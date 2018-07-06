@@ -1,2 +1,2 @@
-- [ ] Paging - fill in
+- [ ] Paging - fill in https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/5-Paging
 - [ ] Helper functions - Clear with Matt
