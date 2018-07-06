@@ -11,10 +11,9 @@ title: Installing the PowerQuery SDK
 2. Create a new Data Connector project
 3. Define your connector logic
 4. Build the project to produce an extension file
-5. Create a `[My Documents]\Microsoft Power BI Desktop\Custom Connectors` directory
-7. Copy the extension file into this directory
-8. Enable the **Custom data connectors** preview feature in Power BI Desktop (under *File | Options and settings | Custom data connectors*)
-8. Restart Power BI Desktop
+5. Copy the extension file into [Documents]/Power BI Desktop/Custom Connectors
+6. Enable the **Custom data connectors** preview feature in Power BI Desktop (under *File | Options and settings | Custom data connectors*)
+7. Restart Power BI Desktop
 
 ![Preview Feature](images/newProject.png)
 ## Distribution of Data Connectors
