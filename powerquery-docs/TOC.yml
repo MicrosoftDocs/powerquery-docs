@@ -1,0 +1,21 @@
+- name: Installing the PowerQuery SDK
+  href: InstallingSDK.md
+- name: Starting to Develop Custom Connectors
+  href: StartingToDevelopCustomConnectors.md
+- name: Tutorials
+  items:
+  - name: TripPin Walkthrough
+    items:
+      -name: Part 1
+      -name: Part 2
+      -name: Part 3
+      -name: Part 4
+      -name: Part 5
+      -name: Part 6
+      -name: Part 7
+      -name: Part 8
+      -name: Part 9
+      -name: Part 10
+  - name: Jenkins architecture
+    href: /azure/architecture/reference-architectures/jenkins/
+    maintainContext: true
