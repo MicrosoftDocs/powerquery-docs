@@ -1,2 +1,1 @@
-### CreatingFirstConnector
-[] Finish copy
+[] Paging - fill in
