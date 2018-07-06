@@ -53,10 +53,10 @@
     	* ~GetHost~
 * [Helper Functions](helper-functions.md)
 * ~Best Practices~
-	* ~Function Naming~
-	* ~Parameters~
-	* ~API Design~
-	* ~Troubleshooting~
+    * ~Function Naming~
+    * ~Parameters~
+    * ~API Design~
+    * ~Troubleshooting~
     * ~Common Errors~
     * [Handling Documentation](HandlingDocumentation.md)
     * [Handling Navigation Tables](HandlingNavigationTables.md)
