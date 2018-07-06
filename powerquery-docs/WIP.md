@@ -1,2 +1,2 @@
-[] Paging - fill in
-[] Helper functions - Clear with Matt
+- [ ] Paging - fill in
+- [ ] Helper functions - Clear with Matt
