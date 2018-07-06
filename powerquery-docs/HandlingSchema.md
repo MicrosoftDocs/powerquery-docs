@@ -196,7 +196,7 @@ SchemaTable = #table({"Entity", "Type"}, {
 });
 ```
 
-We will rely on a common function ([`Table.ChangeType`](HelperFunctions.md#table.changetype) to enforce a schema on our data, much like we used `SchemaTransformTable` in the earlier exercise. Unlike `SchemaTransformTable`, `Table.ChangeType` takes an actual M table type as an argument, and will apply our schema *recursively* for all nested types. Its signature is:
+We will rely on a common function ([`Table.ChangeType`](HelperFunctions.md#tablechangetype)) to enforce a schema on our data, much like we used `SchemaTransformTable` in the earlier exercise. Unlike `SchemaTransformTable`, `Table.ChangeType` takes an actual M table type as an argument, and will apply our schema *recursively* for all nested types. Its signature is:
 
 ```
 Table.ChangeType = (table, tableType as type) as nullable table => ...
