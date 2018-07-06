@@ -19,7 +19,7 @@
     <SuppressCellErrors>False</SuppressCellErrors>
     <MaxRows>1000</MaxRows>
     <ExtensionProject>Yes</ExtensionProject>
-    <Name>HelloWorldWithDocs</Name>
+    <Name>HelloWorld</Name>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>false</DebugSymbols>
@@ -37,10 +37,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HelloWorldWithDocs.pq">
+    <Compile Include="HelloWorld.pq">
       <SubType>Code</SubType>
     </Compile>
-    <Content Include="HelloWorldWithDocs.query.pq">
+    <Compile Include="HelloWorld16.png">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HelloWorld20.png">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HelloWorld24.png">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HelloWorld32.png">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HelloWorld40.png">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HelloWorld48.png">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HelloWorld64.png">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HelloWorld80.png">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="resources.resx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="HelloWorld.query.pq">
       <SubType>Code</SubType>
     </Content>
     <Content Include="README.md">
@@ -58,7 +85,8 @@
       <Reference Include="System.IO.Compression.FileSystem" />
       <Using Namespace="System.Globalization" />
       <Using Namespace="System.IO.Compression " />
-      <Code Type="Fragment" Language="cs"><![CDATA[    
+      <Code Type="Fragment" Language="cs">
+        <![CDATA[    
     using(FileStream fileStream = File.Create(OutputFile))
     using(ZipArchive archiveOut = new ZipArchive(fileStream, ZipArchiveMode.Create, false))
     {
@@ -69,7 +97,8 @@
             archiveOut.CreateEntryFromFile(fullPath, filename, CompressionLevel.Optimal);
         }
     }
-]]></Code>
+]]>
+      </Code>
     </Task>
   </UsingTask>
   <Target Name="BuildExtension" DependsOnTargets="ExtensionClean">

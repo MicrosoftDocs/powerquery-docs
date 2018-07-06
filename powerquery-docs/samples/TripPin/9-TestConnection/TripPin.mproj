@@ -1,9 +1,9 @@
-﻿<Project DefaultTargets="BuildExtension" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="BuildExtension" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>
-    </ProjectGuid>
+    <ProjectGuid>{cd1a0776-2ef1-4748-84c7-96118b1bbdf9}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>MyRootNamespace</RootNamespace>
     <AssemblyName>MyAssemblyName</AssemblyName>
@@ -11,15 +11,16 @@
     <AllowNativeQuery>False</AllowNativeQuery>
     <AsAction>False</AsAction>
     <FastCombine>False</FastCombine>
-    <ClearLog>False</ClearLog>
+    <ClearLog>True</ClearLog>
     <ShowEngineTraces>False</ShowEngineTraces>
-    <ShowUserTraces>False</ShowUserTraces>
-    <LegacyRedirects>False</LegacyRedirects>
+    <ShowUserTraces>True</ShowUserTraces>
+    <LegacyRedirects>True</LegacyRedirects>
     <SuppressRowErrors>False</SuppressRowErrors>
     <SuppressCellErrors>False</SuppressCellErrors>
     <MaxRows>1000</MaxRows>
     <ExtensionProject>Yes</ExtensionProject>
-    <Name>HelloWorldWithDocs</Name>
+    <Name>TripPin</Name>
+    <ThrowOnFoldingFailure>False</ThrowOnFoldingFailure>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>false</DebugSymbols>
@@ -37,14 +38,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HelloWorldWithDocs.pq">
+    <Compile Include="TripPin.pq">
       <SubType>Code</SubType>
     </Compile>
-    <Content Include="HelloWorldWithDocs.query.pq">
-      <SubType>Code</SubType>
-    </Content>
+    <Compile Include="Table.ChangeType.pqm">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="Table.ToNavigationTable.pqm">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="Diagnostics.pqm">
+      <SubType>Content</SubType>
+    </Compile>
     <Content Include="README.md">
       <SubType>Content</SubType>
+    </Content>
+    <Compile Include="Table.GenerateByPage.pqm">
+      <SubType>Content</SubType>
+    </Compile>
+    <Content Include="TripPin.query.pq">
+      <SubType>Code</SubType>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

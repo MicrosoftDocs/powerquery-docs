@@ -1,4 +1,5 @@
-﻿<Project DefaultTargets="BuildExtension" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="BuildExtension" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
@@ -11,15 +12,16 @@
     <AllowNativeQuery>False</AllowNativeQuery>
     <AsAction>False</AsAction>
     <FastCombine>False</FastCombine>
-    <ClearLog>False</ClearLog>
-    <ShowEngineTraces>False</ShowEngineTraces>
+    <ClearLog>True</ClearLog>
+    <ShowEngineTraces>True</ShowEngineTraces>
     <ShowUserTraces>False</ShowUserTraces>
     <LegacyRedirects>False</LegacyRedirects>
     <SuppressRowErrors>False</SuppressRowErrors>
     <SuppressCellErrors>False</SuppressCellErrors>
     <MaxRows>1000</MaxRows>
     <ExtensionProject>Yes</ExtensionProject>
-    <Name>HelloWorldWithDocs</Name>
+    <Name>MyGraph</Name>
+    <ThrowOnFoldingFailure>False</ThrowOnFoldingFailure>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>false</DebugSymbols>
@@ -37,14 +39,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HelloWorldWithDocs.pq">
+    <!--<Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>-->
+    <Compile Include="MyGraph.pq">
       <SubType>Code</SubType>
     </Compile>
-    <Content Include="HelloWorldWithDocs.query.pq">
+    <Compile Include="MyGraph16.png">
       <SubType>Code</SubType>
-    </Content>
-    <Content Include="README.md">
+    </Compile>
+    <Compile Include="MyGraph20.png">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyGraph24.png">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyGraph32.png">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyGraph40.png">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyGraph48.png">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyGraph64.png">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyGraph80.png">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="resources.resx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="client_id">
       <SubType>Content</SubType>
+    </Compile>
+    <Content Include="MyGraph.query.pq">
+      <SubType>Code</SubType>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

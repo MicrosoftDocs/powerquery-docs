@@ -2,8 +2,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>
-    </ProjectGuid>
+    <ProjectGuid>{c7c4a39e-fd85-45a6-a43e-5b244ee349bf}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>MyRootNamespace</RootNamespace>
     <AssemblyName>MyAssemblyName</AssemblyName>
@@ -19,7 +18,7 @@
     <SuppressCellErrors>False</SuppressCellErrors>
     <MaxRows>1000</MaxRows>
     <ExtensionProject>Yes</ExtensionProject>
-    <Name>HelloWorldWithDocs</Name>
+    <Name>DirectQueryForSQL</Name>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>false</DebugSymbols>
@@ -37,14 +36,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HelloWorldWithDocs.pq">
+    <Compile Include="DirectQueryForSQL.pq">
       <SubType>Code</SubType>
     </Compile>
-    <Content Include="HelloWorldWithDocs.query.pq">
+    <Compile Include="DirectQueryForSQL16.png">
       <SubType>Code</SubType>
-    </Content>
-    <Content Include="README.md">
-      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="DirectQueryForSQL20.png">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DirectQueryForSQL24.png">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DirectQueryForSQL32.png">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DirectQueryForSQL40.png">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DirectQueryForSQL48.png">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DirectQueryForSQL64.png">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DirectQueryForSQL80.png">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="resources.resx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="DirectQueryForSQL.query.pq">
+      <SubType>Code</SubType>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

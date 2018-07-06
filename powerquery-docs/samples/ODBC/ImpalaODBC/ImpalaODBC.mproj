@@ -19,7 +19,7 @@
     <SuppressCellErrors>False</SuppressCellErrors>
     <MaxRows>1000</MaxRows>
     <ExtensionProject>Yes</ExtensionProject>
-    <Name>HelloWorldWithDocs</Name>
+    <Name>ImpalaODBC</Name>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>false</DebugSymbols>
@@ -37,14 +37,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HelloWorldWithDocs.pq">
+    <Compile Include="ImpalaODBC.pq">
       <SubType>Code</SubType>
     </Compile>
-    <Content Include="HelloWorldWithDocs.query.pq">
+    <Content Include="ImpalaODBC.query.pq">
       <SubType>Code</SubType>
-    </Content>
-    <Content Include="README.md">
-      <SubType>Content</SubType>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

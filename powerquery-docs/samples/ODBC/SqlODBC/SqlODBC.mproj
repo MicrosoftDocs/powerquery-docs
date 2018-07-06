@@ -11,15 +11,16 @@
     <AllowNativeQuery>False</AllowNativeQuery>
     <AsAction>False</AsAction>
     <FastCombine>False</FastCombine>
-    <ClearLog>False</ClearLog>
+    <ClearLog>True</ClearLog>
     <ShowEngineTraces>False</ShowEngineTraces>
-    <ShowUserTraces>False</ShowUserTraces>
+    <ShowUserTraces>True</ShowUserTraces>
     <LegacyRedirects>False</LegacyRedirects>
     <SuppressRowErrors>False</SuppressRowErrors>
     <SuppressCellErrors>False</SuppressCellErrors>
     <MaxRows>1000</MaxRows>
     <ExtensionProject>Yes</ExtensionProject>
-    <Name>HelloWorldWithDocs</Name>
+    <Name>SqlODBC</Name>
+    <ThrowOnFoldingFailure>True</ThrowOnFoldingFailure>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>false</DebugSymbols>
@@ -37,14 +38,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HelloWorldWithDocs.pq">
+    <Compile Include="SqlODBC.pq">
       <SubType>Code</SubType>
     </Compile>
-    <Content Include="HelloWorldWithDocs.query.pq">
+    <Compile Include="SqlODBC16.png">
       <SubType>Code</SubType>
-    </Content>
-    <Content Include="README.md">
+    </Compile>
+    <Compile Include="SqlODBC20.png">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlODBC24.png">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlODBC32.png">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlODBC40.png">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlODBC48.png">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlODBC64.png">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlODBC80.png">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="resources.resx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Diagnostics.pqm">
       <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="OdbcConstants.pqm">
+      <SubType>Content</SubType>
+    </Compile>
+    <Content Include="SqlODBC.query.pq">
+      <SubType>Code</SubType>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
