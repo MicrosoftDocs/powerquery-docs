@@ -12,7 +12,12 @@ The following applications will be used throughout this tutorial:
 * [Power Query SDK for Visual Studio](https://aka.ms/powerquerysdk)
 * [Fiddler](http://www.telerik.com/fiddler) - Optional, but recommended for viewing and debugging requests to your REST service
 
-Reviewing the [M Extensibility documentation](../../docs/m-extensions.md) before starting this tutorial is highly recommended.
+It's strongly suggested that you review:
+* [Installing the PowerQuery SDK](InstallingSDK.md)
+* [Starting to Develop Custom Connectors](StartingToDevelopCustomConnectors.md)
+* [Creating your first connector: Hello World](CreatingFirstConnector.md)
+* [Handling Data Access](HandlingDataAccess.md)
+* [HandlingAuthentication.md]
 
 ## Parts
 
