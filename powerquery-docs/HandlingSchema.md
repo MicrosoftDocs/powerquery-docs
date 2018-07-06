@@ -1,5 +1,5 @@
 # Handling Schema
-Depending on your data source, information about data types and column names may or may not be provided explicitly. OData REST APIs typically handle this via the [$metadata definition](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part3-csdl.html), and the Power Query `OData.Feed` method automatically handles parsing this information and applying it to the data returned from an OData source.
+Depending on your data source, information about data types and column names may or may not be provided explicitly. OData REST APIs typically handle this via the [$metadata definition](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part3-csdl.html), and the Power Query [`OData.Feed`](https://msdn.microsoft.com/en-us/query-bi/m/odata-feed) method automatically handles parsing this information and applying it to the data returned from an [OData source](OData.Feed.md).
 
 Many REST APIs do not have a way to programmatically determine their schema. In these cases you will need to include  schema definition in your connector.
 
@@ -21,13 +21,13 @@ let
 in
     asTable
 ```
-> **Note**: TripPin is an OData source, so realistically it would make more sense to simply use the `OData.Feed` function's automatic schema handling. In this example we are treating the source as a typical REST API and using `Web.Contents` to demonstrate the technique of hardcoding a schema by hand.
+> **Note**: TripPin is an OData source, so realistically it would make more sense to simply use the `OData.Feed` function's automatic schema handling. In this example we are treating the source as a typical REST API and using [`Web.Contents`](https://msdn.microsoft.com/en-us/query-bi/m/web-contents) to demonstrate the technique of hardcoding a schema by hand.
 
 This table is the result:
 
 ![](images/staticschematable-initial.png)
 
-We can use the handy [`Table.Schema`](https://msdn.microsoft.com/library/mt631344.aspx) function to check the data type of the columns:
+We can use the handy [`Table.Schema`](https://msdn.microsoft.com/en-us/query-bi/m/table-schema) function to check the data type of the columns:
 
 ```
 let
@@ -40,7 +40,7 @@ in
 
 ![](images/staticschematable-schema.png)
 
-Both AirlineCode and Name are of `any` type. [`Table.Schema`](https://msdn.microsoft.com/library/mt631344.aspx) returns a lot of metadata about the columns in a table, including names, positions, type information, and many advanced properties such as Precision, Scale, and MaxLength. For now we will only concern ourselves with the ascribed type (`TypeName`), primitive type (`Kind`), and whether the column value might be null (`IsNullable`).
+Both AirlineCode and Name are of `any` type. `Table.Schema` returns a lot of metadata about the columns in a table, including names, positions, type information, and many advanced properties such as Precision, Scale, and MaxLength. For now we will only concern ourselves with the ascribed type (`TypeName`), primitive type (`Kind`), and whether the column value might be null (`IsNullable`).
 
 ### Defining a Simple Schema Table
 Our schema table will be composed of two columns:
@@ -96,7 +96,7 @@ SchemaTable = #table({"Entity", "SchemaTable"}, {
 ![](images/staticschematable-schematable.png)
 
 ### The SchemaTransformTable Helper Function
-The `SchemaTransformTable` [helper function](HelperFunctions.md) described below will be used to enforce schemas on our data. It takes the following parameters:
+The `SchemaTransformTable` [helper function](HelperFunctions.md#schematransformtable) described below will be used to enforce schemas on our data. It takes the following parameters:
 
 |Parameter    |Type  |Description|
 |:------------|:-----|:----------|
@@ -108,9 +108,9 @@ The logic for this function looks something like this:
 1. Determine if there are any missing columns from the source table
 2. Determine if there are any extra columns
 3. Ignore structured columns (of type `list`, `record`, and `table`), and columns set to type `any`
-4. Use [`Table.TransformColumnTypes`](https://msdn.microsoft.com/library/mt260832.aspx) to set each column type
+4. Use [`Table.TransformColumnTypes`](https://msdn.microsoft.com/query-bi/m/table-transformcolumntypes) to set each column type
 5. Reorder columns based on the order they appear in the schema table
-6. Set thet type on the table itself using [`Value.ReplaceType`](https://msdn.microsoft.com/library/mt260838.aspx)
+6. Set thet type on the table itself using [`Value.ReplaceType`](https://msdn.microsoft.com/query-bi/m/value-replacetype)
 
 > **Note**: The last step to set the table type will remove the need for the Power Query UI to infer type information when viewing the results in the query editor, which can sometimes result in a double-call to the API.
 
@@ -121,9 +121,9 @@ Because so much of the implementation of paging and navigation tables is context
 
 ## Sophisticated Approach
 
-The hardcoded implementation discussed above does a good job of making sure that schemas remain consistent for simple JSON repsonses, but it is limited to parsing the first level of the response. Deeply nested data sets would benefit from the following approach which takes advantage of [M Types](https://msdn.microsoft.com/library/mt809131.aspx).
+The hardcoded implementation discussed above does a good job of making sure that schemas remain consistent for simple JSON repsonses, but it is limited to parsing the first level of the response. Deeply nested data sets would benefit from the following approach which takes advantage of M Types.
 
-Here is a quick refresh about types in the M language from the [Language Specification](https://msdn.microsoft.com/library/mt807488.aspx):
+Here is a quick refresh about types in the M language from the [Language Specification](https://msdn.microsoft.com/query-bi/m/power-query-m-type-system):
 
 >A **type value** is a value that **classifies** other values. A value that is classified by a type is said to **conform** to that type. The M type system consists of the following kinds of types:
 >* Primitive types, which classify primitive values (`binary`, `date`, `datetime`, `datetimezone`, `duration`, `list`, `logical`, `null`, `number`, `record`, `text`, `time`, `type`) and also include a number of abstract types (`function`, `table`, `any`, and `none`)
@@ -196,13 +196,11 @@ SchemaTable = #table({"Entity", "Type"}, {
 });
 ```
 
-We will rely on a common function (`Table.ChangeType`) to enforce a schema on our data, much like we used `SchemaTransformTable` in the earlier exercise. Unlike `SchemaTransformTable`, `Table.ChangeType` takes an actual M table type as an argument, and will apply our schema *recursively* for all nested types. Its signature is:
+We will rely on a common function ([`Table.ChangeType`](HelperFunctions.md#table.changetype) to enforce a schema on our data, much like we used `SchemaTransformTable` in the earlier exercise. Unlike `SchemaTransformTable`, `Table.ChangeType` takes an actual M table type as an argument, and will apply our schema *recursively* for all nested types. Its signature is:
 
 ```
 Table.ChangeType = (table, tableType as type) as nullable table => ...
 ```
-
-The full code listing for `Table.ChangeType` can be found on the [Helper Functions page](HelperFunctions.md).
 
 > **Note**: For flexibility, the function can be used on tables as well as lists of records (which is how tables are represented in a JSON document).
 
