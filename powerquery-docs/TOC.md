@@ -11,15 +11,15 @@
     	* [Token](KeyAuthentication.md)
     	* [OAuth1.0](OAuth1.0Authentication.md)
     	* [OAuth2.0](OAuth2.0Authentication.md)
-	* [Windows Authentication](WindowsAuthentication.md)
-    	* [ResourcePath](ResourcePath.md)
+        * [Windows Authentication](WindowsAuthentication.md)
+        * [ResourcePath](ResourcePath.md)
     * [Handling Data Access](HandlingDataAccess.md)
     	* [Web.Contents](Web.Contents.md)
     	* [ODATA](Odata.Feed.md)
     	* ~Swagger~
     	* [ODBC](Odbc.DataSource.md)
-	* [OleDb](OleDb.DataSource.md)
-	* ~[Ado.Net](AdoDotNet.DataSource.md)~
+        * [OleDb](OleDb.DataSource.md)
+        * ~[Ado.Net](AdoDotNet.DataSource.md)~
     * [Handling Paging](HandlingPaging.md)
     	* NextUrl
     	* ~Cursor: Records~
@@ -29,8 +29,8 @@
     	* [Static](Transformations.md#static-transformations)
     	* [Dynamic](Transformations.md#dynamic-transformations)
     * [Handling Schemas](HandlingSchema.md)
-    	* Hard-coded schema(HandlingSchema.md#simple-hardcoded-approach)
-    	* Table type based schema(HandlingSchema.md#sophisticated-approach)
+    	* [Hard-coded schema](HandlingSchema.md#simple-hardcoded-approach)
+    	* [Table type based schema](HandlingSchema.md#sophisticated-approach)
     * [Handling Status Codes](HandlingStatusCodes.md) [perhaps "handling Non-200 REST responses or something-BA]
     	* [Wait-retry](WaitRetry.md)
     	* [Handling Errors](HandlingErrors.md)
