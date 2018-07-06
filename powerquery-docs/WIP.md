@@ -1,2 +1,3 @@
 - [ ] Paging - fill in https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/5-Paging
 - [ ] Helper functions - Clear with Matt
+- [ ] https://github.com/MicrosoftDocs/powerquery-docs-pr/edit/cpopell-patch-1/powerquery-docs/HandlingSchema.md Update reference to TripPin 6
