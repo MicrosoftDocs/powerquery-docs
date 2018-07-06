@@ -51,6 +51,7 @@
     	* ~Table.Generate~
     	* ~Value.WaitFor~
     	* ~GetHost~
+* [Helper Functions](helper-functions.md)
 * ~Best Practices~
 	* ~Function Naming~
 	* ~Parameters~
