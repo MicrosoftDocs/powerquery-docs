@@ -1,5 +1,5 @@
 # TripPin Part 6 - Schema
-This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially – each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector. 
+This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially â€“ each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector. 
 
 In this lesson, you will:
 
@@ -43,11 +43,11 @@ In the results we see four columns returned:
 3. AirlineCode
 4. Name
 
-![Airlines no schema](../../../blobs/trippin6AirlineNoSchema.png)
+![Airlines no schema](../../../images/trippin6AirlineNoSchema.png)
 
 The "@odata.*" columns are part of OData protocol, and not something we'd want or need to show to the end users of our connector.
 `AirlineCode` and `Name` are the two columns we want to keep.
-If we look at the schema of the table (using the handy [Table.Schema](https://msdn.microsoft.com/library/mt631344.aspx) function), we can see that all of the columns in the table have a data type of `Any.Type`.
+If we look at the schema of the table (using the handy [Table.Schema](https://msdn.microsoft.com/query-bi/m/table-schema) function), we can see that all of the columns in the table have a data type of `Any.Type`.
 
 ```
 let
@@ -56,9 +56,9 @@ let
 in
     Table.Schema(data)
 ```
-![Airlines Table.Schema](../../../blobs/trippin6AirlineTableSchema.png)
+![Airlines Table.Schema](../../../images/trippin6AirlineTableSchema.png)
 
-[Table.Schema](https://msdn.microsoft.com/library/mt631344.aspx) returns a lot of metadata about the columns in a table, including names, positions, type information, and many advanced properties, such as Precision, Scale, and MaxLength.
+[Table.Schema](https://msdn.microsoft.com/query-bi/m/table-schema) returns a lot of metadata about the columns in a table, including names, positions, type information, and many advanced properties, such as Precision, Scale, and MaxLength.
 Future lessons will provide design patterns for setting these advanced properties, but for now we'll only concern ourselves with the ascribed type (`TypeName`), primitive type (`Kind`), and whether the column value might be null (`IsNullable`).
 
 ## Defining a Simple Schema Table
@@ -116,9 +116,9 @@ The logic for this function looks something like this:
 1. Determine if there are any missing columns from the source table
 2. Determine if there are any extra columns
 3. Ignore structured columns (of type `list`, `record`, and `table`), and columns set to `type any`.
-4. Use [Table.TransformColumnTypes](https://msdn.microsoft.com/library/mt260832.aspx) to set each column type
+4. Use [Table.TransformColumnTypes](https://msdn.microsoft.com/query-bi/m/table-transformcolumntypes) to set each column type
 5. Reorder columns based on the order they appear in the schema table
-6. Set the type on the table itself using [Value.ReplaceType](https://msdn.microsoft.com/library/mt260838.aspx)
+6. Set the type on the table itself using [Value.ReplaceType](https://msdn.microsoft.com/query-bi/m/value-replacetype)
 
 >**Note:** The last step to set the table type will remove the need for the Power Query UI to infer type information when viewing the results in the query editor. This removes the double request issue we saw at the [end of the previous tutorial](../5-Paging#putting-it-all-together).
 
@@ -250,10 +250,10 @@ GetPage = (url as text, optional schema as table) as table =>
         withSchema meta [NextLink = nextLink];
 ```
 
->**Note:** This GetPage implementation uses [Table.FromRecords](https://msdn.microsoft.com/library/mt260768.aspx) to convert the list of records in the json response to a table.
->A major downside to use Table.FromRecords is that it assumes all records in the list have the same set of fields.
+>**Note:** This GetPage implementation uses [Table.FromRecords](https://msdn.microsoft.com/query-bi/m/table-fromrecords) to convert the list of records in the json response to a table.
+>A major downside to use [Table.FromRecords](https://msdn.microsoft.com/query-bi/m/table-fromrecords) is that it assumes all records in the list have the same set of fields.
 >This works for the TripPin service, since the OData records are guarenteed to contain the same fields, but this might not be the case for all REST APIs. 
->A more robust implementation would use a combination of [Table.FromList](https://msdn.microsoft.com/library/mt260762.aspx) and [Table.ExpandRecordColumn](https://msdn.microsoft.com/library/mt260752.aspx).
+>A more robust implementation would use a combination of [Table.FromList](https://msdn.microsoft.com/query-bi/m/table-fromlist) and [Table.ExpandRecordColumn](https://msdn.microsoft.com/query-bi/m/table-expandrecordcolumn).
 >Later tutorials will change the implementation to get the column list from the schema table, ensuring that no columns are lost/missing during the json -> M translation. 
 
 ### Adding the GetEntity function
@@ -304,7 +304,7 @@ in
 
 We now see that our Airlines table only has the two columns we defined in its schema:
 
-![Airlines With Schema](../../../blobs/trippin6AirlineWithSchema.png)
+![Airlines With Schema](../../../images/trippin6AirlineWithSchema.png)
 
 If we run the same code against the People table...
 
@@ -318,7 +318,7 @@ in
 
 We see that the ascribed type we used (`Int64.Type`) was also set correctly.
 
-![People With Schema](../../../blobs/trippin6PeopleWithSchema.png)
+![People With Schema](../../../images/trippin6PeopleWithSchema.png)
 
 An important thing to note is that this implementation of `SchemaTransformTable` doesn't modify the types of `list` and `record` columns,
 but the `Emails` and `AddressInfo` columns are still typed as `list`. 
@@ -337,11 +337,11 @@ to display the right UI queues to the end user, and the inference calls can end 
 
 If you view the People table using the [TripPin connector from the previous lesson](../5-Paging), you'll see that all of the columns have a 'type any' icon (even the columns that contain lists):
 
-![People without Schema](../../../blobs/trippin6PQNoSchema.png)
+![People without Schema](../../../images/trippin6PQNoSchema.png)
 
 Running the same query with the TripPin connector from this lesson, we now see that the type information is displayed correctly. 
 
-![People with Schema](../../../blobs/trippin6PQWithSchema.png)
+![People with Schema](../../../images/trippin6PQWithSchema.png)
 
 
 
