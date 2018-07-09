@@ -1,5 +1,5 @@
 # TripPin Part 4 - Data Source Paths
-This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially – each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector. 
+This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially â€“ each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector. 
 
 In this lesson, you will:
 
@@ -8,10 +8,10 @@ In this lesson, you will:
  
 This lesson simplifies the connector built in the [previous lesson](../3-NavTables) by removing its required function parameters, and improving the user experience by moving to a dynamically generated navigation table.
 
-For an in-depth explanation of how credentials are identified, please see the [Data Source Paths section](../../../docs/m-extensions.md#data-source-paths) of the [M extensibility reference](../../../docs/m-extensions.md).
+For an in-depth explanation of how credentials are identified, please see the [Data Source Paths section](../../../HandlingAuthentication.md#data-source-paths) of [Handling Authentication](../../../HandlingAuthentication.md).
 
 ## Data Source Paths
-When invoking a [data source function](../../../docs/m-extensions.md#data-source-functions), the M engine identifies which credentials to use during an evaluation by doing a lookup based on the [Data Source Kind](../../../docs/m-extensions.md#data-source-kind) and [Data Source Path](../../../docs/m-extensions.md#data-source-paths) values.
+When invoking a [data source function](../../../HandlingDataAccess.md#data-source-functions), the M engine identifies which credentials to use during an evaluation by doing a lookup based on the [Data Source Kind](../../../HandlingDataAccess.md#data-source-kind) and [Data Source Path](../../../HandlingAuthentication.md#data-source-paths) values.
 
 In the [previous lesson](../3-NavTables) we shared two data source functions, both with a single `Uri.Type` parameter. 
 
@@ -25,13 +25,13 @@ shared TripPin.Contents =  Value.ReplaceType(TripPinNavTable, type function (url
 
 The first time we run a query that one of the functions, we receive a credential prompt with drop downs that let us select a path and an authentication type. 
 
-![Credentials with Paths](../../../blobs/trippin4Paths.png)
+![Credentials with Paths](../../../images/trippin4Paths.png)
 
 If we run the same query again, with the same parameters, the M engine is able to locate the cached credentials, and no credential prompt is shown. If we modify the `url` argument to our function so that the base path no longer matches, a new credential prompt is displayed for the new path.
 
 You can see any cached credentials on the Credentials table in the M Query Output window.
 
-![Credentials tab](../../../blobs/trippin4CredentialsTab.png)
+![Credentials tab](../../../images/trippin4CredentialsTab.png)
 
 Depending on the type of change, modifying the parameters for your function will likely result in a credential error. 
 
@@ -67,15 +67,15 @@ TripPin.Feed = (url as text) =>
 
 If we update the `TripPin.Contents()` call in our `TripPin.query.pq` file and run it in Visual Studio, we will see a new credential prompt. Note that there is now a single Data Source Path value - TripPin.
 
-![Credentials with no path](../../../blobs/trippin4NewPrompt.png)
+![Credentials with no path](../../../images/trippin4NewPrompt.png)
 
 ## Improving the Navigation Table
 In the [first tutorial](../1-OData) we used the built-in OData functions to connect to the TripPin service.
 This gave us a really nice looking navigation table, based on the TripPin service document, with no additional code on our side.
-The [OData.Feed](https://msdn.microsoft.com/library/mt260868.aspx) function automatically did the hard work for us.
-Since we are "roughing it" by using [Web.Contents](https://msdn.microsoft.com/library/mt260892.aspx) rather than [OData.Feed](https://msdn.microsoft.com/library/mt260868.aspx), we will need to recreate this navigation table ourselves. 
+The [OData.Feed](https://msdn.microsoft.com/query-bi/m/odata-feed) function automatically did the hard work for us.
+Since we are "roughing it" by using [Web.Contents](https://msdn.microsoft.com/query-bi/m/web-contents) rather than [OData.Feed](https://msdn.microsoft.com/query-bi/m/odata-feed), we will need to recreate this navigation table ourselves. 
 
-![OData Navigator](../../../blobs/trippin4NavigatorOData.png)
+![OData Navigator](../../../images/trippin4NavigatorOData.png)
 
 We're going to make the following changes:
 1. Define a list of items to show in our navigation table
@@ -117,14 +117,14 @@ TripPinNavTable = (url as text) as table =>
 ```
 
 When dynamically building URL paths, make sure you're clear where your forward slashes (/) are!
-Note that [Uri.Combine](https://msdn.microsoft.com/library/mt260885) uses the following rules when combining paths:
+Note that [Uri.Combine](https://msdn.microsoft.com/query-bi/m/uri-combine) uses the following rules when combining paths:
 1. When the `relativeUri` parameter starts with a /, it will replace the entire path of the `baseUri` parameter
 2. If the `relativeUri` parameter _does not_ start with a / and the `baseUri` ends with a /, the path is appended
 3. If the `relativeUri` parameter _does not_ start with a / and the `baseUri` _does not_ end with a /, the last segment of the path is replaced
 
 The following image shows examples of this:
 
-![Uri.Combine example](../../../blobs/trippin4UriCombine.png)
+![Uri.Combine example](../../../images/trippin4UriCombine.png)
 
 ### Remove the Entity Specific Functions
 To make our connector easier to maintain, we will remove the entity specific formatting functions we used in the previous lesson - `GetAirlineTables` and `GetAirportsTable`.
@@ -151,4 +151,4 @@ TripPin.Feed = (url as text) =>
 ## Conclusion
 In this tutorial, we cleaned up and simplified our connector by fixing our Data Source Path value, and moving to a more flexible format for our navigation table. After completing these steps (or using the sample code in this directory), the `TripPin.Contents` function returns a navigation table in Power BI Desktop:
 
-![Navigator](../../../blobs/trippin4Complete.png)
+![Navigator](../../../images/trippin4Complete.png)
