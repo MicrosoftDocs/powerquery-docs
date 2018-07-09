@@ -4,14 +4,14 @@ This multi-part tutorial covers the creation of a new data source extension for 
 
 In this lesson, you will:
 
-* Enforce a table schema using [M Types](https://msdn.microsoft.com/library/mt809131.aspx)
+* Enforce a table schema using [M Types](https://msdn.microsoft.com/query-bi/m/power-query-m-type-system)
 * Set types for nested records and lists
 * Refactor code for reuse and unit testing
 
 In the previous lesson we defined our table schemas using a simple "Schema Table" system.
 This schema table approach works for many REST APIs/Data Connectors, but services that return complete
 or deeply nested data sets might benefit from the approach in this tutorial, which leverages
-the [M type system](https://msdn.microsoft.com/library/mt809131.aspx).
+the [M type system](https://msdn.microsoft.com/query-bi/m/power-query-m-type-system).
 
 This lesson will guide you through the following steps:
 
@@ -24,7 +24,7 @@ This lesson will guide you through the following steps:
 Before we start making use of the advanced schema logic, we will add a set of unit tests to our connector
 to reduce the chance of inadvertently breaking something. Unit testing works like this:
 
-1. Copy the common code from the [UnitTest sample](../../UnitTesting) into our `TripPin.query.pq` file
+1. Copy the common code from the [UnitTest sample](../../../HandlingUnitTesting.md) into our `TripPin.query.pq` file
 2. Add a section declaration to the top of our `TripPin.query.pq` file
 3. Create a *shared* record (called `TripPin.UnitTest`)
 4. Define a `Fact` for each test
@@ -63,7 +63,7 @@ shared TripPin.UnitTest =
 
 Clicking run on the project will evaluate all of the Facts, and give us a report output that looks like this:
 
-![Initial Unit Test](../../../blobs/trippin7UnitTest1.png)
+![Initial Unit Test](../../../images/trippin7UnitTest1.png)
 
 Using some principles from [test-driven development](https://en.wikipedia.org/wiki/Test-driven_development),
 we'll add a test that currently fails, but will soon implement/fix (by the end of this tutorial).
@@ -75,7 +75,7 @@ Fact("Emails is properly typed", type text, Type.ListItem(Value.Type(People{0}[E
 
 If we run the code again, we should now see that we have a failing test.
 
-![Unit test with failure](../../../blobs/trippin7UnitTest2.png)
+![Unit test with failure](../../../images/trippin7UnitTest2.png)
 
 Now we just need to implement the functionality to make this work.
 
@@ -86,7 +86,7 @@ It works well when working with flattened/relational data, but didn't support se
 In the TripPin case, the data in the People and Airports entities contain structured columns, and even share a type (Location) for representing address information.
 Rather than defining Name/Type pairs in a schema table, we'll define each of these entities using custom M type declarations. 
 
-Here is a quick refresher about types in the M language from the [Language Specification](https://msdn.microsoft.com/library/mt807488.aspx):
+Here is a quick refresher about types in the M language from the [Language Specification](https://msdn.microsoft.com/query-bi/m/power-query-m-type-system):
 
 >A **type value** is a value that **classifies** other values. A value that is classified by a type is said to **conform** to that type. The M type system consists of the following kinds of types:
 >* Primitive types, which classify primitive values (`binary`, `date`, `datetime`, `datetimezone`, `duration`, `list`, `logical`, `null`, `number`, `record`, `text`, `time`, `type`) and also include a number of abstract types (`function`, `table`, `any`, and `none`)
@@ -215,23 +215,23 @@ GetPage = (url as text, optional schema as type) as table =>
 
 ### Confirming that nested types are being set
 The definition for our `PeopleType` now sets the `Emails` field to a list of text (`{text}`).
-If we are applying the types correctly, the call to [Type.ListItem](https://msdn.microsoft.com/library/mt260965) in our unit test should now be returning `type text` rather than `type any`. 
+If we are applying the types correctly, the call to [Type.ListItem](https://msdn.microsoft.com/query-bi/m/type-listitem) in our unit test should now be returning `type text` rather than `type any`. 
 
 Running our unit tests again show that they are now all passing.
 
-![Unit test with success](../../../blobs/trippin7UnitTest3.png)
+![Unit test with success](../../../images/trippin7UnitTest3.png)
 
 ## Refactoring Common Code into Separate Files 
 >**Note:** The M engine will have improved support for referencing external modules/common code in the future,
 but this approach should carry you through until then.
 
 At this point our extension almost has as much "common" code as TripPin connector code.
-In the future these [common functions](../../../docs/helper-functions.md) will either be part of the built-in standard function library, or you will be able to reference them from another extension.
+In the future these [common functions](../../../HelperFunctions.md) will either be part of the built-in standard function library, or you will be able to reference them from another extension.
 For now, we refactor our code in the following way:
 
 1. Move the reusable functions to separate files (.pqm)
 2. Set the **Build Action** property on the file to **Compile** to make sure it gets included in our extension file during the build
-3. Define a function to load the code using [Expression.Evaluate](https://msdn.microsoft.com/library/mt260970.aspx)
+3. Define a function to load the code using [Expression.Evaluate](https://msdn.microsoft.com/query-bi/m/expression-evaluate)
 4. Load each of the common functions we want to use
 
 The code to do this is included in the snippet below:
