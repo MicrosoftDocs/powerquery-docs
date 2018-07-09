@@ -1,5 +1,5 @@
 # TripPin Part 5 - Paging
-This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially – each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector. 
+This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially â€“ each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector. 
 
 In this lesson, you will:
 
@@ -18,7 +18,7 @@ OData protocol might have noticed that we made a number of incorrect assumptions
 In this lesson we will improve our response handling logic by making it page aware.
 Future tutorials will make the page handling logic more robust and able to handle multiple response formats (including errors from the service).
 
->**Note:** You do not need to implement your own paging logic with connectors based on [OData.Feed](https://msdn.microsoft.com/library/mt260868.aspx), as it handles it all for you automatically.
+>**Note:** You do not need to implement your own paging logic with connectors based on [OData.Feed](https://msdn.microsoft.com/query-bi/m/odata-feed), as it handles it all for you automatically.
 
 ## Paging Checklist
 When implementing paging support, we'll need to the following things about our API:
@@ -29,7 +29,7 @@ When implementing paging support, we'll need to the following things about our A
 4. Are there parameters related to paging that we should be aware of? (such as "page size")
 
 The answer to these questions will impact the way you implement your paging logic. While there is some amount of code reuse
-across paging implementations (such as the use of [Table.GenerateByPage]), most connectors will
+across paging implementations (such as the use of [Table.GenerateByPage](../../../HelperFunctions.md#tablegeneratebypage), most connectors will
 end up requiring custom logic.
 
 >**Note:** This lesson contains paging logic for an OData service, which follows a specific format.
@@ -43,14 +43,14 @@ we've read all of our data.
 
 ```json
 {
-  "odata.context": "...",
-  "odata.count": 37,
-  "value": [
-    { },
-    { },
-    { }
-  ],
-  "odata.nextLink": "...?$skiptoken=342r89"
+Â  "odata.context": "...",
+Â  "odata.count": 37,
+Â  "value": [
+Â Â Â  { },
+Â Â Â  { },
+Â Â Â  { }
+Â  ],
+Â  "odata.nextLink": "...?$skiptoken=342r89"
 }
 ```
 
@@ -75,7 +75,7 @@ in
 Turn on fiddler, and run the query in Visual Studio.
 You'll notice that the query returns a table with 8 rows (index 0 to 7). 
 
-![QueryWithoutPaging](../../../blobs/trippin5People.png)
+![QueryWithoutPaging](../../../images/trippin5People.png)
 
 If we look at the body of the response from fiddler, we see that it does in fact contain an `@odata.nextLink` field,
 indicating that there are more pages of data available. 
@@ -85,9 +85,9 @@ indicating that there are more pages of data available.
   "@odata.context": "http://services.odata.org/V4/TripPinService/$metadata#People",
   "@odata.nextLink": "http://services.odata.org/v4/TripPinService/People?%24skiptoken=8",
   "value": [
-    { },
-    { },
-    { }
+Â Â Â  { },
+Â Â Â  { },
+Â Â Â  { }
   ]
 }
 ```
@@ -96,7 +96,7 @@ indicating that there are more pages of data available.
 We're going to make the following changes to our extension:
 
 1. Import the common `Table.GenerateByPage` function
-2. Add a `GetAllPagesByNextLink` function which uses `Table.GenerateByPage` to glue all pages together
+2. Add a `GetAllPagesByNextLink` function which uses [`Table.GenerateByPage`](../../../HelperFunctions.md#tablegeneratebypage) to glue all pages together
 3. Add a `GetPage` function that can read a single page of data
 4. Add a `GetNextLink` function to extract the next URL from the response
 5. Update `TripPin.Feed` to use the new page reader functions
@@ -150,7 +150,7 @@ the first page of data. The `getNextPage` function should normalize each page of
 
 ### Implementing GetAllPagesByNextLink
 The body of our `GetAllPagesByNextLink` function implements the `getNextPage` function argument for 
-`Table.GenerateByPage`. It will call the `GetPage` function, and retrieve the URL for the next page 
+[`Table.GenerateByPage`](../../../HelperFunctions.md#tablegeneratebypage). It will call the `GetPage` function, and retrieve the URL for the next page 
 of data from the `NextLink` field of the `meta` record from the previous call.
 
 ```
@@ -170,8 +170,8 @@ GetAllPagesByNextLink = (url as text) as table =>
 ```
 
 ### Implementing GetPage
-Our `GetPage` function will use `Web.Contents` to retrieve a single page of data from the TripPin service,
-and converts the response into a table. It passes the response from `Web.Contents` to the 
+Our `GetPage` function will use [Web.Contents](https://msdn.microsoft.com/query-bi/m/web-contents) to retrieve a single page of data from the TripPin service,
+and converts the response into a table. It passes the response from [Web.Contents](https://msdn.microsoft.com/query-bi/m/web-contents) to the 
 `GetNextLink` function to extract the URL of the next page, and sets it on the `meta` record of 
 the returned table (page of data).
 
@@ -209,11 +209,11 @@ TripPin.Feed = (url as text) as table => GetAllPagesByNextLink(url);
 If we re-run the same [test query](#testing-trippin) from earlier in the tutorial, we should now
 see the page reader in action. We should now see we have 20 rows in the response rather than 8.
 
-![QueryWithPaging](../../../blobs/trippin5Paging.png)
+![QueryWithPaging](../../../images/trippin5Paging.png)
 
 If we look at the requests in fiddler, we should now see separate requests for each page of data.
 
-![Fiddler](../../../blobs/trippin5Fiddler.png)
+![Fiddler](../../../images/trippin5Fiddler.png)
 
 > **Note:** You'll notice duplicate requests for the first page of data from the service,
 > which is not ideal. The extra request is a result of the M engine's schema checking behavior.
