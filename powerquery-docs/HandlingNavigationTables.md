@@ -7,7 +7,7 @@ Navigation Tables (or nav tables) are a core part of providing a user-friendly e
 Behind the scenes, a nav table is just a regular M Table value with specific metadata fields defined on its Type. When your data source function returns a table with these fields defined, Power Query will display the navigator dialogue. You can actually see the underlying data as a Table value by right-clicking on the root node and clicking Edit.
 
 ## Table.ToNavigationTable
-You can use the [`Table.ToNavigationTable`](HelperFunctions.md#Table.ToNavigationTable) function to add the table type metadata needed to create a nav table.
+You can use the [`Table.ToNavigationTable`](HelperFunctions.md#tabletonavigationtable) function to add the table type metadata needed to create a nav table.
 
 > **Note**: You currently need to copy and paste this function into your M extension. In the future it will likely be moved into the M standard library.
 
