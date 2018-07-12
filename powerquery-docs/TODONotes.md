@@ -1,7 +1,7 @@
 # M Custom Connector Documentation
-* [Overview]
+* [Overview] Miguel TODO
     * [What is Power Query?] - Miguel TODO
-* [Quick Starts]
+* [Quick Starts] David TODO
     * [Connecting and Transforming Data] - Miguel TODO (Power BI connect quickstart + some aspects of Shape and Combine tutorial)
     * [Combining Data] - Miguel/David TODO (From 'Combine' aspects of Shape and Combine tutorial)
     * [Installing the PowerQuery SDK](InstallingSDK.md)
@@ -16,14 +16,14 @@
         * [Paging]
         * [Enforcing Schema]
         * [Advanced Schema]
-        * [Diagnostics]
-        * [Test Connection]
-        * [Query Folding Part 1]
-        * TODO Query Folding Part 2
+        * [Diagnostics] Colin TODO
+        * [Test Connection] Colin TODO
+        * [Query Folding Part 1] Colin TODO
+        * TODO Query Folding Part 2 Colin TODO
     * [OAuth]
-        * [Github]
-        * [MyGraph]
-* [Samples]
+        * [Github] Colin TODO
+        * [MyGraph] Colin TODO
+* [Samples] Colin TODO
     * [Navigation Table]
     * [Direct Query for SQL]
     * [Impala ODBC]
@@ -31,11 +31,11 @@
     * [Snowflake ODBC]
     * [Unit Testing]
 * [Concepts]
-    * Certification
+    * Certification Colin TODO
 * [How To]
 * [Reference]
     * [Power Query Reference]
-    * [Connector Development Reference]
+    * [Connector Development Reference] Colin TODO Cleanup
       * [Handling Authentication](HandlingAuthentication.md)
     	  * [Anonymous](ImplicitAuthentication.md)
     	  * [Token](KeyAuthentication.md)
@@ -80,3 +80,8 @@
       * [Helper Functions](helper-functions.md)
       * [Handling Documentation](HandlingDocumentation.md)
       * [Handling Navigation Tables](HandlingNavigationTables.md)
+  * [Resources] Colin/Miguel TODO
+      * [Power BI Documentation]
+      * [M Function Reference]
+      * [M Language Document]
+      * [M Type Reference]
