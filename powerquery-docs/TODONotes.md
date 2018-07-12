@@ -1,15 +1,35 @@
 # M Custom Connector Documentation
 * [Overview]
-    * [Installing the PowerQuery SDK](InstallingSDK.md)
+    * [What is Power Query?] - Miguel TODO
 * [Quick Starts]
-    * [Starting to Develop Custom Connectors](StartingToDevelopCustomConnectors.md)
+    * [Connecting and Transforming Data] - Miguel TODO (Power BI connect quickstart + some aspects of Shape and Combine tutorial)
+    * [Combining Data] - Miguel/David TODO (From 'Combine' aspects of Shape and Combine tutorial)
+    * [Installing the PowerQuery SDK](InstallingSDK.md)
+    * [Starting to Develop Custom Connectors](StartingToDevelopCustomConnectors.md) - Merge with below Colin TODO?
     * [Creating your first connector: Hello World](CreatingFirstConnector.md)
-* [Tutorials]
-    * [TripPin Walkthrough]
+* [Tutorials] - Colin finish moving over TODO
+    * [TripPin Walkthrough] - Colin fill-in / fix TODO
+        * [OData]
+        * [REST]
+        * [Navigation Tables]
+        * [Data Source Paths]
+        * [Paging]
+        * [Enforcing Schema]
+        * [Advanced Schema]
+        * [Diagnostics]
+        * [Test Connection]
+        * [Query Folding Part 1]
+        * TODO Query Folding Part 2
     * [OAuth]
         * [Github]
         * [MyGraph]
 * [Samples]
+    * [Navigation Table]
+    * [Direct Query for SQL]
+    * [Impala ODBC]
+    * [Redshift ODBC]
+    * [Snowflake ODBC]
+    * [Unit Testing]
 * [Concepts]
     * Certification
 * [How To]
