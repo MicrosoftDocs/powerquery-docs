@@ -9,7 +9,7 @@
     href: InstallingSDK.md
   - name: Starting to Develop Custom Connectors
     href: StartingToDevelopCustomConnectors.md
-  - name: Creating your first connector: Hello World
+  - name: Creating your first connector - Hello World
     href: CreatingFirstConnector.md
 - name: Tutorials
   items:
