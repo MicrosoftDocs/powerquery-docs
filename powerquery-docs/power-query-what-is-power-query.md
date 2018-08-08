@@ -56,3 +56,6 @@ Business users spend up to 80% of their time on data preparation, delaying the t
 
 ## Next steps
 
+Next, learn how to use Power Query in **Power BI Desktop**.
+
+* [Quickstart: Using Power Query in Power BI Desktop](power-query-quickstart-using-power-bi.md)
