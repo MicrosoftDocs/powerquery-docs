@@ -53,8 +53,8 @@ shared MyExtension.UnitTest =
 
 Running the sample in Visual Studio gives you a visual summary of the pass rates:
 
-![unit tests](../../blobs/unitTestingSample.png)
+![unit tests](../../images/unitTestingSample.png)
 
 Here is an example with a forced failure:
 
-![unit test failure](../../blobs/unitTestingFailure.png)
+![unit test failure](../../images/unitTestingFailure.png)
