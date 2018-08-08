@@ -1,3 +1,19 @@
+---
+title: Handling authentication for Power Query connectors
+description: Manage authentication for Power Query connectors
+author: cpopell
+manager: kfile
+ms.reviewer: ''
+
+ms.service: powerquery
+ms.component: power-query
+ms.topic: overview
+ms.date: 08/10/2018
+ms.author: gepopell
+
+LocalizationGroup: reference
+---
+
 # Handling Authentication
 
 ## Authentication Kinds

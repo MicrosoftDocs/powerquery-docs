@@ -1,3 +1,19 @@
+---
+title: Creating your first connector - Hello World
+description: Create your first connector
+author: cpopell
+manager: kfile
+ms.reviewer: ''
+
+ms.service: powerquery
+ms.component: power-query
+ms.topic: overview
+ms.date: 08/10/2018
+ms.author: gepopell
+
+LocalizationGroup: Get started
+---
+
 # Creating your first connector: Hello World
 
 ## Hello World Sample
