@@ -1,3 +1,19 @@
+---
+title: Adding function documentation
+description: Add function documentation for Power Query connectors
+author: cpopell
+manager: kfile
+ms.reviewer: ''
+
+ms.service: powerquery
+ms.component: power-query
+ms.topic: overview
+ms.date: 08/10/2018
+ms.author: gepopell
+
+LocalizationGroup: reference
+---
+
 # Adding Function Documentation
 
 Power Query will automatically generate an invocation UI for you based on the arguments for your function. By default, this UI will contain the name of your function, and an input for each of your parameters. 
