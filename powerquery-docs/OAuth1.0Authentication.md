@@ -1,3 +1,19 @@
+---
+title: Using OAAuth for Power Query connectors
+description: Use OAuth for Power Query connectors
+author: cpopell
+manager: kfile
+ms.reviewer: ''
+
+ms.service: powerquery
+ms.component: power-query
+ms.topic: overview
+ms.date: 08/10/2018
+ms.author: gepopell
+
+LocalizationGroup: reference
+---
+
 # OAuth
 
 ## Implementing an OAuth Flow

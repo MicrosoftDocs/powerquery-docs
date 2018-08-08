@@ -1,3 +1,19 @@
+---
+title: Handling status codes with Web.Contents for Power Query connectors
+description: Manage status codes with Web.Contents for Power Query connectors
+author: cpopell
+manager: kfile
+ms.reviewer: ''
+
+ms.service: powerquery
+ms.component: power-query
+ms.topic: overview
+ms.date: 08/10/2018
+ms.author: gepopell
+
+LocalizationGroup: reference
+---
+
 # Status Code Handling with `Web.Contents`
 
 The [`Web.Contents`](https://msdn.microsoft.com/en-us/library/mt260892) function has some built in functionality for dealing with certain HTTP status codes. The default behavior can be overridden in your extension using the `ManualStatusHandling` field in the [options record](https://msdn.microsoft.com/library/mt260892#Anchor_1).

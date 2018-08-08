@@ -1,3 +1,19 @@
+---
+title: Handling unit testing for Power Query connectors
+description: Manage unit testing for Power Query connectors
+author: cpopell
+manager: kfile
+ms.reviewer: ''
+
+ms.service: powerquery
+ms.component: power-query
+ms.topic: overview
+ms.date: 08/10/2018
+ms.author: gepopell
+
+LocalizationGroup: reference
+---
+
 # Handling Unit Testing
 
 For both simple and complex connectors, adding unit tests is a best practice and highly recommended.

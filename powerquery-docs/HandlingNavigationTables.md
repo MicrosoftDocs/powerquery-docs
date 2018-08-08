@@ -1,3 +1,19 @@
+---
+title: Handling navigation for Power Query connectors
+description: Manage navigation for Power Query connectors
+author: cpopell
+manager: kfile
+ms.reviewer: ''
+
+ms.service: powerquery
+ms.component: power-query
+ms.topic: overview
+ms.date: 08/10/2018
+ms.author: gepopell
+
+LocalizationGroup: reference
+---
+
 # Handling Navigation
 
 Navigation Tables (or nav tables) are a core part of providing a user-friendly experience for your connector. The Power Query experience displays them to the user after they have entered any required parameters for your data source function, and have authenticated with the data source.
