@@ -128,4 +128,4 @@ To save your work, select **File \> Save** (or **File \> Save As**), as shown in
 In this quickstart you learned how to use Power Query Editor in Power BI Desktop, and how to connect to data sources. To learn more, continue with the tutorial on shaping and transforming data with Power Query.
 
 > [!div class="nextstepaction"]
-> [Power Query tutorial](./tutorial-manage-vm.md)
+> [Power Query tutorial](power-query-tutorial-shape-combine.md)
