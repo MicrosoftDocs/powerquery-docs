@@ -1,3 +1,19 @@
+---
+title: Handling paging for Power Query connectors
+description: Manage paging for Power Query connectors
+author: cpopell
+manager: kfile
+ms.reviewer: ''
+
+ms.service: powerquery
+ms.component: power-query
+ms.topic: overview
+ms.date: 08/10/2018
+ms.author: gepopell
+
+LocalizationGroup: reference
+---
+
 # Paging
 
 REST APIs typically have some mechanism to transmit large volumes of records broken up into *pages* of results. Power Query has the flexibility to support many different paging mechanisms, however, since each paging mechanism is different, some amount of modification of the below examples is likely to be necessary to fit your situation.

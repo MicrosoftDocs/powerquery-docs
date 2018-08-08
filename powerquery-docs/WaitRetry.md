@@ -1,3 +1,19 @@
+---
+title: Using the wait-retry pattern in Power Query connectors
+description: Use the wait-retry pattern for Power Query connectors
+author: cpopell
+manager: kfile
+ms.reviewer: ''
+
+ms.service: powerquery
+ms.component: power-query
+ms.topic: overview
+ms.date: 08/10/2018
+ms.author: gepopell
+
+LocalizationGroup: reference
+---
+
 # Wait-Retry Pattern
 
 In some situations a data source's behavior does not match that expected by Power Query's [default HTTP code handling](/HandlingStatusCodes.md). The examples below show how to work around this situation.

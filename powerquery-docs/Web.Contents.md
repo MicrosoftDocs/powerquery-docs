@@ -1,3 +1,19 @@
+---
+title: Using Web.Contents when creating Power Query connectors
+description: Use Web.Contents when creating Power Query connectors
+author: cpopell
+manager: kfile
+ms.reviewer: ''
+
+ms.service: powerquery
+ms.component: power-query
+ms.topic: overview
+ms.date: 08/10/2018
+ms.author: gepopell
+
+LocalizationGroup: reference
+---
+
 # Web.Contents
 [`Web.Contents`](https://msdn.microsoft.com/library/mt260892.aspx) is the primary way to access web-based data that doesn't offer an OData specification. This requires more effort--depending on what the API is expecting, you'll have to specify a number of different options (documented in detail in the function).
 

@@ -1,3 +1,19 @@
+---
+title: Handling transformations with Web.Contents for Power Query connectors
+description: Manage transformations with Web.Contents for Power Query connectors
+author: cpopell
+manager: kfile
+ms.reviewer: ''
+
+ms.service: powerquery
+ms.component: power-query
+ms.topic: overview
+ms.date: 08/10/2018
+ms.author: gepopell
+
+LocalizationGroup: reference
+---
+
 # Transformations
 For situations where the data source response is not presented in a format that Power BI can consume directly, Power Query can be used to perform a series of transformations.
 ## Static Transformations

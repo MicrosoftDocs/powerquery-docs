@@ -1,3 +1,19 @@
+---
+title: Start developing custom connectors for Power Query 
+description: Create custom Power Query connectors
+author: cpopell
+manager: kfile
+ms.reviewer: ''
+
+ms.service: powerquery
+ms.component: power-query
+ms.topic: overview
+ms.date: 08/10/2018
+ms.author: gepopell
+
+LocalizationGroup: reference
+---
+
 # Starting to Develop Custom Connectors
 To get you up to speed with Power Query, we've listed some of the most common questions on this page.
 

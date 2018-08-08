@@ -1,3 +1,19 @@
+---
+title: Helper functions for M extensions for Power Query connectors
+description: Use helper functions for Power Query connectors
+author: cpopell
+manager: kfile
+ms.reviewer: ''
+
+ms.service: powerquery
+ms.component: power-query
+ms.topic: overview
+ms.date: 08/10/2018
+ms.author: gepopell
+
+LocalizationGroup: reference
+---
+
 # Helper Functions
 This file contains a number of helper functions commonly used in M extensions.
 These functions may eventually be moved to the official M library, but for now can be copied into your extension file code.
