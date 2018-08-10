@@ -11,7 +11,7 @@ This lesson converts the OData based connector for the [TripPin service](http://
 
 ## Recap of the OData Connector
 Before we remove the OData functions from our connector, let's do a quick review for what it currently does (mostly behind the scenes) to retrieve data from the service. 
-Open the TripPin connector project from [Part 1](../1-OData) in Visual Studio. Open the Query file and paste in the following query:
+Open the TripPin connector project from [Part 1](../1-OData/README.md) in Visual Studio. Open the Query file and paste in the following query:
 
 ```
 TripPin.Feed("http://services.odata.org/v4/TripPinService/Me")
