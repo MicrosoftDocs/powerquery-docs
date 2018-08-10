@@ -69,7 +69,7 @@ After installation is complete, launch the gateway and sign into Power BI. The s
 3. Select the directory you wish to load custom connectors from. This will usually be the same directory that you'd use for Power BI Desktop, but the value is configurable. 
 4. The page should now list all extension files in your target directory 
 
-![Gateway connector configuration](../../../blobs/trippin9Gateway.png)
+![Gateway connector configuration](../../../images/trippin9Gateway.png)
 
 Please see the [online documentation](https://docs.microsoft.com/en-us/power-bi/service-gateway-onprem#install-the-gateway-in-personal-mode) for more information about the gateway. 
 
@@ -77,13 +77,13 @@ Please see the [online documentation](https://docs.microsoft.com/en-us/power-bi/
 
 Open Power BI Desktop and create a report that imports data using the TripPin connector. 
 
-![TripPin Navigator](../../../blobs/trippin9Navigator.png)
+![TripPin Navigator](../../../images/trippin9Navigator.png)
 
 Add one or more visuals to your report page (optional), and then publish the report to PowerBI.com.
 
 After publishing, go to PowerBI.com and find the dataset for the report you just published. Click the ellipses, and select _Schedule Refresh_. Expand the _Gateway connection_ and _Data source credentials_ sections.
 
-![Data source settings](../../../blobs/trippin9Settings1.png)
+![Data source settings](../../../images/trippin9Settings1.png)
 
 > **Note:** If the dataset configuration page says that the report contains unknown data sources, your gateway/custom connector may not be configured properly. Go to the personal gateway configuration UI and make sure that there are no errors next to the TripPin connector. You may need to restart the gateway (on the _Service Settings_ page) to pick up the latest configuration.
 
@@ -91,11 +91,11 @@ Click on the _Edit credentials_ link to bring up the authentication dialog, and 
 
 > **Note:** If you receive an error similar to the one below ("Failed to update data source credentials"), you most likely have an issue with your TestConnection handler. 
 
-![TestConnection error](../../../blobs/trippin9TestConnection.png)
+![TestConnection error](../../../images/trippin9TestConnection.png)
 
 After a successful call to TestConnection, the credentials will be accepted. You can now schedule refresh, or click on the dataset ellipse and select "Refresh Now". You can click on the _Refresh history_ link to view the status of the refresh (which generally takes a few minutes to get kicked off).
 
-![Successful configuration](../../../blobs/trippin9Settings2.png)
+![Successful configuration](../../../images/trippin9Settings2.png)
 
 ## Conclusion
 
