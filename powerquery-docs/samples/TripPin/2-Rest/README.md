@@ -7,7 +7,7 @@ In this lesson, you will:
 * Learn how to set request headers and process a JSON response
 * Use Power BI Desktop to wrangle the response into a user friend format
 
-This lesson converts the OData based connector for the [TripPin service](http://services.odata.org/v4/TripPinService/) (created in the [previous lesson](../1-OData)) to a connector that resembles something you'd create for any RESTful API. OData is a RESTful API, but one with a fixed set of conventions. The advantage of OData is that it provides a schema, data retrieval protocol, and standard query language. Taking away the use of [OData.Feed](https://msdn.microsoft.com/query-bi/m/odata-feed) will require us to build these capabilities into the connector ourselves. 
+This lesson converts the OData based connector for the [TripPin service](http://services.odata.org/v4/TripPinService/) (created in the [previous lesson](../1-OData/README.md)) to a connector that resembles something you'd create for any RESTful API. OData is a RESTful API, but one with a fixed set of conventions. The advantage of OData is that it provides a schema, data retrieval protocol, and standard query language. Taking away the use of [OData.Feed](https://msdn.microsoft.com/query-bi/m/odata-feed) will require us to build these capabilities into the connector ourselves. 
 
 ## Recap of the OData Connector
 Before we remove the OData functions from our connector, let's do a quick review for what it currently does (mostly behind the scenes) to retrieve data from the service. 
@@ -180,7 +180,7 @@ If you have not set your Privacy Levels setting to "Always ignore Privacy level 
 
 Privacy prompts when you are combining data from multiple sources and have not yet specified a privacy level for the source(s). Click on the Continue button and set the privacy level of the top source to Public.
 
-![Privacy](../../../blobs/trippin2Privacy.png)
+![Privacy](../../../images/trippin2Privacy.png)
 
 Click Save and your table will appear. While this isn't a navigation table yet, it provides the basic functionality we need to turn it into one in a subsequent lesson.
 
