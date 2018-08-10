@@ -171,7 +171,7 @@ the first page of data. The `getNextPage` function should normalize each page of
 - The first call to `getNextPage` receives a null parameter.
 - `getNextPage` must return null when there are no pages left
 
-An example of using this function can be found in the [Github sample](../samples/Github/), and the [TripPin paging sample](../samples/TripPin/5-Paging/).
+An example of using this function can be found in the [Github sample](../samples/Github/README.md), and the [TripPin paging sample](../samples/TripPin/5-Paging/README.md).
 
 ```
 Github.PagedTable = (url as text) => Table.GenerateByPage((previous) =>

@@ -6,14 +6,14 @@ In this lesson, you will:
 * Simplify the connection logic for our connector
 * Improve the navigation table experience
  
-This lesson simplifies the connector built in the [previous lesson](../3-NavTables) by removing its required function parameters, and improving the user experience by moving to a dynamically generated navigation table.
+This lesson simplifies the connector built in the [previous lesson](../3-NavTables/README.md) by removing its required function parameters, and improving the user experience by moving to a dynamically generated navigation table.
 
 For an in-depth explanation of how credentials are identified, please see the [Data Source Paths section](../../../HandlingAuthentication.md#data-source-paths) of [Handling Authentication](../../../HandlingAuthentication.md).
 
 ## Data Source Paths
 When invoking a [data source function](../../../HandlingDataAccess.md#data-source-functions), the M engine identifies which credentials to use during an evaluation by doing a lookup based on the [Data Source Kind](../../../HandlingDataAccess.md#data-source-kind) and [Data Source Path](../../../HandlingAuthentication.md#data-source-paths) values.
 
-In the [previous lesson](../3-NavTables) we shared two data source functions, both with a single `Uri.Type` parameter. 
+In the [previous lesson](../3-NavTables/README.md) we shared two data source functions, both with a single `Uri.Type` parameter. 
 
 ```
 [DataSource.Kind="TripPin"]
@@ -70,7 +70,7 @@ If we update the `TripPin.Contents()` call in our `TripPin.query.pq` file and ru
 ![Credentials with no path](../../../images/trippin4NewPrompt.png)
 
 ## Improving the Navigation Table
-In the [first tutorial](../1-OData) we used the built-in OData functions to connect to the TripPin service.
+In the [first tutorial](../1-OData/README.md) we used the built-in OData functions to connect to the TripPin service.
 This gave us a really nice looking navigation table, based on the TripPin service document, with no additional code on our side.
 The [OData.Feed](https://msdn.microsoft.com/query-bi/m/odata-feed) function automatically did the hard work for us.
 Since we are "roughing it" by using [Web.Contents](https://msdn.microsoft.com/query-bi/m/web-contents) rather than [OData.Feed](https://msdn.microsoft.com/query-bi/m/odata-feed), we will need to recreate this navigation table ourselves. 
