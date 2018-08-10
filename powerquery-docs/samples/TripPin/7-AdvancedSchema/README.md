@@ -80,7 +80,7 @@ If we run the code again, we should now see that we have a failing test.
 Now we just need to implement the functionality to make this work.
 
 ## Defining Custom M Types
-The schema enforcement approach in the [previous lesson](../6-Schema/) used "schema tables" defined as Name/Type pairs.
+The schema enforcement approach in the [previous lesson](../6-Schema/README.md) used "schema tables" defined as Name/Type pairs.
 It works well when working with flattened/relational data, but didn't support setting types on nested records/tables/lists, or allow you to reuse type definitions across tables/entities. 
 
 In the TripPin case, the data in the People and Airports entities contain structured columns, and even share a type (Location) for representing address information.
@@ -162,7 +162,7 @@ SchemaTable = #table({"Entity", "Type"}, {
 ```
 
 ## Enforcing a Schema Using Types
-We will rely on a common function (`Table.ChangeType`) to enforce a schema on our data, much like we used `SchemaTransformTable` in the [previous lesson](../6-Schema/).
+We will rely on a common function (`Table.ChangeType`) to enforce a schema on our data, much like we used `SchemaTransformTable` in the [previous lesson](../6-Schema/README.md).
 Unlike `SchemaTransformTable`, `Table.ChangeType` takes in an actual M table type as an argument, and will apply our schema _recursively_ for all nested types. It's signature looks like this:
 
 ```
