@@ -23,7 +23,7 @@ _We are hard at work on Office Store integration to make it easy for users to di
 * [M Library Functions](https://msdn.microsoft.com/library/mt253322.aspx)
 * [M Language Specification](https://msdn.microsoft.com/library/mt807488.aspx)
 * [Power BI Developer Center](https://powerbi.microsoft.com/developers/)
-* [Data Connector Tutorial](~/../samples/TripPin)
+* [Data Connector Tutorial](/samples/TripPin)
 
 
 
