@@ -26,11 +26,11 @@ To understand more about the query capabilities that an OData service might offe
 > `OData.Feed`, we need to implement the query folding handlers ourselves. For real world usage, it is recommended
 > that you use `OData.Feed` whenever possible.
 
-Please see the [Table.View documentation](../../../docs/table-view.md) for more information about query folding in M.
+Please see the [Table.View documentation](../../../HandlingQueryFolding.md) for more information about query folding in M.
 
 ## Using Table.View
 
-The [Table.View](../../../docs/table-view.md) function allows a custom connector to override default transformation handlers
+The [Table.View](../../../HandlingQueryFolding.md) function allows a custom connector to override default transformation handlers
 for your data source. An implementation of `Table.View` will provide a function for one or more of the supported handlers.
 If a handler is unimplemented, or returns an `error` during evaluation, the M engine will fall back to its default handler.
 
@@ -175,7 +175,7 @@ Using the scaffolding code described above, each handler implementation requires
 
 ### Handling Table.FirstN with OnTake
 
-The [OnTake handler](../../../docs/table-view.md#ontake) receives a `count` parameter, which is the maximum number of rows to take.
+The [OnTake handler](../../../HandlingQueryFolding.md#ontake) receives a `count` parameter, which is the maximum number of rows to take.
 In OData terms, we can translate this to the [$top](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752362) query parameter. 
 
 We'll use the following unit tests:
@@ -196,7 +196,7 @@ These tests both use `Table.FirstN` to filter to the result set to the first X n
 If you run these tests with _Error on Folding Failure_ set to `False` (the default), the tests should succeed, but if you run Fiddler (or check the trace logs),
 you'll see that the request we send doesn't contain any OData query parameters. 
 
-![Diagnostics trace](../../../blobs/trippin10UnitTestLog1.png)
+![Diagnostics trace](../../../images/trippin10UnitTestLog1.png)
 
 If you set _Error on Folding Failure_ to `True`, they will fail with the "Please try a simpler expression." error. To fix this, we'll define our first Table.View handler for `OnTake`.
 
@@ -240,11 +240,11 @@ CalculateUrl = (state) as text =>
 
 Rerunning the unit tests, we can see that the URL we are accessing now contains the `$top` parameter. (Note that due to URL encoding, $top appears as `%24top`, but the OData service is smart enough to convert it automatically).
 
-![Diagnostics trace with top](../../../blobs/trippin10UnitTestLog2.png)
+![Diagnostics trace with top](../../../images/trippin10UnitTestLog2.png)
 
 ### Handling Table.Skip with OnSkip
 
-The [OnSkip handler](../../../docs/table-view.md#onskip) is a lot like OnTake. It receives a `count` parameter, which is the number of rows to skip from the result set.
+The [OnSkip handler](../../../HandlingQueryFolding.md#onskip) is a lot like OnTake. It receives a `count` parameter, which is the number of rows to skip from the result set.
 This translates nicely to the OData [$skip](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752362) query parameter. 
 
 Unit tests:
@@ -285,7 +285,7 @@ qsWithSkip =
 
 ### Handling Table.SelectColumns with OnSelectColumns
 
-The [OnSelectColumns](../../../docs/table-view.md#onselectcolumns) handler is called when the user selects or removes columns from the result set. The handler receives a `list` of `text` values, representing the column(s) to be selected.
+The [OnSelectColumns](../../../HandlingQueryFolding.md#onselectcolumns) handler is called when the user selects or removes columns from the result set. The handler receives a `list` of `text` values, representing the column(s) to be selected.
 In OData terms, this operation will map to the [$select](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752360) query option.
 The advantage of folding column selection becomes apparent when you are dealing with tables with many columns. The $select operator will remove unselected columns from the result set, resulting in
 more efficient queries.
@@ -358,7 +358,7 @@ qsWithSelect =
 
 ### Handling Table.Sort with OnSort
 
-The [OnSort](../../../docs/table-view.md#onsort) handler receives a `list` of `record` values. Each record contains a `Name` field, indicating the name of the column, and an `Order` field which is equal to `Order.Ascending` or `Order.Descending`. 
+The [OnSort](../../../HandlingQueryFolding.md#onsort) handler receives a `list` of `record` values. Each record contains a `Name` field, indicating the name of the column, and an `Order` field which is equal to `Order.Ascending` or `Order.Descending`. 
 In OData terms, this operation will map to the [$orderby](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752361) query option.
 The $orderby syntax has the column name followed by `asc` or `desc` to indicate Ascending or Descending order. When sorting on multiple columns, the values are separated with a comma. Note, if the `columns` parameter contains more than one item, it is important to maintain the order in which they appear.
 
@@ -416,7 +416,7 @@ qsWithOrderBy =
 
 ### Handling Table.RowCount with GetRowCount
 
-Unlike the other query handlers we've implemented, the [GetRowCount](../../../docs/table-view.md#getrowcount) handler will return a single value - the number of rows expected in the result set. In an M query, this would typically be the result of the `Table.RowCount` transform.
+Unlike the other query handlers we've implemented, the [GetRowCount](../../../HandlingQueryFolding.md#getrowcount) handler will return a single value - the number of rows expected in the result set. In an M query, this would typically be the result of the `Table.RowCount` transform.
 We have a few different options on how to handle this as part of an OData query. 
 
 * The [$count query parameter](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_The_$inlinecount_System), which returns the count as a separate field in the result set.
