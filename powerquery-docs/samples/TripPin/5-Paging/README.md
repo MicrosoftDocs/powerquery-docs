@@ -11,7 +11,7 @@ generally varies from API to API. Thankfully, TripPin is an OData service, and t
 defines a way of doing pagination using [odata.nextLink](http://docs.oasis-open.org/odata/odata-json-format/v4.0/cs01/odata-json-format-v4.0-cs01.html#_Toc365464689) 
 values returned in the body of the response.
 
-To simplify [previous iterations](../TripPin/README.md) of the connector, the `TripPin.Feed` function was not 'page aware'. 
+To simplify [previous iterations](../4-Paths/README.md) of the connector, the `TripPin.Feed` function was not 'page aware'. 
 It simply parsed whatever JSON was returned from the request, and formatted it as a table. Those familiar with the 
 OData protocol might have noticed that we made a number of incorrect assumptions on the [format of the response](http://docs.oasis-open.org/odata/odata-json-format/v4.0/cs01/odata-json-format-v4.0-cs01.html#_Toc365464681)
 (such as assuming there is a `value` field containing an array of records). 
