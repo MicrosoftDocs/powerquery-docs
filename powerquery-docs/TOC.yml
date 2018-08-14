@@ -80,7 +80,7 @@
       - name: "Handling Schemas"
         href: HandlingSchema.md
       - name: "Handling Status Codes"
-        href: HandlingStatusCodex.md
+        href: HandlingStatusCodes.md
       - name: "Handling Unit Testing"
         href: HandlingUnitTesting.md
       - name: "Helper Functions"
