@@ -171,7 +171,7 @@ function is used to set the function parameter to the `Url.Type` ascribed type.
 
 By associating these functions with the `GithubSample` data source kind, they will automatically use the credentials that the user provided. Any M library functions that have been enabled for extensibility (such as Web.Contents) will automatically inherit these credentials as well.
 
-For more details on how credential and authentication works, please see the [Data Connector Technical Reference](../../docs/m-extensions.md).
+For more details on how credential and authentication works, please see [Handling Authentication](../../HandlingAuthentication.md).
 
 ## Sample URL
 
