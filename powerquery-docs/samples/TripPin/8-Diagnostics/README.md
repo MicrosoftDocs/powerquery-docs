@@ -120,7 +120,7 @@ When you run the query, you'll receive the correct error, but if you check the L
 
 ## Diagnostic helper functions in Diagnostics.pqm
 
-The [Diagnostics.pqm](Diagnostics.pqm) file included in this project contains a number of helper functions that make tracing easier. As shown in the [previous tutorial](7-AdvancedSchema/README.md#refactoring-common-code-into-separate-files), we can include this file in our project (remembering to set the Build Action to *Compile*), and then load it in our connector file. The bottom of our connector file should now look something like the code snippet below. Feel free to explore the various functions this module provides, but in this sample, we'll only be using the `Diagnostics.LogValue` and `Diagnostics.LogFailure` functions.
+The [Diagnostics.pqm](https://raw.githubusercontent.com/Microsoft/DataConnectors/master/samples/TripPin/8-Diagnostics/Diagnostics.pqm) file included in this project contains a number of helper functions that make tracing easier. As shown in the [previous tutorial](../7-AdvancedSchema/README.md#refactoring-common-code-into-separate-files), we can include this file in our project (remembering to set the Build Action to *Compile*), and then load it in our connector file. The bottom of our connector file should now look something like the code snippet below. Feel free to explore the various functions this module provides, but in this sample, we'll only be using the `Diagnostics.LogValue` and `Diagnostics.LogFailure` functions.
 
 ```
 // Diagnostics module contains multiple functions. We can take the ones we need.
