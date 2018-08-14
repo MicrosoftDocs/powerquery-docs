@@ -72,15 +72,37 @@
       - name: "Handling Data Access"
         href: HandlingDataAccess.md
       - name: "ODBC Development"
-        href: odbc.md
+        items:
+        - name: "Overview"
+          href: odbc.md#overview
+        - name: "ODBC Extensibility Functions"
+          href: odbc.md#odbc-extensibility-functions
+        - name: "Parameters for your Data Source Function"
+          href: odbc.md#parameters-for-your-data-source-function
+        - name: "Parameters for Odbc.DataSource"
+          href: odbc.md#parameters-for-odbcdatasource
+        - name: "Creating Your Connector"
+          href: odbc.md#creating-your-connector
+        - name: "Troubleshooting and Testing"
+          href: odbc.md#troubleshooting-and-testing
+        - name: "Common Problems"
+          href: odbc.md#common-problems
       - name: "Handling Paging"
         href: HandlingPaging.md
       - name: "Handling Transformations"
-        href: HandlingTransformations.md
+        items:
+        - name: Static
+          href: HandlingTransformations.md#static-transformations
+        - name: Dynamic
+          href: HandlingTransformations.md#dynamic-transformations
       - name: "Handling Schemas"
         href: HandlingSchema.md
       - name: "Handling Status Codes"
-        href: HandlingStatusCodes.md
+        items: 
+        - name: "Default Behavior"
+          href: HandlingStatusCodes.md
+        - name: "Wait Retry Pattern"
+          href: WaitRetry.md
       - name: "Handling Unit Testing"
         href: HandlingUnitTesting.md
       - name: "Helper Functions"
@@ -89,6 +111,9 @@
         href: HandlingDocumentation.md
       - name: "Handling Navigation Tables"
         href: HandlingNavigationTables.md
+      - name: "Handling Gateway Support"
+        href: HandlingGatewaySupport.md
+        
 - name: Resources
   items:
   - name: "Power BI Documentation"
