@@ -6,9 +6,10 @@ We maintain a list of samples on the DataConnectors repo on Github. Each of the 
 
 
 | Sample | Description | Link |
-| :--- | :--- | :--- |
+| :--- | :--- | :------------------------------------------- |
 | Navigation Tables | This sample provides two examples of how to create a navigation table for your data connector using the Table.ToNavigationTable function. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/NavigationTable) |
 | Unit Testing | This sample shows how you can add simple unit testing to your <extension>.query.pq file. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/UnitTesting) |
+| Relationships | This sample demonstrates the declaration of table relationships that will be detected by Power BI Desktop. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/Relationships) |
 
 ## ODBC
 
@@ -35,5 +36,4 @@ We maintain a list of samples on the DataConnectors repo on Github. Each of the 
 | Part 8 | This sample corresponds to TripPin Tutorial Part 8 - Adding Diagnostics. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/8-Diagnostics) |
 | Part 9 | This sample corresponds to TripPin Tutorial Part 9 - Test Connection. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/9-TestConnection) |
 | Part 10 | This sample corresponds to TripPin Tutorial Part 10 - Query Folding Part 1. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/10-TableView1) |
-
 
