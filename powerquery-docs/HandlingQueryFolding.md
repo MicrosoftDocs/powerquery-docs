@@ -107,6 +107,9 @@ The following handlers are required to enable Direct Query capabilities from an 
 |GetExpression  |`() as record`                                         |
 |OnInvoke       |`(function, arguments, index)`                         |Called to determine Direct Query capabilities. |
 
+<!--
+
 ### GetExpression
 
 ### OnInvoke
+-->
