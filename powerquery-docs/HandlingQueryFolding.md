@@ -89,7 +89,7 @@ The following handlers require processing M `RowExpression` values.
 |OnGroup        |`(keys, aggregates)`                                   |Called for various aggregation transformations. |
 |OnJoin         |`(joinSide, leftTable, rightTable, joinKeys, joinKind)`|Called when performing a join of two tables. |
 |OnSelectRows   |`(selector)`                                           |Called when selecting rows based on an expression (`Table.SelectRows`). |
-
+<!--
 ### OnAddColumns
 
 ### OnGroup
@@ -97,7 +97,7 @@ The following handlers require processing M `RowExpression` values.
 ### OnJoin
 
 ### OnSelectRows
-
+-->
 ## Direct Query Handlers
 
 The following handlers are required to enable Direct Query capabilities from an extension. Note that an extension can implement query folding without declaring full Direct Query support. Direct Query support should only be enabled if the majority of the Table.View handlers are implemented.
