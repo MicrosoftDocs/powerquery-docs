@@ -50,12 +50,12 @@
       href: /samples/MyGraph/README.md
 - name: Samples
   items:
-  - name: "Navigation Tables"
-  - name: "Direct Query for SQL"
-  - name: "Impala ODBC"
-  - name: "Redshift ODBC"
-  - name: "Snowflake ODBC"
-  - name: "Unit Testing"
+  - name: "Functional Samples"
+    href: SamplesDirectory.md#functionality
+  - name: "ODBC Samples"
+    href: SamplesDirectory.md#odbc
+  - name: "TripPin Samples"
+    href: SamplesDirectory.md#trippin
 - name: Concepts
   items:
   - name: Certification
@@ -112,12 +112,15 @@
       - name: "Handling Navigation Tables"
         href: HandlingNavigationTables.md
       - name: "Handling Gateway Support"
-        href: HandlingGatewaySupport.md
-        
+        href: HandlingGatewaySupport.md 
 - name: Resources
   items:
   - name: "Power BI Documentation"
+    href: https://docs.microsoft.com/en-us/power-bi/
   - name: "M Function Reference"
+    href: https://msdn.microsoft.com/en-us/query-bi/m/power-query-m-function-reference
   - name: "M Language Document"
+    href: https://msdn.microsoft.com/en-us/query-bi/m/power-query-m-language-specification
   - name: "M Type Reference"
+    href: https://msdn.microsoft.com/en-us/query-bi/m/power-query-m-type-system
     
