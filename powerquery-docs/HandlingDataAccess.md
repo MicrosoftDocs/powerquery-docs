@@ -1,6 +1,6 @@
 ---
-title: Data source functions
-description: How to use data source functions to wrap connector behavior
+title: Handling Data Access
+description: How to use connectors to access data using M data source functions
 author: cpopell
 manager: kfile
 ms.reviewer: ''
@@ -14,7 +14,9 @@ ms.author: gepopell
 LocalizationGroup: reference
 ---
 
-### Data Source Functions
+# Handling Data Access
+
+## Data Source Functions
 
 A Data Connector wraps and customizes the behavior of a [data source function in the M Library](https://msdn.microsoft.com/library/mt253322.aspx#Anchor_15).
 For example, an extension for a REST API would make use of the [Web.Contents](https://msdn.microsoft.com/library/mt260892.aspx) function to make HTTP requests.
@@ -37,7 +39,7 @@ shared HelloWorld.Contents = (optional message as text) =>
         message;
 ```
 
-### Data Source Kind
+## Data Source Kind
 
 Functions marked as `shared` in your extension can be associated with a specific data source by including a `DataSource.Kind` metadata record on the function with the name of a Data Source definition record. 
 The Data Source record defines the authentication types supported by your data source, and basic branding information (like the display name / label).
@@ -58,7 +60,7 @@ HelloWorld = [
 ];
 ```
 
-#### Properties
+### Properties
 
 The following table lists the fields for your Data Source definition record.
 
@@ -69,7 +71,7 @@ The following table lists the fields for your Data Source definition record.
 | SupportsEncryption | logical  | **(optional)** When true, the UI will present the option to connect to the data source using an encrypted connection. This is typically used for data sources with a non-encrypted fallback mechanism (generally ODBC or ADO.NET based sources).                          |
 
 
-### Publish to UI
+## Publish to UI
 
 Similar to the (Data Source)[#data-source-kind] definition record, the Publish record provides the Power Query UI the information it needs to expose this extension in the Get Data dialog.
 
@@ -89,7 +91,7 @@ HelloWorld.Icons = [
 ];
 ```
 
-#### Properties
+### Properties
 
 The following table lists the fields for your Publish record.
 

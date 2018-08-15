@@ -28,14 +28,3 @@ TripPinImpl = (url as text) =>
     in
         json;
 ```
-
-TODO: Add common optional arguments to Web.Contents:
- - ManualStatusHandling = {500, 502}
- - Content = Binary...
- - Headers = []
-
-TODO: Add section about Binary.Buffer?
-
-TODO: Mention that Header/Code/etc. can be found in `meta` record
-
-TODO: Mention that GET is default, POST happens when Content provided

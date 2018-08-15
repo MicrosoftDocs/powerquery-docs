@@ -20,11 +20,10 @@ title: Installing the PowerQuery SDK
 Power BI Desktop users can download extension files and place them in a known directory (steps described above). Power BI Desktop will automatically load the extensions on restart.
 _We are hard at work on Office Store integration to make it easy for users to discover and install data connectors you build. During this preview phase, developers interested in distributing their connectors for use with Power BI can contact us at DataConnectors (at) microsoft.com._
 ## Additional Links and Resources
-* [Data Connector Technical Reference](docs/m-extensions.md)
 * [M Library Functions](https://msdn.microsoft.com/library/mt253322.aspx)
 * [M Language Specification](https://msdn.microsoft.com/library/mt807488.aspx)
 * [Power BI Developer Center](https://powerbi.microsoft.com/developers/)
-* [Data Connector Tutorial](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin)
+* [Data Connector Tutorial](~/../samples/TripPin/README.md)
 
 
 

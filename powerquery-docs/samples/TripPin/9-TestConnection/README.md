@@ -19,7 +19,7 @@ The tutorial will cover the process of enabling your connector for refresh, and 
 4. Publish a workbook that uses your connector to PowerBI.com
 5. Configure scheduled refresh to test your connector
 
-Please see the [technical documentation](../../../docs/m-extensions.md) for more information on the [TestConnection handler](../../../docs/m-extensions.md#implementing-testconnection-for-gateway-support).
+Please see the [Handling Gateway Support](../../../HandlingGatewaySupport.md) for more information on the TestConnection handler.
 
 ## Background
 

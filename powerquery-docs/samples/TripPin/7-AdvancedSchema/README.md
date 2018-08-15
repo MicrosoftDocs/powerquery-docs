@@ -169,7 +169,7 @@ Unlike `SchemaTransformTable`, `Table.ChangeType` takes in an actual M table typ
 Table.ChangeType = (table, tableType as type) as nullable table => ...
 ```
 
-The full code listing for the `Table.ChangeType` function can be found in the [Table.ChangeType.pqm](Table.ChangeType.pqm) file.
+The full code listing for the `Table.ChangeType` function can be found in the [Table.ChangeType.pqm](https://raw.githubusercontent.com/Microsoft/DataConnectors/master/samples/TripPin/7-AdvancedSchema/Table.ChangeType.pqm) file.
 
 >**Note:** For flexibility, the function can be used on tables, as well as lists of records (which is how tables would be represented in a JSON document).
 
