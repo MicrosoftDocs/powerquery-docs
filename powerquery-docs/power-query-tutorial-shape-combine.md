@@ -41,7 +41,7 @@ The following image shows the **Query Settings** pane for a query that has been 
 
 ![Query settings for Power Query Editor](media/power-query-tutorial-shape-combine/shapecombine_querysettingsfinished2.png)
 
-Using the retirement data from the [what is Power Query](power-query-what-is-power-query.md) overview article, which we found by connecting to a Web data source, let’s shape that data to fit our needs.
+Using the retirement data from the [Using Power Query in Power BI Desktop](power-query-quickstart-using-power-bi.md) quickstart article, which we found by connecting to a Web data source, let’s shape that data to fit our needs.
 
 For starters, let's add a custom column to calculate rank based on all data being equal factors and compare this to the existing column _Rank_.  Here's the **Add Column** ribbon, with an arrow pointing toward the **Custom Column** button, which lets you add a custom column.
 
