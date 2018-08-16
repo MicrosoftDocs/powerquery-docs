@@ -1,3 +1,18 @@
+---
+title: Power Query connector samples
+description: A list of functional, ODBC, and tutorial samples of Power Query connectors
+author: cpopell
+manager: kfile
+ms.reviewer: ''
+
+ms.service: powerquery
+ms.component: power-query
+ms.topic: overview
+ms.date: 08/16/2018
+ms.author: gepopell
+
+LocalizationGroup: reference
+
 # List of Samples
 
 We maintain a list of samples on the DataConnectors repo on Github. Each of the links below links to a folder in the sample repository. Generally these folders include a readme, one or more .pq / .query.pq files, a project file for Visual Studio, and in some cases icons. To open these in Visual Studio, make sure you've set up the SDK properly, and run the .mproj file from the cloned or downloaded folder.
