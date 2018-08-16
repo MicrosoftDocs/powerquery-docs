@@ -12,6 +12,7 @@ ms.date: 08/16/2018
 ms.author: gepopell
 
 LocalizationGroup: reference
+---
 
 # Installing the PowerQuery SDK
 
