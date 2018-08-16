@@ -1,4 +1,6 @@
-### Implementing TestConnection for Gateway Support
+# Handling Gateway Support
+
+## Test Connection
 
 > Custom Connector support is now available in both Personal and Enterprise modes of the [On-Premises Data Gateway](https://powerbi.microsoft.com/en-us/blog/on-premises-data-gateway-july-update-is-now-available/).
 > Both gateway modes support **Import** - **Direct Query** support in the Enterprise mode is targeted at an upcoming release.
