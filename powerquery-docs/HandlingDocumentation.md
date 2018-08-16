@@ -63,7 +63,7 @@ The following table lists the Documentation fields that can be set in the metada
 | Documentation.SampleValues     | list   | List of sample values to be displayed (as faded text) inside of the text box.                                                                                                                                          |
 
 ### Example
-The following code snippet (and resulting dialogs) are from the [HelloWorldWithDocs](/samples/HelloWorldWithDocs) sample.
+The following code snippet (and resulting dialogs) are from the [HelloWorldWithDocs](https://github.com/Microsoft/DataConnectors/tree/master/samples/HelloWorldWithDocs) sample.
 
 ```
 [DataSource.Kind="HelloWorldWithDocs", Publish="HelloWorldWithDocs.Publish"]
