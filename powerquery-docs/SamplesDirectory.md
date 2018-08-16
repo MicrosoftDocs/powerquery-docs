@@ -1,3 +1,19 @@
+---
+title: Power Query connector samples
+description: A list of functional, ODBC, and tutorial samples of Power Query connectors
+author: cpopell
+manager: kfile
+ms.reviewer: ''
+
+ms.service: powerquery
+ms.component: power-query
+ms.topic: overview
+ms.date: 08/16/2018
+ms.author: gepopell
+
+LocalizationGroup: reference
+---
+
 # List of Samples
 
 We maintain a list of samples on the DataConnectors repo on Github. Each of the links below links to a folder in the sample repository. Generally these folders include a readme, one or more .pq / .query.pq files, a project file for Visual Studio, and in some cases icons. To open these in Visual Studio, make sure you've set up the SDK properly, and run the .mproj file from the cloned or downloaded folder.
@@ -7,6 +23,8 @@ We maintain a list of samples on the DataConnectors repo on Github. Each of the 
 
 | Sample | Description | Link |
 | :--- | :--- | :------------------------------------------- |
+| Hello World | This very simple sample shows the basic structure of a connector. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/HelloWorld) |
+| Hello World with Docs | Similar to the Hello World sample, this sample shows how to add documentation to a shared function. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/HelloWorldWithDocs) |
 | Navigation Tables | This sample provides two examples of how to create a navigation table for your data connector using the Table.ToNavigationTable function. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/NavigationTable) |
 | Unit Testing | This sample shows how you can add simple unit testing to your <extension>.query.pq file. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/UnitTesting) |
 | Relationships | This sample demonstrates the declaration of table relationships that will be detected by Power BI Desktop. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/Relationships) |

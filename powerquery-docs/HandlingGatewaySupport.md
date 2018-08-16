@@ -12,6 +12,7 @@ ms.date: 08/10/2018
 ms.author: gepopell
 
 LocalizationGroup: reference
+---
 
 # Handling Gateway Support
 

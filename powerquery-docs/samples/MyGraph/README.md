@@ -1,3 +1,19 @@
+---
+title: Microsoft Graph tutorial for Power Query
+description: Writing a Microsoft Graph connector for Power Query including OAuth
+author: cpopell
+manager: kfile
+ms.reviewer: ''
+
+ms.service: powerquery
+ms.component: power-query
+ms.topic: overview
+ms.date: 08/16/2018
+ms.author: gepopell
+
+LocalizationGroup: reference
+---
+
 # MyGraph Connector Sample
 In this sample we will create a basic data source connector for [Microsoft Graph](https://graph.microsoft.io/en-us/). It is written as a walk-through that you can follow step by step.
 

@@ -1,3 +1,19 @@
+---
+title: Github tutorial for Power Query
+description: Writing a Github connector for Power Query including OAuth
+author: cpopell
+manager: kfile
+ms.reviewer: ''
+
+ms.service: powerquery
+ms.component: power-query
+ms.topic: overview
+ms.date: 08/16/2018
+ms.author: gepopell
+
+LocalizationGroup: reference
+---
+
 # Github Connector Sample
 The Github M extension shows how to add support for an OAuth 2.0 protocol authentication flow. You can learn more about the specifics for Github's authentication flow on the [Github Developer site](https://developer.github.com/guides/basics-of-authentication/).
 
