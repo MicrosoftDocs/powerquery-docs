@@ -1,3 +1,18 @@
+---
+title: Query folding for Power Query connectors
+description: Manage query folding for Power Query connectors using the Table.View function
+author: cpopell
+manager: kfile
+ms.reviewer: ''
+
+ms.service: powerquery
+ms.component: power-query
+ms.topic: overview
+ms.date: 08/16/2018
+ms.author: gepopell
+
+LocalizationGroup: reference
+
 # Using Table.View to Implement Query Folding
 
 > This content is still under development. Entries may contain partial content.
