@@ -72,8 +72,3 @@ It will bring up an authentication dialogue. Since there's no authentication opt
 
 Press connect and it will ###finish and test this###
 Query editor
-
-
-Download link?
-
-TODO: complete
