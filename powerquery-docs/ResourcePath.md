@@ -14,9 +14,7 @@ ms.author: gepopell
 LocalizationGroup: reference
 ---
 
-# Resource Path
-
-[comment]: <> (See https://github.com/Microsoft/DataConnectors/blob/master/docs/m-extensions.md)
+# Handling Resource Path
 
 The M engine identifies a data source using a combination of its *Kind* and *Path*. When a data source is encountered during a query evaluation, the M engine will try to find matching credentials. If no credentials are found, the engine returns a special error which results in a credential prompt in Power Query.
 
