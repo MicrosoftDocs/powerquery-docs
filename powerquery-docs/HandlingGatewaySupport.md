@@ -1,3 +1,18 @@
+---
+title: Gateway Support for Power Query connectors
+description: Manage gateway support for Power Query connectors, including test connection
+author: cpopell
+manager: kfile
+ms.reviewer: ''
+
+ms.service: powerquery
+ms.component: power-query
+ms.topic: overview
+ms.date: 08/10/2018
+ms.author: gepopell
+
+LocalizationGroup: reference
+
 # Handling Gateway Support
 
 ## Test Connection
