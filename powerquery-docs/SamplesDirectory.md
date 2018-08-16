@@ -1,153 +1,39 @@
 # List of Samples
 
+We maintain a list of samples on the DataConnectors repo on Github. Each of the links below links to a folder in the sample repository. Generally these folders include a readme, one or more .pq / .query.pq files, a project file for Visual Studio, and in some cases icons. To open these in Visual Studio, make sure you've set up the SDK properly, and run the .mproj file from the cloned or downloaded folder.
+
 ## Functionality
 
-### Navigation Tables
 
-| File | Description | Link |
-| :--- | :--- | :--- |
-| a | b | c |
-| d | e | f |
-| g | h | i |
-
-### Unit Testing
-
-| File | Description | Link |
-| :--- | :--- | :--- |
-| a | b | c |
-| d | e | f |
-| g | h | i |
+| Sample | Description | Link |
+| :--- | :--- | :------------------------------------------- |
+| Navigation Tables | This sample provides two examples of how to create a navigation table for your data connector using the Table.ToNavigationTable function. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/NavigationTable) |
+| Unit Testing | This sample shows how you can add simple unit testing to your <extension>.query.pq file. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/UnitTesting) |
+| Relationships | This sample demonstrates the declaration of table relationships that will be detected by Power BI Desktop. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/Relationships) |
 
 ## ODBC
 
-### Direct Query for SQL
-
-| File | Description | Link |
+| Sample | Description | Link |
 | :--- | :--- | :--- |
-| a | b | c |
-| d | e | f |
-| g | h | i |
-
-### Redshift
-
-| File | Description | Link |
-| :--- | :--- | :--- |
-| a | b | c |
-| d | e | f |
-| g | h | i |
-
-### Snowflake
-
-| File | Description | Link |
-| :--- | :--- | :--- |
-| a | b | c |
-| d | e | f |
-| g | h | i |
-
-### Impala
-
-| File | Description | Link |
-| :--- | :--- | :--- |
-| a | b | c |
-| d | e | f |
-| g | h | i |
-
-## OAuth
-
-### Github
-
-| File | Description | Link |
-| :--- | :--- | :--- |
-| a | b | c |
-| d | e | f |
-| g | h | i |
-
-### MyGraph
-
-| File | Description | Link |
-| :--- | :--- | :--- |
-| a | b | c |
-| d | e | f |
-| g | h | i |
+| SQL | This connector sample serves as a template for ODBC connectors. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/ODBC/SqlODBC) |
+| Redshift | This connector sample uses the Redshift ODBC driver, and is based on the connector template. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/ODBC/RedshiftODBC) |
+| Hive LLAP | This connector sample uses the Hive ODBC driver, and is based on the connector template. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/ODBC/HiveSample) |
+| Snowflake | This connector sample uses the Snowflake ODBC driver, and is based on the connector template. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/ODBC/SnowflakeODBC) |
+| Impala | This connector sample uses the Cloudera Impala ODBC driver, and is based on the connector template. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/ODBC/ImpalaODBC)
+| Direct Query for SQL | This sample creates an ODBC based custom connector that enables Direct Query for SQL Server. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/DirectQueryForSQL) |
 
 ## TripPin
 
-### Part 1
-
-| File | Description | Link |
+| Sample | Description | Link |
 | :--- | :--- | :--- |
-| a | b | c |
-| d | e | f |
-| g | h | i |
+| Part 1 | This sample corresponds to TripPin Tutorial Part 1 - OData. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/1-OData) |
+| Part 2 | This sample corresponds to TripPin Tutorial Part 2 - REST. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/2-Rest) |
+| Part 3 | This sample corresponds to TripPin Tutorial Part 3 - Navigation Tables. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/3-NavTables) |
+| Part 4 | This sample corresponds to TripPin Tutorial Part 4 - Data Source Paths. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/4-Paths) |
+| Part 5 | This sample corresponds to TripPin Tutorial Part 5 - Paging. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/5-Paging) |
+| Part 6 | This sample corresponds to TripPin Tutorial Part 6 - Enforcing Schema. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/6-Schema) |
+| Part 7 | This sample corresponds to TripPin Tutorial Part 7 - Advanced Schema with M Types. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/7-AdvancedSchema) |
+| Part 8 | This sample corresponds to TripPin Tutorial Part 8 - Adding Diagnostics. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/8-Diagnostics) |
+| Part 9 | This sample corresponds to TripPin Tutorial Part 9 - Test Connection. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/9-TestConnection) |
+| Part 10 | This sample corresponds to TripPin Tutorial Part 10 - Query Folding Part 1. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/10-TableView1) |
 
-### Part 2
-
-| File | Description | Link |
-| :--- | :--- | :--- |
-| a | b | c |
-| d | e | f |
-| g | h | i |
-
-### Part 3
-
-| File | Description | Link |
-| :--- | :--- | :--- |
-| a | b | c |
-| d | e | f |
-| g | h | i |
-
-### Part 4
-
-| File | Description | Link |
-| :--- | :--- | :--- |
-| a | b | c |
-| d | e | f |
-| g | h | i |
-
-### Part 5
-
-| File | Description | Link |
-| :--- | :--- | :--- |
-| a | b | c |
-| d | e | f |
-| g | h | i |
-
-### Part 6
-
-| File | Description | Link |
-| :--- | :--- | :--- |
-| a | b | c |
-| d | e | f |
-| g | h | i |
-
-### Part 7
-
-| File | Description | Link |
-| :--- | :--- | :--- |
-| a | b | c |
-| d | e | f |
-| g | h | i |
-
-### Part 8
-
-| File | Description | Link |
-| :--- | :--- | :--- |
-| a | b | c |
-| d | e | f |
-| g | h | i |
-
-### Part 9
-
-| File | Description | Link |
-| :--- | :--- | :--- |
-| a | b | c |
-| d | e | f |
-| g | h | i |
-
-### Part 10
-
-| File | Description | Link |
-| :--- | :--- | :--- |
-| a | b | c |
-| d | e | f |
-| g | h | i |
