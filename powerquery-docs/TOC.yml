@@ -87,6 +87,8 @@
           href: odbc.md#troubleshooting-and-testing
         - name: "Common Problems"
           href: odbc.md#common-problems
+      - name: "Handling Resource Path"
+        href: HandlingResourcePath.md
       - name: "Handling Paging"
         href: HandlingPaging.md
       - name: "Handling Transformations"
