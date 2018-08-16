@@ -73,3 +73,5 @@ It will bring up an authentication dialogue. Since there's no authentication opt
 Press connect and it will tell you that it's a "Preview connector", since we have "Beta" set to true in the query. Since there's no authentication, the authentication screen will present a tab for Anonymous authentication with no fields. Press "Connect" again to finish.
 
 Finally, the query editor will come up showing what we expect--a function that returns the text "Hello world".
+
+For the fully implemented sample, please see the [Hello World Sample](https://github.com/Microsoft/DataConnectors/tree/master/samples/HelloWorld) in the Data Connectors sample repo.
