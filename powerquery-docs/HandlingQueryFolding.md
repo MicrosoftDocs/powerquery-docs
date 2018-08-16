@@ -12,6 +12,7 @@ ms.date: 08/16/2018
 ms.author: gepopell
 
 LocalizationGroup: reference
+---
 
 # Using Table.View to Implement Query Folding
 
