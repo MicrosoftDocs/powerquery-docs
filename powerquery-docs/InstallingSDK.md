@@ -1,7 +1,17 @@
 ---
-uid: InstallingSDK.md
-title: Installing the PowerQuery SDK
----
+title: Installing the Power Query SDK
+description: Installation and explanation of the Power Query SDK and how to use Custom Connectors
+author: cpopell
+manager: kfile
+ms.reviewer: ''
+
+ms.service: powerquery
+ms.component: power-query
+ms.topic: overview
+ms.date: 08/16/2018
+ms.author: gepopell
+
+LocalizationGroup: reference
 
 # Installing the PowerQuery SDK
 
