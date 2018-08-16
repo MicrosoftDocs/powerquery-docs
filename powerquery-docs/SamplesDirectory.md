@@ -23,6 +23,8 @@ We maintain a list of samples on the DataConnectors repo on Github. Each of the 
 
 | Sample | Description | Link |
 | :--- | :--- | :------------------------------------------- |
+| Hello World | This very simple sample shows the basic structure of a connector. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/HelloWorld) |
+| Hello World with Docs | Similar to the Hello World sample, this sample shows how to add documentation to a shared function. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/HelloWorldWithDocs) |
 | Navigation Tables | This sample provides two examples of how to create a navigation table for your data connector using the Table.ToNavigationTable function. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/NavigationTable) |
 | Unit Testing | This sample shows how you can add simple unit testing to your <extension>.query.pq file. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/UnitTesting) |
 | Relationships | This sample demonstrates the declaration of table relationships that will be detected by Power BI Desktop. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/Relationships) |
