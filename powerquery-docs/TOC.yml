@@ -10,6 +10,7 @@
     href: power-query-quickstart-using-power-bi.md
   - name: "Connecting and Transforming Data"
   - name: "Combining Data"
+    href: power-query-tutorial-shape-combine.md
   - name: "Installing the PowerQuery SDK"
     href: InstallingSDK.md
   - name: "Starting to Develop Custom Connectors"
