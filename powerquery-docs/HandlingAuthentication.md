@@ -125,7 +125,7 @@ If no credentials are found, the engine returns an special error which results i
 
 The *Kind* value comes from [Data Source Kind](HandlingDataAccess.md#data-source-kind) definition. 
 
-The *Path* value is derived from the _required parameters_ of your [data source function](HandlingDataAccess#data-source-functions). Optional parameters are not factored into the data source path identifier.
+The *Path* value is derived from the _required parameters_ of your [data source function](HandlingDataAccess.md#data-source-functions). Optional parameters are not factored into the data source path identifier.
 As a result, all data source functions associated with a data source kind must have the same parameters.
 There is special handling for functions that have a single parameter of type `Uri.Type`. See the [section below](#functions-with-an-uri-parameter) for details.
 
