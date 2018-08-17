@@ -19,7 +19,7 @@ LocalizationGroup: reference
 ## Authentication Kinds
 An extension can support one or more kinds of Authentication. Each authentication kind is a different type of credential. The authentication UI displayed to end users in Power Query is driven by the type of credential(s) that an extension supports.
 
-The list of supported authentication types is defined as part of an extension's [Data Source Kind](HandlingDataAccess#data-source-kind) definition. Each Authentication value is a record with specific fields. The table below lists the expected fields for each kind. All fields are required unless marked otherwise.
+The list of supported authentication types is defined as part of an extension's [Data Source Kind](HandlingDataAccess.md#data-source-kind) definition. Each Authentication value is a record with specific fields. The table below lists the expected fields for each kind. All fields are required unless marked otherwise.
 
 | Authentication Kind | Field         | Description                                                                                                                 |
 |:--------------------|:--------------|:----------------------------------------------------------------------------------------------------------------------------|
@@ -79,7 +79,7 @@ The `Extension.CurrentCredential()` function returns a record object. The fields
 | access_token       | OAuth access token value.                                                                                                                                                                                                                                                                                                                            | OAuth                          |
 | Properties         | A record containing other custom properties for a given credential. Typically used with OAuth to store additional properties (such as the refresh\_token) returned with the access\_token during the authentication flow.                                                                                                                            | OAuth                          |
 | Key                | The API key value. Note, the key value is also available in the Password field as well. By default the mashup engine will insert this in an Authorization header as if this value were a basic auth password (with no username). If this is not the behavior you want, you must specify the ManualCredentials = true option in the options record.   | Key                            |
-| EncryptConnection  | A logical value that determined whether to require an encrypted connection to the data source. This value is available for all Authentication Kinds, but will only be set if EncryptConnection is specified in the [Data Source](#data-source-kind) definition.                                                                                      | All                            |
+| EncryptConnection  | A logical value that determined whether to require an encrypted connection to the data source. This value is available for all Authentication Kinds, but will only be set if EncryptConnection is specified in the [Data Source](HandlingDataAccess.md#data-source-kind) definition.                                                                                      | All                            |
 
 The following is an example of accessing the current credential for an API key and using it to populate a custom header (`x-APIKey`).
 
@@ -123,7 +123,7 @@ The M engine identifies a data source using a combination of its *Kind* and *Pat
 When a data source is encountered during a query evaluation, the M engine will try to find matching credentials.
 If no credentials are found, the engine returns an special error which results in a credential prompt in Power Query. 
 
-The *Kind* value comes from [Data Source Kind](HandlingDataAccess.md#data-source-kind definition. 
+The *Kind* value comes from [Data Source Kind](HandlingDataAccess.md#data-source-kind) definition. 
 
 The *Path* value is derived from the _required parameters_ of your [data source function](HandlingDataAccess#data-source-functions). Optional parameters are not factored into the data source path identifier.
 As a result, all data source functions associated with a data source kind must have the same parameters.
