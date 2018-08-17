@@ -47,7 +47,7 @@ The name of the record becomes is unique identifier.
 
 Functions associated with a data source must have the same required function parameters (including name, type, and order). Functions for a specific Data Source Kind can only use credentials associated with that Kind.
 Credentials are identified at runtime by performing a lookup based on the combination of the function's required parameters.
-For more information about how credentials are identified, please see [Data Source Paths] below.
+For more information about how credentials are identified, please see [Data Source Paths](HandlingAuthentication.md#data-source-paths).
 
 **Example:**
 
@@ -66,7 +66,7 @@ The following table lists the fields for your Data Source definition record.
 
 | Field              | Type     | Details                                                                                                                                                                                                                                                                   |
 |:-------------------|:---------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Authentication     | record   | Specifies one or more types of authentication supported by your data source. At least one kind is required. Each kind will be displayed as an option in the Power Query credential prompt. For more information, see [Authentication Kinds](#authentication-kinds) below. |
+| Authentication     | record   | Specifies one or more types of authentication supported by your data source. At least one kind is required. Each kind will be displayed as an option in the Power Query credential prompt. For more information, see [Authentication Kinds](HandlingAuthentication.md#authentication-kinds). |
 | Label              | text     | **(optional)** Friendly display name for this extension in credential dialogs.                                                                                                                                                                                            |
 | SupportsEncryption | logical  | **(optional)** When true, the UI will present the option to connect to the data source using an encrypted connection. This is typically used for data sources with a non-encrypted fallback mechanism (generally ODBC or ADO.NET based sources).                          |
 
