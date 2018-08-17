@@ -19,6 +19,8 @@
     href: CreatingFirstConnector.md
 - name: Tutorials
   items:
+  - name: "Shape and combine data using Power Query Editor"
+    href: power-query-tutorial-shape-combine.md  
   - name: TripPin Walkthrough
     items:
     - name: "Overview"
