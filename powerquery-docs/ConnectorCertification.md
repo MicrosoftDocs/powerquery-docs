@@ -1,3 +1,19 @@
+---
+title: Connector Certification
+description: Guidelines on connector certification and implementation requirements
+author: cpopell
+manager: kfile
+ms.reviewer: ''
+
+ms.service: powerquery
+ms.component: power-query
+ms.topic: conceptual
+ms.date: 08/16/2018
+ms.author: gepopell
+
+LocalizationGroup: reference
+---
+
 # Connector Certification
 
 When developing a custom connector, or if you've been given one by another developer or vendor, you'll notice that they require you to lower the security settings in Power BI to use them. This is due to the fact that M is a versatile language that (as seen in [Handling Authentication](HandlingAuthentication.md)) has the capacity to interact with stored credentials. This means that we needed to give end users a way to only allow certified connectors to run.
@@ -21,9 +37,9 @@ We have a certain set of requirements for certification. We recognize that not e
 
 ### Before starting
 * Developer must own the data source or have recorded permission from the owner of the data source to develop a connector for it.
-* Developer must have an NDA in ContractWeb
-* Developer must sign a Business Partner Agreement
-* Data source must be publicly available (i.e. we are not certifying internal/organizational connectors at this point
+* Developer must sign an NDA
+* Developer must sign a business partner agreement with our team
+* Data source must not be an internal only data source
   
 ### Artifacts
 * PBIX file
