@@ -18,7 +18,7 @@ LocalizationGroup: reference
 
 Power Query will automatically generate an invocation UI for you based on the arguments for your function. By default, this UI will contain the name of your function, and an input for each of your parameters. 
 
-![DefaultFunctionPrompt](/images/defaultFunctionPrompt.png "Function prompt")
+![DefaultFunctionPrompt](images/defaultFunctionPrompt.png "Function prompt")
 
 Similarly, evaluating the name of your function, without specifying parameters, will display information about it. 
 
