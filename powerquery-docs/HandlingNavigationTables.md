@@ -71,7 +71,7 @@ Each of the following item kind values provide a different icon in the navigatio
 
 The image below shows the icon for item kind in Power BI Desktop. 
 
-![ItemKinds](/images/itemKinds.png)
+![ItemKinds](images/itemKinds.png)
 
 ## Examples
 
