@@ -7,7 +7,7 @@ ms.reviewer: ''
 
 ms.service: powerquery
 ms.component: power-query
-ms.topic: overview
+ms.topic: conceptual
 ms.date: 08/16/2018
 ms.author: gepopell
 
@@ -28,6 +28,13 @@ We maintain a list of samples on the DataConnectors repo on Github. Each of the 
 | Navigation Tables | This sample provides two examples of how to create a navigation table for your data connector using the Table.ToNavigationTable function. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/NavigationTable) |
 | Unit Testing | This sample shows how you can add simple unit testing to your <extension>.query.pq file. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/UnitTesting) |
 | Relationships | This sample demonstrates the declaration of table relationships that will be detected by Power BI Desktop. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/Relationships) |
+  
+## OAuth
+
+| Sample | Description | Link |
+| :--- | :--- | :--- |
+| Github | This sample corresponds to the [Github connector tutorial](~/../samples/Github/README.md). | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/Github) |
+| MyGraph | This sample corresponds to the [Microsoft Graph connector tutorial](~/../samples/MyGraph/README.md). | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/MyGraph) |
 
 ## ODBC
 
@@ -44,14 +51,14 @@ We maintain a list of samples on the DataConnectors repo on Github. Each of the 
 
 | Sample | Description | Link |
 | :--- | :--- | :--- |
-| Part 1 | This sample corresponds to TripPin Tutorial Part 1 - OData. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/1-OData) |
-| Part 2 | This sample corresponds to TripPin Tutorial Part 2 - REST. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/2-Rest) |
-| Part 3 | This sample corresponds to TripPin Tutorial Part 3 - Navigation Tables. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/3-NavTables) |
-| Part 4 | This sample corresponds to TripPin Tutorial Part 4 - Data Source Paths. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/4-Paths) |
-| Part 5 | This sample corresponds to TripPin Tutorial Part 5 - Paging. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/5-Paging) |
-| Part 6 | This sample corresponds to TripPin Tutorial Part 6 - Enforcing Schema. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/6-Schema) |
-| Part 7 | This sample corresponds to TripPin Tutorial Part 7 - Advanced Schema with M Types. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/7-AdvancedSchema) |
-| Part 8 | This sample corresponds to TripPin Tutorial Part 8 - Adding Diagnostics. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/8-Diagnostics) |
-| Part 9 | This sample corresponds to TripPin Tutorial Part 9 - Test Connection. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/9-TestConnection) |
-| Part 10 | This sample corresponds to TripPin Tutorial Part 10 - Query Folding Part 1. | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/10-TableView1) |
+| Part 1 | This sample corresponds to [TripPin Tutorial Part 1 - OData](~/../samples/TripPin/1-OData/README.md). | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/1-OData) |
+| Part 2 | This sample corresponds to [TripPin Tutorial Part 2 - REST](~/../samples/TripPin/2-Rest/README.md). | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/2-Rest) |
+| Part 3 | This sample corresponds to [TripPin Tutorial Part 3 - Navigation Tables](~/../samples/TripPin/3-NavTables/README.md). | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/3-NavTables) |
+| Part 4 | This sample corresponds to [TripPin Tutorial Part 4 - Data Source Paths](~/../samples/TripPin/4-Paths/README.md). | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/4-Paths) |
+| Part 5 | This sample corresponds to [TripPin Tutorial Part 5 - Paging](~/../samples/TripPin/5-Paging/README.md). | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/5-Paging) |
+| Part 6 | This sample corresponds to [TripPin Tutorial Part 6 - Enforcing Schema](~/../samples/TripPin/6-Schema/README.md). | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/6-Schema) |
+| Part 7 | This sample corresponds to [TripPin Tutorial Part 7 - Advanced Schema with M Types](~/../samples/TripPin/7-AdvancedSchema/README.md). | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/7-AdvancedSchema) |
+| Part 8 | This sample corresponds to [TripPin Tutorial Part 8 - Adding Diagnostics](~/../samples/TripPin/8-Diagnostics/README.md). | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/8-Diagnostics) |
+| Part 9 | This sample corresponds to [TripPin Tutorial Part 9 - Test Connection](~/../samples/TripPin/9-TestConnection/README.md). | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/9-TestConnection) |
+| Part 10 | This sample corresponds to [TripPin Tutorial Part 10 - Query Folding Part 1](~/../samples/TripPin/10-TableView1/README.md). | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/10-TableView1) |
 

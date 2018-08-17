@@ -60,7 +60,7 @@
 - name: Concepts
   items:
   - name: Certification
-    items:
+    href: ConnectorCertification.md
 - name: How To
   items: 
 - name: Reference
