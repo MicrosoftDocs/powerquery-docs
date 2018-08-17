@@ -141,7 +141,7 @@ The _Path_ value for a data source is derived from the data source function's re
 By default, you can see the actual string value in the Data source settings dialog in Power BI Desktop, and in the credential prompt.
 If the Data Source Kind definition has included a `Label` value, you will see the label value instead.
 
-For example, the data source function in the [HelloWorldWithDocs sample](~/../samples/HelloWorldWithDocs/README.md) has the following signature:
+For example, the data source function in the [HelloWorldWithDocs sample](https://github.com/Microsoft/DataConnectors/tree/master/samples/HelloWorldWithDocs) has the following signature:
 
 ```
 HelloWorldWithDocs.Contents = (message as text, optional count as number) as table => ...
