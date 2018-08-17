@@ -1,3 +1,19 @@
+---
+title: TripPin 3 - Navigation Tables
+description: Adding navigation tables to the TripPin REST connector.
+author: cpopell
+manager: kfile
+ms.reviewer: ''
+
+ms.service: powerquery
+ms.component: power-query
+ms.topic: tutorial
+ms.date: 08/16/2018
+ms.author: gepopell
+
+LocalizationGroup: reference
+---
+
 # TripPin Part 3 - Navigation Tables
 
 This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially – each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector. 
@@ -7,7 +23,7 @@ In this lesson, you will:
 * Create a navigation table for a fixed set of queries
 * Test the navigation table in Power BI Desktop
  
-This lesson adds a navigation table to the TripPin connector created in the [previous lesson](../2-Rest). When our connector used the OData.Feed function ([Part 1](../1_OData)), we received the navigation table “for free”, as derived from the OData service’s $metadata document. When we moved to the Web.Contents function ([Part 2](../2-Rest)), we lost the built-in navigation table. In this lesson, we will take a set of fixed queries we created in Power BI Desktop and add the appropriate metadata for Power Query to popup the Navigator dialog for our data source function.
+This lesson adds a navigation table to the TripPin connector created in the [previous lesson](../2-Rest/README.md). When our connector used the OData.Feed function ([Part 1](../1-OData/README.md)), we received the navigation table “for free”, as derived from the OData service’s $metadata document. When we moved to the Web.Contents function ([Part 2](../2-Rest/README.md)), we lost the built-in navigation table. In this lesson, we will take a set of fixed queries we created in Power BI Desktop and add the appropriate metadata for Power Query to popup the Navigator dialog for our data source function.
 
 Please see the [Navigation Table documentation](../../../HandlingNavigationTables.md) for more information about using nav tables. 
 

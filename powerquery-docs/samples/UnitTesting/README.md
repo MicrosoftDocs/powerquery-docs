@@ -14,7 +14,7 @@ shared UnitTesting.Returns123 = () => "123";
 shared UnitTesting.ReturnsTableWithFiveRows = () => Table.Repeat(#table({"a"},{{1}}), 5);
 ```
 
-Our unit test code is made up of a number of Facts, and a bunch of common code for the unit test framework (`ValueToText`, `Fact`, `Facts`, `Facts.Summarize`). The following code provides an example set of Facts - please see the [UnitTesting.query.pq](UnitTesting.query.pq) file for the common code.
+Our unit test code is made up of a number of Facts, and a bunch of common code for the unit test framework (`ValueToText`, `Fact`, `Facts`, `Facts.Summarize`). The following code provides an example set of Facts - please see the [UnitTesting.query.pq](https://raw.githubusercontent.com/Microsoft/DataConnectors/master/samples/UnitTesting/UnitTesting.query.pq) file for the common code.
 
 ```
 section UnitTestingUnitTests;
@@ -53,8 +53,8 @@ shared MyExtension.UnitTest =
 
 Running the sample in Visual Studio gives you a visual summary of the pass rates:
 
-![unit tests](../../blobs/unitTestingSample.png)
+![unit tests](../../images/unitTestingSample.png)
 
 Here is an example with a forced failure:
 
-![unit test failure](../../blobs/unitTestingFailure.png)
+![unit test failure](../../images/unitTestingFailure.png)

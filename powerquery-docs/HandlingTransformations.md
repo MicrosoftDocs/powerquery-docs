@@ -7,8 +7,8 @@ ms.reviewer: ''
 
 ms.service: powerquery
 ms.component: power-query
-ms.topic: overview
-ms.date: 08/10/2018
+ms.topic: conceptual
+ms.date: 08/16/2018
 ms.author: gepopell
 
 LocalizationGroup: reference
@@ -19,7 +19,7 @@ For situations where the data source response is not presented in a format that 
 ## Static Transformations
 In most cases, the data is presented in a consistent way by the data source: column names, data types, and hierarchical structure are consistent for a given endpoint. In this situation it is appropriate to always apply the same set of transformations to get the data in a format acceptable to Power BI.
 
-An example of static transformation can be found in the [TripPin tutorial] when the data source is treated as a standard REST service:
+An example of static transformation can be found in the [TripPin Part 2 - Data Connector for a REST Service](~/../samples/TripPin/2-Rest/README.md) tutorial when the data source is treated as a standard REST service:
 
 ```
 let
@@ -45,7 +45,7 @@ It is important to note that a sequence of static transformations of this specif
 
 This high level of specificity may be necessary for pushing data to a navigation table, but for more general data access functions it is recommended that you only perform transformations that are appropriate for all endpoints.
 
-> **Note**: Be sure to test transformations under a variety of data circumstances. If the user doesn't have any data at the `/airlines` endpoint, do your transformations result in an empty table with the correct schema? Or is an error encountered during evaluation? See [error handling] for techniques to handle errors automatically.
+> **Note**: Be sure to test transformations under a variety of data circumstances. If the user doesn't have any data at the `/airlines` endpoint, do your transformations result in an empty table with the correct schema? Or is an error encountered during evaluation? See [TripPin Part 7: Advanced Schema with M Types](~/../samples/TripPin/7-AdvancedSchema/README.md) for a discussion on unit testing.
 
 ## Dynamic Transformations
 More complex logic is sometimes needed to convert API responses into stable and consistent forms appropriate for Power BI data models.
@@ -78,9 +78,5 @@ result = Table.FromRows(listOfRows, columnTitlesWithRowNumber)
 2. Next we define a function that allows us to parse a row into a List of cell `value`s. We again prepend `rowNumber` information.
 3. Apply our `RowAsList()` function to each of the `row`s returned in the API response.
 4. Convert the List to a table, specifying the column headers.
-
-[TripPin tutorial]: https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/2-Rest#authoring-transformations-in-power-query
-
-[error handling]: TODO
 
 [endpoint response]: http://smartsheet-platform.github.io/api-docs/#sheets

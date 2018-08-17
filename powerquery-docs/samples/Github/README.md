@@ -1,3 +1,19 @@
+---
+title: Github tutorial for Power Query
+description: Writing a Github connector for Power Query including OAuth
+author: cpopell
+manager: kfile
+ms.reviewer: ''
+
+ms.service: powerquery
+ms.component: power-query
+ms.topic: tutorial
+ms.date: 08/16/2018
+ms.author: gepopell
+
+LocalizationGroup: reference
+---
+
 # Github Connector Sample
 The Github M extension shows how to add support for an OAuth 2.0 protocol authentication flow. You can learn more about the specifics for Github's authentication flow on the [Github Developer site](https://developer.github.com/guides/basics-of-authentication/).
 
@@ -171,7 +187,7 @@ function is used to set the function parameter to the `Url.Type` ascribed type.
 
 By associating these functions with the `GithubSample` data source kind, they will automatically use the credentials that the user provided. Any M library functions that have been enabled for extensibility (such as Web.Contents) will automatically inherit these credentials as well.
 
-For more details on how credential and authentication works, please see the [Data Connector Technical Reference](../../docs/m-extensions.md).
+For more details on how credential and authentication works, please see [Handling Authentication](../../HandlingAuthentication.md).
 
 ## Sample URL
 

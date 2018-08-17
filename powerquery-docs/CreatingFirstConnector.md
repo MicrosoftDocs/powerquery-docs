@@ -7,7 +7,7 @@ ms.reviewer: ''
 
 ms.service: powerquery
 ms.component: power-query
-ms.topic: overview
+ms.topic: quickstart
 ms.date: 08/10/2018
 ms.author: gepopell
 
@@ -62,7 +62,7 @@ HelloWorld.Icons = [
 ];
 ```
 
-Once you built the file and copied it to the correct directory as instructed in the "Installing the PowerQuery SDK" ###LINK###, open PowerBI. You can search for the "hello" connector in the Get Data dialogue. 
+Once you built the file and copied it to the correct directory following the instructions in [Installing the PowerQuery SDK](InstallingSDK.md) tutorial, open PowerBI. You can search for "hello" to find your connector in the Get Data dialogue. 
 
 
 
@@ -70,10 +70,8 @@ It will bring up an authentication dialogue. Since there's no authentication opt
 
 
 
-Press connect and it will ###finish and test this###
-Query editor
+Press connect and it will tell you that it's a "Preview connector", since we have "Beta" set to true in the query. Since there's no authentication, the authentication screen will present a tab for Anonymous authentication with no fields. Press "Connect" again to finish.
 
+Finally, the query editor will come up showing what we expect--a function that returns the text "Hello world".
 
-Download link?
-
-TODO: complete
+For the fully implemented sample, please see the [Hello World Sample](https://github.com/Microsoft/DataConnectors/tree/master/samples/HelloWorld) in the Data Connectors sample repo.

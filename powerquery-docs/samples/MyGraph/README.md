@@ -1,3 +1,19 @@
+---
+title: Microsoft Graph tutorial for Power Query
+description: Writing a Microsoft Graph connector for Power Query including OAuth
+author: cpopell
+manager: kfile
+ms.reviewer: ''
+
+ms.service: powerquery
+ms.component: power-query
+ms.topic: tutorial
+ms.date: 08/16/2018
+ms.author: gepopell
+
+LocalizationGroup: reference
+---
+
 # MyGraph Connector Sample
 In this sample we will create a basic data source connector for [Microsoft Graph](https://graph.microsoft.io/en-us/). It is written as a walk-through that you can follow step by step.
 
@@ -37,7 +53,7 @@ in
 
 Set the `client_id` with the app id you received when you registered your Graph application.
 
-Graph has an extensive list of permission scopes that your application can request. For this sample, the app will request all scopes that do not require admin consent. We will define two more variables – a list of the scopes we want, and the prefix string that graph uses. We'll also add a couple of helper functions to convert the scope list into the expected format.
+Graph has an extensive list of permission scopes that your application can request. For this sample, the app will request all scopes that do not require admin consent. We will define two more variables â€“ a list of the scopes we want, and the prefix string that graph uses. We'll also add a couple of helper functions to convert the scope list into the expected format.
 
 ```
 scope_prefix = "https://graph.microsoft.com/",
@@ -121,7 +137,7 @@ in
 
 Close the Advanced Query Editor to see the generated authorization URL. 
 
-![authorizeUrl value in Power BI Desktop](../../blobs/graph1.png)
+![authorizeUrl value in Power BI Desktop](../../images/graph1.png)
 
 Launch [Fiddler](http://www.telerik.com/fiddler) and copy and paste the URL into the browser of your choice. 
 
@@ -130,12 +146,12 @@ Launch [Fiddler](http://www.telerik.com/fiddler) and copy and paste the URL into
 Entering the URL should bring up the standard Azure Active Directory login page. Complete the auth flow using your regular credentials, and then look at the fiddler trace.
 You'll be interested in the lines with a status of 302 and a host value of login.microsoftonline.com. 
 
-![Fiddler trace of AAD auth flow](../../blobs/graph2.png)
+![Fiddler trace of AAD auth flow](../../images/graph2.png)
 
 Click on the request to `/login.srf` and view the Headers of the Response.
 Under Transport, you will find a location header with the `redirect_uri` value you specified in your code, and a query string containing a very long code value.\
 Extract the code value only, and paste it into your M query as a new variable.
-Note, the header value will also contain a `&session_state=xxxx` query string value at the end – remove this part from the code.
+Note, the header value will also contain a `&session_state=xxxx` query string value at the end â€“ remove this part from the code.
 Also, be sure to include double quotes around the value after you paste it into the advanced query editor. 
 
 To exchange the code for an auth token we will need to create a POST request to the token endpoint.
@@ -161,12 +177,12 @@ jsonResponse = Json.Document(tokenResponse)
 
 When you return the jsonResponse, Power Query will likely prompt you for credentials. Choose Anonymous, and click OK. 
 
-![Authentication prompt](../../blobs/graph3.png)
+![Authentication prompt](../../images/graph3.png)
 
-The authentication code returned by AAD has a short timeout – probably shorter than the time it took you to do the previous steps.
+The authentication code returned by AAD has a short timeout â€“ probably shorter than the time it took you to do the previous steps.
 If your code has expired, you will see a response like this:
 
-![Error for expired code](../../blobs/graph4.png)
+![Error for expired code](../../images/graph4.png)
 
 If you check the fiddler trace you will see a more detailed error message in the JSON body of the response related to timeout.
 Later in this sample we'll update our code so that end users will be able to see the detailed error messages instead of the generic 400 Bad Request error.
@@ -174,7 +190,7 @@ Try the authentication process again (you will likely want your browser to be In
 Capture the `Location` header, and update your M query with the new code value.
 Run the query again, and you should see a parsed record containing an `access_token` value. 
 
-![access_token example](../../blobs/graph5.png)
+![access_token example](../../images/graph5.png)
 
 You now have the raw code you'll need to implement your OAuth flow. 
 As an optional step, you can improve the error handling of your OAuth code by using the `ManualStatusHandling` option to `Web.Contents`.
@@ -204,7 +220,7 @@ result = if (Record.HasFields(body, {"error", "error_description"})) then
 
 Run your query again and you will receive an error (because your code was already exchanged for an auth token). This time you should see the full detailed error message from the service, rather than a generic 400 status code.
 
-![Improved error messages](../../blobs/graph6.png)
+![Improved error messages](../../images/graph6.png)
 
 ## Creating Your Graph Connector
 Take a copy of the code contained within this sample, and open the MyGraph.mproj project file in Visual Studio. Update the `client_id` file with the AAD client_id you received when you registered your own app.
@@ -272,7 +288,7 @@ It is expected to return a record with all the fields that Power BI will need to
 Since our data source function has no required parameters, we won't be making use of the `resourceUrl` value. If our data source function required a user supply URL or sub-domain name, then this is where it would be passed to us.
 The `State` parameter includes a blob of state information that we're expected to include in the URL.
 We will not need to use the `display` value at all.
-The body of the function will look a lot like the `authorizeUrl` variable you created earlier in this sample – 
+The body of the function will look a lot like the `authorizeUrl` variable you created earlier in this sample â€“ 
 the main difference will be the inclusion of the `state` parameter (which is used to prevent [replay attacks](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-protocols-oauth-code)).
 
 ```
@@ -306,7 +322,7 @@ FinishLogin = (context, callbackUri, state) as record
 The `context` parameter will contain any value set in the Context field of the record returned by `StartLogin`.
 Typically this will be a tenant ID or other identifier that was extracted from the original resource URL.
 The `callbackUri` parameter contains the redirect value in the `Location` header, which we'll parse to extract the code value.
-The third parameter (`state`) can be used to round-trip state information to the service – we won't need to use it for AAD. 
+The third parameter (`state`) can be used to round-trip state information to the service â€“ we won't need to use it for AAD. 
 
 We will use the `Uri.Parts` function to break apart the `callbackUri` value. For the AAD auth flow, all we'll care about is the code parameter in the query string. 
 
@@ -324,7 +340,7 @@ FinishLogin = (context, callbackUri, state) =>
 
 If the response doesn't contain `error` fields, we pass the `code` query string parameter from the `Location` header to the `TokenMethod` function.
 
-The `TokenMethod` function converts the `code` to an `access_token`. It is not a direct part of the OAuth interface, but it provides all the heavy lifting for the `FinishLogin` and `Refresh` functions. Its implementation is essentially the tokenResponse logic we created earlier with one small addition – we'll use a grantType variable rather than hardcoding the value to "authorization_code".
+The `TokenMethod` function converts the `code` to an `access_token`. It is not a direct part of the OAuth interface, but it provides all the heavy lifting for the `FinishLogin` and `Refresh` functions. Its implementation is essentially the tokenResponse logic we created earlier with one small addition â€“ we'll use a grantType variable rather than hardcoding the value to "authorization_code".
 
 ```
 TokenMethod = (grantType, tokenField, code) =>
@@ -355,14 +371,14 @@ TokenMethod = (grantType, tokenField, code) =>
 ```
 
 ### Refresh
-This function is called when the `access_token` expires – Power Query will use the `refresh_token` to retrieve a new `access_token`. The implementation here is just a call to `TokenMethod`, passing in the refresh token value rather than the code.
+This function is called when the `access_token` expires â€“ Power Query will use the `refresh_token` to retrieve a new `access_token`. The implementation here is just a call to `TokenMethod`, passing in the refresh token value rather than the code.
 
 ```
 Refresh = (resourceUrl, refresh_token) => TokenMethod("refresh_token", "refresh_token", refresh_token);
 ```
 
 ### Logout
-The last function we need to implement is Logout. The logout implementation for AAD is very simple – we just return a fixed URL. 
+The last function we need to implement is Logout. The logout implementation for AAD is very simple â€“ we just return a fixed URL. 
 
 ```
 Logout = (token) => logout_uri;
@@ -382,7 +398,7 @@ MyGraph.Feed = () =>
 
 Once your function is updated, make sure there are no syntax errors in your code (look for red squiggles). Also be sure to update your `client_id` file with your own AAD app ID. If there are no errors, open the MyGraph.query.m file. 
 
-The `<project>.query.m` file lets you test out your extension. You (currently) don’t get the same navigation table / query building experience you get in Power BI Desktop, but does provide a quick way to test out your code. 
+The `<project>.query.m` file lets you test out your extension. You (currently) donâ€™t get the same navigation table / query building experience you get in Power BI Desktop, but does provide a quick way to test out your code. 
 
 A query to test your data source function would be:
 
@@ -394,14 +410,14 @@ Click the Start (Debug) button to execute the query.
 
 Since this is the first time you are accessing your new data source, you will receive a credential prompt.
 
-![Credential prompt in visual studio](../../blobs/graph7.png)
+![Credential prompt in visual studio](../../images/graph7.png)
 
 Select OAuth2 from the Credential Type drop down, and click Login. This will popup your OAuth flow. After completing your flow, you should see a large blob (your token). Click the Set Credential button at the bottom of the dialog, and close the MQuery Output window.
 
-![Setting credentials](../../blobs/graph8.png)
+![Setting credentials](../../images/graph8.png)
 
 Run the query again. This time you should get a spinning progress dialog, and a query result window.
 
-![Graph query results](../../blobs/graph9.png)
+![Graph query results](../../images/graph9.png)
 
 You can now build your project in Visual Studio to create a compiled extension file, and deploy it to your Custom Connectors directory. Your new data source should now appear in the Get Data dialog the next time you launch Power BI Desktop. 

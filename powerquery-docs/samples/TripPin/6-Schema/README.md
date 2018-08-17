@@ -1,3 +1,19 @@
+---
+title: TripPin 6 - Schema
+description: Adding a schema with enforcement to our TripPin REST connector.
+author: cpopell
+manager: kfile
+ms.reviewer: ''
+
+ms.service: powerquery
+ms.component: power-query
+ms.topic: tutorial
+ms.date: 08/16/2018
+ms.author: gepopell
+
+LocalizationGroup: reference
+---
+
 # TripPin Part 6 - Schema
 This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially – each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector. 
 
@@ -17,7 +33,7 @@ In these cases, you'll need to include schema definitions within your connector.
 In this lesson we'll define a simple, hardcoded schema for each of our tables, and enforce the schema on the data we read from the service. 
 
 >**Note:** The approach described here should work for many REST services.
->[Future lessons](../7-AdvancedSchema/) will build upon this approach by recursively enforcing schemas on structured columns (record, list, table), 
+>[Future lessons](../7-AdvancedSchema/README.md) will build upon this approach by recursively enforcing schemas on structured columns (record, list, table), 
 >and provide sample implementations which can programmatically generate a schema table from CSDL or [JSON Schema](http://json-schema.org/) documents.
 
 Overall, enforcing a schema on the data returned by your connector has multiple benefits, such as:
@@ -26,7 +42,7 @@ Overall, enforcing a schema on the data returned by your connector has multiple 
 3. Ensuring that each page of data has the same shape by adding any columns that might be missing from a response (a common way for REST APIs to indicate a field should be null)
 
 ## Viewing the Existing Schema with Table.Schema
-The connector created in the [previous lesson](../5-Paging/) displays three tables from the TripPin service - `Airlines`, `Airports`, and `People`. 
+The connector created in the [previous lesson](../5-Paging/README.md) displays three tables from the TripPin service - `Airlines`, `Airports`, and `People`. 
 Run the following query to view the `Airlines` table:
 
 ```
@@ -120,7 +136,7 @@ The logic for this function looks something like this:
 5. Reorder columns based on the order they appear in the schema table
 6. Set the type on the table itself using [Value.ReplaceType](https://msdn.microsoft.com/query-bi/m/value-replacetype)
 
->**Note:** The last step to set the table type will remove the need for the Power Query UI to infer type information when viewing the results in the query editor. This removes the double request issue we saw at the [end of the previous tutorial](../5-Paging#putting-it-all-together).
+>**Note:** The last step to set the table type will remove the need for the Power Query UI to infer type information when viewing the results in the query editor. This removes the double request issue we saw at the [end of the previous tutorial](../5-Paging/README.md#putting-it-all-together).
 
 The following helper code can be copy and pasted into your extension:
 
@@ -335,7 +351,7 @@ In addition to modifying column types (and values), our code is also setting the
 Setting this type information benefits performance when running inside of Power Query, as the user experience always attempts to infer type information 
 to display the right UI queues to the end user, and the inference calls can end up triggering additional calls to the underlying data APIs. 
 
-If you view the People table using the [TripPin connector from the previous lesson](../5-Paging), you'll see that all of the columns have a 'type any' icon (even the columns that contain lists):
+If you view the People table using the [TripPin connector from the previous lesson](../5-Paging/README.md), you'll see that all of the columns have a 'type any' icon (even the columns that contain lists):
 
 ![People without Schema](../../../images/trippin6PQNoSchema.png)
 

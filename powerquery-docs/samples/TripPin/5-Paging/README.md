@@ -1,3 +1,19 @@
+---
+title: TripPin 5 - Paging
+description: Adding paging to our TripPin REST connector.
+author: cpopell
+manager: kfile
+ms.reviewer: ''
+
+ms.service: powerquery
+ms.component: power-query
+ms.topic: tutorial
+ms.date: 08/16/2018
+ms.author: gepopell
+
+LocalizationGroup: reference
+---
+
 # TripPin Part 5 - Paging
 This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially – each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector. 
 
@@ -11,7 +27,7 @@ generally varies from API to API. Thankfully, TripPin is an OData service, and t
 defines a way of doing pagination using [odata.nextLink](http://docs.oasis-open.org/odata/odata-json-format/v4.0/cs01/odata-json-format-v4.0-cs01.html#_Toc365464689) 
 values returned in the body of the response.
 
-To simplify [previous iterations](../TripPin/) of the connector, the `TripPin.Feed` function was not 'page aware'. 
+To simplify [previous iterations](../4-Paths/README.md) of the connector, the `TripPin.Feed` function was not 'page aware'. 
 It simply parsed whatever JSON was returned from the request, and formatted it as a table. Those familiar with the 
 OData protocol might have noticed that we made a number of incorrect assumptions on the [format of the response](http://docs.oasis-open.org/odata/odata-json-format/v4.0/cs01/odata-json-format-v4.0-cs01.html#_Toc365464681)
 (such as assuming there is a `value` field containing an array of records). 
@@ -61,7 +77,7 @@ worry about specifying a page size preference - we can support whatever the serv
 > More information about [Server-Driven Paging](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Server-Driven_Paging) can be found in the OData specification
 
 ### Testing TripPin
-Before we fix our paging implementation, let's confirm the current behavior of the extension from the [previous tutorial](../4-Paths). The following test query will retrieve the People table and add an index column to show our current row count.
+Before we fix our paging implementation, let's confirm the current behavior of the extension from the [previous tutorial](../4-Paths/README.md). The following test query will retrieve the People table and add an index column to show our current row count.
 
 ```
 let
@@ -217,7 +233,7 @@ If we look at the requests in fiddler, we should now see separate requests for e
 
 > **Note:** You'll notice duplicate requests for the first page of data from the service,
 > which is not ideal. The extra request is a result of the M engine's schema checking behavior.
-> We will ignore this issue for now and resolve it in the [next tutorial](../6-Schema)
+> We will ignore this issue for now and resolve it in the [next tutorial](../6-Schema/README.md)
 > where we will apply an explict schema.
 
 ## Conclusion

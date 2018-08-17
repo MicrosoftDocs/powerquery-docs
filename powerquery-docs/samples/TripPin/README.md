@@ -1,3 +1,19 @@
+---
+title: TripPin tutorial sequence
+description: Overview and listing of the TripPin connector development tutorial sequence.
+author: cpopell
+manager: kfile
+ms.reviewer: ''
+
+ms.service: powerquery
+ms.component: power-query
+ms.topic: tutorial
+ms.date: 08/16/2018
+ms.author: gepopell
+
+LocalizationGroup: reference
+---
+
 # TripPin Tutorial
 
 This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially - each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector.
@@ -23,13 +39,13 @@ It's strongly suggested that you review:
 
 |Part|Lesson                               |Details|
 |----|:------------------------------------|:----------------------------------------------------|
-|1   |[OData](1-OData)                     |Create a simple Data Connector over an OData service |
-|2   |[Rest](2-Rest)                       |Connect to a REST API that returns a JSON response   |
-|3   |[Nav Tables](3-NavTables)            |Providing a navigation experience for your source    |
-|4   |[Data Source Paths](4-Paths)         |How credentials are identified for your data source  |
-|5   |[Paging](5-Paging)                   |Read with a paged response from a web service        |
-|6   |[Enforcing Schema](6-Schema)         |Enforce table structure and column data types        |
-|7   |[Advanced Schema](7-AdvancedSchema)  |Dynamically enforce table structure using M types and external metadata |
-|8   |[Diagnostics](8-Diagnostics)         |Add detailed tracing to the connector                |
-|9   |[Test Connection](9-TestConnection)  |Implement a TestConnection handler to enable refresh through the gateway |
-|10  |[Query Folding (part 1)](10-TableView1)|Implement basic query folding handlers               |
+|1   |[OData](1-OData/README.md)                     |Create a simple Data Connector over an OData service |
+|2   |[Rest](2-Rest/README.md)                       |Connect to a REST API that returns a JSON response   |
+|3   |[Nav Tables](3-NavTables/README.md)            |Providing a navigation experience for your source    |
+|4   |[Data Source Paths](4-Paths/README.md)         |How credentials are identified for your data source  |
+|5   |[Paging](5-Paging/README.md)                   |Read with a paged response from a web service        |
+|6   |[Enforcing Schema](6-Schema/README.md)         |Enforce table structure and column data types        |
+|7   |[Advanced Schema](7-AdvancedSchema/README.md)  |Dynamically enforce table structure using M types and external metadata |
+|8   |[Diagnostics](8-Diagnostics/README.md)         |Add detailed tracing to the connector                |
+|9   |[Test Connection](9-TestConnection/README.md)  |Implement a TestConnection handler to enable refresh through the gateway |
+|10  |[Query Folding (part 1)](10-TableView1/README.md)|Implement basic query folding handlers               |

@@ -7,8 +7,8 @@ ms.reviewer: ''
 
 ms.service: powerquery
 ms.component: power-query
-ms.topic: overview
-ms.date: 08/10/2018
+ms.topic: conceptual
+ms.date: 08/16/2018
 ms.author: gepopell
 
 LocalizationGroup: reference
@@ -18,7 +18,7 @@ LocalizationGroup: reference
 
 Power Query will automatically generate an invocation UI for you based on the arguments for your function. By default, this UI will contain the name of your function, and an input for each of your parameters. 
 
-![DefaultFunctionPrompt](/images/defaultFunctionPrompt.png "Function prompt")
+![DefaultFunctionPrompt](images/defaultFunctionPrompt.png "Function prompt")
 
 Similarly, evaluating the name of your function, without specifying parameters, will display information about it. 
 
@@ -63,7 +63,7 @@ The following table lists the Documentation fields that can be set in the metada
 | Documentation.SampleValues     | list   | List of sample values to be displayed (as faded text) inside of the text box.                                                                                                                                          |
 
 ### Example
-The following code snippet (and resulting dialogs) are from the [HelloWorldWithDocs](/samples/HelloWorldWithDocs) sample.
+The following code snippet (and resulting dialogs) are from the [HelloWorldWithDocs](https://github.com/Microsoft/DataConnectors/tree/master/samples/HelloWorldWithDocs) sample.
 
 ```
 [DataSource.Kind="HelloWorldWithDocs", Publish="HelloWorldWithDocs.Publish"]

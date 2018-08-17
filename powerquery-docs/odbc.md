@@ -7,8 +7,8 @@ ms.reviewer: ''
 
 ms.service: powerquery
 ms.component: power-query
-ms.topic: overview
-ms.date: 08/10/2018
+ms.topic: conceptual
+ms.date: 08/16/2018
 ms.author: gepopell
 
 LocalizationGroup: reference
@@ -790,7 +790,7 @@ use of sub-selects, COALESCE statements, and aggregations).
 The M engine does basic type size limit validation as part of its query folding logic. If you are receiving a folding error when trying to concatenate two strings that potentially overflow the maximum size of the underlying database type:
 
 1. Ensure that your database can support up-conversion to CLOB types when string concat overflow occurs
-2. Set the `TolerateConcatOverflow` [option]((#parameters-for-odbcdatasource)) for Odbc.DataSource to `true`
+2. Set the `TolerateConcatOverflow` [option](#parameters-for-odbcdatasource) for Odbc.DataSource to `true`
 
 > The [DAX CONCATENATE function](https://msdn.microsoft.com/query-bi/dax/concatenate-function-dax) is currently not supported by Power Query/ODBC extensions.
 > Extension authors should ensure string concatenation works through the query editor by adding calculated columns (`[stringCol1] & [stringCol2]`).

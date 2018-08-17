@@ -7,8 +7,8 @@ ms.reviewer: ''
 
 ms.service: powerquery
 ms.component: power-query
-ms.topic: overview
-ms.date: 08/10/2018
+ms.topic: conceptual
+ms.date: 08/16/2018
 ms.author: gepopell
 
 LocalizationGroup: reference
@@ -71,7 +71,7 @@ Each of the following item kind values provide a different icon in the navigatio
 
 The image below shows the icon for item kind in Power BI Desktop. 
 
-![ItemKinds](/images/itemKinds.png)
+![ItemKinds](images/itemKinds.png)
 
 ## Examples
 

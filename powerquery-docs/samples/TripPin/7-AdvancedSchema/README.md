@@ -1,3 +1,19 @@
+---
+title: TripPin 7 - Advanced Schema
+description: Adding an advanced schema with typing to our TripPin REST connector.
+author: cpopell
+manager: kfile
+ms.reviewer: ''
+
+ms.service: powerquery
+ms.component: power-query
+ms.topic: tutorial
+ms.date: 08/16/2018
+ms.author: gepopell
+
+LocalizationGroup: reference
+---
+
 # TripPin Part 7 - Advanced Schema with M Types
 
 This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially-- each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector. 
@@ -80,7 +96,7 @@ If we run the code again, we should now see that we have a failing test.
 Now we just need to implement the functionality to make this work.
 
 ## Defining Custom M Types
-The schema enforcement approach in the [previous lesson](../6-Schema/) used "schema tables" defined as Name/Type pairs.
+The schema enforcement approach in the [previous lesson](../6-Schema/README.md) used "schema tables" defined as Name/Type pairs.
 It works well when working with flattened/relational data, but didn't support setting types on nested records/tables/lists, or allow you to reuse type definitions across tables/entities. 
 
 In the TripPin case, the data in the People and Airports entities contain structured columns, and even share a type (Location) for representing address information.
@@ -162,14 +178,14 @@ SchemaTable = #table({"Entity", "Type"}, {
 ```
 
 ## Enforcing a Schema Using Types
-We will rely on a common function (`Table.ChangeType`) to enforce a schema on our data, much like we used `SchemaTransformTable` in the [previous lesson](../6-Schema/).
+We will rely on a common function (`Table.ChangeType`) to enforce a schema on our data, much like we used `SchemaTransformTable` in the [previous lesson](../6-Schema/README.md).
 Unlike `SchemaTransformTable`, `Table.ChangeType` takes in an actual M table type as an argument, and will apply our schema _recursively_ for all nested types. It's signature looks like this:
 
 ```
 Table.ChangeType = (table, tableType as type) as nullable table => ...
 ```
 
-The full code listing for the `Table.ChangeType` function can be found in the [Table.ChangeType.pqm](Table.ChangeType.pqm) file.
+The full code listing for the `Table.ChangeType` function can be found in the [Table.ChangeType.pqm](https://raw.githubusercontent.com/Microsoft/DataConnectors/master/samples/TripPin/7-AdvancedSchema/Table.ChangeType.pqm) file.
 
 >**Note:** For flexibility, the function can be used on tables, as well as lists of records (which is how tables would be represented in a JSON document).
 

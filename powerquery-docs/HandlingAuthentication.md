@@ -7,8 +7,8 @@ ms.reviewer: ''
 
 ms.service: powerquery
 ms.component: power-query
-ms.topic: overview
-ms.date: 08/10/2018
+ms.topic: conceptual
+ms.date: 08/16/2018
 ms.author: gepopell
 
 LocalizationGroup: reference
@@ -115,7 +115,7 @@ Extensions can optionally implement `Refresh` (exchanging a refresh token for a 
 
 >In the future we plan to support data sources that require confidential secrets (using a proxy based mechanism).
 
-Please see the [MyGraph](../samples/MyGraph) and [Github](../samples/Github) samples for more details.
+Please see the [MyGraph](~/../samples/MyGraph/README.md) and [Github](~/../samples/Github/README.md) samples for more details.
 
 ### Data Source Paths
 
@@ -141,7 +141,7 @@ The _Path_ value for a data source is derived from the data source function's re
 By default, you can see the actual string value in the Data source settings dialog in Power BI Desktop, and in the credential prompt.
 If the Data Source Kind definition has included a `Label` value, you will see the label value instead.
 
-For example, the data source function in the [HelloWorldWithDocs sample](../samples/HelloWorldWithDocs) has the following signature:
+For example, the data source function in the [HelloWorldWithDocs sample](~/../samples/HelloWorldWithDocs/README.md) has the following signature:
 
 ```
 HelloWorldWithDocs.Contents = (message as text, optional count as number) as table => ...

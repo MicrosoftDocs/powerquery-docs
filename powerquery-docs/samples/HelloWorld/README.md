@@ -20,6 +20,6 @@ This sample provides a simple data source extension that can be run in Visual St
 
 ![Query]
 
-[GetData]: ../../blobs/helloworld1.png "Hello World in Get Data"
-[Auth]: ../../blobs/helloworld2.png "Hello World authentication dialog"
-[Query]: ../../blobs/helloworld3.png "Hello World in the query editor"
+[GetData]: ../../images/helloworld1.png "Hello World in Get Data"
+[Auth]: ../../images/helloworld2.png "Hello World authentication dialog"
+[Query]: ../../images/helloworld3.png "Hello World in the query editor"

@@ -7,15 +7,15 @@ ms.reviewer: ''
 
 ms.service: powerquery
 ms.component: power-query
-ms.topic: overview
-ms.date: 08/10/2018
+ms.topic: conceptual
+ms.date: 08/16/2018
 ms.author: gepopell
 
 LocalizationGroup: reference
 ---
 
 # Handling Schema
-Depending on your data source, information about data types and column names may or may not be provided explicitly. OData REST APIs typically handle this via the [$metadata definition](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part3-csdl.html), and the Power Query [`OData.Feed`](https://msdn.microsoft.com/en-us/query-bi/m/odata-feed) method automatically handles parsing this information and applying it to the data returned from an [OData source](OData.Feed.md).
+Depending on your data source, information about data types and column names may or may not be provided explicitly. OData REST APIs typically handle this via the [$metadata definition](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part3-csdl.html), and the Power Query [`OData.Feed`](https://msdn.microsoft.com/en-us/query-bi/m/odata-feed) method automatically handles parsing this information and applying it to the data returned from an [OData source](HandlingDataAccess.md).
 
 Many REST APIs do not have a way to programmatically determine their schema. In these cases you will need to include  schema definition in your connector.
 

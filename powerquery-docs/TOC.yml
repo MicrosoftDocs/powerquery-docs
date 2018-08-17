@@ -10,6 +10,7 @@
     href: power-query-quickstart-using-power-bi.md
   - name: "Connecting and Transforming Data"
   - name: "Combining Data"
+    href: power-query-tutorial-shape-combine.md
   - name: "Installing the PowerQuery SDK"
     href: InstallingSDK.md
   - name: "Starting to Develop Custom Connectors"
@@ -50,16 +51,16 @@
       href: /samples/MyGraph/README.md
 - name: Samples
   items:
-  - name: "Navigation Tables"
-  - name: "Direct Query for SQL"
-  - name: "Impala ODBC"
-  - name: "Redshift ODBC"
-  - name: "Snowflake ODBC"
-  - name: "Unit Testing"
+  - name: "Functional Samples"
+    href: SamplesDirectory.md#functionality
+  - name: "ODBC Samples"
+    href: SamplesDirectory.md#odbc
+  - name: "TripPin Samples"
+    href: SamplesDirectory.md#trippin
 - name: Concepts
   items:
   - name: Certification
-    items:
+    href: ConnectorCertification.md
 - name: How To
   items: 
 - name: Reference
@@ -72,15 +73,39 @@
       - name: "Handling Data Access"
         href: HandlingDataAccess.md
       - name: "ODBC Development"
-        href: odbc.md
+        items:
+        - name: "Overview"
+          href: odbc.md#overview
+        - name: "ODBC Extensibility Functions"
+          href: odbc.md#odbc-extensibility-functions
+        - name: "Parameters for your Data Source Function"
+          href: odbc.md#parameters-for-your-data-source-function
+        - name: "Parameters for Odbc.DataSource"
+          href: odbc.md#parameters-for-odbcdatasource
+        - name: "Creating Your Connector"
+          href: odbc.md#creating-your-connector
+        - name: "Troubleshooting and Testing"
+          href: odbc.md#troubleshooting-and-testing
+        - name: "Common Problems"
+          href: odbc.md#common-problems
+      - name: "Handling Resource Path"
+        href: HandlingResourcePath.md
       - name: "Handling Paging"
         href: HandlingPaging.md
       - name: "Handling Transformations"
-        href: HandlingTransformations.md
+        items:
+        - name: Static
+          href: HandlingTransformations.md#static-transformations
+        - name: Dynamic
+          href: HandlingTransformations.md#dynamic-transformations
       - name: "Handling Schemas"
         href: HandlingSchema.md
       - name: "Handling Status Codes"
-        href: HandlingStatusCodex.md
+        items: 
+        - name: "Default Behavior"
+          href: HandlingStatusCodes.md
+        - name: "Wait Retry Pattern"
+          href: WaitRetry.md
       - name: "Handling Unit Testing"
         href: HandlingUnitTesting.md
       - name: "Helper Functions"
@@ -89,10 +114,16 @@
         href: HandlingDocumentation.md
       - name: "Handling Navigation Tables"
         href: HandlingNavigationTables.md
+      - name: "Handling Gateway Support"
+        href: HandlingGatewaySupport.md 
 - name: Resources
   items:
   - name: "Power BI Documentation"
+    href: https://docs.microsoft.com/en-us/power-bi/
   - name: "M Function Reference"
+    href: https://msdn.microsoft.com/en-us/query-bi/m/power-query-m-function-reference
   - name: "M Language Document"
+    href: https://msdn.microsoft.com/en-us/query-bi/m/power-query-m-language-specification
   - name: "M Type Reference"
+    href: https://msdn.microsoft.com/en-us/query-bi/m/power-query-m-type-system
     
