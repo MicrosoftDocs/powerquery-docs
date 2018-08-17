@@ -79,7 +79,7 @@ GithubSample = [
 
 If your data source function has multiple parameters, or a single non-URL parameter,
 then the `dataSourcePath` value will be a json string containing the parameters. The snippet
-below comes from the [DirectQueryForSQL](~/../samples/DirectQueryForSQL/README.md) sample. 
+below comes from the [DirectQueryForSQL](https://github.com/Microsoft/DataConnectors/tree/master/samples/DirectQueryForSQL) sample. 
 
 ```
 DirectSQL = [
