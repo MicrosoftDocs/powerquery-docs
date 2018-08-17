@@ -47,7 +47,7 @@ The name of the record becomes is unique identifier.
 
 Functions associated with a data source must have the same required function parameters (including name, type, and order). Functions for a specific Data Source Kind can only use credentials associated with that Kind.
 Credentials are identified at runtime by performing a lookup based on the combination of the function's required parameters.
-For more information about how credentials are identified, please see [Data Source Paths] below.
+For more information about how credentials are identified, please see [Data Source Paths](HandlingAuthentication.md#data-source-paths).
 
 **Example:**
 
