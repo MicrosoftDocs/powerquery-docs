@@ -25,13 +25,3 @@ The heavy lifting of compiling all page results into a single table is performed
 2. Does the paging mechanism involve calculating values, or do we extract the URL for the next page from the response?
 3. How do we know when to stop paging?
 4. Are there parameters related to paging (such as "page size") that we should be aware of?
-
-### NextURL Paging
-
-Consider the example of the TripPin service, which implements a 'NextURL' pattern common across REST APIs.
-
-> **Note**: TripPin is in fact an OData service, and would normally be accessed by using Power Query's built-in `OData.Feed()` function that automatically handles paging. In this example we are treating it as a generic REST API and pulling data with `Web.Contents()` because it gives us an opportunity to demonstrate this paging pattern on an API that is well-documented and easily accessible.
-
-TODO: Continue NextURL paging block here
-
-TODO: decide if 3 sub-bullets should just be on this single page.
