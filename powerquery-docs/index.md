@@ -16,7 +16,7 @@ LocalizationGroup: reference
 
 # Connect to and Transform Data of Any Shape and Size
 
-Power Query is the Data Connectivity Preparation technology that enables end users to seamlessly import and reshape data from within a wide range of Microsoft products, including Excel, Power BI, Analisys Services, Common Data Services for Apps & Analytics, and more.
+Power Query is the data connectivity preparation technology that enables end users to seamlessly import and reshape data from within a wide range of Microsoft products, including Excel, Power BI, Analysis Services, Common Data Services for Apps & Analytics, and more.
 
 <ul class="cardsA panelContent">
     <li>
@@ -58,7 +58,7 @@ Power Query is the Data Connectivity Preparation technology that enables end use
         </a>
     </li>
     <li>
-        <a href="CreatingFirstConnector.md">
+        <a href="InstallingSDK.md">
             <div class="cardSize">
                 <div class="cardPadding">
                     <div class="card">
@@ -115,7 +115,7 @@ Power Query is the Data Connectivity Preparation technology that enables end use
         </a>
     </li>
     <li>
-        <a href="CreatingFirstConnector.md">
+        <a href="ConnectorCertification.md">
             <div class="cardSize">
                 <div class="cardPadding">
                     <div class="card">
