@@ -31,7 +31,7 @@ Power Query is the Data Connectivity Preparation technology that enables end use
                         </div>
                         <div class="cardText">
                             <h3>Power Query Overview</h3>
-                            <p>Learn about Power Query, and how it can help you connect, transform, and use data from a many different sources.</p>
+                            <p>Learn about Power Query, and how it can help you connect, transform, and use data from many different sources.</p>
                         </div>
                     </div>
                 </div>
