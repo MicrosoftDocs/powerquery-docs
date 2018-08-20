@@ -16,7 +16,7 @@ LocalizationGroup: reference
 
 # Wait-Retry Pattern
 
-In some situations a data source's behavior does not match that expected by Power Query's [default HTTP code handling](/HandlingStatusCodes.md). The examples below show how to work around this situation.
+In some situations a data source's behavior does not match that expected by Power Query's [default HTTP code handling](HandlingStatusCodes.md). The examples below show how to work around this situation.
 
 In this scenario we are working with a REST API that occassionally returns a 500 status code indicating an internal server error. In these instances, we would like to wait a few seconds and retry, potentially a few times before we give up.
 
@@ -38,7 +38,7 @@ Based on whether `responseCode ` is 200 or 500 we can either process the result 
 > **Note**: It is recommended to use `Binary.Buffer` to force Power Query to cache the `Web.Contents` results if you will be implementing complex logic such as the Wait-Retry pattern shown here. This prevents Power Query's multi-threaded execution from making multiple calls with potentially inconsistent results.
 
 ## Value.WaitFor
-`Value.WaitFor()` is a standard [helper function](/HelperFunctions.md) that can usually be used with no modification. It works by building a List of retry attempts.
+`Value.WaitFor()` is a standard [helper function](HelperFunctions.md) that can usually be used with no modification. It works by building a List of retry attempts.
 
 ### `producer` Argument
 This contains the task to be (possibly) retried. It is represented as a function so that the iteration number can be used in the `producer` logic. The expected behavior is that `producer` will return `null` if a retry is determined to be necessary. If anything other than `null` is returned by `producer`, that value is in turn returned by `Value.WaitFor`.

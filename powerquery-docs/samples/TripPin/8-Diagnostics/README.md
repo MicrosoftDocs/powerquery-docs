@@ -64,7 +64,7 @@ When tracing is enabled, the user can select the maximum level of messages they 
 
 The `message` parameter is the actual text that will be output to the trace file. Note that the text will not contain the `value` parameter, unless you explicitly include it in the text.
 
-The `value` parameter is what the function will return. When the `delayed` parameter is set to `true`, `value` will be a zero parameter function which returns the actual value you are evaluating. When `delayed` is set to `false`, `value` will be the actual value. An example of how this works can be [found below](#delayed_evaluation).
+The `value` parameter is what the function will return. When the `delayed` parameter is set to `true`, `value` will be a zero parameter function which returns the actual value you are evaluating. When `delayed` is set to `false`, `value` will be the actual value. An example of how this works can be [found below](#delayed-evaluation).
 
 ### Using Diagnostics.Trace in the TripPin connector
 
@@ -102,7 +102,7 @@ TripPinNavTable = (url as text) as table =>
         navTable;
 ```
 
-[Enable tracing](#enabling_diagnostics) for your project, and run your test queries. On the `Errors` tab you should see the text of the error you raised:
+[Enable tracing](#enabling-diagnostics) for your project, and run your test queries. On the `Errors` tab you should see the text of the error you raised:
 
 ![Error message](../../../images/trippin8Error.png)
 

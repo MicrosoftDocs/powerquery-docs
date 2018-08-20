@@ -25,13 +25,13 @@ LocalizationGroup: reference
 
 To support scheduled refresh through the on-premises data gateway, your connector **must** implement a TestConnection handler.
 The function is called when the user is configuring credentials for your source, and used to ensure they are valid.
-The TestConnection handler is set in the [Data Source Kind](#data-source-kind) record, and has the following signature:
+The TestConnection handler is set in the [Data Source Kind](HandlingDataAccess.md#data-source-kind) record, and has the following signature:
 
 ```
 (dataSourcePath) as list => ...
 ```
 
-Where `dataSourcePath` is the [Data Source Path](#data-source-paths) value for your function, and the return value is a list composed of:
+Where `dataSourcePath` is the [Data Source Path](HandlingAuthentication.md#data-source-paths) value for your function, and the return value is a list composed of:
 
 1. The name of the function to call (this function must be marked as `#shared`, and is usually your primary data source function)
 2. One or more arguments to pass to your function
@@ -79,7 +79,7 @@ GithubSample = [
 
 If your data source function has multiple parameters, or a single non-URL parameter,
 then the `dataSourcePath` value will be a json string containing the parameters. The snippet
-below comes from the [DirectQueryForSQL](~/../samples/DirectQueryForSQL/README.md) sample. 
+below comes from the [DirectQueryForSQL](https://github.com/Microsoft/DataConnectors/tree/master/samples/DirectQueryForSQL) sample. 
 
 ```
 DirectSQL = [

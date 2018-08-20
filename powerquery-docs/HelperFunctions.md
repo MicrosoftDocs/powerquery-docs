@@ -22,7 +22,7 @@ You should not mark any of these functions as `shared` within your extension cod
 ## Navigation Tables
 
 ### Table.ToNavigationTable
-This function adds the table type metadata needed for your extension to return a table value that Power Query can recognize as a Navigation Tree. Please see [Navigation Tables](/HandlingNavigationTables.md) for more information.
+This function adds the table type metadata needed for your extension to return a table value that Power Query can recognize as a Navigation Tree. Please see [Navigation Tables](HandlingNavigationTables.md) for more information.
 
 ```
 Table.ToNavigationTable = (

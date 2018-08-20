@@ -20,7 +20,7 @@ REST APIs typically have some mechanism to transmit large volumes of records bro
 
 ## Typical Patterns
 
-The heavy lifting of compiling all page results into a single table is performed by the `Table.GenerateByPage()` [helper function](/HelperFunctions.md), which can generally be used with no modification. The following code snippets describe how to implement some common paging patterns. Regardless of pattern, you will need to understand:
+The heavy lifting of compiling all page results into a single table is performed by the `Table.GenerateByPage()` [helper function](HelperFunctions.md), which can generally be used with no modification. The following code snippets describe how to implement some common paging patterns. Regardless of pattern, you will need to understand:
 1. How do we request the next page of data?
 2. Does the paging mechanism involve calculating values, or do we extract the URL for the next page from the response?
 3. How do we know when to stop paging?

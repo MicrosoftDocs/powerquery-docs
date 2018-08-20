@@ -1,14 +1,11 @@
 - name: Overview
   items:
-  - name: Overview
-    items: 
-  -  name: "What is Power Query?"
-     href: power-query-what-is-power-query.md
+  - name: "What is Power Query?"
+    href: power-query-what-is-power-query.md
 - name: Quick Starts
   items:
   - name: "Using Power Query in Power BI"
     href: power-query-quickstart-using-power-bi.md
-  - name: "Connecting and Transforming Data"
   - name: "Combining Data"
     href: power-query-tutorial-shape-combine.md
   - name: "Installing the PowerQuery SDK"
@@ -21,36 +18,38 @@
   items:
   - name: "Shape and combine data using Power Query Editor"
     href: power-query-tutorial-shape-combine.md  
-  - name: TripPin Walkthrough
+  - name: Connector Development
     items:
-    - name: "Overview"
-      href: /samples/TripPin/README.md
-    - name: "1. OData"
-      href: /samples/TripPin/1-OData/README.md
-    - name: "2. REST API"
-      href: /samples/TripPin/2-Rest/README.md
-    - name: "3. Navigation Tables"
-      href: /samples/TripPin/3-NavTables/README.md
-    - name: "4. Paths"
-      href: /samples/TripPin/4-Paths/README.md
-    - name: "5. Paging"
-      href: /samples/TripPin/5-Paging/README.md
-    - name: "6. Schemas"
-      href: /samples/TripPin/6-Schema/README.md
-    - name: "7. Advanced Schemas"
-      href: /samples/TripPin/7-AdvancedSchema/README.md
-    - name: "8. Diagnostics"
-      href: /samples/TripPin/8-Diagnostics/README.md
-    - name: "9. Test Connection"
-      href: /samples/TripPin/9-TestConnection/README.md
-    - name: "10. Folding"
-      href: /samples/TripPin/10-TableView1/README.md
-  - name: OAuth Tutorials
-    items:
-    - name: "Github"
-      href: /samples/Github/README.md
-    - name: "MyGraph"
-      href: /samples/MyGraph/README.md
+    - name: TripPin Walkthrough
+      items:
+      - name: "Overview"
+        href: samples/TripPin/README.md
+      - name: "1. OData"
+        href: samples/TripPin/1-OData/README.md
+      - name: "2. REST API"
+        href: samples/TripPin/2-Rest/README.md
+      - name: "3. Navigation Tables"
+        href: samples/TripPin/3-NavTables/README.md
+      - name: "4. Paths"
+        href: samples/TripPin/4-Paths/README.md
+      - name: "5. Paging"
+        href: samples/TripPin/5-Paging/README.md
+      - name: "6. Schemas"
+        href: samples/TripPin/6-Schema/README.md
+      - name: "7. Advanced Schemas"
+        href: samples/TripPin/7-AdvancedSchema/README.md
+      - name: "8. Diagnostics"
+        href: samples/TripPin/8-Diagnostics/README.md
+      - name: "9. Test Connection"
+        href: samples/TripPin/9-TestConnection/README.md
+      - name: "10. Folding"
+        href: samples/TripPin/10-TableView1/README.md
+    - name: OAuth Tutorials
+      items:
+      - name: "Github"
+        href: samples/Github/README.md
+      - name: "MyGraph"
+        href: samples/MyGraph/README.md
 - name: Samples
   items:
   - name: "Functional Samples"
