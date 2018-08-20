@@ -20,7 +20,7 @@ Power Query is the Data Connectivity Preparation technology that enbales end use
 
 <ul class="cardsA panelContent">
     <li>
-        <a href="power-query-what-is-power-query">
+        <a href="power-query-what-is-power-query.md">
             <div class="cardSize">
                 <div class="cardPadding">
                     <div class="card">
@@ -38,7 +38,7 @@ Power Query is the Data Connectivity Preparation technology that enbales end use
         </a>
     </li>
     <li>
-        <a href="power-query-quickstart-using-power-bi">
+        <a href="power-query-quickstart-using-power-bi.md">
             <div class="cardSize">
                 <div class="cardPadding">
                     <div class="card">
@@ -56,7 +56,7 @@ Power Query is the Data Connectivity Preparation technology that enbales end use
         </a>
     </li>
     <li>
-        <a href="CreatingFirstConnector">
+        <a href="CreatingFirstConnector.md">
             <div class="cardSize">
                 <div class="cardPadding">
                     <div class="card">
@@ -74,7 +74,7 @@ Power Query is the Data Connectivity Preparation technology that enbales end use
         </a>
     </li>
     <li>
-        <a href="power-query-tutorial-shape-combine">
+        <a href="power-query-tutorial-shape-combine.md">
             <div class="cardSize">
                 <div class="cardPadding">
                     <div class="card">
@@ -110,7 +110,7 @@ Power Query is the Data Connectivity Preparation technology that enbales end use
         </a>
     </li>
     <li>
-        <a href="CreatingFirstConnector">
+        <a href="CreatingFirstConnector.md">
             <div class="cardSize">
                 <div class="cardPadding">
                     <div class="card">
