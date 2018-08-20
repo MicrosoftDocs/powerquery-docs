@@ -31,6 +31,7 @@ Power Query is the Data Connectivity Preparation technology that enables end use
                         </div>
                         <div class="cardText">
                             <h3>Power Query Overview</h3>
+                            <p>Learn about Power Query, and how it can help you connect, transform, and use data from a many different sources.</p>
                         </div>
                     </div>
                 </div>
@@ -49,6 +50,7 @@ Power Query is the Data Connectivity Preparation technology that enables end use
                         </div>
                         <div class="cardText">
                             <h3>Use Power Query in Power BI Desktop</h3>
+                            <p>Quickly get started using Power Query by seeing it in action in Power BI Desktop.</p>
                         </div>
                     </div>
                 </div>
@@ -67,6 +69,7 @@ Power Query is the Data Connectivity Preparation technology that enables end use
                         </div>
                         <div class="cardText">
                             <h3>Develop your own connector</h3>
+                            <p>You can develop your own custom connector for Power Query, and enable connection to your data source of choice.</p>
                         </div>
                     </div>
                 </div>
@@ -85,6 +88,7 @@ Power Query is the Data Connectivity Preparation technology that enables end use
                         </div>
                         <div class="cardText">
                             <h3>Common tasks using Power Query</h3>
+                            <p>See how to perform common tasks using Power Query, including connecting, shaping, and modeling data.</p>
                         </div>
                     </div>
                 </div>
@@ -103,6 +107,7 @@ Power Query is the Data Connectivity Preparation technology that enables end use
                         </div>
                         <div class="cardText">
                             <h3>M language reference</h3>
+                            <p>Gain access to the reference content for the M language, used by Power Query.</p>
                         </div>
                     </div>
                 </div>
@@ -121,6 +126,7 @@ Power Query is the Data Connectivity Preparation technology that enables end use
                         </div>
                         <div class="cardText">
                             <h3>Certify your connectors</h3>
+                            <p>Learn about the process required for your connector to be come a certified connector for Microsoft Power Query.</p>
                         </div>
                     </div>
                 </div>
