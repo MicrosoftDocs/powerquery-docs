@@ -383,7 +383,7 @@ LimitClause = (skip, take) =>
         Location = "AfterQuerySpecification"
     ]
 ```
-
+<!--
 ### Overriding ImplicitTypeConversions
 
 **TODO**
@@ -391,7 +391,7 @@ LimitClause = (skip, take) =>
 ### Providing an OnError handler
 
 **TODO**
-
+-->
 ### Overriding SqlCapabilities
 
 <table>
@@ -690,7 +690,7 @@ SQLGetTypeInfo = (types as table) as table =>
     in
         append;
 ```
-
+<!--
 ### Overriding SQLTables
 
 **TODO**
@@ -698,7 +698,7 @@ SQLGetTypeInfo = (types as table) as table =>
 ## Creating Your Connector
 
 **Checklist: TODO**
-
+-->
 ### Setting the Connection String
 
 The connection string for your ODBC driver is set using the first
@@ -728,7 +728,7 @@ shared SqlODBC.Contents = (server as text) =>
     in
         OdbcDatasource;
 ```
-
+<!--
 ### Setting credentials
 
 **TODO**
@@ -736,7 +736,7 @@ shared SqlODBC.Contents = (server as text) =>
 ### Disable Parameter Binding (if required)
 
 **TODO**
-
+-->
 ## Troubleshooting and Testing
 
 **To enable tracing in Power BI Desktop:**
@@ -776,7 +776,7 @@ Once you have simple queries working, you can then try Direct Query
 scenarios (i.e. building reports in the Report Views). The queries
 generated in Direct Query mode will be significantly more complex (i.e.
 use of sub-selects, COALESCE statements, and aggregations).
-
+<!--
 ## Common Problems
 
 **TODO**
@@ -784,7 +784,7 @@ use of sub-selects, COALESCE statements, and aggregations).
 - In query editor, filter on each data type
 - Filter on missing data types -- SEARCHABLE
 - Filter on date -- timestamp precision incorrect
-
+-->
 ### Concatenation of strings in Direct Query mode
 
 The M engine does basic type size limit validation as part of its query folding logic. If you are receiving a folding error when trying to concatenate two strings that potentially overflow the maximum size of the underlying database type:
