@@ -27,7 +27,7 @@ in
     Output
 ```
 
-![](images/expressionError.png)
+![An example of an Expression.Error error message](images/expressionError.png)
 
 The [`Error.Record`](https://msdn.microsoft.com/en-us/query-bi/m/error-record) function can be used for more control:
 ```
@@ -38,7 +38,7 @@ in
     Output
 ```
 
-![](images/expressionError2.png)
+![An example of an Expression.Error error message with more details](images/expressionError2.png)
 
 ## Catching an Error with `try` and `otherwise`
 The `try` expression converts values and errors into a record value that indicates whether the `try` expression handled an error or not, as well as the proper value or the error record.
@@ -47,17 +47,17 @@ If no error is found, the following record is returned from the `try` expression
 ```
 try "foo"
 ```
-![](images/HasErrorFalse.png)
+![HasError false with value](images/HasErrorFalse.png)
 
 If an error is found, the following record is returned from the `try` expression:
 ```
 try "foo"+1
 ```
-![](images/HasErrorTrue.png)
+![HasError true with error record](images/HasErrorTrue.png)
 
 The Error record contains Reason, Message, and Detail fields:
 
-![](images/ErrorRecord.png)
+![Content of error record](images/ErrorRecord.png)
 
 Depending on the error, the Detail field may contain additional information.
 
