@@ -79,7 +79,3 @@ We have a certain set of requirements for certification. We recognize that not e
 ## Getting your connector certified
 
 If you'd like to reach out about connector certification, please contact us at dataconnectors@microsoft.com
-
-## Community Connectors and Office Store
-
-While we don't currently have an ETA for support in the Office Store, we are looking at the problem. We're also examining support for a way to list 'community connectors' in a sanctioned, central, Microsoft website.
