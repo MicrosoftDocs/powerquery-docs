@@ -46,7 +46,7 @@ Sources that can determine the schema of the result without evaluating the query
 
 > Note that returning `Value.Type(GetRows())` will result in `GetRows()` being invoked twice. If the type cannot be determined without invoking `GetRows()`, it is recommended the results are stored in a common variable. Please see the sample below for an example.
 
-(TODO - sample)
+<!--(TODO - sample)-->
 
 ## Basic Handlers
 
