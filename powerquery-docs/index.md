@@ -26,7 +26,7 @@ Power Query is the data connectivity preparation technology that enables end use
                     <div class="card">
                         <div class="cardImageOuter">
                             <div class="cardImage"> 
-                                <img src="https://docs.microsoft.com/media/common/i_article.svg" alt="" />
+                                <img src="https://docs.microsoft.com/media/common/i_article.svg" alt="Power Query Overview" />
                             </div>
                         </div>
                         <div class="cardText">
@@ -45,7 +45,7 @@ Power Query is the data connectivity preparation technology that enables end use
                     <div class="card">
                         <div class="cardImageOuter">
                             <div class="cardImage"> 
-                                <img src="https://docs.microsoft.com/media/common/i_get-started.svg" alt="" />
+                                <img src="https://docs.microsoft.com/media/common/i_get-started.svg" alt="Use Power Query in Power BI Desktop" />
                             </div>
                         </div>
                         <div class="cardText">
@@ -64,7 +64,7 @@ Power Query is the data connectivity preparation technology that enables end use
                     <div class="card">
                         <div class="cardImageOuter">
                             <div class="cardImage"> 
-                                <img src="https://docs.microsoft.com/media/common/i_code-automate.svg" alt="" />
+                                <img src="https://docs.microsoft.com/media/common/i_code-automate.svg" alt="Connector Development" />
                             </div>
                         </div>
                         <div class="cardText">
@@ -83,7 +83,7 @@ Power Query is the data connectivity preparation technology that enables end use
                     <div class="card">
                         <div class="cardImageOuter">
                             <div class="cardImage"> 
-                                <img src="https://docs.microsoft.com/media/common/i_tasks.svg" alt="" />
+                                <img src="https://docs.microsoft.com/media/common/i_tasks.svg" alt="Common tasks using Power Query" />
                             </div>
                         </div>
                         <div class="cardText">
@@ -102,7 +102,7 @@ Power Query is the data connectivity preparation technology that enables end use
                     <div class="card">
                         <div class="cardImageOuter">
                             <div class="cardImage"> 
-                                <img src="https://docs.microsoft.com/media/common/i_article.svg" alt="" />
+                                <img src="https://docs.microsoft.com/media/common/i_article.svg" alt="M Language Reference" />
                             </div>
                         </div>
                         <div class="cardText">
@@ -121,7 +121,7 @@ Power Query is the data connectivity preparation technology that enables end use
                     <div class="card">
                         <div class="cardImageOuter">
                             <div class="cardImage"> 
-                                <img src="https://docs.microsoft.com/media/common/i_code-quality.svg" alt="" />
+                                <img src="https://docs.microsoft.com/media/common/i_code-quality.svg" alt="Certify your connectors" />
                             </div>
                         </div>
                         <div class="cardText">
