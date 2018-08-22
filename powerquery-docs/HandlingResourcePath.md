@@ -43,14 +43,14 @@ HelloWorldWithDocs.Contents = (message as text, optional count as number) as tab
 The function has a single required parameter (`message`) of type `text`, and will be used to calculate the data source path. The optional parameter (`count`) will be ignored. The path would be displayed as follows:
 
 ### Credential prompt:
-![](images/credentialPromptWithPath.png)
+![Credential prompt with path](images/credentialPromptWithPath.png)
 
 ### Data source settings UI:
-![](images/dataSourceSettingsJson.png)
+![Data source settings UI](images/dataSourceSettingsJson.png)
 
 When a Label value is defined, the data source path value would not be shown:
 
-![](images/dataSourceSettingsLabel.png)
+![Data source settings with label](images/dataSourceSettingsLabel.png)
 
 > **Note:** We currently recommend that you *do not* inlcude a Label for your data source if your function has required parameters, as users will not be able to distinguish between the different credentials they have entered. We are hoping to improve this in the future (i.e., allowing data connectors to display their own custom data source paths).
 
@@ -58,7 +58,7 @@ When a Label value is defined, the data source path value would not be shown:
 
 Because data sources with an Uri-based identifier are so common, there is special handling in the Power Query UI when dealing with Uri-based data source paths. When an Uri-based data source is encountered, the credential dialog provides a dropdown allowing the user to select the base path, rather than the full path (and all paths in-between).
 
-![](images/credentialPromptWithUrl.png)
+![Setting path that credentials apply to](images/credentialPromptWithUrl.png)
 
 As `Uri.Type` is an *ascribed type* rather than a *primitive type* in the M language, you will need to use the [Value.ReplaceType] function in indicate that your text parameter should be treated as a Uri.
 
