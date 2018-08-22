@@ -14,7 +14,7 @@ ms.author: gepopell
 LocalizationGroup: reference
 ---
 
-# Transformations
+# Handling Transformations
 For situations where the data source response is not presented in a format that Power BI can consume directly, Power Query can be used to perform a series of transformations.
 ## Static Transformations
 In most cases, the data is presented in a consistent way by the data source: column names, data types, and hierarchical structure are consistent for a given endpoint. In this situation it is appropriate to always apply the same set of transformations to get the data in a format acceptable to Power BI.
@@ -39,7 +39,7 @@ The transformations in this example are:
 
 At the end of the day we are left with data in a simple tabular format that Power BI can consume and easily render:
 
-![](images/trippin2Airlines.png)
+![Data in tabular form](images/trippin2Airlines.png)
 
 It is important to note that a sequence of static transformations of this specificity are only applicable to a *single* endpoint. In the example above, this sequence of transformations will only work if `"AirlineCode"` and `"Name"` exist in the REST endpoint response since they are hard-coded into the M code. Thus, this sequence of transformations may not work if we try to hit the `/Event` endpoint. 
 

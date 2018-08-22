@@ -41,7 +41,7 @@ in
 
 This table is the result:
 
-![](images/staticschematable-initial.png)
+![Table of TripPin Airline data](images/staticschematable-initial.png)
 
 We can use the handy [`Table.Schema`](https://msdn.microsoft.com/en-us/query-bi/m/table-schema) function to check the data type of the columns:
 
@@ -54,7 +54,7 @@ in
     Table.Schema(asTable)
 ```
 
-![](images/staticschematable-schema.png)
+![Result of Table.Schema applied to TripPin Airline data](images/staticschematable-schema.png)
 
 Both AirlineCode and Name are of `any` type. `Table.Schema` returns a lot of metadata about the columns in a table, including names, positions, type information, and many advanced properties such as Precision, Scale, and MaxLength. For now we will only concern ourselves with the ascribed type (`TypeName`), primitive type (`Kind`), and whether the column value might be null (`IsNullable`).
 
@@ -109,7 +109,7 @@ SchemaTable = #table({"Entity", "SchemaTable"}, {
         {"People", People}
     })
 ```
-![](images/staticschematable-schematable.png)
+![Table of schemas](images/staticschematable-schematable.png)
 
 ### The SchemaTransformTable Helper Function
 The `SchemaTransformTable` [helper function](HelperFunctions.md#schematransformtable) described below will be used to enforce schemas on our data. It takes the following parameters:

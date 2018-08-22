@@ -18,7 +18,7 @@ LocalizationGroup: reference
 
 Navigation Tables (or nav tables) are a core part of providing a user-friendly experience for your connector. The Power Query experience displays them to the user after they have entered any required parameters for your data source function, and have authenticated with the data source.
 
-![](images/navtable.png)
+![The TripPin navigation table](images/navtable.png)
 
 Behind the scenes, a nav table is just a regular M Table value with specific metadata fields defined on its Type. When your data source function returns a table with these fields defined, Power Query will display the navigator dialogue. You can actually see the underlying data as a Table value by right-clicking on the root node and clicking Edit.
 
@@ -71,7 +71,7 @@ Each of the following item kind values provide a different icon in the navigatio
 
 The image below shows the icon for item kind in Power BI Desktop. 
 
-![ItemKinds](images/itemKinds.png)
+![List of Navigation Table ItemKinds](images/itemKinds.png)
 
 ## Examples
 
@@ -98,7 +98,7 @@ shared FunctionCallThatReturnsATable = () =>
 
 This code will result in the following Navigator display in Power BI Desktop:
 
-![](images/navTableSample.png)
+![A sample of a flat navigation table](images/navTableSample.png)
 
 ### Multi-level navigation table
 It is possible to use nested navigation tables to create a hierarchical view over your data set. You do this by setting the `IsLeaf` value for that row to `false` (which marks it as a node that can be expanded), and format the `Data` column to also be another nav table. 
@@ -130,7 +130,7 @@ CreateNavTable = (message as text) as table =>
 ```
 This code would result in the following Navigator display in Power BI Desktop:
 
-![](images/navTableNested.png)
+![A sample of a hierarchical navigation table](images/navTableNested.png)
 
 ### Dynamic Navigation Tables
 More complex functionality can be built from these basics. While all of the above examples show hard-coded entities in the nav table, it is easy to see how a nav table could be generated dynamically based on entities that are available to a given user. A few key considerations for dynamic navigation tables include:
