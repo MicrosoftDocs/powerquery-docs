@@ -63,7 +63,7 @@ If you need to choose more than one column, first select a column then hold down
 
 You can also *transform* column data types from the **Transform** ribbon. Here’s the **Transform** ribbon, with an arrow pointing toward the **Data Type** button, which lets you transform the current data type to another.
 
-![](media/power-query-tutorial-shape-combine/queryoverview_transformribbonarrow.png)
+![Transform ribbon arrow](media/power-query-tutorial-shape-combine/queryoverview_transformribbonarrow.png)
 
 Note that in **Query Settings**, the **Applied Steps** reflect any shaping steps applied to the data. If I want to remove any step from the shaping process, I simply select the **X** to the left of the step. In the following image, **Applied Steps** reflects the steps so far: connecting to the website (**Source**); selecting the table (**Navigation**); and while loading the table, Power Query Editor automatically changed text-based number columns from *Text* to *Whole Number* (**Changed Type**). The last two steps show our previous actions with **Added Custom** and **Changed Type1**. 
 
