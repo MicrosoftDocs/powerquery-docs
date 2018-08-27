@@ -8,7 +8,7 @@ layout: LandingPage
 ms.service: powerquery
 ms.component: power-query
 ms.topic: overview
-ms.date: 08/17/2018
+ms.date: 08/27/2018
 ms.author: davidi
 
 LocalizationGroup: reference
@@ -16,7 +16,7 @@ LocalizationGroup: reference
 
 # Power Query Documentation
 
-Power Query is the data connectivity preparation technology that enables end users to seamlessly import and reshape data from within a wide range of Microsoft products, including Excel, Power BI, Analysis Services, Common Data Services for Apps & Analytics, and more.
+Power Query is the Data Connectivity and Data Preparation technology that enables end users to seamlessly import and reshape data from within a wide range of Microsoft products, including Excel, Power BI, Analysis Services, Common Data Services for Apps & Analytics, and more.
 
 <ul class="cardsA panelContent">
     <li>
