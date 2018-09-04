@@ -17,7 +17,7 @@ LocalizationGroup: Get started
 
 # What is Power Query? 
 
-**Power Query** is the Microsoft Data Connectivity and Data Preparation technology that enables business users to seamlessly access data stored in hundreds of data sources and reshape it to fit their needs, with an easy to use, engaging and no-code user experience. 
+**Power Query** is the Microsoft data connectivity and data preparation technology that enables business users to seamlessly access data stored in hundreds of data sources and reshape it to fit their needs, with an easy to use, engaging and no-code user experience. 
 
 Supported data sources include a wide range of file types, databases, Microsoft Azure services and many other third-party online services. **Power Query** also provides a **Custom Connectors SDK** so that third parties can create their own data connectors and seamlessly plug them into Power Query. 
 
