@@ -14,7 +14,7 @@ ms.author: gepopell
 LocalizationGroup: reference
 ---
 
-# Installing the PowerQuery SDK
+# Installing the Power Query SDK
 
 ## Quickstart
 > **Note:** The steps to enable extensions changed in the June 2017 version of Power BI Desktop.

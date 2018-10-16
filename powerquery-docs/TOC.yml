@@ -66,7 +66,6 @@
   items: 
 - name: Reference
   items:
-  - name: "Power Query Reference"
   - name: "Connector Development Reference"
     items:
       - name: "Handling Authentication"
