@@ -8,7 +8,7 @@ ms.reviewer: ''
 ms.service: powerquery
 ms.component: power-query
 ms.topic: overview
-ms.date: 08/10/2018
+ms.date: 10/16/2018
 ms.author: millopis
 
 LocalizationGroup: Get started
@@ -19,7 +19,7 @@ LocalizationGroup: Get started
 
 **Power Query** is the Microsoft Data Connectivity and Data Preparation technology that enables business users to seamlessly access data stored in hundreds of data sources and reshape it to fit their needs, with an easy to use, engaging and no-code user experience. 
 
-Supported data sources include a wide range of file types, databases, Microsoft Azure services and many other third-party online services. **Power Query** also provides a **Custom Connectors SDK** so that third parties can create their own data connectors and seamlessly plug them into Power Query. 
+Supported data sources include a wide range of file types, databases, Microsoft Azure services and many other third-party online services. **Power Query** also provides a [**Custom Connectors SDK**](https://github.com/Microsoft/DataConnectors) so that third parties can create their own data connectors and seamlessly plug them into Power Query. 
 
 ![Get data using Power Query](media/power-query-what-is-power-query/what-is-power-query_01.png)
 
@@ -36,10 +36,10 @@ The **Power Query Editor** is the primary data preparation experience, allowing 
 
 |Product Name      |Overview  |
 |-------------------------------|---------|
-|Microsoft Power BI     |Power Query enables data analysts and report authors to connect and transform data as part of creating Power BI reports using Power BI Desktop.|
-|Microsoft Excel         |Power Query enables Excel users to import data from a wide range of data sources into Excel for analytics and visualizations. <br>Starting with Excel 2016, Power Query capabilities are natively integrated and can be found under the “Get & Transform” section of the Data tab in the Excel Desktop ribbon.<br> Excel 2010 and 2013 users can also leverage Power Query by installing the Microsoft Power Query for Excel add-in. |
-|Microsoft SQL Server Data Tools for Visual Studio     |Business Intelligence Developers can create Azure Analysis Services and SQL Server Analysis Services tabular models using SQL Server Data Tools for Visual Studio. Within this experience, users can leverage Power Query to access and reshape data as part of defining tabular models.         |
-|Microsoft Common Data Service for Apps     | Common Data Service (CDS) for Apps lets you securely store and manage data that's used by business applications. Data within CDS for Apps is stored within a set of entities. An entity is a set of records used to store data, similar to how a table stores data within a database. <br>CDS for Apps includes a base set of standard entities that cover typical scenarios, but you can also create custom entities specific to your organization and populate them with data using Power Query. App makers can then use PowerApps to build rich applications using this data.        |
+|Microsoft Power BI     |Power Query enables data analysts and report authors to connect and transform data as part of creating Power BI reports using [Power BI Desktop](https://powerbi.microsoft.com/desktop/).|
+|Microsoft Excel         |Power Query enables [Excel](https://office.microsoft.com/excel/) users to import data from a wide range of data sources into Excel for analytics and visualizations. <br>Starting with Excel 2016, Power Query capabilities are natively integrated and can be found under the [“Get & Transform”](https://support.office.com/article/get-transform-in-excel-2016-881c63c6-37c5-4ca2-b616-59e18d75b4de) section of the Data tab in the Excel Desktop ribbon.<br> Excel 2010 and 2013 users can also leverage Power Query by installing the [Microsoft Power Query for Excel add-in](https://www.microsoft.com/download/details.aspx?id=39379&CorrelationId=8492b7f4-cadf-46e3-91c1-9cb047a47cf6). |
+|Microsoft SQL Server Data Tools for Visual Studio     |Business Intelligence Developers can create Azure Analysis Services and SQL Server Analysis Services tabular models using [SQL Server Data Tools for Visual Studio](https://visualstudio.microsoft.com/vs/features/ssdt/). Within this experience, users can leverage Power Query to access and reshape data as part of defining tabular models.         |
+|Microsoft Common Data Service for Apps     | [Common Data Service (CDS) for Apps](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-intro) lets you securely store and manage data that's used by business applications. Data within CDS for Apps is stored within a set of entities. An entity is a set of records used to store data, similar to how a table stores data within a database. <br>CDS for Apps includes a base set of standard entities that cover typical scenarios, but you can also [create custom entities specific to your organization and populate them with data using Power Query](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-cds-newentity-pq). App makers can then use PowerApps to build rich applications using this data.        |
 
 ## How Power Query helps with data acquisition
 
