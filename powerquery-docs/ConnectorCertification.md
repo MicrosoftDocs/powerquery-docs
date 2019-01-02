@@ -18,7 +18,7 @@ LocalizationGroup: reference
 
 When developing a custom connector, or if you've been given one by another developer or vendor, you'll notice that they require you to lower the security settings in Power BI to use them. This is due to the fact that M is a versatile language that (as seen in [Handling Authentication](HandlingAuthentication.md)) has the capacity to interact with stored credentials. This means that we needed to give end users a way to only allow certified connectors to run.
 
-The 'Connector Certification' program, which will begin delivering new connectors via Power BI when we GA in October 2018, is a program in which Microsoft works with vendors to extend the data connectivity capabilities of Power BI.
+The 'Connector Certification' program is a program in which Microsoft works with vendors to extend the data connectivity capabilities of Power BI.
 
 Certified connectors are:
 
