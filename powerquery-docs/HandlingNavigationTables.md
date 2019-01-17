@@ -28,6 +28,7 @@ You can use the [`Table.ToNavigationTable`](HelperFunctions.md#tabletonavigation
 > **Note**: You currently need to copy and paste this function into your M extension. In the future it will likely be moved into the M standard library.
 
 The following table describes the parameters for this function:
+
 | Parameter      | Details         |
 |:---------------|:----------------|
 | table          | Your navigation table.   |
