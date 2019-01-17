@@ -19,7 +19,7 @@ LocalizationGroup: reference
 ## Test Connection
 
 > Custom Connector support is now available in both Personal and Enterprise modes of the [On-Premises Data Gateway](https://powerbi.microsoft.com/en-us/blog/on-premises-data-gateway-july-update-is-now-available/).
-> Both gateway modes support **Import** - **Direct Query** support in the Enterprise mode is targeted at an upcoming release.
+> Both gateway modes support **Import** - **Direct Query** is only supported in Enterprise mode.
 
 > The method for implementing TestConnection functionality is likely to change prior while the Power BI Custom Data Connector functionality is in preview.
 
