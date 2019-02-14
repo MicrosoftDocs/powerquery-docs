@@ -3,10 +3,8 @@ title: Power Query
 description: Welcome to powerquery-docs
 author: cpopell
 manager: kfile
-ms.reviewer: ''
 layout: LandingPage
 ms.service: powerquery
-ms.component: power-query
 ms.topic: overview
 ms.date: 08/27/2018
 ms.author: davidi

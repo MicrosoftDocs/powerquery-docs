@@ -3,10 +3,8 @@ title: TripPin 8 - Adding Diagnostics
 description: Adding diagnostics to our TripPin REST connector.
 author: cpopell
 manager: kfile
-ms.reviewer: ''
 
 ms.service: powerquery
-ms.component: power-query
 ms.topic: tutorial
 ms.date: 08/16/2018
 ms.author: gepopell

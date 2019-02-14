@@ -3,10 +3,8 @@ title: TripPin 2 - REST
 description: Starting a REST connector for the TripPin sample service
 author: cpopell
 manager: kfile
-ms.reviewer: ''
 
 ms.service: powerquery
-ms.component: power-query
 ms.topic: tutorial
 ms.date: 08/16/2018
 ms.author: gepopell

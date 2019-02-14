@@ -3,10 +3,8 @@ title: Installing the Power Query SDK
 description: Installation and explanation of the Power Query SDK and how to use Custom Connectors
 author: cpopell
 manager: kfile
-ms.reviewer: ''
 
 ms.service: powerquery
-ms.component: power-query
 ms.topic: quickstart
 ms.date: 08/16/2018
 ms.author: gepopell
