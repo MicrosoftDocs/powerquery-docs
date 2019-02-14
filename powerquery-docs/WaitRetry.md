@@ -3,10 +3,8 @@ title: Using the wait-retry pattern in Power Query connectors
 description: Use the wait-retry pattern for Power Query connectors
 author: cpopell
 manager: kfile
-ms.reviewer: ''
 
 ms.service: powerquery
-ms.component: power-query
 ms.topic: conceptual
 ms.date: 08/16/2018
 ms.author: gepopell

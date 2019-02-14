@@ -3,10 +3,8 @@ title: Shape and combine data from multiple sources using Power Query
 description: In this tutorial, you learn how to shape and combine data using Power Query
 author: davidiseminger
 manager: kfile
-ms.reviewer: ''
 
 ms.service: powerquery
-ms.component: power-query
 ms.topic: quickstart
 ms.date: 08/10/2018
 ms.author: davidi

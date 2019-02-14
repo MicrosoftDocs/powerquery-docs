@@ -3,10 +3,8 @@ title: What is Power Query?
 description: Learn what Power Query is, and how it can help you get and transform data
 author: mllopis
 manager: kfile
-ms.reviewer: ''
 
 ms.service: powerquery
-ms.component: power-query
 ms.topic: overview
 ms.date: 10/16/2018
 ms.author: millopis
