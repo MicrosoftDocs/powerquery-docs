@@ -2,7 +2,6 @@
 title: Creating your first connector - Hello World
 description: Create your first connector
 author: cpopell
-manager: kfile
 
 ms.service: powerquery
 ms.topic: quickstart

@@ -2,7 +2,6 @@
 title: Quickstart - using Power Query in Power BI
 description: In this quickstart, you learn to use Power Query in Power BI Desktop
 author: davidiseminger
-manager: kfile
 
 ms.service: powerquery
 ms.topic: quickstart

@@ -2,7 +2,6 @@
 title: Start developing custom connectors for Power Query 
 description: Create custom Power Query connectors
 author: cpopell
-manager: kfile
 
 ms.service: powerquery
 ms.topic: quickstart

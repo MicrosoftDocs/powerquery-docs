@@ -2,7 +2,6 @@
 title: Connector Certification
 description: Guidelines on connector certification and implementation requirements
 author: cpopell
-manager: kfile
 
 ms.service: powerquery
 ms.topic: conceptual

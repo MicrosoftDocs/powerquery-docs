@@ -2,7 +2,6 @@
 title: Using a resource path for Power Query connectors
 description: Use a resource path for Power Query connectors
 author: cpopell
-manager: kfile
 
 ms.service: powerquery
 ms.topic: conceptual
