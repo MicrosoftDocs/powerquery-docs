@@ -3,10 +3,8 @@ title: TripPin 1 - OData
 description: Writing an OData connector for the TripPin sample service
 author: cpopell
 manager: kfile
-ms.reviewer: ''
 
 ms.service: powerquery
-ms.component: power-query
 ms.topic: tutorial
 ms.date: 08/16/2018
 ms.author: gepopell

@@ -3,10 +3,8 @@ title: TripPin 10 - Query Folding (part 1)
 description: Initial support for query folding for our TripPin REST connector.
 author: cpopell
 manager: kfile
-ms.reviewer: ''
 
 ms.service: powerquery
-ms.component: power-query
 ms.topic: tutorial
 ms.date: 08/16/2018
 ms.author: gepopell

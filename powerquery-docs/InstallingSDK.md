@@ -2,11 +2,8 @@
 title: Installing the Power Query SDK
 description: Installation and explanation of the Power Query SDK and how to use Custom Connectors
 author: cpopell
-manager: kfile
-ms.reviewer: ''
 
 ms.service: powerquery
-ms.component: power-query
 ms.topic: quickstart
 ms.date: 08/16/2018
 ms.author: gepopell
@@ -23,7 +20,7 @@ LocalizationGroup: reference
 3. Define your connector logic
 4. Build the project to produce an extension file
 5. Copy the extension file into [Documents]/Power BI Desktop/Custom Connectors
-6. Enable the **Custom data connectors** preview feature in Power BI Desktop (under *File | Options and settings | Custom data connectors*)
+6. Check the option - **(Not Recommended) Allow any extension to load without validation or warning** in Power BI Desktop (under *File | Options and settings | Options | Security | Data Extensions*)
 7. Restart Power BI Desktop
 
 ![Preview Feature](images/newProject.png)
