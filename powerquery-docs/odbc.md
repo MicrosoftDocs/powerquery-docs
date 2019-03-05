@@ -2,7 +2,6 @@
 title: Enabling DirectQuery for an ODBC-based Power Query connector
 description: Use DirectQuery for an ODBC-based Power Query connector
 author: cpopell
-manager: kfile
 
 ms.service: powerquery
 ms.topic: conceptual

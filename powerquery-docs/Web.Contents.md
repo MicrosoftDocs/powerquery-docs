@@ -2,7 +2,6 @@
 title: Using Web.Contents when creating Power Query connectors
 description: Use Web.Contents when creating Power Query connectors
 author: cpopell
-manager: kfile
 
 ms.service: powerquery
 ms.topic: conceptual

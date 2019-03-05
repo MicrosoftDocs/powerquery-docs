@@ -2,7 +2,6 @@
 title: Power Query 
 description: Welcome to powerquery-docs
 author: cpopell
-manager: kfile
 layout: LandingPage
 ms.service: powerquery
 ms.topic: overview

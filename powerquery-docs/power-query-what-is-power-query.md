@@ -2,7 +2,6 @@
 title: What is Power Query?
 description: Learn what Power Query is, and how it can help you get and transform data
 author: mllopis
-manager: kfile
 
 ms.service: powerquery
 ms.topic: overview

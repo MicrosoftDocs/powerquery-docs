@@ -2,7 +2,6 @@
 title: Gateway Support for Power Query connectors
 description: Manage gateway support for Power Query connectors, including test connection
 author: cpopell
-manager: kfile
 
 ms.service: powerquery
 ms.topic: conceptual
