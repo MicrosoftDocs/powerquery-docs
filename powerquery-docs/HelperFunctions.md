@@ -107,9 +107,14 @@ Uri.GetHost = (url) =>
 
 This function checks if the user entered an HTTPS url and raises an error if they don't. This is required for user entered URLs for certified connectors.
 
+
 ```
 ValidateUrlScheme = (url as text) as text => if (Uri.Parts(url)[Scheme] <> "https") then error "Url scheme must be HTTPS" else url;
+```
 
+To apply it, just wrap your url parameter in your data access function.
+
+```
 DataAccessFunction = (url as text) as table =>
     let
         _url = ValidateUrlScheme(url),
