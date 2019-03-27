@@ -52,11 +52,11 @@ We have a certain set of requirements for certification. We recognize that not e
 * If using Extension.CurrentCredentials() …
   * Is the usage required? If so, where do the credentials get sent to?
   * Are the requests guaranteed to be made via HTTPS?
-    * You can use the HTTPS enforcement helper function.
+    * You can use the [HTTPS enforcement helper function](HelperFunctions.md#validateurlscheme).
   * If the credentials are sent using Web.Contents() via GET …
     * Can it be turned into a POST?
     * If GET is required, connector MUST use the CredentialQueryString record in the Web.Contents() options record to pass in sensitive credentials
-* If Diagnostics.* functions are used …
+* If [Diagnostics.* functions](https://docs.microsoft.com/en-us/powerquery-m/diagnostics-trace) are used …
   * Validate what is being traced - it MUST NOT
     * Contain PII
     * Contain large amounts of data
@@ -68,9 +68,9 @@ We have a certain set of requirements for certification. We recognize that not e
   
 ### Features and Style
 * Connector MUST use Section document format
-* Connector MUST have Version adornment on section
+* Connector MUST have [Version adornment](HandlingVersioning.md) on section
 * Connector MUST provide function documentation metadata
-* Connector MUST have TestConnection handler
+* Connector MUST have [TestConnection handler](HandlingGatewaySupport.md)
 * Connector MUST follow naming conventions (DataSourceKind.FunctionName)
 * FunctionName should make sense for their domain - generally "Contents", "Tables", "Document", "Databases" …
 * Connector SHOULD have icons
