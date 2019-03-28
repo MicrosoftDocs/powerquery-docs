@@ -12,7 +12,7 @@ LocalizationGroup: reference
 ---
 
 # Versioning
-Versioning is not currently supported in Power Query. However, we plan on lighting up this functionality in the future and encourage all connector developers to take advantage of it. This is required for certified connectors.
+Versioning is not currently supported in Power Query.  We plan on enabling versioning eventually, and recommend all connector developers to use it once available. Versioning is required for certified connectors.
 
 ## Version Format in Power Query
 Versioning in Power Query is a simple metadata record above the section document:
