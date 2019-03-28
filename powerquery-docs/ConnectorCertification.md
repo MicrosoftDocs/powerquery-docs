@@ -34,17 +34,17 @@ We have a certain set of requirements for certification. We recognize that not e
 * Developer must own the data source or have recorded permission from the owner of the data source to develop a connector for it.
 * Developer must sign an NDA
 * Developer must sign a business partner agreement with our team
-  * This is different from a Microsoft Partner agreement. This agreement addresses terms of making your connector code available to us for use in the relevant products. We will sign this when we kick off the process.
+  * The business partner agreement is different from a Microsoft Partner agreement. The agreement addresses terms of making your connector code available to us for use in the relevant products. We will sign the agreement when we kick off the process.
 * Data source must not be an internal only data source
   
 ### Artifacts
 * PBIX file
   * Report should contain one or more queries to test each item in their navigation table
-  * If you don't have a set schema (as an example, databases), we suggest you have a query for each 'type' of table you're concerned with.
+  * If you don't have a set schema (as an example, databases), you should include a query for each 'type' of table you're concerned with.
 * .mez file
-  * This .mez file should follow style standards. For example, use Product.mez rather than Product_PowerBI_Connector.mez.
+  * The .mez file should follow style standards. For example, use Product.mez rather than Product_PowerBI_Connector.mez.
 * Test account
-  * This test account will be reused whenever we're troubleshooting or certifying updates, so if you have a persistent test account it would be best to find a way to share this.
+  * The test account will be reused whenever we're troubleshooting or certifying updates, so if you have a persistent test account it would be best to find a way to share this.
 * Link to external dependencies (ODBC drivers, for example).
 * Documentation on how to use the connector if needed
  
@@ -60,7 +60,7 @@ We have a certain set of requirements for certification. We recognize that not e
   * Validate what is being traced - it MUST NOT
     * Contain PII
     * Contain large amounts of data
-  * We suggest that if you implemented significant tracing in development that you attach it to a variable that checks if tracing should be on or not, and you turn it off before shipping.
+  * If you implemented significant tracing in development, you should attach it to a variable that checks if tracing should be on or not, and you should turn it off before shipping.
 * If Expression.Evaluate() is used …
   * Validate where the expression is coming from / what it is (i.e. can dynamically construct calls to Extension.CurrentCredentials() etc…
   * Expression should not be user provided / take user input
