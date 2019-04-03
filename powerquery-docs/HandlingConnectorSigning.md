@@ -1,12 +1,14 @@
-Trusted Third Party Connectors for Power BI 
-
-Instructions for developer 
+# Trusted Third Party Connectors for Power BI 
 
 Note: If you need help creating a self-signed certificate to test these instructions, please see the Microsoft Documentation on ‘New-SelfSignedCertificate’ in PowerShell here. 
 
 Note: If you need help exporting your certificate as a pfx, please see here. 
 
-Extract MakePQX.zip to wherever you want to run it from. To run it, call it in the command-line. Running without any parameters will return the help information. 
+1. Download
+
+2. Extract MakePQX.zip to wherever you want to run it from. 
+
+3. To run it, call it in the command-line. Running without any parameters will return the help information. 
 
 C:\>C:\Users\cpope\Downloads\MakePQX\MakePQX.exe 
 
@@ -32,7 +34,7 @@ Commands:
 
 There are three commands in MakePQX. Use "MakePQX [command] --help" for more information about a command. 
 
-Pack 
+## Pack 
 
  
 
@@ -42,7 +44,7 @@ C:\Users\cpope\Downloads\MakePQX>MakePQX.exe pack -h
 
  
 
-Usage: MakePQX pack [options] 
+### Usage: MakePQX pack [options] 
 
  
 
@@ -62,7 +64,7 @@ pack --mez <extension.mez> [--target extension.pqx] [--certificate <cert.pfx> [-
 
  
 
-Example 
+### Example 
 
  
 
@@ -71,7 +73,7 @@ C:\Users\cpope\Downloads\MakePQX>MakePQX.exe pack -mz "C:\Users\cpope\OneDrive\D
 Page Break
  
 
-Sign 
+## Sign 
 
  
 
@@ -81,7 +83,7 @@ C:\Users\cpope\Downloads\MakePQX>MakePQX.exe sign -h
 
  
 
-Usage: MakePQX sign [arguments] [options] 
+### Usage: MakePQX sign [arguments] [options] 
 
  
 
@@ -107,7 +109,7 @@ sign <extension.pqx> --certificate <cert.pfx> [--password <certPassword>] [--rep
 
  
 
-Example 
+### Example 
 
  
 
@@ -115,7 +117,7 @@ C:\Users\cpope\Downloads\MakePQX>MakePQX sign "C:\Users\cpope\OneDrive\Documents
 
  
 
-Verify 
+## Verify 
 
  
 
@@ -125,7 +127,7 @@ C:\Users\cpope\Downloads\MakePQX>MakePQX.exe verify -h
 
  
 
-Usage: MakePQX verify [arguments] [options] 
+### Usage: MakePQX verify [arguments] [options] 
 
  
 
@@ -138,51 +140,26 @@ Arguments:
 Options: 
 
   -q  | --quiet      Hides signature verification output. 
-
   -?  | -h | --help  Show help information 
 
- 
+### Example 
 
- 
-
-Example 
-
- 
-
- 
-
-C:\Users\cpope\Downloads\MakePQX>MakePQX verify "C:\Users\cpope\OneDrive\Documents\Power BI Desktop\Custom Connectors\HelloWorldSigned.pqx" 
+```C:\Users\cpope\Downloads\MakePQX>MakePQX verify "C:\Users\cpope\OneDrive\Documents\Power BI Desktop\Custom Connectors\HelloWorldSigned.pqx" 
 
 { 
-
   "SignatureStatus": "Success", 
-
   "CertificateStatus": [ 
-
     { 
-
       "Issuer": "CN=Colin Popell", 
-
       "Thumbprint": "16AF59E4BE5384CD860E230ED4AED474C2A3BC69", 
-
       "Subject": "CN=Colin Popell", 
-
       "NotBefore": "2019-02-14T22:47:42-08:00", 
-
       "NotAfter": "2020-02-14T23:07:42-08:00", 
-
       "Valid": false, 
-
       "Parent": null, 
-
       "Status": "UntrustedRoot" 
-
     } 
-
   ] 
+} ```
 
-} 
-
- 
-
-Once you’ve verified your signature, you can provide the thumbprint to the end-user to list as trusted.
+ Once you’ve verified your signature, you can provide the thumbprint to the end-user to list as trusted.
