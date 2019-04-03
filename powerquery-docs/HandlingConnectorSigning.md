@@ -75,60 +75,42 @@ Page Break
 
 ## Sign 
 
- 
+The _Sign_ command signs your .pqx file with a certificate, giving it a thumbprint that can be checked for trust by Power BI clients with the higher security setting. This takes a pqx file and returns the same pqx file, signed.
 
-C:\Users\cpope\Downloads\MakePQX>MakePQX.exe sign -h 
-
- 
-
- 
-
-### Usage: MakePQX sign [arguments] [options] 
-
- 
+Usage: MakePQX sign \[arguments\] \[options\] 
 
 Arguments: 
 
-  pqx file  The path to the .pqx file. 
+| Argument   | Description                |
+|------------|----------------------------|
+| \<pqx file\> | The path to the .pqx file. | 
 
- 
+Options:
 
-Options: 
-
-  -c  | --certificate  Certificate (.pfx) used to sign the extension file. 
-
-  -p  | --password     Password for the certificate file. 
-
-  -r | --replace       Replace existing signature instead of countersigning. 
-
-  -?  | -h | --help    Show help information 
+| Option | Description |
+|--------|-------------|
+|  -c  \| --certificate | Certificate (.pfx) used to sign the extension file. |
+| -p  \| --password |    Password for the certificate file. |
+|  -r \| --replace   |    Replace existing signature instead of countersigning. |
+|  -?  \| -h \| --help |   Show help information |
 
 sign <extension.pqx> --certificate <cert.pfx> [--password <certPassword>] [--replace] 
 
- 
-
- 
-
 ### Example 
 
- 
-
-C:\Users\cpope\Downloads\MakePQX>MakePQX sign "C:\Users\cpope\OneDrive\Documents\Power BI Desktop\Custom Connectors\HelloWorldSigned.pqx" --certificate ColinPopellTestCertificate.pfx --password password 
-
- 
+```C:\Users\cpope\Downloads\MakePQX>MakePQX sign "C:\Users\cpope\OneDrive\Documents\Power BI Desktop\Custom Connectors\HelloWorldSigned.pqx" --certificate ColinPopellTestCertificate.pfx --password password```
 
 ## Verify 
 
- 
+The _Verify_ command verifies that your module has been properly signed, as well as showing the Certificate status.
 
-C:\Users\cpope\Downloads\MakePQX>MakePQX.exe verify -h 
-
-Usage: MakePQX verify [arguments] [options] 
+Usage: MakePQX verify \[arguments\] \[options\] 
 
 Arguments: 
+
 | Argument   | Description                |
 |------------|----------------------------|
-| <pqx file> | The path to the .pqx file. | 
+| \<pqx file\> | The path to the .pqx file. | 
 
 Options: 
 
