@@ -1,8 +1,10 @@
 # Trusted Third Party Connectors for Power BI 
 
-Note: If you need help creating a self-signed certificate to test these instructions, please see the Microsoft Documentation on ‘New-SelfSignedCertificate’ in PowerShell here. 
+[!NOTE]
+Note: If you need help creating a self-signed certificate to test these instructions, please see the Microsoft Documentation on ‘New-SelfSignedCertificate’ in PowerShell [here](https://docs.microsoft.com/en-us/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps). 
 
-Note: If you need help exporting your certificate as a pfx, please see here. 
+[!NOTE]
+Note: If you need help exporting your certificate as a pfx, please see [here](https://knowledge.digicert.com/solution/SO26065.html). 
 
 1. Download
 
