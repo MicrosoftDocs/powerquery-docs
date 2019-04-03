@@ -131,10 +131,10 @@ Arguments:
 
 Options: 
 
-|                  |                                      |
-|------------------|--------------------------------------|
-| -q \| --quiet     | Hides signature verification output. |
-| -? \| -h \| --help | Show help information                |
+| Option             | Description                           |
+|--------------------|---------------------------------------|
+| -q \| --quiet      | Hides signature verification output.  |
+| -? \| -h \| --help | Show help information                 |
 
 ### Example 
 
