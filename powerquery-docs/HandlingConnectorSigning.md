@@ -123,28 +123,22 @@ C:\Users\cpope\Downloads\MakePQX>MakePQX sign "C:\Users\cpope\OneDrive\Documents
 
 C:\Users\cpope\Downloads\MakePQX>MakePQX.exe verify -h 
 
- 
-
- 
-
-### Usage: MakePQX verify [arguments] [options] 
-
- 
+Usage: MakePQX verify [arguments] [options] 
 
 Arguments: 
 
   pqx file  The path to the .pqx file. 
 
- 
-
 Options: 
 
-  -q  | --quiet      Hides signature verification output. 
-  -?  | -h | --help  Show help information 
+| -q | | --quiet     | Hides signature verification output. |
+|----|---------------|--------------------------------------|
+| -? | | -h | --help | Show help information                |
 
 ### Example 
 
-```C:\Users\cpope\Downloads\MakePQX>MakePQX verify "C:\Users\cpope\OneDrive\Documents\Power BI Desktop\Custom Connectors\HelloWorldSigned.pqx" 
+```
+C:\Users\cpope\Downloads\MakePQX>MakePQX verify "C:\Users\cpope\OneDrive\Documents\Power BI Desktop\Custom Connectors\HelloWorldSigned.pqx" 
 
 { 
   "SignatureStatus": "Success", 
@@ -160,6 +154,7 @@ Options:
       "Status": "UntrustedRoot" 
     } 
   ] 
-} ```
+} 
+```
 
  Once you’ve verified your signature, you can provide the thumbprint to the end-user to list as trusted.
