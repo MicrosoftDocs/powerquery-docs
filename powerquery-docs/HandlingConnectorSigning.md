@@ -1,4 +1,4 @@
-# Trusted Third Party Connectors for Power BI 
+# Handling Power Query Connector Signing 
 
 [!NOTE]
 Note: If you need help creating a self-signed certificate to test these instructions, please see the Microsoft Documentation on ‘New-SelfSignedCertificate’ in PowerShell [here](https://docs.microsoft.com/en-us/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps). 
