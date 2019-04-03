@@ -126,8 +126,9 @@ C:\Users\cpope\Downloads\MakePQX>MakePQX.exe verify -h
 Usage: MakePQX verify [arguments] [options] 
 
 Arguments: 
-
-  pqx file  The path to the .pqx file. 
+| Argument   | Description                |
+|------------|----------------------------|
+| <pqx file> | The path to the .pqx file. | 
 
 Options: 
 
