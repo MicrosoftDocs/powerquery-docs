@@ -133,8 +133,8 @@ Options:
 
 |    |               |                                      |
 |----|---------------|--------------------------------------|
-| -q | | --quiet     | Hides signature verification output. |
-| -? | | -h | --help | Show help information                |
+| -q | \| --quiet     | Hides signature verification output. |
+| -? | \| -h \| --help | Show help information                |
 
 ### Example 
 
