@@ -10,8 +10,6 @@ Note: If you need help exporting your certificate as a pfx, please see here.
 
 3. To run it, call it in the command-line. Running without any parameters will return the help information. 
 
-C:\>C:\Users\cpope\Downloads\MakePQX\MakePQX.exe 
-
 Usage: MakePQX [options] [command] 
 
 Options: 
@@ -29,7 +27,7 @@ Commands:
 |  verify | Verify the signature status on a .pqx file. Return value will be non-zero if the signature is invalid. |
 
  
-There are three commands in MakePQX. Use "MakePQX [command] --help" for more information about a command. 
+There are three commands in MakePQX. Use ```"MakePQX [command] --help"``` for more information about a command. 
 
 ## Pack 
 
