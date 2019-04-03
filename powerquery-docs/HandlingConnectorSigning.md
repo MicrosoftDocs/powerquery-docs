@@ -17,11 +17,13 @@ Usage: MakePQX [options] [command]
 Options: 
 
 | Options | Description |
+|---------|-------------|
 |  -?  \| -h \| --help | Show help information |
 
 Commands: 
 
 | Command | Description |
+|---------|-------------|
 |  pack |   Create a .pqx file. |
 |  sign |   Signs an unsigned pqx, or countersigns if pqx is already signed. Use the --replace option to replace the existing signature. |
 |  verify | Verify the signature status on a .pqx file. Return value will be non-zero if the signature is invalid. |
