@@ -131,8 +131,9 @@ Arguments:
 
 Options: 
 
-| -q | | --quiet     | Hides signature verification output. |
+|    |               |                                      |
 |----|---------------|--------------------------------------|
+| -q | | --quiet     | Hides signature verification output. |
 | -? | | -h | --help | Show help information                |
 
 ### Example 
