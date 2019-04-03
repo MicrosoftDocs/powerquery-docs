@@ -14,64 +14,42 @@ C:\>C:\Users\cpope\Downloads\MakePQX\MakePQX.exe
 
 Usage: MakePQX [options] [command] 
 
- 
-
 Options: 
 
-  -?  | -h | --help  Show help information 
-
- 
+| Options | Description |
+|  -?  \| -h \| --help | Show help information |
 
 Commands: 
 
-  pack    Create a .pqx file. 
-
-  sign    Signs an unsigned pqx, or countersigns if pqx is already signed. Use the --replace option to replace the existing signature. 
-
-  verify  Verify the signature status on a .pqx file. Return value will be non-zero if the signature is invalid. 
+| Command | Description |
+|  pack |   Create a .pqx file. |
+|  sign |   Signs an unsigned pqx, or countersigns if pqx is already signed. Use the --replace option to replace the existing signature. |
+|  verify | Verify the signature status on a .pqx file. Return value will be non-zero if the signature is invalid. |
 
  
-
 There are three commands in MakePQX. Use "MakePQX [command] --help" for more information about a command. 
 
 ## Pack 
 
- 
+The _Pack_ command takes a .mez file and packs it into a .pqx file, which is able to be signed. The .pqx file is also able to support a number of capabilities that will be added in the future.
 
-C:\Users\cpope\Downloads\MakePQX>MakePQX.exe pack -h 
-
- 
-
- 
-
-### Usage: MakePQX pack [options] 
-
- 
+Usage: MakePQX pack \[options\] 
 
 Options: 
 
-  -?  | -h | --help    Show help information 
-
-  -mz | --mez          Input extension file. 
-
-  -c  | --certificate  Certificate (.pfx) used to sign the extension file. 
-
-  -p  | --password     Password for the certificate file. 
-
-  -t  | --target       Output file name. Defaults to the same name as the input file. 
-
-pack --mez <extension.mez> [--target extension.pqx] [--certificate <cert.pfx> [--password <password>]] 
-
- 
+| Option | Description |
+|--------|-------------|
+|  -?  \| -h \| --help |   Show help information |
+|  -mz \| --mez |         Input extension file |
+|  -c  \| --certificate | Certificate (.pfx) used to sign the extension file |
+|  -p  \| --password |    Password for the certificate file |
+|  -t  \| --target |      Output file name. Defaults to the same name as the input file |
 
 ### Example 
 
- 
-
-C:\Users\cpope\Downloads\MakePQX>MakePQX.exe pack -mz "C:\Users\cpope\OneDrive\Documents\Power BI Desktop\Custom Connectors\HelloWorld.mez" -t "C:\Users\cpope\OneDrive\Documents\Power BI Desktop\Custom Connectors\HelloWorldSigned.pqx" 
-
-Page Break
- 
+```
+C:\Users\cpope\Downloads\MakePQX>MakePQX.exe pack -mz "C:\Users\cpope\OneDrive\Documents\Power BI Desktop\Custom Connectors\HelloWorld.mez" -t "C:\Users\cpope\OneDrive\Documents\Power BI Desktop\Custom Connectors\HelloWorldSigned.pqx"
+```
 
 ## Sign 
 
@@ -94,11 +72,11 @@ Options:
 |  -r \| --replace   |    Replace existing signature instead of countersigning. |
 |  -?  \| -h \| --help |   Show help information |
 
-sign <extension.pqx> --certificate <cert.pfx> [--password <certPassword>] [--replace] 
-
 ### Example 
 
-```C:\Users\cpope\Downloads\MakePQX>MakePQX sign "C:\Users\cpope\OneDrive\Documents\Power BI Desktop\Custom Connectors\HelloWorldSigned.pqx" --certificate ColinPopellTestCertificate.pfx --password password```
+```
+C:\Users\cpope\Downloads\MakePQX>MakePQX sign "C:\Users\cpope\OneDrive\Documents\Power BI Desktop\Custom Connectors\HelloWorldSigned.pqx" --certificate ColinPopellTestCertificate.pfx --password password
+```
 
 ## Verify 
 
