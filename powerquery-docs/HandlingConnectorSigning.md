@@ -6,7 +6,7 @@ Note: If you need help creating a self-signed certificate to test these instruct
 [!NOTE]
 Note: If you need help exporting your certificate as a pfx, please see [here](https://knowledge.digicert.com/solution/SO26065.html). 
 
-1. Download
+1. Download from *LINK TBD*
 
 2. Extract MakePQX.zip to wherever you want to run it from. 
 
