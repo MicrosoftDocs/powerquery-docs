@@ -1,3 +1,16 @@
+---
+title: Handling Connector Signing
+description: How to sign custom connectors for trusted use with recommended security levels
+author: cpopell
+
+ms.service: powerquery
+ms.topic: conceptual
+ms.date: 04/28/2019
+ms.author: gepopell
+
+LocalizationGroup: reference
+---
+
 # Handling Power Query Connector Signing 
 
 [!NOTE]
@@ -6,11 +19,11 @@ Note: If you need help creating a self-signed certificate to test these instruct
 [!NOTE]
 Note: If you need help exporting your certificate as a pfx, please see [here](https://knowledge.digicert.com/solution/SO26065.html). 
 
-1. Download from *LINK TBD*
+1. Download from https://aka.ms/makepqx
 
-2. Extract MakePQX.zip to wherever you want to run it from. 
+2. Extract the MakePQX folder in the included zip to your desired target. 
 
-3. To run it, call it in the command-line. Running without any parameters will return the help information. 
+3. To run it, call MakePQX in the command-line. It requires the other libraries in the folder, so you can't copy just the one executable. Running without any parameters will return the help information. 
 
 Usage: MakePQX [options] [command] 
 
