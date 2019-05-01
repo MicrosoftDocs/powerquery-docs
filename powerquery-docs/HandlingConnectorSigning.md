@@ -13,6 +13,10 @@ LocalizationGroup: reference
 
 # Handling Power Query Connector Signing 
 
+In Power BI, the loading of custom connectors is limited by your choice of security setting. As a general rule, when the security for loading custom connectors is set to 'Recommended', the custom connectors won't load at all, and you have to lower it to make them load.
+
+The exception to this is trusted, 'signed connectors'. Signed connectors are a special format of custom connector, a .pqx instead of .mez file, which have been signed with a certificate. The signer can provide the user or the user's IT department with a thumbprint of the signature, which can be put into the registry to securely indicate trusting a given connector.
+
 [!NOTE]
 Note: If you need help creating a self-signed certificate to test these instructions, please see the Microsoft Documentation on ‘New-SelfSignedCertificate’ in PowerShell [here](https://docs.microsoft.com/en-us/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps). 
 
