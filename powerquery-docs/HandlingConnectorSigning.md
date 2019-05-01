@@ -17,6 +17,8 @@ In Power BI, the loading of custom connectors is limited by your choice of secur
 
 The exception to this is trusted, 'signed connectors'. Signed connectors are a special format of custom connector, a .pqx instead of .mez file, which have been signed with a certificate. The signer can provide the user or the user's IT department with a thumbprint of the signature, which can be put into the registry to securely indicate trusting a given connector.
 
+The following steps enable you to use a certificate (with explanation on how to generate one if you don't have one available) and sign a custom connector with the 'MakePQX' tool.
+
 [!NOTE]
 Note: If you need help creating a self-signed certificate to test these instructions, please see the Microsoft Documentation on ‘New-SelfSignedCertificate’ in PowerShell [here](https://docs.microsoft.com/en-us/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps). 
 
