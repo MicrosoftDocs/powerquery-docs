@@ -115,7 +115,9 @@
       - name: "Handling Navigation Tables"
         href: HandlingNavigationTables.md
       - name: "Handling Gateway Support"
-        href: HandlingGatewaySupport.md 
+        href: HandlingGatewaySupport.md
+      - name: "Handling Connector Signing"
+        href: HandlingConnectorSigning.md
 - name: Resources
   items:
   - name: "Power BI Documentation"
