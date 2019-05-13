@@ -140,4 +140,6 @@ C:\Users\cpope\Downloads\MakePQX>MakePQX verify "C:\Users\cpope\OneDrive\Documen
 } 
 ```
 
- Once you’ve verified your signature, you can provide the thumbprint to the end-user to list as trusted.
+## Trusting signed connectors in Power BI Desktop
+
+Once you’ve verified your signature, you can provide the thumbprint to the end-user to list as trusted. You can read about how to do this in the Power BI Documentation (here)[https://docs.microsoft.com/power-bi/desktop-trusted-third-party-connectors].
