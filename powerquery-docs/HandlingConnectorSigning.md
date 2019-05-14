@@ -19,11 +19,11 @@ The exception to this is trusted, 'signed connectors'. Signed connectors are a s
 
 The following steps enable you to use a certificate (with explanation on how to generate one if you don't have one available) and sign a custom connector with the 'MakePQX' tool.
 
-[!NOTE]
-Note: If you need help creating a self-signed certificate to test these instructions, please see the Microsoft Documentation on ‘New-SelfSignedCertificate’ in PowerShell [here](https://docs.microsoft.com/en-us/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps). 
+> [!NOTE]
+> Note: If you need help creating a self-signed certificate to test these instructions, please see the Microsoft Documentation on ‘New-SelfSignedCertificate’ in PowerShell [here](https://docs.microsoft.com/en-us/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps). 
 
-[!NOTE]
-Note: If you need help exporting your certificate as a pfx, please see [here](https://knowledge.digicert.com/solution/SO26065.html). 
+> [!NOTE]
+> Note: If you need help exporting your certificate as a pfx, please see [here](https://knowledge.digicert.com/solution/SO26065.html). 
 
 1. Download from https://aka.ms/makepqx
 
@@ -142,4 +142,4 @@ C:\Users\cpope\Downloads\MakePQX>MakePQX verify "C:\Users\cpope\OneDrive\Documen
 
 ## Trusting signed connectors in Power BI Desktop
 
-Once you’ve verified your signature, you can provide the thumbprint to the end-user to list as trusted. You can read about how to do this in the Power BI Documentation (here)[https://docs.microsoft.com/power-bi/desktop-trusted-third-party-connectors].
+Once you’ve verified your signature, you can provide the thumbprint to the end-user to list as trusted. You can read about how to do this in the Power BI Documentation [here](https://docs.microsoft.com/power-bi/desktop-trusted-third-party-connectors).
