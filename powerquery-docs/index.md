@@ -93,7 +93,7 @@ Power Query is the Data Connectivity and Data Preparation technology that enable
         </a>
     </li>
     <li>
-        <a href="https://msdn.microsoft.com/query-bi/m/power-query-m-reference">
+        <a href="https://docs.microsoft.com/powerquery-m/power-query-m-reference">
             <div class="cardSize">
                 <div class="cardPadding">
                     <div class="card">
