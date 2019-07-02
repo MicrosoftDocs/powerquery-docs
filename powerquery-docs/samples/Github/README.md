@@ -50,7 +50,7 @@ This sample will walk you through the following steps:
 4. Define functions that access the Github API (`GithubSample.Contents`)
 
 ### Step 1 - Create a Data Source definition
-A Data Connector starts with a [record](https://msdn.microsoft.com/en-us/library/mt299038.aspx#record) that describes the extension, including its unique name (which is the name of the record), supported authentication type(s), and a friendly display name (label) for the data source.
+A Data Connector starts with a [record](/powerquery-m/expressions-values-and-let-expression#record) that describes the extension, including its unique name (which is the name of the record), supported authentication type(s), and a friendly display name (label) for the data source.
 When supporting OAuth, the definition contains the functions that implement the OAuth contract - in this case, `StartLogin` and `FinishLogin`.
 
 ```
@@ -131,7 +131,7 @@ The following parameters are required for the Github endpoint:
 |code         |string|**Required**. The code you received in `FinishLogin`|
 |redirect_uri |string|The URL in your app where users will be sent after authorization. See details below about redirect urls.|
 
-Here are the details used parameters for the [Web.Contents](https://msdn.microsoft.com/en-us/library/mt260892.aspx) call.
+Here are the details used parameters for the [Web.Contents](/powerquery-m/web-contents) call.
 
 |Argument|Description|Value|
 |:-------|:----------|:----|
@@ -156,7 +156,7 @@ TokenMethod = (code) =>
         Parts;
 ```
 
-The JSON response from the service will contain an access_token field. `TokenMethod` method converts the JSON response into an M record using [Json.Document](https://msdn.microsoft.com/en-us/library/mt260861.aspx), and returns it to the engine.
+The JSON response from the service will contain an access_token field. `TokenMethod` method converts the JSON response into an M record using [Json.Document](/powerquery-m/json-document), and returns it to the engine.
 
 Sample response:
 ```json
@@ -180,7 +180,7 @@ shared GithubSample.Contents = Value.ReplaceType(Github.Contents, type function 
 shared GithubSample.PagedTable = Value.ReplaceType(Github.PagedTable, type function (url as Uri.Type) as nullable table);
 ```
 
-The `GithubSample.Contents` function is also published to the UI (allowing it to appear in the Get Data dialog). The [Value.ReplaceType](https://msdn.microsoft.com/en-us/library/mt260838.aspx)
+The `GithubSample.Contents` function is also published to the UI (allowing it to appear in the Get Data dialog). The [Value.ReplaceType](/powerquery-m/value-replacetype)
 function is used to set the function parameter to the `Url.Type` ascribed type.
 
 By associating these functions with the `GithubSample` data source kind, they will automatically use the credentials that the user provided. Any M library functions that have been enabled for extensibility (such as Web.Contents) will automatically inherit these credentials as well.

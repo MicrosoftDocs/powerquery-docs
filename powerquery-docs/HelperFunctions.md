@@ -76,7 +76,7 @@ shared MyExtension.Contents = () =>
 ## URI Manipulation
 
 ### Uri.FromParts
-This function constructs a full URL based on individual fields in the record. It acts as the reverse of [Uri.Parts](https://msdn.microsoft.com/en-us/library/mt260886).
+This function constructs a full URL based on individual fields in the record. It acts as the reverse of [Uri.Parts](/powerquery-m/uri-parts).
 
 ```
 Uri.FromParts = (parts) =>

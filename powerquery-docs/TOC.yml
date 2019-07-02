@@ -121,11 +121,11 @@
 - name: Resources
   items:
   - name: "Power BI Documentation"
-    href: https://docs.microsoft.com/en-us/power-bi/
+    href: /power-bi/
   - name: "M Function Reference"
-    href: https://msdn.microsoft.com/en-us/query-bi/m/power-query-m-function-reference
+    href: /powerquery-m/power-query-m-function-reference
   - name: "M Language Document"
-    href: https://msdn.microsoft.com/en-us/query-bi/m/power-query-m-language-specification
+    href: /powerquery-m/power-query-m-language-specification
   - name: "M Type Reference"
-    href: https://msdn.microsoft.com/en-us/query-bi/m/power-query-m-type-system
+    href: /powerquery-m/power-query-m-type-system
     

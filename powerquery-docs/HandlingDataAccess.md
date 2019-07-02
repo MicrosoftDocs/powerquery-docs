@@ -15,15 +15,15 @@ LocalizationGroup: reference
 
 ## Data Source Functions
 
-A Data Connector wraps and customizes the behavior of a [data source function in the M Library](https://msdn.microsoft.com/library/mt253322.aspx#Anchor_15).
-For example, an extension for a REST API would make use of the [Web.Contents](https://msdn.microsoft.com/library/mt260892.aspx) function to make HTTP requests.
+A Data Connector wraps and customizes the behavior of a [data source function in the M Library](/powerquery-m/odbc-datasource).
+For example, an extension for a REST API would make use of the [Web.Contents](/powerquery-m/web-contents) function to make HTTP requests.
 Currently, a limited set of data source functions have been enabled to support extensibility.
 
-- [Web.Contents](https://msdn.microsoft.com/library/mt260892.aspx)
-- [OData.Feed](https://msdn.microsoft.com/library/mt260868.aspx)
-- [Odbc.DataSource](https://msdn.microsoft.com/library/mt708843.aspx)
-- [AdoDotNet.DataSource](https://msdn.microsoft.com/library/mt736964)
-- [OleDb.DataSource](https://msdn.microsoft.com/library/mt790573.aspx)
+- [Web.Contents](/powerquery-m/web-contents)
+- [OData.Feed](/powerquery-m/odata-feed)
+- [Odbc.DataSource](/powerquery-m/odbc-datasource)
+- [AdoDotNet.DataSource](/powerquery-m/adodotnet-datasource)
+- [OleDb.DataSource](/powerquery-m/oledb-datasource)
 
 **Example:**
 

@@ -166,7 +166,7 @@ When an Uri-based data source is encountered, the credential dialog provides a d
 
 ![DataSourceUrl](images/credentialPromptWithUrl.png)
 
-As `Uri.Type` is an _ascribed type_ rather than a _primitive type_ in the M language, you will need to use the [Value.ReplaceType](https://msdn.microsoft.com/library/mt260838) function to indicate that your text parameter should be treated as an Uri.
+As `Uri.Type` is an _ascribed type_ rather than a _primitive type_ in the M language, you will need to use the [Value.ReplaceType](/powerquery-m/value-replacetype) function to indicate that your text parameter should be treated as an Uri.
 
 ```
 shared GithubSample.Contents = Value.ReplaceType(Github.Contents, type function (url as Uri.Type) as any);

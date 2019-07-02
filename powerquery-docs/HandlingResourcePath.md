@@ -67,4 +67,4 @@ shared GithubSample.Contents = Value.ReplaceType(Github.Contents, type function 
 
 [HelloWorldWithDocs sample]: https://github.com/Microsoft/DataConnectors/blob/master/samples/HelloWorldWithDocs
 
-[Value.ReplaceType]: https://msdn.microsoft.com/library/mt260838
+[Value.ReplaceType]: /powerquery-m/value-replacetype
