@@ -12,7 +12,7 @@ LocalizationGroup: reference
 ---
 
 # Handling Schema
-Depending on your data source, information about data types and column names may or may not be provided explicitly. OData REST APIs typically handle this via the [$metadata definition](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part3-csdl.html), and the Power Query [`OData.Feed`](/powerquery-m/odata-feed) method automatically handles parsing this information and applying it to the data returned from an [OData source](HandlingDataAccess.md).
+Depending on your data source, information about data types and column names may or may not be provided explicitly. OData REST APIs typically handle this via the [$metadata definition](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part3-csdl.html), and the Power Query [`OData.Feed`](/powerquery-m/odata-feed) method automatically handles parsing this information and applying it to the data returned from an [OData source](HandlingDataAccess.md).
 
 Many REST APIs do not have a way to programmatically determine their schema. In these cases you will need to include  schema definition in your connector.
 
@@ -25,10 +25,10 @@ Overall, enforcing a schema on the data returned by your connector has multiple 
 3. Ensuring that each page of data has the same shape by adding any columns that might be missing from a response (REST APIs commonly indicate that fields should be null by omitting them entirely)
 
 ### Viewing the Existing Schema with `Table.Schema`
-Consider the following code that returns a simple table from the [TripPin OData sample service](http://www.odata.org/blog/trippin-new-odata-v4-sample-service/):
+Consider the following code that returns a simple table from the [TripPin OData sample service](https://www.odata.org/blog/trippin-new-odata-v4-sample-service/):
 ```
 let
-    url = "http://services.odata.org/TripPinWebApiService/Airlines",
+    url = "https://services.odata.org/TripPinWebApiService/Airlines",
     source = Json.Document(Web.Contents(url))[value],
     asTable = Table.FromRecords(source)
 in
@@ -44,7 +44,7 @@ We can use the handy [`Table.Schema`](/powerquery-m/table-schema) function to ch
 
 ```
 let
-    url = "http://services.odata.org/TripPinWebApiService/Airlines",
+    url = "https://services.odata.org/TripPinWebApiService/Airlines",
     source = Json.Document(Web.Contents(url))[value],
     asTable = Table.FromRecords(source)
 in
@@ -147,7 +147,7 @@ Here is a quick refresh about types in the M language from the [Language Specifi
 >* Nullable types, which classifies the value null in addition to all the values classified by a base type
 >* Type types, which classify values that are types
 
-Using the raw json output we get (and/or by looking up the definitions in the [service's $metadata](http://services.odata.org/v4/TripPinService/$metadata)) we can define the following record types to represent OData complex types:
+Using the raw json output we get (and/or by looking up the definitions in the [service's $metadata](https://services.odata.org/v4/TripPinService/$metadata)) we can define the following record types to represent OData complex types:
 
 ```
 LocationType = type [

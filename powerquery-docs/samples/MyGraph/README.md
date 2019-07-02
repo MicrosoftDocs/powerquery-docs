@@ -32,7 +32,7 @@ Review details about how the OAuth v2 flow works for Graph:
 * [Authentication Code Grant Flow](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-protocols-oauth-code)
 * [Permission scopes](https://graph.microsoft.io/en-us/docs/authorization/permission_scopes)
 
-You'll also want to download and install [Fiddler](http://www.telerik.com/fiddler) to help trace the raw HTTP requests you make while developing the extension.
+You'll also want to download and install [Fiddler](https://www.telerik.com/fiddler) to help trace the raw HTTP requests you make while developing the extension.
 
 To get started create a new blank query in Power BI Desktop, and bring up the advanced query editor. 
 
@@ -137,7 +137,7 @@ Close the Advanced Query Editor to see the generated authorization URL.
 
 ![authorizeUrl value in Power BI Desktop](../../images/graph1.png)
 
-Launch [Fiddler](http://www.telerik.com/fiddler) and copy and paste the URL into the browser of your choice. 
+Launch [Fiddler](https://www.telerik.com/fiddler) and copy and paste the URL into the browser of your choice. 
 
 > **You will need to configure Fiddler to decrypt HTTPS traffic and skip decryption for the following hosts: `msft.sts.microsoft.com`**
 
