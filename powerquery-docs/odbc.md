@@ -15,9 +15,9 @@ LocalizationGroup: reference
 
 ## Overview
 
-Using M's built-in [Odbc.DataSource](https://msdn.microsoft.com/library/mt708843) function is the recommended way to
+Using M's built-in [Odbc.DataSource](/powerquery-m/odbc-datasource) function is the recommended way to
 create custom connectors for data sources that have an existing ODBC
-driver and/or support a SQL query syntax. Wrapping the [Odbc.DataSource](https://msdn.microsoft.com/library/mt708843)
+driver and/or support a SQL query syntax. Wrapping the [Odbc.DataSource](/powerquery-m/odbc-datasource)
 function will allow your connector to inherit default query folding
 behavior based on the capabilities reported by your driver. This will
 enable the M engine to generate SQL statements based on filters and
@@ -46,18 +46,18 @@ can be found in the ODBC samples directory.
 ## ODBC Extensibility Functions
 
 The M engine provides two ODBC related data source functions:
-[Odbc.DataSource](https://msdn.microsoft.com/library/mt708843), and [Odbc.Query](https://msdn.microsoft.com/library/mt260873).
+[Odbc.DataSource](/powerquery-m/odbc-datasource), and [Odbc.Query](/powerquery-m/odbc-query).
 
-The [Odbc.DataSource](https://msdn.microsoft.com/library/mt708843) function provides a default navigation table with
+The [Odbc.DataSource](/powerquery-m/odbc-datasource) function provides a default navigation table with
 all databases, tables, and views from your system, supports query
 folding, and allows for a range of customization options. The majority
 of ODBC based extensions will use this as their primary extensibility
 function. The function accepts two arguments -- a connection string, and
 an options record to provide behavior overrides.
 
-The [Odbc.Query](https://msdn.microsoft.com/library/mt260873) function allows you to execute SQL statements through an
+The [Odbc.Query](/powerquery-m/odbc-query) function allows you to execute SQL statements through an
 ODBC driver. It acts as a passthrough for query execution. Unlike the
-[Odbc.DataSource](https://msdn.microsoft.com/library/mt708843) function, it does not provide query folding
+[Odbc.DataSource](/powerquery-m/odbc-datasource) function, it does not provide query folding
 functionality, and requires that SQL queries be provided by the
 connector (or end user). When building a custom connector, this function
 is typically used internally to run queries to retrieve metadata that
@@ -79,7 +79,7 @@ Power Query, the following guidelines are recommended:
     user is authenticated. Any values that can be discovered
     programmatically after the user is authenticated (such as catalog or
     database name) should be selectable through the Navigator. The
-    default behavior for the [Odbc.DataSource](https://msdn.microsoft.com/library/mt708843) function will be to return
+    default behavior for the [Odbc.DataSource](/powerquery-m/odbc-datasource) function will be to return
     a hierarchical navigation table consisting of Catalog (Database),
     Schema, and Table names, although this can be overridden within your
     connector.
@@ -105,7 +105,7 @@ Power Query, the following guidelines are recommended:
 By default, all required parameters for your data source function are
 factored into Data Source Path value used to identify user credentials.
 
-Note that while the UI for the built-in [Odbc.DataSource](https://msdn.microsoft.com/library/mt708843) function
+Note that while the UI for the built-in [Odbc.DataSource](/powerquery-m/odbc-datasource) function
 provides a dropdown that allows the user to select a DSN, this
 functionality is not available via extensibility. If your data source
 configuration is complex enough to require a fully customizable
@@ -115,7 +115,7 @@ as a text field.
 
 ## Parameters for Odbc.DataSource
 
-The [Odbc.DataSource](https://msdn.microsoft.com/library/mt708843) function takes two parameters -- a connectionString
+The [Odbc.DataSource](/powerquery-m/odbc-datasource) function takes two parameters -- a connectionString
 for your driver, and an options record which lets your override various
 driver behaviors. Through the options record you can override
 capabilities and other information reported by the driver, control the
@@ -273,7 +273,7 @@ are described in subsequent sections.
 
 ### Overriding AstVisitor
 
-The AstVisitor field is set through the [Odbc.DataSource](https://msdn.microsoft.com/library/mt708843) options record.
+The AstVisitor field is set through the [Odbc.DataSource](/powerquery-m/odbc-datasource) options record.
 It is used to modify SQL statements generated for specific query
 scenarios.
 
@@ -699,7 +699,7 @@ SQLGetTypeInfo = (types as table) as table =>
 ### Setting the Connection String
 
 The connection string for your ODBC driver is set using the first
-argument to the [Odbc.DataSource](https://msdn.microsoft.com/library/mt708843) and/or [Odbc.Query](https://msdn.microsoft.com/library/mt260873) functions. The value
+argument to the [Odbc.DataSource](/powerquery-m/odbc-datasource) and/or [Odbc.Query](/powerquery-m/odbc-query) functions. The value
 can be text, or an M record. When using the record, each field in the
 record will become a property in the connection string. All connection
 strings will require a Driver field (or DSN field if you require users
@@ -708,7 +708,7 @@ be set separately (see below). Other properties will be driver specific.
 
 The code snippet below shows the definition of a new data source
 function, creation of the ConnectionString record, and invocation of the
-[Odbc.DataSource](https://msdn.microsoft.com/library/mt708843) function.
+[Odbc.DataSource](/powerquery-m/odbc-datasource) function.
 
 ```
 [DataSource.Kind="SqlODBC", Publish="SqlODBC.Publish"]
@@ -789,6 +789,6 @@ The M engine does basic type size limit validation as part of its query folding 
 1. Ensure that your database can support up-conversion to CLOB types when string concat overflow occurs
 2. Set the `TolerateConcatOverflow` [option](#parameters-for-odbcdatasource) for Odbc.DataSource to `true`
 
-> The [DAX CONCATENATE function](https://msdn.microsoft.com/query-bi/dax/concatenate-function-dax) is currently not supported by Power Query/ODBC extensions.
+> The [DAX CONCATENATE function](/dax/concatenate-function-dax) is currently not supported by Power Query/ODBC extensions.
 > Extension authors should ensure string concatenation works through the query editor by adding calculated columns (`[stringCol1] & [stringCol2]`).
 > When the capability to fold the CONCATENATE operation is added in the future, it should work seamlessly with existing extensions.

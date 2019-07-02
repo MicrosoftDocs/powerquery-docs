@@ -16,7 +16,7 @@ LocalizationGroup: reference
 
 This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially - each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector.
 
-This tutorial uses a public [OData](http://www.odata.org/documentation/) service ([TripPin](http://services.odata.org/v4/TripPinService/)) as a reference source. Although this lesson requires the use of the M engine's OData functions, subsequent lessons will use [Web.Contents](https://msdn.microsoft.com/en-us/library/mt260892.aspx), making it applicable to (most) REST APIs.
+This tutorial uses a public [OData](https://www.odata.org/documentation/) service ([TripPin](https://services.odata.org/v4/TripPinService/)) as a reference source. Although this lesson requires the use of the M engine's OData functions, subsequent lessons will use [Web.Contents](/powerquery-m/web-contents), making it applicable to (most) REST APIs.
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ The following applications will be used throughout this tutorial:
 
 * [Power BI Desktop](https://www.microsoft.com/en-us/download/details.aspx?id=45331), May 2017 release or later
 * [Power Query SDK for Visual Studio](https://aka.ms/powerquerysdk)
-* [Fiddler](http://www.telerik.com/fiddler) - Optional, but recommended for viewing and debugging requests to your REST service
+* [Fiddler](https://www.telerik.com/fiddler) - Optional, but recommended for viewing and debugging requests to your REST service
 
 It's strongly suggested that you review:
 * [Installing the PowerQuery SDK](../../InstallingSDK.md)

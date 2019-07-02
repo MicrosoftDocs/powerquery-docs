@@ -13,11 +13,11 @@ LocalizationGroup: reference
 
 # Status Code Handling with `Web.Contents`
 
-The [`Web.Contents`](https://msdn.microsoft.com/en-us/library/mt260892) function has some built in functionality for dealing with certain HTTP status codes. The default behavior can be overridden in your extension using the `ManualStatusHandling` field in the [options record](https://msdn.microsoft.com/library/mt260892#Anchor_1).
+The [`Web.Contents`](/powerquery-m/web-contents) function has some built in functionality for dealing with certain HTTP status codes. The default behavior can be overridden in your extension using the `ManualStatusHandling` field in the [options record](/powerquery-m/web-contents#__toc360793395).
 
 ## Automatic retry
 
-[`Web.Contents`](https://msdn.microsoft.com/en-us/library/mt260892.aspx) will automatically retry requests that fail with one of the following status codes:
+[`Web.Contents`](/powerquery-m/web-contents) will automatically retry requests that fail with one of the following status codes:
 
 | Code | Status                     |
 |:-----|:---------------------------|

@@ -22,7 +22,7 @@ In this lesson, you will:
 * Enforce a table structure to avoid transformation errors due to missing columns
 * Hide columns from the result set
 
-One of the big advantages of an OData service over a standard REST API is its [$metadata definition](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part3-csdl.html).
+One of the big advantages of an OData service over a standard REST API is its [$metadata definition](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part3-csdl.html).
 The $metadata document describes the data found on this service, including the schema for all of its Entities (Tables) and Fields (Columns). 
 The OData.Feed function uses this schema definition to automatically set data type information - so instead of getting all text and number fields (like you would from Json.Document), end users will dates, whole numbers, times, etc., providing a better overall user experience. 
 
@@ -32,7 +32,7 @@ In this lesson we'll define a simple, hardcoded schema for each of our tables, a
 
 >**Note:** The approach described here should work for many REST services.
 >[Future lessons](../7-AdvancedSchema/README.md) will build upon this approach by recursively enforcing schemas on structured columns (record, list, table), 
->and provide sample implementations which can programmatically generate a schema table from CSDL or [JSON Schema](http://json-schema.org/) documents.
+>and provide sample implementations which can programmatically generate a schema table from CSDL or [JSON Schema](https://json-schema.org/) documents.
 
 Overall, enforcing a schema on the data returned by your connector has multiple benefits, such as:
 1. Setting the correct data types
@@ -61,7 +61,7 @@ In the results we see four columns returned:
 
 The "@odata.*" columns are part of OData protocol, and not something we'd want or need to show to the end users of our connector.
 `AirlineCode` and `Name` are the two columns we want to keep.
-If we look at the schema of the table (using the handy [Table.Schema](https://msdn.microsoft.com/query-bi/m/table-schema) function), we can see that all of the columns in the table have a data type of `Any.Type`.
+If we look at the schema of the table (using the handy [Table.Schema](/powerquery-m/table-schema) function), we can see that all of the columns in the table have a data type of `Any.Type`.
 
 ```
 let
@@ -72,7 +72,7 @@ in
 ```
 ![Airlines Table.Schema](../../../images/trippin6AirlineTableSchema.png)
 
-[Table.Schema](https://msdn.microsoft.com/query-bi/m/table-schema) returns a lot of metadata about the columns in a table, including names, positions, type information, and many advanced properties, such as Precision, Scale, and MaxLength.
+[Table.Schema](/powerquery-m/table-schema) returns a lot of metadata about the columns in a table, including names, positions, type information, and many advanced properties, such as Precision, Scale, and MaxLength.
 Future lessons will provide design patterns for setting these advanced properties, but for now we'll only concern ourselves with the ascribed type (`TypeName`), primitive type (`Kind`), and whether the column value might be null (`IsNullable`).
 
 ## Defining a Simple Schema Table
@@ -130,9 +130,9 @@ The logic for this function looks something like this:
 1. Determine if there are any missing columns from the source table
 2. Determine if there are any extra columns
 3. Ignore structured columns (of type `list`, `record`, and `table`), and columns set to `type any`.
-4. Use [Table.TransformColumnTypes](https://msdn.microsoft.com/query-bi/m/table-transformcolumntypes) to set each column type
+4. Use [Table.TransformColumnTypes](/powerquery-m/table-transformcolumntypes) to set each column type
 5. Reorder columns based on the order they appear in the schema table
-6. Set the type on the table itself using [Value.ReplaceType](https://msdn.microsoft.com/query-bi/m/value-replacetype)
+6. Set the type on the table itself using [Value.ReplaceType](/powerquery-m/value-replacetype)
 
 >**Note:** The last step to set the table type will remove the need for the Power Query UI to infer type information when viewing the results in the query editor. This removes the double request issue we saw at the [end of the previous tutorial](../5-Paging/README.md#putting-it-all-together).
 
@@ -264,10 +264,10 @@ GetPage = (url as text, optional schema as table) as table =>
         withSchema meta [NextLink = nextLink];
 ```
 
->**Note:** This GetPage implementation uses [Table.FromRecords](https://msdn.microsoft.com/query-bi/m/table-fromrecords) to convert the list of records in the json response to a table.
->A major downside to use [Table.FromRecords](https://msdn.microsoft.com/query-bi/m/table-fromrecords) is that it assumes all records in the list have the same set of fields.
+>**Note:** This GetPage implementation uses [Table.FromRecords](/powerquery-m/table-fromrecords) to convert the list of records in the json response to a table.
+>A major downside to use [Table.FromRecords](/powerquery-m/table-fromrecords) is that it assumes all records in the list have the same set of fields.
 >This works for the TripPin service, since the OData records are guarenteed to contain the same fields, but this might not be the case for all REST APIs. 
->A more robust implementation would use a combination of [Table.FromList](https://msdn.microsoft.com/query-bi/m/table-fromlist) and [Table.ExpandRecordColumn](https://msdn.microsoft.com/query-bi/m/table-expandrecordcolumn).
+>A more robust implementation would use a combination of [Table.FromList](/powerquery-m/table-fromlist) and [Table.ExpandRecordColumn](/powerquery-m/table-expandrecordcolumn).
 >Later tutorials will change the implementation to get the column list from the schema table, ensuring that no columns are lost/missing during the json -> M translation. 
 
 ### Adding the GetEntity function

@@ -32,13 +32,13 @@ You can provide documentation for your function by defining custom *type* values
 1. Define a type for each parameter
 2. Define a type for your function
 3. Add various `Documentation.*` fields to your types metadata record
-3. Call [Value.ReplaceType](https://msdn.microsoft.com/en-us/library/mt260838.aspx) to ascribe the type to your shared function
+3. Call [Value.ReplaceType](/powerquery-m/value-replacetype) to ascribe the type to your shared function
 
-You can find more information about types and metadata values in the [M Language Specification](https://msdn.microsoft.com/library/mt807488.aspx).
+You can find more information about types and metadata values in the [M Language Specification](/powerquery-m/power-query-m-language-specification).
 
 Using this approach allows you to supply descriptions and display names for your function, as well as individual parameters. You can also supply sample values for parameters, as well as defining a preset list of values (turning the default text box control into a drop down).
 
-The Power Query experience retrieves documentation from meta values on the type of your function, using a combination of calls to [Value.Type](https://msdn.microsoft.com/en-us/library/mt260827), [Type.FunctionParameters](https://msdn.microsoft.com/en-us/library/mt260943), and [Value.Metadata](https://msdn.microsoft.com/en-us/library/mt260829).
+The Power Query experience retrieves documentation from meta values on the type of your function, using a combination of calls to [Value.Type](/powerquery-m/value-type), [Type.FunctionParameters](/powerquery-m/type-functionparameters), and [Value.Metadata](/powerquery-m/value-metadata).
 
 ### Function Documentation
 The following table lists the Documentation fields that can be set in the metadata for your *function*. All fields are optional.

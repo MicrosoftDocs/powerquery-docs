@@ -26,7 +26,7 @@ DefaultRequestHeaders = [
     #"OData-MaxVersion" = "4.0"                             // we only support v4
 ];
 
-BaseUrl = "http://services.odata.org/v4/TripPinService/";
+BaseUrl = "https://services.odata.org/v4/TripPinService/";
 
 // Define our top level table types
 AirlinesType = type table [ AirlineCode = text, Name = text ];

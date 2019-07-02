@@ -21,18 +21,18 @@ In this lesson, you will:
  
 Many Rest APIs will return data in "pages", requiring clients to make multiple requests to stitch the results together. 
 Although there are some common conventions for pagination (such as [RFC 5988](https://tools.ietf.org/html/rfc5988)), it 
-generally varies from API to API. Thankfully, TripPin is an OData service, and the [OData standard](http://docs.oasis-open.org/odata/odata-json-format/v4.0/cs01/odata-json-format-v4.0-cs01.html)
-defines a way of doing pagination using [odata.nextLink](http://docs.oasis-open.org/odata/odata-json-format/v4.0/cs01/odata-json-format-v4.0-cs01.html#_Toc365464689) 
+generally varies from API to API. Thankfully, TripPin is an OData service, and the [OData standard](https://docs.oasis-open.org/odata/odata-json-format/v4.0/cs01/odata-json-format-v4.0-cs01.html)
+defines a way of doing pagination using [odata.nextLink](https://docs.oasis-open.org/odata/odata-json-format/v4.0/cs01/odata-json-format-v4.0-cs01.html#_Toc365464689) 
 values returned in the body of the response.
 
 To simplify [previous iterations](../4-Paths/README.md) of the connector, the `TripPin.Feed` function was not 'page aware'. 
 It simply parsed whatever JSON was returned from the request, and formatted it as a table. Those familiar with the 
-OData protocol might have noticed that we made a number of incorrect assumptions on the [format of the response](http://docs.oasis-open.org/odata/odata-json-format/v4.0/cs01/odata-json-format-v4.0-cs01.html#_Toc365464681)
+OData protocol might have noticed that we made a number of incorrect assumptions on the [format of the response](https://docs.oasis-open.org/odata/odata-json-format/v4.0/cs01/odata-json-format-v4.0-cs01.html#_Toc365464681)
 (such as assuming there is a `value` field containing an array of records). 
 In this lesson we will improve our response handling logic by making it page aware.
 Future tutorials will make the page handling logic more robust and able to handle multiple response formats (including errors from the service).
 
->**Note:** You do not need to implement your own paging logic with connectors based on [OData.Feed](https://msdn.microsoft.com/query-bi/m/odata-feed), as it handles it all for you automatically.
+>**Note:** You do not need to implement your own paging logic with connectors based on [OData.Feed](/powerquery-m/odata-feed), as it handles it all for you automatically.
 
 ## Paging Checklist
 When implementing paging support, we'll need to the following things about our API:
@@ -50,7 +50,7 @@ end up requiring custom logic.
 >Please check the documentation for your API to determine the changes you'll need to make in your connector to support its paging format.
 
 ## Overview of OData Paging 
-OData paging is driven by [nextLink annotations](http://docs.oasis-open.org/odata/odata-json-format/v4.0/cs01/odata-json-format-v4.0-cs01.html#_Annotation_odata.nextLink) 
+OData paging is driven by [nextLink annotations](https://docs.oasis-open.org/odata/odata-json-format/v4.0/cs01/odata-json-format-v4.0-cs01.html#_Annotation_odata.nextLink) 
 contained within the response payload. The nextLink value contains the URL to the next page of data. We know there is
 another page of data by looking for an `odata.nextLink` field in outermost object in the response. If there is no `odata.nextLink` field, 
 we've read all of our data. 
@@ -68,11 +68,11 @@ we've read all of our data.
 }
 ```
 
-Some OData services allow clients to supply a [max page size preference](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_The_odata.maxpagesize_Preference),
+Some OData services allow clients to supply a [max page size preference](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_The_odata.maxpagesize_Preference),
 but it is up to the service on whether or not to honor it. Power Query should be able to handle responses of any size, so we won't 
 worry about specifying a page size preference - we can support whatever the service throws at us.
 
-> More information about [Server-Driven Paging](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Server-Driven_Paging) can be found in the OData specification
+> More information about [Server-Driven Paging](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Server-Driven_Paging) can be found in the OData specification
 
 ### Testing TripPin
 Before we fix our paging implementation, let's confirm the current behavior of the extension from the [previous tutorial](../4-Paths/README.md). The following test query will retrieve the People table and add an index column to show our current row count.
@@ -96,8 +96,8 @@ indicating that there are more pages of data available.
 
 ```json
 {
-  "@odata.context": "http://services.odata.org/V4/TripPinService/$metadata#People",
-  "@odata.nextLink": "http://services.odata.org/v4/TripPinService/People?%24skiptoken=8",
+  "@odata.context": "https://services.odata.org/V4/TripPinService/$metadata#People",
+  "@odata.nextLink": "https://services.odata.org/v4/TripPinService/People?%24skiptoken=8",
   "value": [
     { },
     { },
@@ -184,8 +184,8 @@ GetAllPagesByNextLink = (url as text) as table =>
 ```
 
 ### Implementing GetPage
-Our `GetPage` function will use [Web.Contents](https://msdn.microsoft.com/query-bi/m/web-contents) to retrieve a single page of data from the TripPin service,
-and converts the response into a table. It passes the response from [Web.Contents](https://msdn.microsoft.com/query-bi/m/web-contents) to the 
+Our `GetPage` function will use [Web.Contents](/powerquery-m/web-contents) to retrieve a single page of data from the TripPin service,
+and converts the response into a table. It passes the response from [Web.Contents](/powerquery-m/web-contents) to the 
 `GetNextLink` function to extract the URL of the next page, and sets it on the `meta` record of 
 the returned table (page of data).
 
