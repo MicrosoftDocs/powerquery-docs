@@ -26,7 +26,7 @@ in
 
 ![An example of an Expression.Error error message](images/expressionError.png)
 
-The [`Error.Record`](https://msdn.microsoft.com/en-us/query-bi/m/error-record) function can be used for more control:
+The [`Error.Record`](/powerquery-m/error-record) function can be used for more control:
 ```
 let
     Source = "foo",

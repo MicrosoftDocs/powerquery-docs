@@ -18,14 +18,14 @@ This multi-part tutorial covers the creation of a new data source extension for 
 
 In this lesson, you will:
 
-* Enforce a table schema using [M Types](https://msdn.microsoft.com/query-bi/m/power-query-m-type-system)
+* Enforce a table schema using [M Types](/powerquery-m/power-query-m-type-system)
 * Set types for nested records and lists
 * Refactor code for reuse and unit testing
 
 In the previous lesson we defined our table schemas using a simple "Schema Table" system.
 This schema table approach works for many REST APIs/Data Connectors, but services that return complete
 or deeply nested data sets might benefit from the approach in this tutorial, which leverages
-the [M type system](https://msdn.microsoft.com/query-bi/m/power-query-m-type-system).
+the [M type system](/powerquery-m/power-query-m-type-system).
 
 This lesson will guide you through the following steps:
 
@@ -100,7 +100,7 @@ It works well when working with flattened/relational data, but didn't support se
 In the TripPin case, the data in the People and Airports entities contain structured columns, and even share a type (Location) for representing address information.
 Rather than defining Name/Type pairs in a schema table, we'll define each of these entities using custom M type declarations. 
 
-Here is a quick refresher about types in the M language from the [Language Specification](https://msdn.microsoft.com/query-bi/m/power-query-m-type-system):
+Here is a quick refresher about types in the M language from the [Language Specification](/powerquery-m/power-query-m-type-system):
 
 >A **type value** is a value that **classifies** other values. A value that is classified by a type is said to **conform** to that type. The M type system consists of the following kinds of types:
 >* Primitive types, which classify primitive values (`binary`, `date`, `datetime`, `datetimezone`, `duration`, `list`, `logical`, `null`, `number`, `record`, `text`, `time`, `type`) and also include a number of abstract types (`function`, `table`, `any`, and `none`)
@@ -229,7 +229,7 @@ GetPage = (url as text, optional schema as type) as table =>
 
 ### Confirming that nested types are being set
 The definition for our `PeopleType` now sets the `Emails` field to a list of text (`{text}`).
-If we are applying the types correctly, the call to [Type.ListItem](https://msdn.microsoft.com/query-bi/m/type-listitem) in our unit test should now be returning `type text` rather than `type any`. 
+If we are applying the types correctly, the call to [Type.ListItem](/powerquery-m/type-listitem) in our unit test should now be returning `type text` rather than `type any`. 
 
 Running our unit tests again show that they are now all passing.
 
@@ -245,7 +245,7 @@ For now, we refactor our code in the following way:
 
 1. Move the reusable functions to separate files (.pqm)
 2. Set the **Build Action** property on the file to **Compile** to make sure it gets included in our extension file during the build
-3. Define a function to load the code using [Expression.Evaluate](https://msdn.microsoft.com/query-bi/m/expression-evaluate)
+3. Define a function to load the code using [Expression.Evaluate](/powerquery-m/expression-evaluate)
 4. Load each of the common functions we want to use
 
 The code to do this is included in the snippet below:

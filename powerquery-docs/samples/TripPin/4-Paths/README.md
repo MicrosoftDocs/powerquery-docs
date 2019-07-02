@@ -86,8 +86,8 @@ If we update the `TripPin.Contents()` call in our `TripPin.query.pq` file and ru
 ## Improving the Navigation Table
 In the [first tutorial](../1-OData/README.md) we used the built-in OData functions to connect to the TripPin service.
 This gave us a really nice looking navigation table, based on the TripPin service document, with no additional code on our side.
-The [OData.Feed](https://msdn.microsoft.com/query-bi/m/odata-feed) function automatically did the hard work for us.
-Since we are "roughing it" by using [Web.Contents](https://msdn.microsoft.com/query-bi/m/web-contents) rather than [OData.Feed](https://msdn.microsoft.com/query-bi/m/odata-feed), we will need to recreate this navigation table ourselves. 
+The [OData.Feed](/powerquery-m/odata-feed) function automatically did the hard work for us.
+Since we are "roughing it" by using [Web.Contents](/powerquery-m/web-contents) rather than [OData.Feed](/powerquery-m/odata-feed), we will need to recreate this navigation table ourselves. 
 
 ![OData Navigator](../../../images/trippin4NavigatorOData.png)
 
@@ -131,7 +131,7 @@ TripPinNavTable = (url as text) as table =>
 ```
 
 When dynamically building URL paths, make sure you're clear where your forward slashes (/) are!
-Note that [Uri.Combine](https://msdn.microsoft.com/query-bi/m/uri-combine) uses the following rules when combining paths:
+Note that [Uri.Combine](/powerquery-m/uri-combine) uses the following rules when combining paths:
 1. When the `relativeUri` parameter starts with a /, it will replace the entire path of the `baseUri` parameter
 2. If the `relativeUri` parameter _does not_ start with a / and the `baseUri` ends with a /, the path is appended
 3. If the `relativeUri` parameter _does not_ start with a / and the `baseUri` _does not_ end with a /, the last segment of the path is replaced

@@ -38,7 +38,7 @@ The `GetRows` handler returns the result of your data source function (i.e. a ta
 
 ### GetType
 
-The `GetType` handler returns the M table type of the result of the call to `GetRows`. In the most basic implementation, this handler would call [Value.Type()](https://msdn.microsoft.com/query-bi/m/value-type) over the result of `GetRows`.
+The `GetType` handler returns the M table type of the result of the call to `GetRows`. In the most basic implementation, this handler would call [Value.Type()](/powerquery-m/value-type) over the result of `GetRows`.
 Sources that can determine the schema of the result without evaluating the query (by using fixed metadata, or querying a metadata/schema service) would perform those operations in this handler.
 
 > Note that returning `Value.Type(GetRows())` will result in `GetRows()` being invoked twice. If the type cannot be determined without invoking `GetRows()`, it is recommended the results are stored in a common variable. Please see the sample below for an example.
@@ -65,7 +65,7 @@ Returns a number. The default handler for the `GetRowCount` operation would be t
 
 ### OnDistinct
 
-Receives a list of column names. The handler must ensure that rows with duplicate values for the specified columns should be removed (i.e. remaining rows are distinct). See [Table.Distinct](https://msdn.microsoft.com/en-us/query-bi/m/table-distinct).
+Receives a list of column names. The handler must ensure that rows with duplicate values for the specified columns should be removed (i.e. remaining rows are distinct). See [Table.Distinct](/powerquery-m/table-distinct).
 
 ### OnRenameColumns
 
@@ -73,11 +73,11 @@ Receives a list of lists, the same as the arguments to `Table.RenameColumns`. Ea
 
 ### OnSelectColumns
 
-Receives a list of column names that the user has selected. See [Table.SelectColumns](https://msdn.microsoft.com/en-us/query-bi/m/table-selectcolumns).
+Receives a list of column names that the user has selected. See [Table.SelectColumns](/powerquery-m/table-selectcolumns).
 
 ### OnSkip
 
-Receives a number indicating the number of rows that should be skipped from the result set. See [Table.Skip](https://msdn.microsoft.com/en-us/query-bi/m/table-skip).
+Receives a number indicating the number of rows that should be skipped from the result set. See [Table.Skip](/powerquery-m/table-skip).
 
 ### OnSort
 
@@ -86,11 +86,11 @@ Receives a list of records of type:
 ```
 type [ Name = text, Order = Int16.Type ]
 ```
-Where `Name` is the name of the column, and `Order` is equal to `Order.Ascending` or `Order.Descending`. See [Table.Sort](https://msdn.microsoft.com/en-us/query-bi/m/table-sort).
+Where `Name` is the name of the column, and `Order` is equal to `Order.Ascending` or `Order.Descending`. See [Table.Sort](/powerquery-m/table-sort).
 
 ### OnTake
 
-Receives a number indicating the maximum number of rows that should be returned from `GetRows`. See [Table.FirstN](https://msdn.microsoft.com/en-us/query-bi/m/table-firstn).
+Receives a number indicating the maximum number of rows that should be returned from `GetRows`. See [Table.FirstN](/powerquery-m/table-firstn).
 
 ## Expression Handlers
 

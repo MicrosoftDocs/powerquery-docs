@@ -12,7 +12,7 @@ LocalizationGroup: reference
 ---
 
 # Handling Schema
-Depending on your data source, information about data types and column names may or may not be provided explicitly. OData REST APIs typically handle this via the [$metadata definition](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part3-csdl.html), and the Power Query [`OData.Feed`](https://msdn.microsoft.com/en-us/query-bi/m/odata-feed) method automatically handles parsing this information and applying it to the data returned from an [OData source](HandlingDataAccess.md).
+Depending on your data source, information about data types and column names may or may not be provided explicitly. OData REST APIs typically handle this via the [$metadata definition](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part3-csdl.html), and the Power Query [`OData.Feed`](/powerquery-m/odata-feed) method automatically handles parsing this information and applying it to the data returned from an [OData source](HandlingDataAccess.md).
 
 Many REST APIs do not have a way to programmatically determine their schema. In these cases you will need to include  schema definition in your connector.
 
@@ -34,13 +34,13 @@ let
 in
     asTable
 ```
-> **Note**: TripPin is an OData source, so realistically it would make more sense to simply use the `OData.Feed` function's automatic schema handling. In this example we are treating the source as a typical REST API and using [`Web.Contents`](https://msdn.microsoft.com/en-us/query-bi/m/web-contents) to demonstrate the technique of hardcoding a schema by hand.
+> **Note**: TripPin is an OData source, so realistically it would make more sense to simply use the `OData.Feed` function's automatic schema handling. In this example we are treating the source as a typical REST API and using [`Web.Contents`](/powerquery-m/web-contents) to demonstrate the technique of hardcoding a schema by hand.
 
 This table is the result:
 
 ![Table of TripPin Airline data](images/staticschematable-initial.png)
 
-We can use the handy [`Table.Schema`](https://msdn.microsoft.com/en-us/query-bi/m/table-schema) function to check the data type of the columns:
+We can use the handy [`Table.Schema`](/powerquery-m/table-schema) function to check the data type of the columns:
 
 ```
 let
@@ -121,9 +121,9 @@ The logic for this function looks something like this:
 1. Determine if there are any missing columns from the source table
 2. Determine if there are any extra columns
 3. Ignore structured columns (of type `list`, `record`, and `table`), and columns set to type `any`
-4. Use [`Table.TransformColumnTypes`](https://msdn.microsoft.com/query-bi/m/table-transformcolumntypes) to set each column type
+4. Use [`Table.TransformColumnTypes`](/powerquery-m/table-transformcolumntypes) to set each column type
 5. Reorder columns based on the order they appear in the schema table
-6. Set thet type on the table itself using [`Value.ReplaceType`](https://msdn.microsoft.com/query-bi/m/value-replacetype)
+6. Set thet type on the table itself using [`Value.ReplaceType`](/powerquery-m/value-replacetype)
 
 > **Note**: The last step to set the table type will remove the need for the Power Query UI to infer type information when viewing the results in the query editor, which can sometimes result in a double-call to the API.
 
@@ -136,7 +136,7 @@ Because so much of the implementation of paging and navigation tables is context
 
 The hardcoded implementation discussed above does a good job of making sure that schemas remain consistent for simple JSON repsonses, but it is limited to parsing the first level of the response. Deeply nested data sets would benefit from the following approach which takes advantage of M Types.
 
-Here is a quick refresh about types in the M language from the [Language Specification](https://msdn.microsoft.com/query-bi/m/power-query-m-type-system):
+Here is a quick refresh about types in the M language from the [Language Specification](/powerquery-m/power-query-m-type-system):
 
 >A **type value** is a value that **classifies** other values. A value that is classified by a type is said to **conform** to that type. The M type system consists of the following kinds of types:
 >* Primitive types, which classify primitive values (`binary`, `date`, `datetime`, `datetimezone`, `duration`, `list`, `logical`, `null`, `number`, `record`, `text`, `time`, `type`) and also include a number of abstract types (`function`, `table`, `any`, and `none`)

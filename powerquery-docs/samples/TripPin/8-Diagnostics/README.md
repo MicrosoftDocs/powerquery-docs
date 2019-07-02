@@ -18,7 +18,7 @@ This multi-part tutorial covers the creation of a new data source extension for 
 
 In this lesson, you will:
 
-* Learn about the [Diagnostics.Trace](https://msdn.microsoft.com/query-bi/m/diagnostics-trace) function
+* Learn about the [Diagnostics.Trace](/powerquery-m/diagnostics-trace) function
 * Use the Diagnostics helper functions to add trace information to help debug your connector
 
 ## Enabling Diagnostics
@@ -41,7 +41,7 @@ Once enabled, you'll start seeing log entries in the M Query Output window, unde
 
 ## Diagnostics.Trace
 
-The [Diagnostics.Trace](https://msdn.microsoft.com/query-bi/m/diagnostics-trace) function is used to write messages into the M engine's trace log. 
+The [Diagnostics.Trace](/powerquery-m/diagnostics-trace) function is used to write messages into the M engine's trace log. 
 
 ```
 Diagnostics.Trace = (traceLevel as number, message as text, value as any, optional delayed as nullable logical as any) => ...
@@ -66,7 +66,7 @@ The `value` parameter is what the function will return. When the `delayed` param
 
 ### Using Diagnostics.Trace in the TripPin connector
 
-For a practical example of using [Diagnostics.Trace](https://msdn.microsoft.com/query-bi/m/diagnostics-trace), and the impact of the `delayed` parameter, update the TripPin connector's `GetSchemaForEntity` function to wrap the `error` exception:
+For a practical example of using [Diagnostics.Trace](/powerquery-m/diagnostics-trace), and the impact of the `delayed` parameter, update the TripPin connector's `GetSchemaForEntity` function to wrap the `error` exception:
 
 ```
 GetSchemaForEntity = (entity as text) as type =>

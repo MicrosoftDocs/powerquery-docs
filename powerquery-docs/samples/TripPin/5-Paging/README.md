@@ -32,7 +32,7 @@ OData protocol might have noticed that we made a number of incorrect assumptions
 In this lesson we will improve our response handling logic by making it page aware.
 Future tutorials will make the page handling logic more robust and able to handle multiple response formats (including errors from the service).
 
->**Note:** You do not need to implement your own paging logic with connectors based on [OData.Feed](https://msdn.microsoft.com/query-bi/m/odata-feed), as it handles it all for you automatically.
+>**Note:** You do not need to implement your own paging logic with connectors based on [OData.Feed](/powerquery-m/odata-feed), as it handles it all for you automatically.
 
 ## Paging Checklist
 When implementing paging support, we'll need to the following things about our API:
@@ -184,8 +184,8 @@ GetAllPagesByNextLink = (url as text) as table =>
 ```
 
 ### Implementing GetPage
-Our `GetPage` function will use [Web.Contents](https://msdn.microsoft.com/query-bi/m/web-contents) to retrieve a single page of data from the TripPin service,
-and converts the response into a table. It passes the response from [Web.Contents](https://msdn.microsoft.com/query-bi/m/web-contents) to the 
+Our `GetPage` function will use [Web.Contents](/powerquery-m/web-contents) to retrieve a single page of data from the TripPin service,
+and converts the response into a table. It passes the response from [Web.Contents](/powerquery-m/web-contents) to the 
 `GetNextLink` function to extract the URL of the next page, and sets it on the `meta` record of 
 the returned table (page of data).
 
