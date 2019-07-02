@@ -144,7 +144,7 @@ That data about various states is interesting, and will be useful for building a
 
 We’re in luck: there’s another public data source that does just that, but it needs a fair amount of shaping before we can connect it to our retirement table. Here’s the Web resource for state abbreviations:
 
-<http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations>
+<https://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations>
 
 From the **Home** ribbon in Power Query Editor, we select **New Source \> Web** and type the address, select **Connect**, and the Navigator shows what it found on that Web page.
 

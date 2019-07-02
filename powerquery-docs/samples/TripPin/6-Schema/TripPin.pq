@@ -28,7 +28,7 @@ DefaultRequestHeaders = [
     #"OData-MaxVersion" = "4.0"                             // we only support v4
 ];
 
-BaseUrl = "http://services.odata.org/v4/TripPinService/";
+BaseUrl = "https://services.odata.org/v4/TripPinService/";
 
 RootEntities = {
     "Airlines",

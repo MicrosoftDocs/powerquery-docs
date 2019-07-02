@@ -111,7 +111,7 @@ Here is a quick refresher about types in the M language from the [Language Speci
 >* Nullable types, which classifies the value null in addition to all the values classified by a base type
 >* Type types, which classify values that are types
 
-Using the raw json output we get (and/or looking up the definitions in the [service's $metadata](http://services.odata.org/v4/TripPinService/$metadata)), we can define the following record types to represent OData complex types:
+Using the raw json output we get (and/or looking up the definitions in the [service's $metadata](https://services.odata.org/v4/TripPinService/$metadata)), we can define the following record types to represent OData complex types:
 
 ```
 LocationType = type [

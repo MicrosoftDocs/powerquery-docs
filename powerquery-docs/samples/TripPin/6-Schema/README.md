@@ -22,7 +22,7 @@ In this lesson, you will:
 * Enforce a table structure to avoid transformation errors due to missing columns
 * Hide columns from the result set
 
-One of the big advantages of an OData service over a standard REST API is its [$metadata definition](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part3-csdl.html).
+One of the big advantages of an OData service over a standard REST API is its [$metadata definition](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part3-csdl.html).
 The $metadata document describes the data found on this service, including the schema for all of its Entities (Tables) and Fields (Columns). 
 The OData.Feed function uses this schema definition to automatically set data type information - so instead of getting all text and number fields (like you would from Json.Document), end users will dates, whole numbers, times, etc., providing a better overall user experience. 
 
@@ -32,7 +32,7 @@ In this lesson we'll define a simple, hardcoded schema for each of our tables, a
 
 >**Note:** The approach described here should work for many REST services.
 >[Future lessons](../7-AdvancedSchema/README.md) will build upon this approach by recursively enforcing schemas on structured columns (record, list, table), 
->and provide sample implementations which can programmatically generate a schema table from CSDL or [JSON Schema](http://json-schema.org/) documents.
+>and provide sample implementations which can programmatically generate a schema table from CSDL or [JSON Schema](https://json-schema.org/) documents.
 
 Overall, enforcing a schema on the data returned by your connector has multiple benefits, such as:
 1. Setting the correct data types

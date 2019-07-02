@@ -20,7 +20,7 @@ An example of static transformation can be found in the [TripPin Part 2 - Data C
 
 ```
 let
-    Source = TripPin.Feed("http://services.odata.org/v4/TripPinService/Airlines"),
+    Source = TripPin.Feed("https://services.odata.org/v4/TripPinService/Airlines"),
     value = Source[value],
     toTable = Table.FromList(value, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
     expand = Table.ExpandRecordColumn(toTable, "Column1", {"AirlineCode", "Name"}, {"AirlineCode", "Name"})
@@ -76,4 +76,4 @@ result = Table.FromRows(listOfRows, columnTitlesWithRowNumber)
 3. Apply our `RowAsList()` function to each of the `row`s returned in the API response.
 4. Convert the List to a table, specifying the column headers.
 
-[endpoint response]: http://smartsheet-platform.github.io/api-docs/#sheets
+[endpoint response]: https://smartsheet-platform.github.io/api-docs/#sheets

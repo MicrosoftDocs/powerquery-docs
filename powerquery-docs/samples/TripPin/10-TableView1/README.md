@@ -33,7 +33,7 @@ This tutorial will replicate the built-in query folding behavior for OData by im
 This part of the tutorial will implement some of the _easier_ handlers to implement (i.e. the ones that don't require expression parsing and state tracking).
 Future tutorials will implement more advanced query folding functionality.
 
-To understand more about the query capabilities that an OData service might offer, please review the [OData v4 URL Conventions](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752357).
+To understand more about the query capabilities that an OData service might offer, please review the [OData v4 URL Conventions](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752357).
 
 > **Note:** As stated above, the `OData.Feed` function will automatically provide query folding capabilities.
 > Since the TripPin series is treating the OData service as a regular REST API, using `Web.Contents` rather than
@@ -190,7 +190,7 @@ Using the scaffolding code described above, each handler implementation requires
 ### Handling Table.FirstN with OnTake
 
 The [OnTake handler](../../../HandlingQueryFolding.md#ontake) receives a `count` parameter, which is the maximum number of rows to take.
-In OData terms, we can translate this to the [$top](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752362) query parameter. 
+In OData terms, we can translate this to the [$top](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752362) query parameter. 
 
 We'll use the following unit tests:
 
@@ -259,7 +259,7 @@ Rerunning the unit tests, we can see that the URL we are accessing now contains 
 ### Handling Table.Skip with OnSkip
 
 The [OnSkip handler](../../../HandlingQueryFolding.md#onskip) is a lot like OnTake. It receives a `count` parameter, which is the number of rows to skip from the result set.
-This translates nicely to the OData [$skip](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752362) query parameter. 
+This translates nicely to the OData [$skip](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752362) query parameter. 
 
 Unit tests:
 
@@ -300,7 +300,7 @@ qsWithSkip =
 ### Handling Table.SelectColumns with OnSelectColumns
 
 The [OnSelectColumns](../../../HandlingQueryFolding.md#onselectcolumns) handler is called when the user selects or removes columns from the result set. The handler receives a `list` of `text` values, representing the column(s) to be selected.
-In OData terms, this operation will map to the [$select](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752360) query option.
+In OData terms, this operation will map to the [$select](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752360) query option.
 The advantage of folding column selection becomes apparent when you are dealing with tables with many columns. The $select operator will remove unselected columns from the result set, resulting in
 more efficient queries.
 
@@ -373,7 +373,7 @@ qsWithSelect =
 ### Handling Table.Sort with OnSort
 
 The [OnSort](../../../HandlingQueryFolding.md#onsort) handler receives a `list` of `record` values. Each record contains a `Name` field, indicating the name of the column, and an `Order` field which is equal to `Order.Ascending` or `Order.Descending`. 
-In OData terms, this operation will map to the [$orderby](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752361) query option.
+In OData terms, this operation will map to the [$orderby](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752361) query option.
 The $orderby syntax has the column name followed by `asc` or `desc` to indicate Ascending or Descending order. When sorting on multiple columns, the values are separated with a comma. Note, if the `columns` parameter contains more than one item, it is important to maintain the order in which they appear.
 
 Unit tests:
@@ -433,8 +433,8 @@ qsWithOrderBy =
 Unlike the other query handlers we've implemented, the [GetRowCount](../../../HandlingQueryFolding.md#getrowcount) handler will return a single value - the number of rows expected in the result set. In an M query, this would typically be the result of the `Table.RowCount` transform.
 We have a few different options on how to handle this as part of an OData query. 
 
-* The [$count query parameter](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_The_$inlinecount_System), which returns the count as a separate field in the result set.
-* The [/$count path segment](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752292), which will return **only** the total count, as a scalar value.
+* The [$count query parameter](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_The_$inlinecount_System), which returns the count as a separate field in the result set.
+* The [/$count path segment](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752292), which will return **only** the total count, as a scalar value.
 
 The downside to the query parameter approach is that still need to send the entire query to the OData service. Since the count comes back inline as part of the result set, we'll have to process the first page of data from the result set.
 While this is still more efficient then reading the entire result set and counting the rows, it's probably still more work than we want to do.

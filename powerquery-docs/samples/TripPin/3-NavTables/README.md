@@ -86,7 +86,7 @@ shared TripPin.Contents =  Value.ReplaceType(TripPinNavTable, type function (url
 We can test our `TripPin.Contents` function using our TripPin.query.pq file. Running the following test query will give us a credential prompt, and a simple table output.
 
 ```
-TripPin.Contents("http://services.odata.org/v4/TripPinService/")
+TripPin.Contents("https://services.odata.org/v4/TripPinService/")
 ```
 
 ![TripPin Table](../../../images/trippin3Table.png)
