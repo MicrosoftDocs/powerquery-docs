@@ -6,6 +6,8 @@
   items:
   - name: "Using Power Query in Power BI"
     href: power-query-quickstart-using-power-bi.md
+  - name: "Using Query Parameters in Power BI Desktop"
+    href: power-query-query-parameters.md    
   - name: "Combining Data"
     href: power-query-tutorial-shape-combine.md
   - name: "Installing the PowerQuery SDK"
