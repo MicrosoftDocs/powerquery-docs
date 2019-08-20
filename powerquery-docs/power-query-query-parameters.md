@@ -67,8 +67,8 @@ Query Parameter values are currently available only in **Power BI Desktop**.
 ## Next steps
 There are all sorts of things you can do with Power Query and Power BI Desktop. For more information, check out the following resources:
 
-* [Query Overview with Power BI Desktop](desktop-query-overview.md)
-* [Data Types in Power BI Desktop](desktop-data-types.md)
-* [Shape and Combine Data with Power BI Desktop](desktop-shape-and-combine-data.md)
-* [Common Query Tasks in Power BI Desktop](desktop-common-query-tasks.md)    
+* [Query Overview with Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-query-overview)
+* [Data Types in Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-data-types)
+* [Shape and Combine Data with Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-shape-and-combine-data)
+* [Common Query Tasks in Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-common-query-tasks)    
 * [Using templates in Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-templates)
