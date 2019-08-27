@@ -68,6 +68,10 @@
   items: 
 - name: Reference
   items:
+  - name: "Authoring Reference"
+    items:
+    - name: "Excel Data Completeness"
+      href: ExcelDataCompleteness.md
   - name: "Connector Development Reference"
     items:
       - name: "Handling Authentication"
