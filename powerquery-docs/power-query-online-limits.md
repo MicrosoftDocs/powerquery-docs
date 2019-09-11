@@ -36,10 +36,10 @@ Per Query Timeout: 10 minutes
 
 During refresh (either scheduled or on-demand), query evaluations return complete results. Data is typically persisted in storage.
 
-| Product Integration | Hourly Evaluation Count | Daily Evaluation Time | Concurrent Evaluations |
+| Product Integration | Hourly Evaluation Count (#) | Daily Evaluation Time (Hours) | Concurrent Evaluations (#) |
 |--|--|--|--|
 | Microsoft Flow (SQL Connector - Transform Data Using Power Query) | 500 | 2 | 5 |
-| Dataflows in PowerApps.com (Analytical)| 500 | 2 | 5 |
+| Dataflows in PowerApps.com (Trial)| 500 | 2 | 5 |
 | Dataflows in PowerApps.com (Standard) | 1000 | 8 | 10 |
-| PowerApps Admin Portal Data Integrator | 1000 | 24 | 10 |
+| Data Integration in PowerApps.com Admin Portal | 1000 | 24 | 10 |
 | Dataflows in PowerBI.com | 1000 | 100 | 10 |
