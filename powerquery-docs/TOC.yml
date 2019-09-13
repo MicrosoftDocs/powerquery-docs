@@ -64,14 +64,16 @@
   items:
   - name: Certification
     href: ConnectorCertification.md
-- name: How To
-  items: 
+  - name: "Power Query Online Limits"
+    href: power-query-online-limits.md
 - name: Reference
   items:
   - name: "Authoring Reference"
     items:
     - name: "Excel Data Completeness"
       href: ExcelDataCompleteness.md
+    - name: "Connectors"
+      href: ConnectorPostgreSQL.md
   - name: "Connector Development Reference"
     items:
       - name: "Handling Authentication"
