@@ -1,3 +1,16 @@
+---
+title: PostgreSQL
+description: Power Query PostgreSQL connector reference
+author: cpopell
+
+ms.service: powerquery
+ms.topic: conceptual
+ms.date: 09/13/2019
+ms.author: gepopell
+
+LocalizationGroup: reference
+---
+
 # PostgreSQL
  
 ## Summary
