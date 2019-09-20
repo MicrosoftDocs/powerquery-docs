@@ -16,8 +16,11 @@ LocalizationGroup: reference
 ## Summary
  
 Release State: General Availability
+
 Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in PowerBI.com (Enterprise Gateway), Dataflows in PowerApps.com (Enterprise Gateway), Excel
+
 Authentication Types Supported: Database (Username/Password)
+
 Note: Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
  
 ## Prerequisites
