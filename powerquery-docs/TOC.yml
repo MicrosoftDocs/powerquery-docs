@@ -73,7 +73,7 @@
     - name: "Excel Data Completeness"
       href: ExcelDataCompleteness.md
     - name: "Connectors"
-      href: ConnectorPostgreSQL.md
+      href: Connectors/PostgreSQL.md
   - name: "Connector Development Reference"
     items:
       - name: "Handling Authentication"
