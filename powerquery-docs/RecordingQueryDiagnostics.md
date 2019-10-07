@@ -25,11 +25,21 @@ To get diagnostics on an authoring session, you first need to make sure that Que
 
 If you trace an entire authoring session, you will generally expect to see something like a source query evaluation, then evaluations related to the relevant navigator, then at least one query emitted for each step you apply (with potentially more depending on the exact UX actions taken). In some connectors, parallel evaluations will happen for performance reasons that will yield very similar sets of data.
 
-## Refresh
+## Refresh Preview
 
-When you have finished transforming your data, you have a sequence of steps in a query. When you press 'Refresh' in the Power Query editor, you won't see just one step in your query diagnostics. The reason for this is that refreshing in the Power Query Editor explicitly refreshes the query ending with the last step applied, and then steps back through the applied steps and refreshes for the query up to that point, back to the source.
+When you have finished transforming your data, you have a sequence of steps in a query. When you press 'Refresh Preview' or 'Refresh All' in the Power Query editor, you won't see just one step in your query diagnostics. The reason for this is that refreshing in the Power Query Editor explicitly refreshes the query ending with the last step applied, and then steps back through the applied steps and refreshes for the query up to that point, back to the source.
 
 This means that if you have five steps in your query, including Source and Navigator, you will expect to see five different evaluations in your diagnostics. The first one, chronologically, will often (but not always) take the longest. This is due to two different reasons:
 
 * It may potentially cache input data that the queries run after it (representing earlier steps in the User Query) can access faster locally.
 * It may have transforms applied to it that significantly truncate how much data has to be returned.
+
+Note that when talking about 'Refresh All' that it will refresh all queries and you'll need to filter to the ones you care about, as you might expect.
+
+## Full Refresh
+
+Query Diagnostics can be used to diagnose the so-called 'final query' that is emitted during the Refresh in Power BI, rather than just the Power Query editor experience. To do this, you first need to load the data to the model once. If you are planning to do this, make sure that you realize that if you press 'Close and Apply' that the editor window will close (interrupting tracing) so you either need to do it on the second refresh, or click the dropdown icon under 'Close and Apply' and press 'Apply' instead.
+
+Either way, make sure to press 'Start Diagnostics' on the Diagnostics section of the 'Tools' tab in the editor, refresh your model, and then press 'Stop' diagnostics.
+
+You can expect to see two evaluations in your diagnostics. The first one, chronologically, will be some kind of metadata call grabbing the information it can about the data source. The second one will generally be retrieving the data--accessing the data source, emitting the final built up Data Source Query with folded down operations, and then performing whatever evaluations are missing on top, locally.
