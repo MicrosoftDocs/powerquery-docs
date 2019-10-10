@@ -34,30 +34,19 @@ To install the Npgsql provider, go to the [releases page](https://github.com/npg
  
 ## Capabilities Supported
 * Import
-* DirectQuery (Power BI only, learn more)
-* Advanced options
-    * Command timeout in minutes
-    * Native SQL statement
-    * Relationship columns
-    * Navigate using full hierarchy
+
 ## Connect to a PostgreSQL database
-Once the matching Npgsql provider is installed, you can connect to a PostgreSQL database. To make the connection, take the following steps:
- 
-1.  From the Power Query Get Data dialog (or Data tab in the Excel ribbon), select  **Database > PostgreSQL**
- 
-![PostgreSQL connection builder in Power BI](images/Postgres2.png)
- 
-2. In the  **PostgreSQL**  dialog that appears, provide the name of the server and database. Optionally, you may provide a command timeout and a native query (SQL statement), as well as select whether or not you want to include relationship columns and navigate using full hierarchy. Once you are done, select  **Connect**.
-3. If the PostgreSQL database requires database user credentials, input those credentials in the dialogue when prompted.
-## Native Query Folding
-To enable Native Query Folding, set the EnableFolding flag to "true" for [Value.NativeQuery()](https://docs.microsoft.com/en-us/powerquery-m/value-nativequery) in the advanced editor.
-Sample:
-```Value.NativeQuery(target as any, query, null, [EnableFolding=true])```
- 
-Operations that are capable of folding will be applied on top of your native query according to normal Import or Direct Query logic. Native Query folding is not applicable with optional parameters present in [Value.NativeQuery()](https://docs.microsoft.com/en-us/powerquery-m/value-nativequery).
  
 ## Troubleshooting
-Your native query may throw the error:
-```We cannot fold on top of this native query. Please modify the native query or remove the 'EnableFolding' option.```
-A basic trouble shooting step is to check if the query in [Value.NativeQuery()](https://docs.microsoft.com/en-us/powerquery-m/value-nativequery) throws the same error with a limit 1 clause around it:
-```select * from (query) _ limit 1```
+
+### Legacy ACE Connector
+** Error resolution **
+
+Workbooks built in a legacy format (such as .xls and .xlsb) are accessed via the Access Database Engine OLEDB provider, and Power Query will display values as returned by this provider. This may cause a lack of fidelity in certain cases compared to what you would see in an equivalent xlsx (OpenXML based) file.
+
+**Incorrect column typing returning nulls**
+
+When Ace loads a sheet, it looks at the first 8 rows to try to guess the data types to use. If the first 8 rows of data are not inclusive of the following data (for example, numeric only in the first 8 rows vs text in the following rows), ACE will apply an incorrect type to that column and return nulls for any data that does not match the type.
+
+
+### Existing Excel documentation we wrote ###
