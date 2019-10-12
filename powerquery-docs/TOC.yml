@@ -70,10 +70,14 @@
   items:
   - name: "Authoring Reference"
     items:
-    - name: "Excel Data Completeness"
-      href: ExcelDataCompleteness.md
     - name: "Connectors"
-      href: Connectors/PostgreSQL.md
+      items:
+      - name: "Excel"
+      - href: Connectors/Excel.md
+      - name: "PostgreSQL"
+      - href: Connectors/PostgreSQL.md
+    - name: "Connecting to VSTS via OData"
+    - href: https://docs.microsoft.com/en-us/azure/devops/report/powerbi/odataquery-connect?view=azure-devops
   - name: "Connector Development Reference"
     items:
       - name: "Handling Authentication"
