@@ -40,7 +40,7 @@ Now, because the time values for the sample queries we're using here are so smal
 
 For my OData results, I see that the vast majority of the time spent was retrieving the data from source--if I click on the 'Data Source' item on the legend, it'll show me all of the different operations related to sending a query to the Data Source.
 
-![OData Northwind Query Diagnostics Summary](images\querydiagnosticsodatahighlevel.png)
+![OData Northwind Query Diagnostics Summary](images/querydiagnosticsodatahighlevel.png)
 
 ### Digging into the data
 
