@@ -23,25 +23,25 @@ The authoring workflow's primary difference is that it will generally generate m
 
 To get diagnostics on an authoring session, you first need to make sure that Query Diagnostics are enabled as a Preview Feature. When this is done, there will be a new 'Tools' tab on the Power Query ribbon. Click 'Start Diagnostics', then return back to the 'Home' tab to create a new Query.
 
-For both data sources, we're going to connect to the data source via 'New Source', 'Recent Sources', or 'Get Data'. For the SQL connection you'll need to put in credentials for your server, but for the public OData endpoint you can put in the endpoint linked above.
+We're going to walk through an example. We're using the OData connector in this sample, but when reviewing the output we'll also look at the SQL version of the same database. For both data sources, we're going to connect to the data source via 'New Source', 'Recent Sources', or 'Get Data'. For the SQL connection you'll need to put in credentials for your server, but for the public OData endpoint you can put in the endpoint linked above.
 
-IMAGE HERE.
+![OData connection](images/diagnosticsodatanorthwind.png)
 
 Once you connect and choose authentication, select the 'Customers' table from the OData service.
 
-IMAGE HERE.
+![Northwind navigation](images/diagnosticsodataselecttable.png)
 
 This will present you with the Customers table in the Power Query interface. Let's say that we want to know how many Sales Representatives order in different countries. First, right click on 'Sales Representative' under the 'Contact Title' column, mouse over 'Text Filters', and select 'Equals'.
 
-IMAGE HERE.
+![Apply text filter to contact title](images/diagnosticsodatafilter.png)
 
 Now, select 'Group By' from the Ribbon and do a grouping by 'Country', with your aggregate being a 'Count'.
 
-IMAGE HERE.
+![Apply Group By](images/diagnosticsodatagroupby.png)
 
 This should present you with the same data you see below.
 
-IMAGE HERE
+![Results](images/diagnosticsodataend.png)
 
 Finally, navigate back to the 'Tools' tab of the Ribbon and click 'Stop Diagnostics'. This will stop the tracing and build your diagnostics file for you, and the summary and detailed tables will appear on the left-hand side.
 
@@ -62,6 +62,12 @@ Note that when talking about 'Refresh All' that it will refresh all queries and 
 
 Query Diagnostics can be used to diagnose the so-called 'final query' that is emitted during the Refresh in Power BI, rather than just the Power Query editor experience. To do this, you first need to load the data to the model once. If you are planning to do this, make sure that you realize that if you press 'Close and Apply' that the editor window will close (interrupting tracing) so you either need to do it on the second refresh, or click the dropdown icon under 'Close and Apply' and press 'Apply' instead.
 
-Either way, make sure to press 'Start Diagnostics' on the Diagnostics section of the 'Tools' tab in the editor, refresh your model, and then press 'Stop' diagnostics.
+![Apply query changes](images/diagnosticscloseandapply.png)
+
+Either way, make sure to press 'Start Diagnostics' on the Diagnostics section of the 'Tools' tab in the editor. Once you've done this refresh your model, or even just the table you care about.
+
+![Refresh table](images/diagnosticsrefresh.png)
+
+Once it's done loading the data to model, press 'Stop' diagnostics.
 
 You can expect to see two evaluations in your diagnostics. The first one, chronologically, will be some kind of metadata call grabbing the information it can about the data source. The second one will generally be retrieving the data--accessing the data source, emitting the final built up Data Source Query with folded down operations, and then performing whatever evaluations are missing on top, locally.
