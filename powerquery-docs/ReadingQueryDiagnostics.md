@@ -30,4 +30,44 @@ While your exact needs might differ, this combination of charts is a good place 
 
 ## Interpreting the visualizations
 
-As mentioned above, there's a lot of questions you can try to answer with query diagnostics, 
+As mentioned above, there's a lot of questions you can try to answer with query diagnostics, but the two that we see the most often are asking how time is spent, and asking what the query sent to the source is.
+
+Asking how the time is spent is easy, and will be very similar for most connectors. A warning with query diagnostics, as mentioned elsewhere, is that you'll see drastically different capabilities depending on the connector. For example, many ODBC based connectors won't have an accurate recording of what query is sent to the actual back-end system, as Power Query only sees what it sends to the ODBC driver.
+
+If we want to see how the time is spent, we can just look at the visualizations we built above.
+
+Now, because the time values for the sample queries we're using here are so small, if we want to work with how Power BI reports time it's better if we convert the Exclusive Duration column to 'Seconds' in the Power Query editor. Once we do this, we can look at our chart and get a pretty decent idea of where time is spent.
+
+For my OData results, I see that the vast majority of the time spent was retrieving the data from source--if I click on the 'Data Source' item on the legend, it'll show me all of the different operations related to sending a query to the Data Source.
+
+![OData Northwind Query Diagnostics Summary](images\querydiagnosticsodatahighlevel.png)
+
+### Digging into the data
+
+When you're looking at this, if it seems like time spent is strange--for example, on the OData query you might see that there's a Data Source Query with the following value:
+
+```Request:
+https://services.odata.org/V4/Northwind/Northwind.svc/Customers?$filter=ContactTitle%20eq%20%27Sales%20Representative%27&$select=CustomerID%2CCountry HTTP/1.1
+Content-Type: application/json;odata.metadata=minimal;q=1.0,application/json;odata=minimalmetadata;q=0.9,application/atomsvc+xml;q=0.8,application/atom+xml;q=0.8,application/xml;q=0.7,text/plain;q=0.7
+
+<Content placeholder>
+
+Response:
+Content-Type: application/json;odata.metadata=minimal;q=1.0,application/json;odata=minimalmetadata;q=0.9,application/atomsvc+xml;q=0.8,application/atom+xml;q=0.8,application/xml;q=0.7,text/plain;q=0.7
+Content-Length: 435
+
+<Content placeholder>
+```
+
+This Data Source Query is associated with an operation that only takes up, say, 1% of the Exclusive Duration. Meanwhile, there's a very similar one:
+
+```
+Request:
+GET https://services.odata.org/V4/Northwind/Northwind.svc/Customers?$filter=ContactTitle eq 'Sales Representative'&$select=CustomerID%2CCountry HTTP/1.1
+
+Response:
+https://services.odata.org/V4/Northwind/Northwind.svc/Customers?$filter=ContactTitle eq 'Sales Representative'&$select=CustomerID%2CCountry
+HTTP/1.1 200 OK
+```
+
+This Data Source Query is associated with an operation that takes up nearly 75% of the Exclusive Duration. If you turn on the path, you discover the latter is actually a child of the former. This means that the first query basically added very little time on its own, with the actual data retrieval being tracked by the 'inner' query.
