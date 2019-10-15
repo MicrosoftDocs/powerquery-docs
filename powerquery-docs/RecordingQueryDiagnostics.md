@@ -1,4 +1,4 @@
-# Power Query Authoring in Power BI
+# Recording Query Diagnostics in Power BI
 
 When authoring in Power Query, the basic workflow is that you connect to a data source, apply some transformations, potentially refresh your data in the Power Query editor, and then load it to the Power BI model. Once it's in the Power BI model, you may refresh it from time to time in Power BI Desktop (if you're using Desktop to view analytics), aside from any refreshes you do in the service.
 
