@@ -70,4 +70,6 @@ Either way, make sure to press 'Start Diagnostics' on the Diagnostics section of
 
 Once it's done loading the data to model, press 'Stop' diagnostics.
 
-You can expect to see two evaluations in your diagnostics. The first one, chronologically, will be some kind of metadata call grabbing the information it can about the data source. The second one will generally be retrieving the data--accessing the data source, emitting the final built up Data Source Query with folded down operations, and then performing whatever evaluations are missing on top, locally.
+You can expect to see some combination of metadata and data queries. Metadata calls grab the information it can about the data source. Data retrieval is about accessing the data source, emitting the final built up Data Source Query with folded down operations, and then performing whatever evaluations are missing on top, locally.
+
+It's important to note that just because you see a resource (database, web endpoint, etc.) or a data source query in your diagnostics, it doesn't mean that it's necessarily performing network activity. Power Query may retrieve this information from its cache. In future updates, we will indicate whether or not information is being retrieved from the cache for easier diagnosis.
