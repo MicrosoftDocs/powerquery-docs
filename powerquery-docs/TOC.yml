@@ -72,6 +72,8 @@
     items:
     - name: "Excel Data Completeness"
       href: ExcelDataCompleteness.md
+    - name: "Combine Files"
+      href: CombineFiles.md
     - name: "Connectors"
       href: Connectors/PostgreSQL.md
   - name: "Connector Development Reference"
