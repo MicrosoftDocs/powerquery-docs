@@ -28,7 +28,7 @@ In order to connect to a PostgreSQL database with  **Power BI Desktop**, the Npg
  
 To install the Npgsql provider, go to the [releases page](https://github.com/npgsql/Npgsql/releases) and download the relevant release. The provider architecture (32-bit vs. 65-bit) needs to match the architecture of the product where you intent to use the connector. When installing, make sure that you select Npgsql GAC Installation to ensure Npgsql itself is added to your machine.
  
-![Npgsql installer with GAC Installation selected](images/Postgres1.png)
+![Npgsql installer with GAC Installation selected](../images/Postgres1.png)
  
 ## Capabilities Supported
 * Import
@@ -43,7 +43,7 @@ Once the matching Npgsql provider is installed, you can connect to a PostgreSQL 
  
 1.  From the Power Query Get Data dialog (or Data tab in the Excel ribbon), select  **Database > PostgreSQL**
  
-![PostgreSQL connection builder in Power BI](images/Postgres2.png)
+![PostgreSQL connection builder in Power BI](../images/Postgres2.png)
  
 2. In the  **PostgreSQL**  dialog that appears, provide the name of the server and database. Optionally, you may provide a command timeout and a native query (SQL statement), as well as select whether or not you want to include relationship columns and navigate using full hierarchy. Once you are done, select  **Connect**.
 3. If the PostgreSQL database requires database user credentials, input those credentials in the dialogue when prompted.

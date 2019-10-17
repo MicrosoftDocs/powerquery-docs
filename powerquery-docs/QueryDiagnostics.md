@@ -27,6 +27,14 @@ Query diagnostics provides two views:  summarized and detailed. The summarized v
 
 The summarized view provides an overview of what occurred during an evaluation for easy high level review. If for a specific operation, further breakdown is desired, the user can look at the group id and view the corresponding operations that were grouped within the detail view.
 
+## Explaining Multiple Evaluations
+
+When refreshing in the Power Query Editor, there's a lot done behind the scenes to attempt to give you a fluent user experience. As an example, when you ‘Refresh Preview’ the evaluator will execute the final step of each given Query, but then in the background it will sequentially run n-1 steps, n-2, steps, etc., so that if you step back through your steps it’s already available.
+
+To keep this performant, currently some caching happens so that it doesn’t have to rerun every part of the final query plan as it goes back through the steps. While this is useful for normal authoring, it would make it harder for the you to compare how steps impact overall performance.
+
+The guideline to deal with this is that if you want the most detailed step by step comparison, you should off background analysis, and then sequentially click back through the steps. Turning off background analysis will stop the automatic cache-based evaluation, and then you can record stepping back and compare how each step took time wise.
+
 ## Diagnostics Schema
 
 ### Id
