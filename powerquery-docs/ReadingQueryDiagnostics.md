@@ -26,6 +26,9 @@ For the second visualization, one choice is to use a Stacked Column Chart. In th
 
 Once your visualization is built, make sure you sort by 'Earliest Start Time' ascending so you can see the order things happen in.
 
+![Visualization of details and time aggregation](images/querydiagnosticsodatahighlevel.png)
+
+
 While your exact needs might differ, this combination of charts is a good place to start for looking at a lot of diagnostics files and for a number of purposes.
 
 ## Interpreting the visualizations
