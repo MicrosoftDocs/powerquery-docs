@@ -28,8 +28,6 @@ In order to connect to a legacy workbook (such as .xls or .xlsb), the Access Dat
 
 ```The 32-bit (or 64-bit) version of the Access Database Engine 2010 OLEDB provider may be required to read this type of file. To download the client software, visit the following site: https://go.microsoft.com/fwlink/?LinkID=285987.```
  
-![Npgsql installer with GAC Installation selected](images/Postgres1.png)
- 
 ## Capabilities Supported
 * Import
 
