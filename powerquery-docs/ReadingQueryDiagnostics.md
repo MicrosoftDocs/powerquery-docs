@@ -41,9 +41,17 @@ If we want to see how the time is spent, we can just look at the visualizations 
 
 Now, because the time values for the sample queries we're using here are so small, if we want to work with how Power BI reports time it's better if we convert the Exclusive Duration column to 'Seconds' in the Power Query editor. Once we do this, we can look at our chart and get a pretty decent idea of where time is spent.
 
-For my OData results, I see that the vast majority of the time spent was retrieving the data from source--if I click on the 'Data Source' item on the legend, it'll show me all of the different operations related to sending a query to the Data Source.
+For my OData results, I see in the image that the vast majority of the time spent was retrieving the data from source--if I click on the 'Data Source' item on the legend, it'll show me all of the different operations related to sending a query to the Data Source.
 
-![OData Northwind Query Diagnostics Summary](images/querydiagnosticsodatahighlevel.png)
+![OData Northwind Query Diagnostics Summary](images/querydiagnosticsodataemitted.png)
+
+If we perform all the same operations and build similar visualizations, but with the SQL traces instead of the ODATA ones, we can see how the two data sources compare!
+
+![OData Northwind Query Diagnostics Summary](images/querydiagnosticssqlhighlevel.png)
+
+If we click the Data Source table, like with the ODATA diagnostics we can see the first evaluation (2.3 in this image) emits metadata queries, with the second evaluation actually retrieving the data we care about. Because we're retrieving very little data in this case the data pulled back takes very little time (less than a tenth of a second for the entire second evaluation to happen, with less than a twentieth of a second for data retrieval itself), but that won't be true in all cases.
+
+As above, we can click the 'Data Source' category on the legend to see the emitted queries.
 
 ### Digging into the data
 
@@ -74,3 +82,5 @@ HTTP/1.1 200 OK
 ```
 
 This Data Source Query is associated with an operation that takes up nearly 75% of the Exclusive Duration. If you turn on the path, you discover the latter is actually a child of the former. This means that the first query basically added very little time on its own, with the actual data retrieval being tracked by the 'inner' query.
+
+These are extreme values, but they're within the bounds of what might be seen.
