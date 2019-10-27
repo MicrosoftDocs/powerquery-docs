@@ -36,7 +36,7 @@ In order to connect to a legacy workbook (such as .xls or .xlsb), the Access Dat
 ## Troubleshooting
 
 ### Legacy ACE Connector
-** Error resolution **
+**Error resolution**
 
 Workbooks built in a legacy format (such as .xls and .xlsb) are accessed via the Access Database Engine OLEDB provider, and Power Query will display values as returned by this provider. This may cause a lack of fidelity in certain cases compared to what you would see in an equivalent xlsx (OpenXML based) file.
 
