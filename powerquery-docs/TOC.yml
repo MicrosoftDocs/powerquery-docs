@@ -73,11 +73,11 @@
     - name: "Connectors"
       items:
       - name: "Excel"
-      - href: Connectors/Excel.md
+        href: Connectors/Excel.md
       - name: "PostgreSQL"
-      - href: Connectors/PostgreSQL.md
+        href: Connectors/PostgreSQL.md
     - name: "Connecting to VSTS via OData"
-    - href: https://docs.microsoft.com/en-us/azure/devops/report/powerbi/odataquery-connect?view=azure-devops
+      href: https://docs.microsoft.com/en-us/azure/devops/report/powerbi/odataquery-connect?view=azure-devops
   - name: "Connector Development Reference"
     items:
       - name: "Handling Authentication"
