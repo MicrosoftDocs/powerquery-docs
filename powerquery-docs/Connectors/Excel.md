@@ -32,6 +32,7 @@ In order to connect to a legacy workbook (such as .xls or .xlsb), the Access Dat
 * Import
 
 ## Connect to an Excel workbook
+To connect to an Excel workbook, select 'Excel' from the product specific data connector list.
  
 ## Troubleshooting
 
