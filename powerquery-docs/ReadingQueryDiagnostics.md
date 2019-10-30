@@ -91,7 +91,7 @@ These are extreme values, but they're within the bounds of what might be seen.
 
 Another important aspect of looking at the data is understanding what operations were 'pushed down' by Power Query to be performed by the back-end data source, which is also known as 'folding'. If we want to see what folded, we can look at what is the 'most specific' query, or queries, that get sent to the back-end data source. We can look at this for both ODATA and SQL.
 
-The operation that described in the article on Recording Diagnostics does essentially four things:
+The operation that was described in the [article](RecordingQueryDiagnostics.md) on Recording Diagnostics does essentially four things:
 
 * Connects to the data source
 * Grabs the customer table
