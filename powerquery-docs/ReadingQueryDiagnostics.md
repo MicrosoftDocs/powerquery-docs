@@ -12,19 +12,20 @@ As mentioned in our article on recording the diagnostics, I'm working with the O
 
 When going through traces, there are a lot of ways you can evaluate them. In this article we're going to focus on a two visualization split--one to show the details you care about, and the other to easily look at time contributions of various factors. For the first visualization, a table is used. You can pick any fields you like, but the ones recommended for an easy, high level look at what's going on are:
 
-* Id
-* Start Time
-* Query
-* Step
-* Data Source Query
-* Exclusive Duration (%)
-* Row Count
-* Category
-* Is User Query
+* [Id](QueryDiagnostics.md#id)
+* [Start Time](QueryDiagnostics.md#start-time)
+* [Query](QueryDiagnostics.md#query)
+* [Step](QueryDiagnostics.md#step)
+* [Data Source Query](QueryDiagnostics.md#data-source-query)
+* [Exclusive Duration (%)](QueryDiagnostics.md#exclusive-duration-)
+* [Row Count](QueryDiagnostics.md#row-count)
+* [Category](QueryDiagnostics.md#category)
+* [Is User Query](QueryDiagnostics.md#is-user-query)
+* [Path](QueryDiagnostics.md#path)
 
-For the second visualization, one choice is to use a Stacked Column Chart. In the 'Axis' parameter, you might want to use 'Id' or 'Step'. If we're looking at the Refresh, because it doesn't have anything to do with steps in the Editor itself, we probably just want to look at 'Id'. For the 'Legend' parameter you should set 'Category' or 'Operation' (depending on the granularity you want). For the 'Value', set 'Exclusive Duration' (and make sure it's not the %, so that you get the raw duration value). Finally, for the Tooltip, set 'Earliest Start Time'.
+For the second visualization, one choice is to use a Stacked Column Chart. In the 'Axis' parameter, you might want to use 'Id' or '[Step](QueryDiagnostics.md#step)'. If we're looking at the Refresh, because it doesn't have anything to do with steps in the Editor itself, we probably just want to look at '[Id](QueryDiagnostics.md#id)'. For the 'Legend' parameter you should set '[Category](QueryDiagnostics.md#category)' or '[Operation](QueryDiagnostics.md#operation)' (depending on the granularity you want). For the 'Value', set '[Exclusive Duration](QueryDiagnostics.md#exclusive-duration)' (and make sure it's not the %, so that you get the raw duration value). Finally, for the Tooltip, set 'Earliest [Start Time](QueryDiagnostics.md#start-time)'.
 
-Once your visualization is built, make sure you sort by 'Earliest Start Time' ascending so you can see the order things happen in.
+Once your visualization is built, make sure you sort by 'Earliest [Start Time](QueryDiagnostics.md#start-time)' ascending so you can see the order things happen in.
 
 ![Visualization of details and time aggregation](images/querydiagnosticsodatahighlevel.png)
 
@@ -39,7 +40,7 @@ Asking how the time is spent is easy, and will be very similar for most connecto
 
 If we want to see how the time is spent, we can just look at the visualizations we built above.
 
-Now, because the time values for the sample queries we're using here are so small, if we want to work with how Power BI reports time it's better if we convert the Exclusive Duration column to 'Seconds' in the Power Query editor. Once we do this, we can look at our chart and get a pretty decent idea of where time is spent.
+Now, because the time values for the sample queries we're using here are so small, if we want to work with how Power BI reports time it's better if we convert the [Exclusive Duration](QueryDiagnostics.md#exclusive-duration) column to 'Seconds' in the Power Query editor. Once we do this, we can look at our chart and get a pretty decent idea of where time is spent.
 
 For my OData results, I see in the image that the vast majority of the time spent was retrieving the data from source--if I click on the 'Data Source' item on the legend, it'll show me all of the different operations related to sending a query to the Data Source.
 
@@ -83,7 +84,7 @@ https://services.odata.org/V4/Northwind/Northwind.svc/Customers?$filter=ContactT
 HTTP/1.1 200 OK
 ```
 
-This Data Source Query is associated with an operation that takes up nearly 75% of the Exclusive Duration. If you turn on the path, you discover the latter is actually a child of the former. This means that the first query basically added very little time on its own, with the actual data retrieval being tracked by the 'inner' query.
+This Data Source Query is associated with an operation that takes up nearly 75% of the Exclusive Duration. If you turn on the [Path](QueryDiagnostics.md#path), you discover the latter is actually a child of the former. This means that the first query basically added very little time on its own, with the actual data retrieval being tracked by the 'inner' query.
 
 These are extreme values, but they're within the bounds of what might be seen.
 
