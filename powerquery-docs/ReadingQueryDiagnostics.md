@@ -1,3 +1,18 @@
+---
+title: Visualizing and Interpreting Query Diagnostics in Power BI
+description: How to read and interpret Query Diagnostics, as well as how to properly build visuals that can give insight on performance
+author: cpopell
+
+ms.service: powerquery
+ms.topic: conceptual
+ms.date: 10/31/2019
+ms.author: gepopell
+
+LocalizationGroup: reference
+---
+
+# Visualizing and Interpreting Query Diagnostics in Power BI
+
 ## Introduction
 
 Once you've [recorded](RecordingQueryDiagnostics.md) the diagnostics you want to use, the next step is being able to understand what they say.
