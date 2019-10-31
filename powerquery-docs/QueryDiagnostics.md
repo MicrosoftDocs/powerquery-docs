@@ -15,7 +15,13 @@ LocalizationGroup: reference
 
 Query Diagnostics is a powerful new feature that will allow you to determine what Power Query is doing during authoring time. While we will be expanding on this feature in the future, including allowing you to use it during full refreshes, at this time it allows you to understand what sort of queries you are emitting, what slowdowns you might run into during authoring refresh, and what kind of background events are happening.
 
-Whenever you start diagnostics, Power Query will begin tracing any evaluations that you cause. The evaluation that most users think of is when you press refresh, or when you retrieve data for the first time, but there are many actions that can cause evaluations depending on the connector. For example, with the SQL connector, when you retrieve a list of values to filter, that would kick off an evaluation as well—but it doesn’t associate with a user query, and that’s represented in the diagnostics. Other system generated queries might include Navigator or “Get Data” experience. 
+To use Query Diagnostics, you need to enable it from the Preview Features menu in Power BI. Once you've done that, a new 'Tools' tab will light up in the Power Query editor that you can use to trace diagnostics.
+
+![Query Diagnostics](./images/diagnosticstoolbar.png)
+
+Whenever you start diagnostics, Power Query will begin tracing any evaluations that you cause. The evaluation that most users think of is when you press refresh, or when you retrieve data for the first time, but there are many actions that can cause evaluations depending on the connector. For example, with the SQL connector, when you retrieve a list of values to filter, that would kick off an evaluation as well—but it doesn’t associate with a user query, and that’s represented in the diagnostics. Other system generated queries might include Navigator or “Get Data” experience.
+
+It's important that you press 'Stop' diagnostics. This will allow the engine to collect the recorded traces and parse them into the proper output. Without this step you'll lose your traces.
 
 With this first version of the feature we present two different diagnostic views—a summarized and a detailed view. The summarized view is aimed to give you an immediate insight into where time is being spent in your query. The detailed view is much deeper, line by line, and will generally only be needed for serious diagnosing by power users.
 
