@@ -1,3 +1,17 @@
+---
+title: Recording Query Diagnostics in Power BI
+description: How to use Query Diagnostics to record in authoring, preview refresh, and full loading/refresh workflows in Power BI
+author: cpopell
+
+ms.service: powerquery
+ms.topic: conceptual
+ms.date: 10/31/2019
+ms.author: gepopell
+
+LocalizationGroup: reference
+---
+
+
 # Recording Query Diagnostics in Power BI
 
 When authoring in Power Query, the basic workflow is that you connect to a data source, apply some transformations, potentially refresh your data in the Power Query editor, and then load it to the Power BI model. Once it's in the Power BI model, you may refresh it from time to time in Power BI Desktop (if you're using Desktop to view analytics), aside from any refreshes you do in the service.
