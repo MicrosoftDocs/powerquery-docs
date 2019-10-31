@@ -4,6 +4,12 @@ When authoring in Power Query, the basic workflow is that you connect to a data 
 
 While you may get a similar result at the end of an authoring workflow, refreshing in the editor, or refreshing in Power BI proper, very different evaluations are run by the software for the different user experiences provided. It's important to know what to expect when doing query diagnostics in these different workflows so you aren't surprised by the very different diagnostic data.
 
+To start diagnostics, you first need to make sure that Query Diagnostics are enabled as a Preview Feature. When this is done, there will be a new 'Tools' tab on the Power Query ribbon. Click 'Start Diagnostics', perform whatever evaluations you want (authoring, preview refresh, full refresh), and the click 'Stop Diagnostics'.
+
+![Query diagnostics control](./images/diagnosticstoolbar.png)
+
+To understand more about the feature, read the introduction article [here](QueryDiagnostics.md).
+
 ## Connector Specifics
 
 It's important to mention that there is no way to cover all the different permutations of what you'll see in Query Diagnostics. There are lots of things that can change exactly what you see in results:
@@ -21,8 +27,6 @@ For the most broad coverage this documentation will focus on Query Diagnostics o
 
 The authoring workflow's primary difference is that it will generally generate more individual evaluations than seen in other workflows. As discussed in the primary Query Diagnostics article, these are a result of populating various user interfaces such as the navigator or filter dropdowns.
 
-To get diagnostics on an authoring session, you first need to make sure that Query Diagnostics are enabled as a Preview Feature. When this is done, there will be a new 'Tools' tab on the Power Query ribbon. Click 'Start Diagnostics', then return back to the 'Home' tab to create a new Query.
-
 We're going to walk through an example. We're using the OData connector in this sample, but when reviewing the output we'll also look at the SQL version of the same database. For both data sources, we're going to connect to the data source via 'New Source', 'Recent Sources', or 'Get Data'. For the SQL connection you'll need to put in credentials for your server, but for the public OData endpoint you can put in the endpoint linked above.
 
 ![OData connection](images/diagnosticsodatanorthwind.png)
@@ -31,7 +35,7 @@ Once you connect and choose authentication, select the 'Customers' table from th
 
 ![Northwind navigation](images/diagnosticsodataselecttable.png)
 
-This will present you with the Customers table in the Power Query interface. Let's say that we want to know how many Sales Representatives order in different countries. First, right click on 'Sales Representative' under the 'Contact Title' column, mouse over 'Text Filters', and select 'Equals'.
+This will present you with the Customers table in the Power Query interface. Let's say that we want to know how many Sales Representatives there are in different countries. First, right click on 'Sales Representative' under the 'Contact Title' column, mouse over 'Text Filters', and select 'Equals'.
 
 ![Apply text filter to contact title](images/diagnosticsodatafilter.png)
 
@@ -73,3 +77,9 @@ Once it's done loading the data to model, press 'Stop' diagnostics.
 You can expect to see some combination of metadata and data queries. Metadata calls grab the information it can about the data source. Data retrieval is about accessing the data source, emitting the final built up Data Source Query with folded down operations, and then performing whatever evaluations are missing on top, locally.
 
 It's important to note that just because you see a resource (database, web endpoint, etc.) or a data source query in your diagnostics, it doesn't mean that it's necessarily performing network activity. Power Query may retrieve this information from its cache. In future updates, we will indicate whether or not information is being retrieved from the cache for easier diagnosis.
+
+# Additional Reading
+
+[An introduction to the feature](QueryDiagnostics.md)
+
+[More about reading and visualizing your recorded traces](ReadingQueryDiagnostics.md)
