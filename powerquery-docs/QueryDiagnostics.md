@@ -15,11 +15,20 @@ LocalizationGroup: reference
 
 Query Diagnostics is a powerful new feature that will allow you to determine what Power Query is doing during authoring time. While we will be expanding on this feature in the future, including allowing you to use it during full refreshes, at this time it allows you to understand what sort of queries you are emitting, what slowdowns you might run into during authoring refresh, and what kind of background events are happening.
 
-Whenever you start diagnostics, Power Query will begin tracing any evaluations that you cause. The evaluation that most users think of is when you press refresh, or when you retrieve data for the first time, but there are many actions that can cause evaluations depending on the connector. For example, with the SQL connector, when you retrieve a list of values to filter, that would kick off an evaluation as well—but it doesn’t associate with a user query, and that’s represented in the diagnostics. Other system generated queries might include Navigator or “Get Data” experience. 
+To use Query Diagnostics, you need to enable it from the Preview Features menu in Power BI. Once you've done that, a new 'Tools' tab will light up in the Power Query editor that you can use to trace diagnostics.
+
+![Query Diagnostics](./images/diagnosticstoolbar.png)
+
+Whenever you start diagnostics, Power Query will begin tracing any evaluations that you cause. The evaluation that most users think of is when you press refresh, or when you retrieve data for the first time, but there are many actions that can cause evaluations depending on the connector. For example, with the SQL connector, when you retrieve a list of values to filter, that would kick off an evaluation as well—but it doesn’t associate with a user query, and that’s represented in the diagnostics. Other system generated queries might include Navigator or “Get Data” experience.
+
+It's important that you press 'Stop' diagnostics. This will allow the engine to collect the recorded traces and parse them into the proper output. Without this step you'll lose your traces.
 
 With this first version of the feature we present two different diagnostic views—a summarized and a detailed view. The summarized view is aimed to give you an immediate insight into where time is being spent in your query. The detailed view is much deeper, line by line, and will generally only be needed for serious diagnosing by power users.
 
 Some capabilities, like the “Data Source Query” column, are currently available only on certain connectors. We will be working to extend the breadth of this coverage in the future.
+
+> [!NOTE]
+> Power Query may perform evaluations that you may not have directly triggered. Some of these evaluations are performed in order to retrieve metadata so we can best optimize our queries or to provide a better user experience (such as retrieving the list of distinct values within a column that are displayed in the Filter Rows experience), and others might be related to how a connector handles parallel evaluations. At the same time, if you see in your query diagnostics repeated queries that you don't believe make sense, feel free to reach out through normal support channels--your feedback is how we improve our product.
 
 ## Summarized vs Detailed View
 
@@ -31,9 +40,8 @@ The summarized view provides an overview of what occurred during an evaluation f
 
 When refreshing in the Power Query Editor, there's a lot done behind the scenes to attempt to give you a fluent user experience. As an example, when you ‘Refresh Preview’ the evaluator will execute the final step of each given Query, but then in the background it will sequentially run n-1 steps, n-2, steps, etc., so that if you step back through your steps it’s already available.
 
-To keep this performant, currently some caching happens so that it doesn’t have to rerun every part of the final query plan as it goes back through the steps. While this is useful for normal authoring, it would make it harder for the you to compare how steps impact overall performance.
+To keep this performant, currently some caching happens so that it doesn’t have to rerun every part of the final query plan as it goes back through the steps. While this is useful for normal authoring, it means that you will not always get correct step comparison information due to later evaluations pulling on cached data.
 
-The guideline to deal with this is that if you want the most detailed step by step comparison, you should off background analysis, and then sequentially click back through the steps. Turning off background analysis will stop the automatic cache-based evaluation, and then you can record stepping back and compare how each step took time wise.
 
 ## Diagnostics Schema
 
