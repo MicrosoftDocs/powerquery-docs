@@ -82,18 +82,19 @@ The time that the operation started.
 ### End Time
 
 The time that the operation ended.
+
 ### Exclusive Duration (%)
 
-One slightly complicated concept that we’re introducing for diagnosis is ‘Exclusive duration’. Due to the fact that many different operations can be happening at once, with overlap between them, ‘Exclusive duration’ refers to the amount of time that specific operation was ‘exclusively’ to blame. In other words, if an operation took 20ms but 10ms of that was shared with other operations, the shared time would only be counted once.
+The Exclusive Duration column of an event is the amount of time the event was active. This contrasts with the "duration" value that results from subtracting the values in an event's Start Time column and End Time column. This "duration" value represents the total time the elapsed between when an event began and when it ended, which may include times the event was in a suspended or inactive state and another event was consuming resources.
 
-Exclusive duration % will add up to approximately 100% within a given evaluation, as filtered by the “Id” column, not within a given diagnostic.
+Exclusive duration % will add up to approximately 100% within a given evaluation, as represented by the “Id” column. For example, if you filter on rows with Id 1.x, the Exclusive Duration percentages would sum to approximately 100%. This will not be the case if you sum the Exclusive Duration % values of all rows in a given diagnostic table.
 
 ### Exclusive Duration
 
-The absolute time, rather than %, of exclusive duration. The total duration of an evaluation can be calculated in one of two ways:
-1.	Find the operation called “Evaluation”. The difference between End Time - Start Time will result in the total duration of an evaluation.
-2.	Subtract the minimum start time of all operations within an evaluation to the maximum end time.
-Note that in cases when the information collected for an evaluation does not account for the total duration, an operation called “Trace Gaps” will be generated to account for this time gap.
+The absolute time, rather than %, of exclusive duration. The total duration (i.e. exclusive duration + time when the event was inactive) of an evaluation can be calculated in one of two ways:
+
+1. Find the operation called “Evaluation”. The difference between End Time - Start Time will result in the total duration of an event.
+2. Subtract the minimum start time of all operations within an event from the maximum end time. Note that in cases when the information collected for an event does not account for the total duration, an operation called “Trace Gaps” will be generated to account for this time gap.
 
 ### Resource
 
