@@ -70,6 +70,8 @@
   items:
   - name: "Authoring Reference"
     items:
+    - name: "Combine Files"
+      href: CombineFiles.md
     - name: "Connectors"
       items:
       - name: "Excel"
