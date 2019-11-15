@@ -1,21 +1,56 @@
 ---
-title: Excel Data Completeness
-description: How to handle data incompleteness and slow data loading issues with Excel workbooks in Power Query
+title: Excel
+description: Power Query Excel connector reference
 author: cpopell
 
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 08/27/2019
+ms.date: 10/11/2019
 ms.author: gepopell
 
 LocalizationGroup: reference
 ---
 
-# Excel Data Completeness
+# Excel
+ 
+## Summary
+ 
+Release State: General Availability
+
+Products: Power BI Desktop, Power BI Service (Gateway for on-premise or .xls files), Dataflows in PowerBI.com (Gateway for on-premise or .xls files), Dataflows in PowerApps.com (Gateway for on-premise or .xls files), Excel
+
+Authentication Types Supported: No authentication
+
+Note: Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+ 
+## Prerequisites
+In order to connect to a legacy workbook (such as .xls or .xlsb), the Access Database Engine 2010 OLEDB provider is required. To install this, go to the [download page](https://go.microsoft.com/fwlink/?LinkID=285987) and install the relevant (32 or 64 bit) version. If you don't have it installed, when connecting to legacy workbooks you will see the following error:
+
+```The 32-bit (or 64-bit) version of the Access Database Engine 2010 OLEDB provider may be required to read this type of file. To download the client software, visit the following site: https://go.microsoft.com/fwlink/?LinkID=285987.```
+ 
+## Capabilities Supported
+* Import
+
+## Connect to an Excel workbook
+To connect to an Excel workbook, select 'Excel' from the product specific data connector list.
+ 
+## Troubleshooting
+
+### Legacy ACE Connector
+**Error resolution**
+
+Workbooks built in a legacy format (such as .xls and .xlsb) are accessed via the Access Database Engine OLEDB provider, and Power Query will display values as returned by this provider. This may cause a lack of fidelity in certain cases compared to what you would see in an equivalent xlsx (OpenXML based) file.
+
+**Incorrect column typing returning nulls**
+
+When Ace loads a sheet, it looks at the first 8 rows to try to guess the data types to use. If the first 8 rows of data are not inclusive of the following data (for example, numeric only in the first 8 rows vs text in the following rows), ACE will apply an incorrect type to that column and return nulls for any data that does not match the type.
+
+
+## Excel Data Completeness
 Under certain circumstances, users will run up against issues where Power Query fails to extract all the data from an Excel Worksheet, or performance is severely degraded against a reasonably sized table.
 Both of these failures generally resolve to the same cause: improper cell range specification.
 
-## Incomplete Data Loading from Excel
+### Incomplete Data Loading from Excel
 Incomplete data loading from Excel is generally caused by a tool exporting an Excel document with an improper 'final cell' value. This will generally be fixed by opening and re-saving the document, but that doesn't explain the cause.
 
 To see the source of the issue, you have to look at the underlying XML of the Worksheet.
@@ -33,8 +68,7 @@ However, if your file has a dimension attribute that resembles \<dimension ref="
 
 As mentioned, this can be resolved by re-saving the file in Excel or changing the tool to generate either a proper ending point or just the starting cell.
 
-## Sluggish Data Loading from Excel
+### Sluggish Data Loading from Excel
 One common cause of slow data loading in Excel is caused by a similar issue. Instead of not using all the data, the ending point indicates significantly more data than is actually there.
 
 To fix this, you can refer to "[Locate and reset the last cell on a worksheet](https://support.office.com/en-us/article/locate-and-reset-the-last-cell-on-a-worksheet-c9e468a8-0fc3-4f69-8038-b3c1d86e99e9)" for detailed instructions.
-
