@@ -6,14 +6,14 @@ manager: kfile
 
 ms.service: powerquery
 ms.topic: tutorial
-ms.date: 08/16/2018
+ms.date: 12/03/2019
 ms.author: gepopell
 
 LocalizationGroup: reference
 ---
 
 # TripPin Part 5 - Paging
-This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially – each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector. 
+This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially&mdash;each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector. 
 
 In this lesson, you will:
 
@@ -25,35 +25,37 @@ generally varies from API to API. Thankfully, TripPin is an OData service, and t
 defines a way of doing pagination using [odata.nextLink](https://docs.oasis-open.org/odata/odata-json-format/v4.0/cs01/odata-json-format-v4.0-cs01.html#_Toc365464689) 
 values returned in the body of the response.
 
-To simplify [previous iterations](../4-Paths/README.md) of the connector, the `TripPin.Feed` function was not 'page aware'. 
-It simply parsed whatever JSON was returned from the request, and formatted it as a table. Those familiar with the 
-OData protocol might have noticed that we made a number of incorrect assumptions on the [format of the response](https://docs.oasis-open.org/odata/odata-json-format/v4.0/cs01/odata-json-format-v4.0-cs01.html#_Toc365464681)
-(such as assuming there is a `value` field containing an array of records). 
-In this lesson we will improve our response handling logic by making it page aware.
+To simplify [previous iterations](../4-Paths/README.md) of the connector, the `TripPin.Feed` function was not _page aware_. 
+It simply parsed whatever JSON was returned from the request and formatted it as a table. Those familiar with the 
+OData protocol might have noticed that a number of incorrect assumptions were made on the [format of the response](https://docs.oasis-open.org/odata/odata-json-format/v4.0/cs01/odata-json-format-v4.0-cs01.html#_Toc365464681)
+(such as assuming there is a `value` field containing an array of records).
+
+In this lesson you'll improve your response handling logic by making it page aware.
 Future tutorials will make the page handling logic more robust and able to handle multiple response formats (including errors from the service).
 
->**Note:** You do not need to implement your own paging logic with connectors based on [OData.Feed](/powerquery-m/odata-feed), as it handles it all for you automatically.
+>[!Note]
+> You do not need to implement your own paging logic with connectors based on [OData.Feed](/powerquery-m/odata-feed), as it handles it all for you automatically.
 
 ## Paging Checklist
-When implementing paging support, we'll need to the following things about our API:
+When implementing paging support, you'll need to know the following things about your API:
 
-1. How do we request the next page of data?
-2. Does the paging mechanism involve calculating values, or do we extract the URL for the next page from the response?
-3. How do we know when to stop paging? 
-4. Are there parameters related to paging that we should be aware of? (such as "page size")
+* How do you request the next page of data?
+* Does the paging mechanism involve calculating values, or do you extract the URL for the next page from the response?
+* How do you know when to stop paging? 
+* Are there parameters related to paging that you should be aware of? (such as "page size")
 
 The answer to these questions will impact the way you implement your paging logic. While there is some amount of code reuse
 across paging implementations (such as the use of [Table.GenerateByPage](../../../HelperFunctions.md#tablegeneratebypage), most connectors will
 end up requiring custom logic.
 
->**Note:** This lesson contains paging logic for an OData service, which follows a specific format.
->Please check the documentation for your API to determine the changes you'll need to make in your connector to support its paging format.
+>[!Note]
+> This lesson contains paging logic for an OData service, which follows a specific format. Check the documentation for your API to determine the changes you'll need to make in your connector to support its paging format.
 
 ## Overview of OData Paging 
 OData paging is driven by [nextLink annotations](https://docs.oasis-open.org/odata/odata-json-format/v4.0/cs01/odata-json-format-v4.0-cs01.html#_Annotation_odata.nextLink) 
-contained within the response payload. The nextLink value contains the URL to the next page of data. We know there is
-another page of data by looking for an `odata.nextLink` field in outermost object in the response. If there is no `odata.nextLink` field, 
-we've read all of our data. 
+contained within the response payload. The nextLink value contains the URL to the next page of data. You'll know if there is
+another page of data by looking for an `odata.nextLink` field in outermost object in the response. If there's no `odata.nextLink` field, 
+you've read all of your data. 
 
 ```json
 {
@@ -69,13 +71,13 @@ we've read all of our data.
 ```
 
 Some OData services allow clients to supply a [max page size preference](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_The_odata.maxpagesize_Preference),
-but it is up to the service on whether or not to honor it. Power Query should be able to handle responses of any size, so we won't 
-worry about specifying a page size preference - we can support whatever the service throws at us.
+but it is up to the service whether or not to honor it. Power Query should be able to handle responses of any size, so you don't need to 
+worry about specifying a page size preference&mdash;you can support whatever the service throws at you.
 
-> More information about [Server-Driven Paging](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Server-Driven_Paging) can be found in the OData specification
+More information about [Server-Driven Paging](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Server-Driven_Paging) can be found in the OData specification.
 
 ### Testing TripPin
-Before we fix our paging implementation, let's confirm the current behavior of the extension from the [previous tutorial](../4-Paths/README.md). The following test query will retrieve the People table and add an index column to show our current row count.
+Before fixing your paging implementation, confirm the current behavior of the extension from the [previous tutorial](../4-Paths/README.md). The following test query will retrieve the People table and add an index column to show your current row count.
 
 ```
 let
@@ -91,7 +93,7 @@ You'll notice that the query returns a table with 8 rows (index 0 to 7).
 
 ![QueryWithoutPaging](../../../images/trippin5People.png)
 
-If we look at the body of the response from fiddler, we see that it does in fact contain an `@odata.nextLink` field,
+If you look at the body of the response from fiddler, you'll see that it does in fact contain an `@odata.nextLink` field,
 indicating that there are more pages of data available. 
 
 ```json
@@ -107,17 +109,16 @@ indicating that there are more pages of data available.
 ```
 
 ## Implementing Paging for TripPin
-We're going to make the following changes to our extension:
+You're now going to make the following changes to your extension:
 
 1. Import the common `Table.GenerateByPage` function
-2. Add a `GetAllPagesByNextLink` function which uses [`Table.GenerateByPage`](../../../HelperFunctions.md#tablegeneratebypage) to glue all pages together
+2. Add a `GetAllPagesByNextLink` function that uses [`Table.GenerateByPage`](../../../HelperFunctions.md#tablegeneratebypage) to glue all pages together
 3. Add a `GetPage` function that can read a single page of data
 4. Add a `GetNextLink` function to extract the next URL from the response
 5. Update `TripPin.Feed` to use the new page reader functions
 
->**Note:** As stated earlier in this tutorial, paging logic will vary between data sources.
->The implementation here tries to break up the logic into functions that should be reusable
->for sources that use 'next links' returned in the response.
+>[!Note]
+> As stated earlier in this tutorial, paging logic will vary between data sources. The implementation here tries to break up the logic into functions that should be reusable for sources that use _next links_ returned in the response.
 
 ### Table.GenerateByPage
 The `Table.GenerateByPage` function can be used to efficiently combine multiple 'pages' of data 
@@ -160,10 +161,10 @@ This is generally done by adding `meta` values to the page before returning it.
 - The columns and table type of the combined table (i.e. all pages together) are derived from
 the first page of data. The `getNextPage` function should normalize each page of data. 
 - The first call to `getNextPage` receives a null parameter.
-- `getNextPage` must return null when there are no pages left
+- `getNextPage` must return null when there are no pages left.
 
 ### Implementing GetAllPagesByNextLink
-The body of our `GetAllPagesByNextLink` function implements the `getNextPage` function argument for 
+The body of your `GetAllPagesByNextLink` function implements the `getNextPage` function argument for 
 [`Table.GenerateByPage`](../../../HelperFunctions.md#tablegeneratebypage). It will call the `GetPage` function, and retrieve the URL for the next page 
 of data from the `NextLink` field of the `meta` record from the previous call.
 
@@ -184,8 +185,8 @@ GetAllPagesByNextLink = (url as text) as table =>
 ```
 
 ### Implementing GetPage
-Our `GetPage` function will use [Web.Contents](/powerquery-m/web-contents) to retrieve a single page of data from the TripPin service,
-and converts the response into a table. It passes the response from [Web.Contents](/powerquery-m/web-contents) to the 
+Your `GetPage` function will use [Web.Contents](/powerquery-m/web-contents) to retrieve a single page of data from the TripPin service,
+and convert the response into a table. It passes the response from [Web.Contents](/powerquery-m/web-contents) to the 
 `GetNextLink` function to extract the URL of the next page, and sets it on the `meta` record of 
 the returned table (page of data).
 
@@ -203,40 +204,36 @@ GetPage = (url as text) as table =>
 ```
 
 ### Implementing GetNextLink
-Our `GetNextLink` function simply checks the body of the response for an `@odata.nextLink` field, and returns its value.
+Your `GetNextLink` function simply checks the body of the response for an `@odata.nextLink` field, and returns its value.
 
 ```
 // In this implementation, 'response' will be the parsed body of the response after the call to Json.Document.
-// We look for the '@odata.nextLink' field and simply return null if it doesn't exist.
+// Look for the '@odata.nextLink' field and simply return null if it doesn't exist.
 GetNextLink = (response) as nullable text => Record.FieldOrDefault(response, "@odata.nextLink");
 ```
 
 ### Putting it all Together
-The final step to implement our paging logic is to update `TripPin.Feed` to use the new functions. 
-For now, we're simply calling through to `GetAllPagesByNextLink`, but in subsequent tutorials,
-we will be adding new capabilities (such as enforcing a schema, and query parameter logic).
+The final step to implement your paging logic is to update `TripPin.Feed` to use the new functions. 
+For now, you're simply calling through to `GetAllPagesByNextLink`, but in subsequent tutorials,
+you'll be adding new capabilities (such as enforcing a schema, and query parameter logic).
 
 ```
 TripPin.Feed = (url as text) as table => GetAllPagesByNextLink(url);
 ```
 
-If we re-run the same [test query](#testing-trippin) from earlier in the tutorial, we should now
-see the page reader in action. We should now see we have 20 rows in the response rather than 8.
+If you re-run the same [test query](#testing-trippin) from earlier in the tutorial, you should now
+see the page reader in action. You should also see that you have 20 rows in the response rather than 8.
 
 ![QueryWithPaging](../../../images/trippin5Paging.png)
 
-If we look at the requests in fiddler, we should now see separate requests for each page of data.
+If you look at the requests in fiddler, you should now see separate requests for each page of data.
 
 ![Fiddler](../../../images/trippin5Fiddler.png)
 
-> **Note:** You'll notice duplicate requests for the first page of data from the service,
-> which is not ideal. The extra request is a result of the M engine's schema checking behavior.
-> We will ignore this issue for now and resolve it in the [next tutorial](../6-Schema/README.md)
-> where we will apply an explict schema.
+>[!Note]
+> You'll notice duplicate requests for the first page of data from the service, which is not ideal. The extra request is a result of the M engine's schema checking behavior. Ignore this issue for now and resolve it in the [next tutorial](../6-Schema/README.md), where you'll apply an explict schema.
 
 ## Conclusion
-This lesson showed you how to implement pagination support for a Rest API. While the logic will 
-likely vary between APIs, the pattern established here should be reusable with minor modifications.
+This lesson showed you how to implement pagination support for a Rest API. While the logic will likely vary between APIs, the pattern established here should be reusable with minor modifications.
 
-In the next lesson, we will look at how to apply an explicit schema to our data, going beyond the
-simple `text` and `number` data types we get from `Json.Document`.
+In the next lesson, you'll look at how to apply an explicit schema to your data, going beyond the simple `text` and `number` data types you get from `Json.Document`.

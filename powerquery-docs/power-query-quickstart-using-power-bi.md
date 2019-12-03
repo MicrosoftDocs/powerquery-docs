@@ -5,7 +5,7 @@ author: davidiseminger
 
 ms.service: powerquery
 ms.topic: quickstart
-ms.date: 08/10/2018
+ms.date: 11/26/2019
 ms.author: davidi
 
 LocalizationGroup: Get started
@@ -28,23 +28,24 @@ With no data connections, **Power Query Editor** appears as a blank pane, ready 
 
 ![A blank Power Query Editor screen](media/power-query-quickstart-using-power-bi/queryoverview_blankpane.png)
 
-Once a query is loaded, **Power Query Editor** view becomes more interesting. If we connect to the following Web data source, **Power Query Editor** loads information about the data, which you can then begin to shape.
+Once a query is loaded, **Power Query Editor** view becomes more interesting. If you connect to the following Web data source, **Power Query Editor** loads information about the data, which you can then begin to shape.
 
 [*https://www.bankrate.com/finance/retirement/best-places-retire-how-state-ranks.aspx*](https://www.bankrate.com/finance/retirement/best-places-retire-how-state-ranks.aspx)
 
 Here’s how **Power Query Editor** appears once a data connection is established:
 
-1. In the ribbon, many buttons are now active to interact with the data in the query
-2. In the left pane, queries are listed and available for selection, viewing, and shaping
-3. In the center pane, data from the selected query is displayed and available for shaping
-4. The **Query Settings** window appears, listing the query’s properties and applied steps  
+* In the ribbon, many buttons are now active to interact with the data in the query.
+* In the left pane, queries are listed and available for selection, viewing, and shaping.
+* In the center pane, data from the selected query is displayed and available for shaping.
+* The **Query Settings** window appears, listing the query’s properties and applied steps.  
    
    ![Elements of the Power Query Editor](media/power-query-quickstart-using-power-bi/queryoverview_withdataconnection.png)
 
-We’ll look at each of these four areas – the ribbon, the queries pane, the data view, and the Query Settings pane – in the following sections.
+The following sections describe each of these four areas&mdash;the ribbon, the queries pane, the data view, and the Query Settings pane.
 
 ## The query ribbon
-The ribbon in **Power Query Editor** consists of five tabs – **Home**, **Transform**, **Add Column**, **View**, and **Help**.
+
+The ribbon in **Power Query Editor** consists of five tabs&mdash;**Home**, **Transform**, **Add Column**, **View**, and **Help**.
 
 The **Home** tab contains the common query tasks, including the first step in any query, which is **Get Data.** The following image shows the **Home** ribbon.  
 
@@ -85,7 +86,8 @@ In the following image, the Web data connection established earlier is displayed
 When you select a right-click menu item (or a ribbon button), Query applies the step to the data, and saves it as part of the query itself. The steps are recorded in the **Query Settings** pane in sequential order, as described in the next section.  
 
 ## The query settings pane
-The **Query Settings** pane is where all steps associated with a query are displayed. For example, in the following image, the **Applied Steps** section of the **Query Settings** pane reflects the fact that we just changed the type of the **Overall score** column.
+
+The **Query Settings** pane is where all steps associated with a query are displayed. For example, in the following image, the **Applied Steps** section of the **Query Settings** pane reflects the fact that the type of the **Overall score** column has changed.
 
 ![The Query Settings pane](media/power-query-quickstart-using-power-bi/queryoverview_querysettingspane.png)
 
@@ -106,6 +108,7 @@ If you want to see the code that **Power Query Editor** is creating with each st
 You can directly edit the code in the **Advanced Editor** window. To close the window, select the **Done** or **Cancel** button.  
 
 ## Saving your work
+
 When your query is where you want it, you can have Power Query Editor apply the changes to the data model into Power BI Desktop, and close Power Query Editor. To do that, select **Close & Apply** from Power Query Editor's **File** menu.  
 
 ![Close and load your query to Power BI Desktop](media/power-query-quickstart-using-power-bi/queryoverview_closenload.png)

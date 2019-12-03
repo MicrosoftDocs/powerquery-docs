@@ -6,7 +6,7 @@ manager: kfile
 
 ms.service: powerquery
 ms.topic: tutorial
-ms.date: 08/16/2018
+ms.date: 12/2/2019
 ms.author: gepopell
 
 LocalizationGroup: reference
@@ -14,7 +14,7 @@ LocalizationGroup: reference
 
 # TripPin Tutorial
 
-This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially - each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector.
+This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially&mdash;each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector.
 
 This tutorial uses a public [OData](https://www.odata.org/documentation/) service ([TripPin](https://services.odata.org/v4/TripPinService/)) as a reference source. Although this lesson requires the use of the M engine's OData functions, subsequent lessons will use [Web.Contents](/powerquery-m/web-contents), making it applicable to (most) REST APIs.
 
@@ -24,7 +24,7 @@ The following applications will be used throughout this tutorial:
 
 * [Power BI Desktop](https://www.microsoft.com/en-us/download/details.aspx?id=45331), May 2017 release or later
 * [Power Query SDK for Visual Studio](https://aka.ms/powerquerysdk)
-* [Fiddler](https://www.telerik.com/fiddler) - Optional, but recommended for viewing and debugging requests to your REST service
+* [Fiddler](https://www.telerik.com/fiddler)&mdash;Optional, but recommended for viewing and debugging requests to your REST service
 
 It's strongly suggested that you review:
 * [Installing the PowerQuery SDK](../../InstallingSDK.md)
@@ -39,7 +39,7 @@ It's strongly suggested that you review:
 |----|:------------------------------------|:----------------------------------------------------|
 |1   |[OData](1-OData/README.md)                     |Create a simple Data Connector over an OData service |
 |2   |[Rest](2-Rest/README.md)                       |Connect to a REST API that returns a JSON response   |
-|3   |[Nav Tables](3-NavTables/README.md)            |Providing a navigation experience for your source    |
+|3   |[Nav Tables](3-NavTables/README.md)            |Provide a navigation experience for your source    |
 |4   |[Data Source Paths](4-Paths/README.md)         |How credentials are identified for your data source  |
 |5   |[Paging](5-Paging/README.md)                   |Read with a paged response from a web service        |
 |6   |[Enforcing Schema](6-Schema/README.md)         |Enforce table structure and column data types        |

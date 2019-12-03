@@ -5,7 +5,7 @@ author: cpopell
 
 ms.service: powerquery
 ms.topic: quickstart
-ms.date: 08/10/2018
+ms.date: 11/27/2019
 ms.author: gepopell
 
 LocalizationGroup: Get started
@@ -15,7 +15,7 @@ LocalizationGroup: Get started
 
 ## Hello World Sample
 This sample provides a simple data source extension that can be run in Visual Studio, and loaded in Power BI Desktop. As an overview, this sample shows the following:
-* Exporting function (HelloWorld.Contents), which takes an option text parameter.
+* Exporting function (`HelloWorld.Contents`), which takes an option text parameter.
 * Defining a data source kind that:
     * Declares that it uses Implicit (anonymous) authentication.
     * Uses string resources that allow for localization.
@@ -24,7 +24,7 @@ This sample provides a simple data source extension that can be run in Visual St
 Following the instructions in [Installing the PowerQuery SDK](InstallingSDK.md), create a new project called "HelloWorld" and copy in the following M code, and then follow the rest of the instructions to be able to open it in PowerBI.
 
 In the following connector definition you will find:
-* A `section` statement
+* A `section` statement.
 * A data source function with metadata establishing it as a data source definition with the Kind `HelloWorld` and Publish `HelloWorld.Publish`.
 * An `Authentication` record declaring that implicit (anonymous) is the only authentication type for this source.
 * A publish record declaring that this connection is in Beta, what text to load from the resx file, the source image, and the source type image.
@@ -59,16 +59,16 @@ HelloWorld.Icons = [
 ];
 ```
 
-Once you built the file and copied it to the correct directory following the instructions in [Installing the PowerQuery SDK](InstallingSDK.md) tutorial, open PowerBI. You can search for "hello" to find your connector in the Get Data dialogue. 
+Once you've built the file and copied it to the correct directory, following the instructions in [Installing the PowerQuery SDK](InstallingSDK.md) tutorial, open PowerBI. You can search for "hello" to find your connector in the **Get Data** dialog. 
 
 
 
-It will bring up an authentication dialogue. Since there's no authentication options, and the function takes no parameters, there's no further steps in these dialogues.
+This step will bring up an authentication dialog. Since there's no authentication options and the function takes no parameters, there's no further steps in these dialogs.
 
 
 
-Press connect and it will tell you that it's a "Preview connector", since we have "Beta" set to true in the query. Since there's no authentication, the authentication screen will present a tab for Anonymous authentication with no fields. Press "Connect" again to finish.
+Press **Connect** and the dialog will tell you that it's a "Preview connector", since `Beta` is set to true in the query. Since there's no authentication, the authentication screen will present a tab for Anonymous authentication with no fields. Press **Connect** again to finish.
 
-Finally, the query editor will come up showing what we expect--a function that returns the text "Hello world".
+Finally, the query editor will come up showing what we expect&mdash;a function that returns the text "Hello world".
 
-For the fully implemented sample, please see the [Hello World Sample](https://github.com/Microsoft/DataConnectors/tree/master/samples/HelloWorld) in the Data Connectors sample repo.
+For the fully implemented sample, see the [Hello World Sample](https://github.com/Microsoft/DataConnectors/tree/master/samples/HelloWorld) in the Data Connectors sample repo.
