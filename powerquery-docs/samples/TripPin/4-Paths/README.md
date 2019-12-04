@@ -37,7 +37,7 @@ shared TripPin.Feed = Value.ReplaceType(TripPinImpl, type function (url as Uri.T
 shared TripPin.Contents =  Value.ReplaceType(TripPinNavTable, type function (url as Uri.Type) as any);
 ```
 
-The first time you run a query that one of the functions, you'll receive a credential prompt with drop downs that lets you select a path and an authentication type. 
+The first time you run a query that uses one of the functions, you'll receive a credential prompt with drop downs that lets you select a path and an authentication type. 
 
 ![Credentials with Paths](../../../images/trippin4Paths.png)
 

@@ -65,7 +65,7 @@ TripPin.Publish = [
 * A shared function (`TripPin.Feed`) that sets the parameter type to `Uri.Type`
 * A Data Source publishing record that will allow the connector to appear in the Power BI **Get Data** dialog 
 
-Open the TripPin.query.pq file. Replace the current contents with a call to your exported function and.
+Open the TripPin.query.pq file. Replace the current contents with a call to your exported function.
 
 ```
 TripPin.Feed("https://services.odata.org/v4/TripPinService/")
