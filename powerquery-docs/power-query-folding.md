@@ -29,43 +29,43 @@ We recommend that you strive to achieve efficiency in your model designs by ensu
 
 ## Sources that support folding
 
-Most data sources that have the concept of a query language support query folding. These data sources can include relational databases, OData feeds (including SharePoint lists), Exchange and Active Directory. However, data sources like flat files, blobs, and web typically do not.
+Most data sources that have the concept of a query language support query folding. These data sources can include relational databases, OData feeds (including SharePoint lists), Exchange, and Active Directory. However, data sources like flat files, blobs, and web typically do not.
 
 ## Transformations that can achieve folding
 
-Relational data source transformations that can be query folded are those that can be written as a single SELECT statement. A SELECT statement can be constructed with appropriate WHERE, GROUP BY and JOIN clauses. It can also contain column expressions (calculations) that use common built-in functions supported by SQL databases.
+Relational data source transformations that can be query folded are those that can be written as a single SELECT statement. A SELECT statement can be constructed with appropriate WHERE, GROUP BY, and JOIN clauses. It can also contain column expressions (calculations) that use common built-in functions supported by SQL databases.
 
-Generally, the following bulleted list describes transformations that can be query folded.
+Generally, the following list describes transformations that can be query folded.
 
-- Removing columns
-- Renaming columns (SELECT column aliases)
-- Filtering rows, with static values or Power Query parameters (WHERE clause predicates)
-- Grouping and summarizing (GROUP BY clause)
-- Expanding record columns (source foreign key columns) to achieve a join of two source tables (JOIN clause)
-- Non-fuzzy merging of fold-able queries based on the same source (JOIN clause)
-- Appending fold-able queries based on the same source (UNION ALL operator)
-- Adding custom columns with _simple logic_ (SELECT column expressions). Simple logic implies uncomplicated operations, possibly including the use of M functions that have equivalent functions in the SQL data source, like mathematic, or text manipulation functions. For example, the following expressions returns the year component of the **OrderDate** column value (to return a numeric value).
+- Removing columns.
+- Renaming columns (SELECT column aliases).
+- Filtering rows, with static values or Power Query parameters (WHERE clause predicates).
+- Grouping and summarizing (GROUP BY clause).
+- Expanding record columns (source foreign key columns) to achieve a join of two source tables (JOIN clause).
+- Non-fuzzy merging of fold-able queries based on the same source (JOIN clause).
+- Appending fold-able queries based on the same source (UNION ALL operator).
+- Adding custom columns with _simple logic_ (SELECT column expressions). Simple logic implies uncomplicated operations, possibly including the use of M functions that have equivalent functions in the SQL data source, like mathematic or text manipulation functions. For example, the following expressions returns the year component of the **OrderDate** column value (to return a numeric value).
 
     ```powerquery-m
     Date.Year([OrderDate])
     ```
 
-- Pivoting and unpivoting (PIVOT and UNPIVOT operators)
+- Pivoting and unpivoting (PIVOT and UNPIVOT operators).
 
 ## Transformations that prevent folding
 
-Generally, the following bulleted list describes transformations that prevent query folding. This is not intended to be an exhaustive list.
+Generally, the following list describes transformations that prevent query folding. This is not intended to be an exhaustive list.
 
-- Merging queries based on different sources
-- Appending (union-ing) queries based on different sources
+- Merging queries based on different sources.
+- Appending (union-ing) queries based on different sources.
 - Adding custom columns with _complex logic_. Complex logic implies the use of M functions that have no equivalent functions in the data source. For example, the following expressions formats the **OrderDate** column value (to return a text value).
 
     ```powerquery-m
     Date.ToText([OrderDate], "yyyy")
     ```
 
-- Adding index columns
-- Changing a column data type
+- Adding index columns.
+- Changing a column data type.
 
 Note that when a Power Query query encompasses multiple data sources, incompatibility of data source privacy levels can prevent query folding from taking place. For more information, see the [Power BI Desktop privacy levels](/power-bi/desktop-privacy-levels) article.
 
