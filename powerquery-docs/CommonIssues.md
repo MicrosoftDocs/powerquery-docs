@@ -25,3 +25,12 @@ We want the entire record with the highest SalesYTD in each TerritoryID. If we o
 You may find yourself occasionally having type errors when you import a table. One common cause of this is if the first 200 rows of your table have one type of data, and then there's a broader or different type of data, type inference will fail. This is due to the fact that type inference is only based on the first 200 rows of data.
 
 To address this, manually type the column towards the type of data that it will actually hold.
+
+## Case Sensitivity
+
+Users may find that they have certain aggregation operations that perform differently in the Power Query editor and in Power BI. This is due to slightly different whitespace handling in the two engines.
+
+Power Query is case and whitespace (both leading and trailing) sensitive, while Analysis Services (which Power BI is operating on top of) is case-insensitive and will treat values with different leading and trailing whitespace as the same value. If you're running into issues with this, you can use a 'contains' on the problematic piece of data to find all rows in Power Query returning that data. 
+
+Once you've done this, use a data cleaning transform such as "lowercase", "UPPERCASE", "Capitalize Every Word", "Trim", or "Clean" to make sure that you've removed any case or whitespace differences between rows.
+
