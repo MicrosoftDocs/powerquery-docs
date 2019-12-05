@@ -21,7 +21,7 @@ In this lesson, you will:
 > [!div class="checklist"]
 > * Learn the basics of query folding 
 > * Learn about the `Table.View` function 
-> * Replicate OData query folding handlers for
+> * Replicate OData query folding handlers for:
   * `$top`
   * `$skip`
   * `$count`
