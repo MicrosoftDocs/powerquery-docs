@@ -13,7 +13,7 @@ LocalizationGroup: Get started
 
 # Creating your first connector: Hello World
 
-## Hello World Sample
+## Hello World sample
 This sample provides a simple data source extension that can be run in Visual Studio, and loaded in Power BI Desktop. As an overview, this sample shows the following:
 * Exporting function (`HelloWorld.Contents`), which takes an option text parameter.
 * Defining a data source kind that:
@@ -69,6 +69,6 @@ This step will bring up an authentication dialog. Since there's no authenticatio
 
 Press **Connect** and the dialog will tell you that it's a "Preview connector", since `Beta` is set to true in the query. Since there's no authentication, the authentication screen will present a tab for Anonymous authentication with no fields. Press **Connect** again to finish.
 
-Finally, the query editor will come up showing what we expect&mdash;a function that returns the text "Hello world".
+Finally, the query editor will come up showing what you expect&mdash;a function that returns the text "Hello world".
 
 For the fully implemented sample, see the [Hello World Sample](https://github.com/Microsoft/DataConnectors/tree/master/samples/HelloWorld) in the Data Connectors sample repo.

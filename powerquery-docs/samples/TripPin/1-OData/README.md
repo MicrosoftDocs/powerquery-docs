@@ -16,10 +16,12 @@ LocalizationGroup: reference
 This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially&mdash;each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector. 
 
 In this lesson, you will:
-* Create a new Data Connector project using the Visual Studio SDK
-* Author a base function to pull data from a source
-* Test your connector in Visual Studio
-* Register your connector in Power BI Desktop
+
+> [!div class="checklist"]
+> * Create a new Data Connector project using the Visual Studio SDK
+> * Author a base function to pull data from a source
+> * Test your connector in Visual Studio
+> * Register your connector in Power BI Desktop
 
 ## Creating a Basic OData Connector
 In this section, you will create a new Data Connector project, provide some basic information, and test it in Visual Studio.

@@ -1,6 +1,6 @@
 ---
 title: TripPin 4 - Data Source Paths
-description: Improving the navigation table of our TripPin REST connector
+description: Improving the navigation table of your TripPin REST connector
 author: cpopell
 manager: kfile
 
@@ -17,8 +17,9 @@ This multi-part tutorial covers the creation of a new data source extension for 
 
 In this lesson, you will:
 
-* Simplify the connection logic for your connector
-* Improve the navigation table experience
+> [!div class="checklist"]
+> * Simplify the connection logic for your connector
+> * Improve the navigation table experience
  
 This lesson simplifies the connector built in the [previous lesson](../3-NavTables/README.md) by removing its required function parameters, and improving the user experience by moving to a dynamically generated navigation table.
 
@@ -59,7 +60,7 @@ For example, when connecting to a relational database, you might need server, da
 Once you know the server to connect to, and credentials have been provided, you could use the database's API to fetch a list of databases, and a list of tables contained within each database.
 In this case, to keep your initial connect dialog as simple as possible, only the server name should be a required parameter&mdash;`Database` and `Table` would be levels of your navigation table.
 
-Since the TripPin service has a fixed URL endpoint, you don't need to prompt the user for any values. You'll remove the *url* parameter from our function, and define a *BaseUrl* variable in our connector. 
+Since the TripPin service has a fixed URL endpoint, you don't need to prompt the user for any values. You'll remove the *url* parameter from your function, and define a *BaseUrl* variable in your connector. 
 
 ```
 BaseUrl = "https://services.odata.org/v4/TripPinService/";

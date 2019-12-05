@@ -18,10 +18,11 @@ This multi-part tutorial covers the creation of a new data source extension for 
 
 In this lesson, you will:
 
-* Create a navigation table for a fixed set of queries
-* Test the navigation table in Power BI Desktop
+> [!div class="checklist"]
+> * Create a navigation table for a fixed set of queries
+> * Test the navigation table in Power BI Desktop
  
-This lesson adds a navigation table to the TripPin connector created in the [previous lesson](../2-Rest/README.md). When your connector used the `OData.Feed` function ([Part 1](../1-OData/README.md)), you received the navigation table “for free”, as derived from the OData service’s $metadata document. When you moved to the `Web.Contents` function ([Part 2](../2-Rest/README.md)), you lost the built-in navigation table. In this lesson, you'll take a set of fixed queries you created in Power BI Desktop and add the appropriate metadata for Power Query to popup the **Navigator** dialog for our data source function.
+This lesson adds a navigation table to the TripPin connector created in the [previous lesson](../2-Rest/README.md). When your connector used the `OData.Feed` function ([Part 1](../1-OData/README.md)), you received the navigation table “for free”, as derived from the OData service’s $metadata document. When you moved to the `Web.Contents` function ([Part 2](../2-Rest/README.md)), you lost the built-in navigation table. In this lesson, you'll take a set of fixed queries you created in Power BI Desktop and add the appropriate metadata for Power Query to popup the **Navigator** dialog for your data source function.
 
 See the [Navigation Table documentation](../../../HandlingNavigationTables.md) for more information about using navigation tables. 
 

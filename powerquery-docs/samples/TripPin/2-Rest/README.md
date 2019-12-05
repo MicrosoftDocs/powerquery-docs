@@ -17,14 +17,15 @@ This multi-part tutorial covers the creation of a new data source extension for 
 
 In this lesson, you will:
 
-* Create a base function that calls out to a REST API using [Web.Contents](/powerquery-m/web-contents)
-* Learn how to set request headers and process a JSON response
-* Use Power BI Desktop to wrangle the response into a user friendly format
+> [!div class="checklist"]
+> * Create a base function that calls out to a REST API using [Web.Contents](/powerquery-m/web-contents)
+> * Learn how to set request headers and process a JSON response
+> * Use Power BI Desktop to wrangle the response into a user friendly format
 
 This lesson converts the OData based connector for the [TripPin service](https://services.odata.org/v4/TripPinService/) (created in the [previous lesson](../1-OData/README.md)) to a connector that resembles something you'd create for any RESTful API. OData is a RESTful API, but one with a fixed set of conventions. The advantage of OData is that it provides a schema, data retrieval protocol, and standard query language. Taking away the use of [OData.Feed](/powerquery-m/odata-feed) will require us to build these capabilities into the connector ourselves. 
 
 ## Recap of the OData Connector
-Before you remove the OData functions from our connector, let's do a quick review of what it currently does (mostly behind the scenes) to retrieve data from the service.
+Before you remove the OData functions from your connector, let's do a quick review of what it currently does (mostly behind the scenes) to retrieve data from the service.
 
 Open the TripPin connector project from [Part 1](../1-OData/README.md) in Visual Studio. Open the Query file and paste in the following query:
 
@@ -115,7 +116,7 @@ Update your query to access some of the TripPin Entities/Tables, such as:
 * `https://services.odata.org/v4/TripPinService/Me/Trips`
 
 You'll notice that the paths that used to return nicely formatted tables now return a top level "value" field with an embedded [List].
-We'll need to do some transformations on the result to make it usable for Power BI scenarios.
+You'll need to do some transformations on the result to make it usable for Power BI scenarios.
 
 ![List results](../../../images/trippin2RawList.png)
 

@@ -1,6 +1,6 @@
 ---
 title: TripPin 5 - Paging
-description: Adding paging to our TripPin REST connector.
+description: Adding paging to your TripPin REST connector.
 author: cpopell
 manager: kfile
 
@@ -17,7 +17,8 @@ This multi-part tutorial covers the creation of a new data source extension for 
 
 In this lesson, you will:
 
-* Add paging support to the connector
+> [!div class="checklist"]
+> * Add paging support to the connector
  
 Many Rest APIs will return data in "pages", requiring clients to make multiple requests to stitch the results together. 
 Although there are some common conventions for pagination (such as [RFC 5988](https://tools.ietf.org/html/rfc5988)), it 
