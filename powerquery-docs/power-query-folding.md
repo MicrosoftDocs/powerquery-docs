@@ -75,6 +75,9 @@ In the Power Query Editor window, it is possible to determine when a Power Query
 
 ![Example of determining that Power Query can achieve query folding in Power BI Desktop](media/power-query-folding/query-folding-example.png)
 
+>[!Note]
+> The **View Native Query** option is only available for certain relational DB/SQL generating connectors. It doesn't work for OData based connectors, for example, even though there is folding occurring on the backend. The Query Diagnostics feature is the best way to see what folding has occurred for non-SQL connectors (although the steps that fold aren't explicitly called out&mdash;you just see the resulting URL that was generated).
+
 To view the folded query, you select the **View Native Query** option. You are then be presented with the native query that Power Query will use to source data.
 
 ![Example of a native query in Power BI Desktop](media/power-query-folding/native-query-example.png)
