@@ -29,7 +29,7 @@ You'll use Power Query (through Power BI Desktop) to write the M code for the Gr
 
 First, review details about how the OAuth v2 flow works for Graph:
 * [Microsoft Graph App authentication using Azure AD](https://graph.microsoft.io/en-us/docs/authorization/app_authorization)
-* [Authentication Code Grant Flow](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-protocols-oauth-code)
+* [Authentication Code Grant Flow](https://docs.microsoft.com/azure/active-directory/active-directory-protocols-oauth-code)
 * [Permission scopes](https://graph.microsoft.io/en-us/docs/authorization/permission_scopes)
 
 You'll also want to download and install [Fiddler](https://www.telerik.com/fiddler) to help trace the raw HTTP requests you make while developing the extension.
@@ -83,7 +83,7 @@ GetScopeString = (scopes as list, optional scopePrefix as text) as text =>
 The `GetScopeString` function will end up generating a scope string that looks like this:
 `https://graph.microsoft.com/User.ReadWrite https://graph.microsoft.com/Contacts.Read https://graph.microsoft.com/User.ReadBasic.All ...`
 
-You'll need to set [several query string parameters](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-protocols-oauth-code) as part of the authorization URL. You can use the `Uri.BuildQueryString` function to properly encode the parameter names and values. Construct the URL by concatenating the `authorize_uri` variable and query string parameters.
+You'll need to set [several query string parameters](https://docs.microsoft.com/azure/active-directory/active-directory-protocols-oauth-code) as part of the authorization URL. You can use the `Uri.BuildQueryString` function to properly encode the parameter names and values. Construct the URL by concatenating the `authorize_uri` variable and query string parameters.
 
 The full code sample is below. 
 
@@ -287,7 +287,7 @@ This function is expected to return a record with all the fields that Power BI w
 Since your data source function has no required parameters, you won't be making use of the `resourceUrl` value. If your data source function required a user supplied URL or sub-domain name, then this is where it would be passed to you.
 The `State` parameter includes a blob of state information that you're expected to include in the URL.
 You won't need to use the `display` value at all.
-The body of the function will look a lot like the `authorizeUrl` variable you created earlier in this sample&mdash;the main difference will be the inclusion of the `state` parameter (which is used to prevent [replay attacks](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-protocols-oauth-code)).
+The body of the function will look a lot like the `authorizeUrl` variable you created earlier in this sample&mdash;the main difference will be the inclusion of the `state` parameter (which is used to prevent [replay attacks](https://docs.microsoft.com/azure/active-directory/develop/active-directory-v2-protocols-oauth-code)).
 
 ```
 StartLogin = (resourceUrl, state, display) =>
