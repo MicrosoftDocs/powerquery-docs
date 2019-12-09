@@ -25,6 +25,8 @@ Note: Some capabilities may be present in one product but not others due to depl
  
 ## Prerequisites
 In order to connect to a PostgreSQL database with  **Power BI Desktop**, the Npgsql provider must be installed on the computer running Power BI Desktop.
+
+**We recommend Npgsql 4.0.10. Npgsql 4.1 and up will not work due to .NET version incompatibilities.**
  
 To install the Npgsql provider, go to the [releases page](https://github.com/npgsql/Npgsql/releases) and download the relevant release. The provider architecture (32-bit vs. 65-bit) needs to match the architecture of the product where you intent to use the connector. When installing, make sure that you select Npgsql GAC Installation to ensure Npgsql itself is added to your machine.
  

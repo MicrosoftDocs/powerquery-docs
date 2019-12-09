@@ -66,6 +66,8 @@
     href: ConnectorCertification.md
   - name: "Power Query Online Limits"
     href: power-query-online-limits.md
+  - name: "Power Query query folding"
+    href: power-query-folding.md
 - name: Reference
   items:
   - name: "Authoring Reference"
