@@ -8,7 +8,7 @@ ms.reviewer: ''
 ms.service: powerquery
 ms.subservice: powerbi-query
 ms.topic: conceptual
-ms.date: 08/20/2019
+ms.date: 11/26/2019
 ms.author: davidi
 
 LocalizationGroup: Connect to data
@@ -31,18 +31,19 @@ In the **Power Query Editor** window, from the **Home** ribbon select **Manage P
 
 The **Parameters** dialog has the following elements that let you create new parameters, or specify metadata and setting for each parameter:
 
-* **Name** - provide a name for this parameter, that lets you easily recognize and differentiate it from other parameters you might create.
+* **Name**&mdash;Provide a name for this parameter that lets you easily recognize and differentiate it from other parameters you might create.
 
-* **Description** - The description is displayed next to the parameter name when parameter information is displayed, helping users who are specifying the parameter value to understand its purpose, and its semantics.
+* **Description**&mdash;The description is displayed next to the parameter name when parameter information is displayed, helping users who are specifying the parameter value to understand its purpose, and its semantics.
 
-* **Required** - The checkbox specifies whether subsequent users can specify whether a value for the parameter must be provided.
+* **Required**&mdash;The checkbox indicates whether subsequent users can specify whether a value for the parameter must be provided.
 
-* **Type** - Applies a Data Type restriction to the input value for the parameter. For example, users can define a parameter of type *Text*, or *Date/Time*. If you want to provide the greatest flexibility for users, you can specify *Any value* from the list of available types in the drop-down.
+* **Type**&mdash;Applies a Data Type restriction to the input value for the parameter. For example, users can define a parameter of type *Text*, or *Date/Time*. If you want to provide the greatest flexibility for users, you can specify *Any value* from the list of available types in the drop-down.
 
-* **Suggested Values** - You can further restrict the entries that users can select or provide for a given parameter. For example, you could specify that the Data Type for a parameter is *Text*, and then restrict the acceptable values for that parameter to a static list of Text values. Users then can pick one of the available values when specifying the parameter value.
-* **Default Value** - Sets the default value for a parameter.
+* **Suggested Values**&mdash;You can further restrict the entries that users can select or provide for a given parameter. For example, you could specify that the Data Type for a parameter is *Text*, and then restrict the acceptable values for that parameter to a static list of Text values. Users then can pick one of the available values when specifying the parameter value.
 
-* **Current Value** - Specifies the parameter's value for the current report.
+* **Default Value**&mdash;Sets the default value for a parameter.
+
+* **Current Value**&mdash;Specifies the parameter's value for the current report.
 
 Once you define these values for a parameter and select **OK**, a new query is defined for each parameter that was created, shown in the **Power Query Editor** dialog.
 

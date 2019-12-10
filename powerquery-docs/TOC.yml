@@ -98,12 +98,8 @@
           href: odbc.md#parameters-for-your-data-source-function
         - name: "Parameters for Odbc.DataSource"
           href: odbc.md#parameters-for-odbcdatasource
-        - name: "Creating Your Connector"
-          href: odbc.md#creating-your-connector
         - name: "Troubleshooting and Testing"
           href: odbc.md#troubleshooting-and-testing
-        - name: "Common Problems"
-          href: odbc.md#common-problems
       - name: "Handling Resource Path"
         href: HandlingResourcePath.md
       - name: "Handling Paging"

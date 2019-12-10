@@ -5,7 +5,7 @@ author: mllopis
 
 ms.service: powerquery
 ms.topic: overview
-ms.date: 10/16/2018
+ms.date: 11/25/2019
 ms.author: millopis
 
 LocalizationGroup: Get started
@@ -14,9 +14,9 @@ LocalizationGroup: Get started
 
 # What is Power Query? 
 
-**Power Query** is the Microsoft Data Connectivity and Data Preparation technology that enables business users to seamlessly access data stored in hundreds of data sources and reshape it to fit their needs, with an easy to use, engaging and no-code user experience. 
+**Power Query** is the Microsoft Data Connectivity and Data Preparation technology that enables business users to seamlessly access data stored in hundreds of data sources and reshape it to fit their needs, with an easy to use, engaging, and no-code user experience. 
 
-Supported data sources include a wide range of file types, databases, Microsoft Azure services and many other third-party online services. **Power Query** also provides a [**Custom Connectors SDK**](https://github.com/Microsoft/DataConnectors) so that third parties can create their own data connectors and seamlessly plug them into Power Query. 
+Supported data sources include a wide range of file types, databases, Microsoft Azure services, and many other third-party online services. **Power Query** also provides a [**Custom Connectors SDK**](https://github.com/Microsoft/DataConnectors) so that third parties can create their own data connectors and seamlessly plug them into Power Query. 
 
 ![Get data using Power Query](media/power-query-what-is-power-query/what-is-power-query_01.png)
 
@@ -45,7 +45,7 @@ Business users spend up to 80% of their time on data preparation, delaying the t
 
 |Existing Challenge  |How does Power Query help?  |
 |---------|---------|
-|Finding & Connecting to data is too difficult     |Power Query enables connectivity to a wide range (100s) of data sources, including data of all sizes and shapes. |
+|Finding and connecting to data is too difficult     |Power Query enables connectivity to a wide range (100s) of data sources, including data of all sizes and shapes. |
 |Experiences for data connectivity are too fragmented     | Consistency of experience, and parity of query capabilities over all data sources with Power Query.        |
 |Data often needs to be reshaped before consumption     | Highly interactive and intuitive experience for rapidly and iteratively building queries over any data source, any size.        |
 |Any shaping is one-off and not repeatable     |  When using Power Query to access and transform data, users are defining a repeatable process (query) that can be easily refreshed in the future to get up-to-date data. <br>In the event that the process/query needs to be modified to account for underlying data or schema changes, Power Query provides users with the ability to modify existing queries using the same interactive and intuitive experience that they used when initially defining their queries.      |
