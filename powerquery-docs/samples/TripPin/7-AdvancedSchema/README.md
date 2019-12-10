@@ -1,12 +1,12 @@
 ---
 title: TripPin 7 - Advanced Schema
-description: Adding an advanced schema with typing to our TripPin REST connector.
+description: Adding an advanced schema with typing to your TripPin REST connector.
 author: cpopell
 manager: kfile
 
 ms.service: powerquery
 ms.topic: tutorial
-ms.date: 08/16/2018
+ms.date: 12/04/2019
 ms.author: gepopell
 
 LocalizationGroup: reference
@@ -14,15 +14,16 @@ LocalizationGroup: reference
 
 # TripPin Part 7 - Advanced Schema with M Types
 
-This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially-- each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector. 
+This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially&mdash;each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector. 
 
 In this lesson, you will:
 
-* Enforce a table schema using [M Types](/powerquery-m/power-query-m-type-system)
-* Set types for nested records and lists
-* Refactor code for reuse and unit testing
+> [!div class="checklist"]
+> * Enforce a table schema using [M Types](/powerquery-m/power-query-m-type-system)
+> * Set types for nested records and lists
+> * Refactor code for reuse and unit testing
 
-In the previous lesson we defined our table schemas using a simple "Schema Table" system.
+In the previous lesson you defined your table schemas using a simple "Schema Table" system.
 This schema table approach works for many REST APIs/Data Connectors, but services that return complete
 or deeply nested data sets might benefit from the approach in this tutorial, which leverages
 the [M type system](/powerquery-m/power-query-m-type-system).
@@ -35,11 +36,11 @@ This lesson will guide you through the following steps:
 4. Refactoring common code into separate files 
 
 ## Adding Unit Tests
-Before we start making use of the advanced schema logic, we will add a set of unit tests to our connector
+Before you start making use of the advanced schema logic, you'll add a set of unit tests to your connector
 to reduce the chance of inadvertently breaking something. Unit testing works like this:
 
-1. Copy the common code from the [UnitTest sample](../../../HandlingUnitTesting.md) into our `TripPin.query.pq` file
-2. Add a section declaration to the top of our `TripPin.query.pq` file
+1. Copy the common code from the [UnitTest sample](../../../HandlingUnitTesting.md) into your `TripPin.query.pq` file
+2. Add a section declaration to the top of your `TripPin.query.pq` file
 3. Create a *shared* record (called `TripPin.UnitTest`)
 4. Define a `Fact` for each test
 5. Call `Facts.Summarize()` to run all of the tests
@@ -75,30 +76,30 @@ shared TripPin.UnitTest =
 ][report];
 ```
 
-Clicking run on the project will evaluate all of the Facts, and give us a report output that looks like this:
+Clicking run on the project will evaluate all of the Facts, and give you a report output that looks like this:
 
 ![Initial Unit Test](../../../images/trippin7UnitTest1.png)
 
 Using some principles from [test-driven development](https://en.wikipedia.org/wiki/Test-driven_development),
-we'll add a test that currently fails, but will soon implement/fix (by the end of this tutorial).
-Specifically, we'll add a test that checks one of the nested records (Emails) we get back in the People entity.
+you'll now add a test that currently fails, but will soon be reimplemented and fixed (by the end of this tutorial).
+Specifically, you'll add a test that checks one of the nested records (Emails) you get back in the People entity.
 
 ```
 Fact("Emails is properly typed", type text, Type.ListItem(Value.Type(People{0}[Emails])))
 ```
 
-If we run the code again, we should now see that we have a failing test.
+If you run the code again, you should now see that you have a failing test.
 
 ![Unit test with failure](../../../images/trippin7UnitTest2.png)
 
-Now we just need to implement the functionality to make this work.
+Now you just need to implement the functionality to make this work.
 
 ## Defining Custom M Types
 The schema enforcement approach in the [previous lesson](../6-Schema/README.md) used "schema tables" defined as Name/Type pairs.
 It works well when working with flattened/relational data, but didn't support setting types on nested records/tables/lists, or allow you to reuse type definitions across tables/entities. 
 
-In the TripPin case, the data in the People and Airports entities contain structured columns, and even share a type (Location) for representing address information.
-Rather than defining Name/Type pairs in a schema table, we'll define each of these entities using custom M type declarations. 
+In the TripPin case, the data in the People and Airports entities contain structured columns, and even share a type (`Location`) for representing address information.
+Rather than defining Name/Type pairs in a schema table, you'll define each of these entities using custom M type declarations. 
 
 Here is a quick refresher about types in the M language from the [Language Specification](/powerquery-m/power-query-m-type-system):
 
@@ -111,7 +112,7 @@ Here is a quick refresher about types in the M language from the [Language Speci
 >* Nullable types, which classifies the value null in addition to all the values classified by a base type
 >* Type types, which classify values that are types
 
-Using the raw json output we get (and/or looking up the definitions in the [service's $metadata](https://services.odata.org/v4/TripPinService/$metadata)), we can define the following record types to represent OData complex types:
+Using the raw JSON output you get (and/or looking up the definitions in the [service's $metadata](https://services.odata.org/v4/TripPinService/$metadata)), you can define the following record types to represent OData complex types:
 
 ```
 LocationType = type [
@@ -138,9 +139,9 @@ CrsType = type [
 ];
 ```
 
-Note how the `LocationType` references the `CityType` and `LocType` to represented its structured columns.
+Note how the `LocationType` references the `CityType` and `LocType` to represent its structured columns.
 
-For the top level entities (that we want represented as Tables), we define _table types_:
+For the top level entities (that you want represented as Tables), you define _table types_:
 
 ```
 AirlinesType = type table [
@@ -165,7 +166,7 @@ PeopleType = type table [
 ];
 ```
 
-We then update our `SchemaTable` variable (which we use as a "lookup table" for entity to type mappings) to use these new type definitions:
+You then update your `SchemaTable` variable (which you use as a "lookup table" for entity to type mappings) to use these new type definitions:
 
 ```
 SchemaTable = #table({"Entity", "Type"}, {
@@ -176,8 +177,8 @@ SchemaTable = #table({"Entity", "Type"}, {
 ```
 
 ## Enforcing a Schema Using Types
-We will rely on a common function (`Table.ChangeType`) to enforce a schema on our data, much like we used `SchemaTransformTable` in the [previous lesson](../6-Schema/README.md).
-Unlike `SchemaTransformTable`, `Table.ChangeType` takes in an actual M table type as an argument, and will apply our schema _recursively_ for all nested types. It's signature looks like this:
+You'll rely on a common function (`Table.ChangeType`) to enforce a schema on your data, much like you used `SchemaTransformTable` in the [previous lesson](../6-Schema/README.md).
+Unlike `SchemaTransformTable`, `Table.ChangeType` takes in an actual M table type as an argument, and will apply your schema _recursively_ for all nested types. It's signature looks like this:
 
 ```
 Table.ChangeType = (table, tableType as type) as nullable table => ...
@@ -185,9 +186,10 @@ Table.ChangeType = (table, tableType as type) as nullable table => ...
 
 The full code listing for the `Table.ChangeType` function can be found in the [Table.ChangeType.pqm](https://raw.githubusercontent.com/Microsoft/DataConnectors/master/samples/TripPin/7-AdvancedSchema/Table.ChangeType.pqm) file.
 
->**Note:** For flexibility, the function can be used on tables, as well as lists of records (which is how tables would be represented in a JSON document).
+>[!Note]
+> For flexibility, the function can be used on tables, as well as lists of records (which is how tables would be represented in a JSON document).
 
-We then need to update the connector code to change the `schema` parameter from a `table` to a `type`, and add a call to `Table.ChangeType` in `GetEntity`. 
+You then need to update the connector code to change the `schema` parameter from a `table` to a `type`, and add a call to `Table.ChangeType` in `GetEntity`. 
 
 ```
 GetEntity = (url as text, entity as text) as table => 
@@ -200,7 +202,7 @@ GetEntity = (url as text, entity as text) as table =>
         appliedSchema;
 ```
 
-`GetPage` is updated to use the list of fields from the schema (to know the names of what to expand when we get the results), but leaves the actual schema enforcement to `GetEntity`.
+`GetPage` is updated to use the list of fields from the schema (to know the names of what to expand when you get the results), but leaves the actual schema enforcement to `GetEntity`.
 
 ```
 GetPage = (url as text, optional schema as type) as table =>
@@ -228,25 +230,23 @@ GetPage = (url as text, optional schema as type) as table =>
 ```
 
 ### Confirming that nested types are being set
-The definition for our `PeopleType` now sets the `Emails` field to a list of text (`{text}`).
-If we are applying the types correctly, the call to [Type.ListItem](/powerquery-m/type-listitem) in our unit test should now be returning `type text` rather than `type any`. 
+The definition for your `PeopleType` now sets the `Emails` field to a list of text (`{text}`).
+If you're applying the types correctly, the call to [Type.ListItem](/powerquery-m/type-listitem) in your unit test should now be returning `type text` rather than `type any`. 
 
-Running our unit tests again show that they are now all passing.
+Running your unit tests again show that they are now all passing.
 
 ![Unit test with success](../../../images/trippin7UnitTest3.png)
 
 ## Refactoring Common Code into Separate Files 
->**Note:** The M engine will have improved support for referencing external modules/common code in the future,
-but this approach should carry you through until then.
+>[!Note]
+> The M engine will have improved support for referencing external modules/common code in the future, but this approach should carry you through until then.
 
-At this point our extension almost has as much "common" code as TripPin connector code.
-In the future these [common functions](../../../HelperFunctions.md) will either be part of the built-in standard function library, or you will be able to reference them from another extension.
-For now, we refactor our code in the following way:
+At this point, your extension almost has as much "common" code as TripPin connector code. In the future these [common functions](../../../HelperFunctions.md) will either be part of the built-in standard function library, or you'll be able to reference them from another extension. For now, you refactor your code in the following way:
 
-1. Move the reusable functions to separate files (.pqm)
-2. Set the **Build Action** property on the file to **Compile** to make sure it gets included in our extension file during the build
-3. Define a function to load the code using [Expression.Evaluate](/powerquery-m/expression-evaluate)
-4. Load each of the common functions we want to use
+1. Move the reusable functions to separate files (.pqm).
+2. Set the **Build Action** property on the file to **Compile** to make sure it gets included in your extension file during the build.
+3. Define a function to load the code using [Expression.Evaluate](/powerquery-m/expression-evaluate).
+4. Load each of the common functions you want to use.
 
 The code to do this is included in the snippet below:
 
@@ -264,8 +264,8 @@ Table.ToNavigationTable = Extension.LoadFunction("Table.ToNavigationTable.pqm");
 ```
 
 ## Conclusion
-This tutorial made a number of improvements to the way we enforce a schema on the data we get from a REST API.
+This tutorial made a number of improvements to the way you enforce a schema on the data you get from a REST API.
 The connector is currently hard coding its schema information, which has a performance benefit at runtime, but is unable to adapt to changes in the service's metadata overtime. 
 Future tutorials will move to a purely dynamic approach that will infer the schema from the service's $metadata document. 
 
-In addition to the schema changes, this tutorial added Unit Tests for our code, and refactored the common helper functions into separate files to improve overall readability. 
+In addition to the schema changes, this tutorial added Unit Tests for your code, and refactored the common helper functions into separate files to improve overall readability. 
