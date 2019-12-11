@@ -22,9 +22,13 @@ We want the entire record with the highest SalesYTD in each TerritoryID. If we o
 
 ## Data Type Inference
 
-You may find yourself occasionally having type errors when you import a table. One common cause of this is if the first 200 rows of your table have one type of data, and then there's a broader or different type of data, type inference will fail. This is due to the fact that type inference is only based on the first 200 rows of data.
+When you import a table, you may find that Power Query sometimes incorrectly detects a column’s data type. One reason this can happen is that PQ infers data types using only the first 200 rows of data. If the data in the first 200 rows is somehow different than the data after row 200, PQ may detect an incorrect column type. This may or may not result in errors, which can make the incorrect type inference tricky to detect in some cases.
+                                                                                                          
+For example, imagine a column that contains integers in the first 200 rows (such as all zeroes), but contains decimal numbers after row 200. In this case, Power Query will infer the data type of the column to be Whole Number (Int64.Type). This will result in the decimal portions of any non-integer numbers being truncated.
 
-To address this, manually type the column towards the type of data that it will actually hold.
+Or imagine a column that contains textual date values in the first 200 rows, and other kinds of text values after row 200. In this case, Power Query will infer the data type of the column to be Date. This will result in the non-date text values being treated as type conversion errors.
+
+Because type detection works on the first 200 rows, but Data Profiling can operate over the entire dataset, you can consider using the Data Profiling functionality to get an early indication in the Query Editor about Errors (from type detection or any number of other reasons) beyond the top N rows.
 
 ## Case Sensitivity
 
