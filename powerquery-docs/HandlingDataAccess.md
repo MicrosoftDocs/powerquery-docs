@@ -5,7 +5,7 @@ author: cpopell
 
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 08/16/2018
+ms.date: 12/11/2019
 ms.author: gepopell
 
 LocalizationGroup: reference
@@ -44,7 +44,7 @@ The name of the record becomes is unique identifier.
 
 Functions associated with a data source must have the same required function parameters (including name, type, and order). Functions for a specific Data Source Kind can only use credentials associated with that Kind.
 Credentials are identified at runtime by performing a lookup based on the combination of the function's required parameters.
-For more information about how credentials are identified, please see [Data Source Paths](HandlingAuthentication.md#data-source-paths).
+For more information about how credentials are identified, see [Data Source Paths](HandlingAuthentication.md#data-source-paths).
 
 **Example:**
 
@@ -70,7 +70,7 @@ The following table lists the fields for your Data Source definition record.
 
 ## Publish to UI
 
-Similar to the (Data Source)[#data-source-kind] definition record, the Publish record provides the Power Query UI the information it needs to expose this extension in the Get Data dialog.
+Similar to the (Data Source)[#data-source-kind] definition record, the Publish record provides the Power Query UI the information it needs to expose this extension in the **Get Data** dialog.
 
 **Example:**
 
@@ -94,10 +94,10 @@ The following table lists the fields for your Publish record.
 
 | Field               | Type    | Details                                                                                                                                                                                                                                                                                                                    |
 |:--------------------|:--------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ButtonText          | list    | List of text items that will be displayed next to the data source's icon in the Power BI Get Data dialog.                                                                                                                                                                                                                  |
-| Category            | text    | Where the extension should be displayed in the Get Data dialog. Currently the only category values with special handing are `Azure` and `Database`. All other values will end up under the Other category.                                                                                                               |
+| ButtonText          | list    | List of text items that will be displayed next to the data source's icon in the Power BI **Get Data** dialog.                                                                                                                                                                                                                  |
+| Category            | text    | Where the extension should be displayed in the **Get Data** dialog. Currently the only category values with special handing are `Azure` and `Database`. All other values will end up under the Other category.                                                                                                               |
 | Beta                | logical | **(optional)** When set to true, the UI will display a Preview/Beta identifier next to your connector name and a warning dialog that the implementation of the connector is subject to breaking changes.                                                                                                                   |
 | LearnMoreUrl        | text    | **(optional)** Url to website containing more information about this data source or connector.                                                                                                                                                                                                                             |
 | SupportsDirectQuery | logical | **(optional)** Enables Direct Query for your extension.<br>**This is currently only supported for ODBC extensions.**                                                                                                                                                                                                       |
 | SourceImage         | record  | **(optional)** A record containing a list of binary images (sourced from the extension file using the **Extension.Contents** method). The record contains two fields (Icon16, Icon32), each with its own list. Each icon should be a different size.                                                                       |                                                                                                                                                                                                                              |
-| SourceTypeImage     | record  | **(optional)** Similar to SourceImage, except the convention for many out of the box connectors is to display a sheet icon with the source specific icon in the bottom right corner. Having a different set of icons for SourceTypeImage is optional - many extensions simply reuse the same set of icons for both fields. |
+| SourceTypeImage     | record  | **(optional)** Similar to SourceImage, except the convention for many out of the box connectors is to display a sheet icon with the source specific icon in the bottom right corner. Having a different set of icons for SourceTypeImage is optional&mdash;many extensions simply reuse the same set of icons for both fields. |
