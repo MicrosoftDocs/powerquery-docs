@@ -109,7 +109,7 @@ Extensions can optionally implement `Refresh` (exchanging a refresh token for a 
 
 >In the future we plan to support data sources that require confidential secrets (using a proxy based mechanism).
 
-See the [MyGraph](~/../samples/MyGraph/README.md) and [Github](~/../samples/Github/README.md) samples for more details.
+See the [MyGraph](samples/MyGraph/README.md) and [Github](samples/Github/README.md) samples for more details.
 
 ### Data Source Paths
 
