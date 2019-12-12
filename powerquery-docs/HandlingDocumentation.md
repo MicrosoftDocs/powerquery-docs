@@ -5,7 +5,7 @@ author: cpopell
 
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 08/16/2018
+ms.date: 12/12/2019
 ms.author: gepopell
 
 LocalizationGroup: reference
@@ -21,7 +21,7 @@ Similarly, evaluating the name of your function, without specifying parameters, 
 
 ![DefaultFunctionInfo](images/defaultFunctionInfo.png "Function info")
 
-You might notice that built-in functions typically provide a better user experience, with descriptions, tooltips, and even sample values. You can take advantage of this same mechanism by defining specific meta values on your function type. This article describes the meta fields that are used by Power Query, and how you can make use of them in your extensions. 
+You might notice that built-in functions typically provide a better user experience, with descriptions, tooltips, and even sample values. You can take advantage of this same mechanism by defining specific meta values on your function type. This topic describes the meta fields that are used by Power Query, and how you can make use of them in your extensions. 
 
 ![CsvDocument](images/csvDocument.png "Function info for Csv.Document")
 
@@ -29,10 +29,10 @@ You might notice that built-in functions typically provide a better user experie
 
 You can provide documentation for your function by defining custom *type* values. The process looks like this:
 
-1. Define a type for each parameter
-2. Define a type for your function
-3. Add various `Documentation.*` fields to your types metadata record
-3. Call [Value.ReplaceType](/powerquery-m/value-replacetype) to ascribe the type to your shared function
+1. Define a type for each parameter.
+2. Define a type for your function.
+3. Add various `Documentation.*` fields to your types metadata record.
+3. Call [Value.ReplaceType](/powerquery-m/value-replacetype) to ascribe the type to your shared function.
 
 You can find more information about types and metadata values in the [M Language Specification](/powerquery-m/power-query-m-language-specification).
 
@@ -45,16 +45,16 @@ The following table lists the Documentation fields that can be set in the metada
 
 | Field                         | Type    | Details                                                                                                                                                                                                                                                                                                                    |
 |:------------------------------|:--------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Documentation.Examples        | list    | List of record objects with example usage of the function. Only displayed as part of the function info. Each record should contain the following optional text fields: `Description`, `Code`, `Result`. |
+| Documentation.Examples        | list    | List of record objects with example usage of the function. Only displayed as part of the function info. Each record should contain the following optional text fields: `Description`, `Code`, and `Result`. |
 | Documentation.LongDescription | text    | Full description of what the function does, displayed in the function info. |
-| Documentation.Na<i></i>me     | text    | Text to display across the top of the function invocation dialog. |
+| Documentation.Name     | text    | Text to display across the top of the function invocation dialog. |
 
 ### Parameter Documentation
 The following table lists the Documentation fields that can be set in the metadata for your *function parameters*. All fields are optional.
 
 | Field                          | Type    | Details                                                                                                                                                                                                                                                                                                                    |
 |:-------------------------------|:-------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Documentation.AllowedValues    | list   | List of valid values for this parameter. Providing this field will change the input from a textbox to a drop down list. Note, this does not prevent a user from manually editing the query to supply alternate values. |
+| Documentation.AllowedValues    | list   | List of valid values for this parameter. Providing this field will change the input from a textbox to a drop down list. Note, this doesn't prevent a user from manually editing the query to supply alternative values. |
 | Documentation.FieldCaption     | text   | Friendly display name to use for the parameter.                                                                                                                                                                        |
 | Documentation.FieldDescription | text   | Description to show next to the display name.                                                                                                                                                                          |
 | Documentation.SampleValues     | list   | List of sample values to be displayed (as faded text) inside of the text box.                                                                                                                                          |
