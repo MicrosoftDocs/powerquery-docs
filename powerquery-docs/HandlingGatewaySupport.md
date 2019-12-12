@@ -15,7 +15,7 @@ LocalizationGroup: reference
 
 ## Test Connection
 
-> Custom Connector support is available in both Personal and Standard modes of the [on-premises data gateway](https://powerbi.microsoft.com/en-us/blog/on-premises-data-gateway-july-update-is-now-available/).
+> Custom Connector support is available in both Personal and Standard modes of the [on-premises data gateway](https://powerbi.microsoft.com/blog/on-premises-data-gateway-july-update-is-now-available/).
 > Both gateway modes support **Import**. **Direct Query** is only supported in Standard mode.
 
 > The method for implementing TestConnection functionality is likely to change while the Power BI Custom Data Connector functionality is in preview.
@@ -40,7 +40,7 @@ If the invocation of the function results in an error, TestConnection is conside
 
 #### Example: Connector with no required arguments
 
-The code snippet below implements TestConnection for a data source with no required parameters (such as the one found in the [TripPin tutorial](~/../samples/TripPin/README.md)).
+The code snippet below implements TestConnection for a data source with no required parameters (such as the one found in the [TripPin tutorial](samples/TripPin/README.md)).
 Connectors with no required parameters (referred to as 'Singletons') do not need any user provided input to test a connection (other than credentials).
 In this case, the `dataSourcePath` value would be equal to the name of the Data Source Kind, and can be ignored.
 The `TripPin.Contents` function is invoked with no additional parameters.
@@ -58,7 +58,7 @@ TripPin = [
 #### Example: Connector with a URL parameter
 
 If your data source function has a single required parameter of the type `Uri.Type`, its `dataSourcePath` will be equal to the URL provided by the user. The snippet below 
-shows the TestConnection implementation from the [Github Sample](~/../samples/Github/README.md).
+shows the TestConnection implementation from the [Github Sample](samples/Github/README.md).
 
 ```
 GithubSample = [
