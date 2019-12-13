@@ -19,7 +19,7 @@ Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in 
 
 Authentication Types Supported: Database (Username/Password), Windows
 
-[M Function Reference](https://docs.microsoft.com/en-us/powerquery-m/sql-database)
+[M Function Reference](https://docs.microsoft.com/powerquery-m/sql-database)
 
 >[!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
