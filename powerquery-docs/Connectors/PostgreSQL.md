@@ -19,14 +19,18 @@ Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in 
 
 Authentication Types Supported: Database (Username/Password)
 
+Function Reference Documentation: [PostgreSQL.Database](https://docs.microsoft.com/en-us/powerquery-m/postgresql-database)
+
 Note: Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
  
 ## Prerequisites
+As of December Power BI Desktop, NpgSQL 4.0.10 shiped with Power BI Desktop and no additional installation is required. GAC Installation overrides the version provided with Power BI Desktop, which will be the default. 
+
 In order to connect to a PostgreSQL database with  **Power BI Desktop**, the Npgsql provider must be installed on the computer running Power BI Desktop.
 
 **We recommend Npgsql 4.0.10. Npgsql 4.1 and up will not work due to .NET version incompatibilities.**
  
-To install the Npgsql provider, go to the [releases page](https://github.com/npgsql/Npgsql/releases) and download the relevant release. The provider architecture (32-bit vs. 65-bit) needs to match the architecture of the product where you intent to use the connector. When installing, make sure that you select Npgsql GAC Installation to ensure Npgsql itself is added to your machine.
+To install the Npgsql provider, go to the [releases page](https://github.com/npgsql/Npgsql/releases) and download the relevant release. The provider architecture (32-bit vs. 64-bit) needs to match the architecture of the product where you intent to use the connector. When installing, make sure that you select Npgsql GAC Installation to ensure Npgsql itself is added to your machine.
  
 ![Npgsql installer with GAC Installation selected](../images/Postgres1.png)
  
