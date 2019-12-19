@@ -72,6 +72,8 @@
     items:
     - name: "Combine Files"
       href: CombineFiles.md
+    - name: "Common Issues"
+      href: CommonIssues.md
     - name: "Connectors"
       items:
       - name: "Excel"
