@@ -54,6 +54,12 @@ Set the `client_id` with the app id you received when you registered your Graph 
 Graph has an extensive list of permission scopes that your application can request. For this sample, the app will request all scopes that do not require admin consent. You'll define two more variables&mdash;a list of the scopes you want, and the prefix string that graph uses. You'll also add a couple of helper functions to convert the scope list into the expected format.
 
 ```
+// The "offline_access" scope is required to receive a refresh token value. It is added
+// separately from the Graph scopes. Please see
+// https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-permissions-and-consent#offline_access
+//
+// For more information on available Graph scopes, please see 
+// https://developer.microsoft.com/en-us/graph/docs/authorization/permission_scopes 
 scope_prefix = "https://graph.microsoft.com/",
 scopes = {
     "User.ReadWrite",
@@ -296,7 +302,7 @@ StartLogin = (resourceUrl, state, display) =>
             client_id = client_id,  
             redirect_uri = redirect_uri,
             state = state,
-            scope = GetScopeString(scopes, scope_prefix),
+            scope = "offline_access " & GetScopeString(scopes, scope_prefix),
             response_type = "code",
             response_mode = "query",
             login = "login"    
@@ -345,7 +351,7 @@ TokenMethod = (grantType, tokenField, code) =>
     let
         queryString = [
             client_id = client_id,
-            scope = GetScopeString(scopes, scope_prefix),
+            scope = "offline_access " & GetScopeString(scopes, scope_prefix),
             grant_type = grantType,
             redirect_uri = redirect_uri
         ],
