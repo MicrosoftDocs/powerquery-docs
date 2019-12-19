@@ -231,7 +231,7 @@ Run your query again and you'll receive an error (because your code was already 
 Take a copy of the code contained within this sample, and open the MyGraph.mproj project file in Visual Studio. Update the `client_id` file with the AAD client_id you received when you registered your own app.
 You'll likely notice that the code is very similar to the OAuth sample code above, with some key differences that will be described below. There are also slight formatting differences due to the code being within a section document (rather than query expression). 
 
-Another difference is the `MyGraph.Feed` function. This will be the data source function You'll expose to the engine. You'll be adding your logic to access and read Graph data in here. You've associated the function with the `MyGraph` Data Source Kind, and exposed it in the UI using the MyGraph.UI record (`[DataSource.Kind="MyGraph", Publish="MyGraph.UI"]`). 
+Another difference is the `MyGraph.Feed` function. This will be the data source function you'll expose to the engine. You'll be adding your logic to access and read Graph data in here. You've associated the function with the `MyGraph` Data Source Kind, and exposed it in the UI using the MyGraph.UI record (`[DataSource.Kind="MyGraph", Publish="MyGraph.UI"]`). 
 
 Since your data source function has no required arguments, it acts as a `Singleton` data source credential type.
 This means that a user will have a single credential for the data source, and that the credential isn't dependent on any of the parameters supplied to the function. 
