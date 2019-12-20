@@ -7,6 +7,7 @@ Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in 
 
 Authentication Types Supported:
 
+Function Reference Documentation: [Xml.Tables](https://docs.microsoft.com/en-us/powerquery-m/xml-tables),[Xml.Document](https://docs.microsoft.com/en-us/powerquery-m/xml-document)
 
 Capabilities supported:
 Document per connector
