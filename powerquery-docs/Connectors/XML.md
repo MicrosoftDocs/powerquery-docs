@@ -1,4 +1,4 @@
-#XML
+# XML
 
 ## Summary
 
@@ -7,26 +7,29 @@ Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in 
 
 Authentication Types Supported:
 
-Function Reference Documentation: [Xml.Tables](https://docs.microsoft.com/en-us/powerquery-m/xml-tables),[Xml.Document](https://docs.microsoft.com/en-us/powerquery-m/xml-document)
+Function Reference Documentation: [Xml.Tables](https://docs.microsoft.com/en-us/powerquery-m/xml-tables), [Xml.Document](https://docs.microsoft.com/en-us/powerquery-m/xml-document)
 
-Capabilities supported:
-Document per connector
+## Capabilities supported
 
-## Functionality
+* Import
 
-Due to the fact that many XML documents have ragged or nested data, you will have to do extra data shaping to get it in the sort of form that will make it convenient to do analytics.
-Both XML functions don't do a good job of surfacing data in a consistent shape. Users are going to have to do extra data shaping to get it into the sort of shape they will want to see it in.
+## Load from XML
 
-Xml.Tables (whatever the UI uses)
+You can load data from an XML file from a file or from the web. The exact process for loading data varies slightly in these two cases.
+
+### Load from file
+
+To load a local XML file, all you need to do is select the 'XML' option in the connector selection. This will launch a local file browser and allow you to select your XML file. You will be presented with the table that the connector loads, which you can then Load or Transform.
+
+### Load from web
+
+If you want to load an XML file from the web, instead of selecting the XML connector you can select the Web connector. Paste in the address of the desired file and you will be prompted with an authentication selection, since you're hitting a website rather than a static file. If there's no authentication, you can just select Anonymous. As in the local case, you will then be presented with the table that the connector loads by default, which you can Load or Transform.
+
+## Troubleshooting
+
+### Data Structure
+
+Due to the fact that many XML documents have ragged or nested data, you will have to do extra data shaping to get it in the sort of form that will make it convenient to do analytics. This holds true whether you use the UI accessible XML.Tables function, or the XML.Document function. Depending on your needs you may find you have to do more or less data shaping.
+
+### Text vs nodes
 If you have similarly structured entries, and you have text nodes with a title entry for each, and one of those nodes has extra tags on the title, it drops everything outside the tag. It does text or nodes, not mixed.
-
-Xml.Document
-Returns mixed content as text, including nested tags, etc.
-
-Text
-Quotestyle
-In text or CSV--'do you support newlines in cells or not', unclear because it's called quotestyle
-
-Web connector
-Point to file, file connector wrapped around web.contents or alternately if it's an html page, it's web.page.
-CRIs on web.page auth types
