@@ -32,7 +32,7 @@ in
     Custom1
 ```
 
-The data you want is the entire record with the highest SalesYTD in each TerritoryID. If you only wanted the max, this would be a simple aggregation&mdash;but yo want the entire input record. To get this, you need to group by TerritoryID and then sort inside each group, keeping the first record.
+The data you want is the entire record with the highest SalesYTD in each TerritoryID. If you only wanted the max, this would be a simple aggregation&mdash;but you want the entire input record. To get this, you need to group by TerritoryID and then sort inside each group, keeping the first record.
 
 ## Data Type Inference
 
