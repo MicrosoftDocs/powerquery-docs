@@ -46,7 +46,8 @@ Source: https://docs.microsoft.com/power-bi/service-comma-separated-value-files
 
 ### Structured Text
 
-```Column 1	Column 2	Column 3
+```
+Column 1	Column 2	Column 3
 This is a string.	1	ABC123
 This is also a string.	2	DEF456
 ```
