@@ -15,11 +15,15 @@ Function Reference Documentation: [Xml.Tables](https://docs.microsoft.com/en-us/
 
 ## Load from XML
 
-You can load data from an XML file from a file or from the web. The exact process for loading data varies slightly in these two cases.
-
 ### Load from file
 
-To load a local XML file, all you need to do is select the 'XML' option in the connector selection. This will launch a local file browser and allow you to select your XML file. You will be presented with the table that the connector loads, which you can then Load or Transform.
+To load a local XML file, all you need to do is select the 'XML' option in the connector selection. This will launch a local file browser and allow you to select your XML file. 
+
+IMAGE HERE
+
+You will be presented with the table that the connector loads, which you can then Load or Transform.
+
+IMAGE HERE
 
 ### Load from web
 
