@@ -19,11 +19,11 @@ Function Reference Documentation: [Xml.Tables](https://docs.microsoft.com/en-us/
 
 To load a local XML file, all you need to do is select the 'XML' option in the connector selection. This will launch a local file browser and allow you to select your XML file. 
 
-IMAGE HERE
+![XML file selection](../images/xmlbrowse.png)
 
 You will be presented with the table that the connector loads, which you can then Load or Transform.
 
-IMAGE HERE
+![Loading data from a XML file in the Navigator](../images/xmlnavigator.png)
 
 ### Load from web
 
