@@ -19,7 +19,7 @@ To load a local text or csv file, all you need to do is select the 'Text/CSV' op
 
 ![Text file selection](../images/textcsvbrowse.png)
 
-Depending on the exact file selected, you may be presented with a few different options.
+Depending on the exact file selected, you will be presented with one of a few different options.
 
 ### Unstructured Text
 If your text file doesn't have structure you will get a single column with a new row per line encoded in the source text. As a sample for unstructured text, you can consider a notepad file with the following contents:
@@ -56,6 +56,9 @@ The final dropdown allows you to select how you want to handle data type detecti
 
 ### Structured Text
 
+In some cases, Power Query will read your text file as some kind of delimeter separated value file. This will essentially treat it as a CSV, though potentially with a different delimeter, and all of the same dropdowns discussed above will apply.
+
+For example, if you save the following below as a text file, it will be read as a CSV rather than unstructured text.
 ```
 Column 1	Column 2	Column 3
 This is a string.	1	ABC123
@@ -64,15 +67,27 @@ This is also a string.	2	DEF456
 
 ![Loading data from a structured text file](../images/textcolumnnavigator.png)
 
+This can be used for any kind of other delimeter based file.
+
+### Editing Source
+
+When editing the source step, you will be presented with a slightly different screen than when initially loading. Depending on what you are currently treating the file as (e.g. text vs csv) you will be presented with a screen with a variety of dropdowns. 
+
+![Editing the source step on a query accessing a CSV file](../images/csveditsource.png)
+
+One new one will also be available, which will led you edit what you want to load the file as--important for troubleshooting.
+
+![Changing the type of file](../images/csveditloadas.png)
+
 ## Troubleshooting
 
 
-Text
-Quotestyle
-In text or CSV--'do you support newlines in cells or not', unclear because it's called quotestyle
+### Placeholder - Quotestyle
 
 ### Loading Files from the Web
 
 Due to how the connector works, in some cases a file may be requested twice when being retrieved from a web endpoint. To avoid this, wrap your Web.Contents function with a Binary.Buffer function, which will allow the engine to avoid the second call.
 
-, clear or otherwise (for example a document that has similar comma usage across paragraphs might be interpreted to be a CSV),
+### Unstructured text being interpreted as structured
+
+In rare cases, a document that has similar comma numbers across paragraphs might be interpreted to be a CSV. If this happens, edit the "Source" step in the Query Editor, and select "Text" instead of "CSV" in the "Open File As" dropdown select.
