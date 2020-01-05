@@ -22,9 +22,7 @@ To load a local text or csv file, all you need to do is select the 'Text/CSV' op
 Depending on the exact file selected, you may be presented with a few different options.
 
 ### Unstructured Text
-If your text file doesn't have structure, clear or otherwise (for example a document that has similar comma usage across paragraphs might be interpreted to be a CSV), you will get a single column with a new row per line encoded in the source text.
-
-As a sample for unstructured text, you can consider a notepad file with the following contents:
+If your text file doesn't have structure you will get a single column with a new row per line encoded in the source text. As a sample for unstructured text, you can consider a notepad file with the following contents:
 
 ```
 Hello world.
@@ -76,3 +74,5 @@ In text or CSV--'do you support newlines in cells or not', unclear because it's 
 ### Loading Files from the Web
 
 Due to how the connector works, in some cases a file may be requested twice when being retrieved from a web endpoint. To avoid this, wrap your Web.Contents function with a Binary.Buffer function, which will allow the engine to avoid the second call.
+
+, clear or otherwise (for example a document that has similar comma usage across paragraphs might be interpreted to be a CSV),
