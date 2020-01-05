@@ -35,27 +35,24 @@ When you load it, you're presented with a navigation screen that loads each of t
 
 ![Loading data from a simple unstructured text file](../images/textrawnavigator.png)
 
-There is only one thing you can fongire on this page, which is the File Origin dropdown select. This lets you 
+There is only one thing you can fongire on this page, which is the File Origin dropdown select. This lets you select [which character set](https://docs.microsoft.com/windows/win32/intl/code-page-identifiers) was used to generate the file.
 
 ![File culture selection for Text/CSV](../images/textfileorigindropdown.png)
-
-
-You will be presented with the table that the connector loads, which you can then Load or Transform.
-
-
-
-
 
 ### CSV
 (To read the Power BI Desktop specific file on CSV files, please see [here](https://docs.microsoft.com/en-us/power-bi/desktop-connect-csv).
 
-If your text file has some structure to it that Power Query can detect, or if it's a csv file, it will load a table that tries to preserve this structure.
+If your text file has some structure to it that Power Query can detect, or if it's a csv file, it will load a table that tries to preserve this structure. You can find a sample CSV file [here](https://docs.microsoft.com/power-bi/service-comma-separated-value-files).
 
-Source: https://docs.microsoft.com/power-bi/service-comma-separated-value-files
+In addition to file origin, CSV also supports specifying the delimeter, as well as how data type detection will be handled.
 
 ![Loading data from a csv file](../images/csvload.png)
 
+Delimeters available include colon, comma, equals sign, semicolon, space, tab, a custom delimeter (which can be any string), and a fixed width (chunking up text by some standard number of characters).
+
 ![Delimeter selection for a csv file](../images/csvdelimeterdropdown.png)
+
+The final dropdown allows you to select how you want to handle data type detection. It can be done based on the first 200 rows, on the entire data set, or you can choose to not do automatic data type detection and instead let all columns default to 'Text'. Warning: if you do it on the entire data set it may cause previewing the data in the editor to be slower.
 
 ![Data type inference selection for a csv file](../images/csvdatatypedropdown.png)
 
@@ -76,7 +73,6 @@ Text
 Quotestyle
 In text or CSV--'do you support newlines in cells or not', unclear because it's called quotestyle
 
-CSV
-Engine function documentation
+### Loading Files from the Web
 
-CRI - promote headers can request the file twice due to how the connector handles the stream when requesting from a web endpoint, the solution is to wrap web.contents with binary.buffer
+Due to how the connector works, in some cases a file may be requested twice when being retrieved from a web endpoint. To avoid this, wrap your Web.Contents function with a Binary.Buffer function, which will allow the engine to avoid the second call.
