@@ -19,22 +19,37 @@ To load a local text or csv file, all you need to do is select the 'Text/CSV' op
 
 ![Text file selection](../images/textcsvbrowse.png)
 
-Depending on the exact file selected, you may be presented with a few different options: if your text file has some structure to it that Power Query can detect, or if it's a csv file, it will load a table that tries to preserve this structure. If your text file doesn't have structure, clear or otherwise (for example a document that has similar comma usage across paragraphs might be interpreted to be a CSV), you will get a single column with a new row per line encoded in the source text.
+Depending on the exact file selected, you may be presented with a few different options.
 
 ### Unstructured Text
+If your text file doesn't have structure, clear or otherwise (for example a document that has similar comma usage across paragraphs might be interpreted to be a CSV), you will get a single column with a new row per line encoded in the source text.
 
-You will be presented with the table that the connector loads, which you can then Load or Transform.
+As a sample for unstructured text, you can consider a notepad file with the following contents:
 
 ```
 Hello world.
 This is sample data.
 ```
 
+When you load it, you're presented with a navigation screen that loads each of these lines into their own row.
+
 ![Loading data from a simple unstructured text file](../images/textrawnavigator.png)
+
+There is only one thing you can fongire on this page, which is the File Origin dropdown select. This lets you 
 
 ![File culture selection for Text/CSV](../images/textfileorigindropdown.png)
 
+
+You will be presented with the table that the connector loads, which you can then Load or Transform.
+
+
+
+
+
 ### CSV
+(To read the Power BI Desktop specific file on CSV files, please see [here](https://docs.microsoft.com/en-us/power-bi/desktop-connect-csv).
+
+If your text file has some structure to it that Power Query can detect, or if it's a csv file, it will load a table that tries to preserve this structure.
 
 Source: https://docs.microsoft.com/power-bi/service-comma-separated-value-files
 
