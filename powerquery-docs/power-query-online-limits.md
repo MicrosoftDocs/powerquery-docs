@@ -5,7 +5,7 @@ author: cpopell
 
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 09/13/2019
+ms.date: 12/10/2019
 ms.author: gepopell
 
 LocalizationGroup: reference
@@ -44,7 +44,7 @@ During refresh (either scheduled or on-demand), query evaluations return complet
 
 | Product Integration | Hourly Evaluation Count (#) | Daily Evaluation Time (Hours) | Concurrent Evaluations (#) |
 |--|--|--|--|
-| Microsoft Flow (SQL Connector - Transform Data Using Power Query) | 500 | 2 | 5 |
+| Microsoft Flow (SQL Connector&mdash;Transform Data Using Power Query) | 500 | 2 | 5 |
 | Dataflows in PowerApps.com (Trial)| 500 | 2 | 5 |
 | Dataflows in PowerApps.com (Production) | 1000 | 8 | 10 |
 | Data Integration in PowerApps.com Admin Portal | 1000 | 24 | 10 |

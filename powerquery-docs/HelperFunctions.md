@@ -5,21 +5,21 @@ author: cpopell
 
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 08/16/2018
+ms.date: 12/12/2019
 ms.author: gepopell
 
 LocalizationGroup: reference
 ---
 
 # Helper Functions
-This file contains a number of helper functions commonly used in M extensions.
+This topic contains a number of helper functions commonly used in M extensions.
 These functions may eventually be moved to the official M library, but for now can be copied into your extension file code.
-You should not mark any of these functions as `shared` within your extension code. 
+You shouldn't mark any of these functions as `shared` within your extension code. 
 
 ## Navigation Tables
 
 ### Table.ToNavigationTable
-This function adds the table type metadata needed for your extension to return a table value that Power Query can recognize as a Navigation Tree. Please see [Navigation Tables](HandlingNavigationTables.md) for more information.
+This function adds the table type metadata needed for your extension to return a table value that Power Query can recognize as a Navigation Tree. See [Navigation Tables](HandlingNavigationTables.md) for more information.
 
 ```
 Table.ToNavigationTable = (
@@ -49,9 +49,9 @@ Table.ToNavigationTable = (
 | Parameter      | Details         |
 |:---------------|:----------------|
 | table          | Your navigation table.   |
-| keyColumns     | List of column names that act as the primary key for your navigation table      |
-| nameColumn     | The name of the column that should be used as the display name in the navigator |
-| dataColumn     | The name of the column that contains the Table or Function to display           |
+| keyColumns     | List of column names that act as the primary key for your navigation table.      |
+| nameColumn     | The name of the column that should be used as the display name in the navigator. |
+| dataColumn     | The name of the column that contains the Table or Function to display.           |
 | itemKindColumn | The name of the column to use to determine the type of icon to display. Valid values for the column are `Table` and `Function`.    |
 | itemNameColumn | The name of the column to use to determine the type of tooltip to display. Valid values for the column are `Table` and `Function`. |
 | isLeafColumn   | The name of the column used to determine if this is a leaf node, or if the node can be expanded to contain another navigation table. |
@@ -92,7 +92,7 @@ Uri.FromParts = (parts) =>
 ### Uri.GetHost
 This function returns the scheme, host, and default port (for HTTP/HTTPS) for a given URL. For example, `https://bing.com/subpath/query?param=1&param2=hello` would become `https://bing.com:443`.
 
-This particularly useful for building `ResourcePath`.
+This is particularly useful for building `ResourcePath`.
 
 ```
 Uri.GetHost = (url) =>
@@ -105,14 +105,14 @@ Uri.GetHost = (url) =>
 
 ### ValidateUrlScheme
 
-This function checks if the user entered an HTTPS url and raises an error if they don't. This is required for user entered URLs for certified connectors.
+This function checks if the user entered an HTTPS URL and raises an error if they don't. This is required for user entered URLs for certified connectors.
 
 
 ```
 ValidateUrlScheme = (url as text) as text => if (Uri.Parts(url)[Scheme] <> "https") then error "Url scheme must be HTTPS" else url;
 ```
 
-To apply it, just wrap your url parameter in your data access function.
+To apply it, just wrap your `url` parameter in your data access function.
 
 ```
 DataAccessFunction = (url as text) as table =>
@@ -126,7 +126,7 @@ DataAccessFunction = (url as text) as table =>
 ## Retrieving Data
 
 ### Value.WaitFor
-This function is useful when making an asynchronous HTTP request, and you need to poll the server until the request is complete. 
+This function is useful when making an asynchronous HTTP request and you need to poll the server until the request is complete. 
 
 ```
 Value.WaitFor = (producer as function, interval as function, optional count as number) as any =>
@@ -150,7 +150,7 @@ should return a `nullable table`.
 getNextPage = (lastPage) as nullable table => ...`
 ```
 
-The `getNextPage` is called repeatedly until it returns `null`. The function will collate 
+`getNextPage` is called repeatedly until it returns `null`. The function will collate 
 all pages into a single table. When the result of the first call to `getNextPage` is null,
 an empty table is returned.
 
@@ -183,12 +183,12 @@ Additional notes:
 - The `getNextPage` function will need to retrieve the next page URL
 (or page number, or whatever other values are used to implement the paging logic).
 This is generally done by adding `meta` values to the page before returning it.
-- The columns and table type of the combined table (i.e. all pages together) are derived from
+- The columns and table type of the combined table (that is, all pages together) are derived from
 the first page of data. The `getNextPage` function should normalize each page of data. 
 - The first call to `getNextPage` receives a null parameter.
-- `getNextPage` must return null when there are no pages left
+- `getNextPage` must return null when there are no pages left.
 
-An example of using this function can be found in the [Github sample](~/../samples/Github/README.md), and the [TripPin paging sample](~/../samples/TripPin/5-Paging/README.md).
+An example of using this function can be found in the [Github sample](samples/Github/README.md), and the [TripPin paging sample](samples/TripPin/5-Paging/README.md).
 
 ```
 Github.PagedTable = (url as text) => Table.GenerateByPage((previous) =>

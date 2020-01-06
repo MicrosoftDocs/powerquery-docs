@@ -5,7 +5,7 @@ author: cpopell
 
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 08/16/2018
+ms.date: 12/11/2019
 ms.author: gepopell
 
 LocalizationGroup: reference
@@ -13,23 +13,24 @@ LocalizationGroup: reference
 
 # Handling Resource Path
 
-The M engine identifies a data source using a combination of its *Kind* and *Path*. When a data source is encountered during a query evaluation, the M engine will try to find matching credentials. If no credentials are found, the engine returns a special error which results in a credential prompt in Power Query.
+The M engine identifies a data source using a combination of its *Kind* and *Path*. When a data source is encountered during a query evaluation, the M engine will try to find matching credentials. If no credentials are found, the engine returns a special error that results in a credential prompt in Power Query.
 
 The *Kind* value comes from [Data Source Kind] definition.
 
-The *Path* value is derived from the *required parameters* of your data source function(s). Optional parameters are not factored into the data source path identifier. As a result, all data source functions associated with a data source kind must have the same parameters. There is special handling for functions that have a single parameter of type `Uri.Type`. See below for further details.
+The *Path* value is derived from the *required parameters* of your data source function(s). Optional parameters aren't factored into the data source path identifier. As a result, all data source functions associated with a data source kind must have the same parameters. There's special handling for functions that have a single parameter of type `Uri.Type`. See below for further details.
 
-You can see an example of how credentials are stored in the *Data source settings* dialog in Power BI Desktop. In this dialog, the Kind is represented by an icon, and the Path value is displayed as text.
+You can see an example of how credentials are stored in the **Data source settings** dialog in Power BI Desktop. In this dialog, the Kind is represented by an icon, and the Path value is displayed as text.
 
 ![](images/datasourcesettingscreds.png)
 
-> **Note:** If you change your data source function's required parameters during development, previously stored credentials will no longer work (because the path values no longer match). You should delete any stored credentials any time you change your data source function parameters. If incompatible credentials are found, you may receive an error at runtime.
+>[Note]
+> If you change your data source function's required parameters during development, previously stored credentials will no longer work (because the path values no longer match). You should delete any stored credentials any time you change your data source function parameters. If incompatible credentials are found, you may receive an error at runtime.
 
 ## Data Source Path Format
 
 The *Path* value for a data source is derived from the data source function's required parameters.
 
-By default, you can see the actual string value in the Data source settings dialog in Power BI Desktop, and in the credential prompt. if the Data Source Kind definition has included a `Label` value, you will see the label value instead.
+By default, you can see the actual string value in the **Data source settings** dialog in Power BI Desktop, and in the credential prompt. if the Data Source Kind definition has included a `Label` value, you'll see the label value instead.
 
 For example, the data source function in the [HelloWorldWithDocs sample] has the following signature:
 
@@ -45,19 +46,20 @@ The function has a single required parameter (`message`) of type `text`, and wil
 ### Data source settings UI:
 ![Data source settings UI](images/dataSourceSettingsJson.png)
 
-When a Label value is defined, the data source path value would not be shown:
+When a Label value is defined, the data source path value won't be shown:
 
 ![Data source settings with label](images/dataSourceSettingsLabel.png)
 
-> **Note:** We currently recommend that you *do not* inlcude a Label for your data source if your function has required parameters, as users will not be able to distinguish between the different credentials they have entered. We are hoping to improve this in the future (i.e., allowing data connectors to display their own custom data source paths).
+>[Note]
+> We currently recommend that you *do not* include a Label for your data source if your function has required parameters, as users won't be able to distinguish between the different credentials they've entered. We are hoping to improve this in the future (that is, allowing data connectors to display their own custom data source paths).
 
-## Functions with an Uri parameter
+## Functions with a Uri parameter
 
-Because data sources with an Uri-based identifier are so common, there is special handling in the Power Query UI when dealing with Uri-based data source paths. When an Uri-based data source is encountered, the credential dialog provides a dropdown allowing the user to select the base path, rather than the full path (and all paths in-between).
+Because data sources with a Uri-based identifier are so common, there's special handling in the Power Query UI when dealing with Uri-based data source paths. When a Uri-based data source is encountered, the credential dialog provides a dropdown allowing the user to select the base path, rather than the full path (and all paths in-between).
 
 ![Setting path that credentials apply to](images/credentialPromptWithUrl.png)
 
-As `Uri.Type` is an *ascribed type* rather than a *primitive type* in the M language, you will need to use the [Value.ReplaceType] function in indicate that your text parameter should be treated as a Uri.
+As `Uri.Type` is an *ascribed type* rather than a *primitive type* in the M language, you'll need to use the [Value.ReplaceType] function to indicate that your text parameter should be treated as a Uri.
 
 ```
 shared GithubSample.Contents = Value.ReplaceType(Github.Contents, type function (url as Uri.type) as any);
