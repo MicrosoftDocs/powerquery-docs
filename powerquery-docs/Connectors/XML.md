@@ -37,3 +37,13 @@ Due to the fact that many XML documents have ragged or nested data, you will hav
 
 ### Text vs nodes
 If you have similarly structured entries, and you have text nodes with a title entry for each, and one of those nodes has extra tags on the title, it drops everything outside the tag. It does text or nodes, not mixed.
+
+For example if you have a node like this:
+```xml
+<abc>
+    Hello <i>world</i>
+</abc>
+```
+Xml.Tables will return the "world" portion but ignore "Hello". Only the element(s) are returned, not the text.
+
+Xml.Document will return "Hello <i>world</i>". The inner node is turned to text in entire, and structure is not preserved.
