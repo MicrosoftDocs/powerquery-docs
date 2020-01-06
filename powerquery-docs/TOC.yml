@@ -74,12 +74,16 @@
     items:
     - name: "Combine Files"
       href: CombineFiles.md
+    - name: "Common Issues"
+      href: CommonIssues.md
     - name: "Connectors"
       items:
       - name: "Excel"
         href: Connectors/Excel.md
       - name: "PostgreSQL"
         href: Connectors/PostgreSQL.md
+      - name: "SQL Server database"
+        href: Connectors/SQLServer.md
     - name: "Connecting to VSTS via OData"
       href: https://docs.microsoft.com/en-us/azure/devops/report/powerbi/odataquery-connect?view=azure-devops
   - name: "Connector Development Reference"

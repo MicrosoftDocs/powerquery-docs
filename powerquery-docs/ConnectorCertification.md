@@ -28,14 +28,20 @@ We work with vendors to try to make sure that they have support in maintenance, 
 
 We have a certain set of requirements for certification. We recognize that not every developer can meet these requirements, and as above we're hoping to introduce a feature set that will handle their needs in short order.
 
+Cut-off dates for certification are:
+* Notification of a submission on the 15th of the month, two months before the targeted Power BI desktop release. In other words for April Power BI, the cut-off is February 15th.
+* Submission must be done by the 1st of the month before the targeted Power BI desktop release. For April Power BI, the cut-off for submission would be March 1st.
+* Technical review must be passed by the 15th of the month before the targeted Power BI desktop release. For April Power BI, the cut-off for technical review would be March 15th.
+
+Due to backlogs, delays, rearchitecture, and testing issues, we highly recommend a long lead time for your initial release, and to very carefully read our requirements below. If you feel like your connector is important to deliver to a few connectors with minimal overhead, we recommend self signing and providing it that way.
+
 ## Certification Requirements
 
 ### Before starting
 * Developer must own the data source or have recorded permission from the owner of the data source to develop a connector for it.
-* Developer must sign an NDA.
-* Developer must sign a business partner agreement with our team.
-  * The business partner agreement is different from a Microsoft Partner agreement. The agreement addresses terms of making your connector code available to us for use in the relevant products. We will sign the agreement when we kick off the process.
-* Data source must not be an internal only data source.
+* The connector must be for a public product.
+* The developer must provide an estimate for usage. We suggest that developers of connectors for very boutique products use our Connector Signing capabilities and provide them directly to the customer.
+* Developer must submit to the Connector Certification Portal. In the future this will be available via standard Microsoft ISV channels. Currently you are required to reach out to dataconnectors@microsoft.com first to connect with the team.
   
 ### Artifacts
 * PBIX file
@@ -47,6 +53,17 @@ We have a certain set of requirements for certification. We recognize that not e
   * The test account will be reused whenever we're troubleshooting or certifying updates, so if you have a persistent test account it would be best to find a way to share this.
 * Link to external dependencies (ODBC drivers, for example)
 * Documentation on how to use the connector if needed
+
+### Features and Style
+* Connector MUST use Section document format
+* Connector MUST have [Version adornment](HandlingVersioning.md) on section
+* Connector MUST provide function documentation metadata
+* Connector MUST have [TestConnection handler](HandlingGatewaySupport.md)
+* Connector MUST follow naming conventions (DataSourceKind.FunctionName)
+* FunctionName should make sense for their domain - generally "Contents", "Tables", "Document", "Databases" …
+* Connector SHOULD have icons
+* Connector SHOULD provide a navigation table
+* Connector SHOULD place strings in resources.resx file
  
 ### Security
 * If using Extension.CurrentCredentials() …
@@ -64,18 +81,7 @@ We have a certain set of requirements for certification. We recognize that not e
 * If Expression.Evaluate() is used …
   * Validate where the expression is coming from / what it is (that is, can dynamically construct calls to Extension.CurrentCredentials(), and so on …
   * Expression should not be user provided / take user input
-  * Expression should not be dynamic (that is, retrieved from a web call)
-  
-### Features and Style
-* Connector MUST use Section document format
-* Connector MUST have [Version adornment](HandlingVersioning.md) on section
-* Connector MUST provide function documentation metadata
-* Connector MUST have [TestConnection handler](HandlingGatewaySupport.md)
-* Connector MUST follow naming conventions (DataSourceKind.FunctionName)
-* FunctionName should make sense for their domain&mdash;generally "Contents", "Tables", "Document", "Databases" …
-* Connector SHOULD have icons
-* Connector SHOULD provide a navigation table
-* Connector SHOULD place strings in resources.resx file
+  * Expression should not be dynamic (i.e. retrieved from a web call)
 
 ## Getting your connector certified
 

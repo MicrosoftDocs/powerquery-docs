@@ -19,10 +19,10 @@ The exception to this is trusted, 'signed connectors'. Signed connectors are a s
 
 The following steps enable you to use a certificate (with explanation on how to generate one if you don't have one available) and sign a custom connector with the 'MakePQX' tool.
 
-> [!NOTE]
-> If you need help creating a self-signed certificate to test these instructions, see the Microsoft Documentation on [New-SelfSignedCertificate in PowerShell](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps). 
+>[!Note]
+> If you need help creating a self-signed certificate to test these instructions, see the Microsoft documentation on [New-SelfSignedCertificate in PowerShell](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps). 
 
-> [!NOTE]
+>[!Note]
 > If you need help exporting your certificate as a pfx, see [How to create a PKCS#12 (PFX) file on a Windows server](https://knowledge.digicert.com/solution/SO26065.html). 
 
 1. Download [MakePQX](https://aka.ms/makepqx).
