@@ -33,10 +33,10 @@ If you want to load an XML file from the web, instead of selecting the XML conne
 
 ### Data Structure
 
-Due to the fact that many XML documents have ragged or nested data, you will have to do extra data shaping to get it in the sort of form that will make it convenient to do analytics. This holds true whether you use the UI accessible XML.Tables function, or the XML.Document function. Depending on your needs you may find you have to do more or less data shaping.
+Due to the fact that many XML documents have ragged or nested data, you may have to do extra data shaping to get it in the sort of form that will make it convenient to do analytics. This holds true whether you use the UI accessible Xml.Tables function, or the Xml.Document function. Depending on your needs you may find you have to do more or less data shaping.
 
 ### Text vs nodes
-If you have similarly structured entries, and you have text nodes with a title entry for each, and one of those nodes has extra tags on the title, it drops everything outside the tag. It does text or nodes, not mixed.
+If your document contains a mixture of text and non-text sibling nodes, you may encounter issues.
 
 For example if you have a node like this:
 ```xml
