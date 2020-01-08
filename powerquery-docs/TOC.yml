@@ -80,6 +80,12 @@
       items:
       - name: "Excel"
         href: Connectors/Excel.md
+      - name: "FHIR"
+        items:
+        - name: Overview
+          href: Connectors/FHIR/FHIR.md
+        - name: Authentication
+          href: Connector/FHIR/FHIR-Authentication.md
       - name: "PostgreSQL"
         href: Connectors/PostgreSQL.md
       - name: "SQL Server database"
