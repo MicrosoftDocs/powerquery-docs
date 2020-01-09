@@ -81,6 +81,14 @@ While the first and the second Power Query expressions will result in the same d
 
 The initial data exploration can be done with the GUI query editor, but it is recommended that the query be refactored with query folding in mind. Specifically, selective queries (filtering) should be performed as early as possible.
 
+## Finding folding patterns
+
+The FHIR Power Query connector will only be able to perform query folding if the Power Query expressions map to known search parameters as defined by the FHIR specification. If you are wondering if query folding is possible, it is recommended to consult the [FHIR specification](https://hl7.org/fhir). Each resource will list a set of search parameters towards the bottom of the specification page. You can also consult the [folding query patterns](FHIR-QueryFoldingPatterns.md) page for examples of how to write foldable Power Query Expressions for FHIR.
+
+## Debugging query folding
+
+If you are trying to determine if a given Power Query expression is being folded and what the resulting FHIR search expression is, you can start [Fiddler](https://www.telerik.com/fiddler) while shaping queries in Power BI Desktop.
+
 ## Summary
 
 Query folding is an enabled more efficient Power Query expressions. A properly crafted Power Query will enable query folding and thus off-load much of the data filtering burden to the data source.
