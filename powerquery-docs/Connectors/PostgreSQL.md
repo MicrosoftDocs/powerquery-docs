@@ -25,7 +25,7 @@ Function Reference Documentation: [PostgreSQL.Database](https://docs.microsoft.c
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
  
 ## Prerequisites
-As of December Power BI Desktop, NpgSQL 4.0.10 shiped with Power BI Desktop and no additional installation is required. GAC Installation overrides the version provided with Power BI Desktop, which will be the default. 
+As of December Power BI Desktop, NpgSQL 4.0.10 shiped with Power BI Desktop and no additional installation is required. GAC Installation overrides the version provided with Power BI Desktop, which will be the default. Refreshing is supported both via cloud in the Power BI Service as well as on premise via the Gateway. In the Power BI service, NpgSQL 4.0.10 will be used, while on premise refresh will use the local installation of NpgSQL if available and otherwise use NpgSQL 4.0.10.
 
 In order to connect to a PostgreSQL database with  **Power BI Desktop**, the Npgsql provider must be installed on the computer running Power BI Desktop.
 
