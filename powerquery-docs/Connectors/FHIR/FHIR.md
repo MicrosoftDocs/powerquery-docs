@@ -15,7 +15,7 @@ LocalizationGroup: reference
 
 Fast Healthcare Interoperability Resources ([FHIR&reg;](https://hl7.org/fhir)) is a new standard for healthcare data interoperability. Healthcare data as resources such as `Patient`, `Observation`, `Encounter`, etc., and a REST API is used for querying healthcare data served by a FHIR server. The FHIR Power Query connector can be used to import and shape data from a FHIR server.
 
-If you don't have a FHIR server, you can provision the [Azure API for FHIR](https://docs.microsoft.com/en-us/azure/healthcare-apis/).
+If you don't have a FHIR server, you can provision the [Azure API for FHIR](https://docs.microsoft.com/azure/healthcare-apis/).
 
 Release State: General Availability
 

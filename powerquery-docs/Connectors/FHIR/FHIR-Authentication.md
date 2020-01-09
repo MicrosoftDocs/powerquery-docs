@@ -11,7 +11,7 @@ LocalizationGroup: reference
 
 # FHIR Connector Authentication
 
-FHIR servers typically [use OAuth authentication](https://www.hl7.org/fhir/security.html#authentication). There are also publicly accessible test servers (e.g. https://vonk.fire.ly, http://test.fhir.org/r4, or http://)
+This article explains authenticated access to FHIR servers using the FHIR Power Query Connector. The connector supports anonymous access to publicly accessible FHIR server and authenticated access to FHIR servers using Azure Active Directory authentication. The [Azure API for FHIR](https://docs.microsoft.com/azure/healthcare-apis) is secured with Azure Active Directory.
 
 ## Anonymous Access
 
@@ -41,7 +41,7 @@ There are some restrictions to be aware of:
 
 1. If your FHIR server does not return a `WWW-Authenticate` challenge header with an `authorization_uri` field on failed authorization, you must use an organizational account to sign in. You cannot use a guest account in your active directory tenant. For the Azure API for FHIR, you **must** use an Azure Active Directory organizational account.
 
-1. If your FHIR service is not the Azure API for FHIR, e.g., if you are running the [open source Microsoft FHIR server for Azure](https://github.com/Microsoft/fhir-server) you will have registered an [Azure Active Directory resource application](https://docs.microsoft.com/en-us/azure/healthcare-apis/register-resource-azure-ad-client-app) for the FHIR server. You must pre-authorize the Power BI client application to be able to access this resource application:
+1. If your FHIR service is not the Azure API for FHIR, e.g., if you are running the [open source Microsoft FHIR server for Azure](https://github.com/Microsoft/fhir-server) you will have registered an [Azure Active Directory resource application](https://docs.microsoft.com/azure/healthcare-apis/register-resource-azure-ad-client-app) for the FHIR server. You must pre-authorize the Power BI client application to be able to access this resource application:
 
     ![Pre Authorize Power BI](FHIR-PreAuthorize-PowerBI.png)
 
