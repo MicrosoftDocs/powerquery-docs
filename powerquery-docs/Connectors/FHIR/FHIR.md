@@ -13,13 +13,13 @@ LocalizationGroup: reference
 
 ## Summary
 
-Fast Healthcare Interoperability Resources ([FHIR&reg;](https://hl7.org/fhir)) is a new standard for healthcare data interoperability. Healthcare data as resources such as `Patient`, `Observation`, `Encounter`, etc., and a REST API is used for querying healthcare data served by a FHIR server. The FHIR Power Query connector can be used to import and shape data from a FHIR server.
+Fast Healthcare Interoperability Resources ([FHIR&reg;](https://hl7.org/fhir)) is a new standard for healthcare data interoperability. Healthcare data is represented as resources such as `Patient`, `Observation`, `Encounter`, etc., and a REST API is used for querying healthcare data served by a FHIR server. The FHIR Power Query connector can be used to import and shape data from a FHIR server.
 
 If you don't have a FHIR server, you can provision the [Azure API for FHIR](https://docs.microsoft.com/azure/healthcare-apis/).
 
 Release State: General Availability
 
-Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in PowerBI.com (Enterprise Gateway)
+Products: Power BI Desktop, Power BI Service.
 
 Authentication Types Supported: Anonymous, Azure Active Directory
 
@@ -29,7 +29,7 @@ Authentication Types Supported: Anonymous, Azure Active Directory
 
 ## Connect to FHIR server
 
-To make the connection, take the following steps:
+To make a connection to a FHIR server, take the following steps:
 
 1. Click the **Get Data** button:
 
@@ -57,7 +57,7 @@ To make the connection, take the following steps:
 
     ![Authentication](FHIR-Sign-In.png)
 
-    The connector supports "Anonymous" for FHIR server with no access controls (e.g. public test servers like http://test.fhir.org/r4) or Azure Active Directory authentication. See [FHIR connector authentication](FHIR-Authentication.md) for details.
+    The connector supports "Anonymous" for FHIR servers with no access controls (e.g. public test servers like http://test.fhir.org/r4) or Azure Active Directory authentication. See [FHIR connector authentication](FHIR-Authentication.md) for details.
 
 1. Select the resources you are interested in:
 
@@ -69,7 +69,7 @@ To make the connection, take the following steps:
 
     ![FHIR Shape Data](FHIR-ShapeData.png)
 
-1. Save query when shaping is complete:
+1. Save the query when shaping is complete:
 
     ![FHIR Save Query](FHIR-SaveQuery.png)
 

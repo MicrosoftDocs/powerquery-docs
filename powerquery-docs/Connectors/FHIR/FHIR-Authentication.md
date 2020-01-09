@@ -11,11 +11,11 @@ LocalizationGroup: reference
 
 # FHIR Connector Authentication
 
-This article explains authenticated access to FHIR servers using the FHIR Power Query Connector. The connector supports anonymous access to publicly accessible FHIR server and authenticated access to FHIR servers using Azure Active Directory authentication. The [Azure API for FHIR](https://docs.microsoft.com/azure/healthcare-apis) is secured with Azure Active Directory.
+This article explains authenticated access to FHIR servers using the FHIR Power Query Connector. The connector supports anonymous access to publicly accessible FHIR servers and authenticated access to FHIR servers using Azure Active Directory authentication. The [Azure API for FHIR](https://docs.microsoft.com/azure/healthcare-apis) is secured with Azure Active Directory.
 
 ## Anonymous Access
 
-There are a number of [publicly accessible FHIR servers for testing](https://wiki.hl7.org/index.php?title=Publicly_Available_FHIR_Servers_for_testing). To enable testing with these public servers, the FHIR Power Query connector supports the "Anonymous" authentication scheme. For example to access the public https://vonk.fire.ly server:
+There are a number of [publicly accessible FHIR servers](https://wiki.hl7.org/index.php?title=Publicly_Available_FHIR_Servers_for_testing). To enable testing with these public servers, the FHIR Power Query connector supports the "Anonymous" authentication scheme. For example to access the public https://vonk.fire.ly server:
 
 1. Enter the URL of the public Vonk server:
 
@@ -25,7 +25,7 @@ There are a number of [publicly accessible FHIR servers for testing](https://wik
 
     ![Vonk anonymous authentication](FHIR-Access-Vonk-Anonymous.png)
 
-After that follow the [query and shape your data](FHIR.md)
+After that follow the steps to [query and shape your data](FHIR.md)
 
 ## Azure Active Directory (Organizational) Authentication
 
@@ -47,7 +47,7 @@ There are some restrictions to be aware of:
 
     The client id for the Power BI client `a672d62c-fc7b-4e81-a576-e60dc46e951d`
 
-1. The Power Query (e.g. Power BI) client will only request a single scope: `user_impersonation`.
+1. The Power Query (e.g. Power BI) client will only request a single scope: `user_impersonation`. This scope must be available and the FHIR server cannot rely on other scopes.
 
 ## Next Steps
 

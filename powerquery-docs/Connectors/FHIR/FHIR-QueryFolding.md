@@ -36,9 +36,11 @@ With such a query the client would only receive the patients of interest and wou
 
 In the example of birth date, the query folding is straightforward, but in general it is challenging in FHIR because the search parameter names don't always correspond to the data field names and frequently multiple data fields will contribute to a single search parameter. 
 
-For example let's consider the Observation resource and the "category" field. The `Observation.category` field is a `CodeableConcept` in FHIR, which has a `coding` field, which has a `system` and `code` fields (among other fields). Suppose you were interested in vital-signs only, you would be interested in Observations where `Observation.category.coding.code = "vital-signs"`, but the FHIR search would look something like `https://myfhirserver.azurehealthcareapis.com/Observation?category=vital-signs`.
+For example let's consider the `Observation` resource and the `category` field. The `Observation.category` field is a `CodeableConcept` in FHIR, which has a `coding` field, which has a `system` and `code` fields (among other fields). Suppose you were interested in vital-signs only, you would be interested in Observations where `Observation.category.coding.code = "vital-signs"`, but the FHIR search would look something like `https://myfhirserver.azurehealthcareapis.com/Observation?category=vital-signs`.
 
-To be able to achieve query folding in the more complicated cases, the FHIR Power Query connector matches Power Query expressions with a list of expression patterns and translates them into appropriate search parameters. This matching with expression patterns works best when the selection expression is done as early as possible data transformation steps.
+To be able to achieve query folding in the more complicated cases, the FHIR Power Query connector matches Power Query expressions with a list of expression patterns and translates them into appropriate search parameters. The expression patterns are generated from the FHIR specification.
+
+This matching with expression patterns works best when any selection expressions (filtering) is done as the earliest as possible data transformation steps before any other shaping of the data.
 
 > [!Note]
 > To give the Power Query engine the best chance of performing query folding, you should do all data selection expressions before any shaping of the data.
@@ -47,7 +49,8 @@ To be able to achieve query folding in the more complicated cases, the FHIR Powe
 
 To illustrate efficient query folding, we will walk through the example of getting all vital signs from the Observation resource. The intuitive way to do this would be to first expand the `Observation.category` field and then expand `Observation.category.coding` and then filter. The query would look something like this:
 
-```
+```M
+// Inefficient Power Query
 let
     Source = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null),
     Observation = Source{[Name="Observation"]}[Data],
@@ -60,7 +63,8 @@ in
 
 Unfortunately, the Power Query engine no longer recognized that as a selection pattern that maps to the `category` search parameter, but if we restructure the query to:
 
-```
+```M
+// Efficient Power Query allowing folding
 let
     Source = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null),
     Observation = Source{[Name="Observation"]}[Data],
@@ -75,11 +79,11 @@ The search query `/Observation?category=vital-signs` will be sent to the FHIR se
 
 While the first and the second Power Query expressions will result in the same data set, the latter will, in general, result in better query performance. It is important to note that the second, more efficient, version of the query cannot be obtained purely through data shaping with the graphical user interface (GUI). It is necessary to write the query in the "Advanced Editor".
 
-The initial data exploration can be done with the GUI query editor, but it is recommended that the query be refactored with query folding in mind. Specifically, selective queries should be performed as early as possible.
+The initial data exploration can be done with the GUI query editor, but it is recommended that the query be refactored with query folding in mind. Specifically, selective queries (filtering) should be performed as early as possible.
 
 ## Summary
 
-Query folding is an important mechanism to leverage in efficient Power Query expressions. A properly crafted Power Query will enable query folding and thus off-load much of the data filtering burden to the data source.
+Query folding is an enabled more efficient Power Query expressions. A properly crafted Power Query will enable query folding and thus off-load much of the data filtering burden to the data source.
 
 ## Next steps
 
