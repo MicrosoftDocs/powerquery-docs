@@ -1,5 +1,5 @@
 ---
-title: FHIR
+title: FHIR Power Query Connector
 description: Power Query FHIR connector reference
 author: hansenms
 ms.service: powerquery
@@ -79,7 +79,7 @@ To make the connection, take the following steps:
 
 ## Next Steps
 
-In this article, you have learned how to use the FHIR Power Query connect to access FHIR data from Power BI. Next explore the authentication features of the FHIR Power Query connector.
+In this article, you have learned how to use the FHIR Power Query connector to access FHIR data from Power BI. Next explore the authentication features of the FHIR Power Query connector.
 
 >[!div class="nextstepaction"]
 >[FHIR connector authentication](FHIR-Authentication.md)
