@@ -1,10 +1,10 @@
 ---
 title: FHIR Power Query Authentication
-description: Power Query FHIR connector reference
+description: FHIR Power Query Authentication
 author: hansenms
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 12/12/2019
+ms.date: 01/08/2020
 ms.author: mihansen
 LocalizationGroup: reference
 ---

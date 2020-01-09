@@ -1,10 +1,10 @@
 ---
-title: FHIR Power Query Connector
-description: Power Query FHIR connector reference
+title: FHIR Power Query connector
+description: FHIR Power Query connector reference
 author: hansenms
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 12/12/2019
+ms.date: 01/08/2020
 ms.author: mihansen
 LocalizationGroup: reference
 ---
