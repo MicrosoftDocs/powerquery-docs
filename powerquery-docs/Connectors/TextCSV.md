@@ -30,7 +30,7 @@ To load a local text or csv file, all you need to do is select the 'Text/CSV' op
 
 ![Text file selection](../images/textcsvbrowse.png)
 
-Depending on the exact file selected, you will be presented with one of a few different options.
+Power Query will treat CSVs as structured files with a comma as a delimeter, a special case of a text file. If you choose a text file, Power Query will automatically attempt to determine if it has delimeter separated values, and what that delimiter is. If it can infer this, it will automatically treat it as a structured data source.
 
 ### Unstructured Text
 If your text file doesn't have structure you will get a single column with a new row per line encoded in the source text. As a sample for unstructured text, you can consider a notepad file with the following contents:
@@ -44,14 +44,14 @@ When you load it, you're presented with a navigation screen that loads each of t
 
 ![Loading data from a simple unstructured text file](../images/textrawnavigator.png)
 
-There is only one thing you can fongire on this page, which is the File Origin dropdown select. This lets you select [which character set](https://docs.microsoft.com/windows/win32/intl/code-page-identifiers) was used to generate the file.
+There is only one thing you can configure on this dialog, which is the File Origin dropdown select. This lets you select [which character set](https://docs.microsoft.com/windows/win32/intl/code-page-identifiers) was used to generate the file.
 
 ![File culture selection for Text/CSV](../images/textfileorigindropdown.png)
 
 ### CSV
 (To read the Power BI Desktop specific file on CSV files, please see [here](https://docs.microsoft.com/en-us/power-bi/desktop-connect-csv).
 
-If your text file has some structure to it that Power Query can detect, or if it's a csv file, it will load a table that tries to preserve this structure. You can find a sample CSV file [here](https://docs.microsoft.com/power-bi/service-comma-separated-value-files).
+You can find a sample CSV file [here](https://docs.microsoft.com/power-bi/service-comma-separated-value-files).
 
 In addition to file origin, CSV also supports specifying the delimeter, as well as how data type detection will be handled.
 
@@ -67,9 +67,9 @@ The final dropdown allows you to select how you want to handle data type detecti
 
 ### Structured Text
 
-In some cases, Power Query will read your text file as some kind of delimeter separated value file. This will essentially treat it as a CSV, though potentially with a different delimeter, and all of the same dropdowns discussed above will apply.
+When Power Query can detect structure to your text file, it will treat it as a delimiter separated value file, and give you the same options available when opening a CSV--which is essentially just a file with an extension indicating the delimiter type.
 
-For example, if you save the following below as a text file, it will be read as a CSV rather than unstructured text.
+For example, if you save the following below as a text file, it will be read as having a tab delimiter rather than unstructured text.
 ```
 Column 1	Column 2	Column 3
 This is a string.	1	ABC123
