@@ -1,3 +1,14 @@
+---
+title: Text/CSV
+description: Power Query Text/CSV connector reference
+author: cpopell
+ms.service: powerquery
+ms.topic: conceptual
+ms.date: 1/9/2020
+ms.author: gepopell
+LocalizationGroup: reference
+---
+
 # Text/CSV
 
 ## Summary
