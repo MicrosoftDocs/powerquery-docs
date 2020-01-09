@@ -54,4 +54,4 @@ There are some restrictions to be aware of:
 In this article, you have learned how to use the FHIR Power Query connector authentication features. Next explore query folding.
 
 >[!div class="nextstepaction"]
->[FHIR Power Query folding](FHIR-QueryFoldingOverview.md)
+>[FHIR Power Query folding](FHIR-QueryFolding.md)
