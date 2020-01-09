@@ -1,3 +1,14 @@
+---
+title: XML
+description: Power Query XML connector reference
+author: cpopell
+ms.service: powerquery
+ms.topic: conceptual
+ms.date: 1/9/2020
+ms.author: gepopell
+LocalizationGroup: reference
+---
+
 # XML
 
 ## Summary
@@ -44,6 +55,4 @@ For example if you have a node like this:
     Hello <i>world</i>
 </abc>
 ```
-Xml.Tables will return the "world" portion but ignore "Hello". Only the element(s) are returned, not the text.
-
-Xml.Document will return "Hello <i>world</i>". The inner node is turned to text in entire, and structure is not preserved.
+Xml.Tables will return the "world" portion but ignore "Hello". Only the element(s) are returned, not the text. However, Xml.Document will return "Hello \<i>world\</i>". The inner node is turned to text in entire, and structure is not preserved.
