@@ -75,7 +75,7 @@ The search query `/Observation?category=vital-signs` will be sent to the FHIR se
 
 While the first and the second Power Query expressions will result in the same data set, the latter will, in general, result in better query performance. It is important to note that the second, more efficient, version of the query cannot be obtained purely through data shaping with the graphical user interface (GUI). It is necessary to write the query in the "Advanced Editor".
 
-It is recommended that initial data exploration can be done with the GUI query editor, but it is recommended that the query be refactored with query folding in mind. Specifically, selective queries should be performed as early as possible.
+The initial data exploration can be done with the GUI query editor, but it is recommended that the query be refactored with query folding in mind. Specifically, selective queries should be performed as early as possible.
 
 ## Summary
 
