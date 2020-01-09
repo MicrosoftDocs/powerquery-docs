@@ -88,6 +88,8 @@
           href: Connectors/FHIR/FHIR-Authentication.md
         - name: Query Folding
           href: Connectors/FHIR/FHIR-QueryFolding.md
+        - name: Data relationships
+          href: Connectors/FHIR/FHIR-Relationships.md
       - name: "PostgreSQL"
         href: Connectors/PostgreSQL.md
       - name: "SQL Server database"
