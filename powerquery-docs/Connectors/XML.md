@@ -16,7 +16,7 @@ LocalizationGroup: reference
 Release State: General Availability
 Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in PowerBI.com (Enterprise Gateway), Dataflows in PowerApps.com (Enterprise Gateway), Excel
 
-Function Reference Documentation: [Xml.Tables](https://docs.microsoft.com/en-us/powerquery-m/xml-tables), [Xml.Document](https://docs.microsoft.com/en-us/powerquery-m/xml-document)
+Function Reference Documentation: [Xml.Tables](https://docs.microsoft.com/powerquery-m/xml-tables), [Xml.Document](https://docs.microsoft.com/powerquery-m/xml-document)
 
 ## Capabilities supported
 
