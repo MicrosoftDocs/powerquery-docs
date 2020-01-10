@@ -19,11 +19,15 @@ Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in 
 
 Authentication Types Supported: Database (Username/Password)
 
+Function Reference Documentation: [PostgreSQL.Database](https://docs.microsoft.com/powerquery-m/postgresql-database)
+
 >[!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
  
 ## Prerequisites
-In order to connect to a PostgreSQL database with  **Power BI Desktop**, the Npgsql provider must be installed on the computer running Power BI Desktop.
+As of the December Power BI Desktop release, NpgSQL 4.0.10 shipped with Power BI Desktop and no additional installation is required. GAC Installation overrides the version provided with Power BI Desktop, which will be the default. Refreshing is supported both through the cloud in the Power BI Service as well as on premise through the Gateway. In the Power BI service, NpgSQL 4.0.10 will be used, while on premise refresh will use the local installation of NpgSQL, if available, and otherwise use NpgSQL 4.0.10.
+
+In order to connect to a PostgreSQL database with **Power BI Desktop**, the Npgsql provider must be installed on the computer running Power BI Desktop.
 
 **We recommend Npgsql 4.0.10. Npgsql 4.1 and up will not work due to .NET version incompatibilities.**
  
@@ -49,14 +53,18 @@ Once the matching Npgsql provider is installed, you can connect to a PostgreSQL 
 2. In the  **PostgreSQL**  dialog that appears, provide the name of the server and database. Optionally, you may provide a command timeout and a native query (SQL statement), as well as select whether or not you want to include relationship columns and navigate using full hierarchy. Once you're done, select  **Connect**.
 3. If the PostgreSQL database requires database user credentials, input those credentials in the dialogue when prompted.
 ## Native Query Folding
-To enable Native Query Folding, set the EnableFolding flag to "true" for [Value.NativeQuery()](https://docs.microsoft.com/powerquery-m/value-nativequery) in the advanced editor.
+To enable Native Query Folding, set the `EnableFolding` flag to `true` for [Value.NativeQuery()](https://docs.microsoft.com/powerquery-m/value-nativequery) in the advanced editor.
+
 Sample:
 ```Value.NativeQuery(target as any, query, null, [EnableFolding=true])```
  
 Operations that are capable of folding will be applied on top of your native query according to normal Import or Direct Query logic. Native Query folding is not applicable with optional parameters present in [Value.NativeQuery()](https://docs.microsoft.com/powerquery-m/value-nativequery).
  
 ## Troubleshooting
-Your native query may throw the error:
+Your native query may throw the following error:
+
 ```We cannot fold on top of this native query. Please modify the native query or remove the 'EnableFolding' option.```
-A basic trouble shooting step is to check if the query in [Value.NativeQuery()](https://docs.microsoft.com/powerquery-m/value-nativequery) throws the same error with a limit 1 clause around it:
+
+A basic trouble shooting step is to check if the query in [Value.NativeQuery()](https://docs.microsoft.com/powerquery-m/value-nativequery) throws the same error with a `limit 1` clause around it:
+
 ```select * from (query) _ limit 1```
