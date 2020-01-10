@@ -83,3 +83,5 @@ In this article, you have learned how to use the FHIR Power Query connector to a
 
 >[!div class="nextstepaction"]
 >[FHIR connector authentication](FHIR-Authentication.md)
+
+> FHIR&reg; and the FHIR Flame icon are the registered trademarks of HL7 and is used with the permission of HL7. Use of the FHIR trademark does not constitute endorsement of this product by HL7
