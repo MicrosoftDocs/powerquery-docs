@@ -26,25 +26,25 @@ Function Reference Documentation: [Xml.Tables](https://docs.microsoft.com/powerq
 
 ### Load from file
 
-To load a local XML file, all you need to do is select the 'XML' option in the connector selection. This will launch a local file browser and allow you to select your XML file. 
+To load a local XML file, all you need to do is select the **XML** option in the connector selection. This will launch a local file browser and allow you to select your XML file. 
 
 ![XML file selection](../images/xmlbrowse.png)
 
-You will be presented with the table that the connector loads, which you can then Load or Transform.
+You'll be presented with the table that the connector loads, which you can then Load or Transform.
 
 ![Loading data from a XML file in the Navigator](../images/xmlnavigator.png)
 
 ### Load from web
 
-If you want to load an XML file from the web, instead of selecting the XML connector you can select the Web connector. Paste in the address of the desired file and you will be prompted with an authentication selection, since you're hitting a website rather than a static file. If there's no authentication, you can just select Anonymous. As in the local case, you will then be presented with the table that the connector loads by default, which you can Load or Transform.
+If you want to load an XML file from the web, instead of selecting the XML connector you can select the Web connector. Paste in the address of the desired file and you'll be prompted with an authentication selection, since you're accessing a website instead of a static file. If there's no authentication, you can just select **Anonymous**. As in the local case, you'll then be presented with the table that the connector loads by default, which you can Load or Transform.
 
 ## Troubleshooting
 
 ### Data Structure
 
-Due to the fact that many XML documents have ragged or nested data, you may have to do extra data shaping to get it in the sort of form that will make it convenient to do analytics. This holds true whether you use the UI accessible Xml.Tables function, or the Xml.Document function. Depending on your needs you may find you have to do more or less data shaping.
+Due to the fact that many XML documents have ragged or nested data, you may have to do extra data shaping to get it in the sort of form that will make it convenient to do analytics. This holds true whether you use the UI accessible Xml.Tables function, or the Xml.Document function. Depending on your needs, you may find you have to do more or less data shaping.
 
-### Text vs nodes
+### Text versus nodes
 If your document contains a mixture of text and non-text sibling nodes, you may encounter issues.
 
 For example if you have a node like this:
@@ -53,4 +53,4 @@ For example if you have a node like this:
     Hello <i>world</i>
 </abc>
 ```
-Xml.Tables will return the "world" portion but ignore "Hello". Only the element(s) are returned, not the text. However, Xml.Document will return "Hello \<i>world\</i>". The inner node is turned to text in entire, and structure is not preserved.
+Xml.Tables will return the "world" portion but ignore "Hello". Only the element(s) are returned, not the text. However, Xml.Document will return "Hello \<i>world\</i>". The entire inner node is turned to text, and structure is not preserved.
