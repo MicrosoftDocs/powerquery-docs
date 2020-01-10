@@ -16,8 +16,6 @@ LocalizationGroup: reference
 Release State: General Availability
 Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in PowerBI.com (Enterprise Gateway), Dataflows in PowerApps.com (Enterprise Gateway), Excel
 
-Authentication Types Supported:
-
 Function Reference Documentation: [File.Contents](https://docs.microsoft.com/en-us/powerquery-m/file-contents), [Lines.FromBinary](https://docs.microsoft.com/en-us/powerquery-m/lines-frombinary), [CSV.Document](https://docs.microsoft.com/powerquery-m/csv-document)
 
 ## Capabilities supported
