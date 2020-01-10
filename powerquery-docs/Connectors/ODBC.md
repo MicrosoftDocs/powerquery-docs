@@ -42,9 +42,10 @@ In the **From ODBC** dialog that appears, provide the connection string (optiona
 
 You may also choose to provide a SQL statement, depending on the capabilities of the driver. Ask your vendor for more information.
 
-## Supported row reduction clause
 To enable folding support for Table.FirstN click on 'Detect' to find supported row reduction clauses, or select from one of the drop down options.
 
 ![Drop down options: Top, Limit, Limit and Offset, ANSI SQL compatible](../images/ODBCrowreduction.png)
 
 This option is applicable to Odbc.DataSource.
+
+Once you're done, select Connect. Select the authentication type and input those credentials in the dialogue when prompted.
