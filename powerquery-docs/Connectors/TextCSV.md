@@ -24,14 +24,14 @@ Function Reference Documentation: [File.Contents](https://docs.microsoft.com/pow
 
 ## Load from Text/CSV File
 
-To load a local text or csv file, all you need to do is select the 'Text/CSV' option in the connector selection. This will launch a local file browser and allow you to select your text file. 
+To load a local text or csv file, all you need to do is select the **Text/CSV** option in the connector selection. This will launch a local file browser and allow you to select your text file. 
 
 ![Text file selection](../images/textcsvbrowse.png)
 
-Power Query will treat CSVs as structured files with a comma as a delimeter, a special case of a text file. If you choose a text file, Power Query will automatically attempt to determine if it has delimeter separated values, and what that delimiter is. If it can infer this, it will automatically treat it as a structured data source.
+Power Query will treat CSVs as structured files with a comma as a delimeter&mdash;a special case of a text file. If you choose a text file, Power Query will automatically attempt to determine if it has delimeter separated values, and what that delimiter is. If it can infer this, it'll automatically treat it as a structured data source.
 
 ### Unstructured Text
-If your text file doesn't have structure you will get a single column with a new row per line encoded in the source text. As a sample for unstructured text, you can consider a notepad file with the following contents:
+If your text file doesn't have structure you'll get a single column with a new row per line encoded in the source text. As a sample for unstructured text, you can consider a notepad file with the following contents:
 
 ```
 Hello world.
@@ -42,7 +42,7 @@ When you load it, you're presented with a navigation screen that loads each of t
 
 ![Loading data from a simple unstructured text file](../images/textrawnavigator.png)
 
-There is only one thing you can configure on this dialog, which is the File Origin dropdown select. This lets you select [which character set](https://docs.microsoft.com/windows/win32/intl/code-page-identifiers) was used to generate the file.
+There's only one thing you can configure on this dialog, which is the **File Origin** dropdown select. This lets you select [which character set](https://docs.microsoft.com/windows/win32/intl/code-page-identifiers) was used to generate the file.
 
 ![File culture selection for Text/CSV](../images/textfileorigindropdown.png)
 
@@ -64,9 +64,9 @@ The final dropdown allows you to select how you want to handle data type detecti
 
 ### Structured Text
 
-When Power Query can detect structure to your text file, it will treat it as a delimiter separated value file, and give you the same options available when opening a CSV--which is essentially just a file with an extension indicating the delimiter type.
+When Power Query can detect structure to your text file, it'll treat it as a delimiter separated value file, and give you the same options available when opening a CSV&mdash;which is essentially just a file with an extension indicating the delimiter type.
 
-For example, if you save the following below as a text file, it will be read as having a tab delimiter rather than unstructured text.
+For example, if you save the following below as a text file, it'll be read as having a tab delimiter rather than unstructured text.
 ```
 Column 1	Column 2	Column 3
 This is a string.	1	ABC123
@@ -79,15 +79,15 @@ This can be used for any kind of other delimeter based file.
 
 ### Editing Source
 
-When editing the source step, you will be presented with a slightly different dialog than when initially loading. Depending on what you are currently treating the file as (e.g. text vs csv) you will be presented with a screen with a variety of dropdowns.
+When editing the source step, you'll be presented with a slightly different dialog than when initially loading. Depending on what you are currently treating the file as (that is, text or csv) you'll be presented with a screen with a variety of dropdowns.
 
 ![Editing the source step on a query accessing a CSV file](../images/csveditsource.png)
 
-The 'Line breaks' dropdown will allow you to select if you want to apply linebreaks that are inside quotes or not. 
+The **Line breaks** dropdown will allow you to select if you want to apply linebreaks that are inside quotes or not. 
 
 ![Editing the line break style for a CSV file](../images/csveditlinebreak.png)
 
-For example, if we edit the 'structured' sample I provided above, we can add a line break.
+For example, if you edit the 'structured' sample provided above, you can add a line break.
 
 ```
 Column 1	Column 2	Column 3
@@ -96,15 +96,15 @@ This is a string.	1	"ABC
 This is also a string.	2	"DEF456"
 ```
 
-If 'Line breaks' is set to 'Ignore quoted line breaks', it will load as if there was no line break (with an extra space).
+If **Line breaks** is set to **Ignore quoted line breaks**, it will load as if there was no line break (with an extra space).
 
 ![Loading of a CSV file with quoted line breaks ignored](../images/csvignorelinebreaks.png)
 
-If 'Line breaks' is set to 'Apply all line breaks', it will load an extra row, with the content after the line breaks being the only content in that row (exact output may depend on structure of the file contents).
+If **Line breaks** is set to **Apply all line breaks**, it will load an extra row, with the content after the line breaks being the only content in that row (exact output may depend on structure of the file contents).
 
 ![Loading of a CSV file with quoted line breaks applied](../images/csvapplylinebreaks.png)
 
-The 'Open file as' will let you edit what you want to load the file as--important for troubleshooting. Note that for structured files that aren't technically CSVs (such as a tab separated value file saved as a text file), you should still have 'Open file as' set to CSV. This also determines which dropdowns are available in the rest of the dialog.
+The **Open file as** dropdown will let you edit what you want to load the file as&mdash;important for troubleshooting. Note that for structured files that aren't technically CSVs (such as a tab separated value file saved as a text file), you should still have **Open file as** set to CSV. This also determines which dropdowns are available in the rest of the dialog.
 
 ![Changing the type of file](../images/csveditloadas.png)
 
@@ -116,4 +116,4 @@ Due to how the connector works, in some cases a file may be requested twice when
 
 ### Unstructured text being interpreted as structured
 
-In rare cases, a document that has similar comma numbers across paragraphs might be interpreted to be a CSV. If this happens, edit the "Source" step in the Query Editor, and select "Text" instead of "CSV" in the "Open File As" dropdown select.
+In rare cases, a document that has similar comma numbers across paragraphs might be interpreted to be a CSV. If this happens, edit the **Source** step in the Query Editor, and select **Text** instead of **CSV** in the **Open File As** dropdown select.
