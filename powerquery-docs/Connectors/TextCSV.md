@@ -82,18 +82,36 @@ This can be used for any kind of other delimeter based file.
 
 ### Editing Source
 
-When editing the source step, you will be presented with a slightly different screen than when initially loading. Depending on what you are currently treating the file as (e.g. text vs csv) you will be presented with a screen with a variety of dropdowns. 
+When editing the source step, you will be presented with a slightly different dialog than when initially loading. Depending on what you are currently treating the file as (e.g. text vs csv) you will be presented with a screen with a variety of dropdowns.
 
 ![Editing the source step on a query accessing a CSV file](../images/csveditsource.png)
 
-One new one will also be available, which will led you edit what you want to load the file as--important for troubleshooting.
+The 'Line breaks' dropdown will allow you to select if you want to apply linebreaks that are inside quotes or not. 
+
+![Editing the line break style for a CSV file](../images/csveditlinebreak.png)
+
+For example, if we edit the 'structured' sample I provided above, we can add a line break.
+
+```
+Column 1	Column 2	Column 3
+This is a string.	1	"ABC
+123"
+This is also a string.	2	"DEF456"
+```
+
+If 'Line breaks' is set to 'Ignore quoted line breaks', it will load as if there was no line break (with an extra space).
+
+![Loading of a CSV file with quoted line breaks ignored](../images/csvignorelinebreaks.png)
+
+If 'Line breaks' is set to 'Apply all line breaks', it will load an extra row, with the content after the line breaks being the only content in that row (exact output may depend on structure of the file contents).
+
+![Loading of a CSV file with quoted line breaks applied](..images/csvapplylinebreaks.png)
+
+The 'Open file as' will let you edit what you want to load the file as--important for troubleshooting. Note that for structured files that aren't technically CSVs (such as a tab separated value file saved as a text file), you should still have 'Open file as' set to CSV. This also determines which dropdowns are available in the rest of the dialog.
 
 ![Changing the type of file](../images/csveditloadas.png)
 
 ## Troubleshooting
-
-
-### Placeholder - Quotestyle
 
 ### Loading Files from the Web
 
