@@ -105,7 +105,7 @@ If 'Line breaks' is set to 'Ignore quoted line breaks', it will load as if there
 
 If 'Line breaks' is set to 'Apply all line breaks', it will load an extra row, with the content after the line breaks being the only content in that row (exact output may depend on structure of the file contents).
 
-![Loading of a CSV file with quoted line breaks applied](..images/csvapplylinebreaks.png)
+![Loading of a CSV file with quoted line breaks applied](../images/csvapplylinebreaks.png)
 
 The 'Open file as' will let you edit what you want to load the file as--important for troubleshooting. Note that for structured files that aren't technically CSVs (such as a tab separated value file saved as a text file), you should still have 'Open file as' set to CSV. This also determines which dropdowns are available in the rest of the dialog.
 
