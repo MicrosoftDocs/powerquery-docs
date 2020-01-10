@@ -84,6 +84,8 @@
         href: Connectors/PostgreSQL.md
       - name: "SQL Server database"
         href: Connectors/SQLServer.md
+      - name: "Text/CSV"
+        href: Connectors/TextCSV.md
     - name: "Connecting to VSTS via OData"
       href: https://docs.microsoft.com/en-us/azure/devops/report/powerbi/odataquery-connect?view=azure-devops
   - name: "Connector Development Reference"
