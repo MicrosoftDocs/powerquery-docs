@@ -19,7 +19,7 @@ Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in 
 
 Authentication Types Supported: Database (Username/Password)
 
-Function Reference Documentation: [PostgreSQL.Database](https://docs.microsoft.com/en-us/powerquery-m/postgresql-database)
+Function Reference Documentation: [PostgreSQL.Database](https://docs.microsoft.com/powerquery-m/postgresql-database)
 
 >[!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
