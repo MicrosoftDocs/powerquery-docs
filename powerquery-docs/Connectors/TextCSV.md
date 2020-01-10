@@ -48,13 +48,13 @@ There's only one thing you can configure on this dialog, which is the **File Ori
 
 ### CSV
 
-You can find a sample CSV file [here](https://docs.microsoft.com/power-bi/service-comma-separated-value-files).
+You can find a sample CSV file [here](https://go.microsoft.com/fwlink/?LinkID=619356).
 
 In addition to file origin, CSV also supports specifying the delimeter, as well as how data type detection will be handled.
 
 ![Loading data from a csv file](../images/csvload.png)
 
-Delimeters available include colon, comma, equals sign, semicolon, space, tab, a custom delimeter (which can be any string), and a fixed width (chunking up text by some standard number of characters).
+Delimeters available include colon, comma, equals sign, semicolon, space, tab, a custom delimeter (which can be any string), and a fixed width (splitting up text by some standard number of characters).
 
 ![Delimeter selection for a csv file](../images/csvdelimeterdropdown.png)
 
