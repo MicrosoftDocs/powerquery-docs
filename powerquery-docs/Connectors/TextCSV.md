@@ -16,7 +16,7 @@ LocalizationGroup: reference
 Release State: General Availability
 Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in PowerBI.com (Enterprise Gateway), Dataflows in PowerApps.com (Enterprise Gateway), Excel
 
-Function Reference Documentation: [File.Contents](https://docs.microsoft.com/en-us/powerquery-m/file-contents), [Lines.FromBinary](https://docs.microsoft.com/en-us/powerquery-m/lines-frombinary), [CSV.Document](https://docs.microsoft.com/powerquery-m/csv-document)
+Function Reference Documentation: [File.Contents](https://docs.microsoft.com/powerquery-m/file-contents), [Lines.FromBinary](https://docs.microsoft.com/powerquery-m/lines-frombinary), [CSV.Document](https://docs.microsoft.com/powerquery-m/csv-document)
 
 ## Capabilities supported
 
@@ -47,7 +47,6 @@ There is only one thing you can configure on this dialog, which is the File Orig
 ![File culture selection for Text/CSV](../images/textfileorigindropdown.png)
 
 ### CSV
-(To read the Power BI Desktop specific file on CSV files, please see [here](https://docs.microsoft.com/en-us/power-bi/desktop-connect-csv).
 
 You can find a sample CSV file [here](https://docs.microsoft.com/power-bi/service-comma-separated-value-files).
 
