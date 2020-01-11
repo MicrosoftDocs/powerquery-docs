@@ -88,6 +88,8 @@
           href: Connectors/FHIR/FHIR-Authentication.md
         - name: Query Folding
           href: Connectors/FHIR/FHIR-QueryFolding.md
+        - name: Query Folding Patterns
+          href: Connectors/FHIR/FHIR-QueryFoldingPatterns.md
         - name: Data relationships
           href: Connectors/FHIR/FHIR-Relationships.md
       - name: "PostgreSQL"
