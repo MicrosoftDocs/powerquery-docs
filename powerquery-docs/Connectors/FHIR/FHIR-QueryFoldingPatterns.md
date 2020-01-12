@@ -18,7 +18,7 @@ This article describes Power Query patterns that will allow effective query fold
 The list of examples in this document is not exhaustive and does not cover all the search parameters which queries will fold to. However, we provide examples of the types of queries and parameters you might encounter. When you are constructing a filter query expression, consider whether the parameter you would like to filter on is:
 
 1. A primitive type (like `Patient.birthDate`)
-1. A complex type property, which would be a record property in Power Query (like `Patient.meta.lastUpdated`)
+1. A complex type, which would be a record in Power Query (like `Patient.meta`)
 1. An array of primitive types, which would be a list in Power Query (like `Patient.meta.profile`)
 1. An array of complex types, which would be a table in Power Query (like `Observation.code.coding`, which has a number of columns)
 
@@ -46,18 +46,34 @@ in
     FilteredPatients
 ```
 
-Filtering for active (boolean) patients:
+Filtering Patients by birth date range suing `and`, only the 1970s:
 
 <!-- 
-    DOC: Folding Patient.active (boolean)
+    DOC: Folding Patient.date AND (date)
 -->
 
 ```M
 let
     Patients = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Patient" ]}[Data],
 
-    // Fold: "active:missing=false&active=true"
-    FilteredPatients = Table.SelectRows(Patients, each [active] <> null and [active] = true)
+    // Fold: "birthdate=ge1970-01-01&birthdate=lt1980-01-01"
+    FilteredPatients = Table.SelectRows(Patients, each [birthDate] < #date(1980, 1, 1) and [birthDate] >= #date(1970, 1, 1))
+in
+    FilteredPatients
+```
+
+Filtering Patients by birthdate using `or`, not the 1970s:
+
+<!-- 
+    DOC: Folding Patient.date OR (date)
+-->
+
+```M
+let
+    Patients = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Patient" ]}[Data],
+
+    // Fold: "birthdate=ge1980-01-01,lt1970-01-01"
+    FilteredPatients = Table.SelectRows(Patients, each [birthDate] >= #date(1980, 1, 1) or [birthDate] < #date(1970, 1, 1))
 in
     FilteredPatients
 ```
@@ -106,6 +122,22 @@ let
 
     // Fold: "gender=male"
     FilteredPatients = Table.SelectRows(Patients, each [gender] = "male")
+in
+    FilteredPatients
+```
+
+Filtering to keep only patients that are not male (includes other):
+
+<!-- 
+    DOC: Folding Patient.gender not male (code)
+-->
+
+```M
+let
+    Patients = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Patient" ]}[Data],
+
+    // Fold: "gender:not=male"
+    FilteredPatients = Table.SelectRows(Patients, each [gender] <> "male")
 in
     FilteredPatients
 ```
@@ -304,6 +336,38 @@ in
     FiltertedConsents
 ```
 
+Filtering text field of complex types:
+
+<!-- 
+    DOC: Folding Observation.code.text, equal
+-->
+
+```M
+let
+    Observations = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Observation" ]}[Data],
+
+    // Fold: "code:text=t"
+    FilteredObservations = Table.SelectRows(Observations, each [code][text] = "t")
+in
+    FilteredObservations
+```
+
+Filtering on text field (starts with):
+
+<!-- 
+    DOC: Folding Observation.code.text, startsWith
+-->
+
+```M
+let
+    Observations = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Observation" ]}[Data],
+
+    // Fold: "code:text=t"
+    FilteredObservations = Table.SelectRows(Observations, each Text.StartsWith([code][text], "t"))
+in
+    FilteredObservations
+```
+
 ## Filtering on lists properties
 
 Filtering Patients on profile:
@@ -359,7 +423,7 @@ in
 Filtering Patients on exact family name:
 
 <!--
-    DOC: Folding Patient.identifier
+    DOC: Folding Patient.name.family (exact)
 -->
 
 ```M
@@ -372,10 +436,40 @@ in
     FilteredPatients
 ```
 
-Filtering Patients on family name starts with:
+Filtering Patients on family name starts with `John` or `Paul`:
 
 <!--
-    DOC: Folding Patient.identifier
+    DOC: Folding Patient.name.family (startsWith OR)
+-->
+
+```M
+let
+    Patients = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Patient" ]}[Data],
+
+    // Fold: "family=John,Paul"
+    FilteredPatients = Table.SelectRows(Patients, each Table.MatchesAnyRows([name], each Text.StartsWith([family], "John")) or Table.MatchesAnyRows([name], each Text.StartsWith([family], "Paul")))
+in
+    FilteredPatients
+```
+
+Filtering Patients on family name starts with `John` and given starts with `Paul`:
+
+<!--
+    DOC: Folding Patient.name.family and patient.name.given
+-->
+
+```M
+let
+    Patients = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Patient" ]}[Data],
+
+    // Fold: "family=John&given=Paul"
+    FilteredPatients = Table.SelectRows(Patients, each Table.MatchesAnyRows([name], each Text.StartsWith([family], "John")) and Table.MatchesAnyRows([name], each List.MatchesAny([given], each Text.StartsWith(_, "Paul"))))
+in
+    FilteredPatients
+```
+
+<!--
+    DOC: Folding Patient.name.family (startsWith)
 -->
 
 ```M
@@ -436,7 +530,39 @@ in
     FilteredObservations
 ```
 
+Filtering on Observation code and text (CodeableConcept):
+
+<!--
+    DOC: Folding Observation.code.coding and Observation.code.text
+-->
+
+```M
+let
+    Observations = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Observation" ]}[Data],
+
+    // Fold: "code:text=t&code=s|c"
+    FilteredObservations = Table.SelectRows(Observations, each Table.MatchesAnyRows([code][coding], each [system] = "s" and [code] = "c") and [code][text] = "t")
+in
+    FilteredObservations
+```
+
 ## Filtering multi-level nested properties
+
+Filtering Patients on family name starts with `John` and given starts with `Paul`:
+
+<!--
+    DOC: Folding Patient.name.family and patient.name.given
+-->
+
+```M
+let
+    Patients = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Patient" ]}[Data],
+
+    // Fold: "family=John&given=Paul"
+    FilteredPatients = Table.SelectRows(Patients, each Table.MatchesAnyRows([name], each Text.StartsWith([family], "John")) and Table.MatchesAnyRows([name], each List.MatchesAny([given], each Text.StartsWith(_, "Paul"))))
+in
+    FilteredPatients
+```
 
 Filtering only vital signs from Observations:
 
@@ -466,6 +592,20 @@ let
 
     // Fold: "category=s|c"
     FilteredObservations = Table.SelectRows(Observations, each Table.MatchesAnyRows([category], each Table.MatchesAnyRows([coding], each [system] = "s" and [code] = "c")))
+in
+    FilteredObservations
+```
+
+<!--
+    DOC: Folding Observation.category.coding with system and code (OR)
+-->
+
+```M
+let
+    Observations = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Observation" ]}[Data],
+
+    // Fold: "category=s1|c1,s2|c2"
+    FilteredObservations = Table.SelectRows(Observations, each Table.MatchesAnyRows([category], each Table.MatchesAnyRows([coding], each ([system] = "s1" and [code] = "c1") or ([system] = "s2" and [code] = "c2"))))
 in
     FilteredObservations
 ```
