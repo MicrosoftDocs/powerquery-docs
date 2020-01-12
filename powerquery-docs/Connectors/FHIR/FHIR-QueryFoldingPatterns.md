@@ -18,11 +18,13 @@ This article describes Power Query patterns that will allow effective query fold
 The list of examples in this document is not exhaustive and does not cover all the search parameters which queries will fold to. However, we provide examples of the types of queries and parameters you might encounter. When you are constructing a filter query expression, consider whether the parameter you would like to filter on is:
 
 1. A primitive type (like `Patient.birthDate`)
-1. A complex type property (like `Patient.meta.lastUpdated`)
-1. A list (like `Patient.meta.profile`)
-1. A table (like `Observation.code.coding`, which has a number of columns)
+1. A complex type property, which would be a record property in Power Query (like `Patient.meta.lastUpdated`)
+1. An array of primitive types, which would be a list in Power Query (like `Patient.meta.profile`)
+1. An array of complex types, which would be a table in Power Query (like `Observation.code.coding`, which has a number of columns)
 
-And then consult the list of examples below.
+And then consult the list of examples below. There also examples of combining these types of filtering patters in multi-level, nested filtering statements.
+
+In each example you will find a filtering expression (`Table.SelectRows`) and right above each filtering statement a comment `// Fold: ...` explaining what search parameters and values the expression will fold to.
 
 ## Filtering on primitive types
 
@@ -301,3 +303,196 @@ let
 in
     FiltertedConsents
 ```
+
+## Filtering on lists properties
+
+Filtering Patients on profile:
+
+<!--
+    DOC: Folding Patient.meta.profile
+-->
+
+```M
+let
+    Patients = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Patient" ]}[Data],
+
+    // Fold: "_profile=http://myprofile"
+    FilteredPatients = Table.SelectRows(Patients, each List.MatchesAny([meta][profile], each _ = "http://myprofile"))
+in
+    FilteredPatients
+```
+
+Filtering AllergyIntolerance on category:
+
+<!--
+    DOC: Folding AllergyIntolerance.category
+-->
+
+```M
+let
+    AllergyIntolerances = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "AllergyIntolerance" ]}[Data],
+
+    // Fold: "category=food"
+    FilteredAllergyIntolerances = Table.SelectRows(AllergyIntolerances, each List.MatchesAny([category], each _ = "food"))
+in
+    FilteredAllergyIntolerances
+```
+
+Filtering AllergyIntolerance on missing category:
+
+<!--
+    DOC: Folding AllergyIntolerance.category missing
+-->
+
+```M
+let
+    AllergyIntolerances = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "AllergyIntolerance" ]}[Data],
+
+    // Fold: "category:missing=true"
+    FilteredAllergyIntolerances = Table.SelectRows(AllergyIntolerances, each List.MatchesAll([category], each _ = null))
+in
+    FilteredAllergyIntolerances
+```
+
+## Filtering on table properties
+
+Filtering Patients on exact family name:
+
+<!--
+    DOC: Folding Patient.identifier
+-->
+
+```M
+let
+    Patients = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Patient" ]}[Data],
+
+    // Fold: "family:exact=Johnson"
+    FilteredPatients = Table.SelectRows(Patients, each Table.MatchesAnyRows([name], each [family] = "Johnson"))
+in
+    FilteredPatients
+```
+
+Filtering Patients on family name starts with:
+
+<!--
+    DOC: Folding Patient.identifier
+-->
+
+```M
+let
+    Patients = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Patient" ]}[Data],
+
+    // Fold: "family=John"
+    FilteredPatients = Table.SelectRows(Patients, each Table.MatchesAnyRows([name], each Text.StartsWith([family], "John")))
+in
+    FilteredPatients
+```
+
+Filtering on Goal due date:
+
+<!--
+    DOC: Folding Goal.target.due.date
+-->
+
+```M
+let
+    Goals = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Goal" ]}[Data],
+
+    // Fold: "target-date=gt2020-03-01"
+    FilteredGoals = Table.SelectRows(Goals, each Table.MatchesAnyRows([target], each [due][date] > #date(2020,3,1)))
+in
+    FilteredGoals
+```
+
+Filtering Patient on identifier:
+
+<!--
+    DOC: Folding Patient.identifier
+-->
+
+```M
+let
+    Patients = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Patient" ]}[Data],
+
+    // Fold: "identifier=s|v"
+    FilteredPatients = Table.SelectRows(Patients, each Table.MatchesAnyRows([identifier], each [system] = "s" and _[value] = "v"))
+in
+    FilteredPatients
+```
+
+Filtering on Observation code (CodeableConcept):
+
+<!--
+    DOC: Folding Observation.code.coding
+-->
+
+```M
+let
+    Observations = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Observation" ]}[Data],
+
+    // Fold: "code=s|c"
+    FilteredObservations = Table.SelectRows(Observations, each Table.MatchesAnyRows([code][coding], each [system] = "s" and [code] = "c"))
+in
+    FilteredObservations
+```
+
+## Filtering multi-level nested properties
+
+Filtering only vital signs from Observations:
+
+<!--
+    DOC: Folding Observation.category.coding vital-signs
+-->
+
+```M
+let
+    Observations = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Observation" ]}[Data],
+
+    // Fold: "category=vital-signs"
+    FilteredObservations = Table.SelectRows(Observations, each Table.MatchesAnyRows([category], each Table.MatchesAnyRows([coding], each [code] = "vital-signs")))
+in
+    FilteredObservations
+```
+
+Filtering Observations on category coding with system and code:
+
+<!--
+    DOC: Folding Observation.category.coding with system and code
+-->
+
+```M
+let
+    Observations = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Observation" ]}[Data],
+
+    // Fold: "category=s|c"
+    FilteredObservations = Table.SelectRows(Observations, each Table.MatchesAnyRows([category], each Table.MatchesAnyRows([coding], each [system] = "s" and [code] = "c")))
+in
+    FilteredObservations
+```
+
+Filtering nested list in table:
+
+<!--
+    DOC: Folding AuditEvent.agent.policy (nested list property)
+-->
+
+```M
+let
+    AuditEvents = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "AuditEvent" ]}[Data],
+
+    // Fold: "policy=http://mypolicy"
+    FilteredAuditEvents = Table.SelectRows(AuditEvents, each Table.MatchesAnyRows([agent], each List.MatchesAny([policy], each _ = "http://mypolicy")))
+in
+    FilteredAuditEvents
+```
+
+## Summary
+
+Query folding turns Power Query filtering expressions into FHIR search parameters. The FHIR Power Query connector recognizes certain patterns and attempts to identify matching search parameters. Recognizing those patterns will help you write more efficient Power Query expressions.
+
+## Next steps
+
+In this article, we reviewed some classes of filtering expressions that will fold to FHIR search parameters. Next read about establishing relationships between FHIR resources.
+
+>[!div class="nextstepaction"]
+>[FHIR Power Query relationships](FHIR-Relationships.md)
