@@ -46,7 +46,7 @@ in
     FilteredPatients
 ```
 
-Filtering Patients by birth date range suing `and`, only the 1970s:
+Filtering Patients by birth date range using `and`, only the 1970s:
 
 <!-- 
     DOC: Folding Patient.date AND (date)
@@ -436,6 +436,22 @@ in
     FilteredPatients
 ```
 
+Filtering on Patients where family name starts with:
+
+<!--
+    DOC: Folding Patient.name.family (startsWith)
+-->
+
+```M
+let
+    Patients = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Patient" ]}[Data],
+
+    // Fold: "family=John"
+    FilteredPatients = Table.SelectRows(Patients, each Table.MatchesAnyRows([name], each Text.StartsWith([family], "John")))
+in
+    FilteredPatients
+```
+
 Filtering Patients on family name starts with `John` or `Paul`:
 
 <!--
@@ -447,7 +463,7 @@ let
     Patients = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Patient" ]}[Data],
 
     // Fold: "family=John,Paul"
-    FilteredPatients = Table.SelectRows(Patients, each Table.MatchesAnyRows([name], each Text.StartsWith([family], "John")) or Table.MatchesAnyRows([name], each Text.StartsWith([family], "Paul")))
+    FilteredPatients = Table.SelectRows(Patients, each Table.MatchesAnyRows([name], each Text.StartsWith([family], "John") or Text.StartsWith([family], "Paul")))
 in
     FilteredPatients
 ```
@@ -464,20 +480,6 @@ let
 
     // Fold: "family=John&given=Paul"
     FilteredPatients = Table.SelectRows(Patients, each Table.MatchesAnyRows([name], each Text.StartsWith([family], "John")) and Table.MatchesAnyRows([name], each List.MatchesAny([given], each Text.StartsWith(_, "Paul"))))
-in
-    FilteredPatients
-```
-
-<!--
-    DOC: Folding Patient.name.family (startsWith)
--->
-
-```M
-let
-    Patients = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Patient" ]}[Data],
-
-    // Fold: "family=John"
-    FilteredPatients = Table.SelectRows(Patients, each Table.MatchesAnyRows([name], each Text.StartsWith([family], "John")))
 in
     FilteredPatients
 ```
