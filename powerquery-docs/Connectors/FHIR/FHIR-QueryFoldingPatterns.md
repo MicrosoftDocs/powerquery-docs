@@ -418,6 +418,23 @@ in
     FilteredAllergyIntolerances
 ```
 
+Filtering AllergyIntolerance on simpler form of missing category:
+
+<!--
+    DOC: Folding AllergyIntolerance.category missing ([category] = null)
+-->
+
+```M
+let
+    AllergyIntolerances = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "AllergyIntolerance" ]}[Data],
+
+    // Fold: "category:missing=true"
+    FilteredAllergyIntolerances = Table.SelectRows(AllergyIntolerances, each [category] = null)
+in
+    FilteredAllergyIntolerances
+```
+
+
 ## Filtering on table properties
 
 Filtering Patients on exact family name:
