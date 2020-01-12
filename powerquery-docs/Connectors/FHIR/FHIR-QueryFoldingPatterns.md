@@ -15,11 +15,18 @@ This article describes Power Query patterns that will allow effective query fold
 
 ## How to use this document
 
-> TODO: Description of pattern organization
+The list of examples in this document is not exhaustive and does not cover all the search parameters which queries will fold to. When you are constructing a query think about whether the parameter you would like to filter on is:
 
-## Filtering on root properties
+1. A primitive root property (like `Patient.birthDate`)
+1. A member of a record (like `Patient.meta.lastUpdated`)
+1. A list (like `Patient.meta.profile`)
+1. A table (like `Observation.code.coding`, which has a number of columns)
 
-Searching for patients by birth date:
+## Filtering on primitive root properties
+
+Root properties are primitive type (string, date, etc.) fields at the root of a resource. Many of them support folding. This section shows examples of searching different types of primitive root level properties.
+
+Filtering patients by birth date:
 
 <!-- 
     DOC: Folding Patient.date (date)
@@ -34,6 +41,86 @@ let
 in
     FilteredPatients
 ```
+
+Filtering for active (boolean) patients:
+
+<!-- 
+    DOC: Folding Patient.active (boolean)
+-->
+
+```M
+let
+    Patients = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Patient" ]}[Data],
+
+    // Fold: "active:missing=false&active=true"
+    FilteredPatients = Table.SelectRows(Patients, each [active] <> null and [active] = true)
+in
+    FilteredPatients
+```
+
+Alternative search for active patients:
+
+<!-- 
+    DOC: Folding Patient.active (boolean) interpreted as true
+-->
+
+```M
+let
+    Patients = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Patient" ]}[Data],
+
+    // Fold: "active=true"
+    FilteredPatients = Table.SelectRows(Patients, each [active])
+in
+    FilteredPatients
+```
+
+Alternative search for patients where active not true (could include missing):
+
+<!-- 
+    DOC: Folding Patient.active (boolean) interpreted as true
+-->
+
+```M
+let
+    Patients = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Patient" ]}[Data],
+
+    // Fold: "active:not=true"
+    FilteredPatients = Table.SelectRows(Patients, each [active] <> true)
+in
+    FilteredPatients
+```
+
+Filtering to keep only male patients:
+
+```M
+let
+    Patients = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Patient" ]}[Data],
+
+    // Fold: "gender=male"
+    FilteredPatients = Table.SelectRows(Patients, each [gender] = "male")
+in
+    FilteredPatients
+```
+
+Filtering Observations with status final (code):
+
+<!-- 
+    DOC: Folding Observation.status (code)
+-->
+
+```M
+let
+    Observations = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Observation" ]}[Data],
+
+    // Fold: "status=final"
+    FilteredObservations = Table.SelectRows(Observations, each [status] = "final")
+in
+    FilteredObservations
+```
+
+## Filtering on record property field
+
+Records in Power Query are a collection of fields, an example would the the `meta` field, which is present on all resources. This section shows examples of searching property fields:
 
 Searching on nested property:
 
@@ -51,4 +138,3 @@ in
     FilteredPatients
 ```
 
-> TODO: Add More folding pattern examples 
