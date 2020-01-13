@@ -15,7 +15,7 @@ This article describes how to establish [relationships](https://docs.microsoft.c
 
 ## Introduction
 
-FHIR resources are related to each other, e.g. an `Observation` references a subject (`Patient`):
+FHIR resources are related to each other, for example, an `Observation` that references a subject (`Patient`):
 
 ```json
 {
@@ -29,21 +29,21 @@ FHIR resources are related to each other, e.g. an `Observation` references a sub
 }
 ```
 
-Some of the resource reference fields in FHIR can refer to multiple different types of resources (e.g. `Practitioner` or `Organization`). To facilitate an easier way to resolve references, the FHIR Power Query connector adds a synthetic field to all imported resources call `<referenceId>`, which contains a concatenation of the resource type and the resource id.
+Some of the resource reference fields in FHIR can refer to multiple different types of resources (for example, `Practitioner` or `Organization`). To facilitate an easier way to resolve references, the FHIR Power Query connector adds a synthetic field to all imported resources call `<referenceId>`, which contains a concatenation of the resource type and the resource ID.
 
 To establish a relationship between two tables, you can connect a specific reference field on a resource to the corresponding `<referenceId>` field on the resource you would like it linked to. In simple cases, Power BI will even detect this for you automatically.
 
 ## Establishing FHIR relationships in Power BI
 
-In this section, we will show an example of establishing a relationship between the `Observation.subject.reference` field and the `<referenceId>` field on `Patient`.
+In this section, we'll show an example of establishing a relationship between the `Observation.subject.reference` field and the `<referenceId>` field on `Patient`.
 
-1. When importing data, select the `Patient` and `Observation` tables:
+1. When importing data, select the **Patient** and **Observation** tables:
 
     ![FHIR Navigation Two Resources](FHIR-Navigate-TwoResources.png)
 
-    Then click **Transform Data**.
+    Then select **Transform Data**.
 
-1. Expand the `subject` column on `Observation` to reveal `subject.reference`:
+1. Expand the **subject** column on `Observation` to reveal `subject.reference`:
 
     ![Expand subject reference](FHIR-ExpandSubject.png)
 
@@ -53,7 +53,7 @@ In this section, we will show an example of establishing a relationship between 
 
 1. Make any other modifications you need to the query and save the modified query.
 
-1. Click **Manage Relationships** in the Power BI client:
+1. Select **Manage Relationships** in the Power BI client:
 
     ![Manage relationships](FHIR-ManageRelationships.png)
 
@@ -72,11 +72,11 @@ In this section, we will show an example of establishing a relationship between 
 
 ## Summary
 
-Resources in FHIR are related. These relationships need to be established on data imported with the FHIR Power Query connector. The `<referenceId>` field is a synthetic field added to all imported FHIR data which will help establish the relationships.
+Resources in FHIR are related. These relationships need to be established on data imported with the FHIR Power Query connector. The `<referenceId>` field is a synthetic field added to all imported FHIR data that will help establish the relationships.
 
 ## Next steps
 
-In this article, you have learned how to establish relationships between tables imported with the FHIR Power Query connector. Next explore query folding with the FHIR Power Query connector.
+In this article, you've learned how to establish relationships between tables imported with the FHIR Power Query connector. Next, explore query folding with the FHIR Power Query connector.
 
 >[!div class="nextstepaction"]
 >[FHIR Power Query folding](FHIR-QueryFolding.md)
