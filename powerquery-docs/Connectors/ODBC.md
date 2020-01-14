@@ -46,6 +46,6 @@ To enable folding support for Table.FirstN click on 'Detect' to find supported r
 
 ![Drop down options: Top, Limit, Limit and Offset, ANSI SQL compatible](../images/ODBCrowreduction.png)
 
-This option is applicable to Odbc.DataSource.
+This option is applicable when not using a native SQL statement. This is due to the fact that when using a native SQL statement, a different function is used (Odbc.Query(), if you look at it in the Advanced Editor), which doesn't support the "supported row reduction clauses" capability.
 
 Once you're done, select Connect. Select the authentication type and input those credentials in the dialogue when prompted.
