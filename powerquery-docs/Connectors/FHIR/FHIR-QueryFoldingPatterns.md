@@ -11,24 +11,24 @@ LocalizationGroup: reference
 
 # FHIR Query Folding Patterns
 
-This article describes Power Query patterns that will allow effective query folding in FHIR. It assumes that you are familiar with using the [FHIR Power Query connector](FHIR.md) and understand the basic motivation and principles for [Power Query folding in FHIR](FHIR-QueryFolding.md).
+This article describes Power Query patterns that will allow effective query folding in FHIR. It assumes that you are familiar with with using the [FHIR Power Query connector](FHIR.md) and understand the basic motivation and principles for [Power Query folding in FHIR](FHIR-QueryFolding.md).
 
 ## How to use this document
 
-The list of examples in this document is not exhaustive and doesn't cover all the search parameters that queries will fold to. However, we provide examples of the types of queries and parameters you might encounter. When you are constructing a filter query expression, consider whether the parameter you would like to filter on is:
+The list of examples in this document is not exhaustive and does not cover all the search parameters which queries will fold to. However, we provide examples of the types of queries and parameters you might encounter. When you are constructing a filter query expression, consider whether the parameter you would like to filter on is:
 
-* A primitive type (like `Patient.birthDate`)
-* A complex type, which would be a record in Power Query (like `Patient.meta`)
-* An array of primitive types, which would be a list in Power Query (like `Patient.meta.profile`)
-* An array of complex types, which would be a table in Power Query (like `Observation.code.coding`, which has a number of columns)
+1. A primitive type (like `Patient.birthDate`)
+1. A complex type, which would be a record in Power Query (like `Patient.meta`)
+1. An array of primitive types, which would be a list in Power Query (like `Patient.meta.profile`)
+1. An array of complex types, which would be a table in Power Query (like `Observation.code.coding`, which has a number of columns)
 
-And then consult the list of examples below. There are also examples of combining these types of filtering patters in multi-level, nested filtering statements.
+And then consult the list of examples below. There also examples of combining these types of filtering patters in multi-level, nested filtering statements.
 
-In each example you'll find a filtering expression (`Table.SelectRows`), and right above each filtering statement a comment `// Fold: ...` explaining what search parameters and values the expression will fold to.
+In each example you will find a filtering expression (`Table.SelectRows`) and right above each filtering statement a comment `// Fold: ...` explaining what search parameters and values the expression will fold to.
 
 ## Filtering on primitive types
 
-Root properties are at the root of a resource and typically of a primitive type (string, date, etc.), but they can also be coding fields (for example, `Encoding.class`). This section shows examples of searching different types of primitive root level properties.
+Root properties are at the root of a resource and typically of a primitive type (string, date, etc.), but they can also be coding fields (e.g. `Encoding.class`). This section shows examples of searching different types of primitive root level properties.
 
 Filtering patients by birth date:
 
@@ -264,7 +264,7 @@ Filtering on Quantity equal value (quantity):
 
 ```M
 let
-    ChargeItems = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "ChargeItems" ]}[Data],
+    ChargeItems = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "ChargeItem" ]}[Data],
 
     // Fold: "quantity=1"
     FilteredChargeItems = Table.SelectRows(ChargeItems, each [quantity][value] = 1)
@@ -280,7 +280,7 @@ Filtering on Quantity greater than value (quantity):
 
 ```M
 let
-    ChargeItems = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "ChargeItems" ]}[Data],
+    ChargeItems = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "ChargeItem" ]}[Data],
 
     // Fold: "quantity=gt1.001"
     FilteredChargeItems = Table.SelectRows(ChargeItems, each [quantity][value] > 1.001)
@@ -296,7 +296,7 @@ Filtering on Quantity with value system and code (quantity):
 
 ```M
 let
-    ChargeItems = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "ChargeItems" ]}[Data],
+    ChargeItems = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "ChargeItem" ]}[Data],
 
     // Fold: "quantity=lt1.001|s|c"
     FilteredChargeItems = Table.SelectRows(ChargeItems, each [quantity][value] < 1.001 and [quantity][system] = "s" and [quantity][code] = "c")
@@ -312,7 +312,7 @@ Filtering on period, starts after (period):
 
 ```M
 let
-    Consents = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Consents" ]}[Data],
+    Consents = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Consent" ]}[Data],
 
     // Fold: "period=sa2010-01-01T00:00:00.000+00:00"
     FiltertedConsents = Table.SelectRows(Consents, each [provision][period][start] > #datetimezone(2010, 1, 1, 0, 0, 0, 0, 0))
@@ -328,7 +328,7 @@ Filtering on period, ends before (period):
 
 ```M
 let
-    Consents = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Consents" ]}[Data],
+    Consents = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Consent" ]}[Data],
 
     // Fold: "period=eb2010-01-01T00:00:00.000+00:00"
     FiltertedConsents = Table.SelectRows(Consents, each [provision][period][end] < #datetimezone(2010, 1, 1, 0, 0, 0, 0, 0))
@@ -615,6 +615,8 @@ in
     FilteredObservations
 ```
 
+Filtering Observations on multiple categories (OR)
+
 <!--
     DOC: Folding Observation.category.coding with system and code (OR)
 -->
@@ -651,7 +653,7 @@ Query folding turns Power Query filtering expressions into FHIR search parameter
 
 ## Next steps
 
-In this article, we reviewed some classes of filtering expressions that will fold to FHIR search parameters. Next, read about establishing relationships between FHIR resources.
+In this article, we reviewed some classes of filtering expressions that will fold to FHIR search parameters. Next read about establishing relationships between FHIR resources.
 
 >[!div class="nextstepaction"]
 >[FHIR Power Query relationships](FHIR-Relationships.md)
