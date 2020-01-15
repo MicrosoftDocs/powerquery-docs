@@ -22,13 +22,13 @@ The list of examples in this document is not exhaustive and does not cover all t
 1. An array of primitive types, which would be a list in Power Query (like `Patient.meta.profile`)
 1. An array of complex types, which would be a table in Power Query (like `Observation.code.coding`, which has a number of columns)
 
-And then consult the list of examples below. There also examples of combining these types of filtering patters in multi-level, nested filtering statements and more complicated filtering expressions that fold to [composite search parameters](https://www.hl7.org/fhir/search.html#combining)
+And then consult the list of examples below. There are also examples of combining these types of filtering patters in multi-level, nested filtering statements. Finally, the this article provides more complicated filtering expressions that fold to [composite search parameters](https://www.hl7.org/fhir/search.html#combining)
 
 In each example you will find a filtering expression (`Table.SelectRows`) and right above each filtering statement a comment `// Fold: ...` explaining what search parameters and values the expression will fold to.
 
 ## Filtering on primitive types
 
-Root properties are at the root of a resource and typically of a primitive type (string, date, etc.), but they can also be coding fields (e.g. `Encoding.class`). This section shows examples of searching different types of primitive root level properties.
+Root properties are at the root of a resource and typically of a primitive type (string, date, etc.), but they can also be coding fields (for example `Encoding.class`). This section shows examples of searching different types of primitive root level properties.
 
 Filtering patients by birth date:
 
@@ -648,7 +648,7 @@ in
 
 ## Filtering with composite search parameters
 
-FHIR has [composite search](https://www.hl7.org/fhir/search.html#combining) parameters that allow filtering on multiple fields in a resource at the same time. For example, one can search for observations with specific code *and* a specific value (a `code-value-quantity`) search. The FHIR Power Query connector will attempt to recognize filtering expressions that map to such composite search parameters. This sections lists some examples of these patters. In the context of analyzing FHIR data, it is especially the composite search parameters on the `Observation` resource that are of interest.
+FHIR has [composite search](https://www.hl7.org/fhir/search.html#combining) parameters that allow filtering on multiple fields in a resource at the same time. For example, one can search for Observations with specific code *and* a specific value (a `code-value-quantity` search parameter). The FHIR Power Query connector will attempt to recognize filtering expressions that map to such composite search parameters. This sections lists some examples of these patterns. In the context of analyzing FHIR data, it is especially the composite search parameters on the `Observation` resource that are of interest.
 
 Filtering Observations on code and value quantity, body height greater than 150:
 
@@ -682,7 +682,7 @@ in
     FilteredObservations
 ```
 
-Filtering on multiple component code value quantities (AND), diastolic blood pressure higher than 90 and systolic blood pressure higher than 140:
+Filtering on multiple component code value quantities (AND), diastolic blood pressure greater than 90 and systolic blood pressure greater than 140:
 
 <!--
     DOC: Folding Observation component-code-value-quantity (AND)
