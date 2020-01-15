@@ -660,7 +660,7 @@ Filtering Observations on code and value quantity, body height greater than 150:
 let
     Observations = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Observation" ]}[Data],
 
-    // Fold: "code-value-quantity=http://loinc|8302-2$gt150"
+    // Fold: "code-value-quantity=http://loinc.org|8302-2$gt150"
     FilteredObservations = Table.SelectRows(Observations, each Table.MatchesAnyRows([code][coding], each [system] = "http://loinc.org" and [code] = "8302-2") and [value][Quantity][value] > 150)
 in
     FilteredObservations
@@ -676,8 +676,8 @@ Filtering on Observation component code and value quantity, systolic blood press
 let
     Observations = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Observation" ]}[Data],
 
-    // Fold: "component-code-value-quantity=http://loinc|8302-2$gt150"
-    FilteredObservations = Table.SelectRows(Observations, each Table.MatchesAnyRows([component], each Table.MatchesAnyRows([code][coding], each [system] = "http://loinc.org" and [code] = "8480-6") and [value][Quantity][value] > 150))
+    // Fold: "component-code-value-quantity=http://loinc.org|8480-6$gt140"
+    FilteredObservations = Table.SelectRows(Observations, each Table.MatchesAnyRows([component], each Table.MatchesAnyRows([code][coding], each [system] = "http://loinc.org" and [code] = "8480-6") and [value][Quantity][value] > 140))
 in
     FilteredObservations
 ```
@@ -692,23 +692,8 @@ Filtering on multiple component code value quantities (AND), diastolic blood pre
 let
     Observations = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Observation" ]}[Data],
 
-    // Fold: "component-code-value-quantity=http://loinc.org|8462-4$gt90&component-code-value-quantity=http://loinc.org|8302-2$gt140"
-    FilteredObservations = Table.SelectRows(Observations, each 
-        Table.MatchesAnyRows([component], each Table.MatchesAnyRows([code][coding], each [system] = "http://loinc.org" and [code] = "8462-4") and [value][Quantity][value] > 90) and
-        Table.MatchesAnyRows([component], each Table.MatchesAnyRows([code][coding], each [system] = "http://loinc.org" and [code] = "8480-6") and [value][Quantity][value] > 140)
-    )
-in
-    FilteredObservations
-```
-
-Filtering on Observation where measurement is either on the main resource or in the component array:
-
-```M
-let
-    Observations = Fhir.Contents("https://jsfhirsrvr.azurewebsites.net", null){[Name = "Observation" ]}[Data],
-
-    // Fold: "combo-code-value-quantity=http://loinc.org|8302-2$gt150"
-    FilteredObservations = Table.SelectRows(Observations, each (Table.MatchesAnyRows([code][coding], each [system] = "http://loinc.org" and [code] = "8302-2") and [value][Quantity][value] > 150) or (Table.MatchesAnyRows([component], each Table.MatchesAnyRows([code][coding], each [system] = "http://loinc.org" and [code] = "8302-2") and [value][Quantity][value] > 150)))
+    // Fold: "component-code-value-quantity=http://loinc.org|8462-4$gt90&component-code-value-quantity=http://loinc.org|8480-6$gt140"
+    FilteredObservations = Table.SelectRows(Observations, each Table.MatchesAnyRows([component], each Table.MatchesAnyRows([code][coding], each [system] = "http://loinc.org" and [code] = "8462-4") and [value][Quantity][value] > 90) and Table.MatchesAnyRows([component], each Table.MatchesAnyRows([code][coding], each [system] = "http://loinc.org" and [code] = "8480-6") and [value][Quantity][value] > 140))
 in
     FilteredObservations
 ```
