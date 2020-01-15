@@ -495,7 +495,11 @@ let
     Patients = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Patient" ]}[Data],
 
     // Fold: "family=John&given=Paul"
-    FilteredPatients = Table.SelectRows(Patients, each Table.MatchesAnyRows([name], each Text.StartsWith([family], "John")) and Table.MatchesAnyRows([name], each List.MatchesAny([given], each Text.StartsWith(_, "Paul"))))
+    FilteredPatients = Table.SelectRows(
+        Patients,
+        each
+            Table.MatchesAnyRows([name], each Text.StartsWith([family], "John")) and
+            Table.MatchesAnyRows([name], each List.MatchesAny([given], each Text.StartsWith(_, "Paul"))))
 in
     FilteredPatients
 ```
@@ -577,7 +581,12 @@ let
     Patients = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Patient" ]}[Data],
 
     // Fold: "family=John&given=Paul"
-    FilteredPatients = Table.SelectRows(Patients, each Table.MatchesAnyRows([name], each Text.StartsWith([family], "John")) and Table.MatchesAnyRows([name], each List.MatchesAny([given], each Text.StartsWith(_, "Paul"))))
+    FilteredPatients =
+        Table.SelectRows(
+            Patients,
+            each
+                Table.MatchesAnyRows([name], each Text.StartsWith([family], "John")) and
+                Table.MatchesAnyRows([name], each List.MatchesAny([given], each Text.StartsWith(_, "Paul"))))
 in
     FilteredPatients
 ```
@@ -625,7 +634,18 @@ let
     Observations = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Observation" ]}[Data],
 
     // Fold: "category=s1|c1,s2|c2"
-    FilteredObservations = Table.SelectRows(Observations, each Table.MatchesAnyRows([category], each Table.MatchesAnyRows([coding], each ([system] = "s1" and [code] = "c1") or ([system] = "s2" and [code] = "c2"))))
+    FilteredObservations =
+        Table.SelectRows(
+            Observations,
+            each
+                Table.MatchesAnyRows(
+                    [category],
+                    each
+                        Table.MatchesAnyRows(
+                            [coding],
+                            each 
+                                ([system] = "s1" and [code] = "c1") or
+                                ([system] = "s2" and [code] = "c2"))))
 in
     FilteredObservations
 ```
@@ -648,7 +668,7 @@ in
 
 ## Filtering with composite search parameters
 
-FHIR has [composite search](https://www.hl7.org/fhir/search.html#combining) parameters that allow filtering on multiple fields on an a complex type within a resource or at the root of the resource at the same time. For example, one can search for Observations with specific code *and* a specific value (a `code-value-quantity` search parameter). The FHIR Power Query connector will attempt to recognize filtering expressions that map to such composite search parameters. This sections lists some examples of these patterns. In the context of analyzing FHIR data, it is especially the composite search parameters on the `Observation` resource that are of interest.
+FHIR has [composite search](https://www.hl7.org/fhir/search.html#combining) parameters that allow filtering on multiple fields on a complex type within a resource or at the root of the resource at the same time. For example, one can search for Observations with specific code *and* a specific value (a `code-value-quantity` search parameter). The FHIR Power Query connector will attempt to recognize filtering expressions that map to such composite search parameters. This sections lists some examples of these patterns. In the context of analyzing FHIR data, it is especially the composite search parameters on the `Observation` resource that are of interest.
 
 Filtering Observations on code and value quantity, body height greater than 150:
 
@@ -693,7 +713,15 @@ let
     Observations = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Observation" ]}[Data],
 
     // Fold: "component-code-value-quantity=http://loinc.org|8462-4$gt90&component-code-value-quantity=http://loinc.org|8480-6$gt140"
-    FilteredObservations = Table.SelectRows(Observations, each Table.MatchesAnyRows([component], each Table.MatchesAnyRows([code][coding], each [system] = "http://loinc.org" and [code] = "8462-4") and [value][Quantity][value] > 90) and Table.MatchesAnyRows([component], each Table.MatchesAnyRows([code][coding], each [system] = "http://loinc.org" and [code] = "8480-6") and [value][Quantity][value] > 140))
+    FilteredObservations = 
+        Table.SelectRows(
+            Observations, 
+            each 
+                Table.MatchesAnyRows(
+                    [component],
+                    each 
+                        Table.MatchesAnyRows([code][coding], each [system] = "http://loinc.org" and [code] = "8462-4") and [value][Quantity][value] > 90) and 
+                        Table.MatchesAnyRows([component], each Table.MatchesAnyRows([code][coding], each [system] = "http://loinc.org" and [code] = "8480-6") and [value][Quantity][value] > 140))
 in
     FilteredObservations
 ```
@@ -709,7 +737,36 @@ let
     Observations = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Observation" ]}[Data],
 
     // Fold: "component-code-value-quantity=http://loinc.org|8462-4$gt90,http://loinc.org|8480-6$gt140"
-    FilteredObservations = Table.SelectRows(Observations, each Table.MatchesAnyRows([component], each Table.MatchesAnyRows([code][coding], each [system] = "http://loinc.org" and [code] = "8462-4") and [value][Quantity][value] > 90) or Table.MatchesAnyRows([component], each Table.MatchesAnyRows([code][coding], each [system] = "http://loinc.org" and [code] = "8480-6") and [value][Quantity][value] > 140))
+    FilteredObservations = 
+        Table.SelectRows(
+            Observations, 
+            each 
+                Table.MatchesAnyRows(
+                    [component], 
+                    each 
+                        (Table.MatchesAnyRows([code][coding], each [system] = "http://loinc.org" and [code] = "8462-4") and [value][Quantity][value] > 90) or
+                         Table.MatchesAnyRows([code][coding], each [system] = "http://loinc.org" and [code] = "8480-6") and [value][Quantity][value] > 140 ))
+in
+    FilteredObservations
+```
+
+Filtering Observations on code value quantities on root of resource or in component array:
+
+<!--
+    DOC: Folding Observation combo-code-value-quantity
+-->
+
+```M
+let
+    Observations = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Observation" ]}[Data],
+
+    // Fold: "combo-code-value-quantity=http://loinc.org|8302-2$gt150"
+    FilteredObservations =
+        Table.SelectRows(
+            Observations,
+            each 
+                (Table.MatchesAnyRows([code][coding], each [system] = "http://loinc.org" and [code] = "8302-2") and [value][Quantity][value] > 150) or
+                (Table.MatchesAnyRows([component], each Table.MatchesAnyRows([code][coding], each [system] = "http://loinc.org" and [code] = "8302-2") and [value][Quantity][value] > 150)))
 in
     FilteredObservations
 ```
