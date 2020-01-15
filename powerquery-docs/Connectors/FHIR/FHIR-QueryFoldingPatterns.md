@@ -648,7 +648,7 @@ in
 
 ## Filtering with composite search parameters
 
-FHIR has [composite search](https://www.hl7.org/fhir/search.html#combining) parameters that allow filtering on multiple fields in a resource at the same time. For example, one can search for Observations with specific code *and* a specific value (a `code-value-quantity` search parameter). The FHIR Power Query connector will attempt to recognize filtering expressions that map to such composite search parameters. This sections lists some examples of these patterns. In the context of analyzing FHIR data, it is especially the composite search parameters on the `Observation` resource that are of interest.
+FHIR has [composite search](https://www.hl7.org/fhir/search.html#combining) parameters that allow filtering on multiple fields on an a complex type within a resource or at the root of the resource at the same time. For example, one can search for Observations with specific code *and* a specific value (a `code-value-quantity` search parameter). The FHIR Power Query connector will attempt to recognize filtering expressions that map to such composite search parameters. This sections lists some examples of these patterns. In the context of analyzing FHIR data, it is especially the composite search parameters on the `Observation` resource that are of interest.
 
 Filtering Observations on code and value quantity, body height greater than 150:
 
@@ -682,7 +682,7 @@ in
     FilteredObservations
 ```
 
-Filtering on multiple component code value quantities (AND), diastolic blood pressure greater than 90 and systolic blood pressure greater than 140:
+Filtering on multiple component code value quantities (AND), diastolic blood pressure greater than 90 *and* systolic blood pressure greater than 140:
 
 <!--
     DOC: Folding Observation component-code-value-quantity (AND)
@@ -694,6 +694,22 @@ let
 
     // Fold: "component-code-value-quantity=http://loinc.org|8462-4$gt90&component-code-value-quantity=http://loinc.org|8480-6$gt140"
     FilteredObservations = Table.SelectRows(Observations, each Table.MatchesAnyRows([component], each Table.MatchesAnyRows([code][coding], each [system] = "http://loinc.org" and [code] = "8462-4") and [value][Quantity][value] > 90) and Table.MatchesAnyRows([component], each Table.MatchesAnyRows([code][coding], each [system] = "http://loinc.org" and [code] = "8480-6") and [value][Quantity][value] > 140))
+in
+    FilteredObservations
+```
+
+Filtering on multiple component code value quantities (OR), diastolic blood pressure greater than 90 *or* systolic blood pressure greater than 140:
+
+<!--
+    DOC: Folding Observation component-code-value-quantity (OR)
+-->
+
+```M
+let
+    Observations = Fhir.Contents("https://myfhirserver.azurehealthcareapis.com", null){[Name = "Observation" ]}[Data],
+
+    // Fold: "component-code-value-quantity=http://loinc.org|8462-4$gt90,http://loinc.org|8480-6$gt140"
+    FilteredObservations = Table.SelectRows(Observations, each Table.MatchesAnyRows([component], each Table.MatchesAnyRows([code][coding], each [system] = "http://loinc.org" and [code] = "8462-4") and [value][Quantity][value] > 90) or Table.MatchesAnyRows([component], each Table.MatchesAnyRows([code][coding], each [system] = "http://loinc.org" and [code] = "8480-6") and [value][Quantity][value] > 140))
 in
     FilteredObservations
 ```
