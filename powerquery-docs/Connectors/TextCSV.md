@@ -16,7 +16,7 @@ LocalizationGroup: reference
 Release State: General Availability
 Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in PowerBI.com (Enterprise Gateway), Dataflows in PowerApps.com (Enterprise Gateway), Excel
 
-Function Reference Documentation: [File.Contents](https://docs.microsoft.com/powerquery-m/file-contents), [Lines.FromBinary](https://docs.microsoft.com/powerquery-m/lines-frombinary), [CSV.Document](https://docs.microsoft.com/powerquery-m/csv-document)
+Function Reference Documentation: [File.Contents](https://docs.microsoft.com/powerquery-m/file-contents), [Lines.FromBinary](https://docs.microsoft.com/powerquery-m/lines-frombinary), [Csv.Document](https://docs.microsoft.com/powerquery-m/csv-document)
 
 ## Capabilities supported
 
@@ -28,7 +28,7 @@ To load a local text or csv file, all you need to do is select the **Text/CSV** 
 
 ![Text file selection](../images/textcsvbrowse.png)
 
-Power Query will treat CSVs as structured files with a comma as a delimeter&mdash;a special case of a text file. If you choose a text file, Power Query will automatically attempt to determine if it has delimeter separated values, and what that delimiter is. If it can infer this, it'll automatically treat it as a structured data source.
+Power Query will treat CSVs as structured files with a comma as a delimiter&mdash;a special case of a text file. If you choose a text file, Power Query will automatically attempt to determine if it has delimiter separated values, and what that delimiter is. If it can infer this, it'll automatically treat it as a structured data source.
 
 ### Unstructured Text
 If your text file doesn't have structure you'll get a single column with a new row per line encoded in the source text. As a sample for unstructured text, you can consider a notepad file with the following contents:
@@ -42,7 +42,7 @@ When you load it, you're presented with a navigation screen that loads each of t
 
 ![Loading data from a simple unstructured text file](../images/textrawnavigator.png)
 
-There's only one thing you can configure on this dialog, which is the **File Origin** dropdown select. This lets you select [which character set](https://docs.microsoft.com/windows/win32/intl/code-page-identifiers) was used to generate the file.
+There's only one thing you can configure on this dialog, which is the **File Origin** dropdown select. This lets you select [which character set](https://docs.microsoft.com/windows/win32/intl/code-page-identifiers) was used to generate the file. Currently, character set is not inferred, and UTF-8 will only be inferred if it starts with a [UTF-8 BOM](https://docs.microsoft.com/globalization/encoding/byte-order-mark).
 
 ![File culture selection for Text/CSV](../images/textfileorigindropdown.png)
 
@@ -50,17 +50,19 @@ There's only one thing you can configure on this dialog, which is the **File Ori
 
 You can find a sample CSV file [here](https://go.microsoft.com/fwlink/?LinkID=619356).
 
-In addition to file origin, CSV also supports specifying the delimeter, as well as how data type detection will be handled.
+In addition to file origin, CSV also supports specifying the delimiter, as well as how data type detection will be handled.
 
 ![Loading data from a csv file](../images/csvload.png)
 
-Delimeters available include colon, comma, equals sign, semicolon, space, tab, a custom delimeter (which can be any string), and a fixed width (splitting up text by some standard number of characters).
+Delimiters available include colon, comma, equals sign, semicolon, space, tab, a custom delimiter (which can be any string), and a fixed width (splitting up text by some standard number of characters).
 
-![Delimeter selection for a csv file](../images/csvdelimeterdropdown.png)
+![Delimiter selection for a csv file](../images/csvdelimeterdropdown.png)
 
-The final dropdown allows you to select how you want to handle data type detection. It can be done based on the first 200 rows, on the entire data set, or you can choose to not do automatic data type detection and instead let all columns default to 'Text'. Warning: if you do it on the entire data set it may cause previewing the data in the editor to be slower.
+The final dropdown allows you to select how you want to handle data type detection. It can be done based on the first 200 rows, on the entire data set, or you can choose to not do automatic data type detection and instead let all columns default to 'Text'. Warning: if you do it on the entire data set it may cause the initial load of the data in the editor to be slower.
 
 ![Data type inference selection for a csv file](../images/csvdatatypedropdown.png)
+
+Since inference can be incorrect, it is worth double checking settings before loading.
 
 ### Structured Text
 
@@ -75,7 +77,7 @@ This is also a string.	2	DEF456
 
 ![Loading data from a structured text file](../images/textcolumnnavigator.png)
 
-This can be used for any kind of other delimeter based file.
+This can be used for any kind of other delimiter based file.
 
 ### Editing Source
 
