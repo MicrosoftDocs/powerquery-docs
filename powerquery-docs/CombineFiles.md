@@ -11,7 +11,7 @@ ms.author: gepopell
 LocalizationGroup: reference
 ---
 
-# Combine Files in Power Query
+# Combine Files in Power Query  
 
 Applies to: Power Query Desktop, Power Query Online
 
