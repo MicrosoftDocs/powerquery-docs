@@ -5,7 +5,7 @@ author: cpopell
 
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 08/16/2018
+ms.date: 12/12/2019
 ms.author: gepopell
 
 LocalizationGroup: reference
@@ -29,18 +29,20 @@ The [`Web.Contents`](/powerquery-m/web-contents) function has some built in func
 
 Requests will be retried up to 3 times before failing. The engine uses an exponential back-off algorithm to determine how long to wait until the next retry, unless the response contains a [`Retry-after`](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.37) header. When the header is found, the engine will wait the specified number of seconds before the next retry. The minimum supported wait time is 0.5 seconds, and the maximum value is 120 seconds.
 
-> **Note**: The `Retry-after` value must be in the `delta-seconds` format. The `HTTP-date` format is currently not supported. 
+>[!Note]
+> The `Retry-after` value must be in the `delta-seconds` format. The `HTTP-date` format is currently not supported. 
 
 ## Authentication exceptions
 
-The following status codes will result in a credentials exception, causing an authentication prompt asking the user to provide credentials (or re-login in the cause of an expired OAuth token).
+The following status codes will result in a credentials exception, causing an authentication prompt asking the user to provide credentials (or re-login in the case of an expired OAuth token).
 
 | Code | Status         |
 |:-----|:---------------|
 | 401  | Unauthorized   |
 | 403  | Forbidden      |
 
-> **Note:** Extensions are able to use the `ManualStatusHandling` option with status codes 401 and 403, which is not something that can be done in `Web.Contents` calls made outside of an extension context (i.e. directly from Power Query).
+>[!Note]
+> Extensions are able to use the `ManualStatusHandling` option with status codes 401 and 403, which is not something that can be done in `Web.Contents` calls made outside of an extension context (that is, directly from Power Query).
 
 ## Redirection
 
@@ -54,4 +56,5 @@ The follow status codes will result in an automatic redirect to the URI specifie
 | 303  | See Other          |
 | 307  | Temporary Redirect |
 
-> **Note:** Only status code 307 will keep a `POST` request method. All other redirect status codes will result in a switch to `GET`.
+>[!Note]
+> Only status code 307 will keep a `POST` request method. All other redirect status codes will result in a switch to `GET`.
