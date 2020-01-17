@@ -114,7 +114,7 @@ The **Open file as** dropdown will let you edit what you want to load the file a
 
 ### Loading Files from the Web
 
-Due to how the connector works, in some cases a file may be requested twice when being retrieved from a web endpoint. To avoid this, wrap your Web.Contents function with a Binary.Buffer function, which will allow the engine to avoid the second call.
+If you are requesting text/csv files from the web and also promoting headers, and you’re retrieving enough files that you need to be concerned with potential throttling, you should consider wrapping your Web.Contents call with Binary.Buffer(). In this case, buffering the file before promoting headers will cause the file to only be requested once.
 
 ### Unstructured text being interpreted as structured
 
