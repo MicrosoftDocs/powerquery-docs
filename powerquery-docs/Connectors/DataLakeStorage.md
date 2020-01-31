@@ -19,33 +19,37 @@ Before you begin this tutorial, you must have the following:
 > [!div class="checklist"]
 > * An Azure subscription. See [Get Azure free trial](https://azure.microsoft.com/pricing/free-trial/).
 > * A storage account that has a hierarchical namespace. Follow [these](https://docs.microsoft.com/azure/storage/common/storage-account-create) instructions to create one.
-> This article assumes that you've created an account named `myadlsg2`.
+> This article assumes that you've created a storage account named `myadlsg2`.
 > * You are granted one of the following roles for the storage account: **Blob Data Reader**, **Blob Data Contributor**, or **Blob Data Owner**.
 > * A sample data file named `Drivers.txt` located in your storage account.
 > You can download this sample from [Azure Data Lake Git Repository](https://github.com/Azure/usql/tree/master/Examples/Samples/Data/AmbulanceData/Drivers.txt), and then upload that file to your storage account.
-> * **Power BI Desktop**. You can download this from [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45331).
+> * **Power BI Desktop**. You can download this from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45331).
 
 ## Create a report in Power BI Desktop
 
 1. Launch Power BI Desktop on your computer.
-2. From the **Home** tab of the Ribbon, click **Get Data**, and then click **More**.
-3. In the **Get Data** dialog box, click **Azure**, click **Azure Data Lake Store Gen2 (Beta)**, and then click **Connect**.
+2. From the **Home** tab of the Ribbon, select **Get Data**, and then select **More**.
+3. In the **Get Data** dialog box, select **Azure > Azure Data Lake Store Gen2**, and then select **Connect**.
 
     ![Get data page](media/DataLakeStorage/get-data-page.png)
 
-4. In the **Azure Data Lake Storage Gen2** dialog box, you can provide the URL to your Azure Data Lake Storage Gen2 account, filesystem or subfolder using the container endpoint format. URLs for Data Lake Storage Gen2 have the following pattern  `https://<accountname>.dfs.core.windows.net/<filesystemname>/<subfolder>` and then click **OK**.
+4. In the **Azure Data Lake Storage Gen2** dialog box, you can provide the URL to your Azure Data Lake Storage Gen2 account, filesystem, or subfolder using the container endpoint format. URLs for Data Lake Storage Gen2 have the following pattern:
+
+    `https://<accountname>.dfs.core.windows.net/<filesystemname>/<subfolder>`
+    
+    Select **OK** to continue.
 
     ![URL](media/DataLakeStorage/adls-url.png)
 
-5. In the next dialog box, click **Sign in** to sign into your storage account. You'll be redirected to your organization's sign in page. Follow the prompts to sign into the account.
+5. In the next dialog box, select **Sign in** to sign into your storage account. You'll be redirected to your organization's sign in page. Follow the prompts to sign into the account.
 
     ![Sign in page](media/DataLakeStorage/sign-in.png)
 
-6. After you've successfully signed in, click **Connect**.
+6. After you've successfully signed in, select **Connect**.
 
     ![Signed in page](media/DataLakeStorage/signed-in.png)
 
-7. The next dialog box shows all files under the URL you provided in step 4 above including the file that you uploaded to your storage account. Verify the information, and then click **Load**.
+7. The next dialog box shows all files under the URL you provided in step 4 above, including the file that you uploaded to your storage account. Verify the information, and then select **Load**.
 
     ![File systems](media/DataLakeStorage/file-systems.png)
 
@@ -53,21 +57,21 @@ Before you begin this tutorial, you must have the following:
 
     ![Fields tab](media/DataLakeStorage/fields.png)
 
-    However, to visualize and analyze the data, we prefer the data to be available per the following fields.
+    However, to visualize and analyze the data, you might prefer the data to be available using the following fields.
 
     ![Fields](media/DataLakeStorage/preferred-fields.png)
 
-    In the next steps, we will update the query to convert the imported data in the desired format.
+    In the next steps, you'll update the query to convert the imported data to the desired format.
 
-9. From the **Home** tab on the ribbon, click **Edit Queries**.
+9. From the **Home** tab on the ribbon, select **Edit Queries**.
 
     ![Queries](media/DataLakeStorage/queries.png)
 
-10. In the **Query Editor**, under the **Content** column, click **Binary**. The file will automatically be detected as CSV and you should see an output as shown below. Your data is now available in a format that you can use to create visualizations.
+10. In the **Query Editor**, under the **Content** column, select **Binary**. The file will automatically be detected as CSV and you should see an output as shown below. Your data is now available in a format that you can use to create visualizations.
 
     ![Output](media/DataLakeStorage/binary.png)
 
-11. From the **Home** tab on the ribbon, click **Close** and **Apply**, and then click **Close** and **Apply**.
+11. From the **Home** tab on the ribbon, select **Close & Apply**.
 
     ![Close and apply](media/DataLakeStorage/close-apply.png)
 
@@ -75,17 +79,17 @@ Before you begin this tutorial, you must have the following:
 
     ![New fields](media/DataLakeStorage/new-fields.png)
 
-13. Let us create a pie chart to represent the drivers in each city for a given country. To do so, make the following selections.
+13. Now you can create a pie chart to represent the drivers in each city for a given country. To do so, make the following selections.
 
-    From the **Visualizations** tab, click the symbol for a pie chart.
+    From the **Visualizations** tab, select the symbol for a pie chart.
 
     ![Visualizations](media/DataLakeStorage/visualizations.png)
 
-    The columns that we are going to use are Column 4 (name of the city) and Column 7 (name of the country). Drag these columns from **Fields** tab to **Visualizations** tab as shown below.
+    In this example, the columns you're going to use are Column 4 (name of the city) and Column 7 (name of the country). Drag these columns from the **Fields** tab to the **Visualizations** tab as shown below.
 
     ![Drag fields](media/DataLakeStorage/visualizations-drag-fields.png)
 
-    The pie chart should now resemble like the one shown below.
+    The pie chart should now resemble the one shown below.
 
     ![Pie chart](media/DataLakeStorage/pie-chart.png)
 
@@ -97,7 +101,7 @@ Before you begin this tutorial, you must have the following:
 
     ![Brazil](media/DataLakeStorage/pie-chart-updated.png)
 
-16. From the **File** menu, click **Save** to save the visualization as a Power BI Desktop file.
+16. From the **File** menu, select **Save** to save the visualization as a Power BI Desktop file.
 
 ## Publish report to Power BI service
 
