@@ -15,20 +15,20 @@ This article describes Power Query patterns that will allow effective query fold
 
 ## How to use this document
 
-The list of examples in this document is not exhaustive and does not cover all the search parameters which queries will fold to. However, we provide examples of the types of queries and parameters you might encounter. When you are constructing a filter query expression, consider whether the parameter you would like to filter on is:
+The list of examples in this document is not exhaustive and does not cover all the search parameters that queries will fold to. However, we provide examples of the types of queries and parameters you might encounter. When you are constructing a filter query expression, consider whether the parameter you would like to filter on is:
 
-1. A primitive type (like `Patient.birthDate`)
-1. A complex type, which would be a record in Power Query (like `Patient.meta`)
-1. An array of primitive types, which would be a list in Power Query (like `Patient.meta.profile`)
-1. An array of complex types, which would be a table in Power Query (like `Observation.code.coding`, which has a number of columns)
+* A primitive type (like `Patient.birthDate`)
+* A complex type, which would be a record in Power Query (like `Patient.meta`)
+* An array of primitive types, which would be a list in Power Query (like `Patient.meta.profile`)
+* An array of complex types, which would be a table in Power Query (like `Observation.code.coding`, which has a number of columns)
 
-And then consult the list of examples below. There are also examples of combining these types of filtering patters in multi-level, nested filtering statements. Finally, the this article provides more complicated filtering expressions that fold to [composite search parameters](https://www.hl7.org/fhir/search.html#combining)
+And then consult the list of examples below. There are also examples of combining these types of filtering patters in multi-level, nested filtering statements. Finally, this article provides more complicated filtering expressions that fold to [composite search parameters](https://www.hl7.org/fhir/search.html#combining).
 
-In each example you will find a filtering expression (`Table.SelectRows`) and right above each filtering statement a comment `// Fold: ...` explaining what search parameters and values the expression will fold to.
+In each example you'll find a filtering expression (`Table.SelectRows`) and right above each filtering statement a comment `// Fold: ...` explaining what search parameters and values the expression will fold to.
 
 ## Filtering on primitive types
 
-Root properties are at the root of a resource and typically of a primitive type (string, date, etc.), but they can also be coding fields (for example `Encoding.class`). This section shows examples of searching different types of primitive root level properties.
+Root properties are at the root of a resource and typically of a primitive type (string, date, and so on), but they can also be coding fields (for example `Encoding.class`). This section shows examples of searching different types of primitive root level properties.
 
 Filtering patients by birth date:
 
@@ -623,7 +623,7 @@ in
     FilteredObservations
 ```
 
-Filtering Observations on multiple categories (OR)
+Filtering Observations on multiple categories (OR):
 
 <!--
     DOC: Folding Observation.category.coding with system and code (OR)
