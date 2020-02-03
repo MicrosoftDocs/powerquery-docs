@@ -32,15 +32,15 @@ Instead of retrieving all Patient resources from the FHIR server and filtering t
 GET https://myfhirserver.azurehealthcareapis.com/Patient?birthdate=lt1980-01-01
 ```
 
-With such a query the client would only receive the patients of interest and would not need to discard data in the client.
+With such a query, the client would only receive the patients of interest and would not need to discard data in the client.
 
-In the example of birth date, the query folding is straightforward, but in general it is challenging in FHIR because the search parameter names don't always correspond to the data field names and frequently multiple data fields will contribute to a single search parameter. 
+In the example of a birth date, the query folding is straightforward, but in general it is challenging in FHIR because the search parameter names don't always correspond to the data field names and frequently multiple data fields will contribute to a single search parameter. 
 
-For example let's consider the `Observation` resource and the `category` field. The `Observation.category` field is a `CodeableConcept` in FHIR, which has a `coding` field, which have `system` and `code` fields (among other fields). Suppose you're interested in vital-signs only, you would be interested in Observations where `Observation.category.coding.code = "vital-signs"`, but the FHIR search would look something like `https://myfhirserver.azurehealthcareapis.com/Observation?category=vital-signs`.
+For example, let's consider the `Observation` resource and the `category` field. The `Observation.category` field is a `CodeableConcept` in FHIR, which has a `coding` field, which have `system` and `code` fields (among other fields). Suppose you're interested in vital-signs only, you would be interested in Observations where `Observation.category.coding.code = "vital-signs"`, but the FHIR search would look something like `https://myfhirserver.azurehealthcareapis.com/Observation?category=vital-signs`.
 
 To be able to achieve query folding in the more complicated cases, the FHIR Power Query connector matches Power Query expressions with a list of expression patterns and translates them into appropriate search parameters. The expression patterns are generated from the FHIR specification.
 
-This matching with expression patterns works best when any selection expressions (filtering) is done as early as possible data transformation steps before any other shaping of the data.
+This matching with expression patterns works best when any selection expressions (filtering) is done as early as possible in data transformation steps before any other shaping of the data.
 
 > [!Note]
 > To give the Power Query engine the best chance of performing query folding, you should do all data selection expressions before any shaping of the data.
@@ -77,13 +77,13 @@ in
 
 The search query `/Observation?category=vital-signs` will be sent to the FHIR server, which will reduce the amount of data that the client will receive from the server.
 
-While the first and the second Power Query expressions will result in the same data set, the latter will, in general, result in better query performance. It's important to note that the second, more efficient, version of the query cannot be obtained purely through data shaping with the graphical user interface (GUI). It's necessary to write the query in the "Advanced Editor".
+While the first and the second Power Query expressions will result in the same data set, the latter will, in general, result in better query performance. It's important to note that the second, more efficient, version of the query can't be obtained purely through data shaping with the graphical user interface (GUI). It's necessary to write the query in the "Advanced Editor".
 
 The initial data exploration can be done with the GUI query editor, but it's recommended that the query be refactored with query folding in mind. Specifically, selective queries (filtering) should be performed as early as possible.
 
 ## Finding folding patterns
 
-The FHIR Power Query connector will only be able to perform query folding if the Power Query expressions map to known search parameters as defined by the FHIR specification. If you're wondering if query folding is possible, it's recommended to consult the [FHIR specification](https://hl7.org/fhir). Each resource will list a set of search parameters towards the bottom of the specification page. You can also consult the [folding query patterns](FHIR-QueryFoldingPatterns.md) page for examples of how to write foldable Power Query Expressions for FHIR.
+The FHIR Power Query connector will only be able to perform query folding if the Power Query expressions map to known search parameters as defined by the FHIR specification. If you're wondering if query folding is possible, we recommend that you consult the [FHIR specification](https://hl7.org/fhir). Each resource will list a set of search parameters towards the bottom of the specification page. You can also consult the [folding query patterns](FHIR-QueryFoldingPatterns.md) page for examples of how to write foldable Power Query Expressions for FHIR.
 
 ## Debugging query folding
 
