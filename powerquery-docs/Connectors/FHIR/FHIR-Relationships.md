@@ -29,7 +29,7 @@ FHIR resources are related to each other, for example, an `Observation` that ref
 }
 ```
 
-Some of the resource reference fields in FHIR can refer to multiple different types of resources (for example, `Practitioner` or `Organization`). To facilitate an easier way to resolve references, the FHIR Power Query connector adds a synthetic field to all imported resources call `<referenceId>`, which contains a concatenation of the resource type and the resource ID.
+Some of the resource reference fields in FHIR can refer to multiple different types of resources (for example, `Practitioner` or `Organization`). To facilitate an easier way to resolve references, the FHIR Power Query connector adds a synthetic field to all imported resources called `<referenceId>`, which contains a concatenation of the resource type and the resource ID.
 
 To establish a relationship between two tables, you can connect a specific reference field on a resource to the corresponding `<referenceId>` field on the resource you would like it linked to. In simple cases, Power BI will even detect this for you automatically.
 
