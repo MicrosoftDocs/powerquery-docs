@@ -25,7 +25,7 @@ There are a number of [publicly accessible FHIR servers](https://wiki.hl7.org/in
 
     ![Vonk anonymous authentication](FHIR-Access-Vonk-Anonymous.png)
 
-After that, follow the steps to [query and shape your data](FHIR.md)
+After that, follow the steps to [query and shape your data](FHIR.md).
 
 ## Azure Active Directory (Organizational) Authentication
 
