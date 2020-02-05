@@ -151,11 +151,7 @@ For example, you could use the following steps to open a JSON file on the https:
 
     As you can see, the Web Connector returns the web contents from the URL you supplied, and then automatically wraps the web contents in the appropriate document type specified by the URL (Json.Document in this example).
 
-<!--So for Excel, I'm editing the Excel document with one of our most common CRIs, which is people trying to get the SharePoint link to the Excel, which is not how you get the right link. That does not work.
-
-While we are here, what does the Advanced here say (see recording_JSON_call_3.png) - that's the same stuff, OK.
-
-This piece about File origin and Open file as, I talk about a little bit in the text files CSV. Basically depending on what you select here (Open file as), you might see more or less options. -->
+<!-- Add information here about getting a SharePoint link in Excel. -->
 
 ## Troubleshooting
 
