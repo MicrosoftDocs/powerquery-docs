@@ -157,9 +157,26 @@ While we are here, what does the Advanced here say (see recording_JSON_call_3.pn
 
 This piece about File origin and Open file as, I talk about a little bit in the text files CSV. Basically depending on what you select here (Open file as), you might see more or less options. -->
 
-## Using a gateway with the Web connector
+## Troubleshooting
+
+### Using a gateway with the Web connector
 
 If you are using the Web connector through an on-premises data gateway, you must have Internet Explorer 10 installed on the gateway machine. This will ensure that the Web.Page call through the gateway will work correctly. 
 
-## 
+### Changing the authentication method
+
+In some cases, you may need to change the authentication method you use to access a particular web site. If this is necessary, perform the following steps:
+
+1. In Power BI Desktop, from the **File** tab, select **Options and settings > Data source settings**. In Excel, from the **Data** tab, select **Get Data > Data Source Settings**.
+
+2. In the **Data source settings** dialog box, select **Global permissions**, choose the web site where you want the permission setting changed, and then select **Edit Permissions**.
+
+3. In the **Edit Permissions** dialog box, under **Credentials**, select **Edit**. 
+
+    ![Edit web site permissions](../images/webPermission.png)
+
+4. Change the credentials to the type required by the web site, select **Save**, and then select **OK**.
+
+You can also delete the credentials for a particular web site in step 3 by selecting **Clear Permissions** for a selected web site, or by selecting **Clear All Permissions** for all of the listed web sites.
+
 
