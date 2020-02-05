@@ -36,7 +36,7 @@ To load data from a website using a basic URL:
 
 1. Select **Get Data > Web** in Power BI or **From Web** in the **Data** ribbon in Excel. 
 
-2. Choose the **Basic** button and enter a URL address in the text box. For example, enter [https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States](https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States). Then select **OK**.
+2. Choose the **Basic** button and enter a URL address in the text box. For example, enter `https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States`. Then select **OK**.
 
    ![Text file selection](../images/webbasicurl.png)
 
@@ -55,7 +55,7 @@ To load data from a website using a basic URL:
 
    ![Web table selection](../images/webnavigator.png)
 
-   The right side of the **Navigator** dialog displays the contents of the table you select to transform or load. In addition, you can also select the **Web View** tab to see the entire contents of the Web page.
+   The right side of the **Navigator** dialog displays the contents of the table you select to transform or load. If you are uncertain which table contains the data you are interested in, you can select the **Web View** tab to see the entire contents of the Web page. The web view lets you see the entire contents of the web site, and emphasizes each of the tables that have been detected on that site. You can select the check box above the emphasized table to obtain the data from that table.
 
    On the lower left side of the **Navigator** dialog, you can also select the **Add table using examples** button. This selection presents an interactive window where you can preview the content of the Web page and enter sample values of the data you want to extract. For more information on using this feature, see [Get webpage data by providing examples](https://docs.microsoft.com/power-bi/desktop-connect-to-web-by-example).
 
@@ -65,7 +65,7 @@ When you select **Get Data > From Web**, in most instances you'll enter URLs in 
 
 ![Web advanced URL assembly](../images/webadvancedurl.png)
 
-Use the **URL parts** section of the dialog to assemble the URL you want to use to get data. Enter the first part of the URL in the **URL parts** section most likely would consist of the scheme, authority, and path of the URI (for example, http://contoso.com/products/). The second text box could include any queries or fragments that you would use to filter the information provided to the web site. If you need to add more than one entry, select **Add part** to add another URL fragment text box. As you enter each part of the URL, the complete URL that will be used when you select **OK** is displayed in the **URL preview** box.
+Use the **URL parts** section of the dialog to assemble the URL you want to use to get data. The first part of the URL in the **URL parts** section most likely would consist of the scheme, authority, and path of the URI (for example, http://contoso.com/products/). The second text box could include any queries or fragments that you would use to filter the information provided to the web site. If you need to add more than one entry, select **Add part** to add another URL fragment text box. As you enter each part of the URL, the complete URL that will be used when you select **OK** is displayed in the **URL preview** box.
 
 Depending on how long the POST request takes to process data, you may need to prolong the time the request continues to stay connected to the web site. In this case, you can use the optional **Command timeout in minutes** to extend the time you stay connected to the web site (in minutes).
 
