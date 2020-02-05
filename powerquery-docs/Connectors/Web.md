@@ -49,7 +49,7 @@ To load data from a website using a basic URL:
    If you select the top-level web address, you won't need to select the authentication method for that URL address or any sub-address again. For example, if you select the https://en.wikipedia.org/ address in this dialog, any web page that begins with this address will not require that you select the authentication method again.
 
    >[!Note]
-   >If you need to change the authentication method for some reason, you can remove the URL address from the list of certified sites by 
+   >If you need to change the authentication method later, see [Changing the authentication method](#changing-the-authentication-method). 
 
 4. From the **Navigator** dialog, you can select a table, then either transform the data in the Power Query editor by selecting **Transform Data**, or load the data by selecting **Load**.
 
