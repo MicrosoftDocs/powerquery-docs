@@ -1,6 +1,6 @@
 ---
 title: FHIR Power Query Folding
-description: FHIR Power Query connector query folding
+description: Power Query connector for FHIR query folding
 author: hansenms
 ms.service: powerquery
 ms.topic: conceptual
@@ -11,7 +11,7 @@ LocalizationGroup: reference
 
 # FHIR Query Folding
 
-[Power Query folding](https://docs.microsoft.com/power-query/power-query-folding) is the mechanism used by a Power Query connector to turn data transformations into queries that are sent to the data source. This allows Power Query to off-load as much of the data selection as possible to the data source rather than retrieving large amounts of unneeded data only to discard it in the client. The FHIR Power Query connector includes query folding capabilities, but due to the nature of [FHIR search](https://www.hl7.org/fhir/search.html), special attention must be given to the Power Query expressions to ensure that query folding is performed when possible. This article explains the basics of FHIR Power Query folding and provides guidelines and examples.
+[Power Query folding](https://docs.microsoft.com/power-query/power-query-folding) is the mechanism used by a Power Query connector to turn data transformations into queries that are sent to the data source. This allows Power Query to off-load as much of the data selection as possible to the data source rather than retrieving large amounts of unneeded data only to discard it in the client. The Power Query connector for FHIR includes query folding capabilities, but due to the nature of [FHIR search](https://www.hl7.org/fhir/search.html), special attention must be given to the Power Query expressions to ensure that query folding is performed when possible. This article explains the basics of FHIR Power Query folding and provides guidelines and examples.
 
 ## FHIR and Query Folding
 
@@ -38,7 +38,7 @@ In the example of a birth date, the query folding is straightforward, but in gen
 
 For example, let's consider the `Observation` resource and the `category` field. The `Observation.category` field is a `CodeableConcept` in FHIR, which has a `coding` field, which have `system` and `code` fields (among other fields). Suppose you're interested in vital-signs only, you would be interested in Observations where `Observation.category.coding.code = "vital-signs"`, but the FHIR search would look something like `https://myfhirserver.azurehealthcareapis.com/Observation?category=vital-signs`.
 
-To be able to achieve query folding in the more complicated cases, the FHIR Power Query connector matches Power Query expressions with a list of expression patterns and translates them into appropriate search parameters. The expression patterns are generated from the FHIR specification.
+To be able to achieve query folding in the more complicated cases, the Power Query connector for FHIR matches Power Query expressions with a list of expression patterns and translates them into appropriate search parameters. The expression patterns are generated from the FHIR specification.
 
 This matching with expression patterns works best when any selection expressions (filtering) is done as early as possible in data transformation steps before any other shaping of the data.
 
@@ -83,7 +83,7 @@ The initial data exploration can be done with the GUI query editor, but it's rec
 
 ## Finding folding patterns
 
-The FHIR Power Query connector will only be able to perform query folding if the Power Query expressions map to known search parameters as defined by the FHIR specification. If you're wondering if query folding is possible, we recommend that you consult the [FHIR specification](https://hl7.org/fhir). Each resource will list a set of search parameters towards the bottom of the specification page. You can also consult the [folding query patterns](FHIR-QueryFoldingPatterns.md) page for examples of how to write foldable Power Query Expressions for FHIR.
+The Power Query connector for FHIR will only be able to perform query folding if the Power Query expressions map to known search parameters as defined by the FHIR specification. If you're wondering if query folding is possible, we recommend that you consult the [FHIR specification](https://hl7.org/fhir). Each resource will list a set of search parameters towards the bottom of the specification page. You can also consult the [folding query patterns](FHIR-QueryFoldingPatterns.md) page for examples of how to write foldable Power Query Expressions for FHIR.
 
 ## Debugging query folding
 
@@ -95,7 +95,7 @@ Query folding provides more efficient Power Query expressions. A properly crafte
 
 ## Next steps
 
-In this article, you've learned how to use query folding in the FHIR Power Query connector. Next, explore the list of FHIR Power Query folding patterns.
+In this article, you've learned how to use query folding in the Power Query connector for FHIR. Next, explore the list of FHIR Power Query folding patterns.
 
 >[!div class="nextstepaction"]
 >[FHIR Power Query folding patterns](FHIR-QueryFoldingPatterns.md)

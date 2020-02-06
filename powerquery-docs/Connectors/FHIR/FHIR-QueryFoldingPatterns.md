@@ -1,6 +1,6 @@
 ---
 title: FHIR Power Query Folding Patterns
-description: FHIR Power Query connector query folding patterns
+description: Power Query connector for FHIR query folding patterns
 author: hansenms
 ms.service: powerquery
 ms.topic: conceptual
@@ -11,7 +11,7 @@ LocalizationGroup: reference
 
 # FHIR Query Folding Patterns
 
-This article describes Power Query patterns that will allow effective query folding in FHIR. It assumes that you are familiar with with using the [FHIR Power Query connector](FHIR.md) and understand the basic motivation and principles for [Power Query folding in FHIR](FHIR-QueryFolding.md).
+This article describes Power Query patterns that will allow effective query folding in FHIR. It assumes that you are familiar with with using the [Power Query connector for FHIR](FHIR.md) and understand the basic motivation and principles for [Power Query folding in FHIR](FHIR-QueryFolding.md).
 
 ## How to use this document
 
@@ -668,7 +668,7 @@ in
 
 ## Filtering with composite search parameters
 
-FHIR has [composite search](https://www.hl7.org/fhir/search.html#combining) parameters that allow filtering on multiple fields on a complex type within a resource or at the root of the resource at the same time. For example, one can search for Observations with specific code *and* a specific value (a `code-value-quantity` search parameter). The FHIR Power Query connector will attempt to recognize filtering expressions that map to such composite search parameters. This sections lists some examples of these patterns. In the context of analyzing FHIR data, it is especially the composite search parameters on the `Observation` resource that are of interest.
+FHIR has [composite search](https://www.hl7.org/fhir/search.html#combining) parameters that allow filtering on multiple fields on a complex type within a resource or at the root of the resource at the same time. For example, one can search for Observations with specific code *and* a specific value (a `code-value-quantity` search parameter). The Power Query connector for FHIR will attempt to recognize filtering expressions that map to such composite search parameters. This sections lists some examples of these patterns. In the context of analyzing FHIR data, it is especially the composite search parameters on the `Observation` resource that are of interest.
 
 Filtering Observations on code and value quantity, body height greater than 150:
 
@@ -773,7 +773,7 @@ in
 
 ## Summary
 
-Query folding turns Power Query filtering expressions into FHIR search parameters. The FHIR Power Query connector recognizes certain patterns and attempts to identify matching search parameters. Recognizing those patterns will help you write more efficient Power Query expressions.
+Query folding turns Power Query filtering expressions into FHIR search parameters. The Power Query connector for FHIR recognizes certain patterns and attempts to identify matching search parameters. Recognizing those patterns will help you write more efficient Power Query expressions.
 
 ## Next steps
 

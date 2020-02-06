@@ -11,11 +11,11 @@ LocalizationGroup: reference
 
 # FHIR Connector Authentication
 
-This article explains authenticated access to FHIR servers using the FHIR Power Query Connector. The connector supports anonymous access to publicly accessible FHIR servers and authenticated access to FHIR servers using Azure Active Directory authentication. The [Azure API for FHIR](https://docs.microsoft.com/azure/healthcare-apis) is secured with Azure Active Directory.
+This article explains authenticated access to FHIR servers using the Power Query connector for FHIR. The connector supports anonymous access to publicly accessible FHIR servers and authenticated access to FHIR servers using Azure Active Directory authentication. The [Azure API for FHIR](https://docs.microsoft.com/azure/healthcare-apis) is secured with Azure Active Directory.
 
 ## Anonymous Access
 
-There are a number of [publicly accessible FHIR servers](https://wiki.hl7.org/index.php?title=Publicly_Available_FHIR_Servers_for_testing). To enable testing with these public servers, the FHIR Power Query connector supports the "Anonymous" authentication scheme. For example to access the public https://vonk.fire.ly server:
+There are a number of [publicly accessible FHIR servers](https://wiki.hl7.org/index.php?title=Publicly_Available_FHIR_Servers_for_testing). To enable testing with these public servers, the Power Query connector for FHIR supports the "Anonymous" authentication scheme. For example to access the public https://vonk.fire.ly server:
 
 1. Enter the URL of the public Vonk server.
 
@@ -29,7 +29,7 @@ After that, follow the steps to [query and shape your data](FHIR.md).
 
 ## Azure Active Directory (Organizational) Authentication
 
-The FHIR Power Query connector supports OAuth authentication for FHIR servers that are secured with [Azure Active Directory](https://azure.microsoft.com/services/active-directory/). 
+The Power Query connector for FHIR supports OAuth authentication for FHIR servers that are secured with [Azure Active Directory](https://azure.microsoft.com/services/active-directory/). 
 
 To use Azure Active Directory authentication, select **Organizational account** when connecting.
 
@@ -51,7 +51,7 @@ There are some restrictions to be aware of:
 
 ## Next Steps
 
-In this article, you've learned how to use the FHIR Power Query connector authentication features. Next, explore query folding.
+In this article, you've learned how to use the Power Query connector for FHIR authentication features. Next, explore query folding.
 
 >[!div class="nextstepaction"]
 >[FHIR Power Query folding](FHIR-QueryFolding.md)

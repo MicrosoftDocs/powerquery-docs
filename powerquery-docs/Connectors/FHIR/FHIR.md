@@ -1,6 +1,6 @@
 ---
-title: FHIR Power Query connector
-description: FHIR Power Query connector reference
+title: Power Query connector for FHIR
+description: Power Query connector for FHIR reference
 author: hansenms
 ms.service: powerquery
 ms.topic: conceptual
@@ -13,7 +13,7 @@ LocalizationGroup: reference
 
 ## Summary
 
-Fast Healthcare Interoperability Resources ([FHIR&reg;](https://hl7.org/fhir)) is a new standard for healthcare data interoperability. Healthcare data is represented as resources such as `Patient`, `Observation`, `Encounter`, and so on, and a REST API is used for querying healthcare data served by a FHIR server. The FHIR Power Query connector can be used to import and shape data from a FHIR server.
+Fast Healthcare Interoperability Resources ([FHIR&reg;](https://hl7.org/fhir)) is a new standard for healthcare data interoperability. Healthcare data is represented as resources such as `Patient`, `Observation`, `Encounter`, and so on, and a REST API is used for querying healthcare data served by a FHIR server. The Power Query connector for FHIR can be used to import and shape data from a FHIR server.
 
 If you don't have a FHIR server, you can provision the [Azure API for FHIR](https://docs.microsoft.com/azure/healthcare-apis/).
 
@@ -79,7 +79,7 @@ To make a connection to a FHIR server, take the following steps:
 
 ## Next Steps
 
-In this article, you've learned how to use the FHIR Power Query connector to access FHIR data from Power BI. Next explore the authentication features of the FHIR Power Query connector.
+In this article, you've learned how to use the Power Query connector for FHIR to access FHIR data from Power BI. Next explore the authentication features of the Power Query connector for FHIR.
 
 >[!div class="nextstepaction"]
 >[FHIR connector authentication](FHIR-Authentication.md)
