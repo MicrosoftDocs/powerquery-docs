@@ -58,8 +58,10 @@ The following table lists the Documentation fields that can be set in the metada
 | Documentation.FieldCaption     | text   | Friendly display name to use for the parameter.                                                                                                                                                                        |
 | Documentation.FieldDescription | text   | Description to show next to the display name.                                                                                                                                                                          |
 | Documentation.SampleValues     | list   | List of sample values to be displayed (as faded text) inside of the text box.                                                                                                                                          |
+| Formatting.IsMultiLine | boolean | Allows you to create a multi-line input, for example for pasting in native queries. |
+| Formatting.IsCode | boolean | Formats the input field for code, commonly with multi-line inputs. |
 
-### Example
+### Basic Example
 The following code snippet (and resulting dialogs) are from the [HelloWorldWithDocs](https://github.com/Microsoft/DataConnectors/tree/master/samples/HelloWorldWithDocs) sample.
 
 ```
@@ -107,3 +109,33 @@ This code results in the following dialogs in Power BI.
 
 **Function info**
 ![FunctionInfo](images/helloWorldWithDocsInfo.png "Hello world with docs function info")
+
+### Multi-Line Example
+
+```
+[DataSource.Kind="HelloWorld", Publish="HelloWorld.Publish"]
+shared HelloWorld.Contents =
+    let
+        HelloWorldType = type function (
+            message1 as (type text meta [
+                Documentation.FieldCaption = "Message 1",
+                Documentation.FieldDescription = "Text to display for message 1",
+                Documentation.SampleValues = {"Hello world"},
+                Formatting.IsMultiLine = true,
+                Formatting.IsCode = true
+            ]),
+            message2 as (type text meta [
+                Documentation.FieldCaption = "Message 2",
+                Documentation.FieldDescription = "Text to display for message 2",
+                Documentation.SampleValues = {"Hola mundo"},
+                Formatting.IsMultiLine = true,
+                Formatting.IsCode = false
+            ])) as text,
+        HelloWorldFunction = (message1 as text, message2 as text) as text => message1 & message2
+    in
+        Value.ReplaceType(HelloWorldFunction, HelloWorldType);
+```
+
+This code (with associated publish information, etc.) results in the following dialogue in Power BI. New lines will be represented in text with '#(lf)', or 'line feed'.
+
+![Multi-line input builder](images/helloWorldMultiline.png)
