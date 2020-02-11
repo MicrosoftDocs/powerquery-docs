@@ -59,7 +59,7 @@ The following table lists the Documentation fields that can be set in the metada
 | Documentation.FieldDescription | text   | Description to show next to the display name.                                                                                                                                                                          |
 | Documentation.SampleValues     | list   | List of sample values to be displayed (as faded text) inside of the text box.                                                                                                                                          |
 | Formatting.IsMultiLine | boolean | Allows you to create a multi-line input, for example for pasting in native queries. |
-| Formatting.IsCode | boolean | Formats the input field for code, commonly with multi-line inputs. |
+| Formatting.IsCode | boolean | Formats the input field for code, commonly with multi-line inputs. Uses a code-like font rather than the standard font.|
 
 ### Basic Example
 The following code snippet (and resulting dialogs) are from the [HelloWorldWithDocs](https://github.com/Microsoft/DataConnectors/tree/master/samples/HelloWorldWithDocs) sample.
