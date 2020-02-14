@@ -29,6 +29,9 @@ Function Reference Documentation: [Web.Page](https://docs.microsoft.com/powerque
 
 * Basic
 * Advanced
+   * URL parts
+   * Command timeout
+   * HTTP request header parameters
 
 ## Load Web data using a basic URL
 
@@ -46,7 +49,9 @@ To load data from a website using a basic URL:
 
    ![Web credentials selection](../images/webcredentials.png)
 
-   If you select the top-level web address, you won't need to select the authentication method for that URL address or any sub-address again. For example, if you select the https://en.wikipedia.org/ address in this dialog, any web page that begins with this address will not require that you select the authentication method again.
+   The level you select for the authentication method determines what part of a URL will have the authentication method applied to it. If you select the top-level web address, the authentication method you select here will be used for that URL address or any sub-address within that address. However, you might not want to set the top URL address to a specific authentication method because different sub-addresses could require different authentication methods. For example, if you were accessing two separate folders of a single SharePoint site and wanted to use different Microsoft Accounts to access each one.
+   
+   Once you have set the authentication method for a specific web address, you won't need to select the authentication method for that URL address or any sub-address again. For example, if you select the https://en.wikipedia.org/ address in this dialog, any web page that begins with this address will not require that you select the authentication method again.  
 
    >[!Note]
    >If you need to change the authentication method later, see [Changing the authentication method](#changing-the-authentication-method). 
@@ -123,12 +128,12 @@ Normally, when you open a file, you'll use the specific file-type connector to o
 The following file types are supported by the Web Connector:
 
 * Access database
-* CSV document
-* Excel workbook
+* [CSV document](textcsv.md)
+* [Excel workbook](excel.md)
 * JSON
 * Text file
 * HTML page
-* XML tables
+* [XML tables](xml.md)
 * PDF
 
 For example, you could use the following steps to open a JSON file on the https://contoso.com/products web site:
