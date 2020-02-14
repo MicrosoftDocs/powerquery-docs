@@ -37,7 +37,7 @@ _We are hard at work on Office Store integration to make it easy for users to di
 * [M Library Functions](/powerquery-m/power-query-m-function-reference)
 * [M Language Specification](/powerquery-m/power-query-m-language-specification)
 * [Power BI Developer Center](https://powerbi.microsoft.com/developers/)
-* [Data Connector Tutorial](/samples/TripPin/README.md)
+* [Data Connector Tutorial](samples/TripPin/README.md)
 
 
 
