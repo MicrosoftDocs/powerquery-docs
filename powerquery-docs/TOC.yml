@@ -108,6 +108,8 @@
         href: https://docs.microsoft.com/en-us/azure/devops/report/powerbi/odataquery-connect?view=azure-devops
       - name: "Data Lake Storage"
         href: Connectors/DataLakeStorage.md
+      - name: "Facebook"
+        href: Connectors/Facebook.md
   - name: "Connector Development Reference"
     items:
       - name: "Handling Authentication"
