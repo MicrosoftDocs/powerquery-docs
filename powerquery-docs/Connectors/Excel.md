@@ -37,6 +37,14 @@ To connect to an Excel workbook, select 'Excel' from the product specific data c
  
 ## Troubleshooting
 
+### Connecting to an online Excel workbook
+
+If you want to connect to an Excel document hosted in Sharepoint, you can do so via the 'Web' connector in Power BI Desktop, Excel, and Dataflows, as well as the 'Excel' connector in Dataflows. To get the link to the file:
+
+* Open the document in Excel Desktop
+* Open the File menu, click the Info tab, and select Copy Path
+* Copy the address into the "File Path or URL" field, and remove the "?web=1" from the end of the address.
+
 ### Legacy ACE Connector
 **Error resolution**
 
