@@ -45,8 +45,6 @@ If you want to connect to an Excel document hosted in Sharepoint:
 * Open the File menu, click the Info tab, and select Copy Path
 * Copy the address into the "File Path or URL" field, and remove the "?web=1" from the end of the address.
 
-![Copy path in Excel Desktop](../images/excel-sharepoint-link.png)
-
 ### Legacy ACE Connector
 **Error resolution**
 
