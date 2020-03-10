@@ -1,0 +1,70 @@
+### YamlMime:Landing 
+
+title: Power Query Documentation
+summary: Power Query is the Data Connectivity and Data Preparation technology that enables end users to seamlessly import and reshape data from within a wide range of Microsoft products, including Excel, Power BI, Analysis Services, Common Data Services for Apps & Analytics, and more.
+
+metadata: 
+  title: Power Query Documentation
+  description: Power Query is used to filter, combine, and mash-up data from one or more supported data sources.  
+  ms.service: power-query
+  ms.topic: landing-page
+  ms.collection: 
+  author: dougklopfenstein
+  ms.author: v-douklo
+  manager: mtillman
+  ms.date: 03/10/2020
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card
+  - title: Power Query Overview
+    linkLists:
+      - linkListType: Overview
+        links:
+          - text: What is Power Query
+            url: power-query-what-is-power-query.md
+
+  # Card
+  - title: Using Power Query
+    linkLists:
+      - linkListType: quickstart
+        links:
+          - text: Using Power Query
+            url: power-query-quickstart-using-power-bi.md
+          - text: Using Power Query parameters
+            url: power-query-query-parameters.md
+
+  # Card
+  - title: Common tasks using Power Query
+    linkLists:
+      - linkListType: tutorial
+        links:
+          - text: Combining data
+            url: power-query-tutorial-shape-combine.md
+
+  # Card
+  - title: Develop your custom connector
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Custom connector development
+            url: installingsdk.md
+            
+  # Card
+  - title: Certify your custom connector
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Custom connector certification
+            url: connectorcertification.md
+
+  # Card
+  - title: M language reference
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: M language reference
+            url: https://docs.microsoft.com/powerquery-m/index
