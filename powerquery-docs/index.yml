@@ -22,7 +22,7 @@ landingContent:
   # Card
   - title: Power Query Overview
     linkLists:
-      - linkListType: Overview
+      - linkListType: overview
         links:
           - text: What is Power Query
             url: power-query-what-is-power-query.md
