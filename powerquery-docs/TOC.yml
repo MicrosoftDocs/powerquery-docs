@@ -110,56 +110,56 @@
           href: SamplesDirectory.md#odbc
         - name: "TripPin Samples"
           href: SamplesDirectory.md#trippin
-    - name: Advanced concepts
-      items:
-      - name: "Handling Authentication"
-        href: HandlingAuthentication.md
-      - name: "Handling Data Access"
-        href: HandlingDataAccess.md
-      - name: "ODBC Development"
+      - name: Advanced concepts
         items:
-        - name: "Overview"
-          href: odbc.md#overview
-        - name: "ODBC Extensibility Functions"
-          href: odbc.md#odbc-extensibility-functions
-        - name: "Parameters for your Data Source Function"
-          href: odbc.md#parameters-for-your-data-source-function
-        - name: "Parameters for Odbc.DataSource"
-          href: odbc.md#parameters-for-odbcdatasource
-        - name: "Troubleshooting and Testing"
-          href: odbc.md#troubleshooting-and-testing
-      - name: "Handling Resource Path"
-        href: HandlingResourcePath.md
-      - name: "Handling Paging"
-        href: HandlingPaging.md
-      - name: "Handling Transformations"
-        items:
-        - name: "Static"
-          href: HandlingTransformations.md#static-transformations
-        - name: "Dynamic"
-          href: HandlingTransformations.md#dynamic-transformations
-      - name: "Handling Schemas"
-        href: HandlingSchema.md
-      - name: "Handling Status Codes"
-        items: 
-        - name: "Default Behavior"
-          href: HandlingStatusCodes.md
-        - name: "Wait Retry Pattern"
-          href: WaitRetry.md
-      - name: "Handling Unit Testing"
-        href: HandlingUnitTesting.md
-      - name: "Helper Functions"
-        href: HelperFunctions.md
-      - name: "Handling Documentation"
-        href: HandlingDocumentation.md
-      - name: "Handling Navigation Tables"
-        href: HandlingNavigationTables.md
-      - name: "Handling Gateway Support"
-        href: HandlingGatewaySupport.md
-      - name: "Handling Connector Signing"
-        href: HandlingConnectorSigning.md
-    - name: Certification
-      href: ConnectorCertification.md
+        - name: "Handling Authentication"
+          href: HandlingAuthentication.md
+        - name: "Handling Data Access"
+          href: HandlingDataAccess.md
+        - name: "ODBC Development"
+          items:
+          - name: "Overview"
+            href: odbc.md#overview
+          - name: "ODBC Extensibility Functions"
+            href: odbc.md#odbc-extensibility-functions
+          - name: "Parameters for your Data Source Function"
+            href: odbc.md#parameters-for-your-data-source-function
+          - name: "Parameters for Odbc.DataSource"
+            href: odbc.md#parameters-for-odbcdatasource
+          - name: "Troubleshooting and Testing"
+            href: odbc.md#troubleshooting-and-testing
+        - name: "Handling Resource Path"
+          href: HandlingResourcePath.md
+        - name: "Handling Paging"
+          href: HandlingPaging.md
+        - name: "Handling Transformations"
+          items:
+          - name: "Static"
+            href: HandlingTransformations.md#static-transformations
+          - name: "Dynamic"
+            href: HandlingTransformations.md#dynamic-transformations
+        - name: "Handling Schemas"
+          href: HandlingSchema.md
+        - name: "Handling Status Codes"
+          items: 
+          - name: "Default Behavior"
+            href: HandlingStatusCodes.md
+          - name: "Wait Retry Pattern"
+            href: WaitRetry.md
+        - name: "Handling Unit Testing"
+          href: HandlingUnitTesting.md
+        - name: "Helper Functions"
+          href: HelperFunctions.md
+        - name: "Handling Documentation"
+          href: HandlingDocumentation.md
+        - name: "Handling Navigation Tables"
+          href: HandlingNavigationTables.md
+        - name: "Handling Gateway Support"
+          href: HandlingGatewaySupport.md
+        - name: "Handling Connector Signing"
+          href: HandlingConnectorSigning.md
+      - name: Certification
+        href: ConnectorCertification.md
     - name: Resources
       items:
       - name: "Power BI Documentation"
