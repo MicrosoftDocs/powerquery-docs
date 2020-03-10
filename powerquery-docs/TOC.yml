@@ -134,10 +134,10 @@
         href: HandlingPaging.md
       - name: "Handling Transformations"
         items:
-        - name: Static
+        - name: "Static"
           href: HandlingTransformations.md#static-transformations
-        - name: Dynamic
-         href: HandlingTransformations.md#dynamic-transformations
+        - name: "Dynamic"
+          href: HandlingTransformations.md#dynamic-transformations
       - name: "Handling Schemas"
         href: HandlingSchema.md
       - name: "Handling Status Codes"
