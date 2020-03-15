@@ -76,6 +76,10 @@
       href: CombineFiles.md
     - name: "Common Issues"
       href: CommonIssues.md
+    - name: "Recording Query Diagnostics"
+      href: RecordingQueryDiagnostics.md
+    - name: "Reading Query Diagnostics"
+      href: ReadingQueryDiagnostics.md
     - name: "Connectors"
       items:
       - name: "Excel"
