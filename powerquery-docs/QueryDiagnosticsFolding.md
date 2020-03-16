@@ -1,3 +1,16 @@
+---
+title: Understanding folding with Query Diagnostics
+description: Using Query Diagnostics to understand what operations are folding versus being performed locally
+author: cpopell
+
+ms.service: powerquery
+ms.topic: conceptual
+ms.date: 03/16/2020
+ms.author: gepopell
+
+LocalizationGroup: reference
+---
+
 # Understanding folding with Query Diagnostics
 
 One of the most common reasons to use Query Diagnostics is to have a better understanding of what operations were 'pushed down' by Power Query to be performed by the back-end data source, which is also known as 'folding'. If we want to see what folded, we can look at what is the 'most specific' query, or queries, that get sent to the back-end data source. We can look at this for both ODATA and SQL.
