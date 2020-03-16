@@ -114,3 +114,5 @@ If you start and stop diagnostics and refresh the same query, we get 40 rows due
 [An introduction to the feature](QueryDiagnostics.md)
 
 [More about reading and visualizing your recorded traces](ReadingQueryDiagnostics.md)
+
+[How to understand what query operations are folding using Query Diagnostics](QueryDiagnosticsFolding.md)
