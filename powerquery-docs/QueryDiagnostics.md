@@ -15,9 +15,13 @@ LocalizationGroup: reference
 
 Query Diagnostics is a powerful new feature that will allow you to determine what Power Query is doing during authoring time. While we will be expanding on this feature in the future, including allowing you to use it during full refreshes, at this time it allows you to understand what sort of queries you are emitting, what slowdowns you might run into during authoring refresh, and what kind of background events are happening.
 
-To use Query Diagnostics, you need to enable it from the Preview Features menu in Power BI. Once you've done that, a new 'Tools' tab will light up in the Power Query editor that you can use to trace diagnostics.
+To use Query Diagnostics, go to the 'Tools' tab in the Power Query Editor ribbon.
 
 ![Query Diagnostics](./images/diagnosticstoolbar.png)
+
+By default, Query Diagnostics may require administrative rights to run (depending on IT policy). If you find yourself unable to run Query Diagnostics, open the Power BI options page, Diagnostics tab, and select 'Enable in Query Editor (does not require running as admin)'. This will constrain you from being able to trace diagnostics when doing a full refresh into Power BI rather than the Power Query editor, but will allow you to still use it when previewing, authoring, etc.
+
+![Query Diagnostics options](./images/diagnosticsoptions.png)
 
 Whenever you start diagnostics, Power Query will begin tracing any evaluations that you cause. The evaluation that most users think of is when you press refresh, or when you retrieve data for the first time, but there are many actions that can cause evaluations depending on the connector. For example, with the SQL connector, when you retrieve a list of values to filter, that would kick off an evaluation as well—but it doesn’t associate with a user query, and that’s represented in the diagnostics. Other system generated queries might include Navigator or “Get Data” experience.
 
