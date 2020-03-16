@@ -37,9 +37,6 @@ It's important to mention that there is no way to cover all the different permut
 
 For the most broad coverage this documentation will focus on Query Diagnostics of the Northwind Customers table, both on SQL and OData. The OData notes use the public endpoint found at [the OData.org website](https://services.odata.org/V4/Northwind/Northwind.svc/), while you'll need to provide a SQL server for yourself. Many data sources will differ significantly from these, and will have connector specific documentation added over time.
 
-## Diagnose Step
-
-
 
 ## Start / Stop Diagnostics
 
@@ -101,6 +98,16 @@ Once it's done loading the data to model, press 'Stop' diagnostics.
 You can expect to see some combination of metadata and data queries. Metadata calls grab the information it can about the data source. Data retrieval is about accessing the data source, emitting the final built up Data Source Query with folded down operations, and then performing whatever evaluations are missing on top, locally.
 
 It's important to note that just because you see a resource (database, web endpoint, etc.) or a data source query in your diagnostics, it doesn't mean that it's necessarily performing network activity. Power Query may retrieve this information from its cache. In future updates, we will indicate whether or not information is being retrieved from the cache for easier diagnosis.
+
+## Diagnose Step
+
+'Diagnose Step' is more useful for getting an insight into what evaluations are happening up to a single step, which can help you identify, up to that step, what performance is like as well as what parts of your query are being performed locally or remotely.
+
+If you used 'Diagnose Step' on the query we built above, you'll find that it only returns 10 or so rows, and if we look at the last row with a Data Source Query we can get a pretty good idea of what our final emitted query to the data source will be. In this case, we can see that Sales Representative was filtered remotely, but the grouping (by process of elimination) happened locally.
+
+![Diagnosing the filtered and grouped Customers table](images/DiagnoseStepOdataCustomers.png)
+
+If you start and stop diagnostics and refresh the same query, we get 40 rows due to the fact that, as mentioned above, Power Query is getting information on every step, not just the final step. This makes it harder when you're just trying to get insight into one particular part of your query.
 
 ## Additional Reading
 
