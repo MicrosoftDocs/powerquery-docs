@@ -76,10 +76,16 @@
       href: CombineFiles.md
     - name: "Common Issues"
       href: CommonIssues.md
-    - name: "Recording Query Diagnostics"
-      href: RecordingQueryDiagnostics.md
-    - name: "Reading Query Diagnostics"
-      href: ReadingQueryDiagnostics.md
+    - name: "Query Diagnostics"
+      items:
+      - name: "What is Query Diagnostics for Power Query?"
+        href: QueryDiagnostics.md
+      - name: "Recording Query Diagnostics"
+        href: RecordingQueryDiagnostics.md
+      - name: "Reading Query Diagnostics"
+        href: ReadingQueryDiagnostics.md
+      - name: "Understanding folding with Query Diagnostics"
+        href: QueryDiagnosticsFolding.md
     - name: "Connectors"
       items:
       - name: "Excel"
