@@ -84,6 +84,8 @@
         href: RecordingQueryDiagnostics.md
       - name: "Reading Query Diagnostics"
         href: ReadingQueryDiagnostics.md
+      - name: "Understanding folding with Query Diagnostics"
+        href: QueryDiagnosticsFolding.md
     - name: "Connectors"
       items:
       - name: "Excel"
