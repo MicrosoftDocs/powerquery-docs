@@ -145,3 +145,11 @@ Operation “0/1/5”, might have a child node, in which case, the path will hav
 Combining two (or more) operations will not occur if it leads to detail loss. The grouping is designed to approximate “commands” executed during the evaluation. In the detailed view, multiple operations will share a Group Id, corresponding to the groups that are aggregated in the Summary view. 
 
 As with most columns, the group id is only relevant within a specific evaluation, as filtered by the Id column.
+
+## Additional Reading
+
+[How to record diagnostics in various use cases](RecordingQueryDiagnostics.md)
+
+[More about reading and visualizing your recorded traces](ReadingQueryDiagnostics.md)
+
+[How to understand what query operations are folding using Query Diagnostics](QueryDiagnosticsFolding.md)
