@@ -78,7 +78,7 @@
       href: CommonIssues.md
     - name: "Query Diagnostics"
       items:
-      - name: "Summary"
+      - name: "What is Query Diagnostics for Power Query?"
         href: QueryDiagnostics.md
       - name: "Recording Query Diagnostics"
         href: RecordingQueryDiagnostics.md
