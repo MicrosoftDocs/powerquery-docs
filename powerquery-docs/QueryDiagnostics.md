@@ -25,9 +25,11 @@ By default, Query Diagnostics may require administrative rights to run (dependin
 
 Whenever you start diagnostics, Power Query will begin tracing any evaluations that you cause. The evaluation that most users think of is when you press refresh, or when you retrieve data for the first time, but there are many actions that can cause evaluations depending on the connector. For example, with the SQL connector, when you retrieve a list of values to filter, that would kick off an evaluation as well—but it doesn’t associate with a user query, and that’s represented in the diagnostics. Other system generated queries might include Navigator or “Get Data” experience.
 
-It's important that you press 'Stop' diagnostics. This will allow the engine to collect the recorded traces and parse them into the proper output. Without this step you'll lose your traces.
+When you press 'Diagnose Step', Power Query runs a special evaluation of just the step you're looking at and shows you the diagnostics for that step, without showing you the diagnostics for other steps in the query. This can make it much easier to get a narrow view into a problem.
 
-With this first version of the feature we present two different diagnostic views—a summarized and a detailed view. The summarized view is aimed to give you an immediate insight into where time is being spent in your query. The detailed view is much deeper, line by line, and will generally only be needed for serious diagnosing by power users.
+It's important that if you're recording all traces that from 'Start Diagnostics' that you press 'Stop diagnostics'. This will allow the engine to collect the recorded traces and parse them into the proper output. Without this step you'll lose your traces.
+
+We currently present two views whenever you get diagnostics: The summarized view is aimed to give you an immediate insight into where time is being spent in your query. The detailed view is much deeper, line by line, and will generally only be needed for serious diagnosing by power users.
 
 Some capabilities, like the “Data Source Query” column, are currently available only on certain connectors. We will be working to extend the breadth of this coverage in the future.
 
