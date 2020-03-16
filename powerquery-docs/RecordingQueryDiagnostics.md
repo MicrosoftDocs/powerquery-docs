@@ -18,11 +18,11 @@ When authoring in Power Query, the basic workflow is that you connect to a data 
 
 While you may get a similar result at the end of an authoring workflow, refreshing in the editor, or refreshing in Power BI proper, very different evaluations are run by the software for the different user experiences provided. It's important to know what to expect when doing query diagnostics in these different workflows so you aren't surprised by the very different diagnostic data.
 
-To start diagnostics, you first need to make sure that Query Diagnostics are enabled as a Preview Feature. When this is done, there will be a new 'Tools' tab on the Power Query ribbon. Click 'Start Diagnostics', perform whatever evaluations you want (authoring, preview refresh, full refresh), and the click 'Stop Diagnostics'.
+To start Query Diagnostics, go to the 'Tools' tab in the Power Query Editor ribbon. You're presented here with a few different options. 
 
 ![Query diagnostics control](./images/diagnosticstoolbar.png)
 
-To understand more about the feature, read the introduction article [here](QueryDiagnostics.md).
+There are two primary options here, 'Diagnose Step' and 'Start Diagnostics' (paired with 'Stop Diagnostics'). The former will give you information on a query up to a selected step, and is most useful for understanding what operations are being performed locally or remotely in a query. The latter gives you more insight into a variety of other cases, discussed below.
 
 ## Connector Specifics
 
@@ -37,7 +37,17 @@ It's important to mention that there is no way to cover all the different permut
 
 For the most broad coverage this documentation will focus on Query Diagnostics of the Northwind Customers table, both on SQL and OData. The OData notes use the public endpoint found at [the OData.org website](https://services.odata.org/V4/Northwind/Northwind.svc/), while you'll need to provide a SQL server for yourself. Many data sources will differ significantly from these, and will have connector specific documentation added over time.
 
-## Authoring
+## Diagnose Step
+
+
+
+## Start / Stop Diagnostics
+
+'Start Diagnostics' and 'Stop Diagnostics' are more broadly applicable than 'Diagnose Step', but will also give you a lot more information that you'll need to sort through. For example, starting diagnostics, refreshing a preview, and then stopping will give you equivalent information to running Diagnose Step on every step (due to how Power Query works in the editor to refresh each step independently). 
+
+To start recording, click 'Start Diagnostics', perform whatever evaluations you want (authoring, preview refresh, full refresh), and then click 'Stop Diagnostics'.
+
+### Authoring
 
 The authoring workflow's primary difference is that it will generally generate more individual evaluations than seen in other workflows. As discussed in the primary Query Diagnostics article, these are a result of populating various user interfaces such as the navigator or filter dropdowns.
 
@@ -65,7 +75,7 @@ Finally, navigate back to the 'Tools' tab of the Ribbon and click 'Stop Diagnost
 
 If you trace an entire authoring session, you will generally expect to see something like a source query evaluation, then evaluations related to the relevant navigator, then at least one query emitted for each step you apply (with potentially more depending on the exact UX actions taken). In some connectors, parallel evaluations will happen for performance reasons that will yield very similar sets of data.
 
-## Refresh Preview
+### Refresh Preview
 
 When you have finished transforming your data, you have a sequence of steps in a query. When you press 'Refresh Preview' or 'Refresh All' in the Power Query editor, you won't see just one step in your query diagnostics. The reason for this is that refreshing in the Power Query Editor explicitly refreshes the query ending with the last step applied, and then steps back through the applied steps and refreshes for the query up to that point, back to the source.
 
@@ -76,7 +86,7 @@ This means that if you have five steps in your query, including Source and Navig
 
 Note that when talking about 'Refresh All' that it will refresh all queries and you'll need to filter to the ones you care about, as you might expect.
 
-## Full Refresh
+### Full Refresh
 
 Query Diagnostics can be used to diagnose the so-called 'final query' that is emitted during the Refresh in Power BI, rather than just the Power Query editor experience. To do this, you first need to load the data to the model once. If you are planning to do this, make sure that you realize that if you press 'Close and Apply' that the editor window will close (interrupting tracing) so you either need to do it on the second refresh, or click the dropdown icon under 'Close and Apply' and press 'Apply' instead.
 
@@ -92,7 +102,7 @@ You can expect to see some combination of metadata and data queries. Metadata ca
 
 It's important to note that just because you see a resource (database, web endpoint, etc.) or a data source query in your diagnostics, it doesn't mean that it's necessarily performing network activity. Power Query may retrieve this information from its cache. In future updates, we will indicate whether or not information is being retrieved from the cache for easier diagnosis.
 
-# Additional Reading
+## Additional Reading
 
 [An introduction to the feature](QueryDiagnostics.md)
 
