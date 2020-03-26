@@ -5,7 +5,7 @@ author: dougklopfenstein
 
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 03/06/2020
+ms.date: 03/26/2020
 ms.author: v-douklo
 
 LocalizationGroup: reference

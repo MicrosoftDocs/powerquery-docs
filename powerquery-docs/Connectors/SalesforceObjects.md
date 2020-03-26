@@ -5,7 +5,7 @@ author: dougklopfenstein
 
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 03/11/2020
+ms.date: 03/26/2020
 ms.author: v-douklo
 
 LocalizationGroup: reference
@@ -38,7 +38,7 @@ In addition, Salesforce API access should be enabled. To verify access settings,
    * CNAME record redirects
    * Relationship columns
 
-## Connect to Salesforce Objectss
+## Connect to Salesforce Objects
 
 To connect to Salesforce Objects data:
 
@@ -52,7 +52,7 @@ To connect to Salesforce Objects data:
 
    You can also select **Custom** and enter a custom URL to log in. This custom URL might be a custom domain you've created within Salesforce, such as https://contoso.salesforce.com. You can also use the custom URL selection if you are using your own CNAME record that redirects to Salesforce.
 
-   In addition, you can also select **Include relationship columns**. This selection alters the query by including columns that might have foreign-key relationships to other tables. If this box is unchecked, you won’t see those columns.
+   In addition, you can select **Include relationship columns**. This selection alters the query by including columns that might have foreign-key relationships to other tables. If this box is unchecked, you won’t see those columns.
 
    Once you've selected the URL, select **OK** to continue.
 
