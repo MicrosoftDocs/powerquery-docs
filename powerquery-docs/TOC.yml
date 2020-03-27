@@ -8,12 +8,12 @@
         href: power-query-what-is-power-query.md
     - name: Quick starts
       items:
-      - name: "Use Power Query"
-        href: power-query-quickstart-using-power-bi.md
-      - name: "Use Query Parameters"
-        href: power-query-query-parameters.md 
+      - name: "Github"
+        href: samples/Github/README.md
+      - name: "MyGraph"
+        href: samples/MyGraph/README.md
     - name: Tutorials
-      items:   
+      items:
       - name: "Shape and combine data"
         href: power-query-tutorial-shape-combine.md
     - name: Concepts
@@ -22,11 +22,21 @@
         href: CombineFiles.md
       - name: "Power Query query folding"
         href: power-query-folding.md
-      - name: "Power Query online limits"
-        href: power-query-online-limits.md
-      - name: "Common issues"
-        href: CommonIssues.md
-    - name: Connector reference
+      - name: "Query Diagnostics"
+        items:
+        - name: "What is Query Diagnostics for Power Query?"
+          href: QueryDiagnostics.md
+        - name: "Recording Query Diagnostics"
+          href: RecordingQueryDiagnostics.md
+        - name: "Reading Query Diagnostics"
+          href: ReadingQueryDiagnostics.md
+        - name: "Understanding folding with Query Diagnostics"
+          href: QueryDiagnosticsFolding.md
+        - name: "Power Query Online Limits"
+          href: power-query-online-limits.md
+        - name: "Common Issues"
+          href: CommonIssues.md
+    - name: "Connectors"
       items:
       - name: "Excel"
         href: Connectors/Excel.md
