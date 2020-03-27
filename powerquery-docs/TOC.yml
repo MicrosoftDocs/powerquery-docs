@@ -9,7 +9,7 @@
     - name: Quick starts
       items:
       - name: "Use Power Query"
-        href: power-query-quickstart-using-power-bi
+        href: power-query-quickstart-using-power-bi.md
       - name: "Use Query Parameters"
         href: power-query-query-parameters.md
     - name: Tutorials
