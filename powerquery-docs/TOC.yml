@@ -8,17 +8,17 @@
         href: power-query-what-is-power-query.md
     - name: Quick starts
       items:
-      - name: "Github"
-        href: samples/Github/README.md
-      - name: "MyGraph"
-        href: samples/MyGraph/README.md
+      - name: "Use Power Query"
+        href: power-query-quickstart-using-power-bi
+      - name: "Use Query Parameters"
+        href: power-query-query-parameters.md
     - name: Tutorials
       items:
       - name: "Shape and combine data"
         href: power-query-tutorial-shape-combine.md
     - name: Concepts
       items:
-      - name: "Combine Files"
+      - name: "Combine files"
         href: CombineFiles.md
       - name: "Power Query query folding"
         href: power-query-folding.md
@@ -32,11 +32,11 @@
           href: ReadingQueryDiagnostics.md
         - name: "Understanding folding with Query Diagnostics"
           href: QueryDiagnosticsFolding.md
-        - name: "Power Query Online Limits"
-          href: power-query-online-limits.md
-        - name: "Common Issues"
-          href: CommonIssues.md
-    - name: "Connectors"
+      - name: "Power Query online limits"
+        href: power-query-online-limits.md
+      - name: "Common issues"
+        href: CommonIssues.md
+    - name: "Connector reference"
       items:
       - name: "Excel"
         href: Connectors/Excel.md
@@ -82,7 +82,7 @@
           href: CreatingFirstConnector.md
       - name: Walkthroughs
         items:
-        - name: TripPin Walkthrough
+        - name: TripPin walkthrough
           items:
           - name: "Overview"
             href: samples/TripPin/README.md
@@ -90,7 +90,7 @@
             href: samples/TripPin/1-OData/README.md
           - name: "2. REST API"
             href: samples/TripPin/2-Rest/README.md
-          - name: "3. Navigation Tables"
+          - name: "3. Navigation tables"
             href: samples/TripPin/3-NavTables/README.md
           - name: "4. Paths"
             href: samples/TripPin/4-Paths/README.md
@@ -98,15 +98,15 @@
             href: samples/TripPin/5-Paging/README.md
           - name: "6. Schemas"
             href: samples/TripPin/6-Schema/README.md
-          - name: "7. Advanced Schemas"
+          - name: "7. Advanced schemas"
             href: samples/TripPin/7-AdvancedSchema/README.md
           - name: "8. Diagnostics"
             href: samples/TripPin/8-Diagnostics/README.md
-          - name: "9. Test Connection"
+          - name: "9. Test connection"
             href: samples/TripPin/9-TestConnection/README.md
           - name: "10. Folding"
             href: samples/TripPin/10-TableView1/README.md
-        - name: OAuth Tutorials
+        - name: OAuth tutorials
           items:
           - name: "Github"
             href: samples/Github/README.md
@@ -114,70 +114,70 @@
             href: samples/MyGraph/README.md
       - name: Samples
         items:
-        - name: "Functional Samples"
+        - name: "Functional samples"
           href: SamplesDirectory.md#functionality
-        - name: "ODBC Samples"
+        - name: "ODBC samples"
           href: SamplesDirectory.md#odbc
-        - name: "TripPin Samples"
+        - name: "TripPin samples"
           href: SamplesDirectory.md#trippin
       - name: Advanced concepts
         items:
-        - name: "Handling Authentication"
+        - name: "Handling authentication"
           href: HandlingAuthentication.md
-        - name: "Handling Data Access"
+        - name: "Handling data access"
           href: HandlingDataAccess.md
-        - name: "ODBC Development"
+        - name: "ODBC development"
           items:
           - name: "Overview"
             href: odbc.md#overview
-          - name: "ODBC Extensibility Functions"
+          - name: "ODBC extensibility functions"
             href: odbc.md#odbc-extensibility-functions
-          - name: "Parameters for your Data Source Function"
+          - name: "Parameters for your Data Source function"
             href: odbc.md#parameters-for-your-data-source-function
           - name: "Parameters for Odbc.DataSource"
             href: odbc.md#parameters-for-odbcdatasource
-          - name: "Troubleshooting and Testing"
+          - name: "Troubleshooting and testing"
             href: odbc.md#troubleshooting-and-testing
-        - name: "Handling Resource Path"
+        - name: "Handling resource path"
           href: HandlingResourcePath.md
-        - name: "Handling Paging"
+        - name: "Handling paging"
           href: HandlingPaging.md
-        - name: "Handling Transformations"
+        - name: "Handling transformations"
           items:
           - name: "Static"
             href: HandlingTransformations.md#static-transformations
           - name: "Dynamic"
             href: HandlingTransformations.md#dynamic-transformations
-        - name: "Handling Schemas"
+        - name: "Handling schemas"
           href: HandlingSchema.md
-        - name: "Handling Status Codes"
+        - name: "Handling status codes"
           items: 
-          - name: "Default Behavior"
+          - name: "Default behavior"
             href: HandlingStatusCodes.md
-          - name: "Wait Retry Pattern"
+          - name: "Wait retry pattern"
             href: WaitRetry.md
-        - name: "Handling Unit Testing"
+        - name: "Handling unit testing"
           href: HandlingUnitTesting.md
-        - name: "Helper Functions"
+        - name: "Helper functions"
           href: HelperFunctions.md
-        - name: "Handling Documentation"
+        - name: "Handling documentation"
           href: HandlingDocumentation.md
-        - name: "Handling Navigation Tables"
+        - name: "Handling navigation tables"
           href: HandlingNavigationTables.md
-        - name: "Handling Gateway Support"
+        - name: "Handling gateway support"
           href: HandlingGatewaySupport.md
-        - name: "Handling Connector Signing"
+        - name: "Handling connector signing"
           href: HandlingConnectorSigning.md
       - name: Certification
         href: ConnectorCertification.md
     - name: Resources
       items:
-      - name: "Power BI Documentation"
+      - name: "Power BI documentation"
         href: /power-bi/
-      - name: "M Function Reference"
+      - name: "M function reference"
         href: /powerquery-m/power-query-m-function-reference
-      - name: "M Language Document"
+      - name: "M language document"
         href: /powerquery-m/power-query-m-language-specification
-      - name: "M Type Reference"
+      - name: "M type reference"
         href: /powerquery-m/power-query-m-type-system
     

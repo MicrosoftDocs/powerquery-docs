@@ -38,29 +38,25 @@ landingContent:
             url: power-query-query-parameters.md
 
   # Card
-  - title: Common tasks using Power Query
+  - title: Tasks using Power Query
     linkLists:
-      - linkListType: tutorial
+      - linkListType: how-to-guide
         links:
           - text: Combining data
             url: power-query-tutorial-shape-combine.md
+          - text: Using Query Diagnostics
+            url: querydiagnostics.md
 
   # Card
   - title: Develop your custom connector
     linkLists:
-      - linkListType: concept
+      - linkListType: how-to-guide
         links:
           - text: Custom connector development
             url: installingsdk.md
-            
-  # Card
-  - title: Certify your custom connector
-    linkLists:
-      - linkListType: concept
-        links:
           - text: Custom connector certification
             url: connectorcertification.md
-
+            
   # Card
   - title: M language reference
     linkLists:
