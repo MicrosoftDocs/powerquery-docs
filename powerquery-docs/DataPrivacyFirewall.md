@@ -205,20 +205,23 @@ in
 
 Here’s a higher-level view, showing the dependencies.
 
-Query Dependencies Dialog
+![Query Dependencies Dialog](images/FirewallQueryDependencies.png)
 
 
 ### Let’s Party Partition!
 
 Let’s zoom in a bit and include steps in the picture, and start walking through the partitioning logic. Here’s a diagram of our three queries, showing the initial firewall partitions in green. Notice that each step starts in its own partition.
 
+![Initial firewall partitions](images/FirewallStepsPane1.png)
 
 Next, we trim parameter partitions. Thus, DbServer gets implicitly included in the Source partition.
 
+![Trimmed firewall partitions](images/FirewallStepsPane2.png)
 
 
 Now we perform the static grouping. This maintains separation between partitions in separate queries (note for instance that the last two steps of Employees don’t get grouped with the steps of Contacts), as well as between partitions that reference other partitions (such as the last two steps of Employees) and those that don’t (such as the first three steps of Employees).
 
+![Post static-grouping firewall partitions](images/FirewallStepsPane3.png)
 
 
 
@@ -230,12 +233,15 @@ For the sake of illustration, though, let’s look at what would happen if the C
 
 In this case, the Contacts query would not access any data sources. Thus, it would get trimmed during the first part of the dynamic phase.
 
+![Firewall partition after dynamic phase trimming](images/FirewallStepsPane4.png)
 
 
 
 With the Contacts partition removed, the last two steps of Employees would no longer reference any partitions except the one containing the first three steps of Employees. Thus, the two partitions would be grouped.
 
 The resulting partition would look like this.
+
+![Final firewall partitions](images/FirewallStepsPane5.png)
 
 
 ## That’s a wrap
