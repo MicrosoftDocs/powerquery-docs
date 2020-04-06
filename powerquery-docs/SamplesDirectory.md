@@ -31,7 +31,6 @@ We maintain a list of samples on the DataConnectors repo on Github. Each of the 
 | Sample | Description | Link |
 | :--- | :--- | :--- |
 | Github | This sample corresponds to the [Github connector tutorial](samples/Github/README.md). | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/Github) |
-| MyGraph | This sample corresponds to the [Microsoft Graph connector tutorial](samples/MyGraph/README.md). | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/MyGraph) |
 
 ## ODBC
 
