@@ -50,8 +50,6 @@
       items:
       - name: "Github"
         href: samples/Github/README.md
-      - name: "MyGraph"
-        href: samples/MyGraph/README.md
 - name: Samples
   items:
   - name: "Functional Samples"
@@ -120,6 +118,10 @@
         href: Connectors/DataLakeStorage.md
       - name: "Facebook"
         href: Connectors/Facebook.md
+      - name: "Salesforce Reports"
+        href: Connectors/SalesforceReports.md
+      - name: "Salesforce Objects"
+        href: Connectors/SalesforceObjects.md
   - name: "Connector Development Reference"
     items:
       - name: "Handling Authentication"

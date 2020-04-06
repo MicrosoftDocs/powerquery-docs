@@ -86,3 +86,10 @@ Due to backlogs, delays, rearchitecture, and testing issues, we highly recommend
 ## Getting your connector certified
 
 If you'd like to reach out about connector certification, please contact us at dataconnectors@microsoft.com.
+
+## Recommended step: Create a template app
+
+Once you've developed a connector to a data source, consider helping customers get up and running quickly by creating a **template app**. A template app provides customers a prebuilt report connected to their data that they can use out-of-the-box or customize as necessary. See [Template apps](https://docs.microsoft.com/power-bi/service-template-apps-overview) for details.
+
+>[!NOTE]
+>Template apps do not support connectors that require a gateway.

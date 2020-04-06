@@ -27,6 +27,11 @@ The list of supported authentication types is defined as part of an extension's 
 |                     | Refresh       | **(optional)** Function that retrieves a new access token from a refresh token.                                                                                |
 |                     | Logout        | **(optional)** Function that invalidates the user's current access token.                                                                                      |
 |                     | Label         | **(optional)** A text value that allows you to override the default label for this AuthenticationKind.                                                         |
+| AAD                 | AuthorizationUri | Your AAD authorization endpoint, which will be of the form "/authorize" |
+|                     | DefaultClientApplication | Default client if the host doesn't natively support AAD type. Has ClientId, ClientSecret, and CallbackUrl sub-fields. |
+|                     | ClientId      | ClientId of your AAD application. Because you're working through PowerQuery, you should use and authorize "a672d62c-fc7b-4e81-a576-e60dc46e951d" for the Desktop client. In the Power BI service, our credential handler will substitute its own ClientId, and for that you should authorize "b52893c8-bc2e-47fc-918b-77022b299bbc" |
+|                     | ClientSecret  | Leave this blank. |
+|                     | CallbackUrl   | The AAD CallbackUrl. Set this to "https://preview.powerbi.com/views/oauthredirect.html" |
 | UsernamePassword    | UsernameLabel | **(optional)** A text value to replace the default label for the _Username_ text box on the credentials UI.                                                    |
 |                     | PasswordLabel | **(optional)** A text value to replace the default label for the _Password_ text box on the credentials UI.                                                    |
 |                     | Label         | **(optional)** A text value that allows you to override the default label for this AuthenticationKind.                                                         |
@@ -202,4 +207,23 @@ As `Uri.Type` is an _ascribed type_ rather than a _primitive type_ in the M lang
 
 ```
 shared GithubSample.Contents = Value.ReplaceType(Github.Contents, type function (url as Uri.Type) as any);
+```
+
+### AAD Authentication Sample
+
+If you're using AAD Authentication, generally for a Microsoft service, your authentication will generally look something like this.
+
+```
+DataSourceKind = [
+    Type = "Url",
+    Authentication = [
+        Aad = [
+            AuthorizationUri = authorization_uri,
+            DefaultClientApplication = [
+                ClientId = "a672d62c-fc7b-4e81-a576-e60dc46e951d",
+                ClientSecret = "",
+                CallbackUrl = "https://preview.powerbi.com/views/oauthredirect.html"
+            ]
+        ]
+    ],
 ```
