@@ -253,4 +253,4 @@ The resulting partition would look like this.
 
 ## That’s a wrap
 
-While there's much more that could be said on this topic, this introductory article is already long enough. Hopefully it’s given you a better understanding of the Firewall, and you better be able to understand and fix Firewall errors when you encounter them in the future.
+While there's much more that could be said on this topic, this introductory article is already long enough. Hopefully it’s given you a better understanding of the Firewall, and will help you to understand and fix Firewall errors when you encounter them in the future.
