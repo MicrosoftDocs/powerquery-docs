@@ -1,90 +1,40 @@
-- name: Overview
-  items:
-  - name: "What is Power Query?"
-    href: power-query-what-is-power-query.md
-- name: Quick Starts
-  items:
-  - name: "Using Power Query in Power BI"
-    href: power-query-quickstart-using-power-bi.md
-  - name: "Using Query Parameters in Power BI Desktop"
-    href: power-query-query-parameters.md    
-  - name: "Combining Data"
-    href: power-query-tutorial-shape-combine.md
-  - name: "Installing the PowerQuery SDK"
-    href: InstallingSDK.md
-  - name: "Starting to Develop Custom Connectors"
-    href: StartingToDevelopCustomConnectors.md
-  - name: "Creating your first connector - Hello World"
-    href: CreatingFirstConnector.md
-- name: Tutorials
-  items:
-  - name: "Shape and combine data using Power Query Editor"
-    href: power-query-tutorial-shape-combine.md  
-  - name: Connector Development
-    items:
-    - name: TripPin Walkthrough
+- name: Power Query documentation
+  href: index.yml
+  expanded: true
+  items: 
+    - name: "What is Power Query?"
+      href: power-query-what-is-power-query.md
+    - name: Quick starts
       items:
-      - name: "Overview"
-        href: samples/TripPin/README.md
-      - name: "1. OData"
-        href: samples/TripPin/1-OData/README.md
-      - name: "2. REST API"
-        href: samples/TripPin/2-Rest/README.md
-      - name: "3. Navigation Tables"
-        href: samples/TripPin/3-NavTables/README.md
-      - name: "4. Paths"
-        href: samples/TripPin/4-Paths/README.md
-      - name: "5. Paging"
-        href: samples/TripPin/5-Paging/README.md
-      - name: "6. Schemas"
-        href: samples/TripPin/6-Schema/README.md
-      - name: "7. Advanced Schemas"
-        href: samples/TripPin/7-AdvancedSchema/README.md
-      - name: "8. Diagnostics"
-        href: samples/TripPin/8-Diagnostics/README.md
-      - name: "9. Test Connection"
-        href: samples/TripPin/9-TestConnection/README.md
-      - name: "10. Folding"
-        href: samples/TripPin/10-TableView1/README.md
-    - name: OAuth Tutorials
+      - name: "Use Power Query"
+        href: power-query-quickstart-using-power-bi.md
+      - name: "Use Query Parameters"
+        href: power-query-query-parameters.md
+    - name: Tutorials
       items:
-      - name: "Github"
-        href: samples/Github/README.md
-- name: Samples
-  items:
-  - name: "Functional Samples"
-    href: SamplesDirectory.md#functionality
-  - name: "ODBC Samples"
-    href: SamplesDirectory.md#odbc
-  - name: "TripPin Samples"
-    href: SamplesDirectory.md#trippin
-- name: Concepts
-  items:
-  - name: Certification
-    href: ConnectorCertification.md
-  - name: "Power Query Online Limits"
-    href: power-query-online-limits.md
-  - name: "Power Query query folding"
-    href: power-query-folding.md
-- name: Reference
-  items:
-  - name: "Authoring Reference"
-    items:
-    - name: "Combine Files"
-      href: CombineFiles.md
-    - name: "Common Issues"
-      href: CommonIssues.md
-    - name: "Query Diagnostics"
+      - name: "Shape and combine data"
+        href: power-query-tutorial-shape-combine.md
+    - name: Concepts
       items:
-      - name: "What is Query Diagnostics for Power Query?"
-        href: QueryDiagnostics.md
-      - name: "Recording Query Diagnostics"
-        href: RecordingQueryDiagnostics.md
-      - name: "Reading Query Diagnostics"
-        href: ReadingQueryDiagnostics.md
-      - name: "Understanding folding with Query Diagnostics"
-        href: QueryDiagnosticsFolding.md
-    - name: "Connectors"
+      - name: "Combine files"
+        href: CombineFiles.md
+      - name: "Power Query query folding"
+        href: power-query-folding.md
+      - name: "Query Diagnostics"
+        items:
+        - name: "What is Query Diagnostics for Power Query?"
+          href: QueryDiagnostics.md
+        - name: "Recording Query Diagnostics"
+          href: RecordingQueryDiagnostics.md
+        - name: "Reading Query Diagnostics"
+          href: ReadingQueryDiagnostics.md
+        - name: "Understanding folding with Query Diagnostics"
+          href: QueryDiagnosticsFolding.md
+      - name: "Power Query online limits"
+        href: power-query-online-limits.md
+      - name: "Common issues"
+        href: CommonIssues.md
+    - name: "Connector reference"
       items:
       - name: "Excel"
         href: Connectors/Excel.md
@@ -122,62 +72,114 @@
         href: Connectors/SalesforceReports.md
       - name: "Salesforce Objects"
         href: Connectors/SalesforceObjects.md
-  - name: "Connector Development Reference"
-    items:
-      - name: "Handling Authentication"
-        href: HandlingAuthentication.md
-      - name: "Handling Data Access"
-        href: HandlingDataAccess.md
-      - name: "ODBC Development"
+    - name: Create custom Power Query connectors
+      items:
+      - name: Quick starts
         items:
-        - name: "Overview"
-          href: odbc.md#overview
-        - name: "ODBC Extensibility Functions"
-          href: odbc.md#odbc-extensibility-functions
-        - name: "Parameters for your Data Source Function"
-          href: odbc.md#parameters-for-your-data-source-function
-        - name: "Parameters for Odbc.DataSource"
-          href: odbc.md#parameters-for-odbcdatasource
-        - name: "Troubleshooting and Testing"
-          href: odbc.md#troubleshooting-and-testing
-      - name: "Handling Resource Path"
-        href: HandlingResourcePath.md
-      - name: "Handling Paging"
-        href: HandlingPaging.md
-      - name: "Handling Transformations"
+        - name: "Install the Power Query SDK"
+          href: InstallingSDK.md
+        - name: "Start developing custom connectors"
+          href: StartingToDevelopCustomConnectors.md
+        - name: "Create your first connector - Hello World"
+          href: CreatingFirstConnector.md
+      - name: Walkthroughs
         items:
-        - name: Static
-          href: HandlingTransformations.md#static-transformations
-        - name: Dynamic
-          href: HandlingTransformations.md#dynamic-transformations
-      - name: "Handling Schemas"
-        href: HandlingSchema.md
-      - name: "Handling Status Codes"
-        items: 
-        - name: "Default Behavior"
-          href: HandlingStatusCodes.md
-        - name: "Wait Retry Pattern"
-          href: WaitRetry.md
-      - name: "Handling Unit Testing"
-        href: HandlingUnitTesting.md
-      - name: "Helper Functions"
-        href: HelperFunctions.md
-      - name: "Handling Documentation"
-        href: HandlingDocumentation.md
-      - name: "Handling Navigation Tables"
-        href: HandlingNavigationTables.md
-      - name: "Handling Gateway Support"
-        href: HandlingGatewaySupport.md
-      - name: "Handling Connector Signing"
-        href: HandlingConnectorSigning.md
-- name: Resources
-  items:
-  - name: "Power BI Documentation"
-    href: /power-bi/
-  - name: "M Function Reference"
-    href: /powerquery-m/power-query-m-function-reference
-  - name: "M Language Document"
-    href: /powerquery-m/power-query-m-language-specification
-  - name: "M Type Reference"
-    href: /powerquery-m/power-query-m-type-system
+        - name: TripPin walkthrough
+          items:
+          - name: "Overview"
+            href: samples/TripPin/README.md
+          - name: "1. OData"
+            href: samples/TripPin/1-OData/README.md
+          - name: "2. REST API"
+            href: samples/TripPin/2-Rest/README.md
+          - name: "3. Navigation tables"
+            href: samples/TripPin/3-NavTables/README.md
+          - name: "4. Paths"
+            href: samples/TripPin/4-Paths/README.md
+          - name: "5. Paging"
+            href: samples/TripPin/5-Paging/README.md
+          - name: "6. Schemas"
+            href: samples/TripPin/6-Schema/README.md
+          - name: "7. Advanced schemas"
+            href: samples/TripPin/7-AdvancedSchema/README.md
+          - name: "8. Diagnostics"
+            href: samples/TripPin/8-Diagnostics/README.md
+          - name: "9. Test connection"
+            href: samples/TripPin/9-TestConnection/README.md
+          - name: "10. Folding"
+            href: samples/TripPin/10-TableView1/README.md
+        - name: OAuth tutorials
+          items:
+          - name: "Github"
+            href: samples/Github/README.md
+          - name: "MyGraph"
+            href: samples/MyGraph/README.md
+      - name: Samples
+        items:
+        - name: "Functional samples"
+          href: SamplesDirectory.md#functionality
+        - name: "ODBC samples"
+          href: SamplesDirectory.md#odbc
+        - name: "TripPin samples"
+          href: SamplesDirectory.md#trippin
+      - name: Advanced concepts
+        items:
+        - name: "Handling authentication"
+          href: HandlingAuthentication.md
+        - name: "Handling data access"
+          href: HandlingDataAccess.md
+        - name: "ODBC development"
+          items:
+          - name: "Overview"
+            href: odbc.md#overview
+          - name: "ODBC extensibility functions"
+            href: odbc.md#odbc-extensibility-functions
+          - name: "Parameters for your Data Source function"
+            href: odbc.md#parameters-for-your-data-source-function
+          - name: "Parameters for Odbc.DataSource"
+            href: odbc.md#parameters-for-odbcdatasource
+          - name: "Troubleshooting and testing"
+            href: odbc.md#troubleshooting-and-testing
+        - name: "Handling resource path"
+          href: HandlingResourcePath.md
+        - name: "Handling paging"
+          href: HandlingPaging.md
+        - name: "Handling transformations"
+          items:
+          - name: "Static"
+            href: HandlingTransformations.md#static-transformations
+          - name: "Dynamic"
+            href: HandlingTransformations.md#dynamic-transformations
+        - name: "Handling schemas"
+          href: HandlingSchema.md
+        - name: "Handling status codes"
+          items: 
+          - name: "Default behavior"
+            href: HandlingStatusCodes.md
+          - name: "Wait retry pattern"
+            href: WaitRetry.md
+        - name: "Handling unit testing"
+          href: HandlingUnitTesting.md
+        - name: "Helper functions"
+          href: HelperFunctions.md
+        - name: "Handling documentation"
+          href: HandlingDocumentation.md
+        - name: "Handling navigation tables"
+          href: HandlingNavigationTables.md
+        - name: "Handling gateway support"
+          href: HandlingGatewaySupport.md
+        - name: "Handling connector signing"
+          href: HandlingConnectorSigning.md
+      - name: Certification
+        href: ConnectorCertification.md
+    - name: Resources
+      items:
+      - name: "Power BI documentation"
+        href: /power-bi/
+      - name: "M function reference"
+        href: /powerquery-m/power-query-m-function-reference
+      - name: "M language document"
+        href: /powerquery-m/power-query-m-language-specification
+      - name: "M type reference"
+        href: /powerquery-m/power-query-m-type-system
     
