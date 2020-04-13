@@ -20,6 +20,8 @@
         href: CombineFiles.md
       - name: "Power Query query folding"
         href: power-query-folding.md
+      - name: "Behind the scenes of the Data Privacy Firewall"
+        href: DataPrivacyFirewall.md
       - name: "Query Diagnostics"
         items:
         - name: "What is Query Diagnostics for Power Query?"
