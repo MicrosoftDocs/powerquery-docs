@@ -15,7 +15,34 @@
       - name: "Shape and combine data"
         href: power-query-tutorial-shape-combine.md
     - name: Concepts
-      items:
+      - name: "Github"
+        href: samples/Github/README.md
+- name: Samples
+  items:
+  - name: "Functional Samples"
+    href: SamplesDirectory.md#functionality
+  - name: "ODBC Samples"
+    href: SamplesDirectory.md#odbc
+  - name: "TripPin Samples"
+    href: SamplesDirectory.md#trippin
+- name: Concepts
+  items:
+  - name: Certification
+    href: ConnectorCertification.md
+  - name: "Power Query Online Limits"
+    href: power-query-online-limits.md
+  - name: "Power Query query folding"
+    href: power-query-folding.md
+- name: Reference
+  items:
+  - name: "Authoring Reference"
+    items:
+    - name: "Combine Files"
+      href: CombineFiles.md
+    - name: "Common Issues"
+      href: CommonIssues.md
+    - name: "Data Privacy Firewall"
+      href: DataPrivacyFirewall.md
       - name: "Combine files"
         href: CombineFiles.md
       - name: "Power Query query folding"
