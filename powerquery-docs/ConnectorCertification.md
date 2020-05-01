@@ -13,7 +13,7 @@ LocalizationGroup: reference
 
 # Connector Certification
 
-When developing a custom connector, or if you've been given one by another developer or vendor, you'll notice that they require you to lower the security settings in Power BI to use them. This is due to the fact that M is a versatile language that (as seen in [Handling Authentication](HandlingAuthentication.md)) has the capacity to interact with stored credentials. This means that we needed to give end users a way to only allow certified connectors to run.
+When developing a custom connector, or if you've been given one by another developer or vendor, you'll notice that they require you to either lower security settings, or to [trust the certificate](https://docs.microsoft.com/power-bi/desktop-trusted-third-party-connectors) the connector is signed with. This is due to the fact that M is a versatile language that (as seen in [Handling Authentication](HandlingAuthentication.md)) has the capacity to interact with stored credentials. This means that we needed to give end users a way to only allow trusted connectors to run.
 
 The 'Connector Certification' program is a program in which Microsoft works with vendors to extend the data connectivity capabilities of Power BI.
 
@@ -27,6 +27,12 @@ Certified connectors are:
 We work with vendors to try to make sure that they have support in maintenance, but customer issues with the connector itself will be directed to the developer.
 
 We have a certain set of requirements for certification. We recognize that not every developer can meet these requirements, and as above we're hoping to introduce a feature set that will handle their needs in short order.
+
+To ensure the best experience for our customers, and that we're focused on customer needs:
+
+* The vendor should make sure their connector was available to customers directly for some time
+* There should be evidence from customers that the connector is working successfully at the level of usage anticipated
+* There should be a thread in the Power BI Ideas forum driven by customers to indicate demand to add it to Power BI Desktop
 
 Cut-off dates for certification are:
 * Notification of a submission on the 15th of the month, two months before the targeted Power BI desktop release. In other words for April Power BI, the cut-off is February 15th.
