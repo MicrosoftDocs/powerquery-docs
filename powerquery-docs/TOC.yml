@@ -39,7 +39,7 @@
     - name: "Connector reference"
       items:
       - name: "List of all connectors"
-        href: ListAllConnectors.md
+        href: index.md
       - name: "Excel"
         href: Connectors/Excel.md
       - name: "FHIR"
