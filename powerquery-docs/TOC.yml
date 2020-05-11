@@ -38,6 +38,8 @@
         href: CommonIssues.md
     - name: "Connector reference"
       items:
+      - name: "List of all connectors"
+        href: ListAllConnectors.md
       - name: "Excel"
         href: Connectors/Excel.md
       - name: "FHIR"
