@@ -29,16 +29,26 @@ This page summarizes all of the general availability connectors for Power Query.
         </td>
     </tr>
     <tr>
-        <td><a href="/connectors/datalakestorage.md"><img src="media/list-of-all-connectors/DataLake64.png" alt="Azure Data Lake Storage" /></a><br/><a href="/connectors/datalakestorage.md"><b>Azure Data Lake Storage</b></a><br/>By Microsoft
+        <td><a href="./connectors/datalakestorage.md"><img src="media/list-of-all-connectors/DataLake64.png" alt="Azure Data Lake Storage connector" /><br/><b>Azure Data Lake Storage</b></a><br/>By Microsoft
         </td>
         <td><a href="./connectors/excel.md"><img src="media/list-of-all-connectors/ExcelWorkbook64.png" alt="Excel connector" /><br/><b>Excel</b></a><br/>By Microsoft
         </td>
-        <td><a href="/power-query/connectors/folder.md"><img src="media/list-of-all-connectors/folder64.png" alt="Folder connector" /><br/><b>Folder</b></a><br/>By Microsoft
+        <td><a href="./connectors/folder.md"><img src="media/list-of-all-connectors/folder64.png" alt="Folder connector" /><br/><b>Folder</b></a><br/>By Microsoft
         </td>
-        <td><a href="/connectors/ODBC.md"><img src="media/list-of-all-connectors/Odbc64.png" alt="ODBC connector" /><br/><b>ODBC</b></a><br/>By Microsoft
+        <td><a href="./connectors/ODBC.md"><img src="media/list-of-all-connectors/Odbc64.png" alt="ODBC connector" /><br/><b>ODBC</b></a><br/>By Microsoft
         </td>
     </tr>
 </table>
+
+&nbsp;
+
+&nbsp;
+
+| | | | |
+| --- | --- | --- | --- |
+| ![Access Database connector](media/list-of-all-connectors/AccessDatabase64.png)<br/>**Access Database**<br/>By Microsoft | ![Active Directory connector](media/list-of-all-connectors/ActiveDirectory64.png)<br/>**Active Directory**<br/>By Microsoft | ![Adobe Analytics connector](media/list-of-all-connectors/AdobeAnalytics64.png)<br/>**Adobe Analytics**<br/>By Microsoft | ![Amazon Redshift connector](media/list-of-all-connectors/AmazonRedshift64.png)<br/>**Amazon Redshift**<br/>By Microsoft |
+| [![Azure Data Lake Storage connector](media/list-of-all-connectors/DataLake64.png)<br/>**Azure Data Lake<br/>Storage**](./connectors/datalakestorage.md)</br>By Microsoft | [![Excel connector](media/list-of-all-connectors/ExcelWorkbook64.png)<br/>**Excel**](./connectors/excel.md)<br/>By Microsoft | [![Folder connector](media/list-of-all-connectors/folder64.png)<br/>**Folder**](./connectors/folder.md)<br/>By Microsoft | [![ODBC connector](media/list-of-all-connectors/Odbc64.png)<br/>**ODBC**](./connectors/ODBC.md)</br>By Microsoft |
+| | | | |
 
 ## Next steps
 
