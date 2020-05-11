@@ -1,6 +1,6 @@
 ---
 title: Authorize a connection
-description: How to select credentials for a connector in Power Query to authorize a connection, and how to edit or delete credentials for specific connectors and sites.
+description: How to select credentials for a connector in Power Query to authorize a connection, how to select the authentication level, and how to edit or delete credentials for specific connectors and sites.
 author: DougKlopfenstein
 
 ms.service: powerquery
