@@ -31,7 +31,7 @@ This page summarizes all of the general availability connectors for Power Query.
     <tr>
         <td><a href="/connectors/datalakestorage.md"><img src="media/list-of-all-connectors/DataLake64.png" alt="Azure Data Lake Storage" /></a><br/><a href="/connectors/datalakestorage.md"><b>Azure Data Lake Storage</b></a><br/>By Microsoft
         </td>
-        <td><a href="/connectors/excel.md"><img src="media/list-of-all-connectors/ExcelWorkbook64.png" alt="Excel connector" /><br/><b>Excel</b></a><br/>By Microsoft
+        <td><a href="/excel.md"><img src="media/list-of-all-connectors/ExcelWorkbook64.png" alt="Excel connector" /><br/><b>Excel</b></a><br/>By Microsoft
         </td>
         <td><a href="/connectors/folder.md"><img src="media/list-of-all-connectors/folder64.png" alt="Folder connector" /><br/><b>Folder</b></a><br/>By Microsoft
         </td>
