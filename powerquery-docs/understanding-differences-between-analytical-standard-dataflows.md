@@ -1,7 +1,7 @@
 ---
 title: Understanding the differences between Analytical and Standard Dataflows
 description: Understanding the differences between Analytical and Standard Dataflows
-author: radcad
+author: radacad
 ms.service: powerquery
 ms.topic: conceptual
 ms.date: 05/11/2020
