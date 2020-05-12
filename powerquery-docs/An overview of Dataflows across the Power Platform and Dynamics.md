@@ -8,7 +8,7 @@ Dataflow is a data integration service, it populates data from one or multiple s
 
 ### How Dataflow function?
 
-![](C:\Users\reza_\OneDrive - Microsoft\Dataflow Docs\Images\01\Dataflow Function.png)
+![How Dataflow Function](images/Dataflow Function.png)
 
 The diagram above shows an overall view of how the Dataflow functions. Dataflow gets data from different data sources (there more than 80 data sources supported already). Dataflow transforms the data using the Power Query engine. And finally it stores the output in a destination, which can be Azure Data Lake gen 2, or Common Data Services.
 
@@ -16,7 +16,7 @@ The diagram above shows an overall view of how the Dataflow functions. Dataflow 
 
 Dataflow is a cloud-based service, it runs fully on cloud. However, to access some of the data sources which might be located on-premises, it can use the on-premises gateway application.
 
-![](C:\Users\reza_\OneDrive - Microsoft\Dataflow Docs\Images\01\Dataflow Cloud.png)
+![Dataflow runs on the cloud](images/Dataflow Cloud.png)
 
 The data transformation compute of dataflow runs on the cloud, and the destination is always cloud: Azure Data Lake gen 2, or CDS both are cloud-based data storage systems. The source, however, can be on-premises or cloud-based. If it is on-premises, Dataflow uses an on-premises data gateway connection to get data from that source.
 
@@ -24,13 +24,13 @@ The data transformation compute of dataflow runs on the cloud, and the destinati
 
 Power Query is the data transformation engine used in the dataflow. This engine not only is strong enough to support many advanced transformation, it is also leveraging a very simple, yet powerful graphical user interface called Power Query Editor. Using the dataflow enables developers to use this editor simply to develop their data integration solutions.
 
-![](C:\Users\reza_\OneDrive - Microsoft\Dataflow Docs\Images\01\Power Query Editor.png)
+![Power Query Transformations](images/Power Query Editor.png)
 
 ### Dataflow Integration with Power Platform and Dynamics
 
 Because dataflow stores the result into Azure Data Lake gen 2, or CDS, other Power Platform services can interact with the data produced by dataflow.
 
-![](C:\Users\reza_\OneDrive - Microsoft\Dataflow Docs\Images\01\Dataflow Power Platform.png)
+![Dataflow Integration with Power Platform and Dynamics](images/Dataflow Power Platform.png)
 
 Power BI, Power Apps, Power Automate, Power Virtual Agent, and Dynamics can interact with the CDS or Azure Data Lake gen 2 to get the data produced by the dataflow.
 
@@ -62,13 +62,13 @@ Consider this scenario: In an organization, the decision has been made to use Po
 
 Dataflow can be used as the replacement of other ETL tools to build a data warehouse. In an organization, for example, the Data engineers of a company decide to use Dataflow to build the star-schema designed data warehouse including fact and dimension tables in Azure data lake gen 2, and then Power BI is used to generate reports and dashboards by getting data from the dataflows.
 
-![](https://i2.wp.com/radacad.com/wp-content/uploads/2019/01/2019-01-21_06h49_16.png)
+![Building a Data Warehousing using Dataflow](https://i2.wp.com/radacad.com/wp-content/uploads/2019/01/2019-01-21_06h49_16.png)
 
 ### Re-Use of Tables Across Multiple Solutions
 
 If there are multiple Power BI solutions that are using a same transformed version of a table, then that table can be produced using a dataflow, and then Power BI files can use the result of the transformation. This is a powerful Power BI implementation architecture that avoids duplicates of the Power Query code, and reduces the maintenance costs of the data integration layer.
 
-![](https://i1.wp.com/radacad.com/wp-content/uploads/2019/01/2019-01-21_06h36_16.png)
+![Re-use of tables across multiple solutions](https://i1.wp.com/radacad.com/wp-content/uploads/2019/01/2019-01-21_06h36_16.png)
 
 
 
