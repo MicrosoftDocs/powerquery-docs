@@ -1,4 +1,15 @@
-# An overview of Dataflows across the Power Platform and Dynamics
+---
+title: An overview of Dataflows across Power Platform and Dynamics 365
+description: An overview of Dataflows across Power Platform and Dynamics 365
+author: radcad
+ms.service: powerquery
+ms.topic: conceptual
+ms.date: 05/11/2020
+ms.author: gepopell
+
+---
+
+# An overview of Dataflows across Power Platform and Dynamics 365
 
 Dataflow is a data integration component, which is not only serving the Power BI solutions, but also helps in Power Platform solutions and Dynamics implementation. In this article, you will learn what is a dataflow, and how it can help in other platform. This article is not about creating dataflow, it is more about introducing it, and use-cases of it in real-world scenarios.
 
