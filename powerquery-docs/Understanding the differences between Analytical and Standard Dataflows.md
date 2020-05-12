@@ -8,7 +8,7 @@ A dataflow by the standard definition is a service to extract, transform, and lo
 
 Standard dataflows can be created by Power Platform Dataflows when created through the Power Apps portal. 
 
-![Creating Standard Dataflow](C:\Users\reza_\OneDrive - Microsoft\Dataflow Docs\Images\02\CreateStandardDataflow.png)
+![Creating Standard Dataflow](images/CreateStandardDataflow.png)
 
 One benefit of this type of dataflow is that any application that can connect to CDS (Common Data Services), can work with the data. Which means; Power BI, Power Apps, Power Automate, Power Virtual Agent, and Dynamics, and some other applications.
 
@@ -18,17 +18,17 @@ An analytical dataflow, in addition to doing the transformation, is also capable
 
 Analytical Dataflow can be created using Power BI dataflows. Regardless if it is an external dataflow (dataflow connected to customer's Azure Data Lake Storage Gen 2), or normal dataflow created in Power BI.
 
-![Creating Analytical dataflow in Power BI](C:\Users\reza_\OneDrive - Microsoft\Dataflow Docs\Images\02\CreateAnalyticalDataflowinPowerBI.png)
+![Creating Analytical dataflow in Power BI](images/CreateAnalyticalDataflowinPowerBI.png)
 
 Analytical Dataflow can be also created in Power Platform dataflows. The selection of analytical dataflow is an option at the start of creation of the dataflow in the Power Apps portal.
 
-![Creating Analytical Dataflow in Power Platform](C:\Users\reza_\OneDrive - Microsoft\Dataflow Docs\Images\02\CreateAnalyticalDataflowPowerPlatform.png)
+![Creating Analytical Dataflow in Power Platform](images/CreateAnalyticalDataflowPowerPlatform.png)
 
 ### AI Functionalities
 
 Depends on the requirement, sometimes, you might need to apply some AI and Machine Learning functions on the data through the dataflow. These functionalities are possible when the dataflow is an analytical dataflow. 
 
-![AI insights in Analytical dataflow](C:\Users\reza_\OneDrive - Microsoft\Dataflow Docs\Images\02\DataflowAIFunctions.png)
+![AI insights in Analytical dataflow](images/DataflowAIFunctions.png)
 
 Here are some articles about how to use AI functions in a dataflow:
 
@@ -44,7 +44,7 @@ One of the reasons to use computed entity is the ability to process large amount
 
 The computed entity helps with the performance of the data transformations, because instead of re-doing the transformations needed in the first entity over and over again, the transformation will be done only once in the computed entity, and then the result will be used multiple times in other entities.
 
-![Computed Entity in Analytical Dataflow](C:\Users\reza_\OneDrive - Microsoft\Dataflow Docs\Images\02\ComputedEntityinDataflow.png)
+![Computed Entity in Analytical Dataflow](images/ComputedEntityinDataflow.png)
 
 To learn more about Computed Entity, read this article:
 
