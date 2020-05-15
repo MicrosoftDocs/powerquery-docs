@@ -217,4 +217,4 @@ When used properly, these functions are extremely useful in debugging issues wit
 
 ## Next steps
 
-[TripPin Part 9 - TestConnection](../9-TestConnection/READMD.md)
+[TripPin Part 9 - TestConnection](../9-TestConnection/README.md)
