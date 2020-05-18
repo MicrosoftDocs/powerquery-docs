@@ -163,10 +163,10 @@ That's all there is to connecting to data sources in Power BI dataflows.
 
 This article showed which data sources you can connect to for dataflows. The following articles go into more detail about common usage scenarios for dataflows. 
 
-* [Self-service data prep in Power BI](dataflows-integration-overview.md)
-* [Using incremental refresh with dataflows](dataflows-incremental-refresh.md)
-* [Creating computed entities in dataflows](dataflows-computed-entities.md)
-* [Link entities between dataflows](dataflows-linked-entities.md)
+* [Self-service data prep in Power BI](create-use.md)
+* [Using incremental refresh with dataflows](incremental-refresh.md)
+* [Creating computed entities in dataflows](computed-entities.md)
+* [Link entities between dataflows](linked-entities.md)
 
 Additional information about dataflows and related information can be found in the following articles:
 

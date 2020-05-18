@@ -19,7 +19,7 @@ A dataflow by the standard definition is a service to extract, transform, and lo
 
 Standard dataflows can be created by Power Platform Dataflows when created through the Power Apps portal. 
 
-![Creating Standard Dataflow](images/CreateStandardDataflow.png)
+![Creating Standard Dataflow](media/analytical-standard-dataflows/create-standard-dataflow.png)
 
 One benefit of this type of dataflow is that any application that can connect to CDS (Common Data Services), can work with the data. Which means; Power BI, Power Apps, Power Automate, Power Virtual Agent, and Dynamics, and some other applications.
 
@@ -29,23 +29,23 @@ An analytical dataflow, in addition to doing the transformation, is also capable
 
 Analytical Dataflow can be created using Power BI dataflows. Regardless if it is an external dataflow (dataflow connected to customer's Azure Data Lake Storage Gen 2), or normal dataflow created in Power BI.
 
-![Creating Analytical dataflow in Power BI](images/CreateAnalyticalDataflowinPowerBI.png)
+![Creating Analytical dataflow in Power BI](media/analytical-standard-dataflows/create-analytical-dataflow-powerbi.png)
 
 Analytical Dataflow can be also created in Power Platform dataflows. The selection of analytical dataflow is an option at the start of creation of the dataflow in the Power Apps portal.
 
-![Creating Analytical Dataflow in Power Platform](images/CreateAnalyticalDataflowPowerPlatform.png)
+![Creating Analytical Dataflow in Power Platform](media/analytical-standard-dataflows/create-analytical-dataflow-power-platform.png)
 
 ### AI Functionalities
 
 Depends on the requirement, sometimes, you might need to apply some AI and Machine Learning functions on the data through the dataflow. These functionalities are possible when the dataflow is an analytical dataflow. 
 
-![AI insights in Analytical dataflow](images/DataflowAIFunctions.png)
+![AI insights in Analytical dataflow](media/analytical-standard-dataflows/dataflow-ai-functions.png)
 
 Here are some articles about how to use AI functions in a dataflow:
 
-- [Azure Machine Learning integration in Power BI](https://docs.microsoft.com/en-us/power-bi/service-machine-learning-integration)
-- [Cognitive Services in Power BI](https://docs.microsoft.com/en-us/power-bi/service-cognitive-services)
-- [Automated Machine Learning in Power BI](https://docs.microsoft.com/en-us/power-bi/service-machine-learning-automated)
+- [Azure Machine Learning integration in Power BI](https://docs.microsoft.com/power-bi/service-machine-learning-integration)
+- [Cognitive Services in Power BI](https://docs.microsoft.com/power-bi/service-cognitive-services)
+- [Automated Machine Learning in Power BI](https://docs.microsoft.com/power-bi/service-machine-learning-automated)
 
 Functions above are not available in the standard dataflow.
 
@@ -55,11 +55,11 @@ One of the reasons to use computed entity is the ability to process large amount
 
 The computed entity helps with the performance of the data transformations, because instead of re-doing the transformations needed in the first entity over and over again, the transformation will be done only once in the computed entity, and then the result will be used multiple times in other entities.
 
-![Computed Entity in Analytical Dataflow](images/ComputedEntityinDataflow.png)
+![Computed Entity in Analytical Dataflow](media/analytical-standard-dataflows/computed-entity-in-dataflow.png)
 
 To learn more about Computed Entity, read this article:
 
-[Using computed entities on Power BI Premium](https://docs.microsoft.com/en-us/power-bi/service-dataflows-computed-entities-premium)
+[Using computed entities on Power BI Premium](https://docs.microsoft.com/power-bi/service-dataflows-computed-entities-premium)
 
 Computed Entity is available only in analytical dataflow.
 
@@ -79,19 +79,19 @@ Here are some differences between analytics entity vs standard entity;
 | Incremental Load                  | Default full-load. <br />Possible to set up incremental refresh with setting up the incremental refresh in the dataflow settings. | Default incremental-load.<br />Possible to change using the "Delete rows that no longer exist in the query output" checkbox at the load settings |
 | Scheduled Refresh                 | Yes. Possibility of notifying the dataflow owners upon the failure | Yes.                                                         |
 
-# Scenarios to Use Each Dataflow Type
+## Scenarios to Use Each Dataflow Type
 
 Here are some sample scenarios and best practice recommendation of usage of each type of the dataflow.
 
-## Heavy Data Transformations on Large Data Tables: Analytical Dataflow
+### Heavy Data Transformations on Large Data Tables: Analytical Dataflow
 
 Analytical dataflows are great option for processing large amount of the data, and also enhancing the compute power behind the transformation using the Computed Entity. The fact that the data is stored in Azure Data Lake also increases the speed of writing to destination, because compared to CDS (which might have many rules to check at the time of data storage), Azure Data Lake is faster for read/write transactions in a large amount of data.
 
-## AI Features: Analytical Dataflow
+### AI Features: Analytical Dataflow
 
 If you are planning to use any of the AI functionalities through the data transformation stage, then analytical dataflow is definitely helpful, because you can use all the AI features supported with this type of dataflow.
 
-## Cross Platform Usage: Standard Dataflow
+### Cross Platform Usage: Standard Dataflow
 
 If your plan when building dataflows is to use the stored data in multiple platforms (not only Power BI, but also other Power Platform services, Dynamics, and etc.) then Standard dataflow is a great choice. Standard dataflow stores the data into CDS, which then can be accessed through many other platforms and services.
 

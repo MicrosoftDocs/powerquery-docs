@@ -86,10 +86,10 @@ Dataflows in Power BI:
 
 The following articles go into more detail about common usage scenarios for dataflows. 
 
-* [Using incremental refresh with dataflows](dataflows-incremental-refresh.md)
-* [Creating computed entities in dataflows](dataflows-computed-entities.md)
-* [Connect to data sources for dataflows](dataflows-data-sources.md)
-* [Link entities between dataflows](dataflows-linked-entities.md)
+* [Using incremental refresh with dataflows](incremental-refresh.md)
+* [Creating computed entities in dataflows](computed-entities.md)
+* [Connect to data sources for dataflows](data-sources.md)
+* [Link entities between dataflows](linked-entities.md)
 
 For more information about the Common Data Model and the CDM Folder standard, read the following articles:
 

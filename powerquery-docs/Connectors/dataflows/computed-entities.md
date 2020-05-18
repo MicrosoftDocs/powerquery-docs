@@ -76,10 +76,10 @@ Linked entities are only available for dataflows created in Power BI and Power A
 
 This article described computed entities and dataflows. Here are some more articles that might be useful.
 
-* [Self-service data prep in Power BI](dataflows-integration-overview.md)
-* [Using incremental refresh with dataflows](dataflows-incremental-refresh.md)
-* [Connect to data sources for dataflows](dataflows-data-sources.md)
-* [Link entities between dataflows](dataflows-linked-entities.md)
+* [Self-service data prep in Power BI](create-use.md)
+* [Using incremental refresh with dataflows](incremental-refresh.md)
+* [Connect to data sources for dataflows](data-sources.md)
+* [Link entities between dataflows](linked-entities.md)
 
 The following links provide additional information about dataflows in Power BI, and other resources: 
 * [Create and use dataflows in Power BI](https://docs.microsoft.com/power-bi/service-dataflows-create-use)

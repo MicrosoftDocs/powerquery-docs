@@ -103,15 +103,15 @@ There are a few limitations to keep in mind when working with linked entities:
 
 The following articles may be useful as you create or work with dataflows. 
 
-* [Self-service data prep in Power BI](dataflows-integration-overview.md)
-* [Using incremental refresh with dataflows](dataflows-incremental-refresh.md)
-* [Creating computed entities in dataflows](dataflows-computed-entities.md)
-* [Connect to data sources for dataflows](dataflows-data-sources.md)
+* [Self-service data prep in Power BI](create-use.md)
+* [Using incremental refresh with dataflows](incremental-refresh.md)
+* [Creating computed entities in dataflows](computed-entities.md)
+* [Connect to data sources for dataflows](data-sources.md)
 
 The articles below provide more information about dataflows and Power BI:
 
 * [Create and use dataflows in Power BI](https://docs.microsoft.com/power-bi/service-dataflows-create-use)
-* [Using computed entities on Power BI Premium](dataflows-computed-entities.md)
+* [Using computed entities on Power BI Premium](computed-entities.md)
 * [Using dataflows with on-premises data sources](https://docs.microsoft.com/power-bi/service-dataflows-on-premises-gateways)
 * [Developer resources for Power BI dataflows](https://docs.microsoft.com/power-bi/service-dataflows-developer-resources)
 
