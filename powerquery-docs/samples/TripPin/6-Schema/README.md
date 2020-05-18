@@ -6,7 +6,7 @@ manager: kfile
 
 ms.service: powerquery
 ms.topic: tutorial
-ms.date: 12/04/2019
+ms.date: 5/15/2020
 ms.author: gepopell
 
 LocalizationGroup: reference
@@ -358,6 +358,10 @@ If you view the People table using the [TripPin connector from the previous less
 Running the same query with the TripPin connector from this lesson, you'll now see that the type information is displayed correctly. 
 
 ![People with Schema](../../../images/trippin6PQWithSchema.png)
+
+## Next steps
+
+[TripPin Part 7 - Advanced Schema with M Types](../7-AdvancedSchema/README.md)
 
 
 
