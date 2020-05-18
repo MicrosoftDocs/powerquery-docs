@@ -52,6 +52,22 @@
           href: Connectors/FHIR/FHIR-QueryFoldingPatterns.md
         - name: Data relationships
           href: Connectors/FHIR/FHIR-Relationships.md
+      - name: Power Platform dataflows
+        items:
+        - name: Overview
+          href: Connectors/dataflows/overview-dataflows-across-power-platform-dynamics-365.md
+        - name: Analytical and standard dataflows
+          href: Connectors/dataflows/understanding-differences-between-analytical-standard-dataflows.md        
+        - name: "Create and use dataflows"
+          href: Connectors/dataflows/create-use.md
+        - name: "Use incremental refresh"
+          href: Connectors/dataflows/incremental-refresh.md
+        - name: "Create computed entities"
+          href: Connectors/dataflows/computed-entities.md
+        - name: "Connect to data sources"
+          href: Connectors/dataflows/data-sources.md
+        - name: "Link entities between dataflows"
+          href: Connectors/dataflows/linked-entities.md
       - name: "XML"
         href: Connectors/XML.md
       - name: "Web"
