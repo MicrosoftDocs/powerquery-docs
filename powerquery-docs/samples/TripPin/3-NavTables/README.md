@@ -6,7 +6,7 @@ manager: kfile
 
 ms.service: powerquery
 ms.topic: tutorial
-ms.date: 12/03/2019
+ms.date: 5/15/2020
 ms.author: gepopell
 
 LocalizationGroup: reference
@@ -150,3 +150,7 @@ If you right click on the root of the navigation tree and select **Edit**, you'l
 
 ## Conclusion
 In this tutorial, you added a [Navigation Table](../../../HandlingNavigationTables.md) to your extension. Navigation Tables are a key feature that make connectors easier to use. In this example your navigation table only has a single level, but the Power Query UI supports displaying navigation tables that have multiple dimensions (even when they are ragged). 
+
+## Next steps
+
+[TripPin Part 4 - Data Source Paths](../4-Paths/README.md)
