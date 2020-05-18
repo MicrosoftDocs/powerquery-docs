@@ -6,7 +6,7 @@ manager: kfile
 
 ms.service: powerquery
 ms.topic: tutorial
-ms.date: 12/05/2019
+ms.date: 5/15/2020
 ms.author: gepopell
 
 LocalizationGroup: reference
@@ -214,3 +214,7 @@ When used properly, these functions are extremely useful in debugging issues wit
 
 >[!Note]
 > As a connector developer, it is your responsibility to ensure that you do not log sensitive or personally identifiable information (PII) as part of your diagnostic logging. You must also be careful to not output too much trace information, as it can have a negative performance impact.
+
+## Next steps
+
+[TripPin Part 9 - TestConnection](../9-TestConnection/README.md)
