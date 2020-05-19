@@ -39,19 +39,19 @@
     - name: Power Platform dataflows
       items:
       - name: Overview
-        href: Connectors/dataflows/overview-dataflows-across-power-platform-dynamics-365.md
+        href: dataflows/overview-dataflows-across-power-platform-dynamics-365.md
       - name: Analytical and standard dataflows
-        href: Connectors/dataflows/understanding-differences-between-analytical-standard-dataflows.md        
+        href: dataflows/understanding-differences-between-analytical-standard-dataflows.md        
       - name: "Create and use dataflows"
-        href: Connectors/dataflows/create-use.md
+        href: dataflows/create-use.md
       - name: "Use incremental refresh"
-        href: Connectors/dataflows/incremental-refresh.md
+        href: dataflows/incremental-refresh.md
       - name: "Create computed entities"
-        href: Connectors/dataflows/computed-entities.md
+        href: dataflows/computed-entities.md
       - name: "Connect to data sources"
-        href: Connectors/dataflows/data-sources.md
+        href: dataflows/data-sources.md
       - name: "Link entities between dataflows"
-        href: Connectors/dataflows/linked-entities.md
+        href: dataflows/linked-entities.md
     - name: "Connector reference"
       items:
       - name: "Excel"
