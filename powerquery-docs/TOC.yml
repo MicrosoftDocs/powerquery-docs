@@ -116,8 +116,6 @@
           items:
           - name: "Github"
             href: samples/Github/README.md
-          - name: "MyGraph"
-            href: samples/MyGraph/README.md
       - name: Samples
         items:
         - name: "Functional samples"

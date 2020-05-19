@@ -6,7 +6,7 @@ manager: kfile
 
 ms.service: powerquery
 ms.topic: tutorial
-ms.date: 12/03/2019
+ms.date: 5/15/2020
 ms.author: gepopell
 
 LocalizationGroup: reference
@@ -168,3 +168,7 @@ TripPin.Feed = (url as text) =>
 In this tutorial, you cleaned up and simplified your connector by fixing your Data Source Path value, and moving to a more flexible format for your navigation table. After completing these steps (or using the sample code in this directory), the `TripPin.Contents` function returns a navigation table in Power BI Desktop.
 
 ![Navigator](../../../images/trippin4Complete.png)
+
+## Next steps
+
+[TripPin Part 5 - Paging](../5-Paging/README.md)
