@@ -1,6 +1,6 @@
 ---
-title: Authorize a connection
-description: How to select credentials for a connector in Power Query to authorize a connection, how to select the authentication level, and how to edit or delete credentials for specific connectors and sites.
+title: Authentication with a data source
+description: How to select credentials for a connector in Power Query to authenticate a connection with a data source, how to select the authentication level, and how to edit or delete credentials for specific connectors and sites.
 author: DougKlopfenstein
 
 ms.service: powerquery
@@ -11,7 +11,7 @@ ms.author: v-douklo
 LocalizationGroup: reference
 ---
 
-# Authorize a connection
+# Authentication with a data source
 
 When you attempt to connect to data using a new connector for the first time, you may be asked to select the authentication method to use for the site containing the data. Once you've selected the authentication method, you won't be asked to select an authentication method for the connector using that site again. However, if you need to change the authentication method later, you can do so.
 
@@ -29,7 +29,7 @@ As you can see, a different selection of authentication methods is presented fro
 
 ## Set the level of the authentication method
 
-In connectors that require you to enter a URL, you'll be asked to select the level to which the authentication method will be applied. For example, if you select the Web connector with a URL of https://contoso.com/2020data/List_of_countries_and_capitals, the default level setting for your authentication method will be https://contoso.com.
+In connectors that require you to enter a URL, you'll be asked to select the level to which the authentication method will be applied. For example, if you select the Web connector with a URL of `https://contoso.com/2020data/List_of_countries_and_capitals`, the default level setting for your authentication method will be `https://contoso.com`.
 
 ![Default level setting](media/connector-authentication/url-level-setting.png)
 
@@ -45,28 +45,28 @@ In some cases, you may need to change the authentication method you use in a con
 
 1. To edit the authentication method in Power BI Desktop and Excel:
 
-    1. In Power BI Desktop, from the File tab, select Options and settings > Data source settings.
+    1. In Power BI Desktop, from the **File** tab, select **Options and settings > Data source settings**.
 
         ![Power BI Desktop data source settings](media/connector-authentication/pbi-edit.png)
 
-    2. In Excel, from the Data tab, select Get Data > Data Source Settings. 
+    2. In Excel, from the **Data** tab, select **Get Data > Data Source Settings**. 
 
         ![Excel data source settings](media/connector-authentication/excel-edit.png)
 
-2. In the Data source settings dialog box, select Global permissions, choose the web site where you want the permission setting changed, and then select Edit Permissions.
+2. In the **Data source settings** dialog box, select **Global permissions**, choose the web site where you want the permission setting changed, and then select **Edit Permissions**.
 
-3. In the Edit Permissions dialog box, under Credentials, select Edit. 
+3. In the **Edit Permissions** dialog box, under **Credentials**, select **Edit**. 
 
     ![Edit permissions](media/connector-authentication/edit-permission.png)
 
-4. Change the credentials to the type required by the web site, select Save, and then select OK.
+4. Change the credentials to the type required by the web site, select **Save**, and then select **OK**.
 
-You can also delete the credentials for a particular web site in step 3 by selecting Clear Permissions for a selected web site, or by selecting Clear All Permissions for all of the listed web sites.
+You can also delete the credentials for a particular web site in step 3 by selecting **Clear Permissions** for a selected web site, or by selecting **Clear All Permissions** for all of the listed web sites.
 
-To edit the authentication method in online services, such as Power Apps and Power BI service:
+To edit the authentication method in online services, such as for dataflows in the Power Bi service and Power Platform:
 
-1. Select the connector, then select Edit connection.
+1. Select the connector, then select **Edit connection**.
 
     ![Edit the online authentication methods](media/connector-authentication/pq-edit-connection.png)
 
-2. Make the required changes and select Next.
+2. Make the required changes and select **Next**.
