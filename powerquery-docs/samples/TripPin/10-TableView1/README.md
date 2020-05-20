@@ -439,7 +439,7 @@ The downside to the query parameter approach is that you still need to send the 
 While this is still more efficient then reading the entire result set and counting the rows, it's probably still more work than you want to do.
 
 The advantage of the path segment approach is that you'll only receive a single scalar value in the result. This makes the entire operation a lot more efficient.
-However, as described in the OData specificatoin, the /$count path segment will return an error if you include other query parameters, such as `$top` or `$skip`, which limits its usefulness.
+However, as described in the OData specification, the /$count path segment will return an error if you include other query parameters, such as `$top` or `$skip`, which limits its usefulness.
 
 In this tutorial, you'll implement the `GetRowCount` handler using the path segment approach. To avoid the errors you'd get if other query parameters are included, you'll check for other state values, and return an "unimplemented error" (`...`) if you find any.
 Returning any error from a `Table.View` handler tells the M engine that the operation cannot be folded, and it should fallback to the default handler instead (which in this case would be counting the total number of rows).
