@@ -40,7 +40,7 @@
       items:
       - name: Overview
         href: dataflows/overview-dataflows-across-power-platform-dynamics-365.md
-      - name: Analytical and standard dataflows
+      - name: Standard and analytical dataflows
         href: dataflows/understanding-differences-between-analytical-standard-dataflows.md        
       - name: "Create and use dataflows"
         href: dataflows/create-use.md
