@@ -1,11 +1,11 @@
 ---
 title: List of all connectors
-description: List of all general availability connectors for Power Query
+description: List of all currently available connectors for Power Query
 author: DougKlopfenstein
 
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 05/11/2020
+ms.date: 05/21/2020
 ms.author: v-douklo
 
 LocalizationGroup: reference
@@ -13,7 +13,7 @@ LocalizationGroup: reference
 
 # Connectors in Power Query
 
-This page summarizes all of the general availability connectors for Power Query. You can select a connector to view more detailed connector-specific documentation.
+This page summarizes all of the connectors currently available for Power Query. You can select a connector to view more detailed connector-specific documentation.
 
 ## List of all connectors
 
