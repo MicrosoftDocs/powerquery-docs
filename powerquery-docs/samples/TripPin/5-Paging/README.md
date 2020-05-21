@@ -6,7 +6,7 @@ manager: kfile
 
 ms.service: powerquery
 ms.topic: tutorial
-ms.date: 12/03/2019
+ms.date: 5/15/2020
 ms.author: gepopell
 
 LocalizationGroup: reference
@@ -238,3 +238,7 @@ If you look at the requests in fiddler, you should now see separate requests for
 This lesson showed you how to implement pagination support for a Rest API. While the logic will likely vary between APIs, the pattern established here should be reusable with minor modifications.
 
 In the next lesson, you'll look at how to apply an explicit schema to your data, going beyond the simple `text` and `number` data types you get from `Json.Document`.
+
+## Next steps
+
+[TripPin Part 6 - Schema](../6-Schema/README.md)

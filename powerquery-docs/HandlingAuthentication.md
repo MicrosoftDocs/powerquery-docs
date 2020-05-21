@@ -115,7 +115,7 @@ Extensions can optionally implement `Refresh` (exchanging a refresh token for a 
 There are two sets of OAuth function signatures; the original signature that contains a minimal number of parameters, and an advanced signature that
 accepts additional parameters. Most OAuth flows can be implemented using the original signatures. You can also mix and match signature types in your implementation. The function calls are matches based on the number of parameters (and their types) - the parameter names are not taken into consideration.
 
-See the [MyGraph](samples/MyGraph/README.md) and [Github](samples/Github/README.md) samples for more details.
+See the [Github](samples/Github/README.md) sample for more details.
 
 ##### Original OAuth Signatures
 

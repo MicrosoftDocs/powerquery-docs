@@ -6,7 +6,7 @@ manager: kfile
 
 ms.service: powerquery
 ms.topic: tutorial
-ms.date: 12/04/2019
+ms.date: 5/15/2020
 ms.author: gepopell
 
 LocalizationGroup: reference
@@ -268,4 +268,8 @@ This tutorial made a number of improvements to the way you enforce a schema on t
 The connector is currently hard coding its schema information, which has a performance benefit at runtime, but is unable to adapt to changes in the service's metadata overtime. 
 Future tutorials will move to a purely dynamic approach that will infer the schema from the service's $metadata document. 
 
-In addition to the schema changes, this tutorial added Unit Tests for your code, and refactored the common helper functions into separate files to improve overall readability. 
+In addition to the schema changes, this tutorial added Unit Tests for your code, and refactored the common helper functions into separate files to improve overall readability.
+
+## Next steps
+
+[TripPin Part 8 - Adding Diagnostics](../8-Diagnostics/README.md)
