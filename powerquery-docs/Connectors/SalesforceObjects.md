@@ -17,7 +17,7 @@ LocalizationGroup: reference
  
 Release State: General Availability
 
-Release State: General Availability Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in PowerBI.com (Enterprise Gateway), Dataflows in PowerApps.com (Enterprise Gateway), Excel
+Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in PowerBI.com (Enterprise Gateway), Dataflows in PowerApps.com (Enterprise Gateway), Excel
 
 Authentication Types Supported: Salesforce account
 
@@ -79,6 +79,8 @@ You can then either load or transform the data.
 *	Note that Salesforce trial accounts do not have API access.
 
 * Custom fields of type "Picklist (Multi-Select)" are not supported by "Create record" and "Update record" operations.
+
+* Lightning URLs are not supported.
 
 For more information about Salesforce internal API limits, see [Salesforce Developer Limits and Allocations Quick Reference](https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm#!).
 
