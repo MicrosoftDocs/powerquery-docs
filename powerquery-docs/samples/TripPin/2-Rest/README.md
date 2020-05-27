@@ -6,7 +6,7 @@ manager: kfile
 
 ms.service: powerquery
 ms.topic: tutorial
-ms.date: 12/02/2019
+ms.date: 5/15/2019
 ms.author: gepopell
 
 LocalizationGroup: reference
@@ -210,3 +210,7 @@ If you run Fiddler and click the **Refresh Preview** button in the Query Editor,
 This lesson showed you how to build a simple connector for a REST service. In this case, you turned an existing OData extension into a standard REST extension (using [Web.Contents](/powerquery-m/web-contents)), but the same concepts apply if you were creating a new extension from scratch. 
 
 In the next lesson, you'll take the queries created in this lesson using Power BI Desktop and turn them into a true navigation table within the extension.
+
+## Next steps
+
+[TripPin Part 3 - Navigation Tables](../3-NavTables/README.md)

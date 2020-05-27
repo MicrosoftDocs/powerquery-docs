@@ -6,7 +6,7 @@ manager: kfile
 
 ms.service: powerquery
 ms.topic: tutorial
-ms.date: 12/02/2019
+ms.date: 5/15/2020
 ms.author: gepopell
 
 LocalizationGroup: reference
@@ -148,3 +148,7 @@ Select the **Me** table, and then select **Edit**. Notice that the columns alrea
 This lesson walked you through the creation of a simple connector based on the [OData.Feed](/powerquery-m/odata-feed) library function. As you saw, very little logic is needed to enable a fully functional connector over the `OData` base function. Other extensibility enabled functions, such as [ODBC.DataSource](/powerquery-m/odbc-datasource), provide similar capabilities.
 
 In the next lesson, you'll replace the use of [OData.Feed](/powerquery-m/odata-feed) with a less capable function&mdash;[Web.Contents](/powerquery-m/web-contents). Each lesson will implement more connector features, including paging, metadata/schema detection, and query folding to the OData query syntax, until your custom connector supports the same range of capabilities as [OData.Feed](/powerquery-m/odata-feed).
+
+## Next steps
+
+[TripPin Part 2 - Data Connector for a REST Service](../2-Rest/README.md)

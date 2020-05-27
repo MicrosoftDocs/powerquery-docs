@@ -6,7 +6,7 @@ manager: kfile
 
 ms.service: powerquery
 ms.topic: tutorial
-ms.date: 12/05/2019
+ms.date: 5/15/2020
 ms.author: gepopell
 
 LocalizationGroup: reference
@@ -116,4 +116,8 @@ After a successful call to TestConnection, the credentials will be accepted. You
 
 ## Conclusion
 
-Congratulations! You now have a production ready custom connector that supports automated refresh through the Power BI service. 
+Congratulations! You now have a production ready custom connector that supports automated refresh through the Power BI service.
+
+## Next steps
+
+[TripPin Part 10 - Query Folding](../10-TableView1/README.md)
