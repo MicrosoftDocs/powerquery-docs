@@ -72,7 +72,7 @@ To connect to SAP HANA data from Power BI Service, dataflows in PowerBI.com, or 
 
    Select **Next** to continue.
 
-   ![SAP HANA database online sign-in](media/sap-hana/sap-hana-online-signin.png)
+   <kbd>![SAP HANA database online sign-in](media/sap-hana/sap-hana-online-signin.png)
 
 3. From the **Navigator** dialog box, you can either transform the data in the Power Query editor by selecting **Transform Data**, or load the data by selecting **Load**.
 

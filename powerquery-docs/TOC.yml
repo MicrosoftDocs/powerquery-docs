@@ -74,6 +74,8 @@
         href: Connectors/SalesforceReports.md
       - name: "Salesforce Objects"
         href: Connectors/SalesforceObjects.md
+      - name: "SAP HANA database"
+        href: Connectors/SapHana.md
       - name: "Folder"
         href: Connectors/Folder.md
       - name: "SharePoint List"
