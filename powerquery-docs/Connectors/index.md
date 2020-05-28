@@ -19,7 +19,7 @@ In addition, a separate list summarizes all of the connectors currently availabl
 
 ## List of currently documented connectors
 
-| Connector | Excel | Power BI (Datasets) | Power BI Dataflows | Power Apps Dataflows | Customer Insights Dataflows | Analysis Services |
+| Connector | Excel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Power BI (Datasets) | Power BI Dataflows | Power Apps Dataflows | Customer<br/>Insights Dataflows | Analysis Services |
 | --- | --- | --- | --- | --- | --- | --- |
 | [![Azure Data Lake Storage](media/index/data-lake-64.png)<br/>**Azure Data Lake Storage**](./datalakestorage.md)<br/>By Microsoft | Yes | Yes | Yes | Yes | Yes | Yes |
 | [![Excel](media/index/excel-workbook-64.png)<br/>**Excel**](./excel.md)<br/>By Microsoft                                          | Yes | Yes | Yes | Yes | Yes | Yes |
