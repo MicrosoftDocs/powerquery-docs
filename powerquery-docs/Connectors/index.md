@@ -13,13 +13,46 @@ LocalizationGroup: reference
 
 # Connectors in Power Query
 
-This page summarizes all of the connectors currently available for Power Query. You can select a connector to view more detailed connector-specific documentation.
+This page contains a list of connectors to data sources that currently contain topics in this documentation. You can select a connector to view more detailed connector-specific documentation.
+
+In addition, a separate list summarizes all of the connectors currently available for Power Query.
+
+## List of currently documented connectors
+
+| Connector | Excel | Power BI (Datasets) | Power BI Dataflows | Power Apps Dataflows | Customer Insights Dataflows | Analysis Services |
+| --- | --- | --- | --- | --- | --- | --- |
+| [![Azure Data Lake Storage](media/index/data-lake-64.png)<br/>**Azure Data Lake Storage**](./datalakestorage.md)<br/>By Microsoft | Yes | Yes | Yes | Yes | Yes | Yes |
+| [![Excel](media/index/excel-workbook-64.png)<br/>**Excel**](./excel.md)<br/>By Microsoft                                          | Yes | Yes | Yes | Yes | Yes | Yes |
+| [![Facebook](media/index/facebook-64.png)<br/>**Facebook**](./facebook.md)<br/>By Microsoft                                       | No  | Yes | No  | No  | No  | No  |
+| [![FHIR](media/index/fhir-64.png)<br/>**FHIR**](./fhir/fhir.md)<br/>By Microsoft                                                  | No  | Yes | No  | No  | No  | No  |
+| ![Folder](media/index/folder-64.png)<br/>**Folder**<br/>By Microsoft                                                              | Yes | Yes | Yes | Yes | Yes | Yes |
+| [![ODBC](media/index/odbc-64.png)<br/>**ODBC**](./odbc.md)<br/>By Microsoft                                                       | Yes | Yes | Yes | Yes | Yes | Yes |
+| [![PostgreSQL database](media/index/database-64.png)<br/>**PostgreSQL database**](./postgresql.md)<br/>By Microsoft               | Yes | Yes | Yes | Yes | Yes | Yes |
+| [![Salesforce Objects](media/index/salesforce-64.png)<br/>**Salesforce Objects**](./salesforceobjects.md)<br/>By Microsoft        | Yes | Yes | Yes | Yes | Yes | Yes |
+| [![Salesforce Reports](media/index/salesforce-64.png)<br/>**Salesforce Reports**](./salesforcereports.md)<br/>By Microsoft        | Yes | Yes | Yes | Yes | Yes | Yes |
+| ![SharePoint list](media/index/sharepoint-64.png)<br/>**SharePoint list**<br/>By Microsoft                                        | Yes | Yes | Yes | Yes | Yes | Yes |
+| ![SharePoint Online List](media/index/sharepoint-64.png)<br/>**SharePoint Online List**<br/>By Microsoft                          | Yes | Yes | Yes | Yes | Yes | No  |
+| [![SQL Server database](media/index/database-64.png)<br/>**SQL Server database**](./sqlserver.md)<br/>By Microsoft                | Yes | Yes | Yes | Yes | Yes | Yes |
+| [![Text/CSV](media/index/textfile-64.png)<br/>**Text/CSV**](./textcsv.md)<br/>By Microsoft                                        | Yes | Yes | Yes | Yes | Yes | Yes |
+| [![Web](media/index/web-64.png)<br/>**Web**](./web.md)<br/>By Microsoft                                                           | Yes | Yes | Yes | Yes | Yes | No  |
+| [![XML](media/index/xml-document-64.png)<br/>**XML**](./xml.md)<br/>By Microsoft                                                  | Yes | Yes | Yes | Yes | Yes | Yes |
+| | | | | | | |
 
 ## List of all connectors
 
+| Connector | Excel | Power BI (Datasets) | Power BI Dataflows | Power Apps Dataflows | Customer Insights Dataflows | Analysis Services |
+| --- | --- | --- | --- | --- | --- | --- |
+| ![Access Database connector](media/index/access-database-64.png)<br/>**Access Database**<br/>By Microsoft    | Yes | Yes | Yes | Yes | Yes | Yes |
+| ![Active Directory connector](media/index/active-directory-64.png)<br/>**Active Directory**<br/>By Microsoft | Yes | Yes | Yes | No  | Yes | Yes |
+| ![Adobe Analytics connector](media/index/adobe-analytics-64.png)<br/>**Adobe Analytics**<br/>By Microsoft    | No  | Yes | No  | No  | No  | No? |
+| ![Amazon Redshift connector](media/index/database-64.png)<br/>**Amazon Redshift**<br/>By Microsoft           | No  | Yes | Yes | Yes | Yes | No  |
+
+<!--&nbsp;
+
+&nbsp;
+
 | | | | |
 | --- | --- | --- | --- |
-| ![Access Database connector](media/index/access-database-64.png)<br/>**Access Database**<br/>By Microsoft | ![Active Directory connector](media/index/active-directory-64.png)<br/>**Active Directory**<br/>By Microsoft | ![Adobe Analytics connector](media/index/adobe-analytics-64.png)<br/>**Adobe Analytics**<br/>By Microsoft | ![Amazon Redshift connector](media/index/database-64.png)<br/>**Amazon Redshift**<br/>By Microsoft |
 | ![appFigures (Beta)](media/index/appfigures-64.png)<br/>**appFigures (Beta)**<br/>By Microsoft | ![Asana (Beta)](media/index/asana-64.png)<br/>**Asana**<br/>By Asana | ![AtScale cubes (Beta)](media/index/cube-database-64.png)<br/>**AtScale cubes (Beta)**<br/>By Microsoft | ![Azure Analysis Services database](media/index/analysis-services-64.png)<br/>**Azure Analysis Services database**<br/>By Microsoft |
 | ![Azure Blob Storage](media/index/blobs-64.png)<br/>**Azure Blob Storage**<br/>By Microsoft | ![Azure Cosmos DB (Beta)](media/index/cosmosdb-64.png)<br/>**Azure Cosmos DB (Beta)**<br/>By Microsoft | ![Azure Cost Management (Beta)](media/index/azure-cost-management-64.png)<br/>**Azure Cost Management (Beta)**<br/>By Microsoft | ![Azure Data Explorer (Beta)](media/index/kusto-64.png)<br/>**Azure Data Explorer (Beta)**<br/>By Microsoft |
 | [![Azure Data Lake Storage](media/index/data-lake-64.png)<br/>**Azure Data Lake Storage**](./datalakestorage.md)<br/>By Microsoft | ![Azure Data Lake Storage Gen2 (Beta)](media/index/tables-64.png)<br/>**Azure Data Lake Storage Gen2 (Beta)**<br/>By Microsoft | ![Azure DevOps (Beta)](media/index/vsts-64.png)<br/>**Azure DevOps (Beta)**<br/>By Microsoft | ![Azure DevOps Server (Beta)](media/index/vsts-64.png)<br/>**Azure DevOps Server (Beta)**<br/>By Microsoft |
@@ -51,8 +84,11 @@ This page summarizes all of the connectors currently available for Power Query. 
 | ![Vena (Beta)](media/index/vena-64.png)<br/>**Vena (Beta)**<br/>By Vena | ![Vertica](media/index/vertica-64.png)<br/>**Vertica**<br/>By Microsoft | [![Web](media/index/web-64.png)<br/>**Web**](./web.md)<br/>By Microsoft | ![Webtrends (Beta)](media/index/webtrends-64.png)<br/>**Webtrends (Beta)**<br/>By Microsoft |
 | ![Workforce Dimensions (Beta)](media/index/workforce-dimensions-64.png)<br/>**Workforce Dimensions (Beta)**<br/>By Kronos | ![Workplace Analytics (Beta)](media/index/workplace-analytics-64.png)<br/>**Workplace Analytics (Beta)**<br/>By Microsoft | [![XML](media/index/xml-document-64.png)<br/>**XML**](./xml.md)<br/>By Microsoft | ![Zendesk (Beta)](media/index/zendesk-64.png)<br/>**Zendesk (Beta)**<br/>By Microsoft |
 | ![Zucchetti HR Infinity (Beta)](media/index/zucchetti-64.png)<br/>**Zucchetti HR Infinity (Beta)**<br/>By Zucchetti | | | |
-| | | | |
+| | | | | -->
 
 ## Next steps
 
-[Power BI data sources](https://docs.microsoft.com/power-bi/power-bi-data-sources)
+- [Power BI data sources (datasets)](https://docs.microsoft.com/power-bi/power-bi-data-sources)
+- [Connect to data sources for Power BI dataflows](https://docs.microsoft.com/power-bi/transform-model/service-dataflows-data-sources#data-sources-for-dataflows)
+- [Available data sources (Dynamics 365 Customer Insights)](https://docs.microsoft.com/dynamics365/ai/customer-insights/data-sources-list)
+- [Data sources supported in Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)
