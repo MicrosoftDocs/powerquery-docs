@@ -76,4 +76,4 @@ On the top right-hand corner of the Value distribution chart there's a small ico
 
 In the image below, we are grouping a column of Product Names by the text length. Once the values have been grouped in the chart, you can interact with it and interact with it as showcased in the 'Filter by value' section of this article.
 
-[Group by text length](images/me-text-length-distribution.png)
+![Group by text length](images/me-text-length-distribution.png)
