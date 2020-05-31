@@ -76,8 +76,9 @@ next image:
 ### Filter by value
 
 You can interact with the value distribution chart on the right and select any
-of the bars with either a mouseover or a right click to display a set of
-available transformations for that value.
+of the bars with mouseover. 
+
+A right click to display a set of available transformations for that value.
 
 [Image of the mouseover and right click
 interactions](https://github.com/migueesc123/powerquery-docs/blob/master/powerquery-docs/image.png)
@@ -98,9 +99,8 @@ option](https://github.com/migueesc123/powerquery-docs/blob/master/powerquery-do
 On the top right-hand corner of the Value distribution chart there's a small
 icon of three dots. When clicking on this contextual three dots, you'll get the
 option to use the 'Group by' feature to group your values in the chart by a set
-of options available. Once the values have been grouped in the chart, you can
-interact with it and interact with it as showcased in the 'Filter by value'
-section of this article.
+of options available. 
+In the image below, we are grouping a column of Product Names by the text length. Once the values have been grouped in the chart, you can interact with it and interact with it as showcased in the 'Filter by value' section of this article.
 
 [Image o group by as a before and after
 picture](https://github.com/migueesc123/powerquery-docs/blob/master/powerquery-docs/image.png)
