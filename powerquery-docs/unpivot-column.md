@@ -1,16 +1,16 @@
-# Unpivot columns
+# Unpivot column
 
 In Power Query, you can transform columns into attribute-value pairs where columns become rows. You use Power Query's Query Editor to unpivot columns.
 
-[![image](C:\Users\MiguelEscobar\Microsoft\Data Integration Docs - General\Miguel-PowerQuery\images\unpivot columns\me-unpivot-diagram)](https://user-images.githubusercontent.com/9544580/81667071-744bdf00-9408-11ea-880c-45e328c9f3da.png)
+![image](images/me-unpivot-diagram.png)
 
 For example, imagine a table like the following:
 
-![image-20200531101811054](C:\Users\MiguelEscobar\AppData\Roaming\Typora\typora-user-images\image-20200531101811054.png)
+![image](images/me-unpivot-initial-table.png)
 
 That has a value by Country and by date as a matrix. We need to transform that table into the following one with unpivoted columns:
 
-![image-20200531101905953](C:\Users\MiguelEscobar\AppData\Roaming\Typora\typora-user-images\image-20200531101905953.png)
+![image](images/me-unpivot-final-table.png)
 
 The key in this transformation is that we have a set of dates on the table that should all be part of a column. The respective value for each date and Country should be in a different column, effectively creating a value-pair.
 
@@ -21,9 +21,9 @@ Power Query will always create the value-pair with two columns:
 
 There are multiple places in the user interface where you can find the **Unpivot Columns** button by either right clicking on the columns that you wish to unpivot or by selecting the icon from the Transform menu in the ribbon.
 
-![image-20200531102150328](C:\Users\MiguelEscobar\AppData\Roaming\Typora\typora-user-images\image-20200531102150328.png)
+![image](images/me-unpivot-right-click.png)
 
-![image-20200531102145587](C:\Users\MiguelEscobar\AppData\Roaming\Typora\typora-user-images\image-20200531102145587.png)
+![image](images/me-unpivot-transform-tab.png)
 
 There are three ways that we can unpivot columns from a table:
 
@@ -35,17 +35,17 @@ There are three ways that we can unpivot columns from a table:
 
 For the scenario described above, we first need to select the columns that we want to unpivot. You can hold the Ctrl key to select as many columns as you need. For our scenario, we want to select all the columns except the one with the header **Country**. After selecting the columns, you can right click on any of the selected columns and then left click on the Unpivot Columns button.
 
-![image-20200531102316237](C:\Users\MiguelEscobar\AppData\Roaming\Typora\typora-user-images\image-20200531102316237.png)
+![image](images/me-unpivot-columns-right-click.png)
 
 The result of that operation will yield the following result: 
 
-![image-20200531102429386](C:\Users\MiguelEscobar\AppData\Roaming\Typora\typora-user-images\image-20200531102429386.png)
+![image](images/me-unpivot-columns-final-table.png)
 
 ### Special considerations
 
 After creating our query from the steps above, Imagine that our initial table gets updated to look like the following:
 
-![image-20200531102949183](C:\Users\MiguelEscobar\AppData\Roaming\Typora\typora-user-images\image-20200531102949183.png)
+![image](images/me-unpivot-updated-source-table.png)
 
 Notice that we've added a new column for the date 9/1/2020 (September 1st, 2020) and 2 new rows for the countries UK and Mexico.
 
@@ -53,7 +53,7 @@ If we try to refresh our query, you'll notice that the operation will not be don
 
 This is how our query will look like after the refresh with the new updated source table:
 
-![image-20200531103306055](C:\Users\MiguelEscobar\AppData\Roaming\Typora\typora-user-images\image-20200531103306055.png)
+![image](images/me-unpivot-columns-final-updated-table.png)
 
 ## Unpivot Other Columns
 
@@ -61,11 +61,11 @@ This is how our query will look like after the refresh with the new updated sour
 
 It is also possible to only select the columns that we do not want to unpivot and only unpivot the rest of the columns from the table. This is where **Unpivot Other Columns** comes into play.
 
-![image-20200531123141437](C:\Users\MiguelEscobar\AppData\Roaming\Typora\typora-user-images\image-20200531123141437.png)
+![image](images/me-unpivot-other-columns.png)
 
 The result of that operation will yield exactly the same result as the one that we got from **Unpivot Columns**.
 
-![image-20200531123316777](C:\Users\MiguelEscobar\AppData\Roaming\Typora\typora-user-images\image-20200531123316777.png)
+![image](images/me-unpivot-other-columns-final-table.png)
 
 [!NOTE] This transformation is crucial for queries with unknown number of columns. The operation will unpivot all columns from our table except the ones that we've selected. This is a ideal solution if the data source of our scenario had new date columns in a refresh as those will get picked up and unpivoted. 
 
@@ -75,11 +75,11 @@ Similar to how it happens with the **Unpivot Columns** operation, if our query r
 
 This means that with a new table like the following:
 
-![image-20200531102949183](C:\Users\MiguelEscobar\AppData\Roaming\Typora\typora-user-images\image-20200531102949183.png)
+![image](images/me-unpivot-updated-source-table.png)
 
 We can select the Country column and do an **Unpivot other columns** which will yield the following result:
 
-![image-20200531124037155](C:\Users\MiguelEscobar\AppData\Roaming\Typora\typora-user-images\image-20200531124037155.png)
+![image](images/me-unpivot-other-columns-updated-final-table.png)
 
 ## Unpivot Only Selected Columns
 
@@ -87,22 +87,20 @@ The purpose of this last option is to only unpivot specific columns from our tab
 
 To perform this operation we select the columns to unpivot which are all of the columns except the **Country** column, and select the option to **Unpivot Only Selected Columns** by doing a right click on any of the selected columns.
 
-### ![image-20200531125027256](C:\Users\MiguelEscobar\AppData\Roaming\Typora\typora-user-images\image-20200531125027256.png)
+![image](images/me-unpivot-only-selected-columns-right-click.png)
 
 Notice how this will yield the same output as the previous examples:
 
-![image-20200531125209581](C:\Users\MiguelEscobar\AppData\Roaming\Typora\typora-user-images\image-20200531125209581.png)
+![image](images/me-unpivot-only-selected-columns-final-table.png)
 
 ### Special considerations
 
 After doing a refreshed and our source table changes to have the 9/1/2020 column and the rows for UK and Mexico, the output of the query will be different from the previous examples. If our source table, after a refresh, changes to the following one:
 
-![image-20200531102949183](C:\Users\MiguelEscobar\AppData\Roaming\Typora\typora-user-images\image-20200531102949183.png)
+![image](images/me-unpivot-updated-source-table.png)
 
 The output of our query will look like this:
 
-![image-20200531125642684](C:\Users\MiguelEscobar\AppData\Roaming\Typora\typora-user-images\image-20200531125642684.png)
+![image](images/me-unpivot-only-selected-columns-updated-final-table.png)
 
 This is because the unpivot operation is only specifically happening on the columns 6/1/2020, 7/1/2020 and 8/1/2020, so the column with the header 9/1/2020 remains unchanged
-
- 
