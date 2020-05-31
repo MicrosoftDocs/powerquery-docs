@@ -19,6 +19,7 @@ The set of steps or stages are:
 ## Connector Parameters
 
 Most connectors initially require at least one parameter to initialize a connection to the data source. For example, the SQL Server connector requires at least the hostname to establish a connection to a SQL Server.
+![SQL Server connector parameters](images/me-connector-parameters.png)
 
 In comparison, when trying to connect to an Excel file, Power Query requires the user to find the file they want to connect to by using the file path.
 
@@ -38,10 +39,13 @@ The current available methods of authentication for Power Query are:
 * **Windows** - Can be implicit or explicit. Impersonation can also be an option.
 * **Database** - Only available in some connectors specific to databases.
 
+For example, for the Azure SQL Server connector the available authentication methods are Windows, Database and Microsoft account as shown in the following image:
+![SQL Server connector authentication methods](images/me-authentication.png)
+
 ## Navigation table (navigator)
 
 The navigation table or navigator's window goal is to display, in a user-friendly way, the objects available from the data source to the end user.
-
+![SQL Server connector navigator](images/me-navigator.png)
 The two main sections of this window are:
 * **Object selection** - Displayed on the left-hand side of the window. The
     user can interact with these objects and select one or enable the
