@@ -37,7 +37,7 @@ Furthermore, it also provides simple statistics on these categories.
 
 By hovering over either one of them we get some quick actions buttons for the operations that we can perform over the values in each category:
 
-![Data Quality hover options](images/me-data-quality-hover.png)
+![Data Quality hover options](images/me-column-quality-hover.png)
 
 ## Column Distribution
 
