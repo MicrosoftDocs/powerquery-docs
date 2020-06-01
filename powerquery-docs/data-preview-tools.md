@@ -1,3 +1,13 @@
+---
+title: Data Preview Tools
+description: Data Preview Tools
+author: ptyx507
+ms.service: powerquery
+ms.reviewer: v-douklo
+ms.date: 06/01/2019
+ms.author: v-miesco
+---
+
 # Data Preview Tools
 
 The main objective of the Data Preview tools is to provide the user with new and intuitive ways to clean, transform and understand their data within the Power Query Editor Window.

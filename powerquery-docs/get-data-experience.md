@@ -1,3 +1,13 @@
+---
+title: "Power Query's 'Get Data' experience"
+description: "Power Query's 'Get Data' experience"
+author: ptyx507
+ms.service: powerquery
+ms.reviewer: v-douklo
+ms.date: 06/01/2019
+ms.author: v-miesco
+---
+
 # Power Query's 'Get Data' experience
 
 When connecting to a data source with Power Query, the process will follow a set of steps or stages before landing the data at a destination, whether the destination is a table or the Power Query Editor window. This article describes the set of steps or stages to better understand how things work with Power Query.
