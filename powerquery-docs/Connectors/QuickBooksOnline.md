@@ -80,17 +80,3 @@ To connect to QuickBooks Online:
 
     ![View the report](media/quickbooks-online/qb-view-report.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
