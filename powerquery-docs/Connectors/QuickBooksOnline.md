@@ -13,9 +13,6 @@ LocalizationGroup: reference
 
 # QuickBooks Online
 
->[!Note]
-> There's a mention of QuickBooks Power BI integration at https://powerbi.microsoft.com/en-us/integrations/quickbooks-online/.
-
 ## Summary
 
 Power BI QuickBooks Online connector enables connecting to your QuickBooks Online account and viewing, analysing, and reporting on your company QuickBooks data in Power BI.
@@ -58,7 +55,7 @@ To connect to QuickBooks Online:
 
 5. In the following dialog select a company and then select **Next**.
 
-   ![Select a company](media/quickbooks-online/qb-company.png)
+   ![Select a company](media/quickbooks-online/qb-select-company.png)
 
 6. Once you have successfully signed in, select **Connect**.
 
@@ -80,3 +77,6 @@ To connect to QuickBooks Online:
 
     ![View the report](media/quickbooks-online/qb-view-report.png)
 
+## Next steps
+
+* [QuickBooks Power BI integration](https://powerbi.microsoft.com/integrations/quickbooks-online/)
