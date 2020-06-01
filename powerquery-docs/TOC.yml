@@ -10,6 +10,12 @@
         href: power-query-quickstart-using-power-bi.md
       - name: "Use Query Parameters"
         href: power-query-query-parameters.md
+    - name: Get Data experience
+      href: get-data-experience.md
+    - name: Data Preview tools
+      href: data-preview-tools.md
+    - name: Unpivot column
+      href: unpivot-column.md
     - name: Tutorials
       items:
       - name: "Shape and combine data"
