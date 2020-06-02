@@ -8,7 +8,7 @@ If the [dataflow is standard](https://github.com/MicrosoftDocs/powerquery-docs-p
 
 However, when the dataflow is [analytical](https://github.com/MicrosoftDocs/powerquery-docs-pr/blob/reza-dataflows/powerquery-docs/dataflows/understanding-differences-between-analytical-standard-dataflows.md), the data is stored in Azure Data Lake storage. The structure that the data is stored is in folders and subfolders of workspaces (or environments), dataflows, and entities under the dataflow. This structure follows the standards defined for the common data model.
 
-![Analytical dataflow stores the data in the CDM structure](C:\Users\reza_\OneDrive - Microsoft\Dataflow Docs\05\AnalyticalDataflowStoresDatainCDMFormat.png)
+![Analytical dataflow stores the data in the CDM structure](media/AnalyticalDataflowStoresDatainCDMFormat.png)
 
 ## What is the CDM Storage Structure
 
@@ -16,7 +16,7 @@ CDM, which stands for [Common Data Model](https://docs.microsoft.com/en-us/commo
 
 Inside the Azure Data Lake Storage, the data is stored inside folders. Each folder represents a workspace or environment. Under that folder, there will be subfolders for each dataflow.
 
-![workspace folder structure](C:\Users\reza_\OneDrive - Microsoft\Dataflow Docs\05\foldersWorkspaceAndDataflows.png)
+![workspace folder structure](media/foldersWorkspaceAndDataflows.png)
 
 ## What's Inside a dataflow Folder?
 
@@ -28,11 +28,11 @@ Inside each dataflow folder, there are sub-folders for each entity, and a metada
 
 The "model.json" file is the metadata definition of the dataflow. This is the one file that contains all the metadata about the dataflow. It includes a list of entities, their transformations, the columns and their data types in each entity, the relationship between entities, and so on. This is the file that you can export from a dataflow easily, even if you don't have access to the CDM folder structure.
 
-![Export model.json file from a dataflow](C:\Users\reza_\OneDrive - Microsoft\Dataflow Docs\05\dataflowExportJson.png)
+![Export model.json file from a dataflow](media/dataflowExportJson.png)
 
 This JSON file is the file that you can use to migrate (or import) your dataflow into another workspace or environment;
 
-![Migrate dataflow into another workspace or environment](C:\Users\reza_\OneDrive - Microsoft\Dataflow Docs\05\dataflowMigrateToAnotherWorkSpace.png)
+![Migrate dataflow into another workspace or environment](media/dataflowMigrateToAnotherWorkSpace.png)
 
 Read [this article](https://docs.microsoft.com/en-us/common-data-model/model-json) to learn what the model.json metadata file exactly includes.
 
@@ -44,7 +44,7 @@ In addition to the metadata file, inside the dataflow folder, there are other su
 
 If you are using dataflows with the internal Azure Data Lake storage provided by Power BI or Power Platform, you won't be able to see those folders. Your only way of seeing the content of the CDM folders is to use Get Data from Power BI or Power Platform dataflows in the Power BI Desktop, or from other dataflows, get data from dataflow.
 
-![Connect to the analytical dataflow's data](C:\Users\reza_\OneDrive - Microsoft\Dataflow Docs\05\GetdatafromAnalyticalDataflow.png)
+![Connect to the analytical dataflow's data](media/GetdatafromAnalyticalDataflow.png)
 
 
 
