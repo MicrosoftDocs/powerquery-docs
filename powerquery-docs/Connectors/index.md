@@ -13,39 +13,80 @@ LocalizationGroup: reference
 
 # Connectors in Power Query
 
-This page contains a list of connectors to data sources that currently contain topics in this documentation. You can select a connector to view more detailed connector-specific documentation.
-
-In addition, a separate list summarizes all of the connectors currently available for Power Query.
-
-## List of currently documented connectors
+The following table contains a list of all the connectors currently available for Power Query. For those connectors that have a reference page in this document, a link is provided under the connector name.
 
 | Connector | Excel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Power BI (Datasets) | Power BI Dataflows | Power Apps Dataflows | Customer<br/>Insights Dataflows | Analysis Services |
 | --- | --- | --- | --- | --- | --- | --- |
-| [![Azure Data Lake Storage](media/index/data-lake-64.png)<br/>**Azure Data Lake Storage**](./datalakestorage.md)<br/>By Microsoft | Yes | Yes | Yes | Yes | Yes | Yes |
-| [![Excel](media/index/excel-workbook-64.png)<br/>**Excel**](./excel.md)<br/>By Microsoft                                          | Yes | Yes | Yes | Yes | Yes | Yes |
-| [![Facebook](media/index/facebook-64.png)<br/>**Facebook**](./facebook.md)<br/>By Microsoft                                       | No  | Yes | No  | No  | No  | No  |
-| [![FHIR](media/index/fhir-64.png)<br/>**FHIR**](./fhir/fhir.md)<br/>By Microsoft                                                  | No  | Yes | No  | No  | No  | No  |
-| ![Folder](media/index/folder-64.png)<br/>**Folder**<br/>By Microsoft                                                              | Yes | Yes | Yes | Yes | Yes | Yes |
-| [![ODBC](media/index/odbc-64.png)<br/>**ODBC**](./odbc.md)<br/>By Microsoft                                                       | Yes | Yes | Yes | Yes | Yes | Yes |
-| [![PostgreSQL database](media/index/database-64.png)<br/>**PostgreSQL database**](./postgresql.md)<br/>By Microsoft               | Yes | Yes | Yes | Yes | Yes | Yes |
-| [![Salesforce Objects](media/index/salesforce-64.png)<br/>**Salesforce Objects**](./salesforceobjects.md)<br/>By Microsoft        | Yes | Yes | Yes | Yes | Yes | Yes |
-| [![Salesforce Reports](media/index/salesforce-64.png)<br/>**Salesforce Reports**](./salesforcereports.md)<br/>By Microsoft        | Yes | Yes | Yes | Yes | Yes | Yes |
-| ![SharePoint list](media/index/sharepoint-64.png)<br/>**SharePoint list**<br/>By Microsoft                                        | Yes | Yes | Yes | Yes | Yes | Yes |
-| ![SharePoint Online List](media/index/sharepoint-64.png)<br/>**SharePoint Online List**<br/>By Microsoft                          | Yes | Yes | Yes | Yes | Yes | No  |
-| [![SQL Server database](media/index/database-64.png)<br/>**SQL Server database**](./sqlserver.md)<br/>By Microsoft                | Yes | Yes | Yes | Yes | Yes | Yes |
-| [![Text/CSV](media/index/textfile-64.png)<br/>**Text/CSV**](./textcsv.md)<br/>By Microsoft                                        | Yes | Yes | Yes | Yes | Yes | Yes |
-| [![Web](media/index/web-64.png)<br/>**Web**](./web.md)<br/>By Microsoft                                                           | Yes | Yes | Yes | Yes | Yes | No  |
-| [![XML](media/index/xml-document-64.png)<br/>**XML**](./xml.md)<br/>By Microsoft                                                  | Yes | Yes | Yes | Yes | Yes | Yes |
+| ![Access Database connector](media/index/access-database-64.png)<br/>**Access Database**<br/>By Microsoft                           | Yes | Yes | Yes | Yes | Yes | Yes |
+| ![Active Directory connector](media/index/active-directory-64.png)<br/>**Active Directory**<br/>By Microsoft                        | Yes | Yes | Yes | No  | Yes | Yes |
+| ![Adobe Analytics connector](media/index/adobe-analytics-64.png)<br/>**Adobe Analytics**<br/>By Microsoft                           | No  | Yes | No  | No  | No  | No  |
+| ![Amazon Redshift connector](media/index/database-64.png)<br/>**Amazon Redshift**<br/>By Microsoft                                  | No  | Yes | Yes | Yes | Yes | No  |
+| ![appFigures (Beta)](media/index/appfigures-64.png)<br/>**appFigures (Beta)**<br/>By Microsoft                                      | No  | Yes | No  | No  | No  | No  |
+| ![Asana (Beta)](media/index/asana-64.png)<br/>**Asana**<br/>By Asana                                                                | No  | Yes | No  | No  | No  | No  |
+| ![AtScale cubes (Beta)](media/index/cube-database-64.png)<br/>**AtScale cubes (Beta)**<br/>By Microsoft                             | No  | Yes | No  | No  | No  | No  |
+| ![Azure Analysis Services database](media/index/analysis-services-64.png)<br/>**Azure Analysis Services database**<br/>By Microsoft | No  | Yes | No  | No  | No  | No  |
+| ![Azure Blob Storage](media/index/blobs-64.png)<br/>**Azure Blob Storage**<br/>By Microsoft                                         | Yes | Yes | Yes | No  | Yes | Yes |
+| ![Azure Cosmos DB (Beta)](media/index/cosmosdb-64.png)<br/>**Azure Cosmos DB (Beta)**<br/>By Microsoft                              | No  | Yes | No  | No  | No  | Yes |
+| ![Azure Cost Management (Beta)](media/index/azure-cost-management-64.png)<br/>**Azure Cost Management (Beta)**<br/>By Microsoft     | No  | Yes | No  | No  | No  | No  |
+| ![Azure Data Explorer (Beta)](media/index/kusto-64.png)<br/>**Azure Data Explorer (Beta)**<br/>By Microsoft                         | Yes | Yes | Yes | Yes | No  | No  |
+| [![Azure Data Lake Storage](media/index/data-lake-64.png)<br/>**Azure Data Lake Storage**](./datalakestorage.md)<br/>By Microsoft   | Yes | Yes | No  | No  | No  | Yes |
+| ![Azure Data Lake Storage Gen2 (Beta)](media/index/tables-64.png)<br/>**Azure Data Lake Storage Gen2 (Beta)**<br/>By Microsoft      | No  | Yes | Yes | Yes | Yes | Yes | 
+| ![Azure DevOps (Beta)](media/index/vsts-64.png)<br/>**Azure DevOps (Beta)**<br/>By Microsoft                                        | No  | Yes | No  | No  | No  | No  |
+| ![Azure DevOps Server (Beta)](media/index/vsts-64.png)<br/>**Azure DevOps Server (Beta)**<br/>By Microsoft                          | No  | Yes | No  | No  | No  | No  |
+| ![Azure HDInsight (HDFS)](media/index/hdinsight-hdfs-64.png)<br/>**Azure HDInsight (HDFS)**<br/>By Microsoft                        | Yes | Yes | No  | No  | No  | Yes |
+| ![Azure HDInsight Spark](media/index/spark-64.png)<br/>**Azure HDInsight Spark**<br/>By Microsoft                                   | No  | Yes | Yes | Yes | Yes | Yes |
+| ![Azure SQL Data Warehouse](media/index/sql-data-warehouse-64.png)<br/>**Azure SQL Data Warehouse**<br/>By Microsoft                | Yes | Yes | Yes | Yes | Yes | Yes |
+| ![Azure SQL database](media/index/sql-database-64.png)<br/>**Azure SQL database**<br/>By Microsoft                                  | Yes | Yes | Yes | Yes | Yes | Yes |
+| ![Azure Table Storage](media/index/tables-64.png)<br/>**Azure Table Storage**<br/>By Microsoft                                      | Yes | Yes | Yes | No  | Yes | Yes |
+| ![Azure Time Series Insights (Beta)](media/index/time-series-insights-connector-64.png)<br/>**Azure Time Series Insights (Beta)**<br/>By Microsoft                                                                                                                             | No  | Yes | No  | No  | No  | No  | 
+| ![BI Connector](media/index/biconnector-64.png)<br/>**BI Connector**<br/>By Guidanz                                                 | No  | Yes | No  | No  | No  | No  |
+| ![BI360](media/index/bi360-64.png)<br/>**BI360**<br/>By Solver Global                                                               | No  | Yes | No  | No  | No  | No  |
+| ![Cognite Data Fusion (Beta)](media/index/cdf-64.png)<br/>**Cognite Data Fustion (Beta)**<br/>By Cognite                            | No  | Yes | No  | No  | No  | No  |
+| ![Common Data Service](media/index/data-pbi-64.png)<br/>**Common Data Service**<br/>By Microsoft                                    | No  | Yes | Yes | No  | Yes | No  |
+| ![Data.World - Get Dataset (Beta)](media/index/data-world-64.png)<br/>**Data.World - Get Dataset (Beta)**<br/>By Microsoft          | No  | Yes | No  | No  | No  | No  |
+| ![Data Virtuality (Beta)](media/index/data-virtuality-64.png)<br/>**Data Virtuality (Beta)**<br/>By Data Virtuality                 | No  | Yes | No  | No  | No  | No  |
+| ![Denodo](media/index/denodo-for-powerbi-64.png)<br/>**Denodo**<br/>By Denodo                                                       | No  | Yes | No  | No  | No  | No  |
+| ![Dremio (Beta)](media/index/dremio-64.png)<br/>**Dremio**<br/>By Dremio                                                            | No  | Yes | No  | No  | No  | No  |
+| ![Dynamics 365 (online)](media/index/dynamics365-64.png)<br/>**Dynamics 365 (online)**<br/>By Microsoft                             | Yes | Yes | No  | No  | No  | Yes |
+| ![Dynamics 365 Business Central](media/index/dynamics365-business-central-64.png)<br/>**Dynamics 365 Business Central**<br/>By Microsoft                                                                                                                             | No  | Yes | No  | No  | No  | No  |
+| ![Dynamics 365 Business Central (on-premises)](media/index/dynamics365-business-central-on-premises-64.png)<br/>**Dynamics 365 Business Central (on-premises)**<br/>By Microsoft                                                                                                                             | No  | Yes | No  | No  | No  | No  |
+| ![Dynamics 365 Customer Insights (Beta)](media/index/customer-insights-64.png)<br/>**Dynamics 365 Customer Insights (Beta)**<br/>By Microsoft                                                                                                                             | No  | Yes | No  | No  | No  | No  |
+| ![Dynamics NAV](media/index/dynamics-nav-64.png)<br/>**Dynamics NAV**<br/>By Microsoft                                              | No  | Yes | No  | No  | No  | No  |
+| ![Emigo Data Source](media/index/sygnet-emigo-64.png)<br/>**Emigo Data Source**<br/>By Sagra                                        | No  | Yes | No  | No  | No  | No  |
+| ![Entersoft Business Suite (Beta)](media/index/entersoft-business-suite-64.png)<br/>**Entersoft Business Suite (Beta)**<br/>By Entersoft                                                                                                                             | No  | Yes | No  | No  | No  | No  |
+| ![Essbase](media/index/cube-database-64.png)<br/>**Essbase**<br/>By Microsoft                                                       | No  | Yes | No  | No  | No  | No  |
+| ![Exasol](media/index/exasol-64.png)<br/>**Exasol**<br/>By Exasol                                                                   | No  | Yes | No  | No  | No  | No  |
+| [![Excel](media/index/excel-workbook-64.png)<br/>**Excel**](./excel.md)<br/>By Microsoft                                            | Yes | Yes | Yes | Yes | Yes | Yes |
+| [![Facebook](media/index/facebook-64.png)<br/>**Facebook**](./facebook.md)<br/>By Microsoft                                         | No  | Yes | No  | No  | No  | No  |
+| ![FactSet Analytics (Beta)](media/index/factset-64.png)<br/>**FactSet Analytics (Beta)**<br/>By FactSet                             | No  | Yes | No  | No  | No  | No  |
+| [![FHIR](media/index/fhir-64.png)<br/>**FHIR**](./fhir/fhir.md)<br/>By Microsoft                                                    | No  | Yes | No  | No  | No  | No  |
+| ![Folder](media/index/folder-64.png)<br/>**Folder**<br/>By Microsoft                                                                | Yes | Yes | Yes | Yes | Yes | Yes |
+| ![Github (Beta)](media/index/github-64.png)<br/>**Github (Beta)**<br/>By Microsoft                                                  | No  | Yes | No  | No  | No  | No  |
+| ![Google Analytics](media/index/google-analytics-64.png)<br/>**Google Analytics**<br/>By Microsoft                                  | No  | Yes | No  | No  | No  | No  |
+| ![Google BigQuery](media/index/database-64.png)<br/>**Google BigQuery**<br/>By Microsoft                                            | No  | Yes | Yes | Yes | Yes | No  |
+| ![Hadoop File (HDFS)](media/index/hdinsight-hdfs-64.png)<br/>**Hadoop File (HDFS)**<br/>By Microsoft                                | Yes | Yes | No  | No  | No  | No  |
+| ![HDInsight Interactive Query](media/index/hadoop-hdinsight-64.png)<br/>**HDInsight Interactive Query**<br/>By Microsoft            | No  | Yes | No  | No  | No  | No  |
+| ![IBM DB2 database](media/index/database-64.png)<br/>**IBM DB2 database**<br/>By Microsoft                                          | Yes | Yes | Yes | Yes | Yes | No  |
+| ![IBM Informix database (Beta)](media/index/database-64.png)<br/>**IBM Informix database (Beta)**<br/>By Microsoft                  | No  | Yes | No  | No  | No  | Yes |
+| ![IBM Netezza](media/index/database-64.png)<br/>**IBM Netezza**<br/>By Microsoft                                                    | No  | Yes | No  | No  | No  | No  |
+| ![Impala](media/index/odbc-64.png)<br/>**Impala**<br/>By Microsoft                                                                  | No  | Yes | No  | Yes | Yes | No  |
+| ![Indexima](media/index/indexima-64.png)<br/>**Indexima**<br/>By Indexima                                                           | No  | Yes | No  | No  | No  | No  |
+| ![Industrial App Store](media/index/industrial-app-store-64.png)<br/>**Industrial App Store**<br/>By Intelligent Plant              | No  | Yes | No  | No  | No  | No  |
+| ![Information Grid](media/index/information-grid-64.png)<br/>**Information Grid**<br/>By Luminis                                    | No  | Yes | No  | No  | No  | No  |
+| ![InterSystems IRIS](media/index/iris-powerbi-connector-64.png)<br/>**InterSystems IRIS**<br/>By Intersystems                       | No  | Yes | No  | No  | No  | No  |
+| ![Intune Data Warehouse](media/index/intune-64.png)<br/>**Intune Data Warehouse**<br/>By Microsoft                                  | No  | Yes | No  | No  | No  | No  |
+| [![ODBC](media/index/odbc-64.png)<br/>**ODBC**](./odbc.md)<br/>By Microsoft                                                         | Yes | Yes | Yes | Yes | Yes | Yes |
+| [![PostgreSQL database](media/index/database-64.png)<br/>**PostgreSQL database**](./postgresql.md)<br/>By Microsoft                 | Yes | Yes | Yes | Yes | Yes | Yes |
+| [![Salesforce Objects](media/index/salesforce-64.png)<br/>**Salesforce Objects**](./salesforceobjects.md)<br/>By Microsoft          | Yes | Yes | Yes | Yes | Yes | Yes |
+| [![Salesforce Reports](media/index/salesforce-64.png)<br/>**Salesforce Reports**](./salesforcereports.md)<br/>By Microsoft          | Yes | Yes | Yes | Yes | Yes | Yes |
+| ![SharePoint list](media/index/sharepoint-64.png)<br/>**SharePoint list**<br/>By Microsoft                                          | Yes | Yes | Yes | Yes | Yes | Yes |
+| ![SharePoint Online List](media/index/sharepoint-64.png)<br/>**SharePoint Online List**<br/>By Microsoft                            | Yes | Yes | Yes | Yes | Yes | No  |
+| [![SQL Server database](media/index/database-64.png)<br/>**SQL Server database**](./sqlserver.md)<br/>By Microsoft                  | Yes | Yes | Yes | Yes | Yes | Yes |
+| [![Text/CSV](media/index/textfile-64.png)<br/>**Text/CSV**](./textcsv.md)<br/>By Microsoft                                          | Yes | Yes | Yes | Yes | Yes | Yes |
+| [![Web](media/index/web-64.png)<br/>**Web**](./web.md)<br/>By Microsoft                                                             | Yes | Yes | Yes | Yes | Yes | No  |
+| [![XML](media/index/xml-document-64.png)<br/>**XML**](./xml.md)<br/>By Microsoft                                                    | Yes | Yes | Yes | Yes | Yes | Yes |
 | | | | | | | |
 
-## List of all connectors
-
-| Connector | Excel | Power BI (Datasets) | Power BI Dataflows | Power Apps Dataflows | Customer Insights Dataflows | Analysis Services |
-| --- | --- | --- | --- | --- | --- | --- |
-| ![Access Database connector](media/index/access-database-64.png)<br/>**Access Database**<br/>By Microsoft    | Yes | Yes | Yes | Yes | Yes | Yes |
-| ![Active Directory connector](media/index/active-directory-64.png)<br/>**Active Directory**<br/>By Microsoft | Yes | Yes | Yes | No  | Yes | Yes |
-| ![Adobe Analytics connector](media/index/adobe-analytics-64.png)<br/>**Adobe Analytics**<br/>By Microsoft    | No  | Yes | No  | No  | No  | No? |
-| ![Amazon Redshift connector](media/index/database-64.png)<br/>**Amazon Redshift**<br/>By Microsoft           | No  | Yes | Yes | Yes | Yes | No  |
 
 <!--&nbsp;
 
@@ -53,20 +94,14 @@ In addition, a separate list summarizes all of the connectors currently availabl
 
 | | | | |
 | --- | --- | --- | --- |
-| ![appFigures (Beta)](media/index/appfigures-64.png)<br/>**appFigures (Beta)**<br/>By Microsoft | ![Asana (Beta)](media/index/asana-64.png)<br/>**Asana**<br/>By Asana | ![AtScale cubes (Beta)](media/index/cube-database-64.png)<br/>**AtScale cubes (Beta)**<br/>By Microsoft | ![Azure Analysis Services database](media/index/analysis-services-64.png)<br/>**Azure Analysis Services database**<br/>By Microsoft |
-| ![Azure Blob Storage](media/index/blobs-64.png)<br/>**Azure Blob Storage**<br/>By Microsoft | ![Azure Cosmos DB (Beta)](media/index/cosmosdb-64.png)<br/>**Azure Cosmos DB (Beta)**<br/>By Microsoft | ![Azure Cost Management (Beta)](media/index/azure-cost-management-64.png)<br/>**Azure Cost Management (Beta)**<br/>By Microsoft | ![Azure Data Explorer (Beta)](media/index/kusto-64.png)<br/>**Azure Data Explorer (Beta)**<br/>By Microsoft |
-| [![Azure Data Lake Storage](media/index/data-lake-64.png)<br/>**Azure Data Lake Storage**](./datalakestorage.md)<br/>By Microsoft | ![Azure Data Lake Storage Gen2 (Beta)](media/index/tables-64.png)<br/>**Azure Data Lake Storage Gen2 (Beta)**<br/>By Microsoft | ![Azure DevOps (Beta)](media/index/vsts-64.png)<br/>**Azure DevOps (Beta)**<br/>By Microsoft | ![Azure DevOps Server (Beta)](media/index/vsts-64.png)<br/>**Azure DevOps Server (Beta)**<br/>By Microsoft |
-| ![Azure HDInsight (HDFS)](media/index/hdinsight-hdfs-64.png)<br/>**Azure HDInsight (HDFS)**<br/>By Microsoft | ![Azure HDInsight Spark](media/index/spark-64.png)<br/>**Azure HDInsight Spark**<br/>By Microsoft | ![Azure SQL Data Warehouse](media/index/sql-data-warehouse-64.png)<br/>**Azure SQL Data Warehouse**<br/>By Microsoft | ![Azure SQL database](media/index/sql-database-64.png)<br/>**Azure SQL database**<br/>By Microsoft |
-| ![Azure Table Storage](media/index/tables-64.png)<br/>**Azure Table Storage**<br/>By Microsoft | ![Azure Time Series Insights (Beta)](media/index/time-series-insights-connector-64.png)<br/>**Azure Time Series Insights (Beta)**<br/>By Microsoft | ![BI Connector](media/index/biconnector-64.png)<br/>**BI Connector**<br/>By Guidanz | ![BI360](media/index/bi360-64.png)<br/>**BI360**<br/>By Solver Global |
-| ![Cognite (Beta)](media/index/cdf-64.png)<br/>**Cognite (Beta)**<br/>By Cognite | ![Common Data Service](media/index/data-pbi-64.png)<br/>**Common Data Service**<br/>By Microsoft | ![Data.World - Get Dataset (Beta)](media/index/data-world-64.png)<br/>**Data.World - Get Dataset (Beta)**<br/>By Microsoft | ![Data Virtuality (Beta)](media/index/data-virtuality-64.png)<br/>**Data Virtuality (Beta)**<br/>By Data Virtuality |
-| ![Denodo](media/index/denodo-for-powerbi-64.png)<br/>**Denodo**<br/>By Denodo | ![Dremio (Beta)](media/index/dremio-64.png)<br/>**Dremio**<br/>By Dremio | ![Dynamics 365 (online)](media/index/dynamics365-64.png)<br/>**Dynamics 365 (online)**<br/>By Microsoft | ![Dynamics 365 Business Central](media/index/dynamics365-business-central-64.png)<br/>**Dynamics 365 Business Central**<br/>By Microsoft |
-| ![Dynamics 365 Business Central (on-premises)](media/index/dynamics365-business-central-on-premises-64.png)<br/>**Dynamics 365 Business Central (on-premises)**<br/>By Microsoft | ![Dynamics 365 Customer Insights (Beta)](media/index/customer-insights-64.png)<br/>**Dynamics 365 Customer Insights (Beta)**<br/>By Microsoft | ![Dynamics 365 for Customer Insights (Beta)](media/index/odbc-64.png)<br/>**Dynamics 365 for Customer Insights (Beta)**<br/>By Microsoft | ![Dynamics 365 Product Insights (Beta)](media/index/product-insights-64.png)<br/>**Dynamics 365 Product Insights (Beta)**<br/>By Microsoft |
-| ![Dynamics NAV](media/index/dynamics-nav-64.png)<br/>**Dynamics NAV**<br/>By Microsoft | ![Emigo](media/index/sygnet-emigo-64.png)<br/>**Emigo**<br/>By Sagra | ![Entersoft (Beta)](media/index/entersoft-business-suite-64.png)<br/>**Entersoft (Beta)**<br/>By Entersoft | ![Essbase](media/index/cube-database-64.png)<br/>**Essbase**<br/>By Microsoft |
-| ![Exasol](media/index/exasol-64.png)<br/>**Exasol**<br/>By Exasol | [![Excel](media/index/excel-workbook-64.png)<br/>**Excel**](./excel.md)<br/>By Microsoft | [![Facebook](media/index/facebook-64.png)<br/>**Facebook**](./facebook.md)<br/>By Microsoft | ![FactSet Analytics (Beta)](media/index/factset-64.png)<br/>**FactSet Analytics (Beta)**<br/>By FactSet |
-| [![FHIR](media/index/fhir-64.png)<br/>**FHIR**](./fhir/fhir.md)<br/>By Microsoft | ![Folder](media/index/folder-64.png)<br/>**Folder**<br/>By Microsoft | ![Github (Beta)](media/index/github-64.png)<br/>**Github (Beta)**<br/>By Microsoft | ![Google Analytics](media/index/google-analytics-64.png)<br/>**Google Analytics**<br/>By Microsoft |
-| ![Google BigQuery](media/index/database-64.png)<br/>**Google BigQuery**<br/>By Microsoft | ![Hadoop File (HDFS)](media/index/hdinsight-hdfs-64.png)<br/>**Hadoop File (HDFS)**<br/>By Microsoft | ![HDInsight Interactive Query](media/index/hadoop-hdinsight-64.png)<br/>**HDInsight Interactive Query**<br/>By Microsoft | ![IBM DB2 database](media/index/database-64.png)<br/>**IBM DB2 database**<br/>By Microsoft |
-| ![IBM Informix database (Beta)](media/index/database-64.png)<br/>**IBM Informix database (Beta)**<br/>By Microsoft | ![IBM Netezza](media/index/database-64.png)<br/>**IBM Netezza**<br/>By Microsoft | ![Impala](media/index/odbc-64.png)<br/>**Impala**<br/>By Microsoft | ![Indexima](media/index/indexima-64.png)<br/>**Indexima**<br/>By Indexima |
-| ![Industrial App Store](media/index/industrial-app-store-64.png)<br/>**Industrial App Store**<br/>By Intelligent Plant | ![InformationGrid](media/index/information-grid-64.png)<br/>**InformationGrid**<br/>By Luminis | ![InterSystems IRIS](media/index/iris-powerbi-connector-64.png)<br/>**InterSystems IRIS**<br/>By Intersystems | ![Intune Data Warehouse](media/index/intune-64.png)<br/>**Intune Data Warehouse**<br/>By Microsoft |
+
+| ![Dynamics 365 for Customer Insights (Beta)](media/index/odbc-64.png)<br/>
+**Dynamics 365 for Customer Insights (Beta)**<br/>By Microsoft                                                                        | Doesn't seem to exist
+| ![Dynamics 365 Product Insights (Beta)](media/index/product-insights-64.png)<br/>**Dynamics 365 Product Insights (Beta)**<br/>By Microsoft                                                                                                                             | Changed to "Product Insights"?
+
+
+
+
 | ![JamfPro (Beta)](media/index/jamf-pro-64.png)<br/>**JamfPro (Beta)**<br/>By Jamf | ![Jethro (Beta)](media/index/jethro-data-connector-64.png)<br/>**Jethro (Beta)**<br/>By JethroData | ![JSON](media/index/json-document-64.png)<br/>**JSON**<br/>By Microsoft | ![Kyligence Enterprise (Beta)](media/index/kyligence-64.png)<br/>**Kyligence Enterprise (Beta)**<br/>By Kyligence |
 | ![Marketo (Beta)](media/index/marketo-64.png)<br/>**Marketo (Beta)**<br/>By Microsoft | ![MarkLogic (Beta)](media/index/marklogic-odbc-64.png)<br/>**MarkLogic (Beta)**<br/>By MarkLogic | ![Microsoft Azure Consumption Insights (Beta)](media/index/azure-consumption-insights-64.png)<br/>**Microsoft Azure Consumption Insights (Beta)**<br/>By Microsoft | ![Microsoft Exchange](media/index/exchange-64.png)<br/>**Microsoft Exchange**<br/>By Microsoft |
 | ![Microsoft Exchange Online](media/index/exchange-64.png)<br/>**Microsoft Exchange Online**<br/>By Microsoft | ![Microsoft Graph Security](media/index/microsoft-graph-security-64.png)<br/>**Microsot Graph Security**<br/>By Microsoft | ![MicroStrategy for Power BI](media/index/microstrategy-64.png)<br/>**MicroStrategy for Power BI**<br/>By MicroStrategy | ![Mixpanel (Beta)](media/index/mixpanel-64.png)<br/>**Mixpanel (Beta)**<br/>By Microsoft |
