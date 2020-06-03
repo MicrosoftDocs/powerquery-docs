@@ -71,7 +71,7 @@ You can interact with the value distribution chart on the right and select any o
 ![Column Profile Filter by value](images/me-column-profile-hover.png)
 
 A right click to display a set of available transformations for that value.
-![Column Profile right click](image/column-profile-right-click.png)
+![Column Profile right click](images/column-profile-right-click.png)
 
 ### Copy data
 
