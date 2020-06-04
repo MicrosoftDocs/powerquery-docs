@@ -80,6 +80,10 @@
         href: Connectors/SharePointList.md
       - name: "SharePoint Online List"
         href: Connectors/SharePointOnlineList.md
+      - name: "JSON"
+        href: Connectors/json.md
+      - name: "OData Feed"
+        href: Connectors/ODataFeed.md
     - name: Create custom Power Query connectors
       items:
       - name: Quick starts
