@@ -6,7 +6,7 @@ You can use the output of Power Platform dataflows from Power Query experience i
 
 If you are using Power BI as the data analysis tool, you can Get Data from Power Platform or Power BI dataflows by choosing the option as part of the get data experience.
 
-![Get Data from Power BI Desktop](C:\Users\reza_\OneDrive - Microsoft\Dataflow Docs\03\GetDatafromDataflow.png)
+![Get Data from Power BI Desktop](media/GetDatafromDataflow.png)
 
 when you get data from a dataflow, the data will be imported into the Power BI dataset, and the refresh of that requires a scheduled refresh process on the Power BI dataset in the service.
 
