@@ -68,7 +68,8 @@ This is how our query will look like after the refresh with the new updated sour
 
 ## Unpivot Other Columns
 
-[!NOTE] Both Unpivot Other Columns and Unpivot Columns provide the same result and behave the same.
+>[!Note]
+> Both Unpivot Other Columns and Unpivot Columns provide the same result and behave the same.
 
 It is also possible to only select the columns that we do not want to unpivot and only unpivot the rest of the columns from the table. This is where **Unpivot Other Columns** comes into play.
 
