@@ -33,3 +33,7 @@ Now you can sort by the Position field in ascending order as well, but this time
 Notice how this action doesn't create a new step, but it modifies the existing one to do both sort operations in just one step. When you sort based upon multiple columns, the order or hierarchy of the sorting is based on the order that the columns were selected. A visual indicator prior to the Field dropdown is displayed which provides a number that represents the order of this order or hierarchy.   
 
 ![](images/me-sort-by-column-multi-column-sort.png)
+
+## To clear a sort
+
+You can clear a sort operation of a specific column by going through the field dropdown and selecting the option to clear sort.
