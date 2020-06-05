@@ -1,12 +1,12 @@
 ---
 title: Splitting Columns By Lowercase to Uppercase
 description: Splitting Columns By Lowercase to Uppercase
-author: t-lijess
+author: jessli20
 
 ms.topic: conceptual
 ms.service: powerquery
 ms.date: 06/04/2020
-ms.author: t-lijess
+ms.author: jessli20
 ---
 
 # Split Columns By Lowercase to Uppercase
@@ -22,7 +22,7 @@ The result of the transformation will be two or more columns split from the orig
 
 ![After](images/splitColumnsAfterTableLU.png)
 
-# Option One: Home Tab Split Columns By Lowercase to Uppercase 
+## Option One: Home Tab Split Columns By Lowercase to Uppercase 
 
 Select the column that we want to split, then go to the **Split Column** option from the *Text column* group:
 
@@ -36,14 +36,14 @@ The final outcome will be the singular column split into multiple given every in
 
 ![Split Column Dropdown](images/splitColumnsAfterFunctionLU.png)
 
-# Option Two: Transform Tab Split Columns By Lowercase to Uppercase 
+## Option Two: Transform Tab Split Columns By Lowercase to Uppercase 
 
 Go to the top left hand corner and click on the *Transform* tab. Then follow the same directions given for ***Option 1: Home Tab Split Columns By Lowercase to Uppercase***.
 
 ![HomeTab](images/splitColumnsTransformTabLU.png)
 
 
-# Option Three: Split Column By Lowercase to Uppercase Function into Formula Bar
+## Option Three: Split Column By Lowercase to Uppercase Function into Formula Bar
 
 On the top of the table there is a formula bar that can compute functions. 
 
