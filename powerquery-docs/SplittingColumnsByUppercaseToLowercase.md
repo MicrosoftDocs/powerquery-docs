@@ -58,3 +58,4 @@ Instead of using the graphical interface, there is an option to insert a functio
 The result will split the first column into the multiple columns by the last Uppercase with a Lowercase following.
 
 ![Function After](images/splitColumnsAfterFunctionUL.png)
+
