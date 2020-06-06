@@ -16,11 +16,11 @@ In this case, the column(s) selected can be split by the last Uppercase to the f
 
 We will be using the following table to show the change.
 
-![Before](images/splitColumnsBeforeTableUL.png)
+![Before](images/splitColumnsBeforeTableUL.PNG)
 
 The result of the transformation will be two or more columns split from the original column.
 
-![After](images/splitColumnsAfterTableUL.png)
+![After](images/splitColumnsAfterTableUL.PNG)
 
 ## Option One: Home Tab Split Columns By Uppercase to Lowercase 
 
@@ -30,24 +30,24 @@ Select the column that we want to split, then go to the **Split Column** option 
 
 After clicking the **Split Column** option, click the suboption **By Uppercase to Lowercase**.
 
-![Split Column Dropdown](images/splitColumnsDropdownUL.png)
+![Split Column Dropdown](images/splitColumnsDropdownUL.PNG)
 
 The final outcome will be the singular column split into multiple given every instance of the last Uppercase letter to the next Lowercase letter.
 
-![Split Column Dropdown](images/splitColumnsAfterFunctionUL.png)
+![Split Column Dropdown](images/splitColumnsAfterFunctionUL.PNG)
 
 ## Option Two: Transform Tab Split Columns By Uppercase to Lowercase 
 
 Go to the top left hand corner and click on the *Transform* tab. Then follow the same directions given for ***Option 1: Home Tab Split Columns By Uppercase to Lowercase***.
 
-![HomeTab](images/splitColumnsTransformTabUL.png)
+![HomeTab](images/splitColumnsTransformTabUL.PNG)
 
 
 ## Option Three: Split Column By Uppercase to Lowercase Function into Formula Bar
 
 On the top of the table there is a formula bar that can compute functions. 
 
-![Function](images/splitColumnsFunctionUL.png)
+![Function](images/splitColumnsFunctionUL.PNG)
 
 Instead of using the graphical interface, there is an option to insert a function into the formula bar to do the same action. Copy and Paste the following lines of code, with personaled inputs in the <> brackets, into the formula bar and then press **Enter**.
 
@@ -57,5 +57,5 @@ Instead of using the graphical interface, there is an option to insert a functio
 ```
 The result will split the first column into the multiple columns by the last Uppercase with a Lowercase following.
 
-![Function After](images/splitColumnsAfterFunctionUL.png)
+![Function After](images/splitColumnsAfterFunctionUL.PNG)
 
