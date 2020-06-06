@@ -34,7 +34,8 @@ In the replace values window, we'll leave the "Value to find" completely blank a
 
 ![](images/me-fill-down-up-replace-values-window.png)
 
-Note. You can learn more about the Replace values operation here.
+>[!NOTE] 
+>You can learn more about the Replace values operation [here](/replace-values.md).
 
 Once all of our empty values are replaced for null values, we select the Comments column, go to the Transform tab and select the Fill up operation from the Any Column group:
 
