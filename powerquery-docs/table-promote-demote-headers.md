@@ -1,4 +1,4 @@
-# Promote or Demote a row to column headers
+# Promote or Demote column headers
 
 When creating a new query from unstructured data sources such as text files, Power Query will try to analyze the contents of the file and promote the first row of data to become the column headers of our table should it deem necessary. In some cases, this suggestion by Power Query will be correct and in some others it might not because of the structure of the file.
 
