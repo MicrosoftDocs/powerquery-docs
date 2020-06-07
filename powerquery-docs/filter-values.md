@@ -24,6 +24,9 @@ The remove empty option will apply two filter rules to your column. The first on
 
 ![](images/me-filter-values-sample-for-empty-rows.png)
 
+You can also select this option from the Remove rows drop-down option inside the Reduce group in the Home tab as shown in the next image:
+![](images/me-filter-values-remove-rows-empty.png)
+
 > Note
 >
 > null values are specific values in the Power Query language that represents no value.
