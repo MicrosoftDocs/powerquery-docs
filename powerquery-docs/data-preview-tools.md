@@ -4,7 +4,7 @@ description: Data Preview Tools
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: v-douklo
-ms.date: 06/01/2019
+ms.date: 06/08/2020
 ms.author: v-miesco
 ---
 
