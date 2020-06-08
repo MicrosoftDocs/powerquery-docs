@@ -1,5 +1,5 @@
 # Data types in Power Query
-| Data Types         | Decimal Number | Currency | Whole Number | Percentage | Date/Time | Date | Time | Date/Time/Timezone | Duration | Text | True/False |
+| Data<br/>Types         | Decimal<br/>Number | Currency | Whole<br/>Number | Percentage | Date/<br/>Time | Date | Time | Date/<br/>Time/<br/>Timezone | Duration | Text | True/False |
 |--------------------|----------------|----------|--------------|------------|-----------|------|------|--------------------|----------|------|------------|
 | Decimal Number     |                | 4        | 4            | 1          | 1         | 4    | 2    | 3                  | 1        | 1    | 1          |
 | Currency           | 1              |          | 4            | 1          | 1         | 4    | 2    | 3                  | 1        | 1    | 1          |
