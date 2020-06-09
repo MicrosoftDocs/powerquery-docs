@@ -16,6 +16,9 @@ To remove duplicates:
 
 ![](images/me-working-with-duplicates-remove-duplicates.png)
 
+> [!WARNING]
+> Power Query doesn't guarantee that it chooses the first instance of a set of duplicates when removing duplicates.
+
 ### From multiple columns
 From our initial table, we want to identify and remove the duplicates by using all of the columns from our table. 
 
@@ -37,9 +40,6 @@ We have multiple duplicates and we want to remove those duplicates to only keep 
 The result of that operation will give us the table that we're looking for:
 
 ![](images/me-working-with-duplicates-remove-column-row-duplicates-final.png)
-
-> [!WARNING]
-> Power Query doesn't guarantee that it chooses the first instance of a set of duplicates when removing duplicates.
 
 ## Keep duplicates
 One of the operations that we can have Power Query do with duplicates, is to keep only the duplicates found in our table.
