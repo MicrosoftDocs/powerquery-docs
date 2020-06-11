@@ -3,8 +3,6 @@
 In Power Query, you can split a column through different methods.
 In this case, the column(s) selected can be split by positions.
 
-
-
 ## Where to find the Split columns: by positions
 We can find the Split columns: by positions option in 3 places:
 1. **Home tab** - under the Split column dropdown menu inside the Transform group 
