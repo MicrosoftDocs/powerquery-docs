@@ -41,7 +41,7 @@ We now proceed to do the same operation over the new Column1.2 column but with t
 
 ![images](images/me-split-columns-number-character-into-columns-split-column-last.png)
 
-* **Number of characters**: 6
+* **Number of characters**: 8
 * **Split**: Once, as far left as possible
 
 The result of that operation will yield a table with 3 columns. Notice the new names of the two columns on the far right, Column1.2.1 and Column1.2.2 which were automatically created by the Split column operation:
@@ -70,6 +70,7 @@ To do that, we select the 'Account' column and select the option to split the co
 
 ![image](images/me-split-columns-number-character-into-columns-split-rows-window.png)
 
+* **Number of characters**: 6
 * **Split**: Repeatedly
 * **Split into**: Rows
 
