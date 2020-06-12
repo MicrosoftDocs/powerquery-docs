@@ -24,38 +24,32 @@ The result of the transformation will be two or more columns split from the orig
 
 ## Option One: Home Tab Split Columns By Uppercase to Lowercase 
 
-Select the column that we want to split, then go to the **Split Column** option from the *Text column* group:
+1. Select the column that we want to split by double-clicking the header.
+2. Then go to the **Split Column** option from the *Text column* group:
 
 ![HomeTab](images/splitColumnsHomeTabUL.png)
 
-After clicking the **Split Column** option, click the suboption **By Uppercase to Lowercase**.
+3. After clicking the **Split Column** option, click the suboption **By Uppercase to Lowercase**.
 
 ![Split Column Dropdown](images/splitColumnsDropdownUL.PNG)
 
-The final outcome will be the singular column split into multiple given every instance of the last Uppercase letter to the next Lowercase letter.
+The final outcome will be the singular column split into multiple columns given every instance of the last Uppercase letter to the next Lowercase letter.
 
 ![Split Column Dropdown](images/splitColumnsAfterFunctionUL.PNG)
 
 ## Option Two: Transform Tab Split Columns By Uppercase to Lowercase 
 
-Go to the top left hand corner and click on the *Transform* tab. Then follow the same directions given for ***Option 1: Home Tab Split Columns By Uppercase to Lowercase***.
+1. Go to the top left hand corner and click on the *Transform* tab.
+
+2. Then follow the same directions given for ***Option 1: Home Tab Split Columns By Uppercase to Lowercase***.
 
 ![HomeTab](images/splitColumnsTransformTabUL.PNG)
 
 
-## Option Three: Split Column By Uppercase to Lowercase Function into Formula Bar
+## Option Three: Split Column By Uppercase to Lowercase using Mouse Right Click
 
-On the top of the table there is a formula bar that can compute functions. 
+1. Move the mouse to the header of the column that needs splitting.
+2. Right click the header and scroll to **Split Column** and open the dropdown.
+3. Within the Split Column dropdown select By **Uppercase to Lowercase**.
 
-![Function](images/splitColumnsFunctionUL.PNG)
-
-Instead of using the graphical interface, there is an option to insert a function into the formula bar to do the same action. Copy and Paste the following lines of code, with personaled inputs in the <> brackets, into the formula bar and then press **Enter**.
-
-```
-= Table.SplitColumn(#"Changed Type", "<insert column name>", Splitter.SplitTextByCharacterTransition({"A".."Z"}, {"a".."z"}), {"<insert new column name #1>", "<insert new column name #2>"})
-
-```
-The result will split the first column into the multiple columns by the last Uppercase with a Lowercase following.
-
-![Function After](images/splitColumnsAfterFunctionUL.PNG)
-
+![HomeTab](images/splitColumnsRightClickUL.PNG)
