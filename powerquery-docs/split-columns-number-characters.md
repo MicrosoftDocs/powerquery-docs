@@ -22,8 +22,8 @@ This column holds 3 values:
 2. **Date** - in the subsequent 8 characters with the format yyyymmdd
 3. **Units** - the remainder of the characters 
 
-We want to split this column into the 3 columns describe before. 
-To do this, we simply select the column and select the option to split the column by number of characters. Inside the 'Split column' window, we apply the following configuration:
+We want to split this column into the 3 columns described before. 
+To do this, we simply select the column and select the option to split the column by number of characters. Inside the 'Split column by Number of Characters' window, we apply the following configuration:
 
 ![images](images/me-split-columns-number-character-into-columns-split-column-window.png)
 
@@ -66,7 +66,7 @@ Our initial table will be the one below with the columns 'Group' and 'Account'.
 ![images](images/me-split-columns-number-character-into-columns-split-ROWS-initial.png)
 
 The 'Account' column can hold multiple values in the same cell. Each value has the same lenght in characters with a total of 6 characters. We want to split these values so we can have each Account value in its own row.
-To do that, we select the 'Account' column and select the option to split the column by number of characters. Inside the 'Split column' window, we apply the following configuratiton:
+To do that, we select the 'Account' column and select the option to split the column by number of characters. Inside the 'Split column by Number of Characters' window, we apply the following configuratiton:
 
 ![image](images/me-split-columns-number-character-into-columns-split-rows-window.png)
 
