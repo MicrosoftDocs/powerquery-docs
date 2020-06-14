@@ -51,7 +51,7 @@ This operation gives us the table that we're looking for:
 
 Our goal is to reach the following table from our original sample table:
 
-![image](images/placeholder.png)
+![image](images/me-group-by-row-operation-final-table.png)
 
 Where we want the total units sold as well as another 2 columns that gives us the name and units sold for the the top performer product summarized at the **Country** and **Sales Channel** level.
  
