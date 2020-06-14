@@ -21,7 +21,7 @@ You can find the 'Group By' button in 3 places:
 
 * **Transform tab** - inside the Table group. 
 
-![image](images/me-group-by-transform-icon.png.png)
+![image](images/me-group-by-transform-icon.png)
 
 * **Right click column(s)** - when doing a right click on the selected column(s), it'll be listed under the contextual menu.
 
