@@ -24,21 +24,30 @@ If you are using your own storage account, and connected that to the dataflow yo
 
 Some of the dataflow features are limited to premium capacity in Power BI. If you want to use the enhanced compute engine to speed up your dataflow queries performance over computed entities, or have DirectQuery connection option to the dataflow, you need to have Power BI capacity A3 or higher.
 
-AI functions, linked entity and computed entity are all premium functions which are not available with Power BI pro account.
+AI capabilities in Power BI, linked entity and computed entity are all premium functions which are not available with Power BI pro account.
 
 ## Features
 
 Below is a list of features and the license needed for them to be available.
 
-| Feature                                         | License                                                      |
-| ----------------------------------------------- | ------------------------------------------------------------ |
-| Standard dataflow                               | Power Apps, Per app plan<br />Power Apps, Per user plan      |
-| Analytical dataflow (using internal storage)    | Power BI Pro<br />Power BI Premium                           |
-| Analytical dataflow (bring your own ADLS gen 2) | Power BI Pro<br /><br />Power Apps<br />Azure Subscription for the ADLS gen 2 |
-| The enhanced compute engine                     | Power BI Premium (A3 or above)                               |
-| DirectQuery connection to dataflow              | Power BI Premium (A3 or above)                               |
-| AI Functions                                    | Power BI Premium                                             |
-| Linked and Computed Entities                    | Power BI Premium<br />Azure Subscription for the ADLS gen 2  |
+| Feature                                                      | Power BI                           | Power Apps                                                   | Customer Insights |
+| ------------------------------------------------------------ | ---------------------------------- | ------------------------------------------------------------ | ----------------- |
+| Store data in Common Data Services entities (Standard dataflow) | N/A                                | Per app Plan<br />Per user plan                              | N/A               |
+| Store data in ADLS gen 2 (Analytical dataflow)               | Power BI Pro<br />Power BI Premium | N/A                                                          | ?                 |
+| Store data in customer provided ADLS gen 2 (Analytical dataflow; bring your own ADLS gen 2) | Power BI Pro<br />Power BI Premium | Per app plan<br />Per user plan                              | ?                 |
+| The enhanced compute engine (Running on Power BI Premium capacity / parallel execution of transforms) | Power BI Premium                   | N/A                                                          | ?                 |
+| DirectQuery connection to dataflow                           | Power BI Premium                   | N/A                                                          | ?                 |
+| AI capabilities in Power BI                                  | Power BI Premium                   | N/A                                                          | ?                 |
+| Linked Entities                                              | Power BI Premium                   | For dataflows with Azure Data Lake Gen2 as the destination (analytical) | ?                 |
+| Computed Entities (in-storage transformations using M)       | Power BI premium                   | For dataflows with Azure Data Lake Gen2 as the destination (analytical) | ?                 |
+| Schedule Refresh                                             |                                    |                                                              |                   |
+| Dataflow authoring with Power Query online                   | Yes                                | Yes                                                          | Yes               |
+| Dataflow Management                                          | Power BI portal                    | Power Apps portal                                            | ?                 |
+| New connectors                                               | Yes                                | Yes                                                          | ?                 |
+| Standardized schema / built-in support for the Common Data Model | Yes                                | Yes                                                          | Yes               |
+| Dataflows Data Connector in Power BI Desktop                 | Yes                                | For dataflows with Azure Data Lake Gen2 as the destination   | ?                 |
+| Dataflow incremental refresh                                 | Power BI Premium                   | For dataflows with Azure Data Lake Gen2 as the destination, requires Power Apps Plan2 | ?                 |
+|                                                              |                                    |                                                              |                   |
 
 ## Limitations on each license
 
@@ -52,11 +61,11 @@ The Power Apps per app plan, covers up to 50 MB database capacity, and the per u
 
 ### Power BI Pro
 
-Power BI Pro only gives you the ability to create analytical dataflows, but not any of the premium features. Using Power BI pro account, you cannot use linked, or computed entity, you cannot use AI functions, and cannot use DirectQuery to the dataflow. The storage for your dataflows is limited to the space left under your Power BI pro account which is a subset of 10 GB storage for all Power BI content.
+Power BI Pro only gives you the ability to create analytical dataflows, but not any of the premium features. Using Power BI pro account, you cannot use linked, or computed entity, you cannot use AI capabilities in Power BI, and cannot use DirectQuery to the dataflow. The storage for your dataflows is limited to the space left under your Power BI pro account which is a subset of 10 GB storage for all Power BI content.
 
 ### Power BI Premium
 
-If you use Power BI Premium (capacity based licensing), you can use all the AI functions, and computed entity, and linked entity, with the ability to have DirectQuery connection to the dataflow, and the usage of the enhanced compute engine. However, the dataflow created under a premium capacity is using the internal ADLS gen2 storage, and won't be accessible by other platform except Power BI itself. You cannot create external dataflows just by having Power BI Premium license, you need to have an Azure subscription for ADLS gen2 as well. 
+If you use Power BI Premium (capacity based licensing), you can use all the AI capabilities in Power BI, and computed entity, and linked entity, with the ability to have DirectQuery connection to the dataflow, and the usage of the enhanced compute engine. However, the dataflow created under a premium capacity is using the internal ADLS gen2 storage, and won't be accessible by other platform except Power BI itself. You cannot create external dataflows just by having Power BI Premium license, you need to have an Azure subscription for ADLS gen2 as well. 
 
 ### Azure Data Lake Storage Gen 2
 
@@ -76,6 +85,6 @@ If you want to read more in detail about the concepts, follow any of the links b
 
 - [Computed entity](computed-entities.md)
 - [Linked entity](linked-entities.md)
-- [AI features in dataflow](https://docs.microsoft.com/power-bi/service-machine-learning-automated)
+- [AI capabilities in Power BI dataflow](https://docs.microsoft.com/power-bi/service-machine-learning-automated)
 - [Standard vs analytical dataflow](understanding-differences-between-analytical-standard-dataflows.md)
 - [The enhanced compute engine](https://docs.microsoft.com/power-bi/transform-model/service-dataflows-enhanced-compute-engine)
