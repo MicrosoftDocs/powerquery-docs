@@ -32,7 +32,7 @@ Power Query enables you to specify your native database query in the **SQL state
 
 3. If this is the first time you're connecting to this server, you'll see a prompt to select the authentication mode to connect to the database. Select an appropriate authentication mode, and continue.
 
-   >{!Note]
+   >[!Note]
    > If you don't have access to the data source (both Server and Database), you'll see a prompt to request access to the server/database (if access-request information is specified in Power BI for the data source). 
 
 4. If the connection is established, the result data is returned in the Query Editor.

@@ -80,4 +80,4 @@ To make the connection, take the following steps:
 
    5. Select **Next** to continue.
 
-4. In the **Navigator**, select the data you require, then either load or transform the data.
+4. In **Navigator**, select the data you require, then either load or transform the data.
