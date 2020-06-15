@@ -13,7 +13,7 @@ LocalizationGroup: reference
 
 # Query Diagnostics
 
-Query Diagnostics is a powerful new feature that will allow you to determine what Power Query is doing during authoring time. While we will be expanding on this feature in the future, including allowing you to use it during full refreshes, at this time it allows you to understand what sort of queries you are emitting, what slowdowns you might run into during authoring refresh, and what kind of background events are happening.
+Query Diagnostics allows you to better understand what Power Query is doing at authoring and at refresh time in Power BI Desktop. While we will be expanding on this feature in the future, including allowing you to use it during full refreshes, at this time it allows you to understand what sort of queries you are emitting, what slowdowns you might run into during authoring refresh, and what kind of background events are happening.
 
 To use Query Diagnostics, go to the 'Tools' tab in the Power Query Editor ribbon.
 
@@ -29,9 +29,15 @@ When you press 'Diagnose Step', Power Query runs a special evaluation of just th
 
 It's important that if you're recording all traces that from 'Start Diagnostics' that you press 'Stop diagnostics'. This will allow the engine to collect the recorded traces and parse them into the proper output. Without this step you'll lose your traces.
 
-We currently present two views whenever you get diagnostics: The summarized view is aimed to give you an immediate insight into where time is being spent in your query. The detailed view is much deeper, line by line, and will generally only be needed for serious diagnosing by power users.
+## Types of Diagnostics
 
-Some capabilities, like the “Data Source Query” column, are currently available only on certain connectors. We will be working to extend the breadth of this coverage in the future.
+We currently provide three types of diagnostics, one of which has two levels of detail.
+
+The first of these are the primary diagnostics, which have a detailed view and a summarized view: The summarized view is aimed to give you an immediate insight into where time is being spent in your query. The detailed view is much deeper, line by line, and will generally only be needed for serious diagnosing by power users.
+
+For this view, some capabilities, like the “Data Source Query” column, are currently available only on certain connectors. We will be working to extend the breadth of this coverage in the future.
+
+Data privacy partitions allow you to understand the logical partitions used for data privacy.
 
 > [!NOTE]
 > Power Query may perform evaluations that you may not have directly triggered. Some of these evaluations are performed in order to retrieve metadata so we can best optimize our queries or to provide a better user experience (such as retrieving the list of distinct values within a column that are displayed in the Filter Rows experience), and others might be related to how a connector handles parallel evaluations. At the same time, if you see in your query diagnostics repeated queries that you don't believe make sense, feel free to reach out through normal support channels--your feedback is how we improve our product.
@@ -145,6 +151,70 @@ Operation “0/1/5”, might have a child node, in which case, the path will hav
 Combining two (or more) operations will not occur if it leads to detail loss. The grouping is designed to approximate “commands” executed during the evaluation. In the detailed view, multiple operations will share a Group Id, corresponding to the groups that are aggregated in the Summary view. 
 
 As with most columns, the group id is only relevant within a specific evaluation, as filtered by the Id column.
+
+## Data Privacy Partitions Schema
+
+### Id
+
+Same as the id for the other query diagnostics results. The integer part represents a single activity id, while the fractional part represents a single evaluation.
+
+### Partition Key
+
+Corresponds to the Query/Step that is used as a firewall partition.
+
+### Firewall Group
+
+Categorization that explains why this partition has to be evaluated separately, includes details on the privacy level of the partition.
+
+### Accessed Resources
+
+List of resource paths of all the resources accessed by this partition, generally uniquely identifying a data source.
+
+### Partition Inputs
+
+List of partition keys upon which the current partition depends. (this could be used to build a graph)
+
+### Expression
+
+The expression that gets evaluated on top of the partition’s query/step. In several cases it coincides with the query/step.
+
+### Start Time
+
+Time when evaluation started for this partition.
+
+### End Time
+
+Time when evaluation ended for this partition.
+
+### Duration
+
+End Time – Start Time
+
+### Exclusive Duration
+
+If partitions are assumed to execute in a single thread, exclusive duration is the “real” duration that can be attributed to this partition.
+
+### Exclusive duration %
+
+Exclusive duration as a percentage.
+
+### Diagnostics
+
+This column only appears when the query diagnostics “Aggregated” or “Detailed” is also captured, allowing the user to correspond between the two diagnostics outputs.
+
+## Performance Counters Schema
+
+When you run performance counters, every half second Power Query will take a snapshot of resource utilization. This isn’t useful for very fast queries but can be helpful for queries that use up a lot more resources.
+
+### Processor Time
+
+### Total Processor Time
+
+### IO Data Bytes per Second
+
+### Commit (Bytes)
+
+### Working Set (Bytes)
 
 ## Additional Reading
 
