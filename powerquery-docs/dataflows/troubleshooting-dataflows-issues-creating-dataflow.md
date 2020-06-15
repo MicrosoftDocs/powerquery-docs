@@ -6,7 +6,7 @@ You might get an issue when you want to create a dataflow, this article reveals 
 
 This problem happens, when you want to create a dataflow in "My Workspace" in Power BI, and you cannot.
 
-![My Workspace](C:\Users\reza_\OneDrive - Microsoft\Dataflow Docs\08\media\MyWorkspace.png)
+![My Workspace](media/MyWorkspace.png)
 
 Reason:
 "My Workspace" has no dataflow capability.
@@ -27,7 +27,7 @@ Resolution:
 
 Ask the workspace Administrators or Members to give you the "Administrator", "Member", or "Contributor" [roles](https://docs.microsoft.com/power-bi/collaborate-share/service-new-workspaces#roles-in-the-new-workspaces).
 
-![Workspace Access Settings](C:\Users\reza_\OneDrive - Microsoft\Dataflow Docs\08\media\WorkspaceAccess.png)
+![Workspace Access Settings](media/WorkspaceAccess.png)
 
 ## Problem: Cannot Create a dataflow in a workspace with edit rights
 
@@ -43,21 +43,21 @@ Ask the Power BI tenant administrator to enable the access for you. The steps ar
 
 1. Power BI tenant administrator should open the Power BI Admin Portal in the Power BI service.
 
-   ![Power BI Admin Portal](C:\Users\reza_\OneDrive - Microsoft\Dataflow Docs\08\media\PowerBIAdminPortal.png)
+   ![Power BI Admin Portal](media/PowerBIAdminPortal.png)
 
 2. Under Tenant Settings, and under the Dataflow settings. Change to Enable and Apply.
 
-   ![Enable Dataflow in Tenant Settings](C:\Users\reza_\OneDrive - Microsoft\Dataflow Docs\08\media\EnableDataflow.png)
+   ![Enable Dataflow in Tenant Settings](media/EnableDataflow.png)
 
 ## Problem: Dataflow Creation Has Limited Options
 
 When you can create a dataflow, however, you don't have all the options. For example, when you create a dataflow, you see the options below;
 
-![Dataflow creation options limited](C:\Users\reza_\OneDrive - Microsoft\Dataflow Docs\08\media\DataflowCreationLimited.png)
+![Dataflow creation options limited](media/DataflowCreationLimited.png)
 
 However, the full options are as below;
 
-![Full Options for Dataflow Creation](C:\Users\reza_\OneDrive - Microsoft\Dataflow Docs\08\media\DataflowCreationFull.png)
+![Full Options for Dataflow Creation](media/DataflowCreationFull.png)
 
 Reason:
 
@@ -67,5 +67,5 @@ Resolution:
 
 Upgrade your Power BI workspace to the new version (Version two). [This article](https://docs.microsoft.com/power-bi/collaborate-share/service-upgrade-workspaces) explains the details of upgrading your workspace.
 
-![Upgrade classic workspace](C:\Users\reza_\OneDrive - Microsoft\Dataflow Docs\08\media\UpgradeWorkspace.png)
+![Upgrade classic workspace](media/UpgradeWorkspace.png)
 
