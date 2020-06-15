@@ -17,7 +17,7 @@ Release State: General Availability
 
 Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in PowerBI.com (Enterprise Gateway), Dataflows in PowerApps.com (Enterprise Gateway), Excel
 
-Authentication Types Supported: Database (Username/Password), Windows
+Authentication Types Supported: Windows (Power BI Desktop, Excel, online service with gateway), Database (Power BI Desktop, Excel), Microsoft Account (all), Basic (online service)
 
 Function Reference Documentation: [Sql.Database](https://docs.microsoft.com/powerquery-m/sql-database), [Sql.Databases](https://docs.microsoft.com/powerquery-m/sql-databases)
 

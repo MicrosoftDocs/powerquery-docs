@@ -32,8 +32,8 @@
           href: ReadingQueryDiagnostics.md
         - name: "Understanding folding with Query Diagnostics"
           href: QueryDiagnosticsFolding.md
-        - name: "Import data using native database query"
-          href: native-database-query.md
+      - name: "Import data using native database query"
+        href: native-database-query.md
       - name: "Power Query online limits"
         href: power-query-online-limits.md
       - name: "Common issues"
