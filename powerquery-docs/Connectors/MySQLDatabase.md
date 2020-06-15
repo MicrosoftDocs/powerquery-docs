@@ -4,7 +4,7 @@ description: Power Query MySQL database connector reference
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 06/08/2020
+ms.date: 06/15/2020
 ms.author: v-douklo
 LocalizationGroup: reference
 ---
@@ -19,7 +19,7 @@ Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in 
 
 Authentication Types Supported: Database (Username/Password), Windows
 
-Function Reference Documentation: [Sql.Database](https://docs.microsoft.com/powerquery-m/sql-database), [Sql.Databases](https://docs.microsoft.com/en-us/powerquery-m/sql-databases)
+Function Reference Documentation: [MySQL.Database](https://docs.microsoft.com/en-us/powerquery-m/mysql-database)
 
 >[!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
@@ -49,27 +49,28 @@ To make the connection, take the following steps:
 
       ![Enter MySQL database connection](./media/mysql-database/signin.png)
 
-   2. Optionally, you may provide a command timeout and a [native query (SQL statement)](native-database-query.md), as well as select whether or not you want to include relationship columns and navigate using full hierarchy. Once you're done, select **OK**.
+   2. Optionally, you may provide a command timeout and a [native query (SQL statement)](native-database-query.md), as well as select whether or not you want to include relationship columns and navigate using full hierarchy.
 
    3. Select the **Database** authentication type and input your MySQL credentials in the **User name** and **Password** boxes.
 
       ![MySQL database authentication](./media/mysql-database/enter-credentials.png)
 
-      Also be sure to select the level to apply your credentials to.
+   4. Select the level to apply your credentials to.
 
-<!--      >[!Note]
-      > If the connection is not encrypted, you'll be prompted with the following dialog.
-
-      ![SQL Server database encryption support](../images/EncryptionWarning.png)
-
-      Select **OK** to connect to the database by using an unencrypted connection, or follow these [instructions](https://docs.microsoft.com/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine?view=sql-server-ver15) to set up encrypted connections to SQL Server. -->
+   5. Once you're done, select **OK**.
 
 3. If you're connecting using an online service:
 
-    1. In the **MySQL database** dialog, provide the name of the server and database. Select the **Basic** authentication kind and input your MySQL credentials in the **Username** and **Password** boxes. If required, include the name of an on-premises data gateway.
+   1. In the **MySQL database** dialog, provide the name of the server and database.  
 
-       ![On premises MySQL database connection](./media/mysql-database/service-signin.png)
+      ![On premises MySQL database connection](./media/mysql-database/service-signin.png)
 
-4. In the **Navigator**, select the data you require, then either load or transform the data.
+   2. Select the **Basic** authentication kind and input your MySQL credentials in the **Username** and **Password** boxes.
+
+   3. If required, include the name of your on-premises data gateway.
+
+   2. Select **Next** to connect to the database.
+
+4. In **Navigator**, select the data you require, then either load or transform the data.
 
    ![Load or transform the data](./media/mysql-database/navigator.png)

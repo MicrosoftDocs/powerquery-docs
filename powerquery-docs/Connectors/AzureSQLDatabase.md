@@ -4,7 +4,7 @@ description: Power Query Azure SQL database connector reference
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 05/29/2020
+ms.date: 06/15/2020
 ms.author: v-douklo
 LocalizationGroup: reference
 ---
@@ -49,30 +49,35 @@ To make the connection, take the following steps:
 
    1. In the **SQL Server database** dialog that appears, provide the name of the server and database (optional). 
 
-   ![Enter Azure SQL database connection](./media/azure-sql-database/signin.png)
+      ![Enter Azure SQL database connection](./media/azure-sql-database/signin.png)
 
    2. If you're connecting from Power BI Desktop, select either the **Import** or **DirectQuery** data connectivity mode.
 
    3. Optionally, you may provide a command timeout and a [native query (SQL statement)](native-database-query.md), as well as select whether or not you want to include relationship columns and navigate using full hierarchy. You can also enable SQL Server failover support. Once you're done, select **OK**.
- 
+
+   4. If this is the first time you're connecting to this database, select the authentication type, input your credentials, and select the level to apply the authentication settings to. Then select **Connect**.
+
+      ![Azure SQL database authentication](./media/azure-sql-database/enter-credentials.png)
+
+      >[!Note]
+      >  If the connection is not encrypted, you'll be prompted with the following dialog.
+
+       ![Azure SQL database encryption support](../images/EncryptionWarning.png)
+
+       Select **OK** to connect to the database by using an unencrypted connection, or follow these [instructions](https://docs.microsoft.com/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine?view=sql-server-ver15) to set up encrypted connections to Azure SQL database.
+
 3. If you're connecting from an online service:
 
    1. In the **Azure SQL database** dialog that appears, provide the name of the server and database.
 
       ![Enter Azure SQL database online connection](./media/azure-sql-database/service-signin.png)
 
-   2. If required, select the name of your on-premises data gateway.
+   2. If this is the first time you're connecting to this database, select the authentication kind and input your credentials.
 
-4. Select the authentication type, input your credentials, and select the level to apply the authentication settings to. Then select **Connect**.
+   3. If required, select the name of your on-premises data gateway.
 
-   ![Azure SQL database authentication](./media/azure-sql-database/enter-credentials.png)
+   4. If the connection is not encrypted, clear the **Use Encrypted Connection** check box.
 
-   <!-- tested, this is true -->
-   >[!Note]
-   > If the connection is not encrypted, you'll be prompted with the following dialog.
+   5. Select **Next** to continue.
 
-   ![SQL Server database encryption support](../images/EncryptionWarning.png)
-
-   Select **OK** to connect to the database by using an unencrypted connection, or follow these [instructions](https://docs.microsoft.com/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine?view=sql-server-ver15) to set up encrypted connections to SQL Server.
-
-5. In the **Navigator**, select the data you require, then either load or transform the data.
+4. In the **Navigator**, select the data you require, then either load or transform the data.
