@@ -19,7 +19,7 @@ Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in 
 
 Authentication Types Supported: Database (Username/Password), Windows
 
-Function Reference Documentation: [MySQL.Database](https://docs.microsoft.com/en-us/powerquery-m/mysql-database)
+Function Reference Documentation: [MySQL.Database](https://docs.microsoft.com/powerquery-m/mysql-database)
 
 >[!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
@@ -49,7 +49,7 @@ To make the connection, take the following steps:
 
       ![Enter MySQL database connection](./media/mysql-database/signin.png)
 
-   2. Optionally, you may provide a command timeout and a [native query (SQL statement)](native-database-query.md), as well as select whether or not you want to include relationship columns and navigate using full hierarchy.
+   2. Optionally, you may provide a command timeout and a [native query (SQL statement)](../native-database-query.md), as well as select whether or not you want to include relationship columns and navigate using full hierarchy.
 
    3. Select the **Database** authentication type and input your MySQL credentials in the **User name** and **Password** boxes.
 
