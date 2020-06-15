@@ -30,7 +30,7 @@ Sometimes, you have a Power Platform dataflow created, and also refreshed. Howev
 
 The error message you receive might be "We reached the end of the buffer", or "DataFormat.Error: We reached the end of the buffer".
 
-![Get data from standard dataflow](C:\Users\reza_\OneDrive - Microsoft\Dataflow Docs\08\media\StandardDataflowGetData.png)
+![Get data from standard dataflow](media/StandardDataflowGetData.png)
 
 Reason: 
 
@@ -40,7 +40,7 @@ Resolution:
 
 If you have created a dataflow that stores the data into the Common Data Services, You cannot see it using the Get Data from dataflow experience. You can use [Get data from Common Data Services](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-powerbi-connector#finding-your-common-data-service-environment-url) instead, to get data from standard dataflows. Or you can create an [analytical dataflow](understanding-differences-between-analytical-standard-dataflows.md) instead, and then access it through the Get data from dataflow.
 
-![Get data from standard vs analytical dataflows](C:\Users\reza_\OneDrive - Microsoft\Dataflow Docs\08\media\GetDataStandardAnalyticalDataflow.png)
+![Get data from standard vs analytical dataflows](media/GetDataStandardAnalyticalDataflow.png)
 
 ## Problem: Cannot have a DirectQuery Connection to the dataflow
 
