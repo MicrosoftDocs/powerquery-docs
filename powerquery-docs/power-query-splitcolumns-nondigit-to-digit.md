@@ -15,12 +15,12 @@ In Power Query, you can create a split a column through different functions.
 In this case, the column(s) selected can be split by every instance of a non-digit followed by a digit.
 
 ## Where to find the Split Columns: By Non-Digit to Digit
-We can find the Split Columns: By Non-Digit to Digit option in 3 places:
+We can find the Split Columns: By Non-Digit to Digit option in three places:
 1. **Home tab** - under the Split column dropdown menu inside the Transform group 
 ![image](images/sc-home-ndtd.png)
 2. **Transform tab** - under the Split column dropdown menu inside the Text column group
 ![image](images/sc-transform-ndtd.png)
-3. **Right click a column** - inside the split columns option
+3. **Right-click a column** - inside the split columns option
 ![image](images/sc-rightclick-ndtd.png)
 
 ## Split Columns By Non-Digit to Digit 
@@ -30,15 +30,15 @@ We will only focus on the "Pets" column.
 
 ![image](images/sc-before-ndtd.png)
 
-This column holds 2 values in each row:
+This column holds two values in each row:
 1. **AnimalType** - The first part is the type of animal 
 2. **Number** - The animal number that came into the person's life.
 
-We want to split this column into the 2 columns described before. 
-To do this, we simply select the column and select the option to split the column by Non-Digit to Digit.
+We want to split this column into the two columns described before. 
+Select the column and select the option to split the column by Non-Digit to Digit.
 
 This singular column will split into multiple columns given every instance of a digit followed with a non-digit. In this case, it only splits it into two.
 
-Our final table is will be as such:
+Our final table will be as such:
 
 ![After](images/sc-after-ndtd.png)
