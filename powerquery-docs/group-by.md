@@ -96,6 +96,10 @@ After removing our **Products** column and setting the data type for both newly 
 
 ![image](images/me-group-by-row-operation-final-table.png)
 
+## Fuzzy Grouping
+
+(Placeholder)
+
 ## More resources
 
 You can perform your own custom column formula to transform the table from the 'Group by' operation. You can read more about how to create your custom column in Power Query from the article [Add a Custom column](add-custom-column.md).
