@@ -54,7 +54,7 @@ Our final table will look like this:
 ## Split columns by positions into rows
 Our initial table will be the one below with the columns 'Group' and 'Account'. 
 
-![images](images/me-split-columns-number-character-into-columns-split-ROWS-initial.png)
+![images](images/me-split-columns-number-character-into-columns-split-rows-initial.png)
 
 The 'Account' column can only hold two values in the same cell. Each value has the same lenght in characters with a total of 6 characters. We want to split these values so we can have each Account value in its own row.
 To do that, we select the 'Account' column and select the option to split the column by positions. Inside the 'Split Column by Positions' window, we apply the following configuratiton:
