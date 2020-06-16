@@ -26,7 +26,7 @@ The set of steps or stages are:
 
 4.  Output Query
 
-## Connector Parameters
+## 1. Connector Parameters
 
 Most connectors initially require at least one parameter to initialize a connection to the data source. For example, the SQL Server connector requires at least the hostname to establish a connection to a SQL Server.
 ![SQL Server connector parameters](images/me-connector-parameters.png)
@@ -37,7 +37,7 @@ The connector parameters are commonly used to establish a connection to a data s
 
 [!NOTE] Some connectors don't require you to enter any parameters at all. These are called Singleton Connectors and will only have one data source path available per environment. Some examples are Adobe Analytics, MailChimp, and Google Analytics.
 
-## Authentication 
+## 2. Authentication 
 
 Every single connection that is made in Power Query has to be authenticated. The authentication methods vary from connector to connector and some connectors might offer multiple methods of authentication.
 
@@ -52,7 +52,7 @@ The current available methods of authentication for Power Query are:
 For example, for the Azure SQL Server connector the available authentication methods are Windows, Database and Microsoft account as shown in the following image:
 ![SQL Server connector authentication methods](images/me-authentication.png)
 
-## Navigation table (navigator)
+## 3. Navigation table (navigator)
 
 The navigation table or navigator's window goal is to display, in a user-friendly way, the objects available from the data source to the end user.
 ![SQL Server connector navigator](images/me-navigator.png)
@@ -67,6 +67,6 @@ The two main sections of this window are:
 output query phase. One example of a connector that can do this is the 'Folder"
 connector.
 
-## Output query
+## 4. Output query
 
 This is the phase where the user defines where to load the query. The options vary from integration to integration. But one option that is always be available is the option to load data to the Power Query Editor to further transform and enrich the query.
