@@ -1,18 +1,18 @@
 # Add a column from examples
 
-With add column from examples in Power Query Editor, you can add new columns to your data model simply by providing one or more example values for the new columns. You can create the new column examples from a selection, or provide input based on all existing columns in the table.
+With add column from examples in Power Query Editor, you can add a new column to a table simply by providing one or more example values for the new columns.
 
 ![Add column example](images/me-add-column-from-example.png)
 
-Using add column from example lets you quickly and easily create new columns, and is great for the following situations:
+Using add column from examples lets you quickly and easily create new columns, and is great for the following situations:
 
 * You know the data you want in your new column, but you're not sure which transformation, or  collection of transformations, will get you there.
 * You already know which transformations you need, but you're not sure what to select in the UI to make them happen.
-* You know all about the transformations you need using a Custom Column expression in M language, but one or more of those expressions aren't available in the UI.
+* You know all about the transformations you need using a Custom Column expression in the M language, but one or more of those transformations aren't available in the UI.
 
-Adding a column from an example is easy and straightforward. The button to create a Column from Examples is located in the **Add Column** tab in the Ribbon, inside the General group:
+Adding a column from examples is easy and straightforward. The button to create a column from examples is located in the **Add Column** tab in the Ribbon, inside the General group:
 
-![Add column from example icon](images/me-add-column-from-example-icon.png)
+![Add column from examples icon](images/me-add-column-from-example-icon.png)
 
 
 ## Add a new column from examples
@@ -21,53 +21,53 @@ We will start with the following table:
 
 ![Original table](images/me-add-column-from-example-original-table.png)
 
-Our goal is to create create two new columns:
-* **Income Range** - Create buckets for the *Monthly Income* column in specific ranges of 5,000 increments.
-* **Full Name** - Concatenate the Last and First Name in a single column.
+Our goal is to create two new columns:
+* **Income Range** - Create buckets for the *Monthly Income* column in specific increments of 5,000.
+* **Full Name** - Concatenate the Last and First Name to a single column.
 
 ![Final table](images/me-add-column-from-example-final-table.png)
 
 ### Column from Examples from selected column(s)
 
-One of the options that we have when creating our new column from examples is to select which columns to base our calculations. For this case, we will be creating the **Income Range** column from the values inside the **Monthly Income** column.
+One of the options we have when creating our new column  is to select which columns will be used in our calculations. For this case, we will be creating the **Income Range** column from the values inside the **Monthly Income** column.
 
 To do this, we simply select the **Income Range** column and then click the Column from Examples dropdown menu to select the *From Selection* option:
 
 ![Column from examples in selected column](images/me-add-column-from-example-from-selection.png)
 
-The preview pane will change its aspect to display a new editable column. In tthis new column we can enter the example values so that Power Query can create the formula that will yield that result for us. For the first example, the value from the selected column is 19500, so in our new column we enter the text '15000 to 20000' which is the bucket where that value falls:
+The preview pane will display a new editable column where we can enter our examples. For the first example, the value from the selected column is 19500. So in our new column we enter the text '15000 to 20000', which is the bucket where that value falls:
 
 ![New Range from example](images/me-add-column-from-example-from-selection-buckets.png)
 
-Automatically, Power Query will try to provide suggestions based on the value entered. These values in the column are in a lighter color to denote that are being suggested by Power Query and not manually entered by the end-user. You can also see a glimpse of the formulat that is being created by Power Query for us in the top section
+When Power Query finds a matching transformation, it fills the transformation results into the remaining rows using light-colored text. You can also see the M formula text for the transformation above the table preview.
 
-After we hit OK, we'll see our column from example now as part of our query and a new step added to our query:
+After we hit OK, we'll see our new column as part of our query as well as a new step added to our query:
 
 ![image](images/me-add-column-from-example-from-selection-buckets-final.png)
 
 ### Column from Examples from all columns
 
-Our new goal is to create a **Full Name** column using the values from the columns first and last name.
+Our new goal is to create a **Full Name** column using the values from the columns First Name and Last Name.
 
-To do that, we select the option to create a column from examples **From All Columns**:
+To do that, we select the **From All Columns** option:
 
 ![images](images/me-add-column-from-example-from-all-columns.png)
 
-Now inside the experience to create a column from examples, we input the **Full Name** in the format that we're lookin for. Our format is the Last Name followed by a comma, then a space and ultimately the first name. For the first row, that example value is *Anders, Maria*:
+Now we input our first **Full Name** example as *Anders, Maria*:
 
 ![images](images/me-add-column-from-example-from-all-columns-full-name.png)
 
-After we hit OK, we'll see our column from example now as part of our query and a new step added to our query:
+After we hit OK, we'll see our new column as part of our query as well as a new step added to our query:
 
 ![images](images/me-add-column-from-example-from-all-columns-full-name-final.png)
 
-Our last step is to remove the columns **First Name**, **Last Name** and **Monthly Income**, and our final table will look like this:
+Our last step is to remove the columns **First Name**, **Last Name** and **Monthly Income**. Our final table will look like this:
 
 ![Final table](images/me-add-column-from-example-final-table.png)
 
 ## Tips and Considerations
 
-When providing examples, Power Query also offers a helpful list of available fields, values and suggested transformations for the selected columns. You can view this contextual list by double clicking on any cells of the column from examples:
+When providing examples, Power Query  offers a helpful list of available fields, values and suggested transformations for the selected columns. You can view this contextual list by double clicking on any cell of the new column:
 
 ![image](images/me-add-column-from-example-suggestions.png)
 
