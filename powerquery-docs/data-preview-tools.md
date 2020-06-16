@@ -14,13 +14,13 @@ The main objective of the Data Preview tools is to provide the user with new and
 
 These Data Preview tools are:
 
-1.  Column Quality
+* Column Quality
 
-2.  Column Distribution
+* Column Distribution
 
-3.  Column Profile
+* Column Profile
 
-By default, only a small version of the Column Quality is enabled, but it is possible to fully enable them by going to the Power Query Editor Window, select the View tab from the ribbon and enable these options as shown in the image below:
+To enable the data preview tools, select the **View** tab from the ribbon and navigate to the Data Preview section. Enable the desired options down below::
 ![Data Preview Tools](images/me-enable-data-preview-tools.png)
 
 Once enabled, this is how they will be seen inside the Power Query Editor Window:
@@ -29,21 +29,22 @@ Once enabled, this is how they will be seen inside the Power Query Editor Window
 
 Each tool is independent from the other. This means that you can select which ones to enable and which ones you would like to keep as disabled.
 
-[!NOTE] By default, Power Query will perform these Data Preview features over the first 1,000 rows of your data. To enable these, check the bottom left query of your editor window to change how the column profiling is performed.
+>[!NOTE] 
+>By default, Power Query will perform these Data Preview features over the first 1,000 rows of your data. To enable these, check the bottom left query of your editor window to change how the column profiling is performed.
 
 ## Column Quality
 The column quality feature provides the user with a simple visual that labels values in rows with values in 3 categories:
 
-* **Valid** - colored in red
+* **Valid** - colored in green
 
-* **Error** - colored in green
+* **Error** - colored in red
 
 * **Empty** - colored in dark grey
 
 These indicators are also displayed right underneath the name of the column as part of a small bar chart as shown below:
 ![Data Quality](images/me-data-quality.png)
 
-Furthermore, it also provides simple statistics on these categories.
+Furthermore, it also displays as a percentage the amount of records within each column quality category.
 
 By hovering over either one of them we get some quick actions buttons for the operations that we can perform over the values in each category:
 
