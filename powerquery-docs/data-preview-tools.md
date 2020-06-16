@@ -46,7 +46,7 @@ These indicators are also displayed right underneath the name of the column as p
 
 Furthermore, it also displays as a percentage the amount of records within each column quality category.
 
-By hovering over either one of them we get some quick actions buttons for the operations that we can perform over the values in each category:
+By hovering over any of the columns, we can see the numerical distribution of the quality of values throughout the column. Additionally, clicking on the More option (…) will allow for some quick action buttons for operations on the values.
 
 ![Data Quality hover options](images/me-column-quality-hover.png)
 
