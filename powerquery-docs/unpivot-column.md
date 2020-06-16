@@ -38,9 +38,9 @@ There are multiple places in the user interface where you can find the **Unpivot
 
 There are three ways that we can unpivot columns from a table:
 
-1. Unpivot Columns
-2. Unpivot Other Columns
-3. Unpivot Only Selected Columns
+* **Unpivot Columns**
+* **Unpivot Other Columns**
+* **Unpivot Only Selected Columns**
 
 ## Unpivot Columns
 
@@ -60,7 +60,8 @@ After creating our query from the steps above, Imagine that our initial table ge
 
 Notice that we've added a new column for the date 9/1/2020 (September 1st, 2020) and 2 new rows for the countries UK and Mexico.
 
-If we try to refresh our query, you'll notice that the operation will not be done only on the columns that we previously selected, but on all of the columns except the one that we originally didn't select: Country. This means that any new column that gets added to our source table will be unpivoted as part of this query.
+If you refresh your query, you’ll notice that the operation will be done on the updated column, but will not affect the column that was not originally selected (Country in this example).
+This means any new column that is added to the source table will be unpivoted as well.
 
 This is how our query will look like after the refresh with the new updated source table:
 
