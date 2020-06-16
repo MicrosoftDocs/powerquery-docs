@@ -1,6 +1,6 @@
 # Add a column from examples
 
-With add column from examples in Power Query Editor, you can add a new column to a table simply by providing one or more example values for the new columns.
+With add column from examples in the Power Query Editor, you can add a new column to a table by simply providing one or more example values for the new column.
 
 ![Add column example](images/me-add-column-from-example.png)
 
