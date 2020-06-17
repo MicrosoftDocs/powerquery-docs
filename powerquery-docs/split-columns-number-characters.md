@@ -18,9 +18,9 @@ Our initial table will be the one below with only one column for "Column1".
 ![image](images/me-split-columns-number-character-into-columns-split-column-initial.png)
 
 This column holds 3 values:
-1. **Account Name** - in the first 6 characters
-2. **Date** - in the subsequent 8 characters with the format yyyymmdd
-3. **Units** - the remainder of the characters 
+* **Account Name** - in the first 6 characters
+* **Date** - in the subsequent 8 characters with the format yyyymmdd
+* **Units** - the remainder of the characters 
 
 We want to split this column into the 3 columns described before. 
 To do this, we simply select the column and select the option to split the column by number of characters. Inside the 'Split column by Number of Characters' window, we apply the following configuration:
