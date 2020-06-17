@@ -14,8 +14,7 @@ In the column header you will see an icon with a down arrow. When you click on i
 
 ![](images/me-filter-values-sort-filter-menu.png)
 
-> Note 
->
+> [!Note] 
 > In this article we'll focus on the aspects related to filtering data, but you can read more about the sort options and how to sort columns in Power Query in this article (url)  
 
 #### Remove Empty
@@ -27,8 +26,7 @@ The remove empty option will apply two filter rules to your column. The first on
 You can also select this option from the Remove rows drop-down option inside the Reduce group in the Home tab as shown in the next image:
 ![](images/me-filter-values-remove-rows-empty.png)
 
-> Note
->
+> [!Note]
 > null values are specific values in the Power Query language that represents no value.
 
 We then select the option to Remove empty as shown in the next image:
@@ -55,8 +53,7 @@ This auto filter section also has a search bar to help you find any values from 
 
 ![](images/me-filter-values-auto-filter-menu.png)
 
-> Note 
->
+> [!Note] 
 > When you load the auto filter window, only the top 1,000 distinct values in the column will load into the filter list. If there are 1,000 or more values in the column in **Query Editor** that you are filtering, a message will appears indicating that the list of values in the filter list may be incomplete, and the **Load more** link is shown. Click the **Load more** link to load another 1,000 distinct values.
 >
 > * If exactly 1,000 distinct values are found again, the list is displayed with a message stating that the list could still be incomplete.
@@ -108,8 +105,7 @@ And the result of that operation will give us just 1 row that meets both criteri
 
 ![](images/me-filter-values-filter-rows-window-advanced-mode-output.png)
 
-> Note
->
+> [!Note]
 > You can add as many clauses as you'd like by clicking on the 'Add clause' button. All clauses act at the same level, so you may want to consider creating multiple Filter steps if you need to implement filters that rely in other filters.
 
 ### Right Click
@@ -118,6 +114,5 @@ You can manually right click on a cell of a particular column to enable the cont
 
 ![](images/me-filter-values-right-click.png)
 
-> Note
->
+> [!Note]
 > Power Query will display the type-specific filter based on the data type of the column.
