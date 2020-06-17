@@ -54,6 +54,14 @@
         href: column-from-example.md
       - name: "Grouping or Summarizing rows"
         href: group-by.md
+      - name: "Split Columns: By Lowercase to Uppercase"
+        href: splitcolumns-lowercase-to-uppercase.md
+      - name: "Split Columns: By Uppercase to Lowercase"
+        href: splitcolumns-uppercase-to-lowercase.md
+      - name: "Split Columns: By Digit to Non-Digit"
+        href: splitcolumns-digit-to-nondigit.md
+      - name: "Split Columns: By Non-Digit to Digit"
+        href: splitcolumns-nondigit-to-digit.md
     - name: Tutorials
       items:
       - name: "Shape and combine data"
