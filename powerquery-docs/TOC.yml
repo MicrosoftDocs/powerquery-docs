@@ -29,7 +29,7 @@
       - name: Working with duplicates
         href: working-with-duplicates.md
       - name: Pivot column
-        href: pivot-columns.md      
+        href: pivot-columns.md
       - name: Fill down or up
         href: fill-down-up.md
       - name: Sort columns
@@ -41,10 +41,10 @@
       - name: Split Columns: By Delimeter
         href: split-columns-delimiter.md
       - name: Split Columns: By Number of Characters
-        href: split-columns-number-characters.md    
+        href: split-columns-number-characters.md
       - name: Split Columns: By Positions
         href: split-columns-positions.md
-      - name: Reverse Rows 
+      - name: Reverse Rows
         href: reverse-rows.md
       - name: Add an Index Column
         href: add-index-column.md
@@ -53,7 +53,7 @@
       - name: Add a Column from Examples
         href: column-from-example.md
       - name: Grouping or Summarizing rows
-        href: group-by.md    
+        href: group-by.md
     - name: Tutorials
       items:
       - name: "Shape and combine data"
