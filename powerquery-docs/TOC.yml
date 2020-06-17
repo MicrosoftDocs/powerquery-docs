@@ -12,47 +12,47 @@
         href: power-query-query-parameters.md
     - name: New topics for review
       items:
-      - name: Get Data experience
+      - name: "Get Data experience"
         href: get-data-experience.md
-      - name: Data Preview tools
+      - name: "Data Preview tools"
         href: data-preview-tools.md
-      - name: Unpivot column
+      - name: "Unpivot column"
         href: unpivot-column.md
-      - name: Promote or Demote Column Headers
+      - name: "Promote or Demote Column Headers"
         href: table-promote-demote-headers.md
-      - name: Filter by row position
+      - name: "Filter by row position"
         href: filter-row-position.md
-      - name: Filter by values
+      - name: "Filter by values"
         href: filter-values.md
-      - name: Working with errors
+      - name: "Working with errors"
         href: working-with-errors.md
-      - name: Working with duplicates
+      - name: "Working with duplicates"
         href: working-with-duplicates.md
-      - name: Pivot column
+      - name: "Pivot column"
         href: pivot-columns.md
-      - name: Fill down or up
+      - name: "Fill down or up"
         href: fill-down-up.md
-      - name: Sort columns
+      - name: "Sort columns"
         href: sort-columns.md
-      - name: Replace values
+      - name: "Replace values"
         href: replace-values.md
-      - name: Transpose table
+      - name: "Transpose table"
         href: transpose-table.md
-      - name: Split Columns: By Delimeter
+      - name: "Split Columns: By Delimeter"
         href: split-columns-delimiter.md
-      - name: Split Columns: By Number of Characters
+      - name: "Split Columns: By Number of Characters"
         href: split-columns-number-characters.md
-      - name: Split Columns: By Positions
+      - name: "Split Columns: By Positions"
         href: split-columns-positions.md
-      - name: Reverse Rows
+      - name: "Reverse Rows"
         href: reverse-rows.md
-      - name: Add an Index Column
+      - name: "Add an Index Column"
         href: add-index-column.md
-      - name: Add a Custom Column
+      - name: "Add a Custom Column"
         href: add-custom-column.md
-      - name: Add a Column from Examples
+      - name: "Add a Column from Examples"
         href: column-from-example.md
-      - name: Grouping or Summarizing rows
+      - name: "Grouping or Summarizing rows"
         href: group-by.md
     - name: Tutorials
       items:
