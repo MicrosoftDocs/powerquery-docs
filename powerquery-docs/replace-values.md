@@ -43,8 +43,7 @@ The outcome of that operation will give us the result that we're looking for:
 
 ![](images/me-replace-values-original-after-numeric-replace.png)
 
-> Note
->
+> [!Note]
 > The replace values operation in columns that are not of the text data type only look for exact matches for the contents of a cell. To enable this behavior in text columns, select the 'match entire cell contents' from the advanced options in the Replace values window
 
 ### Replace instances of a text string
