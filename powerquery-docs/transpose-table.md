@@ -20,9 +20,8 @@ The result of that operation will look like this:
 
 ![](images/me-transpose-after.png)
 
-> !Note
-
->When doing the transpose operation, the column headers of the initial table will be lost. Only the contents of the table will be transposed during the operation and the new columns will have the name of "Column" followed by a sequential number.
+> [!Note]
+> When doing the transpose operation, the column headers of the initial table will be lost. Only the contents of the table will be transposed during the operation and the new columns will have the name of "Column" followed by a sequential number.
 
 ## Post Transpose cleaning
 
