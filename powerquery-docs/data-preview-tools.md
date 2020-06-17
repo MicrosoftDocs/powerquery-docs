@@ -20,7 +20,8 @@ These Data Preview tools are:
 
 * Column Profile
 
-To enable the data preview tools, select the **View** tab from the ribbon and navigate to the Data Preview section. Enable the desired options down below::
+To enable the data preview tools, select the **View** tab from the ribbon and navigate to the Data Preview section. Enable the desired options down below:
+
 ![Data Preview Tools](images/me-enable-data-preview-tools.png)
 
 Once enabled, this is how they will be seen inside the Power Query Editor Window:
