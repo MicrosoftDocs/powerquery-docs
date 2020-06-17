@@ -6,7 +6,7 @@ When you create a dataflow, sometimes you get an issue connecting to the data so
 
 This can happen when you move a query from Power Query in desktop tools to the Power Query in the dataflow, and you get the error below.
 
-![Gateway selection error](C:\Users\reza_\OneDrive - Microsoft\Dataflow Docs\08\media\GatewaySelectError.png)
+![Gateway selection error](media/GatewaySelectError.png)
 
 Reason:
 
@@ -34,7 +34,7 @@ Click on Configure connection. Set up the connection details and credentials.
 
 Sometimes, when you migrate your queries from the Power Query in desktop tools to the dataflow, you get an error saying that a module is disabled in this context. One example of these situation is when your query is using functions such as Web.Page or Web.BrowserContents, etc.
 
-![Disabled Module](C:\Users\reza_\OneDrive - Microsoft\Dataflow Docs\08\media\DisabledModule.png)
+![Disabled Module](media/DisabledModule.png)
 
 Reason:
 
@@ -44,12 +44,12 @@ Resolution:
 
 At first, you have to [install and setup an on-premises gateway](https://docs.microsoft.com/data-integration/gateway/service-gateway-install), and then add a web data source for the web URL you are connecting to;
 
-![Add a web data source](C:\Users\reza_\OneDrive - Microsoft\Dataflow Docs\08\media\WebDataSourceInGateway.png)
+![Add a web data source](media/WebDataSourceInGateway.png)
 
 After adding the web data source, you can go and select the gateway in the dataflow from the Project Options
 
-![Project Options in the dataflow](C:\Users\reza_\OneDrive - Microsoft\Dataflow Docs\08\media\ProjectOptions.png)
+![Project Options in the dataflow](media/ProjectOptions.png)
 
 You might be asked to set up the credentials, and after the successful setup, you should see the queries working fine;
 
-![Disabled functions working fine](C:\Users\reza_\OneDrive - Microsoft\Dataflow Docs\08\media\DisabledFunctionWorkingFine.png)
+![Disabled functions working fine](media/DisabledFunctionWorkingFine.png)
