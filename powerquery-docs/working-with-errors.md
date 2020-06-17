@@ -23,8 +23,7 @@ A step-level error will prevent the query to load and will provide a yellow ribb
 2. **Error message** - The section right after the reason. In the example above is "The column 'Column' of the table wasn't found"
 3. **Error detail** - is the section right after the "Details:". In the example above is "Column"
 
-> !Note 
->
+> [!Note] 
 > Currently Power Query Online only provides the Error message when step level errors are found.
 
 ### Most common step level errors
