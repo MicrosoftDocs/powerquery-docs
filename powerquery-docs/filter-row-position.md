@@ -45,8 +45,7 @@ We need to promote the column headers from the first row of our table. We can do
 
 ![](images/me-filter-row-position-keep-rows-final.png)
 
-> !Note
->
+> [!Note]
 > You can read more about the operations to promote and demote headers from this article (url).
 
 ### Keep Range of Rows
