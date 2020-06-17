@@ -5,7 +5,7 @@ author: cpopell
 
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 08/16/2018
+ms.date: 08/17/2018
 ms.author: gepopell
 
 LocalizationGroup: reference
