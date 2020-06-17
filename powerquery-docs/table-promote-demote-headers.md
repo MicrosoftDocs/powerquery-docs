@@ -18,8 +18,7 @@ The 'Remove top rows' window will appear and in here you can enter the number 4 
 
 ![](images/me-table-promote-demote-headers-promote-remove-top-rows-window.png)
 
-> !Note 
->
+> [!Note] 
 > You can read more about the Remove Top rows and other table operations from the following article (url).
 
 The result of that operation will leave our headers as the first row of our table as shown in the next image:
