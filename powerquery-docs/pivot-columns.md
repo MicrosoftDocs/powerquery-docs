@@ -47,16 +47,20 @@ What we want to do with this table is to Pivot the Position column so we can hav
 ![Pivot columns icon](images/me-pivot-columns-da-pivot-icon.png)
 
 We select the Product column as the value column and from the Advanced section inside the Pivot columns window we select the **don't aggregate** option:
+
 ![Pivot column no aggregation menu](images/me-pivot-columns-no-aggregation.png)
 
 The result of this operation will yield our expected result:
+
 ![Pivot columns no aggregation result](images/me-pivot-columns-no-aggregation-final.png)
 
 ### Errors when using the don't aggregate option
 The way that the don't aggregate option works is that it grabs a single value for the pivot operation to be placed as the value for the intersection of the column and row pair. If, for example, we have a table like the following:
+
 ![Pivot column error example table](images/me-pivot-dont-aggregate-error-initial.png)
 
 And we wanted to pivot that table using the Date column and the values from the Value column, which would make our table have just the Country values on rows and the Dates as columns, we would hit an error at every single cell value because there are multiple rows for every combination of Country and Date. The outcome of the Pivot column operation will yield the following results:
+
 ![Pivot column don't aggregate error](images/me-pivot-dont-aggregate-error-final.png)
 
 Notice how the error message at the details window shows us the message "Expression.Error: There were too many elements in the enumeration to complete the operation." because the don't aggregate operation only expects a single value for the Country and Date combination.
