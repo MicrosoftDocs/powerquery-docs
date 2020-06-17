@@ -38,7 +38,7 @@
         href: replace-values.md
       - name: "Transpose table"
         href: transpose-table.md
-      - name: "Split Columns: By Delimeter"
+      - name: "Split Columns: By Delimiter"
         href: split-columns-delimiter.md
       - name: "Split Columns: By Number of Characters"
         href: split-columns-number-characters.md
