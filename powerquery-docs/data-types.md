@@ -1,4 +1,5 @@
 # Data types in Power Query
+
 | Data<br/>Types         | Decimal<br/>Number | Currency | Whole<br/>Number | Percentage | Date/<br/>Time | Date | Time | Date/<br/>Time/<br/>Timezone | Duration | Text | True/<br/>False |
 |--------------------|----------------|----------|--------------|------------|-----------|------|------|--------------------|----------|------|------------|
 | Decimal<br/>Number     |                | 4        | 4            | 1          | 1         | 4    | 2    | 3                  | 1        | 1    | 1          |
