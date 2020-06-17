@@ -17,8 +17,8 @@ Our initial table will be the one below with only one column for "Accounts".
 ![image](images/me-split-columns-delimiter-into-columns-original.png)
 
 This column holds two values:
-1. Account number
-2. Account name 
+* Account number
+* Account name 
 
 We want to split this column into 2 columns as the values are delimited by a space: the first space from left to right. 
 To do this, we simply select the column and select the option to split the column by a delimiter. Inside the 'Split column' window, we apply the following configuration:
