@@ -27,11 +27,11 @@ Function Reference Documentation: [Json.Document](https://docs.microsoft.com/pow
 
 ## Load from JSON File
 
-To load a local JSON file from either Power BI Desktop or Excel, all you need to do is select the **JSON** option in the connector selection. This will launch a local file browser and allow you to select your JSON file.
+To load a local JSON file into either Power BI Desktop or Excel, all you need to do is select the **JSON** option in the connector selection. This will launch a local file browser and allow you to select your JSON file.
 
 ![JSON file selection](./media/json/json-get-data.png)
 
-To load a local JSON file from an online service, such as Power BI or Power Apps, you'll need to enter the local path to the JSON file, select an on-premises data gateway, and, if authentication is required, enter your credentials.
+To load a local JSON file into an online service, such as Power BI service or Power Apps, you'll need to enter the local path to the JSON file, select an on-premises data gateway, and, if authentication is required, enter your credentials.
 
 ![JSON selection from online service](./media/json/connect-service.png)
 
@@ -57,11 +57,11 @@ in
 
 ## Load from the web
 
-To load a JSON file from the web, instead of selecting the JSON connector you select the [Web connector](web.md). Then enter the web address of the file you want. Since you're requesting a web site instead of a static file, you'll be prompted with an authentication selection. If no authentication is required, you can just select **Anonymous**. As in the local case, you'll then be taken to Power Query Editor.
+To load a JSON file from the web, select the [Web connector](web.md), enter the web address of the file, and follow any credential prompts.
 
 ## Troubleshooting
 
-If the file you try to load produces an error, or if you manually enter an incorrect location for your JSON file, you may see the following message.
+If you see the following message, it may be because the file is invalid, for example, it's not really a JSON file, or is malformed. Or you may be trying to load a JSON Lines file.
 
 ![Unable to connect](./media/json/unable-connect.png)
 

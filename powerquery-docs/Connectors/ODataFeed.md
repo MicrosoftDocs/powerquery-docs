@@ -35,27 +35,25 @@ To load data from an OData Feed using a basic URL:
 
 1. Select the **OData** or **OData Feed** option in the connector selection. 
 
-2. Choose the **Basic** button and enter a URL address in the text box. For example, enter `http://services.odata.org/northwind/northwind.svc/`. Then select **OK**.
+2. If you're connecting from Power BI Desktop or Excel:
 
-   ![OData URL selection](media/odata-feed/odata-basic-url.png)
+   1. Choose the **Basic** button and enter a URL address in the text box. For example, enter `http://services.odata.org/V4/northwind/northwind.svc/`. Then select **OK**.
 
-   If the URL address you enter is invalid, a ![Warning icon](../images/webwarning.png) warning icon will appear next to the **URL** textbox.
+      ![OData URL selection](media/odata-feed/odata-basic-url.png)
 
-3. If the OData feed requires user credentials, in the **OData feed** credentials dialog box:
+      If the URL address you enter is invalid, a ![Warning icon](../images/webwarning.png) warning icon will appear next to the **URL** textbox.
 
-    1. Select **Anonymous** if the OData feed requires no authentication.
-    
-    2. Select **Windows** if the OData feed requires Windows Authentication.
-
-    3. Select **Basic** if the OData feed requires your username and password.
-
-    4. Select **Web API** if the OData feed requires a Web API key.
-
-    5. Click **Organizational account** if the OData feed requires federated access credentials. For Windows Live ID, log into your account.
-
-    6. Select **Save**.
+   2. If this is the first time you're connecting using the OData Feed, select the authentication type, input your credentials (if required), and select the level to apply the authentication settings to. Then select **Connect**.
 
        ![OData credentials selection](media/odata-feed/odata-sign-in.png)
+
+3. If you're connecting from an online service (such as Power BI service or Power Apps):
+
+   1. In the OData dialog that appears, enter a URL in the text box.
+
+      ![OData online sign in](media/odata-feed/odata-online-sign-in.png)
+   
+   2. If this is the first time you're connecting using the OData Feed, select the authentication kind and enter your credentials (if required). Then select **Next**.
 
 4. From the **Navigator** dialog, you can select a table, then either transform the data in the Power Query Editor by selecting **Transform Data**, or load the data by selecting **Load**.
 
