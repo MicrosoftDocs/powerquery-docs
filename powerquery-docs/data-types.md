@@ -67,7 +67,7 @@ We can define or change the data type of a column from 4 places:
 
 ![image](images/me-data-types-right-click.png)
 
-### Using Locale
+### Document or Project Locale
 
 When Power Query defines a column data type or converts from one data type to another, it has to interpret the values to be converted before it can transform them to a different data type.
 
@@ -79,7 +79,7 @@ When Power Query defines a column data type or converts from one data type to an
 
 ![image](images/me-data-types-power-query-desktop-locale.png)
 
-This **Locale** setting is important as based on the chosen value, Power Query will interpret the value before defining a data type. 
+This **Locale** setting is important for importing text values as based on the chosen value, Power Query will interpret the value before defining a data type. 
 
 For example, imagine that we have our Locale set as English (United States), but one of our columns from one of our csv files has dates in the UK format day/month/year as shown in the next image:
 
@@ -109,15 +109,15 @@ The following matrix is designed to give you a quick look at the feasibility of 
 
 | Data<br/>Types         | Decimal<br/>Number | Currency | Whole<br/>Number | Percentage | Date/<br/>Time | Date | Time | Date/<br/>Time/<br/>Timezone | Duration | Text | True/<br/>False |
 |--------------------|----------------|----------|--------------|------------|-----------|------|------|--------------------|----------|------|------------|
-| Decimal<br/>Number     |                | ![warning](images/me-alert.svg)        | ![warning](images/me-alert.svg)            | 1          | 1         | ![warning](images/me-alert.svg)    | 2    | 3                  | 1        | 1    | 1          |
-| Currency           | 1              |          | ![warning](images/me-alert.svg)            | 1          | 1         | ![warning](images/me-alert.svg)    | 2    | 3                  | 1        | 1    | 1          |
+| Decimal<br/>Number     |                | ![warning](images/me-alert-32px.png)        | ![warning](images/me-alert-32px.png)            | 1          | 1         | ![warning](images/me-alert-32px.png)    | 2    | 3                  | 1        | 1    | 1          |
+| Currency           | 1              |          | ![warning](images/me-alert-32px.png)            | 1          | 1         | ![warning](images/me-alert-32px.png)    | 2    | 3                  | 1        | 1    | 1          |
 | Whole<br/>Number       | 1              | 1        |              | 1          | 1         | 1   | 2    | 3                  | 1        | 1    | 1          |
-| Percentage         | 1              | ![warning](images/me-alert.svg)        | ![warning](images/me-alert.svg)            |            | 1         | 1    | 2    | 3                  | 1        | 1    | 1          |
-| Date/<br/>Time          | 1              | ![warning](images/me-alert.svg)        | ![warning](images/me-alert.svg)            | 1          |           | ![warning](images/me-alert.svg)    | ![warning](images/me-alert.svg)    | 3                  | 2        | 1    | 2          |
+| Percentage         | 1              | ![warning](images/me-alert-32px.png)        | ![warning](images/me-alert-32px.png)            |            | 1         | 1    | 2    | 3                  | 1        | 1    | 1          |
+| Date/<br/>Time          | 1              | ![warning](images/me-alert-32px.png)        | ![warning](images/me-alert-32px.png)            | 1          |           | ![warning](images/me-alert-32px.png)    | ![warning](images/me-alert-32px.png)    | 3                  | 2        | 1    | 2          |
 | Date               | 1              | 1        | 1            | 1          | 1         |      | 2    | 3                  | 2        | 1    | 2          |
 | Time               | 1              | 1        | 1            | 1          | 3         | 2    |      | 3                  | 2        | 1    | 2          |
-| Date/<br/>Time/<br/>Timezone | 1              | ![warning](images/me-alert.svg)        | ![warning](images/me-alert.svg)            | 1          | ![warning](images/me-alert.svg)         | ![warning](images/me-alert.svg)    | ![warning](images/me-alert.svg)    |                    | 2        | 1    | 2          |
-| Duration           | 1              | ![warning](images/me-alert.svg)        | ![warning](images/me-alert.svg)            | 1          | 2         | 2    | 2    | 2                  |          | 1    | 2          |
+| Date/<br/>Time/<br/>Timezone | 1              | ![warning](images/me-alert-32px.png)        | ![warning](images/me-alert-32px.png)            | 1          | ![warning](images/me-alert-32px.png)         | ![warning](images/me-alert-32px.png)    | ![warning](images/me-alert-32px.png)    |                    | 2        | 1    | 2          |
+| Duration           | 1              | ![warning](images/me-alert-32px.png)        | ![warning](images/me-alert-32px.png)            | 1          | 2         | 2    | 2    | 2                  |          | 1    | 2          |
 | Text               | 1              | 1        | 1            | 1          | 1         | 1    | 1    | 1                  | 1        |      | 1          |
 | True/<br/>False         | 1              | 1        | 1            | 1          | 2         | 2    | 2    | 2                  | 2        | 1    |            |
 
