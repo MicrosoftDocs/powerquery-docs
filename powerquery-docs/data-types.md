@@ -27,6 +27,9 @@ The most common data types used in Power Query are:
 >[!Note]
 >Power Query provides a set of contextual transformations and options based on the data types of the columns. For example, when you select a column with a data type of Date, you get transformations and options that are contextual to that specific data type throughout the Power Query interface such as in the *Transform* and *Add Column* tab, as well as in the smart filter options. 
 
+## Localization and Globalization
+(placeholder)
+
 ## Data Type Detection
 
 **When connecting to structured data sources such as databases**, Power Query will read the table schema from the data source and automatically display the data with the correct data type for each column.
@@ -35,7 +38,7 @@ The most common data types used in Power Query are:
 
 ### Automatic column data type and headers detection
 
-This setting is specific for unstructured sources and it helps you by automatically detecting the column types and headers for your table. 
+This setting is specific for unstructured sources and it helps you by automatically inspecting and detecting the column types and headers based on the first 200 rows of your table. 
 
 You can enable or disable this setting:
 
@@ -43,13 +46,16 @@ You can enable or disable this setting:
 
 ![image](images/me-data-types-project-options-auto-detect.png)
 
-* **In Power Query for Desktop**,  going to the *Query Options* window, and selecting the *Data Load* item from the left side menu inside the *Current* section. From there, you'll have the option to select or deselect the option for *Automatically detect column types and headers for unstructured sources*.
+* **In Power Query for Desktop**,  you have the ability to define this behavior at both the global and per file level.
+    - **Global** - Inside the Global menu, you can go to the *Data Load* item and go to the Type Detection section on the right. From here you can select any of the three Type Detection configurations which will be applied on every new file created in your application:
+        - Always detect column types and headers for unstructured sources
+        - Detect column types and headers for unstructured sources according to each file's setting
+        - Never detect column types and headers for unstructured sources
 
-<global data load>
+    ![Global Type Detection](images/me-data-types-power-query-desktop-options-global-auto-detect.png)
+    - **Current File** - Inside the Current menu, you can go to the *Data Load* item and go to the Type Detection section on the right. This setting allows you to define if the *Type Detection* should be enabled or disabled for the current file.    
 
-<checks only first 200 rows>
-
-![image](images/me-data-types-power-query-desktop-options-auto-detect.png)
+    ![image](images/me-data-types-power-query-desktop-options-auto-detect.png)
 
 **When this setting is enabled,** Power Query will automatically detect the column headers and data types of unstructured data sources. Power Query will do this by automatically adding two steps to your query:
 
@@ -73,6 +79,7 @@ We can define or change the data type of a column from 4 places:
 * **Column Right click** - as the *Change Type* option.
 
 ![image](images/me-data-types-right-click.png)
+
 
 ### Document or Project Locale
 
@@ -98,7 +105,7 @@ When we try setting the data type of the Date column to be **Date**, we only get
 
 This is because the **Locale** being used is trying to interpret the date under the English (United States) format which is month/date/year, but there is no month 22 in the calendar, so it yields an error.
 
-Instead of trying to just select the Date data type, we can right click the column and select the Using Locale option from the Change type menu
+Instead of trying to just select the Date data type, we can right click the column and select the *Using Locale* option from the Change type menu
 
 ![image](images/me-data-types-locale-sample-right-click.png)
 
@@ -110,23 +117,35 @@ Using this locale, Power Query will be able to interpret the values correctly an
 
 ![image](images/me-data-types-locale-sample-final.png)
 
+#### Verifying the final date values
+
+The formatting of the values is driven by the globalization value. If you have any doubts about the value displayed by Power Query, you can verify your conversion on date values by adding new columns for the day, month, and year from the value. To do this, simply select the date column, go to the *Add column* tab and in the *Date and time column* group you'll see that options for a Date column. 
+
+![Add date portion values](images/me-data-types-power-query-add-column-date.png)
+
+From here you can select to extract parts of the date value such as the year number, the month number, the day number, or even more columns extracted from the date column.
+
+![Date parts](images/me-data-types-power-query-add-column-date-parts.png)
+
+With these columns, we can verify that our date value has been converted correctly.
+
 ### Data type conversion matrix
 
 The following matrix is designed to give you a quick look at the feasibility of data type conversion of a value from one data type to another.
 
 | Data Types         | ![Decimal Number](images/Number_20.png) | ![Currency](images/Currency_20.png) | ![Whole Number](images/WholeNumber_20.png) | ![Percentage](images/Percentage_20.png) | ![Date/Time](images/DateTime_20.png) | ![Date](images/Date_20.png) | ![Time](images/Time_20.png) | ![Date/Time/Timezone](images/DateTimeZone_20.png) | ![Duration](images/Duration_20.png) | ![Text](images/Text_20.png) | ![True/False](images/Logical_20.png) |
 |--------------------|----------------|----------|--------------|------------|-----------|------|------|--------------------|----------|------|------------|
-| Decimal Number     |                | ![warning](images/me-alert-24px.png)        | ![warning](images/me-alert-24px.png)            | ![check](images/me-checkmark-24px.png)          | ![check](images/me-checkmark-24px.png)         | ![warning](images/me-alert-24px.png)    | ![cancel](images/me-cancel-24px.png)   | ![add](images/me-truncate-24px.png)                 | ![check](images/me-checkmark-24px.png)        | ![check](images/me-checkmark-24px.png)    | ![check](images/me-checkmark-24px.png)          |
-| Currency           | ![check](images/me-checkmark-24px.png)              |          | ![warning](images/me-alert-24px.png)            | ![check](images/me-checkmark-24px.png)          | ![check](images/me-checkmark-24px.png)         | ![warning](images/me-alert-24px.png)    | ![cancel](images/me-cancel-24px.png)   | ![add](images/me-truncate-24px.png)                 | ![check](images/me-checkmark-24px.png)        | ![check](images/me-checkmark-24px.png)    | ![check](images/me-checkmark-24px.png)          |
-| Whole Number       | ![check](images/me-checkmark-24px.png)              | ![check](images/me-checkmark-24px.png)        |              | ![check](images/me-checkmark-24px.png)          | ![check](images/me-checkmark-24px.png)         | ![check](images/me-checkmark-24px.png)   | ![cancel](images/me-cancel-24px.png)   | ![add](images/me-truncate-24px.png)                 | ![check](images/me-checkmark-24px.png)        | ![check](images/me-checkmark-24px.png)    | ![check](images/me-checkmark-24px.png)          |
-| Percentage         | ![check](images/me-checkmark-24px.png)              | ![warning](images/me-alert-24px.png)        | ![warning](images/me-alert-24px.png)            |            | ![check](images/me-checkmark-24px.png)         | ![check](images/me-checkmark-24px.png)    | ![cancel](images/me-cancel-24px.png)   | ![add](images/me-truncate-24px.png)                 | ![check](images/me-checkmark-24px.png)        | ![check](images/me-checkmark-24px.png)    | ![check](images/me-checkmark-24px.png)          |
-| Date/Time          | ![check](images/me-checkmark-24px.png)              | ![warning](images/me-alert-24px.png)        | ![warning](images/me-alert-24px.png)            | ![check](images/me-checkmark-24px.png)          |           | ![warning](images/me-alert-24px.png)    | ![warning](images/me-alert-24px.png)    | ![add](images/me-truncate-24px.png)                 | ![cancel](images/me-cancel-24px.png)       | ![check](images/me-checkmark-24px.png)    | ![cancel](images/me-cancel-24px.png)         |
-| Date               | ![check](images/me-checkmark-24px.png)              | ![check](images/me-checkmark-24px.png)        | ![check](images/me-checkmark-24px.png)            | ![check](images/me-checkmark-24px.png)          | ![check](images/me-checkmark-24px.png)         |      | ![cancel](images/me-cancel-24px.png)   | ![add](images/me-truncate-24px.png)                 | ![cancel](images/me-cancel-24px.png)       | ![check](images/me-checkmark-24px.png)    | ![cancel](images/me-cancel-24px.png)         |
-| Time               | ![check](images/me-checkmark-24px.png)              | ![check](images/me-checkmark-24px.png)        | ![check](images/me-checkmark-24px.png)            | ![check](images/me-checkmark-24px.png)          | ![add](images/me-truncate-24px.png)        | ![cancel](images/me-cancel-24px.png)   |      | ![add](images/me-truncate-24px.png)                 | ![cancel](images/me-cancel-24px.png)       | ![check](images/me-checkmark-24px.png)    | ![cancel](images/me-cancel-24px.png)         |
-| Date/Time/Timezone | ![check](images/me-checkmark-24px.png)              | ![warning](images/me-alert-24px.png)        | ![warning](images/me-alert-24px.png)            | ![check](images/me-checkmark-24px.png)          | ![warning](images/me-alert-24px.png)         | ![warning](images/me-alert-24px.png)    | ![warning](images/me-alert-24px.png)    |                    | ![cancel](images/me-cancel-24px.png)       | ![check](images/me-checkmark-24px.png)    | ![cancel](images/me-cancel-24px.png)         |
-| Duration           | ![check](images/me-checkmark-24px.png)              | ![warning](images/me-alert-24px.png)        | ![warning](images/me-alert-24px.png)            | ![check](images/me-checkmark-24px.png)          | ![cancel](images/me-cancel-24px.png)        | ![cancel](images/me-cancel-24px.png)   | ![cancel](images/me-cancel-24px.png)   | ![cancel](images/me-cancel-24px.png)                 |          | ![check](images/me-checkmark-24px.png)    | ![cancel](images/me-cancel-24px.png)         |
-| Text               | ![check](images/me-checkmark-24px.png)              | ![check](images/me-checkmark-24px.png)        | ![check](images/me-checkmark-24px.png)            | ![check](images/me-checkmark-24px.png)          | ![check](images/me-checkmark-24px.png)         | ![check](images/me-checkmark-24px.png)    | ![check](images/me-checkmark-24px.png)    | ![check](images/me-checkmark-24px.png)                  | ![check](images/me-checkmark-24px.png)        |      | ![check](images/me-checkmark-24px.png)          |
-| True/False         | ![check](images/me-checkmark-24px.png)              | ![check](images/me-checkmark-24px.png)        | ![check](images/me-checkmark-24px.png)            | ![check](images/me-checkmark-24px.png)          | ![cancel](images/me-cancel-24px.png)        | ![cancel](images/me-cancel-24px.png)   | ![cancel](images/me-cancel-24px.png)   | ![cancel](images/me-cancel-24px.png)                 | ![cancel](images/me-cancel-24px.png)       | ![check](images/me-checkmark-24px.png)    |            |
+| ![Decimal Number](images/Number_20.png)  Decimal Number     |                | ![warning](images/me-alert-24px.png)        | ![warning](images/me-alert-24px.png)            | ![check](images/me-checkmark-24px.png)          | ![check](images/me-checkmark-24px.png)         | ![warning](images/me-alert-24px.png)    | ![cancel](images/me-cancel-24px.png)   | ![add](images/me-truncate-24px.png)                 | ![check](images/me-checkmark-24px.png)        | ![check](images/me-checkmark-24px.png)    | ![check](images/me-checkmark-24px.png)          |
+| ![Currency](images/Currency_20.png) Currency           | ![check](images/me-checkmark-24px.png)              |          | ![warning](images/me-alert-24px.png)            | ![check](images/me-checkmark-24px.png)          | ![check](images/me-checkmark-24px.png)         | ![warning](images/me-alert-24px.png)    | ![cancel](images/me-cancel-24px.png)   | ![add](images/me-truncate-24px.png)                 | ![check](images/me-checkmark-24px.png)        | ![check](images/me-checkmark-24px.png)    | ![check](images/me-checkmark-24px.png)          |
+| ![Whole Number](images/WholeNumber_20.png) Whole Number       | ![check](images/me-checkmark-24px.png)              | ![check](images/me-checkmark-24px.png)        |              | ![check](images/me-checkmark-24px.png)          | ![check](images/me-checkmark-24px.png)         | ![check](images/me-checkmark-24px.png)   | ![cancel](images/me-cancel-24px.png)   | ![add](images/me-truncate-24px.png)                 | ![check](images/me-checkmark-24px.png)        | ![check](images/me-checkmark-24px.png)    | ![check](images/me-checkmark-24px.png)          |
+| ![Percentage](images/Percentage_20.png) Percentage         | ![check](images/me-checkmark-24px.png)              | ![warning](images/me-alert-24px.png)        | ![warning](images/me-alert-24px.png)            |            | ![check](images/me-checkmark-24px.png)         | ![check](images/me-checkmark-24px.png)    | ![cancel](images/me-cancel-24px.png)   | ![add](images/me-truncate-24px.png)                 | ![check](images/me-checkmark-24px.png)        | ![check](images/me-checkmark-24px.png)    | ![check](images/me-checkmark-24px.png)          |
+| ![Date/Time](images/DateTime_20.png) Date/Time          | ![check](images/me-checkmark-24px.png)              | ![warning](images/me-alert-24px.png)        | ![warning](images/me-alert-24px.png)            | ![check](images/me-checkmark-24px.png)          |           | ![warning](images/me-alert-24px.png)    | ![warning](images/me-alert-24px.png)    | ![add](images/me-truncate-24px.png)                 | ![cancel](images/me-cancel-24px.png)       | ![check](images/me-checkmark-24px.png)    | ![cancel](images/me-cancel-24px.png)         |
+| ![Date](images/Date_20.png) Date | ![check](images/me-checkmark-24px.png)              | ![check](images/me-checkmark-24px.png)        | ![check](images/me-checkmark-24px.png)            | ![check](images/me-checkmark-24px.png)          | ![check](images/me-checkmark-24px.png)         |      | ![cancel](images/me-cancel-24px.png)   | ![add](images/me-truncate-24px.png)                 | ![cancel](images/me-cancel-24px.png)       | ![check](images/me-checkmark-24px.png)    | ![cancel](images/me-cancel-24px.png)         |
+| ![Time](images/Time_20.png) Time               | ![check](images/me-checkmark-24px.png)              | ![check](images/me-checkmark-24px.png)        | ![check](images/me-checkmark-24px.png)            | ![check](images/me-checkmark-24px.png)          | ![add](images/me-truncate-24px.png)        | ![cancel](images/me-cancel-24px.png)   |      | ![add](images/me-truncate-24px.png)                 | ![cancel](images/me-cancel-24px.png)       | ![check](images/me-checkmark-24px.png)    | ![cancel](images/me-cancel-24px.png)         |
+| ![Date/Time/Timezone](images/DateTimeZone_20.png) Date/Time/Timezone | ![check](images/me-checkmark-24px.png)              | ![warning](images/me-alert-24px.png)        | ![warning](images/me-alert-24px.png)            | ![check](images/me-checkmark-24px.png)          | ![warning](images/me-alert-24px.png)         | ![warning](images/me-alert-24px.png)    | ![warning](images/me-alert-24px.png)    |                    | ![cancel](images/me-cancel-24px.png)       | ![check](images/me-checkmark-24px.png)    | ![cancel](images/me-cancel-24px.png)         |
+| ![Duration](images/Duration_20.png) Duration           | ![check](images/me-checkmark-24px.png)              | ![warning](images/me-alert-24px.png)        | ![warning](images/me-alert-24px.png)            | ![check](images/me-checkmark-24px.png)          | ![cancel](images/me-cancel-24px.png)        | ![cancel](images/me-cancel-24px.png)   | ![cancel](images/me-cancel-24px.png)   | ![cancel](images/me-cancel-24px.png)                 |          | ![check](images/me-checkmark-24px.png)    | ![cancel](images/me-cancel-24px.png)         |
+| ![Text](images/Text_20.png) Text               | ![check](images/me-checkmark-24px.png)              | ![check](images/me-checkmark-24px.png)        | ![check](images/me-checkmark-24px.png)            | ![check](images/me-checkmark-24px.png)          | ![check](images/me-checkmark-24px.png)         | ![check](images/me-checkmark-24px.png)    | ![check](images/me-checkmark-24px.png)    | ![check](images/me-checkmark-24px.png)                  | ![check](images/me-checkmark-24px.png)        |      | ![check](images/me-checkmark-24px.png)          |
+| ![True/False](images/Logical_20.png) True/False         | ![check](images/me-checkmark-24px.png)              | ![check](images/me-checkmark-24px.png)        | ![check](images/me-checkmark-24px.png)            | ![check](images/me-checkmark-24px.png)          | ![cancel](images/me-cancel-24px.png)        | ![cancel](images/me-cancel-24px.png)   | ![cancel](images/me-cancel-24px.png)   | ![cancel](images/me-cancel-24px.png)                 | ![cancel](images/me-cancel-24px.png)       | ![check](images/me-checkmark-24px.png)    |            |
 
 
 | Icon | Description |
@@ -135,8 +154,3 @@ The following matrix is designed to give you a quick look at the feasibility of 
 |![cancel](images/me-cancel-24px.png) | Not possible|
 | ![add](images/me-truncate-24px.png) | Possible, but it adds values to the original value |
 | ![warning](images/me-alert-24px.png)  | Possible, it truncates the original value |
-
-
-
->[!Note]
-> Values in Power Query are immutable, meaning that once the values have been calculated they can not be changed. This is important as once a value is converted to a specific data type, the value is transformed from its original value into an immutable form that conforms to the new data type.
