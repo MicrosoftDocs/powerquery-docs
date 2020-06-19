@@ -27,9 +27,6 @@ The most common data types used in Power Query are:
 >[!Note]
 >Power Query provides a set of contextual transformations and options based on the data types of the columns. For example, when you select a column with a data type of Date, you get transformations and options that are contextual to that specific data type throughout the Power Query interface such as in the *Transform* and *Add Column* tab, as well as in the smart filter options. 
 
-## Localization and Globalization
-(placeholder)
-
 ## Data Type Detection
 
 **When connecting to structured data sources such as databases**, Power Query will read the table schema from the data source and automatically display the data with the correct data type for each column.
@@ -82,6 +79,12 @@ We can define or change the data type of a column from 4 places:
 
 
 ### Document or Project Locale
+
+Power Query handles two distinct components that manage the way that things look and are interpreted:
+* **Localization** - the component that tells Power Query in what language it should be displayed.
+* **Globalization** - the component that handles the formatting of the values as well as the interpretation of text values.
+
+The **Locale** is a single value that holds both the Localization and Globalization and is used to interpret text values and convert them into other data types. For example, a Locale such as "English (United States)" tells us that the *Localization*, or language, is English and the *Globalization*, or format of the value, is based in the standards used in the United States. 
 
 When Power Query defines a column data type or converts from one data type to another, it has to interpret the values to be converted before it can transform them to a different data type.
 
