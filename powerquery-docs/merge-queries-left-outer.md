@@ -2,7 +2,9 @@
 
 A left outer join is one of the Join kinds available inside the Merge queries window in Power Query. You can read more about the Merge operations in Power Query from the article [Merge Operations Overview](merge-operations-overview.md).
 
-This article demonstrates with a practical example how to perform a Merge operation using the Left Outer Join as the Join kind.
+The Left Outer Join keeps all rows from the left table, and bring any matching rows from the right table.
+
+This article demonstrates, with a practical example, how to perform a Merge operation using the Left Outer Join as the Join kind.
 
 >[!Note]
 >Samples used in this article are only to showcase the concepts. The concepts showcased here apply to all queries in Power Query.
@@ -32,7 +34,7 @@ The goal is to reach the following table where the name of the *Country* appears
 
 * Select the Sales query and click the Merge queries button to create a new step inside the Sales query that wil merge the **Sales** query with the **Countries** query.
 * Select the **Countries** as the *Right table for merge*
-* Select thee *CountryID* column from the **Sales** table
+* Select the *CountryID* column from the **Sales** table
 * Select the *id* column from the **Countries** table
 * From the *Join Kind* section, select the **Left outer** option
 * Hit the OK button
