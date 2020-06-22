@@ -35,7 +35,10 @@ Our goal is to join these tables using the CountryID column from both tables, so
 >[!Note]
 > While this example shows the same column header for both tables, it is not a requirement for the Merge operation. Column headers do not need to match between tables.
 
-You can also select multiple columns to perform the join by holding the *ctrl* key when selecting the columns. When doing so, the order in which the columns were selected will be displayed next to the column headers as small numbers starting from the number one:
+You can also select multiple columns to perform the join by holding the *ctrl* key when selecting the columns. When doing so, the order in which the columns were selected will be displayed next to the column headers as small numbers starting from the number one. 
+
+In the following sample, we have the tables **Sales** and **Countries**. Each of them have the columns *CountryID* and *StateID* which we need to pair for the join between both columns. 
+In our case we'll first select the CountryID from the Sales table, hold the ctrl key and then select the StateID. This will show the small numbers mentioned before, and we can now do the same set of column selection for the Countries table. The result of selecting those columns will look like this:
 
 ![Merge queries using multiple columns](images/me-merge-operations-overview-merge-window-multiple-columns-sample.png)
 
