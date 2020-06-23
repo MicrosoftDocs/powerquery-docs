@@ -1,7 +1,7 @@
 # Merge operations overview
 
 You can merge queries when you have one or more columns that you’d like to add to another query.
-A merge operation creates a new query from two existing queries by performing a join between both tables using one or multiple columns from both tables. 
+A merge operation works from two existing tables by performing a join between both tables using one or multiple columns from both tables. 
 
 ## To merge queries
 
