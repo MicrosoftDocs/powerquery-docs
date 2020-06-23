@@ -58,12 +58,12 @@ A Join Kind specifies how a merge operation should be performed. The following i
 
 |Join Kind| Icon| Description| Sample Article|
 |---------------|-----|-----------|---------------|
-|Left outer| ![Left outer](images/JoinKindLeftOuterIcon.svg)| All rows from left table, matching from right table|url|
-|Right outer| ![Right outer](images/JoinKindRightOuterIcon.svg)| All rows from right table, matching from left table| url|
-|Full outer| ![Full outer](images/JoinKindFullOuterIcon.svg)| All rows from both tables|url|
-|Inner| ![Inner](images/JoinKindInnerIcon.svg)| Only matching rows from both tables|url|
-|Left anti| ![Left anti](images/JoinKindLeftAntiIcon.svg)| Only rows from left table|url|
-|Right anti| ![Right anti](images/JoinKindRightAntiIcon.svg)| Only rows from right table|url|
+|Left outer| ![Left outer](images/JoinKindLeftOuterIcon.jpg)| All rows from left table, matching from right table|url|
+|Right outer| ![Right outer](images/JoinKindRightOuterIcon.jpg)| All rows from right table, matching from left table| url|
+|Full outer| ![Full outer](images/JoinKindFullOuterIcon.jpg)| All rows from both tables|url|
+|Inner| ![Inner](images/JoinKindInnerIcon.jpg)| Only matching rows from both tables|url|
+|Left anti| ![Left anti](images/JoinKindLeftAntiIcon.jpg)| Only rows from left table|url|
+|Right anti| ![Right anti](images/JoinKindRightAntiIcon.jpg)| Only rows from right table|url|
 
 ## Fuzzy Matching
 
