@@ -11,7 +11,7 @@ You can find the *Merge queries* icon in the **Home** tab under the *Combine* gr
 
 ![Merge queries icons](images/me-merge-operations-overview-merge-icons.png)
 
-The Merge operation requires two tables to be defined:
+The Merge operation requires two tables:
 * **Left table for merge** - the first selection from top to bottom
 * **Right table for merge** - the last selection from top to bottom
 
@@ -22,7 +22,7 @@ The Merge operation requires two tables to be defined:
 
 ### Select column pairs
 
-After both the left and right table have been selected, you can select the columns that should drive the join or merge of the tables. In the example below, there are have two tables:
+After both the left and right table have been selected, you can select the columns that should drive the join between the tables. In the example below, there are two tables:
 * **Sales** - the field CountryID is a key or an identifier from the Countries table.
 * **Countries** - this table contains the CountryID as well as the name of the Country.
 
