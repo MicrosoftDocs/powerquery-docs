@@ -45,9 +45,12 @@ In this case we'll first select the CountryID from the Sales table, hold the ctr
 
 After hitting OK in the Merge window, the base table of your query will have all of the columns from your left table and a new column with the same name of your right table which holds the values correspondant from the right table on a row by row basis.
 
-From here, you can choose to expand the fields from this new table column, which will be the fields from your right table:
+From here, you can choose to expand or aggregate the fields from this new table column, which will be the fields from your right table:
 
 ![Expand table column](images/me-merge-operations-overview-expand-table-column.png)
+
+>[!Note]
+>Currently the Power Query Online experience only provides the expand operation in its interface. The option to *aggregate* will be added later down this year.
 
 ## Join Kinds
 
