@@ -54,6 +54,6 @@ The articles below provide further information that can be helpful.
 - [Connect Azure Data Lake Storage Gen2 for dataflow storage (Power BI dataflows)](https://docs.microsoft.com/power-bi/service-dataflows-connect-azure-data-lake-storage-gen2
   )
 - [Connect Azure Data Lake Storage Gen2 for dataflow storage (Power Platform dataflows)](https://docs.microsoft.com/powerapps/maker/common-data-service/connect-azure-data-lake-storage-for-dataflow)
-- [Creating computed entities in dataflows](computed-entities)
+- [Creating computed entities in dataflows](computed-entities.md)
 - [The enhanced compute engine](https://docs.microsoft.com/power-bi/transform-model/service-dataflows-enhanced-compute-engine)
 - [Standard vs Analytical dataflows](understanding-differences-between-analytical-standard-dataflows.md)
