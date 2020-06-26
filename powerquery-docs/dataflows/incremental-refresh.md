@@ -24,7 +24,7 @@ Incremental refresh is available in dataflows created in Power BI, and dataflows
 
 ![Incremental refresh for dataflows](media/dataflows-incremental-refresh/dataflows-incremental-refresh-03.png)
 
-Using incremental refresh in dataflows created in Power BI requires that the workspace where the dataflow resides be in [Premium capacity](https://docs.microsoft.com/power-bi/service-premium-what-is) to run. Incremental refresh in the Power Apps portal requires Power Apps Plan 2.
+Using incremental refresh in dataflows created in Power BI requires that the workspace where the dataflow resides in [Premium capacity](https://docs.microsoft.com/power-bi/service-premium-what-is) to run. Incremental refresh in the Power Apps portal requires Power Apps Plan 2.
 
 In either Power BI or Power Apps, using incremental refresh requires the source data ingested into the dataflow to have a *datetime* field on which incremental refresh can filter. 
 
@@ -34,29 +34,29 @@ A dataflow can contain many entities. Incremental refresh is set up at the entit
 
 To set up an incremental refreshed entity, start by configuring your entity as you would any other entity.
 
-Once the dataflow is created and saved, select the **incremental refresh** icon in the entity view, as shown in the following image:
+Once the dataflow is created and saved, select the **incremental refresh** icon in the entity view, as shown in the following image.
 
 ![Incremental refresh icon for dataflows](media/dataflows-incremental-refresh/dataflows-incremental-refresh-01.png)
 
-When you click the icon, the **Incremental refresh settings** window appears. When you toggle incremental refresh to the **On** position, you can configure your incremental refresh.
+When you select the icon, the **Incremental refresh settings** window appears. When you toggle incremental refresh to the **On** position, you can configure your incremental refresh.
 
 ![Incremental refresh for dataflows](media/dataflows-incremental-refresh/dataflows-incremental-refresh-03.png)
 
 The following list explains the settings in the **Incremental refresh settings** window. 
 
 * **Incremental refresh on/off toggle**&mdash;this slider toggles incremental refresh policy on or off for the entity.
-* **Filter field drop down**&mdash;selects the query field on which the entity should be filtered for increments. This field only contains *datetime* fields. You cannot use incremental refresh if your entity doesn’t contain a *datetime* field.
+* **Filter field drop-down**&mdash;selects the query field on which the entity should be filtered for increments. This field only contains *datetime* fields. You can't use incremental refresh if your entity doesn’t contain a *datetime* field.
 * **Store rows from the past**&mdash;the following example helps explain the next few settings.
 
-    This example defines a refresh policy to store five years of data in total, and incrementally refresh 10 days of data. If the entity is refreshed daily, the following is carried out for each refresh operation:
+    This example defines a refresh policy to store five years of data in total, and incrementally refresh 10 days of data. If the entity is refreshed daily, the following actions are carried out for each refresh operation:
 
     * Add a new day of data.
     * Refresh 10 days up to the current date.
-    * Remove calendar years that are older than five years prior to the current date. For example, if the current date is January 1st 2019, the year 2013 is removed.
+    * Remove calendar years that are older than five years prior to the current date. For example, if the current date is January 1, 2019, the year 2013 is removed.
 
     The first dataflow refresh might take a while to import all five years, but subsequent refreshes are likely to complete in a small fraction of the initial refresh time.
 
-* **Detect data changes**&mdashIncremental refresh of 10 days is much more efficient than full refresh of 5 years, but you might be able to do even better. When you select the **Detect data changes** checkbox, you can select a date/time column to identify and refresh only the days where the data has changed. This assumes such a column exists in the source system, which is typically for auditing purposes. The maximum value of this column is evaluated for each of the periods in the incremental range. If that data has not changed since the last refresh, there's no need to refresh the period. In the example, this could further reduce the days incrementally refreshed from 10 to perhaps two.
+* **Detect data changes**&mdashIncremental refresh of 10 days is much more efficient than full refresh of five years, but you might be able to do even better. When you select the **Detect data changes** checkbox, you can select a date/time column to identify and refresh only the days where the data has changed. This assumes such a column exists in the source system, which is typically for auditing purposes. The maximum value of this column is evaluated for each of the periods in the incremental range. If that data hasn't changed since the last refresh, there's no need to refresh the period. In the example, this could further reduce the days incrementally refreshed from 10 to perhaps two.
 
 > [!TIP]
 > The current design requires that the column used to detect data changes be persisted and cached into memory. You might want to consider one of the following techniques to reduce cardinality and memory consumption:
@@ -65,16 +65,16 @@ The following list explains the settings in the **Incremental refresh settings**
 >    * Reduce the precision to a level that is acceptable given your refresh-frequency requirements.
 
 
-* **Only refresh complete periods**&mdash;imagine your refresh is scheduled to run at 4:00 AM every morning. If data appears in the source system during those first four hours of that day, you may not want to account for it. Some business metrics, such as barrels per day in the oil and gas industry, are not practical or sensible to account for based on partial days.
+* **Only refresh complete periods**&mdash;imagine your refresh is scheduled to run at 4:00 AM every morning. If data appears in the source system during those first four hours of that day, you may not want to account for it. Some business metrics, such as barrels per day in the oil and gas industry, aren't practical or sensible to account for based on partial days.
 
-    Another example where only refreshing complete periods is appropriate is refreshing data from a financial system. Imagine a financial system where data for the previous month is approved on the 12th calendar day of the month. You could set the incremental range to 1 month and schedule the refresh to run on the 12th day of the month. With this option checked, it would refresh January data (the most recent complete monthly period) on February 12th.
+    Another example where only refreshing complete periods is appropriate is refreshing data from a financial system. Imagine a financial system where data for the previous month is approved on the 12th calendar day of the month. You could set the incremental range to one month and schedule the refresh to run on the 12th day of the month. With this option checked, it would refresh January data (the most recent complete monthly period) on February 12th.
 
 > [!NOTE]
 > Dataflow incremental refresh determines dates according to the following logic: if a refresh is scheduled, incremental refresh for dataflows uses the time-zone defined in the refresh policy. If no schedule for refreshing exists, incremental refresh uses the time from the machine running the refresh.
 
 ## The incremental refresh query
 
-Once incremental refresh is configured, the dataflow automatically alters your query to include filter by date. You can edit the auto-generated query using the **Advanced Power Query Editor** to fine-tune or customize your refresh. Read more about incremental refresh and how it works in the following sections.
+Once incremental refresh is configured, the dataflow automatically alters your query to include filter by date. You can edit the autogenerated query using the **Advanced Power Query Editor** to fine-tune or customize your refresh. Read more about incremental refresh and how it works in the following sections.
 
 ## Incremental refresh and linked versus computed entities
 
@@ -83,7 +83,7 @@ For *linked* entities, incremental refresh updates the source entity. Since link
 *Computed* entities are based on queries running over a datastore, which may be another dataflow. 
 As such, computed entities behave in the same way as linked entities.
 
-Since computed entities and linked entities behave similarly, the requirements and configuration steps are the same for both. One difference is that for computed entities, in certain configurations, incremental refresh cannot run in an optimized fashion due to the way partitions are built. 
+Since computed entities and linked entities behave similarly, the requirements and configuration steps are the same for both. One difference is that for computed entities, in certain configurations, incremental refresh can't run in an optimized fashion because of the way partitions are built. 
 
 ## Changing between incremental and full refresh
 
@@ -96,7 +96,7 @@ When moving a dataflow from incremental to full refresh, all data accumulated in
 
 ## Time zone support in incremental refresh
 
-Dataflow incremental refresh is dependent on the time in which it is run. The filtering of the query is dependent on the day it runs.
+Dataflow incremental refresh is dependent on the time in which it's run. The filtering of the query is dependent on the day it runs.
 
 To accommodate those dependencies and to ensure data consistency, incremental refresh for dataflows implements the following heuristic for *refresh now* scenarios:
 
@@ -104,7 +104,7 @@ To accommodate those dependencies and to ensure data consistency, incremental re
 
 * If no scheduled refresh is defined, dataflows use the timezone of the refreshing user’s computer.
 
-Incremental refresh can also be invoked using APIs. In this case, the API call can hold a timezone setting that is used in the refresh. Using APIs can be helpful for testing and validation purposes.
+Incremental refresh can also be invoked using APIs. In this case, the API call can hold a timezone setting that's used in the refresh. Using APIs can be helpful for testing and validation purposes.
 
 
 ## Incremental refresh implementation details
@@ -136,7 +136,7 @@ Old partitions that fall outside the total range are removed. The refresh operat
 
 This example simulates how the system recovers gracefully from prolonged failure. Let's say refresh doesn't run successfully because data source credentials expired, and the issue takes 13 days to resolve. The incremental range is only 10 days.
 
-The next successful refresh operation, with *Run Date 1/15/2017*, needs to backfill the missing 13 days and refresh them. It also needs to refresh the previous 9 days because they were not refreshed on the normal schedule. In other words, the incremental range is increased from 10 to 22 days.
+The next successful refresh operation, with *Run Date 1/15/2017*, needs to backfill the missing 13 days and refresh them. It also needs to refresh the previous nine days because they weren't refreshed on the normal schedule. In other words, the incremental range is increased from 10 to 22 days.
 
 The next refresh operation, with *Run Date 1/16/2017*, takes the opportunity to merge the days in December and the months in the Q4 2016.
 

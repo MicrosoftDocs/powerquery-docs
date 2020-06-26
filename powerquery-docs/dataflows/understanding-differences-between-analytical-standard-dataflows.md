@@ -11,11 +11,11 @@ ms.author: gepopell
 
 # Understanding the differences between standard and analytical dataflows
 
-You can categorize dataflows in many ways. One of those ways is the difference between standard and analytical dataflows. Understanding this concept helps you create the dataflow for the right requirement. Dataflows create entities, and entities are of two types: standard and analytical. Based on the type of entity produced by the dataflow, we call the dataflow either a standard dataflow or an analytical dataflow.
+You can categorize dataflows in many ways. One of those ways is the difference between standard and analytical dataflows. Understanding this concept helps you create a dataflow for the right requirement. Dataflows create entities, and entities are of two types: standard and analytical. Based on the type of entity produced by the dataflow, we call the dataflow either a standard dataflow or an analytical dataflow.
 
 ## Standard dataflow
 
-A dataflow by the standard definition is a service to extract, transform, and load the data in a destination. A standard dataflow supports Power Query transformations and can get data from any Power Query is compatible data sources. The entities of this type of dataflow store their data in Common Data Service.
+A dataflow by the standard definition is a service to extract, transform, and load the data in a destination. A standard dataflow supports Power Query transformations and can get data from any Power Query compatible data sources. The entities of this type of dataflow store their data in Common Data Service.
 
 Standard dataflows can be created by Power Platform dataflows when created through the Power Apps portal. 
 
@@ -25,19 +25,19 @@ One benefit of this type of dataflow is that any application that can connect to
 
 ## Analytical dataflow
 
-An analytical dataflow, in addition to the transformation, is also capable of extra analytical features. These features can be AI functions in the dataflow, and even the use of computed entities. Analytical entities in the analytical dataflow store their data in Azure Data Lake Storage.
+An analytical dataflow, in addition to the transformation, is also capable of extra analytical features. These features can be AI functions in the dataflow, and even the use of computed entities. Analytical entities in the analytical dataflow store their data in Azure Data Lake Storage Gen2.
 
 You can create analytical dataflows using Power BI dataflows, regardless of whether it's an external dataflow (a dataflow connected to a customer's Azure Data Lake Storage Gen2) or a normal dataflow created in Power BI.
 
 ![Creating an analytical dataflow in Power BI](media/analytical-standard-dataflows/create-analytical-dataflow-powerbi.png)
 
-You can also create analytical dataflows in Power Platform dataflows. When you are creating a Power Platform dataflow through Power Apps Portal, there is an option about making it an analytical dataflow which you can select..
+You can also create analytical dataflows in Power Platform dataflows. When you are creating a Power Platform dataflow through the Power Apps portal, you can choose the option to make it an analytical dataflow.
 
 ![Creating Analytical Dataflow in Power Platform](media/analytical-standard-dataflows/create-analytical-dataflow-power-platform.png)
 
 ### AI functionalities
 
-Depending on the requirement, sometimes, you might need to apply some AI and machine learning functions on the data through the dataflow. These functionalities are possible when the dataflow is analytical. 
+Depending on the requirement, sometimes you might need to apply some AI and machine learning functions to the data through the dataflow. These functionalities are possible when the dataflow is analytical. 
 
 ![AI insights in an analytical dataflow](media/analytical-standard-dataflows/dataflow-ai-functions.png)
 
@@ -47,7 +47,7 @@ The following articles discuss how to use AI functions in a dataflow:
 - [Cognitive Services in Power BI](https://docs.microsoft.com/power-bi/service-cognitive-services)
 - [Automated Machine Learning in Power BI](https://docs.microsoft.com/power-bi/service-machine-learning-automated)
 
-Note that the features listed above are not available in a standard dataflow.
+Note that the features listed above aren't available in a standard dataflow.
 
 ### Computed entity
 
@@ -76,6 +76,7 @@ The following table lists some differences between a standard entity and an anal
 | Mapping to standard Entity        | Yes              | Yes                                                         |
 | Incremental load                  | Default incremental-load<br />Possible to change using the **Delete rows that no longer exist in the query output** checkbox at the load settings | Default full-load <br />Possible to set up incremental refresh by setting up the incremental refresh in the dataflow settings |
 | Scheduled Refresh                 | Yes              | Yes, the possibility of notifying the dataflow owners upon the failure |
+| | | |
 
 ## Scenarios to use each dataflow type
 
@@ -87,7 +88,7 @@ If your plan for building dataflows is to use the stored data in multiple platfo
 
 ### Heavy data transformations on large data tables&mdash;analytical dataflow
 
-Analytical dataflows are an excellent option for processing large amounts of data. Analytical dataflows are also enhancing the computing power behind the transformation. Having the data is stored in Azure Data Lake,  increases the writing speed to a destination. Compared to Common Data Service (which might have many rules to check at the time of data storage), Azure Data Lake is faster for read/write transactions on a large amount of data.
+Analytical dataflows are an excellent option for processing large amounts of data. Analytical dataflows also enhance the computing power behind the transformation. Having the data stored in Azure Data Lake Storage Gen2 increases the writing speed to a destination. Compared to Common Data Service (which might have many rules to check at the time of data storage), Azure Data Lake Storage Gen2 is faster for read/write transactions on a large amount of data.
 
 ### AI features&mdash;analytical dataflow
 

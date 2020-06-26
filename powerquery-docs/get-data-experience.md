@@ -35,24 +35,24 @@ Most connectors initially require at least one parameter to initialize a connect
 
 In comparison, when trying to connect to an Excel file, Power Query requires the user to find the file they want to connect to by using the file path.
 
-The connector parameters are commonly used to establish a connection to a data source and they, in conjunction with the connector used, define what's called a Data Source Path.
+The connector parameters are commonly used to establish a connection to a data source and they, in conjunction with the connector used, define what's called a *data source path*.
 
 >[!Note] 
->Some connectors don't require you to enter any parameters at all. These are called Singleton Connectors and will only have one data source path available per environment. Some examples are Adobe Analytics, MailChimp, and Google Analytics.
+>Some connectors don't require you to enter any parameters at all. These are called *singleton connectors* and will only have one data source path available per environment. Some examples are Adobe Analytics, MailChimp, and Google Analytics.
 
 ## 2. Authentication 
 
-Every single connection that is made in Power Query has to be authenticated. The authentication methods vary from connector to connector and some connectors might offer multiple methods of authentication.
+Every single connection that is made in Power Query has to be authenticated. The authentication methods vary from connector to connector, and some connectors might offer multiple methods of authentication.
 
 The current available methods of authentication for Power Query are:
-* **Anonymous** - Commonly used when connecting to a Web Page.
-* **Basic** - Accepts a **username** and **password** to be sent in base64 encoding.
-* **API Key** - Accepts a single API Key for authentication.
-* **Organizational account / Microsoft Account** - Also known as **OAuth 2.0**.
-* **Windows** - Can be implicit or explicit. Impersonation can also be an option.
-* **Database** - Only available in some connectors specific to databases.
+* **Anonymous**&mdash;Commonly used when connecting to a Web Page.
+* **Basic**&mdash;Accepts a **username** and **password** to be sent in base64 encoding.
+* **API Key**&mdash;Accepts a single API Key for authentication.
+* **Organizational account / Microsoft Account**&mdash;Also known as **OAuth 2.0**.
+* **Windows**&mdash;Can be implicit or explicit. Impersonation can also be an option.
+* **Database**&mdash;Only available in some connectors specific to databases.
 
-For example, for the Azure SQL Server connector the available authentication methods are Windows, Database and Microsoft account as shown in the following image:
+For example, the available authentication methods for the Azure SQL Server connector are Windows, Database, and Microsoft account.
 
 ![SQL Server connector authentication methods](images/me-authentication.png)
 
@@ -63,17 +63,17 @@ The navigation table or navigator's window goal is to display, in a user-friendl
 ![SQL Server connector navigator](images/me-navigator.png)
 
 The two main sections of this window are:
-* **Object selection** - Displayed on the left-hand side of the window. The
-    user can interact with these objects and select one or enable the
+* **Object selection**&mdash;Displayed on the left-hand side of the window. The
+    user can interact with these objects and select one, or enable
     multi-select to get multiple objects.
-* **The data preview** - It displays a preview of the data from the selected
+* **The data preview**&mdash;Displays a preview of the data from the selected
     object on the right-hand side of the window.
 
 >[!Note] 
 >Some connectors completely bypass this window and go straight to the
-output query phase. One example of a connector that can do this is the 'Folder"
+output query phase. One example of a connector that can do this is the "Folder"
 connector.
 
 ## 4. Output query
 
-This is the phase where the user defines where to load the query. The options vary from integration to integration. But one option that is always be available is the option to load data to the Power Query Editor to further transform and enrich the query.
+This is the phase where the user defines where to load the query. The options vary from integration to integration. But one option that is always available is the option to load data to the Power Query Editor to further transform and enrich the query.

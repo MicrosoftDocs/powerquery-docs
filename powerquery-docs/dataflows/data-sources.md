@@ -100,21 +100,21 @@ The **Other** category includes the following available data connections for dat
 
 ## Connect to a data source
 
-To connect to a data source, select the data source. This section uses one example to show how the process works, but each data connection for dataflows is similar in process. Different connectors might require specific credentials or other information, but the flow is similar. In our example, you see in the following image that **Common Data Service for Apps** is selected from the **Online services** data connection category.
+To connect to a data source, select the data source. This section uses one example to show how the process works, but each data connection for dataflows is similar in process. Different connectors might require specific credentials or other information, but the flow is similar. In this example, you see in the following image that **Common Data Service for Apps** is selected from the **Online services** data connection category.
 
 ![Select Common Data Service for Apps](media/dataflows-data-sources/dataflows-data-sources-05.png)
 
-A connection window for the selected data connection is displayed. If credentials are required, you're prompted to provide them. The following image shows a Server URL being entered to connect to a Common Data Service for Apps server.
+A connection window for the selected data connection is displayed. If credentials are required, you're prompted to provide them. The following image shows a Server URL being entered to connect to a Common Data Service server.
 
 ![Credentials or URLs for data connections](media/dataflows-data-sources/dataflows-data-sources-06.png)
 
 Once the Server URL or resource connection information is provided, select **Sign in** to enter the credentials to use for the data access, then select **Next**.
 
-**Power Query Online** initiates and establishes the connection to the data source, and then presents the available tables from that data source in the **Navigator** window, as shown in the following image.
+**Power Query Online** initiates and establishes the connection to the data source. It then presents the available tables from that data source in the **Navigator** window, as shown in the following image.
 
 ![Navigator window shows tables in the data source](media/dataflows-data-sources/dataflows-data-sources-07.png)
 
-You can select tables and data to load by selecting the checkbox next to each in the left pane. To load the data, select **OK** from the bottom of the **Navigator** pane. A Power Query Online dialog appears, where you can edit queries and perform any other transformation you want to perform on the selected data.
+You can select tables and data to load by selecting the checkbox next to each in the left pane. To load the data, select **OK** from the bottom of the **Navigator** pane. A Power Query Online dialog appears. In this dialog, you can edit queries and perform any other transformation you want to perform to the selected data.
 
 ![Edit queries and transform in Power Query Editor](media/dataflows-data-sources/dataflows-data-sources-08.png)
 
@@ -122,9 +122,9 @@ That's all there is to it. Other data sources have similar flows, and use Power 
 
 ## Connecting to additional data sources
 
-There are additional data connectors that are not shown in the Power BI dataflows user interface, but are supported with a few additional steps. 
+There are additional data connectors that aren't shown in the Power BI dataflows user interface, but are supported with a few additional steps. 
 
-You can take the following steps to create a connection to a connector that is not displayed in the user interface:
+You can take the following steps to create a connection to a connector that isn't displayed in the user interface:
 
 1. Open **Power BI Desktop** and select **Get Data**.
 2. Open **Power Query Editor** in Power BI Desktop, then right-click on the relevant query and open the **Advanced Editor**, as shown in the following image. From there, you can copy the M script that appears in the Advanced Editor.
@@ -139,7 +139,7 @@ You can take the following steps to create a connection to a connector that is n
 
     ![Copy the M script into the editor window](media/dataflows-data-sources/dataflows-data-sources-11.png) 
 
-And then your script connects to the data source you specified. 
+Your script then connects to the data source you specified. 
 
 The following list shows which connectors you can currently use by copying and pasting the M query into a blank query:
 

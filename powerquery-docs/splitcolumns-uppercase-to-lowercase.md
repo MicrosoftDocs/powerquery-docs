@@ -1,6 +1,6 @@
 ---
-title: Splitting Columns By Uppercase to Lowercase
-description: Splitting Columns By Uppercase to Lowercase
+title: Split columns by uppercase to lowercase
+description: Split columns by uppercase to lowercase
 author: jessli20
 
 ms.topic: conceptual
@@ -9,36 +9,43 @@ ms.date: 06/04/2020
 ms.author: jessli20
 ---
 
-# Split Columns: By Uppercase to Lowercase
+# Split columns by uppercase to lowercase
 
-In Power Query, you can create a split a column through different functions.
-In this case, the column(s) selected can be split by every instance of the last Uppercase to the next first Lowercase.
+In Power Query, you can split a column through different methods.
+In this case, the column(s) selected can be split by every instance of the last uppercase letter to the next lowercase letter.
 
-## Where to find the Split Columns: By Uppercase to Lowercase
-We can find the Split Columns: By Uppercase to Lowercase option in three places:
-1. **Home tab** - under the Split column dropdown menu inside the Transform group 
-![image](images/sc-home-ul.png)
-2. **Transform tab** - under the Split column dropdown menu inside the Text column group
-![image](images/sc-transform-ul.png)
-3. **Right-click a column** - inside the split columns option
-![image](images/sc-rightclick-ul.png)
+## Where to find Split Columns > By Uppercase to Lowercase
 
-## Split Columns By Uppercase to Lowercase 
+You can find the **Split Columns > By Uppercase to Lowercase** option in three places:
 
-Our initial table will be the one below with only one column for "Column1". 
+* **Home tab**&mdash;under the **Split Column** dropdown menu inside the **Transform** group.
+
+   ![image](images/sc-home-ul.png)
+
+* **Transform tab**&mdash;under the **Split Column** dropdown menu inside the **Text Column** group.
+
+   ![image](images/sc-transform-ul.png)
+
+* **Right-click a column**&mdash;inside the **Split Column** option.
+
+   ![image](images/sc-rightclick-ul.png)
+
+## Split columns by uppercase to lowercase into columns 
+
+Your initial table in this example will be the one shown in the image below, with only one column for **Column1**. 
 
 ![image](images/sc-before-ul.png)
 
 This column holds two values:
-1. **FirstWord** - The first half of a product that is in camel case
-2. **SecondWord** - The second half of a product that is in camel case
 
-We want to split this column into the two columns described before. 
-Select the column and select the option to split the column by Uppercase to Lowercase.
+* **FirstWord**&mdash;The first half of a product that is in camel case.
+* **SecondWord**&mdash;The second half of a product that is in camel case.
 
-This singular column will split into multiple columns given every instance of the last Uppercase letter to the next Lowercase letter. In this case, it only splits it into two.
+In this example, you want to split this column into the two columns described in the list above. Select the column and then select the option to split the column by uppercase to lowercase.
 
-Our final table will be as such:
+This singular column will split into multiple columns given every instance of the last uppercase letter to the next lowercase letter. In this case, it only splits into two columns.
+
+Your final table will look like the following image.
 
 ![After](images/sc-after-ul.png)
 

@@ -1,20 +1,30 @@
-# Fill Down / Up
+---
+title: Fill down or fill up
+description: Fill down or fill up
+author: ptyx507
+ms.service: powerquery
+ms.reviewer: v-douklo
+ms.date: 06/08/2020
+ms.author: v-miesco
+---
 
-The operation to fill up / down is an operation that can happen from row to row in a single column. 
+# Fill down or fill up
 
-For example, imagine the following table where we would like to fill down on the Date column and fill up on the Comments column:
+The operation to fill down or fill up is an operation that can happen from row to row in a single column. 
+
+For example, imagine the following table where you'd like to fill down in the **Date** column and fill up in the **Comments** column.
 
 ![](images/me-fill-down-up-final-source.png)
 
-The outcome that we're expecting is the following:
+The outcome that you'd expect is shown in the following image.
 
 ![](images/me-fill-down-up-final-table.png)
 
-## To Fill Down
+## To fill down
 
-The fill down operation takes a column and traverses through the values in it to fill any null values in the next rows until it finds a new value. This process continues on a row by row basis until there are no more values in that column
+The fill down operation takes a column and traverses through the values in it to fill any null values in the next rows until it finds a new value. This process continues on a row by row basis until there are no more values in that column.
 
-In our example, we want to fill down on the Date column. To do that, you can right click on the Date column and select the option to Fill and Down:
+In the following example, you want to fill down on the **Date** column. To do that, you can right-click on the **Date** column and then select **Fill > Down**.
 
 ![](images/me-fill-down-up-right-click.png)
 
@@ -24,20 +34,20 @@ The result of that operation will look like this:
 
 ## To Fill Up
 
-Similarly to the Fill down operation, the fill up works on a column, but it finds the last value of the column and fills any null values in the previous rows until it finds a new value and then the same process occurs for that value until. This process continues until there are no more values in that column.
+In the same way as the Fill down operation, the fill up works on a column. But fill up finds the last value of the column and fills any null values in the previous rows until it finds a new value. Then the same process occurs for that value. This process continues until there are no more values in that column.
 
-In our example, we want to fill up on the Comments column. You'll notice that our Comments column doesn't have null values, but instead it has what appears to be empty cells. Before we can do the fill up operation, we need transform those empty spaces into null values. To make that happen, we simply select the column, go to the transform tab and select the option to Replace values. 
+In the following example, you want to fill up the **Comments** column. You'll notice that your **Comments** column doesn't have null values. I instead, it has what appears to be empty cells. Before you can do the fill up operation, you need to transform those empty spaces into null values. To make that happen,select the column, go to the **Transform** tab, and select **Replace values**. 
 
 ![](images/me-fill-down-up-replace-values.png)
 
-In the replace values window, we'll leave the "Value to find" completely blank and in the "Replace with" we'll type null:
+In the **Replace values** window, leave **Value to find** blank. In **Replace with**, enter **null**.
 
 ![](images/me-fill-down-up-replace-values-window.png)
 
 >[!NOTE] 
->You can learn more about the Replace values operation see [Replace values](replace-values.md).
+>To learn more about the replace values operation see [Replace values](replace-values.md).
 
-Once all of our empty values are replaced for null values, we select the Comments column, go to the Transform tab and select the Fill up operation from the Any Column group:
+Once all of your empty values are replaced with null values, select the **Comments** column, go to the **Transform** tab, and then select **Fill > Up**.
 
 ![](images/me-fill-down-up-fill-up-icon.png)
 
@@ -46,23 +56,22 @@ The result of that operation will look like this:
 ![](images/me-fill-down-up-fill-up-final.png)
 
 
+## Cleaning up your table
 
-## Cleaning our table
+To finish your table, perform the following transformations:
 
-To finish our table, we will perform the following transformations:
-
-1. Filter the Units column to only have rows that are not equal to *null* 
+1. Filter the **Units** column to only have rows that are not equal to *null*.
 
    ![](images/me-fill-down-up-filter-null-values.png)
 
-2. Rename the Comments column to be Sales Person
+2. Rename the **Comments** column to be **Sales Person**.
 
-![](images/me-fill-down-up-rename-column.png)
+   ![](images/me-fill-down-up-rename-column.png)
 
-3. Replace the values inside the Sales Person column from 'Sales Person: ' to '' so we only get the names of the Sales Persons.
+3. Remove the **Sales Person:** values inside the **Sales Person** column so you only get the names of the sales persons.
 
-![](images/me-fill-down-up-replace-sales-person.png)
+   ![](images/me-fill-down-up-replace-sales-person.png)
 
-And this gives us exactly the table that we were looking for:
+Now you should have exactly the table you were looking for.
 
 ![](images/me-fill-down-up-final-table.png)
