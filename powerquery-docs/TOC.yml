@@ -121,7 +121,7 @@
         - name: "Get data from dataflows"
           href: dataflows/troubleshooting-dataflow-issue-get-data-from-dataflow.md
         - name: "Connection to the source"
-          href: troubleshooting-dataflow-issues-connection-to-the-data-source.md
+          href: dataflows/troubleshooting-dataflow-issues-connection-to-the-data-source.md
     - name: "Connector reference"
       items:
       - name: "Excel"
