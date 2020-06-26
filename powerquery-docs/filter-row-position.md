@@ -1,137 +1,157 @@
-# Filter a table by Row Position
+---
+title: Filter a table by row position
+description: Filter a table by row position
+author: ptyx507
+ms.service: powerquery
+ms.reviewer: v-douklo
+ms.date: 06/08/2020
+ms.author: v-miesco
+---
 
-In Power Query, we have multiple options to filter a table based on the positions of its rows either by keeping or removing those rows. In this article we'll cover all of the methods available in Power Query to filter a table by row position.
+# Filter a table by row position
 
-## Keep Rows
+Power Query has multiple options to filter a table based on the positions of its rows, either by keeping or removing those rows. This article covers all of the methods available in Power Query to filter a table by row position.
 
-These set of functions will select a set of rows from the table and will remove any other rows that do not meet the criteria.
+## Keep rows
 
-We have 2 places where we can find the Keep Rows buttons:
+The *keep rows* set of functions will select a set of rows from the table and will remove any other rows that don't meet the criteria.
 
-1. **Home tab** - under the reduce rows group as the Keep rows button.![](images/me-filter-row-position-keep-rows-home-tab.png)
-2. **Table contextual menu** - inside the data preview section. ![](images/me-filter-row-position-keep-rows-contextual-menu.png)
+There are two places where you can find the keep rows buttons:
 
-### Keep Top Rows
+- **Home tab**&mdash;under the **Reduce Rows** group as the **Keep Rows** button.
+
+   ![](images/me-filter-row-position-keep-rows-home-tab.png)
+
+- **Table contextual menu**&mdash;inside the data preview section. 
+
+   ![](images/me-filter-row-position-keep-rows-contextual-menu.png)
+
+### Keep top rows
 
 Imagine the following table that comes out of a system with a fixed layout:
 
 ![](images/me-filter-row-position-keep-top-rows-start.png)
 
-This report will always contain 7 rows of data, and after that it'll have a section for comments with an unknown number of rows. We want to only keep those first 7 rows of data. To do that, we select the 'Keep top rows' from the table contextual menu and inside the Keep top rows window we input the number 7 in the 'Number of rows' textbox:
+This report will always contain seven rows of data, and after that it will have a section for comments with an unknown number of rows. In this example, you only want to keep the first seven rows of data. To do that, select **Keep top rows** from the table contextual menu. Inside the **Keep top rows** window, enter the number **7** in the **Number of rows** textbox.
 
 ![](images/me-filter-row-position-keep-top-rows-window.png)
 
-The result of that will give us the output table that we're looking for. After we set the data types to our columns, our table will look like this:
+The result of that change will give you the output table you're looking for. After you set the data types to your columns, your table will look like this:
 
 ![](images/me-filter-row-position-keep-rows-final.png)
 
-### Keep Bottom Rows
+### Keep bottom rows
 
 Imagine the following table that comes out of a system with a fixed layout:
 
 ![](images/me-filter-row-position-keep-bottom-rows-start.png)
 
-This report will always contain 7 rows of data right at the end of the report page. Before that, the report holds a section for comments with an unknown number of rows. We want to only keep those last 7 rows of data and the header row. 
+This report will always contain seven rows of data right at the end of the report page. Before that, the report holds a section for comments with an unknown number of rows. In this example, you only want to keep those last seven rows of data and the header row. 
 
-To do that, we select the 'Keep bottom rows' option from the table contextual menu and inside the Keep bottom rows window we input the number 8 in the 'Number of rows' textbox:
+To do that, select **Keep bottom rows** from the table contextual menu. Inside the **Keep bottom rows** window, enter the number **8** in the **Number of rows** textbox.
 
 ![](images/me-filter-row-position-keep-bottom-rows-window.png)
 
-The result of that operation will give us 8 rows, but our column header is part of the table. 
+The result of that operation will give you eight rows, but our column header is part of the table. 
 
 ![](images/me-filter-row-position-keep-bottom-rows-non-promoted-headers.png)
 
-We need to promote the column headers from the first row of our table. We can do this by selecting the 'Use first row as headers' option from the table contextual menu and the result of that will be our table with the correct column headers. After we set the data types to our columns, our table will look like this:
+You need to promote the column headers from the first row of your table. To do this, select **Use first row as headers** from the table contextual menu. The result of that change will be that your table will contain the correct column headers. After you set the data types to your columns, your table will look like this:
 
 ![](images/me-filter-row-position-keep-rows-final.png)
 
 > [!Note]
-> You can read more about the operations to promote and demote headers from this article (url).
+> To read more about the operations to promote and demote headers, see [article name] (url).
 
-### Keep Range of Rows
+### Keep range of rows
 
 Imagine the following table that comes out of a system with a fixed layout:
 
 ![](images/me-filter-row-position-keep-range-rows-start.png)
 
-This report will always contain 5 rows for the Header, 1  row of column headers after that, 7 rows of data right after that and then an unknown number of rows for its comments section. Our goal is to get the 8 rows after the header section of the report and only those 8 rows. 
+This report will always contain five rows for the header, one row of column headers after that, seven rows of data right after that, and then an unknown number of rows for its comments section. In this example, you want to get the eight rows after the header section of the report and only those eight rows. 
 
-To do that, we select the 'Keep range of rows' option from the table contextual menu and inside the Keep range of rows window we input the number 6 in the 'First row' textbox and the number 8 in the 'Number of rows' textbox:
+To do that, select **Keep range of rows** from the table contextual menu. Inside the **Keep range of rows** window, enter the number **6** in the **First row** textbox and the number **8** in the **Number of rows** textbox.
 
 ![](images/me-filter-row-position-keep-range-rows-window.png)
 
-Similar to the previous example for 'Keep bottom rows', the result of that operation will give us 8 rows, but our column header is part of the table:
+Similar to the previous example for "Keep bottom rows", the result of that operation will give you eight rows, but your column header is part of the table.
 
 ![](images/me-filter-row-position-keep-bottom-rows-non-promoted-headers.png)
 
-We can perform the same operation to promote the column headers from the first row of our table. After we set the data types to our columns, our table will look like this:
+You can perform the same operation as in the previous section to promote the column headers from the first row of your table. After you set the data types to your columns, your table will look like the one in the following image.
 
 ![](images/me-filter-row-position-keep-rows-final.png)
 
-## Remove Rows
+## Remove rows
 
-These set of functions will select a set of rows from the table to remove them and only keep the rest of the rows from the table. 
+This set of functions will select a set of rows from the table, remove them, and only keep the rest of the rows in the table. 
 
-We have 2 places where we can find the Remove Rows buttons:
+There are two places where you can find the **Remove Rows** buttons:
 
-1. **Home tab** - under the reduce rows group as the Keep rows button.![](images/me-filter-row-position-remove-rows-home-tab.png)
-2. **Table contextual menu** - inside the data preview section. ![](images/me-filter-row-position-remove-rows-contextual-menu.png)
+- **Home tab**&mdash;under the **Reduce Rows** group as the **Keep Rows** button.
 
-### Remove Top Rows
+   ![](images/me-filter-row-position-remove-rows-home-tab.png)
+
+- **Table contextual menu**&mdash;inside the data preview section. 
+
+   ![](images/me-filter-row-position-remove-rows-contextual-menu.png)
+
+### Remove top rows
 
 Imagine the following table that comes out of a system with a fixed layout:
 
 ![](images/me-filter-row-position-remove-top-rows-start.png)
 
-This report will always contain a fixed section or header that will go from row 1 until row 5 of the table. We want to remove the first 5 rows of the table and only keep the rest of the data.
+This report will always contain a fixed section or header that will go from row 1 until row 5 of the table. In this example, you want to remove the first five rows of the table and only keep the rest of the data.
 
-To do that, we select the 'Remove top rows' option from the table contextual menu and inside the Remove top rows window we input the number 5 in the 'Number of rows' textbox:
+To do that, select **Remove top rows** from the table contextual menu. Inside the **Remove top rows** window, enter the number **5** in the **Number of rows** textbox.
 
 ![](images/me-filter-row-position-remove-top-rows-window.png)
 
-Similarly to the previous example for 'Keep bottom rows' and 'Keep range of rows', the result of that operation will give us 8 rows, but our column header is part of the table:
+In the same way as the previous examples for "Keep bottom rows" and "Keep range of rows", the result of that operation will give you eight rows, but your column header is part of the table.
 
 ![](images/me-filter-row-position-keep-bottom-rows-non-promoted-headers.png)
 
-We can perform the same operation to promote the column headers from the first row of our table. After we set the data types to our columns, our table will look like this:
+You can perform the same operation as in previous examples to promote the column headers from the first row of your table. After you set the data types to your columns, your table will look like the one in the following image.
 
 ![](images/me-filter-row-position-keep-rows-final.png)
 
-### Remove Bottom Rows
+### Remove bottom rows
 
 Imagine the following table that comes out of a system with a fixed layout:
 
 ![](images/me-filter-row-position-remove-bottom-rows-start.png)
 
-This report will always contain a fixed section or footer that will always be the last 5 rows of the table. We want to remove those last 5 rows of the table and only keep the rest of the data.
+This report will always contain a fixed section or footer that will always be the last five rows of the table. In this example, you want to remove those last five rows of the table and only keep the rest of the data.
 
-To do that, we select the 'Remove bottom rows' option from the table contextual menu and inside the Remove top rows window we input the number 5 in the 'Number of rows' textbox:
+To do that, select **Remove bottom rows** from the table contextual menu. Inside the **Remove top rows** window, enter the number **5** in the **Number of rows** textbox.
 
 ![](images/me-filter-row-position-remove-bottom-rows-window.png)
 
-The result of that will give us the output table that we're looking for. After we set the data types to our columns, our table will look like this:
+The result of that change will give you the output table that you're looking for. After you set the data types to your columns, your table will look like this:
 
 ![](images/me-filter-row-position-keep-rows-final.png)
 
-### Remove Alternate Rows
+### Remove alternate rows
 
 Imagine the following table that comes out of a system with a dynamic layout:
 
 ![](images/me-filter-row-position-remove-alternate-rows-start.png)
 
-The way that this report is structured is that we have elements in pairs. Every odd row (1,3,5...) contain the data that we need and right underneath each of those rows, the even rows, there are comments for each of those records. We do not need the comments and we want to remove all of them.
+In this example, the way this report is structured is that you have elements in pairs. Every odd row (1,3,5...) contains the data that you need. Right underneath each of those rows, the even rows, there are comments for each of those records. You don't need the comments and you want to remove all of them.
 
-To do that, we select the 'Remove alternate rows' option from the table contextual menu and inside the Remove alternate rows window we input:
+To do that, select **Remove alternate rows** from the table contextual menu. Inside the **Remove alternate rows** window, enter the following values:
 
 * **First row to remove:** 2
-  * We want to start counting from the second row
+  * You want to start counting from the second row.
 * **Number of rows to remove:** 1
-  * We start defining the pattern to remove rows. After we find the second row, we only want to remove that specific row, so we say that we only need to remove 1 row.
+  * You start defining the pattern to remove rows. After you find the second row, you only want to remove that specific row, so you say that you only need to remove one row.
 * **Number of rows to keep:** 1
-  * After we remove 1 row, we keep the next row and the process starts again for the next row
+  * After you remove one row, you keep the next row. The process starts again for the next row.
 
 ![](images/me-filter-row-position-remove-alternate-rows-window.png)
 
-The result of that will give us the output table that we're looking for. After we set the data types to our columns, our table will look like this:
+The result of that selection will give you the output table that you're looking for. After you set the data types to your columns, your table will look like this:
 
 ![](images/me-filter-row-position-keep-rows-final.png)

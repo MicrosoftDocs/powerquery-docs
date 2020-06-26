@@ -1,85 +1,105 @@
-# Add a Custom column
+---
+title: Add a custom column
+description: Add a custom column
+author: ptyx507
+ms.service: powerquery
+ms.reviewer: v-douklo
+ms.date: 06/08/2020
+ms.author: v-miesco
+---
 
-*Content partially taken from the Power BI docs [article](https://docs.microsoft.com/en-us/power-bi/create-reports/desktop-add-custom-column).*
+# Add a custom column
+
+*Content partially taken from the Power BI docs [article](https://docs.microsoft.com/power-bi/create-reports/desktop-add-custom-column).*
 
 In Power Query, you can create your custom column using the PowerQuery M formula language. PowerQuery M formula language has a comprehensive function reference content set.
 
-Imagine that we have the following table with a set of columns: 
+Imagine that you have the following table with a set of columns. 
 
 ![image](images/me-add-custom-column-initial-table.png)
 
-Using the columns Units, Unit Price and Discount, We would like to create a two new columns:
+Using the **Units**, **Unit Price**, and **Discount** columns, you would like to create two new columns:
 
-* **Total Sale before Discount** - calculated by multiplying the Unit column times the Unit Price
-* **Total Sale after Discount** - calculated by multiplying the **Total Sale before Discount** column by the net percentage value ( one minus the discount value )
+* **Total Sale before Discount**&mdash;calculated by multiplying the **Units** column times the **Unit Price** column.
+* **Total Sale after Discount**&mdash;calculated by multiplying the **Total Sale before Discount** column by the net percentage value (one minus the discount value).
 
-The final table with the new columns will look like this:
+The final table with the new columns will look like the table in the following image.
 
 ![image](images/me-add-custom-column-final-table.png)
 
 ## To add a custom column
 
-To create a custom column,  click on the **Custom Column** button from the **Add Column** tab on the ribbon.
+To create a custom column, select the **Custom Column** button from the **Add Column** tab on the ribbon.
 
 ![images](images/me-add-custom-column-icon.png)
 
-After selecting this, a new **Add Custom Column** window appears.
+After selecting the custom column, a new **Add Custom Column** window appears.
 
 ![images](images/me-add-custom-column-window.png)
 
-This is where we define the the formula to create our columns.
+This window is where you define the formula to create your columns.
 
 The **Add Custom Column** window has the following features: 
-- A list of available columns, in the **Available columns** list on the right.
+- A list of available columns in the **Available columns** list on the right.
 
-- The initial name of your custom column, in the **New column name** box. You can rename this column.
+- The initial name of your custom column in the **New column name** box. You can rename this column.
 
-- [PowerQuery M formula](https://docs.microsoft.com/powerquery-m/power-query-m-function-reference), in the **Custom column formula** box.  
+- [Power Query M formula](https://docs.microsoft.com/powerquery-m/power-query-m-function-reference) in the **Custom column formula** box.  
 
-To add a new custom column, you can select a column from the **Available columns** list on the right, and then select **Insert** below the list to add them to the custom column formula. You can also add a column by double-clicking it in the list. Alternatively, you can write your own formula using the Power Query formula language.
+To add a new custom column, select a column from the **Available columns** list on the right. Then select **Insert column** below the list to add them to the custom column formula. You can also add a column by double-clicking it in the list. Alternatively, you can write your own formula using the Power Query M formula language in the **Custom column formula** text box.
 
 >[!Note]
 >If there's a syntax error when creating your custom column, you'll see a yellow warning icon, along with an error message and reason. 
 
 ### Adding the Total Sales before Discount column
 
-The formula that we will use to create the **Total Sale before Discount** is ```[Units] * [Unit Price]  ``` and this is how it'll look in our Custom column window:
+The formula that you can use to create the **Total Sales before Discount** is `[Units] * [Unit Price]  `. The following image shows how it will look in your **Custom column** window.
 
 ![image](images/me-add-custom-column-total-sale-before-discount.png)
 
-The result of that operation will add a new 'Total Sales beforre Discount' column to our table and will look like the following image:
+The result of that operation will add a new **Total Sales before Discount** column to your table and will look like the following image:
 
 ![image](images/me-add-custom-column-total-sale-before-discount-column.png)
 
 ### Adding the Total Sales after Discount column
 
-The formula that we will use to create the **Total Sale before Discount** is ```[Total Sale before Discount]* (1-[Discount])  ``` and this is how it'll look in our Custom column window:
+The formula that you can use to create the **Total Sales before Discount** is `[Total Sales before Discount]* (1-[Discount]) `. The following image shows how it will look in your **Custom column** window.
 
 ![image](images/me-add-custom-column-total-sale-after-discount.png)
 
-The result of that operation will add a new 'Total Sales after Discount' column to our table and will look like the following image:
+The result of that operation will add a new **Total Sales after Discount** column to your table and will look like the following image:
 
 ![image](images/me-add-custom-column-total-sale-after-discount-column.png)
 
-### Setting the column Data Types
+### Setting the column data types
 
-Notice that our new columns do not have a data type defined yet. We can tell this by looking at the icon in the header of the column which has the *any* data type icon (ABC123). We want to change the data types of both new columns to the type currency. To do that, we select both columns, go to the Home tab and inside the 'Transform' group click the data type dropdown and select the **Currency** data type.
+Notice that your new columns don't have a data type defined yet. You can tell this by looking at the icon in the header of the column that has the* data type icon (ABC123). You'll want to change the data types of both new columns to the type currency. 
+
+To change the data types:
+
+1. Select both the **Total Sales before Discount** and **Total Sales after Discount** columns.
+
+2. Open the **Home** tab.
+
+3. In **Transform** group, select the **Data Type** dropdown.
+
+4. Select the **Currency** data type.
 
 ![image](images/me-add-custom-column-data-types.png)
 
-After defining the data types for both columns, this is how our table will look like:
+After defining the data types for both columns, your table will looks like the following image.
 
 ![image](images/me-add-custom-column-final-table.png)
 
 ## Modify an existing custom column
 
-Power Query adds your custom column to the table, and adds the **Added Custom** step to your query's **Applied Steps** list in **Query Settings**.
+Power Query adds your custom column to the table, and adds the **Added custom** step to your query's **Applied steps** list in **Query settings**.
 
-![Custom column added to Query Settings](images/me-add-custom-column-reconfigure.png)
+![Custom column added to Query settings](images/me-add-custom-column-reconfigure.png)
 
-To modify your custom column, double-click the **Added Custom** step in the **Applied Steps** list. 
+To modify your custom column, double-click the **Added custom** step in the **Applied steps** list. 
 
-   The **Add Custom Column** window appears with the custom column formula you created.
+The **Add Custom Column** window appears with the custom column formula you created.
    
 ## Next steps
 

@@ -1,6 +1,6 @@
 ---
-title: Splitting Columns By Digit to Non-Digit
-description: Splitting Columns By Digit to Non-Digit
+title: Split columns by digit to non-digit
+description: Split columns by digit to non-digit
 author: jessli20
 
 ms.topic: conceptual
@@ -9,37 +9,44 @@ ms.date: 06/04/2020
 ms.author: jessli20
 ---
 
-# Split Columns: By Digit to Non-Digit
+# Split columns by digit to non-digit
 
-In Power Query, you can create a split a column through different functions.
+In Power Query, you can split a column through different methods.
 In this case, the column(s) selected can be split by every instance of a digit followed by a non-digit.
 
-## Where to find the Split Columns: By Digit to Non-Digit
-We can find the Split Columns: By Digit to Non-Digit option in three places:
-1. **Home tab** - under the Split column dropdown menu inside the Transform group 
-![image](images/sc-home-dtnd.png)
-2. **Transform tab** - under the Split column dropdown menu inside the Text column group
-![image](images/sc-transform-dtnd.png)
-3. **Right-click a column** - inside the split columns option
-![image](images/sc-rightclick-dtnd.png)
+## Where to find Split columns > By Digit to Non-Digit
 
-## Split Columns By Digit to Non-Digit 
+You can find the **Split Columns: By Digit to Non-Digit** option in three places:
 
-Our initial table will be the one below with a column for "Pets" and other extra columns.
-We will only focus on the "Pets" column.
+* **Home tab**&mdash;under the **Split Column** dropdown menu inside the **Transform** group.
+
+   ![image](images/sc-home-dtnd.png)
+
+* **Transform tab**&mdash;under the **Split Column** dropdown menu inside the **Text Column** group.
+
+   ![image](images/sc-transform-dtnd.png)
+
+* **Right-click a column**&mdash;inside the **Split Column** option.
+
+   ![image](images/sc-rightclick-dtnd.png)
+
+## Split columns by digit to non-digit into columns
+
+The initial table in this example will be the one shown in the image below, with a column for **Pets** and other extra columns.
+This example will only focus on the **Pets** column.
 
 ![image](images/sc-before-dtnd.png)
 
 This column holds two values in each row:
-1. **Rank** - The rank of the animal
-2. **AnimalType** - The second part of the word type of animal
 
-We want to split this column into the two columns described before. 
-Select the column and select the option to split the column by Digit to Non-Digit.
+* **Rank**&mdash;The rank of the animal.
+* **AnimalType**&mdash;The second part of the word is the type of animal.
+
+In this example, you want to split this column into the two columns described in the list above. Select the column and then select the option to split the column by digit to non-digit.
 
 This singular column will split into multiple columns given every instance of a digit followed with a non-digit. In this case, it only splits it into two.
 
-Our final table will be as such:
+Your final table will look like the following image.
 
 ![After](images/sc-after-dtnd.png)
 

@@ -14,7 +14,7 @@ LocalizationGroup: Data from files
 ---
 # Link entities between dataflows
 
-With dataflows in the Power Platform, you can have a single organizational data storage source where business analysts can prep and manage their data once, and then reuse it between different analytics apps in the organization. 
+With dataflows in Power Platform, you can have a single organizational data storage source where business analysts can prep and manage their data once, and then reuse it between different analytics apps in the organization. 
 
 When you link entities between dataflows, you can reuse entities that have already been ingested, cleansed, and transformed by other dataflows owned by others without the need to maintain that data. The linked entities simply point to the entities in other dataflows, and do *not* copy or duplicate the data.
 
@@ -47,7 +47,7 @@ There are a few ways to link entities between dataflows. You can select **Get Da
 
 A connection window for the selected data connection is displayed. If credentials are required, you're prompted to provide them. 
 
-In Power BI you can select **Add linked entities** from the Dataflows authoring tool, as shown in the following image. 
+In Power BI you can select **Add linked entities** from the dataflow authoring tool, as shown in the following image. 
 
 ![Linked entities in Power BI](media/dataflows-linked-entities/linked-entities-00.png)
 
@@ -59,7 +59,7 @@ To link entities, you must sign in with your Power BI credentials.
 
 A **Navigator** window opens and lets you choose a set of entities to which you can connect. The entities displayed are entities for which you have permissions, across all workspaces and environments in your organization. 
 
-Once your linked entities are selected, they appear in the list of entities for your dataflow in the authoring tool, with a special icon identifying them as Linked entities.
+Once your linked entities are selected, they appear in the list of entities for your dataflow in the authoring tool, with a special icon identifying them as linked entities.
 
 You can also view the source dataflow from the dataflow settings of your linked entity.
 
@@ -83,7 +83,7 @@ It's useful to note that the entire refresh process commits at once. Because of 
 
 ### Refresh logic in Power Apps
 
-The refresh logic of linked entities in Power Apps behave like an external data source. When the dataflow refreshes, it takes the latest data for the entity from the source dataflow. If the source dataflow refreshes, it doesn’t automatically impact the data in the destination dataflow.
+The refresh logic of linked entities in Power Apps behaves like an external data source. When the dataflow refreshes, it takes the latest data for the entity from the source dataflow. If the source dataflow refreshes, it doesn’t automatically impact the data in the destination dataflow.
 
 ## Permissions when viewing reports from dataflows
 
