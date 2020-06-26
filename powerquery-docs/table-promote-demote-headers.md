@@ -29,7 +29,7 @@ The **Remove top rows** window will appear. In this window, enter the number **4
 ![](images/me-table-promote-demote-headers-promote-remove-top-rows-window.png)
 
 > [!Note] 
-> To learn more about **Remove top rows** and other table operations, see [the following article](url).
+> To learn more about **Remove top rows** and other table operations, see [article title] (url).
 
 The result of that operation will leave your headers as the first row of your table.
 

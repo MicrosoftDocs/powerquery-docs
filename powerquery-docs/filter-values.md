@@ -25,7 +25,7 @@ In the column header, you'll see an icon with a down arrow. When you select this
 ![](images/me-filter-values-sort-filter-menu.png)
 
 > [!Note] 
-> In this article we'll focus on the aspects related to filtering data. To learn more about the sort options and how to sort columns in Power Query, see [article title](url).  
+> In this article we'll focus on the aspects related to filtering data. To learn more about the sort options and how to sort columns in Power Query, see [article title] (url).  
 
 #### Remove empty
 

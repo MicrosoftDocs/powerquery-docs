@@ -68,7 +68,7 @@ When combining or merging data between multiple data sources, you might get a `F
 
 ![](images/me-working-with-errors-formula-firewall.png)
 
-This error could be caused by a number of reasons, such as the data privacy levels between data sources or the way that these data sources are being combined / merged. You can read more about the Data Privacy Firewall and how to diagnose this issue from [Data Privacy Firewall](dataprivacyfirewall).
+This error could be caused by a number of reasons, such as the data privacy levels between data sources or the way that these data sources are being combined / merged. You can read more about the Data Privacy Firewall and how to diagnose this issue from [Data Privacy Firewall](dataprivacyfirewall.md).
 
 ## Cell-level error
 

@@ -61,7 +61,7 @@ You need to promote the column headers from the first row of your table. To do t
 ![](images/me-filter-row-position-keep-rows-final.png)
 
 > [!Note]
-> To read more about the operations to promote and demote headers, see [article](url).
+> To read more about the operations to promote and demote headers, see [article name] (url).
 
 ### Keep range of rows
 
