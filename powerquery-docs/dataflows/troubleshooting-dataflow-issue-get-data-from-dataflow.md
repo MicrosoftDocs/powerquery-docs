@@ -29,11 +29,11 @@ In the desktop tools such as Power Query in Excel and Power Query in the Power B
 
 You have to set up a scheduled refresh for a dataflow, or if you want to just have a single refresh, use the manual refresh option. 
 
-![Refresh dataflow](https://docs.microsoft.com/en-us/power-bi/transform-model/media/service-dataflows-create-use/dataflows-create-use_13.png)
+![Refresh dataflow](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-create-use/dataflows-create-use_13.png)
 
 Once a dataflow is refreshed, the data in entities will be visible in the Navigator window of other tools and services.
 
-![Schedule Refresh for dataflows](https://docs.microsoft.com/en-us/power-bi/transform-model/media/service-dataflows-create-use/dataflows-create-use_14.png)
+![Schedule Refresh for dataflows](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-create-use/dataflows-create-use_14.png)
 
 
 
@@ -67,4 +67,4 @@ The enhanced compute engine settings are disabled.
 
 [Enable the enhanced compute engine](https://docs.microsoft.com/power-bi/transform-model/service-dataflows-directquery), and then you'll have the option to connect to the dataflow using the DirectQuery option.
 
-![Enable enhanced compute engine](https://docs.microsoft.com/en-us/power-bi/transform-model/media/service-dataflows-directquery/dataflows-directquery-01.png)
+![Enable enhanced compute engine](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-directquery/dataflows-directquery-01.png)

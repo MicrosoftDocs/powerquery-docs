@@ -10,7 +10,7 @@ ms.author: v-miesco
 
 # Add a custom column
 
-*Content partially taken from the Power BI docs [article](https://docs.microsoft.com/en-us/power-bi/create-reports/desktop-add-custom-column).*
+*Content partially taken from the Power BI docs [article](https://docs.microsoft.com/power-bi/create-reports/desktop-add-custom-column).*
 
 In Power Query, you can create your custom column using the PowerQuery M formula language. PowerQuery M formula language has a comprehensive function reference content set.
 

@@ -25,15 +25,15 @@ A dataflow is external when it's connected to an external Azure Data Lake Storag
 
 ### Power BI dataflow connection to Azure Data Lake Storage Gen2
 
-To connect Power BI dataflows to Azure Data Lake Storage Gen2, you need to follow the process described in [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://docs.microsoft.com/en-us/power-bi/transform-model/service-dataflows-connect-azure-data-lake-storage-gen2) in the Power BI Admin Portal.
+To connect Power BI dataflows to Azure Data Lake Storage Gen2, you need to follow the process described in [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://docs.microsoft.com/power-bi/transform-model/service-dataflows-connect-azure-data-lake-storage-gen2) in the Power BI Admin Portal.
 
-![Connect your own Azure Data Lake Storage for Power BI dataflows](https://docs.microsoft.com/en-us/power-bi/transform-model/media/service-dataflows-connect-azure-data-lake-storage-gen2/dataflows-connect-08b.png)
+![Connect your own Azure Data Lake Storage for Power BI dataflows](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-connect-azure-data-lake-storage-gen2/dataflows-connect-08b.png)
 
 ### Power Platform dataflow: Analytical dataflow Settings
 
-If you're creating an analytical dataflow in Power Platform, then follow the steps in [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/connect-azure-data-lake-storage-for-dataflow) in PowerApps to configure the dataflow to use your own Azure Data Lake Storage Gen2 subscription.
+If you're creating an analytical dataflow in Power Platform, then follow the steps in [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://docs.microsoft.com/powerapps/maker/common-data-service/connect-azure-data-lake-storage-for-dataflow) in PowerApps to configure the dataflow to use your own Azure Data Lake Storage Gen2 subscription.
 
-![Storage account setting for Power Platform analytical dataflow](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/media/select-storage-account.png)
+![Storage account setting for Power Platform analytical dataflow](https://docs.microsoft.com/powerapps/maker/common-data-service/media/select-storage-account.png)
 
 ### Limitation on Change
 
@@ -43,17 +43,17 @@ When you create the connection between Azure Data Lake Storage Gen2 and the data
 
 In Power BI, you can get a better outcome using the enhanced compute engine for the dataflows. You can find this setting under the Premium capacity settings. The enhanced compute engine only works with Power BI capacities A3 or above. The enhanced compute engine will reduce the refresh time required for long-running ETL steps over computed entities, such as joins, distinct, filters, and group by. It also provides the ability to perform DirectQuery over entities from the Power BI dataset.
 
-![The enhanced compute engine](https://docs.microsoft.com/en-us/power-bi/transform-model/media/service-dataflows-enhanced-compute-engine/enhanced-compute-engine-01.png)
+![The enhanced compute engine](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-enhanced-compute-engine/enhanced-compute-engine-01.png)
 
-To learn more about the enhanced compute engine, see [The enhanced compute engine](https://docs.microsoft.com/en-us/power-bi/transform-model/service-dataflows-enhanced-compute-engine).
+To learn more about the enhanced compute engine, see [The enhanced compute engine](https://docs.microsoft.com/power-bi/transform-model/service-dataflows-enhanced-compute-engine).
 
 ## Next Steps
 
 The articles below provide further information that can be helpful.
 
-- [Connect Azure Data Lake Storage Gen2 for dataflow storage (Power BI dataflows)](https://docs.microsoft.com/en-us/power-bi/service-dataflows-connect-azure-data-lake-storage-gen2
+- [Connect Azure Data Lake Storage Gen2 for dataflow storage (Power BI dataflows)](https://docs.microsoft.com/power-bi/service-dataflows-connect-azure-data-lake-storage-gen2
   )
-- [Connect Azure Data Lake Storage Gen2 for dataflow storage (Power Platform dataflows)](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/connect-azure-data-lake-storage-for-dataflow)
+- [Connect Azure Data Lake Storage Gen2 for dataflow storage (Power Platform dataflows)](https://docs.microsoft.com/powerapps/maker/common-data-service/connect-azure-data-lake-storage-for-dataflow)
 - [Creating computed entities in dataflows](computed-entities)
-- [The enhanced compute engine](https://docs.microsoft.com/en-us/power-bi/transform-model/service-dataflows-enhanced-compute-engine)
+- [The enhanced compute engine](https://docs.microsoft.com/power-bi/transform-model/service-dataflows-enhanced-compute-engine)
 - [Standard vs Analytical dataflows](understanding-differences-between-analytical-standard-dataflows.md)
