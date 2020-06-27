@@ -1,3 +1,13 @@
+---
+title: Append data
+description: In Power Query you can append multiple queries. This article demonstrates how to append table queries in Power Query.
+author: ptyx507
+ms.service: powerquery
+ms.reviewer: v-douklo
+ms.date: 06/08/2020
+ms.author: v-miesco
+---
+
 # Append data
 
 In Power Query you can append multiple tables into a single table. The append operation creates a new table schema from all the column headers from the tables to be combined and appends the tables one on top of the other into a single table.
