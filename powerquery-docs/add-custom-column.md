@@ -10,7 +10,7 @@ ms.author: v-miesco
 
 # Add a custom column
 
-In Power Query, you can create your custom column using the PowerQuery M formula language. PowerQuery M formula language has a comprehensive function reference content set.
+In Power Query, you can create your custom column using the Power Query M formula language. Power Query M formula language has a comprehensive function reference content set.
 
 Imagine that you have the following table with a set of columns. 
 
