@@ -1,6 +1,6 @@
 ---
 title: Promote or demote column headers
-description: Promote or demote column headers
+description: In Power Query you can promote or demote headers from a table. This article demonstrates how to perform these operations. 
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: v-douklo
@@ -18,22 +18,22 @@ With Power Query, there are transformations to promote the rows to column header
 
 In this example, Power Query wasn't able to determine the headers of the table because the table contains a set of heading rows for the first three rows. The actual headers of the table begin on row 5.
 
-![](images/me-table-promote-demote-headers-promote-sample-table.png)
+![Sample table for promote rows to column headers](images/me-table-promote-demote-headers-promote-sample-table.png)
 
 Before you can promote the headers, you need to remove the first four rows of the table. To make that happen, use the contextual table menu on the top-left corner of the preview window and select the option to **Remove top rows**.
 
-![](images/me-table-promote-demote-headers-promote-remove-top-rows.png)
+![Remove top rows of sample table](images/me-table-promote-demote-headers-promote-remove-top-rows.png)
 
 The **Remove top rows** window will appear. In this window, enter the number **4** to the number of rows that you want to remove from the top.
 
-![](images/me-table-promote-demote-headers-promote-remove-top-rows-window.png)
+![Remove top rows window](images/me-table-promote-demote-headers-promote-remove-top-rows-window.png)
 
 > [!Note] 
-> To learn more about **Remove top rows** and other table operations, see [article title] (url).
+> To learn more about **Remove top rows** and other table operations, see [Filter by row position](filter-row-position.md).
 
 The result of that operation will leave your headers as the first row of your table.
 
-![](images/me-table-promote-demote-headers-promote-table-before-promote.png)
+![Sample table before promoting row to headers](images/me-table-promote-demote-headers-promote-table-before-promote.png)
 
 ### Locations of the promote headers operation
 
@@ -41,40 +41,40 @@ From here, you have a number of places where you can select the promote headers 
 
 * **Home tab**&mdash;inside the **Transform** group.
 
-   ![](images/me-table-promote-demote-headers-promote-home-tab.png)
+   ![Promote headers button in Home tab](images/me-table-promote-demote-headers-promote-home-tab.png)
 
 * **Transform tab**&mdash;inside the **Table** group.
 
-   ![](images/me-table-promote-demote-headers-promote-transform-tab.png)
+   ![Promote headers button in Transform tab](images/me-table-promote-demote-headers-promote-transform-tab.png)
 
 * **Contextual table menu**&mdash;the first option from the dropdown menu.
 
-   ![](images/me-table-promote-demote-headers-promote-table-menu.png)
+   ![Promote headers button inside contextual table menu](images/me-table-promote-demote-headers-promote-table-menu.png)
 
 After you perform the promote headers operation, your table will look like the following image.
 
-![](images/me-table-promote-demote-headers-promote-final-table.png)
+![Sample table after promoting row to headers](images/me-table-promote-demote-headers-promote-final-table.png)
 
 ## To demote column headers to rows
 
 In the following example, the table headers are incorrect and are, in fact, part of the table's data. You need to demote the headers to be part of the rows of the table.
 
-![](images/me-table-promote-demote-headers-demote-sample-table.png)
+![Sample table for demote header](images/me-table-promote-demote-headers-demote-sample-table.png)
 
 ### Locations of the demote headers operation
 
 * **Home tab**&mdash;as an option from the drop-down menu of **Use first row as headers** in the **Transform** group.
 
-   ![](images/me-table-promote-demote-headers-demote-home-tab.png)
+   ![Demote headers button inside Home tab](images/me-table-promote-demote-headers-demote-home-tab.png)
 
 * **Transform tab**&mdash;as an option from the drop-down menu of **Use first row as headers** in the **Table** group.
 
-   ![](images/me-table-promote-demote-headers-demote-transform-tab.png)
+   ![Demote headers button inside Transform tab](images/me-table-promote-demote-headers-demote-transform-tab.png)
 
 After you perform this operation, your table will look like the one in the following image.
 
-![](images/me-table-promote-demote-headers-demote-almost-final-table.png)
+![Sample table after demoting headers to rows](images/me-table-promote-demote-headers-demote-almost-final-table.png)
 
 As a last step, rename the columns by double-clicking on each column and typing a new name for each of the columns. The end result will look like the following image.
 
-![](images/me-table-promote-demote-headers-demote-final-table.png)
+![Final table after renaming columns](images/me-table-promote-demote-headers-demote-final-table.png)
