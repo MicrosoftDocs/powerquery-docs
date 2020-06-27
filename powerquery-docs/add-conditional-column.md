@@ -1,3 +1,13 @@
+---
+title: Add a conditional column
+description: With Power Query, you can add a conditional column to your query. You can define IF-THEN-ELSE conditions in your query. When the conditions are fulfilled, the conditional column will automatically display the values that you specified.
+author: ptyx507
+ms.service: powerquery
+ms.reviewer: 
+ms.date: 06/30/2020
+ms.author: v-miesco
+---
+
 # Add a conditional column
 
 With Power Query, you can add a conditional column to your query. You can define IF-THEN-ELSE conditions in your query. When the conditions are fulfilled, the conditional column will automatically display the values that you specified.
