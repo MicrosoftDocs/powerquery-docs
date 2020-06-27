@@ -1,6 +1,6 @@
 ---
 title: Data preview tools
-description: Data preview tools
+description: Overview of the Data Quality, Column Distribution, and Column Profile features found inside the Power Query Editor
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: v-douklo
@@ -24,7 +24,7 @@ To enable the data preview tools, select the **View** tab from the ribbon and na
 
 ![Data preview tools](images/me-enable-data-preview-tools.png)
 
-Once enabled, the following image shows how they'll be seen inside Power Query Editor.
+Once enabled, the following image shows how they'll be seen inside the Power Query Editor.
 
 ![Data preview tools enabled](images/me-data-preview-tools-enabled-v2.png)
 
@@ -46,7 +46,7 @@ These indicators are displayed right underneath the name of the column as part o
 
 ![Data Quality](images/me-data-quality.png)
 
-Also, a percentage the number of records within each column quality category is also displayed.
+The number of records within each column quality category is also displayed as a percentage.
 
 By hovering over any of the columns, you can see the numerical distribution of the quality of values throughout the column. Additionally, selecting the ellipsis button (...) opens some quick action buttons for operations on the values.
 
