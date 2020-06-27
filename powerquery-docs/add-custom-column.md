@@ -1,6 +1,6 @@
 ---
 title: Add a custom column
-description: Add a custom column
+description: An article that demonstrates how to create a custom column in Power Query
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: v-douklo
@@ -10,13 +10,11 @@ ms.author: v-miesco
 
 # Add a custom column
 
-*Content partially taken from the Power BI docs [article](https://docs.microsoft.com/power-bi/create-reports/desktop-add-custom-column).*
-
 In Power Query, you can create your custom column using the PowerQuery M formula language. PowerQuery M formula language has a comprehensive function reference content set.
 
 Imagine that you have the following table with a set of columns. 
 
-![image](images/me-add-custom-column-initial-table.png)
+![Sample initial table](images/me-add-custom-column-initial-table.png)
 
 Using the **Units**, **Unit Price**, and **Discount** columns, you would like to create two new columns:
 
@@ -25,17 +23,17 @@ Using the **Units**, **Unit Price**, and **Discount** columns, you would like to
 
 The final table with the new columns will look like the table in the following image.
 
-![image](images/me-add-custom-column-final-table.png)
+![Sample final table](images/me-add-custom-column-final-table.png)
 
 ## To add a custom column
 
 To create a custom column, select the **Custom Column** button from the **Add Column** tab on the ribbon.
 
-![images](images/me-add-custom-column-icon.png)
+![Add Custom column button inside the Add Column tab](images/me-add-custom-column-icon.png)
 
 After selecting the custom column, a new **Add Custom Column** window appears.
 
-![images](images/me-add-custom-column-window.png)
+![Add Custom Column window](images/me-add-custom-column-window.png)
 
 This window is where you define the formula to create your columns.
 
@@ -53,23 +51,23 @@ To add a new custom column, select a column from the **Available columns** list 
 
 ### Adding the Total Sales before Discount column
 
-The formula that you can use to create the **Total Sales before Discount** is `[Units] * [Unit Price]  `. The following image shows how it will look in your **Custom column** window.
+The formula that you can use to create the **Total Sales before Discount** is `[Units] * [Unit Price]`. The following image shows how it will look in your **Custom column** window.
 
-![image](images/me-add-custom-column-total-sale-before-discount.png)
+![Custom column formula for Total Sales before Discount](images/me-add-custom-column-total-sale-before-discount.png)
 
 The result of that operation will add a new **Total Sales before Discount** column to your table and will look like the following image:
 
-![image](images/me-add-custom-column-total-sale-before-discount-column.png)
+![Table with new custom column called Total Sales before Discount](images/me-add-custom-column-total-sale-before-discount-column.png)
 
 ### Adding the Total Sales after Discount column
 
 The formula that you can use to create the **Total Sales before Discount** is `[Total Sales before Discount]* (1-[Discount]) `. The following image shows how it will look in your **Custom column** window.
 
-![image](images/me-add-custom-column-total-sale-after-discount.png)
+![Custom column formula for Total Sales after Discount](images/me-add-custom-column-total-sale-after-discount.png)
 
 The result of that operation will add a new **Total Sales after Discount** column to your table and will look like the following image:
 
-![image](images/me-add-custom-column-total-sale-after-discount-column.png)
+![Table with new custom column called Total Sales after Discount](images/me-add-custom-column-total-sale-after-discount-column.png)
 
 ### Setting the column data types
 
@@ -85,11 +83,11 @@ To change the data types:
 
 4. Select the **Currency** data type.
 
-![image](images/me-add-custom-column-data-types.png)
+![Data types menu in the Home tab](images/me-add-custom-column-data-types.png)
 
 After defining the data types for both columns, your table will looks like the following image.
 
-![image](images/me-add-custom-column-final-table.png)
+![Sample final table](images/me-add-custom-column-final-table.png)
 
 ## Modify an existing custom column
 
