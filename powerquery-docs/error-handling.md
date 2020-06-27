@@ -1,6 +1,6 @@
 ---
 title: Error Handling
-description: An article on how to catch and handle errors in Power Query using the syntax try otherwise.
+description: An article on how to catch and handle errors in Power Query using the syntax try and otherwise.
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: v-douklo
