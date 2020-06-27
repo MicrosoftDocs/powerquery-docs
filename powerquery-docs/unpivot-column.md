@@ -1,6 +1,6 @@
 ---
 title: Unpivot columns
-description: In Power Query, you can transform selected columns into attribute-value pairs where columns become rows. You use Power Query's Editor to unpivot columns
+description: With the Unpivot columns feature in Power Query, you can transform selected columns into attribute-value pairs where columns become rows.
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: v-douklo
