@@ -86,7 +86,6 @@ Previous Name | New Name
 --------------|----------
 Accounts.1 | Account Name
 Accounts.2 | Account Number
-|
 
 Your final table looks like the one in the following image.
 
