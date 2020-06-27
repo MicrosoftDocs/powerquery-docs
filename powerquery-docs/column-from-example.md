@@ -1,6 +1,6 @@
 ---
 title: Add a column from examples
-description: Add a column from examples
+description: Quickly create a new column in Power Query using existing columns as examples.
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: v-douklo
@@ -53,7 +53,7 @@ When Power Query finds a matching transformation, it fills the transformation re
 
 After you select **OK**, you'll see your new column as part of your query. You'll also see a new step added to your query.
 
-![image](images/me-add-column-from-example-from-selection-buckets-final.png)
+![New column from examples added to the table](images/me-add-column-from-example-from-selection-buckets-final.png)
 
 ### Column from Examples from all columns
 
@@ -61,15 +61,15 @@ The next goal is to create a **Full Name** column using the values from the **Fi
 
 To do that, select the **From All Columns** option.
 
-![images](images/me-add-column-from-example-from-all-columns.png)
+![Add Column from examples from all columns option](images/me-add-column-from-example-from-all-columns.png)
 
 Now you'll input your first **Full Name** example as **Enders, Maria**.
 
-![images](images/me-add-column-from-example-from-all-columns-full-name.png)
+![Full Name first example for new column from example](images/me-add-column-from-example-from-all-columns-full-name.png)
 
 After you select **OK**, you'll see your new column as part of your query. You'll also see a new step added to your query.
 
-![images](images/me-add-column-from-example-from-all-columns-full-name-final.png)
+![New Full Name column added to the table](images/me-add-column-from-example-from-all-columns-full-name-final.png)
 
 Your last step is to remove the **First Name**, **Last Name**, and **Monthly Income** columns. Your final table will look like the one in the following image.
 
@@ -79,7 +79,7 @@ Your last step is to remove the **First Name**, **Last Name**, and **Monthly Inc
 
 When providing examples, Power Query  offers a helpful list of available fields, values, and suggested transformations for the selected columns. You can view this contextual list by double-clicking on any cell of the new column.
 
-![image](images/me-add-column-from-example-suggestions.png)
+![Column from example suggestions](images/me-add-column-from-example-suggestions.png)
 
 It is important to note that the **Column From Examples** experience works only on the top 100 rows of your query. You can apply steps prior to the **Column From Examples** step to create your own sample of your data. Once the **Column From Examples** column has been created, you can remove those prior steps and the newly created column won't be affected.
 
