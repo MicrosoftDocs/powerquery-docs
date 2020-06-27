@@ -1,6 +1,6 @@
 ---
 title: "Power Query's 'Get Data' experience"
-description: "Power Query's 'Get Data' experience"
+description: "Complete overview of the Power Query Get Data experience and all of its components such as connector parameters, authentication, navigation table and output."
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: v-douklo
