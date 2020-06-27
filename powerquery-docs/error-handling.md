@@ -1,3 +1,13 @@
+---
+title: Error Handling
+description: An article on how to catch and handle errors in Power Query using the syntax try otherwise.
+author: ptyx507
+ms.service: powerquery
+ms.reviewer: v-douklo
+ms.date: 06/08/2020
+ms.author: v-miesco
+---
+
 # Error Handling
 Similar to how Excel and the DAX language have an IFERROR function, Power Query has its own syntax to test and catch errors.
 
