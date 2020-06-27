@@ -25,7 +25,7 @@ You can find the **Split Columns: By Delimiter** option in three places:
 
 * **Right-click a column**&mdash;inside the **Split column** option.
 
-   ![Split columns button found in column right click contextual menu](images/me-split-columns-delimiter-right-click-icon.png)
+   ![Split column button found in column right click contextual menu](images/me-split-columns-delimiter-right-click-icon.png)
 
 ## Split columns by delimiter into columns
 In this example, the initial table will be the one shown in the image below, with only one column for **Accounts**. 
