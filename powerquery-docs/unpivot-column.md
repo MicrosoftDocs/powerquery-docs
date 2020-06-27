@@ -13,15 +13,15 @@ ms.author: v-miesco
 
 In Power Query, you can transform columns into attribute-value pairs where columns become rows. You use Power Query's query editor to unpivot columns.
 
-![image](images/me-unpivot-diagram.png)
+![Unpivot columns diagram](images/me-unpivot-diagram.png)
 
 For example, imagine a table like the one in the following image.
 
-![image](images/me-unpivot-initial-table.png)
+![General Unpivot columns sample initial table](images/me-unpivot-initial-table.png)
 
 This table has a value by country and by date as a matrix. You may need to transform that table into the following one with unpivoted columns.
 
-![image](images/me-unpivot-final-table.png)
+![General Unpivot columns sample goal table](images/me-unpivot-final-table.png)
 
 The key in this transformation is that you have a set of dates in the table that should all be part of a single column. The respective value for each date and country should be in a different column, effectively creating a value-pair.
 
@@ -32,9 +32,9 @@ Power Query will always create the value-pair with two columns:
 
 There are multiple places in the user interface where you can find **Unpivot columns**. You can right-click on the columns that you want to unpivot, or you can select the icon from the **Transform** tab in the ribbon.
 
-![image](images/me-unpivot-right-click.png)
+![Right click operation to Unpivot columns](images/me-unpivot-right-click.png)
 
-![image](images/me-unpivot-transform-tab.png)
+![Unpivot columns icon in Transform tab](images/me-unpivot-transform-tab.png)
 
 There are three ways that you can unpivot columns from a table:
 
@@ -46,17 +46,17 @@ There are three ways that you can unpivot columns from a table:
 
 For the scenario described above, you first need to select the columns that you want to unpivot. You can hold the **Ctrl** key and select as many columns as you need. For this scenario, you want to select all the columns except the one with the header **Country**. After selecting the columns, you can right-click on any of the selected columns and then select **Unpivot columns**.
 
-![image](images/me-unpivot-columns-right-click.png)
+![Unpivot columns right click](images/me-unpivot-columns-right-click.png)
 
 The result of that operation will yield the result shown in the following image. 
 
-![image](images/me-unpivot-columns-final-table.png)
+![Unpivot columns final table](images/me-unpivot-columns-final-table.png)
 
 ### Special considerations
 
 After creating our query from the steps above, imagine that your initial table gets updated to look like the following screenshot.
 
-![image](images/me-unpivot-updated-source-table.png)
+![Unpivot columns updated source table](images/me-unpivot-updated-source-table.png)
 
 Notice that you've added a new column for the date 9/1/2020 (September 1, 2020) and two new rows for the countries UK and Mexico.
 
@@ -64,7 +64,7 @@ If you refresh your query, you’ll notice that the operation will be done on th
 
 The following image shows what your query will look like after the refresh with the new updated source table.
 
-![image](images/me-unpivot-columns-final-updated-table.png)
+![Unpivot columns final updated table](images/me-unpivot-columns-final-updated-table.png)
 
 ## Unpivot other columns
 
@@ -73,11 +73,11 @@ The following image shows what your query will look like after the refresh with 
 
 It's also possible to only select the columns that you don't want to unpivot and only unpivot the rest of the columns in the table. This is where **Unpivot other columns** comes into play.
 
-![image](images/me-unpivot-other-columns.png)
+![Unpivot other columns right click](images/me-unpivot-other-columns.png)
 
 The result of that operation will yield exactly the same result as the one that you got from **Unpivot Columns**.
 
-![image](images/me-unpivot-other-columns-final-table.png)
+![Unpivot other columns final table](images/me-unpivot-other-columns-final-table.png)
 
 >[!NOTE]
 > This transformation is crucial for queries with an unknown number of columns. The operation will unpivot all columns from your table except the ones that you've selected. This is a ideal solution if the data source of your scenario had new date columns in a refresh, as those will get picked up and unpivoted. 
@@ -88,11 +88,11 @@ Similar to how it happens with the **Unpivot columns** operation, if your query 
 
 This means that with a new table like the one in the following image.
 
-![image](images/me-unpivot-updated-source-table.png)
+![Unpivot updated source table](images/me-unpivot-updated-source-table.png)
 
 You can select the **Country** column and do an Unpivot other column**, which will yield the following result.
 
-![image](images/me-unpivot-other-columns-updated-final-table.png)
+![Unpivot other columns updated final table](images/me-unpivot-other-columns-updated-final-table.png)
 
 ## Unpivot only selected columns
 
@@ -100,20 +100,20 @@ The purpose of this last option is to only unpivot specific columns from your ta
 
 To perform this operation, select the columns to unpivot, which are all the columns except the **Country** column. Then select the option to **Unpivot Only Selected Columns** by right-clicking on any of the selected columns.
 
-![image](images/me-unpivot-only-selected-columns-right-click.png)
+![Unpivot only selected columns right click](images/me-unpivot-only-selected-columns-right-click.png)
 
 Notice how this operation will yield the same output as the previous examples.
 
-![image](images/me-unpivot-only-selected-columns-final-table.png)
+![Unpivot only selected columns final table](images/me-unpivot-only-selected-columns-final-table.png)
 
 ### Special considerations
 
 After doing a refresh, if our source table changes to have a new **9/1/2020** column and new rows for UK and Mexico, the output of the query will be different from the previous examples. If our source table, after a refresh, changes to the following one:
 
-![image](images/me-unpivot-updated-source-table.png)
+![Unpivot updated source table](images/me-unpivot-updated-source-table.png)
 
 The output of our query will look like the following image.
 
-![image](images/me-unpivot-only-selected-columns-updated-final-table.png)
+![Unpivot only selected columns updated final table](images/me-unpivot-only-selected-columns-updated-final-table.png)
 
 It looks like this because the unpivot operation is happening only on the **6/1/2020**, **7/1/2020**, and **8/1/2020** columns, so the column with the header **9/1/2020** remains unchanged.
