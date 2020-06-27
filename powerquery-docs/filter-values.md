@@ -67,6 +67,15 @@ This auto filter section also has a search bar to help you find any values from 
 > * If exactly 1,000 distinct values are found again, the list is displayed with a message stating that the list could still be incomplete.
 > * If less than 1,000 distinct values are found, the full list of values is shown.
 
+## Right-click
+
+You can manually right-click on a cell of a particular column to enable the contextual menu for that value. From the small filter icon, you can then select the filter option you want to use.
+
+![Right click to filter rows based on contents of a cell](images/me-filter-values-right-click.png)
+
+> [!Note]
+> Power Query will display the type-specific filter based on the data type of the column.
+
 ## Type-specific filters
 
 Depending on the data type of your column, you'll see a different option inside the sort & filter menu to help you with some smart or contextual filters. Here are examples for a date, text, or numeric column:
@@ -115,12 +124,3 @@ The result of that operation will give you just one row that meets both criteria
 
 > [!Note]
 > You can add as many clauses as you'd like by selecting the **Add clause** button. All clauses act at the same level, so you may want to consider creating multiple filter steps if you need to implement filters that rely in other filters.
-
-## Right-click
-
-You can manually right-click on a cell of a particular column to enable the contextual menu for that value. From the small filter icon, you can then select the filter option you want to use.
-
-![Right click to filter rows based on contents of a cell](images/me-filter-values-right-click.png)
-
-> [!Note]
-> Power Query will display the type-specific filter based on the data type of the column.
