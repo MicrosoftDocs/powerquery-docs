@@ -1,10 +1,20 @@
+---
+title: "Data types in Power Query"
+description: A comprehensive article on the concepts of data types in Power Query, how to define data types for values and the importance of the data types. 
+author: ptyx507
+ms.service: powerquery
+ms.reviewer: 
+ms.date: 06/30/2020
+ms.author: v-miesco
+---
+
 # Data types in Power Query
 
 A data type in Power Query is a value that classifies other values. A value that is classified by a data type is said to ***conform*** to that data type. 
 
 The data type of a column is displayed on the left hand side of the column header with an icon image that symbolizes the data type:
 
-![image](images/me-data-types-icons.png)
+![Common data types icon in the Data Preview pane](images/me-data-types-icons.png)
 
 The most common data types used in Power Query are:
 
@@ -41,7 +51,7 @@ You can enable or disable this setting:
 
 * **In Power Query Online**, going to the Options menu and selecting the *Project options*. Inside the *Project options* window you'll see the option to *Automatically detect column types and headers for unstructured sources*.
 
-![image](images/me-data-types-project-options-auto-detect.png)
+![Auto detect data type option in the Project options](images/me-data-types-project-options-auto-detect.png)
 
 * **In Power Query for Desktop**,  you have the ability to define this behavior at both the global and per file level.
     - **Global** - Inside the Global menu, you can go to the *Data Load* item and go to the Type Detection section on the right. From here you can select any of the three Type Detection configurations which will be applied on every new file created in your application:
@@ -52,7 +62,7 @@ You can enable or disable this setting:
     ![Global Type Detection](images/me-data-types-power-query-desktop-options-global-auto-detect.png)
     - **Current File** - Inside the Current menu, you can go to the *Data Load* item and go to the Type Detection section on the right. This setting allows you to define if the *Type Detection* should be enabled or disabled for the current file.    
 
-    ![image](images/me-data-types-power-query-desktop-options-auto-detect.png)
+    ![Auto detect data type option in Power Query for desktop applications](images/me-data-types-power-query-desktop-options-auto-detect.png)
 
 **When this setting is enabled,** Power Query will automatically detect the column headers and data types of unstructured data sources. Power Query will do this by automatically adding two steps to your query:
 
@@ -63,19 +73,19 @@ You can enable or disable this setting:
 We can define or change the data type of a column from 4 places:
 * **Home tab** - in the *Data Type* dropdown menu inside the *Transform* group.
 
-![image](images/me-data-types-home-tab.png)
+![Data types menu in the Home tab](images/me-data-types-home-tab.png)
 
 * **Transform tab** - in the *Data Type* dropdown menu inside the *Any Column* group.
 
-![image](images/me-data-types-transform-tab.png)
+![Data types menu in the Transform tab](images/me-data-types-transform-tab.png)
 
 * **Column header icon** - left of the column header shown as an icon.
 
-![image](images/me-data-types-column-header-icon.png)
+![Data types menu in the column header](images/me-data-types-column-header-icon.png)
 
 * **Column Right click** - as the *Change Type* option.
 
-![image](images/me-data-types-right-click.png)
+![Data types menu in the column right click contextual menu](images/me-data-types-right-click.png)
 
 
 ### Document or Project Locale
@@ -90,35 +100,35 @@ When Power Query defines a column data type or converts from one data type to an
 
 * **In Power Query Online**, this interpretation is defined inside the *Project options*, under the *Locale* option.
 
-![image](images/me-data-types-project-options-locale.png)
+![Locale setting in Power Query Online](images/me-data-types-project-options-locale.png)
 
 * **In Power Query for Desktop**, Power Query automatically recognizes your Operating System regional format and uses that to interpret the values for data type conversion. You can override this **Locale** configuration by going inside the *Query Options* window, inside the *Current* menu and selecting the *Regional Settings* option which will display the Locale being used which you can also change.
 
-![image](images/me-data-types-power-query-desktop-locale.png)
+![Locale setting in Power Query for Desktop applications](images/me-data-types-power-query-desktop-locale.png)
 
 This **Locale** setting is important for interpreting text values into a specific data type. 
 
 For example, imagine that we have our Locale set as English (United States), but one of our columns from one of our csv files has dates in the UK format day/month/year as shown in the next image:
 
-![image](images/me-data-types-locale-sample-original.png)
+![Sample original table](images/me-data-types-locale-sample-original.png)
 
 When we try setting the data type of the Date column to be **Date**, we only get error values:
 
-![image](images/me-data-types-locale-sample-error.png)
+![Data type conversion error](images/me-data-types-locale-sample-error.png)
 
 This is because the **Locale** being used is trying to interpret the date under the English (United States) format which is month/date/year, but there is no month 22 in the calendar, so it yields an error.
 
 Instead of trying to just select the Date data type, we can right click the column and select the *Using Locale* option from the Change type menu
 
-![image](images/me-data-types-locale-sample-right-click.png)
+![Change type with locale option in the column right click contextual menu](images/me-data-types-locale-sample-right-click.png)
 
 Inside the Change column type with locale, we select the data type that we want to set, but we also select which Locale to use which for our case has to be English (United Kingdom):
 
-![image](images/me-data-types-change-column-type-locale.png)
+![Change column type with locale window](images/me-data-types-change-column-type-locale.png)
 
 Using this locale, Power Query will be able to interpret the values correctly and convert those to the desired data type:
 
-![image](images/me-data-types-locale-sample-final.png)
+![Final table after using locale](images/me-data-types-locale-sample-final.png)
 
 #### Verifying the final date values
 
