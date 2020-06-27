@@ -1,6 +1,16 @@
+---
+title: "Merge queries: Left outer Join"
+description: An article on how to perform a Merge operation in Power Query using the Left Outer Join kind. 
+author: ptyx507
+ms.service: powerquery
+ms.reviewer: 
+ms.date: 06/30/2020
+ms.author: v-miesco
+---
+
 # Merge queries: Left outer Join
 
-A left outer join is one of the Join kinds available inside the Merge queries window in Power Query. You can read more about the Merge operations in Power Query from the article [Merge Operations Overview](merge-operations-overview.md).
+A left outer join is one of the Join kinds available inside the Merge queries window in Power Query. You can read more about the Merge operations in Power Query from the article [Merge Operations Overview](merge-queries-overview.md).
 
 The Left Outer Join keeps all rows from the left table, and brings any matching rows from the right table.
 

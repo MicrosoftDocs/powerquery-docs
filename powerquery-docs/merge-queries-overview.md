@@ -1,4 +1,14 @@
-# Merge operations overview
+---
+title: "Merge queries overview"
+description: An overview on what are a Merge queries operations in Power Query as well as the basic principles and common uses. 
+author: ptyx507
+ms.service: powerquery
+ms.reviewer: 
+ms.date: 06/30/2020
+ms.author: v-miesco
+---
+
+# Merge queries overview
 
 You can merge queries when you have one or more columns that you’d like to add to another query.
 A merge operation works from two existing tables by performing a join between both tables using one or multiple columns from both tables. 
