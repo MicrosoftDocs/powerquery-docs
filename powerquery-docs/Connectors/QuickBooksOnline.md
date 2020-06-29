@@ -65,18 +65,6 @@ To connect to QuickBooks Online:
 
    ![Select QuickBooks tables](media/quickbooks-online/qb-navigator-window.png)
 
-8. Create a report.
-
-   ![Create a report](media/quickbooks-online/qb-sample-report.png)
-
-9. Optionally, publish to Power BI service.
-
-   ![Publish to Power BI service](media/quickbooks-online/qb-publish.png)
-
-10. View the report in Power BI service.
-
-    ![View the report](media/quickbooks-online/qb-view-report.png)
-
 ## Next steps
 
 * [QuickBooks Power BI integration](https://powerbi.microsoft.com/integrations/quickbooks-online/)
