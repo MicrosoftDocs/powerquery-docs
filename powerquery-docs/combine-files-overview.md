@@ -64,7 +64,7 @@ In the following sample image Power Query detects that the first file has a csv 
 ## 3. Combine files output
 
 After going through the Combine files dialog and finishing this process, Power Query then automatically performs the following actions:
-1. Creates an exemplar query that performs all the required extraction steps in a single file. It uses the file that was selected as the sample file in the **Combine Files** dialog.
+1. Creates an exemplar query that performs all the required extraction steps for a single file. It uses the file that was selected as the sample file in the **Combine Files** dialog.
     * This exemplar query will have the name of *Transform Sample file* in the queries pane.
 2. Creates a function query that parameterizes the file/binary input to the exemplar query. The exemplar query and the function query are linked, so that changes to the exemplar query are reflected in the function query.
     * These queries will be organized under the *Helper queries* queries Group.
