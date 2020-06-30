@@ -47,7 +47,7 @@ Alternatively, you can select **Transform Data** to access the Power Query Edito
 
 ![Combine files icon in column header](images/me-combine-files-overview-combine-files-button-header.png)
 
-## 2. Combine files Dialog
+## 2. Combine files dialog
 
 After selecting the option to Combine files, a new window will prompt called the *Combine Files* dialog.
 
