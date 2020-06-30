@@ -88,7 +88,7 @@
         href: power-query-online-limits.md
       - name: "Common issues"
         href: CommonIssues.md
-    - name: Power Platform dataflows
+    - name: dataflows
       items:
       - name: Overview of dataflows
         href: dataflows/overview-dataflows-across-power-platform-dynamics-365.md
