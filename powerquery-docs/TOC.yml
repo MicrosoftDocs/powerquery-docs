@@ -12,12 +12,6 @@
         href: power-query-query-parameters.md
     - name: New topics for review
       items:
-      - name: Get Data experience
-        href: get-data-experience.md
-      - name: Data Preview tools
-        href: data-preview-tools.md
-      - name: Unpivot column
-        href: unpivot-column.md
       - name: Data types
         href: data-types.md
       - name: Error handling
