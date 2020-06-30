@@ -18,6 +18,20 @@
         href: data-preview-tools.md
       - name: Unpivot column
         href: unpivot-column.md
+      - name: Data types
+        href: data-types.md
+      - name: Error handling
+        href: error-handling.md
+      - name: Add a conditional column
+        href: add-conditional-column.md
+      - name: Append queries
+        href: append-queries.md
+      - name: Merge queries: Overview
+        href: merge-queries-overview.md
+      - name: Merge queries: Left outer join
+        href: merge-queries-left-outer.md
+      - name: Combine files: Overview
+        href: combine-files-overview.md
     - name: Tutorials
       items:
       - name: "Shape and combine data"
