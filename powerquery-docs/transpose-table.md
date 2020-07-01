@@ -1,35 +1,44 @@
-# Tranpose table
+---
+title: Transpose table
+description: In Power Query you can transpose a table with a click of one button. This article demonstrates how to tranpose your table using Power Query.
+author: ptyx507
+ms.service: powerquery
+ms.reviewer: v-douklo
+ms.date: 06/08/2020
+ms.author: v-miesco
+---
 
-The tranpose table operation in Power Query rotates your table 90 degrees by making your rows become columns and your columns become rows.
+# Transpose table
 
-## To Tranpose a table
+The transpose table operation in Power Query rotates your table 90 degrees by making your rows become columns and your columns become rows.
 
-Imagine a table like the following with 3 rows and 4 columns:
+## To transpose a table
 
-![](images/me-transpose-initial-table.png)
+Imagine a table like the one in the following image, with three rows and four columns.
 
-The goal is to transpose that table so we end up with 4 rows and 3 columns as shown in the next image:
+![Sample source table](images/me-transpose-initial-table.png)
 
-![](images/me-transpose-final-table.png)
+The goal of this example is to transpose that table so you end up with four rows and three columns.
 
-The first step to make this happen is to go to the Transform tab in the ribbon and select the option to Transpose inside the Table group as shown in the next image:
+![Sample output table](images/me-transpose-final-table.png)
 
-![](images/me-transpose-button.png)
+First, go to the **Transform** tab in the ribbon and select **Transpose** inside the **Table** group.
 
-The result of that operation will look like this:
+![Transpose button in the Transform tab](images/me-transpose-button.png)
 
-![](images/me-transpose-after.png)
+The result of that operation will look like the following image.
 
-> !Note
+![Result after transposing a table](images/me-transpose-after.png)
 
->When doing the transpose operation, the column headers of the initial table will be lost. Only the contents of the table will be transposed during the operation and the new columns will have the name of "Column" followed by a sequential number.
+> [!Note]
+> When doing the transpose operation, the column headers of the initial table will be lost. Only the contents of the table will be transposed during the operation. The new columns will have the name of **Column** followed by a sequential number.
 
-## Post Transpose cleaning
+## Post transpose cleaning
 
-The headers that we need are in the first row of the table.  We can promote them to be the headers of our table by selecting the table contextual icon inside the Data Preview section and selecting the option to **Use first row as headers** as shown in the next image:
+The headers that you need in this example are in the first row of the table. Your final table will look like the following image. To promote the first row to headers, select the table contextual icon inside the **Data Preview** section. Then select the option to **Use first row as headers**.
 
-![](images/me-transpose-promote-headers.png)
+![Promote row to be table headers](images/me-transpose-promote-headers.png)
 
-The result of that operation will give us the output that we're looking for:
+The result of that operation will give you the output that you're looking for.
 
-![](images/me-transpose-final-table.png)
+![Sample output table](images/me-transpose-final-table.png)

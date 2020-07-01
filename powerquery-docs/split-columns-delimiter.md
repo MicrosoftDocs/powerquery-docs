@@ -1,76 +1,92 @@
-# Split columns: by delimiter
+---
+title: Split columns by delimiter
+description: An article on how to Split columns by delimiter into new columns or rows using Power Query.
+author: ptyx507
+ms.service: powerquery
+ms.reviewer: v-douklo
+ms.date: 06/08/2020
+ms.author: v-miesco
+---
+
+# Split columns by delimiter
 In Power Query, you can split a column through different methods.
 In this case, the column(s) selected can be split by a delimiter.
 
-## Where to find the Split columns: by delimiter
-We can find the Split columns: by delimiter option in 3 places:
-1. **Home tab** - under the Split column dropdown menu inside the Transform group 
-![image](images/me-split-columns-delimiter-icon-home.png)
-2. **Transform tab** - under the Split column dropdown menu inside the Text column group
-![image](images/me-split-columns-delimiter-icon-transform.png)
-3. **Right click a column** - inside the split columns option
-![image](images/me-split-columns-delimiter-right-click-icon.png)
+## Where to find Split Columns > By Delimiter
+You can find the **Split Columns: By Delimiter** option in three places:
+
+* **Home tab**&mdash;under the **Split column** dropdown menu inside the **Transform** group.
+
+   ![Split column button in Home tab](images/me-split-columns-delimiter-icon-home.png)
+
+* **Transform tab**&mdash;under the **Split column** dropdown menu inside the **Text column** group.
+
+   ![Split column button in Transform tab](images/me-split-columns-delimiter-icon-transform.png)
+
+* **Right-click a column**&mdash;inside the **Split column** option.
+
+   ![Split column button found in column right click contextual menu](images/me-split-columns-delimiter-right-click-icon.png)
 
 ## Split columns by delimiter into columns
-Our initial table will be the one below with only one column for "Accounts". 
+In this example, the initial table will be the one shown in the image below, with only one column for **Accounts**. 
 
-![image](images/me-split-columns-delimiter-into-columns-original.png)
+![Sample source table for splitting columns into new columns](images/me-split-columns-delimiter-into-columns-original.png)
 
 This column holds two values:
-1. Account number
-2. Account name 
+* Account number
+* Account name 
 
-We want to split this column into 2 columns as the values are delimited by a space: the first space from left to right. 
-To do this, we simply select the column and select the option to split the column by a delimiter. Inside the 'Split column' window, we apply the following configuration:
-
-![images](images/me-split-columns-delimiter-into-columns-split-column-window.png)
+We want to split this column into two columns. The values are delimited by a space&mdash;the first space from left to right. To do this split, select the column, and then select the option to split the column by a delimiter. In **Split Column by Delimiter**, apply the following configuration:
 
 * **Select or enter delimiter**: Space
 * **Split at**: Left-most delimiter
 
-The result of that operation will give us a table with the two columns that we are expecting:
+![Split column into columns window](images/me-split-columns-delimiter-into-columns-split-column-window.png)
 
-![images](images/me-split-columns-delimiter-into-columns-final.png)
+The result of that operation will give you a table with the two columns that you're expecting.
+
+![Sample output table for splitting columns into new columns](images/me-split-columns-delimiter-into-columns-final.png)
 
 >[!Note]
->Power Query will split the column into as many columns as needed. The name of the new columns will contain the same name of the original column and a suffix, a dot and a number that represents the splitted section of the column, will be appended to the name of the new columns. 
+>Power Query will split the column into as many columns as needed. The name of the new columns will contain the same name as the original column. A suffix that includes a dot and a number that represents the splitted section of the original column will be appended to the name of the new columns. 
 
 ## Split columns by delimiter into rows
-Our initial table will be the one below with the columns 'Cost Center' and 'Accounts'. 
+In this example, your initial table will be the one shown in the image below, with the columns **Cost Center** and **Accounts**. 
 
-![images](images/me-split-columns-delimiter-into-rows-original.png)
+![Sample source table for splitting columns into rows](images/me-split-columns-delimiter-into-rows-original.png)
 
-The 'Accounts' column has values in pairs separated by a comma, and the pairs are separated by a semicolon. Our goal is to split this column into new rows by using the semicolon as the delimiter.
-To do that, we select the 'Accounts' column and select the option to split the column by a delimiter. Inside the 'Split column' window, we apply the following configuratiton:
+The **Accounts** column has values in pairs separated by a comma. These pairs are separated by a semicolon. The goal of this example is to split this column into new rows by using the semicolon as the delimiter.
 
-![image](images/me-split-columns-delimiter-into-rows-split-column-window.png)
+To do that split, select the **Accounts** column. Select the option to split the column by a delimiter. In **Split Column by Delimiter**, apply the following configuration:
 
 * **Select or enter delimiter**: Semicolon
 * **Split at**: Each occurrence of the delimiter
 * **Split into**: Rows
 
-The result of that operation will give us a table with the same amount of columns, but many more rows as the values inside the cells are now in their own cells as shown below:
+![Split column into rows window](images/me-split-columns-delimiter-into-rows-split-column-window.png)
 
-![image](images/me-split-columns-delimiter-into-rows-final.png)
+The result of that operation will give you a table with the same number of columns, but many more rows because the values inside the cells are now in their own cells.
+
+![Sample output table for splitting columns into rows](images/me-split-columns-delimiter-into-rows-final.png)
 
 ### Final Split
 
-Our table still requires one last split column operation. We need to split the 'Accounts' column by the first comma that it finds. This will create a column for the Account Name and another one for the Account Number.
+Your table still requires one last split column operation. You need to split the **Accounts** column by the first comma that it finds. This split will create a column for the account name and another one for the account number.
 
-To do that, we select the 'Accounts' column and apply the Split column by delimiter operation. Insidee the 'Split column' window, we apply the following configuration:
-
-![images](images/me-split-columns-delimiter-into-rows-into-columns-split-window.png)
+To do that split, select the **Accounts** column and then select **Split Column > By Delimiter**. Inside the **Split column** window, apply the following configuration:
 
 * **Select or enter delimiter**: Comma
 * **Split at**: Each occurrence of the delimiter
 
-The result of that operation will give us a table with the three columns that we are expecting. We then rename the columns as follows:
+![Table after splitting into rows and into columns](images/me-split-columns-delimiter-into-rows-into-columns-split-window.png)
+
+The result of that operation will give you a table with the three columns that you're expecting. You then rename the columns as follows:
 
 Previous Name | New Name 
 --------------|----------
 Accounts.1 | Account Name
 Accounts.2 | Account Number
 
-Our final table looks as follows:
+Your final table looks like the one in the following image.
 
-![image](images/me-split-columns-delimiter-into-rows-into-columns-final.png)
+![Final output table with renamed columns](images/me-split-columns-delimiter-into-rows-into-columns-final.png)
