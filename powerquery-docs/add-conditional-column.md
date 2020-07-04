@@ -1,6 +1,6 @@
 ---
 title: Add a conditional column
-description: With Power Query, you can add a conditional column to your query. You can define IF-THEN-ELSE conditions in your query. When the conditions are fulfilled, the conditional column will automatically display the values that you specified.
+description: With Power Query, you can add a conditional column to your query by defining IF-THEN-ELSE conditions in your query. When the conditions are fulfilled, the conditional column will automatically display the values that you specified.
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: 
@@ -10,7 +10,7 @@ ms.author: v-miesco
 
 # Add a conditional column
 
-With Power Query, you can add a conditional column to your query. You can define IF-THEN-ELSE conditions in your query. When the conditions are fulfilled, the conditional column will automatically display the values that you specified.
+With Power Query, you can add a conditional column to your query by defining IF-THEN-ELSE conditions in your query. When the conditions are fulfilled, the conditional column will automatically display the values that you specified.
 
 The **Conditional column** option is located in the **Add column** tab of the Power Query ribbon, inside the **General** group.
 
@@ -24,9 +24,11 @@ For demonstration purposes, you'll be using the following table:
 
 In this table, you have a field that gives you the **CustomerGroup**. You also have different prices applicable to that customer in the **Tier 1 Price**, **Tier 2 Price**, and **Tier 3 Price** fields. In this example, your goal is to create a new column with the name **Final Price** based on the value found in the **CustomerGroup** field. If the value in the **CustomerGroup** field is equal to 1, then you want to use the value from the **Tier 1 Price** field, else you use the value from the **Tier 3 Price**.   
 
-To add this conditional column, select **Conditional column** button. A new window called **Add conditional column** will appear. In this window you can define three pieces:
+To add this conditional column, select **Conditional column** button. A new window called **Add conditional column** will appear. In this window you can define three sections numbered in the following image:
 
 ![Simple conditional column clause](images/me-add-conditional-column-one-clause.png)
+
+The following ordered list will get into the details of each section inside the *Add conditional column* window shown in the previous image where each number represents the section shown in the previous image:
 
 1. **New column name**&mdash;you can define the name of your new column. In this case, you'll use the name **Final Price**.
 2. **Conditional clauses**&mdash;where you define your conditional clauses. You can add more clauses by selecting the **Add clause** button. Each conditional clause will be tested on the order shown in the window from top to bottom. Each clause has four parts:
