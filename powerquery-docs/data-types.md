@@ -53,7 +53,7 @@ To enable or disable this setting:
 
    ![Auto detect data type option in the Project options](images/me-data-types-project-options-auto-detect.png)
 
-* **In Power Query for Desktop**, you have the ability to define this behavior at both the global and per file level.
+* **In Power Query for Desktop**, you have the ability to define this behavior at both the global and per file level inside the *Options* window.
     - **Global**&mdash;Inside the **Global** menu, go to the **Data Load** item and then go to the **Type Detection** section on the right. From here you can select any of the three type detection configurations that will be applied on every new file created in your application:
         - Always detect column types and headers for unstructured sources
         - Detect column types and headers for unstructured sources according to each file's setting
@@ -142,7 +142,7 @@ From here you can select to extract parts of the date value, such as the year nu
 
 With these columns, you can verify that your date value has been converted correctly.
 
-### Data type conversion matrix
+## Data type conversion matrix
 
 The following matrix is designed to give you a quick look at the feasibility of data type conversion of a value from one data type to another.
 
