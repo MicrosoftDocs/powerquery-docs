@@ -12,7 +12,7 @@ ms.author: v-miesco
 
 In Power Query you have the *Combine files* experience to combine multtiple files from a given data source. This article will showcase how the experience works when the files that you want to combine are CSV files. You can read an overview of the *Combine files* experience from the article [Combine files: Overview](combine-files-overview.md). 
 
-## About the sample files used in this article
+## About the sample files used
 
 All csv files used in this example have the same structure and same extension (csv). For the combine files experience, it is imperative that all files that you want to combine have the same structure and extension.
 
