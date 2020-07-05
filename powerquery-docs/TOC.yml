@@ -26,6 +26,8 @@
         href: merge-queries-left-outer.md
       - name: "Combine files: Overview"
         href: combine-files-overview.md
+      - name: "Combine files: CSV documents"
+        href: combine-files-csv.md
       - name: "Get Data experience"
         href: get-data-experience.md
       - name: "Data Preview tools"
