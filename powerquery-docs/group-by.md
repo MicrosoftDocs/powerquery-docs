@@ -149,7 +149,7 @@ Going back to the *Group by* window and expanding the *Fuzzy group options*, you
 
 After selecting the **Transformation table**, you can click the OK button to proceed. The result of that operation will give you the following result:
 
-![Fuzzy grouping sample final table with transform table](images/me-fuzzy-grouping-sample-final-table.png.png)
+![Fuzzy grouping sample final table with transform table](images/me-fuzzy-grouping-sample-final-table.png)
 
 >[!Note]
 >In this example, the *Ignore case* option is enabled so values in the **From** column of the **Transformation table** will be used ignoring the case and will look for the text string without considering casing. This transformation operation occurs first and subsequently the *Fuzzy grouping* operation is performed.
