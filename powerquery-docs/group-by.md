@@ -109,7 +109,50 @@ After removing your **Products** column and setting the data type for both newly
 
 ## Fuzzy grouping
 
-(Placeholder)
+To demonstrate how to perform *Fuzzy grouping* in Power Query's *Group By* functionality, the following sample table will be used:
+
+![Fuzzy grouping sample source table](images/placeholder.png)
+
+The goal of the *Fuzzy grouping* is to perform a *Group by* operation using an approximate match algorithm. Power Query uses the Jaccard Similarity algorithm to measure the similarity between pairs of instances. Then it applies Agglomerative Hierarchical Clustering to group instances together. Below is an image of the output that we expect:
+
+![Fuzzy grouping sample final table no transform table](images/placeholder.png)
+
+To perform the fuzzy grouping, you perform the same steps previously described in this article. The only difference is that this time, in the *Group by* window, you will click the *Use fuzzy grouping* radio button as shown in the next image:
+
+![Fuzzy grouping radio button in Group by window](images/placeholder.png)
+
+For each group of rows, Power Query will pick the most frequent instance as the “canonical” instance. If multiple instances have the same frequency, Power Query will pick the first one. After we hit the OK button in the *Group by* window, we will get the result that we were expecting:
+
+![Fuzzy grouping sample final table no transform table](images/placeholder.png)
+
+However, you have more control over the *Fuzzy grouping* operation by expanding the *Fuzzy group options* as shown in the next image:
+
+![Fuzzy grouping options window](images/placeholder.png)
+
+Here's a list of the availble options for the *Fuzzy group*:
+* **Similarity threshold (optional)** - This option indicates how similar two values need to be in order to be grouped together. The minimum value of 0 will cause all values to be grouped together, and the maximum value of 1 will only allow exact match of values to be grouped together. The default is 0.8.)
+* **Ignore case** - Used to compare text Strings, ignoring case considerations. Enabled by default.
+* **Group by combining text parts** - the algorithm will try to combine text parts (such as 'Micro' and 'soft' into 'Microsoft') in order to group values.
+* **Transformation table (optional)** - select a transformation table that will be used to map values (such as "MSFT" to "Microsoft") to group them together. The table should contain a "From" column and a "To" column.
+
+For this example, a transformation table will be used to demonstrate how values can be mapped. The transformation table needs to have only two columns:
+* **From** - The text string to look for in our table.
+* **To** - The text string used to replace the text string found.
+
+The following image is the transformation table that will be used:
+
+![Fuzzy grouping Sample Transformation table](images/placeholder.png)
+
+Going back to the *Group by* window and expanding the *Fuzzy group options*, you can select the **Transformation table** query from the dropdown as shown in the next image: 
+
+![Fuzzy grouping Sample Transformation table dropdown](images/placeholder.png)
+
+After selecting the **Transformation table**, you can click the OK button to proceed. The result of that operation will give you the following result:
+
+![Fuzzy grouping sample final table with transform table](images/placeholder.png)
+
+>[!Note]
+>In this example, the *Ignore case* option is enabled so values in the **From** column of the **Transformation table** will be used ignoring the case and will look for the text string without considering casing. This transformation operation occurs first and subsequently the Fuzzy group operation is performed.
 
 ## More resources
 
