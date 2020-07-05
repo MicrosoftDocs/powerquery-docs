@@ -113,7 +113,7 @@ To demonstrate how to perform *Fuzzy grouping* in Power Query's *Group By* funct
 
 ![Fuzzy grouping sample source table](images/me-fuzzy-grouping-sample-source-table.png)
 
-The goal of the *Fuzzy grouping* is to perform a *Group by* operation using an approximate match algorithm. Power Query uses the Jaccard Similarity algorithm to measure the similarity between pairs of instances. Then it applies Agglomerative Hierarchical Clustering to group instances together. Below is an image of the output that we expect where the table will be grouped by the *Person* column:
+The goal of the *Fuzzy grouping* is to perform a *Group by* operation using an approximate match algorithm for text strings. Power Query uses the Jaccard Similarity algorithm to measure the similarity between pairs of instances. Then it applies Agglomerative Hierarchical Clustering to group instances together. Below is an image of the output that we expect where the table will be grouped by the *Person* column:
 
 ![Fuzzy grouping sample final table no transform table](images/me-fuzzy-grouping-sample-final-table-no-transform-table.png)
 
