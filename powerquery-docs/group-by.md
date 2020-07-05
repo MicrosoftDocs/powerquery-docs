@@ -129,7 +129,7 @@ However, you have more control over the *Fuzzy grouping* operation by expanding 
 
 ![Fuzzy grouping options window](images/placeholder.png)
 
-Here's a list of the availble options for the *Fuzzy group*:
+Here's a list of the availble options for the *Fuzzy grouping*:
 * **Similarity threshold (optional)** - This option indicates how similar two values need to be in order to be grouped together. The minimum value of 0 will cause all values to be grouped together, and the maximum value of 1 will only allow exact match of values to be grouped together. The default is 0.8.)
 * **Ignore case** - Used to compare text Strings, ignoring case considerations. Enabled by default.
 * **Group by combining text parts** - the algorithm will try to combine text parts (such as 'Micro' and 'soft' into 'Microsoft') in order to group values.
@@ -152,7 +152,7 @@ After selecting the **Transformation table**, you can click the OK button to pro
 ![Fuzzy grouping sample final table with transform table](images/placeholder.png)
 
 >[!Note]
->In this example, the *Ignore case* option is enabled so values in the **From** column of the **Transformation table** will be used ignoring the case and will look for the text string without considering casing. This transformation operation occurs first and subsequently the Fuzzy group operation is performed.
+>In this example, the *Ignore case* option is enabled so values in the **From** column of the **Transformation table** will be used ignoring the case and will look for the text string without considering casing. This transformation operation occurs first and subsequently the *Fuzzy grouping* operation is performed.
 
 ## More resources
 
