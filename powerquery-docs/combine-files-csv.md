@@ -1,6 +1,6 @@
 ---
-title: "Combine Files in Power Query: Overview" 
-description: How to combine files in Power Query and Power Query Online
+title: "Combine Files in Power Query: CSV Dpci,emts" 
+description: How to combine CSV Documents in Power Query and Power Query Online
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: 
