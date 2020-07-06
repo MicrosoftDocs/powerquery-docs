@@ -43,7 +43,7 @@ To load data from an OData Feed:
 
       If the URL address you enter is invalid, a ![Warning icon](../images/webwarning.png) warning icon will appear next to the **URL** textbox.
 
-   2. If this is the first time you're connecting using the OData Feed, select the authentication type, input your credentials (if required), and select the level to apply the authentication settings to. Then select **Connect**.
+   2. If this is the first time you're connecting using the OData Feed, select the authentication type, input your credentials (if necessary), and select the level to apply the authentication settings to. Then select **Connect**.
 
        ![OData credentials selection](media/odata-feed/odata-sign-in.png)
 
@@ -53,7 +53,7 @@ To load data from an OData Feed:
 
       ![OData online sign in](media/odata-feed/odata-online-sign-in.png)
    
-   2. If this is the first time you're connecting using the OData Feed, select the authentication kind and enter your credentials (if required). Then select **Next**.
+   2. If this is the first time you're connecting using the OData Feed, select the authentication kind and enter your credentials (if necessary). Then select **Next**.
 
 4. From the **Navigator** dialog, you can select a table, then either transform the data in the Power Query Editor by selecting **Transform Data**, or load the data by selecting **Load**.
 

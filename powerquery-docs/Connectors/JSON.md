@@ -35,11 +35,11 @@ To load a local JSON file into an online service, such as Power BI service or Po
 
 ![JSON selection from online service](./media/json/connect-service.png)
 
-This will automatically launch the Power Query Editor for you to transform the data if you want, or you can simply close and apply. 
+Loading the JSON file will automatically launch the Power Query Editor for you to transform the data if you want, or you can simply close and apply. 
 
 ![Convert to a table](./media/json/convert-table.png)
 
-JSON data may not always be imported into Power Query as a table. However, you should always be able to use the available Power Query ribbon transforms to convert it to a table.
+JSON data may not always be imported into Power Query as a table. However, you can always use the available Power Query ribbon transforms to convert it to a table.
 
 ## Load from the web
 
