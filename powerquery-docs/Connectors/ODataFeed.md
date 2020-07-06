@@ -29,15 +29,15 @@ Function Reference Documentation: [OData.Feed](https://docs.microsoft.com/powerq
    * Open type columns
 * Select related tables
 
-## Load data using a basic URL
+## Load data from an OData Feed
 
-To load data from an OData Feed using a basic URL:
+To load data from an OData Feed:
 
 1. Select the **OData** or **OData Feed** option in the connector selection. 
 
 2. If you're connecting from Power BI Desktop or Excel:
 
-   1. Choose the **Basic** button and enter a URL address in the text box. For example, enter `http://services.odata.org/V4/northwind/northwind.svc/`. Then select **OK**.
+   1. Choose the **Basic** button and enter a URL address in the text box. This URL should be the root of the OData service you want to connect to. For example, enter `http://services.odata.org/V4/northwind/northwind.svc/`. Then select **OK**.
 
       ![OData URL selection](media/odata-feed/odata-basic-url.png)
 
@@ -61,13 +61,4 @@ To load data from an OData Feed using a basic URL:
 
    If you have multiple tables that have a direct relationship to one or more of the already selected tables, you can select the **Select Related Tables** button. When you do, all tables that have a direct relationship to one or more of the already selected tables will be imported as well.
    
-## Load data using an advanced URL
-
-When you select the OData Feed, in most instances you'll enter URLs in the Basic setting. However, in some cases you may want to assemble a URL from its separate parts and include OData open type columns in the dataset. In this case, in the **OData Feed** dialog, select the **Advanced** option.
-
-![OData advanced URL assembly](./media/odata-feed/odata-advanced.png)
-
-Use the **URL parts** section of the dialog to assemble the URL you want to use to get data. The first part of the URL in the **URL parts** section most likely would consist of the scheme, authority, and path of the URI (for example, http://contoso.com/products/). The second text box could include any queries or fragments that you would use to filter the information provided to the web site. If you need to add more than one part, select **Add part** to add another URL fragment text box. As you enter each part of the URL, the complete URL that will be used when you select **OK** is displayed in the **URL preview** box.
-
-If the data you're going to access contains open types that contain dynamic properties you want to be included, select **Include open type columns**. For more information about open types and dynamic properties, see the [OData documentation](https://www.odata.org/documentation/). 
 

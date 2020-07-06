@@ -17,7 +17,7 @@ Release State: General Availability
 
 Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in PowerBI.com (Enterprise Gateway), Dataflows in PowerApps.com (Enterprise Gateway), Excel
 
-Authentication Types Supported: Anonymous, Organizational Account, Windows
+Authentication Types Supported: Anonymous, Basic (Web only), Organizational Account, Web API (Web only), Windows
 
 Function Reference Documentation: [Json.Document](https://docs.microsoft.com/powerquery-m/json-document)
 
@@ -35,25 +35,11 @@ To load a local JSON file into an online service, such as Power BI service or Po
 
 ![JSON selection from online service](./media/json/connect-service.png)
 
-This will automatically launch the Power Query Editor for you to transform the data if you want, or you can simply close and apply. JSON data is loaded in as a record, with the first column containing the names and the second column containing the values. The values are text, records, or lists. You are presented in the ribbon with the option to turn it into a table, and this may be what you want to do in some cases. This will preserve the initial structure you saw when you loaded it as a record.
+This will automatically launch the Power Query Editor for you to transform the data if you want, or you can simply close and apply. 
 
 ![Convert to a table](./media/json/convert-table.png)
 
-If you want to view a specific record or list, you can select the one you want to see. This can be done when you initially load the JSON, or after you convert it to a table. In either case the drill down will return a record or list of additional text, records, or lists.
-
-![View a record or list](./media/json/view-record-list.png)
-
-Finally, if you want to transform your data such that you can easily expand records and lists in a way that keeps existing data in place (multiplying rows) rather than drilling down, you can either use the UI to convert to a table (as in the first option), transpose the table and then promote headers, or you can use the advanced editor.
-
-If you want to use the advanced editor, the function you want to use is `Table.FromRecords`. With the sample data, this is what the application would look like.
-
-```
-let
-    Source = Json.Document(File.Contents(Path/donuts.json)),
-    #"Converted to Table" = Table.FromRecords({Source})
-in
-    #"Converted to Table"
-```
+JSON data may not always be imported into Power Query as a table. However, you should always be able to use the available Power Query ribbon transforms to convert it to a table.
 
 ## Load from the web
 
@@ -65,4 +51,16 @@ If you see the following message, it may be because the file is invalid, for exa
 
 ![Unable to connect](./media/json/unable-connect.png)
 
-Select the **Retry** button to retry loading your data in the Power Query Editor. Select the **Edit** button to edit the file path, select the file type, or select a specific language set for the JSON file.
+If you are trying to load a JSON Lines file, the following sample M code converts all JSON Lines input to a single flattened table automatically:
+
+```
+let
+    // Read the file into a list of lines
+    Source = Table.FromColumns({Lines.FromBinary(File.Contents("C:\json-lines-example.json"), null, null)}),
+    // Transform each line using Json.Document
+    #"Transformed Column" = Table.TransformColumns(Source, {"Column1", Json.Document})
+in
+    #"Transformed Column"
+```
+
+You'll then need to use an *Expand* operation to combine the lines together.
