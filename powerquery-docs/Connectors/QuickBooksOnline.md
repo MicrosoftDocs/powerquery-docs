@@ -15,7 +15,7 @@ LocalizationGroup: reference
 
 ## Summary
 
-Power BI QuickBooks Online connector enables connecting to your QuickBooks Online account and viewing, analysing, and reporting on your company QuickBooks data in Power BI.
+Power BI QuickBooks Online connector enables connecting to your QuickBooks Online account and viewing, analyzing, and reporting on your company QuickBooks data in Power BI.
 
 Release state: Beta
 
@@ -37,7 +37,7 @@ The QuickBooks Online connector uses the QuickBooks ODBC driver. The QuickBooks 
 
 To connect to QuickBooks Online:
 
-1. In the **Get Data** dialog box, enter **QuickBooks** in the **Search** box, select **QuickBooks Online (Beta)** from the product specific data connector list, and then select **Connect**.
+1. In the **Get Data** dialog box, enter **QuickBooks** in the **Search** box, select **QuickBooks Online (Beta)** from the product-specific data connector list, and then select **Connect**.
 
    ![Get data from QuickBooks Online](media/quickbooks-online/qb-get-data.png)
    
@@ -49,15 +49,15 @@ To connect to QuickBooks Online:
 
    ![Sign in to your account](media/quickbooks-online/qb-signin.png)
 
-4. In the following dialog enter your QuickBooks credentials. You may be required to provide 2FA (two factor authentication code) as well.
+4. In the following dialog, enter your QuickBooks credentials. You may be required to provide 2FA (two factor authentication code) as well.
 
    ![Enter your credentials](media/quickbooks-online/qb-intuit-signin.png)
 
-5. In the following dialog select a company and then select **Next**.
+5. In the following dialog, select a company and then select **Next**.
 
    ![Select a company](media/quickbooks-online/qb-select-company.png)
 
-6. Once you have successfully signed in, select **Connect**.
+6. Once you've successfully signed in, select **Connect**.
 
    ![Connect to QuickBooks Online](media/quickbooks-online/qb-connect.png)
 
