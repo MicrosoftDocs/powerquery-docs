@@ -32,6 +32,8 @@
           href: ReadingQueryDiagnostics.md
         - name: "Understanding folding with Query Diagnostics"
           href: QueryDiagnosticsFolding.md
+      - name: "Import data using native database query"
+        href: native-database-query.md
       - name: "Authentication with a data source"
         href: ConnectorAuthentication.md  
       - name: "Power Query online limits"
@@ -40,6 +42,12 @@
         href: CommonIssues.md
     - name: "Connector reference"
       items:
+      - name: "Azure SQL database"
+        href: Connectors/AzureSQLDatabase.md
+      - name: "Azure SQL Data Warehouse"
+        href: Connectors/AzureSQLDataWarehouse.md
+      - name: "MySQL database"
+        href: Connectors/MySQLDatabase.md
       - name: "Excel"
         href: Connectors/Excel.md
       - name: "FHIR"
