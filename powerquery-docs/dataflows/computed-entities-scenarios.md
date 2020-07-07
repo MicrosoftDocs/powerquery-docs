@@ -18,7 +18,7 @@ There's a great benefit in using the computed entity in the dataflow. This artic
 
 A computed entity is an entity that is already processed through Power Query in the dataflow, and the result of that processing is saved in storage. In analytical dataflows, that means the data is stored in Azure Data Lake Storage Gen2. In other words, computed entities are intermediate entities used to pass the data to other entities. And the data of that intermediate entity is saved in storage too.
 
-![Computed Entity](https://docs.microsoft.com/en-us/power-bi/transform-model/media/service-dataflows-computed-entities-premium/computed-entities-premium_00.png)
+![Computed Entity](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-computed-entities-premium/computed-entities-premium_00.png)
 
 ## Why is it good to use computed entity?
 
