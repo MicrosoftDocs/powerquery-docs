@@ -11,37 +11,41 @@ ms.author: v-rerad
 LocalizationGroup: Data from files
 ---
 
-# Configuring storage and compute options for analytical dataflows
+# Dataflow storage options
 
-For [standard dataflows](understanding-differences-between-analytical-standard-dataflows.md), you don't need to set up the storage, because standard dataflows store the data into Common Data Service in your environment. However, for an [analytical dataflow](understanding-differences-between-analytical-standard-dataflows.md), you need to set up storage options, especially if you aren't using the internal Azure data lake storage for the dataflow.
+[Standard dataflows](understanding-differences-between-analytical-standard-dataflows.md) always load data into Common Data Service tables in an environment. [Analytical dataflows](understanding-differences-between-analytical-standard-dataflows.md) always load data into an Azure Data Lake Gen2 storage accounts. For both dataflow types, there is no need to provision or manange the storage. Dataflow storage, by default, is provided and managed by products the dataflow is created in.
 
-## Internal dataflows
+Analytical dataflows, allow an additional storage option: Providing your organization's Azure Data Lake Gen2 storage account. This option enables access to the data created by dataflow directly via Azure Data Lake Gen2 interfaces. Providing your own storage account for analytical dataflows enables other Azure or line of business applicaitons to leverage the data by connecting to the lake directly.
 
-Internal dataflows are those dataflows that use the internal Azure data lake storage. An example of an internal dataflow is when you create a dataflow in Power BI. By default (if you haven't connected the dataflow to an external Azure Data Lake Storage Gen2), this will use the internal Azure data lake Storage. This type of dataflow can be created only in the Power BI environment at the moment, and access to the output of this type of dataflow is only possible from Power BI Desktop or Power BI dataflows.
+## Dataflows that leverage built-in storage
 
-## External dataflows
+By default, Analytical dataflows will use the built-in Azure data lake storage. For example, when you create a dataflow in Power BI or Power Apps portal. Access to the output of this type of dataflow is only possible via the Power Platform Dataflow connector in Power BI Desktop, or from other Dataflows.
 
-A dataflow is external when it's connected to an external Azure Data Lake Storage Gen2 subscription. Depending on which type of the dataflow you're using (Power BI or Power Platform dataflows), the settings for connecting to an external Azure Data Lake Storage Gen2 subscription is in different places.
+## Dataflows that leverage customer provided storage
 
-### Power BI dataflow connection to Azure Data Lake Storage Gen2
+Before creating a dataflow that leverages a customer provided Azure Data Lake Storage Gen2 storage account, the envrionment or workspace they were created must be linked to an Azure Data Lake Storage Gen2 storage account. Depending on which product the dataflow you're using (Power BI or Power Platform dataflows), the settings for connecting to an external Azure Data Lake Storage Gen2 subscription is linked in different places.
 
-To connect Power BI dataflows to Azure Data Lake Storage Gen2, you need to follow the process described in [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://docs.microsoft.com/power-bi/transform-model/service-dataflows-connect-azure-data-lake-storage-gen2) in the Power BI Admin Portal.
+### Linking Power BI to your organization's Azure Data Lake Storage Gen2
+
+To configure Power BI dataflows to store data in the organization's Azure Data Lake Storage Gen2, you need to follow the steps described in [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://docs.microsoft.com/power-bi/transform-model/service-dataflows-connect-azure-data-lake-storage-gen2) in the Power BI Admin Portal.
 
 ![Connect your own Azure Data Lake Storage for Power BI dataflows](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-connect-azure-data-lake-storage-gen2/dataflows-connect-08b.png)
 
-### Power Platform dataflow: Analytical dataflow Settings
+### Linking a Power Platform environment to your organization's Azure Data Lake Storage Gen2
 
-If you're creating an analytical dataflow in Power Platform, then follow the steps in [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://docs.microsoft.com/powerapps/maker/common-data-service/connect-azure-data-lake-storage-for-dataflow) in PowerApps to configure the dataflow to use your own Azure Data Lake Storage Gen2 subscription.
+To configure dataflows created in PowerApps portal to store data in the organization's Azure Data Lake Storage Gen2, follow the steps in [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://docs.microsoft.com/powerapps/maker/common-data-service/connect-azure-data-lake-storage-for-dataflow) in the PowerApps portal.
 
 ![Storage account setting for Power Platform analytical dataflow](https://docs.microsoft.com/powerapps/maker/common-data-service/media/select-storage-account.png)
 
-### Limitation on Change
+### Known limitations
 
-When you create the connection between Azure Data Lake Storage Gen2 and the dataflow, the connection can't be changed. Linked and computed entities only work properly when they're residing in the same storage account.
+* Once a dataflow is created, its storage location cannot be changed.
+
+* Linked and computed entities features are only available when both dataflows reside in the same storage account.
 
 ## The enhanced compute engine
 
-In Power BI, you can get a better outcome using the enhanced compute engine for the dataflows. You can find this setting under the Premium capacity settings. The enhanced compute engine only works with Power BI capacities A3 or above. The enhanced compute engine will reduce the refresh time required for long-running ETL steps over computed entities, such as joins, distinct, filters, and group by. It also provides the ability to perform DirectQuery over entities from the Power BI dataset.
+In Power BI, in addition to the standard dataflow engine, an enhanced compute engine is available for the dataflows created in Premium workspaces and of the Enhanced dataflow compute workload is enabled by the Administrator of the Premium capacity. You can configure this setting in the Power BI Admin portal, under the Premium capacity settings. The enhanced compute engine is available in Premium P1 or A3 capacities and above. The enhanced compute engine will reduce the refresh time required for long-running ETL steps over computed entities, such as joins, distinct, filters, and group by. It also provides the ability to perform DirectQuery over entities from the Power BI dataset.
 
 ![The enhanced compute engine](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-enhanced-compute-engine/enhanced-compute-engine-01.png)
 
