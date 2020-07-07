@@ -70,6 +70,8 @@
         href: Connectors/DataLakeStorage.md
       - name: "Facebook"
         href: Connectors/Facebook.md
+      - name: "QuickBooks Online"
+        href: Connectors/QuickBooksOnline.md
       - name: "Salesforce Reports"
         href: Connectors/SalesforceReports.md
       - name: "Salesforce Objects"
