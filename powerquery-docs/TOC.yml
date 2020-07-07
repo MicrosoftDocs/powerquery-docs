@@ -32,6 +32,8 @@
           href: ReadingQueryDiagnostics.md
         - name: "Understanding folding with Query Diagnostics"
           href: QueryDiagnosticsFolding.md
+      - name: "Authentication with a data source"
+        href: ConnectorAuthentication.md  
       - name: "Power Query online limits"
         href: power-query-online-limits.md
       - name: "Common issues"
