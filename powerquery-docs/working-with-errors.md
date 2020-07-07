@@ -1,5 +1,5 @@
 ---
-title: Working with errors in Power Query
+title: Dealing with errors 
 description: Understanding errors in Power Query and most common step level and cell level errors.
 author: ptyx507
 ms.service: powerquery
