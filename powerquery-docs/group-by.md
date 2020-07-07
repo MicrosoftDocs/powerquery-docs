@@ -151,8 +151,10 @@ After selecting the **Transformation table**, you can click the OK button to pro
 
 ![Fuzzy grouping sample final table with transform table](images/me-fuzzy-grouping-sample-final-table.png)
 
+In this example, the *Ignore case* option is enabled so values in the **From** column of the **Transformation table** will be used ignoring the case and will look for the text string without considering casing. This transformation operation occurs first and subsequently the *Fuzzy grouping* operation is performed. 
+
 >[!Note]
->In this example, the *Ignore case* option is enabled so values in the **From** column of the **Transformation table** will be used ignoring the case and will look for the text string without considering casing. This transformation operation occurs first and subsequently the *Fuzzy grouping* operation is performed.
+>When grouping by multiple columns, the transformation table will perform the replace operation in all columns if replacing the value increases the similarity score.
 
 ## More resources
 
