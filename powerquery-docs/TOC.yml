@@ -32,12 +32,22 @@
           href: ReadingQueryDiagnostics.md
         - name: "Understanding folding with Query Diagnostics"
           href: QueryDiagnosticsFolding.md
+      - name: "Import data using native database query"
+        href: native-database-query.md
+      - name: "Authentication with a data source"
+        href: ConnectorAuthentication.md  
       - name: "Power Query online limits"
         href: power-query-online-limits.md
       - name: "Common issues"
         href: CommonIssues.md
     - name: "Connector reference"
       items:
+      - name: "Azure SQL database"
+        href: Connectors/AzureSQLDatabase.md
+      - name: "Azure SQL Data Warehouse"
+        href: Connectors/AzureSQLDataWarehouse.md
+      - name: "MySQL database"
+        href: Connectors/MySQLDatabase.md
       - name: "Excel"
         href: Connectors/Excel.md
       - name: "FHIR"
@@ -70,6 +80,8 @@
         href: Connectors/DataLakeStorage.md
       - name: "Facebook"
         href: Connectors/Facebook.md
+      - name: "QuickBooks Online"
+        href: Connectors/QuickBooksOnline.md
       - name: "Salesforce Reports"
         href: Connectors/SalesforceReports.md
       - name: "Salesforce Objects"
@@ -82,6 +94,10 @@
         href: Connectors/SharePointList.md
       - name: "SharePoint Online List"
         href: Connectors/SharePointOnlineList.md
+      - name: "JSON"
+        href: Connectors/json.md
+      - name: "OData Feed"
+        href: Connectors/ODataFeed.md
     - name: Create custom Power Query connectors
       items:
       - name: Quick starts
