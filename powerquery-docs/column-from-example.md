@@ -10,15 +10,13 @@ ms.author: v-miesco
 
 # Add a column from examples
 
-With *add column from examples* in the Power Query Editor, you can add a new column to a table by providing one or more example values for the new column.
-
-![Add column example](images/me-add-column-from-example.png)
-
 Using *add column from examples* lets you quickly and easily create new columns, and is great for the following situations:
 
 * You know the data you want in your new column, but you're not sure which transformation, or collection of transformations, will get you there.
 * You already know which transformations you need, but you're not sure what to select in the UI to make them happen.
 * You know all about the transformations you need using a custom column expression in the M language, but one or more of those transformations aren't available in the UI.
+
+![Add column example](images/me-add-column-from-example.png)
 
 Adding a column from examples is easy and straightforward. The button to create a column from examples is located in the **Add Column** tab in the Ribbon, inside the **General** group.
 
