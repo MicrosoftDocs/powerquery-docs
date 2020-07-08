@@ -45,10 +45,8 @@ The available options are:
 - Average
 
 ## Pivoting columns that can't be aggregated
-The pivot columns operation acts in much the same way as the operation that you see in a pivot table operation in Excel. However, Power Query has an option called **Don't aggregate**, which is particularly important for certain scenarios.
 
-### Pivot a column with no aggregation
-The don't aggregate option is especially helpful in cases when you're trying to pivot columns with text as values. For example, imagine a table, like the following image, that has **Country**, **Position**, and **Product** as fields.
+You can pivot columns without aggregating when you're working with columns that can't be aggregated or it is not required for what you're trying to do. For example, imagine a table, like the following image, that has **Country**, **Position**, and **Product** as fields.
 
 ![Pivot column no aggregation](images/me-pivot-dont-aggregate-valid-initial.png)
 
