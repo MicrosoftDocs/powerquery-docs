@@ -47,7 +47,7 @@ The most common data types used in Power Query are:
 
 This setting is specific for unstructured sources. It helps you by automatically inspecting and detecting the column types and headers based on the first 200 rows of your table. 
 
-To enable or disable this setting:
+By default, this setting is enabled. To disable or enable this setting:
 
 * **In Power Query Online**, go to the **Home > Options** menu and select **Project options**. Inside the Project options window, you'll see the option to **Automatically detect column types and headers for unstructured sources**.
 
