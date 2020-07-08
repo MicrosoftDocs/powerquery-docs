@@ -38,7 +38,7 @@ You can find the **Group By** button in three places:
 
 ![Group by optoin inside the Column right click contextual menu](images/me-group-by-right-click-icon.png)
 
-## To Group by one or more columns: add an aggregated column
+## To Group by one or more columns
 
 In this example, your goal is to reach the following table from your original sample table:
 
