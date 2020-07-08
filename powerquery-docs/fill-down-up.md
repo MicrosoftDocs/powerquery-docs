@@ -1,5 +1,5 @@
 ---
-title: Fill down or fill up
+title: Fill values in a column
 description: With Power Query, you can use the values inside of a column to Fill down or fill up any empty spaces inside of the column. This aricle demonstrates how to perform these transformations in Power Query.
 author: ptyx507
 ms.service: powerquery
@@ -8,7 +8,7 @@ ms.date: 06/08/2020
 ms.author: v-miesco
 ---
 
-# Fill down or fill up
+# Fill values in a column
 
 The operation to fill down or fill up is an operation that can happen from row to row in a single column. 
 
