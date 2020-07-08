@@ -42,34 +42,6 @@ The most common data types used in Power Query are:
 **When connecting to structured data sources such as databases**, Power Query will read the table schema from the data source and automatically display the data with the correct data type for each column.
 
 **When connecting to unstructured sources such as Excel, CSV, and text files**, Power Query can automatically detect data types by inspecting the values inside the table. By default, automatic data type detection is enabled in Power Query for unstructured sources.
-
-### Automatic column data type and headers detection
-
-This setting is specific for unstructured sources. It helps you by automatically inspecting and detecting the column types and headers based on the first 200 rows of your table. 
-
-By default, this setting is enabled. To disable or enable this setting:
-
-* **In Power Query Online**, go to the **Home > Options** menu and select **Project options**. Inside the Project options window, you'll see the option to **Automatically detect column types and headers for unstructured sources**.
-
-   ![Auto detect data type option in the Project options](images/me-data-types-project-options-auto-detect.png)
-
-* **In Power Query for Desktop**, you have the ability to define this behavior at both the global and per file level inside the *Options* window.
-    - **Global**&mdash;Inside the **Global** menu, go to the **Data Load** item and then go to the **Type Detection** section on the right. From here you can select any of the three type detection configurations that will be applied on every new file created in your application:
-        - Always detect column types and headers for unstructured sources
-        - Detect column types and headers for unstructured sources according to each file's setting
-        - Never detect column types and headers for unstructured sources
-
-       ![Global Type Detection](images/me-data-types-power-query-desktop-options-global-auto-detect.png)
-
-    - **Current File**&mdash;Inside the **Current File** menu, go to the **Data Load** item and then go to the **Type Detection** section on the right. This setting allows you to define if the type detection should be enabled or disabled for the current file.    
-
-       ![Auto detect data type option in Power Query for desktop applications](images/me-data-types-power-query-desktop-options-auto-detect.png)
-
-When this setting is enabled, Power Query will automatically detect the column headers and data types of unstructured data sources. Power Query will do this by automatically adding two steps to your query:
-
-* **Promote column headers**&mdash;promotes the first row of the table to be the column header.
-* **Changed Type**&mdash;converts the values from any* data type to a data type based on the inspection of the values from each column.
-
 ## How to define a column data type
 You can define or change the data type of a column from four places:
 
@@ -141,6 +113,34 @@ From here you can select to extract parts of the date value, such as the year nu
 ![Date parts](images/me-data-types-power-query-add-column-date-parts.png)
 
 With these columns, you can verify that your date value has been converted correctly.
+
+### Automatic column data type and headers detection
+
+This setting is specific for unstructured sources. It helps you by automatically inspecting and detecting the column types and headers based on the first 200 rows of your table. 
+
+By default, this setting is enabled. To disable or enable this setting:
+
+* **In Power Query Online**, go to the **Home > Options** menu and select **Project options**. Inside the Project options window, you'll see the option to **Automatically detect column types and headers for unstructured sources**.
+
+   ![Auto detect data type option in the Project options](images/me-data-types-project-options-auto-detect.png)
+
+* **In Power Query for Desktop**, you have the ability to define this behavior at both the global and per file level inside the *Options* window.
+    - **Global**&mdash;Inside the **Global** menu, go to the **Data Load** item and then go to the **Type Detection** section on the right. From here you can select any of the three type detection configurations that will be applied on every new file created in your application:
+        - Always detect column types and headers for unstructured sources
+        - Detect column types and headers for unstructured sources according to each file's setting
+        - Never detect column types and headers for unstructured sources
+
+       ![Global Type Detection](images/me-data-types-power-query-desktop-options-global-auto-detect.png)
+
+    - **Current File**&mdash;Inside the **Current File** menu, go to the **Data Load** item and then go to the **Type Detection** section on the right. This setting allows you to define if the type detection should be enabled or disabled for the current file.    
+
+       ![Auto detect data type option in Power Query for desktop applications](images/me-data-types-power-query-desktop-options-auto-detect.png)
+
+When this setting is enabled, Power Query will automatically detect the column headers and data types of unstructured data sources. Power Query will do this by automatically adding two steps to your query:
+
+* **Promote column headers**&mdash;promotes the first row of the table to be the column header.
+* **Changed Type**&mdash;converts the values from any* data type to a data type based on the inspection of the values from each column.
+
 
 ## Data type conversion matrix
 
