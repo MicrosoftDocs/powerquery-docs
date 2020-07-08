@@ -10,7 +10,7 @@ ms.author: v-miesco
 
 # Fill values in a column
 
-The operation to fill down or fill up is an operation that can happen from row to row in a single column. 
+You can use fill up and fill down to replace null values with the last non-empty value in this column. 
 
 For example, imagine the following table where you'd like to fill down in the **Date** column and fill up in the **Comments** column.
 
