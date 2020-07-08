@@ -20,14 +20,14 @@ One of the key points in any data integration system is to reduce the number of 
 
 The rest of the data integration will then use the staging database as the source for further transformation and converting it to the data warehouse model structure.
 
-We recommended that you follow the same approach using dataflows. Create a set of dataflows that are responsible for just loading data "as is" from the source system (only for the tables that are needed). The result is then stored in the storage structure of the dataflow (either ADLS Gen2 or Common Data Services). This change ensures that the read operation from the source system is at a minimum. 
+We recommended that you follow the same approach using dataflows. Create a set of dataflows that are responsible for just loading data "as is" from the source system (only for the tables that are needed). The result is then stored in the storage structure of the dataflow (either ADLS Gen2 or Common Data Services). This change ensures that the read operation from the source system is minimal.
 
-Then you can have other dataflows sourced from the staging dataflows.
+Next, you can create other dataflows that source their data from staging dataflows. Benefits of this approach include:
 
-- Reducing the read transactions from the source system, and reducing the load on the source system as a result.
+- Reducing the number of read operations from the source system, and reducing the load on the source system as a result.
+- Reducing the load on data gateways, if on-premise data sources is used
 - Having an intermediate copy of the data for reconciliation purpose, in case the source system data changes.
 - Making the transformation dataflows source-independent. 
-- ...
 
 ![Staging dataflows](media/stagingdataflows.png)
 
