@@ -14,11 +14,9 @@ The Index column adds a new column to the table with explicit position values an
 
 ![Add index column buttons in Add column tab](images/me-add-index-column-icon.png)
 
-The *add an index column* operation adds a new column named **Index** to the table with explicit position values. 
+By default the starting index will start from the value 0 and have an increment of 1 per row.
 
 ![Sample index column](images/me-add-index-column-new-index.png)
-
-By default the starting index will start from the value 0 and have an increment of 1 per row.
 
 You can also configure the behavior of this step by selecting the **Custom** option and configuring the two parameters:
 
