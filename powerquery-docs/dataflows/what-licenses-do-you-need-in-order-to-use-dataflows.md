@@ -47,7 +47,7 @@ The following table contains a list of features and the license needed for them 
 | AI capabilities in Power BI                                  | Power BI Premium                   | N/A                                                          | ?                 |
 | Linked entities                                              | Power BI Premium                   | Analytical dataflows only | ?                 |
 | Computed entities (in-storage transformations using M)       | Power BI premium                   | Analytical dataflows only | ?                 |
-| Schedule refresh                                             |                                    |                                                              |                   |
+| Schedule refresh                                             | Yes                                   | Yes                                                             | Yes                  |
 | Dataflow authoring with Power Query online                   | Yes                                | Yes                                                          | Yes               |
 | Dataflow Management                                          | Power BI portal                    | Power Apps portal                                            | ?                 |
 | New connectors                                               | Yes                                | Yes                                                          | ?                 |
@@ -76,7 +76,7 @@ If you use Power BI Premium (capacity-based licensing), you can use all the AI c
 
 ### Using your organization's Azure Data Lake Gen2 account for dataflow storage
 
-To create dataflows that store data in your organizations Azure Data Lake Gen2 account, in addition to the product licenses above, an Azure subscription is requierd. The amount of storage that can be used is not limited by the dataflow or the product it was created in.
+To create dataflows that store data in your organizations Azure Data Lake Gen2 account, in addition to the product licenses above, an Azure subscription is required. The amount of storage that can be used is not limited by the dataflow or the product it was created in.
 
 ## Next step
 
