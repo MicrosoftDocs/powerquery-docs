@@ -27,9 +27,7 @@ You can also configure the behavior of this step by selecting the **Custom** opt
 
 ## Example
 
-The **Index** column is usually created to support other transformation patterns. In this example, you'll see one of those patterns.
-
-For example, you have the following table with only one column, but notice the data pattern within the column.
+For this example, you have the following table with only one column, but notice the data pattern within the column.
 
 ![Sample initial table](images/me-add-index-column-start-table.png)
 
