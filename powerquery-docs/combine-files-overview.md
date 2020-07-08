@@ -10,15 +10,17 @@ ms.author: v-miesco
 
 # Combine files in Power Query: overview
 
-One powerful capability to import data using Power Query is to combine multiple files, which have the same schema, into a single logical table. 
+With Power Query you can combine multiple files with the same schema into a single logical table.
 
-These files can come from different kinds of sources, such as, but not limited to:
+This is very useful when wanting to combine all the files you have in the same folder. For example, if you had a folder that contains monthly files with all the purchase orders for your company then this would be an easy way to consolidate the orders into a single view.
+
+Files can come from a variety of sources such as but not limited to::
 * Local folder
 * SharePoint site
 * Azure Blob Storage
 * Azure Data Lake Storage (Gen1 and Gen2)
 
-When connecting to one of the previously mentioned data sources, you'll notice that they share the same table schema, which is commonly called the *File system view*.
+When working with files, you will notice that they share the same table schema commonly referred to as the *File system view*. Here's an example below:
 
 ![File system view](images/me-combine-files-overview-file-system-view.png)
 
