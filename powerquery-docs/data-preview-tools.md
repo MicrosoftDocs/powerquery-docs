@@ -28,8 +28,6 @@ Once enabled, the following image shows how they'll be seen inside the Power Que
 
 ![Data preview tools enabled](images/me-data-preview-tools-enabled-v2.png)
 
-Each tool is independent from the other. This means that you can select which ones to enable and which ones you would like to keep as disabled.
-
 >[!NOTE] 
 >By default, Power Query will perform these data preview features over the first 1,000 rows of your data. To enable these, check the bottom left query of your editor window to change how the column profiling is performed.
 
