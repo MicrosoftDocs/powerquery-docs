@@ -33,8 +33,6 @@ The result of that operation will look like the following image.
 > [!Note]
 > When doing the transpose operation, the column headers of the initial table will be lost. Only the contents of the table will be transposed during the operation. The new columns will have the name of **Column** followed by a sequential number.
 
-## Post transpose cleaning
-
 The headers that you need in this example are in the first row of the table. Your final table will look like the following image. To promote the first row to headers, select the table contextual icon inside the **Data Preview** section. Then select the option to **Use first row as headers**.
 
 ![Promote row to be table headers](images/me-transpose-promote-headers.png)
