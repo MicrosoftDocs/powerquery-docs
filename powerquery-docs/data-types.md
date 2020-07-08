@@ -10,7 +10,7 @@ ms.author: v-miesco
 
 # Data types in Power Query
 
-A data type in Power Query is a value that classifies other values. A value that is classified by a data type is said to ***conform*** to that data type. 
+Data types in Power Query are used to classify the type of content to have a more structured data set.
 
 The data type of a column is displayed on the left-hand side of the column header with an icon image that symbolizes the data type:
 
