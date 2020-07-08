@@ -26,7 +26,7 @@ However, when the dataflow is [analytical](https://github.com/MicrosoftDocs/powe
 
  
 
-CDM, which stands for [Common Data Model](https://docs.microsoft.com/en-us/common-data-model/), is a metadata structure defined to bring conformity and consistency of using the data across multiple platforms. CDM is not data storage. In fact, is it the way that the data is stored and defined. 
+CDM, which stands for [Common Data Model](https://docs.microsoft.com/common-data-model/), is a metadata structure defined to bring conformity and consistency of using the data across multiple platforms. CDM is not data storage. In fact, is it the way that the data is stored and defined. 
 
  
 
@@ -46,7 +46,7 @@ Inside each dataflow folder, there are sub-folders for each entity, and a metada
 
  
 
-![what's inside a dataflow folder](https://docs.microsoft.com/en-us/common-data-model/media/cdm-folder.png) 
+![what's inside a dataflow folder](https://docs.microsoft.com/common-data-model/media/cdm-folder.png) 
 
  
 
@@ -106,11 +106,11 @@ If your organization enabled dataflows to leverage its Azure Data Lake Storage G
 
  
 
-![Connect to external Azure Data Lake Storage Gen 2](https://docs.microsoft.com/en-us/power-bi/transform-model/media/service-dataflows-connect-azure-data-lake-storage-gen2/dataflows-connect-adlsg2_09.jpg) 
+![Connect to external Azure Data Lake Storage Gen 2](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-connect-azure-data-lake-storage-gen2/dataflows-connect-adlsg2_09.jpg) 
 
  
 
-[This article](https://docs.microsoft.com/en-us/power-bi/transform-model/service-dataflows-connect-azure-data-lake-storage-gen2) explains how to connect the external Azure Data Lake storage account to dataflows in your environment. 
+[This article](https://docs.microsoft.com/power-bi/transform-model/service-dataflows-connect-azure-data-lake-storage-gen2) explains how to connect the external Azure Data Lake storage account to dataflows in your environment. 
 
  
 
@@ -118,24 +118,24 @@ If your organization enabled dataflows to leverage its Azure Data Lake Storage G
 
  
 
-- [Use the Common Data Model to optimize Azure Data Lake Storage Gen2](https://docs.microsoft.com/en-us/common-data-model/data-lake 
+- [Use the Common Data Model to optimize Azure Data Lake Storage Gen2](https://docs.microsoft.com/common-data-model/data-lake 
 
   ) 
 
-- [The metadata file (model.json) for the Common Data Model](https://docs.microsoft.com/en-us/common-data-model/model-json 
+- [The metadata file (model.json) for the Common Data Model](https://docs.microsoft.com/common-data-model/model-json 
 
   ) 
 
-- [Add a CDM folder to Power BI as a dataflow (Preview)](https://docs.microsoft.com/en-us/power-bi/service-dataflows-add-cdm-folder 
+- [Add a CDM folder to Power BI as a dataflow (Preview)](https://docs.microsoft.com/power-bi/service-dataflows-add-cdm-folder 
 
   ) 
 
-- [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://docs.microsoft.com/en-us/power-bi/service-dataflows-connect-azure-data-lake-storage-gen2 
+- [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://docs.microsoft.com/power-bi/service-dataflows-connect-azure-data-lake-storage-gen2 
 
   ) 
 
-- [Dataflows and Azure Data Lake Integration (Preview)](https://docs.microsoft.com/en-us/power-bi/transform-model/service-dataflows-azure-data-lake-integration) 
+- [Dataflows and Azure Data Lake Integration (Preview)](https://docs.microsoft.com/power-bi/transform-model/service-dataflows-azure-data-lake-integration) 
 
-- [Configure workspace dataflow settings (Preview)](https://docs.microsoft.com/en-us/power-bi/service-dataflows-configure-workspace-storage-settings 
+- [Configure workspace dataflow settings (Preview)](https://docs.microsoft.com/power-bi/service-dataflows-configure-workspace-storage-settings 
 
   ) 
