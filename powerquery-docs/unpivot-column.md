@@ -15,7 +15,7 @@ In Power Query, you can transform columns into attribute-value pairs where colum
 
 ![Unpivot columns diagram](images/me-unpivot-diagram.png)
 
-For example, imagine a table like the one in the following image.
+For example, given a table like the one below where country and date create a matrix, it would be very difficult to analyze the data in a scalable way. 
 
 ![General Unpivot columns sample initial table](images/me-unpivot-initial-table.png)
 
