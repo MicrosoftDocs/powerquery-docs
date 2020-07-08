@@ -40,7 +40,7 @@ The goal is to reach the following table where the name of the country appears a
 
 ![Left outer join final table](images/me-merge-operations-left-outer-final-table.png)
 
-## Do a left outer join
+## Left outer join
 
 To do a left outer join:
 
