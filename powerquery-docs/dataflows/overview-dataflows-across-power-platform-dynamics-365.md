@@ -1,20 +1,12 @@
---- 
+---
 
-title: An overview of dataflows across Power Platform and Dynamics 365 products 
-
-description: An overview of dataflows across Power Platform and Dynamics 365 products 
-
+title: An overview of dataflows across Power Platform and Dynamics 365 products
+description: An overview of dataflows across Power Platform and Dynamics 365 products
 author: radacad 
-
 ms.service: powerquery 
-
 ms.topic: conceptual 
-
 ms.date: 05/11/2020 
-
-ms.author: gepopell 
-
- 
+ms.author: gepopell  
 
 --- 
 
