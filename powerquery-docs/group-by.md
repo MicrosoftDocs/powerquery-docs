@@ -40,11 +40,7 @@ You can find the **Group By** button in three places:
 
 ## To Group by one or more columns
 
-In this example, your goal is to reach the following table from your original sample table:
-
-![Sample initial table with aggregated columns](images/me-group-by-add-aggregated-column.png)
-
-You want the total units sold summarized at the **Country** and **Sales Channel** level.
+In this example, your goal is to get the total **Units** sold summarized at the **Country** and **Sales Channel** level.
 
 You can accomplish your goal by performing a group by operation using the following columns as **Group by** columns:
 * Country
