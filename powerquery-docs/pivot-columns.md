@@ -44,7 +44,7 @@ The available options are:
 - Sum
 - Average
 
-## About the don't aggregate option
+## Pivoting columns that can't be aggregated
 The pivot columns operation acts in much the same way as the operation that you see in a pivot table operation in Excel. However, Power Query has an option called **Don't aggregate**, which is particularly important for certain scenarios.
 
 ### Pivot a column with no aggregation
