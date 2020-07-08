@@ -16,6 +16,9 @@ The data type of a column is displayed on the left-hand side of the column heade
 
 ![Common data types icon in the Data Preview pane](images/me-data-types-icons.png)
 
+>[!Note]
+>Power Query provides a set of contextual transformations and options based on the data types of the columns. For example, when you select a column with a data type of Date, you get transformations and options that are contextual to that specific data type. These transformations and options occur throughout the Power Query interface, such as in the *Transform* and *Add Column* tab, as well as in the smart filter options. 
+
 The most common data types used in Power Query are:
 
 |Data Type | Icon | Description|
@@ -33,9 +36,6 @@ The most common data types used in Power Query are:
 |**True/False**|![True/False](images/Logical_20.png) |A Boolean value of either a True or False.|
 |**Binary**| ![Binary](images/Binary_20.png) |The Binary data type can be used to represent any other data with a binary format.|
 |**Any**| ![Any](images/AnyType_20.png)|The *any* data type is the status given to a column without an explicit data type definition. *Any* is the data type that classifies all values. We recommended that you always explicitly define the column data types for your queries from unstructured sources and avoid columns with the *any* data type as the output of your query.|
-
->[!Note]
->Power Query provides a set of contextual transformations and options based on the data types of the columns. For example, when you select a column with a data type of Date, you get transformations and options that are contextual to that specific data type. These transformations and options occur throughout the Power Query interface, such as in the *Transform* and *Add Column* tab, as well as in the smart filter options. 
 
 ## Data type detection
 
