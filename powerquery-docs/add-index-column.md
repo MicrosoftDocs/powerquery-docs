@@ -10,6 +10,8 @@ ms.author: v-miesco
 
 # Add an index column
 
+The Index column adds a new column to the table with explicit position values and is usually created to support other transformation patterns
+
 ![Add index column buttons in Add column tab](images/me-add-index-column-icon.png)
 
 The *add an index column* operation adds a new column named **Index** to the table with explicit position values. 
