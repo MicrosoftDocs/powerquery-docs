@@ -1,5 +1,5 @@
 ---
-title: "Power Query's 'Get Data' experience"
+title: "Getting data"
 description: "Complete overview of the Power Query Get Data experience and all of its components such as connector parameters, authentication, navigation table and output."
 author: ptyx507
 ms.service: powerquery
@@ -8,7 +8,7 @@ ms.date: 06/01/2019
 ms.author: v-miesco
 ---
 
-# Power Query's 'Get Data' experience
+# Getting data
 
 When connecting to a data source with Power Query, the process will follow a set of steps or stages before landing the data at a destination, whether the destination is a table or the Power Query Editor window. This article describes the set of steps or stages to better understand how things work with Power Query.
 
@@ -58,7 +58,7 @@ For example, the available authentication methods for the Azure SQL Server conne
 
 ## 3. Navigation table (navigator)
 
-The navigation table or navigator's window goal is to display, in a user-friendly way, the objects available from the data source to the end user.
+The goal of the navigation table, also known as the or navigator window, is to provide you with a user-friendly to preview and select your data.
 
 ![SQL Server connector navigator](images/me-navigator.png)
 
