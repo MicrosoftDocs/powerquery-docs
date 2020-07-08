@@ -79,13 +79,13 @@ connect to the data source at this stage.
 
 If you've done all the steps successfully, you should see a preview of the data in the Power Query Editor.
 
-## Some Power Query Desktop functions aren't available in Power Query Online
+## Some Power Query Desktop functions requires a gateway in Power Query Online
 
-Remember that although most of your queries can be migrated after setting up the connection or the gateway, if needed, there are a few that won't. Because not all the functions that are supported in Power Query in desktop are supported in Power Query Online, used by dataflows. If this happens, you might get an error message indicating which specific function isn't supported. The figure below shows an example of one of these scenarios.
+Some of the functions might requires gateway, even if their source is not on-premises. Among these are functions such as Web.BrowserContents, and Web.Page. If this happens, you might get an error message indicating which specific function isn't supported. The figure below shows an example of one of these scenarios.
 
 ![Unsupported functions in the dataflow](media/MigrateToDataflowError.png)
 
-If a scenario like this happens, you need to update the query in the dataflow's Power Query editor using a set of steps that are supported in the experience. The list of functions that aren't yet supported in the dataflow is minimal, and functions are getting supported gradually.
+If a scenario like this happens, you have two options. You can set up the gateway for that data source, or you need to update the query in the dataflow's Power Query editor using a set of steps that are supported without the need for the gateway. 
 
 ## Refresh the dataflow entities
 
