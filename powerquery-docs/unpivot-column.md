@@ -19,7 +19,7 @@ For example, given a table like the one below where country and date create a ma
 
 ![General Unpivot columns sample initial table](images/me-unpivot-initial-table.png)
 
-This table has a value by country and by date as a matrix. You may need to transform that table into the following one with unpivoted columns.
+Instead, you could transform the table into the following one with unpivoted columns so that it's easier to use the date as attribute to filter on.
 
 ![General Unpivot columns sample goal table](images/me-unpivot-final-table.png)
 
