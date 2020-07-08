@@ -1,6 +1,6 @@
 # Computed Entities Scenarios and Use-cases
 
-There are benefits to using computed entities in the dataflow. This article explains computed entity use cases and they work behind the scenes.
+There are benefits to using computed entities in the dataflow. This article explains computed entity use cases and how they work behind the scenes.
 
 ## What is a computed entity?
 
@@ -12,7 +12,7 @@ Computed entities solve both problems. Computed entities are similar to other en
 
 Computed entities can be created by referencing an entity in the same dataflow or, by referencing an entity created in a different dataflows.
 
-![Computed Entity](https://docs.microsoft.com/en-us/power-bi/transform-model/media/service-dataflows-computed-entities-premium/computed-entities-premium_00.png)
+![Computed Entity](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-computed-entities-premium/computed-entities-premium_00.png)
 
 ## Why is it good to use Computed Entity?
 
@@ -56,7 +56,7 @@ The concept of the computed entity is to have a table persisted in the storage, 
 
 ## Computed Entity with the Transformations or Without?
 
-Now that you know what computed entities are great for improving performance of the data transformation, a good question to ask is whether transformations should always be deferd to the computed entity or whether they should be applied to the source entity. i.e. should data always be ingested into one entity and then transformed in a computed entity? what are pros and cons?
+Now that you know computed entities are great for improving performance of the data transformation, a good question to ask is whether transformations should always be deferd to the computed entity or whether they should be applied to the source entity. i.e. should data always be ingested into one entity and then transformed in a computed entity? what are pros and cons?
 
 ### Load data without transformation for Text/CSV files
 
