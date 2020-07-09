@@ -53,3 +53,5 @@ To connect to a folder:
 
 All of the files in the folder you select will be included in the data to be combined. If you have data files located in a subfolder of the folder you select, all of these files will also be included. To ensure that combining the file data works properly, make sure that all of the files in the folder and the subfolders have the same schema.
 
+For more information about combining files, see [Combine files in Power Query](../combinefiles.md).
+
