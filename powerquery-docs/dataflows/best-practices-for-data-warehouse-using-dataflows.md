@@ -69,7 +69,7 @@ It isn't ideal to bring data in the same layout of the operational system into a
 
 When building dimension tables, make sure you have a key for each dimension table. This ensures that no many-to-many (or in other terms, weak) relationship is needed between dimensions. You can create the key by applying some transformation to make sure a column or a combination of columns are returning unique rows in the dimension. Then that combination of columns can be marked as key in the entity in the dataflow.
 
-![Mark as Key](media/markaskey.png)
+![Mark as Key](media/MarkAsKey.png)
 
 ### Incremental refresh for large fact tables
 
@@ -83,7 +83,7 @@ Incremental refresh gives you options to only refresh part of the data, the part
 
 In the source system, you have often a table that you use for generating both fact and dimension tables in the data warehouse. These tables are good candidates for computed entities and also intermediate dataflows. The common part of the process, such as data cleaning, removing extra rows and columns, and so on, can be done once. Using a reference from the output of those actions, you can produce the dimension and fact tables. This approach will use the computed entity for the common transformations.
 
-![Referencing from other entities](media/ordersentityreferenced.png)
+![Referencing from other entities](media/OrdersEntityReferenced.png)
 
 
 
