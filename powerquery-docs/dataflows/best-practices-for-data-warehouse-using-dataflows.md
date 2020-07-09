@@ -29,7 +29,7 @@ Then you can have other dataflows sourced from the staging dataflows.
 - Making the transformation dataflows source-independent. 
 - ...
 
-![Staging dataflows](media/stagingdataflows.png)
+![Staging dataflows](media/StagingDataflows.png)
 
 ## Transformation dataflows
 
