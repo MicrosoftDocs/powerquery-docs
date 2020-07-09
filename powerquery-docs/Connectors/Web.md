@@ -130,7 +130,7 @@ The following file types are supported by the Web Connector:
 * Access database
 * [CSV document](textcsv.md)
 * [Excel workbook](excel.md)
-* JSON
+* [JSON](json.md)
 * Text file
 * HTML page
 * [XML tables](xml.md)
