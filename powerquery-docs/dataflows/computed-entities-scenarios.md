@@ -6,17 +6,17 @@ There are benefits to using computed entities in the dataflow. This article expl
 
 An entity represents the data output of a query created in a dataflow, after the dataflow has been refreshed. It represents data from a source and, optionally, the transformations that were applied to it. Sometimes, you might want to create new entities that are a function of a previously ingested entity.
 
-While it's possible to repeat the queries that created an entity and applying new transformations to them, this approach has drawbacks. For example, data is ingested twice and the load on the data source is doubled.
+While it's possible to repeat the queries that created an entity and apply new transformations to them, this approach has drawbacks. For example, data is ingested twice and the load on the data source is doubled.
 
-Computed entities solve both problems. Computed entities are similar to other entities in that they get data from a source and allow customer to apply further transformations to create them, but their data originates from the storage dataflows use and not the original data source. i.e. they were previosuly created by a dataflow and re-used.
+Computed entities solve both problems. Computed entities are similar to other entities in that they get data from a source and allow a customer to apply further transformations to create them. But their data originates from the storage dataflow use and not the original data source, that is, they were previosuly created by a dataflow and re-used.
 
-Computed entities can be created by referencing an entity in the same dataflow or, by referencing an entity created in a different dataflows.
+Computed entities can be created by referencing an entity in the same dataflow, or by referencing an entity created in a different dataflow.
 
 ![Computed Entity](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-computed-entities-premium/computed-entities-premium_00.png)
 
 ## Why is it good to use Computed Entity?
 
-Preforming all the transformation steps at one entity can be slow at times. There can be many reasons for that, the data source might be slow, and some of the transformations that we are doing might be needed to be replicated in two or more queries. In addition, it might be advantegeous to first ingest the data from the source, and then re-use it in one or more entities. In such cases, choosing to create two entities, one that gets data from the data source, and another, a computed entity, that applies additional transformations to data already written into the data lake used by a dataflow can increase performance and re-usibility of data, saving time and resources.
+Preforming all the transformation steps in one entity can be slow at times. There can be many reasons for that, the data source might be slow, and some of the transformations that you are doing might be need to be replicated in two or more queries. In addition, it might be advantegeous to first ingest the data from the source, and then re-use it in one or more entities. In such cases, choosing to create two entities, one that gets data from the data source, and another, a computed entity, that applies additional transformations to data already written into the data lake used by a dataflow can increase performance and re-usibility of data, saving time and resources.
 
 For example, if there are two entities which are even sharing part of their transformation logic, without a computed entity, they will be re-doing the transformations again;
 
@@ -48,11 +48,11 @@ This means that the Orders Aggregated entity will be getting data from the Order
 
 ## Computed Entity in other dataflows
 
-You can also create computed entity in other dataflows. It can be created by getting data from a dataflow via the Power Platform dataflow connector.
+You can also create computed entity in other dataflows. It can be created by getting data from a dataflow using the Power Platform dataflow connector.
 
 ![get data from Power Platform dataflows](media/getdatafromppdataflows.png)
 
-The concept of the computed entity is to have a table persisted in the storage, and other tables sourced from it, so that you can reduce the read from the data source, and share some of the common transformations. This can be achieved by getting data from other dataflows via the dataflow connector, or referencing another query in the same dataflow.
+The concept of the computed entity is to have a table persisted in the storage, and other tables sourced from it, so that you can reduce the read from the data source, and share some of the common transformations. This can be achieved by getting data from other dataflows through the dataflow connector, or referencing another query in the same dataflow.
 
 ## Computed Entity with the Transformations or Without?
 
