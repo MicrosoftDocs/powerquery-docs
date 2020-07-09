@@ -10,7 +10,7 @@ ms.author: v-miesco
 
 # Merge queries overview
 
-You can merge queries when you have one or more columns that you’d like to add to another query. A merge operation joins two existing tables together based on matching values from one or multiple columns. There are different types of joins that could used depending the desired output. 
+A merge operation joins two existing tables together based on matching values from one or multiple columns. There are different types of joins that could used depending the desired output. 
 
 ## To merge queries
 
