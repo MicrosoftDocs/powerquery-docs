@@ -48,7 +48,7 @@ To connect to a SharePoint folder:
 
       ![SharePoint folder desktop authentication](./media/sharepoint-folder/signin.png)
 
-      For more information about authentication methods, see [Authentication with a data source](connectorauthentication.md).
+      For more information about authentication methods, see [Authentication with a data source](../connectorauthentication.md).
 
 4. If you're connecting from Power Query Online:
 
@@ -85,11 +85,11 @@ In some cases, you might have multiple folders on your SharePoint site containin
 
    ![List of SharePoint folder files](./media/sharepoint-folder/list-folder-files.png)
 
-2. In the Power Query editor, scroll down to find the files you want to keep and use **Keep Rows** or **Remove Rows**.  
+2. In the Power Query editor, scroll down to find the files you want to keep.  
 
-   ![](./media/sharepoint-folder/transform-file-table.png)
+   ![Find the files to keep](./media/sharepoint-folder/transform-file-table.png)
 
-3. In the example above, the required files are the last rows in the table. Select **Remove Rows**, enter the value of the last row before the files to keep (in this case 903), and select **OK**.
+3. In the example shown in the screenshot above, the required files are the last rows in the table. Select **Remove Rows**, enter the value of the last row before the files to keep (in this case 903), and select **OK**.
 
    ![Remove rows](./media/sharepoint-folder/remove-rows.png)
 
