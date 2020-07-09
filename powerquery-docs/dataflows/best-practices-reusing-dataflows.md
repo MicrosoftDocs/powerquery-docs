@@ -26,7 +26,7 @@ If you have data transformation dataflows, you can split them into dataflows tha
 
 Each workspace (or environment) is available only for members of that workspace. If you build all your dataflows in one workspace, you're minimizing the reuse of your dataflows. You can have some generic workspaces for dataflows that are processing tenant-wide entities. You can also have some workspace for dataflows to process entities across multiple departments. And you can also have some workspaces for dataflows to be used only in specific departments.
 
-![separate workspaces](media/separateworkspaces.png)
+![separate workspaces](media/SeparateWorkspaces.png)
 
 ### Set the correct access levels on workspaces
 
