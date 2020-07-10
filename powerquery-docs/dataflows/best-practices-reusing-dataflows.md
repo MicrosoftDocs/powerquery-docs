@@ -12,7 +12,7 @@ ms.author: v-rerad
 
 # Best practices for reusing dataflows across environments and workspaces
 
-This article discusses a collection of best practices for resuing dataflows effectively and efficiently. Read this article to avoid design pitfalls, potential performance issues, while developing dataflows for re-use.
+This article discusses a collection of best practices for resuing dataflows effectively and efficiently. Read this article to avoid design pitfalls and potential performance issues, while developing dataflows for reuse.
 
 ## Separate data transformation (T), and staging (or extraction E) dataflows
 
@@ -38,7 +38,7 @@ To give access to dataflows in other workspaces to use the output of the dataflo
 
 There can be many dataflows created under the tenant. It would be hard for the users of the dataflow to know which dataflow is more reliable to use. That's why there's a system of endorsement. Authors of a dataflow, or those who have edit access to it, can endorse the dataflow at three levels: no endorsement, promoted, and certified. 
 
-The levels of endorsement are helpful for users to find reliable dataflows easier and faster. The dataflow with a higher endorsement level appeard first. The Power BI administrator can delegate the ability to endorse dataflows to the certified level to other people. To learn more about endorsement on dataflows, see [Promote or certify dataflows (preview)](https://docs.microsoft.com/power-bi/transform-model/service-dataflows-promote-certify).
+The levels of endorsement are helpful for users to find reliable dataflows easier and faster. The dataflow with a higher endorsement level appears first. The Power BI administrator can delegate the ability to endorse dataflows to the certified level to other people. To learn more about endorsement on dataflows, see [Promote or certify dataflows (preview)](https://docs.microsoft.com/power-bi/transform-model/service-dataflows-promote-certify).
 
 ![endorsement on the dataflow](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-promote-certify/powerbi-dataflow-endorsement-power-query.png)
 
