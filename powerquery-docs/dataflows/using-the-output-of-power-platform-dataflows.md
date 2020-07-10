@@ -27,19 +27,19 @@ When you get data from a dataflow, the data will be imported into the Power BI d
 
 Power BI Dataflows also support a DirectQuery connection. If the size of the data is so large that you don't want to import all of it into the Power BI dataset, you can create a DirectQuery connection. DirectQuery won't copy the data into the Power BI dataset. The tables in the Power BI dataset that get their data from a DirectQuery sourced dataflow don't need a scheduled refresh, because their data will be fetched live from the dataflow.
 
-To use DirectQuery for the dataflows, you need to enable the compute engine on your premium capacity, and then refresh the dataflow before it can be consumed in DirectQuery mode. In addition, it is only supported via the Power BI dataflows connector. For more information, see [Power BI Dataflows Direct Query Support](https://powerbi.microsoft.com/blog/power-bi-dataflows-direct-query-support/).
+To use DirectQuery for the dataflows, you need to enable the compute engine on your premium capacity, and then refresh the dataflow before it can be consumed in DirectQuery mode. In addition, it is only supported through the Power BI dataflows connector. For more information, see [Power BI Dataflows Direct Query Support](https://powerbi.microsoft.com/blog/power-bi-dataflows-direct-query-support/).
 
 ![Premium capacity settings for DirectQuery to the dataflow](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-enhanced-compute-engine/enhanced-compute-engine-01.png)
 
-## Dataflows can Get Data from other dataflows
+## Dataflows can get data from other dataflows
 
-If you would like to re-use data created by one dataflow in another dataflows you can do so by using the dataflow connector in the Power Query editor experience when creating a new dataflow.
+If you'd like to reuse data created by one dataflow in another dataflow, you can do so by using the dataflow connector in the Power Query editor experience when creating a new dataflow.
 
 ![Get Data from dataflow](https://docs.microsoft.com/data-integration/dataflows/media/dataflows-linked-entities/linked-entities-03.png)
 
-When getting data from the output of another dataflow, a [linked entity](https://docs.microsoft.com/data-integration/dataflows/dataflows-linked-entities) will be created. Linked entities provide a way to make data created in an upstream dataflow, available in a downstram dataflow without copying the data to the downstream dataflow. Because linked entities are just pointers to entities created in other dataflows, they are kept up to date by the refresh logic of the upstream dataflow. If both dataflows reside in the same workspace or environment, those dataflows will refresh together, to keep data in both dataflows always up to date. To learn more about the refresh process of linked entities, see [Link entities between dataflows](https://docs.microsoft.com/data-integration/dataflows/dataflows-linked-entities).
+When getting data from the output of another dataflow, a [linked entity](https://docs.microsoft.com/data-integration/dataflows/dataflows-linked-entities) will be created. Linked entities provide a way to make data created in an upstream dataflow available in a downstram dataflow, without copying the data to the downstream dataflow. Because linked entities are just pointers to entities created in other dataflows, they're kept up to date by the refresh logic of the upstream dataflow. If both dataflows reside in the same workspace or environment, those dataflows will refresh together, to keep data in both dataflows always up to date. To learn more about the refresh process of linked entities, see [Link entities between dataflows](https://docs.microsoft.com/data-integration/dataflows/dataflows-linked-entities).
 
-## Separating Data Transformation from Data consumption
+## Separating data transformation from data consumption
 
 When you use the output of a dataflow in other dataflows or datasets, you can create an abstraction between the data transformation layer and the rest of the data model. This abstraction is important because it creates a multi-role architecture, in which the Power Query customer can focus on building the data transformations, and the data modelers can focus on data modeling.
 
