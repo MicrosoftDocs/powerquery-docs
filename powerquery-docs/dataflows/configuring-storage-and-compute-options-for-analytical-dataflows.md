@@ -45,7 +45,7 @@ To configure dataflows created in Power Apps portal to store data in the organiz
 
 ## The enhanced compute engine
 
-In Power BI, in addition to the standard dataflow engine, an enhanced compute engine is available for the dataflows created in Premium workspaces and of the Enhanced dataflow compute workload is enabled by the Administrator of the Premium capacity. You can configure this setting in the Power BI Admin portal, under the Premium capacity settings. The enhanced compute engine is available in Premium P1 or A3 capacities and above. The enhanced compute engine will reduce the refresh time required for long-running ETL steps over computed entities, such as joins, distinct, filters, and group by. It also provides the ability to perform DirectQuery over entities from the Power BI dataset.
+In Power BI, in addition to the standard dataflow engine, an enhanced compute engine is available for the dataflows created in Premium workspaces. You can configure this setting in the Power BI Admin portal, under the Premium capacity settings. The enhanced compute engine is available in Premium P1 or A3 capacities and above. The enhanced compute engine will reduce the refresh time required for long-running ETL steps over computed entities, such as joins, distinct, filters, and group by. It also provides the ability to perform DirectQuery over entities from the Power BI dataset.
 
 ![The enhanced compute engine](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-enhanced-compute-engine/enhanced-compute-engine-01.png)
 
