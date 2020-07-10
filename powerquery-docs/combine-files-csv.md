@@ -10,25 +10,25 @@ ms.author: v-miesco
 
 # Combine files: CSV documents
 
-In Power Query, you have the *Combine files* experience to combine multtiple files from a given data source. This article will showcase how the experience works when the files that you want to combine are CSV files. You can read an overview of the *Combine files* experience from the article [Combine files: Overview](combine-files-overview.md). 
+In Power Query, you have the *Combine files* experience to combine multiple files from a given data source. This article will showcase how the experience works when the files that you want to combine are CSV files. You can read an overview of the *Combine files* experience from the article [Combine files: Overview](combine-files-overview.md). 
 
 ## About the sample files used
 
-All CSV files used in this example have the same structure and same extension (csv). For the combine files experience, it is imperative that all files you want to combine have the same structure and extension.
+All CSV files used in this example have the same structure and same extension (csv). For the combine files experience, it's imperative that all files you want to combine have the same structure and extension.
 
 For this example, there's a total of 12 CSV files. The following image shows the first 15 rows of the file for the month of January.
 
 ![Sample CSV file for January 2019](images/me-combine-files-csv-sample-csv-file.png)
 
-Each file contains sales data for one particular month of the calendar year 2019. The amount of rows varies from file to file, but all files have a header section in the first four rows. Then they have the column headers in row 5 and the data for the table starts from row 6 downwards. 
+Each file contains sales data for one particular month of the calendar year 2019. The number of rows varies from file to file, but all files have a header section in the first four rows. Then they have the column headers in row 5 and the data for the table starts from row 6 downwards. 
 
-The goal is to combine all twelve files into a single table that will look like the following table.
+The goal is to combine all 12 files into a single table that will look like the following table.
 
 ![Sample final combined table](images/me-combine-files-csv-final-table.png)
 
-You can follow along with this example by downloading the sample files used in this article from the following [Download link](csv-files.zip). You can place those files inside the  data source of your choice, such as a local folder, SharePoint folder, Blob Storage, Azure Data Lake, or other data source that provides the *File system view*. 
+You can follow along with this example by downloading the sample files used in this article from the following [download link](csv-files.zip). You can place those files inside the  data source of your choice, such as a local folder, SharePoint folder, Blob Storage, Azure Data Lake, or other data source that provides the *File system view*. 
 
-For simplicity, this article will be using the *Folder* connector. You can read more about the Folder connector from the [Folder](Connectors/Folder.md) article.
+For simplicity, this article will be using the *Folder* connector. To learn more about the Folder connector, see [Folder](Connectors/Folder.md).
 
 ## Table preview dialog
 
@@ -48,7 +48,7 @@ After selecting the **Combine** button in the table preview dialog, you'll be pr
 ![Combine files window](images/me-combine-files-csv-combine-files-window.png)
 
 >[!Note]
->Power Query automatically detects what connector to use based on the first file found in the list. To learn more about the CSV connector, see [Text/CSV](textcsv.md).
+>Power Query automatically detects what connector to use based on the first file found in the list. To learn more about the CSV connector, see [Text/CSV](connectors/textcsv.md).
 
 For this example, leave all the default settings, such as the **Example file** set to **First file**, **File origin**, **Delimiter**, and **Data type detection**.
 
@@ -72,7 +72,7 @@ You now need to apply a new set of transformations to clean the data. This trans
 
 The transformations that need to be added to the *Transform Sample file* query are:
 
-1. **Remove top rows**&mdash;to peform this operation, select the table contextual button on the top left corner of the table, and then select the **Remove top rows** option from the menu. 
+1. **Remove top rows**&mdash;to perform this operation, select the table contextual button on the top-left corner of the table, and then select the **Remove top rows** option from the menu. 
 
    ![Remove top rows table contextual button](images/me-combine-files-csv-remove-top-rows.png)
 
@@ -84,7 +84,7 @@ The transformations that need to be added to the *Transform Sample file* query a
 
    ![Sample query with removed rows](images/me-combine-files-csv-top-rows-removed.png)
 
-2. **Use first row as headers**&mdash;select the table contextual button again, but this time select the **Use first row as headers** option.
+2. **Use first row as headers**&mdash;select the table contextual button again, but this time, select the **Use first row as headers** option.
 
    ![Use first row as headers icon](images/me-combine-files-csv-promote-headers.png)
 
