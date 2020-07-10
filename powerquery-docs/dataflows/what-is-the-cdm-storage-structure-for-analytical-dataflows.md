@@ -12,7 +12,7 @@ ms.author: v-rerad
 
  
 
-Analytical dataflows store both data and metadata in Azure Data Lake Storage Gen2. Standard dataflows leverage to store and describe data created in the lake by them is called Common Data Model folders. In this article, you'll learn more about the storage standard dataflows leverage behind the scenes. 
+Analytical dataflows store both data and metadata in Azure Data Lake Storage Gen2. Dataflows leverage a standard structure to store and describe data created in the lake which is called Common Data Model folders. In this article, you'll learn more about the storage standard that dataflows leverage behind the scenes. 
 
  
 
