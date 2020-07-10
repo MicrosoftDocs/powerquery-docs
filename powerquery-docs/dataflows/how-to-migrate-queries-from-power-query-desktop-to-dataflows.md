@@ -62,13 +62,13 @@ If you aren't using folders in the Power Query, then you can select queries usin
 
 If your data source is an on-premises source, then you need to perform an extra step. Examples of on-premises sources can be Excel files in a shared folder in a local domain, or a SQL Server database hosted in an on-premises server.
 
-Dataflow, as a cloud-based service, requires the on-premises data gateway to connect to the on-premises data source. If the source is an on-premises source, you should [install and configure the gateway](https://docs.microsoft.com/data-integration/gateway/service-gateway-install) for that source system, and then add [the data source for it](https://docs.microsoft.com/data-integration/gateway/service-gateway-manage). Once you completed these steps, you can select the on-premises data gateway when creating the entity in the dataflow.
+A dataflow, as a cloud-based service, requires the on-premises data gateway to connect to the on-premises data source. If the source is an on-premises source, you should [install and configure the gateway](https://docs.microsoft.com/data-integration/gateway/service-gateway-install) for that source system, and then add [the data source for it](https://docs.microsoft.com/data-integration/gateway/service-gateway-manage). Once you've completed these steps, you can select the on-premises data gateway when creating the entity in the dataflow.
 
 ![Gateway setup](media/SetupGatewayForCopiedQuery.png)
 
 The gateway isn't needed for data sources residing in the cloud, such as an Azure SQL Database.
 
-### Configure Connection
+### Configure connection
 
 In the next step, configure the connection to the data source using the **Configure connection** option, enter credentials, or anything else needed to
 connect to the data source at this stage.
@@ -79,9 +79,9 @@ connect to the data source at this stage.
 
 If you've done all the steps successfully, you should see a preview of the data in the Power Query Editor.
 
-## Some Power Query Desktop functions requires a gateway in Power Query Online
+## Some Power Query Desktop functions require a gateway in Power Query Online
 
-Some of the functions might requires gateway, even if their source is not on-premises. Among these are functions such as Web.BrowserContents, and Web.Page. If this happens, you might get an error message indicating which specific function isn't supported. The figure below shows an example of one of these scenarios.
+Some of the functions might require a gateway, even if their source is not on-premises. Among these are functions such as Web.BrowserContents, and Web.Page. If this happens, you might get an error message indicating which specific function isn't supported. The figure below shows an example of one of these scenarios.
 
 ![Unsupported functions in the dataflow](media/MigrateToDataflowError.png)
 
