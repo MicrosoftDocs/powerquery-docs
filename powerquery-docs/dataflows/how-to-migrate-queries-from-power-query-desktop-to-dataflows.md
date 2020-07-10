@@ -10,11 +10,11 @@ ms.author: gepopell
 ---
 # How to migrate queries from Power Query in the desktop (Power BI and Excel) to dataflows
 
-If you already have queries in Power Query, either in Power BI Desktop or in Excel, you might want to migrate the queries into dataflows. Although there's no migration tool or service available at this stage, the migration process is simple and straightforward. In this article, you'll learn the steps to do so.
+If you already have queries in Power Query, either in Power BI Desktop or in Excel, you might want to migrate the queries into dataflows. The migration process is simple and straightforward. In this article, you'll learn the steps to do so.
 
 ## Copy queries from the Desktop
 
-To copy queries from Power Query in the desktop tools (such as Excel or Power BI): 
+Follow these steps to copy queries from Power Query in the desktop tools (such as Excel or Power BI): 
 
 1. In Power BI Desktop, open Power Query Editor by selecting **Transform Data** in the **Home** ribbon.
 
@@ -38,7 +38,7 @@ If you aren't using folders in the Power Query, then you can select queries usin
 
 ![Copy Queries](media/SelectQueries.png)
 
-### Paste the script into the dataflow
+### Paste the copied queries into a dataflow
 
 1. Create a dataflow if you don't have one already.
 
@@ -50,7 +50,7 @@ If you aren't using folders in the Power Query, then you can select queries usin
     
    -   [Creating and using dataflows in Power BI](https://docs.microsoft.com/power-bi/service-dataflows-create-use)
 
-2. Paste the copied folders or queries in the **Queries** pane of the dataflow Power Query Editor using **Ctrl+V**.
+2. Paste the copied folders or queries in the **Queries** pane of the dataflow's Power Query Editor using **Ctrl+V**.
 
    ![Paste queries or folders into the dataflow](media/PasteInDataflow.png)
 
@@ -60,15 +60,15 @@ If you aren't using folders in the Power Query, then you can select queries usin
 
 ### Connect the on-premises data gateway
 
-If your data source is an on-premises source, then you need to do this extra step. Examples of on-premises sources can be Excel files in a shared folder in a local domain, or a SQL Server database hosted in an on-premises server.
+If your data source is an on-premises source, then you need to perform an extra step. Examples of on-premises sources can be Excel files in a shared folder in a local domain, or a SQL Server database hosted in an on-premises server.
 
-Dataflow, as a cloud-based service, requires the on-premises data gateway to connect to the on-premises data source. If the source is an on-premises source, you should [install and configure the gateway](https://docs.microsoft.com/data-integration/gateway/service-gateway-install) for that source system, and then add [the data source for it](https://docs.microsoft.com/data-integration/gateway/service-gateway-manage). Once these are all ready, you can select the on-premises data gateway when creating the entity in the dataflow.
+A dataflow, as a cloud-based service, requires the on-premises data gateway to connect to the on-premises data source. If the source is an on-premises source, you should [install and configure the gateway](https://docs.microsoft.com/data-integration/gateway/service-gateway-install) for that source system, and then add [the data source for it](https://docs.microsoft.com/data-integration/gateway/service-gateway-manage). Once you've completed these steps, you can select the on-premises data gateway when creating the entity in the dataflow.
 
 ![Gateway setup](media/SetupGatewayForCopiedQuery.png)
 
-The gateway isn't needed if the data source isn't an on-premises data source, such as an Azure SQL Database.
+The gateway isn't needed for data sources residing in the cloud, such as an Azure SQL Database.
 
-### Configure Connection
+### Configure connection
 
 In the next step, configure the connection to the data source using the **Configure connection** option, enter credentials, or anything else needed to
 connect to the data source at this stage.
@@ -77,25 +77,25 @@ connect to the data source at this stage.
 
 ### Verification
 
-If you've done all the steps successfully, you should see the data values in the dataflow entity. 
+If you've done all the steps successfully, you should see a preview of the data in the Power Query Editor.
 
-## Some Power Query functions aren't available
+## Some Power Query Desktop functions require a gateway in Power Query Online
 
-Remember that although most of your queries will be working fine after setting up the gateway and connection configuration, there are a few that won't. Because not all the functions that are supported in Power Query in desktop tools are yet fully supported in Power Query in the dataflow, you might get an error message when you use specific functions. The figure below shows an example of one of these scenarios.
+Some of the functions might require a gateway, even if their source is not on-premises. Among these are functions such as Web.BrowserContents, and Web.Page. If this happens, you might get an error message indicating which specific function isn't supported. The figure below shows an example of one of these scenarios.
 
 ![Unsupported functions in the dataflow](media/MigrateToDataflowError.png)
 
-If a scenario like this happens, you need to redevelop your query in Power Query using a set of steps that are supported in the dataflow. The list of functions that aren't yet supported in the dataflow is minimal, and functions are getting supported gradually. 
+If a scenario like this happens, you have two options. You can set up the gateway for that data source, or you need to update the query in the dataflow's Power Query editor using a set of steps that are supported without the need for the gateway. 
 
 ## Refresh the dataflow entities
 
-After migrating your queries to the dataflow, set up a scheduled refresh for your dataflow. You must refresh the dataflow to get data loaded into these entities. You can also do a refresh for the first time as a manual refresh.
+After migrating your queries to the dataflow, You must refresh the dataflow to get data loaded into these entities. You can refresh a dataflow manually, or configure an automatic refresh based on a schedule of your choice.
 
 ![Refresh the dataflow](media/scheduleRefresh.png)
 
 ## Get Data from Power Query Desktop
 
-You can get data from the dataflow entity now in Power BI Desktop using Power BI dataflows, Power Platform dataflows, or Common Data Services (depending on what type of dataflow you're using).
+You can now get data from dataflow entities in Power BI Desktop using the dataflow or Common Data Services connectors (depending on what type of dataflow you're using, analytical or standard).
 
 ![Get data from Dataflows in the Desktop](media/GetDatafromDataflow.png)
 
