@@ -13,7 +13,7 @@ LocalizationGroup: Data from files
 
 # What licenses do you need to use dataflows?
 
-Dataflows can be created in different portals, such as Power BI and Power Apps portal, and can be of two type, analytical and standard dataflows. In addintion, some dataflow features are only available as Premium features. Considering this wide range of products that you can use dataflows, and feature availability in each product or dataflow type, it's important to know what licensing options you need to use dataflows.
+Dataflows can be created in different portals, such as Power BI and Power Apps portal, and can be of two types, analytical and standard dataflows. In addition, some dataflow features are only available as Premium features. Considering the wide range of products that can use dataflows, and feature availability in each product or dataflow type, it's important to know what licensing options you need to use dataflows.
 
 ## Creating dataflows in Power BI workspaces
 
@@ -25,7 +25,7 @@ Power BI pro account is available on a user-monthly-basis option. Multiple optio
 
 If you want to create dataflows in the Power Platform environment a Power Apps (per user or per app) license is required.
 
-If you want to create analytical dataflows that store data in your organization's Azure Data Lake storage Gen2 account, you or your Administrator will need access to an Azure subscription and an Azure Data Lake Gen2 storage account.
+If you want to create analytical dataflows that store data in your organization's Azure Data Lake Storage Gen2 account, you or your administrator will need access to an Azure subscription and an Azure Data Lake Storage Gen2 account.
 
 ## Premium features
 
@@ -76,7 +76,7 @@ If you use Power BI Premium (capacity-based licensing), you can use all the AI c
 
 ### Using your organization's Azure Data Lake Gen2 account for dataflow storage
 
-To create dataflows that store data in your organizations Azure Data Lake Gen2 account, in addition to the product licenses above, an Azure subscription is required. The amount of storage that can be used is not limited by the dataflow or the product it was created in.
+To create dataflows that store data in your organizations Azure Data Lake Storage Gen2 account, in addition to the product licenses above, an Azure subscription is required. The amount of storage that can be used is not limited by the dataflow or the product it was created in.
 
 ## Next step
 
