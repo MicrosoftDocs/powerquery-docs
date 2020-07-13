@@ -10,6 +10,8 @@ ms.author: v-miesco
 
 # Getting data
 
+Power Query can connect to many different data sources so you can work with the data you need. This article walks you through the steps for bringing in data into Power Query. 
+
 When connecting to a data source with Power Query, the process will follow a set of steps or stages before landing the data at a destination, whether the destination is a table or the Power Query Editor window. This article describes the set of steps or stages to better understand how things work with Power Query.
 
 >[!Note] 
