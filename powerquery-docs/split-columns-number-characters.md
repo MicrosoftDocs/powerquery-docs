@@ -37,8 +37,8 @@ The initial table for this example will be the one below, with only one column f
 This column holds three values:
 
 * **Account Name**&mdash;in the first six characters
-* **Date**&mdash;in the next eight characters with the format yyyymmdd
-* **Units**&mdash;the rest of the characters 
+* **Date**&mdash;in the following eight characters with the format yyyymmdd
+* **Units**&mdash;the remaining characters
 
 In this example, you want to split this column into three columns containing the values described in the list above. 
 
@@ -94,6 +94,6 @@ To do that, select the **Account** column and then select the option to split th
 
 ![Split into rows by number of characters window](images/me-split-columns-number-character-into-columns-split-rows-window.png)
 
-The result of that operation will give you a table with the same number of columns, but many more rows because the values inside the cells are now in their own cells.
+The result of that operation will give you a table with the same number of columns, but many more rows because the fragments inside the original cell values in the **Account** column are now split into multiple rows.
 
 ![Final table after the split into rows operation](images/me-split-columns-number-character-into-columns-split-rows-final.png)

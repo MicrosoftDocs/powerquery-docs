@@ -46,4 +46,4 @@ Notice how this action doesn't create a new step, but modifies the existing one 
 
 ## To clear a sort
 
-You can clear a sort operation of a specific column by going through the **Field** dropdown and selecting **Clear Sort**.
+You can clear a sort operation of a specific column by going through the **Field** dropdown and selecting **Clear Sort** or by deleting the step from the Applied Steps pane.

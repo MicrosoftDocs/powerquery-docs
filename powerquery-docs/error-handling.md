@@ -16,7 +16,7 @@ As mentioned in the article on [working with errors in Power Query](working-with
 >[!Note]
 > To demonstrate this concept, this article will use an Excel Workbook as its data source. The concepts showcased here apply to all values in Power Query and not only the ones coming from an Excel Workbook. 
 
-## Catching and managing an error with `try` and `otherwise`
+## Applying conditional logic based on errors
 The sample data source for this demonstration is an Excel Workbook with the following table:
 
 ![Sample data from Excel](images/me-error-handling-sample-workbook.png)

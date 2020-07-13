@@ -15,22 +15,23 @@ LocalizationGroup: Data from files
 
 This article reveals some of the most common errors and issues you might get when you want to create a dataflow, and how to fix them.
 
-## Problem: Can't create a dataflow in My Workspace
+## Problem: Can't create a dataflow in "My Workspace"
 
-This problem happens when you want to create a dataflow in "My Workspace" in Power BI, and you can't.
+This problem happens when you try to create a dataflow in "My Workspace" in Power BI.
 
 ![My Workspace](media/MyWorkspace.png)
 
 **Reason:**
-"My Workspace" has no dataflow capability.
+
+Creating dataflows in "My Workspace" is not supported.
 
 **Resolution:**
 
-Create your dataflows in [organizational workspaces](https://docs.microsoft.com/power-bi/collaborate-share/service-create-the-new-workspaces). It's not possible to have dataflows in "My Workspace". To learn how to create and organizational workspace, see [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/collaborate-share/service-create-the-new-workspaces).
+Create your dataflows in [organizational workspaces](https://docs.microsoft.com/power-bi/collaborate-share/service-create-the-new-workspaces). To learn how to create an organizational workspace, see [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/collaborate-share/service-create-the-new-workspaces).
 
 ## Problem: Can't create a dataflow in an organizational workspace with read-only rights
 
-If you are in an organization workspace and you still can't create a dataflow, it might be because of your access rights in that workspace.
+If you are a member of an organization workspace and you still can't create a dataflow, it might be because of your access rights in that workspace.
 
 **Reason:**
 
@@ -44,15 +45,15 @@ Ask the workspace Administrators or Members to give you the "Administrator", "Me
 
 ## Problem: Can't create a dataflow in a workspace with edit rights
 
-This problem happens when you aren't in "My workspace". Instead, you're in an organizational workspace that either you've created, or someone else has created and you have either "Administrator", "Member", or "Contributor" access. You want to create a dataflow in this scenario, but you can't.
+If you're in an organizational workspace that either you've created, or someone else has created and you have either "Administrator", "Member", or "Contributor" access. You want to create a dataflow in this scenario, but you can't.
 
 **Reason:** 
 
-The access to dataflow creation is disabled by the Power BI tenant admin.
+The access to dataflow creation was disabled by the Power BI administrator.
 
 **Resolution:**
 
-Ask the Power BI tenant administrator to enable the access for you. The steps to do so are:
+Ask the Power BI administrator to enable the access for you. The steps to do so are:
 
 1. The Power BI tenant administrator should open the Power BI **Admin Portal** in the Power BI service.
 

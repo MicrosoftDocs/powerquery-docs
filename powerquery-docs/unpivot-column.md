@@ -11,15 +11,15 @@ ms.author: v-miesco
 
 # Unpivot columns
 
-In Power Query, you can transform columns into attribute-value pairs where columns become rows. You use Power Query's query editor to unpivot columns.
+In Power Query, you can transform columns into attribute-value pairs where columns become rows.
 
 ![Unpivot columns diagram](images/me-unpivot-diagram.png)
 
-For example, imagine a table like the one in the following image.
+For example, given a table like the one below where country and date create a matrix, it would be very difficult to analyze the data in a scalable way. 
 
 ![General Unpivot columns sample initial table](images/me-unpivot-initial-table.png)
 
-This table has a value by country and by date as a matrix. You may need to transform that table into the following one with unpivoted columns.
+Instead, you could transform the table into the following one with unpivoted columns so that it's easier to use the date as attribute to filter on.
 
 ![General Unpivot columns sample goal table](images/me-unpivot-final-table.png)
 
@@ -67,9 +67,6 @@ The following image shows what your query will look like after the refresh with 
 ![Unpivot columns final updated table](images/me-unpivot-columns-final-updated-table.png)
 
 ## Unpivot other columns
-
->[!Note]
-> Both **Unpivot other columns** and **Unpivot columns** provide the same result and behave the same.
 
 It's also possible to only select the columns that you don't want to unpivot and only unpivot the rest of the columns in the table. This is where **Unpivot other columns** comes into play.
 

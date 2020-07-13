@@ -1,5 +1,5 @@
 ---
-title: "Power Query's 'Get Data' experience"
+title: "Getting data"
 description: "Complete overview of the Power Query Get Data experience and all of its components such as connector parameters, authentication, navigation table and output."
 author: ptyx507
 ms.service: powerquery
@@ -8,7 +8,9 @@ ms.date: 06/01/2019
 ms.author: v-miesco
 ---
 
-# Power Query's 'Get Data' experience
+# Getting data
+
+Power Query can connect to many different data sources so you can work with the data you need. This article walks you through the steps for bringing in data into Power Query. 
 
 When connecting to a data source with Power Query, the process will follow a set of steps or stages before landing the data at a destination, whether the destination is a table or the Power Query Editor window. This article describes the set of steps or stages to better understand how things work with Power Query.
 
@@ -19,15 +21,15 @@ When connecting to a data source with Power Query, the process will follow a set
 
 The set of steps or stages are:
 
-1.  Connector parameters
+1.  Connection Settings
 
 2.  Authentication
 
-3.  Navigation table
+3.  Data preview
 
 4.  Output Query
 
-## 1. Connector Parameters
+## 1. Connection Settings
 
 Most connectors initially require at least one parameter to initialize a connection to the data source. For example, the SQL Server connector requires at least the hostname to establish a connection to a SQL Server.
 
@@ -45,7 +47,7 @@ The connector parameters are commonly used to establish a connection to a data s
 Every single connection that is made in Power Query has to be authenticated. The authentication methods vary from connector to connector, and some connectors might offer multiple methods of authentication.
 
 The current available methods of authentication for Power Query are:
-* **Anonymous**&mdash;Commonly used when connecting to a Web Page.
+* **Anonymous**&mdash;Commonly used when connecting to a data source that doesn't require user authentication - such as a web page, a file available over public HTTP, etc.
 * **Basic**&mdash;Accepts a **username** and **password** to be sent in base64 encoding.
 * **API Key**&mdash;Accepts a single API Key for authentication.
 * **Organizational account / Microsoft Account**&mdash;Also known as **OAuth 2.0**.
@@ -56,23 +58,32 @@ For example, the available authentication methods for the Azure SQL Server conne
 
 ![SQL Server connector authentication methods](images/me-authentication.png)
 
-## 3. Navigation table (navigator)
+## 3. Data preview
 
-The navigation table or navigator's window goal is to display, in a user-friendly way, the objects available from the data source to the end user.
+The goal of this data preview stage is to provide you with a user-friendly to preview and select your data.
+
+Depending on the connector that you're using, you can get one of two available experiences:
+* Navigator window
+* Table preview dialog
+
+### Navigator window (Navigation table)
+
+The Navigator window consists of two main sections:
 
 ![SQL Server connector navigator](images/me-navigator.png)
 
-The two main sections of this window are:
 * **Object selection**&mdash;Displayed on the left-hand side of the window. The
-    user can interact with these objects and select one, or enable
-    multi-select to get multiple objects.
+    user can interact with these objects and select them.
+    >[!Note]
+    >For Power Query in Excel, you need to enable the multi-select option from the top left corner of the navigation window.
 * **The data preview**&mdash;Displays a preview of the data from the selected
     object on the right-hand side of the window.
 
->[!Note] 
->Some connectors completely bypass this window and go straight to the
-output query phase. One example of a connector that can do this is the "Folder"
-connector.
+### Table preview dialog
+
+The Table preview dialog is a simple window that consists of only one section for the the data preview. An example of a connector that provides this experience and window the Folder connector. 
+
+![Table preview dialog](images/combinefiles1.png)
 
 ## 4. Output query
 

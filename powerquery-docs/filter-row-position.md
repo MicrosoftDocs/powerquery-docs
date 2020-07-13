@@ -25,6 +25,9 @@ There are two places where you can find the keep rows buttons:
 - **Table contextual menu**&mdash;inside the data preview section. 
 
    ![Keep rows buttons in contextual table menu](images/me-filter-row-position-keep-rows-contextual-menu.png)
+   
+>[!Note]
+>Inside the data preview section in the middle of the Power Query window, you can see the position of your rows on the left hand side of the table. Each row position is represented with a number. The top row starts with the number or position one.   
 
 ### Keep top rows
 
@@ -35,6 +38,7 @@ Imagine the following table that comes out of a system with a fixed layout:
 This report will always contain seven rows of data, and after that it will have a section for comments with an unknown number of rows. In this example, you only want to keep the first seven rows of data. To do that, select **Keep top rows** from the table contextual menu. Inside the **Keep top rows** window, enter the number **7** in the **Number of rows** textbox.
 
 ![Keep top rows window](images/me-filter-row-position-keep-top-rows-window.png)
+
 
 The result of that change will give you the output table you're looking for. After you set the data types to your columns, your table will look like this:
 
@@ -75,7 +79,7 @@ To do that, select **Keep range of rows** from the table contextual menu. Inside
 
 ![Keep range of rows window](images/me-filter-row-position-keep-range-rows-window.png)
 
-Similar to the previous example for "Keep bottom rows", the result of that operation will give you eight rows, but your column header is part of the table.
+Similar to the previous example for "Keep bottom rows", the result of that operation will give you eight rows, but your column header is part of the table. Any rows prior to the **First row** that you defined (row **6**) will be removed from your table.
 
 ![Sample table after performing the Keep range of rows operation](images/me-filter-row-position-keep-bottom-rows-non-promoted-headers.png)
 
@@ -145,11 +149,12 @@ To do that, select **Remove alternate rows** from the table contextual menu. Ins
 
 * **First row to remove:** 2
   * You want to start counting from the second row.
+  * Any rows above the First row to remove will be kept.
 * **Number of rows to remove:** 1
   * You start defining the pattern to remove rows. After you find the second row, you only want to remove that specific row, so you say that you only need to remove one row.
 * **Number of rows to keep:** 1
   * After you remove one row, you keep the next row. The process starts again for the next row.
-
+ 
 ![Remove alternate rows window](images/me-filter-row-position-remove-alternate-rows-window.png)
 
 The result of that selection will give you the output table that you're looking for. After you set the data types to your columns, your table will look like this:

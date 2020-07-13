@@ -10,15 +10,13 @@ ms.author: v-miesco
 
 # Add a column from examples
 
-With *add column from examples* in the Power Query Editor, you can add a new column to a table by providing one or more example values for the new column.
-
-![Add column example](images/me-add-column-from-example.png)
-
 Using *add column from examples* lets you quickly and easily create new columns, and is great for the following situations:
 
 * You know the data you want in your new column, but you're not sure which transformation, or collection of transformations, will get you there.
 * You already know which transformations you need, but you're not sure what to select in the UI to make them happen.
 * You know all about the transformations you need using a custom column expression in the M language, but one or more of those transformations aren't available in the UI.
+
+![Add column example](images/me-add-column-from-example.png)
 
 Adding a column from examples is easy and straightforward. The button to create a column from examples is located in the **Add Column** tab in the Ribbon, inside the **General** group.
 
@@ -81,7 +79,7 @@ When providing examples, Power Query  offers a helpful list of available fields,
 
 ![Column from example suggestions](images/me-add-column-from-example-suggestions.png)
 
-It is important to note that the **Column From Examples** experience works only on the top 100 rows of your query. You can apply steps prior to the **Column From Examples** step to create your own sample of your data. Once the **Column From Examples** column has been created, you can remove those prior steps and the newly created column won't be affected.
+It is important to note that the **Column From Examples** experience works only on the top 100 rows of your data preview. You can apply steps prior to the **Column From Examples** step to create your own data sample. Once the **Column From Examples** column has been created, you can delete those prior steps and the newly created column won't be affected.
 
 ## List of supported transformations
 Many, but not all, transformations are available when using **Add Column from Examples**. The following list shows the supported transformations.
