@@ -79,7 +79,7 @@ When providing examples, Power Query  offers a helpful list of available fields,
 
 ![Column from example suggestions](images/me-add-column-from-example-suggestions.png)
 
-It is important to note that the **Column From Examples** experience works only on the top 100 rows of your query. You can apply steps prior to the **Column From Examples** step to create your own sample of your data. Once the **Column From Examples** column has been created, you can remove those prior steps and the newly created column won't be affected.
+It is important to note that the **Column From Examples** experience works only on the top 100 rows of your data preview. You can apply steps prior to the **Column From Examples** step to create your own data sample. Once the **Column From Examples** column has been created, you can delete those prior steps and the newly created column won't be affected.
 
 ## List of supported transformations
 Many, but not all, transformations are available when using **Add Column from Examples**. The following list shows the supported transformations.
