@@ -40,8 +40,8 @@
         href: filter-row-position.md
       - name: "Filter by values"
         href: filter-values.md
-      - name: "Working with errors"
-        href: working-with-errors.md
+      - name: "Dealing with errors"
+        href: dealing-with-errors.md
       - name: "Working with duplicates"
         href: working-with-duplicates.md
       - name: "Pivot column"
