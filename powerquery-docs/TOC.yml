@@ -46,8 +46,8 @@
         href: working-with-duplicates.md
       - name: "Pivot column"
         href: pivot-columns.md
-      - name: "Fill down or up"
-        href: fill-down-up.md
+      - name: "Fill values in a column"
+        href: fill-values-column.md
       - name: "Sort columns"
         href: sort-columns.md
       - name: "Replace values"
