@@ -68,9 +68,6 @@ The following image shows what your query will look like after the refresh with 
 
 ## Unpivot other columns
 
->[!Note]
-> Both **Unpivot other columns** and **Unpivot columns** provide the same result and behave the same.
-
 It's also possible to only select the columns that you don't want to unpivot and only unpivot the rest of the columns in the table. This is where **Unpivot other columns** comes into play.
 
 ![Unpivot other columns right click](images/me-unpivot-other-columns.png)
