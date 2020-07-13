@@ -65,14 +65,14 @@ From here, you can choose to expand or aggregate the fields from this new table 
 
 A join kind specifies how a merge operation should be performed. The following table describes the available join kinds in Power Query:
 
-|Join Kind| Icon| Description| Sample Article|
-|---------------|-----|-----------|---------------|
-|Left outer| ![Left outer](images/JoinKindLeftOuterIcon.jpg)| All rows from left table, matching from right table|url|
-|Right outer| ![Right outer](images/JoinKindRightOuterIcon.jpg)| All rows from right table, matching from left table| url|
-|Full outer| ![Full outer](images/JoinKindFullOuterIcon.jpg)| All rows from both tables|url|
-|Inner| ![Inner](images/JoinKindInnerIcon.jpg)| Only matching rows from both tables|url|
-|Left anti| ![Left anti](images/JoinKindLeftAntiIcon.jpg)| Only rows from left table|url|
-|Right anti| ![Right anti](images/JoinKindRightAntiIcon.jpg)| Only rows from right table|url|
+|Join Kind| Icon| Description|
+|---------------|-----|-----------|
+|Left outer| ![Left outer](images/JoinKindLeftOuterIcon.jpg)| All rows from left table, matching from right table|
+|Right outer| ![Right outer](images/JoinKindRightOuterIcon.jpg)| All rows from right table, matching from left table|
+|Full outer| ![Full outer](images/JoinKindFullOuterIcon.jpg)| All rows from both tables|
+|Inner| ![Inner](images/JoinKindInnerIcon.jpg)| Only matching rows from both tables|
+|Left anti| ![Left anti](images/JoinKindLeftAntiIcon.jpg)| Only rows from left table|
+|Right anti| ![Right anti](images/JoinKindRightAntiIcon.jpg)| Only rows from right table|
 
 ## Fuzzy matching
 
