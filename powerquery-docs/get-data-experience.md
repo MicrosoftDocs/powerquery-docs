@@ -47,7 +47,7 @@ The connector parameters are commonly used to establish a connection to a data s
 Every single connection that is made in Power Query has to be authenticated. The authentication methods vary from connector to connector, and some connectors might offer multiple methods of authentication.
 
 The current available methods of authentication for Power Query are:
-* **Anonymous**&mdash;Commonly used when connecting to a Web Page.
+* **Anonymous**&mdash;Commonly used when connecting to a data source that doesn't require user authentication - such as a web page, a file available over public HTTP, etc.
 * **Basic**&mdash;Accepts a **username** and **password** to be sent in base64 encoding.
 * **API Key**&mdash;Accepts a single API Key for authentication.
 * **Organizational account / Microsoft Account**&mdash;Also known as **OAuth 2.0**.
@@ -73,8 +73,9 @@ The Navigator window consists of two main sections:
 ![SQL Server connector navigator](images/me-navigator.png)
 
 * **Object selection**&mdash;Displayed on the left-hand side of the window. The
-    user can interact with these objects and select one, or enable
-    multi-select to get multiple objects.
+    user can interact with these objects and select them.
+    >[!Note]
+    >For Power Query in Excel, you need to enable the multi-select option from the top left corner of the navigation window.
 * **The data preview**&mdash;Displays a preview of the data from the selected
     object on the right-hand side of the window.
 
