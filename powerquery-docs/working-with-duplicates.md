@@ -41,6 +41,9 @@ The result of that operation will give you the table that you're looking for.
 
 ![Final table with duplicates removed on all columns](images/me-working-with-duplicates-table-row-duplicates-final.png)
 
+>[!Note]
+>This operation can also be done with a subset of columns. Multi-selection operates over the entire tuple and not individual columns. 
+
 ### From a single column
 From your initial table, in this example you want to identify and remove the duplicates by using only the **Category** column from your table.
 
