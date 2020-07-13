@@ -27,7 +27,7 @@ When you get data from a dataflow, the data will be imported into the Power BI d
 
 Power BI Dataflows also support a DirectQuery connection. If the size of the data is so large that you don't want to import all of it into the Power BI dataset, you can create a DirectQuery connection. DirectQuery won't copy the data into the Power BI dataset. The tables in the Power BI dataset that get their data from a DirectQuery sourced dataflow don't need a scheduled refresh, because their data will be fetched live from the dataflow.
 
-To use DirectQuery for the dataflows, you need to enable the compute engine on your premium capacity, and then refresh the dataflow before it can be consumed in DirectQuery mode. In addition, it is only supported through the Power BI dataflows connector. For more information, see [Power BI Dataflows Direct Query Support](https://powerbi.microsoft.com/blog/power-bi-dataflows-direct-query-support/).
+To use DirectQuery for the dataflows, you need to enable the compute engine on your premium capacity, and then refresh the dataflow before it can be consumed in DirectQuery mode. For more information, see [Power BI Dataflows Direct Query Support](https://powerbi.microsoft.com/blog/power-bi-dataflows-direct-query-support/).
 
 ![Premium capacity settings for DirectQuery to the dataflow](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-enhanced-compute-engine/enhanced-compute-engine-01.png)
 
