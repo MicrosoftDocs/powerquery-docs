@@ -30,8 +30,8 @@
         href: combine-files-csv.md
       - name: "Get Data experience"
         href: get-data-experience.md
-      - name: "Data Preview tools"
-        href: data-preview-tools.md
+      - name: "Data Profiling tools"
+        href: data-profiling-tools.md
       - name: "Unpivot column"
         href: unpivot-column.md
       - name: "Promote or Demote Column Headers"
