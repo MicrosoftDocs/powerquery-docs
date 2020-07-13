@@ -25,7 +25,7 @@ The set of steps or stages are:
 
 2.  Authentication
 
-3.  Navigation table
+3.  Data preview
 
 4.  Output Query
 
@@ -58,23 +58,31 @@ For example, the available authentication methods for the Azure SQL Server conne
 
 ![SQL Server connector authentication methods](images/me-authentication.png)
 
-## 3. Navigation table (navigator)
+## 3. Data preview
 
-The goal of the navigation table, also known as the or navigator window, is to provide you with a user-friendly to preview and select your data.
+The goal of this data preview stage is to provide you with a user-friendly to preview and select your data.
+
+Depending on the connector that you're using, you can get one of two available experiences:
+* Navigator window
+* Table preview dialog
+
+### Navigator window (Navigation table)
+
+The Navigator window consists of two main sections:
 
 ![SQL Server connector navigator](images/me-navigator.png)
 
-The two main sections of this window are:
 * **Object selection**&mdash;Displayed on the left-hand side of the window. The
     user can interact with these objects and select one, or enable
     multi-select to get multiple objects.
 * **The data preview**&mdash;Displays a preview of the data from the selected
     object on the right-hand side of the window.
 
->[!Note] 
->Some connectors completely bypass this window and go straight to the
-output query phase. One example of a connector that can do this is the "Folder"
-connector.
+### Table preview dialog
+
+The Table preview dialog is a simple window that consists of only one section for the the data preview. An example of a connector that provides this experience and window the Folder connector. 
+
+![Table preview dialog](images/combinefiles1.png)
 
 ## 4. Output query
 
