@@ -55,6 +55,9 @@ After you perform the promote headers operation, your table will look like the f
 
 ![Sample table after promoting row to headers](images/me-table-promote-demote-headers-promote-final-table.png)
 
+>[!Note]
+> Table column names must be unique. If the rows to be promoted to headers contain multiple instances of the same text string, Power Query will disambiguate the column names by adding a numeric suffix preceded by a dot to every text string instance that is not unique.
+
 ## To demote column headers to rows
 
 In the following example, the table headers are incorrect and are, in fact, part of the table's data. You need to demote the headers to be part of the rows of the table.
