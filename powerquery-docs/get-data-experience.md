@@ -21,7 +21,7 @@ When connecting to a data source with Power Query, the process will follow a set
 
 The set of steps or stages are:
 
-1.  Connector parameters
+1.  Connection Settings
 
 2.  Authentication
 
@@ -29,7 +29,7 @@ The set of steps or stages are:
 
 4.  Output Query
 
-## 1. Connector Parameters
+## 1. Connection Settings
 
 Most connectors initially require at least one parameter to initialize a connection to the data source. For example, the SQL Server connector requires at least the hostname to establish a connection to a SQL Server.
 
