@@ -40,3 +40,6 @@ The headers that you need in this example are in the first row of the table. You
 The result of that operation will give you the output that you're looking for.
 
 ![Sample output table](images/me-transpose-final-table.png)
+
+>[!Note] 
+>You can learn more about the Table Promote headers operation, also known as **Use first row as headers**, from the article on [Promote or demote column headers](table-promote-demote-headers.md).
