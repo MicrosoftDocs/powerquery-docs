@@ -10,15 +10,17 @@ ms.author: v-miesco
 
 # Combine files in Power Query: overview
 
-One powerful capability to import data using Power Query is to combine multiple files, which have the same schema, into a single logical table. 
+With Power Query you can combine multiple files with the same schema into a single logical table.
 
-These files can come from different kinds of sources, such as, but not limited to:
+This is very useful when wanting to combine all the files you have in the same folder. For example, if you had a folder that contains monthly files with all the purchase orders for your company then this would be an easy way to consolidate the orders into a single view.
+
+Files can come from a variety of sources such as but not limited to::
 * Local folder
 * SharePoint site
 * Azure Blob Storage
 * Azure Data Lake Storage (Gen1 and Gen2)
 
-When connecting to one of the previously mentioned data sources, you'll notice that they share the same table schema, which is commonly called the *File system view*.
+When working with files, you will notice that they share the same table schema commonly referred to as the *File system view*. Here's an example below:
 
 ![File system view](images/me-combine-files-overview-file-system-view.png)
 
@@ -86,4 +88,4 @@ Also, you can easily apply additional transformation or extraction steps by modi
 >[!Note]
 >You can modify the steps inside the exemplar query to change the function applied to each binary in your query. The exemplar query is linked to the function, so any changes made to the exemplar query will be reflected in the function query. 
 >
->If any of the changes affect the column names or column data types, be sure to check the last step of your output query in the event that a **Change column type** step was added and is preventing you from visualizing your table because of a step-level error. To read more about working with errors, see [Working with errors](working-with-errors.md).  
+>If any of the changes affect the column names or column data types, be sure to check the last step of your output query in the event that a **Change column type** step was added and is preventing you from visualizing your table because of a step-level error. To read more about working with errors, see [Dealing with errors](dealing-with-errors.md).  

@@ -42,11 +42,13 @@ This column holds three values:
 In this example, you want to split this column into the three columns made from the values in the list above. To do this split, select the column and then select the option to split the column by positions. In **Split Column by Positions**, apply the following configuration:
 
 * **Positions**: 0,6,14
+   * Positions are zero-based and comma separated where position zero is the start of the string. 
+
 
 ![Split column into columns by positions window](images/me-split-columns-positions-into-columns-split-column-window.png)
 
 >[!Note]
->This operation will first start creating a column from position 0 to position 6, then from position 7 to position 14. From position 15 onwards there'll be another column should there be that number of existing positions.
+>This operation will first start creating a column from position 0 to position 6, then from position 7 to position 14. There will be another column should there be values with a length of 16 or more characters in the current data preview contents.
 
 The result of that operation will give you a table with three columns. 
 
@@ -81,7 +83,7 @@ To do that, select the **Account** column and then select the option to split th
 ![Split column into rows by positions window](images/me-split-columns-positions-into-columns-split-row-window.png)
 
 >[!Note]
->This operation will first start creating a column from position 0 to position 6. From position 7 onwards, there'll be another column should there be that number of existing positions.
+>This operation will first start creating a column from position 0 to position 6. There will be another column should there be values with a length of 8 or more characters in the current data preview contents.
 
 The result of that operation will give you a table with the same number of columns, but many more rows because the values inside the cells are now in their own cells.
 

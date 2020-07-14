@@ -1,66 +1,84 @@
-# Computed Entities Scenarios and Use-cases
+---
+title: Computed entities scenarios and use-cases
+description: Computed entities scenarios and use-cases
+author: radacad
+ms.service: powerquery
+ms.reviewer: v-douklo
+ms.topic: conceptual
+ms.date: 05/25/2020
+ms.author: v-rerad
+---
 
-There is a great benefit in using the computed entity in the dataflow. This article explains uses cases and how it works behind the scene for the transformation.
+# Computed entities scenarios and use-cases
 
-## What is Computed Entity?
+There are benefits to using computed entities in the dataflow. This article explains computed entity use cases and how they work behind the scenes.
 
-A computed entity is an entity that is already processed through Power Query in the dataflow, and the result of that stored in storage. In analytical dataflows, that mean the data stored in Azure Data Lake Storage Gen 2. In other words, Computed entities are intermediate entities to pass the data to other entities. And the data of that intermediate entity is stored in a storage too.
+## What is a computed entity?
 
-![Computed Entity](https://docs.microsoft.com/en-us/power-bi/transform-model/media/service-dataflows-computed-entities-premium/computed-entities-premium_00.png)
+An entity represents the data output of a query created in a dataflow, after the dataflow has been refreshed. It represents data from a source and, optionally, the transformations that were applied to it. Sometimes, you might want to create new entities that are a function of a previously ingested entity.
 
-## Why is it good to use Computed Entity?
+While it's possible to repeat the queries that created an entity and apply new transformations to them, this approach has drawbacks. For example, data is ingested twice and the load on the data source is doubled.
 
-Doing all the transformation steps at one shot against the data source can be slow sometimes. There can be many reasons for that, the data source might be slow, and some of the transformations that we are doing might be needed to be replicated in two or more queries. Having part of the transformations done, and stored as computed entity helps in the performance of the dataflow.
+Computed entities solve both problems. Computed entities are similar to other entities in that they get data from a source and allow a customer to apply further transformations to create them. But their data originates from the storage dataflow use and not the original data source. That is, they were previously created by a dataflow and reused.
 
-For example, if there are two entities which are even sharing part of their transformation logic, without a computed entity, they will be re-doing the transformations again;
+Computed entities can be created by referencing an entity in the same dataflow, or by referencing an entity created in a different dataflow.
+
+![Computed Entity](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-computed-entities-premium/computed-entities-premium_00.png)
+
+## Why is it good to use computed entity?
+
+Performing all the transformation steps in one entity can be slow at times. There can be many reasons for this slowdown&mdash;the data source might be slow, and some of the transformations that you're doing might be need to be replicated in two or more queries. In addition, it might be advantageous to first ingest the data from the source, and then reuse it in one or more entities. In such cases, choosing to create two entities&mdash;one that gets data from the data source, and another, a computed entity, that applies additional transformations to data already written into the data lake used by a dataflow&mdash;can increase performance and reusability of data, saving time and resources.
+
+For example, if two entities are sharing even a part of their transformation logic, without a computed entity the transformation will have to be done twice.
 
 ![without computed entity](media/SeparateEntities.png)
 
-However, if a computed entity is used, then the common (shared) part of the transformation will be processed once, stored in ADLS gen2, and the remaining transformation will processes from the output of it, which is much faster.
+However, if a computed entity is used, then the common (shared) part of the transformation will be processed once and stored in Azure Data Lake Storage Gen2. The remaining transformations will then be processed from the output of the common transformation. Overall, this processing is much faster.
 
 ![Computed entity for the shared transformations](media/Computedentityinbetween.png)
 
-Computed entity is not only helping with having one place as the source code for the transformation, but also it will speed up the transformation because it will be done only once instead of multiple times. The load on the data source will be also reduced.
+A computed entity not only helps by having one place as the source code for the transformation. In addition, a computed entity will also speed up the transformation because the transformation will be done only once instead of multiple times. The load on the data source will also be reduced.
 
-## Example scenario of using computed entity
+## Example scenario using a computed entity
 
-If you are building an aggregated table in Power BI to speed up the data model, your aggregated table can be build with a reference of the original table and doing extra transformations on it. Using this approach, you don't replicate your transformation from the source (the part that is for the original table)
+If you're building an aggregated table in Power BI to speed up the data model, your aggregated table can be built by referencing the original table and applying additional transformations to it. Using this approach, you don't replicate your transformation from the source (the part that is for the original table)
 
-For example, this is Orders entity; 
+For example, the following figure shows an **Orders** entity.
 
 ![Orders Entity](media/ordersentity.png)
 
-And using a reference from it, we build a computed entity;
+Using a reference from this entity, you can build a computed entity.
 
 ![creating computed entity](media/ordersentityreferenced.png)
 
-The computed entity, can have further transformation; (for example Group By to aggregated the data at the customer level)
+The computed entity can have further transformations. For example, you can use **Group By** to aggregate the data at the customer level.
 
 ![Orders aggregated entity](media/ordersaggregatedentity.png)
 
-This means that the Orders Aggregated entity will be getting data from the Order entity (not from the data source again), and parts of the transformations that has been done in the Orders entity is already done, which makes the performance better and data transformation faster.
+This means that the **Orders Aggregated** entity will be getting data from the **Order** entity (not from the data source again). Since some of the transformations that need to be done have already been done in the **Orders** entity, performance is better and data transformation is faster.
 
-## Computed Entity in other dataflows
+## Computed entity in other dataflows
 
-You can also create computed entity in Power Platform dataflows or Customer Insights dataflows. It is not called as computed entity in Power Platform dataflows, but it can be created by creating one dataflow, and then the second dataflow by get data from Power Platform dataflows.
+You can also create computed entity in other dataflows. It can be created by getting data from a dataflow using the Power Platform dataflow connector.
 
 ![get data from Power Platform dataflows](media/getdatafromppdataflows.png)
 
-The whole concept of the computed entity is to have a table persisted in the storage, and other tables sourced from it, so that you can reduce the read from the data source, and share some of the common transformations. This can be achieved with getting data from other dataflows in PowerApps portal, or referencing another query in the Power BI dataflows.
+The concept of the computed entity is to have a table persisted in storage, and other tables sourced from it, so that you can reduce the read time from the data source and share some of the common transformations. This can be achieved by getting data from other dataflows through the dataflow connector, or referencing another query in the same dataflow.
 
-## Computed Entity with the Transformations or Without?
+## Computed entity with transformations or without?
 
-Now that you know the computed entity is good for the performance of the data transformation, a good question is that should you be doing any data transformations in the computed entity? or should it be merely a data ingestion from the data source? what are pros and cons?
 
-### Load data without transform for Text/CSV files
+Now that you know computed entities are great for improving performance of the data transformation, a good question to ask is whether transformations should always be deferred to the computed entity or whether they should be applied to the source entity. That is, should data always be ingested into one entity and then transformed in a computed entity? What are pros and cons?
 
-If the data source does not supports query folding (such as Text/CSV files), then there is little benefit in doing transformation at the time of getting data (inside the computed entity). The computed entity can be only getting data from the Text/CSV file without any transformations.
+### Load data without transformation for Text/CSV files
 
-and other entities that are getting data from the computed entity can do the transformation on top of it.
 
-A computed entity that load raw data from the source even without any transformation can be still helpful, because it reduces the load on the data source. Especially on the scenarios that the data source is on a heavy load, this can be very beneficial.
+When a data source doesn't support query folding (such as Text/CSV files), there's little benefit applying transformations when getting data the data from the source, especially if data volumes are large. The source entity should just load data from the Text/CSV file without applying any transformations.
+
+Then, computed entities can get data from the source entity and perform the transformation on top of the ingested data.
+
+You might ask what is the value of creating a source entity that only ingests data. Such an entity can still be useful, because if the data from the source is used in more than one entity, it will reduce the load on the data source. In addition, data can now be reused by other people and dataflows. Computed entities are especially useful in scenarios where the data volume is large, or when a data source is through an on-premise data gateway because it reduces the traffic from the gateway and the load on data sources behind it. 
 
 ### Doing some of the common transformations for a SQL table
 
-If your data source supports query folding, then it is good to do some of the transformations even in the computed entity, because the query will be folded to the data source, and only the transformed data will be fetched from it, which is better for performance. The set of transformations that you apply in the computed entity can be those which are common between other entities, and can be folded.
-
+If your data source supports query folding, then it's good to perform some of the transformations in the source entity because the query will be folded to the data source, and only the transformed data will be fetched from it, which improves overall performance. The set of transformations that will be common in downstream computed entities should be applied in the source entity, so they can be folded to the source. Other transformations that only apply to downstream entities should be done in computed entities.

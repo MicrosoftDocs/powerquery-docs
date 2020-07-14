@@ -10,16 +10,21 @@ ms.author: v-miesco
 
 # Data types in Power Query
 
-A data type in Power Query is a value that classifies other values. A value that is classified by a data type is said to ***conform*** to that data type. 
+Data types in Power Query are used to classify the type of content to have a more structured data set. A data type is said to ***conform*** to that data type. 
 
 The data type of a column is displayed on the left-hand side of the column header with an icon image that symbolizes the data type:
 
 ![Common data types icon in the Data Preview pane](images/me-data-types-icons.png)
 
+>[!Note]
+>Power Query provides a set of contextual transformations and options based on the data types of the columns. For example, when you select a column with a data type of Date, you get transformations and options that are contextual to that specific data type. These transformations and options occur throughout the Power Query interface, such as in the *Transform* and *Add Column* tab, as well as in the smart filter options. 
+
 The most common data types used in Power Query are:
 
 |Data Type | Icon | Description|
 ----------|------|------------|
+|**Text**| ![Text](images/Text_20.png)  |A Unicode character data string. Can be strings, numbers, or dates represented in a text format. Maximum string length is 268,435,456 Unicode characters (256 mega characters) or 536,870,912 bytes.|
+|**True/False**|![True/False](images/Logical_20.png) |A Boolean value of either a True or False.|
 | **Decimal Number**| ![Decimal Number](images/Number_20.png) |Represents a 64 bit (eight-byte) floating point number. It’s the most common number type and corresponds to numbers as you usually think of them. Although designed to handle numbers with fractional values, it also handles whole numbers. The Decimal Number type can handle negative values from -1.79E +308 through -2.23E -308, 0, and positive values from 2.23E -308 through 1.79E + 308. For example, numbers like 34, 34.01, and 34.000367063 are valid decimal numbers. The largest precision that can be represented in a Decimal Number type is 15 digits long. The decimal separator can occur anywhere in the number. The Decimal Number type corresponds to how Excel stores its numbers.|
 |**Fixed Decimal number** | ![Currency](images/Currency_20.png) | Also known as the Currency type, has a fixed location for the decimal separator. The decimal separator always has four digits to its right and allows for 19 digits of significance. The largest value it can represent is 922,337,203,685,477.5807 (positive or negative). The Fixed Decimal Number type is useful in cases where rounding might introduce errors. When you work with many numbers that have small fractional values, they can sometimes accumulate and force a number to be slightly off. Since the values past the four digits to the right of decimal separator are truncated, the Fixed Decimal type can help you avoid these kinds of errors. | 
 |**Whole Number** | ![Whole Number](images/WholeNumber_20.png)  | Represents a 64 bit (eight-byte) integer value. Because it’s an integer, it has no digits to the right of the decimal place. It allows for 19 digits; positive or negative whole numbers between -9,223,372,036,854,775,807 (-2^63+1) and 9,223,372,036,854,775,806 (2^63-2). It can represent the largest possible precision of the various numeric data types. As with the Fixed Decimal type, the Whole Number type can be useful in cases where you need to control rounding. |
@@ -29,25 +34,38 @@ The most common data types used in Power Query are:
 |**Time**| ![Time](images/Time_20.png)  |Represents just Time (no Date portion). When converted into the model, a Time value is the same as a Date/Time value with no digits to the left of the decimal place.|
 |**Date/Time/Timezone** | ![Date/Time/Timezone](images/DateTimeZone_20.png) |Represents a UTC Date/Time with a timezone offset. It’s converted into Date/Time when loaded into the model.| 
 |**Duration**| ![Duration](images/Duration_20.png) | Represents a length of time. It’s converted into a Decimal Number Type when loaded into the model. As a Decimal Number type it can be added or subtracted from a Date/Time field with correct results. As a Decimal Number type, you can easily use it in visualizations that show magnitude.|
-|**Text**| ![Text](images/Text_20.png)  |A Unicode character data string. Can be strings, numbers, or dates represented in a text format. Maximum string length is 268,435,456 Unicode characters (256 mega characters) or 536,870,912 bytes.|
-|**True/False**|![True/False](images/Logical_20.png) |A Boolean value of either a True or False.|
 |**Binary**| ![Binary](images/Binary_20.png) |The Binary data type can be used to represent any other data with a binary format.|
 |**Any**| ![Any](images/AnyType_20.png)|The *any* data type is the status given to a column without an explicit data type definition. *Any* is the data type that classifies all values. We recommended that you always explicitly define the column data types for your queries from unstructured sources and avoid columns with the *any* data type as the output of your query.|
-
->[!Note]
->Power Query provides a set of contextual transformations and options based on the data types of the columns. For example, when you select a column with a data type of Date, you get transformations and options that are contextual to that specific data type. These transformations and options occur throughout the Power Query interface, such as in the *Transform* and *Add Column* tab, as well as in the smart filter options. 
 
 ## Data type detection
 
 **When connecting to structured data sources such as databases**, Power Query will read the table schema from the data source and automatically display the data with the correct data type for each column.
 
 **When connecting to unstructured sources such as Excel, CSV, and text files**, Power Query can automatically detect data types by inspecting the values inside the table. By default, automatic data type detection is enabled in Power Query for unstructured sources.
+## How to define a column data type
+You can define or change the data type of a column from four places:
+
+* **Home tab**&mdash;in the **Data Type** dropdown menu inside the **Transform** group.
+
+![Data types menu in the Home tab](images/me-data-types-home-tab.png)
+
+* **Transform tab**&mdash;in the **Data Type** dropdown menu inside the **Any Column** group.
+
+![Data types menu in the Transform tab](images/me-data-types-transform-tab.png)
+
+* **Column header icon**&mdash;left of the column header shown as an icon.
+
+![Data types menu in the column header](images/me-data-types-column-header-icon.png)
+
+* **Column right-click** - as the **Change Type** option.
+
+![Data types menu in the column right click contextual menu](images/me-data-types-right-click.png)
 
 ### Automatic column data type and headers detection
 
 This setting is specific for unstructured sources. It helps you by automatically inspecting and detecting the column types and headers based on the first 200 rows of your table. 
 
-To enable or disable this setting:
+By default, this setting is enabled. To disable or enable this setting:
 
 * **In Power Query Online**, go to the **Home > Options** menu and select **Project options**. Inside the Project options window, you'll see the option to **Automatically detect column types and headers for unstructured sources**.
 
@@ -70,27 +88,7 @@ When this setting is enabled, Power Query will automatically detect the column h
 * **Promote column headers**&mdash;promotes the first row of the table to be the column header.
 * **Changed Type**&mdash;converts the values from any* data type to a data type based on the inspection of the values from each column.
 
-## How to define a column data type
-You can define or change the data type of a column from four places:
-
-* **Home tab**&mdash;in the **Data Type** dropdown menu inside the **Transform** group.
-
-![Data types menu in the Home tab](images/me-data-types-home-tab.png)
-
-* **Transform tab**&mdash;in the **Data Type** dropdown menu inside the **Any Column** group.
-
-![Data types menu in the Transform tab](images/me-data-types-transform-tab.png)
-
-* **Column header icon**&mdash;left of the column header shown as an icon.
-
-![Data types menu in the column header](images/me-data-types-column-header-icon.png)
-
-* **Column right-click** - as the **Change Type** option.
-
-![Data types menu in the column right click contextual menu](images/me-data-types-right-click.png)
-
-
-### Document or project locale
+## Document or project locale
 
 Power Query handles two distinct components that manage the way that things look and are interpreted:
 * **Localization**&mdash;the component that tells Power Query in what language it should be displayed.

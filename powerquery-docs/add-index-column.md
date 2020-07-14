@@ -10,13 +10,13 @@ ms.author: v-miesco
 
 # Add an index column
 
+The Index column adds a new column to the table with explicit position values and is usually created to support other transformation patterns
+
 ![Add index column buttons in Add column tab](images/me-add-index-column-icon.png)
 
-The *add an index column* operation adds a new column named **Index** to the table with explicit position values. 
+By default the starting index will start from the value 0 and have an increment of 1 per row.
 
 ![Sample index column](images/me-add-index-column-new-index.png)
-
-By default the starting index will start from the value 0 and have an increment of 1 per row.
 
 You can also configure the behavior of this step by selecting the **Custom** option and configuring the two parameters:
 
@@ -27,9 +27,7 @@ You can also configure the behavior of this step by selecting the **Custom** opt
 
 ## Example
 
-The **Index** column is usually created to support other transformation patterns. In this example, you'll see one of those patterns.
-
-For example, you have the following table with only one column, but notice the data pattern within the column.
+For this example, you have the following table with only one column, but notice the data pattern within the column.
 
 ![Sample initial table](images/me-add-index-column-start-table.png)
 

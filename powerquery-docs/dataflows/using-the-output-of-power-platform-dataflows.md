@@ -45,7 +45,7 @@ When you use the output of a dataflow in other dataflows or datasets, you can cr
 
 ## Next Steps
 
-The following articles provide more details about related topics.
+The following articles provide more details about related articles.
 
 - [Creating and using dataflows in Power BI](https://docs.microsoft.com/power-bi/service-dataflows-create-use)
 - [Link entities between dataflows in Power BI](https://docs.microsoft.com/power-bi/service-dataflows-linked-entities)

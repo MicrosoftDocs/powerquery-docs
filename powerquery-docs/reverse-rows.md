@@ -20,6 +20,6 @@ To reverse the rows of this table, go to the **Transform** tab and select the op
 
 ![Reverse rows icon in Transform tab](images/me-reverse-rows-icon.png)
 
-The result of that operation will give you the result that you're looking for.
+The result of this operation will look as follows.
 
 ![Ouput table after reversing rows](images/me-reverse-rows-final-table.png)

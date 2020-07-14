@@ -1,5 +1,5 @@
 ---
-title: "Merge queries: left outer join"
+title: "Merge queries: Left outer join"
 description: An article on how to perform a merge operation in Power Query using the left outer join kind. 
 author: ptyx507
 ms.service: powerquery
@@ -8,7 +8,7 @@ ms.date: 06/30/2020
 ms.author: v-miesco
 ---
 
-# Merge queries: left outer join
+# Merge queries: Left outer join
 
 A left outer join is one of the join kinds available inside the **Merge queries** window in Power Query. To read more about the merge operations in Power Query, see [Merge operations overview](merge-queries-overview.md).
 
@@ -40,7 +40,7 @@ The goal is to reach the following table where the name of the country appears a
 
 ![Left outer join final table](images/me-merge-operations-left-outer-final-table.png)
 
-## Do a left outer join
+## Left outer join
 
 To do a left outer join:
 

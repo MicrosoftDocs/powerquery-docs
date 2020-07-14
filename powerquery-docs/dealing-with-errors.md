@@ -1,5 +1,5 @@
 ---
-title: Working with errors in Power Query
+title: Dealing with errors 
 description: Understanding errors in Power Query and most common step level and cell level errors.
 author: ptyx507
 ms.service: powerquery
@@ -8,7 +8,7 @@ ms.date: 06/08/2020
 ms.author: v-miesco
 ---
 
-# Working with errors in Power Query
+# Dealing with errors in Power Query
 
 In Power Query, there are two places where you could encounter errors:
 
@@ -75,6 +75,9 @@ This error could be caused by a number of reasons, such as the data privacy leve
 A cell-level error will not prevent the query from loading, but any error values will be displayed as **Error** inside the Cell. Selecting the whitespace inside the cell will display the detail pane underneath the data preview, where you can see the error components
 
 ![Could not convert value to data type error](images/me-working-with-errors-could-not-convert.png)
+
+>[!Note]
+> The Data profiling tools can help you more easily identify cell-level errors with the use of its Column Quality feature. You can learn more about the Column Quality feature from the [Data profiling tools article](data-profiling-tools.md#column-quality).
 
 ### Handling errors at the cell level
 

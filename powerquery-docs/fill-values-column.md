@@ -1,5 +1,5 @@
 ---
-title: Fill down or fill up
+title: Fill values in a column
 description: With Power Query, you can use the values inside of a column to Fill down or fill up any empty spaces inside of the column. This aricle demonstrates how to perform these transformations in Power Query.
 author: ptyx507
 ms.service: powerquery
@@ -8,9 +8,9 @@ ms.date: 06/08/2020
 ms.author: v-miesco
 ---
 
-# Fill down or fill up
+# Fill values in a column
 
-The operation to fill down or fill up is an operation that can happen from row to row in a single column. 
+You can use fill up and fill down to replace null values with the last non-empty value in this column. 
 
 For example, imagine the following table where you'd like to fill down in the **Date** column and fill up in the **Comments** column.
 
@@ -20,7 +20,7 @@ The outcome that you'd expect is shown in the following image.
 
 ![Sample output table](images/me-fill-down-up-final-table.png)
 
-## To fill down
+## Fill down
 
 The fill down operation takes a column and traverses through the values in it to fill any null values in the next rows until it finds a new value. This process continues on a row by row basis until there are no more values in that column.
 
@@ -32,7 +32,7 @@ The result of that operation will look like this:
 
 ![Sample table after performing the fill down operation](images/me-fill-down-up-date-filled-down.png)
 
-## To Fill Up
+## Fill Up
 
 In the same way as the Fill down operation, the fill up works on a column. But fill up finds the last value of the column and fills any null values in the previous rows until it finds a new value. Then the same process occurs for that value. This process continues until there are no more values in that column.
 

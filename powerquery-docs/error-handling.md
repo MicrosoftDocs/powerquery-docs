@@ -11,12 +11,12 @@ ms.author: v-miesco
 # Error handling
 Similar to how Excel and the DAX language have an `IFERROR` function, Power Query has its own syntax to test and catch errors. 
 
-As mentioned in the article on [working with errors in Power Query](working-with-errors.md), errors can appear either at the step or cell level. This article will focus on how you can catch and manage errors based on our own specific logic.
+As mentioned in the article on [dealing with errors in Power Query](dealing-with-errors.md), errors can appear either at the step or cell level. This article will focus on how you can catch and manage errors based on our own specific logic.
 
 >[!Note]
 > To demonstrate this concept, this article will use an Excel Workbook as its data source. The concepts showcased here apply to all values in Power Query and not only the ones coming from an Excel Workbook. 
 
-## Catching and managing an error with `try` and `otherwise`
+## Applying conditional logic based on errors
 The sample data source for this demonstration is an Excel Workbook with the following table:
 
 ![Sample data from Excel](images/me-error-handling-sample-workbook.png)
@@ -99,6 +99,6 @@ After keeping only the **Account**, **Standard Rate**, **Special Rate**, and **F
 
 ## More resources
 
-* [Understanding and working with errors in Power Query](working-with-errors.md)
+* [Understanding and working with errors in Power Query](Dealing-with-errors.md)
 * [Add a Custom column in Power Query](add-custom-column.md)
 * [Add a Conditional column in Power Query](add-conditional-column.md)

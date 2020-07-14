@@ -1,5 +1,5 @@
 ---
-title: Data preview tools
+title: Data profiling tools
 description: Overview of the Data Quality, Column Distribution, and Column Profile features found inside the Power Query Editor
 author: ptyx507
 ms.service: powerquery
@@ -8,11 +8,11 @@ ms.date: 06/08/2020
 ms.author: v-miesco
 ---
 
-# Data preview tools
+# Data profiling tools
 
-The main objective of the data preview tools is to provide the user with new and intuitive ways to clean, transform, and understand their data within the Power Query Editor window.
+The data profiling tools provide new and intuitive ways to clean, transform, and understand data in Power Query Editor.
 
-These data preview tools are:
+These data profiling tools are:
 
 * Column quality
 
@@ -20,15 +20,13 @@ These data preview tools are:
 
 * Column profile
 
-To enable the data preview tools, select the **View** tab from the ribbon and navigate to the **Data Preview** section. Enable the options you want as shown in the following image.
+To enable the data profiling tools, select the **View** tab from the ribbon and navigate to the **Data Preview** section. Enable the options you want as shown in the following image.
 
-![Data preview tools](images/me-enable-data-preview-tools.png)
+![Data profiling tools](images/me-enable-data-preview-tools.png)
 
 Once enabled, the following image shows how they'll be seen inside the Power Query Editor.
 
-![Data preview tools enabled](images/me-data-preview-tools-enabled-v2.png)
-
-Each tool is independent from the other. This means that you can select which ones to enable and which ones you would like to keep as disabled.
+![Data profiling tools enabled](images/me-data-preview-tools-enabled-v2.png)
 
 >[!NOTE] 
 >By default, Power Query will perform these data preview features over the first 1,000 rows of your data. To enable these, check the bottom left query of your editor window to change how the column profiling is performed.

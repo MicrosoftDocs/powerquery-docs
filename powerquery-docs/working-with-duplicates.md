@@ -9,7 +9,7 @@ ms.author: v-miesco
 ---
 
 # Working with duplicate values
-In Power Query, you can identify duplicates from one or multiple columns in a table. You can later apply transformations to either remove or keep those rows.
+In Power Query, you can easily work with duplicate sets of values through transformations that can remove duplicates from your data or can easily filter to duplicates only so you can focus on those.
 
 For this article, we will be using the following table with the columns id, Category and Total to demonstrate how to perform the Remove and Keep duplicates operations in Power Query:
 
@@ -40,6 +40,9 @@ You can tell that you have four rows that are duplicates. Your goal in this exam
 The result of that operation will give you the table that you're looking for.
 
 ![Final table with duplicates removed on all columns](images/me-working-with-duplicates-table-row-duplicates-final.png)
+
+>[!Note]
+>This operation can also be done with a subset of columns. Multi-selection operates over the entire tuple and not individual columns. 
 
 ### From a single column
 From your initial table, in this example you want to identify and remove the duplicates by using only the **Category** column from your table.
@@ -85,3 +88,6 @@ In this example, you have multiple duplicates and you want to keep only those du
 The result of that operation will give you the table that you're looking for.
 
 ![Final sample table with only duplicated rows from a single column](images/me-working-with-duplicates-keep-column-row-duplicates-final.png)
+
+>[!Note]
+> The data profiling tools in Power Query are a great tool to keep or remove duplicates from a column. To learn more about how to enable and use the data profiling tools, see [Data profiling tools](data-profiling-tools.md).

@@ -12,7 +12,7 @@ ms.author: jessli20
 # Split columns by lowercase to uppercase
 
 In Power Query, you can split a column through different methods.
-In this case, the column(s) selected can be split by every instance of the last lowercase letter to the next uppercase letter.
+If your data contains CamelCased text or a similar pattern, then the column(s) selected can be split by every instance of the last lowercase letter to the next uppercase letter very easily.
 
 ## Where to find Split Columns > By Lowercase to Uppercase
 
@@ -48,4 +48,3 @@ This singular column will split into multiple columns given every instance of th
 Your final table will look like the following image.
 
 ![After](images/sc-after-lu.png)
-

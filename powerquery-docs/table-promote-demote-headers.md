@@ -10,7 +10,7 @@ ms.author: v-miesco
 
 # Promote or demote column headers
 
-When creating a new query from unstructured data sources such as text files, Power Query will try to analyze the contents of the file and promote the first row of data to become the column headers of your table, should it deem necessary. In some cases, this suggestion by Power Query will be correct. In some other cases, it might not be correct because of the structure of the file.
+When creating a new query from unstructured data sources such as text files, Power Query will analyze the contents of the file and, if it identifies a different pattern for the first row, it try to promote the first row of data as the column headers of your table. Power Query might not identify the pattern correctly 100% of the time so this article explains how you could promote or demote column headers from rows. 
 
 With Power Query, there are transformations to promote the rows to column headers as well as demote the column headers to rows.
 
@@ -54,6 +54,9 @@ From here, you have a number of places where you can select the promote headers 
 After you perform the promote headers operation, your table will look like the following image.
 
 ![Sample table after promoting row to headers](images/me-table-promote-demote-headers-promote-final-table.png)
+
+>[!Note]
+> Table column names must be unique. If the rows to be promoted to headers contain multiple instances of the same text string, Power Query will disambiguate the column names by adding a numeric suffix preceded by a dot to every text string instance that is not unique.
 
 ## To demote column headers to rows
 

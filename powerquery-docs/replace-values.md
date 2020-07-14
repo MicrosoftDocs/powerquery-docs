@@ -10,7 +10,7 @@ ms.author: v-miesco
 
 # Replace values and errors
 
-With Power Query, you can replace one value with another value in a selected column. There are three ways to start a replace values operation in Power Query:
+With Power Query, you can replace one value with another value in a selected column. These functions can be found by:
 
 - **Right-click on a cell**&mdash;this action will display a contextual menu with the option to replace the selected value in the column with another value. 
 
