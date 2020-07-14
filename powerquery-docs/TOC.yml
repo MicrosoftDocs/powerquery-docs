@@ -62,34 +62,34 @@
         items:
         - name: "Append queries"
           href: append-queries.md
-          - name: Combine files
-            items:
-            - name: "Combine files: Overview"
-              href: combine-files-overview.md
-            - name: "Combine files: CSV documents"
-              href: combine-files-csv.md
-          - name: Merge queries
-            items:
-            - name: "Merge queries: Overview"
-              href: merge-queries-overview.md
-            - name: "Merge queries: Left outer join"
-              href: merge-queries-left-outer.md
-          - name: Split columns
-            items:
-            - name: "Split columns: By delimiter"
-              href: split-columns-delimiter.md
-            - name: "Split columns: By number of characters"
-              href: split-columns-number-characters.md
-            - name: "Split columns: By positions"
-              href: split-columns-positions.md
-            - name: "Split columns: By lowercase to uppercase"
-              href: splitcolumns-lowercase-to-uppercase.md
-            - name: "Split columns: By uppercase to lowercase"
-              href: splitcolumns-uppercase-to-lowercase.md
-            - name: "Split columns: By digit to non-digit"
-              href: splitcolumns-digit-to-nondigit.md
-            - name: "Split columns: By non-digit to digit"
-              href: splitcolumns-nondigit-to-digit.md
+        - name: Combine files
+          items:
+          - name: "Combine files: Overview"
+            href: combine-files-overview.md
+          - name: "Combine files: CSV documents"
+            href: combine-files-csv.md
+        - name: Merge queries
+          items:
+          - name: "Merge queries: Overview"
+            href: merge-queries-overview.md
+          - name: "Merge queries: Left outer join"
+            href: merge-queries-left-outer.md
+        - name: Split columns
+          items:
+          - name: "Split columns: By delimiter"
+            href: split-columns-delimiter.md
+          - name: "Split columns: By number of characters"
+            href: split-columns-number-characters.md
+          - name: "Split columns: By positions"
+            href: split-columns-positions.md
+          - name: "Split columns: By lowercase to uppercase"
+            href: splitcolumns-lowercase-to-uppercase.md
+          - name: "Split columns: By uppercase to lowercase"
+            href: splitcolumns-uppercase-to-lowercase.md
+          - name: "Split columns: By digit to non-digit"
+            href: splitcolumns-digit-to-nondigit.md
+          - name: "Split columns: By non-digit to digit"
+            href: splitcolumns-nondigit-to-digit.md
     - name: Dataflows
       items:
       - name: "Overview of dataflows"

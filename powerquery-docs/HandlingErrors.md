@@ -11,7 +11,7 @@ ms.author: gepopell
 LocalizationGroup: reference
 ---
 
-# Error handling
+# Handling errors
 Errors in Power Query generally halt query evaluation and display a message to the user.
 
 ## Throwing an error with the `error` expression

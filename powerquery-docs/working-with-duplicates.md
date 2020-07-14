@@ -90,4 +90,4 @@ The result of that operation will give you the table that you're looking for.
 ![Final sample table with only duplicated rows from a single column](images/me-working-with-duplicates-keep-column-row-duplicates-final.png)
 
 >[!Note]
-> The Data Preview tools in Power Query are a great tool to keep or remove duplicates from a column. You can learn more about how to enable and use the Data Preview tools from the article [Data Preview tools](data-preview-tools.md).
+> The data profiling tools in Power Query are a great tool to keep or remove duplicates from a column. To learn more about how to enable and use the data profiling tools, see [Data profiling tools](data-profiling-tools.md).

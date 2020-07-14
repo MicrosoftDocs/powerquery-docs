@@ -88,4 +88,4 @@ Also, you can easily apply additional transformation or extraction steps by modi
 >[!Note]
 >You can modify the steps inside the exemplar query to change the function applied to each binary in your query. The exemplar query is linked to the function, so any changes made to the exemplar query will be reflected in the function query. 
 >
->If any of the changes affect the column names or column data types, be sure to check the last step of your output query in the event that a **Change column type** step was added and is preventing you from visualizing your table because of a step-level error. To read more about working with errors, see [Working with errors](working-with-errors.md).  
+>If any of the changes affect the column names or column data types, be sure to check the last step of your output query in the event that a **Change column type** step was added and is preventing you from visualizing your table because of a step-level error. To read more about working with errors, see [Dealing with errors](dealing-with-errors.md).  

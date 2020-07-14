@@ -96,7 +96,7 @@ After this operation is completed, Power Query (by default) will try to automati
 
 ### Revising the Output query
 
-When you go back to the **CSV Files** query, you'll notice that the last step is giving you an error that reads `The column 'Column1' of the table wasn't found`. The reason behind this error is that the previous state of the query was performing an operation against a column by the name **Column1**. But due to the changes made to the **Transform Sample file** query, this column no longer exists. To learn more about errors, see [Working with Errors](working-with-errors.md).
+When you go back to the **CSV Files** query, you'll notice that the last step is giving you an error that reads `The column 'Column1' of the table wasn't found`. The reason behind this error is that the previous state of the query was performing an operation against a column by the name **Column1**. But due to the changes made to the **Transform Sample file** query, this column no longer exists. To learn more about errors, see [Dealing with Errors](dealing-with-errors.md).
 
 ![Output query with step level error](images/me-combine-files-csv-column-name-error.png)
 

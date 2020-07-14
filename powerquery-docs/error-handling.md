@@ -99,6 +99,6 @@ After keeping only the **Account**, **Standard Rate**, **Special Rate**, and **F
 
 ## More resources
 
-* [Understanding and working with errors in Power Query](working-with-errors.md)
+* [Understanding and working with errors in Power Query](Dealing-with-errors.md)
 * [Add a Custom column in Power Query](add-custom-column.md)
 * [Add a Conditional column in Power Query](add-conditional-column.md)
