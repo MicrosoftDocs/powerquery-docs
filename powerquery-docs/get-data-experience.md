@@ -17,8 +17,6 @@ When connecting to a data source with Power Query, the process will follow a set
 >[!Note] 
 >In some cases, a connector might have all of these stages and in other cases a connector might have just a few of them. For more information about the experience of a specific connector, visit the documentation available for the connector.
 
-![Sample process image (To be replaced)](https://350519-1085912-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2019/09/092119_1322_TheGetData1-1024x576.png)
-
 The set of steps or stages are:
 
 1.  Connection Settings
