@@ -37,24 +37,24 @@ AI capabilities in Power BI, linked entity, and computed entity are all premium 
 
 The following table contains a list of features and the license needed for them to be available.
 
-| Feature                                                      | Power BI                           | Power Apps                                                   | Customer Insights |
-| ------------------------------------------------------------ | ---------------------------------- | ------------------------------------------------------------ | ----------------- |
-| Store data in Common Data Services entities (standard dataflow) | N/A                                | Per app plan<br />Per user plan                              | N/A               |
-| Store data in Azure Data Lake Storage Gen2 (analytical dataflow)               | Power BI Pro<br />Power BI Premium | N/A                                                          | ?                 |
-| Store data in customer provided Azure Data Lake Storage Gen2 (analytical dataflow; bring your own Azure Data Lake Storage Gen2) | Power BI Pro<br />Power BI Premium | Per app plan<br />Per user plan                              | ?                 |
-| The enhanced compute engine (running on Power BI Premium capacity / parallel execution of transforms) | Power BI Premium                   | N/A                                                          | ?                 |
-| DirectQuery connection to dataflow                           | Power BI Premium                   | N/A                                                          | ?                 |
-| AI capabilities in Power BI                                  | Power BI Premium                   | N/A                                                          | ?                 |
-| Linked entities                                              | Power BI Premium                   | Analytical dataflows only | ?                 |
-| Computed entities (in-storage transformations using M)       | Power BI premium                   | Analytical dataflows only | ?                 |
-| Schedule refresh                                             | Yes                                   | Yes                                                             | Yes                  |
-| Dataflow authoring with Power Query online                   | Yes                                | Yes                                                          | Yes               |
-| Dataflow Management                                          | Power BI portal                    | Power Apps portal                                            | ?                 |
-| New connectors                                               | Yes                                | Yes                                                          | ?                 |
-| Standardized schema / built-in support for the Common Data Model | Yes                                | Yes                                                          | Yes               |
-| Dataflows Data Connector in Power BI Desktop                 | Yes                                | Analytical dataflows only   | ?                 |
-| Dataflow incremental refresh                                 | Power BI Premium                   | Analytical dataflows only, requires Power Apps Plan2 | ?                 |
-| | | | |
+| Feature                                                      | Power BI                           | Power Apps                                                   |
+| ------------------------------------------------------------ | ---------------------------------- | ------------------------------------------------------------ |
+| Store data in Common Data Services entities (standard dataflow) | N/A                                | Per app plan<br />Per user plan                              |
+| Store data in Azure Data Lake Storage Gen2 (analytical dataflow)               | Power BI Pro<br />Power BI Premium | N/A                                                          |
+| Store data in customer provided Azure Data Lake Storage Gen2 (analytical dataflow; bring your own Azure Data Lake Storage Gen2) | Power BI Pro<br />Power BI Premium | Per app plan<br />Per user plan                              |
+| The enhanced compute engine (running on Power BI Premium capacity / parallel execution of transforms) | Power BI Premium                   | N/A                                                          |
+| DirectQuery connection to dataflow                           | Power BI Premium                   | N/A                                                          |
+| AI capabilities in Power BI                                  | Power BI Premium                   | N/A                                                          |
+| Linked entities                                              | Power BI Premium                   | Analytical dataflows only |
+| Computed entities (in-storage transformations using M)       | Power BI premium                   | Analytical dataflows only |
+| Schedule refresh                                             | Yes                                   | Yes                                                             |
+| Dataflow authoring with Power Query online                   | Yes                                | Yes                                                          |
+| Dataflow Management                                          | Power BI portal                    | Power Apps portal                                            |
+| New connectors                                               | Yes                                | Yes                                                          |
+| Standardized schema / built-in support for the Common Data Model | Yes                                | Yes                                                          |
+| Dataflows Data Connector in Power BI Desktop                 | Yes                                | Analytical dataflows only   |
+| Dataflow incremental refresh                                 | Power BI Premium                   | Analytical dataflows only, requires Power Apps Plan2 |
+| | | |
 
 ## Limitations on each license
 
