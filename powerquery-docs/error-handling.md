@@ -11,7 +11,7 @@ ms.author: v-miesco
 # Error handling
 Similar to how Excel and the DAX language have an `IFERROR` function, Power Query has its own syntax to test and catch errors. 
 
-As mentioned in the article on [working with errors in Power Query](working-with-errors.md), errors can appear either at the step or cell level. This article will focus on how you can catch and manage errors based on our own specific logic.
+As mentioned in the article on [dealing with errors in Power Query](dealing-with-errors.md), errors can appear either at the step or cell level. This article will focus on how you can catch and manage errors based on our own specific logic.
 
 >[!Note]
 > To demonstrate this concept, this article will use an Excel Workbook as its data source. The concepts showcased here apply to all values in Power Query and not only the ones coming from an Excel Workbook. 
