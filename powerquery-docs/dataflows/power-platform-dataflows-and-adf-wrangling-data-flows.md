@@ -37,7 +37,7 @@ Both Power Platform dataflows and Azure Data Factory wrangling dataflows are use
 
 The main point is knowing their differences, because then you can think about scenarios to use each.
 
-|                            | Power Platform dataflows                                     | Azure Data Factory wrangling dataflows                       |
+| Features                   | Power Platform dataflows                                     | Azure Data Factory wrangling dataflows                       |
 | -------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Destinations               | Common Data Services or Azure Data Lake Storage Gen2        | Many destinations, listed [here](https://azure.microsoft.com/blog/new-connectors-available-in-azure-data-factory-v2/) |
 | Power Query transformation | All Power Query functions are supported                      | A limited list of functions supported&mdash;here is the [list](https://docs.microsoft.com/azure/data-factory/wrangling-data-flow-functions) |
