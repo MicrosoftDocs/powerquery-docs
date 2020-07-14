@@ -21,7 +21,7 @@ If you're using Power BI as the data analysis tool, you can Get Data from Power 
 
 ![Get Data from Power BI Desktop](media/GetDatafromDataflow.png)
 
-When you get data from a dataflow, the data will be imported into the Power BI dataset. The data then needs to be refreshed, which requires a scheduled refresh process on the Power BI dataset in the service.
+When you get data from a dataflow, the data will be imported into the Power BI dataset. The data then must be refreshed, which requires a scheduled refresh process on the Power BI dataset in the service.
 
 ### DirectQuery from dataflows
 
@@ -45,7 +45,7 @@ When you use the output of a dataflow in other environments such as Power BI, th
 
 ## Next Steps
 
-The following articles provide more details about related topics.
+The following articles provide more details about related articles.
 
 - [Creating and using dataflows in Power BI](https://docs.microsoft.com/power-bi/service-dataflows-create-use)
 - [Link entities between dataflows in Power BI](https://docs.microsoft.com/power-bi/service-dataflows-linked-entities)
