@@ -44,6 +44,8 @@
       items:
       - name: "Power Query connectors"
         href: Connectors/index.md
+      - name: "Adobe Analytics"
+        href: Connectors/AdobeAnalytics.md
       - name: "Azure SQL database"
         href: Connectors/AzureSQLDatabase.md
       - name: "Azure SQL Data Warehouse"
@@ -64,6 +66,8 @@
           href: Connectors/FHIR/FHIR-QueryFoldingPatterns.md
         - name: Data relationships
           href: Connectors/FHIR/FHIR-Relationships.md
+      - name: "Google Analytics"
+        href: Connectors/GoogleAnalytics.md 
       - name: "XML"
         href: Connectors/XML.md
       - name: "Web"
