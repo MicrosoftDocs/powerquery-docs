@@ -12,7 +12,7 @@ ms.author: v-miesco
 
 A full outer join is one of the join kinds available inside the **Merge queries** window in Power Query. To read more about the merge operations in Power Query, see [Merge operations overview](merge-queries-overview.md).
 
-A full outer join brings all the rows from both the right and left table.
+A full outer join brings all the rows from both the left and right table.
 
 This article demonstrates, with a practical example, how to perform a merge operation using the full outer join as the join kind.
 
