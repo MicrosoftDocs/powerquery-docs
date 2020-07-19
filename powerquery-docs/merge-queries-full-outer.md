@@ -54,7 +54,7 @@ To do a full outer join:
 
 ![Merge window for full outer join](images/me-merge-operations-full-outer-merge-window.png)
 
->[!IMPORTANT]
+>[!TIP]
 >Take a closer look at the message at the bottom of the Merge window that reads *"The selection matches 4 of 4 rows from the first table, and 3 of 4  rows from the second table"* as this is crucial to understand the result that you get from this operation. 
 
 In the **Countries** table you have the *Country* Spain with the id 4, but there are no records for *CountryID* 4 in the Sales table, hence why only 3 of 4 rows from the right table found a match. All rows from the right table that didn't have matching rows from the left tablee will be grouped and shown in a new row in the output table with no values for the fields from the left table. 
