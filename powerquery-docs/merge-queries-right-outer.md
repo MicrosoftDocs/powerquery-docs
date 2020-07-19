@@ -37,7 +37,7 @@ The goal is to merge both tables, where the **Sales** table will be the left tab
 |-----------|------------------|
 |CountryID|id|
 
-The goal is to reach the following table where the name of the country appears as a new **Country** column in the **Sales** table. Due to how the Right outer join works, all rows from the right table will be brought, but only matching rowsx from the left table.
+The goal is to reach the following table where the name of the country appears as a new **Country** column in the **Sales** table. Due to how the Right outer join works, all rows from the right table will be brought, but only matching rowsx from the left table will be kept.
 
 ![Right outer join final table](images/me-merge-operations-right-outer-final-table.png)
 
