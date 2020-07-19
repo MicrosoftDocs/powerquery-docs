@@ -22,13 +22,14 @@ This article demonstrates, with a practical example, how to perform a merge oper
 ## Sample input and output tables
 
 The sample source tables for this example are:
-* **Countries**&mdash;this table is a reference table with the fields **id** and **Country**. The *id* represents the unique identifier of each record.
-
-![Countries table](images/me-merge-operations-left-outer-join-countries-table.png)
 
 * **Sales**&mdash;with the fields **Date**, **CountryID**, and **Units**. The *CountryID* is a whole number value that represents the unique identifier from the **Countries** table.
 
 ![Sales table](images/me-merge-operations-left-outer-join-sales-table.png)
+
+* **Countries**&mdash;this table is a reference table with the fields **id** and **Country**. The *id* represents the unique identifier of each record.
+
+![Countries table](images/me-merge-operations-left-outer-join-countries-table.png)
 
 The goal is to merge both tables, where the **Sales** table will be the left table and the **Countries** table the right one. The join will be made between the following columns:
 
