@@ -21,7 +21,7 @@ Power Query can be found in the following Microsoft products and services:
 |-------|---------|-------------------|------------------|---------|
 |Excel for Windows|![Yes](images/me-checkmark-24px.png)|![Yes](images/me-checkmark-24px.png)|![No](images/me-cancel-24px.png)| ![No](images/me-cancel-24px.png)|
 |Excel for Mac|![Yes](images/me-checkmark-24px.png)|![No](images/me-cancel-24px.png)|![No](images/me-cancel-24px.png)| ![No](images/me-cancel-24px.png)|
-|Power BI|![Yes](images/me-checkmark-24px.png)|![Yes](images/me-checkmark-24px.png)|![Yes](images/me-checkmark-24px.png)| ![No](images/me-cancel-24px.png)
+|Power BI|![Yes](images/me-checkmark-24px.png)|![Yes](images/me-checkmark-24px.png)|![Yes](images/me-checkmark-24px.png)|![Yes](images/me-checkmark-24px.png)
 |Power Apps| ![Yes](images/me-checkmark-24px.png) |![No](images/me-cancel-24px.png)|![Yes](images/me-checkmark-24px.png)| ![Yes](images/me-checkmark-24px.png)||
 |Power Automate| ![Yes](images/me-checkmark-24px.png) |![No](images/me-cancel-24px.png) | ![Yes](images/me-checkmark-24px.png) |![Yes](images/me-checkmark-24px.png)|
 |Azure Data Factory| ![Yes](images/me-checkmark-24px.png) |![No](images/me-cancel-24px.png) |![Yes](images/me-checkmark-24px.png) |![Yes](images/me-checkmark-24px.png)|
