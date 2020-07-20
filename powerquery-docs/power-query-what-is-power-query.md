@@ -16,7 +16,7 @@ LocalizationGroup: Get started
 
 Power Query is a data transformation and data preparation engine. Power Query comes with a graphical interface for getting the data from sources, and and a Power Query Editor for applying the transformation. The destination of which the data will be stored is dependent of where the Power Query have been used, because the engine is available in many other products and services. Using Power Query you can perform the Extract (E), Transform (T), and Load (L) process of data, also called as ETL.
 
-![What is Power Query](whatispowerquery.png)
+![What is Power Query](images/whatispowerquery.png)
 
 
 ## How Power Query helps with data acquisition
@@ -39,7 +39,7 @@ The transformation engine in Power Query includes many pre-build transformation 
 
 All of these transformations are simply possible by choosing the transformation option in the menu, and then applying the options required for that. Here are a few of these transformations available in Power Query Editor;
 
-![Some of the power query transformations](powerquerytransformationslist.png)
+![Some of the power query transformations](images/powerquerytransformationslist.png)
 
 To learn more about data transformations using Power Query, read [this article](power-query-quickstart-using-power-bi.md).
 
@@ -49,7 +49,7 @@ In any data transformation scenario, there are some transformations that cannot 
 
 The M language is the data transformation language of Power Query, anything that happens in the query is written in M. If you want to do advanced transformations using the Power Query engine, you can use the Advanced Editor to access the script of the query and modify it as you wish. The amount of functions and transformations available in M is far more, and what you can do using the language is far more than what can be done through the graphical interface.
 
-![Sample M script](sampleMScript.png)
+![Sample M script](images/sampleMScript.png)
 
 To lean more about M, [follow this](https://docs.microsoft.com/powerquery-m/index) thread.
 
