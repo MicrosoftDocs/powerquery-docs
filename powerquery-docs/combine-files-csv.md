@@ -26,7 +26,7 @@ The goal is to combine all 12 files into a single table that will look like the 
 
 ![Sample final combined table](images/me-combine-files-csv-final-table.png)
 
-You can follow along with this example by downloading the sample files used in this article from the following [download link](csv-files.zip). You can place those files inside the  data source of your choice, such as a local folder, SharePoint folder, Blob Storage, Azure Data Lake, or other data source that provides the *File system view*. 
+You can follow along with this example by downloading the sample files used in this article from the following [download link](https://aka.ms/PQCombineFilesSample). You can place those files inside the  data source of your choice, such as a local folder, SharePoint folder, Blob Storage, Azure Data Lake, or other data source that provides the *File system view*. 
 
 For simplicity, this article will be using the *Folder* connector. To learn more about the Folder connector, see [Folder](Connectors/Folder.md).
 
