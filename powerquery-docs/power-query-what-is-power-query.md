@@ -2,17 +2,16 @@
 title: What is Power Query?
 description: Learn what Power Query is, and how it can help you get and transform data
 author: mllopis
-
 ms.service: powerquery
 ms.topic: overview
-ms.date: 07/20/2019
+ms.date: 07/20/2020
 ms.author: millopis
 
 LocalizationGroup: Get started
 #Customer intent: As a data analyst or report creator, I want to know what Power Query is, so I can decide whether Power Query has the features and services I need to connect to and transform data.
 ---
 
-## What is Power Query?
+# What is Power Query?
 
 Power Query is a data transformation and data preparation engine. Power Query comes with a graphical interface for getting the data from sources, and and a Power Query Editor for applying the transformation. The destination of which the data will be stored is dependent of where the Power Query have been used, because the engine is available in many other products and services. Using Power Query you can perform the Extract (E), Transform (T), and Load (L) process of data, also called as ETL.
 
