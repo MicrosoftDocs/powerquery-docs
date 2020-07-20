@@ -90,7 +90,7 @@ Power Query can be found in the following Microsoft products and services:
 |Azure Data Factory| ![Yes](images/me-checkmark-24px.png) |![No](images/me-cancel-24px.png) |![Yes](images/me-checkmark-24px.png) |![Yes](images/me-checkmark-24px.png)|
 |SQL Server Integration Services| ![Yes](images/me-checkmark-24px.png)| ![No](images/me-cancel-24px.png)|![No](images/me-cancel-24px.png)|![No](images/me-cancel-24px.png)|![No](images/me-cancel-24px.png)|
 |SQL Server Analysis Services| ![Yes](images/me-checkmark-24px.png)| ![Yes](images/me-checkmark-24px.png)|![No](images/me-cancel-24px.png)|![No](images/me-cancel-24px.png)|
-|Dynamics 365 Customer Insights|![No](images/me-cancel-24px.png)|![No](images/me-cancel-24px.png)|![Yes](images/me-checkmark-24px.png)|![Yes](images/me-checkmark-24px.png)
+|Dynamics 365 Customer Insights|![Yes](images/me-checkmark-24px.png)|![No](images/me-cancel-24px.png)|![Yes](images/me-checkmark-24px.png)|![Yes](images/me-checkmark-24px.png)
 
 
 |Label|Description|
