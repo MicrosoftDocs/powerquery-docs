@@ -6,10 +6,12 @@ ms.service: powerquery
 ms.topic: overview
 ms.date: 07/20/2020
 ms.author: millopis
-
 LocalizationGroup: Get started
-#Customer intent: As a data analyst or report creator, I want to know what Power Query is, so I can decide whether Power Query has the features and services I need to connect to and transform data.
 ---
+
+<!--
+#Customer intent: As a data analyst or report creator, I want to know what Power Query is, so I can decide whether Power Query has the features and services I need to connect to and transform data.
+-->
 
 # What is Power Query?
 
