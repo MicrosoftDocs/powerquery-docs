@@ -20,7 +20,7 @@ Power Query is a data transformation and data preparation engine. Power Query co
 ![What is Power Query](images/whatispowerquery.png)
 
 
-## How Power Query helps with data acquisition
+## How Power Query helps with data acquisition?
 
 Business users spend up to 80% of their time on data preparation, delaying the time to analysis and decision making. There are many challenges that cause this situation, and **Power Query** helps address many of them.
 
@@ -77,7 +77,7 @@ Power Query can be used in many products such as Power BI and Excel. However, us
 
 Read [this article](/dataflows/overview-dataflows-across-power-platform-dynamics-365) to learn more about dataflows.
 
-## Where to use Power Query
+## Where to use Power Query?
 
 Power Query can be found in the following Microsoft products and services:
 
