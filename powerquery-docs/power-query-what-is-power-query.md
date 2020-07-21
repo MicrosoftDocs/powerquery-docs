@@ -50,7 +50,8 @@ In any data transformation scenario, there are some transformations that cannot 
 
 The M language is the data transformation language of Power Query, anything that happens in the query is written in M. If you want to do advanced transformations using the Power Query engine, you can use the Advanced Editor to access the script of the query and modify it as you wish. The amount of functions and transformations available in M is far more, and what you can do using the language is far more than what can be done through the graphical interface.
 
-![Sample M script](images/sampleMScript.png)
+> [!div class="mx-imgBorder"]
+> ![Sample M script](images/sampleMScript.png)
 
 To lean more about M, [follow this](https://docs.microsoft.com/powerquery-m/index) thread.
 
