@@ -42,6 +42,8 @@
         href: CommonIssues.md
     - name: "Connector reference"
       items:
+      - name: "Power Query connectors"
+        href: Connectors/index.md
       - name: "Azure SQL database"
         href: Connectors/AzureSQLDatabase.md
       - name: "Azure SQL Data Warehouse"
