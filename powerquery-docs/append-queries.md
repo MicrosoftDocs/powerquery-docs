@@ -22,8 +22,8 @@ You can find the **Append queries** option in the **Home** tab under the **Combi
 ![Append queries icons](images/me-append-queries-icons.png)
 
 The append operation requires at least two tables. The **Append** window has two modes:
-* **Two tables**&mdash;the default behavior, where you select a primary table and a table to be appended to the primary table.
-* **Three or more tables**&mdash;an optional behavior, where you select the tables to be combined from a list of available tables.
+* **Two tables**&mdash;combine two table queries together. This is the default mode.
+* **Three or more tables**&mdash;allow combining an arbitrary number of table queries together.
 
 >[!Note]
 >The tables will be appended in the order in which they are selected, starting with the **Primary table** for the *two tables* mode and from the first table in the **Tables to append** list for the *three or more tables* mode.
