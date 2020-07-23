@@ -40,7 +40,7 @@ Upon connecting to a data source using any of the previously mentioned connector
 
 ![Table preview with combine option](images/combinefiles1.png)
 
-Alternatively, you can select **Transform Data** to access the Power Query Editor, where the list of files can be subset (for example, using filters within the folder path or any of the other columns in this table). Then combine files by selecting the column containing the binaries (for example, in the **Content** column) and then selecting **Combine Files** from any of the following places:
+Alternatively, you can select **Transform Data** to access the Power Query Editor, where the list of files can be subset (for example, using filters on the folder path column to only include files from a specific subfolder). Then combine files by selecting the column containing the binaries (for example, in the **Content** column) and then selecting **Combine Files** from any of the following places:
 
 * **Combine files button**&mdash;inside the **Combine** group in the **Home** tab.
 
