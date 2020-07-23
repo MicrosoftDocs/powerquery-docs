@@ -14,20 +14,22 @@ With Power Query you can combine multiple files with the same schema into a sing
 
 This is very useful when wanting to combine all the files you have in the same folder. For example, if you had a folder that contains monthly files with all the purchase orders for your company then this would be an easy way to consolidate the orders into a single view.
 
-Files can come from a variety of sources such as but not limited to::
+Files can come from a variety of sources such as but not limited to:
 * [Local folder](folder.md)
 * SharePoint site
 * Azure Blob Storage
 * [Azure Data Lake Storage (Gen1 and Gen2)](datalakestorage.md)
 
-When working with files, you will notice that they share the same table schema commonly referred to as the *File system view*. Here's an example below:
+When working with these sources, you will notice that they share the same table schema commonly referred to as the *File system view*. Here's an example below:
 
 ![File system view](images/me-combine-files-overview-file-system-view.png)
 
 In the *File system view* you'll get a column called **Content**, which represents the binary representation of a file.
 
 >[!Note]
-> Selecting any of the **Binary** values inside the **Content** column will automatically create a series of navigation steps to that specific file. Power Query will try to interpret the binary using one of the available connectors, such as TXT / CSV, Excel Workbook, JSON, XML, or other connector as it sees fit.
+> You are able to filter the list of files found inside the *File system view* using any of the fields available. It is a good practice to filter this view to only take into consideration the files that you need to combine either by filtering fields such as the *Extension* or the *Folder Path*. You can learn more about the *File system view* and how to take advantage of it from the article on the [Local folder connector](folder.md).
+
+Selecting any of the **Binary** values inside the **Content** column will automatically create a series of navigation steps to that specific file. Power Query will try to interpret the binary using one of the available connectors, such as TXT / CSV, Excel Workbook, JSON, XML, or other connector as it sees fit.
 
 The combine files feature has the following steps or phases to reach the desired goal:
 * [Table preview dialog](#table-preview-dialog)
