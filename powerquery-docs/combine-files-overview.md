@@ -15,10 +15,10 @@ With Power Query you can combine multiple files with the same schema into a sing
 This is very useful when wanting to combine all the files you have in the same folder. For example, if you had a folder that contains monthly files with all the purchase orders for your company then this would be an easy way to consolidate the orders into a single view.
 
 Files can come from a variety of sources such as but not limited to::
-* Local folder
+* [Local folder](folder.md)
 * SharePoint site
 * Azure Blob Storage
-* Azure Data Lake Storage (Gen1 and Gen2)
+* [Azure Data Lake Storage (Gen1 and Gen2)](datalakestorage.md)
 
 When working with files, you will notice that they share the same table schema commonly referred to as the *File system view*. Here's an example below:
 
