@@ -42,6 +42,11 @@ The most common data types used in Power Query are:
 **When connecting to structured data sources such as databases**, Power Query will read the table schema from the data source and automatically display the data with the correct data type for each column.
 
 **When connecting to unstructured sources such as Excel, CSV, and text files**, Power Query can automatically detect data types by inspecting the values inside the table. By default, automatic data type detection is enabled in Power Query for unstructured sources.
+
+You can also use the **Detect data type** button inside the *Any column* group in the *Transform* tab to automatically detect the data types of the columns in your table.
+
+![Detect data type button inside transform tab](images/me-detect-data-type-icon-any-column.png)
+
 ## How to define a column data type
 You can define or change the data type of a column from four places:
 
