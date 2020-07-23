@@ -16,8 +16,8 @@ The append operation creates a single table by adding the contents of one table 
 
 You can find the **Append queries** option in the **Home** tab under the **Combine** group. From the dropdown, you'll see two options:
 
-* **Append queries**&mdash;displays the **Append** window with the currently selected query as the initial table, also called the primary table, to be appended.
-* **Append queries as new**&mdash;displays the **Append** window without any preselected tables for the append operation.
+* **Append queries**&mdash;displays the **Append** window to add additional tables to the current query.
+* **Append queries as new**&mdash;displays the **Append** window to create a new query by appending multiple tables.
 
 ![Append queries icons](images/me-append-queries-icons.png)
 
