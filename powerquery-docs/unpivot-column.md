@@ -13,7 +13,7 @@ ms.author: v-miesco
 
 In Power Query, you can transform columns into attribute-value pairs where columns become rows.
 
-![Unpivot columns diagram](images/me-unpivot-diagram.png)
+![Unpivot columns diagram](images/unpivot-operation-diagram.png)
 
 For example, given a table like the one below where country and date create a matrix, it would be very difficult to analyze the data in a scalable way. 
 
