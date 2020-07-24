@@ -12,6 +12,8 @@ ms.author: v-miesco
 
 A merge operation joins two existing tables together based on matching values from one or multiple columns. There are different types of joins that could used depending the desired output. 
 
+![Merge operation diagram overview](images/merge-operation-diagram-overview.png)
+
 ## To merge queries
 
 You can find **Merge queries** in the **Home** tab under the **Combine** group. From the dropdown you'll see two options:
