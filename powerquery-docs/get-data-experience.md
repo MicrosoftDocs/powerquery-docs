@@ -27,7 +27,10 @@ The set of steps or stages is:
 
 4.  Output query
 
-## 1. Connection settings
+![Getting data flow diagram](images/getting-data-flow-diagram.png)
+
+
+## 1. Connection Settings
 
 Most connectors initially require at least one parameter to initialize a connection to the data source. For example, the SQL Server connector requires at least the hostname to establish a connection to a SQL Server.
 

@@ -14,6 +14,9 @@ The append operation creates a single table by adding the contents of one table 
 
 ![Append operation sample diagram](images/append-queries-diagram.png)
 
+>[!NOTE]
+>When appending tables that do not have the same Column headers, the result table will have all column headers from all tables appended. If one of the appended tables doesn't have a column header from other tables, the result table will show *null* values in the respective column as shown in the previous image for columns C and D.
+
 ## To append queries
 
 You can find the **Append queries** option in the **Home** tab under the **Combine** group. From the dropdown, you'll see two options:
