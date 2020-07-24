@@ -33,7 +33,7 @@ landingContent:
           - text: Shape and combine data.md
             url: power-query-tutorial-shape-combine.md
           - text: What are dataflows?
-            url: overview-dataflows-across-power-platform-dynamics-365.md
+            url: dataflows/overview-dataflows-across-power-platform-dynamics-365.md
 
   # Card
   - title: Using Power Query
@@ -57,13 +57,13 @@ landingContent:
       - linkListType: concept
         links:
           - text: Create and use dataflows in the Power Platform
-            url: create-use.md
+            url: dataflows/create-use.md
           - text: Dataflow licenses
-            url: what-licenses-do-you-need-in-order-to-use-dataflows.md
+            url: dataflows/what-licenses-do-you-need-in-order-to-use-dataflows.md
           - text: Dataflow best practices
-            url: computed-entities-scenarios.md
+            url: dataflows/computed-entities-scenarios.md
           - text: Troubleshooting dataflows
-            url: troubleshooting-dataflows-issues-creating-dataflow.md
+            url: dataflows/troubleshooting-dataflows-issues-creating-dataflow.md
 
   # Card
   - title: Advanced Power Query articles

@@ -103,8 +103,8 @@ Power Query can be found in the following Microsoft products and services:
 |Dataflows| Power Query as a service that runs in the cloud, and is product agnostic. The stored result can be used in other applications as services.|
 
 ## More resources
-* [Data sources in Power Query](connectors.md)
+* [Data sources in Power Query](connectors/index.md)
 * [Getting data](get-data-experience.md)
 * [Power Query quickstart](power-query-quickstart-using-power-bi.md)
 * [Shape and combine data using Power Query](power-query-tutorial-shape-combine.md)
-* [What are dataflows](overview-dataflows-across-power-platform-dynamics-365.md)
+* [What are dataflows](dataflows/overview-dataflows-across-power-platform-dynamics-365.md)
