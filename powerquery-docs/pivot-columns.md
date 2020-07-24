@@ -11,7 +11,7 @@ ms.author: v-miesco
 # Pivot columns
 In Power Query, you can create a table that contains an aggregate value for each unique value in a column. Power Query groups each unique value, performs an aggregate calculation for each value, and pivots the column into a new table. 
 
-![Pivot columns diagram](images/me-pivot-columns-diagram.png)
+![Pivot columns diagram](images/pivot-operation-diagram.png )
 
 Imagine a table like the one in the following image.
 
