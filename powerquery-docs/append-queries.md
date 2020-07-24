@@ -12,7 +12,7 @@ ms.author: v-miesco
 
 The append operation creates a single table by adding the contents of one table to another table and will have a new table schema defined by aggregation of the column headers from both tables.
 
-![Append operation sample diagram](images/Append Operation.png)
+![Append operation sample diagram](images/append-queries-diagram.png)
 
 ## To append queries
 
