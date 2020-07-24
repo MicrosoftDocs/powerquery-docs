@@ -39,7 +39,7 @@ The goal is to merge both tables, where the **Sales** table will be the left tab
 |-----------|------------------|
 |CountryID|id|
 
-The goal is to reach the following table where the name of the country appears as a new **Country** column in the **Sales** table.
+The following table is thee desired output table where the name of the country appears as a new **Country** column in the **Sales** table as long as the CountryID exists in the Countries table. If there are no matches between the left and right table, a *null* value will be the result of the merge for that row. This can be shown for the CountryID 4 in from the Sales table. 
 
 ![Left outer join final table](images/me-merge-operations-left-outer-final-table.png)
 
