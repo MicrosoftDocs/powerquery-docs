@@ -16,6 +16,8 @@ A left outer join keeps all the rows from the left table, and brings any matchin
 
 This article demonstrates, with a practical example, how to perform a merge operation using the left outer join as the join kind.
 
+![Sample left outer join](images/left-outer-join-operation.png)
+
 >[!Note]
 >Samples used in this article are only to showcase the concepts. The concepts showcased here apply to all queries in Power Query.
 
