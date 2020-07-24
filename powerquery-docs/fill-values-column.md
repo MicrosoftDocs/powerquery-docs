@@ -1,6 +1,6 @@
 ---
 title: Fill values in a column
-description: With Power Query, you can use the values inside of a column to Fill down or fill up any empty spaces inside of the column. This aricle demonstrates how to perform these transformations in Power Query.
+description: With Power Query, you can use the values inside of a column to fill down or fill up any empty spaces inside of the column. This article demonstrates how to perform these transformations in Power Query.
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: v-douklo
@@ -36,7 +36,7 @@ The result of that operation will look like this:
 
 In the same way as the Fill down operation, the fill up works on a column. But fill up finds the last value of the column and fills any null values in the previous rows until it finds a new value. Then the same process occurs for that value. This process continues until there are no more values in that column.
 
-In the following example, you want to fill up the **Comments** column. You'll notice that your **Comments** column doesn't have null values. I instead, it has what appears to be empty cells. Before you can do the fill up operation, you need to transform those empty spaces into null values. To make that happen,select the column, go to the **Transform** tab, and select **Replace values**. 
+In the following example, you want to fill up the **Comments** column. You'll notice that your **Comments** column doesn't have null values. I instead, it has what appears to be empty cells. Before you can do the fill up operation, you need to transform those empty spaces into null values. To make that happen, select the column, go to the **Transform** tab, and select **Replace values**. 
 
 ![Replace values button in the Transform tab](images/me-fill-down-up-replace-values.png)
 

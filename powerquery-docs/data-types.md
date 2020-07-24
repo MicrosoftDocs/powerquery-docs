@@ -12,12 +12,12 @@ ms.author: v-miesco
 
 Data types in Power Query are used to classify the type of content to have a more structured data set. A data type is said to ***conform*** to that data type. 
 
-The data type of a column is displayed on the left-hand side of the column header with an icon image that symbolizes the data type:
+The data type of a column is displayed on the left-hand side of the column header with an icon image that symbolizes the data type.
 
 ![Common data types icon in the Data Preview pane](images/me-data-types-icons.png)
 
 >[!Note]
->Power Query provides a set of contextual transformations and options based on the data types of the columns. For example, when you select a column with a data type of Date, you get transformations and options that are contextual to that specific data type. These transformations and options occur throughout the Power Query interface, such as in the *Transform* and *Add Column* tab, as well as in the smart filter options. 
+>Power Query provides a set of contextual transformations and options based on the data types of the columns. For example, when you select a column with a data type of Date, you get transformations and options that are contextual to that specific data type. These transformations and options occur throughout the Power Query interface, such as in the **Transform** and **Add Column** tab, as well as in the smart filter options. 
 
 The most common data types used in Power Query are:
 
@@ -26,16 +26,17 @@ The most common data types used in Power Query are:
 |**Text**| ![Text](images/Text_20.png)  |A Unicode character data string. Can be strings, numbers, or dates represented in a text format. Maximum string length is 268,435,456 Unicode characters (256 mega characters) or 536,870,912 bytes.|
 |**True/False**|![True/False](images/Logical_20.png) |A Boolean value of either a True or False.|
 | **Decimal Number**| ![Decimal Number](images/Number_20.png) |Represents a 64 bit (eight-byte) floating point number. It’s the most common number type and corresponds to numbers as you usually think of them. Although designed to handle numbers with fractional values, it also handles whole numbers. The Decimal Number type can handle negative values from -1.79E +308 through -2.23E -308, 0, and positive values from 2.23E -308 through 1.79E + 308. For example, numbers like 34, 34.01, and 34.000367063 are valid decimal numbers. The largest precision that can be represented in a Decimal Number type is 15 digits long. The decimal separator can occur anywhere in the number. The Decimal Number type corresponds to how Excel stores its numbers.|
-|**Fixed Decimal number** | ![Currency](images/Currency_20.png) | Also known as the Currency type, has a fixed location for the decimal separator. The decimal separator always has four digits to its right and allows for 19 digits of significance. The largest value it can represent is 922,337,203,685,477.5807 (positive or negative). The Fixed Decimal Number type is useful in cases where rounding might introduce errors. When you work with many numbers that have small fractional values, they can sometimes accumulate and force a number to be slightly off. Since the values past the four digits to the right of decimal separator are truncated, the Fixed Decimal type can help you avoid these kinds of errors. | 
+|**Fixed Decimal Number** | ![Currency](images/Currency_20.png) | Also known as the Currency type, has a fixed location for the decimal separator. The decimal separator always has four digits to its right and allows for 19 digits of significance. The largest value it can represent is 922,337,203,685,477.5807 (positive or negative). The Fixed Decimal Number type is useful in cases where rounding might introduce errors. When you work with many numbers that have small fractional values, they can sometimes accumulate and force a number to be slightly off. Since the values past the four digits to the right of decimal separator are truncated, the Fixed Decimal type can help you avoid these kinds of errors. | 
 |**Whole Number** | ![Whole Number](images/WholeNumber_20.png)  | Represents a 64 bit (eight-byte) integer value. Because it’s an integer, it has no digits to the right of the decimal place. It allows for 19 digits; positive or negative whole numbers between -9,223,372,036,854,775,807 (-2^63+1) and 9,223,372,036,854,775,806 (2^63-2). It can represent the largest possible precision of the various numeric data types. As with the Fixed Decimal type, the Whole Number type can be useful in cases where you need to control rounding. |
 |**Percentage** | ![Percentage](images/Percentage_20.png)| Fundamentally the same as a **Decimal Number** type, but it has a mask to format the values in the column as a percentage in the Power Query Editor Window.|
 |**Date/Time** |  ![Date/Time](images/DateTime_20.png) |Represents both a date and time value. Underneath the covers, the Date/Time value is stored as a Decimal Number Type. So you can actually convert between the two. The time portion of a date is stored as a fraction to whole multiples of 1/300 seconds (3.33 ms). Dates between years 1900 and 9999 are supported.|
 |**Date** | ![Date](images/Date_20.png) | Represents just a Date (no time portion). When converted into the model, a Date is the same as a Date/Time value with zero for the fractional value.|
 |**Time**| ![Time](images/Time_20.png)  |Represents just Time (no Date portion). When converted into the model, a Time value is the same as a Date/Time value with no digits to the left of the decimal place.|
 |**Date/Time/Timezone** | ![Date/Time/Timezone](images/DateTimeZone_20.png) |Represents a UTC Date/Time with a timezone offset. It’s converted into Date/Time when loaded into the model.| 
-|**Duration**| ![Duration](images/Duration_20.png) | Represents a length of time. It’s converted into a Decimal Number Type when loaded into the model. As a Decimal Number type it can be added or subtracted from a Date/Time field with correct results. As a Decimal Number type, you can easily use it in visualizations that show magnitude.|
+|**Duration**| ![Duration](images/Duration_20.png) | Represents a length of time. It’s converted into a Decimal Number type when loaded into the model. As a Decimal Number type it can be added or subtracted from a Date/Time field with correct results. As a Decimal Number type, you can easily use it in visualizations that show magnitude.|
 |**Binary**| ![Binary](images/Binary_20.png) |The Binary data type can be used to represent any other data with a binary format.|
 |**Any**| ![Any](images/AnyType_20.png)|The *any* data type is the status given to a column without an explicit data type definition. *Any* is the data type that classifies all values. We recommended that you always explicitly define the column data types for your queries from unstructured sources and avoid columns with the *any* data type as the output of your query.|
+| | | |
 
 ## Data type detection
 
@@ -52,19 +53,19 @@ You can define or change the data type of a column from four places:
 
 * **Home tab**&mdash;in the **Data Type** dropdown menu inside the **Transform** group.
 
-![Data types menu in the Home tab](images/me-data-types-home-tab.png)
+   ![Data types menu in the Home tab](images/me-data-types-home-tab.png)
 
 * **Transform tab**&mdash;in the **Data Type** dropdown menu inside the **Any Column** group.
 
-![Data types menu in the Transform tab](images/me-data-types-transform-tab.png)
+   ![Data types menu in the Transform tab](images/me-data-types-transform-tab.png)
 
 * **Column header icon**&mdash;left of the column header shown as an icon.
 
-![Data types menu in the column header](images/me-data-types-column-header-icon.png)
+   ![Data types menu in the column header](images/me-data-types-column-header-icon.png)
 
-* **Column right-click** - as the **Change Type** option.
+* **Column right-click**&mdash;as the **Change Type** option.
 
-![Data types menu in the column right click contextual menu](images/me-data-types-right-click.png)
+   ![Data types menu in the column right click contextual menu](images/me-data-types-right-click.png)
 
 ### Automatic column data type and headers detection
 
@@ -76,7 +77,7 @@ By default, this setting is enabled. To disable or enable this setting:
 
    ![Auto detect data type option in the Project options](images/me-data-types-project-options-auto-detect.png)
 
-* **In Power Query for Desktop**, you have the ability to define this behavior at both the global and per file level inside the *Options* window.
+* **In Power Query for Desktop**, you have the ability to define this behavior at both the global and per file level inside the **Options** window.
     - **Global**&mdash;Inside the **Global** menu, go to the **Data Load** item and then go to the **Type Detection** section on the right. From here you can select any of the three type detection configurations that will be applied on every new file created in your application:
         - Always detect column types and headers for unstructured sources
         - Detect column types and headers for unstructured sources according to each file's setting
@@ -91,7 +92,7 @@ By default, this setting is enabled. To disable or enable this setting:
 When this setting is enabled, Power Query will automatically detect the column headers and data types of unstructured data sources. Power Query will do this by automatically adding two steps to your query:
 
 * **Promote column headers**&mdash;promotes the first row of the table to be the column header.
-* **Changed Type**&mdash;converts the values from any* data type to a data type based on the inspection of the values from each column.
+* **Changed Type**&mdash;converts the values from the **any** data type to a data type based on the inspection of the values from each column.
 
 ## Document or project locale
 
@@ -111,7 +112,7 @@ When Power Query defines a column data type or converts from one data type to an
 
    ![Locale setting in Power Query for Desktop applications](images/me-data-types-power-query-desktop-locale.png)
 
-This **Locale** setting is important for interpreting text values into a specific data type. For example, imagine that you have your locale set as English (United States), but one of your columns from one of your csv files has dates in the UK format day/month/year.
+This **Locale** setting is important for interpreting text values into a specific data type. For example, imagine that you have your locale set as English (United States), but one of your columns from one of your CSV files has dates in the UK format day/month/year.
 
 ![Sample original table](images/me-data-types-locale-sample-original.png)
 

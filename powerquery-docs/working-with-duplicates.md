@@ -11,7 +11,7 @@ ms.author: v-miesco
 # Working with duplicate values
 In Power Query, you can easily work with duplicate sets of values through transformations that can remove duplicates from your data or can easily filter to duplicates only so you can focus on those.
 
-For this article, we will be using the following table with the columns id, Category and Total to demonstrate how to perform the Remove and Keep duplicates operations in Power Query:
+For this article, the examples will be using the following table with the **id**, **Category**, and **Total** columns to demonstrate how to do the remove and keep duplicates operations in Power Query.
 
 ![Initial sample table](images/me-working-with-duplicates-initial-table.png)
 
@@ -25,7 +25,7 @@ To remove duplicates:
 3. In the **Reduce Rows** group, select the **Remove Rows** option.
 4. From the dropdown menu for **Remove Rows**, select the option to **Remove duplicates**.
 
-![Remove duplicate button in Home tab](images/me-working-with-duplicates-remove-duplicates.png)
+   ![Remove duplicate button in Home tab](images/me-working-with-duplicates-remove-duplicates.png)
 
 > [!WARNING]
 > Power Query doesn't guarantee that it chooses the first instance of a set of duplicates when removing duplicates.
@@ -35,7 +35,7 @@ From your initial table, in this example you want to identify and remove the dup
 
 ![Initial sample table with duplicates in multiple columns](images/me-working-with-duplicates-table-row-duplicates.png)
 
-You can tell that you have four rows that are duplicates. Your goal in this example is to remove those duplicate rows so there are only distinct rows in your table. Select all columns from your table and then select the **Remove duplicates** button. 
+You can tell that you have four rows that are duplicates. Your goal in this example is to remove those duplicate rows so there are only distinct rows in your table. Select all columns from your table, and then select the **Remove duplicates** button. 
 
 The result of that operation will give you the table that you're looking for.
 
@@ -49,7 +49,7 @@ From your initial table, in this example you want to identify and remove the dup
 
 ![Initial sample with duplicates on Category column](images/me-working-with-duplicates-column-row-duplicates.png)
 
-You have multiple duplicates and you want to remove those duplicates to only keep distinct values. To remove duplicates from the Category column, select the **Category** column and then apply the **Remove duplicates** transformation.
+You have multiple duplicates and you want to remove those duplicates to only keep distinct values. To remove duplicates from the Category column, select the **Category** column, and then apply the **Remove duplicates** transformation.
 
 The result of that operation will give you the table that you're looking for.
 
@@ -65,14 +65,14 @@ To keep duplicates:
 3. In the **Reduce Rows** group, select the **Keep Rows** option.
 4. From the dropdown menu for **Keep Rows**, select the option to **Keep duplicates**.
 
-![Keep duplicates button in Home tab](images/me-working-with-duplicates-keep-duplicates.png)
+   ![Keep duplicates button in Home tab](images/me-working-with-duplicates-keep-duplicates.png)
 
 ### From multiple columns
 From your initial table, in this example you want to identify and keep the duplicates by using all of the columns from your table. 
 
 ![Initial sample table for keep duplicates from multiple columns](images/me-working-with-duplicates-table-row-duplicates.png)
 
-You can tell that you have four rows that are duplicates. Your goal in this example is to keep only the rows that are duplicated in your table. Select all the columns from your table and then select the **Keep duplicates** button. 
+You can tell that you have four rows that are duplicates. Your goal in this example is to keep only the rows that are duplicated in your table. Select all the columns from your table, and then select the **Keep duplicates** button. 
 
 The result of that operation will give you the table that you're looking for.
 
@@ -83,7 +83,7 @@ From your initial table, in this example you want to identify and keep the dupli
 
 ![Initial sample table for keep duplicates from a single column](images/me-working-with-duplicates-keep-column-row-duplicates-identify.png)
 
-In this example, you have multiple duplicates and you want to keep only those duplicates from your table. To keep duplicates from the **id** column, select the **id** column and then apply the **Keep duplicates** transformation.
+In this example, you have multiple duplicates and you want to keep only those duplicates from your table. To keep duplicates from the **id** column, select the **id** column, and then apply the **Keep duplicates** transformation.
 
 The result of that operation will give you the table that you're looking for.
 

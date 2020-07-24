@@ -10,11 +10,11 @@ ms.author: v-miesco
 
 # Add an index column
 
-The Index column adds a new column to the table with explicit position values and is usually created to support other transformation patterns
+**Index column** adds a new column to the table with explicit position values, and is usually created to support other transformation patterns.
 
 ![Add index column buttons in Add column tab](images/me-add-index-column-icon.png)
 
-By default the starting index will start from the value 0 and have an increment of 1 per row.
+By default, the starting index will start from the value 0 and have an increment of 1 per row.
 
 ![Sample index column](images/me-add-index-column-new-index.png)
 
@@ -76,12 +76,12 @@ Your table now has three columns where:
 * **Modulo**&mdash;provides the column position of the value (similar to the y coordinates of an xy chart).
 * **Integer-division**&mdash;provides the row position of the value (similar to the x coordinates of an xy chart).
 
-To achieve the desired table, you need to pivot the **Modulo** column using the values from **Column1** where these values do not get aggregated. Go to the **Transform** tab, select the **Modulo** column, and then select the **Pivot column** icon from the **Any column** group. Inside the **Pivot column** window, select the **Advanced** section. Make sure **Value column** is set to **Column1** and **Aggregate values function** to **Don't aggregate**.
+To achieve the desired table, you need to pivot the **Modulo** column using the values from **Column1** where these values don't get aggregated. Go to the **Transform** tab, select the **Modulo** column, and then select the **Pivot column** icon from the **Any column** group. Inside the **Pivot column** window, select the **Advanced** section. Make sure **Value column** is set to **Column1** and **Aggregate values function** to **Don't aggregate**.
 
 ![Pivot column window](images/me-add-index-column-pivot-column.png)
 
 >[!Note]
->You can read more about the Pivot column operation inside of Power Query from the [Pivot columns](pivot-columns.md) article.
+>For more information about the Pivot column operation inside of Power Query, see [Pivot columns](pivot-columns.md).
 
 The result of that operation will give you a table with four columns.
 
@@ -89,10 +89,10 @@ The result of that operation will give you a table with four columns.
 
 ### Cleaning the table
 
-You can now delete the **Integer-division** column and promote the first row of the table to become the headers of our table.
+You can now delete the **Integer-division** column and promote the first row of the table to become the headers of your table.
 
  >[!Note]
->You can read more about the Promote headers operation inside of Power Query in the [Promote / Demote Headers](table-promote-demote-headers.md) article.
+>For more information about the Promote headers operation inside of Power Query, see [Promote / Demote Headers](table-promote-demote-headers.md).
 
 After defining the correct data types for your columns, your final table has exactly the three columns that you needed and the shape that you were looking for.
 

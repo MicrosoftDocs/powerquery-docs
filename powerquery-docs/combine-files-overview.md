@@ -1,5 +1,5 @@
 ---
-title: "Combine files in Power Query: overview" 
+title: "Combine files overview" 
 description: How to combine files in Power Query and Power Query Online
 author: ptyx507
 ms.service: powerquery
@@ -8,30 +8,30 @@ ms.date: 06/30/2020
 ms.author: v-miesco
 ---
 
-# Combine files in Power Query: overview
+# Combine files overview
 
-With Power Query you can combine multiple files with the same schema into a single logical table.
+With Power Query, you can combine multiple files with the same schema into a single logical table.
 
-This is very useful when wanting to combine all the files you have in the same folder. For example, if you had a folder that contains monthly files with all the purchase orders for your company then this would be an easy way to consolidate the orders into a single view.
+This feature is useful when you want to combine all the files you have in the same folder. For example, if you have a folder that contains monthly files with all the purchase orders for your company, then combining these files would be an easy way to consolidate the orders into a single view.
 
-Files can come from a variety of sources such as but not limited to:
-* [Local folder](folder.md)
+Files can come from a variety of sources, such as, but not limited to:
+* Local folder
 * SharePoint site
 * Azure Blob Storage
-* [Azure Data Lake Storage (Gen1 and Gen2)](datalakestorage.md)
+* Azure Data Lake Storage (Gen1 and Gen2)
 
-When working with these sources, you will notice that they share the same table schema commonly referred to as the *File system view*. Here's an example below:
+When working with these sources, you'll notice that they share the same table schema, commonly referred to as the *file system view*. The following screenshot shows an example of the file system view.
 
 ![File system view](images/me-combine-files-overview-file-system-view.png)
 
-In the *File system view* you'll get a column called **Content**, which represents the binary representation of a file.
+In the file system view, you'll get a column called **Content**, which represents the binary representation of a file.
 
 >[!Note]
-> You are able to filter the list of files found inside the *File system view* using any of the fields available. It is a good practice to filter this view to only take into consideration the files that you need to combine either by filtering fields such as the *Extension* or the *Folder Path*. You can learn more about the *File system view* and how to take advantage of it from the article on the [Local folder connector](folder.md).
+> You can filter the list of files found inside the file system view using any of the fields available. It's good practice to filter this view to only take into consideration the files you need to combine, either by filtering fields such as **Extension** or **Folder Path**. You can learn more about the file system view and how to take advantage of it from the article on the [local folder connector](connectors/folder.md).
 
-Selecting any of the **Binary** values inside the **Content** column will automatically create a series of navigation steps to that specific file. Power Query will try to interpret the binary using one of the available connectors, such as TXT / CSV, Excel Workbook, JSON, XML, or other connector as it sees fit.
+Selecting any of the **Binary** values inside the **Content** column will automatically create a series of navigation steps to that specific file. Power Query will try to interpret the binary using one of the available connectors, such as TXT/CSV, Excel Workbook, JSON, XML, or other connector as it sees fit.
 
-The combine files feature has the following steps or phases to reach the desired goal:
+The combine files feature has the following steps or phases to reach the required goal:
 * [Table preview dialog](#table-preview-dialog)
 * [Combine files dialog](#combine-files-dialog)
 * [Combine files output](#combine-files-output)
@@ -46,11 +46,11 @@ Alternatively, you can select **Transform Data** to access the Power Query Edito
 
 * **Combine files button**&mdash;inside the **Combine** group in the **Home** tab.
 
-![Combine files button in Home tab](images/me-combine-files-overview-combine-files-button-home.png)
+   ![Combine files button in Home tab](images/me-combine-files-overview-combine-files-button-home.png)
 
 * **Combine files icon**&mdash;next to the column header of the column with **Binary** values.
 
-![Combine files icon in column header](images/me-combine-files-overview-combine-files-button-header.png)
+   ![Combine files icon in column header](images/me-combine-files-overview-combine-files-button-header.png)
 
 ## Combine files dialog
 
@@ -82,7 +82,7 @@ After going through the **Combine files** dialog and finishing this process, Pow
 
 4. In addition to the above queries, a new group with the prefix **Transform file from** with the initial query as the suffix is created with all the components that drive this combine files experience.
 
-![Combine files output](images/me-combine-files-overview-combine-files-output.png)
+   ![Combine files output](images/me-combine-files-overview-combine-files-output.png)
 
 Using **Combine files**, you can easily combine all files within a given folder, as long as they have the same file type and structure (such as the same columns).
 Also, you can easily apply additional transformation or extraction steps by modifying the automatically generated exemplar query, without having to worry about modifying or creating additional function query steps. Any changes to the exemplar query are automatically propagated to the linked function query.

@@ -1,6 +1,6 @@
 ---
 title: Pivot columns
-description: In Power Query, you can create a table that contains an aggregate value for each unique value in a column. Power Query groups each unique value, performs an aggregate calculation for each value, and pivots the column into a new table.
+description: In Power Query, you can create a table that contains an aggregate value for each unique value in a column. Power Query groups each unique value, does an aggregate calculation for each value, and pivots the column into a new table.
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: v-douklo
@@ -9,7 +9,7 @@ ms.author: v-miesco
 ---
 
 # Pivot columns
-In Power Query, you can create a table that contains an aggregate value for each unique value in a column. Power Query groups each unique value, performs an aggregate calculation for each value, and pivots the column into a new table. 
+In Power Query, you can create a table that contains an aggregate value for each unique value in a column. Power Query groups each unique value, does an aggregate calculation for each value, and pivots the column into a new table. 
 
 ![Pivot columns diagram](images/pivot-operation-diagram.png )
 
@@ -22,7 +22,7 @@ This table contains values by country and date as a simple table. In this exampl
 ![Pivot column final table](images/me-pivot-columns-final-table.png)
 
 ## To pivot a column
-To make this happen, select the column that you want to pivot. Go to the **Transform** tab and select **Pivot column** from the **Any column** group.
+To pivot a column, select the column that you want to pivot. Go to the **Transform** tab and select **Pivot column** from the **Any column** group.
 
 ![Pivot columns icon](images/me-pivot-columns-icon.png)
 
@@ -46,7 +46,7 @@ The available options are:
 
 ## Pivoting columns that can't be aggregated
 
-You can pivot columns without aggregating when you're working with columns that can't be aggregated or it is not required for what you're trying to do. For example, imagine a table, like the following image, that has **Country**, **Position**, and **Product** as fields.
+You can pivot columns without aggregating when you're working with columns that can't be aggregated or it isn't required for what you're trying to do. For example, imagine a table, like the following image, that has **Country**, **Position**, and **Product** as fields.
 
 ![Pivot column no aggregation](images/me-pivot-dont-aggregate-valid-initial.png)
 
@@ -63,11 +63,11 @@ The result of this operation will yield your expected result.
 ![Pivot columns no aggregation result](images/me-pivot-columns-no-aggregation-final.png)
 
 ### Errors when using the don't aggregate option
-The way that the don't aggregate option works is that it grabs a single value for the pivot operation to be placed as the value for the intersection of the column and row pair. For example, if you have a table like the one in the following image:
+The way the don't aggregate option works is that it grabs a single value for the pivot operation to be placed as the value for the intersection of the column and row pair. For example, let's say you have a table like the one in the following image.
 
 ![Pivot column error example table](images/me-pivot-dont-aggregate-error-initial.png)
 
-Let's say you want to pivot that table using the **Date** column, and you want to use the values from the **Value** column. Because this pivot would make your table have just the Country values on rows and the Dates as columns, you would get an error for every single cell value because there are multiple rows for every combination of Country and Date. The outcome of the Pivot column operation will yield the following results:
+Let's say you want to pivot that table using the **Date** column, and you want to use the values from the **Value** column. Because this pivot would make your table have just the Country values on rows and the Dates as columns, you would get an error for every single cell value because there are multiple rows for every combination of Country and Date. The outcome of the Pivot column operation will yield the results shown in the following image.
 
 ![Pivot column don't aggregate error](images/me-pivot-dont-aggregate-error-final.png)
 

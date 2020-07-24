@@ -21,13 +21,13 @@ The sample data source for this demonstration is an Excel Workbook with the foll
 
 ![Sample data from Excel](images/me-error-handling-sample-workbook.png)
 
-This table from an Excel Workbook has Excel errors such as #NULL!, #REF! and #DIV/0! in the **Standard Rate** column. When you import this table into the Power Query Editor, the following image shows how it will look.
+This table from an Excel Workbook has Excel errors such as **#NULL!**, **#REF!**, and **#DIV/0!** in the **Standard Rate** column. When you import this table into the Power Query Editor, the following image shows how it will look.
 
 ![Sample table in Power Query](images/me-error-handling-sample-workbook-in-power-query.png)
 
 Notice how the errors from the Excel workbook are shown with the `[Error]` value in each of the cells. 
 
-In this case, the goal is to create a new **Final Rate** column that will use the values from the **Standard Rate** column. If there are any errors, then it will use the value from the correspondant **Special Rate** column.
+In this case, the goal is to create a new **Final Rate** column that will use the values from the **Standard Rate** column. If there are any errors, then it will use the value from the correspondent **Special Rate** column.
 
 ### Add custom column with `try` and `otherwise` syntax
 
@@ -35,7 +35,7 @@ To create a new custom column, go to the **Add column** menu and select **Custom
 
 ![try otherwise custom column](images/me-error-handling-try-otherwise-custom-column.png)
 
-The formula above will try to evaluate the **Standard Rate** column and will output it's value if no errors are found. If errors are found in the **Standard Rate** column, then the output will be the value defined after the `otherwise` statement, which in this case is the **Special Rate** column.
+The formula above will try to evaluate the **Standard Rate** column and will output its value if no errors are found. If errors are found in the **Standard Rate** column, then the output will be the value defined after the `otherwise` statement, which in this case is the **Special Rate** column.
 
 After adding the correct data types to all of the columns in the table, the following image shows how the final table looks.
 
@@ -71,7 +71,7 @@ This operation will expose three new fields:
 
 * **All Errors.HasError**&mdash;displays whether the value from the **Standard Rate** column had an error or not.
 * **All Errors.Value**&mdash;if the value from the **Standard Rate** column had no error, this column will display the value from the **Standard Rate** column. For values with errors this field won't be available, and during the expand operation this column will have `null` values.
-* **All Errors.Error**&mdash;if the value from the **Standard Rate** column had an error, this column will display the error record for the value from the **Standard Rate** column. For values with no errors this field won't be available, and during the expand operation this column will have `null` values.
+* **All Errors.Error**&mdash;if the value from the **Standard Rate** column had an error, this column will display the error record for the value from the **Standard Rate** column. For values with no errors, this field won't be available, and during the expand operation this column will have `null` values.
 
 ![try Expanded fields](images/me-error-handling-try-record-expanded-columns.png)
 

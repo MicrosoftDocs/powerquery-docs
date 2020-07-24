@@ -14,11 +14,11 @@ LocalizationGroup: Data from files
 ---
 # Creating computed entities in dataflows
 
-You can perform **in-storage computations** when using **dataflows** with a Power BI Premium subscription. This lets you perform calculations on your existing dataflows, and return results that enable you to focus on report creation and analytics. 
+You can perform *in-storage computations* when using dataflows with a Power BI Premium subscription. This lets you do calculations on your existing dataflows, and return results that enable you to focus on report creation and analytics. 
 
 ![Computed entities in Power BI Premium](media/dataflows-computed-entities/computed-entities-premium-00.png)
 
-To perform **in-storage computations**, you first must create the dataflow and bring data into that Power BI dataflow storage. Once you have a dataflow that contains data, you can create **computed entities**, which are entities that perform in-storage computations. 
+To perform in-storage computations, you first must create the dataflow and bring data into that Power BI dataflow storage. Once you have a dataflow that contains data, you can create *computed entities*, which are entities that do in-storage computations. 
 
 There are two ways you can connect dataflow data to Power BI:
 
@@ -31,22 +31,22 @@ The following sections describe how to create computed entities on your dataflow
 
 Once you have a dataflow with a list of entities, you can perform calculations on those entities.
 
-In the dataflow authoring tool in the Power BI service, select **Edit entities**, then right-click on the entity you want to use as the basis for your computed entity and on which you want to perform calculations. In the context menu, choose **Reference**.
+In the dataflow authoring tool in the Power BI service, select **Edit entities**. Then right-click on the entity you want to use as the basis for your computed entity and on which you want to perform calculations. In the context menu, choose **Reference**.
 
 For the entity to be eligible as a computed entity, the **Enable load** selection must be checked, as shown in the following image. Right-click on the entity to display this context menu.
 
 ![Check the Enable load in the right-click context menu](media/dataflows-computed-entities/computed-entities-premium-01.png)
 
-By selecting **Enable load**, you create a new entity for which its source is the referenced entity. The icon changes, and displays the **computed** icon, as shown in the following image.
+By selecting **Enable load**, you create a new entity whose source is the referenced entity. The icon changes, and displays the **computed** icon, as shown in the following image.
 
 ![Computed entities in Power BI Premium](media/dataflows-computed-entities/computed-entities-premium-00.png)
 
-Any transformation you perform on this newly created entity will be run on the data that already resides in Power BI dataflow storage. That means that the query will not run against the external data source from which the data was imported (for example, the SQL database from which the data was pulled), but rather, is performed on the data that resides in the dataflow storage.
+Any transformation you do on this newly created entity will be run on the data that already resides in Power BI dataflow storage. That means that the query won't run against the external data source from which the data was imported (for example, the SQL database from which the data was pulled). Rather, the query is done on the data that resides in the dataflow storage.
 
 ### Example use cases
-What kind of transformations can be performed with computed entities? Any transformation that you usually specify using the transformation user interface in Power BI, or the M editor, are all supported when performing in-storage computation. 
+What kind of transformations can be done with computed entities? Any transformation that you usually specify using the transformation user interface in Power BI, or the M editor, are all supported when performing in-storage computation. 
 
-Consider the following example: you have an *Account* entity that contains the raw data for all the customers from your Dynamics 365 subscription. You also have *ServiceCalls* raw data from the Service Center, with data from the support calls that were performed from the different account in each day of the year.
+Consider the following example. You have an *Account* entity that contains the raw data for all the customers from your Dynamics 365 subscription. You also have *ServiceCalls* raw data from the Service Center, with data from the support calls that were performed from the different account in each day of the year.
 
 Imagine you want to enrich the *Account* entity with data from the *ServiceCalls*. 
 
@@ -62,7 +62,7 @@ And then you can see the results, shown as *EnrichedAccount* in the following im
 
 ![Results of a computed entity in Power BI Premium](media/dataflows-computed-entities/computed-entities-premium-04.png)
 
-And that's it&mdash;the transformation is performed on the data in the dataflow that resides in your Power BI Premium subscription, not on the source data.
+And that's it&mdash;the transformation is done on the data in the dataflow that resides in your Power BI Premium subscription, not on the source data.
 
 ## Considerations and limitations
 

@@ -42,7 +42,7 @@ This column holds three values:
 In this example, you want to split this column into the three columns made from the values in the list above. To do this split, select the column and then select the option to split the column by positions. In **Split Column by Positions**, apply the following configuration:
 
 * **Positions**: 0,6,14
-   * Positions are zero-based and comma separated where position zero is the start of the string. 
+   * Positions are zero-based and comma-separated, where position zero is the start of the string. 
 
 
 ![Split column into columns by positions window](images/me-split-columns-positions-into-columns-split-column-window.png)
@@ -77,7 +77,7 @@ The initial table for this example will be like the one in the image below, with
 The **Account** column can only hold two values in the same cell. Each value has the same length in characters, with a total of six characters. In this example, you want to split these values so you can have each account value in its own row.
 To do that, select the **Account** column and then select the option to split the column by positions. In **Split Column by Positions**, apply the following configuration:
 
-* **Positions**: 0,6
+* **Positions**: 0, 6
 * **Split into**: Rows
 
 ![Split column into rows by positions window](images/me-split-columns-positions-into-columns-split-row-window.png)

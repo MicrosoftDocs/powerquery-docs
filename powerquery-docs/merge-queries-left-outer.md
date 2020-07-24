@@ -1,6 +1,6 @@
 ---
-title: "Merge queries: Left outer join"
-description: An article on how to perform a merge operation in Power Query using the left outer join kind. 
+title: "Left outer join"
+description: An article on how to do a merge operation in Power Query using the left outer join kind. 
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: 
@@ -8,13 +8,13 @@ ms.date: 06/30/2020
 ms.author: v-miesco
 ---
 
-# Merge queries: Left outer join
+# Left outer join
 
 A left outer join is one of the join kinds available inside the **Merge queries** window in Power Query. To read more about the merge operations in Power Query, see [Merge operations overview](merge-queries-overview.md).
 
 A left outer join keeps all the rows from the left table, and brings any matching rows from the right table.
 
-This article demonstrates, with a practical example, how to perform a merge operation using the left outer join as the join kind.
+This article demonstrates, with a practical example, how to do a merge operation using the left outer join as the join kind.
 
 ![Sample left outer join](images/left-outer-join-operation.png)
 
@@ -27,11 +27,11 @@ The sample source tables for this example are:
 
 * **Sales**&mdash;with the fields **Date**, **CountryID**, and **Units**. The *CountryID* is a whole number value that represents the unique identifier from the **Countries** table.
 
-![Sales table](images/me-merge-operations-left-outer-join-sales-table.png)
+   ![Sales table](images/me-merge-operations-left-outer-join-sales-table.png)
 
-* **Countries**&mdash;this table is a reference table with the fields **id** and **Country**. The *id* represents the unique identifier of each record.
+* **Countries**&mdash;this table is a reference table with the fields **id** and **Country**. The **id* represents the unique identifier of each record.
 
-![Countries table](images/me-merge-operations-left-outer-join-countries-table.png)
+   ![Countries table](images/me-merge-operations-left-outer-join-countries-table.png)
 
 The goal is to merge both tables, where the **Sales** table will be the left table and the **Countries** table the right one. The join will be made between the following columns:
 

@@ -12,7 +12,7 @@ ms.author: v-rerad
 
  
 
-Analytical dataflows store both data and metadata in Azure Data Lake Storage Gen2. Dataflows leverage a standard structure to store and describe data created in the lake which is called Common Data Model folders. In this article, you'll learn more about the storage standard that dataflows leverage behind the scenes. 
+Analytical dataflows store both data and metadata in Azure Data Lake Storage Gen2. Dataflows leverage a standard structure to store and describe data created in the lake, which is called Common Data Model folders. In this article, you'll learn more about the storage standard that dataflows leverage behind the scenes. 
 
  
 
@@ -64,7 +64,7 @@ Inside each dataflow folder, there are sub-folders for each entity and a metadat
 
  
 
-The `model.json` file is the metadata definition of the dataflow. This is the one file that contains all the dataflow’s metadata. It includes a list of entities, the columns and their data types in each entity, the relationship between entities, and so on. This is the file that you can export from a dataflow easily, even if you don't have access to the Common Data Model folder structure. 
+The `model.json` file is the metadata definition of the dataflow. This is the one file that contains all the dataflow’s metadata. It includes a list of entities, the columns, and their data types in each entity, the relationship between entities, and so on. This is the file that you can export from a dataflow easily, even if you don't have access to the Common Data Model folder structure. 
 
  
 

@@ -18,17 +18,17 @@ The **Conditional column** option is located in the **Add column** tab of the Po
 
 ## To add a conditional column
 
-For demonstration purposes, you'll be using the following table:
+For demonstration purposes, you'll be using the table shown in the following image.
 
 ![Sample table](images/me-add-conditional-column-sample-table-start.png)
 
 In this table, you have a field that gives you the **CustomerGroup**. You also have different prices applicable to that customer in the **Tier 1 Price**, **Tier 2 Price**, and **Tier 3 Price** fields. In this example, your goal is to create a new column with the name **Final Price** based on the value found in the **CustomerGroup** field. If the value in the **CustomerGroup** field is equal to 1, then you want to use the value from the **Tier 1 Price** field, else you use the value from the **Tier 3 Price**.   
 
-To add this conditional column, select **Conditional column** button. A new window called **Add conditional column** will appear. In this window you can define three sections numbered in the following image:
+To add this conditional column, select **Conditional column**. A new window called **Add conditional column** will appear. In this window you can define three sections numbered in the following image.
 
 ![Simple conditional column clause](images/me-add-conditional-column-one-clause.png)
 
-The following ordered list will get into the details of each section inside the *Add conditional column* window shown in the previous image where each number represents the section shown in the previous image:
+The following list describes the details of each section inside the **Add conditional column** window shown in the previous image, where each number represents the section shown in the previous image:
 
 1. **New column name**&mdash;you can define the name of your new column. In this case, you'll use the name **Final Price**.
 2. **Conditional clauses**&mdash;where you define your conditional clauses. You can add more clauses by selecting the **Add clause** button. Each conditional clause will be tested on the order shown in the window from top to bottom. Each clause has four parts:
@@ -43,7 +43,7 @@ The result of that operation will give you a new **Final Price** column.
 ![New conditional column](images/me-add-conditional-column-sample-table-mid.png)
 
 >[!Note]
-> New conditional columns will not have a data type defined. You can add a new step to define a data type for this newly created column by following this article on [data types](data-types.md).
+> New conditional columns will not have a data type defined. You can add a new step to define a data type for this newly created column by following the article on [data types](data-types.md).
 
 ### Adding and organizing multiple clauses
 
@@ -57,6 +57,6 @@ For demonstration purposes, let's change your goal. Your new conditional clauses
 >[!Note]
 > At the end of each clause you'll have a contextual button (shown as three dots) that will allow you to delete, move up, and move down your clauses.
 
-The result of that operation will give you the result that you were looking.
+The result of that operation will give you the result that you're looking for.
 
 ![Final conditional column](images/me-add-conditional-column-sample-table-final.png)
