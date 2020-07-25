@@ -45,7 +45,7 @@ After you hit the OK button on the previous window, you can see a new column in 
 
 ![Fruits expanded](images/me-merge-fuzzy-matching-expand-no-transform-table.png)
 
-### Fuzzy matching options
+## Fuzzy matching options
 
 You can modify the **Fuzzy matching options** to tweek how the approximate match should be performed. First double click the *Merge queries* step and insidee the **Merge** window expand the **Fuzzy matching options**.
 
@@ -58,7 +58,7 @@ The available options are:
 * **Number of matches (optional)** - specifies the maximum number of matching rows that can be returned.
 * **Transformation table (optional)** - allows matching records based on custom value mappings. For example, 'Grapes' are matched with 'Raisins' if a transformation table is provided with the 'From' column containing 'Grapes' and the 'To' column containing 'Raisins'.
 
-#### Transformation table
+## Transformation table
 
 For the example showcased in this article, you can use a **Transformation table** to map the value with a missing pair. That value is *apls* which has to be mapped to *Apple*. Your transformation table needs to have two columns:
 
