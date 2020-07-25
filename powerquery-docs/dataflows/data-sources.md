@@ -131,7 +131,7 @@ You can take the following steps to create a connection to a connector that isn'
 
     ![Copy the M script from the Advanced Editor in Power BI Desktop](media/dataflows-data-sources/dataflows-data-sources-09.png) 
 
-3. Open the Power BI dataflow, and select **Get data** for a blank query, as shown in the following image.
+3. Open the Power BI dataflow, and select **Get data** for a blank query.
 
     ![Create a blank query for a dataflow](media/dataflows-data-sources/dataflows-data-sources-10.png) 
 

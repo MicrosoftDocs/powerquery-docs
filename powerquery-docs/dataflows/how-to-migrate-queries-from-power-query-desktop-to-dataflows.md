@@ -66,7 +66,7 @@ A dataflow, as a cloud-based service, requires the on-premises data gateway to c
 
 ![Gateway setup](media/SetupGatewayForCopiedQuery.png)
 
-The gateway isn't needed for data sources residing in the cloud, such as an Azure SQL Database.
+The gateway isn't needed for data sources residing in the cloud, such as an Azure SQL database.
 
 ### Configure connection
 
@@ -81,7 +81,7 @@ If you've done all the steps successfully, you should see a preview of the data 
 
 ## Some Power Query Desktop functions require a gateway in Power Query Online
 
-Some of the functions might require a gateway, even if their source is not on-premises. Among these are functions such as Web.BrowserContents, and Web.Page. If this happens, you might get an error message indicating which specific function isn't supported. The figure below shows an example of one of these scenarios.
+Some of the functions might require a gateway, even if their source is not on-premises. Among these are functions such as `Web.BrowserContents ` and `Web.Page`. If this happens, you might get an error message indicating which specific function isn't supported. The figure below shows an example of one of these scenarios.
 
 ![Unsupported functions in the dataflow](media/MigrateToDataflowError.png)
 

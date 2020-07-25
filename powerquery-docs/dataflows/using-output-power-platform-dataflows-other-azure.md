@@ -12,16 +12,16 @@ ms.author: v-rerad
 
 # Using the output of Power Platform dataflows from other Azure Data workloads
 
-Depends on the storage for the output of the Power Platform dataflows, you can use that output in other Azure services.
+Depending on the storage for the output of the Power Platform dataflows, you can use that output in other Azure services.
 
 ## The benefits of working with the output of Power Platform dataflows
 
 Using Power Platform dataflows, you can reshape data, clean the data, and prepare the data for further analysis and consumption. There are many other Azure data services that work with data as an input and provide actions. 
 
 - Azure Machine Learning can consume the output of dataflows and use it for machine learning scenarios (for example, predictive analysis).
-- Azure Data Factory can get the output of dataflows in a much larger scale combined with the data from big data sources for advanced data integration solutions.
-- Azure Databricks can consume the output of dataflows for applied data science algorithms and further AI with the big data scale with Apache Spark backend.
-- Other Azure data services may use the output of Power Platform dataflows to do further actions on that data.
+- Azure Data Factory can get the output of dataflows in a much larger scale, combined with the data from big data sources, for advanced data integration solutions.
+- Azure Databricks can consume the output of dataflows for applied data science algorithms and further AI with the big data scale in the Apache Spark backend.
+- Other Azure data services can use the output of Power Platform dataflows to do further actions on that data.
 
 ## Dataflows with external Azure Data Lake Storage Gen2 
 

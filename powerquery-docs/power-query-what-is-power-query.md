@@ -63,8 +63,6 @@ To learn more about data transformations using Power Query, see [Quickstart - us
 
 Power Query can be used in many products, such as Power BI and Excel. However, using Power Query inside a specific product limits its usage to only within that specific product. Dataflows are a service version of the Power Query experience. Using dataflows, you can get data and transform the data in the same way. But instead of sending the output to Power BI or Excel, you can store the output in other storage options, such as Common Data Services and Azure Data Lake Storage Gen2. This storage option will let you use the output of dataflows in other products and services. Dataflows are a product-agnostic Power Query service that runs in the cloud.
 
-![Dataflow](dataflows/media/dataflows-power-platform-dynamics-365/dataflow-function.png)
-
 To learn more about dataflows, see [What are dataflows?](/dataflows/overview-dataflows-across-power-platform-dynamics-365.md).
 
 ## The Power Query Formula Language (M)
@@ -73,8 +71,23 @@ In any data transformation scenario, there are some transformations that can't b
 
 The M language is the data transformation language of Power Query. Anything that happens in the query is ultimately written in M. If you want to do advanced transformations using the Power Query engine, you can use the Advanced Editor to access the script of the query and modify it as you want. If you find that the user interface functions and transformations won’t perform the exact changes you need, you can use the Advanced Editor and the M language to fine tune your functions and transformations.
 
-> [!div class="mx-imgBorder"]
-> ![Sample M script](images/sampleMScript.png)
+```powerquery-m
+let
+    Source = Exchange.Contents("xyz@contoso.com"),
+    Mail1 = Source{[Name="Mail"]}[Data],
+    #"Expanded Sender" = Table.ExpandRecordColumn(Mail1, "Sender", {"Name"}, {"Name"}),
+    #"Filtered Rows" = Table.SelectRows(#"Expanded Sender", each ([HasAttachments] = true)),
+    #"Filtered Rows1" = Table.SelectRows(#"Filtered Rows", each ([Subject] = "sample files for email PQ test") and ([Folder Path] = "\Inbox\")),
+    #"Removed Other Columns" = Table.SelectColumns(#"Filtered Rows1",{"Attachments"}),
+    #"Expanded Attachments" = Table.ExpandTableColumn(#"Removed Other Columns", "Attachments", {"Name", "AttachmentContent"}, {"Name", "AttachmentContent"}),
+    #"Filtered Hidden Files1" = Table.SelectRows(#"Expanded Attachments", each [Attributes]?[Hidden]? <> true),
+    #"Invoke Custom Function1" = Table.AddColumn(#"Filtered Hidden Files1", "Transform File from Mail", each #"Transform File from Mail"([AttachmentContent])),
+    #"Removed Other Columns1" = Table.SelectColumns(#"Invoke Custom Function1", {"Transform File from Mail"}),
+    #"Expanded Table Column1" = Table.ExpandTableColumn(#"Removed Other Columns1", "Transform File from Mail", Table.ColumnNames(#"Transform File from Mail"(#"Sample File"))),
+    #"Changed Type" = Table.TransformColumnTypes(#"Expanded Table Column1",{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}, {"Column5", type text}, {"Column6", type text}, {"Column7", type text}, {"Column8", type text}, {"Column9", type text}, {"Column10", type text}})
+in
+    #"Changed Type"
+```
 
 To lean more about M, see [Power Query M formula language](https://docs.microsoft.com/powerquery-m/index).
 

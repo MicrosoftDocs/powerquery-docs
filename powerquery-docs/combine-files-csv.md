@@ -10,7 +10,7 @@ ms.author: v-miesco
 
 # Combine files: CSV documents
 
-In Power Query, you have the *Combine files* experience to combine multiple files from a given data source. This article will showcase how the experience works when the files that you want to combine are CSV files. You can read an overview of the *Combine files* experience from the article [Combine files: Overview](combine-files-overview.md). 
+In Power Query, you have the *Combine files* experience to combine multiple files from a given data source. This article will showcase how the experience works when the files that you want to combine are CSV files. For an overview of the *Combine files* experience, see [Combine files: Overview](combine-files-overview.md). 
 
 ## About the sample files used
 
@@ -32,7 +32,7 @@ For simplicity, this article will be using the *Folder* connector. To learn more
 
 ## Table preview dialog
 
-When connecting to the folder that hosts the files that you want to combine, in this example the name of that folder is **CSV Files**, you'll be prompted with the table preview dialog, which has your folder path on the top-left corner. Also, the data preview will show the *File system view*.
+When connecting to the folder that hosts the files that you want to combine&mdash;in this example the name of that folder is **CSV Files**&mdash;you'll be prompted with the table preview dialog, which has your folder path on the top-left corner. Also, the data preview will show the *File system view*.
 
 ![Table preview dialog for File system view](images/me-combine-files-csv-files-list.png)
 
@@ -64,7 +64,7 @@ However, the data isn't in the correct shape. You need to remove the top four ro
 
 ### Modify the Transform Sample file query
 
-Inside this **Transform Sample file** query, you'll see that the data, as shown in the image below, is for the month of April by looking at the values from the Date column, which has the format year-month-day (YYYY-MM-DD). 'April 2019.csv' is the first file that you saw in the **Table preview** dialog.
+Inside this **Transform Sample file** query, you'll see that the data, as shown in the image below, is for the month of April by looking at the values from the **Date** column, which has the format year-month-day (YYYY-MM-DD). 'April 2019.csv' is the first file that you saw in the **Table preview** dialog.
 
 ![image](images/me-combine-files-csv-transform-sample-file.png)
 
@@ -96,12 +96,12 @@ After this operation is completed, Power Query (by default) will try to automati
 
 ### Revising the Output query
 
-When you go back to the **CSV Files** query, you'll notice that the last step is giving you an error that reads `The column 'Column1' of the table wasn't found`. The reason behind this error is that the previous state of the query was performing an operation against a column by the name **Column1**. But due to the changes made to the **Transform Sample file** query, this column no longer exists. To learn more about errors, see [Dealing with Errors](dealing-with-errors.md).
+When you go back to the **CSV Files** query, you'll notice that the last step is giving you an error that reads `The column 'Column1' of the table wasn't found`. The reason behind this error is that the previous state of the query was doing an operation against a column by the name **Column1**. But because of the changes made to the **Transform Sample file** query, this column no longer exists. To learn more about errors, see [Dealing with Errors](dealing-with-errors.md).
 
 ![Output query with step level error](images/me-combine-files-csv-column-name-error.png)
 
 >[!Note]
-> If the data preview is still not showing you the correct data preview, you can select the **Refresh** button in the **Home** tab inside the **Query* group to refresh the data preview of your query.
+> If the data preview is still not showing you the correct data preview, you can select the **Refresh** button in the **Home** tab inside the **Query** group to refresh the data preview of your query.
 >
 >![Refresh data preview](images/me-combine-files-csv-refresh-preview.png)
 >
@@ -110,7 +110,7 @@ You can remove this last step of the query from the **Applied steps** pane by se
 
 ![Combine files without error step](images/me-combine-files-csv-expanded-table-step.png)
 
-However, notice that none of the columns derived from the files (Date, Country, Units, Revenue) have a data type assigned to them. Assign the correct data type to each column using the following table:
+However, notice that none of the columns derived from the files (Date, Country, Units, Revenue) has a data type assigned to them. Assign the correct data type to each column using the following table:
 
 Column Name | Data type|
 ------------|----------|
