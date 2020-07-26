@@ -7,6 +7,18 @@
       href: merge-queries-right-outer.md
     - name: "Left anti join"
       href: merge-queries-left-anti.md 
+    - name: "Right anti join"
+      href: merge-queries-right-anti.md 
+    - name: "Inner join"
+      href: merge-queries-inner.md 
+    - name: "Full outer join"
+      href: merge-queries-full-outer.md 
+    - name: "Fuzzy merge"
+      href: merge-queries-fuzzy-match.md
+    - name: "Cross join"
+      href: cross-join.md
+    - name: "Choose or Remove columns"
+      href: choose-remove-columns.md
   - name: "What is Power Query?"
       href: power-query-what-is-power-query.md
     - name: Get data
