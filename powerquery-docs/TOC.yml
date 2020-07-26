@@ -2,7 +2,7 @@
   href: index.yml
   expanded: true
   items: 
-  - name: "Second Batch"
+  - name: Second Batch
     - name: "Right outer join"
       href: merge-queries-right-outer.md
     - name: "Left anti join"
