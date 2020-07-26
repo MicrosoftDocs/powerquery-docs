@@ -1,6 +1,6 @@
 ---
 title: Replace values and errors
-description: In Power Query you can replace values and errors found in one or multiple columns with a value of your choice. This article demonstrates how to perform this transformation in Power Query.
+description: In Power Query, you can replace values and errors found in one or multiple columns with a value of your choice. This article demonstrates how to do this transformation in Power Query.
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: v-douklo
@@ -41,7 +41,7 @@ Advanced options are only available in columns of the text data type. Within tha
 
 ### Replace entire cell content
 
-Imagine a table like the following where we have a field for **Account ID**, **Category Name**, and **Sales Goal**.
+Imagine a table like the following where you have a field for **Account ID**, **Category Name**, and **Sales Goal**.
 
 ![Initial sample table](images/me-replace-values-original-table.png)
 
@@ -62,6 +62,6 @@ Continuing with the previous table, let's say you want to replace the text strin
 
 ![Replace values window for text column](images/me-replace-values-text.png)
 
-The result of that operation gives us the table in the following image.
+The result of that operation gives you the table in the following image.
 
 ![Output sample table after values replaced](images/me-replace-values-final-table.png)

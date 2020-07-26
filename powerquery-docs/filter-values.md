@@ -12,7 +12,7 @@ ms.author: v-miesco
 
 In Power Query, you can include or exclude rows according to a specific value in a column. Power Query's user interface provides two methods to filter the values in your column:
 * [**Sort & Filer menu**](#sort--filter-menu)
-* [**Right click operation inside the cell of a column**](#right-click)
+* [**Right-click operation inside the cell of a column**](#right-click)
 
 After a filter is applied, a small filter icon in the column header will appear.
 
@@ -20,12 +20,12 @@ After a filter is applied, a small filter icon in the column header will appear.
 
 ## Sort & filter menu
 
-In the column header, you'll see an icon with an inversed triangle. When you select this icon, the sort & filter menu will be displayed. With this menu, you're able to apply or remove any filters to your column.
+In the column header, you'll see an icon with an inverse triangle. When you select this icon, the *sort and filter* menu will be displayed. With this menu, you can apply or remove any filters to your column.
 
 ![Sort & Filter menu](images/me-filter-values-sort-filter-menu.png)
 
 > [!Note] 
-> In this article we'll focus on the aspects related to filtering data. To learn more about the sort options and how to sort columns in Power Query, see [Sort Columns] (sort-columns.md).  
+> In this article we'll focus on the aspects related to filtering data. To learn more about the sort options and how to sort columns in Power Query, see [Sort Columns](sort-columns.md).  
 
 ### Remove empty
 
@@ -34,7 +34,7 @@ The remove empty option will apply two filter rules to your column. The first ru
 ![Sample table for empty rows](images/me-filter-values-sample-for-empty-rows.png)
 
 > [!Note]
-> A null value is specific value in the Power Query language that represents no value.
+> A null value is a specific value in the Power Query language that represents no value.
 
 You then select the option to remove empty, as shown in the next image.
 
@@ -49,13 +49,13 @@ The result of the remove empty operation gives you the same table without the em
 
 ### Clear filter
 
-When a filter is applied to a column, the clear filter option will appear. The clear filter option inside the Sort & Filter menu helps you remove any filters from your column:
+When a filter is applied to a column, the clear filter option will appear. The clear filter option inside the sort and filter menu helps you remove any filters from your column.
 
 ![Clear filter option](images/me-filter-values-clear-filter.png)
 
 ### Auto filter
 
-The list inside the sort & filter menu is called *auto filter*. This is a list of unique values in your column. You can manually select or deselect which values to take into consideration or not. Any values selected will be taken into consideration; any other values without the selection will be filtered out.
+The list inside the sort and filter menu is called *auto filter*. This is a list of unique values in your column. You can manually select or deselect which values to take into consideration or not. Any values selected will be taken into consideration; any other values without the selection will be filtered out.
 
 This auto filter section also has a search bar to help you find any values from your list.
 
@@ -71,14 +71,14 @@ This auto filter section also has a search bar to help you find any values from 
 
 You can manually right-click on a cell of a particular column to enable the contextual menu for that value. From the small filter icon, you can then select the filter option you want to use.
 
-![Right click to filter rows based on contents of a cell](images/me-filter-values-right-click.png)
+![Right-click to filter rows based on contents of a cell](images/me-filter-values-right-click.png)
 
 > [!Note]
 > Power Query will display the type-specific filter based on the data type of the column.
 
 ## Type-specific filters
 
-Depending on the data type of your column, you'll see a different option inside the sort & filter menu to help you with some smart or contextual filters. Here are examples for a date, text, or numeric column:
+Depending on the data type of your column, you'll see a different option inside the sort and filter menu to help you with some smart or contextual filters. The following images show examples for a date, text, or numeric column.
 
 ![Date column specific filters](images/me-filter-values-date-column.png)
 
@@ -88,7 +88,7 @@ Depending on the data type of your column, you'll see a different option inside 
 
 ### The Filter rows window
 
-When selecting any of the type-specific filters, you'll be presented with the **Filter rows** window. The main objective of this window is to provide a user interface for you to implement filter rules on your column. This window looks like this:
+When selecting any of the type-specific filters, you'll be presented with the **Filter rows** window. The main goal of this window is to provide a user interface for you to implement filter rules on your column. This window looks like the following image.
 
 ![Filter rows window](images/me-filter-values-filter-rows-window.png)
 
@@ -114,7 +114,7 @@ The result of that operation will give you exactly the set of rows that you're l
 
 Basic mode focuses on providing a unique perspective into adding filters to a single column. Advanced mode can implement as many type-specific filters as necessary from all the columns inside the table.
 
-For example, imagine that instead of applying the previous filter in basic mode, you wanted to implement a filter to **Account Code** to keep all values that end with "4". Also, you would like to have values over $100 in the **Sales** column. This is what those selections would look like in advanced mode:
+For example, imagine that instead of applying the previous filter in basic mode, you wanted to implement a filter to **Account Code** to keep all values that end with "4". Also, you would like to have values over $100 in the **Sales** column. The following image shows what those selections would look like in advanced mode.
 
 ![Filter rows window in advanced mode](images/me-filter-values-filter-rows-window-advanced-mode.png)
 

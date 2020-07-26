@@ -10,7 +10,7 @@ ms.author: v-miesco
 
 # Add a custom column
 
-If you need more flexibility for adding new columns than the ones provided out of the box in Power Query, then you can create your custom column using the Power Query M formula language putting a comprehensive function reference content set at your fingertips.
+If you need more flexibility for adding new columns than the ones provided out of the box in Power Query, then you can create your own custom column using the Power Query M formula language, putting a comprehensive function reference content set at your fingertips.
 
 Imagine that you have the following table with a set of columns. 
 
@@ -55,7 +55,7 @@ The formula that you can use to create the **Total Sales before Discount** is `[
 
 ![Custom column formula for Total Sales before Discount](images/me-add-custom-column-total-sale-before-discount.png)
 
-The result of that operation will add a new **Total Sales before Discount** column to your table and will look like the following image:
+The result of that operation will add a new **Total Sales before Discount** column to your table and will look like the following image.
 
 ![Table with new custom column called Total Sales before Discount](images/me-add-custom-column-total-sale-before-discount-column.png)
 
@@ -65,13 +65,13 @@ The formula that you can use to create the **Total Sales before Discount** is `[
 
 ![Custom column formula for Total Sales after Discount](images/me-add-custom-column-total-sale-after-discount.png)
 
-The result of that operation will add a new **Total Sales after Discount** column to your table and will look like the following image:
+The result of that operation will add a new **Total Sales after Discount** column to your table and will look like the following image.
 
 ![Table with new custom column called Total Sales after Discount](images/me-add-custom-column-total-sale-after-discount-column.png)
 
 ### Setting the column data types
 
-Notice that your new columns don't have a data type defined yet. You can tell this by looking at the icon in the header of the column that has the* data type icon (ABC123). You'll want to change the data types of both new columns to the type currency. 
+Notice that your new columns don't have a data type defined yet. You can tell this by looking at the icon in the header of the column that has the data type icon (ABC123). You'll want to change the data types of both new columns to the type currency. 
 
 To change the data types:
 
@@ -85,7 +85,7 @@ To change the data types:
 
 ![Data types menu in the Home tab](images/me-add-custom-column-data-types.png)
 
-After defining the data types for both columns, your table will looks like the following image.
+After defining the data types for both columns, your table will look like the following image.
 
 ![Sample final table](images/me-add-custom-column-final-table.png)
 

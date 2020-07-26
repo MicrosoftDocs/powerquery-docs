@@ -23,7 +23,7 @@ This problem happens when you try to create a dataflow in "My Workspace" in Powe
 
 **Reason:**
 
-Creating dataflows in "My Workspace" is not supported.
+Creating dataflows in "My Workspace" isn't supported.
 
 **Resolution:**
 
@@ -31,7 +31,7 @@ Create your dataflows in [organizational workspaces](https://docs.microsoft.com/
 
 ## Problem: Can't create a dataflow in an organizational workspace with read-only rights
 
-If you are a member of an organization workspace and you still can't create a dataflow, it might be because of your access rights in that workspace.
+If you're a member of an organization workspace and you still can't create a dataflow, it might be because of your access rights in that workspace.
 
 **Reason:**
 
@@ -65,11 +65,11 @@ Ask the Power BI administrator to enable the access for you. The steps to do so 
 
 ## Problem: Dataflow creation has limited options
 
-When you can create a dataflow, all of the options for creating the dataflow may not appear. For example, when you create a dataflow, you might see only the options shown below.
+When you can create a dataflow, all of the options for creating the dataflow may not appear. For example, when you create a dataflow, you might see only the options shown in the following image.
 
 ![Dataflow creation options limited](media/DataflowCreationLimited.png)
 
-However, the full options are shown below.
+However, the full options are shown in this image.
 
 ![Full Options for Dataflow Creation](media/DataflowCreationFull.png)
 

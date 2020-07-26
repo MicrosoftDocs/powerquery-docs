@@ -1,6 +1,6 @@
 ---
-title: "Merge queries: Left outer join"
-description: An article on how to perform a merge operation in Power Query using the left outer join kind. 
+title: "Left outer join"
+description: An article on how to do a merge operation in Power Query using the left outer join kind. 
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: 
@@ -8,13 +8,15 @@ ms.date: 06/30/2020
 ms.author: v-miesco
 ---
 
-# Merge queries: Left outer join
+# Left outer join
 
 A left outer join is one of the join kinds available inside the **Merge queries** window in Power Query. To read more about the merge operations in Power Query, see [Merge operations overview](merge-queries-overview.md).
 
 A left outer join keeps all the rows from the left table, and brings any matching rows from the right table.
 
-This article demonstrates, with a practical example, how to perform a merge operation using the left outer join as the join kind.
+This article demonstrates, with a practical example, how to do a merge operation using the left outer join as the join kind.
+
+![Sample left outer join](images/left-outer-join-operation.png)
 
 >[!Note]
 >Samples used in this article are only to showcase the concepts. The concepts showcased here apply to all queries in Power Query.
@@ -22,13 +24,14 @@ This article demonstrates, with a practical example, how to perform a merge oper
 ## Sample input and output tables
 
 The sample source tables for this example are:
-* **Countries**&mdash;this table is a reference table with the fields **id** and **Country**. The *id* represents the unique identifier of each record.
-
-![Countries table](images/me-merge-operations-left-outer-join-countries-table.png)
 
 * **Sales**&mdash;with the fields **Date**, **CountryID**, and **Units**. The *CountryID* is a whole number value that represents the unique identifier from the **Countries** table.
 
-![Sales table](images/me-merge-operations-left-outer-join-sales-table.png)
+   ![Sales table](images/me-merge-operations-left-outer-join-sales-table.png)
+
+* **Countries**&mdash;this table is a reference table with the fields **id** and **Country**. The **id* represents the unique identifier of each record.
+
+   ![Countries table](images/me-merge-operations-left-outer-join-countries-table.png)
 
 The goal is to merge both tables, where the **Sales** table will be the left table and the **Countries** table the right one. The join will be made between the following columns:
 
@@ -36,7 +39,7 @@ The goal is to merge both tables, where the **Sales** table will be the left tab
 |-----------|------------------|
 |CountryID|id|
 
-The goal is to reach the following table where the name of the country appears as a new **Country** column in the **Sales** table.
+The following table is thee desired output table where the name of the country appears as a new **Country** column in the **Sales** table as long as the CountryID exists in the Countries table. If there are no matches between the left and right table, a *null* value will be the result of the merge for that row. This can be shown for the CountryID 4 in from the Sales table. 
 
 ![Left outer join final table](images/me-merge-operations-left-outer-final-table.png)
 

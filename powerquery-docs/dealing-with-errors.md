@@ -72,7 +72,7 @@ This error could be caused by a number of reasons, such as the data privacy leve
 
 ## Cell-level error
 
-A cell-level error will not prevent the query from loading, but any error values will be displayed as **Error** inside the Cell. Selecting the whitespace inside the cell will display the detail pane underneath the data preview, where you can see the error components
+A cell-level error will not prevent the query from loading, but any error values will be displayed as **Error** inside the cell. Selecting the whitespace inside the cell will display the detail pane underneath the data preview, where you can see the error components.
 
 ![Could not convert value to data type error](images/me-working-with-errors-could-not-convert.png)
 

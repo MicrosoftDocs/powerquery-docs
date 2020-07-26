@@ -93,22 +93,22 @@
             href: merge-queries-overview.md
           - name: "Left outer join"
             href: merge-queries-left-outer.md
-        - name: Split columns
-          items:
-          - name: "By delimiter"
-            href: split-columns-delimiter.md
-          - name: "By number of characters"
-            href: split-columns-number-characters.md
-          - name: "By positions"
-            href: split-columns-positions.md
-          - name: "By lowercase to uppercase"
-            href: splitcolumns-lowercase-to-uppercase.md
-          - name: "By uppercase to lowercase"
-            href: splitcolumns-uppercase-to-lowercase.md
-          - name: "By digit to non-digit"
-            href: splitcolumns-digit-to-nondigit.md
-          - name: "By non-digit to digit"
-            href: splitcolumns-nondigit-to-digit.md
+      - name: Split columns
+        items:
+        - name: "By delimiter"
+          href: split-columns-delimiter.md
+        - name: "By number of characters"
+          href: split-columns-number-characters.md
+        - name: "By positions"
+          href: split-columns-positions.md
+        - name: "By lowercase to uppercase"
+          href: splitcolumns-lowercase-to-uppercase.md
+        - name: "By uppercase to lowercase"
+          href: splitcolumns-uppercase-to-lowercase.md
+        - name: "By digit to non-digit"
+          href: splitcolumns-digit-to-nondigit.md
+        - name: "By non-digit to digit"
+          href: splitcolumns-nondigit-to-digit.md
     - name: Dataflows
       items:
       - name: "Overview of dataflows"

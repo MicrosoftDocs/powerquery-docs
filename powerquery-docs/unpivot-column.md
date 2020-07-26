@@ -11,15 +11,15 @@ ms.author: v-miesco
 
 # Unpivot columns
 
-In Power Query, you can transform columns into attribute-value pairs where columns become rows.
+In Power Query, you can transform columns into attribute-value pairs, where columns become rows.
 
-![Unpivot columns diagram](images/me-unpivot-diagram.png)
+![Unpivot columns diagram](images/unpivot-operation-diagram.png)
 
-For example, given a table like the one below where country and date create a matrix, it would be very difficult to analyze the data in a scalable way. 
+For example, given a table like the one below where country and date create a matrix, it would be difficult to analyze the data in a scalable way. 
 
 ![General Unpivot columns sample initial table](images/me-unpivot-initial-table.png)
 
-Instead, you could transform the table into the following one with unpivoted columns so that it's easier to use the date as attribute to filter on.
+Instead, you could transform the table into the following one with unpivoted columns. In the transformed table, it's easier to use the date as an attribute to filter on.
 
 ![General Unpivot columns sample goal table](images/me-unpivot-final-table.png)
 
@@ -30,7 +30,7 @@ Power Query will always create the value-pair with two columns:
 - **Attribute**&mdash;The name of the column headers that were unpivoted.
 - **Value**&mdash;The values that were underneath each of the unpivoted columns.
 
-There are multiple places in the user interface where you can find **Unpivot columns**. You can right-click on the columns that you want to unpivot, or you can select the icon from the **Transform** tab in the ribbon.
+There are multiple places in the user interface where you can find **Unpivot columns**. You could right-click on the columns that you want to unpivot, or you might select the icon from the **Transform** tab in the ribbon.
 
 ![Right click operation to Unpivot columns](images/me-unpivot-right-click.png)
 
@@ -44,7 +44,7 @@ There are three ways that you can unpivot columns from a table:
 
 ## Unpivot columns
 
-For the scenario described above, you first need to select the columns that you want to unpivot. You can hold the **Ctrl** key and select as many columns as you need. For this scenario, you want to select all the columns except the one with the header **Country**. After selecting the columns, you can right-click on any of the selected columns and then select **Unpivot columns**.
+For the scenario described above, you first need to select the columns you want to unpivot. You can hold the **Ctrl** key and select as many columns as you need. For this scenario, you want to select all the columns except the one with the header **Country**. After selecting the columns, you can right-click on any of the selected columns, and then select **Unpivot columns**.
 
 ![Unpivot columns right click](images/me-unpivot-columns-right-click.png)
 
@@ -54,7 +54,7 @@ The result of that operation will yield the result shown in the following image.
 
 ### Special considerations
 
-After creating our query from the steps above, imagine that your initial table gets updated to look like the following screenshot.
+After creating your query from the steps above, imagine that your initial table gets updated to look like the following screenshot.
 
 ![Unpivot columns updated source table](images/me-unpivot-updated-source-table.png)
 
@@ -68,16 +68,16 @@ The following image shows what your query will look like after the refresh with 
 
 ## Unpivot other columns
 
-It's also possible to only select the columns that you don't want to unpivot and only unpivot the rest of the columns in the table. This is where **Unpivot other columns** comes into play.
+It's also possible to only select the columns that you don't want to unpivot and only unpivot the rest of the columns in the table.  This operation is where **Unpivot other columns** comes into play.
 
 ![Unpivot other columns right click](images/me-unpivot-other-columns.png)
 
-The result of that operation will yield exactly the same result as the one that you got from **Unpivot Columns**.
+The result of that operation will yield exactly the same result as the one you got from **Unpivot Columns**.
 
 ![Unpivot other columns final table](images/me-unpivot-other-columns-final-table.png)
 
 >[!NOTE]
-> This transformation is crucial for queries with an unknown number of columns. The operation will unpivot all columns from your table except the ones that you've selected. This is a ideal solution if the data source of your scenario had new date columns in a refresh, as those will get picked up and unpivoted. 
+> This transformation is crucial for queries with an unknown number of columns. The operation will unpivot all columns from your table except the ones that you've selected. This is an ideal solution if the data source of your scenario had new date columns in a refresh, as those will get picked up and unpivoted. 
 
 ### Special considerations
 
@@ -87,7 +87,7 @@ This means that with a new table like the one in the following image.
 
 ![Unpivot updated source table](images/me-unpivot-updated-source-table.png)
 
-You can select the **Country** column and do an Unpivot other column**, which will yield the following result.
+You can select the **Country** column and do an **Unpivot other column**, which will yield the following result.
 
 ![Unpivot other columns updated final table](images/me-unpivot-other-columns-updated-final-table.png)
 
@@ -95,7 +95,7 @@ You can select the **Country** column and do an Unpivot other column**, which wi
 
 The purpose of this last option is to only unpivot specific columns from your table. This is important for scenarios where you're dealing with an unknown number of columns from your data source and you only want to unpivot the selected columns.
 
-To perform this operation, select the columns to unpivot, which are all the columns except the **Country** column. Then select the option to **Unpivot Only Selected Columns** by right-clicking on any of the selected columns.
+To perform this operation, select the columns to unpivot, which in this example is all the columns except the **Country** column. Then select the option to **Unpivot Only Selected Columns** by right-clicking on any of the selected columns.
 
 ![Unpivot only selected columns right click](images/me-unpivot-only-selected-columns-right-click.png)
 

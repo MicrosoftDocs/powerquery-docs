@@ -24,7 +24,7 @@ Dataflows are a self-service, cloud-based, data preparation technology. Dataflow
 
  
 
-Dataflows are featured in multiple Microsoft products and don't require a dataflow-specific license to be created or run. Dataflows are available in Power Apps, Power BI, and Dynamics 365 customer insights portals. The ability to create and run dataflows is bundled with those products licenses. Dataflow features are mostly common across all products they are featured in, but some product-specific features may exist in dataflows created in one product versus another. 
+Dataflows are featured in multiple Microsoft products and don't require a dataflow-specific license to be created or run. Dataflows are available in Power Apps, Power BI, and Dynamics 365 customer insights portals. The ability to create and run dataflows is bundled with those products licenses. Dataflow features are mostly common across all products they're featured in, but some product-specific features may exist in dataflows created in one product versus another. 
 
  
 
@@ -38,7 +38,7 @@ Dataflows are featured in multiple Microsoft products and don't require a datafl
 
  
 
-The diagram above shows an overall view of how a dataflow is defined. A dataflow gets data from different data sources (there are more than 80 data sources supported already). Then, based on the transformations configured using the Power Query authoring experience, transforms the data using the dataflow engine. Finally, the data is loaded to the output destination, which can be a Power Platform Environment, a Power BI workspace, or the Organization’s Azure Data Lake Storage Gen2 account.  
+The diagram above shows an overall view of how a dataflow is defined. A dataflow gets data from different data sources (there are more than 80 data sources supported already). Then, based on the transformations configured using the Power Query authoring experience, transforms the data using the dataflow engine. Finally, the data is loaded to the output destination, which can be a Power Platform environment, a Power BI workspace, or the organization’s Azure Data Lake Storage Gen2 account.  
 
  
 
@@ -82,7 +82,7 @@ Because a dataflow stores the resulting entities in cloud-based storage, other s
 
  
 
-For example, Power BI, Power Apps, Power Automate, Power Virtual Agent, and Dynamics 365 application can get the data produced by the dataflow by connecting to Common Data Service, Power Platform Dataflow connector, or directly through the lake, depending on the destination configured at dataflow creation time. 
+For example, Power BI, Power Apps, Power Automate, Power Virtual Agent, and Dynamics 365 applications can get the data produced by the dataflow by connecting to Common Data Service, Power Platform Dataflow connector, or directly through the lake, depending on the destination configured at dataflow creation time. 
 
  
 
@@ -108,7 +108,7 @@ The scenarios you have read above are good examples of how a dataflow can be ben
 
 - There are multiple options to start working with dataflows, using licenses for Power Apps, Power BI, and Dynamics 365 Customer Insights. 
 
-- Although dataflows are capable of advanced transformations, they are designed for self-service scenarios and require no IT or developer background. 
+- Although dataflows are capable of advanced transformations, they're designed for self-service scenarios and require no IT or developer background. 
 
  
 

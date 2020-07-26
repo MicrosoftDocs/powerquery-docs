@@ -18,7 +18,7 @@ This article discusses a collection of best practices for resuing dataflows effe
 
 If a dataflow performs all actions, then it is hard to reuse its entities in other dataflows or for other purposes. The best dataflows to reuse are those dataflows doing only a few actions. Creating dataflows that specialize in one specific task is one of the best ways of reusing them. If you have a set of dataflows as staging dataflows, their only action is to extract data "as is" from the source system. These dataflows can be reused in multiple other dataflows.
 
-If you have data transformation dataflows, you can split them into dataflows that preform common transformations. Each dataflow can perform a few actions. This ensures that the output of that dataflow is reusable by other dataflows.
+If you have data transformation dataflows, you can split them into dataflows that perform common transformations. Each dataflow can perform a few actions. This ensures that the output of that dataflow is reusable by other dataflows.
 
 ![multi-layered dataflow architecture](media/MultiLayeredDF.png)
 

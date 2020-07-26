@@ -36,7 +36,7 @@ This column holds two values:
 * Account number
 * Account name 
 
-We want to split this column into two columns. The values are delimited by a space&mdash;the first space from left to right. To do this split, select the column, and then select the option to split the column by a delimiter. In **Split Column by Delimiter**, apply the following configuration:
+In this example, you want to split this column into two columns. The values are delimited by a space&mdash;the first space from left to right. To do this split, select the column, and then select the option to split the column by a delimiter. In **Split Column by Delimiter**, apply the following configuration:
 
 * **Select or enter delimiter**: Space
 * **Split at**: Left-most delimiter

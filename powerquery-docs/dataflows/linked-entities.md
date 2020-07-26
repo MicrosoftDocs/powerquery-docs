@@ -57,7 +57,7 @@ You can also select **Add linked entities** from the **Add entities** menu item 
 
 To link entities, you must sign in with your Power BI credentials.
 
-A **Navigator** window opens and lets you choose a set of entities to which you can connect. The entities displayed are entities for which you have permissions, across all workspaces and environments in your organization. 
+A **Navigator** window opens and lets you choose a set of entities you can connect to. The entities displayed are entities for which you have permissions, across all workspaces and environments in your organization. 
 
 Once your linked entities are selected, they appear in the list of entities for your dataflow in the authoring tool, with a special icon identifying them as linked entities.
 
@@ -69,7 +69,7 @@ The refresh logic of linked entities differs slightly based on whether you're us
 
 ### Refresh logic in Power BI
 
-The default refresh logic of linked entities changes, based on whether the source dataflow resides in the same Power BI workspace as the destination dataflow. The following sections describe the behavior of each.
+The default refresh logic of linked entities changes, based on whether the source dataflow is in the same Power BI workspace as the destination dataflow. The following sections describe the behavior of each.
 
 #### Links between workspaces
 
@@ -94,8 +94,8 @@ When creating a Power BI report that includes data based on a dataflow, users ca
 There are a few limitations to keep in mind when working with linked entities:
 
 * There's a maximum of five referencing hops.
-* Cyclic dependencies of linked entities are not allowed.
-* The dataflow must reside in a [new Power BI workspace](https://docs.microsoft.com/power-bi/service-create-the-new-workspaces), or a Power Apps environment.
+* Cyclic dependencies of linked entities aren't allowed.
+* The dataflow must be in a [new Power BI workspace](https://docs.microsoft.com/power-bi/service-create-the-new-workspaces) or a Power Apps environment.
 * A linked entity can't be joined with a regular entity that gets its data from an on-premises data source.
 
 
