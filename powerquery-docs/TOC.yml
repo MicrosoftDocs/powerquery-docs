@@ -2,11 +2,11 @@
   href: index.yml
   expanded: true
   items: 
-    - name: "Second Batch"
-      - name: "Right outer join"
-        href: merge-queries-right-outer.md
-      - name: "Left anti join"
-        href: merge-queries-left-anti.md 
+  - name: "Second Batch"
+    - name: "Right outer join"
+      href: merge-queries-right-outer.md
+    - name: "Left anti join"
+      href: merge-queries-left-anti.md 
   - name: "What is Power Query?"
       href: power-query-what-is-power-query.md
     - name: Get data
