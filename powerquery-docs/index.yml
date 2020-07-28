@@ -25,7 +25,7 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: What is Power Query
+          - text: What is Power Query?
             url: power-query-what-is-power-query.md
           - text: What are dataflows?
             url: dataflows/overview-dataflows-across-power-platform-dynamics-365.md
