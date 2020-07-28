@@ -14,7 +14,7 @@ In this article you'll learn how to use Power BI Desktop to analyze and visualiz
 
 ## Prerequisites
 
-Before you begin this tutorial, you must have the following:
+Before you begin this tutorial, you must have the following prerequisites:
 
 > [!div class="checklist"]
 > * An Azure subscription. See [Get Azure free trial](https://azure.microsoft.com/pricing/free-trial/).
@@ -43,11 +43,11 @@ Before you begin this tutorial, you must have the following:
 
     ![URL](media/DataLakeStorage/adls-url.png)
 
-5. In the next dialog box, select the authentication method. 
+5. If this is the first time you're using this URL address, you'll be asked to select the authentication method. 
 
    If you select the Organizational account method, select **Sign in** to sign into your storage account. You'll be redirected to your organization's sign in page. Follow the prompts to sign into the account. After you've successfully signed in, select **Connect**.
    
-   If you select the Account key method, enter your account key, and then select **Connect**.
+   If you select the Account key method, enter your account key and then select **Connect**.
 
     ![Sign in page](media/DataLakeStorage/sign-in.png)
 
