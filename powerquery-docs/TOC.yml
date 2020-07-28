@@ -170,14 +170,18 @@
       items:
       - name: "Power Query connectors"
         href: Connectors/index.md
-      - name: "Azure SQL database"
-        href: Connectors/AzureSQLDatabase.md
+      - name: "Connecting to Azure DevOps using OData"
+        href: https://docs.microsoft.com/azure/devops/report/powerbi/odataquery-connect?view=azure-devops
       - name: "Azure SQL Data Warehouse"
         href: Connectors/AzureSQLDataWarehouse.md
-      - name: "MySQL database"
-        href: Connectors/MySQLDatabase.md
+      - name: "Azure SQL database"
+        href: Connectors/AzureSQLDatabase.md
+      - name: "Data Lake Storage"
+        href: Connectors/DataLakeStorage.md
       - name: "Excel"
         href: Connectors/Excel.md
+      - name: "Facebook"
+        href: Connectors/Facebook.md
       - name: "FHIR"
         items:
         - name: Overview
@@ -190,40 +194,36 @@
           href: Connectors/FHIR/FHIR-QueryFoldingPatterns.md
         - name: Data relationships
           href: Connectors/FHIR/FHIR-Relationships.md
-      - name: "XML"
-        href: Connectors/XML.md
-      - name: "Web"
-        href: Connectors/Web.md
-      - name: "PostgreSQL"
-        href: Connectors/PostgreSQL.md
-      - name: "SQL Server database"
-        href: Connectors/SQLServer.md
-      - name: "Text/CSV"
-        href: Connectors/TextCSV.md
-      - name: "ODBC"
-        href: Connectors/Odbc.md
-      - name: "Connecting to VSTS via OData"
-        href: https://docs.microsoft.com/en-us/azure/devops/report/powerbi/odataquery-connect?view=azure-devops
-      - name: "Data Lake Storage"
-        href: Connectors/DataLakeStorage.md
-      - name: "Facebook"
-        href: Connectors/Facebook.md
-      - name: "QuickBooks Online"
-        href: Connectors/QuickBooksOnline.md
-      - name: "Salesforce Reports"
-        href: Connectors/SalesforceReports.md
-      - name: "Salesforce Objects"
-        href: Connectors/SalesforceObjects.md
       - name: "Folder"
         href: Connectors/Folder.md
+      - name: "JSON"
+        href: Connectors/json.md
+      - name: "MySQL database"
+        href: Connectors/MySQLDatabase.md
+      - name: "OData Feed"
+        href: Connectors/ODataFeed.md
+      - name: "ODBC"
+        href: Connectors/Odbc.md
+      - name: "PostgreSQL"
+        href: Connectors/PostgreSQL.md
+      - name: "QuickBooks Online"
+        href: Connectors/QuickBooksOnline.md
+      - name: "Salesforce Objects"
+        href: Connectors/SalesforceObjects.md
+      - name: "Salesforce Reports"
+        href: Connectors/SalesforceReports.md
       - name: "SharePoint List"
         href: Connectors/SharePointList.md
       - name: "SharePoint Online List"
         href: Connectors/SharePointOnlineList.md
-      - name: "JSON"
-        href: Connectors/json.md
-      - name: "OData Feed"
-        href: Connectors/ODataFeed.md
+      - name: "SQL Server database"
+        href: Connectors/SQLServer.md
+      - name: "Text/CSV"
+        href: Connectors/TextCSV.md
+      - name: "XML"
+        href: Connectors/XML.md
+      - name: "Web"
+        href: Connectors/Web.md
     - name: Support and troubleshooting
       items:
       - name: "Power Query online limits"
