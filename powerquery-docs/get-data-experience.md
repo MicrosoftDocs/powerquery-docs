@@ -1,6 +1,6 @@
 ---
 title: "Getting data"
-description: "Complete overview of the Power Query Get Data experience and all of its components such as connector parameters, authentication, navigation table, and output."
+description: "Complete overview of the Power Query Get Data experience and all of its components such as connector parameters, authentication, navigation table, and Query destination."
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: v-douklo
@@ -25,7 +25,7 @@ The set of steps or stages is:
 
 3.  Data preview
 
-4.  Output query
+4.  Query destination
 
 ![Getting data flow diagram](images/getting-data-flow-diagram.png)
 
@@ -86,6 +86,6 @@ The **Table preview** dialog is a simple window that consists of only one sectio
 
 ![Table preview dialog](images/combinefiles1.png)
 
-## 4. Output query
+## 4. Query destination
 
 This is the phase where you define where to load the query. The options vary from integration to integration. But one option that is always available is the option to load data to the Power Query Editor to further transform and enrich the query.
