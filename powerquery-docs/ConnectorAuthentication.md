@@ -13,7 +13,7 @@ LocalizationGroup: reference
 
 # Authentication with a data source
 
-When you attempt to connect to data using a new connector for the first time, you may be asked to select the authentication method to use for the site containing the data. Once you've selected the authentication method, you won't be asked to select an authentication method for the connector using that site again. However, if you need to change the authentication method later, you can do so.
+When you attempt to connect to data source using a new connector for the first time, you may be asked to select the authentication method to use when accessing the data. Once you've selected the authentication method, you won't be asked to select an authentication method for the connector  using the specified connection parameters. However, if you need to change the authentication method later, you can do so.
 
 ## Select an authentication method
 
@@ -35,13 +35,13 @@ In connectors that require you to enter a URL, you'll be asked to select the lev
 
 The level you select for the authentication method you chose for this connector determines what part of a URL will have the authentication method applied to it. If you select the top-level web address, the authentication method you select for this connector will be used for that URL address or any sub-address within that address. 
 
-However, you might not want to set the top URL address to a specific authentication method because different sub-addresses could require different authentication methods. For example, if you were accessing two separate folders of a single SharePoint site and wanted to use different Microsoft Accounts to access each one.
+However, you might not want to set the top URL address to a specific authentication method because different sub-addresses could require different authentication methods. One example might be if you were accessing two separate folders of a single SharePoint site and wanted to use different Microsoft Accounts to access each one.
 
 Once you've set the authentication method for a connector's specific web site address, you won't need to select the authentication method for that connector using that URL address or any sub-address again. For example, let's say you select the https://contoso.com/ address as the level you want the Web connector URL settings to apply to. Whenever you use a Web connector to access any web page that begins with this address, you won't be required to select the authentication method again.
 
 ## Change the authentication method
 
-In some cases, you may need to change the authentication method you use in a connector to access a specific site. If this is necessary, perform the following steps:
+In some cases, you may need to change the authentication method you use in a connector to access a specific data source. If this is necessary, perform the following steps:
 
 1. To edit the authentication method in Power BI Desktop and Excel:
 
@@ -63,7 +63,7 @@ In some cases, you may need to change the authentication method you use in a con
 
 You can also delete the credentials for a particular web site in step 3 by selecting **Clear Permissions** for a selected web site, or by selecting **Clear All Permissions** for all of the listed web sites.
 
-To edit the authentication method in online services, such as for dataflows in the Power Bi service and Power Platform:
+To edit the authentication method in online services, such as for dataflows in the Power BI service and Power Platform:
 
 1. Select the connector, then select **Edit connection**.
 
