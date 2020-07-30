@@ -49,7 +49,7 @@ The goal is to parse the above mentioned columns and expand the contents of thos
 
 ![Sample final output table](images/me-parse-json-xml-sample-output-final-table.png)
 
-## Parse text as JSON
+## As JSON
 
 Select the **SalesPerson** column and click the **JSON** button from the **Parse** dropdown menu inside the *Transform tab*. This will transform the **SalesPerson** column from having text strings to having *Record* values as shown in the next image. You can click in the whitespace inside the cell of the *Record* value to get a detail preview of the contents of the *Record* at the bottom of the screen.
 
@@ -63,7 +63,7 @@ The result of that operation will give you the following table.
 
 ![Expanded JSON fields](images/me-parse-json-xml-parsed-json-expanded-fields.png)
 
-## Parse text as XML
+## As XML
 
 Select the **Country** column and click the **XML** button from the **Parse** dropdown menu inside the *Transform tab*. This will transform the **Country** column from having text strings to having *Table* values as shown in the next image. You can click in the whitespace inside the cell of the *Table* value to get a detail preview of the contents of the *Table* at the bottom of the screen.
 
