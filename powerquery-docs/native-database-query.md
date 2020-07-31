@@ -16,26 +16,96 @@ LocalizationGroup: reference
 Power Query gives you the flexibility to import data from wide variety of databases that it supports. It can run native database queries, which can save you the time it takes to build queries using the Power Query interface. This feature is especially useful for using complex queries that already exist&mdash;and that you might not want to or know how to rebuild using the Power Query interface.
 
 >[!Note]
-> One intent of native database queries is to be non-side effecting. However, Power Query does not guarantee that the query will not affect the database. If you run a native database query written by another user, you will be prompted to ensure that you're aware of the queries that will be evaluated with your credentials.
+> One intent of native database queries is to be non-side effecting. However, Power Query does not guarantee that the query will not affect the database. If you run a native database query written by another user, you will be prompted to ensure that you're aware of the queries that will be evaluated with your credentials. For more information, see [Native database query security](#native-database-query-security).
 
-Power Query enables you to specify your native database query in the **SQL statement** box when connecting to a database. In the example below, you'll import data from a SQL Server database using a native database query. The procedure is similar all other databases that Power Query supports.
+Power Query enables you to specify your native database query in a text box under **Advanced options** when connecting to a database. In the example below, you'll import data from a SQL Server database using a native database query entered in the **SQL statement** text box. The procedure is similar in all other databases with native database query that Power Query supports.
 
 1. Connect to a SQL Server database using Power Query. Select the **SQL Server database** option in the connector selection.
 
 2. In the **SQL Server database** popup window:
 
-   1. Specify the **Server** and **Database** from where you want to import data using native database query.
+   1. Specify the **Server** and **Database** where you want to import data from using native database query.
 
    2. Under **Advanced options**, select the **SQL statement** field and paste or enter your native database query, then select **OK**.
 
-      ![Run native database queries](media/database-select-dialog.png)
+      ![Run native database queries](media/native-database-query/database-select-dialog.png)
 
 3. If this is the first time you're connecting to this server, you'll see a prompt to select the authentication mode to connect to the database. Select an appropriate authentication mode, and continue.
 
    >[!Note]
-   > If you don't have access to the data source (both Server and Database), you'll see a prompt to request access to the server/database (if access-request information is specified in Power BI for the data source). 
+   > If you don't have access to the data source (both Server and Database), you'll see a prompt to request access to the server and database (if access-request information is specified in Power BI for the data source). 
 
-4. If the connection is established, the result data is returned in the Query Editor.
+4. If the connection is established, the result data is returned in the Power Query Editor.
 
    Shape the data as you prefer, then select **Apply & Close** to save the changes and import the data.
 
+## Connectors that support native database queries
+
+The following Power Query connectors support native database queries.
+
+| Connector | Type of native database query
+| --- | --- |
+| Azure Analysis Services database | MDX or DAX query |
+| Azure Database for PostgreSQL | SQL statement |
+| Azure Cosmos DB | SQL statement |
+| Azure SQL Data Warehouse | SQL statement |
+| Azure SQL database | SQL statement |
+| DataWorld.Dataset | Query |
+| Essbase | MDX statement |
+| FHIR | Query |
+| IBM Db2 database | SQL statement |
+| IBM Informix database (Beta) | SQL statement |
+| MySQL database | SQL statement |
+| ODBC | SQL statement |
+| OLE DB | SQL statement |
+| Oracle database | SQL statement |
+| PostgreSQL | SQL statement |
+| SAP HANA database | SQL statement |
+| SQL Server Analysis Services database | MDX or DAX query |
+| SQL Server database | SQL statement |
+| TIBCO(R) Data Virtualization (Beta) | SQL statement |
+| Vena (Beta) | Model Query |
+| | |
+
+## Limitations and issues
+
+Before using native database query, you should be aware of the limitations and issues that you may meet.
+
+### Query folding
+
+Query folding while using a native database query is limited to the PostgreSQL connector only. No other connectors support query folding if you use a native database query. Also, for folding to work in the PostgreSQL connector, the native database query you enter has to work as a subquery.
+
+### Native database query security
+
+Sometimes, when you attempt to use a query created by another user, you may get a message that says:
+
+![Native database query message](media/native-database-query/native-permission.png)
+
+If you see this message, select **Edit Permission**. This selection will open the **Native Database Query** dialog box, where you'll be given an opportunity to either run the native database query, or cancel the query.
+
+![Native database query approval](media/native-database-query/approve-query.png)
+
+By default, if you run a native database query written by another user, each time you run the query you'll be prompted to ensure that you're aware that native queries are inherently unsafe and there's no guarantee that the query won't affect the database being queried.
+
+>[!Note]
+> Native database queries that you insert in your get data operation won't ask you whether you want to run the query or not. They'll just run.
+
+You can turn off the native database query security messages if the native database query is run in either Power BI Desktop or Excel. To turn off the security messages in Power BI Desktop:
+
+1. Under the **File** tab, select **Options and settings > Options**.
+
+2. Under **Global** settings, select **Security**.
+
+3. Uncheck **Require user approval for new native database queries**.
+
+4. Select **OK**.
+
+To turn of the security messages in Excel:
+
+1. Under the **Data** tab, select **Get Data > Query Options**.
+
+2. Under **Global** settings, select **Security**.
+
+3. Uncheck **Require user approval for new native database queries**.
+
+4. Select **OK**.

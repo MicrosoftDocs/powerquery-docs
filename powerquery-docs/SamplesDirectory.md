@@ -56,5 +56,5 @@ We maintain a list of samples on the DataConnectors repo on Github. Each of the 
 | Part 7 | This sample corresponds to [TripPin Tutorial Part 7 - Advanced Schema with M Types](samples/TripPin/7-AdvancedSchema/README.md). | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/7-AdvancedSchema) |
 | Part 8 | This sample corresponds to [TripPin Tutorial Part 8 - Adding Diagnostics](samples/TripPin/8-Diagnostics/README.md). | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/8-Diagnostics) |
 | Part 9 | This sample corresponds to [TripPin Tutorial Part 9 - Test Connection](samples/TripPin/9-TestConnection/README.md). | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/9-TestConnection) |
-| Part 10 | This sample corresponds to [TripPin Tutorial Part 10 - Query Folding Part 1](samples/TripPin/10-TableView1/README.md). | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/10-TableView1) |
+| Part 10 | This sample corresponds to [TripPin Tutorial Part 10 - Basic Query Folding](samples/TripPin/10-TableView1/README.md). | [Github Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/10-TableView1) |
 
