@@ -31,7 +31,7 @@ The append operation requires at least two tables. The **Append** window has two
 * **Three or more tables**&mdash;allow combining an arbitrary number of table queries together.
 
 >[!Note]
->The tables will be appended in the order in which they are selected, starting with the **Primary table** for the *two tables* mode and from the first table in the **Tables to append** list for the *three or more tables* mode.
+>The tables will be appended in the order in which they are selected, starting with the **Primary table** for the *two tables* mode and from the primary table in the **Tables to append** list for the *three or more tables* mode.
 
 ### Append two tables
 
