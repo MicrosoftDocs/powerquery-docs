@@ -48,7 +48,7 @@ You can also copy the full code of your query.
 2. In the ribbon, select the View tab and select the option for *Advanced Editor*
 3. In the *Advanced Editor* window, select all the code and copy it
 
-With the code of your query in your clipboard, you can share the means of your choice. The recipient of this code needs to create a *Blank query* and follow the same steps as mentioned above, but instead of copying the code the recipient will replace the code found in their *Blank query* with the code that you provided.
+With the code of your query in your clipboard, you can share this query through means of your choice. The recipient of this code needs to create a *Blank query* and follow the same steps as mentioned above, but instead of copying the code the recipient will replace the code found in their *Blank query* with the code that you provided.
 
 >[!NOTE]
 >To create a *Blank query* simply go to the **Get Data** window and select *Blank query* from the options.
