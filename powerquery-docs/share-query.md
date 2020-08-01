@@ -10,9 +10,9 @@ ms.author: v-miesco
 
 # Share a query
 
-This article covers the general mechanisms to share a query in Power Query.
+You can use Power Query to extract and transform data from external data sources. These extraction and transformations steps are represented as queries. Queries created with Power Query are expressed using the M language and executed through the M Engine.
 
-A query consists of ....
+You can easily share and reuse your queries across projects, and also across Power Query product integrations. This article covers the general mechanisms to share a query in Power Query.
 
 ## Copy / Paste
 
