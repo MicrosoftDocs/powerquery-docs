@@ -25,7 +25,7 @@ The sample source tables for this example are:
 
 * **Sales**&mdash;with the fields **Date**, **CountryID**, and **Units**. The *CountryID* is a whole number value that represents the unique identifier from the **Countries** table.
 
-![Sales table](images/me-merge-operations-left-outer-join-sales-table.png)
+![Sales table](images/me-merge-operations-full-outer-join-sales-table.png)
 
 * **Countries**&mdash;this table is a reference table with the fields **id** and **Country**. The *id* represents the unique identifier of each record.
 
