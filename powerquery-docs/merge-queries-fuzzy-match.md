@@ -18,11 +18,13 @@ You can enable Fuzzy matching at the bottom of the **Merge** window by selecting
 
 ## Sample scenario
 
-A common use case for **Fuzzy matching** is when there are free-form text fields in something such as a survey. For this article, the sample table is taken directly from an online survey sent to a group with only one question: *What is your favorite fruit?*. The results of that survey are shown below.
+A common use case for **Fuzzy matching** is when there are free-form text fields in something such as a survey. For this article, the sample table is taken directly from an online survey sent to a group with only one question: *What is your favorite fruit?*
+
+The results of that survey are shown below.
 
 ![Sample survey with raw entries](images/me-merge-fuzzy-matching-sample-table.png)
 
-There's a total of 9 records or survey submissions. However, take a closer look at the values provided as some of them have typos or are written in plural and some others written in singular, as well as some others are written in lowercase and some others in uppercase.
+There's a total of nine records or survey submissions. Take a closer look at the values provided as some of them have typos or are written in plural and some others written in singular, as well as some others are written in lowercase and some others in uppercase.
 
 There's a **Fruits** reference table to help standardize these values.
 
@@ -37,22 +39,22 @@ The goal is to standardize all these values so you can perform more analysis.
 
 ## Fuzzy merge
 
-To perform the fuzzy merge you start by doing a Merge. In this case you will use a Left outer join where the left table is the one from the Survey and the right table is the Fruits reference table. At the bottom of the window you can see the option to *Use fuzzy matching to perform the merge* which you can enable.
+To perform the fuzzy merge, you start by doing a Merge. In this case, you will use a Left outer join where the left table is the one from the Survey and the right table is the Fruits reference table. At the bottom of the window, you can see the option to *Use fuzzy matching to perform the merge, which you can enable.
 
 ![Use fuzzy matching to perform the merge option](images/me-merge-fuzzy-matching-simple-merge-window.png)
 
-After you hit the OK button on the previous window, you can see a new column in your table as a result of this merge operation. You can expand it and you can notice that there's one row that doesn't have any values in it. This is exactly what the previous image stated where it said *The selection matches 8 of 9 rows from the first table*.
+After you hit the OK button on the previous window, you can see a new column in your table as a result of this merge operation. You can expand it and you can notice that there's one row that doesn't have any values in it. That is exactly what the previous image stated where it says *The selection matches 8 of 9 rows from the first table*.
 
 ![Fruits expanded](images/me-merge-fuzzy-matching-expand-no-transform-table.png)
 
 ## Fuzzy matching options
 
-You can modify the **Fuzzy matching options** to tweek how the approximate match should be performed. First double click the *Merge queries* step and insidee the **Merge** window expand the **Fuzzy matching options**.
+You can modify the **Fuzzy matching options** to tweak how the approximate match should be done. First double-click the *Merge queries* step and inside the **Merge** window expand the **Fuzzy matching options**.
 
 ![Fuzzy matching options](images/me-merge-fuzzy-matching-options.png)
 
 The available options are:
-* **Similarity threshold (optional)** - a value between 0.00 and 1.00 that provides the ability to match records above a given similarity score. A threshold of 1.00 is teh same as specifying an exact match criterial. For example, 'Grapes' matches with 'Graes' (missing 'p') only if the threshold is set ot less than 0.90. By default this value is set to 0.80.
+* **Similarity threshold (optional)** - a value between 0.00 and 1.00 that provides the ability to match records above a given similarity score. A threshold of 1.00 is the same as specifying an exact match criteria. For example, 'Grapes' matches with 'Graes' (missing 'p') only if the threshold is set ot less than 0.90. By default this value is set to 0.80.
 * **Ignore case** - allows matching records irrespective of the case of the text.
 * **Match by combining text parts** - allows combining text parts in order to find matches. For example, 'Micro soft' is matched with 'Microsoft' if this option is enabled.
 * **Number of matches (optional)** - specifies the maximum number of matching rows that can be returned.
@@ -75,6 +77,6 @@ You can go back to the **Merge** window and in the **Fuzzy matching options** ch
 
 ![Fuzzy merge with transformation table](images/me-merge-fuzzy-matching-custom-merge-window.png)
 
-After you hit the OK button, you'll reach the desired output with all values mapped correctly. Note how the example started with 9 distinct values, but after the Fuzzy merge there are only 4 distinct values.
+After you hit the OK button, you'll reach the desired output with all values mapped correctly. Note how the example started with nine distinct values, but after the Fuzzy merge there are only four distinct values.
 
 ![Sample output table](images/me-merge-fuzzy-matching-sample-output-table.png)
