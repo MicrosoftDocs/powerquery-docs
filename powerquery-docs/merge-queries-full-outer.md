@@ -1,6 +1,6 @@
 ---
 title: "Merge queries: Full outer join"
-description: An article on how to perform a merge operation in Power Query using the full outer join kind. 
+description: An article on how to do a merge operation in Power Query using the full outer join kind. 
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: 
@@ -14,7 +14,7 @@ A full outer join is one of the join kinds available inside the **Merge queries*
 
 A full outer join brings all the rows from both the left and right table.
 
-This article demonstrates, with a practical example, how to perform a merge operation using the full outer join as the join kind.
+This article demonstrates, with a practical example, how to do a merge operation using the full outer join as the join kind.
 
 >[!Note]
 >Samples used in this article are only to showcase the concepts. The concepts showcased here apply to all queries in Power Query.
@@ -37,7 +37,7 @@ The goal is to merge both tables, where the **Sales** table will be the left tab
 |-----------|------------------|
 |CountryID|id|
 
-The goal is to reach the following table where the name of the country appears as a new **Country** column in the **Sales** table. Due to how the Full outer join works, all rows from both the left and right table will be brought, regardless if they only appear in one of the tables.
+The goal is to reach the following table where the name of the country appears as a new **Country** column in the **Sales** table. Because of how the Full outer join works, all rows from both the left and right table will be brought, regardless if they only appear in one of the tables.
 
 ![Full outer join final table](images/me-merge-operations-full-outer-final-table.png)
 
@@ -57,7 +57,7 @@ To do a full outer join:
 >[!TIP]
 >Take a closer look at the message at the bottom of the Merge window that reads *"The selection matches 4 of 4 rows from the first table, and 3 of 4  rows from the second table"* as this is crucial to understand the result that you get from this operation. 
 
-In the **Countries** table you have the *Country* Spain with the id 4, but there are no records for *CountryID* 4 in the Sales table, hence why only 3 of 4 rows from the right table found a match. All rows from the right table that didn't have matching rows from the left tablee will be grouped and shown in a new row in the output table with no values for the fields from the left table. 
+In the **Countries** table, you have the *Country* Spain with the id 4, but there are no records for *CountryID* 4 in the Sales table, hence why only 3 of 4 rows from the right table found a match. All rows from the right table that didn't have matching rows from the left table will be grouped and shown in a new row in the output table with no values for the fields from the left table. 
 
 ![No matching rows on left table for full outer join](images/me-merge-operations-full-outer-no-matching-rows.png)
 
