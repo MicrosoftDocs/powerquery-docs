@@ -23,7 +23,7 @@ In the queries pane, right click the query that you want to copy. From the dropd
 >[!Note]
 > The copy feature is currently not available in Power Query Online instances.
 
-To paste the query from your clipboard simply go to the queries pane and rightclick on any empty space in it. From the menu, select the Paste option.
+To paste the query from your clipboard simply go to the queries pane and right-click on any empty space in it. From the menu, select the Paste option.
 
 ![Paste query on queries pane](images/me-share-query-paste.png)
 
