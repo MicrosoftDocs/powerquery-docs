@@ -77,35 +77,41 @@ Query folding while using a native database query is limited to the PostgreSQL c
 
 ### Native database query security
 
-Sometimes, when you attempt to use a query created by another user, you may get a message that says:
+Sometimes, when you attempt to use a query created by another user or through the Advanced Editor or formula bar&mdash;essentially any other path outside of the connector dialogs where the native query input box is shown&mdash;you may get a message that says:
 
 ![Native database query message](media/native-database-query/native-permission.png)
 
-If you see this message, select **Edit Permission**. This selection will open the **Native Database Query** dialog box, where you'll be given an opportunity to either run the native database query, or cancel the query.
+If you see this message, select **Edit Permission**. This selection will open the **Native Database Query** dialog box. You'll be given an opportunity to either run the native database query, or cancel the query.
 
 ![Native database query approval](media/native-database-query/approve-query.png)
 
-By default, if you run a native database query written by another user, each time you run the query you'll be prompted to ensure that you're aware that native queries are inherently unsafe and there's no guarantee that the query won't affect the database being queried.
+By default, if you run a native database query outside of the connector dialogs, you'll be prompted each time you run a different query text to ensure that the query text that will be executed is approved by you.
 
 >[!Note]
 > Native database queries that you insert in your get data operation won't ask you whether you want to run the query or not. They'll just run.
 
-You can turn off the native database query security messages if the native database query is run in either Power BI Desktop or Excel. To turn off the security messages in Power BI Desktop:
+You can turn off the native database query security messages if the native database query is run in either Power BI Desktop or Excel. To turn off the security messages:
 
-1. Under the **File** tab, select **Options and settings > Options**.
+1. If you're using Power BI Desktop, under the **File** tab, select **Options and settings > Options**. 
 
-2. Under **Global** settings, select **Security**.
-
-3. Uncheck **Require user approval for new native database queries**.
-
-4. Select **OK**.
-
-To turn of the security messages in Excel:
-
-1. Under the **Data** tab, select **Get Data > Query Options**.
+   If you're using Excel, under the **Data** tab, select **Get Data > Query Options**.
 
 2. Under **Global** settings, select **Security**.
 
-3. Uncheck **Require user approval for new native database queries**.
+3. Clear **Require user approval for new native database queries**.
 
 4. Select **OK**.
+
+You can also revoke the approval of any native database queries that you've previously approved for a given data source in either Power BI Desktop or Excel. To revoke the approval:
+
+1. If you're using Power BI Desktop, under the **File** tab, select **Options and settings > Data source settings**.
+
+   If you're using Excel, under the **Data** tab, select **Get Data > Data Source Settings**.
+
+2. In the **Data source settings** dialog box, select **Global permissions**. Then select the data source containing the native database queries whose approval you want to revoke.
+
+3. Select **Edit permissions**.
+
+3. In the **Edit permissions** dialog box, under **Native Database Queries**, select **Revoke Approvals**.
+
+   ![Revoke native database query approval](media/native-database-query/revoke-native-approval.png)
