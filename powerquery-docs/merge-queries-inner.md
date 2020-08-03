@@ -10,9 +10,9 @@ ms.author: v-miesco
 
 # Merge queries: Inner join
 
-A Inner join is one of the join kinds available inside the **Merge queries** window in Power Query. To read more about the merge operations in Power Query, see [Merge operations overview](merge-queries-overview.md).
+An Inner join is one of the join kinds available inside the **Merge queries** window in Power Query. To read more about the merge operations in Power Query, see [Merge operations overview](merge-queries-overview.md).
 
-A Inner join brings only matching rows from both the left and right table.
+An Inner join brings only matching rows from both the left and right table.
 
 This article demonstrates, with a practical example, how to perform a merge operation using the Inner join as the join kind.
 
@@ -43,7 +43,7 @@ The goal is to reach the following table where the name of the country appears a
 
 ## Inner join
 
-To do a Inner join:
+To do an Inner join:
 
 1. Select the **Sales** query and then select **Merge queries** to create a new step inside the Sales query that will merge the **Sales** query with the **Countries** query.
 2. Select the **Countries** as the **Right table for merge**.
@@ -57,8 +57,8 @@ To do a Inner join:
 >[!TIP]
 >Take a closer look at the message at the bottom of the Merge window that reads *"The selection matches 1 of 4 rows from the first table, and 1 of 2  rows from the second table"* as this is crucial to understand the result that you get from this operation. 
 
-In the **Sales** table you have the *CountryID* 1 and 2, but neither of these are found in the **Countries** table hence why the match only found 1 of 4 rows in the left (first) table.
-In the **Countries** table you have the *Country* Spain with the id 4, but there are no records for *CountryID* 4 in the Sales table, hence why only 1 of 2 rows from the right (second) table found a match.
+In the Sales table, you have the *CountryID* 1 and 2, but neither of these are found in the **Countries** table hence why the match only found 1 of 4 rows in the left (first) table.
+In the Countries table, you have the *Country* Spain with the ID 4, but there are no records for *CountryID* 4 in the Sales table, hence why only 1 of 2 rows from the right (second) table found a match.
 
 From the newly created **Countries** column after the merge operation, expand the **Country** field without using the original column name as prefix.
 
