@@ -14,7 +14,7 @@ A Left anti join is one of the join kinds available inside the **Merge queries**
 
 A Left anti  join brings only rows from the left table that don't have any matching rows from the right table.
 
-This article demonstrates, with a practical example, how to perform a merge operation using the Left anti join as the join kind.
+This article demonstrates, with a practical example, how to do a merge operation using the Left anti join as the join kind.
 
 >[!Note]
 >Samples used in this article are only to showcase the concepts. The concepts showcased here apply to all queries in Power Query.
@@ -37,7 +37,7 @@ The goal is to merge both tables, where the **Sales** table will be the left tab
 |-----------|------------------|
 |CountryID|id|
 
-The goal is to reach the following table where only the the rows from the left table that do not match any from the right table are kept.
+The goal is to reach the following table where only the rows from the left table that do not match any from the right table are kept.
 
 ![Left anti join final table](images/me-merge-operations-left-anti-final-table.png)
 
@@ -57,13 +57,13 @@ To do a Left anti join:
 >[!TIP]
 >Take a closer look at the message at the bottom of the Merge window that reads *"The selection excludes 1 of 4 rows from the first table"* as this is crucial to understand the result that you get from this operation. 
 
-In the **Sales** table you have the *CountryID* 1 and 2, but neither of these are found in the **Countries** table hence why the match only found 1 of 4 rows in the left (first) table.
-In the **Countries** table you have the *Country* Spain with the id 4, but there are no records for *CountryID* 4 in the Sales table, hence why only 1 of 2 rows from the right (second) table found a match.
+In the **Sales** table, you have the *CountryID* 1 and 2, but neither of them are found in the **Countries** table hence why the match only found 1 of 4 rows in the left (first) table.
+In the **Countries** table, you have the *Country* Spain with the id 4, but there are no records for *CountryID* 4 in the Sales table, hence why only 1 of 2 rows from the right (second) table found a match.
 
 From the newly created **Countries** column after the merge operation, expand the **Country** field without using the original column name as prefix.
 
 ![Expand table column for Country](images/me-merge-operations-left-anti-expand-field.png)
 
-After doing this operation, the desired result is reached. Note that the newly expanded Country field doesn't have any values and that's because the Left anti join does not bring any values from the right table - it only keeps rows from the left table.
+The newly expanded Country field doesn't have any values and that's because the Left anti join does not bring any values from the right table - it only keeps rows from the left table.
 
 ![Left anti join final table](images/me-merge-operations-left-anti-final-table.png)
