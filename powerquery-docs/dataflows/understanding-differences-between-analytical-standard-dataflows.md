@@ -136,7 +136,7 @@ The following table lists some differences between a standard entity and an anal
 
  
 
-|                | Standard             | Analytical                    | 
+| Operation               | Standard             | Analytical                    | 
 | --------------------------------- | --- | ------------------------------------------------------------ | 
 | How to create                     | Power Platform dataflows | Power BI dataflows<br />Power Platform dataflows by selecting the **Analytical Entity** checkbox when creating the dataflow | 
 | Storage options                   | Common Data Service      | Azure Data Lake Storage Gen2 internal for the Power BI dataflows<br />Azure Data Lake Storage Gen2 external attached to the Power BI or Power Platform dataflows | 

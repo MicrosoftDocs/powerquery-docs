@@ -4,7 +4,7 @@ description: Learn what Power Query is, and how it can help you get and transfor
 author: mllopis
 ms.service: powerquery
 ms.topic: overview
-ms.date: 07/20/2020
+ms.date: 07/27/2020
 ms.author: millopis
 LocalizationGroup: Get started
 ---

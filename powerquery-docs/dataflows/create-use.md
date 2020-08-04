@@ -1,10 +1,8 @@
 ---
-title: "Create and use dataflows in the Power Platform"
-description: Learn how to use dataflows in the Power Platform.
+title: "Create and use dataflows in Microsoft Power Platform"
+description: Learn how to use dataflows in Microsoft Power Platform.
 author: bensack
-manager: kfile
-ms.reviewer: ''
-
+ms.reviewer: v-douklo
 ms.service: dataflows
 ms.topic: conceptual
 ms.date: 08/15/2019
@@ -14,9 +12,9 @@ ms.custom:
 LocalizationGroup: Dataflows
 ---
 
-# Create and use dataflows in the Power Platform
+# Create and use dataflows in Microsoft Power Platform
 
-Using dataflows with Power Platform makes data preparation easier, and lets you reuse your data preparation work in subsequent reports, apps, and models. 
+Using dataflows with Microsoft Power Platform makes data preparation easier, and lets you reuse your data preparation work in subsequent reports, apps, and models. 
 
 In the world of ever-expanding data, data preparation can be difficult and expensive, consuming as much as 60%-80% of the time and cost for a typical analytics project. Such projects can require wrangling fragmented and incomplete data, complex system integration, data with structural inconsistency, and a high skillset barrier. 
 
