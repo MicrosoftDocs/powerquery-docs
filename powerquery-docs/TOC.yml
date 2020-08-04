@@ -24,6 +24,8 @@
           href: filter-row-position.md
         - name: "Filter by values"
           href: filter-values.md
+        - name: "Choose or Remove columns"
+          href: choose-remove-columns.md
         - name: "Grouping or summarizing rows"
           href: group-by.md
         - name: "Unpivot column"
@@ -76,6 +78,20 @@
             href: merge-queries-overview.md
           - name: "Left outer join"
             href: merge-queries-left-outer.md
+          - name: "Right outer join"
+            href: merge-queries-right-outer.md
+          - name: "Left anti join"
+            href: merge-queries-left-anti.md 
+          - name: "Right anti join"
+            href: merge-queries-right-anti.md 
+          - name: "Inner join"
+            href: merge-queries-inner.md 
+          - name: "Full outer join"
+            href: merge-queries-full-outer.md 
+          - name: "Fuzzy merge"
+            href: merge-queries-fuzzy-match.md
+          - name: "Cross join"
+            href: cross-join.md
       - name: Split columns
         items:
         - name: "By delimiter"
@@ -92,24 +108,6 @@
           href: splitcolumns-digit-to-nondigit.md
         - name: "By non-digit to digit"
           href: splitcolumns-nondigit-to-digit.md
-    - name: Mike second batch
-      items:
-      - name: "Right outer join"
-        href: merge-queries-right-outer.md
-      - name: "Left anti join"
-        href: merge-queries-left-anti.md 
-      - name: "Right anti join"
-        href: merge-queries-right-anti.md 
-      - name: "Inner join"
-        href: merge-queries-inner.md 
-      - name: "Full outer join"
-        href: merge-queries-full-outer.md 
-      - name: "Fuzzy merge"
-        href: merge-queries-fuzzy-match.md
-      - name: "Cross join"
-        href: cross-join.md
-      - name: "Choose or Remove columns"
-        href: choose-remove-columns.md
     - name: Dataflows
       items:
       - name: "Overview of dataflows"
