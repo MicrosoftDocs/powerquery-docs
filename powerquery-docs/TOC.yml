@@ -114,6 +114,10 @@
       items:
       - name: "Queries pane"
         href: queries-pane.md
+    - name: Sama third batch
+      items:
+      - name: "Applied steps"
+        href: applied-steps.md
     - name: Dataflows
       items:
       - name: "Overview of dataflows"
