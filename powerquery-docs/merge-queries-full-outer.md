@@ -16,6 +16,8 @@ A full outer join brings all the rows from both the left and right table.
 
 This article demonstrates, with a practical example, how to do a merge operation using the full outer join as the join kind.
 
+![Sample full outer join](images/full-outer-join-operation.png)
+
 >[!Note]
 >Samples used in this article are only to showcase the concepts. The concepts showcased here apply to all queries in Power Query.
 
