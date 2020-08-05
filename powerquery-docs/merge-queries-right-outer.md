@@ -16,6 +16,8 @@ A right outer join keeps all the rows from the right table, and brings any match
 
 This article demonstrates, with a practical example, how to perform a merge operation using the right outer join as the join kind.
 
+![Sample right outer join](images/right-outer-join-operation.png)
+
 >[!Note]
 >Samples used in this article are only to showcase the concepts. The concepts showcased here apply to all queries in Power Query.
 
