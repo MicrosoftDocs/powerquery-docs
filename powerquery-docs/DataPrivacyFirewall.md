@@ -43,7 +43,7 @@ Imagine if you were joining SQL data that included employee Social Security Numb
 
 This is the kind of scenario the Firewall is intended to prevent.
 
-# How does it work?
+## How does it work?
 
 The Firewall exists to prevent data from one source from being unintentionally sent to another source. Simple enough.
 
@@ -57,13 +57,13 @@ Simple…yet confusing. What’s a partition? What makes two data sources “com
 
 Let’s break this down and look at the above rule one piece at a time.
 
-## What’s a partition?
+### What’s a partition?
 
 At its most basic level, a partition is just a collection of one or more query steps. The most granular partition possible (at least in the current implementation) is a single step. The largest partitions can sometimes encompass multiple queries. (More on this later.)
 
 If you’re not familiar with steps, you can view them on the right of the Power Query Editor window after selecting a query, in the **Applied Steps** pane. Steps keep track of everything you’ve done to transform your data into its final shape.
 
-## Partitions that reference other partitions
+### Partitions that reference other partitions
 
 When a query is evaluated with the Firewall on, the Firewall divides the query and all its dependencies into partitions (that is, groups of steps). Any time one partition references something in another partition, the Firewall replaces the reference with a call to a special function called `Value.Firewall`. In other words, the Firewall doesn’t allow partitions to access each other randomly. All references are modified to go through the Firewall. Think of the Firewall as a gatekeeper. A partition that references another partition must get the Firewall’s permission to do so, and the Firewall controls whether or not the referenced data will be allowed into the partition.
 
@@ -105,7 +105,7 @@ When EmployeesReference is evaluated, the call to `Value.Firewall("Section1/Empl
 
 This is how the Firewall maintains control over the data flowing between partitions.
 
-## Partitions that directly access data sources
+### Partitions that directly access data sources
 
 Let’s say you define a query Query1 with one step (note that this single-step query will correspond to one Firewall partition), and that this single step accesses two data sources: a SQL database table and a CSV file. How does the Firewall deal with this, since there’s no partition reference, and thus no call to `Value.Firewall` for it to intercept? Let’s review to the rule stated earlier:
 
@@ -121,7 +121,7 @@ Hopefully you now better understand one of the error messages listed at the begi
 
 Note that this _compatibility_ requirement only applies within a given partition. If a partition is referencing other partitions, the data sources from the referenced partitions don't have to be compatible with one another. This is because the Firewall can buffer the data, which will prevent any further folding against the original data source. The data will be loaded into memory and treated as if it came from nowhere.
 
-## Why not do both?
+### Why not do both?
 
 Let’s say you define a query with one step (which will again correspond to one partition) that accesses two other queries (that is, two other partitions). What if you wanted, in the same step, to also directly access a SQL database? Why can’t a partition reference other partitions and directly access compatible data sources?
 
@@ -133,7 +133,7 @@ So what happens if a partition tries to reference other partitions and also dire
 
 Now you hopefully better understand the other error message listed at the beginning of this article.
 
-## Partitions in-depth
+### Partitions in-depth
 
 As you can probably guess from the above information, how queries are partitioned ends up being incredibly important. If you have some steps that are referencing other queries, and other steps that access data sources, you now hopefully recognize that drawing the partition boundaries in certain places will cause Firewall errors, while drawing them in other places will allow your query to run just fine.
 
@@ -174,13 +174,13 @@ Here’s a high-level summary of the partitioning logic.
             * Isn’t the result (that is, final step) of a query
             * Isn’t cyclic
 
-# What does all this mean?
+## What does all this mean?
 
 Let’s walk through an example to illustrate how the complex logic laid out above works.
 
 Here’s a sample scenario. It’s a fairly straightforward merge of a text file (Contacts) with a SQL database (Employees), where the SQL server is a parameter (DbServer).
 
-## The three queries
+### The three queries
 
 Here’s the M code for the three queries used in this example.
 
@@ -228,7 +228,7 @@ Here’s a higher-level view, showing the dependencies.
 ![Query Dependencies Dialog](images/FirewallQueryDependencies.png)
 
 
-## Let’s Partition
+### Let’s Partition
 
 Let’s zoom in a bit and include steps in the picture, and start walking through the partitioning logic. Here’s a diagram of the three queries, showing the initial firewall partitions in green. Notice that each step starts in its own partition.
 
@@ -247,7 +247,7 @@ Now we perform the static grouping. This maintains separation between partitions
 
 Now we enter the dynamic phase. In this phase, the above static partitions are evaluated. Partitions that don’t access any data sources are trimmed. Partitions are then grouped to create source partitions that are as large as possible. However, in this sample scenario, all the remaining partitions access data sources, and there isn’t any further grouping that can be done. The partitions in our sample thus won’t change during this phase.
 
-## Let’s Pretend
+### Let’s Pretend
 
 For the sake of illustration, though, let’s look at what would happen if the Contacts query, instead of coming from a text file, were hard-coded in M (perhaps via the **Enter Data** dialog).
 
@@ -264,6 +264,6 @@ The resulting partition would look like this.
 ![Final firewall partitions](images/FirewallStepsPane5.png)
 
 
-# That’s a wrap
+## That’s a wrap
 
 While there's much more that could be said on this topic, this introductory article is already long enough. Hopefully it’s given you a better understanding of the Firewall, and will help you to understand and fix Firewall errors when you encounter them in the future.
