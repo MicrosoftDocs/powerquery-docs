@@ -16,6 +16,8 @@ A Right anti join brings only rows from the right table that don't have any matc
 
 This article demonstrates, with a practical example, how to perform a merge operation using the Right anti join as the join kind.
 
+![Sample right anti join](images/right-anti-join-operation.png)
+
 >[!Note]
 >Samples used in this article are only to showcase the concepts. The concepts showcased here apply to all queries in Power Query.
 
