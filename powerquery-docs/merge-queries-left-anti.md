@@ -16,6 +16,8 @@ A Left anti  join brings only rows from the left table that don't have any match
 
 This article demonstrates, with a practical example, how to do a merge operation using the Left anti join as the join kind.
 
+![Sample left anti join](images/left-anti-join-operation.png)
+
 >[!Note]
 >Samples used in this article are only to showcase the concepts. The concepts showcased here apply to all queries in Power Query.
 
