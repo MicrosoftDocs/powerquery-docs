@@ -110,6 +110,10 @@
         href: cross-join.md
       - name: "Choose or Remove columns"
         href: choose-remove-columns.md
+    - name: Jessica third batch
+      items:
+      - name: "Queries pane"
+        href: queries-pane.md
     - name: Dataflows
       items:
       - name: "Overview of dataflows"

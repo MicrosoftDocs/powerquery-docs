@@ -42,7 +42,7 @@ This option functions the same as the **Get Data** feature located on the Ribbon
 
 >[!NOTE]
 >If you would like to learn more about **Get Data** and importing data into Power Query, 
-[look here.](https://docs.microsoft.com/en-us/power-query/get-data-experience)
+[look here.](https://docs.microsoft.com/power-query/get-data-experience)
 
 ### Merge queries
 You can open the *Merge queries* input screen when you select the **Merge queries** option from the context menu. 
@@ -50,7 +50,7 @@ You can open the *Merge queries* input screen when you select the **Merge querie
 This option functions the same as the **Merge queries** feature located on the Ribbon and in other areas of the editor. 
 
 >[!NOTE]
->If you would like to learn more about merging queries, [look here.](https://docs.microsoft.com/en-us/power-query/merge-queries-overview)
+>If you would like to learn more about merging queries, [look here.](https://docs.microsoft.com/power-query/merge-queries-overview)
 
 ### New parameter
 You can open the *New parameter* input screen when you select the **New parameter** option from the context menu. 
