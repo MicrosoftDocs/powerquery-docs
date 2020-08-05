@@ -80,14 +80,14 @@
             href: merge-queries-left-outer.md
           - name: "Right outer join"
             href: merge-queries-right-outer.md
+          - name: "Full outer join"
+            href: merge-queries-full-outer.md   
+          - name: "Inner join"
+            href: merge-queries-inner.md             
           - name: "Left anti join"
             href: merge-queries-left-anti.md 
           - name: "Right anti join"
             href: merge-queries-right-anti.md 
-          - name: "Inner join"
-            href: merge-queries-inner.md 
-          - name: "Full outer join"
-            href: merge-queries-full-outer.md 
           - name: "Fuzzy merge"
             href: merge-queries-fuzzy-match.md
           - name: "Cross join"
