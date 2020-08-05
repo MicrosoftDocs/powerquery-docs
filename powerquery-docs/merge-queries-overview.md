@@ -69,12 +69,12 @@ A join kind specifies how a merge operation should be performed. The following t
 
 |Join Kind| Icon| Description|
 |---------------|-----|-----------|
-|Left outer| ![Left outer](images/JoinKindLeftOuterIcon.jpg)| All rows from left table, matching from right table|
-|Right outer| ![Right outer](images/JoinKindRightOuterIcon.jpg)| All rows from right table, matching from left table|
-|Full outer| ![Full outer](images/JoinKindFullOuterIcon.jpg)| All rows from both tables|
-|Inner| ![Inner](images/JoinKindInnerIcon.jpg)| Only matching rows from both tables|
-|Left anti| ![Left anti](images/JoinKindLeftAntiIcon.jpg)| Only rows from left table|
-|Right anti| ![Right anti](images/JoinKindRightAntiIcon.jpg)| Only rows from right table|
+|[Left outer](merge-queries-left-outer.md)| ![Left outer](images/JoinKindLeftOuterIcon.jpg)| All rows from left table, matching from right table|
+|[Right outer](merge-queries-right-outer.md)| ![Right outer](images/JoinKindRightOuterIcon.jpg)| All rows from right table, matching from left table|
+|[Full outer](merge-queries-full-outer.md)| ![Full outer](images/JoinKindFullOuterIcon.jpg)| All rows from both tables|
+|[Inner](merge-queries-inner.md)| ![Inner](images/JoinKindInnerIcon.jpg)| Only matching rows from both tables|
+|[Left anti](merge-queries-left-anti.md)| ![Left anti](images/JoinKindLeftAntiIcon.jpg)| Only rows from left table|
+|[Right anti](merge-queries-right-anti.md)| ![Right anti](images/JoinKindRightAntiIcon.jpg)| Only rows from right table|
 
 ## Fuzzy matching
 
