@@ -16,6 +16,8 @@ An Inner join brings only matching rows from both the left and right table.
 
 This article demonstrates, with a practical example, how to perform a merge operation using the Inner join as the join kind.
 
+![Sample inner join](images/inner-join-operation.png)
+
 >[!Note]
 >Samples used in this article are only to showcase the concepts. The concepts showcased here apply to all queries in Power Query.
 
