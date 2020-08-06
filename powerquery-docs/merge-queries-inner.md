@@ -39,7 +39,7 @@ The goal is to merge both tables, where the **Sales** table will be the left tab
 |-----------|------------------|
 |CountryID|id|
 
-The goal is to reach the following table where the name of the country appears as a new **Country** column in the **Sales** table. Because of how the inner join works, only matching rows from both the left and right table will be brought.
+The goal is to reach the following table where the name of the country appears as a new **Country** column in the **Sales** table. Because of how the inner join works, only matching rows from both the left and right table will be brought in.
 
 ![Inner join final table](images/me-merge-operations-inner-final-table.png)
 
