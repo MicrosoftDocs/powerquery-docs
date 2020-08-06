@@ -69,7 +69,7 @@ To connect to Common Data Service from Power BI Desktop:
 
    ![Load or transform from navigator](media/common-data-service/navigator.png)
 
-## Connect to Common Data Services from Power Query Online
+## Connect to Common Data Service from Power Query Online
 
 To connect to Common Data Service from Power Query Online:
 
@@ -91,7 +91,7 @@ To connect to Common Data Service from Power Query Online:
 
 ## Alternative Common Data Service connections
 
-There are several alternative ways of extracting and migrating data from Common Data Services:
+There are several alternative ways of extracting and migrating data from Common Data Service:
 
 * Use the OData connector to move data in and out of Common Data Service. For more information on how to migrate data between Common Data Service environments using the dataflows OData connector, see [Migrate data between Common Data Service environments using the dataflows OData connector](https://docs.microsoft.com/powerapps/developer/common-data-service/cds-odata-dataflows-migration).
 
