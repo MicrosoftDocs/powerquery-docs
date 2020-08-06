@@ -41,7 +41,7 @@ In the new browser tab that opens, copy the root of the URL. This root URL is th
 ## Connect to Common Data Service from Power BI Desktop
 
 >[!Note]
-> The Power Query Common Data Service connector is mostly suited towards analytics workloads, not bulk data extraction. For more information, see [Alternative Common Data Service connections](#alternative-common-data-service-connections)
+> The Power Query Common Data Service connector is mostly suited towards analytics workloads, not bulk data extraction. For more information, see [Alternative Common Data Service connections](#alternative-common-data-service-connections).
 
 To connect to Common Data Service from Power BI Desktop:
 
