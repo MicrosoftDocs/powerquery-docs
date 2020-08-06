@@ -15,7 +15,7 @@ LocalizationGroup: reference
 
 Release State: General Availability
 
-Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in PowerBI.com (Enterprise Gateway), Customer Insights
+Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in PowerBI.com (Enterprise Gateway), Dynamics 365 Customer Insights
 
 Authentication types: Organizational account
 
@@ -41,7 +41,7 @@ In the new browser tab that opens, copy the root of the URL. This root URL is th
 ## Connect to Common Data Service from Power BI Desktop
 
 >[!Note]
-> The Power Query Common Data Service connector is mostly suited towards analytics workloads, not bulk data extraction.
+> The Power Query Common Data Service connector is mostly suited towards analytics workloads, not bulk data extraction. For more information, see [Alternative Common Data Service connections](#alternative-common-data-service-connections)
 
 To connect to Common Data Service from Power BI Desktop:
 
@@ -98,6 +98,11 @@ There are several alternative ways of extracting and migrating data from Common 
 * Use the **Export to data lake** feature in Power Apps to extract data from Common Data Service into Azure Data Lake Storage Gen2, which can then be used to run analytics. For more information about the export to data lake feature, see [Exporting CDS data to Azure Data Lake is Generally Available](https://powerapps.microsoft.com/blog/exporting-cds-data-to-azure-data-lake-preview/#:~:text=Exporting%20CDS%20data%20to%20Azure%20Data%20Lake%20is,BI%20reporting%2C%20ML%2C%20Data%20Warehousing%20and%20other%20).
 
 * Use the Tabular Data Stream (TDS) Protocol endpoint to access read-only data in Common Data Service. For more information about this preview feature and a video on how it works, see [Tabular Data Stream (TDS) Protocol endpoint for Common Data Service (CDS)](https://powerapps.microsoft.com/blog/tabular-data-stream-tds-protocol-endpoint-for-common-data-service-cds/).
+
+>[!Note]
+> Both the Common Data Service connector and the OData APIs are meant to serve analytical scenarios where data volumes are relatively small. The recommended approach for bulk data extraction is “Export to Data Lake”. TDS endpoint is a better option than the Common Data Service connector and OData endpoint, but is currently in Preview.
+>
+>As a guideline, most default entities will be retrieved at a rate of approximately 500 rows per second using the Common Data Service connector. Take this rate into account when deciding whether you want to connect to Common Data Service or export to data lake.
 
 ## Limitations and issues
 
