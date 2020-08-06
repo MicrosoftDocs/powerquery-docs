@@ -40,6 +40,9 @@ In the new browser tab that opens, copy the root of the URL. This root URL is th
 
 ## Connect to Common Data Service from Power BI Desktop
 
+>[!Note]
+> The Power Query Common Data Service connector is mostly suited towards analytics workloads, not bulk data extraction.
+
 To connect to Common Data Service from Power BI Desktop:
 
 1. Select **Get data** from the **Home** tab.
@@ -80,12 +83,11 @@ To connect to Common Data Service from Power Query Online:
 
 3. Sign in to your organizational account.
 
-4. When you've successfully signed in, select **Next**.
+4. If required, enter an on-premises data gateway if you're going to be using on-premises data (for example, if you're going to combine data from Common Data Service and an on-premises SQL Server database).
 
-5. In the navigation page, select the data you require, and then select **Transform Data**.
+5. When you've successfully signed in, select **Next**.
 
->[!Note]
-> The Power Query Common Data Service connector is mostly suited towards analytics workloads, not bulk data extraction.
+6. In the navigation page, select the data you require, and then select **Transform Data**.
 
 ## Alternative Common Data Service connections
 
