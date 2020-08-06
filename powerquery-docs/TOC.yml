@@ -18,13 +18,13 @@
         href: power-query-tutorial-shape-combine.md
       - name: Transform table
         items:
-        - name: "Promote or Demote Column Headers"
+        - name: "Promote or demote column headers"
           href: table-promote-demote-headers.md
         - name: "Filter by row position"
           href: filter-row-position.md
         - name: "Filter by values"
           href: filter-values.md
-        - name: "Choose or Remove columns"
+        - name: "Choose or remove columns"
           href: choose-remove-columns.md
         - name: "Grouping or summarizing rows"
           href: group-by.md
@@ -34,7 +34,7 @@
           href: pivot-columns.md
         - name: "Transpose table"
           href: transpose-table.md
-        - name: "Reverse Rows"
+        - name: "Reverse rows"
           href: reverse-rows.md
         - name: "Data profiling tools"
           href: data-profiling-tools.md
