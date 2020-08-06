@@ -4,20 +4,148 @@
   items: 
     - name: "What is Power Query?"
       href: power-query-what-is-power-query.md
-    - name: Quick starts
+    - name: Get data
+      items:
+      - name: "Getting data"
+        href: get-data-experience.md
+      - name: "Authentication with a data source"
+        href: ConnectorAuthentication.md  
+    - name: Transform data
       items:
       - name: "Use Power Query"
         href: power-query-quickstart-using-power-bi.md
-      - name: "Use Query Parameters"
-        href: power-query-query-parameters.md
-    - name: Tutorials
-      items:
       - name: "Shape and combine data"
         href: power-query-tutorial-shape-combine.md
-    - name: Concepts
+      - name: Transform table
+        items:
+        - name: "Promote or Demote Column Headers"
+          href: table-promote-demote-headers.md
+        - name: "Filter by row position"
+          href: filter-row-position.md
+        - name: "Filter by values"
+          href: filter-values.md
+        - name: "Grouping or summarizing rows"
+          href: group-by.md
+        - name: "Unpivot column"
+          href: unpivot-column.md
+        - name: "Pivot column"
+          href: pivot-columns.md
+        - name: "Transpose table"
+          href: transpose-table.md
+        - name: "Reverse Rows"
+          href: reverse-rows.md
+        - name: "Data profiling tools"
+          href: data-profiling-tools.md
+        - name: "Data types"
+          href: data-types.md
+        - name: "Dealing with errors"
+          href: dealing-with-errors.md
+        - name: "Working with duplicates"
+          href: working-with-duplicates.md
+      - name: Transform columns
+        items:
+        - name: "Fill values in a column"
+          href: fill-values-column.md
+        - name: "Sort columns"
+          href: sort-columns.md
+        - name: "Replace values"
+          href: replace-values.md
+      - name: Add columns
+        items:
+        - name: "Add a column from examples"
+          href: column-from-example.md
+        - name: "Add an index column"
+          href: add-index-column.md
+        - name: "Add a custom column"
+          href: add-custom-column.md
+        - name: "Add a conditional column"
+          href: add-conditional-column.md
+      - name: Combine data
+        items:
+        - name: "Append queries"
+          href: append-queries.md
+        - name: Combine files
+          items:
+          - name: "Overview"
+            href: combine-files-overview.md
+          - name: "CSV documents"
+            href: combine-files-csv.md
+        - name: Merge queries
+          items:
+          - name: "Overview"
+            href: merge-queries-overview.md
+          - name: "Left outer join"
+            href: merge-queries-left-outer.md
+      - name: Split columns
+        items:
+        - name: "By delimiter"
+          href: split-columns-delimiter.md
+        - name: "By number of characters"
+          href: split-columns-number-characters.md
+        - name: "By positions"
+          href: split-columns-positions.md
+        - name: "By lowercase to uppercase"
+          href: splitcolumns-lowercase-to-uppercase.md
+        - name: "By uppercase to lowercase"
+          href: splitcolumns-uppercase-to-lowercase.md
+        - name: "By digit to non-digit"
+          href: splitcolumns-digit-to-nondigit.md
+        - name: "By non-digit to digit"
+          href: splitcolumns-nondigit-to-digit.md
+    - name: Dataflows
       items:
-      - name: "Combine files"
-        href: CombineFiles.md
+      - name: "Overview of dataflows"
+        href: dataflows/overview-dataflows-across-power-platform-dynamics-365.md
+      - name: "Analytical versus standard dataflows"
+        href: dataflows/understanding-differences-between-analytical-standard-dataflows.md        
+      - name: "Create and use dataflows"
+        href: dataflows/create-use.md
+      - name: "Use incremental refresh"
+        href: dataflows/incremental-refresh.md
+      - name: "Create computed entities"
+        href: dataflows/computed-entities.md
+      - name: "Connect to data sources"
+        href: dataflows/data-sources.md
+      - name: "Link entities between dataflows"
+        href: dataflows/linked-entities.md
+      - name: Storage Structure
+        items: 
+        - name: "Common Data Model storage structure"
+          href: dataflows/what-is-the-cdm-storage-structure-for-analytical-dataflows.md
+        - name: "Configure storage and compute"
+          href: dataflows/configuring-storage-and-compute-options-for-analytical-dataflows.md
+      - name: "Get data from dataflows"
+        href: dataflows/using-the-output-of-power-platform-dataflows.md
+      - name: "Migrate to dataflows"
+        href: dataflows/how-to-migrate-queries-from-power-query-desktop-to-dataflows.md
+      - name: "Dataflow licenses"
+        href: dataflows/what-licenses-do-you-need-in-order-to-use-dataflows.md
+      - name: Integration
+        items: 
+        - name: "Data Factory dataflows"
+          href: dataflows/power-platform-dataflows-and-adf-wrangling-data-flows.md
+        - name: "Other Azure data services"
+          href: dataflows/using-output-power-platform-dataflows-other-azure.md
+      - name: Best practices
+        items: 
+        - name: "Scenarios for computed entity"
+          href: dataflows/computed-entities-scenarios.md
+        - name: "Developing complex dataflows"
+          href: dataflows/best-practices-developing-complex-dataflows.md
+        - name: "Reusing dataflows"
+          href: dataflows/best-practices-reusing-dataflows.md
+        - name: "Data warehouse"
+          href: dataflows/best-practices-for-data-warehouse-using-dataflows.md
+      - name: Troubleshooting dataflows
+        items: 
+        - name: "Creating dataflows"
+          href: dataflows/troubleshooting-dataflows-issues-creating-dataflow.md
+        - name: "Get data from dataflows"
+          href: dataflows/troubleshooting-dataflow-issue-get-data-from-dataflow.md
+        - name: "Connection to the source"
+          href: dataflows/troubleshooting-dataflow-issues-connection-to-the-data-source.md
+    - name: Advanced topics
+      items:
       - name: "Power Query query folding"
         href: power-query-folding.md
       - name: "Behind the scenes of the Data Privacy Firewall"
@@ -32,28 +160,30 @@
           href: ReadingQueryDiagnostics.md
         - name: "Understanding folding with Query Diagnostics"
           href: QueryDiagnosticsFolding.md
+      - name: "Use Query Parameters"
+        href: power-query-query-parameters.md
+      - name: "Error handling"
+        href: error-handling.md
       - name: "Import data using native database query"
         href: native-database-query.md
-      - name: "Authentication with a data source"
-        href: ConnectorAuthentication.md  
-      - name: "Power Query online limits"
-        href: power-query-online-limits.md
-      - name: "Common issues"
-        href: CommonIssues.md
     - name: "Connector reference"
       items:
       - name: "Power Query connectors"
         href: Connectors/index.md
+      - name: "Connecting to Azure DevOps using OData"
+        href: https://docs.microsoft.com/azure/devops/report/powerbi/odataquery-connect?view=azure-devops
       - name: "Adobe Analytics"
-        href: Connectors/AdobeAnalytics.md
-      - name: "Azure SQL database"
-        href: Connectors/AzureSQLDatabase.md
+      
       - name: "Azure SQL Data Warehouse"
         href: Connectors/AzureSQLDataWarehouse.md
-      - name: "MySQL database"
-        href: Connectors/MySQLDatabase.md
+      - name: "Azure SQL database"
+        href: Connectors/AzureSQLDatabase.md
+      - name: "Data Lake Storage"
+        href: Connectors/DataLakeStorage.md
       - name: "Excel"
         href: Connectors/Excel.md
+      - name: "Facebook"
+        href: Connectors/Facebook.md
       - name: "FHIR"
         items:
         - name: Overview
@@ -66,42 +196,42 @@
           href: Connectors/FHIR/FHIR-QueryFoldingPatterns.md
         - name: Data relationships
           href: Connectors/FHIR/FHIR-Relationships.md
-      - name: "Google Analytics"
-        href: Connectors/GoogleAnalytics.md 
-      - name: "XML"
-        href: Connectors/XML.md
-      - name: "Web"
-        href: Connectors/Web.md
-      - name: "PostgreSQL"
-        href: Connectors/PostgreSQL.md
-      - name: "SQL Server database"
-        href: Connectors/SQLServer.md
-      - name: "Text/CSV"
-        href: Connectors/TextCSV.md
-      - name: "ODBC"
-        href: Connectors/Odbc.md
-      - name: "Connecting to VSTS via OData"
-        href: https://docs.microsoft.com/en-us/azure/devops/report/powerbi/odataquery-connect?view=azure-devops
-      - name: "Data Lake Storage"
-        href: Connectors/DataLakeStorage.md
-      - name: "Facebook"
-        href: Connectors/Facebook.md
-      - name: "QuickBooks Online"
-        href: Connectors/QuickBooksOnline.md
-      - name: "Salesforce Reports"
-        href: Connectors/SalesforceReports.md
-      - name: "Salesforce Objects"
-        href: Connectors/SalesforceObjects.md
       - name: "Folder"
         href: Connectors/Folder.md
+      - name: "JSON"
+        href: Connectors/json.md
+      - name: "MySQL database"
+        href: Connectors/MySQLDatabase.md
+      - name: "OData Feed"
+        href: Connectors/ODataFeed.md
+      - name: "ODBC"
+        href: Connectors/Odbc.md
+      - name: "PostgreSQL"
+        href: Connectors/PostgreSQL.md
+      - name: "QuickBooks Online"
+        href: Connectors/QuickBooksOnline.md
+      - name: "Salesforce Objects"
+        href: Connectors/SalesforceObjects.md
+      - name: "Salesforce Reports"
+        href: Connectors/SalesforceReports.md
       - name: "SharePoint List"
         href: Connectors/SharePointList.md
       - name: "SharePoint Online List"
         href: Connectors/SharePointOnlineList.md
-      - name: "JSON"
-        href: Connectors/json.md
-      - name: "OData Feed"
-        href: Connectors/ODataFeed.md
+      - name: "SQL Server database"
+        href: Connectors/SQLServer.md
+      - name: "Text/CSV"
+        href: Connectors/TextCSV.md
+      - name: "XML"
+        href: Connectors/XML.md
+      - name: "Web"
+        href: Connectors/Web.md
+    - name: Support and troubleshooting
+      items:
+      - name: "Power Query online limits"
+        href: power-query-online-limits.md
+      - name: "Common issues"
+        href: CommonIssues.md
     - name: Create custom Power Query connectors
       items:
       - name: Quick starts
@@ -190,6 +320,8 @@
           href: HandlingUnitTesting.md
         - name: "Helper functions"
           href: HelperFunctions.md
+        - name: "Handling errors"
+          href: HandlingErrors.md
         - name: "Handling documentation"
           href: HandlingDocumentation.md
         - name: "Handling navigation tables"

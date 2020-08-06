@@ -64,7 +64,7 @@ To connect to Salesforce Objects data:
 
 4. If this is the first time you've signed in using a specific app, you'll be asked to verify your authenticity by entering a code sent to your email address. You'll then be asked whether you want the app you are using to access the data. For example, you'll be asked if you want to allow Power BI Desktop to access your Salesforce data. Select **Allow**.
 
-5. In the **Navigator** dialog box, select the Salesforce Ojbects you want to load.
+5. In the **Navigator** dialog box, select the Salesforce Objects you want to load.
 
 You can then either load or transform the data.
 

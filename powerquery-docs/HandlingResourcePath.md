@@ -21,7 +21,7 @@ The *Path* value is derived from the *required parameters* of your data source f
 
 You can see an example of how credentials are stored in the **Data source settings** dialog in Power BI Desktop. In this dialog, the Kind is represented by an icon, and the Path value is displayed as text.
 
-![](images/datasourcesettingscreds.png)
+![Data source settings dialog](images/datasourcesettingscreds.png)
 
 >[Note]
 > If you change your data source function's required parameters during development, previously stored credentials will no longer work (because the path values no longer match). You should delete any stored credentials any time you change your data source function parameters. If incompatible credentials are found, you may receive an error at runtime.
