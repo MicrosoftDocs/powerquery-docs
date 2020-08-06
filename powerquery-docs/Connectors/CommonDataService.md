@@ -59,7 +59,7 @@ To connect to Common Data Service from Power BI Desktop:
 
    Also when the table is loaded, by default if the table contains any picklist fields, a new column with the name of the picklist field with **_display** appended at the end of the name is added to the table. If you don't want the picklist field display column added, in the advanced settings enter **false** in **Add display column**.
 
-   When you've finished filling in the information, select **OK**
+   When you've finished filling in the information, select **OK**.
 
 3. If this is the first time you're connecting to this site, select **Sign in** and input your credentials. Then select **Connect**.
 
