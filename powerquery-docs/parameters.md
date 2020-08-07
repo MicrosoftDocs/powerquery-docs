@@ -88,7 +88,7 @@ You can go to the **Orders** query, and in the Margin field select the filter op
 
 ![Greater than filter option for Margin field](images/me-parameters-step-argument-sample-parameter-greater-than.png)
 
-In the **Filter rows** window you will see a button with a data type for the field selected. You can click this button to display a dropdown menu in which you can select the option to use a Parameter. From the field selection right next to it you can select the parameter that you want to pass to this argument. In this case it's the *Minimum Margin* parameter.
+In the Filter rows window, you will see a button with a data type for the field selected. You can click this button to display a dropdown menu in which you can select the option to use a Parameter. From the field selection right next to it, you can select the parameter that you want to pass to this argument. In this case, it's the *Minimum Margin* parameter.
 
 ![Select parameter for transformation argument](images/me-parameters-step-argument-sample-parameter-select-parameter.png)
 
@@ -105,11 +105,11 @@ You can modify the **Current Value** of your *Minimum Margin* parameter to be 0.
 
 ### Custom Function argument
 
-With Power Query you can create a Custom Function from an existing query with a simple click. Following the previous example, you can right-click the **Orders** query and select the option to *Create Function...* which will launch a new *Create Function* window where you can name your new function and it'll tell you the Parameters being referenced in your query. These Parameters will be used as the Parameters for the Custom Function.
+With Power Query, you can create a Custom Function from an existing query with a simple click. Following the previous example, you can right-click the **Orders** query and select the option to *Create Function...* which will launch a new *Create Function* window where you can name your new function and it will tell you the Parameters being referenced in your query. These Parameters will be used as the Parameters for the Custom Function.
 
 ![Create Function](images/me-parameters-create-function.png)
 
-You can name this new Function however you want. For demonstration purposes, the name of this new function will be **MyFunction**. After you hit the OK button a new group will be created in the Queries pane using the name of your new function and in this Group you will find the parameteers being used for the function, the query that was used to create the function and the function itself:
+You can name this new Function however you want. For demonstration purposes, the name of this new function will be **MyFunction**. After you hit the OK button a new group will be created in the Queries pane using the name of your new function and in this Group you will find the parameters being used for the function, the query that was used to create the function and the function itself:
 
 ![Function created](images/me-parameters-function-created.png)
 
