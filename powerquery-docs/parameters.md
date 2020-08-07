@@ -43,13 +43,13 @@ After creating the parameter, you can always go back to the **Manage Parameters*
 
 A parameter stores a value that can be used for transformations in Power Query. Apart from the name of the parameter and the value that it stores, it also has other components that provide metadata to it. The components of a parameter are as follows.
 
-* **Name** - The name to distinguish the parameter.
-* **Description** - A general description of your parameter.
-* **Required** - Denotes if the parameter should be treated as a required or optional parameter when used inside a function. 
+* **Name** - Provide a name for this parameter that lets you easily recognize and differentiate it from other parameters you might create.
+* **Description** - The description is displayed next to the parameter name when parameter information is displayed, helping users who are specifying the parameter value to understand its purpose, and its semantics.
+* **Required** - The checkbox indicates whether subsequent users can specify whether a value for the **Current Value** component of the parameter must be provided.
 * **Type** - It is highly recommended that you always set up the data type of your parameter. You can learn more about the importance of data types from the article [Data types](data-types.md).
-* **Suggested Values** - Provides the user with options to select a current value from the available options:
+* **Suggested Values** - Provides the user with options to select a value for the **Current Value** from the available options:
     * *Any value* - The current value can be any manually entered value. 
-    * *List of values* - Provides you with a simple table-like experience so you can define a list of suggested values that you can later select from for the **Current Value**. When this option is selected a new option called *Default Value* will be available where you can select what should be the default value for this parameter, which will be the default value shown to the user when referencing the parameter. This is not to be confused with the **Current Value, which is the value that is stored inside the Parameter and can be passed as an argument in transformations. Using this option will enable a drop-down menu to be displayed in the *Default Value* and **Current Value** fields where you can pick one of the values from the suggested list of values.
+    * *List of values* - Provides you with a simple table-like experience so you can define a list of suggested values that you can later select from for the **Current Value**. When this option is selected a new option called *Default Value* will be available where you can select what should be the default value for this parameter, which will be the default value shown to the user when referencing the parameter. This is not to be confused with the **Current Value**, which is the value that is stored inside the Parameter and can be passed as an argument in transformations. Using this option will enable a drop-down menu to be displayed in the *Default Value* and **Current Value** fields where you can pick one of the values from the suggested list of values.
 
     ![Parameter with a suggest list of values](images/me-parameters-list-of-values.png)
 
