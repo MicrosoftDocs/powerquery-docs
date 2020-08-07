@@ -4,7 +4,7 @@ description: An article on how to use parameters in Power Query
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: 
-ms.date: 08/30/2020
+ms.date: 08/31/2020
 ms.author: v-miesco
 ---
 # Using parameters
@@ -104,5 +104,35 @@ You can modify the **Current Value** of your *Minimum Margin* parameter to be 0.
 > Multiple transformations in Power Query offer this experience where you can select your parameter from a dropdown, so it is recommended that you always look for it and take advantage of what parameters can offer you. 
 
 ### Custom Function argument
+
+With Power Query you can create a Custom Function from an existing query with a simple click. Following the previous example, you can right-click the **Orders** query and select the option to *Create Function...* which will launch a new *Create Function* window where you can name your new function and it'll tell you the Parameters being referenced in your query. These Parameters will be used as the Parameters for the Custom Function.
+
+![Create Function](images/me-parameters-create-function.png)
+
+You can name this new Function however you want. For demonstration purposes, the name of this new function will be **MyFunction**. After you hit the OK button a new group will be created in the Queries pane using the name of your new function and in this Group you will find the parameteers being used for the function, the query that was used to create the function and the function itself:
+
+![Function created](images/me-parameters-function-created.png)
+
+You can test this new function by entering a value such as 0.4 in the field underneath the *Minimum Margin* label and then clicking the Invoke button. This will create a new query with the name *Invoked Function* effectively passing the value 0.4 to be used as the argument for the function and giving you only the rows where the Margin is above 40%. 
+
+![Invoked function with value 0.4](images/me-parameters-function-invoked.png)
+
+Your Orders query is linked with your function, so any changes made to the Orders query will be reflected on your function. You can add more parameters to your query and this will automatically update the definition of your function. 
+
+For demonstrations purposes, a new parameter will be added under the name *Maximum Margin* with a Decimal Number data type and a **Current Value** of 0.4.
+
+![New Maximum Margin parameter](images/me-parameters-maximum-margin-parameter.png)
+
+Modify Orders query using the existing **Filter Rows** step and add a new *is less than* clause where the *Maximum Margin* parameter will be referenced as shown below.
+
+![New Maximum Margin parameter used in Filter rows window](images/me-parameters-maximum-margin-parameter-used.png)
+
+Now when you head over to the function, you will see that it now references two parameters instead of just the *Minimum Margin*.
+
+![Function updated with two parameters](images/me-parameters-function-updated-parameters.png)
+
+You can enter values 0.1 for the *Minimum Margin*, 0.35 for the *Maximum Margin*, and hit the OK button. A new *Invoked Function* query with a suffix (2) will be created with only the rows where the Margin is above 10% and below 35%.
+
+![Function invoked with multiple parameters](images/me-parameters-function-invoked-multiple-parameters.png)
 
 You can learn more about how to create Custom Functions from the article [Creating a Custom Function](custom-function.md).
