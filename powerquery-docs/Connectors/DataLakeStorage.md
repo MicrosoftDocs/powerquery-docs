@@ -113,4 +113,4 @@ After you've created the visualizations in Power BI Desktop, you can share it wi
 
 Currently, in Power Query Online, the Azure Data Lake Storage Gen2 connector only supports paths with container, and not subfolder or file.
 
-https://<accountname>.dfs.core.windows.net/<container> will work, while https://<accountname>.dfs.core.windows.net/<container>/<filename> or https://<accountname>.dfs.core.windows.net/<container>/<subfolder> will fail.
+https://\<accountname\>.dfs.core.windows.net/\<container\> will work, while https://\<accountname\>.dfs.core.windows.net/\<container\>/\<filename\> or https://\<accountname\>.dfs.core.windows.net/\<container\>/\<subfolder\> will fail.
