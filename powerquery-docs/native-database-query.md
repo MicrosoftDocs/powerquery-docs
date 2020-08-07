@@ -50,9 +50,9 @@ The following Power Query connectors support native database queries.
 | Azure Cosmos DB | SQL statement |
 | Azure SQL Data Warehouse | SQL statement |
 | Azure SQL database | SQL statement |
-| DataWorld.Dataset | Query |
+| DataWorld.Dataset | SQL statement (read-only) |
 | Essbase | MDX statement |
-| FHIR | Query |
+| FHIR | FHIR Search |
 | IBM Db2 database | SQL statement |
 | IBM Informix database (Beta) | SQL statement |
 | MySQL database | SQL statement |
@@ -64,7 +64,7 @@ The following Power Query connectors support native database queries.
 | SQL Server Analysis Services database | MDX or DAX query |
 | SQL Server database | SQL statement |
 | TIBCO(R) Data Virtualization (Beta) | SQL statement |
-| Vena (Beta) | Model Query |
+| Vena (Beta) | Model Query (MQL) |
 | | |
 
 ## Limitations and issues
