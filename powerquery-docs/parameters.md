@@ -11,7 +11,8 @@ ms.author: v-miesco
 
 A parameter serves as way to easily store and manage a value that can be reused in one or multiple transformation arguments.
 
-Transformations in Power Query can require none or many arguments to be entered by the user. For example, when using the *Keep top rows* transformations as showcased in the [Filter by row position](filter-row-position.md) article where you have to enter a numeric value in the *Number of rows* argument. A parameter can help you to centralize and easily manage that numeric value not only in one transformation, but in as many transformations as you may need.
+Transformations in Power Query can require none or many arguments to be entered by the user. 
+For example, when using the *Keep top rows* transformations as showcased in the [Filter by row position](filter-row-position.md) article where you have to enter a numeric value in the *Number of rows* argument. A parameter can help you centralize and easily manage that numeric value not only in one transformation, but in as many transformations as you may need.
 
 ![Example of where a parameter could be of use](images/me-filter-row-position-keep-top-rows-window.png)
 
