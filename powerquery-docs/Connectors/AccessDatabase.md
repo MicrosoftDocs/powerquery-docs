@@ -28,7 +28,7 @@ Function Reference Documentation: [Access.Database](https://docs.microsoft.com/p
 
 If you're connecting to an Access database from Power Query Online, the system that contains the on-premises data gateway must have the 64-bit version of the [Access Database Engine 2010 OLEDB provider](https://www.microsoft.com/download/details.aspx?id=13255) installed. 
 
-Also, if you are loading an Access database to Power BI Desktop, the bit versions of the Access Database Engine 2010 OLEDB provider and Power BI Desktop on that machine must match (that is, either 32-bit or 64-bit). For more information, see [Import Access database to Power BI Desktop](#import-access-database-to-power-bi-desktop).
+Also, if you are loading an Access database to Power BI Desktop, the versions of the Access Database Engine 2010 OLEDB provider and Power BI Desktop on that machine must match (that is, either 32-bit or 64-bit). For more information, see [Import Access database to Power BI Desktop](#import-access-database-to-power-bi-desktop).
  
 ## Capabilities Supported
 * Import
