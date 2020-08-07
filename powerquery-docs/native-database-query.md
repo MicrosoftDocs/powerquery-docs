@@ -50,7 +50,7 @@ The following Power Query connectors support native database queries.
 | Azure Cosmos DB | SQL statement |
 | Azure SQL Data Warehouse | SQL statement |
 | Azure SQL database | SQL statement |
-| DataWorld.Dataset | SQL statement (read-only) |
+| DataWorld.Dataset | dwSQL |
 | Essbase | MDX statement |
 | FHIR | FHIR Search |
 | IBM Db2 database | SQL statement |
