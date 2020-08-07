@@ -81,15 +81,21 @@ To connect to Common Data Service from Power Query Online:
 
    ![Enter the server URL](media/common-data-service/enter-url-online.png)
 
-3. Sign in to your organizational account.
+3. If necessary, enter an on-premises data gateway if you're going to be using on-premises data (for example, if you're going to combine data from Common Data Service and an on-premises SQL Server database).
 
-4. If required, enter an on-premises data gateway if you're going to be using on-premises data (for example, if you're going to combine data from Common Data Service and an on-premises SQL Server database).
+4. Sign in to your organizational account.
 
 5. When you've successfully signed in, select **Next**.
 
 6. In the navigation page, select the data you require, and then select **Transform Data**.
 
-## Alternative Common Data Service connections
+## Limitations and issues
+
+### Entity retrieval rate
+
+As a guideline, most default entities will be retrieved at a rate of approximately 500 rows per second using the Common Data Service connector. Take this rate into account when deciding whether you want to connect to Common Data Service or export to data lake. If you require faster retrieval rates, consider using the Export to data lake feature or Tabular Data Stream (TDS) endpoint. For more information, see [Alternative Common Data Service connections](#alternative-common-data-service-connections).
+
+### Alternative Common Data Service connections
 
 There are several alternative ways of extracting and migrating data from Common Data Service:
 
@@ -101,13 +107,9 @@ There are several alternative ways of extracting and migrating data from Common 
 
 >[!Note]
 > Both the Common Data Service connector and the OData APIs are meant to serve analytical scenarios where data volumes are relatively small. The recommended approach for bulk data extraction is “Export to Data Lake”. TDS endpoint is a better option than the Common Data Service connector and OData endpoint, but is currently in Preview.
->
->As a guideline, most default entities will be retrieved at a rate of approximately 500 rows per second using the Common Data Service connector. Take this rate into account when deciding whether you want to connect to Common Data Service or export to data lake.
-
-## Limitations and issues
 
 ### Common Data Service OData API performance and throttling limits
 
-For information about OData API performance and throttling limits for Common Data Service connections, see [Requests limits and allocations](https://docs.microsoft.com/power-platform/admin/api-request-limits-allocations).
+For information about OData API performance and throttling limits for Common Data Service connections, see [Requests limits and allocations](https://docs.microsoft.com/power-platform/admin/api-request-limits-allocations). These limitations apply to both the Common Data Source connector (which uses the OData API as an implementation detail) and the [OData Feed](odatafeed.md) connector when accessing the same endpoint.
 
 
