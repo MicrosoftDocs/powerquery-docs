@@ -30,7 +30,8 @@ Power Query provides two easy ways to create parameters:
 
 >[!NOTE]
 >You can also convert a parameter to a query by right-clicking the parameter and then selecting the option to **Convert To Query** as shown in the image below.
->![Conver to query](images/me-parameters-convert-to-query.png)
+>
+>![Convert to query](images/me-parameters-convert-to-query.png)
 
 * **Using the Manage Parameters window** - You can click the *New Parameter* option from the dropdown menu of the Manage Parameters button in the Home tab, or you can launch the **Manage Parameters** window and click in the *New* button on the top to create a parameter. You can fill in this form and hit OK to create a new parameter.
 
