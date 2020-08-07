@@ -186,12 +186,12 @@
       items:
       - name: "Power Query connectors"
         href: Connectors/index.md
-        href: Connectors/AzureSQLDatabase.md
       - name: "Connecting to Azure DevOps using OData"
+        href: https://docs.microsoft.com/azure/devops/report/powerbi/odataquery-connect?view=azure-devops
       - name: "Access database"
         href: Connectors/AccessDatabase.md
       - name: "Azure SQL database"
-        href: https://docs.microsoft.com/azure/devops/report/powerbi/odataquery-connect?view=azure-devops
+        href: Connectors/AzureSQLDatabase.md
       - name: "Azure SQL Data Warehouse"
         href: Connectors/AzureSQLDataWarehouse.md
       - name: "Azure SQL database"
