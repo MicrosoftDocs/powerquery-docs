@@ -117,22 +117,4 @@ You can test this new function by entering a value such as 0.4 in the field unde
 
 ![Invoked function with value 0.4](images/me-parameters-function-invoked.png)
 
-Your Orders query is linked with your function, so any changes made to the Orders query will be reflected on your function. You can add more parameters to your query and this will automatically update the definition of your function. 
-
-For demonstrations purposes, a new parameter will be added under the name *Maximum Margin* with a Decimal Number data type and a **Current Value** of 0.4.
-
-![New Maximum Margin parameter](images/me-parameters-maximum-margin-parameter.png)
-
-Modify Orders query using the existing **Filter Rows** step and add a new *is less than* clause where the *Maximum Margin* parameter will be referenced as shown below.
-
-![New Maximum Margin parameter used in Filter rows window](images/me-parameters-maximum-margin-parameter-used.png)
-
-Now when you head over to the function, you will see that it now references two parameters instead of just the *Minimum Margin*.
-
-![Function updated with two parameters](images/me-parameters-function-updated-parameters.png)
-
-You can enter values 0.1 for the *Minimum Margin*, 0.35 for the *Maximum Margin*, and hit the OK button. A new *Invoked Function* query with a suffix (2) will be created with only the rows where the Margin is above 10% and below 35%.
-
-![Function invoked with multiple parameters](images/me-parameters-function-invoked-multiple-parameters.png)
-
 You can learn more about how to create Custom Functions from the article [Creating a Custom Function](custom-function.md).

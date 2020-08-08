@@ -7,6 +7,6 @@ ms.reviewer:
 ms.date: 08/31/2020
 ms.author: v-miesco
 ---
-# Custom Functions
+# Custom Function
 
 ## Create a custom function
