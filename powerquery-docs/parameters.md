@@ -67,7 +67,7 @@ A parameter can be used in many different ways, but it is more commonly used in 
 
 In the next sections, you'll see an example for these two scenarios.
 
-### Step arguments
+### Transformation step argument
 
 To enable this feature, first go to the *View* tab in the Power Query Editor and enable the *Always allow* option in the Parameters group.
 
