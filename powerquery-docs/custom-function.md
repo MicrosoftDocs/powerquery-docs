@@ -111,10 +111,10 @@ You can check that your that you have data from all files in the folder by check
 ![Validating that the final table contains data from all files](images/me-custom-function-invoked-custom-function-all-data-expanded.png)
 
 >[!NOTE]
->All that you've read above is fundamentally the same process that happens during the **Combine files** experience but done manually.
->It is highly recommended that you also read the  article on [Combine files overview](combine-files-overview.md) and [Combine CSV files](combine-files-csv.md) to further understand how the Combine files experience works in Power Query.
+>What you've read so far is fundamentally the same process that happens during the **Combine files** experience but done manually.
+>It is highly recommended that you also read the  article on [Combine files overview](combine-files-overview.md) and [Combine CSV files](combine-files-csv.md) to further understand how the Combine files experience works in Power Query and the role that custom functions play.
 
-## Add new parameter to custom function
+## Add new parameter to existing custom function
 
 Sample that works on a single scalar value with just one parameter. Then we add a new parameter.
 
