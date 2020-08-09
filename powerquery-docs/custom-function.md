@@ -94,9 +94,25 @@ With the custom function now created and all the transformation steps incorporat
 
 ![Invoke custom function button in Add column menu](images/me-custom-function-invoke-custom-function.png)
 
-After you hit OK, a new column with the name **Output Table** will be created which has Table values in its cells as shown in the next image.
+After you hit OK, a new column with the name **Output Table** will be created which has Table values in its cells as shown in the next image. For simplicity, remove all columns from this table except **Name** and **Output Table**.
 
 ![Custom function invoked](images/me-custom-function-invoked-custom-function.png)
+
+>[!NOTE]
+> Learn more about how to choose or remove columns from a table from the article [Choose or remove columns](choose-remove-columns.md).
+
+
+Your function was applied to each and every single row from the table using the values from the **Content** column as the argument for your function. Now that the data has been transformed into the shape that you're looking for, you can expand the **Output Table** column as shown in the image below without using any prefix for the expanded columns.
+
+![Expand Output Table column](images/me-custom-function-invoked-custom-function-expanded-window.png)
+
+You can check that your that you have data from all files in the folder by checking the values in the **Name** or **Date** column. For this case, you can check the values from the Date column as each file only contains data for a single month from a given year. If you see more than one it means that you've succesfully combined data from multiple files into a single table.
+
+![Validating that the final table contains data from all files](images/me-custom-function-invoked-custom-function-all-data-expanded.png)
+
+>[!NOTE]
+>All that you've read above is fundamentally the same process that happens during the **Combine files** experience but done manually.
+>It is highly recommended that you also read the  article on [Combine files overview](combine-files-overview.md) and [Combine CSV files](combine-files-csv.md) to further understand how the Combine files experience works in Power Query.
 
 ## Add new parameter to custom function
 
