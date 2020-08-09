@@ -106,7 +106,7 @@ Your function was applied to each and every single row from the table using the 
 
 ![Expand Output Table column](images/me-custom-function-invoked-custom-function-expanded-window.png)
 
-You can check that your that you have data from all files in the folder by checking the values in the **Name** or **Date** column. For this case, you can check the values from the Date column as each file only contains data for a single month from a given year. If you see more than one it means that you've succesfully combined data from multiple files into a single table.
+You can check that your you have data from all files in the folder by checking the values in the **Name** or **Date** column. For this case, you can check the values from the Date column as each file only contains data for a single month from a given year. If you see more than one, it means that you've successfully combined data from multiple files into a single table.
 
 ![Validating that the final table contains data from all files](images/me-custom-function-invoked-custom-function-all-data-expanded.png)
 
