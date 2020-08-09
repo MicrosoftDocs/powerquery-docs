@@ -83,19 +83,23 @@ The next set of transformation steps that need to be applied to the **Transform 
 
 Power Query by default will automatically add a new *Changed Type* step after promoting your column headers that will automatically detect the data types for each column. Your **Transform Sample file** query will look as shown in the next image.
 
+>[!NOTE]
+> Learn more about how to promote and demote headers from the article [Promote or demote column headers](table-promote-demote-headers.md).
+
 ![Final transform sample query](images/me-custom-function-final-transform-sample-query.png)
 
 ## Invoke Custom Function as a new column
 
-Use the previous custom function to create a new custom column inside a table. 
+With the custom function now created and all the transformation steps incorporated, you can go back to the original query where you have the list of files from the folder. Inside the *Add Column* menu in the ribbon, select the button that reads *Invoke Custom Function* from the General group. Inside the *Invoke Custom Function* window enter **Output Table** as the *New column name* and select the name of our function, **Transform file**, from the *Function query* dropdown. After selecting the function from the dropdown menu, the parameter for the function will be displayed and you can select which column from the table to use as the argument for this function. Select the column **Content** as the value / argument to be passed for the **File Parameter**.
+
+![Invoke custom function button in Add column menu](images/me-custom-function-invoke-custom-function.png)
+
+After you hit OK, a new column with the name **Output Table** will be created which has Table values in its cells as shown in the next image.
+
+![Custom function invoked](images/me-custom-function-invoked-custom-function.png)
 
 ## Add new parameter to custom function
 
 Sample that works on a single scalar value with just one parameter. Then we add a new parameter.
 
 Talk about the link between the function and the query and how it gets updated.
-
-
-### Common scenario: Combine files experience
-
-Talk about how this interaction is the core of the Combine files experience and kind of a deep dive into how that one works.
