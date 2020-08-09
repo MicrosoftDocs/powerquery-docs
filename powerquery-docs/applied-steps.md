@@ -55,12 +55,24 @@ To delete a series of steps, right click the first step of the series and select
 
 ![Applied steps delete until end](images/applied-steps-delete-until-end.png)
 
+Select **Delete** on the new window.
+
+![Applied steps delete until end warning](images/applied-steps-delete-until-end-warning.png)
+
+The Applied steps list after using the **Delete until end**.
+
+![Applied steps delete until end after](images/applied-steps-delete-until-end-after.png)
+
 ## Insert step after
-To insert a step, right click a step and select **Insert step after** to insert a step after the selected step.
+To add a new step, right click on the last step in the list and select **Insert step after**.
 
 ![Applied steps insert step after](images/applied-steps-insert-step-after.png)
 
-To set a transformation for this step, select it in the list and make the change to the data. It will automatically link the transformation to the selected step.
+To insert a new intermediate step, right click on a step and select **Insert step after**. Then select **Insert** on the new window.
+
+![Applied steps insert step after warning](images/applied-steps-insert-step-after-warning.png)
+
+To set a transformation for the new step, select it in the list and make the change to the data. It will automatically link the transformation to the selected step.
 
 ## Move step
 To move a step up one position in the list, right click the step and select **Move up**.
@@ -70,6 +82,8 @@ To move a step up one position in the list, right click the step and select **Mo
 To move a step down one position in the list, right click the step and select **Move down**.
 
 ![Applied steps move down](images/applied-steps-move-down.png)
+
+Alternatively, or to move more than a single position, drag and drop the step to the desired location.
 
 ## Extract the previous steps into query
 It can help to separate a series of transformations into a different query. To extract all the previous steps into a new query, right click the first step you do *not* want to include in the query and select **Extract Previous**.
