@@ -60,14 +60,14 @@ To insert a step, right click a step and select **Insert step after** to insert 
 
 ![Applied steps insert step after](images/applied-steps-insert-step-after.png)
 
-To set a transformation for this step, select it in the list and make the change to the data. It will autmatically link the tranformation to the selected step.
+To set a transformation for this step, select it in the list and make the change to the data. It will automatically link the transformation to the selected step.
 
 ## Move step
-To move a step up one position in the list, right click  the step and select **Move up**.
+To move a step up one position in the list, right click the step and select **Move up**.
 
 ![Applied steps move up](images/applied-steps-move-up.png)
 
-To move a step down one position in the list, right click the step and selct **Move down**.
+To move a step down one position in the list, right click the step and select **Move down**.
 
 ![Applied steps move down](images/applied-steps-move-down.png)
 
@@ -76,7 +76,7 @@ It can help to separate a series of transformations into a different query. To e
 
 ![Applied steps extract previous](images/applied-steps-extract-previous.png)
 
-Name the new query and select **OK**. To access the new query navigate to the queries pane on the left side of the screen.
+Name the new query and select **OK**. To access the new query, navigate to the **Queries pane** on the left side of the screen.
 
 ## Edit step names and their descriptions
 To edit the step, right click the step and select **Properties**.
