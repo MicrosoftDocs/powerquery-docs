@@ -16,7 +16,7 @@ This article focuses on this experience provided only through the Power Query Us
 
 ## Create a custom function
 
-You can follow along with this example by downloading the sample files used in this article from the following [download link](https://aka.ms/PQCombineFilesSample). For simplicity, this article will be using the Folder connector. To learn more about the Folder connector, see [Folder](folder.md). The goal of this example is to create a custom function that can be applied to all the files in that folder before combining all of the data from all files into a single table.
+You can follow along with this example by downloading the sample files used in this article from the following [download link](https://aka.ms/PQCombineFilesSample). For simplicity, this article will be using the Folder connector. To learn more about the Folder connector, see [Folder](Connectors/folder.md). The goal of this example is to create a custom function that can be applied to all the files in that folder before combining all of the data from all files into a single table.
 
 After connecting to the folder where your files are located, right-click on the Binary value of your choice from the **Content** field and select the option that reads **Add as New Query**. For this example, you'll see that the selection was made for the first file from the list, which happens to be the file *April 2019.csv*.
 
@@ -134,11 +134,11 @@ Now with this new parameter, select the **Transform Sample file** query and filt
 >[!NOTE]
 > Learn more about how to filter columns by values from the article [Filter values](filter-values.md).
 
-Applying this new step to your query will automatically update the **Transform file** function which will now require two parameters based on the two parameters that your **Transform Sample file** uses.
+Applying this new step to your query will automatically update the **Transform file** function, which will now require two parameters based on the two parameters that your **Transform Sample file** uses.
 
 ![Function updated with now two parameters](images/me-custom-function-with-second-parameter.png)
 
-Note that the **CSV files** query has a warning sign next to it. The reason behind this is that now that your function has been updated and it requires two parameters, the step where you invoke the function results in error values since only one of the arguments were passed to the **Transform file** function during the *Invoked Custom Function* step.
+The **CSV files** query has a warning sign next to it. The reason behind this is that now that your function has been updated and it requires two parameters, the step where you invoke the function results in error values since only one of the arguments was passed to the **Transform file** function during the *Invoked Custom Function* step.
 
 ![Errors after function update](images/me-custom-function-errors-after-function-update.png)
 
