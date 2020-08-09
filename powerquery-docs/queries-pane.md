@@ -33,6 +33,10 @@ To reach these actions, open the context menu (the right-click menu) on the quer
 ### Paste
 Paste can be used when you have a copied query to place into the Power Query editor.
 
+>[!NOTE]
+>If you would like to learn more about **Get Data** and importing data into Power Query, 
+[look here.](https://docs.microsoft.com/power-query/get-data-experience)
+
 ### New query
 You can import data into the Power Query editor as an option from the context menu.
 
@@ -41,8 +45,7 @@ This option functions the same as the **Get Data** feature located on the Ribbon
 ![Queries Pane New Query](images/queries-pane-new-query.png)
 
 >[!NOTE]
->If you would like to learn more about **Get Data** and importing data into Power Query, 
-[look here.](https://docs.microsoft.com/power-query/get-data-experience)
+>If you would like to learn more about sharing queries, read the article on [Share queries](share-queries.md).
 
 ### Merge queries
 You can open the *Merge queries* input screen when you select the **Merge queries** option from the context menu. 
@@ -55,6 +58,9 @@ This option functions the same as the **Merge queries** feature located on the R
 ### New parameter
 You can open the *New parameter* input screen when you select the **New parameter** option from the context menu. 
 This option functions the same as the **New parameter** feature located on the Ribbon.
+
+>[!NOTE]
+>If you would like to learn more about **Parameters** in Power Query you can read the article on [Using parameters](parameters.md).
 
 
 ### New group
