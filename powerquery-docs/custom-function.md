@@ -31,8 +31,9 @@ Create a new parameter with the name **File Parameter** and use the **Sample Fil
 ![File parameter](images/me-custom-function-file-parameter.png)
 
 >[!NOTE]
->It is highly recommended that you read the article on [Parameters](Connectors/Folder.md) to better understand how to create and manage parameters in Power Query. 
->It is possible to create a custom function without a parameter. This is commonly seen in scenarios where an input can be inferred from the environment where the function is being invoked. For example, a function that takes the environment's current date and time and creates a specific text string from those values. 
+>It is highly recommended that you read the article on [Parameters](parameters.md) to better understand how to create and manage parameters in Power Query. 
+>Custom functions can be created using any parameters type. There's no requirement for any custom function to have a binary as a parameter.
+>It is possible to create a custom function without a parameter. This is commonly seen in scenarios where an input can be inferred from the environment where the function is being invoked. For example, a function that takes the environment's current date and time and creates a specific text string from those values.  
 
 Right-click the **File Parameter** from the Queries pane and select the option that reads **Reference**.
 
@@ -88,6 +89,9 @@ Power Query by default will automatically add a new *Changed Type* step after pr
 
 ![Final transform sample query](images/me-custom-function-final-transform-sample-query.png)
 
+>[!CAUTION]
+>Your **Transform file** function relies on the steps performed in the **Transform Sample file** query. However, if you try to manually modify the code for the **Transform file** function, you will be greeted with a warning that reads *The definition of the function 'Transform file' is updated whenever query 'Transform Sample file' is updated. However, updates will stop if you directly modify function 'Transform file'.*  
+
 ## Invoke Custom Function as a new column
 
 With the custom function now created and all the transformation steps incorporated, you can go back to the original query where you have the list of files from the folder. Inside the *Add Column* menu in the ribbon, select the button that reads *Invoke Custom Function* from the General group. Inside the *Invoke Custom Function* window enter **Output Table** as the *New column name* and select the name of our function, **Transform file**, from the *Function query* dropdown. After selecting the function from the dropdown menu, the parameter for the function will be displayed and you can select which column from the table to use as the argument for this function. Select the column **Content** as the value / argument to be passed for the **File Parameter**.
@@ -114,8 +118,34 @@ You can check that your you have data from all files in the folder by checking t
 >What you've read so far is fundamentally the same process that happens during the **Combine files** experience but done manually.
 >It is highly recommended that you also read the  article on [Combine files overview](combine-files-overview.md) and [Combine CSV files](combine-files-csv.md) to further understand how the Combine files experience works in Power Query and the role that custom functions play.
 
+
 ## Add new parameter to existing custom function
 
-Sample that works on a single scalar value with just one parameter. Then we add a new parameter.
+Imagine that there's a new requirement on top of what you've built. The new requirement requires that before you combine the files, you filter the data inside them to only get the rows where the Country is equals to *Panama*.
 
-Talk about the link between the function and the query and how it gets updated.
+To make this happen, create a new parameter called **Market** with the text data type and for the **Current Value** you enter the value *Panama*.
+
+![New parameter](images/me-custom-function-second-parameter.png)
+
+Now with this new parameter, select the **Transform Sample file** query and filter the Country field using the value from the **Market** Parameter.
+
+![Filter Country column using the new Market parameter](images/me-custom-function-filter-using-second-parameter.png)
+
+>[!NOTE]
+> Learn more about how to filter columns by values from the article [Filter values](filter-values.md).
+
+Applying this new step to your query will automatically update the **Transform file** function which will now require two parameters based on the two parameters that your **Transform Sample file** uses.
+
+![Function updated with now two parameters](images/me-custom-function-with-second-parameter.png)
+
+Note that the **CSV files** query has a warning sign next to it. The reason behind this is that now that your function has been updated and it requires two parameters, the step where you invoke the function results in error values since only one of the arguments were passed to the **Transform file** function during the *Invoked Custom Function* step.
+
+![Errors after function update](images/me-custom-function-errors-after-function-update.png)
+
+To fix the errors, double-click the *Invoked Custom Function* to bring the **Invoke Custom Function** window and in the Market parameter manually enter the value *Panama*.
+
+![Updating Invoked Custom Function arguments](images/me-custom-function-updated-arguments.png)
+
+You can now check your query to validate that only rows where the *Country* is equals to Panama show up in the final resultset of the **CSV Files** query.
+
+![Final output table after updated arguments](images/me-custom-function-after-updated-arguments.png)
