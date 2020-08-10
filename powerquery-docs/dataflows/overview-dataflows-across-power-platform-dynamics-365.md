@@ -5,16 +5,14 @@ description: An overview of dataflows across Power Platform and Dynamics 365 pro
 author: radacad 
 ms.service: powerquery 
 ms.topic: conceptual 
-ms.date: 05/11/2020 
+ms.date: 07/27/2020 
 ms.author: gepopell  
 
 --- 
 
  
 
-# What are dataflows? 
-
- 
+# What are dataflows?  
 
 Dataflows are a self-service, cloud-based, data preparation technology. Dataflows enable customers to ingest, transform, and load data into Common Data Service environments, Power BI workspaces, or your organization’s Azure Data Lake Storage Gen2 account. Dataflows are authored using Power Query experience, a unified Data Connectivity and Preparation experience already featured in many Microsoft products, including Excel and Power BI. Customers can trigger dataflows to run either on demand or automatically on a schedule; data is always kept up to date. 
 
@@ -44,7 +42,7 @@ The diagram above shows an overall view of how a dataflow is defined. A dataflow
 
  
 
-### Dataflows run on the cloud. 
+### Dataflows run in the cloud 
 
  
 

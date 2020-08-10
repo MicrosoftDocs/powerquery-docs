@@ -25,14 +25,8 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: What is Power Query
+          - text: What is Power Query?
             url: power-query-what-is-power-query.md
-          - text: Get data
-            url: get-data-experience.md
-          - text: Use Power Query
-            url: power-query-quickstart-using-power-bi.md
-          - text: Shape and combine data.md
-            url: power-query-tutorial-shape-combine.md
           - text: What are dataflows?
             url: dataflows/overview-dataflows-across-power-platform-dynamics-365.md
 
@@ -41,16 +35,12 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Transform tables
-            url: table-promote-demote-headers.md
-          - text: Transform columns
-            url: fill-values-column.md
-          - text: Add columns
-            url: column-from-example.md
-          - text: Combine data
-            url: append-queries.md
-          - text: Split columns
-            url: split-columns-delimiter.md
+          - text: Use Power Query
+            url: power-query-quickstart-using-power-bi.md
+          - text: Get data
+            url: get-data-experience.md
+          - text: Transform data
+            url: power-query-tutorial-shape-combine.md
 
   # Card
   - title: Working with dataflows
@@ -63,13 +53,11 @@ landingContent:
             url: dataflows/what-licenses-do-you-need-in-order-to-use-dataflows.md
           - text: Dataflow best practices
             url: dataflows/computed-entities-scenarios.md
-          - text: Troubleshooting dataflows
-            url: dataflows/troubleshooting-dataflows-issues-creating-dataflow.md
 
   # Card
   - title: Advanced Power Query articles
     linkLists:
-      - linkListType: learn
+      - linkListType: concept
         links:
           - text: Query folding
             url: power-query-folding.md
@@ -89,7 +77,7 @@ landingContent:
             url: connectorcertification.md
             
   # Card
-  - title: Reference material
+  - title: Reference content
     linkLists:
       - linkListType: reference
         links:
