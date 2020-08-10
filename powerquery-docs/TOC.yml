@@ -188,6 +188,10 @@
         href: Connectors/index.md
       - name: "Connecting to Azure DevOps using OData"
         href: https://docs.microsoft.com/azure/devops/report/powerbi/odataquery-connect?view=azure-devops
+      - name: "Access database"
+        href: Connectors/AccessDatabase.md
+      - name: "Azure SQL database"
+        href: Connectors/AzureSQLDatabase.md
       - name: "Azure SQL Data Warehouse"
         href: Connectors/AzureSQLDataWarehouse.md
       - name: "Azure SQL database"
