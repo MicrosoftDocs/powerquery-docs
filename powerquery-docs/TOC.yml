@@ -196,6 +196,8 @@
         href: Connectors/AzureSQLDataWarehouse.md
       - name: "Azure SQL database"
         href: Connectors/AzureSQLDatabase.md
+      - name: "Common Data Service"
+        href: Connectors/CommonDataService.md
       - name: "Data Lake Storage"
         href: Connectors/DataLakeStorage.md
       - name: "Excel"

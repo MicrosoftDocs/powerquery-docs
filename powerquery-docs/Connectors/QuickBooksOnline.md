@@ -65,6 +65,17 @@ To connect to QuickBooks Online:
 
    ![Select QuickBooks tables](media/quickbooks-online/qb-navigator-window.png)
 
+## Known issues
+
+Beginning on August 1, 2020, Intuit will no longer support Microsoft Internet Explorer 11 (IE 11) for QuickBooks Online. When you use OAuth2 for authorizing QuickBooks Online, after August 1, 2020, only the following browsers will be supported:
+
+* Microsoft Edge
+* Mozilla Firefox
+* Google Chrome
+* Safari 11 or newer (Mac only)
+
+For more information, see [Alert: Support for IE11 deprecating on July 31, 2020 for Authorization screens](https://blogs.intuit.com/blog/2020/06/27/alert-support-for-ie11-deprecating-on-july-31-2020-for-authorization-screens/).
+
 ## Next steps
 
 * [QuickBooks Power BI integration](https://powerbi.microsoft.com/integrations/quickbooks-online/)
