@@ -19,7 +19,7 @@ Products: Power BI Desktop
 
 Authentication Types Supported: Google Account
 
-Function Reference Documentation: [GoogleAnalytics.Accounts](https://docs.microsoft.com/en-us/powerquery-m/googleanalytics-accounts)
+Function Reference Documentation: [GoogleAnalytics.Accounts](https://docs.microsoft.com/powerquery-m/googleanalytics-accounts)
 
 ## Prerequisites
 Before you can sign in to Google Analytics, you must have an Google Analytics account (username/password).
@@ -65,3 +65,31 @@ You can **Load** the selected table, which brings the entire table into Power BI
 
 ![Load or transform data](./media/adobe-analytics/button-select.png)
 
+## Limitations and issues
+
+You should be aware of the following limitations and issues associated with accessing Adobe Analytics data.
+
+### Google Ananlytics quota limits for Power BI
+
+The standard limitations and quotas for Google Analytics AP requests is documented in [Limits and Quotas on API Requests](https://developers.google.com/analytics/devguides/config/mgmt/v3/limits-quotas). However, Power Query Desktop and Power Query Service allow you to use the following enhanced number of queries. 
+
+Power BI Desktop:
+* Queries per day&mdash;250,000
+* Queries per 100 seconds&mdash;2,000
+
+Power BI Service:
+* Queries per day&mdash;1,500,000
+* Queries per 100 seconds&mdash;4,000
+
+## Troubleshooting
+
+### Fixing time-slice errors
+
+## Next steps
+
+* [Google Analytics Dimensions & Metrics Explorer](https://ga-dev-tools.appspot.com/dimensions-metrics-explorer/)
+* [Google Analytics Core Reporting API](https://developers.google.com/analytics/devguides/reporting/core/v3/)
+
+
+
+ 
