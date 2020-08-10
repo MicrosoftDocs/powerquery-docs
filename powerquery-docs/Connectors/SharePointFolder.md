@@ -97,3 +97,11 @@ In some cases, you might have multiple folders on your SharePoint site containin
 
 For more information about combining files, see [Combine files in Power Query](../combinefiles.md).
 
+### Filename special characters
+
+If a filename contains certain special characters, it may lead to authentication errors due to the filename being truncated in the URL. If you are getting unusual authentication errors, make sure that all of the filenames you're using don't contain any of the following special characters.
+
+`# % $`
+
+If these characters are present in the filename, the file owner must rename the file so that it does NOT contain any of these characters.
+
