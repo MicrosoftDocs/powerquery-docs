@@ -95,7 +95,7 @@ In some cases, you might have multiple folders on your SharePoint site containin
 
 4. Once you've removed all the unnecessary files, select **Combine Files** from the **Home** ribbon to combine the data from all of the remaining files.
 
-For more information about combining files, see [Combine files in Power Query](../combinefiles.md).
+For more information about combining files, see [Combine files in Power Query](../combine-files-overview.md).
 
 ### Filename special characters
 
