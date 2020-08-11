@@ -83,9 +83,71 @@ Power BI Service:
 
 ## Troubleshooting
 
-### Fixing time-slice errors
+### Validating Unexpected Data
 
-[Query Diagnostics](../RecordingQueryDiagnostics.md#diagnose-step)
+In some cases users may discover that the data they're seeing in the Google Analytics connector isn't what they expect. This is especially common with very large date ranges, which the Google Analytics connector will retrieve by default, and the Google Analytics has some limitations around.
+
+To make sure that the data you're seeing is the same as you would get from Google Analytics, you can execute the query yourself in their interactive tool. To understand what data Power Query is retrieving, you can use [Query Diagnostics](../RecordingQueryDiagnostics.md#diagnose-step) to understand what query parameters are being sent to Google Analytics.
+
+ If you follow the instructions for Query Diagnostics and run 'Diagnose Step' on any 'Added Items', you can see the generated results in the Diagnostics 'Data Source Query' column. We recommend running this with as few additional operations as possible on top of your initial connection to Google Analytics, to make sure you're not losing data in a Power Query transform rather than what's being retrieved from Google Analytics.
+ 
+Depending on your query, it may not be in the same place, but for a simple Google Analytics only query you will generally see it as the last row that has content in that column.
+ 
+In the 'Data Source Query' column, you'll find a record with the following pattern:
+
+```
+Request:
+GET https://www.googleapis.com/analytics/v3/data/ga?ids=ga:<GA Id>&metrics=ga:users&dimensions=ga:source&start-date=2009-03-12&end-date=2020-08-11&start-index=1&max-results=1000&quotaUser=<User>%40gmail.com HTTP/1.1
+
+<Content placeholder>
+
+Response:
+HTTP/1.1 200 OK
+Content-Length: -1
+
+<Content placeholder>
+```
+From this you can see we have our [Analytics view (profile) ID](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#ids), our list of [metrics](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#metrics) (here, just ga:users), our list of [dimensions](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#dimensions) (here, just referral source), the [start-date](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#startDate) and [end-date](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#endDate), the [start-index](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#startIndex), [max-results](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#maxResults) (set to 1000 for the editor by default), and the [quotaUser](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#quotaUser).
+
+You can copy these values into the [Google Analytics Query Explorer](https://ga-dev-tools.appspot.com/query-explorer/) to validate that the same data you're seeing returned by your query is also being returned by the API.
+
+If your error is around a date range, you can easily fix it. Go into the Advanced Editor. You will have an M query that looks like (at minimum - there may be other transforms on top of it) something like this.
+
+```
+let
+    Source = GoogleAnalytics.Accounts(),
+    #"<ID>" = Source{[Id="<ID>"]}[Data],
+    #"UA-<ID>-1" = #"<ID>"{[Id="UA-<ID>-1"]}[Data],
+    #"<View ID>" = #"UA-<ID>-1"{[Id="<View ID>"]}[Data],
+    #"Added Items" = Cube.Transform(#"<View ID>",
+        {
+            {Cube.AddAndExpandDimensionColumn, "ga:source", {"ga:source"}, {"Source"}},
+            {Cube.AddMeasureColumn, "Users", "ga:users"}
+        })
+in
+    #"Added Items"
+```
+
+You can do one of two things. If you have a Date column, you can filter on the Date. This is the easier option - if you don't care about breaking it up by date, you can Group afterwards.
+
+If you don't have a Date column, you can manually manipulate the query in the Advanced Editor to add one and filter on it. For example.
+
+```
+   let
+      Source = GoogleAnalytics.Accounts(),
+      #"<ID>" = Source{[Id="<ID>"]}[Data],
+      #"UA-<ID>-1" = #"<ID>"{[Id="UA-<ID>-1"]}[Data],
+      #"<View ID>" = #"UA-<ID>-1"{[Id="<View ID>"]}[Data],
+      #"Added Items" = Cube.Transform(#"<View ID>",
+          {
+              {Cube.AddAndExpandDimensionColumn, "ga:date", {"ga:date"}, {"Date"}},
+              {Cube.AddAndExpandDimensionColumn, "ga:source", {"ga:source"}, {"Source"}},
+              {Cube.AddMeasureColumn, "Organic Searches", "ga:organicSearches"}            
+         }),
+      #"Filtered Rows" = Table.SelectRows(#"Added Items", each [Date] >= #date(2019, 9, 1) and [Date] <= #date(2019, 9, 30))
+   in
+      #"Filtered Rows"
+```
 
 ## Next steps
 
