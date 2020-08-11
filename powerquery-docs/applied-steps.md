@@ -88,7 +88,7 @@ Alternatively, or to move more than a single position, drag and drop the step to
 ![Applied steps drag and drop step](images/applied-steps-drag-and-drop-step.png)
 
 ## Extract the previous steps into query
-It can help to separate a series of transformations into a different query. To extract all the previous steps into a new query, right click the first step you do *not* want to include in the query and select **Extract Previous**.
+It can help to separate a series of transformations into a different query. This allows the query to be referenced for other sources which can be helpful if you are trying to apply the same transformation to multiple datasets. To extract all the previous steps into a new query, right click the first step you do *not* want to include in the query and select **Extract Previous**.
 
 ![Applied steps extract previous](images/applied-steps-extract-previous.png)
 
