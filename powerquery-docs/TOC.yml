@@ -234,6 +234,8 @@
         href: Connectors/SalesforceObjects.md
       - name: "Salesforce Reports"
         href: Connectors/SalesforceReports.md
+      - name: "SharePoint Folder"
+        href: Connectors/SharePointFolder.md
       - name: "SharePoint List"
         href: Connectors/SharePointList.md
       - name: "SharePoint Online List"
