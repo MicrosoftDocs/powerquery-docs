@@ -85,6 +85,8 @@ To move a step down one position in the list, right click the step and select **
 
 Alternatively, or to move more than a single position, drag and drop the step to the desired location.
 
+![Applied steps drag and drop step](images/applied-steps-drag-and-drop-step.png)
+
 ## Extract the previous steps into query
 It can help to separate a series of transformations into a different query. To extract all the previous steps into a new query, right click the first step you do *not* want to include in the query and select **Extract Previous**.
 
