@@ -9,10 +9,11 @@ ms.author: v-miesco
 ---
 # Using parameters
 
-A parameter serves as way to easily store and manage a value that can be reused in one or multiple transformation arguments.
+A parameter serves as way to easily store and manage a value that can be reused.
 
-Transformations in Power Query can require none or many arguments to be entered by the user. 
-For example, when using the *Keep top rows* transformations as showcased in the [Filter by row position](filter-row-position.md) article where you have to enter a numeric value in the *Number of rows* argument. A parameter can help you centralize and easily manage that numeric value not only in one transformation, but in as many transformations as you may need.
+Transformations in Power Query can require arguments to be entered by the user. 
+
+One example where you can use parameters is for the *Keep top rows* transformations as showcased in the [Filter by row position](filter-row-position.md) article where you have to enter a numeric value in the *Number of rows* argument. A parameter can help you centralize and easily manage that numeric value not only in one transformation, but in as many transformations or data source functions as you may need.
 
 ![Example of where a parameter could be of use](images/me-parameters-keep-top-rows.png)
 
@@ -24,12 +25,12 @@ You can easily manage your parameters inside the **Manage Parameters** window. Y
 
 Power Query provides two easy ways to create parameters:
 
-* **From an existing query** - You can easily right-click a query which output is a non-structured value such as, but not limited to, a date, text, number, and select the option to **Convert to Parameter**.
+* **From an existing query** - You can easily right-click a query whose output is a non-structured value such as, but not limited to, a date, text, number, and select **Convert to Parameter**.
     
 ![Convert to parameter](images/me-parameters-convert-to-parameter.png)
 
 >[!NOTE]
->You can also convert a parameter to a query by right-clicking the parameter and then selecting the option to **Convert To Query** as shown in the image below.
+>You can also convert a parameter to a query by right-clicking the parameter and then selecting **Convert To Query** as shown in the image below.
 >
 >![Convert to query](images/me-parameters-convert-to-query.png)
 
@@ -47,17 +48,20 @@ A parameter stores a value that can be used for transformations in Power Query. 
 * **Description** - The description is displayed next to the parameter name when parameter information is displayed, helping users who are specifying the parameter value to understand its purpose, and its semantics.
 * **Required** - The checkbox indicates whether subsequent users can specify whether a value for the **Current Value** component of the parameter must be provided.
 * **Type** - It is highly recommended that you always set up the data type of your parameter. You can learn more about the importance of data types from the article [Data types](data-types.md).
-* **Suggested Values** - Provides the user with options to select a value for the **Current Value** from the available options:
+* **Suggested Values** - Provides the user with suggestions to select a value for the **Current Value** from the available options:
     * *Any value* - The current value can be any manually entered value. 
     * *List of values* - Provides you with a simple table-like experience so you can define a list of suggested values that you can later select from for the **Current Value**. When this option is selected a new option called *Default Value* will be available where you can select what should be the default value for this parameter, which will be the default value shown to the user when referencing the parameter. This is not to be confused with the **Current Value**, which is the value that is stored inside the Parameter and can be passed as an argument in transformations. Using this option will enable a drop-down menu to be displayed in the *Default Value* and **Current Value** fields where you can pick one of the values from the suggested list of values.
 
     ![Parameter with a suggest list of values](images/me-parameters-list-of-values.png)
 
+    >[!NOTE]
+    > You can still manually type any value that you want to pass to the parameter. The list of suggested values only serves as simple suggestions.
+    
     * *Query* - Uses a list query (a query whose output is a list) to provide the list of suggested values that you can later select for the **Current Value**.
 
     ![Parameter with list query](images/me-parameters-query.png)
 
-* **Current Value** - The value that will be stored with this parameter.
+* **Current Value** - The value that will be stored in this parameter.
 
 ## Where to use parameters
 
@@ -88,7 +92,7 @@ You can go to the **Orders** query, and in the Margin field select the filter op
 
 ![Greater than filter option for Margin field](images/me-parameters-step-argument-sample-parameter-greater-than.png)
 
-In the Filter rows window, you will see a button with a data type for the field selected. You can click this button to display a dropdown menu in which you can select the option to use a Parameter. From the field selection right next to it, you can select the parameter that you want to pass to this argument. In this case, it's the *Minimum Margin* parameter.
+In the Filter rows window, you will see a button with a data type for the field selected. You can click this button to display a dropdown menu in which you can select to use a Parameter. From the field selection right next to it, you can select the parameter that you want to pass to this argument. In this case, it's the *Minimum Margin* parameter.
 
 ![Select parameter for transformation argument](images/me-parameters-step-argument-sample-parameter-select-parameter.png)
 
@@ -105,7 +109,7 @@ You can modify the **Current Value** of your *Minimum Margin* parameter to be 0.
 
 ### Custom Function argument
 
-With Power Query, you can create a Custom Function from an existing query with a simple click. Following the previous example, you can right-click the **Orders** query and select the option to *Create Function...* which will launch a new *Create Function* window where you can name your new function and it will tell you the Parameters being referenced in your query. These Parameters will be used as the Parameters for the Custom Function.
+With Power Query, you can create a Custom Function from an existing query with a simple click. Following the previous example, you can right-click the **Orders** query and select *Create Function...* which will launch a new *Create Function* window where you can name your new function and it will tell you the Parameters being referenced in your query. These Parameters will be used as the Parameters for the Custom Function.
 
 ![Create Function](images/me-parameters-create-function.png)
 
