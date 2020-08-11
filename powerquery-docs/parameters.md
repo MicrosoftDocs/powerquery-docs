@@ -46,7 +46,7 @@ A parameter stores a value that can be used for transformations in Power Query. 
 
 * **Name** - Provide a name for this parameter that lets you easily recognize and differentiate it from other parameters you might create.
 * **Description** - The description is displayed next to the parameter name when parameter information is displayed, helping users who are specifying the parameter value to understand its purpose, and its semantics.
-* **Required** - The checkbox indicates whether subsequent users can specify whether a value for the **Current Value** component of the parameter must be provided.
+* **Required** - The checkbox indicates whether subsequent users can specify whether a value for the parameter must be provided.
 * **Type** - It is highly recommended that you always set up the data type of your parameter. You can learn more about the importance of data types from the article [Data types](data-types.md).
 * **Suggested Values** - Provides the user with suggestions to select a value for the **Current Value** from the available options:
     * *Any value* - The current value can be any manually entered value. 
@@ -66,12 +66,12 @@ A parameter stores a value that can be used for transformations in Power Query. 
 ## Where to use parameters
 
 A parameter can be used in many different ways, but it is more commonly used in two scenarios:
-* **Transformation step argument** - With the use of the User Interface you can use a parameter as the argument of multiple transformations driven from the User Interface.
+* **Step argument** - With the use of the User Interface you can use a parameter as the argument of multiple transformations driven from the User Interface.
 * **Custom Function argument** - You can create a new function from a query and reference parameters as the arguments of your custom function.
 
 In the next sections, you'll see an example for these two scenarios.
 
-### Transformation step argument
+### Step argument
 
 To enable this feature, first go to the *View* tab in the Power Query Editor and enable the *Always allow* option in the Parameters group.
 
