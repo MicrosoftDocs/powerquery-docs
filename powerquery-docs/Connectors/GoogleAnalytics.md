@@ -85,7 +85,7 @@ Power BI Service:
 
 ### Fixing time-slice errors
 
-[Query Diagnostics](././RecordingQueryDiagnostics.md#diagnose-step)
+[Query Diagnostics](../RecordingQueryDiagnostics.md#diagnose-step)
 
 ## Next steps
 
