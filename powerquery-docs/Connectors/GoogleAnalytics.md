@@ -85,6 +85,8 @@ Power BI Service:
 
 ### Fixing time-slice errors
 
+[Query Diagnostics](././RecordingQueryDiagnostics.md#diagnose-step)
+
 ## Next steps
 
 * [Google Analytics Dimensions & Metrics Explorer](https://ga-dev-tools.appspot.com/dimensions-metrics-explorer/)
