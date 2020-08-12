@@ -85,7 +85,7 @@ Power BI Service:
 
 ### Validating Unexpected Data
 
-In some cases, you may discover that the data you're seeing in the Google Analytics connector isn't what you expect. This is especially common with very large date ranges, which the Google Analytics connector will retrieve by default, and that Google Analytics has some limitations around.
+When date ranges are very large, Google Analytics will return only a subset of values. You can use the below process to understand what dates are being retrieved, and manually edit them. If you need more data, you can append multiple queries with different date ranges. If you're not sure you're getting back the data you expect to see, you can also use [Data Profiling](../data-profiling-tools.md) to get a quick look at what's being returned.
 
 To make sure that the data you're seeing is the same as you would get from Google Analytics, you can execute the query yourself in their interactive tool. To understand what data Power Query is retrieving, you can use [Query Diagnostics](../RecordingQueryDiagnostics.md#diagnose-step) to understand what query parameters are being sent to Google Analytics.
 
