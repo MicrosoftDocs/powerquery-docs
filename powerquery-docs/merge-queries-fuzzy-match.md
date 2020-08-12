@@ -78,5 +78,4 @@ You can go back to the **Merge** window and in **Fuzzy matching options**, chang
 ![Fuzzy merge with transformation table](images/me-merge-fuzzy-matching-custom-merge-window.png)
 
 After you select **OK**, you'll reach the desired output with all values mapped correctly. Note how the example started with nine distinct values, but after the fuzzy merge there are only four distinct values.
-
 ![Sample output table](images/me-merge-fuzzy-matching-sample-output-table.png)

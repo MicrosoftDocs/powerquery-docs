@@ -17,7 +17,6 @@ You'll be using the **Queries Pane** to navigate through the queries.
 
 ![Queries Pane Basic](images/queries-pane-basic.png)
 
-
 ## Navigating with the queries pane
 
 The most basic usage of the **Queries Pane** is to navigate to all of the queries.
@@ -108,8 +107,8 @@ This option functions the same as the **Get Data** feature located on the Ribbon
 
 ![Queries Pane New Query](images/queries-pane-new-query.png)
 
->[!Note]
->If you would like to learn more about **Get Data** and importing data into Power Query, 
+> [!NOTE]
+> If you would like to learn more about **Get Data** and importing data into Power Query, 
 [look here.](https://docs.microsoft.com/power-query/get-data-experience)
 
 ### Merge queries
@@ -117,12 +116,17 @@ You can open the *Merge queries* input screen when you select the **Merge querie
 
 This option functions the same as the **Merge queries** feature located on the Ribbon and in other areas of the editor. 
 
->[!Note]
+
+>[!NOTE]
 >If you would like to learn more about merging queries, [look here.](https://docs.microsoft.com/power-query/merge-queries-overview)
 
 ### New parameter
 You can open the *New parameter* input screen when you select the **New parameter** option from the context menu. 
 This option functions the same as the **New parameter** feature located on the Ribbon.
+
+> [!NOTE]
+> If you would like to learn more about **Parameters** in Power Query you can read the article on [Using parameters](parameters.md).
+
 
 
 ### New group
