@@ -9,27 +9,27 @@
       - name: "Getting data"
         href: get-data-experience.md
       - name: "Authentication with a data source"
-        href: ConnectorAuthentication.md  
+        href: ConnectorAuthentication.md 
+    - name: "JESAMI's articles"
+      items:
+      - name: "Using the Applied steps list"
+        href: applied-steps.md
+      - name: "Understanding the queries pane"
+        href: queries-pane.md
+      - name: "Share a query"
+        href: share-query.md
+      - name: "Parse text as JSON or XML"
+        href: parse-json-xml.md
+      - name: "Using parameters"
+        href: parameters.md
+      - name: "Custom Functions"
+        href: custom-function.md
     - name: Transform data
       items:
       - name: "Use Power Query"
         href: power-query-quickstart-using-power-bi.md
       - name: "Shape and combine data"
         href: power-query-tutorial-shape-combine.md
-      - name: "JESAMI's articles"
-        items:
-        - name: "Using the Applied steps list"
-          href: applied-steps.md
-        - name: "Understanding the queries pane"
-          href: queries-pane.md
-        - name: "Share a query"
-          href: share-query.md
-        - name: "Parse text as JSON or XML"
-          href: parse-json-xml.md
-        - name: "Using parameters"
-          href: parameters.md
-        - name: "Custom Functions"
-          href: custom-function.md
       - name: Transform table
         items:
         - name: "Promote or demote column headers"
