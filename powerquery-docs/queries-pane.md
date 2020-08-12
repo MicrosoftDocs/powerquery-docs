@@ -22,20 +22,83 @@ You'll be using the **Queries Pane** to navigate through the queries.
 The most basic usage of the **Queries Pane** is to navigate to all of the queries.
 The navigation is similar to a file explorer. To switch between the queries, just select the query that you want to go to.
 
-## Actions in the query pane
+There are also different actions between the online versus desktop Power Query Desktop editors.
 
-There are some key actions that you can do in the queries pane given what is necessary for you. These actions are *New query*, *Merge queries*, *New parameter*, *New group*, and *Paste*. 
+## Basic actions in the query pane
+
+Similar to features throughout the Ribbon and the editor, the context menu on a query can allow you to make transformations directly onto the query.
 
 To reach these actions, open the context menu (the right-click menu) on the query pane box.
 
-![Queries Pane Context Menu](images/queries-pane-context-menu.png)
+Differences between online and desktop:
 
-### Paste
-Paste can be used when you have a copied query to place into the Power Query editor.
+- Power Query Online
+
+  ![Queries Pane Context Menu on Query](images/queries-pane-context-menu-on-query.png)
+
+- Power Query Desktop
+
+  ![Queries Pane Context Menu on Query Desktop](images/queries-pane-context-menu-on-query-desktop.png)
+
+For the sake of being more comprehensive, we will be touching on all of the context menu actions that are relevant for either.
+
+### Rename a query
+To directly change the name of the query, double-select on the name of the query. This action will allow you to immediately change the name.
+
+Other options to rename the query are:
+- Go to the context menu and select **Rename**
+
+  ![Queries Settings Rename](images/queries-settings-rename.png)
+
+- Go to the **Query Settings** and enter in a different name in the **Name** input field.
+ 
+  ![Queries Pane On Query Rename](images/queries-pane-on-query-rename.png)
+
+### Delete a query
+To delete a query, open the context pane on the query and select **Delete**.
+There will be an additional pop-up confirming the deletion. To finalize the deletion, select the *Delete* button.
+
+![Queries Pane On Query Delete](images/queries-pane-on-query-delete.png)
+
+### Duplicating a query
+Duplicating a query will create a copy of the query you are selecting. 
+
+To duplicate your query, open the context pane on the query and select **Duplicate**. A new duplicate query will pop up on the side of the query pane.
+
+![Queries Pane Duplicate](images/queries-pane-on-query-duplicate.png)
+
+### Referencing a query
+Referencing a query will create new query to use the steps of a pervious query without having to duplicate the query. Additionally, any changes on the original query will transfer down to the referenced query.
+
+To duplicate your query, open the context pane on the query and select **Reference**. A new referenced query will pop up on the side of the query pane.
+
+![Queries Pane Reference](images/queries-pane-on-query-reference.png)
+
+### Copy and Paste
+Copy and Paste can be used when you have a copied query to place into the Power Query editor.
 
 >[!NOTE]
->If you would like to learn more about **Get Data** and importing data into Power Query, 
-[look here.](https://docs.microsoft.com/power-query/get-data-experience)
+>If you would like to learn more about how to share and copy and paste queries, 
+[look here.](placeholder -)
+
+
+## Context pane actions in the query pane
+
+There are some context pane key actions that you can do in the queries pane given what is necessary for you. These actions are *New query*, *Merge queries*, *New parameter*, *New group*. 
+
+To reach these actions, open the context menu (the right-click menu) on the query pane box.
+
+Differences between online and desktop:
+
+- Power Query Online
+
+  ![Queries Pane Context Menu Online](images/queries-pane-context-menu.png)
+
+- Power Query Desktop
+
+  ![Queries Pane Context Menu Desktop](images/queries-pane-context-menu-desktop.png)
+
+And once again, for the sake of being more comprehensive, we will be touching on all of the context menu actions that are relevant for either.
 
 ### New query
 You can import data into the Power Query editor as an option from the context menu.
@@ -44,13 +107,15 @@ This option functions the same as the **Get Data** feature located on the Ribbon
 
 ![Queries Pane New Query](images/queries-pane-new-query.png)
 
->[!NOTE]
->If you would like to learn more about sharing queries, read the article on [Share queries](share-queries.md).
+> [!NOTE]
+> If you would like to learn more about **Get Data** and importing data into Power Query, 
+[look here.](https://docs.microsoft.com/power-query/get-data-experience)
 
 ### Merge queries
 You can open the *Merge queries* input screen when you select the **Merge queries** option from the context menu. 
 
 This option functions the same as the **Merge queries** feature located on the Ribbon and in other areas of the editor. 
+
 
 >[!NOTE]
 >If you would like to learn more about merging queries, [look here.](https://docs.microsoft.com/power-query/merge-queries-overview)
@@ -59,8 +124,9 @@ This option functions the same as the **Merge queries** feature located on the R
 You can open the *New parameter* input screen when you select the **New parameter** option from the context menu. 
 This option functions the same as the **New parameter** feature located on the Ribbon.
 
->[!NOTE]
->If you would like to learn more about **Parameters** in Power Query you can read the article on [Using parameters](parameters.md).
+> [!NOTE]
+> If you would like to learn more about **Parameters** in Power Query you can read the article on [Using parameters](parameters.md).
+
 
 
 ### New group
@@ -80,11 +146,4 @@ The move will look like below. Using the same steps as above, you can also move 
 
 ![Queries Pane Moved Into](images/queries-pane-moved-into-group.png)
 
-
-## Actions on the queries
-
-Similar to features throughout the Ribbon and the editor, the context menu on a query can allow you to make transformations directly onto the query.
-
-The options in the menu below are more functional rather than for prepping the data.
-
-![Queries Pane Context Menu on Query](images/queries-pane-context-menu-on-query.png)
+In desktop versions of Power Query, you can also drag and drop the queries into the folders.
