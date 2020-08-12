@@ -11,9 +11,9 @@ ms.author: v-miesco
 
 A parameter serves as way to easily store and manage a value that can be reused.
 
-Transformations in Power Query can require arguments to be entered by the user. 
+Builder dialogs in Power Query can require arguments to be entered by the user. The builder dialogs can choose a parameter to be used for an argument.
 
-One example where you can use parameters is for the *Keep top rows* transformations as showcased in the [Filter by row position](filter-row-position.md) article where you have to enter a numeric value in the *Number of rows* argument. A parameter can help you centralize and easily manage that numeric value not only in one transformation, but in as many transformations or data source functions as you may need.
+One builder dialog example where you can use parameters is for the *Keep top rows* transformations as showcased in the [Filter by row position](filter-row-position.md) article where you have to enter a numeric value in the *Number of rows* argument. A parameter can help you centralize and easily manage that numeric value not only in one transformation, but in as many transformations or data source functions as you may need.
 
 ![Example of where a parameter could be of use](images/me-parameters-keep-top-rows.png)
 
