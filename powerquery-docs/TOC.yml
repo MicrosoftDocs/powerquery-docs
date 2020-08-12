@@ -10,7 +10,7 @@
         href: get-data-experience.md
       - name: "Authentication with a data source"
         href: ConnectorAuthentication.md 
-    - name: "JESAMI's articles"
+    - name: "Articles for review"
       items:
       - name: "Using the Applied steps list"
         href: applied-steps.md
