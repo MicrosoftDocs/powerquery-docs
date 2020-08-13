@@ -1,6 +1,6 @@
 ---
 title: "Getting data"
-description: "Complete overview of the Power Query Get Data experience and all of its components such as connector parameters, authentication, navigation table, and Query destination."
+description: "Complete overview of the Power Query Get Data experience and all of its components, such as connection settings, authentication, data preview, and query destination."
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: v-douklo
@@ -12,7 +12,7 @@ ms.author: v-miesco
 
 Power Query can connect to many different data sources so you can work with the data you need. This article walks you through the steps for bringing in data to Power Query. 
 
-When connecting to a data source with Power Query, the process will follow a set of steps or stages before landing the data at a destination, whether the destination is a table or the Power Query Editor window. This article describes the set of steps or stages to better understand how things work with Power Query.
+Connecting to a data source with Power Query follows a standard set of stages before landing the data at a destination. This article describes each of these stages.
 
 >[!Note] 
 >In some cases, a connector might have all of these stages, and in other cases a connector might have just a few of them. For more information about the experience of a specific connector, visit the documentation available for the connector.
