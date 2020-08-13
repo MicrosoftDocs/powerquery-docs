@@ -83,7 +83,7 @@ These input parameters are:
 
 * Top&mdash;filter the data based on the top items for the dimension. You can enter a value in the **Top** text box, or select the ellipsis next to the text box to select some default values. By default, all items are selected.
 
-* Dimension&mdash;filter the data based on the selected dimension. By default, all dimensions are selected. Custom Adobe dimension filters are not currently supported in the Power Query user interface, but can be defined by hand as M parameters in the query. For more information, see [Using Query Parameters in Power BI Desktop](power-query-query-parameters.md).
+* Dimension&mdash;filter the data based on the selected dimension. By default, all dimensions are selected. Custom Adobe dimension filters are not currently supported in the Power Query user interface, but can be defined by hand as M parameters in the query. For more information, see [Using Query Parameters in Power BI Desktop](../power-query-query-parameters.md).
 
 ## Limitations and issues
 
