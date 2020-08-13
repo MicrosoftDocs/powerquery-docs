@@ -36,7 +36,7 @@ To connect to Adobe Analytics data:
 
    ![Get Data from Adobe Analytics](./media/adobe-analytics/get-aa-data.png)
 
-2. If this is the first time you're getting data through the Adobe Analytics connector, a third party notice will be displayed. Select **Don't warn me again with this connector** if you don't want this message to be displayed again, and then select **Continue**.
+2. If this is the first time you're getting data through the Adobe Analytics connector, a third-party notice will be displayed. Select **Don't warn me again with this connector** if you don't want this message to be displayed again, and then select **Continue**.
 
 3. To sign in to your Adobe Analytics account, select **Sign in**.
 
@@ -53,7 +53,7 @@ To connect to Adobe Analytics data:
 
    ![Enter your password](./media/adobe-analytics/enter-password.png)
 
-6. Once you have successfully signed in, select **Connect**.
+6. Once you've successfully signed in, select **Connect**.
 
    ![Signed in and ready to connect](./media/adobe-analytics/signed-in.png)
 
@@ -83,7 +83,7 @@ These input parameters are:
 
 * Top&mdash;filter the data based on the top items for the dimension. You can enter a value in the **Top** text box, or select the ellipsis next to the text box to select some default values. By default, all items are selected.
 
-* Dimension&mdash;filter the data based on the selected dimension. By default, all dimensions are selected. Custom Adobe dimension filters are not currently supported in the Power Query user interface, but can be defined by hand as M parameters in the query. For more information, see **Fill in with info from Miguel**
+* Dimension&mdash;filter the data based on the selected dimension. By default, all dimensions are selected. Custom Adobe dimension filters are not currently supported in the Power Query user interface, but can be defined by hand as M parameters in the query. For more information, see [Using Query Parameters in Power BI Desktop](power-query-query-parameters.md).
 
 ## Limitations and issues
 
