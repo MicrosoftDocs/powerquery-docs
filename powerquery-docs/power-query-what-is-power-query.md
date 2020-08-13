@@ -46,8 +46,8 @@ Currently there are two Power Query experiences available:
 * **Power Query Online**&mdash;Found in integrations such as Power BI dataflows, Power Platform dataflows, Azure Data Factory wrangling dataflows, and many more that provide the experience through an online webpage.
 * **Power Query for Desktop**&mdash;Found in integrations such as Power Query for Excel and Power BI Desktop. 
 
->[!Note]
->While these two experiences exist, they both provide almost the same user experience in every scenario.
+> [!NOTE]
+> While these two experiences exist, they both provide almost the same user experience in every scenario.
 
 ## Transformations
 
@@ -63,7 +63,7 @@ To learn more about data transformations using Power Query, see [Quickstart - us
 
 Power Query can be used in many products, such as Power BI and Excel. However, using Power Query inside a specific product limits its usage to only within that specific product. Dataflows are a service version of the Power Query experience. Using dataflows, you can get data and transform the data in the same way. But instead of sending the output to Power BI or Excel, you can store the output in other storage options, such as Common Data Services and Azure Data Lake Storage Gen2. This storage option will let you use the output of dataflows in other products and services. Dataflows are a product-agnostic Power Query service that runs in the cloud.
 
-To learn more about dataflows, see [What are dataflows?](dataflows/overview-dataflows-across-power-platform-dynamics-365.md).
+To learn more about dataflows, see [What are dataflows?](dataflows/overview-dataflows-across-power-platform-dynamics-365.md)
 
 ## The Power Query Formula Language (M)
 
