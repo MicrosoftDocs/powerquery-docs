@@ -85,13 +85,13 @@ Power BI Service:
 
 ### Validating Unexpected Data
 
-When date ranges are very large, Google Analytics will return only a subset of values. You can use the below process to understand what dates are being retrieved, and manually edit them. If you need more data, you can append multiple queries with different date ranges. If you're not sure you're getting back the data you expect to see, you can also use [Data Profiling](../data-profiling-tools.md) to get a quick look at what's being returned.
+When date ranges are very large, Google Analytics will return only a subset of values. You can use the process described in this section to understand what dates are being retrieved, and manually edit them. If you need more data, you can append multiple queries with different date ranges. If you're not sure you're getting back the data you expect to see, you can also use [Data Profiling](../data-profiling-tools.md) to get a quick look at what's being returned.
 
-To make sure that the data you're seeing is the same as you would get from Google Analytics, you can execute the query yourself in their interactive tool. To understand what data Power Query is retrieving, you can use [Query Diagnostics](../RecordingQueryDiagnostics.md#diagnose-step) to understand what query parameters are being sent to Google Analytics.
+To make sure that the data you're seeing is the same as you would get from Google Analytics, you can execute the query yourself in Google's interactive tool. To understand what data Power Query is retrieving, you can use [Query Diagnostics](../RecordingQueryDiagnostics.md#diagnose-step) to understand what query parameters are being sent to Google Analytics.
 
- If you follow the instructions for Query Diagnostics and run **Diagnose Step** on any **Added Items**, you can see the generated results in the Diagnostics **Data Source Query** column. We recommend running this with as few additional operations as possible on top of your initial connection to Google Analytics, to make sure you're not losing data in a Power Query transform rather than what's being retrieved from Google Analytics.
+If you follow the instructions for Query Diagnostics and run **Diagnose Step** on any **Added Items**, you can see the generated results in the Diagnostics **Data Source Query** column. We recommend running this with as few additional operations as possible on top of your initial connection to Google Analytics, to make sure you're not losing data in a Power Query transform rather than what's being retrieved from Google Analytics.
  
-Depending on your query, the row containing the emitted API call to Google Analytics may not be in the same place, but for a simple Google Analytics only query you'll generally see it as the last row that has content in that column.
+Depending on your query, the row containing the emitted API call to Google Analytics may not be in the same place. But for a simple Google Analytics only query, you'll generally see it as the last row that has content in that column.
  
 In the **Data Source Query** column, you'll find a record with the following pattern:
 
@@ -107,7 +107,7 @@ Content-Length: -1
 
 <Content placeholder>
 ```
-From this you can see you have your [Analytics view (profile) ID](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#ids), your list of [metrics](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#metrics) (in this case, just `ga:users`), your list of [dimensions](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#dimensions) (in this case, just referral source), the [start-date](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#startDate) and [end-date](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#endDate), the [start-index](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#startIndex), [max-results](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#maxResults) (set to 1000 for the editor by default), and the [quotaUser](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#quotaUser).
+From this record, you can see you have your [Analytics view (profile) ID](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#ids), your list of [metrics](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#metrics) (in this case, just `ga:users`), your list of [dimensions](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#dimensions) (in this case, just referral source), the [start-date](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#startDate) and [end-date](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#endDate), the [start-index](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#startIndex), [max-results](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#maxResults) (set to 1000 for the editor by default), and the [quotaUser](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#quotaUser).
 
 You can copy these values into the [Google Analytics Query Explorer](https://ga-dev-tools.appspot.com/query-explorer/) to validate that the same data you're seeing returned by your query is also being returned by the API.
 
@@ -128,9 +128,9 @@ in
     #"Added Items"
 ```
 
-You can do one of two things. If you have a Date column, you can filter on the Date. This is the easier option. If you don't care about breaking it up by date, you can Group afterwards.
+You can do one of two things. If you have a **Date** column, you can filter on the Date. This is the easier option. If you don't care about breaking it up by date, you can Group afterwards.
 
-If you don't have a Date column, you can manually manipulate the query in the Advanced Editor to add one and filter on it. For example.
+If you don't have a **Date** column, you can manually manipulate the query in the Advanced Editor to add one and filter on it. For example.
 
 ```powerquery-m
    let
