@@ -91,7 +91,7 @@ To make sure that the data you're seeing is the same as you would get from Googl
 
  If you follow the instructions for Query Diagnostics and run **Diagnose Step** on any **Added Items**, you can see the generated results in the Diagnostics **Data Source Query** column. We recommend running this with as few additional operations as possible on top of your initial connection to Google Analytics, to make sure you're not losing data in a Power Query transform rather than what's being retrieved from Google Analytics.
  
-Depending on your query, it may not be in the same place, but for a simple Google Analytics only query you'll generally see it as the last row that has content in that column.
+Depending on your query, the row containing the emitted API call to Google Analytics may not be in the same place, but for a simple Google Analytics only query you'll generally see it as the last row that has content in that column.
  
 In the **Data Source Query** column, you'll find a record with the following pattern:
 
