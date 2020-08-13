@@ -63,7 +63,7 @@ To learn more about data transformations using Power Query, see [Quickstart - us
 
 Power Query can be used in many products, such as Power BI and Excel. However, using Power Query inside a specific product limits its usage to only within that specific product. Dataflows are a service version of the Power Query experience. Using dataflows, you can get data and transform the data in the same way. But instead of sending the output to Power BI or Excel, you can store the output in other storage options, such as Common Data Services and Azure Data Lake Storage Gen2. This storage option will let you use the output of dataflows in other products and services. Dataflows are a product-agnostic Power Query service that runs in the cloud.
 
-To learn more about dataflows, see [What are dataflows?](/dataflows/overview-dataflows-across-power-platform-dynamics-365.md).
+To learn more about dataflows, see [What are dataflows?](dataflows/overview-dataflows-across-power-platform-dynamics-365.md).
 
 ## The Power Query Formula Language (M)
 
