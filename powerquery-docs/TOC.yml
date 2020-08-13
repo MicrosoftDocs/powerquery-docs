@@ -188,6 +188,8 @@
         href: Connectors/index.md
       - name: "Connecting to Azure DevOps using OData"
         href: https://docs.microsoft.com/azure/devops/report/powerbi/odataquery-connect?view=azure-devops
+      - name: "Adobe Analytics"
+        href: "Connectors/AdobeAnalytics.md"
       - name: "Access database"
         href: Connectors/AccessDatabase.md
       - name: "Azure SQL database"
@@ -218,6 +220,8 @@
           href: Connectors/FHIR/FHIR-Relationships.md
       - name: "Folder"
         href: Connectors/Folder.md
+      - name: "Google Analytics"
+        href: Connectors/GoogleAnalytics.md
       - name: "JSON"
         href: Connectors/json.md
       - name: "MySQL database"
