@@ -31,6 +31,8 @@ You can find the **Group by** button in three places:
 
 * On the **Home** tab, in the **Transform** group.
 
+:::image type="content" source="images/me-group-by-home-icon.png" alt-text="Group by on the Home tab" index="Group by on the Home tab":::image type="content" source="{source}" alt-text="{alt-text}":::
+
    ![Group by on the Home tab](images/me-group-by-home-icon.png "Group by on the Home tab")
 
 * On the **Transform** tab, in the **Table** group. 
