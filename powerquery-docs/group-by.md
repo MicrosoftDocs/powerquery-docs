@@ -128,7 +128,7 @@ However, you have more control over the fuzzy grouping operation by expanding **
 
 ![Fuzzy group options](images/me-fuzzy-grouping-fuzzy-group-options.png "Fuzzy group options")
 
-:::image type="content" source="images/me-fuzzy-grouping-fuzzy-group-options.png" alt-text="Fuzzy group options" title="Fuzzy group options":::
+:::image type="content" source="images/me-fuzzy-grouping-fuzzy-group-options.png" alt-text="Fuzzy group options":::
 
 The following options are available for fuzzy grouping:
 
