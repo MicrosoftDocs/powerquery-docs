@@ -13,10 +13,10 @@ Lorem
 
 ## Use the best connector for your task
 
-Power Query offers a vast amount of data connectors ranging from data sources such as TXT, CSV and Excel files, to databases such as Microsoft SQL Server and popular SaaS services such as Microsoft Dynamics 365 and Salesforce. 
-If you don't see your data source listed in the *Get Data* window, you can always use an ODBC / OLEDB to your data source. 
+Power Query offers a vast number of data connectors ranging from data sources such as TXT, CSV and Excel files, to databases such as Microsoft SQL Server and popular SaaS services such as Microsoft Dynamics 365 and Salesforce. 
+If you don't see your data source listed in the *Get Data* window, you can always use the ODBC or OLEDB connector to connect to your data source. 
 
-Using the best connector for the task will provide you with the best experience and performance. For example, using the SQL Server connector instead of the ODBC connector when connecting to a SQL Server database will not only provide you with a much better *Get Data* experience, but the SQL Server connector also offers you features that can improve your experience and performace such as query folding. You can read more about query folding from the article [Power Query query folding](power-query-folding.md).
+Using the best connector for the task will provide you with the best experience and performance. For example, using the SQL Server connector instead of the ODBC connector when connecting to a SQL Server database will not only provide you with a much better *Get Data* experience, but the SQL Server connector also offers you features that can improve your experience and performance such as query folding. You can read more about query folding from the article [Power Query query folding](power-query-folding.md).
 
 > [!NOTE]
 > You can see the full list of available connector for Power Query from the article [Connectors in Power Query](Connectors/index.md).
@@ -26,8 +26,22 @@ Each data connector follows a standard experience as explained in the article on
 ![Sample navigator window](images/me-navigator.png)
 
 ## Explore your data
-    * Trying to promote the usage of the Data Profiling tools
-    * We already have an article on this.
+
+It is highly recommended that you enable the data profiling tools when using Power Query to easily discover information about  your data.
+
+![Data preview or data profiling tools in Power Query](images/me-data-preview-tools-enabled-v2.png)
+
+These tools help you better understand your data by providing you with small visualizations that provide you with information on a per column basis such as.
+* **Column quality** - Denotes how many values in the column fall under valid, error, or empty values.
+* **Column distribution**
+* **Column profile** - Provides a more thorough view of your column and the statistics associated to it
+
+You can also interact with these small visualizations to perform transformations on your data.
+
+![Data Quality hover options](images/me-column-quality-hover.png)
+
+You can read more about the data profiling tools from the article [Data profiling tools](data-profiling-tools.md).
+
 ## Filter as early as you can
     * Explain a little bit about query folding and how powerful it is
     * We already got this article and I’m pretty proud of them (let’s make sure we talk about dynamic filters, e.g. “in the previous N days” and others, which come up very frequently and are not easy to discover)
