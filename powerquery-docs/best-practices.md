@@ -87,6 +87,9 @@ You can even use parameters in some of the arguments of the data connectors. For
 
 ![SQL Server database dialog with parameter for server name](images/me-sql-server-parameter.png)
 
+> [!NOTE]
+> You can read more about creating and using parameters from the article [Using parameters](parameters.md).
+
 ## Create groups
 ## Take a modular approach
 Reference queries to decouple transformation phases 
