@@ -32,11 +32,11 @@ It is highly recommended that you enable the data profiling tools when using Pow
 ![Data preview or data profiling tools in Power Query](images/me-data-preview-tools-enabled-v2.png)
 
 These tools help you better understand your data by providing you with small visualizations that provide you with information on a per column basis such as.
-* **Column quality** - Denotes how many values in the column fall under valid, error, or empty values.
-* **Column distribution**
-* **Column profile** - Provides a more thorough view of your column and the statistics associated to it
+* **Column quality** - Provides a small bar chart and three indicators with the representation of how many values in the column fall under the categories of valid, error, or empty values.
+* **Column distribution** - This feature provides a set of visuals underneath the names of the columns that showcases the frequency and distribution of the values in each of the columns.
+* **Column profile** - Provides a more thorough view of your column and the statistics associated to it.
 
-You can also interact with these small visualizations to perform transformations on your data.
+You can also interact with these features which will help you prepare your data.
 
 ![Data Quality hover options](images/me-column-quality-hover.png)
 
