@@ -143,5 +143,5 @@ You could also leverage the use of query referencing as you see fit, but it's a 
 ## Make your query resilient to changes
     * Select columns or Remove columns
 
-## Create reusable transformations
+## Create reusable functions
     * Creating functions through the UI
