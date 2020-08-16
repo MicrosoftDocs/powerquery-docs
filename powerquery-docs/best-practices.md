@@ -106,11 +106,20 @@ Try to give your groups a meaningful name that makes sense to you and your case.
 > [!NOTE]
 > You can read more about all the available features and components found inside the queries pane from the article [Understanding the queries pane](queries-pane.md).
 
+## Document your work 
+It is highly recommmended that you document your queries by renaming or adding a description to your steps, queries, or groups as you see fit. 
+
+While Power Query automatically creates a step name for you in the applied steps pane, you can also rename your steps or add a description to any of them.
+
+![Applied steps pane with documented steps and description added](images/me-documenting.png)
+
+> [!NOTE]
+> You can read more about all the available features and components found inside the applied steps pane from the article [Using the Applied steps list](applied-steps.md).
+
 ## Take a modular approach
 Reference queries to decouple transformation phases 
 (also cover “Extract Previous” option on Steps)
-## Document your work 
-Rename or add a description at a step/query/group level to further understanding your work
+
 ## Always use the correct data types 
 (include “Detect Data Types” shortcut, and the Options to enable/disable type detection locally and globally)
 ## Make your query resilient to changes
