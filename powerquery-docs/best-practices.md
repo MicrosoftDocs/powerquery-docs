@@ -63,11 +63,11 @@ These type-specific filters can help you create a dynamic filter can always retr
 > [!TIP]
 > You can read more about filtering your data based on values from a column from the article [Filter by values](filter-values.md).
 
-## Use parameters to drive dynamic and flexible queries
+## Use parameters 
     * Probably use a text parameter when connecting to a database for the servername or something similar
     * This is why I wanted to cover the “Parameters” article first – makes sense. I still get several pings on this blog post as it seems to cover much more than the documentation article that we currently have, particularly around the parameter binding widgets.
-## Creating groups to stay organized
-## Take a modular approach: reference your queries
+## Create groups
+## Take a modular approach
 Reference queries to decouple transformation phases 
 (also cover “Extract Previous” option on Steps)
 ## Document your work 
@@ -76,10 +76,5 @@ Rename or add a description at a step/query/group level to further understanding
 (include “Detect Data Types” shortcut, and the Options to enable/disable type detection locally and globally)
 ## Make your query resilient to changes
     * Select columns or Remove columns
-## Create reusable transformations with Custom Functions
+## Create reusable transformations
     * Creating functions through the UI
-
-Structure:
-*	Headline: Best practice #1
-*	The reason why and how
-*	A link to a supporting article
