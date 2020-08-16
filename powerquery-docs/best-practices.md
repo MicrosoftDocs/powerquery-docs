@@ -101,7 +101,10 @@ A great way to keep your work organized is by leveraging the use of groups in th
 
 The sole purpose of groups is to help you keep your work organized by serving as folders for your queries. You can create groups within groups should you ever need to. Moving queries across groups is as easy as drag and drop. 
 
-wTry to give your groups a meaningful name that makes sense to you and your case.
+Try to give your groups a meaningful name that makes sense to you and your case.
+
+> [!NOTE]
+> You can read more about all the available features and components found inside the queries pane from the article [Understanding the queries pane](queries-pane.md).
 
 ## Take a modular approach
 Reference queries to decouple transformation phases 
