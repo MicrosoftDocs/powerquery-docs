@@ -124,7 +124,7 @@ For example, if you have query with the nine steps below.
 
 ![Applied steps pane with documented steps and description added](images/me-documenting.png)
 
-You could split into two queries by having the steps before the query gets merged with the Prices table in the **Merge with Prices table** step, so it's easier to understand the steps that were applied to the Sales query before the Merge. To do this, you can right-click the **Merge with Prices table** step and select the option that reads 
+You could split this query into two at the **Merge with Prices table** step, so it's easier to understand the steps that were applied to the Sales query before the Merge. To do this, you can right-click the **Merge with Prices table** step and select the option that reads 
 
 ![Extract previous step](images/me-extract-previous.png)
 
