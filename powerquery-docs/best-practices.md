@@ -11,12 +11,12 @@ ms.author: v-miesco
 
 **************************** 
 
-## 1.	Use best connector for the task and leverage the *Get Data* experience
+## 1. Use the best connector for the task and leverage the *Get Data* experience
 
-Power Query offers a vast amount of data connectors ranging from data sources such as TXT, CST and Excel files, to databases such as Microsoft SQL Server and popular SaaS services such as Microsoft Dynamics 365 and Salesforce. 
+Power Query offers a vast amount of data connectors ranging from data sources such as TXT, CSV and Excel files, to databases such as Microsoft SQL Server and popular SaaS services such as Microsoft Dynamics 365 and Salesforce. 
 If you don't see your data source listed in the *Get Data* window, you can always use an ODBC / OLEDB to your data source. 
 
-Using the best connector for the task will provide you with the best experience and performance. For example, using the SQL Server connector instead of the ODBC connector when connecting to a SQL Server database will not only provide you with a much easier *Get Data* experience, but the SQL Server connector also offers you features that can improve your experience and performace such as query folding. You can read more about query folding from the article [Power Query query folding](power-query-folding.md).
+Using the best connector for the task will provide you with the best experience and performance. For example, using the SQL Server connector instead of the ODBC connector when connecting to a SQL Server database will not only provide you with a much better *Get Data* experience, but the SQL Server connector also offers you features that can improve your experience and performace such as query folding. You can read more about query folding from the article [Power Query query folding](power-query-folding.md).
 
 > [!NOTE]
 > You can see the full list of available connector for Power Query from the article [Connectors in Power Query](Connectors/index.md).
