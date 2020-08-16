@@ -118,24 +118,26 @@ While Power Query automatically creates a step name for you in the applied steps
 
 ## Take a modular approach
 
-While it is entirely possible to create a single query that contains all the transformations and calculations that you may need, if the query contains a large number of steps then it might be a good idea to split the query into multiple query where one query references the next. The goal of this approach is to simplify and decouple transformation phases into smaller pieces so they're easier to understand.
+While it is entirely possible to create a single query that contains all the transformations and calculations that you may need, if the query contains a large number of steps then it might be a good idea to split the query into multiple queries where one query references the next. The goal of this approach is to simplify and decouple transformation phases into smaller pieces so they're easier to understand.
 
 For example, if you have query with the nine steps below.
 
 ![Applied steps pane with documented steps and description added](images/me-documenting.png)
 
-You could split into two queries by havin the steps before the query gets merged with the Prices table in the **Merge with Prices table** step, so it's easier to understand the steps that were applied to the Sales query before the Merge. To do this, you can simply right click the **Merge with Prices table** step and select the option that reads 
+You could split into two queries by having the steps before the query gets merged with the Prices table in the **Merge with Prices table** step, so it's easier to understand the steps that were applied to the Sales query before the Merge. To do this, you can right-click the **Merge with Prices table** step and select the option that reads 
 
 ![Extract previous step](images/me-extract-previous.png)
 
 You will then be prompted with a dialog to give your new query a name. This will effectively split your query into two queries. One that will have all the queries before the merge, and another one that will have an initial step that will reference your new query and the rest of the steps that you had in your original query from the **Merge with Prices table** step downward.
+
+![Original query after the extract previous step action](images/me-extract-previous-referenced.png)
 
 You could also leverage the use of query referencing as you see fit, but it's a good idea to keep your queries at a level that doesn't seem daunting at first glance with so many steps.
 
 > [!NOTE]
 > You can read more about query referencing from the article on [Understanding the queries pane](queries-pane.md#referencing-a-query).
 
-## Always use the correct data types 
+## Use the correct data types 
 (include “Detect Data Types” shortcut, and the Options to enable/disable type detection locally and globally)
 
 ## Make your query resilient to changes
