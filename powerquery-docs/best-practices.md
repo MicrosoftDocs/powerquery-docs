@@ -64,6 +64,7 @@ These type-specific filters can help you create a dynamic filter that will alway
 > You can read more about filtering your data based on values from a column from the article [Filter by values](filter-values.md).
 
 ## Use parameters 
+Creating queries that are dynamic and flexible is a best practice. Parameters in Power Query help you make your queries more dynamic and flexible.
 A parameter serves as way to easily store and manage a value that can be reused in many different ways, but it is more commonly used in two scenarios:
 * **Step argument** - With the use of the User Interface you can use a parameter as the argument of multiple transformations driven from the User Interface.
 
@@ -87,10 +88,21 @@ You can even use parameters in some of the arguments of the data connectors. For
 
 ![SQL Server database dialog with parameter for server name](images/me-sql-server-parameter.png)
 
+If you change your server location, all you need to do is update the parameter for your server name and your queries will be updated.
+
 > [!NOTE]
 > You can read more about creating and using parameters from the article [Using parameters](parameters.md).
 
 ## Create groups
+
+A great way to keep your work organized is by leveraging the use of groups in the queries pane.
+
+![Working with groups in Power Query](images/queries-pane-move-to-group.png)
+
+The sole purpose of groups is to help you keep your work organized by serving as folders for your queries. You can create groups within groups should you ever need to. Moving queries across groups is as easy as drag and drop. 
+
+wTry to give your groups a meaningful name that makes sense to you and your case.
+
 ## Take a modular approach
 Reference queries to decouple transformation phases 
 (also cover “Extract Previous” option on Steps)
