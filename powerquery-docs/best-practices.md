@@ -18,16 +18,16 @@ If you don't see your data source listed in the *Get Data* window, you can alway
 
 Using the best connector for the task will provide you with the best experience and performance. For example, using the SQL Server connector instead of the ODBC connector when connecting to a SQL Server database will not only provide you with a much better *Get Data* experience, but the SQL Server connector also offers you features that can improve your experience and performance such as query folding. You can read more about query folding from the article [Power Query query folding](power-query-folding.md).
 
-> [!NOTE]
-> You can see the full list of available connector for Power Query from the article [Connectors in Power Query](Connectors/index.md).
-
 Each data connector follows a standard experience as explained in the article on [Getting data](get-data-experience.md). This standardized experience has a stage called **Data Preview** in which you're provided with a user-friendly window to select the data that you want to get from your data source, If the connector allows it, and a simple data preview of that data. You can even select multiple datasets from your datasource through the *Navigation* window as shown in the next image.
 
 ![Sample navigator window](images/me-navigator.png)
 
+> [!TIP]
+> You can see the full list of available connectors in Power Query from the article [Connectors in Power Query](Connectors/index.md).
+
 ## Explore your data
 
-It is highly recommended that you enable the data profiling tools when using Power Query to easily discover information about  your data.
+Before you start preparing you data and adding new transformation steps, it is highly recommended that you enable the data profiling tools when using Power Query to easily discover information about your data.
 
 ![Data preview or data profiling tools in Power Query](images/me-data-preview-tools-enabled-v2.png)
 
@@ -36,15 +36,33 @@ These tools help you better understand your data by providing you with small vis
 * **Column distribution** - This feature provides a set of visuals underneath the names of the columns that showcases the frequency and distribution of the values in each of the columns.
 * **Column profile** - Provides a more thorough view of your column and the statistics associated to it.
 
-You can also interact with these features which will help you prepare your data.
+You can also interact with these features, which will help you prepare your data.
 
 ![Data Quality hover options](images/me-column-quality-hover.png)
 
-You can read more about the data profiling tools from the article [Data profiling tools](data-profiling-tools.md).
+> [!TIP]
+> You can read more about the data profiling tools from the article [Data profiling tools](data-profiling-tools.md).
 
-## Filter as early as you can
-    * Explain a little bit about query folding and how powerful it is
-    * We already got this article and I’m pretty proud of them (let’s make sure we talk about dynamic filters, e.g. “in the previous N days” and others, which come up very frequently and are not easy to discover)
+## Filter your data in early steps
+
+It is always recommended to filter your data in the early stages of your query or as early as possible. Some connectors will take advantage of your filters through query folding as described in the article [Power Query query folding](power-query-folding.md). 
+It is also a best practice to filter out any data that is not relevant for your case. This will let you better focus in your task at hand also only show you the data that you're interested in within the data preview section.
+
+You can use the Auto filter menu that displays a distinct list of the values found in your column to select the values that you want to keep or filter out. You can also use the search bar to help you find the values in your column.
+
+![Auto filter menu in Power Query](images/me-filter-values-auto-filter-menu.png)
+
+You can also take advantage of the Type-specific filters such as "is in the previous" for a date, datetime or even date timezone column.
+
+![type specific filter for a date column](images/me-filter-values-date-column.png)
+
+These type-specific filters can help you create a dynamic filter can always retrieve data that is in the previous *x* number of days, weeks, months, quarters, years, and more as showcased in the image below.
+
+![Is in the previous date-specific filter](images/me-is-in-the-previous.png)
+
+> [!TIP]
+> You can read more about filtering your data based on values from a column from the article [Filter by values](filter-values.md).
+
 ## Use parameters to drive dynamic and flexible queries
     * Probably use a text parameter when connecting to a database for the servername or something similar
     * This is why I wanted to cover the “Parameters” article first – makes sense. I still get several pings on this blog post as it seems to cover much more than the documentation article that we currently have, particularly around the parameter binding widgets.
