@@ -13,7 +13,7 @@ Lorem
 
 ## Use the best connector for your task
 
-Power Query offers a vast number of data connectors ranging from data sources such as TXT, CSV and Excel files, to databases such as Microsoft SQL Server and popular SaaS services such as Microsoft Dynamics 365 and Salesforce. 
+Power Query offers a vast number of data connectors ranging from data sources such as TXT, CSV, and Excel files, to databases such as Microsoft SQL Server and popular SaaS services such as Microsoft Dynamics 365 and Salesforce. 
 If you don't see your data source listed in the *Get Data* window, you can always use the ODBC or OLEDB connector to connect to your data source. 
 
 Using the best connector for the task will provide you with the best experience and performance. For example, using the SQL Server connector instead of the ODBC connector when connecting to a SQL Server database will not only provide you with a much better *Get Data* experience, but the SQL Server connector also offers you features that can improve your experience and performance such as query folding. You can read more about query folding from the article [Power Query query folding](power-query-folding.md).
@@ -124,5 +124,6 @@ Reference queries to decouple transformation phases
 (include “Detect Data Types” shortcut, and the Options to enable/disable type detection locally and globally)
 ## Make your query resilient to changes
     * Select columns or Remove columns
+
 ## Create reusable transformations
     * Creating functions through the UI
