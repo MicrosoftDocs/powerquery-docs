@@ -107,7 +107,7 @@ Try to give your groups a meaningful name that makes sense to you and your case.
 > You can read more about all the available features and components found inside the queries pane from the article [Understanding the queries pane](queries-pane.md).
 
 ## Document your work 
-It is highly recommmended that you document your queries by renaming or adding a description to your steps, queries, or groups as you see fit. 
+It is highly recommended that you document your queries by renaming or adding a description to your steps, queries, or groups as you see fit. 
 
 While Power Query automatically creates a step name for you in the applied steps pane, you can also rename your steps or add a description to any of them.
 
