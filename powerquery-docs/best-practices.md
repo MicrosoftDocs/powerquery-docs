@@ -22,7 +22,7 @@ Each data connector follows a standard experience as explained in the article on
 
 ![Sample navigator window](images/me-navigator.png)
 
-> [!TIP]
+> [!NOTE]
 > You can see the full list of available connectors in Power Query from the article [Connectors in Power Query](Connectors/index.md).
 
 ## Explore your data
@@ -40,7 +40,7 @@ You can also interact with these features, which will help you prepare your data
 
 ![Data Quality hover options](images/me-column-quality-hover.png)
 
-> [!TIP]
+> [!NOTE]
 > You can read more about the data profiling tools from the article [Data profiling tools](data-profiling-tools.md).
 
 ## Filter your data in early steps
@@ -56,16 +56,37 @@ You can also take advantage of the Type-specific filters such as "is in the prev
 
 ![type specific filter for a date column](images/me-filter-values-date-column.png)
 
-These type-specific filters can help you create a dynamic filter can always retrieve data that is in the previous *x* number of days, weeks, months, quarters, years, and more as showcased in the image below.
+These type-specific filters can help you create a dynamic filter that will always retrieve data that is in the previous *x* number of seconds, minutes, hours, days, weeks, months, quarters, years as showcased in the image below.
 
 ![Is in the previous date-specific filter](images/me-is-in-the-previous.png)
 
-> [!TIP]
+> [!NOTE]
 > You can read more about filtering your data based on values from a column from the article [Filter by values](filter-values.md).
 
 ## Use parameters 
-    * Probably use a text parameter when connecting to a database for the servername or something similar
-    * This is why I wanted to cover the “Parameters” article first – makes sense. I still get several pings on this blog post as it seems to cover much more than the documentation article that we currently have, particularly around the parameter binding widgets.
+A parameter serves as way to easily store and manage a value that can be reused in many different ways, but it is more commonly used in two scenarios:
+* **Step argument** - With the use of the User Interface you can use a parameter as the argument of multiple transformations driven from the User Interface.
+
+![Select parameter for transformation argument](images/me-parameters-step-argument-sample-parameter-select-parameter.png)
+
+* **Custom Function argument** - You can create a new function from a query and reference parameters as the arguments of your custom function.
+
+![Create Function](images/me-parameters-create-function.png)
+
+The main benefits of creating and using parameters are.
+
+* Centralized view of all your parameters through the **Manage Parameters** window.
+
+![Manage Parameters window](images/me-parameters-manage-parameters.png)
+
+* Reusability of the parameter in multiple steps or queries.
+
+* Makes the creation of custom functions straightforward and easy.
+
+You can even use parameters in some of the arguments of the data connectors. For example, you could create a parameter for your Server name when connecting to your SQL Server database and use that parameter inside the SQL Server database dialog as shown below.
+
+![SQL Server database dialog with parameter for server name](images/me-sql-server-parameter.png)
+
 ## Create groups
 ## Take a modular approach
 Reference queries to decouple transformation phases 
