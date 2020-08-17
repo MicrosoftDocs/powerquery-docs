@@ -138,7 +138,20 @@ You could also leverage the use of query referencing as you see fit, but it's a 
 > You can read more about query referencing from the article on [Understanding the queries pane](queries-pane.md#referencing-a-query).
 
 ## Use the correct data types 
-(include “Detect Data Types” shortcut, and the Options to enable/disable type detection locally and globally)
+
+Some features in Power Query rely on the data type of the column selected. For example, when selecting a date column the available options under the *Date and time column* group in the **Add Column** menu will be available, but if the column doesn't have a data type set then these options will be greyed out.
+
+![Type specific option in add column menu](images/me-type-specific-filter-for-date.png)
+
+A similar situation occurs for the type-specific filters since they're specific to certain data types and if your column doesn't have a data type defined, these type-specific filters will not be available.
+
+![type specific filter for a date column](images/me-filter-values-date-column.png)
+
+It is crucial that you always work with the correct data types for your columns. When working with structured data sources such as databases, the data type information will be brought from the table schema found in the database, but for unstructured data sources such as TXT and CSV files, it is important that you set the correct data types for the columns coming from that data source.
+By default, Power Query offers you an automatic data type detection for unstructured data sources. You can read more about this feature and how it can help you from the article on [Data types](data-types.md#automatic-column-data-type-and-headers-detection).
+
+> [!NOTE]
+> You can read more about query the importante of data types and how to work with them from the article on [Data types](data-types.md).
 
 ## Make your query resilient to changes
     * Select columns or Remove columns
