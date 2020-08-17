@@ -139,7 +139,7 @@ You could also leverage the use of query referencing as you see fit, but it's a 
 
 ## Use the correct data types 
 
-Some features in Power Query are contextual to the data type of the column selected. For example, when selecting a date column the available options under the *Date and time column* group in the **Add Column** menu will be available, but if the column doesn't have a data type set then these options will be greyed out.
+Some features in Power Query are contextual to the data type of the column selected. For example, when selecting a date column, the available options under the *Date and time column* group in the **Add Column** menu will be available, but if the column doesn't have a data type set then these options will be greyed out.
 
 ![Type specific option in add column menu](images/me-type-specific-filter-for-date.png)
 
@@ -154,7 +154,31 @@ By default, Power Query offers an automatic data type detection for unstructured
 > You can read more about query the importante of data types and how to work with them from the article on [Data types](data-types.md).
 
 ## Make your query resilient to changes
-    * Select columns or Remove columns
+
+Making sure that you create a query that will not have any issues on a future refresh is a top priority. To make your query resilient to changes and be able to refresh even when some components of your data source changes is something that is possible with several features in  Power Query.
+
+It is a best practice to define the scope of your query as to what it should do and what it should account for in terms of structure, layout, column names, data types and any other component that you deem relevant to the scope.
+
+Some examples of transformations that can help you make your query resilient to changes are:
+* If your query has a dynamic number of rows with data, but a fixed number of rows that serve as the footer that should be removed, you can use the **Remove bottom rows** feature.
+
+>[!NOTE]
+> You can read more about filtering your data by row position from the article [Filter a table by row position](filter-row-position.md).
+
+* If your query has a dynamic number of columns, but you only need to select specific columns from your dataset, you can use the **Choose columns** feature.
+
+>[!NOTE]
+> You can read more about choosing or removing columns from the article [Choose or remove columns](choose-remove-columns.md).
+
+* If your query has a dynamic number of columns and you need to unpivot only a subset of your columns, you can use the **unpivot only selected columns** feature.
+
+>[!NOTE]
+> You can read more about the options to unpivot your columns from the article [Unpivot columns](unpivot-column.md).
+
+* If your query has a step that changes the data type of a column but some cells yield errors as the values do not conform to the desired data type, you could remove the rows that yielded error values
+
+>[!NOTE]
+> You can read more about working and dealing with errors from the article [Dealing with errors](dealing-with-errors.md#remove-errors).
 
 ## Create reusable functions
     * Creating functions through the UI
