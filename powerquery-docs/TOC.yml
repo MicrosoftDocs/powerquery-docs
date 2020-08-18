@@ -14,7 +14,7 @@
       items:
       - name: "Using the Applied steps list"
         href: applied-steps.md
-      - name: "Understanding the queries pane"
+      - name: "Using the Queries pane"
         href: queries-pane.md
       - name: "Share a query"
         href: share-query.md
