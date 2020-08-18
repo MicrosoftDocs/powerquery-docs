@@ -9,7 +9,7 @@ ms.author: v-miesco
 ---
 # Best practices when working with Power Query
 
-Below are some tips and tricks to make the most out of your data wrangling experience in Power Query
+Below are some tips and tricks to make the most out of your data wrangling experience in Power Query.
 
 ## Choose the right connector
 
@@ -93,19 +93,6 @@ If you change your server location, all you need to do is update the parameter f
 > [!NOTE]
 > You can read more about creating and using parameters from the article [Using parameters](parameters.md).
 
-## Create groups
-
-A great way to keep your work organized is by leveraging the use of groups in the queries pane.
-
-![Working with groups in Power Query](images/queries-pane-move-to-group.png)
-
-The sole purpose of groups is to help you keep your work organized by serving as folders for your queries. You can create groups within groups should you ever need to. Moving queries across groups is as easy as drag and drop. 
-
-Try to give your groups a meaningful name that makes sense to you and your case.
-
-> [!NOTE]
-> You can read more about all the available features and components found inside the queries pane from the article [Understanding the queries pane](queries-pane.md).
-
 ## Document your work 
 It is highly recommended that you document your queries by renaming or adding a description to your steps, queries, or groups as you see fit. 
 
@@ -155,7 +142,7 @@ By default, Power Query offers an automatic data type detection for unstructured
 
 ## Future-proofing queries
 
-Making sure that you create a query that will not have any issues on a future refresh is a top priority. To make your query resilient to changes and be able to refresh even when some components of your data source changes is something that is possible with several features in  Power Query.
+Making sure that you create a query that will not have any issues on a future refresh is a top priority. To make your query resilient to changes and be able to refresh even when some components of your data source changes are something that is possible with several features in  Power Query.
 
 It is a best practice to define the scope of your query as to what it should do and what it should account for in terms of structure, layout, column names, data types and any other component that you deem relevant to the scope.
 
@@ -181,4 +168,46 @@ Some examples of transformations that can help you make your query resilient to 
 > You can read more about working and dealing with errors from the article [Dealing with errors](dealing-with-errors.md#remove-errors).
 
 ## Create reusable functions
-    * Creating functions through the UI
+If you find yourself in a situation where you need to apply the same set of transformations to different queries or values, creating a Power Query custom function that can be reused as many times as you need could be beneficial. A Power Query custom function is a mapping from a set of input values to a single output value, and is created from native M functions and operators.
+
+For example, if you have multiple queries or values that require the same set of transformations, you could create a custom function that later could be invoked against the queries or values of your choice saving you time and helping you in managing your set of transformations in a central location, which you can modify at any moment.
+
+Power Query custom functions can be created from existing queries and parameters. For example, imagine a query that has several codes as a text string and you wish to create a function that will decode those values.
+
+![List of codes](images/me-sample-flight-data.png)
+
+You start by having a parameter that has a value that serves as an example.
+
+![Sample parameter code value](images/me-sample-parameter-code.png)
+
+From that parameter, you create a new query where you apply the transformations that you need. For this case, you want to split the code *PTY-CM1090-LAX* into multiple components:
+* **Origin** = PTY
+* **Destination** = LAX
+* **Airline** = CM
+* **FlightID** = 1090
+
+![Sample transform query](images/me-sample-transform-query.png)
+
+You can then transform that query into a function by doing a right-click on the query and selecting **Create Function..**. Finally, you can invoke your custom function into any of your queries or values as shown in the next image.
+
+![Invoking a custom function](images/me-invoke-custom-function.png)
+
+After a few more transformations, you can see that you've reached your desired output and leveraged the logic for such transformation from a custom function.
+
+![Final output query after invoking a custom function](images/me-invoked-custom-function.png)
+
+>[!NOTE]
+> You can read more about how to create and use custom functions in Power Query from the article [Custom Functions](custom-function.md).
+
+## Create groups
+
+A great way to keep your work organized is by leveraging the use of groups in the queries pane.
+
+![Working with groups in Power Query](images/queries-pane-move-to-group.png)
+
+The sole purpose of groups is to help you keep your work organized by serving as folders for your queries. You can create groups within groups should you ever need to. Moving queries across groups is as easy as drag and drop. 
+
+Try to give your groups a meaningful name that makes sense to you and your case.
+
+> [!NOTE]
+> You can read more about all the available features and components found inside the queries pane from the article [Understanding the queries pane](queries-pane.md).    
