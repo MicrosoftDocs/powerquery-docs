@@ -194,16 +194,7 @@ You can then transform that query into a function by doing a right-click on the 
 
 After a few more transformations, you can see that you've reached your desired output and leveraged the logic for such transformation from a custom function.
 
- [ ![Final output query after invoking a custom function  
- code|Origin|Destination|Airline|FlightID|
- -----|------|-----------|-------|--------|
- PTY-CM1090-LAX|PTY|LAX|CM|1090|
- LAX-CM701-PTY|LAX|PTY|CM|701|
- PTY-CM4441-MIA|PTY|MIA|CM|4441|
- MIA-UA1257-LAX|MIA|LAX|UA|1257|
- LAX-XY2842-MIA|LAX|MIA|XY|2842|](images/me-invoked-custom-function.png) ](images/me-invoked-custom-function.png#lightbox)
-
-
+ [ ![Final output query after invoking a custom function](images/me-invoked-custom-function.png) ](images/me-invoked-custom-function.png#lightbox)
 
 >[!NOTE]
 > You can read more about how to create and use custom functions in Power Query from the article [Custom Functions](custom-function.md).
