@@ -194,7 +194,7 @@ You can then transform that query into a function by doing a right-click on the 
 
 After a few more transformations, you can see that you've reached your desired output and leveraged the logic for such transformation from a custom function.
 
- :::image type="content" source="images/me-invoked-custom-function.png" alt-text="Final output query after invoking a custom function":::
+ [ ![Final output query after invoking a custom function](images/me-invoked-custom-function.png) ] ()
 
 >[!NOTE]
 > You can read more about how to create and use custom functions in Power Query from the article [Custom Functions](custom-function.md).
