@@ -1,5 +1,5 @@
 ---
-title: Query pane
+title: Using the Queries pane
 description: Within Power Query, you maneuver around the different queries in the editor through the queries pane.
 author: jessli20
 ms.service: powerquery
@@ -9,7 +9,7 @@ ms.author: jessli20
 ---
 
 
-# Understanding the queries pane
+# Using the Queries pane
 
 In Power Query, you'll be creating many different queries. Whether it be from getting data from many tables or from duplicating the original query, the number of queries will increase.
 
@@ -17,7 +17,7 @@ You'll be using the **Queries Pane** to navigate through the queries.
 
 ![Queries Pane Basic](images/queries-pane-basic.png)
 
-## Navigating with the queries pane
+## Navigating with the Queries pane
 
 The most basic usage of the **Queries Pane** is to navigate to all of the queries.
 The navigation is similar to a file explorer. To switch between the queries, just select the query that you want to go to.
@@ -78,13 +78,12 @@ To duplicate your query, open the context pane on the query and select **Referen
 Copy and Paste can be used when you have a copied query to place into the Power Query editor.
 
 >[!NOTE]
->If you would like to learn more about how to share and copy and paste queries, 
-[look here.](placeholder -)
+> You can learn more about how to copy and paste queries from Power Query from the article [Sharing a query](share-query.md).
 
 
-## Context pane actions in the query pane
+## Context pane actions in the Queries pane
 
-There are some context pane key actions that you can do in the queries pane given what is necessary for you. These actions are *New query*, *Merge queries*, *New parameter*, *New group*. 
+There are some context pane key actions that you can do in the Queries pane given what is necessary for you. These actions are *New query*, *Merge queries*, *New parameter*, *New group*. 
 
 To reach these actions, open the context menu (the right-click menu) on the query pane box.
 
@@ -108,17 +107,15 @@ This option functions the same as the **Get Data** feature located on the Ribbon
 ![Queries Pane New Query](images/queries-pane-new-query.png)
 
 > [!NOTE]
-> If you would like to learn more about **Get Data** and importing data into Power Query, 
-[look here.](https://docs.microsoft.com/power-query/get-data-experience)
+> You can learm about how to get **Get Data** into Power Query from the article [Getting data](get-data-experience.md)
 
 ### Merge queries
 You can open the *Merge queries* input screen when you select the **Merge queries** option from the context menu. 
 
 This option functions the same as the **Merge queries** feature located on the Ribbon and in other areas of the editor. 
 
-
 >[!NOTE]
->If you would like to learn more about merging queries, [look here.](https://docs.microsoft.com/power-query/merge-queries-overview)
+>You can learn more about how to use the **Merge queries** feature from the article [Merge queries overview](merge-queries-overview.md).
 
 ### New parameter
 You can open the *New parameter* input screen when you select the **New parameter** option from the context menu. 
@@ -126,8 +123,6 @@ This option functions the same as the **New parameter** feature located on the R
 
 > [!NOTE]
 > If you would like to learn more about **Parameters** in Power Query you can read the article on [Using parameters](parameters.md).
-
-
 
 ### New group
 You can make folders and move the queries into and out of the folders for organizational purposes. These folders are called *groups*.
