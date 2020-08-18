@@ -36,7 +36,7 @@ You can also paste queries between multiple instances and product integrations. 
 ![Paste query from Power BI Desktop into Power Query for Excel](images/me-share-query-paste-in-excel.png)
 
 >[!WARNING]
->Copying and pasting queries between product integrations doesn't guarantee that all functions and components found in the pasted query will work on the destination as some components might only be available in the origin product integration.
+>Copying and pasting queries between product integrations doesn't guarantee that all functions and functionality found in the pasted query will work on the destination as some functionality might only be available in the origin product integration.
 
 ## Copy the M code
 
