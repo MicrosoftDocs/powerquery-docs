@@ -9,9 +9,9 @@ ms.author: v-miesco
 ---
 # Best practices when working with Power Query
 
-Lorem
+Below are some tips and tricks to make the most out of your data wrangling experience in Power Query
 
-## Use the best connector for your task
+## Choose the right connector
 
 Power Query offers a vast number of data connectors ranging from data sources such as TXT, CSV, and Excel files, to databases such as Microsoft SQL Server and popular SaaS services such as Microsoft Dynamics 365 and Salesforce. 
 If you don't see your data source listed in the *Get Data* window, you can always use the ODBC or OLEDB connector to connect to your data source. 
@@ -43,7 +43,7 @@ You can also interact with these features, which will help you prepare your data
 > [!NOTE]
 > You can read more about the data profiling tools from the article [Data profiling tools](data-profiling-tools.md).
 
-## Filter your data in early steps
+## Filter early
 
 It is always recommended to filter your data in the early stages of your query or as early as possible. Some connectors will take advantage of your filters through query folding as described in the article [Power Query query folding](power-query-folding.md). 
 It is also a best practice to filter out any data that is not relevant for your case. This will let you better focus in your task at hand also only show you the data that you're interested in within the data preview section.
@@ -153,7 +153,7 @@ By default, Power Query offers an automatic data type detection for unstructured
 > [!NOTE]
 > You can read more about query the importante of data types and how to work with them from the article on [Data types](data-types.md).
 
-## Make your query resilient to changes
+## Future-proofing queries
 
 Making sure that you create a query that will not have any issues on a future refresh is a top priority. To make your query resilient to changes and be able to refresh even when some components of your data source changes is something that is possible with several features in  Power Query.
 
