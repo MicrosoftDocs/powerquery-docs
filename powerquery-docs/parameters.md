@@ -40,9 +40,9 @@ Power Query provides two easy ways to create parameters:
 
 After creating the parameter, you can always go back to the **Manage Parameters** window to modify any of your parameters at any moment.
 
-## Components of a parameter
+## Parameter properties
 
-A parameter stores a value that can be used for transformations in Power Query. Apart from the name of the parameter and the value that it stores, it also has other components that provide metadata to it. The components of a parameter are as follows.
+A parameter stores a value that can be used for transformations in Power Query. Apart from the name of the parameter and the value that it stores, it also has other properties that provide metadata to it. The properties of a parameter are as follows.
 
 * **Name** - Provide a name for this parameter that lets you easily recognize and differentiate it from other parameters you might create.
 * **Description** - The description is displayed next to the parameter name when parameter information is displayed, helping users who are specifying the parameter value to understand its purpose, and its semantics.
