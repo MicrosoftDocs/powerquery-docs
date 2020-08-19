@@ -23,7 +23,7 @@ Select the **View** tab from the ribbon and then select **Query Settings**
 
 The **Query Settings** menu will open to the right with the **Applied steps** list.
 
-![Applied steps query settings](images/applied-steps-query-settings.png)
+![Applied steps query settings](images/applied-steps-query-settings.PNG)
 
 ## Rename Step
 To rename a step, right click the step and select **Rename**. 
@@ -93,3 +93,9 @@ To edit the step, right click the step and select **Properties**.
 In the window you can change the step name and description and save the changes by selecting **OK**.
 
 ![Applied steps properties](images/applied-steps-properties-window.png)
+
+>[!NOTE]
+> Adding a description to a step will add a small icon next to the step to denote that the step has a description. You can hover over this icon to display the description as a tooltip.
+>
+> ![Description set at a step](images/me-step-description.png)
+>
