@@ -9,16 +9,12 @@ ms.author: t-sazaki
 ---
 
 # Using the Applied steps list
-Applied steps tracks the transforms to your data. In this guide you will learn to 
-- Access the Applied steps list
-- View data transformations
-- Rename Step
-- Delete Step
-- Delete until end
-- Insert step after 
-- Move step
-- Extract the previous steps into query 
-- Edit step names and their descriptions
+
+Any transformations to your data will show in the Applied steps list. For instance, if we change the first column name, it will display in the Applied steps list as **Renamed Columns**.
+
+![Applied steps new column name](images/applied-steps-new-column-name.png)
+
+Selecting any step will show you the results of that particular step so you can see exactly how your data changes as you add steps to the query.
 
 ## Access the Applied steps list
 Select the **View** tab from the ribbon and then select **Query Settings**
@@ -28,11 +24,6 @@ Select the **View** tab from the ribbon and then select **Query Settings**
 The **Query Settings** menu will open to the right with the **Applied steps** list.
 
 ![Applied steps query settings](images/applied-steps-query-settings.png)
-
-## View data transformations
-Any transformations to your data will show in the Applied steps list. For instance, if we change the first column name, it will display in the Applied steps list as **Renamed Columns**.
-
-![Applied steps new column name](images/applied-steps-new-column-name.png)
 
 ## Rename Step
 To rename a step, right click the step and select **Rename**. 
