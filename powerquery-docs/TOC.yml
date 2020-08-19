@@ -9,27 +9,23 @@
       - name: "Getting data"
         href: get-data-experience.md
       - name: "Authentication with a data source"
-        href: ConnectorAuthentication.md 
-    - name: "Articles for review"
-      items:
-      - name: "Using the Applied steps list"
-        href: applied-steps.md
-      - name: "Using the Queries pane"
-        href: queries-pane.md
-      - name: "Share a query"
-        href: share-query.md
-      - name: "Parse text as JSON or XML"
-        href: parse-json-xml.md
-      - name: "Using parameters"
-        href: parameters.md
-      - name: "Custom Functions"
-        href: custom-function.md
+        href: ConnectorAuthentication.md
     - name: Transform data
       items:
       - name: "Use Power Query"
         href: power-query-quickstart-using-power-bi.md
       - name: "Shape and combine data"
         href: power-query-tutorial-shape-combine.md
+      - name: "Using the Applied steps list"
+        href: applied-steps.md
+      - name: "Using the Queries pane"
+        href: queries-pane.md
+      - name: "Share a query"
+        href: share-query.md   
+      - name: "Using parameters"
+        href: parameters.md
+      - name: "Custom Functions"
+        href: custom-function.md        
       - name: Transform table
         items:
         - name: "Promote or demote column headers"
@@ -66,6 +62,8 @@
           href: sort-columns.md
         - name: "Replace values"
           href: replace-values.md
+        - name: "Parse text as JSON or XML"
+          href: parse-json-xml.md          
       - name: Add columns
         items:
         - name: "Add a column from examples"
