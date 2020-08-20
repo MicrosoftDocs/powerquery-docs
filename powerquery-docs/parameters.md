@@ -48,17 +48,17 @@ A parameter stores a value that can be used for transformations in Power Query. 
 * **Required**&mdash;The checkbox indicates whether subsequent users can specify whether a value for the parameter must be provided.
 * **Type**&mdash;We recommended that you always set up the data type of your parameter. You can learn more about the importance of data types from the [Data types](data-types.md) article.
 * **Suggested Values**&mdash;Provides the user with suggestions to select a value for the **Current Value** from the available options:
-    * *Any value*&mdash;The current value can be any manually entered value. 
-    * *List of values*&mdash;Provides you with a simple table-like experience so you can define a list of suggested values that you can later select from for the **Current Value**. When this option is selected, a new option called *Default Value* will be made available. From here you can select what should be the default value for this parameter, which will be the default value shown to the user when referencing the parameter. This value isn't the same as the **Current Value**, which is the value that's stored inside the Parameter and can be passed as an argument in transformations. Using this option will enable a drop-down menu to be displayed in the **Default Value** and **Current Value** fields, where you can pick one of the values from the suggested list of values.
+    * **Any value**&mdash;The current value can be any manually entered value. 
+    * **List of values**&mdash;Provides you with a simple table-like experience so you can define a list of suggested values that you can later select from for the **Current Value**. When this option is selected, a new option called **Default Value** will be made available. From here you can select what should be the default value for this parameter, which will be the default value shown to the user when referencing the parameter. This value isn't the same as the **Current Value**, which is the value that's stored inside the parameter and can be passed as an argument in transformations. Using this option will enable a drop-down menu to be displayed in the **Default Value** and **Current Value** fields, where you can pick one of the values from the suggested list of values.
 
        ![Parameter with a suggest list of values](images/me-parameters-list-of-values.png)
 
        >[!NOTE]
        > You can still manually type any value that you want to pass to the parameter. The list of suggested values only serves as simple suggestions.
     
-    * *Query*&mdash;Uses a list query (a query whose output is a list) to provide the list of suggested values that you can later select for the **Current Value**.
+    * **Query**&mdash;Uses a list query (a query whose output is a list) to provide the list of suggested values that you can later select for the **Current Value**.
 
-    ![Parameter with list query](images/me-parameters-query.png)
+       ![Parameter with list query](images/me-parameters-query.png)
 
 * **Current Value**&mdash;The value that will be stored in this parameter.
 
@@ -83,7 +83,7 @@ For example purposes, you can see the following **Orders** query with the fields
 
 ![Sample table for Orders with margin](images/me-parameters-step-argument-sample-table.png)
 
-You can create a new parameter with the name **Minimum Margin** with a *Decimal Number* type and a *Current Value* of 0.2, as shown in the next image.
+You can create a new parameter with the name **Minimum Margin** with a **Decimal Number** type and a **Current Value** of 0.2, as shown in the next image.
 
 ![Sample Parameter](images/me-parameters-step-argument-sample-parameter.png)
 

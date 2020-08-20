@@ -16,7 +16,7 @@ Any transformations to your data will show in the **Applied Steps** list. For in
 
 Selecting any step will show you the results of that particular step, so you can see exactly how your data changes as you add steps to the query.
 
-## Access the applied steps list
+## Access the Applied Steps list
 Select the **View** tab from the ribbon, and then select **Query Settings**.
 
 :::image type="content" source="images/applied-steps-view.png" alt-text="Applied steps view":::

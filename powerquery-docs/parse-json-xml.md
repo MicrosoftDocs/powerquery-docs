@@ -25,23 +25,23 @@ For this article, you'll be using the following sample table that contains the f
 
 * **SalesPerson**&mdash;Contains unparsed JSON text strings with information about the **FirstName** and **LastName** of the sales person, as in the following example.
 
-```json
-{
-  "id" : 249319,
-  "FirstName": "Lesa",
-  "LastName": "Byrd"
-}
-```
+   ```json
+   {
+     "id" : 249319,
+     "FirstName": "Lesa",
+     "LastName": "Byrd"
+   }
+   ```
 
 * **Country**&mdash;Contains unparsed XML text strings with information about the **Country** and the **Division** that the account has been assigned to, as in the following example. 
 
-```xml
-<root>
-  <id>1</id>
-  <Country>USA</Country>
-  <Division>BI-3316</Division>
-</root>
-```
+   ```xml
+   <root>
+     <id>1</id>
+     <Country>USA</Country>
+     <Division>BI-3316</Division>
+   </root>
+   ```
 The sample table looks as follows.
 
 ![Sample source table](images/me-parse-json-xml-sample-table.png)
