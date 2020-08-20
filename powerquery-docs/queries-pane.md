@@ -15,7 +15,7 @@ In Power Query, you'll be creating many different queries. Whether it be from ge
 
 You'll be using the **Queries** pane to navigate through the queries.
 
-![Queries Pane Basic](images/queries-pane-basic.png)
+[![Queries Pane Basic](images/queries-pane-basic.png)](images/queries-pane-basic.png#lightbox)
 
 ## Navigating with the Queries pane
 
