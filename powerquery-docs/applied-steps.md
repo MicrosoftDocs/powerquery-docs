@@ -8,7 +8,7 @@ ms.date: 08/05/2020
 ms.author: t-sazaki
 ---
 
-# Using the applied steps list
+# Using the Applied Steps list
 
 Any transformations to your data will show in the **Applied Steps** list. For instance, if you change the first column name, it will display in the **Applied Steps** list as **Renamed Columns**.
 
