@@ -8,31 +8,31 @@ ms.date: 08/05/2020
 ms.author: t-sazaki
 ---
 
-# Using the Applied steps list
+# Using the applied steps list
 
-Any transformations to your data will show in the Applied steps list. For instance, if you change the first column name, it will display in the Applied steps list as **Renamed Columns**.
+Any transformations to your data will show in the applied steps list. For instance, if you change the first column name, it will display in the applied steps list as **Renamed Columns**.
 
 ![Applied steps new column name](images/applied-steps-new-column-name.png)
 
 Selecting any step will show you the results of that particular step, so you can see exactly how your data changes as you add steps to the query.
 
-## Access the Applied steps list
+## Access the applied steps list
 Select the **View** tab from the ribbon, and then select **Query Settings**.
 
 :::image type="content" source="images/applied-steps-view.png" alt-text="Applied steps view":::
 
-The **Query Settings** menu will open to the right with the **Applied steps** list.
+The **Query Settings** menu will open to the right with the **Applied Ateps** list.
 
 ![Applied steps query settings](images/applied-steps-query-settings.PNG)
 
-## Rename Step
+## Rename step
 To rename a step, right-click the step and select **Rename**. 
 
 :::image type="content" source="images/applied-steps-rename.png" alt-text="Applied steps rename step":::
 
 Enter in the name you want, and then either select **Enter** or click away from the step.
 
-## Delete Step
+## Delete step
 To delete a step, right-click the step and select **Delete**.
 
 :::image type="content" source="images/applied-steps-delete.png" alt-text="Applied steps delete step":::
