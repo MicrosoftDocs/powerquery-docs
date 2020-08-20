@@ -9,20 +9,21 @@ ms.author: v-miesco
 ---
 # Parse text as JSON or XML
 
-In Power Query you are able to parse the contents of a column with text strings by identifying the contents as either a JSON or XML text string. 
+In Power Query, you can parse the contents of a column with text strings by identifying the contents as either a JSON or XML text string. 
 
 You can perform this parse operation by selecting the **Parse** button found inside the following places in the Power Query Editor:
 
-* **Transform tab** - This button will transform the existing column by parsing its contents.
+* **Transform tab**&mdash;This button will transform the existing column by parsing its contents.
 
     ![Parse button inside the Transform tab](images/me-parse-json-xml-transform-tab.png)
 
-* **Add column tab** - This button will add a new column to the table parsing the contents of the selected column.
+* **Add column tab**&mdash;This button will add a new column to the table parsing the contents of the selected column.
 
     ![Parse button inside the Add column tab](images/me-parse-json-xml-add-column-tab.png)
 
-For this article we'll be using the following sample table that contains the following columns that we need to parse:
-* **SalesPerson** -  Contains unparsed JSON text strings with information about the *FirstName* and *LastName* of the sales person as in the following example.
+For this article, you'll be using the following sample table that contains the following columns that you need to parse:
+
+* **SalesPerson**&mdash;Contains unparsed JSON text strings with information about the **FirstName** and **LastName** of the sales person, as in the following example.
 
 ```json
 {
@@ -32,7 +33,7 @@ For this article we'll be using the following sample table that contains the fol
 }
 ```
 
-* **Country** - Contains unparsed XML text strings with information about the Country and the Division that the account has been assigned to as in the following example. 
+* **Country**&mdash;Contains unparsed XML text strings with information about the **Country** and the **Division** that the account has been assigned to, as in the following example. 
 
 ```xml
 <root>
@@ -51,11 +52,11 @@ The goal is to parse the above mentioned columns and expand the contents of thos
 
 ## As JSON
 
-Select the **SalesPerson** column and click the **JSON** button from the **Parse** dropdown menu inside the *Transform tab*. This will transform the **SalesPerson** column from having text strings to having *Record* values as shown in the next image. You can click in the whitespace inside the cell of the *Record* value to get a detail preview of the contents of the *Record* at the bottom of the screen.
+Select the **SalesPerson** column. Then select **JSON** from the **Parse** dropdown menu inside the **Transform** tab. These steps will transform the **SalesPerson** column from having text strings to having **Record** values, as shown in the next image. You can select anywhere in the whitespace inside the cell of the **Record** value to get a detailed preview of the record contents at the bottom of the screen.
 
 ![Parse JSON text string](images/me-parse-json-xml-parsed-json.png)
 
-Click the expand icon next to the **SalesPerson** column header and from the expand columns menu select only the fields *FirstName* and *LastName* as shown in the image below.
+Select the expand icon next to the **SalesPerson** column header. From the expand columns menu, select only the **FirstName** and **LastName** fields, as shown in the following image.
 
 ![Parsed JSON text string fields to expand](images/me-parse-json-xml-parsed-json-expand-menu.png)
 
@@ -65,14 +66,14 @@ The result of that operation will give you the following table.
 
 ## As XML
 
-Select the **Country** column and click the **XML** button from the **Parse** dropdown menu inside the *Transform tab*. This will transform the **Country** column from having text strings to having *Table* values as shown in the next image. You can click in the whitespace inside the cell of the *Table* value to get a detail preview of the contents of the *Table* at the bottom of the screen.
+Select the **Country** column. Then select the **XML** button from the **Parse** dropdown menu inside the **Transform** tab. These steps will transform the **Country** column from having text strings to having **Table** values as shown in the next image. You can select anywhere in the whitespace inside the cell of the **Table** value to get a detailed preview of the contents of the table at the bottom of the screen.
 
 ![Parse XML text string](images/me-parse-json-xml-parsed-xml.png)
 
-Click the expand icon next to the **Country** column header and from the expand columns menu select only the fields *Country* and *Division* as shown in the image below.
+Select the expand icon next to the **Country** column header. From the expand columns menu, select only the **Country** and **Division** fields, as shown in the following image.
 
 ![Parsed XML text string fields to expand](images/me-parse-json-xml-parsed-xml-expand-menu.png)
 
-You can define all the new columns as text columns. The result of that operation will give you the output table that you are looking for.
+You can define all the new columns as text columns. The result of that operation will give you the output table that you're looking for.
 
 ![Sample final output table](images/me-parse-json-xml-sample-output-final-table.png)
