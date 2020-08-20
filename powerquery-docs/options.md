@@ -1,5 +1,5 @@
 ---
-title: Options Dialog
+title: Options and Settings
 description: Within Power Query, you can change the options and settings.
 author: jessli20
 ms.service: powerquery
@@ -15,7 +15,9 @@ You can change those options in the **Options** feature in Power Query. This fea
 
 In Desktop, it can be found within the **File Tab** and inside **Options and Settings**.
 
-In Online it can be found within the **Home Tab** as a feature.
+In Online, it can be found within the **Home Tab** as a feature.
+
+
 
 ## Global vs. Current/Project Options
 Within Options, there are two layers that the user can set their choices. The first is the Global level.
@@ -23,6 +25,8 @@ Within Options, there are two layers that the user can set their choices. The fi
 The Global level has different settings that affect each of the entities/dataflows/projects and the general Power Query. An example of the type of settings in Global are Power Query Editor settings.
 
 The second level is the project level, which is more specific to the projects that are in the Power Query editor currently.
+
+
 
 ## Power Query Online
 Currently in Power Query Online, there are a couple of functionalities that can be used.
