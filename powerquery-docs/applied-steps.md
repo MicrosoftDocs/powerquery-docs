@@ -21,7 +21,7 @@ Select the **View** tab from the ribbon, and then select **Query Settings**.
 
 :::image type="content" source="images/applied-steps-view.png" alt-text="Applied steps view":::
 
-The **Query Settings** menu will open to the right with the **Applied Ateps** list.
+The **Query Settings** menu will open to the right with the **Applied Steps** list.
 
 ![Applied steps query settings](images/applied-steps-query-settings.PNG)
 
