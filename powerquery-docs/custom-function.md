@@ -17,8 +17,8 @@ This article focuses on this experience provided only through the Power Query Us
 ## Create a custom function
 
 Custom functions in Power Query can be categorized into two:
-* Create a reference out of a table
-* Creating a reusable piece of logic
+* [Create a reference out of a table](#Create-a-reference-out-of-a-table)
+* [Create a reusable piece of logic](#Create-a-reusable-piece-of-logic)
 
 ### Create a reference out of a table
 
@@ -156,5 +156,5 @@ You can now check your query to validate that only rows where the *Country* is e
 
 ![Final output table after updated arguments](images/me-custom-function-after-updated-arguments.png)
 
-### Creating a reusable piece of logic
+### Create a reusable piece of logic
 
