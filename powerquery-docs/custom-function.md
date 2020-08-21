@@ -31,8 +31,10 @@ This option will effectively create a new query with a navigation step directly 
 ![File parameter](images/me-custom-function-file-parameter.png)
 
 >[!NOTE]
->We recommend that you read the article on [Parameters](power-query-query-parameters.md) to better understand how to create and manage parameters in Power Query. 
+>We recommend that you read the article on [Parameters](power-query-query-parameters.md) to better understand how to create and manage parameters in Power Query.
+>
 >Custom functions can be created using any parameters type. There's no requirement for any custom function to have a binary as a parameter.
+>
 >It's possible to create a custom function without a parameter. This is commonly seen in scenarios where an input can be inferred from the environment where the function is being invoked. For example, a function that takes the environment's current date and time, and creates a specific text string from those values.  
 
 Right-click **File Parameter** from the **Queries** pane. Select the **Reference** option.
@@ -116,6 +118,7 @@ You can verify that you have data from all files in the folder by checking the v
 
 >[!NOTE]
 >What you've read so far is fundamentally the same process that happens during the **Combine files** experience, but done manually.
+>
 >We recommend that you also read the  article on [Combine files overview](combine-files-overview.md) and [Combine CSV files](combine-files-csv.md) to further understand how the combine files experience works in Power Query and the role that custom functions play.
 
 
