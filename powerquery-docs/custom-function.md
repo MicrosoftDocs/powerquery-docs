@@ -16,6 +16,12 @@ This article focuses on this experience provided only through the Power Query Us
 
 ## Create a custom function
 
+Custom functions in Power Query can be categorized into two:
+* Create a reference out of a table
+* Creating a reusable piece of logic
+
+### Create a reference out of a table
+
 You can follow along with this example by downloading the sample files used in this article from the following [download link](https://aka.ms/PQCombineFilesSample). For simplicity, this article will be using the Folder connector. To learn more about the Folder connector, see [Folder](Connectors/folder.md). The goal of this example is to create a custom function that can be applied to all the files in that folder before combining all of the data from all files into a single table.
 
 After connecting to the folder where your files are located, right-click on the Binary value of your choice from the **Content** field and select the option that reads **Add as New Query**. For this example, you'll see that the selection was made for the first file from the list, which happens to be the file *April 2019.csv*.
@@ -58,7 +64,7 @@ After creating the function, you'll notice that a new group will be created for 
 
 ![Function group](images/me-custom-function-group.png)
 
-### Applying transformations to Sample query
+#### Applying transformations to Sample query
 
 With your new function created, select the query with the name **Transform Sample file**. This query is now linked with the **Transform file** function, so any changes made to this query will be reflected on the function. This is what is known as the concept of a Sample query linked to a function.
 
@@ -92,7 +98,7 @@ Power Query by default will automatically add a new *Changed Type* step after pr
 >[!CAUTION]
 >Your **Transform file** function relies on the steps performed in the **Transform Sample file** query. However, if you try to manually modify the code for the **Transform file** function, you will be greeted with a warning that reads *The definition of the function 'Transform file' is updated whenever query 'Transform Sample file' is updated. However, updates will stop if you directly modify function 'Transform file'.*  
 
-## Invoke Custom Function as a new column
+#### Invoke Custom Function as a new column
 
 With the custom function now created and all the transformation steps incorporated, you can go back to the original query where you have the list of files from the folder. Inside the *Add Column* menu in the ribbon, select the button that reads *Invoke Custom Function* from the General group. Inside the *Invoke Custom Function* window enter **Output Table** as the *New column name* and select the name of our function, **Transform file**, from the *Function query* dropdown. After selecting the function from the dropdown menu, the parameter for the function will be displayed and you can select which column from the table to use as the argument for this function. Select the column **Content** as the value / argument to be passed for the **File Parameter**.
 
@@ -119,7 +125,7 @@ You can check that your you have data from all files in the folder by checking t
 >It is highly recommended that you also read the  article on [Combine files overview](combine-files-overview.md) and [Combine CSV files](combine-files-csv.md) to further understand how the Combine files experience works in Power Query and the role that custom functions play.
 
 
-## Add new parameter to existing custom function
+#### Add new parameter to existing custom function
 
 Imagine that there's a new requirement on top of what you've built. The new requirement requires that before you combine the files, you filter the data inside them to only get the rows where the Country is equals to *Panama*.
 
@@ -149,3 +155,6 @@ To fix the errors, double-click the *Invoked Custom Function* to bring the **Inv
 You can now check your query to validate that only rows where the *Country* is equals to Panama show up in the final resultset of the **CSV Files** query.
 
 ![Final output table after updated arguments](images/me-custom-function-after-updated-arguments.png)
+
+### Creating a reusable piece of logic
+
