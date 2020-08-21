@@ -22,7 +22,7 @@
         href: queries-pane.md
       - name: "Share a query"
         href: share-query.md   
-      - name: "Custom Functions"
+      - name: "Custom functions"
         href: custom-function.md        
       - name: Transform table
         items:
