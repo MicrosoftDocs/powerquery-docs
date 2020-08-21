@@ -22,8 +22,6 @@
         href: queries-pane.md
       - name: "Share a query"
         href: share-query.md   
-      - name: "Using parameters"
-        href: parameters.md
       - name: "Custom Functions"
         href: custom-function.md        
       - name: Transform table

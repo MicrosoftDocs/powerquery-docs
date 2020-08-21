@@ -92,7 +92,7 @@ To edit the step, right-click the step and select **Properties**.
 
 In the window, you can change the step name and description and save the changes by selecting **OK**.
 
-:::image type="content" source="images/applied-steps-properties-window.png" alt-text="Applied steps properties":::
+:::image type="content" source="images/applied-steps-properties-window.png" alt-text="Applied steps properties window":::
 
 >[!NOTE]
 > Adding a description to a step will add a small icon next to the step to denote that the step has a description. You can hover over this icon to display the description as a tooltip.

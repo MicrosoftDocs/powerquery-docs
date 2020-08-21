@@ -82,11 +82,11 @@ Copy and paste can be used when you have a copied query to place in the Power Qu
 > To learn more about how to copy and paste queries in Power Query, see [Sharing a query](share-query.md).
 
 
-## Context pane actions in the Queries pane
+## Context pane options in the Queries pane
 
-There are some context pane key actions that you can do in the **Queries** pane given what is necessary for you. These actions are **New query**, **Merge queries**, **New parameter**, and **New group**. 
+There are some additional context pane options in the **Queries** pane that you can use. These options are **New query**, **Merge queries**, **New parameter**, and **New group**.
 
-To reach these actions, open the context menu (the right-click menu) the Queries pane.
+To reach these options, open the context menu (the right-click menu) in the Queries pane.
 
 Differences between online and desktop:
 
@@ -103,7 +103,7 @@ For the sake of being more comprehensive, we'll once again describe all of the c
 ### New query
 You can import data into the Power Query editor as an option from the context menu.
 
-This option functions the same as the **Get Data** feature located on the ribbon.  
+This option functions the same as the **Get Data** feature.  
 
 ![Queries Pane New Query](images/queries-pane-new-query.png)
 
@@ -124,7 +124,7 @@ When you select the **New parameter** option from the context menu, the **New pa
 This option functions the same as the **New parameter** feature located on the ribbon.
 
 > [!NOTE]
-> To learn more about **Parameters** in Power Query, see [Using parameters](parameters.md).
+> To learn more about **Parameters** in Power Query, see [Using parameters](power-query-query-parameters.md).
 
 ### New group
 You can make folders and move the queries into and out of the folders for organizational purposes. These folders are called *groups*.
