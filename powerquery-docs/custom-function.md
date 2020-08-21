@@ -152,3 +152,28 @@ You can now check your query to validate that only rows where the *Country* is e
 
 ## Create a custom function from a reusable piece of logic
 
+If you have multiple queries or values that require the same set of transformations, you could create a custom function which acts as a reusable piece of logic that later could be invoked against the queries or values of your choice saving you time and helping you in managing your set of transformations in a central location, which you can modify at any moment.
+
+For example, imagine a query that has several codes as a text string and you wish to create a function that will decode those values.
+
+![List of codes](images/me-sample-flight-data.png)
+
+You start by having a parameter that has a value that serves as an example which for this case it'll be the value *PTY-CM1090-LAX*.
+
+![Sample parameter code value](images/me-sample-parameter-code.png)
+
+From that parameter, you create a new query where you apply the transformations that you need. For this case, you want to split the code *PTY-CM1090-LAX* into multiple components:
+* **Origin** = PTY
+* **Destination** = LAX
+* **Airline** = CM
+* **FlightID** = 1090
+
+![Sample transform query](images/me-sample-transform-query.png)
+
+You can then transform that query into a function by doing a right-click on the query and selecting **Create Function..**. Finally, you can invoke your custom function into any of your queries or values as shown in the next image.
+
+![Invoking a custom function](images/me-invoke-custom-function.png)
+
+After a few more transformations, you can see that you've reached your desired output and leveraged the logic for such transformation from a custom function.
+
+ [ ![Final output query after invoking a custom function](images/me-invoked-custom-function.png) ](images/me-invoked-custom-function.png#lightbox)
