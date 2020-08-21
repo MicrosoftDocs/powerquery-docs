@@ -170,6 +170,22 @@ From that parameter, you create a new query where you apply the transformations 
 
 ![Sample transform query](images/me-sample-transform-query.png)
 
+The M code for that set of transformations is shown below.
+
+```powerquery-m
+let
+    Source = code,
+    SplitValues = Text.Split( Source, "-"),
+    CreateRow = [Origin= SplitValues{0}, Destination= SplitValues{2}, Airline=Text.Start( SplitValues{1},2), FlightID= Text.End( SplitValues{1}, Text.Length( SplitValues{1} ) - 2) ],
+    RowToTable = Table.FromRecords( {  CreateRow } ),
+    #"Changed Type" = Table.TransformColumnTypes(RowToTable,{{"Origin", type text}, {"Destination", type text}, {"Airline", type text}, {"FlightID", type text}})
+in
+    #"Changed Type"
+```
+
+>[!NOTE]
+> You can learn more about Power Query M formula language from the official [docs site](https://docs.microsoft.com/powerquery-m) 
+
 You can then transform that query into a function by doing a right-click on the query and selecting **Create Function..**. Finally, you can invoke your custom function into any of your queries or values as shown in the next image.
 
 ![Invoking a custom function](images/me-invoke-custom-function.png)
