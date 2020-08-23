@@ -25,24 +25,6 @@ Each data connector follows a standard experience as explained in the article on
 > [!NOTE]
 > You can see the full list of available connectors in Power Query from the article [Connectors in Power Query](Connectors/index.md).
 
-## Explore your data
-
-Before you start preparing you data and adding new transformation steps, it is highly recommended that you enable the data profiling tools when using Power Query to easily discover information about your data.
-
-![Data preview or data profiling tools in Power Query](images/me-data-preview-tools-enabled-v2.png)
-
-These tools help you better understand your data by providing you with small visualizations that provide you with information on a per column basis such as.
-* **Column quality** - Provides a small bar chart and three indicators with the representation of how many values in the column fall under the categories of valid, error, or empty values.
-* **Column distribution** - This feature provides a set of visuals underneath the names of the columns that showcases the frequency and distribution of the values in each of the columns.
-* **Column profile** - Provides a more thorough view of your column and the statistics associated to it.
-
-You can also interact with these features, which will help you prepare your data.
-
-![Data Quality hover options](images/me-column-quality-hover.png)
-
-> [!NOTE]
-> You can read more about the data profiling tools from the article [Data profiling tools](data-profiling-tools.md).
-
 ## Filter early
 
 It is always recommended to filter your data in the early stages of your query or as early as possible. Some connectors will take advantage of your filters through query folding as described in the article [Power Query query folding](power-query-folding.md). 
@@ -63,35 +45,39 @@ These type-specific filters can help you create a dynamic filter that will alway
 > [!NOTE]
 > You can read more about filtering your data based on values from a column from the article [Filter by values](filter-values.md).
 
-## Use parameters 
-Creating queries that are dynamic and flexible is a best practice. Parameters in Power Query help you make your queries more dynamic and flexible.
-A parameter serves as way to easily store and manage a value that can be reused in many different ways, but it is more commonly used in two scenarios:
-* **Step argument** - With the use of the User Interface you can use a parameter as the argument of multiple transformations driven from the User Interface.
+## Use the correct data types 
 
-![Select parameter for transformation argument](images/me-parameters-step-argument-sample-parameter-select-parameter.png)
+Some features in Power Query are contextual to the data type of the column selected. For example, when selecting a date column, the available options under the *Date and time column* group in the **Add Column** menu will be available, but if the column doesn't have a data type set then these options will be greyed out.
 
-* **Custom Function argument** - You can create a new function from a query and reference parameters as the arguments of your custom function.
+![Type specific option in add column menu](images/me-type-specific-filter-for-date.png)
 
-![Create Function](images/me-parameters-create-function.png)
+A similar situation occurs for the type-specific filters since they're specific to certain data types and if your column doesn't have the correct data type defined, these type-specific filters will not be available.
 
-The main benefits of creating and using parameters are.
+![type specific filter for a date column](images/me-filter-values-date-column.png)
 
-* Centralized view of all your parameters through the **Manage Parameters** window.
-
-![Manage Parameters window](images/me-parameters-manage-parameters.png)
-
-* Reusability of the parameter in multiple steps or queries.
-
-* Makes the creation of custom functions straightforward and easy.
-
-You can even use parameters in some of the arguments of the data connectors. For example, you could create a parameter for your Server name when connecting to your SQL Server database and use that parameter inside the SQL Server database dialog as shown below.
-
-![SQL Server database dialog with parameter for server name](images/me-sql-server-parameter.png)
-
-If you change your server location, all you need to do is update the parameter for your server name and your queries will be updated.
+It is crucial that you always work with the correct data types for your columns. When working with structured data sources such as databases, the data type information will be brought from the table schema found in the database, but for unstructured data sources such as TXT and CSV files, it is important that you set the correct data types for the columns coming from that data source.
+By default, Power Query offers an automatic data type detection for unstructured data sources. You can read more about this feature and how it can help you from the article on [Data types](data-types.md#automatic-column-data-type-and-headers-detection).
 
 > [!NOTE]
-> You can read more about creating and using parameters from the article [Using parameters](parameters.md).
+> You can read more about query the importante of data types and how to work with them from the article on [Data types](data-types.md).
+
+## Explore your data
+
+Before you start preparing you data and adding new transformation steps, it is highly recommended that you enable the data profiling tools when using Power Query to easily discover information about your data.
+
+![Data preview or data profiling tools in Power Query](images/me-data-preview-tools-enabled-v2.png)
+
+These tools help you better understand your data by providing you with small visualizations that provide you with information on a per column basis such as.
+* **Column quality** - Provides a small bar chart and three indicators with the representation of how many values in the column fall under the categories of valid, error, or empty values.
+* **Column distribution** - This feature provides a set of visuals underneath the names of the columns that showcases the frequency and distribution of the values in each of the columns.
+* **Column profile** - Provides a more thorough view of your column and the statistics associated to it.
+
+You can also interact with these features, which will help you prepare your data.
+
+![Data Quality hover options](images/me-column-quality-hover.png)
+
+> [!NOTE]
+> You can read more about the data profiling tools from the article [Data profiling tools](data-profiling-tools.md).
 
 ## Document your work 
 It is highly recommended that you document your queries by renaming or adding a description to your steps, queries, or groups as you see fit. 
@@ -124,21 +110,18 @@ You could also leverage the use of query referencing as you see fit, but it's a 
 > [!NOTE]
 > You can read more about query referencing from the article on [Understanding the queries pane](queries-pane.md#referencing-a-query).
 
-## Use the correct data types 
+## Create groups
 
-Some features in Power Query are contextual to the data type of the column selected. For example, when selecting a date column, the available options under the *Date and time column* group in the **Add Column** menu will be available, but if the column doesn't have a data type set then these options will be greyed out.
+A great way to keep your work organized is by leveraging the use of groups in the queries pane.
 
-![Type specific option in add column menu](images/me-type-specific-filter-for-date.png)
+![Working with groups in Power Query](images/queries-pane-move-to-group.png)
 
-A similar situation occurs for the type-specific filters since they're specific to certain data types and if your column doesn't have the correct data type defined, these type-specific filters will not be available.
+The sole purpose of groups is to help you keep your work organized by serving as folders for your queries. You can create groups within groups should you ever need to. Moving queries across groups is as easy as drag and drop. 
 
-![type specific filter for a date column](images/me-filter-values-date-column.png)
-
-It is crucial that you always work with the correct data types for your columns. When working with structured data sources such as databases, the data type information will be brought from the table schema found in the database, but for unstructured data sources such as TXT and CSV files, it is important that you set the correct data types for the columns coming from that data source.
-By default, Power Query offers an automatic data type detection for unstructured data sources. You can read more about this feature and how it can help you from the article on [Data types](data-types.md#automatic-column-data-type-and-headers-detection).
+Try to give your groups a meaningful name that makes sense to you and your case.
 
 > [!NOTE]
-> You can read more about query the importante of data types and how to work with them from the article on [Data types](data-types.md).
+> You can read more about all the available features and components found inside the queries pane from the article [Understanding the queries pane](queries-pane.md).    
 
 ## Future-proofing queries
 
@@ -166,6 +149,36 @@ Some examples of transformations that can help you make your query resilient to 
 
 >[!NOTE]
 > You can read more about working and dealing with errors from the article [Dealing with errors](dealing-with-errors.md#remove-errors).
+
+## Use parameters 
+Creating queries that are dynamic and flexible is a best practice. Parameters in Power Query help you make your queries more dynamic and flexible.
+A parameter serves as way to easily store and manage a value that can be reused in many different ways, but it is more commonly used in two scenarios:
+* **Step argument** - With the use of the User Interface you can use a parameter as the argument of multiple transformations driven from the User Interface.
+
+![Select parameter for transformation argument](images/me-parameters-step-argument-sample-parameter-select-parameter.png)
+
+* **Custom Function argument** - You can create a new function from a query and reference parameters as the arguments of your custom function.
+
+![Create Function](images/me-parameters-create-function.png)
+
+The main benefits of creating and using parameters are.
+
+* Centralized view of all your parameters through the **Manage Parameters** window.
+
+![Manage Parameters window](images/me-parameters-manage-parameters.png)
+
+* Reusability of the parameter in multiple steps or queries.
+
+* Makes the creation of custom functions straightforward and easy.
+
+You can even use parameters in some of the arguments of the data connectors. For example, you could create a parameter for your Server name when connecting to your SQL Server database and use that parameter inside the SQL Server database dialog as shown below.
+
+![SQL Server database dialog with parameter for server name](images/me-sql-server-parameter.png)
+
+If you change your server location, all you need to do is update the parameter for your server name and your queries will be updated.
+
+> [!NOTE]
+> You can read more about creating and using parameters from the article [Using parameters](parameters.md).
 
 ## Create reusable functions
 If you find yourself in a situation where you need to apply the same set of transformations to different queries or values, creating a Power Query custom function that can be reused as many times as you need could be beneficial. A Power Query custom function is a mapping from a set of input values to a single output value, and is created from native M functions and operators.
@@ -198,16 +211,3 @@ After a few more transformations, you can see that you've reached your desired o
 
 >[!NOTE]
 > You can read more about how to create and use custom functions in Power Query from the article [Custom Functions](custom-function.md).
-
-## Create groups
-
-A great way to keep your work organized is by leveraging the use of groups in the queries pane.
-
-![Working with groups in Power Query](images/queries-pane-move-to-group.png)
-
-The sole purpose of groups is to help you keep your work organized by serving as folders for your queries. You can create groups within groups should you ever need to. Moving queries across groups is as easy as drag and drop. 
-
-Try to give your groups a meaningful name that makes sense to you and your case.
-
-> [!NOTE]
-> You can read more about all the available features and components found inside the queries pane from the article [Understanding the queries pane](queries-pane.md).    
