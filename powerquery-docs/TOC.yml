@@ -296,7 +296,7 @@
             href: samples/TripPin/10-TableView1/README.md
         - name: OAuth tutorials
           items:
-          - name: "Github"
+          - name: "GitHub"
             href: samples/Github/README.md
       - name: Samples
         items:
