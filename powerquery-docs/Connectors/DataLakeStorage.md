@@ -67,7 +67,7 @@ Before you begin this tutorial, you must have the following prerequisites:
 
 8. From the **Home** tab on the ribbon, select **Edit Queries**.
 
-    ![Queries](media/DataLakeStorage/queries.png)
+    ![Select edit queries](media/DataLakeStorage/queries.png)
 
 9. In the **Query Editor**, under the **Content** column, select **Binary**. The file will automatically be detected as CSV and you should see an output as shown below. Your data is now available in a format that you can use to create visualizations.
 
@@ -85,7 +85,7 @@ Before you begin this tutorial, you must have the following prerequisites:
 
     From the **Visualizations** tab, select the symbol for a pie chart.
 
-    ![Visualizations](media/DataLakeStorage/visualizations.png)
+    ![Select pie chart symbol in Visualizations](media/DataLakeStorage/visualizations.png)
 
     In this example, the columns you're going to use are Column 4 (name of the city) and Column 7 (name of the country). Drag these columns from the **Fields** tab to the **Visualizations** tab as shown below.
 
