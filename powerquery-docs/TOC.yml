@@ -3,9 +3,7 @@
   expanded: true
   items:  
     - name: "What is Power Query?"
-      href: power-query-what-is-power-query.md
-    - name: "Best practices in Power Query"
-      href: best-practices.md      
+      href: power-query-what-is-power-query.md          
     - name: Get data
       items:
       - name: "Getting data"
@@ -172,6 +170,8 @@
           href: dataflows/troubleshooting-dataflow-issue-get-data-from-dataflow.md
         - name: "Connection to the source"
           href: dataflows/troubleshooting-dataflow-issues-connection-to-the-data-source.md
+    - name: Best practices in Power Query
+      href: best-practices.md
     - name: Advanced topics
       items:
       - name: "Power Query query folding"
