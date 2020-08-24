@@ -3,7 +3,7 @@
   expanded: true
   items:  
     - name: "What is Power Query?"
-      href: power-query-what-is-power-query.md
+      href: power-query-what-is-power-query.md          
     - name: Get data
       items:
       - name: "Getting data"
@@ -24,8 +24,6 @@
         href: parameters.md
       - name: "Custom Functions"
         href: custom-function.md
-    - name: Jess Fourth Batch
-      items:
       - name: "Options and settings"
         href: options.md
       - name: "Rename column"
@@ -38,6 +36,14 @@
         href: power-query-quickstart-using-power-bi.md
       - name: "Shape and combine data"
         href: power-query-tutorial-shape-combine.md
+      - name: "Using the Applied Steps list"
+        href: applied-steps.md
+      - name: "Using the Queries pane"
+        href: queries-pane.md
+      - name: "Share a query"
+        href: share-query.md   
+      - name: "Custom functions"
+        href: custom-function.md        
       - name: Transform table
         items:
         - name: "Promote or demote column headers"
@@ -74,6 +80,8 @@
           href: sort-columns.md
         - name: "Replace values"
           href: replace-values.md
+        - name: "Parse text as JSON or XML"
+          href: parse-json-xml.md          
       - name: Add columns
         items:
         - name: "Add a column from examples"
@@ -182,6 +190,8 @@
           href: dataflows/troubleshooting-dataflow-issue-get-data-from-dataflow.md
         - name: "Connection to the source"
           href: dataflows/troubleshooting-dataflow-issues-connection-to-the-data-source.md
+    - name: Best practices in Power Query
+      href: best-practices.md
     - name: Advanced topics
       items:
       - name: "Power Query query folding"
@@ -210,10 +220,18 @@
         href: Connectors/index.md
       - name: "Connecting to Azure DevOps using OData"
         href: https://docs.microsoft.com/azure/devops/report/powerbi/odataquery-connect?view=azure-devops
+      - name: "Adobe Analytics"
+        href: "Connectors/AdobeAnalytics.md"
+      - name: "Access database"
+        href: Connectors/AccessDatabase.md
+      - name: "Azure SQL database"
+        href: Connectors/AzureSQLDatabase.md
       - name: "Azure SQL Data Warehouse"
         href: Connectors/AzureSQLDataWarehouse.md
       - name: "Azure SQL database"
         href: Connectors/AzureSQLDatabase.md
+      - name: "Common Data Service"
+        href: Connectors/CommonDataService.md
       - name: "Data Lake Storage"
         href: Connectors/DataLakeStorage.md
       - name: "Excel"
@@ -234,6 +252,8 @@
           href: Connectors/FHIR/FHIR-Relationships.md
       - name: "Folder"
         href: Connectors/Folder.md
+      - name: "Google Analytics"
+        href: Connectors/GoogleAnalytics.md
       - name: "JSON"
         href: Connectors/json.md
       - name: "MySQL database"
@@ -250,6 +270,8 @@
         href: Connectors/SalesforceObjects.md
       - name: "Salesforce Reports"
         href: Connectors/SalesforceReports.md
+      - name: "SharePoint Folder"
+        href: Connectors/SharePointFolder.md
       - name: "SharePoint List"
         href: Connectors/SharePointList.md
       - name: "SharePoint Online List"
@@ -306,7 +328,7 @@
             href: samples/TripPin/10-TableView1/README.md
         - name: OAuth tutorials
           items:
-          - name: "Github"
+          - name: "GitHub"
             href: samples/Github/README.md
       - name: Samples
         items:

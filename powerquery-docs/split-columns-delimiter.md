@@ -48,7 +48,7 @@ The result of that operation will give you a table with the two columns that you
 ![Sample output table for splitting columns into new columns](images/me-split-columns-delimiter-into-columns-final.png)
 
 >[!Note]
->Power Query will split the column into as many columns as needed. The name of the new columns will contain the same name as the original column. A suffix that includes a dot and a number that represents the splitted section of the original column will be appended to the name of the new columns. 
+>Power Query will split the column into as many columns as needed. The name of the new columns will contain the same name as the original column. A suffix that includes a dot and a number that represents the split sections of the original column will be appended to the name of the new columns. 
 
 ## Split columns by delimiter into rows
 In this example, your initial table will be the one shown in the image below, with the columns **Cost Center** and **Accounts**. 
