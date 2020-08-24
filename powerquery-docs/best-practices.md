@@ -13,10 +13,10 @@ This article contains some tips and tricks to make the most out of your data wra
 
 ## Choose the right connector
 
-Power Query offers a vast number of data connectors, ranging from data sources such as TXT, CSV, and Excel files, to databases such as Microsoft SQL Server, and popular SaaS services such as Microsoft Dynamics 365 and Salesforce. 
+Power Query offers a vast number of data connectors. These connectors range from data sources such as TXT, CSV, and Excel files, to databases such as Microsoft SQL Server, and popular SaaS services such as Microsoft Dynamics 365 and Salesforce. 
 If you don't see your data source listed in the **Get Data** window, you can always use the ODBC or OLEDB connector to connect to your data source. 
 
-Using the best connector for the task will provide you with the best experience and performance. For example, using the SQL Server connector instead of the ODBC connector when connecting to a SQL Server database will not only provide you with a much better **Get Data** experience, but the SQL Server connector also offers you features that can improve your experience and performance, such as query folding. To read more about query folding, see [Power Query query folding](power-query-folding.md).
+Using the best connector for the task will provide you with the best experience and performance. For example, using the SQL Server connector instead of the ODBC connector when connecting to a SQL Server database not only provides you with a much better **Get Data** experience, but the SQL Server connector also offers you features that can improve your experience and performance, such as query folding. To read more about query folding, see [Power Query query folding](power-query-folding.md).
 
 Each data connector follows a standard experience as explained in [Getting data](get-data-experience.md). This standardized experience has a stage called **Data Preview**. In this stage, you're provided with a user-friendly window to select the data that you want to get from your data source, if the connector allows it, and a simple data preview of that data. You can even select multiple datasets from your data source through the **Navigator** window, as shown in the following image.
 
@@ -28,7 +28,7 @@ Each data connector follows a standard experience as explained in [Getting data]
 ## Filter early
 
 It's always recommended to filter your data in the early stages of your query or as early as possible. Some connectors will take advantage of your filters through query folding, as described in [Power Query query folding](power-query-folding.md). 
-It's also a best practice to filter out any data that isn't relevant for your case. This will let you better focus in your task at hand also only show you the data that you're interested in within the data preview section.
+It's also a best practice to filter out any data that isn't relevant for your case. This filtering will let you better focus in your task at hand also only show you the data that you're interested in within the data preview section.
 
 You can use the auto filter menu that displays a distinct list of the values found in your column to select the values that you want to keep or filter out. You can also use the search bar to help you find the values in your column.
 
@@ -101,7 +101,7 @@ You could split this query into two at the **Merge with Prices table** step. Tha
 
 ![Extract previous step](images/me-extract-previous.png)
 
-You'll then be prompted with a dialog to give your new query a name. This will effectively split your query into two queries. One query will have all the queries before the merge The other query will have an initial step that will reference your new query and the rest of the steps that you had in your original query from the **Merge with Prices table** step downward.
+You'll then be prompted with a dialog to give your new query a name. This will effectively split your query into two queries. One query will have all the queries before the merge. The other query will have an initial step that will reference your new query and the rest of the steps that you had in your original query from the **Merge with Prices table** step downward.
 
 ![Original query after the extract previous step action](images/me-extract-previous-referenced.png)
 
@@ -127,7 +127,7 @@ Try to give your groups a meaningful name that makes sense to you and your case.
 
 Making sure that you create a query that won't have any issues during a future refresh is a top priority. There are several features in Power Query to make your query resilient to changes and able to refresh even when some components of your data source changes.
 
-It's a best practice to define the scope of your query as to what it should do and what it should account for in terms of structure, layout, column names, data types, and any other component that you deem relevant to the scope.
+It's a best practice to define the scope of your query as to what it should do and what it should account for in terms of structure, layout, column names, data types, and any other component that you consider relevant to the scope.
 
 Some examples of transformations that can help you make your query resilient to changes are:
 * If your query has a dynamic number of rows with data, but a fixed number of rows that serve as the footer that should be removed, you can use the **Remove bottom rows** feature.
@@ -145,14 +145,14 @@ Some examples of transformations that can help you make your query resilient to 
    >[!NOTE]
    > To learn more about the options to unpivot your columns, see [Unpivot columns](unpivot-column.md).
 
-* If your query has a step that changes the data type of a column but some cells yield errors as the values do not conform to the desired data type, you could remove the rows that yielded error values.
+* If your query has a step that changes the data type of a column, but some cells yield errors as the values don't conform to the desired data type, you could remove the rows that yielded error values.
 
    >[!NOTE]
    > To more about working and dealing with errors, see [Dealing with errors](dealing-with-errors.md#remove-errors).
 
 ## Use parameters 
 Creating queries that are dynamic and flexible is a best practice. Parameters in Power Query help you make your queries more dynamic and flexible.
-A parameter serves as a way to easily store and manage a value that can be reused in many different ways. But it is more commonly used in two scenarios:
+A parameter serves as a way to easily store and manage a value that can be reused in many different ways. But it's more commonly used in two scenarios:
 
 * **Step argument**&mdash;You can use a parameter as the argument of multiple transformations driven from the user interface.
 
