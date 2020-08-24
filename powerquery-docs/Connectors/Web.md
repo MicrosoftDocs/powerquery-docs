@@ -164,6 +164,6 @@ If you are using the Web connector through an on-premises data gateway, you must
 
 ### Changing the authentication method
 
-In some cases, you may need to change the authentication method you use to access a particular SharePoint site. If this is necessary, see [Change the authentication method](connectorauthentication.md#change-the-authentication-method).
+In some cases, you may need to change the authentication method you use to access a particular SharePoint site. If this is necessary, see [Change the authentication method](../connectorauthentication.md#change-the-authentication-method).
 
 

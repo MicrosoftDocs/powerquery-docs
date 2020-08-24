@@ -1,6 +1,6 @@
 ---
 title: Power Query SharePoint List connector
-description: Provides basic information and how to connect to your data, along with troubleshooting tips for obtaining the root SharePoint address and changing the authentication method.
+description: Provides basic information about how to connect to your data, along with troubleshooting tips for obtaining the root SharePoint address and changing the authentication method.
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
@@ -80,6 +80,6 @@ Make sure you supply the root address of the SharePoint site, without any subfol
 
 ### Change the authentication method
 
-In some cases, you may need to change the authentication method you use to access a particular SharePoint site. If this is necessary, see [Change the authentication method](connectorauthentication.md#change-the-authentication-method).
+In some cases, you may need to change the authentication method you use to access a particular SharePoint site. If this is necessary, see [Change the authentication method](../connectorauthentication.md#change-the-authentication-method).
 
 
