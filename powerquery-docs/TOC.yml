@@ -4,6 +4,8 @@
   items:  
     - name: "What is Power Query?"
       href: power-query-what-is-power-query.md
+    - name: "Best practices in Power Query"
+      href: best-practices.md      
     - name: Get data
       items:
       - name: "Getting data"
