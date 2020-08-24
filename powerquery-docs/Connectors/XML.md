@@ -27,7 +27,7 @@ Function Reference Documentation: [Xml.Tables](https://docs.microsoft.com/powerq
 
 ### Load from file
 
-To load a local XML file, all you need to do is select the **XML** option in the connector selection. This will launch a local file browser and allow you to select your XML file. 
+To load a local XML file, all you need to do is select the **XML** option in the connector selection. This action will launch a local file browser and allow you to select your XML file. 
 
 ![XML file selection](../images/xmlbrowse.png)
 
@@ -43,7 +43,7 @@ If you want to load an XML file from the web, instead of selecting the XML conne
 
 ### Data Structure
 
-Due to the fact that many XML documents have ragged or nested data, you may have to do extra data shaping to get it in the sort of form that will make it convenient to do analytics. This holds true whether you use the UI accessible Xml.Tables function, or the Xml.Document function. Depending on your needs, you may find you have to do more or less data shaping.
+Due to the fact that many XML documents have ragged or nested data, you may have to do extra data shaping to get it in the sort of form that will make it convenient to do analytics. This holds true whether you use the UI accessible `Xml.Tables` function, or the `Xml.Document` function. Depending on your needs, you may find you have to do more or less data shaping.
 
 ### Text versus nodes
 If your document contains a mixture of text and non-text sibling nodes, you may encounter issues.
@@ -54,4 +54,4 @@ For example if you have a node like this:
     Hello <i>world</i>
 </abc>
 ```
-Xml.Tables will return the "world" portion but ignore "Hello". Only the element(s) are returned, not the text. However, Xml.Document will return "Hello \<i>world\</i>". The entire inner node is turned to text, and structure is not preserved.
+`Xml.Tables` will return the "world" portion but ignore "Hello". Only the element(s) are returned, not the text. However, `Xml.Document` will return "Hello \<i>world\</i>". The entire inner node is turned to text, and structure isn't preserved.
