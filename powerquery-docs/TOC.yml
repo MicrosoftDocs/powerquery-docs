@@ -26,12 +26,12 @@
         href: custom-function.md
     - name: Jess Fourth Batch
       items:
-      - name: "Options and Settings"
+      - name: "Options and settings"
         href: options.md
-      - name: "Rename Column"
+      - name: "Rename column"
         href: rename-column.md
-      - name: "Move Column"
-        href: move-column.md
+      - name: "Move columns"
+        href: move-columns.md
     - name: Transform data
       items:
       - name: "Use Power Query"
