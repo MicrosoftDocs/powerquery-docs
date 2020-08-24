@@ -179,7 +179,7 @@ You can even use parameters in some of the arguments of the data connectors. For
 If you change your server location, all you need to do is update the parameter for your server name and your queries will be updated.
 
 > [!NOTE]
-> To learn more about creating and using parameters, see [Using parameters](parameters.md).
+> To learn more about creating and using parameters, see [Using parameters](power-query-query-parameters.md).
 
 ## Create reusable functions
 If you find yourself in a situation where you need to apply the same set of transformations to different queries or values, creating a Power Query custom function that can be reused as many times as you need could be beneficial. A Power Query custom function is a mapping from a set of input values to a single output value, and is created from native M functions and operators.
