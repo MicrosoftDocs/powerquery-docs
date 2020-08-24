@@ -28,13 +28,13 @@ Each data connector follows a standard experience as explained in [Getting data]
 ## Filter early
 
 It's always recommended to filter your data in the early stages of your query or as early as possible. Some connectors will take advantage of your filters through query folding, as described in [Power Query query folding](power-query-folding.md). 
-It's also a best practice to filter out any data that isn't relevant for your case. This filtering will let you better focus in your task at hand also only show you the data that you're interested in within the data preview section.
+It's also a best practice to filter out any data that isn't relevant for your case. This will let you better focus on your task at hand by only showing data that’s relevant in the data preview section..
 
 You can use the auto filter menu that displays a distinct list of the values found in your column to select the values that you want to keep or filter out. You can also use the search bar to help you find the values in your column.
 
 ![Auto filter menu in Power Query](images/me-filter-values-auto-filter-menu.png)
 
-You can also take advantage of the type-specific filters such as "is in the previous" for a date, datetime, or even date timezone column.
+You can also take advantage of the type-specific filters such as **In the previous** for a date, datetime, or even date timezone column.
 
 ![type specific filter for a date column](images/me-filter-values-date-column.png)
 
@@ -63,7 +63,7 @@ By default, Power Query offers an automatic data type detection for unstructured
 
 ## Explore your data
 
-Before you start preparing you data and adding new transformation steps, we recommend that you enable the data profiling tools when using Power Query to easily discover information about your data.
+Before you start preparing you data and adding new transformation steps, we recommend that you enable the Power Query [data profiling tools](data-profiling-tools.md) to easily discover information about your data.
 
 ![Data preview or data profiling tools in Power Query](images/me-data-preview-tools-enabled-v2.png)
 
