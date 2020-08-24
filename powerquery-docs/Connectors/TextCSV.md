@@ -1,6 +1,6 @@
 ---
-title: Text/CSV
-description: Power Query Text/CSV connector reference
+title: Power Query Text/CSV connector
+description: Provides basic information and connection instructions, along with troubleshooting tips when loading files from the web and when unstructured text is interpreted as structured.
 author: cpopell
 ms.service: powerquery
 ms.topic: conceptual

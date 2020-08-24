@@ -1,6 +1,6 @@
 ---
-title: Google Analytics
-description: Power Query Google Analytics connector reference
+title: Power Query Google Analytics connector
+description: Provides basic information and connection instructions, along with a list of quota limits for Power BI and instructions on validating unexpected data.
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
@@ -69,7 +69,7 @@ You can **Load** the selected table, which brings the entire table into Power BI
 
 You should be aware of the following limitations and issues associated with accessing Adobe Analytics data.
 
-### Google Ananlytics quota limits for Power BI
+### Google Analytics quota limits for Power BI
 
 The standard limitations and quotas for Google Analytics AP requests is documented in [Limits and Quotas on API Requests](https://developers.google.com/analytics/devguides/config/mgmt/v3/limits-quotas). However, Power Query Desktop and Power Query Service allow you to use the following enhanced number of queries. 
 

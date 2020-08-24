@@ -1,6 +1,6 @@
 ---
-title: Salesforce Reports
-description: Power Query Salesforce Reports connector reference
+title: Power Query Salesforce Reports connector.
+description: Provides basic information, prerequisites, and how to connect to your data using the connector, along with a list of known issues and limitations for the connector.
 author: dougklopfenstein
 
 ms.service: powerquery

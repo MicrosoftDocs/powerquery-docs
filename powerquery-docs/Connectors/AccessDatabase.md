@@ -1,6 +1,6 @@
 ---
-title: Access database
-description: Power Query Access database connector reference
+title: Power Query Access database connector
+description: Provides basic information, prerequisites, and connection instructions, along with tips about using the on-premises data gateway and fixing mismatched bit versions.
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
@@ -41,7 +41,7 @@ To make the connection, take the following steps:
  
 2. If you're connecting from Power BI Desktop or Excel, browse for and select the Access database you want to load. Then select **Open**. 
 
-   ![Enter Access database connection](./media/access-database/select-database.png)
+   ![Enter the Access database connection](./media/access-database/select-database.png)
 
    If the Access database is online, use the [Web connector](web.md) to connect to the database.
 

@@ -1,6 +1,6 @@
 ---
-title: Azure SQL Data Warehouse
-description: Power Query Azure SQL Data Warehouse connector reference
+title: Power Query Azure SQL Data Warehouse connector
+description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your database using the connector.
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
