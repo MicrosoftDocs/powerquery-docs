@@ -43,3 +43,17 @@ The levels of endorsement are helpful for users to find reliable dataflows easie
 ![endorsement on the dataflow](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-promote-certify/powerbi-dataflow-endorsement-power-query.png)
 
 
+
+## Separate entities in multiple dataflows
+
+You can have multiple entities in one dataflow. One of the reasons you might split entities in multiple dataflows is what you learned earlier in this article about separating the data ingestion and data transformation dataflows. Another good reason to have entities in multiple dataflows is when you want a different refresh schedule that other tables. 
+
+In the example below, the Sales table needs to be refreshed every four hours. The date table needs to be refreshed only once a day to keep the current date record updated. And a product mapping table just needs to be refreshed once a week. If you have all of these tables in one dataflow, you have only one refresh option for them all. However, if you split those into multiple dataflows, you can schedule the refresh of each dataflow separately.
+
+![dataflows with different schedules for the refresh](media/DifferentSchedule.png)
+
+## Good table candidates for dataflow entities
+
+When you develop solutions using Power Query in the desktop tools, you might ask yourself; which of these tables are good candidates to be moved to a dataflow? The best tables to be moved to the dataflow are those that need to be used in more than one solution, or more than one environment or service. For example; The Date table in the below example, needs to be used in two separate Power BI files. Instead of duplicating that table into each file, you can build the table in a dataflow as an entity, and re-use it in those Power BI files.
+
+![shared table used in a dataflow](https://i1.wp.com/radacad.com/wp-content/uploads/2019/01/2019-01-21_06h36_16.png)
