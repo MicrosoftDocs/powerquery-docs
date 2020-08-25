@@ -50,7 +50,7 @@ You can have multiple entities in one dataflow. One of the reasons you might spl
 
 In the example below, the Sales table needs to be refreshed every four hours. The date table needs to be refreshed only once a day to keep the current date record updated. And a product mapping table just needs to be refreshed once a week. If you have all of these tables in one dataflow, you have only one refresh option for them all. However, if you split those into multiple dataflows, you can schedule the refresh of each dataflow separately.
 
-![dataflows with different schedules for the refresh](media/DifferentSchedule.png)
+![dataflows with different schedules for the refresh](https://i1.wp.com/radacad.com/wp-content/uploads/2019/01/2019-01-21_06h42_32.png)
 
 ## Good table candidates for dataflow entities
 
