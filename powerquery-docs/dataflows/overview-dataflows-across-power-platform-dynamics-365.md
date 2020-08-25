@@ -1,6 +1,6 @@
 ---
 
-title: An overview of dataflows across Power Platform and Dynamics 365 products
+title: what are dataflows
 description: An overview of dataflows across Power Platform and Dynamics 365 products
 author: radacad 
 ms.service: powerquery 
@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.date: 05/11/2020 
 ms.author: gepopell  
 
---- 
+---
 
  
 
@@ -128,15 +128,15 @@ In this scenario, the decision has been made by an organization to use Power App
 
  
 
-### Using dataflows to build a data warehouse 
+### Using dataflows to build a dimensional model 
 
  
 
-You can use dataflows as a replacement for other ETL tools to build a data warehouse. For example, the data engineers of a company decide to use dataflows to build the star-schema designed data warehouse, including fact and dimension tables in Azure Data Lake Storage Gen2. Then Power BI is used to generate reports and dashboards by getting data from the dataflows. 
+You can use dataflows as a replacement for other ETL tools to build a dimensional model. For example, the data engineers of a company decide to use dataflows to build the star-schema designed dimensional model, including fact and dimension tables in Azure Data Lake Storage Gen2. Then Power BI is used to generate reports and dashboards by getting data from the dataflows. 
 
  
 
-![Building a data warehouse using dataflows](https://i2.wp.com/radacad.com/wp-content/uploads/2019/01/2019-01-21_06h49_16.png) 
+![Building a dimensional model using dataflows](media/DataflowDimensionalModel.png) 
 
  
 
