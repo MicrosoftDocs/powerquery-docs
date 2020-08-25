@@ -1,6 +1,6 @@
-# Better performance with the separation of data ingestion and data transformation dataflows
+# Improve performance and reusability by separating data ingestion from data transformation dataflows
 
-One of the best practices of dataflow implementation is the separation of dataflows into layers of data ingestion and data transformation. This specifically helps with the slower data sources. Instead of getting data from a slow data source again and again, the data ingestion process can be done once, and the transformation can be done on top of that. This article, explains the process.
+One of the best practices of dataflow implementation is separating responsibilities of dataflows into two layers: data ingestion and data transformation. This pattern is specifically helpful with multiple queries of the slower data sources in one dataflow or, multiple dataflows querying the same data sources. Instead of getting data from a slow data source again and again for each query, the data ingestion process can be done once, and the transformation can be done on top of that. This article, explains the process.
 
 ## On-Premises data source
 
@@ -8,7 +8,7 @@ In many scenarios, the on-premises data source is a slow data source. Especially
 
 ![getting data directly from the on-premises data source](media/1/DFfromOnePremDS.png)
 
-Using data ingestion dataflows minimizes the get data process from the source, and the rest of the operation will be using the result of the data ingestion dataflows.
+Using Analytical dataflows for data ingestion minimizes the get data process from the source and focuses on loading data to Azure Data Lake storage. Once in storage, other dataflows can be created that leverage the ingestion dataflow's output and the Dataflow engine can read the data and perform the transformations directly from the data lake and without contacting the original data source or gateway.
 
 ![data ingestion dataflow](media/1/IngestionOnePremDS.png)
 
@@ -23,3 +23,15 @@ The separation of the two layers of data ingestion and transformation is helpful
 This separation is not only useful because of the performance, it is also helpful for the scenarios that an old legacy data source system been migrated to a new system, in those cases, only the data ingestion dataflows need to be changed. The data transformation dataflows will be intact for this type of change.
 
 ![change the data source](media/1/DFChangeDataSource.png)
+
+## Re-use in other tools and services
+
+The separation of the data ingestion dataflow from the data transformation dataflows are helpful in many scenarios. Another use case scenario for this pattern is when you want to use this data in other tools and services. For this purpose it is better to use analytical dataflows and bringing your own Azure Data Lake Storage Gen2 as the storage engine. You can learn more about the [analytical dataflows](https://docs.microsoft.com/power-query/dataflows/understanding-differences-between-analytical-standard-dataflows) in this article.
+
+## Optimize the data ingestion dataflow
+
+Consider optimizing the data ingestion dataflow whenever possible. As an example, if the entire data from the source is not needed, and the data source supports query folding, then filtering data and bringing only a required subset is a good approach. If you are not familiar with the query folding, [read this article](https://docs.microsoft.com/power-query/power-query-folding) to learn more about it.
+
+## Create the data ingestion dataflows as analytical dataflows
+
+Consider creating your data ingestion dataflows as analytical dataflows. This helps especially other services and applications to use this data. This also makes it easier for the data transformation dataflows to get data from the analytical ingestion dataflow. You can learn more about the [analytical dataflows](https://docs.microsoft.com/power-query/dataflows/understanding-differences-between-analytical-standard-dataflows) in this article.
