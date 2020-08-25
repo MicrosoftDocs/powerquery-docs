@@ -1,6 +1,6 @@
 ---
-title: Best practices for creating a data warehouse using dataflows
-description: Best practices for creating a data warehouse using dataflows
+title: Best practices for creating a dimensional model using dataflows
+description: Best practices for creating a dimensional model using dataflows
 author: radacad
 
 ms.service: powerquery
@@ -10,15 +10,15 @@ ms.date: 05/25/2020
 ms.author: v-rerad
 ---
 
-# Best practices for creating a data warehouse using dataflows
+# Best practices for creating a dimensional model using dataflows
 
-Designing a data warehouse is one of the most common tasks you can do with a dataflow. This article highlights some of the best practices for creating a data warehouse using a dataflow.
+Designing a dimensional model is one of the most common tasks you can do with a dataflow. This article highlights some of the best practices for creating a dimensional model using a dataflow.
 
 ## Staging dataflows
 
-One of the key points in any data integration system is to reduce the number of reads from the source operational system. In the traditional data warehouse architecture, this reduction is done by creating a new database called a staging database. The purpose of the staging database is to load data "as is" from the data source into the staging database on a scheduled basis.
+One of the key points in any data integration system is to reduce the number of reads from the source operational system. In the traditional data integration architecture, this reduction is done by creating a new database called a staging database. The purpose of the staging database is to load data "as is" from the data source into the staging database on a scheduled basis.
 
-The rest of the data integration will then use the staging database as the source for further transformation and converting it to the data warehouse model structure.
+The rest of the data integration will then use the staging database as the source for further transformation and converting it to the dimensional model model structure.
 
 We recommended that you follow the same approach using dataflows. Create a set of dataflows that are responsible for just loading data "as is" from the source system (only for the tables that are needed). The result is then stored in the storage structure of the dataflow (either ADLS Gen2 or Common Data Services). This change ensures that the read operation from the source system is minimal.
 
@@ -59,7 +59,7 @@ In the diagram above, the computed entity gets the data directly from the source
 
 ## Build a star schema
 
-The best data warehouse model would be a star schema model that has dimensions and fact tables designed in a way to minimize the amount of time to query the data from the model, and also makes it easy to understand for the data visualizer.
+The best dimensional model would be a star schema model that has dimensions and fact tables designed in a way to minimize the amount of time to query the data from the model, and also makes it easy to understand for the data visualizer.
 
 It isn't ideal to bring data in the same layout of the operational system into a BI system. The data tables should be remodeled. Some of the tables should take the form of a dimension table, which is keeping the descriptive information. Some of the tables should take the form of a fact table, to keep the aggregable data. The layout that fact tables and dimension tables are designed is best to form a star schema. For more information about the star schema, see [Understand star schema and the importance for Power BI](https://docs.microsoft.com/power-bi/guidance/star-schema).
 
@@ -73,7 +73,7 @@ When building dimension tables, make sure you have a key for each dimension tabl
 
 ### Incremental refresh for large fact tables
 
-Fact tables are always the largest tables in the data warehouse. We recommend that you reduce the number of rows transferred for these tables. If you have a very large fact table, ensure that you use incremental refresh for that entity. An incremental refresh can be done in the Power BI dataset, and also the dataflow entities. 
+Fact tables are always the largest tables in the dimensional model. We recommend that you reduce the number of rows transferred for these tables. If you have a very large fact table, ensure that you use incremental refresh for that entity. An incremental refresh can be done in the Power BI dataset, and also the dataflow entities. 
 
 Incremental refresh gives you options to only refresh part of the data, the part that has changed. There are multiple options to choose which part of the data to be refreshed and which part to be persisted. To learn more about incremental refresh in dataflows, see [Using incremental refresh with Power BI dataflows](https://docs.microsoft.com/power-bi/transform-model/service-dataflows-incremental-refresh).
 
@@ -81,17 +81,6 @@ Incremental refresh gives you options to only refresh part of the data, the part
 
 ## Referencing to create dimensions and fact tables
 
-In the source system, you have often a table that you use for generating both fact and dimension tables in the data warehouse. These tables are good candidates for computed entities and also intermediate dataflows. The common part of the process, such as data cleaning, removing extra rows and columns, and so on, can be done once. Using a reference from the output of those actions, you can produce the dimension and fact tables. This approach will use the computed entity for the common transformations.
+In the source system, you have often a table that you use for generating both fact and dimension tables in the dimensional model. These tables are good candidates for computed entities and also intermediate dataflows. The common part of the process, such as data cleaning, removing extra rows and columns, and so on, can be done once. Using a reference from the output of those actions, you can produce the dimension and fact tables. This approach will use the computed entity for the common transformations.
 
 ![Referencing from other entities](media/OrdersEntityReferenced.png)
-
-
-
-
-
-
-
-
-
-
-
