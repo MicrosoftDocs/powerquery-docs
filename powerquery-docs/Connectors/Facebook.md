@@ -1,5 +1,5 @@
 ---
-title: Facebook
+title: Power Query Facebook connector
 description: Power Query Facebook connector reference
 author: cpopell
 

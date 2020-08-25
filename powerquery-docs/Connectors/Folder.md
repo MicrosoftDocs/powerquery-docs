@@ -1,6 +1,6 @@
 ---
-title: Folder
-description: Power Query Folder connector reference
+title: Power Query Folder connector
+description: Provides basic information and connection instructions, along with tips about combining data from multiple files and subfolders.
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
