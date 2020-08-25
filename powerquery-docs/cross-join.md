@@ -17,6 +17,7 @@ This article demonstrates, with a practical example, how to do a cross join in P
 ## Sample input and output tables
 
 For this example, the sample source tables are:
+
 * **Products**&mdash;a table with all the generic products that you sell.
 
    ![Sample Products table](images/me-cross-join-products-table.png)
@@ -40,6 +41,7 @@ Inside the **Custom column** window, enter the name of the query for the cross j
 ![Custom column for cross join](images/me-cross-join-add-column-window.png)
 
 >[!IMPORTANT]
+
 >If your query name has spaces in it, such as **Product Colors**, then the text that you need to enter in the **Custom column formula** section has to follow the syntax ```#"Query name"```. For **Product Colors**, you'd need to enter ```#"Product Colors"```. You can check the name of your queries in the **Query settings pane** on the right side of your screen or inside the **Queries pane** on the left side of your screen.
 
 After you select **OK** in the **Custom column** window, a new column will be added to the table with table values in it. You can select the icon next to the column header of this new column to expand the contents of this newly created column.

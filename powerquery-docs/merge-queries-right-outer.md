@@ -9,7 +9,6 @@ ms.author: v-miesco
 ---
 
 # Right outer join
-
 A right outer join is one of the join kinds available inside the **Merge queries** window in Power Query. To read more about the merge operations in Power Query, see [Merge operations overview](merge-queries-overview.md).
 
 A right outer join keeps all the rows from the right table, and brings any matching rows from the left table.
