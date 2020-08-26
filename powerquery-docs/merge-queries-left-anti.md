@@ -40,7 +40,6 @@ The goal is to merge both tables, where the **Sales** table will be the left tab
 |CountryID|id|
 
 The goal is to reach the following table, where only the rows from the left table that don't match any from the right table are kept.
-
 ![Left anti join final table](images/me-merge-operations-left-anti-final-table.png)
 
 ## Left anti join

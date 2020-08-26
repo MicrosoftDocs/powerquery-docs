@@ -1,6 +1,6 @@
 ---
-title: QuickBooks Online
-description: Power Query QuickBooks Online connector reference
+title: Power Query QuickBooks Online connector
+description: Provides basic information, prerequisites, and instructions on how to connect to your database, along with known issues that may affect the connection.
 author: dougklopfenstein
 
 ms.service: powerquery

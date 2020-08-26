@@ -61,6 +61,7 @@ To do a full outer join:
 
 In the **Countries** table, you have the **Country** Spain with **id** of 4, but there are no records for **CountryID** 4 in the **Sales** table. That's why only three of four rows from the right table found a match. All rows from the right table that didn't have matching rows from the left table will be grouped and shown in a new row in the output table with no values for the fields from the left table. 
 
+
 ![No matching rows on left table for full outer join](images/me-merge-operations-full-outer-no-matching-rows.png)
 
 From the newly created **Countries** column after the merge operation, expand the **Country** field without using the original column name as prefix.

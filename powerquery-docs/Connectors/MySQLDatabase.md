@@ -1,6 +1,6 @@
 ---
-title: MySQL database
-description: Power Query MySQL database connector reference
+title: Power Query MySQL database connector
+description: Provides basic information about products that use the connector, supported authentication types, prerequisites, and connection instructions.
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
