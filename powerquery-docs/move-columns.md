@@ -1,6 +1,6 @@
 ---
 title: Move column
-description: In Power Query, you can move the column to the location wanted.
+description: How to move a column to the location wanted inside of Power Query.
 author: jessli20
 ms.service: powerquery
 ms.reviewer: v-miesco
