@@ -3,7 +3,7 @@ title: Move column
 description: In Power Query, you can move the column to the location wanted.
 author: jessli20
 ms.service: powerquery
-ms.reviewer: 
+ms.reviewer: v-miesco
 ms.date: 08/12/2020
 ms.author: jessli20
 ---
@@ -22,10 +22,9 @@ We will focus on moving the **Contact Name** column.
 
 ![Move Column Move Options](images/move-column-before.png)
 
-To move the column using the **Move** option. Within the **Move** option, there are a couple of choices: Before, After, To beginning and To end.
+To move the column using the **Move** option. This option can be found inside the contextual menu when doing a right-click on a column and also inside the *Any column* group inside the Transform tab. Within the **Move** option, there are a couple of choices: Before, After, To beginning and To end.
 
 ![Move Column Move Options](images/move-column-move-options.png)
-
 
 If you want to move the column 1 space left, then select **Before**.
 
