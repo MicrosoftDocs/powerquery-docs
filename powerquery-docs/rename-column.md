@@ -34,17 +34,17 @@ The end result that you want in your Power Query is a query that looks like the 
 
 ## How to rename a column
 
-The first way to rename the column is to double-click the column header where the name is. The double-click action will immediately allow you to rename the column.
+There are three ways to rename a column in Power Query.
+
+* **Double-click the column header** - The double-click action will immediately allow you to rename the column.
 
 ![Rename Column Double Select](images/me-rename-column-double-click.png)
 
-The second way is by doing a right-click on the column of your choice and selecting the option that reads **Rename...**.
+* **Right-click the column of your choice** - A contextual menu will be displayed and you can select the option that reads **Rename** to rename the select column.
 
 ![Rename Column Context Pane](images/me-rename-column-right-click.png)
 
-Then you can change the name of the column as like above.
-
-The third and final way to rename a column by selecting the **Rename** option from within the *Any column* group in the Transform tab as shown below.
+* **Rename option in the Transform tab** - You can select the **Rename** option from within the *Any column* group in the Transform tab as shown below.
 
 ![Rename column option found inisde the Any column in the Transform tab](images/me-rename-column-transform-tab.png)
 
