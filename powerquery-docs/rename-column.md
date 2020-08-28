@@ -3,7 +3,7 @@ title: Rename column
 description: Within Power Query, you can rename your column given certain conditions.
 author: jessli20
 ms.service: powerquery
-ms.reviewer: 
+ms.reviewer: v-miesco
 ms.date: 08/12/2020
 ms.author: jessli20
 ---
@@ -11,27 +11,42 @@ ms.author: jessli20
 
 # Renaming a column
 
-In Power Query, you can rename columns to format the dataset in a clearer and concise way. 
+In Power Query, you can rename columns to format the dataset in a clear and concise way. 
 
-As an example, we'll start with this dataset:
+As an example, we'll start with a dataset that has 2 columns as shown below.
 
-![Rename Column Before](images/rename-column-before.png)
+|Column 1|Column 2|
+-------|-----
+Panama|Panama
+USA| New York
+Canada | Toronto
 
-and eventually the dataset columns will look like:
+Note that the column headers are **Column 1** and **Column 2**, but you want to change those names for a more friendly name to your columns as follows.
 
-![Rename Column After](images/rename-column-after.png)
+|Original column Name | New column name|
+-----|---
+Column 1|Country
+Column 2|City
+
+The end result that you want in your Power Query is a query that looks like the following.
+
+![Sample output table with Country and City as new field names](images/me-rename-column-sample-output-table.png)
 
 ## How to rename a column
 
-The first way to rename the column is to double select the column header where the name is. The double select action will immediately allow you to rename the column.
+The first way to rename the column is to double-click the column header where the name is. The double-click action will immediately allow you to rename the column.
 
-![Rename Column Double Select](images/rename-column-double-select.png)
+![Rename Column Double Select](images/me-rename-column-double-click.png)
 
-The second way is to open the context pane on the column header and from there, select on the **Rename...** selection.
+The second way is by doing a right-click on the column of your choice and selecting the option that reads **Rename...**.
 
-![Rename Column Context Pane](images/rename-column-context-pane.png)
+![Rename Column Context Pane](images/me-rename-column-right-click.png)
 
 Then you can change the name of the column as like above.
+
+The third and final way to rename a column by selecting the **Rename** option from within the *Any column* group in the Transform tab as shown below.
+
+![Rename column option found inisde the Any column in the Transform tab](images/me-rename-column-transform-tab.png)
 
 ## Avoiding duplicate column names
 
