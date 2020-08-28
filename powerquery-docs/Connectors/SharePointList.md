@@ -82,4 +82,18 @@ Make sure you supply the root address of the SharePoint site, without any subfol
 
 In some cases, you may need to change the authentication method you use to access a particular SharePoint site. If this is necessary, see [Change the authentication method](../connectorauthentication.md#change-the-authentication-method).
 
+### Inconsistent behavior around boolean data
+
+When using Sharepoint List connector, Boolean values are represented inconsistently as TRUE/FALSE or 1/0 in PBI Desktop and Service environments. This may result in wrong data, incorrect filters and empty visuals.
+
+This issue only happens when the Data Type is not explicitly set for a column in the Query View of Power BI Desktop. You can tell by ‘ABC 123’ image on the column and ‘Any’ data type in the ribbon as shown below.
+
+![Data type any on a boolean column](./media/sharepoint-list/booleanany.png)
+
+The user can force the interpretation to be consistent by explicitly setting the data type for the column through the Query Editor. For example, here’s the column with an explicit Boolean type:
+
+![Data type any on a boolean column](./media/sharepoint-list/booleanexplicit.png)
+
+
+
 
