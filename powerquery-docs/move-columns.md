@@ -81,7 +81,7 @@ Move the column to the place that you would like to place it at.
 
 If you want to find a specific column, then go to the **View** tab in the ribbon and select **Go to column**.
 
-From there, you will be able to specfically go to the column you would like to view. This is especially useful if there are a lot of columns.
+From there, you will be able to specifically go to the column you would like to view. This is especially useful if there are many columns.
 
 ![Move Column Go to Column](images/move-column-go-to-column.png)
 
