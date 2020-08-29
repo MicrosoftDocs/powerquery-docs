@@ -1,5 +1,5 @@
 ---
-title: Move column
+title: Move columns
 description: How to move a column to the location wanted inside of Power Query.
 author: jessli20
 ms.service: powerquery
@@ -8,7 +8,7 @@ ms.date: 08/12/2020
 ms.author: jessli20
 ---
 
-# Moving columns
+# Move columns
 
 A process in cleaning and preparing data is to move the columns within the dataset. 
 
