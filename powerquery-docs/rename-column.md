@@ -1,5 +1,5 @@
 ---
-title: Rename column
+title: Rename columns
 description: Within Power Query, you can rename your column given certain conditions.
 author: jessli20
 ms.service: powerquery
@@ -9,7 +9,7 @@ ms.author: jessli20
 ---
 
 
-# Renaming a column
+# Rename columns
 
 In Power Query, you can rename columns to format the dataset in a clear and concise way. 
 
