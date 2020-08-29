@@ -21,7 +21,7 @@ Panama|Panama
 USA| New York
 Canada | Toronto
 
-Note that the column headers are **Column 1** and **Column 2**, but you want to change those names for a more friendly name to your columns as follows.
+The column headers are **Column 1** and **Column 2**, but you want to change those names for a more friendly name to your columns as follows.
 
 |Original column Name | New column name|
 -----|---
@@ -61,13 +61,16 @@ For example, for the first sample table provided in this article, imagine that y
 
 With many actions performed in Power Query that might result in a *Column Name Conflict*, Power Query will try to disambiguate by renaming all duplicate instances of the same column name. The way that Power Query renames these columns is by adding a suffix to the original column name that has a separator (commonly a dot or an underscore) and then a number that represents the instance of the duplicated column name in the order that it was found by Power Query. This can often happen with actions such as but not limited to.
 
-* **Promoting your column headers from your first row** -  For example, if you tried promoting the first row of the sample table in this article it'll rename the columns to be **Panama** and **Panama_1**.
+* **Promoting your column headers from your first row** -  For example, if you tried promoting the first row of the sample table in this article it will rename the columns to be **Panama** and **Panama_1**.
 
 ![Using the promote rows to headers to showcase the column name disambiguation](images/me-rename-column-promote-rows-duplicate-name.png)
 
 >[!NOTE]
 > You can learn more about how to promote headers from your first row in the article [Promote or demote column headers](table-promote-demote-headers.md).
 
-* **Expanding a column with a field name that also exist in the current table** -  This can happen, for example, when you perform a Merge operation and the column with the merged table has field names that also exist in the table. When you try to expand the fields from that column, Power Query will automatically try to disambiguate to prevent *Column Name Conflict* errors.
+* **Expanding a column with a field name that also exists in the current table** -  This can happen, for example, when you perform a Merge operation and the column with the merged table has field names that also exist in the table. When you try to expand the fields from that column, Power Query will automatically try to disambiguate to prevent *Column Name Conflict* errors.
 
 ![Expanding field names that already exist in the table](images/me-rename-column-expand-field-duplicate-names.png)
+
+>[!NOTE]
+> You can learn more about how to merge tables in Power Query from the article [Promote or demote column headers](merge-queries-overview.md).
