@@ -50,27 +50,24 @@ There are three ways to rename a column in Power Query.
 
 ## Avoiding duplicate column names
 
-If you try to rename the column to a column name that already exists, an error will appear. You will have to rename the column to something else.
+Power Query requires the table column names to be unique across all columns. This means that if you try to rename a column to a column name that already exists in the table, an error with the message *Column Name Conflict* will appear. You will have to rename the column to something else.
+
+For example, for the first sample table provided in this article, imagine that you try to rename both **Column 1** and **Column 2** to "Geography". An error message will pop up that will prevent you from renaming a second column "Geography". 
 
 ![Rename Column Column Error](images/rename-column-error.png)
 
 
-## Replacing header actions
+## Column name disambiguation
 
-Any new action promoting the column headers based on the data and replacing the current column names will come with caveats.
+With many actions performed in Power Query that might result in a *Column Name Conflict*, Power Query will try to disambiguate by renaming all duplicate instances of the same column name. The way that Power Query renames these columns is by adding a suffix to the original column name that has a separator (commonly a dot or an underscore) and then a number that represents the instance of the duplicated column name in the order that it was found by Power Query. This can often happen with actions such as but not limited to.
 
-If there are any repeated column names based on the header data, then the second matching column name will have suffix containing an underscore or period followed by a number.
+* **Promoting your column headers from your first row** -  For example, if you tried promoting the first row of the sample table in this article it'll rename the columns to be **Panama** and **Panama_1**.
 
-### Use First Row as Headers action
+![Using the promote rows to headers to showcase the column name disambiguation](images/me-rename-column-promote-rows-duplicate-name.png)
 
-To see the changes, you want to replace the headers with the first row of data use the **Use First Row as Headers** option. The column headers will then look like below. 
+>[!NOTE]
+> You can learn more about how to promote headers from your first row in the article [Promote or demote column headers](table-promote-demote-headers.md).
 
-![Rename Column Duplicate after Promoting Header](images/rename-column-suffix.png)
+* **Expanding a column with a field name that also exist in the current table** -  This can happen, for example, when you perform a Merge operation and the column with the merged table has field names that also exist in the table. When you try to expand the fields from that column, Power Query will automatically try to disambiguate to prevent *Column Name Conflict* errors.
 
-
-### Group By action
-
-If you use a **Group By** action on a column with a matching name, then the result of the **Group By** will have a suffix with a period the number of the matching column names.
-
-![Rename Column Group By](images/rename-column-group-by.png)
-
+![Expanding field names that already exist in the table](images/me-rename-column-expand-field-duplicate-names.png)
