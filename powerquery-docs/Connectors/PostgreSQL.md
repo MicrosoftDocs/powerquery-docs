@@ -1,6 +1,6 @@
 ---
-title: PostgreSQL
-description: Power Query PostgreSQL connector reference
+title: Power Query PostgreSQL connector
+description: Provides basic information, prerequisites, and instructions on how to connect to your database, along with native query folding instructions and troubleshooting tips.
 author: cpopell
 ms.service: powerquery
 ms.topic: conceptual

@@ -85,3 +85,4 @@ After you select **OK**, you'll create a table that looks like Table 1, with all
 <!--
 ![Sample output table](images/me-merge-fuzzy-matching-sample-output-table.png "Sample output table")
 -->
+

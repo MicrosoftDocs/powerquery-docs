@@ -1,6 +1,6 @@
 ---
-title: Common Data Service
-description: Power Query Common Data Service connector reference
+title: Power Query Common Data Service connector
+description: Provides basic information and connection instructions, along with OData API performance information, entity retrieval rate, and alternative means of connecting.
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual

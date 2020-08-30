@@ -10,6 +10,7 @@ ms.custom: edited
 ---
 
 # Right outer join
+
 <!--Please see the editor's notes in merge-queries-left-outer.md-->
 One of the join kinds available in the **Merge** dialog box in Power Query, a *right outer join* keeps all the rows from the right table and brings any matching rows from the left table. More information: [Merge operations overview](merge-queries-overview.md)
 
