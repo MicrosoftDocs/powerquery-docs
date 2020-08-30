@@ -14,7 +14,7 @@ ms.custom: edited
 In Power Query, you can include or exclude rows according to a specific value in a column. You can choose from two methods to filter the values in your column:
 <!--These introduction should be rewritten to mention that type-specific filters are also covered. The two ways of accessing the filters aren't as interesting. This is another example of how describing the UI and describing what the reader wants to know are often at odds with each other.-->
 * [Sort and filter menu](#sort-and-filter-menu)
-* [Cell shortcut menu](#right-click)
+* [Cell shortcut menu](#cell-shortcut-menu)
 
 After you apply a filter to a column, a small filter icon appears in the column heading, as shown in the following illustration.
 
