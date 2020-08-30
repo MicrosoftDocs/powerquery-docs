@@ -28,7 +28,7 @@ The stages are:
 
 4. Query destination
 
-![Flow diagram for getting data](images/getting-data-flow-diagram.png "Flow diagram for getting data")
+![Flow diagram showing the four stages of getting data](images/getting-data-flow-diagram.png "Flow diagram showing the four stages of getting data")
 
 ## 1. Connection settings
 
@@ -49,12 +49,12 @@ Every single connection that's made in Power Query has to be authenticated. The 
 
 The currently available methods of authentication for Power Query are:
 
-* **Anonymous**&mdash;Commonly used when connecting to a data source that doesn't require user authentication, such as a webpage or a file available over public HTTP.
-* **Basic**&mdash;A **username** and **password** sent in base64 encoding are accepted for authentication.<!--Edit okay? "Accepts username and password to be sent..." is ambiguous. In this case it seems that passive voice might actually be clearer.-->
-* **API Key**&mdash;A single API key is accepted for authentication.
-* **Organizational account** or **Microsoft account**&mdash;This method is also known as **OAuth 2.0**.
-* **Windows**&mdash;Can be implicit or explicit.
-* **Database**&mdash;This is only available in some database connectors.
+* **Anonymous**: Commonly used when connecting to a data source that doesn't require user authentication, such as a webpage or a file available over public HTTP.
+* **Basic**: A **username** and **password** sent in base64 encoding are accepted for authentication.<!--Edit okay? "Accepts username and password to be sent..." is ambiguous. In this case it seems that passive voice might actually be clearer.-->
+* **API Key**: A single API key is accepted for authentication.
+* **Organizational account** or **Microsoft account**: This method is also known as **OAuth 2.0**.
+* **Windows**: Can be implicit or explicit.
+* **Database**: This is only available in some database connectors.
 
 For example, the available authentication methods for the SQL Server<!--"Azure" isn't part of the SQL Server brand.--> connector are Windows, Database, and Microsoft account.
 
@@ -76,17 +76,17 @@ The **Navigator** window consists of two main sections:
 * The object selection pane is displayed on the left side of the window. The
     user can interact with and select these objects.
     >[!NOTE]
-    >For Power Query in Excel, you need to enable the multi-select option<!--Will the reader know how to do this? If it's an icon, can we supply it here? --> from the upper-left corner of the navigation window.
+    >For Power Query in Excel, you need to enable multiple selection<!--Edit is via Writing Style Guide, but maybe there's an icon or a command name that we can use instead? If not, will the reader know how to do this?  --> from the upper-left corner of the navigation window.
 * The data preview pane on the right side of the window shows a preview of the data from the object you selected.
 
 ![SQL Server connector navigator window](images/me-navigator.png "SQL Server connector navigator window")
 
 ### Table preview dialog box
 
-The table preview<!--Removed bold format because it doesn't seem to actually have this name (or any fixed name) in the UI.--> dialog box consists of only one section for the data preview. An example of a connector that provides this experience and window is the [Folder](connectors/folder.md) connector.
+The table preview<!--Removed bold format because it doesn't seem to actually have this name (or any fixed name?) in the UI.--> dialog box consists of only one section for the data preview. An example of a connector that provides this experience and window is the [Folder](connectors/folder.md) connector.
 
 ![Table preview dialog box](images/combinefiles1.png "Table preview dialog box")
 
 ## 4. Query destination
 
-This is the stage where you specify where to load the query. The options vary from integration to integration, but the one option that's always available is loading data to the Power Query Editor to further transform and enrich the query.
+This is the stage in which you specify where to load the query. The options vary from integration to integration, but the one option that's always available is loading data to the Power Query Editor to further transform and enrich the query.

@@ -6,88 +6,93 @@ ms.service: powerquery
 ms.reviewer: 
 ms.date: 06/30/2020
 ms.author: v-miesco
+ms.custom: edited
 ---
 
 # Combine files overview
 
-With Power Query, you can combine multiple files with the same schema into a single logical table.
+With Power Query, you can combine multiple files that have the same schema into a single logical table.
 
-This feature is useful when you want to combine all the files you have in the same folder. For example, if you have a folder that contains monthly files with all the purchase orders for your company, then combining these files would be an easy way to consolidate the orders into a single view.
+This feature is useful when you want to combine all the files you have in the same folder. For example, if you have a folder that contains monthly files with all the purchase orders for your company, you can combine these files to consolidate the orders into a single view.
 
-Files can come from a variety of sources, such as, but not limited to:
-* Local folder
-* SharePoint site
-* Azure Blob Storage
+Files can come from a variety of sources, such as (but not limited to):
+
+* Local folders
+* SharePoint sites
+* Azure Blob storage
 * Azure Data Lake Storage (Gen1 and Gen2)
 
 When working with these sources, you'll notice that they share the same table schema, commonly referred to as the *file system view*. The following screenshot shows an example of the file system view.
 
-![File system view](images/me-combine-files-overview-file-system-view.png)
+![File system view](images/me-combine-files-overview-file-system-view.png "File system view")
 
-In the file system view, you'll get a column called **Content**, which represents the binary representation of a file.
+In the file system view, the **Content** column contains the binary representation of each file.<!--Does it always? To judge by the following descriptions, it seems that this might not necessarily be the name of the column. -->
 
->[!Note]
-> You can filter the list of files found inside the file system view using any of the fields available. It's good practice to filter this view to only take into consideration the files you need to combine, either by filtering fields such as **Extension** or **Folder Path**. You can learn more about the file system view and how to take advantage of it from the article on the [local folder connector](connectors/folder.md).
+>[!NOTE]
+> You can filter the list of files in the file system view by using any of the available fields. It's good practice to filter this view to show only the files you need to combine, for example by filtering fields such as **Extension** or **Folder Path**. More information: [Folder](connectors/folder.md)
 
-Selecting any of the **Binary** values inside the **Content** column will automatically create a series of navigation steps to that specific file. Power Query will try to interpret the binary using one of the available connectors, such as TXT/CSV, Excel Workbook, JSON, XML, or other connector as it sees fit.
+Selecting any of the \[Binary\] values in the **Content** column automatically creates a series of navigation steps to that specific file. Power Query will try to interpret the binary by using one of the available connectors, such as Text/CSV, Excel, JSON, or XML.<!--Edits based on the connector names in the docset. You don't need "or other" when you say "such as."-->
 
-The combine files feature has the following steps or phases to reach the required goal:
-* [Table preview dialog](#table-preview-dialog)
-* [Combine files dialog](#combine-files-dialog)
-* [Combine files output](#combine-files-output)
+Combining files takes place in the following stages:<!--Suggested, to echo the "stages" in get-data-experience.-->
 
-## Table preview dialog
+* [Table preview](#table-preview)
+* [Combine files dialog box](#combine-files-dialog-box)
+* [Combined files output](#combined-files-output)<!--Suggest using "combined files" to differentiate the terms a bit.-->
 
-Upon connecting to a data source using any of the previously mentioned connectors, you'll be taken to the table preview dialog. You can then select **Combine** at the bottom-right section of the screen.
+## Table preview
+<!--Suggested. Removed the "dialog box" descriptor simply because it isn't a named dialog box.-->
+When you connect to a data source by using any of the previously mentioned connectors, a table preview opens. If you're certain that you want to combine all the files in the folder<!--Suggested, to emphasize the contrast between doing this now and waiting to clean up the file list that you describe next.-->, select **Combine** in the lower-right corner of the screen.
 
-![Table preview with combine option](images/combinefiles1.png)
+![Table preview with the Combine option](images/combinefiles1.png "Table preview with the Combine option")
 
-Alternatively, you can select **Transform Data** to access the Power Query Editor, where the list of files can be subset (for example, using filters on the folder path column to only include files from a specific subfolder). Then combine files by selecting the column containing the binaries (for example, in the **Content** column) and then selecting **Combine Files** from any of the following places:
+Alternatively, you can select **Transform data** to access the Power Query Editor and create a subset of the list of files (for example, by using filters on the folder path column to only include files from a specific subfolder). Then combine files by selecting the column that contains<!--Suggested.--> the binaries (for example<!--Isn't this always going to be the **Content** column? If so, please delete "for example." If not, does it need to be explained that sometimes this isn't the **Content** column?-->, the **Content** column) and then selecting either:
 
-* **Combine files button**&mdash;inside the **Combine** group in the **Home** tab.
+* The **Combine files** command in the **Combine** group on the **Home** tab.
 
-   ![Combine files button in Home tab](images/me-combine-files-overview-combine-files-button-home.png)
+   ![Combine files command on the Home tab](images/me-combine-files-overview-combine-files-button-home.png "Combine files button on the Home tab")
 
-* **Combine files icon**&mdash;next to the column header of the column with **Binary** values.
+* The **Combine files** icon in the column header of the column that contains \[Binary\] values.<!--Not necessarily the **Content** column?-->
 
-   ![Combine files icon in column header](images/me-combine-files-overview-combine-files-button-header.png)
+   ![Combine files icon in the column header](images/me-combine-files-overview-combine-files-button-header.png "Combine files icon in the column header")
 
-## Combine files dialog
+## Combine files dialog box
 
-After selecting the option to combine files, the **Combine files** dialog will appear.
+After you select the **Combine** or **Combine files** command, the **Combine files** dialog box opens appears and the following occurs:
 
-At this point, combine files behaves as follows:
-* Power Query analyzes the first file from the list and determines the correct file connector to use to open the file contents, such as text, Excel workbook, JSON file, or other connector as it sees fit.
-* In the **Combine files** dialog, Power Query will provide the file connector experience exactly as if you were to connect directly to that sample file.
-  * You can also pick a different sample file instead of the first file, by using the **Example file** dropdown menu.
-  * Optionally, you can exclude files that result in errors from the final output.
+1. Power Query analyzes the example file (by default, the first file in the list)<!--Suggested.--> and determines the correct file connector to use to open that file.<!--Deleted redundant text.-->
+2. The dialog box provides the file connector experience exactly as if you were to connect directly to that example file.
+   * If you want to use a different file for the example file, you can choose it from the **Example file** drop-down menu.
+   * Optional: You can select **Skip files with errors** to exclude from the final output any files that result in errors.
 
-In the following sample image, Power Query detects that the first file has a csv file type extension, so it uses the [CSV connector](connectors/textcsv.md) to interpret the file.
+In the following image, Power Query has detected that the first file has a .csv file name extension, so it uses the [Text/CSV](connectors/textcsv.md) connector to interpret the file.
 
-![Combine files dialog](images/me-combine-files-overview-combine-files-dialog.png)
+![Combine files dialog box](images/me-combine-files-overview-combine-files-dialog.png "Combine files dialog box")
 
-## Combine files output
+## Combined files output
+<!--Suggested.-->
+After the **Combine files** process is finished, Power Query automatically performs the following actions:
 
-After going through the **Combine files** dialog and finishing this process, Power Query then automatically performs the following actions:
+1. Creates an example<!--"Exemplar" isn't used elsewhere in the docset or the UI as far as I can see, and it's not listed as an adjective in the American Heritage dictionary (which please see).--> query that performs all the required extraction steps for a single file. It uses the file that was selected as the example file<!--To match UI. Or this could be "It uses the sample file that was selected in the **Example file** box..."--> in the **Combine files** dialog box.
 
-1. Creates an exemplar query that performs all the required extraction steps for a single file. It uses the file that was selected as the sample file in the **Combine Files** dialog.
+   This example query has the name **Transform Sample file** in the **Queries** pane.
 
-   This exemplar query will have the name **Transform Sample file** in the queries pane.
+2. Creates a function query that parameterizes the file/binary input to the example query. The example query and the function query are linked, so that changes to the example query are reflected in the function query.
 
-2. Creates a function query that parameterizes the file/binary input to the exemplar query. The exemplar query and the function query are linked, so that changes to the exemplar query are reflected in the function query.
+   These queries are listed in the **Helper queries** group.
 
-   These queries will be organized under the **Helper queries** queries group.
+3. Applies the function query to the original query with input binaries (for example, the folder query) so it applies the function query for binary inputs on each row, and then expands the resulting data extraction as top-level columns.
 
-3. Applies the function query to the original query with input binaries (for example, the folder query) so it applies the function query for binary inputs on each row, then expands the resulting data extraction as top-level columns.
+4. Creates a new group with the prefix **Transform file from** and the initial query as the suffix, and organizes all the components used to create these combined files in that group.
 
-4. In addition to the above queries, a new group with the prefix **Transform file from** with the initial query as the suffix is created with all the components that drive this combine files experience.
+   ![Combined files output](images/me-combine-files-overview-combine-files-output.png "Combined files output")
 
-   ![Combine files output](images/me-combine-files-overview-combine-files-output.png)
+You can easily combine all files within a given folder, as long as they have the same file type and structure (including the same columns). You can also apply additional transformation or extraction steps by modifying the automatically generated example query, without having to worry about modifying or creating additional function query steps.<!--Deleted so as not to say this three times in a row.-->
 
-Using **Combine files**, you can easily combine all files within a given folder, as long as they have the same file type and structure (such as the same columns).
-Also, you can easily apply additional transformation or extraction steps by modifying the automatically generated exemplar query, without having to worry about modifying or creating additional function query steps. Any changes to the exemplar query are automatically propagated to the linked function query.
-
->[!Note]
->You can modify the steps inside the exemplar query to change the function applied to each binary in your query. The exemplar query is linked to the function, so any changes made to the exemplar query will be reflected in the function query. 
+>[!NOTE]
+>You can modify the steps inside the example query to change the function applied to each binary in your query. The example query is linked to the function, so any changes made to the example query will be reflected in the function query.
 >
->If any of the changes affect the column names or column data types, be sure to check the last step of your output query in the event that a **Change column type** step was added and is preventing you from visualizing your table because of a step-level error. To read more about working with errors, see [Dealing with errors](dealing-with-errors.md).  
+>If any of the changes affect column names or column data types, be sure to check the last step of your output query. Adding a **Change column type** step can introduce a step-level error that prevents you from visualizing your table.<!--Suggested, to put it a little more directly.--> More information: [Dealing with errors](dealing-with-errors.md)
+
+### See also
+
+[Combine CSV files](combine-files-csv.md)
