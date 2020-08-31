@@ -1,6 +1,6 @@
 ---
-title: List of all connectors
-description: List of all currently available connectors for Power Query
+title: List of all Power Query connectors
+description: List of all currently available Power Query connectors
 author: DougKlopfenstein
 
 ms.service: powerquery
