@@ -91,11 +91,11 @@
       - name: "SAP HANA database"
         items:
         - name: Overview and installation
-          href: overview-and-installation.md
+          href: Connectors/sap-hana/overview-and-installation.md
         - name: SAP HANA encryption
-          href: sap-hana-encryption.md
+          href: Connectors/sap-hana/sap-hana-encryption.md
         - name: Troubleshooting
-          href: sap-hana-troubleshooting.md
+          href: Connectors/sap-hana/sap-hana-troubleshooting.md
       - name: "Folder"
         href: Connectors/Folder.md
       - name: "SharePoint List"
