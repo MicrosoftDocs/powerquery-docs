@@ -1,6 +1,6 @@
 ---
 title: SAP HANA database connector troubleshooting
-description: Provides troubleshooting tips for errors that might occur when using Power Qeury to connect to a SAP HANA database.
+description: Provides troubleshooting tips for errors that might occur when using Power Query to connect to an SAP HANA database.
 author: dougklopfenstein
 
 ms.service: powerquery
@@ -47,9 +47,9 @@ Finally, the driver should also show up as "ODBC DataSources 32-bit" or "ODBC Da
 
 ## Collect SAP HANA ODBC Driver traces
 
-To capture a SAP HANA trace:  
+To capture an SAP HANA trace:  
 
-1. Open a command line window.
+1. Open a command-line window.
 
 2. Depending on your installation, you may need to go to C:\Program Files instead of C:\Program Files (x86). The command might also be hdbodbc_cons.exe instead of hdbodb_cons32.exe.
 
@@ -65,7 +65,7 @@ To capture a SAP HANA trace:
    hdbodbc_cons32.exe trace refresh<br/>
    hdbodbc_cons32.exe show all**
 
-4. Open Power BI, clear the cache, and re-run the scenario.
+4. Open Power BI, clear the cache, and rerun the scenario.
 
 5. Once done, zip up the traces:
 
@@ -76,19 +76,19 @@ To capture a SAP HANA trace:
 
    **hdbodbc_cons.exe trace off**
 
-When capturing a SAP HANA trace, note the following considerations:
+When capturing an SAP HANA trace, note the following considerations:
 
 * The trace commands should be run as the user that will be running the Mashup process that accesses the SAP HANA server.
 * The trace file path you specify should be writable by the user that runs the Mashup process.
 
 For example:
 
-* To capture non-SSO connections from gateway, make sure you use the gateway service user. That is, run the command line window as the gateway user when you want to execute the hdodbc_cons.exe calls. Make sure that the gateway server user can write to the log file location you specify.
+* To capture non-SSO connections from gateway, make sure you use the gateway service user. That is, run the command-line window as the gateway user when you want to execute the hdodbc_cons.exe calls. Make sure that the gateway server user can write to the log file location you specify.
 * To capture SSO connections from Gateway, use the SSO user.
 
 ## SAP HANA: insufficient privilege
 
-This message might be due to:
+This message might be because of:
 
 * The user legitimately not having enough privileges on the view they're trying to access.
 * The following known issue:

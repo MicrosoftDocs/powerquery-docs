@@ -37,7 +37,7 @@ Create an X509 certificate signing request for the HANA server.
 
 1. Go to the Home directory _/__usr/sap/\<sid\>/home_.
 
-1. Create a hidden directory with the name _.__ssl_if one does not already exist.
+1. Create a hidden directory with the name _.__ssl_if one doesn't already exist.
 
 1. Execute the following command:
 

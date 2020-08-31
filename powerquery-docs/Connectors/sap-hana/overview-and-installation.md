@@ -26,13 +26,13 @@ Authentication Types Supported: Basic, Database, Windows
  
 ## Prerequisites
 
-You'll need an SAP account to sign in to the website and download the drivers. If you are unsure, contact the SAP administrator in your organization.
+You'll need an SAP account to sign in to the website and download the drivers. If you're unsure, contact the SAP administrator in your organization.
 
 To use SAP HANA in Power BI Desktop or Excel, you must have the SAP HANA ODBC driver installed on the local client computer for the SAP HANA data connection to work properly. You can download the SAP HANA Client tools from [SAP Development Tools](https://tools.hana.ondemand.com/#hanatools), which contains the necessary ODBC driver. Or you can get it from the [SAP Software Download Center](https://support.sap.com/en/my-support/software-downloads.html). In the Software portal, search for the SAP HANA CLIENT for Windows computers. Since the SAP Software Download Center changes its structure frequently, more specific guidance for navigating that site isn't available. For instructions about installing the SAP HANA ODBC driver, see [Installing SAP HANA ODBC Driver on Windows 64 Bits](https://help.sap.com/viewer/e9146b36040844d0b1f309bc8c1ba6ab/3.2/en-US/734759c0c1c9440c857da0d366e47dda.html).
 
 To use SAP HANA in Excel, you must have either the 32-bit or 64-bit SAP HANA ODBC driver (depending on whether you're using the 32-bit or 64-bit version of Excel) installed on the local client computer.
 
-This feature is only available in Excel for Windows if you have Office 2019 or a [Microsoft 365 subscription](https://products.office.com/en-us/buy/compare-microsoft-office-products). If you are a Microsoft 365 subscriber, [make sure you have the latest version of Office](https://support.office.com/en-us/article/how-do-i-upgrade-office-ee68f6cf-422f-464a-82ec-385f65391350).
+This feature is only available in Excel for Windows if you have Office 2019 or a [Microsoft 365 subscription](https://products.office.com/en-us/buy/compare-microsoft-office-products). If you're a Microsoft 365 subscriber, [make sure you have the latest version of Office](https://support.office.com/en-us/article/how-do-i-upgrade-office-ee68f6cf-422f-464a-82ec-385f65391350).
  
 ## Capabilities Supported
 * Import
@@ -40,9 +40,9 @@ This feature is only available in Excel for Windows if you have Office 2019 or a
 * Advanced
     * SQL Statement
 
-## Connect to a SAP HANA database from Power Query Desktop
+## Connect to an SAP HANA database from Power Query Desktop
 
-To connect to a SAP HANA database from Power Query Desktop:
+To connect to an SAP HANA database from Power Query Desktop:
 
 1. Select **Get Data > SAP HANA database** in Power BI Desktop or **From Database > From SAP HANA Database** in the **Data** ribbon in Excel.
 
@@ -50,15 +50,15 @@ To connect to a SAP HANA database from Power Query Desktop:
 
    ![Enter the SAP HANA server information](sap-hana-server.png)
 
-   By default, the port number is set to support a single container database. If your SAP HANA database is capable of containing more than one multitenant database container, select **Multi-container system database (30013**. If you want to connect to a tenant database or a database with a non-default instance number, select **Custom** from the **Port** drop-down menu. 
+   By default, the port number is set to support a single container database. If your SAP HANA database can contain more than one multitenant database container, select **Multi-container system database (30013**. If you want to connect to a tenant database or a database with a non-default instance number, select **Custom** from the **Port** drop-down menu. 
 
-   If you are connecting to a SAP HANA database from Power BI Desktop, you are also given the option of selecting either **Import** or **DirectQuery**. The example in this article uses **Import**, which is the default (and the only process for Excel). For more information about connecting to the database using DirectQuery in Power BI Desktop, see [Connect to SAP HANA data sources by using DirectQuery in Power BI](https://docs.microsoft.com/power-bi/connect-data/desktop-directquery-sap-hana).
+   If you're connecting to an SAP HANA database from Power BI Desktop, you're also given the option of selecting either **Import** or **DirectQuery**. The example in this article uses **Import**, which is the default (and the only process for Excel). For more information about connecting to the database using DirectQuery in Power BI Desktop, see [Connect to SAP HANA data sources by using DirectQuery in Power BI](https://docs.microsoft.com/power-bi/connect-data/desktop-directquery-sap-hana).
 
    If you select **Advanced options**, you can also enter an SQL statement. For more information on using this SQL statement, see [Import data from a database using native database query](../../native-database-query.md).
 
-   Once you have entered all of your options, select **OK**.
+   Once you've entered all of your options, select **OK**.
 
-3. If you are accessing accessing a database for the first time, you'll be asked to enter your credentials for authentication. In this example, the SAP HANA server requires database user credentials, so select **Database** and enter your user name and password. If necessary, enter your server certificate information.
+3. If you are accessing a database for the first time, you'll be asked to enter your credentials for authentication. In this example, the SAP HANA server requires database user credentials, so select **Database** and enter your user name and password. If necessary, enter your server certificate information.
 
    ![Enter the server credentials](sap-hana-signin.png)
 
@@ -66,11 +66,11 @@ To connect to a SAP HANA database from Power Query Desktop:
    
    For more information about authentication, see [Authentication with a data source](../../connectorauthentication.md).
 
-   Once you've filled in all required infomation, select **Connect**.
+   Once you've filled in all required information, select **Connect**.
 
 4. From the **Navigator** dialog box, you can either transform the data in the Power Query editor by selecting **Transform Data**, or load the data by selecting **Load**.
 
-## Connect to a SAP HANA database Power Query Online
+## Connect to an SAP HANA database Power Query Online
  
 To connect to SAP HANA data from Power Query Online:
 
@@ -100,9 +100,9 @@ To connect to SAP HANA data from Power Query Online:
 
 ## Supported features for SAP HANA
 
-The following list shows the supported features for SAP HANA. Note that not all features listed here are supported in all implementations of the SAP HANA database connector.
+The following list shows the supported features for SAP HANA. Not all features listed here are supported in all implementations of the SAP HANA database connector.
 
-* Both the Power BI Desktop and Excel connector for a SAP HANA database use the SAP ODBC driver to provide the best user experience.
+* Both the Power BI Desktop and Excel connector for an SAP HANA database use the SAP ODBC driver to provide the best user experience.
 
 * In Power BI Desktop, SAP HANA supports both DirectQuery and Import options.
 
@@ -125,7 +125,7 @@ The following list shows the supported features for SAP HANA. Note that not all 
 
 * [Enable encryption for SAP HANA](sap-hana-encryption.md)
 
-The following articles contain more information that you may find useful when connecting to a SAP HANA debase.
+The following articles contain more information that you may find useful when connecting to an SAP HANA debase.
 
 - [Manage your data source - SAP HANA](https://docs.microsoft.com/power-bi/connect-data/service-gateway-enterprise-manage-sap)
 - [Use Kerberos for single sign-on (SSO) to SAP HANA](https://docs.microsoft.com/power-bi/connect-data/service-gateway-sso-kerberos-sap-hana)
