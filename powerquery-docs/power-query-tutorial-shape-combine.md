@@ -46,7 +46,9 @@ For starters, you can add a custom column to calculate rank based on all data be
 
 In the **Custom Column** dialog, in **New column name**, enter **New Rank**, and in **Custom column formula**, enter the following:
 
+```
     ([Cost of living] + [Weather] + [Health care quality] + [Crime] + [Tax] + [Culture] + [Senior] + [#"Well-being"]) / 8
+```
 
 Make sure the status message reads _'No syntax errors have been detected.'_ and select **OK**.
 
@@ -98,7 +100,9 @@ To fix the errors, select the _New Rank_ column, then display the column's data 
 
 Now you can remove the _Cost of living_ parameter and decrement the divisor by changing the formula to the following: 
 
+```
     Table.AddColumn(#"Removed Columns", "New Rank", each ([Weather] + [Health care quality] + [Crime] + [Tax] + [Culture] + [Senior] + [#"Well-being"]) / 7)
+```
 
 Select the green checkmark to the left of the formula box or press **Enter**, and the data should be replaced by revised values. The **Added Custom** step should now complete *with no errors*.
 
@@ -111,7 +115,9 @@ Now you need to sort the data based on the **New Rank** column. First select the
 
 Notice the data is now sorted according to **New Rank**.  However, if you look in the **Rank** column, you'll notice the data is not sorted properly in cases where the **New Rank** value is a tie. To fix this, select the **New Rank** column and change the formula in the **Formula Bar** to the following:
 
+```
     = Table.Sort(#"Changed Type1",{{"New Rank", Order.Ascending},{"Rank", Order.Ascending}})
+```
 
 Select the green checkmark to the left of the formula box or press **Enter**, and the rows should now be ordered in accordance with both _New Rank_ and _Rank_.
 

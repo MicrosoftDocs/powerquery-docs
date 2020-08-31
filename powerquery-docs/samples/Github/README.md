@@ -1,6 +1,6 @@
 ---
-title: Github tutorial for Power Query
-description: Writing a Github connector for Power Query including OAuth
+title: GitHub tutorial for Power Query
+description: Writing a GitHub connector for Power Query including OAuth
 author: cpopell
 manager: kfile
 
@@ -12,15 +12,15 @@ ms.author: gepopell
 LocalizationGroup: reference
 ---
 
-# Github Connector Sample
-The Github M extension shows how to add support for an OAuth 2.0 protocol authentication flow. You can learn more about the specifics of Github's authentication flow on the [Github Developer site](https://developer.github.com/guides/basics-of-authentication/).
+# GitHub Connector Sample
+The GitHub M extension shows how to add support for an OAuth 2.0 protocol authentication flow. You can learn more about the specifics of GitHub's authentication flow on the [GitHub Developer site](https://developer.github.com/guides/basics-of-authentication/).
 
-Before you get started creating an M extension, you need to register a new app on Github, and replace the `client_id` and `client_secret` files with the appropriate values for your app.
+Before you get started creating an M extension, you need to register a new app on GitHub, and replace the `client_id` and `client_secret` files with the appropriate values for your app.
 
-**Note about compatibility issues in Visual Studio:** _The Power Query SDK uses an Internet Explorer based control to popup OAuth dialogs. Github has deprecated its support for the version of IE used by this control, which will prevent you from completing the permission grant for you app if run from within Visual Studio. An alternative is to load the extension with Power BI  Desktop and complete the first OAuth flow there. After your application has been granted access to your account, subsequent logins will work fine from Visual Studio._
+**Note about compatibility issues in Visual Studio:** _The Power Query SDK uses an Internet Explorer based control to popup OAuth dialogs. GitHub has deprecated its support for the version of IE used by this control, which will prevent you from completing the permission grant for you app if run from within Visual Studio. An alternative is to load the extension with Power BI  Desktop and complete the first OAuth flow there. After your application has been granted access to your account, subsequent logins will work fine from Visual Studio._
 
 ## OAuth and Power BI
-OAuth is a form of credentials delegation. By logging in to Github and authorizing the "application" you create for Github, the user is allowing your "application" to login on their behalf to retrieve data into Power BI.
+OAuth is a form of credentials delegation. By logging in to GitHub and authorizing the "application" you create for GitHub, the user is allowing your "application" to login on their behalf to retrieve data into Power BI.
 The "application" must be granted rights to retrieve data (get an access_token) and to refresh the data on a schedule (get and use a refresh_token).
 Your "application" in this context is your Data Connector used to run queries within Power BI.
 Power BI stores and manages the access_token and refresh_token on your behalf.
@@ -28,27 +28,27 @@ Power BI stores and manages the access_token and refresh_token on your behalf.
 >[!Note]
 > To allow Power BI to obtain and use the access_token, you must specify the redirect url as https://oauth.powerbi.com/views/oauthredirect.html.
 
-When you specify this URL and Github successfully authenticates and grants permissions, Github will redirect to PowerBI's oauthredirect endpoint so that Power BI can retrieve the access_token and refresh_token.
+When you specify this URL and GitHub successfully authenticates and grants permissions, GitHub will redirect to PowerBI's oauthredirect endpoint so that Power BI can retrieve the access_token and refresh_token.
 
-## How to register a Github app
+## How to register a GitHub app
 
-Your Power BI extension needs to login to Github. To enable this, you register a new OAuth application with Github at https://Github.com/settings/applications/new.
+Your Power BI extension needs to login to GitHub. To enable this, you register a new OAuth application with GitHub at https://github.com/settings/applications/new.
 
 1. `Application name`: Enter a name for the application for your M extension.
 2. `Authorization callback URL`: Enter https://oauth.powerbi.com/views/oauthredirect.html.  
-3. `Scope`: In Github, set scope to `user, repo`.
+3. `Scope`: In GitHub, set scope to `user, repo`.
 
 >[!Note]
-> A registered OAuth application is assigned a unique Client ID and Client Secret. The Client Secret should not be shared. You get the Client ID and Client Secret from the Github application page. Update the files in your Data Connector project with the Client ID (`client_id` file) and Client Secret (`client_secret` file).
+> A registered OAuth application is assigned a unique Client ID and Client Secret. The Client Secret should not be shared. You get the Client ID and Client Secret from the GitHub application page. Update the files in your Data Connector project with the Client ID (`client_id` file) and Client Secret (`client_secret` file).
 
-## How to implement Github OAuth
+## How to implement GitHub OAuth
 
 This sample will walk you through the following steps:
 
 1. Create a Data Source Kind definition that declares it supports OAuth.
 2. Provide details so the M engine can start the OAuth flow (`StartLogin`).
-3. Convert the code received from Github into an access_token (`FinishLogin` and `TokenMethod`).
-4. Define functions that access the Github API (`GithubSample.Contents`).
+3. Convert the code received from GitHub into an access_token (`FinishLogin` and `TokenMethod`).
+4. Define functions that access the GitHub API (`GithubSample.Contents`).
 
 ### Step 1 - Create a Data Source definition
 A Data Connector starts with a [record](/powerquery-m/expressions-values-and-let-expression#record) that describes the extension, including its unique name (which is the name of the record), supported authentication type(s), and a friendly display name (label) for the data source.
@@ -71,21 +71,21 @@ GithubSample = [
 
 ### Step 2 - Provide details so the M engine can start the OAuth flow
 
-The Github OAuth flow starts when you direct users to the `https://Github.com/login/oauth/authorize` page.
+The GitHub OAuth flow starts when you direct users to the `https://github.com/login/oauth/authorize` page.
 For the user to login, you need to specify a number of query parameters:
 
 |Name       |Type   |Description|
 |:----------|:------|:----------|
-|client_id|string|**Required**. The client ID you received from Github when you registered.|
+|client_id|string|**Required**. The client ID you received from GitHub when you registered.|
 |redirect_uri|string|The URL in your app where users will be sent after authorization. See details below about redirect urls. For M extensions, the `redirect_uri` must be "https://oauth.powerbi.com/views/oauthredirect.html". |
 |scope|string|A comma separated list of scopes. If not provided, scope defaults to an empty list of scopes for users that don't have a valid token for the app. For users who do already have a valid token for the app, the user won't be shown the OAuth authorization page with the list of scopes. Instead, this step of the flow will automatically complete with the same scopes that were used last time the user completed the flow.| 
 |state|string|An un-guessable random string. It's used to protect against cross-site request forgery attacks.| 
 
 The following code snippet describes how to implement a `StartLogin` function to start the login flow.
 A `StartLogin` function takes a `resourceUrl`, `state`, and `display` value.
-In the function, create an `AuthorizeUrl` that concatenates the Github authorize URL with the following parameters:
+In the function, create an `AuthorizeUrl` that concatenates the GitHub authorize URL with the following parameters:
 
-* `client_id`: You get the client ID after you register your extension with Github from the Github application page.
+* `client_id`: You get the client ID after you register your extension with GitHub from the GitHub application page.
 * `scope`: Set scope to "`user, repo`". This sets the authorization scope (that is, what your app wants to access) for the user.
 * `state`: An internal value that the M engine passes in.
 * `redirect_uri`: Set to https://oauth.powerbi.com/views/oauthredirect.html.
@@ -93,7 +93,7 @@ In the function, create an `AuthorizeUrl` that concatenates the Github authorize
 ```
 StartLogin = (resourceUrl, state, display) =>
         let
-            AuthorizeUrl = "https://Github.com/login/oauth/authorize?" & Uri.BuildQueryString([
+            AuthorizeUrl = "https://github.com/login/oauth/authorize?" & Uri.BuildQueryString([
                 client_id = client_id,
                 scope = "user, repo",
                 state = state,
@@ -110,9 +110,9 @@ StartLogin = (resourceUrl, state, display) =>
 
 If this is the first time the user is logging in with your app (identified by its `client_id` value), they'll see a page that asks them to grant access to your app. Subsequent login attempts will simply ask for their credentials.
 
-### Step 3 - Convert the code received from Github into an access_token
+### Step 3 - Convert the code received from GitHub into an access_token
 
-If the user completes the authentication flow, Github redirects back to the Power BI redirect URL with a temporary code in a `code` parameter, as well as the state you provided in the previous step in a `state` parameter. Your `FinishLogin` function will extract the code from the `callbackUri` parameter, and then exchange it for an access token (using the `TokenMethod` function).
+If the user completes the authentication flow, GitHub redirects back to the Power BI redirect URL with a temporary code in a `code` parameter, as well as the state you provided in the previous step in a `state` parameter. Your `FinishLogin` function will extract the code from the `callbackUri` parameter, and then exchange it for an access token (using the `TokenMethod` function).
 
 ```
 FinishLogin = (context, callbackUri, state) =>
@@ -122,13 +122,13 @@ FinishLogin = (context, callbackUri, state) =>
         TokenMethod(Parts[code]);
 ```
 
-To get a Github access token, you pass the temporary code from the Github Authorize Response. In the `TokenMethod` function, you formulate a POST request to Github's access_token endpoint (`https://github.com/login/oauth/access_token`).
-The following parameters are required for the Github endpoint:
+To get a GitHub access token, you pass the temporary code from the GitHub Authorize Response. In the `TokenMethod` function, you formulate a POST request to GitHub's access_token endpoint (`https://github.com/login/oauth/access_token`).
+The following parameters are required for the GitHub endpoint:
 
 |Name         |Type  |Description|
 |:------------|:-----|:----------|
-|client_id    |string|**Required**. The client ID you received from Github when you registered.|
-|client_secret|string|**Required**. The client secret you received from Github when you registered.|
+|client_id    |string|**Required**. The client ID you received from GitHub when you registered.|
+|client_secret|string|**Required**. The client secret you received from GitHub when you registered.|
 |code         |string|**Required**. The code you received in `FinishLogin`.|
 |redirect_uri |string|The URL in your app where users will be sent after authorization. See details below about redirect URLs.|
 
@@ -136,9 +136,9 @@ Here are the details used parameters for the [Web.Contents](/powerquery-m/web-co
 
 |Argument|Description|Value|
 |:-------|:----------|:----|
-|url     |The URL for the Web site.                             |https://Github.com/login/oauth/access_token |
+|url     |The URL for the Web site.                             |https://github.com/login/oauth/access_token |
 |options |A record to control the behavior of this function.    |Not used in this case                       |
-|Query   |Programmatically add query parameters to the URL.     |<code>Content = Text.ToBinary(<br>Uri.BuildQueryString(<br>[<br>client_id = client_id,<br>client_secret = client_secret,<br>code = code,<br>redirect_uri = redirect_uri<br>]<br>))</code><br>Where<br><ul><li>`client_id`: Client ID from Github application page.<li>`client_secret`: Client secret from Github application page.<li>`code`: Code in Github authorization response.<li>`redirect_uri`: The URL in your app where users will be sent after authorization.|
+|Query   |Programmatically add query parameters to the URL.     |<code>Content = Text.ToBinary(<br>Uri.BuildQueryString(<br>[<br>client_id = client_id,<br>client_secret = client_secret,<br>code = code,<br>redirect_uri = redirect_uri<br>]<br>))</code><br>Where<br><ul><li>`client_id`: Client ID from GitHub application page.<li>`client_secret`: Client secret from GitHub application page.<li>`code`: Code in GitHub authorization response.<li>`redirect_uri`: The URL in your app where users will be sent after authorization.|
 |Headers |A record with additional headers for the HTTP request.|<code>Headers= [<br>#"Content-type" = "application/x-www-form-urlencoded",<br>#"Accept" = "application/json"<br>]|
 
 This code snippet describes how to implement a `TokenMethod` function to exchange an auth code for an access token.
@@ -168,7 +168,7 @@ Sample response:
 }
 ```
 
-### Step 4 - Define functions that access the Github API
+### Step 4 - Define functions that access the GitHub API
 
 The following code snippet exports two functions (`GithubSample.Contents` and `GithubSample.PagedTable`)
 by marking them as `shared`, and associates them with the `GithubSample` Data Source Kind. 
@@ -190,7 +190,7 @@ For more details on how credential and authentication works, see [Handling Authe
 
 ## Sample URL
 
-This connector is able to retrieve formatted data from any of the Github v3 REST API endpoints. For example, the query to pull all commits to the Data Connectors repo would look like this:
+This connector is able to retrieve formatted data from any of the GitHub v3 REST API endpoints. For example, the query to pull all commits to the Data Connectors repo would look like this:
 
 ```
 GithubSample.Contents("https://api.github.com/repos/microsoft/dataconnectors/commits")

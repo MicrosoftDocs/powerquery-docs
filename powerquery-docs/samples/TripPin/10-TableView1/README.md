@@ -1,5 +1,5 @@
 ---
-title: TripPin 10 - Query Folding (part 1)
+title: TripPin 10 - Basic Query Folding
 description: Initial support for query folding for your TripPin REST connector.
 author: cpopell
 manager: kfile
@@ -12,7 +12,7 @@ ms.author: gepopell
 LocalizationGroup: reference
 ---
 
-# TripPin Part 10 - Query Folding (part 1)
+# TripPin Part 10&mdash;Basic Query Folding
 
 This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially&mdash;each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector.
 
@@ -33,7 +33,6 @@ When creating a custom connector that uses an M function with built-in query fol
 
 This tutorial will replicate the built-in query folding behavior for OData by implementing function handlers for the `Table.View` function.
 This part of the tutorial will implement some of the _easier_ handlers to implement (that is, ones that don't require expression parsing and state tracking).
-Future tutorials will implement more advanced query folding functionality.
 
 To understand more about the query capabilities that an OData service might offer, see [OData v4 URL Conventions](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc453752357).
 
@@ -531,4 +530,3 @@ One of the main advantages of the `Table.View` handlers being optional is that i
 For most connectors, an important (and basic) handler to implement is `OnTake` (which translates to `$top` in OData), as it limits the amount of rows returned. The Power Query experience will always perform an
 `OnTake` of `1000` rows when displaying previews in the navigator and query editor, so your users might see significant performance improvements when working with larger data sets.
 
-In subsequent tutorials, we'll look at the more advanced query handlers (such as `OnSelectRows`), which require translating M expressions.
