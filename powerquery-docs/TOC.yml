@@ -89,7 +89,13 @@
       - name: "Salesforce Objects"
         href: Connectors/SalesforceObjects.md
       - name: "SAP HANA database"
-        href: Connectors/SapHana.md
+        items:
+        - name: Overview and installation
+          href: overview-and-installation.md
+        - name: SAP HANA encryption
+          href: sap-hana-encryption.md
+        - name: Troubleshooting
+          href: sap-hana-troubleshooting.md
       - name: "Folder"
         href: Connectors/Folder.md
       - name: "SharePoint List"
