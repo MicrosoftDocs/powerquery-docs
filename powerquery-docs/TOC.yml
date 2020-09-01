@@ -257,7 +257,7 @@
         - name: SAP HANA encryption
           href: Connectors/sap-hana/sap-hana-encryption.md
         - name: Configure ODBC for SAP HANA
-          href: configure-odbc-sap-hana.md
+          href: Connectors/sap-hana/configure-odbc-sap-hana.md
         - name: Troubleshooting
           href: Connectors/sap-hana/sap-hana-troubleshooting.md
       - name: "SharePoint Folder"
