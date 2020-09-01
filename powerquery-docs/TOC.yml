@@ -252,7 +252,7 @@
         href: Connectors/SalesforceReports.md
       - name: "SAP HANA database"
         items:
-        - name: Overview and installation
+        - name: Overview
           href: Connectors/sap-hana/overview.md
         - name: SAP HANA encryption
           href: Connectors/sap-hana/sap-hana-encryption.md
