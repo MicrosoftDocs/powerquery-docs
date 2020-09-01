@@ -50,7 +50,7 @@ To connect to an SAP HANA database from Power Query Desktop:
 
    ![Enter the SAP HANA server information](sap-hana-server.png)
 
-   By default, the port number is set to support a single container database. If your SAP HANA database can contain more than one multitenant database container, select **Multi-container system database (30013**. If you want to connect to a tenant database or a database with a non-default instance number, select **Custom** from the **Port** drop-down menu. 
+   By default, the port number is set to support a single container database. If your SAP HANA database can contain more than one multitenant database container, select **Multi-container system database (30013)**. If you want to connect to a tenant database or a database with a non-default instance number, select **Custom** from the **Port** drop-down menu. 
 
    If you're connecting to an SAP HANA database from Power BI Desktop, you're also given the option of selecting either **Import** or **DirectQuery**. The example in this article uses **Import**, which is the default (and the only process for Excel). For more information about connecting to the database using DirectQuery in Power BI Desktop, see [Connect to SAP HANA data sources by using DirectQuery in Power BI](https://docs.microsoft.com/power-bi/connect-data/desktop-directquery-sap-hana).
 
@@ -62,7 +62,7 @@ To connect to an SAP HANA database from Power Query Desktop:
 
    ![Enter the server credentials](sap-hana-signin.png)
 
-   Also, you may need to validate the server certificate. For more information about using validate server certificate selections, see [Using SAP HANA encryption](sap-hana-encryption.md). In Power BI Desktop and Excel, the validate server certificate selection is enabled by default. However, all of the validate server certificate selections in the authentication dialog box in Power Query Desktop are optional. They're optional in case you've already used ODBC Data Source Administrator to set them up at the driver level. If you've already set up these selections in ODBC Data Source Administrator, clear the **Validate server certificate** check box. Otherwise, you can override the validate server certificate selections you've set up in ODBC Data Source Administrator by entering new selections here.
+   Also, you may need to validate the server certificate. For more information about using validate server certificate selections, see [Using SAP HANA encryption](sap-hana-encryption.md). In Power BI Desktop and Excel, the validate server certificate selection is enabled by default. If you've already set up these selections in ODBC Data Source Administrator, clear the **Validate server certificate** check box. To learn more about using ODBC Data Source Administrator to set up these selections, see [Configure SSL for ODBC client access to SAP HANA](configure-odbc-sap-hana.md).
    
    For more information about authentication, see [Authentication with a data source](../../connectorauthentication.md).
 
@@ -108,7 +108,7 @@ The following list shows the supported features for SAP HANA. Not all features l
 
 * Power BI Desktop supports HANA information models, such as Analytic and Calculation Views, and has optimized navigation.
 
-* With SAP HANA, you can also use the direct SQL feature to connect to Row and Column Tables.
+* With SAP HANA, you can also use SQL commands in the native database query SQL statement to connect to Row and Column Tables in HANA Catalog tables, which is not included in the Analytic/Calculation Views provided by the Navigator experience. You can also use the [ODBC connector](../odbc.md) to query these tables.
 
 * Power BI Desktop includes Optimized Navigation for HANA Models.
 

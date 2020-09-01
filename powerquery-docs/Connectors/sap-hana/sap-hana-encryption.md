@@ -91,7 +91,7 @@ Get the certificate signed by a certificate authority (CA) that is trusted by th
 
 ## Test the connection
 
-Before you can validate a server certificate in the Power BI service online, you must have a data source already set up for the on-premises data gateway. If you don't already have a data source set up to test the connection, you'll have to create one. To set up the data source on the gateway:
+Before you can validate a server certificate in the Power BI service online, you must have a data source already set up for the [on-premises data gateway](https://docs.microsoft.com/data-integration/gateway/). If you don't already have a data source set up to test the connection, you'll have to create one. To set up the data source on the gateway:
 
 1. From the Power BI service, select the ![setup icon](setup.png) setup icon.
 
