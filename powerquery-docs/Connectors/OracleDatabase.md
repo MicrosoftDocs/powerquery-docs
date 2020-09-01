@@ -51,7 +51,7 @@ To make the connection, take the following steps:
 
 4. Optionally, you can provide a command timeout and a [native query (SQL statement)](../native-database-query.md), as well as select whether or not you want to include relationship columns and navigate using full hierarchy. Once you're done, select **OK**.
 
-5. If this is the first time you are connecting to this Oracle database, you will be asked to enter your credentials. Select the authentication type you want to use, and then enter your credentials. For more information about authentication, see [Authentication with a data source](connectorauthentication.md).
+5. If this is the first time you are connecting to this Oracle database, you will be asked to enter your credentials. Select the authentication type you want to use, and then enter your credentials. For more information about authentication, see [Authentication with a data source](../connectorauthentication.md).
 
    ![Enter your Oracle database credentials](./media/oracle-database/sign-in.png)
 
