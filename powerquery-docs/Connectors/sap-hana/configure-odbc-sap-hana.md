@@ -62,6 +62,8 @@ To use ODBC Data Source Administrator to set up the validate server certificate 
 
 13.	When the test connection has completed successfully, select **OK**.
 
+For more information about the SAP HANA connection properties, see [Server-Side TLS/SSL Configuration Properties for External Communication (JDBC/ODBC)](https://help.sap.com/viewer/b3ee5778bc2e4a089d3299b82ec762a7/2.0.04/en-US/64065bc94ccb4f64bfb544686db23e60.html).
+
 >[!Note]
 >If you select **Validate server certificate** in the SAP HANA authentication dialog box in Power BI Desktop or Excel, any values you enter in **SSL crypto provider**, **SSL key store**, and **SSL trust store** in the authentication dialog box will override any selections you've set up using ODBC Data Source Administrator.
 
