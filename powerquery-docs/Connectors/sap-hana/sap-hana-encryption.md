@@ -1,12 +1,12 @@
 ---
 title: SAP HANA encryption
-description: Learn how to encrypt the connection when connecting to a HANA server from Power Query using SAML SSO.
+description: Learn how to encrypt the connection when connecting to an SAP HANA server from Power Query using SAML SSO.
 author: davidiseminger
 
 ms.custom: seodec18
 ms.service: powerquery
 ms.topic: how-to
-ms.date: 08/28/2020
+ms.date: 09/01/2020
 ms.author: davidi
 
 LocalizationGroup: Connect to data
