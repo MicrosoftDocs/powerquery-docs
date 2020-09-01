@@ -131,7 +131,7 @@ You'll note that only the **SSL crypto provider** information is required. Howev
 
 ## Next steps
 
-* [SAP HANA database connector troubleshooting](sap-hana-troubleshooting.md)
+* [Configure SSL for ODBC client access to SAP HANA](configure-odbc-sap-hana.md)
 
 
 

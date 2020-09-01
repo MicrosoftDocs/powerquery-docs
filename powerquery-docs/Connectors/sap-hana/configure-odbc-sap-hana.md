@@ -65,9 +65,6 @@ To use ODBC Data Source Administrator to set up the validate server certificate 
 >[!Note]
 >If you select **Validate server certificate** in the SAP HANA authentication dialog box in Power BI Desktop or Excel, any values you enter in **SSL crypto provider**, **SSL key store**, and **SSL trust store** in the authentication dialog box will override any selections you've set up using ODBC Data Source Administrator.
 
+## Next steps
 
-
-
-
-
-
+* [SAP HANA database connector troubleshooting](sap-hana-troubleshooting.md)

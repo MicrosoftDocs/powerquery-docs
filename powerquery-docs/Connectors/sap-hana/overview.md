@@ -87,8 +87,6 @@ To connect to SAP HANA data from Power Query Online:
    >[!Note]
    > You must use an on-premises data gateway with this connector, whether your data is local or online.
 
-   Your 
-
 4. Choose the authentication kind you want to use to access your data. You'll also need to enter a username and password.
 
    >[!Note]
