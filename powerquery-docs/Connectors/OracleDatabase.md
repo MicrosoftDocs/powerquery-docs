@@ -17,7 +17,7 @@ Release State: General Availability
 
 Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in PowerBI.com (Enterprise Gateway), Dataflows in PowerApps.com (Enterprise Gateway), Excel, Dynamics 365 Customer Insights, Analysis Services
 
-Authentication Types Supported: Windows (desktop/onlne), Database (desktop), Basic (online)
+Authentication Types Supported: Windows (desktop/online), Database (desktop), Basic (online)
 
 Function Reference Documentation: [Oracle.Database](https://docs.microsoft.com/powerquery-m/oracle-database)
 
@@ -26,10 +26,8 @@ Function Reference Documentation: [Oracle.Database](https://docs.microsoft.com/p
 
 ## Prerequisites
 
-Before you can connect to an Oracle database using Power Query, you need the Oracle client software v8.1.7 or greater on your computer. To install the Oracle client software, go to [32-bit Oracle Data Access Components (ODAC) with Oracle Developer Tools for Visual Studio (12.1.0.2.4)](https://www.oracle.com/technetwork/topics/dotnet/utilsoft-086879.html) to install the 32-bit Oracle client, or to [64-bit ODAC 12c Release 4 (12.1.0.2.4) Xcopy for Windows x64](https://www.oracle.com/technetwork/database/windows/downloads/index-090165.html) to install the 64-bit Oracle client.
+Before you can connect to an Oracle database using Power Query, you need to install the Oracle client software v8.1.7 or greater on your computer. To install the Oracle client software, go to [32-bit Oracle Data Access Components (ODAC) with Oracle Developer Tools for Visual Studio (12.1.0.2.4)](https://www.oracle.com/technetwork/topics/dotnet/utilsoft-086879.html) to install the 32-bit Oracle client, or to [64-bit ODAC 12c Release 4 (12.1.0.2.4) Xcopy for Windows x64](https://www.oracle.com/technetwork/database/windows/downloads/index-090165.html) to install the 64-bit Oracle client.
 
-If you are going to be using an on-premises data gateway with Power Query desktop, 
- 
 ## Capabilities Supported
 * Import
 * DirectQuery
