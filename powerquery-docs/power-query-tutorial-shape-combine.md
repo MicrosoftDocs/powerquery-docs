@@ -26,7 +26,7 @@ In this tutorial, you'll learn to:
 
 This tutorial demonstrates how to shape a query by using Power Query Editor&mdash;a technology that's incorporated into Power BI Desktop&mdash;and learn some common data tasks.
 
-If you're not signed up for Power BI, you can [sign up for a free trial](https://app.powerbi.com/signupredirect?pbi_source=web) before you begin. Also, you can [download Power BI Desktop for free](https://go.microsoft.com/fwlink/?LinkId=521662&clcid=0x409). 
+If you're not signed up for Power BI, you can [sign up for a free trial](https://app.powerbi.com/signupredirect?pbi_source=web) before you begin. Also, you can [download Power BI Desktop for free](https://go.microsoft.com/fwlink/?LinkId=521662). 
 
 >[!TIP]
 > In Power Query Editor in Power BI Desktop, you can use shortcut menus in addition to the ribbon. Most of what you can select on the **Transform** tab of the ribbon is also available by right-clicking to select an item (such as a column), and choosing a command from the shortcut menu that appears.
