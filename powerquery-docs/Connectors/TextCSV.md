@@ -117,7 +117,7 @@ The **Open file as** dropdown will let you edit what you want to load the file a
 
 1. In Power BI Desktop, under the **File** tab, select **Options and settings** > **Options**. 
 
-2. In the the **Options** page, under **Global**, select **Preview features**.
+2. In the **Options** page, under **Global**, select **Preview features**.
 
 3. Under **Preview features**, select **Import text using examples**. Then select **OK**.
 
@@ -127,7 +127,7 @@ Now when you use the Text/CSV connector, you'll see a new option to **Extract Ta
 
 ![Using the Extract Table Using Examples option](../images/extract-table-using-examples.png)
 
-When you select that new button, you’ll be taken into the “Extract Table Using Examples” experience allowing you to specify sample output values for the data you’d like to extract from your Text/CSV file.
+When you select that new button, you’ll be taken into the “Extract Table Using Examples” page. On this page, you specify sample output values for the data you’d like to extract from your Text/CSV file.
 
 ![Specify sample output values to extract data](../images/specify-sample-output-values.png)
 
