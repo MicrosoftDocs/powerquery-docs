@@ -17,7 +17,7 @@ With Power Query in Power BI, you can connect to many different data sources, tr
 
 Let's get acquainted with Power Query Editor.
 
-If you're not signed up for Power BI, you can [sign up for a free trial](https://app.powerbi.com/signupredirect?pbi_source=web) before you begin. Also, you can [download Power BI Desktop](https://go.microsoft.com/fwlink/?LinkId=521662&clcid=0x409) for free.
+If you're not signed up for Power BI, you can [sign up for a free trial](https://app.powerbi.com/signupredirect?pbi_source=web) before you begin. Also, you can [download Power BI Desktop](https://go.microsoft.com/fwlink/?LinkId=521662) for free.
 
 ## Using Power Query Editor
 
