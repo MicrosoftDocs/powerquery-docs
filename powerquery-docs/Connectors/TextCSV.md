@@ -127,7 +127,7 @@ Now when you use the Text/CSV connector, you'll see a new option to **Extract Ta
 
 ![Using the Extract Table Using Examples option](../images/extract-table-using-examples.png)
 
-When you select that new button, you’ll be taken into the “Extract Table Using Examples” page. On this page, you specify sample output values for the data you’d like to extract from your Text/CSV file.
+When you select that new button, you’ll be taken into the **Extract Table Using Examples** page. On this page, you specify sample output values for the data you’d like to extract from your Text/CSV file. After you enter the first row of the column, other rows in the column are filled out. For the data to be extracted correctly, you may need to enter more than one row in the column. If some cells in the column are incorrect, you can fix the first incorrect cell and the data will be extracted again. Check the data in the first few rows to ensure that the data has been extracted successfully.
 
 >[!Note]
 >We recommend that you enter the examples in column order. Once the column has successfully been filled out, create a new column and begin entering examples in the new column.
