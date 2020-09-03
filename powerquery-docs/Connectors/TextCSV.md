@@ -129,6 +129,9 @@ Now when you use the Text/CSV connector, you'll see a new option to **Extract Ta
 
 When you select that new button, you’ll be taken into the “Extract Table Using Examples” page. On this page, you specify sample output values for the data you’d like to extract from your Text/CSV file.
 
+>[!Note]
+>We recommend that you enter the examples in column order. Once the column has successfully been filled out, create a new column and begin entering examples in the new column.
+
 ![Specify sample output values to extract data](../images/specify-sample-output-values.png)
 
 Once you’re done constructing that table, you can either select to load or transform the data. Notice how the resulting queries contain a detailed breakdown of all the steps that were inferred for the data extraction. These steps are just regular query steps that you can customize as needed.
