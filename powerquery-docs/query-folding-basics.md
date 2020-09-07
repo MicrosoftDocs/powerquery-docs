@@ -91,7 +91,7 @@ Reading the values in that column, you can see that the native query sent to the
 
 ![Value found inside the query for the aggregated query diagnostics which holds the SQL statement sent to the SQL Server](images/me-query-folding-basics-query-diagnostics-aggregated-view-drill-down.png)
 
-This means that your query will send that native query to the Microsoft SQL Server and perform the rest of the transformations locally and this is what it means to have a query which can partially fold.
+This means that your query will send that native query to the Microsoft SQL Server and perform the rest of the transformations locally and this is what it means to have a query that can partially fold.
 
 >[!NOTE]
 > It is highly recommended that you read the article on [Understanding folding with Query Diagnostics](querydiagnosticsfolding.md) to get the most out of the Query Diagnostics tools and how to verify query folding.
