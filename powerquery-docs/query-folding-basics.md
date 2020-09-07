@@ -17,11 +17,17 @@ Depending on how the query is structured, there could be three (3) possible outc
 * **No Query folding** -  When the query contains transformations that can't be translated to the native query langauge of your data source either because the transformations are not supported or the connector doesn't support Query folding. For this case Power Query gets the raw data from your data source and works locally with the Power Query engine to achieve your desired output.
 
 >[!NOTE]
->The Query folding mechanism is primarily available in connectors for structured data sources such as but not limited to [Microsoft SQL Server](sqlserver.md) and [OData Feed](odatafeed.md). 
+>The Query folding mechanism is primarily available in connectors for structured data sources such as but not limited to [Microsoft SQL Server](Connectors/sqlserver.md) and [OData Feed](Connectors/odatafeed.md). 
 >
 >Leveraging a data source that has more processing resources and has Query folding capabilities can expedite your query loading times as the prorcessing will occur at the data source and not locally in the Power Query engine.
 
+This article will try to provide some example scenarios for each of the possible outcomes for query folding in the next sections as well as some suggestions on how to get the most out of the Query folding mechanism.
+
 ## Full Query folding
+
+**About the Data source:** For this scenario the data that you will be connecting to is Microsoft SQL Server and the sample database is the AdventureWorks in its Data Warehouse version which you can download from the article [AdventureWorks sample database](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)
+
+**Connector to use:** The data source has been identified as a database in Microsoft SQL Server. The connector to be used is the [Microsoft SQL Server Connector](Connectors/SQLServer.md)
 
 SQL Server
 
