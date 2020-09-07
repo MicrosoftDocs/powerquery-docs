@@ -14,7 +14,7 @@ Query folding in Power Query is a mechanism where Power Query tries to push as m
 Depending on how the query is structured, there could be three (3) possible outcomes for this mechanism:
 * **Full Query Folding** - When all of your query transformations get pushed back to the data source and no processing occurs locally by the Power Query engine. Instead you receive your desired output directly from the data source.
 * **Partial Query Folding** - When only a few transformations in your query, and not all, can be pushed back to the data source. This means that a subset of your transformations will be performed at your data source and the rest of your query transformations will occur locally.
-* **No Query folding** -  When the query contains transformations that can't be translated to the native query langauge of your data source either because the transformations are not supported or the connector doesn't support Query folding. For this case Power Query gets the raw data from your data source and works locally with the Power Query engine to achieve your desired output.
+* **No Query folding** -  When the query contains transformations that can't be translated to the native query language of your data source either because the transformations are not supported or the connector doesn't support Query folding. For this case Power Query gets the raw data from your data source and works locally with the Power Query engine to achieve your desired output.
 
 >[!NOTE]
 >The Query folding mechanism is primarily available in connectors for structured data sources such as but not limited to [Microsoft SQL Server](Connectors/sqlserver.md) and [OData Feed](Connectors/odatafeed.md). 
@@ -25,7 +25,7 @@ This article will try to provide some example scenarios for each of the possible
 
 ## Full Query folding
 
-For this scenario the data that you will be connecting to is Microsoft SQL Server and the sample database is the AdventureWorks in its Data Warehouse version which you can download from the article [AdventureWorks sample database](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
+For this scenario, the data that you will be connecting to is Microsoft SQL Server and the sample database is the AdventureWorks in its Data Warehouse version, which you can download from the article [AdventureWorks sample database](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
 
 After identifying the data source, it is suggested that you pick the native connectors found in the 'Get Data' window. In this case, the connector to be used is the [Microsoft SQL Server Connector](Connectors/SQLServer.md).
 
@@ -49,7 +49,7 @@ Your goal is to summarize the data inside the *FactInternetSales* table by perfo
 
 ![Filtering the summarized table by the Total Sales Amount column for values greater than or equal to 15000](images/me-query-folding-basics-filter-values-greater-than.png)
 
-One simple way to check if the step in your query can fold back to the data source is to right-click the step and see if the **View Native Query** option is enabled or disabled / greyed out.
+One simple way to check if the step in your query can fold back to the data source is to right-click the step and see if the **View Native Query** option is enabled out or disabled / greyed.
 
 ![Right-clicking the last step of the query to check the View Native Query option](images/me-query-folding-basics-view-native-query.png)
 
@@ -61,13 +61,13 @@ This native query will be sent to the data source (Microsoft SQL Server) and Pow
 
 ## Partial Query folding
 
-Taking the query created in the previous section for **Full Query folding** as your starting point, your new goal is to filter that table to only analyze the rowos for dates that fall in a the weekdays Friday, Saturday, or Sunday.
+Taking the query created in the previous section for **Full Query folding** as your starting point, your new goal is to filter that table to only analyze the rows for dates that fall in the weekdays Friday, Saturday, or Sunday.
 
-To do this, first select the **OrderDate** column. In the **Add Column** menu from ribbon, select the *Date* option found in the the *From Date & Time* group which will display a new menu. From this new submenu, select the option that reads *Day*, and this will display a new submenu where you can select the *Name of Day* option. 
+To do this, first select the **OrderDate** column. In the **Add Column** menu from ribbon, select the *Date* option found in the *From Date & Time* group, which will display a new menu. From this new submenu, select the option that reads *Day*, and this will display a new submenu where you can select the *Name of Day* option. 
 
 ![Option to add a new column for the Name of the Day](images/me-query-folding-basics-weekday-name.png)
 
-After clicking this button, a new column called **Day name** will appear in your table with the name of the Weekday. You can now filter the table using this **Day name** column to only keep the rows with the values Friday, Saturday or Sunday.
+After clicking this button, a new column called **Day name** will appear in your table with the name of the Weekday. You can now filter the table using this **Day name** column to only keep the rows with the values Friday, Saturday, or Sunday.
 
 ![Filtering the summarized table using the name of the Day](images/me-query-folding-basics-filter-weekday-name.png)
 
@@ -80,6 +80,21 @@ For this particular scenario, the query will be partially folded to the data sou
 Another option to verify query folding is to use the Query diagnostics tools, more specifically the **Diagnose Step** option. You can learn more how to use the Query diagnostics tool from the article on *[What is Query Diagnostics for Power Query?](querydiagnostics.md)*.
 
 ![Query diagnostics tools in the Power Query ribbon](images/me-query-folding-basics-query-diagnostics.png)
+
+To use it, you simply need to select the query that you want to analyze and then hit the **Diagnose Step** button. This will create a new group and two queries with the format "[Query Name] [Step Name] [Diagnostics Type] [Timestamp]".
+
+You can take a look at the one that reads "Aggregated" in the [Diagnostics Type] part and take a closer look at the field with the name Data Source Query. This column holds all the requests sent to the data source.
+
+![Query diagnostics at the step level for the last step of the new query showing the requests sent to the data source in the Data Source Query field](images/me-query-folding-basics-query-diagnostics-aggregated-view.png)
+
+Reading the values in that column, you can see that the native query sent to the server to retrieve the information. You can right-click to drill down to a specific value and see the contents of the cell specifically value in row twenty first in the previous image that is the same native query that you can see in the **View Native Query** for the **Filtered Rows1** step.
+
+![Value found inside the query for the aggregated query diagnostics which holds the SQL statement sent to the SQL Server](images/me-query-folding-basics-query-diagnostics-aggregated-view-drill-down.png)
+
+This means that your query will send that native query to the Microsoft SQL Server and perform the rest of the transformations locally and this is what it means to have a query which can partially fold.
+
+>[!NOTE]
+> It is highly recommended that you read the article on [Understanding folding with Query Diagnostics](querydiagnosticsfolding.md) to get the most out of the Query Diagnostics tools and how to verify query folding.
 
 ## No Query folding
 CSV files
