@@ -8,6 +8,10 @@ ms.date: 08/14/2020
 ms.author: jessli20
 ---
 
+not application language
+
+Approved AFGS Authentication Services
+
 # Options and Settings in Power Query
 There are many options and settings within Power Query. Whether it's the editor layouts, the diagnostics or the language settings, you can change many your Power Query experience using the settings.
 
