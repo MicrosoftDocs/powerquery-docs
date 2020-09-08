@@ -242,6 +242,8 @@
         href: Connectors/ODataFeed.md
       - name: "ODBC"
         href: Connectors/Odbc.md
+      - name: "Oracle database"
+        href: Connectors/OracleDatabase.md
       - name: "PostgreSQL"
         href: Connectors/PostgreSQL.md
       - name: "QuickBooks Online"
