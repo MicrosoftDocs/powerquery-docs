@@ -11,53 +11,51 @@ ms.author: v-rerad
 LocalizationGroup: Data from files
 ---
 
-# Troubleshooting dataflow issue: get data from dataflow
+# Troubleshooting dataflow issues: Get data from a dataflow
 
-You might have created a dataflow, but then have difficulty in getting data from it (either using Power Query in Power BI Desktop or from other dataflows). This article explains some of the most common issues that happen when you get data from a dataflow.
+You might have created a dataflow but then had difficulty getting data from it (either by using Power Query in Power BI Desktop or from other dataflows). This article explains some of the most common problems with getting data from a dataflow.
 
-## Problem: This table is empty
+## Error: This table is empty
 
-Let's assume that you're getting data from a dataflow (either in the Power BI Desktop or in another dataflow), and you have access to that dataflow. Sometimes, however, when you get data from a dataflow with the above situation, you get a message in the Navigator saying "This table is empty".
+Let's assume that you're getting data from a dataflow (either in Power BI Desktop or in another dataflow), and you have access to that dataflow. Sometimes, however, when you get data from a dataflow in the above situation, you get a message in the **Navigator** window saying "This table is empty."
 
 **Reason:**
 
-This table is empty means the data isn't loaded into the table.
+The data wasn't loaded into the table.
 
 **Resolution:**
 
-In the desktop tools such as Power Query in Excel and Power Query in the Power BI Desktop, the loading of data into tables happens automatically (unless you disable it). This behavior is a bit different in Power Query in dataflows. In dataflow entities, the data won't be loaded unless you refresh the data.
+In the desktop tools, such as Power Query in Excel and Power Query in Power BI Desktop, the loading of data into tables happens automatically (unless you disable it). This behavior is a bit different in Power Query in dataflows. In dataflow entities, the data won't be loaded unless you refresh the data.
 
-You have to set up a scheduled refresh for a dataflow, or if you want to just have a single refresh, use the manual refresh option. 
+You have to set up a scheduled refresh for a dataflow, or&mdash;if you want to just have a single refresh&mdash;use the manual refresh option.
 
-![Refresh dataflow](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-create-use/dataflows-create-use_13.png)
+![Refresh a dataflow](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-create-use/dataflows-create-use_13.png)
 
-Once a dataflow is refreshed, the data in entities will be visible in the Navigator window of other tools and services.
+After a dataflow is refreshed, the data in entities will be visible in the **Navigator**<!--Is it literally going to be named "Navigator"? If not, should just be "...the data in entities will be visible in other tools and services." --> window of other tools and services.
 
-![Schedule Refresh for dataflows](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-create-use/dataflows-create-use_14.png)
+![Schedule refresh for dataflows](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-create-use/dataflows-create-use_14.png)
 
+## My Power Platform dataflow isn't listed
 
+Sometimes, you have a Power Platform dataflow you created and also refreshed, but you still can't access it through the **Get data** command. This might be because the account that's trying to access the dataflow doesn't have access.<!--Edit okay? There seemed to be something missing here.--> However, if the account does have access to the dataflow, another reason might be the type of dataflow you're accessing.
 
-## Problem: Can't see my Power Platform dataflow listed
+You might receive the error message "We reached the end of the buffer" or "DataFormat.Error: We reached the end of the buffer".
 
-Sometimes, you have a Power Platform dataflow created, and also refreshed. However, you still can't access it from a get data experience. This might be because the account is trying to access the dataflow. However, if the account does have access to the dataflow, another reason can be the type of dataflow.
+![Get data from a standard dataflow](media/StandardDataflowGetData.png)
 
-The error message you receive might be "We reached the end of the buffer", or "DataFormat.Error: We reached the end of the buffer".
+**Reason:**
 
-![Get data from standard dataflow](media/StandardDataflowGetData.png)
-
-**Reason:** 
-
-Only analytical dataflows can be used in Get Data from a dataflow experience.
+Only analytical dataflows can be used in a **Get data** operation from a dataflow<!--Edit okay?-->.
 
 **Resolution:**
 
-If you've created a dataflow that stores the data into the Common Data Services, you can't see it using Get Data from dataflow experience. You can use [Get data from Common Data Services](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-powerbi-connector#finding-your-common-data-service-environment-url) instead, to get data from standard dataflows. Or you can create an [analytical dataflow](understanding-differences-between-analytical-standard-dataflows.md) instead, and then access it through Get data from a dataflow.
+If you've created a dataflow that stores data in Common Data Service&mdash;that is, a standard dataflow&mdash;you can't see it by using the **Get data** operation from a dataflow. However, you can use [**Get data** from Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-powerbi-connector#finding-your-common-data-service-environment-url) to access it. Or you can create an [analytical dataflow](understanding-differences-between-analytical-standard-dataflows.md) instead, and then access it by using **Get data** from a dataflow.
 
-![Get data from standard vs analytical dataflows](media/GetDataStandardAnalyticalDataflow.png)
+![Get data from standard dataflow versus analytical dataflows](media/GetDataStandardAnalyticalDataflow.png)
 
-## Problem: Can't have a DirectQuery Connection to the dataflow
+## I can't make a DirectQuery connection to the dataflow
 
-If you intend to use the dataflow as a DirectQuery source, then you might need to enable it first.
+If you intend to use the dataflow as a DirectQuery source, you might need to enable it first.
 
 **Reason:**
 
@@ -65,6 +63,6 @@ The enhanced compute engine settings are disabled.
 
 **Resolution:**
 
-[Enable the enhanced compute engine](https://docs.microsoft.com/power-bi/transform-model/service-dataflows-directquery), and then you'll have the option to connect to the dataflow using the DirectQuery option.
+[Enable the enhanced compute engine](https://docs.microsoft.com/power-bi/transform-model/service-dataflows-directquery), and then you'll have the option to connect to the dataflow by using DirectQuery.
 
-![Enable enhanced compute engine](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-directquery/dataflows-directquery-01.png)
+![Enable the enhanced compute engine](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-directquery/dataflows-directquery-01.png)
