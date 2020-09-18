@@ -1,6 +1,6 @@
 ---
-title: List of all connectors
-description: List of all currently available connectors for Power Query
+title: List of all Power Query connectors
+description: List of all currently available Power Query connectors
 author: DougKlopfenstein
 
 ms.service: powerquery
@@ -121,7 +121,7 @@ A checkmark indicates the connector is currently supported in the listed service
 | [![Salesforce Reports](media/index/salesforce-64.png)<br/>**Salesforce Reports**](./salesforcereports.md)<br/>By Microsoft          | ![Yes](media/index/yes.png) | ![Yes](media/index/yes.png) | ![Yes](media/index/yes.png) | ![Yes](media/index/yes.png) | ![Yes](media/index/yes.png) | ![Yes](media/index/yes.png) |
 | ![SAP Business Warehouse Application Server](media/index/cube-database-64.png)<br/>**SAP Business<br/>Warehouse<br/>Application Server**<br/>By Microsoft                                                                                                                             | ![No](media/index/no.png)  | ![Yes](media/index/yes.png) | ![Yes](media/index/yes.png) | ![Yes](media/index/yes.png) | ![No](media/index/no.png)  | ![Yes](media/index/yes.png)  |
 | ![SAP Business Warehouse Message Server](media/index/cube-database-64.png)<br/>**SAP Business<br/>Warehouse<br/>Message Server**<br/>By Microsoft                                                                                                                             | ![No](media/index/no.png)  | ![Yes](media/index/yes.png) | ![Yes](media/index/yes.png) | ![Yes](media/index/yes.png) | ![No](media/index/no.png)  | ![No](media/index/no.png)  |
-| ![SAP HANA database](media/index/cube-database-64.png)<br/>**SAP HANA<br/>database**<br/>By Microsoft                                   | ![Yes](media/index/yes.png) | ![Yes](media/index/yes.png) | ![Yes](media/index/yes.png) | ![Yes](media/index/yes.png) | ![No](media/index/no.png)  | ![Yes](media/index/yes.png) |
+| [![SAP HANA database](media/index/cube-database-64.png)<br/>**SAP HANA<br/>database**](./sap-hana/overview.md)<br/>By Microsoft                                   | ![Yes](media/index/yes.png) | ![Yes](media/index/yes.png) | ![Yes](media/index/yes.png) | ![Yes](media/index/yes.png) | ![No](media/index/no.png)  | ![Yes](media/index/yes.png) |
 | [![SharePoint Folder](media/index/sharepoint-64.png)<br/>**SharePoint Folder**](./sharepointfolder.md)<br/>By Microsoft                                      | ![Yes](media/index/yes.png) | ![Yes](media/index/yes.png) | ![Yes](media/index/yes.png) | ![Yes](media/index/yes.png) | ![Yes](media/index/yes.png) | ![No](media/index/no.png)  |
 | [![SharePoint list](media/index/sharepoint-64.png)<br/>**SharePoint list**](./sharepointlist.md)<br/>By Microsoft                   | ![Yes](media/index/yes.png) | ![Yes](media/index/yes.png) | ![Yes](media/index/yes.png) | ![Yes](media/index/yes.png) | ![Yes](media/index/yes.png) | ![Yes](media/index/yes.png) |
 | [![SharePoint Online List](media/index/sharepoint-64.png)<br/>**SharePoint Online<br/>List**](./sharepointonlinelist.md)<br/>By Microsoft                                                                                                                             | ![Yes](media/index/yes.png) | ![Yes](media/index/yes.png) | ![Yes](media/index/yes.png) | ![Yes](media/index/yes.png) | ![Yes](media/index/yes.png) | ![No](media/index/no.png)  |
