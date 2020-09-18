@@ -16,29 +16,29 @@ ms.custom: edited
 
 # What is Power Query?
 
-Power Query is a data transformation and data preparation engine. Power Query comes with a graphical interface for getting data from sources and a Query Editor for applying transformations. Because the engine is available in many products and services, the destination where the data will be stored depends on where Power Query was used. Using Power Query, you can perform the extract, transform, and load (ETL) processing of data.<!--note from editor: I think the image should use the current name, "Azure Data Lake Storage." Please see the Cloud Style Guide: https://styleguides.azurewebsites.net/StyleGuide/Read?id=2696&topicid=43944 -->
+Power Query is a data transformation and data preparation engine. Power Query comes with a graphical interface for getting data from sources and a Power Query Editor for applying transformations. Because the engine is available in many products and services, the destination where the data will be stored depends on where Power Query was used. Using Power Query, you can perform the extract, transform, and load (ETL) processing of data.<!--note from editor: I think the image should use the current name, "Azure Data Lake Storage." Please see the Cloud Style Guide: https://styleguides.azurewebsites.net/StyleGuide/Read?id=2696&topicid=43944 -->
 
 ![What is Power Query?](images/whatispowerquery.png "needs detailed alt text")
 
 ## How Power Query helps with data acquisition
 
-Business users spend up to 80&nbsp;percent of their time on data preparation, which delays the work of analysis and decision-making. Several challenges contribute to<!--Suggested, so as not to repeat "many"--> this situation, and Power Query helps address many of them.
+Business users spend up to 80&nbsp;percent of their time on data preparation, which delays the work of analysis and decision-making. Several challenges contribute to this situation, and Power Query helps address many of them.
 
 |Existing challenge  |How does Power Query help?  |
 |---------|---------|
 |Finding and connecting to data is too difficult     |Power Query enables connectivity to a wide range of data sources, including data of all sizes and shapes. |
 |Experiences for data connectivity are too fragmented     | Consistency of experience, and parity of query capabilities over all data sources.        |
 |Data often needs to be reshaped before consumption     | Highly interactive and intuitive experience for rapidly and iteratively building queries over any data source, of any size.        |
-|Any shaping is one-off and not repeatable     |  When using Power Query to access and transform data, you define a repeatable process (query) that can be easily refreshed in the future to get up-to-date data. <br/>In the event that you need to modify the process or query to account for underlying data or schema changes, you can use the same interactive and intuitive experience you used when you initially defined the query.<!--Suggested.-->     |
-|Volume (data sizes), velocity (rate of change), and variety (breadth of data sources and data shapes)     |  Power Query offers the ability to work against a subset of the entire dataset<!--Via Cloud Style Guide--> to define the required data transformations, allowing you to easily filter down and transform your data to a manageable size. <br/>Power Query queries can be refreshed manually or by taking advantage of scheduled refresh capabilities in specific products (such as Power BI) or even programmatically (by using the Excel object model)<!--No possessive of brand names.-->. <br/>Because Power Query provides connectivity to hundreds of data sources and over 350 different types of data transformations for each of these sources, you can work with data from any source and in any shape.      |
+|Any shaping is one-off and not repeatable     |  When using Power Query to access and transform data, you define a repeatable process (query) that can be easily refreshed in the future to get up-to-date data. <br/>In the event that you need to modify the process or query to account for underlying data or schema changes, you can use the same interactive and intuitive experience you used when you initially defined the query.     |
+|Volume (data sizes), velocity (rate of change), and variety (breadth of data sources and data shapes)     |  Power Query offers the ability to work against a subset of the entire dataset to define the required data transformations, allowing you to easily filter down and transform your data to a manageable size. <br/>Power Query queries can be refreshed manually or by taking advantage of scheduled refresh capabilities in specific products (such as Power BI) or even programmatically (by using the Excel object model). <br/>Because Power Query provides connectivity to hundreds of data sources and over 350 different types of data transformations for each of these sources, you can work with data from any source and in any shape.      |
 
 ## Power Query experiences
 
 The Power Query user experience is provided through the Power Query Editor user interface. The goal of this interface is to help you apply the transformations you need simply by interacting with a user-friendly set of ribbons, menus, buttons, and other interactive components.
 
-The Power Query Editor is the primary data preparation experience, where you can connect to a wide range of data sources and apply hundreds of different data transformations by previewing data and selecting transformations from the UI<!--Edit okay?-->. These data transformation capabilities are common across all data sources, whatever the underlying data source limitations.
+The Power Query Editor is the primary data preparation experience, where you can connect to a wide range of data sources and apply hundreds of different data transformations by previewing data and selecting transformations from the UI. These data transformation capabilities are common across all data sources, whatever the underlying data source limitations.
 
-When you create a new transformation step by interacting with the components of the Power Query interface, Power Query automatically creates the M code required to do the transformation so you don't need to write any code at all.<!--Suggested.-->
+When you create a new transformation step by interacting with the components of the Power Query interface, Power Query automatically creates the M code required to do the transformation so you don't need to write any code.
 
 Currently, two Power Query experiences are available:
 
@@ -50,7 +50,7 @@ Currently, two Power Query experiences are available:
 
 ## Transformations
 
-The transformation engine in Power Query includes many prebuilt transformation functions that can be used through the graphical interface of the Power Query Editor. These transformations can be as simple as removing a column or filtering rows, or as common as using the first row as a table header. There are also advanced transformation options such as merge, append, group by, pivot, and unpivot.<!--You don't need "and so on" if you say "such as."-->
+The transformation engine in Power Query includes many prebuilt transformation functions that can be used through the graphical interface of the Power Query Editor. These transformations can be as simple as removing a column or filtering rows, or as common as using the first row as a table header. There are also advanced transformation options such as merge, append, group by, pivot, and unpivot.
 
 All these transformations are made possible by choosing the transformation option in the menu, and then applying the options required for that transformation. The following illustration shows a few of the transformations available in Power Query Editor.
 
@@ -60,7 +60,7 @@ More information: [Quickstart: Using Power Query in Power BI](power-query-quicks
 
 ## Dataflows
 
-Power Query can be used in many products, such as Power BI and Excel. However, using Power Query within a product limits its usage to only that specific product. *Dataflows* are a product-agnostic service version of the Power Query experience that runs in the cloud.<!--Suggest moving this line here, to tie the story together a bit better.--> Using dataflows, you can get data and transform data in the same way, but instead of sending the output to Power BI or Excel, you can store the output in other storage options such as Common Data Service or Azure Data Lake Storage. This way, you can use the output of dataflows in other products and services.<!--Suggested.-->
+Power Query can be used in many products, such as Power BI and Excel. However, using Power Query within a product limits its usage to only that specific product. *Dataflows* are a product-agnostic service version of the Power Query experience that runs in the cloud. Using dataflows, you can get data and transform data in the same way, but instead of sending the output to Power BI or Excel, you can store the output in other storage options such as Common Data Service or Azure Data Lake Storage. This way, you can use the output of dataflows in other products and services.
 
 More information: [What are dataflows?](/dataflows/overview-dataflows-across-power-platform-dynamics-365.md)
 
@@ -92,7 +92,7 @@ More information: [Power Query M formula language](https://docs.microsoft.com/po
 
 ## Where can you use Power Query?
 
-The following table lists Microsoft products and services where Power Query can be found.<!--No colons to introduce tables, via Writing Style Guide.-->
+The following table lists Microsoft products and services where Power Query can be found.
 <!--I'm sorry to have to replace the nice-looking icons in this table with words; our new guidelines for alt text, unfortunately, say that icons can't have alt text, and if there's no alt text, there's no way for a low-vision user to know what the icons mean.-->
 |Product|M engine<sup>1</sup>|Power Query<br>Desktop<sup>2</sup>|Power Query<br>Online<sup>3</sup>|Dataflows<sup>4</sup>|
 |-------|---------|-------------------|------------------|---------|

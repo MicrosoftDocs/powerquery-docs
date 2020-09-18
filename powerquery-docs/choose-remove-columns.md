@@ -13,13 +13,12 @@ ms.custom: edited
 # Choose or remove columns
 <!--We don't use the same image multiple times. We'll actually get build warnings for that in a month or so. Suggest naming the first instance and then harkening back to it, as shown below. I'm not sure whether this should be a table caption or a figure caption. We don't usually number a table or figure if there's only one in the article, but I want to be able to refer back to it.-->
 **Choose columns** and **Remove columns** are operations that help you define what columns your table needs to keep and which ones it needs to remove. This article will showcase how to use the **Choose columns** and **Remove columns** commands by using the following sample table for both operations.
-<!--This would be a good candidate for an HTML table.-->
-![Sample table](images/me-choose-remove-columns-sample-table.png "needs detailed alt text")
 
-The goal is to create a table that looks like the following.
+![Sample table containing three rows of data with columns for date, product, sales person, unites, GUID, and report created by](images/me-choose-remove-columns-sample-table.png "Sample table with six columns")
 
-*Table 1. Final table for the choose and remove columns example*
-![Final table](images/me-choose-remove-columns-sample-final-table.png "Final table")
+The goal is to create a table that looks like the following image.
+
+![Final table containing three rows of data with columns for date, product, salesperson, and units](images/me-choose-remove-columns-sample-final-table.png "Final table containing three rows of data with columns for date, product, salesperson, and units")
 
 ## Choose columns
 
@@ -27,21 +26,20 @@ On the **Home** tab, in the **Manage columns** group, select **Choose columns**.
 
 ![Choose columns command](images/me-choose-remove-columns-choose-columns-icon.png "Choose columns command")
 
-The **Choose columns** dialog box appears, containing all the available fields (columns)<!--Edit okay?--> in your table. You can select all the fields that you want to keep and remove specific fields by clearing their associated check box. For this example, you want to remove the **GUID** and **Report created by** columns, so you clear the check boxes for those fields.
+The **Choose columns** dialog box appears, containing all the available columns in your table. You can select all the fields that you want to keep and remove specific fields by clearing their associated check box. For this example, you want to remove the **GUID** and **Report created by** columns, so you clear the check boxes for those fields.
 
 ![Choose columns dialog box](images/me-choose-remove-columns-choose-columns-window.png "Choose columns dialog box")
 
-After selecting **OK**, you'll create a table that looks like Table 1, shown earlier in this article.
-<!--
-![Final table](images/me-choose-remove-columns-sample-final-table.png "Final table")
--->
+After selecting **OK**, you'll create a table that only contains the **Date**, **Product**, **SalesPerson**, and **Units** columns.
+
+![Final table with the GUID and Report created by columns removed](images/me-choose-remove-columns-sample-final-table-2.png "Final table with the GUID and Report created by columns removed")
 
 ## Remove columns
 
 When you select **Remove columns** from the **Home** tab, you have two options:
 
 * **Remove columns**: Removes the selected columns.
-* **Remove other columns**: Removes all columns from the table *except*<!--Edit okay?--> the selected ones.
+* **Remove other columns**: Removes all columns from the table *except* the selected ones.
 
 ![Remove columns menu options](images/me-choose-remove-columns-remove-columns-icon.png "Remove columns menu options")
 
@@ -51,22 +49,16 @@ Starting from the sample table, select the **GUID** and the **Report created** c
 
 ![Table column shortcut menu](images/me-choose-remove-columns-remove-columns-right-click.png "Table column shortcut menu")
 
-<!--
-Alternatively, you can select **Remove columns** from the ribbon. The item found in this shortcut menu is exactly the same as the one found in the ribbon.
--->
+After selecting **Remove columns**, you'll create a table that only contains the **Date**, **Product**, **SalesPerson**, and **Units** columns.
 
-After selecting **Remove columns**, you'll create a table that looks like Table 1, shown earlier in this article.
-<!--
-![Final table](images/me-choose-remove-columns-sample-final-table.png "[Final table")
--->
+![Final table with the selected GUID and Report created by columns removed](images/me-choose-remove-columns-sample-final-table-3.png "[Final table with the selected GUID and Report created by columns removed")
 
 ### Remove other columns
 
-Starting from the sample table, select all the columns from the table except **GUID** and **Report created**. On the **Home** tab, select **Remove columns** > **Remove other columns**.<!--Edit okay?-->
+Starting from the sample table, select all the columns from the table except **GUID** and **Report created**. On the **Home** tab, select **Remove columns** > **Remove other columns**.
 
 ![Remove other columns command](images/me-choose-remove-columns-remove-other-columns-icon.png "Remove other columns command")
 
-After selecting **Remove other columns**, you'll create a table that looks like Table 1, shown earlier in this article.
-<!--
-![Final table](images/me-choose-remove-columns-sample-final-table.png "Final table")
--->
+After selecting **Remove other columns**, you'll create a table that only contains the **Date**, **Product**, **SalesPerson**, and **Units** columns.
+
+![Final table with the non-selected GUID and Report created by columns removed](images/me-choose-remove-columns-sample-final-table-4.png "Final table with the non-selected GUID and Report created by columns removed")

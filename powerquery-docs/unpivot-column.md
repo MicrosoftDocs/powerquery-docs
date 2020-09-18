@@ -16,7 +16,7 @@ In Power Query, you can transform columns into attribute-value pairs, where colu
 
 ![Unpivot columns diagram](images/unpivot-operation-diagram.png "needs detailed alt text")
 
-For example, given a table like the following, where country rows and date columns create a matrix of values<!--Suggested.-->, it's difficult to analyze the data in a scalable way.
+For example, given a table like the following, where country rows and date columns create a matrix of values, it's difficult to analyze the data in a scalable way.
 
 ![Unpivot columns sample initial table](images/me-unpivot-initial-table.png "needs detailed alt text")
 
@@ -29,9 +29,9 @@ The key in this transformation is that you have a set of dates in the table that
 Power Query will always create the attribute-value pair by using two columns:
 
 - **Attribute**: The name of the column headings that were unpivoted.
-- **Value**: The values that were underneath each of the unpivoted column headings.<!--Edit okay? These values weren't underneath the column, but in it.-->
+- **Value**: The values that were underneath each of the unpivoted column headings.
 
-There are multiple places in the user interface where you can find **Unpivot columns**. You can right-click the columns that you want to unpivot, or you can select the command<!--Not an icon, to judge by the screenshot.--> from the **Transform** tab in the ribbon.
+There are multiple places in the user interface where you can find **Unpivot columns**. You can right-click the columns that you want to unpivot, or you can select the command from the **Transform** tab in the ribbon.
 
 ![Right-click operation to unpivot columns](images/me-unpivot-right-click.png "Right-click operation to unpivot columns")
 
@@ -84,7 +84,7 @@ The result of that operation will yield exactly the same result as the one you g
 
 Similar to the **Unpivot columns** operation, if your query is refreshed and more data is picked up from the data source, all the columns will be unpivoted except the ones that were previously selected.
 
-To illustrate this, say that you have a new table like the one in the following image.<!--Suggested. You don't want to have an image in the middle of your sentence. (Or maybe you do! But it will be near impossible to make this work for accessibility.) -->
+To illustrate this, say that you have a new table like the one in the following image.
 
 ![Unpivot updated source table](images/me-unpivot-updated-source-table.png "needs detailed alt text")
 
@@ -110,7 +110,7 @@ After doing a refresh, if our source table changes to have a new **9/1/2020** co
 
 ![Unpivot updated source table](images/me-unpivot-updated-source-table.png "Unpivot updated source table")
 
-The output of our query will look like the following image.<!--Would it be possible to highlight the 9/1/2020 column in this image?-->
+The output of our query will look like the following image.
 
 ![Unpivot only selected columns updated final table](images/me-unpivot-only-selected-columns-updated-final-table.png "Unpivot only selected columns updated final table")
 

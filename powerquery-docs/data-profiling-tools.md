@@ -42,11 +42,11 @@ The column quality feature labels values in rows in three categories:
 
 These indicators are displayed directly underneath the name of the column as part of a small bar chart, as shown in the following image.
 
-![Data quality](images/me-data-quality.png "needs detailed alt text")
+![Enhanced view of the bar chart with data quality indicators and labels above each column in the table](images/me-data-quality.png "Enhanced view of the bar chart with data quality indicators and labels")
 
 The number of records in each column quality category is also displayed as a percentage.
 
-By hovering over any of the columns, you can see the numerical distribution of the quality of values throughout the column. Additionally, selecting the ellipsis button (...) opens some quick action buttons for operations on the values.
+By hovering over any of the columns, you are presented with the numerical distribution of the quality of values throughout the column. Additionally, selecting the ellipsis button (...) opens some quick action buttons for operations on the values.
 
 ![Data quality options](images/me-column-quality-hover.png "needs detailed alt text")
 
@@ -56,13 +56,13 @@ This feature provides a set of visuals underneath the names of the columns that 
 
 ![Column distribution](images/me-column-distribution.png "Column distribution")
 
-Besides getting information about the overall data in the column (with distinct count and unique values), you can select the ellipsis button and choose from a menu of available operations.
+By hovering over the distribution data in any of the columns, you get information about the overall data in the column (with distinct count and unique values). You can also select the ellipsis button and choose from a menu of available operations.
 
-![Column distributions options](images/me-column-distribution-hover.png "needs detailed alt text")
+![Column distributions options](images/me-column-distribution-hover.png "Column distributions options")
 
 ## Column profile
 
-This feature provides a more in-depth look at the data in a column. Apart from the column distribution chart, it displays<!--Edit okay? Wasn't sure what was the agent of action here. --> a column statistics chart. This information is displayed underneath the data preview section, as shown in the following image.
+This feature provides a more in-depth look at the data in a column. Apart from the column distribution chart, it contains a column statistics chart. This information is displayed underneath the data preview section, as shown in the following image.
 
 ![Column profile](images/me-column-profile.png "Column profile")
 
@@ -70,11 +70,11 @@ This feature provides a more in-depth look at the data in a column. Apart from t
 
 You can interact with the value distribution chart on the right side and select any of the bars by hovering over the parts of the chart.  
 
-![Column profile filter by value](images/me-column-profile-hover.png "needs detailed alt text")
+![Hover over bar in value distribution bar chart, which shows individual data for that bar](images/me-column-profile-hover.png "Hover over bar in value distribution bar chart")
 
 Right-click to display a set of available transformations for that value.
 
-![Column profile shortcut menu](images/column-profile-right-click.png "needs detailed alt text")
+![Displays shortcut menu with available tranformations for a single bar in the value distribution bar chart](images/column-profile-right-click.png "Displays shortcut menu with available tranformations")
 
 ### Copy data
 
@@ -88,6 +88,6 @@ When you select the ellipsis button (...) in the upper-right corner of the value
 
 ![Group by value distribution](images/me-value-distribution-group-by.png "Group by value distribution")
 
-The image below shows a column of product names that have been grouped by text length. After the values have been grouped in the chart, you can interact with it<!--I'm not sure what this means. This highlights the main problem with describing the UI as opposed to writing task-oriented content. Sections like this just kind of dangle because they're not integrated into anything. We haven't given the reader a reason to read this.--> as described in [Filter by value](#filter-by-value).
+The image below shows a column of product names that have been grouped by text length. After the values have been grouped in the chart, you can interact with individual values in the chart as described in [Filter by value](#filter-by-value).
 
-![Group by text length](images/me-text-length-distribution.png "needs detailed alt text")
+![New bar chart showing the distribution of the text length of store names in the table's Names column](images/me-text-length-distribution.png "New bar chart showing the distribution of the text length of store names in the table's Names column")

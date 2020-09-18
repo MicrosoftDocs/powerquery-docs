@@ -37,7 +37,7 @@ In this example, you want to identify and remove the duplicates by using all of 
 
 ![Initial table with duplicates in multiple columns](images/me-working-with-duplicates-table-row-duplicates.png "Initial table with duplicates in multiple columns")
 
-You have four rows that are duplicates. Your goal is to remove those duplicate rows so there are only unique<!--Suggested.--> rows in your table. Select all columns from your table, and then select **Remove duplicates**. 
+You have four rows that are duplicates. Your goal is to remove those duplicate rows so there are only unique rows in your table. Select all columns from your table, and then select **Remove duplicates**. 
 
 The result of that operation will give you the table that you're looking for.
 
@@ -52,7 +52,7 @@ In this example, you want to identify and remove the duplicates by using only th
 
 ![Initial table with duplicates in the Category column](images/me-working-with-duplicates-column-row-duplicates.png "Initial table with duplicates in the Category column")
 
-You want to remove those duplicates and only keep unique<!--Suggested.--> values. To remove duplicates from the **Category** column, select it, and then select **Remove duplicates**.
+You want to remove those duplicates and only keep unique values. To remove duplicates from the **Category** column, select it, and then select **Remove duplicates**.
 
 The result of that operation will give you the table that you're looking for.
 
@@ -60,7 +60,7 @@ The result of that operation will give you the table that you're looking for.
 
 ## Keep duplicates
 
-The other operation you can perform with duplicates is to keep only the duplicates found in your table.
+Another operation you can perform with duplicates is to keep only the duplicates found in your table.
 
 1. Select the columns that contain duplicate values.
 2. Go to the **Home** tab.

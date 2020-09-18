@@ -10,7 +10,7 @@ ms.custom: edited
 ---
 
 # Dealing with errors in Power Query
-<!--note from editor: I'm guessing that "pane" is the best term for the yellow place where the error appears. I can't find a definitive answer anywhere though; please let me know if you hear of one. I don't think "banner" is right, and "ribbon" definitely isn't.-->
+
 In Power Query, you can encounter two types of errors:
 
 * Step-level errors
@@ -43,7 +43,7 @@ This error commonly occurs when the data source is inaccessible by the user, the
 
 **Example**: You have a query from a text tile that was located in drive D and created by user A. User A shares the query with user B, who doesn't have access to drive D. When this person tries to execute the query, they get a **DataSource.Error** because there's no drive D in their environment.
 
-![File path error](images/me-working-with-errors-file-path.png "needs detailed alt text")
+![Data source error, could not find the file because there's no drive D in the current environment](images/me-working-with-errors-file-path.png "Data source error, could not find the file because there's no drive D in the current environment")
 
 **Possible solutions**: You can change the file path of the text file to a path that both users have access to. As user B, you can change the file path to be a local copy of the same text file. If the **Edit settings** button is available in the error pane, you can select it and change the file path.
 
@@ -53,7 +53,7 @@ This error is commonly triggered when a step makes a direct reference to a colum
 
 **Example**: You have a query from a text file where one of the column names was **Column**. In your query, you have a step that renames that column to **Date**. But there was a change in the original text file, and it no longer has a column heading with the name **Column** because it was manually changed to **Date**. Power Query is unable to find a column heading named **Column**, so it can't rename any columns. It displays the error shown in the following image.
 
-![Column name not found error](images/me-working-with-errors-column-name.png "needs detailed alt text")
+![Expression error, the column of the table wasn't found because the column name was manually changed](images/me-working-with-errors-column-name.png "Expression error, the column of the table wasn't found because the column name was manually changed")
 
 **Possible solutions**: There are multiple solutions for this case, but they all depend on what you'd like to do. For this example, because the correct **Date** column header already comes from your text file, you can just remove the step that renames the column. This will allow your query to run without this error.
 
@@ -61,15 +61,15 @@ This error is commonly triggered when a step makes a direct reference to a colum
 
 When combining or merging data between multiple data sources, you might get a **Formula.Firewall** error such as the one shown in the following image.
 
-![Formula.Firewall error](images/me-working-with-errors-formula-firewall.png "needs detailed alt text")
+![Formula Firewall error, the query references other queries or steps, so it may not directly access a data source](images/me-working-with-errors-formula-firewall.png "Formula Firewall error, the query references other queries or steps, so it may not directly access a data source")
 
 This error can be caused by a number of reasons, such as the data privacy levels between data sources or the way that these data sources are being combined or merged. For more information about how to diagnose this issue, go to [Data privacy firewall](dataprivacyfirewall.md).
 
 ## Cell-level error
 
-A cell-level error won't prevent the query from loading, but displays error values as **Error** in the cell. Selecting the white space in the cell displays the error pane underneath the data preview, as shown in the following image.
+A cell-level error won't prevent the query from loading, but displays error values as **Error** in the cell. Selecting the white space in the cell displays the error pane underneath the data preview.
 
-![Couldn't convert value to data type error](images/me-working-with-errors-could-not-convert.png "needs detailed alt text")
+![Displaying the error message by selecting whitespace in a table cell containing an error](images/me-working-with-errors-could-not-convert.png "Displaying the error message by selecting whitespace in a table cell containing an error")
 
 >[!NOTE]
 > The data profiling tools can help you more easily identify cell-level errors with the column quality feature. More information: [Data profiling tools](data-profiling-tools.md#column-quality)
@@ -80,17 +80,17 @@ When encountering any cell-level errors, Power Query provides a set of functions
 
 For the next sections, the provided examples will be using the same sample query as the start point. In this query, you have a **Sales** column that has one cell with an error caused by a conversion error. The value inside that cell was **NA**, but when you transformed that column to a whole number Power Query couldn't convert **NA** to a number, so it displays the following error.
 
-![Could not convert to data type error details](images/me-working-with-errors-could-not-convert-details.png "needs detailed alt text")
+![Displays data format error, couldn't convert to data type error in the error pane](images/me-working-with-errors-could-not-convert-details.png "Displays data format error, couldn't convert to data type error in the error pane")
 
 #### Remove errors
 
-To remove rows with errors, first select the column that contains errors. On the **Home** tab, in the **Reduce rows** group, select **Remove rows**. From the drop-down menu, select **Remove errors**.
+To remove rows with errors in Power Query, first select the column that contains errors. On the **Home** tab, in the **Reduce rows** group, select **Remove rows**. From the drop-down menu, select **Remove errors**.
 
 ![Remove errors button on the Home tab](images/me-working-with-errors-remove-errors.png "Remove errors button on the Home tab")
 
 The result of that operation will give you the table that you're looking for.
 
-![Removed errors from sample table](images/me-working-with-errors-removed-rows-with-errors.png "needs detailed alt text")
+![Table that previously contained five rows now has the row that contained the error removed, leaving four rows in the table](images/me-working-with-errors-removed-rows-with-errors.png "Table with the row containing the error removed")
 
 #### Replace errors
 
@@ -104,17 +104,17 @@ In the **Replace errors** dialog box, enter the value **10** because you want to
 
 The result of that operation will give you the table that you're looking for.
 
-![Sample table with errors replaced](images/me-working-with-errors-replaced-errors.png "needs detailed alt text")
+![Table in which the third row contained an error in the Sales column now has the error replaced with the value 10](images/me-working-with-errors-replaced-errors.png "Sample table with errors replaced")
 
 #### Keep errors
 
-Power Query can serve as a good auditing tool to identify any rows with errors even if you don't fix the errors. This is where **Keep errors** can be helpful.<!--Edit okay? These sentences seem kind of buried - maybe they should go up in the introduction to "Handling errors at the cell level."--> To keep rows that have errors, first select the column that contains errors. On the **Home** tab, in the **Reduce rows** group, select **Keep rows**. From the drop-down menu, select **Keep errors**.
+Power Query can serve as a good auditing tool to identify any rows with errors even if you don't fix the errors. This is where **Keep errors** can be helpful. To keep rows that have errors, first select the column that contains errors. On the **Home** tab, in the **Reduce rows** group, select **Keep rows**. From the drop-down menu, select **Keep errors**.
 
 ![Keep errors button on the Home tab](images/me-working-with-errors-keep-errors.png "Keep errors button on the Home tab")
 
 The result of that operation will give you the table that you're looking for.
 
-![Sample table with only rows with errors](images/me-working-with-errors-keep-errors-final.png "needs detailed alt text")
+![Final table that keeps only rows that contain errors](images/me-working-with-errors-keep-errors-final.png "Final table that keeps only rows that contain errors")
 
 ### Common cell-level errors
 
@@ -136,8 +136,8 @@ When trying to apply an operation that isn't supported, such as multiplying a te
 
 **Example**: You want to create a custom column for your query by creating a text string that contains the phrase "Total Sales: " concatenated with the value from the **Sales** column. An error occurs because the concatenation operation only supports text columns and not numeric ones.
 
-![Operation error](images/me-working-with-errors-operation-errors.png "needs detailed alt text")
+![Expression error in the error pane caused by trying to apply an And operator to text and a number from the Sales column](images/me-working-with-errors-operation-errors.png "Expression error in the error pane caused by trying to apply an And operator to text and a number from the Sales column")
 
 **Possible solutions**: Before creating this custom column, change the data type of the **Sales** column to be text.
 
-![Sample table with solution for operation error](images/me-working-with-errors-operation-errors-final-table.png "needs detailed alt text")
+![Table with the sales column converted from a Number data type to a Text data type, and the resulting a new column containing both expressions](images/me-working-with-errors-operation-errors-final-table.png "Table with solution for operation error")

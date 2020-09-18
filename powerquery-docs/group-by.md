@@ -18,12 +18,12 @@ In Power Query, you can group values in various rows into a single value by grou
 * Perform a row operation.
 
 For this tutorial, you'll be using the sample table shown in the following image.
-<!--note from editor: I wanted to experiment with the new image extension from the people at docs. It seems to work well. I don't know what the character limit is for the description, but we certainly have more room now to describe the sample tables in detail. Note that the description shows up in the VSCode preview and the preview on Github, but it looks good (that is, it doesn't appear) on the review site.-->
+
 :::image type="complex" source="images/me-group-by-initial-table.png" alt-text="Sample initial table":::
   Table with columns showing Year (2020), Country (USA, Panama, or Canada), Product (Shirt or Shorts), Sales channel (Online or Reseller), and Units (various values from 55 to 7500)
 :::image-end:::
 
-<!--![Sample initial table](images/me-group-by-initial-table.png "Sample initial table")-->
+<!-- ![Sample initial table](images/me-group-by-initial-table.png "Sample initial table")-->
 
 ## Where to find the Group by button
 
@@ -60,7 +60,7 @@ This operation gives you the table that you're looking for.
 ## Perform a row operation to group by one or more columns
 
 In this example, you want total units sold and&mdash;in addition&mdash;you want two other columns that give you the name and units sold for the top-performing product, summarized at the country and sales channel level. 
-<!--note from editor: It's not good design to use the same graphic twice in an article. If we have duplicate alt text, soon we'll be throwing warnings (not just suggestions) at build time. You'll notice in other articles that duplicate images, I've added a caption ("Table 1") to the first occurrence of the image and then just referred back to it. I'm not sure that's optimal, I'll be curious to see what you think.-->
+
 Your goal is to reach a table that looks like the following image from your original sample table.
 
 ![Sample output table with row operations](images/me-group-by-row-operation-final-table.png "Sample output table with row operations")
@@ -90,7 +90,7 @@ With the new **Products** column with \[Table\] values, you create a new custom 
 
 ![Add a custom column](images/me-add-custom-column-icon.png "Add a custom column")
 
-Name your new column **Top performer product**. Enter the formula `Table.Max([Products], "Units" )` under **Custom column formula**.<!--Suggested, to keep the period out of it entirely.--> 
+Name your new column **Top performer product**. Enter the formula `Table.Max([Products], "Units" )` under **Custom column formula**.
 
 ![Custom column formula with Table.Max](images/me-group-by-row-operation-custom-column-formula.png "Custom column formula with Table.Max")
 
@@ -98,13 +98,13 @@ The result of that formula creates a new column with \[Record\] values with the 
 
 ![Result of the custom column formula with Table.Max](images/me-group-by-row-operation-custom-column-details-preview-pane.png "Result of the custom column formula with Table.Max")
 
-With this new **Top performer product** column that contains \[Record\] values, you can select **Expand**<!--What do you think of using the icon here? (Edit assumes that this is the tooltip. If there is no tooltip, this could be "...you can select the expand icon..."-->![expand](images/expand-icon.png), select the **Product** and **Units** fields, and then select **OK**.
+With this new **Top performer product** column that contains \[Record\] values, you can select the ![expand](images/expand-icon.png) expand icon, select the **Product** and **Units** fields, and then select **OK**.
 
 ![Expand operation for record value on the Top performer product column](images/me-group-by-row-operation-custom-column-expand-window.png "Expand operation for record value on the Top performer product column")
 
 After removing your **Products** column and setting the data type for both newly expanded columns, your result will resemble the following image.
 
-![Final table with all transformations](images/me-group-by-row-operation-final-table.png "Final table with all transformations")
+![Final table with all transformations](images/me-group-by-row-operation-final-table-2.png "Final table with all transformations")
 
 ## Fuzzy grouping
 
@@ -120,29 +120,27 @@ To do the fuzzy grouping, you perform the same steps previously described in thi
 
 ![Fuzzy grouping check box in the Group by dialog box](images/me-fuzzy-grouping-button-group-by-window.png "Fuzzy grouping check box in the Group by dialog box")
 
-For each group of rows, Power Query will pick the most frequent instance as the "canonical" instance. If multiple instance occur with the same frequency, Power Query will pick the first one. After you select **OK** in the **Group by** dialog box, you'll get the result that you were expecting.
+For each group of rows, Power Query will pick the most frequent instance as the "canonical" instance. If multiple instances occur with the same frequency, Power Query will pick the first one. After you select **OK** in the **Group by** dialog box, you'll get the result that you were expecting.
 
-![Fuzzy grouping sample final table, no transform table](images/me-fuzzy-grouping-sample-final-table-no-transform-table.png "Fuzzy grouping sample final table, no transform table")
+![Fuzzy grouping sample final table, no transform table](images/me-fuzzy-grouping-sample-final-table-no-transform-table-2.png "Fuzzy grouping sample final table, no transform table")
 
 However, you have more control over the fuzzy grouping operation by expanding **Fuzzy group options**.
 
 ![Fuzzy group options](images/me-fuzzy-grouping-fuzzy-group-options.png "Fuzzy group options")
 
-:::image type="content" source="images/me-fuzzy-grouping-fuzzy-group-options.png" alt-text="Fuzzy group options":::
-
 The following options are available for fuzzy grouping:
 
-* **Similarity threshold (optional)**: This option indicates how similar two values must be to be grouped together. The minimum setting<!--Just to reduce the use of "value".--> of 0 will cause all values to be grouped together. The maximum setting of 1 will only allow values that match exactly to be grouped together. The default is 0.8.
+* **Similarity threshold (optional)**: This option indicates how similar two values must be to be grouped together. The minimum setting of 0 will cause all values to be grouped together. The maximum setting of 1 will only allow values that match exactly to be grouped together. The default is 0.8.
 * **Ignore case**: When comparing text strings, case will be ignored. This option is enabled by default.
 * **Group by combining text parts**: The algorithm will try to combine text parts (such as combining **Micro** and **soft** into **Microsoft**) to group values.
 * **Transformation table (optional)**: You can select a transformation table that will map values (such as mapping **MSFT** to **Microsoft**) to group them together.
 
-For this example, a transformation table will be used to demonstrate how values can be mapped. The transformation table must have two columns:<!--Edit assumes there must be exactly two.-->
+For this example, a transformation table will be used to demonstrate how values can be mapped. The transformation table has two columns:
 
 * **From**: The text string to look for in your table.
 * **To**: The text string to use to replace the text string in the **From** column.
 
-The following image shows the transformation table to create.<!--The reader has to create this table, right? The "table to be used" seems to imply that it already exists somewhere.-->
+The following image shows the transformation table used in this example.
 
 ![Table showing From values of mike and William, and To values of Miguel and Bill](images/me-fuzzy-grouping-sample-transformation-table.png "Table showing From values of mike and William, and To values of Miguel and Bill")
 
@@ -150,14 +148,14 @@ Return to the **Group by** dialog box, expand **Fuzzy group options**, and then 
 
 ![Fuzzy grouping sample transformation table drop-down menu](images/me-fuzzy-grouping-sample-transformation-table-window.png "Fuzzy grouping sample transformation table drop-down menu")
 
-After selecting your transformation table<!--Edit okay? It looks like the sample table shows up in the list, and I assume the reader has to select it? -->, select **OK**. The result of that operation will give you the result shown in the following image.
+After selecting your transformation table, select **OK**. The result of that operation will give you the result shown in the following image.
 
 ![Fuzzy grouping sample final table with transform table](images/me-fuzzy-grouping-sample-final-table.png "")
 
 In this example, the **Ignore case** option was enabled, so the values in the **From** column of the **Transformation table** will be used to look for the text string without considering the case of the string. This transformation operation occurs first, and then the fuzzy grouping operation is performed. 
 
 >[!NOTE]
->When grouping by multiple columns, the transformation table will perform the replace operation in all columns if replacing the value increases the similarity score.<!--I'm not sure how this affects the user. Do they need to do anything about it?-->
+>When grouping by multiple columns, the transformation table will perform the replace operation in all columns if replacing the value increases the similarity score.
 
 ### See also
 

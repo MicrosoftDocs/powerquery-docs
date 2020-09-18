@@ -11,9 +11,12 @@ ms.custom: edited
 
 # Left anti join
 
-One of the join kinds available in the **Merge** dialog box in Power Query, a *left anti join* brings only rows from the left table that don't have any matching rows from the right table. More information: [Merge operations overview](merge-queries-overview.md) 
+One of the join kinds available in the **Merge** dialog box in Power Query is a *left anti join*, which brings in only rows from the left table that don't have any matching rows from the right table. More information: [Merge operations overview](merge-queries-overview.md) 
 
 ![Sample left anti join](images/left-anti-join-operation.png "needs detailed alt text")
+<!-- Keep?
+>[!Note]
+>Samples used in this article are only to showcase the concepts. The concepts showcased here apply to all queries in Power Query. -->
 
 This article uses sample data to show how to do a merge operation with the left anti join. The sample source tables for this example are:
 
@@ -33,12 +36,15 @@ In this example, you'll merge both tables, with the **Sales** table as the left 
 
 The goal is to create a table like the following, where only the rows from the left table that don't match any from the right table are kept.
 
-*Table 1. Final table for the left anti join example*<br>
-![Left anti join final table](images/me-merge-operations-left-anti-final-table.png "needs detailed alt text")
+:::image type="complex" source="images/me-merge-operations-left-anti-final-table.png" alt-text="Left anti join final table":::
+   Left anti join final table with Date, CountryID, Units, and Country column headers, and three rows of data of which the values for the Country column are all null.
+:::image-end:::
+
+<!-- ![Left anti join final table with Date, CountryID, Units, and Country column headers, and three rows of data of which the values for the Country column are all null](images/me-merge-operations-left-anti-final-table.png "needs detailed alt text") -->
 <!--markdownlint-disable MD036-->
 **To perform a left anti join**
 <!--markdownlint-enable MD036-->
-1. Select the **Sales** query, and then select **Merge queries** to create a new step inside the sales query that will merge the **Sales** query with the **Countries** query.
+1. Select the **Sales** query, and then select **Merge queries**.
 2. In the **Merge** dialog box, under **Right table for merge**, select **Countries**.
 3. In the **Sales** table, select the **CountryID** column.
 4. In the **Countries** table, select the **id** column.
@@ -48,7 +54,7 @@ The goal is to create a table like the following, where only the rows from the l
 ![Merge dialog box for left anti join](images/me-merge-operations-left-anti-merge-window.png "needs detailed alt text?")
 
 >[!TIP]
->Take a closer look at the message at the bottom of the dialog box that reads "The selection excludes 1 of 4 rows from the first table." This is crucial to understanding the result that you get from this operation. 
+>Take a closer look at the message at the bottom of the dialog box that reads "The selection excludes 1 of 4 rows from the first table." This message is crucial to understanding the result that you get from this operation. 
 
 In the **Sales** table, you have a **CountryID** of 1 and 2, but neither of them are found in the **Countries** table. That's why the match only found one of four rows in the left (first) table.
 
@@ -58,7 +64,9 @@ From the newly created **Countries** column, expand the **Country** field. Don't
 
 ![Expand table column for Country](images/me-merge-operations-left-anti-expand-field.png "Expand table column for Country")
 
-After performing this operation, you'll create a table that looks like Table 1, shown earlier in this article. The newly expanded **Country** field doesn't have any values. That's because the left anti join doesn't bring any values from the right table&mdash;it only keeps rows from the left table.
-<!--
-![Left anti join final table](images/me-merge-operations-left-anti-final-table.png "Left anti join final table")
--->
+After performing this operation, you'll create a table that looks like the following image. The newly expanded **Country** field doesn't have any values. That's because the left anti join doesn't bring any values from the right table&mdash;it only keeps rows from the left table.
+
+:::image type="complex" source="images/me-merge-operations-left-anti-final-table-2.png" alt-text="Final table for left anti join":::
+   Final table with Date, CountryID, Units, and Country column headers, and three rows of data of which the values for the Country column are all null.
+:::image-end:::
+

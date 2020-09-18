@@ -32,7 +32,7 @@ The result of that operation will look like the following image.
 > [!NOTE]
 > Only the contents of the table will be transposed during the transpose operation; the column headers of the initial table will be lost.  The new columns will have the name **Column** followed by a sequential number.
 
-The headers you need in this example are in the first row of the table. To promote the first row to headers, select the table icon in the upper-left corner<!--Edit okay?--> of the data preview, and then select **Use first row as headers**.
+The headers you need in this example are in the first row of the table. To promote the first row to headers, select the table icon in the upper-left corner of the data preview, and then select **Use first row as headers**.
 
 ![Promote the first row to be table headers](images/me-transpose-promote-headers.png "Promote the first row to be table headers")
 
@@ -41,4 +41,4 @@ The result of that operation will give you the output that you're looking for.
 ![Sample output table](images/me-transpose-final-table.png "needs detailed alt text")
 
 >[!NOTE] 
->To learn more about the promote headers operation, also known as **Use first row as headers**, see [Promote or demote column headers](table-promote-demote-headers.md).
+>To learn more about the promote headers operation, also known as **Use first row as headers**, go to [Promote or demote column headers](table-promote-demote-headers.md).

@@ -11,7 +11,7 @@ ms.custom: edited
 
 # Left outer join
 <!--I think the structure of the join kind articles can be streamlined quite a bit. I'll follow this pattern for the others, but without all the editorial commentary.-->
-One of the join kinds available in the **Merge** dialog box in Power Query, a *left outer join* keeps all the rows from the left table and brings any matching rows from the right table. More information: [Merge operations overview](merge-queries-overview.md)
+One of the join kinds available in the **Merge** dialog box in Power Query is a *left outer join*, which keeps all the rows from the left table and brings in any matching rows from the right table. More information: [Merge operations overview](merge-queries-overview.md)
 
 ![Sample left outer join](images/left-outer-join-operation.png "needs detailed alt text")
 <!--I don't understand the intent of this note; recommend deleting.
@@ -34,14 +34,13 @@ In this example, you'll merge both tables, with the **Sales** table as the left 
 |-----------|------------------|
 |CountryID|id|
 
-The goal is to create a table like the following, where the name of the country appears as a new **Country** column in the **Sales** table as long as the **CountryID** exists in the **Countries** table. If there are no matches between the left and right tables, a *null* value is the result of the merge for that row. In Table 1, this is shown to be the case for **CountryID** 4, which was brought in from the **Sales** table. 
+The goal is to create a table like the following, where the name of the country appears as a new **Country** column in the **Sales** table as long as the **CountryID** exists in the **Countries** table. If there are no matches between the left and right tables, a *null* value is the result of the merge for that row. In the following image, this is shown to be the case for **CountryID** 4, which was brought in from the **Sales** table. 
 
-*Table 1. Final table for the left outer join example*<br>
-![Left outer join final table](images/me-merge-operations-left-outer-final-table.png "needs detailed alt text")
+![Left outer join final table with the Country column added with the value of the fourth row of that column set to null](images/me-merge-operations-left-outer-final-table.png "Left outer join final table with the Country column added with the value of the fourth row of that column set to null")
 <!--markdownlint-disable MD036-->
 **To perform a left outer join**
 <!--markdownlint-enable MD036-->
-1. Select the **Sales** query, and then select **Merge queries**.<!--Suggested. The original didn't seem prescriptive enough. In the middle of a numbered step is no place for all that commentary.-->
+1. Select the **Sales** query, and then select **Merge queries**.
 2. In the **Merge** dialog box, under **Right table for merge**, select **Countries**.
 3. In the **Sales** table, select the **CountryID** column.
 4. In the **Countries** table, select the **id** column.
@@ -54,6 +53,6 @@ From the newly created **Countries** column, expand the **Country** field. Don't
 
 ![Expand table column for Country](images/me-merge-operations-left-outer-expand-field.png "Expand table column for Country")
 
-After performing this operation, you'll create a table that looks like Table 1, shown earlier in this article.
-<!--
-![Left outer join final table](images/me-merge-operations-left-outer-final-table.png "Left outer join final table") -->
+After performing this operation, you'll create a table that looks like the following image.
+
+![Final table with the Country column added with the value of the fourth row of that column set to null](images/me-merge-operations-left-outer-final-table-2.png "Final table with the Country column added with the value of the fourth row of that column set to null")

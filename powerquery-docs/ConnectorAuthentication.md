@@ -20,7 +20,7 @@ Different connectors show different authentication methods. For example, the ODa
 
 ![OData Feed authentication method](media/connector-authentication/odata-authentication.png "OData Feed authentication method")
 
-If you're using a connector from an online app, such as the Power BI service or Power Apps, you'll see an authentication method dialog box for the OData Feed connector that looks something like the following image.<!--To be consistent.-->
+If you're using a connector from an online app, such as the Power BI service or Power Apps, you'll see an authentication method dialog box for the OData Feed connector that looks something like the following image.
 
 ![OData Feed online authentication method](media/connector-authentication/odata-online-authentication.png "OData Feed online authentication method")
 
@@ -32,16 +32,17 @@ In connectors that require you to enter a URL, you'll be asked to select the lev
 
 ![Default level setting](media/connector-authentication/url-level-setting.png "Default level setting")
 
-The level you select for the authentication method you chose for this connector determines what part of a URL will have the authentication method applied to it. If you select the top-level web address, the authentication method you select for this connector will be used for that URL address<!--"URL address" seems redundant. --> or any subaddress<!--Via AH dictionary.--> within that address.
+The level you select for the authentication method you chose for this connector determines what part of a URL will have the authentication method applied to it. If you select the top-level web address, the authentication method you select for this connector will be used for that URL address or any subaddress within that address.
 
-However, you might not want to set the top URL address<!--Or should this be "top-level address"?--> to a specific authentication method because different subaddresses can require different authentication methods. One example might be if you were accessing two separate folders of a single SharePoint site and wanted to use different Microsoft accounts to access each one.
+However, you might not want to set the top-level address to a specific authentication method because different subaddresses can require different authentication methods. One example might be if you were accessing two separate folders of a single SharePoint site and wanted to use different Microsoft accounts to access each one.
 
-After you've set the authentication method for a connector's specific website address<!--How is this different from "address"?-->, you won't need to select the authentication method for that connector using that URL address or any sub-address again. For example, let's say you select the `https://contoso.com/` address as the level you want the Web connector URL settings to apply to. Whenever you use a Web connector to access any webpage that begins with this address, you won't be required to select the authentication method again.
+
+After you've set the authentication method for a connector's specific website address<!--How is this different from "address"?-->, you won't need to select the authentication method for that connector using that URL address or any subaddress again. For example, let's say you select the `https://contoso.com/` address as the level you want the Web connector URL settings to apply to. Whenever you use a [Web connector](connectors/web.md) to access any webpage that begins with this address, you won't be required to select the authentication method again.
 
 ## Change the authentication method
 
 In some cases, you might need to change the authentication method you use in a connector to access a specific data source.
-<!--Suggest pulling these into separate procedures.-->
+
 **To edit the authentication method in Power BI Desktop or Excel**
 
 1. Do one of the following:
@@ -54,7 +55,7 @@ In some cases, you might need to change the authentication method you use in a c
 
         ![Excel data source settings](media/connector-authentication/excel-edit.png "Excel data source settings")
 
-2. In the **Data source settings** dialog box, select **Global permissions**, choose the website where you want to change the permission setting<!--Edit okay?-->, and then select **Edit Permissions**.
+2. In the **Data source settings** dialog box, select **Global permissions**, choose the website where you want to change the permission setting, and then select **Edit Permissions**.
 
 3. In the **Edit Permissions** dialog box, under **Credentials**, select **Edit**. 
 

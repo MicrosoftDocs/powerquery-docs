@@ -26,9 +26,9 @@ The results of that survey are shown in the following image.
 
 ![Sample survey with raw entries](images/me-merge-fuzzy-matching-sample-table.png "needs detailed alt text")
 
-The nine records reflect the survey submissions. Take a closer look at the values provided: some have typos, some are plural, some are singular, some are uppercase, and some are lowercase.
+The nine records reflect the survey submissions. The problem with the survey submissions is that some have typos, some are plural, some are singular, some are uppercase, and some are lowercase.
 
-We have a **Fruits** reference table, which will help us<!--Edit okay?--> standardize these values.
+To help standardize these values, in this example you have a **Fruits** reference table.
 
 ![Fruits reference table](images/me-merge-fuzzy-matching-sample-reference-table.png "needs detailed alt text")
 
@@ -37,8 +37,14 @@ We have a **Fruits** reference table, which will help us<!--Edit okay?--> standa
 
 The goal is to create a table like the following, where you've standardized all these values so you can do more analysis.
 
-*Table 1. Final table for the fuzzy merge example*<br>
-![Sample output table](images/me-merge-fuzzy-matching-sample-output-table.png "needs detailed alt text")
+<a id="fuzzy-matching-sample-output"></a>
+
+:::image type="complex" source="images/me-merge-fuzzy-matching-sample-output-table.png" alt-text="Sample survey output table":::
+   Sample survey output table with the Question column containing the column distribution graph showing nine distict answers with all answers unique, and the answers to the survey with all the typos, plural or singular, and case problems, and also contains the Fruit column containing the column distribution graph showing four distinct answers with one unique answer and lists all of the fruits properly spelled, singular, and proper case.
+:::image-end:::
+
+<!--
+![Sample output table](images/me-merge-fuzzy-matching-sample-output-table.png "needs detailed alt text") -->
 
 ## Fuzzy merge
 
@@ -65,7 +71,7 @@ The available options are:
 * **Transformation table (optional)**: Allows matching records based on custom value mappings. For example, **Grapes** is matched with **Raisins** if a transformation table is provided where the **From** column contains **Grapes** and the **To** column contains **Raisins**.
 
 ## Transformation table
-<!--In the screenshot, it looks like the name of the transformation table is **Transform Table**. Where is the transformation table created and saved? If its name is **Transform Table**, should that be the name of this heading?-->
+
 For the example in this article, you can use a transformation table to map the value that has a missing pair. That value is **apls**, which needs to be mapped to **Apple**. Your transformation table has two columns:
 
 * **From** contains the values to find.
@@ -77,11 +83,11 @@ For this article, the transformation table will look as follows:
 |---|---|
 |apls|Apple|
 
-You can go back to the **Merge** dialog box, and in **Fuzzy matching options** under **Number of matches (optional)**, enter **1**, and under **Transformation table (optional)**, select **Transform Table** from the drop-down menu.<!--Edits okay? I wasn't sure what was UI and what is to be entered by the user. -->
+You can go back to the **Merge** dialog box, and in **Fuzzy matching options** under **Number of matches (optional)**, enter **1**, and under **Transformation table (optional)**, select **Transform Table** from the drop-down menu.
 
 ![Fuzzy merge with transformation table](images/me-merge-fuzzy-matching-custom-merge-window.png "needs detailed alt text")
 
-After you select **OK**, you'll create a table that looks like Table 1, with all values mapped correctly. Note how the example started with nine distinct values, but after the fuzzy merge, there are only four distinct values.
+After you select **OK**, you'll create a table that looks like the [merge fuzzy matching sample output table](#fuzzy-matching-sample-output), with all values mapped correctly. Note how the example started with nine distinct values, but after the fuzzy merge, there are only four distinct values.
 <!--
 ![Sample output table](images/me-merge-fuzzy-matching-sample-output-table.png "Sample output table")
 -->

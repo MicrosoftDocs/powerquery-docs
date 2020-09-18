@@ -1,6 +1,6 @@
 ---
 title: Fill values in a column
-description: With Power Query, you can use the values in a column to fill down or fill up any empty spaces in of the column. This article demonstrates how to perform these transformations in Power Query.
+description: With Power Query, you can use the values in a column to fill down or fill up any empty spaces in the column. This article demonstrates how to perform these transformations in Power Query.
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: v-douklo
@@ -13,11 +13,11 @@ ms.custom: edited
 
 You can use fill up and fill down to replace null values with the last non-empty value in a column. For example, imagine the following table where you'd like to fill down in the **Date** column and fill up in the **Comments** column.
 
-![Sample source table](images/me-fill-down-up-final-source.png "needs detailed alt text")
+![Source table with null cells in the Date, Units, and Total columns and empty cells in the Item, Unit Price, and Comments columns](images/me-fill-down-up-final-source.png "Source table with null and empty cells")
 
 The outcome that you'd expect is shown in the following image.
 
-![Sample output table](images/me-fill-down-up-final-table.png "needs detailed alt text")
+![Output table that no longer contains any null or empty cells, and the comment column renamed to Sales Person](images/me-fill-down-up-final-table.png "Output table that no longer contains any null or empty cells, and the comment column renamed to Sales Person")
 
 ## Fill down
 
@@ -29,13 +29,13 @@ In the following example, you want to fill down on the **Date** column. To do th
 
 The result of that operation will look like the following image.
 
-![Sample table after performing the fill down operation](images/me-fill-down-up-date-filled-down.png "Sample table after performing the fill down operation")
+![Sample table after performing the fill down operation with null cells below the two original date values now filled with the dates](images/me-fill-down-up-date-filled-down.png "Sample table after performing the fill down operation")
 
 ## Fill up
 
 In the same way as the fill down operation, fill up works on a column. But by contrast, fill up finds the last value of the column and fills any null values in the previous rows until it finds a new value. Then the same process occurs for that value. This process continues until there are no more values in that column.
 
-In the following example, you want to fill the **Comments** column from the bottom up. You'll notice that your **Comments** column doesn't have null values, instead it has what appears to be empty cells. Before you can do the fill up operation, you need to transform those empty cells into null values: select the column, go to the **Transform** tab, and then select **Replace values**.
+In the following example, you want to fill the **Comments** column from the bottom up. You'll notice that your **Comments** column doesn't have null values. Instead it has what appears to be empty cells. Before you can do the fill up operation, you need to transform those empty cells into null values: select the column, go to the **Transform** tab, and then select **Replace values**.
 
 ![Replace values button on the Transform tab](images/me-fill-down-up-replace-values.png "Replace values button on the Transform tab")
 
@@ -43,10 +43,7 @@ In the **Replace values** dialog box, leave **Value to find** blank. For **Repla
 
 ![Replace values dialog box](images/me-fill-down-up-replace-values-window.png "Replace values dialog box")
 
-<!--note from editor: You don't want to devote an entire Note to a "see also"-type link. It should either just be "More information: ~file name~" or put into a See also block at the end of the article, which I've done here.-->
-<!--
->>[!NOTE] 
->To learn more about replace values operation see [Replace values](replace-values.md).-->
+More information: [Replace values](replace-values.md)
 
 After all empty cells are replaced with **null**, select the **Comments** column, go to the **Transform** tab, and then select **Fill** > **Up**.
 
@@ -54,7 +51,7 @@ After all empty cells are replaced with **null**, select the **Comments** column
 
 The result of that operation will look like the following image.
 
-![Sample table after performing the fill up operation](images/me-fill-down-up-fill-up-final.png "needs detailed alt text")
+![Sample table after performing the fill up operation with null cells above the two original comment values now filled with comments](images/me-fill-down-up-fill-up-final.png "Sample table after performing the fill up operation")
 
 ## Cleaning up your table
 
@@ -68,11 +65,11 @@ The result of that operation will look like the following image.
 
 3. Remove the **Sales Person:** values from the **Sales Person** column so you only get the names of the salespeople.
 
-   ![Replaced text string inside Sales Person column](images/me-fill-down-up-replace-sales-person.png "needs detailed alt text")
+   ![Using the Replace values operation to replace the Sales Person: text string inside Sales Person column with a blank](images/me-fill-down-up-replace-sales-person.png "Using the Replace values operation to replace the Sales Person: text string inside Sales Person column with a blank")
 
 Now you should have exactly the table you were looking for.
 
-![Sample output table](images/me-fill-down-up-final-table.png "needs detailed alt text")
+![Sample output table with the Sales Person: text string removed from each cell of the Sales Person column](images/me-fill-down-up-final-table.png "Sample output table with the Sales Person: text string removed from each cell of the Sales Person column")
 
 ### See also
 

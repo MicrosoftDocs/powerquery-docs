@@ -13,14 +13,14 @@ ms.custom: edited
 
 Data types in Power Query are used to classify content to have a more structured dataset. A data type is said to ***conform*** to that data type.<!--What does this mean?-->
 
-The data type of a column is displayed on the left side of the column heading<!--Please see note about "header" versus "heading" in table-promote-demote-headers.md--> with an icon that symbolizes the data type.
+The data type of a column is displayed on the left side of the column heading with an icon that symbolizes the data type.
 
-![Common data types icon in the data preview pane](images/me-data-types-icons.png "needs detailed alt text")
+![Shows common data type icons displayed on the left side of the table column heading in the data preview pane](images/me-data-types-icons.png "Common data type icons in the data preview pane")
 
 >[!NOTE]
 >Power Query provides a set of contextual transformations and options based on the data type of the column. For example, when you select a column with a data type of Date, you get transformations and options that apply to that specific data type. These transformations and options occur throughout the Power Query interface, such as on the **Transform** and **Add column** tabs and the smart filter options. 
 
-The most common<!--So this isn't the complete list? If not, can we link to it?--> data types used in Power Query are listed in the following table.
+The most common data types used in Power Query are listed in the following table. Although beyond the scope of this article, you can find the complete list of data types in the Power Query M formula language [Types article](https://docs.microsoft.com/powerquery-m/m-spec-types).
 
 |Data type | Icon | Description|
 ----------|------|------------|
@@ -33,7 +33,7 @@ The most common<!--So this isn't the complete list? If not, can we link to it?--
 |**Date/Time** |  ![Date/Time](images/DateTime_20.png) |Represents both a date and time value. Underneath the covers, the Date/Time value is stored as a Decimal Number type, so you can actually convert between the two. The time portion of a date is stored as a fraction to whole multiples of 1/300 seconds (3.33 ms). Dates between the years 1900 and 9999 are supported.|
 |**Date** | ![Date](images/Date_20.png) | Represents just a date (no time portion). When converted into the model, a Date is the same as a Date/Time value with zero for the fractional value.|
 |**Time**| ![Time](images/Time_20.png)  |Represents just time (no date portion). When converted into the model, a Time value is the same as a Date/Time value with no digits to the left of the decimal place.|
-|**Date/Time/Timezone**<!--Screenshot says "Zone" not "Timezone." Is that okay?--> | ![Date/Time/Timezone](images/DateTimeZone_20.png) |Represents a UTC Date/Time with a time-zone offset. It's converted into Date/Time when loaded into the model.| 
+|**Date/Time/Timezone** | ![Date/Time/Timezone](images/DateTimeZone_20.png) |Represents a UTC Date/Time with a time-zone offset. It's converted into Date/Time when loaded into the model.| 
 |**Duration**| ![Duration](images/Duration_20.png) | Represents a length of time, which is converted into a Decimal Number type when loaded into the model. As a Decimal Number type, it can be added or subtracted from a Date/Time field with correct results. Because it's a Decimal Number type, you can easily use it in visualizations that show magnitude.|
 |**Binary**| ![Binary](images/Binary_20.png) |The Binary data type can be used to represent any other data with a binary format.|
 |**Any**| ![Any](images/AnyType_20.png)|The Any data type is the status given to a column that doesn't have an explicit data type definition. Any is the data type that classifies all values.<!--What does this mean?--> We recommend that you always explicitly define the column data types for your queries from unstructured sources, and avoid having any columns with the Any data type as the output of your query.|
@@ -71,7 +71,7 @@ You can define or change the data type of a column in any of four places:
 
    ![Change type command on the column shortcut menu](images/me-data-types-right-click.png "Change type command on the column shortcut menu]")
 
-### Automatic detection of column data type and headers detection
+### Automatic detection of column data type and headers
 
 This setting is specifically for unstructured sources. It helps you by automatically inspecting and detecting column types and headers based on the first 200 rows of your table. When this setting is enabled, Power Query automatically adds two steps to your query:
 
@@ -82,13 +82,13 @@ By default, this setting is enabled. To disable or enable this setting, follow t
 <!--markdownlint-disable MD036-->
 **To configure automatic data type detection in Power Query Online**
 
-Go to **Home** > **Options**<!--Should this be "On the **Home** tab, select **Options**?-->, and then select **Project options**. In the **Project options** window, select the **Automatically detect column types and headers for unstructured sources** check box.
+On the **Home** tab, select **Options**, and then select **Project options**. In the **Project options** window, select the **Automatically detect column types and headers for unstructured sources** check box.
 
    ![Automatically detect data type option in project options](images/me-data-types-project-options-auto-detect.png "Automatically detect data type option in project options")
 
 **To configure automatic data type detection in Power Query for Desktop**
 
-You can define this behavior both at the global and per-file level in the **Options** window.<!--Can you say how to open this window? It doesn't look like you can get to it via a tab on the ribbon. For me, it required selecting **File**.-->
+You can define this behavior both at the global and per-file level in the **Options** window (in the Power Query Editor, on the **File** tab, select **Options and settings** > **Options**).
 
 * **Global**: On the left pane under **Global**, select **Data load**. On the right pane under **Type detection**, you can select any of three type detection configurations that will be applied to every new file created in your application:
 
@@ -145,9 +145,9 @@ Using this locale, Power Query will be able to interpret values correctly and co
 
 **To verify final date values**
 
-The formatting of the values is driven by the globalization value<!--Shouldn't this just be "locale"? You haven't talked about a globalization value separate from locale.-->. If you have any doubts about the value displayed by Power Query, you can verify the conversion of date values by adding new columns for the day, month, and year from the value. To do this, select the **Date** column and go to the **Add column** tab on the ribbon. In the **Date and time column** group, you'll see the options for a date column.<!--Please check the following alt text, not sure it's correct.-->
+The formatting of the values is driven by the globalization value<!--Shouldn't this just be "locale"? You haven't talked about a globalization value separate from locale.-->. If you have any doubts about the value displayed by Power Query, you can verify the conversion of date values by adding new columns for the day, month, and year from the value. To do this, select the **Date** column and go to the **Add column** tab on the ribbon. In the **Date and time column** group, you'll see the options for a date column.
 
-![Add portions of date values](images/me-data-types-power-query-add-column-date.png "Add portions of date values")
+![Selecting portions of the date column value to be placed in a new column](images/me-data-types-power-query-add-column-date.png "Selecting portions of the date column value to be placed in a new column")
 
 From here, you can extract parts of the date value, such as the year number, the month number, the day number, or even more columns extracted from the **Date** column.
 
@@ -157,7 +157,7 @@ By using these columns, you can verify that your date value has been converted c
 
 ## Data type conversion matrix
 
-The following matrix is designed to give you a quick look at the feasibility of data type conversion of a value from one data type to another.<!--I realize we're not supposed to put dashes in empty cells, but in this case I think it helps. Otherwise the blanks look like a mistake.-->
+The following matrix is designed to give you a quick look at the feasibility of data type conversion of a value from one data type to another.
 
 | Data Types         | ![Decimal number](images/Number_20.png) | ![Currency](images/Currency_20.png) | ![Whole number](images/WholeNumber_20.png) | ![Percentage](images/Percentage_20.png) | ![Date/Time](images/DateTime_20.png) | ![Date](images/Date_20.png) | ![Time](images/Time_20.png) | ![Date/Time/Timezone](images/DateTimeZone_20.png) | ![Duration](images/Duration_20.png) | ![Text](images/Text_20.png) | ![True/False](images/Logical_20.png) |
 |--------------------|----------------|----------|--------------|------------|-----------|------|------|--------------------|----------|------|------------|

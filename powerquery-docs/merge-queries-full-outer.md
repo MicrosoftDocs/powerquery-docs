@@ -11,9 +11,13 @@ ms.custom: edited
 
 # Full outer join
 <!--Please see the editor's notes in merge-queries-left-outer.md-->
-One of the join kinds available in the **Merge** dialog box in Power Query, a *full outer join* brings in all the rows from both the left and right tables. More information: [Merge operations overview](merge-queries-overview.md)
+One of the join kinds available in the **Merge** dialog box in Power Query is a *full outer join*, which brings in all the rows from both the left and right tables. More information: [Merge operations overview](merge-queries-overview.md)
 
-![Sample full outer join](images/full-outer-join-operation.png "needs detailed alt text")
+![Sample full outer join ](images/full-outer-join-operation.png "needs detailed alt text")
+
+<!-- Keep?
+>[!Note]
+>Samples used in this article are only to showcase the concepts. The concepts showcased here apply to all queries in Power Query. -->
 
 This article uses sample data to show how to do a merge operation with the full outer join. The sample source tables for this example are:
 
@@ -33,8 +37,13 @@ In this example, you'll merge both tables, with the **Sales** table as the left 
 
 The goal is to create a table like the following, where the name of the country appears as a new **Country** column in the **Sales** table. Because of how the full outer join works, all rows from both the left and right tables will be brought in, regardless of whether they only appear in one of the tables.
 
-*Table 1. Final table for the full outer join example*<br>
-![Full outer join final table](images/me-merge-operations-full-outer-final-table.png "needs detailed alt text")
+<a id="final-table-full-outer"></a>
+
+:::image type="complex" source="images/me-merge-operations-full-outer-final-table.png" alt-text="Full outer join final table":::
+   Full outer join final table with a Date column set to the Date data type, a CountryID column set to the Text data type, a Units column set to the Number data type, and a Country column set to the Text data type, along with five rows of data in which the fifth row contains null in the Date, CountryID, and Units columns.
+:::image-end:::
+
+<!-- ![Full outer join final table](images/me-merge-operations-full-outer-final-table.png "needs detailed alt text") -->
 <!--markdownlint-disable MD036-->
 **To perform a full outer join**
 <!--markdownlint-enable MD036-->
@@ -48,7 +57,7 @@ The goal is to create a table like the following, where the name of the country 
 ![Merge dialog box for full outer join](images/me-merge-operations-full-outer-merge-window.png "needs detailed alt text?")
 
 >[!TIP]
->Take a closer look at the message at the bottom of the dialog box that reads "The selection matches 4 of 4 rows from the first table, and 3 of 4 rows from the second table." This is crucial for understanding the result that you get from this operation.
+>Take a closer look at the message at the bottom of the dialog box that reads "The selection matches 4 of 4 rows from the first table, and 3 of 4 rows from the second table." This message is crucial for understanding the result that you get from this operation.
 
 In the **Countries** table, you have the **Country** Spain with **id** of 4, but there are no records for **CountryID** 4 in the **Sales** table. That's why only three of four rows from the right table found a match. All rows from the right table that didn't have matching rows from the left table will be grouped and shown in a new row in the output table with no values for the fields from the left table.
 
@@ -58,7 +67,7 @@ From the newly created **Countries** column after the merge operation, expand th
 
 ![Expand table column for Country](images/me-merge-operations-full-outer-expand-field.png "Expand table column for Country")
 
-After performing this operation, you'll create a table that looks like Table 1, shown earlier in this article.
+After performing this operation, you'll create a table that looks like [final table](#final-table-full-outer), shown earlier in this article.
 <!--
 ![Full outer join final table](images/me-merge-operations-full-outer-final-table.png "Full outer join final table")
 -->

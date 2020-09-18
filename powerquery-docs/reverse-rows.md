@@ -10,7 +10,7 @@ ms.custom: edited
 ---
 
 # Reverse rows
-<!--If there's no use case where this command will be useful, is there any reason to have this article? Our content isn't meant just to describe the UI, it should be useful and task-oriented.-->
+
 With Power Query, it's possible to reverse the order of rows in a table. 
 
 Imagine a table with two columns, **ID** and **Country**, as shown in the following image.

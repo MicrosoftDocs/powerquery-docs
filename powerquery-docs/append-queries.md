@@ -11,9 +11,9 @@ ms.custom: edited
 
 # Append data
 <!--Is it okay to have the title diverge from the command name and TOC? Maybe it could be called "Append queries" and then early in the article you could bring up that tables are also (sometimes) called queries? I know I find this easy to forget, maybe some readers will too.-->
-The append operation creates a single table by adding the contents of one table (or more than one table)<!--Edit okay?--> to another, and aggregates the column headers from the tables to create the schema for the new table.<!--Edit okay? I wasn't sure what "will have a new table schema defined" meant.-->
+The append operation creates a single table by adding the contents of one or more tables to another, and aggregates the column headers from the tables to create the schema for the new table.<!--Edit okay? I wasn't sure what "will have a new table schema defined" meant.-->
 
-![Append operation sample diagram](images/append-queries-diagram.png "needs detailed alt text")
+![Diagram showing the result of an append operation with null values in columns that don’t exist in one of the original tables.](images/append-queries-diagram.png "Append operation sample diagram")
 
 >[!NOTE]
 >When tables that don't have the same column headers are appended, all column headers from all tables are appended to the resulting table. If one of the appended tables doesn't have a column header from other tables, the resulting table shows *null* values in the respective column, as shown in the previous image in columns C and D.
@@ -39,11 +39,11 @@ For the example in this article, we'll use the following two tables with sample 
 
 * **Online Sales**: Sales made through an online channel.
 
-    ![Sample online sales table](images/me-append-queries-sample-online-sales.png "needs detailed alt text")
+    ![Sample online sales table with channel name (online), date, customer ID, and units columns](images/me-append-queries-sample-online-sales.png "Sample online sales table")
 
 * **Store Sales**: Sales made through the company's physical locations.
 
-    ![Sample store sales table](images/me-append-queries-sample-store-sales.png "needs detailed alt text")
+    ![Sample store sales table with date, units, referer, customer ID, and channel name (store) columns](images/me-append-queries-sample-store-sales.png "Sample store sales table")
 
 To append these tables, first select the **Online Sales** table. On the **Home** tab, select **Append queries**, which creates a new step in the **Online Sales** query. The **Online Sales** table will be the primary table. The table to append to the primary table will be **Store Sales**.
 
@@ -53,18 +53,18 @@ Power Query performs the append operation based on the names of the column heade
 
 In the event that one table doesn't have columns found in another table, *null* values will appear in the corresponding column, as shown in the **Referer** column of the final query.
 
-![Output from append two tables operation](images/me-append-queries-sample-two-tables-output.png "needs detailed alt text")
+![Table with combined common columns and data, except for the Referer column which contains null values for the online sales rows](images/me-append-queries-sample-two-tables-output.png "Output from append two tables operation")
 
 ## Append three or more tables
 
 In this example, you want to append not only the **Online Sales** and **Store Sales** tables, but also a new table named **Wholesale Sales**.
 
-![Sample wholesale sales table](images/me-append-queries-sample-wholesale-sales.png "needs detailed alt text")
+![Sample wholesale sales table with channel name (wholesale), date, customer ID, and units columns](images/me-append-queries-sample-wholesale-sales.png "Sample wholesale sales table")
 
-The new approach for this example is to select **Append queries as new**, and then in the **Append** dialog box, select the **Three or more tables** option button. In the **Available table(s)** list, select each table you want to append, and then select **Add**. After all the tables you want appear in the **Tables to append** list, select **OK**.<!--Edits okay?-->
+The new approach for this example is to select **Append queries as new**, and then in the **Append** dialog box, select the **Three or more tables** option button. In the **Available table(s)** list, select each table you want to append, and then select **Add**. After all the tables you want appear in the **Tables to append** list, select **OK**.
 
 ![Three or more tables mode](images/me-append-queries-sample-three-more-tables-window.png "Three or more tables mode")
 
 After selecting **OK**, a new query will be created with all your tables appended.
 
-![Three or more tables sample append output](images/me-append-queries-sample-three-more-tables-output.png "needs detailed alt text")
+![Table with combined common columns and data from the three tables, except null values in the online and wholesale rows of the Referer column](images/me-append-queries-sample-three-more-tables-output.png "Three or more tables sample append output")

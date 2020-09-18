@@ -14,7 +14,7 @@ ms.custom: edited
 A merge operation joins two existing tables together based on matching values from one or multiple columns. You can choose to use different types of joins, depending on the output you want.
 
 ![Merge operation diagram overview](images/merge-operation-diagram-overview.png "needs detailed alt text")
-<!--As noted elsewhere, procedure headings don't quite work as H2s. The H3s in this section are sort of like steps in a mega-procedure, so I suggest adding an H3 (line 27) and rewording another so it looks more like a step.-->
+
 ## Merging queries
 
 You can find the **Merge queries** command on the **Home** tab, in the **Combine** group. From the drop-down menu, you'll see two options:
@@ -25,7 +25,7 @@ You can find the **Merge queries** command on the **Home** tab, in the **Combine
 ![Merge queries commands](images/me-merge-operations-overview-merge-icons.png "Merge queries commands")
 
 ### Identify tables for merging
-<!--Suggested.-->
+
 The merge operation requires two tables:
 
 * **Left table for merge**: The first selection, from top to bottom.<!--Does this mean "The first table you select, with all rows selected."?-->
@@ -54,12 +54,12 @@ You can also select multiple columns to perform the join by selecting **Ctrl** a
 
 For this example, you have the **Sales** and **Countries** tables. Each of the tables has **CountryID** and **StateID** columns, which you need to pair for the join between both columns. 
 
-First select the **CountryID** column in the **Sales** table, select **Ctrl**, and then select the **StateID** column. (This will show the small numbers in the column headings.) Next, perform the same selections<!--Suggested.--> in the **Countries** table. The following image shows the result of selecting those columns.
+First select the **CountryID** column in the **Sales** table, select **Ctrl**, and then select the **StateID** column. (This will show the small numbers in the column headings.) Next, perform the same selections in the **Countries** table. The following image shows the result of selecting those columns.
 
 ![Merge queries using multiple columns](images/me-merge-operations-overview-merge-window-multiple-columns-sample.png "needs detailed alt text")
 
-### Expand the new merged table column
-<!--Suggested, so this heading will start with a verb. Should it be "Expand or aggregate...", even if aggregate isn't available everywhere?-->
+### Expand or aggregate the new merged table column
+
 After selecting **OK** in the **Merge** dialog box, the base table of your query will have all the columns from your left table. Also, a new column will be added with the same name as your right table. This column holds the values corresponding to the right table on a row-by-row basis.
 
 From here, you can choose to expand or aggregate the fields from this new table column, which will be the fields from your right table.

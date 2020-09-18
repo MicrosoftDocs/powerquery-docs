@@ -11,11 +11,11 @@ ms.custom: edited
 
 # Add a custom column
 
-If you need more flexibility for adding new columns than the ones provided out of the box in Power Query, you can create your own custom column by using the Power Query M formula language.<!--Marketese isn't appropriate here. Also, this was a dangling modifier. -->
+If you need more flexibility for adding new columns than the ones provided out of the box in Power Query, you can create your own custom column by using the Power Query M formula language.
 
 Imagine that you have a table with the following set of columns.
 
-![Sample initial table](images/me-add-custom-column-initial-table.png "needs detailed alt text")
+![Sample initial table with Date, Country, Units, Unit Price and percent discount columns](images/me-add-custom-column-initial-table.png "Sample initial table")
 
 Using the **Units**, **Unit Price**, and **Discount** columns, you'd like to create two new columns:
 
@@ -24,8 +24,7 @@ Using the **Units**, **Unit Price**, and **Discount** columns, you'd like to cre
 
 The goal is to create a table with new columns that looks like the following image.
 
-*Table 1. Final table for adding a custom column example*
-![Sample final table](images/me-add-custom-column-final-table.png "needs detailed alt text")
+![Create custom Total Sale before Discount and Total Sale after Discount columns in a table](images/me-add-custom-column-example-table.png "Create custom columns in a table")
 
 ## Create a custom column
 
@@ -33,7 +32,7 @@ On the **Add column** tab, select **Custom column**.
 
 ![Custom column command on the Add column tab](images/me-add-custom-column-icon.png "Custom column command on the Add column tab")
 
-The **Custom column** dialog box appears.<!--Edit okay? This seems to be the name in the screenshot.--> This is where you define the formula to create your column.
+The **Custom column** dialog box appears. This is where you define the formula to create your column.
 
 ![Custom column dialog box](images/me-add-custom-column-window.png "Custom column dialog box")
 
@@ -50,39 +49,39 @@ To add a new custom column, select a column from the **Available columns** list 
 >[!NOTE]
 >If there's a syntax error when creating your custom column, you'll see a yellow warning icon, along with an error message and reason.
 
-### Adding the Total Sales before Discount column
+### Adding the Total Sale before Discount column
 
-The formula that you can use to create the **Total Sales before Discount** column is `[Units] * [Unit Price]`. The following image shows how it will look in the **Custom column** dialog box.<!--Can you fix the screenshot so it says plural "Total Sales before Discount"? Here and in me-add-custom-column-total-sale-before-discount-column.png.-->
+The formula that you can use to create the **Total Sale before Discount** column is `[Units] * [Unit Price]`. The following image shows how it will look in the **Custom column** dialog box.
 
-![Custom column formula for Total Sales before Discount](images/me-add-custom-column-total-sale-before-discount.png "Custom column formula for Total Sales before Discount")
+![Custom column formula for Total Sale before Discount](images/me-add-custom-column-total-sale-before-discount.png "Custom column formula for Total Sale before Discount")
 
-The result of that operation will add a new **Total Sales before Discount** column to your table and will look like the following image.
+The result of that operation will add a new **Total Sale before Discount** column to your table and will look like the following image.
 
-![Table with new custom column called Total Sales before Discount](images/me-add-custom-column-total-sale-before-discount-column.png "needs detailed alt text")
+![Table with new custom column called Total Sale before Discount showing the price without the discount](images/me-add-custom-column-total-sale-before-discount-column.png "Table with new Total Sale before Discount custom column")
 
-### Adding the Total Sales after Discount column
+### Adding the Total Sale after Discount column
 
-The formula that you can use to create the **Total Sales before Discount** is `[Total Sales before Discount]* (1-[Discount]) `. The following image shows how it will look in your **Custom column** dialog box.
+The formula that you can use to create the **Total Sale before Discount** is `[Total Sale before Discount]* (1-[Discount]) `. The following image shows how it will look in your **Custom column** dialog box.
 
-![Custom column formula for Total Sales after Discount](images/me-add-custom-column-total-sale-after-discount.png "Custom column formula for Total Sales after Discount")
+![Custom column formula for Total Sale after Discount](images/me-add-custom-column-total-sale-after-discount.png "Custom column formula for Total Sale after Discount")
 
-The result of that operation will add a new **Total Sales after Discount** column to your table and will look like the following image.
+The result of that operation will add a new **Total Sale after Discount** column to your table and will look like the following image.
 
-![Table with new custom column called Total Sales after Discount](images/me-add-custom-column-total-sale-after-discount-column.png "needs detailed alt text")
+![Table with new custom column called Total Sale after Discount showing the price with the discount applied](images/me-add-custom-column-total-sale-after-discount-column.png "Table with new Total Sale after Discount custom column")
 
 ### Setting the column data types
 
 Notice that your new columns don't have a data type defined yet. You can tell this by looking at the icon in the header of the column that has the data type icon (ABC123). You'll want to change the data types of both new columns to Currency. 
 
-1. Select both the **Total Sales before Discount** and **Total Sales after Discount** columns.
+1. Select both the **Total Sale before Discount** and **Total Sale after Discount** columns.
 
 2. On the **Home** tab, in the **Transform** group, select **Data type** > **Currency**.
 
 ![Data types on the Home tab](images/me-add-custom-column-data-types.png "Data types on the Home tab")
 
-After defining the data types for both columns, you'll create a table that looks like Table 1, shown earlier in this article.
-<!--
-![Sample final table](images/me-add-custom-column-final-table.png "Sample final table") -->
+After defining the data types for both columns, you'll create a table that looks like the following image.
+
+![Sample final table](images/me-add-custom-column-final-table.png "Sample final table")
 
 ## Modify an existing custom column
 

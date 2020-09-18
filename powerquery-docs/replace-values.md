@@ -11,9 +11,9 @@ ms.custom: edited
 
 # Replace values and errors
 
-With Power Query, you can replace one value with another value in a column. The **Replace values** command can be found:
+With Power Query, you can replace one value with another value wherever that value is found in a column. The **Replace values** command can be found:
 
-- On the cell shortcut menu. Right-click the cell to replace the selected value in the column<!--Shouldn't this be "cell"?--> with another value. 
+- On the cell shortcut menu. Right-click the cell to replace the selected value in the column with another value. 
 
    ![Shortcut menu for replacing the selected value](images/me-replace-values-right-click.png "Shortcut menu for replacing the selected value")
 
@@ -35,19 +35,17 @@ The replace values operation has two modes:
 - **Replace entire cell contents**: This is the default behavior for non-text columns, where Power Query searches for and replaces the full contents of a cell. You can enable this mode for text columns by selecting **Advanced options**, and then selecting the **Match entire cell contents** check box.
 - **Replace instances of a text string**: This is the default behavior for text columns, where Power Query will search for a specific text string in all rows of a column and replace as many instances of the text string that it finds.
 
-<!--These next lines seem like a red herring. It looks like they're here just to fully describe the UI, they don't fit in to this example at all. Suggest either incorporating this setting into the story, or deleting.
-
 Advanced options are only available in columns of the Text data type. Within that set of options is the **Replace using special characters** option.
 
 ![Replace using special characters option](images/me-replace-values-replace-using-special-characters.png "Replace using special characters option")
--->
+
 ## Replace entire cell contents
 
 Imagine a table like the following, where you have columns for **Account ID**, **Category Name**, and **Sales Goal**.
 
 ![Initial sample table](images/me-replace-values-original-table.png "needs detailed alt text")
 
-The value of **-1** in the **Sales Goal** column is an error in the source and needs to be replaced with the standard sales goal defined by the business for these instances, which is 250,000. To do that, right-click to select the **-1** value, and then select **Replace values**. This action will bring up the **Replace values** dialog box with **Value to find** set to **-1**. Now all you need to do is enter **250000** in the **Replace with** box.
+The value of **-1** in the **Sales Goal** column is an error in the source and needs to be replaced with the standard sales goal defined by the business for these instances, which is 250,000. To do that, right-click the **-1** value, and then select **Replace values**. This action will bring up the **Replace values** dialog box with **Value to find** set to **-1**. Now all you need to do is enter **250000** in the **Replace with** box.
 
 ![Replace values for a non-text column](images/me-replace-values-numeric.png "Replace values for a non-text column")
 
@@ -57,7 +55,7 @@ The outcome of that operation will give you the result that you're looking for.
 
 ## Replace instances of a text string
 
-Continuing with the previous table, let's say you want to remove<!--Suggested.--> the text string "Category Name: " from the **Category Name** column. To do that, go to the **Transform** group on the **Home** tab, and select **Replace values**. In the **Replace values** dialog box, enter the text string **Category Name:** (followed by a space) in the **Value to find** box, leave the **Replace with** box empty, and then select **OK**.<!--Suggested.-->
+Continuing with the previous table, let's say you want to remove the text string "Category Name: " from the **Category Name** column. To do that, go to the **Transform** group on the **Home** tab, and select **Replace values**. In the **Replace values** dialog box, enter the text string **Category Name:** (followed by a space) in the **Value to find** box, leave the **Replace with** box empty, and then select **OK**.
 
 ![Replace values for a text column](images/me-replace-values-text.png "Replace values for a text column")
 

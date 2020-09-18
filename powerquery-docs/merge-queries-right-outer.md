@@ -11,10 +11,12 @@ ms.custom: edited
 
 # Right outer join
 
-<!--Please see the editor's notes in merge-queries-left-outer.md-->
-One of the join kinds available in the **Merge** dialog box in Power Query, a *right outer join* keeps all the rows from the right table and brings any matching rows from the left table. More information: [Merge operations overview](merge-queries-overview.md)
+One of the join kinds available in the **Merge** dialog box in Power Query is a *right outer join*, which keeps all the rows from the right table and brings in any matching rows from the left table. More information: [Merge operations overview](merge-queries-overview.md)
 
 ![Sample right outer join](images/right-outer-join-operation.png "needs detailed alt text")
+<!-- Keep?
+>[!NOTE]
+>Samples used in this article are only to showcase the concepts. The concepts showcased here apply to all queries in Power Query.-->
 
 This article uses sample data to show how to do a merge operation with the right outer join. The sample source tables for this example are:
 
@@ -34,8 +36,8 @@ In this example, you'll merge both tables, with the **Sales** table as the left 
 
 The goal is to create a table like the following, where the name of the country appears as a new **Country** column in the **Sales** table. Because of how the right outer join works, all rows from the right table will be brought in, but only matching rows from the left table will be kept.
 
-*Table 1. Final table for the right outer join example*<br>
-![Right outer join final table](images/me-merge-operations-right-outer-final-table.png "needs detailed alt text")
+![Right outer join final table with Date, CountryID, Units, and Country header columns, and a single row with data for Panama](images/me-merge-operations-right-outer-final-table.png "Right outer join final table with Date, CountryID, Units, and Country header columns, and a single row with data for Panama")
+
 <!--markdownlint-disable MD036-->
 **To perform a right outer join**
 <!--markdownlint-enable MD036-->
@@ -52,6 +54,6 @@ From the newly created **Countries** column, expand the **Country** field. Don't
 
 ![Expand table column for Country](images/me-merge-operations-right-outer-expand-field.png "Expand table column for Country")
 
-After performing this operation, you'll create a table that looks like Table 1, shown earlier in this article.
-<!--
-![Right outer join final table](images/me-merge-operations-right-outer-final-table.png "Right outer join final table") -->
+After performing this operation, you'll create a table that looks like the following image.
+
+![Final table with Date, CountryID, Units, and Country header columns, and a single row with data for Panama](images/me-merge-operations-right-outer-final-table-2.png "Final table with Date, CountryID, Units, and Country header columns, and a single row with data for Panama")

@@ -10,7 +10,7 @@ ms.custom: edited
 ---
 
 # Filter by values in a column
-<!--Edit to title suggested, to match filter-row-position.-->
+
 In Power Query, you can include or exclude rows according to a specific value in a column. You can choose from two methods to filter the values in your column:
 <!--These introduction should be rewritten to mention that type-specific filters are also covered. The two ways of accessing the filters aren't as interesting. This is another example of how describing the UI and describing what the reader wants to know are often at odds with each other.-->
 * [Sort and filter menu](#sort-and-filter-menu)
@@ -31,9 +31,9 @@ In the column header, you'll see an icon with an inverse triangle. When you sele
 
 ### Remove empty
 
-The **Remove empty** command applies two filter rules to your column: The first rule gets rid of any null values, the second rule gets rid of any blank values. For example, imagine a table with just one text column with five rows, where you have one null value and one blank cell.
+The **Remove empty** command applies two filter rules to your column. The first rule gets rid of any null values. The second rule gets rid of any blank values. For example, imagine a table with just one text column with five rows, where you have one null value and one blank cell.
 
-![Sample table for empty rows](images/me-filter-values-sample-for-empty-rows.png "needs detailed alt text")
+![Sample table with the second row containing a null value and the fourth row a blank value](images/me-filter-values-sample-for-empty-rows.png "Sample table with the second row containing a null value and the fourth row a blank value")
 
 > [!NOTE]
 > A null value is a specific value in the Power Query language that represents no value.
@@ -47,7 +47,7 @@ You can also select this option from the **Home** tab in the **Reduce Rows** gro
 -->
 The result of the **Remove empty** operation gives you the same table without the empty values.
 
-![Sample table after removed empty rows](images/me-filter-values-after-remove-empty.png "needs detailed alt text")
+![Sample table after the null row and blank row were removed](images/me-filter-values-after-remove-empty.png "Sample table after the null row and blank row were removed")
 
 ### Clear filter
 
@@ -80,19 +80,19 @@ You can right-click a particular cell in a column to open the shortcut menu for 
 
 ## Type-specific filters
 
-Depending on the data type of your column, you'll see different commands in the sort and filter menu. The following images show examples for a date, text, and numeric columns.
+Depending on the data type of your column, you'll see different commands in the sort and filter menu. The following images show examples for date, text, and numeric columns.
 
-![Date column specific filters](images/me-filter-values-date-column.png "needs detailed alt text")
+![Menu items containing commands and filters that are specific to columns that contain data with the Date data type](images/me-filter-values-date-column.png "Menu items containing commands and filters that are specific to columns that contain data with the Date data type")
 
-![Text column specific filters](images/me-filter-values-text-column.png "needs detailed alt text")
+![Menu items containing commands and filters that are specific to columns that contain the Text data type](images/me-filter-values-text-column.png "Menu items containing commands and filters that are specific to columns that contain the Text data type")
 
-![Numeric column specific filters](images/me-filter-values-numeric-column.png "needs detailed alt text")
+![Menu items containing commands and filters that are specific to columns that contain the Number data type](images/me-filter-values-numeric-column.png "Menu items containing commands and filters that are specific to columns that contain the Number data type")
 
 ### Filter rows
 
 When selecting any of the type-specific filters, you'll use the **Filter rows** dialog box to specify filter rules for the column. This dialog box is shown in the following image.
 
-![Filter rows dialog box](images/me-filter-values-filter-rows-window.png "needs detailed alt text")
+![Example filter rows dialog box opened from the Account Code text column, with one filter set to "begins with"](images/me-filter-values-filter-rows-window.png "Example filter rows dialog box opened from the Account Code text column")
 
 The **Filter rows** dialog box has two modes: **Basic** and **Advanced**.
 
@@ -102,27 +102,31 @@ With basic mode, you can implement up to two filter rules based on type-specific
 
 For example, imagine that in the following table, you want to filter the **Account Code** by all values that start with either **PA** or **PTY**.
 
-![Sample table for basic filter rows operation](images/me-filter-values-sample-table.png "needs detailed alt text")
+![Sample table containing account codes that begin with two or three different characters](images/me-filter-values-sample-table.png "Sample table containing account codes that begin with two or three different characters")
 
-To do that, you can go to the **Filter rows** dialog box for the **Account Code** column and specify the set of filter rules you want.
+To do that, you can go to the **Filter rows** dialog box for the **Account Code** column and specify the set of filter rules you want. 
 
-![Basic filter rows operation](images/me-filter-values-filter-rows-window-basic-mode.png "needs detailed alt text")
+In this example, first select the **Basic** button. Then under **Keep rows where "Account Code"**, select **begins with**, and then enter **PA**. Then select the **or** button. Under the **or** button, select **begins with**, and then enter **PTY**. The select **OK**.
+
+![Basic filter rows operation with the example filter rules applied](images/me-filter-values-filter-rows-window-basic-mode.png "Basic filter rows operation with the example filter rules applied")
 
 The result of that operation will give you the set of rows that you're looking for.
 
-![Sample output table for basic filter rows operation](images/me-filter-values-filter-rows-window-basic-mode-output.png "needs detailed alt text")
+![Sample output table for basic filter rows operation that only contains account codes that begin with either PA or PTY](images/me-filter-values-filter-rows-window-basic-mode-output.png "Sample output table for basic filter rows operation that only contains account codes that begin with either PA or PTY")
 
 ##### Advanced
 
 With advanced mode, you can implement as many type-specific filters as necessary from all the columns in the table.
 
-For example, imagine that instead of applying the previous filter in basic mode, you wanted to implement a filter to **Account Code** to show all values that end with **4**. Also, you want to show values over $100 in the **Sales** column. The following image shows what that will look like in advanced mode.
+For example, imagine that instead of applying the previous filter in basic mode, you wanted to implement a filter to **Account Code** to show all values that end with **4**. Also, you want to show values over $100 in the **Sales** column. 
 
-![Filter rows dialog box in advanced mode](images/me-filter-values-filter-rows-window-advanced-mode.png "needs detailed alt text")
+In this example, first select the **Advanced** button. In the first row, select **Account Code** under **Column name**, **ends with** under **Operator**, and select **4** for the Value. In the second row, select **and**, and then select **Sales** under **Column Name**, **is greater than** under **Operator**, and **100** under **Value**. Then select **OK**
+
+![Filter rows dialog box with advanced filter example settings](images/me-filter-values-filter-rows-window-advanced-mode.png "Filter rows dialog box with advanced filter example settings")
 
 The result of that operation will give you just one row that meets both criteria.
 
-![Output of advanced filter](images/me-filter-values-filter-rows-window-advanced-mode-output.png "needs detailed alt text")
+![Output of advanced filter showing one Account Code that ended in 4 that also had a Sales value over 100](images/me-filter-values-filter-rows-window-advanced-mode-output.png "Output of advanced filter showing one Account Code that ended in 4 that also had a Sales value over 100")
 
 > [!NOTE]
-> You can add as many clauses to as you'd like by selecting **Add clause**. All clauses act at the same level, so you might want to consider creating multiple filter steps if you need to implement filters that rely on other filters.
+> You can add as many clauses as you'd like by selecting **Add clause**. All clauses act at the same level, so you might want to consider creating multiple filter steps if you need to implement filters that rely on other filters.

@@ -11,7 +11,7 @@ ms.custom: edited
 
 # Sort columns
 
-You can sort a table in Power Query by one column or multiple columns. For example, take the following table with the columns named<!--I'm going to suggest using column heading terminology to be consistent with other articles, and also to avoid using **Field** as if it were a UI string.--> **Competition**, **Competitor**, and **Position**.
+You can sort a table in Power Query by one column or multiple columns. For example, take the following table with the columns named **Competition**, **Competitor**, and **Position**.
 
 ![Sample source table](images/me-sort-by-column-start.png "needs detailed alt text")
 
@@ -23,15 +23,15 @@ For this example, the goal is to sort this table by the **Competition** and **Po
 
 To sort the table, first select the column to be sorted. After the column has been selected, you can select the sort operation from one of two places:
 
-- On the **Home** tab, in the **Sort** group, you'll see the icons to sort your column in either ascending or descending order.
+- On the **Home** tab, in the **Sort** group, there are icons to sort your column in either ascending or descending order.
 
    ![Sort column button on the Home tab](images/me-sort-by-column-sort-group.png "Sort column button on the Home tab")
 
-- From the column heading drop-down menu. Next to the name of the column you'll see a drop-down menu indicator :::image type="icon" source="images/col-head-drop-down-menu.png":::. When you select the icon, you'll see the option to sort the column.
+- From the column heading drop-down menu. Next to the name of the column there's a drop-down menu indicator :::image type="icon" source="images/col-head-drop-down-menu.png":::. When you select the icon, you'll see the option to sort the column.
 
   ![Sort commands on the column heading drop-down menu](images/me-sort-by-column-sort-icons.png "Sort commands on the column heading drop-down menu")
 
-In this example, first you need to sort the **Competition** column. You'll perform the operation by using the buttons in the **Sort** group on the **Home** tab. See how this action creates a new step in the **Applied steps** section named **Sorted rows**.
+In this example, first you need to sort the **Competition** column. You'll perform the operation by using the buttons in the **Sort** group on the **Home** tab. This action creates a new step in the **Applied steps** section named **Sorted rows**.
 
 ![Sorted rows step in the Applied steps section](images/me-sort-by-column-sort-step.png "Sorted rows step in the Applied steps section")
 
@@ -46,7 +46,7 @@ Notice that this action doesn't create a new **Sorted rows** step, but modifies 
 ![Sorted columns with numbers that represent the sort order](images/me-sort-by-column-multi-column-sort.png "Sorted columns with numbers that represent the sort order")
 
 ## To clear a sort operation from a column
-<!--Edits okay? I wasn't sure what was happening here.-->
+
 Do one of the following:
 
 - Select the down arrow next to the column heading, and then select **Clear sort**.

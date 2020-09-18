@@ -26,26 +26,26 @@ When working with these sources, you'll notice that they share the same table sc
 
 ![File system view](images/me-combine-files-overview-file-system-view.png "File system view")
 
-In the file system view, the **Content** column contains the binary representation of each file.<!--Does it always? To judge by the following descriptions, it seems that this might not necessarily be the name of the column. -->
+In the file system view, the **Content** column contains the binary representation of each file.
 
 >[!NOTE]
 > You can filter the list of files in the file system view by using any of the available fields. It's good practice to filter this view to show only the files you need to combine, for example by filtering fields such as **Extension** or **Folder Path**. More information: [Folder](connectors/folder.md)
 
-Selecting any of the \[Binary\] values in the **Content** column automatically creates a series of navigation steps to that specific file. Power Query will try to interpret the binary by using one of the available connectors, such as Text/CSV, Excel, JSON, or XML.<!--Edits based on the connector names in the docset. You don't need "or other" when you say "such as."-->
+Selecting any of the \[Binary\] values in the **Content** column automatically creates a series of navigation steps to that specific file. Power Query will try to interpret the binary by using one of the available connectors, such as Text/CSV, Excel, JSON, or XML.
 
-Combining files takes place in the following stages:<!--Suggested, to echo the "stages" in get-data-experience.-->
+Combining files takes place in the following stages:
 
 * [Table preview](#table-preview)
 * [Combine files dialog box](#combine-files-dialog-box)
-* [Combined files output](#combined-files-output)<!--Suggest using "combined files" to differentiate the terms a bit.-->
+* [Combined files output](#combined-files-output)
 
 ## Table preview
-<!--Suggested. Removed the "dialog box" descriptor simply because it isn't a named dialog box.-->
-When you connect to a data source by using any of the previously mentioned connectors, a table preview opens. If you're certain that you want to combine all the files in the folder<!--Suggested, to emphasize the contrast between doing this now and waiting to clean up the file list that you describe next.-->, select **Combine** in the lower-right corner of the screen.
+
+When you connect to a data source by using any of the previously mentioned connectors, a table preview opens. If you're certain that you want to combine all the files in the folder, select **Combine** in the lower-right corner of the screen.
 
 ![Table preview with the Combine option](images/combinefiles1.png "Table preview with the Combine option")
 
-Alternatively, you can select **Transform data** to access the Power Query Editor and create a subset of the list of files (for example, by using filters on the folder path column to only include files from a specific subfolder). Then combine files by selecting the column that contains<!--Suggested.--> the binaries (for example<!--Isn't this always going to be the **Content** column? If so, please delete "for example." If not, does it need to be explained that sometimes this isn't the **Content** column?-->, the **Content** column) and then selecting either:
+Alternatively, you can select **Transform data** to access the Power Query Editor and create a subset of the list of files (for example, by using filters on the folder path column to only include files from a specific subfolder). Then combine files by selecting the column that contains the binaries (for example<!--Isn't this always going to be the **Content** column? If so, please delete "for example." If not, does it need to be explained that sometimes this isn't the **Content** column?-->, the **Content** column) and then selecting either:
 
 * The **Combine files** command in the **Combine** group on the **Home** tab.
 
@@ -57,9 +57,9 @@ Alternatively, you can select **Transform data** to access the Power Query Edito
 
 ## Combine files dialog box
 
-After you select the **Combine** or **Combine files** command, the **Combine files** dialog box opens appears and the following occurs:
+After you select the **Combine** or **Combine files** command, the **Combine files** dialog box opens and the following occurs:
 
-1. Power Query analyzes the example file (by default, the first file in the list)<!--Suggested.--> and determines the correct file connector to use to open that file.<!--Deleted redundant text.-->
+1. Power Query analyzes the example file (by default, the first file in the list) and determines the correct file connector to use to open that file.
 2. The dialog box provides the file connector experience exactly as if you were to connect directly to that example file.
    * If you want to use a different file for the example file, you can choose it from the **Example file** drop-down menu.
    * Optional: You can select **Skip files with errors** to exclude from the final output any files that result in errors.
@@ -69,7 +69,7 @@ In the following image, Power Query has detected that the first file has a .csv 
 ![Combine files dialog box](images/me-combine-files-overview-combine-files-dialog.png "Combine files dialog box")
 
 ## Combined files output
-<!--Suggested.-->
+
 After the **Combine files** process is finished, Power Query automatically performs the following actions:
 
 1. Creates an example<!--"Exemplar" isn't used elsewhere in the docset or the UI as far as I can see, and it's not listed as an adjective in the American Heritage dictionary (which please see).--> query that performs all the required extraction steps for a single file. It uses the file that was selected as the example file<!--To match UI. Or this could be "It uses the sample file that was selected in the **Example file** box..."--> in the **Combine files** dialog box.
@@ -91,7 +91,7 @@ You can easily combine all files within a given folder, as long as they have the
 >[!NOTE]
 >You can modify the steps inside the example query to change the function applied to each binary in your query. The example query is linked to the function, so any changes made to the example query will be reflected in the function query.
 >
->If any of the changes affect column names or column data types, be sure to check the last step of your output query. Adding a **Change column type** step can introduce a step-level error that prevents you from visualizing your table.<!--Suggested, to put it a little more directly.--> More information: [Dealing with errors](dealing-with-errors.md)
+>If any of the changes affect column names or column data types, be sure to check the last step of your output query. Adding a **Change column type** step can introduce a step-level error that prevents you from visualizing your table. More information: [Dealing with errors](dealing-with-errors.md)
 
 ### See also
 

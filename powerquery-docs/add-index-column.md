@@ -17,7 +17,7 @@ The **Index column** command adds a new column to the table with explicit positi
 
 By default, the starting index will start from the value 0 and have an increment of 1 per row.
 
-![Sample index column](images/me-add-index-column-new-index.png "needs detailed alt text")
+![Table with nine rows with a new index column with nine rows containing values 0 (top row) through 8 (bottom row)](images/me-add-index-column-new-index.png "Sample index column")
 
 You can also configure the behavior of this step by selecting the **Custom** option and configuring two parameters:
 
@@ -28,12 +28,11 @@ You can also configure the behavior of this step by selecting the **Custom** opt
 
 For the example in this article, you start with the following table that has only one column, but notice the data pattern in the column.
 
-![Sample initial table](images/me-add-index-column-start-table.png "needs detailed alt text")
+![Sample initial table with a recurring pattern every third row](images/me-add-index-column-start-table.png "Sample initial table")
 
 Let's say that your goal is to transform that table into the one shown in the following image, with the columns **Date**, **Account**, and **Sale**.
 
-*Table 1. Final table for the index column example*<br>
-![Sample output table](images/me-add-index-column-final-table.png "needs detailed alt text")
+![Sample output table with three columns created from the recurring pattern of every third row in the intial single column table](images/me-add-index-column-sample-output-table.png "Sample output table")
 
 ## Step 1. Add an index column
 
@@ -53,7 +52,7 @@ In the **Modulo** dialog box, enter the number from which to find the remainder 
 
 The result of that operation will give you a new column named **Modulo**.
 
-![Modulo column added to the table](images/me-add-index-column-add-modulo-column.png "needs detailed alt text")
+![Modulo column added to the table that repeats a 0 to 2 pattern through the nine rows](images/me-add-index-column-add-modulo-column.png "Modulo column added to the table")
 
 ## Step 3. Add an integer-divide column from the index column
 
@@ -61,13 +60,13 @@ Select the **Index** column, go to the **Add column** tab, and then select **Sta
 
 ![Divide (Integer) button on the Add column tab](images/me-add-index-column-add-divide-integer-icon.png "Divide (Integer) button on the Add column tab")
 
-In the **Integer-divide** dialog box, enter a number by which to divide<!--Edit okay?--> each value in the column. In this case, your pattern repeats itself every three rows, so enter the value **3**.
+In the **Integer-divide** dialog box, enter a number by which to divide each value in the column. In this case, your pattern repeats itself every three rows, so enter the value **3**.
 
 ![Divide (Integer) dialog box](images/me-add-index-column-add-integer-divide-window.png "Divide (Integer) dialog box")
 
 Remove the **Index** column, because you no longer need it. Your table now looks like the following image.
 
-![Transformed table without index column](images/me-add-index-column-add-divide-integer-column.png "needs detailed alt text")
+![Table with Index column removed and an Integer-division column with 0 in the first three rows, 1 in the next three, and 2 in the last three](images/me-add-index-column-add-divide-integer-column.png "Transformed table without index column")
 
 ## Step 4. Pivot a column
 
@@ -80,20 +79,18 @@ Your table now has three columns where:
 To achieve the table you want, you need to pivot the **Modulo** column by using the values from **Column1** where these values don't get aggregated. On the **Transform** tab, select the **Modulo** column, and then select **Pivot column** from the **Any column** group. In the **Pivot column** dialog box, select the **Advanced** option button. Make sure **Value column** is set to **Column1** and **Aggregate values function** is set to **Don't aggregate**.
 
 ![Pivot column dialog box](images/me-add-index-column-pivot-column.png "Pivot column dialog box")
-<!--We don't devote an entire note to a cross-reference for more information.
->[!NOTE]
->For more information about the Pivot column operation inside of Power Query, see [Pivot columns](pivot-columns.md).
--->
+
+More information: [Pivot columns](pivot-columns.md)
 
 The result of that operation will give you a table with four columns, as shown in the following image.
 
-![Sample table with pivoted column](images/me-add-index-column-example-pre-final-table.png "needs detailed alt text")
+![Sample table values from Column 1 pivoted into three columns with three rows for each column](images/me-add-index-column-example-pre-final-table.png "Sample table with pivoted column")
 
 ## Step 5. Clean the table
 
 You can now delete the **Integer-division** column and promote the first row of the table to become the headers of your table. More information: [Promote or demote column headers](table-promote-demote-headers.md)
 
-After defining the correct data types for your columns, you'll create a table that looks like Table 1, with exactly the three columns that you needed and the shape that you were looking for.
-<!--
-![Final sample table](images/me-add-index-column-final-table.png "Final sample table")
--->
+After defining the correct data types for your columns, you'll create a table that looks like the following table, with exactly the three columns that you needed and the shape that you were looking for.
+
+![Final sample output table with no Integer-division column and promoted first row headers](images/me-add-index-column-final-table.png "Final sample table")
+

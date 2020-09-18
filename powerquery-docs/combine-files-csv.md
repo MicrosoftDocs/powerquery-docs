@@ -12,7 +12,7 @@ ms.custom: edited
 # Combine CSV files
 
 In Power Query, you can combine multiple files from a given data source. This article describes how the experience works when the files that you want to combine are CSV files. More information: [Combine files overview](combine-files-overview.md)
-<!--I think it's important to put this information up top, to emphasize that this is basically a tutorial, not a typical set of procedures.-->
+
 > [!TIP]
 > You can follow along with this example by downloading the sample files used in this article from [this download link](https://aka.ms/PQCombineFilesSample). You can place those files in the data source of your choice, such as a local folder, SharePoint folder, Azure Blob storage, Azure Data Lake Storage, or other data source that provides the file system view.
 
@@ -20,17 +20,17 @@ For simplicity, the example in this article uses the Folder connector. More info
 
 ## About the sample files used
 
-To combine files, it's imperative that they all have the same structure and the same extension. All the files used in this example have the same structure and extension (.csv).<!--Suggested. -->
+To combine files, it's imperative that they all have the same structure and the same extension. All the files used in this example have the same structure and extension (.csv).
 
-There<!--You've already established that this is an example.--> are 12 CSV files, one for each month of the calendar year 2019. The following image shows the first 15 rows of the file for the month of January.
+There are 12 CSV files, one for each month of the calendar year 2019. The following image shows the first 15 rows of the file for the month of January.
 
-![Sample CSV file for January 2019](images/me-combine-files-csv-sample-csv-file.png "needs detailed alt text")
+![Sample CSV file for January 2019 showing the header section and the rest of the data, all separated by commas](images/me-combine-files-csv-sample-csv-file.png "Sample CSV file for January 2019")
 
-The number of rows varies from file to file, but all files have a header section in the first four rows. They have column headers in the fifth row<!--Suggested, since the rows aren't numbered in the CSV file.-->, and the data for the table begins in the sixth row and continues through all subsequent rows.
+The number of rows varies from file to file, but all files have a header section in the first four rows. They have column headers in the fifth row, and the data for the table begins in the sixth row and continues through all subsequent rows.
 
-The goal is to combine all 12 files into a single table that looks like the following.
+The goal is to combine all 12 files into a single table. This combined table contains the header row at the top of the table, and includes the source name, date, country, units, and revenue data for the entire year in separate columns after the header row.
 
-![Sample final combined table](images/me-combine-files-csv-final-table.png "needs detailed alt text")
+![Sample final combined table](images/me-combine-files-csv-final-table.png "Sample final combined table")
 
 ## Table preview
 
@@ -39,9 +39,9 @@ When connecting to the folder that hosts the files that you want to combine&mdas
 ![Table preview for the file system view](images/me-combine-files-csv-files-list.png "Table preview for the file system view")
 
 For this example, select **Combine**.
-<!--In a tutorial like this, it's a bit confusing to talk about other use cases beyond the task at hand. That's why I wanted to be sure to cover this in the overview article also.-->
+
 >[!NOTE]
->In a different situation, you might select **Transform data** to further filter and transform your data before combining the files. Selecting **Combine** is only recommended in a situation like this, when you're certain that the folder contains only the files that you want to combine.
+>In a different situation, you might select **Transform data** to further filter and transform your data before combining the files. Selecting **Combine** is only recommended when you're certain that the folder contains only the files that you want to combine.
 
 ## Combine files dialog box
 
@@ -58,23 +58,23 @@ Now select **Transform data** in the lower-right corner to go to the output quer
 
 ## Output query
 
-After selecting **Transform data** in the **Combine files** dialog box, you'll be taken back to the Power Query Editor in the query that you initially created from the connection to the local folder. The following image shows what this output query will look like.
+After selecting **Transform data** in the **Combine files** dialog box, you'll be taken back to the Power Query Editor in the query that you initially created from the connection to the local folder. The output query now contains the source file name in the left-most column, along with the data from each of the source files in the remaining columns.
 
-![Output query for combined files without additional transformations](images/me-combine-files-csv-combined-files-pre-transformation.png "needs detailed alt text")
+![Output query for combined files without additional transformations](images/me-combine-files-csv-combined-files-pre-transformation.png "Output query for combined files without additional transformations")
 
-However, the data isn't in the correct shape. You need to remove the top four rows from each file before combining them. To make this change in each file before you combine them, go to the **Transform Sample file** query in the **Queries** pane on the left side of your screen.
+However, the data isn't in the correct shape. You need to remove the top four rows from each file before combining them. To make this change in each file before you combine them, select the **Transform Sample file** query in the **Queries** pane on the left side of your screen.
 
 ### Modify the Transform Sample file query
 
-In this **Transform Sample file** query, you'll see that the data is for the month of April by looking at the values in the **Date** column, which has the year-month-day (YYYY-MM-DD) format. April 2019.csv is the first file that you saw in the table preview.<!--This whole paragraph ignores anyone with low vision. ("you'll see," "looking at the values," "the first file you saw.") This shows why it's so important to have good, detailed alt text.-->
+In this **Transform Sample file** query, the values in the **Date** column indicate that the data is for the month of April, which has the year-month-day (YYYY-MM-DD) format. April 2019.csv is the first file that's displayed in the table preview.
 
-![image](images/me-combine-files-csv-transform-sample-file.png "needs detailed alt text")
+![Table showing the data columns from April 2019, including the header section in the first four rows and the headings in the fifth row](images/me-combine-files-csv-transform-sample-file.png "The untransformed data columns from April 2019")
 
 You now need to apply a new set of transformations to clean the data. Each transformation will be automatically converted to a function inside the **Helper queries** group that will be applied to every file in the folder before combining the data from each file.
 
 The transformations that need to be added to the **Transform Sample file** query are:
 
-1. **Remove top rows**: To perform this operation, select the table menu<!--Can we get a graphic of this?--> in the upper-left corner of the table, and then select **Remove top rows**. 
+1. **Remove top rows**: To perform this operation, select the table icon menu in the upper-left corner of the table, and then select **Remove top rows**. 
 
    ![Remove top rows on the table menu](images/me-combine-files-csv-remove-top-rows.png "Remove top rows on the table menu")
 
@@ -111,7 +111,7 @@ You can remove this last step of the query from the **Applied steps** pane by se
 
 ![Combine files without error step](images/me-combine-files-csv-expanded-table-step.png "Combine files without error step")
 
-However, notice that none of the columns derived from the files (Date, Country, Units, Revenue) has a data type assigned to it. Assign the correct data type to each column by using the following table.
+However, notice that none of the columns derived from the files (Date, Country, Units, Revenue) have a specific data type assigned to them. Assign the correct data type to each column by using the following table.
 
 | Column name | Data type|
 | ------------|----------|
