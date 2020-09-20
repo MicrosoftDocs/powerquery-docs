@@ -1,5 +1,5 @@
 ---
-title: Data profiling tools
+title: Using the data profiling tools
 description: Overview of the Data Quality, Column Distribution, and Column Profile features found inside the Power Query Editor
 author: ptyx507
 ms.service: powerquery
@@ -8,7 +8,7 @@ ms.date: 06/08/2020
 ms.author: v-miesco
 ---
 
-# Data profiling tools
+# Using the data profiling tools
 
 The data profiling tools provide new and intuitive ways to clean, transform, and understand data in Power Query Editor.
 
