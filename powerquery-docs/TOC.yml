@@ -18,13 +18,13 @@
         href: power-query-tutorial-shape-combine.md
       - name: "Using the Applied Steps list"
         href: applied-steps.md
-      - name: "Data profiling tools"
+      - name: "Using the data profiling tools"
         href: data-profiling-tools.md
       - name: "Using the Queries pane"
         href: queries-pane.md
       - name: "Share a query"
         href: share-query.md   
-      - name: "Custom functions"
+      - name: "Using custom functions"
         href: custom-function.md        
       - name: Transform table
         items:
