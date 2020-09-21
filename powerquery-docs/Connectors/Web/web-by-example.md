@@ -48,7 +48,7 @@ In this example, you'll extract the *Name* and *Price* for each of the games on 
 
 Once you're happy with the data extracted from the Web page, select **OK** to go to Power Query Editor. You can apply more transformations or shape the data, such as combining this data with other data sources.
 
-![data by example](../media/web/web-by-example_07.png)
+![applying more transformations](../media/web/web-by-example_07.png)
 
 ## Next steps
 
