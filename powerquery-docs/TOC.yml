@@ -278,7 +278,7 @@
         items:
         - name: Web connector
           href: Connectors/web/Web.md
-        - name: Web By Example
+        - name: Web by example
           href: Connectors/web/web-by-example.md
     - name: Support and troubleshooting
       items:
