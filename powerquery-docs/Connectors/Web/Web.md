@@ -83,12 +83,12 @@ Normally, when you open a file, you'll use the specific file-type connector to o
 The following file types are supported by the Web Connector:
 
 * Access database
-* [CSV document](textcsv.md)
-* [Excel workbook](excel.md)
-* [JSON](json.md)
+* [CSV document](../textcsv.md)
+* [Excel workbook](../excel.md)
+* [JSON](../json.md)
 * Text file
 * HTML page
-* [XML tables](xml.md)
+* [XML tables](../xml.md)
 * PDF
 
 For example, you could use the following steps to open a JSON file on the https://contoso.com/products web site:

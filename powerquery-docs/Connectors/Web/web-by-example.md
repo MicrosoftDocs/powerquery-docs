@@ -23,15 +23,13 @@ Prices in graphics are for example purposes only.
 
 ## Using Get Data from Web by example
 
-Select the **Web** option in the connector selection. In the dialog box that appears, select **Other** from the categories in the left pane, and then select **Web**. Select **Connect** to continue.
-
-![select Web from Get Data](../media/web/web-by-example_03.png)
+Select the **Web** option in the connector selection, and then select **Connect** to continue.
 
 In **From Web**, enter the URL of the Web page from which you'd like to extract data. In this article, we'll use the Microsoft Store Web page, and show how this connector works.
 
 If you want to follow along, you can use the [Microsoft Store URL](https://www.microsoft.com/store/top-paid/games/xbox?category=classics) that we use in this article:
 
-    https://www.microsoft.com/store/top-paid/games/xbox?category=classics
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://www.microsoft.com/store/top-paid/games/xbox?category=classics
 
 ![Web dialog](../media/web/web-by-example_04.png)
 
