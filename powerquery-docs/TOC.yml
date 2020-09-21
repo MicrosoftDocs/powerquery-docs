@@ -275,7 +275,11 @@
       - name: "XML"
         href: Connectors/XML.md
       - name: "Web"
-        href: Connectors/Web.md
+        items:
+        - name: Web connector
+          href: Connectors/web/Web.md
+        - name: Web By Example
+          href: Connectors/web/web-by-example.md
     - name: Support and troubleshooting
       items:
       - name: "Power Query online limits"
