@@ -13,7 +13,11 @@ ms.custom: edited
 
 One of the join kinds available in the **Merge** dialog box in Power Query is an *inner join*, which brings in only matching rows from both the left and right tables. More information: [Merge operations overview](merge-queries-overview.md)
 
-![Sample inner join](images/inner-join-operation.png "needs detailed alt tex")
+:::image type="complex" source="images/full-outer-join-operation.png" alt-text="Full outer join example":::
+   Figure shows a table on the left with Date, CountryID, and Units columns. The emphasized CountryID column contains values of 1 in rows 1 and 2, 3 in row 3, and 2 in row 4. A table on the right contains ID and Country columns. The emphasized ID column contains values of 3 in row 1 (denoting Panama) and 4 in row 2 (denoting Spain). A table below the first two tables contains Date, CountryID, Units, and Country columns, but only one row of data for Panama. 
+   :::image-end:::
+
+<!--![Sample inner join](images/inner-join-operation.png "needs detailed alt tex") -->
 <!-- Keep?
 >[!Note]
 >Samples used in this article are only to showcase the concepts. The concepts showcased here apply to all queries in Power Query. -->
@@ -22,11 +26,11 @@ This article uses sample data to show how to do a merge operation with the inner
 
 * **Sales**: This table includes the fields **Date**, **CountryID**, and **Units**. **CountryID** is a whole number value that represents the unique identifier from the **Countries** table.
 
-   ![Sales table](images/me-merge-operations-full-outer-join-sales-table.png "needs detailed alt tex")
+   ![Sales table containing Date, CountryID, and Units columns, with CountryID set to 1 in rows 1 and 2, 3 in row 3, and 2 in row 4](images/me-merge-operations-full-outer-join-sales-table.png "Sales table containing Date, CountryID, and Units columns, with CountryID set to 1 in rows 1 and 2, 3 in row 3, and 2 in row 4")
 
 * **Countries**: This is a reference table with the fields **id** and **Country**. The **id** field represents the unique identifier for each record.
 
-   ![Countries table](images/me-merge-operations-inner-join-countries-table.png "needs detailed alt text")
+   ![Countries table with id set to 3 in row 1 and 4 in row 2 and Country set to Panama in row 1 and Spain in row 2](images/me-merge-operations-inner-join-countries-table.png "Countries table with id set to 3 in row 1 and 4 in row 2 and Country set to Panama in row 1 and Spain in row 2")
 
 In this example, you'll merge both tables, with the **Sales** table as the left table and the **Countries** table as the right one. The join will be made between the following columns.
 
@@ -47,7 +51,7 @@ The goal is to create a table like the following, where the name of the country 
 5. In the **Join kind** section, select **Inner**.
 6. Select **OK**.
 
-![Merge dialog box for inner join](images/me-merge-operations-inner-merge-window.png "needs detailed alt text?")
+![Merge dialog box showing the results of following the previous inner join procedure](images/me-merge-operations-inner-merge-window.png "Merge dialog box showing the results of following the previous inner join procedure")
 
 >[!TIP]
 >Take a closer look at the message at the bottom of the dialog box that reads "The selection matches 1 of 4 rows from the first table, and 1 of 2 rows from the second table." This message is crucial to understanding the result that you get from this operation. 

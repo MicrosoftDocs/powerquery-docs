@@ -11,9 +11,13 @@ ms.custom: edited
 
 # Left anti join
 
-One of the join kinds available in the **Merge** dialog box in Power Query is a *left anti join*, which brings in only rows from the left table that don't have any matching rows from the right table. More information: [Merge operations overview](merge-queries-overview.md) 
+One of the join kinds available in the **Merge** dialog box in Power Query is a *left anti join*, which brings in only rows from the left table that don't have any matching rows from the right table. More information: [Merge operations overview](merge-queries-overview.md)
 
-![Sample left anti join](images/left-anti-join-operation.png "needs detailed alt text")
+:::image type="complex" source="images/left-anti-join-operation.png" alt-text="Left anti join example":::
+   Figure shows a table on the left with Date, CountryID, and Units columns. The emphasized CountryID column contains values of 1 in rows 1 and 2, 3 in row 3, and 2 in row 4. A table on the right contains ID and Country columns. The emphasized ID column contains values of 3 in row 1 (denoting Panama) and 4 in row 2 (denoting Spain). A table below the first two tables contains Date, CountryID, Units, and Country columns. The table has three rows, with two rows containing the data for CountryID 1, and one row for CountryID 2. Since none of the remaining CountryIDs match any of the countries in the right table, the rows in the Country column in the merged table all contain null.
+   :::image-end:::
+
+<!--![Sample left anti join](images/left-anti-join-operation.png "needs detailed alt text") -->
 <!-- Keep?
 >[!Note]
 >Samples used in this article are only to showcase the concepts. The concepts showcased here apply to all queries in Power Query. -->
@@ -22,11 +26,11 @@ This article uses sample data to show how to do a merge operation with the left 
 
 * **Sales**: This table includes the fields **Date**, **CountryID**, and **Units**. **CountryID** is a whole number value that represents the unique identifier from the **Countries** table.
 
-   ![Sales table](images/me-merge-operations-full-outer-join-sales-table.png "needs detailed alt text")
+   ![Sales table containing Date, CountryID, and Units columns, with CountryID set to 1 in rows 1 and 2, 3 in row 3, and 2 in row 4](images/me-merge-operations-full-outer-join-sales-table.png "Sales table containing Date, CountryID, and Units columns, with CountryID set to 1 in rows 1 and 2, 3 in row 3, and 2 in row 4")
 
 * **Countries**: This is a reference table with the fields **id** and **Country**. The **id** field represents the unique identifier for each record.
 
-   ![Countries table](images/me-merge-operations-inner-join-countries-table.png "needs detailed alt text")
+   ![Countries table with id set to 3 in row 1 and 4 in row 2 and Country set to Panama in row 1 and Spain in row 2](images/me-merge-operations-inner-join-countries-table.png "Countries table with id set to 3 in row 1 and 4 in row 2 and Country set to Panama in row 1 and Spain in row 2")
 
 In this example, you'll merge both tables, with the **Sales** table as the left table and the **Countries** table as the right one. The join will be made between the following columns.
 

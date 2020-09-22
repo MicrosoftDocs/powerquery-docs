@@ -10,10 +10,14 @@ ms.custom: edited
 ---
 
 # Full outer join
-<!--Please see the editor's notes in merge-queries-left-outer.md-->
+
 One of the join kinds available in the **Merge** dialog box in Power Query is a *full outer join*, which brings in all the rows from both the left and right tables. More information: [Merge operations overview](merge-queries-overview.md)
 
-![Sample full outer join ](images/full-outer-join-operation.png "needs detailed alt text")
+:::image type="complex" source="images/full-outer-join-operation.png" alt-text="Full outer join example":::
+   Figure shows a table on the left with Date, CountryID, and Units columns. The emphasized CountryID column contains values of 1 in rows 1 and 2, 3 in row 3, and 2 in row 4. A table on the right contains ID and Country columns. The emphasized ID column contains values of 1 in row 1 (denoting USA), 2 in row 2 (denoting Canada), 3 in row 3 (denoting Panama), and 4 (denoting Spain) in row 4. A table below the first two tables contains Date, CountryID, Units, and Country columns. All rows have been rearraged in numerical order according to the CountryID value. The country associated with the CountryID number is shown in the Country column. Because the country ID for Spain was not contained in the left table, a new row is added, and the date, country ID, and units values for this row are set to null.
+:::image-end:::
+
+<!-- ![Figure shows a table on the left with Date, CountryID, and Units columns. The emphasized CountryID column contains values of 1 in rows 1 and 2, 3 in row 3, and 2 in row 4. A table on the right contains ID and Country columns. The emphasized ID column contains values of 1 in row 1 (denoting USA), 2 in row 2 (denoting Canada), 3 in row 3 (denoting Panama), and 4 (denoting Spain) in row 4. A table below the first two tables contains Date, CountryID, Units, and Country columns. All rows have been rearraged in numerical order according to the CountryID value. The country associated with the CountryID number is shown in the Country column. Because the country ID for Spain was not contained in the left table, a new row is added, and the date, country ID, and units values for this row are set to null.](images/full-outer-join-operation.png "needs detailed alt text") -->
 
 <!-- Keep?
 >[!Note]
@@ -23,11 +27,11 @@ This article uses sample data to show how to do a merge operation with the full 
 
 * **Sales**: This table includes the fields **Date**, **CountryID**, and **Units**. **CountryID** is a whole number value that represents the unique identifier from the **Countries** table.
 
-   ![Sales table](images/me-merge-operations-full-outer-join-sales-table.png "needs detailed alt text")
+   ![Sales table containing Date, CountryID, and Units columns, with CountryID set to 1 in rows 1 and 2, 3 in row 3, and 2 in row 4](images/me-merge-operations-full-outer-join-sales-table.png "Sales table containing Date, CountryID, and Units columns, with the CountryID set to 1 in rows 1 and 2, 3 in row 3, and 2 in row 4")
 
 * **Countries**: This is a reference table with the fields **id** and **Country**. The **id** field represents the unique identifier for each record.
 
-   ![Countries table](images/me-merge-operations-full-outer-join-countries-table.png "needs detailed alt text")
+   ![Countries table containing id and Country columns, with id set to 1 in row 1, 2 in row 2, 3 in row 3, and 4 in row 4](images/me-merge-operations-full-outer-join-countries-table.png "Countries table containing id and Country columns, with id set to 1 in row 1, 2 in row 2, 3 in row 3, and 4 in row 4")
 
 In this example, you'll merge both tables, with the **Sales** table as the left table and the **Countries** table as the right one. The join will be made between the following columns.
 
@@ -37,13 +41,12 @@ In this example, you'll merge both tables, with the **Sales** table as the left 
 
 The goal is to create a table like the following, where the name of the country appears as a new **Country** column in the **Sales** table. Because of how the full outer join works, all rows from both the left and right tables will be brought in, regardless of whether they only appear in one of the tables.
 
-<a id="final-table-full-outer"></a>
-
-:::image type="complex" source="images/me-merge-operations-full-outer-final-table.png" alt-text="Full outer join final table":::
-   Full outer join final table with a Date column set to the Date data type, a CountryID column set to the Text data type, a Units column set to the Number data type, and a Country column set to the Text data type, along with five rows of data in which the fifth row contains null in the Date, CountryID, and Units columns.
+:::image type="complex" source="images/me-merge-operations-full-outer-final-table.png" alt-text="Final table for full outer join operation":::
+   Full outer join final table with Date, a CountryID, and Units derived from the Sales talbe, and a Country column derived from the Countries table. A fifth row was added to contain data from Spain, but that row contains null in the Date, CountryID, and Units columns since those values did not exist for Spain in the Sales table.
 :::image-end:::
 
 <!-- ![Full outer join final table](images/me-merge-operations-full-outer-final-table.png "needs detailed alt text") -->
+
 <!--markdownlint-disable MD036-->
 **To perform a full outer join**
 <!--markdownlint-enable MD036-->
@@ -54,20 +57,22 @@ The goal is to create a table like the following, where the name of the country 
 5. In the **Join kind** section, select **Full outer**.
 6. Select **OK**
 
-![Merge dialog box for full outer join](images/me-merge-operations-full-outer-merge-window.png "needs detailed alt text?")
+![Merge dialog box showing the results of following the previous full outer join procedure](images/me-merge-operations-full-outer-merge-window.png "Merge dialog box showing the results of following the previous full outer join procedure")
 
 >[!TIP]
 >Take a closer look at the message at the bottom of the dialog box that reads "The selection matches 4 of 4 rows from the first table, and 3 of 4 rows from the second table." This message is crucial for understanding the result that you get from this operation.
 
 In the **Countries** table, you have the **Country** Spain with **id** of 4, but there are no records for **CountryID** 4 in the **Sales** table. That's why only three of four rows from the right table found a match. All rows from the right table that didn't have matching rows from the left table will be grouped and shown in a new row in the output table with no values for the fields from the left table.
 
-![No matching rows on left table for full outer join](images/me-merge-operations-full-outer-no-matching-rows.png "needs detailed alt text")
+![No matching rows for Spain on left table for full outer join, so the Date CountryID and Units values for Spain are set to null](images/me-merge-operations-full-outer-no-matching-rows.png "No matching rows for Spain on left table for full outer join, so the Date CountryID and Units values for Spain are set to null")
 
 From the newly created **Countries** column after the merge operation, expand the **Country** field. Don't select the **Use original column name as prefix** check box.
 
 ![Expand table column for Country](images/me-merge-operations-full-outer-expand-field.png "Expand table column for Country")
 
-After performing this operation, you'll create a table that looks like [final table](#final-table-full-outer), shown earlier in this article.
-<!--
-![Full outer join final table](images/me-merge-operations-full-outer-final-table.png "Full outer join final table")
--->
+After performing this operation, you'll create a table that looks like the following image.
+
+:::image type="complex" source="images/me-merge-operations-full-outer-final-table-2.png" alt-text="Full outer join final table":::
+   Full outer join final table containing Date, a CountryID, and Units derived from the Sales talbe, and a Country column derived from the Countries table. A fifth row was added to contain data from Spain, but that row contains null in the Date, CountryID, and Units columns since those values did not exist for Spain in the Sales table.
+:::image-end:::
+
