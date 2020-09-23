@@ -15,11 +15,19 @@ The transpose table operation in Power Query rotates your table 90 degrees, turn
 
 Imagine a table like the one in the following image, with three rows and four columns.
 
-![Sample source table](images/me-transpose-initial-table.png "needs detailed alt text")
+:::image type="complex" source="images/me-transpose-initial-table.png" alt-text="Sample source table to be transposed":::
+   Table with four columns named Column1 through Column4, with all columns set to the Text data type. Column1 contains Events in row 1, Participants in row 2, and Funds in row 3. Column2 contains Event 1 in row 1, 150 in row 2, and 4000 in row 3. Column3 contains Event 2 in row 1, 450 in row 2, and 10000 in row 3. Column4 contains Event 2 in row 1, 1250 in row 2, and 15000 in row 3.
+:::image-end:::
+
+<!-- ![Sample source table](images/me-transpose-initial-table.png "needs detailed alt text") -->
 
 The goal of this example is to transpose that table so you end up with four rows and three columns.
 
-![Sample output table](images/me-transpose-final-table.png "needs detailed alt text")
+:::image type="complex" source="images/me-transpose-final-table.png" alt-text="Final output table":::
+   Table with three columns named Events with a Text data type, Participants with a Whole number data type, and Funds with a whole number data type. The Events column contains, from top to bottom, Event 1, Event 2, and Event 3. The Participants column contains, from top to bottom, 150, 450, and 1250. The Funds column contains, from top to bottom, 4000, 10000, and 15000.
+:::image-end:::
+
+<!-- ![Sample output table](images/me-transpose-final-table.png "needs detailed alt text") -->
 
 On the **Transform** tab in the ribbon, select **Transpose**.
 
@@ -27,7 +35,11 @@ On the **Transform** tab in the ribbon, select **Transpose**.
 
 The result of that operation will look like the following image.
 
-![Result after transposing a table](images/me-transpose-after.png "needs detailed alt text")
+:::image type="complex" source="images/me-transpose-after.png" alt-text="Sample output table after transpose operation":::
+   Table with three columns named Column1, Column2, and Column 3, with all columns set to the Any data type. Column1 contains, from top to bottom, Events, Event 1, Event 2, and Event 3. Column2 contains, from top to bottom, Participants, 150, 450, and 1250. Column 3 contains, from top to bottom, Funds, 4000, 10000, and 15000.
+:::image-end:::
+
+<!-- ![Result after transposing a table](images/me-transpose-after.png "needs detailed alt text") -->
 
 > [!NOTE]
 > Only the contents of the table will be transposed during the transpose operation; the column headers of the initial table will be lost.  The new columns will have the name **Column** followed by a sequential number.
@@ -38,7 +50,11 @@ The headers you need in this example are in the first row of the table. To promo
 
 The result of that operation will give you the output that you're looking for.
 
-![Sample output table](images/me-transpose-final-table.png "needs detailed alt text")
+:::image type="complex" source="images/me-transpose-final-table-2.png" alt-text="Final sample output table":::
+   Final table with three columns named Events with a Text data type, Participants with a Whole number data type, and Funds with a whole number data type. The Events column contains, from top to bottom, Event 1, Event 2, and Event 3. The Participants column contains, from top to bottom, 150, 450, and 1250. The Funds column contains, from top to bottom, 4000, 10000, and 15000.
+:::image-end:::
+
+<!-- ![Sample output table](images/me-transpose-final-table-2.png "needs detailed alt text") -->
 
 >[!NOTE] 
 >To learn more about the promote headers operation, also known as **Use first row as headers**, go to [Promote or demote column headers](table-promote-demote-headers.md).

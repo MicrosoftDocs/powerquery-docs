@@ -55,7 +55,7 @@ The goal is to create a table like the following, where only the rows from the l
 5. In the **Join kind** section, select **Left anti**.
 6. Select **OK**.
 
-![Merge dialog box for left anti join](images/me-merge-operations-left-anti-merge-window.png "needs detailed alt text?")
+![Merge dialog box showing the results of following the previous left anti join procedure](images/me-merge-operations-left-anti-merge-window.png "Merge dialog box showing the results of following the previous left anti join procedure")
 
 >[!TIP]
 >Take a closer look at the message at the bottom of the dialog box that reads "The selection excludes 1 of 4 rows from the first table." This message is crucial to understanding the result that you get from this operation. 

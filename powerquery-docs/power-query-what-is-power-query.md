@@ -18,7 +18,11 @@ ms.custom: edited
 
 Power Query is a data transformation and data preparation engine. Power Query comes with a graphical interface for getting data from sources and a Power Query Editor for applying transformations. Because the engine is available in many products and services, the destination where the data will be stored depends on where Power Query was used. Using Power Query, you can perform the extract, transform, and load (ETL) processing of data.<!--note from editor: I think the image should use the current name, "Azure Data Lake Storage." Please see the Cloud Style Guide: https://styleguides.azurewebsites.net/StyleGuide/Read?id=2696&topicid=43944 -->
 
-![What is Power Query?](images/whatispowerquery.png "needs detailed alt text")
+:::image type="complex" source="images/whatispowerquery.png" alt-text="Power Query input, transformation, and destination":::
+   Diagram with symbolized data sources on the right, passing though Power query for transformation, and then going to various destinations, such as Azure Data Lake Storage, Common Data Service, Microsoft Excel, or Power BI.
+:::image-end:::
+
+<!-- ![Diagram with symbolized data sources on the right, passing though Power query for transformation, and then going to various destinations.](images/whatispowerquery.png "What is Power Query?") -->
 
 ## How Power Query helps with data acquisition
 
@@ -54,7 +58,7 @@ The transformation engine in Power Query includes many prebuilt transformation f
 
 All these transformations are made possible by choosing the transformation option in the menu, and then applying the options required for that transformation. The following illustration shows a few of the transformations available in Power Query Editor.
 
-![Some Power Query transformations](images/powerquerytransformationslist.png "needs detailed alt text")
+![Image showing the transformation commands under the Transform, Home, and Add Column tabs of the Power Query Editor](images/powerquerytransformationslist.png "The transformation commands under the Transform, Home, and Add Column tabs of the Power Query Editor")
 
 More information: [Quickstart: Using Power Query in Power BI](power-query-quickstart-using-power-bi.md)
 

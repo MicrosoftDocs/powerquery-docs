@@ -11,9 +11,13 @@ ms.custom: edited
 
 # Right anti join
 
-One of the join kinds available in the **Merge** dialog box in Power Query is a *right anti join*, which brings in only rows from the right table that don't have any matching rows from the left table. More information: [Merge operations overview](merge-queries-overview.md) 
+One of the join kinds available in the **Merge** dialog box in Power Query is a *right anti join*, which brings in only rows from the right table that don't have any matching rows from the left table. More information: [Merge operations overview](merge-queries-overview.md)
 
-![Sample right anti join](images/right-anti-join-operation.png "needs detailed alt text")
+:::image type="complex" source="images/right-anti-join-operation.png" alt-text="Right anti join example":::
+   Figure shows a table on the left with Date, CountryID, and Units columns. The emphasized CountryID column contains values of 1 in rows 1 and 2, 3 in row 3, and 2 in row 4. A table on the right contains ID and Country columns. The emphasized ID column contains values of 3 in row 1 (denoting Panama) and 4 in row 2 (denoting Spain). A table below the first two tables contains Date, CountryID, Units, and Country columns. The table has one row, with the Date, CountryID and Units set to null, and the Country set to Spain.
+   :::image-end:::
+
+<!--![Sample right anti join](images/right-anti-join-operation.png "needs detailed alt text") -->
 <!-- Keep?
 >[!NOTE]
 >Samples used in this article are only to showcase the concepts. The concepts showcased here apply to all queries in Power Query.-->
@@ -22,11 +26,11 @@ This article uses sample data to show how to do a merge operation with the right
 
 * **Sales**: This table includes the fields **Date**, **CountryID**, and **Units**. **CountryID** is a whole number value that represents the unique identifier from the **Countries** table.
 
-   ![Sales table](images/me-merge-operations-full-outer-join-sales-table.png "needs detailed alt text")
+   ![Sales table containing Date, CountryID, and Units columns, with CountryID set to 1 in rows 1 and 2, 3 in row 3, and 2 in row 4](images/me-merge-operations-full-outer-join-sales-table.png "Sales table containing Date, CountryID, and Units columns, with CountryID set to 1 in rows 1 and 2, 3 in row 3, and 2 in row 4")
 
 * **Countries**: This is a reference table with the fields **id** and **Country**. The **id** field represents the unique identifier for each record.
 
-   ![Countries table](images/me-merge-operations-inner-join-countries-table.png "needs detailed alt text")
+   ![Countries table with id set to 3 in row 1 and 4 in row 2 and Country set to Panama in row 1 and Spain in row 2](images/me-merge-operations-inner-join-countries-table.png "Countries table with id set to 3 in row 1 and 4 in row 2 and Country set to Panama in row 1 and Spain in row 2")
 
 In this example, you'll merge both tables, with the **Sales** table as the left table and the **Countries** table as the right one. The join will be made between the following columns.
 
@@ -51,7 +55,7 @@ The goal is to create a table like the following, where only the rows from the r
 5. In the **Join kind** section, select **Right anti**.
 6. Select **OK**.
 
-![Merge dialog box for right anti join](images/me-merge-operations-right-anti-merge-window.png "needs detailed alt text?")
+![Merge dialog box showing the results of following the previous right anti join procedure](images/me-merge-operations-right-anti-merge-window.png "Merge dialog box showing the results of following the previous right anti join procedure")
 
 >[!TIP]
 >Take a closer look at the message at the bottom of the dialog box that reads "The selection excludes 1 of 2 rows from the second table." This message is crucial to understanding the result that you get from this operation. 

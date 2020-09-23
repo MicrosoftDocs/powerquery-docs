@@ -17,7 +17,11 @@ When creating a new query from unstructured data sources such as text files, Pow
 
 In the following example, Power Query wasn't able to determine the column headers for the table because the table contains a set of header rows for the first three rows. The actual column headers for the table are contained in row 5.
 
-![Sample table for promote rows to column headers](images/me-table-promote-demote-headers-promote-sample-table.png "needs detailed alt text")
+:::image type="complex" source="images/me-table-promote-demote-headers-promote-sample-table.png" alt-text="Initial sample table for promote rows to column headers":::
+   Table with the columns (Column1, Column2, Column3 and column 4) all set to the Text data type, with four rows containing a header at the top, a column header in row 5, and seven data rows at the bottom.
+:::image-end:::
+
+<!-- ![Sample table for promote rows to column headers](images/me-table-promote-demote-headers-promote-sample-table.png "needs detailed alt text") -->
 
 Before you can promote the headers, you need to remove the first four rows of the table. To make that happen, select the table menu in the upper-left corner of the preview window, and then select **Remove top rows**.
 
@@ -32,7 +36,7 @@ In the **Remove top rows** window, enter **4** in the **Number of rows** box.
 
 The result of that operation will leave the headers as the first row of your table.
 
-![Sample table before promoting row to headers](images/me-table-promote-demote-headers-promote-table-before-promote.png "needs detailed alt text")
+![Sample table with the column headers in the first row, then seven rows of data](images/me-table-promote-demote-headers-promote-table-before-promote.png "Sample table with the column headers in the first row, then seven rows of data")
 
 ### Locations of the promote headers operation
 
@@ -52,7 +56,11 @@ From here, you have a number of places where you can select the promote headers 
 
 After you do the promote headers operation, your table will look like the following image.
 
-![Sample table after promoting row to headers](images/me-table-promote-demote-headers-promote-final-table.png "needs detailed alt text")
+:::image type="complex" source="images/me-table-promote-demote-headers-promote-final-table.png" alt-text="Final table with the promote headers operation":::
+   Table with Date, Country, Total Units, and Total Revenue column headers, and seven rows of data. The Date column header has a Date data type, the Country column header has a Text data type, the Total Units column header has a Whole number data type, and the Total Revenue column header has a Decimal number data type.
+:::image-end:::
+
+<!-- ![Table with Date, Country, Total Units, and Total Revenue column headers, and seven rows of data. The Date column header has a Date data type, the Country column header has a Text data type, the Total Units column header has a Whole number data type, and the Total Revenue column header has a Decimal number data type.](images/me-table-promote-demote-headers-promote-final-table.png "needs detailed alt text") -->
 
 >[!NOTE]
 > Table column names must be unique. If the row you want to promote to a header row contains multiple instances of the same text string, Power Query will disambiguate the column headings by adding a numeric suffix preceded by a dot to every text string that isn't unique.
@@ -61,7 +69,7 @@ After you do the promote headers operation, your table will look like the follow
 
 In the following example, the column headers are incorrect: they're actually part of the table's data. You need to demote the headers to be part of the rows of the table.
 
-![Sample table for demote header](images/me-table-promote-demote-headers-demote-sample-table.png "needs detailed alt text")
+![Table with part of the data currently used as the column headers](images/me-table-promote-demote-headers-demote-sample-table.png "Table with part of the data currently used as the column headers")
 
 ### Locations of the demote headers operation
 
@@ -77,11 +85,15 @@ You have a number of places where you can select the demote headers operation:
 
 After you do this operation, your table will look like the following image.
 
-![Sample table after demoting headers to rows](images/me-table-promote-demote-headers-demote-almost-final-table.png "needs detailed alt text")
+![Table after demoting headers to rows, with the column headers now set to Column1, Column2, Column3, and Column4](images/me-table-promote-demote-headers-demote-almost-final-table.png "Table after demoting headers to rows, with the column headers now set to Column1, Column2, Column3, and Column4")
 
-As a last step, select each column and type a new name for it. The end result will resemble<!--Suggested, since you didn't tell them what to name the columns.--> the following image.
+As a last step, select each column and type a new name for it. The end result will resemble the following image.
 
-![Final table after renaming columns](images/me-table-promote-demote-headers-demote-final-table.png "needs detailed alt text")
+:::image type="complex" source="images/me-table-promote-demote-headers-demote-final-table.png" alt-text="Final table after renaming column headers":::
+   Final table after renaming column headers to Date, Country, Total Units, and Total Revenue, with Renamed columns emphasized in the Query settings pane and the M code shown in the formula bar.
+:::image-end:::
+
+<!-- ![Final table after renaming column headers to Date, Country, Total Units, and Total Revenue, with Renamed columns emphasized in the Query settings pane and the M code shown in the formula bar](images/me-table-promote-demote-headers-demote-final-table.png "needs detailed alt text") -->
 
 ### See also
 

@@ -43,7 +43,7 @@ Advanced options are only available in columns of the Text data type. Within tha
 
 Imagine a table like the following, where you have columns for **Account ID**, **Category Name**, and **Sales Goal**.
 
-![Initial sample table](images/me-replace-values-original-table.png "needs detailed alt text")
+![Initial sample table with -1 in the first row of the Sales Goal column](images/me-replace-values-original-table.png "Initial sample table with -1 in the first row of the Sales Goal column")
 
 The value of **-1** in the **Sales Goal** column is an error in the source and needs to be replaced with the standard sales goal defined by the business for these instances, which is 250,000. To do that, right-click the **-1** value, and then select **Replace values**. This action will bring up the **Replace values** dialog box with **Value to find** set to **-1**. Now all you need to do is enter **250000** in the **Replace with** box.
 
@@ -51,7 +51,7 @@ The value of **-1** in the **Sales Goal** column is an error in the source and n
 
 The outcome of that operation will give you the result that you're looking for.
 
-![Output sample table after values are replaced](images/me-replace-values-original-after-numeric-replace.png "needs detailed alt text")
+![Output sample table after the -1 value in the first row of the Sales Goal column was replaced with 250000](images/me-replace-values-original-after-numeric-replace.png "Output sample table after the -1 value in the first row of the Sales Goal column was replaced with 250000")
 
 ## Replace instances of a text string
 
@@ -61,4 +61,4 @@ Continuing with the previous table, let's say you want to remove the text string
 
 The result of that operation gives you the table in the following image.
 
-![Output sample table after values replaced](images/me-replace-values-final-table.png "needs detailed alt text")
+![Table with the Category Name: text removed from all rows of the Category Name column, leaving only the actual category name](images/me-replace-values-final-table.png "Table with the Category Name: text removed from all rows of the Category Name column, leaving only the actual category name")

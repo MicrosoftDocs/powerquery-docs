@@ -124,7 +124,7 @@ Imagine the following table that comes out of a system with a fixed layout.
    Initial sample table for Remove top rows with the columns (Column1, Column2, and Column3) all set to the Text data type, a header at the top and a column header row and seven data rows at the bottom.
 :::image-end:::
 
-<!-- ![Initial sample table for Remove top rows, with a header at the top and a column header row and data rows at the bottom](images/me-filter-row-position-remove-top-rows-start.png "Initial sample table for Remove top rows, with a header at the top and a column header row and data rows at the bottom") -->
+!-- ![Initial sample table for Remove top rows, with a header at the top and a column header row and data rows at the bottom](images/me-filter-row-position-remove-top-rows-start.png "Initial sample table for Remove top rows, with a header at the top and a column header row and data rows at the bottom") -->
 
 This report always contains a fixed header from row 1 to row 5 of the table. In this example, you want to remove these first five rows and keep the rest of the data.
 

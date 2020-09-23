@@ -13,11 +13,19 @@ ms.custom: edited
 
 You can sort a table in Power Query by one column or multiple columns. For example, take the following table with the columns named **Competition**, **Competitor**, and **Position**.
 
-![Sample source table](images/me-sort-by-column-start.png "needs detailed alt text")
+:::image type="complex" source="images/me-sort-by-column-start.png" alt-text="Sample source table for sorting":::
+   Table with Competition, Competitor, and Position columns. The Competition column contains 1 - Opening in rows 1 and 6, 2 - Main in rows 3 and 5, and 3-Final in rows 2 and 4. The Position row contains a value of either 1 or 2 for each of the Competition values.
+:::image-end:::
+
+<!-- ![Sample source table](images/me-sort-by-column-start.png "needs detailed alt text") -->
 
 For this example, the goal is to sort this table by the **Competition** and **Position** fields in ascending order.
 
-![Sample output table](images/me-sort-by-column-final.png "needs detailed alt text")
+:::image type="complex" source="images/me-sort-by-column-final.png" alt-text="Sample output table after sorting":::
+   Table with Competition, Competitor, and Position columns. The Competition column contains 1 - Opening in rows 1 and 2, 2 - Main in rows 3 and 4, and 3-Final in rows 5 and 6. The Position row contains, from top to bottom, a value of 1, 2, 1, 2, 1, and 2.
+:::image-end:::
+
+<!--![Sample output table](images/me-sort-by-column-final.png "needs detailed alt text") -->
 
 ## To sort a table by using columns
 

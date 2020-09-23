@@ -13,7 +13,11 @@ ms.custom: edited
 <!--I think the structure of the join kind articles can be streamlined quite a bit. I'll follow this pattern for the others, but without all the editorial commentary.-->
 One of the join kinds available in the **Merge** dialog box in Power Query is a *left outer join*, which keeps all the rows from the left table and brings in any matching rows from the right table. More information: [Merge operations overview](merge-queries-overview.md)
 
-![Sample left outer join](images/left-outer-join-operation.png "needs detailed alt text")
+:::image type="complex" source="images/left-outer-join-operation.png" alt-text="Left outer join example":::
+   Figure shows a table on the left with Date, CountryID, and Units columns. The emphasized CountryID column contains values of 1 in rows 1 and 2, 3 in row 3, and 4 in row 4. A table on the right contains ID and Country columns. The emphasized ID column contains values of 1 in row 1 (denoting USA), 2 in row 2 (denoting Canada), and 3 in row 3 (denoting Panama). A table below the first two tables contains Date, CountryID, Units, and Country columns. The table has four rows, with the top two rows containing the data for CountryID 1, one row for CountryID 3, and one row for Country ID 4. Since the right table did not contain an ID of 4, the value of the forth row int the Country column contains null.
+   :::image-end:::
+
+<!-- ![Sample left outer join](images/left-outer-join-operation.png "needs detailed alt text") -->
 <!--I don't understand the intent of this note; recommend deleting.
 >[!NOTE]
 >Samples used in this article are only to showcase the concepts. The concepts showcased here apply to all queries in Power Query.-->
@@ -22,11 +26,15 @@ This article uses sample data to show how to do a merge operation with the left 
 
 * **Sales**: This table includes the fields **Date**, **CountryID**, and **Units**. **CountryID** is a whole number value that represents the unique identifier from the **Countries** table.
 
-   ![Sales table](images/me-merge-operations-left-outer-join-sales-table.png "needs detailed alt text")
+   ![Sales table containing Date, CountryID, and Units columns, with CountryID set to 1 in rows 1 and 2, 3 in row 3, and 4 in row 4](images/me-merge-operations-left-outer-join-sales-table.png "Sales table containing Date, CountryID, and Units columns, with CountryID set to 1 in rows 1 and 2, 3 in row 3, and 4 in row 4")
 
 * **Countries**: This is a reference table with the fields **id** and **Country**. The **id** field represents the unique identifier for each record.
 
-   ![Countries table](images/me-merge-operations-left-outer-join-countries-table.png "needs detailed alt text")
+   :::image type="complex" source="images/me-merge-operations-left-outer-join-countries-table.png" alt-text="Sample Country table for left outer join":::
+      Countries table with id set to 1 in row 1, 2 in row 2, and 3 in row 3, and Country set to USA in row 1, Canada in row 2, and Panama in row 3.
+   :::image-end:::
+
+   <!-- ![Countries table with id set to 1 in row 1, 2 in row 2, and 3 in row 3 and Country set to Panama in row 1 and Spain in row 2](images/me-merge-operations-left-outer-join-countries-table.png "needs detailed alt text") -->
 
 In this example, you'll merge both tables, with the **Sales** table as the left table and the **Countries** table as the right one. The join will be made between the following columns.
 
@@ -47,7 +55,7 @@ The goal is to create a table like the following, where the name of the country 
 5. In the **Join kind** section, select **Left outer**.
 6. Select **OK**.
 
-![Merge dialog box for left outer join](images/me-merge-operations-left-outer-merge-window.png "needs detailed alt text?")
+![Merge dialog box showing the results of following the previous left outer join procedure](images/me-merge-operations-left-outer-merge-window.png "Merge dialog box showing the results of following the previous left outer join procedure")
 
 From the newly created **Countries** column, expand the **Country** field. Don't select the **Use original column name as prefix** check box.
 

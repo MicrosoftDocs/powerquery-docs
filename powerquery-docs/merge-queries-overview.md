@@ -13,7 +13,7 @@ ms.custom: edited
 <!--Edit okay? The other articles all call it this, so if you don't like it, please change those cross-references.-->
 A merge operation joins two existing tables together based on matching values from one or multiple columns. You can choose to use different types of joins, depending on the output you want.
 
-![Merge operation diagram overview](images/merge-operation-diagram-overview.png "needs detailed alt text")
+![Diagram showing two empty tables on top merged to a table on the bottom with all columns from the left table and one from the right table](images/merge-operation-diagram-overview.png "Diagram showing two empty tables on top merged to a table on the bottom with all columns from the left table and one from the right table")
 
 ## Merging queries
 
@@ -22,7 +22,7 @@ You can find the **Merge queries** command on the **Home** tab, in the **Combine
 * **Merge queries**: Displays the **Merge** dialog box, with the selected query as the left table of the merge operation.
 * **Merge queries as new**: Displays the **Merge** dialog box without any preselected tables for the merge operation.
 
-![Merge queries commands](images/me-merge-operations-overview-merge-icons.png "Merge queries commands")
+![Merge queries commands in the Home tab](images/me-merge-operations-overview-merge-icons.png "Merge queries commands in the Home tab")
 
 ### Identify tables for merging
 
@@ -43,7 +43,11 @@ After you've selected both the left and right tables, you can select the columns
 * **Sales**: The **CountryID** field is a key or an identifier from the **Countries** table.
 * **Countries**: This table contains the **CountryID** and the name of the country.
 
-![Merge queries with one column](images/me-merge-operations-overview-merge-window-one-column-sample.png "needs detailed alt text")
+:::image type="complex" source="images/me-merge-operations-overview-merge-window-one-column-sample.png" alt-text="Merge dialog box with left and right tables and columns selected":::
+   Merge dialog box with the Left table for merge set to Sales and the CountryID column selected, and the Right table for merge set to Countries and the CountryID column selected.
+:::image-end:::
+
+<!--![Merge dialog box with the Left table for merge set to Sales and the CountryID column selected, and the Right table for merge set to Countries and the CountryID column selected.](images/me-merge-operations-overview-merge-window-one-column-sample.png "needs detailed alt text") -->
 
 The goal is to join these tables by using the **CountryID** column from both tables, so you select the **CountryID** column from each table. After you make the selections, a message appears with an estimated number of matches at the bottom of the dialog box.
 
@@ -56,7 +60,11 @@ For this example, you have the **Sales** and **Countries** tables. Each of the t
 
 First select the **CountryID** column in the **Sales** table, select **Ctrl**, and then select the **StateID** column. (This will show the small numbers in the column headings.) Next, perform the same selections in the **Countries** table. The following image shows the result of selecting those columns.
 
-![Merge queries using multiple columns](images/me-merge-operations-overview-merge-window-multiple-columns-sample.png "needs detailed alt text")
+:::image type="complex" source="images/me-merge-operations-overview-merge-window-multiple-columns-sample.png" alt-text="Merge dialog box with settings for the left and right tables":::
+   ![Merge dialog box with the Left table for merge set to Sales, with the CountryID and StateID columns selected, and the Right table for merge set to Countries, with the CountryID and StateID columns selected. The Join kind is set to Left outer.
+:::image-end:::
+
+<!--![Merge dialog box with the Left table for merge set to Sales, with the CountryID and StateID columns selected, and the Right table for merge set to Countries, with the CountryID and StateID columns selected. The Join kind is set to Left outer.](images/me-merge-operations-overview-merge-window-multiple-columns-sample.png "needs detailed alt text") -->
 
 ### Expand or aggregate the new merged table column
 
@@ -64,7 +72,11 @@ After selecting **OK** in the **Merge** dialog box, the base table of your query
 
 From here, you can choose to expand or aggregate the fields from this new table column, which will be the fields from your right table.
 
-![Expand table column](images/me-merge-operations-overview-expand-table-column.png "needs detailed alt text")
+:::image type="complex" source="images/me-merge-operations-overview-expand-table-column.png" alt-text="Expand table column menu":::
+   Table showing the merged Countries column on the right, with all rows containing a Table. The expand icon on the right of the Countries column header has been selected, and the expand menu is open. The expand menu has the Select all, CountryID, StateID, Country, and State selections selected. The Use original column name as prefix is also selected.
+:::image-end:::
+
+<!-- ![Table showing the merged Countries column on the right, with all rows containing a Table. The expand icon on the right of the Countries column header has been selected, and the expand menu is open. The expand menu has the Select all, CountryID, StateID, Country, and State selections selected. The Use original column name as prefix is also selected.](images/me-merge-operations-overview-expand-table-column.png "Expand table column menu") -->
 
 >[!NOTE]
 >Currently, the Power Query Online experience only provides the expand operation in its interface. The option to aggregate will be added later this year.
