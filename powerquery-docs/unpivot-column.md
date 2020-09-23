@@ -22,7 +22,7 @@ In Power Query, you can transform columns into attribute-value pairs, where colu
 
 For example, given a table like the following, where country rows and date columns create a matrix of values, it's difficult to analyze the data in a scalable way.
 
-:::image type="complex" source="images/images/me-unpivot-initial-table.png" alt-text="Unpivot columns sample initial table":::
+:::image type="complex" source="images/me-unpivot-initial-table.png" alt-text="Unpivot columns sample initial table":::
    Table containing a Country column set in the Text data type, and 6/1/2020, 7/1/2020, and 8/1/2020 columns set as the Whole number data type. The Country column contains USA in row 1, Canada in row 2, and Panama in row 3. 
 :::image-end:::
 
@@ -99,7 +99,7 @@ You can also select the columns that you don't want to unpivot and unpivot the r
 
 The result of that operation will yield exactly the same result as the one you got from **Unpivot columns**.
 
-:::image type="complex" source="images/me-unpivot-other-columns-final-table" alt-text="Unpivot other columns sample goal table":::
+:::image type="complex" source="images/me-unpivot-other-columns-final-table.png" alt-text="Unpivot other columns sample goal table":::
    Table containing a Country column set as the Text data type, an Attribute column set as the Text data type, and a Value column set as the Whole number data type. The Country column contains USA in the first three rows, Canada in the next three rows, and Panama in the last three rows. The Attribute column contains 6/1/2020 in the first, forth, and seventh rows, 7/1/2020 in the second, fifth, and eighth rows, and 8/1/2020 in the third, sixth, and nineth rows.
 :::image-end:::
 
