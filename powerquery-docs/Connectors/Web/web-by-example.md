@@ -1,12 +1,12 @@
 ---
-title: Extract data from a Web page by example in Power BI Desktop
+title: Extract data from a Web page by example
 description: Extract data from a Web page by providing an example of what you want to pull
 author: davidiseminger
 ms.reviewer: ''
 
 ms.service: powerquery
 ms.topic: how-to
-ms.date: 01/21/2020
+ms.date: 09/22/2020
 ms.author: davidi
 
 LocalizationGroup: Connect to data
