@@ -22,16 +22,13 @@ The list of supported authentication types is defined as part of an extension's 
 | Authentication Kind | Field         | Description                                                                                                                                                    |
 | :------------------ | :------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Implicit            |               | The Implicit (anonymous) authentication kind does not have any fields.                                                                                         |
-| OAuth               | StartLogin    | Function that provides the URL and state information for initiating an OAuth flow.<br><br>See [Implementing an OAuth Flow](#implementing-an-oauth-flow) below. |
+| OAuth               | StartLogin    | Function that provides the URL and state information for initiating an OAuth flow.<br/></br>See [Implementing an OAuth Flow](#implementing-an-oauth-flow) below. |
 |                     | FinishLogin   | Function that extracts the access_token and other properties related to the OAuth flow.                                                                        |
 |                     | Refresh       | **(optional)** Function that retrieves a new access token from a refresh token.                                                                                |
 |                     | Logout        | **(optional)** Function that invalidates the user's current access token.                                                                                      |
 |                     | Label         | **(optional)** A text value that allows you to override the default label for this AuthenticationKind.                                                         |
-| AAD                 | AuthorizationUri | Your AAD authorization endpoint, which will be of the form "/authorize" |
-|                     | DefaultClientApplication | Default client if the host doesn't natively support AAD type. Has ClientId, ClientSecret, and CallbackUrl sub-fields. |
-|                     | ClientId      | ClientId of your AAD application. Because you're working through PowerQuery, you should use and authorize "a672d62c-fc7b-4e81-a576-e60dc46e951d" for the Desktop client. In the Power BI service, our credential handler will substitute its own ClientId, and for that you should authorize "b52893c8-bc2e-47fc-918b-77022b299bbc" |
-|                     | ClientSecret  | Leave this blank. |
-|                     | CallbackUrl   | The AAD CallbackUrl. Set this to "https://preview.powerbi.com/views/oauthredirect.html" |
+| Aad                 | AuthorizationUri | `text` value or function that returns the AAD authorization endpoint (example: `"https://login.microsoftonline.com/common/oauth2/authorize"`).<br/></br>See [Azure Active Directory authentication](#azure_active_directory_authentication) below. |
+|                     | Resource         | `text` value or function that returns the AAD resource value for your service.                                                                              |
 | UsernamePassword    | UsernameLabel | **(optional)** A text value to replace the default label for the _Username_ text box on the credentials UI.                                                    |
 |                     | PasswordLabel | **(optional)** A text value to replace the default label for the _Password_ text box on the credentials UI.                                                    |
 |                     | Label         | **(optional)** A text value that allows you to override the default label for this AuthenticationKind.                                                         |
@@ -45,7 +42,7 @@ The sample below shows the Authentication record for a connector that supports O
 
 **Example:**
 
-```
+```powerquery
 Authentication = [
     OAuth = [
         StartLogin = StartLogin,
@@ -60,7 +57,7 @@ Authentication = [
 ]
 ```
 
-#### Accessing the Current Credentials
+## Accessing the Current Credentials
 
 The current credentials can be retrieved using the `Extension.CurrentCredential()` function.
 
@@ -87,7 +84,7 @@ The following is an example of accessing the current credential for an API key a
 
 **Example:**
 
-```
+```powerquery
 MyConnector.Raw = (_url as text) as binary =>
 let
     apiKey = Extension.CurrentCredential()[Key],
@@ -102,7 +99,7 @@ in
     request
 ```
 
-#### Implementing an OAuth Flow
+## Implementing an OAuth Flow
 
 The OAuth authentication type allows an extension to implement custom logic for their service.
 To do this, an extension will provide functions for `StartLogin` (returning the authorization URI to initiate the OAuth flow)
@@ -117,7 +114,7 @@ accepts additional parameters. Most OAuth flows can be implemented using the ori
 
 See the [Github](samples/Github/README.md) sample for more details.
 
-##### Original OAuth Signatures
+### Original OAuth Signatures
 
 ```powerquery
 StartLogin = (dataSourcePath, state, display) => ...;
@@ -129,7 +126,7 @@ Refresh = (dataSourcePath, refreshToken) =>  ...;
 Logout = (accessToken) => ...;
 ```
 
-##### Advanced OAuth Signatures
+### Advanced OAuth Signatures
 
 Notes about the advanced signatures:
 
@@ -147,7 +144,103 @@ Refresh = (clientApplication, dataSourcePath, oldCredential) =>  ...;
 Logout = (clientApplication, dataSourcePath, accessToken) => ...;
 ```
 
-### Data Source Paths
+### Azure Active Directory authentication
+
+The `Aad` authentication kind is a specialized version of OAuth for Azure Active Directory. It uses the same AAD client as the built-in Power Query connectors that support
+Organization Account authentication.
+
+> [!Note]
+> If your data source requires scopes other than `user_impersonation`, or is incompatible with the use of `user_impersonation`, then you should use the `OAuth` authentication kind.
+
+Most connectors will need to provide values for the `AuthorizationUri` and `Resource` fields. Both fields can be `text` values, or a single argument function that returns a `text value`.
+
+```powerquery
+AuthorizationUri = "https://login.microsoftonline.com/common/oauth2/authorize"
+```
+
+```powerquery
+AuthorizationUri = (dataSourcePath) => FunctionThatDeterminesAadEndpointFromDataSourcePath(dataSourcePath)
+```
+
+```powerquery
+Resource = "77256ee0-fe79-11ea-adc1-0242ac120002"   // AAD resource value for your service - Guid or URL
+```
+
+```powerquery
+Resource = (dataSourcePath) => FunctionThatDeterminesResourceFromDataSourcePath(dataSourcePath)
+```
+
+Connectors that use an [Uri based identifier](#functions_with_an_uri_parameter) do not need to provide a `Resource` value.
+By default, the value will be equal to the root path of the connector's Uri parameter.
+If the data source's AAD resource is different than the domain value (for example, it uses a GUID), then a `Resource` value needs to be provided.
+
+#### Aad authentication kind samples
+
+In this case, the data source supports global cloud AAD using the common tenant (no Azure B2B support).
+
+```powerquery
+Authentication = [
+    Aad = [
+        AuthorizationUri = "https://login.microsoftonline.com/common/oauth2/authorize",
+        Resource = "77256ee0-fe79-11ea-adc1-0242ac120002" // AAD resource value for your service - Guid or URL
+    ]
+]
+```
+
+In this case, the data source supports tenant discovery based on OpenID Connect (OIDC) or similar protocol. This allows the connector to determine the correct AAD endpoint
+to use based on one or more parameters in the data source path. This dynamic discovery approach allows the connector to support Azure B2B.
+
+```powerquery
+
+// Implement this function to retrieve or calculate the service URL based on the data source path parameters
+GetServiceRootFromDataSourcePath = (dataSourcePath) as text => ...;
+
+GetAuthorizationUrlFromWwwAuthenticate = (url as text) as text =>
+    let
+        // Sending an unauthenticated request to the service returns
+        // a 302 status with WWW-Authenticate header in the response. The value will
+        // contain the correct authorization_uri.
+        // 
+        // Example:
+        // Bearer authorization_uri="https://login.microsoftonline.com/{tenant_guid}/oauth2/authorize"
+        responseCodes = {302, 401},
+        endpointResponse = Web.Contents(url, [
+            ManualCredentials = true,
+            ManualStatusHandling = responseCodes
+        ])
+    in
+        if (List.Contains(responseCodes, Value.Metadata(endpointResponse)[Response.Status]?)) then
+            let
+                headers = Record.FieldOrDefault(Value.Metadata(endpointResponse), "Headers", []),
+                wwwAuthenticate = Record.FieldOrDefault(headers, "WWW-Authenticate", ""),
+                split = Text.Split(Text.Trim(wwwAuthenticate), " "),
+                authorizationUri = List.First(List.Select(split, each Text.Contains(_, "authorization_uri=")), null)
+            in
+                if (authorizationUri <> null) then
+                    // Trim and replace the double quotes inserted before the url
+                    Text.Replace(Text.Trim(Text.Trim(Text.AfterDelimiter(authorizationUri, "=")), ","), """", "")
+                else
+                    error Error.Record("DataSource.Error", "Unexpected WWW-Authenticate header format or value during authentication."), [
+                        #"WWW-Authenticate" = wwwAuthenticate
+                    ])
+        else
+            error Error.Unexpected("Unexpected response from server during authentication."));
+
+<... snip ...>
+
+Authentication = [
+    Aad = [
+        AuthorizationUri = (dataSourcePath) =>
+            GetAuthorizationUrlFromWwwAuthenticate(
+                GetServiceRootFromDataSourcePath(dataSourcePath)
+            ),
+        Resource = "https://myAadResourceValue.com", // AAD resource value for your service - Guid or URL
+    ]
+]
+
+```
+
+## Data Source Paths
 
 The M engine identifies a data source using a combination of its _Kind_ and _Path_.
 When a data source is encountered during a query evaluation, the M engine will try to find matching credentials.
@@ -166,16 +259,17 @@ You can see an example of how credentials are stored in the **Data source settin
 > [!Note]
 > If you change your data source function's required parameters during development, previously stored credentials will no longer work (because the path values no longer match). You should delete any stored credentials any time you change your data source function parameters. If incompatible credentials are found, you may receive an error at runtime.
 
-#### Data Source Path Format
+### Data Source Path Format
 
 The _Path_ value for a data source is derived from the data source function's required parameters.
+Required parameters can be excluded from the path by adding `DataSource.Path = false` to the function's metadata ([see below](#excluding_required_parameters_from_your_data_source_path)).
 
 By default, you can see the actual string value in the Data source settings dialog in Power BI Desktop, and in the credential prompt.
 If the Data Source Kind definition has included a `Label` value, you'll see the label value instead.
 
 For example, the data source function in the [HelloWorldWithDocs sample](https://github.com/Microsoft/DataConnectors/tree/master/samples/HelloWorldWithDocs) has the following signature:
 
-```
+```powerquery
 HelloWorldWithDocs.Contents = (message as text, optional count as number) as table => ...
 ```
 
@@ -196,7 +290,45 @@ When a Label value is defined, the data source path value would not be shown:
 > [!Note]
 > We currently recommend you _do not_ include a Label for your data source if your function has required parameters, as users won't be able to distinguish between the different credentials they've entered. We are hoping to improve this in the future (that is, allowing data connectors to display their own custom data source paths).
 
-#### Functions with an Uri parameter
+#### Excluding Required Parameters from your Data Source Path
+
+If you want a function parameter to be required, but not to be included as part of your data source path, you can add `DataSource.Path = false` to the function documentation metadata.
+This property can be added to one or more parameters for your function. Note that adding this field will remove the value from your data source path (meaning that it will no longer be passed to your `TestConnection` function),
+so it should only be used for parameters that are not required to identify your data source, or distinguish credentials.
+
+For example, the connector in the [HelloWorldWithDocs sample](https://github.com/Microsoft/DataConnectors/tree/master/samples/HelloWorldWithDocs) would require different credentials for different `message` values.
+Adding `DataSource.Path = false` to the `message` parameter removes it from the data source path calculation, effectively making the conenctor a "singleton" -
+all calls to `HelloWorldWithDocs.Contents` are treated as the same data source, and the user will only provide credentials once.
+
+```powerquery
+HelloWorldType = type function (
+    message as (type text meta [
+        DataSource.Path = false,
+        Documentation.FieldCaption = "Message",
+        Documentation.FieldDescription = "Text to display",
+        Documentation.SampleValues = {"Hello world", "Hola mundo"}
+    ]),
+    optional count as (type number meta [
+        Documentation.FieldCaption = "Count",
+        Documentation.FieldDescription = "Number of times to repeat the message",
+        Documentation.AllowedValues = { 1, 2, 3 }
+    ]))
+    as table meta [
+        Documentation.Name = "Hello - Name",
+        Documentation.LongDescription = "Hello - Long Description",
+        Documentation.Examples = {[
+            Description = "Returns a table with 'Hello world' repeated 2 times",
+            Code = "HelloWorldWithDocs.Contents(""Hello world"", 2)",
+            Result = "#table({""Column1""}, {{""Hello world""}, {""Hello world""}})"
+        ],[
+            Description = "Another example, new message, new count!",
+            Code = "HelloWorldWithDocs.Contents(""Goodbye"", 1)",
+            Result = "#table({""Column1""}, {{""Goodbye""}})"
+        ]}
+    ];
+```
+
+### Functions with an Uri parameter
 
 Because data sources with an Uri based identifier are so common, there's special handling in the Power Query UI when dealing with Uri based data source paths.
 When an Uri-based data source is encountered, the credential dialog provides a drop down allowing the user to select the base path, rather than the full path (and all paths in between).
@@ -205,7 +337,7 @@ When an Uri-based data source is encountered, the credential dialog provides a d
 
 As `Uri.Type` is an _ascribed type_ rather than a _primitive type_ in the M language, you'll need to use the [Value.ReplaceType](/powerquery-m/value-replacetype) function to indicate that your text parameter should be treated as an Uri.
 
-```
+```powerquery
 shared GithubSample.Contents = Value.ReplaceType(Github.Contents, type function (url as Uri.Type) as any);
 ```
 
