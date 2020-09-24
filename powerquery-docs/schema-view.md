@@ -14,7 +14,7 @@ Schema view is designed to optimize your flow when working on schema level opera
 This article walks you through Schema view and the capabilities it offers. 
 
 
-![Schema view entry point](images/schema-view-overview.png)
+![Schema view](images/schema-view-overview.png)
 
 ## Overview
 When working on data sets with many columns, simple tasks can become incredibly cumbersome because even finding the right column by horizontally scrolling and parsing through all the data is inefficient. Schema view displays your column information in a list that is easy to parse and interact with making it easier than ever to work on your schema.
@@ -28,7 +28,7 @@ You can turn it on by clicking on *Schema view* in the View tab. When you're rea
 
 ## Working on your schema
 You can reorder your columns by dragging and dropping list items.
-![Column operations](images/schema-view-drag.png)
+![Drag and drop columns](images/schema-view-drag.png)
 
 For additional changes on your schema, you have the most used column-level transforms right at your fingertips directly in the list and in the Schema tools tab, plus you can also use transforms available in other tabs the ribbon. 
 
