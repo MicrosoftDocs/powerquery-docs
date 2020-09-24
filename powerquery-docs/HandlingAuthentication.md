@@ -340,22 +340,3 @@ As `Uri.Type` is an _ascribed type_ rather than a _primitive type_ in the M lang
 ```powerquery
 shared GithubSample.Contents = Value.ReplaceType(Github.Contents, type function (url as Uri.Type) as any);
 ```
-
-### AAD Authentication Sample
-
-If you're using AAD Authentication, generally for a Microsoft service, your authentication will generally look something like this.
-
-```
-DataSourceKind = [
-    Type = "Url",
-    Authentication = [
-        Aad = [
-            AuthorizationUri = authorization_uri,
-            DefaultClientApplication = [
-                ClientId = "a672d62c-fc7b-4e81-a576-e60dc46e951d",
-                ClientSecret = "",
-                CallbackUrl = "https://preview.powerbi.com/views/oauthredirect.html"
-            ]
-        ]
-    ],
-```
