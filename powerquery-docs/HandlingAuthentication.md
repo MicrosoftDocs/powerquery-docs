@@ -27,7 +27,7 @@ The list of supported authentication types is defined as part of an extension's 
 |                     | Refresh       | **(optional)** Function that retrieves a new access token from a refresh token.                                                                                |
 |                     | Logout        | **(optional)** Function that invalidates the user's current access token.                                                                                      |
 |                     | Label         | **(optional)** A text value that allows you to override the default label for this AuthenticationKind.                                                         |
-| Aad                 | AuthorizationUri | `text` value or function that returns the AAD authorization endpoint (example: `"https://login.microsoftonline.com/common/oauth2/authorize"`).<br/></br>See [Azure Active Directory authentication](#azure_active_directory_authentication) below. |
+| Aad                 | AuthorizationUri | `text` value or function that returns the AAD authorization endpoint (example: `"https://login.microsoftonline.com/common/oauth2/authorize"`).<br/></br>See [Azure Active Directory authentication](#azure-active-directory-authentication) below. |
 |                     | Resource         | `text` value or function that returns the AAD resource value for your service.                                                                              |
 | UsernamePassword    | UsernameLabel | **(optional)** A text value to replace the default label for the _Username_ text box on the credentials UI.                                                    |
 |                     | PasswordLabel | **(optional)** A text value to replace the default label for the _Password_ text box on the credentials UI.                                                    |
@@ -170,7 +170,7 @@ Resource = "77256ee0-fe79-11ea-adc1-0242ac120002"   // AAD resource value for yo
 Resource = (dataSourcePath) => FunctionThatDeterminesResourceFromDataSourcePath(dataSourcePath)
 ```
 
-Connectors that use an [Uri based identifier](#functions_with_an_uri_parameter) do not need to provide a `Resource` value.
+Connectors that use an [Uri based identifier](#functions-with-an-uri-parameter) do not need to provide a `Resource` value.
 By default, the value will be equal to the root path of the connector's Uri parameter.
 If the data source's AAD resource is different than the domain value (for example, it uses a GUID), then a `Resource` value needs to be provided.
 
@@ -262,7 +262,7 @@ You can see an example of how credentials are stored in the **Data source settin
 ### Data Source Path Format
 
 The _Path_ value for a data source is derived from the data source function's required parameters.
-Required parameters can be excluded from the path by adding `DataSource.Path = false` to the function's metadata ([see below](#excluding_required_parameters_from_your_data_source_path)).
+Required parameters can be excluded from the path by adding `DataSource.Path = false` to the function's metadata ([see below](#excluding-required-parameters-from-your-data-source-path)).
 
 By default, you can see the actual string value in the Data source settings dialog in Power BI Desktop, and in the credential prompt.
 If the Data Source Kind definition has included a `Label` value, you'll see the label value instead.
