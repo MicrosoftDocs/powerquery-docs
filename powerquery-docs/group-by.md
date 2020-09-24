@@ -23,8 +23,6 @@ For this tutorial, you'll be using the sample table shown in the following image
   Table with columns showing Year (2020), Country (USA, Panama, or Canada), Product (Shirt or Shorts), Sales channel (Online or Reseller), and Units (various values from 55 to 7500)
 :::image-end:::
 
-<!-- ![Sample initial table](images/me-group-by-initial-table.png "Sample initial table")-->
-
 ## Where to find the Group by button
 
 You can find the **Group by** button in three places:
@@ -110,7 +108,7 @@ After removing your **Products** column and setting the data type for both newly
 
 To demonstrate how to do "fuzzy grouping," consider the sample table shown in the following image.
 
-![Table with nine rows of entries for "miguel," "Miguel," migueeel," "mike," "Mike"](images/me-fuzzy-grouping-sample-source-table.png "Table with entries for 'miguel,' 'Miguel,' migueeel,' 'mike, and 'Mike'")
+![Table with nine rows of entries that contain various spellings and captilizations of the name Miguel and William](images/me-fuzzy-grouping-sample-source-table.png "Table with nine rows of entries that contain various spellings and captilizations of the name Miguel and William")
 
 The goal of fuzzy grouping is to do a group-by operation that uses an approximate match algorithm for text strings. Power Query uses the Jaccard similarity algorithm to measure the similarity between pairs of instances. Then it applies agglomerative hierarchical clustering to group instances together. The following image shows the output that you expect, where the table will be grouped by the **Person** column.
 

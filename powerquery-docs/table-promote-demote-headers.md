@@ -21,8 +21,6 @@ In the following example, Power Query wasn't able to determine the column header
    Table with the columns (Column1, Column2, Column3 and column 4) all set to the Text data type, with four rows containing a header at the top, a column header in row 5, and seven data rows at the bottom.
 :::image-end:::
 
-<!-- ![Sample table for promote rows to column headers](images/me-table-promote-demote-headers-promote-sample-table.png "needs detailed alt text") -->
-
 Before you can promote the headers, you need to remove the first four rows of the table. To make that happen, select the table menu in the upper-left corner of the preview window, and then select **Remove top rows**.
 
 ![Remove top rows of sample table](images/me-table-promote-demote-headers-promote-remove-top-rows.png "Remove top rows of sample table")
@@ -60,8 +58,6 @@ After you do the promote headers operation, your table will look like the follow
    Table with Date, Country, Total Units, and Total Revenue column headers, and seven rows of data. The Date column header has a Date data type, the Country column header has a Text data type, the Total Units column header has a Whole number data type, and the Total Revenue column header has a Decimal number data type.
 :::image-end:::
 
-<!-- ![Table with Date, Country, Total Units, and Total Revenue column headers, and seven rows of data. The Date column header has a Date data type, the Country column header has a Text data type, the Total Units column header has a Whole number data type, and the Total Revenue column header has a Decimal number data type.](images/me-table-promote-demote-headers-promote-final-table.png "needs detailed alt text") -->
-
 >[!NOTE]
 > Table column names must be unique. If the row you want to promote to a header row contains multiple instances of the same text string, Power Query will disambiguate the column headings by adding a numeric suffix preceded by a dot to every text string that isn't unique.
 
@@ -92,8 +88,6 @@ As a last step, select each column and type a new name for it. The end result wi
 :::image type="complex" source="images/me-table-promote-demote-headers-demote-final-table.png" alt-text="Final table after renaming column headers":::
    Final table after renaming column headers to Date, Country, Total Units, and Total Revenue, with Renamed columns emphasized in the Query settings pane and the M code shown in the formula bar.
 :::image-end:::
-
-<!-- ![Final table after renaming column headers to Date, Country, Total Units, and Total Revenue, with Renamed columns emphasized in the Query settings pane and the M code shown in the formula bar](images/me-table-promote-demote-headers-demote-final-table.png "needs detailed alt text") -->
 
 ### See also
 

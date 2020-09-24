@@ -17,15 +17,11 @@ You can sort a table in Power Query by one column or multiple columns. For examp
    Table with Competition, Competitor, and Position columns. The Competition column contains 1 - Opening in rows 1 and 6, 2 - Main in rows 3 and 5, and 3-Final in rows 2 and 4. The Position row contains a value of either 1 or 2 for each of the Competition values.
 :::image-end:::
 
-<!-- ![Sample source table](images/me-sort-by-column-start.png "needs detailed alt text") -->
-
 For this example, the goal is to sort this table by the **Competition** and **Position** fields in ascending order.
 
 :::image type="complex" source="images/me-sort-by-column-final.png" alt-text="Sample output table after sorting":::
    Table with Competition, Competitor, and Position columns. The Competition column contains 1 - Opening in rows 1 and 2, 2 - Main in rows 3 and 4, and 3-Final in rows 5 and 6. The Position row contains, from top to bottom, a value of 1, 2, 1, 2, 1, and 2.
 :::image-end:::
-
-<!--![Sample output table](images/me-sort-by-column-final.png "needs detailed alt text") -->
 
 ## To sort a table by using columns
 
@@ -55,7 +51,7 @@ Notice that this action doesn't create a new **Sorted rows** step, but modifies 
 
 ## To clear a sort operation from a column
 
-Do one of the following:
+Do one of the following actions:
 
 - Select the down arrow next to the column heading, and then select **Clear sort**.
 - In **Applied steps** on the **Query Settings** pane, delete the **Sorted rows** step.

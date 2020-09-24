@@ -32,7 +32,7 @@ On the **Add column** tab, select **Custom column**.
 
 ![Custom column command on the Add column tab](images/me-add-custom-column-icon.png "Custom column command on the Add column tab")
 
-The **Custom column** dialog box appears. This is where you define the formula to create your column.
+The **Custom column** dialog box appears. This dialog box is where you define the formula to create your column.
 
 ![Custom column dialog box](images/me-add-custom-column-window.png "Custom column dialog box")
 

@@ -17,7 +17,6 @@ One of the join kinds available in the **Merge** dialog box in Power Query is a 
    Figure shows a table on the left with Date, CountryID, and Units columns. The emphasized CountryID column contains values of 1 in rows 1 and 2, 3 in row 3, and 2 in row 4. A table on the right contains ID and Country columns. The emphasized ID column contains values of 3 in row 1 (denoting Panama) and 4 in row 2 (denoting Spain). A table below the first two tables contains Date, CountryID, Units, and Country columns. The table has one row, with the Date, CountryID and Units set to null, and the Country set to Spain.
    :::image-end:::
 
-<!--![Sample right anti join](images/right-anti-join-operation.png "needs detailed alt text") -->
 <!-- Keep?
 >[!NOTE]
 >Samples used in this article are only to showcase the concepts. The concepts showcased here apply to all queries in Power Query.-->
@@ -44,9 +43,8 @@ The goal is to create a table like the following, where only the rows from the r
    Right anti join final table with the Date, CountryID, Units, and Country header columns, containing one row with null in all columns except Country, which contains Spain.
 :::image-end:::
 
-<!-- ![Right anti join final table with the Date, CountryID, Units, and Country header columns, containing one row with null in all columns except Country, which contains Spain](images/me-merge-operations-right-anti-final-table.png "needs detailed alt text") -->
 <!--markdownlint-disable MD036-->
-**To perform a right anti join**
+**To do a right anti join**
 <!--markdownlint-enable MD036-->
 1. Select the **Sales** query, and then select **Merge queries**.
 2. In the **Merge** dialog box, under **Right table for merge**, select **Countries**.

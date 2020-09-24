@@ -22,7 +22,7 @@ If you're not signed up for Power BI, you can [sign up for a free trial](https:/
 ## Using Power Query Editor
 
 Power Query is available in Power BI Desktop through Power Query Editor. To open Power Query Editor, select **Edit Queries** from the Power BI Desktop **Home** tab.  
-<!--Funny. This command doesn't appear on the Home tab in my Power BI Desktop ribbon. Could the UI have been updated since this screenshot?-->
+
 ![Edit Queries button](media/power-query-quickstart-using-power-bi/queryoverview_queryview.png "Edit Queries button")
 
 With no data connections, Power Query Editor appears as a blank pane, ready for data.  
@@ -34,7 +34,7 @@ As soon as a query is loaded, the Power Query Editor view becomes more interesti
 [*https://www.bankrate.com/finance/retirement/best-places-retire-how-state-ranks.aspx*](https://www.bankrate.com/finance/retirement/best-places-retire-how-state-ranks.aspx)
 
 The following image shows how Power Query Editor appears after a data connection is established.
-<!--Because you have those nice callouts, suggest making it clear what they correspond to.-->
+
 
 ![Elements of Power Query Editor](media/power-query-quickstart-using-power-bi/queryoverview_withdataconnection.png "Elements of Power Query Editor")
 | No. | Description |
@@ -42,19 +42,19 @@ The following image shows how Power Query Editor appears after a data connection
 | **1** | On the ribbon, many buttons are now active so you can interact with the data in the query. |
 | **2**   | In the **Queries** pane, queries are listed and available for selection, viewing, and shaping. |
 | **3**   | In the center pane, data from the selected query is displayed and available for shaping. |
-| **4**   | In the **Query Settings** pane, the properties and applied steps for the selected query<!--Edit okay? This seems to be a pane rather than a window.--> are listed. |
+| **4**   | In the **Query Settings** pane, the properties and applied steps for the selected query are listed. |
 
-The following sections describe each of these four areas&mdash;the ribbon, the **Queries** pane, the data view<!--This has various names. I think "data view in the center pane" says it all (see below).-->, and the **Query Settings** pane.
+The following sections describe each of these four areas&mdash;the ribbon, the **Queries** pane, the data view, and the **Query Settings** pane.
 
 ## The query ribbon
 
 The ribbon in Power Query Editor consists of five tabs&mdash;**Home**, **Transform**, **Add Column**, **View**, and **Help**.
 
-The **Home** tab contains the common query tasks, including the first step in any query, which is **Get Data**.<!--There is no **Get Data** button in the screenshot nor in the Power BI Desktop version I just loaded.--> The following image shows the **Home** ribbon.  
+The **Home** tab contains the common query tasks, including the first step in any query, which is **Get Data**. The following image shows the **Home** ribbon.  
 
 ![The Home tab](media/power-query-quickstart-using-power-bi/queryoverview_ribbon.png "The Home tab")
 
-To connect to data and begin the query building process, select the **Get Data** button.<!--Should this be **New Source** instead?--> A menu appears, providing the most common data sources.  
+To connect to data and begin the query building process, select the **Get Data** button. A menu appears, providing the most common data sources.  
 
 ![Get data from a new source](media/power-query-quickstart-using-power-bi/queryoverview_getdatamenu.png "Get data from a new source")
 
@@ -66,10 +66,10 @@ Use the **Add Column** tab to perform additional tasks associated with adding a 
 
 ![The Add Column tab](media/power-query-quickstart-using-power-bi/queryoverview_addcolumnribbon.png "The Add Column tab")
 
-Use the **View** tab to turn on or off the display of<!--Writing Style Guide doesn't like "toggle" as a verb.--> certain panes or windows, and to display the advanced editor. The following image shows the **View** tab.  
+Use the **View** tab to turn on or off the display of certain panes or windows, and to display the advanced editor. The following image shows the **View** tab.  
 
 ![The View tab](media/power-query-quickstart-using-power-bi/queryoverview_viewribbon.png "The View tab")
-<!--Suggest formatting the following as a note to make it stand out a bit. -->
+
 >[!NOTE]
 >Many of the tasks available from the ribbon are also available by right-clicking to select a column, or other data, in the center pane.
 
@@ -81,7 +81,7 @@ The **Queries** pane displays the number of active queries in addition to the na
 
 ## The data view in the center pane
 
-In the center (data) pane, data from the selected query is displayed. This is where much of the work in Power Query<!--Edit okay? I didn't know what this meant.--> is accomplished.
+In the center (data) pane, data from the selected query is displayed. This is where much of the work in Power Query is accomplished.
 
 In the following image, the Web data connection established earlier is displayed, the **Overall score** column is selected, and its column heading has been right-clicked to show the available shortcut menu items. Note that many of these shortcut menu items are the same as the buttons on the ribbon tabs.  
 
@@ -97,7 +97,7 @@ The **Query Settings** pane is where all steps associated with a query are displ
 
 As you apply additional shaping steps to the query, they're captured in the **Applied Steps** section.
 
-It's important to know that the underlying data is *not* changed; rather, Power Query Editor adjusts and shapes its view of the data, and any interaction it has with the underlying data is based on that shaped and modified view.<!--Suggested, but if you don't like, be sure not to use the possessive "Power Query Editor's".-->
+It's important to know that the underlying data is *not* changed; rather, Power Query Editor adjusts and shapes its view of the data, and any interaction it has with the underlying data is based on that shaped and modified view.
 
 In the **Query Settings** pane, you can rename steps, delete steps, or reorder the steps as you see fit. To do so, right-click to select the step in the **Applied Steps** section, and choose the action you want. All query steps are carried out in the order in which they appear in the **Applied Steps** pane.
 
@@ -109,7 +109,7 @@ If you want to see the code that Power Query Editor is creating with each step, 
 
 ![The advanced editor](media/power-query-quickstart-using-power-bi/queryoverview_advancededitor.png "The advanced editor")
 
-You can directly edit the code in the **Advanced Editor** window. To close the window, select the **Done** or **Cancel** button.<!--You sure this is worth saying?-->  
+You can directly edit the code in the **Advanced Editor** window. To close the window, select the **Done** or **Cancel** button. 
 
 ## Saving your work
 
@@ -120,10 +120,9 @@ When your query is where you want it, you can have Power Query Editor apply the 
 As it applies the changes in your query, Power BI Desktop displays the status of the operation.  
 
 ![Progress dialog box](media/power-query-quickstart-using-power-bi/queryoverview_loading.png "Progress dialog box")
-<!--I'm not sure why you wouldn't want to save it? Also you don't need to repeat "where you want it." Suggest deleting, but if you don't want to, you'll want to fix that dangling modifier.-->
-<!--
+
 After you have your query where you want it, or if you just want to make sure your work is saved, Power BI Desktop can save your work in a .pbix file.
--->
+
 
 To save your work as a .pbix file in Power BI Desktop, select **File** > **Save** (or **File** > **Save As**), as shown in the following image.  
 

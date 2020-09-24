@@ -1,6 +1,6 @@
 ---
 title: "Left anti join"
-description: An article on how to perform a merge operation in Power Query using the Left anti join kind. 
+description: An article on how to do a merge operation in Power Query using the Left anti join kind. 
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: 
@@ -17,7 +17,6 @@ One of the join kinds available in the **Merge** dialog box in Power Query is a 
    Figure shows a table on the left with Date, CountryID, and Units columns. The emphasized CountryID column contains values of 1 in rows 1 and 2, 3 in row 3, and 2 in row 4. A table on the right contains ID and Country columns. The emphasized ID column contains values of 3 in row 1 (denoting Panama) and 4 in row 2 (denoting Spain). A table below the first two tables contains Date, CountryID, Units, and Country columns. The table has three rows, with two rows containing the data for CountryID 1, and one row for CountryID 2. Since none of the remaining CountryIDs match any of the countries in the right table, the rows in the Country column in the merged table all contain null.
    :::image-end:::
 
-<!--![Sample left anti join](images/left-anti-join-operation.png "needs detailed alt text") -->
 <!-- Keep?
 >[!Note]
 >Samples used in this article are only to showcase the concepts. The concepts showcased here apply to all queries in Power Query. -->
@@ -28,7 +27,7 @@ This article uses sample data to show how to do a merge operation with the left 
 
    ![Sales table containing Date, CountryID, and Units columns, with CountryID set to 1 in rows 1 and 2, 3 in row 3, and 2 in row 4](images/me-merge-operations-full-outer-join-sales-table.png "Sales table containing Date, CountryID, and Units columns, with CountryID set to 1 in rows 1 and 2, 3 in row 3, and 2 in row 4")
 
-* **Countries**: This is a reference table with the fields **id** and **Country**. The **id** field represents the unique identifier for each record.
+* **Countries**: This table is a reference table with the fields **id** and **Country**. The **id** field represents the unique identifier for each record.
 
    ![Countries table with id set to 3 in row 1 and 4 in row 2 and Country set to Panama in row 1 and Spain in row 2](images/me-merge-operations-inner-join-countries-table.png "Countries table with id set to 3 in row 1 and 4 in row 2 and Country set to Panama in row 1 and Spain in row 2")
 
@@ -44,9 +43,8 @@ The goal is to create a table like the following, where only the rows from the l
    Left anti join final table with Date, CountryID, Units, and Country column headers, and three rows of data of which the values for the Country column are all null.
 :::image-end:::
 
-<!-- ![Left anti join final table with Date, CountryID, Units, and Country column headers, and three rows of data of which the values for the Country column are all null](images/me-merge-operations-left-anti-final-table.png "needs detailed alt text") -->
 <!--markdownlint-disable MD036-->
-**To perform a left anti join**
+**To do a left anti join**
 <!--markdownlint-enable MD036-->
 1. Select the **Sales** query, and then select **Merge queries**.
 2. In the **Merge** dialog box, under **Right table for merge**, select **Countries**.
@@ -68,7 +66,7 @@ From the newly created **Countries** column, expand the **Country** field. Don't
 
 ![Expand table column for Country](images/me-merge-operations-left-anti-expand-field.png "Expand table column for Country")
 
-After performing this operation, you'll create a table that looks like the following image. The newly expanded **Country** field doesn't have any values. That's because the left anti join doesn't bring any values from the right table&mdash;it only keeps rows from the left table.
+After doing this operation, you'll create a table that looks like the following image. The newly expanded **Country** field doesn't have any values. That's because the left anti join doesn't bring any values from the right table&mdash;it only keeps rows from the left table.
 
 :::image type="complex" source="images/me-merge-operations-left-anti-final-table-2.png" alt-text="Final table for left anti join":::
    Final table with Date, CountryID, Units, and Country column headers, and three rows of data of which the values for the Country column are all null.

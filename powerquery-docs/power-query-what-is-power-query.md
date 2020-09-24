@@ -10,10 +10,6 @@ LocalizationGroup: Get started
 ms.custom: edited
 ---
 
-<!--
-#Customer intent: As a data analyst or report creator, I want to know what Power Query is, so I can decide whether Power Query has the features and services I need to connect to and transform data.
--->
-
 # What is Power Query?
 
 Power Query is a data transformation and data preparation engine. Power Query comes with a graphical interface for getting data from sources and a Power Query Editor for applying transformations. Because the engine is available in many products and services, the destination where the data will be stored depends on where Power Query was used. Using Power Query, you can perform the extract, transform, and load (ETL) processing of data.<!--note from editor: I think the image should use the current name, "Azure Data Lake Storage." Please see the Cloud Style Guide: https://styleguides.azurewebsites.net/StyleGuide/Read?id=2696&topicid=43944 -->
@@ -21,8 +17,6 @@ Power Query is a data transformation and data preparation engine. Power Query co
 :::image type="complex" source="images/whatispowerquery.png" alt-text="Power Query input, transformation, and destination":::
    Diagram with symbolized data sources on the right, passing though Power query for transformation, and then going to various destinations, such as Azure Data Lake Storage, Common Data Service, Microsoft Excel, or Power BI.
 :::image-end:::
-
-<!-- ![Diagram with symbolized data sources on the right, passing though Power query for transformation, and then going to various destinations.](images/whatispowerquery.png "What is Power Query?") -->
 
 ## How Power Query helps with data acquisition
 

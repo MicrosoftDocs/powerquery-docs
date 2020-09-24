@@ -36,7 +36,7 @@ Imagine the following table that comes out of a system with a fixed layout.
 
 ![Initial sample table with column headers that are all of the Text data type, seven rows of data, then a section for comments](images/me-filter-row-position-keep-top-rows-start.png "Initial sample table containing a column header, seven rows of data, then a section for comments")
 
-This report always contains seven rows of data, and below those it has a section for comments with an unknown number of rows. In this example, you only want to keep the first seven rows of data. To do that, select **Keep top rows** from the table menu. In the **Keep top rows** dialog box, enter **7** in the **Number of rows** box.
+This report always contains seven rows of data, and below the data it has a section for comments with an unknown number of rows. In this example, you only want to keep the first seven rows of data. To do that, select **Keep top rows** from the table menu. In the **Keep top rows** dialog box, enter **7** in the **Number of rows** box.
 
 ![Keep top rows dialog box](images/me-filter-row-position-keep-top-rows-window.png "Keep top rows dialog box")
 
@@ -52,9 +52,7 @@ Imagine the following table that comes out of a system with a fixed layout.
    Initial sample table with Column1, Column2, and Column3 as the column headers, all set to the Text data type, and the bottom seven rows containing data, and above that a column headers row and an unknown number of comments.
 :::image-end:::
 
-<!-- ![Initial sample table with the bottom seven rows of data, and above that a column headers row and an unknown number of comments](images/me-filter-row-position-keep-bottom-rows-start.png "Initial sample table with the bottom seven rows of data, and above that a column headers row and an unknown number of comments") -->
-
-This report always contains seven rows of data at the end of the report page. Above that, the report has a section for comments with an unknown number of rows. In this example, you only want to keep those last seven rows of data and the header row.
+This report always contains seven rows of data at the end of the report page. Above the data, the report has a section for comments with an unknown number of rows. In this example, you only want to keep those last seven rows of data and the header row.
 
 To do that, select **Keep bottom rows** from the table menu. In the **Keep bottom rows** dialog box, enter **8** in the **Number of rows** box.
 
@@ -70,8 +68,6 @@ You need to promote the column headers from the first row of your table. To do t
    Final sample table for Keep bottom rows after promoting the first row to column headers and retaining seven rows of data, and then setting the Units to the Number data type.
 :::image-end:::
 
-<!-- ![Final sample table for Keep bottom rows after promoting first row to column headers and retaining seven rows of data](images/me-filter-row-position-keep-rows-final-2.png "Final sample table for Keep bottom rows after promoting first row to column headers and retaining seven rows of data") -->
-
 More information: [Promote or demote column headers](table-promote-demote-headers.md)
 
 ### Keep a range of rows
@@ -82,9 +78,7 @@ Imagine the following table that comes out of a system with a fixed layout.
    Initial sample table with the columns (Column1, Column2, and Column3) all set to the Text data type, and containing the column headers and seven rows of data in the middle of the table.
 :::image-end:::
 
-<!-- ![Initial sample table with the column headers and data in the middle of the table](images/me-filter-row-position-keep-range-rows-start.png "Initial sample table with the column headers and data in the middle of the table") -->
-
-This report always contains five rows for the header, one row of column headers below that, seven rows of data below that, and then an unknown number of rows for its comments section. In this example, you want to get the eight rows after the header section of the report, and only those eight rows.
+This report always contains five rows for the header, one row of column headers below the header, seven rows of data below the column headers, and then an unknown number of rows for its comments section. In this example, you want to get the eight rows after the header section of the report, and only those eight rows.
 
 To do that, select **Keep range of rows** from the table menu. In the **Keep range of rows** dialog box, enter **6** in the **First row** box and **8** in the **Number of rows** box.
 
@@ -97,10 +91,8 @@ Similar to the previous example for keeping bottom rows, the result of this oper
 You can perform the same operation as described in [Keep bottom rows](#keep-bottom-rows) to promote the column headers from the first row of your table. After you set data types for your columns, your table will look like the following image.
 
 :::image type="complex" source="images/me-filter-row-position-keep-rows-final-3.png" alt-text="Final sample table for Keep range of rows":::
-   Final sample table for Keep range of rows after promoting first row to column headers and setting the Units column to the Number data type and retaining seven rows of data
+   Final sample table for Keep range of rows after promoting first row to column headers, setting the Units column to the Number data type, and keeping seven rows of data.
 :::image-end:::
-
-<!-- ![Final sample table for Keep range of rows after promoting first row to column headers and retaining seven rows of data](images/me-filter-row-position-keep-rows-final-3.png "Final sample table for Keep range of rows after promoting first row to column headers and retaining seven rows of data") -->
 
 ## Remove rows
 
@@ -124,8 +116,6 @@ Imagine the following table that comes out of a system with a fixed layout.
    Initial sample table for Remove top rows with the columns (Column1, Column2, and Column3) all set to the Text data type, a header at the top and a column header row and seven data rows at the bottom.
 :::image-end:::
 
-!-- ![Initial sample table for Remove top rows, with a header at the top and a column header row and data rows at the bottom](images/me-filter-row-position-remove-top-rows-start.png "Initial sample table for Remove top rows, with a header at the top and a column header row and data rows at the bottom") -->
-
 This report always contains a fixed header from row 1 to row 5 of the table. In this example, you want to remove these first five rows and keep the rest of the data.
 
 To do that, select **Remove top rows** from the table menu. In the **Remove top rows** dialog box, enter **5** in the **Number of rows** box.
@@ -142,17 +132,13 @@ You can perform the same operation as described in previous examples to promote 
    Final sample table for Remove top rows after promoting first row to column headers and setting the Units column to the Number data type, and retaining seven rows of data.
 :::image-end:::
 
-<!-- ![Final sample table for Remove top rows after promoting first row to column headers and retaining seven rows of data](images/me-filter-row-position-keep-rows-final-4.png "needs detailed alt text") -->
-
 ### Remove bottom rows
 
 Imagine the following table that comes out of a system with a fixed layout.
 
 :::image type="complex" source="images/me-filter-row-position-remove-bottom-rows-start.png" alt-text="Initial sample table for Remove bottom rows":::
-   Initial sample table for Remove bottom rows, with the header columns all set to the Text data type, seven rows of data, then a footer of fixed lenghth at the bottom.
+   Initial sample table for Remove bottom rows, with the header columns all set to the Text data type, seven rows of data, then a footer of fixed length at the bottom.
 :::image-end:::
-
-<!-- ![Initial sample table for Remove bottom rows, with the header columns all set to the Text data type, seven rows of data, then a footer of fixed lenghth at the bottom](images/me-filter-row-position-remove-bottom-rows-start.png "Initial sample table for Remove bottom rows, with seven rows of data, then a footer of fixed lenghth at the bottom") -->
 
 This report always contains a fixed section or footer that occupies the last five rows of the table. In this example, you want to remove those last five rows and keep the rest of the data.
 
@@ -171,8 +157,6 @@ Imagine the following table that comes out of a system with a dynamic layout.
 :::image type="complex" source="images/me-filter-row-position-remove-alternate-rows-start.png" alt-text="Initial sample table for the Remove alternate rows operation":::
    Initial sample table with the column headers present and all set to the Text data type, and every other data row containing comments about the data row above it.
 :::image-end:::
-
-<!-- ![Initial sample table with the column headers present, and every other data row containing comments about the data row above it](images/me-filter-row-position-remove-alternate-rows-start.png "Initial sample table with the column headers present, and every other data row containing comments about the data row above it") -->
 
 The way this report is structured is that you have elements in pairs of rows. Every odd row (1, 3, 5...) contains the data that you need. Every even row, directly underneath each odd row, contains comments about each of those records. You don't need the comments, and you want to remove all of them.
 

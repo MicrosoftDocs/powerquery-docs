@@ -73,10 +73,11 @@ Depending on the connector that you're using, you can preview data by using eith
 
 The **Navigator** window consists of two main sections:
 
-* The object selection pane is displayed on the left side of the window. The
-    user can interact with and select these objects.
+* The object selection pane is displayed on the left side of the window. The user can interact with and select these objects.
+
     >[!NOTE]
     >For Power Query in Excel, select the **Select multiple items** option from the upper-left corner of the navigation window to select more than one object at a time in the object selection pane.
+    
 * The data preview pane on the right side of the window shows a preview of the data from the object you selected.
 
 ![SQL Server connector navigator window](images/me-navigator.png "SQL Server connector navigator window")

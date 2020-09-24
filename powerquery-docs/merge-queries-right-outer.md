@@ -17,7 +17,6 @@ One of the join kinds available in the **Merge** dialog box in Power Query is a 
    Figure shows a table on the left with Date, CountryID, and Units columns. The emphasized CountryID column contains values of 1 in rows 1 and 2, 3 in row 3, and 4 in row 4. A table on the right contains ID and Country columns, with only one row. The emphasized ID column contains a value of 3 in row 1 (denoting Panama). A table below the first two tables contains Date, CountryID, Units, and Country columns. The table has one row, with the CountryID of 3 and the Country of Panama.
    :::image-end:::
 
-<!-- ![Sample right outer join](images/right-outer-join-operation.png "needs detailed alt text") -->
 <!-- Keep?
 >[!NOTE]
 >Samples used in this article are only to showcase the concepts. The concepts showcased here apply to all queries in Power Query.-->
@@ -28,7 +27,7 @@ This article uses sample data to show how to do a merge operation with the right
 
    ![Sales table containing Date, CountryID, and Units columns, with CountryID set to 1 in rows 1 and 2, 3 in row 3, and 4 in row 4](images/me-merge-operations-left-outer-join-sales-table.png "Sales table containing Date, CountryID, and Units columns, with CountryID set to 1 in rows 1 and 2, 3 in row 3, and 4 in row 4")
 
-* **Countries**: This is a reference table with the fields **id** and **Country**. The **id** field represents the unique identifier for each record.
+* **Countries**: This table is a reference table with the fields **id** and **Country**. The **id** field represents the unique identifier for each record.
 
    ![Countries table with a single row, with id set to 3 and Country set to Panama.](images/me-merge-operations-right-outer-join-countries-table.png "Countries table with a single row, with id set to 3 and Country set to Panama.")
 
@@ -43,7 +42,7 @@ The goal is to create a table like the following, where the name of the country 
 ![Right outer join final table with Date, CountryID, Units, and Country header columns, and a single row with data for Panama](images/me-merge-operations-right-outer-final-table.png "Right outer join final table with Date, CountryID, Units, and Country header columns, and a single row with data for Panama")
 
 <!--markdownlint-disable MD036-->
-**To perform a right outer join**
+**To do a right outer join**
 <!--markdownlint-enable MD036-->
 1. Select the **Sales** query, and then select **Merge queries**.
 2. In the **Merge** dialog box, under **Right table for merge**, select **Countries**.

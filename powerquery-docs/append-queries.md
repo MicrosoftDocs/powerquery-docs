@@ -27,7 +27,7 @@ You can find the **Append queries** command on the **Home** tab in the **Combine
 
 The append operation requires at least two tables. The **Append** dialog box has two modes:
 
-* **Two tables**: Combine two table queries together. This is the default mode.
+* **Two tables**: Combine two table queries together. This mode is the default mode.
 * **Three or more tables**: Allow an arbitrary number of table queries to be combined.
 
 >[!NOTE]

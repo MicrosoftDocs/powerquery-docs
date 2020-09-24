@@ -117,7 +117,7 @@ When Power Query defines a column data type or converts from one data type to an
 
    ![Locale setting in Power Query Online](images/me-data-types-project-options-locale.png "Locale setting in Power Query Online")
 
-* In Power Query for Desktop, Power Query automatically recognizes your operating system regional format and uses that to interpret the values for data type conversion. To override this locale configuration, open the query **Options** window, and in the left pane under **Current file**, select **Regional settings**. From here you can change the locale to the setting you want.
+* In Power Query for Desktop, Power Query automatically recognizes your operating system regional format and uses that to interpret the values for data type conversion. To override this locale configuration, open the query **Options** window, and in the left pane under **Current file**, select **Regional settings**. From here, you can change the locale to the setting you want.
 
    ![Locale setting in Power Query for Desktop](images/me-data-types-power-query-desktop-locale.png "Locale setting in Power Query for Desktop")
 

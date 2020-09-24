@@ -46,7 +46,7 @@ The following image shows the **Query Settings** pane for a query that has been 
 
 Using the retirement data from the [Using Power Query in Power BI Desktop](power-query-quickstart-using-power-bi.md) quickstart article, which you found by connecting to a Web data source, you can shape that data to fit your needs.
 
-For starters, you can add a custom column to calculate rank based on giving equal weight to all retirement factors<!--Edit okay? I found this confusing. I also wonder what the point of this is beyond creating a new column - can you explain it here?-->, and compare this to the existing column named **Rank**.  On the **Add Column** tab, select the **Custom Column** button, as shown in the following image.
+For starters, you can add a custom column to calculate rank based on giving equal weight to all retirement factors<!--Edit okay? I found this confusing. I also wonder what the point of this is beyond creating a new column - can you explain it here?-->, and compare this column to the existing column named **Rank**.  On the **Add Column** tab, select the **Custom Column** button, as shown in the following image.
 
 ![Create a custom column button](media/power-query-tutorial-shape-combine/shapecombine_customcolumn.png "Create a custom column button")
 
@@ -71,25 +71,25 @@ You can also transform column data types by using the **Transform** tab on the r
 
 ![Data Type button on the Transform tab](media/power-query-tutorial-shape-combine/queryoverview_transformribbonarrow.png "Data Type button on the Transform tab")
 
-Note that in **Query Settings**, **Applied Steps** reflect any shaping steps that have been applied to the data. If you want to remove any step from the shaping process, you simply select the X<!--note from editor: Can we get this inline image here? It doesn't really look like an "X."--> on the left side of the step. In the following image, the **Applied Steps** section lists what has happened so far, which includes connecting to the website (**Source**), selecting the table (**Navigation**), and, while loading the table, Power Query Editor automatically changing text-based number columns from **Text** to **Whole Number** (**Changed Type**). The last two steps show your previous actions, **Added Custom** and **Changed Type1**. 
+Note that in **Query Settings**, **Applied Steps** reflect any shaping steps that have been applied to the data. If you want to remove any step from the shaping process, you select the X<!--note from editor: Can we get this inline image here? It doesn't really look like an "X."--> on the left side of the step. In the following image, the **Applied Steps** section lists what has happened so far, which includes connecting to the website (**Source**), selecting the table (**Navigation**), and, while loading the table, Power Query Editor automatically changing text-based number columns from **Text** to **Whole Number** (**Changed Type**). The last two steps show your previous actions, **Added Custom** and **Changed Type1**. 
 
 ![Query Settings pane](media/power-query-tutorial-shape-combine/shapecombine_appliedstepsearly2.png "Query Settings pane")
 
 Before you can work with this query, you need to make a few changes to get its data where you want it:
 
 1. **Adjust the rankings by removing a column**: You've decided **Cost of living** is a non-factor in your results. You remove this column, but find that the data remains unchanged. You can fix this by following the rest of the steps in this section.
-2. **Fix a few errors**: Because you removed a column, you need to readjust your calculations in the **New Rank** column. This involves changing a formula.
+2. **Fix a few errors**: Because you removed a column, you need to readjust your calculations in the **New Rank** column. This readjustment involves changing a formula.
 3. **Sort the data** based on the **New Rank** and **Rank** columns. 
 4. **Replace data**: Replace a specific value and insert an **Applied step**.
 5. **Change the table name**: **Table 0** isn't a useful descriptor. Changing it is simple.
 
 ### 1. Adjust the rankings by removing a column
 
-To remove the **Cost of living** column, simply select the column, select the **Home** tab on the ribbon, and then select **Remove Columns**, as shown in the following image.
+To remove the **Cost of living** column, select the column, select the **Home** tab on the ribbon, and then select **Remove Columns**, as shown in the following image.
 
 ![Remove a column](media/power-query-tutorial-shape-combine/shapecombine_removecolumnscostofliving.png "Remove a column")
 
-Notice that the **New Rank** values haven't changed; this is due to the ordering of the steps. Because Power Query Editor records steps sequentially&mdash;yet independently of each other&mdash;you can move each step up or down in the **Applied Steps** sequence. Just right-click any step, and a menu appears with commands you can use to **Rename**, **Delete**, **Delete Until End** (remove the current step, and all subsequent steps too), **Move Up**, or **Move Down**. Go ahead and move up the last step, **Removed Columns**, to just before the **Added Custom** step.
+Notice that the **New Rank** values haven't changed; this is because of the ordering of the steps. Because Power Query Editor records steps sequentially&mdash;yet independently of each other&mdash;you can move each step up or down in the **Applied Steps** sequence. Just right-click any step, and a menu appears with commands you can use to **Rename**, **Delete**, **Delete Until End** (remove the current step, and all subsequent steps too), **Move Up**, or **Move Down**. Go ahead and move up the last step, **Removed Columns**, to just before the **Added Custom** step.
 
 ![Move a step in Query Settings](media/power-query-tutorial-shape-combine/shapecombine_movestep.png "Move a step in Query Settings")
 
@@ -148,13 +148,13 @@ Because you're inserting a step, Power Query Editor warns you about the danger o
 
 Change the value to **51**, and the data for Arizona is replaced. When you create a new step, Power Query Editor names it based on the action&mdash;in this case, **Replaced Value**. When you have more than one step with the same name in your query, Power Query Editor adds a number (in sequence) to each subsequent step to differentiate between them.
 
-Now select the last step, **Sorted Rows**, and notice that the data about Arizona's new ranking has indeed changed. This is because you inserted the **Replaced Value** step in the right place, before **Added Custom**.
+Now select the last step, **Sorted Rows**, and notice that the data about Arizona's new ranking has indeed changed. This change is because you inserted the **Replaced Value** step in the right place, before **Added Custom**.
 
 ### 5. Change the table name
 
 Lastly, you'll want to change the name of that table to something descriptive. When you create reports, it's useful to have descriptive table names, especially when you connect to multiple data sources that are all listed on the **Fields** pane of the **Report** view.
 
-Changing the table name is easy. On the **Query Settings** pane, under **Properties**, simply enter **RetirementStats** in the **Name** box, and then select **Enter**.
+Changing the table name is easy. On the **Query Settings** pane, under **Properties**, enter **RetirementStats** in the **Name** box, and then select **Enter**.
 
 ![Rename a table](media/power-query-tutorial-shape-combine/shapecombine_renametable2.png "Rename a table")
 <!--note from editor: The following paragraph needs to be set off somehow. Formatting can really help give shape to content that kind of weaves in and out of step-by-step guidance and commentary.-->
