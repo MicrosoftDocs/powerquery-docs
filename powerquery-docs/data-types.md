@@ -24,7 +24,7 @@ The most common data types used in Power Query are listed in the following table
 
 |Data type | Icon | Description|
 ----------|------|------------|
-|**Text**| ![Text](images/Text_20.png)  |A Unicode character data string. Can be strings, numbers, or dates represented in a text format. Maximum string length is 268,435,456 Unicode characters (256 mega-characters<!--I don't find a definition for "mega character" anywhere, can you verify?-->) or 536,870,912 bytes.|
+|**Text**| ![Text](images/Text_20.png)  |A Unicode character data string. Can be strings, numbers, or dates represented in a text format. Maximum string length is 268,435,456 Unicode characters (where each Unicode character is two bytes) or 536,870,912 bytes.|
 |**True/False**|![True/False](images/Logical_20.png) |A Boolean value of either True or False.|
 | **Decimal number**| ![Decimal Number](images/Number_20.png) |Represents a 64-bit (eight-byte) floating point number. It's the most common number type, and corresponds to numbers as you usually think of them. Although designed to handle numbers with fractional values, it also handles whole numbers. The Decimal Number type can handle negative values from &ndash;1.79E +308 through &ndash;2.23E &ndash;308, 0, and positive values from 2.23E &ndash;308 through 1.79E + 308. For example, numbers like 34, 34.01, and 34.000367063 are valid decimal numbers. The largest precision that can be represented in a Decimal Number type is 15 digits long. The decimal separator can occur anywhere in the number. The Decimal Number type corresponds to how Excel stores its numbers.|
 |**Fixed decimal number** | ![Currency](images/Currency_20.png) | Also known as the Currency type, this data type has a fixed location for the decimal separator. The decimal separator always has four digits to its right and allows for 19 digits of significance. The largest value it can represent is 922,337,203,685,477.5807 (positive or negative). The Fixed Decimal Number type is useful in cases where rounding might introduce errors. When you work with many numbers that have small fractional values, they can sometimes accumulate and force a number to be slightly off. Because the values past the four digits to the right of the decimal separator are truncated, the Fixed Decimal Number type can help you avoid these kinds of errors. | 
@@ -123,7 +123,7 @@ When Power Query defines a column data type or converts from one data type to an
 
 This locale setting is important for interpreting text values into a specific data type. For example, imagine that you have your locale set as **English (United States)**, but a column in one of your CSV files has dates formatted in the United Kingdom format of day/month/year.
 
-![Sample original table](images/me-data-types-locale-sample-original.png "needs detailed alt text")
+![Sample original table with dates in the Date column set to UK format of day, then month, then year](images/me-data-types-locale-sample-original.png "Sample original table with dates in the Date column set to UK format of day, then month, then year")
 
 When you try setting the data type of the **Date** column to be **Date**, you get error values.
 
@@ -141,7 +141,7 @@ In the **Change column type with locale** dialog box, you select the data type t
 
 Using this locale, Power Query will be able to interpret values correctly and convert those values to the right data type.
 
-![Final table after using locale](images/me-data-types-locale-sample-final.png "needs detailed alt text")
+![Final table after using locale, with the dates in the Date column set to US format of month, then day, then year](images/me-data-types-locale-sample-final.png "Final table after using locale, with the dates in the Date column set to US format of month, then day, then year")
 
 **To verify final date values**
 

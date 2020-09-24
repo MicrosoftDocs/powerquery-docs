@@ -93,7 +93,7 @@ When you select a shortcut menu item (or a ribbon button), Power Query applies t
 
 The **Query Settings** pane is where all steps associated with a query are displayed. For example, in the following image, the **Applied steps** section reflects the fact that the data type of the **Overall score** column has changed.
 
-![The Query Settings pane](media/power-query-quickstart-using-power-bi/queryoverview_querysettingspane.png "needs detailed alt text")
+![The Query Settings pane, with emphasis on the Changed Type step at the bottom of the Applied Steps list](media/power-query-quickstart-using-power-bi/queryoverview_querysettingspane.png "The Query Settings pane, with emphasis on the Changed Type step at the bottom of the Applied Steps list")
 
 As you apply additional shaping steps to the query, they're captured in the **Applied Steps** section.
 

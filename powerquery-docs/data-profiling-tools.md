@@ -48,7 +48,7 @@ The number of records in each column quality category is also displayed as a per
 
 By hovering over any of the columns, you are presented with the numerical distribution of the quality of values throughout the column. Additionally, selecting the ellipsis button (...) opens some quick action buttons for operations on the values.
 
-![Data quality options](images/me-column-quality-hover.png "needs detailed alt text")
+![Distribution of names column with 701 names valid (100 percent), zero errors and zero empty, with quick action commands displayed](images/me-column-quality-hover.png "Distribution of names column with 701 names valid (100 percent), zero errors and zero empty, with quick action commands displayed")
 
 ## Column distribution
 
