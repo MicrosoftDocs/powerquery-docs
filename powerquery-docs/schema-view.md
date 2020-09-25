@@ -6,10 +6,10 @@ ms.author: jogabuar
 ms.service: powerquery
 ms.reviewer: 
 ms.date: 09/25/2020
-ms.author: JorgeGabuardiMS
 ---
 
 # Using Schema view (Preview)
+
 Schema view is designed to optimize your flow when working on schema level operations by putting your query's column information front and center. Schema view provides contextual interactions to shape your data structure, and lower latency operations as it only requires the column metadata to be computed and not the complete data results. 
 
 This article walks you through schema view and the capabilities it offers. 
