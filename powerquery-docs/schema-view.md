@@ -1,20 +1,20 @@
 ---
-title: "Using schema view"
+title: "Using Schema view (Preview)"
 description: Schema view optimizes the experience when working on schema-related data operations
 author: jogabuar
 ms.service: powerquery
 ms.reviewer: 
-ms.date: 09/22/2020
+ms.date: 09/25/2020
 ms.author: jogabuar
 ---
 
-# Using Schema view
+# Using Schema view (Preview)
 Schema view is designed to optimize your flow when working on schema level operations by putting your query's column information front and center. Schema view provides contextual interactions to shape your data structure, and lower latency operations as it only requires the column metadata to be computed and not the complete data results. 
 
 This article walks you through schema view and the capabilities it offers. 
 
 
-![Schema view](images/schema-view-overview.png)
+![Schema view displays a list with your query's columns information including name, type, and a key decorator.](images/schema-view-overview.png)
 
 ## Overview
 When working on data sets with many columns, simple tasks can become incredibly cumbersome because even finding the right column by horizontally scrolling and parsing through all the data is inefficient. Schema view displays your column information in a list that's easy to parse and interact with, making it easier than ever to work on your schema.
@@ -26,11 +26,12 @@ You can turn on schema view by selecting **Schema view** in the **View** tab. Wh
 ![Schema view entry point in the View tab](images/schema-view-entry-point.png)
 
 
-## Working on your schema
-You can reorder your columns by dragging and dropping list items.
+## Reordering columns
+One common task when working on your schema is reordering columns. In Schema View this can easily be done by dragging columns in the list and dropping in the right location until you achieve the desired column order.
 
-![Drag and drop columns](images/schema-view-drag.png)
+![Columns in Schema view can be reordered by dragging them and dropping them in the desired position.](images/schema-view-drag.png)
 
-For additional changes to your schema, you have the most used column-level transforms right at your fingertips directly in the list and in the Schema tools tab. Plus, you can also use transforms available in other tabs on the ribbon. 
+## Applying transforms
+For more advanced changes to your schema, you can find the most used column-level transforms right at your fingertips directly in the list and in the Schema tools tab. Plus, you can also use transforms available in other tabs on the ribbon. 
 
-![Schema tools](images/schema-tools.png)
+![Schema Tools is a contextual tab in the ribbon that's available when in Schema view with the most used column-level transforms](images/schema-tools.png)
