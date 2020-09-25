@@ -29,6 +29,9 @@ This table contains values by country and date in a simple table. In this exampl
    Table containing a Country column set in the Text data type, and 6/1/2020, 7/1/2020, and 8/1/2020 columns set as the Whole number data type. The Country column contains Canada in row 1, Panama in row 2, and USA in row 3. 
 :::image-end:::
 
+>[!NOTE]
+> During the pivot columns operation, Power Query will sort the table based on the values found on the first column&mdash;at the left side of the table&mdash;in ascending order.
+
 <!--markdownlint-disable MD036-->
 **To pivot a column**
 <!--markdownlint-enable MD036-->
