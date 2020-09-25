@@ -5,7 +5,7 @@ author: jogabuar
 ms.service: powerquery
 ms.reviewer: 
 ms.date: 09/25/2020
-ms.author: jogabuar
+ms.author: JorgeGabuardiMS
 ---
 
 # Using Schema view (Preview)
