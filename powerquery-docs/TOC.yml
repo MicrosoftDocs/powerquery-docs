@@ -18,11 +18,13 @@
         href: power-query-tutorial-shape-combine.md
       - name: "Using the Applied Steps list"
         href: applied-steps.md
+      - name: "Using the data profiling tools"
+        href: data-profiling-tools.md
       - name: "Using the Queries pane"
         href: queries-pane.md
       - name: "Share a query"
         href: share-query.md   
-      - name: "Custom functions"
+      - name: "Using custom functions"
         href: custom-function.md        
       - name: Transform table
         items:
@@ -43,9 +45,7 @@
         - name: "Transpose table"
           href: transpose-table.md
         - name: "Reverse rows"
-          href: reverse-rows.md
-        - name: "Data profiling tools"
-          href: data-profiling-tools.md
+          href: reverse-rows.md        
         - name: "Data types"
           href: data-types.md
         - name: "Dealing with errors"
@@ -242,6 +242,8 @@
         href: Connectors/ODataFeed.md
       - name: "ODBC"
         href: Connectors/Odbc.md
+      - name: "Oracle database"
+        href: Connectors/OracleDatabase.md
       - name: "PostgreSQL"
         href: Connectors/PostgreSQL.md
       - name: "QuickBooks Online"
@@ -250,6 +252,16 @@
         href: Connectors/SalesforceObjects.md
       - name: "Salesforce Reports"
         href: Connectors/SalesforceReports.md
+      - name: "SAP HANA database"
+        items:
+        - name: Overview
+          href: Connectors/sap-hana/overview.md
+        - name: SAP HANA encryption
+          href: Connectors/sap-hana/sap-hana-encryption.md
+        - name: Configure ODBC for SAP HANA
+          href: Connectors/sap-hana/configure-odbc-sap-hana.md
+        - name: Troubleshooting
+          href: Connectors/sap-hana/sap-hana-troubleshooting.md
       - name: "SharePoint Folder"
         href: Connectors/SharePointFolder.md
       - name: "SharePoint List"

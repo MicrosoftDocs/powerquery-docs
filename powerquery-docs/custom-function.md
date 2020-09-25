@@ -1,5 +1,5 @@
 ---
-title: Custom functions
+title: Using cCustom functions
 description: An article on how to create custom functions in Power Query
 author: ptyx507
 ms.service: powerquery
@@ -7,7 +7,7 @@ ms.reviewer:
 ms.date: 08/31/2020
 ms.author: v-miesco
 ---
-# Custom functions
+# Using custom functions
 
 If you find yourself in a situation where you need to apply the same set of transformations to different queries or values, creating a Power Query custom function that can be reused as many times as you need could be beneficial. A Power Query custom function is a mapping from a set of input values to a single output value, and is created from native M functions and operators. 
 
