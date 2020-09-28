@@ -47,6 +47,6 @@ Go to the Dataflows section under the Data tab in the [Power Apps maker portal](
 The dataflow name will prepopulate with the template name provided. Once you're done with the dataflow creation screen, click *Next* and  you will see your queries from Excel in the query editor. 
 
 >[!Note]
-> For more information on how to configure and create Power Platform dataflows, see [Create and use dataflows](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/create-and-use-dataflows).
+> For more information on how to configure and create Power Platform dataflows, see [Create and use dataflows](#dataflows/create-use.md).
 
 From this point on, you will go through the normal dataflow creation and configuration process so you can further transform your data, set refresh schedules on the dataflow, and any other dataflow operation possible.
