@@ -15,7 +15,7 @@ You can easily create Power Platform dataflows from queries in  Excel workbooks 
 This article walks you through how to export queries from Excel into a Power Query template that can then be imported into Power Platform dataflow to create a dataflow. 
 
 >[!Note]
-> The preview feature for creating Power Query templates from queries feature is only available to Excel Insiders. For more information on the Office insider program, see [Office Insider](https://insider.office.com).
+> The preview feature for creating Power Query templates from queries feature is only available to Office Insiders. For more information on the Office insider program, see [Office Insider](https://insider.office.com).
 
 ## Overview
 Working with large datasets or long-running queries can be cumbersome every time you have to manually trigger a data refresh Excel because it takes resources from your PC to do this and it you have to wait until the computation is done to get the latest data. Moving these operations to a Power Platform dataflows is an effective way to free up your computer's resources and to have the latest data easily available for you to consume in Excel.
