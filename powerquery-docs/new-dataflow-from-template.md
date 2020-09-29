@@ -4,7 +4,7 @@ description: Easily create Power Platform dataflows from queries in Microsoft Ex
 author: JorgeGabuardiMS
 ms.author: jogabuar
 ms.service: powerquery
-ms.reviewer: douklo
+ms.reviewer: v-douklo
 ms.date: 09/28/2020
 ---
 
