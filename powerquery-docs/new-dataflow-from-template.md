@@ -56,3 +56,6 @@ The first step is to create a Power Query template with your queries in Excel.
 4. Select the Power Query template you created earlier. The dataflow name will prepopulate with the template name provided. Once you're done with the dataflow creation screen, select **Next** to see your queries from Excel in the query editor. 
 
 5. From this point, go through the normal dataflow creation and configuration process so you can further transform your data, set refresh schedules on the dataflow, and any other dataflow operation possible. For more information on how to configure and create Power Platform dataflows, see [Create and use dataflows](dataflows/create-use.md).
+
+### See also
+[Create and use dataflows in Power Apps](/powerapps/maker/common-data-service/create-and-use-dataflows)
