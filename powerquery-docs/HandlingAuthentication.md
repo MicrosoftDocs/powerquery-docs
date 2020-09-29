@@ -110,7 +110,7 @@ Extensions can optionally implement `Refresh` (exchanging a refresh token for a 
 > Power Query extensions are evaluated in applications running on client machines. Data Connectors _should not_ use confidential secrets in their OAuth flows, as users may inspect the extension or network traffic to learn the secret. See the [Proof Key for Code Exchange by OAuth Public Clients RFC](https://tools.ietf.org/html/rfc7636) (also known as PKCE) for further details on providing flows that don't rely on shared secrets.
 
 There are two sets of OAuth function signatures; the original signature that contains a minimal number of parameters, and an advanced signature that
-accepts additional parameters. Most OAuth flows can be implemented using the original signatures. You can also mix and match signature types in your implementation. The function calls are matches based on the number of parameters (and their types) - the parameter names are not taken into consideration.
+accepts additional parameters. Most OAuth flows can be implemented using the original signatures. You can also mix and match signature types in your implementation. The function calls are matches based on the number of parameters (and their types). The parameter names are not taken into consideration.
 
 See the [Github](samples/Github/README.md) sample for more details.
 
@@ -170,7 +170,7 @@ Resource = "77256ee0-fe79-11ea-adc1-0242ac120002"   // AAD resource value for yo
 Resource = (dataSourcePath) => FunctionThatDeterminesResourceFromDataSourcePath(dataSourcePath)
 ```
 
-Connectors that use an [Uri based identifier](#functions-with-an-uri-parameter) do not need to provide a `Resource` value.
+Connectors that use a [Uri based identifier](#functions-with-a-uri-parameter) do not need to provide a `Resource` value.
 By default, the value will be equal to the root path of the connector's Uri parameter.
 If the data source's AAD resource is different than the domain value (for example, it uses a GUID), then a `Resource` value needs to be provided.
 
@@ -250,7 +250,7 @@ The _Kind_ value comes from the [Data Source Kind](HandlingDataAccess.md#data-so
 
 The _Path_ value is derived from the _required parameters_ of your [data source function](HandlingDataAccess.md#data-source-functions). Optional parameters aren't factored into the data source path identifier.
 As a result, all data source functions associated with a data source kind must have the same parameters.
-There's special handling for functions that have a single parameter of type `Uri.Type`. See the [section below](#functions-with-an-uri-parameter) for details.
+There's special handling for functions that have a single parameter of type `Uri.Type`. See the [section below](#functions-with-a-uri-parameter) for details.
 
 You can see an example of how credentials are stored in the **Data source settings** dialog in Power BI Desktop. In this dialog, the Kind is represented by an icon, and the Path value is displayed as text.
 
@@ -293,12 +293,11 @@ When a Label value is defined, the data source path value would not be shown:
 #### Excluding Required Parameters from your Data Source Path
 
 If you want a function parameter to be required, but not to be included as part of your data source path, you can add `DataSource.Path = false` to the function documentation metadata.
-This property can be added to one or more parameters for your function. Note that adding this field will remove the value from your data source path (meaning that it will no longer be passed to your `TestConnection` function),
-so it should only be used for parameters that are not required to identify your data source, or distinguish credentials.
+This property can be added to one or more parameters for your function. Note that adding this field removes the value from your data source path (meaning that it will no longer be passed to your `TestConnection` function),
+so it should only be used for parameters that aren't required to identify your data source, or distinguish credentials.
 
 For example, the connector in the [HelloWorldWithDocs sample](https://github.com/Microsoft/DataConnectors/tree/master/samples/HelloWorldWithDocs) would require different credentials for different `message` values.
-Adding `DataSource.Path = false` to the `message` parameter removes it from the data source path calculation, effectively making the conenctor a "singleton" -
-all calls to `HelloWorldWithDocs.Contents` are treated as the same data source, and the user will only provide credentials once.
+Adding `DataSource.Path = false` to the `message` parameter removes it from the data source path calculation, effectively making the connector a "singleton". All calls to `HelloWorldWithDocs.Contents` are treated as the same data source, and the user will only provide credentials once.
 
 ```powerquery
 HelloWorldType = type function (
@@ -328,10 +327,10 @@ HelloWorldType = type function (
     ];
 ```
 
-### Functions with an Uri parameter
+### Functions with a Uri parameter
 
-Because data sources with an Uri based identifier are so common, there's special handling in the Power Query UI when dealing with Uri based data source paths.
-When an Uri-based data source is encountered, the credential dialog provides a drop down allowing the user to select the base path, rather than the full path (and all paths in between).
+Because data sources with a Uri based identifier are so common, there's special handling in the Power Query UI when dealing with Uri based data source paths.
+When a Uri-based data source is encountered, the credential dialog provides a drop down allowing the user to select the base path, rather than the full path (and all paths in between).
 
 ![DataSourceUrl](images/credentialPromptWithUrl.png)
 
