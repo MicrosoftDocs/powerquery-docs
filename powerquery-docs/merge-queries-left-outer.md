@@ -17,10 +17,6 @@ One of the join kinds available in the **Merge** dialog box in Power Query is a 
    Figure shows a table on the left with Date, CountryID, and Units columns. The emphasized CountryID column contains values of 1 in rows 1 and 2, 3 in row 3, and 4 in row 4. A table on the right contains ID and Country columns. The emphasized ID column contains values of 1 in row 1 (denoting USA), 2 in row 2 (denoting Canada), and 3 in row 3 (denoting Panama). A table below the first two tables contains Date, CountryID, Units, and Country columns. The table has four rows, with the top two rows containing the data for CountryID 1, one row for CountryID 3, and one row for Country ID 4. Since the right table didn't contain an ID of 4, the value of the fourth row in the Country column contains null.
    :::image-end:::
 
-<!--I don't understand the intent of this note; recommend deleting.
->[!NOTE]
->Samples used in this article are only to showcase the concepts. The concepts showcased here apply to all queries in Power Query.-->
-
 This article uses sample data to show how to do a merge operation with the left outer join. The sample source tables for this example are:
 
 * **Sales**: This table includes the fields **Date**, **CountryID**, and **Units**. **CountryID** is a whole number value that represents the unique identifier from the **Countries** table.
