@@ -45,7 +45,7 @@ Now you'll sort the **Position** field in ascending order as well, but this time
 
 ![Sort commands on the Position drop-down menu](images/me-sort-by-column-position.png "Sort commands on the Position drop-down menu")
 
-Notice that this action doesn't create a new **Sorted rows** step, but modifies it to perform both sort operations in one step.<!--Suggested.--> When you sort multiple columns, the order that the columns are sorted in is based on the order the columns were selected in.<!--Suggested.--> A visual indicator, displayed as a number to the left of the drop-down menu indicator, shows the place each column occupies in the sort order.<!--Suggested.-->
+Notice that this action doesn't create a new **Sorted rows** step, but modifies it to perform both sort operations in one step. When you sort multiple columns, the order that the columns are sorted in is based on the order the columns were selected in. A visual indicator, displayed as a number to the left of the drop-down menu indicator, shows the place each column occupies in the sort order.
 
 ![Sorted columns with numbers that represent the sort order](images/me-sort-by-column-multi-column-sort.png "Sorted columns with numbers that represent the sort order")
 
