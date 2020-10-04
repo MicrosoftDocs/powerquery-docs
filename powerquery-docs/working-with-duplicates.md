@@ -44,7 +44,7 @@ The result of that operation will give you the table that you're looking for.
 ![Final table with duplicates removed from all columns](images/me-working-with-duplicates-table-row-duplicates-final.png "Final table with duplicates removed from all columns")
 
 >[!NOTE]
->This operation can also be performed with a subset of columns. Multiple selection operates over the entire list<!--Edit okay?--> and not individual columns. 
+>This operation can also be performed with a subset of columns. 
 
 ### Remove duplicates from a single column
 
