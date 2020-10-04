@@ -102,11 +102,6 @@ When you go back to the **CSV Files** query, you'll notice that the last step is
 
 ![Output query with step-level error](images/me-combine-files-csv-column-name-error.png "Output query with step-level error")
 
->[!NOTE]
-> If the data preview is still not showing you the correct data preview, you can select **Refresh** in the **Query** group on the **Home** tab to refresh the data preview of your query.<!--What does "correct data preview" mean here? The data isn't actually corrected until you delete that last step, right? Should this note be moved to after Line 110?-->
->
->![Refresh data preview](images/me-combine-files-csv-refresh-preview.png "Refresh data preview")
-
 You can remove this last step of the query from the **Applied steps** pane by selecting the delete icon<!--Can we get ahold of this icon to use here?--> on the left side of the name of the step. After deleting this step, your query will show the correct results.
 
 ![Combine files without error step](images/me-combine-files-csv-expanded-table-step.png "Combine files without error step")
