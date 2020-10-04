@@ -40,14 +40,14 @@ You can find the **Group by** button in three places:
    ![Group by on the shortcut menu](images/me-group-by-right-click-icon.png "Group by on the shortcut menu")
 
 ## Use an aggregate function to group by one or more columns
-<!--Edit okay?-->
+
 In this example, your goal is to summarize the total units sold at the country and sales channel level. You'll use the **Country** and **Sales Channel** columns to perform the group by operation.
 
 1. Select **Group by** on the **Home** tab.
-1. Select the **Advanced** option, so you can select multiple columns to group by. 
-1. Select the **Country** and **Sales Channel** columns.
-1. Create a new column by aggregating the **Units** column, using the **Sum** operation.<!--The guidance gets very un-specific here. What are the buttons the reader needs to push?-->
-1. Name this new column **Total units**.
+2. Select the **Advanced** option, so you can select multiple columns to group by. 
+3. Select the **Country** and **Sales Channel** columns.
+4. In the New columns section, create a new column where the name is **Total units**, the aggregate operation is **Sum**, and the column used is **Units**.
+5. Hit OK
 
 ![Group by dialog box with aggregated columns](images/me-group-by-add-aggregated-column-window.png "Group by dialog box with aggregated columns")
 
@@ -92,7 +92,7 @@ Name your new column **Top performer product**. Enter the formula `Table.Max([Pr
 
 ![Custom column formula with Table.Max](images/me-group-by-row-operation-custom-column-formula.png "Custom column formula with Table.Max")
 
-The result of that formula creates a new column with \[Record\] values with the row with the maximum value for the **Units** column of each \[Table\] value in the **Products** column.<!--Don't know what this means. -->
+The result of that formula creates a new column with \[Record\] values. These record values are essentially a table with just one row. These records contain the row with the maximum value for the **Units** column of each \[Table\] value in the **Products** column.
 
 ![Result of the custom column formula with Table.Max](images/me-group-by-row-operation-custom-column-details-preview-pane.png "Result of the custom column formula with Table.Max")
 
