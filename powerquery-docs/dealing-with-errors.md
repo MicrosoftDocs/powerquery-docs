@@ -28,8 +28,6 @@ A step-level error prevents the query from loading and displays the error compon
 * **Error message**: The section directly after the reason. In the example above, the error message is **The column 'Column' of the table wasn't found**.
 * **Error detail**: The section directly after the **Details:** string. In the example above, the error detail is **Column**.
 
-> [!NOTE] 
-> Currently, Power Query Online only provides an error message when step-level errors are found.<!--Does this mean that the error message component (second bullet above) isn't displayed for cell-level errors, or the entire error? If the former, can this say "only provides the error message component for step-level errors"?-->
 
 ### Common step-level errors
 
