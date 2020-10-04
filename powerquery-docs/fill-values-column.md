@@ -59,7 +59,7 @@ The result of that operation will look like the following image.
 
    ![Filter the table for non-null values](images/me-fill-down-up-filter-null-values.png "Filter the table for non-null values")
 
-2. Rename the **Comments** column as **Sales Person**.<!--Actually should be "Salesperson," but I won't change it here unless you can change the sample text also.-->
+2. Rename the **Comments** column as **Sales Person**. 
 
    ![Column renamed](images/me-fill-down-up-rename-column.png "Column renamed")
 
