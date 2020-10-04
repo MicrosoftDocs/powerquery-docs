@@ -17,10 +17,6 @@ One of the join kinds available in the **Merge** dialog box in Power Query is an
    Figure shows a table on the left with Date, CountryID, and Units columns. The emphasized CountryID column contains values of 1 in rows 1 and 2, 3 in row 3, and 2 in row 4. A table on the right contains ID and Country columns. The emphasized ID column contains values of 3 in row 1 (denoting Panama) and 4 in row 2 (denoting Spain). A table below the first two tables contains Date, CountryID, Units, and Country columns, but only one row of data for Panama. 
    :::image-end:::
 
-<!-- Keep?
->[!Note]
->Samples used in this article are only to showcase the concepts. The concepts showcased here apply to all queries in Power Query. -->
-
 This article uses sample data to show how to do a merge operation with the inner join. The sample source tables for this example are:
 
 * **Sales**: This table includes the fields **Date**, **CountryID**, and **Units**. **CountryID** is a whole number value that represents the unique identifier from the **Countries** table.
