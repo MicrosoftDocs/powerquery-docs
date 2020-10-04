@@ -11,10 +11,10 @@ ms.custom: edited
 
 # Filter by values in a column
 
-In Power Query, you can include or exclude rows according to a specific value in a column. You can choose from two methods to filter the values in your column:
-<!--These introduction should be rewritten to mention that type-specific filters are also covered. The two ways of accessing the filters aren't as interesting. This is another example of how describing the UI and describing what the reader wants to know are often at odds with each other.-->
+In Power Query, you can include or exclude rows according to a specific value in a column. You can choose from three methods to filter the values in your column:
 * [Sort and filter menu](#sort-and-filter-menu)
 * [Cell shortcut menu](#cell-shortcut-menu)
+* [Type-specific filter](#type-specific-filters)
 
 After you apply a filter to a column, a small filter icon appears in the column heading, as shown in the following illustration.
 
@@ -41,10 +41,11 @@ The **Remove empty** command applies two filter rules to your column. The first 
 You then select **Remove empty** from the sort and filter menu, as shown in the following image.
 
 ![Remove empty rows](images/me-filter-values-remove-empty.png "Remove empty rows")
-<!-- You don't need to document every way to do something, every time. Suggest deleting the following:
+
 You can also select this option from the **Home** tab in the **Reduce Rows** group in the **Remove Rows** drop-down options, as shown in the next image.
+
 ![Remove empty rows option in Home tab](images/me-filter-values-remove-rows-empty.png "Remove empty rows option in Home tab")
--->
+
 The result of the **Remove empty** operation gives you the same table without the empty values.
 
 ![Sample table after the null row and blank row were removed](images/me-filter-values-after-remove-empty.png "Sample table after the null row and blank row were removed")
@@ -57,21 +58,21 @@ When a filter is applied to a column, the **Clear filter** command appears on th
 
 ### Auto filter
 
-The list in the sort and filter menu is called the *auto filter* list, which shows the unique values in your column. You can manually select or deselect which values to include in the list. Any selected values will be taken into consideration by the filter; any values that aren't selected will be ignored.<!--Edit okay? I don't know what "taken into consideration" means here. If you mean that the filter will operate only on the values with check marks, it seems misleading to say that the unselected values will be "filtered out."-->
+The list in the sort and filter menu is called the *auto filter* list, which shows the unique values in your column. You can manually select or deselect which values to include in the list. Any selected values will be taken into consideration by the filter; any values that aren't selected will be ignored.
 
 This auto filter section also has a search bar to help you find any values from your list.
 
 ![Auto filter list](images/me-filter-values-auto-filter-menu.png "Auto filter list")
 
 > [!NOTE]
-> When you load the auto filter list, only the top 1,000 distinct values in the column are loaded. If there are 1,000 or more<!--This is ambiguous; what happens if this first load is exactly 1,000? Should the previous sentence say "only the top 999 distinct values"?--> values in the column in Power Query Editor that you're filtering, a message will appear indicating that the list of values in the filter list might be incomplete, and the **Load more** link appears. Select the **Load more** link to load another 1,000 distinct values.
+> When you load the auto filter list, only the top 1,000 distinct values in the column are loaded. If there are more than 1,000 distinct values in the column in the that you're filtering, a message will appear indicating that the list of values in the filter list might be incomplete, and the **Load more** link appears. Select the **Load more** link to load another 1,000 distinct values.
 >
 > * If exactly 1,000 distinct values are found again, the list is displayed with a message stating that the list might still be incomplete.
 > * If fewer than 1,000 distinct values are found, the full list of values is shown.
 
 ## Cell shortcut menu
 
-You can right-click a particular cell in a column to open the shortcut menu for that value. From the small filter icon<!--Should this be "Point to the small filter icon, and then select..."?-->, you can then select the filter option you want to use.
+You can right-click a particular cell in a column to open the shortcut menu for that value. Point to the small filter icon, and then select the filter option you want to use.
 
 ![Right-click to filter rows based on the contents of a cell](images/me-filter-values-right-click.png "Right-click to filter rows based on the contents of a cell")
 
