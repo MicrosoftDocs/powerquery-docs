@@ -29,7 +29,6 @@ With Power Query, you can replace one value with another value wherever that val
 
    ![Replace values on the Transform tab](images/me-replace-values-transform-tab.png "Replace values on the Transform tab")
 
-<!--I lost the story in this section; the following edits are suggested. You don't want to have just one H2, so I promoted the H3s.-->
 The replace values operation has two modes:
 
 - **Replace entire cell contents**: This is the default behavior for non-text columns, where Power Query searches for and replaces the full contents of a cell. You can enable this mode for text columns by selecting **Advanced options**, and then selecting the **Match entire cell contents** check box.
