@@ -59,4 +59,4 @@ Select **OK** to connect to the database by using an unencrypted connection, or 
 
 ## Next steps
 
-[Optimize Power Query when expanding table columns](optimize-expanding-table-columns.md)
+[Optimize Power Query when expanding table columns](../optimize-expanding-table-columns.md)

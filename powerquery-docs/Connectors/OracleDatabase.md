@@ -119,4 +119,4 @@ If you're using Power BI Report Server, consult the guidance in the [Oracle Conn
 
 ## Next steps
 
-[Optimize Power Query when expanding table columns](optimize-expanding-table-columns.md)
+[Optimize Power Query when expanding table columns](../optimize-expanding-table-columns.md)
