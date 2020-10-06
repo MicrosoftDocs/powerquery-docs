@@ -13,13 +13,17 @@ LocalizationGroup: Connect to data
 ---
 # Get webpage data by providing examples
 
+>[!NOTE]
+>The availability of this feature in Power Query Online will occur in mid-October. In this upcoming release, the Power Query Online experience won’t contain an inline preview of the website in the By example dialog.
+
 Getting data from a web page lets users easily extract data from web pages. Often however, data on Web pages aren't in tidy tables that are easy to extract. Getting data from such pages can be challenging, even if the data is structured and consistent.
 
 There's a solution. With the *Get Data from Web by example* feature, you can essentially show Power Query data you want to extract by providing one or more examples within the connector dialog. Power Query gathers other data on the page that match your examples. With this solution you can extract all sorts of data from Web pages, including data found in tables *and* other non-table data.
 
 ![Get data from web by example](../media/web/web-by-example_01.png)
 
-Prices in graphics are for example purposes only.
+>[!NOTE]
+>Prices listed in the images are for example purposes only.
 
 ## Using Get Data from Web by example
 
