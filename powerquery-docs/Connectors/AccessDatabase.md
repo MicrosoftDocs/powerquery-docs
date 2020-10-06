@@ -43,7 +43,7 @@ To make the connection, take the following steps:
 
    ![Enter the Access database connection](./media/access-database/select-database.png)
 
-   If the Access database is online, use the [Web connector](web.md) to connect to the database.
+   If the Access database is online, use the [Web connector](./web/web.md) to connect to the database.
 
 3. If you're connecting from Power Query Online:
 
