@@ -23,6 +23,9 @@ Authentication Types Supported: Salesforce account
 
 >[!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+
+>[!Warning]
+> By default, Salesforce does not support the browser used for authentication to web services in Power BI. Please opt-in for "[Extended Support for Accessing Lightning Experience Using Microsoft Internet Explorer 11](https://help.salesforce.com/articleView?id=000333934&type=1&mode=1)". You may also want to review Salesforce documentation on "[Configuring Internet Explorer](https://developer.salesforce.com/docs/atlas.en-us.salesforce_supported_browsers_cheatsheet.meta/salesforce_supported_browsers_cheatsheet/getstart_browser_ie.htm)"
  
 ## Prerequisites
 
