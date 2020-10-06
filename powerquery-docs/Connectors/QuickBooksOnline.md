@@ -23,6 +23,9 @@ Products: Power BI Desktop, Power BI Service (Enterprise Gateway)
 
 Authentication Types Supported: QuickBooks Online account
 
+>[!Warning]
+> QuickBooks Online has deprecated support for IE11, which Power BI uses for authentication to web services. At this time, users will be impaired from creating new connections.
+
 ## Prerequisites
 
 To use the QuickBooks Online connector, you must have a QuickBooks Online account username and password.
