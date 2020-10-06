@@ -77,5 +77,5 @@ Refreshing this data will result in only two calls to SharePoint&mdash;one for t
 This approach can be used for any two tables in PowerQuery that have a matching foreign key.
 
 >[!NOTE]
->When these lists exist in SharePoint, user lists and taxonomy are also accessible as a list, and can be joined in exactly the way described above, provided the user has adequate privileges to access these lists.
+>SharePoint user lists and taxonomy are also accessible as tables, and can be joined in exactly the way described above, provided the user has adequate privileges to access these lists.
 
