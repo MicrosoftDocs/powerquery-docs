@@ -56,3 +56,7 @@ To make the connection, take the following steps:
 ![SQL Server database encryption support](../images/EncryptionWarning.png)
 
 Select **OK** to connect to the database by using an unencrypted connection, or follow the [instructions](https://docs.microsoft.com/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine?view=sql-server-ver15) to setup encrypted connections to SQL Server.
+
+## Next steps
+
+[Optimize Power Query when expanding table columns](optimize-expanding-table-columns.md)

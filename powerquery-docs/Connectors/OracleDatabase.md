@@ -117,3 +117,6 @@ If you see the error message, *Object reference not set*, in the Power BI Gatewa
 
 If you're using Power BI Report Server, consult the guidance in the [Oracle Connection Type](https://docs.microsoft.com/sql/reporting-services/report-data/oracle-connection-type-ssrs) article.
 
+## Next steps
+
+[Optimize Power Query when expanding table columns](optimize-expanding-table-columns.md)
