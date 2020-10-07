@@ -44,3 +44,12 @@ Or imagine a column that contains textual date values in the first 200 rows, and
 
 Because type detection works on the first 200 rows, but Data Profiling can operate over the entire dataset, you can consider using the Data Profiling functionality to get an early indication in the Query Editor about Errors (from type detection or any number of other reasons) beyond the top N rows.
 
+## Connections forcibly closed by the remote host
+
+When connecting to various APIs, you might get the following warning:
+
+`Data source error: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host`
+
+If you run into this error, it is most likely a networking issue. Generally, the first people to check with are the owners of the data source you are attempting to connect to. If they don’t think they’re the ones closing the connection, then it’s possible something along the way is (e.g., a proxy server, intermediate routers/gateways, etc.)
+
+Whether this only reproduces with any data or only larger data sizes, it is likely that there is a network timeout somewhere on the route. If it's only with larger data, customers should consult with the data source owner to see if their APIs support paging, so that they can split their requests into smaller chunks. Failing that, alternative ways to extract data from the API (following data source best practices) should be followed.
