@@ -127,7 +127,7 @@ The legacy Power Query Web connector automatically created a `Web.Page`/`Web.Con
 
 The new version of the Web connector automatically creates a `Web.BrowserContents` style query that only supports anonymous authentication. Any query using the new Web connector to connect to a source that requires any authentication method besides anonymous authentication won't authenticate. The `Web.BrowserContents` function itself currently only supports anonymous authentication. This limitation is the same regardless of the host environment. 
 
-However, you can manually construct a Web.Page/Web.Content style query yourself.
+However, you can manually construct a `Web.Page`/`Web.Content` style query yourself.
 
 Currently, the `Web.Page`/`Web.Content` style query is still used automatically by Excel and Power Query Online. Power Query Online does support `Web.BrowserContents` using an on-premises data gateway, but you have to enter such a formula manually. When Web by example becomes available in Power Query Online in mid-October 2020, it will generate `Web.BrowserContent` style queries.
 
