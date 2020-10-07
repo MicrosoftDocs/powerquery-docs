@@ -121,22 +121,22 @@ If you're using the Web connector through an on-premises data gateway, you must 
 
 In some cases, you may need to change the authentication method you use to access a particular site. If this change is necessary, see [Change the authentication method](../../connectorauthentication.md#change-the-authentication-method).
 
-## Limitations on Web connector authentication
+### Limitations on Web connector authentication
 
-The legacy Power Query Web connector automatically created a Web.Page/Web.Content style query that supported authentication. The only limitation occurred if you selected Windows authentication in the authentication method dialog box. In this case, the **Use my current credentials** selection would work correctly, but **Use alternate credentials** would not authenticate.
+The legacy Power Query Web connector automatically created a `Web.Page`/`Web.Content` style query that supported authentication. The only limitation occurred if you selected Windows authentication in the authentication method dialog box. In this case, the **Use my current credentials** selection would work correctly, but **Use alternate credentials** would not authenticate.
 
-The new version of the Web connector automatically creates a Web.BrowserContents style query that only supports anonymous authentication. Any query using the new Web connector to connect to a source that requires any authentication method besides anonymous authentication won't authenticate. The Web.BrowserContents function itself currently only supports anonymous authentication. This limitation is the same regardless of the host environment. 
+The new version of the Web connector automatically creates a `Web.BrowserContents` style query that only supports anonymous authentication. Any query using the new Web connector to connect to a source that requires any authentication method besides anonymous authentication won't authenticate. The `Web.BrowserContents` function itself currently only supports anonymous authentication. This limitation is the same regardless of the host environment. 
 
 However, you can manually construct a Web.Page/Web.Content style query yourself.
 
-Currently, the Web.Page/Web.Content style query is still used automatically by Excel and Power Query Online. Power Query Online does support Web.BrowserContents using an on-premises data gateway, but you have to enter such a formula manually. When Web by example becomes available in Power Query Online in mid-October 2020, it will generate Web.BrowserContent style queries.
+Currently, the `Web.Page`/`Web.Content` style query is still used automatically by Excel and Power Query Online. Power Query Online does support `Web.BrowserContents` using an on-premises data gateway, but you have to enter such a formula manually. When Web by example becomes available in Power Query Online in mid-October 2020, it will generate `Web.BrowserContent` style queries.
 
-In Power BI Desktop you can still use the older Web.Page/Web.Content style query. To generate this style of query:
+In Power BI Desktop you can still use the older `Web.Page`/`Web.Content` style query. To generate this style of query:
 
 1. Under the **File** tab, select **Options and settings** > **Options**.
 2. In the **Global** section, select **Preview features**.
 3. Clear the **New web table inference** preview feature.
 
-Currently, you cannot turn off the Web.BrowserContents style query in Power BI Desktop optimized for Power BI Report Server.
+Currently, you can't turn off the `Web.BrowserContents` style query in Power BI Desktop optimized for Power BI Report Server.
 
-The Web.Page/Web.Content style query required that you have Internet Explorer 10 installed on your computer. In addition, if this style of query was required to pass through an on-premises data gateway, the computer containing the gateway also had to have Internet Explorer installed. If you use only the Web.BrowserContents style query, you do not need to have Internet Explorer 10 installed on your computer or the computer containing the on-premises data gateway.
+The `Web.Page`/`Web.Content` style query required that you have Internet Explorer 10 installed on your computer. In addition, if this style of query was required to pass through an on-premises data gateway, the computer containing the gateway also had to have Internet Explorer installed. If you use only the `Web.BrowserContents` style query, you do not need to have Internet Explorer 10 installed on your computer or the computer containing the on-premises data gateway.
