@@ -139,4 +139,4 @@ In Power BI Desktop you can still use the older Web.Page/Web.Content style query
 
 Currently, you cannot turn off the Web.BrowserContents style query in Power BI Desktop optimized for Power BI Report Server.
 
-The Web.Page/Web.Content style query required that you have Internet Explorer 10 installed on your computer. In addition, if this style of query was required to pass through an on-premises data gateway, the computer containing the gateway all had to have Internet Explorer installed. If you use only use the Web.BrowserContents style query, you do not need to have Internet Explorer 10 installed on your computer or the computer containing the on-premises data gateway.
+The Web.Page/Web.Content style query required that you have Internet Explorer 10 installed on your computer. In addition, if this style of query was required to pass through an on-premises data gateway, the computer containing the gateway also had to have Internet Explorer installed. If you use only the Web.BrowserContents style query, you do not need to have Internet Explorer 10 installed on your computer or the computer containing the on-premises data gateway.
