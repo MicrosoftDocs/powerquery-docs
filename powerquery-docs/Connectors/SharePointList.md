@@ -94,6 +94,6 @@ The user can force the interpretation to be consistent by explicitly setting the
 
 ![Column with explicit boolean type](./media/sharepoint-list/booleanexplicit.png)
 
+## Next steps
 
-
-
+[Optimize Power Query when expanding table columns](../optimize-expanding-table-columns.md)
