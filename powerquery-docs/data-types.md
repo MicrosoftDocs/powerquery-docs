@@ -41,15 +41,15 @@ The most common data types used in Power Query are listed in the following table
 
 ## Data type detection
 
-Data type detection occurs in the following circumstances:<!--Suggested wording. If you don't like it, please add an introduction for this list. It does need to be a list rather than a series of run-in heads because that third paragraph doesn't have a run-in heading.-->
+Data type detection occurs automatically when connecting to:
 
-* **When connecting to structured data sources such as databases**, Power Query reads the table schema from the data source and automatically displays the data by using the correct data type for each column.
+* **Structured data sources such as databases**, Power Query reads the table schema from the data source and automatically displays the data by using the correct data type for each column.
 
-* **When connecting to unstructured sources such as Excel, CSV, and text files**, Power Query automatically detects data types by inspecting the values in the table. By default, automatic data type detection is enabled in Power Query for unstructured sources.
+* **Unstructured sources such as Excel, CSV, and text files**, Power Query automatically detects data types by inspecting the values in the table. By default, automatic data type detection is enabled in Power Query for unstructured sources.
 
-* You can use the **Detect data type** command in the **Any column** group on the **Transform** tab to automatically detect the data types of the columns in your table.
+You can also use the **Detect data type** command in the **Any column** group on the **Transform** tab to automatically detect the data types of the columns in your table.
 
-  ![Detect data type command on the Transform tab](images/me-detect-data-type-icon-any-column.png "Detect data type command on the Transform tab")
+![Detect data type command on the Transform tab](images/me-detect-data-type-icon-any-column.png "Detect data type command on the Transform tab")
 
 ## How to define a column data type
 
@@ -76,7 +76,7 @@ You can define or change the data type of a column in any of four places:
 This setting is specifically for unstructured sources. It helps you by automatically inspecting and detecting column types and headers based on the first 200 rows of your table. When this setting is enabled, Power Query automatically adds two steps to your query:
 
 * **Promote column headers**: Promotes the first row of the table to be the column header.
-* **Changed type**: Converts the values from the Any data type to a data type based on the inspection of the values from each column.<!--I moved this text up from the end of the section so the following procedures can be divided more clearly. -->
+* **Changed type**: Converts the values from the Any data type to a data type based on the inspection of the values from each column.
 
 By default, this setting is enabled. To disable or enable this setting, follow the steps that apply to your Power Query experience.
 <!--markdownlint-disable MD036-->
