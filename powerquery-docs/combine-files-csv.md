@@ -124,7 +124,7 @@ After defining the data types for each column, you'll be ready to load the table
 
 ### Verification
 
-To validate that all files have been combined, you can select the filter icon on the **Source.Name** column heading, which will display all the names of the files that have been combined. If you get a warning such as<!--Could there really be another warning? If not, this can just say "If you get the warning "List may be incomplete..."--> "List may be incomplete," select **Load more** at the bottom of the menu to display more available values in the column.
+To validate that all files have been combined, you can select the filter icon on the **Source.Name** column heading, which will display all the names of the files that have been combined. If you get the warning "List may be incomplete," select **Load more** at the bottom of the menu to display more available values in the column.
 
 ![Incomplete list of the files that have been combined](images/me-combine-files-csv-incomplete-list.png "Incomplete list of the files that have been combined")
 
