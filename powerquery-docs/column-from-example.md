@@ -10,14 +10,12 @@ ms.custom: edited
 ---
 
 # Add a column from examples
-<!--Can you confirm, are these screenshots all based on sample data? I don't find these names or companies in our approved list.-->
+
 When you add columns from examples, you can quickly and easily create new columns that meet your needs. This is useful for the following situations:
 
 - You know the data you want in your new column, but you're not sure which transformation, or collection of transformations, will get you there.
 - You already know which transformations you need, but you're not sure what to select in the UI to make them happen.
 - You know all about the transformations you need by using a custom column expression in the M language, but one or more of those transformations aren't available in the UI.
-<!--Can you introduce this image? I'm not sure what it's showing.-->
-![UI screenshot showing the add column from example pane above the data and an empty column on the right where you enter the examples](images/me-add-column-from-example.png "Add column from examples")
 
 The **Column from examples** command is located on the **Add column** tab, in the **General** group.
 
@@ -25,26 +23,26 @@ The **Column from examples** command is located on the **Add column** tab, in th
 
 ## Add a new column from examples
 
-In this example, you start with the table shown in the following image.<!--Where does the reader get this sample data? I assume we provide it somewhere?-->
+In this example, you start with the table shown in the following image.
 
 ![Original table containing information about specific customers, along whith their location and monthly income](images/me-add-column-from-example-original-table.png "Original table containing information about specific customers, along whith their location and monthly income")
 
 Your goal in this example is to create two new columns:
 
-- **Income Range**: Create buckets for the **Monthly Income** column in discrete increments of 5,000.
+- **Range**: Create bins for the **Monthly Income** column in discrete increments of 5,000.
 - **Full Name**: Concatenate the **Last Name** and **First Name** columns to a single column.
 
 ![Final table with income range and full name columns added](images/me-add-column-from-example-final-table.png "Final table with income range and full name columns added")
 
 ### Column from examples, from selected columns
 
-One of the options you have when creating your new column is to select which columns will be used in your calculations. For this example, you'll be creating the **Income Range** column from the values in the **Monthly Income** column.
+One of the options you have when creating your new column is to select which columns will be used in your calculations. For this example, you'll be creating the **Range** column from the values in the **Monthly Income** column.
 
 To do this, select the **Monthly Income** column, select the **Column from examples** command, and then select **From selection**.
 
 ![Column from examples in selected column](images/me-add-column-from-example-from-selection.png "Column from examples in selected column")
 
-The preview pane displays a new, editable column where you can enter your examples. For the first example, the value from the selected column is 19500. So in your new column, enter the text **15000 to 20000**, which is the bucket where that value falls.
+The preview pane displays a new, editable column where you can enter your examples. For the first example, the value from the selected column is 19500. So in your new column, enter the text **15000 to 20000**, which is the bin where that value falls.
 
 ![Entering data in the new range from example](images/me-add-column-from-example-from-selection-buckets.png "Entering data in the new range from example")
 
@@ -70,7 +68,7 @@ After you select **OK**, you'll see your new column as part of your query. You'l
 
 ![New Full Name column added to the table](images/me-add-column-from-example-from-all-columns-full-name-final.png "New Full Name column added to the table")
 
-Your last step is to remove the **First Name**, **Last Name**, and **Monthly Income** columns. Your final table now contains the **Income Range** and **Full Name** columns with all the data you produced in the previous steps.
+Your last step is to remove the **First Name**, **Last Name**, and **Monthly Income** columns. Your final table now contains the **Range** and **Full Name** columns with all the data you produced in the previous steps.
 
 ![Final table with first name, last name, and monthly income columns removed, and income range and full name columns added](images/me-add-column-from-example-final-table-2.png "Final table with first name, last name, and monthly income columns removed, and income range and full name columns added")
 
