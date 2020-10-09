@@ -1,5 +1,5 @@
 ---
-title: Append data
+title: Append queries
 description: This article demonstrates how to append table queries in Power Query.
 author: ptyx507
 ms.service: powerquery
@@ -9,9 +9,9 @@ ms.author: v-miesco
 ms.custom: edited
 ---
 
-# Append data
-<!--Is it okay to have the title diverge from the command name and TOC? Maybe it could be called "Append queries" and then early in the article you could bring up that tables are also (sometimes) called queries? I know I find this easy to forget, maybe some readers will too.-->
-The append operation creates a single table by adding the contents of one or more tables to another, and aggregates the column headers from the tables to create the schema for the new table.<!--Edit okay? I wasn't sure what "will have a new table schema defined" meant.-->
+# Append queries
+
+The append operation creates a single table by adding the contents of one or more tables to another, and aggregates the column headers from the tables to create the schema for the new table.
 
 ![Diagram showing the result of an append operation with null values in columns that don’t exist in one of the original tables.](images/append-queries-diagram.png "Append operation sample diagram")
 
@@ -49,7 +49,7 @@ To append these tables, first select the **Online Sales** table. On the **Home**
 
 ![Append two tables](images/me-append-queries-sample-two-tables-window.png "Append two tables")
 
-Power Query performs the append operation based on the names of the column headers found on both tables, and not on their ordinal position<!--Don't know what this means.-->. The final table will have all columns from all tables appended. 
+Power Query performs the append operation based on the names of the column headers found on both tables, and not based on their relative position in the headers sections of their respective tables. The final table will have all columns from all tables appended. 
 
 In the event that one table doesn't have columns found in another table, *null* values will appear in the corresponding column, as shown in the **Referer** column of the final query.
 
