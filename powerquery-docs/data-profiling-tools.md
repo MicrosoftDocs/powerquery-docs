@@ -28,7 +28,7 @@ After you enable the options, you'll see something like the following image in P
 ![Data profiling tools enabled](images/me-data-preview-tools-enabled-v2.png "Data profiling tools enabled")
 
 >[!NOTE]
->By default, Power Query will perform this data profiling over the first 1,000 rows of your data. To have it operate over the entire dataset, check the lower-left corner of your editor window to change how column profiling is performed.<!--Edit okay? This was confusing to me.-->
+>By default, Power Query will perform this data profiling over the first 1,000 rows of your data. To have it operate over the entire dataset, check the lower-left corner of your editor window to change how column profiling is performed.
 
 ## Column quality
 
