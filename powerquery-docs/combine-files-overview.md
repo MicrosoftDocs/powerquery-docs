@@ -72,7 +72,7 @@ In the following image, Power Query has detected that the first file has a .csv 
 
 After the **Combine files** process is finished, Power Query automatically performs the following actions:
 
-1. Creates an example<!--"Exemplar" isn't used elsewhere in the docset or the UI as far as I can see, and it's not listed as an adjective in the American Heritage dictionary (which please see).--> query that performs all the required extraction steps for a single file. It uses the file that was selected as the example file<!--To match UI. Or this could be "It uses the sample file that was selected in the **Example file** box..."--> in the **Combine files** dialog box.
+1. Creates an example query that performs all the required extraction steps for a single file. It uses the file that was selected as the example file in the **Combine files** dialog box.
 
    This example query has the name **Transform Sample file** in the **Queries** pane.
 
@@ -86,7 +86,7 @@ After the **Combine files** process is finished, Power Query automatically perfo
 
    ![Combined files output](images/me-combine-files-overview-combine-files-output.png "Combined files output")
 
-You can easily combine all files within a given folder, as long as they have the same file type and structure (including the same columns). You can also apply additional transformation or extraction steps by modifying the automatically generated example query, without having to worry about modifying or creating additional function query steps.<!--Deleted so as not to say this three times in a row.-->
+You can easily combine all files within a given folder, as long as they have the same file type and structure (including the same columns). You can also apply additional transformation or extraction steps by modifying the automatically generated example query, without having to worry about modifying or creating additional function query steps.
 
 >[!NOTE]
 >You can modify the steps inside the example query to change the function applied to each binary in your query. The example query is linked to the function, so any changes made to the example query will be reflected in the function query.
