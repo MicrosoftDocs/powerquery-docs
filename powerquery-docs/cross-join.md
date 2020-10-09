@@ -11,7 +11,7 @@ ms.custom: edited
 
 # Cross join
 
-A *cross join* is a type of join that returns the Cartesian product<!--Are you sure your readers will get this? I think it's a bit show-offy. :) --> of rows from the tables in the join. In other words, it combines each row from the first table with each row from the second table.
+A *cross join* is a type of join that returns the Cartesian product of rows from the tables in the join. In other words, it combines each row from the first table with each row from the second table.
 
 This article demonstrates, with a practical example, how to do a cross join in Power Query.
 
