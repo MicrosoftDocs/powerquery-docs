@@ -145,7 +145,7 @@ Using this locale, Power Query will be able to interpret values correctly and co
 
 **To verify final date values**
 
-The formatting of the values is driven by the globalization value<!--Shouldn't this just be "locale"? You haven't talked about a globalization value separate from locale.-->. If you have any doubts about the value displayed by Power Query, you can verify the conversion of date values by adding new columns for the day, month, and year from the value. To do this, select the **Date** column and go to the **Add column** tab on the ribbon. In the **Date and time column** group, you'll see the options for a date column.
+The formatting of the values is driven by the globalization value. If you have any doubts about the value displayed by Power Query, you can verify the conversion of date values by adding new columns for the day, month, and year from the value. To do this, select the **Date** column and go to the **Add column** tab on the ribbon. In the **Date and time column** group, you'll see the options for a date column.
 
 ![Selecting portions of the date column value to be placed in a new column](images/me-data-types-power-query-add-column-date.png "Selecting portions of the date column value to be placed in a new column")
 
@@ -153,7 +153,7 @@ From here, you can extract parts of the date value, such as the year number, the
 
 ![Date parts](images/me-data-types-power-query-add-column-date-parts.png "Date parts")
 
-By using these columns, you can verify that your date value has been converted correctly.<!--This section kind of trails off. Is it going to be clear to the reader what to do from here?-->
+By using these columns, you can verify that your date value has been converted correctly.
 
 ## Data type conversion matrix
 
