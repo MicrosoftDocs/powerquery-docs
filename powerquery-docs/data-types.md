@@ -11,7 +11,7 @@ ms.custom: edited
 
 # Data types in Power Query
 
-Data types in Power Query are used to classify content to have a more structured dataset. A data type is said to ***conform*** to that data type.<!--What does this mean?-->
+Data types in Power Query are used to classify values to have a more structured dataset. Data types are defined at the field level&mdash;values inside a field are set to ***conform*** to the data type of the field.
 
 The data type of a column is displayed on the left side of the column heading with an icon that symbolizes the data type.
 
@@ -36,7 +36,7 @@ The most common data types used in Power Query are listed in the following table
 |**Date/Time/Timezone** | ![Date/Time/Timezone](images/DateTimeZone_20.png) |Represents a UTC Date/Time with a time-zone offset. It's converted into Date/Time when loaded into the model.| 
 |**Duration**| ![Duration](images/Duration_20.png) | Represents a length of time, which is converted into a Decimal Number type when loaded into the model. As a Decimal Number type, it can be added or subtracted from a Date/Time field with correct results. Because it's a Decimal Number type, you can easily use it in visualizations that show magnitude.|
 |**Binary**| ![Binary](images/Binary_20.png) |The Binary data type can be used to represent any other data with a binary format.|
-|**Any**| ![Any](images/AnyType_20.png)|The Any data type is the status given to a column that doesn't have an explicit data type definition. Any is the data type that classifies all values.<!--What does this mean?--> We recommend that you always explicitly define the column data types for your queries from unstructured sources, and avoid having any columns with the Any data type as the output of your query.|
+|**Any**| ![Any](images/AnyType_20.png)|The Any data type is the status given to a column that doesn't have an explicit data type definition. Any is the data type that classifies all values. We recommend that you always explicitly define the column data types for your queries from unstructured sources, and avoid having any columns with the Any data type as the output of your query.|
 | | | |
 
 ## Data type detection
