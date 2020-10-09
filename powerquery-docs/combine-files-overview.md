@@ -45,13 +45,13 @@ When you connect to a data source by using any of the previously mentioned conne
 
 ![Table preview with the Combine option](images/combinefiles1.png "Table preview with the Combine option")
 
-Alternatively, you can select **Transform data** to access the Power Query Editor and create a subset of the list of files (for example, by using filters on the folder path column to only include files from a specific subfolder). Then combine files by selecting the column that contains the binaries (for example<!--Isn't this always going to be the **Content** column? If so, please delete "for example." If not, does it need to be explained that sometimes this isn't the **Content** column?-->, the **Content** column) and then selecting either:
+Alternatively, you can select **Transform data** to access the Power Query Editor and create a subset of the list of files (for example, by using filters on the folder path column to only include files from a specific subfolder). Then combine files by selecting the column that contains the binaries in the **Content** column and then selecting either:
 
 * The **Combine files** command in the **Combine** group on the **Home** tab.
 
    ![Combine files command on the Home tab](images/me-combine-files-overview-combine-files-button-home.png "Combine files button on the Home tab")
 
-* The **Combine files** icon in the column header of the column that contains \[Binary\] values.<!--Not necessarily the **Content** column?-->
+* The **Combine files** icon in the column header of the column that contains \[Binary\] values.
 
    ![Combine files icon in the column header](images/me-combine-files-overview-combine-files-button-header.png "Combine files icon in the column header")
 
