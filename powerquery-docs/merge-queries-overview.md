@@ -1,5 +1,5 @@
 ---
-title: "Merge operations overview"
+title: "Merge queries overview"
 description: An overview of merge queries operations in Power Query, and the basic principles and common uses. 
 author: ptyx507
 ms.service: powerquery
@@ -9,7 +9,7 @@ ms.author: v-miesco
 ms.custom: edited
 ---
 
-# Merge operations overview
+# Merge queries overview
 <!--Edit okay? The other articles all call it this, so if you don't like it, please change those cross-references.-->
 A merge operation joins two existing tables together based on matching values from one or multiple columns. You can choose to use different types of joins, depending on the output you want.
 
@@ -28,8 +28,8 @@ You can find the **Merge queries** command on the **Home** tab, in the **Combine
 
 The merge operation requires two tables:
 
-* **Left table for merge**: The first selection, from top to bottom.<!--Does this mean "The first table you select, with all rows selected."?-->
-* **Right table for merge**: The last<!--Should this be "second"?--> selection, from top to bottom.
+* **Left table for merge**: The first selection, from top to bottom of your screen.
+* **Right table for merge**: The second selection, from top to bottom of your screen.
 
 ![Merge dialog box](images/me-merge-operations-overview-merge-window.png "Merge dialog box")
 
