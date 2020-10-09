@@ -43,7 +43,7 @@ JSON data may not always be imported into Power Query as a table. However, you c
 
 ## Load from the web
 
-To load a JSON file from the web, select the [Web connector](web.md), enter the web address of the file, and follow any credential prompts.
+To load a JSON file from the web, select the [Web connector](./web/web.md), enter the web address of the file, and follow any credential prompts.
 
 ## Troubleshooting
 

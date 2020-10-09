@@ -22,6 +22,8 @@
         href: data-profiling-tools.md
       - name: "Using the Queries pane"
         href: queries-pane.md
+      - name: "Using Schema view (Preview)"
+        href: schema-view.md
       - name: "Share a query"
         href: share-query.md   
       - name: "Using custom functions"
@@ -194,6 +196,10 @@
         href: error-handling.md
       - name: "Import data using native database query"
         href: native-database-query.md
+      - name: "Create Power Platform dataflows from queries in Microsoft Excel (Preview)"
+        href: new-dataflow-from-template.md
+      - name: Optimize Power Query when expanding table columns
+        href: optimize-expanding-table-columns.md
     - name: "Connector reference"
       items:
       - name: "Power Query connectors"
@@ -275,7 +281,11 @@
       - name: "XML"
         href: Connectors/XML.md
       - name: "Web"
-        href: Connectors/Web.md
+        items:
+        - name: Web connector
+          href: Connectors/web/Web.md
+        - name: Web by example
+          href: Connectors/web/web-by-example.md
     - name: Support and troubleshooting
       items:
       - name: "Power Query online limits"
