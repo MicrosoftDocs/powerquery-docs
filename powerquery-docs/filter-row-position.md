@@ -11,7 +11,7 @@ ms.custom: edited
 
 # Filter a table by row position
 
-Power Query has multiple options to filter a table based on the positions of its rows, either by keeping or removing those rows. This article covers all the available methods.<!--This a prime example of a good opportunity to figure out which use cases would be helpful to the user, and rewrite this article along with table-promote-demote.md, so they cover common tasks rather than the entire UI.-->
+Power Query has multiple options to filter a table based on the positions of its rows, either by keeping or removing those rows. This article covers all the available methods.
 
 ## Keep rows
 
