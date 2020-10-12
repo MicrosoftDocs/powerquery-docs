@@ -24,7 +24,7 @@ Products: Power BI Desktop, Power BI Service (Enterprise Gateway)
 Authentication Types Supported: QuickBooks Online account
 
 >[!Warning]
-> QuickBooks Online has deprecated support for Internet Explorer 11, which Power Query Desktop uses for authentication to online services. At this time, users will be impaired from authenticating but stored credentials should continue to work until their existing authentication tokens expire.
+> QuickBooks Online has deprecated support for Internet Explorer 11, which Power Query Desktop uses for authentication to online services. At this time, users will be impaired from authenticating, but stored credentials should continue to work until their existing authentication tokens expire.
 
 ## Prerequisites
 
