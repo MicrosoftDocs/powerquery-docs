@@ -198,4 +198,4 @@ in
 ```
 
 >[!NOTE]
->If you use this code example, you'll need to [promote the first row to column headers](../../table-promote-demote-headers#locations-of-the-promote-headers-operation).
+>If you use this code example, you'll need to [promote the first row to column headers](../../table-promote-demote-headers.md#locations-of-the-promote-headers-operation).
