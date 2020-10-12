@@ -50,6 +50,6 @@ When connecting to various APIs, you might get the following warning:
 
 `Data source error: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host`
 
-If you run into this error, it is most likely a networking issue. Generally, the first people to check with are the owners of the data source you are attempting to connect to. If they don’t think they’re the ones closing the connection, then it’s possible something along the way is (e.g., a proxy server, intermediate routers/gateways, etc.)
+If you run into this error, it's most likely a networking issue. Generally, the first people to check with are the owners of the data source you are attempting to connect to. If they don’t think they’re the ones closing the connection, then it’s possible something along the way is (e.g., a proxy server, intermediate routers/gateways, etc.)
 
-Whether this only reproduces with any data or only larger data sizes, it is likely that there is a network timeout somewhere on the route. If it's only with larger data, customers should consult with the data source owner to see if their APIs support paging, so that they can split their requests into smaller chunks. Failing that, alternative ways to extract data from the API (following data source best practices) should be followed.
+Whether this only reproduces with any data or only larger data sizes, it is likely that there's a network timeout somewhere on the route. If it's only with larger data, customers should consult with the data source owner to see if their APIs support paging, so that they can split their requests into smaller chunks. Failing that, alternative ways to extract data from the API (following data source best practices) should be followed.
