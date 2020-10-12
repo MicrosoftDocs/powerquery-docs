@@ -71,6 +71,28 @@ To connect to a SharePoint Online List:
 8. From the **Navigator** dialog, you can select a location, then either transform the data in the Power Query editor by selecting **Transform Data**, or load the data by selecting **Load**.
 
    ![Select the list checkbox](./media/sharepoint-online-list/sharepointonlinelistnavigator.png)
+   
+## Connect to Sharepoint Online List v2.0 (Beta)
+
+In the October 2020 release of Power BI Desktop, we introduced an updated version of the SharePoint Online List connector. This connector has improved APIs and greater usability, but is not backwards compatible with usage of the 1.0 connector version.
+
+To access it, you will enter the same connector screen through 3 above. However, make sure you select '2.0 (Beta)' under implementation if it isn't already selected.
+
+   ![A screen showing a sample of SharePoint Online List settings](./media/sharepoint-online-list/sharepointonlinelistnavigator2.png)
+
+With this update to the connector, we're making available two different views for the same data:
+* All
+* Default
+The default view is what you'll see when looking at the list online in whichever view you have set as 'Default' in your settings. If you edit this view to add or remove either user created or system defined columns, or by creating a new view and setting it as default, this will propagate through the connector.
+
+   ![A screen showing a sample of SharePoint Online List settings](./media/sharepoint-online-list/sharepointonlinelistsettings.png)
+
+The all view includes all user created and system defined columns. You can see what columns are included in the below screen.
+
+   ![A screen showing a sample of view settings for a specific view in SharePoint Online List](./media/sharepoint-online-list/sharepointonlinelistview.png)
+
+We look forward to your feedback.
+
 
 ## Troubleshooting
 
