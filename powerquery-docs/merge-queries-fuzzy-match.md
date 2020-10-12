@@ -47,7 +47,7 @@ The goal is to create a table like the following, where you've standardized all 
 
 ## Fuzzy merge
 
-To perform the fuzzy merge, you start by doing a merge. In this case, you'll use a left outer join, where the left table is the one from the survey and the right table is the **Fruits** reference table. At the bottom of the dialog box, select the **Use fuzzy matching to perform the merge** check box.
+To do the fuzzy merge, you start by doing a merge. In this case, you'll use a left outer join, where the left table is the one from the survey and the right table is the **Fruits** reference table. At the bottom of the dialog box, select the **Use fuzzy matching to perform the merge** check box.
 
 ![Use fuzzy matching to perform the merge option](images/me-merge-fuzzy-matching-simple-merge-window.png "Use fuzzy matching to perform the merge option")
 
@@ -88,7 +88,7 @@ You can go back to the **Merge** dialog box, and in **Fuzzy matching options** u
 
 ![Merge dialog box with the number of matches set to 1 and Transformation table set to Transform table](images/me-merge-fuzzy-matching-custom-merge-window.png "Merge dialog box with the number of matches set to 1 and Transformation table set to Transform table")
 
-After you select **OK**, you'll create a table that looks like the image below, with all values mapped correctly. Note how the example started with nine distinct values, but after the fuzzy merge, there are only four distinct values.
+After you select **OK**, you'll create a table that looks like the following image, with all values mapped correctly. Note how the example started with nine distinct values, but after the fuzzy merge, there are only four distinct values.
 
 :::image type="complex" source="images/me-merge-fuzzy-matching-sample-output-table-2.png" alt-text="Fuzzy merge survey output table":::
    Fuzzy merge survey output table with the Question column containing the column distribution graph showing nine distinct answers with all answers unique, and the answers to the survey with all the typos, plural or singular, and case problems. Also contains the Fruit column with the column distribution graph showing four distinct answers with one unique answer and lists all of the fruits properly spelled, singular, and proper case.
