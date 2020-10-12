@@ -95,7 +95,7 @@ In the interim, you can use the following workaround:
 
     ![Selecting the root node in Navigator and selecting transform data from the drop-down menu](images/navigator-transform-data.png)
 
-2. Power Query Editor then opens with the full navigation table in the table preview area. This view doesn't have a limit on number of objects, and you can use filters or any other Power Query transforms to explore the list and find the rows you want (for example, based on the **Name** column).
+2. Power Query Editor then opens with the full navigation table in the table preview area. This view doesn't have a limit on the number of objects, and you can use filters or any other Power Query transforms to explore the list and find the rows you want (for example, based on the **Name** column).
 
 3. Upon finding the item you want, you can get at the contents by selecting the data link (such as the **Table** link in the following image).
 
