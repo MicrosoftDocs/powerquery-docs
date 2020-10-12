@@ -4,7 +4,7 @@ description: Provides basic information and how to connect to your data, along w
 author: dougklopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 02/05/2020
+ms.date: 10/12/2020
 ms.author: v-douklo
 LocalizationGroup: reference
 ---
@@ -51,7 +51,7 @@ To load data from a web site using a basic URL:
 
    The level you select for the authentication method determines what part of a URL will have the authentication method applied to it. If you select the top-level web address, the authentication method you select here will be used for that URL address or any subaddress within that address. However, you might not want to set the top URL address to a specific authentication method because different subaddresses could require different authentication methods. For example, if you were accessing two separate folders of a single SharePoint site and wanted to use different Microsoft Accounts to access each one.
    
-   Once you have set the authentication method for a specific web site address, you won't need to select the authentication method for that URL address or any subaddress again. For example, if you select the https://en.wikipedia.org/ address in this dialog, any web page that begins with this address won't require that you select the authentication method again.  
+   Once you've set the authentication method for a specific web site address, you won't need to select the authentication method for that URL address or any subaddress again. For example, if you select the https://en.wikipedia.org/ address in this dialog, any web page that begins with this address won't require that you select the authentication method again.  
 
    >[!Note]
    >If you need to change the authentication method later, see [Changing the authentication method](#changing-the-authentication-method). 
@@ -115,7 +115,7 @@ For example, you could use the following steps to open a JSON file on the https:
 
 ### Using a gateway with the Web connector
 
-If you're using the Web connector through an on-premises data gateway, you must have Internet Explorer 10 installed on the gateway machine. This will ensure that the `Web.Page` call through the gateway will work correctly. 
+If you're using the Web connector through an on-premises data gateway, you must have Internet Explorer 10 installed on the gateway machine.  This installation will ensure that the `Web.Page` call through the gateway will work correctly. 
 
 ### Changing the authentication method
 
@@ -123,20 +123,79 @@ In some cases, you may need to change the authentication method you use to acces
 
 ### Limitations on Web connector authentication
 
-The legacy Power Query Web connector automatically created a `Web.Page`/`Web.Content` style query that supported authentication. The only limitation occurred if you selected Windows authentication in the authentication method dialog box. In this case, the **Use my current credentials** selection would work correctly, but **Use alternate credentials** would not authenticate.
+>[!NOTE]
+> The limitations described in this section only apply to HTTP web pages. Opening files from the web using this connector is not affected by these limitations.
 
-The new version of the Web connector automatically creates a `Web.BrowserContents` style query that only supports anonymous authentication. Any query using the new Web connector to connect to a source that requires any authentication method besides anonymous authentication won't authenticate. The `Web.BrowserContents` function itself currently only supports anonymous authentication. This limitation is the same regardless of the host environment. 
+The legacy Power Query Web connector automatically created a `Web.Page` style query that supported authentication. The only limitation occurred if you selected Windows authentication in the authentication method dialog box. In this case, the **Use my current credentials** selection would work correctly, but **Use alternate credentials** wouldn't authenticate.
 
-However, you can manually construct a `Web.Page`/`Web.Content` style query yourself.
+The new version of the Web connector automatically creates a `Web.BrowserContents` query that only supports anonymous authentication (for example, the web Connector in Power BI Desktop). Any query using the new Web connector to connect to a source that requires any authentication method besides anonymous authentication won't authenticate. The `Web.BrowserContents` function itself currently only supports anonymous authentication. This limitation is the same regardless of the host environment. 
 
-Currently, the `Web.Page`/`Web.Content` style query is still used automatically by Excel and Power Query Online. Power Query Online does support `Web.BrowserContents` using an on-premises data gateway, but you have to enter such a formula manually. When Web by example becomes available in Power Query Online in mid-October 2020, it will generate `Web.BrowserContent` style queries.
+Currently, Power BI Desktop automatically uses the `Web.BrowserContents` query. The `Web.Page` style query is still used automatically by Excel and Power Query Online. Power Query Online does support `Web.BrowserContents` using an on-premises data gateway, but you have to enter such a formula manually. When Web by example becomes available in Power Query Online in mid-October 2020, it will generate `Web.BrowserContent` style queries.
 
-In Power BI Desktop you can still use the older `Web.Page`/`Web.Content` style query. To generate this style of query:
+The `Web.Page` query required that you have Internet Explorer 10 installed on your computer. Also, if this style of query was required to pass through an on-premises data gateway, the computer containing the gateway also had to have Internet Explorer 10 installed. If you use only the `Web.BrowserContents` query, you don't need to have Internet Explorer 10 installed on your computer or the computer containing the on-premises data gateway.
+
+#### Use `Web.Page` in place of `Web.BrowserContents`
+
+In cases where you need to use `Web.Page` instead of `Web.BrowserContents` because of authentication issues, you can still manually use `Web.Page`.
+
+In Power BI Desktop, you can clear the **New web table inference** to use the older `Web.Page` query:
 
 1. Under the **File** tab, select **Options and settings** > **Options**.
 2. In the **Global** section, select **Preview features**.
-3. Clear the **New web table inference** preview feature.
+3. Clear the **New web table inference** preview feature, and then select **OK**.
+4. Restart Power BI Desktop.
 
-Currently, you can't turn off the `Web.BrowserContents` style query in Power BI Desktop optimized for Power BI Report Server.
+    >[!NOTE]
+    >Currently, you can't turn off the `Web.BrowserContents` style query in Power BI Desktop optimized for Power BI Report Server.
 
-The `Web.Page`/`Web.Content` style query required that you have Internet Explorer 10 installed on your computer. In addition, if this style of query was required to pass through an on-premises data gateway, the computer containing the gateway also had to have Internet Explorer installed. If you use only the `Web.BrowserContents` style query, you do not need to have Internet Explorer 10 installed on your computer or the computer containing the on-premises data gateway.
+You can also get a copy the `Web.Page` query from Excel. To copy the code from Excel:
+
+1. Select **From Web** from the **Data** tab.
+2. Enter the address in the **From Web** dialog box, and then select **OK**.
+3. In **Navigator**, choose the data you want to load, and then select **Transform Data**.
+4. In the **Home** tab of Power Query, select **Advanced Editor**. 
+5. In the **Advanced Editor**, copy the M formula.
+6. In the online app that uses `Web.BrowserContents`, select the **Blank Query** connector.
+7. In the **Blank Query**, enter the `Web.Page` query you copied from Excel. 
+
+You can also manually enter the following code into a blank query. Ensure that you enter the address of the web page you want to load.
+
+```powerqury-m
+let
+  Source = Web.Page(Web.Contents("<your address here>")),
+  Navigation = Source{0}[Data]
+in
+  Navigation
+```
+
+#### Use `Web.BrowserContents` in place of `Web.Page`
+
+In cases where you need to use `Web.BrowserContents` in place of `Web.Page` because of authentication issues, you can manually use `Web.BrowserContents`.
+
+>[!NOTE]
+> Only the `Web.Page` query works in Excel. Attempting to use a `Web.BrowserContents` query in Excel will result in an error.
+
+You can obtain a copy of a `Web.BrowserContents` query from Power BI Desktop:
+
+1. From the **Home** tab, select **Get data**.
+2. In the **Get data** dialog box, select **Other** > **Web**, and then select **Connect**.
+3. Enter the URL of the web page that contains the data you want, and then select **OK**.
+4. In the **Navigator**, select the data you want, and then select **Transform Data**.
+5. In Power Query Editor, from the **Home** tab, select **Advanced editor**.
+6. Copy the code in the advanced editor.
+7. In the app that uses the `Web.Page` query, select the **Blank Query** connector.
+8. In the **Blank Query**, enter the `Web.BrowserContents` query you copied from Power BI Desktop.
+
+If you don't have access to Power BI Desktop, you can also manually enter the following code into a blank query. Ensure that you enter the address of the web page you want to load.
+
+```powerquery-m
+let
+    Source = Web.BrowserContents("<your address here>"),
+    #"Extracted Table From Html" = Html.Table(Source, {{"Column1", "TABLE.tableizer-table > * > TR > :nth-child(1)"}, {"Column2", "TABLE.tableizer-table > * > TR > :nth-child(2)"}, {"Column3", "TABLE.tableizer-table > * > TR > :nth-child(3)"}, {"Column4", "TABLE.tableizer-table > * > TR > :nth-child(4)"}, {"Column5", "TABLE.tableizer-table > * > TR > :nth-child(5)"}, {"Column6", "TABLE.tableizer-table > * > TR > :nth-child(6)"}, {"Column7", "TABLE.tableizer-table > * > TR > :nth-child(7)"}}, [RowSelector="TABLE.tableizer-table > * > TR"]),
+    #"Changed Type" = Table.TransformColumnTypes(#"Extracted Table From Html",{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}, {"Column5", type text}, {"Column6", type text}, {"Column7", type text}})
+in
+    #"Changed Type"
+```
+
+>[!NOTE]
+>If you use this code example, you'll need to [promote the first row to column headers](../../table-promote-demote-headers#locations-of-the-promote-headers-operation).
