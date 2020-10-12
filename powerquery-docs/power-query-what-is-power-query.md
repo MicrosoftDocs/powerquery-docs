@@ -12,7 +12,7 @@ ms.custom: edited
 
 # What is Power Query?
 
-Power Query is a data transformation and data preparation engine. Power Query comes with a graphical interface for getting data from sources and a Power Query Editor for applying transformations. Because the engine is available in many products and services, the destination where the data will be stored depends on where Power Query was used. Using Power Query, you can perform the extract, transform, and load (ETL) processing of data.<!--note from editor: I think the image should use the current name, "Azure Data Lake Storage." Please see the Cloud Style Guide: https://styleguides.azurewebsites.net/StyleGuide/Read?id=2696&topicid=43944 -->
+Power Query is a data transformation and data preparation engine. Power Query comes with a graphical interface for getting data from sources and a Power Query Editor for applying transformations. Because the engine is available in many products and services, the destination where the data will be stored depends on where Power Query was used. Using Power Query, you can perform the extract, transform, and load (ETL) processing of data.
 
 :::image type="complex" source="images/whatispowerquery.png" alt-text="Power Query input, transformation, and destination":::
    Diagram with symbolized data sources on the right, passing though Power query for transformation, and then going to various destinations, such as Azure Data Lake Storage, Common Data Service, Microsoft Excel, or Power BI.
@@ -91,7 +91,7 @@ More information: [Power Query M formula language](https://docs.microsoft.com/po
 ## Where can you use Power Query?
 
 The following table lists Microsoft products and services where Power Query can be found.
-<!--I'm sorry to have to replace the nice-looking icons in this table with words; our new guidelines for alt text, unfortunately, say that icons can't have alt text, and if there's no alt text, there's no way for a low-vision user to know what the icons mean.-->
+
 |Product|M engine<sup>1</sup>|Power Query<br>Desktop<sup>2</sup>|Power Query<br>Online<sup>3</sup>|Dataflows<sup>4</sup>|
 |-------|---------|-------------------|------------------|---------|
 |Excel for Windows|Yes|Yes|No| No|

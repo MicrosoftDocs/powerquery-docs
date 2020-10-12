@@ -37,7 +37,7 @@ The level you select for the authentication method you chose for this connector 
 However, you might not want to set the top-level address to a specific authentication method because different subaddresses can require different authentication methods. One example might be if you were accessing two separate folders of a single SharePoint site and wanted to use different Microsoft accounts to access each one.
 
 
-After you've set the authentication method for a connector's specific website address<!--How is this different from "address"?-->, you won't need to select the authentication method for that connector using that URL address or any subaddress again. For example, let's say you select the `https://contoso.com/` address as the level you want the Web connector URL settings to apply to. Whenever you use a [Web connector](connectors/web.md) to access any webpage that begins with this address, you won't be required to select the authentication method again.
+After you've set the authentication method for a connector's specific address, you won't need to select the authentication method for that connector using that URL address or any subaddress again. For example, let's say you select the `https://contoso.com/` address as the level you want the Web connector URL settings to apply to. Whenever you use a [Web connector](connectors/web.md) to access any webpage that begins with this address, you won't be required to select the authentication method again.
 
 ## Change the authentication method
 

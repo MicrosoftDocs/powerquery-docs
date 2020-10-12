@@ -10,8 +10,8 @@ ms.custom: edited
 ---
 
 # Merge queries overview
-<!--Edit okay? The other articles all call it this, so if you don't like it, please change those cross-references.-->
-A merge operation joins two existing tables together based on matching values from one or multiple columns. You can choose to use different types of joins, depending on the output you want.
+
+A merge queries operation joins two existing tables together based on matching values from one or multiple columns. You can choose to use different types of joins, depending on the output you want.
 
 ![Diagram showing two empty tables on top merged to a table on the bottom with all columns from the left table and one from the right table](images/merge-operation-diagram-overview.png "Diagram showing two empty tables on top merged to a table on the bottom with all columns from the left table and one from the right table")
 

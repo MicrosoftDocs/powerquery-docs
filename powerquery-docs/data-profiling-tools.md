@@ -19,7 +19,7 @@ The data profiling tools provide new and intuitive ways to clean, transform, and
 
 * Column profile
 
-To enable the data profiling tools, go to the **View** tab on the ribbon. Enable the options you want in the **Data preview** group, as shown in the following image.<!--The image is a bit misleading, since it only shows **Show whitespace** enabled. Suggest re-creating with more of the options enabled.-->
+To enable the data profiling tools, go to the **View** tab on the ribbon. Enable the options you want in the **Data preview** group, as shown in the following image.
 
 ![Data profiling tools](images/me-enable-data-preview-tools.png "Data profiling tools")
 

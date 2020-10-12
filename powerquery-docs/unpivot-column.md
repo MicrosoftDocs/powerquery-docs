@@ -55,7 +55,7 @@ For the scenario described above, you first need to select the columns you want 
 
 ![Table with the 6/1/2020, 7/1/2020, and 8/1/2020 columns selected, and the Unpivot columns command selected in the shortcut menu](images/me-unpivot-columns-right-click.png "Table with the 6/1/2020, 7/1/2020, and 8/1/2020 columns selected, and the Unpivot columns command selected in the shortcut menu")
 
-The result of that operation will yield the result shown in the following image.<!--This image should be cropped a bit tighter, it's hard to read.-->
+The result of that operation will yield the result shown in the following image.
 
 :::image type="complex" source="images/me-unpivot-columns-final-table.png" alt-text="Unpivot columns final table":::
    Table containing a Country column set as the Text data type, an Attribute column set as the Text data type, and a Value column set as the Whole number data type. The Country column contains USA in the first three rows, Canada in the next three rows, and Panama in the last three rows. The Attribute column contains 6/1/2020 in the first, forth, and seventh rows, 7/1/2020 in the second, fifth, and eighth rows, and 8/1/2020 in the third, sixth, and ninth rows. In addition, the Unpivot columns entry is emphasized in the Query settings pane and the M language code is shown in the formula bar.

@@ -10,7 +10,7 @@ ms.custom: edited
 ---
 
 # Add an index column
-<!--The structure of this article was a bit confusing, with just one H2 called "Example." What do you think of turning the H3s into explicit steps like this?-->
+
 The **Index column** command adds a new column to the table with explicit position values, and is usually created to support other transformation patterns.
 
 ![Add index column command on the Add column tab](images/me-add-index-column-icon.png "Add index column command on the Add column tab")

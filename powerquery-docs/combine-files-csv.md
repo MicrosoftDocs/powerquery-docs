@@ -102,7 +102,7 @@ When you go back to the **CSV Files** query, you'll notice that the last step is
 
 ![Output query with step-level error](images/me-combine-files-csv-column-name-error.png "Output query with step-level error")
 
-You can remove this last step of the query from the **Applied steps** pane by selecting the delete icon<!--Can we get ahold of this icon to use here?--> on the left side of the name of the step. After deleting this step, your query will show the correct results.
+You can remove this last step of the query from the **Applied steps** pane by selecting the X delete icon on the left side of the name of the step. After deleting this step, your query will show the correct results.
 
 ![Combine files without error step](images/me-combine-files-csv-expanded-table-step.png "Combine files without error step")
 

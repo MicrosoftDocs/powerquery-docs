@@ -35,7 +35,7 @@ The append operation requires at least two tables. The **Append** dialog box has
 
 ## Append two tables
 
-For the example in this article, we'll use the following two tables with sample data:<!--The images had the wrong name in the folder, so I renamed them. Please verify!-->
+For the example in this article, we'll use the following two tables with sample data:
 
 * **Online Sales**: Sales made through an online channel.
 

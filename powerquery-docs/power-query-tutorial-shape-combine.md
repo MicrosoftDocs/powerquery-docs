@@ -46,7 +46,7 @@ The following image shows the **Query Settings** pane for a query that has been 
 
 Using the retirement data from the [Using Power Query in Power BI Desktop](power-query-quickstart-using-power-bi.md) quickstart article, which you found by connecting to a Web data source, you can shape that data to fit your needs.
 
-For starters, you can add a custom column to calculate rank based on giving equal weight to all retirement factors<!--Edit okay? I found this confusing. I also wonder what the point of this is beyond creating a new column - can you explain it here?-->, and compare this column to the existing column named **Rank**.  On the **Add Column** tab, select the **Custom Column** button, as shown in the following image.
+For starters, you can add a custom column to calculate rank based all data being equal factors, and compare this column to the existing column named **Rank**.  On the **Add Column** tab, select the **Custom Column** button, as shown in the following image.
 
 ![Create a custom column button](media/power-query-tutorial-shape-combine/shapecombine_customcolumn.png "Create a custom column button")
 
@@ -71,7 +71,7 @@ You can also transform column data types by using the **Transform** tab on the r
 
 ![Data Type button on the Transform tab](media/power-query-tutorial-shape-combine/queryoverview_transformribbonarrow.png "Data Type button on the Transform tab")
 
-Note that in **Query Settings**, **Applied Steps** reflect any shaping steps that have been applied to the data. If you want to remove any step from the shaping process, you select the X<!--note from editor: Can we get this inline image here? It doesn't really look like an "X."--> on the left side of the step. In the following image, the **Applied Steps** section lists what has happened so far, which includes connecting to the website (**Source**), selecting the table (**Navigation**), and, while loading the table, Power Query Editor automatically changing text-based number columns from **Text** to **Whole Number** (**Changed Type**). The last two steps show your previous actions, **Added Custom** and **Changed Type1**. 
+Note that in **Query Settings**, **Applied Steps** reflect any shaping steps that have been applied to the data. If you want to remove any step from the shaping process, you select the X on the left side of the step. In the following image, the **Applied Steps** section lists what has happened so far, which includes connecting to the website (**Source**), selecting the table (**Navigation**), and, while loading the table, Power Query Editor automatically changing text-based number columns from **Text** to **Whole Number** (**Changed Type**). The last two steps show your previous actions, **Added Custom** and **Changed Type1**. 
 
 ![Query Settings pane](media/power-query-tutorial-shape-combine/shapecombine_appliedstepsearly2.png "Query Settings pane")
 
@@ -115,7 +115,7 @@ Now you can remove the `Cost of living` parameter and decrement the divisor by c
 Table.AddColumn(#"Removed Columns", "New Rank", each ([Weather] + [Health care quality] + [Crime] + [Tax] + [Culture] + [Senior] + [#"Well-being"]) / 7)
 ```
 
-Select the green check mark to the left of the formula bar, or press the Enter key, to replace the revised values. The **Added Custom** step should<!--note from editor: If this isn't 100 percent going to happen, do you need to cover that possibility? According to Writing Style Guide, "Use should only to describe an action that's recommended but optional. Don't use should to indicate probability. If you can't make a definitive statement, use might or rephrase."--> now be completed with no errors.
+Select the green check mark to the left of the formula bar, or press the Enter key, to replace the revised values. The **Added Custom** step should now be completed with no errors.
 
 > [!NOTE]
 > You can also select the **Remove errors** command (from the ribbon or the shortcut menu), which removes any rows that have errors. In this case, the command would have removed all the rows from your data, and you don't want to do that&mdash;you probably want to keep your data in the table.
@@ -157,7 +157,7 @@ Lastly, you'll want to change the name of that table to something descriptive. W
 Changing the table name is easy. On the **Query Settings** pane, under **Properties**, enter **RetirementStats** in the **Name** box, and then select **Enter**.
 
 ![Rename a table](media/power-query-tutorial-shape-combine/shapecombine_renametable2.png "Rename a table")
-<!--note from editor: The following paragraph needs to be set off somehow. Formatting can really help give shape to content that kind of weaves in and out of step-by-step guidance and commentary.-->
+
 You've shaped that data to the extent you need to. Next, you'll connect to another data source and combine data.
 
 ## Combine data
@@ -200,6 +200,12 @@ To get this data into shape, take the following steps:
 
    ![Remove columns](media/power-query-tutorial-shape-combine/shapecombine_removecolumns.png "Remove columns")
 
+    >[!IMPORTANT]
+    >The *sequence* of applied steps in Power Query Editor is important, and can affect how the data is shaped. It’s also important to consider how one step may impact another subsequent step. If you remove a step from the Applied Steps, subsequent steps may not behave as originally intended because of the impact of the query’s sequence of steps.
+
+    >[!NOTE]
+    >When you resize the Power Query Editor window to make the width smaller, some ribbon items are condensed to make the best use of visible space. When you increase the width of the Power Query Editor window, the ribbon items expand to make the most use of the increased ribbon area.
+
 5. Rename the columns and the table itself. As usual, there are a few ways to rename a column. First select the column, and then either select **Rename** from the **Transform** tab, or right-click and select **Rename** from the menu that appears. The following image shows both options; you only need to choose one.
 
    ![Many ways to rename](media/power-query-tutorial-shape-combine/shapecombine_rename.png "Many ways to rename")
@@ -207,9 +213,6 @@ To get this data into shape, take the following steps:
    Rename the columns to **State Name** and **State Code**. Rename the table by entering **StateCodes** in the **Name** box on the **Query Settings** pane. 
 
 Now that you've shaped the StateCodes table the way you want, you'll combine these two tables&mdash;or *queries*&mdash;into one.
-
->[!IMPORTANT]
->The tables you now have are a result of the queries you applied to the data. Such tables are also called *queries*, which is the term we'll use in the following discussion.<!--note from editor: Edit okay? I find it very confusing to use the same word for the question and the set of answers to that question, but if that's what we actually do, c'est la vie. I think the point needs to be highlighted in something like this Important note. -->
 
 There are two primary ways of combining queries: *merging* and *appending*:
 

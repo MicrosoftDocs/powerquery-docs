@@ -109,7 +109,7 @@ Power Query handles two distinct components that manage the way that things look
 * Localization: the component that tells Power Query in what language it should be displayed.
 * Globalization: the component that handles the formatting of the values, in addition to the interpretation of text values.
 
-*Locale* is a single value that holds both the localization and globalization components. Locale is used to interpret text values and convert them into other data types. For example, the locale **English (United States)** means that the *localization*<!--Suggest not equating localization with language, they aren't the same.--> is in United States English and the *globalization*, or format of the value<!--Not sure what "format of the value" refers to. Is this the most precise definition of "globalization" that we've got?-->, is based on the standards used in the United States.
+*Locale* is a single value that holds both the localization and globalization components. Locale is used to interpret text values and convert them into other data types. For example, the locale **English (United States)** means that the *localization* is in United States English and the *globalization*, or format of the value, is based on the standards used in the United States.
 
 When Power Query defines a column data type or converts from one data type to another, it has to interpret the values to be converted before it can transform them to a different data type.
 
