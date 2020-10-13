@@ -153,7 +153,7 @@ You can also get a copy of a `Web.Page` query from Excel. To copy the code from 
 3. In **Navigator**, choose the data you want to load, and then select **Transform Data**.
 4. In the **Home** tab of Power Query, select **Advanced Editor**. 
 5. In the **Advanced Editor**, copy the M formula.
-6. In the online app that uses `Web.BrowserContents`, select the **Blank Query** connector.
+6. In the app that uses `Web.BrowserContents`, select the **Blank Query** connector.
 7. In the **Blank Query**, enter the `Web.Page` query you copied from Excel. 
 
 You can also manually enter the following code into a blank query. Ensure that you enter the address of the web page you want to load.
