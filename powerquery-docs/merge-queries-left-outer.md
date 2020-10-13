@@ -6,60 +6,54 @@ ms.service: powerquery
 ms.reviewer: 
 ms.date: 06/30/2020
 ms.author: v-miesco
+ms.custom: edited
 ---
 
 # Left outer join
 
-A left outer join is one of the join kinds available inside the **Merge queries** window in Power Query. To read more about the merge operations in Power Query, see [Merge operations overview](merge-queries-overview.md).
+One of the join kinds available in the **Merge** dialog box in Power Query is a *left outer join*, which keeps all the rows from the left table and brings in any matching rows from the right table. More information: [Merge operations overview](merge-queries-overview.md)
 
-A left outer join keeps all the rows from the left table, and brings any matching rows from the right table.
+:::image type="complex" source="images/left-outer-join-operation.png" alt-text="Left outer join example":::
+   Figure shows a table on the left with Date, CountryID, and Units columns. The emphasized CountryID column contains values of 1 in rows 1 and 2, 3 in row 3, and 4 in row 4. A table on the right contains ID and Country columns. The emphasized ID column contains values of 1 in row 1 (denoting USA), 2 in row 2 (denoting Canada), and 3 in row 3 (denoting Panama). A table below the first two tables contains Date, CountryID, Units, and Country columns. The table has four rows, with the top two rows containing the data for CountryID 1, one row for CountryID 3, and one row for Country ID 4. Since the right table didn't contain an ID of 4, the value of the fourth row in the Country column contains null.
+   :::image-end:::
 
-This article demonstrates, with a practical example, how to do a merge operation using the left outer join as the join kind.
+This article uses sample data to show how to do a merge operation with the left outer join. The sample source tables for this example are:
 
-![Sample left outer join](images/left-outer-join-operation.png)
+* **Sales**: This table includes the fields **Date**, **CountryID**, and **Units**. **CountryID** is a whole number value that represents the unique identifier from the **Countries** table.
 
->[!Note]
->Samples used in this article are only to showcase the concepts. The concepts showcased here apply to all queries in Power Query.
+   ![Sales table containing Date, CountryID, and Units columns, with CountryID set to 1 in rows 1 and 2, 3 in row 3, and 4 in row 4](images/me-merge-operations-left-outer-join-sales-table.png "Sales table containing Date, CountryID, and Units columns, with CountryID set to 1 in rows 1 and 2, 3 in row 3, and 4 in row 4")
 
-## Sample input and output tables
+* **Countries**: This table is a reference table with the fields **id** and **Country**. The **id** field represents the unique identifier for each record.
 
-The sample source tables for this example are:
+   :::image type="complex" source="images/me-merge-operations-left-outer-join-countries-table.png" alt-text="Sample Country table for left outer join":::
+      Countries table with id set to 1 in row 1, 2 in row 2, and 3 in row 3, and Country set to USA in row 1, Canada in row 2, and Panama in row 3.
+   :::image-end:::
 
-* **Sales**&mdash;with the fields **Date**, **CountryID**, and **Units**. The *CountryID* is a whole number value that represents the unique identifier from the **Countries** table.
+In this example, you'll merge both tables, with the **Sales** table as the left table and the **Countries** table as the right one. The join will be made between the following columns.
 
-   ![Sales table](images/me-merge-operations-left-outer-join-sales-table.png)
-
-* **Countries**&mdash;this table is a reference table with the fields **id** and **Country**. The **id* represents the unique identifier of each record.
-
-   ![Countries table](images/me-merge-operations-left-outer-join-countries-table.png)
-
-The goal is to merge both tables, where the **Sales** table will be the left table and the **Countries** table the right one. The join will be made between the following columns:
-
-|Field from Sales table| Field from Countries table|
+|Field from the Sales table| Field from the Countries table|
 |-----------|------------------|
 |CountryID|id|
 
-The following table is thee desired output table where the name of the country appears as a new **Country** column in the **Sales** table as long as the CountryID exists in the Countries table. If there are no matches between the left and right table, a *null* value will be the result of the merge for that row. This can be shown for the CountryID 4 in from the Sales table. 
+The goal is to create a table like the following, where the name of the country appears as a new **Country** column in the **Sales** table as long as the **CountryID** exists in the **Countries** table. If there are no matches between the left and right tables, a *null* value is the result of the merge for that row. In the following image, this is shown to be the case for **CountryID** 4, which was brought in from the **Sales** table. 
 
-![Left outer join final table](images/me-merge-operations-left-outer-final-table.png)
+![Left outer join final table with the Country column added with the value of the fourth row of that column set to null](images/me-merge-operations-left-outer-final-table.png "Left outer join final table with the Country column added with the value of the fourth row of that column set to null")
+<!--markdownlint-disable MD036-->
+**To do a left outer join**
+<!--markdownlint-enable MD036-->
+1. Select the **Sales** query, and then select **Merge queries**.
+2. In the **Merge** dialog box, under **Right table for merge**, select **Countries**.
+3. In the **Sales** table, select the **CountryID** column.
+4. In the **Countries** table, select the **id** column.
+5. In the **Join kind** section, select **Left outer**.
+6. Select **OK**.
 
-## Left outer join
+![Merge dialog box showing the results of following the previous left outer join procedure](images/me-merge-operations-left-outer-merge-window.png "Merge dialog box showing the results of following the previous left outer join procedure")
 
-To do a left outer join:
+From the newly created **Countries** column, expand the **Country** field. Don't select the **Use original column name as prefix** check box.
 
-1. Select the **Sales** query and then select **Merge queries** to create a new step inside the Sales query that will merge the **Sales** query with the **Countries** query.
-2. Select the **Countries** as the **Right table for merge**.
-3. Select the **CountryID** column from the **Sales** table.
-4. Select the **id** column from the **Countries** table.
-5. From the **Join Kind** section, select the **Left outer** option.
-6. Select **OK** button.
+![Expand table column for Country](images/me-merge-operations-left-outer-expand-field.png "Expand table column for Country")
 
-![Merge window for left outer join](images/me-merge-operations-left-outer-merge-window.png)
+After performing this operation, you'll create a table that looks like the following image.
 
-From the newly created **Countries** column after the merge operation, expand the **Country** field without using the original column name as prefix.
-
-![Expand table column for Country](images/me-merge-operations-left-outer-expand-field.png)
-
-After doing this operation, the desired result is reached.
-
-![Left outer join final table](images/me-merge-operations-left-outer-final-table.png)
+![Final table with the Country column added with the value of the fourth row of that column set to null](images/me-merge-operations-left-outer-final-table-2.png "Final table with the Country column added with the value of the fourth row of that column set to null")
