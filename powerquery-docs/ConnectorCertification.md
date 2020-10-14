@@ -38,7 +38,7 @@ As M is a versatile language that, as seen in [Handling Authentication](Handling
 
 From a developer's perspective, developers need to [self-sign](https://docs.microsoft.com/power-query/handlingconnectorsigning) their custom connector and provide their users with the information (thumbprint) to securely load it.
 
-From a user's perspective, users need to use the thumbprint from the developer to securely [trust and load the custom connector](https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-trusted-third-party-connectors) for use. Alternatively, users can opt to lower their security settings to allow loading of code not certified by Microsoft or another developer, but this is not recommended.
+From a user's perspective, users need to use the thumbprint from the developer to securely [trust and load the custom connector](https://docs.microsoft.com/power-bi/connect-data/desktop-trusted-third-party-connectors) for use. Alternatively, users can opt to lower their security settings to allow loading of code not certified by Microsoft or another developer, but this is not recommended.
 
 ## Certification Overview
 
