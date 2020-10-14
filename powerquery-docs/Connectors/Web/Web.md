@@ -154,7 +154,13 @@ You can also get a copy of a `Web.Page` query from Excel. To copy the code from 
 4. In the **Home** tab of Power Query, select **Advanced Editor**. 
 5. In the **Advanced Editor**, copy the M formula.
 6. In the app that uses `Web.BrowserContents`, select the **Blank Query** connector.
-7. In the **Blank Query**, enter the `Web.Page` query you copied from Excel. 
+7. If you are copying to Power BI Desktop:
+    1. In the **Home** tab, select **Advanced Editor**.
+    2. Paste the copied `Web.Page` query in the editor, and then select **Done**.
+8. If you are copying to Power Query Online:
+    1. In the **Blank Query**, paste the copied `Web.Page` query in the blank query.
+    2. Select an on-premises data gateway to use.
+    3. Select **Next**. 
 
 You can also manually enter the following code into a blank query. Ensure that you enter the address of the web page you want to load.
 
