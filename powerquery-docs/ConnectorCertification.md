@@ -1,101 +1,147 @@
 ---
-title: Connector Certification
-description: Guidelines on connector certification and implementation requirements
-author: cpopell
+title: Power Query Connector Certification
+description: Guidelines on connector certification and implementation requirements for Power Query custom connectors
+author: bezhan-msft
 
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 12/10/2019
-ms.author: gepopell
+ms.date: 10/13/2020
+ms.author: bezhan
 
 LocalizationGroup: reference
 ---
 
-# Connector Certification
+# Power Query Connector Certification
 
-When developing a custom connector, or if you've been given one by another developer or vendor, you'll notice that they require you to either lower security settings, or to [trust the certificate](https://docs.microsoft.com/power-bi/desktop-trusted-third-party-connectors) the connector is signed with. This is due to the fact that M is a versatile language that (as seen in [Handling Authentication](HandlingAuthentication.md)) has the capacity to interact with stored credentials. This means that we needed to give end users a way to only allow trusted connectors to run.
+> [!Note]
+> This article describes the requirements and process to submit a Power Query custom connector for certification. Please read the article closely in entirety before starting the certification process.
 
-The 'Connector Certification' program is a program in which Microsoft works with vendors to extend the data connectivity capabilities of Power BI.
+## Introduction
+
+Certifying a Power Query custom connector makes the connector available publicly, out-of-box, within Power BI Desktop. Certification is governed by Microsoft's Connector Certification Program, where Microsoft works with partner developers to extend the data connectivity capabilities of Power BI.
 
 Certified connectors are:
 
+* Maintained by the partner developer
+
+* Supported by the partner developer
+
 * Certified by Microsoft
+
 * Distributed by Microsoft
-* Maintained by the developer
-* Supported by the developer
 
-We work with vendors to try to make sure that they have support in maintenance, but customer issues with the connector itself will be directed to the developer.
+We work with partners to try to make sure that they have support in maintenance, but customer issues with the connector itself will be directed to the partner developer.
 
-We have a certain set of requirements for certification. We recognize that not every developer can meet these requirements, and as above we're hoping to introduce a feature set that will handle their needs in short order.
+## Custom Connector Security and Signing
 
-To ensure the best experience for our customers, and that we're focused on customer needs:
+As M is a versatile language that (as seen in [Handling Authentication](HandlingAuthentication.md)) has the capacity to interact with stored credentials, we needed to give users a way to only allow trusted connectors to run. When using certified connectors from another developer, you will need to [trust the certificate](https://docs.microsoft.com/power-bi/desktop-trusted-third-party-connectors) by asking the developer to sign it with a certificate and provide you with the information to securely load it. Alternatively, you can opt to lower your security settings to allow loading of code not certified by Microsoft or another developer, though this is not recommended.
 
-* The vendor should make sure their connector was available to customers directly for some time
-* There should be evidence from customers that the connector is working successfully at the level of usage anticipated
-* There should be a thread in the Power BI Ideas forum driven by customers to indicate demand to add it to Power BI Desktop
+## Certification Overview
 
-Cut-off dates for certification are:
-* Notification of a submission on the 15th of the month, two months before the targeted Power BI desktop release. In other words for April Power BI, the cut-off is February 15th.
-* Submission must be done by the 1st of the month before the targeted Power BI desktop release. For April Power BI, the cut-off for submission would be March 1st.
-* Technical review must be passed by the 15th of the month before the targeted Power BI desktop release. For April Power BI, the cut-off for technical review would be March 15th.
+### Prerequisites
 
-Due to backlogs, delays, rearchitecture, and testing issues, we highly recommend a long lead time for your initial release, and to very carefully read our requirements below. If you feel like your connector is important to deliver to a few connectors with minimal overhead, we recommend self signing and providing it that way.
+To ensure the best experience for our customers, we only consider connectors which meet a set of prerequisites for certification: 
+
+* The connector must be for a public product.
+
+* The developer must provide an estimate for usage. We suggest that developers of connectors for very boutique products use our [connector self-signing capabilities](custom-connector-security) to provide them directly to the customer.
+
+* The connector must be already made available to customers directly to fulfill a user need or business scenario.
+
+* The connector must be working successfully at an anticipated level of usage by customers.
+
+* There must be a thread in the [Power BI Ideas forum](https://ideas.powerbi.com/) driven by customers to indicate demand to make the connector publicly available in Power BI Desktop.
+
+These prerequisites exist to ensure that connectors undergoing certification have significant customer and business need to be used and supported post-certification. 
+
+### Process and Timelines
+
+Certified connectors are released with monthly Power BI Desktop releases, so the deadlines for each release work back from each Power BI Desktop release date. The certification process generally takes around two months to complete from registration to release, and is outlined in the following steps:
+* **Registration**: notification of intent to certify your custom connector. This must occur by the 15th of the month, two months before the targeted Power BI desktop release.
+  * For example, for the April Power BI Desktop release, the deadline would be February 15th. 
+
+* **Submission**: submission of connector files for Microsoft review. This must occur by the 1st of the month before the targeted Power BI desktop release.
+  * For example, for the April Power BI Desktop release, the deadline would be March 1st.
+
+* **Technical Review**: finalization of the connector files, passing Microsoft review and certification. This must occur by the 15th of the month before the targeted Power BI Desktop release.
+  * For example, for the April Power BI Desktop release, the deadline would be March 15th.
+
+Due to the complexity of the technical reviews and potential delays, rearchitecture, and testing issues, we highly recommend submitting early with a long lead time for the initial release and certification. If you feel like your connector is important to deliver to a few connectors with minimal overhead, we recommend [self-signing](#custom-connector-security) and providing it that way.
 
 ## Certification Requirements
 
-### Before starting
-* Developer must own the data source or have recorded permission from the owner of the data source to develop a connector for it.
-* The connector must be for a public product.
-* The developer must provide an estimate for usage. We suggest that developers of connectors for very boutique products use our Connector Signing capabilities and provide them directly to the customer.
-* Developer must submit to the Connector Certification Portal. In the future this will be available via standard Microsoft ISV channels. Currently you are required to reach out to dataconnectors@microsoft.com first to connect with the team.
+We have a certain set of requirements for certification. We recognize that not every developer can meet these requirements, and we're hoping to introduce a feature set that will handle developer needs in short order.
   
-### Artifacts
-* PBIX file
-  * Report should contain one or more queries to test each item in their navigation table.
-  * If you don't have a set schema (as an example, databases), you should include a query for each 'type' of table you're concerned with.
-* .mez file
-  * The .mez file should follow style standards. For example, use Product.mez rather than Product_PowerBI_Connector.mez.
-* Test account
-  * The test account will be reused whenever we're troubleshooting or certifying updates, so if you have a persistent test account it would be best to find a way to share this.
-* Link to external dependencies (ODBC drivers, for example)
-* Documentation on how to use the connector if needed
+### Submission Files (Artifacts)
+
+Please ensure the connector files that you submit include all of the following:
+
+* Connector (.mez) file
+  * The .mez file should follow style standards.
+  * Name the .mez file: ```ProductName.mez```
+
+* Power BI Desktop (.pbix) file for testing
+  * We require a sample Power BI report (.pbix) to test your connector with.
+  * The report should include at least one query to test each item in your navigation table.
+  * If there is no set schema (e.g. databases), the report needs to include a query for each "type" of table that the connector may handle. 
+
+* Test account to your data source
+  * We will use the test account to test and troubleshoot your connector.
+  * Provide a test account which is persistent, so we can use the same account to certify any future updates.
+
+* Testing instructions
+  * Provide any documentation on how to use the connector and test its functionality.
+
+* Links to external dependencies (e.g. ODBC drivers)
 
 ### Features and Style
-* Connector MUST use Section document format
-* Connector MUST have [Version adornment](HandlingVersioning.md) on section
-* Connector MUST provide function documentation metadata
-* Connector MUST have [TestConnection handler](HandlingGatewaySupport.md)
-* Connector MUST follow naming conventions (DataSourceKind.FunctionName)
-* FunctionName should make sense for their domain - generally "Contents", "Tables", "Document", "Databases" …
-* Connector SHOULD have icons
-* Connector SHOULD provide a navigation table
-* Connector SHOULD place strings in resources.resx file
+
+The connector must follow a set of feature and style rules to meet a usability standard consistent with other certified connectors. 
+
+* The connector MUST:
+  * use Section document format.
+  * have [version adornment](HandlingVersioning.md) on section.
+  * provide function documentation metadata.
+  * have [TestConnection handler](HandlingGatewaySupport.md).
+  * follow naming conventions (e.g. ```DataSourceKind.FunctionName```).
+
+* The ```FunctionName``` should make sense for the domain. (e.g. "Contents", "Tables", "Document", "Databases" …etc).
+
+* The connector SHOULD:
+  * have icons.
+  * provide a navigation table.
+  * place strings in a ```resources.resx``` file.
  
 ### Security
-* If using Extension.CurrentCredentials() …
+
+There are specific security considerations which your connector must handle.
+
+* If ```Extension.CurrentCredentials()``` is used...
   * Is the usage required? If so, where do the credentials get sent to?
   * Are the requests guaranteed to be made through HTTPS?
     * You can use the [HTTPS enforcement helper function](HelperFunctions.md#validateurlscheme).
   * If the credentials are sent using Web.Contents() via GET …
     * Can it be turned into a POST?
-    * If GET is required, connector MUST use the CredentialQueryString record in the Web.Contents() options record to pass in sensitive credentials
+    * If GET is required, the connector MUST use the CredentialQueryString record in the Web.Contents() options record to pass in sensitive credentials.
+
 * If [Diagnostics.* functions](https://docs.microsoft.com/powerquery-m/diagnostics-trace) are used …
-  * Validate what is being traced&mdash;it MUST NOT
-    * Contain PII
-    * Contain large amounts of data
-  * If you implemented significant tracing in development, you should attach it to a variable that checks if tracing should be on or not, and you should turn it off before shipping.
-* If Expression.Evaluate() is used …
-  * Validate where the expression is coming from / what it is (that is, can dynamically construct calls to Extension.CurrentCredentials(), and so on …
-  * Expression should not be user provided / take user input
-  * Expression should not be dynamic (i.e. retrieved from a web call)
+  * Validate what is being traced; data **must not contain PII or large amounts of unnecessary data**.
+  * If you implemented significant tracing in development, you should implement a variable or feature flag that determines if tracing should be on. This must be **turned off** prior to submitting for certification.
 
-## Getting your connector certified
+* If ```Expression.Evaluate()``` is used …
+  * Validate where the expression is coming from / what it is (that is, can dynamically construct calls to Extension.CurrentCredentials()...etc. 
+  * The ```Expression``` should not be user provided / take user input.
+  * The ```Expression``` should not be dynamic (i.e. retrieved from a web call).
 
-If you'd like to reach out about connector certification, please contact us at dataconnectors@microsoft.com.
+## Registering for Certification
 
-## Recommended step: Create a template app
+If you are interested in pursuing certification of your custom connector, ensure that your scenario and connector meet the [prerequisites](#Prerequisites) and [requirements](#Certification-Requirements) outlined in this article. Failure to do so will cause delays in certification as our team will require you to fix any issues or inconsistencies prior to moving forward with certification.
 
-Once you've developed a connector to a data source, consider helping customers get up and running quickly by creating a **template app**. A template app provides customers a prebuilt report connected to their data that they can use out-of-the-box or customize as necessary. See [Template apps](https://docs.microsoft.com/power-bi/service-template-apps-overview) for details.
+To get started, complete our [registration form](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2DcOSp0ibhKolmfRqZYZ51UN1MzQ0ZYNVlIMUM4MUQ1SUpPTEo3SFg1VC4u), and a Microsoft contact will reach out to begin the process.
+
+## Template Apps (Recommended)
+
+Once you've developed a connector to a data source, consider helping customers get up and running quickly by creating a [template app](https://docs.microsoft.com/power-bi/service-template-apps-overview). A template app provides customers a prebuilt report connected to their data that they can use out-of-the-box or customize as necessary.
 
 >[!NOTE]
 >Template apps do not support connectors that require a gateway.
