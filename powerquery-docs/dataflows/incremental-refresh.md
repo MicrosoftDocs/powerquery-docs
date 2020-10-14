@@ -40,6 +40,7 @@ Once the dataflow is created and saved, select the **incremental refresh** icon 
 
 When you select the icon, the **Incremental refresh settings** window appears. When you toggle incremental refresh to the **On** position, you can configure your incremental refresh.
 
+
 ![Incremental refresh for dataflows](media/dataflows-incremental-refresh/dataflows-incremental-refresh-03.png)
 
 The following list explains the settings in the **Incremental refresh settings** window. 
