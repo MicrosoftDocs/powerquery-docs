@@ -44,7 +44,7 @@ To ensure the best experience for our customers, we only consider connectors whi
 
 * The connector must be for a public product.
 
-* The developer must provide an estimate for usage. We suggest that developers of connectors for very boutique products use our [connector self-signing capabilities](custom-connector-security) to provide them directly to the customer.
+* The developer must provide an estimate for usage. We suggest that developers of connectors for very boutique products use our [connector self-signing capabilities](#custom-connector-security-and-signing) to provide them directly to the customer.
 
 * The connector must be already made available to customers directly to fulfill a user need or business scenario.
 
@@ -66,7 +66,7 @@ Certified connectors are released with monthly Power BI Desktop releases, so the
 * **Technical Review**: finalization of the connector files, passing Microsoft review and certification. This must occur by the 15th of the month before the targeted Power BI Desktop release.
   * For example, for the April Power BI Desktop release, the deadline would be March 15th.
 
-Due to the complexity of the technical reviews and potential delays, rearchitecture, and testing issues, we highly recommend submitting early with a long lead time for the initial release and certification. If you feel like your connector is important to deliver to a few connectors with minimal overhead, we recommend [self-signing](#custom-connector-security) and providing it that way.
+Due to the complexity of the technical reviews and potential delays, rearchitecture, and testing issues, we highly recommend submitting early with a long lead time for the initial release and certification. If you feel like your connector is important to deliver to a few connectors with minimal overhead, we recommend [self-signing](#custom-connector-security-and-signing) and providing it that way.
 
 ## Certification Requirements
 
@@ -105,7 +105,7 @@ The connector must follow a set of feature and style rules to meet a usability s
   * have [TestConnection handler](HandlingGatewaySupport.md).
   * follow naming conventions (e.g. ```DataSourceKind.FunctionName```).
 
-* The ```FunctionName``` should make sense for the domain. (e.g. "Contents", "Tables", "Document", "Databases" …etc).
+* The ```FunctionName``` should make sense for the domain. (e.g. "Contents", "Tables", "Document", "Databases" …etc.).
 
 * The connector SHOULD:
   * have icons.
@@ -135,7 +135,7 @@ There are specific security considerations which your connector must handle.
 
 ## Registering for Certification
 
-If you are interested in pursuing certification of your custom connector, ensure that your scenario and connector meet the [prerequisites](#Prerequisites) and [requirements](#Certification-Requirements) outlined in this article. Failure to do so will cause delays in certification as our team will require you to fix any issues or inconsistencies prior to moving forward with certification.
+If you are interested in pursuing certification of your custom connector, ensure that your scenario and connector meet the [prerequisites](#prerequisites) and [requirements](#certification-requirements) outlined in this article. Failure to do so will cause delays in certification as our team will require you to fix any issues or inconsistencies prior to moving forward with certification.
 
 To get started, complete our [registration form](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2DcOSp0ibhKolmfRqZYZ51UN1MzQ0ZYNVlIMUM4MUQ1SUpPTEo3SFg1VC4u), and a Microsoft contact will reach out to begin the process.
 
