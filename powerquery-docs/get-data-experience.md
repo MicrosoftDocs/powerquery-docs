@@ -77,10 +77,29 @@ The **Navigator** window consists of two main sections:
 
     >[!NOTE]
     >For Power Query in Excel, select the **Select multiple items** option from the upper-left corner of the navigation window to select more than one object at a time in the object selection pane.
+
+    >[!NOTE]
+    >The list of objects in Power Query Desktop is limited to 10,000 items. This limit does not exist in Power Query Online. For a workaround in Power Query Desktop, see [Object limitation workaround](#object-limitation-workaround).
     
 * The data preview pane on the right side of the window shows a preview of the data from the object you selected.
 
 ![SQL Server connector navigator window](images/me-navigator.png "SQL Server connector navigator window")
+
+#### Object limitation workaround
+
+There’s a fixed limit of 10,000 objects in the **Navigator** in Power Query Desktop. This limit does not occur in Power Query Online. Eventually, the Power Query Online UI will replace the one in the desktop.
+
+In the interim, you can use the following workaround:
+
+1. Right-click on the root node of the **Navigator**, and then select **Transform Data**.
+
+    ![Selecting the root node in Navigator and selecting transform data from the drop-down menu](images/navigator-transform-data.png)
+
+2. Power Query Editor then opens with the full navigation table in the table preview area. This view doesn't have a limit on the number of objects, and you can use filters or any other Power Query transforms to explore the list and find the rows you want (for example, based on the **Name** column).
+
+3. Upon finding the item you want, you can get at the contents by selecting the data link (such as the **Table** link in the following image).
+
+    ![Selecting the Table link to view the contents](images/select-table-link.png)
 
 ### Table preview dialog box
 
