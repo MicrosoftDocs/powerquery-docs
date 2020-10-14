@@ -4,7 +4,7 @@ description: Provides basic information and how to connect to your data, along w
 author: dougklopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 02/05/2020
+ms.date: 10/12/2020
 ms.author: v-douklo
 LocalizationGroup: reference
 ---
@@ -51,7 +51,7 @@ To load data from a web site using a basic URL:
 
    The level you select for the authentication method determines what part of a URL will have the authentication method applied to it. If you select the top-level web address, the authentication method you select here will be used for that URL address or any subaddress within that address. However, you might not want to set the top URL address to a specific authentication method because different subaddresses could require different authentication methods. For example, if you were accessing two separate folders of a single SharePoint site and wanted to use different Microsoft Accounts to access each one.
    
-   Once you have set the authentication method for a specific web site address, you won't need to select the authentication method for that URL address or any subaddress again. For example, if you select the https://en.wikipedia.org/ address in this dialog, any web page that begins with this address won't require that you select the authentication method again.  
+   Once you've set the authentication method for a specific web site address, you won't need to select the authentication method for that URL address or any subaddress again. For example, if you select the https://en.wikipedia.org/ address in this dialog, any web page that begins with this address won't require that you select the authentication method again.  
 
    >[!Note]
    >If you need to change the authentication method later, see [Changing the authentication method](#changing-the-authentication-method). 
@@ -115,10 +115,60 @@ For example, you could use the following steps to open a JSON file on the https:
 
 ### Using a gateway with the Web connector
 
-If you're using the Web connector through an on-premises data gateway, you must have Internet Explorer 10 installed on the gateway machine. This will ensure that the `Web.Page` call through the gateway will work correctly. 
+If you're using the Web connector through an on-premises data gateway, you must have Internet Explorer 10 installed on the gateway machine.  This installation will ensure that the `Web.Page` call through the gateway will work correctly. 
 
 ### Changing the authentication method
 
 In some cases, you may need to change the authentication method you use to access a particular site. If this change is necessary, see [Change the authentication method](../../connectorauthentication.md#change-the-authentication-method).
 
+### Limitations on Web connector authentication for HTML content
+
+>[!NOTE]
+> The limitations described in this section only apply to HTML web pages. Opening other kinds of files from the web using this connector isn't affected by these limitations.
+
+The legacy Power Query Web connector automatically creates a `Web.Page` query that supports authentication. The only limitation occurs if you select Windows authentication in the authentication method dialog box. In this case, the **Use my current credentials** selection works correctly, but **Use alternate credentials** wouldn't authenticate.
+
+The new version of the Web connector (currently available in Power BI Desktop) automatically creates a `Web.BrowserContents` query. Such queries currently only support anonymous authentication. In other words, the new Web connector can't be used to connect to a source that requires non-anonymous authentication. This limitation applies to the `Web.BrowserContents` function, regardless of the host environment.
+
+Currently, Power BI Desktop automatically uses the `Web.BrowserContents` function. The `Web.Page` function is still used automatically by Excel and Power Query Online. Power Query Online does support `Web.BrowserContents` using an on-premises data gateway, but you currently would have to enter such a formula manually. When *Web By Example* becomes available in Power Query Online in mid-October 2020, this feature will use `Web.BrowserContents`.
+
+The `Web.Page` function requires that you have Internet Explorer 10 installed on your computer. When refreshing a `Web.Page` query via an on-premises data gateway, the computer containing the gateway must have Internet Explorer 10 installed. If you use only the `Web.BrowserContents` function, you don't need to have Internet Explorer 10 installed on your computer or the computer containing the on-premises data gateway.
+
+In cases where you need to use `Web.Page` instead of `Web.BrowserContents` because of authentication issues, you can still manually use `Web.Page`.
+
+In Power BI Desktop, you can use the older `Web.Page` function by clearing the **New web table inference** preview feature:
+
+1. Under the **File** tab, select **Options and settings** > **Options**.
+2. In the **Global** section, select **Preview features**.
+3. Clear the **New web table inference** preview feature, and then select **OK**.
+4. Restart Power BI Desktop.
+
+    >[!NOTE]
+    >Currently, you can't turn off the use of `Web.BrowserContents` in Power BI Desktop optimized for Power BI Report Server.
+
+You can also get a copy of a `Web.Page` query from Excel. To copy the code from Excel:
+
+1. Select **From Web** from the **Data** tab.
+2. Enter the address in the **From Web** dialog box, and then select **OK**.
+3. In **Navigator**, choose the data you want to load, and then select **Transform Data**.
+4. In the **Home** tab of Power Query, select **Advanced Editor**. 
+5. In the **Advanced Editor**, copy the M formula.
+6. In the app that uses `Web.BrowserContents`, select the **Blank Query** connector.
+7. If you are copying to Power BI Desktop:
+    1. In the **Home** tab, select **Advanced Editor**.
+    2. Paste the copied `Web.Page` query in the editor, and then select **Done**.
+8. If you are copying to Power Query Online:
+    1. In the **Blank Query**, paste the copied `Web.Page` query in the blank query.
+    2. Select an on-premises data gateway to use.
+    3. Select **Next**. 
+
+You can also manually enter the following code into a blank query. Ensure that you enter the address of the web page you want to load.
+
+```powerqury-m
+let
+  Source = Web.Page(Web.Contents("<your address here>")),
+  Navigation = Source{0}[Data]
+in
+  Navigation
+```
 
