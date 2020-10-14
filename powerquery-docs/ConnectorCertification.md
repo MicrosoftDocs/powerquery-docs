@@ -34,7 +34,11 @@ We work with partners to try to make sure that they have support in maintenance,
 
 ## Custom Connector Security and Signing
 
-As M is a versatile language that (as seen in [Handling Authentication](HandlingAuthentication.md)) has the capacity to interact with stored credentials, we needed to give users a way to only allow trusted connectors to run. When using certified connectors from another developer, you will need to [trust the certificate](https://docs.microsoft.com/power-bi/desktop-trusted-third-party-connectors) by asking the developer to sign it with a certificate and provide you with the information to securely load it. Alternatively, you can opt to lower your security settings to allow loading of code not certified by Microsoft or another developer, though this is not recommended.
+As M is a versatile language that, as seen in [Handling Authentication](HandlingAuthentication.md), has the capacity to interact with stored credentials, we need to give users a way to only allow trusted connectors to run.
+
+From a developer's perspective, developers need to [self-sign](https://docs.microsoft.com/power-query/handlingconnectorsigning) their custom connector and provide their users with the information (thumbprint) to securely load it.
+
+From a user's perspective, users need to use the thumbprint from the developer to securely [trust and load the custom connector](https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-trusted-third-party-connectors) for use. Alternatively, users can opt to lower their security settings to allow loading of code not certified by Microsoft or another developer, but this is not recommended.
 
 ## Certification Overview
 
@@ -56,7 +60,7 @@ These prerequisites exist to ensure that connectors undergoing certification hav
 
 ### Process and Timelines
 
-Certified connectors are released with monthly Power BI Desktop releases, so the deadlines for each release work back from each Power BI Desktop release date. The certification process generally takes around two months to complete from registration to release, and is outlined in the following steps:
+Certified connectors are released with monthly Power BI Desktop releases, so the deadlines for each release work back from each Power BI Desktop release date. The expected duration of the certification process from registration to release varies depending on the quality and complexity of the connector submission, and is outlined in the following steps:
 * **Registration**: notification of intent to certify your custom connector. This must occur by the 15th of the month, two months before the targeted Power BI desktop release.
   * For example, for the April Power BI Desktop release, the deadline would be February 15th. 
 
@@ -100,7 +104,7 @@ The connector must follow a set of feature and style rules to meet a usability s
 
 * The connector MUST:
   * use Section document format.
-  * have [version adornment](HandlingVersioning.md) on section.
+  * have [version adornment](https://docs.microsoft.com/power-query/handlingdocumentation) on section.
   * provide function documentation metadata.
   * have [TestConnection handler](HandlingGatewaySupport.md).
   * follow naming conventions (e.g. ```DataSourceKind.FunctionName```).
