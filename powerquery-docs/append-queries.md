@@ -30,8 +30,8 @@ The append operation requires at least two tables. The **Append** dialog box has
 * **Two tables**: Combine two table queries together. This mode is the default mode.
 * **Three or more tables**: Allow an arbitrary number of table queries to be combined.
 
->[!NOTE]
->The tables will be appended in the order in which they're selected, starting with the **Primary table** for **Two tables** mode and the first table in the **Tables to append** list for **Three or more tables** mode.
+>[!Note]
+>The tables will be appended in the order in which they're selected, starting with the **Primary table** for the **Two tables** mode and from the primary table in the **Tables to append** list for the **Three or more tables** mode.
 
 ## Append two tables
 
