@@ -6,7 +6,7 @@ ms.service: powerquery
 ms.reviewer: v-douklo
 ms.topic: conceptual
 ms.date: 05/25/2020
-ms.author: v-rerad
+ms.author: v-douklo
 ---
 
 # Computed entities scenarios and use-cases
