@@ -6,7 +6,7 @@ author: jessli20
 ms.topic: conceptual
 ms.service: powerquery
 ms.date: 06/04/2020
-ms.author: jessli20
+ms.author: v-douklo
 ---
 
 # Split columns by digit to non-digit

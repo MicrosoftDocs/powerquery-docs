@@ -1,6 +1,6 @@
 ---
-title: SharePoint List
-description: Power Query SharePoint List connector reference
+title: Power Query SharePoint List connector
+description: Provides basic information about how to connect to your data, along with troubleshooting tips for obtaining the root SharePoint address and changing the authentication method.
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
@@ -80,16 +80,20 @@ Make sure you supply the root address of the SharePoint site, without any subfol
 
 ### Change the authentication method
 
-In some cases, you may need to change the authentication method you use to access a particular SharePoint site. If this is necessary, perform the following steps:
+In some cases, you may need to change the authentication method you use to access a particular SharePoint site. If this is necessary, see [Change the authentication method](../connectorauthentication.md#change-the-authentication-method).
 
-1. In Power BI Desktop, from the **File** tab, select **Options and settings > Data source settings**. In Excel, from the **Data** tab, select **Get Data > Data Source Settings**.
+### Inconsistent behavior around boolean data
 
-2. In the **Data source settings** dialog box, select **Global permissions**, choose the SharePoint site where you want the permission setting changed, and then select **Edit Permissions**.
+When using the Sharepoint List connector, Boolean values are represented inconsistently as TRUE/FALSE or 1/0 in Power BI Desktop and Power BI service environments. This may result in wrong data, incorrect filters, and empty visuals.
 
-3. In the **Edit Permissions** dialog box, under **Credentials**, select **Edit**. 
+This issue only happens when the **Data Type** is not explicitly set for a column in the Query View of Power BI Desktop. You can tell that the data type isn't set by seeing the "ABC 123" image on the column and "Any" data type in the ribbon as shown below.
 
-    ![Edit web site permissions](./media/sharepoint-list/webPermission.png)
+![Data type any on a boolean column](./media/sharepoint-list/booleanany.png)
 
-4. Change the credentials to the type required by the SharePoint site, select **Save**, and then select **OK**.
+The user can force the interpretation to be consistent by explicitly setting the data type for the column through the Power Query Editor. For example, the following image shows the column with an explicit Boolean type.
 
-You can also delete the credentials for a particular SharePoint site in step 3 by selecting **Clear Permissions** for a selected site, or by selecting **Clear All Permissions** for all of the listed web sites. If you delete the credentials for a SharePoint site, you'll be required to enter your credentials again when you try to access that site to get data.
+![Column with explicit boolean type](./media/sharepoint-list/booleanexplicit.png)
+
+## Next steps
+
+[Optimize Power Query when expanding table columns](../optimize-expanding-table-columns.md)

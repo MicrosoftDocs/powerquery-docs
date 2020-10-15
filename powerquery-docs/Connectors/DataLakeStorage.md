@@ -1,5 +1,5 @@
 ---
-title: Analyze data in Azure Data Lake Storage Gen2 by using Power BI | Microsoft Docs
+title: Analyze data in Azure Data Lake Storage Gen2 by using Power BI
 description: Use Power BI to analyze data stored in Azure Data Lake Storage Gen2
 author: bensack
 ms.service: powerquery
@@ -67,7 +67,7 @@ Before you begin this tutorial, you must have the following prerequisites:
 
 8. From the **Home** tab on the ribbon, select **Edit Queries**.
 
-    ![Queries](media/DataLakeStorage/queries.png)
+    ![Select edit queries](media/DataLakeStorage/queries.png)
 
 9. In the **Query Editor**, under the **Content** column, select **Binary**. The file will automatically be detected as CSV and you should see an output as shown below. Your data is now available in a format that you can use to create visualizations.
 
@@ -85,7 +85,7 @@ Before you begin this tutorial, you must have the following prerequisites:
 
     From the **Visualizations** tab, select the symbol for a pie chart.
 
-    ![Visualizations](media/DataLakeStorage/visualizations.png)
+    ![Select pie chart symbol in Visualizations](media/DataLakeStorage/visualizations.png)
 
     In this example, the columns you're going to use are Column 4 (name of the city) and Column 7 (name of the country). Drag these columns from the **Fields** tab to the **Visualizations** tab as shown below.
 
@@ -108,3 +108,9 @@ Before you begin this tutorial, you must have the following prerequisites:
 ## Publish report to Power BI service
 
 After you've created the visualizations in Power BI Desktop, you can share it with others by publishing it to the Power BI service. For instructions on how to do that, see [Publish from Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-upload-desktop-files/).
+
+## Troubleshooting
+
+Currently, in Power Query Online, the Azure Data Lake Storage Gen2 connector only supports paths with container, and not subfolder or file.
+
+https://\<accountname\>.dfs.core.windows.net/\<container\> will work, while https://\<accountname\>.dfs.core.windows.net/\<container\>/\<filename\> or https://\<accountname\>.dfs.core.windows.net/\<container\>/\<subfolder\> will fail.

@@ -1,6 +1,6 @@
 ---
-title: SharePoint Online List
-description: Power Query SharePoint Online List connector reference
+title: Power Query SharePoint Online List connector
+description: Provides basic information and how to connect to your data, along with troubleshooting tips for obtaining the root SharePoint address and changing the authentication method.
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
@@ -80,16 +80,4 @@ Make sure you supply the root address of the SharePoint site, without any subfol
 
 ### Change the authentication method
 
-In some cases, you may need to change the authentication method you use to access a particular SharePoint site. If this is necessary, perform the following steps:
-
-1. In Power BI Desktop, from the **File** tab, select **Options and settings > Data source settings**. In Excel, from the **Data** tab, select **Get Data > Data Source Settings**.
-
-2. In the **Data source settings** dialog box, select **Global permissions**, choose the SharePoint site where you want the permission setting changed, and then select **Edit Permissions**.
-
-3. In the **Edit Permissions** dialog box, under **Credentials**, select **Edit**. 
-
-    ![Edit web site permissions](./media/sharepoint-online-list/webPermission.png)
-
-4. Change the credentials to the type required by the SharePoint site, select **Save**, and then select **OK**.
-
-You can also delete the credentials for a particular SharePoint site in step 3 by selecting **Clear Permissions** for a selected site, or by selecting **Clear All Permissions** for all of the listed web sites. If you delete the credentials for a SharePoint site, you'll be required to enter your credentials again when you try to access that site to get data.
+In some cases, you may need to change the authentication method you use to access a particular SharePoint site. If this is necessary, see [Change the authentication method](../connectorauthentication.md#change-the-authentication-method).
