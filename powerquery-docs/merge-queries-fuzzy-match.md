@@ -68,7 +68,7 @@ The available options are:
 * **Similarity threshold (optional)**: A value between 0.00 and 1.00 that provides the ability to match records above a given similarity score. A threshold of 1.00 is the same as specifying an exact match criteria. For example, **Grapes** matches with **Graes** (missing the letter *p*) only if the threshold is set to less than 0.90. By default, this value is set to 0.80.
 * **Ignore case**: Allows matching records no matter what the case of the text.
 * **Match by combining text parts**: Allows combining text parts to find matches. For example, **Micro soft** is matched with **Microsoft** if this option is enabled.
-* **Number of matches (optional)**: Specifies the maximum number of matching rows that can be returned.
+* **Number of matches (optional)**: Specifies the maximum number of matching rows that can be returned for every input row.
 * **Transformation table (optional)**: Allows matching records based on custom value mappings. For example, **Grapes** is matched with **Raisins** if a transformation table is provided where the **From** column contains **Grapes** and the **To** column contains **Raisins**.
 
 ## Transformation table
