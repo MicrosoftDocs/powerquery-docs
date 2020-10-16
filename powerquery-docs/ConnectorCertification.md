@@ -105,8 +105,8 @@ The connector must follow a set of feature and style rules to meet a usability s
 * The connector MUST:
 
    * Use Section document format.
-   * Have [version adornment](HandlingDocumentation.md) on section.
-   * Provide function documentation metadata.
+   * Have [version adornment](HandlingVersioning.md) on section.
+   * Provide [function documentation metadata](HandlingDocumentation.md).
    * Have [TestConnection handler](HandlingGatewaySupport.md).
    * Follow naming conventions (for example, `DataSourceKind.FunctionName`).
 
