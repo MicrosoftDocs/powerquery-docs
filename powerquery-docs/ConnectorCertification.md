@@ -14,7 +14,7 @@ LocalizationGroup: reference
 # Power Query Connector Certification
 
 > [!Note]
-> This article describes the requirements and process to submit a Power Query custom connector for certification. Please read the article closely in entirety before starting the certification process.
+> This article describes the requirements and process to submit a Power Query custom connector for certification. Read the entire article closely before starting the certification process.
 
 ## Introduction
 
@@ -44,7 +44,7 @@ From a user's perspective, users need to use the thumbprint from the developer t
 
 ### Prerequisites
 
-To ensure the best experience for our customers, we only consider connectors which meet a set of prerequisites for certification: 
+To ensure the best experience for our customers, we only consider connectors that meet a set of prerequisites for certification: 
 
 * The connector must be for a public product.
 
@@ -87,59 +87,60 @@ Please ensure the connector files that you submit include all of the following:
 * Power BI Desktop (.pbix) file for testing
   * We require a sample Power BI report (.pbix) to test your connector with.
   * The report should include at least one query to test each item in your navigation table.
-  * If there is no set schema (e.g. databases), the report needs to include a query for each "type" of table that the connector may handle. 
+  * If there's no set schema (for example, databases), the report needs to include a query for each "type" of table that the connector may handle. 
 
 * Test account to your data source
   * We will use the test account to test and troubleshoot your connector.
-  * Provide a test account which is persistent, so we can use the same account to certify any future updates.
+  * Provide a test account that is persistent, so we can use the same account to certify any future updates.
 
 * Testing instructions
   * Provide any documentation on how to use the connector and test its functionality.
 
-* Links to external dependencies (e.g. ODBC drivers)
+* Links to external dependencies (for example, ODBC drivers)
 
 ### Features and Style
 
 The connector must follow a set of feature and style rules to meet a usability standard consistent with other certified connectors. 
 
 * The connector MUST:
-  * use Section document format.
-  * have [version adornment](https://docs.microsoft.com/power-query/handlingdocumentation) on section.
-  * provide function documentation metadata.
-  * have [TestConnection handler](HandlingGatewaySupport.md).
-  * follow naming conventions (e.g. ```DataSourceKind.FunctionName```).
 
-* The ```FunctionName``` should make sense for the domain. (e.g. "Contents", "Tables", "Document", "Databases" …etc.).
+   * Use Section document format.
+   * Have [version adornment](HandlingDocumentation.md) on section.
+   * Provide function documentation metadata.
+   * Have [TestConnection handler](HandlingGatewaySupport.md).
+   * Follow naming conventions (for example, `DataSourceKind.FunctionName`).
+
+* The ```FunctionName``` should make sense for the domain (for example "Contents", "Tables", "Document", "Databases", and so on).
 
 * The connector SHOULD:
-  * have icons.
-  * provide a navigation table.
-  * place strings in a ```resources.resx``` file.
+   * Have icons.
+   * Provide a navigation table.
+   * Place strings in a `resources.resx` file.
  
 ### Security
 
-There are specific security considerations which your connector must handle.
+There are specific security considerations that your connector must handle.
 
-* If ```Extension.CurrentCredentials()``` is used...
+* If `Extension.CurrentCredentials()` is used:
   * Is the usage required? If so, where do the credentials get sent to?
   * Are the requests guaranteed to be made through HTTPS?
     * You can use the [HTTPS enforcement helper function](HelperFunctions.md#validateurlscheme).
-  * If the credentials are sent using Web.Contents() via GET …
+  * If the credentials are sent using `Web.Contents()` via GET:
     * Can it be turned into a POST?
-    * If GET is required, the connector MUST use the CredentialQueryString record in the Web.Contents() options record to pass in sensitive credentials.
+    * If GET is required, the connector MUST use the `CredentialQueryString` record in the `Web.Contents()` options record to pass in sensitive credentials.
 
-* If [Diagnostics.* functions](https://docs.microsoft.com/powerquery-m/diagnostics-trace) are used …
+* If [Diagnostics.* functions](https://docs.microsoft.com/powerquery-m/diagnostics-trace) are used:
   * Validate what is being traced; data **must not contain PII or large amounts of unnecessary data**.
   * If you implemented significant tracing in development, you should implement a variable or feature flag that determines if tracing should be on. This must be **turned off** prior to submitting for certification.
 
-* If ```Expression.Evaluate()``` is used …
-  * Validate where the expression is coming from / what it is (that is, can dynamically construct calls to Extension.CurrentCredentials()...etc. 
-  * The ```Expression``` should not be user provided / take user input.
-  * The ```Expression``` should not be dynamic (i.e. retrieved from a web call).
+* If `Expression.Evaluate()` is used:
+  * Validate where the expression is coming from / what it is (that is, can dynamically construct calls to `Extension.CurrentCredentials()` and so on). 
+  * The `Expression` should not be user provided / take user input.
+  * The `Expression` should not be dynamic (that is, retrieved from a web call).
 
 ## Registering for Certification
 
-If you are interested in pursuing certification of your custom connector, ensure that your scenario and connector meet the [prerequisites](#prerequisites) and [requirements](#certification-requirements) outlined in this article. Failure to do so will cause delays in certification as our team will require you to fix any issues or inconsistencies prior to moving forward with certification.
+If you're interested in pursuing certification of your custom connector, ensure that your scenario and connector meet the [prerequisites](#prerequisites) and [requirements](#certification-requirements) outlined in this article. Failure to do so will cause delays in certification as our team will require you to fix any issues or inconsistencies prior to moving forward with certification.
 
 To get started, complete our [registration form](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2DcOSp0ibhKolmfRqZYZ51UN1MzQ0ZYNVlIMUM4MUQ1SUpPTEo3SFg1VC4u), and a Microsoft contact will reach out to begin the process.
 
