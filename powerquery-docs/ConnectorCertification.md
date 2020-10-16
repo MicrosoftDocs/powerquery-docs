@@ -133,7 +133,7 @@ There are specific security considerations that your connector must handle.
   * Validate what is being traced; data **must not contain PII or large amounts of unnecessary data**.
   * If you implemented significant tracing in development, you should implement a variable or feature flag that determines if tracing should be on. This must be **turned off** prior to submitting for certification.
 
-* If ```Expression.Evaluate()``` is used …
+* If ```Expression.Evaluate()``` is used:
   * Validate where the expression is coming from and what it is (that is, can dynamically construct calls to `Extension.CurrentCredentials()` and so on). 
   * The ```Expression``` should not be user provided nor take user input.
   * The ```Expression``` should not be dynamic (that is, retrieved from a web call).
