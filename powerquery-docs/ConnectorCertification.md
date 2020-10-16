@@ -70,7 +70,7 @@ Certified connectors are released with monthly Power BI Desktop releases, so the
 * **Technical Review**: finalization of the connector files, passing Microsoft review and certification. This must occur by the 15th of the month before the targeted Power BI Desktop release.
   * For example, for the April Power BI Desktop release, the deadline would be March 15th.
 
-Due to the complexity of the technical reviews and potential delays, rearchitecture, and testing issues, we highly recommend submitting early with a long lead time for the initial release and certification. If you feel like your connector is important to deliver to a few connectors with minimal overhead, we recommend [self-signing](#custom-connector-security-and-signing) and providing it that way.
+Due to the complexity of the technical reviews and potential delays, rearchitecture, and testing issues, we highly recommend submitting early with a long lead time for the initial release and certification. If you feel like your connector is important to deliver to a few customers with minimal overhead, we recommend [self-signing](#custom-connector-security-and-signing) and providing it that way.
 
 ## Certification Requirements
 
@@ -133,8 +133,8 @@ There are specific security considerations which your connector must handle.
   * If you implemented significant tracing in development, you should implement a variable or feature flag that determines if tracing should be on. This must be **turned off** prior to submitting for certification.
 
 * If ```Expression.Evaluate()``` is used …
-  * Validate where the expression is coming from / what it is (that is, can dynamically construct calls to Extension.CurrentCredentials()...etc. 
-  * The ```Expression``` should not be user provided / take user input.
+  * Validate where the expression is coming from and what it is (that is, can dynamically construct calls to Extension.CurrentCredentials()...etc. 
+  * The ```Expression``` should not be user provided nor take user input.
   * The ```Expression``` should not be dynamic (i.e. retrieved from a web call).
 
 ## Registering for Certification
