@@ -73,7 +73,9 @@ For example, from the table shown in the previous image of this section, you can
 ### OneDrive for Business experience
 
 This connector and its experience also work for files hosted on OneDrive for Business.
-However, the url that you need to use is different from the one used for the SharePoint site. To locate your unique url, go to your OneDrive for Business portal and check the url on your browser. 
+However, the url that you need to use is different from the one used for the SharePoint site. To locate your unique url, go to your OneDrive for Business portal and copy the url from your browser which may look as follows:
+
+`https://contoso-my.sharepoint.com/personal/user123_contoso_com/_layouts/15/onedrive.aspx`
 
 You do not need the full url, but only the first few parts. The url that you need to use in Power Query needs to have the following format:
 
