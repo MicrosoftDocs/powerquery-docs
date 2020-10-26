@@ -12,6 +12,8 @@ ms.author: v-miesco
 
 Power Query offers a series of methods to gain access to files that are hosted on either SharePoint or OneDrive.
 
+## OneDrive for Business Experience in PowerApps
+
 ## From a file url
 
 1. Navigate to your OneDrive for Business location using a browser. Right-click the file you want to use, and select **Open in Excel**.
@@ -92,6 +94,21 @@ This experience is provided through the `SharePoint.Contents` function as descri
     * For example:  `SharePoint.Contents("https://contoso.sharepoint.com/marketing/data")`
 3. Power Query will request you to add an authentication method for your connection. Use the same authentication method that you'd use for the SharePoint files connector.
 4. Navigate through the different documents to the specific folder or file(s) that you're interested in.
+    For example, imagine a SharePoint site with with a *Documents* folder and you can click the *Table* value on the Contents column for that folder and navigate directly to that folder.
 
+    <image>
 
-## OneDrive for Business Experience in PowerApps
+    Inside this *Documents* folder there's a folder for each team in the company. The team folder that you need to navigate to is called **Panama**, so you click the correspondent *Table* value next to the name of that folder. 
+
+    <image>
+
+    Inside the **Panama** folder there are three (3) folders called Archive, Actuals, and Estimates. You wish to connect to the folder with the name Actuals.
+
+    <image>
+
+    With all the files inside the Actuals folder, you could click the **Combine files** button as documented in the article [Combine files overview](combine-files-overview.md) to combine the data from all the files in this folder into just a single table or you could navigate directly to a single file of your choice by clicking the *Binary* value from the **Content** column.
+
+    <image>
+
+>[!NOTE]
+> The experience provided by the `SharePoint.Contents` function is optimal for SharePoint and OneDrive environments with large number of files.
