@@ -92,7 +92,7 @@ While the SharePoint folder connector offers you an experience where you can see
 This experience is provided through the `SharePoint.Contents` function as described in [the documenation article for that function](https://docs.microsoft.com/powerquery-m/sharepoint-contents). Take the following steps to use this function:
 
 1. Create a Blank Query
-2. Change the code in the formula bar to be `SharePoint.Contents(<url>)` where the url is the exact same format as for the SharePoint folder connector. 
+2. Change the code in the formula bar to be `SharePoint.Contents("url")` where the url is the exact same format as for the SharePoint folder connector. 
     * For example:  `SharePoint.Contents("https://contoso.sharepoint.com/marketing/data")`
 3. Power Query will request you to add an authentication method for your connection. Use the same authentication method that you'd use for the SharePoint files connector.
 4. Navigate through the different documents to the specific folder or file(s) that you're interested in.
