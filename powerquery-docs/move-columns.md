@@ -5,7 +5,7 @@ author: jessli20
 ms.service: powerquery
 ms.reviewer: v-miesco
 ms.date: 08/12/2020
-ms.author: jessli20
+ms.author: v-douklo
 ---
 
 # Move columns
@@ -20,7 +20,7 @@ To accomplish this, you can either select the **Move** option or *Drag and Drop*
 To show the different ways of moving columns, we will use the following example.
 This example will focus on moving the **Contact Name** column.
 
-![Move Column Move Options](images/move-column-before.png)
+![Table containing the Contact Name column to be moved in this example](images/move-column-before.png)
 
 Move the column using the **Move** option. This option can be found inside the *Any column* group under the Transform tab. Within the **Move** option, the available choices are.
 * Before
@@ -28,7 +28,7 @@ Move the column using the **Move** option. This option can be found inside the *
 * To beginning 
 * To end
 
-![Move Column Move Options](images/move-column-move-options.png)
+![Shows the available move column choices](images/move-column-move-options.png)
 
 You can also find this option when you right-click a column.
 
@@ -36,38 +36,38 @@ You can also find this option when you right-click a column.
 
 If you want to move one column to the left then select **Before**.
 
-![Move Column Move Before](images/move-column-move-before.png)
+![Select the Before option](images/move-column-move-before.png)
 
 This is the new location of the column.
 
-![Move Column Move Before](images/move-column-move-before-done.png)
+![Table showing column moved one column to the right](images/move-column-move-before-done.png)
 
 
 If you want to move one column to the right, then select **After**.
 
-![Move Column Move After](images/move-column-move-after.png)
+![Select the After option](images/move-column-move-after.png)
 
 This is the new location of the column.
 
-![Move Column Move After](images/move-column-move-after-done.png)
+![Table showing column moved one column to the left](images/move-column-move-after-done.png)
 
 
 If you want to move the column to the most left space of the dataset, then select **To beginning**.
 
-![Move Column Move To Beginning](images/move-column-move-to-beginning.png)
+![Select the To beginning option](images/move-column-move-to-beginning.png)
 
 This is the new location of the column.
 
-![Move Column Move To Beginning](images/move-column-move-to-beginning-done.png)
+![Table showing column moved to the far left side of the table](images/move-column-move-to-beginning-done.png)
 
 
 If you want to move the column to the most right space of the dataset, then select **To end**.
 
-![Move Column Move To End](images/move-column-move-to-end.png)
+![Select the To end option](images/move-column-move-to-end.png)
 
 This is the new location of the column.
 
-![Move Column Move To End](images/move-column-move-to-end-done.png)
+![Table showing column moved to the far right side of the table](images/move-column-move-to-end-done.png)
 
 
 ## Drag and drop
@@ -75,7 +75,7 @@ This is the new location of the column.
 Another way to move a column through the dataset is the drag and drop the column.
 Move the column to the place that you would like to place it at.
 
-![Move Column Drag and Drop](images/move-column-drag-and-drop.png)
+![Using drag and drop to move the column](images/move-column-drag-and-drop.png)
 
 ## Go to column feature
 
@@ -83,5 +83,5 @@ If you want to find a specific column, then go to the **View** tab in the ribbon
 
 From there, you will be able to specifically select the column you would like to view. This is especially useful if there are many columns.
 
-![Move Column Go to Column](images/move-column-go-to-column.png)
+![Using Go to column to select the specific column to go to](images/move-column-go-to-column.png)
 
