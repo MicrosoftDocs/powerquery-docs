@@ -9,7 +9,7 @@ ms.author: v-miesco
 ---
 # Query folding basics
 
-Whenever you apply transforms to source data in Power Query, it does its best to have as many as possible of these performed on the data source, rather than locally (on your machine or in the cloud service, depending). This is called "Query Folding". All of the transforms you apply when working in Power Query are stored in a document (which can be viewed in the Advanced Editor) written in the "M language"(link to M function reference here), and a subset of them are turned into the native query language (such as SQL, API calls, etc.) of your data source.
+When you apply transforms to source data, Power Query attempts to have as many as possible of these performed at the data source, rather than locally on your machine or in the Power Query Online service. This is called "Query Folding". All of the transforms you apply when working in Power Query are stored in a script which can be viewed in the Advanced Editor, which is written in the ["Power Query" aka "M" language](https://docs.microsoft.com/powerquery-m/). A subset of these operations can be turned into the native query language of the data source such as SQL, SOQL, OData, etc.
 
 Depending on how the query is structured, there could be three (3) possible outcomes for this mechanism:
 * **Full Query Folding** - When all of your query transformations get pushed back to the data source and no processing occurs locally by the Power Query engine. Instead you receive your desired output directly from the data source.
