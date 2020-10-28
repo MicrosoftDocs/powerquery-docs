@@ -213,9 +213,7 @@
       - name: "Azure SQL database"
         href: Connectors/AzureSQLDatabase.md
       - name: "Azure SQL Data Warehouse"
-        href: Connectors/AzureSQLDataWarehouse.md
-      - name: "Azure SQL database"
-        href: Connectors/AzureSQLDatabase.md
+        href: Connectors/AzureSQLDataWarehouse.md      
       - name: "Common Data Service"
         href: Connectors/CommonDataService.md
       - name: "Data Lake Storage"
