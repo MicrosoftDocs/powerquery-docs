@@ -9,7 +9,7 @@ ms.author: v-douklo
 LocalizationGroup: reference
 ---
 
-# Troubleshooting
+# Troubleshooting the Web connector
 
 ## Using a gateway with the Web connector
 

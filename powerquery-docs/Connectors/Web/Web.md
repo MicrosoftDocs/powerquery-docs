@@ -68,7 +68,7 @@ To load data from a web site with Power Query Desktop:
    Once you've set the authentication method for a specific web site address, you won't need to select the authentication method for that URL address or any subaddress again. For example, if you select the https://en.wikipedia.org/ address in this dialog, any web page that begins with this address won't require that you select the authentication method again.  
 
    >[!Note]
-   >If you need to change the authentication method later, go to [Changing the authentication method](#changing-the-authentication-method). 
+   >If you need to change the authentication method later, go to [Changing the authentication method](web-troubleshoot.md#changing-the-authentication-method). 
 
 4. From the **Navigator** dialog, you can select a table, then either transform the data in the Power Query editor by selecting **Transform Data**, or load the data by selecting **Load**.
 
