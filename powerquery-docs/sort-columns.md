@@ -6,44 +6,52 @@ ms.service: powerquery
 ms.reviewer: v-douklo
 ms.date: 06/08/2020
 ms.author: v-miesco
+ms.custom: edited
 ---
 
 # Sort columns
 
-You can sort a table in Power Query by either one or multiple columns. For example, take the following table with the fields **Competition**, **Competitor**, and **Position**.
+You can sort a table in Power Query by one column or multiple columns. For example, take the following table with the columns named **Competition**, **Competitor**, and **Position**.
 
-![Sample source table](images/me-sort-by-column-start.png)
+:::image type="complex" source="images/me-sort-by-column-start.png" alt-text="Sample source table for sorting":::
+   Table with Competition, Competitor, and Position columns. The Competition column contains 1 - Opening in rows 1 and 6, 2 - Main in rows 3 and 5, and 3-Final in rows 2 and 4. The Position row contains a value of either 1 or 2 for each of the Competition values.
+:::image-end:::
 
 For this example, the goal is to sort this table by the **Competition** and **Position** fields in ascending order.
 
-![Sample output table](images/me-sort-by-column-final.png)
+:::image type="complex" source="images/me-sort-by-column-final.png" alt-text="Sample output table after sorting":::
+   Table with Competition, Competitor, and Position columns. The Competition column contains 1 - Opening in rows 1 and 2, 2 - Main in rows 3 and 4, and 3-Final in rows 5 and 6. The Position row contains, from top to bottom, a value of 1, 2, 1, 2, 1, and 2.
+:::image-end:::
 
-## To sort a table
+## To sort a table by using columns
 
-To sort the table, first select the column to be sorted. Once the column has been selected, you can select the sort operation from two places:
+To sort the table, first select the column to be sorted. After the column has been selected, you can select the sort operation from one of two places:
 
-- **Home tab**&mdash;you'll find a group called **Sort** where you'll see the icons to sort your column by either ascending or descending order.
+- On the **Home** tab, in the **Sort** group, there are icons to sort your column in either ascending or descending order.
 
-![Sort column button in Home tab](images/me-sort-by-column-sort-group.png)
+   ![Sort column button on the Home tab](images/me-sort-by-column-sort-group.png "Sort column button on the Home tab")
 
-- **Field dropdown**&mdash;next to the name of the field you'll see a dropdown icon. When you select the dropdown icon, you'll see the option to sort your column.
+- From the column heading drop-down menu. Next to the name of the column there's a drop-down menu indicator :::image type="icon" source="images/col-head-drop-down-menu.png":::. When you select the icon, you'll see the option to sort the column.
 
-![Sort column button in Sort & Filter menu](images/me-sort-by-column-sort-icons.png)
+  ![Sort commands on the column heading drop-down menu](images/me-sort-by-column-sort-icons.png "Sort commands on the column heading drop-down menu")
 
-In this example, first you need to do the sort on the **Competition** field. In this case, you've chosen to do the operation through the **Sort** group inside the **Home** tab. See how this action creates a new step in the **Applied Steps** section called **Sorted Rows**.
+In this example, first you need to sort the **Competition** column. You'll perform the operation by using the buttons in the **Sort** group on the **Home** tab. This action creates a new step in the **Applied steps** section named **Sorted rows**.
 
-![Sorted rows step in Applied steps section](images/me-sort-by-column-sort-step.png)
+![Sorted rows step in the Applied steps section](images/me-sort-by-column-sort-step.png "Sorted rows step in the Applied steps section")
 
-A visual indicator, displayed as an arrow, gets added to the **Field** dropdown to display how the column is being sorted.
+A visual indicator, displayed as an arrow pointing up, gets added to the **Competitor** drop-down menu icon to show that the column is being sorted in ascending order.
 
-Now you can sort by the **Position** field in ascending order as well, but this time you'll do it using the **Field** dropdown menu.
+Now you'll sort the **Position** field in ascending order as well, but this time you'll use the **Position** column heading drop-down menu.
 
-![Sort & Filter menu after selecting the field dropdown icon](images/me-sort-by-column-position.png)
+![Sort commands on the Position drop-down menu](images/me-sort-by-column-position.png "Sort commands on the Position drop-down menu")
 
-Notice how this action doesn't create a new step, but modifies the existing one to do both sort operations in just one step. When you sort based on multiple columns, the order or hierarchy of the sorting is based on the order that the columns were selected. A visual indicator prior to the **Field** dropdown is displayed, which provides a number that represents the order of this order or hierarchy.   
+Notice that this action doesn't create a new **Sorted rows** step, but modifies it to perform both sort operations in one step. When you sort multiple columns, the order that the columns are sorted in is based on the order the columns were selected in. A visual indicator, displayed as a number to the left of the drop-down menu indicator, shows the place each column occupies in the sort order.
 
-![Sorted columns with numbers that represent the sort order](images/me-sort-by-column-multi-column-sort.png)
+![Sorted columns with numbers that represent the sort order](images/me-sort-by-column-multi-column-sort.png "Sorted columns with numbers that represent the sort order")
 
-## To clear a sort
+## To clear a sort operation from a column
 
-You can clear a sort operation of a specific column by going through the **Field** dropdown and selecting **Clear Sort** or by deleting the step from the Applied Steps pane.
+Do one of the following actions:
+
+- Select the down arrow next to the column heading, and then select **Clear sort**.
+- In **Applied steps** on the **Query Settings** pane, delete the **Sorted rows** step.

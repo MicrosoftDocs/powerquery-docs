@@ -1,6 +1,6 @@
 ---
-title: QuickBooks Online
-description: Power Query QuickBooks Online connector reference
+title: Power Query QuickBooks Online connector
+description: Provides basic information, prerequisites, and instructions on how to connect to your database, along with known issues that may affect the connection.
 author: dougklopfenstein
 
 ms.service: powerquery
@@ -22,6 +22,9 @@ Release state: Beta
 Products: Power BI Desktop, Power BI Service (Enterprise Gateway)
 
 Authentication Types Supported: QuickBooks Online account
+
+>[!Warning]
+> QuickBooks Online has deprecated support for Internet Explorer 11, which Power Query Desktop uses for authentication to online services. At this time, users will be impaired from authenticating, but stored credentials should continue to work until their existing authentication tokens expire.
 
 ## Prerequisites
 

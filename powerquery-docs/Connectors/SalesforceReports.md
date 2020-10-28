@@ -1,6 +1,6 @@
 ---
-title: Salesforce Reports
-description: Power Query Salesforce Reports connector reference
+title: Power Query Salesforce Reports connector.
+description: Includes basic information, prerequisites, and how to connect to your data using the connector, along with a list of known issues and limitations for the connector.
 author: dougklopfenstein
 
 ms.service: powerquery
@@ -23,6 +23,9 @@ Authentication Types Supported: Salesforce account
 
 >[!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+
+>[!Warning]
+> By default, Salesforce does not support Internet Explorer 11, which is used as part of the authentication experience to online services in Power Query Desktop. Please opt-in for [extended support for accessing Lightning Experience Using Microsoft Internet Explorer 11](https://help.salesforce.com/articleView?id=000333934&type=1&mode=1). You may also want to review Salesforce documentation on [configuring Internet Explorer](https://developer.salesforce.com/docs/atlas.en-us.salesforce_supported_browsers_cheatsheet.meta/salesforce_supported_browsers_cheatsheet/getstart_browser_ie.htm). At this time, users will be impaired from authenticating, but stored credentials should continue to work until their existing authentication tokens expire.
  
 ## Prerequisites
 

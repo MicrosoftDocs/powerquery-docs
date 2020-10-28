@@ -56,7 +56,7 @@ A similar situation occurs for the type-specific filters, since they're specific
 ![type specific filter for a date column](images/me-filter-values-date-column.png)
 
 It's crucial that you always work with the correct data types for your columns. When working with structured data sources such as databases, the data type information will be brought from the table schema found in the database. But for unstructured data sources such as TXT and CSV files, it's important that you set the correct data types for the columns coming from that data source.
-By default, Power Query offers an automatic data type detection for unstructured data sources. You can read more about this feature and how it can help you in [Data types](data-types.md#automatic-column-data-type-and-headers-detection).
+By default, Power Query offers an automatic data type detection for unstructured data sources. You can read more about this feature and how it can help you in [Data types](data-types.md#automatic-detection-of-column-data-type-and-headers).
 
 > [!NOTE]
 > To learn more about the importance of data types and how to work with them, see [Data types](data-types.md).
