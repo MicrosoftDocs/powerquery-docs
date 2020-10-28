@@ -98,7 +98,7 @@ This means that your query will send that native query to the Microsoft SQL Serv
 
 ## No Query folding
 
-Queries that rely solely on unstructured data sources such as CSV, or Excel files do not have Query folding capabilities. This means that Power Query will perform all the required data transformations of your query locally.
+Queries that rely solely on unstructured data sources such as CSV, or Excel files do not have Query folding capabilities. This means that Power Query will evaluate all the required data transformations outside the data source.
 
 One example can be seen in the article on [combining multiple CSV files from a local folder](combine-files-csv.md) where none of the steps have the *View Native Query* active and running the Query diagnostics for that step yield no results in the *Data Source Query* field.
 
@@ -109,6 +109,6 @@ One example can be seen in the article on [combining multiple CSV files from a l
 * Follow the best practices when creating a new query as stated in the article on [Best practices in Power Query](best-practices.md)
 * Checking the **View Native Query** option is always recommended to make sure that your query can be folded back to the data source. If your step disables this option, you know that you've created a step that stops query folding. 
 * Use the Query diagnostics tool to your advantage and to better understand the requests being sent to your data source when query folding capabilities are available for the connector.
-* When combining data sourced from the usage of multiple connectors, Power Query will try to push as much work as possible to both of the data sources while complying with the privacy levels defined for each data source. 
+* When combining data sources from the usage of multiple connectors, Power Query will try to push as much work as possible to both of the data sources while complying with the privacy levels defined for each data source. 
 * Read the article on [Privacy levels](dataprivacyfirewall.md) to protect your queries from running against a Data Privacy Firewall error.
 * You can also use other tools to check query folding from the perspective of the request being received by the data source. Based on our example, you can use the Microsoft SQL Server Profile to check the requests being sent by Power Query and received by the Microsoft SQL Server. 
