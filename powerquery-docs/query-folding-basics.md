@@ -19,9 +19,9 @@ Depending on how the query is structured, there could be three (3) possible outc
 >[!NOTE]
 >The Query folding mechanism is primarily available in connectors for structured data sources such as but not limited to [Microsoft SQL Server](Connectors/sqlserver.md) and [OData Feed](Connectors/odatafeed.md). 
 >
->Leveraging a data source that has more processing resources and has Query folding capabilities can expedite your query loading times as the prorcessing will occur at the data source and not locally in the Power Query engine.
+>Leveraging a data source that has more processing resources and has Query folding capabilities can expedite your query loading times as the processing will occur at the data source and not locally in the Power Query engine.
 
-This article will try to provide some example scenarios for each of the possible outcomes for query folding in the next sections as well as some suggestions on how to get the most out of the Query folding mechanism.
+This article will provide example scenarios for each of the possible outcomes for query folding as well as suggestions on how to get the most out of the query folding mechanism.
 
 ## Full Query folding
 
