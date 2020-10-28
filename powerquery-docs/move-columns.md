@@ -10,19 +10,19 @@ ms.author: jessli20
 
 # Move columns
 
-A process in cleaning and preparing data is to move the columns within the dataset. 
+A common process when preparing data is to move the columns within the dataset. 
 
-To do this process, you can either select the **Move** option or to *Drag and drop* the column.
+To accomplish this, you can either select the **Move** option or *Drag and Drop* the column.
 
 
 ## Move option
 
-To show the different ways of moving the columns, we'll be using the following example.
+To show the different ways of moving columns, we will use the following example.
 We will focus on moving the **Contact Name** column.
 
 ![Move Column Move Options](images/move-column-before.png)
 
-To move the column using the **Move** option. This option can be found inside the *Any column* group inside the Transform tab. Within the **Move** option. The available choices are as follows
+Move the column using the **Move** option. This option can be found inside the *Any column* group under the Transform tab. Within the **Move** option, the available choices are.
 * Before
 * After
 * To beginning 
@@ -34,20 +34,20 @@ You can also find this option when you right-click a column.
 
 ![Right-click contextual menu with the Move options](images/move-column-move-options-right-click.png)
 
-If you want to move the column 1 space left, then select **Before**.
+If you want to move one column to the left then select **Before**.
 
 ![Move Column Move Before](images/move-column-move-before.png)
 
-The following outcome is where the column is newly placed.
+This is the new location of the column.
 
 ![Move Column Move Before](images/move-column-move-before-done.png)
 
 
-If you want to move the column 1 space right, then select **After**.
+If you want to move one column to the right, then select **After**.
 
 ![Move Column Move After](images/move-column-move-after.png)
 
-The following outcome is where the column is newly placed.
+This is the new location of the column.
 
 ![Move Column Move After](images/move-column-move-after-done.png)
 
@@ -56,7 +56,7 @@ If you want to move the column to the most left space of the dataset, then selec
 
 ![Move Column Move To Beginning](images/move-column-move-to-beginning.png)
 
-The following outcome is where the column is newly placed.
+This is the new location of the column.
 
 ![Move Column Move To Beginning](images/move-column-move-to-beginning-done.png)
 
@@ -65,14 +65,14 @@ If you want to move the column to the most right space of the dataset, then sele
 
 ![Move Column Move To End](images/move-column-move-to-end.png)
 
-The following outcome is where the column is newly placed.
+This is the new location of the column.
 
 ![Move Column Move To End](images/move-column-move-to-end-done.png)
 
 
 ## Drag and drop
 
-Another way to move the columns through the dataset is the drag and drop the column.
+Another way to move a column through the dataset is the drag and drop the column.
 Move the column to the place that you would like to place it at.
 
 ![Move Column Drag and Drop](images/move-column-drag-and-drop.png)
@@ -81,7 +81,7 @@ Move the column to the place that you would like to place it at.
 
 If you want to find a specific column, then go to the **View** tab in the ribbon and select **Go to column**.
 
-From there, you will be able to specifically go to the column you would like to view. This is especially useful if there are many columns.
+From there, you will be able to specifically select the column you would like to view. This is especially useful if there are many columns.
 
 ![Move Column Go to Column](images/move-column-go-to-column.png)
 
