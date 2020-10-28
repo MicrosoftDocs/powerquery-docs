@@ -25,7 +25,7 @@ This article will provide example scenarios for each of the possible outcomes fo
 
 ## Full Query folding
 
-For this scenario, the data that you will be connecting to is Microsoft SQL Server and the sample database is the AdventureWorks in its Data Warehouse version, which you can download from the article [AdventureWorks sample database](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
+This scenario connects to Microsoft SQL Server using the Data Warehouse version of the AdventureWorks database which you can download from the article [AdventureWorks sample database](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
 
 After identifying the data source, it is suggested that you pick the native connectors found in the 'Get Data' window. In this case, the connector to be used is the [Microsoft SQL Server Connector](Connectors/SQLServer.md).
 
@@ -45,11 +45,11 @@ Your goal is to summarize the data inside the *FactInternetSales* table by perfo
 >[!NOTE]
 > You can read more on how to use the Group by feature from the article [Grouping or summarizing rows](group-by.md).
 
-* Now with the summarized table at the date level, filter the new *Total Sales Amount* column to only keep rows with values greater than or equal to 15000.
+* Now with the table summarized by date, filter the new *Total Sales Amount* column to keep only rows with values greater than or equal to 15000.
 
 ![Filtering the summarized table by the Total Sales Amount column for values greater than or equal to 15000](images/me-query-folding-basics-filter-values-greater-than.png)
 
-One simple way to check if the step in your query can fold back to the data source is to right-click the step and see if the **View Native Query** option is enabled out or disabled / greyed.
+One simple way to check if the step in your query can fold back to the data source is to right-click the step and see if the **View Native Query** option is enabled or disabled / greyed.
 
 ![Right-clicking the last step of the query to check the View Native Query option](images/me-query-folding-basics-view-native-query.png)
 
@@ -91,10 +91,10 @@ Reading the values in that column, you can see that the native query sent to the
 
 ![Value found inside the query for the aggregated query diagnostics which holds the SQL statement sent to the SQL Server](images/me-query-folding-basics-query-diagnostics-aggregated-view-drill-down.png)
 
-This means that your query will send that native query to the Microsoft SQL Server and perform the rest of the transformations locally and this is what it means to have a query that can partially fold.
+This means that your query will send that native query to the Microsoft SQL Server and perform the rest of the transformations locally. This is what it means to have a query that can partially fold.
 
 >[!NOTE]
-> It is highly recommended that you read the article on [Understanding folding with Query Diagnostics](querydiagnosticsfolding.md) to get the most out of the Query Diagnostics tools and how to verify query folding.
+> It is highly recommended that you read the article on [Understanding folding with Query Diagnostics](querydiagnosticsfolding.md) to get the most out of the Query Diagnostics tools and learn how to verify query folding.
 
 ## No Query folding
 
@@ -107,8 +107,8 @@ One example can be seen in the article on [combining multiple CSV files from a l
 ## Considerations and suggestions
 
 * Follow the best practices when creating a new query as stated in the article on [Best practices in Power Query](best-practices.md)
-* Checking the **View Native Query** option is always recommended to make sure that your query can be folded back to the data source. If your step disables this option, you know that you've created a step that stops query folding. 
-* Use the Query diagnostics tool to your advantage and to better understand the requests being sent to your data source when query folding capabilities are available for the connector.
-* When combining data sources from the usage of multiple connectors, Power Query will try to push as much work as possible to both of the data sources while complying with the privacy levels defined for each data source. 
+* Checking the **View Native Query** option is always recommended to make sure that your query can be folded back to the data source. If your step disables this option, you know that you've created a step that cannot be folded. 
+* Use the Query diagnostics tool to better understand the requests being sent to your data source when query folding capabilities are available for the connector.
+* When combining data sources from multiple connectors, Power Query will try to push as much work as possible to both of the data sources while complying with the privacy levels defined for each data source. 
 * Read the article on [Privacy levels](dataprivacyfirewall.md) to protect your queries from running against a Data Privacy Firewall error.
-* You can also use other tools to check query folding from the perspective of the request being received by the data source. Based on our example, you can use the Microsoft SQL Server Profile to check the requests being sent by Power Query and received by the Microsoft SQL Server. 
+* Use other native tools to check query folding from the perspective of the request being received by the data source. Based on our example, you can use the Microsoft SQL Server Profile to check the requests being sent by Power Query and received by the Microsoft SQL Server. 
