@@ -12,18 +12,18 @@ ms.author: v-miesco
 When you apply transforms to source data, Power Query attempts to have as many as possible of these performed at the data source, rather than locally on your machine or in the Power Query Online service. This is called "Query Folding". All of the transforms you apply when working in Power Query are stored in a script which can be viewed in the Advanced Editor, which is written in the ["Power Query" aka "M" language](https://docs.microsoft.com/powerquery-m/). A subset of these operations can be turned into the native query language of the data source such as SQL, SOQL, OData, etc.
 
 Depending on how the query is structured, there could be three (3) possible outcomes for this mechanism:
-* **Full Query Folding** - When all of your query transformations get pushed back to the data source and no processing occurs locally by the Power Query engine. Instead you receive your desired output directly from the data source.
-* **Partial Query Folding** - When only a few transformations in your query, and not all, can be pushed back to the data source. This means that a subset of your transformations will be performed at your data source and the rest of your query transformations will occur locally.
-* **No Query folding** -  When the query contains transformations that can't be translated to the native query language of your data source either because the transformations are not supported or the connector doesn't support Query folding. For this case Power Query gets the raw data from your data source and works locally with the Power Query engine to achieve your desired output.
+* **Fully folded query** - When all of your query transformations get pushed back to the data source and no processing occurs locally by the Power Query engine. Instead you receive your desired output directly from the data source.
+* **Partial folded query** - When only a few transformations in your query, and not all, can be pushed back to the data source. This means that a subset of your transformations will be performed at your data source and the rest of your query transformations will occur locally.
+* **Query not folded** -  When the query contains transformations that can't be translated to the native query language of your data source either because the transformations are not supported or the connector doesn't support query folding. For this case Power Query gets the raw data from your data source and works locally with the Power Query engine to achieve your desired output.
 
 >[!NOTE]
->The Query folding mechanism is primarily available in connectors for structured data sources such as but not limited to [Microsoft SQL Server](Connectors/sqlserver.md) and [OData Feed](Connectors/odatafeed.md). 
+>The query folding mechanism is primarily available in connectors for structured data sources such as but not limited to [Microsoft SQL Server](Connectors/sqlserver.md) and [OData Feed](Connectors/odatafeed.md). 
 >
->Leveraging a data source that has more processing resources and has Query folding capabilities can expedite your query loading times as the processing will occur at the data source and not locally in the Power Query engine.
+>Leveraging a data source that has more processing resources and has query folding capabilities can expedite your query loading times as the processing will occur at the data source and not locally in the Power Query engine.
 
 This article will provide example scenarios for each of the possible outcomes for query folding as well as suggestions on how to get the most out of the query folding mechanism.
 
-## Full Query folding
+## Full query folding
 
 This scenario connects to Microsoft SQL Server using the Data Warehouse version of the AdventureWorks database which you can download from the article [AdventureWorks sample database](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
 
