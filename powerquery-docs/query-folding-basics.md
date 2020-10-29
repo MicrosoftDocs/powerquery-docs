@@ -104,6 +104,9 @@ One example can be seen in the article on [combining multiple CSV files from a l
 
 ![View Native Query greyed out for the query that combine CSV files](images/me-query-folding-basics-csv-files-source.png)
 
+>[!NOTE]
+>For some connectors, you are able to see the "Data Source Query" representing a given step in your query. When you view the Data Source Query and compare it with what is received by your server, you may find that there are some differences. This is due to the fact that there are optimizations applied before it is sent, though the results are identical. In Power BI Desktop, to see the actual query emitted (for some connectors), you should use Query Diagnostics.
+
 ## Considerations and suggestions
 
 * Follow the best practices when creating a new query as stated in the article on [Best practices in Power Query](best-practices.md)
