@@ -204,8 +204,6 @@
       items:
       - name: "Power Query connectors"
         href: Connectors/index.md
-      - name: "Connecting to Azure DevOps using OData"
-        href: https://docs.microsoft.com/azure/devops/report/powerbi/odataquery-connect?view=azure-devops
       - name: "Adobe Analytics"
         href: "Connectors/AdobeAnalytics.md"
       - name: "Access database"
@@ -243,7 +241,11 @@
       - name: "MySQL database"
         href: Connectors/MySQLDatabase.md
       - name: "OData Feed"
-        href: Connectors/ODataFeed.md
+        items:
+        - name: "OData Feed connector"
+          href: Connectors/ODataFeed.md
+        - name: "Connecting to Azure DevOps using OData"
+          href: https://docs.microsoft.com/azure/devops/report/powerbi/odataquery-connect?view=azure-devops
       - name: "ODBC"
         href: Connectors/Odbc.md
       - name: "Oracle database"
