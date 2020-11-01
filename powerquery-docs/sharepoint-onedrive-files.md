@@ -97,6 +97,8 @@ This experience is provided through the `SharePoint.Contents` function as descri
 1. Create a Blank Query
 2. Change the code in the formula bar to be `SharePoint.Contents("url")` where the url is the exact same format as for the SharePoint folder connector. 
     * For example:  `SharePoint.Contents("https://contoso.sharepoint.com/marketing/data")`
+   >[!NOTE]
+   >By default, this function will try to use the SharePoint API Version 14 to connect. If you are not certain of the API version being used by your SharePoint site, you might want to try using the following example code: `SharePoint.Contents("https://contoso.sharepoint.com/marketing/data", [ApiVersion="Auto"])`
 3. Power Query will request you to add an authentication method for your connection. Use the same authentication method that you'd use for the SharePoint files connector.
 4. Navigate through the different documents to the specific folder or file(s) that you're interested in.
     For example, imagine a SharePoint site with with a *Documents* folder and you can click the *Table* value on the Contents column for that folder and navigate directly to that folder.
