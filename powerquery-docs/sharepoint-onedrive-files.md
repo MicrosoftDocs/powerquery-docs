@@ -27,7 +27,7 @@ Power Query offers a series of methods to gain access to files that are hosted o
    
    ![Screenshot of the Info menu, showing the Copy path button selection.](images/onedrive-copy-path.png)
 
-### Use the link in Power Query
+### From Web connector using the file's link
 In Power Query, you can use the link you just copied to the clipboard. Take the following steps:
 
 1. Select **Get Data** > **Web**.
@@ -88,7 +88,7 @@ For example:
 
 `https://contoso-my.sharepoint/personal/user123_contoso_com`
 
-## SharePoint Contents function
+## SharePoint.Contents function
 
 While the SharePoint folder connector offers you an experience where you can see all the files available in your SharePoint / OneDrive for Business site at once, you can also opt for a different experience where you can navigate through the folders of your SharePoint / OneDrive and reach the desired folder or file(s) that you're interested in.
 
