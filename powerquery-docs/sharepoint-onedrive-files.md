@@ -101,21 +101,18 @@ This experience is provided through the `SharePoint.Contents` function as descri
    >By default, this function will try to use the SharePoint API Version 14 to connect. If you are not certain of the API version being used by your SharePoint site, you might want to try using the following example code: `SharePoint.Contents("https://contoso.sharepoint.com/marketing/data", [ApiVersion="Auto"])`
 3. Power Query will request you to add an authentication method for your connection. Use the same authentication method that you'd use for the SharePoint files connector.
 4. Navigate through the different documents to the specific folder or file(s) that you're interested in.
-    For example, imagine a SharePoint site with with a *Documents* folder and you can click the *Table* value on the Contents column for that folder and navigate directly to that folder.
+    For example, imagine a SharePoint site with with a *Shared Documents* folder and you can click the *Table* value on the **Content** column for that folder and navigate directly to that folder.
 
-    <image>
+    ![Table Preview after connecting to the SharePoint site with the function SharePoint.Contents where there's a folder with the named Shared Documents](images/sp-navigate-level-1-me.png)
 
-    Inside this *Documents* folder there's a folder for each team in the company. The team folder that you need to navigate to is called **Panama**, so you click the correspondent *Table* value next to the name of that folder. 
+    Inside this *Documents* folder there's a folder where the company stores all the sales reports and have named this folder *Sales Reports*. You can click on the *Table* value on the **Content** column for that row.
 
-    <image>
+    ![Table preview after navigating to the Shared Documents folder](images/sp-navigate-level-2-me.png)
 
-    Inside the **Panama** folder there are three (3) folders called Archive, Actuals, and Estimates. You wish to connect to the folder with the name Actuals.
 
-    <image>
+    With all the files inside the *Sales Reports* folder, you could click the **Combine files** button as documented in the article [Combine files overview](combine-files-overview.md) to combine the data from all the files in this folder into just a single table or you could navigate directly to a single file of your choice by clicking the *Binary* value from the **Content** column.
 
-    With all the files inside the Actuals folder, you could click the **Combine files** button as documented in the article [Combine files overview](combine-files-overview.md) to combine the data from all the files in this folder into just a single table or you could navigate directly to a single file of your choice by clicking the *Binary* value from the **Content** column.
-
-    <image>
+     ![Table preview after navigating to the Sales Reports folder](images/sp-navigate-level-3-me.png)
 
 >[!NOTE]
 > The experience provided by the `SharePoint.Contents` function is optimal for SharePoint and OneDrive environments with large number of files.
