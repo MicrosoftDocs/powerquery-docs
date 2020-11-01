@@ -21,26 +21,26 @@ Power Query offers a series of methods to gain access to files that are hosted o
    > [!NOTE]
    > Your browser interface might not look exactly like the following image. There are many ways to select **Open in Excel** for files in your OneDrive for Business browser interface. You can use any option that allows you to open the file in Excel.
    
-   ![Screenshot of OneDrive in a browser, showing the Open in Excel selection.](media/desktop-use-onedrive-business-links/odb-links_02.png)
+   ![Screenshot of OneDrive in a browser, showing the Open in Excel selection.](images/odb-links_02.png)
 
 2. In Excel, select **File** > **Info**, and then select the **Copy path** button, as shown in the following image.
    
-   ![Screenshot of the Info menu, showing the Copy path button selection.](media/desktop-use-onedrive-business-links/onedrive-copy-path.png)
+   ![Screenshot of the Info menu, showing the Copy path button selection.](images/onedrive-copy-path.png)
 
 ### Use the link in Power Query
 In Power Query, you can use the link you just copied to the clipboard. Take the following steps:
 
 1. Select **Get Data** > **Web**.
    
-   ![Screenshot of the Get Data ribbon in Power B I Desktop, showing the Web selection.](media/desktop-use-onedrive-business-links/power-bi-web-link-onedrive.png)
+   ![Screenshot of the Get Data ribbon in Power B I Desktop, showing the Web selection.](images/power-bi-web-link-onedrive.png)
 
 2. With the **Basic** option selected, paste the link into the **From Web** dialog box.
 3. Remove the *?web=1* string at the end of the link so that Power Query can properly navigate to your file, and then select **OK**.
    
-    ![Screenshot of the From Web dialog, showing how to remove a string from the U R L field.](media/desktop-use-onedrive-business-links/power-bi-web-link-confirmation.png) 
+    ![Screenshot of the From Web dialog, showing how to remove a string from the U R L field.](images/power-bi-web-link-confirmation.png) 
 4. If Power Query prompts you for credentials, choose either **Windows** (for on-premises SharePoint sites) or **Organizational Account** (for Microsoft 365 or OneDrive for Business sites).
    
-   ![Screenshot of the Power B I Desktop credential prompt, showing Windows or Organizational account selection.](media/desktop-use-onedrive-business-links/odb-links_06.png)
+   ![Screenshot of the Power B I Desktop credential prompt, showing Windows or Organizational account selection.](images/odb-links_06.png)
 
    A **Navigator** dialog box appears, allowing you to select from the list of tables, sheets, and ranges found in the Excel workbook. From there, you can use the OneDrive for Business file just like any other Excel file. You can create reports and use it in datasets like you would with any other data source.
 
@@ -52,23 +52,26 @@ In Power Query, you can use the link you just copied to the clipboard. Take the 
 
 ## SharePoint folder connector
 
-You can read a detailed step by step guide on how to connect to the files hosted on your SharePoint site from this article on the [SharePoint folder connect](connectors/sharepointfolder#connect-to-a-sharepoint-folder.md).
+You can read a detailed step by step guide on how to connect to the files hosted on your SharePoint site from this article on the [SharePoint folder](connectors/sharepointfolder#connect-to-a-sharepoint-folder.md).
 
-After successfully establishing the connection, you'll be prompted with a table preview with  the files in your SharePoint site. Click the **Transform** button at the bottom right of the window.
+After successfully establishing the connection, you'll be prompted with a table preview with  the files in your SharePoint site. Click the **Transform Data** button at the bottom right of the window.
 
-![Table preview after connecting to a SharePoint site using the SharePoint folder connector with the files found in the SharePoint site](images/placeholder.png)
+![Table preview after connecting to a SharePoint site using the SharePoint folder connector with the files found in the SharePoint site](images/sp-folder-preview.png)
 
-This view of the data is called the *File system view*. Each of the rows in this table represent a file that was found in your SharePoint. 
+Clicking the **Transform Data** button will take you to a view of the data called the *File system view*. Each of the rows in this table represent a file that was found in your SharePoint.
+
+![Table preview of the files in the SharePoint site after clicking the Transform data button](images/sp-transform-data-me.png)
+
 The table has a field named **Content** that has your file in a Binary format. The values in the **Content** field will have a different color than the rest of the values in the other fields of the table and this is to denote that they're clickable.
 
 By clicking a *Binary* value in the **Content** field, Power Query will automatically add a series of steps in your query to navigate to the file and interpret the contents of it whereas possible.
 
-For example, from the table shown in the previous image of this section, you can click the second row where the **Name** field has a value of ?????? and Power Query will automatically create a series of steps to navigate to that file and interpret the contents of the file as a CSV file.
+For example, from the table shown in the previous image of this section, you can click the second row where the **Name** field has a value of *02-February.csv* and Power Query will automatically create a series of steps to navigate and interpret the contents of the file as a CSV file.
 
-![Contents of a CSV file that were automatically interpreted by Power Query as shown in the Applied steps section](images/placeholder.png)
+![Contents of a CSV file with the name 02-February.csv that were automatically interpreted by Power Query as shown in the Applied steps section](images/sp-file-preview-me.png)
 
 >[!NOTE]
->You can interact with the table by applying filters, sortings, and other transforms before navigating to the file of your choice.
+>You can interact with the table by applying filters, sortings, and other transforms before navigating to the file of your choice when clicking the *Binary* value of your choice.
 
 ### OneDrive for Business experience
 
