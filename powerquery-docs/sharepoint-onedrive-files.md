@@ -12,9 +12,33 @@ ms.author: v-miesco
 
 Power Query offers a series of methods to gain access to files that are hosted on either SharePoint or OneDrive.
 
-## OneDrive for Business Experience in PowerApps
+## Browse files Experience
 
-## From a file url
+>[!NOTE]
+>This experience currently only available inside of the Power Query Online experience for PowerApps and can only browse for files in the OneDerive for Business account of the authenticated user.
+
+When creating a Dataflow inside of PowerApps using any of these connectors:
+* Excel
+* JSON
+* PDF
+* XML
+* TXT / CSV
+
+Power Query will provide a button next to the *File path or URL* parameter with a label that reads **Browse OneDrive...**.
+
+![Browse OneDrive... button inside the Connection settings window for the Excel connector](images/sp-browse-button.png)
+
+When you click this button, you'll be prompted to go through the authentication process. After finalizing this process, a new window will appear with all the files inside the OneDrive for business of the authenticated user. 
+
+![New window to browse the files from the OneDrive for Business of the authenticated user](images/sp-browse-window.png)
+
+You can select the file of your choice and then click the OK button. After clicking the OK button, you'll be taken back to the initial connection settings page where you'll see that the *File path or URL* parameter now holds the exact url to the file that you've selected from OneDrive for Business.
+
+![Connection settings window with the url to the selected file hosted on OneDrive for Business](images/sp-browse-url.png)
+
+You can click the **Next** button at the bottom right corner of the window to continue the process and get your data.
+
+## From Web connector using a file url
 
 1. Navigate to your OneDrive for Business location using a browser. Right-click the file you want to use, and select **Open in Excel**.
    
@@ -27,7 +51,7 @@ Power Query offers a series of methods to gain access to files that are hosted o
    
    ![Screenshot of the Info menu, showing the Copy path button selection.](images/onedrive-copy-path.png)
 
-### From Web connector using the file's link
+### Use the link in Power Query
 In Power Query, you can use the link you just copied to the clipboard. Take the following steps:
 
 1. Select **Get Data** > **Web**.
