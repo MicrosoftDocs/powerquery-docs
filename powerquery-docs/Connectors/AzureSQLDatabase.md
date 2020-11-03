@@ -105,7 +105,7 @@ The following table lists all of the advanced options you can set in Power Query
 | Advanced option | Description |
 | --------------- | ----------- |
 | Command timeout in minutes | If your connection lasts longer than 10 minutes (the default timeout), you can enter another value in minutes to keep the connection open longer. This option is only available in Power Query Desktop. |
-| SQL statement | For information, go to [Import data from a database using native database query](../../native-database-query.md). |
+| SQL statement | For information, go to [Import data from a database using native database query](../native-database-query.md). |
 | Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, you won’t see those columns. |
 | Navigate using full hierarchy | If checked, the Navigator displays the complete hierarchy of tables in the database you're connecting to. If cleared, Navigator displays only the tables whose columns and rows contain data. |
 | Enable SQL Server Failover support | If checked, when a node in the Azure SQL [failover group](https://docs.microsoft.com/azure/azure-sql/database/auto-failover-group-overview?tabs=azure-powershell) isn't available, Power Query moves from that node to another when failover occurs. If cleared, no failover will occur. |
