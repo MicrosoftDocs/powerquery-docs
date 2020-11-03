@@ -13,15 +13,15 @@ LocalizationGroup: reference
  
 ## Summary
  
-| Summary | Description |
+| Item | Description |
 | ------- | ------------|
-|Release State | General Availability |
-| Products | Power BI Desktop<br/>Power BI Service (Enterprise Gateway)<br/>Dataflows in PowerBI.com (Enterprise Gateway)<br/>Dataflows in PowerApps.com (Enterprise Gateway)<br/>Excel |
-| Authentication Types Supported| Windows (Power BI Desktop, Excel, Power Query Online with gateway)<br/>Database (Power BI Desktop, Excel)<br/>Microsoft Account (all)<br/> Basic (Power Query Online) |
-| Function Reference Documentation | [Sql.Database](https://docs.microsoft.com/powerquery-m/sql-database)<br/>[Sql.Databases](https://docs.microsoft.com/powerquery-m/sql-databases) |
+|Release state | General Availability |
+| Products supported | Power BI Desktop<br/>Power BI Service (Enterprise Gateway)<br/>Dataflows in PowerBI.com (Enterprise Gateway)<br/>Dataflows in PowerApps.com (Enterprise Gateway)<br/>Excel |
+| Authentication types supported| Windows (Power BI Desktop, Excel, Power Query Online with gateway)<br/>Database (Power BI Desktop, Excel)<br/>Microsoft Account (all)<br/> Basic (Power Query Online) |
+| Function reference docs | [Sql.Database](https://docs.microsoft.com/powerquery-m/sql-database)<br/>[Sql.Databases](https://docs.microsoft.com/powerquery-m/sql-databases) |
 | | |
 
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
  
 ## Prerequisites
