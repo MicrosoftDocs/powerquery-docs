@@ -24,6 +24,10 @@ Function Reference Documentation: [SharePoint.Contents](https://docs.microsoft.c
 >[!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
+>[!NOTE]
+>AAD/OAuth for SharePoint on-premises isn’t supported using the on-premises data gateway. 
+
+
 ## Capabilities supported
 
 * Site URL

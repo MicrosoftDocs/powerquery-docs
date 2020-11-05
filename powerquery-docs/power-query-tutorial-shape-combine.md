@@ -248,9 +248,4 @@ To apply changes and close Power Query Editor, go to the **Home** tab and select
 
 ![Close and apply your settings](media/power-query-tutorial-shape-combine/shapecombine_closeandapply.png "[Close and apply your settings")
 
-## Next step
 
-There are all sorts of things you can do with Power Query. If you're ready to create your own custom connector, go to the following article.
-
-> [!div class="nextstepaction"]
-> [Creating your first connector: Hello World](CreatingFirstConnector.md)
