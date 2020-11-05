@@ -21,6 +21,9 @@ Authentication Types Supported: Anonymous, Microsoft Account, Windows
 
 Function Reference Documentation: [SharePoint.Contents](https://docs.microsoft.com/powerquery-m/sharepoint-contents), [SharePoint.Files](https://docs.microsoft.com/powerquery-m/sharepoint-files)
 
+>[!NOTE]
+>AAD/OAuth for SharePoint on-premises isn’t supported using the on-premises data gateway. 
+
 ## Capabilities supported
 
 * Folder path
