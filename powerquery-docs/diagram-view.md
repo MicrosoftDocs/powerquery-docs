@@ -9,7 +9,7 @@ ms.author: v-miesco
 ---
 # Diagram View 
 
-Diagram View offers a visual way to prepare data within the Power Query editor. This interface allows you to easily create queries and visualize the data preparation process. The Diagram View simplifies the experience of getting started with data wrangling, allows you to speed up the data preparation process and helps quickly understand the dataflow, both the ‘big picture view’ of how queries are related and the ‘detailed view’ of the specific data preparation steps within a query. ***This feature is currently available within Power Query Online as a ‘Preview’ feature.*** 
+Diagram View offers a visual way to prepare data within the Power Query editor. This interface allows you to easily create queries and visualize the data preparation process. The Diagram View simplifies the experience of getting started with data wrangling, allows you to speed up the data preparation process and helps quickly understand the dataflow, both the ‘big picture view’ of how queries are related and the ‘detailed view’ of the specific data preparation steps within a query. **This feature is currently available within Power Query Online as a ‘Preview’ feature.**
 
 This article provides an overview of the capabilities provided within “Diagram View”. 
 
@@ -37,9 +37,7 @@ By searching and selecting the transform from the list, the step gets added to t
 >[!NOTE]
 > To learn more about how to author queries within the Query editor using the Ribbon or the Data Preview check the article on [Power Query Quickstart](power-query-quickstart-using-power-bi.md).
 
-## More Capabilities within Diagram View 
-
-### Query level - Quick actions 
+## Query level - Quick actions 
 
 You can perform two quick actions on a Query – *expand/collapse* a query and *highlight related queries*. These quick actions will show up on an active selected query or on hovering on a query. The remaining query level actions can be performed by clicking the context menu. 
 
@@ -49,13 +47,13 @@ You can perform more query level actions such as duplicate, reference etc. by cl
 
  ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif)![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
-#### Expand/Collapse query 
+### Expand/Collapse query 
 
 To expand/collapse a query, right click within the query and select **Expand/Collapse** from the Query’s context menu. Alternatively, double clicking within the Query can expand/collapse a query. 
 
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
-#### Highlight related queries 
+### Highlight related queries 
 
 To view all the related queries for a given query, you can right click within a query and select **Highlight related queries**. Alternatively, you can click the Highlight related queries button on the top right of a query. 
 
@@ -65,37 +63,37 @@ For instance, you can see below that by clicking the button within the ‘Top US
 
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
-#### Delete query
+### Delete query
 
 To delete a query, you can right click within a query and select **Delete** from the context menu. There will be an additional pop-up to confirm the deletion. 
 
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
-#### Rename query 
+### Rename query 
 
 To rename a query, you can right click within a query and select **Rename** from the context menu. 
 
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
-#### Enable load 
+### Enable load 
 
 To ensure that the results provided by the query are available for downstream usage such as report building, by default ‘Enable load’ is set to true. In case you need to disable load for a given query, right click within a Query, and select **Enable load**. The queries where ‘Enable load’ is set to false, will be displayed with a grey outline. 
 
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
-#### Duplicate
+### Duplicate
 
 To create a copy of a given query, right click within the query and select **Duplicate**. A new duplicate query will pop up within the Diagram View. 
 
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
-#### Reference 
+### Reference 
 
 Referencing a query will create a new query. The new query will use the steps of the previous query without having to duplicate the query. Additionally, any changes on the original query will transfer down to the referenced query. To reference a query, right click within the query and select **Reference**. 
 
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
-#### Move to group 
+### Move to group 
 
 You can make folders and move the queries into these folders for organizational purposes. These folders are called *groups*. To move a given query to a Query group, right click within a query and select **Move to group**. You can choose to move the queries to an existing group or create a new Query group. 
 
@@ -105,27 +103,25 @@ Customers can view the Query groups above the query box within the Diagram View.
 
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
-#### Create function 
+### Create function 
 
 When you need to apply the same set of transformations within different queries or values, creating Power query *functions* can be valuable. Click [here](https://docs.microsoft.com/power-query/custom-function) to learn more about functions. To convert a query into a reusable function, right click within a given query and select **Create function**. 
 
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
-#### Convert to parameter 
+### Convert to parameter 
 
 A parameter provides the flexibility to dynamically change the output of your queries depending on their value and promotes reusability. Click [here](https://docs.microsoft.com/power-query/power-query-query-parameters) to learn more about parameters. To convert a non-structured value such as date, text, number etc., right click within the query and select **Convert to Parameter**. 
 
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
-#### Advanced editor 
+### Advanced editor 
 
 The Advanced editor lets you see the code that Power Query editor is creating with each step. To view the code for a given query, right click within the query and select **Advanced editor**. Click [here](https://docs.microsoft.com/powerquery-m/power-query-m-language-specification) to learn more about the Power Query M language specification. 
 
- 
-
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
-#### Edit Query name and description 
+### Edit Query name and description 
 
 To edit the name of a Query or add a description, right click within a Query and select **Properties**. 
 
@@ -135,31 +131,23 @@ This will open a pop-up where you can edit the name of the Query or add/modify t
 
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
- 
-
 Queries with query description will have an affordance (“i” icon). You can view the Query description by hovering near the Query name. 
 
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
-**Append queries/Append queries as new** 
+### Append queries/Append queries as new
 
 To append or perform a UNION of queries, right click within a query, and select **Append queries**. This will display the Append dialog box to add additional tables to the current query. **Append** **queries as new** will also display the Append dialog box but will allow you to append multiple tables into a new query. Click [here](https://docs.microsoft.com/power-query/append-queries) to learn more about append queries. 
 
- 
-
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
- 
-
-**Merge queries/Merge queries as new** 
+### Merge queries/Merge queries as new
 
 To merge or JOIN queries, right click within a query, and select **Merge queries**. This will display the Merge dialog box, with the selected query as the left table of the merge operation. **Merge queries as new** will also display the Merge dialog box but will allow you to merge two tables into a new query. Click [here](https://docs.microsoft.com/power-query/merge-queries-overview) to learn more about Merge queries. 
 
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
- 
-
-### Step level actions 
+## Step level actions 
 
 By right clicking a step, customers can perform step level actions such as “Edit settings”, “Rename” etc. 
 
@@ -169,57 +157,47 @@ Alternatively, customers can also perform step level actions by hovering over th
 
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif)![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
-#### Edit settings 
+### Edit settings 
 
 To edit the step level settings, right click the step and choose **Edit settings**. Alternatively, customers can double click the step (that has step settings) and directly get to the Settings dialog. The Settings dialog will be able to view or change the step level settings. For example, below is the Settings dialog for the ‘Split column’ step. 
 
- 
-
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
-#### Rename step
+### Rename step
 
 To rename a step, right click the step and select **Rename**. This will open the **Step properties** dialog, where you can enter the name you want, and click OK. 
 
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
- 
-
-#### Delete step 
+### Delete step 
 
 To delete a step, right click the step and click **Delete**. To delete a series of steps until the end, right click the step and choose **Delete until end**. 
 
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
-#### Move before/after 
+### Move before/after 
 
 To move a step one position before, right click a step and select **Move before**. To move a step one position after, right click a step and select **Move after**. 
 
- 
-
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
-#### Extract previous  
+### Extract previous  
 
 To extract all previous steps into a new query, right click the first step that you do *not* want to include in the query and select Extract previous. 
 
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
-#### Edit Step name and description 
+### Edit Step name and description 
 
 You can add step descriptions by right clicking a step within a Query and choosing Properties. 
 
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
-
- 
 
 Alternatively, you can also get to the step level context menu by hovering over the step and clicking the ellipsis (three vertical dots). 
 
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
 This will open a dialog where you can add the step description. This will come handy when you come back to the same query after a few days or when you share your queries or dataflows with other users. 
-
- 
 
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
@@ -229,12 +207,6 @@ By hovering over each step, you can view a call out that shows the step label, s
 
 Clicking on each step would allow you to see the corresponding data preview for that step. 
 
- 
-
- 
-
- 
-
 ## Tips to view your Queries within Diagram View 
 
 ### Expand and Collapse Queries 
@@ -243,13 +215,11 @@ To ensure that you can view your queries within the Diagram View, you can choose
 
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
- 
-
 You can also expand/collapse a query by clicking selecting the query level actions from the Query’s context menu. 
 
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
-**E****xpand all/collapse all** queries by clicking this button below next to the Layout options within the Diagram View pane. 
+**Expand all/collapse all** queries by clicking this button below next to the Layout options within the Diagram View pane. 
 
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif)![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
@@ -259,39 +229,36 @@ Alternatively, you can right click within the Diagram View pane and see a contex
 
 In the collapsed mode, you can quickly look at the steps within the query by hovering over the number of steps in the query. You can click on these steps to navigate to that specific step within the query.  
 
- 
-
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif)![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
- 
 
-### Layout Options 
+## Layout Options 
 
 There are four layout options available within the Diagram View: 
 
-**Zoom out/in:** This option allows you to adjust the zoom level and zoom out/zoom in to view all the queries within the Diagram View. 
+### Zoom out/in
+This option allows you to adjust the zoom level and zoom out/zoom in to view all the queries within the Diagram View. 
 
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
-**Full screen:** This option allows you to view all the queries and their relationships through the ‘Full screen’ mode. The ‘Diagram View’ expands to full screen and the Data Preview, Queries pane and steps pane remain collapsed. 
+### Full screen
+This option allows you to view all the queries and their relationships through the ‘Full screen’ mode. The ‘Diagram View’ expands to full screen and the Data Preview, Queries pane and steps pane remain collapsed. 
 
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
-**Fit to view:** This option adjusts the zoom level so that all the queries and their relationships are fully viewed within the Diagram View. 
-
- 
+### Fit to view
+This option adjusts the zoom level so that all the queries and their relationships are fully viewed within the Diagram View. 
 
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif)![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
-**Reset:** This option allows you to reset the zoom level back to 100% and also resets the pan to the top-left corner. 
+### Reset
+This option allows you to reset the zoom level back to 100% and also resets the pan to the top-left corner. 
 
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
-### Query relationships within Diagram View 
+## Query relationships within Diagram View 
 
 To view all the related queries for a given query, click the **‘Highlight related queries’** button. For instance, you can see below that by clicking the button within the ‘Top US Customers’ query, we can see that ‘Customers’ and ‘Orders’ are highlighted.  
-
- 
 
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
@@ -306,4 +273,3 @@ Similarly, you can click on the right dongle to view direct and indirect depende
 You can also hover on the link icon below a step to view a callout that shows the query relationships. 
 
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
-
