@@ -37,7 +37,7 @@ By searching and selecting the transform from the list, the step gets added to t
 >[!NOTE]
 > To learn more about how to author queries within the Query editor using the Ribbon or the Data Preview check the article on [Power Query Quickstart](power-query-quickstart-using-power-bi.md).
 
-## Query level - Quick actions 
+## Query level actions 
 
 You can perform two quick actions on a Query – *expand/collapse* a query and *highlight related queries*. These quick actions will show up on an active selected query or on hovering on a query. The remaining query level actions can be performed by clicking the context menu. 
 
