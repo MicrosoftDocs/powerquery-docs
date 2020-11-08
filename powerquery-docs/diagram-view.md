@@ -130,31 +130,37 @@ The Advanced editor lets you see the code that Power Query editor is creating wi
 >[!NOTE]
 > To learn more about the code used shown in the advanced editor, visit the article on [Power Query M language specification](https://docs.microsoft.com/powerquery-m/power-query-m-language-specification). 
 
-### Edit Query name and description 
+### Edit query name and description 
 
-To edit the name of a Query or add a description, right click within a Query and select **Properties**. 
+To edit the name of a query or add a description, right click within a query and select **Properties**. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Propertiess option inside the query contextual menu](images/diagram-view-query-properties.png) 
 
-This will open a pop-up where you can edit the name of the Query or add/modify the query description. 
+This will open a pop-up where you can edit the name of the query or add/modify the query description. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Query properties window for the Top Employees by Customers query with a custom Description](images/diagram-view-query-properties-window.png) 
 
-Queries with query description will have an affordance (“i” icon). You can view the Query description by hovering near the Query name. 
+Queries with query description will have an affordance (***i*** icon). You can view the query description by hovering near the query name. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Affordance or ***i*** icon next to the name of the query that when hovered displays the description of the query](images/diagram-view-description-icon.png) 
 
 ### Append queries/Append queries as new
 
-To append or perform a UNION of queries, right click within a query, and select **Append queries**. This will display the Append dialog box to add additional tables to the current query. **Append** **queries as new** will also display the Append dialog box but will allow you to append multiple tables into a new query. Click [here](https://docs.microsoft.com/power-query/append-queries) to learn more about append queries. 
+To append or perform a UNION of queries, right click within a query, and select **Append queries**. This will display the Append dialog box to add additional tables to the current query. **Append** **queries as new** will also display the Append dialog box but will allow you to append multiple tables into a new query. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Append queries options inside the query contextual menu](images/diagram-view-append-queries.png)
+
+>[!NOTE]
+> To learn more about how to append queries in Power Query, visit the article on [Append queries](append-queries.md). 
 
 ### Merge queries/Merge queries as new
 
-To merge or JOIN queries, right click within a query, and select **Merge queries**. This will display the Merge dialog box, with the selected query as the left table of the merge operation. **Merge queries as new** will also display the Merge dialog box but will allow you to merge two tables into a new query. Click [here](https://docs.microsoft.com/power-query/merge-queries-overview) to learn more about Merge queries. 
+To merge or JOIN queries, right click within a query, and select **Merge queries**. This will display the Merge dialog box, with the selected query as the left table of the merge operation. **Merge queries as new** will also display the Merge dialog box but will allow you to merge two tables into a new query. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Merge queries options inside the query contextual menu](images/diagram-view-merge-queries.png)
+
+>[!NOTE]
+> To learn more about how to merge queries in Power Query, visit the article on [Merge queries overview](merge-queries-overview). 
 
 ## Step level actions 
 
