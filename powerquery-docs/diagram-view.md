@@ -11,17 +11,17 @@ ms.author: v-miesco
 
 Diagram View offers a visual way to prepare data within the Power Query editor. This interface allows you to easily create queries and visualize the data preparation process. The Diagram View simplifies the experience of getting started with data wrangling, allows you to speed up the data preparation process and helps quickly understand the dataflow, both the ‘big picture view’ of how queries are related and the ‘detailed view’ of the specific data preparation steps within a query. 
 
->[!IMPORTANT]
->This feature is currently only available within Power Query Online as a ‘Preview’ feature.
-
 This article provides an overview of the capabilities provided within **Diagram View**. 
-
 
 ![Example of the Power Query interface with 3 queries shown in the Diagram View](images/diagram-view-sample.png) 
 
 This feature can be enabled by selecting **Diagram View** within the *View* tab in the ribbon. With the Diagram View enabled, the Steps pane and Queries pane will be collapsed.  
 
 ![Diagram view option inside the View tab in the Power Query ribbon](images/enabling-diagram-view.png) 
+
+>[!Note]
+>This feature is currently only available within Power Query Online as a *Preview* feature.
+
 
 ## Authoring queries using Diagram View 
 
