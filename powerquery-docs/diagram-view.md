@@ -242,7 +242,7 @@ Alternatively, you can right click any empty space within the Diagram View pane 
 
 In the collapsed mode, you can quickly look at the steps within the query by hovering over the number of steps in the query. You can click on these steps to navigate to that specific step within the query.  
 
-![Tooltip showing the available steps in the Customers query after hovering over the number of steps label in the query](images/diagram-view-collapsed-queries.png)
+![Callout showing the available steps in the Customers query after hovering over the number of steps label in the query](images/diagram-view-collapsed-queries.png)
 
 ## Layout Options 
 
@@ -272,16 +272,16 @@ This option allows you to reset the zoom level back to 100% and also resets the 
 
 To view all the related queries for a given query, click the **Highlight related queries** button. For instance, you can see below that by clicking the button within the *Top US Customers* query, we can see that *Customers* and *Orders* are highlighted.  
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Related queries to the Top US Customers (Orders and Customers) are highlighted with a light blue background color after clicking the highlight related queries button in the Top US Customers query](images/diagram-view-highlight-related-queries-sample.png) 
 
 Alternatively, you can click on the dongle on the left of a given query to see the direct and indirect referenced queries. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Related queries to the Top US Customers (Orders and Customers) are highlighted with a light blue background color after clicking small dongle on the left of the Top US Customers query](images/diagram-view-highlight-related-queries-sample-dongle.png) 
 
 Similarly, you can click on the right dongle to view direct and indirect dependent queries. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Callout displays the Direct dependent queries and the Indirect dependent queries after clicking the right dongle of the Customers query](images/diagram-view-highlight-related-queries-direct-indirect-dependent-queries.png) 
 
 You can also hover on the link icon below a step to view a callout that shows the query relationships. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Referenced queries are listed in a callout after hovering over the link icon below a step](images/diagram-view-hover-link-icon.png) 
