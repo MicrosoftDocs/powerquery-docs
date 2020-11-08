@@ -97,29 +97,35 @@ Referencing a query will create a new query. The new query will use the steps of
 
 You can make folders and move the queries into these folders for organizational purposes. These folders are called *groups*. To move a given query to a Query group, right click within a query and select **Move to group**. You can choose to move the queries to an existing group or create a new Query group. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Move to group option inside the query contextual menu](images/diagram-view-move-query-to-group.png) 
 
 Customers can view the Query groups above the query box within the Diagram View. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Icon and Label that specify the group in which the query has been moved to](images/diagram-view-queries-in-group.png) 
 
 ### Create function 
 
 When you need to apply the same set of transformations within different queries or values, creating Power query *functions* can be valuable. Click [here](https://docs.microsoft.com/power-query/custom-function) to learn more about functions. To convert a query into a reusable function, right click within a given query and select **Create function**. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Create function option inside the query contextual menu](images/diagram-view-create-function.png) 
 
 ### Convert to parameter 
 
-A parameter provides the flexibility to dynamically change the output of your queries depending on their value and promotes reusability. Click [here](https://docs.microsoft.com/power-query/power-query-query-parameters) to learn more about parameters. To convert a non-structured value such as date, text, number etc., right click within the query and select **Convert to Parameter**. 
+A parameter provides the flexibility to dynamically change the output of your queries depending on their value and promotes reusability. To convert a non-structured value such as date, text, number etc., right click within the query and select **Convert to Parameter**. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Convert to parameter option inside the query contextual menu](images/diagram-view-convert-to-parameter.png) 
+
+>[!NOTE]
+> To learn more about parameters, visit the article on [Power Query parameters](power-query-query-parameters.md). 
 
 ### Advanced editor 
 
-The Advanced editor lets you see the code that Power Query editor is creating with each step. To view the code for a given query, right click within the query and select **Advanced editor**. Click [here](https://docs.microsoft.com/powerquery-m/power-query-m-language-specification) to learn more about the Power Query M language specification. 
+The Advanced editor lets you see the code that Power Query editor is creating with each step. To view the code for a given query, right click within the query and select **Advanced editor**. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Advanced editor option inside the query contextual menu](images/diagram-view-advanced-editor.png) 
+
+>[!NOTE]
+> To learn more about the code used shown in the advanced editor, visit the article on [Power Query M language specification](https://docs.microsoft.com/powerquery-m/power-query-m-language-specification). 
 
 ### Edit Query name and description 
 
