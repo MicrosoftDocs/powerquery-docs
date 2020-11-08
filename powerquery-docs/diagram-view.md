@@ -164,43 +164,43 @@ To merge or JOIN queries, right click within a query, and select **Merge queries
 
 ## Step level actions 
 
-By right clicking a step, customers can perform step level actions such as “Edit settings”, “Rename” etc. 
+By right clicking a step, you can perform step level actions such as *Edit settings*, *Rename* etc. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif)![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Step level actions displaying in the contextual menu after right clicking a step](images/diagram-view-step-settings.png)
 
-Alternatively, customers can also perform step level actions by hovering over the step and clicking the ellipsis (three vertical dots). 
+Alternatively, you can also perform step level actions by hovering over the step and clicking the ellipsis (three vertical dots). 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif)![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Step level actions contextual menu displayed after clicking on the ellipsis button](images/diagram-view-step-settings-ellipsis-button.png)
 
 ### Edit settings 
 
-To edit the step level settings, right click the step and choose **Edit settings**. Alternatively, customers can double click the step (that has step settings) and directly get to the Settings dialog. The Settings dialog will be able to view or change the step level settings. For example, below is the Settings dialog for the ‘Split column’ step. 
+To edit the step level settings, right click the step and choose **Edit settings**. Alternatively, you can double click the step (that has step settings) and directly get to the Settings dialog. The Settings dialog will be able to view or change the step level settings. For example, below is the Settings dialog for the ‘Split column’ step. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Settings dialog for the Split column step of a query](images/diagram-view-edit-step-settings.png) 
 
 ### Rename step
 
 To rename a step, right click the step and select **Rename**. This will open the **Step properties** dialog, where you can enter the name you want, and click OK. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Rename option inside the step level contextual menu after right clicking a step](images/diagram-view-rename-step.png) 
 
 ### Delete step 
 
 To delete a step, right click the step and click **Delete**. To delete a series of steps until the end, right click the step and choose **Delete until end**. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Delete and Delete until end options inside the step level contextual menu after right clicking a step](images/diagram-view-delete-step.png) 
 
-### Move before/after 
+### Move before / after 
 
 To move a step one position before, right click a step and select **Move before**. To move a step one position after, right click a step and select **Move after**. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Move before and Move after options inside the step level contextual menu after right clicking a step](images/diagram-view-move-step.png) 
 
 ### Extract previous  
 
 To extract all previous steps into a new query, right click the first step that you do *not* want to include in the query and select Extract previous. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Extract previous inside the step level contextual menu after right clicking a ste](images/diagram-view-extract-previous-steps.png) 
 
 ### Edit Step name and description 
 
