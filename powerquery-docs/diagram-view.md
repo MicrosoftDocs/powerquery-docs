@@ -102,7 +102,7 @@ You can make folders and move the queries into these folders for organizational 
 
 ![Move to group option inside the query contextual menu](images/diagram-view-move-query-to-group.png) 
 
-Customers can view the Query groups above the query box within the Diagram View. 
+You can view the Query groups above the query box within the Diagram View. 
 
 ![Icon and Label that specify the group in which the query has been moved to](images/diagram-view-queries-in-group.png) 
 
@@ -251,26 +251,26 @@ There are four layout options available within the Diagram View:
 ### Zoom out / in
 This option allows you to adjust the zoom level and zoom out/zoom in to view all the queries within the Diagram View. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Zoom out / in buttons available at the bottom right hand corner of the Diagram view pane](images/diagram-view-zoom.png) 
 
 ### Full screen
-This option allows you to view all the queries and their relationships through the ‘Full screen’ mode. The ‘Diagram View’ expands to full screen and the Data Preview, Queries pane and steps pane remain collapsed. 
+This option allows you to view all the queries and their relationships through the *Full screen* mode. The **Diagram View** expands to full screen and the Data Preview, Queries pane and steps pane remain collapsed. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Full screen button available at the bottom right hand corner of the Diagram view pane](images/diagram-view-full-screen.png) 
 
 ### Fit to view
 This option adjusts the zoom level so that all the queries and their relationships are fully viewed within the Diagram View. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif)![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Fit to view button available at the bottom right hand corner of the Diagram view pane](images/diagram-view-fit-to-view.png) 
 
 ### Reset
 This option allows you to reset the zoom level back to 100% and also resets the pan to the top-left corner. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Reset button available at the bottom right hand corner of the Diagram view pane](images/diagram-view-reset-view.png) 
 
 ## View query relationships
 
-To view all the related queries for a given query, click the **‘Highlight related queries’** button. For instance, you can see below that by clicking the button within the ‘Top US Customers’ query, we can see that ‘Customers’ and ‘Orders’ are highlighted.  
+To view all the related queries for a given query, click the **Highlight related queries** button. For instance, you can see below that by clicking the button within the *Top US Customers* query, we can see that *Customers* and *Orders* are highlighted.  
 
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
