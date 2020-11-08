@@ -224,32 +224,31 @@ Clicking on each step would allow you to see the corresponding data preview for 
 
 ## Expand and Collapse Queries 
 
-To ensure that you can view your queries within the Diagram View, you can choose to collapse the ones that you are not actively working on and expand the ones that you care about. Expand/collapse queries by clicking on the **‘****Expand/****Collapse’** button on the top right of a Query. Alternatively, double clicking an expanded query will collapse the query and vice-versa. 
+To ensure that you can view your queries within the Diagram View, you can choose to collapse the ones that you are not actively working on and expand the ones that you care about. Expand /collapse queries by clicking on the **Expand / Collapse** button on the top right of a Query. Alternatively, double clicking an expanded query will collapse the query and vice-versa. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Collapse button on the top right corner of the query in the Diagram view](images/diagram-view-collapse-query.png) 
 
-You can also expand/collapse a query by clicking selecting the query level actions from the Query’s context menu. 
+You can also expand / collapse a query by clicking selecting the query level actions from the query’s context menu. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Collapse button inside the query contextual menu after right clicking the query](images/diagram-view-collapse-query-from-context-menu.png) 
 
-**Expand all/collapse all** queries by clicking this button below next to the Layout options within the Diagram View pane. 
+**Expand all / collapse all** queries by clicking this button below next to the Layout options within the Diagram View pane. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif)![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Expand all / collapse all queries button at the bottom right hand corner of the Diagram view pane next to the Layout options](images/diagram-view-collapse-all-queries-button.png) 
 
-Alternatively, you can right click within the Diagram View pane and see a context menu to expand all/collapse all queries. 
+Alternatively, you can right click any empty space within the Diagram View pane and see a context menu to expand all / collapse all queries. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif)![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Contextual menu after right clicking any empty space within the Diagram view pane that showcases the expand all and collapse all queries options](images/diagram-view-right-click.png) 
 
 In the collapsed mode, you can quickly look at the steps within the query by hovering over the number of steps in the query. You can click on these steps to navigate to that specific step within the query.  
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif)![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
-
+![Tooltip showing the available steps in the Customers query after hovering over the number of steps label in the query](images/diagram-view-collapsed-queries.png)
 
 ## Layout Options 
 
 There are four layout options available within the Diagram View: 
 
-### Zoom out/in
+### Zoom out / in
 This option allows you to adjust the zoom level and zoom out/zoom in to view all the queries within the Diagram View. 
 
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
