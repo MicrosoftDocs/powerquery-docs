@@ -57,41 +57,41 @@ To expand/collapse a query, right click within the query and select **Expand/Col
 
 To view all the related queries for a given query, you can right click within a query and select **Highlight related queries**. Alternatively, you can click the Highlight related queries button on the top right of a query. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Highlight related queries buttons at the top of the Top US Customers query and inside the contextual menu](images/diagram-view-highlight-related-queries.png) 
 
 For instance, you can see below that by clicking the button within the ‘Top US Customers’ query, we can see that ‘Customers’ and ‘Orders’ are highlighted.  
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Related queries highlighted for the Top US Customers query inside the Diagram view](images/diagram-view-highlight-related-queries-active.png) 
 
 ### Delete query
 
 To delete a query, you can right click within a query and select **Delete** from the context menu. There will be an additional pop-up to confirm the deletion. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Delete option inside the query contextual menu](images/diagram-view-delete-query.png) 
 
 ### Rename query 
 
-To rename a query, you can right click within a query and select **Rename** from the context menu. 
+To rename a query, you can right click within a query and select **Rename** from the context menu.
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Rename option inside the query contextual menu](images/diagram-view-rename-query.png) 
 
 ### Enable load 
 
-To ensure that the results provided by the query are available for downstream usage such as report building, by default ‘Enable load’ is set to true. In case you need to disable load for a given query, right click within a Query, and select **Enable load**. The queries where ‘Enable load’ is set to false, will be displayed with a grey outline. 
+To ensure that the results provided by the query are available for downstream usage such as report building, by default **Enable load** is set to true. In case you need to disable load for a given query, right click within a Query, and select **Enable load**. The queries where **Enable load** is set to false, will be displayed with a grey outline. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Enable load option inside the query contextual menu](images/diagram-view-query-enable-load.png) 
 
 ### Duplicate
 
-To create a copy of a given query, right click within the query and select **Duplicate**. A new duplicate query will pop up within the Diagram View. 
+To create a copy of a given query, right click within the query and select **Duplicate**. A new duplicate query will appear within the Diagram View. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Duplicate option inside the query contextual menu](images/diagram-view-duplicate-query.png) 
 
 ### Reference 
 
 Referencing a query will create a new query. The new query will use the steps of the previous query without having to duplicate the query. Additionally, any changes on the original query will transfer down to the referenced query. To reference a query, right click within the query and select **Reference**. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Reference option inside the query contextual menu](images/diagram-view-reference-query.png) 
 
 ### Move to group 
 
