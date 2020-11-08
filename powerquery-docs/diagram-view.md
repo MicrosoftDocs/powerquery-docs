@@ -222,9 +222,7 @@ By hovering over each step, you can view a call out that shows the step label, s
 
 Clicking on each step would allow you to see the corresponding data preview for that step. 
 
-## Tips to view your queries
-
-### Expand and Collapse Queries 
+## Expand and Collapse Queries 
 
 To ensure that you can view your queries within the Diagram View, you can choose to collapse the ones that you are not actively working on and expand the ones that you care about. Expand/collapse queries by clicking on the **‘****Expand/****Collapse’** button on the top right of a Query. Alternatively, double clicking an expanded query will collapse the query and vice-versa. 
 
