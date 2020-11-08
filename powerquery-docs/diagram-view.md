@@ -144,7 +144,7 @@ Queries with query description will have an affordance (***i*** icon). You can v
 
 ![Affordance or ***i*** icon next to the name of the query that when hovered displays the description of the query](images/diagram-view-description-icon.png) 
 
-### Append queries/Append queries as new
+### Append queries / Append queries as new
 
 To append or perform a UNION of queries, right click within a query, and select **Append queries**. This will display the Append dialog box to add additional tables to the current query. **Append** **queries as new** will also display the Append dialog box but will allow you to append multiple tables into a new query. 
 
@@ -153,7 +153,7 @@ To append or perform a UNION of queries, right click within a query, and select 
 >[!NOTE]
 > To learn more about how to append queries in Power Query, visit the article on [Append queries](append-queries.md). 
 
-### Merge queries/Merge queries as new
+### Merge queries / Merge queries as new
 
 To merge or JOIN queries, right click within a query, and select **Merge queries**. This will display the Merge dialog box, with the selected query as the left table of the merge operation. **Merge queries as new** will also display the Merge dialog box but will allow you to merge two tables into a new query. 
 
