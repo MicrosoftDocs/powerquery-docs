@@ -200,25 +200,25 @@ To move a step one position before, right click a step and select **Move before*
 
 To extract all previous steps into a new query, right click the first step that you do *not* want to include in the query and select Extract previous. 
 
-![Extract previous inside the step level contextual menu after right clicking a ste](images/diagram-view-extract-previous-steps.png) 
+![Extract previous option inside the step level contextual menu after right clicking a step](images/diagram-view-extract-previous-steps.png) 
 
 ### Edit Step name and description 
 
 You can add step descriptions by right clicking a step within a Query and choosing Properties. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Properties option inside the step level contextual menu after right clicking a step](images/diagram-view-steps-properties.png) 
 
 Alternatively, you can also get to the step level context menu by hovering over the step and clicking the ellipsis (three vertical dots). 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Properties option inside the step level contextual menu after clicking the ellipsis button](images/diagram-view-steps-properties-ellipsis.png) 
 
 This will open a dialog where you can add the step description. This will come handy when you come back to the same query after a few days or when you share your queries or dataflows with other users. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Step properties window for the step with the name 'Filtered rows' and a description that reads 'Filter by US'](images/diagram-view-steps-properties-window.png) 
 
 By hovering over each step, you can view a call out that shows the step label, step name and step descriptions (that were added). 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Descriptions shown at the step level for the steps with the names 'Choose columns' and 'Filter rows' in the Customers query](images/diagram-view-step-descriptions.png) 
 
 Clicking on each step would allow you to see the corresponding data preview for that step. 
 
