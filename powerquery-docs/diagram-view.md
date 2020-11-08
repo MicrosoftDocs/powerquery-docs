@@ -32,7 +32,7 @@ You can add a new step within a query, after the currently selected step, by jus
 
 By searching and selecting the transform from the list, the step gets added to the query as shown below. 
 
-![img](images/step-added-from-diagram-view.png)
+![Remove duplicates transform added through the usage of the + icon in the query when in the diagram view](images/step-added-from-diagram-view.png)
 
 >[!NOTE]
 > To learn more about how to author queries within the Query editor using the Ribbon or the Data Preview check the article on [Power Query Quickstart](power-query-quickstart-using-power-bi.md).
@@ -41,11 +41,11 @@ By searching and selecting the transform from the list, the step gets added to t
 
 You can perform two quick actions on a Query – *expand/collapse* a query and *highlight related queries*. These quick actions will show up on an active selected query or on hovering on a query. The remaining query level actions can be performed by clicking the context menu. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Example of quick actions buttons in a query shown in the Diagram](images/diagram-view-query-quick-actions.png) 
 
 You can perform more query level actions such as duplicate, reference etc. by clicking the query level context menu (the three vertical dots). Alternatively, you can also right click within the query and get to the same context menu. 
 
- ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif)![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+ ![More query level actions shown through the query contextual menu when clicking the three vertical dots or by right clicking the query](images/diagram-view-query-more-actions.png)
 
 ### Expand/Collapse query 
 
