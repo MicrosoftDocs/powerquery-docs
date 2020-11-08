@@ -207,7 +207,7 @@ By hovering over each step, you can view a call out that shows the step label, s
 
 Clicking on each step would allow you to see the corresponding data preview for that step. 
 
-## Tips to view your Queries within Diagram View 
+## Tips to view your queries
 
 ### Expand and Collapse Queries 
 
@@ -256,7 +256,7 @@ This option allows you to reset the zoom level back to 100% and also resets the 
 
 ![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
 
-## Query relationships within Diagram View 
+## View query relationships
 
 To view all the related queries for a given query, click the **‘Highlight related queries’** button. For instance, you can see below that by clicking the button within the ‘Top US Customers’ query, we can see that ‘Customers’ and ‘Orders’ are highlighted.  
 
