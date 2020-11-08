@@ -51,7 +51,7 @@ You can perform more query level actions such as duplicate, reference etc. by cl
 
 To expand/collapse a query, right click within the query and select **Expand/Collapse** from the Query’s context menu. Alternatively, double clicking within the Query can expand/collapse a query. 
 
-![img](https://c1-officeapps-15.cdn.office.net/we/s/161342941006_resources/1033/progress.gif) 
+![Collapse button in the contextual menu of the query](images/diagram-view-expand-collapse-query.png) 
 
 ### Highlight related queries 
 
