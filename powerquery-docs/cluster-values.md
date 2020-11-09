@@ -8,7 +8,7 @@ ms.date: 11/08/2020
 ms.author: v-miesco
 ---
 
-# cluster values
+# Cluster values
 
 Cluster values automatically creates groups with similar values using a fuzzy matching algorithm and then maps a each column's value to the best-match group. This transform is very useful when are working with data that has many different variations of the same value and you need to consolidate values into consistent groups.
 
