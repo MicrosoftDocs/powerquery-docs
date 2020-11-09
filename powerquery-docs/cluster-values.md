@@ -1,6 +1,6 @@
 ---
-title: Fuzzy cluster column
-description: An article that demonstrates how to create a fuzzy cluster column Power Query
+title: Cluster values
+description: An article that demonstrates how to create a cluster values column Power Query
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: 
@@ -8,21 +8,21 @@ ms.date: 11/08/2020
 ms.author: v-miesco
 ---
 
-# Fuzzy cluster column
+# cluster values
 
-**[Missing definition from Miguel / Jorge]**
+Cluster values automatically creates groups with similar values using a fuzzy matching algorithm and then maps a each column's value to the best-match group. This transform is very useful when are working with data that has many different variations of the same value and you need to consolidate values into consistent groups.
 
-To demonstrate how to add a fuzzy cluster conlumn, consider the sample table shown in the following image.
+Consider the sample table shown in the following image.
 
 ![Table with nine rows of entries that contain various spellings and captilizations of the name Miguel and William](images/me-fuzzy-grouping-sample-source-table.png)
 
-The outcome that you're looking for is a table with a new column with the clusters using the values from the **Person** column as shown in the next image.
+The outcome that you're looking for is a table with a new column that shows the right groups of values from the **Person** column and not all the different variations of the same words.
 
 ![Clustered values as a new column called Cluster in the initial table](images/cluster-column-initial-result.png)
 
 ## Create a Cluster column
 
-To do the fuzzy cluster column, first select the column **Person** and then go to the **Add column** tab in the ribbon and select the option that reads *Cluster values*.
+To cluster values, first select the column **Person** and then go to the **Add column** tab in the ribbon and select the option that reads *Cluster values*.
 
 ![Cluster values icon inside the Add column tab in the Power Query online ribbon](images/cluster-column-icon.png)
 
@@ -39,7 +39,7 @@ The result of that operation will yield the result shown in the next image.
 
 ## Using the fuzzy cluster options
 
-The following options are available for creating a new fuzzy cluster column:
+The following options are available for clustering values into a new column:
 
 * **Similarity threshold (optional)**: This option indicates how similar two values must be to be grouped together. The minimum setting of 0 will cause all values to be grouped together. The maximum setting of 1 will only allow values that match exactly to be grouped together. The default is 0.8.
 * **Ignore case**: When comparing text strings, case will be ignored. This option is enabled by default.
@@ -52,6 +52,9 @@ For this example, a new transformation table will be used to demonstrate how val
 * **To**: The text string to use to replace the text string in the From column.
 
 ![Table showing From values of mike and William, and To values of Miguel and Bill](images/me-fuzzy-grouping-sample-transformation-table.png)
+
+>[!IMPORTANT]
+>It's important that the transformation table has a the same columns and column names as shown above (they have to be "From" and "To"), otherwise Power Query will not recognize these.
 
 Using the previously created query, double click the **Clustered values** step and in the *Cluster values* window expand the *Fuzzy cluster options*. In this new *Fuzzy cluster options section*, enable the **Show similarity scores** option and for the **Transformation table (optional)** select the query that has the transform table as shown in the next image.
 
