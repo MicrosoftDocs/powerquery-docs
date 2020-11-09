@@ -16,7 +16,9 @@ To demonstrate how to add a fuzzy cluster conlumn, consider the sample table sho
 
 ![Table with nine rows of entries that contain various spellings and captilizations of the name Miguel and William](images/me-fuzzy-grouping-sample-source-table.png)
 
-The outcome that you're looking for is a table with a new column with the clusters using the values from the **Person** column.
+The outcome that you're looking for is a table with a new column with the clusters using the values from the **Person** column as shown in the next image.
+
+![Clustered values as a new column called Cluster in the initial table](images/cluster-column-initial-result.png)
 
 ## Create a Cluster column
 
