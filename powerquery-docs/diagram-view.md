@@ -160,7 +160,7 @@ To merge or JOIN queries, right-click in a query and select **Merge queries**. T
 ![Merge queries options inside the query contextual menu](images/diagram-view-merge-queries.png)
 
 >[!NOTE]
-> To learn more about how to merge queries in Power Query, go to [Merge queries overview](merge-queries-overview). 
+> To learn more about how to merge queries in Power Query, go to [Merge queries overview](merge-queries-overview.md). 
 
 ## Step level actions 
 
