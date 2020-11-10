@@ -264,6 +264,53 @@ The resulting partition would look like this.
 ![Final firewall partitions](images/FirewallStepsPane5.png)
 
 
+## Example: Passing Data From One Data Source to Another ##
+Okay, enough abstract explanation. Let's look at a common scenario where you're likely to encounter a Firewall error and the steps to resolve it.
+
+Imagine you want to look up a company name from the Northwind OData service, and then use the company name to perform a Bing search.
+
+First, you create a **Company** query to retrieve the company name.
+
+```
+let
+    Source = OData.Feed("https://services.odata.org/V4/Northwind/Northwind.svc/", null, [Implementation="2.0"]),
+    Customers_table = Source{[Name="Customers",Signature="table"]}[Data],
+    CHOPS = Customers_table{[CustomerID="CHOPS"]}[CompanyName]
+in
+    CHOPS
+```
+
+Next, you create a **Search** query that references **Company** and passes it to Bing.
+
+```
+let
+    Source = Text.FromBinary(Web.Contents("https://www.bing.com/search?q=" & Company))
+in
+    Source
+```
+
+At this point you run into trouble. Evaluating **Search** produces a Firewall error.
+
+`Formula.Firewall: Query 'Search' (step 'Source') references other queries or steps, so it may not directly access a data source. Please rebuild this data combination.`
+
+This is because the Source step of **Search** is referencing a data source (bing.com) and also referencing another query/partition (**Company**). It is violating the rule mentioned above ("a partition may either access compatible data sources, or reference other partitions, but not both").
+
+What to do? One option is to disable the Firewall altogether (via the Privacy option labeled "Ignore the Privacy levels and potentially improve performance"). But what if we want to leave the Firewall enabled?
+
+To resolve the error without disabling the Firewall, we can **combine Company and Search into a single query**, like this:
+
+```
+let
+    Source = OData.Feed("https://services.odata.org/V4/Northwind/Northwind.svc/", null, [Implementation="2.0"]),
+    Customers_table = Source{[Name="Customers",Signature="table"]}[Data],
+    CHOPS = Customers_table{[CustomerID="CHOPS"]}[CompanyName],
+    Search = Text.FromBinary(Web.Contents("https://www.bing.com/search?q=" & CHOPS))
+in
+    Search
+```
+
+Everything is now happening inside a *single* partition. Assuming that the Privacy Levels for the two data sources are compatible, the Firewall should now be happy, and we'll no longer get an error.
+
 ## That’s a wrap
 
 While there's much more that could be said on this topic, this introductory article is already long enough. Hopefully it’s given you a better understanding of the Firewall, and will help you to understand and fix Firewall errors when you encounter them in the future.
