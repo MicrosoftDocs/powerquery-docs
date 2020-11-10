@@ -218,7 +218,7 @@ This action will open a dialog box where you can add the step description. This 
 
 By hovering over each step, you can view a call out that shows the step label, step name, and step descriptions (that were added). 
 
-![Descriptions shown at the step level for the steps with the names 'Choose columns' and 'Filter rows' in the Customers query](images/diagram-view-step-descriptions.png) 
+![Descriptions shown at the step level for the steps with the names 'Choose columns' and 'Filter rows' in the Customers query](images/diagram-view-step-descriptions.gif) 
 
 By selecting each step, you can see the corresponding data preview for that step. 
 
