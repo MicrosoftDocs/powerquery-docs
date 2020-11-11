@@ -34,6 +34,8 @@
         href: power-query-tutorial-shape-combine.md
       - name: "Using the Applied Steps list"
         href: applied-steps.md
+      - name: "Query folding basics"
+        href: query-folding-basics.md
       - name: "Using the data profiling tools"
         href: data-profiling-tools.md
       - name: "Using the Queries pane"
@@ -76,6 +78,10 @@
           href: fill-values-column.md
         - name: "Sort columns"
           href: sort-columns.md
+        - name: "Rename column"
+          href: rename-column.md
+        - name: "Move columns"
+          href: move-columns.md
         - name: "Replace values"
           href: replace-values.md
         - name: "Parse text as JSON or XML"
