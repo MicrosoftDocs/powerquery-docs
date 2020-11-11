@@ -5,7 +5,8 @@ author: jessli20
 ms.service: powerquery
 ms.reviewer: v-miesco
 ms.date: 08/12/2020
-ms.author: jessli20
+ms.author: v-douklo
+
 ---
 
 
