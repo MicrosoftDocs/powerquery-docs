@@ -5,14 +5,14 @@ author: radacad
 ms.service: powerquery
 ms.topic: conceptual
 ms.date: 05/25/2020
-ms.author: v-rerad
+ms.author: v-douklo
 ---
 
 # What is the storage structure for analytical dataflows? 
 
  
 
-Analytical dataflows store both data and metadata in Azure Data Lake Storage Gen2. Dataflows leverage a standard structure to store and describe data created in the lake which is called Common Data Model folders. In this article, you'll learn more about the storage standard that dataflows leverage behind the scenes. 
+Analytical dataflows store both data and metadata in Azure Data Lake Storage Gen2. Dataflows leverage a standard structure to store and describe data created in the lake, which is called Common Data Model folders. In this article, you'll learn more about the storage standard that dataflows leverage behind the scenes. 
 
  
 
@@ -64,7 +64,7 @@ Inside each dataflow folder, there are sub-folders for each entity and a metadat
 
  
 
-The `model.json` file is the metadata definition of the dataflow. This is the one file that contains all the dataflow’s metadata. It includes a list of entities, the columns and their data types in each entity, the relationship between entities, and so on. This is the file that you can export from a dataflow easily, even if you don't have access to the Common Data Model folder structure. 
+The `model.json` file is the metadata definition of the dataflow. This is the one file that contains all the dataflow’s metadata. It includes a list of entities, the columns, and their data types in each entity, the relationship between entities, and so on. This is the file that you can export from a dataflow easily, even if you don't have access to the Common Data Model folder structure. 
 
  
 
@@ -128,24 +128,14 @@ To see how to connect the external Azure Data Lake storage account to dataflows 
 
  
 
-- [Use the Common Data Model to optimize Azure Data Lake Storage Gen2](https://docs.microsoft.com/common-data-model/data-lake 
+- [Use the Common Data Model to optimize Azure Data Lake Storage Gen2](https://docs.microsoft.com/common-data-model/data-lake) 
 
-  ) 
+- [The metadata file (model.json) for the Common Data Model](https://docs.microsoft.com/common-data-model/model-json) 
 
-- [The metadata file (model.json) for the Common Data Model](https://docs.microsoft.com/common-data-model/model-json 
+- [Add a CDM folder to Power BI as a dataflow (Preview)](https://docs.microsoft.com/power-bi/service-dataflows-add-cdm-folder) 
 
-  ) 
-
-- [Add a CDM folder to Power BI as a dataflow (Preview)](https://docs.microsoft.com/power-bi/service-dataflows-add-cdm-folder 
-
-  ) 
-
-- [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://docs.microsoft.com/power-bi/service-dataflows-connect-azure-data-lake-storage-gen2 
-
-  ) 
+- [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://docs.microsoft.com/power-bi/service-dataflows-connect-azure-data-lake-storage-gen2) 
 
 - [Dataflows and Azure Data Lake Integration (Preview)](https://docs.microsoft.com/power-bi/transform-model/service-dataflows-azure-data-lake-integration) 
 
-- [Configure workspace dataflow settings (Preview)](https://docs.microsoft.com/power-bi/service-dataflows-configure-workspace-storage-settings 
-
-  ) 
+- [Configure workspace dataflow settings (Preview)](https://docs.microsoft.com/power-bi/service-dataflows-configure-workspace-storage-settings) 

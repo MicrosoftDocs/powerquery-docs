@@ -1,75 +1,123 @@
 ---
-title: Using Query Parameters in Power BI Desktop
-description: Create and use Query Parameters in Power BI Desktop
-author: davidiseminger
-manager: kfile
-ms.reviewer: ''
-
+title: Parameters
+description: An article on how to use parameters in Power Query
+author: ptyx507
 ms.service: powerquery
-ms.subservice: powerbi-query
-ms.topic: conceptual
-ms.date: 11/26/2019
-ms.author: davidi
-
-LocalizationGroup: Connect to data
+ms.reviewer: 
+ms.date: 08/31/2020
+ms.author: v-miesco
 ---
-# Using Query Parameters in Power BI Desktop
+# Using parameters
 
-With **Power Query** and **Power BI Desktop,** you can add **Query Parameters** to a report and make elements of the report dependent on those parameters. For example, you could use Query Parameters to automatically have a report create a filter, load a data model or a data source reference, generate a measure definition, and many other abilities. Query Parameters let users open a report, and by providing values for its Query Parameters, jump-start creating that report with just a few clicks. 
+A parameter serves as a way to easily store and manage a value that can be reused.
 
-![Manage query parameters](media/power-query-query-parameters/query-parameters-01.png)
+Parameters give you the flexibility to dynamically change the output of your queries depending on their value, and can be used for:
 
-You can have one parameter, or multiple parameters for any report. Let's take a look at how to create parameters in Power BI Desktop.
+* Changing the argument values for particular transforms and data source functions
+* Inputs in custom functions
 
-## Creating Query Parameters
+You can easily manage your parameters inside the **Manage Parameters** window. You can get to the **Manage Parameters** window by selecting the **Manage Parameters** option inside **Manage Parameters** in the **Home** tab.
 
-To create or access Query Parameters in a Power BI Desktop report, go to the **Home** ribbon and select **Edit Queries > Edit Parameters** to bring up the **Power Query Editor** window.
+![Manage Parameters window](images/me-parameters-manage-parameters.png)
 
-In the **Power Query Editor** window, from the **Home** ribbon select **Manage Parameters** to bring up the **Parameters** dialog.
+## Creating a parameter
 
-![Query Parameters dialog](media/power-query-query-parameters/query-parameters-02.png)
+Power Query provides two easy ways to create parameters:
 
-The **Parameters** dialog has the following elements that let you create new parameters, or specify metadata and setting for each parameter:
+* **From an existing query**&mdash;You can easily right-click a query whose value is a simple non-structured constant such as, but not limited to, a date, text, or number, and select **Convert to Parameter**. 
+    
+   ![Convert to parameter](images/me-parameters-convert-to-parameter.png)
+
+   >[!NOTE]
+   >You can also convert a parameter to a query by right-clicking the parameter and then selecting **Convert To Query**, as shown in the following image.
+   >
+   >![Convert to query](images/me-parameters-convert-to-query.png)
+
+* **Using the Manage Parameters window**&mdash;You can select the **New Parameter** option from the dropdown menu of **Manage Parameters** in the **Home** tab, or you can launch the **Manage Parameters** window and select in the **New** button on the top to create a parameter. You can fill in this form and select **OK** to create a new parameter.
+
+   ![Create a parameter from the Manage Parameters window](images/me-parameters-create-parameter.png)
+
+After creating the parameter, you can always go back to the **Manage Parameters** window to modify any of your parameters at any moment.
+
+## Parameter properties
+
+A parameter stores a value that can be used for transformations in Power Query. Apart from the name of the parameter and the value that it stores, it also has other properties that provide metadata to it. The properties of a parameter are as follows.
 
 * **Name**&mdash;Provide a name for this parameter that lets you easily recognize and differentiate it from other parameters you might create.
-
-* **Description**&mdash;The description is displayed next to the parameter name when parameter information is displayed, helping users who are specifying the parameter value to understand its purpose, and its semantics.
-
+* **Description**&mdash;The description is displayed next to the parameter name when parameter information is displayed, helping users who are specifying the parameter value to understand its purpose and its semantics.
 * **Required**&mdash;The checkbox indicates whether subsequent users can specify whether a value for the parameter must be provided.
+* **Type**&mdash;We recommended that you always set up the data type of your parameter. You can learn more about the importance of data types from the [Data types](data-types.md) article.
+* **Suggested Values**&mdash;Provides the user with suggestions to select a value for the **Current Value** from the available options:
+    * **Any value**&mdash;The current value can be any manually entered value. 
+    * **List of values**&mdash;Provides you with a simple table-like experience so you can define a list of suggested values that you can later select from for the **Current Value**. When this option is selected, a new option called **Default Value** will be made available. From here you can select what should be the default value for this parameter, which will be the default value shown to the user when referencing the parameter. This value isn't the same as the **Current Value**, which is the value that's stored inside the parameter and can be passed as an argument in transformations. Using the *List of values* will enable a drop-down menu to be displayed in the **Default Value** and **Current Value** fields, where you can pick one of the values from the suggested list of values.
 
-* **Type**&mdash;Applies a Data Type restriction to the input value for the parameter. For example, users can define a parameter of type *Text*, or *Date/Time*. If you want to provide the greatest flexibility for users, you can specify *Any value* from the list of available types in the drop-down.
+       ![Parameter with a suggest list of values](images/me-parameters-list-of-values.png)
 
-* **Suggested Values**&mdash;You can further restrict the entries that users can select or provide for a given parameter. For example, you could specify that the Data Type for a parameter is *Text*, and then restrict the acceptable values for that parameter to a static list of Text values. Users then can pick one of the available values when specifying the parameter value.
+       >[!NOTE]
+       > You can still manually type any value that you want to pass to the parameter. The list of suggested values only serves as simple suggestions.
+    
+    * **Query**&mdash;Uses a list query (a query whose output is a list) to provide the list of suggested values that you can later select for the **Current Value**.
 
-* **Default Value**&mdash;Sets the default value for a parameter.
+       ![Parameter with list query](images/me-parameters-query.png)
 
-* **Current Value**&mdash;Specifies the parameter's value for the current report.
+* **Current Value**&mdash;The value that will be stored in this parameter.
 
-Once you define these values for a parameter and select **OK**, a new query is defined for each parameter that was created, shown in the **Power Query Editor** dialog.
+## Where to use parameters
 
-![Parameter in the Query Editor](media/power-query-query-parameters/query-parameters-03.png)
+A parameter can be used in many different ways, but it's more commonly used in two scenarios:
+* **Step argument**&mdash;You can use a parameter as the argument of multiple transformations driven from the user interface (UI).
+* **Custom Function argument**&mdash;You can create a new function from a query and reference parameters as the arguments of your custom function.
 
-## Using Query Parameters
+In the next sections, you'll see an example for these two scenarios.
 
-Once you've defined Query Parameters, you can specify how they're being referenced or used by other queries. For reports that have parameters, users accessing or using the report are prompted for parameter input with one or more dialog boxes. 
+### Step argument
 
-Once information about the parameter value has been provided, select **Close & Apply** in the **Power Query Editor** ribbon to have the data loaded into the data model. Once the selection or data for parameters have been provided, you can reference the parameters from DAX expressions within the report, or in any other way you might reference a parameter value. 
+To enable this feature, first go to the **View** tab in the Power Query Editor and enable the **Always allow** option in the **Parameters** group.
 
-If you want to change the value for a Query Parameter, you can do that within the report by selecting **Edit Parameters** from the **Edit Queries** button, found on the **Home** ribbon of **Power BI Desktop**.
+![Always allow parameters](images/me-parameters-always-allow.png)
 
-![Parameter in the Query Editor](media/power-query-query-parameters/query-parameters-05.png)
+>[!NOTE]
+>This feature is currently not available in Power Query Online.
 
-Selecting **Edit Parameters** brings up a window that allows you to provide a different value for the parameter. Providing a different value and then selecting **OK** refreshes the report data, and any visuals, based on the new parameter values. 
+For example purposes, you can see the following **Orders** query with the fields **OrderID**, **Units**, and **Margin**.
 
-![Change Query Parameter values](media/power-query-query-parameters/query-parameters-06.png)
+![Sample table for Orders with margin](images/me-parameters-step-argument-sample-table.png)
 
-Query Parameter values are currently available only in **Power BI Desktop**.
+You can create a new parameter with the name **Minimum Margin** with a **Decimal Number** type and a **Current Value** of 0.2, as shown in the next image.
 
-## Next steps
-There are all sorts of things you can do with Power Query and Power BI Desktop. For more information, check out the following resources:
+![Sample Parameter](images/me-parameters-step-argument-sample-parameter.png)
 
-* [Query Overview with Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-query-overview)
-* [Data Types in Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-data-types)
-* [Shape and Combine Data with Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-shape-and-combine-data)
-* [Common Query Tasks in Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-common-query-tasks)    
-* [Using templates in Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-templates)
+You can go to the **Orders** query, and in the **Margin** field select the **Greater Than** filter option.
+
+![Greater than filter option for Margin field](images/me-parameters-step-argument-sample-parameter-greater-than.png)
+
+In the **Filter Rows** window, you'll see a button with a data type for the field selected. You can select the **Parameter** option from the dropdown menu for this button. From the field selection right next to the data type button, you can select the parameter that you want to pass to this argument. In this case, it's the **Minimum Margin** parameter.
+
+![Select parameter for transformation argument](images/me-parameters-step-argument-sample-parameter-select-parameter.png)
+
+After you select **OK**, you can see that your table has been filtered using the **Current Value** for your parameter.
+
+![Sample parameter used as a transformation argument](images/me-parameters-step-argument-sample-parameter-used.png)
+
+If you modify the **Current Value** of your **Minimum Margin** parameter to be 0.3, you can immediately see how your orders query gets updated and shows you only the rows where the **Margin** is above 30%.
+
+![Updated Current Value for parameter](images/me-parameters-step-argument-sample-parameter-updated.png)
+
+>[!TIP]
+> Multiple transformations in Power Query offer this experience where you can select your parameter from a dropdown. So we recommend that you always look for it and take advantage of what parameters can offer you. 
+
+### Custom function argument
+
+With Power Query, you can create a custom function from an existing query with a simple click. Following the previous example, you can right-click the **Orders** query and select **Create Function**, which will launch a new **Create Function** window. In this window, you can name your new function and it will tell you the parameters being referenced in your query. These parameters will be used as the parameters for the custom function.
+
+![Create Function](images/me-parameters-create-function.png)
+
+You can name this new function however you want. For demonstration purposes, the name of this new function will be **MyFunction**. After you select **OK**, a new group will be created in the **Queries** pane using the name of your new function. In this group, you'll find the parameters being used for the function, the query that was used to create the function, and the function itself.
+
+![Function created](images/me-parameters-function-created.png)
+
+You can test this new function by entering a value, such as 0.4, in the field underneath the **Minimum Margin** label. Then select the **Invoke** button. This will create a new query with the name **Invoked Function**, effectively passing the value 0.4 to be used as the argument for the function and giving you only the rows where the margin is above 40%. 
+
+![Invoked function with value 0.4](images/me-parameters-function-invoked.png)
+
+You can learn more about how to create custom functions from the article [Creating a custom function](custom-function.md).

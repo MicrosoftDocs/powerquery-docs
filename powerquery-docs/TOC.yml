@@ -1,29 +1,43 @@
 - name: Power Query documentation
   href: index.yml
   expanded: true
-  items: 
+  items:  
     - name: "What is Power Query?"
-      href: power-query-what-is-power-query.md
+      href: power-query-what-is-power-query.md          
     - name: Get data
       items:
       - name: "Getting data"
         href: get-data-experience.md
       - name: "Authentication with a data source"
-        href: ConnectorAuthentication.md  
+        href: ConnectorAuthentication.md
     - name: Transform data
       items:
       - name: "Use Power Query"
         href: power-query-quickstart-using-power-bi.md
       - name: "Shape and combine data"
         href: power-query-tutorial-shape-combine.md
+      - name: "Using the Applied Steps list"
+        href: applied-steps.md
+      - name: "Using the data profiling tools"
+        href: data-profiling-tools.md
+      - name: "Using the Queries pane"
+        href: queries-pane.md
+      - name: "Using Schema view (Preview)"
+        href: schema-view.md
+      - name: "Share a query"
+        href: share-query.md   
+      - name: "Using custom functions"
+        href: custom-function.md        
       - name: Transform table
         items:
-        - name: "Promote or Demote Column Headers"
+        - name: "Promote or demote column headers"
           href: table-promote-demote-headers.md
         - name: "Filter by row position"
           href: filter-row-position.md
         - name: "Filter by values"
           href: filter-values.md
+        - name: "Choose or remove columns"
+          href: choose-remove-columns.md
         - name: "Grouping or summarizing rows"
           href: group-by.md
         - name: "Unpivot column"
@@ -32,10 +46,8 @@
           href: pivot-columns.md
         - name: "Transpose table"
           href: transpose-table.md
-        - name: "Reverse Rows"
-          href: reverse-rows.md
-        - name: "Data profiling tools"
-          href: data-profiling-tools.md
+        - name: "Reverse rows"
+          href: reverse-rows.md        
         - name: "Data types"
           href: data-types.md
         - name: "Dealing with errors"
@@ -50,6 +62,8 @@
           href: sort-columns.md
         - name: "Replace values"
           href: replace-values.md
+        - name: "Parse text as JSON or XML"
+          href: parse-json-xml.md          
       - name: Add columns
         items:
         - name: "Add a column from examples"
@@ -76,22 +90,36 @@
             href: merge-queries-overview.md
           - name: "Left outer join"
             href: merge-queries-left-outer.md
-        - name: Split columns
-          items:
-          - name: "By delimiter"
-            href: split-columns-delimiter.md
-          - name: "By number of characters"
-            href: split-columns-number-characters.md
-          - name: "By positions"
-            href: split-columns-positions.md
-          - name: "By lowercase to uppercase"
-            href: splitcolumns-lowercase-to-uppercase.md
-          - name: "By uppercase to lowercase"
-            href: splitcolumns-uppercase-to-lowercase.md
-          - name: "By digit to non-digit"
-            href: splitcolumns-digit-to-nondigit.md
-          - name: "By non-digit to digit"
-            href: splitcolumns-nondigit-to-digit.md
+          - name: "Right outer join"
+            href: merge-queries-right-outer.md
+          - name: "Full outer join"
+            href: merge-queries-full-outer.md   
+          - name: "Inner join"
+            href: merge-queries-inner.md             
+          - name: "Left anti join"
+            href: merge-queries-left-anti.md 
+          - name: "Right anti join"
+            href: merge-queries-right-anti.md 
+          - name: "Fuzzy merge"
+            href: merge-queries-fuzzy-match.md
+          - name: "Cross join"
+            href: cross-join.md
+      - name: Split columns
+        items:
+        - name: "By delimiter"
+          href: split-columns-delimiter.md
+        - name: "By number of characters"
+          href: split-columns-number-characters.md
+        - name: "By positions"
+          href: split-columns-positions.md
+        - name: "By lowercase to uppercase"
+          href: splitcolumns-lowercase-to-uppercase.md
+        - name: "By uppercase to lowercase"
+          href: splitcolumns-uppercase-to-lowercase.md
+        - name: "By digit to non-digit"
+          href: splitcolumns-digit-to-nondigit.md
+        - name: "By non-digit to digit"
+          href: splitcolumns-nondigit-to-digit.md
     - name: Dataflows
       items:
       - name: "Whare are dataflows"
@@ -156,6 +184,8 @@
           href: dataflows/troubleshooting-dataflow-issue-get-data-from-dataflow.md
         - name: "Connection to the source"
           href: dataflows/troubleshooting-dataflow-issues-connection-to-the-data-source.md
+    - name: Best practices in Power Query
+      href: best-practices.md
     - name: Advanced topics
       items:
       - name: "Power Query query folding"
@@ -178,18 +208,30 @@
         href: error-handling.md
       - name: "Import data using native database query"
         href: native-database-query.md
+      - name: "Create Power Platform dataflows from queries in Microsoft Excel (Preview)"
+        href: new-dataflow-from-template.md
+      - name: Optimize Power Query when expanding table columns
+        href: optimize-expanding-table-columns.md
     - name: "Connector reference"
       items:
       - name: "Power Query connectors"
         href: Connectors/index.md
+      - name: "Adobe Analytics"
+        href: "Connectors/AdobeAnalytics.md"
+      - name: "Access database"
+        href: Connectors/AccessDatabase.md
       - name: "Azure SQL database"
         href: Connectors/AzureSQLDatabase.md
       - name: "Azure SQL Data Warehouse"
-        href: Connectors/AzureSQLDataWarehouse.md
-      - name: "MySQL database"
-        href: Connectors/MySQLDatabase.md
+        href: Connectors/AzureSQLDataWarehouse.md      
+      - name: "Common Data Service"
+        href: Connectors/CommonDataService.md
+      - name: "Data Lake Storage"
+        href: Connectors/DataLakeStorage.md
       - name: "Excel"
         href: Connectors/Excel.md
+      - name: "Facebook"
+        href: Connectors/Facebook.md
       - name: "FHIR"
         items:
         - name: Overview
@@ -202,40 +244,60 @@
           href: Connectors/FHIR/FHIR-QueryFoldingPatterns.md
         - name: Data relationships
           href: Connectors/FHIR/FHIR-Relationships.md
-      - name: "XML"
-        href: Connectors/XML.md
-      - name: "Web"
-        href: Connectors/Web.md
-      - name: "PostgreSQL"
-        href: Connectors/PostgreSQL.md
-      - name: "SQL Server database"
-        href: Connectors/SQLServer.md
-      - name: "Text/CSV"
-        href: Connectors/TextCSV.md
-      - name: "ODBC"
-        href: Connectors/Odbc.md
-      - name: "Connecting to VSTS via OData"
-        href: https://docs.microsoft.com/en-us/azure/devops/report/powerbi/odataquery-connect?view=azure-devops
-      - name: "Data Lake Storage"
-        href: Connectors/DataLakeStorage.md
-      - name: "Facebook"
-        href: Connectors/Facebook.md
-      - name: "QuickBooks Online"
-        href: Connectors/QuickBooksOnline.md
-      - name: "Salesforce Reports"
-        href: Connectors/SalesforceReports.md
-      - name: "Salesforce Objects"
-        href: Connectors/SalesforceObjects.md
       - name: "Folder"
         href: Connectors/Folder.md
+      - name: "Google Analytics"
+        href: Connectors/GoogleAnalytics.md
+      - name: "JSON"
+        href: Connectors/json.md
+      - name: "MySQL database"
+        href: Connectors/MySQLDatabase.md
+      - name: "OData Feed"
+        items:
+        - name: "OData Feed connector"
+          href: Connectors/ODataFeed.md
+        - name: "Connecting to Azure DevOps using OData"
+          href: https://docs.microsoft.com/azure/devops/report/powerbi/odataquery-connect?view=azure-devops
+      - name: "ODBC"
+        href: Connectors/Odbc.md
+      - name: "Oracle database"
+        href: Connectors/OracleDatabase.md
+      - name: "PostgreSQL"
+        href: Connectors/PostgreSQL.md
+      - name: "QuickBooks Online"
+        href: Connectors/QuickBooksOnline.md
+      - name: "Salesforce Objects"
+        href: Connectors/SalesforceObjects.md
+      - name: "Salesforce Reports"
+        href: Connectors/SalesforceReports.md
+      - name: "SAP HANA database"
+        items:
+        - name: Overview
+          href: Connectors/sap-hana/overview.md
+        - name: SAP HANA encryption
+          href: Connectors/sap-hana/sap-hana-encryption.md
+        - name: Configure ODBC for SAP HANA
+          href: Connectors/sap-hana/configure-odbc-sap-hana.md
+        - name: Troubleshooting
+          href: Connectors/sap-hana/sap-hana-troubleshooting.md
+      - name: "SharePoint Folder"
+        href: Connectors/SharePointFolder.md
       - name: "SharePoint List"
         href: Connectors/SharePointList.md
       - name: "SharePoint Online List"
         href: Connectors/SharePointOnlineList.md
-      - name: "JSON"
-        href: Connectors/json.md
-      - name: "OData Feed"
-        href: Connectors/ODataFeed.md
+      - name: "SQL Server database"
+        href: Connectors/SQLServer.md
+      - name: "Text/CSV"
+        href: Connectors/TextCSV.md
+      - name: "XML"
+        href: Connectors/XML.md
+      - name: "Web"
+        items:
+        - name: Web connector
+          href: Connectors/web/Web.md
+        - name: Web by example
+          href: Connectors/web/web-by-example.md
     - name: Support and troubleshooting
       items:
       - name: "Power Query online limits"
@@ -280,7 +342,7 @@
             href: samples/TripPin/10-TableView1/README.md
         - name: OAuth tutorials
           items:
-          - name: "Github"
+          - name: "GitHub"
             href: samples/Github/README.md
       - name: Samples
         items:

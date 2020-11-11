@@ -6,7 +6,7 @@ author: radacad
 ms.service: powerquery
 ms.topic: conceptual
 ms.date: 05/25/2020
-ms.author: v-rerad
+ms.author: v-douklo
 
 LocalizationGroup: Data from files
 ---
@@ -33,7 +33,7 @@ To configure Power BI dataflows to store data in the organization's Azure Data L
 
 ### Linking a Power Platform environment to your organization's Azure Data Lake Storage Gen2
 
-To configure dataflows created in Power Apps portal to store data in the organization's Azure Data Lake Storage Gen2, follow the steps in [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://docs.microsoft.com/powerapps/maker/common-data-service/connect-azure-data-lake-storage-for-dataflow) in the PowerApps portal.
+To configure dataflows created in Power Apps portal to store data in the organization's Azure Data Lake Storage Gen2, follow the steps in [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://docs.microsoft.com/powerapps/maker/common-data-service/connect-azure-data-lake-storage-for-dataflow) in the Power Apps portal.
 
 ![Storage account setting for Power Platform analytical dataflow](https://docs.microsoft.com/powerapps/maker/common-data-service/media/select-storage-account.png)
 
@@ -41,7 +41,7 @@ To configure dataflows created in Power Apps portal to store data in the organiz
 
 * Once a dataflow is created, its storage location can't be changed.
 
-* Linked and computed entities features are only available when both dataflows reside in the same storage account.
+* Linked and computed entities features are only available when both dataflows are in the same storage account.
 
 ## The enhanced compute engine
 
