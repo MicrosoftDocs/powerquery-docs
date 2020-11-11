@@ -6,7 +6,7 @@ author: jessli20
 ms.topic: conceptual
 ms.service: powerquery
 ms.date: 06/04/2020
-ms.author: jessli20
+ms.author: v-douklo
 ---
 
 # Split columns by digit to non-digit
@@ -44,7 +44,7 @@ This column holds two values in each row:
 
 In this example, you want to split this column into the two columns described in the list above. Select the column and then select the option to split the column by digit to non-digit.
 
-This singular column will split into multiple columns given every instance of a digit followed with a non-digit. In this case, it only splits it into two.
+This single column will split into multiple columns, given every instance of a digit followed with a non-digit. In this case, it only splits it into two.
 
 Your final table will look like the following image.
 

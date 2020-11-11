@@ -40,6 +40,7 @@ Once the dataflow is created and saved, select the **incremental refresh** icon 
 
 When you select the icon, the **Incremental refresh settings** window appears. When you toggle incremental refresh to the **On** position, you can configure your incremental refresh.
 
+
 ![Incremental refresh for dataflows](media/dataflows-incremental-refresh/dataflows-incremental-refresh-03.png)
 
 The following list explains the settings in the **Incremental refresh settings** window. 
@@ -52,11 +53,11 @@ The following list explains the settings in the **Incremental refresh settings**
 
     * Add a new day of data.
     * Refresh 10 days up to the current date.
-    * Remove calendar years that are older than five years prior to the current date. For example, if the current date is January 1, 2019, the year 2013 is removed.
+    * Remove calendar years that are older than five years before the current date. For example, if the current date is January 1, 2019, the year 2013 is removed.
 
     The first dataflow refresh might take a while to import all five years, but subsequent refreshes are likely to complete in a small fraction of the initial refresh time.
 
-* **Detect data changes**&mdashIncremental refresh of 10 days is much more efficient than full refresh of five years, but you might be able to do even better. When you select the **Detect data changes** checkbox, you can select a date/time column to identify and refresh only the days where the data has changed. This assumes such a column exists in the source system, which is typically for auditing purposes. The maximum value of this column is evaluated for each of the periods in the incremental range. If that data hasn't changed since the last refresh, there's no need to refresh the period. In the example, this could further reduce the days incrementally refreshed from 10 to perhaps two.
+* **Detect data changes**&mdash;incremental refresh of 10 days is much more efficient than full refresh of five years, but you might be able to do even better. When you select the **Detect data changes** checkbox, you can select a date/time column to identify and refresh only the days where the data has changed. This assumes such a column exists in the source system, which is typically for auditing purposes. The maximum value of this column is evaluated for each of the periods in the incremental range. If that data hasn't changed since the last refresh, there's no need to refresh the period. In the example, this could further reduce the days incrementally refreshed from 10 to perhaps two.
 
 > [!TIP]
 > The current design requires that the column used to detect data changes be persisted and cached into memory. You might want to consider one of the following techniques to reduce cardinality and memory consumption:
@@ -67,7 +68,7 @@ The following list explains the settings in the **Incremental refresh settings**
 
 * **Only refresh complete periods**&mdash;imagine your refresh is scheduled to run at 4:00 AM every morning. If data appears in the source system during those first four hours of that day, you may not want to account for it. Some business metrics, such as barrels per day in the oil and gas industry, aren't practical or sensible to account for based on partial days.
 
-    Another example where only refreshing complete periods is appropriate is refreshing data from a financial system. Imagine a financial system where data for the previous month is approved on the 12th calendar day of the month. You could set the incremental range to one month and schedule the refresh to run on the 12th day of the month. With this option checked, it would refresh January data (the most recent complete monthly period) on February 12th.
+    Another example where only refreshing complete periods is appropriate is refreshing data from a financial system. Imagine a financial system where data for the previous month is approved on the 12th calendar day of the month. You could set the incremental range to one month and schedule the refresh to run on the 12th day of the month. With this option checked, it would refresh January data (the most recent complete monthly period) on February 12.
 
 > [!NOTE]
 > Dataflow incremental refresh determines dates according to the following logic: if a refresh is scheduled, incremental refresh for dataflows uses the time-zone defined in the refresh policy. If no schedule for refreshing exists, incremental refresh uses the time from the machine running the refresh.
@@ -109,7 +110,7 @@ Incremental refresh can also be invoked using APIs. In this case, the API call c
 
 ## Incremental refresh implementation details
 
-Dataflows use partitioning for incremental refresh. Once XMLA-endpoints for Power BI Premium are available, the partitions become visible. Incremental refresh in dataflows retains the minimum number of partitions to meet refresh policy requirements. Old partitions that go out of range are dropped, maintaining a rolling window. Partitions are opportunistically merged, reducing the total number of partitions required. This improves compression and, in some cases, can improve query performance.
+Dataflows use partitioning for incremental refresh. Once XMLA-endpoints for Power BI Premium are available, the partitions become visible. Incremental refresh in dataflows keeps the minimum number of partitions to meet refresh policy requirements. Old partitions that go out of range are dropped, maintaining a rolling window. Partitions are opportunistically merged, reducing the total number of partitions required. This improves compression and, in some cases, can improve query performance.
 
 The examples in this section share the following refresh policy:
 
@@ -152,7 +153,7 @@ You can read more about incremental refresh in [Incremental refresh in Power BI 
 
 ## Considerations and limitations
 
-Incremental refresh in Power Platform dataflows is only supported in dataflows with an Azure Data Lake Gen2 storage account, not in dataflows with Common Data Service as the destination. 
+Incremental refresh in Power Platform dataflows is only supported in dataflows with an Azure Data Lake Storage Gen2 account, not in dataflows with Common Data Service as the destination. 
 
 ## Next Steps
 

@@ -1,67 +1,63 @@
 ---
 title: Replace values and errors
-description: In Power Query you can replace values and errors found in one or multiple columns with a value of your choice. This article demonstrates how to perform this transformation in Power Query.
+description: In Power Query, you can replace values and errors found in one or multiple columns with a value of your choice. This article demonstrates how to do this transformation in Power Query.
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: v-douklo
 ms.date: 06/08/2020
 ms.author: v-miesco
+ms.custom: edited
 ---
 
 # Replace values and errors
 
-With Power Query, you can replace one value with another value in a selected column. These functions can be found by:
+With Power Query, you can replace one value with another value wherever that value is found in a column. The **Replace values** command can be found:
 
-- **Right-click on a cell**&mdash;this action will display a contextual menu with the option to replace the selected value in the column with another value. 
+- On the cell shortcut menu. Right-click the cell to replace the selected value in the column with another value. 
 
-   ![right-click contextual menu for replace selected value](images/me-replace-values-right-click.png)
+   ![Shortcut menu for replacing the selected value](images/me-replace-values-right-click.png "Shortcut menu for replacing the selected value")
 
-- **Right-click on a column**&mdash;this action displays a contextual menu for operations available in the selected column.
+- On the column shortcut menu.
 
-   ![right-click contextual menu for replace selected column](images/me-replace-values-right-click-column.png)
+   ![Shortcut menu for replacing the selected column](images/me-replace-values-right-click-column.png "Shortcut menu for replacing the selected column")
 
-- **Home tab**&mdash;**Replace values** can be found inside the **Transform** group in the **Home** tab.
+- On the **Home** tab, in the **Transform** group.
 
-   ![Replace values button in Home tab](images/me-replace-values-home-tab.png)
+   ![Replace values on the Home tab](images/me-replace-values-home-tab.png "Replace values on the Home tab")
 
-- **Transform tab**&mdash;**Replace values** can be found inside the **Any Column** group in the **Transform** tab.
+- On the **Transform** tab, in the **Any column** group.
 
-   ![Replace values button in Transform tab](images/me-replace-values-transform-tab.png)
-
-## Replace values modes
+   ![Replace values on the Transform tab](images/me-replace-values-transform-tab.png "Replace values on the Transform tab")
 
 The replace values operation has two modes:
 
-- **Replace instances of a text string**&mdash;this mode is the default behavior for text columns, where Power Query will search for a specific text string inside all rows of a column and replace as many instances of the text string that it finds on all rows.
-- **Replace entire cell content**&mdash;for non-text columns this mode is the default behavior, but for text columns this mode is enabled by going through the **Advanced options** and selecting the **Match entire cell contents** option. Selecting this option will effectively make the replace values operation work exactly as it does with non-text columns, where it only searches and replaces the full contents of a cell. 
+- **Replace entire cell contents**: This is the default behavior for non-text columns, where Power Query searches for and replaces the full contents of a cell. You can enable this mode for text columns by selecting **Advanced options**, and then selecting the **Match entire cell contents** check box.
+- **Replace instances of a text string**: This is the default behavior for text columns, where Power Query will search for a specific text string in all rows of a column and replace as many instances of the text string that it finds.
 
-Advanced options are only available in columns of the text data type. Within that set of options is the **Replace using special characters** option.
+Advanced options are only available in columns of the Text data type. Within that set of options is the **Replace using special characters** option.
 
-![Replace using special characters option](images/me-replace-values-replace-using-special-characters.png)
+![Replace using special characters option](images/me-replace-values-replace-using-special-characters.png "Replace using special characters option")
 
-### Replace entire cell content
+## Replace entire cell contents
 
-Imagine a table like the following where we have a field for **Account ID**, **Category Name**, and **Sales Goal**.
+Imagine a table like the following, where you have columns for **Account ID**, **Category Name**, and **Sales Goal**.
 
-![Initial sample table](images/me-replace-values-original-table.png)
+![Initial sample table with -1 in the first row of the Sales Goal column](images/me-replace-values-original-table.png "Initial sample table with -1 in the first row of the Sales Goal column")
 
-The -1 value in **Sales Goal** is an error in the source and needs to be replaced with a standard sales goal defined by the business for these instances, which is 250,000. To do that, right-click on the -1 value and select the option to replace values. This action will bring up the **Replace Values** window with **Value To Find** prepopulated with the -1 value. All you need to do is define the **Replace With** value, which has to be set at 250,000.
+The value of **-1** in the **Sales Goal** column is an error in the source and needs to be replaced with the standard sales goal defined by the business for these instances, which is 250,000. To do that, right-click the **-1** value, and then select **Replace values**. This action will bring up the **Replace values** dialog box with **Value to find** set to **-1**. Now all you need to do is enter **250000** in the **Replace with** box.
 
-![Replace values window for non-text column](images/me-replace-values-numeric.png)
+![Replace values for a non-text column](images/me-replace-values-numeric.png "Replace values for a non-text column")
 
 The outcome of that operation will give you the result that you're looking for.
 
-![Output sample table after values replaced](images/me-replace-values-original-after-numeric-replace.png)
+![Output sample table after the -1 value in the first row of the Sales Goal column was replaced with 250000](images/me-replace-values-original-after-numeric-replace.png "Output sample table after the -1 value in the first row of the Sales Goal column was replaced with 250000")
 
-> [!Note]
-> The replace values operation in columns that are not of the text data type only look for exact matches for the contents of a cell. To enable this behavior in text columns, select **Match entire cell contents** from the advanced options in the **Replace Values** window.
+## Replace instances of a text string
 
-### Replace instances of a text string
+Continuing with the previous table, let's say you want to remove the text string "Category Name: " from the **Category Name** column. To do that, go to the **Transform** group on the **Home** tab, and select **Replace values**. In the **Replace values** dialog box, enter the text string **Category Name:** (followed by a space) in the **Value to find** box, leave the **Replace with** box empty, and then select **OK**.
 
-Continuing with the previous table, let's say you want to replace the text string "Category Name: " from the **Category Name** column. To do that, select the replace values option from the **Transform** group in the **Home** tab. Inside the **Replace Values** window, enter the text string "Category Name: " in the **Value To Find** text box and leave the **Replace With** text box empty.
+![Replace values for a text column](images/me-replace-values-text.png "Replace values for a text column")
 
-![Replace values window for text column](images/me-replace-values-text.png)
+The result of that operation gives you the table in the following image.
 
-The result of that operation gives us the table in the following image.
-
-![Output sample table after values replaced](images/me-replace-values-final-table.png)
+![Table with the Category Name: text removed from all rows of the Category Name column, leaving only the actual category name](images/me-replace-values-final-table.png "Table with the Category Name: text removed from all rows of the Category Name column, leaving only the actual category name")

@@ -1,6 +1,6 @@
 ---
-title: Salesforce Objects
-description: Power Query Salesforce Objects connector reference
+title: Power Query Salesforce Objects connector
+description: Provides basic information, prerequisites, and how to connect to your data using the connector, along with a list of known issues and limitations for the connector.
 author: dougklopfenstein
 
 ms.service: powerquery
@@ -23,6 +23,9 @@ Authentication Types Supported: Salesforce account
 
 >[!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+
+>[!Warning]
+> By default, Salesforce does not support Internet Explorer 11, which is used as part of the authentication experience to online services in Power Query Desktop. Please opt-in for [extended support for accessing Lightning Experience Using Microsoft Internet Explorer 11](https://help.salesforce.com/articleView?id=000333934&type=1&mode=1). You may also want to review Salesforce documentation on [configuring Internet Explorer](https://developer.salesforce.com/docs/atlas.en-us.salesforce_supported_browsers_cheatsheet.meta/salesforce_supported_browsers_cheatsheet/getstart_browser_ie.htm). At this time, users will be impaired from authenticating, but stored credentials should continue to work until their existing authentication tokens expire.
  
 ## Prerequisites
 
@@ -64,7 +67,7 @@ To connect to Salesforce Objects data:
 
 4. If this is the first time you've signed in using a specific app, you'll be asked to verify your authenticity by entering a code sent to your email address. You'll then be asked whether you want the app you are using to access the data. For example, you'll be asked if you want to allow Power BI Desktop to access your Salesforce data. Select **Allow**.
 
-5. In the **Navigator** dialog box, select the Salesforce Ojbects you want to load.
+5. In the **Navigator** dialog box, select the Salesforce Objects you want to load.
 
 You can then either load or transform the data.
 

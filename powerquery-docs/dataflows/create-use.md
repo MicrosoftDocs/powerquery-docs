@@ -1,10 +1,8 @@
 ---
-title: "Create and use dataflows in the Power Platform"
-description: Learn how to use dataflows in the Power Platform.
+title: "Create and use dataflows in Microsoft Power Platform"
+description: Learn how to use dataflows in Microsoft Power Platform.
 author: bensack
-manager: kfile
-ms.reviewer: ''
-
+ms.reviewer: v-douklo
 ms.service: dataflows
 ms.topic: conceptual
 ms.date: 08/15/2019
@@ -14,9 +12,9 @@ ms.custom:
 LocalizationGroup: Dataflows
 ---
 
-# Create and use dataflows in the Power Platform
+# Create and use dataflows in Microsoft Power Platform
 
-Using dataflows with Power Platform makes data preparation easier, and lets you reuse your data preparation work in subsequent reports, apps, and models. 
+Using dataflows with Microsoft Power Platform makes data preparation easier, and lets you reuse your data preparation work in subsequent reports, apps, and models. 
 
 In the world of ever-expanding data, data preparation can be difficult and expensive, consuming as much as 60%-80% of the time and cost for a typical analytics project. Such projects can require wrangling fragmented and incomplete data, complex system integration, data with structural inconsistency, and a high skillset barrier. 
 
@@ -26,12 +24,12 @@ To make data preparation easier and to help you get more value out of your data,
 
 With dataflows, Microsoft brings Power Query’s self-service data preparation capabilities into the Power BI and Power Apps online services, and **expands** existing capabilities in the following ways:
 
-* **Self-service data prep for big data with Dataflows**&mdash;Dataflows can be used to easily ingest, cleanse, transform, integrate, enrich, and schematize data from a large and ever growing array of transactional and observational sources, encompassing all data preparation logic. Previously, extract, transform, load (ETL) logic could only be included within datasets in Power BI, copied over and over between datasets and bound to dataset management settings. 
+* **Self-service data prep for big data with Dataflows**&mdash;Dataflows can be used to easily ingest, cleanse, transform, integrate, enrich, and schematize data from a large and ever growing array of transactional and observational sources, encompassing all data preparation logic. Previously, extract, transform, load (ETL) logic could only be included within datasets in Power BI, copied over and over between datasets, and bound to dataset management settings. 
 
    With dataflows, ETL logic is elevated to a first-class artifact within Power Platform services and includes dedicated authoring and management experiences. Business analysts, BI professionals, and data scientists can use dataflows to handle the most complex data preparation challenges and build on each other’s work, thanks to a revolutionary model-driven calculation engine, which takes care of all the transformation and dependency logic—cutting time, cost, and expertise to a fraction of what’s traditionally been required for those tasks. You can create dataflows using the well-known, self-service data preparation experience of Power Query. Dataflows are created and easily managed in app workspaces or environments, in the Power BI or Power Apps portal respectively, enjoying all the capabilities these services have to offer, such as permission management, scheduled refreshes, and more.
 
 
-* **Load data to Common Data Service or Azure Data Lake Storage Gen2**&mdash;Depending on your use case, you can store data prepared by Power Platform dataflows in the Common Data Service or your organizations Azure Data Lake Gen2 storage account: 
+* **Load data to Common Data Service or Azure Data Lake Storage Gen2**&mdash;Depending on your use case, you can store data prepared by Power Platform dataflows in the Common Data Service or your organizations Azure Data Lake Storage Gen2 account: 
 
     * **Common Data Service** lets you securely store and manage data that's used by business applications within a set of entities. An *entity* is a set of records used to store data, similar to how a table stores data within a database. Common Data Service includes a base set of standard entities that cover typical scenarios, but you can also create custom entities specific to your organization and populate them with data using dataflows. App makers can then use Power Apps and Flow to build rich applications using this data.
 
@@ -70,7 +68,7 @@ Dataflows in Power Apps:
 - [Creating and using dataflows in Power Apps](https://go.microsoft.com/fwlink/?linkid=2100076)
 - [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://go.microsoft.com/fwlink/?linkid=2099973)
 - [Add data to an entity in Common Data Service](https://go.microsoft.com/fwlink/?linkid=2100075)
-- Visit the PowerApps [dataflow community](https://go.microsoft.com/fwlink/?linkid=2099971) and share what you’re doing, ask questions, or [submit new ideas](https://go.microsoft.com/fwlink/?linkid=2100074)
+- Visit the Power Apps [dataflow community](https://go.microsoft.com/fwlink/?linkid=2099971) and share what you’re doing, ask questions, or [submit new ideas](https://go.microsoft.com/fwlink/?linkid=2100074)
 - Visit the Power Apps dataflow community forum and share what you’re doing, ask questions, or [submit new ideas](https://go.microsoft.com/fwlink/?linkid=2100074)
 
 

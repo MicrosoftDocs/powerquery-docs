@@ -6,154 +6,156 @@ ms.service: powerquery
 ms.reviewer: v-douklo
 ms.date: 06/08/2020
 ms.author: v-miesco
+ms.custom: edited
 ---
 
 # Grouping or summarizing rows
 
-In Power Query, you can group the values in various rows into a single value by grouping the rows according to the values in one or more columns. 
+In Power Query, you can group values in various rows into a single value by grouping the rows according to the values in one or more columns. You can choose from two types of grouping operations:
 
-Power Query has two types of **Group By** operations:
+* Aggregate a column by using an aggregate function.
 
-* aggregate a column with an aggregate function
+* Perform a row operation.
 
-* perform a row operation
+For this tutorial, you'll be using the sample table shown in the following image.
 
-For this demonstration, you'll be using the following sample table:
+:::image type="complex" source="images/me-group-by-initial-table.png" alt-text="Sample initial table":::
+  Table with columns showing Year (2020), Country (USA, Panama, or Canada), Product (Shirt or Shorts), Sales channel (Online or Reseller), and Units (various values from 55 to 7500)
+:::image-end:::
 
-![Sample initial table](images/me-group-by-initial-table.png)
+## Where to find the Group by button
 
-## Where to find the Group By button
+You can find the **Group by** button in three places:
 
-You can find the **Group By** button in three places:
+* On the **Home** tab, in the **Transform** group.
 
-* **Home tab**&mdash;inside the **Transform** group.
+   ![Group by on the Home tab](images/me-group-by-home-icon.png "Group by on the Home tab")
 
-![Group by button in the Home tab](images/me-group-by-home-icon.png)
+* On the **Transform** tab, in the **Table** group. 
 
-* **Transform tab**&mdash;inside the **Table** group. 
+   ![Group by on the Transform tab](images/me-group-by-transform-icon.png "Group by on the Transform tab")
 
-![Group by button in the Transform tab](images/me-group-by-transform-icon.png)
+* On the shortcut menu when you right-click to select columns.
 
-* **Right-click column(s)**&mdash;when doing a right-click on the selected column(s), it will be listed under the contextual menu.
+   ![Group by on the shortcut menu](images/me-group-by-right-click-icon.png "Group by on the shortcut menu")
 
-![Group by optoin inside the Column right click contextual menu](images/me-group-by-right-click-icon.png)
+## Use an aggregate function to group by one or more columns
 
-## To Group by one or more columns
+In this example, your goal is to summarize the total units sold at the country and sales channel level. You'll use the **Country** and **Sales Channel** columns to perform the group by operation.
 
-In this example, your goal is to get the total **Units** sold summarized at the **Country** and **Sales Channel** level.
+1. Select **Group by** on the **Home** tab.
+2. Select the **Advanced** option, so you can select multiple columns to group by. 
+3. Select the **Country** and **Sales Channel** columns.
+4. In the New columns section, create a new column where the name is **Total units**, the aggregate operation is **Sum**, and the column used is **Units**.
+5. Hit OK
 
-You can accomplish your goal by performing a group by operation using the following columns as **Group by** columns:
-* Country
-* Sales Channel
-
-To do this, first select the **Group by** button from the **Home** tab. Select the **Advanced** option so you can select multiple columns to group by. Then select the **Country** and **Sales Channel** column to perform the group by operation on. Create a new column by aggregating the **Units** column using the Sum function and naming this new column **Total units**.
-
-![Group by window with aggregated columns](images/me-group-by-add-aggregated-column-window.png)
+![Group by dialog box with aggregated columns](images/me-group-by-add-aggregated-column-window.png "Group by dialog box with aggregated columns")
 
 This operation gives you the table that you're looking for.
 
-![Sample output table with aggregated columns](images/me-group-by-add-aggregated-column-final.png)
+![Sample output table with aggregated columns](images/me-group-by-add-aggregated-column-final.png "Sample output table with aggregated columns")
 
-## To Group by one or more columns: perform a row operation
+## Perform a row operation to group by one or more columns
 
-In this example, your goal is to reach the following table from your original sample table.
+In this example, you want total units sold and&mdash;in addition&mdash;you want two other columns that give you the name and units sold for the top-performing product, summarized at the country and sales channel level. 
 
-![Sample output table with row operations](images/me-group-by-row-operation-final-table.png)
+Your goal is to reach a table that looks like the following image from your original sample table.
 
-You want the total units sold, as well as two other columns that give you the name and units sold for the top performing product summarized at the **Country** and **Sales Channel** level.
- 
-You can accomplish this change by performing a group by operation using the following columns as **Group by'**columns:
-* Country
-* Sales Channel
+![Sample output table with row operations](images/me-group-by-row-operation-final-table.png "Sample output table with row operations")
 
-And creating two new columns by:
-* Aggregating the **Units** column using the *Sum* operation and naming this new column **Total units**. 
-* Adding a new **Products** column using the *All Rows* operation.
+1. Use the following columns as **Group by** columns:
+   * Country
+   * Sales Channel
 
-![Group by window with non-aggregate column](images/me-group-by-row-operation-window.png)
+2. Create two new columns by doing the following:
+   1. Aggregate the **Units** column by using the **Sum** operation. Name this column **Total units**.
+   1. Add a new **Products** column by using the **All rows** operation.
 
-Once that operation is complete, notice how the **Products** column has **Table** values inside each cell. Each **Table** value contains all rows that were grouped by the **Country** and **Sales Channel** columns from your original table. You can select the whitespace inside the cell so you can see a preview of the contents of the table in the "details preview pane" at the bottom.
+   ![Group by dialog box with a non-aggregate column](images/me-group-by-row-operation-window.png "Group by dialog box with a non-aggregate column")
 
-![Table value details preview pane](images/me-group-by-row-operation-details-preview-pane.png)
+After that operation is complete, notice how the **Products** column has \[Table\] values inside each cell. Each \[Table\] value contains all the rows that were grouped by the **Country** and **Sales Channel** columns from your original table. You can select the white space inside the cell to see a preview of the contents of the table at the bottom of the dialog box.
 
->[!Note]
->Power Query doesn't guarantee that the details preview pane shows all rows that are used for the group by. You can select the **Table** value to see all rows pertaining to the correspondent group by operation. 
+![Table details preview pane](images/me-group-by-row-operation-details-preview-pane.png "Table details preview pane")
 
-What you need to do next is extract the row with the highest value in the **Units** column of the tables inside the new **Products** columns and call that new column **Top performer product**.
+>[!NOTE]
+>The details preview pane might not show all the rows that were used for the group-by operation. You can select the \[Table\] value to see all rows pertaining to the corresponding group-by operation. 
+
+Next, you need to extract the row that has the highest value in the **Units** column of the tables inside the new **Products** column, and call that new column **Top performer product**.
 
 ### Extract the top performer product information
 
-With the new **Products** column with table values, you create a new custom column by going to the **Add Column** menu from the ribbon and selecting **Custom column** from the **General** group.
+With the new **Products** column with \[Table\] values, you create a new custom column by going to the **Add Column** tab on the ribbon and selecting **Custom column** from the **General** group.
 
-![Add custom column button](images/me-add-custom-column-icon.png)
+![Add a custom column](images/me-add-custom-column-icon.png "Add a custom column")
 
-The name of your new column will be **Top performer product**. The formula to enter in **Custom column formula** is `Table.Max([Products], "Units" )`.
+Name your new column **Top performer product**. Enter the formula `Table.Max([Products], "Units" )` under **Custom column formula**.
 
-![Custom column formula with Table.Max](images/me-group-by-row-operation-custom-column-formula.png)
+![Custom column formula with Table.Max](images/me-group-by-row-operation-custom-column-formula.png "Custom column formula with Table.Max")
 
-The result of that formula will create a new column with record values with the row with the maximum value on the **Units** column of each *table* value in the **Products** column.
+The result of that formula creates a new column with \[Record\] values. These record values are essentially a table with just one row. These records contain the row with the maximum value for the **Units** column of each \[Table\] value in the **Products** column.
 
-![Result of the custom column formula with Table.Max](images/me-group-by-row-operation-custom-column-details-preview-pane.png)
+![Result of the custom column formula with Table.Max](images/me-group-by-row-operation-custom-column-details-preview-pane.png "Result of the custom column formula with Table.Max")
 
-With this new **Top performer product** column containing **Record** values, you can select the icon with opposite rows in the column header to expand the contents of the column. Select the **Product** and **Units** fields, and then select **OK**.
+With this new **Top performer product** column that contains \[Record\] values, you can select the ![expand](images/expand-icon.png) expand icon, select the **Product** and **Units** fields, and then select **OK**.
 
-![Expand operation for record value on Top performer product column](images/me-group-by-row-operation-custom-column-expand-window.png)
+![Expand operation for record value on the Top performer product column](images/me-group-by-row-operation-custom-column-expand-window.png "Expand operation for record value on the Top performer product column")
 
-After removing your **Products** column and setting the data type for both newly expanded columns, your result looks like this:
+After removing your **Products** column and setting the data type for both newly expanded columns, your result will resemble the following image.
 
-![Final table with all transformations](images/me-group-by-row-operation-final-table.png)
+![Final table with all transformations](images/me-group-by-row-operation-final-table-2.png "Final table with all transformations")
 
 ## Fuzzy grouping
 
-To demonstrate how to perform *Fuzzy grouping* in Power Query's *Group By* functionality, the following sample table will be used:
+To demonstrate how to do "fuzzy grouping," consider the sample table shown in the following image.
 
-![Fuzzy grouping sample source table](images/me-fuzzy-grouping-sample-source-table.png)
+![Table with nine rows of entries that contain various spellings and captilizations of the name Miguel and William](images/me-fuzzy-grouping-sample-source-table.png "Table with nine rows of entries that contain various spellings and captilizations of the name Miguel and William")
 
-The goal of the *Fuzzy grouping* is to perform a *Group by* operation using an approximate match algorithm for text strings. Power Query uses the Jaccard Similarity algorithm to measure the similarity between pairs of instances. Then it applies Agglomerative Hierarchical Clustering to group instances together. Below is an image of the output that we expect where the table will be grouped by the *Person* column:
+The goal of fuzzy grouping is to do a group-by operation that uses an approximate match algorithm for text strings. Power Query uses the Jaccard similarity algorithm to measure the similarity between pairs of instances. Then it applies agglomerative hierarchical clustering to group instances together. The following image shows the output that you expect, where the table will be grouped by the **Person** column.
 
-![Fuzzy grouping sample final table no transform table](images/me-fuzzy-grouping-sample-final-table-no-transform-table.png)
+![Table showing entries for Person as "Miguel" and "Mike," and Frequency as 3 and 2, respectively"](images/me-fuzzy-grouping-sample-final-table-no-transform-table.png "Table showing entries for Person as 'Miguel' and 'Mike,' and Frequency as 3 and 2, respectively")
 
-To perform the fuzzy grouping, you perform the same steps previously described in this article. The only difference is that this time, in the *Group by* window, you will click the *Use fuzzy grouping* radio button as shown in the next image:
+To do the fuzzy grouping, you perform the same steps previously described in this article. The only difference is that this time, in the **Group by** dialog box, you select the **Use fuzzy grouping** check box.
 
-![Fuzzy grouping radio button in Group by window](images/me-fuzzy-grouping-button-group-by-window.png)
+![Fuzzy grouping check box in the Group by dialog box](images/me-fuzzy-grouping-button-group-by-window.png "Fuzzy grouping check box in the Group by dialog box")
 
-For each group of rows, Power Query will pick the most frequent instance as the “canonical” instance. If multiple instances have the same frequency, Power Query will pick the first one. After we hit the OK button in the *Group by* window, we will get the result that we were expecting:
+For each group of rows, Power Query will pick the most frequent instance as the "canonical" instance. If multiple instances occur with the same frequency, Power Query will pick the first one. After you select **OK** in the **Group by** dialog box, you'll get the result that you were expecting.
 
-![Fuzzy grouping sample final table no transform table](images/me-fuzzy-grouping-sample-final-table-no-transform-table.png)
+![Fuzzy grouping sample final table, no transform table](images/me-fuzzy-grouping-sample-final-table-no-transform-table-2.png "Fuzzy grouping sample final table, no transform table")
 
-However, you have more control over the *Fuzzy grouping* operation by expanding the *Fuzzy group options* as shown in the next image:
+However, you have more control over the fuzzy grouping operation by expanding **Fuzzy group options**.
 
-![Fuzzy grouping options window](images/me-fuzzy-grouping-fuzzy-group-options.png)
+![Fuzzy group options](images/me-fuzzy-grouping-fuzzy-group-options.png "Fuzzy group options")
 
-Here's a list of the availble options for the *Fuzzy grouping*:
-* **Similarity threshold (optional)** - This option indicates how similar two values need to be in order to be grouped together. The minimum value of 0 will cause all values to be grouped together, and the maximum value of 1 will only allow exact match of values to be grouped together. The default is 0.8.)
-* **Ignore case** - Used to compare text Strings, ignoring case considerations. Enabled by default.
-* **Group by combining text parts** - the algorithm will try to combine text parts (such as 'Micro' and 'soft' into 'Microsoft') in order to group values.
-* **Transformation table (optional)** - select a transformation table that will be used to map values (such as "MSFT" to "Microsoft") to group them together. The table should contain a "From" column and a "To" column.
+The following options are available for fuzzy grouping:
 
-For this example, a transformation table will be used to demonstrate how values can be mapped. The transformation table needs to have only two columns:
-* **From** - The text string to look for in our table.
-* **To** - The text string used to replace the text string found.
+* **Similarity threshold (optional)**: This option indicates how similar two values must be to be grouped together. The minimum setting of 0 will cause all values to be grouped together. The maximum setting of 1 will only allow values that match exactly to be grouped together. The default is 0.8.
+* **Ignore case**: When comparing text strings, case will be ignored. This option is enabled by default.
+* **Group by combining text parts**: The algorithm will try to combine text parts (such as combining **Micro** and **soft** into **Microsoft**) to group values.
+* **Transformation table (optional)**: You can select a transformation table that will map values (such as mapping **MSFT** to **Microsoft**) to group them together.
 
-The following image is the transformation table that will be used:
+For this example, a transformation table will be used to demonstrate how values can be mapped. The transformation table has two columns:
 
-![Fuzzy grouping Sample Transformation table](images/me-fuzzy-grouping-sample-transformation-table.png)
+* **From**: The text string to look for in your table.
+* **To**: The text string to use to replace the text string in the **From** column.
 
-Going back to the *Group by* window and expanding the *Fuzzy group options*, you can select the **Transformation table** query from the dropdown as shown in the next image: 
+The following image shows the transformation table used in this example.
 
-![Fuzzy grouping Sample Transformation table dropdown](images/me-fuzzy-grouping-sample-transformation-table-window.png)
+![Table showing From values of mike and William, and To values of Miguel and Bill](images/me-fuzzy-grouping-sample-transformation-table.png "Table showing From values of mike and William, and To values of Miguel and Bill")
 
-After selecting the **Transformation table**, you can click the OK button to proceed. The result of that operation will give you the following result:
+Return to the **Group by** dialog box, expand **Fuzzy group options**, and then select the **Transformation table** drop-down menu.
 
-![Fuzzy grouping sample final table with transform table](images/me-fuzzy-grouping-sample-final-table.png)
+![Fuzzy grouping sample transformation table drop-down menu](images/me-fuzzy-grouping-sample-transformation-table-window.png "Fuzzy grouping sample transformation table drop-down menu")
 
-In this example, the *Ignore case* option is enabled so values in the **From** column of the **Transformation table** will be used ignoring the case and will look for the text string without considering casing. This transformation operation occurs first and subsequently the *Fuzzy grouping* operation is performed. 
+After selecting your transformation table, select **OK**. The result of that operation will give you the result shown in the following image.
 
->[!Note]
+![Fuzzy grouping sample final table with transform table](images/me-fuzzy-grouping-sample-final-table.png "")
+
+In this example, the **Ignore case** option was enabled, so the values in the **From** column of the **Transformation table** will be used to look for the text string without considering the case of the string. This transformation operation occurs first, and then the fuzzy grouping operation is performed. 
+
+>[!NOTE]
 >When grouping by multiple columns, the transformation table will perform the replace operation in all columns if replacing the value increases the similarity score.
 
-## More resources
+### See also
 
-You can create your own custom column formula to transform the table from the **Group by** operation. To learn more about how to create your custom column in Power Query, see [Add a Custom column](add-custom-column.md).
-
-If your goal is to remove the duplicates from a table, you can also use the [Remove duplicates](working-with-duplicates.md) operation within Power Query.
+[Add a custom column](add-custom-column.md)  
+[Remove duplicates](working-with-duplicates.md)

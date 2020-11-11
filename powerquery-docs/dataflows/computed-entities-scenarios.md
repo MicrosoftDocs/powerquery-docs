@@ -6,7 +6,7 @@ ms.service: powerquery
 ms.reviewer: v-douklo
 ms.topic: conceptual
 ms.date: 05/25/2020
-ms.author: v-rerad
+ms.author: v-douklo
 ---
 
 # Computed entities scenarios and use-cases
@@ -25,7 +25,7 @@ Computed entities can be created by referencing an entity in the same dataflow, 
 
 ![Computed Entity](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-computed-entities-premium/computed-entities-premium_00.png)
 
-## Why is it good to use computed entity?
+## Why is it good to use a computed entity?
 
 Performing all the transformation steps in one entity can be slow at times. There can be many reasons for this slowdown&mdash;the data source might be slow, and some of the transformations that you're doing might be need to be replicated in two or more queries. In addition, it might be advantageous to first ingest the data from the source, and then reuse it in one or more entities. In such cases, choosing to create two entities&mdash;one that gets data from the data source, and another, a computed entity, that applies additional transformations to data already written into the data lake used by a dataflow&mdash;can increase performance and reusability of data, saving time and resources.
 
@@ -73,7 +73,7 @@ Now that you know computed entities are great for improving performance of the d
 ### Load data without transformation for Text/CSV files
 
 
-When a data source doesn't support query folding (such as Text/CSV files), there's little benefit applying transformations when getting data the data from the source, especially if data volumes are large. The source entity should just load data from the Text/CSV file without applying any transformations.
+When a data source doesn't support query folding (such as Text/CSV files), there's little benefit applying transformations when getting data from the source, especially if data volumes are large. The source entity should just load data from the Text/CSV file without applying any transformations.
 
 Then, computed entities can get data from the source entity and perform the transformation on top of the ingested data.
 

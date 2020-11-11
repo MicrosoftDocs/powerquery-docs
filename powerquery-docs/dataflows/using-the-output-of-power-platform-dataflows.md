@@ -6,7 +6,7 @@ author: radacad
 ms.service: powerquery
 ms.topic: conceptual
 ms.date: 05/25/2020
-ms.author: v-rerad
+ms.author: v-douklo
 
 LocalizationGroup: Data from files
 ---
@@ -37,7 +37,7 @@ If you'd like to reuse data created by one dataflow in another dataflow, you can
 
 ![Get Data from dataflow](https://docs.microsoft.com/data-integration/dataflows/media/dataflows-linked-entities/linked-entities-03.png)
 
-When getting data from the output of another dataflow, a [linked entity](https://docs.microsoft.com/data-integration/dataflows/dataflows-linked-entities) will be created. Linked entities provide a way to make data created in an upstream dataflow available in a downstram dataflow, without copying the data to the downstream dataflow. Because linked entities are just pointers to entities created in other dataflows, they're kept up to date by the refresh logic of the upstream dataflow. If both dataflows reside in the same workspace or environment, those dataflows will refresh together, to keep data in both dataflows always up to date. To learn more about the refresh process of linked entities, see [Link entities between dataflows](https://docs.microsoft.com/data-integration/dataflows/dataflows-linked-entities).
+When getting data from the output of another dataflow, a [linked entity](https://docs.microsoft.com/data-integration/dataflows/dataflows-linked-entities) will be created. Linked entities provide a way to make data created in an upstream dataflow available in a downstream dataflow, without copying the data to the downstream dataflow. Because linked entities are just pointers to entities created in other dataflows, they're kept up to date by the refresh logic of the upstream dataflow. If both dataflows reside in the same workspace or environment, those dataflows will refresh together, to keep data in both dataflows always up to date. To learn more about the refresh process of linked entities, see [Link entities between dataflows](https://docs.microsoft.com/data-integration/dataflows/dataflows-linked-entities).
 
 ## Separating data transformation from data consumption
 
