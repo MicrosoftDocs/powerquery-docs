@@ -30,6 +30,7 @@ In the image above, the Region field in a lookup field to another entity named "
 
 If you have created a lookup field in one entity that points to another entity, that field in the mapping of the dataflow, might not appear. The reason is that each entity requires a Key field. This best practice would then makes sure that the field is mappable in the entity mappings of the dataflow.
 
+
 ## Setting the Key field in the entity
 
 To set the key field in the entity, you simply need to go to the Keys tab, and add a Key to a field which has unique values.
@@ -47,3 +48,4 @@ Another important best practice is to load the data into the referenced or looku
 ## Known limitations
 
 - Mapping to polymorphic lookup fields is currently not supported 
+

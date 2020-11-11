@@ -1,3 +1,4 @@
+
 # Field Mapping considerations for standard dataflows
 
 When you create dataflows that write their output into Common Data Service, you can follow some guide lines and best practices to get the best outcome. In this article, some of those best practices are mentioned.
@@ -24,6 +25,7 @@ The alternate Key field is what will be used as the primary key.
 
 ## What are good candidates of the Key field
 
+
 The key field is a unique value representing a unique row in the entity. It is important to have this field, because it helps avoiding having duplicate records in the entity. This field can come from three sources;
 
 - The primary key in the source system (Such as OrderID in the example above)
@@ -43,6 +45,7 @@ If you wish to always have the data in your entity to be synchronized with the d
 Having this option checked means that if there is a data row in the entity that does not exist in the next dataflow refresh's query output, that row will be removed from the entity.
 
 ![delete rows that no longer exists](media/DeleteRowsNotExist.png)
+
 
 
 

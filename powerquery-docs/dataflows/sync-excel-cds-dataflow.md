@@ -10,6 +10,7 @@ If you are using a relational data base system as a source, normally you have ke
 
 Having a key column is important for the entity in the Common Data Services. The key column is the row identifier, this is a column with unique values in each row. Having a key column helps in avoiding duplicate rows, and it also helps in synchronizing the data with the source system. If a row has removed from the source system, having a key column is helpful to find it and remove it from the Common Data Services too.
 
+
 ## Creating a key column
 
 If you don't have a key column in your data source (Excel, Text file, or any other sources), then you can generate one using the method explained below.
@@ -42,6 +43,7 @@ If you have just one Excel file (or sheet or table), then the above steps are en
 
 If you are getting data from multiple Excel files, then the Combine Files option of Power Query will automatically append all the data together, and your output will look like this:
 
+
 ![multiple files appended](media/TwoFiles.png)
 
 
@@ -55,3 +57,4 @@ As you can see, the Power Query brings the "Source.Name" column besides the appe
 The last step is to check the box for "delete rows that no longer exists in the query output". This option will compare the data in the Common Data Service's entity with the data coming from the source based on the alternate key (which might be a composite key), and remove the rows that no longer exists. As a result, your data in the Common Data Service will be always synchronized with your data source.
 
 ![delete rows no longer exists](media/DeleteRowsNotExist.png)
+
