@@ -295,7 +295,7 @@ At this point you run into trouble. Evaluating **Search** produces a Firewall er
 
 This is because the Source step of **Search** is referencing a data source (bing.com) and also referencing another query/partition (**Company**). It is violating the rule mentioned above ("a partition may either access compatible data sources, or reference other partitions, but not both").
 
-What to do? One option is to disable the Firewall altogether (via the Privacy option labeled **Ignore the Privacy levels and potentially improve performance**). But what if you want to leave the Firewall enabled?
+What to do? One option is to disable the Firewall altogether (via the Privacy option labeled **Ignore the Privacy Levels and potentially improve performance**). But what if you want to leave the Firewall enabled?
 
 To resolve the error without disabling the Firewall, you can combine Company and Search into a single query, like this:
 
