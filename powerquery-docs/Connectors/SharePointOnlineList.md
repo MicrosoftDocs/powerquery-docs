@@ -1,6 +1,6 @@
 ---
-title: SharePoint Online List
-description: Power Query SharePoint Online List connector reference
+title: Power Query SharePoint Online List connector
+description: Provides basic information and how to connect to your data, along with troubleshooting tips for obtaining the root SharePoint address and changing the authentication method.
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
@@ -71,6 +71,30 @@ To connect to a SharePoint Online List:
 8. From the **Navigator** dialog, you can select a location, then either transform the data in the Power Query editor by selecting **Transform Data**, or load the data by selecting **Load**.
 
    ![Select the list checkbox](./media/sharepoint-online-list/sharepointonlinelistnavigator.png)
+   
+## Connect to Sharepoint Online List v2.0 (Beta)
+
+In the October 2020 release of Power BI Desktop, we introduced an updated version of the SharePoint Online List connector. This connector has improved APIs and greater usability, but isn't backwards compatible with usage of the 1.0 connector version.
+
+To access it, you'll enter the same connector screen through step 3 in the previous procedure. However, make sure you select **2.0 (Beta)** under **Implementation** if it isn't already selected.
+
+   ![A screen showing a sample of SharePoint Online List settings](./media/sharepoint-online-list/sharepointonlinelistnavigator2.png)
+
+With this update to the connector, we're making available two different views for the same data:
+
+* **All**
+* **Default**
+
+The default view is what you'll see when looking at the list online in whichever view you've set as *Default* in your settings. If you edit this view to add or remove either user created or system defined columns, or by creating a new view and setting it as default, this will propagate through the connector.
+
+   ![A screen showing a sample of SharePoint Online List default view](./media/sharepoint-online-list/sharepointonlinelistsettings.png)
+
+The **All** view includes all user created and system defined columns. You can see what columns are included in the following screen.
+
+   ![A screen showing a sample of view settings for a specific view in SharePoint Online List](./media/sharepoint-online-list/sharepointonlinelistview.png)
+
+We look forward to your feedback.
+
 
 ## Troubleshooting
 
@@ -80,16 +104,4 @@ Make sure you supply the root address of the SharePoint site, without any subfol
 
 ### Change the authentication method
 
-In some cases, you may need to change the authentication method you use to access a particular SharePoint site. If this is necessary, perform the following steps:
-
-1. In Power BI Desktop, from the **File** tab, select **Options and settings > Data source settings**. In Excel, from the **Data** tab, select **Get Data > Data Source Settings**.
-
-2. In the **Data source settings** dialog box, select **Global permissions**, choose the SharePoint site where you want the permission setting changed, and then select **Edit Permissions**.
-
-3. In the **Edit Permissions** dialog box, under **Credentials**, select **Edit**. 
-
-    ![Edit web site permissions](./media/sharepoint-online-list/webPermission.png)
-
-4. Change the credentials to the type required by the SharePoint site, select **Save**, and then select **OK**.
-
-You can also delete the credentials for a particular SharePoint site in step 3 by selecting **Clear Permissions** for a selected site, or by selecting **Clear All Permissions** for all of the listed web sites. If you delete the credentials for a SharePoint site, you'll be required to enter your credentials again when you try to access that site to get data.
+In some cases, you may need to change the authentication method you use to access a particular SharePoint site. If this is necessary, see [Change the authentication method](../connectorauthentication.md#change-the-authentication-method).

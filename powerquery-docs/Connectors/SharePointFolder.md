@@ -1,6 +1,6 @@
 ---
-title: SharePoint Folder
-description: Power Query SharePoint Folder connector reference
+title: Power Query SharePoint Folder connector
+description: Provides basic information, prerequisites, and how to connect to your data, along with troubleshooting tips when combining files and using filename special characters.
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
@@ -20,6 +20,9 @@ Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in 
 Authentication Types Supported: Anonymous, Microsoft Account, Windows
 
 Function Reference Documentation: [SharePoint.Contents](https://docs.microsoft.com/powerquery-m/sharepoint-contents), [SharePoint.Files](https://docs.microsoft.com/powerquery-m/sharepoint-files)
+
+>[!NOTE]
+>AAD/OAuth for SharePoint on-premises isn’t supported using the on-premises data gateway. 
 
 ## Capabilities supported
 
