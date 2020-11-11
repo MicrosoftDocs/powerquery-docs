@@ -20,12 +20,8 @@
         href: share-query.md
       - name: "Parse text as JSON or XML"
         href: parse-json-xml.md
-      - name: "Using parameters"
-        href: parameters.md
       - name: "Custom Functions"
         href: custom-function.md
-      - name: "Options and settings"
-        href: options.md
       - name: "Rename column"
         href: rename-column.md
       - name: "Move columns"
