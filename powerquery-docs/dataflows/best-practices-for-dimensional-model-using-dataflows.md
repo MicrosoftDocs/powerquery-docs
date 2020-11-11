@@ -81,6 +81,6 @@ Incremental refresh gives you options to only refresh part of the data, the part
 
 ## Referencing to create dimensions and fact tables
 
-In the source system, you have often a table that you use for generating both fact and dimension tables in the dimensional model. These tables are good candidates for computed entities and also intermediate dataflows. The common part of the process, such as data cleaning, removing extra rows and columns, and so on, can be done once. Using a reference from the output of those actions, you can produce the dimension and fact tables. This approach will use the computed entity for the common transformations.
+In the source system, you often have a table that you use for generating both fact and dimension tables in the data warehouse. These tables are good candidates for computed entities and also intermediate dataflows. The common part of the process, such as data cleaning, removing extra rows and columns, and so on, can be done once. Using a reference from the output of those actions, you can produce the dimension and fact tables. This approach will use the computed entity for the common transformations.
 
 ![Referencing from other entities](media/OrdersEntityReferenced.png)
