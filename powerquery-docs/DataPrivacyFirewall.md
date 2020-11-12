@@ -5,7 +5,7 @@ author: ehrenMSFT
 
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 4/6/2020
+ms.date: 11/11/2020
 ms.author: gepopell
 
 LocalizationGroup: reference
@@ -111,7 +111,7 @@ Let’s say you define a query Query1 with one step (note that this single-step 
 
 * A partition may either access compatible data sources, or reference other partitions, but not both.
 
-In order for your single-partition-but-two-data-sources query to be allowed to run, its two data sources must be “compatible”. In other words, it needs to be okay for data to be shared between them. In terms of the Power Query UI, this means the Privacy Levels of the SQL and CSV data sources need to both be Public, or both be Organizational. If they are both marked Private, or one is marked Public and one is marked Organizational, or they are marked using some other combination of Privacy Levels, then it's not safe for them to both be evaluated in the same partition. Doing so would mean unsafe data leakage could occur (due to folding), and the Firewall would have no way to prevent it.
+In order for your single-partition-but-two-data-sources query to be allowed to run, its two data sources must be “compatible”. In other words, it needs to be okay for data to be shared between them. In terms of the Power Query UI, this means the privacy levels of the SQL and CSV data sources need to both be Public, or both be Organizational. If they are both marked Private, or one is marked Public and one is marked Organizational, or they are marked using some other combination of privacy levels, then it's not safe for them to both be evaluated in the same partition. Doing so would mean unsafe data leakage could occur (due to folding), and the Firewall would have no way to prevent it.
 
 What happens if you try to access incompatible data sources in the same partition?
 
@@ -295,7 +295,7 @@ At this point you run into trouble. Evaluating **Search** produces a Firewall er
 
 This is because the Source step of **Search** is referencing a data source (bing.com) and also referencing another query/partition (**Company**). It is violating the rule mentioned above ("a partition may either access compatible data sources, or reference other partitions, but not both").
 
-What to do? One option is to disable the Firewall altogether (via the Privacy option labeled **Ignore the Privacy levels and potentially improve performance**). But what if you want to leave the Firewall enabled?
+What to do? One option is to disable the Firewall altogether (via the Privacy option labeled **Ignore the Privacy Levels and potentially improve performance**). But what if you want to leave the Firewall enabled?
 
 To resolve the error without disabling the Firewall, you can combine Company and Search into a single query, like this:
 
@@ -309,7 +309,7 @@ in
     Search
 ```
 
-Everything is now happening inside a *single* partition. Assuming that the Privacy levels for the two data sources are compatible, the Firewall should now be happy, and you'll no longer get an error.
+Everything is now happening inside a *single* partition. Assuming that the privacy levels for the two data sources are compatible, the Firewall should now be happy, and you'll no longer get an error.
 
 ## That’s a wrap
 
