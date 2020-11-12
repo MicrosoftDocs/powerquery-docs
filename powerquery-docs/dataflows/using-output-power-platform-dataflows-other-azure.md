@@ -23,23 +23,23 @@ Using Power Platform dataflows, you can reshape data, clean the data, and prepar
 - Azure Databricks can consume the output of dataflows for applied data science algorithms and further AI with the big data scale in the Apache Spark backend.
 - Other Azure data services can use the output of Power Platform dataflows to do further actions on that data.
 
-## Dataflows with external Azure Data Lake Storage Gen2 
+## Dataflows with external Azure Data Lake Storage
 
-If you've connected an external Azure Data Lake Storage Gen2 storage to the Power Platform dataflows, you can connect to it using any Azure services that have Azure Data Lake Storage Gen2 as a source. These services could be Azure Machine Learning, Azure Data Factory, Azure Databricks, Azure Analysis Services, and so on.
+If you've connected an external Azure Data Lake Storage storage to the Power Platform dataflows, you can connect to it using any Azure services that have Azure Data Lake Storage as a source. These services could be Azure Machine Learning, Azure Data Factory, Azure Databricks, Azure Analysis Services, and so on.
 
-In any of these services, use Azure Data Lake Storage Gen2 as the source. You'll be able to enter the details of your storage and connect to the data in it. The data is stored in CSV format, and is readable through any of these tools and services. The following screenshot shows how Azure Data Lake Storage Gen2 is a source option for Azure Data Factory.
+In any of these services, use Azure Data Lake Storage as the source. You'll be able to enter the details of your storage and connect to the data in it. The data is stored in CSV format, and is readable through any of these tools and services. The following screenshot shows how Azure Data Lake Storage is a source option for Azure Data Factory.
 
 ![Using the output of Power Platform dataflows in external ADLS gen 2](media/ADFSourcedFromADLSGen2.png)
 
-## Dataflows with Common Data Services
+## Dataflows with Dataverse
 
-If you're using standard dataflows that store the data in Common Data Services, you can still connect to Common Data Services from many Azure services. The following screenshot shows that in Azure Data Factory the output of a dataflow from Common Data Services can be used as a source.
+If you're using standard dataflows that store the data in Dataverse, you can still connect to Dataverse from many Azure services. The following screenshot shows that in Azure Data Factory the output of a dataflow from Dataverse can be used as a source.
 
-![Using the output of Power Platform dataflows from Common Data Services](media/ADFSourcedFromCDS.png)
+![Using the output of Power Platform dataflows from Dataverse](media/ADFSourcedFromCDS.png)
 
-## Dataflows with internal Azure Data Lake Storage Gen2
+## Dataflows with internal Azure Data Lake Storage
 
-If you're using the internal Azure Data Lake storage that is provided by Power Platform dataflows, then that storage is exclusively limited to the Power Platform tools, and isn't accessible from other Azure data workloads.
+If you're using the internal Azure Data Lake Storage that is provided by Power Platform dataflows, then that storage is exclusively limited to the Power Platform tools, and isn't accessible from other Azure data workloads.
 
 
 

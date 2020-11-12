@@ -51,7 +51,7 @@ Only analytical dataflows can be used in Get Data from a dataflow experience.
 
 **Resolution:**
 
-If you've created a dataflow that stores the data into the Common Data Services, you can't see it using Get Data from dataflow experience. You can use [Get data from Common Data Services](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-powerbi-connector#finding-your-common-data-service-environment-url) instead, to get data from standard dataflows. Or you can create an [analytical dataflow](understanding-differences-between-analytical-standard-dataflows.md) instead, and then access it through Get data from a dataflow.
+If you've created a dataflow that stores the data into Dataverse, you can't see it using Get Data from dataflow experience. You can use [Get data from Dataverse](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-powerbi-connector#finding-your-common-data-service-environment-url) instead, to get data from standard dataflows. Or you can create an [analytical dataflow](understanding-differences-between-analytical-standard-dataflows.md) instead, and then access it through Get data from a dataflow.
 
 ![Get data from standard vs analytical dataflows](media/GetDataStandardAnalyticalDataflow.png)
 

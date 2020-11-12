@@ -1,5 +1,5 @@
 ---
-title: Power Query Common Data Service connector
+title: Power Query Dataverse connector
 description: Provides basic information and connection instructions, along with OData API performance information, entity retrieval rate, and alternative means of connecting.
 author: DougKlopfenstein
 ms.service: powerquery

@@ -153,7 +153,7 @@ You can read more about incremental refresh in [Incremental refresh in Power BI 
 
 ## Considerations and limitations
 
-Incremental refresh in Power Platform dataflows is only supported in dataflows with an Azure Data Lake Storage Gen2 account, not in dataflows with Common Data Service as the destination. 
+Incremental refresh in Power Platform dataflows is only supported in dataflows with an Azure Data Lake Storage account, not in dataflows with Dataverse as the destination. 
 
 ## Next Steps
 

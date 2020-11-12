@@ -32,7 +32,7 @@ You can categorize dataflows in many ways. One of those ways is the difference b
 
  
 
-A dataflow by the standard definition is used to extract, transform, and load data to a destination. A standard dataflow’s destination must be the Common Data Service and the entities produces are database entities.  
+A dataflow by the standard definition is used to extract, transform, and load data to a destination. A standard dataflow’s destination must be Dataverse, and the entities produced are database entities.  
 
  
 
@@ -44,7 +44,7 @@ Standard dataflows can be created through the Power Apps portal.
 
  
 
-One benefit of this type of dataflow is that any application that can connect to Common Data Service can work with the data, such as Power BI, Power Apps, Power Automate, Power Virtual Agent, Dynamics 365, and other applications. 
+One benefit of this type of dataflow is that any application that can connect to Dataverse can work with the data, such as Power BI, Power Apps, Power Automate, Power Virtual Agent, Dynamics 365, and other applications. 
 
  
 
@@ -52,7 +52,7 @@ One benefit of this type of dataflow is that any application that can connect to
 
  
 
-An analytical dataflow stores its entities in storage optimized for analytics&mdash;Azure Data Lake Storage Gen2. Power Platform environments and Power BI workspaces provide customers with managed analytical storage location that's bundled with those product licenses. In addition, customers can link their organization’s Azure Data Lake storage Gen2 account as a destination for dataflows. 
+An analytical dataflow stores its entities in storage optimized for analytics&mdash;Azure Data Lake Storage. Power Platform environments and Power BI workspaces provide customers with managed analytical storage location that's bundled with those product licenses. In addition, customers can link their organization’s Azure Data Lake Storage account as a destination for dataflows. 
 
  
 
@@ -60,7 +60,7 @@ Analytical dataflows are capable additional analytical features. For example, in
 
  
 
-You can create analytical dataflows in Power BI. By default, they'll load data to Power BI’s managed storage. But you can also configure Power Bi to store the data in the organization’s Azure Data Lake Storage Gen2. 
+You can create analytical dataflows in Power BI. By default, they'll load data to Power BI’s managed storage. But you can also configure Power Bi to store the data in the organization’s Azure Data Lake Storage. 
 
  
 
@@ -68,7 +68,7 @@ You can create analytical dataflows in Power BI. By default, they'll load data t
 
  
 
-You can also create analytical dataflows in Power Apps and Dynamics 365 customer insights portals. When you're creating a dataflow in Power Apps portal, you can choose between Common Data Service manages analytical storage or in your organization’s Azure Data Lake storage Gen2 account. 
+You can also create analytical dataflows in Power Apps and Dynamics 365 customer insights portals. When you're creating a dataflow in Power Apps portal, you can choose between Dataverse manages analytical storage or in your organization’s Azure Data Lake Storage account. 
 
  
 
@@ -139,11 +139,11 @@ The following table lists some differences between a standard entity and an anal
 | Operation               | Standard             | Analytical                    | 
 | --------------------------------- | --- | ------------------------------------------------------------ | 
 | How to create                     | Power Platform dataflows | Power BI dataflows<br />Power Platform dataflows by selecting the **Analytical Entity** checkbox when creating the dataflow | 
-| Storage options                   | Common Data Service      | Azure Data Lake Storage Gen2 internal for the Power BI dataflows<br />Azure Data Lake Storage Gen2 external attached to the Power BI or Power Platform dataflows | 
+| Storage options                   | Dataverse      | Azure Data Lake Storage internal for the Power BI dataflows<br />Azure Data Lake Storage external attached to the Power BI or Power Platform dataflows | 
 | Power Query transformations       | Yes             |Yes                                                          | 
 | AI functions                      | No              | Yes                                                          | 
 | Computed entity                   | No              | Yes                                                          | 
-| Can be used in other applications | Yes, through Common Data Service | Power BI dataflows: Only in Power BI<br />Power Platform dataflows or Power BI external dataflows: Yes, through Azure Data Lake Storage Gen2 | 
+| Can be used in other applications | Yes, through Dataverse | Power BI dataflows: Only in Power BI<br />Power Platform dataflows or Power BI external dataflows: Yes, through Azure Data Lake Storage | 
 | Mapping to standard Entity        | Yes              | Yes                                                         | 
 | Incremental load                  | Default incremental-load<br />Possible to change using the **Delete rows that no longer exist in the query output** checkbox at the load settings | Default full-load <br />Possible to set up incremental refresh by setting up the incremental refresh in the dataflow settings | 
 | Scheduled Refresh                 | Yes              | Yes, the possibility of notifying the dataflow owners upon the failure | 
@@ -162,7 +162,7 @@ Here are some sample scenarios and best practice recommendations for each type o
 
  
 
-If your plan for building dataflows is to use stored data in multiple platforms (not only Power BI, but also other Power Platform services, Dynamics, and so on), a standard dataflow is a great choice. Standard dataflows store the data in Common Data Service, which you can access through many other platforms and services. 
+If your plan for building dataflows is to use stored data in multiple platforms (not only Power BI, but also other Power Platform services, Dynamics, and so on), a standard dataflow is a great choice. Standard dataflows store the data in Dataverse, which you can access through many other platforms and services. 
 
  
 
@@ -170,7 +170,7 @@ If your plan for building dataflows is to use stored data in multiple platforms 
 
  
 
-Analytical dataflows are an excellent option for processing large amounts of data. Analytical dataflows are also enhancing the computing power behind the transformation. Having the data is stored in Azure Data Lake Storage Gen2 increases the writing speed to a destination. Compared to Common Data Service (which might have many rules to check at the time of data storage), Azure Data Lake Storage Gen2 is faster for read/write transactions on a large amount of data. 
+Analytical dataflows are an excellent option for processing large amounts of data. Analytical dataflows are also enhancing the computing power behind the transformation. Having the data is stored in Azure Data Lake Storage increases the writing speed to a destination. Compared to Dataverse (which might have many rules to check at the time of data storage), Azure Data Lake Storage is faster for read/write transactions on a large amount of data. 
 
  
 

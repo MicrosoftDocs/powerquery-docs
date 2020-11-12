@@ -80,7 +80,7 @@ The **Azure** category includes the following available data connections for dat
 The **Online Services** includes the following available data connections for dataflows:
 
 * Amazon Redshift
-* Common Data Service for Apps
+* Dataverse for Apps
 * Microsoft Exchange Online
 * Salesforce Objects
 * Salesforce Reports
@@ -100,11 +100,11 @@ The **Other** category includes the following available data connections for dat
 
 ## Connect to a data source
 
-To connect to a data source, select the data source. This section uses one example to show how the process works, but each data connection for dataflows is similar in process. Different connectors might require specific credentials or other information, but the flow is similar. In this example, you see in the following image that **Common Data Service for Apps** is selected from the **Online services** data connection category.
+To connect to a data source, select the data source. This section uses one example to show how the process works, but each data connection for dataflows is similar in process. Different connectors might require specific credentials or other information, but the flow is similar. In this example, you see in the following image that **Dataverse for Apps** is selected from the **Online services** data connection category.
 
-![Select Common Data Service for Apps](media/dataflows-data-sources/dataflows-data-sources-05.png)
+![Select Dataverse for Apps](media/dataflows-data-sources/dataflows-data-sources-05.png)
 
-A connection window for the selected data connection is displayed. If credentials are required, you're prompted to provide them. The following image shows a Server URL being entered to connect to a Common Data Service server.
+A connection window for the selected data connection is displayed. If credentials are required, you're prompted to provide them. The following image shows a Server URL being entered to connect to a Dataverse server.
 
 ![Credentials or URLs for data connections](media/dataflows-data-sources/dataflows-data-sources-06.png)
 

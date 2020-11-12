@@ -14,7 +14,7 @@ ms.author: gepopell
 
 # What are dataflows?  
 
-Dataflows are a self-service, cloud-based, data preparation technology. Dataflows enable customers to ingest, transform, and load data into Common Data Service environments, Power BI workspaces, or your organization’s Azure Data Lake Storage Gen2 account. Dataflows are authored using Power Query experience, a unified Data Connectivity and Preparation experience already featured in many Microsoft products, including Excel and Power BI. Customers can trigger dataflows to run either on demand or automatically on a schedule; data is always kept up to date. 
+Dataflows are a self-service, cloud-based, data preparation technology. Dataflows enable customers to ingest, transform, and load data into Microsoft Dataverse environments, Power BI workspaces, or your organization’s Azure Data Lake Storage Gen2 account. Dataflows are authored using Power Query experience, a unified Data Connectivity and Preparation experience already featured in many Microsoft products, including Excel and Power BI. Customers can trigger dataflows to run either on demand or automatically on a schedule; data is always kept up to date. 
 
  
 
@@ -80,7 +80,7 @@ Because a dataflow stores the resulting entities in cloud-based storage, other s
 
  
 
-For example, Power BI, Power Apps, Power Automate, Power Virtual Agent, and Dynamics 365 applications can get the data produced by the dataflow by connecting to Common Data Service, Power Platform Dataflow connector, or directly through the lake, depending on the destination configured at dataflow creation time. 
+For example, Power BI, Power Apps, Power Automate, Power Virtual Agent, and Dynamics 365 applications can get the data produced by the dataflow by connecting to Dataverse, Power Platform Dataflow connector, or directly through the lake, depending on the destination configured at dataflow creation time. 
 
  
 
@@ -122,7 +122,7 @@ You can use dataflows for many purposes. The following scenarios provide a few e
 
  
 
-In this scenario, the decision has been made by an organization to use Power Apps for the new user interface experience rather than the legacy on-premises system. Power Apps, Power Automate, and AI Builder all leverage Common Data Service as the primary data storage system. The current data in the existing on-premises system can be migrated into Common Data Service using a dataflow, and then leverage by the above products. 
+In this scenario, the decision has been made by an organization to use Power Apps for the new user interface experience rather than the legacy on-premises system. Power Apps, Power Automate, and AI Builder all leverage Dataverse as the primary data storage system. The current data in the existing on-premises system can be migrated into Dataverse using a dataflow, and then leverage by the above products. 
 
  
 
