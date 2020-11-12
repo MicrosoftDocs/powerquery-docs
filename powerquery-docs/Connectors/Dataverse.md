@@ -36,7 +36,7 @@ Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linki
 
 In the new browser tab that opens, copy the root of the URL. This root URL is the unique URL for your environment. The URL will be in the format of https://\<*yourenvironmentid*>.crm.dynamics.com/. Make sure not to copy the rest of the URL. Keep this URL somewhere handy so you can use it later, for example, when you create Power BI reports.
 
-![Common Data Service Environment](media/dataverse/cds-env.png)
+![Location of the Dataverse environment URL](media/dataverse/cds-env.png)
 
 ## Connect to Dataverse from Power BI Desktop
 
