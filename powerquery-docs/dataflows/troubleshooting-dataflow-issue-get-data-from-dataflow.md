@@ -13,6 +13,8 @@ LocalizationGroup: Data from files
 
 # Troubleshooting dataflow issue: get data from dataflow
 
+[!INCLUDE [CDS note](includes/cc-data-platform-banner.md)]
+
 You might have created a dataflow, but then have difficulty in getting data from it (either using Power Query in Power BI Desktop or from other dataflows). This article explains some of the most common issues that happen when you get data from a dataflow.
 
 ## Problem: This table is empty
@@ -51,7 +53,7 @@ Only analytical dataflows can be used in Get Data from a dataflow experience.
 
 **Resolution:**
 
-If you've created a dataflow that stores the data into Dataverse, you can't see it using Get Data from dataflow experience. You can use [Get data from Dataverse](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-powerbi-connector#finding-your-common-data-service-environment-url) instead, to get data from standard dataflows. Or you can create an [analytical dataflow](understanding-differences-between-analytical-standard-dataflows.md) instead, and then access it through Get data from a dataflow.
+If you've created a dataflow that stores the data into Common Data Service, you can't see it using Get Data from dataflow experience. You can use [Get data from Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-powerbi-connector#finding-your-common-data-service-environment-url) instead, to get data from standard dataflows. Or you can create an [analytical dataflow](understanding-differences-between-analytical-standard-dataflows.md) instead, and then access it through Get data from a dataflow.
 
 ![Get data from standard vs analytical dataflows](media/GetDataStandardAnalyticalDataflow.png)
 
