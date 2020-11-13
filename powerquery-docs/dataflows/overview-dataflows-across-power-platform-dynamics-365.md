@@ -134,7 +134,7 @@ You can use dataflows as a replacement for other ETL tools to build a data wareh
 
  
 
-![Building a data warehouse using dataflows](https://i2.wp.com/radacad.com/wp-content/uploads/2019/01/2019-01-21_06h49_16.png) 
+![Building a data warehouse using dataflows](media/building-data-warehouse.png) 
 
  
 
@@ -146,7 +146,7 @@ If multiple Power BI solutions are using the same transformed version of a table
 
  
 
-![Re-use of tables across multiple solutions](https://i1.wp.com/radacad.com/wp-content/uploads/2019/01/2019-01-21_06h36_16.png) 
+![Re-use of tables across multiple solutions](media/reuse-tables-in-solutions.png) 
 
  
 
