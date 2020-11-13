@@ -100,7 +100,7 @@ The **Other** category includes the following available data connections for dat
 
 ## Connect to a data source
 
-To connect to a data source, select the data source. This section uses one example to show how the process works, but each data connection for dataflows is similar in process. Different connectors might require specific credentials or other information, but the flow is similar. In this example, you see in the following image that **Dataverse for Apps** is selected from the **Online services** data connection category.
+To connect to a data source, select the data source. This section uses one example to show how the process works, but each data connection for dataflows is similar in process. Different connectors might require specific credentials or other information, but the flow is similar. In this example, you see in the following image that **Dataverse** is selected from the **Online services** data connection category.
 
 ![Select Dataverse for Apps](media/dataflows-data-sources/dataflows-data-sources-05.png)
 

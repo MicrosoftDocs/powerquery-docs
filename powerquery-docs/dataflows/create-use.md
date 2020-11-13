@@ -29,9 +29,9 @@ With dataflows, Microsoft brings Power Query’s self-service data preparation c
    With dataflows, ETL logic is elevated to a first-class artifact within Power Platform services and includes dedicated authoring and management experiences. Business analysts, BI professionals, and data scientists can use dataflows to handle the most complex data preparation challenges and build on each other’s work, thanks to a revolutionary model-driven calculation engine, which takes care of all the transformation and dependency logic—cutting time, cost, and expertise to a fraction of what’s traditionally been required for those tasks. You can create dataflows using the well-known, self-service data preparation experience of Power Query. Dataflows are created and easily managed in app workspaces or environments, in the Power BI or Power Apps portal respectively, enjoying all the capabilities these services have to offer, such as permission management, scheduled refreshes, and more.
 
 
-* **Load data to Dataverse or Azure Data Lake Storage**&mdash;Depending on your use case, you can store data prepared by Power Platform dataflows in the Dataverse or your organizations Azure Data Lake Storage account: 
+* **Load data to Dataverse or Azure Data Lake Storage**&mdash;Depending on your use case, you can store data prepared by Power Platform dataflows in the Dataverse or your organization's Azure Data Lake Storage account: 
 
-    * **Dataverse** lets you securely store and manage data that's used by business applications within a set of entities. An *entity* is a set of records used to store data, similar to how a table stores data within a database. Dataverse includes a base set of standard entities that cover typical scenarios, but you can also create custom entities specific to your organization and populate them with data using dataflows. App makers can then use Power Apps and Flow to build rich applications using this data.
+    * **Dataverse** lets you securely store and manage data that's used by business applications. Data within Dataverse is stored in a set of tables. A *table* is a set of rows (formerly referred to as records) and columns (formerly referred to as fields/attributes). Each column in the table is designed to store a certain type of data, for example, name, age, salary, and so on. Dataverse includes a base set of standard tables that cover typical scenarios, but you can also create custom tables specific to your organization and populate them with data by using dataflows. App makers can then use Power Apps and Power Automate to build rich applications that use this data.
 
     * **Azure Data Lake Storage** lets you collaborate with people in your organization using Power BI, Azure Data, and AI services, or using custom-built Line of Business Applications that read data from the lake. Dataflows that load data to an Azure Data Lake Storage account store data in Common Data Model folders. Common Data Model folders contain schematized data and metadata in a standardized format, to facilitate data exchange and to enable full interoperability across services that produce or consume data stored in an organization’s Azure Data Lake Storage account as the shared storage layer.
 
@@ -67,7 +67,7 @@ Dataflows in Power Apps:
 - [Self-service data prep in Power Apps](https://go.microsoft.com/fwlink/?linkid=2099972)
 - [Creating and using dataflows in Power Apps](https://go.microsoft.com/fwlink/?linkid=2100076)
 - [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://go.microsoft.com/fwlink/?linkid=2099973)
-- [Add data to an entity in Dataverse](https://go.microsoft.com/fwlink/?linkid=2100075)
+- [Add data to a table in Dataverse by using Power Query](https://go.microsoft.com/fwlink/?linkid=2100075)
 - Visit the Power Apps [dataflow community](https://go.microsoft.com/fwlink/?linkid=2099971) and share what you’re doing, ask questions, or [submit new ideas](https://go.microsoft.com/fwlink/?linkid=2100074)
 - Visit the Power Apps dataflow community forum and share what you’re doing, ask questions, or [submit new ideas](https://go.microsoft.com/fwlink/?linkid=2100074)
 
