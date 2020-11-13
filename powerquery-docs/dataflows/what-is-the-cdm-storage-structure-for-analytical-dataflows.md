@@ -56,7 +56,7 @@ Inside each dataflow folder, there are sub-folders for each entity and a metadat
 
  
 
-![what's inside a dataflow folder](https://docs.microsoft.com/common-data-model/media/cdm-folder.png) 
+![what's inside a dataflow folder](media/cdm-folder.png) 
 
  
 

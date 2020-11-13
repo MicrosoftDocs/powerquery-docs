@@ -80,7 +80,7 @@ The **Azure** category includes the following available data connections for dat
 The **Online Services** includes the following available data connections for dataflows:
 
 * Amazon Redshift
-* Dataverse for Apps
+* Dataverse
 * Microsoft Exchange Online
 * Salesforce Objects
 * Salesforce Reports
