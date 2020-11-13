@@ -13,7 +13,7 @@ LocalizationGroup: Data from files
 
 # Troubleshooting dataflow issue: get data from dataflow
 
-[!INCLUDE [CDS note](includes/cc-data-platform-banner.md)]
+[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
 
 You might have created a dataflow, but then have difficulty in getting data from it (either using Power Query in Power BI Desktop or from other dataflows). This article explains some of the most common issues that happen when you get data from a dataflow.
 

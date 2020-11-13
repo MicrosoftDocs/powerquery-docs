@@ -11,7 +11,7 @@ LocalizationGroup: reference
 
 # Common Data Service
 
-[!INCLUDE [CDS note](includes/cc-data-platform-banner.md)]
+[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
 
 ## Summary
 
