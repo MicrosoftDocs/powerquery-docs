@@ -12,6 +12,8 @@ ms.author: bensack
 
 # Understanding the differences between standard and analytical dataflows 
 
+[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
+
 You can categorize dataflows in many ways. One of those ways is the difference between standard and analytical dataflows. Understanding this concept helps you create the dataflow for the right requirement. Dataflows create entities, and entities are of two types: standard and analytical. Based on the type of entity produced by the dataflow, we call the dataflow either a standard dataflow or an analytical dataflow. 
 
 ## Standard dataflow 

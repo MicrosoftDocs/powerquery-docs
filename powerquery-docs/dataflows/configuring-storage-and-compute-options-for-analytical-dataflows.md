@@ -13,6 +13,8 @@ LocalizationGroup: Data from files
 
 # Dataflow storage options
 
+[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
+
 [Standard dataflows](understanding-differences-between-analytical-standard-dataflows.md) always load data into Dataverse tables in an environment. [Analytical dataflows](understanding-differences-between-analytical-standard-dataflows.md) always load data into Azure Data Lake Storage accounts. For both dataflow types, there's no need to provision or manage the storage. Dataflow storage, by default, is provided and managed by products the dataflow is created in.
 
 Analytical dataflows allow an additional storage option: your organizations' Azure Data Lake Storage account. This option enables access to the data created by a dataflow directly through Azure Data Lake Storage interfaces. Providing your own storage account for analytical dataflows enables other Azure or line-of-business applications to leverage the data by connecting to the lake directly.

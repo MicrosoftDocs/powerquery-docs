@@ -13,6 +13,8 @@ LocalizationGroup: Data from files
 
 # What licenses do you need to use dataflows?
 
+[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
+
 Dataflows can be created in different portals, such as Power BI and Power Apps portal, and can be of two types, analytical and standard dataflows. In addition, some dataflow features are only available as Premium features. Considering the wide range of products that can use dataflows, and feature availability in each product or dataflow type, it's important to know what licensing options you need to use dataflows.
 
 ## Creating dataflows in Power BI workspaces

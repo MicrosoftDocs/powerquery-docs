@@ -12,6 +12,8 @@ ms.author: v-douklo
 
 # Using the output of Power Platform dataflows from other Azure Data workloads
 
+[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
+
 Depending on the storage for the output of the Power Platform dataflows, you can use that output in other Azure services.
 
 ## The benefits of working with the output of Power Platform dataflows
