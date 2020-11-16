@@ -1,15 +1,17 @@
 ---
 title: Power Query Common Data Service connector
-description: Provides basic information and connection instructions, along with OData API performance information, entity retrieval rate, and alternative means of connecting.
+description: Provides basic information and connection instructions, along with OData API performance information, table retrieval rate, and alternative means of connecting.
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 08/06/2020
+ms.date: 11/13/2020
 ms.author: v-douklo
 LocalizationGroup: reference
 ---
 
 # Common Data Service
+
+[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
 
 ## Summary
 
@@ -21,7 +23,7 @@ Authentication types: Organizational account
 
 ## Prerequisites
 
-You must have a Common Data Service environment with maker permissions to access the portal, and read permissions to access data within entities.
+You must have a Common Data Service environment with maker permissions to access the portal, and read permissions to access data within tables.
 
 ## Capabilities supported
 
@@ -36,12 +38,12 @@ Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linki
 
 In the new browser tab that opens, copy the root of the URL. This root URL is the unique URL for your environment. The URL will be in the format of https://\<*yourenvironmentid*>.crm.dynamics.com/. Make sure not to copy the rest of the URL. Keep this URL somewhere handy so you can use it later, for example, when you create Power BI reports.
 
-![Common Data Service Environment](media/common-data-service/cds-env.png)
+![Location of the Common Data Service environment URL](media/common-data-service/cds-env.png)
 
 ## Connect to Common Data Service from Power BI Desktop
 
 >[!Note]
-> The Power Query Common Data Service connector is mostly suited towards analytics workloads, not bulk data extraction. For more information, see [Alternative Common Data Service connections](#alternative-common-data-service-connections).
+> The Power Query Common Data Service connector is mostly suited towards analytics workloads, not bulk data extraction. For more information, go to [Alternative Common Data Service connections](#alternative-common-data-service-connections).
 
 To connect to Common Data Service from Power BI Desktop:
 
@@ -93,21 +95,21 @@ To connect to Common Data Service from Power Query Online:
 
 ### Common Data Service OData API performance and throttling limits
 
-For information about OData API performance and throttling limits for Common Data Service connections, see [Requests limits and allocations](https://docs.microsoft.com/power-platform/admin/api-request-limits-allocations). These limitations apply to both the Common Data Source connector (which uses the OData API as an implementation detail) and the [OData Feed](odatafeed.md) connector when accessing the same endpoint.
+For information about OData API performance and throttling limits for Common Data Service connections, go to [Requests limits and allocations](https://docs.microsoft.com/power-platform/admin/api-request-limits-allocations). These limitations apply to both the Common Data Service connector (which uses the OData API as an implementation detail) and the [OData Feed](odatafeed.md) connector when accessing the same endpoint.
 
-### Entity retrieval rate
+### Table retrieval rate
 
-As a guideline, most default entities will be retrieved at a rate of approximately 500 rows per second using the Common Data Service connector. Take this rate into account when deciding whether you want to connect to Common Data Service or export to data lake. If you require faster retrieval rates, consider using the Export to data lake feature or Tabular Data Stream (TDS) endpoint. For more information, see [Alternative Common Data Service connections](#alternative-common-data-service-connections).
+As a guideline, most default tables will be retrieved at a rate of approximately 500 rows per second using the Common Data Service connector. Take this rate into account when deciding whether you want to connect to Common Data Service or export to data lake. If you require faster retrieval rates, consider using the Export to data lake feature or Tabular Data Stream (TDS) endpoint. For more information, go to [Alternative Common Data Service connections](#alternative-common-data-service-connections).
 
 ### Alternative Common Data Service connections
 
 There are several alternative ways of extracting and migrating data from Common Data Service:
 
-* Use the OData connector to move data in and out of Common Data Service. For more information on how to migrate data between Common Data Service environments using the dataflows OData connector, see [Migrate data between Common Data Service environments using the dataflows OData connector](https://docs.microsoft.com/powerapps/developer/common-data-service/cds-odata-dataflows-migration).
+* Use the OData connector to move data in and out of Common Data Service. For more information on how to migrate data between Common Data Service environments using the dataflows OData connector, go to [Migrate data between Common Data Service environments using the dataflows OData connector](https://docs.microsoft.com/powerapps/developer/common-data-service/cds-odata-dataflows-migration).
 
-* Use the **Export to data lake** feature in Power Apps to extract data from Common Data Service into Azure Data Lake Storage Gen2, which can then be used to run analytics. For more information about the export to data lake feature, see [Exporting CDS data to Azure Data Lake is Generally Available](https://powerapps.microsoft.com/blog/exporting-cds-data-to-azure-data-lake-preview/#:~:text=Exporting%20CDS%20data%20to%20Azure%20Data%20Lake%20is,BI%20reporting%2C%20ML%2C%20Data%20Warehousing%20and%20other%20).
+* Use the **Export to data lake** feature in Power Apps to extract data from Common Data Service into Azure Data Lake Storage, which can then be used to run analytics. For more information about the export to data lake feature, go to [Exporting Common Data Service data to Azure Data Lake is Generally Available](https://powerapps.microsoft.com/blog/exporting-cds-data-to-azure-data-lake-preview/#:~:text=Exporting%20CDS%20data%20to%20Azure%20Data%20Lake%20is,BI%20reporting%2C%20ML%2C%20Data%20Warehousing%20and%20other%20).
 
-* Use the Tabular Data Stream (TDS) Protocol endpoint to access read-only data in Common Data Service. For more information about this preview feature and a video on how it works, see [Tabular Data Stream (TDS) Protocol endpoint for Common Data Service (CDS)](https://powerapps.microsoft.com/blog/tabular-data-stream-tds-protocol-endpoint-for-common-data-service-cds/).
+* Use the Tabular Data Stream (TDS) Protocol endpoint to access read-only data in Common Data Service. For more information about this preview feature and a video on how it works, go to [Tabular Data Stream (TDS) Protocol endpoint for Common Data Service](https://powerapps.microsoft.com/blog/tabular-data-stream-tds-protocol-endpoint-for-common-data-service-cds/).
 
 >[!Note]
 > Both the Common Data Service connector and the OData APIs are meant to serve analytical scenarios where data volumes are relatively small. The recommended approach for bulk data extraction is “Export to Data Lake”. The TDS endpoint is a better option than the Common Data Service connector and OData endpoint, but is currently in Preview.

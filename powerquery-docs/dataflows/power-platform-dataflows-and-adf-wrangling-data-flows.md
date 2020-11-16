@@ -12,11 +12,13 @@ ms.author: v-douklo
 
 # How Power Platform dataflows and Azure Data Factory wrangling dataflows relate to each other?
 
+[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
+
 Power Platform dataflows and Azure Data Factory dataflows are often considered to be doing the same thing: extraction of the data from source systems, transforming the data, and loading the transformed data into a destination. However, there are differences in these two types of dataflows, and you can have a solution implemented that works with a combination of these technologies. This article describes this relationship in more detail.
 
 ## Power Platform dataflows
 
-Power Platform dataflows are data transformation services empowered by the Power Query engine and hosted in the cloud. These dataflows get data from different data sources and, after applying transformations, store it either in Common Data Service or in Azure Data Lake Storage Gen2.
+Power Platform dataflows are data transformation services empowered by the Power Query engine and hosted in the cloud. These dataflows get data from different data sources and, after applying transformations, store it either in Dataverse or in Azure Data Lake Storage.
 
 ![Power Platform dataflows diagram](media/dataflows-power-platform-dynamics-365/dataflow-function.png)
 
@@ -39,7 +41,7 @@ The main point is knowing their differences, because then you can think about sc
 
 | Features                   | Power Platform dataflows                                     | Azure Data Factory wrangling dataflows                       |
 | -------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Destinations               | Common Data Services or Azure Data Lake Storage Gen2        | Many destinations, listed [here](https://azure.microsoft.com/blog/new-connectors-available-in-azure-data-factory-v2/) |
+| Destinations               | Dataverse or Azure Data Lake Storage        | Many destinations, listed [here](https://azure.microsoft.com/blog/new-connectors-available-in-azure-data-factory-v2/) |
 | Power Query transformation | All Power Query functions are supported                      | A limited list of functions supported&mdash;here is the [list](https://docs.microsoft.com/azure/data-factory/wrangling-data-flow-functions) |
 | Sources                    | Many sources are supported                                  | Only a few sources&mdash;here is the [list](https://docs.microsoft.com/azure/data-factory/wrangling-data-flow-functions) |
 | Scalability                | Depends on the Premium capacity and the use of the enhanced compute engine | Highly scalable, the query folding into spark code for cloud scale execution |
