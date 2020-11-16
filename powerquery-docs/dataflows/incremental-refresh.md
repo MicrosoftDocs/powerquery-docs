@@ -14,6 +14,8 @@ LocalizationGroup: Data from files
 ---
 # Using incremental refresh with dataflows
 
+[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
+
 With dataflows, you can bring large amounts of data into Power BI or your organization's provided storage. In some cases, however, it's not practical to update a full copy of source data in each refresh. A good alternative is **incremental refresh**, which provides the following benefits for dataflows:
 
 * **Refresh occurs faster**&mdash;only data that's changed needs to be refreshed. For example, refresh only the last five days of a 10-year dataflow.
@@ -153,7 +155,7 @@ You can read more about incremental refresh in [Incremental refresh in Power BI 
 
 ## Considerations and limitations
 
-Incremental refresh in Power Platform dataflows is only supported in dataflows with an Azure Data Lake Storage Gen2 account, not in dataflows with Common Data Service as the destination. 
+Incremental refresh in Power Platform dataflows is only supported in dataflows with an Azure Data Lake Storage account, not in dataflows with Dataverse as the destination. 
 
 ## Next Steps
 
