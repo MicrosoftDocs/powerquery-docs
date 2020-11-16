@@ -14,7 +14,9 @@ ms.author: gepopell
 
 # What are dataflows?  
 
-Dataflows are a self-service, cloud-based, data preparation technology. Dataflows enable customers to ingest, transform, and load data into Common Data Service environments, Power BI workspaces, or your organization’s Azure Data Lake Storage Gen2 account. Dataflows are authored using Power Query experience, a unified Data Connectivity and Preparation experience already featured in many Microsoft products, including Excel and Power BI. Customers can trigger dataflows to run either on demand or automatically on a schedule; data is always kept up to date. 
+[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
+
+Dataflows are a self-service, cloud-based, data preparation technology. Dataflows enable customers to ingest, transform, and load data into Microsoft Dataverse environments, Power BI workspaces, or your organization’s Azure Data Lake Storage account. Dataflows are authored using Power Query experience, a unified Data Connectivity and Preparation experience already featured in many Microsoft products, including Excel and Power BI. Customers can trigger dataflows to run either on demand or automatically on a schedule; data is always kept up to date. 
 
  
 
@@ -36,7 +38,7 @@ Dataflows are featured in multiple Microsoft products and don't require a datafl
 
  
 
-The diagram above shows an overall view of how a dataflow is defined. A dataflow gets data from different data sources (there are more than 80 data sources supported already). Then, based on the transformations configured using the Power Query authoring experience, transforms the data using the dataflow engine. Finally, the data is loaded to the output destination, which can be a Power Platform environment, a Power BI workspace, or the organization’s Azure Data Lake Storage Gen2 account.  
+The diagram above shows an overall view of how a dataflow is defined. A dataflow gets data from different data sources (there are more than 80 data sources supported already). Then, based on the transformations configured using the Power Query authoring experience, transforms the data using the dataflow engine. Finally, the data is loaded to the output destination, which can be a Power Platform environment, a Power BI workspace, or the organization’s Azure Data Lake Storage account.  
 
  
 
@@ -80,7 +82,7 @@ Because a dataflow stores the resulting entities in cloud-based storage, other s
 
  
 
-For example, Power BI, Power Apps, Power Automate, Power Virtual Agent, and Dynamics 365 applications can get the data produced by the dataflow by connecting to Common Data Service, Power Platform Dataflow connector, or directly through the lake, depending on the destination configured at dataflow creation time. 
+For example, Power BI, Power Apps, Power Automate, Power Virtual Agent, and Dynamics 365 applications can get the data produced by the dataflow by connecting to Dataverse, Power Platform Dataflow connector, or directly through the lake, depending on the destination configured at dataflow creation time. 
 
  
 
@@ -122,7 +124,7 @@ You can use dataflows for many purposes. The following scenarios provide a few e
 
  
 
-In this scenario, the decision has been made by an organization to use Power Apps for the new user interface experience rather than the legacy on-premises system. Power Apps, Power Automate, and AI Builder all leverage Common Data Service as the primary data storage system. The current data in the existing on-premises system can be migrated into Common Data Service using a dataflow, and then leverage by the above products. 
+In this scenario, the decision has been made by an organization to use Power Apps for the new user interface experience rather than the legacy on-premises system. Power Apps, Power Automate, and AI Builder all leverage Dataverse as the primary data storage system. The current data in the existing on-premises system can be migrated into Dataverse using a dataflow, and then leverage by the above products. 
 
  
 
@@ -130,11 +132,11 @@ In this scenario, the decision has been made by an organization to use Power App
 
  
 
-You can use dataflows as a replacement for other ETL tools to build a data warehouse. For example, the data engineers of a company decide to use dataflows to build the star-schema designed data warehouse, including fact and dimension tables in Azure Data Lake Storage Gen2. Then Power BI is used to generate reports and dashboards by getting data from the dataflows. 
+You can use dataflows as a replacement for other ETL tools to build a data warehouse. For example, the data engineers of a company decide to use dataflows to build the star-schema designed data warehouse, including fact and dimension tables in Azure Data Lake Storage. Then Power BI is used to generate reports and dashboards by getting data from the dataflows. 
 
  
 
-![Building a data warehouse using dataflows](https://i2.wp.com/radacad.com/wp-content/uploads/2019/01/2019-01-21_06h49_16.png) 
+![Building a data warehouse using dataflows](media/building-data-warehouse.png) 
 
  
 
@@ -146,7 +148,7 @@ If multiple Power BI solutions are using the same transformed version of a table
 
  
 
-![Re-use of tables across multiple solutions](https://i1.wp.com/radacad.com/wp-content/uploads/2019/01/2019-01-21_06h36_16.png) 
+![Re-use of tables across multiple solutions](media/reuse-tables-in-solutions.png) 
 
  
 

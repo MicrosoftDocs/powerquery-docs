@@ -12,6 +12,8 @@ ms.author: v-douklo
 
 # Best practices for creating a data warehouse using dataflows
 
+[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
+
 Designing a data warehouse is one of the most common tasks you can do with a dataflow. This article highlights some of the best practices for creating a data warehouse using a dataflow.
 
 ## Staging dataflows
@@ -20,7 +22,7 @@ One of the key points in any data integration system is to reduce the number of 
 
 The rest of the data integration will then use the staging database as the source for further transformation and converting it to the data warehouse model structure.
 
-We recommended that you follow the same approach using dataflows. Create a set of dataflows that are responsible for just loading data "as is" from the source system (only for the tables that are needed). The result is then stored in the storage structure of the dataflow (either Azure Data Lake Storage Gen2 or Common Data Services). This change ensures that the read operation from the source system is minimal.
+We recommended that you follow the same approach using dataflows. Create a set of dataflows that are responsible for just loading data "as is" from the source system (only for the tables that are needed). The result is then stored in the storage structure of the dataflow (either Azure Data Lake Storage or Dataverse). This change ensures that the read operation from the source system is minimal.
 
 Next, you can create other dataflows that source their data from staging dataflows. Benefits of this approach include:
 

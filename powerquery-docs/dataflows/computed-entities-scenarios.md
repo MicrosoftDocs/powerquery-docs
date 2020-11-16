@@ -33,7 +33,7 @@ For example, if two entities are sharing even a part of their transformation log
 
 ![without computed entity](media/SeparateEntities.png)
 
-However, if a computed entity is used, then the common (shared) part of the transformation will be processed once and stored in Azure Data Lake Storage Gen2. The remaining transformations will then be processed from the output of the common transformation. Overall, this processing is much faster.
+However, if a computed entity is used, then the common (shared) part of the transformation will be processed once and stored in Azure Data Lake Storage. The remaining transformations will then be processed from the output of the common transformation. Overall, this processing is much faster.
 
 ![Computed entity for the shared transformations](media/Computedentityinbetween.png)
 

@@ -40,6 +40,8 @@
         href: data-profiling-tools.md
       - name: "Using the Queries pane"
         href: queries-pane.md
+      - name: "Diagram view (Preview)"
+        href: diagram-view.md
       - name: "Using Schema view (Preview)"
         href: schema-view.md
       - name: "Share a query"
@@ -235,7 +237,7 @@
       - name: "Azure SQL Data Warehouse"
         href: Connectors/AzureSQLDataWarehouse.md      
       - name: "Common Data Service"
-        href: Connectors/CommonDataService.md
+        href: Connectors/commondataservice.md
       - name: "Data Lake Storage"
         href: Connectors/DataLakeStorage.md
       - name: "Excel"
