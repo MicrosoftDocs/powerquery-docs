@@ -52,11 +52,11 @@ Imagine you want to enrich the *Account* entity with data from the *ServiceCalls
 
 First you would need to aggregate the data from the ServiceCalls to calculate the number of support calls that were done for each account in the last year. 
 
-![Example of a computed entity in Power BI Premium](media/dataflows-computed-entities/computed-entities-premium-02.png)
+![Aggregating the data from the Service Calls](media/dataflows-computed-entities/computed-entities-premium-02.png)
 
 Next, you would want to merge the *Account* entity with the *ServiceCallsAggregated* entity to calculate the enriched **Account** table.
 
-![Example of a computed entity in Power BI Premium](media/dataflows-computed-entities/computed-entities-premium-03.png)
+![Merging the Account entity with the ServiceCallsAggregated entity](media/dataflows-computed-entities/computed-entities-premium-03.png)
 
 And then you can see the results, shown as *EnrichedAccount* in the following image.
 
@@ -68,7 +68,7 @@ And that's it&mdash;the transformation is done on the data in the dataflow that 
 
 It's important to note that if you remove the workspace from Power BI Premium capacity, the associated dataflow will no longer refresh. 
 
-When working with dataflows specifically created in an organization's Azure Data Lake Storage Gen2 account, linked entities and computed entities only work properly when the entities reside in the same storage account. For more information, see [Connect Azure Data Lake Storage Gen2 for dataflow storage)](https://docs.microsoft.com/power-bi/service-dataflows-connect-azure-data-lake-storage-gen2).
+When working with dataflows specifically created in an organization's Azure Data Lake Storage account, linked entities and computed entities only work properly when the entities reside in the same storage account. For more information, see [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://docs.microsoft.com/power-bi/service-dataflows-connect-azure-data-lake-storage-gen2).
 
 Linked entities are only available for dataflows created in Power BI and Power Apps portals. As a best practice, when doing computations on data joined by on-premises and cloud data, create a new entity to perform such computations. This provides a better experience than using an existing entity for computations, such as an entity that is also querying data from both sources and doing in-lake transformations.
 
