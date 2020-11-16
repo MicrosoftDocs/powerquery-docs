@@ -16,7 +16,7 @@ ms.author: bensack
 
 Dataflows are used to extract, transform, and load data to a storage destination where it can be leveraged for different scenarios. Because not all storage destinations share the same charecteristics, some dataflow features and behaviors differ depending on the storage destination the dataflow loads data into. Before you create a dataflow, it's important to understand how the data is going to be used, and choose the storage destination according to the requirements of your solution.
 
-Selecting a storage destination of a dataflow will determine the dataflow's type. A dataflow that loads data into Dataverse tables will be categorized as a *standard dataflow*. Dataflows that load data to analytical entities will be categorized as an *analytical dataflow*.
+Selecting a storage destination of a dataflow determines the dataflow's type. A dataflow that loads data into Dataverse tables is categorized as a *standard dataflow*. Dataflows that load data to analytical entities is categorized as an *analytical dataflow*.
 
 Dataflows created in Power BI are always analytical dataflows. Dataflows created in Power Apps can either be standard or Aanalytical, depending on your selection when creating the dataflow.
 
