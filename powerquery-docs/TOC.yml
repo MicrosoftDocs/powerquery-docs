@@ -9,7 +9,23 @@
       - name: "Getting data"
         href: get-data-experience.md
       - name: "Authentication with a data source"
-        href: ConnectorAuthentication.md
+        href: ConnectorAuthentication.md 
+    - name: "Articles for review"
+      items:
+      - name: "Using the Applied steps list"
+        href: applied-steps.md
+      - name: "Understanding the queries pane"
+        href: queries-pane.md
+      - name: "Share a query"
+        href: share-query.md
+      - name: "Parse text as JSON or XML"
+        href: parse-json-xml.md
+      - name: "Custom Functions"
+        href: custom-function.md
+      - name: "Rename column"
+        href: rename-column.md
+      - name: "Move columns"
+        href: move-columns.md
     - name: Transform data
       items:
       - name: "Use Power Query"
@@ -18,6 +34,8 @@
         href: power-query-tutorial-shape-combine.md
       - name: "Using the Applied Steps list"
         href: applied-steps.md
+      - name: "Query folding basics"
+        href: query-folding-basics.md
       - name: "Using the data profiling tools"
         href: data-profiling-tools.md
       - name: "Using the Queries pane"
@@ -62,6 +80,10 @@
           href: fill-values-column.md
         - name: "Sort columns"
           href: sort-columns.md
+        - name: "Rename column"
+          href: rename-column.md
+        - name: "Move columns"
+          href: move-columns.md
         - name: "Replace values"
           href: replace-values.md
         - name: "Parse text as JSON or XML"
