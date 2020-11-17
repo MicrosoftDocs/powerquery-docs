@@ -15,7 +15,7 @@ Power Query offers a series of methods to gain access to files that are hosted o
 ## Browse files Experience
 
 >[!NOTE]
->This experience currently only available inside of the Power Query Online experience for PowerApps and can only browse for files in the OneDerive for Business account of the authenticated user.
+>Currently only available inside of the Power Query Online for PowerApps and can only browse for files in the OneDerive for Business account of the authenticated user.
 
 When creating a Dataflow inside of PowerApps using any of these connectors:
 * Excel
