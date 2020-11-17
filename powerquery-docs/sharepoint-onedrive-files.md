@@ -76,7 +76,7 @@ In Power Query, you can use the link you just copied to the clipboard. Take the 
 
 ## SharePoint folder connector
 
-You can read a detailed step by step guide on how to connect to the files hosted on your SharePoint site from this article on the [SharePoint folder](connectors/sharepointfolder#connect-to-a-sharepoint-folder.md).
+You can read a detailed step by step guide on how to connect to the files hosted on your SharePoint site from this article on the [SharePoint folder](connectors/sharepointfolder.md#connect-to-a-sharepoint-folder).
 
 After successfully establishing the connection, you'll be prompted with a table preview with  the files in your SharePoint site. Click the **Transform Data** button at the bottom right of the window.
 
