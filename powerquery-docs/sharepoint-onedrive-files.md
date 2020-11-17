@@ -1,6 +1,6 @@
 ---
 title: Use SharePoint & OneDrive files in Power Query
-description: All available methods in Power Query to get files from your SharePoint or OneDrive accounts.
+description: All available methods in Power Query to get files from your SharePoint or OneDrive for Business accounts.
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: 
@@ -10,7 +10,7 @@ ms.author: v-miesco
 
 # Use SharePoint & OneDrive for Business files in Power Query
 
-Power Query offers a series of methods to gain access to files that are hosted on either SharePoint or OneDrive.
+Power Query offers a series of methods to gain access to files that are hosted on either SharePoint or OneDrive for Business.
 
 ## Browse files Experience
 
@@ -71,9 +71,6 @@ In Power Query, you can use the link you just copied to the clipboard. Take the 
 > [!NOTE]
 > To use a OneDrive for Business file as a data source in the Power BI service, with **Service Refresh** enabled for that file, make sure you select **OAuth2** as the **Authentication method** when configuring your refresh settings. Otherwise, you may encounter an error (such as, *Failed to update data source credentials*) when you attempt to connect or to refresh. Selecting **OAuth2** as the authentication method remedies that credentials error.
 
->[!CAUTION]
->When working with files hosted on OneDrive Personal, the file that you want to connect to needs to be publicly available. When setting the authentication method for this connection, select the option that reads **Anonymous**.
-
 ## SharePoint folder connector
 
 You can read a detailed step by step guide on how to connect to the files hosted on your SharePoint site from this article on the [SharePoint folder](connectors/sharepointfolder.md#connect-to-a-sharepoint-folder).
@@ -114,7 +111,7 @@ For example:
 
 ## SharePoint.Contents function
 
-While the SharePoint folder connector offers you an experience where you can see all the files available in your SharePoint / OneDrive for Business site at once, you can also opt for a different experience where you can navigate through the folders of your SharePoint / OneDrive and reach the desired folder or file(s) that you're interested in.
+While the SharePoint folder connector offers you an experience where you can see all the files available in your SharePoint / OneDrive for Business site at once, you can also opt for a different experience where you can navigate through the folders of your SharePoint / OneDrive for Business and reach the desired folder or file(s) that you're interested in.
 
 This experience is provided through the `SharePoint.Contents` function as described in [the documenation article for that function](https://docs.microsoft.com/powerquery-m/sharepoint-contents). Take the following steps to use this function:
 
@@ -139,4 +136,4 @@ This experience is provided through the `SharePoint.Contents` function as descri
      ![Table preview after navigating to the Sales Reports folder](images/sp-navigate-level-3-me.png)
 
 >[!NOTE]
-> The experience provided by the `SharePoint.Contents` function is optimal for SharePoint and OneDrive environments with large number of files.
+> The experience provided by the `SharePoint.Contents` function is optimal for SharePoint and OneDrive for Business environments with large number of files.
