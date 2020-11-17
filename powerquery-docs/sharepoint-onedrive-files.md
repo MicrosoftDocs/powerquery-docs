@@ -71,6 +71,9 @@ In Power Query, you can use the link you just copied to the clipboard. Take the 
 > [!NOTE]
 > To use a OneDrive for Business file as a data source in the Power BI service, with **Service Refresh** enabled for that file, make sure you select **OAuth2** as the **Authentication method** when configuring your refresh settings. Otherwise, you may encounter an error (such as, *Failed to update data source credentials*) when you attempt to connect or to refresh. Selecting **OAuth2** as the authentication method remedies that credentials error.
 
+>[!CAUTION]
+>When working with files hosted on OneDrive Personal, the file that you want to connect to needs to be publicly available. When setting the authentication method for this connection, select the option that reads **Anonymous**.
+
 ## SharePoint folder connector
 
 You can read a detailed step by step guide on how to connect to the files hosted on your SharePoint site from this article on the [SharePoint folder](connectors/sharepointfolder.md#connect-to-a-sharepoint-folder).
