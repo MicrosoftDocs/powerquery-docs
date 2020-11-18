@@ -13,6 +13,8 @@ LocalizationGroup: Data from files
 
 # What licenses do you need to use dataflows?
 
+[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
+
 Dataflows can be created in different portals, such as Power BI and Power Apps portal, and can be of two types, analytical and standard dataflows. In addition, some dataflow features are only available as Premium features. Considering the wide range of products that can use dataflows, and feature availability in each product or dataflow type, it's important to know what licensing options you need to use dataflows.
 
 ## Creating dataflows in Power BI workspaces
@@ -25,7 +27,7 @@ Power BI pro account is available on a user-monthly-basis option. Multiple optio
 
 If you want to create dataflows in the Power Platform environment a Power Apps (per user or per app) license is required.
 
-If you want to create analytical dataflows that store data in your organization's Azure Data Lake Storage Gen2 account, you or your administrator will need access to an Azure subscription and an Azure Data Lake Storage Gen2 account.
+If you want to create analytical dataflows that store data in your organization's Azure Data Lake Storage account, you or your administrator will need access to an Azure subscription and an Azure Data Lake Storage account.
 
 ## Premium features
 
@@ -39,9 +41,9 @@ The following table contains a list of features and the license needed for them 
 
 | Feature                                                      | Power BI                           | Power Apps                                                   |
 | ------------------------------------------------------------ | ---------------------------------- | ------------------------------------------------------------ |
-| Store data in Common Data Services entities (standard dataflow) | N/A                                | Per app plan<br />Per user plan                              |
-| Store data in Azure Data Lake Storage Gen2 (analytical dataflow)               | Power BI Pro<br />Power BI Premium | N/A                                                          |
-| Store data in customer provided Azure Data Lake Storage Gen2 (analytical dataflow; bring your own Azure Data Lake Storage Gen2) | Power BI Pro<br />Power BI Premium | Per app plan<br />Per user plan                              |
+| Store data in Dataverse tables (standard dataflow) | N/A                                | Per app plan<br />Per user plan                              |
+| Store data in Azure Data Lake Storage (analytical dataflow)               | Power BI Pro<br />Power BI Premium | N/A                                                          |
+| Store data in customer provided Azure Data Lake Storage (analytical dataflow; bring your own Azure Data Lake Storage) | Power BI Pro<br />Power BI Premium | Per app plan<br />Per user plan                              |
 | The enhanced compute engine (running on Power BI Premium capacity / parallel execution of transforms) | Power BI Premium                   | N/A                                                          |
 | DirectQuery connection to dataflow                           | Power BI Premium                   | N/A                                                          |
 | AI capabilities in Power BI                                  | Power BI Premium                   | N/A                                                          |
@@ -62,7 +64,7 @@ The table above shows what features each license will give you. The following se
 
 ### Power Apps Licenses
 
-If you use the Power Apps license to create dataflows, there's no limitation on the number of dataflows and entities you can create. However, there's a limitation on the size of Common Data Service you can use.
+If you use the Power Apps license to create dataflows, there's no limitation on the number of dataflows and entities you can create. However, there's a limitation on the size of Dataverse service you can use.
 
 The Power Apps per app plan covers up to a 50-MB database capacity. The Power Apps per user plan allows you to have a database of 250-MB capacity.
 
@@ -72,11 +74,11 @@ Power BI Pro gives you the ability to create analytical dataflows, but not any o
 
 ### Power BI Premium
 
-If you use Power BI Premium (capacity-based licensing), you can use all the AI capabilities in Power BI, computed entities and linked entities, with the ability to have a DirectQuery connection to the dataflow, and you can use the enhanced compute engine. However, the dataflow created under a premium capacity license uses only the internal Azure Data Lake Storage Gen2 storage, and won't be accessible by other platforms except Power BI itself. You can't create external dataflows just by having a Power BI Premium license; you need to have an Azure subscription for Azure Data Lake Storage Gen2 as well.
+If you use Power BI Premium (capacity-based licensing), you can use all the AI capabilities in Power BI, computed entities and linked entities, with the ability to have a DirectQuery connection to the dataflow, and you can use the enhanced compute engine. However, the dataflow created under a premium capacity license uses only the internal Azure Data Lake Storage, and won't be accessible by other platforms except Power BI itself. You can't create external dataflows just by having a Power BI Premium license; you need to have an Azure subscription for Azure Data Lake Storage as well.
 
-### Using your organization's Azure Data Lake Gen2 account for dataflow storage
+### Using your organization's Azure Data Lake Storage account for dataflow storage
 
-To create dataflows that store data in your organizations Azure Data Lake Storage Gen2 account, in addition to the product licenses above, an Azure subscription is required. The amount of storage that can be used is not limited by the dataflow or the product it was created in.
+To create dataflows that store data in your organizations Azure Data Lake Storage account, in addition to the product licenses above, an Azure subscription is required. The amount of storage that can be used is not limited by the dataflow or the product it was created in.
 
 ## Next step
 

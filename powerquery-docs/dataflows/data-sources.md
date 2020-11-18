@@ -14,6 +14,8 @@ LocalizationGroup: Data from files
 ---
 # Connect to data sources for dataflows
 
+[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
+
 With Power Platform dataflows, you can connect to many different data sources to create new dataflows, or add new entities to an existing dataflow.
 
 This article lists the many available data sources for creating or adding to dataflows, and describes how to create those dataflows using these data sources.
@@ -104,7 +106,7 @@ To connect to a data source, select the data source. This section uses one examp
 
 ![Select Common Data Service for Apps](media/dataflows-data-sources/dataflows-data-sources-05.png)
 
-A connection window for the selected data connection is displayed. If credentials are required, you're prompted to provide them. The following image shows a Server URL being entered to connect to a Common Data Service server.
+A connection window for the selected data connection is displayed. If credentials are required, you're prompted to provide them. The following image shows a Server URL being entered to connect to a Common Data Service for Apps server.
 
 ![Credentials or URLs for data connections](media/dataflows-data-sources/dataflows-data-sources-06.png)
 
