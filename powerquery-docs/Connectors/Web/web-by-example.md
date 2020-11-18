@@ -14,7 +14,7 @@ LocalizationGroup: Connect to data
 # Get webpage data by providing examples
 
 >[!NOTE]
->The availability of this feature in Power Query Online will occur in mid-October. In this upcoming release, the Power Query Online experience won’t contain an inline preview of the website in the By example dialog.
+>The availability of this feature in Power Query Online will occur in mid-October. In this upcoming release, the Power Query Online experience won’t contain an inline preview of the website in the By example dialog. 
 
 Getting data from a web page lets users easily extract data from web pages. Often however, data on Web pages aren't in tidy tables that are easy to extract. Getting data from such pages can be challenging, even if the data is structured and consistent.
 
