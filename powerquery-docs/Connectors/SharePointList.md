@@ -24,6 +24,10 @@ Function Reference Documentation: [SharePoint.Contents](https://docs.microsoft.c
 >[!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
+>[!NOTE]
+>AAD/OAuth for SharePoint on-premises isn’t supported using the on-premises data gateway. 
+
+
 ## Capabilities supported
 
 * Site URL
@@ -94,6 +98,6 @@ The user can force the interpretation to be consistent by explicitly setting the
 
 ![Column with explicit boolean type](./media/sharepoint-list/booleanexplicit.png)
 
+## Next steps
 
-
-
+[Optimize Power Query when expanding table columns](../optimize-expanding-table-columns.md)

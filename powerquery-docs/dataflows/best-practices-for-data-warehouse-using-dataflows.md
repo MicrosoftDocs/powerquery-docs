@@ -7,20 +7,22 @@ ms.service: powerquery
 ms.reviewer: v-douklo
 ms.topic: conceptual
 ms.date: 05/25/2020
-ms.author: v-rerad
+ms.author: v-douklo
 ---
 
-# Best practices for creating a data warehouse by using dataflows
+# Best practices for creating a data warehouse using dataflows
 
-Designing a data warehouse is one of the most common tasks you can do with a dataflow. This article highlights some of the best practices for using a dataflow to design and create a data warehouse.
-<!--Edits to H2s later in the article are suggested, to make them parallel. I don't know what verb to suggest for these next three H2s though.-->
+[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
+
+Designing a data warehouse is one of the most common tasks you can do with a dataflow. This article highlights some of the best practices for creating a data warehouse using a dataflow.
+
 ## Staging dataflows
 
 One of the key points in any data integration system is to reduce the number of reads from the source operational system. In the traditional data warehouse architecture, this reduction is done by creating a new database called a *staging database*. The purpose of the staging database is to load data as-is from the data source into the staging database on a regular schedule.
 
 The rest of the data integration then uses the staging database as the source for further transformation and conversion to the data warehouse model structure.
 
-We recommend that you follow the same approach by using dataflows. Create a set of dataflows that are responsible for just loading data as-is from the source system (and only for the tables that you need). The result is then stored in the storage structure of the dataflow (either Azure Data Lake Storage or Common Data Service). This change ensures that the read operation from the source system is minimal.
+We recommend that you follow the same approach by using dataflows. Create a set of dataflows that are responsible for just loading data as-is from the source system (and only for the tables you need). The result is then stored in the storage structure of the dataflow (either Azure Data Lake Storage or Dataverse). This change ensures that the read operation from the source system is minimal.
 
 Next, you can create other dataflows that source their data from staging dataflows. The benefits of this approach include:
 

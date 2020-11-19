@@ -6,12 +6,14 @@ author: radacad
 ms.service: powerquery
 ms.topic: conceptual
 ms.date: 05/25/2020
-ms.author: v-rerad
+ms.author: v-douklo
 
 LocalizationGroup: Data from files
 ---
 
 # Troubleshooting dataflow issues: Get data from a dataflow
+
+[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
 
 You might have created a dataflow but then had difficulty getting data from it (either by using Power Query in Power BI Desktop or from other dataflows). This article explains some of the most common problems with getting data from a dataflow.
 
@@ -49,7 +51,7 @@ Only analytical dataflows can be used in a **Get data** operation from a dataflo
 
 **Resolution:**
 
-If you've created a dataflow that stores data in Common Data Service&mdash;that is, a standard dataflow&mdash;you can't see it by using the **Get data** operation from a dataflow. However, you can use [**Get data** from Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-powerbi-connector#finding-your-common-data-service-environment-url) to access it. Or you can create an [analytical dataflow](understanding-differences-between-analytical-standard-dataflows.md) instead, and then access it by using **Get data** from a dataflow.
+If you've created a dataflow that stores data in Dataverse&mdash;that is, a standard dataflow&mdash;you can't see it by using the **Get data** operation from a dataflow. However, you can use [**Get data** from Dataverse](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-powerbi-connector#finding-your-dataverse-environment-url) to access it. Or you can create an [analytical dataflow](understanding-differences-between-analytical-standard-dataflows.md) instead, and then access it by using **Get data** from a dataflow.
 
 ![Get data from standard dataflow versus analytical dataflows](media/GetDataStandardAnalyticalDataflow.png)
 

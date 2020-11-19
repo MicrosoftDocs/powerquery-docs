@@ -5,28 +5,31 @@ author: radacad
 ms.service: powerquery
 ms.topic: conceptual
 ms.date: 05/25/2020
-ms.author: v-rerad
+ms.author: v-douklo
 ---
 
 # What is the storage structure for analytical dataflows? 
+
+[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
 
 Analytical dataflows store both data and metadata in Azure Data Lake Storage. Dataflows leverage a standard structure to store and describe data created in the lake, which is called Common Data Model folders. In this article, you'll learn more about the storage standard that dataflows use behind the scenes. 
 
 ## Storage needs a structure for an analytical dataflow 
 
-If a [dataflow is standard](understanding-differences-between-analytical-standard-dataflows.md#standard-dataflows), the data is stored in Common Data Service. Common Data Service is like a database system: it has the concept of tables, views, and so on. Common Data Service is the structured data storage option used by standard dataflows.
+If the [dataflow is standard](understanding-differences-between-analytical-standard-dataflows.md#standard-dataflows), then the data is stored in Dataverse. Dataverse is like a database system; it has the concept of tables, views, and so on. Dataverse is a structured data storage option used by standard dataflows. 
 
-However, when a dataflow is [analytical](understanding-differences-between-analytical-standard-dataflows.md#analytical-dataflows), the data is stored in Data Lake Storage. The data and metadata for a dataflow is stored in a Common Data Model folder. Because a storage account might have multiple dataflows stored in it, a hierarchy of folders and subfolders has been introduced to help organize the data. Depending on the product used to create the dataflow, the folders and subfolders might represent workspaces (or environments), and then the Common Data Model folder for the dataflow. In the Common Data model folder, both the schema and data for the dataflow entities are stored. This structure follows the standards defined for Common Data Model.
-<!--In the image, "CDS" should be spelled out.-->
+However, when the dataflow is [analytical](understanding-differences-between-analytical-standard-dataflows.md#analytical-dataflows), the data is stored in Azure Data Lake Storage. A dataflow’s data and metadata is stored in a Common Data Model folder. Since a storage account might have multiple dataflows stored in it, a hierarchy of folders and subfolders has been introduced to help organize the data. Depending on the product the dataflow was created in, the folders and subfolders may represent workspaces (or environments), and then the dataflow’s Common Data Model folder. Inside the Common Data Model folder, both schema and data of the dataflow entities are stored. This structure follows the standards defined for Common Data Model.
+
 ![Analytical dataflow stores the data in the Common Data Model structure](media/AnalyticalDataflowStoresDatainCDMFormat.png) 
 
 ## What is the Common Data Model storage structure?
 
 [Common Data Model](https://docs.microsoft.com/common-data-model/) is a metadata structure defined to bring conformity and consistency for using data across multiple platforms. Common Data Model isn't data storage, it's the way that data is stored and defined. 
 
-Common Data Model folders define how an entity's schema and its data should be stored. In Data Lake Storage, data is organized in folders. Folders can represent a workspace or environment. Under those folders, subfolders for each dataflow are created. 
+Common Data Model folders define how an entity's schema and its data should be stored. In Azure Data Lake Storage, data is organized in folders. Folders can represent a workspace or environment. Under those folders, subfolders for each dataflow are created. 
 
 ![Workspace folder structure](media/foldersWorkspaceAndDataflows.png) 
+ 
 
 ## What's in a dataflow folder? 
 
@@ -58,7 +61,7 @@ If you're using dataflows that use storage provided by the product they were cre
 
 To see how dataflows and the internal Data Lake Storage integration work, see [Dataflows and Azure Data Lake integration (Preview)](https://docs.microsoft.com/power-bi/transform-model/service-dataflows-azure-data-lake-integration). 
 
-If your organization enabled dataflows to take advantage its Data Lake Storage account and was selected as a load target for dataflows, you can still get data from the dataflow by using the Power Platform dataflow connector as described above. But you can also access the Common Data Model folder for the dataflow directly through the lake, even outside of Power Platform tools and services. Access to the lake is possible by using the Azure portal, Azure Storage Explorer, or any other service or experience that supports Data Lake Storage. More information: [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://docs.microsoft.com/power-bi/transform-model/service-dataflows-connect-azure-data-lake-storage-gen2)
+If your organization enabled dataflows to take advantage its Data Lake Storage account and was selected as a load target for dataflows, you can still get data from the dataflow by using the Power Platform dataflow connector as mentioned above. But you can also access the dataflow's Common Data Model folder directly through the lake, even outside of Power Platform tools and services. Access to the lake is possible through the Azure portal, Microsoft Azure Storage Explorer, or any other service or experience that supports Azure Data Lake Storage. More information: [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://docs.microsoft.com/power-bi/transform-model/service-dataflows-connect-azure-data-lake-storage-gen2)
 
 ![Connect to external Data Lake Storage](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-connect-azure-data-lake-storage-gen2/dataflows-connect-adlsg2_09.jpg) 
 

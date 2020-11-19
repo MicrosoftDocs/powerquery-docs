@@ -6,7 +6,7 @@ ms.service: powerquery
 ms.reviewer: v-douklo
 ms.topic: conceptual
 ms.date: 05/25/2020
-ms.author: v-rerad
+ms.author: v-douklo
 ---
 
 # Computed entity scenarios and use cases
@@ -33,9 +33,10 @@ For example, if two entities share even a part of their transformation logic, wi
 <!--Please write more descriptive alt text. -->
 ![Without computed entity](media/SeparateEntities.png)
 
-However, if a computed entity is used, the common (shared) part of the transformation is processed once and stored in Azure Data Lake Storage. The remaining transformations are then processed from the output of the common transformation. Overall, this processing is much faster.
+However, if a computed entity is used, then the common (shared) part of the transformation will be processed once and stored in Azure Data Lake Storage. The remaining transformations will then be processed from the output of the common transformation. Overall, this processing is much faster.
 <!--Also here. This is a nice diagram, it would be good to actually describe it.-->
 ![Computed entity for common transformations](media/Computedentityinbetween.png)
+
 
 A computed entity provides one place as the source code for the transformation and speeds up the transformation because it need only be done once instead of multiple times.<!--Suggested, to be less redundant. --> The load on the data source is also reduced.
 

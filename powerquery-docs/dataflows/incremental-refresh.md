@@ -14,7 +14,9 @@ LocalizationGroup: Data from files
 
 # Using incremental refresh with dataflows
 
-With dataflows, you can bring large amounts of data into Power BI or your organization's provided storage. In some cases, however, it's not practical to update a full copy of source data in each refresh. A good alternative is *incremental refresh*, which provides the following benefits for dataflows:
+[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
+
+With dataflows, you can bring large amounts of data into Power BI or your organization's provided storage. In some cases, however, it's not practical to update a full copy of source data in each refresh. A good alternative is **incremental refresh**, which provides the following benefits for dataflows:
 
 * **Refresh occurs faster**: Only data that's changed needs to be refreshed. For example, refresh only the last five days of a 10-year dataflow.
 * **Refresh is more reliable**: For example, it's not necessary to maintain long-running connections to volatile source systems.
@@ -39,6 +41,7 @@ After the dataflow is created and saved, select **Incremental refresh** ![Increm
 ![Incremental refresh icon for dataflows](media/dataflows-incremental-refresh/dataflows-incremental-refresh-01.png)
 
 When you select the icon, the **Incremental refresh settings** window appears. Turn on incremental refresh<!--Via Writing Style Guide.-->.
+
 
 ![Incremental refresh for dataflows](media/dataflows-incremental-refresh/dataflows-incremental-refresh-03.png)
 
@@ -147,9 +150,7 @@ Both approaches work according to your specified definitions in the refresh sett
 
 ## Considerations and limitations
 
-Incremental refresh in Power Platform dataflows is only supported in dataflows with an Azure Data Lake Storage account, not in dataflows with Common Data Service as the destination.
-
-## Next steps
+Incremental refresh in Power Platform dataflows is only supported in dataflows with an Azure Data Lake Storage account, not in dataflows with Dataverse as the destination. 
 
 
 This article described incremental refresh for dataflows. Here are some more articles that might be useful:

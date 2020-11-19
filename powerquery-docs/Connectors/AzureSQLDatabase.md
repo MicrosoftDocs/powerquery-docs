@@ -1,10 +1,10 @@
 ---
 title: Power Query Azure SQL database connector
-description: Includes basic information and prerequisites for the connector, and instructions on how to connect to your database using the connector.
+description: Includes basic information and prerequisites, instructions on how to connect to your database, and information about advanced connection options.
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 06/15/2020
+ms.date: 11/2/2020
 ms.author: v-douklo
 LocalizationGroup: reference
 ---
@@ -13,23 +13,23 @@ LocalizationGroup: reference
  
 ## Summary
  
-Release State: General Availability
+| Item | Description |
+| ------- | ------------|
+|Release state | General Availability |
+| Products supported | Power BI Desktop<br/>Power BI Service (Enterprise Gateway)<br/>Dataflows in PowerBI.com (Enterprise Gateway)<br/>Dataflows in PowerApps.com (Enterprise Gateway)<br/>Excel |
+| Authentication types supported| Windows (Power BI Desktop, Excel, Power Query Online with gateway)<br/>Database (Power BI Desktop, Excel)<br/>Microsoft Account (all)<br/> Basic (Power Query Online) |
+| Function reference docs | [Sql.Database](https://docs.microsoft.com/powerquery-m/sql-database)<br/>[Sql.Databases](https://docs.microsoft.com/powerquery-m/sql-databases) |
+| | |
 
-Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in PowerBI.com (Enterprise Gateway), Dataflows in PowerApps.com (Enterprise Gateway), Excel
-
-Authentication Types Supported: Windows (Power BI Desktop, Excel, online service with gateway), Database (Power BI Desktop, Excel), Microsoft Account (all), Basic (online service)
-
-Function Reference Documentation: [Sql.Database](https://docs.microsoft.com/powerquery-m/sql-database), [Sql.Databases](https://docs.microsoft.com/powerquery-m/sql-databases)
-
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
  
 ## Prerequisites
 
-By default, Power BI installs an OLE DB driver for Azure SQL database. However, for optimal performance, we recommend that the customer installs the [SQL Server Native Client](https://docs.microsoft.com/sql/relational-databases/native-client/applications/installing-sql-server-native-client?view=sql-server-ver15) before using the Azure SQL database connector. SQL Server Native Client 11.0 and SQL Server Native Client 10.0 are both supported in the latest version.
+By default, Power BI installs an OLE DB driver for Azure SQL database. However, for optimal performance, we recommend that the customer installs the [SQL Server Native Client](https://docs.microsoft.com/sql/relational-databases/native-client/applications/installing-sql-server-native-client) before using the Azure SQL database connector. SQL Server Native Client 11.0 and SQL Server Native Client 10.0 are both supported in the latest version.
 
  
-## Capabilities Supported
+## Capabilities supported
 * Import
 * DirectQuery (Power BI only)
 * Advanced options
@@ -39,45 +39,76 @@ By default, Power BI installs an OLE DB driver for Azure SQL database. However, 
     * Navigate using full hierarchy
     * SQL Server failover support
     
-## Connect to Azure SQL database
+## Connect to Azure SQL database from Power Query Desktop
 
-To make the connection, take the following steps:
+To connect to an Azure SQL database from Power Query Desktop, take the following steps:
  
 1. Select the **Azure SQL database** option in the connector selection.
  
-2. If you're connecting from Power BI desktop or Excel:
+2. In **SQL Server database**, provide the name of the server and database (optional). 
 
-   1. In the **SQL Server database** dialog that appears, provide the name of the server and database (optional). 
+   ![Enter Azure SQL database connection](./media/azure-sql-database/signin.png)
 
-      ![Enter Azure SQL database connection](./media/azure-sql-database/signin.png)
+3. Select either the **Import** or **DirectQuery** data connectivity mode.
 
-   2. If you're connecting from Power BI Desktop, select either the **Import** or **DirectQuery** data connectivity mode.
+4. Optionally, you can select and enter advanced options that will modify the connection query, such as a command timeout or a native query (SQL statement). For information: [Connect using advance options](#connect-using-advanced-options)
 
-   3. Optionally, you may provide a command timeout and a [native query (SQL statement)](../native-database-query.md), as well as select whether or not you want to include relationship columns and navigate using full hierarchy. You can also enable SQL Server failover support. Once you're done, select **OK**.
+5. Select **OK**.
 
-   4. If this is the first time you're connecting to this database, select the authentication type, input your credentials, and select the level to apply the authentication settings to. Then select **Connect**.
+6. If this is the first time you're connecting to this database, select the authentication type, input your credentials, and select the level to apply the authentication settings to. Then select **Connect**.
 
-      ![Azure SQL database authentication](./media/azure-sql-database/enter-credentials.png)
+   ![Azure SQL database authentication](./media/azure-sql-database/enter-credentials.png)
 
-      >[!Note]
-      >  If the connection is not encrypted, you'll be prompted with the following dialog.
+   >[!Note]
+   >  If the connection is not encrypted, you'll be prompted with the following message.
 
-       ![Azure SQL database encryption support](../images/EncryptionWarning.png)
+   ![Azure SQL database encryption support](../images/EncryptionWarning.png)
 
-       Select **OK** to connect to the database by using an unencrypted connection, or follow these [instructions](https://docs.microsoft.com/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine?view=sql-server-ver15) to set up encrypted connections to Azure SQL database.
+   Select **OK** to connect to the database by using an unencrypted connection, or follow the instructions in [Enable encrypted connections to the Database Engine](https://docs.microsoft.com/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine) to set up encrypted connections to Azure SQL database.
 
-3. If you're connecting from an online service:
+7. In **Navigator**, select the database information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
 
-   1. In the **Azure SQL database** dialog that appears, provide the name of the server and database.
+   ![Power Query Desktop Navigator showing the Human Resources employee data](./media/azure-sql-database/navigator-desktop.png)
 
-      ![Enter Azure SQL database online connection](./media/azure-sql-database/service-signin.png)
+## Connect to Azure SQL database from Power Query Online
 
-   2. If this is the first time you're connecting to this database, select the authentication kind and input your credentials.
+To connect to an Azure SQL database from Power Query Online, take the following steps:
+ 
+1. Select the **Azure SQL database** option in the connector selection.
 
-   3. If required, select the name of your on-premises data gateway.
+2. In **Azure SQL database**, provide the name of the server and database.
 
-   4. If the connection is not encrypted, clear the **Use Encrypted Connection** check box.
+   ![Enter the Azure SQL database online connection](./media/azure-sql-database/service-signin.png)
 
-   5. Select **Next** to continue.
+   You can also select and enter advanced options that will modify the connection query, such as a command timeout or a native query (SQL statement). For information: [Connect using advanced options](#connect-using-advanced-options)
 
-4. In **Navigator**, select the data you require, then either load or transform the data.
+3. If this is the first time you're connecting to this database, select the authentication kind and input your credentials.
+
+4. If necessary, select the name of your on-premises data gateway.
+
+5. If the connection is not encrypted, clear the **Use Encrypted Connection** check box.
+
+6. Select **Next** to continue.
+
+7. In **Navigator**, select the data you require, and then select **Transform data**.
+
+   ![Power Query Online Navigator showing the Human Resources employee data](./media/azure-sql-database/navigator-online.png)
+
+## Connect using advanced options
+
+Both Power Query Desktop and Power Query Online provide a set of advanced options that you can add to your query if needed. 
+
+![Display of advanced options available in Power Query Desktop](./media/azure-sql-database/advanced-options.png)
+
+The following table lists all of the advanced options you can set in Power Query Desktop and Power Query Online.
+
+| Advanced option | Description |
+| --------------- | ----------- |
+| Command timeout in minutes | If your connection lasts longer than 10 minutes (the default timeout), you can enter another value in minutes to keep the connection open longer. This option is only available in Power Query Desktop. |
+| SQL statement | For information, go to [Import data from a database using native database query](../native-database-query.md). |
+| Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, you won’t see those columns. |
+| Navigate using full hierarchy | If checked, the Navigator displays the complete hierarchy of tables in the database you're connecting to. If cleared, Navigator displays only the tables whose columns and rows contain data. |
+| Enable SQL Server Failover support | If checked, when a node in the Azure SQL [failover group](https://docs.microsoft.com/azure/azure-sql/database/auto-failover-group-overview?tabs=azure-powershell) isn't available, Power Query moves from that node to another when failover occurs. If cleared, no failover will occur. |
+| | |
+
+Once you've selected the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your Azure SQL database.

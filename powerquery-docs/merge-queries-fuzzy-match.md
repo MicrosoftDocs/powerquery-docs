@@ -6,76 +6,91 @@ ms.service: powerquery
 ms.reviewer: 
 ms.date: 07/22/2020
 ms.author: v-miesco
+ms.custom: edited
 ---
+
 # Fuzzy merge
 
-Fuzzy merge is a Smart Data Preparation feature that allows you to apply Fuzzy Matching algorithms when comparing columns and try to find matches across tables being merged. 
+*Fuzzy merge* is a smart data preparation feature you can use to apply fuzzy matching algorithms when comparing columns, to try to find matches across the tables that are being merged. 
 
-You can enable fuzzy matching at the bottom of the **Merge** window by selecting the *Use fuzzy matching to perform the merge* option. To learn more about the **Merge queries** operation and the **Merge** window, see [Merge queries overview](merge-queries-overview.md).
+You can enable fuzzy matching at the bottom of the **Merge** dialog box by selecting the **Use fuzzy matching to perform the merge** option button. More information: [Merge operations overview](merge-queries-overview.md)
 
 >[!NOTE]
->Fuzzy matching is only supported on merge operations over text columns. Power Query uses the Jaccard Similarity algorithm to measure the similarity between pairs of instances. 
+>Fuzzy matching is only supported on merge operations over text columns. Power Query uses the Jaccard similarity algorithm to measure the similarity between pairs of instances. 
 
 ## Sample scenario
 
-A common use case for *Fuzzy matching* is when there are free-form text fields in something such as a survey. For this article, the sample table is taken directly from an online survey sent to a group with only one question: *What is your favorite fruit?*
+A common use case for fuzzy matching is with freeform text fields, such as in a survey. For this article, the sample table was taken directly from an online survey sent to a group with only one question: *What is your favorite fruit?*
 
 The results of that survey are shown in the following image.
 
-![Sample survey with raw entries](images/me-merge-fuzzy-matching-sample-table.png)
+:::image type="complex" source="images/me-merge-fuzzy-matching-sample-table.png" alt-text="Sample survey with raw entries":::
+   Sample survey output table containing the column distribution graph showing nine distinct answers with all answers unique, and the answers to the survey with all the typos, plural or singular, and case problems.
+:::image-end:::
 
-There's a total of nine records or survey submissions. Take a closer look at the values provided. Some of the values have typos, or are written in plural, and some others are written in singular. Also, some others are written in lowercase, and some others in uppercase.
+The nine records reflect the survey submissions. The problem with the survey submissions is that some have typos, some are plural, some are singular, some are uppercase, and some are lowercase.
 
-There's a **Fruits** reference table to help standardize these values.
+To help standardize these values, in this example you have a **Fruits** reference table.
 
-![Fruits reference table](images/me-merge-fuzzy-matching-sample-reference-table.png)
+:::image type="complex" source="images/me-merge-fuzzy-matching-sample-reference-table.png" alt-text="Fruits reference table":::
+   Fruits reference table containing column distribution graph showing four distinct fruits with all fruits unique, and the list of fruits: apple, pineapple, watermelon, and banana.
+:::image-end:::
 
 >[!NOTE]
->For simplicity, this **Fruits** reference table only has the name of the fruits that  will be needed for this sample. Your reference table can have as many rows as needed.
+>For simplicity, this **Fruits** reference table only includes the name of the fruits that will be needed for this scenario. Your reference table can have as many rows as you need.
 
-The goal is to standardize all these values so you can do more analysis.
+The goal is to create a table like the following, where you've standardized all these values so you can do more analysis.
 
-![Sample output table](images/me-merge-fuzzy-matching-sample-output-table.png)
+:::image type="complex" source="images/me-merge-fuzzy-matching-sample-output-table.png" alt-text="Sample survey output table":::
+   Sample survey output table with the Question column containing the column distribution graph showing nine distinct answers with all answers unique, and the answers to the survey with all the typos, plural or singular, and case problems, and also contains the Fruit column containing the column distribution graph showing four distinct answers with one unique answer and lists all of the fruits properly spelled, singular, and proper case.
+:::image-end:::
 
 ## Fuzzy merge
 
-To perform the fuzzy merge, you start by doing a merge. In this case, you'll use a left outer join where the left table is the one from the survey and the right table is the fruits reference table. At the bottom of the window, you can see the option to **Use fuzzy matching to perform the merge**, which you can enable.
+To do the fuzzy merge, you start by doing a merge. In this case, you'll use a left outer join, where the left table is the one from the survey and the right table is the **Fruits** reference table. At the bottom of the dialog box, select the **Use fuzzy matching to perform the merge** check box.
 
-![Use fuzzy matching to perform the merge option](images/me-merge-fuzzy-matching-simple-merge-window.png)
+![Use fuzzy matching to perform the merge option](images/me-merge-fuzzy-matching-simple-merge-window.png "Use fuzzy matching to perform the merge option")
 
-After you select **OK**, you can see a new column in your table as a result of this merge operation. If you expand it, you'll notice that there's one row that doesn't have any values in it. That's exactly what the previous image stated when it said **The selection matches 8 of 9 rows from the first table**.
+After you select **OK**, you can see a new column in your table because of this merge operation. If you expand it, you'll notice that there's one row that doesn't have any values in it. That's exactly what the dialog box message in the previous image stated when it said "The selection matches 8 of 9 rows from the first table."
 
-![Fruits expanded](images/me-merge-fuzzy-matching-expand-no-transform-table.png)
+:::image type="complex" source="images/me-merge-fuzzy-matching-expand-no-transform-table.png" alt-text="Fuzzy match results in Fruit column":::
+   Fruit column added to the Survey table, with all rows in the Question column expanded, except for row 9, which could not expand and the Fruit column contains null.
+:::image-end:::
 
 ## Fuzzy matching options
 
-You can modify the **Fuzzy matching options** to tweak how the approximate match should be done. First double-click the **Merge queries** step and inside the **Merge** window expand **Fuzzy matching options**.
+You can modify the **Fuzzy matching options** to tweak how the approximate match should be done. First, select the **Merge queries** command, and then in the **Merge** dialog box, expand **Fuzzy matching options**.
 
-![Fuzzy matching options](images/me-merge-fuzzy-matching-options.png)
+![Fuzzy matching options](images/me-merge-fuzzy-matching-options.png "Fuzzy matching options")
 
 The available options are:
-* **Similarity threshold (optional)**&mdash;a value between 0.00 and 1.00 that provides the ability to match records above a given similarity score. A threshold of 1.00 is the same as specifying an exact match criteria. For example, 'Grapes' matches with 'Graes' (missing 'p') only if the threshold is set to less than 0.90. By default this value is set to 0.80.
-* **Ignore case**&mdash;allows matching records no matter what the case of the text.
-* **Match by combining text parts**&mdash;allows combining text parts to find matches. For example, 'Micro soft' is matched with 'Microsoft' if this option is enabled.
-* **Number of matches (optional)**&mdash;specifies the maximum number of matching rows that can be returned.
-* **Transformation table (optional)**&mdash;allows matching records based on custom value mappings. For example, 'Grapes' is matched with 'Raisins' if a transformation table is provided with the 'From' column containing 'Grapes' and the 'To' column containing 'Raisins'.
+
+* **Similarity threshold (optional)**: A value between 0.00 and 1.00 that provides the ability to match records above a given similarity score. A threshold of 1.00 is the same as specifying an exact match criteria. For example, **Grapes** matches with **Graes** (missing the letter *p*) only if the threshold is set to less than 0.90. By default, this value is set to 0.80.
+* **Ignore case**: Allows matching records no matter what the case of the text.
+* **Match by combining text parts**: Allows combining text parts to find matches. For example, **Micro soft** is matched with **Microsoft** if this option is enabled.
+* **Number of matches (optional)**: Specifies the maximum number of matching rows that can be returned for every input row.
+* **Transformation table (optional)**: Allows matching records based on custom value mappings. For example, **Grapes** is matched with **Raisins** if a transformation table is provided where the **From** column contains **Grapes** and the **To** column contains **Raisins**.
 
 ## Transformation table
 
-For the example showcased in this article, you can use a **Transformation table** to map the value with a missing pair. That value is 'apls', which has to be mapped to 'Apple'. Your transformation table needs to have two columns:
+For the example in this article, you can use a transformation table to map the value that has a missing pair. That value is **apls**, which needs to be mapped to **Apple**. Your transformation table has two columns:
 
-* **From**&mdash;will have the values to find.
-* **To**&mdash;will have the values that will be used to replace the values found using the **From** column.
+* **From** contains the values to find.
+* **To** contains the values that will be used to replace the values found by using the **From** column.
 
-For this article, the **Transformation table** will look as follows:
+For this article, the transformation table will look as follows:
 
 |From|To|
 |---|---|
 |apls|Apple|
 
-You can go back to the **Merge** window and in **Fuzzy matching options**, change the **Number of matches (optional)** to be one and choose the **Transformation table (optional)** from the dropdown.
+You can go back to the **Merge** dialog box, and in **Fuzzy matching options** under **Number of matches (optional)**, enter **1**. Under **Transformation table (optional)**, select **Transform Table** from the drop-down menu.
 
-![Fuzzy merge with transformation table](images/me-merge-fuzzy-matching-custom-merge-window.png)
+![Merge dialog box with the number of matches set to 1 and Transformation table set to Transform table](images/me-merge-fuzzy-matching-custom-merge-window.png "Merge dialog box with the number of matches set to 1 and Transformation table set to Transform table")
 
-After you select **OK**, you'll reach the desired output with all values mapped correctly. Note how the example started with nine distinct values, but after the fuzzy merge there are only four distinct values.
-![Sample output table](images/me-merge-fuzzy-matching-sample-output-table.png)
+After you select **OK**, you'll create a table that looks like the following image, with all values mapped correctly. Note how the example started with nine distinct values, but after the fuzzy merge, there are only four distinct values.
+
+:::image type="complex" source="images/me-merge-fuzzy-matching-sample-output-table-2.png" alt-text="Fuzzy merge survey output table":::
+   Fuzzy merge survey output table with the Question column containing the column distribution graph showing nine distinct answers with all answers unique, and the answers to the survey with all the typos, plural or singular, and case problems. Also contains the Fruit column with the column distribution graph showing four distinct answers with one unique answer and lists all of the fruits properly spelled, singular, and proper case.
+:::image-end:::
+

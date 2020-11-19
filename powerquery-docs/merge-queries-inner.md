@@ -6,66 +6,59 @@ ms.service: powerquery
 ms.reviewer: 
 ms.date: 07/22/2020
 ms.author: v-miesco
+ms.custom: edited
 ---
 
 # Inner join
 
-An inner join is one of the join kinds available inside the **Merge queries** window in Power Query. To read more about the merge operations in Power Query, see [Merge operations overview](merge-queries-overview.md).
+One of the join kinds available in the **Merge** dialog box in Power Query is an *inner join*, which brings in only matching rows from both the left and right tables. More information: [Merge operations overview](merge-queries-overview.md)
 
-An inner join brings only matching rows from both the left and right table.
+:::image type="complex" source="images/inner-join-operation.png" alt-text="Inner join example":::
+   Figure shows a table on the left with Date, CountryID, and Units columns. The emphasized CountryID column contains values of 1 in rows 1 and 2, 3 in row 3, and 2 in row 4. A table on the right contains ID and Country columns. The emphasized ID column contains values of 3 in row 1 (denoting Panama) and 4 in row 2 (denoting Spain). A table below the first two tables contains Date, CountryID, Units, and Country columns, but only one row of data for Panama. 
+   :::image-end:::
 
-This article demonstrates, with a practical example, how to do a merge operation using the inner join as the join kind.
+This article uses sample data to show how to do a merge operation with the inner join. The sample source tables for this example are:
 
-![Sample inner join](images/inner-join-operation.png)
+* **Sales**: This table includes the fields **Date**, **CountryID**, and **Units**. **CountryID** is a whole number value that represents the unique identifier from the **Countries** table.
 
->[!Note]
->Samples used in this article are only to showcase the concepts. The concepts showcased here apply to all queries in Power Query.
+   ![Sales table containing Date, CountryID, and Units columns, with CountryID set to 1 in rows 1 and 2, 3 in row 3, and 2 in row 4](images/me-merge-operations-full-outer-join-sales-table.png "Sales table containing Date, CountryID, and Units columns, with CountryID set to 1 in rows 1 and 2, 3 in row 3, and 2 in row 4")
 
-## Sample input and output tables
+* **Countries**: This is a reference table with the fields **id** and **Country**. The **id** field represents the unique identifier for each record.
 
-The sample source tables for this example are:
+   ![Countries table with id set to 3 in row 1 and 4 in row 2 and Country set to Panama in row 1 and Spain in row 2](images/me-merge-operations-inner-join-countries-table.png "Countries table with id set to 3 in row 1 and 4 in row 2 and Country set to Panama in row 1 and Spain in row 2")
 
-* **Sales**&mdash;with the fields **Date**, **CountryID**, and **Units**. The *CountryID* is a whole number value that represents the unique identifier from the **Countries** table.
+In this example, you'll merge both tables, with the **Sales** table as the left table and the **Countries** table as the right one. The join will be made between the following columns.
 
-   ![Sales table](images/me-merge-operations-full-outer-join-sales-table.png)
-
-* **Countries**&mdash;this table is a reference table with the fields **id** and **Country**. The *id* represents the unique identifier of each record.
-
-   ![Countries table](images/me-merge-operations-inner-join-countries-table.png)
-
-The goal is to merge both tables, where the **Sales** table will be the left table and the **Countries** table the right one. The join will be made between the following columns:
-
-|Field from Sales table| Field from Countries table|
+|Field from the Sales table| Field from the Countries table|
 |-----------|------------------|
 |CountryID|id|
 
-The goal is to reach the following table where the name of the country appears as a new **Country** column in the **Sales** table. Because of how the inner join works, only matching rows from both the left and right table will be brought in.
+The goal is to create a table like the following, where the name of the country appears as a new **Country** column in the **Sales** table. Because of how the inner join works, only matching rows from both the left and right tables will be brought in.
 
-![Inner join final table](images/me-merge-operations-inner-final-table.png)
-
-## Inner join
-
-To do an inner join:
-
-1. Select the **Sales** query, and then select **Merge queries** to create a new step inside the sales query that will merge the **Sales** query with the **Countries** query.
-2. Select **Countries** as the **Right table for merge**.
-3. Select the **CountryID** column from the **Sales** table.
-4. Select the **id** column from the **Countries** table.
-5. From the **Join Kind** section, select the **Inner** option.
+![Inner join final table with Date, CountryID, Units, and Country column headers, and a single row of data for the country Panama](images/me-merge-operations-inner-final-table.png "Inner join final table with Date, CountryID, Units, and Country column headers, and a single row of data for the country Panama")
+<!--markdownlint-disable MD036-->
+**To perform an inner join**
+<!--markdownlint-enable MD036-->
+1. Select the **Sales** query, and then select **Merge queries**.
+2. In the **Merge** dialog box, under **Right table for merge**, select **Countries**.
+3. In the **Sales** table, select the **CountryID** column.
+4. In the **Countries** table, select the **id** column.
+5. In the **Join kind** section, select **Inner**.
 6. Select **OK**.
 
-![Merge window for Inner join](images/me-merge-operations-inner-merge-window.png)
+![Merge dialog box showing the results of following the previous inner join procedure](images/me-merge-operations-inner-merge-window.png "Merge dialog box showing the results of following the previous inner join procedure")
 
 >[!TIP]
->Take a closer look at the message at the bottom of the Merge window that reads **The selection matches 1 of 4 rows from the first table, and 1 of 2  rows from the second table** as this is crucial to understand the result that you get from this operation. 
+>Take a closer look at the message at the bottom of the dialog box that reads "The selection matches 1 of 4 rows from the first table, and 1 of 2 rows from the second table." This message is crucial to understanding the result that you get from this operation. 
 
 In the **Sales** table, you have a **CountryID** of 1 and 2, but neither of these values are found in the **Countries** table. That's why the match only found one of four rows in the left (first) table.
-In the **Countries** table, you have the **Country** Spain with the ID 4, but there are no records for a **CountryID** of 4 in the **Sales** table. That's why only one of two rows from the right (second) table found a match.
 
-From the newly created **Countries** column after the merge operation, expand the **Country** field without using the original column name as a prefix.
+In the **Countries** table, you have the **Country** Spain with the **id** 4, but there are no records for a **CountryID** of 4 in the **Sales** table. That's why only one of two rows from the right (second) table found a match.
 
-![Expand table column for Country](images/me-merge-operations-inner-expand-field.png)
+From the newly created **Countries** column, expand the **Country** field. Don't select the **Use original column name as prefix** check box.
 
-After doing this operation, the desired result is reached.
+![Expand table column for Country](images/me-merge-operations-inner-expand-field.png "Expand table column for Country")
 
-![Inner join final table](images/me-merge-operations-inner-final-table.png)
+After performing this operation, you'll create a table that looks like the following image.
+
+![Final table with Date, CountryID, Units, and Country column headers, and a single row of data for the country Panama](images/me-merge-operations-inner-final-table-2.png "Final table with Date, CountryID, Units, and Country column headers, and a single row of data for the country Panama")
