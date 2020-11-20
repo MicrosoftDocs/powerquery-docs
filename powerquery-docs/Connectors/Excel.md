@@ -46,13 +46,18 @@ If you want to connect to an Excel document hosted in Sharepoint, you can do so 
 3. Copy the address into the **File Path or URL** field, and remove the **?web=1** from the end of the address.
 
 ### Legacy ACE connector
-**Error resolution**
+Power Query reads legacy workbooks (such as .xls or .xlsb) using the Access Database Engine (or ACE) OLEDB provider. Because of this, you may encounter unexpected behaviors when importing legacy workbooks which do not occur when importing OpenXML workbooks (such as .xlsx). Here are some common examples.
 
-Workbooks built in a legacy format (such as .xls and .xlsb) are accessed through the Access Database Engine OLEDB provider, and Power Query will display values as returned by this provider. This action may cause a lack of fidelity in certain cases compared to what you would see in an equivalent xlsx (OpenXML based) file.
+**Unexpected value formatting**
 
-**Incorrect column typing returning nulls**
+Due to ACE, values from a legacy Excel workbook may be imported with less precision or fidelity than you expect. For example, imagine your Excel file contains the number 1024.231, which you have formatted for display as "1,024.23". When imported into Power Query, this value is represented as the text value "1,024.23", instead of as the underlying full-fidelity number (1024.231). This is because, in this case, ACE does not surface the underlying value to Power Query, but only the value as it is displayed in Excel.
 
-When Ace loads a sheet, it looks at the first eight rows to try to guess the data types to use. If the first eight rows of data aren't inclusive of the following data (for example, numeric only in the first eight rows versus text in the following rows), ACE will apply an incorrect type to that column and return nulls for any data that doesn't match the type.
+**Unexpected null values**
+
+When ACE loads a sheet, it looks at the first eight rows to determine the data types of the columns. If the first eight rows aren't representative of the subsequent rows, ACE may apply an incorrect type to that column and return nulls for any value that doesn't match the type. For example, if a column contains numbers in the first eight rows (such as 1000, 1001, and so on) but has non-numerical data in subsequent rows (such as "100Y" and "100Z"), ACE will conclude that the column contains numbers, and any non-numeric values will be returned as null.
+
+**Inconsistent value formatting**
+In some cases, ACE will return completely different results across refreshes. Using the example described in the formatting section above, you might suddenly see the value 1024.231 instead of "1,024.23". This can be caused by having the legacy workbook open in Excel while importing it into Power Query. To resolve this, simply close the workbook.
 
 ### Missing or incomplete Excel data
 Sometimes Power Query fails to extract all the data from an Excel Worksheet. This is often caused by the Worksheet having **incorrect dimensions** (for example, having dimensions of `A1:C200` when the actual data occupies more than three columns or 200 rows).
