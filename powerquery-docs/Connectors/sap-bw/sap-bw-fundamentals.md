@@ -23,7 +23,7 @@ The OLAP BAPIs are delivered with SAP BW and provide 3rd-parties and developers 
 
 Applications of all types can be connected with an SAP BW server using these methods.
 
-The OLAP BAPIs are implemented in SAP BW as RFC-enabled function modules and are invoked by applications over SAP’s RFC protocol. This requires the [NetWeaver RFC Library or SAP .NET Connector](setup-and-connect.md#prerequisites) to be installed on the application's machine. 
+The OLAP BAPIs are implemented in SAP BW as RFC-enabled function modules and are invoked by applications over SAP’s RFC protocol. This requires the [NetWeaver RFC Library or SAP .NET Connector](application-setup-and-connect.md#prerequisites) to be installed on the application's machine. 
 
 The OLAP BAPIs provide methods for browsing metadata and master data, and also for passing MDX statements for execution to the MDX Processor.
 
