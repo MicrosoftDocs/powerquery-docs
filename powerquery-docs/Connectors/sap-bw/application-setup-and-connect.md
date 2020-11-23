@@ -14,7 +14,7 @@ LocalizationGroup: reference
 # SAP Business Warehouse Application Server
 
 >[!NOTE]
->The SAP Business Warehouse Application Server connector is now certified for SAP BW/4HANA as of June 2020.
+>The SAP Business Warehouse (BW) Application Server connector is now certified for SAP BW/4HANA as of June 2020.
  
 ## Summary
  

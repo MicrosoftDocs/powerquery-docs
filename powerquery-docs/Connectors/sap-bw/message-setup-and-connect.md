@@ -14,7 +14,7 @@ LocalizationGroup: reference
 # SAP Business Warehouse Message Server
 
 >[!NOTE]
->The SAP Business Warehouse Message Server connector is now certified for SAP BW/4HANA as of June 2020.
+>The SAP Business Warehouse (BW) Message Server connector is now certified for SAP BW/4HANA as of June 2020.
  
 ## Summary
  
@@ -33,7 +33,7 @@ LocalizationGroup: reference
 
 You'll need an SAP account to sign in to the website and download the drivers. If you're unsure, contact the SAP administrator in your organization.
 
-You can use either version 1.0 of the SAP Business Warehouse (BW) Message Server connector or the Implementation 2.0 SAP connector in Power Query Desktop. The following sections describe the installation of each version, in turn. You can choose one or the other connector when connecting to an SAP BW Message Server from Power BI Desktop. We suggest you use the Implementation 2.0 SAP connector whenever possible.
+You can use either version 1.0 of the SAP Business BW Message Server connector or the Implementation 2.0 SAP connector in Power Query Desktop. The following sections describe the installation of each version, in turn. You can choose one or the other connector when connecting to an SAP BW Message Server from Power BI Desktop. We suggest you use the Implementation 2.0 SAP connector whenever possible.
 
 >[!NOTE]
 >We suggest you use the Implementation 2.0 SAP connector whenever possible because it provides significant performance, functionality, and reliability improvements over 1.0.
