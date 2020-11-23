@@ -266,15 +266,37 @@
         href: Connectors/SalesforceObjects.md
       - name: "Salesforce Reports"
         href: Connectors/SalesforceReports.md
+      - name: "SAP Business Warehouse"
+        items:
+        - name: "SAP Business Warehouse Application Server"
+          href: Connectors/sap-bw/application-setup-and-connect.md
+        - name: "SAP Business Warehouse Message Server"
+          href: Connectors/sap-bw/message-setup-and-connect.md
+        - name: "Use advanced options"
+          href: Connectors/sap-bw/use-advanced-options.md
+        - name: "Navigate the query objects"
+          href: Connectors/sap-bw/navigate-query-objects.md
+        - name: "Transform and filter an SAP BW dataset"
+          href: Connectors/sap-bw/transform-filter-sap-bw-data.md
+        - name: "Implementation details"
+          href: Connectors/sap-bw/implementation-details.md
+        - name: "SAP BW fundamentals"
+          href: Connectors/sap-bw/sap-bw-fundamentals.md
+        - name: "Windows authentication and single sign-on"
+          href: Connectors/sap-bw/single-sign-on.md
+        - name: "Import vs. DirectQuery for SAP BW"
+          href: Connectors/sap-bw/import-vs-directquery.md
+        - name: "SAP Business Warehouse connector troubleshooting"
+          href: Connectors/sap-bw/sap-bw-troubleshooting.md
       - name: "SAP HANA database"
         items:
-        - name: Overview
+        - name: "Overview"
           href: Connectors/sap-hana/overview.md
-        - name: SAP HANA encryption
+        - name: "SAP HANA encryption"
           href: Connectors/sap-hana/sap-hana-encryption.md
-        - name: Configure ODBC for SAP HANA
+        - name: "Configure ODBC for SAP HANA"
           href: Connectors/sap-hana/configure-odbc-sap-hana.md
-        - name: Troubleshooting
+        - name: "Troubleshooting"
           href: Connectors/sap-hana/sap-hana-troubleshooting.md
       - name: "SharePoint Folder"
         href: Connectors/SharePointFolder.md
