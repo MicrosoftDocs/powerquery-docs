@@ -286,7 +286,7 @@
           href: Connectors/sap-bw/single-sign-on.md
         - name: "Import vs. DirectQuery for SAP BW"
           href: Connectors/sap-bw/import-vs-directquery.md
-        - name: "SAP Business Warehouse connector troubleshooting"
+        - name: "SAP BW connector troubleshooting"
           href: Connectors/sap-bw/sap-bw-troubleshooting.md
       - name: "SAP HANA database"
         items:
