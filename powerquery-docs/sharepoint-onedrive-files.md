@@ -1,5 +1,5 @@
 ---
-title: Use SharePoint and OneDrive files in Power Query
+title: SharePoint and OneDrive for Business files import
 description: All available methods in Power Query to get files from your SharePoint or OneDrive for Business accounts.
 author: ptyx507
 ms.service: powerquery
@@ -8,14 +8,14 @@ ms.date: 11/18/2020
 ms.author: v-miesco
 ---
 
-# Use SharePoint and OneDrive for Business files in Power Query
+# SharePoint and OneDrive for Business files import
 
 Power Query offers a series of methods to gain access to files that are hosted on either SharePoint or OneDrive for Business.
 
 ## Browse files
 
 >[!NOTE]
->Currently, you can only browse for SharePoint or OneDrive for Business files inside of Power Query Online for PowerApps. Also, you can only browse for files in the OneDrive for Business account of the authenticated user.
+>Currently, you can only browse for OneDrive for Business files of the authenticated user inside of Power Query Online for PowerApps.
 
 Power Query provides a **Browse OneDrive** button next to the **File path or URL** text box when you create a dataflow inside of PowerApps using any of these connectors:
 
