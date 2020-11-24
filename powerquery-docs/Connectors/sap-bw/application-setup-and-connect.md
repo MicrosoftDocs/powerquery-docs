@@ -21,7 +21,7 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power Query Desktop:<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Power BI Desktop<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Analysis Services<br/>Power Query Online:<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Datasets in PowerBI.com (on-premises data gateway (standard mode))<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dataflows in PowerBI.com (on-premises data gateway (standard mode))<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dataflows in PowerApps.com (on-premises data gateway (standard mode)) |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Analysis Services |
 | Authentication Types Supported | Windows (desktop)<br/>Database (desktop)<br/>Basic (online) |
 | Function Reference Documentation | [SapBusinessWarehouse.Cubes](https://docs.microsoft.com/powerquery-m/sapbusinesswarehouse-cubes)<br/>[sapbusinesswarehouseexecutionmode.datastream](https://docs.microsoft.com/powerquery-m/sapbusinesswarehouseexecutionmode.datastream)<br/>[SapBusinessWarehouseExecutionMode.BasXml](https://docs.microsoft.com/powerquery-m/sapbusinesswarehouseexecutionmode.basxml)<br/>[SapBusinessWarehouseExecutionMode.BasXmlGzip](https://docs.microsoft.com/powerquery-m/sapbusinesswarehouseexecutionmode.basxmlgzip) |
 | | |
