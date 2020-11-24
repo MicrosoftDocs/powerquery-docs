@@ -4,7 +4,7 @@ description: Provides troubleshooting tips for errors that might occur when usin
 author: dougklopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 10/28/2020
+ms.date: 11/24/2020
 ms.author: v-douklo
 LocalizationGroup: reference
 ---
@@ -14,6 +14,24 @@ LocalizationGroup: reference
 ## Using a gateway with the Web connector
 
 If you're using the Web connector through an on-premises data gateway, you must have Internet Explorer 10 installed on the gateway machine.  This installation will ensure that the `Web.Page` call through the gateway will work correctly. 
+
+## Capturing web requests and certificate revocation
+
+We've strengthened the security of web connections to protect your data. However, this means that certain scenarios, like capturing web requests with Fiddler, will no longer work by default. To enable those scenarios:
+
+1. Open Power BI Desktop.
+2. Under the **File** tab, select **Options and settings** > **Options**.
+3. In **Options**, under **Global** > **Security**, uncheck **Enable certificate revocation check**.
+
+   ![Image with the Enable certificate revocation check box selected](../../images/web-certificate-revocation.png)
+
+4. Select **OK**.
+5. Restart Power BI Desktop.
+
+>[!IMPORTANT]
+>Be aware that unchecking **Enable certificate revocation check** will make web connections less secure.
+
+To set this scenario in Group Policy, use the "DisableCertificateRevocationCheck" key under the registry path "Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Power BI Desktop". Setting "DisableCertificateRevocationCheck" to 0 will always enable the check (stopping Fiddler and similar software from working) and setting "DisableCertificateRevocationCheck" to 1 will always disable the check (enabling Fiddler and similar software).
 
 ## Changing the authentication method
 

@@ -4,7 +4,7 @@ description: Provides basic information and how to connect to your data, along w
 author: dougklopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 10/28/2020
+ms.date: 11/24/2020
 ms.author: v-douklo
 LocalizationGroup: reference
 ---
@@ -182,24 +182,6 @@ For example, you could use the following steps to open a JSON file on the https:
     ![Open the Formula Bar](webFormulaBar.png)
 
     As you can see, the Web connector returns the web contents from the URL you supplied, and then automatically wraps the web contents in the appropriate document type specified by the URL (`Json.Document` in this example).
-
-### Capturing Web Requests & Certificate Revocation
-
-We've strengthened the security of web connections to protect your data. However, this means that certain scenarios, like capturing web requests with Fiddler, will no longer work by default. To enable those scenarios:
-
-1. Open Power BI Desktop.
-2. Under the **File** tab, select **Options and settings** > **Options**.
-3. In **Options**, under **Global** > **Security**, uncheck **Enable certificate revocation check**.
-
-   ![a](../../images/web-certificate-revocation.png)
-
-4. Select **OK**.
-5. Restart Power BI Desktop.
-
->[!IMPORTANT]
->Be aware that unchecking **Enabel certificate revocation check** will make web connections less secure.
-
-To set this scenario in Group Policy, use the "DisableCertificateRevocationCheck" key under the registry path "Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Power BI Desktop". Setting "DisableCertificateRevocationCheck" to 0 will always enable the check (stopping Fiddler and similar software from working) and setting "DisableCertificateRevocationCheck" to 1 will always disable the check (enabling Fiddler and similar software).
 
 ### See also
 
