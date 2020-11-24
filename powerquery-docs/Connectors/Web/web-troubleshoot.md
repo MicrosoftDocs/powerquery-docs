@@ -24,7 +24,7 @@ In some cases, you may need to change the authentication method you use to acces
 >[!NOTE]
 > The limitations described in this section only apply to HTML web pages. Opening other kinds of files from the web using this connector isn't affected by these limitations.
 
-The legacy Power Query Web connector automatically creates a `Web.Page` query that supports authentication. The only limitation occurs if you select Windows authentication in the authentication method dialog box. In this case, the **Use my current credentials** selection works correctly, but **Use alternate credentials** wouldn't authenticate.
+The legacy Power Query Web connector automatically creates a `Web.Page` query that supports authentication. The only limitation occurs if you select Windows authentication in the authentication method dialog box. In this case, the **Use my current credentials** selection works correctly, but **Use alternate credentials** won't authenticate.
 
 The new version of the Web connector (currently available in Power BI Desktop) automatically creates a `Web.BrowserContents` query. Such queries currently only support anonymous authentication. In other words, the new Web connector can't be used to connect to a source that requires non-anonymous authentication. This limitation applies to the `Web.BrowserContents` function, regardless of the host environment.
 
@@ -70,3 +70,7 @@ in
   Navigation
 ```
 
+### See also
+
+* [Power Query Web connector](web.md)
+* [Troubleshooting the Power Query Web connector](web-troubleshoot.md)

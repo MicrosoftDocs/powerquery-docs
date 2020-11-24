@@ -13,13 +13,13 @@ LocalizationGroup: reference
 
 ## Summary
 
-Release State: General Availability
-
-Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in PowerBI.com (Enterprise Gateway), Dataflows in PowerApps.com (Enterprise Gateway), Excel
-
-Authentication Types Supported: Anonymous, Windows, Basic, Web API, Organizational Account
-
-Function Reference Documentation: [Web.Page](https://docs.microsoft.com/powerquery-m/web-page), [Web.BrowserContents](https://docs.microsoft.com/powerquery-m/web-browsercontents)
+| Item | Description |
+| ---- | ----------- |
+| Release State | General Availability |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights |
+| Authentication Types Supported | Anonymous<br/>Windows<br/>Basic<br/>Web API<br/>Organizational Account |
+| Function Reference Documentation | [Web.Page](https://docs.microsoft.com/powerquery-m/web-page)<br/>[Web.BrowserContents](https://docs.microsoft.com/powerquery-m/web-browsercontents) |
+| | |
 
 ## Prerequisites
 
@@ -59,7 +59,7 @@ To load data from a web site with Power Query Desktop:
 
    * **Basic**: Select this authentication method if the web page requires a basic user name and password.
 
-   * **Web API**: Select this authentication method if the web page contains REST APIs.
+   * **Web API**: Select this method if the web resource that you’re connecting to uses an API Key for authentication purposes.
 
    * **Organizational account**: Select this authentication method if the web page requires organizational account credentials.
 
@@ -84,11 +84,13 @@ To load data from a web site with Power Query Online:
 
 1. From the **Get Data** dialog box, select either **Web page** or **Web API**.
 
-   ![Select either the Web page or Web API connectors](select-web-page-api.png)
+   ![Select either the Web page or Web API connector](select-web-page-api.png)
 
-   In most cases, you'll want to select the Web page connector. For security reasons, you'll need to use an [on-premises data gateway](https://docs.microsoft.com/data-integration/gateway/) with this connector.
+   In most cases, you'll want to select the Web page connector. For security reasons, you'll need to use an [on-premises data gateway](https://docs.microsoft.com/data-integration/gateway/) with this connector. The Web Page connector requires a gateway due to security-related concerns specific to how HTML pages are processed. This is not an issue with Web API connector, as it does not perform any HTML processing.
 
-   If needed, you can use the Web API connector to connect to REST APIs. This connector does not require an on-premises data gateway.
+   In some cases, you might want to use a URL that points at either an API or a file stored on the web. In those scenarios, the Web API connector (or file-specific connectors) would allow you to move forward without an on-premises data gateway.
+
+   Generally, the Web API connector is used to connect to REST APIs with more relaxed . This connector does not require an on-premises data gateway.
 
    Also note that if your URL points to a file, you should [use the specific file connector](#open-files-on-the-web) instead of the Web page connector. 
 
@@ -100,7 +102,7 @@ To load data from a web site with Power Query Online:
 
    ![Enter your on-premises data gateway](enter-gateway.png)
 
-4. Select the authentication method you'll require to connect to the web page.
+4. Select the authentication method you'll use to connect to the web page.
 
    ![Select the authentication method](online-authentication.png)
 
@@ -128,7 +130,7 @@ When you select **Get Data > From Web** in Power Query Desktop, in most instance
 
 Use the **URL parts** section of the dialog to assemble the URL you want to use to get data. The first part of the URL in the **URL parts** section most likely would consist of the scheme, authority, and path of the URI (for example, http://contoso.com/products/). The second text box could include any queries or fragments that you would use to filter the information provided to the web site. If you need to add more than one part, select **Add part** to add another URL fragment text box. As you enter each part of the URL, the complete URL that will be used when you select **OK** is displayed in the **URL preview** box.
 
-Depending on how long the POST request takes to process data, you may need to prolong the time the request continues to stay connected to the web site. In this case, you can use the optional **Command timeout in minutes** to extend the number of minutes you stay connected.
+Depending on how long the POST request takes to process data, you may need to prolong the time the request continues to stay connected to the web site. The default timeout for both POST and GET is 100 seconds. If this timeout is too short, you can use the optional **Command timeout in minutes** to extend the number of minutes you stay connected.
 
 You can also add specific request headers to the POST you send to the web site using the optional **HTTP request header parameters** drop-down box. The following table describes the request headers you can select. 
 
@@ -140,7 +142,7 @@ You can also add specific request headers to the POST you send to the web site u
 | Accept-Language | Indicates the set of natural languages that are preferred in the response. |
 | Cache-Control | Specifies directives that specifies behavior that prevents caches from adversely interfering with a request or response. |
 | Content-Type | Indicates the media type of the associated representation. |
-| If-Modified-Since | Conditionally determines if a variant has been change since the date specified in this field. |
+| If-Modified-Since | Conditionally determines if the web content has been changed since the date specified in this field. If the content has not changed, the server responds with only the headers that have a 304 status code. If the content has changed, the server will return the requested resource along with a status code of 200. |
 | Prefer | Indicates that particular server behaviors are preferred by the client, but are not required for successful completion of the request. |
 | Range | Specifies one or more subranges of the selected representation data. |
 | Referer | Specifies a URI reference for the resource from which the target URI was obtained. |
@@ -148,7 +150,7 @@ You can also add specific request headers to the POST you send to the web site u
 
 ## Open files on the web
 
-Normally, when you open a file, you'll use the specific file-type connector to open that file, for example, the JSON connector to open a JSON file or the CSV connector to open a CSV file. However, if the file you want to open is located on the web, you must use the Web connector to open that file. As in the local case, you'll then be presented with the table that the connector loads by default, which you can then either Load or Transform.
+Normally when you open a local on-premises file in Power Query Desktop, you'll use the specific file-type connector to open that file, for example, the JSON connector to open a JSON file or the CSV connector to open a CSV file. However, if you are using Power Query Desktop and the file you want to open is located on the web, you must use the Web connector to open that file. As in the local case, you'll then be presented with the table that the connector loads by default, which you can then either Load or Transform.
 
 The following file types are supported by the Web Connector:
 
@@ -165,31 +167,23 @@ For example, you could use the following steps to open a JSON file on the https:
 
 1. From the **Get Data** dialog box, select the **Web** connector. 
 
-2. If you are using Power Query Desktop:
+2. Choose the **Basic** button and enter the address in the **URL** box, for example:
 
-    1. Choose the **Basic** button and enter the address in the **URL** box, for example:
+    `http://contoso.com/products/Example_JSON.json`
 
-       `http://contoso.com/products/Example_JSON.json`
+    ![Open JSON file from the web](webJson.png)
 
-       ![Open JSON file from the web](webJson.png)
+3. Select **OK**.
 
-    2. Select **OK**.
+4. If this is the first time you are visiting this URL, select **Anonymous** as the authentication type, and then select **Connect**.
 
-    3. If this is the first time you are visiting this URL, select **Anonymous** as the authentication type, and then select **Connect**.
-
-3. If you are using Power Query Online:
-
-    1. In the **Web Page** dialog box, enter the address in the **URL** box, for example:
-
-       `http://contoso.com/products/Example_JSON.json`
-
-    2. Select an on-premises data gateway to use.
-
-    3. Select **Anonymous** as the authentication kind, and then select **Next**.
-
-4. Power Query Editor will now open with the data contained in the JSON file. Select the **View** tab in the Power Query Editor, then select **Formula Bar** to turn on the formula bar in the editor.
+5. Power Query Editor will now open with the data contained in the JSON file. Select the **View** tab in the Power Query Editor, then select **Formula Bar** to turn on the formula bar in the editor.
 
     ![Open the Formula Bar](webFormulaBar.png)
 
     As you can see, the Web connector returns the web contents from the URL you supplied, and then automatically wraps the web contents in the appropriate document type specified by the URL (`Json.Document` in this example).
 
+### See also
+
+* [Extract data from a Web page by example](web-by-example.md)
+* [Troubleshooting the Power Query Web connector](web-troubleshoot.md)
