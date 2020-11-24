@@ -62,5 +62,5 @@ For further information, go to [Secure Login](https://help.sap.com/viewer/a017d0
 
 ### See also
 
-* [Import vs. DirectQuery for SAP BW](import-vs-directquery.md)
+* [Use advanced options](use-advanced-options.md)
 

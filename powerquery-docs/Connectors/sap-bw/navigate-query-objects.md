@@ -17,16 +17,11 @@ After you connect to your SAP BW instance, the **Navigator** dialog box will sho
 
 You'll see one catalog folder with the name $INFOCUBE. This folder contains all InfoProviders in the SAP BW system.
 
->[!NOTE]
->The navigator shows InfoCubes and BEx queries. For BEx queries, you may need to go into Business Explorer, open the desired query and check **Allow External Access to this Query: By OLE DB for OLAP** for the query to be available in the Navigator.
-
-![Image showing the Allow External Access to this query: By OLE DB for OLAP check box](enable-release.png)
-
 The other catalog folders represent InfoProviders in SAP BW for which at least one query exists.
 
 ![Screenshot of navigator displaying the catalog folders](sap-bw-navigator.png)
 
-The **Navigator** displays a hierarchical tree of data objects from the connected SAP BW system. The following table describes the types of objects.
+The **Navigator** dialog box displays a hierarchical tree of data objects from the connected SAP BW system. The following table describes the types of objects.
 
 | Symbol | Description                                              |
 | ------ | ---------------------------------------------------------|
@@ -44,14 +39,19 @@ The **Navigator** displays a hierarchical tree of data objects from the connecte
 ![Navigator with display options context menu open](navigator-display-options.png)
 
 >[!NOTE]
+>The navigator shows InfoCubes and BEx queries. For BEx queries, you may need to go into Business Explorer, open the desired query and check **Allow External Access to this Query: By OLE DB for OLAP** for the query to be available in the navigator.
+
+![Image showing the Allow External Access to this query: By OLE DB for OLAP check box](enable-release.png)
+
+>[!NOTE]
 >In Power BI Desktop, objects below an InfoCube or BEx Query node, such as the key figures, characteristics, and properties are only shown in Import connectivity mode, not in DirectQuery mode. In DirectQuery mode, all the available objects are mapped to a Power BI model and will be available for use in any visual.
 
-You can select from different display options to view the available query objects in SAP BW:
+In the navigator, you can select from different display options to view the available query objects in SAP BW:
 
 * **Only selected items**: This option limits the objects shown in the list to just the selected items. By default, all query objects are displayed. This option is useful for a review of the objects that you included in your
 query. Another approach to viewing selected items is to select the column names in the preview area.
 
-* **Enable data previews**: This value is the default. This option allows you to control whether a preview of the data should be displayed on the right-hand side in the **Navigator**. Disabling data previews reduces the amount of server interaction and response time. In Power BI Desktop, data preview is only available in Import connectivity mode.
+* **Enable data previews**: This value is the default. This option allows you to control whether a preview of the data should be displayed on the right-hand side in the **Navigator** dialog box. Disabling data previews reduces the amount of server interaction and response time. In Power BI Desktop, data preview is only available in Import connectivity mode.
 
 * **Technical names**: SAP BW supports the notion of *technical names* for query objects, as opposed to the descriptive names that are shown by default. Technical names uniquely identify an object within SAP BW. With the option selected, the technical names will appear next to the descriptive name of the object. 
 

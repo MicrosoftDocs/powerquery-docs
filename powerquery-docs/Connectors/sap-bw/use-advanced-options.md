@@ -81,7 +81,7 @@ DIMENSION PROPERTIES
 
 The SAP BW connector will display a preview of the data that is returned by the MDX statement. You can then either select **Load** to load the data (Power Query Desktop only), or select **Transform Data** to further manipulate the data set in the Power Query Editor.
 
-![MDX data displayed in the Navigator preview](mdx-preview-data.png)
+![MDX data displayed in the navigator preview](mdx-preview-data.png)
 
 To validate and troubleshoot an MDX statement, SAP BW provides the *MDXTEST* transaction for SAP GUI for Windows users. Further, the MDXTEST transaction can be a useful tool for analyzing server errors or performance concerns as a result of processing that occurs within the SAP BW system.
 
@@ -107,15 +107,16 @@ The **Enable characteristic structures** selection changes the way characteristi
 
 If the **Enable characteristic structures** selection is clear (default), the connector will produce a cartesian product of each dimension on the structure with each available measure. For example:
 
-![Image of the Navigator showing the Net Value stat curr and Number of documents values each displayed for Calgary, Frankfurt, and Munich](clear-characteristic-structure.png)
+![Image of the navigator showing the Net Value stat curr and Number of documents values each displayed for Calgary, Frankfurt, and Munich](clear-characteristic-structure.png)
 
 If selected, the connector produces only the available measures. For example:
 
-![Image of the Navigator showing only the Net Value stat curr and Number of documents values displayed](enable-characteristic-structure.png)
+![Image of the navigator showing only the Net Value stat curr and Number of documents values displayed](enable-characteristic-structure.png)
 
 ### See also
 
 * [Navigate the query objects](navigate-query-objects.md)
 * [Transform and filter SAP BW dataset](transform-filter-sap-bw-data.md)
+* [SAP Business Warehouse connector troubleshooting](sap-bw-troubleshooting.md)
 
 

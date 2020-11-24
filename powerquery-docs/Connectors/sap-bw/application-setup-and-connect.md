@@ -134,6 +134,7 @@ To connect to an SAP BW Application Server from Power Query Online:
 
 ### See also
 
-* [Use advanced options](use-advanced-options.md)
 * [Navigate the query objects](navigate-query-objects.md)
 * [SAP Business Warehouse fundamentals](sap-bw-fundamentals.md)
+* [Use advanced options](use-advanced-options.md)
+* [SAP Business Warehouse connector troubleshooting](sap-bw-troubleshooting.md)

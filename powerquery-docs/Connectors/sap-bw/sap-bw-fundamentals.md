@@ -87,4 +87,4 @@ SAP BW comes with built-in tools for creating data models based on different dat
 
 ### See also
 
-* [Windows authentication and single sign-on](single-sign-on.md)
+* [Navigate the query objects](navigate-query-objects.md)

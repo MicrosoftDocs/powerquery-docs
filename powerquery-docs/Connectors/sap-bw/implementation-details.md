@@ -110,7 +110,7 @@ In the example above, this means that:
 
 To manually add the key in Import mode, just expand **Properties** and select the key.
 
-![Selecting the Key property in Power Query Navigator](key-property.png)
+![Selecting the Key property in the Power Query navigator](key-property.png)
 
 The key column will be of type date, and can be used for filtering. Filtering on this column will fold to the server.
 
@@ -149,7 +149,7 @@ The following table provides a summary list of suggestions to improve performanc
 
 | Suggestion | Description |
 | ---------- | ----------- |
-| Limit characteristics and properties (attribute) selection | The time it takes to load data from SAP BW into Power Query increases with the size of the dataset, that is, the number of columns and rows in the flattened result set. To reduce the number of columns, only select the characteristics and properties in the Navigator that you eventually want to see in your report or dashboard. |
+| Limit characteristics and properties (attribute) selection | The time it takes to load data from SAP BW into Power Query increases with the size of the dataset, that is, the number of columns and rows in the flattened result set. To reduce the number of columns, only select the characteristics and properties in the navigator that you eventually want to see in your report or dashboard. |
 | Make use of parameters | Using filters/parameters contributes to reducing the size of the result set, which significantly improves query runtimes.<br/><br/>Parameters are especially valuable when used with large dimensions, where there's many members, such as customers, materials, or document numbers. |
 | Limit number of key figures | Selecting many key figures from a BEx query/BW model can have a significant performance impact during query execution because of the time being spent on loading metadata for units. Only include the key figures that you need in Power Query. |
 | Split up very large queries into multiple, smaller queries | For very large queries against InfoCubes or BEx queries, it may be beneficial to split up the query. For example, one query might be getting the key figures, while another query (or several other queries) is getting the characteristics data. You can join the individual query results in Power Query. |
@@ -162,4 +162,6 @@ The following table provides a summary list of suggestions to improve performanc
 
 ### See also
 
-* [SAP BW fundamentals](sap-bw-fundamentals.md)
+* [SAP Business Warehouse Application Server](application-setup-and-connect.md)
+* [SAP Business Warehouse Message Server](message-setup-and-connect.md)
+* [Import vs. DirectQuery for SAP BW](import-vs-directquery.md)

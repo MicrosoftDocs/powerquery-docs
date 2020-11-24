@@ -30,11 +30,11 @@ The main differences between the two connectivity modes are outlined here, as we
 
 ## Import Connections
 
-When you connect to a data source with Power BI Desktop, the Navigator will allow you to select a set of tables (for relational sources) or a set of source objects (for multidimensional sources). 
+When you connect to a data source with Power BI Desktop, the navigator will allow you to select a set of tables (for relational sources) or a set of source objects (for multidimensional sources). 
 
 For SAP BW connections, you can select the objects you want to include in your query from the tree displayed. You can select an InfoProvider or BEx query for an InfoProvider, expand its key figures and dimensions, and select specific key figures, characteristics, attributes (properties), or hierarchies to be included in your query. 
 
-The selection defines a query that will return a flattened data set consisting of columns and rows. The selected characteristics levels, properties and key figures will be represented in the data set as columns. The key figures are aggregated according to the selected characteristics and their levels. A preview of the data is displayed in the Navigator. You can edit these queries in Power Query prior to loading the data, for example to apply filters, or aggregate the data, or join different tables.
+The selection defines a query that will return a flattened data set consisting of columns and rows. The selected characteristics levels, properties and key figures will be represented in the data set as columns. The key figures are aggregated according to the selected characteristics and their levels. A preview of the data is displayed in the navigator. You can edit these queries in Power Query prior to loading the data, for example to apply filters, or aggregate the data, or join different tables.
 
 When the data defined by the queries is loaded, it will be imported into the Power BI in-memory cache.
 
@@ -52,11 +52,11 @@ When you publish a report (.pbix file) to the Power BI service, a dataset is cre
 
 ## DirectQuery Connections
 
-The navigation experience is slightly different when connecting to an SAP BW source in DirectQuery mode. The Navigator will still display a list of available InfoProviders and BEx queries in SAP BW, however no Power BI query is defined in the process. You'll select the source object itself, that is, the InfoProvider or BEx query, and see the field list with the characteristics and key figures once you connect.
+The navigation experience is slightly different when connecting to an SAP BW source in DirectQuery mode. The navigator will still display a list of available InfoProviders and BEx queries in SAP BW, however no Power BI query is defined in the process. You'll select the source object itself, that is, the InfoProvider or BEx query, and see the field list with the characteristics and key figures once you connect.
 
 For SAP BW queries with variables, you can enter or select values as parameters of the query. Select the **Apply** button to include the specified parameters in the query.
 
-Instead of a data preview, the metadata of the selected InfoCube or BEx Query is displayed. Once you select the **Load** button in the **Navigator**, no data will be imported. 
+Instead of a data preview, the metadata of the selected InfoCube or BEx Query is displayed. Once you select the **Load** button in **Navigator**, no data will be imported. 
 
 ![Load into DirectQuery](load-into-directquery.png)
 
@@ -108,4 +108,4 @@ Also, many of the general best practices described in [Using DirectQuery in Powe
 
 ### See also
 
-* [SAP Business Warehouse connector troubleshooting](sap-bw-troubleshooting.md)
+* [Windows authentication and single sign-on](single-sign-on.md)
