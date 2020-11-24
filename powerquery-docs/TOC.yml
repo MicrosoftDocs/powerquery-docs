@@ -9,7 +9,7 @@
       - name: "Getting data"
         href: get-data-experience.md
       - name: "Authentication with a data source"
-        href: ConnectorAuthentication.md
+        href: ConnectorAuthentication.md 
     - name: Transform data
       items:
       - name: "Use Power Query"
@@ -18,10 +18,14 @@
         href: power-query-tutorial-shape-combine.md
       - name: "Using the Applied Steps list"
         href: applied-steps.md
+      - name: "Query folding basics"
+        href: query-folding-basics.md
       - name: "Using the data profiling tools"
         href: data-profiling-tools.md
       - name: "Using the Queries pane"
         href: queries-pane.md
+      - name: "Diagram view (Preview)"
+        href: diagram-view.md
       - name: "Using Schema view (Preview)"
         href: schema-view.md
       - name: "Share a query"
@@ -60,6 +64,10 @@
           href: fill-values-column.md
         - name: "Sort columns"
           href: sort-columns.md
+        - name: "Rename column"
+          href: rename-column.md
+        - name: "Move columns"
+          href: move-columns.md
         - name: "Replace values"
           href: replace-values.md
         - name: "Parse text as JSON or XML"
@@ -204,8 +212,6 @@
       items:
       - name: "Power Query connectors"
         href: Connectors/index.md
-      - name: "Connecting to Azure DevOps using OData"
-        href: https://docs.microsoft.com/azure/devops/report/powerbi/odataquery-connect?view=azure-devops
       - name: "Adobe Analytics"
         href: "Connectors/AdobeAnalytics.md"
       - name: "Access database"
@@ -213,11 +219,9 @@
       - name: "Azure SQL database"
         href: Connectors/AzureSQLDatabase.md
       - name: "Azure SQL Data Warehouse"
-        href: Connectors/AzureSQLDataWarehouse.md
-      - name: "Azure SQL database"
-        href: Connectors/AzureSQLDatabase.md
+        href: Connectors/AzureSQLDataWarehouse.md      
       - name: "Common Data Service"
-        href: Connectors/CommonDataService.md
+        href: Connectors/commondataservice.md
       - name: "Data Lake Storage"
         href: Connectors/DataLakeStorage.md
       - name: "Excel"
@@ -245,7 +249,11 @@
       - name: "MySQL database"
         href: Connectors/MySQLDatabase.md
       - name: "OData Feed"
-        href: Connectors/ODataFeed.md
+        items:
+        - name: "OData Feed connector"
+          href: Connectors/ODataFeed.md
+        - name: "Connecting to Azure DevOps using OData"
+          href: https://docs.microsoft.com/azure/devops/report/powerbi/odataquery-connect?view=azure-devops
       - name: "ODBC"
         href: Connectors/Odbc.md
       - name: "Oracle database"

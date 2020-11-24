@@ -13,7 +13,7 @@ ms.custom: edited
 
 One of the join kinds available in the **Merge** dialog box in Power Query is an *inner join*, which brings in only matching rows from both the left and right tables. More information: [Merge operations overview](merge-queries-overview.md)
 
-:::image type="complex" source="images/full-outer-join-operation.png" alt-text="Full outer join example":::
+:::image type="complex" source="images/inner-join-operation.png" alt-text="Inner join example":::
    Figure shows a table on the left with Date, CountryID, and Units columns. The emphasized CountryID column contains values of 1 in rows 1 and 2, 3 in row 3, and 2 in row 4. A table on the right contains ID and Country columns. The emphasized ID column contains values of 3 in row 1 (denoting Panama) and 4 in row 2 (denoting Spain). A table below the first two tables contains Date, CountryID, Units, and Country columns, but only one row of data for Panama. 
    :::image-end:::
 
@@ -62,4 +62,3 @@ From the newly created **Countries** column, expand the **Country** field. Don't
 After performing this operation, you'll create a table that looks like the following image.
 
 ![Final table with Date, CountryID, Units, and Country column headers, and a single row of data for the country Panama](images/me-merge-operations-inner-final-table-2.png "Final table with Date, CountryID, Units, and Country column headers, and a single row of data for the country Panama")
-

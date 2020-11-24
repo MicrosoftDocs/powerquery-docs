@@ -24,7 +24,7 @@ You can easily manage your parameters inside the **Manage Parameters** window. Y
 
 Power Query provides two easy ways to create parameters:
 
-* **From an existing query**&mdash;You can easily right-click a query whose output is a non-structured value such as, but not limited to, a date, text, or number, and select **Convert to Parameter**.
+* **From an existing query**&mdash;You can easily right-click a query whose value is a simple non-structured constant such as, but not limited to, a date, text, or number, and select **Convert to Parameter**. 
     
    ![Convert to parameter](images/me-parameters-convert-to-parameter.png)
 
