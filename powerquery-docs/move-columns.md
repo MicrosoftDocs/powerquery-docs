@@ -14,7 +14,7 @@ ms.author: v-douklo
 
 A common process when preparing data is to move columns in the dataset. 
 
-To accomplish this, you can either select the **Move** option or *Drag and Drop* the column.
+To accomplish this, you can either select the **Move** option or *drag and drop* the column.
 
 
 

@@ -96,7 +96,7 @@ This means that your query will send that native query to the Microsoft SQL Serv
 >[!NOTE]
 > We recommend that you read [Understanding folding with Query Diagnostics](querydiagnosticsfolding.md) to get the most out of the Query Diagnostics tools and learn how to verify query folding.
 
-## No Query folding
+## No query folding
 
 Queries that rely solely on unstructured data sources, such as CSV or Excel files, don't have query folding capabilities. This means that Power Query evaluates all the required data transformations outside the data source.
 

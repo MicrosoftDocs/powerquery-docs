@@ -23,11 +23,10 @@ USA| New York
 Canada | Toronto
 | | |
 
-The column headers are **Column 1** and **Column 2**, but you want to change those names to a more friendly name for your columns.
+The column headers are **Column 1** and **Column 2**, but you want to change those names to more friendly names for your columns.
 
 * **Column 1** becomes **Country**
 * **Column 2** becomes **City**
-
 
 The end result that you want in Power Query looks like the following table.
 
