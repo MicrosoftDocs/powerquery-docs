@@ -36,7 +36,7 @@ The end result that you want in Power Query looks like the following table.
 
 There are three ways to rename a column in Power Query.
 
-* **Double-click the column header**: The double-click action immediately lets you to rename the column.
+* **Double-click the column header**: The double-click action immediately lets you rename the column.
 
    ![Rename Column Double Select](images/me-rename-column-double-click.png)
 
@@ -59,7 +59,7 @@ For example, for the first sample table provided in this article, imagine that y
 
 ## Column name disambiguation
 
-With many actions performed in Power Query that might result in a *Column Name Conflict*, Power Query tries to disambiguate by renaming all duplicate instances of the same column name. The way that Power Query renames these columns is by adding a suffix to the original column name that has a separator (commonly a dot or an underscore), and then a number that represents the instance of the duplicated column name in the order that it was found by Power Query. This can often happen with actions such as, but not limited to:
+With many actions performed in Power Query that might result in a *Column Name Conflict*, Power Query tries to disambiguate by renaming all duplicate instances of the same column name. The way that Power Query renames these columns is by adding a suffix to the original column name that has a separator (commonly a dot or an underscore), and then a number that represents the instance of the duplicated column name in the order that it was found by Power Query. This renaming can often happen with actions such as, but not limited to:
 
 * **Promoting your column headers from your first row**:  For example, if you tried promoting the first row of the sample table in this article, Power Query renames the columns to **Panama** and **Panama_1**.
 

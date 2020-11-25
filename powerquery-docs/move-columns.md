@@ -1,7 +1,7 @@
 ---
 title: Move columns
 
-description: How to move a column to the desired location inside of Power Query.
+description: How to move a column to the location you want in Power Query.
 author: jessli20
 ms.service: powerquery
 ms.reviewer: v-miesco
@@ -14,7 +14,7 @@ ms.author: v-douklo
 
 A common process when preparing data is to move columns in the dataset. 
 
-To accomplish this, you can either select the **Move** option or *drag and drop* the column.
+To accomplish this move, you can either select the **Move** option or *drag and drop* the column.
 
 
 
