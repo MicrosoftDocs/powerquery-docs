@@ -13,7 +13,9 @@ LocalizationGroup: reference
 
 ## Using a gateway with the Web connector
 
-If you're using the Web connector through an on-premises data gateway, you must have Internet Explorer 10 installed on the gateway machine.  This installation will ensure that the `Web.Page` call through the gateway will work correctly. 
+Every use of the Web connector to get data from an HTML page requires the use of an on-premises data gateway when published to a Cloud service, whether it's Power BI Service for datasets or dataflows, or Power Apps for dataflows. (Currently, Dynamics 365 Customer Insights doesn't support the use of a gateway.) The only exception is when using Power BI Desktop with the **New web table inference** option turned on, and then publishing that report to the Power BI service. The **New web table inference** option can be enabled or disabled in Power BI Desktop by going to **File** > **Options and settings** > **Options** > **Preview features**. The option is enabled by default.
+
+If you receive a `Please specify how to connect` error message when attempting to connect to an HTML page using the Web connector, ensure that you have Internet Explorer 10 or later installed on the machine that hosts your on-premises data gateway. 
 
 ## Capturing web requests and certificate revocation
 
@@ -70,10 +72,10 @@ You can also get a copy of a `Web.Page` query from Excel. To copy the code from 
 4. In the **Home** tab of Power Query, select **Advanced Editor**. 
 5. In the **Advanced Editor**, copy the M formula.
 6. In the app that uses `Web.BrowserContents`, select the **Blank Query** connector.
-7. If you are copying to Power BI Desktop:
+7. If you're copying to Power BI Desktop:
     1. In the **Home** tab, select **Advanced Editor**.
     2. Paste the copied `Web.Page` query in the editor, and then select **Done**.
-8. If you are copying to Power Query Online:
+8. If you're copying to Power Query Online:
     1. In the **Blank Query**, paste the copied `Web.Page` query in the blank query.
     2. Select an on-premises data gateway to use.
     3. Select **Next**. 

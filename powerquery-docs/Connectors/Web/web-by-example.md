@@ -47,7 +47,7 @@ In this example, you'll extract the *Name* and *Price* for each of the games on 
 > [!NOTE]
 > Value suggestions only include values less than or equal to 128 characters in length.
 
-Once you're happy with the data extracted from the Web page, select **OK** to go to Power Query Editor. You can apply more transformations or shape the data, such as combining this data with other data sources.
+Once you're happy with the data extracted from the Web page, select **OK** to go to Power Query Editor. You can then apply more transformations or shape the data, such as combining this data with other data sources.
 
 ![applying more transformations](web-by-example_07.png)
 
