@@ -17,7 +17,7 @@ Power Query offers a series of methods to gain access to files that are hosted o
 >[!NOTE]
 >Currently, you can only browse for OneDrive for Business files of the authenticated user inside of Power Query Online for PowerApps.
 
-Power Query provides a **Browse OneDrive** button next to the **File path or URL** text box when you create a dataflow inside of PowerApps using any of these connectors:
+Power Query provides a **Browse OneDrive** button next to the **File path or URL** text box when you create a dataflow in PowerApps using any of these connectors:
 
 * [Excel](connectors/excel.md)
 * [JSON](connectors/json.md)
@@ -27,7 +27,7 @@ Power Query provides a **Browse OneDrive** button next to the **File path or URL
 
 ![Browse OneDrive... button inside the Connection settings window for the Excel connector](images/sp-browse-button.png)
 
-When you select this button, you'll be prompted to go through the authentication process. After finalizing this process, a new window appears with all the files inside the OneDrive for Business of the authenticated user. 
+When you select this button, you'll be prompted to go through the authentication process. After completing this process, a new window appears with all the files inside the OneDrive for Business of the authenticated user. 
 
 ![New window to browse the files from the OneDrive for Business of the authenticated user](images/sp-browse-window.png)
 
@@ -35,9 +35,9 @@ You can select the file of your choice, and then select the **Open** button. Aft
 
 ![Connection settings window with the url to the selected file hosted on OneDrive for Business](images/sp-browse-url.png)
 
-You can select the **Next** button at the bottom right corner of the window to continue the process and get your data.
+You can select the **Next** button at the bottom-right corner of the window to continue the process and get your data.
 
-## From the Web connector using a file url
+## From the Web connector using a file URL
 
 1. Navigate to your OneDrive for Business location using a browser. Right-click the file you want to use, and select **Open in Excel**.
    
@@ -76,7 +76,7 @@ When the **Navigator** dialog box appears, you can select from the list of table
 
 ## SharePoint folder connector
 
-You can read a detailed step by step guide on how to connect to the files hosted on your SharePoint site in the [SharePoint folder](connectors/sharepointfolder.md#connect-to-a-sharepoint-folder) article.
+You can read a detailed step-by-step guide on how to connect to the files hosted on your SharePoint site in the [SharePoint folder](connectors/sharepointfolder.md#connect-to-a-sharepoint-folder) article.
 
 After successfully establishing the connection, you'll be prompted with a table preview that shows the files in your SharePoint site. Select the **Transform data** button at the bottom right of the window.
 
@@ -86,11 +86,11 @@ Selecting the **Transform Data** button will take you to a view of the data call
 
 ![Table preview of the files in the SharePoint site after selecting the Transform data button](images/sp-transform-data-me.png)
 
-The table has a column named **Content** that contains your file in a binary format. The values in the **Content** column will have a different color than the rest of the values in the other columns of the table, and this is to denote that they're selectable.
+The table has a column named **Content** that contains your file in a binary format. The values in the **Content** column have a different color than the rest of the values in the other columns of the table, which indicates that they're selectable.
 
 By selecting a **Binary** value in the **Content** column, Power Query will automatically add a series of steps in your query to navigate to the file and interpret its contents where possible.
 
-For example, from the table shown in the previous image of this section, you can select the second row where the **Name** field has a value of **02-February.csv** and Power Query will automatically create a series of steps to navigate and interpret the contents of the file as a CSV file.
+For example, from the table shown in the previous image, you can select the second row where the **Name** field has a value of **02-February.csv**. Power Query will automatically create a series of steps to navigate and interpret the contents of the file as a CSV file.
 
 ![Contents of a CSV file with the name 02-February.csv that were automatically interpreted by Power Query as shown in the Applied steps section](images/sp-file-preview-me.png)
 
@@ -113,7 +113,7 @@ For example:
 
 ## SharePoint.Contents function
 
-While the SharePoint folder connector offers you an experience where you can see all the files available in your SharePoint or OneDrive for Business site at once, you can also opt for a different experience where you can navigate through your SharePoint or OneDrive for Business folders and reach the folder or file(s) that you're interested in.
+While the SharePoint folder connector offers you an experience where you can see all the files available in your SharePoint or OneDrive for Business site at once, you can also opt for a different experience. In this experience, you can navigate through your SharePoint or OneDrive for Business folders and reach the folder or file(s) that you're interested in.
 
 This experience is provided through the [`SharePoint.Contents`](https://docs.microsoft.com/powerquery-m/sharepoint-contents) function. Take the following steps to use this function:
 
@@ -128,7 +128,7 @@ This experience is provided through the [`SharePoint.Contents`](https://docs.mic
 
 4. Navigate through the different documents to the specific folder or file(s) that you're interested in.
 
-    For example, imagine a SharePoint site with with a *Shared Documents* folder. You can select the **Table** value in the **Content** column for that folder and navigate directly to that folder.
+    For example, imagine a SharePoint site with a *Shared Documents* folder. You can select the **Table** value in the **Content** column for that folder and navigate directly to that folder.
 
     ![Table Preview after connecting to the SharePoint site with the function SharePoint.Contents where there's a folder with the name Shared Documents](images/sp-navigate-level-1-me.png)
 
@@ -142,4 +142,4 @@ This experience is provided through the [`SharePoint.Contents`](https://docs.mic
      ![Table preview after navigating to the Sales Reports folder](images/sp-navigate-level-3-me.png)
 
 >[!NOTE]
-> The experience provided by the `SharePoint.Contents` function is optimal for SharePoint and OneDrive for Business environments with large number of files.
+> The experience provided by the `SharePoint.Contents` function is optimal for SharePoint and OneDrive for Business environments with a large number of files.
