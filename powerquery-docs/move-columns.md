@@ -21,11 +21,11 @@ To accomplish this move, you can either select the **Move** option or *drag and 
 ## Move option
 
 
-The following example shows the different ways of moving columns. This example focuses on moving the **Contact Name** column.
+The following example shows the different ways of moving columns. This example focuses on moving the Contact Name column.
 
 ![Table containing the Contact Name column to be moved in this example as the third column in the table](images/move-column-before.png)
 
-You move the column using the **Move** option. This option located in the **Any column** group under the **Transform** tab. In the **Move** option, the available choices are.
+You move the column using the **Move** option. This option located in the **Any column** group under the **Transform** tab. In the **Move** option, the available choices are:
 
 * Before
 * After
@@ -82,7 +82,7 @@ Move the column to the place where you would like to place it.
 
 If you want to find a specific column, then go to the **View** tab in the ribbon and select **Go to column**.
 
-From there, you can specifically select the column you would like to view. This is especially useful if there are many columns.
+From there, you can specifically select the column you would like to view, which is especially useful if there are many columns.
 
 ![Using Go to column to select the specific column to go to](images/move-column-go-to-column.png)
 

@@ -73,7 +73,7 @@ After selecting this option, a new column called **Day Name** appears in your ta
 
 Now check the **View Native Query** option for the last step you created. You'll notice this option appears grayed out or disabled. However, you can right-click the **Filtered Rows1** step and you'll see the **View Native Query** option is available for that step.
 
-For this particular scenario, the query is partially folded to the data source until the *Filtered Rows1* step.
+For this particular scenario, the query is folded to the data source until after the **Filtered rows1** step, and everything after is not folded to the data source. Therefore, the entire scenario is partially folded.
 
 ![View Native query disabled after performing new transformations](images/me-query-folding-basics-disabled-view-native-query.png)
 
