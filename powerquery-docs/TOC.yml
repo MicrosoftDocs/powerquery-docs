@@ -9,7 +9,7 @@
       - name: "Getting data"
         href: get-data-experience.md
       - name: "Authentication with a data source"
-        href: ConnectorAuthentication.md
+        href: ConnectorAuthentication.md 
     - name: Transform data
       items:
       - name: "Use Power Query"
@@ -18,10 +18,14 @@
         href: power-query-tutorial-shape-combine.md
       - name: "Using the Applied Steps list"
         href: applied-steps.md
+      - name: "Query folding basics"
+        href: query-folding-basics.md
       - name: "Using the data profiling tools"
         href: data-profiling-tools.md
       - name: "Using the Queries pane"
         href: queries-pane.md
+      - name: "Diagram view (Preview)"
+        href: diagram-view.md
       - name: "Using Schema view (Preview)"
         href: schema-view.md
       - name: "Share a query"
@@ -60,6 +64,10 @@
           href: fill-values-column.md
         - name: "Sort columns"
           href: sort-columns.md
+        - name: "Rename column"
+          href: rename-column.md
+        - name: "Move columns"
+          href: move-columns.md
         - name: "Replace values"
           href: replace-values.md
         - name: "Parse text as JSON or XML"
@@ -213,7 +221,7 @@
       - name: "Azure SQL Data Warehouse"
         href: Connectors/AzureSQLDataWarehouse.md      
       - name: "Common Data Service"
-        href: Connectors/CommonDataService.md
+        href: Connectors/commondataservice.md
       - name: "Data Lake Storage"
         href: Connectors/DataLakeStorage.md
       - name: "Excel"
@@ -258,15 +266,37 @@
         href: Connectors/SalesforceObjects.md
       - name: "Salesforce Reports"
         href: Connectors/SalesforceReports.md
+      - name: "SAP Business Warehouse"
+        items:
+        - name: "SAP Business Warehouse Application Server"
+          href: Connectors/sap-bw/application-setup-and-connect.md
+        - name: "SAP Business Warehouse Message Server"
+          href: Connectors/sap-bw/message-setup-and-connect.md
+        - name: "SAP BW fundamentals"
+          href: Connectors/sap-bw/sap-bw-fundamentals.md
+        - name: "Navigate the query objects"
+          href: Connectors/sap-bw/navigate-query-objects.md
+        - name: "Transform and filter an SAP BW dataset"
+          href: Connectors/sap-bw/transform-filter-sap-bw-data.md
+        - name: "Implementation details"
+          href: Connectors/sap-bw/implementation-details.md
+        - name: "Import vs. DirectQuery for SAP BW"
+          href: Connectors/sap-bw/import-vs-directquery.md
+        - name: "Windows authentication and single sign-on"
+          href: Connectors/sap-bw/single-sign-on.md
+        - name: "Use advanced options"
+          href: Connectors/sap-bw/use-advanced-options.md
+        - name: "SAP BW connector troubleshooting"
+          href: Connectors/sap-bw/sap-bw-troubleshooting.md
       - name: "SAP HANA database"
         items:
-        - name: Overview
+        - name: "Overview"
           href: Connectors/sap-hana/overview.md
-        - name: SAP HANA encryption
+        - name: "SAP HANA encryption"
           href: Connectors/sap-hana/sap-hana-encryption.md
-        - name: Configure ODBC for SAP HANA
+        - name: "Configure ODBC for SAP HANA"
           href: Connectors/sap-hana/configure-odbc-sap-hana.md
-        - name: Troubleshooting
+        - name: "Troubleshooting"
           href: Connectors/sap-hana/sap-hana-troubleshooting.md
       - name: "SharePoint Folder"
         href: Connectors/SharePointFolder.md
