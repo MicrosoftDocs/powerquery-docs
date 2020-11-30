@@ -4,13 +4,13 @@ description: An article that demonstrates how to create a cluster values column 
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: 
-ms.date: 11/08/2020
+ms.date: 11/30/2020
 ms.author: v-miesco
 ---
 
 # Cluster values
 
-Cluster values automatically create groups with similar values using a fuzzy matching algorithm, and then maps a each column's value to the best-matched group. This transform is very useful when you're working with data that has many different variations of the same value and you need to consolidate values into consistent groups.
+Cluster values automatically create groups with similar values using a fuzzy matching algorithm, and then maps each column's value to the best-matched group. This transform is very useful when you're working with data that has many different variations of the same value and you need to combine values into consistent groups.
 
 Consider a sample table with an **id** column that contains a set of IDs and a **Person** column containing a set of variously spelled and capitalized versions of the names Miguel, Mike, William, and Bill.
 
@@ -44,7 +44,7 @@ The following options are available for clustering values in a new column:
 * **Similarity threshold (optional)**: This option indicates how similar two values must be to be grouped together. The minimum setting of 0 causes all values to be grouped together. The maximum setting of 1 only allows values that match exactly to be grouped together. The default is 0.8.
 * **Ignore case**: When comparing text strings, case is ignored. This option is enabled by default.
 * **Group by combining text parts**: The algorithm tries to combine text parts (such as combining Micro and soft into Microsoft) to group values.
-* **Show similarity scores**: Show similarity scores between the input values and computed representative values after fuzzy clustering.
+* **Show similarity scores**: Shows similarity scores between the input values and computed representative values after fuzzy clustering.
 * **Transformation table (optional)**: You can select a transformation table that maps values (such as mapping MSFT to Microsoft) to group them together.
 
 For this example, a new transformation table with the name **My transform table** is used to demonstrate how values can be mapped. This transformation table has two columns:
@@ -60,6 +60,6 @@ Using the previously created query, double-click the **Clustered values** step, 
 
 ![Fuzzy cluster column with sample transformation table drop-down menu](images/cluster-column-fuzzy-cluster-options-with-transform-table.png)
 
-After selecting your transformation table and enabling the **Show similarity scores** option, select **OK**. The result of that operation will give you a table that contains the same **id** and **Person** columns as the original table, but also includes two new columns on the right called **Cluster** and **Person_Cluster_Similarity**. The **Cluster** column contains the properly spelled and capitalized versions of the names Miguel for versions of Miguel and Mike, an William for versions of Bill, Billy, and William. The **Person_Cluster_Similarity** column contains the similarity scores for each of the names.
+After selecting your transformation table and enabling the **Show similarity scores** option, select **OK**. The result of that operation will give you a table that contains the same **id** and **Person** columns as the original table, but also includes two new columns on the right called **Cluster** and **Person_Cluster_Similarity**. The **Cluster** column contains the properly spelled and capitalized versions of the names Miguel for versions of Miguel and Mike, and William for versions of Bill, Billy, and William. The **Person_Cluster_Similarity** column contains the similarity scores for each of the names.
 
-![table that contains the same **id** and **Person** columns as the original table, but also includes two new columns on the right called **Cluster** and **Person_Cluster_Similarity**. The **Cluster** column contains the properly spelled and capitalized versions of the names Miguel for versions of Miguel and Mike, an William for versions of Bill, Billy, and William. The **Person_Cluster_Similarity** column contains the similarity scores for each of the names](images/cluster-column-final-table.png)
+![Table containing the new Cluster and Person_Cluster_Similarity columns](images/cluster-column-final-table.png)
