@@ -77,30 +77,30 @@ For this particular scenario, the query is folded to the data source until after
 
 ![View Native query disabled after performing new transformations](images/me-query-folding-basics-disabled-view-native-query.png)
 
-Another option to verify query folding is to use the query diagnostics tools, more specifically the **Diagnose Step** option. To learn more about how to use the query diagnostics tool, go to [What is Query Diagnostics for Power Query?](querydiagnostics.md).
+Another option to verify query folding is to use the query diagnostics tools, more specifically the **Diagnose Step** option. To learn more about how to use the query diagnostics tool, go to [What is Query Diagnostics for Power Query?](querydiagnostics.md)
 
 ![Query diagnostics tools in the Power Query ribbon](images/me-query-folding-basics-query-diagnostics.png)
 
 To use query diagnostics, select the query that you want to analyze and then select the **Diagnose Step** button. This action creates a new group and two queries with the format `[Query Name] [Step Name] [Diagnostics Type] [Timestamp]`.
 
-Under **Queries**, take a look at the diagnostic that reads "Aggregated" in the [Diagnostics Type] part and then take a closer look at the Data Source Query column in the table. This column holds all the requests sent to the data source.
+Under **Queries**, take a look at the diagnostic that contains *Aggregated* in the [Diagnostics Type] part. Then take a closer look at the Data Source Query column in the table. This column holds all the requests sent to the data source.
 
 ![Query diagnostics at the step level for the last step of the new query showing the requests sent to the data source in the Data Source Query column](images/me-query-folding-basics-query-diagnostics-aggregated-view.png)
 
-Reading the values in that column, you can see that the native query sent to the server to retrieve the information. You can right-click to drill down to a specific value. If you look at the specific cell value in row 21 in the previous image, you'll note it's the same native query you can see in the **View Native Query** for the **Filtered Rows1** step.
+Reading the values in that column, you can see the native query sent to the server to retrieve the information. You can right-click to drill down to a specific value. If you look at the specific cell value in row 21 in the previous image, you'll note it's the same native query you can see in the **View Native Query** for the **Filtered Rows1** step.
 
 ![Value found inside the query for the aggregated query diagnostics which holds the SQL statement sent to the SQL Server](images/me-query-folding-basics-query-diagnostics-aggregated-view-drill-down.png)
 
 This means that your query will send that native query to the Microsoft SQL Server and do the rest of the transformations locally. This is what it means to have a query that can partially fold.
 
 >[!NOTE]
-> We recommend that you read [Understanding folding with Query Diagnostics](querydiagnosticsfolding.md) to get the most out of the Query Diagnostics tools and learn how to verify query folding.
+> We recommend that you read [Understanding folding with Query Diagnostics](querydiagnosticsfolding.md) to get the most out of the query diagnostics tools and learn how to verify query folding.
 
 ## No query folding
 
 Queries that rely solely on unstructured data sources, such as CSV or Excel files, don't have query folding capabilities. This means that Power Query evaluates all the required data transformations outside the data source.
 
-One example can be seen in the article about [combining multiple CSV files from a local folder](combine-files-csv.md) where none of the steps have the **View Native Query** option active, and running the Query diagnostics for that step yields no results in the Data Source Query column.
+One example can be seen in the article about [combining multiple CSV files from a local folder](combine-files-csv.md) where none of the steps have the **View Native Query** option active, and running the query diagnostics for that step yields no results in the Data Source Query column.
 
 ![View Native Query greyed out for the query that combine CSV files](images/me-query-folding-basics-csv-files-source.png)
 
@@ -108,7 +108,7 @@ One example can be seen in the article about [combining multiple CSV files from 
 
 * Follow the best practices when creating a new query as stated in [Best practices in Power Query](best-practices.md).
 * Checking the **View Native Query** option is always recommended to make sure that your query can be folded back to the data source. If your step disables this option, you know that you've created a step that stops query folding. 
-* Use the Query Diagnostics tool to your advantage and to better understand the requests being sent to your data source when query folding capabilities are available for the connector.
+* Use the query diagnostics tool to your advantage and to better understand the requests being sent to your data source when query folding capabilities are available for the connector.
 * When combining data sourced from the use of multiple connectors, Power Query tries to push as much work as possible to both of the data sources while complying with the privacy levels defined for each data source. 
 * Read the article on [Privacy levels](dataprivacyfirewall.md) to protect your queries from running against a Data Privacy Firewall error.
 * You can also use other tools to check query folding from the perspective of the request being received by the data source. Based on our example, you can use the Microsoft SQL Server Profile to check the requests being sent by Power Query and received by the Microsoft SQL Server. 
