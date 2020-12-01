@@ -58,12 +58,19 @@ If you know of any common errors that may occur with your custom connector, you 
 
 Any other instructions or information about your connector that hasn't been covered by the previous sections can go in this section.
 
-## Article format
+## Article location and format
 
-Your article should be formatted and submitted as Markdown text. It should use the Microsoft style for describing procedures and the UI layout.
+Your article should be made available on GitHub under the Connectors folder in the Power Query docs repo: <https://github.com/MicrosoftDocs/powerquery-docs/tree/master/powerquery-docs/Connectors>. 
 
-The following documents describe how to write and submit an article for your custom connector. They also include instructions on formatting your document in Markdown, and the Microsoft styles that you should follow when writing your article.
+See the [Microsoft Docs contributor guide](https://docs.microsoft.com/contribute/) on how you can contribute to our repo. 
 
-* [Microsoft Docs contributor guide](https://docs.microsoft.com/contribute/)
-* [Docs Markdown reference](https://docs.microsoft.com/contribute/markdown-reference)
-* [Microsoft Writing Style Guide](https://docs.microsoft.com/style-guide/welcome/)
+The article should be formatted and submitted as a Markdown file. It should use the Microsoft style for describing procedures and the UI layout.  
+
+The following articles include instructions on formatting your document in Markdown, and the Microsoft style that you should follow when authoring your article:
+- [Docs Markdown reference](https://docs.microsoft.com/contribute/markdown-reference) 
+- [Microsoft Writing Style Guide](https://docs.microsoft.com/style-guide/welcome/) 
+
+## Example connector article 
+
+Here is an example Power Query connector article that you can use as a starting point: [Azure SQL database](https://docs.microsoft.com/power-query/connectors/azuresqldatabase)
+
