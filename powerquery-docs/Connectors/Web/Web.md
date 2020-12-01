@@ -86,7 +86,7 @@ To load data from a web site with Power Query Online:
 
    ![Select either the Web page or Web API connector](select-web-page-api.png)
 
-   In most cases, you'll want to select the Web page connector. For security reasons, you'll need to use an [on-premises data gateway](https://docs.microsoft.com/data-integration/gateway/) with this connector. The Web Page connector requires a gateway because of security-related concerns specific to how HTML pages are processed. This isn't an issue with Web API connector, as it doesn't do any HTML processing.
+   In most cases, you'll want to select the Web page connector. For security reasons, you'll need to use an [on-premises data gateway](https://docs.microsoft.com/data-integration/gateway/) with this connector. The Web Page connector requires a gateway because HTML pages are retrieved using a browser control, which involves potential security concerns. This isn't an issue with Web API connector, as it doesn't use a browser control.
 
    In some cases, you might want to use a URL that points at either an API or a file stored on the web. In those scenarios, the Web API connector (or file-specific connectors) would allow you to move forward without using an on-premises data gateway.
 
@@ -122,7 +122,7 @@ To load data from a web site with Power Query Online:
 
 ## Load Web data using an advanced URL
 
-When you select **Get Data > From Web** in Power Query Desktop, in most instances you'll enter URLs in the Basic setting. However, in some cases you may want to assemble a URL from its separate parts, set a timeout for the browser, or provide individualized URL header data. In this case, select the **Advanced** option in the **From Web** dialog box.
+When you select **Get Data > From Web** in Power Query Desktop, in most instances you'll enter URLs in the Basic setting. However, in some cases you may want to assemble a URL from its separate parts, set a timeout for the connection, or provide individualized URL header data. In this case, select the **Advanced** option in the **From Web** dialog box.
 
 ![Web advanced URL assembly](webadvancedurl.png)
 
@@ -136,19 +136,19 @@ You can also add specific request headers to the POST you send to the web site u
 | --- | --- |
 | Accept | Specifies the response media types that are acceptable. | 
 | Accept-Charset | Indicates which character sets are acceptable in the textual response content. |
-| Accept-Encoding | Indicates what response content codings are acceptable in the response. |
+| Accept-Encoding | Indicates what response content encodings are acceptable in the response. |
 | Accept-Language | Indicates the set of natural languages that are preferred in the response. |
-| Cache-Control | Specifies directives that specify behavior that prevents caches from adversely interfering with a request or response. |
-| Content-Type | Indicates the media type of the associated representation. |
+| Cache-Control | Indicates the caching policies, specified by directives, in client requests and server responses. |
+| Content-Type | Indicates the media type of the content. |
 | If-Modified-Since | Conditionally determines if the web content has been changed since the date specified in this field. If the content hasn't changed, the server responds with only the headers that have a 304 status code. If the content has changed, the server will return the requested resource along with a status code of 200. |
 | Prefer | Indicates that particular server behaviors are preferred by the client, but aren't required for successful completion of the request. |
 | Range | Specifies one or more subranges of the selected representation data. |
 | Referer | Specifies a URI reference for the resource from which the target URI was obtained. |
 | | |
 
-## Open files on the web
+## Import files from the web
 
-Normally when you open a local on-premises file in Power Query Desktop, you'll use the specific file-type connector to open that file, for example, the JSON connector to open a JSON file or the CSV connector to open a CSV file. However, if you're using Power Query Desktop and the file you want to open is located on the web, you must use the Web connector to open that file. As in the local case, you'll then be presented with the table that the connector loads by default, which you can then either Load or Transform.
+Normally when you import a local on-premises file in Power Query Desktop, you'll use the specific file-type connector to import that file, for example, the JSON connector to import a JSON file or the CSV connector to import a CSV file. However, if you're using Power Query Desktop and the file you want to import is located on the web, you must use the Web connector to import that file. As in the local case, you'll then be presented with the table that the connector loads by default, which you can then either Load or Transform.
 
 The following file types are supported by the Web Connector:
 
@@ -161,7 +161,7 @@ The following file types are supported by the Web Connector:
 * [XML tables](../xml.md)
 * PDF
 
-For example, you could use the following steps to open a JSON file on the https://contoso.com/products web site:
+For example, you could use the following steps to import a JSON file on the https://contoso.com/products web site:
 
 1. From the **Get Data** dialog box, select the **Web** connector. 
 
@@ -169,13 +169,13 @@ For example, you could use the following steps to open a JSON file on the https:
 
     `http://contoso.com/products/Example_JSON.json`
 
-    ![Open JSON file from the web](webJson.png)
+    ![Import a JSON file from the web](webJson.png)
 
 3. Select **OK**.
 
 4. If this is the first time you're visiting this URL, select **Anonymous** as the authentication type, and then select **Connect**.
 
-5. Power Query Editor will now open with the data contained in the JSON file. Select the **View** tab in the Power Query Editor, then select **Formula Bar** to turn on the formula bar in the editor.
+5. Power Query Editor will now open with the data imported from the JSON file. Select the **View** tab in the Power Query Editor, then select **Formula Bar** to turn on the formula bar in the editor.
 
     ![Open the Formula Bar](webFormulaBar.png)
 
