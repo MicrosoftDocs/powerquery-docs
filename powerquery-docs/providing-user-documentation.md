@@ -20,7 +20,7 @@ This section describes the general layout of the Power Query connector articles.
 
 All Power Query connector articles begin with a summary table that contains the following information:
 
-* Release state: Designates whether the connector is in preview or general availability.
+* Release state: Indicates whether the connector is in preview or general availability.
 * Products supported: Lists the products that can use your custom connector.
 * Authentication types supported: Lists the authentication types your custom connector supports.
 * Function reference docs: Lists any M formula language docs that are associated with your custom connector.
@@ -34,15 +34,15 @@ If your custom connector is implemented on various products, but has different c
 
 ### Prerequisites
 
-If your custom connector requires that other applications be installed on the system running your connector or requires that a set up procedure be performed before using your custom connector, you must include a Prerequisites section that describes these installation and set up procedures. This section will also include any information about setting up various versions of your connector (if applicable).
+If your custom connector requires that other applications be installed on the system running your connector or requires that a set-up procedure be done before using your custom connector, you must include a Prerequisites section that describes these installation and set-up procedures. This section will also include any information about setting up various versions of your connector (if applicable).
 
 ### Capabilities supported
 
-This section should contain a list of the capabilities supported by your custom connector. These capabilities are usually a bulleted list that designates whether the connector supports Import and DirectQuery modes, and also any advanced options that are available in the initial dialog box that appears after the user selects your connector in **Get data**. 
+This section should contain a list of the capabilities supported by your custom connector. These capabilities are usually a bulleted list that indicates if the connector supports Import and DirectQuery modes, and also any advanced options that are available in the initial dialog box that appears after the user selects your connector in **Get data**. 
 
 ### Connection instructions
 
-This section contains the procedures required to connect to data. If your custom connector is only used in Power Query Desktop, only one procedure is required. However, if your custom connector is used on both Power Query Desktop and Power Query Online, you must supply a separate procedure in separate sections for each instance. That is, if your custom connector is only used by Power Query Desktop, you'll have one procedure starting with a second order heading and a single step by step procedure. If your custom connector is used by both Power Query Desktop and Power Query Online, you'll have two procedures, each starting with a second order heading, containing a separate step by step procedure under each heading.
+This section contains the procedures required to connect to data. If your custom connector is only used in Power Query Desktop, only one procedure is required. However, if your custom connector is used on both Power Query Desktop and Power Query Online, you must supply a separate procedure in separate sections for each instance. That is, if your custom connector is only used by Power Query Desktop, you'll have one procedure starting with a second order heading and a single step-by-step procedure. If your custom connector is used by both Power Query Desktop and Power Query Online, you'll have two procedures. Each procedure starts with a second order heading, and contains a separate step-by-step procedure under each heading.
 
 The procedure is made up of a numbered list that includes each step required to fill in the information needed to provide a normal connection (not requiring advance options) to the data. 
 
@@ -56,7 +56,7 @@ If you know of any common errors that may occur with your custom connector, you 
 
 ### Additional instructions (optional)
 
-Any other instructions or information regarding your connector that hasn't been covered by the previous sections can go here.
+Any other instructions or information about your connector that hasn't been covered by the previous sections can go in this section.
 
 ## Article format
 
