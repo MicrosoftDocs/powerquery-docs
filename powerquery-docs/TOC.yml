@@ -214,10 +214,10 @@
       items:
       - name: "Power Query connectors"
         href: Connectors/index.md
-      - name: "Adobe Analytics"
-        href: "Connectors/AdobeAnalytics.md"
       - name: "Access database"
         href: Connectors/AccessDatabase.md
+      - name: "Adobe Analytics"
+        href: "Connectors/AdobeAnalytics.md"
       - name: "Azure SQL database"
         href: Connectors/AzureSQLDatabase.md
       - name: "Azure SQL Data Warehouse"

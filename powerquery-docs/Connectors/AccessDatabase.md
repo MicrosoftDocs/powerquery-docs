@@ -49,7 +49,7 @@ To make the connection from Power Query desktop:
 
     ![Select the data you want to import in the Navigator](./media/access-database/navigator-desktop.png)
 
-## Connect to an Access database from Power Query Online:
+## Connect to an Access database from Power Query Online
 
 To make the connection from Power Query desktop:
 
