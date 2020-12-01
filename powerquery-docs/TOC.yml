@@ -424,7 +424,7 @@
           href: HandlingConnectorSigning.md
       - name: Certification
         href: ConnectorCertification.md
-      - name: "Providing user documentation"
+      - name: "Connector documentation"
         href: providing-user-documentation.md
     - name: Resources
       items:
