@@ -16,7 +16,7 @@ LocalizationGroup: reference
 | Item | Description |
 | ------- | ------------|
 |Release state | General Availability |
-| Products supported | Power BI Desktop<br/>Power BI Service (Enterprise Gateway)<br/>Dataflows in PowerBI.com (Enterprise Gateway)<br/>Dataflows in PowerApps.com (Enterprise Gateway)<br/>Excel |
+| Products supported | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication types supported| Windows (Power BI Desktop, Excel, Power Query Online with gateway)<br/>Database (Power BI Desktop, Excel)<br/>Microsoft Account (all)<br/> Basic (Power Query Online) |
 | Function reference docs | [Sql.Database](https://docs.microsoft.com/powerquery-m/sql-database)<br/>[Sql.Databases](https://docs.microsoft.com/powerquery-m/sql-databases) |
 | | |
