@@ -15,7 +15,7 @@ ms.custom: edited
 Power Query is a data transformation and data preparation engine. Power Query comes with a graphical interface for getting data from sources and a Power Query Editor for applying transformations. Because the engine is available in many products and services, the destination where the data will be stored depends on where Power Query was used. Using Power Query, you can perform the extract, transform, and load (ETL) processing of data.
 
 :::image type="complex" source="images/whatispowerquery.png" alt-text="Power Query input, transformation, and destination":::
-   Diagram with symbolized data sources on the right, passing though Power query for transformation, and then going to various destinations, such as Azure Data Lake Storage, Common Data Service, Microsoft Excel, or Power BI.
+   Diagram with symbolized data sources on the right, passing though Power query for transformation, and then going to various destinations, such as Azure Data Lake Storage, Dataverse, Microsoft Excel, or Power BI.
 :::image-end:::
 
 ## How Power Query helps with data acquisition
@@ -58,7 +58,7 @@ More information: [Quickstart: Using Power Query in Power BI](power-query-quicks
 
 ## Dataflows
 
-Power Query can be used in many products, such as Power BI and Excel. However, using Power Query within a product limits its usage to only that specific product. *Dataflows* are a product-agnostic service version of the Power Query experience that runs in the cloud. Using dataflows, you can get data and transform data in the same way, but instead of sending the output to Power BI or Excel, you can store the output in other storage options such as Common Data Service or Azure Data Lake Storage. This way, you can use the output of dataflows in other products and services.
+Power Query can be used in many products, such as Power BI and Excel. However, using Power Query within a product limits its usage to only that specific product. *Dataflows* are a product-agnostic service version of the Power Query experience that runs in the cloud. Using dataflows, you can get data and transform data in the same way, but instead of sending the output to Power BI or Excel, you can store the output in other storage options such as Dataverse or Azure Data Lake Storage. This way, you can use the output of dataflows in other products and services.
 
 More information: [What are dataflows?](/dataflows/overview-dataflows-across-power-platform-dynamics-365.md)
 

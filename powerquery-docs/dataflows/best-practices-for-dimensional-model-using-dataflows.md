@@ -2,7 +2,6 @@
 title: Best practices for creating a dimensional model using dataflows
 description: Best practices for creating a dimensional model using dataflows
 author: radacad
-
 ms.service: powerquery
 ms.reviewer: v-douklo
 ms.topic: conceptual
