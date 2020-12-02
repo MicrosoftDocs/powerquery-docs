@@ -35,15 +35,15 @@ Next, you can create other dataflows that source their data from staging dataflo
 
 ## Transformation dataflows
 
-When you've separated your transformation dataflows from the staging dataflows, the transformation will be independent from the source. This separation helps if you're migrating the source system to a new system. All you need to do in that case is to change the staging dataflows. The transformation dataflows are likely to<!--Maybe this is the solution to getting around "should," which Writing Style Guide disapproves of to indicated probability.--> work without any problem, because they're sourced only from the staging dataflows.
+When you've separated your transformation dataflows from the staging dataflows, the transformation will be independent from the source. This separation helps if you're migrating the source system to a new system. All you need to do in that case is to change the staging dataflows. The transformation dataflows are likely to work without any problem, because they're sourced only from the staging dataflows.
 
-This separation also helps in case the source system connection is slow. The transformation dataflow won't need to wait for a long time to get records coming through a slow connection to the source system. The staging dataflow has already done that part, and the data will be ready for the transformation layer.
+This separation also helps in case the source system connection is slow. The transformation dataflow won't need to wait for a long time to get records coming through a slow connection from the source system. The staging dataflow has already done that part, and the data will be ready for the transformation layer.
 <!--Same comment about branding as previous image. For the alt text here, you'd only need to describe what's different about this image. -->
 ![Transformation dataflows](media/TransformationDataflows.png)
 
 ## Layered architecture
 
-A layered architecture is an architecture in which you perform actions in separate layers. The staging and transformation dataflows can be two layers of a multilayered dataflow architecture. Trying to do actions in layers helps minimize the maintenance required.<!--Suggested.--> When you want to change something, you just need to change it in the layer in which it's located. The other layers will continue to work as usual.<!--Suggested.-->
+A layered architecture is an architecture in which you perform actions in separate layers. The staging and transformation dataflows can be two layers of a multilayered dataflow architecture. Trying to do actions in layers helps minimize the maintenance required. When you want to change something, you just need to change it in the layer in which it's located. The other layers will continue to work as usual.
 
 The following image shows a multilayered architecture for dataflows whose entities are then used in Power BI datasets.
 <!--Not sure what this has to do specifically with a data warehouse, but anyhow. Same comments about branding and alt text apply here.-->
@@ -55,7 +55,7 @@ When you use the result of a dataflow in another dataflow, you're using the conc
 
 ![Computed entity to process common transformations](media/ComputedEntityInBetween.png)
 
-In the preceding image, the computed entity gets the data directly from the source. However, in the architecture of staging and transformation dataflows, it's likely that the computed entities are sourced from the staging dataflows.
+In the previous image, the computed entity gets the data directly from the source. However, in the architecture of staging and transformation dataflows, it's likely that the computed entities are sourced from the staging dataflows.
 <!--Alt text just needs to describe the difference here.-->
 ![Computed entity sourced from dataflows](media/ComputedEntityFromDataflows.png)
 
@@ -73,7 +73,7 @@ When building dimension tables, make sure you have a key for each one. This ensu
 
 ![Mark a column as a key value](media/MarkAsKey.png)
 
-### Do incremental refresh for large fact tables
+### Do an incremental refresh for large fact tables
 
 Fact tables are always the largest tables in the data warehouse. We recommend that you reduce the number of rows transferred for these tables. If you have a very large fact table, ensure that you use incremental refresh for that entity. An incremental refresh can be done in the Power BI dataset and also in the dataflow entities.
 

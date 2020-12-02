@@ -21,21 +21,21 @@ Analytical dataflows allow an additional storage option: your organizations' Azu
 
 ## Dataflows that use built-in storage
 
-By default, analytical dataflows will use the built-in Data Lake Storage; for example, when you create a dataflow in Power BI or Power Apps. Access to the output of this type of dataflow is only possible through the Power Platform dataflow connector in Power BI Desktop, or from other dataflows.
+By default, analytical dataflows will use the built-in Data Lake Storage; for example, when you create a dataflow in Power BI or Power Apps. Access to the output of this type of dataflow is only possible through the Power Platform dataflows connector in Power BI Desktop, or from other dataflows.
 
 ## Dataflows that use customer-provided storage
 
-Before creating a dataflow that uses a Data Lake Storage account provided by the customer<!--Is the "customer" the reader? If so, this should be "a Data Lake Storage account you provided" -->, the environment or workspace it was<!--Edit okay? I didn't know what "they" referred to.--> created in must be linked to a Data Lake Storage account. Depending on which product dataflow you're using (Power BI or Power Platform dataflows), the settings for connecting to an external Data Lake Storage subscription is linked in different places.
+Before creating a dataflow that uses your organization's Data Lake Storage account, you must link the environment or workspace the dataflow was created in to your Data Lake Storage account. Depending on which product dataflow you're using (Power BI or Power Platform dataflows), the settings for connecting to an external Data Lake Storage subscription is linked in different places.
 
 ### Linking Power BI to your organization's Azure Data Lake Storage
 
-To configure Power BI dataflows to store data in your organization's Data Lake Storage, you need to follow the steps described in [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://docs.microsoft.com/power-bi/transform-model/service-dataflows-connect-azure-data-lake-storage-gen2) in the Power BI admin portal<!--Via Cloud Style Guide.-->.
+To configure Power BI dataflows to store data in your organization's Data Lake Storage, you need to follow the steps described in [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://docs.microsoft.com/power-bi/transform-model/service-dataflows-connect-azure-data-lake-storage-gen2) in the Power BI admin portal.
 
 ![Connect your own Data Lake Storage for Power BI dataflows](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-connect-azure-data-lake-storage-gen2/dataflows-connect-08b.png)
 
 ### Linking a Power Platform environment to your organization's Azure Data Lake Storage
 
-To configure dataflows created in Power Apps portal to store data in your organization's Azure Data Lake Storage, follow the steps in [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://docs.microsoft.com/powerapps/maker/common-data-service/connect-azure-data-lake-storage-for-dataflow) in the Power Apps portal.
+To configure dataflows created in Power Apps to store data in your organization's Azure Data Lake Storage, follow the steps in [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://docs.microsoft.com/powerapps/maker/common-data-service/connect-azure-data-lake-storage-for-dataflow) in Power Apps.
 
 ![Storage account setting for Power Platform analytical dataflow](https://docs.microsoft.com/powerapps/maker/common-data-service/media/select-storage-account.png)
 

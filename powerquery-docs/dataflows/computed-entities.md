@@ -33,7 +33,7 @@ After you have a dataflow with a list of entities, you can perform calculations 
 
 In the dataflow authoring tool in the Power BI service, select **Edit entities**. Then right-click the entity you want to use as the basis for your computed entity and on which you want to perform calculations. On the shortcut menu, select **Reference**.
 
-For the entity to be eligible as a computed entity, **Enable load** must be selected, as shown in the following image. Right-click the entity to display this context menu.
+For the entity to be eligible as a computed entity, **Enable load** must be selected, as shown in the following image. Right-click the entity to display this shortcut menu.
 
 ![Select Enable load in the shortcut menu](media/dataflows-computed-entities/computed-entities-premium-01.png)
 
@@ -47,13 +47,13 @@ Any transformation you do on this newly created entity will be run on the data t
 
 What kind of transformations can be done with computed entities? Any transformation that you usually specify by using the transformation user interface in Power BI, or the M editor, are all supported when performing in-storage computation. 
 
-Consider the following example. You have an Account entity that contains the raw data for all the customers from your Dynamics 365 subscription. You also have ServiceCalls raw data from the service center, with data from the support calls that were performed from the different account in each day of the year.
+Consider the following example. You have an Account entity that contains the raw data for all the customers from your Dynamics 365 subscription. You also have ServiceCalls raw data from the service center, with data from the support calls that were performed from the different accounts on each day of the year.
 
 Imagine you want to enrich the Account entity with data from ServiceCalls.
 
 First you would need to aggregate the data from the ServiceCalls to calculate the number of support calls that were done for each account in the last year.
 
-![Aggregating the data from the Service Calls](media/dataflows-computed-entities/computed-entities-premium-02.png)
+![Aggregating the data from the Service Calls by ](media/dataflows-computed-entities/computed-entities-premium-02.png)
 
 Next, you merge the Account entity with the ServiceCallsAggregated entity to calculate the enriched **Account** table.
 
@@ -69,11 +69,13 @@ And that's it&mdash;the transformation is done on the data in the dataflow that 
 
 It's important to note that if you remove the workspace from Power BI Premium capacity, the associated dataflow will no longer be refreshed.
 
-When working with dataflows specifically created in an organization's Azure Data Lake Storage account, linked entities and computed entities only work properly when the entities reside in the same storage account. For more information, see [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://docs.microsoft.com/power-bi/service-dataflows-connect-azure-data-lake-storage-gen2).
+When working with dataflows specifically created in an organization's Azure Data Lake Storage account, linked entities and computed entities only work properly when the entities reside in the same storage account. More information: [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://docs.microsoft.com/power-bi/service-dataflows-connect-azure-data-lake-storage-gen2)
 
-Linked entities are only available for dataflows created in Power BI and Power Apps. As a best practice, when doing computations on data joined by on-premises and cloud data, create a new entity to perform such computations. This provides a better experience than using an existing entity for computations, such as an entity that is also querying data from both sources and doing in-storage<!--Edit okay?--> transformations.
+Linked entities are only available for dataflows created in Power BI and Power Apps. As a best practice, when doing computations on data joined by on-premises and cloud data, create a new entity to perform such computations. This provides a better experience than using an existing entity for computations, such as an entity that is also querying data from both sources and doing in-storage transformations.
 
-## Next steps
+## See also
+
+* [Computed entity scenarios and use cases](computed-entities-scenarios.md)
 
 This article described computed entities and dataflows. Here are some more articles that might be useful:
 
@@ -96,4 +98,4 @@ For more information about Power Query and scheduled refresh, you can read these
 * [Configuring scheduled refresh](https://docs.microsoft.com/power-bi/refresh-scheduled-refresh)
 
 For more information about Common Data Model, you can read its overview article:
-* [Common Data Model - overview ](https://docs.microsoft.com/powerapps/common-data-model/overview)
+* [Common Data Model](https://docs.microsoft.com/powerapps/common-data-model/overview)

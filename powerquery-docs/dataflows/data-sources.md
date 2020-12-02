@@ -7,7 +7,7 @@ ms.reviewer: ''
 
 ms.service: dataflows
 ms.topic: conceptual
-ms.date: 08/15/2019
+ms.date: 12/2/2020
 ms.author: bensack
 
 LocalizationGroup: Data from files
@@ -18,21 +18,21 @@ LocalizationGroup: Data from files
 
 With Power Platform dataflows, you can connect to many different data sources to create new dataflows, or add new entities to an existing dataflow.
 
-This article lists many of the available<!--Suggested, if these lists aren't actually complete. (See note below.)--> data sources for creating or adding to dataflows, and describes how to create those dataflows by using these data sources. For an overview of how to create and use dataflows, see [Creating and using dataflows in Power BI](https://docs.microsoft.com/power-bi/service-dataflows-create-use).<!--It seems that this information is covered in get-data-experience.md. Can you link to that article here? Then you can remove the following H1 (which in any case is kind of an odd duck) and also the procedure at the end of the article (which see).-->
-<!--
+This article lists many available data sources for creating or adding to dataflows, and describes how to create those dataflows by using these data sources. For an overview of how to create and use dataflows, see [Creating and using dataflows in Power BI](https://docs.microsoft.com/power-bi/service-dataflows-create-use).
+
 ## Create a dataflow entity from a data source
 
 To connect to data, open the dataflow authoring tool, and then select **Get data**.
 
 ![Add entities using the Get data command](media/dataflows-data-sources/dataflows-data-sources-03.png)
--->
+
 ## Data sources for dataflows
 
-You can view the available data sources by selecting **Get data** from the dataflow authoring tool, which then displays a dialog box as shown in the following image.
+You can view the available data sources by selecting **Get data** from the dataflow authoring tool, which then displays the **Choose data source** dialog box.
 
 ![Get data categories for dataflows](media/dataflows-data-sources/dataflows-data-sources-04.png)
 
-Data sources for dataflows are organized into the following categories, which appear as tabs in the **Get data** dialog box:<!--I assume it's okay not to cover the Power BI Desktop UI also? -->
+Data sources for dataflows are organized into the following categories, which appear as tabs in the **Choose data source** dialog box:
 
 * All categories
 * File
@@ -43,77 +43,90 @@ Data sources for dataflows are organized into the following categories, which ap
 * Other
 
 The **All categories** category contains all data sources, from all categories. 
-<!--Is it okay that my instance of Power BI Desktop shows different data sources than the ones listed here? For example, it doesn't show "Access," and it does show "Folder," "PDF," and "SharePoint folder".-->
+
 The **File** category includes the following available data connections for dataflows:
 
-* Access<!--Does this really belong here? Seems old-fashioned.-->
 * Excel
+* Folder
 * JSON
+* PDF
+* Parquet
+* SharePoint Folder
 * Text/CSV
 * XML
-<!--Please verify that all the following lists are complete. I only edited for branding.-->
+
 The **Database** category includes the following available data connections for dataflows:
 
-* IBM DB2 Database
-* MySQL Database
-* Oracle Database
-* PostgreSQL Database
-* SQL Server Database
-* Sybase Database
-* Teradata Database
+* Access
+* Amazon Redshift
+* Google BigQuery
+* IBM DB2 database
+* Impala
+* MySQL database
+* Oracle database
+* PostgreSQL database
+* SAP BW Application Server
+* SAP BW Message Server
+* SAP HANA database
+* SQL Server database
+* Snowflake
+* Sybase database
+* Teradata database
 * Vertica
 
-The **Power Platform** category includes the following available data connections for dataflows:<!--Also "Common Data Service"?-->
+The **Power Platform** category includes the following available data connections for dataflows:
 
-* Power BI dataflows
+* Common Data Service
 * Power Platform dataflows
 
 The **Azure** category includes the following available data connections for dataflows:
 
-* Azure Blob Storage<!--Via Cloud Style Guide.-->
-* Azure Data Explorer
-* Azure SQL Data Warehouse
-* Azure SQL Database
-* Azure Table storage<!--Via Cloud Style Guide.-->
+* Azure Blobs
+* Azure Data Explorer (Kusto)
+* Azure Data Lake Storage Gen2
+* Azure HDInsight Spark
+* Azure SQL database
+* Azure Synapse Analytics (SQL DW)
+* Azure Tables
 
 The **Online Services** includes the following available data connections for dataflows:
 
-* Amazon Redshift
-* Common Data Service<!--This name "for Apps" is deprecated. Also, it falls into the "Power Platform" category in my Power BI Desktop.-->
 * Microsoft Exchange Online
-* Salesforce Objects
-* Salesforce Reports
-* SharePoint Online List
+* Salesforce objects
+* Salesforce reports
+* SharePoint Online list
 * Smartsheet
 
 The **Other** category includes the following available data connections for dataflows:
 
 * Active Directory
+* FHIR
 * OData
-* SharePoint List
+* Odbc
+* SharePoint list
+* Spark
 * Web API
 * Web page
 * Blank table
 * Blank Query
 
 ## Connect to a data source
-<!--note from editor: This section is covered by get-data-experience.md. I suggest deleting it entirely. If you don't want to, please redo the images so it uses the current name for Common Data Service (and its current location, if it has indeed been moved to a different category). -->
-To connect to a data source, select the data source. This section uses one example to show how the process works, but each data connection for dataflows is similar in process. Different connectors might require specific credentials or other information, but the flow is similar. In this example, you see in the following image that **Common Data Service for Apps** is selected from the **Online services** data connection category.
-<!--Need a new image.-->
 
-![Select Common Data Service for Apps](media/dataflows-data-sources/dataflows-data-sources-05.png)
+To connect to a data source, select the data source. This section uses one example to show how the process works, but each data connection for dataflows is similar in process. Different connectors might require specific credentials or other information, but the flow is similar. In this example, **SQL Server database** is selected from the **Database** data connection category.
 
-A connection window for the selected data connection is displayed. If credentials are required, you're prompted to provide them. The following image shows a Server URL being entered to connect to a Common Data Service for Apps server.
+![Select SQL Server database from Databases categroy](media/dataflows-data-sources/dataflows-data-sources-05.png)
+
+A connection window for the selected data connection is displayed. If credentials are required, you're prompted to provide them. The following image shows a server and database being entered to connect to a SQL Server database.
 
 ![Credentials or URLs for data connections](media/dataflows-data-sources/dataflows-data-sources-06.png)
 
-After the server URL or resource connection information is provided, select **Sign in** to enter the credentials to use for access to the data, and then select **Next**.
+After the server URL or resource connection information is provided, enter the credentials to use for access to the data. You may also need to enter the name of an on-premises data gateway. Then select **Next**.
 
-Power Query Online initiates and establishes the connection to the data source. It then presents the available tables from that data source in the **Navigator** window, as shown in the following image.
-<!--This isn't a Navigator window, can you create a new image?-->
+Power Query Online initiates and establishes the connection to the data source. It then presents the available tables from that data source in the **Navigator** window.
+
 ![Navigator window shows tables in the data source](media/dataflows-data-sources/dataflows-data-sources-07.png)
 
-You can select tables and data to load by selecting the check box next to each in the left pane. To load the data, select **OK** from the bottom of the **Navigator** window<!--Or should this be **Load**?-->. A Power Query Online dialog box appears, where you can edit queries and perform any other transformation you want to the selected data.
+You can select tables and data to load by selecting the check box next to each in the left pane. To transform the data you've chosen, select **Transform data** from the bottom of the **Navigator** window. A Power Query Online dialog box appears, where you can edit queries and perform any other transformations you want to the selected data.
 
 ![Edit queries and transform in Power Query Editor](media/dataflows-data-sources/dataflows-data-sources-08.png)
 
@@ -139,7 +152,7 @@ You can take the following steps to create a connection to a connector that isn'
 Your script then connects to the data source you specified.
 
 The following list shows which connectors you can currently use by copying and pasting the M query into a blank query:
-<!--Is this current?-->
+
 * SAP Business Warehouse 
 * Azure Analysis Services
 * Adobe Analytics
@@ -161,6 +174,8 @@ This article showed which data sources you can connect to for dataflows. The fol
 * [Using incremental refresh with dataflows](incremental-refresh.md)
 * [Creating computed entities in dataflows](computed-entities.md)
 * [Link entities between dataflows](linked-entities.md)
+
+For information about individual Power Query connectors, go to the [connector reference list of Power Query connectors](../Connectors/index.md), and select the connector you want to learn more about.
 
 Additional information about dataflows and related information can be found in the following articles:
 
