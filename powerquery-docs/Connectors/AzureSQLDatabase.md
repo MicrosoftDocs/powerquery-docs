@@ -4,7 +4,7 @@ description: Includes basic information and prerequisites, instructions on how t
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 11/2/2020
+ms.date: 12/2/2020
 ms.author: v-douklo
 LocalizationGroup: reference
 ---
