@@ -142,6 +142,9 @@ The following image shows the transformation table used in this example.
 
 ![Table showing From values of mike and William, and To values of Miguel and Bill](images/me-fuzzy-grouping-sample-transformation-table.png "Table showing From values of mike and William, and To values of Miguel and Bill")
 
+>[!IMPORTANT]
+>It's important that the transformation table has a the same columns and column names as shown above (they have to be "From" and "To"), otherwise Power Query will not recognize these.
+
 Return to the **Group by** dialog box, expand **Fuzzy group options**, and then select the **Transformation table** drop-down menu.
 
 ![Fuzzy grouping sample transformation table drop-down menu](images/me-fuzzy-grouping-sample-transformation-table-window.png "Fuzzy grouping sample transformation table drop-down menu")
