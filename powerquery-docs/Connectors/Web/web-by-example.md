@@ -6,7 +6,7 @@ ms.reviewer: ''
 
 ms.service: powerquery
 ms.topic: how-to
-ms.date: 11/24/2020
+ms.date: 12/2/2020
 ms.author: davidi
 
 LocalizationGroup: Connect to data

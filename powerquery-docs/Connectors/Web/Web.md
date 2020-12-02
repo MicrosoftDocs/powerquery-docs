@@ -4,7 +4,7 @@ description: Provides basic information and how to connect to your data, along w
 author: dougklopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 11/24/2020
+ms.date: 12/2/2020
 ms.author: v-douklo
 LocalizationGroup: reference
 ---
@@ -90,7 +90,7 @@ To load data from a web site with Power Query Online:
 
    In some cases, you might want to use a URL that points at either an API or a file stored on the web. In those scenarios, the Web API connector (or file-specific connectors) would allow you to move forward without using an on-premises data gateway.
 
-   Also note that if your URL points to a file, you should [use the specific file connector](#open-files-on-the-web) instead of the Web page connector. 
+   Also note that if your URL points to a file, you should [use the specific file connector](#import-files-from-the-web) instead of the Web page connector. 
 
 2. Enter a URL address in the text box. For this example, enter `https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States`.
 
