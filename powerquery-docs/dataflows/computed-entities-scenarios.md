@@ -50,7 +50,7 @@ For example, the following figure shows an Orders entity.
 
 Using a reference from this entity, you can build a computed entity.
 
-:::image type="complex" source="<folderPath>" alt-text="Creating a computed entity":::
+:::image type="complex" source="media/ordersentityreferenced.png" alt-text="Creating a computed entity":::
    Image showing how to create a computed entity from the Orders entity. First right-click the Orders entity in the Queries pane, select the Reference option from the drop-down menu, which creates the computed entity, which is renamed here to Orders aggregated.
 :::image-end:::
 
@@ -64,7 +64,7 @@ This means that the Orders Aggregated entity will be getting data from the Order
 
 You can also create a computed entity in other dataflows. It can be created by getting data from a dataflow with the Power Platform dataflow connector.
 
-:::image type="complex" source="<folderPath>" alt-text="<Get data from Power Platform dataflows>":::
+:::image type="complex" source="media/getdatafromppdataflows.png" alt-text="<Get data from Power Platform dataflows>":::
    Image emphasizes the Power Platform dataflows connector from the Power Query choos data source window, with a description that states that one dataflow entity can be built on top of the data from another dataflow entity, which is already persisted in storage.
 :::image-end:::
 

@@ -22,7 +22,7 @@ If a dataflow performs all actions, it's hard to reuse its entities in other dat
 
 If you have data transformation dataflows, you can split them into dataflows that perform common transformations. Each dataflow can perform a few actions. This ensures that the output of that dataflow is reusable by other dataflows.
 
-:::image type="complex" source="<folderPath>" alt-text="Dataflow perfoming only a few actions":::
+:::image type="complex" source="media/multilayereddf.png" alt-text="Dataflow perfoming only a few actions":::
    Image with data being extracted from a data source to staging dataflows, where the enities are either stored in Dataverse or Azure Data Lake storage, then the data is moved to transformation dataflows where the data is transformed and converted to the data warehouse structure, and then the data is loaded to a Power BI dataset.
 :::image-end:::
 
