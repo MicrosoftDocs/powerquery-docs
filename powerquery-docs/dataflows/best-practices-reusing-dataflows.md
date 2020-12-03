@@ -18,12 +18,12 @@ This article discusses a collection of best practices for reusing dataflows effe
 
 ## Separate data transformation dataflows from staging/extraction dataflows
 
-If a dataflow performs all actions, it's hard to reuse its entities in other dataflows or for other purposes. The best dataflows to reuse are those that perform only a few actions. Creating dataflows that specialize in one specific task is one of the best ways to reuse them. If you have a set of dataflows that you use as [staging dataflows](best-practices-for-data-warehouse-using-dataflows.md#staging-dataflows), their only action is to extract data as-is from the source system. These dataflows can be reused in multiple other dataflows.
+If a dataflow performs all actions, it's hard to reuse its entities in other dataflows or for other purposes. The best dataflows to reuse are those dataflows that perform only a few actions. Creating dataflows that specialize in one specific task is one of the best ways to reuse them. If you have a set of dataflows that you use as [staging dataflows](best-practices-for-data-warehouse-using-dataflows.md#staging-dataflows), their only action is to extract data as-is from the source system. These dataflows can be reused in multiple other dataflows.
 
-If you have data transformation dataflows, you can split them into dataflows that perform common transformations. Each dataflow can perform a few actions. This ensures that the output of that dataflow is reusable by other dataflows.
+If you have data transformation dataflows, you can split them into dataflows that do common transformations. Each dataflow can do just a few actions. These few actions per dataflow ensure that the output of that dataflow is reusable by other dataflows.
 
-:::image type="complex" source="media/multilayereddf.png" alt-text="Dataflow perfoming only a few actions":::
-   Image with data being extracted from a data source to staging dataflows, where the enities are either stored in Dataverse or Azure Data Lake storage, then the data is moved to transformation dataflows where the data is transformed and converted to the data warehouse structure, and then the data is loaded to a Power BI dataset.
+:::image type="complex" source="media/multilayereddf.png" alt-text="Dataflow performing only a few actions":::
+   Image with data being extracted from a data source to staging dataflows, where the entities are either stored in Dataverse or Azure Data Lake storage, then the data is moved to transformation dataflows where the data is transformed and converted to the data warehouse structure, and then the data is loaded to a Power BI dataset.
 :::image-end:::
 
 ## Use multiple workspaces
