@@ -30,12 +30,12 @@ Computed entities can be created by referencing an entity in the same dataflow o
 Performing all transformation steps in one entity can be slow. There can be many reasons for this slowdown&mdash;the data source might be slow, or the transformations that you're doing might need to be replicated in two or more queries. It might be advantageous to first ingest the data from the source and then reuse it in one or more entities. In such cases, you might choose to create two entities: one that gets data from the data source, and another&mdash;a computed entity&mdash;that applies additional transformations to data already written into the data lake used by a dataflow. This can increase performance and reusability of data, saving time and resources.
 
 For example, if two entities share even a part of their transformation logic, without a computed entity the transformation will have to be done twice.
-<!--Please write more descriptive alt text. -->
-![Without computed entity](media/SeparateEntities.png)
+
+![Image showing transformation of data occurring twice](media/SeparateEntities.png)
 
 However, if a computed entity is used, then the common (shared) part of the transformation will be processed once and stored in Azure Data Lake Storage. The remaining transformations will then be processed from the output of the common transformation. Overall, this processing is much faster.
-<!--Also here. This is a nice diagram, it would be good to actually describe it.-->
-![Computed entity for common transformations](media/Computedentityinbetween.png)
+
+![Image showing common transformations done once in the computed entity, and stored in the data lake, and the remaining unique tranformations occurring later](media/Computedentityinbetween.png)
 
 
 A computed entity provides one place as the source code for the transformation and speeds up the transformation because it need only be done once instead of multiple times. The load on the data source is also reduced.

@@ -30,46 +30,48 @@ Next, you can create other dataflows that source their data from staging dataflo
 - Reducing the load on data gateways if an on-premises data source is used.
 - Having an intermediate copy of the data for reconciliation purpose, in case the source system data changes.
 - Making the transformation dataflows source-independent.
-<!--Very nice image. It needs more descriptive alt text so everyone can understand what it's showing. Also, please spell out "CDS" and "ADLS Gen2" -->
-![Staging dataflows](media/StagingDataflows.png)
+
+:::image type="complex" source="media/StagingDataflows.png" alt-text="Staging dataflows":::
+   Image emphasizing staging dataflows and staging storage, and showing the data being accessed from the data source by the staging dataflow, and entities being stored in either Datavers or Azure Data Lake Storage. The entities are then shown being tranformed along with other dataflows, which are then sent out as queries.
+:::image-end:::
 
 ## Transformation dataflows
 
 When you've separated your transformation dataflows from the staging dataflows, the transformation will be independent from the source. This separation helps if you're migrating the source system to a new system. All you need to do in that case is to change the staging dataflows. The transformation dataflows are likely to work without any problem, because they're sourced only from the staging dataflows.
 
 This separation also helps in case the source system connection is slow. The transformation dataflow won't need to wait for a long time to get records coming through a slow connection from the source system. The staging dataflow has already done that part, and the data will be ready for the transformation layer.
-<!--Same comment about branding as previous image. For the alt text here, you'd only need to describe what's different about this image. -->
-![Transformation dataflows](media/TransformationDataflows.png)
+
+![Image similar to the previous image, except transformations are emphasized, and the data is being sent to the data warehouse](media/TransformationDataflows.png)
 
 ## Layered architecture
 
 A layered architecture is an architecture in which you perform actions in separate layers. The staging and transformation dataflows can be two layers of a multilayered dataflow architecture. Trying to do actions in layers helps minimize the maintenance required. When you want to change something, you just need to change it in the layer in which it's located. The other layers will continue to work as usual.
 
 The following image shows a multilayered architecture for dataflows whose entities are then used in Power BI datasets.
-<!--Not sure what this has to do specifically with a data warehouse, but anyhow. Same comments about branding and alt text apply here.-->
-![Multilayered architecture](media/MultiLayeredDF.png)
+
+![Image showing entities being sent though both staging dataflows and then transformation dataflows, and finally being used in Power BI datasets](media/MultiLayeredDF.png)
 
 ## Use a computed entity as often as possible
 
 When you use the result of a dataflow in another dataflow, you're using the concept of the computed entity, which means getting data from an "already-processed-and-stored" entity. The same thing can happen inside a dataflow. When you reference an entity from another entity, you can use the computed entity. This is helpful when you have a set of transformations that need to be done in multiple entities, which are called *common transformations*.
 
-![Computed entity to process common transformations](media/ComputedEntityInBetween.png)
+![Computed entity sourced from a data source used to process common transformations](media/ComputedEntityInBetween.png)
 
 In the previous image, the computed entity gets the data directly from the source. However, in the architecture of staging and transformation dataflows, it's likely that the computed entities are sourced from the staging dataflows.
-<!--Alt text just needs to describe the difference here.-->
-![Computed entity sourced from dataflows](media/ComputedEntityFromDataflows.png)
+
+![Computed entity sourced from dataflows used to process common transformations](media/ComputedEntityFromDataflows.png)
 
 ## Build a star schema
 
 The best data warehouse model is a star schema model that has dimensions and fact tables designed in a way to minimize the amount of time to query the data from the model, and also makes it easy to understand for the data visualizer.
 
 It isn't ideal to bring data in the same layout of the operational system into a BI system. The data tables should be remodeled. Some of the tables should take the form of a dimension table, which keeps the descriptive information. Some of the tables should take the form of a fact table, to keep the aggregable data. The best layout for fact tables and dimension tables to form is a star schema. More information: [Understand star schema and the importance for Power BI](https://docs.microsoft.com/power-bi/guidance/star-schema)
-<!--Needs more descriptive alt text. -->
-![Star schema](https://docs.microsoft.com/power-bi/guidance/media/star-schema/star-schema-example1.png)
+
+![Star schema image showing a fact table surrounded by dimension tables, in the shape of a five-pointed star](https://docs.microsoft.com/power-bi/guidance/media/star-schema/star-schema-example1.png)
 
 ## Use a unique key value for dimensions
 
-When building dimension tables, make sure you have a key for each one. This ensures that there are no many-to-many (or in other words, "weak") relationships among dimensions.<!--Suggested.--> You can create the key by applying some transformation to make sure a column or a combination of columns is returning unique rows in the dimension. Then that combination of columns can be marked as a key in the entity in the dataflow.
+When building dimension tables, make sure you have a key for each one. This ensures that there are no many-to-many (or in other words, "weak") relationships among dimensions. You can create the key by applying some transformation to make sure a column or a combination of columns is returning unique rows in the dimension. Then that combination of columns can be marked as a key in the entity in the dataflow.
 
 ![Mark a column as a key value](media/MarkAsKey.png)
 
@@ -84,5 +86,5 @@ You can use incremental refresh to refresh only part of the data, the part that 
 ## Use referencing to create dimensions and fact tables
 
 In the source system, you often have a table that you use for generating both fact and dimension tables in the data warehouse. These tables are good candidates for computed entities and also intermediate dataflows. The common part of the process&mdash;such as data cleaning, and removing extra rows and columns&mdash;can be done once. By using a reference from the output of those actions, you can produce the dimension and fact tables. This approach will use the computed entity for the common transformations.
-<!--This image needs more descriptive alt text.-->
-![Referencing from other entities](media/OrdersEntityReferenced.png)
+
+![Image showing an Orders query with the reference option being used to create a new query called Orders aggregated](media/OrdersEntityReferenced.png)
