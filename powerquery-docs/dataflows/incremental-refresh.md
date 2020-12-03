@@ -6,7 +6,7 @@ manager: kfile
 ms.reviewer: ''
 ms.service: dataflows
 ms.topic: conceptual
-ms.date: 08/15/2019
+ms.date: 12/2/2019
 ms.author: bensack
 
 LocalizationGroup: Data from files
@@ -22,11 +22,11 @@ With dataflows, you can bring large amounts of data into Power BI or your organi
 * **Refresh is more reliable**: For example, it's not necessary to maintain long-running connections to volatile source systems.
 * **Resource consumption is reduced**: Less data to refresh reduces overall consumption of memory and other resources.
 
-Incremental refresh is available in dataflows created in Power BI and dataflows created in Power Apps<!--Here and throughout: For references to "Power Apps portal," please see the edit notes attached to task 1983193. I changed them to "admin center" where it seemed appropriate, but maybe it should be "the Power Platform admin center" at first mention and then just "admin center"?-->. This article shows screens from Power BI, but these instructions apply to dataflows created in Power BI or in the Power Apps admin center.
+Incremental refresh is available in dataflows created in Power BI and dataflows created in Power Apps. This article shows screens from Power BI, but these instructions apply to dataflows created in Power BI or in Power Apps.
 
 ![Incremental refresh for dataflows](media/dataflows-incremental-refresh/dataflows-incremental-refresh-03.png)
 
-Using incremental refresh in dataflows created in Power BI requires that the dataflow reside in a workspace in [Premium capacity](https://docs.microsoft.com/power-bi/service-premium-what-is).<!--Edit okay? I couldn't follow this.--> Incremental refresh in the Power Apps admin center requires Power Apps Plan 2.
+Using incremental refresh in dataflows created in Power BI requires that the dataflow reside in a workspace in [Premium capacity](https://docs.microsoft.com/power-bi/service-premium-what-is). Incremental refresh in Power Apps requires Power Apps Plan 2.
 
 In either Power BI or Power Apps, using incremental refresh requires that source data ingested into the dataflow have a DateTime field on which incremental refresh can filter.
 
@@ -37,10 +37,10 @@ A dataflow can contain many entities. Incremental refresh is set up at the entit
 To set up an incremental refreshed entity, start by configuring your entity as you would any other entity.
 
 After the dataflow is created and saved, select **Incremental refresh** ![Incremental refresh](media/dataflows-incremental-refresh/dataflows-incremental-refresh-icon.png) in the entity view, as shown in the following image.
-<!--I found it hard to see what this icon looks like, so I suggest using the icon image instead (or in addition).-->
+
 ![Incremental refresh icon for dataflows](media/dataflows-incremental-refresh/dataflows-incremental-refresh-01.png)
 
-When you select the icon, the **Incremental refresh settings** window appears. Turn on incremental refresh<!--Via Writing Style Guide.-->.
+When you select the icon, the **Incremental refresh settings** window appears. Turn on incremental refresh.
 
 
 ![Incremental refresh for dataflows](media/dataflows-incremental-refresh/dataflows-incremental-refresh-03.png)
@@ -59,9 +59,9 @@ The following list explains the settings in the **Incremental refresh settings**
 
   * Remove calendar years that are older than five years before the current date. For example, if the current date is January 1, 2019, the year 2013 is removed.
 
-   The first dataflow refresh might take a while to import all five years, but subsequent refreshes are likely to be completed much more quickly<!--Suggested.-->.
+   The first dataflow refresh might take a while to import all five years, but subsequent refreshes are likely to be completed much more quickly.
 
-* **Detect data changes**: An incremental refresh of 10 days is much more efficient than a full refresh of five years, but you might be able to do even better. When you select the **Detect data changes** check box, you can select a date/time column to identify and refresh only the days where the data has changed. This assumes such a column exists in the source system, which is typically for auditing purposes<!--Not sure what this last clause is modifying.-->. The maximum value of this column is evaluated for each of the periods in the incremental range. If that data hasn't changed since the last refresh, there's no need to refresh the period. In the example, this might further reduce the days incrementally refreshed from 10 to perhaps 2.<!--Via Writing Style Guide.-->
+* **Detect data changes**: An incremental refresh of 10 days is much more efficient than a full refresh of five years, but you might be able to do even better. When you select the **Detect data changes** check box, you can select a date/time column to identify and refresh only the days where the data has changed. This assumes such a column exists in the source system, which is typically for auditing purposes. The maximum value of this column is evaluated for each of the periods in the incremental range. If that data hasn't changed since the last refresh, there's no need to refresh the period. In the example, this might further reduce the days incrementally refreshed from 10 to perhaps 2.
 
   > [!TIP]
   > The current design requires that the column used to detect data changes be persisted and cached into memory. You might want to consider one of the following techniques to reduce cardinality and memory consumption:
@@ -71,13 +71,11 @@ The following list explains the settings in the **Incremental refresh settings**
 
 * **Only refresh complete periods**: Imagine that your refresh is scheduled to run at 4:00 AM every day. If data appears in the source system during those first four hours of that day, you might not want to account for it. Some business metrics, such as barrels per day in the oil and gas industry, aren't practical or sensible to account for based on partial days.
 
-    Another example where only refreshing complete periods is appropriate is refreshing data from a financial system. Imagine a financial system where data for the previous month is approved on the 12th calendar day of the month. You can<!--Writing Style Guide.--> set the incremental range to one month and schedule the refresh to run on the 12th day of the month. With this option selected, the system will refresh January data (the most recent complete monthly period) on February 12.
+    Another example where only refreshing complete periods is appropriate is refreshing data from a financial system. Imagine a financial system where data for the previous month is approved on the 12th calendar day of the month. You can set the incremental range to one month and schedule the refresh to run on the 12th day of the month. With this option selected, the system will refresh January data (the most recent complete monthly period) on February 12.
 
 > [!NOTE]
 > Dataflow incremental refresh determines dates according to the following logic: if a refresh is scheduled, incremental refresh for dataflows uses the time zone defined in the refresh policy. If no schedule for refreshing exists, incremental refresh uses the time from the computer running the refresh.
-<!--Not sure this H2 works here. Suggest just making the following paragraph a transition to the other sections.
-## The incremental refresh query
--->
+
 After incremental refresh is configured, the dataflow automatically alters your query to include filtering by date. You can edit the automatically generated query by using the advanced editor in Power Query to fine-tune or customize your refresh. Read more about incremental refresh and how it works in the following sections.
 
 ## Incremental refresh and linked entities vs. computed entities
@@ -98,7 +96,7 @@ When moving a dataflow from incremental to full refresh, all data accumulated in
 
 ## Time zone support in incremental refresh
 
-Dataflow incremental refresh is dependent on the time at which it's run. The filtering of the query is dependent on the day on which it's run.<!--Edit okay, to be parallel? I couldn't see why these two things were worded differently.-->
+Dataflow incremental refresh is dependent on the time at which it's run. The filtering of the query is dependent on the day on which it's run.
 
 To accommodate those dependencies and to ensure data consistency, incremental refresh for dataflows implements the following heuristic for *refresh now* scenarios:
 
@@ -128,7 +126,7 @@ The refresh operation with *Run Date 12/11/2016* merges the days in November, be
 
 ### Drop old partitions
 
-Old partitions that fall outside the total range are removed. The refresh operation with *Run Date 1/2/2017* drops the partition for Q3 2016 because it falls outside the total range.
+Old partitions that fall outside the total range are removed. The refresh operation with *Run Date 1/2/2017* drops the partition for Q3 of 2016 because it falls outside the total range.
 
 ![Drop old partitions in dataflows](media/dataflows-incremental-refresh/dataflows-incremental-refresh-05.png)
 
@@ -138,7 +136,7 @@ This example simulates how the system recovers gracefully from prolonged failure
 
 The next successful refresh operation, with *Run Date 1/15/2017*, needs to backfill the missing 13 days and refresh them. It also needs to refresh the previous nine days because they weren't refreshed on the normal schedule. In other words, the incremental range is increased from 10 to 22 days.
 
-The next refresh operation, with *Run Date 1/16/2017*, takes the opportunity to merge the days in December and the months in Q4 2016.
+The next refresh operation, with *Run Date 1/16/2017*, takes the opportunity to merge the days in December and the months in Q4 of 2016.
 
 ![Recovery from prolonged failure in dataflows](media/dataflows-incremental-refresh/dataflows-incremental-refresh-06.png)
 
@@ -152,6 +150,7 @@ Both approaches work according to your specified definitions in the refresh sett
 
 Incremental refresh in Power Platform dataflows is only supported in dataflows with an Azure Data Lake Storage account, not in dataflows with Dataverse as the destination. 
 
+### See also
 
 This article described incremental refresh for dataflows. Here are some more articles that might be useful:
 

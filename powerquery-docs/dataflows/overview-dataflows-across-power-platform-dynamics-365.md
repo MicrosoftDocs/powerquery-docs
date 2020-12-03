@@ -4,7 +4,7 @@ description: An overview of dataflows across Microsoft Power Platform and Dynami
 author: radacad 
 ms.service: powerquery 
 ms.topic: conceptual 
-ms.date: 07/27/2020 
+ms.date: 12/2/2020 
 ms.author: gepopell  
 --- 
 
@@ -12,7 +12,7 @@ ms.author: gepopell
 
 [!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
 
-Dataflows are a self-service, cloud-based, data preparation technology. Dataflows enable customers to ingest, transform, and load data into Microsoft Dataverse environments, Power BI workspaces, or your organization's Azure Data Lake Storage<!--Here and throughout the dataflows folder, I've made this edit to "Data Lake Storage." Please see the edit notes attached to task 1983193.--> account. Dataflows are authored by using Power Query, a unified data connectivity and preparation experience already featured in many Microsoft products, including Excel and Power BI. Customers can trigger dataflows to run either on demand or automatically on a schedule; data is always kept up to date. 
+Dataflows are a self-service, cloud-based, data preparation technology. Dataflows enable customers to ingest, transform, and load data into Microsoft Dataverse environments, Power BI workspaces, or your organization's Azure Data Lake Storage account. Dataflows are authored by using Power Query, a unified data connectivity and preparation experience already featured in many Microsoft products, including Excel and Power BI. Customers can trigger dataflows to run either on demand or automatically on a schedule; data is always kept up to date. 
 
 ## Dataflows can be created in multiple Microsoft products
 
@@ -32,21 +32,21 @@ Dataflows are cloud-based. When a dataflow is authored and saved, its definition
 
 ### Dataflows use a powerful transformation engine
 
-Power Query is the data transformation engine used in the dataflow. This engine is capable enough to support many advanced transformations. It also uses a straightforward, yet powerful, graphical user interface called Power Query Editor. You can use this editor to develop your data integration solutions faster and more easily.<!--Suggested so as not to slip into third person.-->
+Power Query is the data transformation engine used in the dataflow. This engine is capable enough to support many advanced transformations. It also uses a straightforward, yet powerful, graphical user interface called Power Query Editor. You can use dataflows with this editor to develop your data integration solutions faster and more easily.
 
 ![Power Query transformations](media/dataflows-power-platform-dynamics-365/power-query-editor.png) 
 
 ### Dataflow integration with Microsoft Power Platform and Dynamics 365
 
 Because a dataflow stores the resulting entities in cloud-based storage, other services can interact with the data produced by dataflows.
-<!--The "PowerApps" and "Power Virtual Agent" icons seem to be outdated. -->
+
 ![Dataflow integration with Microsoft Power Platform and Dynamics 365](media/dataflows-power-platform-dynamics-365/dataflow-power-platform.png) 
 
 For example, Power BI, Power Apps, Power Automate, Power Virtual Agents, and Dynamics 365 applications can get the data produced by the dataflow by connecting to Dataverse, a Power Platform dataflow connector, or directly through the lake, depending on the destination configured at dataflow creation time.
 
 ## Benefits of dataflows
 
-<!--There are no scenarios in the preceding text.-->The following list highlights some of the benefits of using dataflows:
+The following list highlights some of the benefits of using dataflows:
 
 - A dataflow decouples the data transformation layer from the modeling and visualization layer in a Power BI solution.
 
@@ -70,7 +70,7 @@ You can use dataflows for many purposes. The following scenarios provide a few e
 
 ### Data migration from legacy systems
 
-In this scenario, the decision has been made by an organization to use Power Apps for the new user interface experience rather than the legacy on-premises system. Power Apps, Power Automate, and AI Builder all use Common Data Service as the primary data storage system. The current data in the existing on-premises system can be migrated into Common Data Service by using a dataflow, and then these products can use that data.
+In this scenario, the decision has been made by an organization to use Power Apps for the new user interface experience rather than the legacy on-premises system. Power Apps, Power Automate, and AI Builder all use Dataverse as the primary data storage system. The current data in the existing on-premises system can be migrated into Dataverse by using a dataflow, and then these products can use that data.
 
 ### Using dataflows to build a data warehouse
 

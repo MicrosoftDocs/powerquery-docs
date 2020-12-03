@@ -6,7 +6,7 @@ author: radacad
 ms.service: powerquery
 ms.reviewer: v-douklo
 ms.topic: conceptual
-ms.date: 05/25/2020
+ms.date: 12/2/2020
 ms.author: v-douklo
 ---
 

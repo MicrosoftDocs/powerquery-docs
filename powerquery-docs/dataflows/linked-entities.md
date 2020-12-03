@@ -7,7 +7,7 @@ ms.reviewer: ''
 
 ms.service: dataflows
 ms.topic: conceptual
-ms.date: 08/15/2019
+ms.date: 12/2/2019
 ms.author: bensack
 
 LocalizationGroup: Data from files
@@ -16,9 +16,9 @@ LocalizationGroup: Data from files
 
 With dataflows in Microsoft Power Platform, you can have a single organizational data storage source where business analysts can prep and manage their data once, and then reuse it between different analytics apps in the organization. 
 
-When you link entities between dataflows, you can reuse entities that have already been ingested, cleansed, and transformed by dataflows that are owned by others, and you don't have to maintain that data.<!--Suggested.--> The linked entities simply point to the entities in other dataflows, and do *not* copy or duplicate the data.
+When you link entities between dataflows, you can reuse entities that have already been ingested, cleansed, and transformed by dataflows that are owned by others, without the need to maintain that data. The linked entities simply point to the entities in other dataflows, and do *not* copy or duplicate the data.
 
-Linked entities are read-only, so<!--Suggested, to integrate this sentence a bit.--> if you want to create transformations for a linked entity, you must create a new computed entity with a reference to the linked entity.
+Linked entities are read-only, so if you want to create transformations for a linked entity, you must create a new computed entity with a reference to the linked entity.
 
 ## Linked entity availability
 
@@ -41,28 +41,27 @@ Linked entities are available in both Power Apps Plan 1 and Plan 2.
 
 ## How to link entities between dataflows
 
-There are a few ways to link entities between dataflows. To link entities in Power BI, you must sign in with your Power BI credentials.<!--Edit okay? If not, please integrate this sentence into a paragraph somehow.-->
+There are a few ways to link entities between dataflows. To link entities in Power BI, you must sign in with your Power BI credentials.
 
-You can select **Get data** from the dataflow authoring tool, which displays a dialog box for selecting the categories and each data source. Select the **Power Platform dataflows** connector, as shown in the following image. 
-<!--note from editor: Alt text needs to be unique in an article.-->
-![Select the Power Platform connector in Power BI](media/dataflows-linked-entities/linked-entities-03.png)
+You can select **Get data** from the dataflow authoring tool, which displays a dialog box for selecting the categories and each data source. Then select the **Power Platform dataflows** connector. 
+
+![Image showing how to select the Power Platform connector in Power BI](media/dataflows-linked-entities/linked-entities-03.png)
 
 A connection window for the selected data connection is displayed. If credentials are required, you're prompted to provide them.
 
-In Power BI, you can select **Add linked entities** from the dataflow authoring tool, as shown in the following image.
+In Power BI, you can select **Add linked entities** from the dataflow authoring tool.
 
-![Add linked entities in the Power BI dataflow authoring tool](media/dataflows-linked-entities/linked-entities-00.png)
+![Image showing how to add linked entities in the Power BI dataflow authoring tool](media/dataflows-linked-entities/linked-entities-00.png)
 
 You can also select **Add linked entities** from the **Add entities** menu in the Power BI service.
 
-![Add linked entities from the menu in Power BI](media/dataflows-linked-entities/linked-entities-01.png)
+![Image showing how to add linked entities from the menu in the Power BI service](media/dataflows-linked-entities/linked-entities-01.png)
 
-A **Navigator** window opens, from which you can choose a set of entities you can connect to. The window displays<!--Suggested.--> entities for which you have permissions across all workspaces and environments in your organization.
+A **Navigator** window opens, and you can choose a set of entities you can connect to. The window displays entities for which you have permissions across all workspaces and environments in your organization.
 
 After you select your linked entities, they appear in the list of entities for your dataflow in the authoring tool, with a special icon identifying them as linked entities.
-<!-- What is the reader supposed to do with the following sentence? It seems out of place.
+
 You can also view the source dataflow from the dataflow settings of your linked entity.
--->
 
 ## Refresh logic of linked entities
 
@@ -71,10 +70,10 @@ The refresh logic of linked entities differs slightly based on whether you're us
 ### Refresh logic in Power BI
 
 The default refresh logic of linked entities depends on whether the source dataflow is in the same Power BI workspace as the destination dataflow. The following sections describe the behavior of each.
-<!--Suggest using bullets here instead of H4s. Note that the Cloud Style Guide talks about "data refresh" rather than -->
+
 * **Links between workspaces**: Refresh for links from entities in different workspaces behaves like a link to an external data source. When the dataflow is refreshed, it takes the latest data for the entity from the source dataflow. If the source dataflow is refreshed, it doesn't automatically affect the data in the destination dataflow.
 
-* **Links in the same workspace**: When data refresh occurs for a source dataflow, that event automatically triggers a refresh process for dependent entities in all destination dataflows in the same workspace, including any calculated entities based on them. All other entities in the destination dataflow are refreshed according to the dataflow schedule. Entities that depend on more than one source refresh their data whenever any of their sources are refreshed successfully.<!--Okay to use "refresh" here to be parallel with other occurrences?-->
+* **Links in the same workspace**: When data refresh occurs for a source dataflow, that event automatically triggers a refresh process for dependent entities in all destination dataflows in the same workspace, including any calculated entities based on them. All other entities in the destination dataflow are refreshed according to the dataflow schedule. Entities that depend on more than one source refresh their data whenever any of their sources are refreshed successfully.
 
   > [!NOTE]
   > The entire refresh process is committed at once. Because of this, if the data refresh for the destination dataflow fails, the data refresh for the source dataflow fails as well.
@@ -92,7 +91,7 @@ When creating a Power BI report that includes data based on a dataflow, you can 
 There are a few limitations to keep in mind when working with linked entities:
 
 * You can't define more than five "referencing hops."<!--Suggested. Also, suggest defining this term because it isn't used elsewhere in the docset.-->
-* Cyclical dependencies<!--To match other occurrence in the docset (actually it's more frequently called a "circular reference").-->  of linked entities aren't allowed.
+* Cyclical dependencies of linked entities aren't allowed.
 * The dataflow must be in a [new Power BI workspace](https://docs.microsoft.com/power-bi/service-create-the-new-workspaces) or a Power Apps environment.
 * A linked entity can't be joined with a regular entity that gets its data from an on-premises data source.
 

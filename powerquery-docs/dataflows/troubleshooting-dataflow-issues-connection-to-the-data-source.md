@@ -6,13 +6,13 @@ author: radacad
 ms.service: powerquery
 ms.reviewer: v-douklo
 ms.topic: conceptual
-ms.date: 05/25/2020
+ms.date: 12/3/2020
 ms.author: v-douklo
 ---
 
 # Troubleshooting dataflow issues: Connection to the data source
 
-When you create a dataflow, sometimes you get an error connecting to the data source. This can be because of the gateway, credentials, or other reasons. This article explains the most common connection errors and problems, and their resolution.
+When you create a dataflow, sometimes you get an error connecting to the data source. This error can be caused by the gateway, credentials, or other reasons. This article explains the most common connection errors and problems, and their resolution.
 
 ## Error: An on-premises data gateway is required to connect
 
@@ -50,7 +50,7 @@ Sometimes, when you migrate your queries from Power Query in desktop tools to th
 
 **Reason:**
 
-Disabled modules are related to functions that require an on-premises gateway connection to work.<!--I'm a bit confused by the use of "are related to." Would it be accurate to say "Modules are disabled when they include functions that won't work unless the query has an on-premises gateway connection"? --> Even if the function is getting data from a webpage, because of some security compliance requirements, it needs to go through a gateway connection.
+Disabled modules are related to functions that require an on-premises data gateway connection to work. Even if the function is getting data from a webpage, because of some security compliance requirements, it needs to go through a gateway connection.
 
 **Resolution:**
 
@@ -62,6 +62,6 @@ After adding the web data source, you can select the gateway in the dataflow fro
 
 ![Project options in the dataflow](media/ProjectOptions.png)
 
-You might be asked to set up credentials. After you've set up your credentials successfully, the queries should work.<!--Writing Style Guide says "don't use 'should' to indicate probability." Can we say "When you've set up the gateway and your credentials successfully, the modules will no longer be disabled."?-->
+You might be asked to set up credentials. When you've set up the gateway and your credentials successfully, the modules will no longer be disabled."
 
 ![Disabled functions now working](media/DisabledFunctionWorkingFine.png)

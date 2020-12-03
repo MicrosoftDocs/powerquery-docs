@@ -4,7 +4,7 @@ description: Understanding the differences between standard and analytical dataf
 author: radacad 
 ms.service: powerquery 
 ms.topic: conceptual 
-ms.date: 05/11/2020 
+ms.date: 12/3/2020 
 ms.author: bensack 
 --- 
 

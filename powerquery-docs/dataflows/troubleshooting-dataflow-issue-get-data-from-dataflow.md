@@ -5,7 +5,7 @@ author: radacad
 
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 05/25/2020
+ms.date: 12/3/2020
 ms.author: v-douklo
 
 LocalizationGroup: Data from files
@@ -33,13 +33,13 @@ You have to set up a scheduled refresh for a dataflow, or&mdash;if you want to j
 
 ![Refresh a dataflow](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-create-use/dataflows-create-use_13.png)
 
-After a dataflow is refreshed, the data in entities will be visible in the **Navigator**<!--Is it literally going to be named "Navigator"? If not, should just be "...the data in entities will be visible in other tools and services." --> window of other tools and services.
+After a dataflow is refreshed, the data in entities will be visible in the **Navigator** window of other tools and services.
 
 ![Schedule refresh for dataflows](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-create-use/dataflows-create-use_14.png)
 
 ## My Power Platform dataflow isn't listed
 
-Sometimes, you have a Power Platform dataflow you created and also refreshed, but you still can't access it through the **Get data** command. This might be because the account that's trying to access the dataflow doesn't have access.<!--Edit okay? There seemed to be something missing here.--> However, if the account does have access to the dataflow, another reason might be the type of dataflow you're accessing.
+Sometimes, you have a Power Platform dataflow you created and also refreshed, but you still can't access it through the **Get data** command. This might be because the account that's trying to access the dataflow doesn't have access. However, if the account does have access to the dataflow, another reason might be the type of dataflow you're accessing.
 
 You might receive the error message "We reached the end of the buffer" or "DataFormat.Error: We reached the end of the buffer".
 
@@ -47,11 +47,11 @@ You might receive the error message "We reached the end of the buffer" or "DataF
 
 **Reason:**
 
-Only analytical dataflows can be used in a **Get data** operation from a dataflow<!--Edit okay?-->.
+Only analytical dataflows can be used in a **Get data** operation from a dataflow.
 
 **Resolution:**
 
-If you've created a dataflow that stores data in Dataverse&mdash;that is, a standard dataflow&mdash;you can't see it by using the **Get data** operation from a dataflow. However, you can use [**Get data** from Dataverse](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-powerbi-connector#finding-your-dataverse-environment-url) to access it. Or you can create an [analytical dataflow](understanding-differences-between-analytical-standard-dataflows.md) instead, and then access it by using **Get data** from a dataflow.
+If you've created a dataflow that stores data in Dataverse&mdash;that is, a standard dataflow&mdash;you can't see it by using the **Get data** operation from a dataflow. However, you can use [**Get data** from Common Data Service](../commondataservice.md#finding-your-common-data-service-environment-url) to access it. Or you can create an [analytical dataflow](understanding-differences-between-analytical-standard-dataflows.md) instead, and then access it by using **Get data** from a dataflow.
 
 ![Get data from standard dataflow versus analytical dataflows](media/GetDataStandardAnalyticalDataflow.png)
 

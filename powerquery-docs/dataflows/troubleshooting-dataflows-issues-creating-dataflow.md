@@ -27,11 +27,11 @@ Creating dataflows in **My workspace** isn't supported.
 
 **Resolution:**
 
-Create your dataflows in [organizational workspaces](https://docs.microsoft.com/power-bi/collaborate-share/service-create-the-new-workspaces). To learn how to create an organizational workspace, see [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/collaborate-share/service-create-the-new-workspaces).
+Create your dataflows in [organizational workspaces](https://docs.microsoft.com/power-bi/collaborate-share/service-create-the-new-workspaces). To learn how to create an organizational workspace, go to [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/collaborate-share/service-create-the-new-workspaces).
 
 ## I can't create a dataflow in an organizational workspace where I have read-only rights
-<!--Suggested.-->
-This problem happens when you're a member of an organizational workspace and you still can't create a dataflow.
+
+If you're a member of an organization workspace and you still can't create a dataflow, it might be because of your access rights in that workspace.
 
 **Reason:**
 
@@ -39,7 +39,7 @@ You don't have edit rights in the workspace.
 
 **Resolution:**
 
-Ask the workspace administrators or members to give you an Admin<!--Suggested, to match the term used in the target article.-->, Member, or Contributor [role](https://docs.microsoft.com/power-bi/collaborate-share/service-new-workspaces#roles-in-the-new-workspaces).
+Ask the workspace administrators or members to give you an Admin, Member, or Contributor [role](https://docs.microsoft.com/power-bi/collaborate-share/service-new-workspaces#roles-in-the-new-workspaces).
 
 ![Workspace access settings](media/WorkspaceAccess.png)
 
@@ -59,27 +59,26 @@ Ask the Power BI tenant administrator to enable access for you by following thes
 
    ![Power BI admin portal](media/PowerBIAdminPortal.png)
 
-2. On the left pane, select **Tenant settings**, and in the **Dataflow settings** section, turn on the toggle under **Enabled**. Then select **Apply**.
+2. On the left pane, select **Tenant settings**, and in the **Dataflow settings** section, turn on the toggle for **Enabled**. Then select **Apply**.
 
    ![Enable dataflows in tenant settings](media/EnableDataflow.png)
 
-<!--Suggested.-->
 ## I only see limited options when I create a dataflow
 
 When creating a dataflow, sometimes you don't see all the options that are available. For example, you might see only the options shown in the following image.
-<!--The following alt text is suggested. If you don't like, please make sure the alt text fully explains the image.-->
-![Only the "Define new entities" and "Import model" options appear](media/DataflowCreationLimited.png)
+
+![Create dataflow menu where only the "Define new entities" and "Import model" options appear](media/DataflowCreationLimited.png)
 
 However, more options are actually available, as shown in the following image.
-<!--Alt text suggested.-->
-![Additional options "Link entities from other dataflows" and "Attach a Common Data Model folder" appear](media/DataflowCreationFull.png)
+
+![Create dataflow menu where "Define new entities", "Import model", "Link entities from other dataflows", and "Attach a Common Data Model folder" options appear](media/DataflowCreationFull.png)
 
 **Reason:**
 
-You're creating the dataflow in an old version of the Power BI workspace, called V1.<!--See note below.-->
+You're creating the dataflow in an old version of the Power BI workspace, called V1.
 
 **Resolution:**
 
-Upgrade your Power BI workspace to the new version (v2)<!--Is this what the UI calls it? Seems to be.-->. More information: [Upgrade classic workspaces to the new workspaces in Power BI](https://docs.microsoft.com/power-bi/collaborate-share/service-upgrade-workspaces)
+Upgrade your Power BI workspace to the new version (v2). More information: [Upgrade classic workspaces to the new workspaces in Power BI](https://docs.microsoft.com/power-bi/collaborate-share/service-upgrade-workspaces)
 
 ![Upgrade the classic workspace](media/UpgradeWorkspace.png)

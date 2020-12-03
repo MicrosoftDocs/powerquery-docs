@@ -21,13 +21,13 @@ If you're using Power BI for data analysis, you can get data from Power Platform
 
 ![Get data from Power BI Desktop](media/GetDatafromDataflow.png)
 
-When you get data from a dataflow, the data is imported into the Power BI dataset. The dataset then needs to be refreshed. You can choose whether to perform a one-time refresh or an automatic refresh on a schedule you specify. Scheduled refreshes for the dataset can be configured in the Power BI admin portal.
+When you get data from a dataflow, the data is imported into the Power BI dataset. The dataset then needs to be refreshed. You can choose whether to perform a one-time refresh or an automatic refresh on a schedule you specify. Scheduled refreshes for the dataset can be configured in Power BI.
 
 ### DirectQuery from dataflows
 
 Power BI dataflows also support a DirectQuery connection. If the size of the data is so large that you don't want to import all of it into the Power BI dataset, you can create a DirectQuery connection. DirectQuery won't copy the data into the Power BI dataset. The tables in the Power BI dataset that get their data from a DirectQuery-sourced dataflow don't need a scheduled refresh, because their data will be fetched live from the dataflow.
 
-To use DirectQuery for the dataflows, you need to enable the compute engine on your Power BI Premium capacity, and then refresh the dataflow before it can be consumed in DirectQuery mode. For more information, see [Power BI Dataflows DirectQuery Support](https://powerbi.microsoft.com/blog/power-bi-dataflows-direct-query-support/).
+To use DirectQuery for the dataflows, you need to enable the compute engine on your Power BI Premium capacity, and then refresh the dataflow before it can be consumed in DirectQuery mode. For more information, go to [Power BI Dataflows DirectQuery Support](https://powerbi.microsoft.com/blog/power-bi-dataflows-direct-query-support/).
 
 ![Premium capacity settings for DirectQuery to the dataflow](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-enhanced-compute-engine/enhanced-compute-engine-01.png)
 
@@ -41,7 +41,7 @@ When getting data from the output of another dataflow, a [linked entity](https:/
 
 ## Separating data transformation from data consumption
 
-When you use the output of a dataflow in other dataflows or datasets, you can create an abstraction between the data transformation layer and the rest of the data model. This abstraction is important because it creates a multiple-role architecture, in which the Power Query customer can focus on building the data transformations, and data modelers can focus on data modeling.
+When you use the output of a dataflow in other dataflows or datasets, you can create an abstraction between the data transformation layer and the rest of the data model. This abstraction is important because it creates a multi-role architecture, in which the Power Query customer can focus on building the data transformations, and data modelers can focus on data modeling.
 
 ## Next Steps
 

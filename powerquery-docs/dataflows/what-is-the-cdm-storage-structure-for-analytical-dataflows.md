@@ -4,7 +4,7 @@ description: What is the storage structure for analytical dataflows
 author: radacad
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 05/25/2020
+ms.date: 12/3/2020
 ms.author: v-douklo
 ---
 
@@ -35,7 +35,7 @@ Common Data Model folders define how an entity's schema and its data should be s
 
 Each dataflow folder contains a subfolder for each entity and a metadata file named `model.json`.  
 
-![What's in a dataflow folder?](https://docs.microsoft.com/common-data-model/media/cdm-folder.png) 
+![What's in a dataflow folder?](media/cdm-folder.png) 
 
 ### The metadata file: model.json 
 
@@ -47,7 +47,7 @@ You can use this JSON file to migrate (or import) your dataflow into another wor
 
 ![Migrate a dataflow into another workspace or environment](media/dataflowMigrateToAnotherWorkSpace.png) 
 
-To learn exactly what the model.json metadata file includes, see [The metadata file (model.json) for Common Data Model](https://docs.microsoft.com/common-data-model/model-json).
+To learn exactly what the model.json metadata file includes, go to [The metadata file (model.json) for Common Data Model](https://docs.microsoft.com/common-data-model/model-json).
 
 ### Data files
 
@@ -55,13 +55,13 @@ In addition to the metadata file, the dataflow folder includes other subfolders.
 
 ## How to see or access Common Data Model folders
 
-If you're using dataflows that use storage provided by the product they were created in,<!--Edits okay?--> you won't have access to those folders directly. In such cases, getting data from the dataflows requires using the Power Platform dataflow connector available in the **Get data** experience in Power BI, Power Apps, and Dynamics 35 Customer Insights products, or in Power BI Desktop.<!--Should the first reference read "the Power BI service"? Not sure why "Power BI Desktop" is tacked on so awkwardly here.-->
+If you're using dataflows that use storage provided by the product they were created in, you won't have access to those folders directly. In such cases, getting data from the dataflows requires using the Power Platform dataflow connector available in the **Get data** experience in the Power BI service, Power Apps, and Dynamics 35 Customer Insights products, or in Power BI Desktop.
 
 ![Connect to data for an analytical dataflow](media/GetdatafromAnalyticalDataflow.png) 
 
-To see how dataflows and the internal Data Lake Storage integration work, see [Dataflows and Azure Data Lake integration (Preview)](https://docs.microsoft.com/power-bi/transform-model/service-dataflows-azure-data-lake-integration). 
+To learn how dataflows and the internal Data Lake Storage integration work, go to [Dataflows and Azure Data Lake integration (Preview)](https://docs.microsoft.com/power-bi/transform-model/service-dataflows-azure-data-lake-integration). 
 
-If your organization enabled dataflows to take advantage its Data Lake Storage account and was selected as a load target for dataflows, you can still get data from the dataflow by using the Power Platform dataflow connector as mentioned above. But you can also access the dataflow's Common Data Model folder directly through the lake, even outside of Power Platform tools and services. Access to the lake is possible through the Azure portal, Microsoft Azure Storage Explorer, or any other service or experience that supports Azure Data Lake Storage. More information: [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://docs.microsoft.com/power-bi/transform-model/service-dataflows-connect-azure-data-lake-storage-gen2)
+If your organization enabled dataflows to take advantage of its Data Lake Storage account and was selected as a load target for dataflows, you can still get data from the dataflow by using the Power Platform dataflow connector as mentioned above. But you can also access the dataflow's Common Data Model folder directly through the lake, even outside of Power Platform tools and services. Access to the lake is possible through the Azure portal, Microsoft Azure Storage Explorer, or any other service or experience that supports Azure Data Lake Storage. More information: [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://docs.microsoft.com/power-bi/transform-model/service-dataflows-connect-azure-data-lake-storage-gen2)
 
 ![Connect to external Data Lake Storage](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-connect-azure-data-lake-storage-gen2/dataflows-connect-adlsg2_09.jpg) 
 

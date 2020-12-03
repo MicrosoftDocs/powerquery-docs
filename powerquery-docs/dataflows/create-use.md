@@ -5,7 +5,7 @@ author: bensack
 ms.reviewer: v-douklo
 ms.service: dataflows
 ms.topic: conceptual
-ms.date: 08/15/2019
+ms.date: 12/2/2019
 ms.author: bensack
 ms.custom: 
 

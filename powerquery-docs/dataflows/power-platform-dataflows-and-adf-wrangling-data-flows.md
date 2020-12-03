@@ -6,7 +6,7 @@ author: radacad
 ms.service: powerquery
 ms.reviewer: v-douklo
 ms.topic: conceptual
-ms.date: 05/25/2020
+ms.date: 12/2/2020
 ms.author: v-douklo
 ---
 
@@ -49,6 +49,6 @@ The main point is knowing their differences, because then you can think about sc
 
 ## Which user persona is suited to which type of dataflow?
 
-If you're a citizen application developer or citizen data analyst with small-scale to medium-scale data to be integrated and transformed, you'll find the Power Platform dataflows more convenient. The large number of transformations available, the ability to work with them without having developer knowledge, and the fact that dataflows can be authored, monitored, and edited in the Power BI or Power Platform admin center&mdash;all are reasons that make Power Platform dataflows a great data integration solution for this type of developer.
+If you're a citizen application developer or citizen data analyst with small-scale to medium-scale data to be integrated and transformed, you'll find the Power Platform dataflows more convenient. The large number of transformations available, the ability to work with them without having developer knowledge, and the fact that dataflows can be authored, monitored, and edited in Power BI or Power Platform&mdash;all are reasons that make Power Platform dataflows a great data integration solution for this type of developer.
 
-If you're a data developer who's dealing with big data and huge datasets, with a large scale<!--Should this be "number"? Not sure what "scale of rows" means here.--> of rows to be ingested every time, you'll find the Data Factory wrangling dataflows a better tool for the job. They give you the ability to have the Spark code for the cloud-scale execution handle a huge amount of data ingestion and have the other part of the dataflow help with transforming the data.<!--Edit okay? Again, the verbs seemed to be missing.--> Working with the Azure portal to author, monitor, and edit wrangling dataflows requires a higher developer learning curve than the experience in Power Platform dataflows. Wrangling dataflows are best suited for this type of audience.
+If you're a data developer who's dealing with big data and huge datasets, with a large number of rows to be ingested every time, you'll find the Data Factory wrangling dataflows a better tool for the job. They give you the ability to have the Spark code for the cloud-scale execution handle a huge amount of data ingestion and have the other part of the dataflow help with transforming the data.<!--Edit okay? Again, the verbs seemed to be missing.--> Working with the Azure portal to author, monitor, and edit wrangling dataflows requires a higher developer learning curve than the experience in Power Platform dataflows. Wrangling dataflows are best suited for this type of audience.

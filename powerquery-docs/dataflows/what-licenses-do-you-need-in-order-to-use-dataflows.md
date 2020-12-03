@@ -5,7 +5,7 @@ author: radacad
 
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 05/25/2020
+ms.date: 12/3/2020
 ms.author: v-douklo
 
 LocalizationGroup: Data from files
@@ -15,25 +15,25 @@ LocalizationGroup: Data from files
 
 [!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
 
-Dataflows can be created in different portals, such as Power BI and the Power Apps admin center, and can be of either analytical or standard type. In addition, some dataflow features are only available as Premium features. Considering the wide range of products that can use dataflows, and feature availability in each product or dataflow type, it's important to know what licensing options you need to use dataflows.
+Dataflows can be created in different portals, such as Power BI and the Power Apps, and can be of either analytical or standard type. In addition, some dataflow features are only available as Premium features. Considering the wide range of products that can use dataflows, and feature availability in each product or dataflow type, it's important to know what licensing options you need to use dataflows.
 
 ## Creating dataflows in Power BI workspaces
 
 If you want to create dataflows in Power BI workspaces, you need to have a paid Power BI Pro license. A Power BI free license won't give you the ability to create dataflows. Depending on the features you use, a Power BI Premium or embedded capacity is required.
 
-A Power BI Pro account is available on a user-monthly basis<!--Edit okay?-->. Multiple options are available for premium or embedded capacities.
+A Power BI Pro account is available on a user-monthly basis. Multiple options are available for premium or embedded capacities.
 
 ## Creating dataflows in Microsoft Power Platform environments
 
 If you want to create dataflows in the Microsoft Power Platform environment a Power Apps (per-user or per-app) license is required.
 
-If you want to create analytical dataflows that store data in your organization's Azure Data Lake Storage Gen2 <!--I won't follow the Cloud Style Guide here because Gen2 as opposed to Gen1 seems implied in an article about licensing.-->account, you or your administrator will need access to an Azure subscription and an Azure Data Lake Storage Gen2 account.
+If you want to create analytical dataflows that store data in your organization's Azure Data Lake Storage Gen2 account, you or your administrator will need access to an Azure subscription and an Azure Data Lake Storage Gen2 account.
 
 ## Premium features
 
 Some of the dataflow features are limited to premium licenses. If you want to use the enhanced compute engine to speed up your dataflow queries' performance over computed entities, or have the DirectQuery connection option to the dataflow, you need to have Power BI P1 or A3 or higher capacities.
 
-AI capabilities in Power BI, linked entity, and computed entity are all premium functions that aren't available with a Power BI Pro account<!--Or should this be "license", to be parallel?-->.
+AI capabilities in Power BI, linked entity, and computed entity are all premium functions that aren't available with a Power BI Pro account.
 
 ## Features
 
@@ -51,7 +51,7 @@ The following table contains a list of features and the license needed for them 
 | Computed entities (in-storage transformations using M)       | Power BI premium                   | Analytical dataflows only |
 | Schedule refresh                                             | Yes                                   | Yes                                                             |
 | Dataflow authoring with Power Query Online                   | Yes                                | Yes                                                          |
-| Dataflow management                                          | Power BI admin portal                    | Power Apps admin center                                         |
+| Dataflow management                                          | Power BI                     | Power Apps                                         |
 | New connectors                                               | Yes                                | Yes                                                          |
 | Standardized schema, built-in support for Common Data Model | Yes                                | Yes                                                          |
 | Dataflows data connector in Power BI Desktop                 | Yes                                | Analytical dataflows only   |
@@ -78,7 +78,7 @@ If you use Power BI Premium (capacity-based licensing), you can use all the AI c
 
 ### Using your organization's Azure Data Lake Storage account for dataflow storage
 
-To create dataflows that store data in your organizations Azure Data Lake Storage account, in addition to the product licenses above, you must have an Azure subscription. The amount of storage that can be used isn't limited by the dataflow or the product it was created in.
+To create dataflows that store data in your organization's Azure Data Lake Storage account, in addition to the product licenses above, you must have an Azure subscription. The amount of storage that can be used isn't limited by the dataflow or the product it was created in.
 
 ## Next step
 
