@@ -1,16 +1,14 @@
 ---
 
 title: What are dataflows
-description: An overview of dataflows across Power Platform and Dynamics 365 products
+description: An overview of dataflows across Microsoft Power Platform and Dynamics 365 products
 author: radacad 
 ms.service: powerquery 
 ms.topic: conceptual 
-ms.date: 07/27/2020 
+ms.date: 12/3/2020 
 ms.author: gepopell  
 
 ---
-
- 
 
 # What are dataflows?  
 
