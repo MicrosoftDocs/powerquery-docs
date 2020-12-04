@@ -18,12 +18,12 @@ One of the common scenarios that happens when you integrate data into Dataverse 
 
 ## The importance of the key column
 
-If you're using a relational data base system as a source, normally you have key columns in the tables, and the data is in a proper format to be loaded into Dataverse. However, the data from the Excel files are not always that clean. You often have an Excel file with sheets of data without having any key column. In [Field mapping considerations for standard dataflows](get-best-of-standard-dataflows.md), you can see that if there's a key column in the source, it can be easily used as the alternate key in the field mapping of the dataflow.
+If you're using a relational data base system as a source, normally you have key columns in the tables, and the data is in a proper format to be loaded into Dataverse. However, the data from the Excel files aren't always that clean. You often have an Excel file with sheets of data without having any key column. In [Field mapping considerations for standard dataflows](get-best-of-standard-dataflows.md), you can see that if there's a key column in the source, it can be easily used as the alternate key in the field mapping of the dataflow.
 
 > [!div class="mx-imgBorder"]
 > ![Alternate key configuration](media/PKAKsame.png)
 
-Having a key column is important for the table in Dataverse. The key column is the row identifier; this is a column with unique values in each row. Having a key column helps in avoiding duplicate rows, and it also helps in synchronizing the data with the source system. If a row is removed from the source system, having a key column is helpful to find it and remove it from Dataverse as well.
+Having a key column is important for the table in Dataverse. The key column is the row identifier; this column contains unique values in each row. Having a key column helps in avoiding duplicate rows, and it also helps in synchronizing the data with the source system. If a row is removed from the source system, having a key column is helpful to find it and remove it from Dataverse as well.
 
 ## Creating a key column
 
@@ -31,7 +31,7 @@ If you don't have a key column in your data source (Excel, text file, or any oth
 
 1. Clean your data. 
 
-   The very first step to create the key column is to remove all unnecessary rows, clean the data, remove empty rows, and remove any possible duplicates.
+   The first step to create the key column is to remove all unnecessary rows, clean the data, remove empty rows, and remove any possible duplicates.
 
    > [!div class="mx-imgBorder"]
    > ![clean data](media/CleanData.png)
@@ -47,7 +47,7 @@ When you add the index column, you have some options to customize it, for exampl
 
 ## Use the key column as the alternate key
 
-Now that you have the key column(s), you can assign the at the dataflow's field mapping to the Alternate Key.
+Now that you have the key column(s), you can assign the dataflow's field mapping to the Alternate Key.
 
 > [!div class="mx-imgBorder"]
 > ![Setting the Alternate key fields](media/IndexAlternateKey.png)
@@ -63,7 +63,7 @@ If you're getting data from multiple Excel files, then the **Combine Files** opt
 > [!div class="mx-imgBorder"]
 > ![Image showing multiple files that have been appended together](media/TwoFiles.png)
 
-As shown in the preceding image, besides the append result, Power Query also brings in the Source.Name column, which contains the file name. The Index value in each file might be unique, but it's not unique across multiple files. However, the combination of the Index column and the Source.Name column is a unique combination. You need to choose a composite alternate key for this scenario.
+As shown in the preceding image, besides the append result, Power Query also brings in the Source.Name column, which contains the file name. The Index value in each file might be unique, but it's not unique across multiple files. However, the combination of the Index column and the Source.Name column is a unique combination. Choose a composite alternate key for this scenario.
 
 > [!div class="mx-imgBorder"]
 > ![composite key](media/CompositeIndexKey.png)

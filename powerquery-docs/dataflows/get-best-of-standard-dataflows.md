@@ -20,7 +20,7 @@ When you create dataflows that write their output to Dataverse, you can follow s
 
 Having a primary key column in the entity helps in avoiding duplicates in the data rows. A primary key column is a column that's unique and deterministic of a data row in the entity. For example, in an Orders table, if the Order ID is the primary key column, you shouldn't have two rows with the same Order ID. Also, one Order ID, let's say an order with the ID 345, should only represent one row in the entity.
 
-To choose the key column for the entity in Datavers from the dataflow, you need to set the alternate key.
+To choose the key column for the entity in Dataverse from the dataflow, you need to set the alternate key.
 
 The following image shows how you can choose the key column to be populated from the source when you create a new entity in the dataflow.
 

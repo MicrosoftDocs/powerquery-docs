@@ -19,7 +19,7 @@ Designing a dimensional model is one of the most common tasks you can do with a 
 
 One of the key points in any data integration system is to reduce the number of reads from the source operational system. In the traditional data integration architecture, this reduction is done by creating a new database called a *staging database*. The purpose of the staging database is to load data as-is from the data source into the staging database on a regular schedule.
 
-The rest of the data integration will then use the staging database as the source for further transformation and converting it to the dimensional model model structure.
+The rest of the data integration will then use the staging database as the source for further transformation and converting it to the dimensional model structure.
 
 We recommended that you follow the same approach using dataflows. Create a set of dataflows that are responsible for just loading data as-is from the source system (and only for the tables you need). The result is then stored in the storage structure of the dataflow (either Azure Data Lake Storage or Dataverse). This change ensures that the read operation from the source system is minimal.
 
@@ -31,7 +31,7 @@ Next, you can create other dataflows that source their data from staging dataflo
 - Making the transformation dataflows source-independent.
 
 :::image type="complex" source="media/StagingDataflows.png" alt-text="Staging dataflows":::
-   Image emphasizing staging dataflows and staging storage, and showing the data being accessed from the data source by the staging dataflow, and entities being stored in either Datavers or Azure Data Lake Storage. The entities are then shown being tranformed along with other dataflows, which are then sent out as queries.
+   Image emphasizing staging dataflows and staging storage, and showing the data being accessed from the data source by the staging dataflow, and entities being stored in either Cadavers or Azure Data Lake Storage. The entities are then shown being transformed along with other dataflows, which are then sent out as queries.
 :::image-end:::
 
 ## Transformation dataflows
@@ -64,13 +64,13 @@ In the previous image, the computed entity gets the data directly from the sourc
 
 The best dimensional model is a star schema model that has dimensions and fact tables designed in a way to minimize the amount of time to query the data from the model, and also makes it easy to understand for the data visualizer.
 
-It isn't ideal to bring data in the same layout of the operational system into a BI system. The data tables should be remodeled. Some of the tables should take the form of a dimension table, which keeps the descriptive information. Some of the tables should take the form of a fact table, to keep the aggregable data. The best layout for fact tables and dimension tables to form is a star schema. More information: [Understand star schema and the importance for Power BI](https://docs.microsoft.com/power-bi/guidance/star-schema)
+It isn't ideal to bring data in the same layout of the operational system into a BI system. The data tables should be remodeled. Some of the tables should take the form of a dimension table, which keeps the descriptive information. Some of the tables should take the form of a fact table, to keep the aggregatable data. The best layout for fact tables and dimension tables to form is a star schema. More information: [Understand star schema and the importance for Power BI](https://docs.microsoft.com/power-bi/guidance/star-schema)
 
 ![Star schema image showing a fact table surrounded by dimension tables, in the shape of a five-pointed star](https://docs.microsoft.com/power-bi/guidance/media/star-schema/star-schema-example1.png)
 
 ### Use a unique key value for dimensions
 
-When building dimension tables, make sure you have a key for each one. This ensures that there are no many-to-many (or in other words, "weak") relationships among dimensions. You can create the key by applying some transformation to make sure a column or a combination of columns is returning unique rows in the dimension. Then that combination of columns can be marked as a key in the entity in the dataflow.
+When building dimension tables, make sure you have a key for each one. This key ensures that there are no many-to-many (or in other words, "weak") relationships among dimensions. You can create the key by applying some transformation to make sure a column or a combination of columns is returning unique rows in the dimension. Then that combination of columns can be marked as a key in the entity in the dataflow.
 
 > [!div class="mx-imgBorder"]
 > ![Mark a column as a key value](media/MarkAsKey.png)

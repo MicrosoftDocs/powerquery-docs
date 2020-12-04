@@ -28,13 +28,13 @@ Using analytical dataflows for data ingestion minimizes the get data process fro
 
 ## Slow data source
 
-The same process is valid when a data source is slow. Some of the software as a service (SaaS) data sources perform slow because of the limitations of their API calls.
+The same process is valid when a data source is slow. Some of the software as a service (SaaS) data sources perform slowly because of the limitations of their API calls.
 
 ## Separation of the data ingestion and data transformation dataflows
 
 The separation of the two layers&mdash;data ingestion and transformation&mdash;is helpful in the scenarios where the data source is slow. It helps to minimize the interaction with the data source.
 
-This separation is not only useful because of the performance improvement, it's also helpful for the scenarios where an old legacy data source system has been migrated to a new system. In those cases, only the data ingestion dataflows need to be changed. The data transformation dataflows remain intact for this type of change.
+This separation isn't only useful because of the performance improvement, it's also helpful for the scenarios where an old legacy data source system has been migrated to a new system. In those cases, only the data ingestion dataflows need to be changed. The data transformation dataflows remain intact for this type of change.
 
 > [!div class="mx-imgBorder"]
 > ![Changing the data source](media/1/DFChangeDataSource.png)

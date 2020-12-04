@@ -34,17 +34,17 @@ There are multiple roles used to configure the security level for standard dataf
 | System Customizer          | Create custom entities         | Custom entities this user creates will be visible to this user only |
 | Members of the environment | Get data from dataflows        | Every member in the environment can get data from the dataflows in that environment |
 
-## Row-level security is not supported
+## Row-level security isn't supported
 
 The current version of standard dataflows doesn't support row-level security.
 
-If you haven't heard of row-level security before, here is a quick introduction. If you have users with different levels of access to the same table, you can filter the data at the row level. For example, in the Orders table, you might have a SalesTerritory column, and you might want to filter the data in a way that users from California could only see records from the Orders table that belongs to California. This is possible through row-level security.
+If you haven't heard of row-level security before, here's a quick introduction. If you have users with different levels of access to the same table, you can filter the data at the row level. For example, in the Orders table, you might have a SalesTerritory column, and you might want to filter the data in a way that users from California could only see records from the Orders table that belongs to California. This is possible through row-level security.
 
 ## Steps to assign roles
 
 The steps in the following procedure are sourced from [Configure user security to resources in an environment](https://docs.microsoft.com/power-platform/admin/database-security). 
 
-Verify that the user you want to assign a security role to is present in the environment. If not, add the user to the environment. You'll be able to assign a security role as part of the process of adding the user. More information: [Add users to an environment](https://docs.microsoft.com/power-platform/admin/add-users-to-environment)
+Verify that the user you want to assign a security role to is present in the environment. If not, add the user to the environment. You can assign a security role as part of the process of adding the user. More information: [Add users to an environment](https://docs.microsoft.com/power-platform/admin/add-users-to-environment)
 
 In general, a security role can only be assigned to users who are in the Enabled state. But if you need to assign a security role to users in the Disabled state, you can do so by enabling **allowRoleAssignmentOnDisabledUsers** in OrgDBOrgSettings.
 

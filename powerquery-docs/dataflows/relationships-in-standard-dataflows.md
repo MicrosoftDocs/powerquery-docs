@@ -18,11 +18,11 @@ In the standard dataflow, you can easily map fields from the dataflow query into
 
 ## What is the relationship and why do you need that?
 
-If you are coming from a database development background, you're familiar with the concept of a relationship between tables. However, many users of Power Platform services are not coming from that background. You might wonder what the relationship is, or why you should create a relationship between tables.
+If you're coming from a database development background, you're familiar with the concept of a relationship between tables. However, many users of Power Platform services aren't coming from that background. You might wonder what the relationship is, or why you should create a relationship between tables.
 
-The tables and their relationship are fundamental concepts of designing a database. To learn everything about relationships is beyond the scope of this article. However, we'll discuss it in a very general way here. 
+The tables and their relationship are fundamental concepts of designing a database. To learn everything about relationships is beyond the scope of this article. However, we'll discuss it in a general way here. 
 
-Let's say you want to store information about customers and their details, including region, in Dataverse. You can keep everything in one table. Your table can be called Customers, and it can contain fields, such as CustomerID, Name, Birthdate, and Region. Now imagine that you have another table that also has the store's information. This table can have fields, such as Store ID, Name, and Region. As you can see, the region is repeated in both tables. There's no single place where you can get all regions; some of the region's data is in the Customers table, and some of it's in the Stores table. If you ever build an application or a report from this information, you always have to consolidate the two region's information into one.
+Let's say you want to store information about customers and their details, including region, in Dataverse. You can keep everything in one table. Your table can be called Customers, and it can contain fields, such as CustomerID, Name, Birthdate, and Region. Now imagine that you have another table that also has the store's information. This table can have fields, such as Store ID, Name, and Region. As you can see, the region is repeated in both tables. There's no single place where you can get all regions; some of the region's data is in the Customers table, and some of it's in the Stores table. If you ever build an application or a report from this information, you always have to combine the two regions' information into one.
 
 > [!div class="mx-imgBorder"]
 > ![Two tables with no relationship](media/1/NoRelationship.png)
@@ -49,7 +49,7 @@ If you've created a lookup field in one table that points to another table, that
 
 ## Setting the Key field in the table
 
-To set the key field in the the, go to the **Keys** tab, and add a key to a field that has unique values.
+To set the key field in the table, go to the **Keys** tab, and add a key to a field that has unique values.
 
 > [!div class="mx-imgBorder"]
 > ![Set a key field](media/1/SetKey.png)
