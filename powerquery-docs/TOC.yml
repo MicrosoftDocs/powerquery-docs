@@ -146,7 +146,7 @@
         href: dataflows/data-sources.md
       - name: "Link entities between dataflows"
         href: dataflows/linked-entities.md
-      - name: Storage Structure
+      - name: Storage structure
         items: 
         - name: "Common Data Model storage structure"
           href: dataflows/what-is-the-cdm-storage-structure-for-analytical-dataflows.md
@@ -160,7 +160,7 @@
         href: dataflows/what-licenses-do-you-need-in-order-to-use-dataflows.md
       - name: Standard dataflows
         items: 
-        - name: "Relationships and Lookups"
+        - name: "Relationships and lookups"
           href: dataflows/relationships-in-standard-dataflows.md
         - name: "Field mapping"
           href: dataflows/get-best-of-standard-dataflows.md

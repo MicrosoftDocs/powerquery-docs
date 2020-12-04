@@ -24,7 +24,8 @@ To choose the key column for the entity in Datavers from the dataflow, you need 
 
 The following image shows how you can choose the key column to be populated from the source when you create a new entity in the dataflow.
 
-![Primary key and the alternate key are the same](media/PKAKsame.png)
+> [!div class="mx-imgBorder"]
+> ![Primary key and the alternate key are the same](media/PKAKsame.png)
 
 The primary name field that you see in the field mapping is for a label field; this field doesn't need to be unique. The field that's used in the entity for checking duplication will be the field that you set in the **Alternate Key** field.
 
@@ -44,7 +45,8 @@ The key field is a unique value representing a unique row in the entity. It's im
 
 - A concatenated field created through Power Query transformations in the dataflow. 
 
-  ![Merging columns to create a concatenated unique column](media/MergeColumnsDataflow.png)
+  > [!div class="mx-imgBorder"]
+  > ![Merging columns to create a concatenated unique column](media/MergeColumnsDataflow.png)
 
 - A combination of fields to be selected in the **Alternate Key** option. A combination of fields used as a key field is also called a *composite key*.
 
@@ -56,7 +58,8 @@ If you want to have the data in your entity always synchronized with the data fr
 
 Having this option checked means that if there's a data row in the entity that doesn't exist in the next dataflow refresh's query output, that row will be removed from the entity.
 
-![Delete rows that no longer exists](media/DeleteRowsNotExist.png)
+> [!div class="mx-imgBorder"]
+> ![Delete rows that no longer exists](media/DeleteRowsNotExist.png)
 
 
 

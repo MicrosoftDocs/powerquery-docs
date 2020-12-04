@@ -21,7 +21,7 @@ If someone in the team has created a dataflow and wants to share it with other t
 A standard dataflow stores data in Dataverse. Dataverse is located in an environment. Before accessing data stored in Dataverse, and also dataflows, you first need to have access to the environment.
 
 > [!div class="mx-imgBorder"]
-> !![Image demonstrating how to add a user to the environment](https://docs.microsoft.com/power-platform/admin/media/add-user.png)
+> ![Image demonstrating how to add a user to the environment](https://docs.microsoft.com/power-platform/admin/media/add-user.png)
 
 ## Roles
 

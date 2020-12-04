@@ -18,7 +18,7 @@ This article discusses a collection of best practices for reusing dataflows effe
 
 ## Separate data transformation dataflows from staging/extraction dataflows
 
-If a dataflow performs all actions, it's hard to reuse its entities in other dataflows or for other purposes. The best dataflows to reuse are those dataflows that perform only a few actions. Creating dataflows that specialize in one specific task is one of the best ways to reuse them. If you have a set of dataflows that you use as [staging dataflows](best-practices-for-data-warehouse-using-dataflows.md#staging-dataflows), their only action is to extract data as-is from the source system. These dataflows can be reused in multiple other dataflows.
+If a dataflow performs all actions, it's hard to reuse its entities in other dataflows or for other purposes. The best dataflows to reuse are those dataflows that perform only a few actions. Creating dataflows that specialize in one specific task is one of the best ways to reuse them. If you have a set of dataflows that you use as [staging dataflows](best-practices-for-dimensional-model-using-dataflows.md#staging-dataflows), their only action is to extract data as-is from the source system. These dataflows can be reused in multiple other dataflows.
 
 If you have data transformation dataflows, you can split them into dataflows that do common transformations. Each dataflow can do just a few actions. These few actions per dataflow ensure that the output of that dataflow is reusable by other dataflows.
 
@@ -54,10 +54,12 @@ You can have multiple entities in one dataflow. One of the reasons you might spl
 
 In the example shown in the following image, the sales table needs to be refreshed every four hours. The date table needs to be refreshed only once a day to keep the current date record updated. And a product mapping table just needs to be refreshed once a week. If you have all of these tables in one dataflow, you have only one refresh option for them all. However, if you split these tables into multiple dataflows, you can schedule the refresh of each dataflow separately.
 
-![Dataflows with different schedules for the refresh](https://i1.wp.com/radacad.com/wp-content/uploads/2019/01/2019-01-21_06h42_32.png)
+> [!div class="mx-imgBorder"]
+> ![Dataflows with different schedules for the refresh](https://i1.wp.com/radacad.com/wp-content/uploads/2019/01/2019-01-21_06h42_32.png)
 
 ## Good table candidates for dataflow entities
 
 When you develop solutions using Power Query in the desktop tools, you might ask yourself; which of these tables are good candidates to be moved to a dataflow? The best tables to be moved to the dataflow are those that need to be used in more than one solution, or more than one environment or service. For example, the Date table shown in the following image needs to be used in two separate Power BI files. Instead of duplicating that table in each file, you can build the table in a dataflow as an entity, and reuse it in those Power BI files.
 
-![Shared table used in a dataflow](https://i1.wp.com/radacad.com/wp-content/uploads/2019/01/2019-01-21_06h36_16.png)
+> [!div class="mx-imgBorder"]
+> ![Shared table used in a dataflow](https://i1.wp.com/radacad.com/wp-content/uploads/2019/01/2019-01-21_06h36_16.png)
