@@ -10,7 +10,7 @@ ms.author: v-miesco
 
 # SharePoint and OneDrive for Business files import
 
-Power Query offers a series of methods to gain access to files that are hosted on either SharePoint or OneDrive for Business.
+Power Query offers a series of ways to gain access to files that are hosted on either SharePoint or OneDrive for Business.
 
 ## Browse files
 
