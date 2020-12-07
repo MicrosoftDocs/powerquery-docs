@@ -4,7 +4,7 @@ description: "In Power Query, you can group or summarize the values in various r
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: v-douklo
-ms.date: 06/08/2020
+ms.date: 12/05/2020
 ms.author: v-miesco
 ms.custom: edited
 ---
@@ -105,6 +105,8 @@ After removing your **Products** column and setting the data type for both newly
 ![Final table with all transformations](images/me-group-by-row-operation-final-table-2.png "Final table with all transformations")
 
 ## Fuzzy grouping
+>[!NOTE]
+>The following feature is only available in Power Query Online.
 
 To demonstrate how to do "fuzzy grouping," consider the sample table shown in the following image.
 
