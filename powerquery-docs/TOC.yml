@@ -9,7 +9,9 @@
       - name: "Getting data"
         href: get-data-experience.md
       - name: "Authentication with a data source"
-        href: ConnectorAuthentication.md 
+        href: ConnectorAuthentication.md
+      - name: "SharePoint and OneDrive for Business files import"
+        href: sharepoint-onedrive-files.md        
     - name: Transform data
       items:
       - name: "Use Power Query"
