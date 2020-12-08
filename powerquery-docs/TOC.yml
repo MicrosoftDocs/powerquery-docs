@@ -134,7 +134,7 @@
           href: splitcolumns-nondigit-to-digit.md
     - name: Dataflows
       items:
-      - name: "Whare are dataflows"
+      - name: "Overview of dataflows"
         href: dataflows/overview-dataflows-across-power-platform-dynamics-365.md
       - name: "Analytical vs. standard dataflows"
         href: dataflows/understanding-differences-between-analytical-standard-dataflows.md        

@@ -77,7 +77,8 @@ In this scenario, the decision has been made by an organization to use Power App
 
 You can use dataflows as a replacement for other extract, transform, load (ETL) tools to build a data warehouse. In this scenario, the data engineers of a company decide to use dataflows to build their star schema&ndash;designed data warehouse, including fact and dimension tables in Data Lake Storage. Then Power BI is used to generate reports and dashboards by getting data from the dataflows.
 
-![Building a data warehouse by using dataflows](https://i2.wp.com/radacad.com/wp-content/uploads/2019/01/2019-01-21_06h49_16.png) 
+> [!div class="mx-imgBorder"]
+> ![Building a data warehouse by using dataflows](https://i2.wp.com/radacad.com/wp-content/uploads/2019/01/2019-01-21_06h49_16.png) 
 
 ### Centralize data preparation and reuse of datasets across multiple Power BI solutions
 
