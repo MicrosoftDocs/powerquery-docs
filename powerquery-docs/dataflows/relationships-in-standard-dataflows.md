@@ -59,11 +59,7 @@ After setting the key field, you can see the field in the mapping of the dataflo
 > [!div class="mx-imgBorder"]
 > ![The key field displayed under Field mapping](media/1/FieldMappingLookup.png)
 
-## Run the dataflow for the referenced (lookup) table first
-
-Another important best practice is to load the data in the referenced or lookup table first. The reason for this is to load all possible values in the lookup table so that, when you load data to a table that is using a lookup field, it performs without any problems.
-
 ## Known limitations
 
-- Mapping to polymorphic lookup fields is currently not supported.
+- Mapping to [polymorphic lookup](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/working-with-references#polymorphic-lookups) fields is currently not supported.
 
