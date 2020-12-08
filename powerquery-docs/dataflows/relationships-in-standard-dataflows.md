@@ -61,5 +61,5 @@ After setting the key field, you can see the field in the mapping of the dataflo
 
 ## Known limitations
 
-- Mapping to [polymorphic lookup](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/working-with-references#polymorphic-lookups) fields is currently not supported.
+- Mapping to [polymorphic lookup](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-references#polymorphic-lookups) fields is currently not supported.
 
