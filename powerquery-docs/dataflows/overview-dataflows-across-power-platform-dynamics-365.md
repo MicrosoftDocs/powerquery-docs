@@ -4,9 +4,10 @@ description: An overview of dataflows across Microsoft Power Platform and Dynami
 author: radacad 
 ms.service: powerquery 
 ms.topic: conceptual 
-ms.date: 12/2/2020 
+ms.date: 12/3/2020 
 ms.author: gepopell  
---- 
+
+---
 
 # What are dataflows?  
 
@@ -86,11 +87,11 @@ If multiple Power BI solutions are using the same transformed version of a table
 
 In this scenario, the decision has been made by an organization to use Power Apps for the new user interface experience rather than the legacy on-premises system. Power Apps, Power Automate, and AI Builder all leverage Dataverse as the primary data storage system. The current data in the existing on-premises system can be migrated into Dataverse using a dataflow, and then leverage by the above products. 
 
-### Using dataflows to build a data warehouse 
+### Using dataflows to build a dimensional model 
 
-You can use dataflows as a replacement for other ETL tools to build a data warehouse. For example, the data engineers of a company decide to use dataflows to build the star-schema designed data warehouse, including fact and dimension tables in Azure Data Lake Storage. Then Power BI is used to generate reports and dashboards by getting data from the dataflows. 
+You can use dataflows as a replacement for other ETL tools to build a dimensional model. For example, the data engineers of a company decide to use dataflows to build the star-schema designed dimensional model, including fact and dimension tables in Azure Data Lake Storage Gen2. Then Power BI is used to generate reports and dashboards by getting data from the dataflows. 
 
-![Building a data warehouse using dataflows](media/building-data-warehouse.png) 
+![Building a dimensional model using dataflows](media/DataflowDimensionalModel.png) 
 
 ### Centralize data preparation and reuse of datasets across multiple Power BI solutions 
 
