@@ -42,7 +42,7 @@ To connect to a folder from Power Query Desktop:
 
    ![Folder information](./media/folder/folderinfo.png)
 
-3. Select **Combine & Transform Data** to combine the data in the files of the selected folder and load the data in the Power Query Editor for editing. Select **Combine & Load** to load the data from all of the files in the folder directly into your app. Or select **Transform Data** to load the folder data in the Power Query Editor without combining data inside the files in the folders.
+3. Select **Combine & Transform Data** to combine the data in the files of the selected folder and load the data in the Power Query Editor for editing. Select **Combine & Load** to load the data from all of the files in the folder directly into your app. Or select **Transform Data** to load the folder data as-is in the Power Query Editor.
 
    ![Combine files from folder](./media/folder/combinefolderfiles.png)
 
@@ -65,7 +65,7 @@ To connect to a folder from Power Query Online:
 
 5. Select **Next**.
 
-6. In the **Navigator** dialog box, select **Combine** to combine the data in the files of the selected folder and load the data into the Power Query Editor for editing. Or select **Transform data** to load the folder data in the Power Query Editor without combining data inside the files in the folders.
+6. In the **Navigator** dialog box, select **Combine** to combine the data in the files of the selected folder and load the data into the Power Query Editor for editing. Or select **Transform data** to load the folder data as-is in the Power Query Editor.
 
    ![Select what to do with the data displayed in the Navigator](./media/folder/navigator-online.png)
 
