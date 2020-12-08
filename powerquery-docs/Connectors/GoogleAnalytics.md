@@ -12,18 +12,18 @@ LocalizationGroup: reference
 # Google Analytics
  
 ## Summary
- 
-Release State: General Availability
 
-Products: Power BI Desktop
-
-Authentication Types Supported: Google Account
-
-Function Reference Documentation: [GoogleAnalytics.Accounts](https://docs.microsoft.com/powerquery-m/googleanalytics-accounts)
+| Item | Description |
+| ---- | ----------- |
+| Release State | General Availability |
+| Products | Power BI Desktop |
+| Authentication Types Supported | Google Account |
+| Function Reference Documentation | [GoogleAnalytics.Accounts](https://docs.microsoft.com/powerquery-m/googleanalytics-accounts) |
+| | |
 
 ## Prerequisites
-Before you can sign in to Google Analytics, you must have an Google Analytics account (username/password).
 
+Before you can sign in to Google Analytics, you must have an Google Analytics account (username/password).
  
 ## Capabilities Supported
 * Import
@@ -32,11 +32,11 @@ Before you can sign in to Google Analytics, you must have an Google Analytics ac
 
 To connect to Google Analytics data:
 
-1. Select **Get Data** from the **Home** ribbon in Power BI Desktop. Select **Online Services** from the categories on the left, select **Google Analytics**, and then select **Connect**.
+1. Select **Get Data** from the **Home** ribbon in Power BI Desktop. Select **Online Services** from the categories on the left, and then select **Google Analytics**. Then select **Connect**.
 
    ![Get Data from Google Analytics](./media/google-analytics/get-ga-data.png)
 
-2. If this is the first time you're getting data through the Google Analytics connector, a third party notice will be displayed. Select **Don't warn me again with this connector** if you don't want this message to be displayed again, and then select **Continue**.
+2. If this is the first time you're getting data through the Google Analytics connector, a third party notice is displayed. Select **Don't warn me again with this connector** if you don't want this message to be displayed again. Then select **Continue**.
 
 3. To sign in to your Google Analytics account, select **Sign in**.
 
@@ -55,7 +55,7 @@ To connect to Google Analytics data:
 
    ![Allow access to your Google account](./media/google-analytics/access-account.png)
 
-6. Once you have successfully signed in, select **Connect**.
+6. Once you've successfully signed in, select **Connect**.
 
    ![Signed in and ready to connect](./media/google-analytics/signed-in.png)
 
@@ -71,13 +71,13 @@ You should be aware of the following limitations and issues associated with acce
 
 ### Google Analytics quota limits for Power BI
 
-The standard limitations and quotas for Google Analytics AP requests is documented in [Limits and Quotas on API Requests](https://developers.google.com/analytics/devguides/config/mgmt/v3/limits-quotas). However, Power Query Desktop and Power Query Service allow you to use the following enhanced number of queries. 
+The standard limitations and quotas for Google Analytics AP requests is documented in [Limits and Quotas on API Requests](https://developers.google.com/analytics/devguides/config/mgmt/v3/limits-quotas). However, Power BI Desktop and Power BI service allow you to use the following enhanced number of queries. 
 
 Power BI Desktop:
 * Queries per day&mdash;250,000
 * Queries per 100 seconds&mdash;2,000
 
-Power BI Service:
+Power BI service:
 * Queries per day&mdash;1,500,000
 * Queries per 100 seconds&mdash;4,000
 
@@ -111,7 +111,7 @@ From this record, you can see you have your [Analytics view (profile) ID](https:
 
 You can copy these values into the [Google Analytics Query Explorer](https://ga-dev-tools.appspot.com/query-explorer/) to validate that the same data you're seeing returned by your query is also being returned by the API.
 
-If your error is around a date range, you can easily fix it. Go into the Advanced Editor. You'll have an M query that looks something like this (at a minimum&mdash;there may be other transforms on top of it).
+If your error is around a date range, you can easily fix it. Go into the [Advanced Editor](power-query-quickstart-using-power-bi.md#the-advanced-editor). You'll have an M query that looks something like this (at a minimum&mdash;there may be other transforms on top of it).
 
 ```powerquery-m
 let
