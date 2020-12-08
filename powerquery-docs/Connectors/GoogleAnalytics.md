@@ -111,7 +111,7 @@ From this record, you can see you have your [Analytics view (profile) ID](https:
 
 You can copy these values into the [Google Analytics Query Explorer](https://ga-dev-tools.appspot.com/query-explorer/) to validate that the same data you're seeing returned by your query is also being returned by the API.
 
-If your error is around a date range, you can easily fix it. Go into the [Advanced Editor](power-query-quickstart-using-power-bi.md#the-advanced-editor). You'll have an M query that looks something like this (at a minimum&mdash;there may be other transforms on top of it).
+If your error is around a date range, you can easily fix it. Go into the [Advanced Editor](../power-query-quickstart-using-power-bi.md#the-advanced-editor). You'll have an M query that looks something like this (at a minimum&mdash;there may be other transforms on top of it).
 
 ```powerquery-m
 let
