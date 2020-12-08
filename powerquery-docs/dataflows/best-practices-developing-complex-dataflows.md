@@ -26,10 +26,6 @@ Having some dataflows just for extracting data (that is, [staging dataflows](bes
    Image showing data being extracted from a data source to staging dataflows, where the enities are either stored in Dataverse or Azure Data Lake storage, then the data is moved to transformation dataflows where the data is transformed and converted to the data warehouse structure, and then the data is moved to the dataset.
 :::image-end:::
 
-## Separate dataflows in multiple workspaces
-
-Maintaining dataflows can be much easier when they're in their own workspaces. Having all of your dataflows in one workspace might be too confusing. The lineage<!--What is this?--> can show even dataflows from other workspaces, and access can be given only to the users of those workspaces. 
-
 ## Use custom functions
 
 Custom functions are helpful in scenarios where a certain number of steps have to be done for a number of queries from different sources. Custom functions can be developed through the graphical interface in Power Query Editor or by using an M script. Functions can be reused in a dataflow in as many entities as needed.

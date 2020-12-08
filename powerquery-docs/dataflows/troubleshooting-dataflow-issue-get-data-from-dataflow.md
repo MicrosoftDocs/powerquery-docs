@@ -33,9 +33,11 @@ You have to set up a scheduled refresh for a dataflow, or&mdash;if you want to j
 
 ![Refresh a dataflow](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-create-use/dataflows-create-use_13.png)
 
+![Schedule refresh for dataflows](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-create-use/dataflows-create-use_14.png)
+
 After a dataflow is refreshed, the data in entities will be visible in the **Navigator** window of other tools and services.
 
-![Schedule refresh for dataflows](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-create-use/dataflows-create-use_14.png)
+More information: [Refreshing a dataflow in Power BI](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-configure-consume#refreshing-a-dataflow) and [Set the refresh frequency in Power Apps](https://docs.microsoft.com/powerapps/maker/common-data-service/create-and-use-dataflows#set-the-refresh-frequency)
 
 ## My Power Platform dataflow isn't listed
 

@@ -90,7 +90,7 @@ When creating a Power BI report that includes data based on a dataflow, you can 
 
 There are a few limitations to keep in mind when working with linked entities:
 
-* You can't define more than five "referencing hops."<!--Suggested. Also, suggest defining this term because it isn't used elsewhere in the docset.-->
+* An entity can be referenced by another dataflows. That reference entity can also be reference by other dataflows and so on, up to 5 times.
 * Cyclical dependencies of linked entities aren't allowed.
 * The dataflow must be in a [new Power BI workspace](https://docs.microsoft.com/power-bi/service-create-the-new-workspaces) or a Power Apps environment.
 * A linked entity can't be joined with a regular entity that gets its data from an on-premises data source.
