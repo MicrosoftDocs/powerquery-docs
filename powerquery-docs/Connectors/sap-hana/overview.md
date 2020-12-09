@@ -5,7 +5,7 @@ author: dougklopfenstein
 
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 9/01/2020
+ms.date: 12/9/2020
 ms.author: v-douklo
 
 LocalizationGroup: reference
@@ -14,12 +14,14 @@ LocalizationGroup: reference
 # SAP HANA database
  
 ## Summary
- 
-Release State: General Availability
 
-Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in PowerBI.com (Enterprise Gateway), Dataflows in PowerApps.com (Enterprise Gateway), Excel
-
-Authentication Types Supported: Basic, Database, Windows
+| Item | Description |
+| ---- | ----------- |
+| Release State | General Availability |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Analysis Services |
+| Authentication Types Supported | Basic<br/>Database<br/>Windows |
+| Function Reference Documentation | [SapHana.Database](https://docs.microsoft.com/powerquery-m/saphana-database) |
+| | |
 
 >[!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.

@@ -5,7 +5,7 @@ author: cpopell
 
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 12/10/2019
+ms.date: 12/9/2020
 ms.author: gepopell
 
 LocalizationGroup: reference
@@ -14,12 +14,14 @@ LocalizationGroup: reference
 # Excel
  
 ## Summary
- 
-Release State: General Availability
 
-Products: Power BI Desktop, Power BI Service (Gateway for on-premise or .xls files), Dataflows in PowerBI.com (Gateway for on-premise or .xls files), Dataflows in PowerApps.com (Gateway for on-premise or .xls files), Excel
-
-Authentication Types Supported: No authentication
+| Item | Description |
+| ---- | ----------- |
+| Release State | General Availability |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Authentication Types Supported | No authentication |
+| Function Reference Documentation | [Excel.Workbook](https://docs.microsoft.com/powerquery-m/excel-workbook)<br/>[Excel.CurrentWorkbook](https://docs.microsoft.com/powerquery-m/excel-currentworkbook) |
+| | |
 
 >[!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
@@ -31,6 +33,39 @@ In order to connect to a legacy workbook (such as .xls or .xlsb), the Access Dat
  
 ## Capabilities Supported
 * Import
+
+## Connect to an Excel workbook from Power Query Desktop
+
+To make the connection from Power Query Desktop:
+
+1. Select the **Excel** option in the connector selection.
+2. Browse for and select the Excel workbook you want to load. Then select **Open**.
+
+   ![Select the Excel workbook from File Explorer](./media/excel/connect-desktop.png)
+
+   If the Excel workbook is online, use the [Web connector](web/web.md) to connect to the database.
+
+3. In Navigator, select the workbook information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
+
+   ![Excel workbook imported into Power Query Desktop Navigator](./media/excel/desktop-navigator-view.png)
+
+## Connect to an Excel workbook from Power Query Online
+
+To make the connection from Power Query Online:
+
+1. Select the **Excel** option in the connector selection.
+
+2. In the Excel dialog box that appears, provide the path to the Excel workbook.
+
+   ![Connection information to access the Excel workbook](./media/excel/connect-online.png)
+
+3. If necessary, select an on-premises data gateway to access the Excel workbook. 
+
+4. If this is the first time you've accessed this Excel workbook, select the authentication kind and sign in to your account (if needed).
+
+3. In Navigator, select the workbook information you want, then  **Transform Data** to continue transforming the data in Power Query Editor.
+
+   ![Excel workbook imported into Power Query online Navigator](./media/excel/online-navigator-view.png)
 
 ## Connect to an Excel workbook
 To connect to an Excel workbook, select 'Excel' from the product-specific data connector list.

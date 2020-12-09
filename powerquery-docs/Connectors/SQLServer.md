@@ -4,7 +4,7 @@ description: Includes basic information about products that use the connector, s
 author: cpopell
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 12/12/2019
+ms.date: 12/9/2020
 ms.author: gepopell
 LocalizationGroup: reference
 ---
@@ -13,13 +13,13 @@ LocalizationGroup: reference
  
 ## Summary
  
-Release State: General Availability
-
-Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in PowerBI.com (Enterprise Gateway), Dataflows in PowerApps.com (Enterprise Gateway), Excel, Flow
-
-Authentication Types Supported: Database (Username/Password), Windows
-
-[M Function Reference](https://docs.microsoft.com/powerquery-m/sql-database)
+| Item | Description |
+| ---- | ----------- |
+| Release State | General Availability |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Authentication Types Supported | Database (Username/Password)<br/>Windows |
+| M Function Reference | [Sql.Database](https://docs.microsoft.com/powerquery-m/sql-database)<br/>[Sql.Databases](https://docs.microsoft.com/powerquery-m/sql-databases) |
+| | |
 
 >[!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
@@ -30,7 +30,7 @@ By default, Power BI installs an OLE DB driver for SQL Server. However, for opti
  
 ## Capabilities Supported
 * Import
-* DirectQuery (Power BI only, learn more)
+* DirectQuery (Power BI Desktop)
 * Advanced options
     * Command timeout in minutes
     * Native SQL statement
@@ -38,25 +38,76 @@ By default, Power BI installs an OLE DB driver for SQL Server. However, for opti
     * Navigate using full hierarchy
     * SQL Server failover support
     
-## Connect to SQL Server database
+## Connect to SQL Server database from Power Query Desktop
+
 To make the connection, take the following steps:
  
-1.  From the Power Query **Get Data** dialog (or **Data** tab in the Excel ribbon), select **Database > SQL Server database**.
+1. Select the **SQL Server database** option in the connector selection.
  
-![SQL Server database connection builder in Power BI](../images/SQLServerBuilder.png)
+2. In the **SQL Server database** dialog that appears, provide the name of the server and database (optional). 
+
+   ![SQL Server database connection builder in Power Query Desktop](./media/sql-server-database/select-database-desktop.png)
+
+3. Select either the **Import** or **DirectQuery** data connectivity mode (Power BI Desktop only).
+
+4. Select **OK**.
+
+5. If this is the first time you're connecting to this database, select the authentication type, input your credentials, and select the level to apply the authentication settings to. Then select **Connect**.
+
+   ![SQL Server database authentication](./media/sql-server-database/signin-desktop.png)
+
+   >[!Note]
+   > If the connection is not encrypted, you'll be prompted with the following dialog.
+
+   ![SQL Server database encryption support](../images/EncryptionWarning.png)
+
+    Select **OK** to connect to the database by using an unencrypted connection, or follow these [instructions](https://docs.microsoft.com/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine) to setup encrypted connections to SQL Server.
+
+6. In **Navigator**, select the database information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
+
+   ![Power Query Navigator showing the employee data](./media/sql-server-database/navigator-desktop.png)
+
+## Connect to SQL Server database from Power Query Online
+
+To make the connection, take the following steps:
  
-2. In the **SQL Server database** dialog that appears, provide the name of the server and database (optional). Optionally, you may provide a command timeout and a native query (SQL statement), as well as select whether or not you want to include relationship columns and navigate using full hierarchy. Once you're done, select **Connect**.
-3. Select the authentication type and input those credentials in the dialogue when prompted.
+1. Select the **SQL Server database** option in the connector selection.
+ 
+2. In the **SQL Server database** dialog that appears, provide the name of the server and database (optional). 
 
-![SQL Server database authentication](../images/SQLServerAuth.png)
+   ![SQL Server database connection builder in Power Query Online](./media/sql-server-database/select-database-online.png)
 
->[!Note]
-> If the connection is not encrypted, you'll be prompted with the following dialog.
+3. If needed, select an on-premises data gateway.
 
-![SQL Server database encryption support](../images/EncryptionWarning.png)
+4. If this is the first time you're connecting to this database, select the authentication kind and input your credentials.
 
-Select **OK** to connect to the database by using an unencrypted connection, or follow the [instructions](https://docs.microsoft.com/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine) to setup encrypted connections to SQL Server.
+5. If the connection is not encrypted, and the connection dialog contains a **Use Encrypted Connection** check box, clear the check box.
 
-## Next steps
+6. Select **Next** to continue.
+
+7. In **Navigator**, select the data you require, and then select **Transform data**.
+
+   ![Power Query Online Navigator showing the Human Resources employee data](./media/sql-server-database/navigator-online.png)
+
+## Connect using advanced options
+
+Both Power Query Desktop and Power Query Online provide a set of advanced options that you can add to your query if needed. 
+
+![Display of advanced options available in Power Query Desktop](./media/sql-server-database/advanced-options.png)
+
+The following table lists all of the advanced options you can set in Power Query Desktop and Power Query Online.
+
+| Advanced option | Description |
+| --------------- | ----------- |
+| Command timeout in minutes | If your connection lasts longer than 10 minutes (the default timeout), you can enter another value in minutes to keep the connection open longer. This option is only available in Power Query Desktop. |
+| SQL statement | For information, go to [Import data from a database using native database query](../native-database-query.md). |
+| Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, you won’t see those columns. |
+| Navigate using full hierarchy | If checked, the Navigator displays the complete hierarchy of tables in the database you're connecting to. If cleared, Navigator displays only the tables whose columns and rows contain data. |
+| Enable SQL Server Failover support | If checked, when a node in the SQL Server [failover group](https://docs.microsoft.com/sql/sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server) isn't available, Power Query moves from that node to another when failover occurs. If cleared, no failover will occur. |
+| | |
+
+Once you've selected the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your SQL Server database.
+
+### See also
 
 [Optimize Power Query when expanding table columns](../optimize-expanding-table-columns.md)
