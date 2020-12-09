@@ -59,9 +59,9 @@ Select **OK** to connect to the database by using an unencrypted connection, or 
 
 ## Troubleshooting
 
-### Always Encrypted Columns
+### Always Encrypted columns
 
-Power Query does not support 'Always Encrypted' columns.
+Power Query doesn't support 'Always Encrypted' columns.
 
 ## Next steps
 
