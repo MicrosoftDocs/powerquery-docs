@@ -3,7 +3,7 @@ title: Promote or demote column headers
 description: In Power Query, you can promote or demote headers in a table. This article demonstrates how to do these operations. 
 author: ptyx507
 ms.service: powerquery
-ms.reviewer: v-douklo
+ms.reviewer: kvivek
 ms.date: 06/08/2020
 ms.author: v-miesco
 ms.custom: edited

@@ -5,7 +5,7 @@ author: t-sazaki
 ms.service: powerquery
 ms.reviewer: 
 ms.date: 08/05/2020
-ms.author: v-douklo
+ms.author: bezhan
 ---
 
 # Using the Applied Steps list

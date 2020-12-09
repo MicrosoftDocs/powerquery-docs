@@ -3,7 +3,7 @@ title: Field mapping considerations for standard dataflows
 description: Learn how to get the best outcomes when writing creating dataflows that write their output to Dataverse
 author: bensack
 
-ms.reviewer: v-douklo
+ms.reviewer: kvivek
 ms.service: dataflows
 ms.topic: conceptual
 ms.date: 12/3/2020
