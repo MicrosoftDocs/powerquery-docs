@@ -206,15 +206,25 @@ This column only appears when the query diagnostics “Aggregated” or “Detai
 
 When you run performance counters, every half second Power Query will take a snapshot of resource utilization. This isn’t useful for very fast queries but can be helpful for queries that use up a lot more resources.
 
-### Processor Time
+### % Processor Time
+
+Percent of time spent by processors on the query. This may reach above 100% due to multiple processors.
 
 ### Total Processor Time
 
+Total duration of processor time spent on the query.
+
 ### IO Data Bytes per Second
+
+Throughput speed of data received from the data source, expressed in bytes per second.
 
 ### Commit (Bytes)
 
+Amount of virtual memory reserved by the evaluation.
+
 ### Working Set (Bytes)
+
+Amount of memory reserved by the evaluation.
 
 ## Additional Reading
 
