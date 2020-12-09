@@ -83,7 +83,7 @@ To make the connection, take the following steps:
 
    ![PostgreSQL connection builder in Power Query Online](./media/postgresql/server-name-online.png)
 
-3. If necessary, include the name of your on-premises data gateway.
+3. Select the name of the on-premises data gateway you want to use.
 
 4. Select the **Basic** authentication kind and input your MySQL credentials in the **Username** and **Password** boxes.
 
