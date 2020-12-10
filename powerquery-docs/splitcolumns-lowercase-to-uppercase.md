@@ -20,21 +20,21 @@ You can find the **Split Columns: By Lowercase to Uppercase** option in three pl
 
 * **Home tab**&mdash;under the **Split Column** dropdown menu inside the **Transform** group.
 
-   ![image](images/sc-home-lu.png)
+   ![Image shows By Lowercase to Uppercase under the Home tab](images/sc-home-lu.png)
 
 * **Transform tab**&mdash;under the **Split Column** dropdown menu inside the **Text Column** group.
 
-   ![image](images/sc-transform-lu.png)
+   ![Image shows By Lowercase to Uppercase under the Transform tab](images/sc-transform-lu.png)
 
 * **Right-click a column**&mdash;inside the **Split Column** option.
 
-   ![image](images/sc-rightclick-lu.png)
+   ![Image shows By Lowercase to Uppercase when right-clicking a column](images/sc-rightclick-lu.png)
 
 ## Split columns by lowercase to uppercase into columns
 
 The initial table in this example will be the one shown in the image below, with one column for **Word** and an extra column named **Syllables**. You'll only focus on the first column.
 
-![image](images/sc-before-lu.png)
+![Image showing table with Word and Syllables columns, with five rows, with the Word column containing the first and second half of the word](images/sc-before-lu.png)
 
 This column holds two values in each row:
 
@@ -47,4 +47,4 @@ This single column will split into multiple columns, given every instance of the
 
 Your final table will look like the following image.
 
-![After](images/sc-after-lu.png)
+![Image showing Word.1, Word.2 and Syllables columns, with the first and second half of the word separated into the two columns](images/sc-after-lu.png)
