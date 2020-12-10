@@ -17,7 +17,7 @@ LocalizationGroup: reference
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
-| Authentication Types Supported | Anonymous<br/>Windows<br/>Basic<br/> Organizational Account |
+| Authentication Types Supported | Anonymous<br/>Windows<br/>Basic<br/>Organizational Account |
 | Function Reference Documentation | [Access.Database](https://docs.microsoft.com/powerquery-m/access-database) |
 | | |
 
