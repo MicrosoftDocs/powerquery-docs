@@ -5,7 +5,7 @@ author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
 ms.date: 06/15/2020
-ms.author: v-douklo
+ms.author: bezhan
 LocalizationGroup: reference
 ---
 
@@ -26,7 +26,7 @@ Function Reference Documentation: [Sql.Database](https://docs.microsoft.com/powe
  
 ## Prerequisites
 
-By default, Power BI installs an OLE DB driver for Azure SQL Data Warehouse. However, for optimal performance, we recommend that the customer installs the [SQL Server Native Client](https://docs.microsoft.com/sql/relational-databases/native-client/applications/installing-sql-server-native-client?view=sql-server-ver15) before using the Azure SQL Data Warehouse connector. SQL Server Native Client 11.0 and SQL Server Native Client 10.0 are both supported in the latest version.
+By default, Power BI installs an OLE DB driver for Azure SQL Data Warehouse. However, for optimal performance, we recommend that the customer installs the [SQL Server Native Client](https://docs.microsoft.com/sql/relational-databases/native-client/applications/installing-sql-server-native-client) before using the Azure SQL Data Warehouse connector. SQL Server Native Client 11.0 and SQL Server Native Client 10.0 are both supported in the latest version.
 
  
 ## Capabilities Supported
@@ -64,7 +64,7 @@ To make the connection, take the following steps:
 
        ![Azure SQL Data Warehouse encryption support](../images/EncryptionWarning.png)
 
-       Select **OK** to connect to the database by using an unencrypted connection, or follow these [instructions](https://docs.microsoft.com/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine?view=sql-server-ver15) to set up encrypted connections to Azure SQL Data Warehouse.
+       Select **OK** to connect to the database by using an unencrypted connection, or follow these [instructions](https://docs.microsoft.com/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine) to set up encrypted connections to Azure SQL Data Warehouse.
 
 3. If you're connecting from an online service:
 

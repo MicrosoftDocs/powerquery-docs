@@ -3,7 +3,7 @@ title: Split columns by number of characters
 description: An article on how to Split columns by number of characters into new columns or rows using Power Query.
 author: ptyx507
 ms.service: powerquery
-ms.reviewer: v-douklo
+ms.reviewer: kvivek
 ms.date: 06/08/2020
 ms.author: v-miesco
 ---
