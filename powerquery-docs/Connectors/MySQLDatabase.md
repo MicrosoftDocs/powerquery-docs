@@ -17,7 +17,7 @@ LocalizationGroup: reference
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
-| Authentication Types Supported | Windows (Power BI Desktop, Excel, online service with gateway), Database (Power BI Desktop, Excel), Basic (online service with gateway) |
+| Authentication Types Supported | Windows (Power BI Desktop, Excel, online service with gateway)<br/>Database (Power BI Desktop, Excel)<br/>Basic (online service with gateway) |
 | Function Reference Documentation | [MySQL.Database](https://docs.microsoft.com/powerquery-m/mysql-database) |
 | | |
 

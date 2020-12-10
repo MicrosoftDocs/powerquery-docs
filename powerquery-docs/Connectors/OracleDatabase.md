@@ -17,7 +17,7 @@ LocalizationGroup: reference
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
-| Authentication Types Supported | Windows (desktop/online), Database (desktop), Basic (online) |
+| Authentication Types Supported | Windows (desktop/online)<br/>Database (desktop)<br/>Basic (online) |
 | Function Reference Documentation | [Oracle.Database](https://docs.microsoft.com/powerquery-m/oracle-database) |
 | | |
 
