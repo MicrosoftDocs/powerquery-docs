@@ -108,6 +108,12 @@ The following table lists all of the advanced options you can set in Power Query
 
 Once you've selected the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your SQL Server database.
 
-### See also
+## Troubleshooting
+
+### Always Encrypted columns
+
+Power Query doesn't support 'Always Encrypted' columns.
+
+## Next steps
 
 [Optimize Power Query when expanding table columns](../optimize-expanding-table-columns.md)

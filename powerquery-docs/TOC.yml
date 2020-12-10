@@ -9,7 +9,9 @@
       - name: "Getting data"
         href: get-data-experience.md
       - name: "Authentication with a data source"
-        href: ConnectorAuthentication.md 
+        href: ConnectorAuthentication.md
+      - name: "SharePoint and OneDrive for Business files import"
+        href: sharepoint-onedrive-files.md        
     - name: Transform data
       items:
       - name: "Use Power Query"
@@ -133,8 +135,9 @@
     - name: Dataflows
       items:
       - name: "Overview of dataflows"
+
         href: dataflows/overview-dataflows-across-power-platform-dynamics-365.md
-      - name: "Analytical versus standard dataflows"
+      - name: "Analytical vs. standard dataflows"
         href: dataflows/understanding-differences-between-analytical-standard-dataflows.md        
       - name: "Create and use dataflows"
         href: dataflows/create-use.md
@@ -146,7 +149,7 @@
         href: dataflows/data-sources.md
       - name: "Link entities between dataflows"
         href: dataflows/linked-entities.md
-      - name: Storage Structure
+      - name: Storage structure
         items: 
         - name: "Common Data Model storage structure"
           href: dataflows/what-is-the-cdm-storage-structure-for-analytical-dataflows.md
@@ -154,33 +157,45 @@
           href: dataflows/configuring-storage-and-compute-options-for-analytical-dataflows.md
       - name: "Get data from dataflows"
         href: dataflows/using-the-output-of-power-platform-dataflows.md
-      - name: "Migrate to dataflows"
+      - name: "Migrate queries to dataflows"
         href: dataflows/how-to-migrate-queries-from-power-query-desktop-to-dataflows.md
       - name: "Dataflow licenses"
         href: dataflows/what-licenses-do-you-need-in-order-to-use-dataflows.md
+      - name: Standard dataflows
+        items: 
+        - name: "Relationships and lookups"
+          href: dataflows/relationships-in-standard-dataflows.md
+        - name: "Field mapping"
+          href: dataflows/get-best-of-standard-dataflows.md
+        - name: "Security and Roles"
+          href: dataflows/security-role-standard-dataflows.md
+        - name: "Sync Excel data"
+          href: dataflows/sync-excel-cds-dataflow.md
       - name: Integration
         items: 
         - name: "Data Factory dataflows"
           href: dataflows/power-platform-dataflows-and-adf-wrangling-data-flows.md
         - name: "Other Azure data services"
           href: dataflows/using-output-power-platform-dataflows-other-azure.md
-      - name: Best practices
+      - name: Best practices for dataflows
         items: 
-        - name: "Scenarios for computed entity"
+        - name: "Scenarios for computed entities"
           href: dataflows/computed-entities-scenarios.md
         - name: "Developing complex dataflows"
           href: dataflows/best-practices-developing-complex-dataflows.md
         - name: "Reusing dataflows"
           href: dataflows/best-practices-reusing-dataflows.md
-        - name: "Data warehouse"
-          href: dataflows/best-practices-for-data-warehouse-using-dataflows.md
+        - name: "Dimensional model"
+          href: dataflows/best-practices-for-dimensional-model-using-dataflows.md
+        - name: "Performance"
+          href: dataflows/performance-ingestion-transformation-dataflows.md
       - name: Troubleshooting dataflows
         items: 
         - name: "Creating dataflows"
           href: dataflows/troubleshooting-dataflows-issues-creating-dataflow.md
-        - name: "Get data from dataflows"
+        - name: "Getting data from dataflows"
           href: dataflows/troubleshooting-dataflow-issue-get-data-from-dataflow.md
-        - name: "Connection to the source"
+        - name: "Connecting to the data source"
           href: dataflows/troubleshooting-dataflow-issues-connection-to-the-data-source.md
     - name: Best practices in Power Query
       href: best-practices.md
@@ -314,10 +329,12 @@
         href: Connectors/XML.md
       - name: "Web"
         items:
-        - name: Web connector
+        - name: "Web connector"
           href: Connectors/web/Web.md
-        - name: Web by example
+        - name: "Web by example"
           href: Connectors/web/web-by-example.md
+        - name: "Troubleshooting"
+          href: Connectors/web/web-troubleshoot.md
     - name: Support and troubleshooting
       items:
       - name: "Power Query online limits"
