@@ -7,7 +7,7 @@ ms.service: powerquery
 ms.reviewer:
 ms.topic: conceptual
 ms.date: 10/6/2020
-ms.author: v-douklo
+ms.author: bezhan
 ---
 
 # Optimize Power Query when expanding table columns

@@ -3,7 +3,7 @@ title: Using the data profiling tools
 description: Overview of the Data Quality, Column Distribution, and Column Profile features found inside the Power Query Editor
 author: ptyx507
 ms.service: powerquery
-ms.reviewer: v-douklo
+ms.reviewer: kvivek
 ms.date: 06/08/2020
 ms.author: v-miesco
 ms.custom: edited
