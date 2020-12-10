@@ -1,13 +1,11 @@
 --- 
-
 title: Understanding the differences between standard and analytical dataflows 
 description: Understanding the differences between standard and analytical dataflows 
 author: radacad 
 ms.service: powerquery 
 ms.topic: conceptual 
-ms.date: 05/11/2020 
+ms.date: 12/3/2020 
 ms.author: bensack 
-
 --- 
 
 # Understanding the differences between standard and analytical dataflows 
@@ -30,7 +28,8 @@ A standard dataflow loads data to Dataverse tables. Standard dataflows can only 
 
 We've been working on significant updates to standard dataflows to improve their performance and reliability. These improvements will eventually be available to all standard dataflows. But in the interim, we'll differentiate between existing standard dataflows (version 1) and new standard dataflows (version 2) by adding a version indicator in Power Apps.
 
-![Standard dataflow versions](media/analytical-standard-dataflows/Standard-Dataflow-Version-Indication.png) 
+> [!div class="mx-imgBorder"]
+> ![Standard dataflow versions](media/analytical-standard-dataflows/Standard-Dataflow-Version-Indication.png) 
 
 ## Analytical dataflows 
 
@@ -95,14 +94,12 @@ Here are some sample scenarios and best practice recommendations for each type o
 
 ### Cross-platform usage&mdash;standard dataflow 
 
-If your plan for building dataflows is to use stored data in multiple platforms (not only Power BI, but also other Power Platform services, Dynamics, and so on), a standard dataflow is a great choice. Standard dataflows store the data in Dataverse, which you can access through many other platforms and services. 
+If your plan for building dataflows is to use stored data in multiple platforms (not only Power BI, but also other Microsoft Power Platform services, Dynamics 365, and so on), a standard dataflow is a great choice. Standard dataflows store the data in Dataverse, which you can access through many other platforms and services. 
 
-### Heavy data transformations on large data tables&mdash;analytical dataflow 
+### Heavy data transformations on large data tables&mdash;analytical dataflow
 
-Analytical dataflows are an excellent option for processing large amounts of data. Analytical dataflows are also enhancing the computing power behind the transformation. Having the data is stored in Azure Data Lake Storage increases the writing speed to a destination. Compared to Dataverse (which might have many rules to check at the time of data storage), Azure Data Lake Storage is faster for read/write transactions on a large amount of data. 
+Analytical dataflows are an excellent option for processing large amounts of data. Analytical dataflows also enhance the computing power behind the transformation. Having the data stored in Azure Data Lake Storage increases the writing speed to a destination. Compared to Dataverse (which might have many rules to check at the time of data storage), Azure Data Lake Storage is faster for read/write transactions on a large amount of data.
 
-### AI features&mdash;analytical dataflow 
+### AI features&mdash;analytical dataflow
 
-If you're planning to use any AI functionalities through the data transformation stage, then an analytical dataflow is helpful because you can use all the supported AI features with this type of dataflow. 
-
- 
+If you're planning to use any AI functionality through the data transformation stage, you'll find it helpful to use an analytical dataflow because you can use all the supported AI features with this type of dataflow.
