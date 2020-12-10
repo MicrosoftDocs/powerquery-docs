@@ -20,7 +20,7 @@ This section describes the general layout of the Power Query connector articles.
 
 All Power Query connector articles begin with a summary table that contains the following information:
 
-* Release state: Indicates whether the connector is in preview or general availability.
+* Release state: Indicates whether the connector is in preview or general availability. Use either "Preview" or "General Availability".
 * Products supported: Lists the products that can use your custom connector.
 * Authentication types supported: Lists the authentication types your custom connector supports.
 * Function reference docs: Lists any M formula language docs that are associated with your custom connector.
@@ -42,7 +42,7 @@ This section should contain a list of the capabilities supported by your custom 
 
 ### Connection instructions
 
-This section contains the procedures required to connect to data. If your custom connector is only used in Power Query Desktop, only one procedure is required. However, if your custom connector is used on both Power Query Desktop and Power Query Online, you must supply a separate procedure in separate sections for each instance. That is, if your custom connector is only used by Power Query Desktop, you'll have one procedure starting with a second order heading and a single step-by-step procedure. If your custom connector is used by both Power Query Desktop and Power Query Online, you'll have two procedures. Each procedure starts with a second order heading, and contains a separate step-by-step procedure under each heading.
+This section contains the procedures required to connect to data. If your custom connector is only used in Power Query Desktop, only one procedure is required. However, if your custom connector is used on both Power Query Desktop and Power Query Online, you must supply a separate procedure in separate sections for each instance. That is, if your custom connector is only used by Power Query Desktop, you'll have one procedure starting with a second order heading and a single step-by-step procedure. If your custom connector is used by both Power Query Desktop and Power Query Online, you'll have two procedures. Each procedure starts with a second order heading, and contains a separate step-by-step procedure under each heading. For examples of each of these types of procedures, go to [Example connector articles](#example-connector-articles).
 
 The procedure is made up of a numbered list that includes each step required to fill in the information needed to provide a normal connection (not requiring advance options) to the data. 
 
@@ -70,7 +70,10 @@ The following articles include instructions on formatting your document in Markd
 - [Docs Markdown reference](https://docs.microsoft.com/contribute/markdown-reference) 
 - [Microsoft Writing Style Guide](https://docs.microsoft.com/style-guide/welcome/) 
 
-## Example connector article 
+## Example connector articles
 
-Here is an example Power Query connector article that you can use as a starting point: [Azure SQL database](https://docs.microsoft.com/power-query/connectors/azuresqldatabase)
+Here are a couple of example Power Query connector articles that you can use as a starting point: 
+
+* [Adobe Analytics](./connectors/adobeanalytics.md) (Power Query Desktop only)
+* [Azure SQL database](./connectors/azuresqldatabase) (Power Query Desktop and Power Query Online)
 
