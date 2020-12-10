@@ -19,7 +19,7 @@ LocalizationGroup: reference
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
-| Authentication Types Supported | No authentication |
+| Authentication Types Supported | Anonymous (online)<br/>Basic (online)<br/>Organizational account (online) |
 | Function Reference Documentation | [Excel.Workbook](https://docs.microsoft.com/powerquery-m/excel-workbook)<br/>[Excel.CurrentWorkbook](https://docs.microsoft.com/powerquery-m/excel-currentworkbook) |
 | | |
 
@@ -45,7 +45,7 @@ To make the connection from Power Query Desktop:
 
    If the Excel workbook is online, use the [Web connector](web/web.md) to connect to the database.
 
-3. In Navigator, select the workbook information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
+3. In **Navigator**, select the workbook information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
 
    ![Excel workbook imported into Power Query Desktop Navigator](./media/excel/desktop-navigator-view.png)
 
@@ -63,18 +63,15 @@ To make the connection from Power Query Online:
 
 4. If this is the first time you've accessed this Excel workbook, select the authentication kind and sign in to your account (if needed).
 
-3. In Navigator, select the workbook information you want, then  **Transform Data** to continue transforming the data in Power Query Editor.
+3. In **Navigator**, select the workbook information you want, and then  **Transform Data** to continue transforming the data in Power Query Editor.
 
    ![Excel workbook imported into Power Query online Navigator](./media/excel/online-navigator-view.png)
 
-## Connect to an Excel workbook
-To connect to an Excel workbook, select 'Excel' from the product-specific data connector list.
- 
 ## Troubleshooting
 
 ### Connecting to an online Excel workbook
 
-If you want to connect to an Excel document hosted in Sharepoint, you can do so via the 'Web' connector in Power BI Desktop, Excel, and Dataflows, as well as the 'Excel' connector in Dataflows. To get the link to the file:
+If you want to connect to an Excel document hosted in Sharepoint, you can do so via the [Web](web/web.md) connector in Power BI Desktop, Excel, and Dataflows, as well as the Excel connector in Dataflows. To get the link to the file:
 
 1. Open the document in Excel Desktop.
 2. Open the **File** menu, select the **Info** tab, and then select **Copy Path**.
