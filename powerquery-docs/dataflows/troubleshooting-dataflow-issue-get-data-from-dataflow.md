@@ -1,0 +1,72 @@
+---
+title: Troubleshooting dataflow issue - get data from dataflow
+description: Troubleshooting dataflow issue - get data from dataflow
+author: radacad
+
+ms.service: powerquery
+ms.topic: conceptual
+ms.date: 12/3/2020
+ms.author: v-douklo
+
+LocalizationGroup: Data from files
+---
+
+# Troubleshooting dataflow issues: Get data from a dataflow
+
+[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
+
+You might have created a dataflow but then had difficulty getting data from it (either by using Power Query in Power BI Desktop or from other dataflows). This article explains some of the most common problems with getting data from a dataflow.
+
+## Error: This table is empty
+
+Let's assume that you're getting data from a dataflow (either in Power BI Desktop or in another dataflow), and you have access to that dataflow. Sometimes, however, when you get data from a dataflow in the above situation, you get a message in the **Navigator** window saying "This table is empty."
+
+**Reason:**
+
+The data wasn't loaded into the table.
+
+**Resolution:**
+
+In the desktop tools, such as Power Query in Excel and Power Query in Power BI Desktop, the loading of data into tables happens automatically (unless you disable it). This behavior is a bit different in Power Query in dataflows. In dataflow entities, the data won't be loaded unless you refresh the data.
+
+You have to set up a scheduled refresh for a dataflow, or&mdash;if you want to just have a single refresh&mdash;use the manual refresh option.
+
+![Refresh a dataflow](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-create-use/dataflows-create-use_13.png)
+
+![Schedule refresh for dataflows](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-create-use/dataflows-create-use_14.png)
+
+After a dataflow is refreshed, the data in entities will be visible in the **Navigator** window of other tools and services.
+
+More information: [Refreshing a dataflow in Power BI](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-configure-consume#refreshing-a-dataflow) and [Set the refresh frequency in Power Apps](https://docs.microsoft.com/powerapps/maker/common-data-service/create-and-use-dataflows#set-the-refresh-frequency)
+
+## My Power Platform dataflow isn't listed
+
+Sometimes, you have a Power Platform dataflow you created and also refreshed, but you still can't access it through the **Get data** command. This might be because the account that's trying to access the dataflow doesn't have access. However, if the account does have access to the dataflow, another reason might be the type of dataflow you're accessing.
+
+You might receive the error message "We reached the end of the buffer" or "DataFormat.Error: We reached the end of the buffer".
+
+![Get data from a standard dataflow](media/StandardDataflowGetData.png)
+
+**Reason:**
+
+Only analytical dataflows can be used in a **Get data** operation from a dataflow.
+
+**Resolution:**
+
+If you've created a dataflow that stores data in Dataverse&mdash;that is, a standard dataflow&mdash;you can't see it by using the **Get data** operation from a dataflow. However, you can use [**Get data** from Common Data Service](../connectors/commondataservice.md#finding-your-common-data-service-environment-url) to access it. Or you can create an [analytical dataflow](understanding-differences-between-analytical-standard-dataflows.md) instead, and then access it by using **Get data** from a dataflow.
+
+![Get data from standard dataflow versus analytical dataflows](media/GetDataStandardAnalyticalDataflow.png)
+
+## I can't make a DirectQuery connection to the dataflow
+
+If you intend to use the dataflow as a DirectQuery source, you might need to enable it first.
+
+**Reason:**
+
+The enhanced compute engine settings are disabled.
+
+**Resolution:**
+
+[Enable the enhanced compute engine](https://docs.microsoft.com/power-bi/transform-model/service-dataflows-directquery), and then you'll have the option to connect to the dataflow by using DirectQuery.
+
+![Enable the enhanced compute engine](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-directquery/dataflows-directquery-01.png)

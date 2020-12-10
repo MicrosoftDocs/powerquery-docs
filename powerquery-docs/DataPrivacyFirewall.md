@@ -5,7 +5,7 @@ author: ehrenMSFT
 
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 4/6/2020
+ms.date: 11/11/2020
 ms.author: gepopell
 
 LocalizationGroup: reference
@@ -43,7 +43,7 @@ Imagine if you were joining SQL data that included employee Social Security Numb
 
 This is the kind of scenario the Firewall is intended to prevent.
 
-# How does it work?
+## How does it work?
 
 The Firewall exists to prevent data from one source from being unintentionally sent to another source. Simple enough.
 
@@ -57,13 +57,13 @@ Simple…yet confusing. What’s a partition? What makes two data sources “com
 
 Let’s break this down and look at the above rule one piece at a time.
 
-## What’s a partition?
+### What’s a partition?
 
 At its most basic level, a partition is just a collection of one or more query steps. The most granular partition possible (at least in the current implementation) is a single step. The largest partitions can sometimes encompass multiple queries. (More on this later.)
 
 If you’re not familiar with steps, you can view them on the right of the Power Query Editor window after selecting a query, in the **Applied Steps** pane. Steps keep track of everything you’ve done to transform your data into its final shape.
 
-## Partitions that reference other partitions
+### Partitions that reference other partitions
 
 When a query is evaluated with the Firewall on, the Firewall divides the query and all its dependencies into partitions (that is, groups of steps). Any time one partition references something in another partition, the Firewall replaces the reference with a call to a special function called `Value.Firewall`. In other words, the Firewall doesn’t allow partitions to access each other randomly. All references are modified to go through the Firewall. Think of the Firewall as a gatekeeper. A partition that references another partition must get the Firewall’s permission to do so, and the Firewall controls whether or not the referenced data will be allowed into the partition.
 
@@ -105,13 +105,13 @@ When EmployeesReference is evaluated, the call to `Value.Firewall("Section1/Empl
 
 This is how the Firewall maintains control over the data flowing between partitions.
 
-## Partitions that directly access data sources
+### Partitions that directly access data sources
 
 Let’s say you define a query Query1 with one step (note that this single-step query will correspond to one Firewall partition), and that this single step accesses two data sources: a SQL database table and a CSV file. How does the Firewall deal with this, since there’s no partition reference, and thus no call to `Value.Firewall` for it to intercept? Let’s review to the rule stated earlier:
 
 * A partition may either access compatible data sources, or reference other partitions, but not both.
 
-In order for your single-partition-but-two-data-sources query to be allowed to run, its two data sources must be “compatible”. In other words, it needs to be okay for data to be shared between them. In terms of the Power Query UI, this means the Privacy Levels of the SQL and CSV data sources need to both be Public, or both be Organizational. If they are both marked Private, or one is marked Public and one is marked Organizational, or they are marked using some other combination of Privacy Levels, then it's not safe for them to both be evaluated in the same partition. Doing so would mean unsafe data leakage could occur (due to folding), and the Firewall would have no way to prevent it.
+In order for your single-partition-but-two-data-sources query to be allowed to run, its two data sources must be “compatible”. In other words, it needs to be okay for data to be shared between them. In terms of the Power Query UI, this means the privacy levels of the SQL and CSV data sources need to both be Public, or both be Organizational. If they are both marked Private, or one is marked Public and one is marked Organizational, or they are marked using some other combination of privacy levels, then it's not safe for them to both be evaluated in the same partition. Doing so would mean unsafe data leakage could occur (due to folding), and the Firewall would have no way to prevent it.
 
 What happens if you try to access incompatible data sources in the same partition?
 
@@ -121,7 +121,7 @@ Hopefully you now better understand one of the error messages listed at the begi
 
 Note that this _compatibility_ requirement only applies within a given partition. If a partition is referencing other partitions, the data sources from the referenced partitions don't have to be compatible with one another. This is because the Firewall can buffer the data, which will prevent any further folding against the original data source. The data will be loaded into memory and treated as if it came from nowhere.
 
-## Why not do both?
+### Why not do both?
 
 Let’s say you define a query with one step (which will again correspond to one partition) that accesses two other queries (that is, two other partitions). What if you wanted, in the same step, to also directly access a SQL database? Why can’t a partition reference other partitions and directly access compatible data sources?
 
@@ -133,7 +133,7 @@ So what happens if a partition tries to reference other partitions and also dire
 
 Now you hopefully better understand the other error message listed at the beginning of this article.
 
-## Partitions in-depth
+### Partitions in-depth
 
 As you can probably guess from the above information, how queries are partitioned ends up being incredibly important. If you have some steps that are referencing other queries, and other steps that access data sources, you now hopefully recognize that drawing the partition boundaries in certain places will cause Firewall errors, while drawing them in other places will allow your query to run just fine.
 
@@ -174,13 +174,13 @@ Here’s a high-level summary of the partitioning logic.
             * Isn’t the result (that is, final step) of a query
             * Isn’t cyclic
 
-# What does all this mean?
+## What does all this mean?
 
 Let’s walk through an example to illustrate how the complex logic laid out above works.
 
 Here’s a sample scenario. It’s a fairly straightforward merge of a text file (Contacts) with a SQL database (Employees), where the SQL server is a parameter (DbServer).
 
-## The three queries
+### The three queries
 
 Here’s the M code for the three queries used in this example.
 
@@ -228,7 +228,7 @@ Here’s a higher-level view, showing the dependencies.
 ![Query Dependencies Dialog](images/FirewallQueryDependencies.png)
 
 
-## Let’s Partition
+### Let’s partition
 
 Let’s zoom in a bit and include steps in the picture, and start walking through the partitioning logic. Here’s a diagram of the three queries, showing the initial firewall partitions in green. Notice that each step starts in its own partition.
 
@@ -247,7 +247,7 @@ Now we perform the static grouping. This maintains separation between partitions
 
 Now we enter the dynamic phase. In this phase, the above static partitions are evaluated. Partitions that don’t access any data sources are trimmed. Partitions are then grouped to create source partitions that are as large as possible. However, in this sample scenario, all the remaining partitions access data sources, and there isn’t any further grouping that can be done. The partitions in our sample thus won’t change during this phase.
 
-## Let’s Pretend
+### Let’s pretend
 
 For the sake of illustration, though, let’s look at what would happen if the Contacts query, instead of coming from a text file, were hard-coded in M (perhaps via the **Enter Data** dialog).
 
@@ -264,6 +264,53 @@ The resulting partition would look like this.
 ![Final firewall partitions](images/FirewallStepsPane5.png)
 
 
-# That’s a wrap
+## Example: Passing data from one data source to another
+Okay, enough abstract explanation. Let's look at a common scenario where you're likely to encounter a Firewall error and the steps to resolve it.
+
+Imagine you want to look up a company name from the Northwind OData service, and then use the company name to perform a Bing search.
+
+First, you create a **Company** query to retrieve the company name.
+
+```
+let
+    Source = OData.Feed("https://services.odata.org/V4/Northwind/Northwind.svc/", null, [Implementation="2.0"]),
+    Customers_table = Source{[Name="Customers",Signature="table"]}[Data],
+    CHOPS = Customers_table{[CustomerID="CHOPS"]}[CompanyName]
+in
+    CHOPS
+```
+
+Next, you create a **Search** query that references **Company** and passes it to Bing.
+
+```
+let
+    Source = Text.FromBinary(Web.Contents("https://www.bing.com/search?q=" & Company))
+in
+    Source
+```
+
+At this point you run into trouble. Evaluating **Search** produces a Firewall error.
+
+`Formula.Firewall: Query 'Search' (step 'Source') references other queries or steps, so it may not directly access a data source. Please rebuild this data combination.`
+
+This is because the Source step of **Search** is referencing a data source (bing.com) and also referencing another query/partition (**Company**). It is violating the rule mentioned above ("a partition may either access compatible data sources, or reference other partitions, but not both").
+
+What to do? One option is to disable the Firewall altogether (via the Privacy option labeled **Ignore the Privacy Levels and potentially improve performance**). But what if you want to leave the Firewall enabled?
+
+To resolve the error without disabling the Firewall, you can combine Company and Search into a single query, like this:
+
+```
+let
+    Source = OData.Feed("https://services.odata.org/V4/Northwind/Northwind.svc/", null, [Implementation="2.0"]),
+    Customers_table = Source{[Name="Customers",Signature="table"]}[Data],
+    CHOPS = Customers_table{[CustomerID="CHOPS"]}[CompanyName],
+    Search = Text.FromBinary(Web.Contents("https://www.bing.com/search?q=" & CHOPS))
+in
+    Search
+```
+
+Everything is now happening inside a *single* partition. Assuming that the privacy levels for the two data sources are compatible, the Firewall should now be happy, and you'll no longer get an error.
+
+## That’s a wrap
 
 While there's much more that could be said on this topic, this introductory article is already long enough. Hopefully it’s given you a better understanding of the Firewall, and will help you to understand and fix Firewall errors when you encounter them in the future.

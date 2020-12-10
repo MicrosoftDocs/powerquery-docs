@@ -4,7 +4,8 @@
       {
         "files": [
           "**/*.md",
-          "**/*.yml"
+          "**/*.yml",
+          "**/*.svg"
         ],
         "exclude": [
           "**/obj/**",
@@ -22,7 +23,9 @@
       {
         "files": [
           "**/*.png",
-          "**/*.jpg"
+          "**/*.jpg",
+          "**/*.gif",
+          "**/*.svg"
         ],
         "exclude": [
           "**/obj/**",
@@ -39,7 +42,8 @@
       "extendBreadcrumb": true,
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/powerquery-docs",
-      "feedback_product_url": "https://powerquery.microsoft.com/en-us/resources/" 
+      "feedback_product_url": "https://powerquery.microsoft.com/en-us/resources/",
+      "searchScope": ["Power Query"] 
     },
     "fileMetadata": {},
     "template": [],

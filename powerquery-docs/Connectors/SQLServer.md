@@ -1,6 +1,6 @@
 ---
-title: SQL Server
-description: Power Query SQL Server connector reference
+title: Power Query SQL Server connector
+description: Includes basic information about products that use the connector, supported authentication types, prerequisites, and connection instructions.
 author: cpopell
 ms.service: powerquery
 ms.topic: conceptual
@@ -25,7 +25,7 @@ Authentication Types Supported: Database (Username/Password), Windows
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
  
 ## Prerequisites
-By default, Power BI installs an OLE DB driver for SQL Server. However, for optimal performance, we recommend that the customer installs the [SQL Server Native Client](https://docs.microsoft.com/sql/relational-databases/native-client/applications/installing-sql-server-native-client?view=sql-server-ver15) before using the SQL Server connector. SQL Server Native Client 11.0 and SQL Server Native Client 10.0 are both supported in the latest version.
+By default, Power BI installs an OLE DB driver for SQL Server. However, for optimal performance, we recommend that the customer installs the [SQL Server Native Client](https://docs.microsoft.com/sql/relational-databases/native-client/applications/installing-sql-server-native-client) before using the SQL Server connector. SQL Server Native Client 11.0 and SQL Server Native Client 10.0 are both supported in the latest version.
 
  
 ## Capabilities Supported
@@ -55,4 +55,14 @@ To make the connection, take the following steps:
 
 ![SQL Server database encryption support](../images/EncryptionWarning.png)
 
-Select **OK** to connect to the database by using an unencrypted connection, or follow the [instructions](https://docs.microsoft.com/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine?view=sql-server-ver15) to setup encrypted connections to SQL Server.
+Select **OK** to connect to the database by using an unencrypted connection, or follow the [instructions](https://docs.microsoft.com/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine) to setup encrypted connections to SQL Server.
+
+## Troubleshooting
+
+### Always Encrypted columns
+
+Power Query doesn't support 'Always Encrypted' columns.
+
+## Next steps
+
+[Optimize Power Query when expanding table columns](../optimize-expanding-table-columns.md)

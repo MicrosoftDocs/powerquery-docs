@@ -1,5 +1,5 @@
 ---
-title: Analyze data in Azure Data Lake Storage Gen2 by using Power BI | Microsoft Docs
+title: Analyze data in Azure Data Lake Storage Gen2 by using Power BI
 description: Use Power BI to analyze data stored in Azure Data Lake Storage Gen2
 author: bensack
 ms.service: powerquery
@@ -14,7 +14,7 @@ In this article you'll learn how to use Power BI Desktop to analyze and visualiz
 
 ## Prerequisites
 
-Before you begin this tutorial, you must have the following:
+Before you begin this tutorial, you must have the following prerequisites:
 
 > [!div class="checklist"]
 > * An Azure subscription. See [Get Azure free trial](https://azure.microsoft.com/pricing/free-trial/).
@@ -37,23 +37,25 @@ Before you begin this tutorial, you must have the following:
 
     `https://<accountname>.dfs.core.windows.net/<filesystemname>/<subfolder>`
     
+    You can also select whether you want to use the file system view or the Common Data Model folder view.
+
     Select **OK** to continue.
 
     ![URL](media/DataLakeStorage/adls-url.png)
 
-5. In the next dialog box, select **Sign in** to sign into your storage account. You'll be redirected to your organization's sign in page. Follow the prompts to sign into the account.
+5. If this is the first time you're using this URL address, you'll be asked to select the authentication method. 
+
+   If you select the Organizational account method, select **Sign in** to sign into your storage account. You'll be redirected to your organization's sign in page. Follow the prompts to sign into the account. After you've successfully signed in, select **Connect**.
+   
+   If you select the Account key method, enter your account key and then select **Connect**.
 
     ![Sign in page](media/DataLakeStorage/sign-in.png)
 
-6. After you've successfully signed in, select **Connect**.
-
-    ![Signed in page](media/DataLakeStorage/signed-in.png)
-
-7. The next dialog box shows all files under the URL you provided in step 4 above, including the file that you uploaded to your storage account. Verify the information, and then select **Load**.
+6. The next dialog box shows all files under the URL you provided in step 4 above, including the file that you uploaded to your storage account. Verify the information, and then select **Load**.
 
     ![File systems](media/DataLakeStorage/file-systems.png)
 
-8. After the data has been successfully loaded into Power BI, you'll see the following fields in the **Fields** tab.
+7. After the data has been successfully loaded into Power BI, you'll see the following fields in the **Fields** tab.
 
     ![Fields tab](media/DataLakeStorage/fields.png)
 
@@ -63,27 +65,27 @@ Before you begin this tutorial, you must have the following:
 
     In the next steps, you'll update the query to convert the imported data to the desired format.
 
-9. From the **Home** tab on the ribbon, select **Edit Queries**.
+8. From the **Home** tab on the ribbon, select **Edit Queries**.
 
-    ![Queries](media/DataLakeStorage/queries.png)
+    ![Select edit queries](media/DataLakeStorage/queries.png)
 
-10. In the **Query Editor**, under the **Content** column, select **Binary**. The file will automatically be detected as CSV and you should see an output as shown below. Your data is now available in a format that you can use to create visualizations.
+9. In the **Query Editor**, under the **Content** column, select **Binary**. The file will automatically be detected as CSV and you should see an output as shown below. Your data is now available in a format that you can use to create visualizations.
 
     ![Output](media/DataLakeStorage/binary.png)
 
-11. From the **Home** tab on the ribbon, select **Close & Apply**.
+10. From the **Home** tab on the ribbon, select **Close & Apply**.
 
     ![Close and apply](media/DataLakeStorage/close-apply.png)
 
-12. Once the query is updated, the **Fields** tab will show the new fields available for visualization.
+11. Once the query is updated, the **Fields** tab will show the new fields available for visualization.
 
     ![New fields](media/DataLakeStorage/new-fields.png)
 
-13. Now you can create a pie chart to represent the drivers in each city for a given country. To do so, make the following selections.
+12. Now you can create a pie chart to represent the drivers in each city for a given country. To do so, make the following selections.
 
     From the **Visualizations** tab, select the symbol for a pie chart.
 
-    ![Visualizations](media/DataLakeStorage/visualizations.png)
+    ![Select pie chart symbol in Visualizations](media/DataLakeStorage/visualizations.png)
 
     In this example, the columns you're going to use are Column 4 (name of the city) and Column 7 (name of the country). Drag these columns from the **Fields** tab to the **Visualizations** tab as shown below.
 
@@ -93,16 +95,22 @@ Before you begin this tutorial, you must have the following:
 
     ![Pie chart](media/DataLakeStorage/pie-chart.png)
 
-14. By selecting a specific country from the page level filters, you can now see the number of drivers in each city of the selected country. For example, under the **Visualizations** tab, under **Page level filters**, select **Brazil**.
+13. By selecting a specific country from the page level filters, you can now see the number of drivers in each city of the selected country. For example, under the **Visualizations** tab, under **Page level filters**, select **Brazil**.
 
     ![Page filters](media/DataLakeStorage/page-filters.png)
 
-15. The pie chart is automatically updated to display the drivers in the cities of Brazil.
+14. The pie chart is automatically updated to display the drivers in the cities of Brazil.
 
     ![Brazil](media/DataLakeStorage/pie-chart-updated.png)
 
-16. From the **File** menu, select **Save** to save the visualization as a Power BI Desktop file.
+15. From the **File** menu, select **Save** to save the visualization as a Power BI Desktop file.
 
 ## Publish report to Power BI service
 
 After you've created the visualizations in Power BI Desktop, you can share it with others by publishing it to the Power BI service. For instructions on how to do that, see [Publish from Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-upload-desktop-files/).
+
+## Troubleshooting
+
+Currently, in Power Query Online, the Azure Data Lake Storage Gen2 connector only supports paths with container, and not subfolder or file.
+
+https://\<accountname\>.dfs.core.windows.net/\<container\> will work, while https://\<accountname\>.dfs.core.windows.net/\<container\>/\<filename\> or https://\<accountname\>.dfs.core.windows.net/\<container\>/\<subfolder\> will fail.

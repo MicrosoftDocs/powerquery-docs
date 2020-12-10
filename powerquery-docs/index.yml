@@ -1,10 +1,11 @@
 ### YamlMime:Landing 
 
-title: Power Query Documentation
-summary: Power Query is the Data Connectivity and Data Preparation technology that enables end users to seamlessly import and reshape data from within a wide range of Microsoft products, including Excel, Power BI, Analysis Services, Common Data Services for Apps & Analytics, and more.
+
+title: Power Query documentation
+summary: Power Query is the data connectivity and data preparation technology that enables end users to seamlessly import and reshape data from within a wide range of Microsoft products, including Excel, Power BI, Analysis Services, Dataverse, and more.
 
 metadata: 
-  title: Power Query Documentation
+  title: Power Query documentation
   description: Power Query is used to filter, combine, and mash-up data from one or more supported data sources.  
   ms.service: power-query
   ms.topic: landing-page
@@ -24,28 +25,46 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: What is Power Query
+          - text: What is Power Query?
             url: power-query-what-is-power-query.md
+          - text: What are dataflows?
+            url: dataflows/overview-dataflows-across-power-platform-dynamics-365.md
 
   # Card
   - title: Using Power Query
     linkLists:
-      - linkListType: quickstart
-        links:
-          - text: Using Power Query
-            url: power-query-quickstart-using-power-bi.md
-          - text: Using Power Query parameters
-            url: power-query-query-parameters.md
-
-  # Card
-  - title: Tasks using Power Query
-    linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Combining data
+          - text: Use Power Query
+            url: power-query-quickstart-using-power-bi.md
+          - text: Get data
+            url: get-data-experience.md
+          - text: Transform data
             url: power-query-tutorial-shape-combine.md
-          - text: Using Query Diagnostics
+
+  # Card
+  - title: Working with dataflows
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Create and use dataflows in the Power Platform
+            url: dataflows/create-use.md
+          - text: Dataflow licenses
+            url: dataflows/what-licenses-do-you-need-in-order-to-use-dataflows.md
+          - text: Dataflow best practices
+            url: dataflows/computed-entities-scenarios.md
+
+  # Card
+  - title: Advanced Power Query articles
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Query folding
+            url: power-query-folding.md
+          - text: Query diagnostics
             url: querydiagnostics.md
+          - text: Error handling
+            url: error-handling.md
 
   # Card
   - title: Develop your custom connector
@@ -58,9 +77,11 @@ landingContent:
             url: connectorcertification.md
             
   # Card
-  - title: M language reference
+  - title: Reference content
     linkLists:
       - linkListType: reference
         links:
+          - text: Connectors in Power Query
+            url: connectors/index.md
           - text: M language reference
             url: https://docs.microsoft.com/powerquery-m/index
