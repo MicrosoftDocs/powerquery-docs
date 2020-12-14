@@ -53,3 +53,32 @@ When connecting to various APIs, you might get the following warning:
 If you run into this error, it's most likely a networking issue. Generally, the first people to check with are the owners of the data source you're attempting to connect to. If they don’t think they’re the ones closing the connection, then it’s possible something along the way is (for example, a proxy server, intermediate routers/gateways, and so on).
 
 Whether this only reproduces with any data or only larger data sizes, it's likely that there's a network timeout somewhere on the route. If it's only with larger data, customers should consult with the data source owner to see if their APIs support paging, so that they can split their requests into smaller chunks. Failing that, alternative ways to extract data from the API (following data source best practices) should be followed.
+
+## TLS RSA cipher suites are deprecated
+
+Effective October 30, 2020, the following cipher suites are being deprecated from our servers.
+* "TLS_RSA_WITH_AES_256_GCM_SHA384”
+* "TLS_RSA_WITH_AES_128_GCM_SHA256”
+* "TLS_RSA_WITH_AES_256_CBC_SHA256”
+* "TLS_RSA_WITH_AES_128_CBC_SHA256”
+
+The following is the full list of supported ciphersuites:
+
+* "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256"
+* "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384"
+* "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"
+* "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384"
+* "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256"
+* "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384"
+* "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+* "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384"
+
+Cipher suites are used to encrypt messages to secure a network connection between clients/servers and other servers. We are removing the above list of cipher suites to comply with our current security protocols. Beginning March 1, 2021, customers can only use our [standard cipher suites](https://docs.microsoft.com/en-us/power-platform/admin/server-cipher-tls-requirements).
+
+These are the cipher suites the server you connect to must support to connect to it from Power Query Online or Power BI.
+
+In Power Query Desktop (Power BI, Excel), we don’t control your cipher suites . If you're trying to connect to Power Platform  (for example Power Platform Dataflows) or the Power BI Service, you will need one of those cipher suites enabled on your OS. You may either upgrade the [Windows version](https://docs.microsoft.com/en-us/windows/win32/secauthn/cipher-suites-in-schannel) or update the [Windows TLS registry](https://docs.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings) to make sure that you server end-point supports one of these ciphers.
+
+ To verify that your server complies with the security protocol, you can perform a test using a TLS cipher and scanner tool, for example [SSLLABS](https://www.ssllabs.com/ssltest/analyze.html).
+
+Customers must upgrade their servers before March 1, 2021. For more information about configuring TLS Cipher Suite order, see [Manage Transport Layer Security (TLS)](https://docs.microsoft.com/en-us/windows-server/security/tls/manage-tls).
