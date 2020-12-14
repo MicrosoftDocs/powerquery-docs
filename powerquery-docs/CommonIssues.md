@@ -82,3 +82,11 @@ In Power Query Desktop (Power BI, Excel), we don’t control your cipher suites 
  To verify that your server complies with the security protocol, you can perform a test using a TLS cipher and scanner tool, for example [SSLLABS](https://www.ssllabs.com/ssltest/analyze.html).
 
 Customers must upgrade their servers before March 1, 2021. For more information about configuring TLS Cipher Suite order, see [Manage Transport Layer Security (TLS)](https://docs.microsoft.com/en-us/windows-server/security/tls/manage-tls).
+
+## Certificate Revocation
+
+An upcoming version of Power BI Desktop will cause SSL connections failure from Desktop when any certificates in the SSL chain are missing certificate revocation status. This is a change from the current state, where revocation only caused connection failure in the case where the certificate was explicitly revoked. Other certificate issues might include invalid signatures, and certificate expiration.
+
+Due to the fact that there are a number of configurations in which revocation status may be stripped, such as with corporate proxy servers, we will be providing an additional option to ignore certificates that don't have revocation information. This will allow situations where revocation information is stripped in certain cases, but you don't want to lower security entirely, to continue working.
+
+It isn't recommended, but users will continue to be able to turn off revocation checks entirely.
