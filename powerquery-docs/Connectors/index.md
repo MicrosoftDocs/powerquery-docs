@@ -6,7 +6,7 @@ author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
 ms.date: 06/03/2020
-ms.author: v-douklo
+ms.author: bezhan
 
 LocalizationGroup: reference
 ---
@@ -39,7 +39,7 @@ A checkmark indicates the connector is currently supported in the listed service
 | ![Azure DevOps Server (Beta)](media/index/vsts-64.png)<br/>**Azure DevOps<br/>Server</br>(Beta)**<br/>By Microsoft                          | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Azure HDInsight (HDFS)](media/index/hdinsight-hdfs-64.png)<br/>**Azure HDInsight<br/>(HDFS)**<br/>By Microsoft                        | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) |
 | ![Azure HDInsight Spark](media/index/spark-64.png)<br/>**Azure HDInsight<br/>Spark**<br/>By Microsoft                                   | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
-| [![Azure SQL Data Warehouse](media/index/sql-data-warehouse-64.png)<br/>**Azure SQL Data<br/>Warehouse**](azuresqldatawarehouse.md)<br/>By Microsoft                | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
+| [![Azure Synapse Analytics (SQL DW)](media/index/sql-data-warehouse-64.png)<br/>**Azure Synapse<br/>Analytics<br/>(SQL DW)**](azuresqldatawarehouse.md)<br/>By Microsoft                | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
 | [![Azure SQL database](media/index/sql-database-64.png)<br/>**Azure SQL<br/>database**](azuresqldatabase.md)<br/>By Microsoft                                  | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
 | ![Azure Table Storage](media/index/tables-64.png)<br/>**Azure Table<br/>Storage**<br/>By Microsoft                                      | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
 | ![Azure Time Series Insights (Beta)](media/index/time-series-insights-connector-64.png)<br/>**Azure Time<br/>Series Insights<br/> (Beta)**<br/>By Microsoft                                                                                                                             | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | 
