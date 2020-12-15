@@ -93,7 +93,7 @@ If you do not already have one, create a dataflow. This can be done in either [P
     
     ![example to select dataflow id](media/dataflowid.png)
 
-    * Repeat this proces for all required fields
+    * Repeat this process for all required fields
     
     ![example of required fields](media/final.PNG)  
 
