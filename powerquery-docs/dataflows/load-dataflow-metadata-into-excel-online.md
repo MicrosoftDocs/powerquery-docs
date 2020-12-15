@@ -16,17 +16,26 @@ ms.author: mideboer
 
 In this step-by-step tutorial, we will show you how to set up your own monitoring dashboard for all of your dataflows:
 
+
 ![example of monitoring dashboard](media/dashboard.PNG)
+
+First, we are going to download the `.xlsx` file from this repository and save it on our OneDrive for Business or SharePoint. Next, we are going to create a Power Automate connector that will load meta-data from Dataflows into the excel file on the OneDrive or Sharepoint. After that, we are going to connect the Power BI file to the Excel file, so we can visualize the meta-data and start monitoring our dataflows.
+
 
 You can use this dashboard to monitor your dataflows' refresh duration and failure count. With this dashboard, you can track any issues with your dataflows performance and share the data with others. 
 
 First, you will download the Excel file and save it in OneDrive for Business or SharePoint. Next, you will create a Power Automate connector which will load metadata from your dataflow into the Excel file in OneDrive for Business or SharePoint. Lastly, you will connect a Power BI file to the Excel file to visualize the metadata and start monitoring the dataflows.
 
+
 ![overview of loading data through Excel](media/excel.PNG)	
 
+
 ## Prerequisites
+* Download and Install [Microsoft Excel](https://www.microsoft.com/en/microsoft-365/excel)
 
 * [Power BI Desktop](https://www.microsoft.com/download/details.aspx?id=58494).
+
+* [Power Automate Premium License](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)
 
 * [Microsoft Excel](https://www.microsoft.com/en/microsoft-365/excel).
 
@@ -78,15 +87,33 @@ If you do not already have one, create a dataflow. This can be done in either [P
 
     * Select the Dataflow ID as the dynamic content.
 
+
 	![example to select dataflow id in Excel](media/dataflowid.png)
+
+  The **Add a row into a table** action is expanded because you need to enter you *Location* of the excel file and the specific *Table* the data need to load to.
+    * **Location**: The location of the Excel file. Either *OneDrive for Business* or a *SharePoint Site*
+    * **Document Library**: The library of the excel file
+    * **File**: The exact location of the `.xlsx` file
+    * **Table**: The name of the Table to load the data into. The table is called *Datflow-monitoring*.
+
 
     * Repeat this process for all required fields.
 
+
     ![example of required fields in Excel](media/excelcomplete.PNG)  
 
-* Save the flow.
+    For every required field, we are going to add a dynamic value. This value is the output of the meta-data of the dataflow run. 
+    * click on the field  next to **Dataflow_name** and then click on the *lightning* button.
+![An example of folder structure](media/dynamicexcel.png)
+
+
+  * Save the flow.
+
 
 ## Create a Power BI Report
+
+![An example of folder structure](media/excelcomplete.PNG)  
+
 
 * Open the `.pbit` file.
 
