@@ -58,14 +58,14 @@ If you do not already have one, create a dataflow. This can be done in either [P
 
   The **Dataflow Refresh** trigger is expanded because you need to enter information on your dataflow:
     * **Group Type**: Select *Environment* when connecting to Power Apps and *Workspace* when connecting to Power BI.
-	* **Group**: Select the Power Apps environment or the Power BI workspace your dataflow is in.
+    * **Group**: Select the Power Apps environment or the Power BI workspace your dataflow is in.
     * **Dataflow**: Select your dataflow by name.
   
   The **Add a row into a table** action is expanded because you need to enter the *Location* of the Excel file and the specific *Table* the data loads to.
-    * **Location**: The location of the Excel file on OneDrive for Business or SharePoint.
-    * **Document Library**: The library of the Excel file.
-    * **File**: The file path to the Excel file.
-    * **Table**: "Dataflow_monitoring".
+    * **Location**: Select the location of the Excel file on OneDrive for Business or SharePoint.
+    * **Document Library**: Select the library of the Excel file.
+    * **File**: Select the file path to the Excel file.
+    * **Table**: Select "Dataflow_monitoring".
 
 * Add dynamic values to the required fields.
 
