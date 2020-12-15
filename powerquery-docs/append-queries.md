@@ -3,7 +3,7 @@ title: Append queries
 description: This article demonstrates how to append table queries in Power Query.
 author: ptyx507
 ms.service: powerquery
-ms.reviewer: v-douklo
+ms.reviewer: kvivek
 ms.date: 06/08/2020
 ms.author: v-miesco
 ms.custom: edited

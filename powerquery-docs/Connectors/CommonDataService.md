@@ -5,7 +5,7 @@ author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
 ms.date: 11/13/2020
-ms.author: v-douklo
+ms.author: bezhan
 LocalizationGroup: reference
 ---
 
@@ -15,11 +15,12 @@ LocalizationGroup: reference
 
 ## Summary
 
-Release State: General Availability
-
-Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in PowerBI.com (Enterprise Gateway), Dynamics 365 Customer Insights
-
-Authentication types: Organizational account
+| Item | Description |
+| ---- | ----------- |
+| Release State | General Availability |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Dynamics 365 Customer Insights |
+| Authentication types | Organizational account |
+| | |
 
 ## Prerequisites
 
