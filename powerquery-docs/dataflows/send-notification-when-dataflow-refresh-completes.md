@@ -1,7 +1,7 @@
 ---
 title: Send a Notification when a Dataflow Refresh Completes
 description: How to use the dataflows connector in Power Automate to send a notification when a dataflow refresh completes
-author: mideboer
+author: miquelladeboer
 
 ms.service: powerquery
 ms.reviewer: kvivek
@@ -21,7 +21,7 @@ When your dataflow refresh completes, you or others who manage or depend on the 
 For sending notifications, you can use three templates:
 * When a dataflow refresh status changes, send an email notification.
 * When a dataflow succeeds or fails, send an email notification.
-* When a dataflows refresh status changes, send a Teams notification.
+* When a dataflow refresh status changes, send a Teams notification.
 
 This tutorial will use the second template.
 * Navigate to [Power Automate](https://flow.microsoft.com).
