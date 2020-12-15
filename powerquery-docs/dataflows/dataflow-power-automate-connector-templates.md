@@ -1,41 +1,40 @@
 ---
-title: Load Data into Dataverse table and build a dataflows monitoring report with Power BI
-description: How to use the dataflows connector templates in Power Automate to created a dataflows monitoring report in Power BI
-author: mideboer
+title: Power Automate Templates for the Dataflows Connector
+description: Introduction to Power Automate templates for the dataflows connector.
+author: miquelladeboer
 
 ms.service: powerquery
 ms.reviewer: kvivek
 ms.topic: conceptual
-ms.date: 2/15/2020
+ms.date: 12/15/2020
 ms.author: mideboer
 ---
+# Power Automate Templates for the Dataflows Connector
 
-# Power Automate Templates for Dataflows Connector
+The dataflows Power Automate Connector can:
+* trigger a flow when a dataflows refresh completes.
+* take action to initiate a dataflows refresh.
 
-The Dataflow Power Automate Connector can:
-* Trigger a flow when a dataflows refresh completes.
-* Take action to initiate a dataflows refresh.
+In this article, we discuss some use cases with provided templates to help you quickstart the use of this connector:
 
-In this blog, we are going to discuss some use cases with corresponding templates, to quickstart the use of this connector. We are going to discuss the following templates:
+[Send notifications](send-notification-when-dataflow-refresh-completes.md):
+* When a dataflow refresh status changes, send an email notification.
+* When a dataflow succeeds or fails, send an email notification.
+* When a dataflows refresh status changes, send a Teams notification.
 
-[Notifications](trigger-dataflows-and-power-bi-dataset-sequentially.md):
-* Send an email notification when a dataflows refresh status changes.
-* Send email notification on success or failure of a dataflow.
-* When a dataflows refresh status changes, sends a Teams notification.
+[Open support tickets](open-support-ticket-when-dataflow-refresh-completes.md):
+* When a dataflows refresh fails, send a message to Azure Service Bus queue to open a support ticket. 
 
-[Support tickets](open-support-ticket-when-dataflow-refresh-completes.md):
-* When a dataflows refresh fails, send a message to service bus queue to open a support ticket
+[Refresh dataflows and datasets sequentially](trigger-dataflows-and-power-bi-dataset-sequentially.md):
+* When you click on a button, initiate a dataflows refresh.
+* When an analytical dataflow refresh succeeds, initiate a standard dataflow refresh.
+* When a dataflow refresh succeeds, initiate a Power BI dataset refresh.
+* When a file in SharePoint is updated, initiate a dataflow refresh.
 
-[Refresh Dataflows/Datasets sequentially](trigger-dataflows-and-power-bi-dataset-sequentially.md):
-* When you click on button, initiate a dataflows refresh.
-* When an analytical dataflows refresh succeeds, initiate a standard dataflows refresh.
-* When a dataflows refresh succeeds, initiate a Power BI dataset refresh.
-* When a file in SharePoint gets updated, initiate a dataflows refresh.
-
-Save dataflows refresh meta-data:
-* [When a dataflows refresh completes, save meta-data to Dataverse Table](load-dataflow-metadata-into-dataverse-table.md)
-* [When a dataflows refresh completes, save meta-data to Excel online](load-dataflow-metadata-into-excel-online.md)
-* [When a dataflows refresh completes, save meta-data to Power BI Streaming dataset](load-dataflow-metadata-into-power-bi-dataset.md)
+Save dataflow refresh metadata:
+* [When a dataflow refresh completes, save metadata to a Dataverse table](load-dataflow-metadata-into-dataverse-table.md)
+* [When a dataflow refresh completes, save metadata to Excel online](load-dataflow-metadata-into-excel-online.md)
+* [When a dataflow refresh completes, save metadata to a Power BI streaming dataset](load-dataflow-metadata-into-power-bi-dataset.md)
 
 Tutorial: Create a Dataflow Monitoring Dashboard
 
