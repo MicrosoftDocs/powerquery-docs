@@ -6,7 +6,7 @@ author: mideboer
 ms.service: powerquery
 ms.reviewer: kvivek
 ms.topic: conceptual
-ms.date: 15/2/2020
+ms.date: 2/15/2020
 ms.author: mideboer
 ---
 # Send notification when dataflow refresh complete
