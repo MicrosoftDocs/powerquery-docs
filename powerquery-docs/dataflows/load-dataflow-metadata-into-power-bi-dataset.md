@@ -85,7 +85,7 @@ If you do not already have one, create a dataflow. This can be done in either [P
 
 ## Create a Power BI Report
 
-* Navigate to [Power BI](https://powerbi.microsoft.com)m
+* Navigate to [Power BI](https://powerbi.microsoft.com).
 * Navigate to the streaming dataset.
 * Create your own report on top of this data.
 
