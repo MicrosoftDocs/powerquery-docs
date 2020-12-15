@@ -19,7 +19,7 @@ In this step-by-step tutorial, we will show you how to set up your own monitorin
 
 You can use this dashboard to monitor your dataflows' refresh duration and failure count. With this dashboard, you can track any issues with your dataflows performance and share the data with others. 
 
-First, we will create a new Dataverse table which stores all the metadata from the dataflow run. For every refresh of a dataflow, we add a record to this table. We can also store metadata for multiple dataflows runs in the same table. After the table is created, we can connect the Power BI file to the Dataverse table.
+First, you will create a new Dataverse table which stores all the metadata from the dataflow run. For every refresh of a dataflow, a record is added to this table. You can also store metadata for multiple dataflows runs in the same table. After the table is created, you will connect the Power BI file to the Dataverse table.
 
 ![dataverse tutorial overview](media/dataverse.PNG)
 
