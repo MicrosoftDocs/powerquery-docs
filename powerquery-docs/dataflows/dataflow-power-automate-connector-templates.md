@@ -12,8 +12,8 @@ ms.author: mideboer
 # Power Automate Templates for the Dataflows Connector
 
 The dataflows Power Automate connector can:
-* trigger a flow when a dataflows refresh completes, or
-* take action to initiate a dataflows refresh.
+* trigger a flow when a dataflow refresh completes, or
+* take action to initiate a dataflow refresh.
 
 In this article, we discuss some use cases with provided templates to help you quickstart the use of this connector:
 
