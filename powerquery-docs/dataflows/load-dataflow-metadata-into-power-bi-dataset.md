@@ -17,26 +17,26 @@ In this step-by-step example we will show you how to set up your own monitoring 
 
 You can use this dashboard to monitor your Dataflows Duration and Failure count. This way you can easily track any issues with your dataflows performance and share with others.
 
-First, we are going to create a new Streaming Dataset in Power BI. This dataset will collect all the metadata from the dataflow run. For every refresh of a dataflow, we add a record to this dataset. We can run multiple dataflows all to the same dataset. When we have built the data, we can build a power BI report on the data.
+First, we are going to create a new Streaming Dataset in Power BI. This dataset will collect all the metadata from the dataflow run. For every refresh of a dataflow, we add a record to this dataset. We can run multiple dataflows all to the same dataset. When we have built the data, we can build a Power BI report on the data.
 
 ![An example of folder structure](media/powerbi.PNG)
 ## Requirements
 
-* [Power BI Pro Licence](https://docs.microsoft.com/power-bi/admin/service-admin-purchasing-power-bi-pro) 
+* [Power BI Pro License](https://docs.microsoft.com/power-bi/admin/service-admin-purchasing-power-bi-pro) 
 
-* [Power Automate Premium Licence](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)
+* [Power Automate Premium License](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)
 
 * A dataflow in [Power BI Dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service) or [Power Platform Dataflows](https://docs.microsoft.com/powerapps/maker/common-data-service/create-and-use-dataflows#:~:text=Create%20a%20dataflow%201%20Sign%20in%20to%20Power,entities%20to%20be%20stored.%20...%20Mais%20itens...%20)
 
 ## Create a new streaming dataset in Power BI
 * Navigate to [Power BI Portal](https://powerbi.microsoft.com)
 * Follow these [Instructions](https://docs.microsoft.com/power-bi/connect-data/service-real-time-streaming#set-up-your-real-time-streaming-dataset-in-power-bi) to create a new streaming dataset in Power BI.
-Note: Make sure you create a streaming dataste based on the API and add the historical data opt in.
+Note: Make sure you create a streaming dataset based on the API and add the historical data opt in.
 
     In the right pane, enter the following values, and then select `Create`.
     * **Dataset Name** *Dataflow Monitoring* 
 
-    * **Value** *Dataflow Nam*, **Data type** *Text* 
+    * **Value** *Dataflow Name*, **Data type** *Text* 
     * **Value** *Dataflow DI*, **Data type** *Text* 
     * **Value** *Refresh Status*, **Data type** *Text* 
     * **Value** *Refresh Type*, **Data type** *Text*
@@ -63,13 +63,13 @@ If you do not already have one, create a Dataflow. This can be done in either [P
     * **Dataflow**: Select your dataflow by name
 
      The **Add Rows (Streaming Dataset)** action is expanded because you need to enter you Power BI *Workspace* and *Dataset*. You need to enter the following information:
-   * **Workspace ID**: The Power Bi workspace you created your Streaming Dataset in step 1.
+   * **Workspace ID**: The Power BI workspace you created your Streaming Dataset in step 1.
     * **Dataset**: Select the Streaming dataset *Dataflows Monitoring* you created in step 1
     * **Table**: The Streaming dataset we created *RealTimeData*
 
 * Add dynamic values to the required fields
 
-    For every required field, we are going to add a dynamic value. This value is the ouput of the meta-data of the dataflow run. 
+    For every required field, we are going to add a dynamic value. This value is the output of the meta-data of the dataflow run. 
     * click on the field next to **Dataflow ID** and then click on the *lightning* button.
     * Add the Dataflow ID as the dynamic content
 ![An example of folder structure](media/dynamicstreaming.png)
