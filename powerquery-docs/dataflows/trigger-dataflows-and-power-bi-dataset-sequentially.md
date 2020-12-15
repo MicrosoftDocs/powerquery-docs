@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.date: 12/15/2020
 ms.author: mideboer
 ---
-# Trigger Dataflows and Power BI Dataset sequentially
+# Trigger Dataflows and Power BI Datasets Sequentially
 
 ## Introduction
 There are two common scenarios for how you can use this connector to trigger multiple dataflows and Power BI datasets sequentially.
@@ -22,7 +22,7 @@ If a dataflow performs all actions, then it is hard to reuse its entities in oth
 
 If you want to ensure that your dashboard is up to date after a dataflow refreshes your data, you can use the connector to trigger the refresh of a Power BI dataset after your dataflow refreshes successfully.
 
-## Triggering Dataflows Sequentially
+## Trigger Dataflows Sequentially
 
 This tutorial covers the first scenario above.
 
