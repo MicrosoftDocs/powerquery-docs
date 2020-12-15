@@ -46,7 +46,7 @@ First, download the Dataverse [.pbit file](https://download.microsoft.com/downlo
     * **Display name**: "Dataflow Name"
     * **Data type**: Text
     * **Required**: Checked
-    
+
 * Repeat adding column for the following values
     * **Display name**: "Refresh Status", **Data type**: Text, **Required**: Checked.
     * **Display name**: "Refresh Type", **Data type**: Text, **Required**: Checked.
