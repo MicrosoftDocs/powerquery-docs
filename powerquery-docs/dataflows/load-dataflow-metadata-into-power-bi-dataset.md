@@ -12,6 +12,8 @@ ms.author: mideboer
 
 # Load Data into a Power BI Streaming Dataset and Build a Dataflows Monitoring Report with Power BI
 
+## Introduction
+
 In this step-by-step tutorial, we will show you how to set up your own monitoring dashboard for all of your dataflows:
 
 ![example of monitoring dashboard](media/dashboard.PNG)
