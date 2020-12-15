@@ -9,6 +9,7 @@ ms.topic: conceptual
 ms.date: 15/2/2020
 ms.author: mideboer
 ---
+# Load Data into Dataverse table and build a dataflows monitoring report with Power BI
 
 In this step-by-step example we will show you how to set up your own monitoring dashboard for all your dataflows:
 

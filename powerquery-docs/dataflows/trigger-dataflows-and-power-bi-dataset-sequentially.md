@@ -9,6 +9,7 @@ ms.topic: conceptual
 ms.date: 15/2/2020
 ms.author: mideboer
 ---
+# Trigger Dataflows and Power BI Dataset sequentially
 
 ### Use Cases
 There are two very common use cases for how you can use this connector to trigger multiple dataflows and Power BI dataset sequentially.

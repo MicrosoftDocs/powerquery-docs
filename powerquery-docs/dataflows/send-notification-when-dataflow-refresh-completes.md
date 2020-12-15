@@ -9,6 +9,7 @@ ms.topic: conceptual
 ms.date: 15/2/2020
 ms.author: mideboer
 ---
+# Send notification when dataflow refresh complete
 
 ### Use Case
 When your dataflow refresh completes, you, or other people who manage or depend on the dataflow, want to get an email, teams, or other type of notification to alert you that the dataflow refresh completed and/or of its status. This way, you know your data is up to date and you can start getting new insights. Another common scenario is not get notified when a dataflow refresh failed. This way you can idediately start ivestigating the problem and alert people that depend on the data being refreshed.

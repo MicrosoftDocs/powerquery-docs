@@ -9,6 +9,7 @@ ms.topic: conceptual
 ms.date: 15/2/2020
 ms.author: mideboer
 ---
+# Open a ticket when dataflow refresh failed
 
 ### Use Cases
 When your dataflow refresh completes, or has been taking longer than expected, you might want to open a support ticket/create a message in a que or service bus or add an item to Azure DevOps, so your support team can take a look at the issue.
