@@ -229,7 +229,7 @@
       items:
       - name: Dataflows and Power Automate
         items: 
-        - name: "Power Automate templates for the dataflows connector"
+        - name: "Overview Power Automate Templates"
           href: dataflows/dataflow-power-automate-connector-templates.md
         - name: "Send notification when a dataflow refresh completes"
           href: dataflows/send-notification-when-dataflow-refresh-completes.md
