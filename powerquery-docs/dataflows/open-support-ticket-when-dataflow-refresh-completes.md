@@ -15,7 +15,7 @@ ms.author: mideboer
 
 When your dataflow refresh completes or has been taking longer than expected, you may want your support team to investigate. With this tutorial, you can automatically open a support ticket, create a message in a queue or Service Busm or add an item to Azure DevOps to notify your support team.
 
-## Create a Queue in Azure Service Bus
+## Automatically Create a Queue in Azure Service Bus
 
 In this template, we make use of Azure Service Bus. To set up an Azure Service Bus and create a queue, see these [instructions](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-quickstart-portal#create-a-namespace-in-the-azure-portal).
 
