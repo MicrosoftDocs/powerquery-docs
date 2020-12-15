@@ -22,7 +22,7 @@ If a dataflow performs all actions, then it is hard to reuse its entities in oth
 
 If you want to ensure that your dashboard is up to date after a dataflow refreshes your data, you can use the connector to trigger the refresh of a Power BI dataset after your dataflow refreshes successfully.
 
-## Triggering Dataflows Simultaneously
+## Triggering Dataflows Sequentially
 
 This tutorial covers the first scenario above.
 
@@ -38,7 +38,7 @@ This tutorial covers the first scenario above.
     * **Group**: Select the Power Apps environment or the Power BI workspace your dataflow is in.
     * **Dataflow**: Select your dataflow by name.
 
-After the condition, you can specify what happens after success or failure of the dataflow. In this template, we trigger a new dataflow:
+   After the condition, you can specify what happens after success or failure of the dataflow. In this template, we trigger a new dataflow:
 
    The **Refresh a dataflow** action is expanded because you need to enter information on your dataflow:
     * **Group Type**: Select *Environment* when connecting to Power Apps and *Workspace* when connecting to Power BI.
