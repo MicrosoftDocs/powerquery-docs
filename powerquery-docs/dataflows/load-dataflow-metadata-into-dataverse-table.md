@@ -25,7 +25,7 @@ First, you will create a new Dataverse table which stores all the metadata from 
 
 ## Prerequisites
 
-* Download and install [Power BI Desktop](https://www.microsoft.com/download/details.aspx?id=58494).
+* [Power BI Desktop](https://www.microsoft.com/download/details.aspx?id=58494).
 
 * A [Dataverse environment](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-intro) with permissions to create new custom tables.
 
