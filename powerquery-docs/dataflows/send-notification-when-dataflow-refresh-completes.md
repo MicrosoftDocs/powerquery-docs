@@ -1,41 +1,40 @@
 ---
-title: Send notification when dataflow refresh complete
-description: How to use the Dataflows Connector Templates to send a notification when a dataflow refresh completes
+title: Send a Notification when a Dataflow Refresh Completes
+description: How to use the dataflows connector in Power Automate to send a notification when a dataflow refresh completes
 author: mideboer
 
 ms.service: powerquery
 ms.reviewer: kvivek
 ms.topic: conceptual
-ms.date: 2/15/2020
+ms.date: 12/15/2020
 ms.author: mideboer
 ---
-# Send notification when dataflow refresh complete
 
-### Use Case
-When your dataflow refresh completes, you, or other people who manage or depend on the dataflow, want to get an email, teams, or other type of notification to alert you that the dataflow refresh completed and/or of its status. This way, you know your data is up to date and you can start getting new insights. Another common scenario is not gotten notified when a dataflow refresh failed. This way you can immediately start investigating the problem and alert people that depend on the data being refreshed.
+# Send a Notification when a Dataflow Refresh Completes
 
-### Using the templates
-For sending notifications, we published three templates:
-* Send an email notification when a dataflow refresh status changes
-* Send email notification on success or failure of a dataflow
-* When a dataflow refresh status changes, send a Teams notification
+## Introduction
 
-Let's take a look at the second template:
-* Navigate to [Power Automate Portal](https://flow.microsoft.com)
-* Search for the template **Send email notification on success or failure of a data flow refresh**, by following these [instructions](https://docs.microsoft.com/power-automate/get-started-logic-template)
+When your dataflow refresh completes, you or others who manage or depend on the dataflow may want to receive a notification to alert you of the dataflow refresh status. This way, you know your data is up to date and you can start getting new insights. Another common scenario addressed by this tutorial is notification after a dataflow fails. A notification allows you to start investigating the problem and alert people that depend on the data being successfully refreshed.
 
-![An example of folder structure](media/emailyesyno.PNG)
+## Sending a Notification Using Power Automate
 
-* Customize the flow.
-Actions that require your input will automatically be expanded.
+For sending notifications, you can use three templates:
+* When a dataflow refresh status changes, send an email notification.
+* When a dataflow succeeds or fails, send an email notification.
+* When a dataflows refresh status changes, send a Teams notification.
 
-   The **Dataflow Refresh** trigger is expanded because you need to enter *Dataflow*. You need to enter the following information:
-    * **Group Type**: Choose *Environment* when connection to Power Apps and *Workspace* when connecting to Power BI
-    * **Group**: Select the Power Apps environment or the Power BI workspace your dataflow is in
-    * **Dataflow**: Select your dataflow by name
+This tutorial will use the second template.
+* Navigate to [Power Automate](https://flow.microsoft.com).
+* Search for the template "Send email notification on success or failure of a data flow refresh". If you encounter difficulty, see these [instructions](https://docs.microsoft.com/power-automate/get-started-logic-template).
 
-After the condition, you can specify what happens after success or failure of the dataflow. In this template in both cases, an email will be sent with the status of the dataflow refresh.
+![notification example in Power Automate](media/emailyesyno.PNG)
 
-![An example of folder structure](media/isyes.PNG)
+* Customize the flow. Actions that require your input will automatically be expanded.
+   The **Dataflow Refresh** trigger is expanded because you need to enter information on your dataflow:
+    * **Group Type**: Select *Environment* when connecting to Power Apps and *Workspace* when connecting to Power BI.
+    * **Group**: Select the Power Apps environment or the Power BI workspace your dataflow is in.
+    * **Dataflow**: Select your dataflow by name.
 
-Note: you can modify the email content or flow.
+* After the conditions, you can specify what happens after success or failure of the dataflow. In this template, in both cases an email is sent with the status of the dataflow refresh. You can also modify the flow or message content.
+
+![example of complete notification flow](media/isyes.PNG)
