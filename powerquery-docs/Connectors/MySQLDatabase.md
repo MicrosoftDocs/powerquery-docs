@@ -4,7 +4,7 @@ description: Provides basic information about products that use the connector, s
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 06/15/2020
+ms.date: 12/08/2020
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -12,14 +12,14 @@ LocalizationGroup: reference
 # MySQL database
  
 ## Summary
- 
-Release State: General Availability
 
-Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in PowerBI.com (Enterprise Gateway), Dataflows in PowerApps.com (Enterprise Gateway), Excel
-
-Authentication Types Supported: Windows (Power BI Desktop, Excel, online service with gateway), Database (Power BI Desktop, Excel), Basic (online service with gateway)
-
-Function Reference Documentation: [MySQL.Database](https://docs.microsoft.com/powerquery-m/mysql-database)
+| Item | Description |
+| ---- | ----------- |
+| Release State | General Availability |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Authentication Types Supported | Windows (Power BI Desktop, Excel, online service with gateway)<br/>Database (Power BI Desktop, Excel)<br/>Basic (online service with gateway) |
+| Function Reference Documentation | [MySQL.Database](https://docs.microsoft.com/powerquery-m/mysql-database) |
+| | |
 
 >[!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
@@ -37,40 +37,70 @@ By default, Power BI installs an OLE DB driver for MySQL database. However, for 
     * Relationship columns
     * Navigate using full hierarchy
     
-## Connect to MySQL database
+## Connect to MySQL database from Power Query Desktop
 
 To make the connection, take the following steps:
  
 1. Select the **MySQL database** option in the connector selection.
  
-2. If you're connecting from Power BI desktop or Excel:
+2. In the **MySQL database** dialog, provide the name of the server and database. 
 
-   1. In the **MySQL database** dialog, provide the name of the server and database. 
+   ![Enter MySQL database connection](./media/mysql-database/signin.png)
 
-      ![Enter MySQL database connection](./media/mysql-database/signin.png)
+3. Select the **Database** authentication type and input your MySQL credentials in the **User name** and **Password** boxes.
 
-   2. Optionally, you may provide a command timeout and a [native query (SQL statement)](../native-database-query.md), as well as select whether or not you want to include relationship columns and navigate using full hierarchy.
+   ![MySQL database authentication](./media/mysql-database/enter-credentials.png)
 
-   3. Select the **Database** authentication type and input your MySQL credentials in the **User name** and **Password** boxes.
+4. Select the level to apply your credentials to.
 
-      ![MySQL database authentication](./media/mysql-database/enter-credentials.png)
+5. Once you're done, select **OK**.
 
-   4. Select the level to apply your credentials to.
+   >[!Note]
+   > If the connection is not encrypted, you'll be prompted with the following dialog.
 
-   5. Once you're done, select **OK**.
+   ![MySQL database encryption support](../images/EncryptionWarning.png)
 
-3. If you're connecting using an online service:
+   Select **OK** to connect to the database by using an unencrypted connection, or follow the [instructions](https://docs.microsoft.com/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine) to set up encrypted connections to SQL Server.
 
-   1. In the **MySQL database** dialog, provide the name of the server and database.  
-
-      ![On premises MySQL database connection](./media/mysql-database/service-signin.png)
-
-   2. Select the **Basic** authentication kind and input your MySQL credentials in the **Username** and **Password** boxes.
-
-   3. If required, include the name of your on-premises data gateway.
-
-   2. Select **Next** to connect to the database.
-
-4. In **Navigator**, select the data you require, then either load or transform the data.
+6. In **Navigator**, select the data you require, then either load or transform the data.
 
    ![Load or transform the data](./media/mysql-database/navigator.png)
+
+## Connect to MySQL database from Power Query Online
+
+To make the connection, take the following steps:
+
+1. Select the **MySQL database** option in the connector selection.
+ 
+2. In the **MySQL database** dialog, provide the name of the server and database.  
+
+   ![On premises MySQL database connection](./media/mysql-database/service-signin.png)
+
+3. If necessary, include the name of your on-premises data gateway.
+
+4. Select the **Basic** authentication kind and input your MySQL credentials in the **Username** and **Password** boxes.
+
+5. If your connection isn't encrypted, clear **Use Encrypted Connection**.
+
+5. Select **Next** to connect to the database.
+
+6. In **Navigator**, select the data you require, then select **Transform data** to transform the data in Power Query Editor.
+
+## Connect using advanced options
+
+Power Query Desktop provides a set of advanced options that you can add to your query if needed.
+
+![Advanced options included in the MySQL connection dialog box](./media/mysql-database/advanced-options.png)
+
+
+The following table lists all of the advanced options you can set in Power Query Desktop.
+
+| Advanced option	| Description |
+| --------------- | ----------- |
+| Command timeout in minutes | If your connection lasts longer than 10 minutes (the default timeout), you can enter another value in minutes to keep the connection open longer. This option is only available in Power Query Desktop. |
+| SQL statement | For information, go to [Import data from a database using native database query](../native-database-query.md). |
+| Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, you won’t see those columns. |
+| Navigate using full hierarchy | If checked, the navigator displays the complete hierarchy of tables in the database you're connecting to. If cleared, the navigator displays only the tables whose columns and rows contain data. |
+| | |
+
+Once you've selected the advanced options you require, select **OK** in Power Query Desktop to connect to your MySQL database.
