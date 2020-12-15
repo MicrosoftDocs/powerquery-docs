@@ -93,12 +93,6 @@ If you do not already have one, create a dataflow. This can be done in either [P
 
     * Repeat this process for all required fields.
 
-    ![example of required fields in Excel](media/excelcomplete.PNG)  
-
-    For every required field, we are going to add a dynamic value. This value is the output of the meta-data of the dataflow run. 
-    * click on the field  next to **Dataflow_name** and then click on the *lightning* button.
-![An example of folder structure](media/dynamicexcel.png)
-
   * Save the flow.
 
 
