@@ -5,7 +5,7 @@ author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
 ms.date: 12/2/2020
-ms.author: v-douklo
+ms.author: bezhan
 LocalizationGroup: reference
 ---
 
@@ -27,7 +27,6 @@ LocalizationGroup: reference
 ## Prerequisites
 
 By default, Power BI installs an OLE DB driver for Azure Synapse Analytics (SQL DW). However, for optimal performance, we recommend that the customer installs the [SQL Server Native Client](https://docs.microsoft.com/sql/relational-databases/native-client/applications/installing-sql-server-native-client) before using the Azure Synapse Analytics (SQL DW) connector. SQL Server Native Client 11.0 and SQL Server Native Client 10.0 are both supported in the latest version.
-
  
 ## Capabilities Supported
 * Import

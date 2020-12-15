@@ -441,6 +441,8 @@
           href: HandlingConnectorSigning.md
       - name: Certification
         href: ConnectorCertification.md
+      - name: "Custom connector documentation"
+        href: providing-user-documentation.md
     - name: Resources
       items:
       - name: "Power BI documentation"

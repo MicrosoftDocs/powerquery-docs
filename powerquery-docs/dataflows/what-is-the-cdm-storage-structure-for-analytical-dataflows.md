@@ -5,7 +5,7 @@ author: radacad
 ms.service: powerquery
 ms.topic: conceptual
 ms.date: 12/3/2020
-ms.author: v-douklo
+ms.author: bezhan
 ---
 
 # What is the storage structure for analytical dataflows? 

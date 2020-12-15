@@ -3,7 +3,7 @@ title: Working with duplicate values
 description: Working with duplicate values in Power Query. An article about how to remove and keep duplicates from one or multiple columns.
 author: ptyx507
 ms.service: powerquery
-ms.reviewer: v-douklo
+ms.reviewer: kvivek
 ms.date: 06/08/2020
 ms.author: v-miesco
 ms.custom: edited
