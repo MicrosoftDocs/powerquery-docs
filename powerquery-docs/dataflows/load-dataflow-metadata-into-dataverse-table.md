@@ -1,9 +1,20 @@
-# Load Data into Dataverse Table and build a dataflow monitoring report with Power BI
+---
+title: Load Data into Dataverse table and build a dataflows monitoring report with Power BI
+description: How to use the dataflows connector templates in Power Automate to created a dataflows monitoring report in Power BI
+author: mideboer
+
+ms.service: powerquery
+ms.reviewer: kvivek
+ms.topic: conceptual
+ms.date: 15/2/2020
+ms.author: mideboer
+---
+
 In this step-by-step example we will show you how to set up your own monitoring dashboard for all your dataflows:
 
 ![An example of folder structure](media/dashboard.PNG)
 
-You can use this dashboard to monitor your dataflow's refresh duration and failure count. This way you can easily track any issues with your dataflows performance and share with others.
+You can use this dashboard to monitor your dataflow's refresh duration and failure count. This way you can easily track any issues with your dataflows performance and share with others. 
 
 First, we are going to create a new Dataverse table. This table will store all the metadata from the dataflow run. For every refresh of a dataflow, we add a record to this table. We can store metadata for multiple dataflows runs in the same table. When we built the table, we can connect the .pbit file to the Dataverse table.
 

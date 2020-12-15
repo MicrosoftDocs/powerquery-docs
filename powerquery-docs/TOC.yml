@@ -225,6 +225,24 @@
         href: new-dataflow-from-template.md
       - name: Optimize Power Query when expanding table columns
         href: optimize-expanding-table-columns.md
+    - name: How-to guides
+      items:
+      - name: Dataflows and Power Automate
+        items: 
+        - name: "Power Automate templates for dataflows connector"
+          href: dataflows/dataflow-power-automate-connector-templates.md
+        - name: "Send notification when dataflow refresh completes"
+          href: dataflows/send-notification-when-dataflow-refresh-completes.md
+        - name: "Open ticket when dataflow refresh failed"
+          href: dataflows/send-notification-when-dataflow-refresh-completes.md
+        - name: "Trigger Dataflows and Power BI Dataset sequentially"
+          href: dataflows/trigger-dataflows-and-power-bi-dataset-sequentially.md
+        - name: "Dataverse to build a dataflows monitoring report"
+          href: dataflows/load-dataflow-metadata-into-dataverse-table.md
+        - name: "Excel to build a dataflows monitoring report"
+          href: dataflows/load-dataflow-metadata-into-excel-online.md
+        - name: "Power BI dataset to build a dataflows monitoring report"
+          href: dataflows/load-dataflow-metadata-into-power-bi-dataset.md
     - name: "Connector reference"
       items:
       - name: "Power Query connectors"

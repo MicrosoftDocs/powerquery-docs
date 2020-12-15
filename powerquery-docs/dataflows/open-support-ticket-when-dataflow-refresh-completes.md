@@ -1,7 +1,17 @@
-## Open a support ticket when dataflow refresh completes
+---
+title: Open a ticket when dataflow refresh failed
+description: How to use the dataflows connector templates in Power Automate to created a ticket when a dataflow refresh fails
+author: mideboer
+
+ms.service: powerquery
+ms.reviewer: kvivek
+ms.topic: conceptual
+ms.date: 15/2/2020
+ms.author: mideboer
+---
 
 ### Use Cases
-When your dataflow refresh completes, or has been taking longer than expected, you might want to open a support ticket/create a message in a que or service bus, so your support team can take a look at the issue.
+When your dataflow refresh completes, or has been taking longer than expected, you might want to open a support ticket/create a message in a que or service bus or add an item to Azure DevOps, so your support team can take a look at the issue.
 
 ### Using the Templates
 

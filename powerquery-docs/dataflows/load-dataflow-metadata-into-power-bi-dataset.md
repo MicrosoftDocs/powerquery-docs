@@ -1,4 +1,15 @@
-# Load Data into Power BI Streaming Dataset and build Power BI report 
+---
+title: Load Data into Power BI streaming dataset and build a dataflows monitoring report with Power BI
+description: How to use the dataflows connector templates in Power Automate to created a dataflows monitoring report in Power BI
+author: mideboer
+
+ms.service: powerquery
+ms.reviewer: kvivek
+ms.topic: conceptual
+ms.date: 15/2/2020
+ms.author: mideboer
+---
+
 In this step-by-step example we will show you how to set up your own monitoring dashboard for Power BI and/or Power Platform dataflows:
 
 ![An example of folder structure](media/dashboard.PNG)

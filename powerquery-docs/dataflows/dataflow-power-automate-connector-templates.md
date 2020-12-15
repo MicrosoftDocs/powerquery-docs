@@ -1,5 +1,18 @@
-Dataflows Power Automate Connector 
-In this **[POST]** you can read about the new connector to:
+---
+title: Power Automate Templates for Dataflows Connector
+description: How to use the dataflows connector templates in Power Automate
+author: mideboer
+
+ms.service: powerquery
+ms.reviewer: kvivek
+ms.topic: conceptual
+ms.date: 15/2/2020
+ms.author: mideboer
+---
+
+# Power Automate Templates for Dataflows Connector
+
+The Dataflow Power Automate Connector can:
 * Trigger a flow when a dataflow refresh completes
 * Take action to initiate a dataflow refresh
 
