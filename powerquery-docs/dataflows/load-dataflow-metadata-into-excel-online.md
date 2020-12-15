@@ -17,18 +17,18 @@ In this step-by-step example we will show you how to set up your own monitoring 
 
 You can use this dashboard to monitor your Dataflows Duration and Failure count. This way you can easily track any issues with your dataflows performance and share with others.
 
-First, we are going to download the `.xlsx` file from this reposotory and save it on our OneDrive for Business or SharePoint. Next, we are going to create a Power Automate connector that will load meta-data from Dataflows into the excel file on the Onedrive or Sharepoint. After that, we are going to connect the Power BI file to the Excel file, so we can visualize the meta-data and start monitoring our dataflows.
+First, we are going to download the `.xlsx` file from this repository and save it on our OneDrive for Business or SharePoint. Next, we are going to create a Power Automate connector that will load meta-data from Dataflows into the excel file on the OneDrive or Sharepoint. After that, we are going to connect the Power BI file to the Excel file, so we can visualize the meta-data and start monitoring our dataflows.
 
 ![An example of folder structure](media/excel.PNG)
 ## Requirements
 
 * Download and Install [Power BI Desktop](https://www.microsoft.com/download/details.aspx?id=58494)
 
-* Dowload and Install [Microsoft Excel](https://www.microsoft.com/en/microsoft-365/excel)
+* Download and Install [Microsoft Excel](https://www.microsoft.com/en/microsoft-365/excel)
 
 * [OneDrive for Business](https://www.microsoft.com/en/microsoft-365/onedrive/onedrive-for-business)
 
-* [Power Automate Premium Licence](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)
+* [Power Automate Premium License](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)
 
 * A dataflow in [Power BI Dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service) or [Power Platform Dataflows](https://docs.microsoft.com/powerapps/maker/common-data-service/create-and-use-dataflows#:~:text=Create%20a%20dataflow%201%20Sign%20in%20to%20Power,entities%20to%20be%20stored.%20...%20Mais%20itens...%20)
 
@@ -58,21 +58,21 @@ If you do not already have one, create a Dataflow. This can be done in either [P
     * **Dataflow**: Select your dataflow by name
 
      The **Add a row into a table** action is expanded because you need to enter you *Location* of the excel file and the specific *Table* the data need to load to.
-   * **Location**: The lcoation of the Excel file. Either *OneDrive for Business* or a *SharePoint Site*
-    * **Document Library**: The lirary of the excel file
+   * **Location**: The location of the Excel file. Either *OneDrive for Business* or a *SharePoint Site*
+    * **Document Library**: The library of the excel file
     * **File**: The exact location of the `.xlsx` file
     * **Table**: The name of the Table to load the data into. The table is called *Datflow-monitoring*.
 
 * Add dynamic values to the required fields
 
-    For every required field, we are going to add a dynamic value. This value is the ouput of the meta-data of the dataflow run. 
+    For every required field, we are going to add a dynamic value. This value is the output of the meta-data of the dataflow run. 
     * click on the field  next to **Dataflow_name** and then click on the *lightning* button.
 ![An example of folder structure](media/dynamicexcel.png)
 
     * Add the Dataflow Name as the dynamic content
 ![An example of folder structure](media/dynamicexcel1.png)
 
-    * Repeat this proces for all required fields
+    * Repeat this process for all required fields
 ![An example of folder structure](media/excelcomplete.PNG)  
 
 * `Save` the flow
