@@ -233,7 +233,7 @@
           href: dataflows/dataflow-power-automate-connector-templates.md
         - name: "Send notification when a dataflow refresh completes"
           href: dataflows/send-notification-when-dataflow-refresh-completes.md
-        - name: "Open ticket when a dataflow refresh fails"
+        - name: "Open a ticket when a dataflow refresh fails"
           href: dataflows/send-notification-when-dataflow-refresh-completes.md
         - name: "Trigger dataflows and Power BI datasets sequentially"
           href: dataflows/trigger-dataflows-and-power-bi-dataset-sequentially.md
