@@ -1,38 +1,37 @@
 ---
-title: Open a ticket when dataflow refresh failed
-description: How to use the dataflows connector templates in Power Automate to created a ticket when a dataflow refresh fails
+title: Open a Ticket when a Dataflow Refresh Fails
+description: How to use the dataflows connector in Power Automate to open a ticket when a dataflow refresh fails
 author: mideboer
 
 ms.service: powerquery
 ms.reviewer: kvivek
 ms.topic: conceptual
-ms.date: 15/2/2020
+ms.date: 12/15/2020
 ms.author: mideboer
 ---
-# Open a ticket when dataflow refresh failed
+# Open a Ticket when a Dataflow Refresh Fails
 
-### Use Cases
-When your dataflow refresh completes, or has been taking longer than expected, you might want to open a support ticket/create a message in a que or service bus or add an item to Azure DevOps, so your support team can take a look at the issue.
+## Introduction
 
-### Using the Templates
+When your dataflow refresh completes or has been taking longer than expected, you may want your support team to investigate. With this tutorial, you can automatically open a support ticket, create a message in a queue or Service Busm or add an item to Azure DevOps to notify your support team.
 
-Let's look at the template where we want to add a message to the queue, when a dataflow refresh failed. In this template, we make use of Azure Service Bus. To create an Azure Service bus and create a Queue follow these [instructions](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quickstart-portal#create-a-namespace-in-the-azure-portal).
+## Create a Queue in Azure Service Bus
 
-* Navigate to [Power Automate Portal](https://flow.microsoft.com)
-* Search for the template **when a dataflow refresh failes, add a new message to the queue**, by following these [instructions](https://docs.microsoft.com/en-us/power-automate/get-started-logic-template)
+In this template, we make use of Azure Service Bus. To set up an Azure Service Bus and create a queue, see these [instructions](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-quickstart-portal#create-a-namespace-in-the-azure-portal).
 
-![An example of folder structure](media/servicebuscondition.PNG)
+* Navigate to [Power Automate](https://flow.microsoft.com).
 
-* Customize the flow
-    Actions that require input from you will automatically be expanded.
+* Search for the template "When a dataflow refresh fails, add a new message to the queue". If you encounter difficulty, see these [instructions](https://docs.microsoft.com/power-automate/get-started-logic-template).
 
-   The **Dataflow Refresh** trigger is expanded because you need to enter *Dataflow*. You need to enter the following information:
-    * **Group Type**: Choose *Environment* when connecting to Power Apps and *Workspace* when connecting to Power BI
-    * **Group**: Select the Power Apps environment or the Power BI workspace you dataflow is in
-    * **Dataflow**: Select your dataflow by name
+![example of service bus](media/servicebuscondition.PNG)
 
-After the condition, you can specify what happens after succes or failure of the dataflow. In this template in both cases, we send you an email with the status of the dataflow refresh.
+* Customize the flow. Actions that require input from you will automatically be expanded.
 
-![An example of folder structure](media/ifyesservice.PNG)
+   The **Dataflow Refresh** trigger is expanded because you need to enter information on your dataflow:
+    * **Group Type**: Select *Environment* when connecting to Power Apps and *Workspace* when connecting to Power BI.
+    * **Group**: Select the Power Apps environment or the Power BI workspace your dataflow is in.
+    * **Dataflow**: Select your dataflow by name.
 
-Note: you can modify the message content or flow.
+* After the conditions, you can specify what happens after success or failure of the dataflow. In this template, in both cases an email is sent with the status of the dataflow refresh. You can also modify the flow or message content. 
+
+![example of complete flow in service bus](media/ifyesservice.PNG)
