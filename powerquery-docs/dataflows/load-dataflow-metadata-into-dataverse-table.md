@@ -43,15 +43,15 @@ First, download the Dataverse [.pbit file](https://download.microsoft.com/downlo
 * Follow these [instructions](https://docs.microsoft.com/powerapps/maker/common-data-service/create-custom-entity) to create a new table.
 
 * In the right pane, enter the following values, and then select `Create`
-    * **Display name** *Dataflow Name*
-    * **Data type** *text*
-    *  *Required*
+    * **Display name**: "Dataflow Name"
+    * **Data type**: Text
+    * **Required**: Checked
 
 * Repeat adding column for the following values
-    * **Display name**: *Refresh Status*, **Data type**: *Text*, **Required**: *Required*
-    * **Display name**: *Refresh Type*, **Data type**: *Text*, **Required**: *Required*
-    * **Display name**: *Start Time*, **Data type**: *Date and Time*, **Required**: *Required*
-    * **Display name**: *End Time*, **Data type**: *Date and Time*, **Required**: *Required*
+    * **Display name**: "Refresh Status", **Data type**: Text, **Required**: Checked.
+    * **Display name**: "Refresh Type", **Data type**: Text, **Required**: Checked.
+    * **Display name**: "Start Time", **Data type**: Date and Time, **Required**: Checked.
+    * **Display name**: "End Time", **Data type**: Date and Time, **Required**: Checked.
 
 
 ## Create a dataflow
@@ -81,7 +81,6 @@ If you do not already have one, create a dataflow. This can be done in either [P
     * Select the field next to **Dataflow ID** and then select the lightning button.
     
     ![example of lightning button](media/dynamic.png)
-
 
     * Repeat this process for all required fields.
     
