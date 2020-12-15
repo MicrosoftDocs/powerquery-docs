@@ -4,7 +4,7 @@ description: Provides basic information, prerequisites, and connection instructi
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 07/9/2020
+ms.date: 12/2/2020
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -13,13 +13,13 @@ LocalizationGroup: reference
  
 ## Summary
  
-Release State: General Availability
-
-Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in PowerBI.com (Enterprise Gateway), Dataflows in PowerApps.com (Enterprise Gateway), Excel
-
-Authentication Types Supported: Anonymous, Windows, Basic, Organizational Account
-
-Function Reference Documentation: [Access.Database](https://docs.microsoft.com/powerquery-m/access-database)
+| Item | Description |
+| ---- | ----------- |
+| Release State | General Availability |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Authentication Types Supported | Anonymous<br/>Windows<br/>Basic<br/>Organizational Account |
+| Function Reference Documentation | [Access.Database](https://docs.microsoft.com/powerquery-m/access-database) |
+| | |
 
 >[!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
@@ -28,43 +28,53 @@ Function Reference Documentation: [Access.Database](https://docs.microsoft.com/p
 
 If you're connecting to an Access database from Power Query Online, the system that contains the on-premises data gateway must have the 64-bit version of the [Access Database Engine 2010 OLEDB provider](https://www.microsoft.com/download/details.aspx?id=13255) installed. 
 
-Also, if you are loading an Access database to Power BI Desktop, the versions of the Access Database Engine 2010 OLEDB provider and Power BI Desktop on that machine must match (that is, either 32-bit or 64-bit). For more information, see [Import Access database to Power BI Desktop](#import-access-database-to-power-bi-desktop).
+If you're loading an Access database to Power BI Desktop, the versions of the Access Database Engine 2010 OLEDB provider and Power BI Desktop on that machine must match (that is, either 32-bit or 64-bit). For more information, go to [Import Access database to Power BI Desktop](#import-access-database-to-power-bi-desktop).
  
 ## Capabilities Supported
 * Import
     
-## Connect to a Microsoft Access database
+## Connect to an Access database from Power Query Desktop
 
-To make the connection, take the following steps:
+To make the connection from Power Query desktop:
  
 1. Select the **Access database** option in the connector selection.
  
-2. If you're connecting from Power BI Desktop or Excel, browse for and select the Access database you want to load. Then select **Open**. 
+2. Browse for and select the Access database you want to load. Then select **Open**. 
 
    ![Enter the Access database connection](./media/access-database/select-database.png)
 
    If the Access database is online, use the [Web connector](./web/web.md) to connect to the database.
 
-3. If you're connecting from Power Query Online:
+3. In **Navigator**, select the database information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
 
-   1. In the **Access database** dialog that appears, provide the path to the Access database.
+    ![Select the data you want to import in the Navigator](./media/access-database/navigator-desktop.png)
+
+## Connect to an Access database from Power Query Online
+
+To make the connection from Power Query desktop:
+
+1. Select the **Access database** option in the connector selection.
+
+2. In the **Access database** dialog that appears, provide the path to the Access database.
 
       ![Enter Access database online connection](./media/access-database/online-select-database.png)
 
-   2. Enter the file path or URL address to the Access database.
+3. Enter the file path or URL address to the Access database.
 
-   3. Select the name of your on-premises data gateway.
+4. Select the name of your on-premises data gateway.
 
       >[!Note]
       > You must select an on-premises data gateway for this connector, whether the Access database is on your local network or on a web site.
 
-   4. Select the type of credentials for the connection to the Access database in **Authentication kind**.
+5. Select the type of credentials for the connection to the Access database in **Authentication kind**.
 
-   5. Enter your credentials.
+6. Enter your credentials.
 
-   6. Select **Next** to continue.
+7. Select **Next** to continue.
 
-4. In **Navigator**, select the data you require, then either load or transform the data.
+4. In **Navigator**, select the data you require, and then select **Transform data** to continue transforming the data in Power Query Editor.
+
+    ![Select the data you want in the Navigator](./media/access-database/navigator-online.png)
 
 ## Troubleshooting
 
