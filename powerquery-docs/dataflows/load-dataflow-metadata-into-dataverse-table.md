@@ -82,22 +82,22 @@ If you do not already have one, create a dataflow. This can be done in either [P
     * **Environment**: Select your Dataverse environment.
     * **Entity Name**: Select the entity named "Dataflows Monitoring" which you previously created. 
 
-* Add dynamic values to the required fields
+* Add dynamic values to the required fields.
 
     For every required field, you need to add a dynamic value. This value is the output of the metadata of the dataflow run. 
     * Select the field next to **Dataflow ID** and then select the lightning button.
     
     ![example of lightning button](media/dynamic.png)
 
-    * Select the Dataflow ID as the dynamic content
+    * Select the Dataflow ID as the dynamic content.
     
     ![example to select dataflow id](media/dataflowid.png)
 
-    * Repeat this process for all required fields
+    * Repeat this process for all required fields.
     
     ![example of required fields](media/final.PNG)  
 
-* Save the flow
+* Save the flow.
 
 ## Create a Power BI Report
 
