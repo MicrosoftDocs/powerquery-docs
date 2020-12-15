@@ -31,7 +31,7 @@ In this article, we discuss some use cases with provided templates to help you q
 * When a dataflow refresh succeeds, initiate a Power BI dataset refresh.
 * When a file in SharePoint is updated, initiate a dataflow refresh.
 
-Save dataflow refresh metadata:
+Save dataflow refresh metadata and build a dataflows monitoring dashboard:
 * [When a dataflow refresh completes, save metadata to a Dataverse table](load-dataflow-metadata-into-dataverse-table.md)
 * [When a dataflow refresh completes, save metadata to Excel online](load-dataflow-metadata-into-excel-online.md)
 * [When a dataflow refresh completes, save metadata to a Power BI streaming dataset](load-dataflow-metadata-into-power-bi-dataset.md)
