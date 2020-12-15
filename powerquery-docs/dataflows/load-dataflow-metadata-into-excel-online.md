@@ -16,6 +16,8 @@ In this step-by-step tutorial, we will show you how to set up your own monitorin
 
 ![example of monitoring dashboard](media/dashboard.PNG)
 
+You can use this dashboard to monitor your dataflows' refresh duration and failure count. With this dashboard, you can track any issues with your dataflows performance and share the data with others. 
+
 First, you will download the Excel file and save it in OneDrive for Business or SharePoint. Next, you will create a Power Automate connector which will load metadata from your dataflow into the Excel file in OneDrive for Business or SharePoint. Lastly, you will connect a Power BI file to the Excel file to visualize the metadata and start monitoring the dataflows.
 
 ![overview of loading data through Excel](media/excel.PNG)	
