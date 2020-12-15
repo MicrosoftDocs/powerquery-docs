@@ -24,8 +24,6 @@ First, you will create a new Dataverse table which stores all the metadata from 
 ![dataverse tutorial overview](media/dataverse.PNG)
 
 ## Prerequisites
-
-
 * [Power BI Desktop](https://www.microsoft.com/download/details.aspx?id=58494).
 
 * A [Dataverse environment](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-intro) with permissions to create new custom tables.
@@ -42,13 +40,13 @@ First, download the Dataverse [.pbit file](https://download.microsoft.com/downlo
 
 * Navigate to the [Power Apps portal](https://powerapps.microsoft.com/).
 
-
 * Follow these [instructions](https://docs.microsoft.com/powerapps/maker/common-data-service/create-custom-entity) to create a new table.
 
-    In the right pane, enter the following values, and then select `Create`
+* In the right pane, enter the following values, and then select `Create`
     * **Display name** *Dataflow Name*
     * **Data type** *text*
     *  *Required*
+
 * Repeat adding column for the following values
     * **Display name**: *Refresh Status*, **Data type**: *Text*, **Required**: *Required*
     * **Display name**: *Refresh Type*, **Data type**: *Text*, **Required**: *Required*
@@ -90,7 +88,6 @@ If you do not already have one, create a dataflow. This can be done in either [P
     ![example of required fields](media/final.PNG)  
 
 * Save the flow.
-
 
 ## Create a Power BI Report
 

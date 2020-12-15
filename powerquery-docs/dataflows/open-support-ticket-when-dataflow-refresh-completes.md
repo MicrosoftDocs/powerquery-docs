@@ -1,9 +1,6 @@
 ---
 title: Open a Ticket when a Dataflow Refresh Fails
 description: How to use the dataflows connector in Power Automate to open a ticket when a dataflow refresh fails
-title: Open a ticket when dataflow refresh failed
-description: How to use the dataflows connector templates in Power Automate to create a ticket when a dataflow refresh fails
-author: mideboer
 
 ms.service: powerquery
 ms.reviewer: kvivek
@@ -16,9 +13,6 @@ ms.author: mideboer
 ## Introduction
 
 ### Use Cases
-When your dataflow refresh completes, or has been taking longer than expected, you might want to open a support ticket/create a message in a queue or service bus or add an item to Azure DevOps, so your support team can take a look at the issue.
-
-
 When your dataflow refresh completes or has been taking longer than expected, you may want your support team to investigate. With this tutorial, you can automatically open a support ticket, create a message in a queue or Service Busm or add an item to Azure DevOps to notify your support team.
 
 ## Automatically Create a Queue in Azure Service Bus
@@ -26,9 +20,6 @@ When your dataflow refresh completes or has been taking longer than expected, yo
 In this template, we make use of Azure Service Bus. To set up an Azure Service Bus and create a queue, see these [instructions](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-quickstart-portal#create-a-namespace-in-the-azure-portal).
 
 * Navigate to [Power Automate Portal](https://flow.microsoft.com)
-* Search for the template **when a dataflow refresh fails, add a new message to the queue**, by following these [instructions](https://docs.microsoft.com/en-us/power-automate/get-started-logic-template)
-
-* Navigate to [Power Automate](https://flow.microsoft.com).
 
 * Search for the template "When a dataflow refresh fails, add a new message to the queue". If you encounter difficulty, see these [instructions](https://docs.microsoft.com/power-automate/get-started-logic-template).
 
@@ -36,20 +27,10 @@ In this template, we make use of Azure Service Bus. To set up an Azure Service B
 
 * Customize the flow. Actions that require input from you will automatically be expanded.
 
-* Customize the flow.
-Actions that require input from you will automatically be expanded.
-
    The **Dataflow Refresh** trigger is expanded because you need to enter *Dataflow*. You need to enter the following information:
     * **Group Type**: Choose *Environment* when connecting to Power Apps and *Workspace* when connecting to Power BI
     * **Group**: Select the Power Apps environment or the Power BI workspace your dataflow is in
     * **Dataflow**: Select your dataflow by name
-
-After the condition, you can specify what happens after success or failure of the dataflow. In this template in both cases, we send you an email with the status of the dataflow refresh.
-
-   The **Dataflow Refresh** trigger is expanded because you need to enter information on your dataflow:
-    * **Group Type**: Select *Environment* when connecting to Power Apps and *Workspace* when connecting to Power BI.
-    * **Group**: Select the Power Apps environment or the Power BI workspace your dataflow is in.
-    * **Dataflow**: Select your dataflow by name.
 
 * After the conditions, you can specify what happens after success or failure of the dataflow. In this template, in both cases an email is sent with the status of the dataflow refresh. You can also modify the flow or message content. 
 
