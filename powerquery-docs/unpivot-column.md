@@ -3,7 +3,7 @@ title: Unpivot columns
 description: With the unpivot columns feature in Power Query, you can transform selected columns into attribute-value pairs where columns become rows.
 author: ptyx507
 ms.service: powerquery
-ms.reviewer: v-douklo
+ms.reviewer: kvivek
 ms.date: 06/01/2019
 ms.author: v-miesco
 ms.custom: edited

@@ -4,10 +4,10 @@ description: Best practices for reusing dataflows across environments and worksp
 author: radacad
 
 ms.service: powerquery
-ms.reviewer: v-douklo
+ms.reviewer: kvivek
 ms.topic: conceptual
 ms.date: 12/2/2020
-ms.author: v-douklo
+ms.author: bezhan
 ---
 
 # Best practices for reusing dataflows across environments and workspaces

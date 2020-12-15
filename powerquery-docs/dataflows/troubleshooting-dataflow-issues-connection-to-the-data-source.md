@@ -4,10 +4,10 @@ description: Troubleshooting dataflow issues - connection to the data source
 author: radacad
 
 ms.service: powerquery
-ms.reviewer: v-douklo
+ms.reviewer: kvivek
 ms.topic: conceptual
 ms.date: 12/3/2020
-ms.author: v-douklo
+ms.author: bezhan
 ---
 
 # Troubleshooting dataflow issues: Connection to the data source

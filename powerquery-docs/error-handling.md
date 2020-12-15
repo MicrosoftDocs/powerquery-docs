@@ -3,7 +3,7 @@ title: Error handling
 description: An article on how to catch and handle errors in Power Query using the syntax try and otherwise.
 author: ptyx507
 ms.service: powerquery
-ms.reviewer: v-douklo
+ms.reviewer: kvivek
 ms.date: 06/08/2020
 ms.author: v-miesco
 ---

@@ -4,10 +4,10 @@ description: Using the output of Power Platform dataflows from other Azure data 
 author: radacad
 
 ms.service: powerquery
-ms.reviewer: v-douklo
+ms.reviewer: kvivek
 ms.topic: conceptual
 ms.date: 12/3/2020
-ms.author: v-douklo
+ms.author: bezhan
 ---
 
 # Using the output of Power Platform dataflows from other Azure data workloads

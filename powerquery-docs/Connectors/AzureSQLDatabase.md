@@ -4,8 +4,8 @@ description: Includes basic information and prerequisites, instructions on how t
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 11/2/2020
-ms.author: v-douklo
+ms.date: 12/2/2020
+ms.author: bezhan
 LocalizationGroup: reference
 ---
 
@@ -16,7 +16,7 @@ LocalizationGroup: reference
 | Item | Description |
 | ------- | ------------|
 |Release state | General Availability |
-| Products supported | Power BI Desktop<br/>Power BI Service (Enterprise Gateway)<br/>Dataflows in PowerBI.com (Enterprise Gateway)<br/>Dataflows in PowerApps.com (Enterprise Gateway)<br/>Excel |
+| Products supported | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication types supported| Windows (Power BI Desktop, Excel, Power Query Online with gateway)<br/>Database (Power BI Desktop, Excel)<br/>Microsoft Account (all)<br/> Basic (Power Query Online) |
 | Function reference docs | [Sql.Database](https://docs.microsoft.com/powerquery-m/sql-database)<br/>[Sql.Databases](https://docs.microsoft.com/powerquery-m/sql-databases) |
 | | |
@@ -59,6 +59,8 @@ To connect to an Azure SQL database from Power Query Desktop, take the following
 
    ![Azure SQL database authentication](./media/azure-sql-database/enter-credentials.png)
 
+   For more information about authentication methods, go to [Authentication with a data source](../connectorauthentication.md).
+
    >[!Note]
    >  If the connection is not encrypted, you'll be prompted with the following message.
 
@@ -80,7 +82,7 @@ To connect to an Azure SQL database from Power Query Online, take the following 
 
    ![Enter the Azure SQL database online connection](./media/azure-sql-database/service-signin.png)
 
-   You can also select and enter advanced options that will modify the connection query, such as a command timeout or a native query (SQL statement). For information: [Connect using advanced options](#connect-using-advanced-options)
+   You can also select and enter advanced options that will modify the connection query, such as a command timeout or a native query (SQL statement). More information: [Connect using advanced options](#connect-using-advanced-options)
 
 3. If this is the first time you're connecting to this database, select the authentication kind and input your credentials.
 
@@ -107,8 +109,8 @@ The following table lists all of the advanced options you can set in Power Query
 | Command timeout in minutes | If your connection lasts longer than 10 minutes (the default timeout), you can enter another value in minutes to keep the connection open longer. This option is only available in Power Query Desktop. |
 | SQL statement | For information, go to [Import data from a database using native database query](../native-database-query.md). |
 | Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, you won’t see those columns. |
-| Navigate using full hierarchy | If checked, the Navigator displays the complete hierarchy of tables in the database you're connecting to. If cleared, Navigator displays only the tables whose columns and rows contain data. |
-| Enable SQL Server Failover support | If checked, when a node in the Azure SQL [failover group](https://docs.microsoft.com/azure/azure-sql/database/auto-failover-group-overview?tabs=azure-powershell) isn't available, Power Query moves from that node to another when failover occurs. If cleared, no failover will occur. |
+| Navigate using full hierarchy | If checked, the navigator displays the complete hierarchy of tables in the database you're connecting to. If cleared, the navigator displays only the tables whose columns and rows contain data. |
+| Enable SQL Server Failover support | If checked, when a node in the Azure SQL [failover group](https://docs.microsoft.com/azure/azure-sql/database/auto-failover-group-overview?tabs=azure-powershell) isn't available, Power Query moves from that node to another when failover occurs. If cleared, no failover occurs. |
 | | |
 
 Once you've selected the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your Azure SQL database.
