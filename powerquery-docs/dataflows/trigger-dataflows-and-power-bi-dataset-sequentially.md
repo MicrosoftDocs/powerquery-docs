@@ -14,7 +14,7 @@ ms.author: mideboer
 ### Use Cases
 There are two very common use cases for how you can use this connector to trigger multiple dataflows and Power BI dataset sequentially.
 
-1. Trigger the refresh of a Standard Dataflow after the succesful completion of an Analytical Dataflow refresh.
+1. Trigger the refresh of a Standard Dataflow after the successful completion of an Analytical Dataflow refresh.
 
 If a dataflow performs all actions, then it is hard to reuse its entities in other dataflows or for other purposes. The best dataflows to reuse are those dataflows doing only a few actions. Creating dataflows that specialize in one specific task is one of the best ways of reusing them. If you have a set of dataflows as staging dataflows, their only action is to extract data "as is" from the source system. These dataflows can be reused in multiple other dataflows. For more information, take a look at the [best practices for reusing dataflows](https://docs.microsoft.com/power-query/dataflows/best-practices-reusing-dataflows)
 
