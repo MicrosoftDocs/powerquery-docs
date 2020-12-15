@@ -229,19 +229,19 @@
       items:
       - name: Dataflows and Power Automate
         items: 
-        - name: "Power Automate templates for dataflows connector"
+        - name: "Power Automate templates for the dataflows connector"
           href: dataflows/dataflow-power-automate-connector-templates.md
-        - name: "Send notification when dataflow refresh completes"
+        - name: "Send notification when a dataflow refresh completes"
           href: dataflows/send-notification-when-dataflow-refresh-completes.md
-        - name: "Open ticket when dataflow refresh failed"
-          href: dataflows/send-notification-when-dataflow-refresh-completes.md
-        - name: "Trigger Dataflows and Power BI Dataset sequentially"
+        - name: "Open a ticket when a dataflow refresh fails"
+          href: dataflows/open-support-ticket-when-dataflow-refresh-completes.md
+        - name: "Trigger dataflows and Power BI datasets sequentially"
           href: dataflows/trigger-dataflows-and-power-bi-dataset-sequentially.md
-        - name: "Dataverse to build a dataflows monitoring report"
+        - name: "Use Dataverse to build a dataflows monitoring report"
           href: dataflows/load-dataflow-metadata-into-dataverse-table.md
-        - name: "Excel to build a dataflows monitoring report"
+        - name: "Use Excel to build a dataflows monitoring report"
           href: dataflows/load-dataflow-metadata-into-excel-online.md
-        - name: "Power BI dataset to build a dataflows monitoring report"
+        - name: "Use a Power BI dataset to build a dataflows monitoring report"
           href: dataflows/load-dataflow-metadata-into-power-bi-dataset.md
     - name: "Connector reference"
       items:
