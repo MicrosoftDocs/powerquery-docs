@@ -54,7 +54,7 @@ First, download the Dataverse [.pbit file](https://download.microsoft.com/downlo
     * **Display name**: *End Time*, **Data type**: *Date and Time*, **Required**: *Required*
 
 
-# Create a dataflow
+## Create a dataflow
 
 If you do not already have one, create a dataflow. This can be done in either [Power BI dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service) or [Power Apps dataflows](https://docs.microsoft.com/powerapps/maker/common-data-service/create-and-use-dataflows).
 
