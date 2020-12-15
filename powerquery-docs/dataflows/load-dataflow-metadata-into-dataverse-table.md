@@ -25,6 +25,7 @@ First, you will create a new Dataverse table which stores all the metadata from 
 
 ## Prerequisites
 
+
 * [Power BI Desktop](https://www.microsoft.com/download/details.aspx?id=58494).
 
 * A [Dataverse environment](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-intro) with permissions to create new custom tables.
@@ -41,33 +42,27 @@ First, download the Dataverse [.pbit file](https://download.microsoft.com/downlo
 
 * Navigate to the [Power Apps portal](https://powerapps.microsoft.com/).
 
+
 * Follow these [instructions](https://docs.microsoft.com/powerapps/maker/common-data-service/create-custom-entity) to create a new table.
 
-    When prompted by the right pane, enter the following values:
-    * **Display name**:  "Dataflows Monitoring"
-    * **Column name**:   "Dataflow ID"
-    
-* Follow the same instructions to add custom columns to the new table.
+    In the right pane, enter the following values, and then select `Create`
+    * **Display name** *Dataflow Name*
+    * **Data type** *text*
+    *  *Required*
+* Repeat adding column for the following values
+    * **Display name**: *Refresh Status*, **Data type**: *Text*, **Required**: *Required*
+    * **Display name**: *Refresh Type*, **Data type**: *Text*, **Required**: *Required*
+    * **Display name**: *Start Time*, **Data type**: *Date and Time*, **Required**: *Required*
+    * **Display name**: *End Time*, **Data type**: *Date and Time*, **Required**: *Required*
 
-    When prompted by the right pane, enter the following values:
-    * **Display name**: "Dataflow Name"
-    * **Data type**: Text
-    * **Required**: Checked
-    
-* Repeat adding columns for the following values
-    * **Display name**: "Refresh Status", **Data type**: Text, **Required**: Checked
-    * **Display name**: "Refresh Type", **Data type**: Text, **Required**: Checked
-    * **Display name**: "Start Time", **Data type**: Date and Time, **Required**: Checked
-    * **Display name**: "End Time", **Data type**: Date and Time, **Required**: Checked
 
-## Create a dataflow
+# Create a dataflow
 
 If you do not already have one, create a dataflow. This can be done in either [Power BI dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service) or [Power Apps dataflows](https://docs.microsoft.com/powerapps/maker/common-data-service/create-and-use-dataflows).
 
 ## Create a Power Automate Flow
-
-* Navigate to [Power Automate](https://flow.microsoft.com).
-* Search for the template "When a dataflow refresh completes, output status into CDS entity". If you encounter difficulty, see these [instructions](https://docs.microsoft.com/power-automate/get-started-logic-template),
+* Navigate to [Power Automate Portal](https://flow.microsoft.com)
+* Search for the template **When a dataflow refresh completes, output status into CDS entity**, by following these [instructions](https://docs.microsoft.com/power-automate/get-started-logic-template)
 
 ![example of template](media/connector.PNG)
 
@@ -89,15 +84,13 @@ If you do not already have one, create a dataflow. This can be done in either [P
     
     ![example of lightning button](media/dynamic.png)
 
-    * Select the Dataflow ID as the dynamic content.
-    
-    ![example to select dataflow id](media/dataflowid.png)
 
     * Repeat this process for all required fields.
     
     ![example of required fields](media/final.PNG)  
 
 * Save the flow.
+
 
 ## Create a Power BI Report
 
