@@ -14,7 +14,7 @@ ms.author: mideboer
 ## Introduction
 
 ### Use Cases
-When your dataflow refresh completes or has been taking longer than expected, you may want your support team to investigate. With this tutorial, you can automatically open a support ticket, create a message in a queue or Service Busm or add an item to Azure DevOps to notify your support team.
+When your dataflow refresh completes or has been taking longer than expected, you may want your support team to investigate. With this tutorial, you can automatically open a support ticket, create a message in a queue or Service Bus or add an item to Azure DevOps to notify your support team.
 
 ## Automatically Create a Queue in Azure Service Bus
 
