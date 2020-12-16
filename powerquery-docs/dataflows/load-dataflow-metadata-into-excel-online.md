@@ -80,7 +80,6 @@ If you do not already have one, create a dataflow. This can be done in either [P
     ![An example of folder structure](media/dynamicexcel1.png)
 
     * Repeat this process for all required fields.
-    ![example to select dataflow id in Excel](media/excelcomplete.png)
 
   * Save the flow.
 
