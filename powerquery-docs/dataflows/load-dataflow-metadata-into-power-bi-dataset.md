@@ -38,14 +38,14 @@ You can use this dashboard to monitor your dataflows' refresh duration and failu
 
 * Follow these [instructions](https://docs.microsoft.com/power-bi/connect-data/service-real-time-streaming#set-up-your-real-time-streaming-dataset-in-power-bi) to create a new streaming dataset in Power BI. Ensure you create a streaming dataset based on the API and add the historical data opt in.
 
-In the right pane, enter the following values, and then select `Create`.
-    * **Dataset Name**: "Dataflow Monitoring".
-    * **Value**: "Dataflow Name", **Data type**: Text.
-    * **Value**: "Dataflow ID", **Data type**: Text.
-    * **Value**: "Refresh Status", **Data type**: Text. 
-    * **Value**: "Refresh Type", **Data type**: Text.
-    * **Value**: "Start Time", **Data type**: Date and Time. 
-    * **Value**: "End Time", **Data type**: Date and Time.
+In the right pane, enter the following values, and then select Create.
+   * **Dataset Name**: "Dataflow Monitoring".
+   * **Value**: "Dataflow Name", **Data type**: Text.
+   * **Value**: "Dataflow ID", **Data type**: Text.
+   * **Value**: "Refresh Status", **Data type**: Text. 
+   * **Value**: "Refresh Type", **Data type**: Text.
+   * **Value**: "Start Time", **Data type**: Date and Time. 
+   * **Value**: "End Time", **Data type**: Date and Time.
 
 ![example of add streaming dataset](media/addstreamingdatset.PNG)
 
@@ -76,8 +76,8 @@ If you do not already have one, create a dataflow. This can be done in either [P
 
      For every required field, you need to add a dynamic value. This value is the output of the metadata of the dataflow run.
     * Select the field next to **Dataflow ID** and then select the lightning button.
-    
-    ![example of lightning button in Excel](media/dynamicexcel.png)
+   
+   ![An example of adding dynamic fields](media/dynamicstreaming.png)
 
     * Repeat this process for all required fields.
 
