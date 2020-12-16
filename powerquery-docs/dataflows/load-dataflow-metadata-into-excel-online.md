@@ -78,7 +78,7 @@ If you do not already have one, create a dataflow. This can be done in either [P
 
     * Select the Dataflow ID as the dynamic content.
 
-	![example to select dataflow id in Excel](media/dataflowid.png)
+	![example to select dataflow id in Excel](media/excelcomplete.png)
 
     * Repeat this process for all required fields.
 
@@ -86,8 +86,6 @@ If you do not already have one, create a dataflow. This can be done in either [P
 
 
 ## Create a Power BI Report
-
-![An example of folder structure](media/excelcomplete.PNG)  
 
 * Open the `.pbit` file.
 
