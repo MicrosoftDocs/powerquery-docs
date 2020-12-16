@@ -77,10 +77,10 @@ If you do not already have one, create a dataflow. This can be done in either [P
     ![example of lightning button in Excel](media/dynamicexcel.png)
 
     * Select the Dataflow ID as the dynamic content.
-
-	![example to select dataflow id in Excel](media/excelcomplete.png)
+    ![An example of folder structure](images/dynamicexcel1.png)
 
     * Repeat this process for all required fields.
+    ![example to select dataflow id in Excel](media/excelcomplete.png)
 
   * Save the flow.
 
