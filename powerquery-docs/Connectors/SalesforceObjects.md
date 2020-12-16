@@ -87,4 +87,12 @@ You can then either load or transform the data.
 
 For more information about Salesforce internal API limits, see [Salesforce Developer Limits and Allocations Quick Reference](https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm#!).
 
+## Troubleshooting
+
+### Enabling OAuth Authentication in Power BI Desktop
+
+Starting in December 2021 Power BI Desktop:
+* Install the new Edge Chromium browser, (at least beta) from https://www.microsoftedgeinsider.com/en-us/download.
+* In your Environment Variables, set the System variable PQ_EnableEdgeChromiumOAuth to true . Once that is set it will use Edge Chromium for only QuickBooksOnline. For this release, only QuickBooksOnline is enabled by default.
+* To set it for Salesforce, in System Environment Variables set PQ_ExtendEdgeChromiumOAuthAllowList to Salesforce
 
