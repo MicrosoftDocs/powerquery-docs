@@ -24,7 +24,7 @@ Products: Power BI Desktop, Power BI Service (Enterprise Gateway)
 Authentication Types Supported: QuickBooks Online account
 
 >[!Warning]
-> QuickBooks Online has deprecated support for Internet Explorer 11, which Power Query Desktop uses for authentication to online services. At this time, users will be impaired from authenticating, but stored credentials should continue to work until their existing authentication tokens expire.
+> QuickBooks Online has deprecated support for Internet Explorer 11, which Power Query Desktop uses for authentication to online services. To be able to log in to Quickbooks Online from Power BI Desktop, please see the Troubleshooting section below.
 
 ## Prerequisites
 
@@ -78,6 +78,12 @@ Beginning on August 1, 2020, Intuit will no longer support Microsoft Internet Ex
 * Safari 11 or newer (Mac only)
 
 For more information, see [Alert: Support for IE11 deprecating on July 31, 2020 for Authorization screens](https://blogs.intuit.com/blog/2020/06/27/alert-support-for-ie11-deprecating-on-july-31-2020-for-authorization-screens/).
+
+## Troubleshooting
+
+* Install the new Edge Chromium browser, (at least beta) from https://www.microsoftedgeinsider.com/en-us/download.
+* In your Environment Variables, set the System variable PQ_EnableEdgeChromiumOAuth to true . Once that is set it will use Edge Chromium for only QuickBooksOnline. For this release, only QuickBooksOnline is enabled by default.
+* You should now be able to log in to QuickBooks Online.
 
 ## Next steps
 
