@@ -79,8 +79,6 @@ If you do not already have one, create a dataflow. This can be done in either [P
     ![An example of adding dynamic fiels](media/dynamicstreaming.png)
 
     * Repeat this process for all required fields.
-    ![An example of all required fiels](meida/streamfinal.PNG)  
-    
 
 * Save the flow.
 
