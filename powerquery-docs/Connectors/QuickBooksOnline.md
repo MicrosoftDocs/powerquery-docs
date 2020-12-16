@@ -81,6 +81,9 @@ For more information, see [Alert: Support for IE11 deprecating on July 31, 2020 
 
 ## Troubleshooting
 
+### Enabling OAuth Authentication in Power BI Desktop
+
+Starting in December 2021 Power BI Desktop:
 * Install the new Edge Chromium browser, (at least beta) from https://www.microsoftedgeinsider.com/en-us/download.
 * In your Environment Variables, set the System variable PQ_EnableEdgeChromiumOAuth to true . Once that is set it will use Edge Chromium for only QuickBooksOnline. For this release, only QuickBooksOnline is enabled by default.
 * You should now be able to log in to QuickBooks Online.
