@@ -76,10 +76,11 @@ If you do not already have one, create a dataflow. This can be done in either [P
 
      For every required field, you need to add a dynamic value. This value is the output of the metadata of the dataflow run.
     * Select the field next to **Dataflow ID** and then select the lightning button.
-    
-    ![example of lightning button in Excel](media/dynamicexcel.png)
+    ![An example of adding dynamic fiels](media/dynamicstreaming.png)
 
     * Repeat this process for all required fields.
+    ![An example of all required fiels](meida/streamfinal.PNG)  
+    
 
 * Save the flow.
 
