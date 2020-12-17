@@ -177,6 +177,22 @@
           href: dataflows/power-platform-dataflows-and-adf-wrangling-data-flows.md
         - name: "Other Azure data services"
           href: dataflows/using-output-power-platform-dataflows-other-azure.md
+      - name: Power Automate templates for dataflows
+        items: 
+        - name: "Overview of Power Automate templates for dataflows"
+          href: dataflows/dataflow-power-automate-connector-templates.md
+        - name: "Send notification when a dataflow refresh completes"
+          href: dataflows/send-notification-when-dataflow-refresh-completes.md
+        - name: "Open a ticket when a dataflow refresh fails"
+          href: dataflows/open-support-ticket-when-dataflow-refresh-completes.md
+        - name: "Trigger dataflows and Power BI datasets sequentially"
+          href: dataflows/trigger-dataflows-and-power-bi-dataset-sequentially.md
+        - name: "Use Dataverse to build a dataflows monitoring report"
+          href: dataflows/load-dataflow-metadata-into-dataverse-table.md
+        - name: "Use Excel to build a dataflows monitoring report"
+          href: dataflows/load-dataflow-metadata-into-excel-online.md
+        - name: "Use a Power BI dataset to build a dataflows monitoring report"
+          href: dataflows/load-dataflow-metadata-into-power-bi-dataset.md
       - name: Best practices for dataflows
         items: 
         - name: "Scenarios for computed entities"
@@ -224,18 +240,18 @@
       - name: "Create Power Platform dataflows from queries in Microsoft Excel (Preview)"
         href: new-dataflow-from-template.md
       - name: Optimize Power Query when expanding table columns
-        href: optimize-expanding-table-columns.md
+        href: optimize-expanding-table-columns.md    
     - name: "Connector reference"
       items:
       - name: "Power Query connectors"
         href: Connectors/index.md
-      - name: "Adobe Analytics"
-        href: "Connectors/AdobeAnalytics.md"
       - name: "Access database"
         href: Connectors/AccessDatabase.md
+      - name: "Adobe Analytics"
+        href: "Connectors/AdobeAnalytics.md"
       - name: "Azure SQL database"
         href: Connectors/AzureSQLDatabase.md
-      - name: "Azure SQL Data Warehouse"
+      - name: "Azure Synapse Analytics (SQL DW)"
         href: Connectors/AzureSQLDataWarehouse.md      
       - name: "Common Data Service"
         href: Connectors/commondataservice.md
@@ -441,6 +457,8 @@
           href: HandlingConnectorSigning.md
       - name: Certification
         href: ConnectorCertification.md
+      - name: "Custom connector documentation"
+        href: providing-user-documentation.md
     - name: Resources
       items:
       - name: "Power BI documentation"

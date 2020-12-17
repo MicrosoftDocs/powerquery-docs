@@ -6,7 +6,7 @@ author: jessli20
 ms.service: powerquery
 ms.reviewer: v-miesco
 ms.date: 11/24/2020
-ms.author: v-douklo
+ms.author: bezhan
 
 ---
 
