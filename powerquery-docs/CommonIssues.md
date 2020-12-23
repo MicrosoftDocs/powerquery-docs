@@ -20,7 +20,7 @@ In Power Query, you'll often want to sort your data before you perform some othe
 
 If you sorted your table, applied an aggregation, and then you tried to apply a distinct to the original sort operation, you might be surprised to find out that you had lost both the first and the second sort. In other words, if you had two rows with sales for a single store, and you had them sorted in descending order so that the first row had a greater dollar value than the second, you might find that the second row was preserved when you ran a distinct on the Store ID.
 
-There are ways to make this work via a smart combination of aggregations, but these aren't exposed by the user experience. Unfortunately, there are a sufficiently large number of possible transformations here that we can't give an example for all outcomes, but here is how you might address the problem above.
+There are ways to achieve this outcome via a smart combination of aggregations, but these aren't exposed by the user experience. Unfortunately, there are a sufficiently large number of possible transformations here that we can't give an example for all outcomes, but here is how you might address the problem above.
 
 ```
 let
@@ -32,11 +32,11 @@ in
     Custom1
 ```
 
-The data you want is the entire record with the highest SalesYTD in each TerritoryID. If you only wanted the max, this would be a simple aggregation&mdash;but you want the entire input record. To get this, you need to group by TerritoryID and then sort inside each group, keeping the first record.
+The data you want is the entire record with the highest SalesYTD in each TerritoryID. If you only wanted the max, it would be a simple aggregation&mdash;but you want the entire input record. To get this, you need to group by TerritoryID and then sort inside each group, keeping the first record.
 
 ## Data Type Inference
 
-When you import a table, you may find that Power Query sometimes incorrectly detects a column’s data type. One reason this can happen is that Power Query infers data types using only the first 200 rows of data. If the data in the first 200 rows is somehow different than the data after row 200, Power Query may detect an incorrect column type. This may or may not result in errors, which can make the incorrect type inference tricky to detect in some cases.
+When you import a table, you may find that Power Query sometimes incorrectly detects a column’s data type. One reason incorrect detection can happen is that Power Query infers data types using only the first 200 rows of data. If the data in the first 200 rows is somehow different than the data after row 200, Power Query may detect an incorrect column type. This may or may not result in errors, which can make the incorrect type inference tricky to detect in some cases.
                                                                                                           
 For example, imagine a column that contains integers in the first 200 rows (such as all zeroes), but contains decimal numbers after row 200. In this case, Power Query will infer the data type of the column to be Whole Number (Int64.Type). This will result in the decimal portions of any non-integer numbers being truncated.
 
@@ -62,7 +62,7 @@ Effective October 30, 2020, the following cipher suites are being deprecated fro
 * "TLS_RSA_WITH_AES_256_CBC_SHA256”
 * "TLS_RSA_WITH_AES_128_CBC_SHA256”
 
-The following is the full list of supported cipher suites:
+The following list are the supported cipher suites:
 
 * "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256"
 * "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384"
@@ -87,6 +87,6 @@ Customers must upgrade their servers before March 1, 2021. For more information 
 
 An upcoming version of Power BI Desktop will cause SSL connections failure from Desktop when any certificates in the SSL chain are missing certificate revocation status. This is a change from the current state, where revocation only caused connection failure in the case where the certificate was explicitly revoked. Other certificate issues might include invalid signatures, and certificate expiration.
 
-Due to the fact that there are a number of configurations in which revocation status may be stripped, such as with corporate proxy servers, we will be providing an additional option to ignore certificates that don't have revocation information. This will allow situations where revocation information is stripped in certain cases, but you don't want to lower security entirely, to continue working.
+Because there are configurations in which revocation status may be stripped, such as with corporate proxy servers, we will be providing another option to ignore certificates that don't have revocation information. This will allow situations where revocation information is stripped in certain cases, but you don't want to lower security entirely, to continue working.
 
 It isn't recommended, but users will continue to be able to turn off revocation checks entirely.
