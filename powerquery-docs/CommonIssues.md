@@ -75,9 +75,9 @@ The following list are the supported cipher suites:
 
 Cipher suites are used to encrypt messages to secure a network connection between clients/servers and other servers. We are removing the above list of cipher suites to comply with our current security protocols. Beginning March 1, 2021, customers can only use our [standard cipher suites](https://docs.microsoft.com/power-platform/admin/server-cipher-tls-requirements).
 
-These are the cipher suites the server you connect to must support to connect to it from Power Query Online or Power BI.
+These are the cipher suites the server you connect to must support to connect from Power Query Online or Power BI.
 
-In Power Query Desktop (Power BI, Excel), we don’t control your cipher suites. If you're trying to connect to Power Platform  (for example Power Platform Dataflows) or the Power BI Service, you will need one of those cipher suites enabled on your OS. You may either upgrade the [Windows version](https://docs.microsoft.com/windows/win32/secauthn/cipher-suites-in-schannel) or update the [Windows TLS registry](https://docs.microsoft.com/windows-server/security/tls/tls-registry-settings) to make sure that you server endpoint supports one of these ciphers.
+In Power Query Desktop (Power BI, Excel), we don’t control your cipher suites. If you're trying to connect to Power Platform  (for example Power Platform Dataflows) or the Power BI Service, you will need one of those cipher suites enabled on your OS. You may either upgrade the [Windows version](https://docs.microsoft.com/windows/win32/secauthn/cipher-suites-in-schannel) or update the [Windows TLS registry](https://docs.microsoft.com/windows-server/security/tls/tls-registry-settings) to make sure that your server endpoint supports one of these ciphers.
 
  To verify that your server complies with the security protocol, you can perform a test using a TLS cipher and scanner tool. One example might be [SSLLABS](https://www.ssllabs.com/ssltest/analyze.html).
 
@@ -87,6 +87,6 @@ Customers must upgrade their servers before March 1, 2021. For more information 
 
 An upcoming version of Power BI Desktop will cause SSL connections failure from Desktop when any certificates in the SSL chain are missing certificate revocation status. This  is a change from the current state, where revocation only caused connection failure in the case where the certificate was explicitly revoked. Other certificate issues might include invalid signatures, and certificate expiration.
 
-Because there are configurations in which revocation status may be stripped, such as with corporate proxy servers, we will be providing another option to ignore certificates that don't have revocation information. This option will allow situations where revocation information is stripped in certain cases, but you don't want to lower security entirely, to continue working.
+As there are configurations in which revocation status may be stripped, such as with corporate proxy servers, we will be providing another option to ignore certificates that don't have revocation information. This option will allow situations where revocation information is stripped in certain cases, but you don't want to lower security entirely, to continue working.
 
 It isn't recommended, but users will continue to be able to turn off revocation checks entirely.
