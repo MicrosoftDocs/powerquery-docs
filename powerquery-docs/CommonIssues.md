@@ -62,7 +62,7 @@ Effective October 30, 2020, the following cipher suites are being deprecated fro
 * "TLS_RSA_WITH_AES_256_CBC_SHA256”
 * "TLS_RSA_WITH_AES_128_CBC_SHA256”
 
-The following is the full list of supported ciphersuites:
+The following is the full list of supported cipher suites:
 
 * "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256"
 * "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384"
@@ -77,7 +77,7 @@ Cipher suites are used to encrypt messages to secure a network connection betwee
 
 These are the cipher suites the server you connect to must support to connect to it from Power Query Online or Power BI.
 
-In Power Query Desktop (Power BI, Excel), we don’t control your cipher suites . If you're trying to connect to Power Platform  (for example Power Platform Dataflows) or the Power BI Service, you will need one of those cipher suites enabled on your OS. You may either upgrade the [Windows version](https://docs.microsoft.com/windows/win32/secauthn/cipher-suites-in-schannel) or update the [Windows TLS registry](https://docs.microsoft.com/windows-server/security/tls/tls-registry-settings) to make sure that you server end-point supports one of these ciphers.
+In Power Query Desktop (Power BI, Excel), we don’t control your cipher suites. If you're trying to connect to Power Platform  (for example Power Platform Dataflows) or the Power BI Service, you will need one of those cipher suites enabled on your OS. You may either upgrade the [Windows version](https://docs.microsoft.com/windows/win32/secauthn/cipher-suites-in-schannel) or update the [Windows TLS registry](https://docs.microsoft.com/windows-server/security/tls/tls-registry-settings) to make sure that you server endpoint supports one of these ciphers.
 
  To verify that your server complies with the security protocol, you can perform a test using a TLS cipher and scanner tool, for example [SSLLABS](https://www.ssllabs.com/ssltest/analyze.html).
 
