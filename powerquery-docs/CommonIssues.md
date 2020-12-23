@@ -16,7 +16,7 @@ LocalizationGroup: reference
 
 ## Preserving Sort
 
-In Power Query, you'll often want to sort your data before you perform some other operation. For example, if you wanted to sort a sales table by the Store ID and the sale amount, and then you wanted to perform a group, you might expect sort order to be preserved. However, due to how operation application works, sort order is not preserved through aggregations or joins. 
+In Power Query, you'll often want to sort your data before you perform some other operation. For example, if you wanted to sort a sales table by the Store ID and the sale amount, and then you wanted to perform a group, you might expect sort order to be preserved. Due to how operation application works however, sort order is not preserved through aggregations or joins. 
 
 If you sorted your table, applied an aggregation, and then you tried to apply a distinct to the original sort operation, you might be surprised to find out that you had lost both the first and the second sort. In other words, if you had two rows with sales for a single store, and you had them sorted in descending order so that the first row had a greater dollar value than the second, you might find that the second row was preserved when you ran a distinct on the Store ID.
 
@@ -32,13 +32,13 @@ in
     Custom1
 ```
 
-The data you want is the entire record with the highest SalesYTD in each TerritoryID. If you only wanted the max, it would be a simple aggregation&mdash;but you want the entire input record. To get this, you need to group by TerritoryID and then sort inside each group, keeping the first record.
+The data you want is the entire record with the highest SalesYTD in each TerritoryID. If you only wanted the max, it would be an aggregation&mdash;but you want the entire input record. To get this, you need to group by TerritoryID and then sort inside each group, keeping the first record.
 
 ## Data Type Inference
 
 When you import a table, you may find that Power Query sometimes incorrectly detects a column’s data type. One reason incorrect detection can happen is that Power Query infers data types using only the first 200 rows of data. If the data in the first 200 rows is somehow different than the data after row 200, Power Query may detect an incorrect column type. This may or may not result in errors, which can make the incorrect type inference tricky to detect in some cases.
                                                                                                           
-For example, imagine a column that contains integers in the first 200 rows (such as all zeroes), but contains decimal numbers after row 200. In this case, Power Query will infer the data type of the column to be Whole Number (Int64.Type). This will result in the decimal portions of any non-integer numbers being truncated.
+As an example, imagine a column that contains integers in the first 200 rows (such as all zeroes), but contains decimal numbers after row 200. In this case, Power Query will infer the data type of the column to be Whole Number (Int64.Type). This will result in the decimal portions of any non-integer numbers being truncated.
 
 Or imagine a column that contains textual date values in the first 200 rows, and other kinds of text values after row 200. In this case, Power Query will infer the data type of the column to be Date. This will result in the non-date text values being treated as type conversion errors.
 
@@ -79,14 +79,14 @@ These are the cipher suites the server you connect to must support to connect to
 
 In Power Query Desktop (Power BI, Excel), we don’t control your cipher suites. If you're trying to connect to Power Platform  (for example Power Platform Dataflows) or the Power BI Service, you will need one of those cipher suites enabled on your OS. You may either upgrade the [Windows version](https://docs.microsoft.com/windows/win32/secauthn/cipher-suites-in-schannel) or update the [Windows TLS registry](https://docs.microsoft.com/windows-server/security/tls/tls-registry-settings) to make sure that you server endpoint supports one of these ciphers.
 
- To verify that your server complies with the security protocol, you can perform a test using a TLS cipher and scanner tool, for example [SSLLABS](https://www.ssllabs.com/ssltest/analyze.html).
+ To verify that your server complies with the security protocol, you can perform a test using a TLS cipher and scanner tool. One example might be [SSLLABS](https://www.ssllabs.com/ssltest/analyze.html).
 
 Customers must upgrade their servers before March 1, 2021. For more information about configuring TLS Cipher Suite order, see [Manage Transport Layer Security (TLS)](https://docs.microsoft.com/windows-server/security/tls/manage-tls).
 
 ## Certificate Revocation
 
-An upcoming version of Power BI Desktop will cause SSL connections failure from Desktop when any certificates in the SSL chain are missing certificate revocation status. This is a change from the current state, where revocation only caused connection failure in the case where the certificate was explicitly revoked. Other certificate issues might include invalid signatures, and certificate expiration.
+An upcoming version of Power BI Desktop will cause SSL connections failure from Desktop when any certificates in the SSL chain are missing certificate revocation status. This  is a change from the current state, where revocation only caused connection failure in the case where the certificate was explicitly revoked. Other certificate issues might include invalid signatures, and certificate expiration.
 
-Because there are configurations in which revocation status may be stripped, such as with corporate proxy servers, we will be providing another option to ignore certificates that don't have revocation information. This will allow situations where revocation information is stripped in certain cases, but you don't want to lower security entirely, to continue working.
+Because there are configurations in which revocation status may be stripped, such as with corporate proxy servers, we will be providing another option to ignore certificates that don't have revocation information. This option will allow situations where revocation information is stripped in certain cases, but you don't want to lower security entirely, to continue working.
 
 It isn't recommended, but users will continue to be able to turn off revocation checks entirely.
