@@ -15,9 +15,9 @@ This article goes over many scenarios that will show you how to take advantage o
 
 ## Adjust the similarity threshold
 
-The best scenario for applying the Fuzzy match algorithm is when all text strings in a column contain only the strings that need to be compared and not extra components. For example, comparing 'Apples' against '4ppl3s' yields better similarity scores than comparing 'Apples' to 'My favorite fruit, by far, is Apples. I simply love them!'.
+The best scenario for applying the Fuzzy match algorithm is when all text strings in a column contain only the strings that need to be compared and not extra components. For example, comparing ``Apples`` against ``4ppl3s`` yields higher similarity scores than comparing ``Apples`` to ``My favorite fruit, by far, is Apples. I simply love them!``.
 
-This is because the word 'Apples' in the second string is only a small part of the whole text string that yields a lower similarity score.
+This is because the word ``Apples`` in the second string is only a small part of the whole text string that yields a lower similarity score.
 
 Take a look at the following dataset that consists of responses from a survey that had only one question "What is your favorite fruit?". 
 
