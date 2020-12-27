@@ -72,7 +72,7 @@ This change gets you closer to the result that you're looking for, except for th
 >[!NOTE]
 >Power Query will always use the value closest to the threshold to define the clusters. The threshold defines the lower limit of similarity score that is acceptable to create assign the value to a cluster.
 
-You can try again by changing the *Similarity score* from 0.6 to a lower number until you get the results that you're expecting. For this case, change the *Similarity score* to 0.5, which will yield the exact result that you're expecting with the text string ``My favorite fruit, by far, is Apples. I simply love them!`` now assigned to the cluster ``Apples`` as shown in the next image:
+You can try again by changing the *Similarity score* from 0.6 to a lower number until you get the results that you're expecting. For this case, **change the *Similarity score* to 0.5**, which will yield the exact result that you're expecting with the text string ``My favorite fruit, by far, is Apples. I simply love them!`` now assigned to the cluster ``Apples`` as shown in the next image:
 
 ![Table with the correct values in the Cluster column where the string ``My favorite fruit, by far, is Apples. I simply love them!`` is now assigned to the cluster ``Apples`` ](images/me-make-fuzzy-clear-cluster-values-with-show-similarity-score-50.png)
 
