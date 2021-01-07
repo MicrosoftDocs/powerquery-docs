@@ -77,6 +77,28 @@ Step folding indicators use an underlying query plan, and require it to be able 
 |**Opaque**|-----|Opaque indicators tell you that the resulting query plan is inconclusive for some reason. It generally indicates that there is a true 'constant' table, or that that transform or connector is not supported by the indicators and query plan tool.|
 |**Unknown**|-----|Unknown indicators represent an absence of query plan, either due to an error or attempting to run the query plan evaluation on something other than a table (such as a record, list, or primitive).|
 
+## Example Analysis
 
->[!NOTE]
-> In the future the Power Query team will be exposing the ability to examine the query plan in greater depth more directly, for advanced users.
+You can see a simple example by connecting to the Products table in Adventure Works (SQL). The initial load, similar to above, will look as follows:
+
+![Initial step indicators for loading the Product table](images/example-step-diagnostics-1.png)
+
+Adding more steps that fold will extend that green line. This is because this step also folds.
+
+![Adding a remove column step to the previous query, extending the folding indicator line](images/example-step-diagnostics-2.png)
+
+ Adding a step that doesn't fold will show an indicator--for example, Capitalize Each Word will never fold. We can see obviously that the indicator changes, showing that as of this step it's stopped folding. As I said above, the previous steps will still fold.
+
+ ![Adding a Capitalize Each Word step to break folding](images/example-step-diagnostics-3.png)
+
+ Adding more steps downstream of this that depend on Capitalize Each Step will continue to not fold.
+
+ ![Adding more steps that don't fold](images/example-step-diagnostics-4.png)
+
+
+ However, if you (for example) remove the column you applied the capitalization to, so that the optimized query plan can all fold once more, you'll get a result like this--although something like this is uncommon. This shows you how it's not just the order of steps, but the actual transformations that apply as well.
+
+ ![Showing how removing the problematic column allows things to fold without removing the step](images/example-step-diagnostics-5.png)
+ 
+ >[!NOTE]
+> In the future the Power Query team will be exposing the ability to examine the query plan in greater depth more directly, for advanced users. This will allow users to actually check what operations have folded.
