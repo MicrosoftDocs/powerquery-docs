@@ -381,6 +381,18 @@ SAP users need access to specific BAPI function modules to get metadata and retr
 
 To solve this issue, verify that the user has access to the various MDPROVIDER modules and `BAPI_IOBJ_GETDETAIL`. To further troubleshoot this or similar issues, you can enable tracing. Select **File** > **Options and settings** > **Options**. In **Options**, select **Diagnostics**, then select **Enable tracing**. Attempt to retrieve data from SAP BW while tracing is active, and examine the trace file for more detail.
 
+### Memory Exceptions
+
+In some cases, you may encounter one of the following memory errors:
+
+* `Message: No more memory available to add rows to an internal table.`
+* `Message: [DataSource.Error] SAP Business Warehouse: The memory request for [number] bytes could not be complied with.`
+* `Message: The memory request for [number] bytes could not be complied with.`
+
+These memory exceptions are from the SAP BW server and are due to the server running out of available memory to process the query. This may happen when the query returns a large set of results or when the query is too complex for the server to handle, for example, when a query has many crossjoins. 
+
+To resolve this error, the recommendation is to simplify the query or divide it into smaller queries. If possible, push more aggregation to the server. Alternatively, contact your SAP Basis team to increase the resources available in the server. 
+
 ### See also
 
 * [2777473 - MDX: FAQ for Power BI accessing BW or BW/4HANA](https://apps.support.sap.com/sap/support/knowledge/2777473)
