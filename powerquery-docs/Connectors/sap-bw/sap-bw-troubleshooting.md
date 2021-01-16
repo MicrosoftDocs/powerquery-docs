@@ -383,13 +383,13 @@ To solve this issue, verify that the user has access to the various MDPROVIDER m
 
 ### Memory Exceptions
 
-In some cases, you may encounter one of the following memory errors:
+In some cases, you might encounter one of the following memory errors:
 
 * `Message: No more memory available to add rows to an internal table.`
 * `Message: [DataSource.Error] SAP Business Warehouse: The memory request for [number] bytes could not be complied with.`
 * `Message: The memory request for [number] bytes could not be complied with.`
 
-These memory exceptions are from the SAP BW server and are due to the server running out of available memory to process the query. This may happen when the query returns a large set of results or when the query is too complex for the server to handle, for example, when a query has many crossjoins. 
+These memory exceptions are from the SAP BW server and are due to the server running out of available memory to process the query. This might happen when the query returns a large set of results or when the query is too complex for the server to handle, for example, when a query has many crossjoins. 
 
 To resolve this error, the recommendation is to simplify the query or divide it into smaller queries. If possible, push more aggregation to the server. Alternatively, contact your SAP Basis team to increase the resources available in the server. 
 
