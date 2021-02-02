@@ -106,7 +106,7 @@ and `FinishLogin` (exchanging the authorization code for an access token).
 Extensions can optionally implement `Refresh` (exchanging a refresh token for a new access token) and `Logout` (expiring the current refresh and access tokens) functions as well.
 
 > [!Note]
-> Power Query extensions are evaluated in applications running on client machines. Data Connectors _should not_ use confidential secrets in their OAuth flows, as users may inspect the extension or network traffic to learn the secret. See the [Proof Key for Code Exchange by OAuth Public Clients RFC](https://tools.ietf.org/html/rfc7636) (also known as PKCE) for further details on providing flows that don't rely on shared secrets.
+> Power Query extensions are evaluated in applications running on client machines. Data Connectors _should not_ use confidential secrets in their OAuth flows, as users may inspect the extension or network traffic to learn the secret. See the [Proof Key for Code Exchange by OAuth Public Clients RFC](https://tools.ietf.org/html/rfc7636) (also known as PKCE) for further details on providing flows that don't rely on shared secrets. A [sample](https://github.com/microsoft/DataConnectors/blob/master/samples/OAuthPKCE/PKCESample.pq) implementation of this flow can be found on our GitHub site.
 
 There are two sets of OAuth function signatures; the original signature that contains a minimal number of parameters, and an advanced signature that
 accepts additional parameters. Most OAuth flows can be implemented using the original signatures. You can also mix and match signature types in your implementation. The function calls are matches based on the number of parameters (and their types). The parameter names are not taken into consideration.
