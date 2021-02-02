@@ -73,7 +73,7 @@ Step folding indicators use an underlying query plan, and require it to be able 
 |---------|----|-------|
 |**Folding**|-----|The folding indicator tells you that the query up to this step will be evaluated by the data source.|
 |**Not folding**|-----|The not folding indicator tells you that some part of the query up to this step will be evaluated outside the data source. You can compare it with the last folding indicator, if there is one, to see if you can rearrange your query to be more performant.|
-|**Might fold**|-----|Might fold indicators are uncommon. They mean that a query 'might' fold. They indicate either that folding/not folding will be determined at runtime, when pulling results from the query, and that the query plan is dynamic. These will likely only appear with ODBC or OData connections. |
+|**Might fold**|![Folding indicator for 'might fold](images/might-fold-small.png)|Might fold indicators are uncommon. They mean that a query 'might' fold. They indicate either that folding/not folding will be determined at runtime, when pulling results from the query, and that the query plan is dynamic. These will likely only appear with ODBC or OData connections. |
 |**Opaque**|-----|Opaque indicators tell you that the resulting query plan is inconclusive for some reason. It generally indicates that there is a true 'constant' table, or that that transform or connector is not supported by the indicators and query plan tool.|
 |**Unknown**|-----|Unknown indicators represent an absence of query plan, either due to an error or attempting to run the query plan evaluation on something other than a table (such as a record, list, or primitive).|
 
