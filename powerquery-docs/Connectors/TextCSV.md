@@ -147,3 +147,25 @@ If you're requesting text/csv files from the web and also promoting headers, and
 ### Unstructured text being interpreted as structured
 
 In rare cases, a document that has similar comma numbers across paragraphs might be interpreted to be a CSV. If this issue happens, edit the **Source** step in the Query Editor, and select **Text** instead of **CSV** in the **Open File As** dropdown select.
+
+### Error: Connection closed by host
+
+When loading Text/CSV files from a web source, you may encounter the following error: “An existing connection was forcibly closed by the remote host.”. This error is likely caused by the host employing protective measures and closing a connection which may be temporarily paused, for example, when promoting headers or waiting on another data source connection for a join operation. The recommendation is to add a [Binary.Buffer](https://docs.microsoft.com/powerquery-m/binary-buffer) (recommended) or a [Table.Buffer](https://docs.microsoft.com/powerquery-m/table-buffer) so that the file is retrieved and stored all at once. This prevents the situation of pausing during read and the host should not proactively close the connection. 
+
+The following example illustrates this workaround.
+* Original:
+
+```
+= Csv.Document(Web.Contents("https://.../MyFile.csv"))
+```
+
+* With ```Binary.Buffer```:
+
+```
+= Csv.Document(Binary.Buffer(Web.Contents("https://.../MyFile.csv")))
+```
+
+* With ```Table.Buffer```:
+```
+= Table.Buffer(Csv.Document(Web.Contents("https://.../MyFile.csv")))
+```
