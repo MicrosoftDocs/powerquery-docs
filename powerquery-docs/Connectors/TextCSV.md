@@ -150,9 +150,9 @@ In rare cases, a document that has similar comma numbers across paragraphs might
 
 ### Error: Connection closed by host
 
-When loading Text/CSV files from a web source, you may encounter the following error: “An existing connection was forcibly closed by the remote host.”. This error is likely caused by the host employing protective measures and closing a connection which may be temporarily paused, for example, when promoting headers or waiting on another data source connection for a join operation. The recommendation is to add a [Binary.Buffer](https://docs.microsoft.com/powerquery-m/binary-buffer) (recommended) or a [Table.Buffer](https://docs.microsoft.com/powerquery-m/table-buffer) so that the file is retrieved and stored all at once. This prevents the situation of pausing during read and the host should not proactively close the connection. 
+When loading Text/CSV files from a web source, you may encounter the following error: “An existing connection was forcibly closed by the remote host.”. This error is likely caused by the host employing protective measures and closing a connection which may be temporarily paused, for example, when promoting headers or waiting on another data source connection for a join operation. The recommendation is to add a [Binary.Buffer](https://docs.microsoft.com/powerquery-m/binary-buffer) (recommended) or a [Table.Buffer](https://docs.microsoft.com/powerquery-m/table-buffer) so that the file is retrieved and stored all at once. This prevents the situation of pausing during load and the host should not proactively close the connection. 
 
-The following example illustrates this workaround.
+The following example illustrates this workaround. This buffering needs to be done before the resulting table is passed to ```Table.PromoteHeaders``` or a join operation.
 * Original:
 
 ```
