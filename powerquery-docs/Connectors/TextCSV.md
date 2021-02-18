@@ -162,7 +162,7 @@ The following example illustrates this workaround. This buffering needs to be do
 * With ```Binary.Buffer```:
 
 ```
-= Csv.Document(Binary.Buffer(Web.Contents("https://.../MyFile.csv")))
+Csv.Document(Binary.Buffer(Web.Contents("https://.../MyFile.csv")))
 ```
 
 * With ```Table.Buffer```:
