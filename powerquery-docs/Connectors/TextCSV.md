@@ -167,5 +167,5 @@ The following example illustrates this workaround. This buffering needs to be do
 
 * With ```Table.Buffer```:
 ```
-= Table.Buffer(Csv.Document(Web.Contents("https://.../MyFile.csv")))
+Table.Buffer(Csv.Document(Web.Contents("https://.../MyFile.csv")))
 ```
