@@ -35,7 +35,7 @@ You'll need an SAP account to sign in to the website and download the drivers. I
 
 You can use either version 1.0 of the SAP Business Warehouse (BW) Application Server connector or the Implementation 2.0 SAP connector in Power Query Desktop. The following sections describe the installation of each version, in turn. You can choose one or the other connector when connecting to an SAP BW Application Server from Power BI Desktop.
 
-We support BW 7.3, BW 7.5 and BW/4HANA 2.0. 
+BW 7.3, BW 7.5 and BW/4HANA 2.0 is supported. 
 
 >[!NOTE]
 >We suggest you use the Implementation 2.0 SAP connector whenever possible because it provides significant performance, functionality, and reliability improvements over 1.0.
