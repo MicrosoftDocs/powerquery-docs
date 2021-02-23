@@ -111,7 +111,7 @@ For more information about Salesforce internal API limits, see [Salesforce Devel
 
 ### Enabling Edge Chromium for OAuth Authentication in Power BI Desktop
 
-Starting in December 2021 Power BI Desktop:
+Starting in December 2020 Power BI Desktop:
 * Install the new Edge Chromium browser, (at least beta) from https://www.microsoftedgeinsider.com/download.
 * In your Environment Variables, set the System variable `PQ_EnableEdgeChromiumOAuth` to true . Once that is set it will use Edge Chromium for only QuickBooksOnline. For this release, only QuickBooksOnline is enabled by default.
 * To set it for Salesforce, in System Environment Variables set `PQ_ExtendEdgeChromiumOAuthAllowList` to Salesforce
