@@ -71,4 +71,4 @@ To load data from an OData Feed in Power Query Online:
    
 ## Connecting to Microsoft Graph
 
-Connecting to [Microsoft Graph](https://docs.microsoft.com/graph/overview) REST [APIs](https://graph.microsoft.com) from Power Query is not recommended or supported. See this [article](../connecting-to-graph.md) for more information.
+Connecting to [Microsoft Graph](https://docs.microsoft.com/graph/overview) REST [APIs](https://graph.microsoft.com) from Power Query isn't recommended or supported. See this [article](../connecting-to-graph.md) for more information.
