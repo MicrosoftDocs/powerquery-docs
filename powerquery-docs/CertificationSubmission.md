@@ -1,17 +1,16 @@
 ---
-title: Power Query Connector Certification Submission
+title: Power Query connector certification submission
 description: Instructions for submitting a Power Query custom connector for certification.
 author: bezhan-msft
-
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 02/24/2020
+ms.date: 03/01/2020
 ms.author: bezhan
 
 LocalizationGroup: reference
 ---
 
-# Power Query Connector Submission
+# Power Query connector submission
 
 ## Introduction
 
@@ -19,7 +18,7 @@ This article provides instructions for how to submit your Power Query custom con
 
 ## Prerequisites
 
-Once you've been approved for certification, ensure that your connector meets the [certification requirements](https://docs.microsoft.com/power-query/connectorcertification#certification-requirements) and follows all feature, style, and security guidelines. Prepare the [submission artifacts](https://docs.microsoft.com/power-query/connectorcertification#certification-requirements) for submission.
+After you've been approved for certification, ensure that your connector meets the [certification requirements](https://docs.microsoft.com/power-query/connectorcertification#certification-requirements) and follows all feature, style, and security guidelines. Prepare the [submission artifacts](https://docs.microsoft.com/power-query/connectorcertification#certification-requirements) for submission.
 
 ## Submitting to the Connector Certification Portal
 
@@ -29,9 +28,9 @@ The Connector Certification Portal is an experience within [ISV Studio](https://
 
 1. Navigate to [ISV Studio](https://aka.ms/ISVStudio) and log in with your work Microsoft account. Personal accounts aren't supported in this experience.
 
-2. Select the "Connector certification" tab on the left to launch the Connector Certification Portal experience.
+2. Select the **Connector certification** tab on the left to launch the Connector Certification Portal experience.
 
-3. Select "Power Query" as your connector type.
+3. Select **Power Query** as your connector type.
 
 4. Read and agree to our connector Partner Agreement. If there is a separate agreement governing the relationship between your organization and Microsoft, let your Microsoft contact know.
 
@@ -45,7 +44,7 @@ The Connector Certification Portal is an experience within [ISV Studio](https://
 
 Updates to your connector submission can be made at any time, except when your connector is in the process of production deployment. When you are submitting an update, ensure that you submit an update to your existing submission, rather than creating a new submission.
 
-1. Navigate to the "Connector certification" experience within [ISV Studio](https://aka.ms/ISVStudio).
+1. Navigate to the **Connector certification** experience within [ISV Studio](https://aka.ms/ISVStudio).
 
 2. From the list of connectors you manage, select the connector submission to view its connector versions.
 
