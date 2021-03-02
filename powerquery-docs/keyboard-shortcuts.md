@@ -1,10 +1,21 @@
-**Keyboard Shortcuts**
+---
+title: Keyboard shortcuts in Power Query
+description: This article outlines global keyboard shortcuts in Power Query Online
+author: 
+ms.service: powerquery
+ms.reviewer: kvivek
+ms.date: 03/02/2021
+ms.author: dhsundar
+ms.custom: edited
+---
 
-Keyboard shortcuts provide a quick way to navigate and allow users to work more efficiently. For users with mobility or vision disabilities, keyboard shortcuts can be easier than using the touchscreen, and are an essential alternative to using the mouse. The table in this article lists all the shortcuts available within Power Query Online.
+# Keyboard shortcuts
 
-When using the Query Editor within Power Query Online, you can press Ctrl +? or navigate to Help -\&gt; Keyboard shortcuts to view the list of keyboard shortcuts.
+Keyboard shortcuts provide a quick way to navigate and allow users to work more efficiently. For users with mobility or vision disabilities, keyboard shortcuts can be easier than using the touchscreen and are an essential alternative to using the mouse. The table in this article lists all the shortcuts available in Power Query Online.
 
-## Query Editor
+When using the Query Editor in Power Query Online, you can press ```Ctrl + ?``` or navigate to the Keyboard shortcuts button in the Help tab to view the list of keyboard shortcuts.
+
+## Query Editor...
 
 | **To do this action** | **Press** |
 | --- | --- |
@@ -18,7 +29,7 @@ When using the Query Editor within Power Query Online, you can press Ctrl +? or 
 | Advanced editor | **Ctrl + Shift + M** |
 | Refresh | **Alt + F5** |
 
-## Data Preview
+## Data Preview...
 
 | **To do this action** | **Press** |
 | --- | --- |
@@ -26,7 +37,7 @@ When using the Query Editor within Power Query Online, you can press Ctrl +? or 
 | Select all cells | **Ctrl + A** |
 | Select column | **Ctrl + Space** |
 
-## _When the focus is on the column header_
+## Focus on Column Header
 
 | Filter menu | **Alt +**![](RackMultipart20210302-4-r7oydo_html_3cccea986cc3e491.png) |
 | --- | --- |
@@ -36,7 +47,7 @@ When using the Query Editor within Power Query Online, you can press Ctrl +? or 
 | Select first column | **Home** |
 | Select last column | **End** |
 
-## _When the focus is on the cell_
+## Focus on Cell
 
 | Select first cell of the row | **Home** |
 | --- | --- |

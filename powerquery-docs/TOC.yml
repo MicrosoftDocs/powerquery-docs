@@ -215,7 +215,7 @@
           href: dataflows/troubleshooting-dataflow-issue-get-data-from-dataflow.md
         - name: "Connecting to the data source"
           href: dataflows/troubleshooting-dataflow-issues-connection-to-the-data-source.md
-    - name: Feyboard shortcuts in Power Query
+    - name: Keyboard shortcuts in Power Query
       href: keyboard-shortcuts.md
     - name: Best practices in Power Query
       href: best-practices.md
