@@ -11,7 +11,9 @@
       - name: "Authentication with a data source"
         href: ConnectorAuthentication.md
       - name: "SharePoint and OneDrive for Business files import"
-        href: sharepoint-onedrive-files.md        
+        href: sharepoint-onedrive-files.md    
+      - name: "Lack of support connecting to Microsoft Graph"    
+        href: connecting-to-graph.md
     - name: Transform data
       items:
       - name: "Use Power Query"
