@@ -1,7 +1,7 @@
 ---
 title: Keyboard shortcuts in Power Query
 description: This article outlines global keyboard shortcuts in Power Query Online
-author: 
+author: heydh
 ms.service: powerquery
 ms.reviewer: kvivek
 ms.date: 03/02/2021
