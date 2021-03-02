@@ -15,7 +15,7 @@ Keyboard shortcuts provide a quick way to navigate and allow users to work more 
 
 When using the Query Editor in Power Query Online, you can press ```Ctrl + ?``` or navigate to the Keyboard shortcuts button in the Help tab to view the list of keyboard shortcuts.
 
-## Query Editor...
+## Query Editor
 
 | **To do this action** | **Press** |
 | --- | --- |
@@ -29,7 +29,7 @@ When using the Query Editor in Power Query Online, you can press ```Ctrl + ?``` 
 | Advanced editor | **Ctrl + Shift + M** |
 | Refresh | **Alt + F5** |
 
-## Data Preview...
+## Data Preview
 
 | **To do this action** | **Press** |
 | --- | --- |
