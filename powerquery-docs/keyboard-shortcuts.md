@@ -49,7 +49,7 @@ When using the Query Editor in Power Query Online, you can press ```Ctrl + ?``` 
 | Select first column | **Home** |
 | Select last column | **End** |
 
-## When the focus is on the cell
+### When the focus is on the cell
 
 | **To do this action** | **Press** |
 | --- | --- |
