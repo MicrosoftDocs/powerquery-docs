@@ -37,18 +37,22 @@ When using the Query Editor in Power Query Online, you can press ```Ctrl + ?``` 
 | Select all cells | **Ctrl + A** |
 | Select column | **Ctrl + Space** |
 
-## Focus on Column Header
+### When the focus is on the column header
 
-| Filter menu | **Alt +**![](RackMultipart20210302-4-r7oydo_html_3cccea986cc3e491.png) |
+| **To do this action** | **Press** |
 | --- | --- |
-| Change column type menu | **Ctrl +**![](RackMultipart20210302-4-r7oydo_html_3cccea986cc3e491.png) |
-| Move focus to column header on the left | **Ctrl +**![](RackMultipart20210302-4-r7oydo_html_d8bcd2ad6af721e7.png) |
-| Move focus to column header on the right | **Ctrl +**![](RackMultipart20210302-4-r7oydo_html_bd82a03d537d28da.gif) |
+| Filter menu | **Alt + Down arrow key** |
+| --- | --- |
+| Change column type menu | **Ctrl + Down arrow key** |
+| Move focus to column header on the left | **Ctrl + Left arrow key** |
+| Move focus to column header on the right | **Ctrl + Right arrow key**  |
 | Select first column | **Home** |
 | Select last column | **End** |
 
-## Focus on Cell
+## When the focus is on the cell
 
+| **To do this action** | **Press** |
+| --- | --- |
 | Select first cell of the row | **Home** |
 | --- | --- |
 | Select last cell of the row | **End** |
@@ -68,7 +72,7 @@ When using the Query Editor in Power Query Online, you can press ```Ctrl + ?``` 
 | Save entered data | **Ctrl + Enter** |
 | Show suggestions (when available) | **Ctrl + Space** |
 
-## Multi-line text editor (Blank query/Advanced Editor)
+## Multi-line text editor (Blank query/Advanced editor)
 
 | **To do this action** | **Press** |
 | --- | --- |
@@ -78,12 +82,12 @@ When using the Query Editor in Power Query Online, you can press ```Ctrl + ?``` 
 
 | **To do this action** | **Press** |
 | --- | --- |
-| Expand focused query | **Ctrl +**![](RackMultipart20210302-4-r7oydo_html_bd82a03d537d28da.gif) |
-| Collapse focused query | **Ctrl +**![](RackMultipart20210302-4-r7oydo_html_d8bcd2ad6af721e7.png) |
-| Move focus from query level to step level | **Alt +**![](RackMultipart20210302-4-r7oydo_html_3cccea986cc3e491.png) |
+| Expand focused query | **Ctrl + Right arrow key** |
+| Collapse focused query | **Ctrl + Left arrow key** |
+| Move focus from query level to step level | **Alt + Down arrow key** |
 | Move focus from step level to query level | **Esc** |
-| Expand all queries | **Ctrl + Shift +**![](RackMultipart20210302-4-r7oydo_html_bd82a03d537d28da.gif) |
-| Collapse all queries | **Ctrl + Shift +**![](RackMultipart20210302-4-r7oydo_html_d8bcd2ad6af721e7.png) |
+| Expand all queries | **Ctrl + Shift + Right arrow key** |
+| Collapse all queries | **Ctrl + Shift + Left arrow key** |
 | Insert new step using + button (after selected step) | **Ctrl + Alt + N** |
 | Highlight related queries | **Ctrl + Alt + R** |
 | Select all queries | **Ctrl + A** |
