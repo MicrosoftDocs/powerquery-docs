@@ -81,7 +81,7 @@ We have a certain set of requirements for certification. We recognize that not e
 Please ensure the connector files that you submit include all of the following:
 
 * Connector (.mez) file
-  * The .mez file should follow style standards.
+  * The .mez file should follow style standards and be named similarly to the product or service name. It should not include words like "Power BI", "Connector" or "API". 
   * Name the .mez file: ```ProductName.mez```
 
 * Power BI Desktop (.pbix) file for testing
@@ -108,14 +108,14 @@ The connector must follow a set of feature and style rules to meet a usability s
    * Have [version adornment](HandlingVersioning.md) on section.
    * Provide [function documentation metadata](HandlingDocumentation.md).
    * Have [TestConnection handler](HandlingGatewaySupport.md).
-   * Follow naming conventions (for example, `DataSourceKind.FunctionName`).
+   * Follow naming conventions (for example, `DataSourceKind.FunctionName`). It should not include words like "Power BI", "Connector" or "API". 
 
 * The ```FunctionName``` should make sense for the domain (for example "Contents", "Tables", "Document", "Databases", and so on).
 
 * The connector SHOULD:
    * Have icons.
    * Provide a navigation table.
-   * Place strings in a `resources.resx` file.
+   * Place strings in a `resources.resx` file. URLs and values should be hardcoded in the connector code and not be placed in the `resources.resx` file. 
  
 ### Security
 
