@@ -55,7 +55,7 @@ In addition to the metadata file, the dataflow folder includes other subfolders.
 
 ## How to see or access Common Data Model folders
 
-If you're using dataflows that use storage provided by the product they were created in, you won't have access to those folders directly. In such cases, getting data from the dataflows requires using the Power Platform dataflow connector available in the **Get data** experience in the Power BI service, Power Apps, and Dynamics 35 Customer Insights products, or in Power BI Desktop.
+If you're using dataflows that use storage provided by the product they were created in, you won't have access to those folders directly. In such cases, getting data from the dataflows requires using the Microsoft Power Platform dataflow connector available in the **Get data** experience in the Power BI service, Power Apps, and Dynamics 35 Customer Insights products, or in Power BI Desktop.
 
 ![Connect to data for an analytical dataflow](media/GetdatafromAnalyticalDataflow.png) 
 

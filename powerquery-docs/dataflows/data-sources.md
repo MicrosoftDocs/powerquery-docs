@@ -1,6 +1,6 @@
 ---
 title: Connect to data sources for dataflows
-description: Learn how to connect to data sources for dataflows
+description: Learn how to connect to data sources for dataflows.
 author: bensack
 manager: kfile
 ms.reviewer: ''
@@ -16,7 +16,7 @@ LocalizationGroup: Data from files
 
 [!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
 
-With Power Platform dataflows, you can connect to many different data sources to create new dataflows, or add new entities to an existing dataflow.
+With Microsoft Power Platform dataflows, you can connect to many different data sources to create new dataflows, or add new entities to an existing dataflow.
 
 This article lists many available data sources for creating or adding to dataflows, and describes how to create those dataflows by using these data sources. For an overview of how to create and use dataflows, see [Creating and using dataflows in Power BI](https://docs.microsoft.com/power-bi/service-dataflows-create-use).
 

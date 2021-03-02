@@ -1,6 +1,6 @@
 --- 
 title: Understanding the differences between standard and analytical dataflows 
-description: Understanding the differences between standard and analytical dataflows 
+description: Understanding the differences between standard and analytical dataflows.
 author: radacad 
 ms.service: powerquery 
 ms.topic: conceptual 
@@ -33,7 +33,7 @@ We've been working on significant updates to standard dataflows to improve their
 
 ## Analytical dataflows 
 
-An analytical dataflow loads data to storage types optimized for analytics&mdash;Azure Data Lake Storage. Power Platform environments and Power BI workspaces provide customers with a managed analytical storage location that's bundled with those product licenses. In addition, customers can link their organization’s Azure Data Lake storage account as a destination for dataflows.
+An analytical dataflow loads data to storage types optimized for analytics&mdash;Azure Data Lake Storage. Microsoft Power Platform environments and Power BI workspaces provide customers with a managed analytical storage location that's bundled with those product licenses. In addition, customers can link their organization’s Azure Data Lake storage account as a destination for dataflows.
 
 Analytical dataflows are capable additional analytical features. For example, integration with Power BI’s AI features or use of computed entities which will be discussed later.  
 

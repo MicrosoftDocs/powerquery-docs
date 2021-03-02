@@ -18,7 +18,7 @@ In the standard dataflow, you can easily map fields from the dataflow query into
 
 ## What is the relationship and why do you need that?
 
-If you're coming from a database development background, you're familiar with the concept of a relationship between tables. However, many users of Power Platform services aren't coming from that background. You might wonder what the relationship is, or why you should create a relationship between tables.
+If you're coming from a database development background, you're familiar with the concept of a relationship between tables. However, many users of Microsoft Power Platform services aren't coming from that background. You might wonder what the relationship is, or why you should create a relationship between tables.
 
 The tables and their relationship are fundamental concepts of designing a database. To learn everything about relationships is beyond the scope of this article. However, we'll discuss it in a general way here. 
 
