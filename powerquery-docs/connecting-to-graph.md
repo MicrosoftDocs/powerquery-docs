@@ -15,7 +15,7 @@ ms.author: mmasson
 
 Connecting to [Microsoft Graph](https://docs.microsoft.com/graph/overview) REST [APIs](https://graph.microsoft.com) from Power Query isn't recommended or supported. Instead, we recommend users explore alternative solutions for retrieving analytics data based on Graph, such as [Microsoft Graph data connect](https://docs.microsoft.com/graph/overview#access-microsoft-graph-data-at-scale-using-microsoft-graph-data-connect).
 
-Users may find they can make certain REST calls to Microsoft Graph API endpoints work through the ```Web.Contents``` or ```OData.Feed``` functions, but these approaches are not reliable as long-term solutions. 
+Users may find they can make certain REST calls to Microsoft Graph API endpoints work through the `Web.Contents` or `OData.Feed` functions, but these approaches are not reliable as long-term solutions. 
 
 This article outlines the issues associated with Microsoft Graph connectivity from Power Query and explain why it isn't recommended.
 
