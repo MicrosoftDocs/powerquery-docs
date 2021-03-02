@@ -1,6 +1,6 @@
 ---
 title: Configuring storage and compute options for analytical dataflows
-description: Configuring storage and compute options for analytical dataflows
+description: Configuring storage and compute options for analytical dataflows.
 author: radacad
 
 ms.service: powerquery
@@ -21,7 +21,7 @@ Analytical dataflows allow an additional storage option: your organizations' Azu
 
 ## Dataflows that use built-in storage
 
-By default, analytical dataflows will use the built-in Data Lake Storage; for example, when you create a dataflow in Power BI or Power Apps. Access to the output of this type of dataflow is only possible through the Power Platform dataflows connector in Power BI Desktop, or from other dataflows.
+By default, analytical dataflows will use the built-in Data Lake Storage; for example, when you create a dataflow in Power BI or Power Apps. Access to the output of this type of dataflow is only possible through the Microsoft Power Platform dataflows connector in Power BI Desktop, or from other dataflows.
 
 ## Dataflows that use customer-provided storage
 

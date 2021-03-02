@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting dataflow issue - get data from dataflow
-description: Troubleshooting dataflow issue - get data from dataflow
+description: Troubleshooting dataflow issue - get data from dataflow.
 author: radacad
 
 ms.service: powerquery
@@ -39,9 +39,9 @@ After a dataflow is refreshed, the data in entities will be visible in the **Nav
 
 More information: [Refreshing a dataflow in Power BI](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-configure-consume#refreshing-a-dataflow) and [Set the refresh frequency in Power Apps](https://docs.microsoft.com/powerapps/maker/common-data-service/create-and-use-dataflows#set-the-refresh-frequency)
 
-## My Power Platform dataflow isn't listed
+## My Microsoft Power Platform dataflow isn't listed
 
-Sometimes, you have a Power Platform dataflow you created and also refreshed, but you still can't access it through the **Get data** command. This might be because the account that's trying to access the dataflow doesn't have access. However, if the account does have access to the dataflow, another reason might be the type of dataflow you're accessing.
+Sometimes, you have a Microsoft Power Platform dataflow you created and also refreshed, but you still can't access it through the **Get data** command. This might be because the account that's trying to access the dataflow doesn't have access. However, if the account does have access to the dataflow, another reason might be the type of dataflow you're accessing.
 
 You might receive the error message "We reached the end of the buffer" or "DataFormat.Error: We reached the end of the buffer".
 

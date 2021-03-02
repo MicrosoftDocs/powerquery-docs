@@ -1,6 +1,6 @@
 ---
 title: Using the output of Power Platform dataflows from other Power Query experiences
-description: Using the output of Power Platform dataflows from other Power Query experiences
+description: Using the output of Microsoft Power Platform dataflows from other Power Query experiences.
 author: radacad
 
 ms.service: powerquery
@@ -11,9 +11,9 @@ ms.author: bezhan
 LocalizationGroup: Data from files
 ---
 
-# Using the output of Power Platform dataflows from other Power Query experiences
+# Using the output of Microsoft Power Platform dataflows from other Power Query experiences
 
-You can use the output of Power Platform dataflows from the Power Query experience in other products. For example, in Power BI Desktop&mdash;or even in another dataflow&mdash;you can get data from the output of a dataflow. In this article, you'll learn how to do so.
+You can use the output of Microsoft Power Platform dataflows from the Power Query experience in other products. For example, in Power BI Desktop&mdash;or even in another dataflow&mdash;you can get data from the output of a dataflow. In this article, you'll learn how to do so.
 
 ## Get data from dataflows in Power BI
 
@@ -50,5 +50,5 @@ The following articles provide more details about related articles.
 - [Creating and using dataflows in Power BI](https://docs.microsoft.com/power-bi/service-dataflows-create-use)
 - [Link entities between dataflows in Power BI](https://docs.microsoft.com/power-bi/service-dataflows-linked-entities)
 - [Connect to data created by Power BI dataflows in Power BI Desktop (Beta)](https://docs.microsoft.com/power-bi/desktop-connect-dataflows)
-- [Create and use dataflows in the Power Platform](https://docs.microsoft.com/data-integration/dataflows/dataflows-integration-overview)
+- [Create and use dataflows in Power Platform](https://docs.microsoft.com/data-integration/dataflows/dataflows-integration-overview)
 - [Link entities between dataflows (Power Platform)](https://docs.microsoft.com/data-integration/dataflows/dataflows-linked-entities)

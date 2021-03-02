@@ -148,7 +148,7 @@ Both approaches work according to your specified definitions in the refresh sett
 
 ## Considerations and limitations
 
-Incremental refresh in Power Platform dataflows is only supported in dataflows with an Azure Data Lake Storage account, not in dataflows with Dataverse as the destination. 
+Incremental refresh in Microsoft Power Platform dataflows is only supported in dataflows with an Azure Data Lake Storage account, not in dataflows with Dataverse as the destination. 
 
 ### See also
 
