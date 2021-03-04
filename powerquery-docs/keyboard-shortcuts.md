@@ -82,8 +82,8 @@ When using the Query Editor in Power Query Online, you can press ```Ctrl + ?``` 
 
 | **To do this action** | **Press** |
 | --- | --- |
-| Expand focused query | **Ctrl + Right arrow key** |
-| Collapse focused query | **Ctrl + Left arrow key** |
+| Expand selected query | **Ctrl + Right arrow key** |
+| Collapse selected query | **Ctrl + Left arrow key** |
 | Move focus from query level to step level | **Alt + Down arrow key** |
 | Move focus from step level to query level | **Esc** |
 | Expand all queries | **Ctrl + Shift + Right arrow key** |
