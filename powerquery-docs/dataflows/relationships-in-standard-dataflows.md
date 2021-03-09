@@ -41,7 +41,7 @@ In Dataverse, you can have a field defined as a lookup field, which points to an
 > [!div class="mx-imgBorder"]
 > ![Lookup field](media/1/LookupField.png)
 
-In the preceding image, the Region field is a lookup field to another table named Region Lookup. To learn more about different types of relationships, go to [Create a relationship between tables](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-entity-lookup).
+In the preceding image, the Region field is a lookup field to another table named Region Lookup. To learn more about different types of relationships, go to [Create a relationship between tables](/powerapps/maker/common-data-service/data-platform-entity-lookup).
 
 ## When the field mapping doesn't show the relationship fields
 
@@ -61,5 +61,4 @@ After setting the key field, you can see the field in the mapping of the dataflo
 
 ## Known limitations
 
-- Mapping to [polymorphic lookup](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-references#polymorphic-lookups) fields is currently not supported.
-
+- Mapping to [polymorphic lookup](/powerapps/maker/canvas-apps/working-with-references#polymorphic-lookups) fields is currently not supported.

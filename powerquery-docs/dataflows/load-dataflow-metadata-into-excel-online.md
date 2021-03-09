@@ -30,11 +30,11 @@ You can use this dashboard to monitor your dataflows' refresh duration and failu
 
 * [Power BI Desktop](https://www.microsoft.com/download/details.aspx?id=58494).
 
-* A [Premium Power Automate License](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)
+* A [Premium Power Automate License](/power-platform/admin/pricing-billing-skus)
 
 * [OneDrive for Business](https://www.microsoft.com/en/microsoft-365/onedrive/onedrive-for-business).
 
-* A [Power BI dataflow](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service) or [Power Platform dataflow](https://docs.microsoft.com/powerapps/maker/common-data-service/create-and-use-dataflows).
+* A [Power BI dataflow](/power-bi/transform-model/dataflows/dataflows-introduction-self-service) or [Power Platform dataflow](/powerapps/maker/common-data-service/create-and-use-dataflows).
 
 ## Download the .pbit file
 
@@ -46,13 +46,13 @@ Next, download the [.xlsx file](https://download.microsoft.com/download/1/4/E/14
 
 ## Create a dataflow
 
-If you do not already have one, create a dataflow. This can be done in either [Power BI dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service) or [Power Apps dataflows](https://docs.microsoft.com/powerapps/maker/common-data-service/create-and-use-dataflows).
+If you do not already have one, create a dataflow. This can be done in either [Power BI dataflows](/power-bi/transform-model/dataflows/dataflows-introduction-self-service) or [Power Apps dataflows](/powerapps/maker/common-data-service/create-and-use-dataflows).
 
 ## Create a flow in Power Automate 
 
 * Navigate to [Power Automate](https://flow.microsoft.com).
 
-* Search for the template "When a dataflow refresh completes, output status into Excel". If you encounter difficulty, see these [instructions](https://docs.microsoft.com/power-automate/get-started-logic-template).
+* Search for the template "When a dataflow refresh completes, output status into Excel". If you encounter difficulty, see these [instructions](/power-automate/get-started-logic-template).
 
 ![example of excel template](media/templateexcel.PNG)
 

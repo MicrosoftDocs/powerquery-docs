@@ -104,6 +104,6 @@ If multiple Power BI solutions are using the same transformed version of a table
 
 The following articles provide further study materials for dataflows. 
 
-- [Create and use dataflows in Microsoft Power Platform](https://docs.microsoft.com/data-integration/dataflows/dataflows-integration-overview) 
+- [Create and use dataflows in Microsoft Power Platform](/data-integration/dataflows/dataflows-integration-overview) 
 
-- [Creating and using dataflows in Power BI](https://docs.microsoft.com/power-bi/service-dataflows-create-use) 
+- [Creating and using dataflows in Power BI](/power-bi/service-dataflows-create-use)

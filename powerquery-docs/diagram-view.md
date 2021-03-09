@@ -108,7 +108,7 @@ You can view the query groups above the query box in the diagram view.
 
 ### Create function
 
-When you need to apply the same set of transformations in different queries or values, creating custom Power Query *functions* can be valuable. To learn more about custom functions, go to [Using custom functions](https://docs.microsoft.com/power-query/custom-function). To convert a query into a reusable function, right-click in a given query and select **Create function**. 
+When you need to apply the same set of transformations in different queries or values, creating custom Power Query *functions* can be valuable. To learn more about custom functions, go to [Using custom functions](./custom-function.md). To convert a query into a reusable function, right-click in a given query and select **Create function**. 
 
 ![Create function option inside the query contextual menu](images/diagram-view-create-function.png) 
 
@@ -128,7 +128,7 @@ With the advanced editor, you can see the code that Power Query editor is creati
 ![Advanced editor option inside the query contextual menu](images/diagram-view-advanced-editor.png) 
 
 >[!NOTE]
-> To learn more about the code used in the advanced editor, go to [Power Query M language specification](https://docs.microsoft.com/powerquery-m/power-query-m-language-specification). 
+> To learn more about the code used in the advanced editor, go to [Power Query M language specification](/powerquery-m/power-query-m-language-specification). 
 
 ### Edit query name and description 
 
@@ -284,4 +284,4 @@ Similarly, you can select the right dongle to view direct and indirect dependent
 
 You can also hover on the link icon below a step to view a callout that shows the query relationships. 
 
-![Referenced queries are listed in a callout after hovering over the link icon below a step](images/diagram-view-hover-link-icon.png) 
+![Referenced queries are listed in a callout after hovering over the link icon below a step](images/diagram-view-hover-link-icon.png)

@@ -94,6 +94,6 @@ If you want to read more details about the concepts discussed in this article, f
 
 - [Computed entities](computed-entities.md)
 - [Linked entities](linked-entities.md)
-- [AI capabilities in Power BI dataflows](https://docs.microsoft.com/power-bi/service-machine-learning-automated)
+- [AI capabilities in Power BI dataflows](/power-bi/service-machine-learning-automated)
 - [Standard vs. analytical dataflows](understanding-differences-between-analytical-standard-dataflows.md)
-- [The enhanced compute engine](https://docs.microsoft.com/power-bi/transform-model/service-dataflows-enhanced-compute-engine)
+- [The enhanced compute engine](/power-bi/transform-model/service-dataflows-enhanced-compute-engine)

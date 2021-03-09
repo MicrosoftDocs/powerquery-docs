@@ -26,11 +26,11 @@ First, you will create a new Dataverse table which stores all the metadata from 
 ## Prerequisites
 * [Power BI Desktop](https://www.microsoft.com/download/details.aspx?id=58494).
 
-* A [Dataverse environment](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-intro) with permissions to create new custom tables.
+* A [Dataverse environment](/powerapps/maker/common-data-service/data-platform-intro) with permissions to create new custom tables.
 
-* A [Premium Power Automate Licence](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus).
+* A [Premium Power Automate Licence](/power-platform/admin/pricing-billing-skus).
 
-* A [Power BI dataflow](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service) or [Power Platform dataflow](https://docs.microsoft.com/powerapps/maker/common-data-service/create-and-use-dataflows).
+* A [Power BI dataflow](/power-bi/transform-model/dataflows/dataflows-introduction-self-service) or [Power Platform dataflow](/powerapps/maker/common-data-service/create-and-use-dataflows).
 
 ## Download the .pbit file
 
@@ -40,7 +40,7 @@ First, download the Dataverse [.pbit file](https://download.microsoft.com/downlo
 
 * Navigate to the [Power Apps portal](https://powerapps.microsoft.com/).
 
-* Follow these [instructions](https://docs.microsoft.com/powerapps/maker/common-data-service/create-custom-entity) to create a new table.
+* Follow these [instructions](/powerapps/maker/common-data-service/create-custom-entity) to create a new table.
 
 * In the right pane, enter the following values, and then select `Create`
     * **Display name**: "Dataflow Name"
@@ -55,11 +55,11 @@ First, download the Dataverse [.pbit file](https://download.microsoft.com/downlo
 
 ## Create a dataflow
 
-If you do not already have one, create a dataflow. This can be done in either [Power BI dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service) or [Power Apps dataflows](https://docs.microsoft.com/powerapps/maker/common-data-service/create-and-use-dataflows).
+If you do not already have one, create a dataflow. This can be done in either [Power BI dataflows](/power-bi/transform-model/dataflows/dataflows-introduction-self-service) or [Power Apps dataflows](/powerapps/maker/common-data-service/create-and-use-dataflows).
 
 ## Create a Power Automate Flow
 * Navigate to [Power Automate](https://flow.microsoft.com).
-* Search for the template "When a dataflow refresh completes, output status into CDS entity". If you encounter issues, see these [instructions](https://docs.microsoft.com/power-automate/get-started-logic-template).
+* Search for the template "When a dataflow refresh completes, output status into CDS entity". If you encounter issues, see these [instructions](/power-automate/get-started-logic-template).
 
 ![example of template](media/connector.PNG)
 
