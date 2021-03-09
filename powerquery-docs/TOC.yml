@@ -215,7 +215,9 @@
           href: dataflows/troubleshooting-dataflow-issue-get-data-from-dataflow.md
         - name: "Connecting to the data source"
           href: dataflows/troubleshooting-dataflow-issues-connection-to-the-data-source.md
-    - name: Best practices in Power Query
+    - name: Keyboard shortcuts
+      href: keyboard-shortcuts.md
+    - name: Best practices
       href: best-practices.md
     - name: Advanced topics
       items:
