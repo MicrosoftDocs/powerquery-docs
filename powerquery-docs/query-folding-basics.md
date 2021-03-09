@@ -9,7 +9,7 @@ ms.author: v-miesco
 ---
 # Query folding basics
 
-Whenever you apply transforms to source data in Power Query, it does its best to have as many as possible of these transformations done on the data source, rather than locally (on your machine or in the cloud service). This is called *query folding*. All of the transforms you apply when working in Power Query are stored in a document (that can be viewed in the Advanced Editor) written in the [M language](https://docs.microsoft.com/powerquery-m/), and a subset of them are turned into the native query language (such as SQL and API calls) of your data source.
+Whenever you apply transforms to source data in Power Query, it does its best to have as many as possible of these transformations done on the data source, rather than locally (on your machine or in the cloud service). This is called *query folding*. All of the transforms you apply when working in Power Query are stored in a document (that can be viewed in the Advanced Editor) written in the [M language](/powerquery-m/), and a subset of them are turned into the native query language (such as SQL and API calls) of your data source.
 
 Depending on how the query is structured, there could be three possible outcomes for this mechanism:
 * **Full query Folding**: When all of your query transformations get pushed back to the data source and no processing occurs locally by the Power Query engine. Instead you receive your desired output directly from the data source.
@@ -25,7 +25,7 @@ This article provides some example scenarios for each of the possible outcomes f
 
 ## Full query folding
 
-For this scenario, you'll be connecting to a Microsoft SQL Server and the data you'll be using is the sample AdventureWorks database in its Data Warehouse version. You can download this database from the article [AdventureWorks sample database](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
+For this scenario, you'll be connecting to a Microsoft SQL Server and the data you'll be using is the sample AdventureWorks database in its Data Warehouse version. You can download this database from the article [AdventureWorks sample database](/sql/samples/adventureworks-install-configure).
 
 After identifying the data source, we suggest that you pick the native connectors found in the **Get Data** dialog box. In this case, the connector to be used is the [Microsoft SQL Server Connector](Connectors/SQLServer.md).
 
@@ -111,5 +111,4 @@ One example can be seen in the article about [combining multiple CSV files from 
 * Use the query diagnostics tool to your advantage and to better understand the requests being sent to your data source when query folding capabilities are available for the connector.
 * When combining data sourced from the use of multiple connectors, Power Query tries to push as much work as possible to both of the data sources while complying with the privacy levels defined for each data source. 
 * Read the article on [Privacy levels](dataprivacyfirewall.md) to protect your queries from running against a Data Privacy Firewall error.
-* You can also use other tools to check query folding from the perspective of the request being received by the data source. Based on our example, you can use the Microsoft SQL Server Profile to check the requests being sent by Power Query and received by the Microsoft SQL Server. 
-
+* You can also use other tools to check query folding from the perspective of the request being received by the data source. Based on our example, you can use the Microsoft SQL Server Profile to check the requests being sent by Power Query and received by the Microsoft SQL Server.

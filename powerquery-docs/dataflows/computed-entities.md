@@ -22,7 +22,7 @@ To perform in-storage computations, you first must create the dataflow and bring
 
 There are two ways you can connect dataflow data to Power BI:
 
-* [Using self-service authoring of a dataflow](https://docs.microsoft.com/power-bi/service-dataflows-create-use)
+* [Using self-service authoring of a dataflow](/power-bi/service-dataflows-create-use)
 * Using an external dataflow
 
 The following sections describe how to create computed entities on your dataflow data.
@@ -69,7 +69,7 @@ And that's it&mdash;the transformation is done on the data in the dataflow that 
 
 It's important to note that if you remove the workspace from Power BI Premium capacity, the associated dataflow will no longer be refreshed.
 
-When working with dataflows specifically created in an organization's Azure Data Lake Storage account, linked entities and computed entities only work properly when the entities reside in the same storage account. More information: [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://docs.microsoft.com/power-bi/service-dataflows-connect-azure-data-lake-storage-gen2)
+When working with dataflows specifically created in an organization's Azure Data Lake Storage account, linked entities and computed entities only work properly when the entities reside in the same storage account. More information: [Connect Azure Data Lake Storage Gen2 for dataflow storage](/power-bi/service-dataflows-connect-azure-data-lake-storage-gen2)
 
 Linked entities are only available for dataflows created in Power BI and Power Apps. As a best practice, when doing computations on data joined by on-premises and cloud data, create a new entity to perform such computations. This provides a better experience than using an existing entity for computations, such as an entity that is also querying data from both sources and doing in-storage transformations.
 
@@ -86,16 +86,16 @@ This article described computed entities and dataflows. Here are some more artic
 
 The following links provide additional information about dataflows in Power BI and other resources:
 
-* [Create and use dataflows in Power BI](https://docs.microsoft.com/power-bi/service-dataflows-create-use)
-* [Using dataflows with on-premises data sources](https://docs.microsoft.com/power-bi/service-dataflows-on-premises-gateways)
-* [Developer resources for Power BI dataflows](https://docs.microsoft.com/power-bi/service-dataflows-developer-resources)
-* [Configure workspace dataflow settings (Preview)](https://docs.microsoft.com/power-bi/service-dataflows-configure-workspace-storage-settings)
-* [Add a CDM folder to Power BI as a dataflow (Preview)](https://docs.microsoft.com/power-bi/service-dataflows-add-cdm-folder)
-* [Connect Azure Data Lake Storage Gen2 for dataflow storage (Preview)](https://docs.microsoft.com/power-bi/service-dataflows-connect-azure-data-lake-storage-gen2)
+* [Create and use dataflows in Power BI](/power-bi/service-dataflows-create-use)
+* [Using dataflows with on-premises data sources](/power-bi/service-dataflows-on-premises-gateways)
+* [Developer resources for Power BI dataflows](/power-bi/service-dataflows-developer-resources)
+* [Configure workspace dataflow settings (Preview)](/power-bi/service-dataflows-configure-workspace-storage-settings)
+* [Add a CDM folder to Power BI as a dataflow (Preview)](/power-bi/service-dataflows-add-cdm-folder)
+* [Connect Azure Data Lake Storage Gen2 for dataflow storage (Preview)](/power-bi/service-dataflows-connect-azure-data-lake-storage-gen2)
 
 For more information about Power Query and scheduled refresh, you can read these articles:
-* [Query overview in Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-query-overview)
-* [Configuring scheduled refresh](https://docs.microsoft.com/power-bi/refresh-scheduled-refresh)
+* [Query overview in Power BI Desktop](/power-bi/desktop-query-overview)
+* [Configuring scheduled refresh](/power-bi/refresh-scheduled-refresh)
 
 For more information about Common Data Model, you can read its overview article:
-* [Common Data Model](https://docs.microsoft.com/powerapps/common-data-model/overview)
+* [Common Data Model](/powerapps/common-data-model/overview)

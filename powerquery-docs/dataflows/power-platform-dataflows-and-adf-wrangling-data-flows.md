@@ -26,7 +26,7 @@ Power Platform dataflows are data transformation services empowered by the Power
 
 Data Factory is a cloud-based extract, transform, load (ETL) service that supports many different sources and destinations. There are two types of dataflows under this technology: mapping dataflows and wrangling dataflows. Wrangling dataflows are empowered by the Power Query engine for data transformation.
 
-![Wrangling dataflow](https://docs.microsoft.com/azure/data-factory/media/wrangling-data-flow/tutorial6.png)
+![Wrangling dataflow](/azure/data-factory/media/wrangling-data-flow/tutorial6.png)
 
 ## What do they have in common?
 
@@ -42,8 +42,8 @@ The main point is knowing their differences, because then you can think about sc
 | Features                   | Power Platform dataflows                                     | Data Factory wrangling dataflows                       |
 | -------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Destinations               | Dataverse or Azure Data Lake Storage        | Many destinations ([see the list here](https://azure.microsoft.com/blog/new-connectors-available-in-azure-data-factory-v2/)) |
-| Power Query transformation | All Power Query functions are supported                      | A limited set of functions are supported ([see the list here](https://docs.microsoft.com/azure/data-factory/wrangling-data-flow-functions)) |
-| Sources                    | Many sources are supported                                  | Only a few sources ([see the list here](https://docs.microsoft.com/azure/data-factory/wrangling-data-flow-functions)) |
+| Power Query transformation | All Power Query functions are supported                      | A limited set of functions are supported ([see the list here](/azure/data-factory/wrangling-data-flow-functions)) |
+| Sources                    | Many sources are supported                                  | Only a few sources ([see the list here](/azure/data-factory/wrangling-data-flow-functions)) |
 | Scalability                | Depends on the Premium capacity and the use of the enhanced compute engine | Highly scalable |
 | | |
 
