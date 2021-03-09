@@ -4,14 +4,14 @@ description: This article provides information about global keyboard shortcuts i
 author: heydh
 ms.service: powerquery
 ms.reviewer: kvivek
-ms.date: 03/02/2021
+ms.date: 03/08/2021
 ms.author: dhsundar
 ms.custom: edited
 ---
 
 # Keyboard shortcuts in Power Query
 
-Keyboard shortcuts provide a quick way to navigate and allow users to work more efficiently. For users with mobility or vision disabilities, keyboard shortcuts can be easier than using the touchscreen and are an essential alternative to using the mouse. The table in this article lists all the shortcuts available in Power Query Online.
+Keyboard shortcuts provide a quick way to navigate and allow users to work more efficiently. For users with mobility or vision disabilities, keyboard shortcuts can be easier than using the touchscreen, and are an essential alternative to using the mouse. The table in this article lists all the shortcuts available in Power Query Online.
 
 When using the Query Editor in Power Query Online, you can press Ctrl+? or navigate to the **Keyboard shortcuts** button in the **Help** tab to view the list of keyboard shortcuts.
 
