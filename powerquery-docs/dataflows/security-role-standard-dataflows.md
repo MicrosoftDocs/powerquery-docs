@@ -21,7 +21,7 @@ If someone in the team has created a dataflow and wants to share it with other t
 A standard dataflow stores data in Dataverse. Dataverse is located in an environment. Before accessing data stored in Dataverse, and also dataflows, you first need to have access to the environment.
 
 > [!div class="mx-imgBorder"]
-> ![Image demonstrating how to add a user to the environment](https://docs.microsoft.com/power-platform/admin/media/add-user.png)
+> ![Image demonstrating how to add a user to the environment](/power-platform/admin/media/add-user.png)
 
 ## Roles
 
@@ -42,9 +42,9 @@ If you haven't heard of row-level security before, here's a quick introduction. 
 
 ## Steps to assign roles
 
-The steps in the following procedure are sourced from [Configure user security to resources in an environment](https://docs.microsoft.com/power-platform/admin/database-security). 
+The steps in the following procedure are sourced from [Configure user security to resources in an environment](/power-platform/admin/database-security). 
 
-Verify that the user you want to assign a security role to is present in the environment. If not, add the user to the environment. You can assign a security role as part of the process of adding the user. More information: [Add users to an environment](https://docs.microsoft.com/power-platform/admin/add-users-to-environment)
+Verify that the user you want to assign a security role to is present in the environment. If not, add the user to the environment. You can assign a security role as part of the process of adding the user. More information: [Add users to an environment](/power-platform/admin/add-users-to-environment)
 
 In general, a security role can only be assigned to users who are in the Enabled state. But if you need to assign a security role to users in the Disabled state, you can do so by enabling **allowRoleAssignmentOnDisabledUsers** in OrgDBOrgSettings.
 
@@ -57,16 +57,16 @@ To add a security role to a user who is already present in an environment:
 3. Select **Manage users in Dynamics 365**.
 
    > [!div class="mx-imgBorder"]
-   > ![Select Manage users in Dynamics 365](https://docs.microsoft.com/power-platform/admin/media/manage-users-dynamics-365.png)
+   > ![Select Manage users in Dynamics 365](/power-platform/admin/media/manage-users-dynamics-365.png)
 
 4. Select the user from the list of users in the environment, and then select **Manage roles**.
 
    > [!div class="mx-imgBorder"]
-   > ![Select Manage roles](https://docs.microsoft.com/power-platform/admin/media/select-manage-roles.png)
+   > ![Select Manage roles](/power-platform/admin/media/select-manage-roles.png)
 
 5. Assign one or more security roles to the user.
 
    > [!div class="mx-imgBorder"]
-   > ![Manage user roles](https://docs.microsoft.com/power-platform/admin/media/manage-user-roles.png)
+   > ![Manage user roles](/power-platform/admin/media/manage-user-roles.png)
 
 6. Select **OK**.

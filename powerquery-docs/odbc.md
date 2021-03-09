@@ -404,7 +404,7 @@ LimitClause = (skip, take) =>
 </tr>
 <tr class="even">
 <td>PrepareStatements</td>
-<td><p>A logical value that indicates that statements should be prepared using <a href="https://docs.microsoft.com/sql/odbc/reference/syntax/sqlprepare-function">SQLPrepare</a>.</p>
+<td><p>A logical value that indicates that statements should be prepared using <a href="/sql/odbc/reference/syntax/sqlprepare-function">SQLPrepare</a>.</p>
 <p>Default: false</p></td>
 </tr>
 <tr class="odd">
@@ -456,7 +456,7 @@ LimitClause = (skip, take) =>
 ### Overriding SQLColumns
 
 `SQLColumns` is a function handler that receives the results of an ODBC call
-to [SQLColumns](https://docs.microsoft.com/sql/odbc/reference/syntax/sqlcolumns-function). The source parameter contains a table with the data type information. This override is typically used to fix up data type mismatches between calls to `SQLGetTypeInfo` and `SQLColumns`.
+to [SQLColumns](/sql/odbc/reference/syntax/sqlcolumns-function). The source parameter contains a table with the data type information. This override is typically used to fix up data type mismatches between calls to `SQLGetTypeInfo` and `SQLColumns`.
 
 For details of the format of the source table parameter, see:
 https://docs.microsoft.com/sql/odbc/reference/syntax/sqlcolumns-function
@@ -466,7 +466,7 @@ https://docs.microsoft.com/sql/odbc/reference/syntax/sqlcolumns-function
 This field is used to override SQLFunctions values returned by an ODBC
 driver. It contains a record whose field names are equal to the
 FunctionId constants defined for the ODBC
-[SQLGetFunctions](https://docs.microsoft.com/sql/odbc/reference/syntax/sqlgetfunctions-function)
+[SQLGetFunctions](/sql/odbc/reference/syntax/sqlgetfunctions-function)
 function. Numeric constants for each of these fields can be found in the
 [ODBC
 specification](https://github.com/Microsoft/ODBC-Specification/blob/master/Windows/inc/sqlext.h).
@@ -485,7 +485,7 @@ specification](https://github.com/Microsoft/ODBC-Specification/blob/master/Windo
 </tr>
 <tr class="even">
 <td>SQL_API_SQLBINDCOL</td>
-<td><p>A logical (true/false) value that indicates whether the Mashup Engine should use the <a href="https://docs.microsoft.com/sql/odbc/reference/syntax/sqlbindcol-function">SQLBindCol API</a> when retrieving data. When set to false, <a href="https://docs.microsoft.com/sql/odbc/reference/syntax/sqlgetdata-function">SQLGetData</a> is used instead.</p>
+<td><p>A logical (true/false) value that indicates whether the Mashup Engine should use the <a href="/sql/odbc/reference/syntax/sqlbindcol-function">SQLBindCol API</a> when retrieving data. When set to false, <a href="/sql/odbc/reference/syntax/sqlgetdata-function">SQLGetData</a> is used instead.</p>
 <p>Default: false</p></td>
 </tr>
 </tbody>
@@ -505,7 +505,7 @@ SQLGetFunctions = [
 This field is used to override SQLGetInfo values returned by an ODBC
 driver. It contains a record whose fields are names equal to the
 InfoType constants defined for the ODBC
-[SQLGetInfo](https://docs.microsoft.com/sql/odbc/reference/syntax/sqlgetinfo-function)
+[SQLGetInfo](/sql/odbc/reference/syntax/sqlgetinfo-function)
 function. Numeric constants for each of these fields can be found in the
 [ODBC
 specification](https://github.com/Microsoft/ODBC-Specification/blob/master/Windows/inc/sqlext.h).
@@ -588,7 +588,7 @@ Flags = (flags as list) =>
 The first approach is used to completely override the values returned by the ODBC driver. The second approach is used if you want to add to or modify these values.
 
 For details of the format of the types table parameter and expected return value,
-see the [SQLGetTypeInfo function reference](https://docs.microsoft.com/sql/odbc/reference/syntax/sqlgettypeinfo-function).
+see the [SQLGetTypeInfo function reference](/sql/odbc/reference/syntax/sqlgettypeinfo-function).
 
 #### SQLGetTypeInfo using a static table
 

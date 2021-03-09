@@ -53,9 +53,9 @@ Sometimes, depending on the requirement, you might need to apply some AI and mac
 
 The following articles discuss how to use AI functions in a dataflow: 
 
-- [Azure Machine Learning integration in Power BI](https://docs.microsoft.com/power-bi/service-machine-learning-integration) 
-- [Cognitive Services in Power BI](https://docs.microsoft.com/power-bi/service-cognitive-services) 
-- [Automated Machine Learning in Power BI](https://docs.microsoft.com/power-bi/service-machine-learning-automated) 
+- [Azure Machine Learning integration in Power BI](/power-bi/service-machine-learning-integration) 
+- [Cognitive Services in Power BI](/power-bi/service-cognitive-services) 
+- [Automated Machine Learning in Power BI](/power-bi/service-machine-learning-automated) 
 
 Note that the features listed above are Power BI specific and are not available when creating a dataflow in the Power Apps or Dynamics 365 customer insights portals.  
 
@@ -67,7 +67,7 @@ The computed entity helps with the performance of the data transformations. Inst
 
 ![Computed entity in an analytical dataflow](media/analytical-standard-dataflows/computed-entity-in-dataflow.png) 
 
-To learn more about computed entities, see [Using computed entities on Power BI Premium](https://docs.microsoft.com/power-bi/service-dataflows-computed-entities-premium). 
+To learn more about computed entities, see [Using computed entities on Power BI Premium](/power-bi/service-dataflows-computed-entities-premium). 
 
 Computed entities are available only in an analytical dataflow. 
 

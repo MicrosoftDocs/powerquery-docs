@@ -25,7 +25,7 @@ For sending notifications, you can use three templates:
 
 This tutorial will use the second template.
 * Navigate to [Power Automate](https://flow.microsoft.com).
-* Search for the template "Send email notification on success or failure of a data flow refresh". If you encounter difficulty, see these [instructions](https://docs.microsoft.com/power-automate/get-started-logic-template).
+* Search for the template "Send email notification on success or failure of a data flow refresh". If you encounter difficulty, see these [instructions](/power-automate/get-started-logic-template).
 
 ![notification example in Power Automate](media/emailyesyno.PNG)
 

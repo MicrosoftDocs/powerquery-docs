@@ -18,7 +18,7 @@ LocalizationGroup: Data from files
 
 With Microsoft Power Platform dataflows, you can connect to many different data sources to create new dataflows, or add new entities to an existing dataflow.
 
-This article lists many available data sources for creating or adding to dataflows, and describes how to create those dataflows by using these data sources. For an overview of how to create and use dataflows, see [Creating and using dataflows in Power BI](https://docs.microsoft.com/power-bi/service-dataflows-create-use).
+This article lists many available data sources for creating or adding to dataflows, and describes how to create those dataflows by using these data sources. For an overview of how to create and use dataflows, see [Creating and using dataflows in Power BI](/power-bi/service-dataflows-create-use).
 
 ## Create a dataflow entity from a data source
 
@@ -179,14 +179,14 @@ For information about individual Power Query connectors, go to the [connector re
 
 Additional information about dataflows and related information can be found in the following articles:
 
-* [Create and use dataflows in Power BI](https://docs.microsoft.com/power-bi/service-dataflows-create-use)
-* [Using dataflows with on-premises data sources](https://docs.microsoft.com/power-bi/service-dataflows-on-premises-gateways)
-* [Developer resources for Power BI dataflows](https://docs.microsoft.com/power-bi/service-dataflows-developer-resources)
-* [Dataflows and Azure Data Lake integration (Preview)](https://docs.microsoft.com/power-bi/service-dataflows-azure-data-lake-integration)
+* [Create and use dataflows in Power BI](/power-bi/service-dataflows-create-use)
+* [Using dataflows with on-premises data sources](/power-bi/service-dataflows-on-premises-gateways)
+* [Developer resources for Power BI dataflows](/power-bi/service-dataflows-developer-resources)
+* [Dataflows and Azure Data Lake integration (Preview)](/power-bi/service-dataflows-azure-data-lake-integration)
 
 For more information about Power Query and scheduled refresh, you can read these articles:
-* [Query overview in Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-query-overview)
-* [Configuring scheduled refresh](https://docs.microsoft.com/power-bi/refresh-scheduled-refresh)
+* [Query overview in Power BI Desktop](/power-bi/desktop-query-overview)
+* [Configuring scheduled refresh](/power-bi/refresh-scheduled-refresh)
 
 For more information about Common Data Model, you can read its overview article:
-* [Common Data Model - overview ](https://docs.microsoft.com/powerapps/common-data-model/overview)
+* [Common Data Model - overview ](/powerapps/common-data-model/overview)
