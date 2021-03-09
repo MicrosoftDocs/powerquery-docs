@@ -5,7 +5,7 @@ author: DougKlopfenstein
 ms.service: powerquery
 ms.reviewer: 
 ms.date: 12/01/2020
-ms.author: v-douklo
+ms.author: bezhan
 ---
 
 # Providing user documentation for your custom connector
