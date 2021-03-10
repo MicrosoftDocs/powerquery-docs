@@ -1,36 +1,36 @@
 ---
-title: Step Folding Indicators
+title: Step folding indicators in Power Query
 description: Step folding indicators in Power Query Online allow you to understand what steps fold and give insight into how to build more performant queries.
 author: cpopell
 ms.service: powerquery
-ms.date: 01/01/2021
+ms.date: 03/09/2021
 ms.author: George.Popell
 ---
 
-# Step Folding Indicators
+# Step folding indicators
 
-## Introduction
+> [!NOTE]
+> Before reading this article, we recommended that you read [Query folding in Power Query](query-folding-basics.md) to better understand how folding works in Power Query.
 
->[!NOTE]
-> It is highly recommended that you read the article on [Query Folding in Power Query](query-folding-basics.md) before reading this article to better understand how folding works in Power Query.
+Step folding indicators allow you to understand the steps that fold or not fold. 
 
-Step folding indicators allow you to understand which steps fold, and which steps don't. 
+Using step folding indicators, when you make a change that breaks folding, it will become obvious. This will allow you to more easily resolve issues quickly, avoid performance issues in the first place, and have better insight into your queries. In most cases you run into, steps will simply fold or not fold. There are a number of cases where the outcome isn't as obvious, discussed in the section on [Step diagnostics indicators](#step-diagnostics-indicators) (Dynamic, Opaque, and Unknown
+) later in this article.
 
-Using step folding indicators, when you make a change that breaks folding, it will become obvious. This will allow you to more easily resolve issues quickly, avoid performance issues in the first place, and have better insight into your queries. In most cases you run into, steps will simply fold or not fold. There are a number of cases where the outcome isn't as obvious, discussed in the section on Indicators (Dynamic, Opaque, and Unknown).
+> [!NOTE]
+> The step folding indicators feature is available only for Power Query Online.
 
->[!NOTE]
-> The step folding indicators feature is only available for Power Query Online.
-
-## Enabling Step Diagnostics
+## Enabling step diagnostics
 
 
-## Interpreting Step Diagnostics
 
-When looking at step diagnostics, the most important thing to understand is that the diagnostic state isn't sequential. In other words, the indicator for that step describes whether the query as a whole, up to that point, folds or not. If you have an indicator that shows that the query doesn't fold, followed by an indicator that shows it does fold, that means that every step up to that point does fold.
+## Interpreting step diagnostics
+
+When looking at step diagnostics, the most important thing to understand is that the diagnostic state isn't sequential. In other words, the indicator for that step describes whether the query as a whole, up to that point, folds or not. If you have an indicator that shows that the query doesn't fold, followed by an indicator that shows it does fold, it means that every step up to that point does fold.
 
 You can see an example of this even with a very simple query against a SQL source.
 
-Using the Northwind sample database, I've connected to the Products table and loaded data. Doing this through the Navigation experience gives me the following query:
+Using the Northwind sample database, connect to the Products table and load data. Doing this through the Navigation experience will give the following query:
 
 ```
 let
@@ -41,7 +41,7 @@ in
   #"Navigation 2"
 ```
 
-If you look at how this shows up in step folding indicators, you can see that the first step doesn't fold, the second step is inconclusive, and that the third step folds.
+If you look at how this shows up in step folding indicators, you can see that the first step doesn't fold, the second step is inconclusive, and the third step folds.
 
 ![Source, Navigation 1, and Navigation 2 steps in Folding Indicator pane](images/interpreting-step-diagnostics-1.png)
 
@@ -65,7 +65,7 @@ In step folding indicators, you will see that you have the exact same indicators
 
 ![Source, Navigation 1, Navigation 2, and Capitalize Each Word steps in Folding Indicator pane](images/interpreting-step-diagnostics-2.png)
 
-## Step Diagnostics Indicators
+## Step diagnostics indicators
 
 Step folding indicators use an underlying query plan, and require it to be able to get information about the query to report it. Currently the query plan only supports tables, so some cases (lists, records, primitives) will not report as folding or not. Similarly, constant tables will report as opaque. 
 
@@ -77,7 +77,7 @@ Step folding indicators use an underlying query plan, and require it to be able 
 |**Opaque**|![Folding indicator for 'opaque, inconclusive folding'](images/opaque-folding-small.png)|Opaque indicators tell you that the resulting query plan is inconclusive for some reason. It generally indicates that there is a true 'constant' table, or that that transform or connector is not supported by the indicators and query plan tool.|
 |**Unknown**|![Folding indicator for 'no query plan'](images/no-query-plan-small.png)|Unknown indicators represent an absence of query plan, either due to an error or attempting to run the query plan evaluation on something other than a table (such as a record, list, or primitive).|
 
-## Example Analysis
+## Example analysis
 
 You can see a simple example by connecting to the Products table in Adventure Works (SQL). The initial load, similar to above, will look as follows:
 
@@ -87,18 +87,16 @@ Adding more steps that fold will extend that green line. This is because this st
 
 ![Adding a remove column step to the previous query, extending the folding indicator line](images/example-step-diagnostics-2.png)
 
- Adding a step that doesn't fold will show an indicator--for example, Capitalize Each Word will never fold. We can see obviously that the indicator changes, showing that as of this step it's stopped folding. As I said above, the previous steps will still fold.
+ Adding a step that doesn't fold will show an indicator, for example, **Capitalize each word** will never fold. We can see obviously that the indicator changes, showing that as of this step, it's stopped folding. As mentioned earlier, the previous steps will still fold.
 
  ![Adding a Capitalize Each Word step to break folding](images/example-step-diagnostics-3.png)
 
- Adding more steps downstream of this that depend on Capitalize Each Step will continue to not fold.
+ Adding more steps downstream that depend on **Capitalize each step** will continue to not fold.
 
  ![Adding more steps that don't fold](images/example-step-diagnostics-4.png)
 
 
- However, if you (for example) remove the column you applied the capitalization to, so that the optimized query plan can all fold once more, you'll get a result like this--although something like this is uncommon. This shows you how it's not just the order of steps, but the actual transformations that apply as well.
+ However, if you remove the column you applied the capitalization to so that the optimized query plan can all fold once more, you'll get a result like this; although something like this is uncommon. This shows you how it's not just the order of steps, but the actual transformations that apply as well.
 
  ![Showing how removing the problematic column allows things to fold without removing the step](images/example-step-diagnostics-5.png)
  
- >[!NOTE]
-> In the future the Power Query team will be exposing the ability to examine the query plan in greater depth more directly, for advanced users. This will allow users to actually check what operations have folded.
