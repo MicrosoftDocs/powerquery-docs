@@ -19,15 +19,8 @@ When using the Query Editor in Power Query Online, you can press Ctrl+? or navig
 
 | Action | Keyboard shortcut |
 | --- | --- |
-| Get Data | Ctrl+Alt+D |
-| Enter Data | Ctrl+Alt+T |
-| Add custom column | Ctrl+Alt+C |
-| Choose column | Ctrl+K |
 | Go to column | Ctrl+G |
 | Add column from examples | Ctrl+E |
-| Blank query | Ctrl+M |
-| Advanced editor | Ctrl+Shift+M |
-| Refresh | Alt+F5 |
 
 ## Data Preview
 
@@ -37,7 +30,7 @@ When using the Query Editor in Power Query Online, you can press Ctrl+? or navig
 | Select all cells | Ctrl+A |
 | Select column | Ctrl+Space |
 
-### When the focus is on the column header
+##### When the focus is on the column header
 
 | Action | Keyboard shortcut|
 | --- | --- |
@@ -48,7 +41,7 @@ When using the Query Editor in Power Query Online, you can press Ctrl+? or navig
 | Select first column | Home |
 | Select last column | End |
 
-### When the focus is on the cell
+##### When the focus is on the cell
 
 | Action | Keyboard shortcut|
 | --- | --- |
