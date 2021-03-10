@@ -14,8 +14,7 @@ ms.author: George.Popell
 
 Step folding indicators allow you to understand the steps that fold or not fold. 
 
-Using step folding indicators, when you make a change that breaks folding, it will become obvious. This will allow you to more easily resolve issues quickly, avoid performance issues in the first place, and have better insight into your queries. In most cases you run into, steps will simply fold or not fold. There are a number of cases where the outcome isn't as obvious, discussed in the section on [Step diagnostics indicators](#step-diagnostics-indicators) (Dynamic, Opaque, and Unknown
-) later in this article.
+Using step folding indicators, when you make a change that breaks folding, it will become obvious. This will allow you to more easily resolve issues quickly, avoid performance issues in the first place, and have better insight into your queries. In most cases you run into, steps will fold, or not fold. There are many cases where the outcome isn't as obvious, discussed in the section on [Step diagnostics indicators](#step-diagnostics-indicators) (Dynamic, Opaque, and Unknown) later in this article.
 
 > [!NOTE]
 > The step folding indicators feature is available only for Power Query Online.
@@ -28,7 +27,7 @@ Using step folding indicators, when you make a change that breaks folding, it wi
 
 When looking at step diagnostics, the most important thing to understand is that the diagnostic state isn't sequential. In other words, the indicator for that step describes whether the query as a whole, up to that point, folds or not. If you have an indicator that shows that the query doesn't fold, followed by an indicator that shows it does fold, it means that every step up to that point does fold.
 
-You can see an example of this even with a very simple query against a SQL source.
+You can see an example of this even with a simple query against a SQL source.
 
 Using the Northwind sample database, connect to the Products table and load data. Doing this through the Navigation experience will give the following query:
 
@@ -47,7 +46,7 @@ If you look at how this shows up in step folding indicators, you can see that th
 
 You can see that the initial steps don't fold, but the final step generated when you load data initially does fold. How the first few steps (**Source**, sometimes **Navigation**) are handled depends on the connector. With SQL, for example, it's handled as a catalog table value, which doesn't fold. However, as soon as you select data for that connector it will.
 
-Conversely, this can also mean that your query folds up to a point and then stops folding. Unlike in the case where you have a folding indicator for the step, which shows that everything folds, when you have a not folding indicator it doesn't mean that everything doesn't fold - instead it means that "not everything" folds. Generally, everything up to the last folding indicator will fold, with additional operations happening after.
+Conversely, this can also mean that your query folds up to a point and then stops folding. Unlike in the case where you have a folding indicator for the step, which shows that everything folds, when you have a not folding indicator it doesn't mean that everything doesn't fold - instead it means that "not everything" folds. Generally, everything up to the last folding indicator will fold, with more operations happening after.
 
 Modifying the example from above, you can give a transform that never folds - *Capitalize Each Word*.
 
@@ -79,7 +78,7 @@ Step folding indicators use an underlying query plan, and require it to be able 
 
 ## Example analysis
 
-You can see a simple example by connecting to the Products table in Adventure Works (SQL). The initial load, similar to above, will look as follows:
+You can see an example by connecting to the Products table in Adventure Works (SQL). The initial load, similar to above, will look as follows:
 
 ![Initial step indicators for loading the Product table](images/example-step-diagnostics-1.png)
 
