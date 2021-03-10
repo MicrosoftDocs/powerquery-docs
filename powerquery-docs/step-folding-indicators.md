@@ -4,7 +4,7 @@ description: Step folding indicators in Power Query Online allow you to understa
 author: cpopell
 ms.service: powerquery
 ms.date: 03/09/2021
-ms.author: George.Popell
+ms.author: gepopell
 ---
 
 # Step folding indicators
