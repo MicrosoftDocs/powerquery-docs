@@ -27,7 +27,7 @@ Creating dataflows in **My workspace** isn't supported.
 
 **Resolution:**
 
-Create your dataflows in [organizational workspaces](https://docs.microsoft.com/power-bi/collaborate-share/service-create-the-new-workspaces). To learn how to create an organizational workspace, go to [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/collaborate-share/service-create-the-new-workspaces).
+Create your dataflows in [organizational workspaces](/power-bi/collaborate-share/service-create-the-new-workspaces). To learn how to create an organizational workspace, go to [Create the new workspaces in Power BI](/power-bi/collaborate-share/service-create-the-new-workspaces).
 
 ## I can't create a dataflow in an organizational workspace where I have read-only rights
 
@@ -39,7 +39,7 @@ You don't have edit rights in the workspace.
 
 **Resolution:**
 
-Ask the workspace administrators or members to give you an Admin, Member, or Contributor [role](https://docs.microsoft.com/power-bi/collaborate-share/service-new-workspaces#roles-in-the-new-workspaces).
+Ask the workspace administrators or members to give you an Admin, Member, or Contributor [role](/power-bi/collaborate-share/service-new-workspaces#roles-in-the-new-workspaces).
 
 ![Workspace access settings](media/WorkspaceAccess.png)
 
@@ -79,6 +79,6 @@ You're creating the dataflow in an old version of the Power BI workspace, called
 
 **Resolution:**
 
-Upgrade your Power BI workspace to the new version (v2). More information: [Upgrade classic workspaces to the new workspaces in Power BI](https://docs.microsoft.com/power-bi/collaborate-share/service-upgrade-workspaces)
+Upgrade your Power BI workspace to the new version (v2). More information: [Upgrade classic workspaces to the new workspaces in Power BI](/power-bi/collaborate-share/service-upgrade-workspaces)
 
 ![Upgrade the classic workspace](media/UpgradeWorkspace.png)

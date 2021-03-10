@@ -11,7 +11,9 @@
       - name: "Authentication with a data source"
         href: ConnectorAuthentication.md
       - name: "SharePoint and OneDrive for Business files import"
-        href: sharepoint-onedrive-files.md        
+        href: sharepoint-onedrive-files.md    
+      - name: "Lack of support connecting to Microsoft Graph"    
+        href: connecting-to-graph.md
     - name: Transform data
       items:
       - name: "Use Power Query"
@@ -213,7 +215,9 @@
           href: dataflows/troubleshooting-dataflow-issue-get-data-from-dataflow.md
         - name: "Connecting to the data source"
           href: dataflows/troubleshooting-dataflow-issues-connection-to-the-data-source.md
-    - name: Best practices in Power Query
+    - name: Keyboard shortcuts
+      href: keyboard-shortcuts.md
+    - name: Best practices
       href: best-practices.md
     - name: Advanced topics
       items:
@@ -457,10 +461,14 @@
           href: HandlingGatewaySupport.md
         - name: "Handling connector signing"
           href: HandlingConnectorSigning.md
-      - name: Certification
-        href: ConnectorCertification.md
-      - name: "Custom connector documentation"
-        href: providing-user-documentation.md
+      - name: Connector Certification
+        items:
+        - name: Overview
+          href: ConnectorCertification.md
+        - name: Submission
+          href: CertificationSubmission.md
+        - name: "Custom connector documentation"
+          href: providing-user-documentation.md
     - name: Resources
       items:
       - name: "Power BI documentation"

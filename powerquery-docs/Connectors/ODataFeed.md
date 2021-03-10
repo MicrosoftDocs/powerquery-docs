@@ -69,4 +69,6 @@ To load data from an OData Feed in Power Query Online:
 
    If you have multiple tables that have a direct relationship to one or more of the already selected tables, you can select the **Select Related Tables** button. When you do, all tables that have a direct relationship to one or more of the already selected tables will be imported as well.
    
+## Connecting to Microsoft Graph
 
+Connecting to [Microsoft Graph](https://docs.microsoft.com/graph/overview) REST [APIs](https://graph.microsoft.com) from Power Query isn't recommended or supported. See this [article](../connecting-to-graph.md) for more information.

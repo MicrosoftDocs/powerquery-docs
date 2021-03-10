@@ -33,7 +33,7 @@ LocalizationGroup: reference
    * Command timeout
    * HTTP request header parameters
 
-## Load Web data from Power Query Desktop
+## Load Web data using Power Query Desktop
 
 To load data from a web site with Power Query Desktop:
 
@@ -63,6 +63,10 @@ To load data from a web site with Power Query Desktop:
 
    * **Organizational account**: Select this authentication method if the web page requires organizational account credentials.
 
+
+   >[!Note]
+   >When uploading the report to the Power BI service, only the **anonymous**, **Windows** and **basic** authentication methods are available.
+
    The level you select for the authentication method determines what part of a URL will have the authentication method applied to it. If you select the top-level web address, the authentication method you select here will be used for that URL address or any subaddress within that address. However, you might not want to set the top URL address to a specific authentication method because different subaddresses could require different authentication methods. For example, if you were accessing two separate folders of a single SharePoint site and wanted to use different Microsoft Accounts to access each one.
    
    Once you've set the authentication method for a specific web site address, you won't need to select the authentication method for that URL address or any subaddress again. For example, if you select the https://en.wikipedia.org/ address in this dialog, any web page that begins with this address won't require that you select the authentication method again.  
@@ -78,7 +82,7 @@ To load data from a web site with Power Query Desktop:
 
    On the lower left side of the **Navigator** dialog, you can also select the **Add table using examples** button. This selection presents an interactive window where you can preview the content of the web page and enter sample values of the data you want to extract. For more information on using this feature, go to [Get webpage data by providing examples](https://docs.microsoft.com/power-bi/desktop-connect-to-web-by-example).
 
-## Load Web data from Power Query Online
+## Load Web data using Power Query Online
 
 To load data from a web site with Power Query Online:
 

@@ -13,7 +13,7 @@ LocalizationGroup: reference
 
 # Transform and filter an SAP BW dataset
 
-With Power Query Editor, you can apply additional data transformations and filtering steps before you bring the dataset from SAP BW into the Power BI Desktop or Power Platform data model.
+With Power Query Editor, you can apply additional data transformations and filtering steps before you bring the dataset from SAP BW into the Power BI Desktop or Microsoft Power Platform data model.
 
 In Power Query Editor, the *Applied Steps* for the query are shown in the **Query Settings** pane on the right. To modify or review a step, select the gear icon next to a step.
 

@@ -86,7 +86,7 @@ in
     #"Changed Type"
 ```
 
-More information: [Power Query M formula language](https://docs.microsoft.com/powerquery-m/index)
+More information: [Power Query M formula language](/powerquery-m/index)
 
 ## Where can you use Power Query?
 
@@ -118,4 +118,4 @@ The following table lists Microsoft products and services where Power Query can 
 [Getting data](get-data-experience.md)  
 [Power Query quickstart](power-query-quickstart-using-power-bi.md)  
 [Shape and combine data using Power Query](power-query-tutorial-shape-combine.md)  
-[What are dataflows](dataflows/overview-dataflows-across-power-platform-dynamics-365.md)  
+[What are dataflows](dataflows/overview-dataflows-across-power-platform-dynamics-365.md)

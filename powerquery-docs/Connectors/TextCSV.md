@@ -4,7 +4,7 @@ description: Provides basic information and connection instructions, along with 
 author: cpopell
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 9/03/2020
+ms.date: 02/17/2021
 ms.author: gepopell
 LocalizationGroup: reference
 ---
@@ -147,3 +147,25 @@ If you're requesting text/csv files from the web and also promoting headers, and
 ### Unstructured text being interpreted as structured
 
 In rare cases, a document that has similar comma numbers across paragraphs might be interpreted to be a CSV. If this issue happens, edit the **Source** step in the Query Editor, and select **Text** instead of **CSV** in the **Open File As** dropdown select.
+
+### Error: Connection closed by host
+
+When loading Text/CSV files from a web source and also promoting headers, you might sometimes encounter the following errors: ```“An existing connection was forcibly closed by the remote host”``` or ```“Received an unexpected EOF or 0 bytes from the transport stream.”``` These errors might be caused by the host employing protective measures and closing a connection which might be temporarily paused, for example, when waiting on another data source connection for a join or append operation. To work around these errors, try adding a [Binary.Buffer](https://docs.microsoft.com/powerquery-m/binary-buffer) (recommended) or [Table.Buffer](https://docs.microsoft.com/powerquery-m/table-buffer) call, which will download the file, load it into memory, and immediately close the connection. This should prevent any pause during download and keep the host from forcibly closing the connection before the content is retrieved. 
+
+The following example illustrates this workaround. This buffering needs to be done before the resulting table is passed to ```Table.PromoteHeaders```.
+* Original:
+
+```
+Csv.Document(Web.Contents("https://.../MyFile.csv"))
+```
+
+* With ```Binary.Buffer```:
+
+```
+Csv.Document(Binary.Buffer(Web.Contents("https://.../MyFile.csv")))
+```
+
+* With ```Table.Buffer```:
+```
+Table.Buffer(Csv.Document(Web.Contents("https://.../MyFile.csv")))
+```

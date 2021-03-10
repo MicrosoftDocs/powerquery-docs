@@ -84,4 +84,4 @@ landingContent:
           - text: Connectors in Power Query
             url: connectors/index.md
           - text: M language reference
-            url: https://docs.microsoft.com/powerquery-m/index
+            url: /powerquery-m/index

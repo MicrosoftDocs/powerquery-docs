@@ -11,6 +11,10 @@ LocalizationGroup: reference
 
 # Troubleshooting the Web connector
 
+## Connecting to Microsoft Graph
+
+Connecting to [Microsoft Graph](https://docs.microsoft.com/graph/overview) REST [APIs](https://graph.microsoft.com) from Power Query isn't recommended or supported. See this [article](../../connecting-to-graph.md) for more information.
+
 ## Using a gateway with the Web connector
 
 Every use of the Web connector to get data from an HTML page requires the use of an on-premises data gateway when published to a Cloud service, whether it's Power BI Service for datasets or dataflows, or Power Apps for dataflows. (Currently, Dynamics 365 Customer Insights doesn't support the use of a gateway.) <!-- The only exception is when using Power BI Desktop with the **New web table inference** option turned on, and then publishing that report to the Power BI service. The **New web table inference** option can be enabled or disabled in Power BI Desktop by going to **File** > **Options and settings** > **Options** > **Preview features**. The option is enabled by default. -->
