@@ -40,6 +40,16 @@ The Connector Certification Portal is an experience within [ISV Studio](https://
 
 7. If you would like to add teammates to manage your connector, let your Microsoft contact know.
 
+After your connector code review is complete, our team will schedule a demo for your team to walk us through the connector experience. We will be validating the following scenarios:
+* You can successfully connect to the service.
+* Your connector correctly displays navigation tables.
+* Your connector correctly authenticates with the expected authentication method.
+* You can successfully refresh the connector.
+* You can successfully publish to the service.
+* You can successfully refresh end-to-end through the gateway.
+
+Ensure these scenarios are working successfully prior to the demo so that the demo goes smooth and won't block the release of your connector.
+
 ### Updates
 
 Updates to your connector submission can be made at any time, except when your connector is in the process of production deployment. When you are submitting an update, ensure that you submit an update to your existing submission, rather than creating a new submission.
