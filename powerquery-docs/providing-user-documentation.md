@@ -60,7 +60,7 @@ Any other instructions or information about your connector that hasn't been cove
 
 ## Article location and format
 
-Your article should be made available on GitHub under the Connectors folder in the Power Query docs repo: <https://github.com/MicrosoftDocs/powerquery-docs/tree/master/powerquery-docs/Connectors>. 
+Your article should be made available on GitHub under the Connectors folder in the Power Query docs repo: <https://github.com/MicrosoftDocs/powerquery-docs/tree/master/powerquery-docs/Connectors>. Ensure you also add a link to your article in the list of connectors with the correct logo. Certified connectors will only be available under **Power BI (Datasets)**. Images and media should be submitted under ```/Connectors/media/index```.
 
 See the [Microsoft Docs contributor guide](/contribute/) on how you can contribute to our repo. 
 
