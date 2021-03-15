@@ -50,7 +50,7 @@ After your connector code review is complete, our team will schedule a demo for 
 * You can successfully publish to the service.
 * You can successfully refresh end-to-end through the gateway.
 
-Ensure these scenarios are working successfully prior to the demo so that the demo goes smooth and won't block the release of your connector.
+Ensure that these scenarios are working successfully before the demo so that the demo goes smooth and doesn't block the release of your connector.
 
 ### Updates
 
