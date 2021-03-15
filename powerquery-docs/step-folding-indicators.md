@@ -19,10 +19,6 @@ Using step folding indicators, when you make a change that breaks folding, it wi
 > [!NOTE]
 > The step folding indicators feature is available only for Power Query Online.
 
-## Enabling step diagnostics
-
-
-
 ## Interpreting step diagnostics
 
 When looking at step diagnostics, the most important thing to understand is that the diagnostic state isn't sequential. In other words, the indicator for that step describes whether the query as a whole, up to that point, folds or not. If you have an indicator that shows that the query doesn't fold, followed by an indicator that shows it does fold, it means that every step up to that point does fold.
