@@ -26,7 +26,7 @@ Incremental refresh is available in dataflows created in Power BI and dataflows 
 
 ![Incremental refresh for dataflows](media/dataflows-incremental-refresh/dataflows-incremental-refresh-03.png)
 
-Using incremental refresh in dataflows created in Power BI requires that the dataflow reside in a workspace in [Premium capacity](/power-bi/service-premium-what-is). Incremental refresh in Power Apps requires Power Apps Plan 2.
+Using incremental refresh in dataflows created in Power BI requires that the dataflow reside in a workspace in [Premium capacity](/power-bi/service-premium-what-is). Incremental refresh in Power Apps requires Power Apps Plan 2 and is only available for dataflows with Azure Data Lake Storage as the destination.
 
 In either Power BI or Power Apps, using incremental refresh requires that source data ingested into the dataflow have a DateTime field on which incremental refresh can filter.
 
