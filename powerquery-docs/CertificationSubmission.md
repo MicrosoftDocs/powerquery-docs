@@ -38,7 +38,19 @@ The Connector Certification Portal is an experience within [ISV Studio](https://
 
 6. Read the guidelines for providing [documentation](https://docs.microsoft.com/power-query/providing-user-documentation) for your custom connector. Submit a pull request to our public [documentation repository](https://github.com/MicrosoftDocs/powerquery-docs/tree/master/powerquery-docs/Connectors) with an `.md` file following the custom connector documentation guidelines. This step is crucial to ensure users know how to use your connector. Once the pull request has been made, send a link to the pull request in the Activity Control experience in the Connector Certification Portal. 
 
-7. If you would like to add teammates to manage your connector, let your Microsoft contact know.
+7. Also within the Activity Control, share a paragraph introducing your connector and explaining its value proposition to users and customers. This entry will be submitted as part of the Power BI blog in the upcoming month's post, announcing the release of your connector. 
+
+8. If you would like to add teammates to manage your connector, let your Microsoft contact know.
+
+After your connector code review is complete, our team will schedule a demo for your team to walk us through the connector experience. We will be validating the following scenarios:
+* You can successfully connect to the service.
+* Your connector correctly displays navigation tables.
+* Your connector correctly authenticates with the expected authentication method.
+* You can successfully refresh the connector.
+* You can successfully publish to the service.
+* You can successfully refresh end-to-end through the gateway.
+
+Ensure that these scenarios are working successfully before the demo so that the demo goes smooth and doesn't block the release of your connector.
 
 ### Updates
 
