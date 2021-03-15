@@ -1,10 +1,10 @@
 ---
-title: Providing user documentation
+title: Providing user documentation for your Power Query custom connector
 description: Describes the format and layout of the user documentation that needs to be submitted for your Power Query custom connector.
 author: DougKlopfenstein
 ms.service: powerquery
-ms.reviewer: 
-ms.date: 12/01/2020
+ms.reviewer: kvivek
+ms.date: 03/15/2021
 ms.author: bezhan
 ---
 
@@ -60,7 +60,7 @@ Any other instructions or information about your connector that hasn't been cove
 
 ## Article location and format
 
-Your article should be made available on GitHub under the Connectors folder in the Power Query docs repo: <https://github.com/MicrosoftDocs/powerquery-docs/tree/master/powerquery-docs/Connectors>. Ensure you also add a link to your article in the [list of connectors](./connectors/index.md) referencing the correct logo image uploaded to ```/Connectors/media/index```. Certified connectors will only be available under **Power BI (Datasets)**.
+Your article should be made available on GitHub under the Connectors folder in the Power Query docs repo: <https://github.com/MicrosoftDocs/powerquery-docs/tree/master/powerquery-docs/Connectors>. Ensure that you also add a link to your article in the [list of connectors](./connectors/index.md) referencing the correct logo image uploaded to `/Connectors/media/index` folder. Certified connectors will only be available under **Power BI (Datasets)**.
 
 See the [Microsoft Docs contributor guide](/contribute/) on how you can contribute to our repo. 
 
