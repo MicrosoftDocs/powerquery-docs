@@ -137,7 +137,6 @@
     - name: Dataflows
       items:
       - name: "Overview of dataflows"
-
         href: dataflows/overview-dataflows-across-power-platform-dynamics-365.md
       - name: "Analytical vs. standard dataflows"
         href: dataflows/understanding-differences-between-analytical-standard-dataflows.md        
@@ -221,8 +220,10 @@
       href: best-practices.md
     - name: Advanced topics
       items:
-      - name: "Power Query query folding"
+      - name: "Query folding"
         href: power-query-folding.md
+      - name: "Fuzzy matching"
+        href: fuzzy-matching.md 
       - name: "Behind the scenes of the Data Privacy Firewall"
         href: DataPrivacyFirewall.md
       - name: "Query Diagnostics"
