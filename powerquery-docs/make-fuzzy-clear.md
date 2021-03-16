@@ -9,7 +9,7 @@ ms.author: v-miesco
 ---
 # Making Fuzzy Clear
 
-Power Query features such as [fuzzy merge](merge-queries-fuzzy-match.md), [cluster values](cluster-values.md), and [fuzzy grouping](group-by.md#fuzzy-grouping#fuzzy-grouping) use the same mechanisms to work as fuzzy matching.
+Power Query features such as [fuzzy merge](merge-queries-fuzzy-match.md), [cluster values](cluster-values.md), and [fuzzy grouping](group-by.md#fuzzy-grouping) use the same mechanisms to work as fuzzy matching.
 
 This article goes over many scenarios that will show you how to take advantage of the options that fuzzy matching has with the goal of making 'fuzzy' clear.
 
