@@ -76,5 +76,5 @@ You can try again by changing the *Similarity score* from 0.6 to a lower number 
 
 ![Table with the correct values in the Cluster column where the string ``My favorite fruit, by far, is Apples. I simply love them!`` is now assigned to the cluster ``Apples`` ](images/me-make-fuzzy-clear-cluster-values-with-show-similarity-score-50.png)
 
->[!NOTE]
+> [!NOTE]
 > Currently only the [Cluster values](cluster-values.md) feature in Power Query Online will provide a new column with the similarity score.
