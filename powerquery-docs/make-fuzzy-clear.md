@@ -1,6 +1,6 @@
 ---
 title: "Making Fuzzy Clear"
-description: "How-to article on the Fuzzy Matching feature for Power Query and how to better take advantage of it"
+description: "How-to article on the fuzzy matching feature in Power Query and how to better take advantage of it"
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: 
@@ -17,9 +17,9 @@ This article goes over many scenarios that will show you how to take advantage o
 
 The best scenario for applying the fuzzy match algorithm is when all text strings in a column contain only the strings that need to be compared and not extra components. For example, comparing `Apples` against `4ppl3s` yields higher similarity scores than comparing `Apples` to `My favorite fruit, by far, is Apples. I simply love them!`.
 
-This is because the word ``Apples`` in the second string is only a small part of the whole text string that yields a lower similarity score.
+This is because the word `Apples` in the second string is only a small part of the whole text string that yields a lower similarity score.
 
-Take a look at the following dataset that consists of responses from a survey that had only one question "What is your favorite fruit?". 
+Take a look at the following dataset that consists of responses from a survey that had only one question "What is your favorite fruit?" 
 
 |Fruit|
 |-----|
@@ -41,9 +41,9 @@ Now you're tasked with clustering the values. To do that, you load the previous 
 
 ![Cluster values icon inside the Add column menu in the ribbon available after selecting the Fruit column from the table](images/me-make-fuzzy-clear-cluster-values-icon.png)
 
-A new window will appear called the **Cluster values** window where you can specify the name of the new column. Name this new column *Cluster* and hit OK.
+The **Cluster values** screen appears where you can specify the name of the new column. Name this new column *Cluster* and hit OK.
 
-![Cluster values window after selecting the Fruit column. The new column name field has been set to 'Cluster'](images/me-make-fuzzy-clear-cluster-values-default-window.png)
+![Cluster values screen after selecting the Fruit column. The new column name field has been set to 'Cluster'](images/me-make-fuzzy-clear-cluster-values-default-window.png)
 
 By default, Power Query will use a similarity threshold of 0.8 (or 80%) and the result of the previous operation will yield the following table with a new *Cluster* column:
 
@@ -53,7 +53,7 @@ While the clustering has been done, it is not giving you the expected results fo
 
 You wish to determine what's causing this clustering. To do this, you can double-click the *Clustered values* step to bring back the **Cluster values** window. Inside this window, expand the text that reads *Fuzzy cluster options* and enable the option that reads *Show similarity scores* as shown in the image below and hit the OK button:
 
-![Cluster values window with the fuzzy cluster options displayed and the show similarity scores option selected](images/me-make-fuzzy-clear-cluster-values-window-with-show-similarity-score.png)
+![Cluster values window with the fuzzy cluster options displayed and the show similarity scores option selected](images/me-make-fuzzy-clear-cluster-values-screen-with-show-similarity-score.png)
 
 Enabling the *Show similarity scores* option will bring a new column to your table that shows you exactly the similarity score between the defined cluster and the original value.
 
@@ -61,9 +61,9 @@ Enabling the *Show similarity scores* option will bring a new column to your tab
 
 Upon closer inspection, you can see that Power Query couldn't find any other values within the similarity threshold for the text strings ``Blue berries are simply the best``,``Strawberries = <3``, ``fav fruit is bananas``, and ``My favorite fruit, by far, is Apples. I simply love them!``.
 
-You can go back to the **Cluster values** window one more time by double-clicking the *Clustered values* step and changing the *Similarity threshold* from 0.8 to 0.6 as shown in the image below:
+You can go back to the **Cluster values** screen one more time by double-clicking the *Clustered values* step and changing the *Similarity threshold* from 0.8 to 0.6 as shown in the image below:
 
-![Cluster values window with the fuzzy cluster options displayed, the similarity threshold set at 0.6, and the show similarity scores option selected](images/me-make-fuzzy-clear-cluster-values-window-with-show-similarity-score-60.png)
+![Cluster values screen with the fuzzy cluster options displayed, the similarity threshold set at 0.6, and the show similarity scores option selected](images/me-make-fuzzy-clear-cluster-values-window-with-show-similarity-score-60.png)
 
 This change gets you closer to the result that you're looking for, except for the text string ``My favorite fruit, by far, is Apples. I simply love them!``. This is because by changing the *Similarity threshold* value from 0.8 to 0.6 Power Query is now able to use the values with a similarity score that start from 0.6 all the way to 1. 
 
