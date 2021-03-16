@@ -235,6 +235,8 @@
           href: ReadingQueryDiagnostics.md
         - name: "Understanding folding with Query Diagnostics"
           href: QueryDiagnosticsFolding.md
+      - name: "Step Folding Indicators"
+        href: step-folding-indicators.md
       - name: "Use Query Parameters"
         href: power-query-query-parameters.md
       - name: "Error handling"
