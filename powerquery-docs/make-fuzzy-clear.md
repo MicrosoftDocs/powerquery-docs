@@ -9,13 +9,13 @@ ms.author: v-miesco
 ---
 # Making Fuzzy Clear
 
-Power Query features such as [Fuzzy merge](merge-queries-fuzzy-match.md), [Cluster values](cluster-values.md), and [Fuzzy grouping](group-by.md#fuzzy-grouping#fuzzy-grouping) use the same mechanisms to work also called  Fuzzy matching.
+Power Query features such as [fuzzy merge](merge-queries-fuzzy-match.md), [cluster values](cluster-values.md), and [fuzzy grouping](group-by.md#fuzzy-grouping#fuzzy-grouping) use the same mechanisms to work as fuzzy matching.
 
-This article goes over many scenarios that will show you how to take advantage of the options that Fuzzy matching has with the goal of making 'fuzzy' clear.
+This article goes over many scenarios that will show you how to take advantage of the options that fuzzy matching has with the goal of making 'fuzzy' clear.
 
 ## Adjust the similarity threshold
 
-The best scenario for applying the Fuzzy match algorithm is when all text strings in a column contain only the strings that need to be compared and not extra components. For example, comparing ``Apples`` against ``4ppl3s`` yields higher similarity scores than comparing ``Apples`` to ``My favorite fruit, by far, is Apples. I simply love them!``.
+The best scenario for applying the fuzzy match algorithm is when all text strings in a column contain only the strings that need to be compared and not extra components. For example, comparing `Apples` against `4ppl3s` yields higher similarity scores than comparing `Apples` to `My favorite fruit, by far, is Apples. I simply love them!`.
 
 This is because the word ``Apples`` in the second string is only a small part of the whole text string that yields a lower similarity score.
 
