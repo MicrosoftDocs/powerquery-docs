@@ -49,7 +49,7 @@ By default, Power Query will use a similarity threshold of 0.8 (or 80%) and the 
 
 ![Default output after performing the Cluster values operation on the Fruit column with default values](images/me-make-fuzzy-clear-cluster-values-default-output.png)
 
-While the clustering has been done, it is not giving you the expected results for all the rows. Row number two (2) still has the value ``Blue berries are simply the best``, but it should be clustered to ``Blueberries``, and something similar happens to the text strings ``Strawberries = <3``, ``fav fruit is bananas``, and ``My favorite fruit, by far, is Apples. I simply love them!``.
+While the clustering has been done, it is not giving you the expected results for all the rows. Row number two (2) still has the value `Blue berries are simply the best`, but it should be clustered to `Blueberries`, and something similar happens to the text strings `Strawberries = <3`, `fav fruit is bananas`, and `My favorite fruit, by far, is Apples. I simply love them!`.
 
 You wish to determine what's causing this clustering. To do this, you can double-click the *Clustered values* step to bring back the **Cluster values** window. Inside this window, expand the text that reads *Fuzzy cluster options* and enable the option that reads *Show similarity scores* as shown in the image below and hit the OK button:
 
@@ -59,22 +59,22 @@ Enabling the *Show similarity scores* option will bring a new column to your tab
 
 ![Table with new similarity score column with the name Fruit_Cluster_Similarity](images/me-make-fuzzy-clear-cluster-values-with-show-similarity-score.png)
 
-Upon closer inspection, you can see that Power Query couldn't find any other values within the similarity threshold for the text strings ``Blue berries are simply the best``,``Strawberries = <3``, ``fav fruit is bananas``, and ``My favorite fruit, by far, is Apples. I simply love them!``.
+Upon closer inspection, you can see that Power Query couldn't find any other values within the similarity threshold for the text strings `Blue berries are simply the best`,`Strawberries = <3`, `fav fruit is bananas`, and `My favorite fruit, by far, is Apples. I simply love them!`.
 
 You can go back to the **Cluster values** screen one more time by double-clicking the *Clustered values* step and changing the *Similarity threshold* from 0.8 to 0.6 as shown in the image below:
 
 ![Cluster values screen with the fuzzy cluster options displayed, the similarity threshold set at 0.6, and the show similarity scores option selected](images/me-make-fuzzy-clear-cluster-values-window-with-show-similarity-score-60.png)
 
-This change gets you closer to the result that you're looking for, except for the text string ``My favorite fruit, by far, is Apples. I simply love them!``. This is because by changing the *Similarity threshold* value from 0.8 to 0.6 Power Query is now able to use the values with a similarity score that start from 0.6 all the way to 1. 
+This change gets you closer to the result that you're looking for, except for the text string `My favorite fruit, by far, is Apples. I simply love them!`. This is because by changing the *Similarity threshold* value from 0.8 to 0.6 Power Query is now able to use the values with a similarity score that start from 0.6 all the way to 1. 
 
 ![Table after defining the similarity threshold at 0.6 with new values assigned in the Cluster column](images/me-make-fuzzy-clear-cluster-values-with-show-similarity-score-60.png)
 
 >[!NOTE]
 >Power Query will always use the value closest to the threshold to define the clusters. The threshold defines the lower limit of similarity score that is acceptable to create assign the value to a cluster.
 
-You can try again by changing the *Similarity score* from 0.6 to a lower number until you get the results that you're expecting. For this case, **change the *Similarity score* to 0.5**, which will yield the exact result that you're expecting with the text string ``My favorite fruit, by far, is Apples. I simply love them!`` now assigned to the cluster ``Apples`` as shown in the next image:
+You can try again by changing the *Similarity score* from 0.6 to a lower number until you get the results that you're expecting. For this case, **change the *Similarity score* to 0.5**, which will yield the exact result that you're expecting with the text string `My favorite fruit, by far, is Apples. I simply love them!` now assigned to the cluster `Apples` as shown in the next image:
 
-![Table with the correct values in the Cluster column where the string ``My favorite fruit, by far, is Apples. I simply love them!`` is now assigned to the cluster ``Apples`` ](images/me-make-fuzzy-clear-cluster-values-with-show-similarity-score-50.png)
+![Table with the correct values in the Cluster column where the string `My favorite fruit, by far, is Apples. I simply love them!` is now assigned to the cluster `Apples` ](images/me-make-fuzzy-clear-cluster-values-with-show-similarity-score-50.png)
 
 > [!NOTE]
 > Currently only the [Cluster values](cluster-values.md) feature in Power Query Online will provide a new column with the similarity score.
