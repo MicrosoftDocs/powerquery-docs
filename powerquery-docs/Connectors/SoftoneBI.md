@@ -97,6 +97,6 @@ For example:
 ![Refreshing the data](media/softone-bi/softone-bi-sales-overview.png)
 
 [!IMPORTANT]
-If you are working with more that one Soft1/Atlantis installation, then when switching between data stores, you must clear the SoftOne BI credentials saved by Power BI Desktop or
+If you are working with more that one Soft1/Atlantis installation, then when switching between data stores, you must clear the SoftOne BI credentials saved by Power BI Desktop.
 
 
