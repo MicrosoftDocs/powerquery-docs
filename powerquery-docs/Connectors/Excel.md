@@ -27,9 +27,11 @@ LocalizationGroup: reference
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
  
 ## Prerequisites
-To connect to a legacy workbook (such as .xls or .xlsb), the Access Database Engine 2010 OLEDB provider is required. To install this provider, go to the [download page](https://go.microsoft.com/fwlink/?LinkID=285987) and install the relevant (32 bit or 64 bit) version. If you don't have it installed, when connecting to legacy workbooks you'll see the following error:
+To connect to a legacy workbook (such as .xls or .xlsb), the Access Database Engine OLEDB (or ACE) provider is required. To install this provider, go to the [download page](https://go.microsoft.com/fwlink/?LinkID=285987) and install the relevant (32 bit or 64 bit) version. If you don't have it installed, you'll see the following error when connecting to legacy workbooks:
 
-```The 32-bit (or 64-bit) version of the Access Database Engine 2010 OLEDB provider may be required to read this type of file. To download the client software, visit the following site: https://go.microsoft.com/fwlink/?LinkID=285987.```
+```The 'Microsoft.ACE.OLEDB.12.0' provider is not registered on the local machine. The 32-bit (or 64-bit) version of the Access Database Engine OLEDB provider may be required to read this type of file. To download the client software, visit the following site: https://go.microsoft.com/fwlink/?LinkID=285987.```
+
+ACE can't be installed in cloud service environments. So if you're seeing this error in a cloud host (such as Power Query Online), you'll need to use a gateway that has ACE installed to connect to the legacy Excel files.
  
 ## Capabilities Supported
 * Import
@@ -43,7 +45,7 @@ To make the connection from Power Query Desktop:
 
    ![Select the Excel workbook from File Explorer](./media/excel/connect-desktop.png)
 
-   If the Excel workbook is online, use the [Web connector](web/web.md) to connect to the database.
+   If the Excel workbook is online, use the [Web connector](web/web.md) to connect to the workbook.
 
 3. In **Navigator**, select the workbook information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
 
