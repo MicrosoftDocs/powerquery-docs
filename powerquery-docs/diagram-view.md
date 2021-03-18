@@ -17,7 +17,7 @@ This article provides an overview of the capabilities provided by diagram view.
 
 This feature is enabled by selecting **Diagram view** in the **View** tab on the ribbon. With diagram view enabled, the steps pane and queries pane will be collapsed.  
 
-![Diagram view option inside the View tab in the Power Query ribbon](images/enabling-diagram-view.png) 
+![Diagram view option inside the View tab in the Power Query ribbon](images/enabling-diagram-view.jpg) 
 
 >[!Note]
 >Currently, diagram view is only available in Power Query Online.
