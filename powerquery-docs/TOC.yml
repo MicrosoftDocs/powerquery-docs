@@ -28,7 +28,7 @@
         href: data-profiling-tools.md
       - name: "Using the Queries pane"
         href: queries-pane.md
-      - name: "Diagram view (Preview)"
+      - name: "Diagram view"
         href: diagram-view.md
       - name: "Using Schema view (Preview)"
         href: schema-view.md
