@@ -4,7 +4,7 @@ description: Diagram view offers a visual way to prepare data in the Power Query
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: 
-ms.date: 11/08/2020
+ms.date: 03/18/2021
 ms.author: v-miesco
 ---
 # Diagram view
@@ -146,7 +146,7 @@ Queries with query description will have an affordance (***i*** icon). You can v
 
 ### Append queries/Append queries as new
 
-To append or perform a UNION of queries, right-click in a query and select **Append queries**. This action will display the **Append** dialog box where you can add additional tables to the current query. **Append queries as new** will also display the **Append** dialog box, but will allow you to append multiple tables into a new query. 
+To append or perform a UNION of queries, right-click in a query and select **Append queries**. This action will display the **Append** dialog box where you can add more tables to the current query. **Append queries as new** will also display the **Append** dialog box, but will allow you to append multiple tables into a new query. 
 
 ![Append queries options inside the query contextual menu](images/diagram-view-append-queries.png)
 
@@ -202,7 +202,7 @@ To extract all previous steps into a new query, right-click the first step that 
 
 ![Extract previous option inside the step level contextual menu after right clicking a step](images/diagram-view-extract-previous-steps.png) 
 
-### Edit Step name and description 
+### Edit step name and description 
 
 To add step descriptions, right-click a step in a query and then choose **Properties**. 
 
@@ -222,7 +222,7 @@ By hovering over each step, you can view a call out that shows the step label, s
 
 By selecting each step, you can see the corresponding data preview for that step. 
 
-## Expand and Collapse Queries 
+## Expand and collapse queries 
 
 To ensure that you can view your queries in the diagram view, you can collapse the ones that you aren't actively working on and expand the ones that you care about. Expand or collapse queries by selecting the **Expand/Collapse** button on the top-right of a query. Alternatively, double-clicking an expanded query will collapse the query and vice-versa. 
 
@@ -246,7 +246,7 @@ In the collapsed mode, you can quickly look at the steps in the query by hoverin
 
 ## Layout Options 
 
-There are four layout options available in the diagram view: zoom out/zoom in, full screen, fit to view, and reset.
+There are four layout options available in the diagram view: zoom out, zoom in, full screen, fit to view, and reset.
 
 ### Zoom out/zoom in
 With this option, you can adjust the zoom level and zoom out or zoom in to view all the queries in the diagram view. 
@@ -298,27 +298,27 @@ We show **step labels** by default within the diagram view.
 
 ![Step labels are displayed in diagram view](images/diagram-view-step-labels.png)
 
-You can change diagram view settings to show **step names** so to match the **applied steps** within the **query settings** pane. 
+You can change diagram view settings to show **step names** to match the **applied steps** within the **query settings** pane. 
 
 ![Step names are displayed in diagram view](images/diagram-view-step-names.png)
 
 ## Auto-highlight related queries
 
-By choosing the setting **Auto-highlight related queries** within diagram view settings, related queries are always highlighted so that you can visually see the query dependencies better
+By selecting **Auto-highlight related queries** within diagram view settings, related queries are always highlighted so that you can visually see the query dependencies better
 
 ![Diagram view showing a light blue highlight for queries which are related to each other](images/diagram-view-auto-highlight-related-queries.png)
 
-## Compact View
+## Compact view
 
 When you have queries with multiple steps, it can be challenging to scroll horizontally to view all your steps within the viewport. 
 
 ![Diagram view showing a query with many steps, requiring a low zoom level to view all the steps](images/diagram-view-compact-view.png)
 
-To address this, diagram view offers **compact view** which compresses the steps from top to bottom instead of left to right. This view can be especially useful when you have queries with multiple steps, so that you can see as many queries as possible within the viewport. 
+To address this, diagram view offers **Compact view**, which compresses the steps from top to bottom instead of left to right. This view can be especially useful when you have queries with multiple steps, so that you can see as many queries as possible within the viewport. 
 
 ![Diagram view showing a query in compact view, where steps are displayed top to bottom instead of left to right](images/diagram-view-compact-view-activated.png)
 
-To enable this view, navigate to diagram view settings and select **compact view** inside the **View** tab in the ribbon. 
+To enable this view, navigate to diagram view settings and select **Compact view** inside the **View** tab in the ribbon. 
 
 ![Diagram view settings with compact view selection in a red box](images/diagram-view-compact-view-settings.png)
 
@@ -330,37 +330,37 @@ You may want to see more data within the data preview to understand and analyze 
 
 ## Expand or collapse all queries
 
-By default, the queries within Diagram View are collapsed. There are options to expand or collapse each query in a single click.
+By default, the queries within diagram view are collapsed. There are options to expand or collapse each query in a single click.
 
 ![In diagram view, a button and tooltip to expand all queries in the bottom right of diagram view](images/data-preview-expand-queries.png)
 
-You can also expand or collapse related queries from the Query level context menu. 
+You can also expand or collapse related queries from the query level context menu. 
 
 ![In diagram view's query level context menu, a red box around options to expand or collapse related queries](images/diagram-view-expand-or-collapse-queries.jpg)
 
 ## Multi-select queries
 
-You select multiple queries within the diagram view by holding down the Ctrl key and clicking queries. Once you multi-select, right clicking will show a context menu that allows performing operations such as merge, append, move to group, expand/collapse and more. 
+You select multiple queries within the diagram view by holding down the Ctrl key and clicking queries. Once you multi-select, right-clicking will show a context menu that allows performing operations such as merge, append, move to group, expand/collapse and more. 
 
-![In diagram view, three queries higlighted in light blue signifying that they have been multi-selected, with a context menu in a red box displaying different operations](images/diagram-view-multi-select.png)
+![In diagram view, three queries highlighted in light blue signifying that they have been multi-selected, with a context menu in a red box displaying different operations](images/diagram-view-multi-select.png)
 
 ## Inline rename
 
-You can double click the query name to rename the query.
+You can double-click the query name to rename the query.
 
 ![In diagram view, showing how double clicking the query name will make the name editable](images/diagram-view-inline-rename.jpg)
 
-Double clicking the step name allows you to rename the step, provided the diagram view setting is showing step names.
+Double-clicking the step name allows you to rename the step, provided the diagram view setting is showing step names.
 
 ![In the diagram view, showing how double clicking the step name will name the name editable](images/diagram-view-rename-step.jpg)
 
-When step labels are displayed in diagram view, double clicking the step label shows the dialog box to rename the step name and provide a description. 
+When step labels are displayed in diagram view, double-clicking the step label shows the dialog box to rename the step name and provide a description. 
 
 ![In the diagram view, showing a modal where step properties and description can be edited](images/diagram-view-rename-step-label.jpg)
 
 ## Accessibility
 
-Diagram view supports accessibility features such as keyboard navigation, high-contrast mode and screen reader support. The following table describes the keyboard shortcuts that are available within Diagram View. To learn more about keyboard shortcuts available within Power Query Online, see [keyboard shortcuts](keyboard-shortcuts.md).
+Diagram view supports accessibility features such as keyboard navigation, high-contrast mode, and screen reader support. The following table describes the keyboard shortcuts that are available within diagram view. To learn more about keyboard shortcuts available within Power Query Online, see [keyboard shortcuts in Power Query](keyboard-shortcuts.md).
 
 | Action | Keyboard shortcut|
 | --- | --- |
