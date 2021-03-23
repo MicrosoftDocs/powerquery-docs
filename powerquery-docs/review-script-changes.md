@@ -15,7 +15,7 @@ LocalizationGroup: reference
 # Review Script Changes in Power Query Online
 
 ## Background
-Due to the way queries are stored in Power Query Online, mashup documents (which can be seen in the 'Advanced Editor'), there are cases where manually entered M script, generally comments, is lost. To give users the ability to understand what changes are being made so they can possibly rearrange their script to fix it, the 'Review Script Changes' pane provides a diff experience highlighting the changes.
+Due to the way queries are stored in Power Query Online, there are cases where manually entered M script (generally comments) is lost. To give users the ability to understand what changes are being made so they can possibly rearrange their script to fix it, the 'Review Script Changes' pane provides a diff experience highlighting the changes.
 
 There are three notable cases that may cause this experience.
 
