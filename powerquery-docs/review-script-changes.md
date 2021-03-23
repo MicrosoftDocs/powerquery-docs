@@ -31,3 +31,6 @@ In certain cases your script will be updated if it results in a syntax error by 
 ## Experience
 
 When you commit a query, Power Query Online will evaluate it to see if the 'stored' version of the script differs from what you have submitted at all. If it does, it will present you with a 'Review Script Changes' modal that will allow you to accept or cancel. If you accept, the changes will be made to your query. If you cancel, you will have the option to rewrite your query to make sure that you move your comments properly, or rearrange however else you want.
+
+
+![Review Script Changes pane depicting a diff between what is committed and what is saved](images/review-script-changes.png "Review Script Changes pane")
