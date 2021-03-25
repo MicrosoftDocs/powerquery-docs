@@ -4,7 +4,7 @@ description: This article provides information about global keyboard shortcuts i
 author: heydh
 ms.service: powerquery
 ms.reviewer: kvivek
-ms.date: 03/08/2021
+ms.date: 03/09/2021
 ms.author: dhsundar
 ms.custom: edited
 ---
