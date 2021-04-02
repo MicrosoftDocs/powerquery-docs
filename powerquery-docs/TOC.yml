@@ -28,7 +28,7 @@
         href: data-profiling-tools.md
       - name: "Using the Queries pane"
         href: queries-pane.md
-      - name: "Diagram view (Preview)"
+      - name: "Diagram view"
         href: diagram-view.md
       - name: "Using Schema view (Preview)"
         href: schema-view.md
@@ -137,7 +137,6 @@
     - name: Dataflows
       items:
       - name: "Overview of dataflows"
-
         href: dataflows/overview-dataflows-across-power-platform-dynamics-365.md
       - name: "Analytical vs. standard dataflows"
         href: dataflows/understanding-differences-between-analytical-standard-dataflows.md        
@@ -221,8 +220,10 @@
       href: best-practices.md
     - name: Advanced topics
       items:
-      - name: "Power Query query folding"
+      - name: "Query folding"
         href: power-query-folding.md
+      - name: "Fuzzy matching"
+        href: fuzzy-matching.md 
       - name: "Behind the scenes of the Data Privacy Firewall"
         href: DataPrivacyFirewall.md
       - name: "Query Diagnostics"
@@ -235,6 +236,8 @@
           href: ReadingQueryDiagnostics.md
         - name: "Understanding folding with Query Diagnostics"
           href: QueryDiagnosticsFolding.md
+      - name: "Step Folding Indicators"
+        href: step-folding-indicators.md
       - name: "Use Query Parameters"
         href: power-query-query-parameters.md
       - name: "Error handling"
