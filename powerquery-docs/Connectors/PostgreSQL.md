@@ -112,7 +112,7 @@ The following table lists all of the advanced options you can set in Power Query
 
 Once you've selected the advanced options you require, select **OK** in Power Query Desktop to connect to your PostgreSQL database.
 
-## Native Query Folding
+## Native query folding
 
 By default, native query folding is enabled. Operations that are capable of folding will be applied on top of your native query according to normal Import or Direct Query logic. Native Query folding isn't applicable with optional parameters present in [Value.NativeQuery()](/powerquery-m/value-nativequery).
 
