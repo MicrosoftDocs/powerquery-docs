@@ -364,7 +364,7 @@
         href: power-query-online-limits.md
       - name: "Common issues"
         href: CommonIssues.md
-      - name: "Review Script Changes"
+      - name: "Review script changes"
         href: review-script-changes.md
     - name: Create custom Power Query connectors
       items:
