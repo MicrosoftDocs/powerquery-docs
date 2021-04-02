@@ -38,12 +38,12 @@ To connect to Anaplan data:
 
   **Anaplan Auth URL**: https://auth.anaplan.com
 
-  ![Connection Configuration.](https://preview-assets-us-01.kc-usercontent.com:443/cddce937-cf5a-003a-bfad-78b8fc29ea3f/f8db985b-d21d-4c68-bd45-3082cdf9ce12/Connection-Configuration.png)
+  ![Connection Configuration.](media/anaplan/connection-configuration.png)
 
   Once you've entered the API and Auth URL, select **ok**.
 
 3. Log in to the connector to verify your access to an Anaplan workspace. 
-  ![ID and password dialog.](https://preview-assets-us-01.kc-usercontent.com:443/cddce937-cf5a-003a-bfad-78b8fc29ea3f/8d7f8f1f-3d07-4a57-aa7a-b55630e568bf/Your-id.png)
+  ![ID and password dialog.](media/anaplan/Your-id.png)
   
   Once you've succeeded, select **Connect**.
 
@@ -59,7 +59,7 @@ When you run an export action:
 
 To run an export action, use the **Navigator** dialog to locate your export.
 
-![Run Export Action and Load.](https://preview-assets-us-01.kc-usercontent.com:443/cddce937-cf5a-003a-bfad-78b8fc29ea3f/fd245739-4a34-4433-8e3e-eaed27d4d4cf/Export-load.png)
+![Run Export Action and Load.](media/anaplan/Export-load.png)
 
 1.  Search your Anaplan models to find and set your export. You can also locate for your model name via the search field.
 2.  Check the box next to **ƒx Run Export Action** to select your export.
@@ -70,7 +70,7 @@ To run an export action, use the **Navigator** dialog to locate your export.
 
 The **Load** dialog displays and your data loads. 
 
-![Load dialog for data.](https://preview-assets-us-01.kc-usercontent.com:443/cddce937-cf5a-003a-bfad-78b8fc29ea3f/d2e8b066-6b57-4f3e-b60c-be2ac72aad9b/Data-load-dialog.png)
+![Load dialog for data.](media/anaplan/Data-load-dialog.png)
 
 ## Troubleshooting
 
@@ -81,17 +81,17 @@ If you get a connector related error message, first, try refreshing.
   *   Clear cache within Power BI (**File**, **Options**, **Clear cache)** and restart the connector, or
   *   Click **Cancel** and select **Refresh** (top right).
 
-![Authentication error.](https://preview-assets-us-01.kc-usercontent.com:443/cddce937-cf5a-003a-bfad-78b8fc29ea3f/fa59c069-e970-4864-9e14-952a7c5e3f28/auth-cred-error.2.png)
+![Authentication error.](media/anaplan/auth-cred-error.2.png)
 
 If you still receive a credential error after you clear cache, also clear your recent sources. 
 
  *   Select **Recent sources**
 
-![Select recent sources.](https://preview-assets-us-01.kc-usercontent.com:443/cddce937-cf5a-003a-bfad-78b8fc29ea3f/e9151dbc-0dea-4d99-97ed-de04b04a5623/Recent-sources-1.png)
+![Select recent sources.](media/anaplan/Recent-sources-1.png)
 
   *  Select **Remove from list**
 
-![Remove source from list.](https://preview-assets-us-01.kc-usercontent.com:443/cddce937-cf5a-003a-bfad-78b8fc29ea3f/ab64c9a3-1526-4b59-a897-ff617f31032e/Recent-sources-2.png)
+![Remove source from list.](media/anaplan/Recent-sources-2.png)
 
 Establish the connection to the export again, and your data refreshes.
 
@@ -100,17 +100,17 @@ Establish the connection to the export again, and your data refreshes.
 
 Click **Close & Apply** or **Refresh Preview**
 
-![Power query error.](https://preview-assets-us-01.kc-usercontent.com:443/cddce937-cf5a-003a-bfad-78b8fc29ea3f/5bc46bb5-843c-40bb-ae5d-f52eed51f9c4/Power-query-error.png)
+![Power query error.](media/anaplan/Power-query-error.png)
 
 Your data refreshes.
 
-![Close & Apply and Refresh Preview icons.](https://preview-assets-us-01.kc-usercontent.com:443/cddce937-cf5a-003a-bfad-78b8fc29ea3f/153e8ab2-28ca-4021-872a-e85f1c50c1bd/Power-query-solution.png)
+![Close & Apply and Refresh Preview icons.](media/anaplan/Power-query-solution.png)
 
 
 ### Power Query Expression error
 
 Click **Refresh Preview** to refresh.
 
-![Power Query error Key and Table.](https://preview-assets-us-01.kc-usercontent.com:443/cddce937-cf5a-003a-bfad-78b8fc29ea3f/eb19585d-46a4-48dc-901d-6c7af89e5916/Expression-error.png)
+![Power Query error Key and Table.](media/anaplan/Expression-error.png)
 
-![Refresh preview](https://preview-assets-us-01.kc-usercontent.com:443/cddce937-cf5a-003a-bfad-78b8fc29ea3f/dba42050-d209-4acf-8215-0d59b44188e6/Refresh-preview.png)
+![Refresh preview](media/anaplan/Refresh-preview.png)
