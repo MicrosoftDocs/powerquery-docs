@@ -114,9 +114,9 @@ Once you've selected the advanced options you require, select **OK** in Power Qu
 
 ## Native Query Folding
 
-By default, Native Query Folding is enabled. Operations that are capable of folding will be applied on top of your native query according to normal Import or Direct Query logic. Native Query folding isn't applicable with optional parameters present in [Value.NativeQuery()](https://docs.microsoft.com/powerquery-m/value-nativequery).
+By default, native query folding is enabled. Operations that are capable of folding will be applied on top of your native query according to normal Import or Direct Query logic. Native Query folding isn't applicable with optional parameters present in [Value.NativeQuery()](/powerquery-m/value-nativequery).
 
-In the rare case that folding doesn't work with Native Query Folding enabled, you can disable it. To disable Native Query Folding, set the `EnableFolding` flag to `false` for [Value.NativeQuery()](https://docs.microsoft.com/powerquery-m/value-nativequery) in the advanced editor.
+In the rare case that folding doesn't work with native query folding enabled, you can disable it. To disable native query folding, set the `EnableFolding` flag to `false` for [Value.NativeQuery()](/powerquery-m/value-nativequery) in the advanced editor.
 
 Sample:
 `Value.NativeQuery(target as any, query, null, [EnableFolding=false])`
