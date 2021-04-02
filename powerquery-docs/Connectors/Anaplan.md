@@ -31,6 +31,7 @@ The connector runs through Anaplan public data integration APIs and allows you t
 To connect to Anaplan data:
 
 1. Select **Anaplan** from the product-specific data connector list, and then select **Connect**.
+
 2. In the Anaplan Connector Configuration screen, enter the API and Authentication URLs:
   
   **Anaplan API URL**:  https://api.anaplan.com
@@ -40,6 +41,7 @@ To connect to Anaplan data:
   ![Connection Configuration.](https://preview-assets-us-01.kc-usercontent.com:443/cddce937-cf5a-003a-bfad-78b8fc29ea3f/f8db985b-d21d-4c68-bd45-3082cdf9ce12/Connection-Configuration.png)
 
   Once you've entered the API and Auth URL, select **ok**.
+
 3. Log in to the connector to verify your access to an Anaplan workspace. 
   ![ID and password dialog.](https://preview-assets-us-01.kc-usercontent.com:443/cddce937-cf5a-003a-bfad-78b8fc29ea3f/8d7f8f1f-3d07-4a57-aa7a-b55630e568bf/Your-id.png)
   
