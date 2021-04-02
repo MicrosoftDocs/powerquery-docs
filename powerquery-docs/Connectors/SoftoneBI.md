@@ -96,6 +96,6 @@ In this case, you'll need to go back to your application and upload your data.
 ![Sales overview](media/softone-bi/softone-bi-sales-overview.png)
 
 [!IMPORTANT]
-If you're working with more that one Soft1/Atlantis installation, then when switching between data stores, you must clear the SoftOne BI credentials saved by Power BI Desktop.
+If you're working with more than one Soft1/Atlantis installation, then when switching between data stores, you must clear the SoftOne BI credentials saved by Power BI Desktop.
 
 
