@@ -109,7 +109,7 @@ Your data will refresh, resolving the error.
 
 ### Power Query expression error
 
-If you encounter a Power Query expession error, select **Refresh Preview** to refresh the data. 
+If you encounter a Power Query expression error, select **Refresh Preview** to refresh the data. 
 
 ![Power Query error Key and Table](media/anaplan/Expression-error.png)
 
