@@ -346,7 +346,7 @@
         href: Connectors/SharePointList.md
       - name: "SharePoint Online List"
         href: Connectors/SharePointOnlineList.md
-      - name: "SoftOne BI"
+      - name: "SoftOne BI (Beta)"
         href: Connectors/SoftOneBI.md
       - name: "SQL Server database"
         href: Connectors/SQLServer.md
