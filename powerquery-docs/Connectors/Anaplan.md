@@ -96,21 +96,23 @@ If you still receive a credential error after you clear cache, also clear your r
 1. Establish the connection to the export again, and your data refreshes.
 
 
-### Credential error in the Power Query Editor
+### Credential error in the Power Query editor
 
-Select **Close & Apply** or **Refresh Preview**.
+If you encounter a credential error in the Power Query editor, select **Close & Apply** or **Refresh Preview** to refresh the data. 
 
 ![Power query error](media/anaplan/Power-query-error.png)
 
-Your data refreshes.
+Your data will refresh, resolving the error. 
 
 ![Close & Apply and Refresh Preview icons](media/anaplan/Power-query-solution.png)
 
 
-### Power Query Expression error
+### Power Query expression error
 
-Select **Refresh Preview** to refresh.
+If you encounter a Power Query expession error, select **Refresh Preview** to refresh the data. 
 
 ![Power Query error Key and Table](media/anaplan/Expression-error.png)
+
+Your data will refresh, resolving the error.
 
 ![Refresh preview](media/anaplan/Refresh-preview.png)
