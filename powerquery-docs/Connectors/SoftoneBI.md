@@ -10,7 +10,7 @@ ms.reviewer: kvivek
 LocalizationGroup: reference
 ---
 
-# SoftOne BI
+# SoftOne BI (Beta)
 
 ## Summary
 
