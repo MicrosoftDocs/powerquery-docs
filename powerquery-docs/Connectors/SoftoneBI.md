@@ -1,15 +1,16 @@
 ---
-title: Softone BI connector
-description: Provides basic information and how to connect to your data, along with the supported file types and instructions on using the on-premises data gateway and authentication types.
+title: SoftOne BI connector
+description: This article provides information for the SoftOne BI connector and a tutorial for usage.
 author: basilrormose
 ms.service: powerquery
 ms.topic: 
 ms.date: 
-ms.author: 
+ms.author: bezhan
+ms.reviewer: kvivek
 LocalizationGroup: reference
 ---
 
-# SoftOne BI
+# SoftOne BI (Beta)
 
 ## Summary
 
@@ -21,7 +22,10 @@ LocalizationGroup: reference
 
 ## Prerequisites
 
-You will need to have the Soft1 ERP/CRM or Atlantis ERP product installed with a licensed SoftOne BI connector module. A web account must configured in the application with access to the SoftOne BI Connector service - this account (Username and Password) and your installation serial number will be used during authentication by the SoftOne BI connector.
+>[!Note]
+> This connector is scheduled to be released in the April release of Power BI Desktop and may not yet be available.
+
+You'll need to have the Soft1 ERP/CRM or Atlantis ERP product installed with a licensed SoftOne BI connector module. A web account must be configured in the application with access to the SoftOne BI Connector service. This account information and your installation serial number will be validated during authentication by the SoftOne BI connector.
 
 The SoftOne BI connector is supported from Soft1 Series 5 version 500.521.11424 or later and Atlantis ERP version 3.3.2697.1 or later.
 
@@ -31,72 +35,73 @@ The SoftOne BI connector is supported from Soft1 Series 5 version 500.521.11424 
 
 ## Connection instructions 
 
-Softone provides a number of templates as Power BI template files (.pbit) (e.g., Sales & Collections, Finance) that you can use as is or customize which will provide you with a great start to your BI project. 
+SoftOne provides many templates as Power BI template files (.pbit) that you can use or customize which will provide you with a start to your BI project. For example, Sales & Collections, and Finance.
 
-To connect in Power BI Desktop from using a new report follow the steps below. If you are connecting from a report created using one of the SoftOne BI templates the please refer to: [Using a provided template](#Using-a-provided-template)
+To connect in Power BI Desktop using a new report, follow the steps below. If you're connecting from a report created using one of the SoftOne BI templates, see [Using a provided template](#using-a-provided-template) later in this article.
 
 ### Connect to your Soft1 or Atlantis data store from scratch
 
 To load data from your installation with Power Query Desktop:
 
-1. Select **Get Data > More... > Online Services** in Power BI Desktop and search for **SoftOne BI**.
+1. Select **Get Data > More... > Online Services** in Power BI Desktop and search for **SoftOne BI**. Select **Connect**.
 
-![Select the SoftOne BI connector](media/softone-bi/softone-bi-select.png)
+    > [!div class="mx-imgBorder"]
+    > ![Select the SoftOne BI connector](media/softone-bi/softone-bi-select.png)
 
-2. Then select **Connect**, and then **Sign in**.
+1. Select **Sign in**. An authentication form will display.
 
-![Sign in via the connector](media/softone-bi/softone-bi-connect.png)
+    > [!div class="mx-imgBorder"]
+    > ![Enter your installation serial number and Web Account credentials](media/softone-bi/softone-bi-login.png)
 
-3. An authentication form will display 
+    >[!NOTE]
+    >- If you enter incorrect credentials, you'll receive a message stating that your sign in failed due to invalid credentials.
+    >- If the SoftOne BI Connector is not activated, or the Web Account that you're using is not configured with the service, you'll receive a message stating that access is denied because the selected module is not activated.
 
-![Enter the your installation serial number and Web Account credentials](media/softone-bi/softone-bi-login.png)
+1. After signing in with SoftOne Web Services, you can connect to your data store.
 
->[!NOTE]
->* If you enter incorrect credentials, you will receive a message on the login form that your login failed due to invalid credentials.
->* If the SoftOne BI Connector is not activated, or the Web Account that you are using is not configured with the service, you will receive a message that access is denied because the selected module is not activated.
+    > [!div class="mx-imgBorder"]
+    > ![Connect to your data store](media/softone-bi/softone-bi-connect-data-store.png)
 
-4. After signing in via SoftOne Web Services, you can connect to your data store.
+    Selecting **Connect** will take you to the navigation table and display the available tables from the data store from which you may select the data required.
 
-![Connect to your data store](media/softone-bi/softone-bi-connect-data-store.png)
+5. In the navigator, you should now see the tables in your data store. Fetching the tables can take some time.
 
-Pressing **Connect** will take you to the Navigation Table which will display the available tables from the data store from which you may select the data required.
+    > [!div class="mx-imgBorder"]
+    > ![Sample navigation table](media/softone-bi/softone-bi-navtable.png)
 
-5. In the Navigator you should now see the tables in your data store. Fetching the tables can take a few seconds.
 
-![Sample navigation table](media/softone-bi/softone-bi-navtable.png)
+    You must have uploaded the data from your Soft1 or Atlantis installation (per the product documentation) to see any tables. If you haven't uploaded your data, you won't see any tables displayed in the Navigation Table.
 
->[!NOTE]
-> You must have uploaded the data from your Soft1 or Atlantis installation (per the product documentation) to see any tables. If you have not uploaded your data, you will not see any tables displayed in the Navigation Table.
->
->![No data tables - data has not been uploaded](media/softone-bi/softone-bi-no-data.png)
->
-> You will need to go back to your application and upload your data.
+    > [!div class="mx-imgBorder"]
+    > ![No data tables - data has not been uploaded](media/softone-bi/softone-bi-no-data.png)
+
+    In this case, you'll need to go back to your application and upload your data.
 
 ### Using a provided template
 
 1. Open the selected template, Power BI Desktop will attempt to load the data from the data store, and will prompt for credentials. 
 
-![Enter your credentials](media/softone-bi/softone-bi-open-template.png)
+    > [!div class="mx-imgBorder"]
+    > ![Enter your credentials](media/softone-bi/softone-bi-open-template.png)
 
-2. Select **Sign in** and enter your credentials (Serial Number, Username and Password).
+2. Select **Sign in** and enter your credentials (Serial number, username, and password).
 
-![Enter the your installation serial number and Web Account credentials](media/softone-bi/softone-bi-login.png)
+    > [!div class="mx-imgBorder"]
+    > ![Enter the your installation serial number and Web Account credentials](media/softone-bi/softone-bi-login.png)
 
-3. Once you are authenticated, press **Connect**. 
+3. Once you're authenticated, select **Connect**. 
 
-![Connect to your data store](media/softone-bi/softone-bi-connect-data-store.png)
+    > [!div class="mx-imgBorder"]
+    > ![Connect to your data store](media/softone-bi/softone-bi-connect-data-store.png)
 
-4. Power BI Desktop will fetch the data from the data store.
+    Power BI Desktop will fetch the data from the data store.
 
-![Refreshing the data](media/softone-bi/softone-bi-refresh.png)
+5. After the refresh has completed, you're ready to start customizing the report or to publish it as is to the Power BI Service.
 
-5. Once the refresh has completed, you are ready to start customizing the report or to publish it as is to the Power BI Service.
+    > [!div class="mx-imgBorder"]
+    > ![Sales overview](media/softone-bi/softone-bi-sales-overview.png)
 
-For example:
-
-![Refreshing the data](media/softone-bi/softone-bi-sales-overview.png)
-
-[!IMPORTANT]
-If you are working with more that one Soft1/Atlantis installation, then when switching between data stores, you must clear the SoftOne BI credentials saved by Power BI Desktop or
+> [!IMPORTANT]
+> If you're working with more than one Soft1/Atlantis installation, then when switching between data stores, you must clear the SoftOne BI credentials saved by Power BI Desktop.
 
 
