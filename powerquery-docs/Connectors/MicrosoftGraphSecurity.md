@@ -24,5 +24,5 @@ LocalizationGroup: reference
 
 ## Deprecation
 
-> Note
+> Note:
 > This connector is in the process of deprecation due to ending support from the end service. We do not recommend you make any new connections with this connector and that you transition off existing connections. 
