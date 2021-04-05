@@ -256,6 +256,8 @@
         href: Connectors/AccessDatabase.md
       - name: "Adobe Analytics"
         href: "Connectors/AdobeAnalytics.md"
+      - name: "Anaplan"
+        href: Connectors/Anaplan.md
       - name: "Azure SQL database"
         href: Connectors/AzureSQLDatabase.md
       - name: "Azure Synapse Analytics (SQL DW)"
@@ -344,6 +346,8 @@
         href: Connectors/SharePointList.md
       - name: "SharePoint Online List"
         href: Connectors/SharePointOnlineList.md
+      - name: "SoftOne BI (Beta)"
+        href: Connectors/SoftOneBI.md
       - name: "SQL Server database"
         href: Connectors/SQLServer.md
       - name: "Text/CSV"
@@ -364,6 +368,8 @@
         href: power-query-online-limits.md
       - name: "Common issues"
         href: CommonIssues.md
+      - name: "Review script changes"
+        href: review-script-changes.md
     - name: Create custom Power Query connectors
       items:
       - name: Quick starts
