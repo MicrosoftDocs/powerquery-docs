@@ -1,6 +1,6 @@
 ---
 title: Power Query Microsoft Graph Security connector
-description: Provides basic information and prerequisites for the connector, descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
+description: Provides information on the deprecation of the Microsoft Graph Security connector.
 author: bezhan
 ms.service: powerquery
 ms.topic: conceptual
