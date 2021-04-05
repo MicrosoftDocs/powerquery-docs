@@ -1,6 +1,6 @@
 --- 
-title: Understanding the differences between standard and analytical dataflows 
-description: Understanding the differences between standard and analytical dataflows.
+title: Understanding the differences between dataflow types
+description: Understanding the differences between standard V1, V2 and analytical dataflows.
 author: radacad 
 ms.service: powerquery 
 ms.topic: conceptual 
@@ -8,7 +8,7 @@ ms.date: 12/3/2020
 ms.author: bensack 
 --- 
 
-# Understanding the differences between standard and analytical dataflows 
+# Understanding the differences between dataflow types
 
 [!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
 
@@ -30,6 +30,20 @@ We've been working on significant updates to standard dataflows to improve their
 
 > [!div class="mx-imgBorder"]
 > ![Standard dataflow versions](media/analytical-standard-dataflows/Standard-Dataflow-Version-Indication.png) 
+
+### Standard dataflow versions feature comparison
+
+The following table lists the major features differenced between Standard Dataflows V1 and V2 and provides information about each features behavior in per version.
+
+| **Feature** | **Standard V1** | **Standard V2** |
+| --- | --- | --- |
+| Maximum number of dataflows that can be saved with automatic schedule per customer tenant | 50 |  Unlimited |
+| Maximum number of records ingested per query/table | 500,000 | Unblounded. The maximum number of records that can be ingested per query/table now depends on Dataverse service protection limits at the time of ingestion. |
+| Ingestion speed into Dataverse | Baseline performance | Improved performance by a few factors. Actual results may vary and depend on charecteristics of the data ingested, and load on Dataverse service at the time of ingestion. |
+| Incremental Refresh policy | Not supported | Supported |
+| Resilliancy | When Dataverse service protection limits are encountered, a records will be retried up to 3 times. | When Dataverse service protection limits are encountered, a records will be retried up to 3 times.
+
+
 
 ## Analytical dataflows 
 
