@@ -1,22 +1,22 @@
 --- 
-title: Understanding the differences between standard and analytical dataflows 
-description: Understanding the differences between standard and analytical dataflows.
+title: Understanding the differences between dataflow types
+description: Understanding the differences between standard V1, V2 and analytical dataflows.
 author: radacad 
 ms.service: powerquery 
 ms.topic: conceptual 
-ms.date: 12/3/2020 
+ms.date: 04/06/2021 
 ms.author: bensack 
 --- 
 
-# Understanding the differences between standard and analytical dataflows 
+# Understanding the differences between dataflow types
 
 [!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
 
-Dataflows are used to extract, transform, and load data to a storage destination where it can be leveraged for different scenarios. Because not all storage destinations share the same charecteristics, some dataflow features and behaviors differ depending on the storage destination the dataflow loads data into. Before you create a dataflow, it's important to understand how the data is going to be used, and choose the storage destination according to the requirements of your solution.
+Dataflows are used to extract, transform, and load data to a storage destination where it can be leveraged for different scenarios. Because not all storage destinations share the same characteristics, some dataflow features and behaviors differ depending on the storage destination the dataflow loads data into. Before you create a dataflow, it's important to understand how the data is going to be used, and choose the storage destination according to the requirements of your solution.
 
 Selecting a storage destination of a dataflow determines the dataflow's type. A dataflow that loads data into Dataverse tables is categorized as a *standard dataflow*. Dataflows that load data to analytical entities is categorized as an *analytical dataflow*.
 
-Dataflows created in Power BI are always analytical dataflows. Dataflows created in Power Apps can either be standard or Aanalytical, depending on your selection when creating the dataflow.
+Dataflows created in Power BI are always analytical dataflows. Dataflows created in Power Apps can either be standard or analytical, depending on your selection when creating the dataflow.
 
 ## Standard dataflows 
 
@@ -31,13 +31,27 @@ We've been working on significant updates to standard dataflows to improve their
 > [!div class="mx-imgBorder"]
 > ![Standard dataflow versions](media/analytical-standard-dataflows/Standard-Dataflow-Version-Indication.png) 
 
+### Standard dataflow versions feature comparison
+
+The following table lists the major features differences between standard dataflows V1 and V2, and provides information about each feature's behavior in each version.
+
+| **Feature** | **Standard V1** | **Standard V2** |
+| --- | --- | --- |
+| Maximum number of dataflows that can be saved with automatic schedule per customer tenant | 50 |  Unlimited |
+| Maximum number of records ingested per query/table | 500,000 | Unbounded. The maximum number of records that can be ingested per query or table now depends on Dataverse service protection limits at the time of ingestion. |
+| Ingestion speed into Dataverse | Baseline performance | Improved performance by a few factors. Actual results may vary and depend on characteristics of the data ingested, and load on Dataverse service at the time of ingestion. |
+| Incremental Refresh policy | Not supported | Supported |
+| Resiliency | When Dataverse service protection limits are encountered, a record will be retried up to 3 times. | When Dataverse service protection limits are encountered, a record will be retried up to 3 times.
+
+
+
 ## Analytical dataflows 
 
 An analytical dataflow loads data to storage types optimized for analytics&mdash;Azure Data Lake Storage. Microsoft Power Platform environments and Power BI workspaces provide customers with a managed analytical storage location that's bundled with those product licenses. In addition, customers can link their organization’s Azure Data Lake storage account as a destination for dataflows.
 
 Analytical dataflows are capable additional analytical features. For example, integration with Power BI’s AI features or use of computed entities which will be discussed later.  
 
-You can create analytical dataflows in Power BI. By default, they'll load data to Power BI’s managed storage. But you can also configure Power Bi to store the data in the organization’s Azure Data Lake Storage. 
+You can create analytical dataflows in Power BI. By default, they'll load data to Power BI’s managed storage. But you can also configure Power BI to store the data in the organization’s Azure Data Lake Storage. 
 
 ![Creating an analytical dataflow in Power BI](media/analytical-standard-dataflows/create-analytical-dataflow-powerbi.png) 
 
