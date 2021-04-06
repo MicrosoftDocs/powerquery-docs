@@ -4,7 +4,7 @@ description: Understanding the differences between standard V1, V2 and analytica
 author: radacad 
 ms.service: powerquery 
 ms.topic: conceptual 
-ms.date: 12/3/2020 
+ms.date: 04/06/2021 
 ms.author: bensack 
 --- 
 
