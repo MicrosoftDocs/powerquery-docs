@@ -284,6 +284,8 @@
           href: Connectors/FHIR/FHIR-Relationships.md
       - name: "Folder"
         href: Connectors/Folder.md
+      - name: "EQuIS"
+        href: Connectors/EQuIS.md
       - name: "Google Analytics"
         href: Connectors/GoogleAnalytics.md
       - name: "JSON"
