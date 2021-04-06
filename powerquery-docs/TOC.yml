@@ -261,7 +261,9 @@
       - name: "Azure SQL database"
         href: Connectors/AzureSQLDatabase.md
       - name: "Azure Synapse Analytics (SQL DW)"
-        href: Connectors/AzureSQLDataWarehouse.md      
+        href: Connectors/AzureSQLDataWarehouse.md
+      - name: "Bloomberg Data and Analytics"
+        href: Connectors/BloombergDataAndAnalytics.md 
       - name: "Common Data Service"
         href: Connectors/commondataservice.md
       - name: "Data Lake Storage"
