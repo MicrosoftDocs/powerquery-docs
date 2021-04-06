@@ -4,7 +4,7 @@ description: List of all currently available Power Query connectors
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 04/02/2021
+ms.date: 04/03/2021
 ms.author: bezhan
 
 LocalizationGroup: reference
