@@ -2,10 +2,9 @@
 title: List of all Power Query connectors
 description: List of all currently available Power Query connectors
 author: DougKlopfenstein
-
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 06/03/2020
+ms.date: 04/02/2021
 ms.author: bezhan
 
 LocalizationGroup: reference
