@@ -1,0 +1,9 @@
+{
+  "redirections": [
+    {
+      "source_path": "powerquery-docs/Connectors/CommonDataService.md",
+      "redirect_url": "/power-query/connectors/dataverse",
+      "redirect_document_id": "false"
+    }    
+  ]
+}
