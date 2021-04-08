@@ -1,6 +1,6 @@
 ---
 title: Power Query Dataverse connector
-description: Provides basic information and connection instructions, along with OData API performance information, table retrieval rate, and alternative means of connecting.
+description: Provides basic information and connection instructions, along with OData API performance information, table retrieval rate, and alternative means of connecting to Dataverse.
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
@@ -42,7 +42,7 @@ In the new browser tab that opens, copy the root of the URL. This root URL is th
 ## Connect to Dataverse from Power BI Desktop
 
 >[!Note]
-> The Power Query Dataverse connector is mostly suited towards analytics workloads, not bulk data extraction. For more information, go to [Alternative Dataverse connections](#alternative-common-data-service-connections).
+> The Power Query Dataverse connector is mostly suited towards analytics workloads, not bulk data extraction. For more information, go to [Alternative Dataverse connections](#alternative-dataverse-connections).
 
 To connect to Dataverse from Power BI Desktop:
 
@@ -98,7 +98,7 @@ For information about OData API performance and throttling limits for Dataverse 
 
 ### Table retrieval rate
 
-As a guideline, most default tables will be retrieved at a rate of approximately 500 rows per second using the Dataverse connector. Take this rate into account when deciding whether you want to connect to Dataverse or export to data lake. If you require faster retrieval rates, consider using the Export to data lake feature or Tabular Data Stream (TDS) endpoint. For more information, go to [Alternative Dataverse connections](#alternative-common-data-service-connections).
+As a guideline, most default tables will be retrieved at a rate of approximately 500 rows per second using the Dataverse connector. Take this rate into account when deciding whether you want to connect to Dataverse or export to data lake. If you require faster retrieval rates, consider using the Export to data lake feature or Tabular Data Stream (TDS) endpoint. For more information, go to [Alternative Dataverse connections](#alternative-dataverse-connections).
 
 ### Alternative Dataverse connections
 
