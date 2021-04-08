@@ -268,6 +268,8 @@
         href: Connectors/commondataservice.md
       - name: "Data Lake Storage"
         href: Connectors/DataLakeStorage.md
+      - name: "Dataverse"
+        href: Connectors/dataverse.md
       - name: "Excel"
         href: Connectors/Excel.md
       - name: "Facebook"
