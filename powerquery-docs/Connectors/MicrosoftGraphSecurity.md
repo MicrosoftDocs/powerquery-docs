@@ -17,7 +17,7 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | Deprecated |
-| Products | Power BI Desktop |
+| Products | - |
 | Authentication Types Supported | Organizational account |
 | Function Reference Documentation | - |
 | | |
