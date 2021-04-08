@@ -11,8 +11,6 @@ LocalizationGroup: reference
 
 # Dataverse
 
-[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
-
 ## Summary
 
 | Item | Description |
@@ -50,7 +48,7 @@ To connect to Dataverse from Power BI Desktop:
 
 1. Select **Get data** from the **Home** tab.
 
-2. In the **Get Data** dialog box, select **Power Platform > Dataverse**.
+2. In the **Get Data** dialog box, select **Power Platform > Dataverse**, and then select **Connect**.
 
    ![Get data in Power BI Desktop](media/common-data-service/get-data.png)
 
@@ -76,7 +74,7 @@ To connect to Dataverse from Power BI Desktop:
 
 To connect to Dataverse from Power Query Online:
 
-1. From the **Data sources** page, select **Dataverse**.
+1. From the **Data sources** page, select **Common Data Service**.
 
    ![Get data from Power Query Online](media/common-data-service/get-data-online.png)
 

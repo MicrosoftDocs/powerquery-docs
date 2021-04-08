@@ -261,11 +261,11 @@
       - name: "Azure SQL database"
         href: Connectors/AzureSQLDatabase.md
       - name: "Azure Synapse Analytics (SQL DW)"
-        href: Connectors/AzureSQLDataWarehouse.md      
-      - name: "Common Data Service"
-        href: Connectors/commondataservice.md
+        href: Connectors/AzureSQLDataWarehouse.md
       - name: "Data Lake Storage"
         href: Connectors/DataLakeStorage.md
+      - name: "Dataverse"
+        href: Connectors/dataverse.md
       - name: "Excel"
         href: Connectors/Excel.md
       - name: "Facebook"
