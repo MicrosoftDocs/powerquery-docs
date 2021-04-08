@@ -4,7 +4,7 @@ description: Provides information on the deprecation of the Microsoft Graph Secu
 author: bezhan
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 4/4/2020
+ms.date: 4/8/2020
 ms.author: bezhan
 ms.reviewer: kvivek
 LocalizationGroup: reference
