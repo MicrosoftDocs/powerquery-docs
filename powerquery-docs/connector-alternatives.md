@@ -1,6 +1,6 @@
 ---
 title: Alternatives to out-of-box connectivity in Power BI Desktop
-description: Provides users alternatives to connect to their data when there is no out-of-box connector available
+description: Provides users alternatives to connect to their data when no out-of-box connector is available
 author: bezhan-msft
 ms.service: powerquery
 ms.topic: conceptual
@@ -14,7 +14,7 @@ LocalizationGroup: reference
 
 ## Introduction
 
-While Power BI Desktop offers out-of-box connectivity to over 150 data sources, there may be cases where a user wishes to connect to a data source for which there is no out-of-box connector available. 
+While Power BI Desktop offers out-of-box connectivity to over 150 data sources, there may be cases where a user wishes to connect to a data source for which no out-of-box connector is available. 
 
 This article describes connectivity options available to users in those cases.
 
@@ -30,9 +30,9 @@ Learn more about connectivity through generic interfaces [here](/power-bi/connec
 
 ## Connectivity through a custom connector
 
-The [Power Query SDK](./installingsdk.md) allows users to create custom connectors to unblock connectivity scenarios to Power BI Desktop. Users should be able to create and distribute custom connectors to end services and data sources they are able to authenticate to. 
+The [Power Query SDK](./installingsdk.md) allows users to create custom connectors to unblock connectivity scenarios to Power BI Desktop. Users can create and distribute custom connectors to end services and data sources they can authenticate to. 
 
-Community members and organizations may also share custom connectors they have created. While Microsoft does not offer any support, ownership, or guarantees for these custom connectors, users may be able to use them for their scenarios. 
+Community members and organizations may also share custom connectors that they've created. While Microsoft doesn't offer any support, ownership, or guarantees for these custom connectors, users may be able to use them for their scenarios. 
 
 Users that own an end service or data source can create a custom connector and may be eligible to [certify](./CertificationSubmission.md) the connector to have it made available publicly out-of-box within Power BI Desktop. 
 
