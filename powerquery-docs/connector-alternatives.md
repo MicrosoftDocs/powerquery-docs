@@ -42,4 +42,4 @@ As only the data source owner or an approved third party can build and certify a
 
 ## Request in Power BI Ideas forum
 
-In addition to directly engaging the data source owner, users should also create or vote on ideas in the (Power BI Ideas Forum)[https://ideas.powerbi.com] to demonstrate the need and demand for a connector. This feedback may also help encourage the data source owner to invest into a certified connector available for users out-of-box in Power BI Desktop. 
+In addition to directly engaging the data source owner, users should also create or vote on ideas in the [Power BI Ideas Forum](https://ideas.powerbi.com) to demonstrate the need and demand for a connector. This feedback may also help encourage the data source owner to invest into a certified connector available for users out-of-box in Power BI Desktop. 
