@@ -4,7 +4,7 @@ description: This article provides information about global keyboard shortcuts i
 author: heydh
 ms.service: powerquery
 ms.reviewer: kvivek
-ms.date: 03/08/2021
+ms.date: 04/09/2021
 ms.author: dhsundar
 ms.custom: edited
 ---
@@ -19,8 +19,15 @@ When using the Query Editor in Power Query Online, you can press Ctrl+? or navig
 
 | Action | Keyboard shortcut |
 | --- | --- |
+| Get Data | Ctrl+Alt+D |
+| Enter Data | Ctrl+Alt+T |
+| Add custom column | Ctrl+Alt+C |
+| Choose column | Ctrl+K |
 | Go to column | Ctrl+G |
 | Add column from examples | Ctrl+E |
+| Blank query | Ctrl+M |
+| Advanced editor | Ctrl+Shift+M |
+| Refresh | Alt+F5 |
 
 ## Data Preview
 
