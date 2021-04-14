@@ -84,10 +84,6 @@ You can use dataflows as a replacement for other extract, transform, load (ETL) 
 
 If multiple Power BI solutions are using the same transformed version of a table, the process of creating the table will be repeated multiple times. This increases the load on the source system, consumes more resources, and creates duplicate data with multiple points of failure. Instead, a single dataflow can be created to compute the data for all solutions. Power BI can then reuse the result of the transformation in all solutions. The dataflow, if used in such a way, can be part of a robust Power BI implementation architecture that avoids the Power Query code duplicates and reduces the maintenance costs of the data integration layer.
 
-### Data migration from legacy systems 
-
-In this scenario, the decision has been made by an organization to use Power Apps for the new user interface experience rather than the legacy on-premises system. Power Apps, Power Automate, and AI Builder all leverage Dataverse as the primary data storage system. The current data in the existing on-premises system can be migrated into Dataverse using a dataflow, and then leverage by the above products. 
-
 ### Using dataflows to build a dimensional model 
 
 You can use dataflows as a replacement for other ETL tools to build a dimensional model. For example, the data engineers of a company decide to use dataflows to build the star-schema designed dimensional model, including fact and dimension tables in Azure Data Lake Storage Gen2. Then Power BI is used to generate reports and dashboards by getting data from the dataflows. 
