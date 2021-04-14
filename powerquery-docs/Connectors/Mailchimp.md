@@ -24,5 +24,4 @@ LocalizationGroup: reference
 
 ## Deprecation
 
-> Note:
-> This connector is in the process of deprecation and is no longer supported. We do not recommend you make any new connections with this connector and that you transition off existing connections. 
+This connector is deprecated, and won't be supported soon. We recommend you transition off existing connections using this connector, and don't use this connectpr for new connections. 
