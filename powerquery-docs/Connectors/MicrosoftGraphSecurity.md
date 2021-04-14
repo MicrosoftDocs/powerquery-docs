@@ -24,5 +24,5 @@ LocalizationGroup: reference
 
 ## Deprecation
 
-> Note:
-> This connector is in the process of deprecation due to ending support from the end service. We do not recommend you make any new connections with this connector and that you transition off existing connections. 
+> [!NOTE]
+> TThis connector is deprecated because of end of support of the Microsoft Graph Security API. We recommend that you transition off existing connections using this connector, and don't use this connector for new connections. 
