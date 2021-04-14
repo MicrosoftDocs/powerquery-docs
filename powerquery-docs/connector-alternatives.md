@@ -12,11 +12,7 @@ LocalizationGroup: reference
 
 # Alternatives to out-of-box connectivity in Power BI Desktop
 
-## Introduction
-
-While Power BI Desktop offers out-of-box connectivity to over 150 data sources, there may be cases where a user wishes to connect to a data source for which no out-of-box connector is available. 
-
-This article describes connectivity options available to users in those cases.
+While Power BI Desktop offers out-of-box connectivity to over 150 data sources, there may be cases where a user wants to connect to a data source for which no out-of-box connector is available. 
 
 ## Connectivity through generic interfaces
 
