@@ -14,6 +14,8 @@
         href: sharepoint-onedrive-files.md    
       - name: "Lack of support connecting to Microsoft Graph"    
         href: connecting-to-graph.md
+      - name: "Connectivity without an existing connector"
+        href: connector-alternatives.md
     - name: Transform data
       items:
       - name: "Use Power Query"
