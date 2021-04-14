@@ -14,6 +14,8 @@
         href: sharepoint-onedrive-files.md    
       - name: "Lack of support connecting to Microsoft Graph"    
         href: connecting-to-graph.md
+      - name: "Connectivity without an existing connector"
+        href: connector-alternatives.md
     - name: Transform data
       items:
       - name: "Use Power Query"
@@ -288,6 +290,8 @@
         href: Connectors/GoogleAnalytics.md
       - name: "JSON"
         href: Connectors/json.md
+      - name: "Mailchimp (Deprecated)"
+        href: Connectors/Mailchimp.md
       - name: "MySQL database"
         href: Connectors/MySQLDatabase.md
       - name: "OData Feed"
@@ -346,6 +350,8 @@
         href: Connectors/SharePointList.md
       - name: "SharePoint Online List"
         href: Connectors/SharePointOnlineList.md
+      - name: "Stripe (Deprecated)"
+        href: Connectors/Stripe.md
       - name: "SoftOne BI (Beta)"
         href: Connectors/SoftOneBI.md
       - name: "SQL Server database"
