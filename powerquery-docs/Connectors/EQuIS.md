@@ -54,4 +54,4 @@ To connect to an EQuIS Enterprise site from Power BI Desktop, take the following
 * When using reports in a facility group, non-administrator users must have permission to all facilities contained in the facility group.
 * Only "grid" reports will be available in the **Navigator**.
 * All datasets consumed by the EQuIS connector will use camelCase for column names.
-* The current version of the EQuIS connector will retrieve a dataset in a single request and is limited to 1,048,576 rows in a single dataset (this limitation may be removed in a future version of the connector).
+* The current version of the EQuIS connector will retrieve a dataset in a single request and is limited to 1,048,576 rows in a single dataset (this limitation might be removed in a future version of the connector).
