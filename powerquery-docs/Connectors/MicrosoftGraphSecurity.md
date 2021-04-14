@@ -25,4 +25,4 @@ LocalizationGroup: reference
 ## Deprecation
 
 > [!NOTE]
-> TThis connector is deprecated because of end of support of the Microsoft Graph Security API. We recommend that you transition off existing connections using this connector, and don't use this connector for new connections. 
+> This connector is deprecated because of end of support of the Microsoft Graph Security API. We recommend that you transition off existing connections using this connector, and don't use this connector for new connections. 
