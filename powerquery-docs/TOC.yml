@@ -298,6 +298,8 @@
         href: Connectors/json.md
       - name: "Mailchimp (Deprecated)"
         href: Connectors/Mailchimp.md
+      - name: "Microsoft Graph Security (Deprecated)"
+        href: Connectors/MicrosoftGraphSecurity.md
       - name: "MySQL database"
         href: Connectors/MySQLDatabase.md
       - name: "OData Feed"
