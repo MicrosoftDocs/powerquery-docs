@@ -20,6 +20,9 @@ In this example, the outcome you're looking for is a table with a new column tha
 
 ![Clustered values as a new column called Cluster in the initial table](images/cluster-column-initial-result.png)
 
+> [!NOTE]
+> The Cluster values feature is available only for Power Query Online.
+
 ## Create a Cluster column
 
 To cluster values, first select the **Person** column, go to the **Add column** tab in the ribbon, and then select the **Cluster values** option.
