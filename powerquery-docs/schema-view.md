@@ -14,8 +14,10 @@ Schema view is designed to optimize your flow when working on schema level opera
 
 This article walks you through schema view and the capabilities it offers. 
 
-
 ![Schema view displays a list with your query's columns information including name, type, and a key decorator.](images/schema-view-overview.png)
+
+> [!NOTE]
+> The Schema view indicators feature is available only for Power Query Online.
 
 ## Overview
 When working on data sets with many columns, simple tasks can become incredibly cumbersome because even finding the right column by horizontally scrolling and parsing through all the data is inefficient. Schema view displays your column information in a list that's easy to parse and interact with, making it easier than ever to work on your schema.
