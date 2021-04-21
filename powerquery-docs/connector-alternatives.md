@@ -28,7 +28,7 @@ Learn more about connectivity through generic interfaces [here](/power-bi/connec
 
 The [Power Query SDK](./installingsdk.md) allows users to create custom connectors to unblock connectivity scenarios to Power BI Desktop. Users can create and distribute custom connectors to end services and data sources they can authenticate to. 
 
-Community members and organizations may also share custom connectors that they've created. While Microsoft doesn't offer any support, ownership, or guarantees for these custom connectors, users may be able to use them for their scenarios. The Power BI Partner Program also includes many partners which can build custom connectors. Learn more about the program or find a partner [here](https://powerbi.microsoft.com/find-a-partner/?term=Power+Query).
+Community members and organizations may also share custom connectors that they've created. While Microsoft doesn't offer any support, ownership, or guarantees for these custom connectors, users may be able to use them for their scenarios. The Power BI Partner Program also includes many partners which can build custom connectors. Learn more about the program or find a partner here: [Contact a Power BI Partner](https://powerbi.microsoft.com/find-a-partner/?term=Power+Query).
 
 Users that own an end service or data source can create a custom connector and may be eligible to [certify](./CertificationSubmission.md) the connector to have it made available publicly out-of-box within Power BI Desktop. 
 
