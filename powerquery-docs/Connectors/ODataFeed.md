@@ -87,9 +87,9 @@ In cases where you're passing in a URL to the OData connector that's not just th
 
 ### Authenticating to arbitrary services
 
-Some services support the ability for the OData connector to authenticate them with OAuth/AAD authentication out of the box. However, this won't work in most cases.
+Some services support the ability for the OData connector to authenticate with OAuth/AAD authentication out of the box. However, this won't work in most cases.
 
-When trying this, if you see the following error:
+When attempting to authenticate, if you see the following error:
 
 “We were unable to connect because this credential type isn’t supported for this resource. Please choose another credential type.”
 
