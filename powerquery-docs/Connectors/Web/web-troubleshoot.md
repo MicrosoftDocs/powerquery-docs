@@ -94,6 +94,18 @@ in
   Navigation
 ```
 
+## Authenticating to arbitrary services
+
+Some services support the ability for the Web connector to authenticate them with OAuth/AAD authentication out of the box. However, this won't work in most cases.
+
+When trying this, if you see the following error:
+
+“We were unable to connect because this credential type isn’t supported for this resource. Please choose another credential type.”
+
+   ![Error from connecting to an endpoint that doesn't support OAuth with the web connector](../../images/credential-type-not-supported.png)
+
+Please contact the service owner. They will either need to change the authentication configuration or build a custom connector.
+
 ### See also
 
 * [Power Query Web connector](web.md)
