@@ -93,7 +93,7 @@ When trying this, if you see the following error:
 
 “We were unable to connect because this credential type isn’t supported for this resource. Please choose another credential type.”
 
-   ![Error from connecting to an endpoint that doesn't support OAuth with the web connector](../../images/credential-type-not-supported.png)
+   ![Error from connecting to an endpoint that doesn't support OAuth with the web connector](../images/credential-type-not-supported.png)
 
 Please contact the service owner. They will either need to change the authentication configuration or build a custom connector.
 
