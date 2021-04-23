@@ -294,6 +294,8 @@
         href: Connectors/EQuIS.md
       - name: "Google Analytics"
         href: Connectors/GoogleAnalytics.md
+      - name: "Google BigQuery"
+        href: Connectors/GoogleBigQuery.md
       - name: "JSON"
         href: Connectors/json.md
       - name: "Mailchimp (Deprecated)"
