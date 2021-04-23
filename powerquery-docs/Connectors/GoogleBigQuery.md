@@ -1,10 +1,10 @@
 ---
 title: Power Query Google BigQuery connector
-description: Provides basic information and prerequisites for the Google BigQuery connector, descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
+description: Provides basic information and prerequisites for the Google BigQuery connector.
 author: bezhan
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 4/22/20201
+ms.date: 4/22/2021
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -22,7 +22,7 @@ LocalizationGroup: reference
 
 ## Prerequisites
 
-You will need a Google Account to log into Google BigQuery. 
+You'll need a Google Account to log into Google BigQuery. 
 
 ## Capabilities Supported
 
@@ -44,7 +44,7 @@ To connect to Google BigQuery, follow these steps:
 
   ![Sign in to Google](./media/google-bigquery/SignIntoGoogle.png)
 
-4) Once signed in, select **Connect** to proceed.
+4) Once signed in, select **Connect** to continue.
 
   ![Connect to Google BigQuery Data](./media/google-bigquery/ConnectToGoogleBigQueryData.png)
 
