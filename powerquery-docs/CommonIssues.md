@@ -90,3 +90,7 @@ An upcoming version of Power BI Desktop will cause SSL connections failure from 
 As there are configurations in which revocation status may be stripped, such as with corporate proxy servers, we will be providing another option to ignore certificates that don't have revocation information. This option will allow situations where revocation information is stripped in certain cases, but you don't want to lower security entirely, to continue working.
 
 It isn't recommended, but users will continue to be able to turn off revocation checks entirely.
+
+## "Evaluation was canceled"
+
+Power Query will return the message "Evaluation was cancelled" when background analysis is disabled and the user switches between queries, or closes the Editor while a query is refreshing.
