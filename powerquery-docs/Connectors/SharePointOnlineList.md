@@ -114,7 +114,8 @@ The back-end API for Sharepoint uses UTC time and sends this directly to Power B
 
 To get time into local time, the user must do the same conversion that the SharePoint client does. An example of the column operations that would do this are:
 
-```#"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"Datewithtime", type datetimezone}}),
+```
+#"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"Datewithtime", type datetimezone}}),
 #"Timezone Shifted" = Table.TransformColumns(#"Changed Type", {"Datewithtime", DateTimeZone.ToLocal})
 ```
 
