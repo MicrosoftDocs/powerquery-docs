@@ -108,13 +108,14 @@ In some cases, you may need to change the authentication method you use to acces
 
 ### Timezone Issues
 
-In SharePoint Online List (v1.0), you may notice that timezone data doesn't match what you would expect from your browser. The SharePoint web-based client does a local timezone conversion based on the browser's known of the user's timezone.
+When using the SharePoint Online List (v1.0) connector, you may notice that timezone data doesn't match what you would expect from your browser. The SharePoint web-based client performs a local timezone conversion based on the browser's knowledge of the user's timezone.
 
-The back-end API for Sharepoint uses UTC time, and sends this directly to Power BI. Power BI doesn't convert this, but reports it to the user.
+The back-end API for Sharepoint uses UTC time and sends this directly to Power BI. Power BI doesn't convert this, but reports it to the user.
 
-To get time into local time, the user must do the same conversion that the SharePoint client does. An example of the column operations that would do this:
+To get time into local time, the user must do the same conversion that the SharePoint client does. An example of the column operations that would do this are:
 
-#"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"Datewithtime", type datetimezone}}),
+```#"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"Datewithtime", type datetimezone}}),
 #"Timezone Shifted" = Table.TransformColumns(#"Changed Type", {"Datewithtime", DateTimeZone.ToLocal})
+```
 
-The first operation changes the type to datetimezone, and the second one converts it to the computer local time.
+The first operation changes the type to ```datetimezone```, and the second operation converts it to the computer's local time.
