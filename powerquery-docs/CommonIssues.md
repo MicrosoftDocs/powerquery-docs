@@ -91,6 +91,6 @@ As there are configurations in which revocation status may be stripped, such as 
 
 It isn't recommended, but users will continue to be able to turn off revocation checks entirely.
 
-## Cancelled evaluation error
+## Canceled evaluation error
 
-Power Query will return the message "Evaluation was cancelled" when background analysis is disabled and the user switches between queries or closes the Query Editor while a query is in the process of refreshing.
+Power Query will return the message "Evaluation was canceled" when background analysis is disabled and the user switches between queries or closes the Query Editor while a query is in the process of refreshing.
