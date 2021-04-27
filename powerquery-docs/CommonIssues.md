@@ -93,4 +93,4 @@ It isn't recommended, but users will continue to be able to turn off revocation 
 
 ## "Evaluation was canceled"
 
-Power Query will return the message "Evaluation was cancelled" when background analysis is disabled and the user switches between queries, or closes the Editor while a query is refreshing.
+Power Query will return the message "Evaluation was cancelled" when background analysis is disabled and the user switches between queries or closes the Query Editor while a query is in the process of refreshing.
