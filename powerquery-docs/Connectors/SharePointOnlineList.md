@@ -105,3 +105,16 @@ Make sure you supply the root address of the SharePoint site, without any subfol
 ### Change the authentication method
 
 In some cases, you may need to change the authentication method you use to access a particular SharePoint site. If this is necessary, see [Change the authentication method](../connectorauthentication.md#change-the-authentication-method).
+
+### Timezone Issues
+
+In SharePoint Online List (v1.0), you may notice that timezone data doesn't match what you would expect from your browser. The SharePoint web-based client does a local timezone conversion based on the browser's known of the user's timezone.
+
+The back-end API for Sharepoint uses UTC time, and sends this directly to Power BI. Power BI doesn't convert this, but reports it to the user.
+
+To get time into local time, the user must do the same conversion that the SharePoint client does. An example of the column operations that would do this:
+
+#"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"Datewithtime", type datetimezone}}),
+#"Timezone Shifted" = Table.TransformColumns(#"Changed Type", {"Datewithtime", DateTimeZone.ToLocal})
+
+The first operation changes the type to datetimezone, and the second one converts it to the computer local time.
