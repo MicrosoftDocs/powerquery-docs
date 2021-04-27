@@ -83,7 +83,7 @@ In Power Query Desktop (Power BI, Excel), we don’t control your cipher suites.
 
 Customers must upgrade their servers before March 1, 2021. For more information about configuring TLS Cipher Suite order, see [Manage Transport Layer Security (TLS)](https://docs.microsoft.com/windows-server/security/tls/manage-tls).
 
-## Certificate Revocation
+## Certificate revocation
 
 An upcoming version of Power BI Desktop will cause SSL connections failure from Desktop when any certificates in the SSL chain are missing certificate revocation status. This  is a change from the current state, where revocation only caused connection failure in the case where the certificate was explicitly revoked. Other certificate issues might include invalid signatures, and certificate expiration.
 
@@ -91,6 +91,6 @@ As there are configurations in which revocation status may be stripped, such as 
 
 It isn't recommended, but users will continue to be able to turn off revocation checks entirely.
 
-## "Evaluation was canceled"
+## Cancelled evaluation error
 
 Power Query will return the message "Evaluation was cancelled" when background analysis is disabled and the user switches between queries or closes the Query Editor while a query is in the process of refreshing.
