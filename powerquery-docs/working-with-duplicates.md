@@ -4,7 +4,7 @@ description: Working with duplicate values in Power Query. An article about how 
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: kvivek
-ms.date: 06/08/2020
+ms.date: 04/28/2021
 ms.author: v-miesco
 ms.custom: edited
 ---
@@ -14,7 +14,7 @@ ms.custom: edited
 You can work with duplicate sets of values through transformations that can remove duplicates from your data or filter your data to show duplicates only, so you can focus on them.
 
 > [!WARNING]
-> Power Query is case-sensitive. When working with duplicate values, Power Query considers the case of the text which may lead to undesired results. As a workaround, users can apply an uppercase or lowercase transform prior to removing duplicates. 
+> Power Query is case-sensitive. When working with duplicate values, Power Query considers the case of the text, which might lead to undesired results. As a workaround, users can apply an uppercase or lowercase transform prior to removing duplicates. 
 
 For this article, the examples use the following table with **id**, **Category**, and **Total** columns.
 
