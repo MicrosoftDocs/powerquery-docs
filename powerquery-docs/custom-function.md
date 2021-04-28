@@ -1,5 +1,5 @@
 ---
-title: Using cCustom functions
+title: Using custom functions in Power Query
 description: An article on how to create custom functions in Power Query
 author: ptyx507
 ms.service: powerquery
