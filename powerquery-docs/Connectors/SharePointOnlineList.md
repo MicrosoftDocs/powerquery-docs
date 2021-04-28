@@ -106,7 +106,7 @@ Make sure you supply the root address of the SharePoint site, without any subfol
 
 In some cases, you may need to change the authentication method you use to access a particular SharePoint site. If this is necessary, see [Change the authentication method](../connectorauthentication.md#change-the-authentication-method).
 
-### Timezone Issues
+### Timezone issues
 
 When using the SharePoint Online List (v1.0) connector, you may notice that timezone data doesn't match what you would expect from your browser. The SharePoint web-based client performs a local timezone conversion based on the browser's knowledge of the user's timezone.
 
