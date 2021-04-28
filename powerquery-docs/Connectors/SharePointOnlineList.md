@@ -110,7 +110,7 @@ In some cases, you may need to change the authentication method you use to acces
 
 When using the SharePoint Online List (v1.0) connector, you may notice that timezone data doesn't match what you would expect from your browser. The SharePoint web-based client performs a local timezone conversion based on the browser's knowledge of the user's timezone.
 
-The back-end API for Sharepoint uses UTC time and sends this directly to Power BI. Power BI doesn't convert this, but reports it to the user.
+The backend API for Sharepoint uses UTC time and sends this directly to Power BI. Power BI doesn't convert this, but reports it to the user.
 
 To get time into local time, the user must do the same conversion that the SharePoint client does. An example of the column operations that would do this are:
 
