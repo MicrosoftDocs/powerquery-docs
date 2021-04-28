@@ -4,7 +4,7 @@ description: Provides troubleshooting tips for errors that might occur when usin
 author: dougklopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 12/2/2020
+ms.date: 04/28/2021
 ms.author: bezhan
 LocalizationGroup: reference
 ---
