@@ -2,10 +2,9 @@
 title: Power Query Excel connector
 description: Provides basic information and prerequisites for the connector, along with troubleshooting tips, how to fix missing or incomplete Excel data, and improve performance.
 author: cpopell
-
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 12/9/2020
+ms.date: 04/28/2021
 ms.author: gepopell
 
 LocalizationGroup: reference
@@ -130,7 +129,7 @@ Slow loading of Excel data can also be caused by incorrect dimensions. However, 
 
 To fix this issue, you can refer to [Locate and reset the last cell on a worksheet](https://support.office.com/en-us/article/locate-and-reset-the-last-cell-on-a-worksheet-c9e468a8-0fc3-4f69-8038-b3c1d86e99e9) for detailed instructions.
 
-### Poor performance loading from SharePoint
+### Poor performance when loading data from SharePoint
 
 When retrieving data from Excel on your machine or from SharePoint, consider both the volume of the data involved, as well as the complexity of the workbook.
 
