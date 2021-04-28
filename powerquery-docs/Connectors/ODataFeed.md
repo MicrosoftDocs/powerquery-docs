@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for the connector, and
 author: dougklopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 12/8/2020
+ms.date: 08/28/2021
 ms.author: bezhan
 LocalizationGroup: reference
 ---
