@@ -14,6 +14,9 @@ If you find yourself in a situation where you need to apply the same set of tran
 While you can manually create your own Power Query custom function using code as shown in [Understanding Power Query M functions](https://docs.microsoft.com/powerquery-m/understanding-power-query-m-functions), the Power Query user interface offers you features to speed up, simplify, and enhance the process of creating and managing a custom function. 
 This article focuses on this experience provided only through the Power Query user interface and how to get the most out of it.
 
+>[!IMPORTANT]
+>This article showcases how to create a custom function with Power Query using common transforms created through the usage of the Power Query user interface. It focuses on the core concepts to create a custom functions and builds on top of other articles found across the Power Query docs. Be sure to check the note sections highlighted throughout the article to find more information about specific transforms used.
+
 ## Create a custom function from a table reference
 
 You can follow along with this example by downloading the sample files used in this article from the following [download link](https://aka.ms/PQCombineFilesSample). For simplicity, this article will be using the Folder connector. To learn more about the Folder connector, see [Folder](Connectors/folder.md). The goal of this example is to create a custom function that can be applied to all the files in that folder before combining all of the data from all files into a single table.
