@@ -19,11 +19,13 @@ While implementing authentication is outlined in the [authentication](handlingau
 
 ### Windows authentication
 
-Windows-based authentication is supported. To enable Windows-based authentication in your connector, add the following line in the ```Authentication``` section of your connector.
+Windows-based authentication is supported. To enable Windows-based authentication in your connector, add the following line in the **Authentication** section of your connector.
 
-```Windows = [ SupportsAlternateCredentials = true ]```
+```
+Windows = [ SupportsAlternateCredentials = true ]
+```
 
-This will expose Windows authentication as an option in the Power BI Desktop authentication experience. The ```SupportsAlternateCredentials``` flag will expose the additional option to "Connect using alternative credentials". After this is enabled, you will be able to specify explicit Windows account credentials (username and password) and can be used to test impersonation by providing your own account credentials. 
+This will expose Windows authentication as an option in the Power BI Desktop authentication experience. The **SupportsAlternateCredentials** flag will expose the additional option to "Connect using alternative credentials". After this is enabled, you will be able to specify explicit Windows account credentials (username and password) and can be used to test impersonation by providing your own account credentials. 
 
 ### Single sign-on (SSO) authentication
 
