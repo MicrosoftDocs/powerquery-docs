@@ -340,3 +340,7 @@ As `Uri.Type` is an _ascribed type_ rather than a _primitive type_ in the M lang
 ```powerquery
 shared GithubSample.Contents = Value.ReplaceType(Github.Contents, type function (url as Uri.Type) as any);
 ```
+
+## Additional types of authentication
+
+For information on additional types of authentication not covered in this article, such as Kerberos-based single sign-on, visit the [additional connector functionality](additional-connector-functionality.md) article to learn more. 
