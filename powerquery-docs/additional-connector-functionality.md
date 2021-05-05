@@ -29,7 +29,7 @@ This change will expose Windows authentication as an option in the Power BI Desk
 
 ### Single sign-on (SSO) authentication
 
-This section outlines options available for implementing single sign-on (SSO) functionality into your certified connector. Currently, there is no support for "plug and play" extensibility for SSO. Enabling SSO would require changes and collaboration both on the Microsoft and data source or connector sides. 
+This section outlines options available for implementing single sign-on (SSO) functionality into your certified connector. Currently, there is no support for "plug and play" extensibility for SSO. Enabling SSO would require changes and collaboration both on the Microsoft and data source or connector sides, so reach out to your Microsoft contact prior to starting work.
 
 #### Azure Active Directory (AAD) SSO
 
@@ -41,10 +41,10 @@ Kerberos-based single sign-on is supported in gateway scenarios. The data source
 
 Power BI will send the current user information to the gateway. The gateway will use Kerberos Constrained Delegation to invoke the query process as the impersonated user.
 
-After making the above changes, the connector owner can test the following scenarios in their own instance of the gateway and in Power BI service to validate functionality.
-* Desktop: Windows impersonation (current user)
-* Desktop: Windows impersonation using alternate credentials
-* Gateway: Windows impersonation using alternate credentials, by pre-configuring the data source with Windows account credentials in the Gateway Power BI Admin portal. 
+After making the above changes, the connector owner can test the following scenarios to validate functionality.
+* In Power BI Desktop: Windows impersonation (current user)
+* In Power BI Desktop: Windows impersonation using alternate credentials
+* In the gateway: Windows impersonation using alternate credentials, by pre-configuring the data source with Windows account credentials in the Gateway Power BI Admin portal. 
 
 After this functionality is validated, Microsoft must make a change to enable single sign-on. Reach out to your Microsoft contact to learn more on how to request this change.
 
