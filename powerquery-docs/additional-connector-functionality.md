@@ -37,11 +37,16 @@ Azure Active Directory (AAD)-based single sign-on is supported in Cloud scenario
 
 #### Kerberos SSO 
 
-Kerberos-based single sign-on is supported in gateway scenarios. The data source must support Windows authentication. Generally, these scenarios include the use of a driver for Direct Query; the driver must support thread-based user impersonation. The gateway must be [configured](/power-bi/connect-data/service-gateway-sso-kerberos) to support Kerberos Constrained Delegation (KCD). An example can be found in the open-sourced [Impala](https://github.com/microsoft/DataConnectors/blob/master/samples/ODBC/ImpalaODBC/ImpalaODBC.pq) connector. 
+Kerberos-based single sign-on is supported in gateway scenarios. The data source must support Windows authentication. Generally, these scenarios involve Direct Query-based reports, and a connector based on an ODBC driver. The primary requirements for the driver is that it can determine Kerberos configuration settings from the current thread context, and that it supports thread-based user impersonation. The gateway must be [configured](/power-bi/connect-data/service-gateway-sso-kerberos) to support Kerberos Constrained Delegation (KCD). An example can be found in the [Impala](https://github.com/microsoft/DataConnectors/blob/master/samples/ODBC/ImpalaODBC/ImpalaODBC.pq) sample connector. 
 
-Power BI will send the user's Azure Active Directory information to the gateway, which runs the query process with user impersonation to connect to the end data source.
+Power BI will send the current user information to the gateway. The gateway will use Kerberos Constrained Delegation to invoke the query process as the impersonated user.
 
-After making the above changes, the connector owner can test in their own instance of the gateway and in Power BI service to validate functionality. For certified connectors, Microsoft must make a change to enable Kerberos-based SSO; reach out to your Microsoft contact to learn more.
+After making the above changes, the connector owner can test the following scenarios in their own instance of the gateway and in Power BI service to validate functionality.
+* Desktop: Windows impersonation (current user)
+* Desktop: Windows impersonation using alternate credentials
+* Gateway: Windows impersonation using alternate credentials, by pre-configuring the data source with Windows account credentials in the Gateway Power BI Admin portal. 
+
+After this functionality is validated, Microsoft must make a change to enable single sign-on. Reach out to your Microsoft contact to learn more on how to request this change.
 
 #### SAML SSO
 
