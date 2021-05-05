@@ -19,7 +19,7 @@ While implementing authentication is outlined in the [authentication](handlingau
 
 ### Windows authentication
 
-Windows-based authentication is supported. To enable Windows-based authentication in your connector, add the following line in the **Authentication** section of your connector.
+Windows authentication is supported. To enable Windows-based authentication in your connector, add the following line in the **Authentication** section of your connector.
 
 ```
 Windows = [ SupportsAlternateCredentials = true ]
