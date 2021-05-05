@@ -1,6 +1,6 @@
 ---
 title: Power Query Microsoft Azure Consumption Insights connector
-description: Provides information on the deprecation of the Microsoft Azure Consumption Insights.
+description: Provides information on the deprecation of the Microsoft Azure Consumption Insights connector.
 author: bezhan
 ms.service: powerquery
 ms.topic: conceptual
@@ -25,5 +25,5 @@ LocalizationGroup: reference
 ## Deprecation
 
 > [!NOTE]
-> This connector is deprecated because of end of support for Microsoft Azure Consumption Insights. We recommend that you transition off existing connections using this connector, and don't use this connector for new connections. Users are instructed to use the certified Microsoft Azure Cost Management connector as a replacement. 
+> This connector is deprecated because of end of support for Microsoft Azure Consumption Insights. We recommend that users transition off existing connections using this connector, and don't use this connector for new connections. Users are instructed to use the certified Microsoft Azure Cost Management connector as a replacement. 
 
