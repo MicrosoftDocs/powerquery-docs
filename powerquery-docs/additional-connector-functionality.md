@@ -25,7 +25,7 @@ Windows authentication is supported. To enable Windows-based authentication in y
 Windows = [ SupportsAlternateCredentials = true ]
 ```
 
-This change will expose Windows authentication as an option in the Power BI Desktop authentication experience. The **SupportsAlternateCredentials** flag will expose the option to "Connect using alternative credentials". After this flag is enabled, you can specify explicit Windows account credentials (username and password). You can use this to test impersonation by providing your own account credentials. 
+This change will expose Windows authentication as an option in the Power BI Desktop authentication experience. The **SupportsAlternateCredentials** flag will expose the option to "Connect using alternative credentials". After this flag is enabled, you can specify explicit Windows account credentials (username and password). You can use this feature to test impersonation by providing your own account credentials. 
 
 ### Single sign-on (SSO) authentication
 
@@ -37,7 +37,7 @@ Azure Active Directory (AAD)-based single sign-on is supported in Cloud scenario
 
 #### Kerberos SSO 
 
-Kerberos-based single sign-on is supported in gateway scenarios. The data source must support Windows authentication. Generally, these scenarios involve Direct Query-based reports, and a connector based on an ODBC driver. The primary requirements for the driver is that it can determine Kerberos configuration settings from the current thread context, and that it supports thread-based user impersonation. The gateway must be [configured](/power-bi/connect-data/service-gateway-sso-kerberos) to support Kerberos Constrained Delegation (KCD). An example can be found in the [Impala](https://github.com/microsoft/DataConnectors/blob/master/samples/ODBC/ImpalaODBC/ImpalaODBC.pq) sample connector. 
+Kerberos-based single sign-on is supported in gateway scenarios. The data source must support Windows authentication. Generally, these scenarios involve Direct Query-based reports, and a connector based on an ODBC driver. The primary requirements for the driver are that it can determine Kerberos configuration settings from the current thread context, and that it supports thread-based user impersonation. The gateway must be [configured](/power-bi/connect-data/service-gateway-sso-kerberos) to support Kerberos Constrained Delegation (KCD). An example can be found in the [Impala](https://github.com/microsoft/DataConnectors/blob/master/samples/ODBC/ImpalaODBC/ImpalaODBC.pq) sample connector. 
 
 Power BI will send the current user information to the gateway. The gateway will use Kerberos Constrained Delegation to invoke the query process as the impersonated user.
 
@@ -66,7 +66,7 @@ Some Power Query connectors offer end users the ability to specify [native datab
 
 ### Allowing users to use Direct Query over a custom SQL statement
 
-**Scenario**: A end user can leverage Direct Query over native database queries. 
+**Scenario**: An end user can use Direct Query over native database queries. 
 
 **Status**: This feature is not currently supported in our extensibility SDK. The product team is investigating this scenario and expect that this may eventually be possible for connectors with ODBC drivers and end data sources supporting ANSI SQL92 "pass through" mode. 
 
