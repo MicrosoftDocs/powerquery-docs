@@ -52,3 +52,22 @@ After this functionality is validated, Microsoft must make a change to enable si
 
 SAML-based SSO is often not supported by end data sources and isn't a recommended approach. If your scenario requires the use of SAML-based SSO, reach out to your Microsoft contact or visit our documentation to [learn more](/power-bi/connect-data/service-gateway-sso-saml).
 
+## Native Database Query Support
+
+Some Power Query connectors offer end users the ability to specify [native database queries](native-database-query.md) under **Advanced options** in the connection experience. Custom connector developers may be interested in offering native database query support in their connector. 
+
+### Allowing users to run a custom SQL statement through an ODBC-based custom connector
+
+**Scenario**: An end user can run custom SQL statements through their ODBC-based connector. The statement would be run in Import Mode, and there is no need for the transformations to fold. 
+
+**Status**: This feature is not currently supported in our extensibility SDK, as the native database query security model is unavailable to custom connectors. The product team is investigating the feasibility of this scenario.
+
+**Workarounds**: The connector developer can opt to use generic ODBC functionality instead of a custom connector, as the custom connector code does not provide any additional functional benefit when using the **Odbc.Query** function. If the data source can enforce read-only access, there may be another workaround available through exposing a function to pass in a native query. Reach out to your Microsoft contact to learn more. 
+
+### Allowing users to use Direct Query over a custom SQL statement
+
+**Scenario**: A end user can leverage Direct Query over native database queries. 
+
+**Status**: This feature is not currently supported in our extensibility SDK. The product team is investigating this scenario and expect that this may eventually be possible for connectors with ODBC drivers and end data sources supporting ANSI SQL92 "pass through" mode. 
+
+**Workarounds**: None. 
