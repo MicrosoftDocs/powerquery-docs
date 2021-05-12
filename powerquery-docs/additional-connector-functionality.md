@@ -60,9 +60,11 @@ Some Power Query connectors offer end users the ability to specify [native datab
 
 **Scenario**: An end user can run custom SQL statements through their ODBC-based connector. The statement would be run in Import Mode, and there is no need for the transformations to fold. 
 
-**Status**: This feature is not currently supported in our extensibility SDK, as the native database query security model is unavailable to custom connectors. The product team is investigating the feasibility of this scenario.
+**Status**: This feature is not currently supported in our extensibility SDK. While we provide a [native database query security model](native-database-query#native-database-query-security) for some connectors to prevent users from issuing destructive statements, this is currently unavailable to custom connectors. The product team is investigating the feasibility of this scenario. Without the extensibility of the security model, we do not recommend connectors expose native query functionality unless through one of the workarounds below. 
 
-**Workarounds**: The connector developer can opt to use generic ODBC functionality instead of a custom connector, as the custom connector code does not provide any additional functional benefit when using the **Odbc.Query** function. If the data source can enforce read-only access, there may be another workaround available through exposing a function to pass in a native query. Reach out to your Microsoft contact to learn more. 
+**Workarounds**: The connector developer can opt to use generic ODBC functionality with the **Odbc.Query** function instead of a custom connector. Unlike **Odbc.DataSource**, which allows the custom connector to override driver settings and improve query folding behavior, **Odbc.Query** simply runs the query as provided and does not benefit from the custom connector wrapper.
+
+If the data source can enforce read-only access and you would like to proceed with exposing **Odbc.Query** functionality for your connector, the recommendation is to provide a second data source function with its own Publish record, and have two entries in the Get Data dialog (**DataSource.Database, DataSource.Query**). The **Odbc.Query** function would only support Import mode in Power BI, not Direct Query. The distinction is recommended as combining **Odbc.Query** (which does not support query folding) and **Odbc.DataSource** (which does support query folding) may confuse end users. Reach out to your Microsoft contact if you would like code samples outlining this design. 
 
 ### Allowing users to use Direct Query over a custom SQL statement
 
