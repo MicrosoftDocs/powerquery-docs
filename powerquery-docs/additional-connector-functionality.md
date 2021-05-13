@@ -4,18 +4,18 @@ description: Provides information to custom and certified connector developers o
 author: bezhan-msft
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 5/4/2021
+ms.date: 5/12/2021
 ms.author: bezhan
 LocalizationGroup: reference
 ---
 
 # Additional connector functionality
 
-This article outlines different types of extra connector functionality that connector developers may want to invest in. For each type, this article outlines availability and instructions to enable the functionality.
+This article provides indormation about different types of additional connector functionality that connector developers might want to invest in. For each type, this article outlines availability and instructions to enable the functionality.
 
 ## Authentication
 
-While implementing authentication is outlined in the [authentication](handlingauthentication.md) article, there are other methods which connector owners may be interested in offering. 
+While implementing authentication is covered in the [authentication](handlingauthentication.md) article, there are other methods that connector owners might be interested in offering. 
 
 ### Windows authentication
 
@@ -27,13 +27,13 @@ Windows = [ SupportsAlternateCredentials = true ]
 
 This change will expose Windows authentication as an option in the Power BI Desktop authentication experience. The **SupportsAlternateCredentials** flag will expose the option to "Connect using alternative credentials". After this flag is enabled, you can specify explicit Windows account credentials (username and password). You can use this feature to test impersonation by providing your own account credentials. 
 
-### Single sign-on (SSO) authentication
+### Single sign-on authentication
 
 This section outlines options available for implementing single sign-on (SSO) functionality into your certified connector. Currently, there is no support for "plug and play" extensibility for SSO. Enabling SSO would require changes and collaboration both on the Microsoft and data source or connector sides, so reach out to your Microsoft contact prior to starting work.
 
-#### Azure Active Directory (AAD) SSO
+#### Azure Active Directory SSO
 
-Azure Active Directory (AAD)-based single sign-on is supported in Cloud scenarios. The data source must accept AAD access tokens, as the Power BI AAD user token will be exchanged with a data source token from Azure Active Directory. If you have a certified connector, reach out to your Microsoft contact to learn more.
+Azure Active Directory (Azure AD)-based SSO is supported in cloud scenarios. The data source must accept Azure AD access tokens, as the Power BI Azure AD user token will be exchanged with a data source token from Azure AD. If you have a certified connector, reach out to your Microsoft contact to learn more.
 
 #### Kerberos SSO 
 
@@ -42,15 +42,15 @@ Kerberos-based single sign-on is supported in gateway scenarios. The data source
 Power BI will send the current user information to the gateway. The gateway will use Kerberos Constrained Delegation to invoke the query process as the impersonated user.
 
 After making the above changes, the connector owner can test the following scenarios to validate functionality.
-* In Power BI Desktop: Windows impersonation (current user)
-* In Power BI Desktop: Windows impersonation using alternate credentials
-* In the gateway: Windows impersonation using alternate credentials, by pre-configuring the data source with Windows account credentials in the Gateway Power BI Admin portal. 
+- In Power BI Desktop: Windows impersonation (current user)
+- In Power BI Desktop: Windows impersonation using alternate credentials
+- In the gateway: Windows impersonation using alternate credentials, by pre-configuring the data source with Windows account credentials in the Gateway Power BI Admin portal. 
 
 Connector developers can also use this procedure to test their implementation of Kerberos-based SSO.
 
-1) Set up an on-premises data gateway with single sign-on enabled using instructions in the [Power BI Kerberos SSO documentation](/power-bi/connect-data/service-gateway-sso-kerberos#prerequisites).
+1) Set up an on-premises data gateway with single sign-on enabled using instructions in the [Power BI Kerberos SSO documentation](/power-bi/connect-data/service-gateway-sso-kerberos#prerequisites) article.
 
-2) Validate the setup by testing with SQL Server and Windows accounts. Set up the [SQL Server Kerberos configuration manager](/troubleshoot/sql/connect/kerberos-configuration-manager-available). If you can use Kerberos SSO with SQL Server, then your Power BI data gateway is properly set up to enable Kerberos SSO for other data sources as well.
+2) Validate the setup by testing with SQL Server and Windows accounts. Set up the [SQL Server Kerberos configuration manager](/troubleshoot/sql/connect/kerberos-configuration-manager-available). If you can use Kerberos SSO with SQL Server then your Power BI data gateway is properly set up to enable Kerberos SSO for other data sources as well.
 
 3) Create an application (for example, a command-line tool) that connects to your server through your ODBC driver. Ensure that your application can use Windows authentication for the connection.
 
@@ -66,7 +66,7 @@ Reach out to your Microsoft contact prior to starting work to learn more on how 
 
 SAML-based SSO is often not supported by end data sources and isn't a recommended approach. If your scenario requires the use of SAML-based SSO, reach out to your Microsoft contact or visit our documentation to [learn more](/power-bi/connect-data/service-gateway-sso-saml).
 
-## Native Database Query Support
+## Native database query support
 
 Some Power Query connectors offer end users the ability to specify [native database queries](native-database-query.md) under **Advanced options** in the connection experience. Custom connector developers may be interested in offering native database query support in their connector. 
 
