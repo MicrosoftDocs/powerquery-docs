@@ -37,6 +37,7 @@ The following image shows how Power Query Editor appears after a data connection
 
 
 ![Elements of Power Query Editor](media/power-query-quickstart-using-power-bi/queryoverview_withdataconnection.png "Elements of Power Query Editor")
+
 | No. | Description |
 |---------|-------------|
 | **1** | On the ribbon, many buttons are now active so you can interact with the data in the query. |
