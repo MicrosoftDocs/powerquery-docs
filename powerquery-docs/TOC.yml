@@ -294,6 +294,8 @@
         href: Connectors/EQuIS.md
       - name: "Google Analytics"
         href: Connectors/GoogleAnalytics.md
+      - name: "Google BigQuery"
+        href: Connectors/GoogleBigQuery.md
       - name: "JSON"
         href: Connectors/json.md
       - name: "Mailchimp (Deprecated)"
@@ -434,6 +436,8 @@
           href: SamplesDirectory.md#trippin
       - name: Advanced concepts
         items:
+        - name: "Additional connector functionality"
+          href: additional-connector-functionality.md
         - name: "Handling authentication"
           href: HandlingAuthentication.md
         - name: "Handling data access"
