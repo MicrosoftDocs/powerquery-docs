@@ -42,6 +42,8 @@ To connect to SumTotal from Power BI Desktop:
 
 3. Enter the server URL address of the data you want to load.
 
+**NOTE"** You will be prompted with a Script Error popup, this is to load JS/CSS scripts the login form uses, Click Yes.
+
 4. When the table is loaded in the **Navigator** dialog box, you will be presented with the list of OData API entities that are currently supported by the connector, you can select one or multiple entities.
 
   When you've finished selecting entities , select **Load** or  **Transform Data**.
