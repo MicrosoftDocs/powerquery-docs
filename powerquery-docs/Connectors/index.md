@@ -174,7 +174,7 @@ A checkmark indicates the connector is currently supported in the listed service
 
 ## Next steps
 
-- [Power BI data sources (datasets)](https://docs.microsoft.com/power-bi/power-bi-data-sources)
-- [Connect to data sources for Power BI dataflows](https://docs.microsoft.com/power-bi/transform-model/service-dataflows-data-sources#data-sources-for-dataflows)
-- [Available data sources (Dynamics 365 Customer Insights)](https://docs.microsoft.com/dynamics365/ai/customer-insights/data-sources-list)
-- [Data sources supported in Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)
+- [Power BI data sources (datasets)](/power-bi/power-bi-data-sources)
+- [Connect to data sources for Power BI dataflows](/power-bi/transform-model/service-dataflows-data-sources#data-sources-for-dataflows)
+- [Available data sources (Dynamics 365 Customer Insights)](/dynamics365/ai/customer-insights/data-sources-list)
+- [Data sources supported in Azure Analysis Services](/azure/analysis-services/analysis-services-datasource)
