@@ -1,6 +1,6 @@
 ---
-title: Power Query Google BigQuery connector
-description: Provides basic information and prerequisites for the Google BigQuery connector.
+title: Google BigQuery connector
+description: Provides basic information and prerequisites for the Google BigQuery connector for Power Query.
 author: bezhan
 ms.service: powerquery
 ms.topic: conceptual
@@ -34,19 +34,19 @@ To connect to Google BigQuery, follow these steps:
 
 1) In the Get Data experience, search for and select **Google BigQuery**. 
 
-  ![Get Data from Google BigQuery](./media/google-bigquery/GetData.png)
+    ![Get Data from Google BigQuery](./media/google-bigquery/GetData.png)
 
-2) The Google BigQuery supports connecting through an organizational account. Select **Sign In** to proceed.
+2) The Google BigQuery connevtor supports connecting through an organizational account. Select **Sign In** to proceed.
 
-  ![Sign in to Google BigQuery](./media/google-bigquery/SignIn.png)
+    ![Sign in to Google BigQuery](./media/google-bigquery/SignIn.png)
 
 3) A **Sign in with Google** dialog will appear. Select your Google account and approve connecting to Power BI Desktop.
 
-  ![Sign in to Google](./media/google-bigquery/SignIntoGoogle.png)
+    ![Sign in to Google](./media/google-bigquery/SignIntoGoogle.png)
 
 4) Once signed in, select **Connect** to continue.
 
-  ![Connect to Google BigQuery Data](./media/google-bigquery/ConnectToGoogleBigQueryData.png)
+    ![Connect to Google BigQuery Data](./media/google-bigquery/ConnectToGoogleBigQueryData.png)
 
 5) The Navigator will now load. Select your data in the Navigator and select either **Transform Data** in Power Query or **Load** into Power BI Desktop.
 
@@ -58,9 +58,9 @@ This section describes any limitations or considerations of the Google BigQuery 
 
 To optimize performance considerations, Google BigQuery performs well with large datasets when denormalized, flattened, and nested. 
 
-The Google BigQuery connector supports nested fields, which are loaded as Text columns in JSON format. 
+The Google BigQuery connector supports nested fields, which are loaded as text columns in JSON format. 
 
-  ![Google BigQuery Nested Fields Support](./media/google-bigquery/GoogleBigQueryNestedFields.png)
+![Google BigQuery Nested Fields Support](./media/google-bigquery/GoogleBigQueryNestedFields.png)
 
 Users should select **Transform Data** and then use the JSON parsing capabilities within the Power Query Editor to extract the data.
 
