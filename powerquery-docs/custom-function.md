@@ -11,7 +11,7 @@ ms.author: v-miesco
 
 If you find yourself in a situation where you need to apply the same set of transformations to different queries or values, creating a Power Query custom function that can be reused as many times as you need could be beneficial. A Power Query custom function is a mapping from a set of input values to a single output value, and is created from native M functions and operators. 
 
-While you can manually create your own Power Query custom function using code as shown in [Understanding Power Query M functions](https://docs.microsoft.com/powerquery-m/understanding-power-query-m-functions), the Power Query user interface offers you features to speed up, simplify, and enhance the process of creating and managing a custom function. 
+While you can manually create your own Power Query custom function using code as shown in [Understanding Power Query M functions](/powerquery-m/understanding-power-query-m-functions), the Power Query user interface offers you features to speed up, simplify, and enhance the process of creating and managing a custom function. 
 This article focuses on this experience provided only through the Power Query user interface and how to get the most out of it.
 
 > [!IMPORTANT]
@@ -190,7 +190,7 @@ in
 ```
 
 >[!NOTE]
-> To learn more about the Power Query M formula language, see [Power Query M formula language](https://docs.microsoft.com/powerquery-m) 
+> To learn more about the Power Query M formula language, see [Power Query M formula language](/powerquery-m) 
 
 You can then transform that query into a function by doing a right-click on the query and selecting **Create Function**. Finally, you can invoke your custom function into any of your queries or values, as shown in the next image.
 
