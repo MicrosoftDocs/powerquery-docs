@@ -46,7 +46,21 @@ After making the above changes, the connector owner can test the following scena
 * In Power BI Desktop: Windows impersonation using alternate credentials
 * In the gateway: Windows impersonation using alternate credentials, by pre-configuring the data source with Windows account credentials in the Gateway Power BI Admin portal. 
 
-After this functionality is validated, Microsoft must make a change to enable single sign-on. Reach out to your Microsoft contact to learn more on how to request this change.
+Connector developers can also use this procedure to test their implementation of Kerberos-based SSO.
+
+1) Set up an on-premises data gateway with single sign-on enabled using instructions in the [Power BI Kerberos SSO documentation](/power-bi/connect-data/service-gateway-sso-kerberos#prerequisites).
+
+2) Validate the set up by testing with SQL Server and Windows accounts. Set up the [SQL Server Kerberos configuration manager](/troubleshoot/sql/connect/kerberos-configuration-manager-available). If you can use Kerberos SSO with SQL Server, then your Power BI data gateway is properly set up to enable Kerberos SSO for other data sources as well.
+
+3) Create a simple application (e.g. a command line tool) that connects to your server through your ODBC driver. Ensure that your application can use Windows authentication for the connection.
+
+4) Modify your test application so that it can take a username (UPN) as an argument and use the [WindowsIdentity](/dotnet/api/system.security.principal.windowsidentity.-ctor?view=dotnet-plat-ext-3.1#System_Security_Principal_WindowsIdentity__ctor_System_String_) constructor with it. Once complete, with the privileges granted to the gateway account set up in Step 1, you should be able to obtain the user's [AccessToken](/dotnet/api/system.security.principal.windowsidentity.accesstoken?view=dotnet-plat-ext-3.1) property and [impersonate](/dotnet/api/system.security.principal.windowsidentity.impersonate?view=netframework-4.8) this token.
+
+5) Once you've made the changes to your application, ensure that you can use impersonation to load and connect to your service through the ODBC driver. Ensure that data can be retrieved. If you want to use native C or C++ code to achieve this, you'll need to use [LsaLoginUser](/windows/win32/api/ntsecapi/nf-ntsecapi-lsalogonuser) to retrieve a token with just the username and use the [KERB_S4U_LOGON](/windows/win32/api/ntsecapi/ns-ntsecapi-kerb_s4u_logon) option.
+
+After this functionality is validated, Microsoft will make a change to thread the UPN from the Power BI Service down through the gateway. Once at the gateway, it will essentially act the same way as your test application to retrieve data.
+
+Reach out to your Microsoft contact prior to starting work to learn more on how to request this change.
 
 #### SAML SSO
 
