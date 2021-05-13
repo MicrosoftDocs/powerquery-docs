@@ -50,13 +50,13 @@ Connector developers can also use this procedure to test their implementation of
 
 1) Set up an on-premises data gateway with single sign-on enabled using instructions in the [Power BI Kerberos SSO documentation](/power-bi/connect-data/service-gateway-sso-kerberos#prerequisites).
 
-2) Validate the set up by testing with SQL Server and Windows accounts. Set up the [SQL Server Kerberos configuration manager](/troubleshoot/sql/connect/kerberos-configuration-manager-available). If you can use Kerberos SSO with SQL Server, then your Power BI data gateway is properly set up to enable Kerberos SSO for other data sources as well.
+2) Validate the setup by testing with SQL Server and Windows accounts. Set up the [SQL Server Kerberos configuration manager](/troubleshoot/sql/connect/kerberos-configuration-manager-available). If you can use Kerberos SSO with SQL Server, then your Power BI data gateway is properly set up to enable Kerberos SSO for other data sources as well.
 
-3) Create a simple application (e.g. a command line tool) that connects to your server through your ODBC driver. Ensure that your application can use Windows authentication for the connection.
+3) Create an application (for example, a command-line tool) that connects to your server through your ODBC driver. Ensure that your application can use Windows authentication for the connection.
 
 4) Modify your test application so that it can take a username (UPN) as an argument and use the [WindowsIdentity](/dotnet/api/system.security.principal.windowsidentity.-ctor#System_Security_Principal_WindowsIdentity__ctor_System_String_) constructor with it. Once complete, with the privileges granted to the gateway account set up in Step 1, you should be able to obtain the user's [AccessToken](/dotnet/api/system.security.principal.windowsidentity.accesstoken) property and [impersonate](/dotnet/api/system.security.principal.windowsidentity.impersonate) this token.
 
-5) Once you've made the changes to your application, ensure that you can use impersonation to load and connect to your service through the ODBC driver. Ensure that data can be retrieved. If you want to use native C or C++ code to achieve this, you'll need to use [LsaLoginUser](/windows/win32/api/ntsecapi/nf-ntsecapi-lsalogonuser) to retrieve a token with just the username and use the [KERB_S4U_LOGON](/windows/win32/api/ntsecapi/ns-ntsecapi-kerb_s4u_logon) option.
+5) Once you've made the changes to your application, ensure that you can use impersonation to load and connect to your service through the ODBC driver. Ensure that data can be retrieved. If you want to use native C or C++ code instead, you'll need to use [LsaLoginUser](/windows/win32/api/ntsecapi/nf-ntsecapi-lsalogonuser) to retrieve a token with just the username and use the [KERB_S4U_LOGON](/windows/win32/api/ntsecapi/ns-ntsecapi-kerb_s4u_logon) option.
 
 After this functionality is validated, Microsoft will make a change to thread the UPN from the Power BI Service down through the gateway. Once at the gateway, it will essentially act the same way as your test application to retrieve data.
 
@@ -74,7 +74,7 @@ Some Power Query connectors offer end users the ability to specify [native datab
 
 **Scenario**: An end user can run custom SQL statements through their ODBC-based connector. The statement would be run in Import Mode, and there is no need for the transformations to fold. 
 
-**Status**: This feature is not currently supported in our extensibility SDK. While we provide a [native database query security model](native-database-query.md#native-database-query-security) for some connectors to prevent users from issuing destructive statements, this is currently unavailable to custom connectors. The product team is investigating the feasibility of this scenario. Without the extensibility of the security model, we do not recommend connectors expose native query functionality unless through one of the workarounds below. 
+**Status**: This feature is not currently supported in our extensibility SDK. While we provide a [native database query security model](native-database-query.md#native-database-query-security) for some connectors to prevent users from issuing destructive statements, this model is currently unavailable to custom connectors. The product team is investigating the feasibility of this scenario. Without the extensibility of the security model, we do not recommend connectors expose native query functionality unless through one of the workarounds below. 
 
 **Workarounds**: The connector developer can opt to use generic ODBC functionality with the **Odbc.Query** function instead of a custom connector. Unlike **Odbc.DataSource**, which allows the custom connector to override driver settings and improve query folding behavior, **Odbc.Query** simply runs the query as provided and does not benefit from the custom connector wrapper.
 
@@ -84,6 +84,6 @@ If the data source can enforce read-only access and you would like to proceed wi
 
 **Scenario**: An end user can use Direct Query over native database queries. 
 
-**Status**: This feature is not currently supported in our extensibility SDK. The product team is investigating this scenario and expect that this may eventually be possible for connectors with ODBC drivers and end data sources supporting ANSI SQL92 "pass through" mode. 
+**Status**: This feature is not currently supported in our extensibility SDK. The product team is investigating this scenario and expect that this scenario may eventually be possible for connectors with ODBC drivers and end data sources supporting ANSI SQL92 "pass through" mode. 
 
 **Workarounds**: None. 
