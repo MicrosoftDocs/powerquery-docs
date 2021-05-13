@@ -436,6 +436,8 @@
           href: SamplesDirectory.md#trippin
       - name: Advanced concepts
         items:
+        - name: "Additional connector functionality"
+          href: additional-connector-functionality.md
         - name: "Handling authentication"
           href: HandlingAuthentication.md
         - name: "Handling data access"
