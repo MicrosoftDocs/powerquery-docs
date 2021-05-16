@@ -20,8 +20,8 @@
       items:
       - name: "Use Power Query"
         href: power-query-quickstart-using-power-bi.md
-      - name: "Shape and combine data"
-        href: power-query-tutorial-shape-combine.md
+      - name: "Using the Power Query editor to transform data"
+        href: power-query-ui.md
       - name: "Using the Applied Steps list"
         href: applied-steps.md
       - name: "Query folding basics"
