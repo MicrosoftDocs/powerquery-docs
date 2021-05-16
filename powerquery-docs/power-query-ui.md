@@ -191,7 +191,7 @@ This change will add a new icon next to your step that you can hover over to rea
 ![Hover to view step properties](media/power-query-ui/pqui-step-hover.png)
 
 > [!NOTE]
-> You can learn more about **Applied steps** from its documentation [article](applied-steps).
+> You can learn more about **Applied steps** from its documentation [article](applied-steps.md).
 
 Before moving on to the next section, disable the **Diagram view** to only see the **Data preview**.
 
