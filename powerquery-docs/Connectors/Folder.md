@@ -18,7 +18,7 @@ LocalizationGroup: reference
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 |Authentication Types Supported | Windows |
-| Function Reference Documentation | [Folder.Contents](https://docs.microsoft.com/powerquery-m/folder-contents), [Folder.Files](https://docs.microsoft.com/powerquery-m/folder-files) |
+| Function Reference Documentation | [Folder.Contents](/powerquery-m/folder-contents), [Folder.Files](/powerquery-m/folder-files) |
 | | |
 
 ## Capabilities supported
@@ -76,4 +76,3 @@ To connect to a folder from Power Query Online:
 All of the files in the folder you select are included in the data to be combined. If you have data files located in a subfolder of the folder you select, all of these files are also included. To ensure that combining the file data works properly, make sure that all of the files in the folder and its subfolders have the same schema.
 
 For more information about combining files, see [Combine files in Power Query](../combine-files-overview.md).
-

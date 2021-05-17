@@ -11,7 +11,7 @@ LocalizationGroup: reference
 
 # FHIR Relationships
 
-This article describes how to establish [relationships](https://docs.microsoft.com/power-bi/desktop-create-and-manage-relationships) between tables that have been imported using the Power Query connector for FHIR.
+This article describes how to establish [relationships](/power-bi/desktop-create-and-manage-relationships) between tables that have been imported using the Power Query connector for FHIR.
 
 ## Introduction
 

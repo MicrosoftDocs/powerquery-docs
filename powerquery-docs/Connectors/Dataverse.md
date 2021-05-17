@@ -94,7 +94,7 @@ To connect to Dataverse from Power Query Online:
 
 ### Dataverse OData API performance and throttling limits
 
-For information about OData API performance and throttling limits for Dataverse connections, go to [Requests limits and allocations](https://docs.microsoft.com/power-platform/admin/api-request-limits-allocations). These limitations apply to both the Dataverse connector (which uses the OData API as an implementation detail) and the [OData Feed](odatafeed.md) connector when accessing the same endpoint.
+For information about OData API performance and throttling limits for Dataverse connections, go to [Requests limits and allocations](/power-platform/admin/api-request-limits-allocations). These limitations apply to both the Dataverse connector (which uses the OData API as an implementation detail) and the [OData Feed](odatafeed.md) connector when accessing the same endpoint.
 
 ### Table retrieval rate
 
@@ -104,7 +104,7 @@ As a guideline, most default tables will be retrieved at a rate of approximately
 
 There are several alternative ways of extracting and migrating data from Dataverse:
 
-* Use the OData connector to move data in and out of Dataverse. For more information on how to migrate data between Dataverse environments using the dataflows OData connector, go to [Migrate data between Dataverse environments using the dataflows OData connector](https://docs.microsoft.com/powerapps/developer/common-data-service/cds-odata-dataflows-migration).
+* Use the OData connector to move data in and out of Dataverse. For more information on how to migrate data between Dataverse environments using the dataflows OData connector, go to [Migrate data between Dataverse environments using the dataflows OData connector](/powerapps/developer/common-data-service/cds-odata-dataflows-migration).
 
 * Use the **Export to data lake** feature in Power Apps to extract data from Dataverse into Azure Data Lake Storage, which can then be used to run analytics. For more information about the export to data lake feature, go to [Exporting Dataverse data to Azure Data Lake is Generally Available](https://powerapps.microsoft.com/blog/exporting-cds-data-to-azure-data-lake-preview/#:~:text=Exporting%20CDS%20data%20to%20Azure%20Data%20Lake%20is,BI%20reporting%2C%20ML%2C%20Data%20Warehousing%20and%20other%20).
 
@@ -112,4 +112,3 @@ There are several alternative ways of extracting and migrating data from Dataver
 
 >[!Note]
 > Both the Dataverse connector and the OData APIs are meant to serve analytical scenarios where data volumes are relatively small. The recommended approach for bulk data extraction is “Export to Data Lake”. The TDS endpoint is a better option than the Dataverse connector and OData endpoint, but is currently in Preview.
-
