@@ -67,5 +67,5 @@ The following examples show some descriptions of various cube functions:
 
 ### See also
 
-* [Power Query M formula language reference](https://docs.microsoft.com/powerquery-m/)
+* [Power Query M formula language reference](/powerquery-m/)
 * [Implementation details](implementation-details.md)

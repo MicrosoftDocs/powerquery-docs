@@ -14,7 +14,7 @@ LocalizationGroup: reference
 # Windows authentication and single sign-on
 
 >[!NOTE]
-> The following information about Windows authentication and single sign-on applies only to Power Query Desktop. For more information about using Windows authentication and single sign-on in Power Query Desktop, go to [Overview of single sign-on (SSO) for gateways in Power BI](https://docs.microsoft.com/power-bi/connect-data/service-gateway-sso-overview).
+> The following information about Windows authentication and single sign-on applies only to Power Query Desktop. For more information about using Windows authentication and single sign-on in Power Query Desktop, go to [Overview of single sign-on (SSO) for gateways in Power BI](/power-bi/connect-data/service-gateway-sso-overview).
 
 For Windows-based authentication and single sign-on functionality, your SAP BW server must be configured for sign in using Secure Network Communications (SNC). SNC is a mechanism provided by the SAP system that enables application-level security on data exchanged between a client, such as Power BI Desktop, and the SAP BW server. SNC works with different external security products and offers features that the SAP system doesn't directly provide, including single sign-on.
 
@@ -63,4 +63,3 @@ For further information, go to [Secure Login](https://help.sap.com/viewer/a017d0
 ### See also
 
 * [Use advanced options](use-advanced-options.md)
-

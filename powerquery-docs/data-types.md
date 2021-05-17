@@ -20,7 +20,7 @@ The data type of a column is displayed on the left side of the column heading wi
 >[!NOTE]
 >Power Query provides a set of contextual transformations and options based on the data type of the column. For example, when you select a column with a data type of Date, you get transformations and options that apply to that specific data type. These transformations and options occur throughout the Power Query interface, such as on the **Transform** and **Add column** tabs and the smart filter options. 
 
-The most common data types used in Power Query are listed in the following table. Although beyond the scope of this article, you can find the complete list of data types in the Power Query M formula language [Types article](https://docs.microsoft.com/powerquery-m/m-spec-types).
+The most common data types used in Power Query are listed in the following table. Although beyond the scope of this article, you can find the complete list of data types in the Power Query M formula language [Types article](/powerquery-m/m-spec-types).
 
 |Data type | Icon | Description|
 ----------|------|------------|

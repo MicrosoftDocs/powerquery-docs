@@ -18,7 +18,7 @@ LocalizationGroup: reference
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication Types Supported | Anonymous<br/>Windows<br/>Basic<br/>Organizational Account |
-| Function Reference Documentation | [Access.Database](https://docs.microsoft.com/powerquery-m/access-database) |
+| Function Reference Documentation | [Access.Database](/powerquery-m/access-database) |
 | | |
 
 >[!Note]
@@ -90,5 +90,4 @@ A 64-bit version of the Access Database Engine 2010 OLEDB provider must be insta
 
 ### Import Access database to Power BI Desktop
 
-In some cases, you may get a `The 'Microsoft.ACE.OLEDB.12.0' provider is not registered` error when attempting to import an Access database file to Power BI Desktop. This error may be caused by using mismatched bit versions of Power BI Desktop and the Access Database Engine 2010 OLEDB provider. For more information about how you can fix this mismatch, see [Troubleshoot importing Access and Excel .xls files in Power BI Desktop](https://docs.microsoft.com/power-bi/connect-data/desktop-access-database-errors).
-
+In some cases, you may get a `The 'Microsoft.ACE.OLEDB.12.0' provider is not registered` error when attempting to import an Access database file to Power BI Desktop. This error may be caused by using mismatched bit versions of Power BI Desktop and the Access Database Engine 2010 OLEDB provider. For more information about how you can fix this mismatch, see [Troubleshoot importing Access and Excel .xls files in Power BI Desktop](/power-bi/connect-data/desktop-access-database-errors).

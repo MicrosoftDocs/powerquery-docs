@@ -11,7 +11,7 @@ LocalizationGroup: reference
 
 # FHIR Query Folding
 
-[Power Query folding](https://docs.microsoft.com/power-query/power-query-folding) is the mechanism used by a Power Query connector to turn data transformations into queries that are sent to the data source. This allows Power Query to off-load as much of the data selection as possible to the data source rather than retrieving large amounts of unneeded data only to discard it in the client. The Power Query connector for FHIR includes query folding capabilities, but due to the nature of [FHIR search](https://www.hl7.org/fhir/search.html), special attention must be given to the Power Query expressions to ensure that query folding is performed when possible. This article explains the basics of FHIR Power Query folding and provides guidelines and examples.
+[Power Query folding](../../power-query-folding.md) is the mechanism used by a Power Query connector to turn data transformations into queries that are sent to the data source. This allows Power Query to off-load as much of the data selection as possible to the data source rather than retrieving large amounts of unneeded data only to discard it in the client. The Power Query connector for FHIR includes query folding capabilities, but due to the nature of [FHIR search](https://www.hl7.org/fhir/search.html), special attention must be given to the Power Query expressions to ensure that query folding is performed when possible. This article explains the basics of FHIR Power Query folding and provides guidelines and examples.
 
 ## FHIR and Query Folding
 

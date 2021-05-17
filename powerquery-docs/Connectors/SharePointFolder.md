@@ -19,7 +19,7 @@ Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in 
 
 Authentication Types Supported: Anonymous, Microsoft Account, Windows
 
-Function Reference Documentation: [SharePoint.Contents](https://docs.microsoft.com/powerquery-m/sharepoint-contents), [SharePoint.Files](https://docs.microsoft.com/powerquery-m/sharepoint-files)
+Function Reference Documentation: [SharePoint.Contents](/powerquery-m/sharepoint-contents), [SharePoint.Files](/powerquery-m/sharepoint-files)
 
 >[!NOTE]
 >AAD/OAuth for SharePoint on-premises isn’t supported using the on-premises data gateway. 
@@ -107,4 +107,3 @@ If a filename contains certain special characters, it may lead to authentication
 `# % $`
 
 If these characters are present in the filename, the file owner must rename the file so that it does NOT contain any of these characters.
-
