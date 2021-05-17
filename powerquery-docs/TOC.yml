@@ -267,7 +267,7 @@
       - name: "Bloomberg Data and Analytics"
         href: Connectors/BloombergDataAndAnalytics.md 
       - name: "Common Data Service"
-        href: Connectors/commondataservice.md
+        href: ./connectors/dataverse.md
       - name: "Data Lake Storage"
         href: Connectors/DataLakeStorage.md
       - name: "Dataverse"
@@ -309,7 +309,7 @@
         - name: "OData Feed connector"
           href: Connectors/ODataFeed.md
         - name: "Connecting to Azure DevOps using OData"
-          href: https://docs.microsoft.com/azure/devops/report/powerbi/odataquery-connect?view=azure-devops
+          href: /azure/devops/report/powerbi/odataquery-connect?view=azure-devops
       - name: "ODBC"
         href: Connectors/Odbc.md
       - name: "Oracle database"

@@ -18,7 +18,7 @@ LocalizationGroup: reference
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights |
 | Authentication Types Supported | Anonymous<br/>Windows<br/>Basic<br/>Web API<br/>Organizational Account |
-| Function Reference Documentation | [Web.Page](https://docs.microsoft.com/powerquery-m/web-page)<br/>[Web.BrowserContents](https://docs.microsoft.com/powerquery-m/web-browsercontents) |
+| Function Reference Documentation | [Web.Page](/powerquery-m/web-page)<br/>[Web.BrowserContents](/powerquery-m/web-browsercontents) |
 | | |
 
 ## Prerequisites
@@ -80,7 +80,7 @@ To load data from a web site with Power Query Desktop:
 
    The right side of the **Navigator** dialog displays the contents of the table you select to transform or load. If you're uncertain which table contains the data you're interested in, you can select the **Web View** tab. The web view lets you see the entire contents of the web page, and highlights each of the tables that have been detected on that site. You can select the check box above the highlighted table to obtain the data from that table.
 
-   On the lower left side of the **Navigator** dialog, you can also select the **Add table using examples** button. This selection presents an interactive window where you can preview the content of the web page and enter sample values of the data you want to extract. For more information on using this feature, go to [Get webpage data by providing examples](https://docs.microsoft.com/power-bi/desktop-connect-to-web-by-example).
+   On the lower left side of the **Navigator** dialog, you can also select the **Add table using examples** button. This selection presents an interactive window where you can preview the content of the web page and enter sample values of the data you want to extract. For more information on using this feature, go to [Get webpage data by providing examples](/power-bi/desktop-connect-to-web-by-example).
 
 ## Load Web data using Power Query Online
 
@@ -90,7 +90,7 @@ To load data from a web site with Power Query Online:
 
    ![Select either the Web page or Web API connector](select-web-page-api.png)
 
-   In most cases, you'll want to select the Web page connector. For security reasons, you'll need to use an [on-premises data gateway](https://docs.microsoft.com/data-integration/gateway/) with this connector. The Web Page connector requires a gateway because HTML pages are retrieved using a browser control, which involves potential security concerns. This isn't an issue with Web API connector, as it doesn't use a browser control.
+   In most cases, you'll want to select the Web page connector. For security reasons, you'll need to use an [on-premises data gateway](/data-integration/gateway/) with this connector. The Web Page connector requires a gateway because HTML pages are retrieved using a browser control, which involves potential security concerns. This isn't an issue with Web API connector, as it doesn't use a browser control.
 
    In some cases, you might want to use a URL that points at either an API or a file stored on the web. In those scenarios, the Web API connector (or file-specific connectors) would allow you to move forward without using an on-premises data gateway.
 
