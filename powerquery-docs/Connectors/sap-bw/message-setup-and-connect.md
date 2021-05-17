@@ -23,7 +23,7 @@ LocalizationGroup: reference
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows) |
 | Authentication Types Supported | Windows (desktop)<br/>Database (desktop)<br/>Basic (online) |
-| Function Reference Documentation | [SapBusinessWarehouse.Cubes](https://docs.microsoft.com/powerquery-m/sapbusinesswarehouse-cubes)<br/>[sapbusinesswarehouseexecutionmode.datastream](https://docs.microsoft.com/powerquery-m/sapbusinesswarehouseexecutionmode.datastream)<br/>[SapBusinessWarehouseExecutionMode.BasXml](https://docs.microsoft.com/powerquery-m/sapbusinesswarehouseexecutionmode.basxml)<br/>[SapBusinessWarehouseExecutionMode.BasXmlGzip](https://docs.microsoft.com/powerquery-m/sapbusinesswarehouseexecutionmode.basxmlgzip) |
+| Function Reference Documentation | [SapBusinessWarehouse.Cubes](/powerquery-m/sapbusinesswarehouse-cubes)<br/>[sapbusinesswarehouseexecutionmode.datastream](/powerquery-m/sapbusinesswarehouseexecutionmode.datastream)<br/>[SapBusinessWarehouseExecutionMode.BasXml](/powerquery-m/sapbusinesswarehouseexecutionmode.basxml)<br/>[SapBusinessWarehouseExecutionMode.BasXmlGzip](/powerquery-m/sapbusinesswarehouseexecutionmode.basxmlgzip) |
 | | |
 
 >[!Note]
@@ -82,7 +82,7 @@ To connect to an SAP BW Message Server:
 
 2. Enter the server, system number, client ID, and logon group of the SAP BW Message Server you want to connect to. This example uses `SAPBWTestServer` as the server name, a system number of `100`, a client ID of `837`, and a logon group of `PURCHASING`.
 
-    The rest of this example describes how to import your data into Power Query Desktop, which is the default setting for **Data Connectivity mode**. If you want to use DirectQuery to load your data, see [Connect to SAP Business Warehouse by using DirectQuery in Power BI](https://docs.microsoft.com/power-bi/connect-data/desktop-directquery-sap-bw).
+    The rest of this example describes how to import your data into Power Query Desktop, which is the default setting for **Data Connectivity mode**. If you want to use DirectQuery to load your data, see [Connect to SAP Business Warehouse by using DirectQuery in Power BI](/power-bi/connect-data/desktop-directquery-sap-bw).
 
     This example also uses the default **Implementation** of **2.0 (requires SAP .NET Connector 3.0)**. If you want to use version 1 of the SAP BW Message Server connector, select **1.0 (requires NetWeaver RFC)**.
 
@@ -114,7 +114,7 @@ To connect to an SAP BW Message Server from Power Query Online:
 
 2. Enter the server, system number, client ID, and logo group of the SAP BW Message Server you want to connect to. This example uses `SAPBWTestServer` as the server name, a system number of `100`, a client ID of `837`, and a logon group of `PURCHASING`.
 
-3. Select the [on-premises data gateway](https://docs.microsoft.com/data-integration/gateway/service-gateway-onprem) you want to use to connect to the data.
+3. Select the [on-premises data gateway](/data-integration/gateway/service-gateway-onprem) you want to use to connect to the data.
 
 4. Set **Authentication Kind** to **Basic**. Enter your user name and password.
 

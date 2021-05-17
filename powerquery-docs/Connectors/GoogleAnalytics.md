@@ -18,7 +18,7 @@ LocalizationGroup: reference
 | Release State | General Availability |
 | Products | Power BI Desktop |
 | Authentication Types Supported | Google Account |
-| Function Reference Documentation | [GoogleAnalytics.Accounts](https://docs.microsoft.com/powerquery-m/googleanalytics-accounts) |
+| Function Reference Documentation | [GoogleAnalytics.Accounts](/powerquery-m/googleanalytics-accounts) |
 | | |
 
 ## Prerequisites
@@ -156,4 +156,3 @@ If you don't have a **Date** column, you can manually manipulate the query in th
 
 
 
- 
