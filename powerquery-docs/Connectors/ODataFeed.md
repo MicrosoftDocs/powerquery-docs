@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for the connector, and
 author: dougklopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 04/28/2021
+ms.date: 05/14/2021
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -17,7 +17,7 @@ LocalizationGroup: reference
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
-| Authentication Types Supported | Anonymous<br/>Windows<br/>Basic<br/>Web API<br/>Organizational Account |
+| Authentication Types Supported | Anonymous<br/>Windows<br/>Basic (requires Gateway)<br/>Web API<br/>Organizational Account |
 | Function Reference Documentation | [OData.Feed](/powerquery-m/odata-feed), [ODataOmitValues.Nulls](/powerquery-m/odataomitvalues-nulls) |
 | | |
 

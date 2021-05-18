@@ -11,7 +11,7 @@ LocalizationGroup: reference
 
 # Additional connector functionality
 
-This article provides indormation about different types of additional connector functionality that connector developers might want to invest in. For each type, this article outlines availability and instructions to enable the functionality.
+This article provides information about different types of additional connector functionality that connector developers might want to invest in. For each type, this article outlines availability and instructions to enable the functionality.
 
 ## Authentication
 

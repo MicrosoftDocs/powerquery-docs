@@ -36,7 +36,7 @@ To connect to Google BigQuery, follow these steps:
 
     ![Get Data from Google BigQuery](./media/google-bigquery/GetData.png)
 
-2) The Google BigQuery connevtor supports connecting through an organizational account. Select **Sign In** to proceed.
+2) The Google BigQuery connector supports connecting through an organizational account. Select **Sign In** to proceed.
 
     ![Sign in to Google BigQuery](./media/google-bigquery/SignIn.png)
 
