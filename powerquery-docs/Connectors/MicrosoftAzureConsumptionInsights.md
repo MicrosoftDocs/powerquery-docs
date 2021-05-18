@@ -1,5 +1,5 @@
 ---
-title: Power Query Microsoft Azure Consumption Insights connector
+title: Microsoft Azure Consumption Insights (Beta) (Deprecated)
 description: Provides information on the deprecation of the Microsoft Azure Consumption Insights connector.
 author: bezhan
 ms.service: powerquery
@@ -33,6 +33,6 @@ Users are instructed to use the certified Microsoft Azure Cost Management connec
 
 ### Timeline
 
-The Microsoft Azure Consumption Insights service will cease to work in December 2021. Users should transition off the Microsoft Azure Consumption Insights connector to the Microsoft Azure Cost Management connector by then. 
+The Microsoft Azure Consumption Insights service will stop working in December 2021. Users should transition off the Microsoft Azure Consumption Insights connector to the Microsoft Azure Cost Management connector by December 2021. 
 
 
