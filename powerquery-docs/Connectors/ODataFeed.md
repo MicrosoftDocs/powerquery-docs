@@ -96,5 +96,3 @@ When attempting to authenticate, if you see the following error:
    ![Error from connecting to an endpoint that doesn't support OAuth with the web connector](../images/credential-type-not-supported.png)
 
 Please contact the service owner. They will either need to change the authentication configuration or build a custom connector.
-
-

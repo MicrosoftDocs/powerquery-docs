@@ -19,7 +19,7 @@ Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in 
 
 Authentication Types Supported: Anonymous, Basic (Web only), Organizational Account, Web API (Web only), Windows
 
-Function Reference Documentation: [Json.Document](https://docs.microsoft.com/powerquery-m/json-document)
+Function Reference Documentation: [Json.Document](/powerquery-m/json-document)
 
 ## Capabilities supported
 

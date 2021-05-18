@@ -18,7 +18,7 @@ Before you begin this tutorial, you must have the following prerequisites:
 
 > [!div class="checklist"]
 > * An Azure subscription. See [Get Azure free trial](https://azure.microsoft.com/pricing/free-trial/).
-> * A storage account that has a hierarchical namespace. Follow [these](https://docs.microsoft.com/azure/storage/common/storage-account-create) instructions to create one.
+> * A storage account that has a hierarchical namespace. Follow [these](/azure/storage/common/storage-account-create) instructions to create one.
 > This article assumes that you've created a storage account named `myadlsg2`.
 > * You are granted one of the following roles for the storage account: **Blob Data Reader**, **Blob Data Contributor**, or **Blob Data Owner**.
 > * A sample data file named `Drivers.txt` located in your storage account.

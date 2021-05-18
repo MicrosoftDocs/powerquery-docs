@@ -23,7 +23,7 @@ Computed entities solve both problems. Computed entities are similar to other en
 
 Computed entities can be created by referencing an entity in the same dataflow or by referencing an entity created in a different dataflow.
 
-![Computed entity](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-computed-entities-premium/computed-entities-premium_00.png)
+![Computed entity](/power-bi/transform-model/media/service-dataflows-computed-entities-premium/computed-entities-premium_00.png)
 
 ## Why use a computed entity?
 
