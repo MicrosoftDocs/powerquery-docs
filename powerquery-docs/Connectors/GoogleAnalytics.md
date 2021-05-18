@@ -22,7 +22,7 @@ LocalizationGroup: reference
 | | |
 
 > [!NOTE]
-> Starting July 2021, Google will be migrating away all authentication from embedded browser authentication flows. Due to this, you will need to update your Power BI version to June 2021 or later to support the new authentication flow.
+> Effective July 2021, Google will discontinue support for sign-ins to Google accounts from embedded browser frameworks. Due to this change, in late June 2021 you will need to update your Power BI Desktop version to June 2021 to support signing in to Google.
 
 ## Prerequisites
 
