@@ -300,6 +300,8 @@
         href: Connectors/json.md
       - name: "Mailchimp (Deprecated)"
         href: Connectors/Mailchimp.md
+      - name: "Microsoft Azure Consumption Insights (Beta) (Deprecated)"
+        href: Connectors/MicrosoftAzureConsumptionInsights.md
       - name: "Microsoft Graph Security (Deprecated)"
         href: Connectors/MicrosoftGraphSecurity.md
       - name: "MySQL database"
