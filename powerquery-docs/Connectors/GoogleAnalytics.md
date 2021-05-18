@@ -22,7 +22,7 @@ LocalizationGroup: reference
 | | |
 
 > [!NOTE]
-> Starting near the end of June 2021, Google will be migrating away all authentication from embedded browser authentication flows. Due to this, you will need to update your Power BI version to June 2021 or later to support the new authentication flow.
+> Starting July 2021, Google will be migrating away all authentication from embedded browser authentication flows. Due to this, you will need to update your Power BI version to June 2021 or later to support the new authentication flow.
 
 ## Prerequisites
 
