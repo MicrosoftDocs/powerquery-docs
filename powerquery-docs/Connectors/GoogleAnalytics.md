@@ -21,6 +21,9 @@ LocalizationGroup: reference
 | Function Reference Documentation | [GoogleAnalytics.Accounts](/powerquery-m/googleanalytics-accounts) |
 | | |
 
+> [!NOTE]
+> Starting near the end of June 2021, Google will be migrating away all authentication from embedded browser authentication flows. Due to this, you will need to update your Power BI version to June 2021 or later to support the new authentication flow.
+
 ## Prerequisites
 
 Before you can sign in to Google Analytics, you must have an Google Analytics account (username/password).
