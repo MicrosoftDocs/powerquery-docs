@@ -21,6 +21,9 @@ LocalizationGroup: reference
 | Function Reference Documentation | [GoogleAnalytics.Accounts](/powerquery-m/googleanalytics-accounts) |
 | | |
 
+> [!NOTE]
+> Effective July 2021, Google will discontinue support for sign-ins to Google accounts from embedded browser frameworks. Due to this change, in late June 2021 you will need to update your Power BI Desktop version to June 2021 to support signing in to Google.
+
 ## Prerequisites
 
 Before you can sign in to Google Analytics, you must have an Google Analytics account (username/password).
