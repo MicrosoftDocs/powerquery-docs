@@ -17,7 +17,7 @@ LocalizationGroup: reference
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
-| Authentication Types Supported | Database (Username/Password) |
+| Authentication Types Supported | Database (Username/Password), AAD |
 | Function Reference Documentation | [PostgreSQL.Database](https://docs.microsoft.com/powerquery-m/postgresql-database) |
 | | |
 
@@ -62,7 +62,7 @@ Once you successfully connect, a **Navigator** window appears and displays the d
 
 You can **Load** the selected table, which brings the entire table into **Power BI Desktop**, or you can **Edit** the query, which opens **Query Editor** so you can filter and refine the set of data you want to use, and then load that refined set of data into **Power BI Desktop**.
 
-## Connect to a PostgreSQL database from Power Query Online
+## Connect to a Snowflake database from Power Query Online
 
 To make the connection, take the following steps:
 
@@ -94,11 +94,7 @@ The following table lists all of the advanced options you can set in Power Query
 | Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, you won’t see those columns. |
 | | |
 
-Once you've selected the advanced options you require, select **OK** in Power Query Desktop to connect to your PostgreSQL database.
-
-### Custom Roles
-
-The Snowflake connector supports *Custom Roles* beginning with the February 2021 release of Power BI Desktop.
+Once you've selected the advanced options you require, select **OK** in Power Query Desktop to connect to your Snowflake database.
 
 ## Next Steps
 
