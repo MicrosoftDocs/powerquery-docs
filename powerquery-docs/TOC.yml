@@ -258,6 +258,8 @@
         href: Connectors/AccessDatabase.md
       - name: "Adobe Analytics"
         href: "Connectors/AdobeAnalytics.md"
+        name: "Automy Data Analytics"
+        href: "Connectors/AutomyDataAnalytics.md"
       - name: "Anaplan"
         href: Connectors/Anaplan.md
       - name: "Azure SQL database"
