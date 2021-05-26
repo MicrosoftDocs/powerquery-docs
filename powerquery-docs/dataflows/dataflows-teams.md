@@ -23,15 +23,15 @@ In this example, we are going to load data from an Excel file that is located on
 
 2.  Select the **Build** tab, and select **Dataflows (Preview)**.
 
-![Navigate to dataflows page in Teams](media/navigate-to-dataflows-page-teams.png) 
+![Navigate to dataflows page in Teams](media/navigate-dataflows-page.PNG) 
 
 3.  To create a new dataflow, click the **New** button.
 
-![Creating a new dataflow](media/create-new-dataflow-teams.png) 
+![Creating a new dataflow](media/create-dataflow-teams.PNG) 
 
 4.  Select the **Excel workbook** connector or any of the other connectors.
 
-![Select a connector](media/select-connector-teams.png) 
+![Select a connector](media/choose-connector-teams.PNG) 
 
 5.  Enter a URL address in the text box or use the **Browse OneDrive** button to easily navigate through your OneDrive folders. When selected the right file, click the **Next** button. See the documentation for more details for using the [OneDrive conenction](https://docs.microsoft.com/power-query/sharepoint-onedrive-files) or [gettingg data](https://docs.microsoft.com/power-query/get-data-experience) from other sources.
 
@@ -39,16 +39,18 @@ In this example, we are going to load data from an Excel file that is located on
 
 7.  [Clean and transform your data using Power Query](https://docs.microsoft.com/power-query/power-query-quickstart-using-power-bi). You can use the out-of-the box transformations to delete missing values, delete unnecessary columns or to filter your data. With Power Query you can apply more than 300 different transformations on your data. You can learn more about Power Query [here](https://docs.microsoft.com/power-query/power-query-what-is-power-query).
 
+![Clean and transform data with Power Query](media/prep-data-teams.PNG) 
+
 8.	Next, we create a new table in Dataverse for Teams by selecting the **Load to new table**. You can also choose to load your data into an existing table. In this screen you can specify a **Unique primary name column** and an **Alternate key column (optional)**. In this example, we leave this as the default values. To learn more about mapping your data and the different settings, [see the documentation](https://docs.microsoft.com/power-query/dataflows/get-best-of-standard-dataflows).
 
-![Mapping of data to Dataverse for Teams](media/maps-data-teams.png) 
+![Mapping of data to Dataverse for Teams](media/data-mapping-teams.PNG) 
 
 9.  Click **Create** to finish your dataflow. Once you’ve created your dataflow, data will begin loading into Dataverse for Teams. This process can take some time and you can use the management page to check the status. When a dataflow completes a run, its data is available to use. 
 
 ## Managing your dataflows
 You can manage any dataflow you created from the Dataflows (Preview) tab. Here, you can see the status of all dataflows, when your dataflow was last refreshed and take action from the action bar. 
 
-![Dataflows management page](media/manage-dataflows-teams.png) 
+![Dataflows management page](media/manage-dataflow-teams.PNG) 
 
 In the **Last Refresh** column, you can see when your data was last refreshed. If your refresh failed, an error indication appears. If you click on the error indication, the details of the error and recommended steps to address it will appear.
 
@@ -60,7 +62,7 @@ In the **Status** column you can see the current status of the dataflow. Possibl
 
 You can navigate to the action bar by clicking on the three dots “…” next to your dataflow.
 
-![Take an action on your dataflow](media/action-bar-teams.png) 
+![Take an action on your dataflow](media/action-bar.PNG) 
 
 Here you can:
 * **Edit** your dataflow if you want to change your transformation logic or mapping.
@@ -71,7 +73,7 @@ Here you can:
 
 When clicking on **show refresh history** you can see information about the last refresh of your dataflow. When the dataflow refresh is successful, you can see how many rows were added or updated in Dataverse. When your dataflow refresh was not successful, you can investigate why with the help of the error message.
 
-![Rferesh history of a dataflow](media/refresh-history-teams.png) 
+![Rferesh history of a dataflow](media/refresh-message-teams.PNG) 
 
 ## Dataflows in Teams is a lightweight version.
 Dataflows in Dataverse for Teams is a lightweight version of dataflows in the Maker Portal and can only load data into Dataverse for Teams. Dataflows in Dataverse for Teams are optimized for a one-time import of data, but you can refresh your data manually trough the refresh button in the dataflow management page. If you want full dataflows functionality, you can  [upgrade your environment](https://docs.microsoft.com/power-platform/admin/about-teams-environment#upgrade-process).
