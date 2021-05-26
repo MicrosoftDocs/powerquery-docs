@@ -10,7 +10,7 @@ ms.date: 12/2/2020
 ms.author: mideboer
 ---
 
-# Create and use dataflows in Microsoft Teams
+# Create and use dataflows in Microsoft Teams (Preview)
 
 With your master data already sitting in a different location, you can use Power Query dataflows to directly access your data through the connectors and load the data into Dataverse for Teams. When data is updated in your master data, you can refresh your dataflows by just one click and the data in Dataverse for Teams is updated too. You can also use the Power Query data transformations to easily validate and clean your data and enforce data quality for your Apps.
 
