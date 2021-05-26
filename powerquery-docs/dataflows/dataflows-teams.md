@@ -14,9 +14,9 @@ ms.author: mideboer
 
 With your master data already sitting in a different location, you can use Power Query dataflows to directly access your data through the connectors and load the data into Dataverse for Teams. When data is updated in your master data, you can refresh your dataflows by just one click and the data in Dataverse for Teams is updated too. You can also use the Power Query data transformations to easily validate and clean your data and enforce data quality for your Apps.
 
-[Dataflows](https://docs.microsoft.com/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) were introduced to help organizations retrieve data from disparate sources and prepare it for consumption. You can easily create dataflows using familiar, [self-service Power Query](https://docs.microsoft.com/power-query/power-query-what-is-power-query) experience  to ingest, transform, integrate, and enrich data. When creating a dataflow, you will; connect to data, transform the data and load data into Dataverse for Teams tables.  Once the dataflow is created, it will begin the process of importing data into the dataverse table. Then you can start building apps to leverage that data.
+[Dataflows](https://docs.microsoft.com/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) were introduced to help organizations retrieve data from disparate sources and prepare it for consumption. You can easily create dataflows using familiar, [self-service Power Query](https://docs.microsoft.com/power-query/power-query-what-is-power-query) experience  to ingest, transform, integrate, and enrich data. When creating a dataflow, you will; connect to data, transform the data and load data into Dataverse for Teams tables.  Once the dataflow is created, it will begin the process of importing data into the Dataverse table. Then you can start building apps to leverage that data.
 
-## Create a dataflow from the dataflwos page
+## Create a dataflow from the dataflows page
 In this example, we are going to load data from an Excel file that is located on OneDrive into Dataverse for Teams. You can follow this example with any other data source.
 
 1.  Sign in to [Teams web](https://teams.microsoft.com/) version, and then select the link for **Power Apps**.
@@ -33,7 +33,7 @@ In this example, we are going to load data from an Excel file that is located on
 
 ![Select a connector](media/choose-connector-teams.PNG) 
 
-5.  Enter a URL address in the text box or use the **Browse OneDrive** button to easily navigate through your OneDrive folders. When selected the right file, click the **Next** button. See the documentation for more details for using the [OneDrive conenction](https://docs.microsoft.com/power-query/sharepoint-onedrive-files) or [gettingg data](https://docs.microsoft.com/power-query/get-data-experience) from other sources.
+5.  Enter a URL address in the text box or use the **Browse OneDrive** button to easily navigate through your OneDrive folders. When selected the right file, click the **Next** button. See the documentation for more details for using the [OneDrive connection](https://docs.microsoft.com/power-query/sharepoint-onedrive-files) or [getting data](https://docs.microsoft.com/power-query/get-data-experience) from other sources.
 
 6.  In this screen you can select the tables that are present in your Excel file. If your Excel file has multiple sheets and tables, you can select only the tables you are interested in. When you are done, click **Transform data**.
 
@@ -57,7 +57,7 @@ In the **Last Refresh** column, you can see when your data was last refreshed. I
 In the **Status** column you can see the current status of the dataflow. Possible states are:
 * **Unpublished**. The dataflow is saved as a draft, and you can finish authoring your dataflow later.
 * **Publishing in progress**. The dataflows is being published.
-* **Published**. The dataflow is published and ready to load data into Dataverse . Only a published dataflows can be refreshed.
+* **Published**. The dataflow is published and ready to load data into Dataverse. Only a published dataflow can be refreshed.
 * **Refresh in progress**. The dataflow is extracting, transforming, and loading your data from the source to the Dataverse Tables. This process can take several minutes depending on the complexity of transformations and data source's performance. It is recommended to check the status of the dataflow frequently.
 
 You can navigate to the action bar by clicking on the three dots “…” next to your dataflow.
