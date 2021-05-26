@@ -1,6 +1,6 @@
 ---
 title: Power Query BQE Core connector
-description: Provides basic information, prerequisites, and instructions on how to connect to your BQE Core, along with known issues that may affect the connection.
+description: Provides basic information, prerequisites, and instructions on how to connect to BQE Core, along with known issues that may affect the connection.
 author: cruzgreg
 
 ms.service: powerquery
@@ -24,9 +24,9 @@ LocalizationGroup: reference
 
 ## Prerequisites
 
-To use the BQE Core PowerBI connector, you must have a BQE Core account with username and password.
+To use the BQE Core Power BI connector, you must have a BQE Core account with username and password.
 
-## Capabilities Supported
+## Capabilities supported
 
 * Import
 
@@ -40,13 +40,13 @@ To use Power BI with Core:
 
 2. Select BQE Core in the list select **Connect**.
 
-3. Select **Sign In**. You will be prompted to log into Core.
+3. Select **Sign In**. You'll be prompted to log into Core.
 
 ![Login](media/bqe-core/core-bi-11.png) 
 
 4. On the login screen, enter your Core email and password. Select **Login**.
 
-5. You will then be prompted to select your Core company file. Select **Grant Permission**.
+5. You'll then be prompted to select your Core company file. Select **Grant Permission**.
 
 ![Grant Permissions](media/bqe-core/core-bi-13.png) 
 
