@@ -17,7 +17,7 @@ LocalizationGroup: reference
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | (Beta) |
+| Release State | Beta |
 | Products | Power BI (Datasets) |
 | Authentication Types Supported | BQE Core Account |
 | Function Reference Documentation | - |
