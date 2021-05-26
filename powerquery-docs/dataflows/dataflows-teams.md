@@ -12,6 +12,9 @@ ms.author: mideboer
 
 # Create and use dataflows in Microsoft Teams (Preview)
 
+Microsoft Dataverse for Teams delivers a built-in, low-code data platform for Microsoft Teams. It provides relational data storage, rich data types, enterprise-grade governance, and one-click solution deployment. Dataverse for Teams enables everyone to easily build and deploy apps. 
+Before today, the way to get data into Dataverse for Teams was by manually adding data directly into a table. This process can be prone to errors and is not scalable.  But now, with self-service data prep you can find, clean, shape, and import your data into Dataverse for Teams.  
+
 With your master data already sitting in a different location, you can use Power Query dataflows to directly access your data through the connectors and load the data into Dataverse for Teams. When data is updated in your master data, you can refresh your dataflows by just one click and the data in Dataverse for Teams is updated too. You can also use the Power Query data transformations to easily validate and clean your data and enforce data quality for your Apps.
 
 [Dataflows](https://docs.microsoft.com/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) were introduced to help organizations retrieve data from disparate sources and prepare it for consumption. You can easily create dataflows using familiar, [self-service Power Query](https://docs.microsoft.com/power-query/power-query-what-is-power-query) experience  to ingest, transform, integrate, and enrich data. When creating a dataflow, you will; connect to data, transform the data and load data into Dataverse for Teams tables.  Once the dataflow is created, it will begin the process of importing data into the Dataverse table. Then you can start building apps to leverage that data.
