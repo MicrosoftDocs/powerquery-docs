@@ -274,8 +274,6 @@
         href: Connectors/dataverse.md
       - name: "Excel"
         href: Connectors/Excel.md
-      - name: "Facebook"
-        href: Connectors/Facebook.md
       - name: "FHIR"
         items:
         - name: Overview
