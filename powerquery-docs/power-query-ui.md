@@ -74,9 +74,25 @@ The Power Query editor represents the Power Query user interface where you can a
 
 ## Using the Power Query editor
 
-In this section, you'll begin transforming your data using Power Query. First, collapse the queries pane and switch to the schema view by selecting the rightmost button in the status bar.
+In this section, you'll begin transforming your data using Power Query, but before you start working on transforming the data, some of the panes throughout the UI can be expanded or collapsed depending on their context in order to let you focus on the view that matters the most to you.
 
-![Collapse the queries pane and switch to schema view](media/power-query-ui/pqui-collapse-queries-pane.png)
+### Expand and collapse panes
+You will notice that throughout the Power Query user interface there will be some icons that will help you collapse or expand certain views or sections. You can see one on the left-hand side of your screen in the Queries pane as shown in the image below which will help you collapse the queries pane.
+
+![Collapse queries pane using the icon on the top right corner of the Queries pane](images/me-collapse-queries-pane.png)
+
+### Switch between views
+
+Apart from being able to collapse certain panes and sections in the Power Query user interface, you can also switch what views should be displayed. To do this, simply go to the View tab in the ribbon and you'll find the groups **Preview** and **Layout** which control how the Power Query user interface will look like.
+You are encouraged to try all of these options to find the view and layout that you feel most comfortable working with. For this example, click the *Schema view* button from the ribbon.
+
+![The Schema view button found inside the View tab in the Power Query ribbon](images/me-change-to-schema-view.png)
+
+You may have also noticed that at the right-most of the status bar you have the icons for the Diagram, Data, and Schema view that you can also use to change between views. You can also use these icons to enable or disable the view of your choice.
+
+![The Power Query user interface with the queries pane collapsed and the current view switched to the schema view from the data view](media/power-query-ui/pqui-collapse-queries-pane.png)
+
+### The Schema view experience
 
 The schema view offers you a quick and straightforward way to only interact with the components of the schema for your table, such as the column names and data types. The schema view is the recommended view when you want to do schema-related actions, such as removing columns, renaming columns, changing column data types, reordering columns, or duplicating columns. 
 
@@ -86,6 +102,8 @@ The schema view offers you a quick and straightforward way to only interact with
 In schema view, select the checkmark next to the **Orders** and **CustomerDemographics** columns, and from the ribbon select the **Remove columns** action. This selection applies a transformation to remove these columns from your data.
 
 ![Remove columns](media/power-query-ui/pqui-remove-columns.png)
+
+### The Diagram view experience
 
 You can now switch back to the data preview view and enable diagram view to see a more visual perspective of your data and query.
 
@@ -220,6 +238,6 @@ We recommended that you use this feature throughout the development of your quer
 
 In this article, you created a series of queries with Power Query that provides a customer-to-supplier ratio analysis at the country level for the Northwind corporation. 
 
-You learned the components of the Power Query user interface, how to create new queries inside the query editor, reference queries, merge queries, understand the applied steps section, add new columns, and how to leverage the data profiling tools to better understand your data.
+You learned the components of the Power Query user interface, how to create new queries inside the query editor, reference queries, merge queries, understand the applied steps section, add new columns, and how to use the data profiling tools to better understand your data.
 
-Power Query is a powerful tool used to connect to many different data sources and transform the data into the shape you want. The scenarios outlined in this article are examples to show how users can leverage Power Query to transform raw data into important actionable business insights. 
+Power Query is a powerful tool used to connect to many different data sources and transform the data into the shape you want. The scenarios outlined in this article are examples to show how users can use Power Query to transform raw data into important actionable business insights. 
