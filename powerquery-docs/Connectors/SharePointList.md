@@ -19,7 +19,7 @@ Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in 
 
 Authentication Types Supported: Anonymous, Windows, Microsoft Account
 
-Function Reference Documentation: [SharePoint.Contents](https://docs.microsoft.com/powerquery-m/sharepoint-contents), [SharePoint.Files](https://docs.microsoft.com/powerquery-m/sharepoint-files), [SharePoint.Tables](https://docs.microsoft.com/powerquery-m/sharepoint-tables)
+Function Reference Documentation: [SharePoint.Contents](/powerquery-m/sharepoint-contents), [SharePoint.Files](/powerquery-m/sharepoint-files), [SharePoint.Tables](/powerquery-m/sharepoint-tables)
 
 >[!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.

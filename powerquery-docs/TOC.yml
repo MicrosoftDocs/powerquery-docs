@@ -267,15 +267,13 @@
       - name: "Bloomberg Data and Analytics"
         href: Connectors/BloombergDataAndAnalytics.md 
       - name: "Common Data Service"
-        href: Connectors/commondataservice.md
+        href: ./connectors/dataverse.md
       - name: "Data Lake Storage"
         href: Connectors/DataLakeStorage.md
       - name: "Dataverse"
         href: Connectors/dataverse.md
       - name: "Excel"
         href: Connectors/Excel.md
-      - name: "Facebook"
-        href: Connectors/Facebook.md
       - name: "FHIR"
         items:
         - name: Overview
@@ -294,10 +292,14 @@
         href: Connectors/EQuIS.md
       - name: "Google Analytics"
         href: Connectors/GoogleAnalytics.md
+      - name: "Google BigQuery"
+        href: Connectors/GoogleBigQuery.md
       - name: "JSON"
         href: Connectors/json.md
       - name: "Mailchimp (Deprecated)"
         href: Connectors/Mailchimp.md
+      - name: "Microsoft Azure Consumption Insights (Beta) (Deprecated)"
+        href: Connectors/MicrosoftAzureConsumptionInsights.md
       - name: "Microsoft Graph Security (Deprecated)"
         href: Connectors/MicrosoftGraphSecurity.md
       - name: "MySQL database"
@@ -307,7 +309,7 @@
         - name: "OData Feed connector"
           href: Connectors/ODataFeed.md
         - name: "Connecting to Azure DevOps using OData"
-          href: https://docs.microsoft.com/azure/devops/report/powerbi/odataquery-connect?view=azure-devops
+          href: /azure/devops/report/powerbi/odataquery-connect?view=azure-devops
       - name: "ODBC"
         href: Connectors/Odbc.md
       - name: "Oracle database"
@@ -434,6 +436,8 @@
           href: SamplesDirectory.md#trippin
       - name: Advanced concepts
         items:
+        - name: "Additional connector functionality"
+          href: additional-connector-functionality.md
         - name: "Handling authentication"
           href: HandlingAuthentication.md
         - name: "Handling data access"

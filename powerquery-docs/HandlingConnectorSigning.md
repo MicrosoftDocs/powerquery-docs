@@ -20,7 +20,7 @@ The exception to this is trusted, 'signed connectors'. Signed connectors are a s
 The following steps enable you to use a certificate (with explanation on how to generate one if you don't have one available) and sign a custom connector with the 'MakePQX' tool.
 
 >[!Note]
-> If you need help creating a self-signed certificate to test these instructions, see the Microsoft documentation on [New-SelfSignedCertificate in PowerShell](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps). 
+> If you need help creating a self-signed certificate to test these instructions, see the Microsoft documentation on [New-SelfSignedCertificate in PowerShell](/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps). 
 
 >[!Note]
 > If you need help exporting your certificate as a pfx, see [How to create a PKCS#12 (PFX) file on a Windows server](https://knowledge.digicert.com/solution/SO26065.html). 
@@ -138,4 +138,4 @@ Options:
 
 ## Trusting signed connectors in Power BI Desktop
 
-Once you’ve verified your signature, you can provide the thumbprint to the end-user to list as trusted. You can read about how to do this in the [Power BI Documentation](https://docs.microsoft.com/power-bi/desktop-trusted-third-party-connectors).
+Once you’ve verified your signature, you can provide the thumbprint to the end-user to list as trusted. You can read about how to do this in the [Power BI Documentation](/power-bi/desktop-trusted-third-party-connectors).

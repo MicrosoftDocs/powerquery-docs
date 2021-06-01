@@ -22,9 +22,6 @@ LocalizationGroup: reference
 
 ## Prerequisites
 
-> [!NOTE]
-> This connector is scheduled to be released in the April release of Power BI Desktop and may not yet be available.
-
 Your organization must subscribe to Bloomberg PORT Enterprise and you must be a Bloomberg Anywhere user and have a Bloomberg biometric authentication device (B-Unit).
  
 ## Capabilities Supported

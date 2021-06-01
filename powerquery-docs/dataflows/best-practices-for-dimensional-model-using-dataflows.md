@@ -64,9 +64,9 @@ In the previous image, the computed entity gets the data directly from the sourc
 
 The best dimensional model is a star schema model that has dimensions and fact tables designed in a way to minimize the amount of time to query the data from the model, and also makes it easy to understand for the data visualizer.
 
-It isn't ideal to bring data in the same layout of the operational system into a BI system. The data tables should be remodeled. Some of the tables should take the form of a dimension table, which keeps the descriptive information. Some of the tables should take the form of a fact table, to keep the aggregatable data. The best layout for fact tables and dimension tables to form is a star schema. More information: [Understand star schema and the importance for Power BI](https://docs.microsoft.com/power-bi/guidance/star-schema)
+It isn't ideal to bring data in the same layout of the operational system into a BI system. The data tables should be remodeled. Some of the tables should take the form of a dimension table, which keeps the descriptive information. Some of the tables should take the form of a fact table, to keep the aggregatable data. The best layout for fact tables and dimension tables to form is a star schema. More information: [Understand star schema and the importance for Power BI](/power-bi/guidance/star-schema)
 
-![Star schema image showing a fact table surrounded by dimension tables, in the shape of a five-pointed star](https://docs.microsoft.com/power-bi/guidance/media/star-schema/star-schema-example1.png)
+![Star schema image showing a fact table surrounded by dimension tables, in the shape of a five-pointed star](/power-bi/guidance/media/star-schema/star-schema-example1.png)
 
 ### Use a unique key value for dimensions
 
@@ -79,9 +79,9 @@ When building dimension tables, make sure you have a key for each one. This key 
 
 Fact tables are always the largest tables in the dimensional model. We recommend that you reduce the number of rows transferred for these tables. If you have a very large fact table, ensure that you use incremental refresh for that entity. An incremental refresh can be done in the Power BI dataset, and also the dataflow entities. 
 
-You can use incremental refresh to refresh only part of the data, the part that has changed. There are multiple options to choose which part of the data to be refreshed and which part to be persisted. More information: [Using incremental refresh with Power BI dataflows](https://docs.microsoft.com/power-bi/transform-model/service-dataflows-incremental-refresh)
+You can use incremental refresh to refresh only part of the data, the part that has changed. There are multiple options to choose which part of the data to be refreshed and which part to be persisted. More information: [Using incremental refresh with Power BI dataflows](/power-bi/transform-model/service-dataflows-incremental-refresh)
 
-![Incremental refresh for dataflows](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-incremental-refresh/dataflows-incremental-refresh_03.png)
+![Incremental refresh for dataflows](/power-bi/transform-model/media/service-dataflows-incremental-refresh/dataflows-incremental-refresh_03.png)
 
 ## Referencing to create dimensions and fact tables
 

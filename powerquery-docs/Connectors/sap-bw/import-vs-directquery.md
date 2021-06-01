@@ -24,9 +24,9 @@ LocalizationGroup: reference
 >* [Connect to an SAP BW Message Server from Power Query Desktop](message-setup-and-connect.md#connect-to-an-sap-bw-message-server-from-power-query-desktop)
 >* [Connect to an SAP BW Message Server from Power Query Online](message-setup-and-connect.md#connect-to-an-sap-bw-message-server-from-power-query-online)
 
-With Power Query, you can connect to a wide variety of data sources, including online services, databases, different file formats, and others. If you are using Power BI Desktop, you can connect to these data sources in two different ways: either import the data into Power BI, or connect directly to data in the source repository, which is known as DirectQuery. When you connect to an SAP BW system, you can also choose between these two connectivity modes. For a complete list of data sources that support DirectQuery, refer to [Power BI data sources](https://docs.microsoft.com/power-bi/connect-data/power-bi-data-sources).
+With Power Query, you can connect to a wide variety of data sources, including online services, databases, different file formats, and others. If you are using Power BI Desktop, you can connect to these data sources in two different ways: either import the data into Power BI, or connect directly to data in the source repository, which is known as DirectQuery. When you connect to an SAP BW system, you can also choose between these two connectivity modes. For a complete list of data sources that support DirectQuery, refer to [Power BI data sources](/power-bi/connect-data/power-bi-data-sources).
 
-The main differences between the two connectivity modes are outlined here, as well as guidelines and limitations, as they relate to SAP BW connections. For additional information about DirectQuery mode, go to [Using DirectQuery in Power BI](https://docs.microsoft.com/power-bi/connect-data/desktop-directquery-about).
+The main differences between the two connectivity modes are outlined here, as well as guidelines and limitations, as they relate to SAP BW connections. For additional information about DirectQuery mode, go to [Using DirectQuery in Power BI](/power-bi/connect-data/desktop-directquery-about).
 
 ## Import Connections
 
@@ -46,9 +46,9 @@ If the data in the underlying source changes, it won't be reflected in your visu
 
 When you publish a report (.pbix file) to the Power BI service, a dataset is created and uploaded to the Power BI server. The imported data in the cache is included with that dataset. While you work with a report in the Power BI service, the uploaded data is queried, providing a fast response time and interactivity. You can set up a scheduled refresh of the dataset, or re-import the data manually. For on-premise SAP BW data sources, it's necessary to configure an on-premises data gateway. Information about installing and configuring the on-premises data gateway can be found in the following documentation:
 
-* [On-premises data gateway documentation](https://docs.microsoft.com/data-integration/gateway/)
-* [Manage gateway data source in Power BI](https://docs.microsoft.com/power-bi/connect-data/service-gateway-data-sources)
-* [Data source management in Power Platform](https://docs.microsoft.com/power-platform/admin/onpremises-data-gateway-source-management)
+* [On-premises data gateway documentation](/data-integration/gateway/)
+* [Manage gateway data source in Power BI](/power-bi/connect-data/service-gateway-data-sources)
+* [Data source management in Power Platform](/power-platform/admin/onpremises-data-gateway-source-management)
 
 ## DirectQuery Connections
 
@@ -70,7 +70,7 @@ Any changes in the underlying data won't be immediately reflected in your visual
 
 When you publish a report to the Power BI service, it will again result in the creation of a dataset in the Power BI service, just as for an import connection. However, no data is included with that dataset.
 
-While you work with a report in the Power BI service, the underlying data source is queried again to retrieve the necessary data. For DirectQuery connections to your SAP BW and SAP HANA systems, you must have an [on-premises data gateway](https://docs.microsoft.com/data-integration/gateway/service-gateway-install) installed and the [data source registered with the gateway](https://docs.microsoft.com/power-bi/connect-data/service-gateway-data-sources).
+While you work with a report in the Power BI service, the underlying data source is queried again to retrieve the necessary data. For DirectQuery connections to your SAP BW and SAP HANA systems, you must have an [on-premises data gateway](/data-integration/gateway/service-gateway-install) installed and the [data source registered with the gateway](/power-bi/connect-data/service-gateway-data-sources).
 
 For SAP BW queries with variables, end users can edit parameters of the query.
 
@@ -101,9 +101,9 @@ You can disable cross-highlighting throughout your entire report, which reduces 
 
 These changes will apply to your report while you interact with it in Power BI Desktop, as well as when your users consume the report in the Power BI service.
 
-In the Power BI service, the query cache for DirectQuery connections is updated on a periodic basis by querying the data source. By default, this update happens every hour, but it can be configured to a different interval in dataset settings. For more information, go to [Data refresh in Power BI](https://docs.microsoft.com/power-bi/connect-data/refresh-data).
+In the Power BI service, the query cache for DirectQuery connections is updated on a periodic basis by querying the data source. By default, this update happens every hour, but it can be configured to a different interval in dataset settings. For more information, go to [Data refresh in Power BI](/power-bi/connect-data/refresh-data).
 
-Also, many of the general best practices described in [Using DirectQuery in Power BI](https://docs.microsoft.com/power-bi/connect-data/desktop-directquery-about) apply equally when using DirectQuery over SAP BW. Additional details specific to SAP BW are described in [Connect to SAP Business Warehouse by using DirectQuery in Power BI](https://docs.microsoft.com/power-bi/desktop-directquery-sap-bw).
+Also, many of the general best practices described in [Using DirectQuery in Power BI](/power-bi/connect-data/desktop-directquery-about) apply equally when using DirectQuery over SAP BW. Additional details specific to SAP BW are described in [Connect to SAP Business Warehouse by using DirectQuery in Power BI](/power-bi/desktop-directquery-sap-bw).
 
 
 ### See also
