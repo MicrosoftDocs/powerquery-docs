@@ -102,11 +102,11 @@ The following table lists the major features differences between dataflows for D
 | Manual refresh | Yes | Yes |
 | Scheduled refresh | No | Yes |
 | Incremental refresh | No | Yes |
-| Standard entities | No | Yes |
+| Standard tables | No | Yes |
 | Custom tables | Yes | Yes |
 | Full PQ functionality | Yes | Yes |
 | Supported connectors | [Subset of PQO connectors](https://docs.microsoft.com/power-query/connectors/)| [All PQO connectors](https://docs.microsoft.com/power-query/connectors/)|
 | Small data volumes | Yes | Yes |
 | Larger data volumes | No <sup>1</sup> | Yes |
 
-<sup>1</sup> Although there is no limitation on the amount of data you can load into Dataverse for Teams, we do not recommend this for large data volumes. For better performance in loading larger amounts of data, we recommend a Dataverse environment.
+<sup>1</sup> Although there is no limitation on the amount of data you can load into Dataverse for Teams, for better performance in loading larger amounts of data, we recommend a Dataverse environment.
