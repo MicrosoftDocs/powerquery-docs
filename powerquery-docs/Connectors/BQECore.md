@@ -1,6 +1,6 @@
 ---
 title: Power Query BQE Core connector
-description: Provides basic information, prerequisites, and instructions on how to connect to BQE Core, along with known issues that may affect the connection.
+description: Provides basic information, prerequisites, and instructions on how to connect to BQE Core.
 author: cruzgreg
 
 ms.service: powerquery
@@ -30,28 +30,26 @@ To use the BQE Core Power BI connector, you must have a BQE Core account with us
 
 * Import
 
-## Connect to BQE Core
+## Connect to BQE Core from Power Query Desktop
 
-To use Power BI with Core:
+To connect to BQE Core data:
 
 1. Launch Power BI Desktop and enter the **Get Data** experience.
 
-![Get Data](media/bqe-core/core-bi-9.png)
+2. From the **Other** category, select **BQEDataConnector**, and then select **Connect**.
 
-2. Select BQE Core in the list select **Connect**.
+   ![Get Data](media/bqe-core/core-bi-9.png)
 
-3. Select **Sign In**. You'll be prompted to log into Core.
+3. Select **Sign In**. You'll be prompted to sign in to Core.
 
-![Login](media/bqe-core/core-bi-11.png) 
+   ![Login](media/bqe-core/core-bi-11.png)
 
-4. On the login screen, enter your Core email and password. Select **Login**.
+4. In the sign in screen, enter your Core email and password. Select **Login**.
 
 5. You'll then be prompted to select your Core company file. Select **Grant Permission**.
 
-![Grant Permissions](media/bqe-core/core-bi-13.png) 
+   ![Grant Permissions](media/bqe-core/core-bi-13.png)
 
-6. Next, select **Connect** and select a module. For reference, review the API Reference under the Core API Documentation.
+6. Select **Connect**, and then select a module. For reference, review the API Reference under the [Core API Documentation](https://api-explorer.bqecore.com/).
 
-7. Select from the Navigator the tables to load and select **Transform Data** to enter the Power Query experience. 
-
-
+7. From the Navigator, select the tables to load, and then select **Transform Data** to transform the data in Power Query.
