@@ -80,7 +80,7 @@ In this section, you'll begin transforming your data using Power Query. But befo
 
 You'll notice that throughout the Power Query user interface there are icons that help you collapse or expand certain views or sections. For example, there's an icon on the top right-hand corner of the Queries pane that collapses the queries pane when selected, and expands the pane when selected again.
 
-![Collapse queries pane using the icon on the top right corner of the Queries pane](images/me-collapse-queries-pane.png)
+![Collapse queries pane using the icon on the top right corner of the Queries pane](media/power-query-ui/pqui-collapse-queries-pane.png)
 
 ### Switch between views
 
@@ -88,11 +88,11 @@ Apart from being able to collapse certain panes and sections in the Power Query 
 
 You're encouraged to try all of these options to find the view and layout that you feel most comfortable working with. As an example, select **Schema view** from the ribbon.
 
-![The Schema view button found inside the View tab in the Power Query ribbon](images/me-change-to-schema-view.png)
+![The Schema view button found inside the View tab in the Power Query ribbon](media/power-query-ui/pqui-change-to-schema-view.png)
 
 The right side of the status bar also contains icons for the diagram, data, and schema views. You can use these icons to change between views. You can also use these icons to enable or disable the view of your choice.
 
-[ ![The Power Query user interface with the queries pane collapsed and the current view switched to the schema view from the data view](media/power-query-ui/pqui-collapse-queries-pane.png) ](media/power-query-ui/pqui-collapse-queries-pane.png#lightbox)
+[ ![The Power Query user interface with the queries pane collapsed and the current view switched to the schema view from the data view](media/power-query-ui/pqui-current-view-schema.png) ](media/power-query-ui/pqui-current-view-schema.png#lightbox)
 
 ### What is schema view
 
