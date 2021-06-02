@@ -10,9 +10,10 @@ ms.date: 12/2/2020
 ms.author: mideboer
 ---
 
+
 # Create and use dataflows in Microsoft Teams (Preview)
 
-[Microsoft Dataverse for Teams](https://docs.microsoft.com/en-us/power-platform/admin/about-teams-environment) delivers a built-in, low-code data platform for Microsoft Teams. It provides relational data storage, rich data types, enterprise-grade governance, and one-click solution deployment. Dataverse for Teams enables everyone to easily build and deploy apps. 
+[Microsoft Dataverse for Teams](/powerapps/teams/overview-data-platform) delivers a built-in, low-code data platform for Microsoft Teams. It provides relational data storage, rich data types, enterprise-grade governance, and one-click solution deployment. Dataverse for Teams enables everyone to easily build and deploy apps. 
 Before today, the way to get data into Dataverse for Teams was by manually adding data directly into a table. This process can be prone to errors and is not scalable.  But now, with self-service data prep you can find, clean, shape, and import your data into Dataverse for Teams.  
 
 With your master data already sitting in a different location, you can use Power Query dataflows to directly access your data through the connectors and load the data into Dataverse for Teams. When data is updated in your master data, you can refresh your dataflows by just one click and the data in Dataverse for Teams is updated too. You can also use the Power Query data transformations to easily validate and clean your data and enforce data quality for your Apps.
@@ -79,7 +80,7 @@ When clicking on **show refresh history** you can see information about the last
 ![Rferesh history of a dataflow](media/refresh-message-teams.PNG) 
 
 ## Dataflows in Teams is a lightweight version.
-Dataflows in Dataverse for Teams is a lightweight version of dataflows in the Maker Portal and can only load data into Dataverse for Teams. Dataflows in Dataverse for Teams are optimized for a one-time import of data, but you can refresh your data manually trough the refresh button in the dataflow management page. If you want full dataflows functionality, you can  [upgrade your environment](https://docs.microsoft.com/power-platform/admin/about-teams-environment#upgrade-process).
+Dataflows in Dataverse for Teams is a lightweight version of dataflows in the Maker Portal and can only load data into Dataverse for Teams. Dataflows in Dataverse for Teams are optimized for a one-time import of data, but you can refresh your data manually trough the refresh button in the dataflow management page. If you want full dataflows functionality, you can  [upgrade your environment](power-platform/admin/about-teams-environment#upgrade-process).
 
 Supported data sources in Dataflows in Dataverse for Teams are:
 * Excel (OneDrive)
