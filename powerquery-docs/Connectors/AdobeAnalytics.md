@@ -18,7 +18,7 @@ LocalizationGroup: reference
 | Release State | General Availability |
 | Products | Power BI Desktop |
 | Authentication Types Supported | Organizational account |
-| Function Reference Documentation | [AdobeAnalytics.Cubes](https://docs.microsoft.com/powerquery-m/adobeanalytics-cubes) |
+| Function Reference Documentation | [AdobeAnalytics.Cubes](/powerquery-m/adobeanalytics-cubes) |
 | | |
 ## Prerequisites
 Before you can sign in to Adobe Analytics, you must have an Adobe Analytics account (username/password).

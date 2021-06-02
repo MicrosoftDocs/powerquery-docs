@@ -42,7 +42,7 @@ The **Custom column** dialog box contains:
 
 * The initial name of your custom column in the **New column name** box. You can rename this column.
 
-* [Power Query M formula](https://docs.microsoft.com/powerquery-m/power-query-m-function-reference) in the **Custom column formula** box.  
+* [Power Query M formula](/powerquery-m/power-query-m-function-reference) in the **Custom column formula** box.  
 
 To add a new custom column, select a column from the **Available columns** list on the right side of the dialog box. Then select the **Insert column** button below the list to add it to the custom column formula. You can also add a column by selecting it in the list. Alternatively, you can write your own formula by using the Power Query M formula language in the **Custom column formula** box.
 

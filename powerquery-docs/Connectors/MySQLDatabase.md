@@ -18,7 +18,7 @@ LocalizationGroup: reference
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication Types Supported | Windows (Power BI Desktop, Excel, online service with gateway)<br/>Database (Power BI Desktop, Excel)<br/>Basic (online service with gateway) |
-| Function Reference Documentation | [MySQL.Database](https://docs.microsoft.com/powerquery-m/mysql-database) |
+| Function Reference Documentation | [MySQL.Database](/powerquery-m/mysql-database) |
 | | |
 
 >[!Note]
@@ -26,7 +26,7 @@ LocalizationGroup: reference
  
 ## Prerequisites
 
-By default, Power BI installs an OLE DB driver for MySQL database. However, for optimal performance, we recommend that the customer installs the [SQL Server Native Client](https://docs.microsoft.com/sql/relational-databases/native-client/applications/installing-sql-server-native-client) before using the MySQL database connector. SQL Server Native Client 11.0 and SQL Server Native Client 10.0 are both supported in the latest version.
+By default, Power BI installs an OLE DB driver for MySQL database. However, for optimal performance, we recommend that the customer installs the [SQL Server Native Client](/sql/relational-databases/native-client/applications/installing-sql-server-native-client) before using the MySQL database connector. SQL Server Native Client 11.0 and SQL Server Native Client 10.0 are both supported in the latest version.
 
  
 ## Capabilities Supported
@@ -60,7 +60,7 @@ To make the connection, take the following steps:
 
    ![MySQL database encryption support](../images/EncryptionWarning.png)
 
-   Select **OK** to connect to the database by using an unencrypted connection, or follow the [instructions](https://docs.microsoft.com/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine) to set up encrypted connections to SQL Server.
+   Select **OK** to connect to the database by using an unencrypted connection, or follow the [instructions](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine) to set up encrypted connections to SQL Server.
 
 6. In **Navigator**, select the data you require, then either load or transform the data.
 
