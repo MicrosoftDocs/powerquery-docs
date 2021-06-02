@@ -4,6 +4,16 @@
       "source_path": "powerquery-docs/Connectors/CommonDataService.md",
       "redirect_url": "/power-query/connectors/dataverse",
       "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerquery-docs/power-query-quickstart-using-power-bi.md",
+      "redirect_url": "/power-query/power-query-ui",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerquery-docs/power-query-tutorial-shape-combine.md",
+      "redirect_url": "/power-query/power-query-ui",
+      "redirect_document_id": "false"
     }    
   ]
 }
