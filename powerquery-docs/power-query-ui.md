@@ -61,7 +61,7 @@ The above experience of connecting to your data, specifying the authentication m
 
 The Power Query editor represents the Power Query user interface, where you can add or modify queries, manage queries by grouping or adding descriptions to query steps, or visualize your queries and their structure with different views. The Power Query user interface has five distinct components.
 
-[ ![The Power Query user interface](media/power-query-ui/pqui-user-interface.png) ](/media/power-query-ui/pqui-user-interface.png#lightbox)
+[ ![The Power Query user interface](media/power-query-ui/pqui-user-interface.png) ](media/power-query-ui/pqui-user-interface.png#lightbox)
 
 1. **Ribbon**: the ribbon navigation experience, which provides multiple tabs to add transforms, select options for your query, and access different ribbon buttons to complete various tasks.
 2. **Queries pane**: a view of all your available queries.
