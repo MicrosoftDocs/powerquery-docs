@@ -9,7 +9,7 @@ ms.author: bezhan
 LocalizationGroup: reference
 ---
 
-# EQuIS
+# EQuIS (Beta) 
 
 ## Summary
 
