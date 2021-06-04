@@ -96,7 +96,7 @@ Host: [URL HOST]
 Connection: Keep-Alive
 ```
 
-The service is then expected to respond with a **401** response with a **WWW_Authenticate** header indicating the Azure AD authorization URI to use. This can include the tenant to log into, or **/common/** if the resource isn’t associated with a specific tenant.
+The service is then expected to respond with a **401** response with a **WWW_Authenticate** header indicating the Azure AD authorization URI to use. This response should include the tenant to log into, or **/common/** if the resource isn’t associated with a specific tenant.
 
 ```
 HTTP/1.1 401 Unauthorized
@@ -108,7 +108,7 @@ Date: Wed, 15 Aug 2018 15:02:04 GMT
 Content-Length: 49
 ```
 
-Power Query can then initiate the OAuth flow against the **authorization_uri**. Power Query will request an Azure AD Resource or Audience value equal to the domain of the URL being requested. This would be the value you use for your Azure Application ID URL value in your API/service registration. For example, if accessing **https://api.myservice.com/path/to/data/api**, Power Query would expect your Application ID URL value to be equal to **https://api.myservice.com**.
+Power Query can then initiate the OAuth flow against the **authorization_uri**. Power Query will request an Azure AD Resource or Audience value equal to the domain of the URL being requested. This value would be the value you use for your Azure Application ID URL value in your API/service registration. For example, if accessing **https://api.myservice.com/path/to/data/api**, Power Query would expect your Application ID URL value to be equal to **https://api.myservice.com**.
 
 The only supported OAuth scope for this flow is **user_impersonation**.
 
