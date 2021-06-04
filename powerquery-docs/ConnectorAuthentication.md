@@ -75,24 +75,57 @@ You can also delete the credentials for a particular website in step 3 by select
 
 ## Connecting with Azure Active Directory using the Web and OData connectors
 
-In certain cases, you can use Azure Active Directory to connect to Web and OData sources without requiring a service-specific or custom connector. To allow users to edit or author their own reports, we recommend using the OData connector to take advantage of the following benefits:
+When using the Web and OData connector in Power Query, you may try to connect to services that require OAuth or Azure Active Directory-based authentication. In certain cases where the service is configured correctly, you will be able to authenticate without requiring a service-specific or custom connector. To allow users to edit or author their own reports, we recommend using the OData connector to take advantage of the following benefits:
 * built-in support for paged results,
 * a navigation table based on the service document that shows the schema for your data source,
 * built-in support for filters and other OData query parameters,
 * automatic data type or schema import, and, 
 * automatic detection and import of relationships between tables. 
 
-When using the OData connector, after you enter the URL to connect to the service in the "Get Data" connection builder experience, you will be presented with a credential prompt. 
+This section will outline connection symptoms when the service is not configured properly and provide information on how Power Query interacts with the service when it is properly configured. 
 
-Select **Organizational Account** to proceed to connect using Azure Active Directory.
+### Symptoms when the service is not configured properly
 
-Power Query will send a request to the provided URL endpoint with an Authorization header with an empty bearer token.
+If you run into the error **“We were unable to connect because this credential type isn’t supported for this resource. Please choose another credential type.”**, this means that your service does not support the authentication type. 
+
+One example of this is the Northwind OData service. 
+
+1) Enter the Northwind endpoint in the "Get Data" experience using the OData connector. 
+
+![Connect to Northwind](media/connector-authentication/northwind-odata.png)
+
+2) Select OK to enter the authentication experience. Normally, because Northwind isn’t an authenticated service, you would just use **Anonymous**. To demonstrate lack of support for Azure Active Directory, select **Organizational account** and ‘Sign in’.
+
+![Northwind authentication](media/connector-authentication/northwind-auth.png)
+
+
+3) You will encounter the error, indicating that OAuth or Azure Active Directory authentication is not supported in the service.
+
+![Northwind error](media/connector-authentication/northwind-error.png)
+
+### Supported workflow
+
+One example of a supported service working properly with OAuth is CRM, for example, **https://*.crm.dynamics.com/api/data/v8.2**.
+
+1) Enter the URL in the "Get Data" experience using the OData connector. 
+
+![CRM authentication](media/connector-authentication/crm-auth.png)
+
+2) Select **Organizational Account** and **Sign-in** to proceed to connect using OAuth.
+
+![CRM authentication dialog](media/connector-authentication/crm-auth-dialog.png)
+
+3) The request succeeds and the OAuth flow should continue to allow you to authenticate successfully.
+
+![CRM authentication success](media/connector-authentication/crm-auth-success.png)
+
+When you select **Sign-in** in Step 2 above, Power Query will send a request to the provided URL endpoint with an Authorization header with an empty bearer token.
 
 ```
-GET [URL] HTTP/1.1
+GET https://*.crm.dynamics.com/api/data/v8.2 HTTP/1.1
 Authorization: Bearer
 User-Agent: Microsoft.Data.Mashup (https://go.microsoft.com/fwlink/?LinkID=304225)
-Host: [URL HOST]
+Host: pbi.crm.dynamics.com
 Connection: Keep-Alive
 ```
 
