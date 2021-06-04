@@ -99,4 +99,4 @@ When using the Query Editor in Power Query Online, you can press Ctrl+? or navig
 | Select all queries | Ctrl+A |
 | Copy queries | Ctrl+C |
 | Paste queries | Ctrl+V |
-
+| Select multiple consecutive queries | Ctrl+Up arrow key and Ctrl+Down arrow key |
