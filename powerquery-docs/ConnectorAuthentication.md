@@ -72,3 +72,53 @@ You can also delete the credentials for a particular website in step 3 by select
     ![Edit the online authentication methods](media/connector-authentication/pq-edit-connection.png "Edit the online authentication methods")
 
 2. Make the required changes, and then select **Next**.
+
+## Connecting with Azure Active Directory using the Web and OData connectors
+
+In certain cases, you can use Azure Active Directory to connect to Web and OData sources without requiring a service-specific or custom connector. To allow users to edit or author their own reports, we recommend using the OData connector to take advantage of the following benefits:
+* built-in support for paged results,
+* a navigation table based on the service document that shows the schema for your data source,
+* built-in support for filters and other OData query parameters,
+* automatic data type or schema import, and, 
+* automatic detection and import of relationships between tables. 
+
+When using the OData connector, after you enter the URL to connect to the service in the "Get Data" connection builder experience, you will be presented with a credential prompt. 
+
+Select **Organizational Account** to proceed to connect using Azure Active Directory.
+
+Power Query will send a request to the provided URL endpoint with an Authorization header with an empty bearer token.
+
+```
+GET [URL] HTTP/1.1
+Authorization: Bearer
+User-Agent: Microsoft.Data.Mashup (https://go.microsoft.com/fwlink/?LinkID=304225)
+Host: [URL HOST]
+Connection: Keep-Alive
+```
+
+The service is then expected to respond with a **401** response with a **WWW_Authenticate** header indicating the Azure AD authorization URI to use. This can include the tenant to log into, or **/common/** if the resource isn’t associated with a specific tenant.
+
+```
+HTTP/1.1 401 Unauthorized
+Cache-Control: private
+Content-Type: text/html
+Server: 
+WWW-Authenticate: Bearer authorization_uri=https://login.microsoftonline.com/3df2eaf6-33d0-4a10-8ce8-7e596000ebe7/oauth2/authorize 
+Date: Wed, 15 Aug 2018 15:02:04 GMT
+Content-Length: 49
+```
+
+Power Query can then initiate the OAuth flow against the **authorization_uri**. Power Query will request an Azure AD Resource or Audience value equal to the domain of the URL being requested. This would be the value you use for your Azure Application ID URL value in your API/service registration. For example, if accessing **https://api.myservice.com/path/to/data/api**, Power Query would expect your Application ID URL value to be equal to **https://api.myservice.com**.
+
+The only supported OAuth scope for this flow is **user_impersonation**.
+
+The following Azure Active Directory client IDs are used by Power Query. You may need to explicitly allow these client IDs to access your service and API, depending on your overall Azure Active Directory settings.
+
+| Client ID  | Title | Description |
+| ---------- | ----- | ----------- |
+| a672d62c-fc7b-4e81-a576-e60dc46e951d | Power Query for Excel | Public client, used in Power BI Desktop and Gateway. |
+| b52893c8-bc2e-47fc-918b-77022b299bbc | Power BI Data Refresh | Confidential client, used in Power BI service. |
+| | | |
+
+If you need more control over the OAuth flow (for example, if your service must respond with a 302 rather than a 401), or if your application’s Application ID URL or Azure AD Resource value do not match the URL of your service, then you’d need to use a custom connector. Visit the related [documentation](HandlingAuthentication.md) for using our built-in Azure AD flow.
+
