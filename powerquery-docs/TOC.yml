@@ -18,10 +18,8 @@
         href: connector-alternatives.md
     - name: Transform data
       items:
-      - name: "Use Power Query"
-        href: power-query-quickstart-using-power-bi.md
-      - name: "Shape and combine data"
-        href: power-query-tutorial-shape-combine.md
+      - name: "Use Power Query to transform data"
+        href: power-query-ui.md
       - name: "Using the Applied Steps list"
         href: applied-steps.md
       - name: "Query folding basics"
@@ -276,8 +274,6 @@
         href: Connectors/dataverse.md
       - name: "Excel"
         href: Connectors/Excel.md
-      - name: "Facebook"
-        href: Connectors/Facebook.md
       - name: "FHIR"
         items:
         - name: Overview
@@ -292,7 +288,7 @@
           href: Connectors/FHIR/FHIR-Relationships.md
       - name: "Folder"
         href: Connectors/Folder.md
-      - name: "EQuIS"
+      - name: "EQuIS (Beta)"
         href: Connectors/EQuIS.md
       - name: "Google Analytics"
         href: Connectors/GoogleAnalytics.md
