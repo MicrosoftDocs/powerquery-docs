@@ -13,6 +13,9 @@ LocalizationGroup: reference
 
 # BQE Core (Beta)
 
+>[!Note]
+>The following connector article is provided by BQE, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the BQE website and use the support channels there.
+
 ## Summary
 
 | Item | Description |
@@ -46,7 +49,10 @@ To connect to BQE Core data:
 
 4. In the sign in screen, enter your Core email and password. Select **Login**.
 
-5. You'll then be prompted to select your Core company file. Select **Grant Permission**.
+5. You'll then be prompted to select your Core company file.
+   1. Select the Core company file you want to use.
+   1. (Optional) If you select **Remember my consent**, the next time you connect to this Core company file you won't need to grant permission again.
+   1. Select **Grant Permission**.
 
    ![Grant Permissions](media/bqe-core/core-bi-13.png)
 

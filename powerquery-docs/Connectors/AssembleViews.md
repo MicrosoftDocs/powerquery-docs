@@ -11,7 +11,10 @@ LocalizationGroup: reference
 ---
 
 # Assemble Views (Beta)
- 
+
+>[!Note]
+>The following connector article is provided by Autodesk, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Autodesk website and use the support channels there.
+
 ## Summary
 
 | Item | Description |
@@ -42,7 +45,7 @@ To connect to Assemble data:
 
 2. In **Assemble Views**, enter your site's URL to sign in. For example, use **https://example.tryassemble.com**.
 
-   a. (Optional) Select a date from which you want to load the data. Leaving this entry blank will result in the latest data being pulled each time you refresh.
+   a. (Optional) Select a date from which you want to load the data. Leaving this entry blank results in the latest data being pulled each time you refresh.
 
       ![Enter your Assemble URL](media/assemble-views/assemble-views-url.png)
 
