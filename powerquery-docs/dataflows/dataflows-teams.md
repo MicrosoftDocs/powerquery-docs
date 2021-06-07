@@ -43,11 +43,11 @@ In this example, you're going to load data from an Excel file that's located on 
 
 6. In **Navigator**, select the tables that are present in your Excel file. If your Excel file has multiple sheets and tables, select only the tables you're interested in. When you're done, select **Transform data**.
 
-7. [Clean and transform your data using Power Query](../power-query-ui.md). You can use the out-of-the box transformations to delete missing values, delete unnecessary columns, or to filter your data. With Power Query, you can apply more than 300 different transformations on your data. To learn more about Power Query, see [What is Power Query?](../power-query-what-is-power-query.md). After you are finished with preparing your data, click **Next**.
+7. Clean and transform your data using Power Query. You can use the out-of-the box transformations to delete missing values, delete unnecessary columns, or to filter your data. With Power Query, you can apply more than 300 different transformations on your data. To learn more about Power Query transformations, see [Use Power Query to transform data](../power-query/ui.md). After you're finished with preparing your data, select **Next**.
 
    ![Clean and transform data with Power Query](media/data-prep-dataflows-teams.PNG)
 
-8. In **Map tables**, select **Load to new table** to create a new table in Dataverse for Teams. You can also choose to load your data into an existing table. In the **Map tables** screen, you can also specify a **Unique primary name column** and an **Alternate key column (optional)**. In this example, leave these selections with the default values. To learn more about mapping your data and the different settings, [Field mapping considerations for standard dataflows](get-best-of-standard-dataflows.md).
+8. In **Map tables**, select **Load to new table** to create a new table in Dataverse for Teams. You can also choose to load your data into an existing table. In the **Map tables** screen, you can also specify a **Unique primary name column** and an **Alternate key column (optional)**. In this example, leave these selections with the default values. To learn more about mapping your data and the different settings, see [Field mapping considerations for standard dataflows](get-best-of-standard-dataflows.md).
 
    ![Mapping of data to Dataverse for Teams](media/data-mapping-teams.PNG)
 
