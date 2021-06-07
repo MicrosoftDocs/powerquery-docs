@@ -43,7 +43,7 @@ In this example, you're going to load data from an Excel file that's located on 
 
 6. In **Navigator**, select the tables that are present in your Excel file. If your Excel file has multiple sheets and tables, select only the tables you're interested in. When you're done, select **Transform data**.
 
-7. Clean and transform your data using Power Query. You can use the out-of-the box transformations to delete missing values, delete unnecessary columns, or to filter your data. With Power Query, you can apply more than 300 different transformations on your data. To learn more about Power Query transformations, see [Use Power Query to transform data](../power-query/ui.md). After you're finished with preparing your data, select **Next**.
+7. Clean and transform your data using Power Query. You can use the out-of-the box transformations to delete missing values, delete unnecessary columns, or to filter your data. With Power Query, you can apply more than 300 different transformations on your data. To learn more about Power Query transformations, see [Use Power Query to transform data](../power-query-ui.md). After you're finished with preparing your data, select **Next**.
 
    ![Clean and transform data with Power Query](media/data-prep-dataflows-teams.PNG)
 
