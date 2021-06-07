@@ -23,7 +23,7 @@ With your organizational data already sitting in a different location, you can u
 
 ## Create a dataflow from the dataflows page
 
-In this example, you're going to load data from an Excel file that's located on OneDrive into Dataverse for Teams. You can follow this example with any other data source.
+In this example, you're going to load data from an Excel file that's located on OneDrive into Dataverse for Teams.
 
 1. Sign in to [Teams web version](https://teams.microsoft.com/), and then select the link for **Power Apps**.
 
@@ -35,7 +35,7 @@ In this example, you're going to load data from an Excel file that's located on 
 
    ![Creating a new dataflow](media/create-dataflow-teams.PNG)
 
-4. Select the **Excel workbook** connector or any of the other connectors.
+4. Select the **Excel workbook** connector.
 
    ![Select a connector](media/choose-connector-teams.PNG)
 
@@ -43,7 +43,7 @@ In this example, you're going to load data from an Excel file that's located on 
 
 6. In **Navigator**, select the tables that are present in your Excel file. If your Excel file has multiple sheets and tables, select only the tables you're interested in. When you're done, select **Transform data**.
 
-7. [Clean and transform your data using Power Query](../power-query-ui.md). You can use the out-of-the box transformations to delete missing values, delete unnecessary columns, or to filter your data. With Power Query, you can apply more than 300 different transformations on your data. To learn more about Power Query, see [What is Power Query?](../power-query-what-is-power-query.md).
+7. [Clean and transform your data using Power Query](../power-query-ui.md). You can use the out-of-the box transformations to delete missing values, delete unnecessary columns, or to filter your data. With Power Query, you can apply more than 300 different transformations on your data. To learn more about Power Query, see [What is Power Query?](../power-query-what-is-power-query.md). After you are finished with preparing your data, click **Next**.
 
    ![Clean and transform data with Power Query](media/data-prep-dataflows-teams.PNG)
 
