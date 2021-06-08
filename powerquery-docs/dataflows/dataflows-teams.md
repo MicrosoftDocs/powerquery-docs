@@ -86,9 +86,9 @@ Select **Show refresh history** to see information about the last refresh of you
 
 ## Dataflows in Teams is a lightweight version
 
-Dataflows in Dataverse for Teams are a lightweight version of dataflows in the maker portal and can only load data into Dataverse for Teams. Dataflows in Dataverse for Teams are optimized for a one-time import of data, but you can refresh your data manually through the refresh button in the dataflow management page. If you want full dataflows functionality, you can [upgrade your environment](/power-platform/admin/about-teams-environment).
+Dataflows in Teams are a lightweight version of dataflows in the maker portal and can only load data into Dataverse for Teams. Dataflows in Teams are optimized for a one-time import of data, but you can refresh your data manually through the refresh button in the dataflow management page. If you want full dataflows functionality, you can [upgrade your environment](/power-platform/admin/about-teams-environment).
 
-Supported data sources in dataflows in Dataverse for Teams are:
+Supported data sources in dataflows in Teams are:
 
 * Excel (OneDrive)
 * Text/CSV (OneDrive)
@@ -101,9 +101,9 @@ Supported data sources in dataflows in Dataverse for Teams are:
 * Web API
 
 > [!NOTE]
-> Dataflows in Dataverse for Teams don't support non-premises data sources, such as on premises file locations.
+> Dataflows in Teams don't support non-premises data sources, such as on premises file locations.
 
-The following table lists the major feature differences between dataflows for Dataverse in Teams and dataflows in Dataverse.
+The following table lists the major feature differences between dataflows for Dataverse in Teams and dataflows for Dataverse.
 
 | **Dataflow capability** | **Dataverse for Teams** | **Dataverse** |
 | --- | --- | --- |
