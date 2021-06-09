@@ -171,7 +171,7 @@ A checkmark indicates the connector is currently supported in the listed service
 | ![Zucchetti HR Infinity (Beta)](media/index/zucchetti-64.png)<br/>**Zucchetti HR<br/>Infinity (Beta)**<br/>By Zucchetti                 | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | | | | | | | |
 
-<sup>1</sup> Available in dataflows for Microsoft Teams.
+<sup>1</sup> Available in [dataflows for Microsoft Teams](../dataflows/dataflows-teams.md).
 
 ## Next steps
 
