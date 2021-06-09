@@ -142,6 +142,8 @@
         href: dataflows/understanding-differences-between-analytical-standard-dataflows.md        
       - name: "Create and use dataflows"
         href: dataflows/create-use.md
+      - name: "Create and use dataflows in Teams"
+        href: dataflows/dataflows-teams.md
       - name: "Use incremental refresh"
         href: dataflows/incremental-refresh.md
       - name: "Create computed entities"
