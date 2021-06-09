@@ -14,7 +14,7 @@ ms.author: mideboer
 # Create and use dataflows in Microsoft Teams (Preview)
 
 > [!NOTE]
-> We are rolling out dataflows for Microsoft Teams gradually. This feature might not be avaiable in your region yet.
+> We are rolling out dataflows for Microsoft Teams gradually. This feature might not be available in your region yet.
 
 [Microsoft Dataverse for Teams](/powerapps/teams/overview-data-platform) delivers a built-in, low-code data platform for Microsoft Teams. It provides relational data storage, rich data types, enterprise-grade governance, and one-click solution deployment. Dataverse for Teams enables everyone to easily build and deploy apps.
 
