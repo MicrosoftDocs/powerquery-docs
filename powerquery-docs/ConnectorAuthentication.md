@@ -137,8 +137,6 @@ Content-Length: 49
 
 Power Query can then initiate the OAuth flow against the **authorization_uri**. Power Query requests an Azure AD Resource or Audience value equal to the domain of the URL being requested. This value would be the value you use for your Azure Application ID URL value in your API/service registration. For example, if accessing `https://api.myservice.com/path/to/data/api`, Power Query would expect your Application ID URL value to be equal to `https://api.myservice.com`.
 
-The only supported OAuth scope for this flow is **user_impersonation**.
-
 The following Azure Active Directory client IDs are used by Power Query. You might need to explicitly allow these client IDs to access your service and API, depending on your overall Azure Active Directory settings.
 
 | Client ID  | Title | Description |
