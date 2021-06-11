@@ -18,7 +18,7 @@ LocalizationGroup: reference
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication Types Supported | Basic (Username/Password) |
-| Function Reference Documentation | [Essbase.Cubes](https://docs.microsoft.com/en-us/powerquery-m/essbase-cubes) |
+| Function Reference Documentation | [Essbase.Cubes](/powerquery-m/essbase-cubes) |
 |  |  |
 
 > [!Note]
@@ -44,7 +44,15 @@ To connect to an Essbase server:
 
 1. Select the **Essbase** option in the **Get Data** experience.
 
-2. When connecting, you must specify the **URL** to the Oracle Essbase Hyperion server. Typically, the URL looks like http://yourservername.domain.com:portnumber/aps/XMLA. The **hostname** (e.g., yourservername.domain.com) is the hostname or IP address of the Oracle Hyperion **Application Provider Service (APS)** server for your in-house system. The **port number** (e.g., 19000) is the port number the APS server is listening for XMLA requests. The last portion of the URL, the **path** (i.e., **/aps/XMLA**), is case-sensitive and must be specified exactly as shown.
+2. When connecting, you must specify the **URL** to the Oracle Essbase Hyperion server. Typically, the URL looks like:
+
+```
+http://[hostname]:[port number]/aps/XMLA
+```
+
+* The **hostname** (e.g., yourservername.domain.com) is the hostname or IP address of the Oracle Hyperion **Application Provider Service (APS)** server for your in-house system. 
+* The **port number** (e.g., 19000) is the port number the APS server is listening for XMLA requests. 
+* The last portion of the URL, the **path** (i.e., **/aps/XMLA**), is case-sensitive and must be specified exactly as shown.
 
 ![Essbase connection builder](./media/essbase/url-database.png)
 
@@ -104,7 +112,7 @@ When **Data Connectivity mode** of **DirectQuery** is chosen, the data source **
 
 PowerBI Essbase connector does not support Measure Hierarchies. All measures are displayed at the same level. Users are still able to select all the measures that they need. The search field can be used to narrow down the displayed measures if there are many measures.
 
-# Performance Considerations
+## Performance Considerations
 
 Interacting with Power BI in DirectQuery mode is very dynamic. When clicking a checkbox to include a measure or dimension level in the visualization Power BI generates a query and sends it to the Oracle Essbase server to get the results. Power BI is optimized to cache any repeated queries to improve performance. But if any new query is generated, it is sent to the Oracle Essbase server to produce a new result. Depending on the number of selected measures, dimension levels, and the filters applied, the query may get sent more quickly than the Oracle Essbase server can respond. To improve performance and increase responsiveness, consider the following three methods to optimize your interaction with the Oracle Essbase server.
 
@@ -119,7 +127,7 @@ Selecting the **Reduce number of queries sent by** option will disable cross hig
 Note: These options apply only to the current file you are working on. **Current File** option settings are saved with the file and restored when opening the same file.
 
 
-# Iterative Filter Application When Adding Dimension Levels In Import Mode
+## Iterative Filter Application When Adding Dimension Levels In Import Mode
 
 When interacting in Import mode with a multidimensional cube data source like Oracle's Essbase, Power BI initially displays the measures, dimensions, and dimension levels in the database Navigator dialog. However, while Power BI makes it easy to select and visualize data it can, at times, lead to retrieving too much data from the server.
 
@@ -127,7 +135,7 @@ The following procedure demonstrates how to reduce the chances of retrieving mor
 
 ## Connecting to the Oracle Essbase Data Source
 
-1. Follow the instruction in [Power Query Essbase connector](power-query-essbase-connector.md) to connect to an Essbase server via Import mode.
+1. Follow the instructions above to connect to an Essbase server via Import mode.
 
 2. Expand the tree to drill down to your desired server, application and database until it exposes the measures and dimensions for your database. For now, select your measures and only one dimension level. Pick the most important dimension level. In later steps, we'll build the result by incrementally adding more dimensions levels.
 
@@ -213,7 +221,7 @@ The following procedure demonstrates how to reduce the chances of retrieving mor
 
 
 
-# Iterative Filter Application When Adding Dimension Levels In DirectQuery Mode
+## Iterative Filter Application When Adding Dimension Levels In DirectQuery Mode
 
 1. When interacting in DirectQuery mode with a multidimensional cube data source (like Oracle’s Essbase), Power BI displays the cube’s dimensions and levels in the Fields pane.
 
@@ -243,7 +251,7 @@ The following procedure demonstrates how to reduce the chances of retrieving mor
 
 ![Add new dimensions](./media/essbase/iterative-DQ-add-new-dimensions.png)
 
-For more information about adding filters, view the online [documentation](https://docs.microsoft.com/en-us/power-bi/power-bi-report-add-filter).
+For more information about adding filters, view the online [documentation](/power-bi/power-bi-report-add-filter).
 
 
 ## Troubleshooting
@@ -343,7 +351,7 @@ Essbase Analytic Provider Services (APS) or Essbase server indicates a large num
 
 ### Resolution
 
-When the Connectivity mode is DirectQuery, it is easy to click on measures or dimension levels to add to the selected visualization. However, each new selection creates a new query and a new session to the Essbase Analytic Provider Services (APS)/Essbase server. There are a few ways to ensure a reduced number of queries or reduce the size of each query result. Review the Performance Consideration section to reduce the number of times the server is queried and to also reduce the size of query results. Refer to section [Performance Consideration](#Performance-Considerations)
+When the Connectivity mode is DirectQuery, it is easy to click on measures or dimension levels to add to the selected visualization. However, each new selection creates a new query and a new session to the Essbase Analytic Provider Services (APS)/Essbase server. There are a few ways to ensure a reduced number of queries or reduce the size of each query result. Review the Performance Consideration section to reduce the number of times the server is queried and to also reduce the size of query results. Refer to section [Performance Consideration](#performance-considerations)
 
 ### Validation
 
