@@ -12,7 +12,7 @@ ms.reviewer:
 localizationgroup: reference
 ---
 
-# Query plan for Power Query
+# Query plan for Power Query (Preview)
 
 Query plan for Power Query is a feature that focuses in providing you a better view as to how your query might get evaluated. It's main usecase is for when you want to review why a particular query might not fold at a particular step.
 
@@ -109,5 +109,19 @@ Since the data source is a SQL Server database, if the goal is to retrieve the l
 This alternative is equivalent to the original query. While this in theory seems like a good alternative, you need to make the changes in order to see if this will make this fully fold back to the data source.
 
 ## 5. Implement changes to your query
+Implement the alternative discussed in the previous section:
+* Close the query plan dialog and go back to the Power Query Editor. 
+* Remove the Kept bottom rows step.
+* Sort the **SalesOrderID** column in descending order
+* Click the table icon on the top left corner of the data preview view and select the option that reads Keep top rows. In the dialog pass the number five as the argument and hit OK.
+
 <Image after the changes>
-After implementing the changes
+After implementing the changes, check again the step folding indicators and then review the query plan for the last step of the query.
+
+Note how now there are only folded nodes. Click the view details of the Value.NativeQuery to check what is the query being sent to the database.
+
+<image of the metadata for the new Value.NativeQuery>
+
+While this time this article is the one telling you what alternatives to apply, the main objective of Query folding is to give you the visibility of what's being sent to your data source and what transforms will be done locally. 
+
+You can tweak your code to see the impact that it has in your query and, using the step folding indicators, have a better idea of what steps are preventing your query from folding.
