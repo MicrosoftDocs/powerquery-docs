@@ -85,7 +85,7 @@ You can identify the nodes in this diagram into two groups:
 * **Folded nodes** -  This can be either "Value.NativeQuery" or "data source" nodes such as SQL Server. 
 * **Non-folded nodes** - Any other node that doesn't have Value.NativeQuery or the name of a particular "data source".
 
-In the image below you'll see the folded nodes inside the red rectagle and the rest of the nodes outside of it are nodes that do not fold back to the data source and you need to review those as the goal is to attempt to have those fold back to the data source.
+In the image below you'll see the folded nodes inside the red rectangle and the rest of the nodes outside of it are nodes that do not fold back to the data source and you need to review those as the goal is to attempt to have those fold back to the data source.
 
 ![Query plan highlighting two of the folded nodes with a red rectangle](media/query-plan/query-plan-folded-nodes.png)
 
@@ -126,7 +126,7 @@ After implementing the changes, check again the step folding indicators and see 
 
 ![All step folding indicators are green and showing that they can be folded. The final table provides the same rows but in a different order](media/query-plan/alternative-approach.png)
 
-Now it is time to review the query plan of the last step which is now the **Keep top rows**. Note how now there are only folded nodes. Click the view details of the Value.NativeQuery to check what is the query being sent to the database.
+Now it is time to review the query plan of the last step that is now the **Keep top rows**. Note how now there are only folded nodes. Click the view details of the Value.NativeQuery to check what is the query being sent to the database.
 
 ![New query plan after making the changes to the query which now showcases only folded nodes with the Value.NativeQuery showing the full SQL statement that evaluates the query](media/query-plan/alternative-query-plan.png)
 
