@@ -116,14 +116,19 @@ Implement the alternative discussed in the previous section:
 * Close the query plan dialog and go back to the Power Query Editor. 
 * Remove the Kept bottom rows step.
 * Sort the **SalesOrderID** column in descending order
+![Sorting tthe SalesOrderID column in descending order using the autofilter menu](media/query-plan/sort-descending.png)
+
 * Click the table icon on the top left corner of the data preview view and select the option that reads Keep top rows. In the dialog pass the number five as the argument and hit OK.
 
-<Image after the changes>
-After implementing the changes, check again the step folding indicators and then review the query plan for the last step of the query.
+![Using the table context menu to select the Keep top rows transform to keep only the top five rows](media/query-plan/keep-top-rows.png)
 
-Note how now there are only folded nodes. Click the view details of the Value.NativeQuery to check what is the query being sent to the database.
+After implementing the changes, check again the step folding indicators and see if its giving you a positive outcome.
 
-<image of the metadata for the new Value.NativeQuery>
+![All step folding indicators are green and showing that they can be folded. The final table provides the same rows but in a different order](media/query-plan/alternative-approach.png)
+
+Now its time to review the query plan of the last step which its now the **Keep top rows**. Note how now there are only folded nodes. Click the view details of the Value.NativeQuery to check what is the query being sent to the database.
+
+![New query plan after making the changes to the query which now showcases only folded nodes with the Value.NativeQuery showing the full SQL statement that evaluates the query](media/query-plan/alternative-query-plan.png)
 
 While this time this article is the one telling you what alternatives to apply, the main objective of Query folding is to give you the visibility of what's being sent to your data source and what transforms will be done locally. 
 
