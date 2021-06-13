@@ -52,7 +52,7 @@ in
 
 After following these steps, your query will look exactly like the one shown in the screeenshot below:
 
-![Sample query with step folding indicators enabled](media\query-plan\sample-query.png)
+![Sample query with step folding indicators enabled](media/query-plan/sample-query.png)
 
 As a brief description of what this query is trying to accomplish, it connects to the SalesOrderHeader table to get only a few columns and only the last five orders with a **TotalDue** value above 1000.
 
@@ -66,7 +66,7 @@ As a brief description of what this query is trying to accomplish, it connects t
 
 Your first step in this process is to review your query and pay close attention to the step folding indicators. The goal is to review the steps that are maked as not folded and see if making changes to the overall query could make those transformations fold completely.
 
-![Step folding indicators for the sample query inside the Applied steps pane](media\query-plan\step-folding-indicators-sample.png)
+![Step folding indicators for the sample query inside the Applied steps pane](media/query-plan/step-folding-indicators-sample.png)
 
 For this example, the step named **Kept bottom rows** is the only step that has an indicator that it can not be folded and at the same time is the output of the query.
 
@@ -75,7 +75,7 @@ The goal now is to review this step and understand what's being folded back to t
 ## 2. Select the query step to check its query plan
 You've identified the **Kept bottom rows** step as a step of interest since that step doesn't fold back to the data source. Right click the step and select the option that reads **View Query plan**. This action will display a new dialogue where you'll see a diagram for the query plan of the selected step.
 
-![Query plan dialogue that showcases a diagram view for the query plan with nodes connected by lines](media\query-plan\query-plan-diagram-sample-query.png)
+![Query plan dialogue that showcases a diagram view for the query plan with nodes connected by lines](media/query-plan/query-plan-diagram-sample-query.png)
 
 Power Query tries to optimize your query by taking advantage of lazy evaluation and query folding as mentioned in the article on [Query folding basics](query-folding-basics.md). This Query plan represents the optimized translation of your M query into the native query that will be sent to the data source and any transforms that will be performed locally.  
 
@@ -87,7 +87,7 @@ You can identify the nodes in this diagram into two groups:
 
 In the image below you'll see the folded nodes inside the red rentagle and the rest of the nodes outside of it are nodes that do not fold back to the data source and you need to review those as the goal is to attempt to have those fold back to the data source.
 
-![Query plan highlighting two of the folded nodes with a red rectangle](media\query-plan\query-plan-folded-nodes.png)
+![Query plan highlighting two of the folded nodes with a red rectangle](media/query-plan/query-plan-folded-nodes.png)
 
 Furthermore, you can click the *View details* text at the bottom of some nodes in order to see more metadata about each those. For example, the details of the Value.NativeQuery shows the native query (in SQL) that will be sent to the data source.
 
