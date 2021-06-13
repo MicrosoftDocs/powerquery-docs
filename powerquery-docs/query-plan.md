@@ -21,6 +21,15 @@ Through a practical example, this article will demonstrate the main usecase and 
 >[!NOTE]
 >The query plan feature for Power Query is only available inside the Power Query Online experience.
 
+<flow diagram>
+
+This article has been divided in a series of recommended steps in order to interpret the query plan. These steps are:
+1. Review the step folding indicators
+2. Select the query step to check its query plan
+3. Identify folded nodes from other nodes
+4. Review non-folded nodes and consider actions to improve
+5. Implement changes to your query
+
 In order to follow this example, follow the following steps to load this query in your own Power Query Online environment:
 1. Open your Power Query Online experience.
 2. Create a new blank query and replace the code from the blank query with the code shown below.
@@ -49,13 +58,6 @@ As a brief description of what this query is trying to accomplish, it connects t
 
 >[!NOTE]
 >This article uses a simplified example to showcase this feature, but please bare in mind the concepts described in this article apply to all queries. It is recommended that you have a good knowledge of query folding before reading the query plan. You can learn more about query folding from the article [Query folding basics](query-folding-basics.md). 
-
-This article has been divided in a series of recommended steps in order to interpret the query plan. These steps are:
-1. Review the step folding indicators
-2. Select the query step to check its query plan
-3. Identify folded nodes from other nodes
-4. Review non-folded nodes and consider actions to improve
-5. Implement changes to your query
 
 ## 1. Review the step folding indicators
 
