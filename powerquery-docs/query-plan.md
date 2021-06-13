@@ -92,7 +92,7 @@ In the image below you'll see the folded nodes inside the red rentagle and the r
 Furthermore, you can click the *View details* text at the bottom of some nodes in order to see more metadata about each those. For example, the details of the Value.NativeQuery shows the native query (in SQL) that will be sent to the data source.
 
 
-![Details view for the Value.NativeQuery node in the query plan](media\query-plan\query-plan-view-details.png)
+![Details view for the Value.NativeQuery node in the query plan](media/query-plan/query-plan-view-details.png)
 
 That is effectively the query that Power Query sends to the data source and then the following node called [Table.LastN](https://docs.microsoft.com/powerquery-m/table-lastn) is calculated locally by the Power Query engine as it can't be folded.
 
