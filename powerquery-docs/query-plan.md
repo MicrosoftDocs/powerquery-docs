@@ -43,6 +43,7 @@ in
 
 After following these steps, your query will look exactly like the one shown in the screeenshot below:
 
+<image of how the query will look like>
 
 As a brief description of what this query is trying to accomplish, it connects to the SalesOrderHeader table to get only a few columns and only the last five orders with a **TotalDue** value above 1000.
 
@@ -92,6 +93,21 @@ Furthermore, you can click the *View details* text at the bottom of some nodes i
 
 That is effectively the query that Power Query sends to the data source and then the following node called [Table.LastN](https://docs.microsoft.com/powerquery-m/table-lastn) is calculated locally by the Power Query engine as it can't be folded.
 
+>[!NOTE]
+>In most cases, the non-folded node will have the name of the Power Query M function that will be executed locally.
+
 ## 4. Review non-folded nodes and consider actions to improve
 
+You've been able to determine what are the nodes that couldn't be folded and would be evaluated locally. This case only has the Table.LastN node, but in other scenarios it could have many more.
+
+The goal is to apply changes to your query so that the step can be completely folded. Some of the changes that you could implement could range from re-arranging your steps to applying an alternate logic to your query which is more explicit to the data source. This doesn't mean that all queries and all operations are foldable by applying some changes, but it's a good practice to determine via trial and error if your query could be folded back.
+
+Since the data source is a SQL Server database, if the goal is to retrieve the last five orders from the table, then a viable alternative would be to take advantage of the TOP and ORDER BY clauses in SQL. Since there is no BOTTOM clause in SQL, there is simply not a way to translate the Power Query transform into SQL. You could remove the Table.LastN step and replace it with:
+1. **A sort descending step** - by the SalesOrderID column from the table since this column determines which order goes first and which has been entered last.
+2. **Select the top five rows** - since the table has been sorted, this transform will accomplish the same as if it was a *Kept bottom rows* (Table.LastN).  
+
+This alternative is equivalent to the original query. While this in theory seems like a good alternative, you need to make the changes in order to see if this will make this fully fold back to the data source.
+
 ## 5. Implement changes to your query
+<Image after the changes>
+After implementing the changes
