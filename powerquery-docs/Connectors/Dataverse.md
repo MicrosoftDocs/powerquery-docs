@@ -74,7 +74,7 @@ To connect to Dataverse from Power BI Desktop:
 
 To connect to Dataverse from Power Query Online:
 
-1. From the **Data sources** page, select **Common Data Service**.
+1. From the **Data sources** page, select **Common Data Service (Legacy)**.
 
    ![Get data from Power Query Online](media/common-data-service/get-data-online.png)
 
