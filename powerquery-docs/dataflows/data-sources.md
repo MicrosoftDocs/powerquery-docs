@@ -76,7 +76,8 @@ The **Database** category includes the following available data connections for 
 
 The **Power Platform** category includes the following available data connections for dataflows:
 
-* Common Data Service
+* Common Data Service (Legacy)
+* Dataverse
 * Power Platform dataflows
 
 The **Azure** category includes the following available data connections for dataflows:
