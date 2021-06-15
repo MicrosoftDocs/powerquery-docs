@@ -56,9 +56,7 @@ This query connect to the SalesOrderHeader table, selects a few columns from the
 
 >[!NOTE]
 >This article uses a simplified example to showcase this feature, but please bear in mind the concepts described in this article apply to all queries. It is recommended that you have a good knowledge of query folding before reading the query plan. You can learn more about query folding from the article [Query folding basics](query-folding-basics.md). 
-
 ## 1. Review the step folding indicators
-
 >[!NOTE]
 >Before reading this section, it is recommended that you review the article on [Step Folding Indicators](step-folding-indicators.md).
 
@@ -81,7 +79,6 @@ Power Query tries to optimize your query by taking advantage of lazy evaluation 
 >It's important to note that the query plan represents the optimized plan. When the engine is evaluating a query it will try to fold all operators into a data source. In some cases, it might even do some internal reordering of the steps to maximize folding. With this in mind, the nodes/operators left in this optimized query plan will typically contain the "folded" data source query and any operators that could not be folded and will be evaluated locally.
 
 ### Identify folded nodes from other nodes
-
 You can identify the nodes in this diagram into two groups:
 * **Folded nodes** -  This can be either "Value.NativeQuery" or "data source" nodes such as SQL Server. 
 * **Non-folded nodes** - Any other node that doesn't have Value.NativeQuery or the name of a particular "data source".
@@ -101,7 +98,6 @@ Note that the query shown here might not be the exact same query sent to the dat
 >Note that the operators might not exactly match the functions used in the query's script.
 
 ### Review non-folded nodes and consider actions to take and make your transform fold
-
 You've been able to determine which nodes couldn't be folded and would be evaluated locally. This case only has the Table.LastN node, but in other scenarios it could have many more.
 
 The goal is to apply changes to your query so that the step can be folded. Some of the changes that you could implement could range from rearranging your steps to applying an alternate logic to your query that is more explicit to the data source. This doesn't mean that all queries and all operations are foldable by applying some changes, but it's a good practice to determine via trial and error if your query could be folded back.
@@ -111,7 +107,6 @@ Since the data source is a SQL Server database, if the goal is to retrieve the l
 2. **Select the top five rows** - since the table has been sorted, this transform will accomplish the same as if it was a *Kept bottom rows* (Table.LastN).  
 
 This alternative is equivalent to the original query. While this in theory seems like a good alternative, you need to make the changes in order to see if this will make this fully fold back to the data source.
-
 ## 3. Implement changes to your query
 Implement the alternative discussed in the previous section:
 * Close the query plan dialog and go back to the Power Query Editor. 
