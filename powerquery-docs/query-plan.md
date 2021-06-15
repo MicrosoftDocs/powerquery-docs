@@ -14,7 +14,7 @@ localizationgroup: reference
 
 # Query plan for Power Query (Preview)
 
-Query plan for Power Query is a feature that focuses in providing you a better view as to how your query might get evaluated. It's main use case is for when you want to review why a particular query might not fold at a particular step.
+Query plan for Power Query is a feature that provides a better view on your query's evaluation. It's particularly useful tto help determine why a particular query might not fold at a particular step.
 
 Through a practical example, this article will demonstrate the main use case and potential benefits of using the query plan feature to review your query steps. The examples used in this article have been created using the AdventureWorksLT sample database for Azure SQL Server, which you can download from the [official documentation here](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-ver15&tabs=ssms).
 
@@ -30,9 +30,9 @@ This article has been divided in a series of recommended steps in order to inter
 4. Review non-folded nodes and consider actions to improve
 5. Implement changes to your query
 
-In order to follow this example, follow the following steps to load this query in your own Power Query Online environment:
+Follow these steps to create the query in your own Power Query Online environment.
 1. Open your Power Query Online experience.
-2. Create a new blank query and replace the code from the blank query with the code shown below.
+2. Create a new blank query and replace the query's script with the one below.
 ```
 let
   Source = Sql.Database("servername", "database"),
@@ -54,10 +54,10 @@ After following these steps, your query will look exactly like the one shown in 
 
 ![Sample query with step folding indicators enabled](media/query-plan/sample-query.png)
 
-As a brief description of what this query is trying to accomplish, it connects to the SalesOrderHeader table to get only a few columns and only the last five orders with a **TotalDue** value above 1000.
+This query connect to the SalesOrderHeader table, selects a few columns from the last five orders with a **TotalDue** value above 1000.
 
 >[!NOTE]
->This article uses a simplified example to showcase this feature, but please bare in mind the concepts described in this article apply to all queries. It is recommended that you have a good knowledge of query folding before reading the query plan. You can learn more about query folding from the article [Query folding basics](query-folding-basics.md). 
+>This article uses a simplified example to showcase this feature, but please bear in mind the concepts described in this article apply to all queries. It is recommended that you have a good knowledge of query folding before reading the query plan. You can learn more about query folding from the article [Query folding basics](query-folding-basics.md). 
 
 ## 1. Review the step folding indicators
 
@@ -68,16 +68,19 @@ Your first step in this process is to review your query and pay close attention 
 
 ![Step folding indicators for the sample query inside the Applied steps pane](media/query-plan/step-folding-indicators-sample.png)
 
-For this example, the step named **Kept bottom rows** is the only step that has an indicator that it cannot be folded and at the same time is the output of the query.
+For this example, the only step that cannot be folded is **Kept bottom rows**, which is easy to identify through the *not folded* step indicator. This step is also the last step of the query.
 
 The goal now is to review this step and understand what's being folded back to the data source and what can't be folded.
 
 ## 2. Select the query step to check its query plan
-You've identified the **Kept bottom rows** step as a step of interest since that step doesn't fold back to the data source. Right-click the step and select the option that reads **View Query plan**. This action will display a new dialogue where you'll see a diagram for the query plan of the selected step.
+You've identified the **Kept bottom rows** step as a step of interest since it doesn't fold back to the data source. Right-click the step and select the option that reads **View Query plan**. This action will display a new dialog where you'll see a diagram for the query plan of the selected step.
 
-![Query plan dialogue that showcases a diagram view for the query plan with nodes connected by lines](media/query-plan/query-plan-diagram-sample-query.png)
+![Query plan dialog that showcases a diagram view for the query plan with nodes connected by lines](media/query-plan/query-plan-diagram-sample-query.png)
 
-Power Query tries to optimize your query by taking advantage of lazy evaluation and query folding as mentioned in the article on [Query folding basics](query-folding-basics.md). This Query plan represents the optimized translation of your M query into the native query that will be sent to the data source and any transforms that will be performed locally.  
+Power Query tries to optimize your query by taking advantage of lazy evaluation and query folding as mentioned in the article on [Query folding basics](query-folding-basics.md). This query plan represents the optimized translation of your M query into the native query that will be sent to the data source and any transforms that will be performed locally.  
+
+>[!NOTE]
+>It's important to note that the query plan represents the optimized plan. When the engine is evaluating a query it will try to fold all operators into a data source. In some cases, it might even do some internal reordering of the steps to maximize folding. With this in mind, the nodes/operators left in this optimized query plan will typically contain the "folded" data source query and any operators that could not be folded and will be evaluated locally.
 
 ## 3. Identify folded nodes from other nodes
 
@@ -85,23 +88,23 @@ You can identify the nodes in this diagram into two groups:
 * **Folded nodes** -  This can be either "Value.NativeQuery" or "data source" nodes such as SQL Server. 
 * **Non-folded nodes** - Any other node that doesn't have Value.NativeQuery or the name of a particular "data source".
 
-In the image below you'll see the folded nodes inside the red rectangle and the rest of the nodes outside of it are nodes that do not fold back to the data source and you need to review those as the goal is to attempt to have those fold back to the data source.
+In the image below you'll see the folded nodes inside the red rectangle. The rest are nodes that could not be folded back to the data source. You'll need to review these nodes since the goal is to attempt to have those fold back to the data source.
 
 ![Query plan highlighting two of the folded nodes with a red rectangle](media/query-plan/query-plan-folded-nodes.png)
 
-Furthermore, you can click the *View details* text at the bottom of some nodes in order to see more metadata about each those. For example, the details of the Value.NativeQuery show the native query (in SQL) that will be sent to the data source.
+You can click the *View details* text at the bottom of some nodes to display extended information. For example, the details of the Value.NativeQuery node show the native query (in SQL) that will be sent to the data source.
 
 
 ![Details view for the Value.NativeQuery node in the query plan](media/query-plan/query-plan-view-details.png)
 
-That is effectively the query that Power Query sends to the data source and then the following node called [Table.LastN](https://docs.microsoft.com/powerquery-m/table-lastn) is calculated locally by the Power Query engine as it can't be folded.
+Note that the query shown here might not be the exact same query sent to the data source, but it's a good approximation. The node next to it,  [Table.LastN](https://docs.microsoft.com/powerquery-m/table-lastn) is calculated locally by the Power Query engine as it can't be folded.
 
 >[!NOTE]
->In most cases, the non-folded node will have the name of the Power Query M function that will be executed locally.
+>Note that the operators might not exactly match the functions used in the query's script.
 
 ## 4. Review non-folded nodes and consider actions to improve
 
-You've been able to determine what are the nodes that couldn't be folded and would be evaluated locally. This case only has the Table.LastN node, but in other scenarios it could have many more.
+You've been able to determine which nodes couldn't be folded and would be evaluated locally. This case only has the Table.LastN node, but in other scenarios it could have many more.
 
 The goal is to apply changes to your query so that the step can be folded. Some of the changes that you could implement could range from rearranging your steps to applying an alternate logic to your query that is more explicit to the data source. This doesn't mean that all queries and all operations are foldable by applying some changes, but it's a good practice to determine via trial and error if your query could be folded back.
 
@@ -122,14 +125,14 @@ Implement the alternative discussed in the previous section:
 
 ![Using the table context menu to select the Keep top rows transform to keep only the top five rows](media/query-plan/keep-top-rows.png)
 
-After implementing the changes, check again the step folding indicators and see if it is giving you a positive outcome.
+After implementing the changes, check again the step folding indicators and see if it is giving you a folded indicator.
 
 ![All step folding indicators are green and showing that they can be folded. The final table provides the same rows but in a different order](media/query-plan/alternative-approach.png)
 
-Now it is time to review the query plan of the last step that is now the **Keep top rows**. Note how now there are only folded nodes. Click the view details of the Value.NativeQuery to check what is the query being sent to the database.
+Now it is time to review the query plan of the last step that is now the **Keep top rows**. Note how now there are only folded nodes. Click the view details of the Value.NativeQuery to verify which query is being sent to the database.
 
 ![New query plan after making the changes to the query which now showcases only folded nodes with the Value.NativeQuery showing the full SQL statement that evaluates the query](media/query-plan/alternative-query-plan.png)
 
-While this time this article is the one telling you what alternatives to apply, the main objective of Query folding is to give you the visibility of what's being sent to your data source and what transforms will be done locally. 
+While the article is suggesting what alternative to apply, the main objective is for you to learn how to use the query plan to investigate query folding, and provide visibility of what's being sent to your data source and what transforms will be done locally. 
 
-You can tweak your code to see the impact that it has in your query and, using the step folding indicators, have a better idea of what steps are preventing your query from folding.
+You can tweak your code to see the impact that it has in your query and, using the step folding indicators, have a better idea ofof which steps are preventing your query from folding.
