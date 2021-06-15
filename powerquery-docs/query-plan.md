@@ -21,7 +21,7 @@ Through a practical example, this article will demonstrate the main use case and
 >[!NOTE]
 >The query plan feature for Power Query is only available inside the Power Query Online experience.
 
-<flow diagram>
+![Suggested process to use the query plan feature in Power Query by reviewing the step folding indicators, then review the query plan for a selected step and finally implement any changes derived from reviewing the query plan](media/query-plan/query-plan-flow.png)
 
 This article has been divided in a series of recommended steps in order to interpret the query plan. These steps are:
 1. Review the step folding indicators
