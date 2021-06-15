@@ -25,10 +25,8 @@ Through a practical example, this article will demonstrate the main use case and
 
 This article has been divided in a series of recommended steps in order to interpret the query plan. These steps are:
 1. Review the step folding indicators
-2. Select the query step to check its query plan
-3. Identify folded nodes from other nodes
-4. Review non-folded nodes and consider actions to improve
-5. Implement changes to your query
+2. Select the query step to review its query plan
+3. Implement changes to your query
 
 Follow these steps to create the query in your own Power Query Online environment.
 1. Open your Power Query Online experience.
@@ -72,7 +70,7 @@ For this example, the only step that cannot be folded is **Kept bottom rows**, w
 
 The goal now is to review this step and understand what's being folded back to the data source and what can't be folded.
 
-## 2. Select the query step to check its query plan
+## 2. Select the query step to review its query plan
 You've identified the **Kept bottom rows** step as a step of interest since it doesn't fold back to the data source. Right-click the step and select the option that reads **View Query plan**. This action will display a new dialog where you'll see a diagram for the query plan of the selected step.
 
 ![Query plan dialog that showcases a diagram view for the query plan with nodes connected by lines](media/query-plan/query-plan-diagram-sample-query.png)
@@ -82,7 +80,7 @@ Power Query tries to optimize your query by taking advantage of lazy evaluation 
 >[!NOTE]
 >It's important to note that the query plan represents the optimized plan. When the engine is evaluating a query it will try to fold all operators into a data source. In some cases, it might even do some internal reordering of the steps to maximize folding. With this in mind, the nodes/operators left in this optimized query plan will typically contain the "folded" data source query and any operators that could not be folded and will be evaluated locally.
 
-## 3. Identify folded nodes from other nodes
+### Identify folded nodes from other nodes
 
 You can identify the nodes in this diagram into two groups:
 * **Folded nodes** -  This can be either "Value.NativeQuery" or "data source" nodes such as SQL Server. 
@@ -102,7 +100,7 @@ Note that the query shown here might not be the exact same query sent to the dat
 >[!NOTE]
 >Note that the operators might not exactly match the functions used in the query's script.
 
-## 4. Review non-folded nodes and consider actions to improve
+### Review non-folded nodes and consider actions to take and make your transform fold
 
 You've been able to determine which nodes couldn't be folded and would be evaluated locally. This case only has the Table.LastN node, but in other scenarios it could have many more.
 
@@ -114,7 +112,7 @@ Since the data source is a SQL Server database, if the goal is to retrieve the l
 
 This alternative is equivalent to the original query. While this in theory seems like a good alternative, you need to make the changes in order to see if this will make this fully fold back to the data source.
 
-## 5. Implement changes to your query
+## 3. Implement changes to your query
 Implement the alternative discussed in the previous section:
 * Close the query plan dialog and go back to the Power Query Editor. 
 * Remove the Kept bottom rows step.
