@@ -24,9 +24,9 @@ Through a practical example, this article will demonstrate the main use case and
 ![Suggested process to use the query plan feature in Power Query by reviewing the step folding indicators, then review the query plan for a selected step and finally implement any changes derived from reviewing the query plan](media/query-plan/query-plan-flow.png)
 
 This article has been divided in a series of recommended steps in order to interpret the query plan. These steps are:
-1. [Review the step folding indicators](#1.-Review-the-step-folding-indicators)
-2. [Select the query step to review its query plan](#2.-Select-the-query-step-to-review-its-query-plan)
-3. [Implement changes to your query](#3.-Implement-changes-to-your-query)
+1. [Review the step folding indicators](#1-review-the-step-folding-indicators)
+2. [Select the query step to review its query plan](#2-select-the-query-step-to-review-its-query-plan)
+3. [Implement changes to your query](#3-implement-changes-to-your-query)
 
 Follow these steps to create the query in your own Power Query Online environment.
 1. Open your Power Query Online experience.
