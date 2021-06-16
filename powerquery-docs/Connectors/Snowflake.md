@@ -62,7 +62,7 @@ To make the connection to a **Snowflake** computing warehouse, take the followin
    > [!NOTE]
    > Once you enter your username and password for a particular **Snowflake** server, Power BI Desktop uses those same credentials in subsequent connection attempts. You can modify those credentials by going to **File > Options and settings > Data source settings**. More information: [Change the authentication method](../ConnectorAuthentication.md#change-the-authentication-method)
 
-   If you want to use the Microsoft account option, the Snowflake AAD integration must be configured on the Snowflake side. To do this, go to the Getting Started section of the [Snowflake documentation on the topic](https://docs.snowflake.net/manuals/user-guide/oauth-powerbi.html#power-bi-sso-to-snowflake).
+   If you want to use the Microsoft account option, the Snowflake AAD integration must be configured on the Snowflake side. For more information: [Power BI SSO to Snowflake - Getting Started](https://docs.snowflake.com/en/user-guide/oauth-powerbi.html#getting-started)
 
 7. In **Navigator** select one or multiple elements to import and use in Power BI Desktop. Then select either **Load** to load the table in Power BI Desktop, or **Edit** to open the Power Query Editor where you can filter and refine the set of data you want to use, and then load that refined set of data into Power BI Desktop.
 
@@ -76,7 +76,7 @@ To make the connection, take the following steps:
 
    ![Snowflake connection builder in Power Query Online](./media/Snowflake/snowflake-pqo-advanced.png)
 
-3. Enter any values in the advanced options you want to use. If there are any advanced options not represented in the UI, you can edit them in **Advanced Options** later.
+3. Enter any values in the advanced options you want to use. If there are any advanced options not represented in the UI, you can edit them in the **Advanced Editor** in Power Query later.
 
 4. Enter your connection credentials, including selecting or creating a new connection, which gateway you would like to use, and a username and password (only the Basic authentication kind is supported in Power Query Online).
 
@@ -102,4 +102,4 @@ Once you've selected the advanced options you require, select **OK** in Power Qu
 
 ## Additional information
 
-- [Connect to Snowflake in Power BI Service](/power-bi/connect-data/service-connect-snowflake)"
+- [Connect to Snowflake in Power BI Service](/power-bi/connect-data/service-connect-snowflake)
