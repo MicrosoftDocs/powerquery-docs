@@ -23,7 +23,7 @@ LocalizationGroup: reference
 
 > [!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
-> 
+
 ## Capabilities Supported
 
 - Import
@@ -48,7 +48,7 @@ To make the connection to a **Snowflake** computing warehouse, take the followin
 
 3. Optionally, enter values in any advanced options that you want to use to modify the connection query, such as a text value to use as a Role name or a command timeout. More information: [Connect using advanced options](#connect-using-advanced-options)
 
-4. Select **Import** to import data directly into Power BI, or select **DirectQuery**. More information: [Use DirectQuery in Power BI Desktop](https://docs.microsoft.com/power-bi/connect-data/desktop-use-directquery)
+4. Select **Import** to import data directly into Power BI, or select **DirectQuery**. More information: [Use DirectQuery in Power BI Desktop](/power-bi/connect-data/desktop-use-directquery)
 
    >[!Note]
    >Azure Active Directory (Azure AD) Single Sign-On (SSO) only supports DirectQuery.
@@ -102,4 +102,4 @@ Once you've selected the advanced options you require, select **OK** in Power Qu
 
 ## Additional information
 
-- [Connect to Snowflake in Power BI Service](https://docs.microsoft.com/power-bi/connect-data/service-connect-snowflake)"
+- [Connect to Snowflake in Power BI Service](/power-bi/connect-data/service-connect-snowflake)"
