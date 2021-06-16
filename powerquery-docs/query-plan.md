@@ -14,7 +14,7 @@ localizationgroup: reference
 
 # Query plan for Power Query (Preview)
 
-Query plan for Power Query is a feature that provides a better view on your query's evaluation. It's particularly useful tto help determine why a particular query might not fold at a particular step.
+Query plan for Power Query is a feature that provides a better view on your query's evaluation. It's particularly useful to help determine why a particular query might not fold at a particular step.
 
 Through a practical example, this article will demonstrate the main use case and potential benefits of using the query plan feature to review your query steps. The examples used in this article have been created using the AdventureWorksLT sample database for Azure SQL Server, which you can download from the [official documentation here](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-ver15&tabs=ssms).
 
@@ -52,7 +52,7 @@ After following these steps, your query will look exactly like the one shown in 
 
 ![Sample query with step folding indicators enabled](media/query-plan/sample-query.png)
 
-This query connect to the SalesOrderHeader table, selects a few columns from the last five orders with a **TotalDue** value above 1000.
+This query connects to the SalesOrderHeader table, selects a few columns from the last five orders with a **TotalDue** value above 1000.
 
 >[!NOTE]
 >This article uses a simplified example to showcase this feature, but please bear in mind the concepts described in this article apply to all queries. It is recommended that you have a good knowledge of query folding before reading the query plan. You can learn more about query folding from the article [Query folding basics](query-folding-basics.md). 
@@ -62,7 +62,7 @@ This query connect to the SalesOrderHeader table, selects a few columns from the
 
 Your first step in this process is to review your query and pay close attention to the step folding indicators. The goal is to review the steps that are marked as not folded and see if making changes to the overall query could make those transformations fold completely.
 
-[![Step folding indicators for the sample query inside the Applied steps pane](media/query-plan/step-folding-indicators-sample.png) ](media/query-plan/step-folding-indicators-sample.png)
+[ ![Step folding indicators for the sample query inside the Applied steps pane](media/query-plan/step-folding-indicators-sample.png) ](media/query-plan/step-folding-indicators-sample.png)
 
 For this example, the only step that cannot be folded is **Kept bottom rows**, which is easy to identify through the *not folded* step indicator. This step is also the last step of the query.
 
@@ -102,7 +102,7 @@ You've been able to determine which nodes couldn't be folded and would be evalua
 
 The goal is to apply changes to your query so that the step can be folded. Some of the changes that you could implement could range from rearranging your steps to applying an alternate logic to your query that is more explicit to the data source. This doesn't mean that all queries and all operations are foldable by applying some changes, but it's a good practice to determine via trial and error if your query could be folded back.
 
-Since the data source is a SQL Server database, if the goal is to retrieve the last five orders from the table, then a viable alternative would be to take advantage of the [TOP](https://docs.microsoft.com/sql/t-sql/queries/top-transact-sql?view=sql-server-ver15) and [ORDER BY](https://docs.microsoft.com/sql/t-sql/queries/select-order-by-clause-transact-sql?view=sql-server-ver15) clauses in SQL. Since there is no BOTTOM clause in SQL, there is not a way to translate the Power Query transform into SQL. You could remove the Table.LastN step and replace it with:
+Since the data source is a SQL Server database, if the goal is to retrieve the last five orders from the table, then a viable alternative would be to take advantage of the [TOP](https://docs.microsoft.com/sql/t-sql/queries/top-transact-sql?view=sql-server-ver15) and [ORDER BY](https://docs.microsoft.com/sql/t-sql/queries/select-order-by-clause-transact-sql?view=sql-server-ver15) clauses in SQL. Since there is no BOTTOM clause in SQL, the Table.LastN transform in PowerQuery cannot be translated into SQL. You could remove the Table.LastN step and replace it with:
 1. **A sort descending step** - by the SalesOrderID column from the table since this column determines which order goes first and which has been entered last.
 2. **Select the top five rows** - since the table has been sorted, this transform will accomplish the same as if it was a *Kept bottom rows* (Table.LastN).  
 
