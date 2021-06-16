@@ -34,7 +34,7 @@ Follow these steps to create the query in your own Power Query Online environmen
 ```
 let
   Source = Sql.Database("servername", "database"),
-  Navigation = Source{[Schema = "SalesLT", Item = "SalesOrderHeader"]}[Data],
+  Navigation = Source{[Schema = "Sales", Item = "SalesOrderHeader"]}[Data],
   #"Removed other columns" = Table.SelectColumns(Navigation, {"SalesOrderID", "OrderDate", "SalesOrderNumber", "PurchaseOrderNumber", "AccountNumber", "CustomerID", "TotalDue"}),
   #"Filtered rows" = Table.SelectRows(#"Removed other columns", each [TotalDue] > 1000),
   #"Kept bottom rows" = Table.LastN(#"Filtered rows", 5)
