@@ -60,7 +60,7 @@ To make the connection to a **Snowflake** computing warehouse, take the followin
    ![Screenshot of the Snowflake credential prompt, showing the Username and Password fields.](./media/Snowflake/snowflake-authentication.png)
 
    > [!NOTE]
-   > Once you enter your username and password for a particular **Snowflake** server, Power BI Desktop uses those same credentials in subsequent connection attempts. You can modify those credentials by going to **File > Options and settings > Data source settings**. More information: [Change the authentication method](../ConnectorAuthentication#change-the-authentication-method)
+   > Once you enter your username and password for a particular **Snowflake** server, Power BI Desktop uses those same credentials in subsequent connection attempts. You can modify those credentials by going to **File > Options and settings > Data source settings**. More information: [Change the authentication method](../ConnectorAuthentication.md#change-the-authentication-method)
 
    If you want to use the Microsoft account option, the Snowflake AAD integration must be configured on the Snowflake side. To do this, go to the Getting Started section of the [Snowflake documentation on the topic](https://docs.snowflake.net/manuals/user-guide/oauth-powerbi.html#power-bi-sso-to-snowflake).
 
