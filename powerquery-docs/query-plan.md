@@ -24,9 +24,9 @@ Through a practical example, this article will demonstrate the main use case and
 ![Suggested process to use the query plan feature in Power Query by reviewing the step folding indicators, then review the query plan for a selected step and finally implement any changes derived from reviewing the query plan](media/query-plan/query-plan-flow.png)
 
 This article has been divided in a series of recommended steps in order to interpret the query plan. These steps are:
-1. Review the step folding indicators
-2. Select the query step to review its query plan
-3. Implement changes to your query
+1. [Review the step folding indicators](#1.-Review-the-step-folding-indicators)
+2. [Select the query step to review its query plan](#2.-Select-the-query-step-to-review-its-query-plan)
+3. [Implement changes to your query](#3.-Implement-changes-to-your-query)
 
 Follow these steps to create the query in your own Power Query Online environment.
 1. Open your Power Query Online experience.
@@ -43,7 +43,7 @@ in
 ```
 3. Before hitting next, be sure to change the "servername" and "database" with the correct names for your own environment
 4. *(Optional)* If you are trying to connect to a server and database for an on-premises environment, be sure to configure a gateway for it.
-5. Provide the credentials to your data source by clicking the yellow ribbon.
+5. Provide the credentials to your data source by clicking on the configure connection ribbon.
 
 >[!NOTE]
 >For more information about the SQL Server connector, you can read the article on conecting to a [SQL Server database](connectors/sqlserver.md). 
@@ -60,7 +60,7 @@ This query connect to the SalesOrderHeader table, selects a few columns from the
 >[!NOTE]
 >Before reading this section, it is recommended that you review the article on [Step Folding Indicators](step-folding-indicators.md).
 
-Your first step in this process is to review your query and pay close attention to the step folding indicators. The goal is to review the steps that are made as not folded and see if making changes to the overall query could make those transformations fold completely.
+Your first step in this process is to review your query and pay close attention to the step folding indicators. The goal is to review the steps that are marked as not folded and see if making changes to the overall query could make those transformations fold completely.
 
 ![Step folding indicators for the sample query inside the Applied steps pane](media/query-plan/step-folding-indicators-sample.png)
 
@@ -80,8 +80,8 @@ Power Query tries to optimize your query by taking advantage of lazy evaluation 
 
 ### Identify folded nodes from other nodes
 You can identify the nodes in this diagram into two groups:
-* **Folded nodes** -  This can be either "Value.NativeQuery" or "data source" nodes such as SQL Server. 
-* **Non-folded nodes** - Any other node that doesn't have Value.NativeQuery or the name of a particular "data source".
+* **Folded nodes** -  This can be either "Value.NativeQuery" or "data source" nodes such as Sql.Database. 
+* **Non-folded nodes** - Other table operators, such as Table.SelectRows, Table.SelectColumns, and other functions that couldn't be folded.
 
 In the image below you'll see the folded nodes inside the red rectangle. The rest are nodes that could not be folded back to the data source. You'll need to review these nodes since the goal is to attempt to have those fold back to the data source.
 
