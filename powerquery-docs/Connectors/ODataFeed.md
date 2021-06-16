@@ -30,7 +30,7 @@ LocalizationGroup: reference
 * Select related tables
 
 >[!Note]
-> Microsoft Graph is not currently supported by the OData Feed function.
+> Microsoft Graph is not supported. More information: [Lack of Support for Microsoft Graph in Power Query](../connecting-to-graph.md)
 
 ## Load data from an OData Feed in Power Query Desktop
 
