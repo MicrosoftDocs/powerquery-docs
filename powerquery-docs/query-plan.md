@@ -62,7 +62,7 @@ This query connects to the SalesOrderHeader table, selects a few columns from th
 
 Your first step in this process is to review your query and pay close attention to the step folding indicators. The goal is to review the steps that are marked as not folded and see if making changes to the overall query could make those transformations fold completely.
 
-[ ![Step folding indicators for the sample query inside the Applied steps pane](media/query-plan/step-folding-indicators-sample.png) ](media/query-plan/step-folding-indicators-sample.png)
+[ ![Step folding indicators for the sample query inside the Applied steps pane](media/query-plan/step-folding-indicators-sample.png) ](media/query-plan/step-folding-indicators-sample.png#lightbox)
 
 For this example, the only step that cannot be folded is **Kept bottom rows**, which is easy to identify through the *not folded* step indicator. This step is also the last step of the query.
 
