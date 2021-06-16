@@ -14,7 +14,7 @@ localizationgroup: reference
 
 # Query plan for Power Query (Preview)
 
-Query plan for Power Query is a feature that provides a better view on your query's evaluation. It's particularly useful to help determine why a particular query might not fold at a particular step.
+Query plan for Power Query is a feature that provides a better view on your query's evaluation. It's useful to help determine why a particular query might not fold at a particular step.
 
 Through a practical example, this article will demonstrate the main use case and potential benefits of using the query plan feature to review your query steps. The examples used in this article have been created using the AdventureWorksLT sample database for Azure SQL Server, which you can download from the [official documentation here](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-ver15&tabs=ssms).
 
@@ -92,7 +92,7 @@ You can click the *View details* text at the bottom of some nodes to display ext
 
 ![Details view for the Value.NativeQuery node in the query plan](media/query-plan/query-plan-view-details.png)
 
-Note that the query shown here might not be the exact same query sent to the data source, but it's a good approximation. The node next to it,  [Table.LastN](https://docs.microsoft.com/powerquery-m/table-lastn) is calculated locally by the Power Query engine as it can't be folded.
+The query shown here might not be the exact same query sent to the data source, but it's a good approximation. The node next to it,  [Table.LastN](https://docs.microsoft.com/powerquery-m/table-lastn) is calculated locally by the Power Query engine as it can't be folded.
 
 >[!NOTE]
 >Note that the operators might not exactly match the functions used in the query's script.
@@ -128,4 +128,4 @@ Now it is time to review the query plan of the last step that is now the **Keep 
 
 While the article is suggesting what alternative to apply, the main objective is for you to learn how to use the query plan to investigate query folding, and provide visibility of what's being sent to your data source and what transforms will be done locally. 
 
-You can tweak your code to see the impact that it has in your query and, using the step folding indicators, have a better idea ofof which steps are preventing your query from folding.
+You can tweak your code to see the impact that it has in your query and, using the step folding indicators, have a better idea of which steps are preventing your query from folding.
