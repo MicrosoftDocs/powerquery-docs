@@ -18,7 +18,7 @@ LocalizationGroup: reference
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication Types Supported | Database (Username/Password) |
-| Function Reference Documentation | [PostgreSQL.Database](https://docs.microsoft.com/powerquery-m/postgresql-database) |
+| Function Reference Documentation | [PostgreSQL.Database](/powerquery-m/postgresql-database) |
 | | |
 
 > [!Note]
@@ -67,7 +67,7 @@ Once the matching Npgsql provider is installed, you can connect to a PostgreSQL 
 
    ![Azure SQL database encryption support](../images/EncryptionWarning.png)
 
-   Select **OK** to connect to the database by using an unencrypted connection, or follow the instructions in [Enable encrypted connections to the Database Engine](https://docs.microsoft.com/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine) to set up encrypted connections to PostgreSQL database.
+   Select **OK** to connect to the database by using an unencrypted connection, or follow the instructions in [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine) to set up encrypted connections to PostgreSQL database.
 
 5. In **Navigator**, select the database information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
 
@@ -112,14 +112,15 @@ The following table lists all of the advanced options you can set in Power Query
 
 Once you've selected the advanced options you require, select **OK** in Power Query Desktop to connect to your PostgreSQL database.
 
-## Native Query Folding
+## Native query folding
 
-To enable Native Query Folding, set the `EnableFolding` flag to `true` for [Value.NativeQuery()](https://docs.microsoft.com/powerquery-m/value-nativequery) in the advanced editor.
+By default, native query folding is enabled. Operations that are capable of folding will be applied on top of your native query according to normal Import or Direct Query logic. Native Query folding isn't applicable with optional parameters present in [Value.NativeQuery()](/powerquery-m/value-nativequery).
+
+In the rare case that folding doesn't work with native query folding enabled, you can disable it. To disable native query folding, set the `EnableFolding` flag to `false` for [Value.NativeQuery()](/powerquery-m/value-nativequery) in the advanced editor.
 
 Sample:
-`Value.NativeQuery(target as any, query, null, [EnableFolding=true])`
+`Value.NativeQuery(target as any, query, null, [EnableFolding=false])`
 
-Operations that are capable of folding will be applied on top of your native query according to normal Import or Direct Query logic. Native Query folding isn't applicable with optional parameters present in [Value.NativeQuery()](https://docs.microsoft.com/powerquery-m/value-nativequery).
 
 ## Troubleshooting
 
@@ -127,6 +128,6 @@ Your native query may throw the following error:
 
 `We cannot fold on top of this native query. Please modify the native query or remove the 'EnableFolding' option.`
 
-A basic trouble shooting step is to check if the query in [Value.NativeQuery()](https://docs.microsoft.com/powerquery-m/value-nativequery) throws the same error with a `limit 1` clause around it:
+A basic trouble shooting step is to check if the query in [Value.NativeQuery()](/powerquery-m/value-nativequery) throws the same error with a `limit 1` clause around it:
 
 `select * from (query) _ limit 1`

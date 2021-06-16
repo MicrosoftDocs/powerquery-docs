@@ -26,17 +26,17 @@ You can use this dashboard to monitor your dataflows' refresh duration and failu
 
 ## Prerequisites
 
-* A [Power BI Pro Licence](https://docs.microsoft.com/power-bi/admin/service-admin-purchasing-power-bi-pro).
+* A [Power BI Pro Licence](/power-bi/admin/service-admin-purchasing-power-bi-pro).
 
-* A [Premium Power Automate Licence](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus).
+* A [Premium Power Automate Licence](/power-platform/admin/pricing-billing-skus).
 
-* A [Power BI dataflow](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service) or [Power Platform dataflow](https://docs.microsoft.com/powerapps/maker/common-data-service/create-and-use-dataflows).
+* A [Power BI dataflow](/power-bi/transform-model/dataflows/dataflows-introduction-self-service) or [Power Platform dataflow](/powerapps/maker/common-data-service/create-and-use-dataflows).
 
 ## Create a new streaming dataset in Power BI
 
 * Navigate to [Power BI](https://powerbi.microsoft.com).
 
-* Follow these [instructions](https://docs.microsoft.com/power-bi/connect-data/service-real-time-streaming#set-up-your-real-time-streaming-dataset-in-power-bi) to create a new streaming dataset in Power BI. Ensure you create a streaming dataset based on the API and add the historical data opt in.
+* Follow these [instructions](/power-bi/connect-data/service-real-time-streaming#set-up-your-real-time-streaming-dataset-in-power-bi) to create a new streaming dataset in Power BI. Ensure you create a streaming dataset based on the API and add the historical data opt in.
 
 In the right pane, enter the following values, and then select Create.
    * **Dataset Name**: "Dataflow Monitoring".
@@ -51,12 +51,12 @@ In the right pane, enter the following values, and then select Create.
 
 ## Create a dataflow
 
-If you do not already have one, create a dataflow. This can be done in either [Power BI dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service) or [Power Apps dataflows](https://docs.microsoft.com/powerapps/maker/common-data-service/create-and-use-dataflows).
+If you do not already have one, create a dataflow. This can be done in either [Power BI dataflows](/power-bi/transform-model/dataflows/dataflows-introduction-self-service) or [Power Apps dataflows](/powerapps/maker/common-data-service/create-and-use-dataflows).
 
 ## Create a Flow in Power Automate
 
 * Navigate to [Power Automate](https://flow.microsoft.com),
-* Search for the template "When a dataflow refresh completes, output status into Power BI Streaming Dataset". If you encounter difficulty, see these [instructions](https://docs.microsoft.com/power-automate/get-started-logic-template).
+* Search for the template "When a dataflow refresh completes, output status into Power BI Streaming Dataset". If you encounter difficulty, see these [instructions](/power-automate/get-started-logic-template).
 
 ![example of streaming dataset template](media/streamingconnector.PNG)
 

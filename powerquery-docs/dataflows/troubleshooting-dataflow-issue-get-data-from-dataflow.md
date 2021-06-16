@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting dataflow issue - get data from dataflow
-description: Troubleshooting dataflow issue - get data from dataflow
+description: Troubleshooting dataflow issue - get data from dataflow.
 author: radacad
 
 ms.service: powerquery
@@ -31,17 +31,17 @@ In the desktop tools, such as Power Query in Excel and Power Query in Power BI D
 
 You have to set up a scheduled refresh for a dataflow, or&mdash;if you want to just have a single refresh&mdash;use the manual refresh option.
 
-![Refresh a dataflow](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-create-use/dataflows-create-use_13.png)
+![Refresh a dataflow](/power-bi/transform-model/media/service-dataflows-create-use/dataflows-create-use_13.png)
 
-![Schedule refresh for dataflows](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-create-use/dataflows-create-use_14.png)
+![Schedule refresh for dataflows](/power-bi/transform-model/media/service-dataflows-create-use/dataflows-create-use_14.png)
 
 After a dataflow is refreshed, the data in entities will be visible in the **Navigator** window of other tools and services.
 
-More information: [Refreshing a dataflow in Power BI](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-configure-consume#refreshing-a-dataflow) and [Set the refresh frequency in Power Apps](https://docs.microsoft.com/powerapps/maker/common-data-service/create-and-use-dataflows#set-the-refresh-frequency)
+More information: [Refreshing a dataflow in Power BI](/power-bi/transform-model/dataflows/dataflows-configure-consume#refreshing-a-dataflow) and [Set the refresh frequency in Power Apps](/powerapps/maker/common-data-service/create-and-use-dataflows#set-the-refresh-frequency)
 
-## My Power Platform dataflow isn't listed
+## My Microsoft Power Platform dataflow isn't listed
 
-Sometimes, you have a Power Platform dataflow you created and also refreshed, but you still can't access it through the **Get data** command. This might be because the account that's trying to access the dataflow doesn't have access. However, if the account does have access to the dataflow, another reason might be the type of dataflow you're accessing.
+Sometimes, you have a Microsoft Power Platform dataflow you created and also refreshed, but you still can't access it through the **Get data** command. This might be because the account that's trying to access the dataflow doesn't have access. However, if the account does have access to the dataflow, another reason might be the type of dataflow you're accessing.
 
 You might receive the error message "We reached the end of the buffer" or "DataFormat.Error: We reached the end of the buffer".
 
@@ -53,7 +53,7 @@ Only analytical dataflows can be used in a **Get data** operation from a dataflo
 
 **Resolution:**
 
-If you've created a dataflow that stores data in Dataverse&mdash;that is, a standard dataflow&mdash;you can't see it by using the **Get data** operation from a dataflow. However, you can use [**Get data** from Common Data Service](../connectors/commondataservice.md#finding-your-common-data-service-environment-url) to access it. Or you can create an [analytical dataflow](understanding-differences-between-analytical-standard-dataflows.md) instead, and then access it by using **Get data** from a dataflow.
+If you've created a dataflow that stores data in Dataverse&mdash;that is, a standard dataflow&mdash;you can't see it by using the **Get data** operation from a dataflow. However, you can use [**Get data** from Datverse](../connectors/dataverse.md#finding-your-dataverse-environment-url) to access it. Or you can create an [analytical dataflow](understanding-differences-between-analytical-standard-dataflows.md) instead, and then access it by using **Get data** from a dataflow.
 
 ![Get data from standard dataflow versus analytical dataflows](media/GetDataStandardAnalyticalDataflow.png)
 
@@ -67,6 +67,6 @@ The enhanced compute engine settings are disabled.
 
 **Resolution:**
 
-[Enable the enhanced compute engine](https://docs.microsoft.com/power-bi/transform-model/service-dataflows-directquery), and then you'll have the option to connect to the dataflow by using DirectQuery.
+[Enable the enhanced compute engine](/power-bi/transform-model/service-dataflows-directquery), and then you'll have the option to connect to the dataflow by using DirectQuery.
 
-![Enable the enhanced compute engine](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-directquery/dataflows-directquery-01.png)
+![Enable the enhanced compute engine](/power-bi/transform-model/media/service-dataflows-directquery/dataflows-directquery-01.png)

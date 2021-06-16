@@ -1,5 +1,5 @@
 ---
-title: Using cCustom functions
+title: Using custom functions in Power Query
 description: An article on how to create custom functions in Power Query
 author: ptyx507
 ms.service: powerquery
@@ -11,14 +11,17 @@ ms.author: v-miesco
 
 If you find yourself in a situation where you need to apply the same set of transformations to different queries or values, creating a Power Query custom function that can be reused as many times as you need could be beneficial. A Power Query custom function is a mapping from a set of input values to a single output value, and is created from native M functions and operators. 
 
-While you can manually create your own Power Query custom function using code as shown in [Understanding Power Query M functions](https://docs.microsoft.com/powerquery-m/understanding-power-query-m-functions), the Power Query user interface offers you features to speed up, simplify, and enhance the process of creating and managing a custom function. 
+While you can manually create your own Power Query custom function using code as shown in [Understanding Power Query M functions](/powerquery-m/understanding-power-query-m-functions), the Power Query user interface offers you features to speed up, simplify, and enhance the process of creating and managing a custom function. 
 This article focuses on this experience provided only through the Power Query user interface and how to get the most out of it.
+
+> [!IMPORTANT]
+> This article outlines how to create a custom function with Power Query using common transforms accessible in the Power Query user interface. It focuses on the core concepts to create custom functions, and links to additional articles in Power Query documenation for more information on specific transforms that are referenced in this article.
 
 ## Create a custom function from a table reference
 
 You can follow along with this example by downloading the sample files used in this article from the following [download link](https://aka.ms/PQCombineFilesSample). For simplicity, this article will be using the Folder connector. To learn more about the Folder connector, see [Folder](Connectors/folder.md). The goal of this example is to create a custom function that can be applied to all the files in that folder before combining all of the data from all files into a single table.
 
-After connecting to the folder where your files are located, right-click on the **Binary** value of your choice from the **Content** field and select the **Add as New Query** option. For this example, you'll see that the selection was made for the first file from the list, which happens to be the file *April 2019.csv*.
+Start by using the Folder connector experience to navigate to the folder where your files are located and select **Transform Data** or **Edit**. This will take you to the Power Query experience. Right-click on the **Binary** value of your choice from the **Content** field and select the **Add as New Query** option. For this example, you'll see that the selection was made for the first file from the list, which happens to be the file *April 2019.csv*.
 
 ![Selecting a file to be our Sample File](images/me-custom-function-add-as-new-query.png)
 
@@ -187,7 +190,7 @@ in
 ```
 
 >[!NOTE]
-> To learn more about the Power Query M formula language, see [Power Query M formula language](https://docs.microsoft.com/powerquery-m) 
+> To learn more about the Power Query M formula language, see [Power Query M formula language](/powerquery-m) 
 
 You can then transform that query into a function by doing a right-click on the query and selecting **Create Function**. Finally, you can invoke your custom function into any of your queries or values, as shown in the next image.
 

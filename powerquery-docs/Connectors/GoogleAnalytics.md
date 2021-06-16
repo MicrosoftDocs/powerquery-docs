@@ -18,8 +18,11 @@ LocalizationGroup: reference
 | Release State | General Availability |
 | Products | Power BI Desktop |
 | Authentication Types Supported | Google Account |
-| Function Reference Documentation | [GoogleAnalytics.Accounts](https://docs.microsoft.com/powerquery-m/googleanalytics-accounts) |
+| Function Reference Documentation | [GoogleAnalytics.Accounts](/powerquery-m/googleanalytics-accounts) |
 | | |
+
+> [!NOTE]
+> Effective July 2021, Google will discontinue support for sign-ins to Google accounts from embedded browser frameworks. Due to this change, in late June 2021 you will need to update your Power BI Desktop version to June 2021 to support signing in to Google.
 
 ## Prerequisites
 
@@ -156,4 +159,3 @@ If you don't have a **Date** column, you can manually manipulate the query in th
 
 
 
- 

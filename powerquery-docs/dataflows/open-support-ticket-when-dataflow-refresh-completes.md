@@ -17,11 +17,11 @@ When your dataflow refresh completes or has been taking longer than expected, yo
 
 ## Automatically Create a Queue in Azure Service Bus
 
-In this template, we make use of Azure Service Bus. To set up an Azure Service Bus and create a queue, see these [instructions](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-quickstart-portal#create-a-namespace-in-the-azure-portal).
+In this template, we make use of Azure Service Bus. To set up an Azure Service Bus and create a queue, see these [instructions](/azure/service-bus-messaging/service-bus-quickstart-portal#create-a-namespace-in-the-azure-portal).
 
 * Navigate to [Power Automate Portal](https://flow.microsoft.com)
 
-* Search for the template "When a dataflow refresh fails, add a new message to the queue". If you encounter difficulty, see these [instructions](https://docs.microsoft.com/power-automate/get-started-logic-template).
+* Search for the template "When a dataflow refresh fails, add a new message to the queue". If you encounter difficulty, see these [instructions](/power-automate/get-started-logic-template).
 
 ![example of service bus](media/servicebuscondition.PNG)
 

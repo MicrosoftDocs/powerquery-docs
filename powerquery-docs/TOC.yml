@@ -11,13 +11,15 @@
       - name: "Authentication with a data source"
         href: ConnectorAuthentication.md
       - name: "SharePoint and OneDrive for Business files import"
-        href: sharepoint-onedrive-files.md        
+        href: sharepoint-onedrive-files.md    
+      - name: "Lack of support connecting to Microsoft Graph"    
+        href: connecting-to-graph.md
+      - name: "Connectivity without an existing connector"
+        href: connector-alternatives.md
     - name: Transform data
       items:
-      - name: "Use Power Query"
-        href: power-query-quickstart-using-power-bi.md
-      - name: "Shape and combine data"
-        href: power-query-tutorial-shape-combine.md
+      - name: "Use Power Query to transform data"
+        href: power-query-ui.md
       - name: "Using the Applied Steps list"
         href: applied-steps.md
       - name: "Query folding basics"
@@ -26,7 +28,7 @@
         href: data-profiling-tools.md
       - name: "Using the Queries pane"
         href: queries-pane.md
-      - name: "Diagram view (Preview)"
+      - name: "Diagram view"
         href: diagram-view.md
       - name: "Using Schema view (Preview)"
         href: schema-view.md
@@ -135,12 +137,13 @@
     - name: Dataflows
       items:
       - name: "Overview of dataflows"
-
         href: dataflows/overview-dataflows-across-power-platform-dynamics-365.md
       - name: "Analytical vs. standard dataflows"
         href: dataflows/understanding-differences-between-analytical-standard-dataflows.md        
       - name: "Create and use dataflows"
         href: dataflows/create-use.md
+      - name: "Create and use dataflows in Teams"
+        href: dataflows/dataflows-teams.md
       - name: "Use incremental refresh"
         href: dataflows/incremental-refresh.md
       - name: "Create computed entities"
@@ -213,12 +216,16 @@
           href: dataflows/troubleshooting-dataflow-issue-get-data-from-dataflow.md
         - name: "Connecting to the data source"
           href: dataflows/troubleshooting-dataflow-issues-connection-to-the-data-source.md
-    - name: Best practices in Power Query
+    - name: Keyboard shortcuts
+      href: keyboard-shortcuts.md
+    - name: Best practices
       href: best-practices.md
     - name: Advanced topics
       items:
-      - name: "Power Query query folding"
+      - name: "Query folding"
         href: power-query-folding.md
+      - name: "Fuzzy matching"
+        href: fuzzy-matching.md 
       - name: "Behind the scenes of the Data Privacy Firewall"
         href: DataPrivacyFirewall.md
       - name: "Query Diagnostics"
@@ -231,6 +238,8 @@
           href: ReadingQueryDiagnostics.md
         - name: "Understanding folding with Query Diagnostics"
           href: QueryDiagnosticsFolding.md
+      - name: "Step Folding Indicators"
+        href: step-folding-indicators.md
       - name: "Use Query Parameters"
         href: power-query-query-parameters.md
       - name: "Error handling"
@@ -249,18 +258,22 @@
         href: Connectors/AccessDatabase.md
       - name: "Adobe Analytics"
         href: "Connectors/AdobeAnalytics.md"
+      - name: "Anaplan"
+        href: Connectors/Anaplan.md
       - name: "Azure SQL database"
         href: Connectors/AzureSQLDatabase.md
       - name: "Azure Synapse Analytics (SQL DW)"
-        href: Connectors/AzureSQLDataWarehouse.md      
+        href: Connectors/AzureSQLDataWarehouse.md
+      - name: "Bloomberg Data and Analytics"
+        href: Connectors/BloombergDataAndAnalytics.md 
       - name: "Common Data Service"
-        href: Connectors/commondataservice.md
+        href: ./connectors/dataverse.md
       - name: "Data Lake Storage"
         href: Connectors/DataLakeStorage.md
+      - name: "Dataverse"
+        href: Connectors/dataverse.md
       - name: "Excel"
         href: Connectors/Excel.md
-      - name: "Facebook"
-        href: Connectors/Facebook.md
       - name: "FHIR"
         items:
         - name: Overview
@@ -275,10 +288,20 @@
           href: Connectors/FHIR/FHIR-Relationships.md
       - name: "Folder"
         href: Connectors/Folder.md
+      - name: "EQuIS (Beta)"
+        href: Connectors/EQuIS.md
       - name: "Google Analytics"
         href: Connectors/GoogleAnalytics.md
+      - name: "Google BigQuery"
+        href: Connectors/GoogleBigQuery.md
       - name: "JSON"
         href: Connectors/json.md
+      - name: "Mailchimp (Deprecated)"
+        href: Connectors/Mailchimp.md
+      - name: "Microsoft Azure Consumption Insights (Beta) (Deprecated)"
+        href: Connectors/MicrosoftAzureConsumptionInsights.md
+      - name: "Microsoft Graph Security (Deprecated)"
+        href: Connectors/MicrosoftGraphSecurity.md
       - name: "MySQL database"
         href: Connectors/MySQLDatabase.md
       - name: "OData Feed"
@@ -286,7 +309,7 @@
         - name: "OData Feed connector"
           href: Connectors/ODataFeed.md
         - name: "Connecting to Azure DevOps using OData"
-          href: https://docs.microsoft.com/azure/devops/report/powerbi/odataquery-connect?view=azure-devops
+          href: /azure/devops/report/powerbi/odataquery-connect?view=azure-devops
       - name: "ODBC"
         href: Connectors/Odbc.md
       - name: "Oracle database"
@@ -337,6 +360,10 @@
         href: Connectors/SharePointList.md
       - name: "SharePoint Online List"
         href: Connectors/SharePointOnlineList.md
+      - name: "Stripe (Deprecated)"
+        href: Connectors/Stripe.md
+      - name: "SoftOne BI (Beta)"
+        href: Connectors/SoftOneBI.md
       - name: "SQL Server database"
         href: Connectors/SQLServer.md
       - name: "Text/CSV"
@@ -357,6 +384,8 @@
         href: power-query-online-limits.md
       - name: "Common issues"
         href: CommonIssues.md
+      - name: "Review script changes"
+        href: review-script-changes.md
     - name: Create custom Power Query connectors
       items:
       - name: Quick starts
@@ -407,6 +436,8 @@
           href: SamplesDirectory.md#trippin
       - name: Advanced concepts
         items:
+        - name: "Additional connector functionality"
+          href: additional-connector-functionality.md
         - name: "Handling authentication"
           href: HandlingAuthentication.md
         - name: "Handling data access"
@@ -455,10 +486,14 @@
           href: HandlingGatewaySupport.md
         - name: "Handling connector signing"
           href: HandlingConnectorSigning.md
-      - name: Certification
-        href: ConnectorCertification.md
-      - name: "Custom connector documentation"
-        href: providing-user-documentation.md
+      - name: Connector Certification
+        items:
+        - name: Overview
+          href: ConnectorCertification.md
+        - name: Submission
+          href: CertificationSubmission.md
+        - name: "Custom connector documentation"
+          href: providing-user-documentation.md
     - name: Resources
       items:
       - name: "Power BI documentation"

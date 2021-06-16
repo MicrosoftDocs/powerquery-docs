@@ -64,17 +64,17 @@ Most dataflow capabilities are available in both Power Apps and Power BI. Datafl
 
 More information about dataflows in Power Apps:
 
-- [Self-service data prep in Power Apps](https://go.microsoft.com/fwlink/?linkid=2099972)
-- [Creating and using dataflows in Power Apps](https://go.microsoft.com/fwlink/?linkid=2100076)
-- [Connect Azure Data Lake Storage Gen2 for dataflow storage](https://go.microsoft.com/fwlink/?linkid=2099973)
-- [Add data to a table in Dataverse by using Power Query](https://go.microsoft.com/fwlink/?linkid=2100075)
+- [Self-service data prep in Power Apps](/powerapps/maker/data-platform/self-service-data-prep-with-dataflows)
+- [Creating and using dataflows in Power Apps](/powerapps/maker/data-platform/create-and-use-dataflows)
+- [Connect Azure Data Lake Storage Gen2 for dataflow storage](/powerapps/maker/data-platform/connect-azure-data-lake-storage-for-dataflow)
+- [Add data to a table in Dataverse by using Power Query](/powerapps/maker/data-platform/add-data-power-query)
 - Visit the Power Apps [dataflow community](https://go.microsoft.com/fwlink/?linkid=2099971) and share what you’re doing, ask questions, or [submit new ideas](https://go.microsoft.com/fwlink/?linkid=2100074)
 - Visit the Power Apps dataflow community forum and share what you’re doing, ask questions, or [submit new ideas](https://go.microsoft.com/fwlink/?linkid=2100074)
 
 More information about dataflows in Power BI:
 
-* [Self-service data prep in Power BI](https://docs.microsoft.com/power-bi/service-dataflows-overview)
-* [Create and use dataflows in Power BI](https://docs.microsoft.com/power-bi/service-dataflows-create-use)
+* [Self-service data prep in Power BI](/power-bi/service-dataflows-overview)
+* [Create and use dataflows in Power BI](/power-bi/service-dataflows-create-use)
 * [Dataflows whitepaper](https://go.microsoft.com/fwlink/?linkid=2011419&clcid=0x409)
 * Detailed [video](https://aka.ms/DataflowIntroVideo) of a dataflows walkthrough
 * Visit the Power BI [dataflows community](https://community.powerbi.com/t5/Service/bd-p/power-bi-web-app) and share what you're doing, ask questions, or [submit new ideas](https://ideas.powerbi.com/forums/265200-power-bi-ideas?category_id=341638)
@@ -90,6 +90,6 @@ The following articles go into more detail about common usage scenarios for data
 
 For more information about Common Data Model and the Common Data Model folder standard, read the following articles:
 
-* [Common Data Model - overview](https://docs.microsoft.com/powerapps/common-data-model/overview) 
-* [Common Data Model folders](https://go.microsoft.com/fwlink/?linkid=2045304)
-* [Common Data Model folder model file definition](https://go.microsoft.com/fwlink/?linkid=2045521)
+* [Common Data Model - overview](/powerapps/common-data-model/overview) 
+* [Common Data Model folders](/common-data-model/data-lake)
+* [Common Data Model folder model file definition](/common-data-model/model-json)

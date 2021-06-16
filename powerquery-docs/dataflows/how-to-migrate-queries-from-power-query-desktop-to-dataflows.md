@@ -1,6 +1,6 @@
 ---
 title: How to migrate queries from Power Query in the desktop (Power BI and Excel) to dataflows
-description: How to migrate queries from Power Query in the desktop (Power BI and Excel) to dataflows
+description: How to migrate queries from Power Query in the desktop (Power BI and Excel) to dataflows.
 author: radacad
 ms.service: powerquery
 ms.topic: conceptual
@@ -12,7 +12,7 @@ ms.author: gepopell
 
 If you already have queries in Power Query, either in Power BI Desktop or in Excel, you might want to migrate the queries into dataflows. The migration process is simple and straightforward. In this article, you'll learn the steps to do so.
 
-To learn how to create a dataflow in Power Platform, go to [Create and use dataflows in Power Platform](https://docs.microsoft.com/data-integration/dataflows/dataflows-integration-overview). To learn how to create a dataflow in Power BI, go to [Creating and using dataflows in Power BI](https://docs.microsoft.com/power-bi/service-dataflows-create-use).
+To learn how to create a dataflow in Microsoft Power Platform, go to [Create and use dataflows in Power Platform](/data-integration/dataflows/dataflows-integration-overview). To learn how to create a dataflow in Power BI, go to [Creating and using dataflows in Power BI](/power-bi/service-dataflows-create-use).
 
 ## Migrating the queries from the desktop
 
@@ -69,7 +69,7 @@ To migrate queries from Power Query in the desktop tools:
 
    If your data source is an on-premises source, you need to perform an extra step. Examples of on-premises sources can be Excel files in a shared folder in a local domain, or a SQL Server database hosted in an on-premises server.
 
-   A dataflow, as a cloud-based service, requires the on-premises data gateway to connect to the on-premises data source. You need to [install and configure the gateway](https://docs.microsoft.com/data-integration/gateway/service-gateway-install) for that source system, and then add [the data source for it](https://docs.microsoft.com/data-integration/gateway/service-gateway-manage). After you've completed these steps, you can select the on-premises data gateway when you create the entity in the dataflow.
+   A dataflow, as a cloud-based service, requires the on-premises data gateway to connect to the on-premises data source. You need to [install and configure the gateway](/data-integration/gateway/service-gateway-install) for that source system, and then add [the data source for it](/data-integration/gateway/service-gateway-manage). After you've completed these steps, you can select the on-premises data gateway when you create the entity in the dataflow.
 
    > [!div class="mx-imgBorder"]
    > ![Gateway setup](media/SetupGatewayForCopiedQuery.png)
@@ -102,8 +102,7 @@ After migrating your queries to the dataflow, you must refresh the dataflow to g
 
 ## Get data from Power Query Desktop
 
-You can now get data from dataflow entities in Power BI Desktop by using the Power Platform dataflow or Common Data Service connectors (depending on what type of dataflow you're using, analytical or standard). More information: [Connect to data created by Power Platform dataflows in Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-connect-dataflows)
+You can now get data from dataflow entities in Power BI Desktop by using the Power Platform dataflow or Common Data Service connectors (depending on what type of dataflow you're using, analytical or standard). More information: [Connect to data created by Power Platform dataflows in Power BI Desktop](/power-bi/desktop-connect-dataflows)
 
 
 ![Get data from dataflows in Power BI Desktop](media/GetDatafromDataflow.png)
-

@@ -26,7 +26,7 @@ When your entity in the dataflow gets data from an on-premises data source, a ga
 
 **Resolution:**
 
-Select **Select gateway**. If the gateway hasn't been set up yet, see [Install an on-premises data gateway](https://docs.microsoft.com/data-integration/gateway/service-gateway-install).
+Select **Select gateway**. If the gateway hasn't been set up yet, see [Install an on-premises data gateway](/data-integration/gateway/service-gateway-install).
 
 ## Error: Please specify how to connect
 
@@ -54,7 +54,7 @@ Disabled modules are related to functions that require an on-premises data gatew
 
 **Resolution:**
 
-First, [install and set up an on-premises gateway](https://docs.microsoft.com/data-integration/gateway/service-gateway-install). Then add a web data source for the web URL you're connecting to.
+First, [install and set up an on-premises gateway](/data-integration/gateway/service-gateway-install). Then add a web data source for the web URL you're connecting to.
 
 ![Add a web data source](media/WebDataSourceInGateway.png)
 

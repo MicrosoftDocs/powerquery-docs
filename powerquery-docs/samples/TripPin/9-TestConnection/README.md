@@ -23,7 +23,7 @@ In this lesson, you will:
 > * Configure the On-Premises Data Gateway (Personal mode)
 > * Test scheduled refresh through the Power BI service
 
-Custom Connector support was added to the April 2018 release of the [Personal On-Premises Gateway](https://docs.microsoft.com/power-bi/service-gateway-onprem#install-the-gateway-in-personal-mode).
+Custom Connector support was added to the April 2018 release of the [Personal On-Premises Gateway](/power-bi/service-gateway-onprem#install-the-gateway-in-personal-mode).
 This new (preview) functionality allows for Scheduled Refresh of reports that make use of your custom connector. 
 
 This tutorial will cover the process of enabling your connector for refresh, and provide a quick walkthrough of the steps to configure the gateway. Specifically you will:
@@ -86,7 +86,7 @@ After installation is complete, launch the gateway and sign into Power BI. The s
 
 ![Gateway connector configuration](../../../images/trippin9Gateway.png)
 
-See the [online documentation](https://docs.microsoft.com/power-bi/service-gateway-onprem#install-the-gateway-in-personal-mode) for more information about the gateway. 
+See the [online documentation](/power-bi/service-gateway-onprem#install-the-gateway-in-personal-mode) for more information about the gateway. 
 
 ## Testing Scheduled Refresh
 

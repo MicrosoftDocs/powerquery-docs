@@ -17,7 +17,7 @@ Release State: General Availability
 
 Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in PowerBI.com (Enterprise Gateway), Dataflows in PowerApps.com (Enterprise Gateway), Excel
 
-Function Reference Documentation: [File.Contents](https://docs.microsoft.com/powerquery-m/file-contents), [Lines.FromBinary](https://docs.microsoft.com/powerquery-m/lines-frombinary), [Csv.Document](https://docs.microsoft.com/powerquery-m/csv-document)
+Function Reference Documentation: [File.Contents](/powerquery-m/file-contents), [Lines.FromBinary](/powerquery-m/lines-frombinary), [Csv.Document](/powerquery-m/csv-document)
 
 ## Capabilities supported
 
@@ -43,7 +43,7 @@ When you load it, you're presented with a navigation screen that loads each of t
 
 ![Loading data from a simple unstructured text file](../images/textrawnavigator.png)
 
-There's only one thing you can configure on this dialog, which is the **File Origin** dropdown select. This dropdown lets you select [which character set](https://docs.microsoft.com/windows/win32/intl/code-page-identifiers) was used to generate the file. Currently, character set isn't inferred, and UTF-8 will only be inferred if it starts with a [UTF-8 BOM](https://docs.microsoft.com/globalization/encoding/byte-order-mark).
+There's only one thing you can configure on this dialog, which is the **File Origin** dropdown select. This dropdown lets you select [which character set](/windows/win32/intl/code-page-identifiers) was used to generate the file. Currently, character set isn't inferred, and UTF-8 will only be inferred if it starts with a [UTF-8 BOM](/globalization/encoding/byte-order-mark).
 
 ![File culture selection for Text/CSV](../images/textfileorigindropdown.png)
 
@@ -150,7 +150,7 @@ In rare cases, a document that has similar comma numbers across paragraphs might
 
 ### Error: Connection closed by host
 
-When loading Text/CSV files from a web source and also promoting headers, you might sometimes encounter the following errors: ```“An existing connection was forcibly closed by the remote host”``` or ```“Received an unexpected EOF or 0 bytes from the transport stream.”```. These errors might be caused by the host employing protective measures and closing a connection which might be temporarily paused, for example, when waiting on another data source connection for a join or append operation. To work around these errors, try adding a [Binary.Buffer](https://docs.microsoft.com/powerquery-m/binary-buffer) (recommended) or [Table.Buffer](https://docs.microsoft.com/powerquery-m/table-buffer) call, which will download the file, load it into memory, and immediately close the connection. This should prevent any pause during download and keep the host from forcibly closing the connection before the content is retrieved. 
+When loading Text/CSV files from a web source and also promoting headers, you might sometimes encounter the following errors: ```“An existing connection was forcibly closed by the remote host”``` or ```“Received an unexpected EOF or 0 bytes from the transport stream.”``` These errors might be caused by the host employing protective measures and closing a connection which might be temporarily paused, for example, when waiting on another data source connection for a join or append operation. To work around these errors, try adding a [Binary.Buffer](/powerquery-m/binary-buffer) (recommended) or [Table.Buffer](/powerquery-m/table-buffer) call, which will download the file, load it into memory, and immediately close the connection. This should prevent any pause during download and keep the host from forcibly closing the connection before the content is retrieved. 
 
 The following example illustrates this workaround. This buffering needs to be done before the resulting table is passed to ```Table.PromoteHeaders```.
 * Original:

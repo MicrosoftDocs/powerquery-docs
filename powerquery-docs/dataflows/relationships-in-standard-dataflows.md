@@ -18,7 +18,7 @@ In the standard dataflow, you can easily map fields from the dataflow query into
 
 ## What is the relationship and why do you need that?
 
-If you're coming from a database development background, you're familiar with the concept of a relationship between tables. However, many users of Power Platform services aren't coming from that background. You might wonder what the relationship is, or why you should create a relationship between tables.
+If you're coming from a database development background, you're familiar with the concept of a relationship between tables. However, many users of Microsoft Power Platform services aren't coming from that background. You might wonder what the relationship is, or why you should create a relationship between tables.
 
 The tables and their relationship are fundamental concepts of designing a database. To learn everything about relationships is beyond the scope of this article. However, we'll discuss it in a general way here. 
 
@@ -41,7 +41,7 @@ In Dataverse, you can have a field defined as a lookup field, which points to an
 > [!div class="mx-imgBorder"]
 > ![Lookup field](media/1/LookupField.png)
 
-In the preceding image, the Region field is a lookup field to another table named Region Lookup. To learn more about different types of relationships, go to [Create a relationship between tables](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-entity-lookup).
+In the preceding image, the Region field is a lookup field to another table named Region Lookup. To learn more about different types of relationships, go to [Create a relationship between tables](/powerapps/maker/common-data-service/data-platform-entity-lookup).
 
 ## When the field mapping doesn't show the relationship fields
 
@@ -61,5 +61,4 @@ After setting the key field, you can see the field in the mapping of the dataflo
 
 ## Known limitations
 
-- Mapping to [polymorphic lookup](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-references#polymorphic-lookups) fields is currently not supported.
-
+- Mapping to [polymorphic lookup](/powerapps/maker/canvas-apps/working-with-references#polymorphic-lookups) fields is currently not supported.

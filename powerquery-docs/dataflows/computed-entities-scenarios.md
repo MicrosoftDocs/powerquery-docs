@@ -1,6 +1,6 @@
 ---
 title: Computed entity scenarios and use cases
-description: Computed entity scenarios and use cases
+description: Computed entity scenarios and use cases.
 author: radacad
 ms.service: powerquery
 ms.reviewer: kvivek
@@ -23,7 +23,7 @@ Computed entities solve both problems. Computed entities are similar to other en
 
 Computed entities can be created by referencing an entity in the same dataflow or by referencing an entity created in a different dataflow.
 
-![Computed entity](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-computed-entities-premium/computed-entities-premium_00.png)
+![Computed entity](/power-bi/transform-model/media/service-dataflows-computed-entities-premium/computed-entities-premium_00.png)
 
 ## Why use a computed entity?
 
@@ -62,7 +62,7 @@ This means that the Orders Aggregated entity will be getting data from the Order
 
 ## Computed entity in other dataflows
 
-You can also create a computed entity in other dataflows. It can be created by getting data from a dataflow with the Power Platform dataflow connector.
+You can also create a computed entity in other dataflows. It can be created by getting data from a dataflow with the Microsoft Power Platform dataflow connector.
 
 :::image type="complex" source="media/getdatafromppdataflows.png" alt-text="<Get data from Power Platform dataflows>":::
    Image emphasizes the Power Platform dataflows connector from the Power Query choos data source window, with a description that states that one dataflow entity can be built on top of the data from another dataflow entity, which is already persisted in storage.

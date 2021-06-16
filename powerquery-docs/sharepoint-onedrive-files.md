@@ -115,7 +115,7 @@ For example:
 
 While the SharePoint folder connector offers you an experience where you can see all the files available in your SharePoint or OneDrive for Business site at once, you can also opt for a different experience. In this experience, you can navigate through your SharePoint or OneDrive for Business folders and reach the folder or file(s) that you're interested in.
 
-This experience is provided through the [`SharePoint.Contents`](https://docs.microsoft.com/powerquery-m/sharepoint-contents) function. Take the following steps to use this function:
+This experience is provided through the [`SharePoint.Contents`](/powerquery-m/sharepoint-contents) function. Take the following steps to use this function:
 
 1. Create a Blank Query.
 

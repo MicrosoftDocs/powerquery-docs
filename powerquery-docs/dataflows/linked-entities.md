@@ -26,9 +26,9 @@ Linked entity availability depends on whether you're using dataflows in Power BI
 
 ### Linked entities in Power BI
 
-To be refreshed, linked entities require a [Power BI Premium](https://docs.microsoft.com/power-bi/service-premium-what-is) subscription. Linked entities are available in any dataflow on a workspace that's hosted on Power BI Premium capacity. There are no limitations on the source dataflow.
+To be refreshed, linked entities require a [Power BI Premium](/power-bi/service-premium-what-is) subscription. Linked entities are available in any dataflow on a workspace that's hosted on Power BI Premium capacity. There are no limitations on the source dataflow.
 
-Linked entities only work properly in new Power BI workspaces, and, likewise, all linked dataflows must be located in new workspaces. More information: [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/service-create-the-new-workspaces)
+Linked entities only work properly in new Power BI workspaces, and, likewise, all linked dataflows must be located in new workspaces. More information: [Create the new workspaces in Power BI](/power-bi/service-create-the-new-workspaces)
 
 > [!NOTE]
 > Entities differ based on whether they're standard entities or computed entities. Standard entities (often simply referred to as entities) query an external data source, such as a SQL database. Computed entities require Premium capacity on Power BI and run their transformations on data that's already in Power BI storage. 
@@ -92,7 +92,7 @@ There are a few limitations to keep in mind when working with linked entities:
 
 * An entity can be referenced by another dataflows. That reference entity can also be reference by other dataflows and so on, up to 5 times.
 * Cyclical dependencies of linked entities aren't allowed.
-* The dataflow must be in a [new Power BI workspace](https://docs.microsoft.com/power-bi/service-create-the-new-workspaces) or a Power Apps environment.
+* The dataflow must be in a [new Power BI workspace](/power-bi/service-create-the-new-workspaces) or a Power Apps environment.
 * A linked entity can't be joined with a regular entity that gets its data from an on-premises data source.
 
 ## Next steps
@@ -106,16 +106,16 @@ The following articles might be useful as you create or work with dataflows:
 
 The articles below provide more information about dataflows and Power BI:
 
-* [Create and use dataflows in Power BI](https://docs.microsoft.com/power-bi/service-dataflows-create-use)
+* [Create and use dataflows in Power BI](/power-bi/service-dataflows-create-use)
 * [Using computed entities on Power BI Premium](computed-entities.md)
-* [Using dataflows with on-premises data sources](https://docs.microsoft.com/power-bi/service-dataflows-on-premises-gateways)
-* [Developer resources for Power BI dataflows](https://docs.microsoft.com/power-bi/service-dataflows-developer-resources)
+* [Using dataflows with on-premises data sources](/power-bi/service-dataflows-on-premises-gateways)
+* [Developer resources for Power BI dataflows](/power-bi/service-dataflows-developer-resources)
 
 For more information about Power Query and scheduled refresh, you can read these articles:
 
-* [Query overview in Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-query-overview)
-* [Configuring scheduled refresh](https://docs.microsoft.com/power-bi/refresh-scheduled-refresh)
+* [Query overview in Power BI Desktop](/power-bi/desktop-query-overview)
+* [Configuring scheduled refresh](/power-bi/refresh-scheduled-refresh)
 
 For more information about Common Data Model, you can read its overview article:
 
-* [Common Data Model - overview ](https://docs.microsoft.com/powerapps/common-data-model/overview)
+* [Common Data Model - overview ](/powerapps/common-data-model/overview)

@@ -34,17 +34,17 @@ Each workspace (or environment) is available only for members of that workspace.
 
 ## Set the correct access levels on workspaces
 
-To give access to dataflows in other workspaces to use the output of a dataflow in a workspace, you just need to give them View access in the workspace. To learn more about other roles in a Power BI workspace, go to [Roles in the new workspaces](https://docs.microsoft.com/power-bi/collaborate-share/service-new-workspaces#roles-in-the-new-workspaces).
+To give access to dataflows in other workspaces to use the output of a dataflow in a workspace, you just need to give them View access in the workspace. To learn more about other roles in a Power BI workspace, go to [Roles in the new workspaces](/power-bi/collaborate-share/service-new-workspaces#roles-in-the-new-workspaces).
 
-![Access to the workspace](https://docs.microsoft.com/power-bi/collaborate-share/media/service-create-the-new-workspaces/power-bi-workspace-add-members.png)
+![Access to the workspace](/power-bi/collaborate-share/media/service-create-the-new-workspaces/power-bi-workspace-add-members.png)
 
 ## Endorsement on the dataflow in Power BI
 
 There can be many dataflows created in a tenant organization, and it can be hard for the users to know which dataflow is most reliable. Authors of a dataflow, or those who have edit access to it, can endorse the dataflow at three levels: no endorsement, promoted, or certified. 
 
-These levels of endorsement help users find reliable dataflows easier and faster. The dataflow with a higher endorsement level appears first. The Power BI administrator can delegate the ability to endorse dataflows to the certified level to other people. More information: [Promote or certify dataflows (Preview)](https://docs.microsoft.com/power-bi/transform-model/service-dataflows-promote-certify)
+These levels of endorsement help users find reliable dataflows easier and faster. The dataflow with a higher endorsement level appears first. The Power BI administrator can delegate the ability to endorse dataflows to the certified level to other people. More information: [Promote or certify dataflows (Preview)](/power-bi/transform-model/service-dataflows-promote-certify)
 
-![Endorsement on dataflows](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-promote-certify/powerbi-dataflow-endorsement-power-query.png)
+![Endorsement on dataflows](/power-bi/transform-model/media/service-dataflows-promote-certify/powerbi-dataflow-endorsement-power-query.png)
 
 
 

@@ -1,11 +1,11 @@
 ---
-title: Providing user documentation
+title: Providing user documentation for your Power Query custom connector
 description: Describes the format and layout of the user documentation that needs to be submitted for your Power Query custom connector.
 author: DougKlopfenstein
 ms.service: powerquery
-ms.reviewer: 
-ms.date: 12/01/2020
-ms.author: v-douklo
+ms.reviewer: kvivek
+ms.date: 03/15/2021
+ms.author: bezhan
 ---
 
 # Providing user documentation for your custom connector
@@ -60,20 +60,19 @@ Any other instructions or information about your connector that hasn't been cove
 
 ## Article location and format
 
-Your article should be made available on GitHub under the Connectors folder in the Power Query docs repo: <https://github.com/MicrosoftDocs/powerquery-docs/tree/master/powerquery-docs/Connectors>. 
+Your article should be made available on GitHub under the Connectors folder in the Power Query docs repo: <https://github.com/MicrosoftDocs/powerquery-docs/tree/master/powerquery-docs/Connectors>. Ensure that you also add a link to your article in the [list of connectors](./connectors/index.md) referencing the correct logo image uploaded to `/Connectors/media/index` folder. Lastly, ensure that you add a link to your article in the table of contents file (`TOC.yml`). Certified connectors will only be available under **Power BI (Datasets)**.
 
-See the [Microsoft Docs contributor guide](https://docs.microsoft.com/contribute/) on how you can contribute to our repo. 
+See the [Microsoft Docs contributor guide](/contribute/) on how you can contribute to our repo. 
 
 The article should be formatted and submitted as a Markdown file. It should use the Microsoft style for describing procedures and the UI layout.  
 
 The following articles include instructions on formatting your document in Markdown, and the Microsoft style that you should follow when authoring your article:
-- [Docs Markdown reference](https://docs.microsoft.com/contribute/markdown-reference) 
-- [Microsoft Writing Style Guide](https://docs.microsoft.com/style-guide/welcome/) 
+- [Docs Markdown reference](/contribute/markdown-reference) 
+- [Microsoft Writing Style Guide](/style-guide/welcome/) 
 
 ## Example connector articles
 
 Here are a couple of example Power Query connector articles that you can use as a starting point: 
 
 * [Adobe Analytics](./connectors/adobeanalytics.md) (Power Query Desktop only)
-* [Azure SQL database](./connectors/azuresqldatabase) (Power Query Desktop and Power Query Online)
-
+* [Azure SQL database](./connectors/azuresqldatabase.md) (Power Query Desktop and Power Query Online)
