@@ -31,7 +31,6 @@ LocalizationGroup: reference
 ## Distribution of Data Connectors
 
 Power BI Desktop users can download extension files and place them in a known directory (steps described above). Power BI Desktop will automatically load the extensions on restart.
-_We are hard at work on Office Store integration to make it easy for users to discover and install data connectors you build. During this preview phase, developers interested in distributing their connectors for use with Power BI can contact us at DataConnectors (at) microsoft.com._
 
 ## Additional links and resources
 * [M Library Functions](/powerquery-m/power-query-m-function-reference)

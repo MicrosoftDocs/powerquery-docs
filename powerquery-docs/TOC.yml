@@ -362,6 +362,8 @@
         href: Connectors/SharePointList.md
       - name: "SharePoint Online List"
         href: Connectors/SharePointOnlineList.md
+      - name: "Snowflake"
+        href: Connectors/Snowflake.md
       - name: "Stripe (Deprecated)"
         href: Connectors/Stripe.md
       - name: "SoftOne BI (Beta)"
