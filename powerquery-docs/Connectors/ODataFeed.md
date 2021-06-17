@@ -29,6 +29,9 @@ LocalizationGroup: reference
    * Open type columns
 * Select related tables
 
+>[!Note]
+> Microsoft Graph is not supported. More information: [Lack of Support for Microsoft Graph in Power Query](../connecting-to-graph.md)
+
 ## Load data from an OData Feed in Power Query Desktop
 
 To load data from an OData Feed in Power Query Desktop:
