@@ -83,6 +83,10 @@ You've identified the **Kept bottom rows** step as a step of interest since it d
 
 Power Query tries to optimize your query by taking advantage of lazy evaluation and query folding, as mentioned in [Query folding basics](query-folding-basics.md). This query plan represents the optimized translation of your M query into the native query that's sent to the data source. It also includes any transforms that are done locally.  
 
+At the bottom of the dialog you'll be able to see a bar with icons to help you zoom in or out of the query plan view as well as other buttons to help you manage the view. For the previous image the *Fit to view* option from this bar was used to better appreciate the nodes.
+
+[![Query plan dialog that showcases a diagram view for the query plan with nodes connected by lines](media/query-plan/query-plan-fit-to-screen.png)](media/query-plan/query-plan-fit-to-screen.png#lightbox)
+
 >[!NOTE]
 >The query plan represents the optimized plan. When the engine is evaluating a query, it tries to fold all operators into a data source. In some cases, it might even do some internal reordering of the steps to maximize folding. With this in mind, the nodes/operators left in this optimized query plan typically contain the "folded" data source query and any operators that couldn't be folded and are evaluated locally.
 
@@ -95,7 +99,7 @@ You can identify the nodes in this diagram as two groups:
 
 The following image shows the folded nodes inside the red rectangle. The rest of the nodes couldn't be folded back to the data source. You'll need to review the rest of the nodes since the goal is to attempt to have those nodes fold back to the data source.
 
-[![Query plan highlighting two of the folded nodes with a red rectangle](media/query-plan/query-plan-folded-nodes.png)](media/query-plan/query-plan-folded-nodes.png#lightbox)
+[![Query plan view controls at the bottom of the dialog with the fit to view option selected](media/query-plan/query-plan-folded-nodes.png)](media/query-plan/query-plan-folded-nodes.png#lightbox)
 
 You can select **View details** at the bottom of some nodes to display extended information. For example, the details of the `Value.NativeQuery` node show the native query (in SQL) that will be sent to the data source.
 
