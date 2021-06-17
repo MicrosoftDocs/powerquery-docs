@@ -101,7 +101,7 @@ You can select **View details** at the bottom of some nodes to display extended 
 
 [![Details view for the Value.NativeQuery node in the query plan](media/query-plan/query-plan-view-details.png)](media/query-plan/query-plan-view-details.png#lightbox)
 
-The query shown here might not be exactly the same query sent to the data source, but it's a good approximation. The node next to it,  [Table.LastN](/powerquery-m/table-lastn) is calculated locally by the Power Query engine, as it can't be folded.
+The query shown here might not be exactly the same query sent to the data source, but it's a good approximation. The node next to it, [Table.LastN](/powerquery-m/table-lastn), is calculated locally by the Power Query engine, as it can't be folded.
 
 >[!NOTE]
 >The operators might not exactly match the functions used in the query's script.
