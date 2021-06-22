@@ -52,7 +52,7 @@ To connect to Dataverse from Power BI Desktop:
 
    ![Get data in Power BI Desktop](media/common-data-service/get-data.png)
 
-2. Enter the server URL address of the data you want to load.
+3. Enter the server URL address of the data you want to load.
 
    ![Server URL selection](media/common-data-service/enter-url.png)
 
@@ -62,11 +62,11 @@ To connect to Dataverse from Power BI Desktop:
 
    When you've finished filling in the information, select **OK**.
 
-3. If this is the first time you're connecting to this site, select **Sign in** and input your credentials. Then select **Connect**.
+4. If this is the first time you're connecting to this site, select **Sign in** and input your credentials. Then select **Connect**.
 
    ![Sign in to this site](media/common-data-service/sign-in.png)
 
-4. In **Navigator**, select the data you require, then either load or transform the data.
+5. In **Navigator**, select the data you require, then either load or transform the data.
 
    ![Load or transform from navigator](media/common-data-service/navigator.png)
 
@@ -74,7 +74,7 @@ To connect to Dataverse from Power BI Desktop:
 
 To connect to Dataverse from Power Query Online:
 
-1. From the **Data sources** page, select **Common Data Service**.
+1. From the **Data sources** page, select **Common Data Service (Legacy)**.
 
    ![Get data from Power Query Online](media/common-data-service/get-data-online.png)
 
