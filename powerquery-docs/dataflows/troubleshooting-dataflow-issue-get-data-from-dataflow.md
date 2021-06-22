@@ -53,7 +53,7 @@ Only analytical dataflows can be used in a **Get data** operation from a dataflo
 
 **Resolution:**
 
-If you've created a dataflow that stores data in Dataverse&mdash;that is, a standard dataflow&mdash;you can't see it by using the **Get data** operation from a dataflow. However, you can use [**Get data** from Datverse](../connectors/dataverse.md#finding-your-dataverse-environment-url) to access it. Or you can create an [analytical dataflow](understanding-differences-between-analytical-standard-dataflows.md) instead, and then access it by using **Get data** from a dataflow.
+If you've created a dataflow that stores data in Dataverse&mdash;that is, a standard dataflow&mdash;you can't see it by using the **Get data** operation from a dataflow. However, you can use [**Get data** from Dataverse](../connectors/dataverse.md#finding-your-dataverse-environment-url) to access it. Or you can create an [analytical dataflow](understanding-differences-between-analytical-standard-dataflows.md) instead, and then access it by using **Get data** from a dataflow.
 
 ![Get data from standard dataflow versus analytical dataflows](media/GetDataStandardAnalyticalDataflow.png)
 
