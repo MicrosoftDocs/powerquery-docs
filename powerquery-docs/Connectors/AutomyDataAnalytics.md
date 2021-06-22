@@ -32,52 +32,54 @@ To connect to Automy Data Analytics data:
 
 1. Select **Get Data** from the **Home** ribbon in Power BI Desktop. Select **Online Services** from the categories on the left, select **Automy Data Analytics**, and then select **Connect**.
 
-   ![Get Data from Automy Data Analytics](./media/automy-data-analytics/get-aa-data.png)
+![Get Data from Automy Data Analytics](./media/automy-data-analytics/get-aa-data.png)
 
 2. If this is the first time you're getting data through the Automy Data Analytics connector, a third-party notice will be displayed. Select **Don't warn me again with this connector** if you don't want this message to be displayed again, and then select **Continue**.
+
+3. Sign in to the connector with API Key to verify your access to an Automy. 
+  
+![API Key Dialog](.media/automy-data-analytics/auth-ada-key.png)
+  
+    Once you've succeeded, select **Connect**.
 
 3. In the Automy Data Analytics window that appears, select the correct parameters to prepared the connection. Select the type of report and data type and completed the token information, following the chart below;and then select **Ok**.
 
 > [!NOTE]
 > You can generate an authentication token for reports using the configuration option in Automy.
 
-| Report Type | Data Type | Token  (Is required) | Form Identificator (Is required) | Table Identificator (Is required) |
-|-|-|-|-|-|
-| generic | environments | Yes | No | No |
-| generic | processes | Yes | No | No |
-| generic | process-groups | Yes | No | No |
-| generic | users | Yes | No | No |
-| generic | user-groups | Yes | No | No |
-| generic | positions | Yes | No | No |
-| generic | entities | Yes | No | No |
-| generic, process | requests | Yes | No | No |
-| generic, process | action-instances | Yes | No | No |
-| generic, process | user-instances | Yes | No | No |
-| generic, process | form-instances | Yes | No | No |
-| generic, process | form-instance-fields | Yes | No | No |
-| generic, process | forms | Yes | No | No |
-| generic, process | field-groups | Yes | No | No |
-| generic, process | fields | Yes | No | No |
-| generic | entity-data | Yes | No | No |
-| process | form-data | Yes | Yes | No |
-| process | form-table-data | Yes | Yes | No |
-| process | execution-steps | Yes | No | No |
-| process | instance-approvers | Yes | No | No |
+4. In the **Navigator** dialog box, select the Automy tables you want to load. You can then either load or transform the data.
 
-![Get Data from Automy Data Analytics](./media/automy-data-analytics/set-ada-parameter.png)
+![Get Data from Automy Data Analytics](.media/automy-data-analytics/nav-ada-data.png)
 
-4. You can **Load** the selected table, which brings the entire table into Power BI Desktop, or you can select **Transform Data** to edit the query, which opens Power Query Editor. You can then filter and refine the set of data you want to use, and then load that refined set of data into Power BI Desktop.
+5. In the case of selecting functions, they will have to be invoked with the parameters requested from the **Transform Data** option in Power Query Editor.
 
-![Load or transform data](./media/automy-data-analytics/button-ada-select.png)
+![Load or transform data](./media/automy-data-analytics/param-ada-function.png)
+
+
+### Credential error in the Navigator
+
+Do one of the following:
+-   Clear cache within Power BI (**File**, **Options**, **Clear cache)** and restart the connector, or
+-   Select **Cancel** and select **Refresh** (top right).
+
+![Authentication error](./media/automy-data-analytics/error-ada-token.png)
+
+If you still receive a credential error after you clear cache, also clear your recent sources. 
+
+1. Select (**File**, **Data source settings**)**
+
+![Select Automy sources](./media/automy-data-analytics/datasource-ada-clear.png)
+
+2. Clear data source and establish the connection to the navigation again.
 
 
 ## Limitations and issues
 
 You should be aware of the following limitations and issues associated with accessing Automy Data Analytics data.
 
-* Automy Data Analytics has a built-in limit of 2 MM rows returned per Database connection. 
+* Automy Data Analytics has a built-in limit of 100k rows returned per connection.
 
-* The default rate limit for an Automy Data Analytics Company is 600 requests per minute per user.
+* The default rate limit for an Automy Data Analytics Company is 120 requests per minute per user.
 
 Import from Automy Data Analytics will stop and display an error message whenever the Automy Data Analytics connector hits any of the limits listed above.
 
