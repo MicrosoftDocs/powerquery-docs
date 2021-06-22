@@ -32,13 +32,13 @@ To connect to Automy Data Analytics data:
 
 1. Select **Get Data** from the **Home** ribbon in Power BI Desktop. Select **Online Services** from the categories on the left, select **Automy Data Analytics**, and then select **Connect**.
 
-![Get Data from Automy Data Analytics](./media/automy-data-analytics/get-aa-data.png)
+![Get Data from Automy Data Analytics](./media/automy-data-analytics/get-ada-data.png)
 
 2. If this is the first time you're getting data through the Automy Data Analytics connector, a third-party notice will be displayed. Select **Don't warn me again with this connector** if you don't want this message to be displayed again, and then select **Continue**.
 
 3. Sign in to the connector with API Key to verify your access to an Automy. 
   
-![API Key Dialog](.media/automy-data-analytics/auth-ada-key.png)
+![API Key Dialog](./media/automy-data-analytics/auth-ada-key.png)
   
     Once you've succeeded, select **Connect**.
 
@@ -49,7 +49,7 @@ To connect to Automy Data Analytics data:
 
 4. In the **Navigator** dialog box, select the Automy tables you want to load. You can then either load or transform the data.
 
-![Get Data from Automy Data Analytics](.media/automy-data-analytics/nav-ada-data.png)
+![Get Data from Automy Data Analytics](./media/automy-data-analytics/nav-ada-data.png)
 
 5. In the case of selecting functions, they will have to be invoked with the parameters requested from the **Transform Data** option in Power Query Editor.
 
