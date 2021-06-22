@@ -30,7 +30,7 @@ There are multiple roles used to configure the security level for standard dataf
 | Security role              | Privileges                     | Description                                                  |
 | -------------------------- | ------------------------------ | ------------------------------------------------------------ |
 | Environment Maker          | Create dataflows and entities  | Can create dataflows and write to custom or non-custom entities |
-| Common Data Service User   | Write to non-custom entities | Has all the rights to work with non-custom entities          |
+| Basic User   | Write to non-custom entities | Has all the rights to work with non-custom entities          |
 | System Customizer          | Create custom entities         | Custom entities this user creates will be visible to this user only |
 | Members of the environment | Get data from dataflows        | Every member in the environment can get data from the dataflows in that environment |
 
