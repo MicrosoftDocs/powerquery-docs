@@ -240,6 +240,8 @@
           href: QueryDiagnosticsFolding.md
       - name: "Step Folding Indicators"
         href: step-folding-indicators.md
+      - name: "Query plan (Preview)"
+        href: query-plan.md
       - name: "Use Query Parameters"
         href: power-query-query-parameters.md
       - name: "Error handling"
