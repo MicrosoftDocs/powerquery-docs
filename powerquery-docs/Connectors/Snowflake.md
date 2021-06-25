@@ -96,7 +96,7 @@ The following table lists all of the advanced options you can set in Power Query
 | Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, you won’t see those columns. |
 | Connection timeout in seconds | Specifies how long to wait for a response when interacting with the Snowflake service before returning an error. Default is 0 (no timeout).|
 | Command timeout in seconds | Specifies how long to wait for a query to complete before returning an error. Default is 0 (no timeout). |
-| SQL Statement | For information, go to [Import data from a database using native database query](../native-database-query.md). In this version of native database query functionality, you need to use fully qualified table names in the format Database.Schema.Table, for example **SELECT * FROM DEMO_DB.PUBLIC.DEMO_TABLE**.  |
+| SQL Statement | For information, go to [Import data from a database using native database query](../native-database-query.md). In this version of native database query functionality, you need to use fully qualified table names in the format **Database.Schema.Table**, for example **SELECT * FROM DEMO_DB.PUBLIC.DEMO_TABLE**.  |
 | | |
 
 Once you've selected the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your Snowflake database.
