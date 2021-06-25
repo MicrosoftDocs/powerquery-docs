@@ -22,9 +22,6 @@ LocalizationGroup: reference
 
 ## Prerequisites
 
->[!Note]
-> This connector is scheduled to be released in the April release of Power BI Desktop and may not yet be available.
-
 You'll need to have the Soft1 ERP/CRM or Atlantis ERP product installed with a licensed SoftOne BI connector module. A web account must be configured in the application with access to the SoftOne BI Connector service. This account information and your installation serial number will be validated during authentication by the SoftOne BI connector.
 
 The SoftOne BI connector is supported from Soft1 Series 5 version 500.521.11424 or later and Atlantis ERP version 3.3.2697.1 or later.

@@ -102,7 +102,7 @@ After migrating your queries to the dataflow, you must refresh the dataflow to g
 
 ## Get data from Power Query Desktop
 
-You can now get data from dataflow entities in Power BI Desktop by using the Power Platform dataflow or Common Data Service connectors (depending on what type of dataflow you're using, analytical or standard). More information: [Connect to data created by Power Platform dataflows in Power BI Desktop](/power-bi/desktop-connect-dataflows)
+You can now get data from dataflow entities in Power BI Desktop by using the Power Platform dataflow or Dataverse connectors (depending on what type of dataflow you're using, analytical or standard). More information: [Connect to data created by Power Platform dataflows in Power BI Desktop](/power-bi/desktop-connect-dataflows)
 
 
 ![Get data from dataflows in Power BI Desktop](media/GetDatafromDataflow.png)

@@ -18,10 +18,8 @@
         href: connector-alternatives.md
     - name: Transform data
       items:
-      - name: "Use Power Query"
-        href: power-query-quickstart-using-power-bi.md
-      - name: "Shape and combine data"
-        href: power-query-tutorial-shape-combine.md
+      - name: "Use Power Query to transform data"
+        href: power-query-ui.md
       - name: "Using the Applied Steps list"
         href: applied-steps.md
       - name: "Query folding basics"
@@ -144,6 +142,8 @@
         href: dataflows/understanding-differences-between-analytical-standard-dataflows.md        
       - name: "Create and use dataflows"
         href: dataflows/create-use.md
+      - name: "Create and use dataflows in Teams"
+        href: dataflows/dataflows-teams.md
       - name: "Use incremental refresh"
         href: dataflows/incremental-refresh.md
       - name: "Create computed entities"
@@ -240,6 +240,8 @@
           href: QueryDiagnosticsFolding.md
       - name: "Step Folding Indicators"
         href: step-folding-indicators.md
+      - name: "Query plan (Preview)"
+        href: query-plan.md
       - name: "Use Query Parameters"
         href: power-query-query-parameters.md
       - name: "Error handling"
@@ -278,8 +280,6 @@
         href: Connectors/dataverse.md
       - name: "Excel"
         href: Connectors/Excel.md
-      - name: "Facebook"
-        href: Connectors/Facebook.md
       - name: "FHIR"
         items:
         - name: Overview
@@ -294,7 +294,7 @@
           href: Connectors/FHIR/FHIR-Relationships.md
       - name: "Folder"
         href: Connectors/Folder.md
-      - name: "EQuIS"
+      - name: "EQuIS (Beta)"
         href: Connectors/EQuIS.md
       - name: "Google Analytics"
         href: Connectors/GoogleAnalytics.md
@@ -366,6 +366,8 @@
         href: Connectors/SharePointList.md
       - name: "SharePoint Online List"
         href: Connectors/SharePointOnlineList.md
+      - name: "Snowflake"
+        href: Connectors/Snowflake.md
       - name: "Stripe (Deprecated)"
         href: Connectors/Stripe.md
       - name: "SoftOne BI (Beta)"
