@@ -66,9 +66,6 @@ In the **Last Refresh** column, you can see when your data was last refreshed. I
 
 In the **Status** column, you can see the current status of the dataflow. Possible states are:
 
-* **Unpublished**: the dataflow is saved as a draft, and you can finish authoring your dataflow later.
-* **Publishing in progress**: the dataflow is being published.
-* **Published**: the dataflow is published and ready to load data into Dataverse. Only a published dataflow can be refreshed.
 * **Refresh in progress**: the dataflow is extracting, transforming, and loading your data from the source to the Dataverse Tables. This process can take several minutes depending on the complexity of transformations and data source's performance. We recommend that you check the status of the dataflow frequently.
 
 To navigate to the action bar, select the three dots “…” next to your dataflow.
