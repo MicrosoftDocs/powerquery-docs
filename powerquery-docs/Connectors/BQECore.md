@@ -1,84 +1,61 @@
 ---
 title: Power Query BQE Core connector
-description: Provides basic information, prerequisites, and instructions on how to connect to your database, along with known issues that may affect the connection.
+description: Provides basic information, prerequisites, and instructions on how to connect to BQE Core.
 author: cruzgreg
 
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 06/01/2020
+ms.date: 05/25/2020
 ms.author: bezhan
 
 LocalizationGroup: reference
 ---
 
-# BQE Core
+# BQE Core (Beta)
+
+>[!Note]
+>The following connector article is provided by BQE, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the BQE website and use the support channels there.
 
 ## Summary
 
-Core allows you to integrate with Microsoft Power BI. Power BI is a business intelligence service by Microsoft wherein you can track your business analytics and create reports and dashboards on it. It is a powerful tool that connects your various data sources and turns them into meaningful, centralized, visual and interactive insights for your business.
-
-Release state: Beta
-
-Products: Power BI Desktop, Power BI Service (Enterprise Gateway)
-
-Authentication Types Supported: BQE Core account
-
+| Item | Description |
+| ---- | ----------- |
+| Release State | Beta |
+| Products | Power BI (Datasets) |
+| Authentication Types Supported | BQE Core Account |
+| Function Reference Documentation | - |
 
 ## Prerequisites
 
-To use the BQE Core PowerBI connector, you must have a BQE Core account username and password.
+To use the BQE Core Power BI connector, you must have a BQE Core account with username and password.
 
+## Capabilities supported
 
-## Capabilities Supported
+* Import
 
-* Export
+## Connect to BQE Core from Power Query Desktop
 
-## Connect to BQE Core
+To connect to BQE Core data:
 
-To use Power BI with Core:
+1. Launch Power BI Desktop and enter the **Get Data** experience.
 
-1. Download Microsoft Power BI from their [Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=58494%20) and then install it on your computer.
-     
-2. Next, download the [BQE Core Power BI Connector](https://bqesoftwareinc.blob.core.windows.net/powerbi/BQEDataConnector.pqx). 
+2. From the **Other** category, select **BQEDataConnector**, and then select **Connect**.
 
-3. Open this downloaded file: Power BI and then go to File > Options and settings > Options.
+   ![Get Data](media/bqe-core/core-bi-9.png)
 
-![Options](media/bqe-core/core-bi-3.png)
+3. Select **Sign In**. You'll be prompted to sign in to Core.
 
-4. On the Options screen, select Security. Under Data Extensions, enable '(Not Recommended) Allow any extension to load without validation or warning.'
+   ![Login](media/bqe-core/core-bi-11.png)
 
-![Data Extensions](media/bqe-core/core-bi-4.png)
+4. In the sign in screen, enter your Core email and password. Select **Login**.
 
-5. Click OK and close Power BI.  
+5. You'll then be prompted to select your Core company file.
+   1. Select the Core company file you want to use.
+   1. (Optional) If you select **Remember my consent**, the next time you connect to this Core company file you won't need to grant permission again.
+   1. Select **Grant Permission**.
 
-6. Now re-open Power BI. There should be a folder in Documents called Microsoft Power BI Desktop. If there is none, manually create it with this exact name.
+   ![Grant Permissions](media/bqe-core/core-bi-13.png)
 
-![Documents](media/bqe-core/core-bi-6.png)
+6. Select **Connect**, and then select a module. For reference, review the API Reference under the [Core API Documentation](https://api-explorer.bqecore.com/).
 
-7. Within the Microsoft Power BI Desktop folder, there should be a folder called Custom Connectors. If it does not exist, manually create it with this exact name.
-
-8. Copy and paste the downloaded BQEDataConnector.pqx file to the Custom Connectors folder.
-
-![Custom Connectors](media/bqe-core/core-bi-8.png)
-
-9. Next, launch Power BI and go to File > Get Data > Other.
-
-![Get Data](media/bqe-core/core-bi-9.png)
-
-10. Select BQEDataConnector in the list (if it does not show up, then it is not saved in the correct Documents folder) and click Connect.
-
-11. Click Sign In. You will be prompted to log into Core.
-
-![Login](media/bqe-core/core-bi-11.png) 
-
-12. On the Log In screen, enter your Core Email and Password. Click Log in.
-
-13. You are prompted to select your Core company file. Click Grant Permission.
-
-![Grant Permissions](media/bqe-core/core-bi-13.png) 
-
-14. Next, click Connect and select a module on the left (say Client). For reference, check out the Core API Documentation > API Reference.
-
-15. Look at the Objects to get the fields; if they are filterable, look for [] that denotes the field can be expanded.
-
-
+7. From the Navigator, select the tables to load, and then select **Transform Data** to transform the data in Power Query.
