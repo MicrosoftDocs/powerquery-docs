@@ -262,12 +262,16 @@
         href: "Connectors/AdobeAnalytics.md"
       - name: "Anaplan"
         href: Connectors/Anaplan.md
+      - name: "AssembleViews (Beta)"
+        href: Connectors/AssembleViews.md
       - name: "Azure SQL database"
         href: Connectors/AzureSQLDatabase.md
       - name: "Azure Synapse Analytics (SQL DW)"
         href: Connectors/AzureSQLDataWarehouse.md
       - name: "Bloomberg Data and Analytics"
-        href: Connectors/BloombergDataAndAnalytics.md 
+        href: Connectors/BloombergDataAndAnalytics.md
+      - name: "BQE Core (Beta)"
+        href: Connectors/BQECore.md
       - name: "Common Data Service"
         href: ./connectors/dataverse.md
       - name: "Data Lake Storage"
@@ -370,6 +374,8 @@
         href: Connectors/SoftOneBI.md
       - name: "SQL Server database"
         href: Connectors/SQLServer.md
+      - name: "SumTotal (Beta)"
+        href: Connectors/SumTotal.md
       - name: "Text/CSV"
         href: Connectors/TextCSV.md
       - name: "XML"
