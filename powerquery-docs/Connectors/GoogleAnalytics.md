@@ -22,7 +22,7 @@ LocalizationGroup: reference
 | | |
 
 > [!NOTE]
-> Effective July 2021, Google will discontinue support for sign-ins to Google accounts from embedded browser frameworks. Due to this change, you will need to update your Power BI Desktop version to June 2021 to support signing in to Google.
+> Effective July 2021, Google will discontinue support for sign-ins to Google accounts from embedded browser frameworks. Due to this change, you will need to [update](https://powerbi.microsoft.com/downloads/) your Power BI Desktop version to June 2021 to support signing in to Google.
 
 ## Prerequisites
 
