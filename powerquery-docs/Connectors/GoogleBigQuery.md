@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for the Google BigQuer
 author: bezhan
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 5/18/2021
+ms.date: 06/29/2021
 ms.author: bezhan
 LocalizationGroup: reference
 ---
