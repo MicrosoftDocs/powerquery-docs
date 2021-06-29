@@ -123,6 +123,6 @@ The first operation changes the type to ```datetimezone```, and the second opera
 
 ### SharePoint Join Limit
 
-_This issue is limited to the SharePoint Online List v2.0 connector._
+**This issue is limited to the SharePoint Online List v2.0 connector**
 
-The SharePoint Online List v2.0 connector uses a different API than the v1.0 connector, and is therefore subject to a maximum of 12 join operations per query, as documented in the [SharePoint Online documentation](https://docs.microsoft.com/sharepoint/install/software-boundaries-and-limits-0?source=docs#list-and-library-limits) under _List view lookup threshold_. This will manifest as sharepoint queries failing when more than 12 columns are accessed simultaneously from a SharePoint list.
+The SharePoint Online List v2.0 connector uses a different API than the v1.0 connector, and is therefore subject to a maximum of 12 join operations per query, as documented in the [SharePoint Online documentation](/sharepoint/install/software-boundaries-and-limits-0?source=docs#list-and-library-limits) under **List view lookup threshold**. This will manifest as SharePoint queries failing when more than 12 columns are accessed simultaneously from a SharePoint list.
