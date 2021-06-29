@@ -17,7 +17,7 @@ LocalizationGroup: reference
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Power BI Desktop |
-| Authentication Types Supported | Organizational account |
+| Authentication Types Supported | Organizational account <br> Service account |
 | | |
 
 > [!NOTE]
@@ -30,6 +30,7 @@ You'll need a Google Account to log into Google BigQuery.
 ## Capabilities Supported
 
  * Import
+ * Direct Query
 
 ## Connection Instructions
 
@@ -56,6 +57,10 @@ To connect to Google BigQuery, follow these steps:
 ## Limitations and Considerations
 
 This section describes any limitations or considerations of the Google BigQuery connector.
+
+### Connecting to Google Big Query in Power BI Desktop
+
+Read about limitations and considerations in connecting to Google Big Query in Power BI Desktop in the documentation [here](/power-bi/connect-data/desktop-connect-bigquery#considerations-and-limitations).
 
 ### Nested Fields
 
