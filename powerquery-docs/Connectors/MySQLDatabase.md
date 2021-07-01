@@ -26,9 +26,8 @@ LocalizationGroup: reference
  
 ## Prerequisites
 
-By default, Power BI installs an OLE DB driver for MySQL database. However, for optimal performance, we recommend that the customer installs the [SQL Server Native Client](/sql/relational-databases/native-client/applications/installing-sql-server-native-client) before using the MySQL database connector. SQL Server Native Client 11.0 and SQL Server Native Client 10.0 are both supported in the latest version.
+Users need to install the [Oracle MySQL Connector/NET] package prior to using this connector in Power BI Desktop. This component must also be installed on the machine running the on-premises data gateway in order to use this connector in Power Query Online (dataflows) or Power BI Service. 
 
- 
 ## Capabilities Supported
 * Import
 * Advanced options
