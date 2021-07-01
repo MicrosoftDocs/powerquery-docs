@@ -17,7 +17,7 @@ LocalizationGroup: reference
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Power BI Desktop |
-| Authentication Types Supported | Organizational account |
+| Authentication Types Supported | Organizational account <br> Google service account |
 | | |
 
 > [!NOTE]
@@ -69,5 +69,9 @@ Users should select **Transform Data** and then use the JSON parsing capabilitie
 
 * Under the **Transforms** ribbon tab, the **Text Column** category, select **Parse** and then **JSON**.
 * Extract the JSON record fields using the **Expand Column** option.
+
+### Setting up Google service account
+
+For more information on setting up or using Google service accounts, read this [documentation page](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) from Google.
 
 
