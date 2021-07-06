@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for the Google BigQuer
 author: bezhan
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 5/18/2021
+ms.date: 07/06/2021
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -21,7 +21,7 @@ LocalizationGroup: reference
 | | |
 
 > [!NOTE]
-> Effective July 2021, Google will discontinue support for sign-ins to Google accounts from embedded browser frameworks. Due to this change, in late June 2021 you will need to update your Power BI Desktop version to June 2021 to support signing in to Google.
+> Effective July 2021, Google will discontinue support for sign-ins to Google accounts from embedded browser frameworks. Due to this change, you will need to [update](https://powerbi.microsoft.com/downloads/) your Power BI Desktop version to June 2021 to support signing in to Google.
 
 ## Prerequisites
 
@@ -74,5 +74,9 @@ Users should select **Transform Data** and then use the JSON parsing capabilitie
 
 * Under the **Transforms** ribbon tab, the **Text Column** category, select **Parse** and then **JSON**.
 * Extract the JSON record fields using the **Expand Column** option.
+
+### Setting up Google service account
+
+For more information on setting up or using Google service accounts, read [Creating and managing service account keys](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) in Google docs.
 
 

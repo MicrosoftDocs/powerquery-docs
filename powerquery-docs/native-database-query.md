@@ -61,6 +61,7 @@ The following Power Query connectors support native database queries.
 | Oracle database | SQL statement |
 | PostgreSQL | SQL statement |
 | SAP HANA database | SQL statement |
+| Snowflake | SQL statement |
 | SQL Server Analysis Services database | MDX or DAX query |
 | SQL Server database | SQL statement |
 | TIBCO(R) Data Virtualization (Beta) | SQL statement |
