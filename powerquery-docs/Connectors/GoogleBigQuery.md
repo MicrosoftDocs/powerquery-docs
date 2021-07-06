@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for the Google BigQuer
 author: bezhan
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 06/29/2021
+ms.date: 07/06/2021
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -72,6 +72,6 @@ Users should select **Transform Data** and then use the JSON parsing capabilitie
 
 ### Setting up Google service account
 
-For more information on setting up or using Google service accounts, read this [documentation page](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) from Google.
+For more information on setting up or using Google service accounts, read [Creating and managing service account keys](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) in Google docs.
 
 
