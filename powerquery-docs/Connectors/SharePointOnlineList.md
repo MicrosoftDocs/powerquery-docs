@@ -4,7 +4,7 @@ description: Provides basic information and how to connect to your data, along w
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 5/1/2020
+ms.date: 07/06/2021
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -43,17 +43,17 @@ To connect to a SharePoint Online List:
 
 3. Paste the address into the **Site URL** field in the open dialog box.
 
-   ![Folder selection](./media/sharepoint-online-list/sharepointonlinelisturl.png)
+   ![Folder selection](./media/sharepoint-online-list/sharepointOnlineListUrl.png)
 
    If the URL address you enter is invalid, a ![Warning icon](../images/webwarning.png) warning icon will appear next to the **Site URL** textbox.
 
 4. You may or may not see a SharePoint access screen like the following image.  If you don't see it, skip to step 8. If you do see it, select the type of credentials you will use to access your SharePoint site on the left side of the page (in this example, a Microsoft account).
 
-   ![Choose Microsoft account](./media/sharepoint-online-list/sharepointonlinelistsignin.png)
+   ![Choose Microsoft account](./media/sharepoint-online-list/sharepointOnlineListSignIn.png)
    
 5. Select the level to you want to apply these sign in settings to.
 
-   ![Select the authentication level](./media/sharepoint-online-list/sharepointonlinelistlevel.png)
+   ![Select the authentication level](./media/sharepoint-online-list/sharepointOnlineListLevel.png)
 
    The level you select for the authentication method determines what part of a URL will have the authentication method applied to it. If you select the top-level web address, the authentication method you select here will be used for that URL address or any sub-address within that address. However, you might not want to set the top URL address to a specific authentication method because different sub-addresses could require different authentication methods. For example, if you were accessing two separate folders of a single SharePoint site and wanted to use different Microsoft Accounts to access each one.
    
@@ -64,13 +64,13 @@ To connect to a SharePoint Online List:
 
 6. Select **Sign In** and enter the user name and password you use to sign in to Microsoft Office 365.
 
-   ![Sign in to your Microsoft account](./media/sharepoint-online-list/sharepointonlinelistsignin2.png)
+   ![Sign in to your Microsoft account](./media/sharepoint-online-list/sharepointOnlineListSignIn2.png)
    
 7. When you finish signing in, select **Connect**.
 
 8. From the **Navigator** dialog, you can select a location, then either transform the data in the Power Query editor by selecting **Transform Data**, or load the data by selecting **Load**.
 
-   ![Select the list checkbox](./media/sharepoint-online-list/sharepointonlinelistnavigator.png)
+   ![Select the list checkbox](./media/sharepoint-online-list/sharepointOnlineListNavigator.png)
    
 ## Connect to Sharepoint Online List v2.0 (Beta)
 
@@ -120,3 +120,9 @@ To get time into local time, the user must do the same conversion that the Share
 ```
 
 The first operation changes the type to ```datetimezone```, and the second operation converts it to the computer's local time.
+
+### SharePoint Join Limit
+
+**This issue is limited to the SharePoint Online List v2.0 connector**
+
+The SharePoint Online List v2.0 connector uses a different API than the v1.0 connector, and is therefore subject to a maximum of 12 join operations per query, as documented in the [SharePoint Online documentation](/sharepoint/install/software-boundaries-and-limits-0?source=docs#list-and-library-limits) under **List view lookup threshold**. This will manifest as SharePoint queries failing when more than 12 columns are accessed simultaneously from a SharePoint list.
