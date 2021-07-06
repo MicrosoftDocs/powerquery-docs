@@ -272,6 +272,8 @@
         href: Connectors/DataLakeStorage.md
       - name: "Dataverse"
         href: Connectors/dataverse.md
+      - name: "Essbase"
+        href: Connectors/Essbase.md
       - name: "Excel"
         href: Connectors/Excel.md
       - name: "FHIR"
