@@ -341,7 +341,7 @@ The query you're trying to execute is producing results greater than the Oracle 
 
 Retry to load the data and if the problem persists, try to increase to a longer timeout interval or filter the data further. If the problem still persists, try the resolution on [Symptoms 3](#timeout3).
 
-<a href="timeout3"></a>
+<a name="timeout3"></a>
 **Symptom 3**
 
 Essbase Analytic Provider Services (APS) or Essbase server indicates a large number of connections with long running sessions.
