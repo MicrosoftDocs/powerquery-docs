@@ -71,7 +71,7 @@ To connect to an Essbase server:
 
 ## Using data source navigator when importing data
 
-When **Data Connectivity mode** is set to **Import**, the data source navigator loads the servers configured for the APS server you’ve provided in the URL. Expanding a server node in the tree reveals the available applications. Expanding an application node reveals the available databases (also known as cubes). Expanding a database node reveals the available measures and dimensions. The dimension can be further expanded to reveal the levels in the hierarchy for each dimension.
+When **Data Connectivity mode** is set to **Import**, the data source navigator loads the servers configured for the APS server you've provided in the URL. Expanding a server node in the tree reveals the available applications. Expanding an application node reveals the available databases (also known as cubes). Expanding a database node reveals the available measures and dimensions. The dimension can be further expanded to reveal the levels in the hierarchy for each dimension.
 
 Choose a measure and all (or specific) dimension levels by selecting the checkbox next to the name. A preview of the data is provided in the pane on the right. You can select the **Load** button to retrieve the data associated with the selection or select the **Transform Data** button to set further filters on the data before loading it in Power BI.
 
@@ -99,7 +99,7 @@ So, the grouping of the hierarchical levels makes it easier to select what to im
 
 ## Using data source navigator for DirectQuery
 
-When a **Data Connectivity mode** of **DirectQuery** is chosen, the data source navigator loads the servers configured for the APS server you’ve provided in the URL. Expanding a server node in the tree reveals the available applications. Expanding an application node reveals the available databases (also known as cubes).
+When a **Data Connectivity mode** of **DirectQuery** is chosen, the data source navigator loads the servers configured for the APS server you've provided in the URL. Expanding a server node in the tree reveals the available applications. Expanding an application node reveals the available databases (also known as cubes).
 
 ![Essbase Direct Query data navigator selections](./media/essbase/direct-query-data-navigator.png)
 
@@ -218,7 +218,7 @@ You're now ready to create reports and visualizations.
 
 ## Iterative filter application when adding dimension levels in DirectQuery mode
 
-When interacting in DirectQuery mode with a multidimensional cube data source (like Oracle’s Essbase), Power BI displays the cube’s dimensions and levels in the **Fields** pane.
+When interacting in DirectQuery mode with a multidimensional cube data source (like Oracle's Essbase), Power BI displays the cube's dimensions and levels in the **Fields** pane.
 
 [ ![Dimension and levels](./media/essbase/iterative-DQ-dimensions-and-levels.png) ](./media/essbase/iterative-DQ-dimensions-and-levels.png#lightbox)
 
@@ -228,23 +228,23 @@ To view and filter based on dimension members:
 
    [ ![Add fields here](./media/essbase/iterative-DQ-add-fields-here.png) ](./media/essbase/iterative-DQ-add-fields-here.png#lightbox)
 
-2. Once a dimension’s level is in the **Filter** pane and the filter type is set to **Basic filtering**, you’ll notice that the members of that dimension’s level are displayed as a list of available filters.
+2. Once a dimension's level is in the **Filter** pane and the filter type is set to **Basic filtering**, you'll notice that the members of that dimension's level are displayed as a list of available filters.
 
 3. You can check the members you want to include in your result.
 
-   Or you can select the Select all option, then uncheck the members you don’t want to include in your result.
+   Or you can select the Select all option, then uncheck the members you don't want to include in your result.
 
    Type some characters in the search field for that filter to find members in the list.
 
    [ ![Check members you want](./media/essbase/iterative-DQ-check-members-you-want.png) ](./media/essbase/iterative-DQ-check-members-you-want.png#lightbox)
 
-4. When you have filters for two or more levels of the same dimension, you’ll notice that selecting members from a higher level in the dimension changes the members available in the lower levels of that dimension.
+4. When you have filters for two or more levels of the same dimension, you'll notice that selecting members from a higher level in the dimension changes the members available in the lower levels of that dimension.
 
     This cross highlighting/filtering behavior can be disabled by checking the **Disabling cross highlighting/filtering by default** option, as described in [Query reductions options](#query-reductions-options).
 
    [ ![Notice member for filtering changed](./media/essbase/iterative-DQ-notice-member-for-filtering-changed.png) ](./media/essbase/iterative-DQ-notice-member-for-filtering-changed.png#lightbox)
 
-5. When you’ve finished choosing the members you want in the dimension level filter, it’s a good time to add that dimension level to your visualization. Check the matching dimension level in the **Fields** pane and it's then added to your current visualization.
+5. When you've finished choosing the members you want in the dimension level filter, it's a good time to add that dimension level to your visualization. Check the matching dimension level in the **Fields** pane and it's then added to your current visualization.
 
    [ ![Add new dimensions](./media/essbase/iterative-DQ-add-new-dimensions.png) ](./media/essbase/iterative-DQ-add-new-dimensions.png#lightbox)
 
@@ -358,7 +358,7 @@ Retry to load the data.
 
 **Symptom**
 
-An MDX statement returns the error message "The key didn’t match any rows in the table".
+An MDX statement returns the error message "The key didn't match any rows in the table".
 
 **Resolution**
 
@@ -376,7 +376,7 @@ An MDX statement returns the error message "Unable to get the cube name from the
 
 **Resolution**
 
-Ensure the database name in the MDX statement’s FROM clause is fully qualified with the application and database name, for example, [Sample.Basic]. Select the **Edit** button and correct the fully qualified database name in the MDX statement’s FROM clause.
+Ensure the database name in the MDX statement's FROM clause is fully qualified with the application and database name, for example, [Sample.Basic]. Select the **Edit** button and correct the fully qualified database name in the MDX statement's FROM clause.
 
 **Validation**
 
@@ -390,7 +390,7 @@ An MDX statement returns the error message "Essbase Error (1260060): The cube na
 
 **Resolution**
 
-Ensure the application name and the fully qualified database name in the FROM clause match. Select the **Edit** button and correct either the application name or the fully qualified database name in the MDX statement’s FROM clause
+Ensure the application name and the fully qualified database name in the FROM clause match. Select the **Edit** button and correct either the application name or the fully qualified database name in the MDX statement's FROM clause
 
 **Validation**
 
@@ -405,7 +405,7 @@ Loading a dimension returns the error message "Essbase Error (1200549): Repeated
 **Resolution**
 
 1. Sign in to the Essbase server, open the Essbase Administration Services Console and sign in with an admin user (or whoever has permissions over the problematic database).
-2. Navigate to the Essbase server → application → database with the problematic "Measures" dimension.
+2. Navigate to the Essbase server > application > database with the problematic "Measures" dimension.
 3. Unlock the outline of the database and edit it.
 4. Determine which dimension should be the "Accounts" dimension type. Right-click it and select **Edit member properties…**.
 5. Select the Dimension Type field and set it to **Accounts**. Select **OK**.
