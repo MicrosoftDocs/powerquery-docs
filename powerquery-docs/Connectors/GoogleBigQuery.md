@@ -39,7 +39,7 @@ To connect to Google BigQuery from Power Query Desktop, take the following steps
 
     ![Get Data from Google BigQuery](./media/google-bigquery/GetData.png)
 
-2. The Google BigQuery connector supports connecting through an organizational account or a service account login. In this example, you'll use the organizational account to sign in. Select **Sign In** to proceed.
+2. The Google BigQuery connector supports connecting through an organizational account or a service account sign-in. In this example, you'll use the organizational account to sign in. Select **Sign In** to continue.
 
     ![Sign in to Google BigQuery](./media/google-bigquery/SignIn.png)
 
@@ -61,11 +61,11 @@ To connect to Google BigQuery from Power Query Desktop, take the following steps
 
 To connect to Google BigQuery from Power Query Online, take the following steps:
 
-1. In the Get Data experience, select the **Database** category and then select **Google BigQuery**.
+1. In the Get Data experience, select the **Database** category, and then select **Google BigQuery**.
 
     ![Image of Get Data dialog box with emphasis on the Database connector category and the Google BigQuery connector](./media/google-bigquery/get-data-online.png)
 
-2. In the **Google BigQuery Database** dialog, you may need to either create a new connection or select an existing connection. If you are using on-premises data, select an on-premises data gateway. Then select **Sign in**.
+2. In the **Google BigQuery Database** dialog, you may need to either create a new connection or select an existing connection. If you're using on-premises data, select an on-premises data gateway. Then select **Sign in**.
 
     ![Image of sign in dialog box](./media/google-bigquery/sign-in-online.png)
 
@@ -89,11 +89,11 @@ This section describes any limitations or considerations of the Google BigQuery 
 
 ### Connecting to Google Big Query in Power BI Desktop
 
-For more information about limitations and considerations in connecting to Google Big Query in Power BI, go to [Considerations and limitations](/power-bi/connect-data/desktop-connect-bigquery#considerations-and-limitations).
+For more information about limitations and considerations when connecting to Google Big Query, go to [Considerations and limitations](/power-bi/connect-data/desktop-connect-bigquery#considerations-and-limitations).
 
 ### Nested fields
 
-To optimize performance considerations, Google BigQuery performs well with large datasets when denormalized, flattened, and nested.
+To optimize performance considerations, Google BigQuery does well with large datasets when denormalized, flattened, and nested.
 
 The Google BigQuery connector supports nested fields, which are loaded as text columns in JSON format.
 
