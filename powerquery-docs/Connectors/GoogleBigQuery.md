@@ -25,7 +25,7 @@ LocalizationGroup: reference
 
 ## Prerequisites
 
-You'll need a Google Account to sign in to Google BigQuery.
+You'll need a Google account or a Google service account to sign in to Google BigQuery.
 
 ## Capabilities supported
 
