@@ -6,7 +6,6 @@ ms.service: powerquery
 ms.reviewer: kvivek
 ms.date: 04/09/2021
 ms.author: dhsundar
-ms.custom: edited
 ms.custom: intro-internal
 ---
 
