@@ -5,7 +5,8 @@ author: radacad
 ms.service: powerquery 
 ms.topic: conceptual 
 ms.date: 6/10/2021 
-ms.author: gepopell  
+ms.author: gepopell
+ms.custom: intro-internal  
 
 ---
 

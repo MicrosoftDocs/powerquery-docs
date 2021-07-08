@@ -8,6 +8,7 @@ ms.service: powerquery
 ms.topic: tutorial
 ms.date: 12/09/2019
 ms.author: gepopell
+ms.custom: intro-internal
 
 LocalizationGroup: reference
 ---

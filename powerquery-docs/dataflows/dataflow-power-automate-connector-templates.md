@@ -8,6 +8,7 @@ ms.reviewer: kvivek
 ms.topic: conceptual
 ms.date: 12/15/2020
 ms.author: mideboer
+ms.custom: intro-internal
 ---
 # Power Automate Templates for the Dataflows Connector
 
