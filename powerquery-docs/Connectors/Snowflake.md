@@ -27,9 +27,10 @@ LocalizationGroup: reference
 ## Capabilities Supported
 
 - Import
-- DirectQuery (Power BI only, learn more)
+- DirectQuery (Power BI only)
 - Advanced options
   - Specify a text value to use as Role name
+  - Native SQL statement
   - Relationship columns
   - Connection timeout in seconds
   - Command timeout in seconds
