@@ -7,6 +7,7 @@ ms.service: powerquery
 ms.topic: conceptual
 ms.date: 12/10/2020
 ms.author: gepopell
+ms.custom: intro-internal
 
 LocalizationGroup: reference
 ---
