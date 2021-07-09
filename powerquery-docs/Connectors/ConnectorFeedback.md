@@ -20,16 +20,16 @@ This section outlines instructions to receive support or submit feedback on Micr
 
 ### Support and troubleshooting
 
-If you are encountering an issue with a Power Query connector, use the dedicated support channels for the product you are using Power Query connectors within. For example, for Power BI, visit the [Power BI support page](https://powerbi.microsoft.com/support/).
+If you're finding an issue with a Power Query connector, use the dedicated support channels for the product you're using Power Query connectors within. For example, for Power BI, visit the [Power BI support page](https://powerbi.microsoft.com/support/).
 
-If you are seeking help with using Microsoft-owned Power Query connectors, please visit one of the following resources.
+If you're seeking help with using Microsoft-owned Power Query connectors, visit one of the following resources.
 * [Power Query on Microsoft Q&A](https://docs.microsoft.com/answers/products/pwrqry)
-* Community forums for the product you are using Power Query within. For example, for Power BI, this would be the [Power BI Community](https://community.powerbi.com/t5/Power-Query/bd-p/power-bi-services)
+* Community forums for the product you're using Power Query within. For example, for Power BI, this forum would be the [Power BI Community](https://community.powerbi.com/t5/Power-Query/bd-p/power-bi-services)
 * [Power Query website resources](https://powerquery.microsoft.com/resources/)
 
 ### Submitting feedback
 
-To submit feedback about a Microsoft-owned connector, we ask that you provide the feedback to the "ideas" forum for the product you are using Power Query connectors within. For example, for Power BI, visit the [Power BI ideas forum](https://ideas.powerbi.com). If you have one, you can also provide feedback directly to your Microsoft account contact.
+To submit feedback about a Microsoft-owned connector, provide the feedback to the "ideas" forum for the product you're using Power Query connectors within. For example, for Power BI, visit the [Power BI ideas forum](https://ideas.powerbi.com). If you have one, you can also provide feedback directly to your Microsoft account contact.
 
 ## Non-Microsoft-owned connectors
 
@@ -39,8 +39,8 @@ This section outlines instructions to receive support or submit feedback on non-
 
 For non-Microsoft-owned connectors, support and troubleshooting asks should go to the connector owner through their support channels. For example, for a Contoso-owned connector, you should submit a request through the Contoso support channels. 
 
-You may also engage the Power Query community resources indicated above for Microsoft-owned connectors, in case a member of the community is able to assist.
+You may also engage the Power Query community resources indicated above for Microsoft-owned connectors, in case a member of the community can assist.
 
 ### Submitting feedback
 
-As non-Microsoft-owned connectors are managed and updated by the respective connector owner, feedback on connectors should be sent directly to the connector owner. For example, to submit feedback about a Contoso-owned connector, you should directly submit feedback to Contoso.
+As non-Microsoft-owned connectors are managed and updated by the respective connector owner, feedback should be sent directly to the connector owner. For example, to submit feedback about a Contoso-owned connector, you should directly submit feedback to Contoso.
