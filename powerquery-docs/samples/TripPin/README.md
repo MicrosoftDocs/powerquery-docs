@@ -2,13 +2,11 @@
 title: TripPin tutorial sequence
 description: Overview and listing of the TripPin connector development tutorial sequence.
 author: cpopell
-manager: kfile
-
 ms.service: powerquery
 ms.topic: tutorial
 ms.date: 12/2/2019
 ms.author: gepopell
-ms.custom: intro-internal
+ms.custom:
 
 LocalizationGroup: reference
 ---
