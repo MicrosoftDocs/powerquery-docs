@@ -396,6 +396,8 @@
         href: CommonIssues.md
       - name: "Review script changes"
         href: review-script-changes.md
+      - name: "Connector support and feedback"
+        href: Connectors/ConnectorFeedback.md
     - name: Create custom Power Query connectors
       items:
       - name: Quick starts
