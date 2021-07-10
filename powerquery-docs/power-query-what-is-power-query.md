@@ -6,8 +6,8 @@ ms.service: powerquery
 ms.topic: overview
 ms.date: 07/27/2020
 ms.author: millopis
+ms.custom: intro-internal
 LocalizationGroup: Get started
-ms.custom: edited
 ---
 
 # What is Power Query?

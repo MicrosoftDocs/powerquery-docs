@@ -2,12 +2,11 @@
 title: GitHub tutorial for Power Query
 description: Writing a GitHub connector for Power Query including OAuth
 author: cpopell
-manager: kfile
-
 ms.service: powerquery
 ms.topic: tutorial
 ms.date: 12/09/2019
 ms.author: gepopell
+ms.custom: 
 
 LocalizationGroup: reference
 ---
