@@ -18,7 +18,7 @@ LocalizationGroup: reference
 | Release State                    | General Availability                                                         |
 | Products                         | Power BI (Datasets)                                                          |
 | Authentication Types Supported   | Basic (Username/Password)                                                    |
-| Function Reference Documentation | [Essbase.Cubes](https://docs.microsoft.com/en-us/powerquery-m/essbase-cubes) |
+| Function Reference Documentation | [Essbase.Cubes](/powerquery-m/essbase-cubes)                                 |
 |                                  |                                                                              |
 
 > [!Note]
