@@ -6,6 +6,7 @@ ms.service: powerquery
 ms.topic: conceptual
 ms.date: 04/02/2021
 ms.author: bezhan
+ms.custom: intro-internal
 
 LocalizationGroup: reference
 ---
