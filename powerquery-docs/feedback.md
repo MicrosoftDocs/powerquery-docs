@@ -19,7 +19,7 @@ For Power Query connectors, see [Feedback and support for Power Query connectors
 If you're finding an issue with Power Query, use the dedicated support channels for the product you're using Power Query within. For example, for Power BI, visit the [Power BI support page](https://powerbi.microsoft.com/support/).
 
 You may also use any of the following community resources:
-* [Power Query on Microsoft Q&A](https://docs.microsoft.com/answers/products/pwrqry)
+* [Power Query on Microsoft Q&A](/answers/products/pwrqry)
 * Community forums for the product you're using Power Query within. For example, for Power BI, this forum would be the [Power BI Community](https://community.powerbi.com/t5/Power-Query/bd-p/power-bi-services)
 * [Power Query website resources](https://powerquery.microsoft.com/resources/)
 

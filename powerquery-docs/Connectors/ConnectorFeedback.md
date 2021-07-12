@@ -23,7 +23,7 @@ This section outlines instructions to receive support or submit feedback on Micr
 If you're finding an issue with a Power Query connector, use the dedicated support channels for the product you're using Power Query connectors within. For example, for Power BI, visit the [Power BI support page](https://powerbi.microsoft.com/support/).
 
 If you're seeking help with using Microsoft-owned Power Query connectors, visit one of the following resources.
-* [Power Query on Microsoft Q&A](https://docs.microsoft.com/answers/products/pwrqry)
+* [Power Query on Microsoft Q&A](/answers/products/pwrqry)
 * Community forums for the product you're using Power Query within. For example, for Power BI, this forum would be the [Power BI Community](https://community.powerbi.com/t5/Power-Query/bd-p/power-bi-services)
 * [Power Query website resources](https://powerquery.microsoft.com/resources/)
 
