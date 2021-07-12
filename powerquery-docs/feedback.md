@@ -12,7 +12,9 @@ ms.author: bezhan
 
 This article describes how to get support or submit feedback for Power Query.
 
-For Power Query connectors, see [Feedback and support for Power Query connectors](Connectors/ConnectorFeedback.md).
+For **Power Query connectors**, see [Feedback and support for Power Query connectors](Connectors/ConnectorFeedback.md).
+
+For **Power Query documentation**, you can submit feedback through the **Submit and view feedback for - This page** link at the bottom of each article. 
 
 ## Support and troubleshooting
 
