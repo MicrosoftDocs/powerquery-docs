@@ -220,6 +220,8 @@
       href: keyboard-shortcuts.md
     - name: Best practices
       href: best-practices.md
+    - name: Feedback and support
+      href: feedback.md
     - name: Advanced topics
       items:
       - name: "Query folding"
