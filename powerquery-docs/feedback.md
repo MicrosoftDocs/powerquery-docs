@@ -10,7 +10,7 @@ ms.author: bezhan
 
 # Power Query Feedback
 
-This article describes how to submit feedback for Power Query. Depending on if you are looking for Power Query support or to send feedback about Power Query, you should be leveraging different channels, as described below.
+This article describes how to get support or submit feedback for Power Query.
 
 For Power Query connectors, see [Feedback and support for Power Query connectors](Connectors/ConnectorFeedback.md).
 
