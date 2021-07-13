@@ -64,7 +64,7 @@ shared MyExtension.UnitTest =
 ```
 Running the sample in Visual Studio will evaluate all of the Facts and give you a visual summary of the pass rates:
 
-![Example of pass rates](images/UnitTesting1.png)
+![Example of pass rates.](images/UnitTesting1.png)
 
 Implementing unit testing early in the connector development process enables you to follow the principles of test-driven development. Imagine that you need to write a function called `Uri.GetHost` that returns only the host data from a URI. You might start by writing a test case to verify that the function appropriately performs the expected function:
 
@@ -91,8 +91,8 @@ Uri.GetHost = (url) =>
         parts[Scheme] & "://" & parts[Host]
 ```
 
-![Some tests fail](images/UnitTestingFailure.png)
+![Some tests fail.](images/UnitTestingFailure.png)
 
 The [final version of the function](HelperFunctions.md) should pass all unit tests. This also makes it easy to ensure that future updates to the function do not accidentally remove any of its basic functionality.
 
-![All tests pass](images/UnitTestingPass.png)
+![All tests pass.](images/UnitTestingPass.png)

@@ -40,13 +40,13 @@ shared TripPin.Contents =  Value.ReplaceType(TripPinNavTable, type function (url
 
 The first time you run a query that uses one of the functions, you'll receive a credential prompt with drop downs that lets you select a path and an authentication type. 
 
-![Credentials with Paths](../../../images/trippin4Paths.png)
+![Credentials with Paths.](../../../images/trippin4Paths.png)
 
 If you run the same query again, with the same parameters, the M engine is able to locate the cached credentials, and no credential prompt is shown. If you modify the `url` argument to your function so that the base path no longer matches, a new credential prompt is displayed for the new path.
 
 You can see any cached credentials on the Credentials table in the **M Query Output** window.
 
-![Credentials tab](../../../images/trippin4CredentialsTab.png)
+![Credentials tab.](../../../images/trippin4CredentialsTab.png)
 
 Depending on the type of change, modifying the parameters of your function will likely result in a credential error. 
 
@@ -82,7 +82,7 @@ TripPin.Feed = (url as text) =>
 
 If you update the `TripPin.Contents()` call in your `TripPin.query.pq` file and run it in Visual Studio, you'll see a new credential prompt. Note that there is now a single Data Source Path value&mdash;TripPin.
 
-![Credentials with no path](../../../images/trippin4NewPrompt.png)
+![Credentials with no path.](../../../images/trippin4NewPrompt.png)
 
 ## Improving the Navigation Table
 In the [first tutorial](../1-OData/README.md) you used the built-in `OData` functions to connect to the TripPin service.
@@ -90,7 +90,7 @@ This gave you a really nice looking navigation table, based on the TripPin servi
 The [OData.Feed](/powerquery-m/odata-feed) function automatically did the hard work for you.
 Since you're "roughing it" by using [Web.Contents](/powerquery-m/web-contents) rather than [OData.Feed](/powerquery-m/odata-feed), you'll need to recreate this navigation table yourself. 
 
-![OData Navigator](../../../images/trippin4NavigatorOData.png)
+![OData Navigator.](../../../images/trippin4NavigatorOData.png)
 
 You're going to make the following changes:
 1. Define a list of items to show in your navigation table
@@ -139,7 +139,7 @@ Note that [Uri.Combine](/powerquery-m/uri-combine) uses the following rules when
 
 The following image shows examples of this:
 
-![Uri.Combine example](../../../images/trippin4UriCombine.png)
+![Uri.Combine example.](../../../images/trippin4UriCombine.png)
 
 ### Remove the Entity Specific Functions
 To make your connector easier to maintain, you'll remove the entity specific formatting functions you used in the previous lesson&mdash;`GetAirlineTables` and `GetAirportsTable`.
@@ -167,7 +167,7 @@ TripPin.Feed = (url as text) =>
 ## Conclusion
 In this tutorial, you cleaned up and simplified your connector by fixing your Data Source Path value, and moving to a more flexible format for your navigation table. After completing these steps (or using the sample code in this directory), the `TripPin.Contents` function returns a navigation table in Power BI Desktop.
 
-![Navigator](../../../images/trippin4Complete.png)
+![Navigator.](../../../images/trippin4Complete.png)
 
 ## Next steps
 

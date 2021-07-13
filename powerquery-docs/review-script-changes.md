@@ -38,4 +38,4 @@ When you commit a query, Power Query Online will evaluate it to see if the 'stor
 - If you accept, the changes will be made to your query. 
 - If you cancel, you might rewrite your query to make sure that you move your comments properly, or rearrange however else you want.
 
-![Review Script Changes pane depicting a diff between what is committed and what is saved](images/review-script-changes.png "Review Script Changes pane")
+![Review Script Changes pane depicting a diff between what is committed and what is saved.](images/review-script-changes.png "Review Script Changes pane")

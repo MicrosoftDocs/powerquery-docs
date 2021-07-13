@@ -22,14 +22,14 @@ Dataflows created in Power BI are always analytical dataflows. Dataflows created
 
 A standard dataflow loads data to Dataverse tables. Standard dataflows can only be created in Power Apps. One benefit of creating this type of dataflow is that any application that depends on data in Dataverse can work with the data created by standard dataflows. Typical applications that leverage Dataverse tables are Power Apps, Power Automate, AI Builder and Power Virtual Agents.  
 
-![Creating a standard dataflow](media/analytical-standard-dataflows/create-standard-dataflow.png) 
+![Creating a standard dataflow.](media/analytical-standard-dataflows/create-standard-dataflow.png) 
 
 ### Standard dataflows versions
 
 We've been working on significant updates to standard dataflows to improve their performance and reliability. These improvements will eventually be available to all standard dataflows. But in the interim, we'll differentiate between existing standard dataflows (version 1) and new standard dataflows (version 2) by adding a version indicator in Power Apps.
 
 > [!div class="mx-imgBorder"]
-> ![Standard dataflow versions](media/analytical-standard-dataflows/Standard-Dataflow-Version-Indication.png) 
+> ![Standard dataflow versions.](media/analytical-standard-dataflows/Standard-Dataflow-Version-Indication.png) 
 
 ### Standard dataflow versions feature comparison
 
@@ -53,17 +53,17 @@ Analytical dataflows are capable additional analytical features. For example, in
 
 You can create analytical dataflows in Power BI. By default, they'll load data to Power BI’s managed storage. But you can also configure Power BI to store the data in the organization’s Azure Data Lake Storage. 
 
-![Creating an analytical dataflow in Power BI](media/analytical-standard-dataflows/create-analytical-dataflow-powerbi.png) 
+![Creating an analytical dataflow in Power BI.](media/analytical-standard-dataflows/create-analytical-dataflow-powerbi.png) 
 
 You can also create analytical dataflows in Power Apps and Dynamics 365 customer insights portals. When you're creating a dataflow in Power Apps portal, you can choose between Dataverse manages analytical storage or in your organization’s Azure Data Lake Storage account. 
 
-![Creating Analytical Dataflow in Power Platform](media/analytical-standard-dataflows/create-analytical-dataflow-power-platform.png) 
+![Creating Analytical Dataflow in Power Platform.](media/analytical-standard-dataflows/create-analytical-dataflow-power-platform.png) 
 
 ### AI Integration 
 
 Sometimes, depending on the requirement, you might need to apply some AI and machine learning functions on the data through the dataflow. These functionalities are available in Power BI dataflows and require a Premium workspace. 
 
-![AI insights in an analytical dataflow](media/analytical-standard-dataflows/dataflow-ai-functions.png) 
+![AI insights in an analytical dataflow.](media/analytical-standard-dataflows/dataflow-ai-functions.png) 
 
 The following articles discuss how to use AI functions in a dataflow: 
 
@@ -79,7 +79,7 @@ One of the reasons to use a computed entity is the ability to process large amou
 
 The computed entity helps with the performance of the data transformations. Instead of re-doing the transformations needed in the first entity multiple times, the transformation will be done only once in the computed entity. Then the result will be used multiple times in other entities. 
 
-![Computed entity in an analytical dataflow](media/analytical-standard-dataflows/computed-entity-in-dataflow.png) 
+![Computed entity in an analytical dataflow.](media/analytical-standard-dataflows/computed-entity-in-dataflow.png) 
 
 To learn more about computed entities, see [Using computed entities on Power BI Premium](/power-bi/service-dataflows-computed-entities-premium). 
 

@@ -15,13 +15,13 @@ ms.author: mideboer
 
 In this step-by-step tutorial, we will show you how to set up your own monitoring dashboard for all of your dataflows:
 
-![example of monitoring dashboard](media/dashboard.PNG)
+![example of monitoring dashboard.](media/dashboard.PNG)
 
 You can use this dashboard to monitor your dataflows' refresh duration and failure count. With this dashboard, you can track any issues with your dataflows performance and share the data with others. 
 
 First, you will create a new Dataverse table which stores all the metadata from the dataflow run. For every refresh of a dataflow, a record is added to this table. You can also store metadata for multiple dataflows runs in the same table. After the table is created, you will connect the Power BI file to the Dataverse table.
 
-![dataverse tutorial overview](media/dataverse.PNG)
+![dataverse tutorial overview.](media/dataverse.PNG)
 
 ## Prerequisites
 * [Power BI Desktop](https://www.microsoft.com/download/details.aspx?id=58494).
@@ -61,7 +61,7 @@ If you do not already have one, create a dataflow. This can be done in either [P
 * Navigate to [Power Automate](https://flow.microsoft.com).
 * Search for the template "When a dataflow refresh completes, output status into CDS entity". If you encounter issues, see these [instructions](/power-automate/get-started-logic-template).
 
-![example of template](media/connector.PNG)
+![example of template.](media/connector.PNG)
 
 * Customize the flow. Actions that require input from you will automatically be expanded.
 
@@ -79,11 +79,11 @@ If you do not already have one, create a dataflow. This can be done in either [P
     For every required field, you need to add a dynamic value. This value is the output of the metadata of the dataflow run. 
     * Select the field next to **Dataflow ID** and then select the lightning button.
     
-    ![example of lightning button](media/dynamic.png)
+    ![example of lightning button.](media/dynamic.png)
 
     * Repeat this process for all required fields.
     
-    ![example of required fields](media/final.PNG)  
+    ![example of required fields.](media/final.PNG)  
 
 * Save the flow.
 

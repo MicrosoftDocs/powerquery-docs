@@ -47,17 +47,17 @@ To connect to a SharePoint List:
 
 3. Paste the address into the **Site URL** field in the open dialog box.
 
-   ![Folder selection](./media/sharepoint-list/sharepointlisturl.png)
+   ![Folder selection.](./media/sharepoint-list/sharepointlisturl.png)
 
-   If the URL address you enter is invalid, a ![Warning icon](../images/webwarning.png) warning icon will appear next to the **Site URL** textbox.
+   If the URL address you enter is invalid, a ![Warning icon.](../images/webwarning.png) warning icon will appear next to the **Site URL** textbox.
 
 4. You may or may not see a SharePoint access screen like the following image.  If you don't see it, skip to step 8. If you do see it, select the type of credentials you will use to access your SharePoint site on the left side of the page (in this example, a Microsoft account).
 
-   ![Choose Microsoft account](./media/sharepoint-list/sharepointlistsignin.png)
+   ![Choose Microsoft account.](./media/sharepoint-list/sharepointlistsignin.png)
    
 5. Select the level to you want to apply these sign in settings to.
 
-   ![Select the authentication level](./media/sharepoint-list/sharepointlistlevel.png)
+   ![Select the authentication level.](./media/sharepoint-list/sharepointlistlevel.png)
 
    The level you select for the authentication method determines what part of a URL will have the authentication method applied to it. If you select the top-level web address, the authentication method you select here will be used for that URL address or any sub-address within that address. However, you might not want to set the top URL address to a specific authentication method because different sub-addresses could require different authentication methods. For example, if you were accessing two separate folders of a single SharePoint site and wanted to use different Microsoft Accounts to access each one.
    
@@ -68,13 +68,13 @@ To connect to a SharePoint List:
 
 6. Select **Sign In** and enter the user name and password you use to sign in to Microsoft Office 365.
 
-   ![Sign in to your Microsoft account](./media/sharepoint-list/sharepointlistsignin2.png)
+   ![Sign in to your Microsoft account.](./media/sharepoint-list/sharepointlistsignin2.png)
    
 7. When you finish signing in, select **Connect**.
 
 8. From the **Navigator** dialog, you can select a location, then either transform the data in the Power Query editor by selecting **Transform Data**, or load the data by selecting **Load**.
 
-   ![Select the list checkbox](./media/sharepoint-list/sharepointlistnavigator.png)
+   ![Select the list checkbox.](./media/sharepoint-list/sharepointlistnavigator.png)
 
 ## Troubleshooting
 
@@ -92,11 +92,11 @@ When using the Sharepoint List connector, Boolean values are represented inconsi
 
 This issue only happens when the **Data Type** is not explicitly set for a column in the Query View of Power BI Desktop. You can tell that the data type isn't set by seeing the "ABC 123" image on the column and "Any" data type in the ribbon as shown below.
 
-![Data type any on a boolean column](./media/sharepoint-list/booleanany.png)
+![Data type any on a boolean column.](./media/sharepoint-list/booleanany.png)
 
 The user can force the interpretation to be consistent by explicitly setting the data type for the column through the Power Query Editor. For example, the following image shows the column with an explicit Boolean type.
 
-![Column with explicit boolean type](./media/sharepoint-list/booleanexplicit.png)
+![Column with explicit boolean type.](./media/sharepoint-list/booleanexplicit.png)
 
 ## Next steps
 

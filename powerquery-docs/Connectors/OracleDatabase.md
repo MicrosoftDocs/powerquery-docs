@@ -55,7 +55,7 @@ To make the connection, take the following steps:
  
 2. Specify the Oracle Server to connect to in **Server**. If a SID is required, specify it by using the format *ServerName/SID*, where *SID* is the unique name of the database. If the *ServerName/SID* format doesn't work, use *ServerName/ServiceName*, where *ServiceName* is the alias you use to connect.
 
-   ![Enter Oracle database connection](./media/oracle-database/select-database.png)
+   ![Enter Oracle database connection.](./media/oracle-database/select-database.png)
 
    >[!Note]
    > If you are using a local database, or autonomous database connections, you may need to place the server name in quotation marks to avoid connection errors.
@@ -64,7 +64,7 @@ To make the connection, take the following steps:
 
 4. If this is the first time you're connecting to this Oracle database, select the authentication type you want to use, and then enter your credentials. For more information about authentication, go to [Authentication with a data source](../connectorauthentication.md).
 
-   ![Enter your Oracle database credentials](./media/oracle-database/sign-in.png)
+   ![Enter your Oracle database credentials.](./media/oracle-database/sign-in.png)
 
 5. In **Navigator**, select the data you require, then either select **Load** to load the data or **Transform Data** to transform the data.
 
@@ -76,7 +76,7 @@ To make the connection, take the following steps:
 
 2. In the **Oracle database** dialog that appears, specify the Oracle Server to connect to in **Server**. If a SID is required, specify it by using the format *ServerName/SID*, where *SID* is the unique name of the database. If the *ServerName/SID* format doesn't work, use *ServerName/ServiceName*, where *ServiceName* is the alias you use to connect.
 
-   ![Enter Oracle database online connection](./media/oracle-database/select-database-online.png)
+   ![Enter Oracle database online connection.](./media/oracle-database/select-database-online.png)
 
 3. Select the name of your on-premises data gateway.
 
@@ -95,7 +95,7 @@ To make the connection, take the following steps:
 
 Power Query Desktop provides a set of advanced options that you can add to your query if needed.
 
-![Advanced options included in the Oracle database connection dialog box](./media/oracle-database/advanced-options-oracle.png)
+![Advanced options included in the Oracle database connection dialog box.](./media/oracle-database/advanced-options-oracle.png)
 
 
 The following table lists all of the advanced options you can set in Power Query Desktop.

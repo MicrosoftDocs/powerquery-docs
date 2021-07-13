@@ -32,7 +32,7 @@ For Power BI Desktop versions released before December 2019, you must install th
 
 **We recommend NpgSQL 4.0.10. NpgSQL 4.1 and up won't work due to .NET version incompatibilities.**
 
-![Npgsql installer with GAC Installation selected](../images/Postgres1.png)
+![Npgsql installer with GAC Installation selected.](../images/Postgres1.png)
 
 ## Capabilities Supported
 
@@ -52,26 +52,26 @@ Once the matching Npgsql provider is installed, you can connect to a PostgreSQL 
 
 2. In the **PostgreSQL database** dialog that appears, provide the name of the server and database.
 
-   ![PostgreSQL connection builder in Power BI](./media/postgresql/server-name-database.png)
+   ![PostgreSQL connection builder in Power BI.](./media/postgresql/server-name-database.png)
 
 3. Select either the **Import** or **DirectQuery** data connectivity mode.
 
 4. If this is the first time you're connecting to this database, input your PostgreSQL credentials in the **User name** and **Password** boxes of the **Database** authentication type. Select the level to apply the authentication settings to. Then select **Connect**.
 
-    ![Enter your PostgreSQL user name and password](./media/postgresql/sign-in-desktop.png)
+    ![Enter your PostgreSQL user name and password.](./media/postgresql/sign-in-desktop.png)
 
    For more information about using authentication methods, go to [Authentication with a data source](../connectorauthentication.md).
 
    >[!Note]
    > If the connection is not encrypted, you'll be prompted with the following message.
 
-   ![Azure SQL database encryption support](../images/EncryptionWarning.png)
+   ![Azure SQL database encryption support.](../images/EncryptionWarning.png)
 
    Select **OK** to connect to the database by using an unencrypted connection, or follow the instructions in [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine) to set up encrypted connections to PostgreSQL database.
 
 5. In **Navigator**, select the database information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
 
-   ![Power Query Desktop Navigator showing the Human Resources employee data in PostgreSQL database](./media/postgresql/navigator-desktop.png)
+   ![Power Query Desktop Navigator showing the Human Resources employee data in PostgreSQL database.](./media/postgresql/navigator-desktop.png)
 
 ## Connect to a PostgreSQL database from Power Query Online
 
@@ -81,7 +81,7 @@ To make the connection, take the following steps:
 
 2. In the **PostgreSQL database** dialog that appears, provide the name of the server and database.
 
-   ![PostgreSQL connection builder in Power Query Online](./media/postgresql/server-name-online.png)
+   ![PostgreSQL connection builder in Power Query Online.](./media/postgresql/server-name-online.png)
 
 3. Select the name of the on-premises data gateway you want to use.
 
@@ -97,7 +97,7 @@ To make the connection, take the following steps:
 
 Power Query Desktop provides a set of advanced options that you can add to your query if needed.
 
-![Advanced options included in the PostgreSQL connection dialog box](./media/postgresql/postgresql-advanced-options.png)
+![Advanced options included in the PostgreSQL connection dialog box.](./media/postgresql/postgresql-advanced-options.png)
 
 
 The following table lists all of the advanced options you can set in Power Query Desktop.

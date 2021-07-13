@@ -37,7 +37,7 @@ Open Fiddler and then select the Start button in Visual Studio.
 
 In Fiddler, you'll see three requests to the server:
 
-![Fiddler OData requests](../../../images/trippin2Fiddler.png)
+![Fiddler OData requests.](../../../images/trippin2Fiddler.png)
 
 * `/Me`&mdash;the actual URL you are requesting.
 * `/$metadata`&mdash;a call automatically made by the `OData.Feed` function to determine schema and type information about the response.
@@ -75,7 +75,7 @@ Note the request headers that were sent along with the requests and the JSON for
 
 When the query finishes evaluating, the M Query Output window should show the Record value for the Me singleton. 
 
-![OData results](../../../images/trippin2ODataResult.png)
+![OData results.](../../../images/trippin2ODataResult.png)
 
 If you compare the fields in the output window with the fields returned in the raw JSON response, you'll notice a mismatch. The query result has additional fields (`Friends`, `Trips`, `GetFriendsTrips`) that don't appear anywhere in the JSON response. The [OData.Feed](/powerquery-m/odata-feed) function automatically appended these fields to the record based on the schema returned by $metadata. This is a good example of how a connector might augment and/or reformat the response from the service to provide a better user experience. 
 
@@ -118,7 +118,7 @@ Update your query to access some of the TripPin Entities/Tables, such as:
 You'll notice that the paths that used to return nicely formatted tables now return a top level "value" field with an embedded [List].
 You'll need to do some transformations on the result to make it usable for Power BI scenarios.
 
-![List results](../../../images/trippin2RawList.png)
+![List results.](../../../images/trippin2RawList.png)
 
 ## Authoring Transformations in Power Query
 While it is certainly possible to author your M transformations by hand, most people prefer to use Power Query to shape their data.
@@ -133,7 +133,7 @@ Be sure to include the = sign.
 
 Manipulate the output until it looks like the original OData feed&mdash;a table with two columns: AirlineCode and Name.
 
-![Formatted airlines](../../../images/trippin2Airlines.png)
+![Formatted airlines.](../../../images/trippin2Airlines.png)
 
 The resulting query should look something like this:
 
@@ -151,7 +151,7 @@ Give the query a name ("Airlines").
 
 Create a new Blank Query. This time, use the `TripPin.Feed` function to access the /Airports entity. Apply transforms until you get something similar to the share shown below. The matching query can also be found below&mdash;give this query a name ("Airports") as well.
 
-![Formatted airports](../../../images/trippin2Airports.png)
+![Formatted airports.](../../../images/trippin2Airports.png)
 
 ```
 let
@@ -192,15 +192,15 @@ in
 
 If you have not set your Privacy Levels setting to "Always ignore Privacy level settings" (also known as "Fast Combine") you'll see a privacy prompt. 
 
-![Firewall](../../../images/trippin2Firewall.png)
+![Firewall.](../../../images/trippin2Firewall.png)
 
 Privacy prompts appear when you're combining data from multiple sources and have not yet specified a privacy level for the source(s). Select the **Continue** button and set the privacy level of the top source to **Public**.
 
-![Privacy](../../../images/trippin2Privacy.png)
+![Privacy.](../../../images/trippin2Privacy.png)
 
 Select **Save** and your table will appear. While this isn't a navigation table yet, it provides the basic functionality you need to turn it into one in a subsequent lesson.
 
-![FakeNav](../../../images/trippin2FakeNav.png)
+![FakeNav.](../../../images/trippin2FakeNav.png)
 
 Data combination checks do not occur when accessing multiple data sources from within an extension. Since all data source calls made from within the extension inherit the same authorization context, it is assumed they are "safe" to combine. Your extension will always be treated as a single data source when it comes to data combination rules. Users would still receive the regular privacy prompts when combining your source with other M sources. 
 

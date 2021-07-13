@@ -46,7 +46,7 @@ To make the connection, take the following steps:
  
 2. In the **SQL Server database** dialog that appears, provide the name of the server and database (optional). 
 
-   ![SQL Server database connection builder in Power Query Desktop](./media/sql-server-database/select-database-desktop.png)
+   ![SQL Server database connection builder in Power Query Desktop.](./media/sql-server-database/select-database-desktop.png)
 
 3. Select either the **Import** or **DirectQuery** data connectivity mode (Power BI Desktop only).
 
@@ -54,18 +54,18 @@ To make the connection, take the following steps:
 
 5. If this is the first time you're connecting to this database, select the authentication type, input your credentials, and select the level to apply the authentication settings to. Then select **Connect**.
 
-   ![SQL Server database authentication](./media/sql-server-database/signin-desktop.png)
+   ![SQL Server database authentication.](./media/sql-server-database/signin-desktop.png)
 
    >[!Note]
    > If the connection is not encrypted, you'll be prompted with the following dialog.
 
-   ![SQL Server database encryption support](../images/EncryptionWarning.png)
+   ![SQL Server database encryption support.](../images/EncryptionWarning.png)
 
     Select **OK** to connect to the database by using an unencrypted connection, or follow these [instructions](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine) to setup encrypted connections to SQL Server.
 
 6. In **Navigator**, select the database information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
 
-   ![Power Query Navigator showing the employee data](./media/sql-server-database/navigator-desktop.png)
+   ![Power Query Navigator showing the employee data.](./media/sql-server-database/navigator-desktop.png)
 
 ## Connect to SQL Server database from Power Query Online
 
@@ -75,7 +75,7 @@ To make the connection, take the following steps:
  
 2. In the **SQL Server database** dialog that appears, provide the name of the server and database (optional). 
 
-   ![SQL Server database connection builder in Power Query Online](./media/sql-server-database/select-database-online.png)
+   ![SQL Server database connection builder in Power Query Online.](./media/sql-server-database/select-database-online.png)
 
 3. If needed, select an on-premises data gateway.
 
@@ -87,13 +87,13 @@ To make the connection, take the following steps:
 
 7. In **Navigator**, select the data you require, and then select **Transform data**.
 
-   ![Power Query Online Navigator showing the Human Resources employee data](./media/sql-server-database/navigator-online.png)
+   ![Power Query Online Navigator showing the Human Resources employee data.](./media/sql-server-database/navigator-online.png)
 
 ## Connect using advanced options
 
 Both Power Query Desktop and Power Query Online provide a set of advanced options that you can add to your query if needed. 
 
-![Display of advanced options available in Power Query Desktop](./media/sql-server-database/advanced-options.png)
+![Display of advanced options available in Power Query Desktop.](./media/sql-server-database/advanced-options.png)
 
 The following table lists all of the advanced options you can set in Power Query Desktop and Power Query Online.
 

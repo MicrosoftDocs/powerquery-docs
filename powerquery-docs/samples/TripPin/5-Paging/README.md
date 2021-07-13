@@ -92,7 +92,7 @@ in
 Turn on fiddler, and run the query in Visual Studio.
 You'll notice that the query returns a table with 8 rows (index 0 to 7). 
 
-![QueryWithoutPaging](../../../images/trippin5People.png)
+![QueryWithoutPaging.](../../../images/trippin5People.png)
 
 If you look at the body of the response from fiddler, you'll see that it does in fact contain an `@odata.nextLink` field,
 indicating that there are more pages of data available. 
@@ -225,11 +225,11 @@ TripPin.Feed = (url as text) as table => GetAllPagesByNextLink(url);
 If you re-run the same [test query](#testing-trippin) from earlier in the tutorial, you should now
 see the page reader in action. You should also see that you have 20 rows in the response rather than 8.
 
-![QueryWithPaging](../../../images/trippin5Paging.png)
+![QueryWithPaging.](../../../images/trippin5Paging.png)
 
 If you look at the requests in fiddler, you should now see separate requests for each page of data.
 
-![Fiddler](../../../images/trippin5Fiddler.png)
+![Fiddler.](../../../images/trippin5Fiddler.png)
 
 >[!Note]
 > You'll notice duplicate requests for the first page of data from the service, which is not ideal. The extra request is a result of the M engine's schema checking behavior. Ignore this issue for now and resolve it in the [next tutorial](../6-Schema/README.md), where you'll apply an explict schema.
