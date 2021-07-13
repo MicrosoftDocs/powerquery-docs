@@ -32,14 +32,14 @@ If you've connected an external Azure Data Lake Storage storage to the Power Pla
 In any of these services, use Azure Data Lake Storage as the source. You'll be able to enter the details of your storage and connect to the data in it. The data is stored in CSV format, and is readable through any of these tools and services. The following screenshot shows how Azure Data Lake Storage is a source option for Azure Data Factory.
 
 > [!div class="mx-imgBorder"]
-> ![Using the output of Power Platform dataflows in external Data Lake Storage](media/ADFSourcedFromADLSGen2.png)
+> ![Using the output of Power Platform dataflows in external Data Lake Storage.](media/ADFSourcedFromADLSGen2.png)
 
 ## Dataflows with Dataverse
 
 If you're using standard dataflows that store the data in Dataverse, you can still connect to Dataverse from many Azure services. The following image shows that in Azure Data Factory, the output of a dataflow from Dataverse can be used as a source.
 
 > [!div class="mx-imgBorder"]
-> ![Using the output of Power Platform dataflows from Dataverse](media/ADFSourcedFromCDS.png)
+> ![Using the output of Power Platform dataflows from Dataverse.](media/ADFSourcedFromCDS.png)
 
 ## Dataflows with internal Azure Data Lake Storage
 

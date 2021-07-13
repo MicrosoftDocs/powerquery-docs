@@ -25,7 +25,7 @@ All Power Query connector articles begin with a summary table that contains the 
 * Authentication types supported: Lists the authentication types your custom connector supports.
 * Function reference docs: Lists any M formula language docs that are associated with your custom connector.
 
-![Example summary table](images/sample-summary.png)
+![Example summary table.](images/sample-summary.png)
 
 If your custom connector is implemented on various products, but has different capabilities on these products, include the following or similar note in your article after the summary table:
 

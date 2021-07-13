@@ -38,7 +38,7 @@ To make the connection, take the following steps:
  
 1. From the Power Query **Get Data** dialog (or **Data** tab in the Excel ribbon), select **Database > ODBC**.
  
-   ![ODBC connection builder in Power BI](../images/ODBCbuilder.png)
+   ![ODBC connection builder in Power BI.](../images/ODBCbuilder.png)
  
 2. In the **From ODBC** dialog that appears, provide the connection string (optional).
 
@@ -46,7 +46,7 @@ To make the connection, take the following steps:
 
 3. To enable folding support for [Table.FirstN](/powerquery-m/table-firstn), select **Detect** to find supported row reduction clauses, or select from one of the drop down options.
 
-   ![Drop down options: Top, Limit, Limit and Offset, ANSI SQL compatible](../images/ODBCrowreduction.png)
+   ![Drop down options: Top, Limit, Limit and Offset, ANSI SQL compatible.](../images/ODBCrowreduction.png)
 
    This option is not applicable when using a native SQL statement.
 
