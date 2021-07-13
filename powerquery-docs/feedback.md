@@ -1,5 +1,5 @@
 ---
-title: Power Query Feedback
+title: Power Query feedback
 description: This article describes where users can receive support and share feedback for Power Query. 
 author: bezhan-msft
 ms.service: powerquery
@@ -8,7 +8,7 @@ ms.date: 07/12/2021
 ms.author: bezhan
 ---
 
-# Power Query Feedback
+# Power Query feedback
 
 This article describes how to get support or submit feedback for Power Query.
 

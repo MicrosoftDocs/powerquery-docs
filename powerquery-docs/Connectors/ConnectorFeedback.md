@@ -1,5 +1,5 @@
 ---
-title: Power Query Connector Feedback
+title: Power Query connector feedback
 description: This article describes where users can receive support and share feedback for Power Query Connectors. 
 author: bezhan-msft
 ms.service: powerquery
@@ -8,7 +8,7 @@ ms.date: 07/09/2021
 ms.author: bezhan
 ---
 
-# Power Query Connectors Feedback
+# Power Query connector feedback
 
 This article describes how to submit feedback for Power Query connectors. It's important to distinguish between Microsoft-owned connectors and non-Microsoft-owned connectors, as the support and feedback channels are different.
 
