@@ -73,18 +73,18 @@ Note that when a Power Query query encompasses multiple data sources, incompatib
 
 In the Power Query Editor window, it is possible to determine when a Power Query query can be folded. In the **Query Settings** pane, when you right-click the last applied step, if the **View Native Query** option is enabled (not greyed out), then the entire query can be folded.
 
-![Example of determining that Power Query can achieve query folding in Power BI Desktop](media/power-query-folding/query-folding-example.png)
+![Example of determining that Power Query can achieve query folding in Power BI Desktop.](media/power-query-folding/query-folding-example.png)
 
 >[!Note]
 > The **View Native Query** option is only available for certain relational DB/SQL generating connectors. It doesn't work for OData based connectors, for example, even though there is folding occurring on the backend. The Query Diagnostics feature is the best way to see what folding has occurred for non-SQL connectors (although the steps that fold aren't explicitly called out&mdash;you just see the resulting URL that was generated).
 
 To view the folded query, you select the **View Native Query** option. You are then be presented with the native query that Power Query will use to source data.
 
-![Example of a native query in Power BI Desktop](media/power-query-folding/native-query-example.png)
+![Example of a native query in Power BI Desktop.](media/power-query-folding/native-query-example.png)
 
 If the **View Native Query** option is not enabled (greyed out), this is evidence that all query steps cannot be folded. However, it could mean that a subset of steps can still be folded. Working backwards from the last step, you can check each step to see if the **View Native Query** option is enabled. If this is the case, then you have learned where, in the sequence of steps, that query folding could no longer be achieved.
 
-![Example of determining that Power Query cannot achieve query folding in Power BI Desktop](media/power-query-folding/query-folding-not-example.png)
+![Example of determining that Power Query cannot achieve query folding in Power BI Desktop.](media/power-query-folding/query-folding-not-example.png)
 
 ## Next steps
 

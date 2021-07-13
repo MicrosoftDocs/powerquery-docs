@@ -256,7 +256,7 @@ There's special handling for functions that have a single parameter of type `Uri
 
 You can see an example of how credentials are stored in the **Data source settings** dialog in Power BI Desktop. In this dialog, the Kind is represented by an icon, and the Path value is displayed as text.
 
-![DataSourcePaths](images/dataSourceSettingsCreds.png)
+![DataSourcePaths.](images/dataSourceSettingsCreds.png)
 
 > [!Note]
 > If you change your data source function's required parameters during development, previously stored credentials will no longer work (because the path values no longer match). You should delete any stored credentials any time you change your data source function parameters. If incompatible credentials are found, you may receive an error at runtime.
@@ -279,15 +279,15 @@ The function has a single required parameter (`message`) of type `text`, and wil
 
 Credential prompt:
 
-![DataSourceCredentials](images/credentialPromptWithPath.png)
+![DataSourceCredentials.](images/credentialPromptWithPath.png)
 
 Data source settings UI:
 
-![DataSourceSettings](images/dataSourceSettingsJson.png)
+![DataSourceSettings.](images/dataSourceSettingsJson.png)
 
 When a Label value is defined, the data source path value wouldn't be shown:
 
-![DataSourceLabel](images/dataSourceSettingsLabel.png)
+![DataSourceLabel.](images/dataSourceSettingsLabel.png)
 
 > [!Note]
 > We currently recommend you _do not_ include a Label for your data source if your function has required parameters, as users won't be able to distinguish between the different credentials they've entered. We are hoping to improve this in the future (that is, allowing data connectors to display their own custom data source paths).
@@ -333,7 +333,7 @@ HelloWorldType = type function (
 Because data sources with a Uri based identifier are so common, there's special handling in the Power Query UI when dealing with Uri based data source paths.
 When a Uri-based data source is encountered, the credential dialog provides a drop-down allowing the user to select the base path, rather than the full path (and all paths in between).
 
-![DataSourceUrl](images/credentialPromptWithUrl.png)
+![DataSourceUrl.](images/credentialPromptWithUrl.png)
 
 As `Uri.Type` is an _ascribed type_ rather than a _primitive type_ in the M language, you'll need to use the [Value.ReplaceType](/powerquery-m/value-replacetype) function to indicate that your text parameter should be treated as a Uri.
 

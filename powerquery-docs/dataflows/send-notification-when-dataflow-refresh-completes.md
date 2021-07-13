@@ -27,7 +27,7 @@ This tutorial will use the second template.
 * Navigate to [Power Automate](https://flow.microsoft.com).
 * Search for the template "Send email notification on success or failure of a data flow refresh". If you encounter difficulty, see these [instructions](/power-automate/get-started-logic-template).
 
-![notification example in Power Automate](media/emailyesyno.PNG)
+![notification example in Power Automate.](media/emailyesyno.PNG)
 
 * Customize the flow. Actions that require your input will automatically be expanded.
    The **Dataflow Refresh** trigger is expanded because you need to enter information on your dataflow:
@@ -37,4 +37,4 @@ This tutorial will use the second template.
 
 * After the conditions, you can specify what happens after success or failure of the dataflow. In this template, in both cases an email is sent with the status of the dataflow refresh. You can also modify the flow or message content.
 
-![example of complete notification flow](media/isyes.PNG)
+![example of complete notification flow.](media/isyes.PNG)

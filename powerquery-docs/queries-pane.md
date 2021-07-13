@@ -15,7 +15,7 @@ In Power Query, you'll be creating many different queries. Whether it be from ge
 
 You'll be using the **Queries** pane to navigate through the queries.
 
-[![Queries Pane Basic](images/queries-pane-basic.png)](images/queries-pane-basic.png#lightbox)
+[![Queries Pane Basic.](images/queries-pane-basic.png)](images/queries-pane-basic.png#lightbox)
 
 ## Navigating with the Queries pane
 
@@ -35,11 +35,11 @@ Differences between online and desktop:
 
 - Power Query Online
 
-  ![Queries Pane Context Menu on Query](images/queries-pane-context-menu-on-query.png)
+  ![Queries Pane Context Menu on Query.](images/queries-pane-context-menu-on-query.png)
 
 - Power Query Desktop
 
-  ![Queries Pane Context Menu on Query Desktop](images/queries-pane-context-menu-on-query-desktop.png)
+  ![Queries Pane Context Menu on Query Desktop.](images/queries-pane-context-menu-on-query-desktop.png)
 
 To be more comprehensive, we'll be touching on all of the context menu actions that are relevant for either.
 
@@ -49,31 +49,31 @@ To directly change the name of the query, double-select on the name of the query
 Other options to rename the query are:
 - Go to the context menu and select **Rename**.
 
-  ![Queries Settings Rename](images/queries-settings-rename.png)
+  ![Queries Settings Rename.](images/queries-settings-rename.png)
 
 - Go to **Query Settings** and enter in a different name in the **Name** input field.
  
-  ![Queries Pane On Query Rename](images/queries-pane-on-query-rename.png)
+  ![Queries Pane On Query Rename.](images/queries-pane-on-query-rename.png)
 
 ### Delete a query
 To delete a query, open the context pane on the query and select **Delete**.
 There will be an additional pop-up confirming the deletion. To complete the deletion, select the **Delete** button.
 
-![Queries Pane On Query Delete](images/queries-pane-on-query-delete.png)
+![Queries Pane On Query Delete.](images/queries-pane-on-query-delete.png)
 
 ### Duplicating a query
 Duplicating a query will create a copy of the query you're selecting. 
 
 To duplicate your query, open the context pane on the query and select **Duplicate**. A new duplicate query will pop up on the side of the query pane.
 
-![Queries Pane Duplicate](images/queries-pane-on-query-duplicate.png)
+![Queries Pane Duplicate.](images/queries-pane-on-query-duplicate.png)
 
 ### Referencing a query
 Referencing a query will create a new query. The new query uses the steps of a previous query without having to duplicate the query. Additionally, any changes on the original query will transfer down to the referenced query.
 
 To reference your query, open the context pane on the query and select **Reference**. A new referenced query will pop up on the side of the query pane.
 
-![Queries Pane Reference](images/queries-pane-on-query-reference.png)
+![Queries Pane Reference.](images/queries-pane-on-query-reference.png)
 
 ### Copy and paste
 Copy and paste can be used when you have a copied query to place in the Power Query editor.
@@ -92,11 +92,11 @@ Differences between online and desktop:
 
 - Power Query Online
 
-  ![Queries Pane Context Menu Online](images/queries-pane-context-menu.png)
+  ![Queries Pane Context Menu Online.](images/queries-pane-context-menu.png)
 
 - Power Query Desktop
 
-  ![Queries Pane Context Menu Desktop](images/queries-pane-context-menu-desktop.png)
+  ![Queries Pane Context Menu Desktop.](images/queries-pane-context-menu-desktop.png)
 
 For the sake of being more comprehensive, we'll once again describe all of the context menu actions that are relevant for either.
 
@@ -105,7 +105,7 @@ You can import data into the Power Query editor as an option from the context me
 
 This option functions the same as the **Get Data** feature.  
 
-![Queries Pane New Query](images/queries-pane-new-query.png)
+![Queries Pane New Query.](images/queries-pane-new-query.png)
 
 > [!NOTE]
 > To learn about how to get data into Power Query, see [Getting data](get-data-experience.md)
@@ -129,7 +129,7 @@ This option functions the same as the **New parameter** feature located on the r
 ### New group
 You can make folders and move the queries into and out of the folders for organizational purposes. These folders are called *groups*.
 
-![Queries Pane New Group](images/queries-pane-new-group.png)
+![Queries Pane New Group.](images/queries-pane-new-group.png)
 
 To move the query into a group, open the context menu on the specific query. 
 
@@ -137,10 +137,10 @@ In the menu, select **Move to group**.
 
 Then, select the group you want to put the query in.
 
-![Queries Pane Move To](images/queries-pane-move-to-group.png)
+![Queries Pane Move To.](images/queries-pane-move-to-group.png)
 
 The move will look like the following image. Using the same steps as above, you can also move the query out of the group by selecting **Queries (root)** or another group. 
 
-![Queries Pane Moved Into](images/queries-pane-moved-into-group.png)
+![Queries Pane Moved Into.](images/queries-pane-moved-into-group.png)
 
 In desktop versions of Power Query, you can also drag and drop the queries into the folders.

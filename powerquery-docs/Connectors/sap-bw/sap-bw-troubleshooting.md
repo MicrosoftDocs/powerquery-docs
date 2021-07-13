@@ -319,7 +319,7 @@ User accounts in SAP BW have default settings for how decimal or date/time value
 
 The default settings are maintained in the SAP system in the User Profile for an account, and the user can view or change these settings in the SAP GUI with the menu path **System** > **User Profile** > **Own Data**.
 
-![Decimal notation settings menu](decimal-notation.png)
+![Decimal notation settings menu.](decimal-notation.png)
 
 Power BI Desktop queries the SAP system for the decimal notation of the connected user and uses that notation to format decimal values in the data from SAP BW.
 
@@ -357,7 +357,7 @@ To solve this error, users must ask their SAP admin to grant the SAP BW user bei
    
 You can perform BEx queries in Power BI Desktop by enabling a specific property, as shown in the following image:
    
-![Enable Release for External Access](enable-release.png)
+![Enable Release for External Access.](enable-release.png)
 
 ### MDX interface limitation
 

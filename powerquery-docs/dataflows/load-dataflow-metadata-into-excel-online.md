@@ -16,13 +16,13 @@ ms.author: mideboer
 
 In this step-by-step tutorial, we will show you how to set up your own monitoring dashboard for all of your dataflows:
 
-![example of monitoring dashboard](media/dashboard.PNG)
+![example of monitoring dashboard.](media/dashboard.PNG)
 
 First, you will download the Excel file and save it in OneDrive for Business or SharePoint. Next, you will create a Power Automate connector which will load metadata from your dataflow into the Excel file in OneDrive for Business or SharePoint. Lastly, you will connect a Power BI file to the Excel file to visualize the metadata and start monitoring the dataflows.
 
 You can use this dashboard to monitor your dataflows' refresh duration and failure count. With this dashboard, you can track any issues with your dataflows performance and share the data with others. 
 
-![overview of loading data through Excel](media/excel.PNG)	
+![overview of loading data through Excel.](media/excel.PNG)	
 
 
 ## Prerequisites
@@ -54,7 +54,7 @@ If you do not already have one, create a dataflow. This can be done in either [P
 
 * Search for the template "When a dataflow refresh completes, output status into Excel". If you encounter difficulty, see these [instructions](/power-automate/get-started-logic-template).
 
-![example of excel template](media/templateexcel.PNG)
+![example of excel template.](media/templateexcel.PNG)
 
 * Customize the flow. Actions that require input from you will automatically be expanded.
 
@@ -74,10 +74,10 @@ If you do not already have one, create a dataflow. This can be done in either [P
   For every required field, you need to add a dynamic value. This value is the output of the metadata of the dataflow run.
     * Select the field next to **Dataflow ID** and then select the lightning button.
     
-    ![example of lightning button in Excel](media/dynamicexcel.png)
+    ![example of lightning button in Excel.](media/dynamicexcel.png)
 
     * Select the Dataflow ID as the dynamic content.
-    ![An example of folder structure](media/dynamicexcel1.png)
+    ![An example of folder structure.](media/dynamicexcel1.png)
 
     * Repeat this process for all required fields.
 

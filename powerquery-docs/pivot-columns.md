@@ -13,19 +13,19 @@ ms.custom: edited
 
 In Power Query, you can create a table that contains an aggregate value for each unique value in a column. Power Query groups each unique value, does an aggregate calculation for each value, and pivots the column into a new table.
 
-:::image type="complex" source="images/pivot-operation-diagram.png" alt-text="Pivot columns diagram":::
+:::image type="complex" source="images/pivot-operation-diagram.png" alt-text="Pivot columns diagram.":::
    Diagram showing a table on the left with a blank column and rows. An Attributes column contains nine rows with A1, A2, and A3 repeated three times. A Values column contains, from top to bottom, values V1 through V9. With the columns pivoted, a table on the right contains a blank column and rows, the Attributes values A1, A2, and A3 as column headers, with the A1 column containing the values V1, V4, and V7, the A2 column containing the values V2, V5, and V8, and the A3 column containing the values V3, V6, and V9.
 :::image-end:::
 
 Imagine a table like the one in the following image.
 
-:::image type="complex" source="images/me-pivot-columns-original-table.png" alt-text="Pivot column original table":::
+:::image type="complex" source="images/me-pivot-columns-original-table.png" alt-text="Pivot column original table.":::
    Table containing a Country column set as the Text data type, a Date column set as the Data data type, and a Value column set as the Whole number data type. The Country column contains USA in the first three rows, Canada in the next three rows, and Panama in the last three rows. The Date column contains 6/1/2020 in the first, forth, and seventh rows, 7/1/2020 in the second, fifth, and eighth rows, and 8/1/2020 in the third, sixth, and ninth rows.
 :::image-end:::
 
 This table contains values by country and date in a simple table. In this example, you want to transform this table into the one where the date column is pivoted, as shown in the following image.
 
-:::image type="complex" source="images/me-pivot-columns-final-table.png" alt-text="Pivot column final table":::
+:::image type="complex" source="images/me-pivot-columns-final-table.png" alt-text="Pivot column final table.":::
    Table containing a Country column set in the Text data type, and 6/1/2020, 7/1/2020, and 8/1/2020 columns set as the Whole number data type. The Country column contains Canada in row 1, Panama in row 2, and USA in row 3. 
 :::image-end:::
 
@@ -39,15 +39,15 @@ This table contains values by country and date in a simple table. In this exampl
 1. Select the column that you want to pivot. 
 2. On the **Transform** tab in the **Any column** group, select **Pivot column**.
 
-   ![Pivot column command](images/me-pivot-columns-icon.png "Pivot column command")
+   ![Pivot column command.](images/me-pivot-columns-icon.png "Pivot column command")
 
 3. In the **Pivot column** dialog box, in the **Value column** list, select **Value**.
 
-   ![Pivot columns dialog box](images/me-pivot-columns-basic-menu.png "Pivot columns dialog box")
+   ![Pivot columns dialog box.](images/me-pivot-columns-basic-menu.png "Pivot columns dialog box")
 
    By default, Power Query will try to do a sum as the aggregation, but you can select the **Advanced** option to see other available aggregations. 
 
-   ![Pivot columns aggregations](images/me-pivot-columns-aggregations.png "Pivot columns aggregations")
+   ![Pivot columns aggregations.](images/me-pivot-columns-aggregations.png "Pivot columns aggregations")
 
 The available options are:
 
@@ -64,17 +64,17 @@ The available options are:
 
 You can pivot columns without aggregating when you're working with columns that can't be aggregated, or aggregation isn't required for what you're trying to do. For example, imagine a table like the following image, that has **Country**, **Position**, and **Product** as fields.
 
-:::image type="complex" source="images/me-pivot-dont-aggregate-valid-initial.png" alt-text="Pivot column no aggregation":::
+:::image type="complex" source="images/me-pivot-dont-aggregate-valid-initial.png" alt-text="Pivot column no aggregation.":::
    Table with Country column containing USA in the first three rows, Canada in the next three rows, and Panama in the last three rows. The Position column contains First Place in the first, fourth, and seventh rows, Second Place in the second, fifth, and eighth rows, and third Place in the third, sixth, and ninth rows.
 :::image-end:::
 
 Let's say you want to pivot the **Position** column in this table so you can have its values as new columns. For the values of these new columns, you'll use the values from the **Product** column. Select the **Position** column, and then select **Pivot column** to pivot that column.
 
-![Table with the Positions column selected, and showing the Pivot columns command in the Transform tab](images/me-pivot-columns-da-pivot-icon.png "Pivot columns command in the Transform tab")
+![Table with the Positions column selected, and showing the Pivot columns command in the Transform tab.](images/me-pivot-columns-da-pivot-icon.png "Pivot columns command in the Transform tab")
 
 In the **Pivot column** dialog box, select the **Product** column as the value column. Select the **Advanced** option button in the **Pivot columns** dialog box, and then select **Don't aggregate**.
 
-![Pivot column dialog box with Aggregate value function set to Don't aggregate](images/me-pivot-columns-no-aggregation.png "Pivot column dialog box with Aggregate value function set to Don't aggregate")
+![Pivot column dialog box with Aggregate value function set to Don't aggregate.](images/me-pivot-columns-no-aggregation.png "Pivot column dialog box with Aggregate value function set to Don't aggregate")
 
 The result of this operation will yield the result shown in the following image.
 

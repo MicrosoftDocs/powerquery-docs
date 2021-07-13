@@ -45,17 +45,17 @@ There are a few ways to link entities between dataflows. To link entities in Pow
 
 You can select **Get data** from the dataflow authoring tool, which displays a dialog box for selecting the categories and each data source. Then select the **Power Platform dataflows** connector. 
 
-![Image showing how to select the Power Platform connector in Power BI](media/dataflows-linked-entities/linked-entities-03.png)
+![Image showing how to select the Power Platform connector in Power BI.](media/dataflows-linked-entities/linked-entities-03.png)
 
 A connection window for the selected data connection is displayed. If credentials are required, you're prompted to provide them.
 
 In Power BI, you can select **Add linked entities** from the dataflow authoring tool.
 
-![Image showing how to add linked entities in the Power BI dataflow authoring tool](media/dataflows-linked-entities/linked-entities-00.png)
+![Image showing how to add linked entities in the Power BI dataflow authoring tool.](media/dataflows-linked-entities/linked-entities-00.png)
 
 You can also select **Add linked entities** from the **Add entities** menu in the Power BI service.
 
-![Image showing how to add linked entities from the menu in the Power BI service](media/dataflows-linked-entities/linked-entities-01.png)
+![Image showing how to add linked entities from the menu in the Power BI service.](media/dataflows-linked-entities/linked-entities-01.png)
 
 A **Navigator** window opens, and you can choose a set of entities you can connect to. The window displays entities for which you have permissions across all workspaces and environments in your organization.
 
