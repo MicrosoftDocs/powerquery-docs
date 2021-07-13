@@ -12,7 +12,9 @@ ms.author: bezhan
 
 This article describes how to submit feedback for Power Query connectors. It's important to distinguish between Microsoft-owned connectors and non-Microsoft-owned connectors, as the support and feedback channels are different.
 
-To confirm whether a connector is Microsoft-owned, visit the [connector reference](index.md).
+To confirm whether a connector is Microsoft-owned, visit the [connector reference](index.md). Only connectors marked as "By Microsoft" are Microsoft-owned connectors.
+
+![Image from connector reference with arrow pointing to "By Microsoft"](./media/connector-feedback/microsoft-owned-connector.png)
 
 ## Microsoft-owned connectors
 
