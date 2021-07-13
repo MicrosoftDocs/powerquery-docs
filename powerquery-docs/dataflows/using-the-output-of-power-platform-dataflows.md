@@ -19,7 +19,7 @@ You can use the output of Microsoft Power Platform dataflows from the Power Quer
 
 If you're using Power BI for data analysis, you can get data from Power Platform dataflows or Power BI dataflows by choosing those data sources.
 
-![Get data from Power BI Desktop](media/GetDatafromDataflow.png)
+![Get data from Power BI Desktop.](media/GetDatafromDataflow.png)
 
 When you get data from a dataflow, the data is imported into the Power BI dataset. The dataset then needs to be refreshed. You can choose whether to perform a one-time refresh or an automatic refresh on a schedule you specify. Scheduled refreshes for the dataset can be configured in Power BI.
 
@@ -29,13 +29,13 @@ Power BI dataflows also support a DirectQuery connection. If the size of the dat
 
 To use DirectQuery for the dataflows, you need to enable the compute engine on your Power BI Premium capacity, and then refresh the dataflow before it can be consumed in DirectQuery mode. For more information, go to [Power BI Dataflows DirectQuery Support](https://powerbi.microsoft.com/blog/power-bi-dataflows-direct-query-support/).
 
-![Premium capacity settings for DirectQuery to the dataflow](/power-bi/transform-model/media/service-dataflows-enhanced-compute-engine/enhanced-compute-engine-01.png)
+![Premium capacity settings for DirectQuery to the dataflow.](/power-bi/transform-model/media/service-dataflows-enhanced-compute-engine/enhanced-compute-engine-01.png)
 
 ## Dataflows can get data from other dataflows
 
 If you'd like to reuse data created by one dataflow in another dataflow, you can do so by using the dataflow connector in the Power Query editor experience when you create the new dataflow.
 
-![Get data from a dataflow](/data-integration/dataflows/media/dataflows-linked-entities/linked-entities-03.png)
+![Get data from a dataflow.](/data-integration/dataflows/media/dataflows-linked-entities/linked-entities-03.png)
 
 When getting data from the output of another dataflow, a [linked entity](/data-integration/dataflows/dataflows-linked-entities) will be created. Linked entities provide a way to make data created in an upstream dataflow available in a downstream dataflow, without copying the data to the downstream dataflow. Because linked entities are just pointers to entities created in other dataflows, they're kept up to date by the refresh logic of the upstream dataflow. If both dataflows reside in the same workspace or environment, those dataflows will be refreshed together, to keep data in both dataflows always up to date. More information: [Link entities between dataflows](/data-integration/dataflows/dataflows-linked-entities)
 

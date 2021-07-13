@@ -31,15 +31,15 @@ The first step is to create a Power Query template with your queries in Excel.
 
 1. Start the Power Query editor from **Data** tab > **Get Data** > **Launch Power Query Editor**.
 
-    ![Launch the Power Query editor in Excel from the Get Data dropdown](images/excel-launch-pq-editor.png)
+    ![Launch the Power Query editor in Excel from the Get Data dropdown.](images/excel-launch-pq-editor.png)
 
 2.  Once Power Query loads, select **File** > **Export Template**. 
 
-    ![Export template option located in the File menu](images/excel-export-template.png "Export template option located in the File menu")
+    ![Export template option located in the File menu.](images/excel-export-template.png "Export template option located in the File menu")
 
 3.  The template requires basic information such as a name and a description before it can be saved locally on your computer. 
 
-    ![Export template UI in Excel](images/excel-export-template-ui.png "Export template UI in Excel")
+    ![Export template UI in Excel.](images/excel-export-template-ui.png "Export template UI in Excel")
 
 
 
@@ -51,7 +51,7 @@ The first step is to create a Power Query template with your queries in Excel.
 
 3. From the toolbar, select **New dataflow** > **Import template**. 
 
-    ![Import Power Query template in Power Platform dataflows](images/powerplatform-dataflow-template-import.png "Import Power Query template in Power Platform dataflows")
+    ![Import Power Query template in Power Platform dataflows.](images/powerplatform-dataflow-template-import.png "Import Power Query template in Power Platform dataflows")
 
 4. Select the Power Query template you created earlier. The dataflow name will prepopulate with the template name provided. Once you're done with the dataflow creation screen, select **Next** to see your queries from Excel in the query editor. 
 

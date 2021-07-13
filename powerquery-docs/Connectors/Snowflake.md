@@ -75,7 +75,7 @@ To make the connection, take the following steps:
 
 2. In the **Snowflake** dialog that appears, enter the name of the server and warehouse.
 
-   ![Snowflake connection builder in Power Query Online](./media/Snowflake/snowflake-pqo-advanced.png)
+   ![Snowflake connection builder in Power Query Online.](./media/Snowflake/snowflake-pqo-advanced.png)
 
 3. Enter any values in the advanced options you want to use. If there are any advanced options not represented in the UI, you can edit them in the **Advanced Editor** in Power Query later.
 

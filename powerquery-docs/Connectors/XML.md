@@ -29,11 +29,11 @@ Function Reference Documentation: [Xml.Tables](/powerquery-m/xml-tables), [Xml.D
 
 To load a local XML file, all you need to do is select the **XML** option in the connector selection. This action will launch a local file browser and allow you to select your XML file. 
 
-![XML file selection](../images/xmlbrowse.png)
+![XML file selection.](../images/xmlbrowse.png)
 
 You'll be presented with the table that the connector loads, which you can then Load or Transform.
 
-![Loading data from a XML file in the Navigator](../images/xmlnavigator.png)
+![Loading data from a XML file in the Navigator.](../images/xmlnavigator.png)
 
 ### Load from web
 

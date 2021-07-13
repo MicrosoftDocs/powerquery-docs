@@ -29,7 +29,7 @@ This tutorial covers the first scenario above.
 * Navigate to [Power Automate](https://flow.microsoft.com).
 * Search for the template "Trigger a dataflow refresh after my dataflow refresh completed successfully". If you encounter difficulty, follow these [instructions](/power-automate/get-started-logic-template).
 
-![overview of simultaneous dataflow](media/emailyesyno.PNG)
+![overview of simultaneous dataflow.](media/emailyesyno.PNG)
 
 * Customize the flow. Actions that require input from you will automatically be expanded.
 

@@ -40,17 +40,17 @@ To load data from an OData Feed in Power Query Desktop:
 
 2. Choose the **Basic** button and enter a URL address in the text box. This URL should be the root of the OData service you want to connect to. For example, enter `http://services.odata.org/V4/northwind/northwind.svc/`. Then select **OK**.
 
-   ![OData URL selection](media/odata-feed/odata-basic-url.png)
+   ![OData URL selection.](media/odata-feed/odata-basic-url.png)
 
-   If the URL address you enter is invalid, a ![Warning icon](../images/webwarning.png) warning icon will appear next to the **URL** textbox.
+   If the URL address you enter is invalid, a ![Warning icon.](../images/webwarning.png) warning icon will appear next to the **URL** textbox.
 
 3. If this is the first time you're connecting using the OData Feed, select the authentication type, input your credentials (if necessary), and select the level to apply the authentication settings to. Then select **Connect**.
 
-   ![OData credentials selection](media/odata-feed/odata-sign-in.png)
+   ![OData credentials selection.](media/odata-feed/odata-sign-in.png)
 
 4. From the **Navigator** dialog, you can select a table, then either transform the data in the Power Query Editor by selecting **Transform Data**, or load the data by selecting **Load**.
 
-   ![Web table selection](media/odata-feed/odata-navigator.png)
+   ![Web table selection.](media/odata-feed/odata-navigator.png)
 
    If you have multiple tables that have a direct relationship to one or more of the already selected tables, you can select the **Select Related Tables** button. When you do, all tables that have a direct relationship to one or more of the already selected tables will be imported as well.
 
@@ -62,13 +62,13 @@ To load data from an OData Feed in Power Query Online:
 
 2. In the OData dialog that appears, enter a URL in the text box.
 
-   ![OData online sign in](media/odata-feed/odata-online-sign-in.png)
+   ![OData online sign in.](media/odata-feed/odata-online-sign-in.png)
    
 3. If this is the first time you're connecting using the OData Feed, select the authentication kind and enter your credentials (if necessary). Then select **Next**.
 
 4. From the **Navigator** dialog, you can select a table, then transform the data in the Power Query Editor by selecting **Transform Data**.
 
-   ![Web table selection](media/odata-feed/odata-navigator.png)
+   ![Web table selection.](media/odata-feed/odata-navigator.png)
 
    If you have multiple tables that have a direct relationship to one or more of the already selected tables, you can select the **Select Related Tables** button. When you do, all tables that have a direct relationship to one or more of the already selected tables will be imported as well.
    
@@ -96,6 +96,6 @@ When attempting to authenticate, if you see the following error:
 
 “We were unable to connect because this credential type isn’t supported for this resource. Please choose another credential type.”
 
-   ![Error from connecting to an endpoint that doesn't support OAuth with the web connector](../images/credential-type-not-supported.png)
+   ![Error from connecting to an endpoint that doesn't support OAuth with the web connector.](../images/credential-type-not-supported.png)
 
 Please contact the service owner. They will either need to change the authentication configuration or build a custom connector.

@@ -58,11 +58,11 @@ For SAP BW queries with variables, you can enter or select values as parameters 
 
 Instead of a data preview, the metadata of the selected InfoCube or BEx Query is displayed. Once you select the **Load** button in **Navigator**, no data will be imported. 
 
-![Load into DirectQuery](load-into-directquery.png)
+![Load into DirectQuery.](load-into-directquery.png)
 
 You can make changes to the values for the SAP BW query variables with the **Edit Queries** option on the Power BI Desktop ribbon.
 
-![Edit variables](edit-variables.png)
+![Edit variables.](edit-variables.png)
 
 As you start creating your visuals in Power BI Desktop, the underlying data source in SAP BW is queried to retrieve the required data. The time it takes to update a visual depends on the performance of the underlying SAP BW system.
 
@@ -95,7 +95,7 @@ Using DirectQuery is generally only feasible when the underlying data source can
 
 If you're working with either very large datasets or encounter slow SAP BW query response time in DirectQuery mode, Power BI provides options in the report to send fewer queries, which makes it easier to interact with the report. To access these options in Power BI Desktop, go to **File** > **Options and settings** > **Options**, and select **Query reduction**.
 
-![Setting query reduction](query-reduction.png)
+![Setting query reduction.](query-reduction.png)
 
 You can disable cross-highlighting throughout your entire report, which reduces the number of queries sent to SAP BW. You can also add an **Apply** button to slicers and filter selections. You can make as many slicer and filter selections as you want, but no queries will be sent to SAP BW until you select the **Apply** button. Your selections will then be used to filter all your data.
 

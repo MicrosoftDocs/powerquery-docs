@@ -78,7 +78,7 @@ shared TripPin.UnitTest =
 
 Clicking run on the project will evaluate all of the Facts, and give you a report output that looks like this:
 
-![Initial Unit Test](../../../images/trippin7UnitTest1.png)
+![Initial Unit Test.](../../../images/trippin7UnitTest1.png)
 
 Using some principles from [test-driven development](https://en.wikipedia.org/wiki/Test-driven_development),
 you'll now add a test that currently fails, but will soon be reimplemented and fixed (by the end of this tutorial).
@@ -90,7 +90,7 @@ Fact("Emails is properly typed", type text, Type.ListItem(Value.Type(People{0}[E
 
 If you run the code again, you should now see that you have a failing test.
 
-![Unit test with failure](../../../images/trippin7UnitTest2.png)
+![Unit test with failure.](../../../images/trippin7UnitTest2.png)
 
 Now you just need to implement the functionality to make this work.
 
@@ -235,7 +235,7 @@ If you're applying the types correctly, the call to [Type.ListItem](/powerquery-
 
 Running your unit tests again show that they are now all passing.
 
-![Unit test with success](../../../images/trippin7UnitTest3.png)
+![Unit test with success.](../../../images/trippin7UnitTest3.png)
 
 ## Refactoring Common Code into Separate Files 
 >[!Note]
