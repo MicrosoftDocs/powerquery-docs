@@ -23,7 +23,7 @@ In this template, we make use of Azure Service Bus. To set up an Azure Service B
 
 * Search for the template "When a dataflow refresh fails, add a new message to the queue". If you encounter difficulty, see these [instructions](/power-automate/get-started-logic-template).
 
-![example of service bus](media/servicebuscondition.PNG)
+![example of service bus.](media/servicebuscondition.PNG)
 
 * Customize the flow. Actions that require input from you will automatically be expanded.
 
@@ -34,4 +34,4 @@ In this template, we make use of Azure Service Bus. To set up an Azure Service B
 
 * After the conditions, you can specify what happens after success or failure of the dataflow. In this template, in both cases an email is sent with the status of the dataflow refresh. You can also modify the flow or message content. 
 
-![example of complete flow in service bus](media/ifyesservice.PNG)
+![example of complete flow in service bus.](media/ifyesservice.PNG)

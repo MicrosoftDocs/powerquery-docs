@@ -26,7 +26,7 @@ In addition to an optimized column management experience, another key benefit of
 
 You can turn on schema view by selecting **Schema view** in the **View** tab. When you're ready to work on your data again, you can select **Data view** to go back.
 
-![Schema view entry point in the View tab](images/schema-view-entry-point.png)
+![Schema view entry point in the View tab.](images/schema-view-entry-point.png)
 
 
 ## Reordering columns
@@ -37,4 +37,4 @@ One common task when working on your schema is reordering columns. In Schema Vie
 ## Applying transforms
 For more advanced changes to your schema, you can find the most used column-level transforms right at your fingertips directly in the list and in the Schema tools tab. Plus, you can also use transforms available in other tabs on the ribbon. 
 
-![Schema Tools is a contextual tab in the ribbon that's available when in Schema view with the most used column-level transforms](images/schema-tools.png)
+![Schema Tools is a contextual tab in the ribbon that's available when in Schema view with the most used column-level transforms.](images/schema-tools.png)

@@ -33,11 +33,11 @@ You must have a Dataverse environment with maker permissions to access the porta
 
 ## Finding your Dataverse Environment URL
 
-Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). In the upper right of the Power Apps page, select the environment you're going to connect to. Select the ![Settings icon](media/common-data-service/settings-icon.png) settings icon, and then select **Advanced settings**.
+Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). In the upper right of the Power Apps page, select the environment you're going to connect to. Select the ![Settings icon.](media/common-data-service/settings-icon.png) settings icon, and then select **Advanced settings**.
 
 In the new browser tab that opens, copy the root of the URL. This root URL is the unique URL for your environment. The URL will be in the format of https://\<*yourenvironmentid*>.crm.dynamics.com/. Make sure not to copy the rest of the URL. Keep this URL somewhere handy so you can use it later, for example, when you create Power BI reports.
 
-![Location of the Dataverse environment URL](media/common-data-service/cds-env.png)
+![Location of the Dataverse environment URL.](media/common-data-service/cds-env.png)
 
 ## Connect to Dataverse from Power BI Desktop
 
@@ -50,11 +50,11 @@ To connect to Dataverse from Power BI Desktop:
 
 2. In the **Get Data** dialog box, select **Power Platform > Dataverse**, and then select **Connect**.
 
-   ![Get data in Power BI Desktop](media/common-data-service/get-data.png)
+   ![Get data in Power BI Desktop.](media/common-data-service/get-data.png)
 
 3. Enter the server URL address of the data you want to load.
 
-   ![Server URL selection](media/common-data-service/enter-url.png)
+   ![Server URL selection.](media/common-data-service/enter-url.png)
 
    When the table is loaded in the Navigator dialog box, by default the columns in the table are reordered in alphabetical order by the column names. If you don't want the columns reordered, in the advanced settings enter **false** in **Reorder columns**.
 
@@ -64,11 +64,11 @@ To connect to Dataverse from Power BI Desktop:
 
 4. If this is the first time you're connecting to this site, select **Sign in** and input your credentials. Then select **Connect**.
 
-   ![Sign in to this site](media/common-data-service/sign-in.png)
+   ![Sign in to this site.](media/common-data-service/sign-in.png)
 
 5. In **Navigator**, select the data you require, then either load or transform the data.
 
-   ![Load or transform from navigator](media/common-data-service/navigator.png)
+   ![Load or transform from navigator.](media/common-data-service/navigator.png)
 
 ## Connect to Dataverse from Power Query Online
 
@@ -76,11 +76,11 @@ To connect to Dataverse from Power Query Online:
 
 1. From the **Data sources** page, select **Common Data Service (Legacy)**.
 
-   ![Get data from Power Query Online](media/common-data-service/get-data-online.png)
+   ![Get data from Power Query Online.](media/common-data-service/get-data-online.png)
 
 2. Enter the server URL address of the data you want to load.
 
-   ![Enter the server URL](media/common-data-service/enter-url-online.png)
+   ![Enter the server URL.](media/common-data-service/enter-url-online.png)
 
 3. If necessary, enter an on-premises data gateway if you're going to be using on-premises data (for example, if you're going to combine data from Dataverse and an on-premises SQL Server database).
 

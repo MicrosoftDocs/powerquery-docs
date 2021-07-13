@@ -41,11 +41,11 @@ To connect to BQE Core data:
 
 2. From the **Other** category, select **BQEDataConnector**, and then select **Connect**.
 
-   ![Get Data](media/bqe-core/core-bi-9.png)
+   ![Get Data.](media/bqe-core/core-bi-9.png)
 
 3. Select **Sign In**. You'll be prompted to sign in to Core.
 
-   ![Login](media/bqe-core/core-bi-11.png)
+   ![Login.](media/bqe-core/core-bi-11.png)
 
 4. In the sign in screen, enter your Core email and password. Select **Login**.
 
@@ -54,7 +54,7 @@ To connect to BQE Core data:
    1. (Optional) If you select **Remember my consent**, the next time you connect to this Core company file you won't need to grant permission again.
    1. Select **Grant Permission**.
 
-   ![Grant Permissions](media/bqe-core/core-bi-13.png)
+   ![Grant Permissions.](media/bqe-core/core-bi-13.png)
 
 6. Select **Connect**, and then select a module. For reference, review the API Reference under the [Core API Documentation](https://api-explorer.bqecore.com/).
 

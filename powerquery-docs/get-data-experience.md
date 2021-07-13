@@ -28,13 +28,13 @@ The stages are:
 
 4. Query destination
 
-![Flow diagram showing the four stages of getting data](images/getting-data-flow-diagram.png "Flow diagram showing the four stages of getting data")
+![Flow diagram showing the four stages of getting data.](images/getting-data-flow-diagram.png "Flow diagram showing the four stages of getting data")
 
 ## 1. Connection settings
 
 Most connectors initially require at least one parameter to initialize a connection to the data source. For example, the SQL Server connector requires at least the host name to establish a connection to the SQL Server database.
 
-![SQL Server connector parameters](images/me-connector-parameters.png "SQL Server connector parameters")
+![SQL Server connector parameters.](images/me-connector-parameters.png "SQL Server connector parameters")
 
 In comparison, when trying to connect to an Excel file, Power Query requires that you use the file path to find the file you want to connect to.
 
@@ -58,7 +58,7 @@ The currently available methods of authentication for Power Query are:
 
 For example, the available authentication methods for the SQL Server database connector are Windows, Database, and Microsoft account.
 
-![SQL Server database connector authentication methods](images/me-authentication.png "SQL Server database connector authentication methods")
+![SQL Server database connector authentication methods.](images/me-authentication.png "SQL Server database connector authentication methods")
 
 ## 3. Data preview
 
@@ -83,7 +83,7 @@ The **Navigator** window consists of two main sections:
     
 * The data preview pane on the right side of the window shows a preview of the data from the object you selected.
 
-![SQL Server connector navigator window](images/me-navigator.png "SQL Server connector navigator window")
+![SQL Server connector navigator window.](images/me-navigator.png "SQL Server connector navigator window")
 
 #### Object limitation workaround
 
@@ -93,19 +93,19 @@ In the interim, you can use the following workaround:
 
 1. Right-click on the root node of the **Navigator**, and then select **Transform Data**.
 
-    ![Selecting the root node in Navigator and selecting transform data from the drop-down menu](images/navigator-transform-data.png)
+    ![Selecting the root node in Navigator and selecting transform data from the drop-down menu.](images/navigator-transform-data.png)
 
 2. Power Query Editor then opens with the full navigation table in the table preview area. This view doesn't have a limit on the number of objects, and you can use filters or any other Power Query transforms to explore the list and find the rows you want (for example, based on the **Name** column).
 
 3. Upon finding the item you want, you can get at the contents by selecting the data link (such as the **Table** link in the following image).
 
-    ![Selecting the Table link to view the contents](images/select-table-link.png)
+    ![Selecting the Table link to view the contents.](images/select-table-link.png)
 
 ### Table preview dialog box
 
 The table preview dialog box consists of only one section for the data preview. An example of a connector that provides this experience and window is the [Folder](connectors/folder.md) connector.
 
-![Table preview dialog box](images/combinefiles1.png "Table preview dialog box")
+![Table preview dialog box.](images/combinefiles1.png "Table preview dialog box")
 
 ## 4. Query destination
 
