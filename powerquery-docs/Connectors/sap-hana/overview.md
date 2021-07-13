@@ -20,7 +20,7 @@ LocalizationGroup: reference
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Analysis Services |
 | Authentication Types Supported | Basic<br/>Database<br/>Windows |
-| Function Reference Documentation | [SapHana.Database](https://docs.microsoft.com/powerquery-m/saphana-database) |
+| Function Reference Documentation | [SapHana.Database](/powerquery-m/saphana-database) |
 | | |
 
 >[!Note]
@@ -52,11 +52,11 @@ To connect to an SAP HANA database from Power Query Desktop:
 
 2. Enter the name and port of the SAP HANA server you want to connect to. The example in the following figure uses `SAPHANATestServer` on port `30015`. 
 
-   ![Enter the SAP HANA server information](sap-hana-server.png)
+   ![Enter the SAP HANA server information.](sap-hana-server.png)
 
    By default, the port number is set to support a single container database. If your SAP HANA database can contain more than one multitenant database container, select **Multi-container system database (30013)**. If you want to connect to a tenant database or a database with a non-default instance number, select **Custom** from the **Port** drop-down menu. 
 
-   If you're connecting to an SAP HANA database from Power BI Desktop, you're also given the option of selecting either **Import** or **DirectQuery**. The example in this article uses **Import**, which is the default (and the only mode for Excel). For more information about connecting to the database using DirectQuery in Power BI Desktop, see [Connect to SAP HANA data sources by using DirectQuery in Power BI](https://docs.microsoft.com/power-bi/connect-data/desktop-directquery-sap-hana).
+   If you're connecting to an SAP HANA database from Power BI Desktop, you're also given the option of selecting either **Import** or **DirectQuery**. The example in this article uses **Import**, which is the default (and the only mode for Excel). For more information about connecting to the database using DirectQuery in Power BI Desktop, see [Connect to SAP HANA data sources by using DirectQuery in Power BI](/power-bi/connect-data/desktop-directquery-sap-hana).
 
    If you select **Advanced options**, you can also enter an SQL statement. For more information on using this SQL statement, see [Import data from a database using native database query](../../native-database-query.md).
 
@@ -64,7 +64,7 @@ To connect to an SAP HANA database from Power Query Desktop:
 
 3. If you are accessing a database for the first time, you'll be asked to enter your credentials for authentication. In this example, the SAP HANA server requires database user credentials, so select **Database** and enter your user name and password. If necessary, enter your server certificate information.
 
-   ![Enter the server credentials](sap-hana-signin.png)
+   ![Enter the server credentials.](sap-hana-signin.png)
 
    Also, you may need to validate the server certificate. For more information about using validate server certificate selections, see [Using SAP HANA encryption](sap-hana-encryption.md). In Power BI Desktop and Excel, the validate server certificate selection is enabled by default. If you've already set up these selections in ODBC Data Source Administrator, clear the **Validate server certificate** check box. To learn more about using ODBC Data Source Administrator to set up these selections, see [Configure SSL for ODBC client access to SAP HANA](configure-odbc-sap-hana.md).
    
@@ -84,7 +84,7 @@ To connect to SAP HANA data from Power Query Online:
 
    If you want to connect to a tenant database or a database with a non-default instance number, select **Custom** from the **Port** drop-down menu. 
 
-   <kbd>![SAP HANA database online sign-in](sap-hana-online-signin.png)
+   <kbd>![SAP HANA database online sign-in.](sap-hana-online-signin.png)
 
 3. Select the name of the on-premises data gateway to use for accessing the database. 
 
@@ -129,5 +129,5 @@ The following list shows the supported features for SAP HANA. Not all features l
 
 The following articles contain more information that you may find useful when connecting to an SAP HANA debase.
 
-- [Manage your data source - SAP HANA](https://docs.microsoft.com/power-bi/connect-data/service-gateway-enterprise-manage-sap)
-- [Use Kerberos for single sign-on (SSO) to SAP HANA](https://docs.microsoft.com/power-bi/connect-data/service-gateway-sso-kerberos-sap-hana)
+- [Manage your data source - SAP HANA](/power-bi/connect-data/service-gateway-enterprise-manage-sap)
+- [Use Kerberos for single sign-on (SSO) to SAP HANA](/power-bi/connect-data/service-gateway-sso-kerberos-sap-hana)

@@ -19,7 +19,7 @@ Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in 
 
 Authentication Types Supported: Anonymous, Basic (Web only), Organizational Account, Web API (Web only), Windows
 
-Function Reference Documentation: [Json.Document](https://docs.microsoft.com/powerquery-m/json-document)
+Function Reference Documentation: [Json.Document](/powerquery-m/json-document)
 
 ## Capabilities supported
 
@@ -29,15 +29,15 @@ Function Reference Documentation: [Json.Document](https://docs.microsoft.com/pow
 
 To load a local JSON file into either Power BI Desktop or Excel, all you need to do is select the **JSON** option in the connector selection. This will launch a local file browser and allow you to select your JSON file.
 
-![JSON file selection](./media/json/json-get-data.png)
+![JSON file selection.](./media/json/json-get-data.png)
 
 To load a local JSON file into an online service, such as Power BI service or Power Apps, you'll need to enter the local path to the JSON file, select an on-premises data gateway, and, if authentication is required, enter your credentials.
 
-![JSON selection from online service](./media/json/connect-service.png)
+![JSON selection from online service.](./media/json/connect-service.png)
 
 Loading the JSON file will automatically launch the Power Query Editor for you to transform the data if you want, or you can simply close and apply. 
 
-![Convert to a table](./media/json/convert-table.png)
+![Convert to a table.](./media/json/convert-table.png)
 
 JSON data may not always be imported into Power Query as a table. However, you can always use the available Power Query ribbon transforms to convert it to a table.
 
@@ -49,7 +49,7 @@ To load a JSON file from the web, select the [Web connector](./web/web.md), ente
 
 If you see the following message, it may be because the file is invalid, for example, it's not really a JSON file, or is malformed. Or you may be trying to load a JSON Lines file.
 
-![Unable to connect](./media/json/unable-connect.png)
+![Unable to connect.](./media/json/unable-connect.png)
 
 If you are trying to load a JSON Lines file, the following sample M code converts all JSON Lines input to a single flattened table automatically:
 

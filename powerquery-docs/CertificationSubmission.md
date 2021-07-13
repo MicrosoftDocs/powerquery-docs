@@ -18,7 +18,7 @@ This article provides instructions for how to submit your Power Query custom con
 
 ## Prerequisites
 
-After you've been approved for certification, ensure that your connector meets the [certification requirements](https://docs.microsoft.com/power-query/connectorcertification#certification-requirements) and follows all feature, style, and security guidelines. Prepare the [submission artifacts](https://docs.microsoft.com/power-query/connectorcertification#certification-requirements) for submission.
+After you've been approved for certification, ensure that your connector meets the [certification requirements](./connectorcertification.md#certification-requirements) and follows all feature, style, and security guidelines. Prepare the [submission artifacts](./connectorcertification.md#certification-requirements) for submission.
 
 ## Submitting to the Connector Certification Portal
 
@@ -36,9 +36,9 @@ The Connector Certification Portal is an experience within [ISV Studio](https://
 
 5. Upload your `.mez` file and complete the form with information on your connector. Submit the form to finish the connector submission process. Once submitted, you can use the Activity Control experience on the right to communicate with your Microsoft contact. 
 
-6. Read the guidelines for providing [documentation](https://docs.microsoft.com/power-query/providing-user-documentation) for your custom connector. Submit a pull request to our public [documentation repository](https://github.com/MicrosoftDocs/powerquery-docs/tree/master/powerquery-docs/Connectors) with an `.md` file following the custom connector documentation guidelines. This step is crucial to ensure users know how to use your connector. Once the pull request has been made, send a link to the pull request in the Activity Control experience in the Connector Certification Portal. 
+6. Read the guidelines for providing [documentation](./providing-user-documentation.md) for your custom connector. Create a Markdown (`.md`) file following the custom connector documentation guidelines, leveraging examples from existing documentation if needed. This step is crucial to ensure users know how to use your connector. Once complete, submit the Markdown (`.md`) file in the Activity Control as an attachment.
 
-7. Also within the Activity Control, share a paragraph introducing your connector and explaining its value proposition to users and customers. This entry will be submitted as part of the Power BI blog in the upcoming month's post, announcing the release of your connector. 
+7. Also in the Activity Control, share a paragraph introducing your connector and explaining its value proposition to users and customers. This entry will be submitted as part of the Power BI blog in the upcoming month's post, announcing the release of your connector. 
 
 8. If you would like to add teammates to manage your connector, let your Microsoft contact know.
 
@@ -66,5 +66,4 @@ Updates to your connector submission can be made at any time, except when your c
 
 5. You can upload a new version of artifacts and complete the submission form again.
 
-6. After submitting the connector form, within the Activity Control chat feature on the right, submit a short changelog explaining the connector update. This information should be public and written in a customer-facing way, as it will be included in the next Power BI Desktop blog update. 
-
+6. After submitting the connector form, in the Activity Control chat feature on the right, submit a short changelog explaining the connector update. This information should be public and written in a customer-facing way, as it will be included in the next Power BI Desktop blog update.

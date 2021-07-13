@@ -24,7 +24,7 @@ With dataflows, you can bring large amounts of data into Power BI or your organi
 
 Incremental refresh is available in dataflows created in Power BI and dataflows created in Power Apps. This article shows screens from Power BI, but these instructions apply to dataflows created in Power BI or in Power Apps.
 
-![Incremental refresh for dataflows](media/dataflows-incremental-refresh/dataflows-incremental-refresh-03.png)
+![Incremental refresh for dataflows.](media/dataflows-incremental-refresh/dataflows-incremental-refresh-03.png)
 
 Using incremental refresh in dataflows created in Power BI requires that the dataflow reside in a workspace in [Premium capacity](/power-bi/service-premium-what-is). Incremental refresh in Power Apps requires Power Apps Plan 2.
 
@@ -36,14 +36,14 @@ A dataflow can contain many entities. Incremental refresh is set up at the entit
 
 To set up an incremental refreshed entity, start by configuring your entity as you would any other entity.
 
-After the dataflow is created and saved, select **Incremental refresh** ![Incremental refresh](media/dataflows-incremental-refresh/dataflows-incremental-refresh-icon.png) in the entity view, as shown in the following image.
+After the dataflow is created and saved, select **Incremental refresh** ![Incremental refresh.](media/dataflows-incremental-refresh/dataflows-incremental-refresh-icon.png) in the entity view, as shown in the following image.
 
-![Incremental refresh icon for dataflows](media/dataflows-incremental-refresh/dataflows-incremental-refresh-01.png)
+![Incremental refresh icon for dataflows.](media/dataflows-incremental-refresh/dataflows-incremental-refresh-01.png)
 
 When you select the icon, the **Incremental refresh settings** window appears. Turn on incremental refresh.
 
 
-![Incremental refresh for dataflows](media/dataflows-incremental-refresh/dataflows-incremental-refresh-03.png)
+![Incremental refresh for dataflows.](media/dataflows-incremental-refresh/dataflows-incremental-refresh-03.png)
 
 The following list explains the settings in the **Incremental refresh settings** window.
 
@@ -122,13 +122,13 @@ The examples in this section share the following refresh policy:
 In this example, day partitions are automatically merged to the month level after they go outside the incremental range. Partitions in the incremental range need to be maintained at daily granularity to allow only those days to be refreshed.
 The refresh operation with *Run Date 12/11/2016* merges the days in November, because they fall outside the incremental range.
 
-![Merge partitions in dataflows](media/dataflows-incremental-refresh/dataflows-incremental-refresh-04.png)
+![Merge partitions in dataflows.](media/dataflows-incremental-refresh/dataflows-incremental-refresh-04.png)
 
 ### Drop old partitions
 
 Old partitions that fall outside the total range are removed. The refresh operation with *Run Date 1/2/2017* drops the partition for Q3 of 2016 because it falls outside the total range.
 
-![Drop old partitions in dataflows](media/dataflows-incremental-refresh/dataflows-incremental-refresh-05.png)
+![Drop old partitions in dataflows.](media/dataflows-incremental-refresh/dataflows-incremental-refresh-05.png)
 
 ### Recovery from prolonged failure
 
@@ -138,7 +138,7 @@ The next successful refresh operation, with *Run Date 1/15/2017*, needs to backf
 
 The next refresh operation, with *Run Date 1/16/2017*, takes the opportunity to merge the days in December and the months in Q4 of 2016.
 
-![Recovery from prolonged failure in dataflows](media/dataflows-incremental-refresh/dataflows-incremental-refresh-06.png)
+![Recovery from prolonged failure in dataflows.](media/dataflows-incremental-refresh/dataflows-incremental-refresh-06.png)
 
 ## Dataflow incremental refresh and datasets
 

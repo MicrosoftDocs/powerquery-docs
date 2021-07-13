@@ -18,7 +18,7 @@ LocalizationGroup: reference
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication Types Supported | Windows (desktop/online)<br/>Database (desktop)<br/>Basic (online) |
-| Function Reference Documentation | [Oracle.Database](https://docs.microsoft.com/powerquery-m/oracle-database) |
+| Function Reference Documentation | [Oracle.Database](/powerquery-m/oracle-database) |
 | | |
 
 >[!Note]
@@ -36,7 +36,7 @@ Before you can connect to an Oracle database using Power Query, you need to inst
 >[!Note]
 >Choose a version of Oracle Data Access Client (ODAC) that's compatible with your Oracle Server. For instance, ODAC 12.x doesn't always support Oracle Server version 9. Choose the Windows installer of the Oracle Client. During the setup of the Oracle client, make sure you enable *Configure ODP.NET and/or Oracle Providers for ASP.NET* at machine-wide level by selecting the corresponding checkbox during the setup wizard. Some versions of the Oracle client wizard selects the checkbox by default, others do'nt. Make sure that checkbox is selected so that Power Query can connect to your Oracle database.
 
-To connect to an Oracle database with the [on-premises data gateway](https://docs.microsoft.com/data-integration/gateway/), the correct Oracle client software must be installed on the computer running the gateway. The Oracle client software you use depends on the Oracle server version, but will always match the 64-bit gateway. For more information, go to [Manage your data source - Oracle](https://docs.microsoft.com/power-bi/connect-data/service-gateway-onprem-manage-oracle).
+To connect to an Oracle database with the [on-premises data gateway](/data-integration/gateway/), the correct Oracle client software must be installed on the computer running the gateway. The Oracle client software you use depends on the Oracle server version, but will always match the 64-bit gateway. For more information, go to [Manage your data source - Oracle](/power-bi/connect-data/service-gateway-onprem-manage-oracle).
 
 ## Capabilities Supported
 * Import
@@ -55,16 +55,16 @@ To make the connection, take the following steps:
  
 2. Specify the Oracle Server to connect to in **Server**. If a SID is required, specify it by using the format *ServerName/SID*, where *SID* is the unique name of the database. If the *ServerName/SID* format doesn't work, use *ServerName/ServiceName*, where *ServiceName* is the alias you use to connect.
 
-   ![Enter Oracle database connection](./media/oracle-database/select-database.png)
+   ![Enter Oracle database connection.](./media/oracle-database/select-database.png)
 
    >[!Note]
    > If you are using a local database, or autonomous database connections, you may need to place the server name in quotation marks to avoid connection errors.
    
-3. If you're connecting from Power BI Desktop, select either the **Import** or **DirectQuery** data connectivity mode. The rest of these example steps use the Import data connectivity mode. To learn more about DirectQuery, go to [Use DirectQuery in Power BI Desktop](https://docs.microsoft.com/power-bi/connect-data/desktop-use-directquery).
+3. If you're connecting from Power BI Desktop, select either the **Import** or **DirectQuery** data connectivity mode. The rest of these example steps use the Import data connectivity mode. To learn more about DirectQuery, go to [Use DirectQuery in Power BI Desktop](/power-bi/connect-data/desktop-use-directquery).
 
 4. If this is the first time you're connecting to this Oracle database, select the authentication type you want to use, and then enter your credentials. For more information about authentication, go to [Authentication with a data source](../connectorauthentication.md).
 
-   ![Enter your Oracle database credentials](./media/oracle-database/sign-in.png)
+   ![Enter your Oracle database credentials.](./media/oracle-database/sign-in.png)
 
 5. In **Navigator**, select the data you require, then either select **Load** to load the data or **Transform Data** to transform the data.
 
@@ -76,7 +76,7 @@ To make the connection, take the following steps:
 
 2. In the **Oracle database** dialog that appears, specify the Oracle Server to connect to in **Server**. If a SID is required, specify it by using the format *ServerName/SID*, where *SID* is the unique name of the database. If the *ServerName/SID* format doesn't work, use *ServerName/ServiceName*, where *ServiceName* is the alias you use to connect.
 
-   ![Enter Oracle database online connection](./media/oracle-database/select-database-online.png)
+   ![Enter Oracle database online connection.](./media/oracle-database/select-database-online.png)
 
 3. Select the name of your on-premises data gateway.
 
@@ -95,7 +95,7 @@ To make the connection, take the following steps:
 
 Power Query Desktop provides a set of advanced options that you can add to your query if needed.
 
-![Advanced options included in the Oracle database connection dialog box](./media/oracle-database/advanced-options-oracle.png)
+![Advanced options included in the Oracle database connection dialog box.](./media/oracle-database/advanced-options-oracle.png)
 
 
 The following table lists all of the advanced options you can set in Power Query Desktop.
@@ -130,9 +130,9 @@ If you downloaded Power BI Desktop from the Microsoft Store, you might be unable
 
 * If you want to use the version from Microsoft Store: on your local computer, copy oraons.dll from *12.X.X\client_X* to *12.X.X\client_X\bin*, where *X* represents version and directory numbers.
 
-If you see the error message, *Object reference not set*, in the Power BI Gateway when you connect to an Oracle database, follow the instructions in [Manage your data source - Oracle](https://docs.microsoft.com/power-bi/connect-data/service-gateway-onprem-manage-oracle).
+If you see the error message, *Object reference not set*, in the Power BI Gateway when you connect to an Oracle database, follow the instructions in [Manage your data source - Oracle](/power-bi/connect-data/service-gateway-onprem-manage-oracle).
 
-If you're using Power BI Report Server, consult the guidance in the [Oracle Connection Type](https://docs.microsoft.com/sql/reporting-services/report-data/oracle-connection-type-ssrs) article.
+If you're using Power BI Report Server, consult the guidance in the [Oracle Connection Type](/sql/reporting-services/report-data/oracle-connection-type-ssrs) article.
 
 ## Next steps
 

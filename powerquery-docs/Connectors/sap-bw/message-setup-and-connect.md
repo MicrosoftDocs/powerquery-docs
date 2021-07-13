@@ -23,7 +23,7 @@ LocalizationGroup: reference
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows) |
 | Authentication Types Supported | Windows (desktop)<br/>Database (desktop)<br/>Basic (online) |
-| Function Reference Documentation | [SapBusinessWarehouse.Cubes](https://docs.microsoft.com/powerquery-m/sapbusinesswarehouse-cubes)<br/>[sapbusinesswarehouseexecutionmode.datastream](https://docs.microsoft.com/powerquery-m/sapbusinesswarehouseexecutionmode.datastream)<br/>[SapBusinessWarehouseExecutionMode.BasXml](https://docs.microsoft.com/powerquery-m/sapbusinesswarehouseexecutionmode.basxml)<br/>[SapBusinessWarehouseExecutionMode.BasXmlGzip](https://docs.microsoft.com/powerquery-m/sapbusinesswarehouseexecutionmode.basxmlgzip) |
+| Function Reference Documentation | [SapBusinessWarehouse.Cubes](/powerquery-m/sapbusinesswarehouse-cubes)<br/>[sapbusinesswarehouseexecutionmode.datastream](/powerquery-m/sapbusinesswarehouseexecutionmode.datastream)<br/>[SapBusinessWarehouseExecutionMode.BasXml](/powerquery-m/sapbusinesswarehouseexecutionmode.basxml)<br/>[SapBusinessWarehouseExecutionMode.BasXmlGzip](/powerquery-m/sapbusinesswarehouseexecutionmode.basxmlgzip) |
 | | |
 
 >[!Note]
@@ -56,7 +56,7 @@ To use the version 2.0 SAP BW Message Server connector in Power BI Desktop or Po
 
 When you install, in **Optional setup steps**, make sure you select **Install assemblies to GAC**.
 
-![Select to install assemblies to GAC](install-to-gac.png)
+![Select to install assemblies to GAC.](install-to-gac.png)
 
 >[!Note]
 > If you want to use version 1.0 of the SAP BW Message Server connector, you must use the *SAP NetWeaver* library. For more information about installing version 1.0, see [Prerequisites for version 1.0](#prerequisites-for-version-10). We recommend using the Implementation 2.0 SAP BW Message Server connector whenever possible.
@@ -82,7 +82,7 @@ To connect to an SAP BW Message Server:
 
 2. Enter the server, system number, client ID, and logon group of the SAP BW Message Server you want to connect to. This example uses `SAPBWTestServer` as the server name, a system number of `100`, a client ID of `837`, and a logon group of `PURCHASING`.
 
-    The rest of this example describes how to import your data into Power Query Desktop, which is the default setting for **Data Connectivity mode**. If you want to use DirectQuery to load your data, see [Connect to SAP Business Warehouse by using DirectQuery in Power BI](https://docs.microsoft.com/power-bi/connect-data/desktop-directquery-sap-bw).
+    The rest of this example describes how to import your data into Power Query Desktop, which is the default setting for **Data Connectivity mode**. If you want to use DirectQuery to load your data, see [Connect to SAP Business Warehouse by using DirectQuery in Power BI](/power-bi/connect-data/desktop-directquery-sap-bw).
 
     This example also uses the default **Implementation** of **2.0 (requires SAP .NET Connector 3.0)**. If you want to use version 1 of the SAP BW Message Server connector, select **1.0 (requires NetWeaver RFC)**.
 
@@ -90,11 +90,11 @@ To connect to an SAP BW Message Server:
 
     When you've finished filling in the relevant information, select **OK**.
 
-   ![Enter the SAP Business Warehouse Message Server information](get-data-message.png)
+   ![Enter the SAP Business Warehouse Message Server information.](get-data-message.png)
 
 3. When accessing the database for the first time, the SAP BW Message Server requires database user credentials. Power Query Desktop offers two authentication modes for SAP BW connections&mdash;user name/password authentication (Database), and Windows authentication (single sign-on). SAML authentication isn't currently supported. Select either **Windows** or **Database**. If you select **Database** authentication, enter your user name and password. If you select **Windows** authentication, go to [Windows Authentication and single sign-on](single-sign-on.md) to learn more about the requirements for Windows authentication.
 
-   ![Enter the message server credentials](sign-in-message.png)
+   ![Enter the message server credentials.](sign-in-message.png)
 
    Then select **Connect**.
 
@@ -102,7 +102,7 @@ To connect to an SAP BW Message Server:
 
 4. From the **Navigator** dialog box, select the items you want to use. When you select one or more items from the server, the **Navigator** dialog box creates a preview of the output table. For more information about navigating the SAP BW Message Server query objects in Power Query, go to [Navigate the query objects](navigate-query-objects.md).
 
-   ![Message Server navigator view from Power Query Desktop](navigator-desktop.png)
+   ![Message Server navigator view from Power Query Desktop.](navigator-desktop.png)
 
 5. From the **Navigator** dialog box, you can either transform the data in the Power Query Editor by selecting **Transform Data**, or load the data by selecting **Load**.
 
@@ -114,11 +114,11 @@ To connect to an SAP BW Message Server from Power Query Online:
 
 2. Enter the server, system number, client ID, and logo group of the SAP BW Message Server you want to connect to. This example uses `SAPBWTestServer` as the server name, a system number of `100`, a client ID of `837`, and a logon group of `PURCHASING`.
 
-3. Select the [on-premises data gateway](https://docs.microsoft.com/data-integration/gateway/service-gateway-onprem) you want to use to connect to the data.
+3. Select the [on-premises data gateway](/data-integration/gateway/service-gateway-onprem) you want to use to connect to the data.
 
 4. Set **Authentication Kind** to **Basic**. Enter your user name and password.
 
-   ![SAP BW Message Server online sign-in](get-data-online-power-apps-message.png)
+   ![SAP BW Message Server online sign-in.](get-data-online-power-apps-message.png)
 
 5. You can also select from a set of [advanced options](use-advanced-options.md) to fine-tune your query. 
 
@@ -128,7 +128,7 @@ To connect to an SAP BW Message Server from Power Query Online:
 
 7. From the **Navigator** dialog box, you can transform the data in the Power Query Editor by selecting **Transform Data**.
 
-   ![SAP BW Message Server Navigator view from Power Query Online](navigator-online.png)
+   ![SAP BW Message Server Navigator view from Power Query Online.](navigator-online.png)
 
 
 ### See also

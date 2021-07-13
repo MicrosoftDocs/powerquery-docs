@@ -8,6 +8,7 @@ ms.reviewer: kvivek
 ms.topic: conceptual
 ms.date: 12/15/2020
 ms.author: mideboer
+ms.custom: intro-internal
 ---
 # Power Automate Templates for the Dataflows Connector
 
@@ -36,4 +37,4 @@ Save dataflow refresh metadata and build a dataflows monitoring dashboard:
 * [When a dataflow refresh completes, save metadata to Excel online](load-dataflow-metadata-into-excel-online.md)
 * [When a dataflow refresh completes, save metadata to a Power BI streaming dataset](load-dataflow-metadata-into-power-bi-dataset.md)
 
-![example of dataflow monitoring dashboard](media/dashboard.PNG)
+![example of dataflow monitoring dashboard.](media/dashboard.PNG)

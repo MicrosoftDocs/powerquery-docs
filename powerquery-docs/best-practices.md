@@ -6,6 +6,7 @@ ms.service: powerquery
 ms.reviewer: 
 ms.date: 08/31/2020
 ms.author: v-miesco
+ms.custom: intro-internal
 ---
 # Best practices when working with Power Query
 
@@ -20,7 +21,7 @@ Using the best connector for the task will provide you with the best experience 
 
 Each data connector follows a standard experience as explained in [Getting data](get-data-experience.md). This standardized experience has a stage called **Data Preview**. In this stage, you're provided with a user-friendly window to select the data that you want to get from your data source, if the connector allows it, and a simple data preview of that data. You can even select multiple datasets from your data source through the **Navigator** window, as shown in the following image.
 
-![Sample navigator window](images/me-navigator.png)
+![Sample navigator window.](images/me-navigator.png)
 
 > [!NOTE]
 > To see the full list of available connectors in Power Query, see [Connectors in Power Query](Connectors/index.md).
@@ -32,15 +33,15 @@ It's also a best practice to filter out any data that isn't relevant for your ca
 
 You can use the auto filter menu that displays a distinct list of the values found in your column to select the values that you want to keep or filter out. You can also use the search bar to help you find the values in your column.
 
-![Auto filter menu in Power Query](images/me-filter-values-auto-filter-menu.png)
+![Auto filter menu in Power Query.](images/me-filter-values-auto-filter-menu.png)
 
 You can also take advantage of the type-specific filters such as **In the previous** for a date, datetime, or even date timezone column.
 
-![type specific filter for a date column](images/me-filter-values-date-column.png)
+![type specific filter for a date column.](images/me-filter-values-date-column.png)
 
 These type-specific filters can help you create a dynamic filter that will always retrieve data that's in the previous *x* number of seconds, minutes, hours, days, weeks, months, quarters, or years as showcased in the following image.
 
-![Is in the previous date-specific filter](images/me-is-in-the-previous.png)
+![Is in the previous date-specific filter.](images/me-is-in-the-previous.png)
 
 > [!NOTE]
 > To learn more about filtering your data based on values from a column, see [Filter by values](filter-values.md).
@@ -49,11 +50,11 @@ These type-specific filters can help you create a dynamic filter that will alway
 
 Some features in Power Query are contextual to the data type of the column selected. For example, when selecting a date column, the available options under the **Date and time column** group in the **Add Column** menu will be available. But if the column doesn't have a data type set, then these options will be greyed out.
 
-![Type specific option in add column menu](images/me-type-specific-filter-for-date.png)
+![Type specific option in add column menu.](images/me-type-specific-filter-for-date.png)
 
 A similar situation occurs for the type-specific filters, since they're specific to certain data types. If your column doesn't have the correct data type defined, these type-specific filters won't be available.
 
-![type specific filter for a date column](images/me-filter-values-date-column.png)
+![type specific filter for a date column.](images/me-filter-values-date-column.png)
 
 It's crucial that you always work with the correct data types for your columns. When working with structured data sources such as databases, the data type information will be brought from the table schema found in the database. But for unstructured data sources such as TXT and CSV files, it's important that you set the correct data types for the columns coming from that data source.
 By default, Power Query offers an automatic data type detection for unstructured data sources. You can read more about this feature and how it can help you in [Data types](data-types.md#automatic-detection-of-column-data-type-and-headers).
@@ -65,7 +66,7 @@ By default, Power Query offers an automatic data type detection for unstructured
 
 Before you start preparing you data and adding new transformation steps, we recommend that you enable the Power Query [data profiling tools](data-profiling-tools.md) to easily discover information about your data.
 
-![Data preview or data profiling tools in Power Query](images/me-data-preview-tools-enabled-v2.png)
+![Data preview or data profiling tools in Power Query.](images/me-data-preview-tools-enabled-v2.png)
 
 These data profiling tools help you better understand your data. The tools provide you with small visualizations that show you information on a per column basis, such as:
 * **Column quality**&mdash;Provides a small bar chart and three indicators with the representation of how many values in the column fall under the categories of valid, error, or empty values.
@@ -74,7 +75,7 @@ These data profiling tools help you better understand your data. The tools provi
 
 You can also interact with these features, which will help you prepare your data.
 
-![Data Quality hover options](images/me-column-quality-hover.png)
+![Data Quality hover options.](images/me-column-quality-hover.png)
 
 > [!NOTE]
 > To learn more about the data profiling tools, see [Data profiling tools](data-profiling-tools.md).
@@ -84,7 +85,7 @@ We recommend that you document your queries by renaming or adding a description 
 
 While Power Query automatically creates a step name for you in the applied steps pane, you can also rename your steps or add a description to any of them.
 
-![Applied steps pane with documented steps and description added](images/me-documenting.png)
+![Applied steps pane with documented steps and description added.](images/me-documenting.png)
 
 > [!NOTE]
 > To learn more about all the available features and components found inside the applied steps pane, see [Using the Applied steps list](applied-steps.md).
@@ -95,15 +96,15 @@ It's entirely possible to create a single query that contains all the transforma
 
 For example, say you have a query with the nine steps shown in the following image.
 
-![Applied steps pane with documented steps and description added](images/me-documenting.png)
+![Applied steps pane with documented steps and description added.](images/me-documenting.png)
 
 You could split this query into two at the **Merge with Prices table** step. That way it's easier to understand the steps that were applied to the sales query before the merge. To do this operation, you right-click the **Merge with Prices table** step and select the **Extract Previous** option. 
 
-![Extract previous step](images/me-extract-previous.png)
+![Extract previous step.](images/me-extract-previous.png)
 
 You'll then be prompted with a dialog to give your new query a name. This will effectively split your query into two queries. One query will have all the queries before the merge. The other query will have an initial step that will reference your new query and the rest of the steps that you had in your original query from the **Merge with Prices table** step downward.
 
-![Original query after the extract previous step action](images/me-extract-previous-referenced.png)
+![Original query after the extract previous step action.](images/me-extract-previous-referenced.png)
 
 You could also leverage the use of query referencing as you see fit. But it's a good idea to keep your queries at a level that doesn't seem daunting at first glance with so many steps.
 
@@ -114,7 +115,7 @@ You could also leverage the use of query referencing as you see fit. But it's a 
 
 A great way to keep your work organized is by leveraging the use of groups in the queries pane.
 
-![Working with groups in Power Query](images/queries-pane-move-to-group.png)
+![Working with groups in Power Query.](images/queries-pane-move-to-group.png)
 
 The sole purpose of groups is to help you keep your work organized by serving as folders for your queries. You can create groups within groups should you ever need to. Moving queries across groups is as easy as drag and drop. 
 
@@ -156,17 +157,17 @@ A parameter serves as a way to easily store and manage a value that can be reuse
 
 * **Step argument**&mdash;You can use a parameter as the argument of multiple transformations driven from the user interface.
 
-   ![Select parameter for transformation argument](images/me-parameters-step-argument-sample-parameter-select-parameter.png)
+   ![Select parameter for transformation argument.](images/me-parameters-step-argument-sample-parameter-select-parameter.png)
 
 * **Custom Function argument**&mdash;You can create a new function from a query, and reference parameters as the arguments of your custom function.
 
-   ![Create Function](images/me-parameters-create-function.png)
+   ![Create Function.](images/me-parameters-create-function.png)
 
 The main benefits of creating and using parameters are:
 
 * Centralized view of all your parameters through the **Manage Parameters** window.
 
-   ![Manage Parameters window](images/me-parameters-manage-parameters.png)
+   ![Manage Parameters window.](images/me-parameters-manage-parameters.png)
 
 * Reusability of the parameter in multiple steps or queries.
 
@@ -174,7 +175,7 @@ The main benefits of creating and using parameters are:
 
 You can even use parameters in some of the arguments of the data connectors. For example, you could create a parameter for your server name when connecting to your SQL Server database. Then you could use that parameter inside the SQL Server database dialog.
 
-![SQL Server database dialog with parameter for server name](images/me-sql-server-parameter.png)
+![SQL Server database dialog with parameter for server name.](images/me-sql-server-parameter.png)
 
 If you change your server location, all you need to do is update the parameter for your server name and your queries will be updated.
 
@@ -188,11 +189,11 @@ For example, say you have multiple queries or values that require the same set o
 
 Power Query custom functions can be created from existing queries and parameters. For example, imagine a query that has several codes as a text string and you want to create a function that will decode those values.
 
-![List of codes](images/me-sample-flight-data.png)
+![List of codes.](images/me-sample-flight-data.png)
 
 You start by having a parameter that has a value that serves as an example.
 
-![Sample parameter code value](images/me-sample-parameter-code.png)
+![Sample parameter code value.](images/me-sample-parameter-code.png)
 
 From that parameter, you create a new query where you apply the transformations that you need. For this case, you want to split the code **PTY-CM1090-LAX** into multiple components:
 * **Origin** = PTY
@@ -200,15 +201,15 @@ From that parameter, you create a new query where you apply the transformations 
 * **Airline** = CM
 * **FlightID** = 1090
 
-![Sample transform query](images/me-sample-transform-query.png)
+![Sample transform query.](images/me-sample-transform-query.png)
 
 You can then transform that query into a function by doing a right-click on the query and selecting **Create Function**. Finally, you can invoke your custom function into any of your queries or values, as shown in the following image.
 
-![Invoking a custom function](images/me-invoke-custom-function.png)
+![Invoking a custom function.](images/me-invoke-custom-function.png)
 
 After a few more transformations, you can see that you've reached your desired output and leveraged the logic for such a transformation from a custom function.
 
- [ ![Final output query after invoking a custom function](images/me-invoked-custom-function.png) ](images/me-invoked-custom-function.png#lightbox)
+ [ ![Final output query after invoking a custom function.](images/me-invoked-custom-function.png) ](images/me-invoked-custom-function.png#lightbox)
 
 >[!NOTE]
 > To learn more about how to create and use custom functions in Power Query from the article [Custom Functions](custom-function.md).

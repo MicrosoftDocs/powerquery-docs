@@ -19,15 +19,15 @@ In Power Query Editor, the *Applied Steps* for the query are shown in the **Quer
 
 For example, if you select the gear icon next to **Added Items**, you can review the selected data objects in SAP BW, or modify the specified query parameters. This way it's possible to filter a dataset using a characteristic that isn't included in the result set.
 
-![Add items dialog](add-items-dialog.png)
+![Add items dialog.](add-items-dialog.png)
 
 You can apply additional filters on the dataset by selecting the drop-down menu for one of the columns. 
 
-![Filter from column](filter-from-column.png)
+![Filter from column.](filter-from-column.png)
 
 Another easy way to set a filter is to right-click on one of the values in the table, then select **Member Filters** or **Text Filters**.
 
-![Filter from a value in the table](filter-from-table-value.png)
+![Filter from a value in the table.](filter-from-table-value.png)
 
 For example, you could filter the dataset to only include records for Calendar Year/Month FEB 2003, or apply a text filter to only include records where Calendar Year/Month contains 2003.
 
@@ -35,17 +35,17 @@ Not every filter will get folded into the query against SAP BW. You can determin
 
 If the icon is a cube, then the filter is applied in the query against the SAP BW system.
 
-![Top left corner of table showing cube icon](cube-icon.png)
+![Top left corner of table showing cube icon.](cube-icon.png)
 
 If the icon is a table, then the filter isn't part of the query and only applied to the table.
 
-![Top left corner of table showing table icon](table-icon.png)
+![Top left corner of table showing table icon.](table-icon.png)
 
 Behind the UI of Power Query Editor, code is generated based on the M formula language for data mashup queries.
 
 You can view the generated M code with the **Advanced Editor** option in the **View** tab.
 
-![Generated M code in the Advanced Editor](generated-m-code.png)
+![Generated M code in the Advanced Editor.](generated-m-code.png)
 
 To see a description for each function or to test it, right-click on the existing SAP BW query in the **Queries** pane and select **Create Function**. In the formula bar at the top, enter:
 
@@ -53,7 +53,7 @@ To see a description for each function or to test it, right-click on the existin
 
 where <_function name_> is the name of the function you want to see described. The following example shows the description of the `Cube.Transform` function.
 
-![Image of the create function dialog box showing information about the Cube.Transform function](cube-transform-definition.png)
+![Image of the create function dialog box showing information about the Cube.Transform function.](cube-transform-definition.png)
 
 The following examples show some descriptions of various cube functions:
 
@@ -67,5 +67,5 @@ The following examples show some descriptions of various cube functions:
 
 ### See also
 
-* [Power Query M formula language reference](https://docs.microsoft.com/powerquery-m/)
+* [Power Query M formula language reference](/powerquery-m/)
 * [Implementation details](implementation-details.md)

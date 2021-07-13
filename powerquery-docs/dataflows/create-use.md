@@ -22,7 +22,7 @@ In the world of ever-expanding data, data preparation can be difficult and expen
 
 To make data preparation easier and to help you get more value out of your data, Power Query and Power Platform dataflows were created.
 
-![Linked entities in Power BI](media/dataflows-linked-entities/linked-entities-03.png)
+![Linked entities in Power BI.](media/dataflows-linked-entities/linked-entities-03.png)
 
 With dataflows, Microsoft brings the self-service data preparation capabilities of Power Query into the Power BI and Power Apps online services, and expands existing capabilities in the following ways:
 

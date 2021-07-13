@@ -28,7 +28,7 @@ In this section, you will create a new Data Connector project, provide some basi
 
 Open Visual Studio, and create a new Project. Under the Power Query folder, select the Data Connector project. For this sample, set the project name to `TripPin`.
 
-![VSProject](../../../images/vs2017_project.png)
+![VSProject.](../../../images/vs2017_project.png)
 
 Open the TripPin.pq file and paste in the following connector definition.
 
@@ -82,11 +82,11 @@ In Visual Studio, you'll receive a similar prompt that calls out which data sour
 Select the shortest of the data source paths (https://services.odata.org/)&mdash;this will apply your credential to all URLs under this path.
 Select the **Anonymous** credential type, and then select **Set Credential**. 
 
-![Credential prompt](../../../images/credentialPrompt.png)
+![Credential prompt.](../../../images/credentialPrompt.png)
 
 Select **OK** to close the dialog, and then select the **Start** button once again. You see a query execution status dialog, and finally a Query Result table showing the data returned from your query.
 
-![Query results](../../../images/trippin1Results.png)
+![Query results.](../../../images/trippin1Results.png)
 
 You can try out a few different OData URLs in the test file to see what how different results are returned. For example:
 
@@ -125,23 +125,23 @@ To use your extension in Power BI Desktop, you'll need to copy your connector pr
 
 You should be able to locate your extension by typing its name into the search box. 
 
-![Get Data Dialog](../../../images/trippin1GetData.png)
+![Get Data Dialog.](../../../images/trippin1GetData.png)
 
 Double click on the function name and the function invocation dialog will appear. Enter the root URL of the service (https://services.odata.org/v4/TripPinService/), and select **OK**. 
 
-![Invoke Function](../../../images/trippin1Function.png)
+![Invoke Function.](../../../images/trippin1Function.png)
 
 Since this is the first time you are accessing this data source, you'll receive a prompt for credentials. Check that the shortest URL is selected, and then select **Connect**. 
 
-![Credential prompt](../../../images/trippin1Creds.png)
+![Credential prompt.](../../../images/trippin1Creds.png)
 
 Notice that instead of getting a simple table of data, the navigator appears. This is because the [OData.Feed](/powerquery-m/odata-feed) function returns a table with special metadata on top of it that the Power Query experience knows to display as a navigation table. This walkthrough will cover how you can create and customize your own navigation table in a future lesson. 
 
-![Nav Table](../../../images/trippin1NavTable.png)
+![Nav Table.](../../../images/trippin1NavTable.png)
 
 Select the **Me** table, and then select **Edit**. Notice that the columns already have types assigned (well, most of them). This is another feature of the underlying [OData.Feed](/powerquery-m/odata-feed) function. If you watch the requests in [Fiddler](https://www.telerik.com/fiddler), you'll see that you've fetched the service's $metadata document. The engine's OData implementation does this automatically to determine the service's schema, data types, and relationships. 
 
-![Me Record](../../../images/trippin1Me.png)
+![Me Record.](../../../images/trippin1Me.png)
 
 ## Conclusion
 

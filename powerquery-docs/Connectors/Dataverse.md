@@ -33,11 +33,11 @@ You must have a Dataverse environment with maker permissions to access the porta
 
 ## Finding your Dataverse Environment URL
 
-Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). In the upper right of the Power Apps page, select the environment you're going to connect to. Select the ![Settings icon](media/common-data-service/settings-icon.png) settings icon, and then select **Advanced settings**.
+Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). In the upper right of the Power Apps page, select the environment you're going to connect to. Select the ![Settings icon.](media/common-data-service/settings-icon.png) settings icon, and then select **Advanced settings**.
 
 In the new browser tab that opens, copy the root of the URL. This root URL is the unique URL for your environment. The URL will be in the format of https://\<*yourenvironmentid*>.crm.dynamics.com/. Make sure not to copy the rest of the URL. Keep this URL somewhere handy so you can use it later, for example, when you create Power BI reports.
 
-![Location of the Dataverse environment URL](media/common-data-service/cds-env.png)
+![Location of the Dataverse environment URL.](media/common-data-service/cds-env.png)
 
 ## Connect to Dataverse from Power BI Desktop
 
@@ -50,11 +50,11 @@ To connect to Dataverse from Power BI Desktop:
 
 2. In the **Get Data** dialog box, select **Power Platform > Dataverse**, and then select **Connect**.
 
-   ![Get data in Power BI Desktop](media/common-data-service/get-data.png)
+   ![Get data in Power BI Desktop.](media/common-data-service/get-data.png)
 
-2. Enter the server URL address of the data you want to load.
+3. Enter the server URL address of the data you want to load.
 
-   ![Server URL selection](media/common-data-service/enter-url.png)
+   ![Server URL selection.](media/common-data-service/enter-url.png)
 
    When the table is loaded in the Navigator dialog box, by default the columns in the table are reordered in alphabetical order by the column names. If you don't want the columns reordered, in the advanced settings enter **false** in **Reorder columns**.
 
@@ -62,25 +62,25 @@ To connect to Dataverse from Power BI Desktop:
 
    When you've finished filling in the information, select **OK**.
 
-3. If this is the first time you're connecting to this site, select **Sign in** and input your credentials. Then select **Connect**.
+4. If this is the first time you're connecting to this site, select **Sign in** and input your credentials. Then select **Connect**.
 
-   ![Sign in to this site](media/common-data-service/sign-in.png)
+   ![Sign in to this site.](media/common-data-service/sign-in.png)
 
-4. In **Navigator**, select the data you require, then either load or transform the data.
+5. In **Navigator**, select the data you require, then either load or transform the data.
 
-   ![Load or transform from navigator](media/common-data-service/navigator.png)
+   ![Load or transform from navigator.](media/common-data-service/navigator.png)
 
 ## Connect to Dataverse from Power Query Online
 
 To connect to Dataverse from Power Query Online:
 
-1. From the **Data sources** page, select **Common Data Service**.
+1. From the **Data sources** page, select **Common Data Service (Legacy)**.
 
-   ![Get data from Power Query Online](media/common-data-service/get-data-online.png)
+   ![Get data from Power Query Online.](media/common-data-service/get-data-online.png)
 
 2. Enter the server URL address of the data you want to load.
 
-   ![Enter the server URL](media/common-data-service/enter-url-online.png)
+   ![Enter the server URL.](media/common-data-service/enter-url-online.png)
 
 3. If necessary, enter an on-premises data gateway if you're going to be using on-premises data (for example, if you're going to combine data from Dataverse and an on-premises SQL Server database).
 
@@ -94,7 +94,7 @@ To connect to Dataverse from Power Query Online:
 
 ### Dataverse OData API performance and throttling limits
 
-For information about OData API performance and throttling limits for Dataverse connections, go to [Requests limits and allocations](https://docs.microsoft.com/power-platform/admin/api-request-limits-allocations). These limitations apply to both the Dataverse connector (which uses the OData API as an implementation detail) and the [OData Feed](odatafeed.md) connector when accessing the same endpoint.
+For information about OData API performance and throttling limits for Dataverse connections, go to [Requests limits and allocations](/power-platform/admin/api-request-limits-allocations). These limitations apply to both the Dataverse connector (which uses the OData API as an implementation detail) and the [OData Feed](odatafeed.md) connector when accessing the same endpoint.
 
 ### Table retrieval rate
 
@@ -104,7 +104,7 @@ As a guideline, most default tables will be retrieved at a rate of approximately
 
 There are several alternative ways of extracting and migrating data from Dataverse:
 
-* Use the OData connector to move data in and out of Dataverse. For more information on how to migrate data between Dataverse environments using the dataflows OData connector, go to [Migrate data between Dataverse environments using the dataflows OData connector](https://docs.microsoft.com/powerapps/developer/common-data-service/cds-odata-dataflows-migration).
+* Use the OData connector to move data in and out of Dataverse. For more information on how to migrate data between Dataverse environments using the dataflows OData connector, go to [Migrate data between Dataverse environments using the dataflows OData connector](/powerapps/developer/common-data-service/cds-odata-dataflows-migration).
 
 * Use the **Export to data lake** feature in Power Apps to extract data from Dataverse into Azure Data Lake Storage, which can then be used to run analytics. For more information about the export to data lake feature, go to [Exporting Dataverse data to Azure Data Lake is Generally Available](https://powerapps.microsoft.com/blog/exporting-cds-data-to-azure-data-lake-preview/#:~:text=Exporting%20CDS%20data%20to%20Azure%20Data%20Lake%20is,BI%20reporting%2C%20ML%2C%20Data%20Warehousing%20and%20other%20).
 
@@ -112,4 +112,3 @@ There are several alternative ways of extracting and migrating data from Dataver
 
 >[!Note]
 > Both the Dataverse connector and the OData APIs are meant to serve analytical scenarios where data volumes are relatively small. The recommended approach for bulk data extraction is “Export to Data Lake”. The TDS endpoint is a better option than the Dataverse connector and OData endpoint, but is currently in Preview.
-

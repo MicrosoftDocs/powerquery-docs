@@ -27,7 +27,7 @@ There are four phases to enabling encryption for SAP HANA using OpenSSL. We cove
 
 Ensure your HANA server is configured to use OpenSSL as its cryptographic provider. Replace the missing path information below with the server ID (sid) of your HANA server.
 
-![OpenSSL cryptographic provider](ssl-crypto-provider.png)
+![OpenSSL cryptographic provider.](ssl-crypto-provider.png)
 
 ## Create a certificate signing request
 
@@ -79,7 +79,7 @@ Get the certificate signed by a certificate authority (CA) that is trusted by th
 
     There are various ways to ensure this trust relationship exists using Microsoft Management Console (mmc) or the command line. You can import the CA's X509 certificate (trust.pem) into the **Trusted Root Certification Authorities** folder for the user that will establish the connection, or into the same folder for the client machine itself, if that is desirable.
 
-    ![Trusted Root Certification Authorities folder](trusted-root-certification.png)
+    ![Trusted Root Certification Authorities folder.](trusted-root-certification.png)
 
     You must first convert trust.pem into a .crt file before you can import the certificate into the Trusted Root Certification Authorities folder, for example by executing the following OpenSSL command:
 
@@ -91,9 +91,9 @@ Get the certificate signed by a certificate authority (CA) that is trusted by th
 
 ## Test the connection
 
-Before you can validate a server certificate in the Power BI service online, you must have a data source already set up for the [on-premises data gateway](https://docs.microsoft.com/data-integration/gateway/). If you don't already have a data source set up to test the connection, you'll have to create one. To set up the data source on the gateway:
+Before you can validate a server certificate in the Power BI service online, you must have a data source already set up for the [on-premises data gateway](/data-integration/gateway/). If you don't already have a data source set up to test the connection, you'll have to create one. To set up the data source on the gateway:
 
-1. From the Power BI service, select the ![setup icon](setup.png) setup icon.
+1. From the Power BI service, select the ![setup icon.](setup.png) setup icon.
 
 2. From the drop-down list, select **Manage gateways**.
 
@@ -115,11 +115,11 @@ Test the connection in Power BI Desktop or the Power BI service.
 
     - Power BI Desktop
 
-        ![Validate server certificate - service](validate-server-certificate-service.png)
+        ![Validate server certificate - service.](validate-server-certificate-service.png)
 
     - Power BI service
 
-        ![Validate server certificate - desktop](validate-server-certificate-desktop.png)
+        ![Validate server certificate - desktop.](validate-server-certificate-desktop.png)
 
 2. Verify that you can successfully establish an encrypted connection to the server with the **Validate server certificate** option enabled, by loading data in Power BI Desktop or refreshing a published report in Power BI service.
 
@@ -132,6 +132,3 @@ You'll note that only the **SSL crypto provider** information is required. Howev
 ## Next steps
 
 * [Configure SSL for ODBC client access to SAP HANA](configure-odbc-sap-hana.md)
-
-
-

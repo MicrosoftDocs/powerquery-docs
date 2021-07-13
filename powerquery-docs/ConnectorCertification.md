@@ -7,6 +7,7 @@ ms.service: powerquery
 ms.topic: conceptual
 ms.date: 10/13/2020
 ms.author: bezhan
+ms.custom: intro-internal
 
 LocalizationGroup: reference
 ---
@@ -36,9 +37,9 @@ We work with partners to try to make sure that they have support in maintenance,
 
 As M is a versatile language that, as seen in [Handling Authentication](HandlingAuthentication.md), has the capacity to interact with stored credentials, we need to give users a way to only allow trusted connectors to run.
 
-From a developer's perspective, developers need to [self-sign](https://docs.microsoft.com/power-query/handlingconnectorsigning) their custom connector and provide their users with the information (thumbprint) to securely load it.
+From a developer's perspective, developers need to [self-sign](./handlingconnectorsigning.md) their custom connector and provide their users with the information (thumbprint) to securely load it.
 
-From a user's perspective, users need to use the thumbprint from the developer to securely [trust and load the custom connector](https://docs.microsoft.com/power-bi/connect-data/desktop-trusted-third-party-connectors) for use. Alternatively, users can opt to lower their security settings to allow loading of code not certified by Microsoft or another developer, but this is not recommended.
+From a user's perspective, users need to use the thumbprint from the developer to securely [trust and load the custom connector](/power-bi/connect-data/desktop-trusted-third-party-connectors) for use. Alternatively, users can opt to lower their security settings to allow loading of code not certified by Microsoft or another developer, but this is not recommended.
 
 ## Certification Overview
 
@@ -129,7 +130,7 @@ There are specific security considerations that your connector must handle.
     * Can it be turned into a POST?
     * If GET is required, the connector MUST use the `CredentialQueryString` record in the `Web.Contents()` options record to pass in sensitive credentials.
 
-* If [Diagnostics.* functions](https://docs.microsoft.com/powerquery-m/diagnostics-trace) are used:
+* If [Diagnostics.* functions](/powerquery-m/diagnostics-trace) are used:
   * Validate what is being traced; data **must not contain PII or large amounts of unnecessary data**.
   * If you implemented significant tracing in development, you should implement a variable or feature flag that determines if tracing should be on. This must be **turned off** prior to submitting for certification.
 
@@ -146,7 +147,7 @@ To get started, complete our [registration form](https://forms.microsoft.com/Pag
 
 ## Template Apps (Recommended)
 
-Once you've developed a connector to a data source, consider helping customers get up and running quickly by creating a [template app](https://docs.microsoft.com/power-bi/service-template-apps-overview). A template app provides customers a prebuilt report connected to their data that they can use out-of-the-box or customize as necessary.
+Once you've developed a connector to a data source, consider helping customers get up and running quickly by creating a [template app](/power-bi/service-template-apps-overview). A template app provides customers a prebuilt report connected to their data that they can use out-of-the-box or customize as necessary.
 
 >[!NOTE]
 >Template apps do not support connectors that require a gateway.

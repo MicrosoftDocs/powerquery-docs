@@ -18,7 +18,7 @@ LocalizationGroup: reference
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication Types Supported | Anonymous<br/>Windows<br/>Basic<br/>Organizational Account |
-| Function Reference Documentation | [Access.Database](https://docs.microsoft.com/powerquery-m/access-database) |
+| Function Reference Documentation | [Access.Database](/powerquery-m/access-database) |
 | | |
 
 >[!Note]
@@ -41,13 +41,13 @@ To make the connection from Power Query desktop:
  
 2. Browse for and select the Access database you want to load. Then select **Open**. 
 
-   ![Enter the Access database connection](./media/access-database/select-database.png)
+   ![Enter the Access database connection.](./media/access-database/select-database.png)
 
    If the Access database is online, use the [Web connector](./web/web.md) to connect to the database.
 
 3. In **Navigator**, select the database information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
 
-    ![Select the data you want to import in the Navigator](./media/access-database/navigator-desktop.png)
+    ![Select the data you want to import in the Navigator.](./media/access-database/navigator-desktop.png)
 
 ## Connect to an Access database from Power Query Online
 
@@ -57,7 +57,7 @@ To make the connection from Power Query desktop:
 
 2. In the **Access database** dialog that appears, provide the path to the Access database.
 
-      ![Enter Access database online connection](./media/access-database/online-select-database.png)
+      ![Enter Access database online connection.](./media/access-database/online-select-database.png)
 
 3. Enter the file path or URL address to the Access database.
 
@@ -74,7 +74,7 @@ To make the connection from Power Query desktop:
 
 4. In **Navigator**, select the data you require, and then select **Transform data** to continue transforming the data in Power Query Editor.
 
-    ![Select the data you want in the Navigator](./media/access-database/navigator-online.png)
+    ![Select the data you want in the Navigator.](./media/access-database/navigator-online.png)
 
 ## Troubleshooting
 
@@ -90,5 +90,4 @@ A 64-bit version of the Access Database Engine 2010 OLEDB provider must be insta
 
 ### Import Access database to Power BI Desktop
 
-In some cases, you may get a `The 'Microsoft.ACE.OLEDB.12.0' provider is not registered` error when attempting to import an Access database file to Power BI Desktop. This error may be caused by using mismatched bit versions of Power BI Desktop and the Access Database Engine 2010 OLEDB provider. For more information about how you can fix this mismatch, see [Troubleshoot importing Access and Excel .xls files in Power BI Desktop](https://docs.microsoft.com/power-bi/connect-data/desktop-access-database-errors).
-
+In some cases, you may get a `The 'Microsoft.ACE.OLEDB.12.0' provider is not registered` error when attempting to import an Access database file to Power BI Desktop. This error may be caused by using mismatched bit versions of Power BI Desktop and the Access Database Engine 2010 OLEDB provider. For more information about how you can fix this mismatch, see [Troubleshoot importing Access and Excel .xls files in Power BI Desktop](/power-bi/connect-data/desktop-access-database-errors).

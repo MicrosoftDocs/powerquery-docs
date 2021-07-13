@@ -15,7 +15,7 @@ If you need more flexibility for adding new columns than the ones provided out o
 
 Imagine that you have a table with the following set of columns.
 
-![Sample initial table with Date, Country, Units, Unit Price and percent discount columns](images/me-add-custom-column-initial-table.png "Sample initial table")
+![Sample initial table with Date, Country, Units, Unit Price and percent discount columns.](images/me-add-custom-column-initial-table.png "Sample initial table")
 
 Using the **Units**, **Unit Price**, and **Discount** columns, you'd like to create two new columns:
 
@@ -24,17 +24,17 @@ Using the **Units**, **Unit Price**, and **Discount** columns, you'd like to cre
 
 The goal is to create a table with new columns that looks like the following image.
 
-![Create custom Total Sale before Discount and Total Sale after Discount columns in a table](images/me-add-custom-column-example-table.png "Create custom columns in a table")
+![Create custom Total Sale before Discount and Total Sale after Discount columns in a table.](images/me-add-custom-column-example-table.png "Create custom columns in a table")
 
 ## Create a custom column
 
 On the **Add column** tab, select **Custom column**.
 
-![Custom column command on the Add column tab](images/me-add-custom-column-icon.png "Custom column command on the Add column tab")
+![Custom column command on the Add column tab.](images/me-add-custom-column-icon.png "Custom column command on the Add column tab")
 
 The **Custom column** dialog box appears. This dialog box is where you define the formula to create your column.
 
-![Custom column dialog box](images/me-add-custom-column-window.png "Custom column dialog box")
+![Custom column dialog box.](images/me-add-custom-column-window.png "Custom column dialog box")
 
 The **Custom column** dialog box contains:
 
@@ -42,7 +42,7 @@ The **Custom column** dialog box contains:
 
 * The initial name of your custom column in the **New column name** box. You can rename this column.
 
-* [Power Query M formula](https://docs.microsoft.com/powerquery-m/power-query-m-function-reference) in the **Custom column formula** box.  
+* [Power Query M formula](/powerquery-m/power-query-m-function-reference) in the **Custom column formula** box.  
 
 To add a new custom column, select a column from the **Available columns** list on the right side of the dialog box. Then select the **Insert column** button below the list to add it to the custom column formula. You can also add a column by selecting it in the list. Alternatively, you can write your own formula by using the Power Query M formula language in the **Custom column formula** box.
 
@@ -53,21 +53,21 @@ To add a new custom column, select a column from the **Available columns** list 
 
 The formula that you can use to create the **Total Sale before Discount** column is `[Units] * [Unit Price]`. The following image shows how it will look in the **Custom column** dialog box.
 
-![Custom column formula for Total Sale before Discount](images/me-add-custom-column-total-sale-before-discount.png "Custom column formula for Total Sale before Discount")
+![Custom column formula for Total Sale before Discount.](images/me-add-custom-column-total-sale-before-discount.png "Custom column formula for Total Sale before Discount")
 
 The result of that operation will add a new **Total Sale before Discount** column to your table and will look like the following image.
 
-![Table with new custom column called Total Sale before Discount showing the price without the discount](images/me-add-custom-column-total-sale-before-discount-column.png "Table with new Total Sale before Discount custom column")
+![Table with new custom column called Total Sale before Discount showing the price without the discount.](images/me-add-custom-column-total-sale-before-discount-column.png "Table with new Total Sale before Discount custom column")
 
 ### Adding the Total Sale after Discount column
 
 The formula that you can use to create the **Total Sale before Discount** is `[Total Sale before Discount]* (1-[Discount]) `. The following image shows how it will look in your **Custom column** dialog box.
 
-![Custom column formula for Total Sale after Discount](images/me-add-custom-column-total-sale-after-discount.png "Custom column formula for Total Sale after Discount")
+![Custom column formula for Total Sale after Discount.](images/me-add-custom-column-total-sale-after-discount.png "Custom column formula for Total Sale after Discount")
 
 The result of that operation will add a new **Total Sale after Discount** column to your table and will look like the following image.
 
-![Table with new custom column called Total Sale after Discount showing the price with the discount applied](images/me-add-custom-column-total-sale-after-discount-column.png "Table with new Total Sale after Discount custom column")
+![Table with new custom column called Total Sale after Discount showing the price with the discount applied.](images/me-add-custom-column-total-sale-after-discount-column.png "Table with new Total Sale after Discount custom column")
 
 ### Setting the column data types
 
@@ -77,17 +77,17 @@ Notice that your new columns don't have a data type defined yet. You can tell th
 
 2. On the **Home** tab, in the **Transform** group, select **Data type** > **Currency**.
 
-![Data types on the Home tab](images/me-add-custom-column-data-types.png "Data types on the Home tab")
+![Data types on the Home tab.](images/me-add-custom-column-data-types.png "Data types on the Home tab")
 
 After defining the data types for both columns, you'll create a table that looks like the following image.
 
-![Sample final table](images/me-add-custom-column-final-table.png "Sample final table")
+![Sample final table.](images/me-add-custom-column-final-table.png "Sample final table")
 
 ## Modify an existing custom column
 
 Power Query adds your custom column to the table and adds the **Added custom** step to the **Applied steps** list in **Query settings**.
 
-![Custom column added to the applied steps list](images/me-add-custom-column-reconfigure.png "Custom column added to the applied steps list")
+![Custom column added to the applied steps list.](images/me-add-custom-column-reconfigure.png "Custom column added to the applied steps list")
 
 To modify your custom column, select the **Added custom** step in the **Applied steps** list. 
 

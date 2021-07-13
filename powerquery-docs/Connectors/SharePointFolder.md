@@ -19,7 +19,7 @@ Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in 
 
 Authentication Types Supported: Anonymous, Microsoft Account, Windows
 
-Function Reference Documentation: [SharePoint.Contents](https://docs.microsoft.com/powerquery-m/sharepoint-contents), [SharePoint.Files](https://docs.microsoft.com/powerquery-m/sharepoint-files)
+Function Reference Documentation: [SharePoint.Contents](/powerquery-m/sharepoint-contents), [SharePoint.Files](/powerquery-m/sharepoint-files)
 
 >[!NOTE]
 >AAD/OAuth for SharePoint on-premises isn’t supported using the on-premises data gateway. 
@@ -43,13 +43,13 @@ To connect to a SharePoint folder:
 
 3. If you're connecting from Power BI desktop or Excel:
 
-   1. Paste the address into the **Site URL** test box in the **SharePoint folder** dialog box. In this case, the site URL is `https://contoso.sharepoint.com/marketing/data`. If the site URL you enter is invalid, a ![warning icon](./media/sharepoint-folder/warning.png) warning icon will appear next to the URL textbox.
+   1. Paste the address into the **Site URL** test box in the **SharePoint folder** dialog box. In this case, the site URL is `https://contoso.sharepoint.com/marketing/data`. If the site URL you enter is invalid, a ![warning icon.](./media/sharepoint-folder/warning.png) warning icon will appear next to the URL textbox.
 
-      ![SharePoint folder selection](./media/sharepoint-folder/url-select.png)
+      ![SharePoint folder selection.](./media/sharepoint-folder/url-select.png)
 
    2. If this is the first time you've visited this site address, select the appropriate authentication method. Enter your credentials and chose which level to apply these setting to. Then select **Connect**.
 
-      ![SharePoint folder desktop authentication](./media/sharepoint-folder/signin.png)
+      ![SharePoint folder desktop authentication.](./media/sharepoint-folder/signin.png)
 
       For more information about authentication methods, see [Authentication with a data source](../connectorauthentication.md).
 
@@ -57,7 +57,7 @@ To connect to a SharePoint folder:
 
     1. Paste the address into the **Site URL** test box in the **SharePoint folder** dialog box. In this case, the site URL is `https://contoso.sharepoint.com/marketing/data`. 
 
-       ![Online folder selection and sign in](./media/sharepoint-folder/online-signin.png)
+       ![Online folder selection and sign in.](./media/sharepoint-folder/online-signin.png)
 
     2. If the SharePoint folder is on-premises, enter the name of an on-premises data gateway.
 
@@ -67,11 +67,11 @@ To connect to a SharePoint folder:
 
 5. When you select the SharePoint folder you want to use, the file information about all of the files in that SharePoint folder are displayed. In addition, file information about any files in any subfolders is also displayed.
 
-   ![Folder information](./media/sharepoint-folder/folder-info.png)
+   ![Folder information.](./media/sharepoint-folder/folder-info.png)
 
 6. Select **Combine & Transform Data** to combine the data in the files of the selected SharePoint folder and load the data into the Power Query Editor for editing. Or select **Combine & Load** to load the data from all of the files in the SharePoint folder directly into your app.
 
-   ![Combine files from SharePoint folder](./media/sharepoint-folder/combinefolderfiles.png)
+   ![Combine files from SharePoint folder.](./media/sharepoint-folder/combinefolderfiles.png)
 
 >[!Note]
 >The **Combine & Transform Data** and **Combine & Load** buttons are the easiest ways to combine data found in the files of the SharePoint folder you specify. You could also use the **Load** button (in Power BI Desktop only) or the **Transform Data** buttons to combine the files as well, but that requires more manual steps.
@@ -86,15 +86,15 @@ In some cases, you might have multiple folders on your SharePoint site containin
 
 1. In the list of files from the SharePoint folder you chose, select **Transform Data**.
 
-   ![List of SharePoint folder files](./media/sharepoint-folder/list-folder-files.png)
+   ![List of SharePoint folder files.](./media/sharepoint-folder/list-folder-files.png)
 
 2. In the Power Query editor, scroll down to find the files you want to keep.  
 
-   ![Find the files to keep](./media/sharepoint-folder/transform-file-table.png)
+   ![Find the files to keep.](./media/sharepoint-folder/transform-file-table.png)
 
 3. In the example shown in the screenshot above, the required files are the last rows in the table. Select **Remove Rows**, enter the value of the last row before the files to keep (in this case 903), and select **OK**.
 
-   ![Remove rows](./media/sharepoint-folder/remove-rows.png)
+   ![Remove rows.](./media/sharepoint-folder/remove-rows.png)
 
 4. Once you've removed all the unnecessary files, select **Combine Files** from the **Home** ribbon to combine the data from all of the remaining files.
 
@@ -107,4 +107,3 @@ If a filename contains certain special characters, it may lead to authentication
 `# % $`
 
 If these characters are present in the filename, the file owner must rename the file so that it does NOT contain any of these characters.
-

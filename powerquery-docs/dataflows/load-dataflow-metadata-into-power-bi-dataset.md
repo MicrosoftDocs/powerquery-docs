@@ -16,13 +16,13 @@ ms.author: mideboer
 
 In this step-by-step tutorial, we will show you how to set up your own monitoring dashboard for all of your dataflows:
 
-![example of monitoring dashboard](media/dashboard.PNG)
+![example of monitoring dashboard.](media/dashboard.PNG)
 
 First, you will create a new streaming dataset in Power BI. This dataset will collect all the metadata from the dataflow run, and for every refresh of a dataflow, a record is added to this dataset. You can run multiple dataflows all to the same dataset. Lastly, you can build a Power BI report on the data to visualize the metadata and start monitoring the dataflows.
 
 You can use this dashboard to monitor your dataflows' refresh duration and failure count. With this dashboard, you can track any issues with your dataflows performance and share the data with others. 
 
-![overview of PowerBI streaming dataset](media/powerbi.PNG)
+![overview of PowerBI streaming dataset.](media/powerbi.PNG)
 
 ## Prerequisites
 
@@ -47,7 +47,7 @@ In the right pane, enter the following values, and then select Create.
    * **Value**: "Start Time", **Data type**: Date and Time. 
    * **Value**: "End Time", **Data type**: Date and Time.
 
-![example of add streaming dataset](media/addstreamingdatset.PNG)
+![example of add streaming dataset.](media/addstreamingdatset.PNG)
 
 ## Create a dataflow
 
@@ -58,7 +58,7 @@ If you do not already have one, create a dataflow. This can be done in either [P
 * Navigate to [Power Automate](https://flow.microsoft.com),
 * Search for the template "When a dataflow refresh completes, output status into Power BI Streaming Dataset". If you encounter difficulty, see these [instructions](/power-automate/get-started-logic-template).
 
-![example of streaming dataset template](media/streamingconnector.PNG)
+![example of streaming dataset template.](media/streamingconnector.PNG)
 
 * Customize the flow. Actions that require input from you will automatically be expanded.
 
@@ -77,7 +77,7 @@ If you do not already have one, create a dataflow. This can be done in either [P
      For every required field, you need to add a dynamic value. This value is the output of the metadata of the dataflow run.
     * Select the field next to **Dataflow ID** and then select the lightning button.
    
-   ![An example of adding dynamic fields](media/dynamicstreaming.png)
+   ![An example of adding dynamic fields.](media/dynamicstreaming.png)
 
     * Repeat this process for all required fields.
 
@@ -89,4 +89,4 @@ If you do not already have one, create a dataflow. This can be done in either [P
 * Navigate to the streaming dataset.
 * Create your own report on top of this data.
 
-![PowerBI report data example](media/createyourownreport.PNG)
+![PowerBI report data example.](media/createyourownreport.PNG)
