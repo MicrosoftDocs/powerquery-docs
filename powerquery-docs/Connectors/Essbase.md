@@ -42,7 +42,7 @@ None
 
 To connect to an Essbase server:
 
-1. Select the **Essbase** option in the **Get Data** experience.
+1. Select the **Essbase** option in the **Get Data** experience. 
 
 2. Enter the **URL** to the Oracle Essbase Hyperion server. Typically, the URL looks like `http://[hostname]:[port number]/aps/XMLA`. The components of the URL are:
 
