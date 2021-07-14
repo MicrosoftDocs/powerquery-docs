@@ -194,7 +194,7 @@ Web pages that load their content dynamically might require special handling. If
 3. You refresh the site again.
 4. No error occurs.
 
-These kinds of issues are usually due to timing. Pages that load their content dynamically can sometimes be inconsistent since the content can change after the browser considers loading complete. Sometimes [Web.BrowserContents](/powerquery-m/web-browsercontents) grabs the HTML after all the dynamic content has loaded. Other times the changes are still in progress when it grabs the HTML, leading to sporadic errors.
+These kinds of issues are usually due to timing. Pages that load their content dynamically can sometimes be inconsistent since the content can change after the browser considers loading complete. Sometimes [Web.BrowserContents](/powerquery-m/web-browsercontents) downloads the HTML after all the dynamic content has loaded. Other times the changes are still in progress when it downloads the HTML, leading to sporadic errors.
 
 The solution is to pass the `WaitFor` option to `Web.BrowserContents`, which indicates either a selector or a length of time that should be waited for before grabbing the HTML.
 
