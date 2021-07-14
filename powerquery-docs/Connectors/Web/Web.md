@@ -196,7 +196,7 @@ Web pages that load their content dynamically might require special handling. If
 
 These kinds of issues are usually due to timing. Pages that load their content dynamically can sometimes be inconsistent since the content can change after the browser considers loading complete. Sometimes [Web.BrowserContents](/powerquery-m/web-browsercontents) downloads the HTML after all the dynamic content has loaded. Other times the changes are still in progress when it downloads the HTML, leading to sporadic errors.
 
-The solution is to pass the `WaitFor` option to `Web.BrowserContents`, which indicates either a selector or a length of time that should be waited for before grabbing the HTML.
+The solution is to pass the `WaitFor` option to `Web.BrowserContents`, which indicates either a selector or a length of time that should be waited for before downloading the HTML.
 
 How can you tell if a page is dynamic? Usually it's pretty simple. Open the page in a browser and watch it load. If the content shows up right away, it's a regular HTML page. If it appears dynamically or changes over time, it's a dynamic page.
 
