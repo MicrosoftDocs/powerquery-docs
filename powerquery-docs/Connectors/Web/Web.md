@@ -4,7 +4,7 @@ description: Provides basic information and how to connect to your data, along w
 author: dougklopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 12/2/2020
+ms.date: 7/14/2021
 ms.author: bezhan
 LocalizationGroup: reference
 ---
