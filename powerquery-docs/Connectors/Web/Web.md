@@ -185,7 +185,7 @@ For example, you could use the following steps to import a JSON file on the http
 
     As you can see, the Web connector returns the web contents from the URL you supplied, and then automatically wraps the web contents in the appropriate document type specified by the URL (`Json.Document` in this example).
 
-## Handling dynamic pages
+## Handling dynamic web pages
 
 Web pages that load their content dynamically might require special handling. If you notice sporadic errors in your web queries, it's possible that you're trying to access a dynamic web page. One common example of this type of error is:
 
@@ -194,7 +194,7 @@ Web pages that load their content dynamically might require special handling. If
 3. You refresh the site again.
 4. No error occurs.
 
-These kinds of issues are usually due to timing. Pages that load their content dynamically can sometimes be inconsistent since the content can change after the browser considers loading complete. Sometimes [Web.BrowserContents](/powerquery-m/web-browsercontents.md) grabs the HTML after all the dynamic content has loaded. Other times the changes are still in progress when it grabs the HTML, leading to sporadic errors.
+These kinds of issues are usually due to timing. Pages that load their content dynamically can sometimes be inconsistent since the content can change after the browser considers loading complete. Sometimes [Web.BrowserContents](/powerquery-m/web-browsercontents) grabs the HTML after all the dynamic content has loaded. Other times the changes are still in progress when it grabs the HTML, leading to sporadic errors.
 
 The solution is to pass the `WaitFor` option to `Web.BrowserContents`, which indicates either a selector or a length of time that should be waited for before grabbing the HTML.
 
