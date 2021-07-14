@@ -90,7 +90,7 @@ To load data from a web site with Power Query Online:
 
    ![Select either the Web page or Web API connector.](select-web-page-api.png)
 
-   In most cases, you'll want to select the Web page connector. For security reasons, you'll need to use an [on-premises data gateway](/data-integration/gateway/) with this connector. The Web Page connector requires a gateway because HTML pages are retrieved using a browser control, which involves potential security concerns. This isn't an issue with Web API connector, as it doesn't use a browser control.
+   In most cases, you'll want to select the Web page connector. For security reasons, you'll need to use an [on-premises data gateway](/data-integration/gateway/) with this connector. The Web Page connector requires a gateway because HTML pages are retrieved using a browser control, which involves potential security concerns. This concern isn't an issue with Web API connector, as it doesn't use a browser control.
 
    In some cases, you might want to use a URL that points at either an API or a file stored on the web. In those scenarios, the Web API connector (or file-specific connectors) would allow you to move forward without using an on-premises data gateway.
 
@@ -185,7 +185,22 @@ For example, you could use the following steps to import a JSON file on the http
 
     As you can see, the Web connector returns the web contents from the URL you supplied, and then automatically wraps the web contents in the appropriate document type specified by the URL (`Json.Document` in this example).
 
-### See also
+## Handling dynamic pages
+
+Web pages that load their content dynamically might require special handling. If you notice sporadic errors in your web queries, it's possible that you're trying to access a dynamic web page. One common example of this type of error is:
+
+1. You refresh the site.
+2. You see an error (for example, "the column 'Foo' of the table wasn't found").
+3. You refresh the site again.
+4. No error occurs.
+
+These kinds of issues are usually due to timing. Pages that load their content dynamically can sometimes be inconsistent since the content can change after the browser considers loading complete. Sometimes [Web.BrowserContents](/powerquery-m/web-browsercontents.md) grabs the HTML after all the dynamic content has loaded. Other times the changes are still in progress when it grabs the HTML, leading to sporadic errors.
+
+The solution is to pass the `WaitFor` option to `Web.BrowserContents`, which indicates either a selector or a length of time that should be waited for before grabbing the HTML.
+
+How can you tell if a page is dynamic? Usually it's pretty simple. Open the page in a browser and watch it load. If the content shows up right away, it's a regular HTML page. If it appears dynamically or changes over time, it's a dynamic page.
+
+## See also
 
 * [Extract data from a Web page by example](web-by-example.md)
 * [Troubleshooting the Power Query Web connector](web-troubleshoot.md)
