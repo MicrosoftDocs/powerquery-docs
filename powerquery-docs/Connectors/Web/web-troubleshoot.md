@@ -106,6 +106,12 @@ When attempting to authenticate, if you see the following error:
 
 Please contact the service owner. They will either need to change the authentication configuration or build a custom connector.
 
+## Web connector uses HTTP 1.1 to communicate
+
+The Power Query Web connector communicates with a data source using HTTP 1.1. If your data source is expecting to communicate using HTTP 1.0, you might receive a an error, such as `500 Internal Server Error`.
+
+It's not possible to switch Power Query to use HTTP 1.0. Power Query always sends an `Expect:100-continue` when there's a body to avoid passing a possibly large payload when the initial call itself might fail (for example, due to a lack of permissions). Currently, this behavior can't be changed.
+
 ### See also
 
 * [Power Query Web connector](web.md)
