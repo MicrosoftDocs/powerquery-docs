@@ -8,7 +8,7 @@ ms.reviewer: asaxton
 ms.service: powerquery
 ms.topic: conceptual
 ms.date: 11/20/2019
-ms.author: v-pemyer
+ms.author: dougklo
 ---
 
 # Power Query query folding
