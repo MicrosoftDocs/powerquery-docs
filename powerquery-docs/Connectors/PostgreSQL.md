@@ -37,7 +37,7 @@ For Power BI Desktop versions released before December 2019, you must install th
 ## Capabilities Supported
 
 - Import
-- DirectQuery (Power BI only, learn more)
+- DirectQuery (Power BI only)
 - Advanced options
   - Command timeout in minutes
   - Native SQL statement
