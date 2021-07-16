@@ -24,7 +24,7 @@ LocalizationGroup: reference
 
 You must have a Dataverse environment with maker permissions to access the portal, and read permissions to access data within tables.
 
-You'll also need ports 1433 and 5558 to be able to be opened for the connector to succesfully connect. Visit the **Limitations and issues** section below in this article for more details. 
+You'll also need ports 1433 and 5558 to be able to be opened for the connector to successfully connect. Visit the **Limitations and issues** section below in this article for more details. 
 
 ## Capabilities supported
 
