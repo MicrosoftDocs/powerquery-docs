@@ -64,7 +64,7 @@ To connect to Dataverse from Power BI Desktop:
 
    When you've finished filling in the information, select **OK**.
 
-4. If this is the first time you're connecting to this site, select **Sign in** and input your credentials. Then select **Connect**.
+4. If this attempt is the first time you're connecting to this site, select **Sign in** and input your credentials. Then select **Connect**.
 
    ![Sign in to this site.](media/common-data-service/sign-in.png)
 
@@ -117,4 +117,4 @@ There are several alternative ways of extracting and migrating data from Dataver
 
 ### SQL Server connection issue due to closed ports
 
-When connecting with the Dataverse connector, you may encounter an **Unable to connect** error indicating that a network or instance-specific error occurred while establishing a connection to SQL Server. This is likely caused by the TCP ports 1433 and 5558 being blocked during connection. Visit this [article](/powerapps/developer/data-platform/dataverse-sql-query#blocked-ports) to troubleshoot the blocked port error. 
+When connecting with the Dataverse connector, you may encounter an **Unable to connect** error indicating that a network or instance-specific error occurred while establishing a connection to SQL Server. This error is likely caused by the TCP ports 1433 and 5558 being blocked during connection. Visit this [article](/powerapps/developer/data-platform/dataverse-sql-query#blocked-ports) to troubleshoot the blocked port error. 
