@@ -55,22 +55,24 @@ If you do not already have one, create a dataflow. This can be done in either [P
 
 ## Create a Flow in Power Automate
 
-* Navigate to [Power Automate](https://flow.microsoft.com),
-* Search for the template "When a dataflow refresh completes, output status into Power BI Streaming Dataset". If you encounter difficulty, see these [instructions](/power-automate/get-started-logic-template).
+* Navigate to [Power Automate](https://flow.microsoft.com).
+* Create a new **automated cloud flow**
 
-![example of streaming dataset template.](media/streamingconnector.PNG)
-
-* Customize the flow. Actions that require input from you will automatically be expanded.
-
-   The **Dataflow Refresh** trigger is expanded because you need to enter information on your dataflow:
+* Search for the connector "When a dataflow refresh completes (preview)". If you encounter difficulty, see these [instructions](/power-automate/get-started-logic-flow).
+* Customize the connector. You need to enter information on your dataflow:
     * **Group Type**: Select *Environment* when connecting to Power Apps and *Workspace* when connecting to Power BI.
     * **Group**: Select the Power Apps environment or the Power BI workspace your dataflow is in.
     * **Dataflow**: Select your dataflow by name.
 
-     The **Add Rows (Streaming Dataset)** action is expanded because you need to enter your Power BI *Workspace* and *Dataset*:
+* Click on **new step** to add an action to your flow.
+* Search for the connector "Add Rows (Streaming Dataset)".
+* Customize the connector. You need to enter information:
     * **Workspace ID**: Select the Power BI workspace which contains your streaming dataset.
     * **Dataset**: Select the streaming dataset "Dataflows Monitoring" you previously created.
     * **Table**: Select "RealTimeData"
+
+![example of streaming dataset template.](media/streamingconnector.PNG)
+
 
 * Add dynamic values to the required fields.
 
