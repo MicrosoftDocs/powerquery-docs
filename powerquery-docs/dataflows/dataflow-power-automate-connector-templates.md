@@ -16,7 +16,7 @@ The dataflows Power Automate connector can:
 * trigger a flow when a dataflow refresh completes, or
 * take action to initiate a dataflow refresh.
 
-In this article, we discuss some use cases with provided templates to help you quickstart the use of this connector:
+In this article, we discuss some use cases with provided tutorials to help you quickstart the use of this connector:
 
 [Send notifications](send-notification-when-dataflow-refresh-completes.md):
 * When a dataflow refresh status changes, send an email notification.
