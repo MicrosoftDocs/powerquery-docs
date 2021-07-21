@@ -25,13 +25,13 @@ This article describes how to create those dataflows by using these data sources
 
 To create a dataflow from a data source, you'll first have to connect to your data.
 
-# [Power BI service](#tab/Power BI service)
+# [Power BI service](#tab/power-bi-service)
 
 To connect to data in Power BI, open a workspace, select **New**, select **Dataflow** from the drop-down menu, and then under **Define new tables** select **Add new tables**.
 
 ![Add tables from the new dataflow command.](media/dataflows-data-sources/dataflows-data-sources-pbi-online.png)
 
-# [Power Apps](#tab/Power Apps)
+# [Power Apps](#tab/power-apps)
 
 To connect to data in Power Apps, select **Data** > **Dataflows**, select **New Dataflow**, and enter a name for the dataflow, and then select **Create**. 
 
