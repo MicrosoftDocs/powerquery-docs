@@ -7,28 +7,40 @@ ms.reviewer: ''
 
 ms.service: dataflows
 ms.topic: conceptual
-ms.date: 12/2/2020
+ms.date: 7/21/2021
 ms.author: bensack
 
 LocalizationGroup: Data from files
 ---
+
 # Connect to data sources for dataflows
 
 [!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
 
 With Microsoft Power Platform dataflows, you can connect to many different data sources to create new dataflows, or add new entities to an existing dataflow.
 
-This article lists many available data sources for creating or adding to dataflows, and describes how to create those dataflows by using these data sources. For an overview of how to create and use dataflows, see [Creating and using dataflows in Power BI](/power-bi/service-dataflows-create-use).
+This article describes how to create those dataflows by using these data sources. For an overview of how to create and use dataflows, see [Creating a dataflow](/power-bi/service-dataflows-create-use) and [Create and use dataflows in Power Apps](/powerapps/maker/data-platform/create-and-use-dataflows).
 
-## Create a dataflow entity from a data source
+## Create a dataflow from a data source
 
-To connect to data, open the dataflow authoring tool, and then select **Get data**.
+To create a dataflow from a data source, you'll first have to connect to your data.
 
-![Add entities using the Get data command.](media/dataflows-data-sources/dataflows-data-sources-03.png)
+# [Power BI service](#tab/Power BI service)
+
+To connect to data in Power BI, open a workspace, select **New**, select **Dataflow** from the drop-down menu, and then under **Define new tables** select **Add new tables**.
+
+![Add tables from the new dataflow command.](media/dataflows-data-sources/dataflows-data-sources-pbi-online.png)
+
+# [Power Apps](#tab/Power Apps)
+
+To connect to data in Power Apps, select **Data** > **Dataflows**, select **New Dataflow**, and enter a name for the dataflow, and then select **Create**. 
+
+![Add](media/dataflows-data-sources/dataflows-data-sources-pa-online.png)
+---
 
 ## Data sources for dataflows
 
-You can view the available data sources by selecting **Get data** from the dataflow authoring tool, which then displays the **Choose data source** dialog box.
+Once you've created the dataflow from the dataflow authoring tool, you'll be presented with the **Choose data source** dialog box.
 
 ![Get data categories for dataflows.](media/dataflows-data-sources/dataflows-data-sources-04.png)
 
@@ -42,74 +54,7 @@ Data sources for dataflows are organized into the following categories, which ap
 * Online Services
 * Other
 
-The **All categories** category contains all data sources, from all categories. 
-
-The **File** category includes the following available data connections for dataflows:
-
-* Excel
-* Folder
-* JSON
-* PDF
-* Parquet
-* SharePoint Folder
-* Text/CSV
-* XML
-
-The **Database** category includes the following available data connections for dataflows:
-
-* Access
-* Amazon Redshift
-* Google BigQuery
-* IBM DB2 database
-* Impala
-* MySQL database
-* Oracle database
-* PostgreSQL database
-* SAP BW Application Server
-* SAP BW Message Server
-* SAP HANA database
-* SQL Server database
-* Snowflake
-* Sybase database
-* Teradata database
-* Vertica
-
-The **Power Platform** category includes the following available data connections for dataflows:
-
-* Common Data Service (Legacy)
-* Dataverse
-* Power Platform dataflows
-
-The **Azure** category includes the following available data connections for dataflows:
-
-* Azure Blobs
-* Azure Data Explorer (Kusto)
-* Azure Data Lake Storage Gen2
-* Azure HDInsight Spark
-* Azure SQL database
-* Azure Synapse Analytics (SQL DW)
-* Azure Tables
-
-The **Online Services** includes the following available data connections for dataflows:
-
-* Microsoft Exchange Online
-* Salesforce objects
-* Salesforce reports
-* SharePoint Online list
-* Smartsheet
-
-The **Other** category includes the following available data connections for dataflows:
-
-* Active Directory
-* FHIR
-* OData
-* Odbc
-* SharePoint list
-* Spark
-* Web API
-* Web page
-* Blank table
-* Blank Query
+For a list of all of the supported data sources in Power Query, see [Connectors in Power Query](../Connectors/index.md).
 
 ## Connect to a data source
 
