@@ -36,6 +36,7 @@ To connect to data in Power BI, open a workspace, select **New**, select **Dataf
 To connect to data in Power Apps, select **Data** > **Dataflows**, select **New Dataflow**, and enter a name for the dataflow, and then select **Create**. 
 
 ![Add](media/dataflows-data-sources/dataflows-data-sources-pa-online.png)
+
 ---
 
 ## Data sources for dataflows
