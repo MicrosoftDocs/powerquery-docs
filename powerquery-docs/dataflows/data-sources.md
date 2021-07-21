@@ -42,7 +42,7 @@ To connect to data in Power Apps:
 
 1. Select **Data** > **Dataflows**.
 2. Select **New Dataflow**.
-3. In the **New Dataflow** dialog box, enter a name for the new dataflow
+3. In the **New Dataflow** dialog box, enter a name for the new dataflow.
 4. Select **Create**.
 
 ![Add](media/dataflows-data-sources/dataflows-data-sources-pa-online.png)
