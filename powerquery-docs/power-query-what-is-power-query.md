@@ -6,8 +6,8 @@ ms.service: powerquery
 ms.topic: overview
 ms.date: 07/27/2020
 ms.author: millopis
+ms.custom: intro-internal
 LocalizationGroup: Get started
-ms.custom: edited
 ---
 
 # What is Power Query?
@@ -52,7 +52,7 @@ The transformation engine in Power Query includes many prebuilt transformation f
 
 All these transformations are made possible by choosing the transformation option in the menu, and then applying the options required for that transformation. The following illustration shows a few of the transformations available in Power Query Editor.
 
-![Image showing the transformation commands under the Transform, Home, and Add Column tabs of the Power Query Editor](images/powerquerytransformationslist.png "The transformation commands under the Transform, Home, and Add Column tabs of the Power Query Editor")
+![Image showing the transformation commands under the Transform, Home, and Add Column tabs of the Power Query Editor.](images/powerquerytransformationslist.png "The transformation commands under the Transform, Home, and Add Column tabs of the Power Query Editor")
 
 More information: [Quickstart: Using Power Query in Power BI](power-query-quickstart-using-power-bi.md)
 

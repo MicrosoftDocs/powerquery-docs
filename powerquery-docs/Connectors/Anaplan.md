@@ -38,13 +38,13 @@ To connect to Anaplan data:
 
     - **Anaplan Auth URL**: https://auth.anaplan.com
 
-    ![Connection Configuration](media/anaplan/connection-configuration.png)
+    ![Connection Configuration.](media/anaplan/connection-configuration.png)
 
     After you've entered the API and Auth URL, select **Ok**.
 
 3. Sign in to the connector to verify your access to an Anaplan workspace. 
   
-    ![ID and password dialog](media/anaplan/Your-id.png)
+    ![ID and password dialog.](media/anaplan/Your-id.png)
   
     Once you've succeeded, select **Connect**.
 
@@ -60,7 +60,7 @@ When you run an export action:
 
 To run an export action, use the **Navigator** dialog to locate your export.
 
-![Run Export Action and Load](media/anaplan/Export-load.png)
+![Run Export Action and Load.](media/anaplan/Export-load.png)
 
 1.  Search your Anaplan models to find and set your export. You can also locate for your model name via the search field.
 
@@ -81,17 +81,17 @@ Do one of the following:
 -   Clear cache within Power BI (**File**, **Options**, **Clear cache)** and restart the connector, or
 -   Select **Cancel** and select **Refresh** (top right).
 
-    ![Authentication error](media/anaplan/auth-cred-error.2.png)
+    ![Authentication error.](media/anaplan/auth-cred-error.2.png)
 
 If you still receive a credential error after you clear cache, also clear your recent sources. 
 
 1. Select **Recent sources**
 
-    ![Select recent sources](media/anaplan/Recent-sources-1.png)
+    ![Select recent sources.](media/anaplan/Recent-sources-1.png)
 
 1. Select **Remove from list**
 
-    ![Remove source from list](media/anaplan/Recent-sources-2.png)
+    ![Remove source from list.](media/anaplan/Recent-sources-2.png)
 
 1. Establish the connection to the export again, and your data refreshes.
 
@@ -100,19 +100,19 @@ If you still receive a credential error after you clear cache, also clear your r
 
 If you encounter a credential error in the Power Query editor, select **Close & Apply** or **Refresh Preview** to refresh the data. 
 
-![Power query error](media/anaplan/Power-query-error.png)
+![Power query error.](media/anaplan/Power-query-error.png)
 
 Your data will refresh, resolving the error. 
 
-![Close & Apply and Refresh Preview icons](media/anaplan/Power-query-solution.png)
+![Close & Apply and Refresh Preview icons.](media/anaplan/Power-query-solution.png)
 
 
 ### Power Query expression error
 
 If you encounter a Power Query expression error, select **Refresh Preview** to refresh the data. 
 
-![Power Query error Key and Table](media/anaplan/Expression-error.png)
+![Power Query error Key and Table.](media/anaplan/Expression-error.png)
 
 Your data will refresh, resolving the error.
 
-![Refresh preview](media/anaplan/Refresh-preview.png)
+![Refresh preview.](media/anaplan/Refresh-preview.png)

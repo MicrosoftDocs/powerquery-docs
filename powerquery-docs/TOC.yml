@@ -220,6 +220,8 @@
       href: keyboard-shortcuts.md
     - name: Best practices
       href: best-practices.md
+    - name: Feedback and support
+      href: feedback.md
     - name: Advanced topics
       items:
       - name: "Query folding"
@@ -280,6 +282,8 @@
         href: Connectors/DataLakeStorage.md
       - name: "Dataverse"
         href: Connectors/dataverse.md
+      - name: "Essbase"
+        href: Connectors/Essbase.md
       - name: "Excel"
         href: Connectors/Excel.md
       - name: "FHIR"
@@ -398,6 +402,8 @@
         href: CommonIssues.md
       - name: "Review script changes"
         href: review-script-changes.md
+      - name: "Connector support and feedback"
+        href: Connectors/ConnectorFeedback.md
     - name: Create custom Power Query connectors
       items:
       - name: Quick starts

@@ -99,7 +99,7 @@ This message might be because of:
 
    *  Response from SAP:
 
-      ![SAP response to known issue](sap-hana-issue.png)
+      ![SAP response to known issue.](sap-hana-issue.png)
 
    Unfortunately, this is an SAP issue so you'll need to wait for a fix from SAP.
 

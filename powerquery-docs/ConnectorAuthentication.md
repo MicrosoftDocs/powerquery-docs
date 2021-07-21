@@ -18,11 +18,11 @@ When you attempt to connect to a data source using a new connector for the first
 
 Different connectors show different authentication methods. For example, the OData Feed connector in Power BI Desktop and Excel displays the following authentication method dialog box.
 
-![OData Feed authentication method](media/connector-authentication/odata-authentication.png "OData Feed authentication method")
+![OData Feed authentication method.](media/connector-authentication/odata-authentication.png "OData Feed authentication method")
 
 If you're using a connector from an online app, such as the Power BI service or Power Apps, you'll see an authentication method dialog box for the OData Feed connector that looks something like the following image.
 
-![OData Feed online authentication method](media/connector-authentication/odata-online-authentication.png "OData Feed online authentication method")
+![OData Feed online authentication method.](media/connector-authentication/odata-online-authentication.png "OData Feed online authentication method")
 
 As you can see, a different selection of authentication methods is presented from an online app. Also, some connectors might ask you to enter the name of an on-premises data gateway to be able to connect to your data.
 
@@ -30,7 +30,7 @@ As you can see, a different selection of authentication methods is presented fro
 
 In connectors that require you to enter a URL, you'll be asked to select the level to which the authentication method will be applied. For example, if you select the Web connector with a URL of `https://contoso.com/2020data/List_of_countries_and_capitals`, the default level setting for your authentication method will be `https://contoso.com`.
 
-![Default level setting](media/connector-authentication/url-level-setting.png "Default level setting")
+![Default level setting.](media/connector-authentication/url-level-setting.png "Default level setting")
 
 The level you select for the authentication method you chose for this connector determines what part of a URL will have the authentication method applied to it. If you select the top-level web address, the authentication method you select for this connector will be used for that URL address or any subaddress within that address.
 
@@ -49,17 +49,17 @@ In some cases, you might need to change the authentication method you use in a c
 
     - In Power BI Desktop, on the **File** tab, select **Options and settings** > **Data source settings**.
 
-        ![Power BI Desktop data source settings](media/connector-authentication/pbi-edit.png "Power BI Desktop data source settings")
+        ![Power BI Desktop data source settings.](media/connector-authentication/pbi-edit.png "Power BI Desktop data source settings")
 
     - In Excel, on the **Data** tab, select **Get Data** > **Data Source Settings**. 
 
-        ![Excel data source settings](media/connector-authentication/excel-edit.png "Excel data source settings")
+        ![Excel data source settings.](media/connector-authentication/excel-edit.png "Excel data source settings")
 
 2. In the **Data source settings** dialog box, select **Global permissions**, choose the website where you want to change the permission setting, and then select **Edit Permissions**.
 
 3. In the **Edit Permissions** dialog box, under **Credentials**, select **Edit**. 
 
-    ![Edit permissions](media/connector-authentication/edit-permission.png "Edit permissions")
+    ![Edit permissions.](media/connector-authentication/edit-permission.png "Edit permissions")
 
 4. Change the credentials to the type required by the website, select **Save**, and then select **OK**.
 
@@ -69,7 +69,7 @@ You can also delete the credentials for a particular website in step 3 by select
 
 1. Select the connector, and then select **Edit connection**.
 
-    ![Edit the online authentication methods](media/connector-authentication/pq-edit-connection.png "Edit the online authentication methods")
+    ![Edit the online authentication methods.](media/connector-authentication/pq-edit-connection.png "Edit the online authentication methods")
 
 2. Make the required changes, and then select **Next**.
 
@@ -87,15 +87,15 @@ One example of this is the Northwind OData service.
 
 1) Enter the Northwind endpoint in the "Get Data" experience using the OData connector.
 
-   ![Connect to Northwind](media/connector-authentication/northwind-odata.png)
+   ![Connect to Northwind.](media/connector-authentication/northwind-odata.png)
 
 2) Select **OK** to enter the authentication experience. Normally, because Northwind isn’t an authenticated service, you would just use **Anonymous**. To demonstrate lack of support for Azure Active Directory, choose **Organizational account**, and then select **Sign in**.
 
-   ![Northwind authentication](media/connector-authentication/northwind-auth.png)
+   ![Northwind authentication.](media/connector-authentication/northwind-auth.png)
 
 3) You'll encounter the error, indicating that OAuth or Azure Active Directory authentication isn't supported in the service.
 
-   ![Northwind error](media/connector-authentication/northwind-error.png)
+   ![Northwind error.](media/connector-authentication/northwind-error.png)
 
 ### Supported workflow
 
@@ -103,15 +103,15 @@ One example of a supported service working properly with OAuth is CRM, for examp
 
 1) Enter the URL in the "Get Data" experience using the OData connector.
 
-   ![CRM authentication](media/connector-authentication/crm-auth.png)
+   ![CRM authentication.](media/connector-authentication/crm-auth.png)
 
 2) Select **Organizational Account**, and then select **Sign-in** to proceed to connect using OAuth.
 
-   ![CRM authentication dialog](media/connector-authentication/crm-auth-dialog.png)
+   ![CRM authentication dialog.](media/connector-authentication/crm-auth-dialog.png)
 
 3) The request succeeds and the OAuth flow continues to allow you to authenticate successfully.
 
-   ![CRM authentication success](media/connector-authentication/crm-auth-success.png)
+   ![CRM authentication success.](media/connector-authentication/crm-auth-success.png)
 
 When you select **Sign-in** in Step 2 above, Power Query sends a request to the provided URL endpoint with an Authorization header with an empty bearer token.
 

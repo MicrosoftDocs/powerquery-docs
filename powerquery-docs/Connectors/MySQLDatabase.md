@@ -26,9 +26,8 @@ LocalizationGroup: reference
  
 ## Prerequisites
 
-By default, Power BI installs an OLE DB driver for MySQL database. However, for optimal performance, we recommend that the customer installs the [SQL Server Native Client](/sql/relational-databases/native-client/applications/installing-sql-server-native-client) before using the MySQL database connector. SQL Server Native Client 11.0 and SQL Server Native Client 10.0 are both supported in the latest version.
+Users need to install the [Oracle MySQL Connector/NET](https://dev.mysql.com/downloads/connector/net/) package prior to using this connector in Power BI Desktop. This component must also be installed on the machine running the on-premises data gateway in order to use this connector in Power Query Online (dataflows) or Power BI Service. 
 
- 
 ## Capabilities Supported
 * Import
 * Advanced options
@@ -45,11 +44,11 @@ To make the connection, take the following steps:
  
 2. In the **MySQL database** dialog, provide the name of the server and database. 
 
-   ![Enter MySQL database connection](./media/mysql-database/signin.png)
+   ![Enter MySQL database connection.](./media/mysql-database/signin.png)
 
 3. Select the **Database** authentication type and input your MySQL credentials in the **User name** and **Password** boxes.
 
-   ![MySQL database authentication](./media/mysql-database/enter-credentials.png)
+   ![MySQL database authentication.](./media/mysql-database/enter-credentials.png)
 
 4. Select the level to apply your credentials to.
 
@@ -58,13 +57,13 @@ To make the connection, take the following steps:
    >[!Note]
    > If the connection is not encrypted, you'll be prompted with the following dialog.
 
-   ![MySQL database encryption support](../images/EncryptionWarning.png)
+   ![MySQL database encryption support.](../images/EncryptionWarning.png)
 
    Select **OK** to connect to the database by using an unencrypted connection, or follow the [instructions](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine) to set up encrypted connections to SQL Server.
 
 6. In **Navigator**, select the data you require, then either load or transform the data.
 
-   ![Load or transform the data](./media/mysql-database/navigator.png)
+   ![Load or transform the data.](./media/mysql-database/navigator.png)
 
 ## Connect to MySQL database from Power Query Online
 
@@ -74,7 +73,7 @@ To make the connection, take the following steps:
  
 2. In the **MySQL database** dialog, provide the name of the server and database.  
 
-   ![On premises MySQL database connection](./media/mysql-database/service-signin.png)
+   ![On premises MySQL database connection.](./media/mysql-database/service-signin.png)
 
 3. If necessary, include the name of your on-premises data gateway.
 
@@ -90,7 +89,7 @@ To make the connection, take the following steps:
 
 Power Query Desktop provides a set of advanced options that you can add to your query if needed.
 
-![Advanced options included in the MySQL connection dialog box](./media/mysql-database/advanced-options.png)
+![Advanced options included in the MySQL connection dialog box.](./media/mysql-database/advanced-options.png)
 
 
 The following table lists all of the advanced options you can set in Power Query Desktop.

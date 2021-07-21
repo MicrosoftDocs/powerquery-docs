@@ -28,7 +28,7 @@ Power Query enables you to specify your native database query in a text box unde
 
    2. Under **Advanced options**, select the **SQL statement** field and paste or enter your native database query, then select **OK**.
 
-      ![Run native database queries](media/native-database-query/database-select-dialog.png)
+      ![Run native database queries.](media/native-database-query/database-select-dialog.png)
 
 3. If this is the first time you're connecting to this server, you'll see a prompt to select the authentication mode to connect to the database. Select an appropriate authentication mode, and continue.
 
@@ -61,6 +61,7 @@ The following Power Query connectors support native database queries.
 | Oracle database | SQL statement |
 | PostgreSQL | SQL statement |
 | SAP HANA database | SQL statement |
+| Snowflake | SQL statement |
 | SQL Server Analysis Services database | MDX or DAX query |
 | SQL Server database | SQL statement |
 | TIBCO(R) Data Virtualization (Beta) | SQL statement |
@@ -79,11 +80,11 @@ Query folding while using a native database query is limited to the PostgreSQL c
 
 Sometimes, when you attempt to use a query created by another user or through the Advanced Editor or formula bar&mdash;essentially any other path outside of the connector dialogs where the native query input box is shown&mdash;you may get a message that says:
 
-![Native database query message](media/native-database-query/native-permission.png)
+![Native database query message.](media/native-database-query/native-permission.png)
 
 If you see this message, select **Edit Permission**. This selection will open the **Native Database Query** dialog box. You'll be given an opportunity to either run the native database query, or cancel the query.
 
-![Native database query approval](media/native-database-query/approve-query.png)
+![Native database query approval.](media/native-database-query/approve-query.png)
 
 By default, if you run a native database query outside of the connector dialogs, you'll be prompted each time you run a different query text to ensure that the query text that will be executed is approved by you.
 
@@ -114,4 +115,4 @@ You can also revoke the approval of any native database queries that you've prev
 
 3. In the **Edit permissions** dialog box, under **Native Database Queries**, select **Revoke Approvals**.
 
-   ![Revoke native database query approval](media/native-database-query/revoke-native-approval.png)
+   ![Revoke native database query approval.](media/native-database-query/revoke-native-approval.png)

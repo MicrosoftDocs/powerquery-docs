@@ -26,7 +26,7 @@ LocalizationGroup: reference
 6. Check the option **(Not Recommended) Allow any extension to load without validation or warning** in Power BI Desktop (under *File | Options and settings | Options | Security | Data Extensions*).
 7. Restart Power BI Desktop.
 
-![Preview Feature](images/newProject.png)
+![Preview Feature.](images/newProject.png)
 
 ## Distribution of Data Connectors
 

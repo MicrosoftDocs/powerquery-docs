@@ -47,27 +47,27 @@ To connect to Assemble data:
 
    a. (Optional) Select a date from which you want to load the data. Leaving this entry blank results in the latest data being pulled each time you refresh.
 
-      ![Enter your Assemble URL](media/assemble-views/assemble-views-url.png)
+      ![Enter your Assemble URL.](media/assemble-views/assemble-views-url.png)
 
    b. Once you've entered the URL, select **OK** to continue.
 
 3. Select **Sign in** to sign in to your Autodesk account.
 
-   ![Sign in to your Autodesk account](media/assemble-views/assemble-views-sign-in.png)
+   ![Sign in to your Autodesk account.](media/assemble-views/assemble-views-sign-in.png)
 
    Once you've successfully signed in, select **Connect**.
 
 4. In the **Navigator** dialog box, select the Assemble Views that you want to load. For each project, there's a single item for view images named **[Your Project] View Thumbnails**. Select this option if you want to include images in your report. Select **Transform Data** to continue to Power Query.
 
-   ![Select which views to import](media/assemble-views/assemble-views-selection.png)
+   ![Select which views to import.](media/assemble-views/assemble-views-selection.png)
 
 5. In Power Query, you'll see a single column named **Rows**. On the header of the column, select the button with two arrows pointing in opposite directions to expand your rows.
 
-   ![Data preview pre-transformation](media/assemble-views/assemble-views-pre-transform.png)
+   ![Data preview pre-transformation.](media/assemble-views/assemble-views-pre-transform.png)
 
    a. Uncheck **Use original column name as prefix** and select **OK** for each view data query you've selected.
 
-      ![Don't keep original column name as prefix](media/assemble-views/assemble-views-transform-1.png)
+      ![Don't keep original column name as prefix.](media/assemble-views/assemble-views-transform-1.png)
 
    b. Select **Close & Apply** to load the datasets.
 
@@ -77,7 +77,7 @@ To connect to Assemble data:
 
    b. Open the **Data category** drop-down and select **Image URL**. You can now drag and drop the Image field into your report visuals.
 
-   ![Change Data category for images](media/assemble-views/assemble-views-change-data-category.png)
+   ![Change Data category for images.](media/assemble-views/assemble-views-change-data-category.png)
 
 ## Known issues and limitations
 

@@ -20,13 +20,13 @@ Microsoft Power Platform dataflows and Azure Data Factory dataflows are often co
 
 Power Platform dataflows are data transformation services empowered by the Power Query engine and hosted in the cloud. These dataflows get data from different data sources and, after applying transformations, store it either in Dataverse or in Azure Data Lake Storage.
 
-![Power Platform dataflows diagram](media/dataflows-power-platform-dynamics-365/dataflow-function.png)
+![Power Platform dataflows diagram.](media/dataflows-power-platform-dynamics-365/dataflow-function.png)
 
 ## Data Factory wrangling dataflows
 
 Data Factory is a cloud-based extract, transform, load (ETL) service that supports many different sources and destinations. There are two types of dataflows under this technology: mapping dataflows and wrangling dataflows. Wrangling dataflows are empowered by the Power Query engine for data transformation.
 
-![Wrangling dataflow](/azure/data-factory/media/wrangling-data-flow/tutorial6.png)
+![Wrangling dataflow.](/azure/data-factory/media/wrangling-data-flow/tutorial6.png)
 
 ## What do they have in common?
 

@@ -15,13 +15,13 @@ ms.author: mideboer
 
 In this step-by-step tutorial, we will show you how to set up your own monitoring dashboard for all of your dataflows:
 
-![example of monitoring dashboard](media/dashboard.PNG)
+![example of monitoring dashboard.](media/dashboard.PNG)
 
 You can use this dashboard to monitor your dataflows' refresh duration and failure count. With this dashboard, you can track any issues with your dataflows performance and share the data with others. 
 
 First, you will create a new Dataverse table which stores all the metadata from the dataflow run. For every refresh of a dataflow, a record is added to this table. You can also store metadata for multiple dataflows runs in the same table. After the table is created, you will connect the Power BI file to the Dataverse table.
 
-![dataverse tutorial overview](media/dataverse.PNG)
+![dataverse tutorial overview.](media/dataverse.PNG)
 
 ## Prerequisites
 * [Power BI Desktop](https://www.microsoft.com/download/details.aspx?id=58494).
@@ -58,32 +58,35 @@ First, download the Dataverse [.pbit file](https://download.microsoft.com/downlo
 If you do not already have one, create a dataflow. This can be done in either [Power BI dataflows](/power-bi/transform-model/dataflows/dataflows-introduction-self-service) or [Power Apps dataflows](/powerapps/maker/common-data-service/create-and-use-dataflows).
 
 ## Create a Power Automate Flow
+
 * Navigate to [Power Automate](https://flow.microsoft.com).
-* Search for the template "When a dataflow refresh completes, output status into CDS entity". If you encounter issues, see these [instructions](/power-automate/get-started-logic-template).
+* Create a new **automated cloud flow**
 
-![example of template](media/connector.PNG)
-
-* Customize the flow. Actions that require input from you will automatically be expanded.
-
-   The **Dataflow Refresh** trigger is expanded because you need to enter information on your dataflow:
+* Search for the connector "When a dataflow refresh completes (preview)". If you encounter difficulty, see these [instructions](/power-automate/get-started-logic-flow).
+* Customize the connector. You need to enter information on your dataflow:
     * **Group Type**: Select *Environment* when connecting to Power Apps and *Workspace* when connecting to Power BI.
     * **Group**: Select the Power Apps environment or the Power BI workspace your dataflow is in.
     * **Dataflow**: Select your dataflow by name.
 
-   The **Create a new record** action is expanded because you need to enter your Dataverse *Environment* and *Entity Name*:
+* Click on **new step** to add an action to your flow.
+* Search for the connector "Create a new record" form Dataverse.
+* Customize the connector. You need to enter information:
     * **Environment**: Select your Dataverse environment.
     * **Entity Name**: Select the entity named "Dataflows Monitoring" which you previously created. 
+
+
+![example of template.](media/connector.PNG)
 
 * Add dynamic values to the required fields.
 
     For every required field, you need to add a dynamic value. This value is the output of the metadata of the dataflow run. 
     * Select the field next to **Dataflow ID** and then select the lightning button.
     
-    ![example of lightning button](media/dynamic.png)
+    ![example of lightning button.](media/dynamic.png)
 
     * Repeat this process for all required fields.
     
-    ![example of required fields](media/final.PNG)  
+    ![example of required fields.](media/final.PNG)  
 
 * Save the flow.
 

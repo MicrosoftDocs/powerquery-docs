@@ -15,15 +15,15 @@ LocalizationGroup: reference
 
 Power Query will automatically generate an invocation UI for you based on the arguments for your function. By default, this UI will contain the name of your function, and an input for each of your parameters. 
 
-![DefaultFunctionPrompt](images/defaultFunctionPrompt.png "Function prompt")
+![DefaultFunctionPrompt.](images/defaultFunctionPrompt.png "Function prompt")
 
 Similarly, evaluating the name of your function, without specifying parameters, will display information about it. 
 
-![DefaultFunctionInfo](images/defaultFunctionInfo.png "Function info")
+![DefaultFunctionInfo.](images/defaultFunctionInfo.png "Function info")
 
 You might notice that built-in functions typically provide a better user experience, with descriptions, tooltips, and even sample values. You can take advantage of this same mechanism by defining specific meta values on your function type. This topic describes the meta fields that are used by Power Query, and how you can make use of them in your extensions. 
 
-![CsvDocument](images/csvDocument.png "Function info for Csv.Document")
+![CsvDocument.](images/csvDocument.png "Function info for Csv.Document")
 
 ## Function Types
 
@@ -105,10 +105,10 @@ HelloWorldImpl = (message as text, optional count as number) as table =>
 This code results in the following dialogs in Power BI. 
 
 **Function invocation**
-![FunctionPrompt](images/helloWorldWithDocs.png "Hello world with docs prompt")
+![FunctionPrompt.](images/helloWorldWithDocs.png "Hello world with docs prompt")
 
 **Function info**
-![FunctionInfo](images/helloWorldWithDocsInfo.png "Hello world with docs function info")
+![FunctionInfo.](images/helloWorldWithDocsInfo.png "Hello world with docs function info")
 
 ### Multi-Line Example
 
@@ -138,4 +138,4 @@ shared HelloWorld.Contents =
 
 This code (with associated publish information, etc.) results in the following dialogue in Power BI. New lines will be represented in text with '#(lf)', or 'line feed'.
 
-![Multi-line input builder](images/helloWorldMultiline.png)
+![Multi-line input builder.](images/helloWorldMultiline.png)
