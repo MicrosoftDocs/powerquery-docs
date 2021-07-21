@@ -1,5 +1,5 @@
 ---
-title: Load Data into Excel Online and build a Dataflows Monitoring Report with Power BI
+title: Load Data into a Power BI Streaming Dataset and build a Dataflows Monitoring Report with Power BI
 description: How to use the dataflows connector in Power Automate to create a dataflows monitoring report in Power BI
 author: miquelladeboer
 
@@ -10,7 +10,7 @@ ms.date: 12/15/2020
 ms.author: mideboer
 ---
 
-# Load Data into Excel Online and Build a Dataflows Monitoring Report with Power BI
+# Load Data into a Power BI Streaming Dataset and Build a Dataflows Monitoring Report with Power BI
 
 ## Introduction
 
@@ -18,31 +18,37 @@ In this step-by-step tutorial, we will show you how to set up your own monitorin
 
 ![example of monitoring dashboard.](media/dashboard.PNG)
 
-First, you will download the Excel file and save it in OneDrive for Business or SharePoint. Next, you will create a Power Automate connector which will load metadata from your dataflow into the Excel file in OneDrive for Business or SharePoint. Lastly, you will connect a Power BI file to the Excel file to visualize the metadata and start monitoring the dataflows.
+First, you will create a new streaming dataset in Power BI. This dataset will collect all the metadata from the dataflow run, and for every refresh of a dataflow, a record is added to this dataset. You can run multiple dataflows all to the same dataset. Lastly, you can build a Power BI report on the data to visualize the metadata and start monitoring the dataflows.
 
 You can use this dashboard to monitor your dataflows' refresh duration and failure count. With this dashboard, you can track any issues with your dataflows performance and share the data with others. 
 
-![overview of loading data through Excel.](media/excel.PNG)	
+![overview of PowerBI streaming dataset.](media/powerbi.PNG)
 
 
 ## Prerequisites
-* [Microsoft Excel](https://www.microsoft.com/en/microsoft-365/excel)
 
-* [Power BI Desktop](https://www.microsoft.com/download/details.aspx?id=58494).
+* A [Power BI Pro License](/power-bi/admin/service-admin-purchasing-power-bi-pro).
 
 * A [Premium Power Automate License](/power-platform/admin/pricing-billing-skus)
 
-* [OneDrive for Business](https://www.microsoft.com/en/microsoft-365/onedrive/onedrive-for-business).
-
 * A [Power BI dataflow](/power-bi/transform-model/dataflows/dataflows-introduction-self-service) or [Power Platform dataflow](/powerapps/maker/common-data-service/create-and-use-dataflows).
 
-## Download the .pbit file
+## Create a new streaming dataset in Power BI
 
-First, download the [.pbit file](https://download.microsoft.com/download/1/4/E/14EDED28-6C58-4055-A65C-23B4DA81C4DE/excel-template.pbit).
+* Navigate to [Power BI](https://powerbi.microsoft.com).
 
-## Download the Excel file and Save to OneDrive
+* Follow these [instructions](/power-bi/connect-data/service-real-time-streaming#set-up-your-real-time-streaming-dataset-in-power-bi) to create a new streaming dataset in Power BI. Ensure you create a streaming dataset based on the API and add the historical data opt in.
 
-Next, download the [.xlsx file](https://download.microsoft.com/download/1/4/E/14EDED28-6C58-4055-A65C-23B4DA81C4DE/dataflow_monitoring.xlsx) and save the file to a location on OneDrive for Business or SharePoint
+*   In the right pane, enter the following values, and then select Create.
+       * **Dataset Name**: "Dataflow Monitoring".
+       * **Value**: "Dataflow Name", **Data type**: Text.
+       * **Value**: "Dataflow ID", **Data type**: Text.
+       * **Value**: "Refresh Status", **Data type**: Text. 
+       * **Value**: "Refresh Type", **Data type**: Text.
+       * **Value**: "Start Time", **Data type**: Date and Time. 
+       * **Value**: "End Time", **Data type**: Date and Time.
+
+![example of add streaming dataset.](media/addstreamingdatset.PNG)
 
 ## Create a dataflow
 
@@ -51,7 +57,8 @@ If you do not already have one, create a dataflow. This can be done in either [P
 ## Create a flow in Power Automate 
 
 * Navigate to [Power Automate](https://flow.microsoft.com).
-* Create a new **automated cloud flow**
+
+* Select **Create** > **Automated cloud flow**.
 
 * Search for the connector "When a dataflow refresh completes (preview)". If you encounter difficulty, see these [instructions](/power-automate/get-started-logic-flow).
 * Customize the connector. You need to enter information on your dataflow:
