@@ -104,7 +104,7 @@ The following table lists Microsoft products and services where Power Query can 
 |SQL Server Analysis Services| Yes| Yes|No|No|
 |Dynamics 365 Customer Insights|Yes|No|Yes|Yes|
 
-| | |
+| <span>| <span>|
 | --- | --- |
 |<sup>1</sup>**M engine** |The underlying query execution engine that runs queries expressed in the Power Query formula language ("M"). |
 |<sup>2</sup>**Power&nbsp;Query&nbsp;Desktop** |The Power Query experience found in desktop applications. |
