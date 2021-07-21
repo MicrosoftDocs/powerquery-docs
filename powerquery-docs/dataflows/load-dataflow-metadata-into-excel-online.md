@@ -1,6 +1,6 @@
 ---
 title: Load Data into Excel Online and build a Dataflows Monitoring Report with Power BI
-description: How to use the dataflows connector in Power Automate to create a dataflows monitoring report in Power BI
+description: How to use and Excel file and the dataflows connector in Power Automate to create a dataflows monitoring report in Power BI
 author: miquelladeboer
 
 ms.service: powerquery
