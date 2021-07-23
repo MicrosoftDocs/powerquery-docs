@@ -33,7 +33,7 @@ It's strongly suggested that you review:
 * [Handling Authentication](../../HandlingAuthentication.md)
 
 >[!Note]
->You can also start trace logging of your work at any time by enabling diagnostics, which is described later on in this tutorial. More information: [Enabling diagnostics](/8-Diagnostics/README.md#enabling-diagnostics)
+>You can also start trace logging of your work at any time by enabling diagnostics, which is described later on in this tutorial. More information: [Enabling diagnostics](8-Diagnostics/README.md#enabling-diagnostics)
 
 ## Parts
 
