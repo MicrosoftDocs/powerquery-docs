@@ -29,4 +29,4 @@ Custom connectors allow you to create new data sources or customize and extend a
 * Exposing a limited or filtered view over your data source to improve usability.
 * Enabling DirectQuery for a data source using an ODBC driver.
 
-Custom connectors are only available in Power BI Desktop and Power BI Service through the use of an on-premises data gateway. More information: [TripPin 9 - Test Connection](/samples/9-TestConnection/README.md)
+Custom connectors are only available in Power BI Desktop and Power BI Service through the use of an on-premises data gateway. More information: [TripPin 9 - Test Connection](/samples/TripPin/9-TestConnection/README.md)

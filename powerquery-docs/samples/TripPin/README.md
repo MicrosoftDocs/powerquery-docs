@@ -27,7 +27,7 @@ The following applications will be used throughout this tutorial:
 
 It's strongly suggested that you review:
 * [Installing the PowerQuery SDK](../../InstallingSDK.md)
-* [Starting to Develop Custom Connectors](../../StartingToDevelopCustomConnectors.md)
+* [Start developing custom connectors](../../StartingToDevelopCustomConnectors.md)
 * [Creating your first connector: Hello World](../../CreatingFirstConnector.md)
 * [Handling Data Access](../../HandlingDataAccess.md)
 * [Handling Authentication](../../HandlingAuthentication.md)
