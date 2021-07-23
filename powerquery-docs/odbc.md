@@ -458,8 +458,7 @@ LimitClause = (skip, take) =>
 `SQLColumns` is a function handler that receives the results of an ODBC call
 to [SQLColumns](/sql/odbc/reference/syntax/sqlcolumns-function). The source parameter contains a table with the data type information. This override is typically used to fix up data type mismatches between calls to `SQLGetTypeInfo` and `SQLColumns`.
 
-For details of the format of the source table parameter, see:
-https://docs.microsoft.com/sql/odbc/reference/syntax/sqlcolumns-function
+For details of the format of the source table parameter, go to [SQLColumns Function](/sql/odbc/reference/syntax/sqlcolumns-function).
 
 ### Overriding SQLGetFunctions
 
