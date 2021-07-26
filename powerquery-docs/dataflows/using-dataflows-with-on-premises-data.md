@@ -121,9 +121,9 @@ You can change the enterprise gateway used for a given dataflow and change the g
     - To share a connection, select **Share** and then add or remove users.
 
       > [!NOTE]
-      > You can only share some types of connections, such as a SQL Server connection. For more information, see [Share canvas-app resources in Power Apps](../canvas-apps/share-app-resources.md). <br />
+      > You can only share some types of connections, such as a SQL Server connection. For more information, see [Share canvas-app resources in Power Apps](/powerapps/maker/canvas-apps/share-app-resources). <br />
       >
-      > For more information about how to manage a connection, see [Manage canvas-app connections in Power Apps](../canvas-apps/add-manage-connections.md).
+      > For more information about how to manage a connection, see [Manage canvas-app connections in Power Apps](/powerapps/maker/canvas-apps/add-manage-connections).
 
 ---
 
@@ -142,11 +142,11 @@ There are a few known limitations when using enterprise gateways and dataflows.
 
 - Using gateways in dataflows is only supported for people with *Admins* permissions. *Can use* and *Can use + share* permissions levels are not currently supported.
 
-For information about troubleshooting issues with gateways, or configuring the gateway service for your network, see [Understand on-premises data gateways](../canvas-apps/gateway-reference.md).
+For information about troubleshooting issues with gateways, or configuring the gateway service for your network, go to [On-premises data gateway documentation](/data-integration/gateway).
 
 ## Next steps
 
-- [Create and use dataflows in Power Apps](create-and-use-dataflows.md)
+- [Create and use dataflows in Power Apps](/powerapps/maker/data-platform/create-and-use-dataflows)
 
 - [Add data to a table in Microsoft Dataverse by using Power Query](add-data-power-query.md)
 
