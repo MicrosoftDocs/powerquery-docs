@@ -164,26 +164,26 @@
           href: dataflows/linked-entities.md
         - name: "Connect Azure Data Lake for dataflow storage"
           href: dataflows/connect-azure-data-lake-storage-for-dataflow.md
-          - name: Storage structure
-            items: 
-            - name: "Common Data Model storage structure"
-              href: dataflows/what-is-the-cdm-storage-structure-for-analytical-dataflows.md
-            - name: "Configure storage and compute"
-              href: dataflows/configuring-storage-and-compute-options-for-analytical-dataflows.md
-            - name: Best practices for dataflows
-              items: 
-              - name: "Scenarios for computed entities"
-                href: dataflows/computed-entities-scenarios.md
-              - name: "Developing complex dataflows"
-                href: dataflows/best-practices-developing-complex-dataflows.md
-              - name: "Reusing dataflows"
-                href: dataflows/best-practices-reusing-dataflows.md
-              - name: "Dimensional model"
-                href: dataflows/best-practices-for-dimensional-model-using-dataflows.md
-              - name: "Performance"
-                href: dataflows/performance-ingestion-transformation-dataflows.md
-            - name: "Other Azure data services"
-              href: dataflows/using-output-power-platform-dataflows-other-azure.md
+        - name: Storage structure
+          items: 
+          - name: "Common Data Model storage structure"
+            href: dataflows/what-is-the-cdm-storage-structure-for-analytical-dataflows.md
+          - name: "Configure storage and compute"
+            href: dataflows/configuring-storage-and-compute-options-for-analytical-dataflows.md
+        - name: Best practices for dataflows
+          items: 
+          - name: "Scenarios for computed entities"
+            href: dataflows/computed-entities-scenarios.md
+          - name: "Developing complex dataflows"
+            href: dataflows/best-practices-developing-complex-dataflows.md
+          - name: "Reusing dataflows"
+            href: dataflows/best-practices-reusing-dataflows.md
+          - name: "Dimensional model"
+            href: dataflows/best-practices-for-dimensional-model-using-dataflows.md
+          - name: "Performance"
+            href: dataflows/performance-ingestion-transformation-dataflows.md
+        - name: "Other Azure data services"
+          href: dataflows/using-output-power-platform-dataflows-other-azure.md
       - name: Standard dataflows
         items: 
         - name: "Relationships and lookups"
