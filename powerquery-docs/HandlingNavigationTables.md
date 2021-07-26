@@ -85,7 +85,7 @@ shared NavigationTable.Simple = () =>
             {"Item1",      "item1",      #table({"Column1"}, {{"Item1"}}), "Table",    "Table",    true},
             {"Item2",      "item2",      #table({"Column1"}, {{"Item2"}}), "Table",    "Table",    true},
             {"Item3",      "item3",      FunctionCallThatReturnsATable(),  "Table",    "Table",    true},            
-            {"MyFunction", "myfunction", AnotherFunction.Contents(),       "Function", "Function", true}
+            {"MyFunction", "myfunction", AnotherFunction.Contents,       "Function", "Function", true}
             }),
         NavTable = Table.ToNavigationTable(objects, {"Key"}, "Name", "Data", "ItemKind", "ItemName", "IsLeaf")
     in

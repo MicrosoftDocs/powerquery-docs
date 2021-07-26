@@ -4,7 +4,7 @@ description: List of all currently available Power Query connectors
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 04/02/2021
+ms.date: 7/23/2021
 ms.author: bezhan
 ms.custom: intro-internal
 
@@ -122,7 +122,7 @@ A checkmark indicates the connector is currently supported in the listed service
 | ![Planview Enterprise One - PRM (Beta).](media/index/planview-enterprise-64.png)<br/>**Planview Enterprise<br/>One - PRM (Beta)**<br/>By Planview                                                                                                                              | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | [![PostgreSQL database.](media/index/database-64.png)<br/>**PostgreSQL<br/>database**](./postgresql.md)<br/>By Microsoft                 | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
 | ![Power BI dataflows (Beta).](media/index/powerbi-dataflows-64.png)<br/>**Power BI dataflows<br/>(Beta)**<br/>By Microsoft               | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
-| ![Power BI datasets.](media/index/data-pbi-64.png)<br/>**Power BI datasets**<br/>By Microsoft                                        | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | 
+| ![Power BI datasets.](media/index/data-pbi-64.png)<br/>**Power BI datasets**<br/>By Microsoft                                        | ![Supported](media/index/yes.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | 
 | ![Power Platform dataflows.](media/index/power-platform-dataflows-64.png)<br/>**Power Platform<br/>dataflows**<br/>By Microsoft                                                                                                                             | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png)  | ![Not supported](media/index/no.png)  |
 | ![Product Insights (Beta).](media/index/product-insights-64.png)<br/>**Product Insights<br/>(Beta)**<br/>By Microsoft                    | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | 
 | ![Projectplace for Power BI(Beta).](media/index/projectplace-64.png)<br/>**Projectplace<br/>for Power BI<br/>(Beta)**<br/>By Planview               | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
