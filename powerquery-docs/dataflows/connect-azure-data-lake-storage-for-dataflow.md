@@ -123,9 +123,8 @@ This article provided guidance about how to connect an Azure Data Lake Storage G
 
 For more information about dataflows, the Common Data Model, and Azure Data Lake Storage Gen2, go to these articles:
 
-- [Self-service data prep with dataflows](./self-service-data-prep-with-dataflows.md)
-- [Creating and using dataflows in Power Apps](./create-and-use-dataflows.md)
-- [Connect Azure Data Lake Storage Gen2 for dataflow storage]()
+- [Self-service data prep with dataflows](/powerapps/maker/data-platform/self-service-data-prep-with-dataflows)
+- [Creating and using dataflows in Power Apps](/powerapps/maker/data-platform/create-and-use-dataflows)
 - [Add data to a table in Microsoft Dataverse](./add-data-power-query.md)
 
 For more information about Azure storage, go to this article:
@@ -134,7 +133,7 @@ For more information about Azure storage, go to this article:
 
 For more information about the Common Data Model, go to these articles:
 
-- [Common Data Model - overview](/common-data-model/) 
+- [Common Data Model - overview](/common-data-model/)
 - [Common Data Model folders](/common-data-model/data-lake)
 - [CDM model file definition](/common-data-model/model-json)
 

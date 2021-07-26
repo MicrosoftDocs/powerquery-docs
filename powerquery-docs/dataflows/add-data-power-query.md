@@ -13,9 +13,7 @@ LocalizationGroup: reference
 
 # Add data to a table in Microsoft Dataverse by using Power Query
 
-[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
-
-In this procedure, you'll create a table in [Dataverse](data-platform-intro.md) and fill that table with data from an OData feed by using Power Query. You can use the same techniques to integrate data from these online and on-premises sources, among others:
+In this procedure, you'll create a table in [Dataverse](/powerapps/maker/data-platform/data-platform-intro) and fill that table with data from an OData feed by using Power Query. You can use the same techniques to integrate data from these online and on-premises sources, among others:
 
 * SQL Server
 * Salesforce
@@ -28,7 +26,7 @@ In this procedure, you'll create a table in [Dataverse](data-platform-intro.md) 
 
 You can also filter, transform, and combine data before you load it into a new or existing table.
 
-If you don't have a license for Power Apps, you can [sign up for free](../signup-for-powerapps.md).
+If you don't have a license for Power Apps, you can [sign up for free](/powerapps/maker/signup-for-powerapps).
 
 ## Prerequisites
 
@@ -90,4 +88,4 @@ If you select **Load to existing table**, you can specify a table into which you
   > [!div class="mx-imgBorder"]
   > ![Specify the name of the new table.](./media/existing-entity.png)
 
-If an [error message about permissions](troubleshoot-power-query-issues.md) appears, contact your administrator.
+If an [error message about permissions](/powerapps/maker/data-platform/troubleshoot-power-query-issues) appears, contact your administrator.
