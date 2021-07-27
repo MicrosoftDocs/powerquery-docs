@@ -266,7 +266,7 @@
         href: "Connectors/AmazonAthena.md"
       - name: "Anaplan"
         href: Connectors/Anaplan.md
-      - name: "AssembleViews (Beta)"
+      - name: "AssembleViews"
         href: Connectors/AssembleViews.md
       - name: "Azure SQL database"
         href: Connectors/AzureSQLDatabase.md
