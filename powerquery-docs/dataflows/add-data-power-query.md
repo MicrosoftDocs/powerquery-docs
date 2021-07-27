@@ -30,7 +30,7 @@ If you don't have a license for Power Apps, you can [sign up for free](/powerapp
 
 ## Prerequisites
 
-Before you start to follow this topic:
+Before you start to follow this article:
 
 * Switch to an [environment](/power-platform/admin/working-with-environments) in which you can create tables.
 * You must have a Power Apps per user plan or Power Apps per app plan.

@@ -17,7 +17,7 @@ You can configure dataflows to store their data in your organization’s Azure D
 > [!IMPORTANT]
 > Dataflow with Analytical tables feature utilizes the Azure Synapse Link for Dataverse service, which may offer varying levels of compliance, privacy, security, and data location commitments. For more information about Azure Synapse Link for Dataverse, go to the [blog article](https://go.microsoft.com/fwlink/?linkid=2109088).
 
-There are some advantages to configuring dataflows to store their definitions and datafiles in your data lake, including the following:
+There are some advantages to configuring dataflows to store their definitions and datafiles in your data lake, such as:
 
 - Azure Data Lake Storage Gen2 provides an enormously scalable storage facility for data.
 - Dataflow data and definition files can be leveraged by your IT department's developers to leverage Azure data and artificial intelligence (AI) services as demonstrated in the GitHub samples from Azure data services.
@@ -51,12 +51,12 @@ The following sections walk through the steps necessary to configure your Azure 
 Follow the steps in [Create an Azure Data Lake Storage Gen2 storage account](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
 1. Make sure you select the same region as your environment and set your storage as StorageV2 (general purpose v2).
-2. Make sure you enable the hierarchical namespace feature. 
+2. Make sure you enable the hierarchical namespace feature.
 3. We recommend that you set the replication setting to Read-access geo-redundant storage (RA-GRS).
 
 ## Connect your Azure Data Lake Storage Gen2 to Power Apps
 
-Once you've set up your Azure Data Lake Storage Gen2 account in the Azure portal, you are ready to connect it to a specific dataflow or a Power Apps environment. Connecting the lake to an environment allows other makers and admins in the environment to create dataflows that store their data in your organization's lake as well. 
+Once you've set up your Azure Data Lake Storage Gen2 account in the Azure portal, you're ready to connect it to a specific dataflow or a Power Apps environment. Connecting the lake to an environment allows other makers and admins in the environment to create dataflows that store their data in your organization's lake as well.
 
 To connect your Azure Data Lake Storage Gen2 account with the dataflow, follow these steps:
 
@@ -75,7 +75,7 @@ To connect your Azure Data Lake Storage Gen2 account with the dataflow, follow t
 
 ## Select the storage account to use for dataflow storage
 
-If a storage account has not yet been associated with the environment, a **Link to data lake** dialog box appears. You'll need to sign in and find the data lake you created in the previous steps. In this example, no data lake is associated with the environment and so a prompt occurs to add one.
+If a storage account hasn't yet been associated with the environment, a **Link to data lake** dialog box appears. You'll need to sign in and find the data lake you created in the previous steps. In this example, no data lake is associated with the environment and so a prompt occurs to add one.
 
 1. Select storage account.
 
@@ -94,9 +94,9 @@ Once these steps are successfully completed, your Azure Data Lake Storage Gen2 a
 
 There are a few considerations and limitations to keep in mind when working with your dataflow storage:
 
-- Linking an Azure Data Lake Store Gen2 account for dataflow storage is not supported in the default environment.
+- Linking an Azure Data Lake Store Gen2 account for dataflow storage isn't supported in the default environment.
 - Once a dataflow storage location is configured for a dataflow, it can't be changed.
-- By default, any member of the environment can access dataflow data using the Power Platform Dataflows Connector. However, only the owners of a dataflow can access its files directly in Azure Data Lake Storage Gen2. To authorize additional people to access the dataflows data directly in the lake, you must authorize them to the dataflow’s **CDM Folder** in the data lake or the data lake itself.
+- By default, any member of the environment can access dataflow data using the Power Platform Dataflows Connector. However, only the owners of a dataflow can access its files directly in Azure Data Lake Storage Gen2. To authorize more people to access the dataflows data directly in the lake, you must authorize them to the dataflow’s **CDM Folder** in the data lake or the data lake itself.
 - When a dataflow is deleted, its **CDM Folder** in the lake will also be deleted.
 
 > [!IMPORTANT]
@@ -115,7 +115,7 @@ Further information about Azure Synapse Link for Dataverse is available in [this
 
 *When can I change the dataflow storage location of an environment?*
 
-   Changing the environment's dataflow storage location is not currently supported.
+   Changing the environment's dataflow storage location isn't currently supported.
 
 ## Next steps
 

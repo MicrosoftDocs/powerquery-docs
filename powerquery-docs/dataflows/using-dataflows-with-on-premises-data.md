@@ -25,6 +25,18 @@ With a gateway, you can connect to on-premises data through these connections:
 
 ## Prerequisites
 
+# [Power BI service](#tab/power-bi-service)
+
+### Power BI service
+
+- A Power BI service account. Don't have one? [Sign up for 60 days free](/power-bi/fundamentals/service-get-started#sign-up-for-the-power-bi-service).
+
+- Administrative permissions on a gateway. These permissions are provided by default for gateways you install. Administrators can grant other people permissions for gateways.
+
+# [Power Apps](#tab/power-apps)
+
+### Power Apps
+
 - A Power Apps account. Don't have one? [Sign up for 30 days free](/powerapps/maker/signup-for-powerapps).
 
 - Administrative permissions on a gateway. These permissions are provided by default for gateways you install. Administrators can grant other people permissions for gateways.
@@ -32,6 +44,8 @@ With a gateway, you can connect to on-premises data through these connections:
 - A license that supports accessing on-premises data using an on-premises gateway. More information: "Connect to your data" row of the "Explore Power Apps plans" table in the [Power Apps pricing](https://powerapps.microsoft.com/pricing/) page.
 
 - Gateways and on-premises connections can only be created and used in the user's default environment. More information: [Working with environments and Microsoft Power Apps](/power-platform/admin/working-with-environments).
+
+---
 
 ## Install a gateway
 
@@ -73,7 +87,7 @@ To install a gateway from Power Apps:
 
    ![Choose an on-premises data source.](media/on-premises-data-sources.png)
 
-3. Provide the connection details for the enterprise gateway that will be used to access the on-premises data. You must select the gateway itself, and provide credentials for the selected gateway. Only gateways for which you are an administrator appear in the list.
+3. Provide the connection details for the enterprise gateway that will be used to access the on-premises data. You must select the gateway itself, and provide credentials for the selected gateway. Only gateways for which you're an administrator appear in the list.
 
     ![Provide connection details.](media/connection-creds.png)
 
@@ -117,7 +131,7 @@ You can change the enterprise gateway used for a given dataflow and change the g
 1. In the left navigation bar of *powerapps.com*, select **Gateways**, and then choose the gateway you want.
 
 2. Perform the action that you want:
-    - To view details, edit the settings, or delete a gateway, select **Connections** and then select a connection.
+    - To view details, edit the settings, or delete a gateway, select **Connections**, and then select a connection.
     - To share a connection, select **Share** and then add or remove users.
 
       > [!NOTE]
@@ -137,10 +151,10 @@ There are a few known limitations when using enterprise gateways and dataflows.
 
 - If several gateways are needed, the best practice is to build several dataflows (one for each gateway) and use the compute or table reference capabilities to unify the data.
 
-- Dataflows are only supported using enterprise gateways. Personal gateways will not be available for selection in the drop-down lists and settings
+- Dataflows are only supported using enterprise gateways. Personal gateways won't be available for selection in the drop-down lists and settings
     screens.
 
-- Using gateways in dataflows is only supported for people with *Admins* permissions. *Can use* and *Can use + share* permissions levels are not currently supported.
+- Using gateways in dataflows is only supported for people with *Admins* permissions. *Can use* and *Can use + share* permissions levels aren't currently supported.
 
 For information about troubleshooting issues with gateways, or configuring the gateway service for your network, go to [On-premises data gateway documentation](/data-integration/gateway).
 
