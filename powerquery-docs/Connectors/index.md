@@ -256,7 +256,7 @@ A checkmark indicates the connector is currently supported in the listed service
 
 ## Connectors R
 
-| **Connector**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Excel**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Power BI (Datasets)** | **Power BI (Dataflows)** | **Power Apps (Dataflows)** | **Customer<br/>Insights (Dataflows)** | **Analysis Services** |
+| **Connector** | **Excel**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Power BI (Datasets)** | **Power BI (Dataflows)** | **Power Apps (Dataflows)** | **Customer<br/>Insights (Dataflows)** | **Analysis Services** |
 | --- | --- | --- | --- | --- | --- | --- |
 | ![R Script](media/index/r-64.png)<br/>**R Script**<br/>By Microsoft                                                                 | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Roamler (Beta)](media/index/roamler-icon-64.png)<br/>**Roamler (Beta)**<br/>By Roamler                                            | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
