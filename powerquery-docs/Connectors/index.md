@@ -16,13 +16,15 @@ The following table contains a list of all the connectors currently available fo
 
 A checkmark indicates the connector is currently supported in the listed service; an X indicates that the connector is not currently supported in the listed service.
 
-<!-- [A](#letter-a) | [B](#letter-b) | [C](#letter-c) | [D](#letter-d) | [E](#letter-e) | [F](#letter-f) | [G](#letter-g) | [H](#letter-h) | [I](#letter-i) | [J](#letter-j) | [K](#letter-k) | [L](#letter-l) | [M](#letter-m) | N | [O](#letter-o) | [P](#letter-p) | [Q](#letter-q) | [R](#letter-r) | [S](#letter-s) | [T](#letter-t) | U | [V](#letter-v) | [W](#letter-w) | [X](#letter-x) | Y | [Z](#letter-z)
+[A](#letter-a) | [B](#letter-b) | [C](#letter-c) | [D](#letter-d) | [E](#letter-e) | [F](#letter-f) | [G](#letter-g) | [H](#letter-h) | [I](#letter-i) | [J](#letter-j) | [K](#letter-k) | [L](#letter-l) | [M](#letter-m) | N | [O](#letter-o) | [P](#letter-p) | [Q](#letter-q) | [R](#letter-r) | [S](#letter-s) | [T](#letter-t) | U | [V](#letter-v) | [W](#letter-w) | [X](#letter-x) | Y | [Z](#letter-z)
 
-# [All](#tab/All)
+<a name="letter-a"></a>
+
+## Connectors A
 
 | Connector | Excel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Power BI (Datasets) | Power BI (Dataflows) | Power Apps (Dataflows) | Customer<br/>Insights (Dataflows) | Analysis Services |
 | --- | --- | --- | --- | --- | --- | --- |
-| <a name="letter-a"></a>[![Access Database connector](media/index/access-database-64.png)<br/>**Access Database**](./accessdatabase.md)<br/>By Microsoft                           | ![Supported](media/index/yes.png "Supported in Excel") | ![Supported](media/index/yes.png "Supported in Power BI (Datasets)") | ![Supported](media/index/yes.png "Supported in Power BI (Dataflows)") | ![Supported](media/index/yes.png "Supported in Power Apps (Dataflows)") | ![Supported](media/index/yes.png "Supported in Customer Insights (Dataflows)") | ![Supported](media/index/yes.png "Supported in Analysis Services") |
+| [![Access Database connector](media/index/access-database-64.png)<br/>**Access Database**](./accessdatabase.md)<br/>By Microsoft                           | ![Supported](media/index/yes.png "Supported in Excel") | ![Supported](media/index/yes.png "Supported in Power BI (Datasets)") | ![Supported](media/index/yes.png "Supported in Power BI (Dataflows)") | ![Supported](media/index/yes.png "Supported in Power Apps (Dataflows)") | ![Supported](media/index/yes.png "Supported in Customer Insights (Dataflows)") | ![Supported](media/index/yes.png "Supported in Analysis Services") |
 | ![Active Directory connector](media/index/active-directory-64.png)<br/>**Active Directory**<br/>By Microsoft                        | ![Supported](media/index/yes.png "Supported in Excel") | ![Supported](media/index/yes.png "Supported in Power BI (Datasets)") | ![Supported](media/index/yes.png "Supported in Power BI (Dataflows)") | ![Not supported](media/index/no.png "Not supported in Power Apps (Dataflows)")  | ![Not supported](media/index/no.png "Not supported in Customer Insights (Dataflows)") | ![Supported](media/index/yes.png "Supported in Analysis Services") |
 | ![Acterys (Beta)](media/index/acterys-64.png)<br/>**Acterys (Beta)**<br/>By Acterys                        | ![Not supported](media/index/no.png "Not supported in Excel") | ![Supported](media/index/yes.png "Supported in Power BI (Datasets)") | ![Not supported](media/index/no.png "Not supported in Power BI (Dataflows)") | ![Not supported](media/index/no.png "Not supported in Power Apps (Dataflows)")  | ![Not supported](media/index/no.png "Not supported in Customer Insights (Dataflows)") | ![Not supported](media/index/no.png "Not supported in Analysis Services") |
 | ![Actian (Beta)](media/index/actian-64.png)<br/>**Actian (Beta)**<br/>By Actian                        | ![Not supported](media/index/no.png) | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png) | ![Not supported](media/index/no.png) |
@@ -31,7 +33,6 @@ A checkmark indicates the connector is currently supported in the listed service
 | [![Anaplan)](media/index/anaplan-64.png)<br/>**Anaplan**](./Anaplan.md)<br/>By Anaplan                        | ![Not supported](media/index/no.png) | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png) | ![Not supported](media/index/no.png) |
 | ![appFigures (Beta)](media/index/appfigures-64.png)<br/>**appFigures<br/>(Beta)**<br/>By Microsoft                                      | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Asana (Beta)](media/index/asana-64.png)<br/>**Asana**<br/>By Asana                                                                | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
-| **Connector** | **Excel**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Power BI (Datasets)** | **Power BI (Dataflows)** | **Power Apps (Dataflows)** | **Customer<br/>Insights (Dataflows)** | **Analysis Services** |
 | ![AtScale cubes (Beta)](media/index/cube-database-64.png)<br/>**AtScale cubes<br/>(Beta)**<br/>By Microsoft                             | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Automation Anywhere](media/index/automation-anywhere-64.png)<br/>**Automation<br/>Anywhere**<br/>By Automation <br/> Anywhere                             | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Azure Analysis Services database](media/index/analysis-services-64.png)<br/>**Azure Analysis<br/>Services database**<br/>By Microsoft | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
@@ -41,7 +42,6 @@ A checkmark indicates the connector is currently supported in the listed service
 | ![Azure Databricks](media/index/databricks-64.png)<br/>**Azure <br/> Databricks**<br/>By Microsoft | ![Not supported](media/index/no.png) | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png) | ![Not supported](media/index/no.png) | ![Not supported](media/index/no.png) | ![Not supported](media/index/no.png) |
 | ![Azure Data Explorer (Beta)](media/index/kusto-64.png)<br/>**Azure Data<br/>Explorer<br/>(Beta)**<br/>By Microsoft                         | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png)  | ![Not supported](media/index/no.png)  |
 | ![Azure Data Lake Storage Gen1](media/index/data-lake-64.png)<br/>**Azure Data Lake<br/>Storage Gen1**<br/>By Microsoft                           | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) |
-| **Connector** | **Excel**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Power BI (Datasets)** | **Power BI (Dataflows)** | **Power Apps (Dataflows)** | **Customer<br/>Insights (Dataflows)** | **Analysis Services** |
 | [![Azure Data Lake Storage Gen2 (Beta)](media/index/tables-64.png)<br/>**Azure Data Lake<br/>Storage Gen2<br/>(Beta)**](./datalakestorage.md)<br/>By Microsoft                                                                                                                             | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | 
 | ![Azure DevOps (Beta)](media/index/vsts-64.png)<br/>**Azure DevOps<br/>(Beta)**<br/>By Microsoft                                        | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Azure DevOps Server (Beta)](media/index/vsts-64.png)<br/>**Azure DevOps<br/>Server</br>(Beta)**<br/>By Microsoft                          | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
@@ -51,14 +51,34 @@ A checkmark indicates the connector is currently supported in the listed service
 | [![Azure SQL database](media/index/sql-database-64.png)<br/>**Azure SQL<br/>database**](azuresqldatabase.md)<br/>By Microsoft                                  | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
 | ![Azure Table Storage](media/index/tables-64.png)<br/>**Azure Table<br/>Storage**<br/>By Microsoft                                      | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png) | ![Supported](media/index/yes.png) |
 | ![Azure Time Series Insights (Beta)](media/index/time-series-insights-connector-64.png)<br/>**Azure Time<br/>Series Insights<br/> (Beta)**<br/>By Microsoft                                                                                                                             | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | 
+
+<a name="letter-b"></a>
+
+## Connectors B
+
 | **Connector** | **Excel**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Power BI (Datasets)** | **Power BI (Dataflows)** | **Power Apps (Dataflows)** | **Customer<br/>Insights (Dataflows)** | **Analysis Services** |
-| <a name="letter-b"></a>![BI Connector](media/index/biconnector-64.png)<br/>**BI Connector**<br/>By Guidanz                                                 | ![Not supported](media/index/no.png "Excel")  | ![Supported](media/index/yes.png "Power BI (Datasets)") | ![Not supported](media/index/no.png "Power BI (Dataflows)")  | ![Not supported](media/index/no.png "Power Apps (Dataflows)")  | ![Not supported](media/index/no.png "Customer Insights (Dataflows)")  | ![Not supported](media/index/no.png "Analysis Services")  |
+| --- | --- | --- | --- | --- | --- | --- |
+| ![BI Connector](media/index/biconnector-64.png)<br/>**BI Connector**<br/>By Guidanz                                                 | ![Not supported](media/index/no.png "Excel")  | ![Supported](media/index/yes.png "Power BI (Datasets)") | ![Not supported](media/index/no.png "Power BI (Dataflows)")  | ![Not supported](media/index/no.png "Power Apps (Dataflows)")  | ![Not supported](media/index/no.png "Customer Insights (Dataflows)")  | ![Not supported](media/index/no.png "Analysis Services")  |
 | ![BI360](media/index/bi360-64.png)<br/>**BI360**<br/>By Solver Global                                                               | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | [![Bloomberg Data and Analytics](media/index/bloomberg-64.png)<br/>**Bloomberg Data <br/>and Analytics**](./BloombergDataAndAnalytics.md)<br/>By Bloomberg                                                               | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
-| <a name="letter-c"></a>![Cognite Data Fusion (Beta)](media/index/cdf-64.png)<br/>**Cognite Data<br/>Fustion<br/>(Beta)**<br/>By Cognite                            | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
+
+<a name="letter-c"></a>
+
+## Connectors C
+
+| **Connector** | **Excel**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Power BI (Datasets)** | **Power BI (Dataflows)** | **Power Apps (Dataflows)** | **Customer<br/>Insights (Dataflows)** | **Analysis Services** |
+| --- | --- | --- | --- | --- | --- | --- |
+| ![Cognite Data Fusion (Beta)](media/index/cdf-64.png)<br/>**Cognite Data<br/>Fustion<br/>(Beta)**<br/>By Cognite                            | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Cherwell (Beta)](media/index/cherwell-64.png)<br/>**Cherwell (Beta)**<br/>By Cherwell                            | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Common Data Service (legacy)](media/index/cds-to-data64.png)<br/>**Common Data<br/>Service (legacy)**<br/>By Microsoft                            | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
-| <a name="letter-d"></a>![Data.World - Get Dataset (Beta)](media/index/data-world-64.png)<br/>**Data.World -<br/>Get Dataset<br/>(Beta)**<br/>By Microsoft          | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
+
+<a name="letter-d"></a>
+
+## Connectors D
+
+| **Connector** | **Excel**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Power BI (Datasets)** | **Power BI (Dataflows)** | **Power Apps (Dataflows)** | **Customer<br/>Insights (Dataflows)** | **Analysis Services** |
+| --- | --- | --- | --- | --- | --- | --- |
+| ![Data.World - Get Dataset (Beta)](media/index/data-world-64.png)<br/>**Data.World -<br/>Get Dataset<br/>(Beta)**<br/>By Microsoft          | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Data Virtuality (Beta)](media/index/data-virtuality-64.png)<br/>**Data Virtuality<br/>(Beta)**<br/>By Data Virtuality                 | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | [![Dataverse](media/index/dataverse-64.png)<br/>**Dataverse**](./dataverse.md)<br/>By Microsoft                                    | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png) | ![Not supported](media/index/no.png)  |
 | ![Denodo](media/index/denodo-for-powerbi-64.png)<br/>**Denodo**<br/>By Denodo                                                       | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
@@ -68,24 +88,59 @@ A checkmark indicates the connector is currently supported in the listed service
 | ![Dynamics 365 Business Central (on-premises)](media/index/dynamics365-business-central-on-premises-64.png)<br/>**Dynamics 365<br/>Business Central<br/>(on-premises)**<br/>By Microsoft                                                                                                                             | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Dynamics 365 Customer Insights (Beta)](media/index/customer-insights-64.png)<br/>**Dynamics 365<br/>Customer Insights<br/>(Beta)**<br/>By Microsoft                                                                                                                             | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Dynamics NAV](media/index/dynamics-nav-64.png)<br/>**Dynamics NAV**<br/>By Microsoft                                              | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
-| <a name="letter-e"></a>![eWay-CRM](media/index/ewaycrm-64.png)<br/>**eWay-CRM**<br/>By eWay-CRM                                        | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  
+
+<a name="letter-e"></a>
+
+## Connectors E
+
+| **Connector** | **Excel**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Power BI (Datasets)** | **Power BI (Dataflows)** | **Power Apps (Dataflows)** | **Customer<br/>Insights (Dataflows)** | **Analysis Services** |
+| --- | --- | --- | --- | --- | --- | --- |
+| ![eWay-CRM](media/index/ewaycrm-64.png)<br/>**eWay-CRM**<br/>By eWay-CRM                                        | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  
 ![Emigo Data Source](media/index/sygnet-emigo-64.png)<br/>**Emigo Data<br/>Source**<br/>By Sagra                                        | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Entersoft Business Suite (Beta)](media/index/entersoft-business-suite-64.png)<br/>**Entersoft<br/>Business Suite<br/>(Beta)**<br/>By Entersoft                                                                                                                             | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | [![EQuIS (Beta)](media/index/equis-64.png)<br/>**EQuIS (Beta)**](./EQuIS.md)<br/>By EarthSoft                                                                                                                             | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Essbase](media/index/cube-database-64.png)<br/>**Essbase**<br/>By Microsoft                                                       | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Exasol](media/index/exasol-64.png)<br/>**Exasol**<br/>By Exasol                                                                   | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | [![Excel](media/index/excel-workbook-64.png)<br/>**Excel**](./excel.md)<br/>By Microsoft                                            | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) <sup>1</sup>| ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
-| <a name="letter-f"></a>![FactSet Analytics (Beta)](media/index/factset-64.png)<br/>**FactSet Analytics<br/>(Beta)**<br/>By FactSet                             | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
+
+<a name="letter-f"></a>
+
+## Connectors F
+
+| **Connector** | **Excel**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Power BI (Datasets)** | **Power BI (Dataflows)** | **Power Apps (Dataflows)** | **Customer<br/>Insights (Dataflows)** | **Analysis Services** |
+| --- | --- | --- | --- | --- | --- | --- |
+| ![FactSet Analytics (Beta)](media/index/factset-64.png)<br/>**FactSet Analytics<br/>(Beta)**<br/>By FactSet                             | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | [![FHIR](media/index/fhir-64.png)<br/>**FHIR**](./fhir/fhir.md)<br/>By Microsoft                                                    | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | [![Folder](media/index/folder-64.png)<br/>**Folder**](./folder.md)<br/>By Microsoft                                                 | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
-| <a name="letter-g"></a>![Github (Beta)](media/index/github-64.png)<br/>**Github<br/>(Beta)**<br/>By Microsoft                                                  | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
+
+<a name="letter-g"></a>
+
+## Connectors G
+
+| **Connector** | **Excel**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Power BI (Datasets)** | **Power BI (Dataflows)** | **Power Apps (Dataflows)** | **Customer<br/>Insights (Dataflows)** | **Analysis Services** |
+| --- | --- | --- | --- | --- | --- | --- |
+| ![Github (Beta)](media/index/github-64.png)<br/>**Github<br/>(Beta)**<br/>By Microsoft                                                  | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | [![Google Analytics](media/index/google-analytics-64.png)<br/>**Google Analytics**](./googleanalytics.md)<br/>By Microsoft                                  | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | [![Google BigQuery](media/index/database-64.png)<br/>**Google BigQuery**](./googlebigquery.md)<br/>By Microsoft                                            | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  |
-| <a name="letter-h"></a>![Hadoop File (HDFS)](media/index/hdinsight-hdfs-64.png)<br/>**Hadoop File<br/>(HDFS)**<br/>By Microsoft                                | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
+
+<a name="letter-h"></a>
+
+## Connectors H
+
+| **Connector** | **Excel**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Power BI (Datasets)** | **Power BI (Dataflows)** | **Power Apps (Dataflows)** | **Customer<br/>Insights (Dataflows)** | **Analysis Services** |
+| --- | --- | --- | --- | --- | --- | --- |
+| ![Hadoop File (HDFS)](media/index/hdinsight-hdfs-64.png)<br/>**Hadoop File<br/>(HDFS)**<br/>By Microsoft                                | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![HDInsight Interactive Query](media/index/hadoop-hdinsight-64.png)<br/>**HDInsight<br/>Interactive Query**<br/>By Microsoft            | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Hexagon PPM Smart API](media/index/hexagon-64.png)<br/>**Hexagon PPM <br/> Smart API**<br/>By Hexagon PPM            | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Hive LLAP (Beta)](media/index/hive-64.png)<br/>**Hive LLAP (Beta)**<br/>By Microsoft   | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
-| <a name="letter-i"></a>![IBM DB2 database](media/index/database-64.png)<br/>**IBM DB2<br/>database**<br/>By Microsoft                                          | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  |
+
+<a name="letter-i"></a>
+
+## Connectors I
+
+| **Connector** | **Excel**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Power BI (Datasets)** | **Power BI (Dataflows)** | **Power Apps (Dataflows)** | **Customer<br/>Insights (Dataflows)** | **Analysis Services** |
+| --- | --- | --- | --- | --- | --- | --- |
+| ![IBM DB2 database](media/index/database-64.png)<br/>**IBM DB2<br/>database**<br/>By Microsoft                                          | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  |
 | ![IBM Informix database (Beta)](media/index/database-64.png)<br/>**IBM Informix<br/>database<br/>(Beta)**<br/>By Microsoft                  | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) |
 | ![IBM Netezza](media/index/database-64.png)<br/>**IBM Netezza**<br/>By Microsoft                                                    | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Impala](media/index/odbc-64.png)<br/>**Impala**<br/>By Microsoft                                                                  | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  |
@@ -94,14 +149,42 @@ A checkmark indicates the connector is currently supported in the listed service
 | ![Information Grid (Beta)](media/index/information-grid-64.png)<br/>**Information<br/>Grid (Beta)**<br/>By Luminis                                    | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![InterSystems IRIS (Beta)](media/index/iris-powerbi-connector-64.png)<br/>**InterSystems<br/>IRIS (Beta)**<br/>By Intersystems                       | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Intune Data Warehouse (Beta)](media/index/intune-64.png)<br/>**Intune Data<br/>Warehouse (Beta)**<br/>By Microsoft                                  | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
-| <a name="letter-j"></a>![Jamf Pro (Beta)](media/index/jamf-pro-64.png)<br/>**Jamf Pro<br/>(Beta)**<br/>By Jamf                                                 | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
+
+<a name="letter-j"></a>
+
+## Connectors J
+
+| **Connector** | **Excel**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Power BI (Datasets)** | **Power BI (Dataflows)** | **Power Apps (Dataflows)** | **Customer<br/>Insights (Dataflows)** | **Analysis Services** |
+| --- | --- | --- | --- | --- | --- | --- |
+| ![Jamf Pro (Beta)](media/index/jamf-pro-64.png)<br/>**Jamf Pro<br/>(Beta)**<br/>By Jamf                                                 | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Jethro (Beta)](media/index/jethro-data-connector-64.png)<br/>**Jethro<br/>(Beta)**<br/>By JethroData                                  | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | [![JSON](media/index/json-document-64.png)<br/>**JSON**](json.md)<br/>By Microsoft                                                             | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) <sup>1</sup> | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
-| <a name="letter-k"></a>![Kognitwin (Beta)](media/index/kognitwin-64.png)<br/>**Kognitwin<br/>(Beta)**<br/>By Kongsberg                   | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
+
+<a name="letter-k"></a>
+
+## Connectors K
+
+| **Connector** | **Excel**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Power BI (Datasets)** | **Power BI (Dataflows)** | **Power Apps (Dataflows)** | **Customer<br/>Insights (Dataflows)** | **Analysis Services** |
+| --- | --- | --- | --- | --- | --- | --- |
+| ![Kognitwin (Beta)](media/index/kognitwin-64.png)<br/>**Kognitwin<br/>(Beta)**<br/>By Kongsberg                   | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 ![Kyligence](media/index/kyligence-64.png)<br/>**Kyligence**<br/>By Kyligence                   | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
-| <a name="letter-l"></a>![Linkar PICK Style/MultiValue Databases (Beta)](media/index/linkar-connector-64.png)<br/>**Linkar PICK Style/MultiValue Databases (Beta)**<br/>By Kosday Solutions | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
+
+<a name="letter-l"></a>
+
+## Connectors L
+
+| **Connector** | **Excel**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Power BI (Datasets)** | **Power BI (Dataflows)** | **Power Apps (Dataflows)** | **Customer<br/>Insights (Dataflows)** | **Analysis Services** |
+| --- | --- | --- | --- | --- | --- | --- |
+| ![Linkar PICK Style/MultiValue Databases (Beta)](media/index/linkar-connector-64.png)<br/>**Linkar PICK Style/MultiValue Databases (Beta)**<br/>By Kosday Solutions | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![LinkedIn Sales Navigator (Beta)](media/index/LI-64.png)<br/>**LinkedIn Sales Navigator (Beta)**<br/>By Microsoft | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
-| <a name="letter-m"></a>![Marketo (Beta)](media/index/marketo-64.png)<br/>**Marketo<br/>(Beta)**<br/>By Microsoft                                               | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
+
+<a name="letter-m"></a>
+
+## Connectors M
+
+| **Connector** | **Excel**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Power BI (Datasets)** | **Power BI (Dataflows)** | **Power Apps (Dataflows)** | **Customer<br/>Insights (Dataflows)** | **Analysis Services** |
+| --- | --- | --- | --- | --- | --- | --- |
+| ![Marketo (Beta)](media/index/marketo-64.png)<br/>**Marketo<br/>(Beta)**<br/>By Microsoft                                               | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![MarkLogic (Beta)](media/index/marklogic-odbc-64.png)<br/>**MarkLogic<br/>(Beta)**<br/>By MarkLogic                                    | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![MariaDB](media/index/mariadb-64.png)<br/>**MariaDB**<br/>By MariaDB                                    | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | [![Microsoft Azure Consumption Insights (Beta) (Deprecated)](media/index/azure-consumption-insights-64.png)<br/>**Microsoft Azure<br/>Consumption Insights<br/>(Beta) (Deprecated)**](MicrosoftAzureConsumptionInsights.md)<br/>By Microsoft                                                                                                                             | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
@@ -111,11 +194,25 @@ A checkmark indicates the connector is currently supported in the listed service
 | ![MicroStrategy for Power BI](media/index/microstrategy-64.png)<br/>**MicroStrategy<br/>for Power BI**<br/>By MicroStrategy             | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Mixpanel (Beta)](media/index/mixpanel-64.png)<br/>**Mixpanel (Beta)**<br/>By Microsoft                                            | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | [![MySQL database](media/index/database-64.png)<br/>**MySQL database**](mysqldatabase.md)<br/>By Microsoft                                              | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
-| <a name="letter-o"></a>[![OData Feed](media/index/odata-64.png)<br/>**OData Feed**](odatafeed.md)<br/>By Microsoft                                                         | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) <sup>1</sup> | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
+
+<a name="letter-o"></a>
+
+## Connectors O
+
+| **Connector** | **Excel**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Power BI (Datasets)** | **Power BI (Dataflows)** | **Power Apps (Dataflows)** | **Customer<br/>Insights (Dataflows)** | **Analysis Services** |
+| --- | --- | --- | --- | --- | --- | --- |
+| [![OData Feed](media/index/odata-64.png)<br/>**OData Feed**](odatafeed.md)<br/>By Microsoft                                                         | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) <sup>1</sup> | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
 | [![ODBC](media/index/odbc-64.png)<br/>**ODBC**](./odbc.md)<br/>By Microsoft                                                         | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
 | ![OLE DB](media/index/oledb-64.png)<br/>**OLE DB**<br/>By Microsoft                                                                 | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) |
 | [![Oracle database](media/index/database-64.png)<br/>**Oracle database**](oracledatabase.md)<br/>By Microsoft                                            | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
-| <a name="letter-p"></a>![Parquet](media/index/parquet-64.png)<br/>**Parquet**<br/>By Microsoft                                                                         | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png)  | ![Not supported](media/index/no.png)  |
+
+<a name="letter-p"></a>
+
+## Connectors P
+
+| **Connector** | **Excel**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Power BI (Datasets)** | **Power BI (Dataflows)** | **Power Apps (Dataflows)** | **Customer<br/>Insights (Dataflows)** | **Analysis Services** |
+| --- | --- | --- | --- | --- | --- | --- |
+| ![Parquet](media/index/parquet-64.png)<br/>**Parquet**<br/>By Microsoft                                                                         | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png)  | ![Not supported](media/index/no.png)  |
 | ![Palantir Foundry](media/index/foundry-64.png)<br/>**Palantir Foundry**</br>By Palantir   | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Paxata](media/index/paxata-64.png)<br/>**Paxata**<br/>By Paxata                                                     | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![PDF](media/index/pdffile-64.png)<br/>**PDF**<br/>By Microsoft                                                                     | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) <sup>1</sup> | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  |
@@ -128,12 +225,33 @@ A checkmark indicates the connector is currently supported in the listed service
 | ![Product Insights (Beta)](media/index/product-insights-64.png)<br/>**Product Insights<br/>(Beta)**<br/>By Microsoft                    | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | 
 | ![Projectplace for Power BI(Beta)](media/index/projectplace-64.png)<br/>**Projectplace<br/>for Power BI<br/>(Beta)**<br/>By Planview               | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Python Script](media/index/python-64.png)<br/>**Python Script**<br/>By Microsoft                                                  | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
-| <a name="letter-q"></a>![QubolePresto (Beta)](media/index/qubolepresto-64.png)<br/>**QubolePresto Beta**<br/>By Qubole                                                 | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
+
+<a name="letter-q"></a>
+
+## Connectors Q
+
+| **Connector** | **Excel**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Power BI (Datasets)** | **Power BI (Dataflows)** | **Power Apps (Dataflows)** | **Customer<br/>Insights (Dataflows)** | **Analysis Services** |
+| --- | --- | --- | --- | --- | --- | --- |
+| ![QubolePresto (Beta)](media/index/qubolepresto-64.png)<br/>**QubolePresto Beta**<br/>By Qubole                                                 | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | [![Quickbooks Online (Beta)](media/index/qbo-64.png)<br/>**Quickbooks Online<br/>(Beta)**](quickbooksonline.md)<br/>By Microsoft                               | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Quick Base](media/index/qbconnector-64.png)<br/>**Quick Base**<br/>By Quick Base                                                  | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
-| <a name="letter-r"></a>![R Script](media/index/r-64.png)<br/>**R Script**<br/>By Microsoft                                                                 | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
+
+<a name="letter-r"></a>
+
+## Connectors R
+
+| **Connector** | **Excel**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Power BI (Datasets)** | **Power BI (Dataflows)** | **Power Apps (Dataflows)** | **Customer<br/>Insights (Dataflows)** | **Analysis Services** |
+| --- | --- | --- | --- | --- | --- | --- |
+| ![R Script](media/index/r-64.png)<br/>**R Script**<br/>By Microsoft                                                                 | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Roamler (Beta)](media/index/roamler-icon-64.png)<br/>**Roamler (Beta)**<br/>By Roamler                                            | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
-| <a name="letter-s"></a>[![Salesforce Objects](media/index/salesforce-64.png)<br/>**Salesforce Objects**](./salesforceobjects.md)<br/>By Microsoft          | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
+
+<a name="letter-s"></a>
+
+## Connectors S
+
+| **Connector** | **Excel**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Power BI (Datasets)** | **Power BI (Dataflows)** | **Power Apps (Dataflows)** | **Customer<br/>Insights (Dataflows)** | **Analysis Services** |
+| --- | --- | --- | --- | --- | --- | --- |
+| [![Salesforce Objects](media/index/salesforce-64.png)<br/>**Salesforce Objects**](./salesforceobjects.md)<br/>By Microsoft          | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
 | [![Salesforce Reports](media/index/salesforce-64.png)<br/>**Salesforce Reports**](./salesforcereports.md)<br/>By Microsoft          | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
 | [![SAP Business Warehouse Application Server](media/index/cube-database-64.png)<br/>**SAP Business<br/>Warehouse<br/>Application Server**<br/>](./sap-bw/application-setup-and-connect.md)By Microsoft                                                                                                                             | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png)  | ![Supported](media/index/yes.png)  |
 | [![SAP Business Warehouse Message Server](media/index/cube-database-64.png)<br/>**SAP Business<br/>Warehouse<br/>Message Server**](./sap-bw/message-setup-and-connect.md)<br/>By Microsoft                                                                                                                             | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png)  | ![Not supported](media/index/no.png)  |
@@ -156,22 +274,57 @@ A checkmark indicates the connector is currently supported in the listed service
 | ![SurveyMonkey (Beta)](media/index/surveymonkey-64.png)<br/>**SurveyMonkey (Beta)**<br/>By SurveyMonkey                                           | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![SweetIQ (Beta)](media/index/sweetiq-64.png)<br/>**SweetIQ (Beta)**<br/>By Microsoft                                               | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Sybase Database](media/index/database-64.png)<br/>**Sybase Database**<br/>By Microsoft                                            | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png) | ![Supported](media/index/yes.png) |
-| <a name="letter-t"></a>![TeamDesk (Beta)](media/index/teamdesk-64.png)<br/>**TeamDesk (Beta)**<br/>By ForeSoft                                             | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
+
+<a name="letter-t"></a>
+
+## Connectors T
+
+| **Connector** | **Excel**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Power BI (Datasets)** | **Power BI (Dataflows)** | **Power Apps (Dataflows)** | **Customer<br/>Insights (Dataflows)** | **Analysis Services** |
+| --- | --- | --- | --- | --- | --- | --- |
+| ![TeamDesk (Beta)](media/index/teamdesk-64.png)<br/>**TeamDesk (Beta)**<br/>By ForeSoft                                             | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Tenforce (Smart)List](media/index/tenforce-connector-64.png)<br/>**Tenforce (Smart)List**<br/>By Tenforce           | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Teradata database](media/index/database-64.png)<br/>**Teradata database**<br/>By Microsoft                                        | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
 | [![Text/CSV](media/index/textfile-64.png)<br/>**Text/CSV**](./textcsv.md)<br/>By Microsoft                                          | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) <sup>1</sup> | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
 | ![TIBCO(R) Data Virtualization (Beta)](media/index/tibco-64.png)<br/>**TIBCO(R) Data<br/>Virtualization</br>(Beta)**<br/>By TIBCO                 | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Twilio (Beta)](media/index/twilio-64.png)<br/>**Twilio (Beta)**<br/>By Microsoft                                                  | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
-| <a name="letter-v"></a>![Vena (Beta)](media/index/vena-64.png)<br/>**Vena (Beta)**<br/>By Vena                                                             | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
+
+<a name="letter-v"></a>
+
+## Connectors V
+
+| **Connector** | **Excel**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Power BI (Datasets)** | **Power BI (Dataflows)** | **Power Apps (Dataflows)** | **Customer<br/>Insights (Dataflows)** | **Analysis Services** |
+| --- | --- | --- | --- | --- | --- | --- |
+| ![Vena (Beta)](media/index/vena-64.png)<br/>**Vena (Beta)**<br/>By Vena                                                             | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Vertica](media/index/vertica-64.png)<br/>**Vertica**<br/>By Microsoft                                                             | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png) | ![Not supported](media/index/no.png)  |
 | ![Vessel Insights (Beta)](media/index/vessel-insights-64.png)<br/>**Vessel Insights (Beta)**<br/>By Kongsberg   | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
-| <a name="letter-w"></a>[![Web](media/index/web-64.png)<br/>**Web**](./web/web.md)<br/>By Microsoft                                                             | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) <sup>1</sup>| ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  |
+
+<a name="letter-w"></a>
+
+## Connectors W
+
+| **Connector** | **Excel**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Power BI (Datasets)** | **Power BI (Dataflows)** | **Power Apps (Dataflows)** | **Customer<br/>Insights (Dataflows)** | **Analysis Services** |
+| --- | --- | --- | --- | --- | --- | --- |
+| [![Web](media/index/web-64.png)<br/>**Web**](./web/web.md)<br/>By Microsoft                                                             | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) <sup>1</sup>| ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  |
 | ![Webtrends Analytics(Beta)](media/index/webtrends-64.png)<br/>**Webtrends Analytics (Beta)**<br/>By Microsoft                                         | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Witivio (Beta)](media/index/witivio-64.png)<br/>**Witivio (Beta)**</br>By Witivio  | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | 
 | ![Workforce Dimensions (Beta)](media/index/workforce-dimensions-64.png)<br/>**Workforce Dimensions<br/>(Beta)**<br/>By Kronos           | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Workplace Analytics (Beta)](media/index/workplace-analytics-64.png)<br/>**Workplace Analytics<br/>(Beta)**<br/>By Microsoft           | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
-| <a name="letter-x"></a>[![XML](media/index/xml-document-64.png)<br/>**XML**](./xml.md)<br/>By Microsoft                                                    | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) <sup>1</sup> | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
-| <a name="letter-z"></a>![Zendesk (Beta)](media/index/zendesk-64.png)<br/>**Zendesk (Beta)**<br/>By Microsoft                                               | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
+
+<a name="letter-x"></a>
+
+## Connectors X
+
+| **Connector** | **Excel**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Power BI (Datasets)** | **Power BI (Dataflows)** | **Power Apps (Dataflows)** | **Customer<br/>Insights (Dataflows)** | **Analysis Services** |
+| --- | --- | --- | --- | --- | --- | --- |
+| [![XML](media/index/xml-document-64.png)<br/>**XML**](./xml.md)<br/>By Microsoft                                                    | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) <sup>1</sup> | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
+
+<a name="letter-z"></a>
+
+## Connectors Z
+
+| **Connector** | **Excel**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Power BI (Datasets)** | **Power BI (Dataflows)** | **Power Apps (Dataflows)** | **Customer<br/>Insights (Dataflows)** | **Analysis Services** |
+| --- | --- | --- | --- | --- | --- | --- |
+| ![Zendesk (Beta)](media/index/zendesk-64.png)<br/>**Zendesk (Beta)**<br/>By Microsoft                                               | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Zoho Creator (Beta)](media/index/zoho-creator-64.png)<br/>**Zoho Creater (Beta)**<br/>By Zoho   | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Zucchetti HR Infinity (Beta)](media/index/zucchetti-64.png)<br/>**Zucchetti HR<br/>Infinity (Beta)**<br/>By Zucchetti                 | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | | | | | | | |
@@ -185,7 +338,7 @@ A checkmark indicates the connector is currently supported in the listed service
 - [Available data sources (Dynamics 365 Customer Insights)](/dynamics365/ai/customer-insights/data-sources-list)
 - [Data sources supported in Azure Analysis Services](/azure/analysis-services/analysis-services-datasource) -->
 
-# [A](#tab/A)
+<!-- # [A](#tab/A)
 
 | Connector | Excel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Power BI (Datasets) | Power BI (Dataflows) | Power Apps (Dataflows) | Customer<br/>Insights (Dataflows) | Analysis Services |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -682,3 +835,5 @@ No connectors begin with the letter Y.
 - [Connect to data sources for Power BI dataflows](/power-bi/transform-model/service-dataflows-data-sources#data-sources-for-dataflows)
 - [Available data sources (Dynamics 365 Customer Insights)](/dynamics365/ai/customer-insights/data-sources-list)
 - [Data sources supported in Azure Analysis Services](/azure/analysis-services/analysis-services-datasource)
+
+--- -->
