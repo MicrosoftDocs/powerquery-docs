@@ -50,7 +50,8 @@ A checkmark indicates the connector is currently supported in the listed service
 | [![Azure Synapse Analytics (SQL DW)](media/index/sql-data-warehouse-64.png)<br/>**Azure Synapse<br/>Analytics<br/>(SQL DW)**](azuresqldatawarehouse.md)<br/>By Microsoft                | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
 | [![Azure SQL database](media/index/sql-database-64.png)<br/>**Azure SQL<br/>database**](azuresqldatabase.md)<br/>By Microsoft                                  | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
 | ![Azure Table Storage](media/index/tables-64.png)<br/>**Azure Table<br/>Storage**<br/>By Microsoft                                      | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png) | ![Supported](media/index/yes.png) |
-| ![Azure Time Series Insights (Beta)](media/index/time-series-insights-connector-64.png)<br/>**Azure Time<br/>Series Insights<br/> (Beta)**<br/>By Microsoft                                                                                                                             | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | 
+| ![Azure Time Series Insights (Beta)](media/index/time-series-insights-connector-64.png)<br/>**Azure Time<br/>Series Insights<br/> (Beta)**<br/>By Microsoft                                                                                                                             | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
+| | | | | | | |
 
 <a name="letter-b"></a>
 
@@ -61,6 +62,7 @@ A checkmark indicates the connector is currently supported in the listed service
 | ![BI Connector](media/index/biconnector-64.png)<br/>**BI Connector**<br/>By Guidanz                                                 | ![Not supported](media/index/no.png "Excel")  | ![Supported](media/index/yes.png "Power BI (Datasets)") | ![Not supported](media/index/no.png "Power BI (Dataflows)")  | ![Not supported](media/index/no.png "Power Apps (Dataflows)")  | ![Not supported](media/index/no.png "Customer Insights (Dataflows)")  | ![Not supported](media/index/no.png "Analysis Services")  |
 | ![BI360](media/index/bi360-64.png)<br/>**BI360**<br/>By Solver Global                                                               | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | [![Bloomberg Data and Analytics](media/index/bloomberg-64.png)<br/>**Bloomberg Data <br/>and Analytics**](./BloombergDataAndAnalytics.md)<br/>By Bloomberg                                                               | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
+| | | | | | | |
 
 <a name="letter-c"></a>
 
@@ -71,6 +73,7 @@ A checkmark indicates the connector is currently supported in the listed service
 | ![Cognite Data Fusion (Beta)](media/index/cdf-64.png)<br/>**Cognite Data<br/>Fustion<br/>(Beta)**<br/>By Cognite                            | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Cherwell (Beta)](media/index/cherwell-64.png)<br/>**Cherwell (Beta)**<br/>By Cherwell                            | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Common Data Service (legacy)](media/index/cds-to-data64.png)<br/>**Common Data<br/>Service (legacy)**<br/>By Microsoft                            | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
+| | | | | | | |
 
 <a name="letter-d"></a>
 
@@ -88,6 +91,7 @@ A checkmark indicates the connector is currently supported in the listed service
 | ![Dynamics 365 Business Central (on-premises)](media/index/dynamics365-business-central-on-premises-64.png)<br/>**Dynamics 365<br/>Business Central<br/>(on-premises)**<br/>By Microsoft                                                                                                                             | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Dynamics 365 Customer Insights (Beta)](media/index/customer-insights-64.png)<br/>**Dynamics 365<br/>Customer Insights<br/>(Beta)**<br/>By Microsoft                                                                                                                             | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Dynamics NAV](media/index/dynamics-nav-64.png)<br/>**Dynamics NAV**<br/>By Microsoft                                              | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
+| | | | | | | |
 
 <a name="letter-e"></a>
 
@@ -102,6 +106,7 @@ A checkmark indicates the connector is currently supported in the listed service
 | ![Essbase](media/index/cube-database-64.png)<br/>**Essbase**<br/>By Microsoft                                                       | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Exasol](media/index/exasol-64.png)<br/>**Exasol**<br/>By Exasol                                                                   | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | [![Excel](media/index/excel-workbook-64.png)<br/>**Excel**](./excel.md)<br/>By Microsoft                                            | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) <sup>1</sup>| ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
+| | | | | | | |
 
 <a name="letter-f"></a>
 
@@ -112,6 +117,7 @@ A checkmark indicates the connector is currently supported in the listed service
 | ![FactSet Analytics (Beta)](media/index/factset-64.png)<br/>**FactSet Analytics<br/>(Beta)**<br/>By FactSet                             | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | [![FHIR](media/index/fhir-64.png)<br/>**FHIR**](./fhir/fhir.md)<br/>By Microsoft                                                    | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | [![Folder](media/index/folder-64.png)<br/>**Folder**](./folder.md)<br/>By Microsoft                                                 | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
+| | | | | | | |
 
 <a name="letter-g"></a>
 
@@ -122,6 +128,7 @@ A checkmark indicates the connector is currently supported in the listed service
 | ![Github (Beta)](media/index/github-64.png)<br/>**Github<br/>(Beta)**<br/>By Microsoft                                                  | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | [![Google Analytics](media/index/google-analytics-64.png)<br/>**Google Analytics**](./googleanalytics.md)<br/>By Microsoft                                  | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | [![Google BigQuery](media/index/database-64.png)<br/>**Google BigQuery**](./googlebigquery.md)<br/>By Microsoft                                            | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  |
+| | | | | | | |
 
 <a name="letter-h"></a>
 
@@ -133,6 +140,7 @@ A checkmark indicates the connector is currently supported in the listed service
 | ![HDInsight Interactive Query](media/index/hadoop-hdinsight-64.png)<br/>**HDInsight<br/>Interactive Query**<br/>By Microsoft            | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Hexagon PPM Smart API](media/index/hexagon-64.png)<br/>**Hexagon PPM <br/> Smart API**<br/>By Hexagon PPM            | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Hive LLAP (Beta)](media/index/hive-64.png)<br/>**Hive LLAP (Beta)**<br/>By Microsoft   | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
+| | | | | | | |
 
 <a name="letter-i"></a>
 
@@ -149,6 +157,7 @@ A checkmark indicates the connector is currently supported in the listed service
 | ![Information Grid (Beta)](media/index/information-grid-64.png)<br/>**Information<br/>Grid (Beta)**<br/>By Luminis                                    | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![InterSystems IRIS (Beta)](media/index/iris-powerbi-connector-64.png)<br/>**InterSystems<br/>IRIS (Beta)**<br/>By Intersystems                       | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Intune Data Warehouse (Beta)](media/index/intune-64.png)<br/>**Intune Data<br/>Warehouse (Beta)**<br/>By Microsoft                                  | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
+| | | | | | | |
 
 <a name="letter-j"></a>
 
@@ -159,6 +168,7 @@ A checkmark indicates the connector is currently supported in the listed service
 | ![Jamf Pro (Beta)](media/index/jamf-pro-64.png)<br/>**Jamf Pro<br/>(Beta)**<br/>By Jamf                                                 | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Jethro (Beta)](media/index/jethro-data-connector-64.png)<br/>**Jethro<br/>(Beta)**<br/>By JethroData                                  | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | [![JSON](media/index/json-document-64.png)<br/>**JSON**](json.md)<br/>By Microsoft                                                             | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) <sup>1</sup> | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
+| | | | | | | |
 
 <a name="letter-k"></a>
 
@@ -168,6 +178,7 @@ A checkmark indicates the connector is currently supported in the listed service
 | --- | --- | --- | --- | --- | --- | --- |
 | ![Kognitwin (Beta)](media/index/kognitwin-64.png)<br/>**Kognitwin<br/>(Beta)**<br/>By Kongsberg                   | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 ![Kyligence](media/index/kyligence-64.png)<br/>**Kyligence**<br/>By Kyligence                   | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
+| | | | | | | |
 
 <a name="letter-l"></a>
 
@@ -177,6 +188,7 @@ A checkmark indicates the connector is currently supported in the listed service
 | --- | --- | --- | --- | --- | --- | --- |
 | ![Linkar PICK Style/MultiValue Databases (Beta)](media/index/linkar-connector-64.png)<br/>**Linkar PICK Style/MultiValue Databases (Beta)**<br/>By Kosday Solutions | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![LinkedIn Sales Navigator (Beta)](media/index/LI-64.png)<br/>**LinkedIn Sales Navigator (Beta)**<br/>By Microsoft | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
+| | | | | | | |
 
 <a name="letter-m"></a>
 
@@ -194,6 +206,7 @@ A checkmark indicates the connector is currently supported in the listed service
 | ![MicroStrategy for Power BI](media/index/microstrategy-64.png)<br/>**MicroStrategy<br/>for Power BI**<br/>By MicroStrategy             | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Mixpanel (Beta)](media/index/mixpanel-64.png)<br/>**Mixpanel (Beta)**<br/>By Microsoft                                            | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | [![MySQL database](media/index/database-64.png)<br/>**MySQL database**](mysqldatabase.md)<br/>By Microsoft                                              | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
+| | | | | | | |
 
 <a name="letter-o"></a>
 
@@ -205,6 +218,7 @@ A checkmark indicates the connector is currently supported in the listed service
 | [![ODBC](media/index/odbc-64.png)<br/>**ODBC**](./odbc.md)<br/>By Microsoft                                                         | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
 | ![OLE DB](media/index/oledb-64.png)<br/>**OLE DB**<br/>By Microsoft                                                                 | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) |
 | [![Oracle database](media/index/database-64.png)<br/>**Oracle database**](oracledatabase.md)<br/>By Microsoft                                            | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
+| | | | | | | |
 
 <a name="letter-p"></a>
 
@@ -225,6 +239,7 @@ A checkmark indicates the connector is currently supported in the listed service
 | ![Product Insights (Beta)](media/index/product-insights-64.png)<br/>**Product Insights<br/>(Beta)**<br/>By Microsoft                    | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | 
 | ![Projectplace for Power BI(Beta)](media/index/projectplace-64.png)<br/>**Projectplace<br/>for Power BI<br/>(Beta)**<br/>By Planview               | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Python Script](media/index/python-64.png)<br/>**Python Script**<br/>By Microsoft                                                  | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
+| | | | | | | |
 
 <a name="letter-q"></a>
 
@@ -235,6 +250,7 @@ A checkmark indicates the connector is currently supported in the listed service
 | ![QubolePresto (Beta)](media/index/qubolepresto-64.png)<br/>**QubolePresto Beta**<br/>By Qubole                                                 | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | [![Quickbooks Online (Beta)](media/index/qbo-64.png)<br/>**Quickbooks Online<br/>(Beta)**](quickbooksonline.md)<br/>By Microsoft                               | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Quick Base](media/index/qbconnector-64.png)<br/>**Quick Base**<br/>By Quick Base                                                  | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
+| | | | | | | |
 
 <a name="letter-r"></a>
 
@@ -244,6 +260,7 @@ A checkmark indicates the connector is currently supported in the listed service
 | --- | --- | --- | --- | --- | --- | --- |
 | ![R Script](media/index/r-64.png)<br/>**R Script**<br/>By Microsoft                                                                 | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Roamler (Beta)](media/index/roamler-icon-64.png)<br/>**Roamler (Beta)**<br/>By Roamler                                            | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
+| | | | | | | |
 
 <a name="letter-s"></a>
 
@@ -274,6 +291,7 @@ A checkmark indicates the connector is currently supported in the listed service
 | ![SurveyMonkey (Beta)](media/index/surveymonkey-64.png)<br/>**SurveyMonkey (Beta)**<br/>By SurveyMonkey                                           | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![SweetIQ (Beta)](media/index/sweetiq-64.png)<br/>**SweetIQ (Beta)**<br/>By Microsoft                                               | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Sybase Database](media/index/database-64.png)<br/>**Sybase Database**<br/>By Microsoft                                            | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png) | ![Supported](media/index/yes.png) |
+| | | | | | | |
 
 <a name="letter-t"></a>
 
@@ -287,6 +305,7 @@ A checkmark indicates the connector is currently supported in the listed service
 | [![Text/CSV](media/index/textfile-64.png)<br/>**Text/CSV**](./textcsv.md)<br/>By Microsoft                                          | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) <sup>1</sup> | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
 | ![TIBCO(R) Data Virtualization (Beta)](media/index/tibco-64.png)<br/>**TIBCO(R) Data<br/>Virtualization</br>(Beta)**<br/>By TIBCO                 | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Twilio (Beta)](media/index/twilio-64.png)<br/>**Twilio (Beta)**<br/>By Microsoft                                                  | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
+| | | | | | | |
 
 <a name="letter-v"></a>
 
@@ -297,6 +316,7 @@ A checkmark indicates the connector is currently supported in the listed service
 | ![Vena (Beta)](media/index/vena-64.png)<br/>**Vena (Beta)**<br/>By Vena                                                             | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Vertica](media/index/vertica-64.png)<br/>**Vertica**<br/>By Microsoft                                                             | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png) | ![Not supported](media/index/no.png)  |
 | ![Vessel Insights (Beta)](media/index/vessel-insights-64.png)<br/>**Vessel Insights (Beta)**<br/>By Kongsberg   | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
+| | | | | | | |
 
 <a name="letter-w"></a>
 
@@ -309,6 +329,7 @@ A checkmark indicates the connector is currently supported in the listed service
 | ![Witivio (Beta)](media/index/witivio-64.png)<br/>**Witivio (Beta)**</br>By Witivio  | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | 
 | ![Workforce Dimensions (Beta)](media/index/workforce-dimensions-64.png)<br/>**Workforce Dimensions<br/>(Beta)**<br/>By Kronos           | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Workplace Analytics (Beta)](media/index/workplace-analytics-64.png)<br/>**Workplace Analytics<br/>(Beta)**<br/>By Microsoft           | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
+| | | | | | | |
 
 <a name="letter-x"></a>
 
@@ -317,6 +338,7 @@ A checkmark indicates the connector is currently supported in the listed service
 | **Connector** | **Excel**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | **Power BI (Datasets)** | **Power BI (Dataflows)** | **Power Apps (Dataflows)** | **Customer<br/>Insights (Dataflows)** | **Analysis Services** |
 | --- | --- | --- | --- | --- | --- | --- |
 | [![XML](media/index/xml-document-64.png)<br/>**XML**](./xml.md)<br/>By Microsoft                                                    | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) <sup>1</sup> | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
+| | | | | | | |
 
 <a name="letter-z"></a>
 
