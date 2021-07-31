@@ -14,7 +14,7 @@ Power Query works as a tool that extracts the data from a data source, performs 
 
 The diagram below explores the process that happens in order to evaluate a query in Power Query:
 
-![Query evaluation diagram 1](placeholder.png)
+![Query evaluation diagram as an overview](media/query-folding-basics/diagram-1.png)
 
 1.	The Power Query query script, found inside the Advanced Editor, is submitted to the Power Query engine alongside with other important information such as credentials and data source privacy levels.
 2. Power Query determines what data needs to be extracted from the data source and submits a request to the data source.
@@ -29,7 +29,7 @@ When Power Query reads your query script, it runs it through an optimization pro
 
 You can see in detail the steps that take place in this optimization process by following the below diagram:
 
-![Detailed Query evaluation diagram 2](placeholder.png)
+![Query evaluation diagram 1](media/query-folding-basics/diagram-2.png))
 
 1. The Power Query query script, found inside the Advanced Editor, is submitted to the Power Query engine alongside with other important information such as credentials and data source privacy levels.
 2. The Query folding mechanism defines what information to extract from the data source and what set of transformations will need to happen inside the Power Query engine. It sends the instructions to two other components that will take care of retrieving the data from the data source and transforming the incoming data locally if necessary.
