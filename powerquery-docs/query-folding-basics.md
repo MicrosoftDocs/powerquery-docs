@@ -29,7 +29,7 @@ When Power Query reads your query script, it runs it through an optimization pro
 
 You can see in detail the steps that take place in this optimization process by following the below diagram:
 
-![Query evaluation diagram 1](media/query-folding-basics/diagram-2.png))
+![Query evaluation diagram 1](media/query-folding-basics/diagram-2.png)
 
 1. The Power Query query script, found inside the Advanced Editor, is submitted to the Power Query engine alongside with other important information such as credentials and data source privacy levels.
 2. The Query folding mechanism defines what information to extract from the data source and what set of transformations will need to happen inside the Power Query engine. It sends the instructions to two other components that will take care of retrieving the data from the data source and transforming the incoming data locally if necessary.
@@ -46,6 +46,8 @@ The goal of Query folding is to offload or push as much of the evaluation of a q
 
 It accomplishes this goal by translating the code from your query into a language that can be interpreted and executed by your data source, thus pushing the evaluation to your data source and sending the result of that evaluation to Power Query.
 
+This often provides a much faster query execution than extracting all the required data from your data source and running all transforms required locally.
+
 Depending on how the query is structured, there could be three possible outcomes for the query folding mechanism:
 * **Full query Folding**: When all of your query transformations get pushed back to the data source and no processing occurs locally by the Power Query engine. Instead you receive your desired output directly from the data source.
 * **Partial query Folding**: When only a few transformations in your query, and not all, can be pushed back to the data source. This means that a subset of your transformations is done at your data source and the rest of your query transformations occur locally.
@@ -57,6 +59,9 @@ Depending on how the query is structured, there could be three possible outcomes
 >Leveraging a data source that has more processing resources and has Query folding capabilities can expedite your query loading times as the processing occurs at the data source and not locally in the Power Query engine.
 
 This article provides some example scenarios for each of the possible outcomes for query folding. It will also include some suggestions on how to get the most out of the query folding mechanism.
+
+>[!IMPORTANT]
+> All data source functions, commonly showcased as the Source step of a query, will query the data to the data source in its own language. The query folding mechanism applies to all transforms applied to your query after your data source function so they can be translated and combined into a single data source query.
 
 ## Full query folding
 
