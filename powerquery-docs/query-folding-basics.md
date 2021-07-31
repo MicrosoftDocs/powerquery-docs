@@ -8,11 +8,45 @@ ms.date: 11/24/2020
 ms.author: v-miesco
 ms.custom: intro-internal
 ---
-# Query folding basics
+# Query evaluation and query folding
 
-Whenever you apply transforms to source data in Power Query, it does its best to have as many as possible of these transformations done on the data source, rather than locally (on your machine or in the cloud service). This is called *query folding*. All of the transforms you apply when working in Power Query are stored in a document (that can be viewed in the Advanced Editor) written in the [M language](/powerquery-m/), and a subset of them are turned into the native query language (such as SQL and API calls) of your data source.
+Power Query works as a tool that extracts the data from a data source, performs any transformations needed using the Power Query engine (also known as the Mashup engine), and then it loads your desired output into a destination of your choice.
 
-Depending on how the query is structured, there could be three possible outcomes for this mechanism:
+The diagram below explores the process that happens in order to evaluate a query in Power Query:
+
+![Query evaluation diagram 1](placeholder.png)
+
+1.	The Power Query query script, found inside the Advanced Editor, is submitted to the Power Query engine alongside with other important information such as credentials and data source privacy levels.
+2. Power Query determines what data needs to be extracted from the data source and submits a request to the data source.
+3.	The data source responds to the request from Power Query by transferring the requested data to Power Query.
+4.	Power Query receives the incoming data from the data source and performs any transformations using the Power Query engine if necessary.
+5.	The results derived from the previous point are loaded to a destination.
+
+When Power Query reads your query script, it runs it through an optimization process to more efficiently evaluate your query. In this process it determines what steps (transforms) from your query can be offloaded to your data source and which other steps would need to be evaluated locally using the Power Query engine. This optimization process is also called Query folding where Power Query tries to push as much of the load possible to the data source in an effort to optimize your query execution.
+
+>[!IMPORTANT]
+>All rules from the Power Query formula language (also known as M Language) are followed. Most notably, lazy evaluation plays an important role during the optimization process where Power Query will understand what specific transforms from your query need to be evaluated and what others do not need to be evaluated because they are not needed in the output of your query.
+
+You can see in detail the steps that take place in this optimization process by following the below diagram:
+
+![Detailed Query evaluation diagram 2](placeholder.png)
+
+1. The Power Query query script, found inside the Advanced Editor, is submitted to the Power Query engine alongside with other important information such as credentials and data source privacy levels.
+2. The Query folding mechanism defines what information to extract from the data source and what set of transformations will need to happen inside the Power Query engine. It sends the instructions to two other components that will take care of retrieving the data from the data source and transforming the incoming data locally if necessary.
+3. Once the instructions have been received by the internal components of Power Query, Power Query sends a request to the data source using a data source query.
+4. The data source receives the request from Power Query and transfers the data to the Power Query engine.
+5. Once the data is inside Power Query, the transformation engine inside Power Query (also known as mashup engine) performs the local transformations that couldn't be folded back or offloaded to the data source.
+6. The results derived from the previous point are loaded to a destination.
+
+This is the process that happens to a Power Query query during its evaluation.
+
+# What is Query folding? 
+
+The goal of Query folding is to offload or push as much of the evaluation of a query to the data source which is able to compute the transformations from your query. 
+
+It accomplishes this goal by translating the code from your query into a language that can be interpreted and executed by your data source, thus pushing the evaluation to your data source and sending the result of that evaluation to Power Query.
+
+Depending on how the query is structured, there could be three possible outcomes for the query folding mechanism:
 * **Full query Folding**: When all of your query transformations get pushed back to the data source and no processing occurs locally by the Power Query engine. Instead you receive your desired output directly from the data source.
 * **Partial query Folding**: When only a few transformations in your query, and not all, can be pushed back to the data source. This means that a subset of your transformations is done at your data source and the rest of your query transformations occur locally.
 * **No query folding**:  When the query contains transformations that can't be translated to the native query language of your data source, either because the transformations aren't supported or the connector doesn't support query folding. For this case, Power Query gets the raw data from your data source and works locally with the Power Query engine to achieve your desired output.
