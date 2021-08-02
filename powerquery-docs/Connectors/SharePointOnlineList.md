@@ -4,7 +4,7 @@ description: Provides basic information and how to connect to your data, along w
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 07/06/2021
+ms.date: 8/2/2021
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -126,3 +126,7 @@ The first operation changes the type to ```datetimezone```, and the second opera
 **This issue is limited to the SharePoint Online List v2.0 connector**
 
 The SharePoint Online List v2.0 connector uses a different API than the v1.0 connector, and is therefore subject to a maximum of 12 join operations per query, as documented in the [SharePoint Online documentation](/sharepoint/install/software-boundaries-and-limits-0?source=docs#list-and-library-limits) under **List view lookup threshold**. This will manifest as SharePoint queries failing when more than 12 columns are accessed simultaneously from a SharePoint list.
+
+### Using OData to access a SharePoint Online List
+
+If you use an OData feed to access a SharePoint List, be aware that there is an approximately 2100 character limitation to the URL you use to connect. More information: [Maximum URL length](OdataFeed.md#maximum-url-length)
