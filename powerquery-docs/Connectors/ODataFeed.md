@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for the connector, and
 author: dougklopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 05/14/2021
+ms.date: 8/2/2021
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -40,17 +40,17 @@ To load data from an OData Feed in Power Query Desktop:
 
 2. Choose the **Basic** button and enter a URL address in the text box. This URL should be the root of the OData service you want to connect to. For example, enter `http://services.odata.org/V4/northwind/northwind.svc/`. Then select **OK**.
 
-   ![OData URL selection](media/odata-feed/odata-basic-url.png)
+   ![OData URL selection.](media/odata-feed/odata-basic-url.png)
 
-   If the URL address you enter is invalid, a ![Warning icon](../images/webwarning.png) warning icon will appear next to the **URL** textbox.
+   If the URL address you enter is invalid, a ![Warning icon.](../images/webwarning.png) warning icon will appear next to the **URL** textbox.
 
 3. If this is the first time you're connecting using the OData Feed, select the authentication type, input your credentials (if necessary), and select the level to apply the authentication settings to. Then select **Connect**.
 
-   ![OData credentials selection](media/odata-feed/odata-sign-in.png)
+   ![OData credentials selection.](media/odata-feed/odata-sign-in.png)
 
 4. From the **Navigator** dialog, you can select a table, then either transform the data in the Power Query Editor by selecting **Transform Data**, or load the data by selecting **Load**.
 
-   ![Web table selection](media/odata-feed/odata-navigator.png)
+   ![Web table selection.](media/odata-feed/odata-navigator.png)
 
    If you have multiple tables that have a direct relationship to one or more of the already selected tables, you can select the **Select Related Tables** button. When you do, all tables that have a direct relationship to one or more of the already selected tables will be imported as well.
 
@@ -62,16 +62,16 @@ To load data from an OData Feed in Power Query Online:
 
 2. In the OData dialog that appears, enter a URL in the text box.
 
-   ![OData online sign in](media/odata-feed/odata-online-sign-in.png)
-   
+   ![OData online sign in.](media/odata-feed/odata-online-sign-in.png)
+
 3. If this is the first time you're connecting using the OData Feed, select the authentication kind and enter your credentials (if necessary). Then select **Next**.
 
 4. From the **Navigator** dialog, you can select a table, then transform the data in the Power Query Editor by selecting **Transform Data**.
 
-   ![Web table selection](media/odata-feed/odata-navigator.png)
+   ![Web table selection.](media/odata-feed/odata-navigator.png)
 
    If you have multiple tables that have a direct relationship to one or more of the already selected tables, you can select the **Select Related Tables** button. When you do, all tables that have a direct relationship to one or more of the already selected tables will be imported as well.
-   
+
 ## Connecting to Microsoft Graph
 
 Connecting to [Microsoft Graph](/graph/overview) REST [APIs](https://graph.microsoft.com) from Power Query isn't recommended or supported. See this [article](../connecting-to-graph.md) for more information.
@@ -81,7 +81,7 @@ Connecting to [Microsoft Graph](/graph/overview) REST [APIs](https://graph.micro
 ### Joins
 
 Due to the architecture of OData and other web connectors, joins can be non-performant. While you have the option to use navigation columns when merging between tables from an OData source, you don't have this option when merging with non-Odata sources.
- 
+
 If you are seeing performance issues when merging an OData source, you should apply [Table.Buffer](/powerquery-m/table-buffer) to your OData query in the Advanced Editor, before you merge the data.
 
 ### Test Connection issues
@@ -96,6 +96,22 @@ When attempting to authenticate, if you see the following error:
 
 “We were unable to connect because this credential type isn’t supported for this resource. Please choose another credential type.”
 
-   ![Error from connecting to an endpoint that doesn't support OAuth with the web connector](../images/credential-type-not-supported.png)
+   ![Error from connecting to an endpoint that doesn't support OAuth with the web connector.](../images/credential-type-not-supported.png)
 
-Please contact the service owner. They will either need to change the authentication configuration or build a custom connector.
+Contact the service owner. They'll either need to change the authentication configuration or build a custom connector.
+
+### Maximum URL length
+
+If you're using the OData feed connector to connect to a SharePoint list, SharePoint online list, or Project Online, the maximum URL length for these connections is approximately 2100 characters. Exceeding the character limit results in an 401 error. This maximum URL length is built in the SharePoint front end and can't be changed.
+
+To get around this limitation, start with the root OData endpoint and then navigate and filter inside Power Query. Power Query filters this URL locally when the URL is too long for SharePoint to handle. For example, start with:
+
+```
+OData.Feed("https://contoso.sharepoint.com/teams/sales/_api/ProjectData")
+```
+
+instead of
+
+```
+OData.Feed("https://contoso.sharepoint.com/teams/sales/_api/ProjectData/Projects?select=_x0031_MetricName...etc...")
+```

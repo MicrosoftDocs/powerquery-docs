@@ -15,7 +15,7 @@ LocalizationGroup: reference
 
 Navigation Tables (or nav tables) are a core part of providing a user-friendly experience for your connector. The Power Query experience displays them to the user after they've entered any required parameters for your data source function, and have authenticated with the data source.
 
-![The TripPin navigation table](images/navtable.png)
+![The TripPin navigation table.](images/navtable.png)
 
 Behind the scenes, a nav table is just a regular M Table value with specific metadata fields defined on its Type. When your data source function returns a table with these fields defined, Power Query will display the navigator dialog. You can actually see the underlying data as a Table value by right-clicking on the root node and selecting **Edit**.
 
@@ -70,7 +70,7 @@ Each of the following item kind values provide a different icon in the navigatio
 
 The image below shows the icons for item kinds in Power BI Desktop. 
 
-![List of Navigation Table ItemKinds](images/itemKinds.png)
+![List of Navigation Table ItemKinds.](images/itemKinds.png)
 
 ## Examples
 
@@ -85,7 +85,7 @@ shared NavigationTable.Simple = () =>
             {"Item1",      "item1",      #table({"Column1"}, {{"Item1"}}), "Table",    "Table",    true},
             {"Item2",      "item2",      #table({"Column1"}, {{"Item2"}}), "Table",    "Table",    true},
             {"Item3",      "item3",      FunctionCallThatReturnsATable(),  "Table",    "Table",    true},            
-            {"MyFunction", "myfunction", AnotherFunction.Contents(),       "Function", "Function", true}
+            {"MyFunction", "myfunction", AnotherFunction.Contents,       "Function", "Function", true}
             }),
         NavTable = Table.ToNavigationTable(objects, {"Key"}, "Name", "Data", "ItemKind", "ItemName", "IsLeaf")
     in
@@ -97,7 +97,7 @@ shared FunctionCallThatReturnsATable = () =>
 
 This code will result in the following Navigator display in Power BI Desktop:
 
-![A sample of a flat navigation table](images/navTableSample.png)
+![A sample of a flat navigation table.](images/navTableSample.png)
 
 ### Multi-level navigation table
 It is possible to use nested navigation tables to create a hierarchical view over your data set. You do this by setting the `IsLeaf` value for that row to `false` (which marks it as a node that can be expanded), and format the `Data` column to also be another nav table. 
@@ -129,7 +129,7 @@ CreateNavTable = (message as text) as table =>
 ```
 This code would result in the following Navigator display in Power BI Desktop:
 
-![A sample of a hierarchical navigation table](images/navTableNested.png)
+![A sample of a hierarchical navigation table.](images/navTableNested.png)
 
 ### Dynamic Navigation Tables
 More complex functionality can be built from these basics. While all of the above examples show hard-coded entities in the nav table, it's easy to see how a nav table could be generated dynamically based on entities that are available to a given user. A few key considerations for dynamic navigation tables include:

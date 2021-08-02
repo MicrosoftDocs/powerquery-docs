@@ -33,21 +33,21 @@ To make a connection to a FHIR server, take the following steps:
 
 1. Select the **Get Data** button.
 
-    ![Get Data](FHIR-GetData.png)
+    ![Get Data.](FHIR-GetData.png)
 
 1. Select **More...**.
 
-    ![Get Data More](FHIR-GetData-More.png)
+    ![Get Data More.](FHIR-GetData-More.png)
 
 1. Search for "FHIR".
 
-    ![Search for FHIR connector](FHIR-Search-Connector.png)
+    ![Search for FHIR connector.](FHIR-Search-Connector.png)
 
     Select the FHIR connector and select **Connect**.
 
 1. Enter the URL for your FHIR server.
 
-    ![FHIR Connection Details](FHIR-Connection-Details.png)
+    ![FHIR Connection Details.](FHIR-Connection-Details.png)
 
     You can optionally enter an initial query for the FHIR server, if you know exactly what data you're looking for.
 
@@ -55,27 +55,27 @@ To make a connection to a FHIR server, take the following steps:
 
 1. Decide on your authentication scheme.
 
-    ![Authentication](FHIR-Sign-In.png)
+    ![Authentication.](FHIR-Sign-In.png)
 
     The connector supports "Anonymous" for FHIR servers with no access controls (for example, public test servers like http://test.fhir.org/r4) or Azure Active Directory authentication. See [FHIR connector authentication](FHIR-Authentication.md) for details.
 
 1. Select the resources you're interested in.
 
-    ![FHIR Navigator](FHIR-Navigator.png)
+    ![FHIR Navigator.](FHIR-Navigator.png)
 
     Select **Transform** to shape the data.
 
 1. Shape the data as needed, for example, expand the postal code.
 
-    ![FHIR Shape Data](FHIR-ShapeData.png)
+    ![FHIR Shape Data.](FHIR-ShapeData.png)
 
 1. Save the query when shaping is complete.
 
-    ![FHIR Save Query](FHIR-SaveQuery.png)
+    ![FHIR Save Query.](FHIR-SaveQuery.png)
 
 1. Create dashboards with data, for example, make a plot of the patient locations based on postal code.
 
-    ![FHIR Plot Patient Locations](FHIR-PlotPatientlocations.png)
+    ![FHIR Plot Patient Locations.](FHIR-PlotPatientlocations.png)
 
 ## Next Steps
 

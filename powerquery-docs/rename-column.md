@@ -30,7 +30,7 @@ The column headers are **Column 1** and **Column 2**, but you want to change tho
 
 The end result that you want in Power Query looks like the following table.
 
-![Sample output table with Country and City as new column headings](images/me-rename-column-sample-output-table.png)
+![Sample output table with Country and City as new column headings.](images/me-rename-column-sample-output-table.png)
 
 ## How to rename a column
 
@@ -38,15 +38,15 @@ There are three ways to rename a column in Power Query.
 
 * **Double-click the column header**: The double-click action immediately lets you rename the column.
 
-   ![Rename Column Double Select](images/me-rename-column-double-click.png)
+   ![Rename Column Double Select.](images/me-rename-column-double-click.png)
 
 * **Right-click the column of your choice**: A contextual menu is displayed and you can select the **Rename** option to rename the selected column.
 
-   ![Rename Column Context Pane](images/me-rename-column-right-click.png)
+   ![Rename Column Context Pane.](images/me-rename-column-right-click.png)
 
 * **Rename option in the Transform tab**: In the **Transform** tab, under the **Any column** group, select the **Rename** option.
 
-   ![Rename column option found inisde the Any column in the Transform tab](images/me-rename-column-transform-tab.png)
+   ![Rename column option found inisde the Any column in the Transform tab.](images/me-rename-column-transform-tab.png)
 
 ## Avoiding duplicate column names
 
@@ -54,7 +54,7 @@ Power Query requires table column names to be unique across all columns. This me
 
 For example, for the first sample table provided in this article, imagine that you try to rename both **Column 1** and **Column 2** to "Geography". An error message pops up that prevents you from renaming the second column to "Geography". 
 
-![Rename column error message](images/rename-column-error.png)
+![Rename column error message.](images/rename-column-error.png)
 
 
 ## Column name disambiguation
@@ -63,12 +63,12 @@ With many actions performed in Power Query that might result in a *Column Name C
 
 * **Promoting your column headers from your first row**:  For example, if you tried promoting the first row of the sample table in this article, Power Query renames the columns to **Panama** and **Panama_1**.
 
-   ![Using the promote rows to headers to showcase the column name disambiguation](images/me-rename-column-promote-rows-duplicate-name.png)
+   ![Using the promote rows to headers to showcase the column name disambiguation.](images/me-rename-column-promote-rows-duplicate-name.png)
 
    >[!NOTE]
    > To learn more about how to promote headers from your first row, go to[Promote or demote column headers](table-promote-demote-headers.md).
 
 * **Expanding a column with a field name that also exists in the current table**: This can happen, for example, when you perform a merge operation and the column with the merged table has field names that also exist in the table. When you try to expand the fields from that column, Power Query automatically tries to disambiguate to prevent *Column Name Conflict* errors.
 
-   ![Expanding field names that already exist in the table](images/me-rename-column-expand-field-duplicate-names.png)
+   ![Expanding field names that already exist in the table.](images/me-rename-column-expand-field-duplicate-names.png)
 
