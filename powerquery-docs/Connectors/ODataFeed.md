@@ -107,11 +107,11 @@ If you're using the OData feed connector to connect to a SharePoint list, ShareP
 To get around this limitation, start with the root OData endpoint and then navigate and filter inside Power Query. Power Query filters this URL locally when the URL is too long for SharePoint to handle. For example, start with:
 
 ```
-OData.Feed("https://microsoft.sharepoint.com/teams/DES_PWA/_api/ProjectData")
+OData.Feed("https://contoso.sharepoint.com/teams/sales/_api/ProjectData")
 ```
 
 instead of
 
 ```
-OData.Feed("https://microsoft.sharepoint.com/teams/DES_PWA/_api/ProjectData/Projects?select=_x0031_MetricName...etc...")
+OData.Feed("https://contoso.sharepoint.com/teams/sales/_api/ProjectData/Projects?select=_x0031_MetricName...etc...")
 ```
