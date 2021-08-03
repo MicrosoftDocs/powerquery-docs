@@ -61,11 +61,12 @@ HelloWorld = [
 
 The following table lists the fields for your Data Source definition record.
 
-| Field              | Type     | Details                                                                                                                                                                                                                                                                   |
-|:-------------------|:---------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Field              | Type     | Details |
+|:-------------------|:---------|:-----------------------------------------|
 | Authentication     | record   | Specifies one or more types of authentication supported by your data source. At least one kind is required. Each kind will be displayed as an option in the Power Query credential prompt. For more information, see [Authentication Kinds](HandlingAuthentication.md#authentication-kinds). |
-| Label              | text     | **(optional)** Friendly display name for this extension in credential dialogs.                                                                                                                                                                                            |
-| SupportsEncryption | logical  | **(optional)** When true, the UI will present the option to connect to the data source using an encrypted connection. This is typically used for data sources with a non-encrypted fallback mechanism (generally ODBC or ADO.NET based sources).                          |
+| Label              | text     | **(optional)** Friendly display name for this extension in credential dialogs. |
+| SupportsEncryption | logical  | **(optional)** When true, the UI will present the option to connect to the data source using an encrypted connection. This is typically used for data sources with a non-encrypted fallback mechanism (generally ODBC or ADO.NET based sources). |
+| | | |
 
 
 ## Publish to UI
@@ -92,12 +93,13 @@ HelloWorld.Icons = [
 
 The following table lists the fields for your Publish record.
 
-| Field               | Type    | Details                                                                                                                                                                                                                                                                                                                    |
-|:--------------------|:--------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ButtonText          | list    | List of text items that will be displayed next to the data source's icon in the Power BI **Get Data** dialog.                                                                                                                                                                                                                  |
-| Category            | text    | Where the extension should be displayed in the **Get Data** dialog. Currently the only category values with special handing are `Azure` and `Database`. All other values will end up under the Other category.                                                                                                               |
-| Beta                | logical | **(optional)** When set to true, the UI will display a Preview/Beta identifier next to your connector name and a warning dialog that the implementation of the connector is subject to breaking changes.                                                                                                                   |
-| LearnMoreUrl        | text    | **(optional)** Url to website containing more information about this data source or connector.                                                                                                                                                                                                                             |
-| SupportsDirectQuery | logical | **(optional)** Enables Direct Query for your extension.<br>**This is currently only supported for ODBC extensions.**                                                                                                                                                                                                       |
-| SourceImage         | record  | **(optional)** A record containing a list of binary images (sourced from the extension file using the **Extension.Contents** method). The record contains two fields (Icon16, Icon32), each with its own list. Each icon should be a different size.                                                                       |                                                                                                                                                                                                                              |
+| Field               | Type    | Details |
+|:--------------------|:--------|:-----------------------------------------|
+| ButtonText          | list    | List of text items that will be displayed next to the data source's icon in the Power BI **Get Data** dialog. |
+| Category            | text    | Where the extension should be displayed in the **Get Data** dialog. Currently the only category values with special handing are `Azure` and `Database`. All other values will end up under the Other category. |
+| Beta                | logical | **(optional)** When set to true, the UI will display a Preview/Beta identifier next to your connector name and a warning dialog that the implementation of the connector is subject to breaking changes. |
+| LearnMoreUrl        | text    | **(optional)** Url to website containing more information about this data source or connector. |
+| SupportsDirectQuery | logical | **(optional)** Enables Direct Query for your extension.<br>**This is currently only supported for ODBC extensions.** |
+| SourceImage         | record  | **(optional)** A record containing a list of binary images (sourced from the extension file using the **Extension.Contents** method). The record contains two fields (Icon16, Icon32), each with its own list. Each icon should be a different size. |
 | SourceTypeImage     | record  | **(optional)** Similar to SourceImage, except the convention for many out of the box connectors is to display a sheet icon with the source specific icon in the bottom right corner. Having a different set of icons for SourceTypeImage is optional&mdash;many extensions simply reuse the same set of icons for both fields. |
+| | | |

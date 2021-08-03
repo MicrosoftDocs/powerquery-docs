@@ -24,6 +24,8 @@ LocalizationGroup: reference
 
 You must have a Dataverse environment with maker permissions to access the portal, and read permissions to access data within tables.
 
+You'll also need ports 1433 and 5558 to be open in Dataverse for the connector to successfully establish a connection. For more information, go to [SQL Server connection issue due to closed ports](#sql-server-connection-issue-due-to-closed-ports). 
+
 ## Capabilities supported
 
 * Server URL
@@ -62,7 +64,7 @@ To connect to Dataverse from Power BI Desktop:
 
    When you've finished filling in the information, select **OK**.
 
-4. If this is the first time you're connecting to this site, select **Sign in** and input your credentials. Then select **Connect**.
+4. If this attempt is the first time you're connecting to this site, select **Sign in** and input your credentials. Then select **Connect**.
 
    ![Sign in to this site.](media/common-data-service/sign-in.png)
 
@@ -112,3 +114,7 @@ There are several alternative ways of extracting and migrating data from Dataver
 
 >[!Note]
 > Both the Dataverse connector and the OData APIs are meant to serve analytical scenarios where data volumes are relatively small. The recommended approach for bulk data extraction is “Export to Data Lake”. The TDS endpoint is a better option than the Dataverse connector and OData endpoint, but is currently in Preview.
+
+### SQL Server connection issue due to closed ports
+
+When connecting with the Dataverse connector, you may encounter an **Unable to connect** error indicating that a network or instance-specific error occurred while establishing a connection to SQL Server. This error is likely caused by the TCP ports 1433 and 5558 being blocked during connection. To troubleshoot the blocked port error, go to [Blocked ports](/powerapps/developer/data-platform/dataverse-sql-query#blocked-ports).
