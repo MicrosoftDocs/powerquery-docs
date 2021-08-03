@@ -11,7 +11,7 @@ ms.author: dougklo
 
 # Capture web requests with Fiddler
 
-When diagnosing issues that may occur when Power Query communicates with your data, you may be asked to supply a Fiddler trace. The information provided by Fiddler can be of significant use when troubleshooting connectivity issues.
+When diagnosing issues that might occur when Power Query communicates with your data, you might be asked to supply a Fiddler trace. The information provided by Fiddler can be of significant use when troubleshooting connectivity issues.
 
 >[!Note]
 >This article assumes that you are already familiar with how Fiddler works in general.
@@ -62,7 +62,7 @@ To save the capture session to a log file, select **File** > **Save** > **All Se
 
 ## Return your system to its original configuration
 
-Once you have finished providing Fiddler log files and troubleshooting has completed, you'll want to return your system to its original configuration and remove Fiddler as the middleman.
+Once you've finished providing Fiddler log files and troubleshooting has completed, you'll want to return your system to its original configuration and remove Fiddler as the middleman.
 
 To return your system to its original configuration:
 
