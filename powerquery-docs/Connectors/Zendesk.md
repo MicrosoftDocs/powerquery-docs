@@ -16,7 +16,7 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products | Power BI Desktop |
+| Products | Power BI (Datasets) |
 | Authentication Types Supported | Zendesk account |
 | | |
 
