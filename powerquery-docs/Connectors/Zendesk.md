@@ -16,8 +16,8 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products | Power BI (Dataflow) |
-| Authentication Types Supported | Organizational account |
+| Products | Power BI Desktop |
+| Authentication Types Supported | Zendesk account |
 | | |
 
 ## Prerequisites

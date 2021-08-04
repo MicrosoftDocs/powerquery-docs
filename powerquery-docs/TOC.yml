@@ -394,7 +394,7 @@
           href: Connectors/web/web-by-example.md
         - name: "Troubleshooting"
           href: Connectors/web/web-troubleshoot.md
-      - name: "Zendesk"
+      - name: "Zendesk (Beta)"
         href: Connectors/Zendesk.md
     - name: Support and troubleshooting
       items:
