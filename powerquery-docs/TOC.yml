@@ -264,7 +264,7 @@
         href: Connectors/Anaplan.md
       - name: "AssembleViews (Beta)"
         href: Connectors/AssembleViews.md
-      - name: "Automy Data Analytics"
+      - name: "Automy Data Analytics (Beta)"
         href: "Connectors/AutomyDataAnalytics.md"
       - name: "Azure SQL database"
         href: Connectors/AzureSQLDatabase.md
