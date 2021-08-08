@@ -1,6 +1,6 @@
 ---
-title: Power Query Automy Data Analytics connector
-description: Provides basic information and prerequisites for the Automy Data Analytics
+title: Power Query Automy Data Analytics Connector
+description: Provides basic information and prerequisites for the Automy Data Analytics connector
 author: cquintero89
 ms.service: powerquery
 ms.topic: conceptual
@@ -9,7 +9,7 @@ ms.author: bezhan-msft
 LocalizationGroup: reference
 ---
 
-# Automy Data Analytics
+# Automy Data Analytics (Beta)
 
 ## Summary
 
@@ -21,7 +21,7 @@ LocalizationGroup: reference
 | | |
 
 ## Prerequisites
-Before you can sign in to Automy Data Analytics, you must have an Automy Token Report.
+Before you can sign in to Automy Data Analytics, you must have an Automy Report Token.
 
 
 ## Capabilities Supported
