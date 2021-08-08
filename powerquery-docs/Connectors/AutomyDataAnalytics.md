@@ -1,11 +1,11 @@
 ---
 title: Power Query Automy Data Analytics Connector
 description: Provides basic information and prerequisites for the Automy Data Analytics connector
-author: cquintero89
+author: bezhan-msft
 ms.service: powerquery
 ms.topic: conceptual
 ms.date: 7/9/2021
-ms.author: bezhan-msft
+ms.author: bezhan
 LocalizationGroup: reference
 ---
 
@@ -49,11 +49,11 @@ Once you've succeeded, select **Connect**.
 > You can generate an authentication token for reports using the configuration option in Automy.
 4. In the **Navigator** dialog box, select the Automy tables you want to load. You can then either load or transform the data.
 
-![Get Data from Automy Data Analytics](./media/automy-data-analytics/nav-ada-data.png)
+![Get Data from Automy Data Analytics Navigator](./media/automy-data-analytics/nav-ada-data.png)
 
 5. In the case of selecting functions, they will have to be invoked with the parameters requested from the **Transform Data** option in Power Query Editor.
 
-![Load or transform data](./media/automy-data-analytics/param-ada-function.png)
+![Load or transform data in Automy Data Analytics](./media/automy-data-analytics/param-ada-function.png)
 
 ## Limitations and issues
 
@@ -73,7 +73,7 @@ Do one of the following:
 -   Clear cache within Power BI (**File**, **Options**, **Clear cache)** and restart the connector, or
 -   Select **Cancel** and select **Refresh** (top right).
 
-![Authentication error](./media/automy-data-analytics/error-ada-token.png)
+![Authentication error in Automy Data Analytics](./media/automy-data-analytics/error-ada-token.png)
 
 If you still receive a credential error after you clear cache, also clear your recent sources. 
 
