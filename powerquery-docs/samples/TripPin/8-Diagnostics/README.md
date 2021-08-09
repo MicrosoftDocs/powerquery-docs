@@ -26,7 +26,7 @@ In this lesson, you will:
 
 Power Query users can enable trace logging by selecting the checkbox under **Options | Diagnostics**.
 
-![Enable tracing in Power Query](../../../images/trippin8EnableTrace.png)
+![Enable tracing in Power Query.](../../../images/trippin8EnableTrace.png)
 
 Once enabled, any subsequent queries will cause the M engine to emit trace information to log files located in a fixed user directory.
 
@@ -36,7 +36,7 @@ When running M queries from within the Power Query SDK, tracing is enabled at th
 * **Show Engine Traces**&mdash;this setting controls the output of built-in traces from the M engine. These traces are generally only useful to members of the Power Query team, so you'll typically want to keep this set to `false`.
 * **Show User Traces**&mdash;this setting controls trace information output by your connector. You'll want to set this to `true`.
 
-![Project properties](../../../images/trippin8ProjectProperties.png)
+![Project properties.](../../../images/trippin8ProjectProperties.png)
 
 Once enabled, you'll start seeing log entries in the M Query Output window, under the Log tab.
 
@@ -103,11 +103,11 @@ TripPinNavTable = (url as text) as table =>
 
 [Enable tracing](#enabling-diagnostics) for your project, and run your test queries. On the `Errors` tab you should see the text of the error you raised:
 
-![Error message](../../../images/trippin8Error.png)
+![Error message.](../../../images/trippin8Error.png)
 
 Also, on the `Log` tab, you should see the same message. Note that if you use different values for the `message` and `value` parameters, these would be different.
 
-![Error log](../../../images/trippin8ErrorLog.png)
+![Error log.](../../../images/trippin8ErrorLog.png)
 
 Also note that the `Action` field of the log message contains the name (Data Source Kind) of your extension (in this case, `Engine/Extension/TripPin`). This makes it easier to find the messages related to your extension when there are multiple queries involved and/or system (mashup engine) tracing is enabled.
 
@@ -178,10 +178,10 @@ Note that you have to use the new `_url` and `_schema` values in the call to `Ge
 When you run your queries, you should now see new messages in the log.
 
 Accessing url:
-![Accessing url message](../../../images/trippin8Log.png)
+![Accessing url message.](../../../images/trippin8Log.png)
 
 Schema type:
-![Schema type message](../../../images/trippin8TraceWithType.png)
+![Schema type message.](../../../images/trippin8TraceWithType.png)
 
 Note that you see the serialized version of the `schema` parameter `type`, rather than what you'd get when you do a simple `Text.FromValue` on a type value (which results in "type").
 
@@ -203,7 +203,7 @@ withData = Table.AddColumn(rename, "Data", each Diagnostics.LogFailure("Error in
 
 In the trace, you can find the resulting error message containing your `text`, and the original error information.
 
-![LogFailure message](../../../images/trippin8LogFunction.png)
+![LogFailure message.](../../../images/trippin8LogFunction.png)
 
 Be sure to reset your function to a working state before proceeding with the next tutorial.
 

@@ -25,15 +25,15 @@ Power Query provides a **Browse OneDrive** button next to the **File path or URL
 * [XML](connectors/xml.md)
 * [TXT/CSV](connectors/textcsv.md)
 
-![Browse OneDrive... button inside the Connection settings window for the Excel connector](images/sp-browse-button.png)
+![Browse OneDrive... button inside the Connection settings window for the Excel connector.](images/sp-browse-button.png)
 
 When you select this button, you'll be prompted to go through the authentication process. After completing this process, a new window appears with all the files inside the OneDrive for Business of the authenticated user. 
 
-![New window to browse the files from the OneDrive for Business of the authenticated user](images/sp-browse-window.png)
+![New window to browse the files from the OneDrive for Business of the authenticated user.](images/sp-browse-window.png)
 
 You can select the file of your choice, and then select the **Open** button. After selecting **Open**, you'll be taken back to the initial connection settings page where you'll see that the **File path or URL** text box now holds the exact URL to the file you've selected from OneDrive for Business.
 
-![Connection settings window with the url to the selected file hosted on OneDrive for Business](images/sp-browse-url.png)
+![Connection settings window with the url to the selected file hosted on OneDrive for Business.](images/sp-browse-url.png)
 
 You can select the **Next** button at the bottom-right corner of the window to continue the process and get your data.
 
@@ -80,11 +80,11 @@ You can read a detailed step-by-step guide on how to connect to the files hosted
 
 After successfully establishing the connection, you'll be prompted with a table preview that shows the files in your SharePoint site. Select the **Transform data** button at the bottom right of the window.
 
-![Table preview after connecting to a SharePoint site using the SharePoint folder connector showing the files found in the SharePoint site](images/sp-folder-preview.png)
+![Table preview after connecting to a SharePoint site using the SharePoint folder connector showing the files found in the SharePoint site.](images/sp-folder-preview.png)
 
 Selecting the **Transform Data** button will take you to a view of the data called the *File system view*. Each of the rows in this table represents a file that was found in your SharePoint site.
 
-![Table preview of the files in the SharePoint site after selecting the Transform data button](images/sp-transform-data-me.png)
+![Table preview of the files in the SharePoint site after selecting the Transform data button.](images/sp-transform-data-me.png)
 
 The table has a column named **Content** that contains your file in a binary format. The values in the **Content** column have a different color than the rest of the values in the other columns of the table, which indicates that they're selectable.
 
@@ -92,7 +92,7 @@ By selecting a **Binary** value in the **Content** column, Power Query will auto
 
 For example, from the table shown in the previous image, you can select the second row where the **Name** field has a value of **02-February.csv**. Power Query will automatically create a series of steps to navigate and interpret the contents of the file as a CSV file.
 
-![Contents of a CSV file with the name 02-February.csv that were automatically interpreted by Power Query as shown in the Applied steps section](images/sp-file-preview-me.png)
+![Contents of a CSV file with the name 02-February.csv that were automatically interpreted by Power Query as shown in the Applied steps section.](images/sp-file-preview-me.png)
 
 >[!NOTE]
 >You can interact with the table by applying filters, sortings, and other transforms before navigating to the file of your choice. Once you've finished these transforms, select the **Binary** value you want to view. 
@@ -130,16 +130,16 @@ This experience is provided through the [`SharePoint.Contents`](/powerquery-m/sh
 
     For example, imagine a SharePoint site with a *Shared Documents* folder. You can select the **Table** value in the **Content** column for that folder and navigate directly to that folder.
 
-    ![Table Preview after connecting to the SharePoint site with the function SharePoint.Contents where there's a folder with the name Shared Documents](images/sp-navigate-level-1-me.png)
+    ![Table Preview after connecting to the SharePoint site with the function SharePoint.Contents where there's a folder with the name Shared Documents.](images/sp-navigate-level-1-me.png)
 
     Inside this *Shared Documents* folder there's a folder where the company stores all the sales reports. This folder is named *Sales Reports*. You can select the **Table** value on the **Content** column for that row.
 
-    ![Table preview after navigating to the Shared Documents folder](images/sp-navigate-level-2-me.png)
+    ![Table preview after navigating to the Shared Documents folder.](images/sp-navigate-level-2-me.png)
 
 
     With all the files inside the *Sales Reports* folder, you could select the **Combine files** button (see [Combine files overview](combine-files-overview.md)) to combine the data from all the files in this folder to a single table. Or you could navigate directly to a single file of your choice by selecting the **Binary** value from the **Content** column.
 
-     ![Table preview after navigating to the Sales Reports folder](images/sp-navigate-level-3-me.png)
+     ![Table preview after navigating to the Sales Reports folder.](images/sp-navigate-level-3-me.png)
 
 >[!NOTE]
 > The experience provided by the `SharePoint.Contents` function is optimal for SharePoint and OneDrive for Business environments with a large number of files.

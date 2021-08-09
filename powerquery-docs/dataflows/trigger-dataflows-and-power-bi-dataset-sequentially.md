@@ -27,20 +27,28 @@ If you want to ensure that your dashboard is up to date after a dataflow refresh
 This tutorial covers the first scenario above.
 
 * Navigate to [Power Automate](https://flow.microsoft.com).
-* Search for the template "Trigger a dataflow refresh after my dataflow refresh completed successfully". If you encounter difficulty, follow these [instructions](/power-automate/get-started-logic-template).
+* Create a new **automated cloud flow**
 
-![overview of simultaneous dataflow](media/emailyesyno.PNG)
-
-* Customize the flow. Actions that require input from you will automatically be expanded.
-
-   The **Dataflow Refresh** trigger is expanded because you need to enter information on your dataflow:
+* Search for the connector "When a dataflow refresh completes (preview)". If you encounter difficulty, see these [instructions](/power-automate/get-started-logic-flow).
+* Customize the connector. You need to enter information on your dataflow:
     * **Group Type**: Select *Environment* when connecting to Power Apps and *Workspace* when connecting to Power BI.
     * **Group**: Select the Power Apps environment or the Power BI workspace your dataflow is in.
     * **Dataflow**: Select your dataflow by name.
 
-   After the condition, you can specify what happens after success or failure of the dataflow. In this template, we trigger a new dataflow:
+* Customize the flow. Actions that require input from you will automatically be expanded.
 
-   The **Refresh a dataflow** action is expanded because you need to enter information on your dataflow:
+* Click on **new step** to add an action to your flow.
+* Search for the connector "Condition".
+* Customize the connector. You need to enter information:
+   * In the first cell, add the **Refresh Status** from the dataflow connector.
+   * Leave the second cell as **is equal to**.
+   * Type in the third cell **Succes**.
+
+![overview of simultaneous dataflow.](media/emailyesyno.PNG)
+
+* In the **If Yes** section, click on **Add an action**
+* Search for the connector "Refresh a dataflow".
+* Customize the connector:
     * **Group Type**: Select *Environment* when connecting to Power Apps and *Workspace* when connecting to Power BI.
     * **Group**: Select the Power Apps environment or the Power BI workspace your dataflow is in.
     * **Dataflow**: Select your dataflow by name.

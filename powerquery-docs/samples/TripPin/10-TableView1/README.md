@@ -208,7 +208,7 @@ These tests both use `Table.FirstN` to filter to the result set to the first X n
 If you run these tests with **Error on Folding Failure** set to `False` (the default), the tests should succeed, but if you run Fiddler (or check the trace logs),
 you'll see that the request you send doesn't contain any OData query parameters. 
 
-![Diagnostics trace](../../../images/trippin10UnitTestLog1.png)
+![Diagnostics trace.](../../../images/trippin10UnitTestLog1.png)
 
 If you set **Error on Folding Failure** to `True`, they will fail with the "Please try a simpler expression." error. To fix this, you'll define your first Table.View handler for `OnTake`.
 
@@ -252,7 +252,7 @@ CalculateUrl = (state) as text =>
 
 Rerunning the unit tests, you can see that the URL you are accessing now contains the `$top` parameter. (Note that due to URL encoding, `$top` appears as `%24top`, but the OData service is smart enough to convert it automatically).
 
-![Diagnostics trace with top](../../../images/trippin10UnitTestLog2.png)
+![Diagnostics trace with top.](../../../images/trippin10UnitTestLog2.png)
 
 ### Handling Table.Skip with OnSkip
 

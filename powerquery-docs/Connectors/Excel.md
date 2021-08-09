@@ -42,13 +42,13 @@ To make the connection from Power Query Desktop:
 1. Select the **Excel** option in the connector selection.
 2. Browse for and select the Excel workbook you want to load. Then select **Open**.
 
-   ![Select the Excel workbook from File Explorer](./media/excel/connect-desktop.png)
+   ![Select the Excel workbook from File Explorer.](./media/excel/connect-desktop.png)
 
    If the Excel workbook is online, use the [Web connector](web/web.md) to connect to the workbook.
 
 3. In **Navigator**, select the workbook information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
 
-   ![Excel workbook imported into Power Query Desktop Navigator](./media/excel/desktop-navigator-view.png)
+   ![Excel workbook imported into Power Query Desktop Navigator.](./media/excel/desktop-navigator-view.png)
 
 ## Connect to an Excel workbook from Power Query Online
 
@@ -58,7 +58,7 @@ To make the connection from Power Query Online:
 
 2. In the Excel dialog box that appears, provide the path to the Excel workbook.
 
-   ![Connection information to access the Excel workbook](./media/excel/connect-online.png)
+   ![Connection information to access the Excel workbook.](./media/excel/connect-online.png)
 
 3. If necessary, select an on-premises data gateway to access the Excel workbook. 
 
@@ -66,7 +66,7 @@ To make the connection from Power Query Online:
 
 3. In **Navigator**, select the workbook information you want, and then  **Transform Data** to continue transforming the data in Power Query Editor.
 
-   ![Excel workbook imported into Power Query online Navigator](./media/excel/online-navigator-view.png)
+   ![Excel workbook imported into Power Query online Navigator.](./media/excel/online-navigator-view.png)
 
 ## Troubleshooting
 

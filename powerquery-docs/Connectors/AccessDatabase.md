@@ -41,13 +41,13 @@ To make the connection from Power Query desktop:
  
 2. Browse for and select the Access database you want to load. Then select **Open**. 
 
-   ![Enter the Access database connection](./media/access-database/select-database.png)
+   ![Enter the Access database connection.](./media/access-database/select-database.png)
 
    If the Access database is online, use the [Web connector](./web/web.md) to connect to the database.
 
 3. In **Navigator**, select the database information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
 
-    ![Select the data you want to import in the Navigator](./media/access-database/navigator-desktop.png)
+    ![Select the data you want to import in the Navigator.](./media/access-database/navigator-desktop.png)
 
 ## Connect to an Access database from Power Query Online
 
@@ -57,7 +57,7 @@ To make the connection from Power Query desktop:
 
 2. In the **Access database** dialog that appears, provide the path to the Access database.
 
-      ![Enter Access database online connection](./media/access-database/online-select-database.png)
+      ![Enter Access database online connection.](./media/access-database/online-select-database.png)
 
 3. Enter the file path or URL address to the Access database.
 
@@ -74,7 +74,7 @@ To make the connection from Power Query desktop:
 
 4. In **Navigator**, select the data you require, and then select **Transform data** to continue transforming the data in Power Query Editor.
 
-    ![Select the data you want in the Navigator](./media/access-database/navigator-online.png)
+    ![Select the data you want in the Navigator.](./media/access-database/navigator-online.png)
 
 ## Troubleshooting
 

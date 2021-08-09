@@ -24,7 +24,7 @@ A common use case for fuzzy matching is with freeform text fields, such as in a 
 
 The results of that survey are shown in the following image.
 
-:::image type="complex" source="images/me-merge-fuzzy-matching-sample-table.png" alt-text="Sample survey with raw entries":::
+:::image type="complex" source="images/me-merge-fuzzy-matching-sample-table.png" alt-text="Sample survey with raw entries.":::
    Sample survey output table containing the column distribution graph showing nine distinct answers with all answers unique, and the answers to the survey with all the typos, plural or singular, and case problems.
 :::image-end:::
 
@@ -32,7 +32,7 @@ The nine records reflect the survey submissions. The problem with the survey sub
 
 To help standardize these values, in this example you have a **Fruits** reference table.
 
-:::image type="complex" source="images/me-merge-fuzzy-matching-sample-reference-table.png" alt-text="Fruits reference table":::
+:::image type="complex" source="images/me-merge-fuzzy-matching-sample-reference-table.png" alt-text="Fruits reference table.":::
    Fruits reference table containing column distribution graph showing four distinct fruits with all fruits unique, and the list of fruits: apple, pineapple, watermelon, and banana.
 :::image-end:::
 
@@ -41,7 +41,7 @@ To help standardize these values, in this example you have a **Fruits** referenc
 
 The goal is to create a table like the following, where you've standardized all these values so you can do more analysis.
 
-:::image type="complex" source="images/me-merge-fuzzy-matching-sample-output-table.png" alt-text="Sample survey output table":::
+:::image type="complex" source="images/me-merge-fuzzy-matching-sample-output-table.png" alt-text="Sample survey output table.":::
    Sample survey output table with the Question column containing the column distribution graph showing nine distinct answers with all answers unique, and the answers to the survey with all the typos, plural or singular, and case problems, and also contains the Fruit column containing the column distribution graph showing four distinct answers with one unique answer and lists all of the fruits properly spelled, singular, and proper case.
 :::image-end:::
 
@@ -49,11 +49,11 @@ The goal is to create a table like the following, where you've standardized all 
 
 To do the fuzzy merge, you start by doing a merge. In this case, you'll use a left outer join, where the left table is the one from the survey and the right table is the **Fruits** reference table. At the bottom of the dialog box, select the **Use fuzzy matching to perform the merge** check box.
 
-![Use fuzzy matching to perform the merge option](images/me-merge-fuzzy-matching-simple-merge-window.png "Use fuzzy matching to perform the merge option")
+![Use fuzzy matching to perform the merge option.](images/me-merge-fuzzy-matching-simple-merge-window.png "Use fuzzy matching to perform the merge option")
 
 After you select **OK**, you can see a new column in your table because of this merge operation. If you expand it, you'll notice that there's one row that doesn't have any values in it. That's exactly what the dialog box message in the previous image stated when it said "The selection matches 8 of 9 rows from the first table."
 
-:::image type="complex" source="images/me-merge-fuzzy-matching-expand-no-transform-table.png" alt-text="Fuzzy match results in Fruit column":::
+:::image type="complex" source="images/me-merge-fuzzy-matching-expand-no-transform-table.png" alt-text="Fuzzy match results in Fruit column.":::
    Fruit column added to the Survey table, with all rows in the Question column expanded, except for row 9, which could not expand and the Fruit column contains null.
 :::image-end:::
 
@@ -61,7 +61,7 @@ After you select **OK**, you can see a new column in your table because of this 
 
 You can modify the **Fuzzy matching options** to tweak how the approximate match should be done. First, select the **Merge queries** command, and then in the **Merge** dialog box, expand **Fuzzy matching options**.
 
-![Fuzzy matching options](images/me-merge-fuzzy-matching-options.png "Fuzzy matching options")
+![Fuzzy matching options.](images/me-merge-fuzzy-matching-options.png "Fuzzy matching options")
 
 The available options are:
 
@@ -86,11 +86,11 @@ For this article, the transformation table will look as follows:
 
 You can go back to the **Merge** dialog box, and in **Fuzzy matching options** under **Number of matches (optional)**, enter **1**. Under **Transformation table (optional)**, select **Transform Table** from the drop-down menu.
 
-![Merge dialog box with the number of matches set to 1 and Transformation table set to Transform table](images/me-merge-fuzzy-matching-custom-merge-window.png "Merge dialog box with the number of matches set to 1 and Transformation table set to Transform table")
+![Merge dialog box with the number of matches set to 1 and Transformation table set to Transform table.](images/me-merge-fuzzy-matching-custom-merge-window.png "Merge dialog box with the number of matches set to 1 and Transformation table set to Transform table")
 
 After you select **OK**, you'll create a table that looks like the following image, with all values mapped correctly. Note how the example started with nine distinct values, but after the fuzzy merge, there are only four distinct values.
 
-:::image type="complex" source="images/me-merge-fuzzy-matching-sample-output-table-2.png" alt-text="Fuzzy merge survey output table":::
+:::image type="complex" source="images/me-merge-fuzzy-matching-sample-output-table-2.png" alt-text="Fuzzy merge survey output table.":::
    Fuzzy merge survey output table with the Question column containing the column distribution graph showing nine distinct answers with all answers unique, and the answers to the survey with all the typos, plural or singular, and case problems. Also contains the Fruit column with the column distribution graph showing four distinct answers with one unique answer and lists all of the fruits properly spelled, singular, and proper case.
 :::image-end:::
 

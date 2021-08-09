@@ -24,6 +24,8 @@ LocalizationGroup: reference
 
 You must have a Dataverse environment with maker permissions to access the portal, and read permissions to access data within tables.
 
+You'll also need ports 1433 and 5558 to be open in Dataverse for the connector to successfully establish a connection. For more information, go to [SQL Server connection issue due to closed ports](#sql-server-connection-issue-due-to-closed-ports). 
+
 ## Capabilities supported
 
 * Server URL
@@ -33,11 +35,11 @@ You must have a Dataverse environment with maker permissions to access the porta
 
 ## Finding your Dataverse Environment URL
 
-Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). In the upper right of the Power Apps page, select the environment you're going to connect to. Select the ![Settings icon](media/common-data-service/settings-icon.png) settings icon, and then select **Advanced settings**.
+Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). In the upper right of the Power Apps page, select the environment you're going to connect to. Select the ![Settings icon.](media/common-data-service/settings-icon.png) settings icon, and then select **Advanced settings**.
 
 In the new browser tab that opens, copy the root of the URL. This root URL is the unique URL for your environment. The URL will be in the format of https://\<*yourenvironmentid*>.crm.dynamics.com/. Make sure not to copy the rest of the URL. Keep this URL somewhere handy so you can use it later, for example, when you create Power BI reports.
 
-![Location of the Dataverse environment URL](media/common-data-service/cds-env.png)
+![Location of the Dataverse environment URL.](media/common-data-service/cds-env.png)
 
 ## Connect to Dataverse from Power BI Desktop
 
@@ -50,11 +52,11 @@ To connect to Dataverse from Power BI Desktop:
 
 2. In the **Get Data** dialog box, select **Power Platform > Dataverse**, and then select **Connect**.
 
-   ![Get data in Power BI Desktop](media/common-data-service/get-data.png)
+   ![Get data in Power BI Desktop.](media/common-data-service/get-data.png)
 
 3. Enter the server URL address of the data you want to load.
 
-   ![Server URL selection](media/common-data-service/enter-url.png)
+   ![Server URL selection.](media/common-data-service/enter-url.png)
 
    When the table is loaded in the Navigator dialog box, by default the columns in the table are reordered in alphabetical order by the column names. If you don't want the columns reordered, in the advanced settings enter **false** in **Reorder columns**.
 
@@ -62,13 +64,13 @@ To connect to Dataverse from Power BI Desktop:
 
    When you've finished filling in the information, select **OK**.
 
-4. If this is the first time you're connecting to this site, select **Sign in** and input your credentials. Then select **Connect**.
+4. If this attempt is the first time you're connecting to this site, select **Sign in** and input your credentials. Then select **Connect**.
 
-   ![Sign in to this site](media/common-data-service/sign-in.png)
+   ![Sign in to this site.](media/common-data-service/sign-in.png)
 
 5. In **Navigator**, select the data you require, then either load or transform the data.
 
-   ![Load or transform from navigator](media/common-data-service/navigator.png)
+   ![Load or transform from navigator.](media/common-data-service/navigator.png)
 
 ## Connect to Dataverse from Power Query Online
 
@@ -76,11 +78,11 @@ To connect to Dataverse from Power Query Online:
 
 1. From the **Data sources** page, select **Common Data Service (Legacy)**.
 
-   ![Get data from Power Query Online](media/common-data-service/get-data-online.png)
+   ![Get data from Power Query Online.](media/common-data-service/get-data-online.png)
 
 2. Enter the server URL address of the data you want to load.
 
-   ![Enter the server URL](media/common-data-service/enter-url-online.png)
+   ![Enter the server URL.](media/common-data-service/enter-url-online.png)
 
 3. If necessary, enter an on-premises data gateway if you're going to be using on-premises data (for example, if you're going to combine data from Dataverse and an on-premises SQL Server database).
 
@@ -112,3 +114,7 @@ There are several alternative ways of extracting and migrating data from Dataver
 
 >[!Note]
 > Both the Dataverse connector and the OData APIs are meant to serve analytical scenarios where data volumes are relatively small. The recommended approach for bulk data extraction is “Export to Data Lake”. The TDS endpoint is a better option than the Dataverse connector and OData endpoint, but is currently in Preview.
+
+### SQL Server connection issue due to closed ports
+
+When connecting with the Dataverse connector, you may encounter an **Unable to connect** error indicating that a network or instance-specific error occurred while establishing a connection to SQL Server. This error is likely caused by the TCP ports 1433 and 5558 being blocked during connection. To troubleshoot the blocked port error, go to [Blocked ports](/powerapps/developer/data-platform/dataverse-sql-query#blocked-ports).

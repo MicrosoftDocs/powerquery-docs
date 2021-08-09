@@ -42,31 +42,31 @@ To connect to QuickBooks Online:
 
 1. In the **Get Data** dialog box, enter **QuickBooks** in the **Search** box, select **QuickBooks Online (Beta)** from the product-specific data connector list, and then select **Connect**.
 
-   ![Get data from QuickBooks Online](media/quickbooks-online/qb-get-data.png)
-   
+   ![Get data from QuickBooks Online.](media/quickbooks-online/qb-get-data.png)
+
 2. Select **Continue** in the **Preview connector** message.
 
-   ![Preview connector](media/quickbooks-online/qb-preview-connector.png)
+   ![Preview connector.](media/quickbooks-online/qb-preview-connector.png)
 
 3. Select **Sign in** to sign into your QuickBooks Online account.
 
-   ![Sign in to your account](media/quickbooks-online/qb-signin.png)
+   ![Sign in to your account.](media/quickbooks-online/qb-signin.png)
 
 4. In the following dialog, enter your QuickBooks credentials. You may be required to provide 2FA (two factor authentication code) as well.
 
-   ![Enter your credentials](media/quickbooks-online/qb-intuit-signin.png)
+   ![Enter your credentials.](media/quickbooks-online/qb-intuit-signin.png)
 
 5. In the following dialog, select a company and then select **Next**.
 
-   ![Select a company](media/quickbooks-online/qb-select-company.png)
+   ![Select a company.](media/quickbooks-online/qb-select-company.png)
 
 6. Once you've successfully signed in, select **Connect**.
 
-   ![Connect to QuickBooks Online](media/quickbooks-online/qb-connect.png)
+   ![Connect to QuickBooks Online.](media/quickbooks-online/qb-connect.png)
 
 7. In the **Navigator** dialog box, select the QuickBooks tables you want to load. You can then either load or transform the data.
 
-   ![Select QuickBooks tables](media/quickbooks-online/qb-navigator-window.png)
+   ![Select QuickBooks tables.](media/quickbooks-online/qb-navigator-window.png)
 
 ## Known issues
 
@@ -83,7 +83,8 @@ For more information, see [Alert: Support for IE11 deprecating on July 31, 2020 
 
 ### Enabling OAuth Authentication in Power BI Desktop
 
-Starting in December 2021 Power BI Desktop:
+Starting in December 2020 Power BI Desktop:
+
 * Install the new Edge Chromium browser, (at least beta) from https://www.microsoftedgeinsider.com/en-us/download.
 * In your Environment Variables, set the System variable PQ_EnableEdgeChromiumOAuth to true . Once that is set it will use Edge Chromium for only QuickBooksOnline. For this release, only QuickBooksOnline is enabled by default.
 * You should now be able to log in to QuickBooks Online.

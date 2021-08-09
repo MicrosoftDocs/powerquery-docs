@@ -19,11 +19,11 @@ There are a number of [publicly accessible FHIR servers](https://wiki.hl7.org/in
 
 1. Enter the URL of the public Vonk server.
 
-    ![Access public Vonk server](FHIR-Access-Vonk.png)
+    ![Access public Vonk server.](FHIR-Access-Vonk.png)
 
 1. Select **Anonymous** authentication scheme.
 
-    ![Vonk anonymous authentication](FHIR-Access-Vonk-Anonymous.png)
+    ![Vonk anonymous authentication.](FHIR-Access-Vonk-Anonymous.png)
 
 After that, follow the steps to [query and shape your data](FHIR.md).
 
@@ -33,7 +33,7 @@ The Power Query connector for FHIR supports OAuth authentication for FHIR server
 
 To use Azure Active Directory authentication, select **Organizational account** when connecting.
 
-![FHIR Sign In](FHIR-Sign-In.png)
+![FHIR Sign In.](FHIR-Sign-In.png)
 
 There are some restrictions to be aware of:
 
@@ -43,7 +43,7 @@ There are some restrictions to be aware of:
 
 * If your FHIR service is not the Azure API for FHIR (for example, if you are running the [open source Microsoft FHIR server for Azure](https://github.com/Microsoft/fhir-server)), you will have registered an [Azure Active Directory resource application](/azure/healthcare-apis/register-resource-azure-ad-client-app) for the FHIR server. You must pre-authorize the Power BI client application to be able to access this resource application.
 
-    ![Pre Authorize Power BI](FHIR-PreAuthorize-PowerBI.png)
+    ![Pre Authorize Power BI.](FHIR-PreAuthorize-PowerBI.png)
 
     The client Id for the Power BI client is `a672d62c-fc7b-4e81-a576-e60dc46e951d`.
 

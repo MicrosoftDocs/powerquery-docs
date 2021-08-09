@@ -42,7 +42,7 @@ For the second visualization, one choice is to use a Stacked Column Chart. In th
 
 Once your visualization is built, make sure you sort by 'Earliest [Start Time](QueryDiagnostics.md#start-time)' ascending so you can see the order things happen in.
 
-![Visualization of details and time aggregation](images/querydiagnosticsodatahighlevel.png)
+![Visualization of details and time aggregation.](images/querydiagnosticsodatahighlevel.png)
 
 
 While your exact needs might differ, this combination of charts is a good place to start for looking at a lot of diagnostics files and for a number of purposes.
@@ -59,11 +59,11 @@ Now, because the time values for the sample queries we're using here are so smal
 
 For my OData results, I see in the image that the vast majority of the time spent was retrieving the data from source--if I click on the 'Data Source' item on the legend, it'll show me all of the different operations related to sending a query to the Data Source.
 
-![OData Northwind Query Diagnostics Summary](images/querydiagnosticsodataemitted.png)
+![OData Northwind Query Diagnostics Summary.](images/querydiagnosticsodataemitted.png)
 
 If we perform all the same operations and build similar visualizations, but with the SQL traces instead of the ODATA ones, we can see how the two data sources compare!
 
-![OData Northwind Query Diagnostics Summary](images/querydiagnosticssqlhighlevel.png)
+![OData Northwind Query Diagnostics Summary.](images/querydiagnosticssqlhighlevel.png)
 
 If we click the Data Source table, like with the ODATA diagnostics we can see the first evaluation (2.3 in this image) emits metadata queries, with the second evaluation actually retrieving the data we care about. Because we're retrieving very little data in this case the data pulled back takes very little time (less than a tenth of a second for the entire second evaluation to happen, with less than a twentieth of a second for data retrieval itself), but that won't be true in all cases.
 
