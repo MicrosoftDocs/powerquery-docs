@@ -76,9 +76,36 @@ Some Power Query connectors offer end users the ability to specify [native datab
 
 **Status**: This feature is not currently supported in our extensibility SDK. While we provide a [native database query security model](native-database-query.md#native-database-query-security) for some connectors to prevent users from issuing destructive statements, this model is currently unavailable to custom connectors. The product team is investigating the feasibility of this scenario. Without the extensibility of the security model, we do not recommend connectors expose native query functionality unless through one of the workarounds below. 
 
-**Workarounds**: The connector developer can opt to use generic ODBC functionality with the **Odbc.Query** function instead of a custom connector. Unlike **Odbc.DataSource**, which allows the custom connector to override driver settings and improve query folding behavior, **Odbc.Query** simply runs the query as provided and does not benefit from the custom connector wrapper.
+**Workarounds**: If the data source is able to use the generic ODBC connector which supports native database query, this is recommended. However, there may be cases where the generic ODBC connectivity scenario may not work, for example, if authentication is not compatible. 
 
-If the data source can enforce read-only access and you would like to proceed with exposing **Odbc.Query** functionality for your connector, the recommendation is to provide a second data source function with its own Publish record, and have two entries in the Get Data dialog (**DataSource.Database, DataSource.Query**). The **Odbc.Query** function would only support Import mode in Power BI, not Direct Query. The distinction is recommended as combining **Odbc.Query** (which does not support query folding) and **Odbc.DataSource** (which does support query folding) may confuse end users. Reach out to your Microsoft contact if you would like code samples outlining this design. 
+In those cases, the connector developer can opt to use generic ODBC functionality with the **Odbc.Query** function instead of a custom connector. Unlike **Odbc.DataSource**, which allows the custom connector to override driver settings and improve query folding behavior, **Odbc.Query** simply runs the query as provided and does not benefit from the custom connector wrapper. 
+
+If the data source can enforce read-only access and you would like to proceed with exposing **Odbc.Query** functionality for your connector, the recommendation is to provide a second data source function with its own Publish record, and have two entries in the Get Data dialog (**DataSource.Database, DataSource.Query**). The **Odbc.Query** function would only support Import mode in Power BI, not Direct Query. The distinction is recommended as combining **Odbc.Query** (which does not support query folding) and **Odbc.DataSource** (which does support query folding) may confuse end users. Be sure to also clearly distinguish the naming of your two Publish records to clearly communicate to users which function to use for native query. 
+
+If the data source does not enforce a read-only access, the connector must also leverage the native database query security feature.
+
+Below is a code example of a connector which exposes two functions, one which accepts a native query and one which doesn't. 
+
+```
+section Extension;
+
+[DataSource.Kind = "Extension"]
+shared Extension.DataSource = (server as text) => server;
+
+[DataSource.Kind = "Extension"]
+shared Extension.Query = (server as text, query as text) => query;
+
+Extension = [
+    Type="Custom",
+    MakeResourcePath = (server) => server,
+    ParseResourcePath = (resource) => { resource },
+    NativeQuery = (optional query) => query,
+    Authentication=[Implicit=null]
+];
+
+```
+
+When evaluated, if the parameter names of the data source function can be mapped to the parameter names of the ```NativeQuery``` function on the data source definition, and the ```NativeQuery``` function returns text, then the call site will generate a native query prompt. In this case, ```Extension.Query("server", "select 1")``` will generate a challenge for the native query text ``select 1`` while Extension.DataSource("server") will not generate a native query challenge.
 
 ### Allowing users to use Direct Query over a custom SQL statement
 
