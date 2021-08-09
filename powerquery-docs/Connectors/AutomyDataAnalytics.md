@@ -44,7 +44,7 @@ To connect to Automy Data Analytics data:
 
    Once you've succeeded, select **Connect**.
 
-4. In the Automy Data Analytics window that appears, select the correct parameters to prepare the connection. Select the type of report and data type and completed the token information, following the chart below,                      and then select **Ok**.
+4. In the Automy Data Analytics window that appears, select the correct parameters to prepare the connection. Select the type of report and data type and completed the token information, and then select **Ok**.
 
    > [!NOTE]
    > You can generate an authentication token for reports using the configuration option in Automy.
@@ -71,14 +71,7 @@ For more guidelines on accessing Automy Data Analytics, contact [support@automy.
 
 ### Credential error in the Navigator
 
-If a credential error occurs in the Navigator, do one of the following steps:
-
-* Clear the cache in Power BI Desktop (**File** > **Options and Settings** > **Options** > **Clear cache**) and restart the connector.
-* Select **Cancel** and select **Refresh** (top right).
-
-   ![Authentication error in Automy Data Analytics](./media/automy-data-analytics/error-ada-token.png)
-
-If you still receive a credential error after you clear the cache, also clear your recent sources.
+If a credential error occurs in the Navigator, clear your recent data source settings.
 
 1. In Power BI Desktop, select **File** > **Data source settings**.
 
