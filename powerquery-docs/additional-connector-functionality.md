@@ -102,10 +102,9 @@ Extension = [
     NativeQuery = (optional query) => query,
     Authentication=[Implicit=null]
 ];
-
 ```
 
-When evaluated, if the parameter names of the data source function can be mapped to the parameter names of the ```NativeQuery``` function on the data source definition, and the ```NativeQuery``` function returns text, then the call site will generate a native query prompt. In this case, ```Extension.Query("server", "select 1")``` will generate a challenge for the native query text ``select 1`` while Extension.DataSource("server") will not generate a native query challenge.
+When evaluated, if the parameter names of the data source function can be mapped to the parameter names of the ```NativeQuery``` function on the data source definition, and the ```NativeQuery``` function returns text, then the call site will generate a native query prompt. In this case, ```Extension.Query("server", "select 1")``` will generate a challenge for the native query text ``select 1`` while ```Extension.DataSource("server")``` will not generate a native query challenge.
 
 ### Allowing users to use Direct Query over a custom SQL statement
 
