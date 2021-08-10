@@ -88,7 +88,7 @@ It accomplishes this goal by translating the code from your query into a languag
 
 This often provides a much faster query execution than extracting all the required data from your data source and running all transforms required in the Power Query engine.
 
-When you use the [Get Data experience](get-data-experience.md), Power Query guides you through the process that ultimately lets you connect to your data source. When doing so, Power Query leverages a series of functions in the M language categorized as [accessing data functions](https://docs.microsoft.com/powerquery-m/accessing-data-functions) which is the function that you commonly see in the first step of your query commonly with the name *Source*. These specific functions use mechanisms and protocols in order to connect to your data source using a language that your data source can understand. 
+When you use the [Get Data experience](get-data-experience.md), Power Query guides you through the process that ultimately lets you connect to your data source. When doing so, Power Query leverages a series of functions in the M language categorized as [accessing data functions](https://docs.microsoft.com/powerquery-m/accessing-data-functions). The function that you commonly see in the first step of your query commonly with the name *Source*. These specific functions use mechanisms and protocols in order to connect to your data source using a language that your data source can understand. 
 
 However, the steps that follow in your query are the steps or transforms that the query folding mechanism will attempt to optimize and check if they can be offloaded to your data source instead of them being processed using the Power Query engine. 
 
@@ -112,15 +112,23 @@ This article provides some example scenarios for each of the possible outcomes f
 
 #### Full query folding
 
-Example 1
+* Order descending by timestamp or ID
+* Keep top 20 rows
+* Keep columns
+* Simple transform
 
 #### Partial query folding
 
-Example 2
+* Keep Columns
+* Order ascending by timestamp or ID
+* Keep bottom 20 rows
+* Simple transform
 
 #### No query folding
 
-Example 3
+* Keep bottom 20 rows
+* Keep columns
+* Simple transform
 
 >[!NOTE] 
 >Queries that rely solely on unstructured data sources or that don't have a compute engine, such as CSV or Excel files, don't have query folding capabilities. This means that Power Query evaluates all the required data transformations using the Power Query engine.
