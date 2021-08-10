@@ -80,6 +80,10 @@ You can see in detail the steps that take place in this optimization process by 
 
 This is the process that happens to a Power Query query during its evaluation.
 
+## What is query folding?
+
+Section on what is query folding
+
 ## Possible outcomes of query folding 
 
 The goal of query folding is to offload or push as much of the evaluation of a query to the data source which is able to compute the transformations of your query. 
