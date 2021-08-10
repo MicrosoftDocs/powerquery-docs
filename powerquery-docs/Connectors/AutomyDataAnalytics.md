@@ -53,7 +53,7 @@ To connect to Automy Data Analytics data:
 
    ![Get Data from Automy Data Analytics Navigator](./media/automy-data-analytics/nav-ada-data.png)
 
-6. In the case of selecting functions, they'll have to be invoked with the parameters requested from the **Transform Data** option in Power Query Editor.
+   If you’re selecting functions, be sure to select **Transform Data** so that you can add parameters to the functions you’ve selected. More information: [Using parameters](power-query-query-parameters.md)
 
    ![Load or transform data in Automy Data Analytics](./media/automy-data-analytics/param-ada-function.png)
 
