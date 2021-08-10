@@ -48,111 +48,52 @@ You can see in detail the steps that take place in this optimization process by 
 
 This is the process that happens to a Power Query query during its evaluation.
 
-## Possible outcomes of Query folding 
+## Possible outcomes of query folding 
 
-The goal of Query folding is to offload or push as much of the evaluation of a query to the data source which is able to compute the transformations from your query. 
+The goal of query folding is to offload or push as much of the evaluation of a query to the data source which is able to compute the transformations of your query. 
 
 It accomplishes this goal by translating the code from your query into a language that can be interpreted and executed by your data source, thus pushing the evaluation to your data source and sending the result of that evaluation to Power Query.
 
-This often provides a much faster query execution than extracting all the required data from your data source and running all transforms required locally in the Power Query engine.
+This often provides a much faster query execution than extracting all the required data from your data source and running all transforms required in the Power Query engine.
 
 When you use the [Get Data experience](get-data-experience.md), Power Query guides you through the process that ultimately lets you connect to your data source. When doing so, Power Query leverages a series of functions in the M language categorized as [accessing data functions](https://docs.microsoft.com/powerquery-m/accessing-data-functions) which is the function that you commonly see in the first step of your query commonly with the name *Source*. These specific functions use mechanisms and protocols in order to connect to your data source using a language that your data source can understand. 
 
 However, the steps that follow in your query are the steps or transforms that the query folding mechanism will attempt to optimize and check if they can be offloaded to your data source instead of them being processed using the Power Query engine. 
 
+>[!IMPORTANT]
+> All data source functions, commonly showcased as the *Source* step of a query, will query the data to the data source in its native language. The query folding mechanism applies to all transforms applied to your query after your data source function so they can be translated and combined into a single data source query or as many transforms that can be offloaded to the data source.
+
 Depending on how the query is structured, there could be three possible outcomes to the query folding mechanism:
-* **Full query Folding**: When all of your query transformations get pushed back to the data source and no processing occurs locally by the Power Query engine. Instead you receive your desired output directly from the data source.
+* **Full query Folding**: When all of your query transformations get pushed back to the data source and no processing occurs  by the Power Query engine. Instead you receive your desired output directly from the data source.
 * **Partial query Folding**: When only a few transformations in your query, and not all, can be pushed back to the data source. This means that a subset of your transformations is done at your data source and the rest of your query transformations occur locally.
-* **No query folding**:  When the query contains transformations that can't be translated to the native query language of your data source, either because the transformations aren't supported or the connector doesn't support query folding. For this case, Power Query gets the raw data from your data source and works locally with the Power Query engine to achieve your desired output.
+* **No query folding**:  When the query contains transformations that can't be translated to the native query language of your data source, either because the transformations aren't supported or the connector doesn't support query folding. For this case, Power Query gets the raw data from your data source and uses the Power Query engine to achieve your desired output by processing the required transforms at the Power Query engine level.
 
 >[!NOTE]
 >The Query folding mechanism is primarily available in connectors for structured data sources such as, but not limited to, [Microsoft SQL Server](Connectors/sqlserver.md) and [OData Feed](Connectors/odatafeed.md). 
 >
->Leveraging a data source that has more processing resources and has Query folding capabilities can expedite your query loading times as the processing occurs at the data source and not locally in the Power Query engine.
+>Leveraging a data source that has more processing resources and has Query folding capabilities can expedite your query loading times as the processing occurs at the data source and not  in the Power Query engine.
 
 This article provides some example scenarios for each of the possible outcomes for query folding. It will also include some suggestions on how to get the most out of the query folding mechanism.
 
->[!IMPORTANT]
-> All data source functions, commonly showcased as the Source step of a query, will query the data to the data source in its own language. The query folding mechanism applies to all transforms applied to your query after your data source function so they can be translated and combined into a single data source query.
-
-### Full query folding
-
-For this scenario, you'll be connecting to a Microsoft SQL Server and the data you'll be using is the sample AdventureWorks database in its Data Warehouse version. You can download this database from the article [AdventureWorks sample database](/sql/samples/adventureworks-install-configure).
-
-After identifying the data source, we suggest that you pick the native connectors found in the **Get Data** dialog box. In this case, the connector to be used is the [Microsoft SQL Server Connector](Connectors/SQLServer.md).
-
-Your goal is to summarize the data inside the FactInternetSales table by performing the following transformations:
-
-1. Only get the data from September 2012 by filtering the rows on the OrderDate column.
-
-   ![Filtering the FactInternetSales table by the OrderDate column for only dates in the month of September 2012.](images/me-query-folding-basics-filter-values.png)
-
-   >[!NOTE]
-   > To learn more about how to filter rows by their values, go to [Filter values](filter-values.md).
-
-2. Group by the OrderDate column and create a new aggregated column using the **Sum** operation on the SalesAmount column. Name this new column Total Sales Amount.
-
-   ![Group by using the OrderDate column and aggregating by the SalesAmount column.](images/me-query-folding-basics-group-by.png)
-
-   >[!NOTE]
-    > To learn more about how to use the group by feature, go to [Grouping or summarizing rows](group-by.md).
-
-3. Now with the summarized table at the date level, filter the new Total Sales Amount column to only keep rows with values greater than or equal to 15000.
-
-   ![Filtering the summarized table by the Total Sales Amount column for values greater than or equal to 15000.](images/me-query-folding-basics-filter-values-greater-than.png)
-
-One simple way to check if the step in your query can fold back to the data source is to right-click the step and see if the **View Native Query** option is enabled or disabled (grayed out).
-
-![Right-clicking the last step of the query to check the View Native Query option.](images/me-query-folding-basics-view-native-query.png)
-
-When you select the **View Native Query** option, a new **Native Query** dialog box appears. Here you'll see the native query that Power Query has translated from all the transformations that construct the selected step.
-
-![The Native Query dialog box with the SQL code generated by Power Query.](images/me-query-folding-basics-native-query-window.png)
-
-This native query is sent to the data source (Microsoft SQL Server) and Power Query only receives the result of that query.
-
-### Partial query folding
-
-Taking the query created in the previous section for **Full Query folding** as your starting point, your new goal is to filter that table to only analyze the rows for dates that fall in the weekdays Friday, Saturday, or Sunday.
-
-To do this, first select the OrderDate column. In the **Add Column** menu from the ribbon, select the **Date** option in the **From Date & Time** group. From this context menu, select the **Day** option. This selection displays a new context menu where you select the **Name of Day** option. 
-
-![Option to add a new column for the Name of the Day.](images/me-query-folding-basics-weekday-name.png)
-
-After selecting this option, a new column called **Day Name** appears in your table with the name of the day. You can now filter the table using this **Day Name** column to only keep the rows with the values Friday, Saturday, or Sunday.
-
-![Filtering the summarized table using the name of the Day.](images/me-query-folding-basics-filter-weekday-name.png)
-
-Now check the **View Native Query** option for the last step you created. You'll notice this option appears grayed out or disabled. However, you can right-click the **Filtered Rows1** step and you'll see the **View Native Query** option is available for that step.
-
-For this particular scenario, the query is folded to the data source until after the **Filtered rows1** step, and everything after is not folded to the data source. Therefore, the entire scenario is partially folded.
-
-![View Native query disabled after performing new transformations.](images/me-query-folding-basics-disabled-view-native-query.png)
-
-Another option to verify query folding is to use the query diagnostics tools, more specifically the **Diagnose Step** option. To learn more about how to use the query diagnostics tool, go to [What is Query Diagnostics for Power Query?](querydiagnostics.md)
-
-![Query diagnostics tools in the Power Query ribbon.](images/me-query-folding-basics-query-diagnostics.png)
-
-To use query diagnostics, select the query that you want to analyze and then select the **Diagnose Step** button. This action creates a new group and two queries with the format `[Query Name] [Step Name] [Diagnostics Type] [Timestamp]`.
-
-Under **Queries**, take a look at the diagnostic that contains *Aggregated* in the [Diagnostics Type] part. Then take a closer look at the Data Source Query column in the table. This column holds all the requests sent to the data source.
-
-![Query diagnostics at the step level for the last step of the new query showing the requests sent to the data source in the Data Source Query column.](images/me-query-folding-basics-query-diagnostics-aggregated-view.png)
-
-Reading the values in that column, you can see the native query sent to the server to retrieve the information. You can right-click to drill down to a specific value. If you look at the specific cell value in row 21 in the previous image, you'll note it's the same native query you can see in the **View Native Query** for the **Filtered Rows1** step.
-
-![Value found inside the query for the aggregated query diagnostics which holds the SQL statement sent to the SQL Server.](images/me-query-folding-basics-query-diagnostics-aggregated-view-drill-down.png)
-
-This means that your query will send that native query to the Microsoft SQL Server and do the rest of the transformations locally. This is what it means to have a query that can partially fold.
-
-### No query folding
+### About the scenario
 
 
+#### Full query folding
+
+Example 1
+
+#### Partial query folding
+
+Example 2
+
+#### No query folding
+
+Example 3
 
 >[!NOTE] 
 >Queries that rely solely on unstructured data sources or that don't have a compute engine, such as CSV or Excel files, don't have query folding capabilities. This means that Power Query evaluates all the required data transformations using the Power Query engine.
 
-### Performance comparison
+### Query performance comparison
 
 Here's a section to compare all 3 possible outcomes.
 
