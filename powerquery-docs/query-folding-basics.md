@@ -1,6 +1,6 @@
 ---
-title: Query folding basics
-description: Understanding the basic principles of query folding to get the most out of your Power Query experience and optimize your queries.
+title: Understanding query evaluation and query folding in Power Query
+description: Guide on how queries get evaluated in Power Query, how the query folding mechanism works and how to get the most out of it to improve query execution times.
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: 
@@ -16,7 +16,7 @@ ms.custom: intro-internal
 
 *Explain how the UI helps you create the script, but you can also manually edit the script using the advanced editor and the different views to modify your code.*
 
-## How does query get evalauted in Power Query?
+## How does a query get evaluated in Power Query?
 
 Power Query works as a tool that extracts the data from a data source, performs any transformations needed using the Power Query engine (also known as the Mashup engine), and then it loads your desired output into a destination of your choice.
 
@@ -48,7 +48,7 @@ You can see in detail the steps that take place in this optimization process by 
 
 This is the process that happens to a Power Query query during its evaluation.
 
-## Possibble outcomes of Query folding 
+## Possible outcomes of Query folding 
 
 The goal of Query folding is to offload or push as much of the evaluation of a query to the data source which is able to compute the transformations from your query. 
 
@@ -56,7 +56,11 @@ It accomplishes this goal by translating the code from your query into a languag
 
 This often provides a much faster query execution than extracting all the required data from your data source and running all transforms required locally in the Power Query engine.
 
-Depending on how the query is structured, there could be three possible outcomes for the query folding mechanism:
+When you use the [Get Data experience](get-data-experience.md), Power Query guides you through the process that ultimately lets you connect to your data source. When doing so, Power Query leverages a series of functions in the M language categorized as [accessing data functions](https://docs.microsoft.com/powerquery-m/accessing-data-functions) which is the function that you commonly see in the first step of your query commonly with the name *Source*. These specific functions use mechanisms and protocols in order to connect to your data source using a language that your data source can understand. 
+
+However, the steps that follow in your query are the steps or transforms that the query folding mechanism will attempt to optimize and check if they can be offloaded to your data source instead of them being processed using the Power Query engine. 
+
+Depending on how the query is structured, there could be three possible outcomes to the query folding mechanism:
 * **Full query Folding**: When all of your query transformations get pushed back to the data source and no processing occurs locally by the Power Query engine. Instead you receive your desired output directly from the data source.
 * **Partial query Folding**: When only a few transformations in your query, and not all, can be pushed back to the data source. This means that a subset of your transformations is done at your data source and the rest of your query transformations occur locally.
 * **No query folding**:  When the query contains transformations that can't be translated to the native query language of your data source, either because the transformations aren't supported or the connector doesn't support query folding. For this case, Power Query gets the raw data from your data source and works locally with the Power Query engine to achieve your desired output.
@@ -141,16 +145,16 @@ Reading the values in that column, you can see the native query sent to the serv
 
 This means that your query will send that native query to the Microsoft SQL Server and do the rest of the transformations locally. This is what it means to have a query that can partially fold.
 
->[!NOTE]
-> We recommend that you read [Understanding folding with Query Diagnostics](querydiagnosticsfolding.md) to get the most out of the query diagnostics tools and learn how to verify query folding.
-
 ### No query folding
 
-Queries that rely solely on unstructured data sources, such as CSV or Excel files, don't have query folding capabilities. This means that Power Query evaluates all the required data transformations outside the data source.
 
-One example can be seen in the article about [combining multiple CSV files from a local folder](combine-files-csv.md) where none of the steps have the **View Native Query** option active, and running the query diagnostics for that step yields no results in the Data Source Query column.
 
-![View Native Query greyed out for the query that combine CSV files.](images/me-query-folding-basics-csv-files-source.png)
+>[!NOTE] 
+>Queries that rely solely on unstructured data sources or that don't have a compute engine, such as CSV or Excel files, don't have query folding capabilities. This means that Power Query evaluates all the required data transformations using the Power Query engine.
+
+### Performance comparison
+
+Here's a section to compare all 3 possible outcomes.
 
 ## Considerations and suggestions
 
