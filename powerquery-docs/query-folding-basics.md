@@ -8,7 +8,15 @@ ms.date: 11/24/2020
 ms.author: v-miesco
 ms.custom: intro-internal
 ---
-# Query evaluation and query folding
+# Understanding query evaluation and query folding in Power Query
+
+*Intro about what to expect from this article and why it's here.*
+
+## Create a Power Query M script
+
+*Explain how the UI helps you create the script, but you can also manually edit the script using the advanced editor and the different views to modify your code.*
+
+## How does query get evalauted in Power Query?
 
 Power Query works as a tool that extracts the data from a data source, performs any transformations needed using the Power Query engine (also known as the Mashup engine), and then it loads your desired output into a destination of your choice.
 
@@ -16,7 +24,7 @@ The diagram below explores the process that happens in order to evaluate a query
 
 ![Query evaluation diagram as an overview](media/query-folding-basics/diagram-1.png)
 
-1.	The Power Query query script, found inside the Advanced Editor, is submitted to the Power Query engine alongside with other important information such as credentials and data source privacy levels.
+1. The Power Query query script (also known as M code), found inside the Advanced Editor, is submitted to the Power Query engine alongside with other important information such as credentials and data source privacy levels.
 2. Power Query determines what data needs to be extracted from the data source and submits a request to the data source.
 3.	The data source responds to the request from Power Query by transferring the requested data to Power Query.
 4.	Power Query receives the incoming data from the data source and performs any transformations using the Power Query engine if necessary.
@@ -40,13 +48,13 @@ You can see in detail the steps that take place in this optimization process by 
 
 This is the process that happens to a Power Query query during its evaluation.
 
-# What is Query folding? 
+## Possibble outcomes of Query folding 
 
 The goal of Query folding is to offload or push as much of the evaluation of a query to the data source which is able to compute the transformations from your query. 
 
 It accomplishes this goal by translating the code from your query into a language that can be interpreted and executed by your data source, thus pushing the evaluation to your data source and sending the result of that evaluation to Power Query.
 
-This often provides a much faster query execution than extracting all the required data from your data source and running all transforms required locally.
+This often provides a much faster query execution than extracting all the required data from your data source and running all transforms required locally in the Power Query engine.
 
 Depending on how the query is structured, there could be three possible outcomes for the query folding mechanism:
 * **Full query Folding**: When all of your query transformations get pushed back to the data source and no processing occurs locally by the Power Query engine. Instead you receive your desired output directly from the data source.
@@ -63,7 +71,7 @@ This article provides some example scenarios for each of the possible outcomes f
 >[!IMPORTANT]
 > All data source functions, commonly showcased as the Source step of a query, will query the data to the data source in its own language. The query folding mechanism applies to all transforms applied to your query after your data source function so they can be translated and combined into a single data source query.
 
-## Full query folding
+### Full query folding
 
 For this scenario, you'll be connecting to a Microsoft SQL Server and the data you'll be using is the sample AdventureWorks database in its Data Warehouse version. You can download this database from the article [AdventureWorks sample database](/sql/samples/adventureworks-install-configure).
 
@@ -99,7 +107,7 @@ When you select the **View Native Query** option, a new **Native Query** dialog 
 
 This native query is sent to the data source (Microsoft SQL Server) and Power Query only receives the result of that query.
 
-## Partial query folding
+### Partial query folding
 
 Taking the query created in the previous section for **Full Query folding** as your starting point, your new goal is to filter that table to only analyze the rows for dates that fall in the weekdays Friday, Saturday, or Sunday.
 
@@ -136,7 +144,7 @@ This means that your query will send that native query to the Microsoft SQL Serv
 >[!NOTE]
 > We recommend that you read [Understanding folding with Query Diagnostics](querydiagnosticsfolding.md) to get the most out of the query diagnostics tools and learn how to verify query folding.
 
-## No query folding
+### No query folding
 
 Queries that rely solely on unstructured data sources, such as CSV or Excel files, don't have query folding capabilities. This means that Power Query evaluates all the required data transformations outside the data source.
 
