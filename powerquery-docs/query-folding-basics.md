@@ -10,15 +10,44 @@ ms.custom: intro-internal
 ---
 # Understanding query evaluation and query folding in Power Query
 
-*Intro about what to expect from this article and why it's here.*
+*Intro about what to expect from this article and why it's here. - Get help from Bob to write this after the rest of the sections are finished*
+
 
 ## Create a Power Query M script
 
-*Explain how the UI helps you create the script, but you can also manually edit the script using the advanced editor and the different views to modify your code.*
+A query in Power Query is written in the M language. This query gets interpreted and evaluated by the Power Query engine to show its results. The M script or M code serves as the set of instructions needed to evaluate the query. You can think of the M script as a recipe in order to prepare your data.
+
+The most common way to create an M script is by using the Power Query Editor. For example, when you connect to a data source such as a SQL Server database you'll notice on the right-hand side of your screen that there's a section called [applied steps](applied-steps.md) which displays all the steps or transforms used in your query. In this sense, the Power Query Editor serves as an interface to help you create the appropriate M script for the transforms that you're after.
+
+<image of the applied steps and the data preview view>
+
+As you can see from the previous image, the query in the image has the following steps:
+* the name - what it does
+*
+*
+*
+
+The Power Query Editor helps you add these steps, through a diverse set of interactions on its user interface, to create the M Script that creates your desired query output.
+
+These set of steps names are a friendly way to interpret the M script that Power Query has created for you. To view this full M script you can either go to the Advanced Editor window or change the view of the formula bar to show the query script as shown below.
+
+<image that displays the full script and the corresponding names of the steps>   
+
+From the previous image, you can see that most of the names that you see in the applied steps pane are also being used in the M script and in some cases they are wrapped around other symbols. The Power Query Editor always tries to show you a friendly name instead of the exact name being used inside your M script to help you interpret your query much easier.
+
+>[!NOTE]
+>Steps of a query are also conventionally called identifiers in the M language. A quoted-identifier, such as the one for the #"Step Name", can be used to allow any sequence of zero or more Unicode characters to be used as an identifier, including keywords, whitespace, comments, operators and punctuators. You can learn more about identifiers in the M language from the documentation on [lexical structure](https://docs.microsoft.com/powerquery-m/m-spec-lexical-structure#identifiers).
+
+Furthermore, any changes that you make to your query through the Power Query Editor will automatically update the M script for your query. For example, using the previous image as the starting point, if you change the StepName to be "MyStep", this will automatically be updated in the script view as shown in the image below:
+
+<image about how a change in a step name does update the m script>
+
+While it is recommended to leverage the Power Query Editor to create all or most of M script for you, you can manually add or modify pieces of your M code. You can learn more about the M language from the [official docs site for the language](https://docs.microsoft.com/powerquery-m/). 
+
+>[!NOTE]
+> M Script or M code are terms used for any code that uses the M Language. In the context of this article, M Script also refers to the code found inside a Power Query query and accesible through the Advanced Editor window in the View tab and also through the script view in the formula bar.
 
 ## How does a query get evaluated in Power Query?
-
-Power Query works as a tool that extracts the data from a data source, performs any transformations needed using the Power Query engine (also known as the Mashup engine), and then it loads your desired output into a destination of your choice.
 
 The diagram below explores the process that happens in order to evaluate a query in Power Query:
 
