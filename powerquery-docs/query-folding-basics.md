@@ -15,12 +15,15 @@ ms.custom: intro-internal
 
 ## Create a Power Query M script
 
-A query in Power Query is written in the M language. This query gets interpreted and evaluated by the Power Query engine to show its results. The M script or M code serves as the set of instructions needed to evaluate the query. You can think of the M script as a recipe in order to prepare your data.
+A query in Power Query is written in the M language. This query gets interpreted and evaluated by the Power Query engine to output its results. The M script or M code serves as the set of instructions needed to evaluate the query. 
 
-The most common way to create an M script is by using the Power Query Editor. For example, when you connect to a data source such as a SQL Server database you'll notice on the right-hand side of your screen that there's a section called [applied steps](applied-steps.md) which displays all the steps or transforms used in your query. In this sense, the Power Query Editor serves as an interface to help you create the appropriate M script for the transforms that you're after as well as validating that the code is valid. 
+>[!TIP]
+>You can think of the M script as a recipe in order to prepare your data.
+
+The most common way to create an M script is by using the Power Query Editor. For example, when you connect to a data source such as a SQL Server database you'll notice on the right-hand side of your screen that there's a section called [applied steps](applied-steps.md) which displays all the steps or transforms used in your query. In this sense, the Power Query Editor serves as an interface to help you create the appropriate M script for the transforms that you're after as well as validating that the code used is valid. 
 
 >[!NOTE]
->Other components of the Power Query Editor will leverage the evaluation of your query to show you a data preview of your query, show you a diagram view of all queries in your project or help you expand the experience in order to create new steps or modify existing ones.
+>Other components of the Power Query Editor will leverage the evaluation of your query to show you a data preview, a diagram view of all queries in your project or help you expand the experience in order to create new steps or modify existing ones.
 
 <image of the applied steps and the data preview view>
 
