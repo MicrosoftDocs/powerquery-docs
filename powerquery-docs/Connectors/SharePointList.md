@@ -4,7 +4,7 @@ description: Provides basic information about how to connect to your data, along
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 4/30/2020
+ms.date: 8/2/2021
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -97,6 +97,10 @@ This issue only happens when the **Data Type** is not explicitly set for a colum
 The user can force the interpretation to be consistent by explicitly setting the data type for the column through the Power Query Editor. For example, the following image shows the column with an explicit Boolean type.
 
 ![Column with explicit boolean type.](./media/sharepoint-list/booleanexplicit.png)
+
+### Using OData to access a SharePoint List
+
+If you use an OData feed to access a SharePoint List, be aware that there is an approximately 2100 character limitation to the URL you use to connect. More information: [Maximum URL length](OdataFeed.md#maximum-url-length)
 
 ## Next steps
 

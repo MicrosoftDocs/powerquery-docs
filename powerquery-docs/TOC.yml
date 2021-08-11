@@ -394,6 +394,8 @@
           href: Connectors/web/web-by-example.md
         - name: "Troubleshooting"
           href: Connectors/web/web-troubleshoot.md
+      - name: "Zendesk (Beta)"
+        href: Connectors/Zendesk.md
     - name: Support and troubleshooting
       items:
       - name: "Power Query online limits"
@@ -404,6 +406,8 @@
         href: review-script-changes.md
       - name: "Connector support and feedback"
         href: Connectors/ConnectorFeedback.md
+      - name: "Capture web requests with Fiddler"
+        href: web-connection-fiddler.md
     - name: Create custom Power Query connectors
       items:
       - name: Quick starts
