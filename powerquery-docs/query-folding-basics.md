@@ -10,7 +10,7 @@ ms.custom: intro-internal
 ---
 # Understanding query evaluation and query folding in Power Query
 
-*Intro about what to expect from this article and why it's here. - Get help from Bob to write this after the rest of the sections are finished*
+*Get help from Bob to write this after the rest of the sections are finished*
 
 
 ## Create a Power Query M script
@@ -25,33 +25,35 @@ The most common way to create an M script is by using the Power Query Editor. Fo
 >[!NOTE]
 >Other components of the Power Query Editor will leverage the evaluation of your query to show you a data preview, a diagram view of all queries in your project or help you expand the experience in order to create new steps or modify existing ones.
 
-<image of the applied steps and the data preview view>
+![image of the applied steps and the data preview view](media/query-folding-basics/applied-steps-section.png)
 
-As you can see from the previous image, the query in the image has the following steps:
-* the name - what it does
-*
-*
-*
+As you can see from the previous image that shows the applied steps section, the query in the image has the following steps:
 
-The Power Query Editor helps you add these steps, through a diverse set of interactions on its user interface, to create the M Script that creates your desired query output.
+* **Source**: Makes the connection to the data source. In this case its a connection to a SQL Server database.
+* **Navigation**: Navigates to a specific table inside the database.
+* **Removed other columns**: Selects what columns to keep from the table and removes teh rest.
+* **Sorted rows**: Sorts the table using a one or multiple columns using a descending order.
+* **Kept top rows**: Filters the table to only keep a certain number of rows from the top of the table.
 
-These set of steps names are a friendly way to interpret the M script that Power Query has created for you. To view this full M script you can either go to the Advanced Editor window in the View tab or change the view of the formula bar to show the query script as shown below.
+The Power Query Editor helps you add these steps, through a diverse set of interactions on its user interface, to create the M Script that outputs your desired query output.
 
-<image that displays the full script and the corresponding names of the steps>   
+These set of steps names are a friendly way to interpret the M script that Power Query has created for you. To view this full M script you can either go to the Advanced Editor window in the View tab or change the view of the formula bar to show the query script by going into the View tab and from the Layout group select the **Script view** to be *Query script*.
+
+![image that displays the full script and the corresponding names of the steps](media/query-folding-basics/m-script-applied-steps.png) 
 
 From the previous image, you can see that most of the names that you see in the applied steps pane are also being used in the M script and in some cases they are wrapped around other symbols. The Power Query Editor always tries to show you a friendly name instead of the exact name being used inside your M script to help you interpret your query much easier.
 
 >[!NOTE]
->Steps of a query are also conventionally called identifiers in the M language. A quoted-identifier, such as the one for the #"Step Name", can be used to allow any sequence of zero or more Unicode characters to be used as an identifier, including keywords, whitespace, comments, operators and punctuators. You can learn more about identifiers in the M language from the documentation on [lexical structure](https://docs.microsoft.com/powerquery-m/m-spec-lexical-structure#identifiers).
+>Steps of a query are also conventionally called identifiers in the M language. A quoted-identifier, such as the one for the *#"Kept top rows"*, can be used to allow any sequence of zero or more Unicode characters to be used as an identifier, including keywords, whitespace, comments, operators and punctuators. You can learn more about identifiers in the M language from the documentation on [lexical structure](https://docs.microsoft.com/powerquery-m/m-spec-lexical-structure#identifiers).
 
-Furthermore, any changes that you make to your query through the Power Query Editor will automatically update the M script for your query. For example, using the previous image as the starting point, if you change the StepName to be "MyStep", this will automatically be updated in the script view as shown in the image below:
+Furthermore, any changes that you make to your query through the Power Query Editor will automatically update the M script for your query. For example, using the previous image as the starting point, if you change the *Kept top rows* step name to be *Top 20 rows*, this will automatically be updated in the script view as shown in the image below:
 
-<image about how a change in a step name does update the m script>
+![image about how a change in a step name updates the m script](media/query-folding-basics/change-step-name.png)
 
 While it is recommended to leverage the Power Query Editor to create all or most of M script for you, you can manually add or modify pieces of your M code. You can learn more about the M language from the [official docs site for the language](https://docs.microsoft.com/powerquery-m/). 
 
 >[!NOTE]
-> M Script or M code are terms used for any code that uses the M Language. In the context of this article, M Script also refers to the code found inside a Power Query query and accesible through the Advanced Editor window in the View tab and also through the script view in the formula bar.
+> M Script or M code are terms used for any code that uses the M Language. In the context of this article, M Script also refers to the code found inside a Power Query query and accessible through the Advanced Editor window in the View tab and also through the script view in the formula bar.
 
 ## How does a query get evaluated in Power Query?
 
@@ -85,17 +87,13 @@ This is the process that happens to a Power Query query during its evaluation.
 
 ## What is query folding?
 
-Section on what is query folding
-
-## Possible outcomes of query folding 
-
 The goal of query folding is to offload or push as much of the evaluation of a query to the data source which is able to compute the transformations of your query. 
 
 It accomplishes this goal by translating the code from your query into a language that can be interpreted and executed by your data source, thus pushing the evaluation to your data source and sending the result of that evaluation to Power Query.
 
 This often provides a much faster query execution than extracting all the required data from your data source and running all transforms required in the Power Query engine.
 
-When you use the [Get Data experience](get-data-experience.md), Power Query guides you through the process that ultimately lets you connect to your data source. When doing so, Power Query leverages a series of functions in the M language categorized as [accessing data functions](https://docs.microsoft.com/powerquery-m/accessing-data-functions). The function that you commonly see in the first step of your query commonly with the name *Source*. These specific functions use mechanisms and protocols in order to connect to your data source using a language that your data source can understand. 
+When you use the [Get Data experience](get-data-experience.md), Power Query guides you through the process that ultimately lets you connect to your data source. When doing so, Power Query leverages a series of functions in the M language categorized as [accessing data functions](https://docs.microsoft.com/powerquery-m/accessing-data-functions). These specific functions use mechanisms and protocols in order to connect to your data source using a language that your data source can understand. 
 
 However, the steps that follow in your query are the steps or transforms that the query folding mechanism will attempt to optimize and check if they can be offloaded to your data source instead of them being processed using the Power Query engine. 
 
@@ -103,9 +101,10 @@ However, the steps that follow in your query are the steps or transforms that th
 > All data source functions, commonly showcased as the *Source* step of a query, will query the data to the data source in its native language. The query folding mechanism applies to all transforms applied to your query after your data source function so they can be translated and combined into a single data source query or as many transforms that can be offloaded to the data source.
 
 Depending on how the query is structured, there could be three possible outcomes to the query folding mechanism:
-* **Full query Folding**: When all of your query transformations get pushed back to the data source and no processing occurs  by the Power Query engine. Instead you receive your desired output directly from the data source.
-* **Partial query Folding**: When only a few transformations in your query, and not all, can be pushed back to the data source. This means that a subset of your transformations is done at your data source and the rest of your query transformations occur locally.
+
 * **No query folding**:  When the query contains transformations that can't be translated to the native query language of your data source, either because the transformations aren't supported or the connector doesn't support query folding. For this case, Power Query gets the raw data from your data source and uses the Power Query engine to achieve your desired output by processing the required transforms at the Power Query engine level.
+* **Partial query Folding**: When only a few transformations in your query, and not all, can be pushed back to the data source. This means that a subset of your transformations is done at your data source and the rest of your query transformations occur locally.
+* **Full query Folding**: When all of your query transformations get pushed back to the data source and no processing occurs  by the Power Query engine. Instead you receive your desired output directly from the data source.
 
 >[!NOTE]
 >The Query folding mechanism is primarily available in connectors for structured data sources such as, but not limited to, [Microsoft SQL Server](Connectors/sqlserver.md) and [OData Feed](Connectors/odatafeed.md). 
@@ -114,22 +113,7 @@ Depending on how the query is structured, there could be three possible outcomes
 
 This article provides some example scenarios for each of the possible outcomes for query folding. It will also include some suggestions on how to get the most out of the query folding mechanism.
 
-### About the scenario
-
-
-#### Full query folding
-
-* Order descending by timestamp or ID
-* Keep top 20 rows
-* Keep columns
-* Simple transform
-
-#### Partial query folding
-
-* Keep Columns
-* Order ascending by timestamp or ID
-* Keep bottom 20 rows
-* Simple transform
+### Example scenario 
 
 #### No query folding
 
@@ -139,6 +123,21 @@ This article provides some example scenarios for each of the possible outcomes f
 
 >[!NOTE] 
 >Queries that rely solely on unstructured data sources or that don't have a compute engine, such as CSV or Excel files, don't have query folding capabilities. This means that Power Query evaluates all the required data transformations using the Power Query engine.
+
+#### Partial query folding
+
+* Keep Columns
+* Order ascending by timestamp or ID
+* Keep bottom 20 rows
+* Simple transform
+
+#### Full query folding
+
+* Order descending by timestamp or ID
+* Keep top 20 rows
+* Keep columns
+* Simple transform
+
 
 ### Query performance comparison
 
