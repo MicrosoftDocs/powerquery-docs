@@ -70,6 +70,9 @@ To make the connection from Power Query Online:
 
 ## Troubleshooting
 
+### Numeric precision (or "Why did my numbers change?")
+When importing Excel data, you may notice that certain number values seem to change slightly when imported into Power Query. For example, if you select a cell containing 0.049 in Excel, this number is displayed in the formula bar as 0.049. But if you import the same cell into Power Query and select it, the preview details will display it as 0.049000000000000002 (even though in the preview table it is formatted as 0.049). What's going on here? The answer is a bit complicated, and has to do with how Excel stores numbers using something called floating-point notation. The bottom line is that there are certain numbers that Excel can't represent with 100% precision. If you crack open the xlsx file and look at the actual value being stored, you'll see that in the xlsx file, 0.049 *is* actually stored as 0.049000000000000002. This is the value Power Query reads from the xlsx, and thus the value that appears when you select the cell in Power Query. (For more information on numeric precision in Power Query, see the "Decimal number" and "Fixed decimal number" sections of [this page](/power-query/data-types).)
+
 ### Connecting to an online Excel workbook
 
 If you want to connect to an Excel document hosted in Sharepoint, you can do so via the [Web](web/web.md) connector in Power BI Desktop, Excel, and Dataflows, and also with the Excel connector in Dataflows. To get the link to the file:
