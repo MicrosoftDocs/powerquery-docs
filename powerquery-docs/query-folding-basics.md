@@ -12,7 +12,6 @@ ms.custom: intro-internal
 
 *Get help from Bob to write this after the rest of the sections are finished*
 
-
 ## Create a Power Query M script
 
 A query in Power Query is written in the M language. This query gets interpreted and evaluated by the Power Query engine to output its results. The M script or M code serves as the set of instructions needed to evaluate the query. 
@@ -63,11 +62,11 @@ The diagram below explores the process that happens in order to evaluate a query
 
 1. The Power Query query script (also known as M code), found inside the Advanced Editor, is submitted to the Power Query engine alongside with other important information such as credentials and data source privacy levels.
 2. Power Query determines what data needs to be extracted from the data source and submits a request to the data source.
-3.	The data source responds to the request from Power Query by transferring the requested data to Power Query.
-4.	Power Query receives the incoming data from the data source and performs any transformations using the Power Query engine if necessary.
-5.	The results derived from the previous point are loaded to a destination.
+3. The data source responds to the request from Power Query by transferring the requested data to Power Query.
+4. Power Query receives the incoming data from the data source and performs any transformations using the Power Query engine if necessary.
+5. The results derived from the previous point are loaded to a destination.
 
-When Power Query reads your query script, it runs it through an optimization process to more efficiently evaluate your query. In this process it determines what steps (transforms) from your query can be offloaded to your data source and which other steps would need to be evaluated locally using the Power Query engine. This optimization process is also called Query folding where Power Query tries to push as much of the load possible to the data source in an effort to optimize your query execution.
+When Power Query reads your query script, it runs it through an optimization process to more efficiently evaluate your query. In this process it determines what steps (transforms) from your query can be offloaded to your data source and which other steps would need to be evaluated using the Power Query engine. This optimization process is also called Query folding where Power Query tries to push as much of the load possible to the data source in an effort to optimize your query execution.
 
 >[!IMPORTANT]
 >All rules from the Power Query formula language (also known as M Language) are followed. Most notably, lazy evaluation plays an important role during the optimization process where Power Query will understand what specific transforms from your query need to be evaluated and what others do not need to be evaluated because they are not needed in the output of your query.
@@ -77,10 +76,10 @@ You can see in detail the steps that take place in this optimization process by 
 ![Query evaluation diagram 1](media/query-folding-basics/diagram-2.png)
 
 1. The Power Query query script, found inside the Advanced Editor, is submitted to the Power Query engine alongside with other important information such as credentials and data source privacy levels.
-2. The Query folding mechanism defines what information to extract from the data source and what set of transformations will need to happen inside the Power Query engine. It sends the instructions to two other components that will take care of retrieving the data from the data source and transforming the incoming data locally if necessary.
+2. The Query folding mechanism defines what information to extract from the data source and what set of transformations will need to happen inside the Power Query engine. It sends the instructions to two other components that will take care of retrieving the data from the data source and transforming the incoming data in the Power Query engine if necessary.
 3. Once the instructions have been received by the internal components of Power Query, Power Query sends a request to the data source using a data source query.
 4. The data source receives the request from Power Query and transfers the data to the Power Query engine.
-5. Once the data is inside Power Query, the transformation engine inside Power Query (also known as mashup engine) performs the local transformations that couldn't be folded back or offloaded to the data source.
+5. Once the data is inside Power Query, the transformation engine inside Power Query (also known as mashup engine) performs the transformations that couldn't be folded back or offloaded to the data source.
 6. The results derived from the previous point are loaded to a destination.
 
 This is the process that happens to a Power Query query during its evaluation.
@@ -103,7 +102,7 @@ However, the steps that follow in your query are the steps or transforms that th
 Depending on how the query is structured, there could be three possible outcomes to the query folding mechanism:
 
 * **No query folding**:  When the query contains transformations that can't be translated to the native query language of your data source, either because the transformations aren't supported or the connector doesn't support query folding. For this case, Power Query gets the raw data from your data source and uses the Power Query engine to achieve your desired output by processing the required transforms at the Power Query engine level.
-* **Partial query Folding**: When only a few transformations in your query, and not all, can be pushed back to the data source. This means that a subset of your transformations is done at your data source and the rest of your query transformations occur locally.
+* **Partial query Folding**: When only a few transformations in your query, and not all, can be pushed back to the data source. This means that a subset of your transformations is done at your data source and the rest of your query transformations occur in the Power Query engine.
 * **Full query Folding**: When all of your query transformations get pushed back to the data source and no processing occurs  by the Power Query engine. Instead you receive your desired output directly from the data source.
 
 >[!NOTE]
