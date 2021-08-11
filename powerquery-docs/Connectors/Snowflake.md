@@ -109,7 +109,7 @@ Power BI and Snowflake are partnering to host a hands-on webinar on August 25th,
 In this hands on lab, learn how to access all relevant data from a single source and turn data into insights through this connector.
 
 * Access first party data seamlessly in Snowflake
-* Leverage the Data Marketplace to query live POS data from 3rd party providers
+* Leverage the Data Marketplace to query live data from 3rd party providers
 * Set up self-serve analytics in Power BI
 
 Sign up for the webinar using the above link!
