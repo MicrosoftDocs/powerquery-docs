@@ -50,7 +50,7 @@ Furthermore, any changes that you make to your query through the Power Query Edi
 
 ![image about how a change in a step name updates the m script](media/query-folding-basics/change-step-name.png)
 
-While it is recommended to leverage the Power Query Editor to create all or most of M script for you, you can manually add or modify pieces of your M code. You can learn more about the M language from the [official docs site for the language](https://docs.microsoft.com/powerquery-m/). 
+While it is recommended to leverage the Power Query Editor to create all or most of the M script for you, you can manually add or modify pieces of your M code. You can learn more about the M language from the [official docs site for the language](https://docs.microsoft.com/powerquery-m/). 
 
 >[!NOTE]
 > M Script or M code are terms used for any code that uses the M Language. In the context of this article, M Script also refers to the code found inside a Power Query query and accessible through the Advanced Editor window in the View tab and also through the script view in the formula bar.
