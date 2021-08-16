@@ -93,18 +93,27 @@ Below is a code example of a connector which exposes two functions, one which ac
 ```
 section Extension;
 
+// This function would call Odbc.DataSource
 [DataSource.Kind = "Extension"]
 shared Extension.DataSource = (server as text) => server;
 
+// This function would call Odbc.Query
 [DataSource.Kind = "Extension"]
 shared Extension.Query = (server as text, query as text) => query;
 
 Extension = [
+    // MakeResourcePath overrides the default Data Source Path creation logic that serializes
+    // all required parameters as a JSON encoded value. This is required to keep the data source
+    // path the same between the Extension.DataSource and Extension.Query functions. Alternatively,
+    // you can provide a function documentation type and use DataSource.Path = false for the query
+    // parameter to exclude it from the data source path calculation.
     Type="Custom",
     MakeResourcePath = (server) => server,
     ParseResourcePath = (resource) => { resource },
+
+    // Use NativeQuery to enable a Native Database Query prompt in the Power Query user experience.
     NativeQuery = (optional query) => query,
-    Authentication=[Implicit=null]
+    Authentication=[Anonymous=null]
 ];
 ```
 
