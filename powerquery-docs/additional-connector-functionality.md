@@ -74,7 +74,7 @@ Some Power Query connectors offer end users the ability to specify [native datab
 
 **Scenario**: An end user can run custom SQL statements through their ODBC-based connector. The statement would be run in Import Mode, and there is no need for the transformations to fold. 
 
-**Status**: This feature is not currently supported in our extensibility SDK. While we provide a [native database query security model](native-database-query.md#native-database-query-security) for some connectors to prevent users from issuing destructive statements, this model is currently unavailable to custom connectors. The product team is investigating the feasibility of this scenario. Without the extensibility of the security model, we do not recommend connectors expose native query functionality unless through one of the workarounds below. 
+**Status**: This feature is not currently supported in our extensibility SDK. The product team is investigating the feasibility of this scenario. Without the extensibility of the security model, we do not recommend connectors expose native query functionality unless through one of the workarounds below. 
 
 **Workarounds**: If the data source is able to use the generic ODBC connector which supports native database query, this is recommended. However, there may be cases where the generic ODBC connectivity scenario may not work, for example, if authentication needs to be implemented at the connector level.
 
@@ -82,7 +82,7 @@ In those cases, the connector developer can opt to use generic ODBC functionalit
 
 If the data source can enforce read-only access and you would like to proceed with exposing **Odbc.Query** functionality for your connector, the recommendation is to provide a second data source function with its own Publish record, and have two entries in the Get Data dialog (**DataSource.Database, DataSource.Query**). The **Odbc.Query** function would only support Import mode in Power BI, not Direct Query. The distinction is recommended as combining **Odbc.Query** (which does not support query folding) and **Odbc.DataSource** (which does support query folding) may confuse end users. Be sure to also clearly distinguish the naming of your two Publish records to clearly communicate to users which function to use for native query. 
 
-If the data source does not enforce a read-only access, the connector must also leverage the native database query security feature.
+If the data source does not enforce a read-only access, the connector must also leverage our [native database query security model](native-database-query.md#native-database-query-security) feature. 
 
 Below is a code example of a connector which exposes two functions, one which accepts a native query and one which doesn't. 
 
