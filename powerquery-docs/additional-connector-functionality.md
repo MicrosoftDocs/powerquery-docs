@@ -82,7 +82,11 @@ In those cases, the connector developer can opt to use generic ODBC functionalit
 
 If the data source can enforce read-only access and you would like to proceed with exposing **Odbc.Query** functionality for your connector, the recommendation is to provide a second data source function with its own Publish record, and have two entries in the Get Data dialog (**DataSource.Database, DataSource.Query**). The **Odbc.Query** function would only support Import mode in Power BI, not Direct Query. The distinction is recommended as combining **Odbc.Query** (which does not support query folding) and **Odbc.DataSource** (which does support query folding) may confuse end users. Be sure to also clearly distinguish the naming of your two Publish records to clearly communicate to users which function to use for native query. 
 
-If the data source does not enforce a read-only access, the connector must also leverage our [native database query security model](native-database-query.md#native-database-query-security) feature. 
+If the data source does not enforce a read-only access, the connector must also leverage our [native database query security model](native-database-query.md#native-database-query-security) feature. Note that the Native Database Query prompt does not work in the Visual Studio SDK. When you try to run ```Extension.Query``` in Visual Studio, you'll receive an error.
+
+```The evaluation requires a permission that has not been provided. Data source kind: 'Extension'. Data source path: 'test'. Permission kind: 'Native Query'```
+
+You will need to conduct testing in Power BI Desktop.
 
 Below is a code example of a connector which exposes two functions, one which accepts a native query and one which doesn't. 
 
