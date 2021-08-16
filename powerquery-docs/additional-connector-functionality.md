@@ -76,7 +76,7 @@ Some Power Query connectors offer end users the ability to specify [native datab
 
 **Status**: This feature is not currently supported in our extensibility SDK. While we provide a [native database query security model](native-database-query.md#native-database-query-security) for some connectors to prevent users from issuing destructive statements, this model is currently unavailable to custom connectors. The product team is investigating the feasibility of this scenario. Without the extensibility of the security model, we do not recommend connectors expose native query functionality unless through one of the workarounds below. 
 
-**Workarounds**: If the data source is able to use the generic ODBC connector which supports native database query, this is recommended. However, there may be cases where the generic ODBC connectivity scenario may not work, for example, if authentication is not compatible. 
+**Workarounds**: If the data source is able to use the generic ODBC connector which supports native database query, this is recommended. However, there may be cases where the generic ODBC connectivity scenario may not work, for example, if authentication needs to be implemented at the connector level.
 
 In those cases, the connector developer can opt to use generic ODBC functionality with the **Odbc.Query** function instead of a custom connector. Unlike **Odbc.DataSource**, which allows the custom connector to override driver settings and improve query folding behavior, **Odbc.Query** simply runs the query as provided and does not benefit from the custom connector wrapper. 
 
