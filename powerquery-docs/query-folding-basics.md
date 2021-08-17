@@ -145,7 +145,9 @@ Here's a section to compare all 3 possible outcomes.
 ## Considerations and suggestions
 
 * Follow the best practices when creating a new query as stated in [Best practices in Power Query](best-practices.md).
-* Checking the **View Native Query** option is always recommended to make sure that your query can be folded back to the data source. If your step disables this option, you know that you've created a step that stops query folding. 
+* Use the step folding indicators to check which steps are preventing your query from folding and re-order them if necessary to increase folding.
+* Use the query plan to determine which transforms are happening at the Power Query engine for that particular step and consider re-arranging your query to check the updated query plan. For data sources that support folding, any nodes in the query plan other than Value.NativeQuery and datas ource access nodes represent transforms that didn’t fold.
+* Check the **View Native Query** option is always recommended to make sure that your query can be folded back to the data source. If your step disables this option, you know that you've created a step that stops query folding. 
 * Use the query diagnostics tool to your advantage and to better understand the requests being sent to your data source when query folding capabilities are available for the connector.
 * When combining data sourced from the use of multiple connectors, Power Query tries to push as much work as possible to both of the data sources while complying with the privacy levels defined for each data source. 
 * Read the article on [Privacy levels](dataprivacyfirewall.md) to protect your queries from running against a Data Privacy Firewall error.
