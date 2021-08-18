@@ -18,7 +18,7 @@ LocalizationGroup: reference
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication Types Supported | Anonymous<br/>Windows<br/>Microsoft Account |
-| Function Reference Documentation | [SharePoint.Contents](/powerquery-m/sharepoint-contents)<br/>[SharePoint.Files](/powerquery-m/sharepoint-files) | [SharePoint.Tables](/powerquery-m/sharepoint-tables) |
+| Function Reference Documentation | [SharePoint.Contents](/powerquery-m/sharepoint-contents)<br/>[SharePoint.Files](/powerquery-m/sharepoint-files)<br/>[SharePoint.Tables](/powerquery-m/sharepoint-tables) |
 | | |
 
 >[!Note]

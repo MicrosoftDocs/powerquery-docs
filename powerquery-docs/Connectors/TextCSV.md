@@ -166,7 +166,7 @@ Once you’re done constructing that table, you can either select to load or tra
 ![Detailed breakdown of steps for data extraction.](./media/text-csv/data-extraction-steps.png)
 
 >[!Note]
-This feature is being released soon in Power Query Online. More information: [Text/CSV by example data extraction](https://docs.microsoft.com/power-platform-release-plan/2021wave1/data-integration/textcsv-example-data-extraction) 
+This feature is being released soon in Power Query Online. More information: [Text/CSV by example data extraction](/power-platform-release-plan/2021wave1/data-integration/textcsv-example-data-extraction) 
 
 ## Troubleshooting
 
