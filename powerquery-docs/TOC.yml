@@ -262,7 +262,7 @@
         href: Connectors/AccessDatabase.md
       - name: "Adobe Analytics"
         href: "Connectors/AdobeAnalytics.md"
-      - name: "Amazon Athena"
+      - name: "Amazon Athena (Beta)"
         href: "Connectors/AmazonAthena.md"
       - name: "Anaplan"
         href: Connectors/Anaplan.md
@@ -328,7 +328,7 @@
         href: Connectors/OracleDatabase.md
       - name: "PostgreSQL"
         href: Connectors/PostgreSQL.md
-      - name: "QuickBooks Online"
+      - name: "QuickBooks Online (Beta)"
         href: Connectors/QuickBooksOnline.md
       - name: "Salesforce Objects"
         href: Connectors/SalesforceObjects.md

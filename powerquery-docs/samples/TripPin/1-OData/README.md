@@ -6,14 +6,15 @@ manager: kfile
 
 ms.service: powerquery
 ms.topic: tutorial
-ms.date: 5/15/2020
+ms.date: 8/10/2021
 ms.author: gepopell
 
 LocalizationGroup: reference
 ---
 
 # TripPin Part 1 - Data Connector for an OData Service
-This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially&mdash;each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector. 
+
+This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially&mdash;each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector.
 
 In this lesson, you will:
 
@@ -24,6 +25,7 @@ In this lesson, you will:
 > * Register your connector in Power BI Desktop
 
 ## Creating a Basic OData Connector
+
 In this section, you will create a new Data Connector project, provide some basic information, and test it in Visual Studio.
 
 Open Visual Studio, and create a new Project. Under the Power Query folder, select the Data Connector project. For this sample, set the project name to `TripPin`.
@@ -61,6 +63,7 @@ TripPin.Publish = [
 ```
 
  This connector definition contains:
+
 * A Data Source definition record for the TripPin connector
 * A declaration that Implicit (Anonymous) is the only authentication type for this source
 * A function (`TripPinImpl`) with an implementation that calls [OData.Feed](/powerquery-m/odata-feed)
@@ -73,14 +76,13 @@ Open the TripPin.query.pq file. Replace the current contents with a call to your
 TripPin.Feed("https://services.odata.org/v4/TripPinService/")
 ```
 
-Select the **Start** button to launch the M Query utility. 
+Select the **Start** button to launch the M Query utility.
 
-The <project>.query.pq file is used to test out your extension without having to deploy it to your Power BI Desktop's bin folder. Selecting the **Start** button (or press **F5**) automatically compiles your extension and launches the M Query utility.
+The \<project>.query.pq file is used to test out your extension without having to deploy it to your Power BI Desktop's bin folder. Selecting the **Start** button (or pressing **F5**) automatically compiles your extension and launches the M Query utility.
 
-Running your query for the first time results in a credential error. In Power Query, the hosting application would convert this error into a credential prompt.
-In Visual Studio, you'll receive a similar prompt that calls out which data source is missing credentials and its data source path.
-Select the shortest of the data source paths (https://services.odata.org/)&mdash;this will apply your credential to all URLs under this path.
-Select the **Anonymous** credential type, and then select **Set Credential**. 
+Running your query for the first time results in a credential error. In Power Query, the hosting application would convert this error into a credential prompt. In Visual Studio, you'll receive a similar prompt that calls out which data source is missing credentials and its data source path. Select the shortest of the data source paths (`https://services.odata.org/`)&mdash;this will apply your credential to all URLs under this path.
+
+Select the **Anonymous** credential type, and then select **Set Credential**.
 
 ![Credential prompt.](../../../images/credentialPrompt.png)
 
@@ -90,9 +92,9 @@ Select **OK** to close the dialog, and then select the **Start** button once aga
 
 You can try out a few different OData URLs in the test file to see what how different results are returned. For example:
 
-* https://services.odata.org/v4/TripPinService/Me
-* https://services.odata.org/v4/TripPinService/GetPersonWithMostFriends()
-* https://services.odata.org/v4/TripPinService/People 
+* `https://services.odata.org/v4/TripPinService/Me`
+* `https://services.odata.org/v4/TripPinService/GetPersonWithMostFriends()`
+* `https://services.odata.org/v4/TripPinService/People`
 
 The TripPin.query.pq file can contain single statements, let statements, or full section documents. 
 
@@ -110,36 +112,38 @@ Open [Fiddler](https://www.telerik.com/fiddler) to capture HTTP traffic, and run
 One thing to note if you look at the URLs is that you can see the query folding that happened with the `SelectColumns` statement.
 `https://services.odata.org/v4/TripPinService/People?$select=UserName%2CFirstName%2CLastName`
 
-If you add more transformations to your query, you can see how they impact the generated URL. 
+If you add more transformations to your query, you can see how they impact the generated URL.
 
 This behavior is important to note. Even though you did not implement explicit folding logic, your connector inherits these capabilities from the [OData.Feed](/powerquery-m/odata-feed) function. M statements are compose-able&mdash;filter contexts will flow from one function to another, whenever possible. This is similar in concept to the way data source functions used within your connector inherit their authentication context and credentials. In later lessons, you'll replace the use of [OData.Feed](/powerquery-m/odata-feed), which has native folding capabilities, with [Web.Contents](/powerquery-m/web-contents), which does not. To get the same level of capabilities, you'll need to use the `Table.View` interface and implement your own explicit folding logic.
 
 ## Loading Your Extension in Power BI Desktop
-To use your extension in Power BI Desktop, you'll need to copy your connector project's output file (TripPin.mez) to your Custom Connectors directory. 
-1. In Visual Studio, select **Build | Build Solution (F6)** from the menu bar. This will generate the .mez file for you project. By default, this will go in your project's bin\Debug folder. 
+
+To use your extension in Power BI Desktop, you'll need to copy your connector project's output file (TripPin.mez) to your Custom Connectors directory.
+
+1. In Visual Studio, select **Build | Build Solution (F6)** from the menu bar. This will generate the .mez file for you project. By default, this will go in your project's bin\Debug folder.
 2. Create a `[My Documents]\Power BI Desktop\Custom Connectors` directory.
 3. Copy the extension file into this directory.
 4. Enable the **Custom data connectors** preview feature in Power BI Desktop (under **File > Options and settings > Custom data connectors**).
 5. Restart Power BI Desktop.
 6. Select **Get Data > More** to bring up the **Get Data** dialog.
 
-You should be able to locate your extension by typing its name into the search box. 
+You should be able to locate your extension by typing its name into the search box.
 
 ![Get Data Dialog.](../../../images/trippin1GetData.png)
 
-Double click on the function name and the function invocation dialog will appear. Enter the root URL of the service (https://services.odata.org/v4/TripPinService/), and select **OK**. 
+Double click on the function name and the function invocation dialog will appear. Enter the root URL of the service (https://services.odata.org/v4/TripPinService/), and select **OK**.
 
 ![Invoke Function.](../../../images/trippin1Function.png)
 
-Since this is the first time you are accessing this data source, you'll receive a prompt for credentials. Check that the shortest URL is selected, and then select **Connect**. 
+Since this is the first time you are accessing this data source, you'll receive a prompt for credentials. Check that the shortest URL is selected, and then select **Connect**.
 
 ![Credential prompt.](../../../images/trippin1Creds.png)
 
-Notice that instead of getting a simple table of data, the navigator appears. This is because the [OData.Feed](/powerquery-m/odata-feed) function returns a table with special metadata on top of it that the Power Query experience knows to display as a navigation table. This walkthrough will cover how you can create and customize your own navigation table in a future lesson. 
+Notice that instead of getting a simple table of data, the navigator appears. This is because the [OData.Feed](/powerquery-m/odata-feed) function returns a table with special metadata on top of it that the Power Query experience knows to display as a navigation table. This walkthrough will cover how you can create and customize your own navigation table in a future lesson.
 
 ![Nav Table.](../../../images/trippin1NavTable.png)
 
-Select the **Me** table, and then select **Edit**. Notice that the columns already have types assigned (well, most of them). This is another feature of the underlying [OData.Feed](/powerquery-m/odata-feed) function. If you watch the requests in [Fiddler](https://www.telerik.com/fiddler), you'll see that you've fetched the service's $metadata document. The engine's OData implementation does this automatically to determine the service's schema, data types, and relationships. 
+Select the **Me** table, and then select **Edit**. Notice that the columns already have types assigned (well, most of them). This is another feature of the underlying [OData.Feed](/powerquery-m/odata-feed) function. If you watch the requests in [Fiddler](https://www.telerik.com/fiddler), you'll see that you've fetched the service's $metadata document. The engine's OData implementation does this automatically to determine the service's schema, data types, and relationships.
 
 ![Me Record.](../../../images/trippin1Me.png)
 

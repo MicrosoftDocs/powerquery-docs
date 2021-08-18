@@ -10,36 +10,40 @@ LocalizationGroup: reference
 ---
 
 # ODBC
- 
+
 ## Summary
- 
-Release State: General Availability
 
-Products: Power BI Desktop, Power BI Service (On-Premise Gateway), Dataflows in PowerBI.com (On-Premise Gateway), Dataflows in PowerApps.com (On-Premise Gateway), Excel, Flow
-
-Authentication Types Supported: Database (Username/Password), Windows, Default or Custom
-
-M Function Reference: [Odbc.DataSource](/powerquery-m/odbc-datasource), [Odbc.Query](/powerquery-m/odbc-query)
+| Item | Description |
+| ---- | ----------- |
+| Release State | General Availability |
+| Products |  Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Authentication Types Supported | Database (Username/Password)<br/>Windows<br/>Default or Custom |
+| Function Reference Documentation | [Odbc.DataSource](/powerquery-m/odbc-datasource)<br/>[Odbc.Query](/powerquery-m/odbc-query) |
+| | |
 
 >[!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
- 
+
+## Prerequisites
+
+Before you get started, make sure you've properly configured the connection in the [Windows ODBC Data Source Administrator](/sql/odbc/admin/odbc-data-source-administrator). The exact process here will depend on the driver.
+
 ## Capabilities Supported
+
 * Import
 * Advanced options
   * Connection string (non-credential properties)
   * SQL statement
   * Supported row reduction clauses
-    
+
 ## Connect to an ODBC data source
-Before you get started, make sure you've properly configured the connection in the [Windows ODBC Data Source Administrator](/sql/odbc/admin/odbc-data-source-administrator?view=sql-server-ver15). The exact process here will depend on the driver.
 
 To make the connection, take the following steps:
- 
+
 1. From the Power Query **Get Data** dialog (or **Data** tab in the Excel ribbon), select **Database > ODBC**.
- 
+
    ![ODBC connection builder in Power BI.](../images/ODBCbuilder.png)
- 
+
 2. In the **From ODBC** dialog that appears, provide the connection string (optional).
 
    You may also choose to provide a SQL statement, depending on the capabilities of the driver. Ask your vendor for more information.

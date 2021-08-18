@@ -1,19 +1,22 @@
 ---
-title: FHIR Power Query Authentication
-description: FHIR Power Query Authentication
+title: FHIR Power Query authentication
+description: FHIR Power Query authentication
 author: hansenms
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 01/08/2020
+ms.date: 8/9/2021
 ms.author: mihansen
 LocalizationGroup: reference
 ---
 
-# FHIR Connector Authentication
+# FHIR connector authentication
 
 This article explains authenticated access to FHIR servers using the Power Query connector for FHIR. The connector supports anonymous access to publicly accessible FHIR servers and authenticated access to FHIR servers using Azure Active Directory authentication. The [Azure API for FHIR](/azure/healthcare-apis) is secured with Azure Active Directory.
 
-## Anonymous Access
+>[!Note]
+>If you are connecting to a FHIR server from an online service, such as Power BI service, you can only use an organizational account.
+
+## Anonymous access
 
 There are a number of [publicly accessible FHIR servers](https://wiki.hl7.org/index.php?title=Publicly_Available_FHIR_Servers_for_testing). To enable testing with these public servers, the Power Query connector for FHIR supports the "Anonymous" authentication scheme. For example to access the public https://vonk.fire.ly server:
 
@@ -27,7 +30,7 @@ There are a number of [publicly accessible FHIR servers](https://wiki.hl7.org/in
 
 After that, follow the steps to [query and shape your data](FHIR.md).
 
-## Azure Active Directory (Organizational) Authentication
+## Azure Active Directory (organizational) authentication
 
 The Power Query connector for FHIR supports OAuth authentication for FHIR servers that are secured with [Azure Active Directory](https://azure.microsoft.com/services/active-directory/). 
 
@@ -49,7 +52,7 @@ There are some restrictions to be aware of:
 
 * The Power Query (for example, Power BI) client will only request a single scope: `user_impersonation`. This scope must be available and the FHIR server cannot rely on other scopes.
 
-## Next Steps
+## Next steps
 
 In this article, you've learned how to use the Power Query connector for FHIR authentication features. Next, explore query folding.
 
