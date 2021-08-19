@@ -1,70 +1,65 @@
-﻿---
-title: Power Query SumTotal connector
-description: Provides basic information and prerequisites for the SumTotal connector, and outlines limitations and issues.
-author: bezhan-msft
-ms.service: powerquery
-ms.topic: conceptual
-ms.date: 5/25/2021
-ms.author: bezhan
-LocalizationGroup: reference
+
+
 ---
 
-# SumTotal (Beta)
-
->[!Note]
->The following connector article is provided by SumTotal, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the SumTotal website and use the support channels there.
+# SumTotal PowerBI Connector
 
 ## Summary
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | Beta |
-| Products | Power BI (Datasets) |
-| Authentication types | OAuth 2.0 |
-| Function Reference Documentation | - |
+| Release State | General Availability |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Dynamics 365 Customer Insights |
+| Authentication types | SumTotal credentials via OAuth2.0 |
+| Function Reference Documentation | Web.Conents <br> Table.ToNavigationTable <br>Table.FromRecords <br> Json.Document|
 | | |
 
 ## Prerequisites
 
-You must have a SumTotal hosted environment with standard permissions to access the portal, and read permissions to access data in tables.
+You must have a SumTotal hosted environment with standard permissions to access the portal, and read permissions to access data within tables.
 
 ## Capabilities supported
 
-* Import
+* Query Multiple OData endpoints
+* Create rich and visual reporting via query data
+* Advanced
+   * Optionally filter records by RowVersionId parameter to get incremental data
 
-## Finding your SumTotal hosted URL
+## Finding your Sumtotal Hosted URL
 
-Copy the SumTotal hosted root URL in full. This root URL is the unique URL specific to your instance. The URL will be in the format of **https://\<*yourdomain*>.sumtotal.host/**. Make sure not to copy the rest of the URL. Keep this URL somewhere handy so you can use it later.
+Copy the SumTotal hosted root URL in full. This root URL is the unique URL specific to customer. The URL will be in the format of **https://\<*yourcustomerdomain*>.sumtotal.host/**. Make sure not to copy the rest of the URL. Keep this URL somewhere handy so you can use it later.
 
 ## Connect to SumTotal BI from Power BI Desktop
 
->[!NOTE]
->The Power Query SumTotal connector is currently only suited towards OData API endpoints. For more information, see the [SumTotal OData API specification](https://marketplace.sumtotalsystems.com/Home/ODataAPI).
+>[Note]
+> The Power Query SumTotal connector is currently only suited towards OData API endpoints. For more information, go to [SumTotal's OData API functionality](#https://marketplace.sumtotalsystems.com/Home/ODataAPI).
 
 To connect to SumTotal from Power BI Desktop:
 
-1. In the **Get Data** experience, select **SumTotal** in the **Other** category, and then select **Connect**.
+1. Select **Get data** from the **Home** tab.
 
-2. Enter the server URL address of the data you want to load.
+2. In the **Get Data** dialog box, select **Other > SumTotal**, and then select **Connect**.
 
-   >[!NOTE]
-   >You'll be prompted with a script error; this is expected and loads the JS/CSS scripts that the login form uses. Select **Yes**.
+![alt text](https://marketplace.sumtotalsystems.com/Content/Product/38/media/b642fae5-f7f9-49b3-8e16-25c3cb3373ec.png)
 
-3. When the table is loaded in **Navigator**, you'll be presented with the list of OData API entities that are currently supported by the connector. You can select to load one or multiple entities.
+3. Enter the server URL address of the data you want to load.
 
-4. When you've finished selecting entities, select **Load** to load the data directly in Power BI desktop, or select **Transform Data** to transform the data.
+**NOTE"** You will be prompted with a Script Error popup, this is to load JS/CSS scripts the login form uses, Click Yes.
 
->[!NOTE]
->If this is the first time you're connecting to this site, select **Sign in** and input your credentials. Then select **Connect**.
+4. When the table is loaded in the **Navigator** dialog box, you will be presented with the list of OData API entities that are currently supported by the connector, you can select one or multiple entities.
 
-## Known issues and limitations
+  When you've finished selecting entities , select **Load** or  **Transform Data**.
 
-This section describes any limitations or considerations of the SumTotal connector.
+**NOTE:** If this is the first time you're connecting to this site, 
+select **Sign in** and input your credentials. Then select **Connect**.
+
+## Limitations and issues
 
 ### SumTotal OData API performance and throttling limits
 
-For information about OData API performance and throttling limits for SumTotal connections, see the [SumTotal's OData API specification](https://marketplace.sumtotalsystems.com/Home/ODataAPI) under the **Important Notes** section. These limitations apply to both the SumTotal connector (which uses the OData API) and the 'actual' OData Hosted API when accessing the same endpoints.
+For information about OData API performance and throttling limits for SumTotal connections, go to [SumTotal's OData API functionality](#https://marketplace.sumtotalsystems.com/Home/ODataAPI)  under 'Important Notes' section. These limitations apply to both the SumTotal connector (which uses the OData API as an implementation detail) and the 'actual' OData Hosted API when accessing the same endpoints.
 
 ### Table retrieval rate
 
-Most default tables are retrieved at approximately 1000 rows per second using the SumTotal connector. If you require faster retrieval rates, consider using the **RowVersionId** filter parameter. You can pass this parameter directly to the environment hosted URL by appending it as a query string parameter, for example, **https://{host}.sumtotalystems.com/?rowVersionId=1234**.
+As a guideline, most default tables will be retrieved at a rate of approximately 1000 rows per second using the SumTotal connector. If you require faster retrieval rates, consider using the RowVersionId filter Parameter that you can pass directly into the environment hosted URL by appending it as a query string parameter. 
+Full url example with rowVersionId parameter: https://{host}.sumtotalystems.com/?rowVersionId=1234
