@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for the connector, and
 author: cpopell
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 1/9/2020
+ms.date: 8/20/2021
 ms.author: gepopell
 LocalizationGroup: reference
 ---
@@ -36,22 +36,64 @@ Before you get started, make sure you've properly configured the connection in t
   * SQL statement
   * Supported row reduction clauses
 
-## Connect to an ODBC data source
+## Connect to an ODBC data source from Power Query Desktop
 
 To make the connection, take the following steps:
 
-1. From the Power Query **Get Data** dialog (or **Data** tab in the Excel ribbon), select **Database > ODBC**.
+1. Select the **ODBC** option in the **Get Data** selection.
 
-   ![ODBC connection builder in Power BI.](../images/ODBCbuilder.png)
+2. In **From ODBC**, select the data source name (DSN) from the **Data source name (DSN)** drop-down box. In this example, a DSN name of **SQL Server Database** was selected.
 
-2. In the **From ODBC** dialog that appears, provide the connection string (optional).
+   ![ODBC connection builder in Power Query Desktop.](./media/odbc/ODBCbuilder.png)
 
-   You may also choose to provide a SQL statement, depending on the capabilities of the driver. Ask your vendor for more information.
+   You can also choose **Advanced options** to enter more optional connection information. More information: [Connect using advanced options](#connect-using-advanced-options)
 
-3. To enable folding support for [Table.FirstN](/powerquery-m/table-firstn), select **Detect** to find supported row reduction clauses, or select from one of the drop down options.
+3. Once you're done, select **OK**.
 
-   ![Drop down options: Top, Limit, Limit and Offset, ANSI SQL compatible.](../images/ODBCrowreduction.png)
+4. If this is the first time you are connecting to this database, select the authentication type and input your credentials when prompted.
 
-   This option is not applicable when using a native SQL statement.
+   ![ODBC authentication in Power Query Desktop](./media/odbc/odbc-authentication.png)
 
-4. Once you're done, select **Connect**. Select the authentication type and input those credentials in the dialogue when prompted.
+   The authentication types available are:
+   * **Default or Custom**: Don't specify any credentials or only include connection string properties.
+   * **Windows**: Select this authentication type if you want to connect using Windows authentication. Optionally, include any connection string properties you need.
+   * **Database**: Use a username and password to access a data source with an ODBC driver. Optionally, include any connection string properties you need. This is the default selection.
+
+   More information: [Authentication with a data source](../connectorauthentication.md)
+
+5. Once you are done, select **Connect**.
+
+6. In the **Navigator**, select the database information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
+
+   ![navigator](./media/odbc/odbc-desktop-navigator.png)
+
+## Connect to an ODBC data source from Power Query Online
+
+To make the connection, take the following steps:
+
+1. From the **Data sources** page, select **ODBC**.
+
+2. In the ODBC page, enter your ODBC connection string. In this example, the connection string is `dsn=SQL Server Database`.
+
+   ![Image of ODBC page, with the connection string set to the SQL Server database](./media/odbc/odbc-online-connection.png)
+
+3. If needed, select an on-premises data gateway in **Data gateway**.
+
+4. Choose the authentication kind you'll use to sign in, and then enter your credentials.
+
+5. Select **Next**.
+
+6. In the **Navigator**, select the database information you want, and then select **Transform data** to continue transforming the data in Power Query Editor.
+
+## Connect using advanced options
+
+Power Query provides a set of advanced options that you can add to your query if needed.
+
+![ODBC advanced options](./media/odbc/odbc-advanced-options.png)
+
+| Advanced option | Description |
+| --------------- | ----------- |
+| Connection string (non-credential properties) | ((This appears to be option in Power Query Desktop but required in Power Query Online)) |
+| SQL statement | To provide a SQL statement, depending on the capabilities of the driver. Ask your vendor for more information, or go to [Import data from a database using native database query](../native-database-query.md). |
+| Supported row reduction clauses | To enable folding support for [Table.FirstN](/powerquery-m/table-firstn). Select **Detect** to find supported row reduction clauses, or select from one of the drop down options (TOP, LIMIT and OFFSET, LIMIT, or ANSI SQL-compatible). This option is not applicable when using a native SQL statement. Only available in Power Query Desktop. |
+| | |
