@@ -18,7 +18,7 @@ This article explains authenticated access to FHIR servers using the Power Query
 
 ## Anonymous access
 
-There are a number of [publicly accessible FHIR servers](https://wiki.hl7.org/index.php?title=Publicly_Available_FHIR_Servers_for_testing). To enable testing with these public servers, the Power Query connector for FHIR supports the "Anonymous" authentication scheme. For example to access the public https://vonk.fire.ly server:
+There are many [publicly accessible FHIR servers](https://wiki.hl7.org/index.php?title=Publicly_Available_FHIR_Servers_for_testing). To enable testing with these public servers, the Power Query connector for FHIR supports the "Anonymous" authentication scheme. For example to access the public https://vonk.fire.ly server:
 
 1. Enter the URL of the public Vonk server.
 
@@ -42,15 +42,15 @@ There are some restrictions to be aware of:
 
 * The expected Audience for the FHIR server **must** be equal to the base URL of the FHIR server. For the [Azure API for FHIR](/azure/healthcare-apis/), you can set this when you [provision the FHIR service](/azure/healthcare-apis/fhir-paas-portal-quickstart#additional-settings) or later in the portal.
 
-* If your FHIR server does not return a `WWW-Authenticate` challenge header with an `authorization_uri` field on failed authorization, you must use an organizational account to sign in. You cannot use a guest account in your active directory tenant. For the Azure API for FHIR, you **must** use an Azure Active Directory organizational account.
+* If your FHIR server doesn't return a `WWW-Authenticate` challenge header with an `authorization_uri` field on failed authorization, you must use an organizational account to sign in. You can't use a guest account in your active directory tenant. For the Azure API for FHIR, you **must** use an Azure Active Directory organizational account.
 
-* If your FHIR service is not the Azure API for FHIR (for example, if you are running the [open source Microsoft FHIR server for Azure](https://github.com/Microsoft/fhir-server)), you will have registered an [Azure Active Directory resource application](/azure/healthcare-apis/register-resource-azure-ad-client-app) for the FHIR server. You must pre-authorize the Power BI client application to be able to access this resource application.
+* If your FHIR service isn't the Azure API for FHIR (for example, if you're running the [open source Microsoft FHIR server for Azure](https://github.com/Microsoft/fhir-server)), you'll have registered an [Azure Active Directory resource application](/azure/healthcare-apis/register-resource-azure-ad-client-app) for the FHIR server. You must pre-authorize the Power BI client application to be able to access this resource application.
 
     ![Pre Authorize Power BI.](FHIR-PreAuthorize-PowerBI.png)
 
-    The client Id for the Power BI client is `a672d62c-fc7b-4e81-a576-e60dc46e951d`.
+    The client ID for the Power BI client is `a672d62c-fc7b-4e81-a576-e60dc46e951d`.
 
-* The Power Query (for example, Power BI) client will only request a single scope: `user_impersonation`. This scope must be available and the FHIR server cannot rely on other scopes.
+* The Power Query (for example, Power BI) client will only request a single scope: `user_impersonation`. This scope must be available and the FHIR server can't rely on other scopes.
 
 ## Next steps
 
