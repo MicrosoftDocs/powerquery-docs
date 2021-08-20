@@ -84,7 +84,7 @@ Running your query for the first time results in a credential error. In Power Qu
 
 Select the **Anonymous** credential type, and then select **Set Credential**.
 
-![Credential prompt.](../../../images/credentialPrompt.png)
+![Image of M Query Output dialog, with the Errors tab selected, and the Data Source Path filled in and the Credential Type set to Anonymous.](../../../images/credentialPrompt.png)
 
 Select **OK** to close the dialog, and then select the **Start** button once again. You see a query execution status dialog, and finally a Query Result table showing the data returned from your query.
 
@@ -137,7 +137,7 @@ Double click on the function name and the function invocation dialog will appear
 
 Since this is the first time you are accessing this data source, you'll receive a prompt for credentials. Check that the shortest URL is selected, and then select **Connect**.
 
-![Credential prompt.](../../../images/trippin1Creds.png)
+![Image of credential prompt set to Anonymous and the level setting set to the shortest URL.](../../../images/trippin1Creds.png)
 
 Notice that instead of getting a simple table of data, the navigator appears. This is because the [OData.Feed](/powerquery-m/odata-feed) function returns a table with special metadata on top of it that the Power Query experience knows to display as a navigation table. This walkthrough will cover how you can create and customize your own navigation table in a future lesson.
 

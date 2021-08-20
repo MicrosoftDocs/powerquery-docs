@@ -57,7 +57,7 @@ To connect to a SharePoint folder:
 
 4. When you select the SharePoint folder you want to use, the file information about all of the files in that SharePoint folder are displayed. In addition, file information about any files in any subfolders is also displayed.
 
-   ![Folder information.](./media/sharepoint-folder/folder-info.png)
+   ![Image of the Navigator showing the folder information.](./media/sharepoint-folder/folder-info.png)
 
 5. Select **Combine & Transform Data** to combine the data in the files of the selected SharePoint folder and load the data into the Power Query Editor for editing. Or select **Combine & Load** to load the data from all of the files in the SharePoint folder directly into your app.
 
@@ -84,7 +84,7 @@ To connect to a SharePoint folder:
 
 6. When you select the SharePoint folder you want to use, the file information about all of the files in that SharePoint folder are displayed. In addition, file information about any files in any subfolders is also displayed.
 
-   ![Folder information.](./media/sharepoint-folder/folder-info-online.png)
+   ![Image of the online Navigator showing the folder information.](./media/sharepoint-folder/folder-info-online.png)
 
 7. Select **Combine** to combine the data in the files of the selected SharePoint folder and load the data into the Power Query Editor for editing.
 

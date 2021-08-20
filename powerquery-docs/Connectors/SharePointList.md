@@ -45,7 +45,7 @@ To connect to a SharePoint list:
 
 2. Paste the SharePoint site URL you copied in [Determine the site URL](#determine-the-site-url) to the **Site URL** field in the open dialog box.
 
-   ![Folder selection.](./media/sharepoint-list/sharepointlisturl.png)
+   ![Image of the SharePoint lists dialog with the Site URL filled in.](./media/sharepoint-list/sharepointlisturl.png)
 
    If the URL address you enter is invalid, a ![Warning icon.](../images/webwarning.png) warning icon will appear next to the **Site URL** textbox.
 
@@ -69,7 +69,7 @@ To connect to a SharePoint list:
 
 2. Paste the SharePoint site URL you copied in [Determine the site URL](#determine-the-site-url) to the **Site URL** field in the open dialog box.
 
-   ![Folder selection.](./media/sharepoint-list/sharepoint-list-url-online.png)
+   ![Image of the online SharePoint list page with the Site URL information filled in.](./media/sharepoint-list/sharepoint-list-url-online.png)
 
 3. Enter the name of an on-premises data gateway if needed.
 

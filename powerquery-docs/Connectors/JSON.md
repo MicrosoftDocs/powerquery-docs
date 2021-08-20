@@ -34,13 +34,13 @@ To load a local JSON file:
 
 1. Select the **JSON** option in the **Get Data** selection. This selection launches a local file browser where you can select your JSON file.
 
-   ![JSON file selection.](./media/json/json-get-data.png)
+   ![Image of the file browser with two JSON files to choose from.](./media/json/json-get-data.png)
 
 2. Select **Open** to open the file.
 
 Loading the JSON file will automatically launch the Power Query Editor. Power Query uses automatic table detection to seamlessly flatten the JSON data into a table. From the editor, you can then continue to transform the data if you want, or you can just close and apply.
 
-![Convert to a table.](./media/json/convert-table.png)
+![Image of the Power Query editor with the JSON data flattened into a table.](./media/json/convert-table.png)
 
 ## Load a local JSON file from Power Query Online
 
@@ -50,7 +50,7 @@ To load a local JSON file:
 
 2. Enter the path to the local JSON file.
 
-   ![JSON selection from online service.](./media/json/connect-service.png)
+   ![Image of the JSON connection setting dialog from the online service, with a file path, data gateway, and Windows authentication kind displayed.](./media/json/connect-service.png)
 
 3. Select an on-premises data gateway from **Data gateway**.
 
@@ -60,7 +60,7 @@ To load a local JSON file:
 
 Loading the JSON file will automatically launch the Power Query Editor. Power Query uses automatic table detection to seamlessly flatten the JSON data into a table. From the editor, you can then continue to transform the data if you want, or you can just save and close to load the data.
 
-![Convert to a table.](./media/json/convert-table-online.png)
+![Image of the online Power Query editor with the JSON data flattened into a table.](./media/json/convert-table-online.png)
 
 ## Load from the web
 
@@ -70,7 +70,7 @@ To load a JSON file from the web, select the [Web connector](./web/web.md), ente
 
 If you see the following message, it might be because the file is invalid, for example, it's not really a JSON file, or is malformed. Or you might be trying to load a JSON Lines file.
 
-![Unable to connect message.](./media/json/unable-connect.png)
+![Image of the unable to connect message.](./media/json/unable-connect.png)
 
 If you're trying to load a JSON Lines file, the following sample M code converts all JSON Lines input to a single flattened table automatically:
 
