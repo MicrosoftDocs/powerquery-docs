@@ -38,11 +38,9 @@ To load a local JSON file:
 
 2. Select **Open** to open the file.
 
-Loading the JSON file will automatically launch the Power Query Editor. From the editor, you can transform the data if you want, or you can just close and apply.
+Loading the JSON file will automatically launch the Power Query Editor. Power Query uses automatic table detection to seamlessly flatten the JSON data into a table. From the editor, you can then continue to transform the data if you want, or you can just close and apply.
 
 ![Convert to a table.](./media/json/convert-table.png)
-
-JSON data might not always be imported into Power Query as a table. However, you can always use the available Power Query ribbon transforms to convert it to a table.
 
 ## Load a local JSON file from Power Query Online
 
@@ -58,11 +56,11 @@ To load a local JSON file:
 
 4. If authentication is required, enter your credentials.
 
-Loading the JSON file will automatically launch the Power Query Editor. From the editor, you can transform the data if you want, or you can just close and apply.
+5. Select **Next**.
 
-![Convert to a table.](./media/json/convert-table.png)
+Loading the JSON file will automatically launch the Power Query Editor. Power Query uses automatic table detection to seamlessly flatten the JSON data into a table. From the editor, you can then continue to transform the data if you want, or you can just save and close to load the data.
 
-JSON data might not always be imported into Power Query as a table. However, you can always use the available Power Query ribbon transforms to convert it to a table.
+![Convert to a table.](./media/json/convert-table-online.png)
 
 ## Load from the web
 
