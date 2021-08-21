@@ -110,9 +110,10 @@ However, the steps that follow in your query are the steps or transforms that th
 
 Depending on how the query is structured, there could be three possible outcomes to the query folding mechanism:
 
-* **No query folding**:  When the query contains transformations that can't be translated to the native query language of your data source, either because the transformations aren't supported or the connector doesn't support query folding. For this case, Power Query gets the raw data from your data source and uses the Power Query engine to achieve your desired output by processing the required transforms at the Power Query engine level.
-* **Partial query folding**: When only a few transformations in your query, and not all, can be pushed back to the data source. This means that a subset of your transformations is done at your data source and the rest of your query transformations occur in the Power Query engine.
 * **Full query folding**: When all of your query transformations get pushed back to the data source and minimal processing occurs at the Power Query engine. 
+* **Partial query folding**: When only a few transformations in your query, and not all, can be pushed back to the data source. This means that a subset of your transformations is done at your data source and the rest of your query transformations occur in the Power Query engine.
+* **No query folding**:  When the query contains transformations that can't be translated to the native query language of your data source, either because the transformations aren't supported or the connector doesn't support query folding. For this case, Power Query gets the raw data from your data source and uses the Power Query engine to achieve your desired output by processing the required transforms at the Power Query engine level.
+
 
 >[!NOTE]
 >The Query folding mechanism is primarily available in connectors for structured data sources such as, but not limited to, [Microsoft SQL Server](Connectors/sqlserver.md) and [OData Feed](Connectors/odatafeed.md). During the optimization phase, the engine may sometimes reorder steps in the query.
@@ -129,11 +130,24 @@ Imagine a scenario where, using the [Adventure Works LT2019 database](https://do
 
 This article will showcase three ways to achieve the same output with different levels of query folding ranging from no query folding to full query folding.
 
+#### Full query folding
+
+* Order descending by timestamp or ID
+* Keep top 20 rows
+* Keep columns
+* Simple transform
+
+#### Partial query folding
+
+* Keep Columns
+* Order ascending by timestamp or ID
+* Keep bottom 20 rows
+* Simple transform
+
 #### No query folding
 
 >[!IMPORTANT]
 >Queries that rely solely on unstructured data sources or that don't have a compute engine, such as CSV or Excel files, don't have query folding capabilities. This means that Power Query evaluates all the required data transformations using the Power Query engine.
-
 
 After connecting to your database and navigating to the **SalesOrderHeader** table, you select the **Keep bottom rows** transform found inside the Reduce rows group of the home tab as shown in the next image.
 
@@ -160,20 +174,9 @@ This yields exactly the output that you were tasked with. However, checking the 
 
 You can right click the last step of your query, the one named *Kept bottom rows*, and select the option that reads **Query plan**. The goal of the Query plan is to showcase which transforms will be evaluated by the Power Query engine and which transforms could be offloaded to the data source. You can learn more about the **Query plan feature** from the [official documentation article](https://docs.microsoft.com/power-query/query-plan).
 
-#### Partial query folding
+![Query plan for the query created showing multiple nodes, two of which are within a rectangle and these two nodes represent the Kept bottom rows and Remove other columns transforms](media/query-folding-basics/no-folding-query-plan.png)
 
-* Keep Columns
-* Order ascending by timestamp or ID
-* Keep bottom 20 rows
-* Simple transform
-
-#### Full query folding
-
-* Order descending by timestamp or ID
-* Keep top 20 rows
-* Keep columns
-* Simple transform
-
+Each card in the previous image is called a node and it represents every process that needs to happen (from left to right) in order for your query to be evaluated.Some of those nodes can be evaluated at your data source while others, like the two nodes within the rectangle of the previous image, will be evaluated using the Power Query engine. These two nodes represent the two transforms that you added, *Kept bottom rows* and *Remove other columns*, whilst the rest of the node represent operations that will happen at your data source level.
 
 ### Query performance comparison
 
