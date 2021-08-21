@@ -106,7 +106,7 @@ When you use the [Get Data experience](get-data-experience.md), Power Query guid
 However, the steps that follow in your query are the steps or transforms that the query folding mechanism will attempt to optimize and check if they can be offloaded to your data source instead of them being processed using the Power Query engine. 
 
 >[!IMPORTANT]
-> All data source functions, commonly showcased as the *Source* step of a query, will query the data to the data source in its native language. The query folding mechanism applies to all transforms applied to your query after your data source function so they can be translated and combined into a single data source query or as many transforms that can be offloaded to the data source.
+> All data source functions, commonly showcased as the *Source* and or *Navigation* steps of a query, will query the data to the data source in its native language. The query folding mechanism applies to all transforms applied to your query after your data source function so they can be translated and combined into a single data source query or as many transforms that can be offloaded to the data source.
 
 Depending on how the query is structured, there could be three possible outcomes to the query folding mechanism:
 
@@ -154,6 +154,11 @@ Lastly, now inside the **Choose columns** dialog, you select the columns *SalesO
 
 ![Selecting the columns SalesOrderID, SalesOrderNumber, and AccountNumber inside the Choose columns dialog](media/query-folding-basics/choose-columns-dialog.png)
 
+This yields exactly the output that you were tasked with. However, checking the applied steps pane, you can notice that the step folding indicators are showing that the transforms that you added, Kept bottom rows and choose columns (named as Removed other columns), are marked as steps that will be evaluated outside the data source or, in other words, at the Power Query engine.
+
+![Applied steps pane for the query with the step folding indicators showcasing that the Kept bottom rows and the Removed other columns steps are marked as steps that will be evaluated outside the data source](media/query-folding-basics/no-folding-steps.png)
+
+You can right click the last step of your query, the one named *Kept bottom rows*, and select the option that reads **Query plan**. The goal of the Query plan is to showcase which transforms will be evaluated by the Power Query engine and which transforms could be offloaded to the data source. You can learn more about the **Query plan feature** from the [official documentation article](https://docs.microsoft.com/power-query/query-plan).
 
 #### Partial query folding
 
