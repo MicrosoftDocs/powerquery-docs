@@ -132,10 +132,35 @@ This article will showcase three ways to achieve the same output with different 
 
 #### Full query folding
 
-* Order descending by timestamp or ID
-* Keep top 20 rows
-* Keep columns
-* Simple transform
+After connecting to your database and navigating to the **SalesOrderHeader** table, you start by selecting the columns that you want to keep from your table. You select the **Choose columns** transform found inside the *Manage columns* group from the Home tab which will help you to explicitly select the columns that you want to keep from your table and remove the rest.
+
+![Selecting the choose columns transform found inside the Manage columns group from the Home tab](media/query-folding-basics/choose-columns-ui.png)
+
+Inside the **Choose columns** dialog, you select the columns *SalesOrderID*, *SalesOrderNumber*, and *AccountNumber* and click the OK button.
+
+![Selecting the columns SalesOrderID, SalesOrderNumber, and AccountNumber inside the Choose columns dialog](media/query-folding-basics/choose-columns-dialog.png)
+
+You know create a logic that will sort the table to have the last orders at the top. You select the *SalesOrderID* column, which is the primary key and incremental sequence or index of the table, and sort the table only using this in descending order right from the auto-filter menu inside the data preview view for the column.
+
+![](descending)
+
+Next, you select the table contextual menu from inside the data preview view and choose the *Keep top rows* transform.
+
+![](keep top rows)
+
+Inside the *Keep top rows* dialog, you enter the value twenty and then click the OK button.
+
+![](keep top rows dialog)
+
+This yields exactly the output that you were tasked with. When checking the applied steps pane, you can notice that the step folding indicators are showing that the transforms that you added, choose columns (named as Removed other columns), sorted rows and Kept top rows, are marked as steps that will be evaluated at the data source.
+
+![](media/query-folding-basics/full-folding-steps.png)
+
+You can right click the last step of your query, the one named *Kept top rows*, and select the option that reads **Query plan**. The goal of the Query plan is to showcase which transforms will be evaluated by the Power Query engine and which transforms could be offloaded to the data source. You can learn more about the **Query plan feature** from the [official documentation article](https://docs.microsoft.com/power-query/query-plan)
+
+![](media/query-folding-basics/full-folding-query-plan.png)
+
+///need to explain what this means and why it's good to have compact query plans
 
 #### Partial query folding
 
@@ -172,7 +197,7 @@ This yields exactly the output that you were tasked with. However, checking the 
 
 ![Applied steps pane for the query with the step folding indicators showcasing that the Kept bottom rows and the Removed other columns steps are marked as steps that will be evaluated outside the data source](media/query-folding-basics/no-folding-steps.png)
 
-You can right click the last step of your query, the one named *Kept bottom rows*, and select the option that reads **Query plan**. The goal of the Query plan is to showcase which transforms will be evaluated by the Power Query engine and which transforms could be offloaded to the data source. You can learn more about the **Query plan feature** from the [official documentation article](https://docs.microsoft.com/power-query/query-plan).
+You can right click the last step of your query, the one named *Kept bottom rows*, and select the option that reads **Query plan**.
 
 ![Query plan for the query created showing multiple nodes, two of which are within a rectangle and these two nodes represent the Kept bottom rows and Remove other columns transforms](media/query-folding-basics/no-folding-query-plan.png)
 
@@ -186,7 +211,7 @@ Here's a section to compare all 3 possible outcomes.
 
 * Follow the best practices when creating a new query as stated in [Best practices in Power Query](best-practices.md).
 * Use the step folding indicators to check which steps are preventing your query from folding and re-order them if necessary to increase folding.
-* Use the query plan to determine which transforms are happening at the Power Query engine for that particular step and consider re-arranging your query to check the updated query plan. For data sources that support folding, any nodes in the query plan other than Value.NativeQuery and datas ource access nodes represent transforms that didn’t fold.
+* Use the query plan to determine which transforms are happening at the Power Query engine for that particular step and consider re-arranging your query to check the updated query plan. For data sources that support folding, any nodes in the query plan other than Value.NativeQuery and data source access nodes represent transforms that didn’t fold.
 * Check the **View Native Query** option is always recommended to make sure that your query can be folded back to the data source. If your step disables this option, you know that you've created a step that stops query folding. 
 * Use the query diagnostics tool to your advantage and to better understand the requests being sent to your data source when query folding capabilities are available for the connector.
 * When combining data sourced from the use of multiple connectors, Power Query tries to push as much work as possible to both of the data sources while complying with the privacy levels defined for each data source. 
