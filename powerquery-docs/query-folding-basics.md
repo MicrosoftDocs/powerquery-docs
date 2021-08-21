@@ -162,12 +162,31 @@ You can right click the last step of your query, the one named *Kept top rows*, 
 
 ///need to explain what this means and why it's good to have compact query plans
 
+Below is the full M script for the query created.
+
+```
+let
+  Source = Sql.Database(ServerName, DatabaseName),
+  Navigation = Source{[Schema = "SalesLT", Item = "SalesOrderHeader"]}[Data],
+  #"Removed other columns" = Table.SelectColumns(Navigation, {"SalesOrderID", "SalesOrderNumber", "AccountNumber"}),
+  #"Sorted rows" = Table.Sort(#"Removed other columns", {{"SalesOrderID", Order.Descending}}),
+  #"Kept top rows" = Table.FirstN(#"Sorted rows", 20)
+in
+  #"Kept top rows"
+```
+
 #### Partial query folding
 
-* Keep Columns
-* Order ascending by timestamp or ID
-* Keep bottom 20 rows
-* Simple transform
+```
+let
+  Source = Sql.Database(ServerName, DatabaseName),
+  Navigation = Source{[Schema = "SalesLT", Item = "SalesOrderHeader"]}[Data],
+  #"Removed other columns" = Table.SelectColumns(Navigation, {"SalesOrderID", "SalesOrderNumber", "AccountNumber"}),
+  #"Sorted rows" = Table.Sort(#"Removed other columns", {{"SalesOrderID", Order.Ascending}}),
+  #"Kept bottom rows" = Table.LastN(#"Sorted rows", 20)
+in
+  #"Kept bottom rows"
+  ```
 
 #### No query folding
 
@@ -202,6 +221,18 @@ You can right click the last step of your query, the one named *Kept bottom rows
 ![Query plan for the query created showing multiple nodes, two of which are within a rectangle and these two nodes represent the Kept bottom rows and Remove other columns transforms](media/query-folding-basics/no-folding-query-plan.png)
 
 Each card in the previous image is called a node and it represents every process that needs to happen (from left to right) in order for your query to be evaluated.Some of those nodes can be evaluated at your data source while others, like the two nodes within the rectangle of the previous image, will be evaluated using the Power Query engine. These two nodes represent the two transforms that you added, *Kept bottom rows* and *Remove other columns*, whilst the rest of the node represent operations that will happen at your data source level.
+
+Below is the full M script for the query created:
+
+```
+let
+  Source = Sql.Database(ServerName, DatabaseName),
+  Navigation = Source{[Schema = "SalesLT", Item = "SalesOrderHeader"]}[Data],
+  #"Kept bottom rows" = Table.LastN(Navigation, 20),
+  #"Removed other columns" = Table.SelectColumns(#"Kept bottom rows", {"SalesOrderID", "SalesOrderNumber", "AccountNumber"})
+in
+  #"Removed other columns"
+```
 
 ### Query performance comparison
 
