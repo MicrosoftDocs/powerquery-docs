@@ -74,23 +74,23 @@ Some Power Query connectors offer end users the ability to specify [native datab
 
 **Scenario**: An end user can run custom SQL statements through their ODBC-based connector. The statement would be run in Import Mode, and there is no need for the transformations to fold. 
 
-**Status**: This feature is not currently supported in our extensibility SDK. The product team is investigating the feasibility of this scenario. Without the extensibility of the security model, we do not recommend connectors expose native query functionality unless through one of the workarounds below. 
+**Status**: This feature isn't currently supported in our extensibility SDK. The product team is investigating the feasibility of this scenario. Without the extensibility of the security model, we don't recommend connectors expose native query functionality unless through one of the workarounds below.
 
-**Workarounds**: If the data source is able to use the generic ODBC connector which supports native database query, this is recommended. However, there may be cases where the generic ODBC connectivity scenario may not work, for example, if authentication needs to be implemented at the connector level.
+**Workarounds**: If the data source is able to use the generic ODBC connector that currently supports native database query, this use is recommended. However, there may be cases where the generic ODBC connectivity scenario might not work, for example, if authentication needs to be implemented at the connector level.
 
-In those cases, the connector developer can opt to use generic ODBC functionality with the **Odbc.Query** function instead of a custom connector. Unlike **Odbc.DataSource**, which allows the custom connector to override driver settings and improve query folding behavior, **Odbc.Query** simply runs the query as provided and does not benefit from the custom connector wrapper. 
+In those cases, the connector developer can opt to use generic ODBC functionality with the **Odbc.Query** function instead of a custom connector. Unlike **Odbc.DataSource**, which allows the custom connector to override driver settings and improve query folding behavior, **Odbc.Query** simply runs the query as provided and doesn't benefit from the custom connector wrapper.
 
-If the data source can enforce read-only access and you would like to proceed with exposing **Odbc.Query** functionality for your connector, the recommendation is to provide a second data source function with its own Publish record, and have two entries in the Get Data dialog (**DataSource.Database, DataSource.Query**). The **Odbc.Query** function would only support Import mode in Power BI, not Direct Query. The distinction is recommended as combining **Odbc.Query** (which does not support query folding) and **Odbc.DataSource** (which does support query folding) may confuse end users. Be sure to also clearly distinguish the naming of your two Publish records to clearly communicate to users which function to use for native query. 
+If the data source can enforce read-only access and you'd like to proceed with exposing **Odbc.Query** functionality for your connector, we recommend that you provide a second data source function with its own Publish record, and have two entries in the Get Data dialog (**DataSource.Database, DataSource.Query**). The **Odbc.Query** function would only support Import mode in Power BI, not Direct Query. The distinction is recommended, since combining **Odbc.Query** (which does'nt support query folding) and **Odbc.DataSource** (which does support query folding) may confuse end users. Also be sure to clearly distinguish the naming of your two Publish records to clearly communicate to users which function to use for native query.
 
-If the data source does not enforce a read-only access, the connector must also leverage our [native database query security model](native-database-query.md#native-database-query-security) feature. Note that the Native Database Query prompt does not work in the Visual Studio SDK. When you try to run `Extension.Query` in Visual Studio, you'll receive an error.
+If the data source doesn't enforce a read-only access, the connector must also leverage our [native database query security model](native-database-query.md#native-database-query-security) feature. Note that the Native Database Query prompt doesn't work in Visual Studio SDK. When you try to run `Extension.Query` in Visual Studio, you'll receive an error.
 
 ```
 The evaluation requires a permission that has not been provided. Data source kind: 'Extension'. Data source path: 'test'. Permission kind: 'Native Query'
 ```
 
-You will need to conduct testing in Power BI Desktop.
+You'll need to conduct testing in Power BI Desktop.
 
-Below is a code example of a connector which exposes two functions, one which accepts a native query and one which doesn't. 
+The following connector code example exposes two functions, one that accepts a native query and one that doesn't.
 
 ```
 section Extension;
@@ -119,12 +119,12 @@ Extension = [
 ];
 ```
 
-When evaluated, if the parameter names of the data source function can be mapped to the parameter names of the `NativeQuery` function on the data source definition, and the `NativeQuery` function returns text, then the call site will generate a native query prompt. In this case, `Extension.Query("server", "select 1")` will generate a challenge for the native query text `select 1` while `Extension.DataSource("server")` will not generate a native query challenge.
+When evaluated, if the parameter names of the data source function can be mapped to the parameter names of the `NativeQuery` function on the data source definition, and the `NativeQuery` function returns text, then the call site generates a native query prompt. In this case, `Extension.Query("server", "select 1")` generates a challenge for the native query text `select 1`, while `Extension.DataSource("server")` won't generate a native query challenge.
 
 ### Allowing users to use Direct Query over a custom SQL statement
 
 **Scenario**: An end user can use Direct Query over native database queries. 
 
-**Status**: This feature is not currently supported in our extensibility SDK. The product team is investigating this scenario and expect that this scenario may eventually be possible for connectors with ODBC drivers and end data sources supporting ANSI SQL92 "pass through" mode. 
+**Status**: This feature is not currently supported in our extensibility SDK. The product team is investigating this scenario and expect that this scenario may eventually be possible for connectors with ODBC drivers and end data sources supporting ANSI SQL92 "pass through" mode.
 
-**Workarounds**: None. 
+**Workarounds**: None.
