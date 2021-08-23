@@ -124,7 +124,7 @@ This article provides some example scenarios for each of the possible outcomes f
 
 ### Example scenario
 
-Imagine a scenario where, using the [Adventure Works LT2019 database](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-ver15&tabs=ssms) for SQL Server, you are tasked with creating a query in Power Query that connects to the **SalesOrderHeader** table and retrieves the fields *SalesOrderID*, *SalesOrderNumber*, and *AccountNumber* from the last twenty orders.
+Imagine a scenario where, using the [Wide World Importers database for Azure Synapse Analytics SQL pool](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/load-data-wideworldimportersdw), you are tasked with creating a query in Power Query that connects to the **fact_Sale** table and retrieves the fields *SalesOrderID*, *SalesOrderNumber*, and *AccountNumber* from the last twenty orders.
 
 ![Sample output table derived from the SalesOrderHeader table of the Adventure Works LT2019 database with only the last twenty orders](media/query-folding-basics/sample-output.png)
 
