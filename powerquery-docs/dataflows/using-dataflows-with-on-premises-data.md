@@ -25,15 +25,11 @@ With a gateway, you can connect to on-premises data through these connections:
 
 ## Prerequisites
 
-# [Power BI service](#tab/power-bi-service)
-
 ### Power BI service
 
 - A Power BI service account. Don't have one? [Sign up for 60 days free](/power-bi/fundamentals/service-get-started#sign-up-for-the-power-bi-service).
 
 - Administrative permissions on a gateway. These permissions are provided by default for gateways you install. Administrators can grant other people permissions for gateways.
-
-# [Power Apps](#tab/power-apps)
 
 ### Power Apps
 
@@ -45,13 +41,11 @@ With a gateway, you can connect to on-premises data through these connections:
 
 - Gateways and on-premises connections can only be created and used in the user's default environment. More information: [Working with environments and Microsoft Power Apps](/power-platform/admin/working-with-environments).
 
----
-
 ## Install a gateway
 
 You can install an on-premises data gateway directly from the online service.
 
-# [Power BI service](#tab/power-bi-service)
+### Install a gateway from Power BI service
 
 To install a gateway from Power BI service:
 
@@ -61,7 +55,7 @@ To install a gateway from Power BI service:
 
 2. Install the gateway using the instructions provided in [Install an on-premises data gateway](/data-integration/gateway/service-gateway-install.md).
 
-# [Power Apps](#tab/power-apps)
+### Install a gateway rom Power Apps
 
 To install a gateway from Power Apps:
 
@@ -76,8 +70,6 @@ To install a gateway from Power Apps:
 3. In the **On-Premises Data Gateway** section, select **Download**.
 
 4. Install the gateway using the instructions provided in [Install an on-premises data gateway](/data-integration/gateway/service-gateway-install.md).
-
----
 
 ## Use an on-premises data source in a dataflow
 
@@ -98,7 +90,7 @@ You can change the enterprise gateway used for a given dataflow and change the g
 
 ## View and manage gateway permissions
 
-# [Power BI service](#tab/power-bi-service)
+### Power BI service gateway permissions
 
 1. Select the setup button in the upper right corner of Power BI service, choose **Manage gateways**, and then select the gateway you want.
 
@@ -106,17 +98,15 @@ You can change the enterprise gateway used for a given dataflow and change the g
 
 2. To add a user to the gateway, select the **Administrators** table and enter the email address of the user you would like to add as an administrator. Using gateways in dataflows requires Admin permission on the gateway. Admins have full control of the gateway, including adding users, setting permissions, creating connections to all available data sources, and deleting the gateway.
 
-# [Power Apps](#tab/power-apps)
+### Power Apps gateway permissions
 
 1. In the left navigation pane of [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Gateways** and then select the gateway you want.
 
 2. To add a user to a gateway, select **Users**, specify a user or group, and then specify a permission level. Using gateways in dataflows requires Admin permission on the gateway. Admins have full control of the gateway, including adding users, setting permissions, creating connections to all available data sources, and deleting the gateway.
 
----
-
 ## View and manage gateway connections
 
-# [Power BI service](#tab/power-bi-service)
+### Power BI service gateway connections
 
 1. Select the setup button in the upper right corner of Power BI service, choose **Manage gateways**, and then select the gateway you want.
 
@@ -126,7 +116,7 @@ You can change the enterprise gateway used for a given dataflow and change the g
    - To add a data source to the gateway, select **Add Data Source**, enter a data source name and choose the data source type under **Data Source Settings**, and then enter the email address of the person who will use the data source.
    - To delete a gateway, select the ellipsis to the right of the gateway name and then select **Remove**.
 
-# [Power Apps](#tab/power-apps)
+### Power Apps gateway connections
 
 1. In the left navigation bar of *powerapps.com*, select **Gateways**, and then choose the gateway you want.
 
@@ -135,11 +125,9 @@ You can change the enterprise gateway used for a given dataflow and change the g
     - To share a connection, select **Share** and then add or remove users.
 
       > [!NOTE]
-      > You can only share some types of connections, such as a SQL Server connection. For more information, see [Share canvas-app resources in Power Apps](/powerapps/maker/canvas-apps/share-app-resources). <br />
+      > You can only share some types of connections, such as a SQL Server connection. For more information, see [Share canvas-app resources in Power Apps](/powerapps/maker/canvas-apps/share-app-resources).
       >
       > For more information about how to manage a connection, see [Manage canvas-app connections in Power Apps](/powerapps/maker/canvas-apps/add-manage-connections).
-
----
 
 ## Limitations
 
