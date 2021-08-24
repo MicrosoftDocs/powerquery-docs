@@ -79,14 +79,15 @@ When Power Query reads your M script, it runs it through an optimization process
 
 You can see in detail the steps that take place in this optimization process by following the below diagram:
 
-![Query evaluation diagram 1](media/query-folding-basics/diagram-2.png)
+![Query evaluation diagram 2](media/query-folding-basics/diagram-2.png)
 
 1. The M Script, found inside the Advanced Editor, is submitted to the Power Query engine alongside with other important information such as credentials and data source privacy levels.
-2. The Query folding mechanism defines what information to extract from the data source and what set of transformations will need to happen inside the Power Query engine. It sends the instructions to two other components that will take care of retrieving the data from the data source and transforming the incoming data in the Power Query engine if necessary.
-3. Once the instructions have been received by the internal components of Power Query, Power Query sends a request to the data source using a data source query.
-4. The data source receives the request from Power Query and transfers the data to the Power Query engine.
-5. Once the data is inside Power Query, the transformation engine inside Power Query (also known as mashup engine) performs the transformations that couldn't be folded back or offloaded to the data source.
-6. The results derived from the previous point are loaded to a destination.
+2. The Query folding mechanism submits metadata requests to the data source to determine the capabilities of the data source, table schemas, relationships between different entities at the data source and more. 
+3. Based on the metadata received, the query folding mechanisms determines what information to extract from the data source and what set of transformations will need to happen inside the Power Query engine. It sends the instructions to two other components that will take care of retrieving the data from the data source and transforming the incoming data in the Power Query engine if necessary.
+4. Once the instructions have been received by the internal components of Power Query, Power Query sends a request to the data source using a data source query.
+5. The data source receives the request from Power Query and transfers the data to the Power Query engine.
+6. Once the data is inside Power Query, the transformation engine inside Power Query (also known as mashup engine) performs the transformations that couldn't be folded back or offloaded to the data source.
+7. The results derived from the previous point are loaded to a destination.
 
 This is the process that happens to a Power Query query during its evaluation.
 
@@ -124,15 +125,25 @@ This article provides some example scenarios for each of the possible outcomes f
 
 ### Example scenario
 
-Imagine a scenario where, using the [Wide World Importers database for Azure Synapse Analytics SQL pool](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/load-data-wideworldimportersdw), you are tasked with creating a query in Power Query that connects to the **fact_Sale** table and retrieves the fields *SalesOrderID*, *SalesOrderNumber*, and *AccountNumber* from the last twenty orders.
+Imagine a scenario where, using the [Wide World Importers database for Azure Synapse Analytics SQL database](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/load-data-wideworldimportersdw), you are tasked with creating a query in Power Query that connects to the **fact_Sale** table, retrieves the last ten sales and only the following fields:
 
-![Sample output table derived from the SalesOrderHeader table of the Adventure Works LT2019 database with only the last twenty orders](media/query-folding-basics/sample-output.png)
+* *Sales Key* 
+* *Customer Key*
+* *Invoice Date Key*
+* *Description*
+* *Quantity*
+
+>[!NOTE]
+>For demonstration purposes, this article uses the database outlined on the tutorial on loading the Wide World Importers database into Azure Synapse Analytics with the main difference being the fact_Sales table only holding data for the year 2000 and with a total of 3644356 rows.
+>While the results might not exactly match the results that you get by following the tutorial from the Azure Synapse Analytics documentation, the goal of this article is to showcase the core concepts and impact that query folding can have in your queries.
+
+![Sample output table derived from the fact_Sales table of the Wide World Importers Azure Synapse Analytics database](media/query-folding-basics/sample-output.png)
 
 This article will showcase three ways to achieve the same output with different levels of query folding ranging from no query folding to full query folding.
 
 #### Full query folding
 
-After connecting to your database and navigating to the **SalesOrderHeader** table, you start by selecting the columns that you want to keep from your table. You select the **Choose columns** transform found inside the *Manage columns* group from the Home tab which will help you to explicitly select the columns that you want to keep from your table and remove the rest.
+After connecting to the database and navigating to the **fact_Sales** table, you start by selecting the columns that you want to keep from your table. You select the **Choose columns** transform found inside the *Manage columns* group from the Home tab which will help you to explicitly select the columns that you want to keep from your table and remove the rest.
 
 ![Selecting the choose columns transform found inside the Manage columns group from the Home tab](media/query-folding-basics/choose-columns-ui.png)
 
