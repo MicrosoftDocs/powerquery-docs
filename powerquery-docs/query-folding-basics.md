@@ -175,7 +175,7 @@ let
   Source = Sql.Database(ServerName, DatabaseName),
   Navigation = Source{[Schema = "wwi", Item = "fact_Sale"]}[Data],
   #"Kept bottom rows" = Table.LastN(Navigation, 10),
-  #"Choose columns" = Table.SelectColumns(#"Kept bottom rows", {"Sale Key", "Customer Key", "Invoice Date Key", "Description", "Quantity", "Profit"})
+  #"Choose columns" = Table.SelectColumns(#"Kept bottom rows", {"Sale Key", "Customer Key", "Invoice Date Key", "Description", "Quantity"})
 in
   #"Choose columns""
 ```
@@ -194,15 +194,15 @@ Each card in the previous image is called a node and it represents every process
 
 You can also see exactly the query that would be sent to your data source by clicking the *view details* hyperlink in the Value.NativeQuery node. 
 
-....image of the native query...
+![SQL Statement found inside the Value.NativeQuery that represents a request of all fields and records from the fact_Sales table in the database](media/query-folding-basics/no-folding-native-query.png)
 
-This query is in the native language of your data source. For this case, that language is SQL and this statement represents a query that requests all rows from the **fact_Sales** table. 
-Understanding this will help us better understand the story that the query plan tries to convey in order of the nodes which is:
+This query is in the native language of your data source. For this case, that language is SQL and this statement represents a query that requests all rows and fields from the **fact_Sales** table. 
+Understanding this will help you better understand the story that the query plan tries to convey in order of the nodes which is:
 
-* **Node1**: Connects to the database and sends metadata requests.
-* **Node2**: Power Query submits the data requests in a native SQL statement to the data source. For this case, that represents all records from the fact_Sales table.
-* **Node3**: Once Power Query receives all records from the fact_Sales table, it uses the Power Query engine to filter the table and keep only the last ten rows.
-* **Node4**: Power Query will use the output of the Node3 and apply a new transform called Table.SelectRows which selects the specific columns that you want to keep from a table.
+* **Sql.Database**: Connects to the database and sends metadata requests to understand its capabilities.
+* **Value.NativeQuery**: Power Query submits the data requests in a native SQL statement to the data source. For this case, that represents all records and fields from the fact_Sales table.
+* **Table.LastN**: Once Power Query receives all records from the fact_Sales table, it uses the Power Query engine to filter the table and keep only the last ten rows.
+* **Table.SelectColumns**: Power Query will use the output of the Node3 and apply a new transform called Table.SelectRows which selects the specific columns that you want to keep from a table.
 
 #### Full query folding
 
