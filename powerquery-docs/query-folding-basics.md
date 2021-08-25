@@ -127,11 +127,11 @@ This article provides some example scenarios for each of the possible outcomes f
 
 Imagine a scenario where, using the [Wide World Importers database for Azure Synapse Analytics SQL database](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/load-data-wideworldimportersdw), you are tasked with creating a query in Power Query that connects to the **fact_Sale** table and retrieves the last ten sales with only the following fields:
 
-* *Sales Key* 
-* *Customer Key*
-* *Invoice Date Key*
-* *Description*
-* *Quantity*
+* Sales Key
+* Customer Key
+* Invoice Date Key
+* Description
+* Quantity
 
 >[!NOTE]
 >For demonstration purposes, this article uses the database outlined on the tutorial on loading the Wide World Importers database into Azure Synapse Analytics with the main difference being the fact_Sales table only holding data for the year 2000 and with a total of 3644356 rows.
@@ -188,9 +188,9 @@ Checking the applied steps pane, you notice that the step folding indicators are
 
 You can right click the last step of your query, the one named *Kept bottom rows*, and select the option that reads **Query plan**.
 
-![Query plan for the query created showing multiple nodes, two of which are within a rectangle and these two nodes represent the Kept bottom rows and Remove other columns transforms](media/query-folding-basics/no-folding-query-plan.png)
+![Query plan for the query created showing multiple nodes, two of which are within a rectangle and these two nodes represent the Kept bottom rows and Choose](media/query-folding-basics/no-folding-query-plan.png)
 
-Each card in the previous image is called a node and it represents every process that needs to happen (from left to right) in order for your query to be evaluated. Some of those nodes can be evaluated at your data source while others, like the two nodes within the rectangle of the previous image, will be evaluated using the Power Query engine. These two nodes represent the two transforms that you added, *Kept bottom rows* and *Remove other columns*, whilst the rest of the node represent operations that will happen at your data source level.
+Each card in the previous image is called a node and it represents every process that needs to happen (from left to right) in order for your query to be evaluated. Some of these nodes can be evaluated at your data source while others like the nodes for Table.LastN and Table.SelectColumns, within the rectangle of the previous image, will be evaluated using the Power Query engine. These two nodes represent the two transforms that you added, *Kept bottom rows* and *Choose columns*, whilst the rest of the node represent operations that will happen at your data source level.
 
 You can also see exactly the query that would be sent to your data source by clicking the *view details* hyperlink in the Value.NativeQuery node. 
 
