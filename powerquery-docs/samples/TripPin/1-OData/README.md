@@ -85,7 +85,7 @@ In Visual Studio, you'll receive a similar prompt that calls out which data sour
 Select the shortest of the data source paths (`https://services.odata.org/`)&mdash;this will apply your credential to all URLs under this path.
 Select the **Anonymous** credential type, and then select **Set Credential**.
 
-![Credential prompt.](../../../images/credentialPrompt.png)
+![Credential error prompt.](../../../images/credentialPrompt.png)
 
 Select **OK** to close the dialog, and then select the **Start** button once again. You see a query execution status dialog, and finally a Query Result table showing the data returned from your query.
 
