@@ -24,7 +24,7 @@ LocalizationGroup: reference
 
 You must have a Dataverse environment with maker permissions to access the portal, and read permissions to access data within tables.
 
-To use the Dataverse connector, the **TDS endpoint** setting must be enabled in your environment. More information: [Manage feature settings](/power-platform/admin/settings-features).
+To use the Dataverse connector, the **TDS endpoint** setting must be enabled in your environment. More information: [Manage feature settings](/power-platform/admin/settings-features)
 
 To use the Dataverse connector, TCP ports 1433 and/or 5558 need to be open to connect. If only port 5558 is enabled, you must append that port number to the Dataverse environment URL, such as *yourenvironmentid.crm.dynamics.com:5558*. More information: [SQL Server connection issue due to closed ports](#sql-server-connection-issue-due-to-closed-ports)
 
@@ -46,7 +46,7 @@ In the new browser tab that opens, copy the root of the URL. This root URL is th
 ## Connect to Dataverse from Power BI Desktop
 
 >[!Note]
-> The Power Query Dataverse connector is mostly suited towards analytics workloads, not bulk data extraction. For more information, go to [Alternative Dataverse connections](#alternative-dataverse-connections).
+> The Power Query Dataverse connector is mostly suited towards analytics workloads, not bulk data extraction. More information: [Alternative Dataverse connections](#alternative-dataverse-connections)
 
 To connect to Dataverse from Power BI Desktop:
 
@@ -87,7 +87,7 @@ To connect to Dataverse from Power Query Online:
 
    ![Enter the server URL.](media/common-data-service/enter-url-online.png)
 
-3. If necessary, enter an on-premises data gateway if you're going to be using on-premises data (for example, if you're going to combine data from Dataverse and an on-premises SQL Server database).
+3. If necessary, enter an on-premises data gateway if you're going to be using on-premises data. For example, if you're going to combine data from Dataverse and an on-premises SQL Server database.
 
 4. Sign in to your organizational account.
 
@@ -101,13 +101,13 @@ To connect to Dataverse from Power Query Online:
 
 Dataverse is the direct replacement for the Common Data Service connector. However, there may be times when it's necessary to choose the Common Data Service (Legacy) connector instead of the Dataverse connector:
 
-* If you are connecting to data using Power Apps, you'll still have to use the Common Data Service (Legacy) connector.
-* If you are accessing large datasets that are greater than 80 MB.
-* If you want paging of the query results and and want to build reports that use the image data type.
+* If you're connecting to data using Power Apps, you'll still have to use the Common Data Service (Legacy) connector.
+* If you're accessing large datasets that are greater than 80 MB.
+* If you want paging of the query results and want to build reports that use the image data type.
 
-In addition, there are certain Tabular Data Stream (TDS) data types that are supported in OData when using Common Data Service (Legacy) that aren't supported in Dataverse. The supported and unsupported data types are listed in [How Dataverse SQL differs from Transact-SQL (Preview)](/powerapps/developer/data-platform/how-dataverse-sql-differs-from-transact-sql?tabs=supported).
+Also, there are certain Tabular Data Stream (TDS) data types that are supported in OData when using Common Data Service (Legacy) that aren't supported in Dataverse. The supported and unsupported data types are listed in [How Dataverse SQL differs from Transact-SQL (Preview)](/powerapps/developer/data-platform/how-dataverse-sql-differs-from-transact-sql?tabs=supported).
 
-All of these feature will be added to the Dataverse connector in the future, at which time the Common Data Service (Legacy) connector will be deprecated.
+All of these features will be added to the Dataverse connector in the future, at which time the Common Data Service (Legacy) connector will be deprecated.
 
 ### Dataverse OData API performance and throttling limits
 
