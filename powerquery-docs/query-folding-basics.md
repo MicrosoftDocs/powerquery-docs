@@ -139,7 +139,10 @@ Imagine a scenario where, using the [Wide World Importers database for Azure Syn
 
 ![Sample output table derived from the fact_Sales table of the Wide World Importers Azure Synapse Analytics database](media/query-folding-basics/sample-output.png)
 
-This article will showcase three ways to achieve the same output with different levels of query folding ranging from no query folding to full query folding.
+This article will showcase three ways to achieve the same output with different levels of query folding:
+- No query folding
+- Partial query folding
+- Full query folding
 
 #### No query folding
 
@@ -150,7 +153,7 @@ After connecting to your database and navigating to the **fact_Sales** table, yo
 
 ![Keep bottom rows transform found inside the Reduce rows group of the home tab](media/query-folding-basics/keep-bottom-rows-ui.png)
 
-After selecting this transform, a new dialogue will appear where you can enter the number of rows that you'd like to keep. For this case, you enter the value ten as shown in the image below and then click the OK button.
+After selecting this transform, a new dialog will appear where you can enter the number of rows that you'd like to keep. For this case, you enter the value ten as shown in the image below and then click the OK button.
 
 ![Entering the value twenty inside the Keep bottom rows dialog](media/query-folding-basics/keep-bottom-rows-dialog.png)
 
@@ -170,16 +173,16 @@ This yields exactly the output that you were tasked with and below is the full M
 ```
 let
   Source = Sql.Database(ServerName, DatabaseName),
-  Navigation = Source{[Schema = "SalesLT", Item = "SalesOrderHeader"]}[Data],
-  #"Kept bottom rows" = Table.LastN(Navigation, 20),
-  #"Removed other columns" = Table.SelectColumns(#"Kept bottom rows", {"SalesOrderID", "SalesOrderNumber", "AccountNumber"})
+  Navigation = Source{[Schema = "wwi", Item = "fact_Sale"]}[Data],
+  #"Kept bottom rows" = Table.LastN(Navigation, 10),
+  #"Choose columns" = Table.SelectColumns(#"Kept bottom rows", {"Sale Key", "Customer Key", "Invoice Date Key", "Description", "Quantity", "Profit"})
 in
-  #"Removed other columns"
+  #"Choose columns""
 ```
 
 ##### Understanding the query evaluation
 
-Checking the applied steps pane, you notice that the step folding indicators are showing that the transforms that you added, Kept bottom rows and choose columns (shown as Removed other columns), are marked as steps that will be evaluated outside the data source or, in other words, at the Power Query engine.
+Checking the applied steps pane, you notice that the step folding indicators are showing that the transforms that you added, Kept bottom rows and Choose columns, are marked as steps that will be evaluated outside the data source or, in other words, at the Power Query engine.
 
 ![Applied steps pane for the query with the step folding indicators showcasing that the Kept bottom rows and the Removed other columns steps are marked as steps that will be evaluated outside the data source](media/query-folding-basics/no-folding-steps.png)
 
@@ -200,7 +203,6 @@ Understanding this will help us better understand the story that the query plan 
 * **Node2**: Power Query submits the data requests in a native SQL statement to the data source. For this case, that represents all records from the fact_Sales table.
 * **Node3**: Once Power Query receives all records from the fact_Sales table, it uses the Power Query engine to filter the table and keep only the last ten rows.
 * **Node4**: Power Query will use the output of the Node3 and apply a new transform called Table.SelectRows which selects the specific columns that you want to keep from a table.
-
 
 #### Full query folding
 
