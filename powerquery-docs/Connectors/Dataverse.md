@@ -24,20 +24,22 @@ LocalizationGroup: reference
 
 You must have a Dataverse environment with maker permissions to access the portal, and read permissions to access data within tables.
 
-You'll also need ports 1433 and 5558 to be open in Dataverse for the connector to successfully establish a connection. For more information, go to [SQL Server connection issue due to closed ports](#sql-server-connection-issue-due-to-closed-ports). 
+To use the Dataverse connector, the **TDS endpoint** setting must be enabled in your environment. More information: [Manage feature settings](/power-platform/admin/settings-features).
+
+To use the Dataverse connector, TCP ports 1433 and/or 5558 need to be open to connect. If only port 5558 is enabled, you must append that port number to the Dataverse environment URL, such as *yourenvironmentid.crm.dynamics.com:5558*. More information: [SQL Server connection issue due to closed ports](#sql-server-connection-issue-due-to-closed-ports)
 
 ## Capabilities supported
 
 * Server URL
 * Advanced
-   * Reorder columns
-   * Add display column
+  * Reorder columns
+  * Add display column
 
-## Finding your Dataverse Environment URL
+## Finding your Dataverse environment URL
 
 Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). In the upper right of the Power Apps page, select the environment you're going to connect to. Select the ![Settings icon.](media/common-data-service/settings-icon.png) settings icon, and then select **Advanced settings**.
 
-In the new browser tab that opens, copy the root of the URL. This root URL is the unique URL for your environment. The URL will be in the format of https://\<*yourenvironmentid*>.crm.dynamics.com/. Make sure not to copy the rest of the URL. Keep this URL somewhere handy so you can use it later, for example, when you create Power BI reports.
+In the new browser tab that opens, copy the root of the URL. This root URL is the unique URL for your environment. The URL will be in the format of https://\<*yourenvironmentid*>.crm.dynamics.com/. **Make sure you remove https:// and the trailing / from the URL before pasting it to connect to your environment.** Keep this URL somewhere handy so you can use it later, for example, when you create Power BI reports.
 
 ![Location of the Dataverse environment URL.](media/common-data-service/cds-env.png)
 
@@ -54,21 +56,22 @@ To connect to Dataverse from Power BI Desktop:
 
    ![Get data in Power BI Desktop.](media/common-data-service/get-data.png)
 
-3. Enter the server URL address of the data you want to load.
+3. Enter the Dataverse environment URL of the data you want to load. Use the format *\<yourenvironmentid>.crm.dynamics.com*. Be sure to remove the `https://` prefix and `/` suffix from the URL before entering the name in **Environment domain**. More information: [Finding your Dataverse environment URL](#finding-your-dataverse-environment-url)
 
    ![Server URL selection.](media/common-data-service/enter-url.png)
 
-   When the table is loaded in the Navigator dialog box, by default the columns in the table are reordered in alphabetical order by the column names. If you don't want the columns reordered, in the advanced settings enter **false** in **Reorder columns**.
+4. Select one of the following Data Connectivity mode options:
 
-   Also when the table is loaded, by default if the table contains any picklist fields, a new column with the name of the picklist field with **_display** appended at the end of the name is added to the table. If you don't want the picklist field display column added, in the advanced settings enter **false** in **Add display column**.
+   * **Import**: We recommend that you import data to Power BI wherever possible. With this mode, data is cached in the Power BI service and imported on a scheduled interval.
+   * **DirectQuery**: Connects directly to the data in Dataverse. Use this mode for real-time data retrieval. This mode can also more strictly enforce the Dataverse security model. More information: DirectQuery model guidance in Power BI Desktop.
 
    When you've finished filling in the information, select **OK**.
 
-4. If this attempt is the first time you're connecting to this site, select **Sign in** and input your credentials. Then select **Connect**.
+5. If this attempt is the first time you're connecting to this site, select **Sign in** and input your credentials. Then select **Connect**.
 
    ![Sign in to this site.](media/common-data-service/sign-in.png)
 
-5. In **Navigator**, select the data you require, then either load or transform the data.
+6. In **Navigator**, select the data you require, then either load or transform the data.
 
    ![Load or transform from navigator.](media/common-data-service/navigator.png)
 
@@ -93,6 +96,18 @@ To connect to Dataverse from Power Query Online:
 6. In the navigation page, select the data you require, and then select **Transform Data**.
 
 ## Limitations and issues
+
+### When to use the Common Data Service (Legacy) connector
+
+Dataverse is the direct replacement for the Common Data Service connector. However, there may be times when it's necessary to choose the Common Data Service (Legacy) connector instead of the Dataverse connector:
+
+* If you are connecting to data using Power Apps, you'll still have to use the Common Data Service (Legacy) connector.
+* If you are accessing large datasets that are greater than 80 MB.
+* If you want paging of the query results and and want to build reports that use the image data type.
+
+In addition, there are certain Tabular Data Stream (TDS) data types that are supported in OData when using Common Data Service (Legacy) that aren't supported in Dataverse. The supported and unsupported data types are listed in [How Dataverse SQL differs from Transact-SQL (Preview)](/powerapps/developer/data-platform/how-dataverse-sql-differs-from-transact-sql?tabs=supported).
+
+All of these feature will be added to the Dataverse connector in the future, at which time the Common Data Service (Legacy) connector will be deprecated.
 
 ### Dataverse OData API performance and throttling limits
 
