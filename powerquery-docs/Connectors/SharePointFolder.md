@@ -49,7 +49,7 @@ To connect to a SharePoint folder:
 
    Select **OK** to continue.
 
-3. If this is the first time you've visited this site address, select the appropriate authentication method. Enter your credentials and chose which level to apply these settings to. Then select **Connect**.
+3. If this is the first time you've visited this site address, select the appropriate authentication method. Enter your credentials and choose which level to apply these settings to. Then select **Connect**.
 
    ![SharePoint folder desktop authentication.](./media/sharepoint-folder/signin.png)
 

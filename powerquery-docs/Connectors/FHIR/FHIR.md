@@ -39,11 +39,11 @@ To make a connection to a FHIR server, take the following steps:
 
     ![Image with the Get Data selection highlighted in the Home tab of Power BI Desktop.](FHIR-GetData.png)
 
-1. Select **Other** > **FHIR**, and then select **Connect**.
+2. Select **Other** > **FHIR**, and then select **Connect**.
 
     ![Image of the Get Data dialog box with the Other category and the FHIR connector emphasized.](FHIR-GetData-More.png)
 
-1. Enter the URL for your FHIR server.
+3. Enter the URL for your FHIR server.
 
     ![Image with the FHIR connection details.](FHIR-Connection-Details.png)
 
@@ -51,27 +51,27 @@ To make a connection to a FHIR server, take the following steps:
 
     Select **OK** to proceed.
 
-1. Decide on your authentication scheme.
+4. Decide on your authentication scheme.
 
     ![Image of authentication dialog box with the Organizational account selected and the user not yet signed in.](FHIR-Sign-In.png)
 
     The connector supports "Anonymous" for FHIR servers with no access controls (for example, public test servers (like http://test.fhir.org/r4) or Azure Active Directory authentication. Go to [FHIR connector authentication](FHIR-Authentication.md) for details.
 
-1. Select the resources you're interested in.
+5. Select the resources you're interested in.
 
     ![Image of the Navigator with the FHIR Patient resource selected, and the patient records shown in the display window.](FHIR-Navigator.png)
 
     Select **Transform Data** to shape the data.
 
-1. Shape the data as needed, for example, expand the postal code.
+6. Shape the data as needed, for example, expand the postal code.
 
     ![Image of the Power Query Editor with the patient data shown, the address column selected, and the postal code selected for expansion.](FHIR-ShapeData.png)
 
-1. Save the query when shaping is complete.
+7. Save the query when shaping is complete.
 
     ![Image of the Power Query Editor with the postal code expanded and the Close & Apply selection in the Home tab emphasized.](FHIR-SaveQuery.png)
 
-1. Create dashboards with data, for example, make a plot of the patient locations based on postal code.
+8. Create dashboards with data, for example, make a plot of the patient locations based on postal code.
 
     ![Image of the Power Query Desktop with the address.postalCode emphasized in the Location box, with a map showing each patient postal code as a dot on the map.](FHIR-PlotPatientlocations.png)
 
@@ -83,7 +83,7 @@ To make a connection to a FHIR server, take the following steps:
 
    ![Image of the Choose data source dialog box with the Other category and the FHIR connector emphasized.](FHIR-GetData-online.png)
 
-2. In the **FHIR** dialog, enter the URL for you FHIR server.  
+2. In the **FHIR** dialog, enter the URL for your FHIR server.  
 
    ![Image with the FHIR URL filled in.](./FHIR-Access-online.png)
 

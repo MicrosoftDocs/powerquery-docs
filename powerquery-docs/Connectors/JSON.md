@@ -38,7 +38,7 @@ To load a local JSON file:
 
 2. Select **Open** to open the file.
 
-Loading the JSON file will automatically launch the Power Query Editor. Power Query uses automatic table detection to seamlessly flatten the JSON data into a table. From the editor, you can then continue to transform the data if you want, or you can just close and apply.
+Loading the JSON file will automatically launch the Power Query Editor. Power Query uses automatic table detection to seamlessly flatten the JSON data into a table. From the editor, you can then continue to transform the data if you want, or you can just close and apply. More information: [Automatic Table Detection from JSON files now generally available](https://powerbi.microsoft.com/en-us/blog/power-bi-april-2021-feature-summary/#post-14480-_Toc68689108)
 
 ![Image of the Power Query editor with the JSON data flattened into a table.](./media/json/convert-table.png)
 
@@ -58,7 +58,7 @@ To load a local JSON file:
 
 5. Select **Next**.
 
-Loading the JSON file will automatically launch the Power Query Editor. Power Query uses automatic table detection to seamlessly flatten the JSON data into a table. From the editor, you can then continue to transform the data if you want, or you can just save and close to load the data.
+Loading the JSON file will automatically launch the Power Query Editor. Power Query uses automatic table detection to seamlessly flatten the JSON data into a table. From the editor, you can then continue to transform the data if you want, or you can just save and close to load the data. More information: [Automatic Table Detection from JSON files now generally available](https://powerbi.microsoft.com/en-us/blog/power-bi-april-2021-feature-summary/#post-14480-_Toc68689108)
 
 ![Image of the online Power Query editor with the JSON data flattened into a table.](./media/json/convert-table-online.png)
 
