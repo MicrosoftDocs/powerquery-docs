@@ -4,7 +4,7 @@ description: Guide on how queries get evaluated in Power Query, how the query fo
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: 
-ms.date: 11/24/2020
+ms.date: 9/1/2020
 ms.author: v-miesco
 ms.custom: intro-internal
 ---
@@ -166,7 +166,7 @@ Next, you select the **Choose columns** transform found inside the *Manage colum
 
 Lastly, now inside the **Choose columns** dialog, you select the columns *Sales Key*, *Customer Key*, *Invoice Date Key*, *Description*, and *Quantity* and click the OK button.
 
-![Selecting the columns SalesOrderID, SalesOrderNumber, and AccountNumber inside the Choose columns dialog](media/query-folding-basics/choose-columns-dialog.png)
+![Selecting the columns Sales Key, Customer Key, Invoice Date Key, Description, and Quantity and click the OK button. inside the Choose columns dialog](media/query-folding-basics/choose-columns-dialog.png)
 
 This yields exactly the output that you were tasked with and below is the full M script for the query created:
 
@@ -188,66 +188,23 @@ Checking the applied steps pane, you notice that the step folding indicators are
 
 You can right click the last step of your query, the one named *Kept bottom rows*, and select the option that reads **Query plan**.
 
-![Query plan for the query created showing multiple nodes, two of which are within a rectangle and these two nodes represent the Kept bottom rows and Choose](media/query-folding-basics/no-folding-query-plan.png)
+![Query plan for the query created showing multiple nodes, two of which are within a rectangle that represent the nodes that will be evaluated by the Power Query Engine](media/query-folding-basics/no-folding-query-plan.png)
 
 Each card in the previous image is called a node and it represents every process that needs to happen (from left to right) in order for your query to be evaluated. Some of these nodes can be evaluated at your data source while others like the nodes for Table.LastN and Table.SelectColumns, within the rectangle of the previous image, will be evaluated using the Power Query engine. These two nodes represent the two transforms that you added, *Kept bottom rows* and *Choose columns*, whilst the rest of the node represent operations that will happen at your data source level.
 
-You can also see exactly the query that would be sent to your data source by clicking the *view details* hyperlink in the Value.NativeQuery node. 
+You can also see exactly the query that would be sent to your data source by clicking the *view details* hyperlink in the Value.NativeQuery node.
 
 ![SQL Statement found inside the Value.NativeQuery that represents a request of all fields and records from the fact_Sales table in the database](media/query-folding-basics/no-folding-native-query.png)
 
 This query is in the native language of your data source. For this case, that language is SQL and this statement represents a query that requests all rows and fields from the **fact_Sales** table. 
-Understanding this will help you better understand the story that the query plan tries to convey in order of the nodes which is:
+Understanding this will help you better understand the story that the query plan tries to convey in order of the nodes which is a sequential process that starts by requesting the data from your data source:
 
 * **Sql.Database**: Connects to the database and sends metadata requests to understand its capabilities.
 * **Value.NativeQuery**: Power Query submits the data requests in a native SQL statement to the data source. For this case, that represents all records and fields from the fact_Sales table.
 * **Table.LastN**: Once Power Query receives all records from the fact_Sales table, it uses the Power Query engine to filter the table and keep only the last ten rows.
-* **Table.SelectColumns**: Power Query will use the output of the Node3 and apply a new transform called Table.SelectRows which selects the specific columns that you want to keep from a table.
+* **Table.SelectColumns**: Power Query will use the output of the **Table.LastN** node and apply a new transform called Table.SelectRows which selects the specific columns that you want to keep from a table.
 
-#### Full query folding
-
-After connecting to the database and navigating to the **fact_Sales** table, you start by selecting the columns that you want to keep from your table. You select the **Choose columns** transform found inside the *Manage columns* group from the Home tab which will help you to explicitly select the columns that you want to keep from your table and remove the rest.
-
-![Selecting the choose columns transform found inside the Manage columns group from the Home tab](media/query-folding-basics/choose-columns-ui.png)
-
-Inside the **Choose columns** dialog, you select the columns *SalesOrderID*, *SalesOrderNumber*, and *AccountNumber* and click the OK button.
-
-![Selecting the columns SalesOrderID, SalesOrderNumber, and AccountNumber inside the Choose columns dialog](media/query-folding-basics/choose-columns-dialog.png)
-
-You know create a logic that will sort the table to have the last orders at the top. You select the *SalesOrderID* column, which is the primary key and incremental sequence or index of the table, and sort the table only using this in descending order right from the auto-filter menu inside the data preview view for the column.
-
-![](descending)
-
-Next, you select the table contextual menu from inside the data preview view and choose the *Keep top rows* transform.
-
-![](keep top rows)
-
-Inside the *Keep top rows* dialog, you enter the value twenty and then click the OK button.
-
-![](keep top rows dialog)
-
-This yields exactly the output that you were tasked with. When checking the applied steps pane, you can notice that the step folding indicators are showing that the transforms that you added, choose columns (named as Removed other columns), sorted rows and Kept top rows, are marked as steps that will be evaluated at the data source.
-
-![](media/query-folding-basics/full-folding-steps.png)
-
-You can right click the last step of your query, the one named *Kept top rows*, and select the option that reads **Query plan**. The goal of the Query plan is to showcase which transforms will be evaluated by the Power Query engine and which transforms could be offloaded to the data source. You can learn more about the **Query plan feature** from the [official documentation article](https://docs.microsoft.com/power-query/query-plan)
-
-![](media/query-folding-basics/full-folding-query-plan.png)
-
-///need to explain what this means and why it's good to have compact query plans
-
-Below is the full M script for the query created.
-
-```
-let
-  Source = Sql.Database(ServerName, DatabaseName),
-  Navigation = Source{[Schema = "SalesLT", Item = "SalesOrderHeader"]}[Data],
-  #"Removed other columns" = Table.SelectColumns(Navigation, {"SalesOrderID", "SalesOrderNumber", "AccountNumber"}),
-  #"Sorted rows" = Table.Sort(#"Removed other columns", {{"SalesOrderID", Order.Descending}}),
-  #"Kept top rows" = Table.FirstN(#"Sorted rows", 20)
-in
-  #"Kept top rows"
-```
+For its evaluation, this query had to download all rows and fields from the fact_Sales table and took an average of 2 minutes and 45 seconds to be processed in a standard instance of Power BI Dataflows (which accounts for the evaluation and loading of data to dataflows). 
 
 #### Partial query folding
 
@@ -262,10 +219,63 @@ in
   #"Kept bottom rows"
   ```
 
+#### Full query folding
+
+After connecting to the database and navigating to the **fact_Sales** table, you start by selecting the columns that you want to keep from your table. You select the **Choose columns** transform found inside the *Manage columns* group from the Home tab which will help you to explicitly select the columns that you want to keep from your table and remove the rest.
+
+![Selecting the choose columns transform found inside the Manage columns group from the Home tab](media/query-folding-basics/choose-columns-ui.png)
+
+Inside the **Choose columns** dialog, you select the columns *Sales Key*, *Customer Key*, *Invoice Date Key*, *Description*, and *Quantity* and click the OK button.
+
+![Selecting the columns Sales Key, Customer Key, Invoice Date Key, Description, and Quantity and click the OK button. inside the Choose columns dialog](media/query-folding-basics/choose-columns-dialog.png)
+
+You now create a logic that will sort the table to have the last sales at the top of the table. You select the *Sale Key* column, which is the primary key and incremental sequence or index of the table, and sort the table only using this field in descending order right from the auto-filter menu inside the data preview view for the column.
+
+![Sort the Sale Key field of the table in descending order using the auto-filter field contextual menu](media/query-folding-basics/full-folding-sort-descending.png)
+
+Next, you select the table contextual menu from inside the data preview view and choose the *Keep top rows* transform.
+
+![Keep top rows option inside the table contextual menu](media/query-folding-basics/full-folding-keep-top-rows.png)
+
+Inside the *Keep top rows* dialog, you enter the value twenty and then click the OK button.
+
+![Keep top rows dialog with the value of ten entered as the input value to only keep the top ten rows of the table](media/query-folding-basics/full-folding-keep-top-rows-dialog.png)
+
+This yields exactly the output that you were tasked with and below is the full M script for the query created:
+```
+let
+  Source = Sql.Database(ServerName, DatabaseName),
+  Navigation = Source{[Schema = "wwi", Item = "fact_Sale"]}[Data],
+  #"Choose columns" = Table.SelectColumns(Navigation, {"Sale Key", "Customer Key", "Invoice Date Key", "Description", "Quantity"}),
+  #"Sorted rows" = Table.Sort(#"Choose columns", {{"Sale Key", Order.Descending}}),
+  #"Kept top rows" = Table.FirstN(#"Sorted rows", 10)
+in
+  #"Kept top rows"
+```
+
+##### Understanding the query evaluation
+
+When checking the applied steps pane, you can notice that the step folding indicators are showing that the transforms that you added *Choose columns*, *Sorted rows* and *Kept top rows*, are marked as steps that will be evaluated at the data source.
+
+![All the query steps have the icon that showcases that they can be folded back to the data source](media/query-folding-basics/full-folding-steps.png)
+
+You can right click the last step of your query, the one named *Kept top rows*, and select the option that reads **Query plan**. The goal of the Query plan is to showcase which transforms will be evaluated by the Power Query engine and which transforms could be offloaded to the data source. 
+
+![SQL Statement found inside the Value.NativeQuery that represents a request of the top ten records of the fact_Sales table sorted using the Sale Key field and with only the fields Sale Key, Customer Key, Invoice Date Key, Description and Quantity](media/query-folding-basics/full-folding-query-plan.png)
+
+This query is in the native language of your data source. For this case, that language is SQL and this statement represents a query that requests all rows and fields from the **fact_Sales** table. 
+Understanding this will help you better understand the story that the query plan tries to convey in order of the nodes which is:
+
+* **Sql.Database**: Connects to the database and sends metadata requests to understand its capabilities.
+* **Value.NativeQuery**: Power Query submits the data requests in a native SQL statement to the data source. For this case, that represents a request for only the top ten records of the fact_Sales table with only the required fields after being sorted in a descending order using the Sale Key field.
+
+For its evaluation, this query only to download ten rows and exactly the fields that you needed from the fact_Sales table and took an average of 31 seconds to be processed in a standard instance of Power BI Dataflows (which accounts for the evaluation and loading of data to dataflows).
 
 ### Query performance comparison
 
 Here's a section to compare all 3 possible outcomes.
+
+
 
 ## Considerations and suggestions
 
