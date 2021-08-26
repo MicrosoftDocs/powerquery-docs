@@ -144,7 +144,7 @@ This article will showcase three ways to achieve the same output with different 
 - Partial query folding
 - Full query folding
 
-#### No query folding
+#### No query folding example: Creating the query
 
 >[!IMPORTANT]
 >Queries that rely solely on unstructured data sources or that don't have a compute engine, such as CSV or Excel files, don't have query folding capabilities. This means that Power Query evaluates all the required data transformations using the Power Query engine.
@@ -155,7 +155,7 @@ After connecting to your database and navigating to the **fact_Sales** table, yo
 
 After selecting this transform, a new dialog will appear where you can enter the number of rows that you'd like to keep. For this case, you enter the value ten as shown in the image below and then click the OK button.
 
-![Entering the value twenty inside the Keep bottom rows dialog](media/query-folding-basics/keep-bottom-rows-dialog.png)
+![Entering the value ten inside the Keep bottom rows dialog](media/query-folding-basics/keep-bottom-rows-dialog.png)
 
 >[!TIP]
 >For this case, performing this operation does yield the result of the last ten sales. However, in most scenarios it is recommended to provide a more explicit logic that defines what rows are considered last last by applying a sort operation on the table.
@@ -180,7 +180,7 @@ in
   #"Choose columns""
 ```
 
-##### Understanding the query evaluation
+##### No query folding example: Understanding the query evaluation
 
 Checking the applied steps pane, you notice that the step folding indicators are showing that the transforms that you added, Kept bottom rows and Choose columns, are marked as steps that will be evaluated outside the data source or, in other words, at the Power Query engine.
 
@@ -206,20 +206,7 @@ Understanding this will help you better understand the story that the query plan
 
 For its evaluation, this query had to download all rows and fields from the fact_Sales table and took an average of 2 minutes and 45 seconds to be processed in a standard instance of Power BI Dataflows (which accounts for the evaluation and loading of data to dataflows). 
 
-#### Partial query folding
-
-```
-let
-  Source = Sql.Database(ServerName, DatabaseName),
-  Navigation = Source{[Schema = "SalesLT", Item = "SalesOrderHeader"]}[Data],
-  #"Removed other columns" = Table.SelectColumns(Navigation, {"SalesOrderID", "SalesOrderNumber", "AccountNumber"}),
-  #"Sorted rows" = Table.Sort(#"Removed other columns", {{"SalesOrderID", Order.Ascending}}),
-  #"Kept bottom rows" = Table.LastN(#"Sorted rows", 20)
-in
-  #"Kept bottom rows"
-  ```
-
-#### Full query folding
+#### Partial query folding: Creating the query
 
 After connecting to the database and navigating to the **fact_Sales** table, you start by selecting the columns that you want to keep from your table. You select the **Choose columns** transform found inside the *Manage columns* group from the Home tab which will help you to explicitly select the columns that you want to keep from your table and remove the rest.
 
@@ -229,7 +216,46 @@ Inside the **Choose columns** dialog, you select the columns *Sales Key*, *Custo
 
 ![Selecting the columns Sales Key, Customer Key, Invoice Date Key, Description, and Quantity and click the OK button. inside the Choose columns dialog](media/query-folding-basics/choose-columns-dialog.png)
 
-You now create a logic that will sort the table to have the last sales at the top of the table. You select the *Sale Key* column, which is the primary key and incremental sequence or index of the table, and sort the table only using this field in descending order right from the auto-filter menu inside the data preview view for the column.
+You now create a logic that will sort the table to have the **last sales at the bottom of the table**. You select the *Sale Key* column, which is the primary key and incremental sequence or index of the table, and sort the table only using this field in ascending order right from the auto-filter menu inside the data preview view for the column.
+
+![Sort the Sale Key field of the table in ascending order using the auto-filter field contextual menu](media/query-folding-basics/partial-folding-sort-ascending.png)
+
+Next, you select the table contextual menu from inside the data preview view and choose the *Keep bottom rows* transform.
+
+![Keep bottom rows option inside the table contextual menu](media/query-folding-basics/partial-folding-keep-bottom-rows.png)
+
+Inside the *Keep bottom rows* dialog, you enter the value ten and then click the OK button.
+
+![Keep bottom rows dialog with the value of ten entered as the input value to only keep the bottom ten rows of the table](media/query-folding-basics/partial-folding-keep-bottom-rows-dialog.png)
+
+This yields exactly the output that you were tasked with and below is the full M script for the query created:
+
+```
+let
+  Source = Sql.Database(ServerName, DatabaseName),
+  Navigation = Source{[Schema = "wwi", Item = "fact_Sale"]}[Data],
+  #"Choose columns" = Table.SelectColumns(Navigation, {"Sale Key", "Customer Key", "Invoice Date Key", "Description", "Quantity"}),
+  #"Sorted rows" = Table.Sort(#"Choose columns", {{"Sale Key", Order.Ascending}}),
+  #"Kept bottom rows" = Table.LastN(#"Sorted rows", 10)
+in
+  #"Kept bottom rows"
+```
+
+### Partial query folding example: Understanding the query evaluation
+
+
+
+#### Full query folding example: Creating the query
+
+After connecting to the database and navigating to the **fact_Sales** table, you start by selecting the columns that you want to keep from your table. You select the **Choose columns** transform found inside the *Manage columns* group from the Home tab which will help you to explicitly select the columns that you want to keep from your table and remove the rest.
+
+![Selecting the choose columns transform found inside the Manage columns group from the Home tab](media/query-folding-basics/choose-columns-ui.png)
+
+Inside the **Choose columns** dialog, you select the columns *Sales Key*, *Customer Key*, *Invoice Date Key*, *Description*, and *Quantity* and click the OK button.
+
+![Selecting the columns Sales Key, Customer Key, Invoice Date Key, Description, and Quantity and click the OK button. inside the Choose columns dialog](media/query-folding-basics/choose-columns-dialog.png)
+
+You now create a logic that will sort the table to have the **last sales at the top of the table.** You select the *Sale Key* column, which is the primary key and incremental sequence or index of the table, and sort the table only using this field in descending order right from the auto-filter menu inside the data preview view for the column.
 
 ![Sort the Sale Key field of the table in descending order using the auto-filter field contextual menu](media/query-folding-basics/full-folding-sort-descending.png)
 
@@ -237,7 +263,7 @@ Next, you select the table contextual menu from inside the data preview view and
 
 ![Keep top rows option inside the table contextual menu](media/query-folding-basics/full-folding-keep-top-rows.png)
 
-Inside the *Keep top rows* dialog, you enter the value twenty and then click the OK button.
+Inside the *Keep top rows* dialog, you enter the value ten and then click the OK button.
 
 ![Keep top rows dialog with the value of ten entered as the input value to only keep the top ten rows of the table](media/query-folding-basics/full-folding-keep-top-rows-dialog.png)
 
@@ -253,7 +279,7 @@ in
   #"Kept top rows"
 ```
 
-##### Understanding the query evaluation
+##### Full query folding example: Understanding the query evaluation
 
 When checking the applied steps pane, you can notice that the step folding indicators are showing that the transforms that you added *Choose columns*, *Sorted rows* and *Kept top rows*, are marked as steps that will be evaluated at the data source.
 
@@ -273,9 +299,13 @@ For its evaluation, this query only to download ten rows and exactly the fields 
 
 ### Query performance comparison
 
-Here's a section to compare all 3 possible outcomes.
+Explain why the no folding and partial folding queries didn't work in contrast to why the full query folding worked better.
+(how a SQL BOTTOM clause doesn't exist and why a sorting operation can do wonders)
 
-
+* Query refresh times chart (Dataflows refresh history value)
+* Query data (row count) throughput of the data source chart (average user would understand better a row count than "total bytes transferred")
+* Transforms executed by Power Query (chart of how full query folding nets to almost zero work at the PQ level)
+* Average data preview evaluation in PQ Editor chart
 
 ## Considerations and suggestions
 
