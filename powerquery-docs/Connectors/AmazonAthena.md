@@ -10,7 +10,7 @@ ms.reviewer: kvivek
 LocalizationGroup: reference
 ---
 
-# Amazon Athena
+# Amazon Athena (Beta)
 
 ## Summary
 
