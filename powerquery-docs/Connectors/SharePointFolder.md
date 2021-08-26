@@ -1,80 +1,95 @@
 ---
-title: Power Query SharePoint Folder connector
+title: Power Query SharePoint folder connector
 description: Provides basic information, prerequisites, and how to connect to your data, along with troubleshooting tips when combining files and using filename special characters.
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 06/16/2020
+ms.date: 8/11/2021
 ms.author: bezhan
 LocalizationGroup: reference
 ---
 
-# SharePoint Folder
+# SharePoint folder
 
 ## Summary
 
-Release State: General Availability
-
-Products: Power BI Desktop, Power BI Service (Enterprise Gateway), Dataflows in PowerBI.com (Enterprise Gateway), Dataflows in PowerApps.com (Enterprise Gateway), Excel
-
-Authentication Types Supported: Anonymous, Microsoft Account, Windows
-
-Function Reference Documentation: [SharePoint.Contents](/powerquery-m/sharepoint-contents), [SharePoint.Files](/powerquery-m/sharepoint-files)
+| Item | Description |
+| ---- | ----------- |
+| Release State | General Availability |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights |
+| Authentication Types Supported | Anonymous<br/>Microsoft Account<br/>Windows |
+| Function Reference Documentation | [SharePoint.Contents](/powerquery-m/sharepoint-contents)<br/>[SharePoint.Files](/powerquery-m/sharepoint-files) |
+| | |
 
 >[!NOTE]
->AAD/OAuth for SharePoint on-premises isn’t supported using the on-premises data gateway. 
+>AAD/OAuth for SharePoint on-premises isn’t supported using the on-premises data gateway.
 
 ## Capabilities supported
 
 * Folder path
 * Combine
-   * Combine and load
-   * Combine and transform
+  * Combine and load
+  * Combine and transform
 
-## Connect to a SharePoint folder
+## Determine the site URL
+
+When you're connecting to a SharePoint site, you'll be asked to enter the site URL. To find the site URL that contains your SharePoint folder, first open a page in SharePoint. From a page in SharePoint, you can usually get the site address by selecting **Home** in the navigation pane, or the icon for the site at the top. Copy the address from your web browser's address bar and save for later.
+
+   ![Image with the locations of Home in the navigation pane, the icon at the top of the site, and the resulting URL address.](./media/sharepoint-list/sharepoint-address.png)
+
+## Connect to a SharePoint folder from Power Query Desktop
 
 To connect to a SharePoint folder:
 
-1. Select the **SharePoint folder** option in the connector selection.
+1. From **Get Data**, select **SharePoint folder**.
 
-2. Find the address (also known as a URL) of your SharePoint site that contains the folder you want to use. 
+2. Paste the SharePoint site URL you copied in [Determine the site URL](#determine-the-site-url) to the **Site URL** text box in the **SharePoint folder** dialog box. In this example, the site URL is `https://contoso.sharepoint.com/marketing/data`. If the site URL you enter is invalid, a ![warning icon.](./media/sharepoint-folder/warning.png) warning icon will appear next to the URL text box.
 
-   From a page in SharePoint, you can usually get the site address by selecting **Home** in the navigation pane, or the icon for the site at the top, then copying the address from your web browser's address bar.
+   ![SharePoint folder selection.](./media/sharepoint-folder/url-select.png)
 
-3. If you're connecting from Power BI desktop or Excel:
+   Select **OK** to continue.
 
-   1. Paste the address into the **Site URL** test box in the **SharePoint folder** dialog box. In this case, the site URL is `https://contoso.sharepoint.com/marketing/data`. If the site URL you enter is invalid, a ![warning icon.](./media/sharepoint-folder/warning.png) warning icon will appear next to the URL textbox.
+3. If this is the first time you've visited this site address, select the appropriate authentication method. Enter your credentials and choose which level to apply these settings to. Then select **Connect**.
 
-      ![SharePoint folder selection.](./media/sharepoint-folder/url-select.png)
+   ![SharePoint folder desktop authentication.](./media/sharepoint-folder/signin.png)
 
-   2. If this is the first time you've visited this site address, select the appropriate authentication method. Enter your credentials and chose which level to apply these setting to. Then select **Connect**.
+   For more information about authentication methods and level settings, go to [Authentication with a data source](../connectorauthentication.md).
 
-      ![SharePoint folder desktop authentication.](./media/sharepoint-folder/signin.png)
+4. When you select the SharePoint folder you want to use, the file information about all of the files in that SharePoint folder are displayed. In addition, file information about any files in any subfolders is also displayed.
 
-      For more information about authentication methods, see [Authentication with a data source](../connectorauthentication.md).
+   ![Image of the Navigator showing the folder information.](./media/sharepoint-folder/folder-info.png)
 
-4. If you're connecting from Power Query Online:
-
-    1. Paste the address into the **Site URL** test box in the **SharePoint folder** dialog box. In this case, the site URL is `https://contoso.sharepoint.com/marketing/data`. 
-
-       ![Online folder selection and sign in.](./media/sharepoint-folder/online-signin.png)
-
-    2. If the SharePoint folder is on-premises, enter the name of an on-premises data gateway.
-
-    3. Select the authentication kind, and enter any credentials that are required.
-
-    4. Select **Next**.
-
-5. When you select the SharePoint folder you want to use, the file information about all of the files in that SharePoint folder are displayed. In addition, file information about any files in any subfolders is also displayed.
-
-   ![Folder information.](./media/sharepoint-folder/folder-info.png)
-
-6. Select **Combine & Transform Data** to combine the data in the files of the selected SharePoint folder and load the data into the Power Query Editor for editing. Or select **Combine & Load** to load the data from all of the files in the SharePoint folder directly into your app.
+5. Select **Combine & Transform Data** to combine the data in the files of the selected SharePoint folder and load the data into the Power Query Editor for editing. Or select **Combine & Load** to load the data from all of the files in the SharePoint folder directly into your app.
 
    ![Combine files from SharePoint folder.](./media/sharepoint-folder/combinefolderfiles.png)
 
 >[!Note]
->The **Combine & Transform Data** and **Combine & Load** buttons are the easiest ways to combine data found in the files of the SharePoint folder you specify. You could also use the **Load** button (in Power BI Desktop only) or the **Transform Data** buttons to combine the files as well, but that requires more manual steps.
+>The **Combine & Transform Data** and **Combine & Load** buttons are the easiest ways to combine data found in the files of the SharePoint folder you specify. You could also use the **Load** button or the **Transform Data** buttons to combine the files as well, but that requires more manual steps.
+
+## Connect to a SharePoint folder from Power Query Online
+
+To connect to a SharePoint folder:
+
+1. From the **Data sources** page, select **SharePoint folder**.
+
+2. Paste the SharePoint site URL you copied in [Determine the site URL](#determine-the-site-url) to the **Site URL** text box in the **SharePoint folder** dialog box. In this example, the site URL is `https://contoso.sharepoint.com/marketing/data`.
+
+   ![Online folder selection and sign in.](./media/sharepoint-folder/online-signin.png)
+
+3. If the SharePoint folder is on-premises, enter the name of an on-premises data gateway.
+
+4. Select the authentication kind, and enter any credentials that are required.
+
+5. Select **Next**.
+
+6. When you select the SharePoint folder you want to use, the file information about all of the files in that SharePoint folder are displayed. In addition, file information about any files in any subfolders is also displayed.
+
+   ![Image of the online Navigator showing the folder information.](./media/sharepoint-folder/folder-info-online.png)
+
+7. Select **Combine** to combine the data in the files of the selected SharePoint folder and load the data into the Power Query Editor for editing.
+
+    >[!Note]
+    >The **Combine** button is the easiest way to combine data found in the files of the SharePoint folder you specify. You could also use the **Transform Data** buttons to combine the files as well, but that requires more manual steps.
 
 ## Troubleshooting
 
@@ -98,11 +113,11 @@ In some cases, you might have multiple folders on your SharePoint site containin
 
 4. Once you've removed all the unnecessary files, select **Combine Files** from the **Home** ribbon to combine the data from all of the remaining files.
 
-For more information about combining files, see [Combine files in Power Query](../combine-files-overview.md).
+For more information about combining files, go to [Combine files in Power Query](../combine-files-overview.md).
 
 ### Filename special characters
 
-If a filename contains certain special characters, it may lead to authentication errors due to the filename being truncated in the URL. If you are getting unusual authentication errors, make sure that all of the filenames you're using don't contain any of the following special characters.
+If a filename contains certain special characters, it may lead to authentication errors because of the filename being truncated in the URL. If you're getting unusual authentication errors, make sure all of the filenames you're using don't contain any of the following special characters.
 
 `# % $`
 
