@@ -55,9 +55,9 @@ To make the connection, take the following steps:
    ![ODBC authentication in Power Query Desktop](./media/odbc/odbc-authentication.png)
 
    The authentication types available are:
-   * **Default or Custom**: Don't specify any credentials or only include connection string properties.
+   * **Default or Custom**: Select this authentication type when you don't specify any credentials if you're using DSN configured with a username and password. Or, if you need to include credentials as connection string properties.
    * **Windows**: Select this authentication type if you want to connect using Windows authentication. Optionally, include any connection string properties you need.
-   * **Database**: Use a username and password to access a data source with an ODBC driver. Optionally, include any connection string properties you need. This is the default selection.
+   * **Database**: Select this authentication type to use a username and password to access a data source with an ODBC driver. Optionally, include any connection string properties you need. This is the default selection.
 
    More information: [Authentication with a data source](../connectorauthentication.md)
 
@@ -93,7 +93,7 @@ Power Query provides a set of advanced options that you can add to your query if
 
 | Advanced option | Description |
 | --------------- | ----------- |
-| Connection string (non-credential properties) | ((This appears to be option in Power Query Desktop but required in Power Query Online)) |
-| SQL statement | To provide a SQL statement, depending on the capabilities of the driver. Ask your vendor for more information, or go to [Import data from a database using native database query](../native-database-query.md). |
-| Supported row reduction clauses | To enable folding support for [Table.FirstN](/powerquery-m/table-firstn). Select **Detect** to find supported row reduction clauses, or select from one of the drop down options (TOP, LIMIT and OFFSET, LIMIT, or ANSI SQL-compatible). This option is not applicable when using a native SQL statement. Only available in Power Query Desktop. |
+| Connection string (non-credential properties) | Provides an optional connection string that can be used instead of the **Data source name (DSN)** selection in Power BI Desktop. If **Data source name (DSN)** is set to **(None)**, you can enter a connection string here instead. For example, the following connection strings are valid: **dsn=_\<myDSN>_** or **driver=_\<myDriver>_;port=_\<myPortNumber>_;server=_\<myServer>_;database=_\<myDatabase>_;**. The `{ }` characters can be used to escape special characters. Keys for connection strings will vary between different ODBC drivers. Consult your ODBC driver provider for more information about valid connection strings. |
+| SQL statement | Provides a SQL statement, depending on the capabilities of the driver. Ask your vendor for more information, or go to [Import data from a database using native database query](../native-database-query.md). |
+| Supported row reduction clauses | Enables folding support for [Table.FirstN](/powerquery-m/table-firstn). Select **Detect** to find supported row reduction clauses, or select from one of the drop down options (TOP, LIMIT and OFFSET, LIMIT, or ANSI SQL-compatible). This option is not applicable when using a native SQL statement. Only available in Power Query Desktop. |
 | | |

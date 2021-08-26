@@ -101,8 +101,6 @@ The default view is what you'll see when looking at the list online in whichever
 
    [ ![A screen showing a sample of SharePoint Online list default view.](./media/sharepoint-online-list/sharepointonlinelistsettings.png) ](./media/sharepoint-online-list/sharepointonlinelistsettings.png#lightbox)
 
-We look forward to your feedback.
-
 ## Troubleshooting
 
 ### Use root SharePoint address
