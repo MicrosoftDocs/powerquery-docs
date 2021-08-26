@@ -63,7 +63,7 @@ To connect to Dataverse from Power BI Desktop:
 4. Select one of the following Data Connectivity mode options:
 
    * **Import**: We recommend that you import data to Power BI wherever possible. With this mode, data is cached in the Power BI service and imported on a scheduled interval.
-   * **DirectQuery**: Connects directly to the data in Dataverse. Use this mode for real-time data retrieval. This mode can also more strictly enforce the Dataverse security model. More information: DirectQuery model guidance in Power BI Desktop.
+   * **DirectQuery**: Connects directly to the data in Dataverse. Use this mode for real-time data retrieval. This mode can also more strictly enforce the Dataverse security model. More information: [DirectQuery model guidance in Power BI Desktop](/power-bi/guidance/directquery-model-guidance)
 
    When you've finished filling in the information, select **OK**.
 
