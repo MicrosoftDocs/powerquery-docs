@@ -33,6 +33,10 @@ Certified connectors are:
 
 We work with partners to try to make sure that they have support in maintenance, but customer issues with the connector itself will be directed to the partner developer.
 
+Certified connectors are bundled out-of-box in Power BI Desktop. Custom connectors need to be loaded in Power BI Desktop, as described in [Loading your extension in Power BI Desktop](samples/TripPin/1-OData/README.md#loading-your-extension-in-power-bi-desktop). Both can be refreshed through Power BI Desktop or Power BI Service through using an on-premises data gateway by implementing a [TestConnection](samples/trippin/9-testconnection/readme.md).
+
+Certified connectors with a `TestConnection` implementation also support end-to-end refresh through the cloud (Power BI Service) without the need of an on-premises data gateway. The Power BI service environment essentially hosts a “cloud gateway” that runs similar to the on-premises gateway. After certification, we will deploy your connector to this environment so that it's available to all Power BI customers. There are additional requirements for connectors that need to use additional components, such as an ODBC-based driver. Be sure to reach out to your Microsoft contact if your connector requires the use of additional components.
+
 ## Custom Connector Security and Signing
 
 As M is a versatile language that, as seen in [Handling Authentication](HandlingAuthentication.md), has the capacity to interact with stored credentials, we need to give users a way to only allow trusted connectors to run.
