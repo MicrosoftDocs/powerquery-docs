@@ -5,7 +5,7 @@ author:
 ms.service: powerquery
 ms.reviewer: 
 ms.date: 9/1/2020
-ms.author: 
+ms.author: z
 ms.custom: intro-internal
 ---
 # Query folding examples
@@ -252,7 +252,23 @@ For the showcased examples, Power Query had to request over 3.6 million rows fro
 >It is recommended to implement incremental refresh solutions that leverage query folding for queries or entities with large amount of data. Different product integrations of Power Query implement timeouts to terminate long running queries. Some data sources also implement timeouts on long running sessions trying to execute expensive queries against their servers.
 
 ### Transforms executed by the Power Query Engine
-* Transforms executed by Power Query (chart of how full query folding nets to almost zero work at the PQ level)
+
+This article showcased how you can leverage the [Query plan](query-plan.md) to better understand how your query might be evaluated. Inside the query plan, you are able to see exactly the nodes of the transform operations that will be performed by the Power Query Engine. 
+
+The following table showcases the nodes from the query plans of the previous queries that would've been evaluated by the Power Query engine:
+
+|Example|Label|Power Query Engine transform nodes|
+|--------|------|--------------|
+|No query folding| None|  Table.LastN, Table.SelectColumns |
+|Partial query folding| Partial| Table.LastN |
+|Full query folding| Full| --|
+
+![](media/query-folding-basics/total-local-transforms.png)
+
+For the examples showcased in this article, the full query folding example doesn't require any transforms to happen inside the Power Query engine as the require output table comes directly from the data source. In contrast, the other two queries required some computation to happen at the Power Query engine and due to the amount of data that needs to be processed, the process for these examples takes more time than the full query folding example.
+
+>[!TIP]
+>While not every single transform requires the same resources to compute its resources, it is often more optimal to have a small number of nodes to show in the query plan. 
 
 ## Considerations and suggestions
 
