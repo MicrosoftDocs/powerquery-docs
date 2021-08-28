@@ -8,7 +8,7 @@ ms.date: 8/29/2020
 ms.author: v-miesco
 ms.custom: intro-internal
 ---
-# Understanding query evaluation and query folding in Power Query
+# Overview on query evaluation and query folding in Power Query
 
 *Get help from Bob or Doug to write this after the rest of the sections are finished*
 
