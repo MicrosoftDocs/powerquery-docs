@@ -1,11 +1,11 @@
 ---
 title: Query folding examples in Power Query
 description: Demonstration on the impact of query folding in power Query. A comparison and analysis of multiple query examples with no folding, partial folding and full query folding in Power Query.
-author: ptyx507
+author: 
 ms.service: powerquery
 ms.reviewer: 
 ms.date: 9/1/2020
-ms.author: v-miesco
+ms.author: 
 ms.custom: intro-internal
 ---
 # Query folding examples
@@ -231,7 +231,25 @@ It is often the case that a query which fully folds back to the data source outp
 The next sub-sections will explain the impact that these two processes had in the previously mentioned queries.
 
 ### Data in Transit
-* Query data (row count) throughput of the data source chart (average user would understand better a row count than "total bytes transferred")
+
+When a query gets executed, it tries to fetch the data from the data source as one of its first steps. What data is fetched from the data source is defined by the query folding mechanism that identifies what steps from the query can be offloaded to the data source.
+
+Below is a table with the amount of rows requested from the fact_Sales table of the database and a brief description of the SQL statement sent to request such data from the data source:
+
+|Example|Label|Rows requested| Description|
+|--------|------|--------------|---------|
+|No query folding| None|  3644356 |Request for all fields and all records from the fact_Sale table|
+|Partial query folding| Partial| 3644356|Request for all records, but only required fields from the fact_Sale table after it was sorted by the Sale Key field|
+|Full query folding| Full| 10| Request for only the required fields and the TOP 10 records of the fact_Sales after being sorted in descending order by the Sale Key field|
+
+![](media/query-folding-basics/data-in-transit.png)
+
+When requesting data from a data source, the data source needs to compute the results for the request and then send the data to the requestor. While the computing resources have already been mentioned, the network resources of moving the data from the data source to Power Query and then have Power Query be able to effectively receive the data and prepare it for the transforms that will happen locally can take some time depending on the size of the data.
+
+For the showcased examples, Power Query had to request over 3.6 million rows from the data source for the no query folding and partial query folding examples, whereas for the full query folding it only requested 10 rows. For the fields requested, the no query folding example requested all the available fields from the table, whilst both the partial query folding and the full query folding only submitted a request for exactly the fields that they needed.
+
+>[!CAUTION]
+>It is recommended to implement incremental refresh solutions that leverage query folding for queries or entities with large amount of data. Different product integrations of Power Query implement timeouts to terminate long running queries. Some data sources also implement timeouts on long running sessions trying to execute expensive queries against their servers.
 
 ### Transforms executed by the Power Query Engine
 * Transforms executed by Power Query (chart of how full query folding nets to almost zero work at the PQ level)
