@@ -12,7 +12,7 @@ ms.custom: intro-internal
 
 This article provides some example scenarios for each of the three possible outcomes for query folding. It also includes some suggestions on how to get the most out of the query folding mechanism and the impact that it can have in your queries.
 
-### The scenario
+## The scenario
 
 Imagine a scenario where, using the [Wide World Importers database for Azure Synapse Analytics SQL database](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/load-data-wideworldimportersdw), you are tasked with creating a query in Power Query that connects to the **fact_Sale** table and retrieves the last ten sales with only the following fields:
 
@@ -33,7 +33,7 @@ This article will showcase three ways to achieve the same output with different 
 - Partial query folding
 - Full query folding
 
-#### No query folding example: Creating the query
+## No query folding example
 
 >[!IMPORTANT]
 >Queries that rely solely on unstructured data sources or that don't have a compute engine, such as CSV or Excel files, don't have query folding capabilities. This means that Power Query evaluates all the required data transformations using the Power Query engine.
@@ -69,7 +69,7 @@ in
   #"Choose columns""
 ```
 
-##### No query folding example: Understanding the query evaluation
+### No query folding: Understanding the query evaluation
 
 Checking the applied steps pane, you notice that the step folding indicators are showing that the transforms that you added, Kept bottom rows and Choose columns, are marked as steps that will be evaluated outside the data source or, in other words, at the Power Query engine.
 
@@ -98,7 +98,7 @@ Understanding this will help you better understand the story that the query plan
 
 For its evaluation, this query had to download all rows and fields from the fact_Sales table and took an average of 2 minutes and 45 seconds to be processed in a standard instance of Power BI Dataflows (which accounts for the evaluation and loading of data to dataflows). 
 
-#### Partial query folding: Creating the query
+## Partial query folding example
 
 After connecting to the database and navigating to the **fact_Sales** table, you start by selecting the columns that you want to keep from your table. You select the **Choose columns** transform found inside the *Manage columns* group from the Home tab which will help you to explicitly select the columns that you want to keep from your table and remove the rest.
 
@@ -158,7 +158,7 @@ Understanding this will help you better understand the story that the query plan
 
 For its evaluation, this query had to download all rows and only the required fields from the fact_Sales table. It took an average of 1 minutes and 45 seconds to be processed in a standard instance of Power BI Dataflows (which accounts for the evaluation and loading of data to dataflows). 
 
-#### Full query folding example: Creating the query
+## Full query folding example
 
 After connecting to the database and navigating to the **fact_Sales** table, you start by selecting the columns that you want to keep from your table. You select the **Choose columns** transform found inside the *Manage columns* group from the Home tab which will help you to explicitly select the columns that you want to keep from your table and remove the rest.
 
@@ -192,7 +192,7 @@ in
   #"Kept top rows"
 ```
 
-##### Full query folding example: Understanding the query evaluation
+### Full query folding example: Understanding the query evaluation
 
 When checking the applied steps pane, you can notice that the step folding indicators are showing that the transforms that you added *Choose columns*, *Sorted rows* and *Kept top rows*, are marked as steps that will be evaluated at the data source.
 
@@ -210,7 +210,7 @@ Understanding this will help you better understand the story that the query plan
 
 For its evaluation, this query only to download ten rows and exactly the fields that you needed from the fact_Sales table and took an average of 31 seconds to be processed in a standard instance of Power BI Dataflows (which accounts for the evaluation and loading of data to dataflows).
 
-### Query performance comparison
+## Query performance comparison
 
 Explain why the no folding and partial folding queries didn't work in contrast to why the full query folding worked better.
 (how a SQL BOTTOM clause doesn't exist and why a sorting operation can do wonders)
