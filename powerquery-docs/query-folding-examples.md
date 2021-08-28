@@ -79,9 +79,6 @@ You can right click the last step of your query, the one named *Kept bottom rows
 
 ![Query plan for the query created showing multiple nodes, two of which are within a rectangle that represent the nodes that will be evaluated by the Power Query Engine](media/query-folding-basics/no-folding-query-plan.png)
 
->[!IMPORTANT]
-> Note around the data source nodes and how they are always being folded to the data source.
-
 Each box in the previous image is called a node and it represents every process that needs to happen (from left to right) in order for your query to be evaluated. Some of these nodes can be evaluated at your data source while others like the nodes for Table.LastN and Table.SelectColumns, within the rectangle of the previous image, will be evaluated using the Power Query engine. These two nodes represent the two transforms that you added, *Kept bottom rows* and *Choose columns*, whilst the rest of the node represent operations that will happen at your data source level.
 
 You can also see exactly the query that would be sent to your data source by clicking the *view details* hyperlink in the Value.NativeQuery node.
@@ -96,7 +93,7 @@ Understanding this will help you better understand the story that the query plan
 * **Table.LastN**: Once Power Query receives all records from the fact_Sales table, it uses the Power Query engine to filter the table and keep only the last ten rows.
 * **Table.SelectColumns**: Power Query will use the output of the **Table.LastN** node and apply a new transform called Table.SelectRows which selects the specific columns that you want to keep from a table.
 
-For its evaluation, this query had to download all rows and fields from the fact_Sales table and took an average of 2 minutes and 45 seconds to be processed in a standard instance of Power BI Dataflows (which accounts for the evaluation and loading of data to dataflows). 
+For its evaluation, this query had to download all rows and fields from the fact_Sales table and took an average of 3 minutes and 4 seconds to be processed in a standard instance of Power BI Dataflows (which accounts for the evaluation and loading processed of data to dataflows). 
 
 ## Partial query folding example
 
@@ -143,7 +140,7 @@ You can right click the last step of your query, the one named *Kept bottom rows
 
 ![Query plan for the query created showing multiple nodes where the Table.LastN node, shown within a rectangle, is a node that will be evaluated by the Power Query Engine and not by the data source](media/query-folding-basics/partial-folding-query-plan.png)
 
-Each card in the previous image is called a node and it represents every process that needs to happen (from left to right) in order for your query to be evaluated. Some of these nodes can be evaluated at your data source while others like the node for Table.LastN, represented by your *Kept bottom rows step*, will be evaluated using the Power Query engine.
+Each box in the previous image is called a node and it represents every process that needs to happen (from left to right) in order for your query to be evaluated. Some of these nodes can be evaluated at your data source while others like the node for Table.LastN, represented by your *Kept bottom rows step*, will be evaluated using the Power Query engine.
 
 You can also see exactly the query that would be sent to your data source by clicking the *view details* hyperlink in the Value.NativeQuery node.
 
@@ -156,7 +153,7 @@ Understanding this will help you better understand the story that the query plan
 * **Value.NativeQuery**: Power Query submits the data requests in a native SQL statement to the data source. For this case, that represents all records and only the requested fields from the fact_Sales table in the database sorted in ascending order by the Sales Key field.
 * **Table.LastN**: Once Power Query receives all records from the fact_Sales table, it uses the Power Query engine to filter the table and keep only the last ten rows.
 
-For its evaluation, this query had to download all rows and only the required fields from the fact_Sales table. It took an average of 1 minutes and 45 seconds to be processed in a standard instance of Power BI Dataflows (which accounts for the evaluation and loading of data to dataflows). 
+For its evaluation, this query had to download all rows and only the required fields from the fact_Sales table. It took an average of 3 minutes and 4 seconds to be processed in a standard instance of Power BI Dataflows (which accounts for the evaluation and loading of data to dataflows). 
 
 ## Full query folding example
 
@@ -202,23 +199,30 @@ You can right click the last step of your query, the one named *Kept top rows*, 
 
 ![SQL Statement found inside the Value.NativeQuery that represents a request of the top ten records of the fact_Sales table sorted using the Sale Key field and with only the fields Sale Key, Customer Key, Invoice Date Key, Description and Quantity](media/query-folding-basics/full-folding-query-plan.png)
 
-This query is in the native language of your data source. For this case, that language is SQL and this statement represents a query that requests all rows and fields from the **fact_Sales** table. 
+This query is in the native language of your data source. For this case, that language is SQL and this statement represents a query that requests all rows and fields from the **fact_Sales** table.
 Understanding this will help you better understand the story that the query plan tries to convey in order of the nodes which is:
 
 * **Sql.Database**: Connects to the database and sends metadata requests to understand its capabilities.
 * **Value.NativeQuery**: Power Query submits the data requests in a native SQL statement to the data source. For this case, that represents a request for only the top ten records of the fact_Sales table with only the required fields after being sorted in a descending order using the Sale Key field.
 
+>[!NOTE]
+>In the T-SQL language, while there is no clause that will yield a SELECT operation for the bottom rows of a table, there is the TOP clause that retrieves the top rows of a table.
+
 For its evaluation, this query only to download ten rows and exactly the fields that you needed from the fact_Sales table and took an average of 31 seconds to be processed in a standard instance of Power BI Dataflows (which accounts for the evaluation and loading of data to dataflows).
 
-## Query performance comparison
+## Performance comparison
 
 Explain why the no folding and partial folding queries didn't work in contrast to why the full query folding worked better.
 (how a SQL BOTTOM clause doesn't exist and why a sorting operation can do wonders)
 
+### Refresh times
 * Query refresh times chart (Dataflows refresh history value)
+
+### Data in Transit
 * Query data (row count) throughput of the data source chart (average user would understand better a row count than "total bytes transferred")
+
+### Transforms executed by the Power Query Engine
 * Transforms executed by Power Query (chart of how full query folding nets to almost zero work at the PQ level)
-* Average data preview evaluation in PQ Editor chart
 
 ## Considerations and suggestions
 
@@ -230,4 +234,4 @@ Explain why the no folding and partial folding queries didn't work in contrast t
 * When combining data sourced from the use of multiple connectors, Power Query tries to push as much work as possible to both of the data sources while complying with the privacy levels defined for each data source. 
 * Read the article on [Privacy levels](dataprivacyfirewall.md) to protect your queries from running against a Data Privacy Firewall error.
 * You can also use other tools to check query folding from the perspective of the request being received by the data source. Based on our example, you can use the Microsoft SQL Server Profile to check the requests being sent by Power Query and received by the Microsoft SQL Server.
-* a new folded step generates a new SQL statement that will be sent to the database
+* Whenever you add a new step to your query, Power Query will try to fold it back to the data source as a new data source query that will be evaluated by your data source.
