@@ -12,7 +12,7 @@ ms.custom: intro-internal
 
 *Get help from Bob or Doug to write this after the rest of the sections are finished*
 
-## Create a Power Query M script
+## Power Query M script
 
 A query in Power Query is written in the M language. This query gets interpreted and evaluated by the Power Query engine to output its results. The M script or M code serves as the set of instructions needed to evaluate the query. 
 
@@ -23,18 +23,18 @@ The most common way to create an M script is by using the Power Query Editor. Fo
 
 >[!NOTE]
 > The M script is used within the Power Query editor to:
-> * Display the query as a series of steps and allow the creation or modification of new steps
-> * Display a diagram view
+> - Display the query as a series of steps and allow the creation or modification of new steps
+> - Display a diagram view
 
 ![image of the applied steps and the data preview view](media/query-folding-basics/applied-steps-section.png)
 
 As you can see from the previous image that shows the applied steps section, the query in the image has the following steps:
 
-* **Source**: Makes the connection to the data source. In this case its a connection to a SQL Server database.
-* **Navigation**: Navigates to a specific table within the database.
-* **Removed other columns**: Selects which columns to keep from the table and removes the rest.
-* **Sorted rows**: Sorts the table using one or multiple columns using a descending order.
-* **Kept top rows**: Filters the table to only keep a certain number of rows from the top of the table.
+- **Source**: Makes the connection to the data source. In this case its a connection to a SQL Server database.
+- **Navigation**: Navigates to a specific table within the database.
+- **Removed other columns**: Selects which columns to keep from the table and removes the rest.
+- **Sorted rows**: Sorts the table using one or multiple columns using a descending order.
+- **Kept top rows**: Filters the table to only keep a certain number of rows from the top of the table.
 
 The Power Query Editor helps you add these steps, through a diverse set of interactions on its user interface, to create the M Script that produces your desired query output.
 
@@ -45,9 +45,9 @@ These set of steps names are a friendly way to interpret the M script that Power
 From the previous image, you can see that most of the names that you see in the applied steps pane are also being used in the M script and in some cases they are wrapped around other symbols. The Power Query Editor always tries to show you a friendly name instead of the exact name being used inside your M script to help you interpret your query much easier.
 
 >[!NOTE]
->Steps of a query are named using something called  *identifiers* in the M language. A quoted-identifier, such as the one for the *#"Kept top rows"*, can be used to allow any sequence of zero or more Unicode characters to be used as an identifier, including keywords, whitespace, comments, operators and punctuators. You can learn more about *identifiers* in the M language from the documentation on [lexical structure](https://docs.microsoft.com/powerquery-m/m-spec-lexical-structure#identifiers).
+>Steps of a query are named using something called *identifiers* in the M language. sometimes extra characters are wrapped around step names in M, but these aren’t shown in the applied steps. An example is the  *#"Kept top rows"* which is categorized as a *quoted identifier* because of these extra characters. A quoted identifier can be used used to allow any sequence of zero or more Unicode characters to be used as an identifier, including keywords, whitespace, comments, operators and punctuators. You can learn more about *identifiers* in the M language from the documentation on [lexical structure](https://docs.microsoft.com/powerquery-m/m-spec-lexical-structure#identifiers).
 
-Furthermore, any changes that you make to your query through the Power Query Editor will automatically update the M script for your query. For example, using the previous image as the starting point, if you change the *Kept top rows* step name to be *Top 20 rows*, this will automatically be updated in the script view as shown in the image below:
+Any changes that you make to your query through the Power Query Editor will automatically update the M script for your query. For example, using the previous image as the starting point, if you change the *Kept top rows* step name to be *Top 20 rows*, this will automatically be updated in the script view as shown in the image below:
 
 ![image about how a change in a step name updates the m script](media/query-folding-basics/change-step-name.png)
 
@@ -56,7 +56,7 @@ While it is recommended to leverage the Power Query Editor to create all or most
 >[!NOTE]
 > M Script or M code are terms used for any code that uses the M Language. In the context of this article, M Script also refers to the code found inside a Power Query query and accessible through the Advanced Editor window in the View tab and also through the script view in the formula bar.
 
-## How does a query get evaluated in Power Query?
+## Query evaluation in Power Query
 
 The diagram below explores the process that happens in order to evaluate the previously mentioned query in Power Query:
 
@@ -94,7 +94,7 @@ This is the process that happens to a Power Query query during its evaluation.
 >[!NOTE]
 >Depending on the transformations and data source used in the M script, Power Query will determine if it will stream or buffer the incoming data.
 
-## What is query folding?
+## Query folding overview
 
 The goal of query folding is to offload or push as much of the evaluation of a query to the data source which is able to compute the transformations of your query.
 
