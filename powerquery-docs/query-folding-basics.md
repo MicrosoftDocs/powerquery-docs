@@ -158,7 +158,7 @@ After selecting this transform, a new dialog will appear where you can enter the
 ![Entering the value ten inside the Keep bottom rows dialog](media/query-folding-basics/keep-bottom-rows-dialog.png)
 
 >[!TIP]
->For this case, performing this operation does yield the result of the last ten sales. However, in most scenarios it is recommended to provide a more explicit logic that defines what rows are considered last last by applying a sort operation on the table.
+>For this case, performing this operation yields the result of the last ten sales. In most scenarios it is recommended to provide a more explicit logic that defines what rows are considered last last by applying a sort operation on the table.
 
 Next, you select the **Choose columns** transform found inside the *Manage columns* group from the Home tab which will help you to explicitly select the columns that you want to keep from your table and remove the rest.
 
