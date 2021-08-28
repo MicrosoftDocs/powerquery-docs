@@ -1,6 +1,6 @@
 ---
-title: Understanding query evaluation and query folding in Power Query
-description: Guide on how queries get evaluated in Power Query, how the query folding mechanism works and how to get the most out of it to improve query execution times.
+title: Query folding examples in Power Query
+description: Demonstration on the impact of query folding in power Query. A comparison and analysis of multiple query examples with no folding, partial folding and full query folding in Power Query.
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: 
@@ -16,11 +16,11 @@ This article provides some example scenarios for each of the three possible outc
 
 Imagine a scenario where, using the [Wide World Importers database for Azure Synapse Analytics SQL database](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/load-data-wideworldimportersdw), you are tasked with creating a query in Power Query that connects to the **fact_Sale** table and retrieves the last ten sales with only the following fields:
 
-* Sales Key
-* Customer Key
-* Invoice Date Key
-* Description
-* Quantity
+- Sales Key
+- Customer Key
+- Invoice Date Key
+- Description
+- Quantity
 
 >[!NOTE]
 >For demonstration purposes, this article uses the database outlined on the tutorial on loading the Wide World Importers database into Azure Synapse Analytics with the main difference being the fact_Sales table only holding data for the year 2000 and with a total of 3644356 rows.
@@ -88,10 +88,10 @@ You can also see exactly the query that would be sent to your data source by cli
 This query is in the native language of your data source. For this case, that language is SQL and this statement represents a query that requests all rows and fields from the **fact_Sales** table. 
 Understanding this will help you better understand the story that the query plan tries to convey in order of the nodes which is a sequential process that starts by requesting the data from your data source:
 
-* **Sql.Database**: Connects to the database and sends metadata requests to understand its capabilities.
-* **Value.NativeQuery**: Power Query submits the data requests in a native SQL statement to the data source. For this case, that represents all records and fields from the fact_Sales table.
-* **Table.LastN**: Once Power Query receives all records from the fact_Sales table, it uses the Power Query engine to filter the table and keep only the last ten rows.
-* **Table.SelectColumns**: Power Query will use the output of the **Table.LastN** node and apply a new transform called Table.SelectRows which selects the specific columns that you want to keep from a table.
+- **Sql.Database**: Connects to the database and sends metadata requests to understand its capabilities.
+- **Value.NativeQuery**: Power Query submits the data requests in a native SQL statement to the data source. For this case, that represents all records and fields from the fact_Sales table.
+- **Table.LastN**: Once Power Query receives all records from the fact_Sales table, it uses the Power Query engine to filter the table and keep only the last ten rows.
+- **Table.SelectColumns**: Power Query will use the output of the **Table.LastN** node and apply a new transform called Table.SelectRows which selects the specific columns that you want to keep from a table.
 
 For its evaluation, this query had to download all rows and fields from the fact_Sales table and took an average of 3 minutes and 4 seconds to be processed in a standard instance of Power BI Dataflows (which accounts for the evaluation and loading processed of data to dataflows). 
 
@@ -149,11 +149,11 @@ You can also see exactly the query that would be sent to your data source by cli
 This query is in the native language of your data source. For this case, that language is SQL and this statement represents a query that requests all rows and only the requested fields from the **fact_Sales** table ordered by the Sale Key field. 
 Understanding this will help you better understand the story that the query plan tries to convey in order of the nodes which is a sequential process that starts by requesting the data from your data source:
 
-* **Sql.Database**: Connects to the database and sends metadata requests to understand its capabilities.
-* **Value.NativeQuery**: Power Query submits the data requests in a native SQL statement to the data source. For this case, that represents all records and only the requested fields from the fact_Sales table in the database sorted in ascending order by the Sales Key field.
-* **Table.LastN**: Once Power Query receives all records from the fact_Sales table, it uses the Power Query engine to filter the table and keep only the last ten rows.
+- **Sql.Database**: Connects to the database and sends metadata requests to understand its capabilities.
+- **Value.NativeQuery**: Power Query submits the data requests in a native SQL statement to the data source. For this case, that represents all records and only the requested fields from the fact_Sales table in the database sorted in ascending order by the Sales Key field.
+- **Table.LastN**: Once Power Query receives all records from the fact_Sales table, it uses the Power Query engine to filter the table and keep only the last ten rows.
 
-For its evaluation, this query had to download all rows and only the required fields from the fact_Sales table. It took an average of 3 minutes and 4 seconds to be processed in a standard instance of Power BI Dataflows (which accounts for the evaluation and loading of data to dataflows). 
+For its evaluation, this query had to download all rows and only the required fields from the fact_Sales table. It took an average of 3 minutes and 4 seconds to be processed in a standard instance of Power BI Dataflows (which accounts for the evaluation and loading of data to dataflows).
 
 ## Full query folding example
 
@@ -202,8 +202,8 @@ You can right click the last step of your query, the one named *Kept top rows*, 
 This query is in the native language of your data source. For this case, that language is SQL and this statement represents a query that requests all rows and fields from the **fact_Sales** table.
 Understanding this will help you better understand the story that the query plan tries to convey in order of the nodes which is:
 
-* **Sql.Database**: Connects to the database and sends metadata requests to understand its capabilities.
-* **Value.NativeQuery**: Power Query submits the data requests in a native SQL statement to the data source. For this case, that represents a request for only the top ten records of the fact_Sales table with only the required fields after being sorted in a descending order using the Sale Key field.
+- **Sql.Database**: Connects to the database and sends metadata requests to understand its capabilities.
+- **Value.NativeQuery**: Power Query submits the data requests in a native SQL statement to the data source. For this case, that represents a request for only the top ten records of the fact_Sales table with only the required fields after being sorted in a descending order using the Sale Key field.
 
 >[!NOTE]
 >In the T-SQL language, while there is no clause that will yield a SELECT operation for the bottom rows of a table, there is the TOP clause that retrieves the top rows of a table.
@@ -212,11 +212,23 @@ For its evaluation, this query only to download ten rows and exactly the fields 
 
 ## Performance comparison
 
-Explain why the no folding and partial folding queries didn't work in contrast to why the full query folding worked better.
-(how a SQL BOTTOM clause doesn't exist and why a sorting operation can do wonders)
+To better understand the impact that query folding has in these queries, you can refresh your queries, record the time it takes to fully refresh each query and compare them. For simplicity, this article provides the average refresh timings captured using the Power BI Dataflows refresh mechanic and connecting to a dedicated Azure Synapse Analytics environment with DW2000c as the service level.
 
-### Refresh times
-* Query refresh times chart (Dataflows refresh history value)
+The refresh time for each query was as follow:
+|Example|Label|Time in seconds|
+|--------|------|--------------|
+|No query folding| None| 361|
+|Partial query folding| Partial| 184|
+|Full query folding| Full| 31|
+
+![Chart that compares the refresh time of the no folding query with 361 seconds, the partial query folding with 184 seconds and the fully folded query with 31 seconds](media/query-folding-basics/outcome-timing.png)
+
+It is often the case that a query which fully folds back to the data source outperforms similar queries that do not completely fold back to the data source. While there could be many reasons why this is the case ranging from the complexity of the transforms that your query performs to the query optimizations implemented at your data source such as indexes and dedicated computing and network resources, there are two specific key processes that query folding tries to leverage and minimize the impact that both of these have with Power Query and these are:
+
+- Data in transit
+- Transforms executed by the Power Query engine
+
+The next sub-sections will explain the impact that these two processes had in the previously mentioned queries.
 
 ### Data in Transit
 * Query data (row count) throughput of the data source chart (average user would understand better a row count than "total bytes transferred")
