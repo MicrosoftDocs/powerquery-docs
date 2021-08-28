@@ -5,7 +5,7 @@ author:
 ms.service: powerquery
 ms.reviewer: 
 ms.date: 9/1/2020
-ms.author: z
+ms.author: 
 ms.custom: intro-internal
 ---
 # Query folding examples
