@@ -182,7 +182,7 @@
             href: dataflows/best-practices-for-dimensional-model-using-dataflows.md
           - name: "Performance"
             href: dataflows/performance-ingestion-transformation-dataflows.md
-        - name: "Other Azure data services"
+        - name: "Get dateflows data from Azure services"
           href: dataflows/using-output-power-platform-dataflows-other-azure.md
       - name: Standard dataflows
         items: 
