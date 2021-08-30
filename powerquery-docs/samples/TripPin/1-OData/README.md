@@ -78,14 +78,13 @@ TripPin.Feed("https://services.odata.org/v4/TripPinService/")
 
 Select the **Start** button to launch the M Query utility.
 
-The \<project>.query.pq file is used to test out your extension without having to deploy it to your Power BI Desktop's bin folder. Selecting the **Start** button (or press **F5**) automatically compiles your extension and launches the M Query utility.
+The \<project>.query.pq file is used to test out your extension without having to deploy it to your Power BI Desktop's bin folder. Selecting the **Start** button (or pressing **F5**) automatically compiles your extension and launches the M Query utility.
 
-Running your query for the first time results in a credential error. In Power Query, the hosting application would convert this error into a credential prompt.
-In Visual Studio, you'll receive a similar prompt that calls out which data source is missing credentials and its data source path.
-Select the shortest of the data source paths (`https://services.odata.org/`)&mdash;this will apply your credential to all URLs under this path.
+Running your query for the first time results in a credential error. In Power Query, the hosting application would convert this error into a credential prompt. In Visual Studio, you'll receive a similar prompt that calls out which data source is missing credentials and its data source path. Select the shortest of the data source paths (`https://services.odata.org/`)&mdash;this will apply your credential to all URLs under this path.
+
 Select the **Anonymous** credential type, and then select **Set Credential**.
 
-![Credential error prompt.](../../../images/credentialPrompt.png)
+![Image of M Query Output dialog, with the Errors tab selected, and the Data Source Path filled in and the Credential Type set to Anonymous.](../../../images/credentialPrompt.png)
 
 Select **OK** to close the dialog, and then select the **Start** button once again. You see a query execution status dialog, and finally a Query Result table showing the data returned from your query.
 
@@ -93,9 +92,9 @@ Select **OK** to close the dialog, and then select the **Start** button once aga
 
 You can try out a few different OData URLs in the test file to see what how different results are returned. For example:
 
-* https://services.odata.org/v4/TripPinService/Me
-* https://services.odata.org/v4/TripPinService/GetPersonWithMostFriends()
-* https://services.odata.org/v4/TripPinService/People
+* `https://services.odata.org/v4/TripPinService/Me`
+* `https://services.odata.org/v4/TripPinService/GetPersonWithMostFriends()`
+* `https://services.odata.org/v4/TripPinService/People`
 
 The TripPin.query.pq file can contain single statements, let statements, or full section documents.
 
@@ -138,7 +137,7 @@ Select the function name, and select **Connect**. A third-party message appears&
 
 Since this is the first time you are accessing this data source, you'll receive a prompt for credentials. Check that the shortest URL is selected, and then select **Connect**.
 
-![Credential prompt.](../../../images/trippin1Creds.png)
+![Image of credential prompt set to Anonymous and the level setting set to the shortest URL.](../../../images/trippin1Creds.png)
 
 Notice that instead of getting a simple table of data, the navigator appears. This is because the [OData.Feed](/powerquery-m/odata-feed) function returns a table with special metadata on top of it that the Power Query experience knows to display as a navigation table. This walkthrough will cover how you can create and customize your own navigation table in a future lesson.
 

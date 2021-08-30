@@ -5,23 +5,24 @@ author: dougklopfenstein
 
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 06/01/2020
+ms.date: 8/10/2021
 ms.author: bezhan
 
 LocalizationGroup: reference
 ---
 
-# QuickBooks Online
+# QuickBooks Online (Beta)
+
+The Power BI QuickBooks Online connector enables connecting to your QuickBooks Online account and viewing, analyzing, and reporting on your company QuickBooks data in Power BI.
 
 ## Summary
 
-Power BI QuickBooks Online connector enables connecting to your QuickBooks Online account and viewing, analyzing, and reporting on your company QuickBooks data in Power BI.
-
-Release state: Beta
-
-Products: Power BI Desktop, Power BI Service (Enterprise Gateway)
-
-Authentication Types Supported: QuickBooks Online account
+| Item | Description |
+| ---- | ----------- |
+| Release State | Beta |
+| Products | Power BI (Datasets) |
+| Authentication Types Supported | QuickBooks Online account |
+| | |
 
 >[!Warning]
 > QuickBooks Online has deprecated support for Internet Explorer 11, which Power Query Desktop uses for authentication to online services. To be able to log in to Quickbooks Online from Power BI Desktop, see the Troubleshooting section below.
@@ -86,7 +87,7 @@ For more information, see [Alert: Support for IE11 deprecating on July 31, 2020 
 Starting in December 2020 Power BI Desktop:
 
 * Install the new Edge Chromium browser, (at least beta) from https://www.microsoftedgeinsider.com/en-us/download.
-* In your Environment Variables, set the System variable PQ_EnableEdgeChromiumOAuth to true . Once that is set it will use Edge Chromium for only QuickBooksOnline. For this release, only QuickBooksOnline is enabled by default.
+* In your Environment Variables, set the System variable PQ_EnableEdgeChromiumOAuth to true . Once that variable is set, it will use Edge Chromium for only QuickBooksOnline. For this release, only QuickBooksOnline is enabled by default.
 * You should now be able to log in to QuickBooks Online.
 
 ## Next steps

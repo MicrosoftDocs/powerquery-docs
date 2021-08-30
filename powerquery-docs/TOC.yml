@@ -262,7 +262,7 @@
         href: Connectors/AccessDatabase.md
       - name: "Adobe Analytics"
         href: "Connectors/AdobeAnalytics.md"
-      - name: "Amazon Athena"
+      - name: "Amazon Athena (Beta)"
         href: "Connectors/AmazonAthena.md"
       - name: "Anaplan"
         href: Connectors/Anaplan.md
@@ -294,9 +294,9 @@
           href: Connectors/FHIR/FHIR.md
         - name: Authentication
           href: Connectors/FHIR/FHIR-Authentication.md
-        - name: Query Folding
+        - name: Query folding
           href: Connectors/FHIR/FHIR-QueryFolding.md
-        - name: Query Folding Patterns
+        - name: Query folding patterns
           href: Connectors/FHIR/FHIR-QueryFoldingPatterns.md
         - name: Data relationships
           href: Connectors/FHIR/FHIR-Relationships.md
@@ -330,7 +330,7 @@
         href: Connectors/OracleDatabase.md
       - name: "PostgreSQL"
         href: Connectors/PostgreSQL.md
-      - name: "QuickBooks Online"
+      - name: "QuickBooks Online (Beta)"
         href: Connectors/QuickBooksOnline.md
       - name: "Salesforce Objects"
         href: Connectors/SalesforceObjects.md
@@ -368,11 +368,11 @@
           href: Connectors/sap-hana/configure-odbc-sap-hana.md
         - name: "Troubleshooting"
           href: Connectors/sap-hana/sap-hana-troubleshooting.md
-      - name: "SharePoint Folder"
+      - name: "SharePoint folder"
         href: Connectors/SharePointFolder.md
-      - name: "SharePoint List"
+      - name: "SharePoint list"
         href: Connectors/SharePointList.md
-      - name: "SharePoint Online List"
+      - name: "SharePoint Online list"
         href: Connectors/SharePointOnlineList.md
       - name: "Snowflake"
         href: Connectors/Snowflake.md
