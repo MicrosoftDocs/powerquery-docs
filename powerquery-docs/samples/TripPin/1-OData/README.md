@@ -6,7 +6,7 @@ manager: kfile
 
 ms.service: powerquery
 ms.topic: tutorial
-ms.date: 8/10/2021
+ms.date: 8/25/2021
 ms.author: gepopell
 
 LocalizationGroup: reference
@@ -96,7 +96,7 @@ You can try out a few different OData URLs in the test file to see what how diff
 * `https://services.odata.org/v4/TripPinService/GetPersonWithMostFriends()`
 * `https://services.odata.org/v4/TripPinService/People`
 
-The TripPin.query.pq file can contain single statements, let statements, or full section documents. 
+The TripPin.query.pq file can contain single statements, let statements, or full section documents.
 
 ```
 let
@@ -123,15 +123,15 @@ To use your extension in Power BI Desktop, you'll need to copy your connector pr
 1. In Visual Studio, select **Build | Build Solution (F6)** from the menu bar. This will generate the .mez file for you project. By default, this will go in your project's bin\Debug folder.
 2. Create a `[My Documents]\Power BI Desktop\Custom Connectors` directory.
 3. Copy the extension file into this directory.
-4. Enable the **Custom data connectors** preview feature in Power BI Desktop (under **File > Options and settings > Custom data connectors**).
+4. Check the option **(Not Recommended) Allow any extension to load without validation or warning** in Power BI Desktop (under **File** > **Options and settings** > **Options** > **Security** > **Data Extensions**).
 5. Restart Power BI Desktop.
 6. Select **Get Data > More** to bring up the **Get Data** dialog.
 
-You should be able to locate your extension by typing its name into the search box.
+You can locate your extension by typing its name into the search box.
 
 ![Get Data Dialog.](../../../images/trippin1GetData.png)
 
-Double click on the function name and the function invocation dialog will appear. Enter the root URL of the service (https://services.odata.org/v4/TripPinService/), and select **OK**.
+Select the function name, and select **Connect**. A third-party message appears&mdash;select **Continue** to continue. The function invocation dialog now appears. Enter the root URL of the service (`https://services.odata.org/v4/TripPinService/`), and select **OK**.
 
 ![Invoke Function.](../../../images/trippin1Function.png)
 
@@ -143,7 +143,7 @@ Notice that instead of getting a simple table of data, the navigator appears. Th
 
 ![Nav Table.](../../../images/trippin1NavTable.png)
 
-Select the **Me** table, and then select **Edit**. Notice that the columns already have types assigned (well, most of them). This is another feature of the underlying [OData.Feed](/powerquery-m/odata-feed) function. If you watch the requests in [Fiddler](https://www.telerik.com/fiddler), you'll see that you've fetched the service's $metadata document. The engine's OData implementation does this automatically to determine the service's schema, data types, and relationships.
+Select the **Me** table, and then select **Transform Data**. Notice that the columns already have types assigned (well, most of them). This is another feature of the underlying [OData.Feed](/powerquery-m/odata-feed) function. If you watch the requests in [Fiddler](https://www.telerik.com/fiddler), you'll see that you've fetched the service's $metadata document. The engine's OData implementation does this automatically to determine the service's schema, data types, and relationships.
 
 ![Me Record.](../../../images/trippin1Me.png)
 
