@@ -80,15 +80,7 @@ Beginning on August 1, 2020, Intuit will no longer support Microsoft Internet Ex
 
 For more information, see [Alert: Support for IE11 deprecating on July 31, 2020 for Authorization screens](https://blogs.intuit.com/blog/2020/06/27/alert-support-for-ie11-deprecating-on-july-31-2020-for-authorization-screens/).
 
-## Troubleshooting
-
-### Enabling OAuth Authentication in Power BI Desktop
-
-Starting in December 2020 Power BI Desktop:
-
-* Install the new Edge Chromium browser, (at least beta) from https://www.microsoftedgeinsider.com/en-us/download.
-* In your Environment Variables, set the System variable PQ_EnableEdgeChromiumOAuth to true . Once that variable is set, it will use Edge Chromium for only QuickBooksOnline. For this release, only QuickBooksOnline is enabled by default.
-* You should now be able to log in to QuickBooks Online.
+For information about current Microsoft Edge support in Power BI Desktop, go to [Enabling Microsoft Edge (Chromium) for OAuth Authentication in Power BI Desktop](../oauth-edge-chromium.md).
 
 ## Next steps
 

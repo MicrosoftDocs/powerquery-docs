@@ -253,7 +253,9 @@
       - name: "Create Power Platform dataflows from queries in Microsoft Excel (Preview)"
         href: new-dataflow-from-template.md
       - name: Optimize Power Query when expanding table columns
-        href: optimize-expanding-table-columns.md    
+        href: optimize-expanding-table-columns.md
+      - name: "Enabling OAuth authentication in Power BI Desktop"
+        href: oauth-edge-chromium.md
     - name: "Connector reference"
       items:
       - name: "Power Query connectors"
