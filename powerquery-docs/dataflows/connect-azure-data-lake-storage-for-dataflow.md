@@ -1,7 +1,7 @@
 ---
 title: "Connect Azure Data Lake Storage Gen2 for dataflow storage | MicrosoftDocs"
 description: "Learn how to connect Azure Data Lake Storage Gen2 for dataflow storage"
-ms.date: 12/05/2019
+ms.date: 9/1/2021
 ms.reviewer: dougklo
 ms.service: powerquery
 ms.topic: "how-to"

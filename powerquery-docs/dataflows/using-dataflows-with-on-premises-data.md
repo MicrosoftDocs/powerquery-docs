@@ -1,7 +1,7 @@
 ---
 title: "Using an on-premises data gateway in Power Platform dataflows | MicrosoftDocs"
 description: "Learn how to use an on-premises data gateway in Power Platform dataflows"
-ms.date: 08/05/2019
+ms.date: 9/1/2021
 ms.reviewer: dougklo
 ms.service: powerquery
 ms.topic: article
@@ -55,7 +55,7 @@ To install a gateway from Power BI service:
 
 2. Install the gateway using the instructions provided in [Install an on-premises data gateway](/data-integration/gateway/service-gateway-install.md).
 
-### Install a gateway rom Power Apps
+### Install a gateway from Power Apps
 
 To install a gateway from Power Apps:
 

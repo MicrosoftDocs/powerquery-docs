@@ -5,7 +5,7 @@ author: mllopis
 ms.reviewer: dougklo
 ms.service: powerquery
 ms.topic: how-to
-ms.date: 05/04/2020
+ms.date: 9/1/2021
 ms.author: millopis
 
 LocalizationGroup: reference
