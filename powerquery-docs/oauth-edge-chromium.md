@@ -10,9 +10,9 @@ ms.author: dougklo
 
 # Enabling Microsoft Edge (Chromium) for OAuth authentication in Power BI Desktop
 
-If you were using OAuth authentication to connect to your data, the OAuth dialog in Power Query used the Microsoft Internet Explorer 11 embedded control browser. However, certain connectors, such as QuickBooks Online, Salesforce Reports, and Salesforce Objects, no longer contain support for Internet Explorer 11.
+If you are using OAuth authentication to connect to your data, the OAuth dialog in Power Query uses the Microsoft Internet Explorer 11 embedded control browser. However, certain web services, such as QuickBooks Online, Salesforce Reports, and Salesforce Objects, no longer support Internet Explorer 11.
 
-As of December of 2020, Power BI Desktop by default now supports WebView2 for OAuth authentication in certain connectors. These connectors are:
+As of December of 2020, Power BI Desktop now uses [Microsoft Edge WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/) for OAuth authentication with certain connectors. These connectors are:
 
 * GitHub
 * QuickBooks Online
@@ -22,9 +22,9 @@ As of December of 2020, Power BI Desktop by default now supports WebView2 for OA
 * Twilio
 * Zendesk
 
-On your Power BI Desktop machine, you can get WebView2 control either by installing the new Edge (Chromium) browser, (at least beta) from [https://www.microsoftedgeinsider.com/download](https://www.microsoftedgeinsider.com/download), or by installing the [WebView2 redist package](https://developer.microsoft.com/microsoft-edge/webview2/#download-section).
+On your Power BI Desktop machine, you can get WebView2 control either by installing the new Edge (Chromium) browser (at least beta) from [https://www.microsoftedgeinsider.com/download](https://www.microsoftedgeinsider.com/download), or by installing the [WebView2 redist package](https://developer.microsoft.com/microsoft-edge/webview2/#download-section).
 
-All other connectors will use Internet Explorer by default unless the settings are overridden using environment variables.
+All other connectors will use Internet Explorer 11 by default unless the settings are overridden using environment variables.
 
 * To enable WebView2 for all connectors, set `PQ_EdgeChromiumOAuthAllowListAll` to true:
 
