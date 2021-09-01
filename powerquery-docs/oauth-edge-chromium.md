@@ -1,6 +1,6 @@
 ---
 title: Enabling Microsoft Edge (Chromium) for OAuth authentication in Power BI Desktop
-description: This article describes how users can install and use Microsfot Edge (Chromium) for OAuth authentication in Power BI Desktop. 
+description: This article describes how users can install and use Microsoft Edge (Chromium) for OAuth authentication in Power BI Desktop. 
 author: DougKlopfenstein
 ms.service: powerquery
 ms.reviewer: dougklo
@@ -10,7 +10,7 @@ ms.author: dougklo
 
 # Enabling Microsoft Edge (Chromium) for OAuth authentication in Power BI Desktop
 
-If you are using OAuth authentication to connect to your data, the OAuth dialog in Power Query uses the Microsoft Internet Explorer 11 embedded control browser. However, certain web services, such as QuickBooks Online, Salesforce Reports, and Salesforce Objects, no longer support Internet Explorer 11.
+If you're using OAuth authentication to connect to your data, the OAuth dialog in Power Query uses the Microsoft Internet Explorer 11 embedded control browser. However, certain web services, such as QuickBooks Online, Salesforce Reports, and Salesforce Objects, no longer support Internet Explorer 11.
 
 As of December of 2020, Power BI Desktop now uses [Microsoft Edge WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/) for OAuth authentication with certain connectors. These connectors are:
 
