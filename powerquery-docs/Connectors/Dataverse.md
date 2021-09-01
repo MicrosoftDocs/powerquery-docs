@@ -4,7 +4,7 @@ description: Provides basic information and connection instructions, along with 
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 04/07/2021
+ms.date: 9/1/2021
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -102,8 +102,8 @@ To connect to Dataverse from Power Query Online:
 Dataverse is the direct replacement for the Common Data Service connector. However, there may be times when it's necessary to choose the Common Data Service (Legacy) connector instead of the Dataverse connector:
 
 * If you're connecting to data using Power Apps, you'll still have to use the Common Data Service (Legacy) connector.
-* If you're accessing large datasets that are greater than 80 MB.
-* If you want paging of the query results and want to build reports that use the image data type.
+* If you're accessing large datasets that are greater than 80 MB, you'll still have to use the Common Data Service (Legacy) connector.
+* If you want paging of the query results and want to build reports that use the image data type, you'll still have to use the Common Data Service (Legacy) connector.
 
 Also, there are certain Tabular Data Stream (TDS) data types that are supported in OData when using Common Data Service (Legacy) that aren't supported in Dataverse. The supported and unsupported data types are listed in [How Dataverse SQL differs from Transact-SQL (Preview)](/powerapps/developer/data-platform/how-dataverse-sql-differs-from-transact-sql?tabs=supported).
 
