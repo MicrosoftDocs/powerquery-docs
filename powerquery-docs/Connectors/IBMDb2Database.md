@@ -63,6 +63,10 @@ To make the connection, take the following steps:
 
    ![Enter your IBM Db2 database credentials.](./media/ibm-db2/enter-credentials.png)
 
+   By default, Power Query attempts to connect to the IBM Db2 database using an encrypted connection. If Power Query can't connect using an encrypted connection, an "unable to connect" dialog box will appear. To connect using an unencrypted connection, select **OK**.
+
+   ![Unable to connect dialog box](./media/ibm-db2/encryption-support.png)
+
 6. In **Navigator**, select the data you require, then either select **Load** to load the data or **Transform Data** to transform the data.
 
    ![Select the data you require from the database](./media/ibm-db2/navigator.png)
@@ -84,11 +88,13 @@ To make the connection, take the following steps:
 
 5. Enter your credentials.
 
+6. Select **Use Encrypted Connection** if you want to use an encrypted connection, or clear it if you want to use an unencrypted connection.
+
    ![Enter IBM Db2 database online connection.](./media/ibm-db2/sign-in-online.png)
 
-6. Select **Next** to continue.
+7. Select **Next** to continue.
 
-7. In **Navigator**, select the data you require, then select **Transform data** to transform the data in Power Query Editor.
+8. In **Navigator**, select the data you require, then select **Transform data** to transform the data in Power Query Editor.
 
    ![Select the data you want to transform in the Navigator](./media/ibm-db2/navigator-online.png)
 
@@ -102,8 +108,8 @@ The following table lists all of the advanced options you can set in Power Query
 
 | Advanced option | Description |
 | --------------- | ----------- |
-| Driver |  |
-| Command timeout in minutes | If your connection lasts longer than 10 minutes (the default timeout), you can enter another value in minutes to keep the connection open longer. This option is only available in Power Query Desktop. |
+| Driver | This option is only available in Power Query Desktop. |
+| Command timeout in minutes | If your connection lasts longer than 10 minutes (the default timeout), you can enter another value in minutes to keep the connection open longer. |
 | Package collection | |
 | SQL statement | For information, go to [Import data from a database using native database query](../native-database-query.md). |
 | Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, you won’t see those columns. |
