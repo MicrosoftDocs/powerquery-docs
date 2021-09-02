@@ -276,7 +276,7 @@
         href: "Connectors/AmazonAthena.md"
       - name: "Anaplan"
         href: Connectors/Anaplan.md
-      - name: "AssembleViews (Beta)"
+      - name: "AssembleViews"
         href: Connectors/AssembleViews.md
       - name: "Automy Data Analytics (Beta)"
         href: "Connectors/AutomyDataAnalytics.md"

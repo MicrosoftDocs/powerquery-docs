@@ -10,7 +10,7 @@ ms.author: bezhan
 LocalizationGroup: reference
 ---
 
-# Assemble Views (Beta)
+# Assemble Views
 
 >[!Note]
 >The following connector article is provided by Autodesk, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Autodesk website and use the support channels there.
@@ -19,7 +19,7 @@ LocalizationGroup: reference
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | Beta |
+| Release State | GA |
 | Products | Power BI (Datasets) |
 | Authentication Types Supported | Autodesk Account |
 | Function Reference Documentation | - |
