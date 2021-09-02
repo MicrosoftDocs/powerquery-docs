@@ -308,6 +308,8 @@
         href: Connectors/GoogleAnalytics.md
       - name: "Google BigQuery"
         href: Connectors/GoogleBigQuery.md
+      - name: "IBM Db2 database"
+        href: Connectors/IBMDb2Database.md
       - name: "JSON"
         href: Connectors/json.md
       - name: "Mailchimp (Deprecated)"
