@@ -94,7 +94,7 @@ The following table describes all of the advanced options you can set in Power Q
 
 ## Use Azure AD Single Sign-On (SSO)
 
-Add text explanation here
+Azure AD SSO enables single sign on on the data gateway to cloud data sources that rely on Azure Active Directory (Azure AD)-based authentication. When you configure Azure AD SSO on the on-premises data gateway for an applicable data source, queries execute under the Azure AD identity of the user that interacts with the Power BI report.
 
 ### Azure AD Single Sign-On (SSO)
 
