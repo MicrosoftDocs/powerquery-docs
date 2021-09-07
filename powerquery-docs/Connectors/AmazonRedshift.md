@@ -74,11 +74,13 @@ To connect to Amazon Redshift data:
 
 3. If needed, select the on-premises data gateway in **Data gateway**.
 
-4. Select the type of authentication you want to use in **Authentication kind**, and then enter your user name and password.
+4. Select the type of authentication you want to use in **Authentication kind**, and then enter your credentials.
 
-5. Select **Next** to continue.
+5. Select or clear **Use Encrypted Connection** depending on whether you want to use an encrypted connection or not.
 
-6. In **Navigator**, select the data you require, and then select **Transform data**. This selection opens the Power Query Editor so that you can filter and refine the set of data you want to use.
+6. Select **Next** to continue.
+
+7. In **Navigator**, select the data you require, and then select **Transform data**. This selection opens the Power Query Editor so that you can filter and refine the set of data you want to use.
 
 ## Connect using advanced options
 
