@@ -94,11 +94,11 @@ The following table describes all of the advanced options you can set in Power Q
 | Batch size | Specifies the maximum number of rows to retrieve at a time from the server when fetching data. A small number translates into more calls to the server when retrieving a large dataset. A large number of rows may improve performance, but could cause high memory usage. The default value is 100 rows. |
 | | |
 
-## Use Azure AD Single Sign-On (SSO)
+## Enable Azure AD Single Sign-On (SSO) for Amazon Redshift
 
-Azure AD SSO enables single sign on on the data gateway to cloud data sources that rely on Azure Active Directory (Azure AD)-based authentication. When you configure Azure AD SSO on the on-premises data gateway for an applicable data source, queries execute under the Azure AD identity of the user that interacts with the Power BI report.
+We support AAD SSO in both Power BI service and the on-premises data gateway. For more information about enabling AAD SSO for all connectors, go to [Overview of single sign-on (SSO) for on-premises data gateways in Power BI](/power-bi/connect-data/service-gateway-sso-overview).
 
-### Azure AD Single Sign-On (SSO)
+### Azure AD Single Sign-On (SSO) through Power BI service
 
 To configure a new connection in Power BI service:
 
@@ -110,9 +110,9 @@ To configure a new connection in Power BI service:
 
    ![Enable the Redshift SSO option.](./media/amazon-redshift/redshift-sso.png)
 
-### Azure AD Single Sign-On (SSO) with an on-premises data gateway
+### Azure AD Single Sign-On (SSO) for Amazon Redshift with an on-premises data gateway
 
-To configure a new connection in Power BI service using an on-premises data gateway:
+Before you can enable Azure AD SSO for Amazon Redshift you must first enable Azure AD SSO for all data sources that support Azure AD SSO with an on-premises data gateway:
 
 1. In Power BI service, select **Admin portal** from the settings list.
 
@@ -121,6 +121,8 @@ To configure a new connection in Power BI service using an on-premises data gate
 2. Under **Tenant settings**, enable **Azure AD Single-Sign On (SSO) for Gateway**.
 
    ![Enable AAD SSO for gateway.](./media/amazon-redshift/aad-sso-for-gateway.png)
+
+Once you've enabled Azure AD SSO for all data sources, then enable Azure AD SSO for Amazone Redshift:
 
 3. Also enable the **Redshift SSO** option.
 
