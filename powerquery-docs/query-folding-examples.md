@@ -47,13 +47,13 @@ After selecting this transform, a new dialog will appear where you can enter the
 ![Entering the value ten inside the Keep bottom rows dialog](media/query-folding-basics/keep-bottom-rows-dialog.png)
 
 >[!TIP]
->For this case, performing this operation yields the result of the last ten sales. In most scenarios it is recommended to provide a more explicit logic that defines what rows are considered last last by applying a sort operation on the table.
+>For this case, performing this operation yields the result of the last ten sales. In most scenarios it is recommended to provide a more explicit logic that defines which rows are considered last by applying a sort operation on the table.
 
-Next, you select the **Choose columns** transform found inside the *Manage columns* group from the Home tab which will help you to explicitly select the columns that you want to keep from your table and remove the rest.
+Next, you select the **Choose columns** transform found inside the *Manage columns* group from the Home tab which will let you select the columns that you want to keep from your table and remove the rest.
 
 ![Selecting the choose columns transform found inside the Manage columns group from the Home tab](media/query-folding-basics/choose-columns-ui.png)
 
-Lastly, now inside the **Choose columns** dialog, you select the columns *Sales Key*, *Customer Key*, *Invoice Date Key*, *Description*, and *Quantity* and click the OK button.
+Lastly, inside the **Choose columns** dialog, you select the columns *Sales Key*, *Customer Key*, *Invoice Date Key*, *Description*, and *Quantity* and click the OK button.
 
 ![Selecting the columns Sales Key, Customer Key, Invoice Date Key, Description, and Quantity and click the OK button. inside the Choose columns dialog](media/query-folding-basics/choose-columns-dialog.png)
 
@@ -71,7 +71,7 @@ in
 
 ### No query folding: Understanding the query evaluation
 
-Checking the applied steps pane, you notice that the step folding indicators are showing that the transforms that you added, Kept bottom rows and Choose columns, are marked as steps that will be evaluated outside the data source or, in other words, at the Power Query engine.
+Under “Applied steps”, you’ll notice that the step folding indicators for, Kept bottom rows and Choose columns are marked as steps that will be evaluated outside the data source or, in other words, by the Power Query engine.
 
 ![Applied steps pane for the query with the step folding indicators showcasing that the Kept bottom rows and the Removed other columns steps are marked as steps that will be evaluated outside the data source](media/query-folding-basics/no-folding-steps.png)
 
@@ -79,19 +79,19 @@ You can right click the last step of your query, the one named *Kept bottom rows
 
 ![Query plan for the query created showing multiple nodes, two of which are within a rectangle that represent the nodes that will be evaluated by the Power Query Engine](media/query-folding-basics/no-folding-query-plan.png)
 
-Each box in the previous image is called a node and it represents every process that needs to happen (from left to right) in order for your query to be evaluated. Some of these nodes can be evaluated at your data source while others like the nodes for Table.LastN and Table.SelectColumns, within the rectangle of the previous image, will be evaluated using the Power Query engine. These two nodes represent the two transforms that you added, *Kept bottom rows* and *Choose columns*, whilst the rest of the node represent operations that will happen at your data source level.
+Each box in the previous image is called a node and it represents the operation breakdown to fulfill this query.. Nodes that represent data sources, such as SQL Server in the example above, and the Value.NativeQuery nodes represent which part of the query is offloaded to the data source. The rest of the nodes, in this case Table.LastN and Table.SelectColumns, highlighted within the rectangle in the previous image, will be evaluated by the Power Query engine. These two nodes represent the two transforms that you added, *Kept bottom rows* and *Choose columns*, whilst the rest of the nodes represent operations that will happen at your data source level.
 
 You can also see exactly the query that would be sent to your data source by clicking the *view details* hyperlink in the Value.NativeQuery node.
 
 ![SQL Statement found inside the Value.NativeQuery that represents a request of all fields and records from the fact_Sales table in the database](media/query-folding-basics/no-folding-native-query.png)
 
 This query is in the native language of your data source. For this case, that language is SQL and this statement represents a query that requests all rows and fields from the **fact_Sales** table. 
-Understanding this will help you better understand the story that the query plan tries to convey in order of the nodes which is a sequential process that starts by requesting the data from your data source:
+Consulting this query will help you better understand the story that the query plan tries to convey:
 
-- **Sql.Database**: Connects to the database and sends metadata requests to understand its capabilities.
-- **Value.NativeQuery**: Power Query submits the data requests in a native SQL statement to the data source. For this case, that represents all records and fields from the fact_Sales table.
+- **Sql.Database**: This node represents the data source access. Connects to the database and sends metadata requests to understand its capabilities.
+- **Value.NativeQuery**: Represents which query was generated by Power Query in order to fulfill the query.  Power Query submits the data requests in a native SQL statement to the data source. In this case, that represents all records and fields (columns) from the fact_Sales table. For this scenario, this is undesirable, as the table contains millions of rows and the interest is only in the last ten.
 - **Table.LastN**: Once Power Query receives all records from the fact_Sales table, it uses the Power Query engine to filter the table and keep only the last ten rows.
-- **Table.SelectColumns**: Power Query will use the output of the **Table.LastN** node and apply a new transform called Table.SelectRows which selects the specific columns that you want to keep from a table.
+- **Table.SelectColumns**: Power Query will use the output of the **Table.LastN** node and apply a new transform called Table.SelectColumns which selects the specific columns that you want to keep from a table.
 
 For its evaluation, this query had to download all rows and fields from the fact_Sales table and took an average of 3 minutes and 4 seconds to be processed in a standard instance of Power BI Dataflows (which accounts for the evaluation and loading processed of data to dataflows). 
 
@@ -105,7 +105,7 @@ Inside the **Choose columns** dialog, you select the columns *Sales Key*, *Custo
 
 ![Selecting the columns Sales Key, Customer Key, Invoice Date Key, Description, and Quantity and click the OK button. inside the Choose columns dialog](media/query-folding-basics/choose-columns-dialog.png)
 
-You now create a logic that will sort the table to have the **last sales at the bottom of the table**. You select the *Sale Key* column, which is the primary key and incremental sequence or index of the table, and sort the table only using this field in ascending order right from the auto-filter menu inside the data preview view for the column.
+You now create a logic that will sort the table to have the **last sales at the bottom of the table**. You select the *Sale Key* column, which is the primary key and incremental sequence or index of the table and sort the table only using this field in ascending order right from the auto-filter menu inside the data preview view for the column.
 
 ![Sort the Sale Key field of the table in ascending order using the auto-filter field contextual menu](media/query-folding-basics/partial-folding-sort-ascending.png)
 
@@ -132,13 +132,13 @@ in
 
 ### Partial query folding example: Understanding the query evaluation
 
-Checking the applied steps pane, you notice that the step folding indicators are showing that the last transform that you added, Kept bottom rows, is marked as a step that will be evaluated outside the data source or, in other words, at the Power Query engine.
+Checking the applied steps pane, you notice that the step folding indicators are showing that the last transform that you added, Kept bottom rows, is marked as a step that will be evaluated outside the data source or, in other words, by the Power Query engine.
 
 ![Applied steps pane for the query with the step folding indicators showcasing that the Kept bottom rows is marked as a step that will be evaluated outside the data source](media/query-folding-basics/partial-folding-steps.png)
 
 You can right click the last step of your query, the one named *Kept bottom rows*, and select the option that reads **Query plan** to better understand how your query might be evaluated.
 
-![Query plan for the query created showing multiple nodes where the Table.LastN node, shown within a rectangle, is a node that will be evaluated by the Power Query Engine and not by the data source](media/query-folding-basics/partial-folding-query-plan.png)
+![Query plan for the query created showing multiple nodes where the Table.LastN node, shown inside a rectangle, is a node that will be evaluated by the Power Query Engine and not by the data source](media/query-folding-basics/partial-folding-query-plan.png)
 
 Each box in the previous image is called a node and it represents every process that needs to happen (from left to right) in order for your query to be evaluated. Some of these nodes can be evaluated at your data source while others like the node for Table.LastN, represented by your *Kept bottom rows step*, will be evaluated using the Power Query engine.
 
@@ -165,7 +165,7 @@ Inside the **Choose columns** dialog, you select the columns *Sales Key*, *Custo
 
 ![Selecting the columns Sales Key, Customer Key, Invoice Date Key, Description, and Quantity and click the OK button. inside the Choose columns dialog](media/query-folding-basics/choose-columns-dialog.png)
 
-You now create a logic that will sort the table to have the **last sales at the top of the table.** You select the *Sale Key* column, which is the primary key and incremental sequence or index of the table, and sort the table only using this field in descending order right from the auto-filter menu inside the data preview view for the column.
+You now create a logic that will sort the table to have the **last sales at the top of the table.** You select the *Sale Key* column, which is the primary key and incremental sequence or index of the table and sort the table only using this field in descending order right from the auto-filter menu inside the data preview view for the column.
 
 ![Sort the Sale Key field of the table in descending order using the auto-filter field contextual menu](media/query-folding-basics/full-folding-sort-descending.png)
 
@@ -208,7 +208,7 @@ Understanding this will help you better understand the story that the query plan
 >[!NOTE]
 >In the T-SQL language, while there is no clause that will yield a SELECT operation for the bottom rows of a table, there is the TOP clause that retrieves the top rows of a table.
 
-For its evaluation, this query only to download ten rows and exactly the fields that you needed from the fact_Sales table and took an average of 31 seconds to be processed in a standard instance of Power BI Dataflows (which accounts for the evaluation and loading of data to dataflows).
+For its evaluation, this query will only download ten rows and only the fields that you requested from the fact_Sales table and took an average of 31 seconds to be processed in a standard instance of Power BI Dataflows (which accounts for the evaluation and loading of data to dataflows).
 
 ## Performance comparison
 
@@ -253,7 +253,7 @@ For the showcased examples, Power Query had to request over 3.6 million rows fro
 
 ### Transforms executed by the Power Query Engine
 
-This article showcased how you can leverage the [Query plan](query-plan.md) to better understand how your query might be evaluated. Inside the query plan, you are able to see exactly the nodes of the transform operations that will be performed by the Power Query Engine. 
+This article showcased how you can leverage the [Query plan](query-plan.md) to better understand how your query might be evaluated. Inside the query plan, you can see exactly the nodes of the transform operations that will be performed by the Power Query Engine. 
 
 The following table showcases the nodes from the query plans of the previous queries that would've been evaluated by the Power Query engine:
 
@@ -267,6 +267,13 @@ The following table showcases the nodes from the query plans of the previous que
 
 For the examples showcased in this article, the full query folding example doesn't require any transforms to happen inside the Power Query engine as the require output table comes directly from the data source. In contrast, the other two queries required some computation to happen at the Power Query engine and due to the amount of data that needs to be processed, the process for these examples takes more time than the full query folding example.
 
+Transforms can roughly be grouped into two categories:
+
+- **Full scan operators**: These are operators that need to gather all the rows before the data can move on to the next operator in the chain. For example, in order to sort data, Power Query needs to gather all the data. Other examples of Full scan operators are *Table.Group*, *Table.NestedJoin*, *Table.Pivot*.
+
+-	**Streaming operators**: These are pass-through operators. For example, Table.SelectRows with a simple filter can usually filter the results as they pass through the operator, and won’t need to gather all rows before moving the data. *Table.SelectColumns*, T*able.ReorderColumns*, *Table.LastN* are additional examples of this sort of operators.
+
+
 >[!TIP]
 >While not every single transform requires the same resources to compute its resources, it is often more optimal to have a small number of nodes to show in the query plan. 
 
@@ -275,8 +282,8 @@ For the examples showcased in this article, the full query folding example doesn
 * Follow the best practices when creating a new query as stated in [Best practices in Power Query](best-practices.md).
 * Use the step folding indicators to check which steps are preventing your query from folding and re-order them if necessary to increase folding.
 * Use the query plan to determine which transforms are happening at the Power Query engine for that particular step and consider re-arranging your query to check the updated query plan. For data sources that support folding, any nodes in the query plan other than Value.NativeQuery and data source access nodes represent transforms that didn’t fold.
-* Check the **View Native Query** option is always recommended to make sure that your query can be folded back to the data source. If your step disables this option, you know that you've created a step that stops query folding. 
-* Use the query diagnostics tool to your advantage and to better understand the requests being sent to your data source when query folding capabilities are available for the connector.
+* Check the **View Native Query** option is always recommended to make sure that your query can be folded back to the data source. If your step disables this option, you know that you've created a step that stops query folding. Note that not all sources support this functionality, in those cases, you can rely on the step folding indicators and query plan.
+* Use the query diagnostics tools to your advantage and to better understand the requests being sent to your data source when query folding capabilities are available for the connector.
 * When combining data sourced from the use of multiple connectors, Power Query tries to push as much work as possible to both of the data sources while complying with the privacy levels defined for each data source. 
 * Read the article on [Privacy levels](dataprivacyfirewall.md) to protect your queries from running against a Data Privacy Firewall error.
 * You can also use other tools to check query folding from the perspective of the request being received by the data source. Based on our example, you can use the Microsoft SQL Server Profile to check the requests being sent by Power Query and received by the Microsoft SQL Server.
