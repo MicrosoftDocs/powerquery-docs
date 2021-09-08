@@ -274,6 +274,8 @@
         href: "Connectors/AdobeAnalytics.md"
       - name: "Amazon Athena (Beta)"
         href: "Connectors/AmazonAthena.md"
+      - name: "Amazon Redshift"
+        href: Connectors/AmazonRedshift.md
       - name: "Anaplan"
         href: Connectors/Anaplan.md
       - name: "AssembleViews"
