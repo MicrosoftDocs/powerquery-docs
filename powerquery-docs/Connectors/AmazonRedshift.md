@@ -1,10 +1,10 @@
 ---
 title: Power Query Amazon Redshift connector
-description: Provides basic information, prerequisites, and instructions on how to connect.
+description: Provides basic information, prerequisites, and instructions on how to connect to Amazon Redshift data.
 author: dougklopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 8/23/2021
+ms.date: 9/8/2021
 ms.author: dougklo
 ms.reviewer: kvivek
 LocalizationGroup: reference
@@ -18,7 +18,7 @@ LocalizationGroup: reference
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
-| Authentication Types Supported | Amazon Redshift<br />Microsoft account    |
+| Authentication Types Supported | Amazon Redshift<br />Basic<br/>Microsoft account<br/>Organizational account |
 
 ## Prerequisites
 
@@ -48,7 +48,7 @@ To connect to Amazon Redshift data:
 
     After you have finished filling in and selecting all the options you need, select **OK**.
 
-3. If this is the first time you're connecting to this database, enter your credentials in the **User name** and **Password** boxes of the Amazon Redshift authentication type. Then select Connect.
+3. If this is the first time you're connecting to this database, enter your credentials in the **User name** and **Password** boxes of the Amazon Redshift authentication type. Then select **Connect**.
 
     ![Image showing the authentication dialog, with Amazon Redshift selected as the authentication type.](./media/amazon-redshift/authentication.png)
 
@@ -96,7 +96,7 @@ The following table describes all of the advanced options you can set in Power Q
 
 ## Enable Azure AD Single Sign-On (SSO) for Amazon Redshift
 
-We support AAD SSO in both Power BI service and the on-premises data gateway. For more information about enabling AAD SSO for all connectors, go to [Overview of single sign-on (SSO) for on-premises data gateways in Power BI](/power-bi/connect-data/service-gateway-sso-overview).
+We support Azure AD SSO through both Power BI Service (cloud) and also through the on-premises data gateway. For more information about enabling Azure AD SSO for all connectors, go to [Overview of single sign-on (SSO) for on-premises data gateways in Power BI](/power-bi/connect-data/service-gateway-sso-overview).
 
 ### Azure AD Single Sign-On (SSO) through Power BI service
 
@@ -120,7 +120,7 @@ Before you can enable Azure AD SSO for Amazon Redshift, you must first enable Az
 
 2. Under **Tenant settings**, enable **Azure AD Single-Sign On (SSO) for Gateway**.
 
-   ![Enable AAD SSO for gateway.](./media/amazon-redshift/aad-sso-for-gateway.png)
+   ![Enable Azure AD SSO for gateway.](./media/amazon-redshift/aad-sso-for-gateway.png)
 
 Once you've enabled Azure AD SSO for all data sources, then enable Azure AD SSO for Amazon Redshift:
 
