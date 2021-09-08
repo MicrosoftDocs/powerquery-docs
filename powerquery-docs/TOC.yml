@@ -396,6 +396,8 @@
         href: Connectors/SumTotal.md
       - name: "Text/CSV"
         href: Connectors/TextCSV.md
+      - name: "Usercube"
+        href: Connectors/Usercube.md
       - name: "XML"
         href: Connectors/XML.md
       - name: "Web"
