@@ -17,8 +17,8 @@ LocalizationGroup: reference
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights |
-| Authentication Types Supported |  |
-| Function Reference Documentation |  |
+| Authentication Types Supported | Basic<br/>Database<br/>Windows |
+| Function Reference Documentation | [DB2.Database](/powerquery-m/db2-database) |
 | | |
 
 >[!Note]
@@ -26,12 +26,12 @@ LocalizationGroup: reference
 
 ## Prerequisites
 
-((Enter prerequisites here))
+By default, the IBM Db2 database connector uses the Microsoft driver to connect to your data. If you choose to use the IBM driver in the advanced options in Power Query Desktop, you must first install the IBM Db2 driver for .NET on your machine used to connect to the data. For instructions on how to download, install, and configure the IBM Db2 driver for .NET, go to [Download initial Version 11.5 clients and drivers](https://www.ibm.com/support/pages/download-initial-version-115-clients-and-drivers). More information: [Driver limitations](#driver-limitations), [Ensure the IBM Db2 driver is installed](#ensure-the-ibm-db2-driver-is-installed)
 
 ## Capabilities Supported
 
 * Import
-* DirectQuery
+* DirectQuery (Power BI Desktop only)
 * Advanced options
   * Driver (IBM or Microsoft)
   * Command timeout in minutes
@@ -75,20 +75,20 @@ To make the connection, take the following steps:
 
 To make the connection, take the following steps:
 
-1. Select the **IBM Db2 database** option in the **Power Query - Connecto to data source** page.
+1. Select the **IBM Db2 database** option in the **Power Query - Connect to data source** page.
 
 2. Specify the IBM Db2 server to connect to in **Server**. If a port is required, specify it by using the format *ServerName:Port*, where *Port* is the port number. Also, enter the IBM Db2 database you want to access in **Database**. In this example, the server name and port are `TestIBMDb2server.contoso.com:4000` and the IBM Db2 database being accessed in `NORTHWD2`
 
 3. Select the name of your on-premises data gateway.
 
    >[!Note]
-   > You must select an on-premises data gateway for this connector, whether the IBM Db2 database is on your local network or on a web site.
+   > You must select an on-premises data gateway for this connector, whether the IBM Db2 database is on your local network or online.
 
 4. If this is the first time you're connecting to this IBM Db2 database, select the type of credentials for the connection in **Authentication kind**. Choose **Basic** if you plan to use an account that's created in the IBM Db2 database instead of Windows authentication.
 
 5. Enter your credentials.
 
-6. Select **Use Encrypted Connection** if you want to use an encrypted connection, or clear it if you want to use an unencrypted connection.
+6. Select **Use Encrypted Connection** if you want to use an encrypted connection, or clear the option if you want to use an unencrypted connection.
 
    ![Enter IBM Db2 database online connection.](./media/ibm-db2/sign-in-online.png)
 
@@ -108,18 +108,51 @@ The following table lists all of the advanced options you can set in Power Query
 
 | Advanced option | Description |
 | --------------- | ----------- |
-| Driver | This option is only available in Power Query Desktop. |
+| Driver | Determines which driver is used to connect to your IBM Db2 database. The choices are IBM and Windows (default). If you select the IBM driver, you must first ensure that the IBM Db2 driver is installed on your machine. This option is only available in Power Query Desktop. More information: [Ensure the IBM Db2 driver is installed](#ensure-the-ibm-db2-driver-is-installed) |
 | Command timeout in minutes | If your connection lasts longer than 10 minutes (the default timeout), you can enter another value in minutes to keep the connection open longer. |
-| Package collection | |
+| Package collection | A name of the control structure used by Db2 when processing an SQL statement. Only available when using the Microsoft driver. |
 | SQL statement | For information, go to [Import data from a database using native database query](../native-database-query.md). |
 | Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, you won’t see those columns. |
 | Navigate using full hierarchy | If checked, the navigator displays the complete hierarchy of tables in the database you're connecting to. If cleared, the navigator displays only the tables whose columns and rows contain data. |
 | | |
 
-Once you've selected the advanced options you require, select **OK** in Power Query to connect to your IBM Db2 database.
+Once you've selected the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your IBM Db2 database.
+
+## Issues and limitations
+
+### Driver limitations
+
+You can choose to use either the Microsoft driver (default) or the IBM driver if you're using Power Query Desktop. Power Query Online currently only uses the Microsoft driver. Each driver has its limitations.
+
+* Microsoft driver
+  * Doesn't support Transport Layer Security (TLS)
+* IBM driver
+  * The IBM Db2 database connector, when using the IBM driver, doesn't work with Mainframe or AS/400 systems
+  * Doesn't support DirectQuery
+
+Microsoft provides support for the Microsoft driver, but not for the IBM driver. However, if you're familiar with the Db2 client and your IT department already has it set up and configured on your machines, your IT department should know how to troubleshoot the IBM driver.
+
+### Native queries not supported in DirectQuery
+
+When you select DirectQuery as the data connectivity mode in Power Query Desktop, the SQL statement text box in the advanced options is disabled. It's disabled because the Power Query IBM Db2 connector doesn’t currently support query push down on top of a native database query.
 
 ## Troubleshooting
 
-## Next steps
+### Ensure the IBM Db2 driver is installed
 
-[Optimize Power Query when expanding table columns](../optimize-expanding-table-columns.md)
+If you choose to use the IBM Db2 driver for Power Query Desktop, you first have to download, install, and configure the driver on your machine. To ensure the IBM Db2 driver has been installed:
+
+1. Open Windows PowerShell on your machine.
+2. Enter the following command:
+
+   `[System.Data.Common.DbProviderFactories]::GetFactoryClasses() | ogv`
+
+3. In the dialog box that opens, you should see the following name in the **InvariantName** column:
+
+   `IBM.Data.DB2`
+
+If this name is in the **InvariantName** column, the IBM Db2 driver has been installed and configured correctly.
+
+## More information
+
+* [Data Source Wizard](/host-integration-server/db2oledbv/data-source-wizard)
