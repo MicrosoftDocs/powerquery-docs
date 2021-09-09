@@ -110,7 +110,7 @@ The following table lists all of the advanced options you can set in Power Query
 | --------------- | ----------- |
 | Driver | Determines which driver is used to connect to your IBM Db2 database. The choices are IBM and Windows (default). If you select the IBM driver, you must first ensure that the IBM Db2 driver is installed on your machine. This option is only available in Power Query Desktop. More information: [Ensure the IBM Db2 driver is installed](#ensure-the-ibm-db2-driver-is-installed) |
 | Command timeout in minutes | If your connection lasts longer than 10 minutes (the default timeout), you can enter another value in minutes to keep the connection open longer. |
-| Package collection | A name of the control structure used by Db2 when processing an SQL statement. Only available when using the Microsoft driver. |
+| Package collection | A name of the control structure used by Db2 when processing an SQL statement. Specifies where to look for the packages, and to auto-create them if necessary. By default, this option uses the value `NULLID`. You can specify another value if you put different vendor’s packages in different collections. Only available when using the Microsoft driver. More information: [DB2 packages: Concepts, examples, and common problems](https://web.archive.org/web/20200808072933/https:/www.ibm.com/developerworks/data/library/techarticle/dm-0606chun/index.html) |
 | SQL statement | For information, go to [Import data from a database using native database query](../native-database-query.md). |
 | Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, you won’t see those columns. |
 | Navigate using full hierarchy | If checked, the navigator displays the complete hierarchy of tables in the database you're connecting to. If cleared, the navigator displays only the tables whose columns and rows contain data. |
@@ -152,6 +152,46 @@ If you choose to use the IBM Db2 driver for Power Query Desktop, you first have 
    `IBM.Data.DB2`
 
 If this name is in the **InvariantName** column, the IBM Db2 driver has been installed and configured correctly.
+
+### SQLCODE -805 and SQLCODE -551 error codes
+
+When attempting to connect to an IBM Db2 database, you may sometimes encounter the common error SQLCODE -805, which indicates the package isn't found in the `NULLID` or other collection (specified in the Power Query **Package connection** configuration). You may also encounter the common error SQLCODE -551, which indicates you can't create packages because you lack package binding authority.
+
+Typically, SQLCODE -805 is followed by SQLCODE -551, but you'll see only the second exception. In reality, the problem is the same. You lack the authority to bind the package to either `NULLID` or the specified collection.
+
+Typically, most IBM Db2 administrators don't provide bind package authority to end users&mdash;especially in an IBM z/OS (mainframe) and IBM i (AS/400) environment. It's different for Db2 LUW, where a base user account has built-in bind package privileges with which to create the MSCS001 (Cursor Stability) package in the user’s own collection (name = user login name).
+
+If you don't have built-in bind package privileges, you'll need to ask your Db2 administrator for a user account that has package binding authority. With this account, you'll connect to the database and fetch data, which will auto-create the package. Afterwards, the administrator can revoke the packaging binding authority. Also, afterwards, the administrator can "bind copy" the package to other collections&mdash;to increase concurrency, to better match your internal standards for where packages are bound, and so on.
+
+When connecting to IBM Db2 for z/OS, the Db2 administrator can do the following steps.
+
+1. Grant authority to bind a new package to the user with one of the following commands:
+   * GRANT BINDADD ON SYSTEM TO \<_authorization_name_>
+   * GRANT PACKADM ON \<_collection_name_> TO \<_authorization_name_>
+
+2. Using Power Query, connect to the IBM Db2 database and retrieve a list of schemas, tables, and views. The Power Query IBM Db2 database connector will auto-create the package NULLID.MSCS001, and then grant execute on the package to public.
+
+3. Revoke authority to bind a new package to the user with one of the following commands:
+   * REVOKE BINDADD FROM \<_authorization_name_>
+   * REVOKE PACKADM ON \<_collection_name_> FROM \<_authorization_name_>
+
+When connection to IBM Db2 for LUW, the Db2 administrator can do the following steps.
+
+1. GRANT BINDADD ON DATABSE TO USER \<_authorization_name_>.
+
+2. Using Power Query, connect to the IBM Db2 database and retrieve a list of schemas, tables, and views. The Power Query IBM Db2 connector will auto-create the package NULLID.MSCS001, and then grant execute on the package to public.
+
+3. REVOKE BINDADD ON DATABASE FROM USER \<_authorization_name_>.
+
+4. GRANT EXECUTE ON PACKAGE \<_collection.package_> TO USER \<_authorization_name_>.
+
+When connecting to IBM Db2 for i, the Db2 administrator can do the following steps.
+
+1. WRKOBJ QSYS/CRTSQLPKG. Type "2" to change the object authority.
+
+2. Change authority from *EXCLUDE to PUBLIC or \<_authorization_name_>.
+
+3. Afterwards, change authority back to *EXCLUDE.
 
 ## More information
 
