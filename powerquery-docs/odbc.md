@@ -184,22 +184,21 @@ are described in subsequent sections.
 <li><p>LimitClause</p></li>
 </ul>
 <p>See the AstVisitor section for more information.</p></td>
-</tr>
 <tr class="even">
+<td>CancelQueryExplicitly</td>
+<td><p>A logical value that instructs the M engine to explicitly cancel any running calls through the ODBC driver before terminating the connection to the ODBC server.</p>
+<p>This is useful in situations where query execution is managed independently of the network connections to the server, for example in some Spark deployments. In most cases this value doesn't need to be set as the query in the server is cancelled when the network connection to the server is terminated.</p>
+<p>Default: false</p></td>
+</tr>
+<tr class="odd">
 <td>ClientConnectionPooling</td>
 <td><p>A logical value that enables client-side connection pooling for the ODBC driver. Most drivers will want to set this value to true.</p>
 <p>Default: false</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>CredentialConnectionString</td>
 <td><p>A text or record value used to specify credential related connection string properties.</p>
 <p>See the Credential section for more information.</p></td>
-</tr>
-<tr class="even">
-<td>ExplicitQueryCancel</td>
-<td><p>A logical value that instructs the M engine to explicitly cancel any running calls through the ODBC driver before terminating the connection to the ODBC server.</p>
-<p>This is useful in situations where query execution is managed independently of the network connections to the server, for example in some Spark deployments. In most cases this value doesn't need to be set as the query in the server is cancelled when the network connection to the server is terminated.</p>
-<p>Default: false</p></td>
 </tr>
 <tr class="odd">
 <td>HideNativeQuery</td>
