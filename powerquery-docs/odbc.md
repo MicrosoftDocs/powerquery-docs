@@ -187,7 +187,7 @@ are described in subsequent sections.
 <tr class="even">
 <td>CancelQueryExplicitly</td>
 <td><p>A logical value that instructs the M engine to explicitly cancel any running calls through the ODBC driver before terminating the connection to the ODBC server.</p>
-<p>This is useful in situations where query execution is managed independently of the network connections to the server, for example in some Spark deployments. In most cases this value doesn't need to be set as the query in the server is cancelled when the network connection to the server is terminated.</p>
+<p>This field is useful in situations where query execution is managed independently of the network connections to the server, for example in some Spark deployments. In most cases, this value doesn't need to be set because the query in the server is canceled when the network connection to the server is terminated.</p>
 <p>Default: false</p></td>
 </tr>
 <tr class="odd">
