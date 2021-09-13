@@ -30,7 +30,7 @@ The most common way to create an M script is by using the Power Query editor. Fo
 
 The previous image shows the applied steps section with the following steps:
 
-- **Source**: Makes the connection to the data source. In this case its a connection to a SQL Server database.
+- **Source**: Makes the connection to the data source. In this case it's a connection to a SQL Server database.
 - **Navigation**: Navigates to a specific table within the database.
 - **Removed other columns**: Selects which columns from the table to keep.
 - **Sorted rows**: Sorts the table using one or multiple columns using a descending order.
