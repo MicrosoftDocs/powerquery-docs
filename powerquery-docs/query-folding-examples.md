@@ -79,7 +79,7 @@ You can right click the last step of your query, the one named *Kept bottom rows
 
 ![Query plan for the query created showing multiple nodes, two of which are within a rectangle that represent the nodes that will be evaluated by the Power Query Engine](media/query-folding-basics/no-folding-query-plan.png)
 
-Each box in the previous image is called a node and it represents the operation breakdown to fulfill this query.. Nodes that represent data sources, such as SQL Server in the example above, and the Value.NativeQuery nodes represent which part of the query is offloaded to the data source. The rest of the nodes, in this case Table.LastN and Table.SelectColumns, highlighted within the rectangle in the previous image, will be evaluated by the Power Query engine. These two nodes represent the two transforms that you added, *Kept bottom rows* and *Choose columns*, whilst the rest of the nodes represent operations that will happen at your data source level.
+Each box in the previous image is called a node and it represents the operation breakdown to fulfill this query. Nodes that represent data sources, such as SQL Server in the example above, and the Value.NativeQuery nodes represent which part of the query is offloaded to the data source. The rest of the nodes, in this case Table.LastN and Table.SelectColumns, highlighted within the rectangle in the previous image, will be evaluated by the Power Query engine. These two nodes represent the two transforms that you added, *Kept bottom rows* and *Choose columns*, whilst the rest of the nodes represent operations that will happen at your data source level.
 
 You can also see exactly the query that would be sent to your data source by clicking the *view details* hyperlink in the Value.NativeQuery node.
 
