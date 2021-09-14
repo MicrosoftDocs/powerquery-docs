@@ -75,7 +75,7 @@ Under “Applied steps”, you’ll notice that the step folding indicators for,
 
 ![Applied steps pane for the query with the step folding indicators showcasing that the Kept bottom rows and the Removed other columns steps are marked as steps that will be evaluated outside the data source](media/query-folding-basics/no-folding-steps.png)
 
-You can right click the last step of your query, the one named *Kept bottom rows*, and select the option that reads **View Query plan**. The goal of the query plan is to provide you with a better and more detailed view of your query's evaluation. You can learn more about this feature from the article on [Query plan](query-plan.md).
+You can right click the last step of your query, the one named *Kept bottom rows*, and select the option that reads **View Query plan**. The goal of the query plan is to provide you with a detailed view of how your query is actually run. You can learn more about this feature from the article on [Query plan](query-plan.md).
 
 ![Query plan for the query created showing multiple nodes, two of which are within a rectangle that represent the nodes that will be evaluated by the Power Query Engine](media/query-folding-basics/no-folding-query-plan.png)
 
