@@ -272,7 +272,7 @@ Transforms can be grouped into the following categories:
 |Type of Operator|Description
 |-----|----|
 |**Remote**|These operators are data source nodes. The evaluation of these operators occurs outside of Power Query.
-|**Streaming**|These are pass-through operators. For example, Table.SelectRows with a simple filter can usually filter the results as they pass through the operator, and won’t need to gather all rows before moving the data. *Table.SelectColumns*, T*able.ReorderColumns*, *Table.LastN* are additional examples of this sort of operators.
+|**Streaming**|These are pass-through operators. For example, Table.SelectRows with a simple filter can usually filter the results as they pass through the operator, and won’t need to gather all rows before moving the data. *Table.SelectColumns*, T*able.ReorderColumns* are additional examples of this sort of operators.
 |**Full scan**|These are operators that need to gather all the rows before the data can move on to the next operator in the chain. For example, in order to sort data, Power Query needs to gather all the data. Other examples of Full scan operators are *Table.Group*, *Table.NestedJoin*, *Table.Pivot*.
 
 
