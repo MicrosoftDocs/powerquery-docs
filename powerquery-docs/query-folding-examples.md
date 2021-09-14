@@ -267,11 +267,15 @@ The following table showcases the nodes from the query plans of the previous que
 
 For the examples showcased in this article, the full query folding example doesn't require any transforms to happen inside the Power Query engine as the require output table comes directly from the data source. In contrast, the other two queries required some computation to happen at the Power Query engine and due to the amount of data that needs to be processed, the process for these examples takes more time than the full query folding example.
 
-Transforms can roughly be grouped into two categories:
+Transforms can be grouped into the following categories:
 
-- **Full scan operators**: These are operators that need to gather all the rows before the data can move on to the next operator in the chain. For example, in order to sort data, Power Query needs to gather all the data. Other examples of Full scan operators are *Table.Group*, *Table.NestedJoin*, *Table.Pivot*.
+|Type of Operator|Description
+|-----|----|
+|**Remote**|These operators are data source nodes. The evaluation of these operators occurs outside of Power Query.
+|**Streaming**|These are pass-through operators. For example, Table.SelectRows with a simple filter can usually filter the results as they pass through the operator, and won’t need to gather all rows before moving the data. *Table.SelectColumns*, T*able.ReorderColumns*, *Table.LastN* are additional examples of this sort of operators.
+|**Full scan**|These are operators that need to gather all the rows before the data can move on to the next operator in the chain. For example, in order to sort data, Power Query needs to gather all the data. Other examples of Full scan operators are *Table.Group*, *Table.NestedJoin*, *Table.Pivot*.
 
--	**Streaming operators**: These are pass-through operators. For example, Table.SelectRows with a simple filter can usually filter the results as they pass through the operator, and won’t need to gather all rows before moving the data. *Table.SelectColumns*, T*able.ReorderColumns*, *Table.LastN* are additional examples of this sort of operators.
+
 
 
 >[!TIP]
