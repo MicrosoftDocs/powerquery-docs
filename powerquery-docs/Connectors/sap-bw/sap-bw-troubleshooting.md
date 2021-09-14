@@ -397,6 +397,8 @@ To resolve this error, the recommendation is to simplify the query or divide it 
 
 In some cases you may find that text strings are being truncated to 60 characters in Power BI Desktop.
 
-Because the Power Query SAP Business Warehouse connector uses the MDX interface provided by SAP for 3rd party access, you'll probably need to contact SAP for possible solutions as they own the layer between the MDX interface and the SAP BW server. However, for a first step, follow the instructions in [2777473 - MDX: FAQ for Power BI accessing BW or BW/4HANA](https://apps.support.sap.com/sap/support/knowledge/2777473) and see if that resolves your issue. Otherwise, you'll need to contact SAP and ask how "long text is XL" can be specified for your specific scenario.
+First, follow the instructions in [2777473 - MDX: FAQ for Power BI accessing BW or BW/4HANA](https://apps.support.sap.com/sap/support/knowledge/2777473) and see if that resolves your issue.
+
+Because the Power Query SAP Business Warehouse connector uses the MDX interface provided by SAP for 3rd party access, you'll need to contact SAP for possible solutions as they own the layer between the MDX interface and the SAP BW server. Ask how "long text is XL" can be specified for your specific scenario.
 
 ![Image showing where to set long text is xl setting.](long-text-xl.png)
