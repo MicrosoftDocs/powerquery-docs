@@ -296,6 +296,8 @@
         href: Connectors/DataLakeStorage.md
       - name: "Dataverse"
         href: Connectors/dataverse.md
+      - name: "EQuIS (Beta)"
+        href: Connectors/EQuIS.md
       - name: "Essbase"
         href: Connectors/Essbase.md
       - name: "Excel"
@@ -314,8 +316,6 @@
           href: Connectors/FHIR/FHIR-Relationships.md
       - name: "Folder"
         href: Connectors/Folder.md
-      - name: "EQuIS (Beta)"
-        href: Connectors/EQuIS.md
       - name: "Google Analytics"
         href: Connectors/GoogleAnalytics.md
       - name: "Google BigQuery"
@@ -388,12 +388,12 @@
         href: Connectors/SharePointOnlineList.md
       - name: "Snowflake"
         href: Connectors/Snowflake.md
-      - name: "Stripe (Deprecated)"
-        href: Connectors/Stripe.md
       - name: "SoftOne BI (Beta)"
         href: Connectors/SoftOneBI.md
       - name: "SQL Server database"
         href: Connectors/SQLServer.md
+      - name: "Stripe (Deprecated)"
+        href: Connectors/Stripe.md
       - name: "SumTotal (Beta)"
         href: Connectors/SumTotal.md
       - name: "Text/CSV"

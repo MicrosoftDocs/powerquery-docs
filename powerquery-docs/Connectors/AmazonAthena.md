@@ -4,7 +4,7 @@ description: Provides basic information, prerequisites, and instructions on how 
 author: bezhan-msft
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 7/1/2021
+ms.date: 9/16/2021
 ms.author: bezhan
 ms.reviewer: kvivek
 LocalizationGroup: reference
@@ -12,13 +12,17 @@ LocalizationGroup: reference
 
 # Amazon Athena (Beta)
 
+>[!Note]
+>The following connector article is provided by Amazon, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Amazon website and use the support channels there.
+
 ## Summary
 
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
 | Products | Power BI (Datasets) |
-| Authentication Types Supported | DSN configuration <br /> Organizational account    |
+| Authentication Types Supported | DSN configuration <br /> Organizational account |
+| | |
 
 ## Prerequisites
 
