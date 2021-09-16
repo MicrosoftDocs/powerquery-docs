@@ -4,7 +4,7 @@ description: Provides basic information and how to connect to your data, along w
 author: cpopell
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 8/18/2021
+ms.date: 9/16/2021
 ms.author: gepopell
 LocalizationGroup: reference
 ---
@@ -17,7 +17,11 @@ LocalizationGroup: reference
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
-| Function Reference Documentation | [Xml.Tables](/powerquery-m/xml-tables)<br/>[Xml.Document](/powerquery-m/xml-document)
+| Function Reference Documentation | [Xml.Tables](/powerquery-m/xml-tables)<br/>[Xml.Document](/powerquery-m/xml-document) |
+| | |
+
+>[!Note]
+>Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Capabilities supported
 

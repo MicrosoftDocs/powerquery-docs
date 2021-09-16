@@ -4,7 +4,7 @@ description: Provides basic information and connection instructions, along with 
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 12/8/2020
+ms.date: 9/16/2020
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -20,6 +20,9 @@ LocalizationGroup: reference
 |Authentication Types Supported | Windows |
 | Function Reference Documentation | [Folder.Contents](/powerquery-m/folder-contents), [Folder.Files](/powerquery-m/folder-files) |
 | | |
+
+>[!Note]
+>Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Capabilities supported
 
