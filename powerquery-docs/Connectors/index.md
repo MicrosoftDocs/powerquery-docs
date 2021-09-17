@@ -333,4 +333,3 @@ The connectors are listed in alphabetical order in separate tables for each lett
 - [Connect to data sources for Power BI dataflows](/power-bi/transform-model/service-dataflows-data-sources#data-sources-for-dataflows)
 - [Available data sources (Dynamics 365 Customer Insights)](/dynamics365/ai/customer-insights/data-sources-list)
 - [Data sources supported in Azure Analysis Services](/azure/analysis-services/analysis-services-datasource)
-- 

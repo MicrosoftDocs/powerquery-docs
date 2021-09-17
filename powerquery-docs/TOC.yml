@@ -272,7 +272,7 @@
         href: Connectors/AccessDatabase.md
       - name: "Adobe Analytics"
         href: "Connectors/AdobeAnalytics.md"
-      - name: "Amazon Athena (Beta)"
+      - name: "Amazon Athena"
         href: "Connectors/AmazonAthena.md"
       - name: "Amazon Redshift"
         href: Connectors/AmazonRedshift.md
