@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for the Google BigQuer
 author: bezhan
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 07/06/2021
+ms.date: 9/16/2021
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -19,6 +19,9 @@ LocalizationGroup: reference
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Customer Insights (Dataflows) |
 | Authentication Types Supported | Organizational account<br/>Service account |
 | | |
+
+>[!Note]
+>Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 > [!NOTE]
 > Effective July 2021, Google will discontinue support for sign-ins to Google accounts from embedded browser frameworks. Due to this change, you will need to [update](https://powerbi.microsoft.com/downloads/) your Power BI Desktop version to June 2021 to support signing in to Google.

@@ -4,7 +4,7 @@ description: Provides basic information and connection instructions, along with 
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 9/1/2021
+ms.date: 9/16/2021
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -19,6 +19,9 @@ LocalizationGroup: reference
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Dynamics 365 Customer Insights |
 | Authentication types | Organizational account |
 | | |
+
+>[!Note]
+>Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
 

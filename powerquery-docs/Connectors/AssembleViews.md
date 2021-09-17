@@ -4,7 +4,7 @@ description: Includes basic information, prerequisites, and information on how t
 author: hofax
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 5/25/2021
+ms.date: 9/16/2021
 ms.author: bezhan
 
 LocalizationGroup: reference
@@ -23,9 +23,6 @@ LocalizationGroup: reference
 | Products | Power BI (Datasets) |
 | Authentication Types Supported | Autodesk Account |
 | Function Reference Documentation | - |
-
->[!Note]
-> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
 
