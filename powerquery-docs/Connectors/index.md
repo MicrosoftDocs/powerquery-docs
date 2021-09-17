@@ -4,7 +4,7 @@ description: List of all currently available Power Query connectors
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 8/2/2021
+ms.date: 9/16/2021
 ms.author: bezhan
 ms.custom: intro-internal
 
@@ -28,7 +28,7 @@ The connectors are listed in alphabetical order in separate tables for each lett
 | ![Acterys (Beta).](media/index/acterys-64.png)<br/>**Acterys (Beta)**<br/>By Acterys                        | ![Not supported](media/index/no.png) | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png) | ![Not supported](media/index/no.png) |
 | ![Actian (Beta).](media/index/actian-64.png)<br/>**Actian (Beta)**<br/>By Actian                        | ![Not supported](media/index/no.png) | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png) | ![Not supported](media/index/no.png) |
 | [![Adobe Analytics connector.](media/index/adobe-analytics-64.png)<br/>**Adobe Analytics**](./adobeanalytics.md)<br/>By Microsoft                           | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
-| [![Amazon Athena (Beta)](media/index/amazon-athena-64.png)<br/>**Amazon Athena (Beta)**](./AmazonAthena.md)<br/>By Amazon | ![Not supported](media/index/no.png) | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png) | ![Not supported](media/index/no.png) | ![Not supported](media/index/no.png) | ![Not supported](media/index/no.png) |
+| [![Amazon Athena](media/index/amazon-athena-64.png)<br/>**Amazon Athena**](./AmazonAthena.md)<br/>By Amazon | ![Not supported](media/index/no.png) | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png) | ![Not supported](media/index/no.png) | ![Not supported](media/index/no.png) | ![Not supported](media/index/no.png) |
 | [![Amazon Redshift](media/index/database-64.png)<br/>**Amazon Redshift**](./AmazonRedshift.md)<br/>By Microsoft                                  | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  |
 | [![Anaplan).](media/index/anaplan-64.png)<br/>**Anaplan**](./Anaplan.md)<br/>By Anaplan                        | ![Not supported](media/index/no.png) | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png) | ![Not supported](media/index/no.png) |
 | ![appFigures (Beta).](media/index/appfigures-64.png)<br/>**appFigures<br/>(Beta)**<br/>By Microsoft                                      | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
