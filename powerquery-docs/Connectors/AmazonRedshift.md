@@ -4,7 +4,7 @@ description: Provides basic information, prerequisites, and instructions on how 
 author: dougklopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 9/8/2021
+ms.date: 9/16/2021
 ms.author: dougklo
 ms.reviewer: kvivek
 LocalizationGroup: reference
@@ -19,6 +19,10 @@ LocalizationGroup: reference
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
 | Authentication Types Supported | Amazon Redshift<br />Basic<br/>Microsoft account<br/>Organizational account |
+| | |
+
+>[!Note]
+>Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
 

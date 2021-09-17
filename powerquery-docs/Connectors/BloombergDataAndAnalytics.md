@@ -4,13 +4,16 @@ description: Provides basic information and prerequisites for the Bloomberg Data
 author: kanstantsin-chernik
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 4/5/2020
+ms.date: 9/16/2021
 ms.author: bezhan
 LocalizationGroup: reference
 ---
 
 # Bloomberg Data and Analytics
- 
+
+>[!Note]
+>The following connector article is provided by Bloomberg, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Bloomberg website and use the support channels there.
+
 ## Summary
 
 | Item | Description |

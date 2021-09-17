@@ -4,7 +4,7 @@ description: Provides basic information and connection instructions, along with 
 author: cpopell
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 8/18/2021
+ms.date: 9/16/2021
 ms.author: gepopell
 LocalizationGroup: reference
 ---
@@ -19,6 +19,9 @@ LocalizationGroup: reference
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Function Reference Documentation | [File.Contents](/powerquery-m/file-contents)<br/>[Lines.FromBinary](/powerquery-m/lines-frombinary)<br/>[Csv.Document](/powerquery-m/csv-document) |
 | | |
+
+>[!Note]
+>Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Capabilities supported
 
