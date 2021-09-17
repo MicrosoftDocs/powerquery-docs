@@ -26,7 +26,7 @@ LocalizationGroup: reference
 
 ## Prerequisites
 
-By default, the IBM Db2 database connector uses the Microsoft driver to connect to your data. If you choose to use the IBM driver in the advanced options in Power Query Desktop, you must first install the IBM Db2 driver for .NET on your machine used to connect to the data. For instructions on how to download, install, and configure the IBM Db2 driver for .NET, go to [Download initial Version 11.5 clients and drivers](https://www.ibm.com/support/pages/download-initial-version-115-clients-and-drivers). More information: [Driver limitations](#driver-limitations), [Ensure the IBM Db2 driver is installed](#ensure-the-ibm-db2-driver-is-installed)
+By default, the IBM Db2 database connector uses the Microsoft driver to connect to your data. If you choose to use the IBM driver in the advanced options in Power Query Desktop, you must first install the IBM Db2 driver for .NET on the machine used to connect to the data. The name of this driver changes from time to time, so be sure to install the IBM Db2 driver that works with .NET. For instructions on how to download, install, and configure the IBM Db2 driver for .NET, go to [Download initial Version 11.5 clients and drivers](https://www.ibm.com/support/pages/download-initial-version-115-clients-and-drivers). More information: [Driver limitations](#driver-limitations), [Ensure the IBM Db2 driver is installed](#ensure-the-ibm-db2-driver-is-installed)
 
 ## Capabilities Supported
 
@@ -108,9 +108,9 @@ The following table lists all of the advanced options you can set in Power Query
 
 | Advanced option | Description |
 | --------------- | ----------- |
-| Driver | Determines which driver is used to connect to your IBM Db2 database. The choices are IBM and Windows (default). If you select the IBM driver, you must first ensure that the IBM Db2 driver is installed on your machine. This option is only available in Power Query Desktop. More information: [Ensure the IBM Db2 driver is installed](#ensure-the-ibm-db2-driver-is-installed) |
+| Driver | Determines which driver is used to connect to your IBM Db2 database. The choices are IBM and Windows (default). If you select the IBM driver, you must first ensure that the IBM Db2 driver for .NET is installed on your machine. This option is only available in Power Query Desktop. More information: [Ensure the IBM Db2 driver is installed](#ensure-the-ibm-db2-driver-is-installed) |
 | Command timeout in minutes | If your connection lasts longer than 10 minutes (the default timeout), you can enter another value in minutes to keep the connection open longer. |
-| Package collection | A name of the control structure used by Db2 when processing an SQL statement. Specifies where to look for the packages, and to automatically create them if necessary. By default, this option uses the value `NULLID`. You can specify another value if you put different vendor’s packages in different collections. Only available when using the Microsoft driver. More information: [DB2 packages: Concepts, examples, and common problems](https://web.archive.org/web/20200808072933/https:/www.ibm.com/developerworks/data/library/techarticle/dm-0606chun/index.html) |
+| Package collection | Specifies where to look for packages. Packages are control structures used by Db2 when processing an SQL statement, and will be automatically created if necessary. By default, this option uses the value `NULLID`. Only available when using the Microsoft driver. More information: [DB2 packages: Concepts, examples, and common problems](https://web.archive.org/web/20200808072933/https:/www.ibm.com/developerworks/data/library/techarticle/dm-0606chun/index.html) |
 | SQL statement | For information, go to [Import data from a database using native database query](../native-database-query.md). |
 | Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, you won’t see those columns. |
 | Navigate using full hierarchy | If checked, the navigator displays the complete hierarchy of tables in the database you're connecting to. If cleared, the navigator displays only the tables whose columns and rows contain data. |
@@ -122,15 +122,17 @@ Once you've selected the advanced options you require, select **OK** in Power Qu
 
 ### Driver limitations
 
-You can choose to use either the Microsoft driver (default) or the IBM driver if you're using Power Query Desktop. Power Query Online currently only uses the Microsoft driver. Each driver has its limitations.
+The Microsoft driver is the same one used in Microsoft Host Integration Server, called the "ADO.NET Provider for DB2". The IBM driver is the IBM Db/2 driver that works with .Net. The name of this driver changes from time to time, so be sure it's the one that works with .NET, which is different from the IBM Db2 drivers that work with OLE/DB, ODBC, or JDBC.
+
+You can choose to use either the Microsoft driver (default) or the IBM driver if you're using Power Query Desktop. Currently, Power Query Online only uses the Microsoft driver. Each driver has its limitations.
 
 * Microsoft driver
   * Doesn't support Transport Layer Security (TLS)
 * IBM driver
-  * The IBM Db2 database connector, when using the IBM driver, doesn't work with Mainframe or AS/400 systems
+  * The IBM Db2 database connector, when using the IBM Db2 driver for .NET, doesn't work with Mainframe or AS/400 systems
   * Doesn't support DirectQuery
 
-Microsoft provides support for the Microsoft driver, but not for the IBM driver. However, if you're familiar with the Db2 client and your IT department already has it set up and configured on your machines, your IT department should know how to troubleshoot the IBM driver.
+Microsoft provides support for the Microsoft driver, but not for the IBM driver. However, if your IT department already has it set up and configured on your machines, your IT department should know how to troubleshoot the IBM driver.
 
 ### Native queries not supported in DirectQuery
 
@@ -159,9 +161,9 @@ When attempting to connect to an IBM Db2 database, you may sometimes encounter t
 
 Typically, SQLCODE -805 is followed by SQLCODE -551, but you'll see only the second exception. In reality, the problem is the same. You lack the authority to bind the package to either `NULLID` or the specified collection.
 
-Typically, most IBM Db2 administrators don't provide bind package authority to end users&mdash;especially in an IBM z/OS (mainframe) and IBM i (AS/400) environment. It's different for Db2 LUW, where a base user account has built-in bind package privileges with which to create the MSCS001 (Cursor Stability) package in the user’s own collection (name = user login name).
+Typically, most IBM Db2 administrators don't provide bind package authority to end users&mdash;especially in an IBM z/OS (mainframe) or IBM i (AS/400) environment. Db2 on Linux, Unix, or Windows is different in that user accounts have bind privileges by default, which create the MSCS001 (Cursor Stability) package in the user’s own collection (name = user login name).
 
-If you don't have built-in bind package privileges, you'll need to ask your Db2 administrator for a user account that has package binding authority. With this account, you'll connect to the database and fetch data, which will auto-create the package. Afterwards, the administrator can revoke the packaging binding authority. Also, afterwards, the administrator can "bind copy" the package to other collections&mdash;to increase concurrency, to better match your internal standards for where packages are bound, and so on.
+If you don't have bind package privileges, you'll need to ask your Db2 administrator for package binding authority. With this package binding authority, connect to the database and fetch data, which will auto-create the package. Afterwards, the administrator can revoke the packaging binding authority. Also, afterwards, the administrator can "bind copy" the package to other collections&mdash;to increase concurrency, to better match your internal standards for where packages are bound, and so on.
 
 When connecting to IBM Db2 for z/OS, the Db2 administrator can do the following steps.
 
@@ -175,9 +177,9 @@ When connecting to IBM Db2 for z/OS, the Db2 administrator can do the following 
    * REVOKE BINDADD FROM \<_authorization_name_>
    * REVOKE PACKADM ON \<_collection_name_> FROM \<_authorization_name_>
 
-When connection to IBM Db2 for LUW, the Db2 administrator can do the following steps.
+When connecting to IBM Db2 for Linux, Unix, or Windows, the Db2 administrator can do the following steps.
 
-1. GRANT BINDADD ON DATABSE TO USER \<_authorization_name_>.
+1. GRANT BINDADD ON DATABASE TO USER \<_authorization_name_>.
 
 2. Using Power Query, connect to the IBM Db2 database and retrieve a list of schemas, tables, and views. The Power Query IBM Db2 connector will auto-create the package NULLID.MSCS001, and then grant execute on the package to public.
 
@@ -195,4 +197,4 @@ When connecting to IBM Db2 for i, the Db2 administrator can do the following ste
 
 ## More information
 
-* [Data Source Wizard](/host-integration-server/db2oledbv/data-source-wizard)
+* [HIS - Microsoft OLE DB Provider for DB2](/host-integration-server/db2oledbv/microsoft-ole-db-provider-for-db2)
