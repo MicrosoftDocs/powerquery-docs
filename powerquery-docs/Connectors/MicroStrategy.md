@@ -48,7 +48,7 @@ To connect to MicroStrategy using Power BI Desktop:
    
    2. Library/OIDC
 
-      [!IMPORTANT] To utilize OIDC authentication you need to add **https://oauth.powerbi.com/views/oauthredirect.html** url to list of reply urls
+      [!IMPORTANT] To utilize OIDC authentication you need to add **https://oauth.powerbi.com/views/oauthredirect.html** url to list of reply urls in your IdP settings
 
       1. Click **Sign in**
 
