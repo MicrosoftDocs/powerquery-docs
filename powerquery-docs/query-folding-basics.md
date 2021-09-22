@@ -14,7 +14,7 @@ ms.custom: intro-internal
 
 ## Power Query M script
 
-Any query, whether created by Power Query, written by the user in the advanced editor, or entered using a blank document, consists of functions and syntax from the [Power Query M formula language](/powerquery-m/). This query gets interpreted and evaluated by the Power Query engine to output its results. The M script serves as the set of instructions needed to evaluate the query.
+Any query, whether created by Power Query, manually written by you in the advanced editor, or entered using a blank document, consists of functions and syntax from the [Power Query M formula language](/powerquery-m/). This query gets interpreted and evaluated by the Power Query engine to output its results. The M script serves as the set of instructions needed to evaluate the query.
 
 >[!TIP]
 >You can think of the M script as a recipe in order to prepare your data.
