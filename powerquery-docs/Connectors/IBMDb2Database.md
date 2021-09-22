@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for the connector, and
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 9/2/2021
+ms.date: 9/22/2021
 ms.author: dougklo
 LocalizationGroup: reference
 ---
@@ -44,9 +44,9 @@ By default, the IBM Db2 database connector uses the Microsoft driver to connect 
 
 To make the connection, take the following steps:
 
-1. Select the **IBM Db2 database** option in from **Get Data**.
+1. Select the **IBM Db2 database** option from **Get Data**.
 
-2. Specify the IBM Db2 server to connect to in **Server**. If a port is required, specify it by using the format *ServerName:Port*, where *Port* is the port number. Also, enter the IBM Db2 database you want to access in **Database**. In this example, the server name and port are `TestIBMDb2server.contoso.com:4000` and the IBM Db2 database being accessed in `NORTHWD2`.
+2. Specify the IBM Db2 server to connect to in **Server**. If a port is required, specify it by using the format *ServerName:Port*, where *Port* is the port number. Also, enter the IBM Db2 database you want to access in **Database**. In this example, the server name and port are `TestIBMDb2server.contoso.com:4000` and the IBM Db2 database being accessed is `NORTHWD2`.
 
    ![Enter IBM Db2 database connection.](./media/ibm-db2/sign-in.png)
 
@@ -77,7 +77,7 @@ To make the connection, take the following steps:
 
 1. Select the **IBM Db2 database** option in the **Power Query - Connect to data source** page.
 
-2. Specify the IBM Db2 server to connect to in **Server**. If a port is required, specify it by using the format *ServerName:Port*, where *Port* is the port number. Also, enter the IBM Db2 database you want to access in **Database**. In this example, the server name and port are `TestIBMDb2server.contoso.com:4000` and the IBM Db2 database being accessed in `NORTHWD2`
+2. Specify the IBM Db2 server to connect to in **Server**. If a port is required, specify it by using the format *ServerName:Port*, where *Port* is the port number. Also, enter the IBM Db2 database you want to access in **Database**. In this example, the server name and port are `TestIBMDb2server.contoso.com:4000` and the IBM Db2 database being accessed is `NORTHWD2`
 
 3. Select the name of your on-premises data gateway.
 
