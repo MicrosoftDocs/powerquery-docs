@@ -4,7 +4,7 @@ description: Demonstration on the impact of query folding in power Query. A comp
 author: 
 ms.service: powerquery
 ms.reviewer: 
-ms.date: 9/1/2020
+ms.date: 9/1/2021
 ms.author: 
 ms.custom: intro-internal
 ---
