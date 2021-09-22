@@ -1,11 +1,11 @@
 ---
 title: Understanding query evaluation and query folding in Power Query
 description: Overview on Power Query query evaluation and query folding mechanisms
-author: ptyx507
+author: 
 ms.service: powerquery
 ms.reviewer: 
-ms.date: 8/29/2020
-ms.author: v-miesco
+ms.date: 9/1/2021
+ms.author: 
 ms.custom: intro-internal
 ---
 # Overview of query evaluation and query folding in Power Query
