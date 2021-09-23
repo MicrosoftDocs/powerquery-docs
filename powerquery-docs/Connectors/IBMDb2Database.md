@@ -122,7 +122,7 @@ Once you've selected the advanced options you require, select **OK** in Power Qu
 
 ### Driver limitations
 
-The Microsoft driver is the same one used in Microsoft Host Integration Server, called the "ADO.NET Provider for DB2". The IBM driver is the IBM Db/2 driver that works with .Net. The name of this driver changes from time to time, so be sure it's the one that works with .NET, which is different from the IBM Db2 drivers that work with OLE/DB, ODBC, or JDBC.
+The Microsoft driver is the same one used in Microsoft Host Integration Server, called the "ADO.NET Provider for DB2". The IBM driver is the IBM Db/2 driver that works with .NET. The name of this driver changes from time to time, so be sure it's the one that works with .NET, which is different from the IBM Db2 drivers that work with OLE/DB, ODBC, or JDBC.
 
 You can choose to use either the Microsoft driver (default) or the IBM driver if you're using Power Query Desktop. Currently, Power Query Online only uses the Microsoft driver. Each driver has its limitations.
 
@@ -157,7 +157,7 @@ If this name is in the **InvariantName** column, the IBM Db2 driver has been ins
 
 ### SQLCODE -805 and SQLCODE -551 error codes
 
-When attempting to connect to an IBM Db2 database, you may sometimes encounter the common error SQLCODE -805, which indicates the package isn't found in the `NULLID` or other collection (specified in the Power Query **Package connection** configuration). You may also encounter the common error SQLCODE -551, which indicates you can't create packages because you lack package binding authority.
+When attempting to connect to an IBM Db2 database, you may sometimes come across the common error SQLCODE -805, which indicates the package isn't found in the `NULLID` or other collection (specified in the Power Query **Package connection** configuration). You may also encounter the common error SQLCODE -551, which indicates you can't create packages because you lack package binding authority.
 
 Typically, SQLCODE -805 is followed by SQLCODE -551, but you'll see only the second exception. In reality, the problem is the same. You lack the authority to bind the package to either `NULLID` or the specified collection.
 
@@ -194,6 +194,46 @@ When connecting to IBM Db2 for i, the Db2 administrator can do the following ste
 2. Change authority from *EXCLUDE to PUBLIC or \<_authorization_name_>.
 
 3. Afterwards, change authority back to *EXCLUDE.
+
+### SQLCODE -360 error code
+
+When attempting to connect to the IBM Db2 database, you may come across the following error:
+
+`Microsoft Db2 Client: The host resource could not be found. Check that the Initial Catalog value matches the host resource name. SQLSTATE=HY000 SQLCODE=-360`
+
+This error message indicates that you didn’t put the right value in for the name of the database.
+
+### Determine database name
+
+To determine the database name to use:
+
+1. On the IBM AS/400, run `DSPRDBDIRE`.
+
+   ![Image showing the output of the Display Relational Database Directory Entries](./media/ibm-db2/display-entries.png)
+
+2. One of the entries will have a **Remote Location** of ***LOCAL**. This entry is the one to use.
+
+### Determine port number
+
+The Microsoft driver connects to the database using the Distributed Relational Database Architecture (DRDA) protocol. The default port for DRDA is port 446. Try this value first.
+
+To find for certain what port the DRDA service is running on:
+
+1. Run the AS/400 command `WRKSRVTBLE`.
+
+2. Scroll down until your find the entries for DRDA.
+
+   ![Service Table Entries](./media/ibm-db2/service-table-entries.png)
+
+3. To confirm that the DRDA service is up and listening on that port, run `NETSTAT`.
+
+   ![DRDA listening](./media/ibm-db2/drda-listening.png)
+
+4. Choose either option 3 (for IPv4) or option 6 (for IPv6).
+
+5. Press F14 to see the port numbers instead of names, and scroll until you see the port in question. It should have an entry with a state of “Listen”.
+
+   ![IP connection status](./media/ibm-db2/ip-connection-status.png)
 
 ## More information
 
