@@ -259,7 +259,7 @@ are described in subsequent sections.
 </tr>
 <tr class="odd">
 <td>TolerateConcatOverflow</td>
-<td><p>Allows concatenation of text values to occur even when it cannot be guaranteed that the result will fall be truncated to fit within the range of an available type.</p>
+<td><p>Allows concatenation of text values to occur even if the result may be truncated to fit within the range of an available type.</p>
 <p>For example, when concatenating a VARCHAR(4000) field with a VARCHAR(4000) field on a system which supports a maximize VARCHAR size of 4000 and no CLOB type, the concatenation will be folded even though the result might get truncated.</p>
 <p>Default: false</p></td>
 </tr>
