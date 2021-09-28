@@ -5,7 +5,10 @@ author: David Barraclough
 ---
 
 # SIS-CC SDMX 
- 
+
+>[!Note]
+>The following connector article is provided by the Statistical Information System Collaboration Community (SIS-CC), the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the https://siscc.org/ website and use the support channels there.
+
 ## Summary
 
 | Item | Description |
@@ -13,28 +16,39 @@ author: David Barraclough
 | Release State | General Availability |
 | Products | Power BI (Datasets) |
 | Authentication Types Supported | Anonymous |
-| | |
+| Function Reference Documentation | SDMX.Contents |
 
 ## Prerequisites
-When certified there should be no special installation required.
+Before you get started, make sure you've properly configured the URL from the Service Provider’s API. The exact process here will depend on the Service Provider.
 
 ## Capabilities Supported
-* Import
+Import of SDMX-CSV 2.1 format. Other formats are not supported.
 
 ## Connection instructions
-
 To connect to SDMX Web Service data:
 
-1. Open Power BI 
-2. Get Data, and type SDMX in the search box to quickly find this connector
-3. In the "Data query URL" textbox put an SDMX REST data query URL (the web service must support the SDMX-CSV format). Example: https://stats-nsi-stable.pacificdata.org/rest/data/SPC,DF_COVID,1.0/M.PF+GU+FJ+PG+NC+MH+MP+SB+VU+WF+WS+_T.CASES+DEATHS?startPeriod=2020-03&dimensionAtObservation=AllDimensions
-4. In the "Display format" dropdown make a selection between showing Labels and codes, codes only, or labels only
-5. (optional) In the "Label language preference" specify a language using IETF BCP 47 format.
-6. Click ok and the data will appear in the Preview screen with the standard Power BI transform optional step
-7. Click Load and the dataset concepts will appear in the Fields pane to construct your report
+1. Select **Get Data** from the **Home** ribbon in Power BI Desktop. Select **All** from the categories on the left, and then select **SIS-CC SDMX**. Then select **Connect**.
+
+![sisccsdmxconnectordesktop](https://user-images.githubusercontent.com/9213243/135047581-e8d87c44-2ecc-432f-9568-6cf840dd0eb5.jpg)
+
+2. Fill in the parameters as so:
+	1.	In the **Data query URL** put an SDMX REST data query URL (the web service must support the SDMX-CSV format).
+	2.	In **Display format** select one of the options: 
+		- Show codes and labels, ex: FREQ: Frequency
+		- Show codes; ex: FREQ
+		- Show labels ex: Frequency
+		- Optionally, enter a language preference in **Label language preference** using an IETF BCP 47 tag
+
+![sisccsdmxconnectordesktopparams](https://user-images.githubusercontent.com/9213243/135048221-d97d4c56-dc90-4d77-8652-a18d919aebff.jpg)
+
+3.	If this is the first time you’re connecting to the REST web service in the previous step **Data query URL**, this authentication step is displayed.  As the connection is Anonymous, click **Connect**
+
+![sisccsdmxconnectordesktopauth](https://user-images.githubusercontent.com/9213243/135048653-e331ac0e-9995-4ee5-b932-ddbaa037c887.jpg)
+
+5.	Select **Load** to import the data into Power BI, or **Transform Data** to edit the query in Power Query Editor where you can refine the query before loading into Power BI.
 
 ## Limitations and issues
+This version of the connector does not support importing data formats SDMX-ML or SDMX-JSON.
 
-Apart from default Power BI limitations the connector is only limited by the capabilities of whichever SDMX web service is used in step 3 in Connection instructions.
-
-More details on SDMX web services are on the SDMX standard's official web site: https://sdmx.org/?page_id=5008. Particularly for the REST web services: https://github.com/sdmx-twg/sdmx-rest/
+## Next Steps
+If you wish to submit a feature request, or contribute to the open source project then go to the [Gitlab project site](https://gitlab.com/sis-cc/sdmx-tools/sdmx-power-bi)
