@@ -118,4 +118,4 @@ When authenticating through a Google service account in Power BI Desktop, there'
 * Service Account Email: must be in email format
 * Service Account JSON key file contents: once this JSON key is downloaded, all new lines must be removed from the file so that the contents are in one line. Once the JSON file is in that format, the contents can be pasted into this field.
 
-When authenticating through Google service account in Power BI service, users need to use "Basic" authentication. The **Username** field maps to the **Service Account Email** field above, and the **Password** field maps to the **Service Account JSON key file contents** field above. The format requirements for each credential remain the same in both Power BI Desktop and Power BI service.
+When authenticating through a Google service account in Power BI service, users need to use "Basic" authentication. The **Username** field maps to the **Service Account Email** field above, and the **Password** field maps to the **Service Account JSON key file contents** field above. The format requirements for each credential remain the same in both Power BI Desktop and Power BI service.
