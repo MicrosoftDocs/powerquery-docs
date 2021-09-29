@@ -155,8 +155,8 @@ Altogether, the query will look like this.
 
 ```
 let
-    Source = CommonDataService.Database("org0e5fbdeb.crm.dynamics.com"),
-    myQuery = Value.NativeQuery(Source, "select name from account")
+    Source = CommonDataService.Database("[DATABASE]"),
+    myQuery = Value.NativeQuery(Source, "[QUERY]")
 in
     myQuery
 ```
