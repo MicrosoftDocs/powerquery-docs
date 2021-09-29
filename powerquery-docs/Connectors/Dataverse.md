@@ -137,7 +137,6 @@ There are several alternative ways of extracting and migrating data from Dataver
 
 When connecting with the Dataverse connector, you may encounter an **Unable to connect** error indicating that a network or instance-specific error occurred while establishing a connection to SQL Server. This error is likely caused by the TCP ports 1433 and 5558 being blocked during connection. To troubleshoot the blocked port error, go to [Blocked ports](/powerapps/developer/data-platform/dataverse-sql-query#blocked-ports).
 
-
 ### Using native database queries with Dataverse
 
 A user can connect to Dataverse using a custom SQL statement or a native database query. While there is no user interface for this experience, users are able to enter the query using the Power Query Advanced Editor. In order to use a native database query, a **Database** must be specified as the Source. 
@@ -161,4 +160,3 @@ let
 in
     myQuery
 ```
-
