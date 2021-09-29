@@ -4,7 +4,7 @@ description: Provides basic information and connection instructions, along with 
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 9/16/2021
+ms.date: 9/29/2021
 ms.author: bezhan
 LocalizationGroup: reference
 ---
