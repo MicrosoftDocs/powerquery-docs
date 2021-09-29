@@ -139,7 +139,7 @@ When connecting with the Dataverse connector, you may encounter an **Unable to c
 
 ### Using native database queries with Dataverse
 
-A user can connect to Dataverse using a custom SQL statement or a [native database query](/power-query/native-database-query). While there is no user interface for this experience, users are able to enter the query using the Power Query Advanced Editor. In order to use a native database query, a **Database** must be specified as the Source. 
+A user can connect to Dataverse using a custom SQL statement or a [native database query](/power-query/native-database-query.md). While there is no user interface for this experience, users are able to enter the query using the Power Query Advanced Editor. In order to use a native database query, a **Database** must be specified as the Source. 
 
 ```
 Source = CommonDataService.Database([DATABASE URL])
