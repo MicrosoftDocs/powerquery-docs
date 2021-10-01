@@ -10,7 +10,7 @@ ms.reviewer: kvivek
 LocalizationGroup: reference
 ---
 
-# Amazon Athena
+# Azure Cosmos DB v2
 
 >[!Note]
 >The following connector article is provided by Amazon, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Amazon website and use the support channels there.
@@ -21,7 +21,8 @@ LocalizationGroup: reference
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Power BI (Datasets) |
-| Authentication Types Supported | DSN configuration <br /> Organizational account |
+| Authentication Types Supported | DSN configuration
+<br /> Organizational account |
 | | |
 
 ## Prerequisites
