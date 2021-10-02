@@ -1,19 +1,16 @@
 ---
-title: Power Query Amazon Athena connector
-description: Provides basic information, prerequisites, and instructions on how to connect to Amazon Athena
-author: bezhan-msft
+title: Power Query Azure Cosmos DB v2
+description: Provides basic information, prerequisites, and instructions on how to connect to Azure Cosmos DB
+author: cateodor-msft
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 9/16/2021
-ms.author: bezhan
-ms.reviewer: kvivek
+ms.date: 10/02/2021
+ms.author: cateodor
+ms.reviewer: rechalil
 LocalizationGroup: reference
 ---
 
 # Azure Cosmos DB v2
-
->[!Note]
->The following connector article is provided by Amazon, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Amazon website and use the support channels there.
 
 ## Summary
 
@@ -27,7 +24,7 @@ LocalizationGroup: reference
 
 ## Prerequisites
 
-* An [Azure Cosmos DB](https://azure.microsoft.com/en-us/free/cosmos-db)
+* An [Azure Cosmos DB](https://azure.microsoft.com/en-us/services/cosmos-db/#overview) account
 * [Permissions](https://docs.aws.amazon.com/athena/latest/ug/policy-actions.html) to use Athena
 * Customers must install the [Amazon Athena ODBC driver](https://docs.aws.amazon.com/athena/latest/ug/connect-with-odbc.html) before using the connector
 
@@ -36,9 +33,9 @@ LocalizationGroup: reference
 * Import
 * DirectQuery
 
-## Connect to Amazon Athena
+## Connect to Azure Cosmos DB
 
-To connect to Athena data:
+To connect to Azure Cosmos DB data:
 
 1. Launch Power BI Desktop.
 
