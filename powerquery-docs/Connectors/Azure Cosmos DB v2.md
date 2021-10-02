@@ -41,11 +41,11 @@ To connect to Azure Cosmos DB data:
 
 2. In the **Home** tab, select **Get Data**.
 
-3. In the search box, enter **Athena**.
+3. In the search box, enter **Cosmos DB v2**.
 
-4. Select **Amazon Athena**, and then select **Connect**.
+4. Select **Azure Cosmos DB v2**, and then select **Connect**.
 
-    ![Select Amazon Athena](./media/amazon-athena/amazon-athena-1.png)
+    ![Select Amazon Athena](./media/azure-cosmosdb/azure-cosmosdb-getdata.png)
 
 5. On the **Amazon Athena** connection page, enter the following information:
 
