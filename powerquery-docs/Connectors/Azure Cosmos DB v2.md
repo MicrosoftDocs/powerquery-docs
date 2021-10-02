@@ -73,3 +73,7 @@ To connect to Azure Cosmos DB data:
 10. Otherwise, select **Load**. After the load is complete, you can create visualizations like the one in the following image. If you selected **DirectQuery**, Power BI issues a query to Athena for the visualization that you requested.
 
     ![A sample data visualization](./media/amazon-athena/amazon-athena-5.png)
+
+## Limitations and issues
+
+You should be aware of the following limitations and issues associated with accessing Azure Cosmos DB v2 data.
