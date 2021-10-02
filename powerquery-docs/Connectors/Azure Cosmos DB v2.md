@@ -27,7 +27,7 @@ LocalizationGroup: reference
 
 ## Prerequisites
 
-* An [Amazon Web Services (AWS) account](https://aws.amazon.com/)
+* An [Azure Cosmos DB](https://azure.microsoft.com/en-us/free/cosmos-db)
 * [Permissions](https://docs.aws.amazon.com/athena/latest/ug/policy-actions.html) to use Athena
 * Customers must install the [Amazon Athena ODBC driver](https://docs.aws.amazon.com/athena/latest/ug/connect-with-odbc.html) before using the connector
 
