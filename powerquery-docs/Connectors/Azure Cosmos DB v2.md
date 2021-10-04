@@ -51,8 +51,33 @@ To connect to Azure Cosmos DB data:
     * For **Data Connectivity mode**, choose a mode that's appropriate for your use case, following these general guidelines:
         * For smaller datasets, choose **Import**. When using import mode, Power BI works with Cosmos DB to import the contents of the entire dataset for use in your visualizations.
         * For larger datasets, choose **DirectQuery**. In DirectQuery mode, no data is downloaded to your workstation. While you create or interact with a visualization, Microsoft Power BI works with Athena to dynamically query the underlying data source so that you're always viewing current data. More information: [Use DirectQuery in Power BI Desktop](/power-bi/connect-data/desktop-use-directquery)
+    * Customizing Default Options:
+        * Number of Retries (NumberOfRetries / NUMBER_OF_RETRIES)
+            How many times to retry in case of HTTP Return Codes of
+                408 - Request Timeout
+                412 - Precondition Failed
+                429 - Too Many Requests
+        * Advanced Passdown (0 / 1) (DoPassdowns / ADVANCED_PASSDOWN)
+            Attempt to Passdown whenever possible
+        * PBI mode (0 / 1) (IsPBIContext / PBI_MODE)
+            The ODBC Driver’s behavior is tailored towards the PBI flow support
+        * Protocol Type, 0: Text / 1: Binary (PROTOCOL)
+            The format of the Data exchanged with Cosmos DB (Text or Binary)
+        * Schema in a Document
+            Flag indicating if collection schema is explicitly stated as a document (SCHEMA_IN_COLLECTION)
+            * Name of the database containing schema document if explicitly specified (DB_WITH_SCHEMA)
+            * Name of the collection containing schema document if explicitly specified (COLL_WITH_SCHEMA)
+            * Name of JSON property to use in looking up the schema document (KC)
+            * Value of the JSON property to use in looking up the schema document (KV)
+            * Name of JSON property in schema document containing the collection schema (SC)
+        * Flag to indicate if error should be thrown if trying to sort more columns than composite index limit (TreatFullSortingMissesAsErrors / TREAT_FULL_SORTING_MISSES_AS_ERRORS)
+            Detect whether the target collection has a Composite Index matching the Sorted Sequence of Columns
+        * Flag to indicate if assistive experience should interject if optimal composite indices are not defined for Sort Passdown (use in development phase) (IsReportDeveloperModeOn / REPORT_DEVELOPER_MODE_ON)
+            When detecting an error at the above 6., prompt whether the JSON of the Composite Index definition will be copied into the clipboard ( which could be pasted into the composite index definition in the Cosmos DB Portal );
+        * Flag to indicate if all fields in sort clause should be passed down, otherwise only the field sorted on in PBI report or first field specified in M will be passed down as an optimization (FULL_SORTING_ON)
+        * Rest API Version, possible values 2015-12-16, 2018-12-31 (RestApiVersion / )
 
-    ![Enter connection information](./media/amazon-athena/amazon-athena-2.png)
+    ![Enter connection information](./media/azure-cosmosdb/azure-cosmosdb-connector-settings.png)
 
 6. Select **OK**.
 
