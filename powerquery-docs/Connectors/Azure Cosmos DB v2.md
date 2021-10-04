@@ -50,8 +50,8 @@ To connect to Azure Cosmos DB data:
     * For **Cosmos Endpoint**, enter the URI of the ODBC DSN that you want to use. For instructions on configuring your DSN, go to the [ODBC driver documentation](https://docs.microsoft.com/en-us/azure/cosmos-db/sql/odbc-driver).
     * For **Data Connectivity mode**, choose a mode that's appropriate for your use case, following these general guidelines:
         * For smaller datasets, choose **Import**. When using import mode, Power BI works with Cosmos DB to import the contents of the entire dataset for use in your visualizations.
-        * For larger datasets, choose **DirectQuery**. In DirectQuery mode, no data is downloaded to your workstation. While you create or interact with a visualization, Microsoft Power BI works with Athena to dynamically query the underlying data source so that you're always viewing current data. More information: [Use DirectQuery in Power BI Desktop](/power-bi/connect-data/desktop-use-directquery)
-    * Customizing Default Options:
+        * For larger datasets, choose **DirectQuery**. In DirectQuery mode, no data is downloaded to your workstation. While you create or interact with a visualization, Microsoft Power BI works with Cosmos DB to dynamically query the underlying data source so that you're always viewing current data. More information: [Use DirectQuery in Power BI Desktop](/power-bi/connect-data/desktop-use-directquery)
+    * Customizing Default Options (DSN Attribute Name / Key Name):
         * Number of Retries (NumberOfRetries / NUMBER_OF_RETRIES)
             How many times to retry in case of HTTP Return Codes of
                 408 - Request Timeout
@@ -83,20 +83,20 @@ To connect to Azure Cosmos DB data:
 
 7. At the prompt to configure data source authentication, select either **Use Data Source Configuration** or **AAD Authentication**. Enter any required sign-in information. Then select **Connect**.
 
-    ![Choose an authentication method](./media/amazon-athena/amazon-athena-3.png)
+    ![Choose an authentication method](./media/azure-cosmosdb/azure-cosmosdb-authentication.png)
 
     Your data catalog, databases, and tables appear in the **Navigator** dialog box.
 
-    ![The Navigator dialog box shows your data](./media/amazon-athena/amazon-athena-4.png)
+    ![The Navigator dialog box shows your data](./media/azure-cosmosdb/azure-cosmosdb-navigation.png)
 
 8. In the **Display Options** pane, select the check box for the dataset that you want to use.
 
 9. If you want to transform the dataset before you import it, go to the bottom of the dialog box and select **Transform Data**. This selection opens the Power Query Editor so that you can filter and refine the set of data you want to use.
 
-10. Otherwise, select **Load**. After the load is complete, you can create visualizations like the one in the following image. If you selected **DirectQuery**, Power BI issues a query to Athena for the visualization that you requested.
-
-    ![A sample data visualization](./media/amazon-athena/amazon-athena-5.png)
+10. Otherwise, select **Load**. After the load is complete, you can create visualizations like the one in the following image. If you selected **DirectQuery**, Power BI issues a query to Cosmos DB for the visualization that you requested.
 
 ## Limitations and issues
 
 You should be aware of the following limitations and issues associated with accessing Azure Cosmos DB v2 data.
+1. 
+2. 
