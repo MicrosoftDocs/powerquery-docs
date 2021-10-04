@@ -83,7 +83,7 @@ The connectors are listed in alphabetical order in separate tables for each lett
 <br />**Azure CosmosDB v1
 <br />(Beta)**
 <br />By Microsoft                              | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) |
-| [![Azure Cosmos DB (Beta) v2.](media/index/cosmosdb-64.png)
+| ![Azure Cosmos DB (Beta) v2.](media/index/cosmosdb-64.png)
 <br />**Azure CosmosDB v2
 <br />(Beta)**
 <br />By Microsoft                              | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) |
