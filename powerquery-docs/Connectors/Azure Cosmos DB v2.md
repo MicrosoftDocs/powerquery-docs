@@ -25,8 +25,6 @@ LocalizationGroup: reference
 ## Prerequisites
 
 * An [Azure Cosmos DB](https://azure.microsoft.com/en-us/services/cosmos-db/#overview) account
-* [Permissions](https://docs.aws.amazon.com/athena/latest/ug/policy-actions.html) to use Athena
-* Customers must install the [Amazon Athena ODBC driver](https://docs.aws.amazon.com/athena/latest/ug/connect-with-odbc.html) before using the connector
 
 ## Capabilities supported
 
@@ -45,9 +43,9 @@ To connect to Azure Cosmos DB data:
 
 4. Select **Azure Cosmos DB v2**, and then select **Connect**.
 
-    ![Select Amazon Athena](./media/azure-cosmosdb/azure-cosmosdb-getdata.png)
+    ![Select Azure Cosmos DB v2](./media/azure-cosmosdb/azure-cosmosdb-getdata.png)
 
-5. On the **Amazon Athena** connection page, enter the following information:
+5. On the **Azure Cosmos DB v2** connection page, enter the following information:
 
     * For **DSN**, enter the name of the ODBC DSN that you want to use. For instructions on configuring your DSN, go to the [ODBC driver documentation](https://docs.aws.amazon.com/athena/latest/ug/connect-with-odbc.html#connect-with-odbc-driver-documentation).
     * For **Data Connectivity mode**, choose a mode that's appropriate for your use case, following these general guidelines:
