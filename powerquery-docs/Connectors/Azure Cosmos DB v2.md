@@ -53,7 +53,7 @@ To connect to Azure Cosmos DB data:
           * **Note** - to completely have the **Import** mode setup properly, you need to have the both config options **Advanced Passdown** and **PBI Mode** set to **0**
         * For larger datasets, choose **DirectQuery**. In DirectQuery mode, no data is downloaded to your workstation. While you create or interact with a visualization, Microsoft Power BI works with Cosmos DB to dynamically query the underlying data source so that you're always viewing current data. More information: [Use DirectQuery in Power BI Desktop](/power-bi/connect-data/desktop-use-directquery).
           * **Note** - to completely have the **DirectQuery** mode setup properly, you need to have the both config options **Advanced Passdown** and **PBI Mode** set to **1**
-    * Customizing Default Options (DSN Attribute Name / Key Name):
+    * Customizing Default Options (**DSN Attribute Name** / **Key Name**):
         * Number of Retries (NumberOfRetries / NUMBER_OF_RETRIES)
             How many times to retry in case of HTTP Return Codes of
             * 408 - Request Timeout
@@ -97,7 +97,7 @@ To connect to Azure Cosmos DB data:
 
 10. Otherwise, select **Load**. After the load is complete, you can create visualizations like the one in the following image. If you selected **DirectQuery**, Power BI issues a query to Cosmos DB for the visualization that you requested.
 
-## Limitations and issues
+## Instructions, Limitations and Known Issues
 
 You should be aware of the following **Instructions**, **Limitations** and **Known Issues** associated with accessing the current version of Azure Cosmos DB v2 data.
 1. Instructions:
