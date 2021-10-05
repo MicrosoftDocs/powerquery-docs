@@ -77,6 +77,7 @@ To connect to Azure Cosmos DB data:
         * Flag to indicate if assistive experience should interject if optimal composite indices are not defined for Sort Passdown (use in development phase)
             When detecting an error at the above 6., prompt whether the JSON of the Composite Index definition will be copied into the clipboard ( which could be pasted into the composite index definition in the Cosmos DB Portal );
         * Flag to indicate if all fields in sort clause should be passed down, otherwise only the field sorted on in PBI report or first field specified in M will be passed down as an optimization
+            * as a note, sorting depends on the composite indexes defined for the collection; currently the Cosmos DB containers have a maximum of 8 composite indexes which could be defined
         * Rest API Version, possible values 2015-12-16, 2018-12-31
 
     ![Enter connection information](./media/azure-cosmosdb/azure-cosmosdb-connector-settings.png)
