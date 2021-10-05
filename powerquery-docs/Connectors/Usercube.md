@@ -10,6 +10,9 @@ LocalizationGroup: reference
 ---
 
 # Usercube
+
+>[!Note]
+>The following connector article is provided by Usercube, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Usercube website and use the support channels there.
  
 ## Summary
 

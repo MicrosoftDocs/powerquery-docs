@@ -388,6 +388,8 @@
         href: Connectors/SharePointList.md
       - name: "SharePoint Online list"
         href: Connectors/SharePointOnlineList.md
+      - name: SIS-CC SDMX
+        href: Connectors/SISCCSDMX.md
       - name: "Snowflake"
         href: Connectors/Snowflake.md
       - name: "SoftOne BI (Beta)"
