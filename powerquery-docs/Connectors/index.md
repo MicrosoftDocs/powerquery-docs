@@ -287,12 +287,6 @@ The connectors are listed in alphabetical order in separate tables for each lett
 
 <sup>1</sup> Available in [dataflows for Microsoft Teams](../dataflows/dataflows-teams.md).
 
-## U
-
-| Connector | Excel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Power BI (Datasets) | Power BI (Dataflows) | Power Apps (Dataflows) | Customer<br/>Insights (Dataflows) | Analysis Services |
-| --- | --- | --- | --- | --- | --- | --- |
-| ![Usercube (Beta).](media/index/usercube-64.png)<br/>**Usercube (Beta)**<br/>By Usercube | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
-
 ## V
 
 | Connector | Excel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Power BI (Datasets) | Power BI (Dataflows) | Power Apps (Dataflows) | Customer<br/>Insights (Dataflows) | Analysis Services |
