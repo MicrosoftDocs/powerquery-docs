@@ -83,7 +83,7 @@ To connect to Azure Cosmos DB data:
 
 6. Select **OK**.
 
-7. At the prompt to configure data source authentication, select either **Use Data Source Configuration** or **AAD Authentication**. Enter any required sign-in information. Then select **Connect**.
+7. At the prompt to configure data source authentication, enter the Account Key. Then select **Connect**.
 
     ![Choose an authentication method](./media/azure-cosmosdb/azure-cosmosdb-authentication.png)
 
@@ -95,7 +95,7 @@ To connect to Azure Cosmos DB data:
 
 9. If you want to transform the dataset before you import it, go to the bottom of the dialog box and select **Transform Data**. This selection opens the Power Query Editor so that you can filter and refine the set of data you want to use.
 
-10. Otherwise, select **Load**. After the load is complete, you can create visualizations like the one in the following image. If you selected **DirectQuery**, Power BI issues a query to Cosmos DB for the visualization that you requested.
+10. Otherwise, select **Load**. After the load is complete, you can create visualizations. If you selected **DirectQuery**, Power BI issues a query to Cosmos DB for the visualization that you requested.
 
 ## Instructions, Limitations and Known Issues
 
@@ -105,4 +105,4 @@ You should be aware of the following **Instructions**, **Limitations** and **Kno
 2. Limitations:
     * reports need to be filtered on Partition Keys
 3. Known Issues ( they are fixed for the next PBI version, the November Build ):
-    * reports with more than 8 column ...
+    * reports with more than 8 columns won't work in Direct Query mode
