@@ -1,7 +1,7 @@
 ---
 title: Power Query Azure Cosmos DB v2
 description: Provides basic information, prerequisites, and instructions on how to connect to Azure Cosmos DB
-author: cateodor-msft
+author: Calin-Teodorescu
 ms.service: powerquery
 ms.topic: conceptual
 ms.date: 10/02/2021
@@ -24,7 +24,7 @@ LocalizationGroup: reference
 
 ## Prerequisites
 
-* An [Azure Cosmos DB](https://azure.microsoft.com/en-us/services/cosmos-db/#overview) account
+* An [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/#overview) account
 
 ## Capabilities supported
 
