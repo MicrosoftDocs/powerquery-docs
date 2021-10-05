@@ -105,9 +105,13 @@ To connect to Azure Cosmos DB data:
 You should be aware of the following **Instructions**, **Limitations** and **Known Issues** associated with accessing the current version of Azure Cosmos DB v2 data.
 1. Instructions:
     * when using it in **Import Mode**, setup both **Advanced Passdown** and **PBI Mode** to **0**
+    * don't Publish Reports ( on PBI Service ) which have the Report Developer Mode enabled (REPORT_DEVELOPER_MODE_ON="1")
     * best practices when working with large collections in Direct Query mode:
-        * 
 2. Limitations:
-    * reports need to be filtered on Partition Keys
+    * reports need to be filtered on Partition Keys;
+    * if sorting on more than one column is desired ( FULL_SORTING_ON="1" ) there needs to be taken into consideration that the Sorting will be delegated to Cosmos DB
+      which doesn't sort on fields which are not part of Composite Indexes; to assist with the creation of the necessary Composite Indexes, while designing the report in PBI Desktop,
+      the Report Developer Mode needs to be enabled (REPORT_DEVELOPER_MODE_ON="1") which will prompt to Copy to Clipboard the JSON text which could be pasted in the
+      Cosmos DB Portal when specifying the Cosmos DB Collection Composite Index;
 3. Known Issues ( they are fixed for the next PBI version, the November Build ):
-    * reports with more than 8 columns won't work in Direct Query mode
+    * reports with more than 8 columns won't work in Direct Query mode;
