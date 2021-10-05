@@ -56,9 +56,9 @@ To connect to Azure Cosmos DB data:
     * Customizing Default Options (DSN Attribute Name / Key Name):
         * Number of Retries (NumberOfRetries / NUMBER_OF_RETRIES)
             How many times to retry in case of HTTP Return Codes of
-                * 408 - Request Timeout
-                * 412 - Precondition Failed
-                * 429 - Too Many Requests
+            * 408 - Request Timeout
+            * 412 - Precondition Failed
+            * 429 - Too Many Requests
         * Advanced Passdown (0 / 1) (DoPassdowns / ADVANCED_PASSDOWN)
             Attempt to Passdown whenever possible
         * PBI mode (0 / 1) (IsPBIContext / PBI_MODE)
