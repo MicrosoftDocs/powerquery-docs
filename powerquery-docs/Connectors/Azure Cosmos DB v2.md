@@ -105,6 +105,8 @@ To connect to Azure Cosmos DB data:
 You should be aware of the following **Instructions**, **Limitations** and **Known Issues** associated with accessing the current version of Azure Cosmos DB v2 data.
 1. Instructions:
     * when using it in **Import Mode**, setup both **Advanced Passdown** and **PBI Mode** to **0**
+    * best practices when working with large collections in Direct Query mode:
+        * 
 2. Limitations:
     * reports need to be filtered on Partition Keys
 3. Known Issues ( they are fixed for the next PBI version, the November Build ):
