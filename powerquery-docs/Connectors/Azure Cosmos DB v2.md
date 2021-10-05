@@ -47,7 +47,7 @@ To connect to Azure Cosmos DB data:
 
 5. On the **Azure Cosmos DB v2** connection page, enter the following information:
 
-    * For **Cosmos Endpoint**, enter the URI of the ODBC DSN that you want to use. For instructions on configuring your DSN, go to the [ODBC driver documentation](https://docs.microsoft.com/en-us/azure/cosmos-db/sql/odbc-driver).
+    * For **Cosmos Endpoint**, enter the URI of the of the Azure Cosmos DB account that you want to use.
     * For **Data Connectivity mode**, choose a mode that's appropriate for your use case, following these general guidelines:
         * For smaller datasets, choose **Import**. When using import mode, Power BI works with Cosmos DB to import the contents of the entire dataset for use in your visualizations.
         * For larger datasets, choose **DirectQuery**. In DirectQuery mode, no data is downloaded to your workstation. While you create or interact with a visualization, Microsoft Power BI works with Cosmos DB to dynamically query the underlying data source so that you're always viewing current data. More information: [Use DirectQuery in Power BI Desktop](/power-bi/connect-data/desktop-use-directquery)
