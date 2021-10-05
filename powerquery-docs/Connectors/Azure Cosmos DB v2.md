@@ -94,6 +94,9 @@ To connect to Azure Cosmos DB data:
 8. In the **Display Options** pane, select the check box for the dataset that you want to use.
 
 9. If you want to transform the dataset before you import it, go to the bottom of the dialog box and select **Transform Data**. This selection opens the Power Query Editor so that you can filter and refine the set of data you want to use.
+   Also you could fine tune the Connector Options by modifying the passed arguments
+
+   ![Connection arguments in Query Editor](./media/azure-cosmosdb/azure-cosmosdb-connection-arguments.png)
 
 10. Otherwise, select **Load**. After the load is complete, you can create visualizations. If you selected **DirectQuery**, Power BI issues a query to Cosmos DB for the visualization that you requested.
 
