@@ -104,7 +104,7 @@ To connect to Azure Cosmos DB data:
 
 You should be aware of the following **Instructions**, **Limitations** and **Known Issues** associated with accessing the current version of Azure Cosmos DB v2 data.
 1. Instructions:
-    * when using it in **Import Mode**, setup both **Advanced Passdown** and **PBI Mode** to **0**
+    * when using it in **Import Mode**, setup both **Advanced Passdown** and **PBI Mode** to **0** (ADVANCED_PASSDOWN="0", PBI_MODE="0")
     * don't Publish Reports ( on PBI Service ) which have the Report Developer Mode enabled (REPORT_DEVELOPER_MODE_ON="1")
     * best practices when working with new large collections in Direct Query mode:
         * temporarily enable the Report Developer Mode (REPORT_DEVELOPER_MODE_ON="1"); this will allow the discovery of Data Layout by loading from Cosmos DB
