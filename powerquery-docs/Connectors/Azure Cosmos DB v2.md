@@ -50,7 +50,9 @@ To connect to Azure Cosmos DB data:
     * For **Cosmos Endpoint**, enter the URI of the of the Azure Cosmos DB account that you want to use.
     * For **Data Connectivity mode**, choose a mode that's appropriate for your use case, following these general guidelines:
         * For smaller datasets, choose **Import**. When using import mode, Power BI works with Cosmos DB to import the contents of the entire dataset for use in your visualizations.
+          **Note** - to completely have the **Import**mode setup properly, you need to have the both config options **Advanced Passdown** and **PBI Mode** set to **0**
         * For larger datasets, choose **DirectQuery**. In DirectQuery mode, no data is downloaded to your workstation. While you create or interact with a visualization, Microsoft Power BI works with Cosmos DB to dynamically query the underlying data source so that you're always viewing current data. More information: [Use DirectQuery in Power BI Desktop](/power-bi/connect-data/desktop-use-directquery)
+          **Note** - to completely have the **DirectQuery**mode setup properly, you need to have the both config options **Advanced Passdown** and **PBI Mode** set to **1**
     * Customizing Default Options (DSN Attribute Name / Key Name):
         * Number of Retries (NumberOfRetries / NUMBER_OF_RETRIES)
             How many times to retry in case of HTTP Return Codes of
