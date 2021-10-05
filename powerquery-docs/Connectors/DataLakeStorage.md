@@ -111,6 +111,6 @@ After you've created the visualizations in Power BI Desktop, you can share it wi
 
 ## Troubleshooting
 
-Currently, in Power Query Online, the Azure Data Lake Storage Gen2 connector only supports paths with container, and not subfolder or file. For example, https://\<_accountname_>.dfs.core.windows.net/\<_container_> will work, while https://\<_accountname_>.dfs.core.windows.net/\<_container_>/\<_filename_> or https://\<_accountname_>.dfs.core.windows.net/\<_container_>/\<_subfolder_> will fail.
+Currently, in Power Query Online, the Azure Data Lake Storage Gen2 connector only supports paths with container, and not subfolder or file.
 
-Microsoft doesn't support dataflow or dataset refresh using OAuth2 authentication when the Azure Data Lake Storage Gen 2 (ADLS) account is in a different tenant. This limitation only applies to ADLS when the authentication method is OAuth2, that is, when you attempt to connect to a cross-tenant ADLS using an Azure AD account. In this case, we recommend that you use a different authentication method that is not OAuth2/AAD, such as the Key authentication method.
+https://\<accountname\>.dfs.core.windows.net/\<container\> will work, while https://\<accountname\>.dfs.core.windows.net/\<container\>/\<filename\> or https://\<accountname\>.dfs.core.windows.net/\<container\>/\<subfolder\> will fail.
