@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for the connector, and
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 9/22/2021
+ms.date: 10/5/2021
 ms.author: dougklo
 LocalizationGroup: reference
 ---
@@ -129,7 +129,7 @@ You can choose to use either the Microsoft driver (default) or the IBM driver if
 * Microsoft driver
   * Doesn't support Transport Layer Security (TLS)
 * IBM driver
-  * The IBM Db2 database connector, when using the IBM Db2 driver for .NET, doesn't work with Mainframe or AS/400 systems
+  * The IBM Db2 database connector, when using the IBM Db2 driver for .NET, doesn't work with Mainframe or IBM i systems
   * Doesn't support DirectQuery
 
 Microsoft provides support for the Microsoft driver, but not for the IBM driver. However, if your IT department already has it set up and configured on your machines, your IT department should know how to troubleshoot the IBM driver.
@@ -203,11 +203,37 @@ When attempting to connect to the IBM Db2 database, you may come across the foll
 
 This error message indicates that you didn’t put the right value in for the name of the database.
 
+### SQLCODE -1336 error code
+
+`The specified host could not be found.`
+
+Double check the name, and confirm that the host is reachable.
+
+### SQLCODE -1037 error code
+
+`Host is reachable, but is not responding on the specified port.`
+
+The port is specified at the end of the server name, separated by a colon. If omitted, the default value of 50000 is used.
+
+To find the port Db2 is using for Linux, Unix, and Windows, run this command:
+
+`db2 get dbm cfg | findstr SVCENAME`
+
+Look in the output for an entry for SVCENAME (and SSL_SVCENAME for TLS encrypted connections). If this value is a number, that’s the port. Otherwise cross reference the value with the system's "services" table. You can usually find this at /etc/services, or at c:\windows\system32\drivers\etc\services for Windows.
+
+The following screenshot shows the output of this command in Linux/Unix.
+
+![Image with output of the db2 command in Linux and Unix](./media/ibm-db2/db2-command-unix.png)
+
+The following screenshot shows the output of this command in Windows.
+
+![Image with output of the db2 command in Windows](./media/ibm-db2/db2-command-windows.png)
+
 ### Determine database name
 
 To determine the database name to use:
 
-1. On the IBM AS/400, run `DSPRDBDIRE`.
+1. On the IBM i, run `DSPRDBDIRE`.
 
    ![Image showing the output of the Display Relational Database Directory Entries](./media/ibm-db2/display-entries.png)
 
@@ -219,7 +245,7 @@ The Microsoft driver connects to the database using the Distributed Relational D
 
 To find for certain what port the DRDA service is running on:
 
-1. Run the AS/400 command `WRKSRVTBLE`.
+1. Run the IBM i command `WRKSRVTBLE`.
 
 2. Scroll down until your find the entries for DRDA.
 
