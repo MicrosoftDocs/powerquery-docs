@@ -54,29 +54,31 @@ To connect to Azure Cosmos DB data:
         * For larger datasets, choose **DirectQuery**. In DirectQuery mode, no data is downloaded to your workstation. While you create or interact with a visualization, Microsoft Power BI works with Cosmos DB to dynamically query the underlying data source so that you're always viewing current data. More information: [Use DirectQuery in Power BI Desktop](/power-bi/connect-data/desktop-use-directquery).
           * **Note** - to completely have the **DirectQuery** mode setup properly, you need to have the both config options **Advanced Passdown** and **PBI Mode** set to **1**
     * Customizing Default Options:
-        * Number of Retries
+        Note: 0 means False, 1 means True, neither 1 nor 0 means False
+        * Number of Retries ( default 5 )
             How many times to retry in case of HTTP Return Codes of
             * 408 - Request Timeout
             * 412 - Precondition Failed
             * 429 - Too Many Requests
-        * Advanced Passdown (0 / 1)
+        * Advanced Passdown (0 / 1) ( default 1 )
             Attempt to Passdown whenever possible
-        * PBI mode (0 / 1)
+        * PBI mode (0 / 1) ( default 1 )
             The ODBC Driver’s behavior is tailored towards the PBI flow support
-        * Protocol Type, 0: Text / 1: Binary
+        * Protocol Type, 0: Text / 1: Binary ( default 1 )
             The format of the Data exchanged with Cosmos DB (Text or Binary)
         * Schema in a Document
-            Flag indicating if collection schema is explicitly stated as a document
+            Flag indicating if collection schema is explicitly stated as a document ( default 0, i.e. No schema as document )
+            ![Example of Usage](./media/azure-cosmosdb/azure-cosmosdb-schema-in-collection.png)
             * Name of the database containing schema document if explicitly specified
             * Name of the collection containing schema document if explicitly specified
             * Name of JSON property to use in looking up the schema document
             * Value of the JSON property to use in looking up the schema document
             * Name of JSON property in schema document containing the collection schema
-        * Flag to indicate if error should be thrown if trying to sort more columns than composite index limit
+        * Flag to indicate if error should be thrown if trying to sort more columns than composite index limit ( default 1 )
             Detect whether the target collection has a Composite Index matching the Sorted Sequence of Columns
-        * Flag to indicate if assistive experience should interject if optimal composite indices are not defined for Sort Passdown (use in development phase)
+        * Flag to indicate if assistive experience should interject if optimal composite indices are not defined for Sort Passdown (use in development phase) ( default 0 )
             When detecting an error at the above 6., prompt whether the JSON of the Composite Index definition will be copied into the clipboard ( which could be pasted into the composite index definition in the Cosmos DB Portal );
-        * Flag to indicate if all fields in sort clause should be passed down, otherwise only the field sorted on in PBI report or first field specified in M will be passed down as an optimization
+        * Flag to indicate if all fields in sort clause should be passed down, otherwise only the field sorted on in PBI report or first field specified in M will be passed down as an optimization ( default 0 )
             * as a note, sorting depends on the composite indexes defined for the collection; currently the Cosmos DB containers have a maximum of 8 composite indexes which could be defined
         * Rest API Version, possible values 2015-12-16, 2018-12-31
 
