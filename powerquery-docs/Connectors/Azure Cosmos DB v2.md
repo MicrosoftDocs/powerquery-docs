@@ -80,7 +80,7 @@ To connect to Azure Cosmos DB data:
             When detecting an error at the above 6., prompt whether the JSON of the Composite Index definition will be copied into the clipboard ( which could be pasted into the composite index definition in the Cosmos DB Portal );
         * Flag to indicate if all fields in sort clause should be passed down, otherwise only the field sorted on in PBI report or first field specified in M will be passed down as an optimization ( default 0 )
             * as a note, sorting depends on the composite indexes defined for the collection; currently the Cosmos DB containers have a maximum of 8 composite indexes which could be defined
-        * Rest API Version, possible values 2015-12-16, 2018-12-31
+        * Rest API Version, possible values 2015-12-16, 2018-12-31 ( default 2018-12-31 )
 
     ![Enter connection information](./media/azure-cosmosdb/azure-cosmosdb-connector-settings.png)
 
@@ -120,5 +120,5 @@ You should be aware of the following **Instructions**, **Limitations** and **Kno
       which doesn't sort on fields which are not part of Composite Indexes; to assist with the creation of the necessary Composite Indexes, while designing the report in PBI Desktop,
     * the Report Developer Mode needs to be enabled (REPORT_DEVELOPER_MODE_ON="1") which will prompt to Copy to Clipboard the JSON text which could be pasted in the
       Cosmos DB Portal when specifying the Cosmos DB Collection Composite Index;
-3. Known Issues ( they are fixed for the next PBI version, the November Build ):
+3. Known Issues ( they are fixed for the next PBI Release ):
     * reports with more than 8 columns won't work in Direct Query mode;
