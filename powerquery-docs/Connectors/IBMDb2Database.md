@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for the connector, and
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 10/5/2021
+ms.date: 10/7/2021
 ms.author: dougklo
 LocalizationGroup: reference
 ---
@@ -233,7 +233,7 @@ The following screenshot shows the output of this command in Windows.
 
 To determine the database name to use:
 
-1. On the IBM i, run `DSPRDBDIRE`.
+1. On IBM i, run `DSPRDBDIRE`.
 
    ![Image showing the output of the Display Relational Database Directory Entries](./media/ibm-db2/display-entries.png)
 
