@@ -207,7 +207,7 @@ This error message indicates that you didn’t put the right value in for the na
 
 `The specified host could not be found.`
 
-Double check the name, and confirm that the host is reachable.
+Double check the name, and confirm that the host is reachable. For example, use [ping](/windows-server/administration/windows-commands/ping) in a command prompt to attempt to reach the server and ensure the IP address is correct, or use [telnet](/windows-server/administration/windows-commands/telnet) to communicate with the server.
 
 ### SQLCODE -1037 error code
 
