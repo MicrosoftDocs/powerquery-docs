@@ -120,5 +120,6 @@ You should be aware of the following **Instructions**, **Limitations** and **Kno
       which doesn't sort on fields which are not part of Composite Indexes; to assist with the creation of the necessary Composite Indexes, while designing the report in PBI Desktop,
     * the Report Developer Mode needs to be enabled (REPORT_DEVELOPER_MODE_ON="1") which will prompt to Copy to Clipboard the JSON text which could be pasted in the
       Cosmos DB Portal when specifying the Cosmos DB Collection Composite Index;
-3. Known Issues ( they are fixed for the next PBI Release ):
+3. Known Issues when in Direct Query Mode:
     * reports with more than 8 columns won't work in Direct Query mode;
+    * COUNT is not Passed Down; the effect is that SQL expressions Passing Down COUNT will fail and not display a number
