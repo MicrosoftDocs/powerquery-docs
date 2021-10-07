@@ -95,6 +95,8 @@ It isn't recommended, but users will continue to be able to turn off revocation 
 
 Power Query will return the message "Evaluation was canceled" when background analysis is disabled and the user switches between queries or closes the Query Editor while a query is in the process of refreshing.
 
+### Error: The key didn't match any rows in the table
+
 There are many reasons why Power Query may return an error that **the key didn't match any rows in the table**. When this happens, the Mashup Engine is unable to find the table name it is searching for. Reasons why this may happen include:
 * The table name has been changed, for example in the data source itself.
 * The account used to access the table does not have sufficient privileges to read the table.
