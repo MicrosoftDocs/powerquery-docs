@@ -91,10 +91,6 @@ As there are configurations in which revocation status may be stripped, such as 
 
 It isn't recommended, but users will continue to be able to turn off revocation checks entirely.
 
-## Canceled evaluation error
-
-Power Query will return the message "Evaluation was canceled" when background analysis is disabled and the user switches between queries or closes the Query Editor while a query is in the process of refreshing.
-
 ## Error: Evaluation was canceled
 
 Power Query will return the message "Evaluation was canceled" when background analysis is disabled and the user switches between queries or closes the Query Editor while a query is in the process of refreshing.
@@ -102,4 +98,4 @@ Power Query will return the message "Evaluation was canceled" when background an
 There are many reasons why Power Query may return an error that **the key didn't match any rows in the table**. When this happens, the Mashup Engine is unable to find the table name it is searching for. Reasons why this may happen include:
 * The table name has been changed, for example in the data source itself.
 * The account used to access the table does not have sufficient privileges to read the table.
-* There may be multiple credentials for a single data source, which is [not supported in Power BI Service](/power-bi/connect-data/refresh-data#accessing-cloud-data-sources). This may happen, for example, when the data source is a cloud data source and multiple accounts are being used to access the data source at the same time with different credentials. If the data source is on-premises, you
+* There may be multiple credentials for a single data source, which is [not supported in Power BI Service](/power-bi/connect-data/refresh-data#accessing-cloud-data-sources). This may happen, for example, when the data source is a cloud data source and multiple accounts are being used to access the data source at the same time with different credentials. If the data source is on-premises, you will need to use the on-premises data gateway.
