@@ -5,7 +5,7 @@ author: ptyx507
 ms.service: powerquery
 ms.reviewer: 
 ms.date: 11/30/2020
-ms.author: v-miesco
+ms.author: dougklo
 ---
 
 # Cluster values
