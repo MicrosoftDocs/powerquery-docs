@@ -121,4 +121,4 @@ You should be aware of the following **Instructions**, **Limitations**, and **Kn
       Cosmos DB Portal when specifying the Cosmos DB Collection Composite Index;
 3. Known Issues when in Direct Query Mode:
     * reports with more than 8 columns won't work in Direct Query mode;
-    * COUNT is not Passed Down; the effect is that SQL expressions Passing Down COUNT will fail and not display a number;
+    * Aggregate Functions are not Passed Down; the effect is that SQL expressions Passing Down COUNT, SUM, etc. will fail and not display a number;
