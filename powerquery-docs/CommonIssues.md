@@ -20,7 +20,7 @@ You might assume that if you sort your data, any downstream operations will pres
 
 For example, if you sort a sales table so that each store's largest sale is shown first, you might expect that performing a "Remove duplicates" operation will return only the top sale for each store. And this might in fact appear to work. However, this behavior is not guaranteed.
 
-Due to how operation application works, and the way that Power Query offloads certain operations to data sources (which can have their own unique ordering behavior), sort order is not guaranteed to be preserved through aggregations (such as Table.Group), merges (such as Table.NestedJoin), or duplicate removal (such as Table.Distinct).
+Due to the way Power Query optimizes certain operations, including skipping them or offloading them to data sources (which can have their own unique ordering behavior), sort order is not guaranteed to be preserved through aggregations (such as Table.Group), merges (such as Table.NestedJoin), or duplicate removal (such as Table.Distinct).
 
 There are a number of ways to work around this. Here are two suggestions:
 * Perform a sort *after* applying the downstream operation. For example, when grouping rows, sort the nested table in each group before applying further steps. Here's some sample M code that demonstrates this approach: `Table.Group(Sales_SalesPerson, {"TerritoryID"}, {{"SortedRows", each Table.Sort(_, {"SalesYTD", Order.Descending})}})`
