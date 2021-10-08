@@ -4,7 +4,7 @@ description: Provides basic information and connection instructions, along with 
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 9/16/2021
+ms.date: 10/7/2021
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -27,9 +27,12 @@ LocalizationGroup: reference
 > [!NOTE]
 > Effective July 2021, Google will discontinue support for sign-ins to Google accounts from embedded browser frameworks. Due to this change, you will need to [update](https://powerbi.microsoft.com/downloads/) your Power BI Desktop version to June 2021 to support signing in to Google.
 
+> [!Note]
+>This connector uses V4 of the Google Analytics API.
+
 ## Prerequisites
 
-Before you can sign in to Google Analytics, you must have an Google Analytics account (username/password).
+Before you can sign in to Google Analytics, you must have a Google Analytics account (username/password).
 
 ## Capabilities Supported
 
@@ -43,7 +46,7 @@ To connect to Google Analytics data:
 
    ![Get Data from Google Analytics.](./media/google-analytics/get-ga-data.png)
 
-2. If this is the first time you're getting data through the Google Analytics connector, a third party notice is displayed. Select **Don't warn me again with this connector** if you don't want this message to be displayed again. Then select **Continue**.
+2. If this is the first time you're getting data through the Google Analytics connector, a third-party notice is displayed. Select **Don't warn me again with this connector** if you don't want this message to be displayed again. Then select **Continue**.
 
 3. To sign in to your Google Analytics account, select **Sign in**.
 
@@ -77,7 +80,7 @@ To connect to Google Analytics data:
 
 1. Select **Google Analytics** from the **Power Query - Choose data source** page.
 
-2. From the connection page, enter a connection name and choose an on-premises data gateway if required.
+2. From the connection page, enter a connection name and choose an on-premises data gateway if necessary.
 
    ![Image showing the connection page with a connection name and no gateway selected.](./media/google-analytics/ga-connect.png)
 
@@ -171,7 +174,7 @@ in
 
 You can do one of two things. If you have a **Date** column, you can filter on the Date. This is the easier option. If you don't care about breaking it up by date, you can Group afterwards.
 
-If you don't have a **Date** column, you can manually manipulate the query in the Advanced Editor to add one and filter on it. For example.
+If you don't have a **Date** column, you can manually manipulate the query in the Advanced Editor to add one and filter on it. For example:
 
 ```powerquery-m
    let
