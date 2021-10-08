@@ -1,6 +1,6 @@
 ---
 title: Power Query Usercube connector
-description: Provides basic information and prerequisites for the Usercube connector, descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
+description: Provides basic information and prerequisites for the Usercube connector. Also includes descriptions of the optional input parameters, and discusses limitations and issues you might run into.
 author: bezhan-msft
 ms.service: powerquery
 ms.topic: conceptual
@@ -28,7 +28,7 @@ LocalizationGroup: reference
 
 You must have a Usercube instance with the *PowerBI* option.
 
-## Capabilities Supported
+## Capabilities supported
 
 - Import
 
@@ -46,7 +46,7 @@ To connect to a Usercube server:
 
    ![Usercube Server.](media/usercube/usercube-server.png)
 
-4. Enter the client credentials. The *Client Id* must be built from the *Identifier* of an *OpenIdClient* element defined in the configuration of your Usercube instance. To this identifier, you must concatenate the `@` character and the domain name of the Usercube instance. 
+4. Enter the client credentials. The *Client Id* must be built from the *Identifier* of an *OpenIdClient* element. This element is defined in the configuration of your Usercube instance. To this identifier, you must concatenate the `@` character and the domain name of the Usercube instance. 
 
    ![Client credentials.](media/usercube/usercube-client-credentials.png)
 
