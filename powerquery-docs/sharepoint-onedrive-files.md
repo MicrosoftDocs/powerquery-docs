@@ -5,7 +5,7 @@ author: ptyx507
 ms.service: powerquery
 ms.reviewer: 
 ms.date: 11/18/2020
-ms.author: v-miesco
+ms.author: dougklo
 ---
 
 # SharePoint and OneDrive for Business files import
