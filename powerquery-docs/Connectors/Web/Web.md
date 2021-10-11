@@ -4,7 +4,7 @@ description: Provides basic information and how to connect to your data, along w
 author: dougklopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 7/14/2021
+ms.date: 9/16/2021
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -20,6 +20,9 @@ LocalizationGroup: reference
 | Authentication Types Supported | Anonymous<br/>Windows<br/>Basic<br/>Web API<br/>Organizational Account |
 | Function Reference Documentation | [Web.Page](/powerquery-m/web-page)<br/>[Web.BrowserContents](/powerquery-m/web-browsercontents) |
 | | |
+
+>[!Note]
+>Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
 

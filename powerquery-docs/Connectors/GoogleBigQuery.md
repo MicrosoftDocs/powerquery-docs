@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for the Google BigQuer
 author: bezhan
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 07/06/2021
+ms.date: 10/7/2021
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -20,6 +20,9 @@ LocalizationGroup: reference
 | Authentication Types Supported | Organizational account<br/>Service account |
 | | |
 
+>[!Note]
+>Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+
 > [!NOTE]
 > Effective July 2021, Google will discontinue support for sign-ins to Google accounts from embedded browser frameworks. Due to this change, you will need to [update](https://powerbi.microsoft.com/downloads/) your Power BI Desktop version to June 2021 to support signing in to Google.
 
@@ -30,7 +33,7 @@ You'll need a Google account or a Google service account to sign in to Google Bi
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI only)
+* DirectQuery (Power BI Desktop only)
 
 ## Connect to Google BigQuery data from Power Query Desktop
 
@@ -40,21 +43,25 @@ To connect to Google BigQuery from Power Query Desktop, take the following steps
 
     ![Get Data from Google BigQuery.](./media/google-bigquery/GetData.png)
 
-2. The Google BigQuery connector supports connecting through an organizational account or a service account sign-in. In this example, you'll use the organizational account to sign in. Select **Sign In** to continue.
+2. If you want to use any advance options, select **Advanced options**. Otherwise, select **OK** to continue. More information: [Connect using advanced options](#connect-using-advanced-options)
+
+    ![Image showing initial dialog box with the advanced options selection](./media/google-bigquery/sign-in-advanced-options.png)
+
+3. The Google BigQuery connector supports connecting through an organizational account or a service account sign-in. In this example, you'll use the organizational account to sign in. Select **Sign In** to continue.
 
     ![Sign in to Google BigQuery.](./media/google-bigquery/SignIn.png)
 
     You can also sign in using a Google service account. In this case, select **Service Account Login** and enter your service account email and your service account JSON key file contents. Then select **Connect**.
 
-3. A **Sign in with Google** dialog appears. Select your Google account and approve connecting to Power BI Desktop.
+4. A **Sign in with Google** dialog appears. Select your Google account and approve connecting to Power BI Desktop.
 
     ![Sign in to Google.](./media/google-bigquery/SignIntoGoogle.png)
 
-4. Once signed in, select **Connect** to continue.
+5. Once signed in, select **Connect** to continue.
 
     ![Connect to Google BigQuery Data.](./media/google-bigquery/ConnectToGoogleBigQueryData.png)
 
-5. Once you successfully connect, a **Navigator** window appears and displays the data available on the server. Select your data in the navigator. Then select either **Transform Data** to transform the data in Power Query or **Load** to load the data in Power BI Desktop.
+6. Once you successfully connect, a **Navigator** window appears and displays the data available on the server. Select your data in the navigator. Then select either **Transform Data** to transform the data in Power Query or **Load** to load the data in Power BI Desktop.
 
     ![Image of Power Query navigator loading Google BigQuery data to desktop app.](./media/google-bigquery/navigator-bigquery.png)
 
@@ -76,13 +83,35 @@ To connect to Google BigQuery from Power Query Online, take the following steps:
 
     ![Image of Google sign in dialog.](./media/google-bigquery/SignIntoGoogle.png)
 
-4. Once signed in, select **Next** to continue.
+4. If you want to use any advance options, select **Advanced options**. More information: [Connect using advanced options](#connect-using-advanced-options)
+
+5. Once signed in, select **Next** to continue.
 
     ![Image of the user successfully signed in.](./media/google-bigquery/connect-online-to-data.png)
 
-5. Once you successfully connect, a **Navigator** window appears and displays the data available on the server. Select your data in the navigator. Then select **Next** to transform the data in Power Query.
+6. Once you successfully connect, a **Navigator** window appears and displays the data available on the server. Select your data in the navigator. Then select **Next** to transform the data in Power Query.
 
     ![Image of Power Query navigator loading Google BigQuery data to online app.](./media/google-bigquery/navigator-bigquery-online.png)
+
+## Connect using advanced options
+
+Both Power Query Desktop and Power Query Online provide a set of advanced options that you can add to your query if needed.
+
+![Display of advanced options available in Power Query Desktop.](./media/google-bigquery/advanced-options.png)
+
+The following table lists all of the advanced options you can set in Power Query Desktop and Power Query Online.
+
+| Advanced option | Description |
+| --------------- | ----------- |
+| Billing Project ID | A project against which Power Query will run queries. Permissions and billing are tied to this project. |
+| Use Storage Api | A flag that enables using the [Storage API of Google BigQuery](https://cloud.google.com/bigquery/docs/reference/storage). This option is true by default. However, as of now this option is defunct as Google uses storage API exclusively and changing this flag does not change any behavior. |
+| Connection timeout duration | The standard connection setting (in seconds) that controls how long Power Query waits for a connection to complete. You can change this value if your connection doesn't complete before 15 seconds (the default value.) |
+| Command timeout duration | How long Power Query waits for a query to complete and return results. The default depends on the driver default. You can enter another value in minutes to keep the connection open longer. |
+| Project ID | The project that you want to run native queries on. This option is only available in Power Query Desktop. |
+| SQL statement | For information, go to [Import data from a database using native database query](../native-database-query.md). In this version of native database query functionality, you need to use fully qualified table names in the format `Database.Schema.Table`, for example `SELECT * FROM DEMO_DB.PUBLIC.DEMO_TABLE`. This option is only available in Power Query Desktop. |
+| | |
+
+Once you've selected the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your Google BigQuery data.
 
 ## Limitations and considerations
 
@@ -108,3 +137,11 @@ Users should select **Transform Data** and then use the JSON parsing capabilitie
 ### Setting up a Google service account
 
 For more information on setting up or using Google service accounts, go to [Creating and managing service account keys](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) in the Google docs.
+
+### Authenticating through a Google service account
+
+When authenticating through a Google service account in Power BI Desktop, there's a specific credential format that's required by the connector.
+* Service Account Email: must be in email format
+* Service Account JSON key file contents: once this JSON key is downloaded, all new lines must be removed from the file so that the contents are in one line. Once the JSON file is in that format, the contents can be pasted into this field.
+
+When authenticating through a Google service account in Power BI service, users need to use "Basic" authentication. The **Username** field maps to the **Service Account Email** field above, and the **Password** field maps to the **Service Account JSON key file contents** field above. The format requirements for each credential remain the same in both Power BI Desktop and Power BI service.

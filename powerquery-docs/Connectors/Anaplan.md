@@ -4,13 +4,16 @@ description: Provides basic information, prerequisites, and instructions on how 
 author: cpopell
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 4/2/2021
+ms.date: 9/16/2021
 ms.author: gepopell
 ms.reviewer: kvivek
 LocalizationGroup: reference
 ---
 
 # Anaplan
+
+>[!Note]
+>The following connector article is provided by Anaplan, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Anaplan website and use the support channels there.
 
 ## Summary
 

@@ -5,7 +5,7 @@ author: ptyx507
 ms.service: powerquery
 ms.reviewer: kvivek
 ms.date: 06/08/2020
-ms.author: v-miesco
+ms.author: dougklo
 ---
 
 # Split columns by delimiter
