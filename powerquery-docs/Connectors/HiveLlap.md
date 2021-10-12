@@ -69,7 +69,7 @@ To connect to an Apache Hive LLAP server:
 
 ## Kerberos-based single sign-on (SSO) for Hive LLAP
 
-The Hive LLAP connector now supports Kerberos-based single sign-on (SSO). 
+The Hive LLAP connector now supports Kerberos-based single sign-on (SSO).
 
 To use this feature:
 
@@ -89,7 +89,7 @@ More information, [Configure Kerberos-based SSO from Power BI service to on-prem
 
 ## Troubleshooting
 
-You might come across the following "Unable to connect" error after entering the authentication information for the connector and selecting **Connect**.
+You might come across the following "SSL_connect" error after entering the authentication information for the connector and selecting **Connect**.
 
 ![Unable to connect error with SSL wrong version number](./media/hive-llap/unable-to-connect.png)
 
