@@ -101,3 +101,7 @@ There are many reasons why Power Query may return an error that **the key didn't
 * The table name has been changed, for example in the data source itself.
 * The account used to access the table does not have sufficient privileges to read the table.
 * There may be multiple credentials for a single data source, which is [not supported in Power BI Service](/power-bi/connect-data/refresh-data#accessing-cloud-data-sources). This may happen, for example, when the data source is a cloud data source and multiple accounts are being used to access the data source at the same time with different credentials. If the data source is on-premises, you will need to use the on-premises data gateway.
+
+## Limitation: Domain-joined requirement for gateway machines when using Windows authentication
+
+Using Windows authentication with an on-premises gateway requires the gateway machine to be domain joined. This applies to any connections that are set up with “Windows authentication through the gateway”. Windows accounts which will be used to access a data source may require read access to the shared components in the Windows directory and the gateway installation.
