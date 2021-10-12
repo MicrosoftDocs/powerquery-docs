@@ -320,6 +320,8 @@
         href: Connectors/GoogleAnalytics.md
       - name: "Google BigQuery"
         href: Connectors/GoogleBigQuery.md
+      - name: "Hive LLAP"
+        href: Connectors/HiveLlap.md
       - name: "IBM Db2 database"
         href: Connectors/IBMDb2Database.md
       - name: "JSON"
