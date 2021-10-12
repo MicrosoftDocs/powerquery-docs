@@ -402,6 +402,8 @@
         href: Connectors/SumTotal.md
       - name: "Text/CSV"
         href: Connectors/TextCSV.md
+      - name: "TIBCO&reg; Data Virtualization (Beta)"
+        href: Connectors/tibco.md
       - name: "XML"
         href: Connectors/XML.md
       - name: "Web"
