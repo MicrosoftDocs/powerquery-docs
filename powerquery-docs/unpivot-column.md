@@ -5,7 +5,7 @@ author: ptyx507
 ms.service: powerquery
 ms.reviewer: kvivek
 ms.date: 06/01/2019
-ms.author: v-miesco
+ms.author: dougklo
 ms.custom: edited
 ---
 

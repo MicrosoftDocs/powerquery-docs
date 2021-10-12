@@ -5,7 +5,7 @@ author: ptyx507
 ms.service: powerquery
 ms.reviewer: 
 ms.date: 03/16/2021
-ms.author: v-miesco
+ms.author: dougklo
 ---
 # How fuzzy matching works in Power Query?
 

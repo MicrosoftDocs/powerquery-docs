@@ -3,7 +3,7 @@ title: Rename columns
 description: Within Power Query, you can rename your column given certain conditions.
 author: jessli20
 ms.service: powerquery
-ms.reviewer: v-miesco
+ms.reviewer: dougklo
 ms.date: 11/24/2020
 ms.author: bezhan
 
