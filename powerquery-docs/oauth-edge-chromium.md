@@ -10,9 +10,28 @@ ms.author: dougklo
 
 # Enabling Microsoft Edge (Chromium) for OAuth authentication in Power BI Desktop
 
-If you're using OAuth authentication to connect to your data, the OAuth dialog in Power Query uses the Microsoft Internet Explorer 11 embedded control browser. However, certain web services, such as QuickBooks Online, Salesforce Reports, and Salesforce Objects, no longer support Internet Explorer 11.
+If you're using OAuth authentication to connect to your data, the OAuth dialog in Power Query uses the Microsoft Internet Explorer 11 embedded control browser. However, certain web services, such as QuickBooks Online, Salesforce Reports, and Salesforce Objects no longer support Internet Explorer 11.
 
-## December 2020 update
+## October 2021 Power BI release
+
+>[!Note]
+>If you are using an earlier release of Power BI, go to [December 2020 Power BI Release](#december-2020-power-bi-release).
+
+As of October of 2021, Power BI Desktop now uses [Microsoft Edge WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/), by default, for OAuth authentication for all connectors. However, you can change the default behavior using environment variables.
+
+* To disable the use of WebView2 for specific connectors, set `PQ_ExtendEdgeChromiumOAuthDenyList` with the name(s) of the connector(s) you want to disable. Multiple connectors are separated by semicolons.
+
+   ```
+   setx PQ_ExtendEdgeChromiumOAuthDenyList   MyExtension1;MyExtension2
+   ```
+
+* To disable the use of WebView2, set `PQ_DisableEdgeChromiumOAuth` to true.
+
+   ```
+   setx PQ_DisableEdgeChromiumOAuth   true
+   ```
+
+## December 2020 Power BI release
 
 As of December of 2020, Power BI Desktop uses [Microsoft Edge WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/) for OAuth authentication with certain connectors. These connectors are:
 
@@ -38,22 +57,6 @@ All other connectors will use Internet Explorer 11 by default unless the setting
 
    ```
    setx PQ_ExtendEdgeChromiumOAuthAllowList   MyExtension1;MyExtension2
-   ```
-
-* To disable the use of WebView2, set `PQ_DisableEdgeChromiumOAuth` to true.
-
-   ```
-   setx PQ_DisableEdgeChromiumOAuth   true
-   ```
-
-## October 2021 update
-
-As of October of 2021, Power BI Desktop now uses [Microsoft Edge WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/), by default, for OAuth authentication for all connectors. However, you can change the default behavior using environment variables.
-
-* To disable the use of WebView2 for specific connectors, set `PQ_ExtendEdgeChromiumOAuthDenyList` with the name(s) of the connector(s) you want to disable. Multiple connectors are separated by semicolons.
-
-   ```
-   setx PQ_ExtendEdgeChromiumOAuthDenyList   MyExtension1;MyExtension2
    ```
 
 * To disable the use of WebView2, set `PQ_DisableEdgeChromiumOAuth` to true.
