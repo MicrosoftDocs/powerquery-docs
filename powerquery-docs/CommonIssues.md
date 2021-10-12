@@ -93,8 +93,8 @@ Power Query will return the message "Evaluation was canceled" when background an
 
 There are many reasons why Power Query may return an error that **the key didn't match any rows in the table**. When this error happens, the Mashup Engine is unable to find the table name it's searching for. Reasons why this error may happen include:
 * The table name has been changed, for example in the data source itself.
-* The account used to access the table does not have sufficient privileges to read the table.
-* There may be multiple credentials for a single data source, which is [not supported in Power BI Service](/power-bi/connect-data/refresh-data#accessing-cloud-data-sources). This may happen, for example, when the data source is a cloud data source and multiple accounts are being used to access the data source at the same time with different credentials. If the data source is on-premises, you will need to use the on-premises data gateway.
+* The account used to access the table doesn't have sufficient privileges to read the table.
+* There may be multiple credentials for a single data source, which [isn't supported in Power BI Service](/power-bi/connect-data/refresh-data#accessing-cloud-data-sources). This error may happen, for example, when the data source is a cloud data source and multiple accounts are being used to access the data source at the same time with different credentials. If the data source is on-premises, you'll need to use the on-premises data gateway.
 
 ## Limitation: Domain-joined requirement for gateway machines when using Windows authentication
 
