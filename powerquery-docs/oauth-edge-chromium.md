@@ -4,7 +4,7 @@ description: This article describes how users can install and use Microsoft Edge
 author: DougKlopfenstein
 ms.service: powerquery
 ms.reviewer: dougklo
-ms.date: 8/31/2021
+ms.date: 10/12/2021
 ms.author: dougklo
 ---
 
@@ -12,7 +12,9 @@ ms.author: dougklo
 
 If you're using OAuth authentication to connect to your data, the OAuth dialog in Power Query uses the Microsoft Internet Explorer 11 embedded control browser. However, certain web services, such as QuickBooks Online, Salesforce Reports, and Salesforce Objects, no longer support Internet Explorer 11.
 
-As of December of 2020, Power BI Desktop now uses [Microsoft Edge WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/) for OAuth authentication with certain connectors. These connectors are:
+## December 2020 update
+
+As of December of 2020, Power BI Desktop uses [Microsoft Edge WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/) for OAuth authentication with certain connectors. These connectors are:
 
 * GitHub
 * QuickBooks Online
@@ -36,6 +38,22 @@ All other connectors will use Internet Explorer 11 by default unless the setting
 
    ```
    setx PQ_ExtendEdgeChromiumOAuthAllowList   MyExtension1;MyExtension2
+   ```
+
+* To disable the use of WebView2, set `PQ_DisableEdgeChromiumOAuth` to true.
+
+   ```
+   setx PQ_DisableEdgeChromiumOAuth   true
+   ```
+
+## October 2021 update
+
+As of October of 2021, Power BI Desktop now uses [Microsoft Edge WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/), by default, for OAuth authentication for all connectors. However, you can change the default behavior using environment variables.
+
+* To disable the use of WebView2 for specific connectors, set `PQ_ExtendEdgeChromiumOAuthDenyList` with the name(s) of the connector(s) you want to disable. Multiple connectors are separated by semicolons.
+
+   ```
+   setx PQ_ExtendEdgeChromiumOAuthDenyList   MyExtension1;MyExtension2
    ```
 
 * To disable the use of WebView2, set `PQ_DisableEdgeChromiumOAuth` to true.
