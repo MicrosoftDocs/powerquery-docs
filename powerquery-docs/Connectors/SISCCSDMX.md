@@ -21,12 +21,12 @@ LocalizationGroup: reference
 | Release State | General Availability |
 | Products | Power BI (Datasets) |
 | Authentication Types Supported | Anonymous |
-| Function Reference Documentation | SDMX.Contents |
+| Function Reference Documentation | &mdash; |
 | | |
 
 ## Prerequisites
 
-Before you get started, make sure you've properly configured the URL from the Service Provider’s API. The exact process here will depend on the Service Provider.
+Before you get started, make sure you've properly configured the URL from the service provider’s API. The exact process here will depend on the service provider.
 
 ## Capabilities supported
 
@@ -38,17 +38,17 @@ To connect to SDMX Web Service data:
 
 1. Select **Get Data** from the **Home** ribbon in Power BI Desktop. Select **All** from the categories on the left, and then select **SIS-CC SDMX**. Then select **Connect**.
 
-   ![SIS-CC SDMX Get Data](media/sisccsdmx/sisccsdmxgetdata.jpg)
+   ![SIS-CC SDMX Get Data.](media/sisccsdmx/sisccsdmxgetdata.jpg)
 
 2. Fill in the parameters:
    1. In the **Data query URL**, enter an SDMX REST data query URL (the web service must support the SDMX-CSV format).
    2. In **Display format**, select one of the options:
-      - Show codes and labels, ex: FREQ: Frequency
-      - Show codes; ex: FREQ
-      - Show labels ex: Frequency
+      - Show codes and labels; example: FREQ: Frequency
+      - Show codes; example: FREQ
+      - Show labels; example: Frequency
       - Optionally, enter a language preference in **Label language preference** using an IETF BCP 47 tag
 
-   ![SIS-CC SDMX Connect to Data](media/sisccsdmx/sisccsdmxconnector.jpg)
+   ![SIS-CC SDMX Connect to Data.](media/sisccsdmx/sisccsdmxconnector.jpg)
 
 3. If this is the first time you’re connecting to the REST web service in the previous step **Data query URL**, this authentication step is displayed. As the connection is Anonymous, select **Connect**
 

@@ -21,7 +21,7 @@ LocalizationGroup: reference
 | Release State                    | General Availability                                                         |
 | Products                         | Power BI (Datasets)                                                          |
 | Authentication Types Supported   | Client Credentials                                                           |
-| Function Reference Documentation | [Usercube.Universes](/powerquery-m/usercube-universes)                       |
+| Function Reference Documentation | &mdash;                                                                      |
 |                                  |                                                                              |
 
 ## Prerequisites
@@ -46,7 +46,7 @@ To connect to a Usercube server:
 
    ![Usercube Server.](media/usercube/usercube-server.png)
 
-4. Enter the client credentials. The *Client Id* must be built from the *Identifier* of an *OpenIdClient* element. This element is defined in the configuration of your Usercube instance. To this identifier, you must concatenate the `@` character and the domain name of the Usercube instance. 
+4. Enter the client credentials. The *Client Id* must be built from the *Identifier* of an *OpenIdClient* element. This element is defined in the configuration of your Usercube instance. To this identifier, you must concatenate the `@` character and the domain name of the Usercube instance.
 
    ![Client credentials.](media/usercube/usercube-client-credentials.png)
 
