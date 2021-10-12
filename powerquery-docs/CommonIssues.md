@@ -98,5 +98,5 @@ There are many reasons why Power Query may return an error that **the key didn't
 
 ## Limitation: Domain-joined requirement for gateway machines when using Windows authentication
 
-Using Windows authentication with an on-premises gateway requires the gateway machine to be domain joined. This applies to any connections that are set up with “Windows authentication through the gateway”. Windows accounts which will be used to access a data source may require read access to the shared components in the Windows directory and the gateway installation.
+Using Windows authentication with an on-premises gateway requires the gateway machine to be domain joined. This applies to any connections that are set up with “Windows authentication through the gateway”. Windows accounts that will be used to access a data source might require read access to the shared components in the Windows directory and the gateway installation.
 
