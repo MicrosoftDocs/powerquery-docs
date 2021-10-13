@@ -404,7 +404,7 @@
         href: Connectors/SumTotal.md
       - name: "Text/CSV"
         href: Connectors/TextCSV.md
-      - name: "TIBCO&reg; Data Virtualization (Beta)"
+      - name: "TIBCO(R) Data Virtualization (Beta)"
         href: Connectors/tibco.md
       - name: "Usercube"
         href: Connectors/Usercube.md
