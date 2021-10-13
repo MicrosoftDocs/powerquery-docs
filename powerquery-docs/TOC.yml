@@ -390,6 +390,8 @@
         href: Connectors/SharePointList.md
       - name: "SharePoint Online list"
         href: Connectors/SharePointOnlineList.md
+      - name: SIS-CC SDMX
+        href: Connectors/SISCCSDMX.md
       - name: "Snowflake"
         href: Connectors/Snowflake.md
       - name: "SoftOne BI (Beta)"
@@ -404,6 +406,8 @@
         href: Connectors/TextCSV.md
       - name: "TIBCO&reg; Data Virtualization (Beta)"
         href: Connectors/tibco.md
+      - name: "Usercube"
+        href: Connectors/Usercube.md
       - name: "XML"
         href: Connectors/XML.md
       - name: "Web"
