@@ -17,7 +17,8 @@
 Your organization must have configured MicroStrategy environement and the user account on MicroStrategy environement needs access to the Powewr BI connector.
  
 ## Capabilities Supported
-* Import 
+* Import
+* Data refresh
 
 ## Connect to MicroStrategy using Power BI Desktop
 
@@ -64,7 +65,7 @@ To connect to MicroStrategy using Power BI Desktop:
 
 ## Refresh data for the MicroStrategy using Power BI Online
 
-[!WARNING] Scheduled refresh is currently supported only for OIDC authentication
+[!WARNING] Scheduled refresh functionality is not available for library authentication
 
 To refresh data for the MicroStrategy from Power BI Online, take the following steps:
  
