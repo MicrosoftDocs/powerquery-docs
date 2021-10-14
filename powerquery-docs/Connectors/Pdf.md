@@ -17,7 +17,7 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights |
 | Authentication Types Supported | Anonymous (online)<br/>Basic (online)<br/>Organizational account(online)</br>Windows (online) |
 | Function Reference Documentation | [Pdf.Tables](/powerquery-m/pdf-tables) |
 | | |
