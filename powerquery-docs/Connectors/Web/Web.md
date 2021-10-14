@@ -166,7 +166,7 @@ The following file types are supported by the Web Connector:
 * [Text file](../textcsv.md)
 * HTML page
 * [XML tables](../xml.md)
-* PDF
+* [PDF](../pdf.md)
 
 For example, you could use the following steps to import a JSON file on the https://contoso.com/products web site:
 
