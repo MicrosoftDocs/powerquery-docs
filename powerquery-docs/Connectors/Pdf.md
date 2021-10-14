@@ -18,7 +18,7 @@ LocalizationGroup: reference
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights |
-| Authentication Types Supported | Anonymous (online)<br/>Basic (online)<br/>Organizational account(online)</br>Windows (online) |
+| Authentication Types Supported | Anonymous (online)<br/>Basic (online)<br/>Organizational account (online)</br>Windows (online) |
 | Function Reference Documentation | [Pdf.Tables](/powerquery-m/pdf-tables) |
 | | |
 
@@ -48,12 +48,6 @@ To make the connection from Power Query Desktop:
 
    ![PDF file imported into Power Query Desktop Navigator.](./media/pdf/desktop-navigator-view.png)
 
-You can specify the **Start page** and **End page** as optional parameters for your PDF connection. You can also specify these parameters in the M formula language, using the following format:
-
-```
-Pdf.Tables(File.Contents("c:\sample.pdf"), [StartPage=10, EndPage=11])
-```
-
 ## Connect to a PDF file from Power Query Online
 
 To make the connection from Power Query Online:
@@ -71,9 +65,3 @@ To make the connection from Power Query Online:
 5. In **Navigator**, select the file information you want, and then select **Transform Data** to continue transforming the data in Power Query Editor.
 
    ![PDF file imported into Power Query online Navigator.](./media/pdf/online-navigator-view.png)
-
-You can specify the **Start page** and **End page** as optional parameters for your PDF connection. You can also specify these parameters in the M formula language, using the following format:
-
-```
-Pdf.Tables(File.Contents("c:\sample.pdf"), [StartPage=10, EndPage=11])
-```
