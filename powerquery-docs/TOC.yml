@@ -344,6 +344,8 @@
         href: Connectors/Odbc.md
       - name: "Oracle database"
         href: Connectors/OracleDatabase.md
+      - name: "PDF"
+        href: Connectors/Pdf.md
       - name: "PostgreSQL"
         href: Connectors/PostgreSQL.md
       - name: "QuickBooks Online (Beta)"
