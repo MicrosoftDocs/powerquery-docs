@@ -139,3 +139,7 @@ To fix this issue, you can refer to [Locate and reset the last cell on a workshe
 When retrieving data from Excel on your machine or from SharePoint, consider both the volume of the data involved, as well as the complexity of the workbook.
 
 You'll notice performance degradation when retrieving very large files from SharePoint. However, this is only one part of the problem. If you have significant business logic in an Excel file being retrieved from SharePoint, this business logic may have to execute when you refresh your data, which could cause complicated calculations. Consider aggregating and pre-calculating data, or moving more of the business logic out of the Excel layer and into the Power Query layer.
+
+### Errors when using the Excel connector to import CSV files
+
+Even though CSV files can be opened in Excel, they're not Excel files. Please use the [Text/CSV connector](TextCSV.md) instead.
