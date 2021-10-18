@@ -148,7 +148,7 @@ Source = CommonDataService.Database([DATABASE URL])
 Once a database source has been defined, you can specify a native query using the [Value.NativeQuery](/powerquery-m/value-nativequery) function.
 
 ```
-myQuery = Value.NativeQuery(Source, [QUERY])
+myQuery = Value.NativeQuery(Source, [QUERY], null, [EnableFolding=true])
 ```
 
 Altogether, the query will look like this.
@@ -156,7 +156,9 @@ Altogether, the query will look like this.
 ```
 let
     Source = CommonDataService.Database("[DATABASE]"),
-    myQuery = Value.NativeQuery(Source, "[QUERY]")
+    myQuery = Value.NativeQuery(Source, "[QUERY]", null, [EnableFolding=true])
 in
     myQuery
 ```
+
+Note that misspelling a column name may result in an error message about query folding instead of missing column. 
