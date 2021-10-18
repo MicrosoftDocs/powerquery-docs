@@ -102,7 +102,7 @@ You can change the enterprise gateway used for a given dataflow and change the g
 
 1. In the left navigation pane of [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Gateways** and then select the gateway you want.
 
-2. To add a user to a gateway, select **Users**, specify a user or group, and then specify a permission level. Using gateways in dataflows requires Admin permission on the gateway. Admins have full control of the gateway, including adding users, setting permissions, creating connections to all available data sources, and deleting the gateway.
+2. To add a user to a gateway, select **Users**, specify a user or group, and then specify a permission level. Creating new data sources with a gateway in dataflows requires Admin permission on the gateway. Admins have full control of the gateway, including adding users, setting permissions, creating connections to all available data sources, and deleting the gateway.
 
 ## View and manage gateway connections
 
@@ -142,7 +142,7 @@ There are a few known limitations when using enterprise gateways and dataflows.
 - Dataflows are only supported using enterprise gateways. Personal gateways won't be available for selection in the drop-down lists and settings
     screens.
 
-- Using gateways in dataflows is only supported for people with *Admins* permissions. *Can use* and *Can use + share* permissions levels aren't currently supported.
+- Creating new data sources with a gateway in dataflows is only supported for people with *Admins* permissions. *Can use* and *Can use + share* permissions levels aren't currently supported.
 
 For information about troubleshooting issues with gateways, or configuring the gateway service for your network, go to [On-premises data gateway documentation](/data-integration/gateway).
 
