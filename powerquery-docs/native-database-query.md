@@ -45,6 +45,7 @@ The following Power Query connectors support native database queries.
 
 | Connector | Type of native database query
 | --- | --- |
+| Amazon Redshift | SQL statement |
 | Azure Analysis Services database | MDX or DAX query |
 | Azure Database for PostgreSQL | SQL statement |
 | Azure Cosmos DB | SQL statement |
