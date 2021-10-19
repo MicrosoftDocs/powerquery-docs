@@ -5,7 +5,7 @@ author: ptyx507
 ms.service: powerquery
 ms.reviewer: 
 ms.date: 11/18/2020
-ms.author: v-miesco
+ms.author: dougklo
 ---
 
 # SharePoint and OneDrive for Business files import
@@ -21,7 +21,7 @@ Power Query provides a **Browse OneDrive** button next to the **File path or URL
 
 * [Excel](connectors/excel.md)
 * [JSON](connectors/json.md)
-* PDF
+* [PDF](connectors/pdf.md)
 * [XML](connectors/xml.md)
 * [TXT/CSV](connectors/textcsv.md)
 
@@ -76,7 +76,7 @@ When the **Navigator** dialog box appears, you can select from the list of table
 
 ## SharePoint folder connector
 
-You can read a detailed step-by-step guide on how to connect to the files hosted on your SharePoint site in the [SharePoint folder](connectors/sharepointfolder.md#connect-to-a-sharepoint-folder) article.
+You can read a detailed step-by-step guide on how to connect to the files hosted on your SharePoint site in the [SharePoint folder](connectors/sharepointfolder.md) article.
 
 After successfully establishing the connection, you'll be prompted with a table preview that shows the files in your SharePoint site. Select the **Transform data** button at the bottom right of the window.
 
@@ -120,7 +120,9 @@ This experience is provided through the [`SharePoint.Contents`](/powerquery-m/sh
 1. Create a Blank Query.
 
 2. Change the code in the formula bar to be `SharePoint.Contents("url")` where `url` is the same format used for the SharePoint folder connector. For example:
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`SharePoint.Contents("https://contoso.sharepoint.com/marketing/data")`
+
+   `SharePoint.Contents("https://contoso.sharepoint.com/marketing/data")`
+
    >[!NOTE]
    >By default, this function tries to use SharePoint API Version 14 to connect. If you aren't certain of the API version being used by your SharePoint site, you might want to try using the following example code: `SharePoint.Contents("https://contoso.sharepoint.com/marketing/data", [ApiVersion="Auto"])`.
 

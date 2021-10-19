@@ -104,7 +104,7 @@ Once you've selected the advanced options you require, select **OK** in Power Qu
 
 ## Power BI and Snowflake Webinar
 
-Power BI and Snowflake are partnering to host a hands-on webinar on August 25th, 2021 to deep-dive into [Attaining Consumer Insights with Snowflake and Microsoft Power BI](https://www.snowflake.com/webinar/virtual-hands-on-labs/attaining-consumer-insights-with-snowflake-and-microsoft-power-bi/). 
+Power BI and Snowflake partnered to host a hands-on webinar on August 25th, 2021 to deep-dive into [Attaining Consumer Insights with Snowflake and Microsoft Power BI](https://www.snowflake.com/webinar/virtual-hands-on-labs/attaining-consumer-insights-with-snowflake-and-microsoft-power-bi/). 
 
 In this hands on lab, learn how to access all relevant data from a single source and turn data into insights through this connector.
 
@@ -112,7 +112,7 @@ In this hands on lab, learn how to access all relevant data from a single source
 * Leverage the Data Marketplace to query live data from 3rd party providers
 * Set up self-serve analytics in Power BI
 
-Sign up for the webinar using the above link!
+View the webinar on-demand using the above link!
 
 ## Additional information
 

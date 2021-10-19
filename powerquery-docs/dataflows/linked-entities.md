@@ -7,7 +7,7 @@ ms.reviewer: ''
 
 ms.service: dataflows
 ms.topic: conceptual
-ms.date: 12/2/2019
+ms.date: 8/31/2021
 ms.author: bensack
 
 LocalizationGroup: Data from files
@@ -94,6 +94,7 @@ There are a few limitations to keep in mind when working with linked entities:
 * Cyclical dependencies of linked entities aren't allowed.
 * The dataflow must be in a [new Power BI workspace](/power-bi/service-create-the-new-workspaces) or a Power Apps environment.
 * A linked entity can't be joined with a regular entity that gets its data from an on-premises data source.
+* When using M parameters to address linked entities, if the source dataflow is refreshed, it doesn't automatically affect the data in the destination dataflow.
 
 ## Next steps
 

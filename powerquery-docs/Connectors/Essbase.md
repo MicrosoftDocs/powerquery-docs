@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for the Essbase connec
 author: bezhan-msft
 ms.service: powerquery 
 ms.topic: conceptual
-ms.date: 6/11/2021 
+ms.date: 9/16/2021 
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -20,9 +20,6 @@ LocalizationGroup: reference
 | Authentication Types Supported   | Basic (Username/Password)                                                    |
 | Function Reference Documentation | [Essbase.Cubes](/powerquery-m/essbase-cubes)                                 |
 |                                  |                                                                              |
-
-> [!Note]
-> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
 

@@ -6,7 +6,7 @@ author: bezhan-msft
 ms.service: powerquery
 ms.topic: quickstart
 ms.date: 5/28/2021
-ms.author: v-miesco
+ms.author: dougklo
 ms.reviewer: kvivek
 ms.custom: intro-internal
 

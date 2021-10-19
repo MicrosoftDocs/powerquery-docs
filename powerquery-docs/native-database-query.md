@@ -51,6 +51,7 @@ The following Power Query connectors support native database queries.
 | Azure SQL Data Warehouse | SQL statement |
 | Azure SQL database | SQL statement |
 | DataWorld.Dataset | dwSQL |
+| Dataverse | SQL statement |
 | Essbase | MDX statement |
 | FHIR | FHIR Search |
 | IBM Db2 database | SQL statement |

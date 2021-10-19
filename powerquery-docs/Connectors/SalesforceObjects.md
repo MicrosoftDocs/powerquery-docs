@@ -5,14 +5,14 @@ author: dougklopfenstein
 
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 12/9/2020
+ms.date: 8/31/2021
 ms.author: bezhan
 
 LocalizationGroup: reference
 ---
 
 # Salesforce Objects
- 
+
 ## Summary
 
 | Item | Description |
@@ -26,8 +26,8 @@ LocalizationGroup: reference
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 >[!Warning]
-> By default, Salesforce does not support Internet Explorer 11, which is used as part of the authentication experience to online services in Power Query Desktop. Please opt-in for [extended support for accessing Lightning Experience Using Microsoft Internet Explorer 11](https://help.salesforce.com/articleView?id=000333934&type=1&mode=1). You may also want to review Salesforce documentation on [configuring Internet Explorer](https://developer.salesforce.com/docs/atlas.en-us.salesforce_supported_browsers_cheatsheet.meta/salesforce_supported_browsers_cheatsheet/getstart_browser_ie.htm). At this time, users will be impaired from authenticating, but stored credentials should continue to work until their existing authentication tokens expire. To resolve this, review "Enabling Microsoft Edge (Chromium) for OAuth Authentication in Power BI Desktop" at the bottom of this document.
- 
+> By default, Salesforce does not support Internet Explorer 11, which is used as part of the authentication experience to online services in Power Query Desktop. Please opt-in for [extended support for accessing Lightning Experience Using Microsoft Internet Explorer 11](https://help.salesforce.com/articleView?id=000333934&type=1&mode=1). You may also want to review Salesforce documentation on [configuring Internet Explorer](https://developer.salesforce.com/docs/atlas.en-us.salesforce_supported_browsers_cheatsheet.meta/salesforce_supported_browsers_cheatsheet/getstart_browser_ie.htm). At this time, users will be impaired from authenticating, but stored credentials should continue to work until their existing authentication tokens expire. To resolve this, go to [Enabling Microsoft Edge (Chromium) for OAuth Authentication in Power BI Desktop](../oauth-edge-chromium.md).
+
 ## Prerequisites
 
 To use the Salesforce Objects connector, you must have a Salesforce account username and password.
@@ -37,10 +37,10 @@ Also, Salesforce API access should be enabled. To verify access settings, go to 
 ## Capabilities Supported
 
 * Production
-* Custom<br/>
-   * Custom domains
-   * CNAME record redirects
-   * Relationship columns
+* Custom
+  * Custom domains
+  * CNAME record redirects
+  * Relationship columns
 
 ## Connect to Salesforce Objects from Power Query Desktop
 
@@ -97,22 +97,12 @@ To connect to Salesforce Objects data:
 
 * Salesforce session settings can block this integration. Ensure that the setting **Lock sessions to the IP address from which they originated** is disabled.
 
-*	Salesforce API access should be enabled. To verify access settings, go to profile settings for the current user and search for "API Enabled" checkbox.
+* Salesforce API access should be enabled. To verify access settings, go to profile settings for the current user and search for "API Enabled" checkbox.
 
-*	Salesforce trial accounts don't have API access.
+* Salesforce trial accounts don't have API access.
 
 * Custom fields of type "Picklist (Multi-Select)" are not supported by "Create record" and "Update record" operations.
 
 * Lightning URLs aren't supported.
 
-For more information about Salesforce internal API limits, see [Salesforce Developer Limits and Allocations Quick Reference](https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm#!).
-
-## Troubleshooting
-
-### Enabling Microsoft Edge (Chromium) for OAuth Authentication in Power BI Desktop
-
-Starting in December 2020 Power BI Desktop:
-* Install the new Microsoft Edge (Chromium) browser, (at least beta) from https://www.microsoftedgeinsider.com/download.
-* In your Environment Variables, set the System variable `PQ_EnableEdgeChromiumOAuth` to true . Once that is set it will use Edge Chromium for only QuickBooksOnline. For this release, only QuickBooksOnline is enabled by default.
-* To set it for Salesforce, in System Environment Variables set `PQ_ExtendEdgeChromiumOAuthAllowList` to Salesforce
-
+For more information about Salesforce internal API limits, go to [Salesforce Developer Limits and Allocations Quick Reference](https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm#!).

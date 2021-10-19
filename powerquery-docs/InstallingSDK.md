@@ -47,8 +47,8 @@ Installing the Power Query SDK for Visual Studio will create a new Data Connecto
 
 This creates a new project containing the following files:
 
-* Connector definition file (<connectorName>.pq)
-* A query test file (<connectorName>.query.pq)
+* Connector definition file (\<connectorName>.pq)
+* A query test file (\<connectorName>.query.pq)
 * A string resource file (resources.resx)
 * PNG files of various sizes used to create icons
 
