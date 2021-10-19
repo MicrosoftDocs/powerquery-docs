@@ -142,4 +142,4 @@ You'll notice performance degradation when retrieving very large files from Shar
 
 ### Errors when using the Excel connector to import CSV files
 
-Even though CSV files can be opened in Excel, they're not Excel files. Please use the [Text/CSV connector](TextCSV.md) instead.
+Even though CSV files can be opened in Excel, they're not Excel files. Use the [Text/CSV connector](TextCSV.md) instead.
