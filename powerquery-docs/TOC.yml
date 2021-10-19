@@ -328,6 +328,8 @@
         href: Connectors/MicrosoftAzureConsumptionInsights.md
       - name: "Microsoft Graph Security (Deprecated)"
         href: Connectors/MicrosoftGraphSecurity.md
+      - name: "MicroStrategy for Power BI"
+        href: Connectors/MicroStrategyForPowerBI.md
       - name: "MySQL database"
         href: Connectors/MySQLDatabase.md
       - name: "OData Feed"
