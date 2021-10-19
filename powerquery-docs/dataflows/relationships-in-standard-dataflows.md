@@ -60,5 +60,6 @@ After setting the key field, you can see the field in the mapping of the dataflo
 > ![The key field displayed under Field mapping.](media/1/FieldMappingLookup.png)
 
 ## Known limitations
-
+ 
 - Mapping to [polymorphic lookup](/powerapps/maker/canvas-apps/working-with-references#polymorphic-lookups) fields is currently not supported.
+- Mapping to a multi-level lookup field, a lookup that points to another tables' lookup field, is currently not supported.

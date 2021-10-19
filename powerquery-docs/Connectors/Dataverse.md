@@ -4,7 +4,7 @@ description: Provides basic information and connection instructions, along with 
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 9/16/2021
+ms.date: 9/29/2021
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -135,4 +135,30 @@ There are several alternative ways of extracting and migrating data from Dataver
 
 ### SQL Server connection issue due to closed ports
 
-When connecting with the Dataverse connector, you may encounter an **Unable to connect** error indicating that a network or instance-specific error occurred while establishing a connection to SQL Server. This error is likely caused by the TCP ports 1433 and 5558 being blocked during connection. To troubleshoot the blocked port error, go to [Blocked ports](/powerapps/developer/data-platform/dataverse-sql-query#blocked-ports).
+When connecting with the Dataverse connector, you might encounter an **Unable to connect** error indicating that a network or instance-specific error occurred while establishing a connection to SQL Server. This error is likely caused by the TCP ports 1433 and 5558 being blocked during connection. To troubleshoot the blocked port error, go to [Blocked ports](/powerapps/developer/data-platform/dataverse-sql-query#blocked-ports).
+
+### Using native database queries with Dataverse
+
+You can connect to Dataverse using a custom SQL statement or a [native database query](/../native-database-query). While there's no user interface for this experience, you can enter the query using the Power Query Advanced Editor. In order to use a native database query, a **Database** must be specified as the Source. 
+
+```
+Source = CommonDataService.Database([DATABASE URL])
+```
+
+Once a database source has been defined, you can specify a native query using the [Value.NativeQuery](/powerquery-m/value-nativequery) function.
+
+```
+myQuery = Value.NativeQuery(Source, [QUERY], null, [EnableFolding=true])
+```
+
+Altogether, the query will look like this.
+
+```
+let
+    Source = CommonDataService.Database("[DATABASE]"),
+    myQuery = Value.NativeQuery(Source, "[QUERY]", null, [EnableFolding=true])
+in
+    myQuery
+```
+
+Note that misspelling a column name may result in an error message about query folding instead of missing column. 

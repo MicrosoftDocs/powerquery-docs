@@ -45,12 +45,14 @@ The following Power Query connectors support native database queries.
 
 | Connector | Type of native database query
 | --- | --- |
+| Amazon Redshift | SQL statement |
 | Azure Analysis Services database | MDX or DAX query |
 | Azure Database for PostgreSQL | SQL statement |
 | Azure Cosmos DB | SQL statement |
 | Azure SQL Data Warehouse | SQL statement |
 | Azure SQL database | SQL statement |
 | DataWorld.Dataset | dwSQL |
+| Dataverse | SQL statement |
 | Essbase | MDX statement |
 | FHIR | FHIR Search |
 | IBM Db2 database | SQL statement |
