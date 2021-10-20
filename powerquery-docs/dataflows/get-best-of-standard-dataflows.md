@@ -58,9 +58,12 @@ If you want to have the data in your entity always synchronized with the data fr
 
 Having this option checked means that if there's a data row in the entity that doesn't exist in the next dataflow refresh's query output, that row will be removed from the entity.
 
+
 > [!div class="mx-imgBorder"]
 > ![Delete rows that no longer exists.](media/DeleteRowsNotExist.png)
 
-
-
-
+## Known limitations
+ 
+- Mapping to [polymorphic lookup](/powerapps/maker/canvas-apps/working-with-references#polymorphic-lookups) fields is currently not supported.
+- Mapping to a multi-level lookup field, a lookup that points to another tables' lookup field, is currently not supported.
+- Mapping to **Status** and **Status Reason** [fields](powerapps/developer/data-platform/define-custom-state-model-transitions#what-is-the-state-model) is currently not supported.
