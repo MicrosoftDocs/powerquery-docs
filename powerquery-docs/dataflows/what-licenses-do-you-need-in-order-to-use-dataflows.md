@@ -42,20 +42,20 @@ The following table contains a list of features and the license needed for them 
 | Feature                                                      | Power BI                           | Power Apps                                                   |
 | ------------------------------------------------------------ | ---------------------------------- | ------------------------------------------------------------ |
 | Store data in Dataverse tables (standard dataflow) | N/A                                | Per app plan<br />Per user plan                              |
-| Store data in Azure Data Lake Storage (analytical dataflow)               | Power BI Pro<br />Power BI Premium | N/A                                                          |
+| Store data in Azure Data Lake Storage (analytical dataflow)               | Power BI Pro<br />Power BI Premium | Yes, via analytical dataflows                              |
 | Store data in customer provided Azure Data Lake Storage (analytical dataflow; bring your own Azure Data Lake Storage) | Power BI Pro<br />Power BI Premium | Per app plan<br />Per user plan                              |
 | The enhanced compute engine (running on Power BI Premium capacity / parallel execution of transforms) | Power BI Premium                   | N/A                                                          |
 | DirectQuery connection to dataflow                           | Power BI Premium                   | N/A                                                          |
 | AI capabilities in Power BI                                  | Power BI Premium                   | N/A                                                          |
-| Linked entities                                              | Power BI Premium                   | Analytical dataflows only |
-| Computed entities (in-storage transformations using M)       | Power BI premium                   | Analytical dataflows only |
+| Linked entities                                              | Power BI Premium                   | Yes, via analytical dataflows |
+| Computed entities (in-storage transformations using M)       | Power BI premium                   | Yes, via analytical dataflows |
 | Schedule refresh                                             | Yes                                   | Yes                                                             |
 | Dataflow authoring with Power Query Online                   | Yes                                | Yes                                                          |
 | Dataflow management                                          | Power BI                     | Power Apps                                         |
 | New connectors                                               | Yes                                | Yes                                                          |
 | Standardized schema, built-in support for Common Data Model | Yes                                | Yes                                                          |
-| Dataflows data connector in Power BI Desktop                 | Yes                                | Analytical dataflows only   |
-| Dataflow incremental refresh                                 | Power BI Premium                   | Analytical dataflows only, requires Power Apps Plan2 |
+| Dataflows data connector in Power BI Desktop                 | Yes                                | Yes, via analytical dataflows   |
+| Dataflow incremental refresh                                 | Power BI Premium                   | Yes, via analytical dataflows with Per user Plan |
 | | | |
 
 ## Limitations on each license
