@@ -40,6 +40,9 @@ Once the connector is installed, configure a data source name (DSN) to specify t
 
 ![TDV DSN Configuration.](./media/tibco/tdv_dsn.png)
 
+>[!Note]
+>Power BI Connector for TIBCO(R) Data Virtualization is the driver used by the TIBCO(R) Data Virtualization connector to connect Power BI Desktop to TDV.
+
 ## Capabilities Supported
 
 - Import
