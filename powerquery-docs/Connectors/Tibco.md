@@ -29,11 +29,11 @@ LocalizationGroup: reference
 
 To access the TIBCO eDelivery site, you must have purchased TIBCO Software. There's no TIBCO license required for the TIBCO(R) Data Virtualization (TDV) software&mdash;a TIBCO customer only needs to have a valid contract in place. If you don't have access, then you'll need to contact the TIBCO admin in your organization.
 
-The Power BI Connector for TIBCO(R) Data Virtualization must first be downloaded from [https://edelivery.tibco.com](https://edelivery.tibco.com) and installed on the machine running Power BI Desktop. The eDelivery site downloads a ZIP file (for example, TIB_tdv_drivers_\<_VERSION_>_all.zip*.zip where \<_VERSION_>=TDV Version) that contains an installer program that installs all TDV client drivers, including the PowerBI Connector.
+The Power BI Connector for TIBCO(R) Data Virtualization must first be downloaded from [https://edelivery.tibco.com](https://edelivery.tibco.com) and installed on the machine running Power BI Desktop. The eDelivery site downloads a ZIP file (for example, TIB_tdv_drivers_\<_VERSION_>_all.zip*.zip where \<_VERSION_>=TDV Version) that contains an installer program that installs all TDV client drivers, including the Power BI Connector.
 
 ![TDV Setup.](./media/tibco/tdv-setup.png)
 
-Once the connector is installed, a data source name (DSN) must be configured to specify the connection properties needed to connect to the TIBCO(R) Data Virtualization server.
+Once the connector is installed, configure a data source name (DSN) to specify the connection properties needed to connect to the TIBCO(R) Data Virtualization server.
 
 >[!Note]
 > The DSN architecture (32-bit or 64-bit) needs to match the architecture of the product where you intend to use the connector.
