@@ -1,5 +1,5 @@
 ---
-title: TIBCO(R) Data Virtualization connector
+title: TIBCO(R) Data Virtualization connector (Beta)
 description: Provides basic information, prerequisites, and instructions on how to connect to your TIBCO(R) Data Virtualization Server.
 author: sahuero
 ms.service: powerquery
@@ -10,16 +10,16 @@ LocalizationGroup: reference
 
 ---
 
-# TIBCO(R) Data Virtualization
+# TIBCO(R) Data Virtualization (Beta)
 
 >[!Note]
->The following connector article is provided by Tibco, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Tibco website and use the support channels there.
+>The following connector article is provided by TIBCO, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the TIBCO website and use the support channels there.
 
 ## Summary
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | Preview |
+| Release State | Beta |
 | Products | Power BI (Datasets) |
 | Authentication Types Supported | Database (Username/Password)<br/>Windows Authentication (NTLM/Kerberos) |
 | Function Reference Documentation | &mdash; |
@@ -27,7 +27,7 @@ LocalizationGroup: reference
 
 ## Prerequisites
 
-To access the TIBCO eDelivery site, you must have purchased TIBCO Software. There's no TIBCO license required for the TIBCO(R) Data Virtualization (TDV) software&mdash;a TIBCO customer only needs to have a valid contract in place. If you don't have access, then you'll need to contact the TIBCO admin in your organization.
+To access the TIBCO eDelivery site, you must have purchased TIBCO software. There's no TIBCO license required for the TIBCO(R) Data Virtualization (TDV) software&mdash;a TIBCO customer only needs to have a valid contract in place. If you don't have access, then you'll need to contact the TIBCO admin in your organization.
 
 The Power BI Connector for TIBCO(R) Data Virtualization must first be downloaded from [https://edelivery.tibco.com](https://edelivery.tibco.com) and installed on the machine running Power BI Desktop. The eDelivery site downloads a ZIP file (for example, TIB_tdv_drivers_\<_VERSION_>_all.zip*.zip where \<_VERSION_>=TDV Version) that contains an installer program that installs all TDV client drivers, including the Power BI Connector.
 
@@ -106,4 +106,4 @@ To use this feature:
 
    ![Add data source dialog showing the Kerberos advanced settings in TDV.](./media/tibco/kerberos-sso.png)
 
-More information, [Configure Kerberos-based SSO from Power BI service to on-premises data sources](/power-bi/connect-data/service-gateway-sso-kerberos)
+More information: [Configure Kerberos-based SSO from Power BI service to on-premises data sources](/power-bi/connect-data/service-gateway-sso-kerberos)
