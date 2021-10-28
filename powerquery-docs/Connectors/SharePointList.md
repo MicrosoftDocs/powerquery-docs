@@ -4,7 +4,7 @@ description: Provides basic information about how to connect to your data, along
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 8/11/2021
+ms.date: 10/27/2021
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -85,7 +85,7 @@ To connect to a SharePoint list:
 
 ### Use root SharePoint address
 
-Make sure you supply the root address of the SharePoint site, without any subfolders or documents. For example, use link similar to the following: https://contoso.sharepoint.com/teams/ObjectModel/
+Make sure you supply the root address of the SharePoint site, without any subfolders or documents. For example, use link similar to the following: `https://contoso.sharepoint.com/teams/ObjectModel/`
 
 ### Inconsistent behavior around boolean data
 

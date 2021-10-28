@@ -4,7 +4,7 @@ description: Provides basic information and connection instructions, along with 
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 9/29/2021
+ms.date: 10/27/2021
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -139,7 +139,7 @@ When connecting with the Dataverse connector, you might encounter an **Unable to
 
 ### Using native database queries with Dataverse
 
-You can connect to Dataverse using a custom SQL statement or a [native database query](/../native-database-query). While there's no user interface for this experience, you can enter the query using the Power Query Advanced Editor. In order to use a native database query, a **Database** must be specified as the Source. 
+You can connect to Dataverse using a custom SQL statement or a [native database query](../native-database-query.md). While there's no user interface for this experience, you can enter the query using the Power Query Advanced Editor. In order to use a native database query, a **Database** must be specified as the Source. 
 
 ```
 Source = CommonDataService.Database([DATABASE URL])
