@@ -46,6 +46,10 @@ You can isolate instances of multiple queries by turning off specific parts of t
 * With background analysis disabled
 * \[Optional] Doing a Table.Buffer
 
+In this example, you’ll have only a single M evaluation that happens when you refresh the Power Query Editor preview. If the duplicate requests occur at this point, then they’re somehow inherent in the way the query is authored. If not, and if you enable the settings above one-by-one, you can then observe at what point the duplicate requests start occurring.
+
+The following sections describe these steps in more detail.
+
 ### Set up Power Query Editor
 
 The first step to isolating multiple queries is setting up your data in the Power Query Editor. You can then refresh the data in the editor. Basically, you take the same steps to set up your data in the Power Query Editor that you always do: connect to your data source, select the data you want in the Power Query Navigator, and then select **Transform data**.
@@ -79,5 +83,3 @@ More information: [Table.Buffer](/powerquery-m/table-buffer)
 To run the test, do a refresh in the Power Query Editor.
 
 ![Image with the location of the refresh button emphasized](./media/multiple-queries/refresh-preview.png)
-
-In this example, you’ll have only a single M evaluation that happens when you refresh the Power Query Editor preview. If the duplicate requests occur at this point, then they’re somehow inherent in the way the query is authored. If not, and if you enable the settings above one-by-one, you can then observe at what point the duplicate requests start occurring.
