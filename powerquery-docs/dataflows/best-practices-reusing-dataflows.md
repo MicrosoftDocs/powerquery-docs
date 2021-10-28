@@ -42,7 +42,7 @@ To give access to dataflows in other workspaces to use the output of a dataflow 
 
 There can be many dataflows created in a tenant organization, and it can be hard for the users to know which dataflow is most reliable. Authors of a dataflow, or those who have edit access to it, can endorse the dataflow at three levels: no endorsement, promoted, or certified. 
 
-These levels of endorsement help users find reliable dataflows easier and faster. The dataflow with a higher endorsement level appears first. The Power BI administrator can delegate the ability to endorse dataflows to the certified level to other people. More information: [Promote or certify dataflows (Preview)](/power-bi/transform-model/service-dataflows-promote-certify)
+These levels of endorsement help users find reliable dataflows easier and faster. The dataflow with a higher endorsement level appears first. The Power BI administrator can delegate the ability to endorse dataflows to the certified level to other people. More information: [Endorsement - Promoting and certifying Power BI content](/power-bi/collaborate-share/service-endorsement-overview)
 
 ![Endorsement on dataflows.](/power-bi/transform-model/media/service-dataflows-promote-certify/powerbi-dataflow-endorsement-power-query.png)
 

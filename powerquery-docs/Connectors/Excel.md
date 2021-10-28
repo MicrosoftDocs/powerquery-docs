@@ -4,14 +4,14 @@ description: Provides basic information and prerequisites for the connector, alo
 author: cpopell
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 04/28/2021
+ms.date: 10/27/2021
 ms.author: gepopell
 
 LocalizationGroup: reference
 ---
 
 # Excel
- 
+
 ## Summary
 
 | Item | Description |
@@ -24,15 +24,17 @@ LocalizationGroup: reference
 
 >[!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
- 
+
 ## Prerequisites
+
 To connect to a legacy workbook (such as .xls or .xlsb), the Access Database Engine OLEDB (or ACE) provider is required. To install this provider, go to the [download page](/power-bi/connect-data/desktop-access-database-errors) and install the relevant (32 bit or 64 bit) version. If you don't have it installed, you'll see the following error when connecting to legacy workbooks:
 
 ```The 'Microsoft.ACE.OLEDB.12.0' provider is not registered on the local machine. The 32-bit (or 64-bit) version of the Access Database Engine OLEDB provider may be required to read this type of file. To download the client software, visit the following site: https://go.microsoft.com/fwlink/?LinkID=285987.```
 
 ACE can't be installed in cloud service environments. So if you're seeing this error in a cloud host (such as Power Query Online), you'll need to use a gateway that has ACE installed to connect to the legacy Excel files.
- 
+
 ## Capabilities Supported
+
 * Import
 
 ## Connect to an Excel workbook from Power Query Desktop
@@ -60,20 +62,21 @@ To make the connection from Power Query Online:
 
    ![Connection information to access the Excel workbook.](./media/excel/connect-online.png)
 
-3. If necessary, select an on-premises data gateway to access the Excel workbook. 
+3. If necessary, select an on-premises data gateway to access the Excel workbook.
 
 4. If this is the first time you've accessed this Excel workbook, select the authentication kind and sign in to your account (if needed).
 
-3. In **Navigator**, select the workbook information you want, and then  **Transform Data** to continue transforming the data in Power Query Editor.
+5. In **Navigator**, select the workbook information you want, and then  **Transform Data** to continue transforming the data in Power Query Editor.
 
    ![Excel workbook imported into Power Query online Navigator.](./media/excel/online-navigator-view.png)
 
 ## Troubleshooting
 
 ### Numeric precision (or "Why did my numbers change?")
+
 When importing Excel data, you may notice that certain number values seem to change slightly when imported into Power Query. For example, if you select a cell containing 0.049 in Excel, this number is displayed in the formula bar as 0.049. But if you import the same cell into Power Query and select it, the preview details display it as 0.049000000000000002 (even though in the preview table it's formatted as 0.049). What's going on here?
 
-The answer is a bit complicated, and has to do with how Excel stores numbers using something called *binary floating-point notation*. The bottom line is that there are certain numbers that Excel can't represent with 100% precision. If you crack open the .xlsx file and look at the actual value being stored, you'll see that in the .xlsx file, 0.049 *is* actually stored as 0.049000000000000002. This is the value Power Query reads from the .xlsx, and thus the value that appears when you select the cell in Power Query. (For more information on numeric precision in Power Query, go to the "Decimal number" and "Fixed decimal number" sections of [Data types in Power Query](/powerquery-docs/data-types.md).)
+The answer is a bit complicated, and has to do with how Excel stores numbers using something called *binary floating-point notation*. The bottom line is that there are certain numbers that Excel can't represent with 100% precision. If you crack open the .xlsx file and look at the actual value being stored, you'll see that in the .xlsx file, 0.049 *is* actually stored as 0.049000000000000002. This is the value Power Query reads from the .xlsx, and thus the value that appears when you select the cell in Power Query. (For more information on numeric precision in Power Query, go to the "Decimal number" and "Fixed decimal number" sections of [Data types in Power Query](../data-types.md).)
 
 ### Connecting to an online Excel workbook
 
@@ -96,21 +99,23 @@ Because of ACE, values from a legacy Excel workbook might be imported with less 
 When ACE loads a sheet, it looks at the first eight rows to determine the data types of the columns. If the first eight rows aren't representative of the later rows, ACE may apply an incorrect type to that column and return nulls for any value that doesn't match the type. For example, if a column contains numbers in the first eight rows (such as 1000, 1001, and so on) but has non-numerical data in later rows (such as "100Y" and "100Z"), ACE concludes that the column contains numbers, and any non-numeric values are returned as null.
 
 #### Inconsistent value formatting
+
 In some cases, ACE returns completely different results across refreshes. Using the example described in the [formatting section](#unexpected-value-formatting), you might suddenly see the value 1024.231 instead of "1,024.23". This difference can be caused by having the legacy workbook open in Excel while importing it into Power Query. To resolve this problem, close the workbook.
 
 ### Missing or incomplete Excel data
+
 Sometimes Power Query fails to extract all the data from an Excel Worksheet. This failure is often caused by the Worksheet having **incorrect dimensions** (for example, having dimensions of `A1:C200` when the actual data occupies more than three columns or 200 rows).
 
 #### How to diagnose incorrect dimensions
 
 To view the dimensions of a Worksheet:
 
-1.    Rename the xlsx file with a .zip extension.
-1.    Open the file in File Explorer.
-1.    Navigate into xl\worksheets.
-1.    Copy the xml file for the problematic sheet (for example, Sheet1.xml) out of the zip file to another location.
-1.    Inspect the first few lines of the file. If the file is small enough, open it in a text editor. If the file is too large to be opened in a text editor, run the following command from a Command Prompt: **more Sheet1.xml**.
-1.    Look for a `<dimension .../>` tag (for example, `<dimension ref="A1:C200" />`).
+1. Rename the xlsx file with a .zip extension.
+2. Open the file in File Explorer.
+3. Navigate into xl\worksheets.
+4. Copy the xml file for the problematic sheet (for example, Sheet1.xml) out of the zip file to another location.
+5. Inspect the first few lines of the file. If the file is small enough, open it in a text editor. If the file is too large to be opened in a text editor, run the following command from a Command Prompt: **more Sheet1.xml**.
+6. Look for a `<dimension .../>` tag (for example, `<dimension ref="A1:C200" />`).
 
 If your file has a dimension attribute that points to a single cell (such as `<dimension ref="A1" />`), Power Query uses this attribute to find the starting row and column of the data on the sheet.
 
@@ -120,9 +125,9 @@ However, if your file has a dimension attribute that points to multiple cells (s
 
 You can fix issues caused by incorrect dimensions by doing one of the following actions:
 
-*   Open and resave the document in Excel. This action will overwrite the incorrect dimensions stored in the file with the correct value.
-*   Ensure the tool that generated the Excel file is fixed to output the dimensions correctly.
-*   Update your M query to ignore the incorrect dimensions. As of the December 2020 release of Power Query, `Excel.Workbook` now supports an `InferSheetDimensions` option. When true, this option will cause the function to ignore the dimensions stored in the Workbook and instead determine them by inspecting the data.
+* Open and resave the document in Excel. This action will overwrite the incorrect dimensions stored in the file with the correct value.
+* Ensure the tool that generated the Excel file is fixed to output the dimensions correctly.
+* Update your M query to ignore the incorrect dimensions. As of the December 2020 release of Power Query, `Excel.Workbook` now supports an `InferSheetDimensions` option. When true, this option will cause the function to ignore the dimensions stored in the Workbook and instead determine them by inspecting the data.
 
     Here's an example of how to provide this option:
 

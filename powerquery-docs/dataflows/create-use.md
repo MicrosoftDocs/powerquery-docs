@@ -5,7 +5,7 @@ author: bensack
 ms.reviewer: kvivek
 ms.service: dataflows
 ms.topic: conceptual
-ms.date: 12/2/2019
+ms.date: 10/27/2021
 ms.author: bensack
 ms.custom: 
 
@@ -77,7 +77,7 @@ More information about dataflows in Power BI:
 * [Create and use dataflows in Power BI](/power-bi/service-dataflows-create-use)
 * [Dataflows whitepaper](https://go.microsoft.com/fwlink/?linkid=2011419&clcid=0x409)
 * Detailed [video](https://aka.ms/DataflowIntroVideo) of a dataflows walkthrough
-* Visit the Power BI [dataflows community](https://community.powerbi.com/t5/Service/bd-p/power-bi-web-app) and share what you're doing, ask questions, or [submit new ideas](https://ideas.powerbi.com/forums/265200-power-bi-ideas?category_id=341638)
+* Visit the Power BI [dataflows community](https://community.powerbi.com/t5/Service/bd-p/power-bi-web-app) and share what you're doing, ask questions, or [submit new ideas](https://ideas.powerbi.com/ideas)
 
 ## Next steps
 
