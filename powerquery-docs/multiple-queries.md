@@ -58,7 +58,9 @@ Be sure to undo this step before resuming normal testing.
 
 ### Disable background analysis
 
-The next step is to disable background analysis. Background analysis is controlled by the **Allow data preview to download in the background** setting described in [Disable Power Query background refresh](/power-bi/guidance/power-query-background-refresh).
+The next step is to disable background analysis. Background analysis is controlled by the **Allow data preview to download in the background** setting described in [Disable Power Query background refresh](/power-bi/guidance/power-query-background-refresh) for Power BI. You can also disable this option in Excel.
+
+![Image showing Query options in excel with background analysis disabled](./media/multiple-queries/data-previews.png)
 
 ### Use a table buffer
 
