@@ -150,12 +150,12 @@ When you attempt to use an on-premises data source to publish a dataflow, you mi
 
 ```
 AzureDataLakeStorage failed to get the response:
-'The underlying connection was closed: An unexpected error occurred on a send.'.
+'The underlying connection was closed: An unexpected error occurred on a send.'
 ```
 
 This error usually occurs because you're attempting to connect to Azure Data Lake Storage through a firewall or proxy, but you haven't properly configured the proxy settings for the on-premises data gateway. To learn more about how to configure these proxy settings, go to [Configure proxy settings for the on-premises data gateway](/data-integration/gateway/service-gateway-proxy).
 
-For more information about troubleshooting issues with gateways, or configuring the gateway service for your network, go to [On-premises data gateway documentation](/data-integration/gateway).
+For more information about troubleshooting issues with gateways, or configuring the gateway service for your network, go to the [On-premises data gateway documentation](/data-integration/gateway).
 
 
 
