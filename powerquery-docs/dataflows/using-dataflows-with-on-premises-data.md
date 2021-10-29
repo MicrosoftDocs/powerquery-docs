@@ -1,7 +1,7 @@
 ---
 title: "Using an on-premises data gateway in Power Platform dataflows | MicrosoftDocs"
 description: "Learn how to use an on-premises data gateway in Power Platform dataflows"
-ms.date: 10/27/2021
+ms.date: 10/29/2021
 ms.reviewer: dougklo
 ms.service: powerquery
 ms.topic: article
@@ -153,7 +153,7 @@ AzureDataLakeStorage failed to get the response:
 'The underlying connection was closed: An unexpected error occurred on a send.'.
 ```
 
-This error usually occurs because you are attempting to connect to Azure Data Lake Storage through a firewall or proxy, but you have not properly configured the proxy settings for the on-premises data gateway. To learn more about how to configure these proxy settings, go to [Configure proxy settings for the on-premises data gateway](/data-integration/gateway/service-gateway-proxy).
+This error usually occurs because you're attempting to connect to Azure Data Lake Storage through a firewall or proxy, but you haven't properly configured the proxy settings for the on-premises data gateway. To learn more about how to configure these proxy settings, go to [Configure proxy settings for the on-premises data gateway](/data-integration/gateway/service-gateway-proxy).
 
 For more information about troubleshooting issues with gateways, or configuring the gateway service for your network, go to [On-premises data gateway documentation](/data-integration/gateway).
 
