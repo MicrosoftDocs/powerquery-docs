@@ -1,6 +1,6 @@
 ---
 title: Power Query Synapse Workspaces connector
-description: Provides basic information and connection instructions, along with a list of quota limits for Power BI and instructions on validating unexpected data.
+description: Provides basic information and connection instructions for Synapse Workspaces connector.
 author: miquelladeboer
 ms.service: powerquery
 ms.topic: conceptual
@@ -58,9 +58,9 @@ You can **Load** the selected table, which brings the entire table into Power BI
 
 ### I do not see my Synapse workspace in the conenctor.
 
-The Synapse Connector is using the [Azure RBAC](https://docs.microsoft.com/azure/role-based-access-control/overview) to find the Synapse Worspaces you have access to. 
+The Synapse Connector is using the [Azure RBAC](/azure/role-based-access-control/overview) to find the Synapse Worspaces you have access to. 
 
-If your access is only defined in the [Synapse RBAC](https://docs.microsoft.com/azure/synapse-analytics/security/synapse-workspace-synapse-rbac), you might not see the workspace.
+If your access is only defined in the [Synapse RBAC](/azure/synapse-analytics/security/synapse-workspace-synapse-rbac), you might not see the workspace.
 
 Make sure your access is defined by Azure RBAC to ensure all Synapse workspaces will show.
 
