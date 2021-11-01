@@ -54,20 +54,13 @@ Once the connection is established, you’ll see a list of the workspaces you ha
 You can **Load** the selected table, which brings the entire table into Power BI Desktop, or you can select **Transform Data** to edit the query, which opens Power Query Editor. You can then filter and refine the set of data you want to use, and then load that refined set of data into Power BI Desktop.
 
 
-## Limitations and issues
-
-You should be aware of the following limitations and issues associated with accessing Synapse Workspaces data.
-
-### Synapse Workspaces limits for Power BI
-
-
 ## Troubleshooting
 
 ### I do not see my Synapse workspace in the conenctor.
 
-The Synapse Connector is using the [Azure RBAC](https://docs.microsoft.com/en-us/azure/role-based-access-control/overview) to find the Synapse Worspaces you have access to. 
+The Synapse Connector is using the [Azure RBAC](https://docs.microsoft.com/azure/role-based-access-control/overview) to find the Synapse Worspaces you have access to. 
 
-If your access is only defined in the [Synapse RBAC](https://docs.microsoft.com/en-us/azure/synapse-analytics/security/synapse-workspace-synapse-rbac), you might not see the workspace.
+If your access is only defined in the [Synapse RBAC](https://docs.microsoft.com/azure/synapse-analytics/security/synapse-workspace-synapse-rbac), you might not see the workspace.
 
 Make sure your access is defined by Azure RBAC to ensure all Synapse workspaces will show.
 
