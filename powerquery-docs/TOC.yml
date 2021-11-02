@@ -410,10 +410,6 @@
         href: Connectors/tibco.md
       - name: "Usercube"
         href: Connectors/Usercube.md
-      - name: "Workforce Dimensions (Beta) (Deprecated)"
-        href: Connectors/WorkforceDimensions.md
-      - name: "XML"
-        href: Connectors/XML.md
       - name: "Web"
         items:
         - name: "Web connector"
@@ -422,6 +418,10 @@
           href: Connectors/web/web-by-example.md
         - name: "Troubleshooting"
           href: Connectors/web/web-troubleshoot.md
+      - name: "Workforce Dimensions (Beta) (Deprecated)"
+        href: Connectors/WorkforceDimensions.md
+      - name: "XML"
+        href: Connectors/XML.md
       - name: "Zendesk (Beta)"
         href: Connectors/Zendesk.md
     - name: Support and troubleshooting
