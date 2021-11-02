@@ -141,7 +141,24 @@ For more information on setting up or using Google service accounts, go to [Crea
 ### Authenticating through a Google service account
 
 When authenticating through a Google service account in Power BI Desktop, there's a specific credential format that's required by the connector.
+
 * Service Account Email: must be in email format
 * Service Account JSON key file contents: once this JSON key is downloaded, all new lines must be removed from the file so that the contents are in one line. Once the JSON file is in that format, the contents can be pasted into this field.
 
 When authenticating through a Google service account in Power BI service, users need to use "Basic" authentication. The **Username** field maps to the **Service Account Email** field above, and the **Password** field maps to the **Service Account JSON key file contents** field above. The format requirements for each credential remain the same in both Power BI Desktop and Power BI service.
+
+### Unable to authenticate with Google BigQuery Storage API
+
+The Google BigQuery connector uses [Google BigQuery Storage API](https://cloud.google.com/bigquery/docs/reference/storage) by default. This feature is controlled by the advanced option called [UseStorageApi](#connect-using-advanced-options). You might encounter issues with this feature if you use granular permissions. In this scenario, you might see the following error message or fail to get any data from your query:
+
+`ERROR [HY000] [Microsoft][BigQuery] (131) Unable to authenticate with Google BigQuery Storage API. Check your account permissions`
+
+You can resolve this issue by adjusting the user permissions for the BigQuery Storage API correctly. These storage API permissions are required to access data correctly with BigQueryStorage API:
+
+* `bigquery.readsessions.create`: Creates a new read session via the BigQuery Storage API.
+* `bigquery.readsessions.getData`: Reads data from a read session via the BigQuery Storage API.
+* `bigquery.readsessions.update`: Updates a read session via the BigQuery Storage API.
+
+These permissions typically are provided in the `BigQuery.User` role. More information, [Google BigQuery Predefined roles and permissions](https://cloud.google.com/bigquery/docs/access-control)
+
+If the above steps don't resolve the problem, you can disable the BigQuery Storage API.
