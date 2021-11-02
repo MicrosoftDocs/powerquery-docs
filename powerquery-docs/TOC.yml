@@ -410,7 +410,7 @@
         href: Connectors/tibco.md
       - name: "Usercube"
         href: Connectors/Usercube.md
-      - name: "Workforce Dimensions"
+      - name: "Workforce Dimensions (Beta) (Deprecated)"
         href: Connectors/WorkforceDimensions.md
       - name: "XML"
         href: Connectors/XML.md
