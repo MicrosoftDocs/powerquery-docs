@@ -286,6 +286,8 @@
         href: Connectors/AzureSQLDatabase.md
       - name: "Azure Synapse Analytics (SQL DW)"
         href: Connectors/AzureSQLDataWarehouse.md
+      - name: "Azure Synapse Analytics workspace (Beta)"
+        href: Connectors/synapse.md
       - name: "Bloomberg Data and Analytics"
         href: Connectors/BloombergDataAndAnalytics.md
       - name: "BQE Core (Beta)"

@@ -1,6 +1,6 @@
 ---
-title: Power Query Synapse Workspaces connector
-description: Provides basic information and connection instructions for Synapse Workspaces connector.
+title: Power Query Azure Synapse Analytics workspace connector
+description: Provides basic information and connection instructions for the Azure Synapse Analytics Workspace connector.
 author: miquelladeboer
 ms.service: powerquery
 ms.topic: conceptual
@@ -9,8 +9,8 @@ ms.author: mideboer
 LocalizationGroup: reference
 ---
 
-# Synapse Workspaces (Beta)
- 
+# Azure Synapse Analytics workspace (Beta)
+
 ## Summary
 
 | Item | Description |
@@ -21,25 +21,24 @@ LocalizationGroup: reference
 | | |
 
 >[!Note]
-> This Synapse Workspaces connector does not replace the Synapse Alalytics (DW) connector. This connector makes exploring data in Synapse workspaces more accecable. Some capabilities not be present in this connector, including Native Query and Direct Query support.
+> This Azure Synapse Analytics workspace connector doesn't replace the Azure Synapse Analytics (SQL DW) connector. This connector makes exploring data in Synapse workspaces more accessible. Some capabilities aren't present in this connector, including native query and DirectQuery support.
 
 >[!Note]
-> This Synapse Workspaces connector supports access to all data in your Synapse Workspace, including Synapse Serverless, Synapse on-demand and Spark tabels.
-
+> This connector supports access to all data in your Synapse workspace, including Synapse Serverless, Synapse on-demand, and Spark tables.
 
 ## Prerequisites
 
-Before you can sign in to Synapse workspaces, you must have sccess to Azure Synapse Analytics Workspace [Access Control Instructions].
+Before you can sign in to Synapse workspaces, you must have access to Azure Synapse Analytics Workspace [Access Control Instructions].
 
 ## Capabilities Supported
 
 * Import
 
-## Connect to Synapse Workspaces data from Power Query Desktop
+## Connect to Synapse workspace data from Power Query Desktop
 
-To connect to Synapse Workspaces data:
+To connect to Synapse workspace data:
 
-1. Select **Get Data** from the **Home** ribbon in Power BI Desktop. Select **Synapse Workspaces**. Then select **Connect**.
+1. Select **Get Data** from the **Home** ribbon in Power BI Desktop. Select **Azure Synapse Analytics workspace (Beta)**. Then select **Connect**.
 
    ![Get Data from Synapse Workspaces.](./media/azure-sql-database/get-data-synapse.png)
 
@@ -49,21 +48,16 @@ To connect to Synapse Workspaces data:
 
 4. Once you've successfully signed in, select **Connect**.
 
-Once the connection is established, you’ll see a list of the workspaces you have access to. Drill through the workspaces, databases and tables.
+Once the connection is established, you’ll see a list of the workspaces you have access to. Drill through the workspaces, databases, and tables.
 
 You can **Load** the selected table, which brings the entire table into Power BI Desktop, or you can select **Transform Data** to edit the query, which opens Power Query Editor. You can then filter and refine the set of data you want to use, and then load that refined set of data into Power BI Desktop.
 
-
 ## Troubleshooting
 
-### I do not see my Synapse workspace in the conenctor.
+### I don't see my Synapse workspace in the connector
 
-The Synapse Connector is using the [Azure RBAC](/azure/role-based-access-control/overview) to find the Synapse Worspaces you have access to. 
+The Synapse connector is using [Azure role-based access control (RBAC)](/azure/role-based-access-control/overview) to find the Synapse workspaces you have access to.
 
-If your access is only defined in the [Synapse RBAC](/azure/synapse-analytics/security/synapse-workspace-synapse-rbac), you might not see the workspace.
+If your access is only defined in [Synapse RBAC](/azure/synapse-analytics/security/synapse-workspace-synapse-rbac), you might not see the workspace.
 
-Make sure your access is defined by Azure RBAC to ensure all Synapse workspaces will show.
-
-
-
-
+Make sure your access is defined by Azure RBAC to ensure all Synapse workspaces are displayed.
