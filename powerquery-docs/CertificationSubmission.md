@@ -60,10 +60,8 @@ Updates to your connector submission can be made at any time, except when your c
 
 2. From the list of connectors you manage, select the connector submission to view its connector versions.
 
-3. Select the most recent connector version.
+3. For an update to a certified connector, select the link to submit a new version in the panel on the right, on top of the existing connector versions. For an update to an existing connector version undergoing certification, select the most recent connector version and on the bottom left, select the **Submit an update** button. 
 
-4. At the bottom left, select the "Submit an update" button. 
+4. You can upload a new version of artifacts and complete the submission form again.
 
-5. You can upload a new version of artifacts and complete the submission form again.
-
-6. After submitting the connector form, in the Activity Control chat feature on the right, submit a short changelog explaining the connector update. This information should be public and written in a customer-facing way, as it will be included in the next Power BI Desktop blog update.
+5. After submitting the connector form, in the **Activity Control** chat feature on the right, submit a short changelog explaining the connector update. This information should be public and written in a customer-facing way, as it will be included in the next Power BI Desktop blog update.
