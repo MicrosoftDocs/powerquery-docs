@@ -115,15 +115,8 @@ You should be aware of the following limitations and issues associated with acce
 
 The standard limitations and quotas for Google Analytics AP requests is documented in [Limits and Quotas on API Requests](https://developers.google.com/analytics/devguides/config/mgmt/v3/limits-quotas). However, Power BI Desktop and Power BI service allow you to use the following enhanced number of queries.
 
-Power BI Desktop:
-
-* Queries per day&mdash;250,000
-* Queries per 100 seconds&mdash;2,000
-
-Power BI service:
-
-* Queries per day&mdash;1,500,000
-* Queries per 100 seconds&mdash;4,000
+* Queries per day: 1,500,000
+* Queries per 100 seconds: 4,000
 
 ## Troubleshooting
 
