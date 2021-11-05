@@ -15,7 +15,7 @@ When refreshing in the Power Query editor, there's a lot done behind the scenes 
 
 ## When multiple requests occur
 
-The following sections describe a few instances when Power Query can send multiple times requests to a data source.
+The following sections describe a few instances when Power Query can send multiple requests to a data source.
 
 ### Connector design
 
@@ -35,7 +35,7 @@ Sometimes Power Query’s folding layer may generate multiple requests to a data
 
 ### Background data downloads (also known as “background analysis”)
 
-Similar to the evaluations performed for data privacy, the Power Query Editor by default will download a preview of the first 1000 rows of each query step. Downloading these rows helps ensure the data preview is ready to display as soon as a step is selected, but it can also cause duplicate data source requests. More information: [Disable background analysis](#disable-background-analysis)
+Similar to the evaluations performed for data privacy, the Power Query editor by default will download a preview of the first 1000 rows of each query step. Downloading these rows helps ensure the data preview is ready to display as soon as a step is selected, but it can also cause duplicate data source requests. More information: [Disable background analysis](#disable-background-analysis)
 
 ### Loading to the Power BI Desktop model
 
@@ -53,18 +53,18 @@ Various Power Query editor background tasks can also trigger extra data source r
 
 You can isolate instances of multiple queries by turning off specific parts of the query process to isolate where the duplicate requests are coming from. For example, if you start:
 
-* In the Power Query Editor
+* In the Power Query editor
 * With the firewall disabled
 * With background analysis disabled
-* \[Optional] Doing a Table.Buffer
+* \[Optional] Doing a `Table.Buffer`
 
-In this example, you’ll have only a single M evaluation that happens when you refresh the Power Query Editor preview. If the duplicate requests occur at this point, then they’re somehow inherent in the way the query is authored. If not, and if you enable the settings above one-by-one, you can then observe at what point the duplicate requests start occurring.
+In this example, you’ll have only a single M evaluation that happens when you refresh the Power Query editor preview. If the duplicate requests occur at this point, then they’re somehow inherent in the way the query is authored. If not, and if you enable the settings above one-by-one, you can then observe at what point the duplicate requests start occurring.
 
 The following sections describe these steps in more detail.
 
-### Set up Power Query Editor
+### Set up Power Query editor
 
-You don't need to reconnect or recreate your query, just open the query you want to test in the Power Query Editor. You can [duplicate the query](queries-pane.md#duplicating-a-query) in the editor if you don't want to mess with the existing query.
+You don't need to reconnect or recreate your query, just open the query you want to test in the Power Query editor. You can [duplicate the query](queries-pane.md#duplicating-a-query) in the editor if you don't want to mess with the existing query.
 
 ### Disable the data privacy firewall
 
@@ -76,13 +76,13 @@ Be sure to undo this step before resuming normal testing.
 
 The next step is to disable background analysis. Background analysis is controlled by the **Allow data preview to download in the background** setting described in [Disable Power Query background refresh](/power-bi/guidance/power-query-background-refresh) for Power BI. You can also disable this option in Excel.
 
-![Image showing Query options in excel with background analysis disabled](./media/multiple-queries/data-previews.png)
+![Image showing Query options in Excel with background analysis disabled](./media/multiple-queries/data-previews.png)
 
 ### Buffer your table
 
-Optionally, you can also use `Table.Buffer` to force all the data to be read, which imitates what happens during a load. To use `Table.Buffer` in the Power Query Editor:
+Optionally, you can also use `Table.Buffer` to force all the data to be read, which imitates what happens during a load. To use `Table.Buffer` in the Power Query editor:
 
-1. In the Power Query Editor formula bar, select the **fx** button to add a new step.
+1. In the Power Query editor formula bar, select the **fx** button to add a new step.
 
    ![Image with the location of the fx button emphasized](./media/multiple-queries/fx-button.png)
 
@@ -92,6 +92,6 @@ More information: [Table.Buffer](/powerquery-m/table-buffer)
 
 ### Run the test
 
-To run the test, do a refresh in the Power Query Editor.
+To run the test, do a refresh in the Power Query editor.
 
 ![Image with the location of the refresh button emphasized](./media/multiple-queries/refresh-preview.png)
