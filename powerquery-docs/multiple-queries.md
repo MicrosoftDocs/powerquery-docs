@@ -4,36 +4,52 @@ description: This article provides information about the various reasons that a 
 author: dougklopfenstein
 ms.service: powerquery
 ms.reviewer: kvivek
-ms.date: 10/28/2021
+ms.date: 11/5/2021
 ms.author: dougklo
 ms.custom: intro-internal
 ---
 
 # Why does my query run multiple times?
 
-When refreshing in the Power Query editor, there's a lot done behind the scenes to attempt to give you a fluent user experience. However, in some cases you might notice that multiple API requests are being triggered from Power BI Desktop and Power BI service when data is refreshed. In normal operation, connectors can make multiple calls to the backend for various reasons, including metadata, caching of results, pagination, and so on. This behavior is normal and is designed to work that way.
+When refreshing in the Power Query editor, there's a lot done behind the scenes to attempt to give you a smooth user experience, and to execute your queries efficiently and securely. However, in some cases you might notice that multiple data source requests are being triggered by Power Query when data is refreshed. Sometimes these requests are normal, but other times they can be prevented.
 
-This article describes a few instances when queries normally run multiple times. It also includes information on how you can isolate the actual query that's running multiple times.
+## When multiple queries occur
 
-## Multiple queries from a single table
+The following sections describe a few instances when queries normally run multiple times.
 
-You might come across a time when multiple queries occur when refreshing a single table only. There's no single answer for why the exact same query might be run more than once, and the conditions that cause it vary between Power BI Desktop and Power BI service refresh.
+### Connector design
 
-In a cloud environment, if the query doesn't have a "top 1000" and the multiple requests happen in cloud refresh, the most likely explanation is that the same data source is being used to populate multiple tables in the data model. This is because each table in the data model is a separate evaluation of the underlying M query. In non-desktop environments, those evaluations each start out with an empty data cache, and so don't benefit from the same query having been run for a different table. You might be able to avoid multiple queries by using Table.Buffer. More information: [Use a table buffer](#use-a-table-buffer)
+Connectors can make multiple calls to the backend for various reasons, including metadata, caching of results, pagination, and so on. This behavior is normal and is designed to work that way.
 
-In a desktop environment, a single refresh of all the tables in the data model is run using a single shared cache. Even here, though, you can get multiple requests either because the cache is too small (which is relatively unlikely) or because the queries are running at roughly the same time and the cache is "write-behind".
+### Multiple queries referencing a single data source
 
-In general, disabling data privacy&mdash;assuming that's acceptable&mdash;would eliminate the "TOP 1000" queries in refresh. More information: [Disable the data privacy firewall](#disable-the-data-privacy-firewall)
+Multiple requests to the same data source can occur if multiple queries pull from that data source. This can happen even in a case where only one query references the data source. If that query is referenced by one or more other queries, then each query&mdash;along with all the queries it depends on&mdash;is evaluated independently.
 
-## Multiple queries for Analysis Services refresh
+In a desktop environment, a single refresh of all the tables in the data model is run using a single shared cache, which can reduce the likelihood of multiple requests to the same data source (since one query can benefit from the same request having already been run and cached for a different query). Even here, though, you can get multiple requests either because the data source isn't cached (for example, local CSV files), the request to the data source is different than a request that was already cached because of downstream operations (which can alter folding), the cache is too small (which is relatively unlikely), or because the queries are running at roughly the same time.
+
+In a cloud environment, each query is refreshed using its own separate data cache, so a query can’t benefit from the same request having already been run for a different query.
+
+### Folding
+
+Sometimes Power Query’s folding layer may generate multiple requests to a data source, based on the operations being performed downstream. In such cases, you might avoid multiple requests by using `Table.Buffer`. More information: [Buffer your table](#buffer-your-table)
+
+### Data privacy analysis
+
+Data privacy does its own evaluations of each query to determine whether the queries are safe to run. This evaluation can sometimes cause multiple requests to a data source. A telltale sign that a given request is coming from data privacy analysis is that it will have a “TOP 1000” condition (although not all data sources support such a condition). In general, disabling data privacy&mdash;assuming that's acceptable&mdash;would eliminate the "TOP 1000" or other data privacy-related requests during refresh. More information: [Disable the data privacy firewall](#disable-the-data-privacy-firewall)
+
+### Background data downloads (also known as “background analysis”)
+
+Similar to the evaluations performed for data privacy, the Power Query Editor by default will download a preview of the first 1000 rows of each query and step so that the data preview is ready to display as soon as the query or step is selected. More information: [Disable background analysis](#disable-background-analysis)
+
+### Multiple queries when loading to the Power BI Desktop model
 
 In a desktop environment, Analysis Services (AS) does refresh with two evaluations&mdash;one to check for schema changes and one to fetch data&mdash;and sometimes has to fetch data for both.
 
-## Multiple queries from query diagnostics
+### Multiple queries from query diagnostics
 
 The editor runs multiple queries as described in [Explaining multiple evaluations](/power-query/querydiagnostics#explaining-multiple-evaluations) in the Query Diagnostics article. These queries have the same timing issue for the persistent cache.
 
-## Multiple queries for data privacy analysis
+### Multiple queries for data privacy analysis
 
 Analysis for data privacy also runs multiple queries.
 
@@ -52,7 +68,7 @@ The following sections describe these steps in more detail.
 
 ### Set up Power Query Editor
 
-The first step to isolating multiple queries is setting up your data in the Power Query Editor. You can then refresh the data in the editor. Basically, you take the same steps to set up your data in the Power Query Editor that you always do: connect to your data source, select the data you want in the Power Query Navigator, and then select **Transform data**.
+You don't need to reconnect or recreate your query, just open the query you want to test in the Power Query Editor. You can [duplicate the query](queries-pane.md#duplicating-a-query) in the editor if you don't want to mess with the existing query.
 
 ### Disable the data privacy firewall
 
@@ -66,9 +82,9 @@ The next step is to disable background analysis. Background analysis is controll
 
 ![Image showing Query options in excel with background analysis disabled](./media/multiple-queries/data-previews.png)
 
-### Use a table buffer
+### Buffer your table
 
-Optionally, you can also use Table.Buffer to force all the data to be read, which imitates what happens during a load. To use Table.Buffer in the Power Query Editor:
+Optionally, you can also use `Table.Buffer` to force all the data to be read, which imitates what happens during a load. To use `Table.Buffer` in the Power Query Editor:
 
 1. In the Power Query Editor formula bar, select the **fx** button to add a new step.
 
