@@ -1,7 +1,7 @@
 ---
 title: "Using an on-premises data gateway in Power Platform dataflows | MicrosoftDocs"
 description: "Learn how to use an on-premises data gateway in Power Platform dataflows"
-ms.date: 10/27/2021
+ms.date: 10/29/2021
 ms.reviewer: dougklo
 ms.service: powerquery
 ms.topic: article
@@ -144,7 +144,20 @@ There are a few known limitations when using enterprise gateways and dataflows.
 
 - Creating new data sources with a gateway in dataflows is only supported for people with *Admins* permissions. *Can use* and *Can use + share* permissions levels aren't currently supported.
 
-For information about troubleshooting issues with gateways, or configuring the gateway service for your network, go to [On-premises data gateway documentation](/data-integration/gateway).
+## Troubleshooting
+
+When you attempt to use an on-premises data source to publish a dataflow, you might come across the following MashupException error:
+
+```
+AzureDataLakeStorage failed to get the response:
+'The underlying connection was closed: An unexpected error occurred on a send.'
+```
+
+This error usually occurs because you're attempting to connect to an Azure Data Lake Storage endpoint through a proxy, but you haven't properly configured the proxy settings for the on-premises data gateway. To learn more about how to configure these proxy settings, go to [Configure proxy settings for the on-premises data gateway](/data-integration/gateway/service-gateway-proxy).
+
+For more information about troubleshooting issues with gateways, or configuring the gateway service for your network, go to the [On-premises data gateway documentation](/data-integration/gateway).
+
+
 
 ## Next steps
 
