@@ -33,10 +33,6 @@ In a cloud environment, each query is refreshed using its own separate cache, so
 
 Sometimes Power Query’s folding layer may generate multiple requests to a data source, based on the operations being performed downstream. In such cases, you might avoid multiple requests by using `Table.Buffer`. More information: [Buffer your table](#buffer-your-table)
 
-### Background data downloads (also known as “background analysis”)
-
-Similar to the evaluations performed for data privacy, the Power Query editor by default will download a preview of the first 1000 rows of each query step. Downloading these rows helps ensure the data preview is ready to display as soon as a step is selected, but it can also cause duplicate data source requests. More information: [Disable background analysis](#disable-background-analysis)
-
 ### Loading to the Power BI Desktop model
 
 In Power BI Desktop, Analysis Services (AS) refreshes data by using two evaluations: one to fetch the schema&mdash;which AS does by asking for zero rows&mdash;and one to fetch the data. If computing the zero-row schema requires fetching the data, then duplicate data source requests can occur.
@@ -44,6 +40,10 @@ In Power BI Desktop, Analysis Services (AS) refreshes data by using two evaluati
 ### Data privacy analysis
 
 Data privacy does its own evaluations of each query to determine whether the queries are safe to run together. This evaluation can sometimes cause multiple requests to a data source. A telltale sign that a given request is coming from data privacy analysis is that it will have a “TOP 1000” condition (although not all data sources support such a condition). In general, disabling data privacy&mdash;assuming that's acceptable&mdash;would eliminate the "TOP 1000" or other data privacy-related requests during refresh. More information: [Disable the data privacy firewall](#disable-the-data-privacy-firewall)
+
+### Background data downloads (also known as “background analysis”)
+
+Similar to the evaluations performed for data privacy, the Power Query editor by default will download a preview of the first 1000 rows of each query step. Downloading these rows helps ensure the data preview is ready to display as soon as a step is selected, but it can also cause duplicate data source requests. More information: [Disable background analysis](#disable-background-analysis)
 
 ### Miscellaneous Power Query editor background tasks
 
@@ -56,6 +56,7 @@ You can isolate instances of multiple queries by turning off specific parts of t
 * In the Power Query editor
 * With the firewall disabled
 * With background analysis disabled
+* With [column profiling](data-profiling-tools.md) and any other background tasks disabled
 * \[Optional] Doing a `Table.Buffer`
 
 In this example, you’ll have only a single M evaluation that happens when you refresh the Power Query editor preview. If the duplicate requests occur at this point, then they’re somehow inherent in the way the query is authored. If not, and if you enable the settings above one-by-one, you can then observe at what point the duplicate requests start occurring.
