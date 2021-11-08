@@ -248,6 +248,8 @@
           href: ReadingQueryDiagnostics.md
         - name: "Understanding folding with Query Diagnostics"
           href: QueryDiagnosticsFolding.md
+      - name: "Why does my query run multiple times?"
+        href: multiple-queries.md
       - name: "Step Folding Indicators"
         href: step-folding-indicators.md
       - name: "Query plan (Preview)"
