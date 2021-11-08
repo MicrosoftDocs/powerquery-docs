@@ -76,7 +76,7 @@ Before using native database query, you should be aware of the limitations and i
 
 ### Query folding
 
-Query folding while using a native database query is limited to the PostgreSQL connector only. No other connectors support query folding if you use a native database query. Also, for folding to work in the PostgreSQL connector, the native database query you enter has to work as a subquery.
+Query folding while using a native database query is limited to the PostgreSQL, Azure SQL database and SQL Server database connectors only. No other connectors support query folding if you use a native database query. Also, for folding to work, the native database query you enter has to work as a subquery. Lastly, for folding to work in the Azure SQL database and SQL Server database connectors, the EnableFolding option has to be set to true explicitly via the EnableFolding option as mentioned here: ![Native Query Folding](../Connectors/PostgreSQL.md#native-query-folding)
 
 ### Native database query security
 
