@@ -4,7 +4,7 @@ description: Provides basic information and how to connect to your data, along w
 author: dougklopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 9/16/2021
+ms.date: 10/27/2021
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -133,7 +133,7 @@ When you select **Get Data > From Web** in Power Query Desktop, in most instance
 
 ![Web advanced URL assembly.](webadvancedurl.png)
 
-Use the **URL parts** section of the dialog to assemble the URL you want to use to get data. The first part of the URL in the **URL parts** section most likely would consist of the scheme, authority, and path of the URI (for example, http://contoso.com/products/). The second text box could include any queries or fragments that you would use to filter the information provided to the web site. If you need to add more than one part, select **Add part** to add another URL fragment text box. As you enter each part of the URL, the complete URL that will be used when you select **OK** is displayed in the **URL preview** box.
+Use the **URL parts** section of the dialog to assemble the URL you want to use to get data. The first part of the URL in the **URL parts** section most likely would consist of the scheme, authority, and path of the URI (for example, `http://contoso.com/products/`). The second text box could include any queries or fragments that you would use to filter the information provided to the web site. If you need to add more than one part, select **Add part** to add another URL fragment text box. As you enter each part of the URL, the complete URL that will be used when you select **OK** is displayed in the **URL preview** box.
 
 Depending on how long the POST request takes to process data, you may need to prolong the time the request continues to stay connected to the web site. The default timeout for both POST and GET is 100 seconds. If this timeout is too short, you can use the optional **Command timeout in minutes** to extend the number of minutes you stay connected.
 
@@ -166,9 +166,9 @@ The following file types are supported by the Web Connector:
 * [Text file](../textcsv.md)
 * HTML page
 * [XML tables](../xml.md)
-* PDF
+* [PDF](../pdf.md)
 
-For example, you could use the following steps to import a JSON file on the https://contoso.com/products web site:
+For example, you could use the following steps to import a JSON file on the `https://contoso.com/products` web site:
 
 1. From the **Get Data** dialog box, select the **Web** connector. 
 

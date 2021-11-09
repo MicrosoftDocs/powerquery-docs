@@ -248,6 +248,8 @@
           href: ReadingQueryDiagnostics.md
         - name: "Understanding folding with Query Diagnostics"
           href: QueryDiagnosticsFolding.md
+      - name: "Why does my query run multiple times?"
+        href: multiple-queries.md
       - name: "Step Folding Indicators"
         href: step-folding-indicators.md
       - name: "Query plan (Preview)"
@@ -322,6 +324,8 @@
         href: Connectors/GoogleAnalytics.md
       - name: "Google BigQuery"
         href: Connectors/GoogleBigQuery.md
+      - name: "Hive LLAP"
+        href: Connectors/HiveLlap.md
       - name: "IBM Db2 database"
         href: Connectors/IBMDb2Database.md
       - name: "JSON"
@@ -344,6 +348,8 @@
         href: Connectors/Odbc.md
       - name: "Oracle database"
         href: Connectors/OracleDatabase.md
+      - name: "PDF"
+        href: Connectors/Pdf.md
       - name: "PostgreSQL"
         href: Connectors/PostgreSQL.md
       - name: "QuickBooks Online (Beta)"
@@ -390,6 +396,8 @@
         href: Connectors/SharePointList.md
       - name: "SharePoint Online list"
         href: Connectors/SharePointOnlineList.md
+      - name: SIS-CC SDMX
+        href: Connectors/SISCCSDMX.md
       - name: "Snowflake"
         href: Connectors/Snowflake.md
       - name: "SoftOne BI (Beta)"
@@ -402,8 +410,10 @@
         href: Connectors/SumTotal.md
       - name: "Text/CSV"
         href: Connectors/TextCSV.md
-      - name: "XML"
-        href: Connectors/XML.md
+      - name: "TIBCO(R) Data Virtualization (Beta)"
+        href: Connectors/tibco.md
+      - name: "Usercube"
+        href: Connectors/Usercube.md
       - name: "Web"
         items:
         - name: "Web connector"
@@ -412,6 +422,10 @@
           href: Connectors/web/web-by-example.md
         - name: "Troubleshooting"
           href: Connectors/web/web-troubleshoot.md
+      - name: "Workforce Dimensions (Beta) (Deprecated)"
+        href: Connectors/WorkforceDimensions.md
+      - name: "XML"
+        href: Connectors/XML.md
       - name: "Zendesk (Beta)"
         href: Connectors/Zendesk.md
     - name: Support and troubleshooting
