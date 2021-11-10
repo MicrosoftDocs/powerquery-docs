@@ -65,7 +65,7 @@ To connect to Azure Cosmos DB data:
 
     Your data catalog, databases, and tables appear in the **Navigator** dialog box.
 
-    ![The Navigator dialog box shows your data].(./media/azure-cosmosdb/azure-cosmosdb-navigation.png)
+    [![The Navigator dialog box shows your data.](./media/azure-cosmosdb/azure-cosmosdb-navigation.png)](./media/azure-cosmosdb/azure-cosmosdb-navigation.png#lightbox)
 
 8. In the **Display Options** pane, select the check box for the dataset that you want to use.
 
