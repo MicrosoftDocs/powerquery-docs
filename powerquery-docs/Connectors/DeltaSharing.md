@@ -11,6 +11,9 @@ LocalizationGroup: reference
 
 # Delta Sharing (Beta)
 
+>[!Note]
+>The following connector article is provided by Databricks, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Databricks website and use the support channels there.
+
 ## Summary
 
 | Item | Description |
@@ -36,23 +39,23 @@ For detailed information about Delta Sharing, visit [Access data shared with you
 
 ## Connect to Databricks Delta Sharing in Power BI Desktop
 
-To connect to <Databricks> using the Delta Sharing connector follow the steps below:
+To connect to Databricks using the Delta Sharing connector, use the following steps:
 
 1. Open Power BI Desktop.
 
-2. Navigate to the **Get Data** menu and search for “Delta Sharing”.
+2. Navigate to the **Get Data** menu and search for **Delta Sharing**.
 
-3. Select the connector and click **Connect**.
+3. Select the connector and then select **Connect**.
 
 4. Enter the endpoint URL retrieved from the credentials file in the Delta Sharing Server URL field.
 
-5. Optionally, in the **Advanced Options** tab you may set a **Row Limit** for the maximum number of rows you can download. This is set to 1 million rows by default.
+5. Optionally, in the **Advanced Options** tab you can set a **Row Limit** for the maximum number of rows you can download. This is set to 1 million rows by default.
 
-6. Click **OK**.
+6. Select **OK**.
 
-7. In the **Authentication** box enter the token retrieved from the credentials file in the **Bearer Token** field.
+7. In the **Authentication** dialog box, enter the token retrieved from the credentials file in the **Bearer Token** field.
 
-8. Click **Connect**.
+8. Select **Connect**.
 
 ## Limitations and considerations
 
