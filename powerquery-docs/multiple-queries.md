@@ -4,14 +4,14 @@ description: This article provides information about the various reasons that a 
 author: dougklopfenstein
 ms.service: powerquery
 ms.reviewer: kvivek
-ms.date: 11/5/2021
+ms.date: 11/10/2021
 ms.author: dougklo
 ms.custom: intro-internal
 ---
 
 # Why does my query run multiple times?
 
-When refreshing in the Power Query editor, there's a lot done behind the scenes to attempt to give you a smooth user experience, and to execute your queries efficiently and securely. However, in some cases you might notice that multiple data source requests are being triggered by Power Query when data is refreshed. Sometimes these requests are normal, but other times they can be prevented.
+When refreshing in Power Query, there's a lot done behind the scenes to attempt to give you a smooth user experience, and to execute your queries efficiently and securely. However, in some cases you might notice that multiple data source requests are being triggered by Power Query when data is refreshed. Sometimes these requests are normal, but other times they can be prevented.
 
 ## When multiple requests occur
 
@@ -47,7 +47,7 @@ Similar to the evaluations performed for data privacy, the Power Query editor by
 
 ### Miscellaneous Power Query editor background tasks
 
-Various Power Query editor background tasks can also trigger extra data source requests (for example, step folding analysis, column profiling, and so on).
+Various Power Query editor background tasks can also trigger extra data source requests (for example, step folding analysis, column profiling, the automatic refresh of the 1000-row preview that Power Query triggers after loading results to Excel, and so on).
 
 ## Isolating multiple queries
 
