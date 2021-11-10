@@ -75,7 +75,7 @@ To connect to Azure Cosmos DB data:
 
 10. Otherwise, select **Load**. After the load is complete, you can create visualizations. If you selected **DirectQuery**, Power BI issues a query to Cosmos DB for the visualization that you requested.
 
-## Connect using advance options
+## Connect using advanced options
 
 Power Query Desktop provides a set of advanced options that you can add to your query if needed.
 
