@@ -26,7 +26,7 @@ LocalizationGroup: reference
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 >[!Note]
-> The PDF connector is not supported in Power BI Premium.
+> PDF is not supported in Power BI Premium.
 
 ## Prerequisites
 

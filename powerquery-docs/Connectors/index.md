@@ -4,7 +4,7 @@ description: List of all currently available Power Query connectors
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 9/16/2021
+ms.date: 11/10/2021
 ms.author: bezhan
 ms.custom: intro-internal
 
@@ -222,8 +222,8 @@ The connectors are listed in alphabetical order in separate tables for each lett
 | ![Python Script.](media/index/python-64.png)<br/>**Python Script**<br/>By Microsoft                                                  | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | | | | | | | |
 
-<sup>1</sup> Available in [dataflows for Microsoft Teams](../dataflows/dataflows-teams.md).
-<sup>2</sup> Not supported in Power BI Premium.
+<sup>1</sup> Available in [dataflows for Microsoft Teams](../dataflows/dataflows-teams.md).<br/>
+<sup>2</sup> PDF is not supported in Power BI Premium.
 
 ## Q
 
