@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for the connector, alo
 author: dougklopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 10/14/2021
+ms.date: 11/10/2021
 ms.author: dougklo
 
 LocalizationGroup: reference
@@ -24,11 +24,14 @@ LocalizationGroup: reference
 
 >[!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
- 
+
+>[!Note]
+> The PDF connector is not supported in Power BI Premium.
+
 ## Prerequisites
 
 None.
- 
+
 ## Capabilities Supported
 
 * Import
