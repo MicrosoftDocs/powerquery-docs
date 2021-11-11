@@ -4,7 +4,7 @@ description: List of all currently available Power Query connectors
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 9/16/2021
+ms.date: 11/10/2021
 ms.author: bezhan
 ms.custom: intro-internal
 
@@ -210,7 +210,7 @@ The connectors are listed in alphabetical order in separate tables for each lett
 | ![Parquet.](media/index/parquet-64.png)<br/>**Parquet**<br/>By Microsoft                                                                         | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png)  | ![Not supported](media/index/no.png)  |
 | ![Palantir Foundry.](media/index/foundry-64.png)<br/>**Palantir Foundry**</br>By Palantir   | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Paxata.](media/index/paxata-64.png)<br/>**Paxata**<br/>By Paxata                                                     | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
-| [![PDF.](media/index/pdffile-64.png)<br/>**PDF**](pdf.md)<br/>By Microsoft                                                                     | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) <sup>1</sup> | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  |
+| [![PDF.](media/index/pdffile-64.png)<br/>**PDF**](pdf.md)<br/>By Microsoft                                                                     | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) <sup>2</sup> | ![Supported](media/index/yes.png) <sup>2</sup> | ![Supported](media/index/yes.png) <sup>1</sup> | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  |
 | ![Planview Enterprise One - CTM (Beta).](media/index/planview-enterprise-64.png)<br/>**Planview Enterprise<br/>One - CTM (Beta)**<br/>By Planview                                                                                                                              | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | ![Planview Enterprise One - PRM (Beta).](media/index/planview-enterprise-64.png)<br/>**Planview Enterprise<br/>One - PRM (Beta)**<br/>By Planview                                                                                                                              | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | [![PostgreSQL database.](media/index/database-64.png)<br/>**PostgreSQL<br/>database**](./postgresql.md)<br/>By Microsoft                 | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) | ![Supported](media/index/yes.png) |
@@ -222,7 +222,8 @@ The connectors are listed in alphabetical order in separate tables for each lett
 | ![Python Script.](media/index/python-64.png)<br/>**Python Script**<br/>By Microsoft                                                  | ![Not supported](media/index/no.png)  | ![Supported](media/index/yes.png) | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  | ![Not supported](media/index/no.png)  |
 | | | | | | | |
 
-<sup>1</sup> Available in [dataflows for Microsoft Teams](../dataflows/dataflows-teams.md).
+<sup>1</sup> Available in [dataflows for Microsoft Teams](../dataflows/dataflows-teams.md).<br/>
+<sup>2</sup> PDF is not supported in Power BI Premium.
 
 ## Q
 
