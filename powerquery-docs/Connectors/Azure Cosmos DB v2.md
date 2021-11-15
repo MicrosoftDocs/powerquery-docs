@@ -18,7 +18,7 @@ LocalizationGroup: reference
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Power BI (Datasets) |
-| Authentication Types Supported | DSN configuration<br />Organizational account |
+| Authentication Types Supported | Feed Key |
 | | |
 
 >[!Note]
