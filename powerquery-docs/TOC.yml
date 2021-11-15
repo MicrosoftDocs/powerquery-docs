@@ -284,6 +284,8 @@
         href: Connectors/AssembleViews.md
       - name: "Automy Data Analytics (Beta)"
         href: "Connectors/AutomyDataAnalytics.md"
+      - name: "Azure Cosmos DB v2 (Beta)"
+        href: Connectors/Azure Cosmos DB v2.md
       - name: "Azure SQL database"
         href: Connectors/AzureSQLDatabase.md
       - name: "Azure Synapse Analytics (SQL DW)"
