@@ -22,7 +22,7 @@ LocalizationGroup: reference
 | | |
 
 >[!Note]
->The Azure Cosmos DB V2 connector release has been delayed. We recommend continuing to use the Azure Cosmos DB V1 connector. 
+>The Azure Cosmos DB V2 connector release has been delayed. We recommend continuing to use the Azure Cosmos DB V1 connector.
 
 ## Prerequisites
 
@@ -105,6 +105,9 @@ The following table lists all of the advanced options you can set in Power Query
 | | |
 
 ## Schema in a document
+
+>[!Note]
+>Currently, this section contains preliminary information. Additional information will be added before the connector is officially released.
 
 Flag indicating if collection schema is explicitly stated as a document (default 0, that is, no schema as document)
 
