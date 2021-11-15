@@ -302,6 +302,8 @@
         href: Connectors/DataLakeStorage.md
       - name: "Dataverse"
         href: Connectors/dataverse.md
+      - name: "Delta Sharing"
+        href: Connectors/DeltaSharing.md
       - name: "EQuIS (Beta)"
         href: Connectors/EQuIS.md
       - name: "Essbase"
