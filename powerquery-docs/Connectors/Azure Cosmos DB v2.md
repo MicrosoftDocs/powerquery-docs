@@ -21,6 +21,9 @@ LocalizationGroup: reference
 | Authentication Types Supported | DSN configuration<br />Organizational account |
 | | |
 
+>[!Note]
+>The Azure Cosmos DB V2 connector release has been delayed. We recommend continuing to use the Azure Cosmos DB V1 connector. 
+
 ## Prerequisites
 
 * An [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/#overview) account
