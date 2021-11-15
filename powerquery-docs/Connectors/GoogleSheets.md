@@ -71,4 +71,4 @@ This connector uses a different ResourcePath for every Google Sheet URL. You'll 
 
 ### Understanding URL parsing
 
-The connector first checks for the signature of the URL, ensuring it starts with **https://docs.google.com/spreadsheets/d/**. The connector then parses the Google Spreadsheet ID from the URL to include in the Google Sheets API call. The rest of the URL isn't used. Each Google Sheet connection is tied to the submitted URL, which will act as the ResourcePath.
+The connector first checks for the signature of the URL, ensuring it starts with `https://docs.google.com/spreadsheets/d/`. The connector then parses the Google Spreadsheet ID from the URL to include in the Google Sheets API call. The rest of the URL isn't used. Each Google Sheet connection is tied to the submitted URL, which will act as the ResourcePath.
