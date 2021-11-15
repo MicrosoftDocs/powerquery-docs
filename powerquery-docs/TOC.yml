@@ -320,7 +320,7 @@
         href: Connectors/GoogleAnalytics.md
       - name: "Google BigQuery"
         href: Connectors/GoogleBigQuery.md
-      - name: "Google Sheets"
+      - name: "Google Sheets (Beta)"
         href: Connectors/GoogleSheets.md
       - name: "Hive LLAP"
         href: Connectors/HiveLlap.md

@@ -1,6 +1,6 @@
 ---
 title: Power Query Google Sheets connector
-description: Provides basic information and prerequisites for the Google Sheets connector, descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
+description: Provides basic information and prerequisites for the Google Sheets connector, descriptions of the optional input parameters, and discusses limitations and issues you might come across.
 author: bezhan-msft
 ms.service: powerquery
 ms.topic: conceptual
@@ -9,8 +9,8 @@ ms.author: bezhan
 LocalizationGroup: reference
 ---
 
-# Google Sheets
- 
+# Google Sheets (Beta)
+
 ## Summary
 
 | Item | Description |
@@ -23,10 +23,10 @@ LocalizationGroup: reference
 
 ## Prerequisites
 
-Before you can use the Google Sheets connector, you must have a Google account and have access to the Google Sheet you are trying to connect to.
+Before you can use the Google Sheets connector, you must have a Google account and have access to the Google Sheet you're trying to connect to.
 
- 
 ## Capabilities Supported
+
 * Import
 
 ## Connect to Google Sheets data from Power Query Desktop
@@ -37,7 +37,7 @@ To connect to Google Sheets from Power Query Desktop, take the following steps:
 
     ![Get Data from Google Sheets.](./media/google-sheets/GetData.png)
 
-2. You will be prompted for a Google Sheets URL. Copy and paste the URL from your browser address bar into the input prompt. 
+2. You'll be prompted for a Google Sheets URL. Copy and paste the URL from your browser address bar into the input prompt.
 
 3. The Google Sheets connector supports connecting through an organizational (Google) account. Select **Sign In** to continue.
 
@@ -59,17 +59,16 @@ This section describes any limitations or considerations of the Google BigQuery 
 
 ### Power Query Online
 
-This connector is not yet available in Power Query Online and Dataflows experiences.
+This connector isn't yet available in Power Query Online and dataflows experiences.
 
-### Shared Drive support
+### Shared drive support
 
-This connector does support connecting to shared Drives.
+This connector does support connecting to shared drives.
 
 ### Multiple connections
 
-This connector uses a different ResourcePath for every Google Sheet URL. You will need to authenticate to every new resource path and URL, but you may not need to sign into Google multiple times if the previous sessions remain active. 
+This connector uses a different ResourcePath for every Google Sheet URL. You'll need to authenticate to every new resource path and URL, but you might not need to sign into Google multiple times if the previous sessions remain active.
 
 ### Understanding URL parsing
 
-The connector will first check for the signature of the URL, ensuring it starts with **https://docs.google.com/spreadsheets/d/** and then will parse the Google Spreadsheet ID from the URL to include in the Google Sheets API call. The remainder of the URL is not used. Each Google Sheet connection is tied to the submitted URL which will act as the ResourcePath.
-
+The connector first checks for the signature of the URL, ensuring it starts with **https://docs.google.com/spreadsheets/d/**. The connector then parses the Google Spreadsheet ID from the URL to include in the Google Sheets API call. The rest of the URL isn't used. Each Google Sheet connection is tied to the submitted URL, which will act as the ResourcePath.
