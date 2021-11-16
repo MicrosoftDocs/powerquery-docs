@@ -67,7 +67,7 @@ If you don't already have one, create a dataflow. You can create a dataflow in e
    * **File**: Select the file path to the Excel file.
    * **Table**: Select "Dataflow_monitoring".
 
-   [![Image of the Excel Add a row into a table connection, with the fields ready to be filled in.](media/templateexcel.png)](media/templateexcel.png#lightbox)
+   ![Image of the Excel Add a row into a table connection, with the fields ready to be filled in.](media/templateexcel.png)
 
 8. Add dynamic values to the required fields.
 
@@ -77,7 +77,7 @@ If you don't already have one, create a dataflow. You can create a dataflow in e
 
    2. Select **Dataflow Name** from the **Dynamic content** context box.
 
-      ![Image of the Excel Add a row into a table connector, with the dynamic contents selection dialog box.](media/dynamicexcel1.png)
+      [![Image of the Excel Add a row into a table connector, with the dynamic contents selection dialog box.](media/dynamicexcel1.png)](media/dynamicexcel1.png#lightbox)
 
    3. Repeat this process for all required fields.
 
