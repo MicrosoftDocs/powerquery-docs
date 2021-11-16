@@ -284,10 +284,14 @@
         href: Connectors/AssembleViews.md
       - name: "Automy Data Analytics (Beta)"
         href: "Connectors/AutomyDataAnalytics.md"
+      - name: "Azure Cosmos DB v2 (Beta)"
+        href: Connectors/Azure Cosmos DB v2.md
       - name: "Azure SQL database"
         href: Connectors/AzureSQLDatabase.md
       - name: "Azure Synapse Analytics (SQL DW)"
         href: Connectors/AzureSQLDataWarehouse.md
+      - name: "Azure Synapse Analytics workspace (Beta)"
+        href: Connectors/synapse.md
       - name: "Bloomberg Data and Analytics"
         href: Connectors/BloombergDataAndAnalytics.md
       - name: "BQE Core (Beta)"
@@ -298,6 +302,8 @@
         href: Connectors/DataLakeStorage.md
       - name: "Dataverse"
         href: Connectors/dataverse.md
+      - name: "Delta Sharing"
+        href: Connectors/DeltaSharing.md
       - name: "EQuIS (Beta)"
         href: Connectors/EQuIS.md
       - name: "Essbase"
@@ -322,6 +328,8 @@
         href: Connectors/GoogleAnalytics.md
       - name: "Google BigQuery"
         href: Connectors/GoogleBigQuery.md
+      - name: "Google Sheets (Beta)"
+        href: Connectors/GoogleSheets.md
       - name: "Hive LLAP"
         href: Connectors/HiveLlap.md
       - name: "IBM Db2 database"
