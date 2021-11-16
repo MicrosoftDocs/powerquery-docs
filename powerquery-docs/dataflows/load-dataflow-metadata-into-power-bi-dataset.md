@@ -6,7 +6,7 @@ author: miquelladeboer
 ms.service: powerquery
 ms.reviewer: kvivek
 ms.topic: conceptual
-ms.date: 12/15/2020
+ms.date: 12/16/2020
 ms.author: mideboer
 ---
 
@@ -14,13 +14,13 @@ ms.author: mideboer
 
 This tutorial demonstrates how to load data in a Power BI streaming dataset to create a dataflows monitoring report in Power BI.
 
-![example of monitoring dashboard.](media/dashboard.PNG)
+![Image with an example of a monitoring dashboard.](media/dashboard.PNG)
 
 First, you'll create a new streaming dataset in Power BI. This dataset collects all the metadata from the dataflow run, and for every refresh of a dataflow, a record is added to this dataset. You can run multiple dataflows all to the same dataset. Lastly, you can build a Power BI report on the data to visualize the metadata and start monitoring the dataflows.
 
 You can use this dashboard to monitor your dataflows' refresh duration and failure count. With this dashboard, you can track any issues with your dataflows performance and share the data with others.
 
-![overview of PowerBI streaming dataset.](media/powerbi.PNG)
+![Image with an overview of the Power BI streaming dataset.](media/powerbi.PNG)
 
 ## Prerequisites
 
@@ -96,7 +96,7 @@ If you do not already have one, create a dataflow. You can create a dataflow in 
 
    2. Select **Dataflow Name** from the **Dynamic content** context box.
 
-      ![An example of folder structure.](media/dynamic-streaming.png)
+      [![Image of the Add rows to a dataset connector with the dynamic content ready to be selected.](media/dynamic-streaming.png)](media/dynamic-streaming.png#lightbox)
 
    3. Repeat this process for all required fields.
 
@@ -110,4 +110,4 @@ If you do not already have one, create a dataflow. You can create a dataflow in 
 
 3. Create your own report on top of this data.
 
-   ![PowerBI report data example.](media/createyourownreport.png)
+   [![Image of the Power BI report data example with the real time data ready to be used in the Power BI dashboard.](media/createyourownreport.png)](media/createyourownreport.png#lightbox)

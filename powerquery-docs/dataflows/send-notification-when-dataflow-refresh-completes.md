@@ -33,11 +33,11 @@ To set up a Power Automate notification that will be sent when a dataflow fails:
    2. Leave the second cell as **is equal to**.
    3. In the third cell, enter **False**.
 
-   ![Notification example in Power Automate.](media/emailyesnofalse.PNG)
+   [![Image of the condition connector with all the cells filled out.](media/emailyesnofalse.PNG)](media/emailyesnofalse.PNG#lightbox)
 
 8. In the **If Yes** section, select **Add an action**.
 9. Search for the "Send an email notification (V3)" connector, and then select it.
 10. Enter the email address and subject information.
 11. Inside the body of the email, select the field next to **Body** and use **Dynamic content** to add dataflow information to the content of your email.
 
-![Example of a complete notification flow.](media/isyes.PNG)
+    [![Image of the Send an email notifictaion connector, with the Body of the email filled in using dynamic content.](media/isyes.PNG)](media/isyes.PNG#lightbox)

@@ -38,9 +38,9 @@ To automatically create a queue in Azure Service Bus:
 8. In the **If Yes** section, select **Add an action**.
 9. Search for the "Send message" connector from Service Bus, and then select it.
 
-   ![example of service bus.](media/servicebuscondition.PNG)
+   [![Image of the full flow diagram with the Service Bus send message connector opened.](media/servicebuscondition.PNG)](media/servicebuscondition.PNG#lightbox)
 
-10. If necessary, enter a **Connection name** for this message. In **Connection string**, enter the connection string that was generated when you created the Service Bus namespace. Then select **Create**.
-11. Add dataflow information to the content of your message by selecting the field next to **Content**, and then select the dynamic content you want to use from **Add dynamic content**.
+10. Enter a **Connection name** for this message. In **Connection string**, enter the connection string that was generated when you created the Service Bus namespace. Then select **Create**.
+11. Add dataflow information to the content of your message by selecting the field next to **Content**, and then select the dynamic content you want to use from **Dynamic content**.
 
-    ![Example of complete flow in service bus.](media/ifyesservice.PNG)
+    [![Image of the Send message connector with the Content field filled in with content from the dyanamic content dialog box.](media/ifyesservice.PNG)](media/ifyesservice.PNG#lightbox)

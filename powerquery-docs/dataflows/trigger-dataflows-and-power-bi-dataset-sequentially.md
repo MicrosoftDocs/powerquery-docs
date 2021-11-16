@@ -43,7 +43,7 @@ To trigger dataflows sequentially:
    2. Leave the second cell as **is equal to**.
    3. In the third cell, enter **Success**.
 
-   ![Overview of simultaneous dataflow.](media/emailyesnosuccess.PNG)
+   [![Image with the conditions set to occur when the Refresh status equals success.](media/emailyesnosuccess.PNG)](media/emailyesnosuccess.PNG#lightbox)
 
 8. In the **If Yes** section, select **Add an action**.
 9. Search for the "Refresh a dataflow" connector, and then select it.
@@ -52,3 +52,5 @@ To trigger dataflows sequentially:
     * **Group Type**: Select *Environment* when connecting to Power Apps and *Workspace* when connecting to Power BI.
     * **Group**: Select the Power Apps environment or the Power BI workspace your dataflow is in.
     * **Dataflow**: Select your dataflow by name.
+
+    ![Image with the refresh a dataflow connector in the If yes dialog box.](media/refresh-a-dataflow.png)
