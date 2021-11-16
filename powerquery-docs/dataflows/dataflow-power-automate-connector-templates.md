@@ -15,7 +15,7 @@ ms.custom: intro-internal
 The dataflows Power Automate connector can:
 
 * Trigger a flow when a dataflow refresh completes.
-* Take action to initiate a dataflow refresh.
+* Take action to start a dataflow refresh.
 
 This section discusses some use cases with provided tutorials to help you quickstart the use of this connector:
 
@@ -31,10 +31,10 @@ This section discusses some use cases with provided tutorials to help you quicks
 
 [Refresh dataflows and datasets sequentially](trigger-dataflows-and-power-bi-dataset-sequentially.md):
 
-* When you select a button, initiate a dataflow refresh.
-* When an analytical dataflow refresh succeeds, initiate a standard dataflow refresh.
-* When a dataflow refresh succeeds, initiate a Power BI dataset refresh.
-* When a file in SharePoint is updated, initiate a dataflow refresh.
+* When you select a button, start a dataflow refresh.
+* When an analytical dataflow refresh succeeds, start a standard dataflow refresh.
+* When a dataflow refresh succeeds, start a Power BI dataset refresh.
+* When a file in SharePoint is updated, start a dataflow refresh.
 
 Save dataflow refresh metadata and build a dataflows monitoring dashboard:
 

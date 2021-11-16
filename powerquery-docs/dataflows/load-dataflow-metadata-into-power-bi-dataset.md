@@ -70,7 +70,7 @@ If you do not already have one, create a dataflow. You can create a dataflow in 
 
 3. Enter a flow name, and then search for the "When a dataflow refresh completes" connector. Select this connector from the list, and then select **Create**.
 
-4. Customize the connector. You need to enter the following information on your dataflow:
+4. Customize the connector. Enter the following information on your dataflow:
 
     * **Group Type**: Select *Environment* when connecting to Power Apps and *Workspace* when connecting to Power BI.
     * **Group**: Select the Power Apps environment or the Power BI workspace your dataflow is in.
@@ -80,7 +80,7 @@ If you do not already have one, create a dataflow. You can create a dataflow in 
 
 6. Search for the connector "Add rows to a dataset" from Power BI, and then select it.
 
-7. Customize the connector. You need to enter the following information:
+7. Customize the connector. Enter the following information:
 
    * **Workspace ID**: Select the Power BI workspace that contains your streaming dataset.
    * **Dataset**: Select the streaming dataset **Dataflow Monitoring** that you previously created in [Create a new streaming dataset in Power BI](#create-a-new-streaming-dataset-in-power-bi).
