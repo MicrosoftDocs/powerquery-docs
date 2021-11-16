@@ -11,7 +11,7 @@ ms.author: mideboer
 ---
 # Load data in a Dataverse table and build a dataflows monitoring report with Power BI
 
-This tutorial demonstrates how to set up your own monitoring dashboard for all of your dataflows.
+This tutorial demonstrates how to load data in a Dataverse table to create a dataflows monitoring report in Power BI.
 
 ![Example of a monitoring dashboard.](media/dashboard.PNG)
 
@@ -41,11 +41,11 @@ First, download the Dataverse [.pbit file](https://download.microsoft.com/downlo
 
 2. On the left navigation pane expand **Data**, select **Tables**, and then select **New table**.
 
-   [![Image with the new table dialog opened.](media/new-table-dialog.png)](media/new-table-dialog.png#lightbox)
+   ![Image with the new table dialog opened.](media/new-table-dialog.png)
 
 3. In the **New table** pane:
    1. Enter **Dataflows Monitoring** in **Display name**.
-   1. Under **Primary Name Column**, enter **Dataflow name** in **Primary Name**.
+   1. Under **Primary Name Column**, enter **Dataflow name** in **Display name**.
    1. Select **Create**.
 
 4. Select **Add column** to repeat adding columns for the following values:
@@ -54,6 +54,8 @@ First, download the Dataverse [.pbit file](https://download.microsoft.com/downlo
    * **Display name**: "Refresh Type", **Data type**: Text, **Required**: Required.
    * **Display name**: "Start Time", **Data type**: Date and Time, **Required**: Required.
    * **Display name**: "End Time", **Data type**: Date and Time, **Required**: Required.
+
+   ![Image with the new column dialog opened](media/new-column-dialog.png)
 
 ## Create a dataflow
 

@@ -6,13 +6,13 @@ author: miquelladeboer
 ms.service: powerquery
 ms.reviewer: kvivek
 ms.topic: conceptual
-ms.date: 12/15/2020
+ms.date: 11/16/2021
 ms.author: mideboer
 ---
 
 # Open a ticket when a dataflow refresh fails
 
-When your dataflow refresh completes or has been taking longer than expected, you might want your support team to investigate. With this tutorial, you can automatically open a support ticket, create a message in a queue or Service Bus or add an item to Azure DevOps to notify your support team.
+When your dataflow refresh completes or has been taking longer than expected, you might want your support team to investigate. With this tutorial, you can automatically open a support ticket, create a message in a queue or Service Bus, or add an item to Azure DevOps to notify your support team.
 
 In this tutorial, we make use of Azure Service Bus. For instructions on how to set up an Azure Service Bus and create a queue, go to [Use Azure portal to create a Service Bus namespace and a queue](/azure/service-bus-messaging/service-bus-quickstart-portal).
 
@@ -41,6 +41,6 @@ To automatically create a queue in Azure Service Bus:
    ![example of service bus.](media/servicebuscondition.PNG)
 
 10. If necessary, enter a **Connection name** for this message. In **Connection string**, enter the connection string that was generated when you created the Service Bus namespace. Then select **Create**.
-11. Add dataflow information to the content of your message by using **Add dynamic content**.
+11. Add dataflow information to the content of your message by selecting the field next to **Content**, and then select the dynamic content you want to use from **Add dynamic content**.
 
     ![Example of complete flow in service bus.](media/ifyesservice.PNG)

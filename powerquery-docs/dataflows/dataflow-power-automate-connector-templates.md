@@ -6,7 +6,7 @@ author: miquelladeboer
 ms.service: powerquery
 ms.reviewer: kvivek
 ms.topic: conceptual
-ms.date: 11/12/2021
+ms.date: 11/16/2021
 ms.author: mideboer
 ms.custom: intro-internal
 ---
@@ -41,5 +41,3 @@ Save dataflow refresh metadata and build a dataflows monitoring dashboard:
 * [When a dataflow refresh completes, save metadata to a Dataverse table](load-dataflow-metadata-into-dataverse-table.md)
 * [When a dataflow refresh completes, save metadata to Excel online](load-dataflow-metadata-into-excel-online.md)
 * [When a dataflow refresh completes, save metadata to a Power BI streaming dataset](load-dataflow-metadata-into-power-bi-dataset.md)
-
-![Example of dataflow monitoring dashboard.](media/dashboard.PNG)
