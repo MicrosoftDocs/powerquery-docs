@@ -3,8 +3,8 @@ title: Step folding indicators in Power Query
 description: Step folding indicators in Power Query Online allow you to understand what steps fold and give insight into how to build more performant queries.
 author: cpopell
 ms.service: powerquery
-ms.date: 03/09/2021
-ms.author: gepopell
+ms.date: 11/17/2021
+ms.author: ptyx507
 ---
 
 # Step folding indicators
