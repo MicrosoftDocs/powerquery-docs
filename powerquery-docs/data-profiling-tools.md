@@ -34,16 +34,15 @@ After you enable the options, you'll see something like the following image in P
 
 The column quality feature labels values in rows in five categories:
 
-* **Valid**, shown in green
+* **Valid**, shown in green.
 
-* **Error**, shown in red
+* **Error**, shown in red.
 
-* **Empty**, shown in dark grey
+* **Empty**, shown in dark grey.
 
-* **Unknown**, shown in dashed green *(When there are errors in a column, the quality of the remaining data is unknown)*
+* **Unknown**, shown in dashed green. Indicates when there are errors in a column, the quality of the remaining data is unknown.
 
-* **Unexpected error**, shown in dashed red 
-
+* **Unexpected error**, shown in dashed red.
 
 These indicators are displayed directly underneath the name of the column as part of a small bar chart, as shown in the following image.
 
