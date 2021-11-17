@@ -1,11 +1,11 @@
 ---
 title: Query plan
 description: An article that describes why and how to use the new Query plan feature in Power Query.  
-author: ptyx507
+author: dougklo
 
 ms.service: powerquery
 ms.topic: quickstart
-ms.date: 6/12/2021
+ms.date: 11/17/2021
 ms.author: dougklo
 ms.reviewer: dougklo
 
