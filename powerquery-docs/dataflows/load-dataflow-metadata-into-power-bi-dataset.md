@@ -109,5 +109,3 @@ If you do not already have one, create a dataflow. You can create a dataflow in 
 2. Navigate to the streaming dataset (in this example, in the **DocTestWorkspace** workspace, from the **Dataflow Monitoring** dataset, select **Create Report**).
 
 3. Create your own report on top of this data.
-
-   [![Image of the Power BI report data example with the real time data ready to be used in the Power BI dashboard.](media/createyourownreport.png)](media/createyourownreport.png#lightbox)
