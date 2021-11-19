@@ -4,7 +4,7 @@ description: Overview on Power Query query evaluation and query folding mechanis
 author: migueesc123
 ms.service: powerquery
 ms.reviewer: 
-ms.date: 11/4/2021
+ms.date: 11/11/2021
 ms.author: dougklo
 ms.custom: intro-internal
 ---
@@ -18,7 +18,7 @@ ms.custom: intro-internal
 Any query, whether created by Power Query, manually written by you in the advanced editor, or entered using a blank document, consists of functions and syntax from the [Power Query M formula language](/powerquery-m/). This query gets interpreted and evaluated by the Power Query engine to output its results. The M script serves as the set of instructions needed to evaluate the query.
 
 >[!TIP]
->You can think of the M script as a recipe in order to prepare your data.
+>You can think of the M script as a recipe that describes how to prepare your data.
 
 The most common way to create an M script is by using the Power Query editor. For example, when you connect to a data source, such as a SQL Server database, you'll notice on the right-hand side of your screen that there's a section called [applied steps](applied-steps.md). This section displays all the steps or transforms used in your query. In this sense, the Power Query editor serves as an interface to help you create the appropriate M script for the transforms that you're after, and ensures that the code you use is valid.
 
@@ -35,19 +35,14 @@ The previous image emphasizes the applied steps section, which contains the foll
 - **Source**: Makes the connection to the data source. In this case, it's a connection to a SQL Server database.
 - **Navigation**: Navigates to a specific table in the database.
 - **Removed other columns**: Selects which columns from the table to keep.
-- **Sorted rows**: Sorts the table using one or multiple columns in descending order.
+- **Sorted rows**: Sorts the table using one or more columns.
 - **Kept top rows**: Filters the table to only keep a certain number of rows from the top of the table.
 
-The Power Query editor helps you add these steps through a diverse set of interactions on its user interface. These interactions create the M Script that produces the query output you want.
-
-This set of step names is a friendly way to interpret the M script that Power Query has created for you. There are several ways to view the full M script. In Power Query, you can select **Advanced Editor** in the **View** tab. You can also select **Advanced Editor** from the **Query** group in the **Home** tab. In some versions of Power Query, you can also change the view of the formula bar to show the query script by going into the **View** tab and from the **Layout** group, select **Script view** > **Query script**.
+This set of step names is a friendly way to view the M script that Power Query has created for you. There are several ways to view the full M script. In Power Query, you can select **Advanced Editor** in the **View** tab. You can also select **Advanced Editor** from the **Query** group in the **Home** tab. In some versions of Power Query, you can also change the view of the formula bar to show the query script by going into the **View** tab and from the **Layout** group, select **Script view** > **Query script**.
 
 ![Image with the full M script and the corresponding names of the applied steps.](media/query-folding-basics/m-script-applied-steps.png)
 
-Most of the names found in the **Applied steps** pane are also being used in the M script. In some cases, they're wrapped around other characters. The Power Query editor always tries to show you a friendly name instead of the exact name being used inside your M script to help you interpret your query much easier.
-
->[!NOTE]
->Steps of a query are named using something called *identifiers* in the M language. Sometimes extra characters are wrapped around step names in M, but these aren’t shown in the applied steps. An example is `#"Kept top rows"`, which is categorized as a *quoted identifier* because of these extra characters. A quoted identifier can be used to allow any sequence of zero or more Unicode characters to be used as an identifier, including keywords, whitespace, comments, operators, and punctuators. To learn more about *identifiers* in the M language, go to [lexical structure](/powerquery-m/m-spec-lexical-structure#identifiers).
+Most of the names found in the **Applied steps** pane are also being used as is in the M script. Steps of a query are named using something called *identifiers* in the M language. Sometimes extra characters are wrapped around step names in M, but these aren’t shown in the applied steps. An example is `#"Kept top rows"`, which is categorized as a *quoted identifier* because of these extra characters. A quoted identifier can be used to allow any sequence of zero or more Unicode characters to be used as an identifier, including keywords, whitespace, comments, operators, and punctuators. To learn more about *identifiers* in the M language, go to [lexical structure](/powerquery-m/m-spec-lexical-structure#identifiers).
 
 Any changes that you make to your query through the Power Query editor will automatically update the M script for your query. For example, using the previous image as the starting point, if you change the **Kept top rows** step name to be **Top 20 rows**, this will automatically be updated in the script view.
 
@@ -79,7 +74,7 @@ This optimization process is called *query folding*, where Power Query tries to 
 >[!IMPORTANT]
 >All rules from the [Power Query M formula language (also known as the M language)](/powerquery-m/) are followed. Most notably, *lazy evaluation* plays an important role during the optimization process. In this process, Power Query understands what specific transforms from your query need to be evaluated. Power Query also understands what other transforms don't need to be evaluated because they're not needed in the output of your query.
 >
->Furthermore, when multiple sources are involved, the data privacy level of each data source is taken into consideration when evaluating the query. More information [Behind the scenes of the Data Privacy Firewall](dataprivacyfirewall.md)
+>Furthermore, when multiple sources are involved, the data privacy level of each data source is taken into consideration when evaluating the query. More information: [Behind the scenes of the Data Privacy Firewall](dataprivacyfirewall.md)
 
 The following diagram demonstrates the steps that take place in this optimization process.
 
@@ -100,7 +95,7 @@ The following diagram demonstrates the steps that take place in this optimizatio
 
 The goal of query folding is to offload or push as much of the evaluation of a query to a data source that can compute the transformations of your query.
 
-Query folding mechanism accomplishes this goal by translating your M script to a language that can be interpreted and executed by your data source. It then pushes the evaluation to your data source and sends the result of that evaluation to Power Query.
+The query folding mechanism accomplishes this goal by translating your M script to a language that can be interpreted and executed by your data source. It then pushes the evaluation to your data source and sends the result of that evaluation to Power Query.
 
 This operation often provides a much faster query execution than extracting all the required data from your data source and running all transforms required in the Power Query engine.
 
@@ -109,7 +104,7 @@ When you use the [Get Data experience](get-data-experience.md), Power Query guid
 However, the steps that follow in your query are the steps or transforms that the query folding mechanism attempts to optimize. It then checks if they can be offloaded to your data source instead of being processed using the Power Query engine.
 
 >[!IMPORTANT]
-> All data source functions, commonly showcased as the **Source** step of a query, queries the data at the data source in its native language. The query folding mechanism is utilized on all transforms applied to your query after your data source function so they can be translated and combined into a single data source query or as many transforms that can be offloaded to the data source.
+> All data source functions, commonly shown as the **Source** step of a query, queries the data at the data source in its native language. The query folding mechanism is utilized on all transforms applied to your query after your data source function so they can be translated and combined into a single data source query or as many transforms that can be offloaded to the data source.
 
 Depending on how the query is structured, there could be three possible outcomes to the query folding mechanism:
 

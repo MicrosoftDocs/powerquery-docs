@@ -11,7 +11,7 @@ ms.custom: intro-internal
 
 # Query folding examples
 
-This article provides some example scenarios for each of the three possible outcomes for query folding. It also includes some suggestions on how to get the most out of the query folding mechanism, and the affect that it can have in your queries.
+This article provides some example scenarios for each of the three possible outcomes for query folding. It also includes some suggestions on how to get the most out of the query folding mechanism, and the effect that it can have in your queries.
 
 ## The scenario
 
@@ -60,7 +60,7 @@ Lastly, inside the **Choose columns** dialog, select the `Sale Key`, `Customer K
 
 ![Selecting the `Sale Key`, `Customer Key`, `Invoice Date Key`, `Description`, and `Quantity` columns for the no query folding example.](media/query-folding-basics/choose-columns-dialog.png)
 
-These steps yield exactly the output that you were tasked with. The following code sample is the full M script for the query you created:
+The following code sample is the full M script for the query you created:
 
 ```
 let
@@ -121,7 +121,7 @@ In **Keep bottom rows**, enter the value 10, and then select **OK**.
 
 ![Keep bottom rows dialog with the value of 10 entered as the input value to only keep the bottom ten rows of the table.](media/query-folding-basics/partial-folding-keep-bottom-rows-dialog.png)
 
-These steps yield exactly the output that you were tasked with. The following code sample is the full M script for the query you created:
+The following code sample is the full M script for the query you created:
 
 ```
 let
@@ -166,7 +166,7 @@ After connecting to the database and navigating to the `fact_Sale` table, start 
 
 ![Selecting the Choose columns transform for the full query folding example.](media/query-folding-basics/choose-columns-ui.png)
 
-Ins **Choose columns**, select the `Sale Key`, `Customer Key`, `Invoice Date Key`, `Description`, and `Quantity` columns, and then select **OK**.
+In **Choose columns**, select the `Sale Key`, `Customer Key`, `Invoice Date Key`, `Description`, and `Quantity` columns, and then select **OK**.
 
 ![Selecting the `Sale Key`, `Customer Key`, `Invoice Date Key`, `Description`, and `Quantity` columns for the full query folding example.](media/query-folding-basics/choose-columns-dialog.png)
 
@@ -182,7 +182,7 @@ In **Keep top rows**, enter the value 10, and then select **OK**.
 
 ![Keep top rows dialog with the value of ten entered as the input value to only keep the top ten rows of the table.](media/query-folding-basics/full-folding-keep-top-rows-dialog.png)
 
-These steps yield exactly the output that you were tasked with. The following code sample is the full M script for the query you created:
+The following code sample is the full M script for the query you created:
 
 ```
 let
@@ -213,7 +213,7 @@ Consulting this query can help you better understand the story that the query pl
 - `Value.NativeQuery`: Power Query submits the data requests in a native SQL statement to the data source. For this case, that represents a request for only the top 10 records of the `fact_Sale` table, with only the required fields after being sorted in descending order using the `Sale Key` field.
 
 >[!NOTE]
->In the T-SQL language, while there is no clause that yield a SELECT operation for the bottom rows of a table, there is the TOP clause that retrieves the top rows of a table.
+>In the T-SQL language, while there is no clause that can be used to SELECT the bottom rows of a table, there is a TOP clause that retrieves the top rows of a table.
 
 For its evaluation, this query only downloads 10 rows, with only the fields that you requested from the `fact_Sale` table. This query took an average of 31 seconds to be processed in a standard instance of Power BI dataflows (which accounts for the evaluation and loading of data to dataflows).
 
@@ -296,8 +296,8 @@ Transforms can be grouped into the following categories:
 - Use the step folding indicators to check which steps are preventing your query from folding. Reorder them if necessary to increase folding.
 - Use the query plan to determine which transforms are happening at the Power Query engine for that particular step. Consider rearranging your query to check the updated query plan. For data sources that support folding, any nodes in the query plan other than `Value.NativeQuery` and data source access nodes represent transforms that didn’t fold.
 - The **View Native Query** option is always recommended to make sure that your query can be folded back to the data source. If your step disables this option, you've created a step that stops query folding. Not all sources support this functionality. In those cases, you can rely on the step folding indicators and query plan.
-- Use the query diagnostics tools to your advantage to better understand the requests being sent to your data source when query folding capabilities are available for the connector.
+- Use the query diagnostics tools to better understand the requests being sent to your data source when query folding capabilities are available for the connector.
 - When combining data sourced from the use of multiple connectors, Power Query tries to push as much work as possible to both of the data sources while complying with the privacy levels defined for each data source.
 - Read the article on [privacy levels](dataprivacyfirewall.md) to protect your queries from running against a Data Privacy Firewall error.
-- Use other tools to check query folding from the perspective of the request being received by the data source. Based on the example in this article, you can use the Microsoft SQL Server Profile to check the requests being sent by Power Query and received by the Microsoft SQL Server.
+- Use other tools to check query folding from the perspective of the request being received by the data source. Based on the example in this article, you can use the Microsoft SQL Server Profiler to check the requests being sent by Power Query and received by the Microsoft SQL Server.
 - If you add a new step to a fully folded query and the new step also folds, Power Query might send a new request to the data source instead of using a cached version of the previous result. In practice, this process can result in seemingly simple operations on a small amount of data taking longer to refresh in the preview than expected. This longer refresh is due to Power Query requerying the data source rather than working off a local copy of the data.
