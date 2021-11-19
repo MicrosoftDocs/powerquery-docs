@@ -1,34 +1,33 @@
 ---
-title: Load data into a Dataverse table and build a dataflows monitoring report with Power BI
+title: Load data in a Dataverse table and build a dataflows monitoring report with Power BI
 description: How to use the dataflows connector in Power Automate to create a dataflows monitoring report with Power BI
 author: miquelladeboer
 
 ms.service: powerquery
 ms.reviewer: kvivek
 ms.topic: conceptual
-ms.date: 12/15/2020
+ms.date: 11/12/2021
 ms.author: mideboer
 ---
-# Load Data into a Dataverse table and Build a Dataflows Monitoring Report with Power BI
+# Load data in a Dataverse table and build a dataflows monitoring report with Power BI
 
-## Introduction
+This tutorial demonstrates how to load data in a Dataverse table to create a dataflows monitoring report in Power BI.
 
-In this step-by-step tutorial, we will show you how to set up your own monitoring dashboard for all of your dataflows:
+![Image of an example Power BI data monitoring dashboard.](media/dashboard.PNG)
 
-![example of monitoring dashboard.](media/dashboard.PNG)
+You can use this dashboard to monitor your dataflows' refresh duration and failure count. With this dashboard, you can track any issues with your dataflows performance and share the data with others.
 
-You can use this dashboard to monitor your dataflows' refresh duration and failure count. With this dashboard, you can track any issues with your dataflows performance and share the data with others. 
+First, you'll create a new Dataverse table that stores all the metadata from the dataflow run. For every refresh of a dataflow, a record is added to this table. You can also store metadata for multiple dataflow runs in the same table. After the table is created, you'll connect the Power BI file to the Dataverse table.
 
-First, you will create a new Dataverse table which stores all the metadata from the dataflow run. For every refresh of a dataflow, a record is added to this table. You can also store metadata for multiple dataflows runs in the same table. After the table is created, you will connect the Power BI file to the Dataverse table.
-
-![dataverse tutorial overview.](media/dataverse.PNG)
+![Dataverse tutorial overview.](media/dataverse.PNG)
 
 ## Prerequisites
+
 * [Power BI Desktop](https://www.microsoft.com/download/details.aspx?id=58494).
 
 * A [Dataverse environment](/powerapps/maker/common-data-service/data-platform-intro) with permissions to create new custom tables.
 
-* A [Premium Power Automate Licence](/power-platform/admin/pricing-billing-skus).
+* A [Premium Power Automate License](/power-platform/admin/pricing-billing-skus).
 
 * A [Power BI dataflow](/power-bi/transform-model/dataflows/dataflows-introduction-self-service) or [Power Platform dataflow](/powerapps/maker/common-data-service/create-and-use-dataflows).
 
@@ -38,67 +37,68 @@ First, download the Dataverse [.pbit file](https://download.microsoft.com/downlo
 
 ## Create a new table in Dataverse
 
-* Navigate to the [Power Apps portal](https://powerapps.microsoft.com/).
+1. Navigate to the [Power Apps portal](https://powerapps.microsoft.com/).
 
-* Follow these [instructions](/powerapps/maker/common-data-service/create-custom-entity) to create a new table.
+2. On the left navigation pane expand **Data**, select **Tables**, and then select **New table**.
 
-* In the right pane, enter the following values, and then select `Create`
-    * **Display name**: "Dataflow Name"
-    * **Data type**: Text
-    * **Required**: Checked
+   [![Image with the new table dialog opened.](media/new-table-dialog.png)](media/new-table-dialog.png#lightbox)
 
-* Repeat adding column for the following values
-    * **Display name**: "Refresh Status", **Data type**: Text, **Required**: Checked.
-    * **Display name**: "Refresh Type", **Data type**: Text, **Required**: Checked.
-    * **Display name**: "Start Time", **Data type**: Date and Time, **Required**: Checked.
-    * **Display name**: "End Time", **Data type**: Date and Time, **Required**: Checked.
+3. In the **New table** pane:
+   1. Enter **Dataflows Monitoring** in **Display name**.
+   1. Under **Primary Name Column**, enter **Dataflow name** in **Display name**.
+   1. Select **Create**.
+
+4. Select **Add column** to repeat adding columns for the following values:
+
+   * **Display name**: "Refresh Status", **Data type**: Text, **Required**: Required.
+   * **Display name**: "Refresh Type", **Data type**: Text, **Required**: Required.
+   * **Display name**: "Start Time", **Data type**: Date and Time, **Required**: Required.
+   * **Display name**: "End Time", **Data type**: Date and Time, **Required**: Required.
+
+   [![Image with the new column dialog opened.](media/new-column-dialog.png)](media/new-column-dialog.png#lightbox)
 
 ## Create a dataflow
 
-If you do not already have one, create a dataflow. This can be done in either [Power BI dataflows](/power-bi/transform-model/dataflows/dataflows-introduction-self-service) or [Power Apps dataflows](/powerapps/maker/common-data-service/create-and-use-dataflows).
+If you don't already have one, create a dataflow. You can create a dataflow in either [Power BI dataflows](/power-bi/transform-model/dataflows/dataflows-introduction-self-service) or [Power Apps dataflows](/powerapps/maker/common-data-service/create-and-use-dataflows).
 
-## Create a Power Automate Flow
+## Create a Power Automate flow
 
-* Navigate to [Power Automate](https://flow.microsoft.com).
-* Create a new **automated cloud flow**
+1. Navigate to [Power Automate](https://flow.microsoft.com).
+2. Select **Create** > **Automated cloud flow**.
+3. Enter a flow name, and then search for the "When a dataflow refresh completes" connector. Select this connector from the list, and then select **Create**.
+4. Customize the connector. Enter the following information on your dataflow:
 
-* Search for the connector "When a dataflow refresh completes (preview)". If you encounter difficulty, see these [instructions](/power-automate/get-started-logic-flow).
-* Customize the connector. You need to enter information on your dataflow:
-    * **Group Type**: Select *Environment* when connecting to Power Apps and *Workspace* when connecting to Power BI.
-    * **Group**: Select the Power Apps environment or the Power BI workspace your dataflow is in.
-    * **Dataflow**: Select your dataflow by name.
+   * **Group Type**: Select *Environment* when connecting to Power Apps and *Workspace* when connecting to Power BI.
+   * **Group**: Select the Power Apps environment or the Power BI workspace your dataflow is in.
+   * **Dataflow**: Select your dataflow by name.
 
-* Click on **new step** to add an action to your flow.
-* Search for the connector "Create a new record" form Dataverse.
-* Customize the connector. You need to enter information:
-    * **Environment**: Select your Dataverse environment.
-    * **Entity Name**: Select the entity named "Dataflows Monitoring" which you previously created. 
+5. Select **New step** to add an action to your flow.
+6. Search for the "Add a new row" connector from Dataverse, and then select it.
+7. In **Add a new row**, select **Choose a table** and then choose **Dataflows Monitoring** from the list.
 
+   ![Image with the dataflows monitoring fields in the add a new row dialog box.](media/table-choice.png)
 
-![example of template.](media/connector.PNG)
+8. For every required field, you need to add a dynamic value. This value is the output of the metadata of the dataflow that's run.
+    1. Select the field next to **Dataflow Name** and then select **Dataflow Name** from the dynamic content.
 
-* Add dynamic values to the required fields.
+       [![Image with the dataflow name dynamic content added to the dataflow name field.](media/dynamic.png)](media/dynamic.png#lightbox)
 
-    For every required field, you need to add a dynamic value. This value is the output of the metadata of the dataflow run. 
-    * Select the field next to **Dataflow ID** and then select the lightning button.
-    
-    ![example of lightning button.](media/dynamic.png)
+    2. Repeat this process for all required fields.
 
-    * Repeat this process for all required fields.
-    
-    ![example of required fields.](media/final.PNG)  
+       ![Image of the Add a new row connector with all the fields filled in with dynamic content.](media/final.PNG)  
 
-* Save the flow.
+9. Save the flow.
 
 ## Create a Power BI Report
 
-* Open the `.pbit` file.
+1. Open the `.pbit` file.
 
-* Connect to your Dataverse entity **Dataflow Monitoring**.
+2. Connect to your Dataverse entity **Dataflows Monitoring**.
 
-In this dashboard, you can monitor, for every dataflow in your specified time interval:
-* the dataflow duration
-* the dataflow count
-* the dataflow failure count
+In this dashboard, for every dataflow in your specified time interval, you can monitor:
 
-The uniqueID for every dataflow is generated by a merge between the dataflow name and the dataflow start time.
+* The dataflow duration
+* The dataflow count
+* The dataflow failure count
+
+The unique ID for every dataflow is generated by a merge between the dataflow name and the dataflow start time.
