@@ -504,8 +504,8 @@
           href: HandlingDataAccess.md
         - name: "ODBC development"
           items:
-          - name: "Overview"
-            href: odbc.md#overview
+          - name: "Enabling DirectQuery for an ODBC based connector"
+            href: odbc.md
           - name: "ODBC extensibility functions"
             href: odbc.md#odbc-extensibility-functions
           - name: "Parameters for your Data Source function"

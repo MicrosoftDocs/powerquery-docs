@@ -11,7 +11,7 @@ ms.author: gepopell
 LocalizationGroup: reference
 ---
 
-# Enabling Direct Query for an ODBC based connector
+# Enabling DirectQuery for an ODBC based connector
 
 Using M's built-in [Odbc.DataSource](/powerquery-m/odbc-datasource) function is the recommended way to create custom connectors for data sources that have an existing ODBC driver and/or support a SQL query syntax. Wrapping the [Odbc.DataSource](/powerquery-m/odbc-datasource) function will allow your connector to inherit default query folding
 behavior based on the capabilities reported by your driver. This will enable the M engine to generate SQL statements based on filters and other transformations defined by the user within the Power Query experience, without having to provide this logic within the connector itself.
