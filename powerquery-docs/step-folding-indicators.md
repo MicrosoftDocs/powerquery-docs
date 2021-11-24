@@ -1,10 +1,11 @@
 ---
 title: Step folding indicators in Power Query
 description: Step folding indicators in Power Query Online allow you to understand what steps fold and give insight into how to build more performant queries.
-author: cpopell
+author: ptyx507
 ms.service: powerquery
-ms.date: 11/17/2021
-ms.author: ptyx507
+ms.date: 11/23/2021
+ms.author: dougklo
+ms.reviewer: dougklo
 ---
 
 # Step folding indicators
@@ -25,7 +26,7 @@ When looking at step diagnostics, the most important thing to understand is that
 
 You can see an example of this even with a simple query against a SQL source.
 
-Using the [AdventureWorks sample database](https://docs.microsoft.com/sql/samples/adventureworks-install-configure), connect to the Products table and load data. Doing this through the Navigation experience will give the following query:
+Using the [AdventureWorks sample database](/sql/samples/adventureworks-install-configure), connect to the Products table and load data. Doing this through the Navigation experience will give the following query:
 
 ```
 let

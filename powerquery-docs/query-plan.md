@@ -1,14 +1,12 @@
 ---
 title: Query plan
 description: An article that describes why and how to use the new Query plan feature in Power Query.  
-author: dougklo
-
+author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: quickstart
-ms.date: 11/17/2021
+ms.date: 11/23/2021
 ms.author: dougklo
 ms.reviewer: dougklo
-
 localizationgroup: reference
 ---
 
@@ -81,7 +79,7 @@ You've identified the **Kept bottom rows** step as a step of interest since it d
 
 [![Query plan dialog that showcases a diagram view for the query plan with nodes connected by lines.](media/query-plan/query-plan-diagram-sample-query.png)](media/query-plan/query-plan-diagram-sample-query.png#lightbox)
 
-Power Query tries to optimize your query by taking advantage of lazy evaluation and query folding, as mentioned in [Query folding basics](query-folding-basics.md). This query plan represents the optimized translation of your M query into the native query that's sent to the data source. It also includes any transforms that are performed by the Power Query Engine. The order in which the nodes appears follows the order of your query starting from the last step or output of your query which is represented on the far left of the diagram and in this case is the *Table.LastN* node that represents the *Kept bottom rows* step. 
+Power Query tries to optimize your query by taking advantage of lazy evaluation and query folding, as mentioned in [Query folding basics](query-folding-basics.md). This query plan represents the optimized translation of your M query into the native query that's sent to the data source. It also includes any transforms that are performed by the Power Query Engine. The order in which the nodes appear follows the order of your query starting from the last step or output of your query, which is represented on the far left of the diagram and in this case is the *Table.LastN* node that represents the *Kept bottom rows* step.
 
 At the bottom of the dialog, there's a bar with icons that help you zoom in or out of the query plan view, and other buttons to help you manage the view. For the previous image, the *Fit to view* option from this bar was used to better appreciate the nodes.
 
