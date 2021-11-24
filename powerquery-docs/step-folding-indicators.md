@@ -40,9 +40,9 @@ If you look at how this shows up in step folding indicators, you can see that th
 
 ![Source and Navigation steps in Folding Indicator pane.](images/interpreting-step-diagnostics-1.png)
 
-You can see that the initial steps doesn't fold, but the final step generated when you load data initially does fold. How the first steps (**Source**, and sometimes other **Navigation** steps) are handled depends on the connector. With SQL, for example, it's handled as a catalog table value, which doesn't fold. However, as soon as you select data for that connector it will.
+You can see that the initial steps don't fold, but the final step generated when you load data initially does fold. How the first steps (**Source**, and sometimes other **Navigation** steps) are handled depends on the connector. With SQL, for example, it's handled as a catalog table value, which doesn't fold. However, as soon as you select data for that connector it will.
 
-Conversely, this can also mean that your query folds up to a point and then stops folding. Unlike in the case where you have a folding indicator for the step, which shows that everything folds, when you have a not folding indicator it doesn't mean that everything doesn't fold - instead it means that "not everything" folds. Generally, everything up to the last folding indicator will fold, with more operations happening after.
+Conversely, this can also mean that your query folds up to a point and then stops folding. Unlike in the case where you have a folding indicator for the step, which shows that everything folds when you have a not-folding indicator it doesn't mean that everything doesn't fold. Instead, it means that "not everything" folds. Generally, everything up to the last folding indicator will fold, with more operations happening after.
 
 Modifying the example from above, you can give a transform that never folds - *Capitalize Each Word*.
 
@@ -66,7 +66,7 @@ Step folding indicators use an underlying query plan, and require it to be able 
 |Indicator|Icon|Description|
 |---------|----|-------|
 |**Folding**|![Folding indicator for 'will fold'.](images/folding-small.png)|The folding indicator tells you that the query up to this step will be evaluated by the data source.|
-|**Not folding**|![Folding indicator for 'not folding'.](images/not-folding-small.png)|The not folding indicator tells you that some part of the query up to this step will be evaluated outside the data source. You can compare it with the last folding indicator, if there is one, to see if you can rearrange your query to be more performant.|
+|**Not folding**|![Folding indicator for 'not folding'.](images/not-folding-small.png)|The not-folding indicator tells you that some part of the query up to this step will be evaluated outside the data source. You can compare it with the last folding indicator, if there is one, to see if you can rearrange your query to be more performant.|
 |**Might fold**|![Folding indicator for 'might fold'.](images/might-fold-small.png)|Might fold indicators are uncommon. They mean that a query 'might' fold. They indicate either that folding/not folding will be determined at runtime, when pulling results from the query, and that the query plan is dynamic. These will likely only appear with ODBC or OData connections. |
 |**Opaque**|![Folding indicator for 'opaque, inconclusive folding'.](images/opaque-folding-small.png)|Opaque indicators tell you that the resulting query plan is inconclusive for some reason. It generally indicates that there is a true 'constant' table, or that that transform or connector is not supported by the indicators and query plan tool.|
 |**Unknown**|![Folding indicator for 'no query plan'.](images/no-query-plan-small.png)|Unknown indicators represent an absence of query plan, either due to an error or attempting to run the query plan evaluation on something other than a table (such as a record, list, or primitive).|
