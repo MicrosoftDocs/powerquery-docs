@@ -1,11 +1,11 @@
 ---
 title: Query plan
 description: An article that describes why and how to use the new Query plan feature in Power Query.  
-author: ptyx507
+author: dougklo
 
 ms.service: powerquery
 ms.topic: quickstart
-ms.date: 6/12/2021
+ms.date: 11/17/2021
 ms.author: dougklo
 ms.reviewer: dougklo
 
@@ -81,7 +81,7 @@ You've identified the **Kept bottom rows** step as a step of interest since it d
 
 [![Query plan dialog that showcases a diagram view for the query plan with nodes connected by lines.](media/query-plan/query-plan-diagram-sample-query.png)](media/query-plan/query-plan-diagram-sample-query.png#lightbox)
 
-Power Query tries to optimize your query by taking advantage of lazy evaluation and query folding, as mentioned in [Query folding basics](query-folding-basics.md). This query plan represents the optimized translation of your M query into the native query that's sent to the data source. It also includes any transforms that are done locally.  
+Power Query tries to optimize your query by taking advantage of lazy evaluation and query folding, as mentioned in [Query folding basics](query-folding-basics.md). This query plan represents the optimized translation of your M query into the native query that's sent to the data source. It also includes any transforms that are performed by the Power Query Engine. The order in which the nodes appears follows the order of your query starting from the last step or output of your query which is represented on the far left of the diagram and in this case is the *Table.LastN* node that represents the *Kept bottom rows* step. 
 
 At the bottom of the dialog, there's a bar with icons that help you zoom in or out of the query plan view, and other buttons to help you manage the view. For the previous image, the *Fit to view* option from this bar was used to better appreciate the nodes.
 
@@ -94,8 +94,8 @@ At the bottom of the dialog, there's a bar with icons that help you zoom in or o
 
 You can identify the nodes in this diagram as two groups:
 
-* **Folded nodes**: This node can be either `Value.NativeQuery` or "data source" nodes such as `Sql.Database`.
-* **Non-folded nodes**: Other table operators, such as `Table.SelectRows`, `Table.SelectColumns`, and other functions that couldn't be folded.
+* **Folded nodes**: This node can be either `Value.NativeQuery` or "data source" nodes such as `Sql.Database`. These can also be identified with the label ***remote*** under their function name.
+* **Non-folded nodes**: Other table operators, such as `Table.SelectRows`, `Table.SelectColumns`, and other functions that couldn't be folded. These can also be identified with the labels ***Full scan*** and ***Streaming***.
 
 The following image shows the folded nodes inside the red rectangle. The rest of the nodes couldn't be folded back to the data source. You'll need to review the rest of the nodes since the goal is to attempt to have those nodes fold back to the data source.
 
@@ -105,7 +105,7 @@ You can select **View details** at the bottom of some nodes to display extended 
 
 [![Details view for the Value.NativeQuery node in the query plan.](media/query-plan/query-plan-view-details.png)](media/query-plan/query-plan-view-details.png#lightbox)
 
-The query shown here might not be exactly the same query sent to the data source, but it's a good approximation. The node next to it, [Table.LastN](/powerquery-m/table-lastn), is calculated locally by the Power Query engine, as it can't be folded.
+The query shown here might not be exactly the same query sent to the data source, but it's a good approximation. For this case, it tells you exactly what columns will be queried from the SalesOrderHeader table and then how it will filter that table using the TotalDue field to only get rows where the value for that field is larger than 1000. The node next to it, [Table.LastN](/powerquery-m/table-lastn), is calculated locally by the Power Query engine, as it can't be folded.
 
 >[!NOTE]
 >The operators might not exactly match the functions used in the query's script.
@@ -128,7 +128,7 @@ This alternative is equivalent to the original query. While this alternative in 
 Implement the alternative discussed in the previous section:
 
 1. Close the query plan dialog and go back to the Power Query Editor.
-2. Remove the Kept bottom rows step.
+2. Remove the *Kept bottom rows* step.
 3. Sort the **SalesOrderID** column in descending order.
 
    ![Sorting the SalesOrderID column in descending order using the autofilter menu.](media/query-plan/sort-descending.png)
