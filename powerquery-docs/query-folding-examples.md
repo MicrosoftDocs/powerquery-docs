@@ -97,7 +97,7 @@ Consulting this query can help you better understand the story that the query pl
 - `Table.LastN`: Once Power Query receives all records from the `fact_Sale` table, it uses the Power Query engine to filter the table and keep only the last 10 rows.
 - `Table.SelectColumns`: Power Query will use the output of the `Table.LastN` node and apply a new transform called `Table.SelectColumns`, which selects the specific columns that you want to keep from a table.
 
-For its evaluation, this query had to download all rows and fields from the `fact_Sale` table. This query took an average of 3 minutes and 4 seconds to be processed in a standard instance of Power BI dataflows (which accounts for the evaluation and loading processed of data to dataflows).
+For its evaluation, this query had to download all rows and fields from the `fact_Sale` table. This query took an average of 3 minutes and 4 seconds to be processed in a standard instance of Power BI dataflows (which accounts for the evaluation and loading of data to dataflows).
 
 ## Partial query folding example
 
@@ -144,7 +144,7 @@ You can right-click the last step of your query, the one named `Kept bottom rows
 
 ![Query plan showing multiple nodes where the `Table.LastN` node, shown inside a rectangle, is a node that will be evaluated by the Power Query engine and not by the data source.](media/query-folding-basics/partial-folding-query-plan.png)
 
-Each box in the previous image is called a `node`. A node represents every process that needs to happen (from left to right) in order for your query to be evaluated. Some of these nodes can be evaluated at your data source while others, like the node for `Table.LastN`, represented by the **Kept bottom rows** step, are evaluated using the Power Query engine.
+Each box in the previous image is called a *node*. A node represents every process that needs to happen (from left to right) in order for your query to be evaluated. Some of these nodes can be evaluated at your data source while others, like the node for `Table.LastN`, represented by the **Kept bottom rows** step, are evaluated using the Power Query engine.
 
 To see the exact query that is sent to your data source, select **View details** in the `Value.NativeQuery` node.
 
@@ -213,7 +213,7 @@ Consulting this query can help you better understand the story that the query pl
 - `Value.NativeQuery`: Power Query submits the data requests in a native SQL statement to the data source. For this case, that represents a request for only the top 10 records of the `fact_Sale` table, with only the required fields after being sorted in descending order using the `Sale Key` field.
 
 >[!NOTE]
->In the T-SQL language, while there is no clause that can be used to SELECT the bottom rows of a table, there is a TOP clause that retrieves the top rows of a table.
+>While there's no clause that can be used to SELECT the bottom rows of a table in the T-SQL language, there's a TOP clause that retrieves the top rows of a table.
 
 For its evaluation, this query only downloads 10 rows, with only the fields that you requested from the `fact_Sale` table. This query took an average of 31 seconds to be processed in a standard instance of Power BI dataflows (which accounts for the evaluation and loading of data to dataflows).
 
@@ -259,7 +259,7 @@ When requesting data from a data source, the data source needs to compute the re
 For the showcased examples, Power Query had to request over 3.6 million rows from the data source for the no query folding and partial query folding examples. For the full query folding example, it only requested 10 rows. For the fields requested, the no query folding example requested all the available fields from the table. Both the partial query folding and the full query folding examples only submitted a request for exactly the fields that they needed.
 
 >[!CAUTION]
->We recommend that you implement incremental refresh solutions that leverage query folding for queries or entities with large amounts of data. Different product integrations of Power Query implement timeouts to terminate long running queries. Some data sources also implement timeouts on long running sessions, trying to execute expensive queries against their servers.
+>We recommend that you implement incremental refresh solutions that leverage query folding for queries or entities with large amounts of data. Different product integrations of Power Query implement timeouts to terminate long running queries. Some data sources also implement timeouts on long running sessions, trying to execute expensive queries against their servers. More information: [Using incremental refresh with dataflows](/power-query/dataflows/incremental-refresh) and [Incremental refresh for datasets](/power-bi/connect-data/incremental-refresh-overview)
 
 ### Transforms executed by the Power Query engine
 
@@ -288,13 +288,13 @@ Transforms can be grouped into the following categories:
 | | |
 
 >[!TIP]
->While not every single transform requires the same resources to compute its resources, it's often more optimal to have a small number of nodes to show in the query plan.
+>While not every transform is the same from a performance standpoint, in most cases, having fewer transforms is usually better.
 
 ## Considerations and suggestions
 
 - Follow the best practices when creating a new query, as stated in [Best practices in Power Query](best-practices.md).
 - Use the step folding indicators to check which steps are preventing your query from folding. Reorder them if necessary to increase folding.
-- Use the query plan to determine which transforms are happening at the Power Query engine for that particular step. Consider rearranging your query to check the updated query plan. For data sources that support folding, any nodes in the query plan other than `Value.NativeQuery` and data source access nodes represent transforms that didn’t fold.
+- Use the query plan to determine which transforms are happening at the Power Query engine for a particular step. Consider modifying your existing query by re-arranging your steps. Then check the query plan of the last step of your query again and see if the query plan looks better than the previous one. For example, the new query plan has less nodes than the previous one, and most of the nodes are “Streaming” nodes and not “full scan”. For data sources that support folding, any nodes in the query plan other than `Value.NativeQuery` and data source access nodes represent transforms that didn’t fold.
 - The **View Native Query** option is always recommended to make sure that your query can be folded back to the data source. If your step disables this option, you've created a step that stops query folding. Not all sources support this functionality. In those cases, you can rely on the step folding indicators and query plan.
 - Use the query diagnostics tools to better understand the requests being sent to your data source when query folding capabilities are available for the connector.
 - When combining data sourced from the use of multiple connectors, Power Query tries to push as much work as possible to both of the data sources while complying with the privacy levels defined for each data source.
