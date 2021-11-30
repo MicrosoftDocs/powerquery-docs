@@ -506,24 +506,16 @@
           items:
           - name: "Enabling DirectQuery for an ODBC based connector"
             href: odbc.md
-          - name: "ODBC extensibility functions"
-            href: odbc.md#odbc-extensibility-functions
-          - name: "Parameters for your Data Source function"
-            href: odbc.md#parameters-for-your-data-source-function
           - name: "Parameters for Odbc.DataSource"
-            href: odbc.md#parameters-for-odbcdatasource
+            href: odbc-parameters.md
           - name: "Troubleshooting and testing"
-            href: odbc.md#troubleshooting-and-testing
+            href: odbc-troubleshooting.md
         - name: "Handling resource path"
           href: HandlingResourcePath.md
         - name: "Handling paging"
           href: HandlingPaging.md
         - name: "Handling transformations"
-          items:
-          - name: "Static"
-            href: HandlingTransformations.md#static-transformations
-          - name: "Dynamic"
-            href: HandlingTransformations.md#dynamic-transformations
+          href: HandlingTransformations.md
         - name: "Handling schemas"
           href: HandlingSchema.md
         - name: "Handling status codes"
