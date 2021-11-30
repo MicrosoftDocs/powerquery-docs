@@ -19,7 +19,7 @@ LocalizationGroup: reference
 
 ## Introduction
 
-Certifying a Power Query custom connector makes the connector available publicly, out-of-box, within Power BI Desktop. Certification is governed by Microsoft's Connector Certification Program, where Microsoft works with partner developers to extend the data connectivity capabilities of Power BI.
+Certifying a Power Query custom connector makes the connector available publicly, out-of-box, within Power BI Desktop. Certified Connectors are supported in PowerBI.com and all versions of Power BI Premium, except Dataflows. Certification is governed by Microsoft's Connector Certification Program, where Microsoft works with partner developers to extend the data connectivity capabilities of Power BI.
 
 Certified connectors are:
 
