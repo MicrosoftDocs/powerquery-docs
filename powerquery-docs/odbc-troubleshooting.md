@@ -61,7 +61,7 @@ Once you have simple queries working, you can then try DirectQuery scenarios (fo
 The M engine does basic type size limit validation as part of its query folding logic. If you're receiving a folding error when trying to concatenate two strings that potentially overflow the maximum size of the underlying database type:
 
 1. Ensure that your database can support up-conversion to CLOB types when string concatenation overflow occurs.
-2. Set the `TolerateConcatOverflow` [option](#parameters-for-odbcdatasource) for `Odbc.DataSource` to `true`.
+2. Set the [TolerateConcatOverflow option](odbc-parameters.md#tolerate) for `Odbc.DataSource` to `true`.
 
 >[!Note]
 > The [DAX CONCATENATE function](/dax/concatenate-function-dax) is currently not supported by Power Query/ODBC extensions.

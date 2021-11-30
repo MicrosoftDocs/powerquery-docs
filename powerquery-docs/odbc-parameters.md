@@ -30,6 +30,8 @@ The following table describes the public fields in the options record.
 
 The following table describes the options record fields that are only available through extensibility. Fields that aren't simple literal values are described in later sections.
 
+<a id="tolerate"></a>
+
 | Field | Description |
 | --- | --- |
 | `AstVisitor` | A record containing one or more overrides to control SQL query generation. The most common usage of this field is to provide logic to generate a LIMIT/OFFSET clause for drivers that don't support TOP.<br/><br/>Fields include `Constant` and `LimitClause`.<br/><br/>More information: [Overriding AstVisitor](#overriding-astvisitor) |
