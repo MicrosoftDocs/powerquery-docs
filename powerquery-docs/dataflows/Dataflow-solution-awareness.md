@@ -69,13 +69,17 @@ For security reasons, credentials of connections leveraged by dataflows are not 
 
    ![Screenshot showing power query prompting for credentials.](./media/dataflows-solution-awareness/Solutions_dataflows_after_Import_03.png)
 
-4. One credentials have been updated, all queries that leverage that connection should automatically load and the datalfow. If your dataflow loads data into Dataverse Tables, click next to review the mapping configuration.
+Once the credentials for the connection have been updated, all queries that leverage that connection should automatically load. 
+
+4. If your dataflow loads data into Dataverse Tables, click next to review the mapping configuration.
 
    ![Screenshot showing power query prompting for credentials.](./media/dataflows-solution-awareness/Solutions_dataflows_after_Import_05.png)
 
 5. The mapping configuration is also saved as part of the solution. Since we also added the destination table to the solutions, there is no need to re-create the table in this environment and you can publish the dataflow:
 
    ![Screenshot showing power query prompting for credentials.](./media/dataflows-solution-awareness/Solutions_dataflows_after_Import_06.png)
+   
+   Thats it. Your dataflow will now refresh and load data into the destiantion table.
 
 ## Knowns limitations
 
