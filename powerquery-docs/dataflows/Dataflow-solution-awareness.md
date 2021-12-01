@@ -1,8 +1,11 @@
 ---
 title: Dataflows in Solutions
 description: Overview of Dataflows in solutions, special considerations and limitation
-author: Ben Sack
+author: bensack
 ms.author: bensack
+ms.service: powerquery 
+ms.topic: conceptual 
+ms.date: 12/01/2021 
 
 ---
 # Overview of solution-aware dataflows
