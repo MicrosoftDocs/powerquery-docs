@@ -24,7 +24,7 @@ Follow these steps to add a dataflow to a solution.
 
 ### Prerequisites
 
-* You need to have created a solution before you can add a dataflow to it. More information: [Create solutions](https://docs.microsoft.com/powerapps/maker/data-platform/create-solution)
+* You need to have created a solution before you can add a dataflow to it. More information: [Create solutions](/powerapps/maker/data-platform/create-solution)
 * You need to be the owner of at least one dataflow in the environment. More information: [Create dataflows](/data-integration/dataflows/dataflows-integration-overview)
 
 ### Add the dataflow
@@ -40,20 +40,20 @@ Follow these steps to add a dataflow to a solution.
 
 4. Select **Add Exiting**, then **Automation** and finally, **Dataflow**.
 
-   ![Screen showing the different types of items that can be created with dataflow highlighted.](./media/dataflows-solution-awareness/Solutions_03_AddExistingDataflow.png)
+   ![Screen showing add existing dataflow option highlighted.](./media/dataflows-solution-awareness/Solutions_03_AddExistingDataflow.png)
 
 5. Optional: If your dataflow loads data into a custom Dataverse Table, add the custom table to the solution as well.
    
    In this example, the dataflow we added to the solution loads data into a custom table called Full Order Details which we want to also include in the solution with the dataflow.
 
    Once both Dataflow and table it loads data to were added to the solution, it should appear like this:
-    ![Screenshot showing the two added artifact](./media/dataflows-solution-awareness/Solutions_06_ComponentsAdded.png)
+    ![Screenshot showing the two artifacts added to the solution](./media/dataflows-solution-awareness/Solutions_06_ComponentsAdded.png)
 
    To save your work, be sure to publish all customizations. Now, the solution is ready for exporting from the source environment and importing to the destination environment.
 
 ## Exporting and Importing solutions containing dataflows
 
-Exporting and importing solutions containing dataflows is identical to performing the same operations for other artifacts. For the most up-to-date instructions, see documentation on [exporting](https://docs.microsoft.com/powerapps/maker/data-platform/export-solutions) and [importing](https://docs.microsoft.com/powerapps/maker/data-platform/import-update-export-solutions) solutions.
+Exporting and importing solutions containing dataflows is identical to performing the same operations for other artifacts. For the most up-to-date instructions, see documentation on [exporting](/powerapps/maker/data-platform/export-solutions) and [importing](/powerapps/maker/data-platform/import-update-export-solutions) solutions.
 
 ## Updating a dataflow's connections after solution import
 
@@ -73,11 +73,11 @@ Once the credentials for the connection have been updated, all queries that leve
 
 4. If your dataflow loads data into Dataverse Tables, click next to review the mapping configuration.
 
-   ![Screenshot showing power query prompting for credentials.](./media/dataflows-solution-awareness/Solutions_dataflows_after_Import_05.png)
+   ![Screenshot showing all queries with data loaded after connection credentials have been provided.](./media/dataflows-solution-awareness/Solutions_dataflows_after_Import_05.png)
 
 5. The mapping configuration is also saved as part of the solution. Since we also added the destination table to the solutions, there is no need to re-create the table in this environment and you can publish the dataflow:
 
-   ![Screenshot showing power query prompting for credentials.](./media/dataflows-solution-awareness/Solutions_dataflows_after_Import_06.png)
+   ![Screenshot showing map tables experience with pre-configured selections.](./media/dataflows-solution-awareness/Solutions_dataflows_after_Import_06.png)
    
    Thats it. Your dataflow will now refresh and load data into the destiantion table.
 
