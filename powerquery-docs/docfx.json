@@ -44,7 +44,8 @@
       "feedback_github_repo": "MicrosoftDocs/powerquery-docs",
       "feedback_product_url": "https://docs.microsoft.com/power-query/feedback",
       "searchScope": ["Power Query"],
-      "recommendations": true 
+      "recommendations": true,
+      "titleSuffix": "Power Query" 
     },
     "fileMetadata": {},
     "template": [],
