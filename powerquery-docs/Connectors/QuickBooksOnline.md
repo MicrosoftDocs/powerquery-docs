@@ -5,7 +5,7 @@ author: dougklopfenstein
 
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 8/31/2021
+ms.date: 12/1/2021
 ms.author: bezhan
 
 LocalizationGroup: reference
@@ -81,7 +81,3 @@ Beginning on August 1, 2020, Intuit will no longer support Microsoft Internet Ex
 For more information, see [Alert: Support for IE11 deprecating on July 31, 2020 for Authorization screens](https://blogs.intuit.com/blog/2020/06/27/alert-support-for-ie11-deprecating-on-july-31-2020-for-authorization-screens/).
 
 For information about current Microsoft Edge support in Power BI Desktop, go to [Enabling Microsoft Edge (Chromium) for OAuth Authentication in Power BI Desktop](../oauth-edge-chromium.md).
-
-## Next steps
-
-* [QuickBooks Power BI integration](https://powerbi.microsoft.com/integrations/quickbooks-online/)
