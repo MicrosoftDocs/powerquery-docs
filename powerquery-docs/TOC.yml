@@ -24,6 +24,8 @@
         href: applied-steps.md
       - name: "Query folding basics"
         href: query-folding-basics.md
+      - name: "Query folding examples"
+        href: query-folding-examples.md
       - name: "Using the data profiling tools"
         href: data-profiling-tools.md
       - name: "Using the Queries pane"
