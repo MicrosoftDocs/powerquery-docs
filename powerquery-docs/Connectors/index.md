@@ -230,8 +230,8 @@ The connectors are listed in alphabetical order in separate tables for each lett
 | | | | | | | |
 
 <sup>1</sup> Available in [dataflows for Microsoft Teams](../dataflows/dataflows-teams.md).<br/>
-<sup>2</sup> PDF isn't supported in Power BI Premium.<br/>
-<sup>3</sup> Parquet doesn't work in the 32-bit version of Power BI Desktop.
+<sup>2</sup> The PDF connector isn't supported in Power BI Premium.<br/>
+<sup>3</sup> The Parquet connector isn’t supported in the 32-bit version of Power BI Desktop.
 
 ## Q
 
