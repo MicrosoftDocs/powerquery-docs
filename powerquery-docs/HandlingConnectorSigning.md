@@ -5,8 +5,8 @@ author: cpopell
 
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 10/27/2021
-ms.author: gepopell
+ms.date: 12/1/2021
+ms.author: dougklo
 
 LocalizationGroup: reference
 ---
@@ -20,10 +20,10 @@ The exception to this is trusted, 'signed connectors'. Signed connectors are a s
 The following steps enable you to use a certificate (with an explanation on how to generate one if you don't have one available) and sign a custom connector with the 'MakePQX' tool.
 
 >[!Note]
-> If you need help creating a self-signed certificate to test these instructions, see the Microsoft documentation on [New-SelfSignedCertificate in PowerShell](/powershell/module/pki/new-selfsignedcertificate).
+> If you need help creating a self-signed certificate to test these instructions, go to the Microsoft documentation on [New-SelfSignedCertificate in PowerShell](/powershell/module/pki/new-selfsignedcertificate).
 
 >[!Note]
-> If you need help exporting your certificate as a pfx, see [How to create a PKCS#12 (PFX) file on a Windows server](https://knowledge.digicert.com/solution/SO26065.html). 
+> If you need help exporting your certificate as a pfx, go to [Export-PfxCertificate](/powershell/module/pki/export-pfxcertificate).
 
 1. Download [MakePQX](https://aka.ms/makepqx).
 
