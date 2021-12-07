@@ -72,7 +72,7 @@ Before you start to follow this article:
 
     You can specify a different primary-name column, map a different column in the source table to each column in the table that you're creating, or both. You can also specify whether Text columns in your query output should be created as either Multiline Text or Single-Line Text in the Dataverse. To follow this tutorial exactly, leave the default column mapping.
 
-1. Select **Refresh manually** for Power Query - Refresh Settings, and then select **Create**.
+1. Select **Refresh manually** for Power Query - Refresh Settings, and then select **Publish**.
 
 1. Under **Data** (near the left edge), select **Tables** to show the list of tables in your database.
 
