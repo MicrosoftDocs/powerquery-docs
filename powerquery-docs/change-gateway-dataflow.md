@@ -46,6 +46,6 @@ After changing your data gateway, t is always recommended to check your data sou
 >
 >The Path value is derived from the required parameters of your data source function and for this example that would be the folder path.
 
-The best way to validate the data source path is to go into the query where your data source function is being used and check the parameters being used for it. For this example, there is only one query that connects to a folder and this query has the *Source* step with the data source path defined in it. You can double click the Source step to get the dialog that will show you the parameters used for your data source function and make sure that the folder path, or the correct parameters for your data source function, is the correct one in relation to the gateway being used.
+The best way to validate the data source path is to go into the query where your data source function is being used and check the parameters being used for it. For this example, there is only one query that connects to a folder and this query has the *Source* step with the data source path defined in it. You can double-click the Source step to get the dialog that will show you the parameters used for your data source function and make sure that the folder path, or the correct parameters for your data source function, is the correct one in relation to the gateway being used.
 
 ![](media\change-gateway\data-source-path.png)
