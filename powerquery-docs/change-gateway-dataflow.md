@@ -12,7 +12,7 @@ ms.reviewer: dougklo
 When creating a new dataflow project in Power Query Online, you can select the gateway used for your specific data sources during the get data experience. This article showcases how you can modify or assign a gateway to an existing dataflow project.
 
 >[!NOTE]
->Before being able to change a gateway, make sure that you have the needed gateways already registered under your tenant and with access for the authors of the dataflow project. You can learn more about data gateways from [Using an on-premises data gateway in Power Platform dataflows](https://docs.microsoft.com/power-query/dataflows/using-dataflows-with-on-premises-data).
+>Before being able to change a gateway, make sure that you have the needed gateways already registered under your tenant and with access for the authors of the dataflow project. You can learn more about data gateways from [Using an on-premises data gateway in Power Platform dataflows](using-dataflows-with-on-premises-data.md).
 
 ## Changing the gateway
 
