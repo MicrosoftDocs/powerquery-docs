@@ -11,18 +11,39 @@ ms.custom: intro-internal
 
 # Getting data
 
-## Power Query Online experience
-
-## Power Query Desktop experience
-
-Power Query can connect to many different data sources so you can work with the data you need. This article walks you through the steps for bringing in data to Power Query.
+Power Query can connect to many different data sources so you can work with the data you need. This article walks you through the steps for bringing in data to Power Query either in the Power Query Desktop or the Power Query Online experience.
 
 Connecting to a data source with Power Query follows a standard set of stages before landing the data at a destination. This article describes each of these stages.
 
 >[!NOTE]
 >In some cases, a connector might have all of these stages, and in other cases a connector might have just a few of them. For more information about the experience of a specific connector, go to the documentation available for the specific connector.
 
-The stages are:
+## Power Query Online experience
+
+The stages for getting data in Power Query Online are:
+
+1. Connection settings and Authentication
+
+2. Data preview
+
+3. Query destination
+
+![Flow diagram showing the three stages of getting data in Power Query Online.](images/getting-data-pqo-flow.png "Flow diagram showing the three stages of getting data in Power Query Online")
+
+### 1. Connection settings and Authentication
+
+* parameters
+* authentication
+* connection name 
+* gateway
+
+### 2. Data preview
+
+### 3. Query destination
+
+## Power Query Desktop experience
+
+The stages for getting data in the Power Query Desktop experience sare:
 
 1. Connection settings
 
