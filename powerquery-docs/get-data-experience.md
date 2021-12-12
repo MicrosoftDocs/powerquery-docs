@@ -138,20 +138,61 @@ In the Power Query online experience you are greeted with the *Connect to data s
 
 #### Connection Settings
 
-This is the section where you are able to define the information needed to establish a connection to your data source. Depending on your connector, that could be the name of the server, database, a folder path, file path, or other information required by the connector in order to establish a connection to your data source. Some connectors also enable advanced sections or specific sub-sections to give you more control and options on how to connect to your data source.
+This is the section where you are able to define the information needed to establish a connection to your data source. Depending on your connector, that could be the name of the server, name of a database, a folder path, a file path, or other information required by the connector in order to establish a connection to your data source. Some connectors also enable advanced sections or specific sub-sections to give you more control and options on how to connect to your data source.
 
 ![Connect to data source dialog when using the SQL Server database connector that showcases the Connection settings with the advanced options section expanded](images/connection-settings-pqo-advanced.png)
 
 #### Connection credentials
 
-* parameters
-* authentication
-* connection name 
-* gateway
+The first time that you use Power Query, you will be required to create a new connection against your data source. A connection is the full definition of the gateway, credentials, privacy levels and other connector-specific fields related to the connection credentials that are required to establish a connection to your data source. 
 
 >[!NOTE]
->Some Power Query integrations do not currently enable you to establish a defined connection or a privacy level, but all Power Query online experiences do provide a way to define the data gateway, authentication kind, and the credentials that need to be used.
+>Some connector offer specific fields inside the connection credentials section to enable or define any sort of security related to the connection that needs to be established. As an example, the SQL Server connector offers the *Use Encrypted Connection* field as shown in the previous images.
+
+![Connect to data source dialog with all information to create a new connection entered](images/connect-to-data-source-pqo-credentials-entered.png)
+
+The primary information required by all connectors to define a connection are:
+
+* **Connection name:** This is the name that you can define to uniquely identify your connections. Note that you can not duplicate the name of a connection in your environment.
+* **Data gateway:** If your data source requires a data gateway, you can select what gateway to use using the dropdown from this field.
+* **Authentication kind & credentials:** Depending on the connector, you might be presented with multiple options of what authentication kind are available to establish a connection as well as where to enter the credentials. For this example, the image shows that the Windows authentication kind has been selected and you are able to see the *Username* and *Password* fields to establish a connection.
+* **Privacy level:**
+
+>[!NOTE]
+>You can learn more about what data gateways are and how to register a new gateway for your environment or tenant from the article on [Using on-premises data gateway](using-dataflows-with-on-premises-data.md).
+
+>[!IMPORTANT]
+>Some Power Query integrations do not currently enable you to establish a defined connection or a privacy level, but all Power Query online experiences do provide a way to define the data gateway, authentication kind, and the credentials needed to establish a connection with your data source.
+
+You can define a connection once and re-use it later on when using the Power Query online experience again so you don't have to re-enter all this information again. The *Connection* field offers a dropdown menu where you can select your already defined connections. When selecting a connection from this menu, you will only have access to enter the credentials, privacy level, and other connector-specific fields for your data source in your project.
+
+![Connect to data source dialog where the connection name was picked from the dropdown menu inside the connection field](images/connect-to-data-source-pqo-pick-connection.png)
 
 ### 2. Data preview
 
+The goal of the data preview stage is to provide you with a user-friendly way to preview and select your data.
+
+Depending on the connector that you're using, you can preview data by using either:
+
+* Navigator window
+* Table preview dialog box
+
+#### Navigator window (navigation table)
+
+The **Navigator** window consists of two main sections:
+
+* The object selection pane is displayed on the left side of the window. The user can interact with and select these objects.
+    
+* The data preview pane on the right side of the window shows a preview of the data from the object you selected.
+
+![SQL Server connector navigator window.](images/pqo-navigator-window.png "SQL Server connector navigator window")
+
+#### Table preview dialog box
+
+The table preview dialog box consists of only one section for the data preview. An example of a connector that provides this experience and window is the [Folder](connectors/folder.md) connector.
+
+![Table preview dialog box.](images/combinefiles1.png "Table preview dialog box")
+
 ### 3. Query destination
+
+This is the stage in which you specify where to load the query. For the Power Query online experience, you are required to load the data into the Power Query Editor where you can further transform and enrich the query if you choose to do so.
