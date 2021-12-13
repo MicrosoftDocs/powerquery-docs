@@ -1,6 +1,6 @@
 ---
 title: "Getting data"
-description: "Overview of the Power Query get data experience and all its components, such as connector parameters, authentication, navigation table, and query destination."
+description: "Overviews of the Power Query get data experience and all its components, such as connector parameters, authentication, navigation table, and query destination."
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: kvivek
@@ -15,8 +15,9 @@ Power Query can connect to many different data sources so you can work with the 
 
 Connecting to a data source with Power Query follows a standard set of stages before landing the data at a destination. This article describes each of these stages.
 
+<!--
 >[!NOTE]
->To better understand how to get data using the different product integrations of Power Query, you can read the article on [Where to get data](where-to-get-data.md).
+>To better understand how to get data using the different product integrations of Power Query, you can read the article on [Where to get data](where-to-get-data.md)//]-->
 
 >[!IMPORTANT]
 >In some cases, a connector might have all stages of the get data experience, and in other cases a connector might have just a few of them. For more information about the experience of a specific connector, go to the documentation available for the specific connector by searching on the [Connectors in Power Query article](connectors.md).
@@ -164,7 +165,7 @@ The primary information required by all connectors to define a connection are:
 >[!IMPORTANT]
 >Some Power Query integrations do not currently enable you to establish a defined connection or a privacy level, but all Power Query online experiences do provide a way to define the data gateway, authentication kind, and the credentials needed to establish a connection with your data source.
 
-You can define a connection once and re-use it later on when using the Power Query online experience again so you don't have to re-enter all this information again. The *Connection* field offers a dropdown menu where you can select your already defined connections. When selecting a connection from this menu, you will only have access to enter the credentials, privacy level, and other connector-specific fields for your data source in your project.
+You can define a connection once and reuse it later on when using the Power Query online experience again so you don't have to reenter all this information again. The *Connection* field offers a dropdown menu where you can select your already defined connections. When selecting a connection from this menu, you will only have access to enter the credentials, privacy level, and other connector-specific fields for your data source in your project.
 
 ![Connect to data source dialog where the connection name was picked from the dropdown menu inside the connection field](images/connect-to-data-source-pqo-pick-connection.png)
 
