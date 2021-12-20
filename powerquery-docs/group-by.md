@@ -1,6 +1,6 @@
 ---
 title: "Grouping or summarizing rows"
-description: "In Power Query, you can group or summarize the values in various rows into a single value by grouping the rows according to the values in one or more columns. Power Query has two types of Group By operations: aggregate a column with an aggregate function, or perform a row operation."
+description: "In Power Query, you can group or summarize the values in various rows into a single value by grouping the rows according to the values in one or more columns. Power Query has two types of Group By operations: aggregate a column with an aggregate function, or perform an operation."
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: kvivek
@@ -15,7 +15,7 @@ In Power Query, you can group values in various rows into a single value by grou
 
 * Aggregate a column by using an aggregate function.
 
-* Perform a row operation.
+* Perform an operation.
 
 For this tutorial, you'll be using the sample table shown in the following image.
 
@@ -55,13 +55,31 @@ This operation gives you the table that you're looking for.
 
 ![Sample output table with aggregated columns.](images/me-group-by-add-aggregated-column-final.png "Sample output table with aggregated columns")
 
-## Perform a row operation to group by one or more columns
+## Operations available
 
-In this example, you want total units sold and&mdash;in addition&mdash;you want two other columns that give you the name and units sold for the top-performing product, summarized at the country and sales channel level. 
+With the **Group by** feature, the operations available can be categorized into two groups:
 
-Your goal is to reach a table that looks like the following image from your original sample table.
+* Aggregations based on a single column
+* Operations based on a row
 
-![Sample output table with row operations.](images/me-group-by-row-operation-final-table.png "Sample output table with row operations")
+The following table describes each of these operations.
+|Category|Operation Name|Description|
+|-----|------|------|
+|Column aggregation|Sum|???|
+|Column aggregation|Average|???|
+|Column aggregation|Median|???|
+|Column aggregation|Min|???|
+|Column aggregation|Max|???|
+|Column aggregation|Count distinct values|???|
+|Row level operation|Count rows|???|
+|Row level operation|Count distinct rows|???|
+|Row level operation|All rows|???|
+
+## Perform an operation to group by one or more columns
+
+In this example, you want total units sold and&mdash;in addition&mdash;you want two other columns that give you the name and units sold for the top-performing product, summarized at the country and sales channel level.
+
+![Sample output table with operations.](images/me-group-by-row-operation-final-table.png "Sample output table with operations")
 
 1. Use the following columns as **Group by** columns:
    * Country
@@ -127,6 +145,7 @@ For each group of rows, Power Query will pick the most frequent instance as the 
 However, you have more control over the fuzzy grouping operation by expanding **Fuzzy group options**.
 
 ![Fuzzy group options.](images/me-fuzzy-grouping-fuzzy-group-options.png "Fuzzy group options")
+
 
 The following options are available for fuzzy grouping:
 
