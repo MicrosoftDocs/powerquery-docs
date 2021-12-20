@@ -146,12 +146,12 @@ However, you have more control over the fuzzy grouping operation by expanding **
 
 ![Fuzzy group options.](images/me-fuzzy-grouping-fuzzy-group-options.png "Fuzzy group options")
 
-
 The following options are available for fuzzy grouping:
 
 * **Similarity threshold (optional)**: This option indicates how similar two values must be to be grouped together. The minimum setting of 0 will cause all values to be grouped together. The maximum setting of 1 will only allow values that match exactly to be grouped together. The default is 0.8.
 * **Ignore case**: When comparing text strings, case will be ignored. This option is enabled by default.
 * **Group by combining text parts**: The algorithm will try to combine text parts (such as combining **Micro** and **soft** into **Microsoft**) to group values.
+* **Show similarity scores**: Show similarity scores between the input values and the computed representative values after fuzzy grouping. Requires the addition of an operation such as *All rows* to showcase this information on a row by row level.
 * **Transformation table (optional)**: You can select a transformation table that will map values (such as mapping **MSFT** to **Microsoft**) to group them together.
 
 For this example, a transformation table will be used to demonstrate how values can be mapped. The transformation table has two columns:
@@ -166,7 +166,7 @@ The following image shows the transformation table used in this example.
 >[!IMPORTANT]
 >It's important that the transformation table has a the same columns and column names as shown above (they have to be "From" and "To"), otherwise Power Query will not recognize these.
 
-Return to the **Group by** dialog box, expand **Fuzzy group options**, and then select the **Transformation table** drop-down menu.
+Return to the **Group by** dialog box, expand **Fuzzy group options**, change the operation from *Count rows* to *All rows*, enable the **Show similarity scores** option and then select the **Transformation table** drop-down menu.
 
 ![Fuzzy grouping sample transformation table drop-down menu.](images/me-fuzzy-grouping-sample-transformation-table-window.png "Fuzzy grouping sample transformation table drop-down menu")
 
@@ -176,6 +176,8 @@ After selecting your transformation table, select **OK**. The result of that ope
 
 In this example, the **Ignore case** option was enabled, so the values in the **From** column of the **Transformation table** will be used to look for the text string without considering the case of the string. This transformation operation occurs first, and then the fuzzy grouping operation is performed. 
 
+You can also see how the similarity score is shown in the table value next to the person column which reflects exactly how the values were grouped and their respective similarity scores. You have the option to expand this column if needed or use the values from the new Frequency columns for other sort of transformations.
+ 
 >[!NOTE]
 >When grouping by multiple columns, the transformation table will perform the replace operation in all columns if replacing the value increases the similarity score.
 
