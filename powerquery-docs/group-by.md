@@ -63,6 +63,7 @@ With the **Group by** feature, the operations available can be categorized into 
 * Operations based on a row
 
 The following table describes each of these operations.
+
 |Category|Operation Name|Description|
 |-----|------|------|
 |Column aggregation|Sum|???|
