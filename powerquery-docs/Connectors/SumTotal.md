@@ -9,9 +9,9 @@
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Dynamics 365 Customer Insights |
+| Products | Power BI (Datasets) |
 | Authentication types | SumTotal credentials via OAuth2.0 |
-| Function Reference Documentation | Web.Conents <br> Table.ToNavigationTable <br>Table.FromRecords <br> Json.Document|
+| Function Reference Documentation | [Web.Contents](#https://docs.microsoft.com/en-us/powerquery-m/web-contents) <br> [Table.ToNavigationTable](https://docs.microsoft.com/en-us/power-query/helperfunctions#tabletonavigationtable) <br>[Table.FromRecords](https://docs.microsoft.com/en-us/powerquery-m/table-fromrecords) <br> [Json.Document](https://docs.microsoft.com/en-us/powerquery-m/json-document)|
 | | |
 
 ## Prerequisites
@@ -25,7 +25,7 @@ You must have a SumTotal hosted environment with standard permissions to access 
 * Advanced
    * Optionally filter records by RowVersionId parameter to get incremental data
 
-## Finding your Sumtotal Hosted URL
+## Finding your Sumtotal hosted URL
 
 Copy the SumTotal hosted root URL in full. This root URL is the unique URL specific to customer. The URL will be in the format of **https://\<*yourcustomerdomain*>.sumtotal.host/**. Make sure not to copy the rest of the URL. Keep this URL somewhere handy so you can use it later.
 
