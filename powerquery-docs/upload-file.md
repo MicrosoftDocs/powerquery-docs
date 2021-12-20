@@ -11,7 +11,7 @@ ms.custom: intro-internal
 
 # Upload a file (Preview)
 
-You can upload files to your Power Query project when using the Power Query online experience. 
+You can upload files to your Power Query project when using the Power Query online experience.
 
 ## Upload a file experience
 
