@@ -153,7 +153,7 @@ The **Open file as** dropdown will let you edit what you want to load the file a
 
 ## Text/CSV by Example
 
-*Text/CSV By Example* in Power Query is a generally available feature in Power BI Desktop. When you use the Text/CSV connector, you'll see an option to **Extract Table Using Examples** on the bottom-left corner of the navigator.
+*Text/CSV By Example* in Power Query is a generally available feature in Power BI Desktop and Power Query online. When you use the Text/CSV connector, you'll see an option to **Extract Table Using Examples** on the bottom-left corner of the navigator.
 
 ![Using the Extract Table Using Examples option.](./media/text-csv/extract-table-using-examples.png)
 
@@ -167,9 +167,6 @@ When you select that button, you’ll be taken into the **Extract Table Using Ex
 Once you’re done constructing that table, you can either select to load or transform the data. Notice how the resulting queries contain a detailed breakdown of all the steps that were inferred for the data extraction. These steps are just regular query steps that you can customize as needed.
 
 ![Detailed breakdown of steps for data extraction.](./media/text-csv/data-extraction-steps.png)
-
->[!Note]
-This feature is being released soon in Power Query Online. More information: [Text/CSV by example data extraction](/power-platform-release-plan/2021wave1/data-integration/textcsv-example-data-extraction) 
 
 ## Troubleshooting
 
