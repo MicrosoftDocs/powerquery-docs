@@ -64,17 +64,17 @@ With the **Group by** feature, the operations available can be categorized into 
 
 The following table describes each of these operations.
 
-|Category|Operation Name|Description|
+|Operation Name|Category|Description|
 |-----|------|------|
-|Column aggregation|Sum|Sums up all values from a column of numbers|
-|Column aggregation|Average|Calculates the average value from a column of numbers|
-|Column aggregation|Median|Calculates the median from a column of numbers|
-|Column aggregation|Min|Calculates the minimum value from a column of numbers|
-|Column aggregation|Max|Calculates the maximum value from a column of numbers|
-|Column aggregation|Count distinct values|Calculate the number of distinct values from a column|
-|Row level operation|Count rows|Calculates the total number of rows from a given group|
-|Row level operation|Count distinct rows|Calculates the number of distinct rows from a give group|
-|Row level operation|All rows|Outputs all grouped rows in a table value with no aggregations|
+|**Sum**|Column aggregation|Sums up all values from a column of numbers|
+|**Average**|Column aggregation|Calculates the average value from a column of numbers|
+|**Median**|Column aggregation|Calculates the median from a column of numbers|
+|**Min**|Column aggregation|Calculates the minimum value from a column of numbers|
+|**Max**|Column aggregation|Calculates the maximum value from a column of numbers|
+|**Count distinct values**|Column aggregation|Calculate the number of distinct values from a column|
+|**Count rows**|Row level operation|Calculates the total number of rows from a given group|
+|**Count distinct rows**|Row level operation|Calculates the number of distinct rows from a give group|
+|**All rows**|Row level operation|Outputs all grouped rows in a table value with no aggregations|
 
 ## Perform an operation to group by one or more columns
 
