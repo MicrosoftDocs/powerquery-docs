@@ -13,9 +13,9 @@ ms.custom: edited
 
 In Power Query, you can group values in various rows into a single value by grouping the rows according to the values in one or more columns. You can choose from two types of grouping operations:
 
-* Aggregate a column by using an aggregate function.
+* Column groupings.
 
-* Perform an operation.
+* Row groupings.
 
 For this tutorial, you'll be using the sample table shown in the following image.
 
@@ -57,24 +57,24 @@ This operation gives you the table that you're looking for.
 
 ### Operations available
 
-With the **Group by** feature, the operations available can be categorized into two groups:
+With the **Group by** feature, the operations available can be categorized into two either:
 
-* Aggregations based on a single column
-* Operations based on a row
+* Row level operation
+* Column level operation
 
 The following table describes each of these operations.
 
 |Operation Name|Category|Description|
 |-----|------|------|
-|**Sum**|Column aggregation|Sums up all values from a column of numbers|
-|**Average**|Column aggregation|Calculates the average value from a column of numbers|
-|**Median**|Column aggregation|Calculates the median from a column of numbers|
-|**Min**|Column aggregation|Calculates the minimum value from a column of numbers|
-|**Max**|Column aggregation|Calculates the maximum value from a column of numbers|
-|**Count distinct values**|Column aggregation|Calculate the number of distinct values from a column|
-|**Count rows**|Row level operation|Calculates the total number of rows from a given group|
-|**Count distinct rows**|Row level operation|Calculates the number of distinct rows from a give group|
-|**All rows**|Row level operation|Outputs all grouped rows in a table value with no aggregations|
+|**Sum**|Column operation|Sums up all values from a column of numbers|
+|**Average**|Column operation|Calculates the average value from a column of numbers|
+|**Median**|Column operation|Calculates the median from a column of numbers|
+|**Min**|Column operation|Calculates the minimum value from a column of numbers|
+|**Max**|Column operation|Calculates the maximum value from a column of numbers|
+|**Count distinct values**|Column operation|Calculate the number of distinct values from a column|
+|**Count rows**|Row operation|Calculates the total number of rows from a given group|
+|**Count distinct rows**|Row operation|Calculates the number of distinct rows from a given group|
+|**All rows**|Row operation|Outputs all grouped rows in a table value with no aggregations|
 
 ## Perform an operation to group by one or more columns
 
@@ -152,7 +152,7 @@ The following options are available for fuzzy grouping:
 * **Similarity threshold (optional)**: This option indicates how similar two values must be to be grouped together. The minimum setting of 0 will cause all values to be grouped together. The maximum setting of 1 will only allow values that match exactly to be grouped together. The default is 0.8.
 * **Ignore case**: When comparing text strings, case will be ignored. This option is enabled by default.
 * **Group by combining text parts**: The algorithm will try to combine text parts (such as combining **Micro** and **soft** into **Microsoft**) to group values.
-* **Show similarity scores**: Show similarity scores between the input values and the computed representative values after fuzzy grouping. Requires the addition of an operation such as *All rows* to showcase this information on a row by row level.
+* **Show similarity scores**: Show similarity scores between the input values and the computed representative values after fuzzy grouping. Requires the addition of an operation such as *All rows* to showcase this information on a row-by-row level.
 * **Transformation table (optional)**: You can select a transformation table that will map values (such as mapping **MSFT** to **Microsoft**) to group them together.
 
 For this example, a transformation table will be used to demonstrate how values can be mapped. The transformation table has two columns:
@@ -177,7 +177,7 @@ After selecting your transformation table, select **OK**. The result of that ope
 
 In this example, the **Ignore case** option was enabled, so the values in the **From** column of the **Transformation table** will be used to look for the text string without considering the case of the string. This transformation operation occurs first, and then the fuzzy grouping operation is performed. 
 
-You can also see how the similarity score is shown in the table value next to the person column which reflects exactly how the values were grouped and their respective similarity scores. You have the option to expand this column if needed or use the values from the new Frequency columns for other sort of transformations.
+You can also see how the similarity score is shown in the table value next to the person column, which reflects exactly how the values were grouped and their respective similarity scores. You have the option to expand this column if needed or use the values from the new Frequency columns for other sort of transformations.
  
 >[!NOTE]
 >When grouping by multiple columns, the transformation table will perform the replace operation in all columns if replacing the value increases the similarity score.
