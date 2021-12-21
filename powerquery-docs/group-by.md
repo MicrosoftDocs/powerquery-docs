@@ -66,15 +66,15 @@ The following table describes each of these operations.
 
 |Category|Operation Name|Description|
 |-----|------|------|
-|Column aggregation|Sum|???|
-|Column aggregation|Average|???|
-|Column aggregation|Median|???|
-|Column aggregation|Min|???|
-|Column aggregation|Max|???|
-|Column aggregation|Count distinct values|???|
-|Row level operation|Count rows|???|
-|Row level operation|Count distinct rows|???|
-|Row level operation|All rows|???|
+|Column aggregation|Sum|Sums up all values from a column of numbers|
+|Column aggregation|Average|Calculates the average value from a column of numbers|
+|Column aggregation|Median|Calculates the median from a column of numbers|
+|Column aggregation|Min|Calculates the minimum value from a column of numbers|
+|Column aggregation|Max|Calculates the maximum value from a column of numbers|
+|Column aggregation|Count distinct values|Calculate the number of distinct values from a column|
+|Row level operation|Count rows|Calculates the total number of rows from a given group|
+|Row level operation|Count distinct rows|Calculates the number of distinct rows from a give group|
+|Row level operation|All rows|Outputs all grouped rows in a table value with no aggregations|
 
 ## Perform an operation to group by one or more columns
 
