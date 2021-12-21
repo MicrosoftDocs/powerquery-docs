@@ -55,7 +55,7 @@ This operation gives you the table that you're looking for.
 
 ![Sample output table with aggregated columns.](images/me-group-by-add-aggregated-column-final.png "Sample output table with aggregated columns")
 
-## Operations available
+### Operations available
 
 With the **Group by** feature, the operations available can be categorized into two groups:
 
