@@ -157,7 +157,7 @@ The primary information required by all connectors to define a connection are:
 * **Connection name:** This is the name that you can define to uniquely identify your connections. Note that you can not duplicate the name of a connection in your environment.
 * **Data gateway:** If your data source requires a data gateway, you can select what gateway to use using the dropdown from this field.
 * **Authentication kind & credentials:** Depending on the connector, you might be presented with multiple options of what authentication kind are available to establish a connection as well as where to enter the credentials. For this example, the image shows that the Windows authentication kind has been selected and you are able to see the *Username* and *Password* fields to establish a connection.
-* **Privacy level:**
+* **Privacy level:** You can define the privacy level for your data source to be either None, Private, Organizational or Public.
 
 >[!NOTE]
 >You can learn more about what data gateways are and how to register a new gateway for your environment or tenant from the article on [Using on-premises data gateway](using-dataflows-with-on-premises-data.md).
