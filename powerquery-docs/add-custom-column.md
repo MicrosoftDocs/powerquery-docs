@@ -81,9 +81,12 @@ Power Query adds your custom column to the table and adds the **Added custom** s
 
 ![Custom column added to the applied steps list.](images/me-add-custom-column-reconfigure.png "Custom column added to the applied steps list")
 
-To modify your custom column, select the **Added custom** step in the **Applied steps** list. 
+To modify your custom column, select the **Added custom** step in the **Applied steps** list.
 
 The **Custom column** dialog box appears with the custom column formula you created.
+
+>[!NOTE]
+>Depending on the formula that you've used for your custom column, Power Query changes the settings behavior of your step for a more simplified and native experience. For this example, you can see how the **Added custom** step changed its behavior from a standard custom column step to a *Multiplication* experience because the formula from that step only multiplies the values from two columns.
 
 ## Next steps
 
