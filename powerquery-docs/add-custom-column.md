@@ -1,10 +1,10 @@
 ---
 title: Add a custom column
 description: An article that demonstrates how to create a custom column in Power Query
-author: ptyx507
+author: ptyx507X
 ms.service: powerquery
 ms.reviewer: kvivek
-ms.date: 06/08/2020
+ms.date: 12/22/2021
 ms.author: dougklo
 ms.custom: edited
 ---
@@ -38,9 +38,11 @@ The **Custom column** dialog box appears. This dialog box is where you define th
 
 The **Custom column** dialog box contains:
 
-* An **Available columns** list on the right.
-
 * The initial name of your custom column in the **New column name** box. You can rename this column.
+
+* A dropdown menu where you can select the data type for your new column.
+
+* An **Available columns** list on the right underneath the Data type field.
 
 * [Power Query M formula](/powerquery-m/power-query-m-function-reference) in the **Custom column formula** box.  
 
@@ -51,7 +53,7 @@ To add a new custom column, select a column from the **Available columns** list 
 
 ### Adding the Total Sale before Discount column
 
-The formula that you can use to create the **Total Sale before Discount** column is `[Units] * [Unit Price]`. The following image shows how it will look in the **Custom column** dialog box.
+The formula that you can use to create the **Total Sale before Discount** column is `[Units] * [Unit Price]`. From the *Data type* menu, select the data type that reads Currency. The following image shows how it will look in the **Custom column** dialog box.
 
 ![Custom column formula for Total Sale before Discount.](images/me-add-custom-column-total-sale-before-discount.png "Custom column formula for Total Sale before Discount")
 
@@ -59,29 +61,19 @@ The result of that operation will add a new **Total Sale before Discount** colum
 
 ![Table with new custom column called Total Sale before Discount showing the price without the discount.](images/me-add-custom-column-total-sale-before-discount-column.png "Table with new Total Sale before Discount custom column")
 
+
+>[!NOTE]
+>If you are using the Power Query desktop experience, you will notice that the Data type field is not available in the *Add custom column* dialog. This will mean that you will need to define a data type for them after creating the columns. You can learn more about defining a data type to a column from the article on [Data types in Power Query](data-types.md#how-to-define-a-column-data-type).
+
 ### Adding the Total Sale after Discount column
 
-The formula that you can use to create the **Total Sale before Discount** is `[Total Sale before Discount]* (1-[Discount]) `. The following image shows how it will look in your **Custom column** dialog box.
+The formula that you can use to create the **Total Sale before Discount** is `[Total Sale before Discount]* (1-[Discount]) `. Set the data type of this new column to be Currency. The following image shows how it will look in your **Custom column** dialog box.
 
 ![Custom column formula for Total Sale after Discount.](images/me-add-custom-column-total-sale-after-discount.png "Custom column formula for Total Sale after Discount")
 
 The result of that operation will add a new **Total Sale after Discount** column to your table and will look like the following image.
 
 ![Table with new custom column called Total Sale after Discount showing the price with the discount applied.](images/me-add-custom-column-total-sale-after-discount-column.png "Table with new Total Sale after Discount custom column")
-
-### Setting the column data types
-
-Notice that your new columns don't have a data type defined yet. You can tell this by looking at the icon in the header of the column that has the data type icon (ABC123). You'll want to change the data types of both new columns to Currency. 
-
-1. Select both the **Total Sale before Discount** and **Total Sale after Discount** columns.
-
-2. On the **Home** tab, in the **Transform** group, select **Data type** > **Currency**.
-
-![Data types on the Home tab.](images/me-add-custom-column-data-types.png "Data types on the Home tab")
-
-After defining the data types for both columns, you'll create a table that looks like the following image.
-
-![Sample final table.](images/me-add-custom-column-final-table.png "Sample final table")
 
 ## Modify an existing custom column
 
