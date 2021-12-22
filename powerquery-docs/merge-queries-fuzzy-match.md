@@ -1,10 +1,10 @@
 ---
 title: "Fuzzy merge"
 description: "Finding approximate matches with Fuzzy Matching in Power Query's merge operations"
-author: ptyx507
+author: ptyx507X
 ms.service: powerquery
 ms.reviewer: 
-ms.date: 07/22/2020
+ms.date: 12/22/2021
 ms.author: dougklo
 ms.custom: edited
 ---
