@@ -134,6 +134,13 @@ After defining these fields, a new grid will pop up where you will be able to en
 
 ![New Interesting Orders list parameter with the values 125, 777 and 999 in the values grid](images/me-list-parameter-dialog.png)
 
+>[!NOTE]
+> While this example uses numbers, you can also store other data types in your list from such as text, dates, datetime and more. Read more about [data types in Power Query](data-types.md).
+
+>[!TIP]
+>If you wish to have more control on what values are used in your list parameter, you can always create a list with constant values and convert your list query to a parameter as showcased previously in this article.
+
+
 With the new **Interesting Orders** list parameters in place, you can head back to the Orders query and click the auto-filter menu of the **OrderID** field to find the sub-menu for *Numbers filters*, and inside the sub-menu find the **In..** option.
 
 ![In.. option inside the Numbers filters sub-menu for the OrderID column](images/me-numbers-filters-in-list-parameter.png)
@@ -148,6 +155,3 @@ After selecting this option, a new *Filter rows* dialog will appear where you ar
 After clicking the OK button, you'll be taken back to your query where you'll be able to see how your query has been filtered using the list parameter that you've created and only kept the rows where the OrderID was equal to either **125**, **777** or **999**.
 
 ![Final table after being filtered using both the Interesting Orders list parameter and the Minimum Margin of 10%](images/me-final-output-list-parameter.png)
-
->[!TIP]
->If you wish to have more control on what values are used in your list parameter, you can always create a list with constant values and convert your list query to a parameter as showcased previously in this article.
