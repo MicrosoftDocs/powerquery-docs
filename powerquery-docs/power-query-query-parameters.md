@@ -119,6 +119,35 @@ You can test this new function by entering a value, such as 0.4, in the field un
 
 You can learn more about how to create custom functions from the article [Creating a custom function](custom-function.md).
 
-## About Multi-value or list parameters
+## Multi-value or list parameters
 
-<insert here the new functionality>
+A new type of parameter available only in the Power Query Online experience are multi-value or list parameters. This section will showcase how to create a new list parameter and how to use it in your queries.
+
+Following the previous sample, change the current value for Minimum Margin from **0.3** to **0.1**.  The new goal is to create a list parameter that can hold the order numbers of the orders that you're interested in analyzing. To create the new parameter you can go to the *Manage Parameter* dialog and click the *New* button to create a new parameter. The name of this new parameter will have the following information:
+
+* **Name:** Interesting Orders
+* **Description:** A set of of order numbers which are interesting for a specific analysis
+* **Required:** True
+* **Type:** List
+
+After defining these fields, a new grid will pop up where you will be able to enter the values that you want to store for your parameter. In this case those values are **125**, **777** and **999** as shown in the image below.
+
+![New Interesting Orders list parameter with the values 125, 777 and 999 in the values grid](images/me-list-parameter-dialog.png)
+
+With the new **Interesting Orders** list parameters in place, you can head back to the Orders query and click the auto-filter menu of the **OrderID** field to find the sub-menu for *Numbers filters*, and inside the sub-menu find the **In..** option.
+
+![In.. option inside the Numbers filters sub-menu for the OrderID column](images/me-numbers-filters-in-list-parameter.png)
+
+After selecting this option, a new *Filter rows* dialog will appear where you are able to select the list parameter from a drop-down menu.
+
+![Filter rows dialog showing the in operator where you can use the new Interesting Orders list parameter](images/me-filter-rows-list-parameter.png)
+
+>[!NOTE]
+>List parameters can work with either the **In...** or **Not in...** options. The **In...** allows you to filter by only the values from your list, while the **Not in...** does exactly the opposite and tries to filter your column to get all values that are not equal to the values stored in your parameter.
+
+After clicking the OK button, you'll be taken back to your query where you'll be able to see how your query has been filtered using the list parameter that you've created and only kept the rows where the OrderID was equal to either **125**, **777** or **999**.
+
+![Final table after being filtered using both the Interesting Orders list parameter and the Minimum Margin of 10%](images/me-final-output-list-parameter.png)
+
+>[!TIP]
+>If you wish to have more control about what values are used in your list parameter, you can always create a list with constant values and convert your list query to a parameter as showcased previously in this article.
