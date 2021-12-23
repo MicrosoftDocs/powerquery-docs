@@ -101,7 +101,7 @@ If you modify the **Current Value** of your **Minimum Margin** parameter to be 0
 ![Updated Current Value for parameter.](images/me-parameters-step-argument-sample-parameter-updated.png)
 
 >[!TIP]
-> Multiple transformations in Power Query offer this experience where you can select your parameter from a dropdown. So we recommend that you always look for it and take advantage of what parameters can offer you. 
+> Multiple transformations in Power Query offer this experience where you can select your parameter from a dropdown. So we recommend that you always look for it and take advantage of what parameters can offer you.
 
 ### Custom function argument
 
@@ -113,7 +113,7 @@ You can name this new function however you want. For demonstration purposes, the
 
 ![Function created.](images/me-parameters-function-created.png)
 
-You can test this new function by entering a value, such as 0.4, in the field underneath the **Minimum Margin** label. Then select the **Invoke** button. This will create a new query with the name **Invoked Function**, effectively passing the value 0.4 to be used as the argument for the function and giving you only the rows where the margin is above 40%. 
+You can test this new function by entering a value, such as 0.4, in the field underneath the **Minimum Margin** label. Then select the **Invoke** button. This will create a new query with the name **Invoked Function**, effectively passing the value 0.4 to be used as the argument for the function and giving you only the rows where the margin is above 40%.
 
 ![Invoked function with value 0.4.](images/me-parameters-function-invoked.png)
 
