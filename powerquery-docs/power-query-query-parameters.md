@@ -150,4 +150,4 @@ After clicking the OK button, you'll be taken back to your query where you'll be
 ![Final table after being filtered using both the Interesting Orders list parameter and the Minimum Margin of 10%](images/me-final-output-list-parameter.png)
 
 >[!TIP]
->If you wish to have more control about what values are used in your list parameter, you can always create a list with constant values and convert your list query to a parameter as showcased previously in this article.
+>If you wish to have more control on what values are used in your list parameter, you can always create a list with constant values and convert your list query to a parameter as showcased previously in this article.
