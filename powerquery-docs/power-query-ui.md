@@ -82,11 +82,11 @@ In this section, you'll begin transforming your data using Power Query. But befo
 
 The ribbon is the component where you'll find most of the transforms and actions that you can do in the Power Query editor. It has multiple tabs depending on the product integration and each of the tabs provides specific buttons and options, some of which might be redundant across the whole Power Query experience to provide you with easy access to the transforms and actions that you may need in just a few clicks.
 
-[ ![The Power Query user interface with the standard ribbon view on the Home tab.](media/power-query-ui/standard-ribbon.png) ](media/power-query-ui/standard-ribbong.png#lightbox)
+[ ![The Power Query user interface with the standard ribbon view on the Home tab.](media/power-query-ui/standard-ribbon.png) ](media/power-query-ui/standard-ribbon.png#lightbox)
 
 The Power Query interface is responsive and will try to adjust your screen resolution to show you the best experience. In scenarios where you'd like to see a compact version of the ribbon there is also a collapse button at the bottom-right corner for the ribbon to help you switch to the compact ribbon. 
 
-[ ![The Power Query user interface with the compact ribbon view on the Home tab.](media/power-query-ui/compact-ribbon.png) ](media/power-query-ui/compact-ribbong.png#lightbox)
+[ ![The Power Query user interface with the compact ribbon view on the Home tab.](media/power-query-ui/compact-ribbon.png) ](media/power-query-ui/compact-ribbon.png#lightbox)
 
 You can switch back to the standard ribbon view by simply clicking on the expand icon at the bottom-right corner of the ribbon
 
