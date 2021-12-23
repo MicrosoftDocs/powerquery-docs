@@ -1,10 +1,10 @@
 ---
 title: Parameters
 description: An article on how to use parameters in Power Query
-author: ptyx507
+author: ptyx507x
 ms.service: powerquery
 ms.reviewer: 
-ms.date: 08/31/2020
+ms.date: 12/22/2021
 ms.author: dougklo
 ---
 # Using parameters
@@ -121,3 +121,7 @@ You can test this new function by entering a value, such as 0.4, in the field un
 ![Invoked function with value 0.4.](images/me-parameters-function-invoked.png)
 
 You can learn more about how to create custom functions from the article [Creating a custom function](custom-function.md).
+
+## About Multi-value or list parameters
+
+<insert here the new functionality>
