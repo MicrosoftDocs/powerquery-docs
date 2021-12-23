@@ -76,9 +76,6 @@ To enable this feature, first go to the **View** tab in the Power Query Editor a
 
 ![Always allow parameters.](images/me-parameters-always-allow.png)
 
->[!NOTE]
->This feature is currently not available in Power Query Online.
-
 For example purposes, you can see the following **Orders** query with the fields **OrderID**, **Units**, and **Margin**.
 
 ![Sample table for Orders with margin.](images/me-parameters-step-argument-sample-table.png)
