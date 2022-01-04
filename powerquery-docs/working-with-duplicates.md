@@ -32,7 +32,7 @@ One of the operations that you can perform is to remove duplicate values from yo
    ![Remove duplicates.](images/me-working-with-duplicates-remove-duplicates.png "Remove duplicates")
 
 > [!WARNING]
-> There's no guarantee that the first instance in a set of duplicates will be chosen when duplicates are removed. Learn more about how to preserve sorting in the [Common issues](CommonIssues.md##PreservingSort) article.
+> There's no guarantee that the first instance in a set of duplicates will be chosen when duplicates are removed. Learn more about how to preserve sorting in the [Common issues](CommonIssues.md#Preserving-Sort) article.
 
 ### Remove duplicates from multiple columns
 
