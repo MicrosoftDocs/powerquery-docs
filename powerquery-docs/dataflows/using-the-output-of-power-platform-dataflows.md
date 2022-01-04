@@ -1,23 +1,23 @@
 ---
-title: Using the output of Power Platform dataflows from other Power Query experiences
-description: Using the output of Microsoft Power Platform dataflows from other Power Query experiences.
+title: Using the output of Dataflows from other Power Query experiences
+description: Using the output of Dataflows from other Power Query experiences.
 author: radacad
 
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 05/25/2020
-ms.author: bezhan
+ms.date: 01/04/2022
+ms.author: jeluitwi
 
 LocalizationGroup: Data from files
 ---
 
-# Using the output of Microsoft Power Platform dataflows from other Power Query experiences
+# Using the output of Dataflows from other Power Query experiences
 
-You can use the output of Microsoft Power Platform dataflows from the Power Query experience in other products. For example, in Power BI Desktop&mdash;or even in another dataflow&mdash;you can get data from the output of a dataflow. In this article, you'll learn how to do so.
+You can use the output of Microsoft Dataflows from the Power Query experience in other products. For example, in Power BI Desktop&mdash;or even in another dataflow&mdash;you can get data from the output of a dataflow. In this article, you'll learn how to do so.
 
 ## Get data from dataflows in Power BI
 
-If you're using Power BI for data analysis, you can get data from Power Platform dataflows or Power BI dataflows by choosing those data sources.
+If you're using Power BI for data analysis, you can get data from Dataflows by choosing that data source.
 
 ![Get data from Power BI Desktop.](media/GetDatafromDataflow.png)
 
@@ -25,9 +25,9 @@ When you get data from a dataflow, the data is imported into the Power BI datase
 
 ### DirectQuery from dataflows
 
-Power BI dataflows also support a DirectQuery connection. If the size of the data is so large that you don't want to import all of it into the Power BI dataset, you can create a DirectQuery connection. DirectQuery won't copy the data into the Power BI dataset. The tables in the Power BI dataset that get their data from a DirectQuery-sourced dataflow don't need a scheduled refresh, because their data will be fetched live from the dataflow.
+Dataflows also support a DirectQuery connection. If the size of the data is so large that you don't want to import all of it into the Power BI dataset, you can create a DirectQuery connection. DirectQuery won't copy the data into the Power BI dataset. The tables in the Power BI dataset that get their data from a DirectQuery-sourced dataflow don't need a scheduled refresh, because their data will be fetched live from the dataflow.
 
-To use DirectQuery for the dataflows, you need to enable the compute engine on your Power BI Premium capacity, and then refresh the dataflow before it can be consumed in DirectQuery mode. For more information, go to [Power BI Dataflows DirectQuery Support](https://powerbi.microsoft.com/blog/power-bi-dataflows-direct-query-support/).
+To use DirectQuery for the dataflows, you need to enable the compute engine on your Power BI Premium capacity, and then refresh the dataflow before it can be consumed in DirectQuery mode. For more information, go to [Dataflows DirectQuery Support](https://powerbi.microsoft.com/blog/power-bi-dataflows-direct-query-support/).
 
 ![Premium capacity settings for DirectQuery to the dataflow.](/power-bi/transform-model/media/service-dataflows-enhanced-compute-engine/enhanced-compute-engine-01.png)
 
@@ -52,3 +52,4 @@ The following articles provide more details about related articles.
 - [Connect to data created by Power BI dataflows in Power BI Desktop (Beta)](/power-bi/desktop-connect-dataflows)
 - [Create and use dataflows in Power Platform](/data-integration/dataflows/dataflows-integration-overview)
 - [Link entities between dataflows (Power Platform)](/data-integration/dataflows/dataflows-linked-entities)
+- [Working with duplicate values in dataflows](/powerquery-docs/working-with-duplicates)
