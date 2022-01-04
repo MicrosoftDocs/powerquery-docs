@@ -4,8 +4,8 @@ description: Working with duplicate values in Power Query. An article about how 
 author: ptyx507
 ms.service: powerquery
 ms.reviewer: kvivek
-ms.date: 04/28/2021
-ms.author: dougklo
+ms.date: 01/04/2022
+ms.author: jeluitwi
 ms.custom: edited
 ---
 
@@ -32,7 +32,7 @@ One of the operations that you can perform is to remove duplicate values from yo
    ![Remove duplicates.](images/me-working-with-duplicates-remove-duplicates.png "Remove duplicates")
 
 > [!WARNING]
-> There's no guarantee that the first instance in a set of duplicates will be chosen when duplicates are removed.
+> There's no guarantee that the first instance in a set of duplicates will be chosen when duplicates are removed. Learn more about how to preserve sorting in the [Common issues](CommonIssues.md##PreservingSort) article.
 
 ### Remove duplicates from multiple columns
 
