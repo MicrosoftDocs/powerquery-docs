@@ -53,7 +53,7 @@ To get data in Power BI service:
 
 1. On the left side of Power BI service, select **Workspaces** (but not **My Workspace**)
 
-2. From the Workspace drop down, select the workspace you want to use.
+2. From the Workspace context menu, select the workspace you want to use.
 
 3. From the workspace (in this example, TestWorkspace01), select the drop-down menu next to **+New**.
 
@@ -81,7 +81,7 @@ To get data in Power Apps when creating a table:
 
    You can also choose to get data from an Excel worksheet without using the **Get data** feature.
 
-   ![Image](media/where-to-get-data/get-data-excel-powerapps.png)
+   ![Image with Dataverse tables open, the data context menu open, with the get data from Excel option emphasized.](media/where-to-get-data/get-data-excel-powerapps.png)
 
 3. Select the connector from the list of data sources.
 
@@ -100,7 +100,7 @@ To get data in Power Apps when creating a dataflow:
    1. Select **New dataflow**.
    1. In the **New dataflow** dialog box, enter a name for your new dataflow.
 
-      ![Image](media/where-to-get-data/new-dataflow-powerapps.png)
+      ![Image of the New dataflow dialog box, with the name text box filled in.](media/where-to-get-data/new-dataflow-powerapps.png)
 
    1. Select **Create**.
    1. Select the connector from the list of data sources.
@@ -113,7 +113,7 @@ To get data in Customer Insights:
 
 1. On the left side of Customer Insights, select **Data** > **Data sources**.
 
-   ![image](media/where-to-get-data/add-data-source-ci.png)
+   ![Image with Data sources open, and Add data source emphasized.](media/where-to-get-data/add-data-source-ci.png)
 
 2. In the **Data sources** window, select **Add data source**.
 
@@ -121,7 +121,7 @@ To get data in Customer Insights:
 
 4. In **Save data source as**, enter a name for your data source.
 
-   ![Image](media/where-to-get-data/choose-import-method.png)
+   ![Image with Choose you import method open, with Microsoft Power Query selected, and MyNewDataSource set for Save data source as](media/where-to-get-data/choose-import-method.png)
 
 5. Select **Next**.
 
@@ -131,7 +131,7 @@ You'll then be asked to fill out information that's required for you to access t
 
 ## Get data from Analysis Services
 
-With Analysis Services, a solution is developed in Visual Studio with the Analysis Services Projects extension and then deployed to SQL Server Analysis Services, Azure Analysis Services, or a Power BI Premium workspace.
+With Analysis Services, a solution is developed in Visual Studio with the Analysis Services Projects extension. The solution is then deployed to SQL Server Analysis Services, Azure Analysis Services, or a Power BI Premium workspace.
 
 The Analysis Services documentation contains the following information that describes the process for getting data
 
