@@ -103,4 +103,4 @@ Using Windows authentication with an on-premises gateway requires the gateway ma
 
 ## Limitation: Cross tenant OAuth2 refresh isn't supported in Power BI service
 
-While connecting a data source using OAuth2, the data source is required to be in the same tenant as Power BI service. Currently, multi-tenant scenarios aren't supported with OAuth2.
+If you want to connect to a data source from Power BI service using OAuth2, the data source must be in the same tenant as Power BI service. Currently, multi-tenant connection scenarios aren’t supported with OAuth2.
