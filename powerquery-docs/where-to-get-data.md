@@ -5,7 +5,7 @@ author: DougKlopfenstein
 
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 8/3/2021
+ms.date: 1/5/2021
 ms.author: dougklo
 
 LocalizationGroup: reference
@@ -13,7 +13,7 @@ LocalizationGroup: reference
 
 # Where to get data
 
-Getting data from available data sources is usually the first encounter you have with Power Query. This article will show you the basics of getting data from the services that include this feature.
+Getting data from available data sources is usually the first encounter you have with Power Query. This article provides basic steps for getting data from each of the services that include this feature.
 
 ## Get data in Power BI Desktop
 
@@ -21,17 +21,17 @@ To get data in Power BI Desktop:
 
 1. From the **Home** ribbon, select **Get data**.
 
-   ![Image shows the Power BI Desktop Get Data dialog box](media/where-to-get-data/get-data-power-bi-desktop.png)
+   ![Image of the Power BI Desktop Get Data dialog box](media/where-to-get-data/get-data-power-bi-desktop.png)
 
 2. From the left side of the **Get Data** dialog box, you can either select one of the categories or enter the name of a connector in the search box.
 
 3. Select the connector you want to use to access your data.
- 
-4. Select **Connect**. You'll then be asked to fill out information that's required for you to access the data. See the [individual connector articles](connectors/index.md) for more information about this required information.
+
+4. Select **Connect**. You'll then be asked to fill out information that's required for you to access the data. Go to the [individual connector articles](connectors/index.md) for more information about this required information.
 
 In Power BI Desktop, you can also select an Excel worksheet, a Power BI dataset, a SQL server database, or Dataverse data without using the **Get data** feature. You can also enter data directly in a table, or select from a data source that was recently used.
 
-![Image shows the Data field in the Home ribbon of Power BI Desktop](media/where-to-get-data/power-bi-desktop-data-select.png)
+![Image of the Data field in the Home ribbon of Power BI Desktop](media/where-to-get-data/power-bi-desktop-data-select.png)
 
 ## Get data in Excel
 
@@ -41,9 +41,9 @@ To get data in Excel:
 
 2. Scroll through the category selections in the drop-down box, and select the connector you want to use.
 
-   ![Image shows the Get Data drop-down list of categories and the connectors shown under the From File category ](media/where-to-get-data/get-data-excel.png)
+   ![Image shows the Get Data drop-down list of categories and the connectors shown under the From File category.](media/where-to-get-data/get-data-excel.png)
 
-You'll then be asked to fill out information that's required for you to access the data. See the [individual connector articles](connectors/index.md) for more information about this required information.
+You'll then be asked to fill out information that's required for you to access the data. Go to the [individual connector articles](connectors/index.md) for more information about this required information.
 
 In Excel, you can also select Text/CVS, Web, and Excel worksheet data without using the **Get Data** feature. You can also select from a data source that was recently used and from existing connections or tables.
 
@@ -59,29 +59,35 @@ To get data in Power BI service:
 
 4. From the **New** drop-down menu, select **Dataflow**.
 
+    [![Image with text workspace open, the context menu for new open, and dataflow emphasized.](media/where-to-get-data/workspace-dataflow.png)](media/where-to-get-data/workspace-dataflow.png#lightbox)
+
 5. From **Define new tables**, select **Add new tables**.
 
 6. Select the connector from the list of data sources.
 
-You'll then be asked to fill out information that's required for you to access the data. See the [individual connector articles](connectors/index.md) for more information about this required information.
+You'll then be asked to fill out information that's required for you to access the data. Go to the [individual connector articles](connectors/index.md) for more information about this required information.
 
 ## Get data from Power Apps
 
-To get data in Power Apps:
+There are a couple of places in Power Apps where you can get data, either by creating a new table or by creating a dataflow.
 
-1. On the left side of Power Apps, select **Data** > **Tables**.
+To get data in Power Apps when creating a table:
+
+1. On the left side of Power Apps, select **Dataverse** > **Tables**.
 
 2. In the **Tables** pane, at the top left, select **Data** > **Get data** > **Get data**.
 
-   ![Image shows to get data for a new table](media/where-to-get-data/get-data-power-apps.png)
+   ![Image with Dataverse tables open, the data context menu open, with the get data option emphasized.](media/where-to-get-data/get-data-power-apps.png)
 
    You can also choose to get data from an Excel worksheet without using the **Get data** feature.
 
+   ![Image](media/where-to-get-data/get-data-excel-powerapps.png)
+
 3. Select the connector from the list of data sources.
 
-An alternative method to get data in Power Apps:
+To get data in Power Apps when creating a dataflow:
 
-1. On the left side of Power Apps, select **Data** > **Dataflows**.
+1. On the left side of Power Apps, select **Dataverse** > **Dataflows**.
 
 2. If a dataflow already exists:
 
@@ -93,10 +99,13 @@ An alternative method to get data in Power Apps:
 
    1. Select **New dataflow**.
    1. In the **New dataflow** dialog box, enter a name for your new dataflow.
+
+      ![Image](media/where-to-get-data/new-dataflow-powerapps.png)
+
    1. Select **Create**.
    1. Select the connector from the list of data sources.
 
-You'll then be asked to fill out information that's required for you to access the data. See the [individual connector articles](connectors/index.md) for more information about this required information.
+You'll then be asked to fill out information that's required for you to access the data. Go to the [individual connector articles](connectors/index.md) for more information about this required information.
 
 ## Get data from Dynamics 365 Custom Insights
 
@@ -104,14 +113,28 @@ To get data in Customer Insights:
 
 1. On the left side of Customer Insights, select **Data** > **Data sources**.
 
+   ![image](media/where-to-get-data/add-data-source-ci.png)
+
 2. In the **Data sources** window, select **Add data source**.
 
-3. In **Choose your import method**, choose **Import data**.
+3. In **Choose your import method**, choose **Microsoft Power Query**.
 
 4. In **Save data source as**, enter a name for your data source.
+
+   ![Image](media/where-to-get-data/choose-import-method.png)
 
 5. Select **Next**.
 
 6. Select the connector from the list of data sources.
 
-You'll then be asked to fill out information that's required for you to access the data. See the [individual connector articles](connectors/index.md) for more information about this required information.
+You'll then be asked to fill out information that's required for you to access the data. Go to the [individual connector articles](connectors/index.md) for more information about this required information.
+
+## Get data from Analysis Services
+
+With Analysis Services, a solution is developed in Visual Studio with the Analysis Services Projects extension and then deployed to SQL Server Analysis Services, Azure Analysis Services, or a Power BI Premium workspace.
+
+The Analysis Services documentation contains the following information that describes the process for getting data
+
+* To set up a Visual Studio solution with the Analysis Services Projects extension: [Create a tabular model project](/analysis-services/tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project)
+
+* To get data: [Get data](/analysis-services/tutorial-tabular-1400/as-lesson-2-get-data)
