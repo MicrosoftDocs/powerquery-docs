@@ -30,11 +30,11 @@ You must have an existing Dataflow with maker permissions to access the portal, 
 ## Capabilities supported
 
 * Import
-* Direct Query* 
+* Direct Query*
 * Organizational account sign-in
 
 >[!Note]
->Direct query requires Power BI premium, learn more about other benefits [here](https://docs.microsoft.com/en-us/power-bi/transform-model/dataflows/dataflows-premium-features).
+>Direct query requires Power BI premium, learn more this and about other benefits [here](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-premium-features).
 
 ## Get data fom Dataflows in Power BI Desktop
 
@@ -53,7 +53,6 @@ To get data from Dataflows in Power BI Desktop:
 4. In **Navigator**, select the Dataflow you require, then either load or transform the data.
 
    ![Load or transform from navigator.](media/dataflows/navigate.png)
-
 
 ## Get data from Dataflows in Power Query Online
 
@@ -75,31 +74,14 @@ To get data from Dataflows in Power Query Online:
 
 6. In the navigation page, select the data you require, and then select **Transform Data**.
 
-
-
-
-
-
-
-
-
-TO BE DONE V
-
-
-
-
-
-
 ## Limitations and issues
 
 ### How to get direct query to work with Dataflows
 
-To get Direct query running you need to consider which location you use as destination for your dataflow. 
-- fff
-
-
-
+To get direct query to run you need have Power BI Premium and adjust some configuration items in your Power BI workspace. This is explained in the [dataflows premium features](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-premium-features) article.
 
 ### See also
 
-[Data profiling tools](data-profiling-tools.md)
+* [Using the output of Dataflows from other Power Query experiences](../dataflows/using-output-power-platform-dataflows-other-azure.md)
+* [Best practices for designing and developing complex dataflows](../dataflows/best-practices-developing-complex-dataflows.md)
+* [Best practices for reusing dataflows across environments and workspaces](../dataflows/best-practices-reusing-dataflows.md)
