@@ -8,6 +8,8 @@
       items:
       - name: "Getting data"
         href: get-data-experience.md
+      - name: "Where to get data"
+        href: where-to-get-data.md
       - name: "Authentication with a data source"
         href: ConnectorAuthentication.md
       - name: "SharePoint and OneDrive for Business files import"
