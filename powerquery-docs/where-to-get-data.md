@@ -13,13 +13,13 @@ LocalizationGroup: reference
 
 # Where to get data
 
-Getting data from available data sources is usually the first encounter you have with Power Query. This article provides basic steps for getting data from each of the services that include this feature.
+Getting data from available data sources is usually the first encounter you have with Power Query. This article provides basic steps for getting data from each of the products that include Power Query.
 
 ## Get data in Power BI Desktop
 
 The procedures for where to start getting data in Power BI Desktop are described in [Data sources in Power BI Desktop](/power-bi/connect-data/desktop-data-sources).
 
-In Power BI Desktop, you can also select an Excel worksheet, a Power BI dataset, a SQL server database, or Dataverse data without using the **Get data** feature. You can also enter data directly in a table, or select from a data source that was recently used.
+In Power BI Desktop, you can also select an Excel worksheet, a Power BI dataset, a SQL server database, or Dataverse data without using the **Get data** option. You can also enter data directly in a table, or select from a data source that was recently used.
 
 ![Image of the Data field in the Home ribbon of Power BI Desktop](media/where-to-get-data/power-bi-desktop-data-select.png)
 
@@ -29,13 +29,13 @@ To get data in Excel:
 
 1. From the **Data** ribbon, select **Get Data**.
 
-2. Scroll through the category selections in the drop-down box, and select the connector you want to use.
+2. Scroll through the category selections in the get data context menu, and select the connector you want to use.
 
    ![Image shows the Get Data drop-down list of categories and the connectors shown under the From File category.](media/where-to-get-data/get-data-excel.png)
 
 You'll then be asked to fill out information that's required for you to access the data. Go to the [individual connector articles](connectors/index.md) for more information about this required information.
 
-In Excel, you can also select Text/CVS, Web, and Excel worksheet data without using the **Get Data** feature. You can also select from a data source that was recently used and from existing connections or tables.
+In Excel, you can also select Text/CVS, Web, and Excel worksheet data without using the **Get Data** option. You can also select from a data source that was recently used and from existing connections or tables.
 
 ## Get data from Power BI service
 
@@ -45,9 +45,9 @@ To get data in Power BI service:
 
 2. From the Workspace context menu, select the workspace you want to use.
 
-3. From the workspace (in this example, TestWorkspace01), select the drop-down menu next to **+New**.
+3. From the workspace (in this example, TestWorkspace01), select the context menu next to **+New**.
 
-4. From the **New** drop-down menu, select **Dataflow**.
+4. From the **New** context menu, select **Dataflow**.
 
     [![Image with text workspace open, the context menu for new open, and dataflow emphasized.](media/where-to-get-data/workspace-dataflow.png)](media/where-to-get-data/workspace-dataflow.png#lightbox)
 
@@ -65,11 +65,11 @@ To get data in Power Apps when creating a table:
 
 1. On the left side of Power Apps, select **Dataverse** > **Tables**.
 
-2. In the **Tables** pane, at the top left, select **Data** > **Get data** > **Get data**.
+2. In the **Tables** pane, at the top left, select **Data** > **Get data**.
 
    [![Image with Dataverse tables open, the data context menu open, with the get data option emphasized.](media/where-to-get-data/get-data-power-apps.png)](media/where-to-get-data/get-data-power-apps.png#lightbox)
 
-   You can also choose to get data from an Excel worksheet without using the **Get data** feature.
+   You can also choose to get data from an Excel worksheet without using the **Get data** option.
 
    [![Image with Dataverse tables open, the data context menu open, with the get data from Excel option emphasized.](media/where-to-get-data/get-data-excel-powerapps.png)](media/where-to-get-data/get-data-excel-powerapps.png#lightbox)
 
@@ -97,7 +97,7 @@ To get data in Power Apps when creating a dataflow:
 
 You'll then be asked to fill out information that's required for you to access the data. Go to the [individual connector articles](connectors/index.md) for more information about this required information.
 
-## Get data from Dynamics 365 Custom Insights
+## Get data from Dynamics 365 Customer Insights
 
 To get data in Customer Insights:
 
@@ -105,7 +105,7 @@ To get data in Customer Insights:
 
    [![Image with Data sources open, and Add data source emphasized.](media/where-to-get-data/add-data-source-ci.png)](media/where-to-get-data/add-data-source-ci.png#lightbox)
 
-2. In the **Data sources** window, select **Add data source**.
+2. In the **Data sources** pane, select **Add data source**.
 
 3. In **Choose your import method**, choose **Microsoft Power Query**.
 
@@ -121,10 +121,10 @@ You'll then be asked to fill out information that's required for you to access t
 
 ## Get data from Analysis Services
 
-With Analysis Services, a solution is developed in Visual Studio with the Analysis Services Projects extension. The solution is then deployed to SQL Server Analysis Services, Azure Analysis Services, or a Power BI Premium workspace.
+With Analysis Services, a solution is developed in Visual Studio with the Analysis Services projects extension. The solution is then deployed to SQL Server Analysis Services, Azure Analysis Services, or a Power BI Premium workspace.
 
 The Analysis Services documentation contains the following information that describes the process for getting data:
 
-* To set up a Visual Studio solution with the Analysis Services Projects extension: [Create a tabular model project](/analysis-services/tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project)
+* To set up a Visual Studio solution with the Analysis Services projects extension: [Create a tabular model project](/analysis-services/tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project)
 
 * To get data: [Get data](/analysis-services/tutorial-tabular-1400/as-lesson-2-get-data)
