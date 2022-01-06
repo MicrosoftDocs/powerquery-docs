@@ -17,17 +17,7 @@ Getting data from available data sources is usually the first encounter you have
 
 ## Get data in Power BI Desktop
 
-To get data in Power BI Desktop:
-
-1. From the **Home** ribbon, select **Get data**.
-
-   ![Image of the Power BI Desktop Get Data dialog box](media/where-to-get-data/get-data-power-bi-desktop.png)
-
-2. From the left side of the **Get Data** dialog box, you can either select one of the categories or enter the name of a connector in the search box.
-
-3. Select the connector you want to use to access your data.
-
-4. Select **Connect**. You'll then be asked to fill out information that's required for you to access the data. Go to the [individual connector articles](connectors/index.md) for more information about this required information.
+The procedures for where to start getting data in Power BI Desktop are described in [Data sources in Power BI Desktop](/power-bi/connect-data/desktop-data-sources).
 
 In Power BI Desktop, you can also select an Excel worksheet, a Power BI dataset, a SQL server database, or Dataverse data without using the **Get data** feature. You can also enter data directly in a table, or select from a data source that was recently used.
 
@@ -77,11 +67,11 @@ To get data in Power Apps when creating a table:
 
 2. In the **Tables** pane, at the top left, select **Data** > **Get data** > **Get data**.
 
-   ![Image with Dataverse tables open, the data context menu open, with the get data option emphasized.](media/where-to-get-data/get-data-power-apps.png)
+   [![Image with Dataverse tables open, the data context menu open, with the get data option emphasized.](media/where-to-get-data/get-data-power-apps.png)](media/where-to-get-data/get-data-power-apps.png#lightbox)
 
    You can also choose to get data from an Excel worksheet without using the **Get data** feature.
 
-   ![Image with Dataverse tables open, the data context menu open, with the get data from Excel option emphasized.](media/where-to-get-data/get-data-excel-powerapps.png)
+   [![Image with Dataverse tables open, the data context menu open, with the get data from Excel option emphasized.](media/where-to-get-data/get-data-excel-powerapps.png)](media/where-to-get-data/get-data-excel-powerapps.png#lightbox)
 
 3. Select the connector from the list of data sources.
 
@@ -100,7 +90,7 @@ To get data in Power Apps when creating a dataflow:
    1. Select **New dataflow**.
    1. In the **New dataflow** dialog box, enter a name for your new dataflow.
 
-      ![Image of the New dataflow dialog box, with the name text box filled in.](media/where-to-get-data/new-dataflow-powerapps.png)
+      [![Image of the New dataflow dialog box, with the name text box filled in.](media/where-to-get-data/new-dataflow-powerapps.png)](media/where-to-get-data/new-dataflow-powerapps.png#lightbox)
 
    1. Select **Create**.
    1. Select the connector from the list of data sources.
@@ -113,7 +103,7 @@ To get data in Customer Insights:
 
 1. On the left side of Customer Insights, select **Data** > **Data sources**.
 
-   ![Image with Data sources open, and Add data source emphasized.](media/where-to-get-data/add-data-source-ci.png)
+   [![Image with Data sources open, and Add data source emphasized.](media/where-to-get-data/add-data-source-ci.png)](media/where-to-get-data/add-data-source-ci.png#lightbox)
 
 2. In the **Data sources** window, select **Add data source**.
 
@@ -121,7 +111,7 @@ To get data in Customer Insights:
 
 4. In **Save data source as**, enter a name for your data source.
 
-   ![Image with Choose you import method open, with Microsoft Power Query selected, and MyNewDataSource set for Save data source as](media/where-to-get-data/choose-import-method.png)
+   [![Image with Choose you import method open, with Microsoft Power Query selected, and MyNewDataSource set for Save data source as](media/where-to-get-data/choose-import-method.png)](media/where-to-get-data/choose-import-method.png#lightbox)
 
 5. Select **Next**.
 
@@ -133,7 +123,7 @@ You'll then be asked to fill out information that's required for you to access t
 
 With Analysis Services, a solution is developed in Visual Studio with the Analysis Services Projects extension. The solution is then deployed to SQL Server Analysis Services, Azure Analysis Services, or a Power BI Premium workspace.
 
-The Analysis Services documentation contains the following information that describes the process for getting data
+The Analysis Services documentation contains the following information that describes the process for getting data:
 
 * To set up a Visual Studio solution with the Analysis Services Projects extension: [Create a tabular model project](/analysis-services/tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project)
 
