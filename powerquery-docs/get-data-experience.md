@@ -20,7 +20,7 @@ Connecting to a data source with Power Query follows a standard set of stages be
 >To better understand how to get data using the different product integrations of Power Query, you can read the article on [Where to get data](where-to-get-data.md)//]-->
 
 >[!IMPORTANT]
->In some cases, a connector might have all stages of the get data experience, and in other cases a connector might have just a few of them. For more information about the experience of a specific connector, go to the documentation available for the specific connector by searching on the [Connectors in Power Query article](connectors.md).
+>In some cases, a connector might have all stages of the get data experience, and in other cases a connector might have just a few of them. For more information about the experience of a specific connector, go to the documentation available for the specific connector by searching on the [Connectors in Power Query article](connectors/index.md).
 
 ## Power Query Desktop experience
 
