@@ -146,6 +146,8 @@
         href: dataflows/create-use.md
       - name: "Create and use dataflows in Teams"
         href: dataflows/dataflows-teams.md
+      - name: "Consume data from dataflows"
+        href: dataflows/using-the-output-of-power-platform-dataflows.md
       - name: "Use incremental refresh"
         href: dataflows/incremental-refresh.md
       - name: "Connect to data sources"
@@ -158,8 +160,6 @@
         href: dataflows/using-dataflows-with-on-premises-data.md
       - name: Analytical dataflows
         items:
-        - name: "Get data from dataflows"
-          href: dataflows/using-the-output-of-power-platform-dataflows.md
         - name: "Create computed entities"
           href: dataflows/computed-entities.md
         - name: "Link entities between dataflows"
@@ -303,7 +303,9 @@
       - name: "Data Lake Storage"
         href: Connectors/DataLakeStorage.md
       - name: "Dataverse"
-        href: Connectors/dataverse.md
+        href: Connectors/dataverse.md     
+      - name: "Dataflows"
+        href: Connectors/Dataflows.md
       - name: "Delta Sharing"
         href: Connectors/DeltaSharing.md
       - name: "EQuIS (Beta)"
