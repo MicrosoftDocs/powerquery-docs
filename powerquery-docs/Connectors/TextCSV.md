@@ -5,7 +5,7 @@ author: cpopell
 ms.service: powerquery
 ms.topic: conceptual
 ms.date: 9/16/2021
-ms.author: gepopell
+ms.author: dougklo
 LocalizationGroup: reference
 ---
 
