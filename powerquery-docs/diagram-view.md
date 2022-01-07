@@ -253,10 +253,6 @@ With this option, you can adjust the zoom level and zoom out or zoom in to view 
 
 ![Zoom out or zoom in button available at the bottom right-hand corner of the diagram view pane.](images/diagram-view-zoom.png) 
 
-### Mini-map
-
-*//// to be added*///
-
 ### Full screen
 With this option, you can view all the queries and their relationships through the *Full screen* mode. The diagram view pane expands to full screen and the data preview pane, queries pane, and steps pane remain collapsed. 
 
