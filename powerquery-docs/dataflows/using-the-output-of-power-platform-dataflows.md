@@ -1,11 +1,11 @@
 ---
-title: Using the output of Dataflows from other Power Query experiences
-description: Using the output of Dataflows from other Power Query experiences.
-author: radacad
+title: Consume data from Dataflows
+description: Consume data from Dataflows.
+author: luitwieler
 
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 01/04/2022
+ms.date: 01/06/2022
 ms.author: jeluitwi
 
 LocalizationGroup: Data from files
