@@ -27,7 +27,7 @@ If you're new to Power Query, you can [sign up for a free trial of Power BI](htt
 
 You can also [download Power BI Desktop for free](https://go.microsoft.com/fwlink/?LinkId=521662). 
 
-Examples in this article connect to and use the [Northwind OData feed](https://services.odata.org/V4/Northwind/Northwind.svc/). 
+Examples in this article connect to and use the [Northwind OData feed](https://services.odata.org/V4/Northwind/Northwind.svc/).
 
 ```
 https://services.odata.org/V4/Northwind/Northwind.svc/
@@ -40,9 +40,10 @@ To start, locate the **OData** feed connector from the "Get Data" experience. Yo
 ![Select OData in the Get Data Experience.](media/power-query-ui/pqui-odata-selection.png)
 
 Once you select this connector, the screen displays the connection settings and credentials.
+
 - For **URL**, enter the URL to the Northwind OData feed shown in the previous section.
 - For **On-premises data gateway**, leave as none.
-- For **Authentication kind**, leave as anonymous. 
+- For **Authentication kind**, leave as anonymous.
 
 Select the **Next** button.
 
@@ -80,11 +81,11 @@ In this section, you'll begin transforming your data using Power Query. But befo
 
 ### The ribbon
 
-The ribbon is the component where you'll find most of the transforms and actions that you can do in the Power Query editor. It has multiple tabs depending on the product integration and each of the tabs provides specific buttons and options, some of which might be redundant across the whole Power Query experience to provide you with easy access to the transforms and actions that you may need in just a few clicks.
+The ribbon is the component where you'll find most of the transforms and actions that you can do in the Power Query editor. It has multiple tabs, whose values depend on the product integration. Each of the tabs provides specific buttons and options, some of which might be redundant across the whole Power Query experience. These buttons and options provide you with easy access to the transforms and actions that you may need.
 
 [ ![The Power Query user interface with the standard ribbon view on the Home tab.](media/power-query-ui/standard-ribbon.png) ](media/power-query-ui/standard-ribbon.png#lightbox)
 
-The Power Query interface is responsive and will try to adjust your screen resolution to show you the best experience. In scenarios where you'd like to see a compact version of the ribbon there is also a collapse button at the bottom-right corner for the ribbon to help you switch to the compact ribbon. 
+The Power Query interface is responsive and tries to adjust your screen resolution to show you the best experience. In scenarios where you'd like to see a compact version of the ribbon, there's also a collapse button at the bottom-right corner of the ribbon to help you switch to the compact ribbon.
 
 [ ![The Power Query user interface with the compact ribbon view on the Home tab.](media/power-query-ui/compact-ribbon.png) ](media/power-query-ui/compact-ribbon.png#lightbox)
 
