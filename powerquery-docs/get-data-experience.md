@@ -198,4 +198,6 @@ The table preview dialog box consists of only one section for the data preview. 
 
 ### 3. Query editor
 
-This is the stage in which you specify where to load the query. For the Power Query online experience, you are required to load the data into the Power Query Editor where you can further transform and enrich the query if you choose to do so.
+For the Power Query online experience, you are required to load the data into the Power Query Editor where you can further transform and enrich the query if you choose to do so.
+
+[ ![Sample query loaded into the query editor](media/query-plan/alternative-approach.png) ](media/query-plan/sample-query.png#lightbox)
