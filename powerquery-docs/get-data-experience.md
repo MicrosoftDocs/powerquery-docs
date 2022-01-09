@@ -117,6 +117,8 @@ The table preview dialog box consists of only one section for the data preview. 
 
 This is the stage in which you specify where to load the query. The options vary from integration to integration, but the one option that's always available is loading data to the Power Query Editor to further transform and enrich the query.
 
+![Get data load destinations in navigator window and table preview](images/get-data-load-to.png)
+
 ## Power Query Online experience
 
 The stages for getting data in Power Query Online are:
@@ -125,7 +127,7 @@ The stages for getting data in Power Query Online are:
 
 2. Data preview
 
-3. Query destination
+3. Query editor
 
 ![Flow diagram showing the three stages of getting data in Power Query Online.](images/getting-data-pqo-flow.png "Flow diagram showing the three stages of getting data in Power Query Online")
 
@@ -194,6 +196,6 @@ The table preview dialog box consists of only one section for the data preview. 
 
 ![Table preview dialog box.](images/combinefiles1.png "Table preview dialog box")
 
-### 3. Query destination
+### 3. Query editor
 
 This is the stage in which you specify where to load the query. For the Power Query online experience, you are required to load the data into the Power Query Editor where you can further transform and enrich the query if you choose to do so.
