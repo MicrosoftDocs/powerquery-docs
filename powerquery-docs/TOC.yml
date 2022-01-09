@@ -10,6 +10,8 @@
         href: get-data-experience.md
       - name: "Authentication with a data source"
         href: ConnectorAuthentication.md
+      - name: "Upload a file"
+        href: upload-file.md
       - name: "SharePoint and OneDrive for Business files import"
         href: sharepoint-onedrive-files.md    
       - name: "Lack of support connecting to Microsoft Graph"    
