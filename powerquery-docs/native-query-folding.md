@@ -8,7 +8,7 @@ ms.date: 01/01/2022
 ms.author: v-mescobar
 ---
 
-# Query folding on queries using the Value.NativeQuery function
+# Query folding on native queries
 
 In Power Query you are able to define a native query and run it against your data source. The article on [Import data from a database using native database query](native-database-query.md) explains how to do this process which applies to multiple data sources but, by doing so your query will not be taking advantage of any query folding from subsequent query steps.
 
