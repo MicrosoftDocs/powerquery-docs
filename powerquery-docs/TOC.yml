@@ -144,8 +144,8 @@
         href: dataflows/create-use.md
       - name: "Create and use dataflows in Teams"
         href: dataflows/dataflows-teams.md
-      - name: "Use solution-aware dataflows"
-        href: dataflows/dataflow-solution-aware.md
+      - name: "Use dataflows in solutions"
+        href: dataflows/dataflow-solution-awareness.md
       - name: "Use incremental refresh"
         href: dataflows/incremental-refresh.md
       - name: "Connect to data sources"
