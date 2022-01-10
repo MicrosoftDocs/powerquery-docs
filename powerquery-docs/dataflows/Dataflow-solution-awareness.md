@@ -62,7 +62,7 @@ Exporting and importing solutions containing dataflows is identical to doing the
 
 ## Updating a dataflow's connections after solution import
 
-For security reasons, credentials of connections leveraged by dataflows aren't persisted by solutions. Once a dataflow is deployed as part of a solution, you'll need to edit its connections before it can be scheduled to run.
+For security reasons, credentials of connections used by dataflows aren't persisted by solutions. Once a dataflow is deployed as part of a solution, you'll need to edit its connections before it can be scheduled to run.
 
 1. On the left navigation pane, select the down arrow next to **Dataverse** and select **Dataflows**. Identify the dataflow that was imported, and select **Edit** from the context menu.
 
@@ -74,7 +74,7 @@ For security reasons, credentials of connections leveraged by dataflows aren't p
 
    ![Screenshot showing power query prompting for credentials.](./media/dataflows-solution-awareness/Solutions_dataflows_after_Import_03.png)
 
-   Once the credentials for the connection have been updated, all queries that use that connection automatically loads.
+   Once the credentials for the connection have been updated, all queries that use that connection automatically load.
 
 4. If your dataflow loads data in Dataverse tables, select **Next** to review the mapping configuration.
 
@@ -89,8 +89,8 @@ For security reasons, credentials of connections leveraged by dataflows aren't p
 ## Known limitations
 
 * Dataflows can't be created from within solutions. To add a dataflow to a solution, follow the steps outlined in this article.
-* Dataflows can't be edited directly from within solutions. Instead, the dataflow should be edited in the Dataflows experience.
+* Dataflows can't be edited directly from within solutions. Instead, the dataflow must be edited in the dataflows experience.
 * Dataflows can't use connection references for any connector.
 * Environment variables can't be used by dataflows.
-* Dataflows don't support adding required components such as custom tables they load data to. Instead, the custom table should be manually added to the solution.
+* Dataflows don't support adding required components, such as custom tables they load data to. Instead, the custom table should be manually added to the solution.
 * Dataflows can't be deployed by application users (service principals).
