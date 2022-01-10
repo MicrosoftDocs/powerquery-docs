@@ -5,10 +5,10 @@ author: miquelladeboer
 
 ms.service: powerquery
 ms.reviewer: kvivek
-ms.topic: conceptual
+ms.topic: overview
 ms.date: 11/16/2021
 ms.author: mideboer
-ms.custom: intro-internal
+
 ---
 # Power Automate templates for the dataflows connector
 

@@ -4,7 +4,6 @@ description: Create your first connector
 author: cpopell
 
 ms.service: powerquery
-ms.topic: quickstart
 ms.date: 11/27/2019
 ms.author: gepopell
 ms.custom: intro-internal
