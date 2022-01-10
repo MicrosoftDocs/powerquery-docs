@@ -5,7 +5,7 @@ author: cpopell
 
 ms.service: powerquery
 ms.date: 11/27/2019
-ms.author: gepopell
+ms.author: dougklo
 ms.custom: intro-internal
 
 LocalizationGroup: Get started

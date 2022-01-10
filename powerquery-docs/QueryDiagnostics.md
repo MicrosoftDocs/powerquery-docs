@@ -6,7 +6,7 @@ author: cpopell
 ms.service: powerquery
 ms.topic: overview
 ms.date: 12/10/2020
-ms.author: gepopell
+ms.author: dougklo
 
 LocalizationGroup: reference
 ---

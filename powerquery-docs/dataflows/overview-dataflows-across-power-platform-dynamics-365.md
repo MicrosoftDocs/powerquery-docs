@@ -5,7 +5,7 @@ author: radacad
 ms.service: powerquery 
 ms.topic: overview
 ms.date: 6/10/2021 
-ms.author: gepopell
+ms.author: dougklo
 
 ---
 
