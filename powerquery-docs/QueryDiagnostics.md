@@ -4,10 +4,9 @@ description: Using Query Diagnostics to diagnose what operations and data source
 author: cpopell
 
 ms.service: powerquery
-ms.topic: conceptual
+ms.topic: overview
 ms.date: 12/10/2020
-ms.author: gepopell
-ms.custom: intro-internal
+ms.author: dougklo
 
 LocalizationGroup: reference
 ---

@@ -6,7 +6,7 @@ ms.service: powerquery
 ms.reviewer: kvivek
 ms.date: 06/01/2019
 ms.author: dougklo
-ms.custom: intro-internal
+ms.topic: overview
 ---
 
 # Getting data
