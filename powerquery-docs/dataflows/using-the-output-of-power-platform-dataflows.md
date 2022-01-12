@@ -5,31 +5,36 @@ author: luitwieler
 
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 01/06/2022
+ms.date: 01/12/2022
 ms.author: jeluitwi
 
 LocalizationGroup: Data from files
 ---
 
-# Using the output of Dataflows from other Power Query experiences
+# Consume data from Dataflows
 
-You can use the output of Microsoft Dataflows from the Power Query experience in other products. For example, in Power BI Desktop&mdash;or even in another dataflow&mdash;you can get data from the output of a dataflow. In this article, you'll learn how to do so.
+The ways you can consume data from Microsoft Dataflows is depending on several factors like storage and type of dataflow. In this article, you'll learn how to choose the right dataflow for your needs.
 
-## Get data from dataflows in Power BI
+## Type of Dataflow
 
-If you're using Power BI for data analysis, you can get data from Dataflows by choosing that data source.
+There are multiple types of dataflows available for you to create. You can choose between a Power BI Dataflow, Standard Dataflow or an Analytical Dataflow. Read [this article](../dataflows/understanding-differences-between-analytical-standard-dataflows) to Learn more about the differences and how to select the right type based on your needs.
 
-![Get data from Power BI Desktop.](media/GetDatafromDataflow.png)
+## Storage type
 
-When you get data from a dataflow, the data is imported into the Power BI dataset. The dataset then needs to be refreshed. You can choose whether to perform a one-time refresh or an automatic refresh on a schedule you specify. Scheduled refreshes for the dataset can be configured in Power BI.
+A Dataflow is able to write to multiple output destination types. In short you should be using the [Dataflows connector](../Connectors/Dataflows.md), unless your destination is a Dataverse table. Then you use the [Dataverse/CDM connector](../Connectors/Dataverse.md).
 
-### DirectQuery from dataflows
+### Azure Data Lake Storage
 
-Dataflows also support a DirectQuery connection. If the size of the data is so large that you don't want to import all of it into the Power BI dataset, you can create a DirectQuery connection. DirectQuery won't copy the data into the Power BI dataset. The tables in the Power BI dataset that get their data from a DirectQuery-sourced dataflow don't need a scheduled refresh, because their data will be fetched live from the dataflow.
+Azure Data Lake storage is available in Power BI Dataflows and Power Apps Analytical Dataflows. By default you are using a Microsoft Manged Data Lake however, you have the option to connect a self-hosted data lake to the dataflow environment. The following guides will help you to connect the data lake to your environment: 
 
-To use DirectQuery for the dataflows, you need to enable the compute engine on your Power BI Premium capacity, and then refresh the dataflow before it can be consumed in DirectQuery mode. For more information, go to [Dataflows DirectQuery Support](https://powerbi.microsoft.com/blog/power-bi-dataflows-direct-query-support/).
+- [Connect Data Lake Gen 2 storage to a Power BI Workspace](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-azure-data-lake-storage-integration)
+- [Connect Data Lake Gen 2 storage to a Power Apps Environment](../dataflows/connect-azure-data-lake-storage-for-dataflow)
 
-![Premium capacity settings for DirectQuery to the dataflow.](/power-bi/transform-model/media/service-dataflows-enhanced-compute-engine/enhanced-compute-engine-01.png)
+Once you have connected your data lake you should still use the dataflow connector. If this connector does not meet your needs, you could consider using the [Azure Data Lake connector](../Connectors/DataLakeStorage.md) instead.
+
+### Dataverse
+
+A standard dataflow will write the output data to a dataverse table. [Dataverse](https://docs.microsoft.com/en-us/powerapps/maker/data-platform/data-platform-intro) lets you securely store and manage data that's used by business applications. After you loaded data into the Dataverse table you can consume the data using the [dataverse connector](../Connectors/Dataverse.md).
 
 ## Dataflows can get data from other dataflows
 
@@ -42,6 +47,16 @@ When getting data from the output of another dataflow, a [linked entity](/data-i
 ## Separating data transformation from data consumption
 
 When you use the output of a dataflow in other dataflows or datasets, you can create an abstraction between the data transformation layer and the rest of the data model. This abstraction is important because it creates a multi-role architecture, in which the Power Query customer can focus on building the data transformations, and data modelers can focus on data modeling.
+
+## Frequently asked questions
+
+### _My dataflow table does not show up in the dataflow connector in Power BI_
+
+You are probably using a Dataverse table as destination for your standard dataflow. Use the [Dataverse/CDM connector](../Connectors/Dataverse.md) instead or consider switching to an analytical dataflow.
+
+### _There is a difference in the data when I remove duplicates in dataflows, how can I resolve this?_
+
+There could be a difference in data between design-time and refresh-time. We do not guarantee which instance is being kept during refresh time. [This article](/powerquery-docs/working-with-duplicates) will help you to avoid inconsistencies in your data.
 
 ## Next Steps
 

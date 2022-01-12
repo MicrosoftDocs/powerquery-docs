@@ -4,7 +4,7 @@ description: Provides basic information and connection instructions for connecti
 author: Luitwieler
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 01/05/2022
+ms.date: 01/12/2022
 ms.author: jeluitwi
 LocalizationGroup: reference
 ---
@@ -34,7 +34,7 @@ You must have an existing Dataflow with maker permissions to access the portal, 
 * Organizational account sign-in
 
 >[!Note]
->Direct query requires Power BI premium, learn more this and about other benefits [here](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-premium-features).
+>Direct query requires Power BI premium, read [this article](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-premium-features) to learn more.
 
 ## Get data fom Dataflows in Power BI Desktop
 
@@ -74,11 +74,19 @@ To get data from Dataflows in Power Query Online:
 
 6. In the navigation page, select the data you require, and then select **Transform Data**.
 
-## Limitations and issues
+## Frequently asked questions
 
-### How to get direct query to work with Dataflows
+### _Direct query is not working for me in Power BI, what should I do?_
 
-To get direct query to run you need have Power BI Premium and adjust some configuration items in your Power BI workspace. This is explained in the [dataflows premium features](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-premium-features) article.
+To get direct query to run you need have Power BI Premium and adjust a few configuration items in your Power BI workspace. This is explained in the [dataflows premium features](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-premium-features) article.
+
+### _My dataflow table does not show up in the dataflow connector in Power BI_
+
+You are probably using a Dataverse table as destination for your standard dataflow. Use the [Dataverse/CDM connector](../Connectors/Dataverse.md) instead or consider switching to an analytical dataflow.
+
+### _There is a difference in the data when I remove duplicates in dataflows, how can I resolve this?_
+
+There could be a difference in data between design-time and refresh-time. We do not guarantee which instance is being kept during refresh time. [This article](/powerquery-docs/working-with-duplicates) will help you to avoid inconsistencies in your data.
 
 ### See also
 
