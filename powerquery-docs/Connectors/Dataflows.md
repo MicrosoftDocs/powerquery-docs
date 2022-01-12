@@ -76,15 +76,15 @@ To get data from Dataflows in Power Query Online:
 
 ## Frequently asked questions
 
-### _Direct query is not working for me in Power BI, what should I do?_
+_**Direct query is not working for me in Power BI, what should I do?**_
 
 To get direct query to run you need have Power BI Premium and adjust a few configuration items in your Power BI workspace. This is explained in the [dataflows premium features](/power-bi/transform-model/dataflows/dataflows-premium-features) article.
 
-### _My dataflow table does not show up in the dataflow connector in Power BI_
+_**My dataflow table does not show up in the dataflow connector in Power BI**_
 
 You are probably using a Dataverse table as destination for your standard dataflow. Use the [Dataverse/CDM connector](../Connectors/Dataverse.md) instead or consider switching to an analytical dataflow.
 
-### _There is a difference in the data when I remove duplicates in dataflows, how can I resolve this?_
+_**There is a difference in the data when I remove duplicates in dataflows, how can I resolve this?**_
 
 There could be a difference in data between design-time and refresh-time. We do not guarantee which instance is being kept during refresh time. [This article](/powerquery-docs/working-with-duplicates) will help you to avoid inconsistencies in your data.
 

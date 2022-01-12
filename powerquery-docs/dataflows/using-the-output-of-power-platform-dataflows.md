@@ -50,11 +50,11 @@ When you use the output of a dataflow in other dataflows or datasets, you can cr
 
 ## Frequently asked questions
 
-### _My dataflow table does not show up in the dataflow connector in Power BI_
+_**My dataflow table does not show up in the dataflow connector in Power BI**_
 
 You are probably using a Dataverse table as destination for your standard dataflow. Use the [Dataverse/CDM connector](../Connectors/Dataverse.md) instead or consider switching to an analytical dataflow.
 
-### _There is a difference in the data when I remove duplicates in dataflows, how can I resolve this?_
+_**There is a difference in the data when I remove duplicates in dataflows, how can I resolve this?**_
 
 There could be a difference in data between design-time and refresh-time. We do not guarantee which instance is being kept during refresh time. [This article](/powerquery-docs/working-with-duplicates) will help you to avoid inconsistencies in your data.
 
