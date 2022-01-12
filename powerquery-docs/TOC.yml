@@ -148,6 +148,8 @@
         href: dataflows/dataflows-teams.md
       - name: "Consume data from dataflows"
         href: dataflows/using-the-output-of-power-platform-dataflows.md
+      - name: "Use dataflows in solutions"
+        href: dataflows/dataflow-solution-awareness.md
       - name: "Use incremental refresh"
         href: dataflows/incremental-refresh.md
       - name: "Connect to data sources"
@@ -184,7 +186,7 @@
             href: dataflows/best-practices-for-dimensional-model-using-dataflows.md
           - name: "Performance"
             href: dataflows/performance-ingestion-transformation-dataflows.md
-        - name: "Get dateflows data from Azure services"
+        - name: "Get dataflows data from Azure services"
           href: dataflows/using-output-power-platform-dataflows-other-azure.md
       - name: Standard dataflows
         items: 
@@ -420,7 +422,7 @@
         href: Connectors/SumTotal.md
       - name: "Text/CSV"
         href: Connectors/TextCSV.md
-      - name: "TIBCO(R) Data Virtualization (Beta)"
+      - name: "TIBCO(R) Data Virtualization"
         href: Connectors/tibco.md
       - name: "Usercube"
         href: Connectors/Usercube.md

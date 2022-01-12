@@ -6,8 +6,6 @@ ms.service: powerquery
 ms.topic: overview
 ms.date: 10/27/2021
 ms.author: millopis
-ms.custom: intro-internal
-LocalizationGroup: Get started
 ---
 
 # What is Power Query?

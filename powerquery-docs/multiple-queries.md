@@ -6,7 +6,7 @@ ms.service: powerquery
 ms.reviewer: kvivek
 ms.date: 11/10/2021
 ms.author: dougklo
-ms.custom: intro-internal
+ms.topic: conceptual
 ---
 
 # Why does my query run multiple times?
