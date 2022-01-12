@@ -34,7 +34,7 @@ You must have an existing Dataflow with maker permissions to access the portal, 
 * Organizational account sign-in
 
 >[!Note]
->Direct query requires Power BI premium, read [this article](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-premium-features) to learn more.
+>Direct query requires Power BI premium, read [this article](/power-bi/transform-model/dataflows/dataflows-premium-features) to learn more.
 
 ## Get data fom Dataflows in Power BI Desktop
 
@@ -78,7 +78,7 @@ To get data from Dataflows in Power Query Online:
 
 ### _Direct query is not working for me in Power BI, what should I do?_
 
-To get direct query to run you need have Power BI Premium and adjust a few configuration items in your Power BI workspace. This is explained in the [dataflows premium features](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-premium-features) article.
+To get direct query to run you need have Power BI Premium and adjust a few configuration items in your Power BI workspace. This is explained in the [dataflows premium features](/power-bi/transform-model/dataflows/dataflows-premium-features) article.
 
 ### _My dataflow table does not show up in the dataflow connector in Power BI_
 
