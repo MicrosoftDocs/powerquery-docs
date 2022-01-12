@@ -17,7 +17,7 @@ The ways you can consume data from Microsoft Dataflows is depending on several f
 
 ## Type of Dataflow
 
-There are multiple types of dataflows available for you to create. You can choose between a Power BI Dataflow, Standard Dataflow or an Analytical Dataflow. Read [this article](../dataflows/understanding-differences-between-analytical-standard-dataflows) to Learn more about the differences and how to select the right type based on your needs.
+There are multiple types of dataflows available for you to create. You can choose between a Power BI Dataflow, Standard Dataflow or an Analytical Dataflow. Read [this article](./understanding-differences-between-analytical-standard-dataflows) to Learn more about the differences and how to select the right type based on your needs.
 
 ## Storage type
 
@@ -28,13 +28,13 @@ A Dataflow is able to write to multiple output destination types. In short you s
 Azure Data Lake storage is available in Power BI Dataflows and Power Apps Analytical Dataflows. By default you are using a Microsoft Manged Data Lake however, you have the option to connect a self-hosted data lake to the dataflow environment. The following guides will help you to connect the data lake to your environment: 
 
 - [Connect Data Lake Gen 2 storage to a Power BI Workspace](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-azure-data-lake-storage-integration)
-- [Connect Data Lake Gen 2 storage to a Power Apps Environment](../dataflows/connect-azure-data-lake-storage-for-dataflow)
+- [Connect Data Lake Gen 2 storage to a Power Apps Environment](./connect-azure-data-lake-storage-for-dataflow)
 
 Once you have connected your data lake you should still use the dataflow connector. If this connector does not meet your needs, you could consider using the [Azure Data Lake connector](../Connectors/DataLakeStorage.md) instead.
 
 ### Dataverse
 
-A standard dataflow will write the output data to a dataverse table. [Dataverse](https://docs.microsoft.com/en-us/powerapps/maker/data-platform/data-platform-intro) lets you securely store and manage data that's used by business applications. After you loaded data into the Dataverse table you can consume the data using the [dataverse connector](../Connectors/Dataverse.md).
+A standard dataflow will write the output data to a dataverse table. [Dataverse](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro) lets you securely store and manage data that's used by business applications. After you loaded data into the Dataverse table you can consume the data using the [dataverse connector](../Connectors/Dataverse.md).
 
 ## Dataflows can get data from other dataflows
 
