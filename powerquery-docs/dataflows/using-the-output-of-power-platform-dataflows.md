@@ -21,7 +21,7 @@ There are multiple types of dataflows available for you to create. You can choos
 
 ## Storage type
 
-A Dataflow is able to write to multiple output destination types. In short you should be using the [Dataflows connector](../Connectors/Dataflows.md), unless your destination is a Dataverse table. Then you use the [Dataverse/CDM connector](../Connectors/Dataverse.md).
+A Dataflow is able to write to multiple output destination types. In short you should be using the [Dataflows connector](../Connectors/Dataflows.md), unless your destination is a Dataverse table. Then you use the [Dataverse/CDS connector](../Connectors/Dataverse.md).
 
 ### Azure Data Lake Storage
 
@@ -52,7 +52,7 @@ When you use the output of a dataflow in other dataflows or datasets, you can cr
 
 _**My dataflow table does not show up in the dataflow connector in Power BI**_
 
-You are probably using a Dataverse table as destination for your standard dataflow. Use the [Dataverse/CDM connector](../Connectors/Dataverse.md) instead or consider switching to an analytical dataflow.
+You are probably using a Dataverse table as destination for your standard dataflow. Use the [Dataverse/CDS connector](../Connectors/Dataverse.md) instead or consider switching to an analytical dataflow.
 
 _**There is a difference in the data when I remove duplicates in dataflows, how can I resolve this?**_
 
