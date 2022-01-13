@@ -36,7 +36,7 @@ You must have an existing Dataflow with maker permissions to access the portal, 
 >[!Note]
 >Direct query requires Power BI premium, read [this article](/power-bi/transform-model/dataflows/dataflows-premium-features) to learn more.
 
-## Get data fom Dataflows in Power BI Desktop
+## Get data from Dataflows in Power BI Desktop
 
 To get data from Dataflows in Power BI Desktop:
 
@@ -78,15 +78,15 @@ To get data from Dataflows in Power Query Online:
 
 _**Direct query is not working for me in Power BI, what should I do?**_
 
-To get direct query to run you need have Power BI Premium and adjust a few configuration items in your Power BI workspace. This is explained in the [dataflows premium features](/power-bi/transform-model/dataflows/dataflows-premium-features) article.
+To get direct query to run, you need to have Power BI Premium and adjust a few configuration items in your Power BI workspace. These actions are explained in the [dataflows premium features](/power-bi/transform-model/dataflows/dataflows-premium-features) article.
 
 _**My dataflow table does not show up in the dataflow connector in Power BI**_
 
-You are probably using a Dataverse table as destination for your standard dataflow. Use the [Dataverse/CDS connector](../Connectors/Dataverse.md) instead or consider switching to an analytical dataflow.
+You're probably using a Dataverse table as destination for your standard dataflow. Use the [Dataverse/CDS connector](../Connectors/Dataverse.md) instead or consider switching to an analytical dataflow.
 
 _**There is a difference in the data when I remove duplicates in dataflows, how can I resolve this?**_
 
-There could be a difference in data between design-time and refresh-time. We do not guarantee which instance is being kept during refresh time. [This article](/powerquery-docs/working-with-duplicates) will help you to avoid inconsistencies in your data.
+There could be a difference in data between design-time and refresh-time. We don't guarantee which instance is being kept during refresh time. [This article](/powerquery-docs/working-with-duplicates) will help you to avoid inconsistencies in your data.
 
 ### See also
 
