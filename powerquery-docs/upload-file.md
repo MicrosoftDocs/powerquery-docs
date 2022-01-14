@@ -13,6 +13,17 @@ ms.custom: intro-internal
 
 You can upload files to your Power Query project when using Power Query Online.
 
+The following connectors currently support the upload a file feature.
+
+* [Excel](connectors/excel.md)
+* [JSON](connectors/json.md)
+* [PDF](connectors/pdf.md)
+* [Text / CSV](connectors/textcsv.md)
+* [XML](connectors/xml.md)
+
+>[!NOTE]
+> Only files with the following extensions are supported for upload: .csv, .json, .pdf, .prn, .tsv, .txt, .xl, .xls, .xlsb, .xlsm, .xlsw, .xlsx, .xml.
+
 ## Upload a file experience
 
 When you select a connector that offers the *Upload file* experience, you will notice a radio button on the top that enables this feature.
@@ -47,16 +58,3 @@ When using the Power Query editor, you can drop a file on either the [diagram vi
 When dropping the file on either of the previously mentioned sections, a dialog with the appropriate connector settings page will be shown, based on the file extension of the file that's being uploaded.
 
 ![Text / CSV connector settings page shown after dropping a text file on the diagram view of the Power Query editor](media/upload-file/drag-drop-txt.png)
-
-## Connectors and file extensions supported
-
-The following connectors currently support the upload a file feature.
-
-* [Excel](connectors/excel.md)
-* [JSON](connectors/json.md)
-* [PDF](connectors/pdf.md)
-* [Text / CSV](connectors/textcsv.md)
-* [XML](connectors/xml.md)
-
->[!NOTE]
-> Only files with the following extensions are supported for upload: .csv, .json, .pdf, .prn, .tsv, .txt, .xl, .xls, .xlsb, .xlsm, .xlsw, .xlsx, .xml.
