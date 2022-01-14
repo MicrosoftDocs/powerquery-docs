@@ -19,13 +19,13 @@ Getting data from available data sources is usually the first encounter you have
 
 The procedures for where to start getting data in Power BI Desktop are described in [Data sources in Power BI Desktop](/power-bi/connect-data/desktop-data-sources).
 
-In Power BI Desktop, you can also select an Excel worksheet, a Power BI dataset, a SQL server database, or Dataverse data without using the **Get data** option. You can also enter data directly in a table, or select from a data source that was recently used.
+In Power BI Desktop, you can also directly select an Excel worksheet, a Power BI dataset, a SQL server database, or Dataverse data without using the **Get data** option. You can also enter data directly in a table, or select from a data source that was recently used.
 
 ![Image of the Data field in the Home ribbon of Power BI Desktop](media/where-to-get-data/power-bi-desktop-data-select.png)
 
-## Get data in Excel
+## Get data in Excel (Windows or Mac)
 
-To get data in Excel:
+To get data in Excel for Windows or Excel for Mac:
 
 1. From the **Data** ribbon, select **Get Data**.
 
@@ -35,7 +35,10 @@ To get data in Excel:
 
 You'll then be asked to fill out information that's required for you to access the data. Go to the [individual connector articles](connectors/index.md) for more information about this required information.
 
-In Excel, you can also select Text/CVS, Web, and Excel worksheet data without using the **Get Data** option. You can also select from a data source that was recently used and from existing connections or tables.
+In Excel, you can also directly select Text/CVS, Web, and Excel worksheet data without using the **Get Data** option. You can also select from a data source that was recently used and from existing connections or tables.
+
+>[!Note]
+>Not all Excel versions support all of the same Power Query connectors. For a complete list of the Power Query connectors supported by all versions of Excel for Windows and Excel for Mac, go to [Power Query data sources in Excel versions](https://support.microsoft.com/en-us/office/power-query-data-sources-in-excel-versions-e9332067-8e49-46fc-97ff-f2e1bfa0cb16).
 
 ## Get data from Power BI service
 
@@ -59,9 +62,9 @@ You'll then be asked to fill out information that's required for you to access t
 
 ## Get data from Power Apps
 
-There are a couple of places in Power Apps where you can get data, either by creating a new table or by creating a dataflow.
+There are several places in Power Apps where you can get data, either by importing data to a table or by creating a dataflow.
 
-To get data in Power Apps when creating a table:
+To import data to a new table in Power Apps:
 
 1. On the left side of Power Apps, select **Dataverse** > **Tables**.
 
@@ -69,9 +72,28 @@ To get data in Power Apps when creating a table:
 
    [![Image with Dataverse tables open, the data context menu open, with the get data option emphasized.](media/where-to-get-data/get-data-power-apps.png)](media/where-to-get-data/get-data-power-apps.png#lightbox)
 
-   You can also choose to get data from an Excel worksheet without using the **Get data** option.
+   You can also choose to get data directly from an Excel worksheet without using the **Get data** option.
 
    [![Image with Dataverse tables open, the data context menu open, with the get data from Excel option emphasized.](media/where-to-get-data/get-data-excel-powerapps.png)](media/where-to-get-data/get-data-excel-powerapps.png#lightbox)
+
+3. Select the connector from the list of data sources.
+
+To import data to an existing table in Power Apps:
+
+1. On the left side of Power Apps, select **Dataverse** > **Tables**.
+
+2. In the **Tables** pane, either:
+   1. Select a table in the **Tables** pane that you want to import data to, and then select **Data** > **Get data**.
+
+      ![Image with Dataverse tables open, the data context menu open, with the get data option emphasized.](media/where-to-get-data/table-get-data.png)
+
+   1. Open the table to its individual pane, and then select **Data** > **Get data**.
+
+      ![Image with Dataverse tables open, the data context menu open, with the get data option emphasized.](media/where-to-get-data/table-address-get-data.png)
+
+   In either case, you can also choose to get data from an Excel worksheet without using the **Get data** option.
+
+   [![Image with Dataverse tables open, the data context menu open, with the get data from Excel option emphasized.](media/where-to-get-data/table-data-from-excel.png)
 
 3. Select the connector from the list of data sources.
 
