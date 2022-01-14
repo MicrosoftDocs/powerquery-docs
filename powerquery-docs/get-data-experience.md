@@ -5,8 +5,8 @@ author: ptyx507
 ms.service: powerquery
 ms.reviewer: kvivek
 ms.date: 06/01/2019
-ms.author: v-miesco
-ms.custom: intro-internal
+ms.author: dougklo
+ms.topic: overview
 ---
 
 # Getting data

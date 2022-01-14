@@ -6,7 +6,7 @@ ms.service: powerquery
 ms.reviewer: kvivek
 ms.date: 04/09/2021
 ms.author: dhsundar
-ms.custom: intro-internal
+ms.topic: conceptual
 ---
 
 # Keyboard shortcuts in Power Query

@@ -5,8 +5,8 @@ author: ptyx507
 ms.service: powerquery
 ms.reviewer: 
 ms.date: 06/30/2020
-ms.author: v-miesco
-ms.custom: intro-internal
+ms.author: dougklo
+ms.topic: overview
 ---
 
 # Combine files overview

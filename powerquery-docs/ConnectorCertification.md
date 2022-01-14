@@ -19,7 +19,7 @@ LocalizationGroup: reference
 
 ## Introduction
 
-Certifying a Power Query custom connector makes the connector available publicly, out-of-box, within Power BI Desktop. Certification is governed by Microsoft's Connector Certification Program, where Microsoft works with partner developers to extend the data connectivity capabilities of Power BI.
+Certifying a Power Query custom connector makes the connector available publicly, out-of-box, within Power BI Desktop. Certified connectors are supported in PowerBI.com and all versions of Power BI Premium, except dataflows. Certification is governed by Microsoft's Connector Certification Program, where Microsoft works with partner developers to extend the data connectivity capabilities of Power BI.
 
 Certified connectors are:
 
@@ -32,6 +32,10 @@ Certified connectors are:
 * Distributed by Microsoft
 
 We work with partners to try to make sure that they have support in maintenance, but customer issues with the connector itself will be directed to the partner developer.
+
+Certified connectors are bundled out-of-box in Power BI Desktop. Custom connectors need to be loaded in Power BI Desktop, as described in [Loading your extension in Power BI Desktop](samples/TripPin/1-OData/README.md#loading-your-extension-in-power-bi-desktop). Both can be refreshed through Power BI Desktop or Power BI Service through using an on-premises data gateway by implementing a [TestConnection](samples/trippin/9-testconnection/readme.md).
+
+Certified connectors with a `TestConnection` implementation also support end-to-end refresh through the cloud (Power BI Service) without the need of an on-premises data gateway. The Power BI service environment essentially hosts a “cloud gateway” that runs similar to the on-premises gateway. After certification, we will deploy your connector to this environment so that it's available to all Power BI customers. There are additional requirements for connectors that need to use additional components, such as an ODBC-based driver. Be sure to reach out to your Microsoft contact if your connector requires the use of additional components.
 
 ## Custom Connector Security and Signing
 
@@ -49,13 +53,15 @@ To ensure the best experience for our customers, we only consider connectors tha
 
 * The connector must be for a public product.
 
+* The connector must be considered code-complete for a initial release version. The program allows for frequent iterations and updates. Note that Microsoft doesn't directly offer technical consulting for development of custom connectors. However as part of the program, Microsoft can recommend resources for developers to further engage with. Once registered with the program below, reach out to your Microsoft contact to learn more.
+
 * The developer must provide an estimate for usage. We suggest that developers of connectors for very boutique products use our [connector self-signing capabilities](#custom-connector-security-and-signing) to provide them directly to the customer.
 
-* The connector must be already made available to customers directly to fulfill a user need or business scenario.
+* The connector must be already made available to customers directly to fulfill a user need or business scenario. This can be done using a Private Preview program by distributing the completed connector directly to end users and organizations through [self-signing](#custom-connector-security-and-signing). Each user or organization should be able to provide feedback and validation that there's a business need for the connector and that the connector is working sucessfully to fulfill their business requirements. 
 
 * The connector must be working successfully at an anticipated level of usage by customers.
 
-* There must be a thread in the [Power BI Ideas forum](https://ideas.powerbi.com/) driven by customers to indicate demand to make the connector publicly available in Power BI Desktop.
+* There must be a thread in the [Power BI Ideas forum](https://ideas.powerbi.com/) driven by customers to indicate demand to make the connector publicly available in Power BI Desktop. There is no set threshold of engagement. However the more engagement, the stronger the evidenced demand for the connector.
 
 These prerequisites exist to ensure that connectors undergoing certification have significant customer and business need to be used and supported post-certification. 
 
@@ -142,6 +148,8 @@ There are specific security considerations that your connector must handle.
 ## Registering for Certification
 
 If you're interested in pursuing certification of your custom connector, ensure that your scenario and connector meet the [prerequisites](#prerequisites) and [requirements](#certification-requirements) outlined in this article. Failure to do so will cause delays in certification as our team will require you to fix any issues or inconsistencies prior to moving forward with certification.
+
+Ensure that your connector is code complete and has been tested in both authoring in Power BI Desktop, and refreshing and consumption in Power BI Service. Ensure you have tested full end-to-end refresh in Power BI Service through the use of an on-premises data gateway. 
 
 To get started, complete our [registration form](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2DcOSp0ibhKolmfRqZYZ51UN1MzQ0ZYNVlIMUM4MUQ1SUpPTEo3SFg1VC4u), and a Microsoft contact will reach out to begin the process.
 

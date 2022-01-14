@@ -4,13 +4,16 @@ description: This article provides information for the SoftOne BI connector and 
 author: basilrormose
 ms.service: powerquery
 ms.topic: 
-ms.date: 
+ms.date: 9/16/2021
 ms.author: bezhan
 ms.reviewer: kvivek
 LocalizationGroup: reference
 ---
 
 # SoftOne BI (Beta)
+
+>[!Note]
+>The following connector article is provided by SoftOne, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the SoftOne website and use the support channels there.
 
 ## Summary
 
@@ -19,6 +22,7 @@ LocalizationGroup: reference
 | Release State | Preview |
 | Products | Power BI (Datasets) |
 | Authentication Types Supported | Basic (Soft1/Atlantis Web Services) |
+| | |
 
 ## Prerequisites
 

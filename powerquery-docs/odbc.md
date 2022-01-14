@@ -184,62 +184,67 @@ are described in subsequent sections.
 <li><p>LimitClause</p></li>
 </ul>
 <p>See the AstVisitor section for more information.</p></td>
-</tr>
 <tr class="even">
+<td>CancelQueryExplicitly</td>
+<td><p>A logical value that instructs the M engine to explicitly cancel any running calls through the ODBC driver before terminating the connection to the ODBC server.</p>
+<p>This field is useful in situations where query execution is managed independently of the network connections to the server, for example in some Spark deployments. In most cases, this value doesn't need to be set because the query in the server is canceled when the network connection to the server is terminated.</p>
+<p>Default: false</p></td>
+</tr>
+<tr class="odd">
 <td>ClientConnectionPooling</td>
 <td><p>A logical value that enables client-side connection pooling for the ODBC driver. Most drivers will want to set this value to true.</p>
 <p>Default: false</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>CredentialConnectionString</td>
 <td><p>A text or record value used to specify credential related connection string properties.</p>
 <p>See the Credential section for more information.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>HideNativeQuery</td>
 <td><p>A logical value that controls whether your connector allows native SQL statements to be passed in by a query using the Value.NativeQuery() function.</p>
 <p>Note: this functionality is currently not exposed in the Power Query user experience. Users would need to manually edit their queries to take advantage of this capability.</p>
 <p>Default: false</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>ImplicitTypeConversions</td>
 <td><p>A table value containing implicit type conversions supported by your driver or backend server. Values in this table are additive to the conversions reported by the driver itself.</p>
 <p>This field is typically used in conjunction with the SQLGetTypeInfo field when overriding data type information reported by the driver.</p>
 <p>See the ImplicitTypeConversions section for more information.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>OnError</td>
 <td><p>An error handling function that receives an errorRecord parameter of type record.</p>
 <p>Common uses of this function include handling SSL connection failures, providing a download link if your driver isn't found on the system, and reporting authentication errors.</p>
 <p>See the OnError section for more information.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>SoftNumbers</td>
 <td><p>Allows the M engine to select a compatible data type when conversion between two specific numeric types isn't declared as supported in the SQL_CONVERT_* capabilities.</p>
 <p>Default: false</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>SqlCapabilities</td>
 <td><p>A record providing various overrides of driver capabilities, and a way to specify capabilities that aren't expressed through ODBC 3.8.</p>
 <p>See the SqlCapabilities section for more information.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>SQLColumns</td>
 <td><p>A function that allows you to modify column metadata returned by the SQLColumns function.</p>
 <p>See the SQLColumns section for more information.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>SQLGetFunctions</td>
 <td><p>A record that allows you to override values returned by calls to SQLGetFunctions.</p>
 <p>A common use of this field is to disable the use of parameter binding, or to specify that generated queries should use CAST rather than CONVERT.</p>
 <p>See the SQLGetFunctions section for more information.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>SQLGetInfo</td>
 <td><p>A record that allows you to override values returned by calls to SQLGetInfo.</p>
 <p>See the SQLGetInfo section for more information.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>SQLGetTypeInfo</td>
 <td><p>A table, or function that returns a table, that overrides the type information returned by SQLGetTypeInfo.</p>
 <p>When the value is set to a table, the value completely replaces the type information reported by the driver. SQLGetTypeInfo won't be called.</p>
@@ -247,18 +252,18 @@ are described in subsequent sections.
 <p>This field is typically used when there's a mismatch between data types reported by SQLGetTypeInfo and SQLColumns.</p>
 <p>See the SQLGetTypeInfo section for more information.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>SQLTables</td>
 <td><p>A function that allows you to modify the table metadata returned by a call to SQLTables.</p>
 <p>See the SQLTables section for more information.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>TolerateConcatOverflow</td>
-<td><p>Allows conversion of numeric and text types to larger types if an operation would cause the value to fall out of range of the original type.</p>
-<p>For example, when adding Int32.Max + Int32.Max, the engine will cast the result to Int64 when this setting is set to true. When adding a VARCHAR(4000) and a VARCHAR(4000) field on a system that supports a maximize VARCHAR size of 4000, the engine will cast the result into a CLOB type.</p>
+<td><p>Allows concatenation of text values to occur even if the result might be truncated to fit within the range of an available type.</p>
+<p>For example, when concatenating a VARCHAR(4000) field with a VARCHAR(4000) field on a system that supports a maximize VARCHAR size of 4000 and no CLOB type, the concatenation will be folded even though the result might get truncated.</p>
 <p>Default: false</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>UseEmbeddedDriver</td>
 <td><p><strong>(internal use):</strong> A logical value that controls whether the ODBC driver should be loaded from a local directory (using new functionality defined in the ODBC 4.0 specification). This is generally only set by connectors created by Microsoft that ship with Power Query.</p>
 <p>When set to false, the system ODBC driver manager will be used to locate and load the driver.</p>

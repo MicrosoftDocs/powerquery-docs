@@ -3,10 +3,9 @@ title: An overview of dataflows across Microsoft Power Platform and Dynamics 365
 description: An overview of dataflows across Microsoft Power Platform and Dynamics 365 products
 author: radacad 
 ms.service: powerquery 
-ms.topic: conceptual 
+ms.topic: overview
 ms.date: 6/10/2021 
-ms.author: gepopell
-ms.custom: intro-internal  
+ms.author: dougklo
 
 ---
 
@@ -79,10 +78,6 @@ In this scenario, the decision has been made by an organization to use Power App
 You can use dataflows as a replacement for other extract, transform, load (ETL) tools to build a data warehouse. In this scenario, the data engineers of a company decide to use dataflows to build their star schema&ndash;designed data warehouse, including fact and dimension tables in Data Lake Storage. Then Power BI is used to generate reports and dashboards by getting data from the dataflows.
 
 ![Building a data warehouse by using dataflows.](media/dataflows-build-data-warehouse.png)
-
-### Centralize data preparation and reuse of datasets across multiple Power BI solutions
-
-If multiple Power BI solutions are using the same transformed version of a table, the process of creating the table will be repeated multiple times. This increases the load on the source system, consumes more resources, and creates duplicate data with multiple points of failure. Instead, a single dataflow can be created to compute the data for all solutions. Power BI can then reuse the result of the transformation in all solutions. The dataflow, if used in such a way, can be part of a robust Power BI implementation architecture that avoids the Power Query code duplicates and reduces the maintenance costs of the data integration layer.
 
 ### Using dataflows to build a dimensional model 
 

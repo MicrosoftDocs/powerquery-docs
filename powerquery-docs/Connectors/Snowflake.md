@@ -102,6 +102,18 @@ The following table lists all of the advanced options you can set in Power Query
 
 Once you've selected the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your Snowflake database.
 
+## Power BI and Snowflake Webinar
+
+Power BI and Snowflake partnered to host a hands-on webinar on August 25th, 2021 to deep-dive into [Attaining Consumer Insights with Snowflake and Microsoft Power BI](https://www.snowflake.com/webinar/virtual-hands-on-labs/attaining-consumer-insights-with-snowflake-and-microsoft-power-bi/). 
+
+In this hands on lab, learn how to access all relevant data from a single source and turn data into insights through this connector.
+
+* Access first party data seamlessly in Snowflake
+* Leverage the Data Marketplace to query live data from 3rd party providers
+* Set up self-serve analytics in Power BI
+
+View the webinar on-demand using the above link!
+
 ## Additional information
 
 - [Connect to Snowflake in Power BI Service](/power-bi/connect-data/service-connect-snowflake)

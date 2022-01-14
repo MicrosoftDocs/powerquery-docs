@@ -5,8 +5,8 @@ author: ptyx507
 ms.service: powerquery
 ms.reviewer: 
 ms.date: 08/31/2020
-ms.author: v-miesco
-ms.custom: intro-internal
+ms.author: dougklo
+ms.topic: conceptual
 ---
 # Best practices when working with Power Query
 
@@ -29,7 +29,7 @@ Each data connector follows a standard experience as explained in [Getting data]
 ## Filter early
 
 It's always recommended to filter your data in the early stages of your query or as early as possible. Some connectors will take advantage of your filters through query folding, as described in [Power Query query folding](power-query-folding.md). 
-It's also a best practice to filter out any data that isn't relevant for your case. This will let you better focus on your task at hand by only showing data that’s relevant in the data preview section..
+It's also a best practice to filter out any data that isn't relevant for your case. This will let you better focus on your task at hand by only showing data that’s relevant in the data preview section.
 
 You can use the auto filter menu that displays a distinct list of the values found in your column to select the values that you want to keep or filter out. You can also use the search bar to help you find the values in your column.
 
@@ -45,6 +45,16 @@ These type-specific filters can help you create a dynamic filter that will alway
 
 > [!NOTE]
 > To learn more about filtering your data based on values from a column, see [Filter by values](filter-values.md).
+
+## Do expensive operations last
+Certain operations require reading the full data source in order to return *any* results, and will thus be slow to preview in the Power Query Editor. For example, if you perform a sort, it's possible that the first few sorted rows are at the end of the source data. So in order to return any results, the sort operation must first read *all* the rows.
+
+Other operations (such as filters) do not need to read all the data before returning any results. Instead, they operate over the data in what's called a "streaming" fashion. The data "streams" by, and results are returned along the way. In the Power Query Editor, such operations only need to read enough of the source data to populate the preview.
+
+When possible, perform such streaming operations first, and do any more expensive operations last. This will help minimize the amount of time you spend waiting for the preview to render each time you add a new step to your query.
+
+## Temporarily work against a subset of your data
+If adding new steps to your query in the Power Query Editor is slow, consider first doing a "Keep First Rows" operation and limiting the number of rows you're working against. Then, once you've added all the steps you need, remove the "Keep First Rows" step.
 
 ## Use the correct data types 
 

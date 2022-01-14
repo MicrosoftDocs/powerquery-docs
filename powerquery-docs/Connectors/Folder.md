@@ -4,7 +4,7 @@ description: Provides basic information and connection instructions, along with 
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 12/8/2020
+ms.date: 9/16/2020
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -20,6 +20,9 @@ LocalizationGroup: reference
 |Authentication Types Supported | Windows |
 | Function Reference Documentation | [Folder.Contents](/powerquery-m/folder-contents), [Folder.Files](/powerquery-m/folder-files) |
 | | |
+
+>[!Note]
+>Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Capabilities supported
 
@@ -73,6 +76,8 @@ To connect to a folder from Power Query Online:
 
 ### Combining files
 
-All of the files in the folder you select are included in the data to be combined. If you have data files located in a subfolder of the folder you select, all of these files are also included. To ensure that combining the file data works properly, make sure that all of the files in the folder and its subfolders have the same schema.
+When you combine files using the folder connector, all the files in the folder and its subfolders are processed the same way, and the results are then combined. The way the files are processed is determined by the example file you select. For example, if you select an Excel file and choose a table called "Table1", then all the files will be treated as Excel files that contain a table called "Table1".
 
-For more information about combining files, see [Combine files in Power Query](../combine-files-overview.md).
+To ensure that combining the files works properly, make sure that all the files in the folder and its subfolders have the same file format and structure. If you need to exclude some of the files, first select **Transform data** instead of **Combine** and filter the table of files in the Power Query Editor before [combining](../combine-files-overview.md).
+
+For more information about combining files, go to [Combine files in Power Query](../combine-files-overview.md).

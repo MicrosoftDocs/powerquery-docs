@@ -4,10 +4,8 @@ description: Learn what Power Query is, and how it can help you get and transfor
 author: mllopis
 ms.service: powerquery
 ms.topic: overview
-ms.date: 07/27/2020
+ms.date: 10/27/2021
 ms.author: millopis
-ms.custom: intro-internal
-LocalizationGroup: Get started
 ---
 
 # What is Power Query?
@@ -60,7 +58,7 @@ More information: [Quickstart: Using Power Query in Power BI](power-query-quicks
 
 Power Query can be used in many products, such as Power BI and Excel. However, using Power Query within a product limits its usage to only that specific product. *Dataflows* are a product-agnostic service version of the Power Query experience that runs in the cloud. Using dataflows, you can get data and transform data in the same way, but instead of sending the output to Power BI or Excel, you can store the output in other storage options such as Dataverse or Azure Data Lake Storage. This way, you can use the output of dataflows in other products and services.
 
-More information: [What are dataflows?](/dataflows/overview-dataflows-across-power-platform-dynamics-365.md)
+More information: [What are dataflows?](./dataflows/overview-dataflows-across-power-platform-dynamics-365.md)
 
 ## Power Query M formula language
 
