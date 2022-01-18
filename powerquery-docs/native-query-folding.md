@@ -22,10 +22,8 @@ This article showcases an alternative method to create native queries against yo
 
 The following method is applicable to the following data connectors.
 
-* [Dataverse and dataflows](connectors/dataverse.md) *(when using enhanced compute)*
 * [SQL Server](connectors/sqlserver)
 * [PostgreSQL](connectors/postgresql.md)
-* [MySQL](connectors/mysqldatabase.md)
 * [Amazon Redshift](connectors/amazonredshift.md)
 * [Google BigQuery](connectors/googlebigquery.md)
 * [Snowflake](connectors/snowflake.md)
