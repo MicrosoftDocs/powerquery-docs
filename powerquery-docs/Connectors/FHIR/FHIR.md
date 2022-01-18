@@ -33,7 +33,7 @@ If you don't have a FHIR server, you can provision the [Azure API for FHIR](/azu
 
 ## Prerequisites
 
-You must have FHIR Reader role on the FHIR server to read data from the server.
+You must have a FHIR Reader role on the FHIR server to read data from the server.
 
 ## Connect to a FHIR server from Power Query Desktop
 
@@ -59,7 +59,7 @@ To make a connection to a FHIR server, take the following steps:
 
     ![Image of authentication dialog box with the Organizational account selected and the user not yet signed in.](FHIR-Sign-In.png)
 
-    The connector supports "Anonymous" for FHIR servers with no access controls (for example, public test servers (like http://test.fhir.org/r4) or Azure Active Directory authentication. You must have FHIR Reader role on the FHIR server to read data from the server. Go to [FHIR connector authentication](FHIR-Authentication.md) for details.
+    The connector supports "Anonymous" for FHIR servers with no access controls (for example, public test servers (like http://test.fhir.org/r4) or Azure Active Directory authentication. You must have a FHIR Reader role on the FHIR server to read data from the server. Go to [FHIR connector authentication](FHIR-Authentication.md) for details.
 
 5. Select the resources you're interested in.
 
@@ -95,7 +95,7 @@ To make a connection to a FHIR server, take the following steps:
 
 3. If necessary, include the name of your on-premises data gateway.
 
-4. Select the **Organizational account** authentication kind, and select **Sign in**. Enter your credentials when asked. You must have FHIR Reader role on the FHIR server to read data from the server.
+4. Select the **Organizational account** authentication kind, and select **Sign in**. Enter your credentials when asked. You must have a FHIR Reader role on the FHIR server to read data from the server.
 
 5. Select **Next** to proceed.
 
