@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for the connector, des
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 12/2/2020
+ms.date: 1/18/2022
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -16,7 +16,7 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI Desktop |
+| Products | Power BI (datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Customer Insights (Dataflows) |
 | Authentication Types Supported | Organizational account |
 | Function Reference Documentation | [AdobeAnalytics.Cubes](/powerquery-m/adobeanalytics-cubes) |
 | | |
