@@ -51,4 +51,16 @@ After changing your data gateway, we recommended that you check your data source
 
 The best way to validate the data source path is to go into the query where your data source function is being used and check the parameters being used for it. For this example, there's only one query that connects to a folder and this query has the **Source** step with the data source path defined in it. You can double-click the **Source** step to get the dialog that shows you the parameters used for your data source function. Make sure that the folder path, or the correct parameters for your data source function, is the correct one in relation to the gateway being used.
 
-![Image of the results of double-clicking the Source in the Power Query Query settings pane, with the Folder path shown from the example in this article.](media\change-gateway\data-source-path.png)
+![Image of the results of double-clicking the Source in the Power Query Query settings pane, with the Folder path shown from the example in this article.](media\change-gateway\data-source-path.png)\
+
+## Modifiy authentication
+
+To modify the credentials used against your data source, you can click the **Get data** button in the ribbon to launch the *Choose data source* dialog and define a new or existing connection to your data source. For the purpose of this example, the connector that will be used is the Folder connector.
+
+![Choose data source dialog showing the folder connector](media\change-gateway\choose-data-source.png)
+
+Once in the *Connection settings* dialog, you can create a new connection or select or modify a different connection for your data source.
+
+![Connection settings dialog for the folder connector](media\change-gateway\folder-connection-settings.png)
+
+After defining the connection details, you can click the OK button at the bottom right corner and validate that your query is loading in the Power Query editor.
