@@ -5,7 +5,7 @@ author: cpopell
 
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 12/11/2018
+ms.date: 1/19/2022
 ms.author: dougklo
 
 LocalizationGroup: reference
@@ -343,4 +343,4 @@ shared SqlODBC.Contents = (server as text) =>
 
 ## Next steps
 
-- [Troubleshooting and testing an ODBC-based connector](odbc-troubleshooting.md)
+- [Test and troubleshoot an ODBC-based connector](odbc-troubleshooting.md)

@@ -5,13 +5,19 @@ author: cpopell
 
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 12/11/2018
+ms.date: 1/19/2022
 ms.author: dougklo
 
 LocalizationGroup: reference
 ---
 
-# Troubleshooting and testing an ODBC-based connector
+# Test and troubleshoot an ODBC-based connector
+
+While you're building your ODBC-based connector, it's a good idea to occasionally test and troubleshoot the connector. This section describes how to set up and use some test and troubleshooting tools.
+
+## Use the tracing tool in Power BI Desktop
+
+One of the basic tools for testing and troubleshooting an ODBC-based connector is the ability to use tracing in Power BI Desktop to determine why errors may be occurring.
 
 To enable tracing in Power BI Desktop:
 
@@ -56,7 +62,7 @@ Once you have simple queries working, you can then try DirectQuery scenarios (fo
 - Filter on date -- timestamp precision incorrect
 -->
 
-## Concatenation of strings in Direct Query mode
+## Concatenation of strings in DirectQuery mode
 
 The M engine does basic type size limit validation as part of its query folding logic. If you're receiving a folding error when trying to concatenate two strings that potentially overflow the maximum size of the underlying database type:
 
@@ -64,6 +70,6 @@ The M engine does basic type size limit validation as part of its query folding 
 2. Set the [TolerateConcatOverflow option](odbc-parameters.md#tolerate) for `Odbc.DataSource` to `true`.
 
 >[!Note]
-> The [DAX CONCATENATE function](/dax/concatenate-function-dax) is currently not supported by Power Query/ODBC extensions.
+> The [DAX CONCATENATE function](/dax/concatenate-function-dax) isn't currently supported by Power Query/ODBC extensions.
 > Extension authors should ensure string concatenation works through the query editor by adding calculated columns (`[stringCol1] & [stringCol2]`).
 > When the capability to fold the CONCATENATE operation is added in the future, it should work seamlessly with existing extensions.

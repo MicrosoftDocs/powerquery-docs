@@ -508,7 +508,7 @@
             href: odbc.md
           - name: "Parameters for Odbc.DataSource"
             href: odbc-parameters.md
-          - name: "Troubleshooting and testing"
+          - name: "Testing and troubleshooting"
             href: odbc-troubleshooting.md
         - name: "Handling resource path"
           href: HandlingResourcePath.md
