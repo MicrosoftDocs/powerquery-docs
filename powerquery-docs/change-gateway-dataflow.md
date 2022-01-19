@@ -64,3 +64,6 @@ Once in the *Connection settings* dialog, you can create a new connection or sel
 ![Connection settings dialog for the folder connector](media\change-gateway\folder-connection-settings.png)
 
 After defining the connection details, you can click the OK button at the bottom right corner and validate that your query is loading in the Power Query editor.
+
+>[!NOTE]
+>This process is the same as if you were to connect again to your data source, but by doing the process again you're effectively re-defining what authentication method and credentials to use against your data source.
