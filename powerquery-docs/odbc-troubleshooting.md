@@ -48,7 +48,8 @@ Here are steps you can take for initial testing in Power BI Desktop:
 7. Expressions that fail to fold will result in a warning bar. Note the failure, remove the step, and move to the next test case. Details about the cause of the failure should be emitted to the trace logs.
 8. Close Power BI Desktop.
 9. Copy the trace files to a new directory.
-10. Use the recommend Power BI workbook to parse and analyze the trace files.
+10. Open the trace files in your text editor of choice.
+11. Search for `OdbcQuery/FoldingWarning` entries in the trace files. These entries should contain more information as to why the query engine believes that query folding isn't possible for this operation.
 
 Once you have simple queries working, you can then try DirectQuery scenarios (for example, building reports in the Report Views). The queries generated in DirectQuery mode are significantly more complex (that is, use of sub-selects, COALESCE statements, and aggregations).
 
