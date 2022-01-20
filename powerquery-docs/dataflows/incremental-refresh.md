@@ -24,6 +24,10 @@ With dataflows, you can bring large amounts of data into Power BI or your organi
 
 Incremental refresh is available in dataflows created in Power BI and dataflows created in Power Apps. This article shows screens from Power BI, but these instructions apply to dataflows created in Power BI or in Power Apps.
 
+> [!NOTE]
+> When the schema for a table in an analytical dataflow changes, a full refresh has to take place so that all data created by the dataflow after refresh shares the same schema. As a result, any data stored incrementally will be refreshed and in some cases, if the source system does not retain historic data, will be lost.
+
+
 ![Incremental refresh for dataflows.](media/dataflows-incremental-refresh/dataflows-incremental-refresh-03.png)
 
 Using incremental refresh in dataflows created in Power BI requires that the dataflow reside in a workspace in [Premium capacity](/power-bi/service-premium-what-is). Incremental refresh in Power Apps requires Power Apps Plan 2.
