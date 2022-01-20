@@ -30,6 +30,9 @@ Using incremental refresh in dataflows created in Power BI requires that the dat
 
 In either Power BI or Power Apps, using incremental refresh requires that source data ingested into the dataflow have a DateTime field on which incremental refresh can filter.
 
+> [!NOTE]
+> When the schema for a table in an analytical dataflow changes, a full refresh has to take place so that all data created by the dataflow after refresh shares the same schema. As a result, any data stored incrementally will be refreshed and in some cases, if the source system does not retain historic data, will be lost.
+
 ## Configuring incremental refresh for dataflows
 
 A dataflow can contain many entities. Incremental refresh is set up at the entity level, allowing one dataflow to hold both fully refreshed entities and incrementally refreshed entities.
