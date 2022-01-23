@@ -422,6 +422,8 @@
         href: Connectors/TextCSV.md
       - name: "TIBCO(R) Data Virtualization"
         href: Connectors/tibco.md
+      - name: "Twilio (Deprecated) (Beta)"
+        href: Connectors/twilio.md
       - name: "Usercube"
         href: Connectors/Usercube.md
       - name: "Web"
