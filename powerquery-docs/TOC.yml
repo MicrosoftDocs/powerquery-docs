@@ -280,6 +280,8 @@
         href: "Connectors/AdobeAnalytics.md"
       - name: "Amazon Athena"
         href: "Connectors/AmazonAthena.md"
+      - name: "Amazon OpenSearch Project"
+        href: "Connectors/AmazonOpenSearchProject.md"
       - name: "Amazon Redshift"
         href: Connectors/AmazonRedshift.md
       - name: "Anaplan"
@@ -308,6 +310,8 @@
         href: Connectors/dataverse.md
       - name: "Delta Sharing"
         href: Connectors/DeltaSharing.md
+      - name: "Digital Construction Works Insights"
+        href: Connectors/DigitalConstructionWorksInsights.md"
       - name: "EQuIS (Beta)"
         href: Connectors/EQuIS.md
       - name: "Essbase"
@@ -358,6 +362,8 @@
         href: Connectors/Odbc.md
       - name: "Oracle database"
         href: Connectors/OracleDatabase.md
+      - name: "OpenSearch Project"
+        href: Connectors/OpenSearchProject.md
       - name: "PDF"
         href: Connectors/Pdf.md
       - name: "PostgreSQL"
