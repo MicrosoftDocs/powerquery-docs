@@ -112,3 +112,6 @@ In the query plan view, you can see that a node with the name Value.NativeQuery 
 The native query is wrapped around another SELECT statement to create  a subquery of the original. Power Query will do its best to create the most optimal query given the transforms used and the native query provided.
 
 ![Query plan for the Filtered rows step](media/native-query-folding/query-plan.png)
+
+>[!TIP]
+>For scenarios where you get errors because query folding wasn't possible, it is recommended that you try validating your steps as a subquery of your original native query to check if there might be any syntax or context conflicts.
