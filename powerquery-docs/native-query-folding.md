@@ -35,13 +35,13 @@ The following method is applicable to the following data connectors.
 >To showcase this process, this article will use the SQL Server connector and the [AdventureWorks2019 sample database](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
 >However, the contents described in this article are applicable to all supported connectors.
 
-When connecting to the data source, is important that you connect to the node or level where you'll want to execute your native query. For this case, that will be the database level inside the server.
+When connecting to the data source, is important that you connect to the node or level where you will want to execute your native query. For this case, that will be the database level inside the server.
 
 ![Connection settings dialog for the connection to the AdventureWorks2019 database on a local instance of SQL Server](media/native-query-folding/connection-settings.png)
 
-After defining the connection settings along with the connection credentials for your connection, you will be taking through the navigation dialog for your data source where you'll see all the available objects that you can connect to.
+After defining the connection settings along with the connection credentials for your connection, you will be taking through the navigation dialog for your data source where you will see all the available objects that you can connect to.
 
-From this list, need to select the object where the query should be executed (also known as the target). For this case that's the database level that reads *SQL Server database*.
+From this list, need to select the object where the query should be executed (also known as the target). For this case that is the database level that reads *SQL Server database*.
 
 ### For Power Query Desktop
 
@@ -89,9 +89,9 @@ The most important component of this formula is the usage of the optional record
 >[NOTE]
 >You can read more about the Value.NativeQuery function from the [official documentation article](https://docs.microsoft.com/powerquery-m/value-nativequery).
 
-After you've entered the formula, a warning will be shown that will require you to enable native queries to run for your specific step. You can click continue for this step to be evaluated.
+After you have entered the formula, a warning will be shown that will require you to enable native queries to run for your specific step. You can click continue for this step to be evaluated.
 
-This SQL statement yields a table with only three rows and 2 columns.
+This SQL statement yields a table with only three rows and two columns.
 
 ![Native query evaluated against the target database](media/native-query-folding/native-query-executed-sample.png)
 
