@@ -12,7 +12,7 @@ ms.author: bensack
 
 # Field mapping considerations for standard dataflows
 
-[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
+
 
 When you create dataflows that write their output to Dataverse, you can follow some guide lines and best practices to get the best outcome. In this article, some of those best practices are covered.
 
