@@ -14,7 +14,7 @@ LocalizationGroup: Data from files
 
 # Using incremental refresh with dataflows
 
-[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
+
 
 With dataflows, you can bring large amounts of data into Power BI or your organization's provided storage. In some cases, however, it's not practical to update a full copy of source data in each refresh. A good alternative is **incremental refresh**, which provides the following benefits for dataflows:
 
