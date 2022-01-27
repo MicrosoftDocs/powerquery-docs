@@ -12,7 +12,7 @@ ms.author: bensack
 
 # Sync your Excel data source with Dataverse using a dataflow
 
-[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
+
 
 One of the common scenarios that happens when you integrate data into Dataverse is keeping it synchronized with the source. Using the standard dataflow, you can load data into Dataverse. This article explains how you can keep the data synchronized with the source system.
 

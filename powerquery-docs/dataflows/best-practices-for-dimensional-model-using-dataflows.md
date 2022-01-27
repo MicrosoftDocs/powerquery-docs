@@ -11,7 +11,7 @@ ms.author: bezhan
 
 # Best practices for creating a dimensional model using dataflows
 
-[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
+
 
 Designing a dimensional model is one of the most common tasks you can do with a dataflow. This article highlights some of the best practices for creating a dimensional model using a dataflow.
 
