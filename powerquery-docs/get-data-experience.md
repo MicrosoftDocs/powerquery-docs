@@ -89,7 +89,7 @@ The **Navigator** window consists of two main sections:
 
 * The data preview pane on the right side of the window shows a preview of the data from the object you selected.
 
-   ![SQL Server connector navigator window.](media/get-data-experience/navigator.png "SQL Server connector navigator window")
+   ![SQL Server connector navigator window in Power Query Desktop.](media/get-data-experience/navigator.png "SQL Server connector navigator window")
 
 ##### Object limitation workaround
 
@@ -164,7 +164,7 @@ The primary information required by all connectors to define a connection are:
 * **Privacy level:** You can define the privacy level for your data source to be either **None**, **Private**, **Organizational**, or **Public**.
 
 >[!NOTE]
->To learn more about what data gateways are and how to register a new gateway for your environment or tenant, go to [Using on-premises data gateway](using-dataflows-with-on-premises-data.md).
+>To learn more about what data gateways are and how to register a new gateway for your environment or tenant, go to [Using on-premises data gateway](dataflows/using-dataflows-with-on-premises-data.md).
 
 >[!IMPORTANT]
 >Some Power Query integrations don't currently enable a defined connection or a privacy level. But, all Power Query Online experiences do provide a way to define the data gateway, authentication kind, and the credentials needed to establish a connection with your data source.
@@ -194,7 +194,7 @@ The **Navigator** window consists of two main sections:
 
 * The data preview pane on the right side of the window shows a preview of the data from the object you selected.
 
-   [![SQL Server connector navigator window.](media/get-data-experience/pqo-navigator-window.png "SQL Server connector navigator window")](media/get-data-experience/pqo-navigator-window.png#lightbox)
+   [![SQL Server connector navigator window in Power Query Online.](media/get-data-experience/pqo-navigator-window.png "SQL Server connector navigator window")](media/get-data-experience/pqo-navigator-window.png#lightbox)
 
 #### Table preview dialog box in Power Query Online
 
@@ -206,4 +206,4 @@ The table preview dialog box consists of only one section for the data preview. 
 
 For Power Query Online, you're required to load the data into the Power Query editor where you can further transform and enrich the query if you choose to do so.
 
-[ ![Sample query loaded into the query editor](media/query-plan/alternative-approach.png) ](media/query-plan/sample-query.png#lightbox)
+[![Sample query loaded into the query editor](media/query-plan/alternative-approach.png)](media/query-plan/sample-query.png#lightbox)
