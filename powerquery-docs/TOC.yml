@@ -16,6 +16,8 @@
         href: connecting-to-graph.md
       - name: "Connectivity without an existing connector"
         href: connector-alternatives.md
+      - name: "Change a dataflow gateway"
+        href: change-gateway-dataflow.md
     - name: Transform data
       items:
       - name: "Use Power Query to transform data"
