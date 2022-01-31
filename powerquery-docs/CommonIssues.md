@@ -105,6 +105,6 @@ Using Windows authentication with an on-premises gateway requires the gateway ma
 
 If you want to connect to a data source from Power BI service using OAuth2, the data source must be in the same tenant as Power BI service. Currently, multi-tenant connection scenarios aren’t supported with OAuth2.
 
-## Limitation: Custom ADFS authentication endpoint isn't supported in Power BI service
+## Limitation: Custom AD FS authentication endpoint isn't supported in Power BI service
 
-The ability to use a custom ADFS authentication endpoint is not supported in Power BI service. Users may encounter the following error: **The token service reported by the resource is not trusted**.
+The ability to use a custom Active Directory Federation Services (AD FS) authentication endpoint isn't supported in Power BI service. Users might encounter the following error: **The token service reported by the resource is not trusted**.
