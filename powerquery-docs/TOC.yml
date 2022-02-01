@@ -281,7 +281,7 @@
       - name: "Amazon Athena"
         href: "Connectors/AmazonAthena.md"
       - name: "Amazon OpenSearch Project (Beta)"
-        href: "Connectors/AmazonOpenSearchProject.md"
+        href: "Connectors/AmazonOpenSearchService.md"
       - name: "Amazon Redshift"
         href: Connectors/AmazonRedshift.md
       - name: "Anaplan"
@@ -311,7 +311,7 @@
       - name: "Delta Sharing"
         href: Connectors/DeltaSharing.md
       - name: "Digital Construction Works Insights (Beta)"
-        href: Connectors/DigitalConstructionWorksInsights.md"
+        href: Connectors/DigitalConstructionWorksInsights.md
       - name: "EQuIS (Beta)"
         href: Connectors/EQuIS.md
       - name: "Essbase"
