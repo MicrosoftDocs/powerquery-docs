@@ -38,7 +38,7 @@ First you'll need to set up the proxy settings in Windows. There are two ways to
 
 A `Web.DefaultProxy` function has been added to the extensibility module. Third-party M connectors can use this function to fetch the web proxy settings to be set in the driver properties (when the proxy is enabled as described in [Windows proxy settings](#windows-proxy-settings)).
 
-The proxy information can be set in the connection string against the connection parameter, which can differ by connectors. Proxy credentials (username and password) are not supported. `Web.DefaultProxy` takes in the serverUri/host as the parameter and returns a record containing the proxy URI as the `ProxyUri` field of a record. To get the constituent parts of the URI (for example: scheme, host, port) inside the connector, use `Uri.Parts`.
+The proxy information can be set in the connection string against the connection parameter, which can differ by connectors. Proxy credentials (username and password) aren't supported. `Web.DefaultProxy` takes in the serverUri/host as the parameter and returns a record containing the proxy URI as the `ProxyUri` field of a record. To get the constituent parts of the URI (for example: scheme, host, port) inside the connector, use `Uri.Parts`.
 
 If the proxy isn't configured, `Web.DefaultProxy` returns an empty record.
 
