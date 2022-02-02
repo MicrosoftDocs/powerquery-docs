@@ -360,10 +360,10 @@
           href: /azure/devops/report/powerbi/odataquery-connect?view=azure-devops
       - name: "ODBC"
         href: Connectors/Odbc.md
-      - name: "Oracle database"
-        href: Connectors/OracleDatabase.md
       - name: "OpenSearch Project (Beta)"
         href: Connectors/OpenSearchProject.md
+      - name: "Oracle database"
+        href: Connectors/OracleDatabase.md
       - name: "PDF"
         href: Connectors/Pdf.md
       - name: "PostgreSQL"

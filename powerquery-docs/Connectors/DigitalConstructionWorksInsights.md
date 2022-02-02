@@ -18,15 +18,17 @@ LocalizationGroup: reference
 |Release state | Beta |
 | Products supported | Power BI (Datasets) |
 | Authentication types supported| Digital Construction Works JSON Web Token (JWT) |
-| Function reference docs | - |
+| Function reference docs | &mdash; |
 | | |
 
 > [!NOTE]
-> Use of this connector requires a Digital Construction Works Integrations Platform subscription. To learn more, go to https://www.digitalconstructionworks.com/solutions/the-dcw-integrations-platform. Visit https://www.digitalconstructionworks.com for company information.
+> The following connector article is provided by Digital Construction Works (DCW), the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the DCW website and use the support channels there.
 
 ## Prerequisites
 
-Users of the Digital Construction Works (DCW) Integrations Platform can request a JWT from their project administrator in order to access data using the DCW Insights connector. Users can then follow the documentation for the OData API to connect to the datasets they want to use in Power BI.
+Use of this connector requires a Digital Construction Works Integrations Platform subscription. To learn more, go to https://www.digitalconstructionworks.com/solutions/the-dcw-integrations-platform. Visit https://www.digitalconstructionworks.com for company information.
+
+Users of the Digital Construction Works (DCW) Integrations Platform can request a JSON Web Token (JWT) from their project administrator in order to access data using the DCW Insights connector. Users can then follow the documentation for the OData API to connect to the datasets they want to use in Power BI.
 
 ## Capabilities supported
 
@@ -46,7 +48,7 @@ To connect to a DCW Insights project, take the following steps:
 
 3. Select **OK**.
 
-4. If this is the first time you're connecting to this endpoint, you'll be asked to enter in the JWT used to authorize you for this project. Then select **Connect**.
+4. If this is the first time you're connecting to this endpoint, you'll be asked to enter in the [JWT](#prerequisites) used to authorize you for this project. Then select **Connect**.
 
    ![Image of DCW Insights JWT authentication dialog with blank Account key in which to enter the JWT.](./media/dcw-insights-connector/step3.png)
 
@@ -67,6 +69,6 @@ Power Query doesn't support "Always Encrypted" columns.
 
 ### OData.Feed
 
-We leverage the following default settings when using [OData.Feed](odatafeed.md):
+We use the following default settings when using [OData.Feed](odatafeed.md):
 
 Implementation = "2.0", MoreColumns = true, ODataVersion = 4
