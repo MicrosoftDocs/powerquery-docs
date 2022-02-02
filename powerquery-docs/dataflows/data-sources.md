@@ -15,7 +15,7 @@ LocalizationGroup: Data from files
 
 # Connect to data sources for dataflows
 
-[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
+
 
 With Microsoft Power BI and Power Platform dataflows, you can connect to many different data sources to create new dataflows, or add new entities to an existing dataflow.
 

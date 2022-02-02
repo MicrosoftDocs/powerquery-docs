@@ -12,7 +12,7 @@ ms.author: bezhan
 
 # Best practices for reusing dataflows across environments and workspaces
 
-[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
+
 
 This article discusses a collection of best practices for reusing dataflows effectively and efficiently. Read this article to avoid design pitfalls and potential performance issues as you develop dataflows for reuse.
 

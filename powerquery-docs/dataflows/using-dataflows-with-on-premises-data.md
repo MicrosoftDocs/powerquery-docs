@@ -43,7 +43,12 @@ With a gateway, you can connect to on-premises data through these connections:
 
 ## Install a gateway
 
-You can install an on-premises data gateway directly from the online service.
+You can install an on-premises data gateway directly from the online service. 
+
+>[!NOTE]
+>
+>- It's a good general practice to make sure you're using a supported version of the on-premises data gateway. We release a new update of the on-premises data gateway every month. Currently, Microsoft actively supports only the last six releases of the on-premises data gateway.
+>- Starting April 2022, the minimum required gateway version will be Feburary 2021. Dataflows that refresh using an earlier version of the gateway might stop refreshing.
 
 ### Install a gateway from Power BI service
 
@@ -133,11 +138,13 @@ You can change the enterprise gateway used for a given dataflow and change the g
 
 There are a few known limitations when using enterprise gateways and dataflows.
 
+- Dataflow refresh might fail if an out-of-date data gateway is used. Starting April 2022, the minimum required data gateway version is February 2021.
+
 - Each dataflow can use only one gateway. As such, all queries should be configured using the same gateway.
 
 - Changing the gateway impacts the entire dataflow.
 
-- If several gateways are needed, the best practice is to build several dataflows (one for each gateway) and use the compute or table reference capabilities to unify the data.
+- If several gateways are needed, the best practice is to build several dataflows (one for each gateway). Then use the compute or table reference capabilities to unify the data.
 
 - Dataflows are only supported using enterprise gateways. Personal gateways won't be available for selection in the drop-down lists and settings
     screens.
@@ -148,7 +155,7 @@ There are a few known limitations when using enterprise gateways and dataflows.
 
 When you attempt to use an on-premises data source to publish a dataflow, you might come across the following MashupException error:
 
-```
+```M
 AzureDataLakeStorage failed to get the response:
 'The underlying connection was closed: An unexpected error occurred on a send.'
 ```
@@ -157,7 +164,7 @@ This error usually occurs because you're attempting to connect to an Azure Data 
 
 For more information about troubleshooting issues with gateways, or configuring the gateway service for your network, go to the [On-premises data gateway documentation](/data-integration/gateway).
 
-
+If you're experiencing issues with the gateway version you're using, try updating to the latest version as your issue might have been resolved in the latest version. For more information about updating your gateway, go to [Update an on-premises data gateway](/data-integration/gateway/service-gateway-update).
 
 ## Next steps
 

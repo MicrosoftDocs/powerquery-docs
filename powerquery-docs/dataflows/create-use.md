@@ -14,7 +14,7 @@ LocalizationGroup: Dataflows
 
 # Create and use dataflows in Microsoft Power Platform
 
-[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
+
 
 Using dataflows with Microsoft Power Platform makes data preparation easier, and lets you reuse your data preparation work in subsequent reports, apps, and models. 
 
