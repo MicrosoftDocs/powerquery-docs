@@ -143,6 +143,7 @@ The following Azure Active Directory client IDs are used by Power Query. You mig
 | ---------- | ----- | ----------- |
 | a672d62c-fc7b-4e81-a576-e60dc46e951d | Power Query for Excel | Public client, used in Power BI Desktop and Gateway. |
 | b52893c8-bc2e-47fc-918b-77022b299bbc | Power BI Data Refresh | Confidential client, used in Power BI service. |
+| 7ab7862c-4c57-491e-8a45-d52a7e023983 | Power Apps and Power Automate | Confidential client, used in PowerApps and Power Automate. You may need to [pre-authenticate](/azure/active-directory/develop/quickstart-configure-app-expose-web-apis#add-a-scope) using Step 8. |
 | | | |
 
 If you need more control over the OAuth flow (for example, if your service must respond with a `302` rather than a `401`), or if your application’s Application ID URL or Azure AD Resource value don't match the URL of your service, then you’d need to use a custom connector. For more information about using our built-in Azure AD flow, go to [Azure Active Directory authentication](HandlingAuthentication.md#azure-active-directory-authentication).
