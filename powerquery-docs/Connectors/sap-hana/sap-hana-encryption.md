@@ -42,7 +42,7 @@ Create an X509 certificate signing request for the HANA server.
 
 3. Create a hidden directory with the name _.__ssl_if one doesn't already exist.
 
-4. Execute the following command:
+4. Run the following command:
 
     **sapgenpse gen_pse -p cert.pse -r csr.txt -k GN-dNSName:\<_HOSTNAME with FQDN_> "CN=\<_HOSTNAME with FQDN_>, O=\<_organization_>, C=\<_country_>"**
 
@@ -101,7 +101,7 @@ Before you can validate a server certificate in the Power BI service online, you
 
 Test the connection in Power BI Desktop or the Power BI service.
 
-1. In Power BI Desktop or in the **Data Source Settings** page of the Power BI service, ensure that **Validate server certificate** is enabled before attempting to establish a connection to your SAP HANA server. For **SSL crypto provider**, select commoncrypto if you've configured the CommonCryptoLib library as your crypto provider. Leave the SSL key store and SSL trust store fields blank.
+1. In Power BI Desktop or in the **Data Source Settings** page of the Power BI service, ensure that **Validate server certificate** is enabled before attempting to establish a connection to your SAP HANA server. For **SSL crypto provider**, select commoncrypto. Leave the SSL key store and SSL trust store fields blank.
 
     - Power BI Desktop
 
@@ -117,8 +117,8 @@ You'll note that only the **SSL crypto provider** information is required. Howev
 
 ## Additional information
 
-* [Server-Side TLS/SSL Configuration Properties for External Communication (JDBC/ODBC)](https://help.sap.com/viewer/b3ee5778bc2e4a089d3299b82ec762a7/2.0.04/en-US/64065bc94ccb4f64bfb544686db23e60.html)
+- [Server-Side TLS/SSL Configuration Properties for External Communication (JDBC/ODBC)](https://help.sap.com/viewer/b3ee5778bc2e4a089d3299b82ec762a7/2.0.04/en-US/64065bc94ccb4f64bfb544686db23e60.html)
 
 ## Next steps
 
-* [Configure SSL for ODBC client access to SAP HANA](configure-odbc-sap-hana.md)
+- [Configure SSL for ODBC client access to SAP HANA](configure-odbc-sap-hana.md)
