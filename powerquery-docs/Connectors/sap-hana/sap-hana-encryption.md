@@ -6,7 +6,7 @@ author: davidiseminger
 ms.custom: seodec18
 ms.service: powerquery
 ms.topic: how-to
-ms.date: 09/01/2020
+ms.date: 2/4/2022
 ms.author: davidi
 
 LocalizationGroup: Connect to data
@@ -24,13 +24,13 @@ This article provides an overview of enabling encryption using CommonCryptoLib a
 > [!NOTE]
 > The setup steps for encryption detailed in this article overlap with the setup and configuration steps for SAML SSO. Use CommonCryptoLib as your HANA server's encryption provider, and make sure that your choice of CommonCryptoLib is consistent across SAML and encryption configurations.
 
-There are four phases to enabling encryption for SAP HANA. We cover these phases next. For more information, go to [Securing the Communication between SAP HANA Studio and SAP HANA Server through SSL](https://blogs.sap.com/2015/09/28/securing-the-communication-between-sap-hana-studio-and-sap-hana-server-through-ssl/).
+There are four phases to enabling encryption for SAP HANA. We cover these phases next. More information: [Securing the Communication between SAP HANA Studio and SAP HANA Server through SSL](https://blogs.sap.com/2015/09/28/securing-the-communication-between-sap-hana-studio-and-sap-hana-server-through-ssl/)
 
 ## Use CommonCryptoLib
 
-Ensure your HANA server is configured to use CommonCryptoLib as its cryptographic provider. Replace the missing path information below with the server ID (sid) of your HANA server.
+Ensure your HANA server is configured to use CommonCryptoLib as its cryptographic provider.
 
-![OpenSSL cryptographic provider.](ssl-crypto-provider.png)
+![OpenSSL cryptographic provider.](common-crypto.png)
 
 ## Create a certificate signing request
 
@@ -38,17 +38,15 @@ Create an X509 certificate signing request for the HANA server.
 
 1. Using SSH, connect to the Linux machine that the HANA server runs on as \<sid\>adm.
 
-1. Go to the Home directory _/__usr/sap/\<sid\>/home_.
+2. Go to the Home directory _/__usr/sap/\<sid\>/home_.
 
-1. Create a hidden directory with the name _.__ssl_if one doesn't already exist.
+3. Create a hidden directory with the name _.__ssl_if one doesn't already exist.
 
-1. Execute the following command:
+4. Execute the following command:
 
-    ```
-    openssl req -newkey rsa:2048 -days 365 -sha256 -keyout Server\_Key.pem -out Server\_Req.pem -nodes
-    ```
+    **sapgenpse gen_pse -p cert.pse -r csr.txt -k GN-dNSName:\<_HOSTNAME with FQDN_> "CN=\<_HOSTNAME with FQDN_>, O=\<_organization_>, C=\<_country_>"**
 
-This command creates a certificate signing request and private key. Once signed, the certificate is valid for a year (see the -days parameter). When prompted for the common name (CN), enter the fully qualified domain name (FQDN) of the computer the HANA server is installed on.
+This command creates a certificate signing request and private key. Once signed, the certificate is valid for a year. Fill in \<_HOSTNAME with FQDN_> with the host name and fully qualified domain name (FQDN).
 
 ## Get the certificate signed
 
@@ -56,27 +54,19 @@ Get the certificate signed by a certificate authority (CA) that is trusted by th
 
 1. If you already have a trusted company CA (represented by CA\_Cert.pem and CA\_Key.pem in the following example), sign the certificate request by running the following command:
 
-    ```
-    openssl x509 -req -days 365 -in Server\_Req.pem -sha256 -extfile /etc/ssl/openssl.cnf -extensions usr\_cert -CA CA\_Cert.pem -CAkey CA\_Key.pem -CAcreateserial -out Server\_Cert.pem
-    ```
+    **openssl x509 -req -days 365 -in csr.txt -CA CA_Cert.pem -CAkey CA_Key.pem -CAcreateserial -out cert.pem**
 
     If you don't already have a CA you can use, you can create a root CA yourself by following the steps outlined in [Securing the Communication between SAP HANA Studio and SAP HANA Server through SSL](https://blogs.sap.com/2015/09/28/securing-the-communication-between-sap-hana-studio-and-sap-hana-server-through-ssl/).
 
-1. Create the HANA server certificate chain by combining the server certificate, key, and the CA's certificate (the key.pem name is the convention for SAP HANA):
+2. Copy the new file, cert.pem, to the server.
 
-    ```
-    cat Server\_Cert.pem Server\_Key.pem CA\_Cert.pem \> key.pem
-    ```
+3. Create the HANA server certificate chain:
 
-1. Create a copy of CA\_Cert.pem named trust.pem (the trust.pem name is the convention for SAP HANA):
+    **sapgenpse import_own_cert -p cert.pse -c cert.pem**
 
-    ```
-    cp CA\_Cert.pem trust.pem
-    ```
+4. Restart the HANA server.
 
-1. Restart the HANA server.
-
-1. Verify the trust relationship between a client and the CA you used to sign the SAP HANA server's certificate.
+5. Verify the trust relationship between a client and the CA you used to sign the SAP HANA server's certificate.
 
     The client must trust the CA used to sign the HANA server's X509 certificate before an encrypted connection can be made to the HANA server from the client's machine.
 
