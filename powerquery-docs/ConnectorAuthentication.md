@@ -146,6 +146,6 @@ The following Azure Active Directory client IDs are used by Power Query. You mig
 | 7ab7862c-4c57-491e-8a45-d52a7e023983 | Power Apps and Power Automate | Confidential client, used in PowerApps and Power Automate. |
 | | | |
 
-You may need to pre-authenticate using Step 8 of these [instructions](/azure/active-directory/develop/quickstart-configure-app-expose-web-apis#add-a-scope).
+You might need to explicitly allow these client IDs to access your service and API, depending on your overall Azure Active Directory settings - see Step 8 of these [instructions]((/azure/active-directory/develop/quickstart-configure-app-expose-web-apis#add-a-scope) for more details.
 
 If you need more control over the OAuth flow (for example, if your service must respond with a `302` rather than a `401`), or if your application’s Application ID URL or Azure AD Resource value don't match the URL of your service, then you’d need to use a custom connector. For more information about using our built-in Azure AD flow, go to [Azure Active Directory authentication](HandlingAuthentication.md#azure-active-directory-authentication).
