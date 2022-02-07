@@ -112,13 +112,14 @@ Once you've selected the advanced options you require, select **OK** in Power Qu
 
 ## Connect to Oracle Autonomous Database
 
-To connect to an Oracle Autonomous Database, you need the following things:
+To connect to an Oracle Autonomous Database, you need the following accounts and apps:
 
-* An Oracle Cloud account
-* An Oracle Autonomous database
-* Power BI Desktop
-* Power BI service account
-* On-premises data gateway
+* An Oracle.com account ([Get an Oracle.com Account](https://docs.oracle.com/en/cloud/get-started/subscriptions-cloud/csgsg/get-oracle-com-account.html))
+* An Oracle Cloud account ([About Oracle Cloud Accounts](https://docs.oracle.com/en/cloud/get-started/subscriptions-cloud/csgsg/oracle-cloud-accounts.html))
+* An Oracle Autonomous Database ([Oracle Autonomous Database](https://www.oracle.com/ie/autonomous-database/))
+* Power BI Desktop ([Get Power BI Desktop](/power-bi/fundamentals/desktop-get-the-desktop))
+* Power BI service account ([Licensing the Power BI service for users in your organization](/power-bi/admin/service-admin-licensing-organization))
+* On-premises data gateway ([Download and install a standard gateway](/data-integration/gateway/service-gateway-install#download-and-install-a-standard-gateway))
 
 ### Download your client credentials
 
@@ -142,7 +143,7 @@ To download your client credentials:
 
 1. Go to the [Oracle Data Access Components Runtime Downloads](https://www.oracle.com/database/technologies/dotnet-odacdeploy-downloads.html) page.
 
-2. Under **ODAC XCopy**, select either **64-bit Unmanaged ODP.NET 19.10** or **32-bit Unmanaged ODP.NET 19.10**, depending on whether you'll be usting the 64-bit or 32-bit version of Power BI Desktop. This example will use the 64-bit version.
+2. Under **ODAC XCopy**, select either **64-bit Unmanaged ODP.NET 19.10** or **32-bit Unmanaged ODP.NET 19.10**, depending on whether you'll be usting the 64-bit or 32-bit version of Power BI Desktop. This example uses the 64-bit version.
 
 3. Review and accept the Oracle license agreement, then select **Download ODP.NETUnmanaged19.10Xcopyx64.zip**.
 
@@ -165,7 +166,7 @@ To download your client credentials:
 
 ### Configure the unmanaged ODP.NET
 
-1. In the command prompt, go to \<install-folder\>\odp.net\bin\4. In this example, the location is `c:\oracle\odp.net\bin\4`.
+1. In the command prompt, go to \<_install-folder_\>\odp.net\bin\4. In this example, the location is `c:\oracle\odp.net\bin\4`.
 
 2. Enter the following commands:
 
