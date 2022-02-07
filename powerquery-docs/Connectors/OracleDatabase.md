@@ -143,7 +143,7 @@ To download your client credentials:
 
 1. Go to the [Oracle Data Access Components Runtime Downloads](https://www.oracle.com/database/technologies/dotnet-odacdeploy-downloads.html) page.
 
-2. Under **ODAC XCopy**, select either **64-bit Unmanaged ODP.NET 19.10** or **32-bit Unmanaged ODP.NET 19.10**, depending on whether you'll be usting the 64-bit or 32-bit version of Power BI Desktop. This example uses the 64-bit version.
+2. Under **ODAC XCopy**, select either **64-bit Unmanaged ODP.NET 19.10** or **32-bit Unmanaged ODP.NET 19.10**, depending on whether you'll be using the 64-bit or 32-bit version of Power BI Desktop. The examples in this article use the 64-bit version.
 
 3. Review and accept the Oracle license agreement, then select **Download ODP.NETUnmanaged19.10Xcopyx64.zip**.
 
@@ -225,7 +225,7 @@ _`contosodata_low` = (description= (retry_count=20)(retry_delay=3)(address=(prot
 
 1. In Power BI service, select the gear icon in the upper right-hand side, then select **Manage gateways**.
 
-   [![Manage gateways](media/oracle-database/adb-manage-gateways.png)](media/oracle-database/adb-mamage-gateways.png#lightbox)
+   [![Manage gateways](media/oracle-database/adb-manage-gateways.png)](media/oracle-database/adb-manage-gateways.png#lightbox)
 
 2. In **Add Data Source**, select **Add data sources to use the gateway**.
 
