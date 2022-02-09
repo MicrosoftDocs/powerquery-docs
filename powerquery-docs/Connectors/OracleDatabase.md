@@ -104,7 +104,7 @@ The following table lists all of the advanced options you can set in Power Query
 | --------------- | ----------- |
 | Command timeout in minutes | If your connection lasts longer than 10 minutes (the default timeout), you can enter another value in minutes to keep the connection open longer. This option is only available in Power Query Desktop. |
 | SQL statement | For information, go to [Import data from a database using native database query](../native-database-query.md). |
-| Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, you won’t see those columns. |
+| Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, these columns won't appear. |
 | Navigate using full hierarchy | If checked, the navigator displays the complete hierarchy of tables in the database you're connecting to. If cleared, the navigator displays only the tables whose columns and rows contain data. |
 | | |
 
@@ -143,30 +143,43 @@ To download your client credentials:
 
 1. Go to the [Oracle Data Access Components Runtime Downloads](https://www.oracle.com/database/technologies/dotnet-odacdeploy-downloads.html) page.
 
-2. Under **ODAC XCopy**, select either **64-bit Unmanaged ODP.NET 19.10** or **32-bit Unmanaged ODP.NET 19.10**, depending on whether you'll be using the 64-bit or 32-bit version of Power BI Desktop. The examples in this article use the 64-bit version.
+2. If you're using a 64-bit version of Power BI Desktop, under **64-bit ODAC OUI**, select **64-bit ODAC 19.3.1**. If you're using a 32-bit version of Power BI Desktop, go to the download page for the 32-bit version from the link on the Oracle page. We recommend that you use the 64-bit version. The examples in this article use the 64-bit version.
 
-3. Review and accept the Oracle license agreement, then select **Download ODP.NETUnmanaged19.10Xcopyx64.zip**.
+3. Review and accept the Oracle license agreement, then select **Download ODAC1931_x64.zip**.
 
 4. You'll be asked to sign in to your Oracle account. This account might be different from your Oracle Cloud account, so be sure to enter the correct username and password.
 
-   The Oracle ODAC Xcopy zip file is then downloaded to your Windows default download location.
+   The Oracle ODAC OUI zip file is then downloaded to your Windows default download location.
 
-5. From the default download location, extract the files from the zip file and place them in a convenient location.
+5. From the default download location, extract the files from the zip file and place them in a convenient folder of your choice.
 
 6. Open a Windows command prompt (cmd.exe) in administrator mode.
 
-7. In the command prompt, navigate to the folder where you extracted the ODAC Xcopy files.
+7. In the command prompt, navigate to the folder where you extracted the ODAC OUI files.
 
-8. Enter the following line in the command prompt (if you are using .NET Framework 4):
+8. Open setup.exe.
 
-   `install.bat odp.net4 c:\oracle odac false`
+9. In **Specify Oracle Home User**, select **Use Windows Built-in Account**. Then select **Next**.
 
-   >[!Note]
-   >Other options exist for .NET Framework 2 or MTS, whether you want to install Oracle Instant Client, and the installation location. For example, if you are connecting to multiple autonomous databases, you might want to set up a more complex folder structure to accommodate each of these databases. Go to the readme.htm file in the folder containing the extracted ODAC Xcopy files for more information about these options.
+   ![Image with Use Windows Built-in Account selected in the Specify Oracle Home User dialog box.](media/oracle-database/driver-install-step-1.png)
+
+10. In **Specify Installation Location**, select the location for the Oracle base folder. Select **Browse** to browse to the folder you want to use, then select **Select**. Then select **Next**.
+
+    ![Image with the browser open and a new location listed for the Oracle base.](media/oracle-database/driver-install-step-2.png)
+
+11. In **Available Product Components**, only select **Oracle Data Provider for .NET**. Then select **Next**.
+
+    ![Image with Oracle Data Provider for .Net selected.](media/oracle-database/driver-install-step-3.png)
+
+12. The installer then performs some prerequisite checks to ensure your system meets the minimum installation and configuration requirements. Once this check is finished, select **Next**.
+
+13. The installer then presents a summary of the actions it's going to take. To continue, select **Install**.
+
+14. Once the installer has finished installing all of your driver components, select **Close**.
 
 ### Configure the unmanaged ODP.NET
 
-1. In the command prompt, go to \<_install-folder_\>\odp.net\bin\4. In this example, the location is `c:\oracle\odp.net\bin\4`.
+1. In the command prompt, go to \<_install-folder_\>\odp.net\bin\4. In this example, the location is `c:\oracle\driver\odp.net\bin\4`.
 
 2. Enter the following commands:
 
@@ -174,31 +187,23 @@ To download your client credentials:
 
    `OraProvCfg /action:config /product:odp /frameworkversion:v4.0.30319 /providerpath:"Oracle.DataAccess.dll"`
 
-   ![ODAC commands](media/oracle-database/adb-odac-config.png)
+   ![Image with Command prompt open and the two ODAC commands successfully completed.](media/oracle-database/adb-odac-config.png)
 
-3. Search for **Environment Variables** in the Windows Start menu **Search** option, and select **Edit the system environment variables**.
+### Set the environment variables
 
-4. From **System Properties**, select **Environment Variables**.
+1. Search for **Environment Variables** in the Windows Start menu **Search** option, and select **Edit the system environment variables**.
 
-5. In **Environment Variables**, under **User variables**, select **New**.
+2. From **System Properties**, select **Environment Variables**.
 
-6. In **New User Variable**, enter `TNS_ADMIN` in **Variable name**, and the location where you'll unzip your ADB wallet in **Variable value**. Then select **OK**.
+3. In **Environment Variables**, under **System variables**, select **New**.
 
-7. Under **System variables**, select **Path**, and then select **Edit**.
+4. In **New System Variable**, enter `TNS_ADMIN` in **Variable name**, and the location where you'll unzip your ADB wallet in **Variable value**. Then select **OK**.
 
-8. Select **New** and add the \bin and \odp.net folders to the path. In this example, add:
+5. Select **OK**.
 
-   `c:\oracle\bin`
+6. In **Environment Variables**, select **OK**.
 
-   `c:\oracle\odp.net`
-
-9. Select the \bin folder, and use **Move Up** to move it to the top of the path list. This ensures that this folder path setting has precedence over other existing Oracle Homes. 
-
-10. Select **OK**.
-
-11. In **Environment Variables**, select **OK**.
-
-12. In **System Properties**, select **OK**.
+7. In **System Properties**, select **OK**.
 
 ### Configure Oracle ADB credentials
 
@@ -206,30 +211,76 @@ To download your client credentials:
 
 2. Unzip the credentials into a folder. In this example, the credentials are extracted to c:\data\wallet\wallet_contosomart.
 
-   ![Wallet unzipped](media/oracle-database/adb-wallet-unzipped.png)
+   ![Image with the wallet files unzipped in the wallet folder.](media/oracle-database/adb-wallet-unzipped.png)
 
    >[!Note]
    >The tnsnames.ora file is used to connect to Oracle autonomous databases.
 
-3. Open the tnsnames.ora file in the wallets folder. The file contains a list of ADB net service names that you can connect to. In this example, the names are contosomart_high, contosomart_low, and contosomart_medium. Your ADB net service names will probably be named differently.
+3. Open sqlnet.ora in an editor, such as Notepad.
 
-   ![Tns names](media/oracle-database/adb-tnsnames.png)
+4. Under **WALLET_LOCATION**, change the path to your wallet folder under the Directory option. In this example:
 
-If you are connecting to multiple ADBs on the same machine with different wallets, add the MY_WALLET_DIRECTORY parameter to the end of the network service name descriptor for each wallet. For example:
+   `WALLET_LOCATION = (SOURCE = (METHOD = file) (METHOD_DATA = (DIRECTORY="c:\data\wallet\Wallet_ContosoMart")))`
 
-_`contosomart_high` = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.us-ashburn-1.oraclecloud.com))(connect_data=(service_name=g817f1b31d0b79f_contosomart_high.adb.oraclecloud.com))(security=(ssl_server_cert_dn="CN=adwc.uscom-east-1.oraclecloud.com, OU=Oracle BMCS US, O=Oracle Corporation, L=Redwood City, ST=California, C=US")(`MY_WALLET_DIRECTORY=C:\DATA\WALLET\Wallet_contosomart`)))_
+5. Save and close the sqlnet.ora file.
 
-_`contosodata_low` = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.us-ashburn-1.oraclecloud.com))(connect_data=(service_name=g817f1b31d0b79f_contosomart_low.adb.oraclecloud.com))(security=(ssl_server_cert_dn="CN=adwc.uscom-east-1.oraclecloud.com, OU=Oracle BMCS US, O=Oracle Corporation, L=Redwood City, ST=California, C=US")(`MY_WALLET_DIRECTORY=C:\DATA\WALLET\Wallet_contosodata`)))_
+Open the tnsnames.ora file in the wallets folder. The file contains a list of ADB net service names that you can connect to. In this example, the names are contosomart_high, contosomart_low, and contosomart_medium. Your ADB net service names will be different.
+
+   ![Image with three example TNS names, contosomart_high, contosomart_low, and contosomart_medium.](media/oracle-database/adb-tnsnames.png)
+
+### Initial test of the connection
+
+1. Open Power BI Desktop.
+
+2. Select **Get Data**.
+
+3. From **Get Data**, select **Database** > **Oracle database**.
+
+4. Enter the name of the Oracle Autonomous Database server you want to connect to. In this example, the server is contosomart_high. Then select **OK**.
+
+   ![Image of the Oracle database dialog box with contosomart_high as the server name and import mode selected.](media/oracle-database/adb-enter-server.png)
+
+5. If this is the first time you're signing in to this server from Power BI Desktop, you'll be asked to enter your credentials. Select **Database**, then enter the user name and password for the Oracle database. The credentials you enter here are the user name and password for the specific Oracle Autonomous Database you want to connect to. In this example, the database's initial administrator user name and password are used. Then select **Connect**.
+
+   ![Image of the credentials dialog box, with Database selected, and the default database user name and password entered.](media/oracle-database/adb-credentials.png)
+
+At this point, the **Navigator** appears and displays the connection data.
+
+![Image with the navigator open and the contosomart_high database shown with all of its ](media/oracle-database/adb-navigator.png)
+
+You might also come across one of several errors because the configuration hasn't been properly set up. These errors are discussed in [Troubleshooting](#troubleshooting).
+
+One error that might occur in this initial test takes place in **Navigator**, where the database appears to be connected, but contains no data. Instead, an Oracle: ORA-28759: failure to open file error appears in place of the data.
+
+![Image of Navigator with the database name at the top, but an error appears instead of the data.](media/oracle-database/failure-to-open-file.png)
+
+If this error occurs, be sure that the wallet folder path you supplied in sqlnet.ora is the full and correct path to the wallet folder.
 
 ### Configure the gateway
 
 1. In Power BI service, select the gear icon in the upper right-hand side, then select **Manage gateways**.
 
-   [![Manage gateways](media/oracle-database/adb-manage-gateways.png)](media/oracle-database/adb-manage-gateways.png#lightbox)
+   [![Image of the Power BI service open, the gear icon selected, and the Manage gateways menu with Manage gateways emphasized.](media/oracle-database/adb-manage-gateways.png)](media/oracle-database/adb-manage-gateways.png#lightbox)
 
 2. In **Add Data Source**, select **Add data sources to use the gateway**.
 
-   [![Add data source to use the gateway](media/oracle-database/adb-add-data-source.png)](media/oracle-database/adb-add-data-source.png#lightbox)
+   [![Image of the Add data source window in Power BI service, with Add data source to use the gateway emphasized.](media/oracle-database/adb-add-data-source.png)](media/oracle-database/adb-add-data-source.png#lightbox)
+
+3. In **Data Source Name**, enter the name you want to use as the data source setting.
+
+4. In **Data Source Type**, select **Oracle**.
+
+5. In **Server**, enter the name of the Oracle Autonomous Database server.
+
+6. In **Authentication Method**, select **Basic**.
+
+7. Enter the user name and password for the Oracle Autonomous Database. In this example, the default database administrator user name and password are used.
+
+8. Select **Add**.
+
+   ![Image of the Data Source Settings window, with all of the data source settings filled in.](media/oracle-database/adb-set-data-sources.png)
+
+If everything has been installed and configured correctly, a **Connection Successful** message appears. You can now connect to the Oracle Autonomous Database using the steps described in [Connect to an Oracle database from Power Query Online](#connect-to-an-oracle-database-from-power-query-online).
 
 ## Troubleshooting
 
@@ -241,7 +292,7 @@ You might come across any of several errors from Oracle when the naming syntax i
 * ORA-12170: TNS: connect timeout occurred.
 * ORA-12504: TNS: listener was not given the SERVICE_NAME in CONNECT_DATA.
 
-These errors might occur if the Oracle client either isn't installed or isn't configured properly. If it's installed, verify the tnsnames.ora file is properly configured and you're using the proper net_service_name. You also need to make sure the net_service_name is the same between the machine that uses Power BI Desktop and the machine that runs the gateway. For more information, see [Prerequisites](#prerequisites).
+These errors might occur if the Oracle client either isn't installed or isn't configured properly. If it's installed, verify the tnsnames.ora file is properly configured and you're using the proper net_service_name. You also need to make sure the net_service_name is the same between the machine that uses Power BI Desktop and the machine that runs the gateway. More information: [Prerequisites](#prerequisites)
 
 You might also come across a compatibility issue between the Oracle server version and the Oracle Data Access Client version. Typically, you want these versions to match, as some combinations are incompatible. For instance, ODAC 12.x doesn't support Oracle Server version 9.
 
@@ -251,7 +302,7 @@ If you downloaded Power BI Desktop from the Microsoft Store, you might be unable
 
 * If you want to use the version from Microsoft Store: on your local computer, copy oraons.dll from *12.X.X\client_X* to *12.X.X\client_X\bin*, where *X* represents version and directory numbers.
 
-If you see the error message, *Object reference not set*, in the Power BI Gateway when you connect to an Oracle database, follow the instructions in [Manage your data source - Oracle](/power-bi/connect-data/service-gateway-onprem-manage-oracle).
+If the *Object reference not set* error message occurs in Power BI when you connect to an Oracle database using the on-premises data gateway, follow the instructions in [Manage your data source - Oracle](/power-bi/connect-data/service-gateway-onprem-manage-oracle).
 
 If you're using Power BI Report Server, consult the guidance in the [Oracle Connection Type](/sql/reporting-services/report-data/oracle-connection-type-ssrs) article.
 
