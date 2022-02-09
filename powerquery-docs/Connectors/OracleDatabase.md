@@ -92,7 +92,7 @@ To make the connection, take the following steps:
 
 7. In **Navigator**, select the data you require, then select **Transform data** to transform the data in Power Query Editor.
 
-## Connect to Oracle Autonomous Database
+## Connect to an Oracle Autonomous Database
 
 To connect to an Oracle Autonomous Database, you need the following accounts and apps:
 
@@ -129,7 +129,7 @@ To download your client credentials:
 
 3. Review and accept the Oracle license agreement, then select **Download ODAC1931_x64.zip**.
 
-4. You'll be asked to sign in to your Oracle account. This account might be different from your Oracle Cloud account, so be sure to enter the correct username and password.
+4. You'll be asked to sign in to your Oracle account. This account might be different from your Oracle Cloud account, so be sure to enter the correct user name and password.
 
    The Oracle ODAC OUI zip file is then downloaded to your Windows default download location.
 
