@@ -125,7 +125,7 @@ To download your client credentials:
 
 1. Go to the [Oracle Data Access Components Runtime Downloads](https://www.oracle.com/database/technologies/dotnet-odacdeploy-downloads.html) page.
 
-2. If you're using a 64-bit version of Power BI Desktop, under **64-bit ODAC OUI**, select **64-bit ODAC 19.3.1**. If you're using a 32-bit version of Power BI Desktop, go to the download page for the 32-bit version from the link on the Oracle page. We recommend that you use the 64-bit version. The examples in this article use the 64-bit version.
+2. If you're using a 64-bit version of Power BI Desktop, under **64-bit ODAC OUI**, select the latest version of the ODAC installer, which is currently **64-bit ODAC 19.3.1**. If you're using a 32-bit version of Power BI Desktop, go to the download page for the 32-bit version from the link on the Oracle page. We recommend that you use the 64-bit version of Power BI Desktop. The examples in this article use the 64-bit version.
 
 3. Review and accept the Oracle license agreement, then select **Download ODAC1931_x64.zip**.
 
@@ -139,7 +139,7 @@ To download your client credentials:
 
 7. In the command prompt, navigate to the folder where you extracted the ODAC OUI files.
 
-8. Open setup.exe.
+8. Run setup.exe.
 
 9. In **Specify Oracle Home User**, select **Use Windows Built-in Account**. Then select **Next**.
 
