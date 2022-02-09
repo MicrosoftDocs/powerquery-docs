@@ -94,6 +94,9 @@ To make the connection, take the following steps:
 
 ## Connect to an Oracle Autonomous Database
 
+>[!Note]
+>Currently, you can connect to an Oracle Autonomous Database from Excel, Power BI Desktop, Power BI service, and Power Apps.
+
 To connect to an Oracle Autonomous Database, you need the following accounts and apps:
 
 * An Oracle.com account ([Get an Oracle.com Account](https://docs.oracle.com/en/cloud/get-started/subscriptions-cloud/csgsg/get-oracle-com-account.html))
