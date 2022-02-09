@@ -92,24 +92,6 @@ To make the connection, take the following steps:
 
 7. In **Navigator**, select the data you require, then select **Transform data** to transform the data in Power Query Editor.
 
-## Connect using advanced options
-
-Power Query Desktop provides a set of advanced options that you can add to your query if needed.
-
-![Advanced options included in the Oracle database connection dialog box.](./media/oracle-database/advanced-options-oracle.png)
-
-The following table lists all of the advanced options you can set in Power Query Desktop.
-
-| Advanced option | Description |
-| --------------- | ----------- |
-| Command timeout in minutes | If your connection lasts longer than 10 minutes (the default timeout), you can enter another value in minutes to keep the connection open longer. This option is only available in Power Query Desktop. |
-| SQL statement | For information, go to [Import data from a database using native database query](../native-database-query.md). |
-| Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, these columns won't appear. |
-| Navigate using full hierarchy | If checked, the navigator displays the complete hierarchy of tables in the database you're connecting to. If cleared, the navigator displays only the tables whose columns and rows contain data. |
-| | |
-
-Once you've selected the advanced options you require, select **OK** in Power Query Desktop to connect to your Oracle database.
-
 ## Connect to Oracle Autonomous Database
 
 To connect to an Oracle Autonomous Database, you need the following accounts and apps:
@@ -281,6 +263,22 @@ If this error occurs, be sure that the wallet folder path you supplied in sqlnet
    ![Image of the Data Source Settings window, with all of the data source settings filled in.](media/oracle-database/adb-set-data-sources.png)
 
 If everything has been installed and configured correctly, a **Connection Successful** message appears. You can now connect to the Oracle Autonomous Database using the steps described in [Connect to an Oracle database from Power Query Online](#connect-to-an-oracle-database-from-power-query-online).
+
+## Connect using advanced options
+
+Power Query Desktop and Power Query Online provide a set of advanced options that you can add to your query if needed.
+
+The following table lists all of the advanced options you can set in Power Query Desktop and Power Query Online.
+
+| Advanced option | Description |
+| --------------- | ----------- |
+| Command timeout in minutes | If your connection lasts longer than 10 minutes (the default timeout), you can enter another value in minutes to keep the connection open longer. This option is only available in Power Query Desktop. |
+| SQL statement | For information, go to [Import data from a database using native database query](../native-database-query.md). |
+| Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, these columns won't appear. |
+| Navigate using full hierarchy | If checked, the navigator displays the complete hierarchy of tables in the database you're connecting to. If cleared, the navigator displays only the tables whose columns and rows contain data. |
+| | |
+
+Once you've selected the advanced options you require, select **OK** in Power Query Desktop to connect to your Oracle database.
 
 ## Troubleshooting
 
