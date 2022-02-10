@@ -1,0 +1,126 @@
+---
+title: Power Query Common Data Service (Legacy) connector
+description: Provides basic information and instructions on connecting to data using the Common Data Service (Legacy) connector.
+author: DougKlopfenstein
+ms.service: powerquery
+ms.topic: conceptual
+ms.date: 2/10/2022
+ms.author: dougklo
+LocalizationGroup: reference
+---
+
+# Common Data Service (Legacy)
+
+>[!Note]
+>The Common Data Service (Legacy) connector has be superceded by the Power Query [Dataverse](dataverse.md) connector. In most cases, we recommend that you use the Dataverse connector instead of the Common Data Service (Legacy) connector. However, there may be limited cases where it's necessary to choose the Common Data Service (Legacy) connector. These cases are described in [When to use the Common Data Service (Legacy) connector](#when-to-use-the-common-data-service-legacy-connector).
+
+## Summary
+
+| Item | Description |
+| ---- | ----------- |
+| Release State | General Availability |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Dynamics 365 Customer Insights |
+| Authentication types | Organizational account |
+| | |
+
+>[!Note]
+>Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+
+## Prerequisites
+
+You must have a Common Data Service (Legacy) environment with maker permissions to access the portal, and read permissions to access data within tables.
+
+## Capabilities supported
+
+* Server URL
+* Advanced
+  * Reorder columns
+  * Add display column
+
+## Connect to Common Data Service (Legacy) from Power BI Desktop
+
+To connect to Common Data Service (Legacy) from Power BI Desktop:
+
+1. Select **Get data** from the **Home** tab.
+
+2. In the **Get Data** dialog box, select **Power Platform** > **Common Data Service (Legacy)**, and then select **Connect**.
+
+   ![Get data in Power BI Desktop.](media/common-data-service/get-data.png)
+
+3. Enter the Common Data Service (Legacy) environment URL of the data you want to load. Use the format https://\<_yourenvironmentid_>.crm.dynamics.com/. More information: [Finding your Dataverse environment URL](#finding-your-dataverse-environment-url)
+
+   ![Server URL selection.](media/common-data-service/enter-url.png)
+
+   You can also choose **Advanced options** to enter more optional connection information. More information: [Connect using advanced options](#connect-using-advanced-options)
+
+4. Once you're done, select **OK**.
+
+5. If this attempt is the first time you're connecting to this site, select **Sign in** and input your credentials. Then select **Connect**.
+
+   ![Sign in to this site.](media/common-data-service/sign-in.png)
+
+6. In **Navigator**, select the data you require, then either load or transform the data.
+
+   ![Load or transform from navigator.](media/common-data-service/navigator.png)
+
+## Connect to Common Data Service (Legacy) from Power Query Online
+
+To connect to Common Data Service (Legacy) from Power Query Online:
+
+1. From the **Data sources** page, select **Common Data Service (Legacy)**.
+
+   ![Get data from Power Query Online.](media/common-data-service/get-data-online.png)
+
+2. Enter the server URL address of the data you want to load.
+
+   ![Enter the server URL.](media/common-data-service/enter-url-online.png)
+
+3. If necessary, enter an on-premises data gateway if you're going to be using on-premises data. For example, if you're going to combine data from Dataverse and an on-premises SQL Server database.
+
+4. Sign in to your organizational account.
+
+5. When you've successfully signed in, select **Next**.
+
+6. In the navigation page, select the data you require, and then select **Transform Data**.
+
+## Finding your Common Data Service (Legacy) environment URL
+
+Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). In the upper right of the Power Apps page, select the environment you're going to connect to. Select the ![Settings icon.](media/common-data-service/settings-icon.png) settings icon, and then select **Advanced settings**.
+
+In the new browser tab that opens, copy the root of the URL. This root URL is the unique URL for your environment. The URL will be in the format of https://\<*yourenvironmentid*>.crm.dynamics.com/. Keep this URL somewhere handy so you can use it later, for example, when you create Power BI reports.
+
+![Location of the Common Data Service (Legacy) environment URL.](media/common-data-service/cds-env.png)
+
+### When to use the Common Data Service (Legacy) connector
+
+Dataverse is the direct replacement for the Common Data Service connector. However, there may be times when it's necessary to choose the Common Data Service (Legacy) connector instead of the [Dataverse](dataverse.md) connector:
+
+* If you're accessing large datasets that are greater than 80 MB, you'll still have to use the Common Data Service (Legacy) connector.
+* If you want paging of the query results and want to build reports that use the image data type, you'll still have to use the Common Data Service (Legacy) connector.
+
+Also, there are certain Tabular Data Stream (TDS) data types that are supported in OData when using Common Data Service (Legacy) that aren't supported in Dataverse. The supported and unsupported data types are listed in [How Dataverse SQL differs from Transact-SQL (Preview)](/powerapps/developer/data-platform/how-dataverse-sql-differs-from-transact-sql?tabs=supported).
+
+All of these features will be added to the Dataverse connector in the future, at which time the Common Data Service (Legacy) connector will be deprecated.
+
+## Limitations and issues
+
+### Common Data Service OData API performance and throttling limits
+
+For information about OData API performance and throttling limits for Common Data Service connections, see [Requests limits and allocations](https://docs.microsoft.com/power-platform/admin/api-request-limits-allocations). These limitations apply to both the Common Data Source connector (which uses the OData API as an implementation detail) and the [OData Feed](odatafeed.md) connector when accessing the same endpoint.
+
+### Entity retrieval rate
+
+As a guideline, most default entities will be retrieved at a rate of approximately 500 rows per second using the Common Data Service connector. Take this rate into account when deciding whether you want to connect to Common Data Service or export to data lake. If you require faster retrieval rates, consider using the Export to data lake feature or Tabular Data Stream (TDS) endpoint. For more information, see [Alternative Common Data Service connections](#alternative-common-data-service-connections).
+
+### Alternative Common Data Service connections
+
+There are several alternative ways of extracting and migrating data from Common Data Service:
+
+* Use the OData connector to move data in and out of Common Data Service. For more information on how to migrate data between Common Data Service environments using the dataflows OData connector, see [Migrate data between Common Data Service environments using the dataflows OData connector](https://docs.microsoft.com/powerapps/developer/common-data-service/cds-odata-dataflows-migration).
+
+* Use the **Export to data lake** feature in Power Apps to extract data from Common Data Service into Azure Data Lake Storage Gen2, which can then be used to run analytics. For more information about the export to data lake feature, see [Exporting CDS data to Azure Data Lake is Generally Available](https://powerapps.microsoft.com/blog/exporting-cds-data-to-azure-data-lake-preview/#:~:text=Exporting%20CDS%20data%20to%20Azure%20Data%20Lake%20is,BI%20reporting%2C%20ML%2C%20Data%20Warehousing%20and%20other%20).
+
+* Use the Tabular Data Stream (TDS) Protocol endpoint to access read-only data in Common Data Service. For more information about this preview feature and a video on how it works, see [Tabular Data Stream (TDS) Protocol endpoint for Common Data Service (CDS)](https://powerapps.microsoft.com/blog/tabular-data-stream-tds-protocol-endpoint-for-common-data-service-cds/).
+
+>[!Note]
+> Both the Common Data Service connector and the OData APIs are meant to serve analytical scenarios where data volumes are relatively small. The recommended approach for bulk data extraction is “Export to Data Lake”. The TDS endpoint is a better option than the Common Data Service connector and OData endpoint, but is currently in Preview.

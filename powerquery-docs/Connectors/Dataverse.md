@@ -4,7 +4,7 @@ description: Provides basic information and connection instructions, along with 
 author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 10/27/2021
+ms.date: 2/10/2022
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -38,14 +38,6 @@ To use the Dataverse connector, TCP ports 1433 and/or 5558 need to be open to co
   * Reorder columns
   * Add display column
 
-## Finding your Dataverse environment URL
-
-Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). In the upper right of the Power Apps page, select the environment you're going to connect to. Select the ![Settings icon.](media/common-data-service/settings-icon.png) settings icon, and then select **Advanced settings**.
-
-In the new browser tab that opens, copy the root of the URL. This root URL is the unique URL for your environment. The URL will be in the format of https://\<*yourenvironmentid*>.crm.dynamics.com/. **Make sure you remove https:// and the trailing / from the URL before pasting it to connect to your environment.** Keep this URL somewhere handy so you can use it later, for example, when you create Power BI reports.
-
-![Location of the Dataverse environment URL.](media/common-data-service/cds-env.png)
-
 ## Connect to Dataverse from Power BI Desktop
 
 >[!Note]
@@ -57,38 +49,27 @@ To connect to Dataverse from Power BI Desktop:
 
 2. In the **Get Data** dialog box, select **Power Platform > Dataverse**, and then select **Connect**.
 
-   ![Get data in Power BI Desktop.](media/common-data-service/get-data.png)
+   ![Get data in Power BI Desktop.](media/dataverse/get-data.png)
 
-3. Enter the Dataverse environment URL of the data you want to load. Use the format *\<yourenvironmentid>.crm.dynamics.com*. Be sure to remove the `https://` prefix and `/` suffix from the URL before entering the name in **Environment domain**. More information: [Finding your Dataverse environment URL](#finding-your-dataverse-environment-url)
+3. If this attempt is the first time you're connecting to this site, select **Sign in** and input your credentials. Then select **Connect**.
 
-   ![Server URL selection.](media/common-data-service/enter-url.png)
+   ![Sign in to this site.](media/dataverse/sign-in.png)
 
-4. Select one of the following Data Connectivity mode options:
+4. In **Navigator**, select the data you require, then either load or transform the data.
 
-   * **Import**: We recommend that you import data to Power BI wherever possible. With this mode, data is cached in the Power BI service and imported on a scheduled interval.
-   * **DirectQuery**: Connects directly to the data in Dataverse. Use this mode for real-time data retrieval. This mode can also more strictly enforce the Dataverse security model. More information: [DirectQuery model guidance in Power BI Desktop](/power-bi/guidance/directquery-model-guidance)
-
-   When you've finished filling in the information, select **OK**.
-
-5. If this attempt is the first time you're connecting to this site, select **Sign in** and input your credentials. Then select **Connect**.
-
-   ![Sign in to this site.](media/common-data-service/sign-in.png)
-
-6. In **Navigator**, select the data you require, then either load or transform the data.
-
-   ![Load or transform from navigator.](media/common-data-service/navigator.png)
+   ![Load or transform from navigator.](media/dataverse/navigator.png)
 
 ## Connect to Dataverse from Power Query Online
 
 To connect to Dataverse from Power Query Online:
 
-1. From the **Data sources** page, select **Common Data Service (Legacy)**.
+1. From the **Data sources** page, select **Dataverse**.
 
-   ![Get data from Power Query Online.](media/common-data-service/get-data-online.png)
+   ![Get data from Power Query Online.](media/dataverse/get-data-online.png)
 
-2. Enter the server URL address of the data you want to load.
+2. Enter the server URL address of the data you want to load. For instructions on obtaining the correct server URL address, go to [Finding your Dataverse environment URL](#finding-your-dataverse-environment-url).
 
-   ![Enter the server URL.](media/common-data-service/enter-url-online.png)
+   ![Enter the server URL.](media/dataverse/enter-url-online.png)
 
 3. If necessary, enter an on-premises data gateway if you're going to be using on-premises data. For example, if you're going to combine data from Dataverse and an on-premises SQL Server database.
 
@@ -98,11 +79,19 @@ To connect to Dataverse from Power Query Online:
 
 6. In the navigation page, select the data you require, and then select **Transform Data**.
 
-## Limitations and issues
+   ![Navigation page open with the Application User data selected.](media/dataverse/navigator-online.png)
 
-### When to use the Common Data Service (Legacy) connector
+## Finding your Dataverse environment URL
 
-Dataverse is the direct replacement for the Common Data Service connector. However, there may be times when it's necessary to choose the Common Data Service (Legacy) connector instead of the Dataverse connector:
+Before you connect to Dataverse from Power Query Online, you'll need to find your Dataverse environment URL. Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). In the upper right of the Power Apps page, select the environment you're going to connect to. Select the ![Settings icon.](media/common-data-service/settings-icon.png) settings icon, and then select **Advanced settings**.
+
+In the new browser tab that opens, copy the root of the URL. This root URL is the unique URL for your environment. The URL will be in the format of https://\<*yourenvironmentid*>.crm.dynamics.com/. **Make sure you remove https:// and the trailing / from the URL before pasting it to connect to your environment.** Keep this URL somewhere handy so you can use it later, for example, when you create Power BI reports.
+
+![Location of the Dataverse environment URL.](media/dataverse/cds-env.png)
+
+## When to use the Common Data Service (Legacy) connector
+
+Dataverse is the direct replacement for the Common Data Service connector. However, there may be times when it's necessary to choose the [Common Data Service (Legacy) connector](CommonDataServiceLegacy.md) instead of the Dataverse connector:
 
 * If you're connecting to data using Power Apps, you'll still have to use the Common Data Service (Legacy) connector.
 * If you're accessing large datasets that are greater than 80 MB, you'll still have to use the Common Data Service (Legacy) connector.
@@ -111,6 +100,8 @@ Dataverse is the direct replacement for the Common Data Service connector. Howev
 Also, there are certain Tabular Data Stream (TDS) data types that are supported in OData when using Common Data Service (Legacy) that aren't supported in Dataverse. The supported and unsupported data types are listed in [How Dataverse SQL differs from Transact-SQL (Preview)](/powerapps/developer/data-platform/how-dataverse-sql-differs-from-transact-sql?tabs=supported).
 
 All of these features will be added to the Dataverse connector in the future, at which time the Common Data Service (Legacy) connector will be deprecated.
+
+## Limitations and issues
 
 ### Dataverse performance and throttling limits
 
