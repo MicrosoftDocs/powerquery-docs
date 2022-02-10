@@ -47,19 +47,21 @@ To connect to Common Data Service (Legacy) from Power BI Desktop:
 
    ![Get data in Power BI Desktop.](media/common-data-service/get-data.png)
 
-3. Enter the Common Data Service (Legacy) environment URL of the data you want to load. Use the format https://\<_yourenvironmentid_>.crm.dynamics.com/. More information: [Finding your Dataverse environment URL](#finding-your-dataverse-environment-url)
+3. Enter the Common Data Service (Legacy) environment URL of the data you want to load. Use the format https://\<_yourenvironmentid_>.crm.dynamics.com/. More information: [Finding your Dataverse environment URL](#finding-your-common-data-service-legacy-environment-url)
 
    ![Server URL selection.](media/common-data-service/enter-url.png)
 
-   You can also choose **Advanced options** to enter more optional connection information. More information: [Connect using advanced options](#connect-using-advanced-options)
+   When the table is loaded in the Navigator dialog box, by default the columns in the table are reordered in alphabetical order by the column names. If you don't want the columns reordered, in the advanced settings enter **false** in **Reorder columns**.
 
-4. Once you're done, select **OK**.
+   Also when the table is loaded, by default if the table contains any picklist fields, a new column with the name of the picklist field with **_display** appended at the end of the name is added to the table. If you don't want the picklist field display column added, in the advanced settings enter **false** in **Add display column**.
 
-5. If this attempt is the first time you're connecting to this site, select **Sign in** and input your credentials. Then select **Connect**.
+   When you've finished filling in the information, select **OK**.
+
+4. If this attempt is the first time you're connecting to this site, select **Sign in** and input your credentials. Then select **Connect**.
 
    ![Sign in to this site.](media/common-data-service/sign-in.png)
 
-6. In **Navigator**, select the data you require, then either load or transform the data.
+5. In **Navigator**, select the data you require, then either load or transform the data.
 
    ![Load or transform from navigator.](media/common-data-service/navigator.png)
 
@@ -106,7 +108,7 @@ All of these features will be added to the Dataverse connector in the future, at
 
 ### Common Data Service OData API performance and throttling limits
 
-For information about OData API performance and throttling limits for Common Data Service connections, see [Requests limits and allocations](https://docs.microsoft.com/power-platform/admin/api-request-limits-allocations). These limitations apply to both the Common Data Source connector (which uses the OData API as an implementation detail) and the [OData Feed](odatafeed.md) connector when accessing the same endpoint.
+For information about OData API performance and throttling limits for Common Data Service connections, see [Requests limits and allocations](/power-platform/admin/api-request-limits-allocations). These limitations apply to both the Common Data Source connector (which uses the OData API as an implementation detail) and the [OData Feed](odatafeed.md) connector when accessing the same endpoint.
 
 ### Entity retrieval rate
 
@@ -116,7 +118,7 @@ As a guideline, most default entities will be retrieved at a rate of approximate
 
 There are several alternative ways of extracting and migrating data from Common Data Service:
 
-* Use the OData connector to move data in and out of Common Data Service. For more information on how to migrate data between Common Data Service environments using the dataflows OData connector, see [Migrate data between Common Data Service environments using the dataflows OData connector](https://docs.microsoft.com/powerapps/developer/common-data-service/cds-odata-dataflows-migration).
+* Use the OData connector to move data in and out of Common Data Service. For more information on how to migrate data between Common Data Service environments using the dataflows OData connector, see [Migrate data between Common Data Service environments using the dataflows OData connector](/powerapps/developer/common-data-service/cds-odata-dataflows-migration).
 
 * Use the **Export to data lake** feature in Power Apps to extract data from Common Data Service into Azure Data Lake Storage Gen2, which can then be used to run analytics. For more information about the export to data lake feature, see [Exporting CDS data to Azure Data Lake is Generally Available](https://powerapps.microsoft.com/blog/exporting-cds-data-to-azure-data-lake-preview/#:~:text=Exporting%20CDS%20data%20to%20Azure%20Data%20Lake%20is,BI%20reporting%2C%20ML%2C%20Data%20Warehousing%20and%20other%20).
 
