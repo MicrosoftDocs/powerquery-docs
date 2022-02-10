@@ -6,7 +6,7 @@ ms.service: powerquery
 ms.reviewer: 
 ms.date: 06/30/2020
 ms.author: dougklo
-ms.custom: intro-internal
+ms.topic: overview
 ---
 
 # Merge queries overview

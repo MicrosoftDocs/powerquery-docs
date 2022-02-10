@@ -14,8 +14,6 @@ LocalizationGroup: Data from files
 
 # Using incremental refresh with dataflows
 
-[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
-
 With dataflows, you can bring large amounts of data into Power BI or your organization's provided storage. In some cases, however, it's not practical to update a full copy of source data in each refresh. A good alternative is **incremental refresh**, which provides the following benefits for dataflows:
 
 * **Refresh occurs faster**: Only data that's changed needs to be refreshed. For example, refresh only the last five days of a 10-year dataflow.
@@ -23,6 +21,9 @@ With dataflows, you can bring large amounts of data into Power BI or your organi
 * **Resource consumption is reduced**: Less data to refresh reduces overall consumption of memory and other resources.
 
 Incremental refresh is available in dataflows created in Power BI and dataflows created in Power Apps. This article shows screens from Power BI, but these instructions apply to dataflows created in Power BI or in Power Apps.
+
+> [!NOTE]
+> When the schema for a table in an analytical dataflow changes, a full refresh takes place to ensure that all the resulting data matches the new schema. As a result, any data stored incrementally is refreshed and in some cases, if the source system doesn't retain historic data, is lost.
 
 ![Incremental refresh for dataflows.](media/dataflows-incremental-refresh/dataflows-incremental-refresh-03.png)
 
@@ -34,14 +35,13 @@ In either Power BI or Power Apps, using incremental refresh requires that source
 
 A dataflow can contain many entities. Incremental refresh is set up at the entity level, allowing one dataflow to hold both fully refreshed entities and incrementally refreshed entities.
 
-To set up an incremental refreshed entity, start by configuring your entity as you would any other entity.
+To set up an incremental-refreshed entity, start by configuring your entity as you would any other entity.
 
 After the dataflow is created and saved, select **Incremental refresh** ![Incremental refresh.](media/dataflows-incremental-refresh/dataflows-incremental-refresh-icon.png) in the entity view, as shown in the following image.
 
 ![Incremental refresh icon for dataflows.](media/dataflows-incremental-refresh/dataflows-incremental-refresh-01.png)
 
 When you select the icon, the **Incremental refresh settings** window appears. Turn on incremental refresh.
-
 
 ![Incremental refresh for dataflows.](media/dataflows-incremental-refresh/dataflows-incremental-refresh-03.png)
 
@@ -148,7 +148,7 @@ Both approaches work according to your specified definitions in the refresh sett
 
 ## Considerations and limitations
 
-Incremental refresh in Microsoft Power Platform dataflows is only supported in dataflows with an Azure Data Lake Storage account, not in dataflows with Dataverse as the destination. 
+Incremental refresh in Microsoft Power Platform dataflows is only supported in dataflows with an Azure Data Lake Storage account, not in dataflows with Dataverse as the destination.
 
 ### See also
 
@@ -169,4 +169,4 @@ For more information about Power Query and scheduled refresh, you can read these
 
 For more information about Common Data Model, you can read its overview article:
 
-* [Common Data Model - overview ](/common-data-model/)
+* [Common Data Model - overview](/common-data-model/)

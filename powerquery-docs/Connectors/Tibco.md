@@ -46,7 +46,7 @@ Once the connector is installed, configure a data source name (DSN) to specify t
 ## Capabilities Supported
 
 - Import
-- DirectQuery (Power BI only)
+- DirectQuery (Power BI Desktop only)
 - Advanced Connection Properties
 - Advanced
   - Native SQL statement
