@@ -69,7 +69,7 @@ The most important component of this formula is the use of the optional record f
 
 ![New custom step formula with the usage of the Value.NativeQuery function and the explicit SQL query](media/native-query-folding/value-native-query-formula.png)
 
->[NOTE]
+>[!NOTE]
 >You can read more about the Value.NativeQuery function from the [official documentation article](https://docs.microsoft.com/powerquery-m/value-nativequery).
 
 After you have entered the formula, a warning will be shown that will require you to enable native queries to run for your specific step. You can click continue for this step to be evaluated.
