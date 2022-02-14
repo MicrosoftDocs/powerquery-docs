@@ -4,23 +4,22 @@ description: This article provides information on how to enable query folding ag
 author: ptyx507x
 ms.service: powerquery
 ms.reviewer: 
-ms.date: 01/01/2022
+ms.date: 01/31/2022
 ms.author: v-mescobar
 ---
 
 # Query folding on native queries
 
-In Power Query, you are able to define a native query and run it against your data source. The article on [Import data from a database using native database query](native-database-query.md) explains how to do this process that applies to multiple data sources but, by doing so your query will not be taking advantage of any query folding from subsequent query steps.
+In Power Query, you're able to define a native query and run it against your data source. The [Import data from a database using native database query](native-database-query.md) article explains how to do this process with multiple data sources. But, by using the process described in that article, your query won't take advantage of any query folding from subsequent query steps.
 
 This article showcases an alternative method to create native queries against your data source using the [Value.NativeQuery](https://docs.microsoft.com/powerquery-m/value-nativequery) function and keep the query folding mechanism active for subsequent steps of your query.
 
 >[!NOTE]
->It is recommended that you read the documentation on [query folding](query-folding-basics.md) and the [step folding indicators](query-folding-basics.md) to better understand the concepts used throughout this article.
-
+>We recommend that you read the documentation on [query folding](query-folding-basics.md) and the [step folding indicators](query-folding-basics.md) to better understand the concepts used throughout this article.
 
 ## Supported data connectors
 
-The following method is applicable to the following data connectors.
+The method described in the next sections applies to the following data connectors:
 
 * [Dataverse](connectors/dataverse.md) *(when using enhanced compute)*
 * [SQL Server](connectors/sqlserver)
@@ -32,57 +31,58 @@ The following method is applicable to the following data connectors.
 ## Connect to data source
 
 >[!NOTE]
->To showcase this process, this article will use the SQL Server connector and the [AdventureWorks2019 sample database](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
->However, the contents described in this article are applicable to all supported connectors.
+>To showcase this process, this article uses the SQL Server connector and the [AdventureWorks2019 sample database](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
+>However, the methods described in this article apply to all supported connectors.
 
-When connecting to the data source, is important that you connect to the node or level where you will want to execute your native query. For this case, that will be the database level inside the server.
+When connecting to the data source, it's important that you connect to the node or level where you want to execute your native query. For the example in this article, that node will be the database level inside the server.
 
-![Connection settings dialog for the connection to the AdventureWorks2019 database on a local instance of SQL Server](media/native-query-folding/connection-settings.png)
+![Connection settings dialog for the connection to the AdventureWorks2019 database on a local instance of SQL Server.](media/native-query-folding/connection-settings.png)
 
-After defining the connection settings along with the connection credentials for your connection, you will be taking through the navigation dialog for your data source where you will see all the available objects that you can connect to.
+After defining the connection settings and supplying the credentials for your connection, you'll be taken to the navigation dialog for your data source. In that dialog, you'll see all the available objects that you can connect to.
 
-From this list, need to select the object where the query should be executed (also known as the target). For this case that is the database level that reads *SQL Server database*.
+From this list, you need to select the object where the native query is run (also known as the target). For this example, that object is the database level.
 
 ### For Power Query Desktop
 
-For the desktop versions of Power Query, you are able to right-click the database node in the navigator window and select the options that read **Transform Data** which will create a new query of the overall view of your database, which is the target that you need to execute your native query.
+For the desktop versions of Power Query, right-click the database node in the navigator window and select the **Transform Data** option. Selecting this option creates a new query of the overall view of your database, which is the target you need to run your native query.
 
-![Navigator window for the Power Query desktop experience where the user has right clicked the database node and shown an item from a menu that reads "Transform Data"](media/native-query-folding/pq-desktop-navigator-window.png)
+![Image where the user has right clicked the database node in the navigator, with emphasis on the Transform Data menu item.](media/native-query-folding/pq-desktop-navigator-window.png)
 
 ### For Power Query Online
 
 >[!NOTE]
->The method showcased in the Power Query Desktop section is the preferred method. However, this method is not currently possible in Power Query Online and this gap is being addressed.
+>The method showcased in the Power Query Desktop section is the preferred method. However, this method isn't currently possible in Power Query Online. This gap is being addressed.
+>
 >The following section showcases a workaround to reach the same target defined in the previous section.
 
-Inside the Navigator window, you can select a single object from the list and then click the button to get to the Query editor.
+Inside the Navigator window, select a single object from the list. Then select **Next** (or **Transform Data**) to get to the Power Query editor.
 
-![Navigator window for the Power Query Online experience where the user has selected a query from the available objects](media/native-query-folding/pq-online-navigator-window.png)
+![Navigator window for Power Query Online where the user has selected a single query from the available objects.](media/native-query-folding/pq-online-navigator-window.png)
 
-Once your query is shown in the Query editor window, check the *Applied steps* section on the right side of the screen and look for the last step of your query. Delete the last step of your query, which should have a name similar to **Navigation**.
+Once your query is in the Query editor window, check **Applied steps** on the right side of the screen. Look for the last step of your query. Delete the last step of your query, which should have a name similar to **Navigation**.
 
-![Query with the navigation step on the applied steps section shown in the Power Query Online experience](media/native-query-folding/pqo-query-navigation-step.png)
+![Query with the navigation step in the applied steps section of the Power Query Online editor.](media/native-query-folding/pqo-query-navigation-step.png)
 
-After the step has been deleted, only the Source step should be shown which displays a table with all the available objects in your database similarly to how they were displayed in the Navigator window.
+After the step has been deleted, only the **Source** step should still be available. This step contains a table with all the available objects in your database, similar to how they were displayed in the Navigator window.
 
-![Query after the navigation step on the applied steps section has been deleted  shown in the Power Query Online experience](media/native-query-folding/pqo-sample-query-navigation-deleted.png)
+![Query after the navigation step in the applied steps section has been deleted, with only the source step remaining.](media/native-query-folding/pqo-sample-query-navigation-deleted.png)
 
 ## Use Value.NativeQuery function
 
-The goal of this process is to execute the SQL code below and apply more transformations with Power Query that can be folded back to the source.
+The goal of this process is to execute the following SQL code, and to apply more transformations with Power Query that can be folded back to the source.
 
 ```sql
 SELECT DepartmentID, Name FROM HumanResources.Department WHERE GroupName = 'Research and Development'
 ```
 
-The first step was to  define the correct target that in this case is the database where the SQL code will be executed.
-Once a step has the correct target, you can select that step and click the fx button in the formula bar to add a custom step and replace the formula from ```Source``` to be the following formula:
+The first step was to define the correct target, which in this case is the database where the SQL code will be run.
+Once a step has the correct target, you can select that step&mdash;in this case, **Source** in **Applied Steps**&mdash;and then select the **fx** button in the formula bar to add a custom step. In this example, replace the `Source` formula with the following formula:
 
 ```M
 Value.NativeQuery(Source, "SELECT DepartmentID, Name FROM HumanResources.Department WHERE GroupName = 'Research and Development'  ", null, [EnableFolding = true])
 ```
-The most important component of this formula is the usage of the optional record for the forth parameter of the function that has the **EnableFolding** record field set to *true*.
 
+The most important component of this formula is the use of the optional record for the forth parameter of the function that has the **EnableFolding** record field set to *true*.
 
 ![New custom step formula with the usage of the Value.NativeQuery function and the explicit SQL query](media/native-query-folding/value-native-query-formula.png)
 
