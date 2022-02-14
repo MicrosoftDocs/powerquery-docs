@@ -28,11 +28,11 @@ The method described in the next sections applies to the following data connecto
 * [Google BigQuery](connectors/googlebigquery.md)
 * [Snowflake](connectors/snowflake.md)
 
-## Connect to data source
+## Connect to target from data source
 
 >[!NOTE]
 >To showcase this process, this article uses the SQL Server connector and the [AdventureWorks2019 sample database](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
->However, the methods described in this article apply to all supported connectors.
+>The experience may vary from connector to connector, but this article showcases the fundamentals on how to enable query folding capabilities over native queries for the supported connectors.
 
 When connecting to the data source, it's important that you connect to the node or level where you want to execute your native query. For the example in this article, that node will be the database level inside the server.
 
