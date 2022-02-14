@@ -42,30 +42,13 @@ After defining the connection settings and supplying the credentials for your co
 
 From this list, you need to select the object where the native query is run (also known as the target). For this example, that object is the database level.
 
-### For Power Query Desktop
-
-For the desktop versions of Power Query, right-click the database node in the navigator window and select the **Transform Data** option. Selecting this option creates a new query of the overall view of your database, which is the target you need to run your native query.
+At the navigator window in Power Query, right-click the database node in the navigator window and select the **Transform Data** option. Selecting this option creates a new query of the overall view of your database, which is the target you need to run your native query.
 
 ![Image where the user has right clicked the database node in the navigator, with emphasis on the Transform Data menu item.](media/native-query-folding/pq-desktop-navigator-window.png)
 
-### For Power Query Online
+Once your query lands in the Power Query editor, only the **Source** step should show in the Applied steps pane. This step contains a table with all the available objects in your database, similar to how they were displayed in the Navigator window.
 
->[!NOTE]
->The method showcased in the Power Query Desktop section is the preferred method. However, this method isn't currently possible in Power Query Online. This gap is being addressed.
->
->The following section showcases a workaround to reach the same target defined in the previous section.
-
-Inside the Navigator window, select a single object from the list. Then select **Next** (or **Transform Data**) to get to the Power Query editor.
-
-![Navigator window for Power Query Online where the user has selected a single query from the available objects.](media/native-query-folding/pq-online-navigator-window.png)
-
-Once your query is in the Query editor window, check **Applied steps** on the right side of the screen. Look for the last step of your query. Delete the last step of your query, which should have a name similar to **Navigation**.
-
-![Query with the navigation step in the applied steps section of the Power Query Online editor.](media/native-query-folding/pqo-query-navigation-step.png)
-
-After the step has been deleted, only the **Source** step should still be available. This step contains a table with all the available objects in your database, similar to how they were displayed in the Navigator window.
-
-![Query after the navigation step in the applied steps section has been deleted, with only the source step remaining.](media/native-query-folding/pqo-sample-query-navigation-deleted.png)
+![Query with only the source step](media/native-query-folding/pqo-sample-query-navigation-deleted.png)
 
 ## Use Value.NativeQuery function
 
