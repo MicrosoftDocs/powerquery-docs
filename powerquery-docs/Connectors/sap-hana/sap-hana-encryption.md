@@ -4,7 +4,7 @@ description: Learn how to encrypt the connection when connecting to an SAP HANA 
 author: davidiseminger
 
 ms.custom: seodec18
-ms.service: powerquery
+
 ms.topic: how-to
 ms.date: 09/01/2020
 ms.author: davidi

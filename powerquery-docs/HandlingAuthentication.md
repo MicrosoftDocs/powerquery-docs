@@ -2,7 +2,7 @@
 title: Handling authentication for Power Query connectors
 description: Manage authentication for Power Query connectors
 author: cpopell
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 01/27/2021
 ms.author: gepopell

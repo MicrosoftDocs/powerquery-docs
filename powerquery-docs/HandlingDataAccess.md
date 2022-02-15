@@ -3,7 +3,7 @@ title: Handling Data Access
 description: How to use connectors to access data using M data source functions
 author: cpopell
 
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 12/11/2019
 ms.author: gepopell

@@ -3,7 +3,7 @@ title: Troubleshooting dataflow issue - get data from dataflow
 description: Troubleshooting dataflow issue - get data from dataflow.
 author: radacad
 
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 12/3/2020
 ms.author: bezhan

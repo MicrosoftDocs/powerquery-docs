@@ -2,7 +2,7 @@
 title: Analyze data in Azure Data Lake Storage Gen2 by using Power BI
 description: Use Power BI to analyze data stored in Azure Data Lake Storage Gen2
 author: bensack
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 01/29/2020
 ms.author: bensack

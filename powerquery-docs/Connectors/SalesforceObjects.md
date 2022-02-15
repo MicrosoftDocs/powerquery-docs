@@ -3,7 +3,7 @@ title: Power Query Salesforce Objects connector
 description: Provides basic information, prerequisites, and information on how to connect to your data, along with a list of known issues and limitations.
 author: dougklopfenstein
 
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 10/27/2021
 ms.author: bezhan

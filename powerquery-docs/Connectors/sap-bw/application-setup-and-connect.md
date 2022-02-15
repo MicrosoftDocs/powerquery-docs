@@ -3,7 +3,7 @@ title: Power Query SAP Business Warehouse Application Server connector
 description: Power Query SAP Business Warehouse Application Server connector reference
 author: dougklopfenstein
 
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 11/23/2020
 ms.author: bezhan

@@ -3,7 +3,7 @@ title: Creating your first connector - Hello World
 description: Create your first connector
 author: cpopell
 
-ms.service: powerquery
+
 ms.date: 11/27/2019
 ms.author: dougklo
 ms.custom: intro-internal
