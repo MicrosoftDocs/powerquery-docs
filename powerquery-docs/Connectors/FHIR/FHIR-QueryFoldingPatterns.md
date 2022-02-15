@@ -2,7 +2,7 @@
 title: FHIR Power Query folding patterns
 description: Power Query connector for FHIR query folding patterns
 author: hansenms
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 01/08/2020
 ms.author: mihansen

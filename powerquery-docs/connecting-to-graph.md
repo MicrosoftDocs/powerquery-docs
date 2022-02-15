@@ -2,7 +2,7 @@
 title: Lack of Support for Microsoft Graph in Power Query
 description: This article describes Power Query's lack of support for connecting to Microsoft Graph
 author: mattmasson
-ms.service: powerquery
+
 ms.reviewer: kvivek
 ms.date: 02/23/2021
 ms.author: mmasson

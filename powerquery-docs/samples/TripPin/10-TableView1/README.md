@@ -4,7 +4,7 @@ description: Initial support for query folding for your TripPin REST connector.
 author: cpopell
 manager: kfile
 
-ms.service: powerquery
+
 ms.topic: tutorial
 ms.date: 12/05/2019
 ms.author: gepopell

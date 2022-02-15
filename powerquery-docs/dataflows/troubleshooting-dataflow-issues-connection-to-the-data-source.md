@@ -3,7 +3,7 @@ title: Troubleshooting dataflow issues - connection to the data source
 description: Troubleshooting dataflow issues - connection to the data source
 author: radacad
 
-ms.service: powerquery
+
 ms.reviewer: kvivek
 ms.topic: conceptual
 ms.date: 12/3/2020

@@ -4,7 +4,7 @@ description: Describes the security roles and permission levels used in standard
 author: bensack
 
 ms.reviewer: kvivek
-ms.service: dataflows
+
 ms.topic: conceptual
 ms.date: 12/3/2020
 ms.author: bensack

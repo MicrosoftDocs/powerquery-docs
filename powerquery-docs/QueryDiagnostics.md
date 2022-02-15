@@ -3,7 +3,7 @@ title: Query Diagnostics
 description: Using Query Diagnostics to diagnose what operations and data source queries are being performed
 author: cpopell
 
-ms.service: powerquery
+
 ms.topic: overview
 ms.date: 12/10/2020
 ms.author: dougklo

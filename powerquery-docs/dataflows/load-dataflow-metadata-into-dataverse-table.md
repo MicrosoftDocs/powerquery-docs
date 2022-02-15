@@ -3,7 +3,7 @@ title: Load data in a Dataverse table and build a dataflows monitoring report wi
 description: How to use the dataflows connector in Power Automate to create a dataflows monitoring report with Power BI
 author: miquelladeboer
 
-ms.service: powerquery
+
 ms.reviewer: kvivek
 ms.topic: conceptual
 ms.date: 11/12/2021

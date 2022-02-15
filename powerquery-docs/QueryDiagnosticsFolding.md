@@ -3,7 +3,7 @@ title: Understanding folding with Query Diagnostics
 description: Using Query Diagnostics to understand what operations are folding versus being performed locally
 author: cpopell
 
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 03/16/2020
 ms.author: gepopell

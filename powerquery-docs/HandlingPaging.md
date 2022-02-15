@@ -3,7 +3,7 @@ title: Handling paging for Power Query connectors
 description: Manage paging for Power Query connectors
 author: cpopell
 
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 5/15/2020
 ms.author: gepopell

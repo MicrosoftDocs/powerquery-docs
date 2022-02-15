@@ -4,7 +4,7 @@ description: Extract data from a Web page by providing an example of what you wa
 author: davidiseminger
 ms.reviewer: ''
 
-ms.service: powerquery
+
 ms.topic: how-to
 ms.date: 12/2/2020
 ms.author: davidi

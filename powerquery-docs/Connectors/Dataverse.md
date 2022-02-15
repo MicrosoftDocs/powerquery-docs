@@ -2,7 +2,7 @@
 title: Power Query Dataverse connector
 description: Provides basic information and connection instructions, along with OData API performance information, table retrieval rate, and alternative means of connecting to Dataverse.
 author: DougKlopfenstein
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 10/27/2021
 ms.author: bezhan

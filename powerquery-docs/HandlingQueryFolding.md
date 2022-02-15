@@ -3,7 +3,7 @@ title: Query folding for Power Query connectors
 description: Manage query folding for Power Query connectors using the Table.View function
 author: cpopell
 
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 08/16/2018
 ms.author: gepopell

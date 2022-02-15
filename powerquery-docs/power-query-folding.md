@@ -5,7 +5,7 @@ author: peter-myers
 manager: asaxton
 ms.reviewer: asaxton
 
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 11/20/2019
 ms.author: dougklo

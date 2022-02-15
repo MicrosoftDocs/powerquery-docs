@@ -3,7 +3,7 @@ title: Handling Connector Signing
 description: How to sign custom connectors for trusted use with recommended security levels
 author: cpopell
 
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 12/1/2021
 ms.author: dougklo

@@ -2,7 +2,7 @@
 title: Power Query Folder connector
 description: Provides basic information and connection instructions, along with tips about combining data from multiple files and subfolders.
 author: DougKlopfenstein
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 9/16/2020
 ms.author: bezhan

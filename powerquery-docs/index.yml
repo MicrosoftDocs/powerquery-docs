@@ -7,7 +7,7 @@ summary: Power Query is the data connectivity and data preparation technology th
 metadata: 
   title: Power Query documentation
   description: Power Query is used to filter, combine, and mash-up data from one or more supported data sources.  
-  ms.service: power-query
+  
   ms.topic: landing-page
   ms.collection: 
   author: dougklopfenstein
