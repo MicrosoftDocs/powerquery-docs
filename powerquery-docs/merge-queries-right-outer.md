@@ -2,7 +2,7 @@
 title: "Right outer join"
 description: An article on how to do a merge operation in Power Query using the right outer join kind. 
 author: ptyx507
-ms.service: powerquery
+
 ms.reviewer: 
 ms.date: 07/22/2020
 ms.author: dougklo

@@ -3,7 +3,7 @@ title: Consume data from dataflows
 description: Consume data from dataflows.
 author: luitwieler
 
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 01/12/2022
 ms.author: jeluitwi

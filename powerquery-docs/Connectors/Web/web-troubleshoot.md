@@ -2,7 +2,7 @@
 title: Troubleshooting the Power Query Web connector
 description: Provides troubleshooting tips for errors that might occur when using the Power Query Web connector to connect to a web site.
 author: dougklopfenstein
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 04/28/2021
 ms.author: bezhan

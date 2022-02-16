@@ -3,7 +3,7 @@ title: "Using an on-premises data gateway in Power Platform dataflows | Microsof
 description: "Learn how to use an on-premises data gateway in Power Platform dataflows"
 ms.date: 10/29/2021
 ms.reviewer: dougklo
-ms.service: powerquery
+
 ms.topic: article
 author: Mattp123
 ms.author: matp

@@ -3,7 +3,7 @@ title: Error handling for Power Query connectors
 description: Manage error handling for Power Query connectors
 author: cpopell
 
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 08/17/2018
 ms.author: gepopell

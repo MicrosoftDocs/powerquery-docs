@@ -3,7 +3,7 @@ title: Transform and filter an SAP BW dataset
 description: Describes various ways to transform and filter SAP BW datasets in the Power Query Editor.
 author: dougklopfenstein
 
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 11/23/2020
 ms.author: bezhan

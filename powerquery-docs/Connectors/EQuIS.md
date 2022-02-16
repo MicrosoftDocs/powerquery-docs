@@ -2,7 +2,7 @@
 title: EarthSoft's EQuIS Power Query Data Connector
 description: Provides basic information and connection instructions for the EQuIS connector.
 author: mathew-weaver
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 9/16/2021
 ms.author: bezhan
