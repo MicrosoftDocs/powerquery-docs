@@ -95,7 +95,7 @@ There are a few limitations to keep in mind when working with linked entities:
 * The dataflow must be in a [new Power BI workspace](/power-bi/service-create-the-new-workspaces) or a Power Apps environment.
 * A linked entity can't be joined with a regular entity that gets its data from an on-premises data source.
 * When using M parameters to address linked entities, if the source dataflow is refreshed, it doesn't automatically affect the data in the destination dataflow.
-* Attempt to connect 2 dataflow entities between 2 workspaces of different storage types (BYOSA and Internal) is not supported 
+* Attempting to connect two dataflow entities between two workspaces of different storage types&mdash;BYOSA and Internal&mdash;isn't supported.
 
 ## Next steps
 
