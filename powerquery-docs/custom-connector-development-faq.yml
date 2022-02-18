@@ -1,14 +1,14 @@
 ### YamlMime:FAQ
 metadata:
   title: Custom connector development FAQ
-  description: This article contains frequently asked questions about developing Power Query custom connectors that is collected in one spot.
+  description: This article contains frequently asked questions about developing Power Query custom connectors that are collected in one spot.
   author: DougKlopfenstein
   manager: leeclontz
   ms.reviewer: bezhan
   
   ms.technology:
   ms.topic: conceptual
-  ms.date: 2/17/2022
+  ms.date: 2/18/2022
   ms.author: dougklo
 
 title: Custom connector development FAQ
@@ -26,7 +26,7 @@ sections:
       - question: |
           Is it possible to present table partition information by adding another level to the navigation hierarchy, and let users select one or more partitions?
         answer: |
-          It is possible if end users frequently want to retrieve a single partition of data. However, this functionality can't be added to an already existing connector. In essence, this change would break an already existing connector.
+          It's possible if end users frequently want to retrieve a single partition of data. However, this functionality can't be added to an already existing connector. In essence, this change would break an already existing connector.
 
   - name: Troubleshooting
     questions:
@@ -72,7 +72,7 @@ sections:
       - question: |
           When a schema or database opens in the Power Query navigator, it starts immediately fetching all of the tables under the database instead of waiting for a table to be selected. What is causing this behavior?  
         answer: |
-          This might be a side effect of how you're building your navigation table. If you're creating new records with [Table.TransformRows](/powerquery-m/table-transformrows), this usage usually results in eager evaluation of the data tables. Instead, use the following code to make the table evaluation lazy.
+          This behavior might be a side effect of how you're building your navigation table. If you're creating new records with [Table.TransformRows](/powerquery-m/table-transformrows), this usage usually results in eager evaluation of the data tables. Instead, use the following code to make the table evaluation lazy.
 
           ```powerquery-m
           GetShares = (server_host as text) as table =>
@@ -92,7 +92,7 @@ sections:
       - question: |
           A single table can consist of multiple partitioned files. The current implementation downloads all the files before showing a preview. Is there a way to avoid downloading all the files, and only download files until there's enough rows for the preview?
         answer: |
-          This is a side effect of using [Table.Combine](/powerquery-m/table-combine). An alternative method is to build a "table of tables" and use the [Table.ExpandTableColumn](/powerquery-m/table-expandtablecolumn) function. This method lazily expands partitions as needed. For example:
+          This behavior is a side effect of using [Table. Combine](/powerquery-m/table-combine). An alternative method is to build a "table of tables" and use the [Table.ExpandTableColumn](/powerquery-m/table-expandtablecolumn) function. This method lazily expands partitions as needed. For example:
 
           ```powerquery-m
           GetFiles = (tables_url as text, table_name as text) as table =>
