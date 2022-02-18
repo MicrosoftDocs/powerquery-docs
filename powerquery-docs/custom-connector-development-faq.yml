@@ -19,9 +19,9 @@ sections:
   - name: General
     questions:
       - question: |
-          Is it possible to show a warning if a large table is selected, since we already have the table metadata?
+          Is it possible to show a warning if...?
         answer: |
-          No, we currently don't provide a way for connectors or queries to return out of band warnings or information to the Power Query experience.
+          Outside of documented warning patterns, we currently don't provide a way to return out of band warnings, such as a large table or large metadata warning.
 
       - question: |
           Is it possible to present table partition information by adding another level to the navigation hierarchy, and let users select one or more partitions?
@@ -128,3 +128,6 @@ sections:
               in
                   Web.Contents(uriWithoutQuery, modifiedOptions);
           ```
+additionalContent: |
+  >[!Note]
+  >Reach out to your Microsoft contact if you are interested in engaging a recommended 3rd party custom connector developer consultant.
