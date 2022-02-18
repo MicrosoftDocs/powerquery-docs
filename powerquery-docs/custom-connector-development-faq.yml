@@ -128,9 +128,3 @@ sections:
               in
                   Web.Contents(uriWithoutQuery, modifiedOptions);
           ```
-
-additionalContent: |
-
-  ## Next steps
-
-    * [Custom connector support]
