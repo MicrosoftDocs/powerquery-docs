@@ -548,6 +548,8 @@
           href: HandlingGatewaySupport.md
         - name: "Handling connector signing"
           href: HandlingConnectorSigning.md
+        - name: "Handling proxy support"
+          href: HandlingProxySupport.md
       - name: Connector Certification
         items:
         - name: Overview
