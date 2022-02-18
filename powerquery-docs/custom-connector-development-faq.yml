@@ -16,7 +16,7 @@ summary: |
   Here are some answers to common questions that might occur while developing custom Power Query connectors.
 
 sections:
-  - name:
+  - name: Single section - ignored
     questions:
       - question: |
           The custom connector I've been developing works fine in Power BI Desktop. But when I try to run it in Power BI service, I can't set credentials or configure the data source. What's wrong?
@@ -131,4 +131,4 @@ additionalContent: |
 
   ## Next steps
 
-    * [Troubleshoot the on-premises data gateway](service-gateway-tshoot.md)
+    * [Troubleshoot the on-premises data gateway](/data-integration/gateway/service-gateway-tshoot.md)
