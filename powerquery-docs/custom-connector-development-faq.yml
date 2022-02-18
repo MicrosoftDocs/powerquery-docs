@@ -16,7 +16,19 @@ summary: |
   Here are some answers to common questions that might occur while developing custom Power Query connectors.
 
 sections:
-  - name: Single section - ignored
+  - name: General
+    questions:
+      - question: |
+          Is it possible to show a warning if a large table is selected, since we already have the table metadata?
+        answer: |
+          No, we currently don't provide a way for connectors or queries to return out of band warnings or information to the Power Query experience.
+
+      - question: |
+          Is it possible to present table partition information by adding another level to the navigation hierarchy, and let users select one or more partitions?
+        answer: |
+          It is possible if end users frequently want to retrieve a single partition of data. However, this functionality can't be added to an already existing connector. In essence, this change would break an already existing connector.
+
+  - name: Troubleshooting
     questions:
       - question: |
           The custom connector I've been developing works fine in Power BI Desktop. But when I try to run it in Power BI service, I can't set credentials or configure the data source. What's wrong?
@@ -80,7 +92,7 @@ sections:
       - question: |
           A single table can consist of multiple partitioned files. The current implementation downloads all the files before showing a preview. Is there a way to avoid downloading all the files, and only download files until there's enough rows for the preview?
         answer: |
-          This is a side effect of using [Table.Combine](/powerquery-m/table-combine). An alternative pattern is to build a "table of tables" and use the [Table.ExpandTableColumn](/powerquery-m/table-expandtablecolumn) function. This pattern lazily expands partitions as needed. For example:
+          This is a side effect of using [Table.Combine](/powerquery-m/table-combine). An alternative method is to build a "table of tables" and use the [Table.ExpandTableColumn](/powerquery-m/table-expandtablecolumn) function. This method lazily expands partitions as needed. For example:
 
           ```powerquery-m
           GetFiles = (tables_url as text, table_name as text) as table =>
@@ -116,16 +128,6 @@ sections:
               in
                   Web.Contents(uriWithoutQuery, modifiedOptions);
           ```
-
-      - question: |
-          Is it possible to show a warning if a large table is selected, since we already have the table metadata?
-        answer: |
-          No, we currently don't provide a way for connectors or queries to return out of band warnings or information to the Power Query experience.
-
-      - question: |
-          Is it possible to present table partition information by adding another level to the navigation hierarchy, and let users select one or more partitions?
-        answer: |
-          It is possible if end users frequently want to retrieve a single partition of data. However, this functionality can't be added to an already existing connector. In essence, this change would break an already existing connector.
 
 additionalContent: |
 
