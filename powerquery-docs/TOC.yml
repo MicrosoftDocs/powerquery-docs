@@ -557,7 +557,7 @@
         - name: "Custom connector documentation"
           href: providing-user-documentation.md
       - name: Custom connector development FAQ
-        href: custom-connector-development-faq.md
+        href: custom-connector-development-faq.yml
     - name: Resources
       items:
       - name: "Power BI documentation"
