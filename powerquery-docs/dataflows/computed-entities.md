@@ -5,7 +5,7 @@ author: bensack
 manager: kfile
 ms.reviewer: ''
 
-ms.service: dataflows
+
 ms.topic: conceptual
 ms.date: 12/2/2019
 ms.author: bensack

@@ -3,7 +3,7 @@ title: What licenses do you need to use dataflows
 description: What licenses do you need to use dataflows
 author: radacad
 
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 12/3/2020
 ms.author: bezhan

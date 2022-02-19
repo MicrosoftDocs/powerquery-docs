@@ -4,7 +4,7 @@ description: Describes how to keep data loaded into Dataverse synchronized with 
 author: bensack
 
 ms.reviewer: kvivek
-ms.service: dataflows
+
 ms.topic: conceptual
 ms.date: 12/4/2020
 ms.author: bensack

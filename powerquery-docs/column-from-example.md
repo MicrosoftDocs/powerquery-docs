@@ -2,7 +2,7 @@
 title: Add a column from examples
 description: Quickly create a new column in Power Query using existing columns as examples.
 author: ptyx507
-ms.service: powerquery
+
 ms.reviewer: kvivek
 ms.date: 06/08/2020
 ms.author: dougklo

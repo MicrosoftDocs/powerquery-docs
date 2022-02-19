@@ -2,7 +2,7 @@
 title: "Combine files overview" 
 description: How to combine files in Power Query and Power Query Online
 author: ptyx507
-ms.service: powerquery
+
 ms.reviewer: 
 ms.date: 06/30/2020
 ms.author: dougklo

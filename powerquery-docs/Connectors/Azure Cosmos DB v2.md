@@ -2,7 +2,7 @@
 title: Power Query Azure Cosmos DB v2 (Beta)
 description: Provides basic information, prerequisites, and instructions on how to connect to Azure Cosmos DB
 author: Calin-Teodorescu
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 11/10/2021
 ms.author: cateodor

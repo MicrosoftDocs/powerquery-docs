@@ -282,6 +282,8 @@
         href: "Connectors/AdobeAnalytics.md"
       - name: "Amazon Athena"
         href: "Connectors/AmazonAthena.md"
+      - name: "Amazon OpenSearch Project (Beta)"
+        href: "Connectors/AmazonOpenSearchService.md"
       - name: "Amazon Redshift"
         href: Connectors/AmazonRedshift.md
       - name: "Anaplan"
@@ -312,6 +314,8 @@
         href: Connectors/Dataflows.md
       - name: "Delta Sharing"
         href: Connectors/DeltaSharing.md
+      - name: "Digital Construction Works Insights (Beta)"
+        href: Connectors/DigitalConstructionWorksInsights.md
       - name: "EQuIS (Beta)"
         href: Connectors/EQuIS.md
       - name: "Essbase"
@@ -360,6 +364,8 @@
           href: /azure/devops/report/powerbi/odataquery-connect?view=azure-devops
       - name: "ODBC"
         href: Connectors/Odbc.md
+      - name: "OpenSearch Project (Beta)"
+        href: Connectors/OpenSearchProject.md
       - name: "Oracle database"
         href: Connectors/OracleDatabase.md
       - name: "PDF"
@@ -426,7 +432,7 @@
         href: Connectors/TextCSV.md
       - name: "TIBCO(R) Data Virtualization"
         href: Connectors/tibco.md
-      - name: "Twilio (Deprecated) (Beta)"
+      - name: "Twilio (Beta) (Deprecated)"
         href: Connectors/twilio.md
       - name: "Usercube"
         href: Connectors/Usercube.md
@@ -548,6 +554,8 @@
           href: HandlingGatewaySupport.md
         - name: "Handling connector signing"
           href: HandlingConnectorSigning.md
+        - name: "Handling proxy support"
+          href: HandlingProxySupport.md
       - name: Connector Certification
         items:
         - name: Overview

@@ -3,7 +3,7 @@ title: Trigger dataflows and Power BI datasets sequentially
 description: How to use the dataflows connector in Power Automate to trigger dataflows and Power BI datasets sequentially
 author: miquelladeboer
 
-ms.service: powerquery
+
 ms.reviewer: kvivek
 ms.topic: conceptual
 ms.date: 11/12/2021

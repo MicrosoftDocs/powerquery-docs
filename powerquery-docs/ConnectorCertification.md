@@ -3,7 +3,7 @@ title: Power Query Connector Certification
 description: Guidelines on connector certification and implementation requirements for Power Query custom connectors
 author: bezhan-msft
 
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 10/13/2020
 ms.author: bezhan

@@ -2,7 +2,7 @@
 title: Power Query Google Sheets connector
 description: Provides basic information and prerequisites for the Google Sheets connector, descriptions of the optional input parameters, and discusses limitations and issues you might come across.
 author: bezhan-msft
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 10/20/2021
 ms.author: bezhan

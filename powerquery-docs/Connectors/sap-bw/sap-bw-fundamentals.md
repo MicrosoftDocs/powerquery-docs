@@ -3,7 +3,7 @@ title: SAP Business Warehouse fundamentals
 description: Describes basic SAP BW architecture and terminology used when interacting with the Power Query SAP Business Warehouse connector.
 author: dougklopfenstein
 
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 11/23/2020
 ms.author: bezhan
