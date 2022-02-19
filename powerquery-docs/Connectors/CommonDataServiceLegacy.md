@@ -126,3 +126,13 @@ There are several alternative ways of extracting and migrating data from Common 
 
 >[!Note]
 > Both the Common Data Service connector and the OData APIs are meant to serve analytical scenarios where data volumes are relatively small. The recommended approach for bulk data extraction is “Export to Data Lake”. The TDS endpoint is a better option than the Common Data Service connector and OData endpoint, but is currently in Preview.
+
+### Querying display columns must include the field in the query
+
+When using this connector, if you are including `<field>_display` columns, you must include `<field>` in the query as well, or the `<field>_display` column may be null.
+
+``` 
+Example: Table.SelectColumns(#"Navigation 1", {"statuscode", "statuscode_display"})
+```
+
+If ```statuscode``` is not included, ```statuscode_display``` may be null and err out.
