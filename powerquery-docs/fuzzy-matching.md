@@ -2,7 +2,7 @@
 title: "How fuzzy matching works in Power Query?"
 description: "How-to article on the fuzzy matching feature in Power Query and how to better take advantage of it"
 author: ptyx507
-ms.service: powerquery
+
 ms.reviewer: 
 ms.date: 03/16/2021
 ms.author: dougklo

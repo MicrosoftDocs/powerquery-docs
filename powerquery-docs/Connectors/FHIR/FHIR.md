@@ -2,9 +2,9 @@
 title: Power Query connector for FHIR
 description: Power Query connector for FHIR reference
 author: hansenms
-ms.service: powerquery
+
 ms.topic: conceptual
-ms.date: 8/9/2021
+ms.date: 1/18/2022
 ms.author: mihansen
 LocalizationGroup: reference
 ---
@@ -31,6 +31,10 @@ If you don't have a FHIR server, you can provision the [Azure API for FHIR](/azu
 
 * Import
 
+## Prerequisites
+
+You must have a FHIR Data Reader role on the FHIR server to read data from the server. More information: [Assign roles for the FHIR service](/azure/healthcare-apis/configure-azure-rbac#assign-roles-for-the-fhir-service)
+
 ## Connect to a FHIR server from Power Query Desktop
 
 To make a connection to a FHIR server, take the following steps:
@@ -55,7 +59,7 @@ To make a connection to a FHIR server, take the following steps:
 
     ![Image of authentication dialog box with the Organizational account selected and the user not yet signed in.](FHIR-Sign-In.png)
 
-    The connector supports "Anonymous" for FHIR servers with no access controls (for example, public test servers (like http://test.fhir.org/r4) or Azure Active Directory authentication. Go to [FHIR connector authentication](FHIR-Authentication.md) for details.
+    The connector supports "Anonymous" for FHIR servers with no access controls (for example, public test servers (like http://test.fhir.org/r4) or Azure Active Directory authentication. You must have a [FHIR Data Reader role](#prerequisites) on the FHIR server to read data from the server. Go to [FHIR connector authentication](FHIR-Authentication.md) for details.
 
 5. Select the resources you're interested in.
 
@@ -91,7 +95,7 @@ To make a connection to a FHIR server, take the following steps:
 
 3. If necessary, include the name of your on-premises data gateway.
 
-4. Select the **Organizational account** authentication kind, and select **Sign in**. Enter your credentials when asked.
+4. Select the **Organizational account** authentication kind, and select **Sign in**. Enter your credentials when asked. You must have a [FHIR Data Reader role](#prerequisites) on the FHIR server to read data from the server.
 
 5. Select **Next** to proceed.
 

@@ -3,7 +3,7 @@ title: Behind the scenes of the Data Privacy Firewall
 description: Describes the purpose of the Data Privacy Firewall
 author: ehrenMSFT
 
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 11/11/2020
 ms.author: gepopell

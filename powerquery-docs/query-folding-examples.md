@@ -2,11 +2,11 @@
 title: Query folding examples in Power Query
 description: Demonstrates the affect of query folding in Power Query. A comparison and analysis of multiple query examples with no folding, partial folding, and full query folding in Power Query.
 author: migueesc123
-ms.service: powerquery
+
 ms.reviewer: 
 ms.date: 11/4/2021
 ms.author: dougklo
-ms.custom: intro-internal
+ms.topic: conceptual
 ---
 
 # Query folding examples

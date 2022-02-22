@@ -3,7 +3,7 @@ title: Best practices for designing and developing complex dataflows
 description: Best practices for designing and developing complex dataflows
 author: radacad
 
-ms.service: powerquery
+
 ms.reviewer: kvivek
 ms.topic: conceptual
 ms.date: 12/2/2020

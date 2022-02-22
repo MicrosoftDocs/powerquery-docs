@@ -2,12 +2,10 @@
 title: What is Power Query?
 description: Learn what Power Query is, and how it can help you get and transform data
 author: mllopis
-ms.service: powerquery
+
 ms.topic: overview
 ms.date: 10/27/2021
 ms.author: millopis
-ms.custom: intro-internal
-LocalizationGroup: Get started
 ---
 
 # What is Power Query?

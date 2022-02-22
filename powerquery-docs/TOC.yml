@@ -18,6 +18,8 @@
         href: connecting-to-graph.md
       - name: "Connectivity without an existing connector"
         href: connector-alternatives.md
+      - name: "Change a dataflow gateway"
+        href: change-gateway-dataflow.md
     - name: Transform data
       items:
       - name: "Use Power Query to transform data"
@@ -148,6 +150,10 @@
         href: dataflows/create-use.md
       - name: "Create and use dataflows in Teams"
         href: dataflows/dataflows-teams.md
+      - name: "Consume data from dataflows"
+        href: dataflows/using-the-output-of-power-platform-dataflows.md
+      - name: "Use dataflows in solutions"
+        href: dataflows/dataflow-solution-awareness.md
       - name: "Use incremental refresh"
         href: dataflows/incremental-refresh.md
       - name: "Connect to data sources"
@@ -160,8 +166,6 @@
         href: dataflows/using-dataflows-with-on-premises-data.md
       - name: Analytical dataflows
         items:
-        - name: "Get data from dataflows"
-          href: dataflows/using-the-output-of-power-platform-dataflows.md
         - name: "Create computed entities"
           href: dataflows/computed-entities.md
         - name: "Link entities between dataflows"
@@ -186,7 +190,7 @@
             href: dataflows/best-practices-for-dimensional-model-using-dataflows.md
           - name: "Performance"
             href: dataflows/performance-ingestion-transformation-dataflows.md
-        - name: "Get dateflows data from Azure services"
+        - name: "Get dataflows data from Azure services"
           href: dataflows/using-output-power-platform-dataflows-other-azure.md
       - name: Standard dataflows
         items: 
@@ -280,6 +284,8 @@
         href: "Connectors/AdobeAnalytics.md"
       - name: "Amazon Athena"
         href: "Connectors/AmazonAthena.md"
+      - name: "Amazon OpenSearch Project (Beta)"
+        href: "Connectors/AmazonOpenSearchService.md"
       - name: "Amazon Redshift"
         href: Connectors/AmazonRedshift.md
       - name: "Anaplan"
@@ -305,9 +311,13 @@
       - name: "Data Lake Storage"
         href: Connectors/DataLakeStorage.md
       - name: "Dataverse"
-        href: Connectors/dataverse.md
+        href: Connectors/dataverse.md     
+      - name: "Dataflows"
+        href: Connectors/Dataflows.md
       - name: "Delta Sharing"
         href: Connectors/DeltaSharing.md
+      - name: "Digital Construction Works Insights (Beta)"
+        href: Connectors/DigitalConstructionWorksInsights.md
       - name: "EQuIS (Beta)"
         href: Connectors/EQuIS.md
       - name: "Essbase"
@@ -356,6 +366,8 @@
           href: /azure/devops/report/powerbi/odataquery-connect?view=azure-devops
       - name: "ODBC"
         href: Connectors/Odbc.md
+      - name: "OpenSearch Project (Beta)"
+        href: Connectors/OpenSearchProject.md
       - name: "Oracle database"
         href: Connectors/OracleDatabase.md
       - name: "PDF"
@@ -420,8 +432,10 @@
         href: Connectors/SumTotal.md
       - name: "Text/CSV"
         href: Connectors/TextCSV.md
-      - name: "TIBCO(R) Data Virtualization (Beta)"
+      - name: "TIBCO(R) Data Virtualization"
         href: Connectors/tibco.md
+      - name: "Twilio (Beta) (Deprecated)"
+        href: Connectors/twilio.md
       - name: "Usercube"
         href: Connectors/Usercube.md
       - name: "Web"
@@ -508,26 +522,18 @@
           href: HandlingDataAccess.md
         - name: "ODBC development"
           items:
-          - name: "Overview"
-            href: odbc.md#overview
-          - name: "ODBC extensibility functions"
-            href: odbc.md#odbc-extensibility-functions
-          - name: "Parameters for your Data Source function"
-            href: odbc.md#parameters-for-your-data-source-function
+          - name: "Enabling DirectQuery for an ODBC based connector"
+            href: odbc.md
           - name: "Parameters for Odbc.DataSource"
-            href: odbc.md#parameters-for-odbcdatasource
-          - name: "Troubleshooting and testing"
-            href: odbc.md#troubleshooting-and-testing
+            href: odbc-parameters.md
+          - name: "Testing and troubleshooting"
+            href: odbc-troubleshooting.md
         - name: "Handling resource path"
           href: HandlingResourcePath.md
         - name: "Handling paging"
           href: HandlingPaging.md
         - name: "Handling transformations"
-          items:
-          - name: "Static"
-            href: HandlingTransformations.md#static-transformations
-          - name: "Dynamic"
-            href: HandlingTransformations.md#dynamic-transformations
+          href: HandlingTransformations.md
         - name: "Handling schemas"
           href: HandlingSchema.md
         - name: "Handling status codes"
@@ -550,6 +556,8 @@
           href: HandlingGatewaySupport.md
         - name: "Handling connector signing"
           href: HandlingConnectorSigning.md
+        - name: "Handling proxy support"
+          href: HandlingProxySupport.md
       - name: Connector Certification
         items:
         - name: Overview

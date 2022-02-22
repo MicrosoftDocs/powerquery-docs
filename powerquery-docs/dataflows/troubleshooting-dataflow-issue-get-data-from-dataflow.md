@@ -3,7 +3,7 @@ title: Troubleshooting dataflow issue - get data from dataflow
 description: Troubleshooting dataflow issue - get data from dataflow.
 author: radacad
 
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 12/3/2020
 ms.author: bezhan
@@ -13,7 +13,7 @@ LocalizationGroup: Data from files
 
 # Troubleshooting dataflow issues: Get data from a dataflow
 
-[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
+
 
 You might have created a dataflow but then had difficulty getting data from it (either by using Power Query in Power BI Desktop or from other dataflows). This article explains some of the most common problems with getting data from a dataflow.
 

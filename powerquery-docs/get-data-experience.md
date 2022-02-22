@@ -2,11 +2,11 @@
 title: "Getting data"
 description: "Overview of the Power Query get data experience and all its components, such as connector parameters, authentication, navigation table, and query destination."
 author: ptyx507
-ms.service: powerquery
+
 ms.reviewer: kvivek
 ms.date: 06/01/2019
 ms.author: dougklo
-ms.custom: intro-internal
+ms.topic: overview
 ---
 
 # Getting data

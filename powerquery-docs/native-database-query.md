@@ -3,7 +3,7 @@ title: Import data from a database using native database query
 description: Describes the steps you take to import data from a database using a native database query
 author: DougKlopfenstein
 
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 06/05/2020
 ms.author: bezhan

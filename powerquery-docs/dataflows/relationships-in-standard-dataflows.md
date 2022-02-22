@@ -4,7 +4,7 @@ description: Learn how to map fields with relationship fields from the dataflow 
 author: bensack
 
 ms.reviewer: kvivek
-ms.service: dataflows
+
 ms.topic: conceptual
 ms.date: 12/3/2020
 ms.author: bensack
@@ -12,7 +12,7 @@ ms.author: bensack
 
 # Mapping fields with relationships in standard dataflows
 
-[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
+
 
 In the standard dataflow, you can easily map fields from the dataflow query into Dataverse tables. However, if the Dataverse table has lookup or relationship fields, additional consideration is required to make sure this process works.
 

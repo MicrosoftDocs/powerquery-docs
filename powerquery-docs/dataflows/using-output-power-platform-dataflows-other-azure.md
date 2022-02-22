@@ -3,7 +3,7 @@ title: Using the output of Power Platform dataflows from other Azure data worklo
 description: Using the output of Microsoft Power Platform dataflows from other Azure data workloads.
 author: radacad
 
-ms.service: powerquery
+
 ms.reviewer: kvivek
 ms.topic: conceptual
 ms.date: 12/3/2020
@@ -12,7 +12,7 @@ ms.author: bezhan
 
 # Using the output of Microsoft Power Platform dataflows from other Azure data workloads
 
-[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
+
 
 Depending on the storage for the output of the Microsoft Power Platform dataflows, you can use that output in other Azure services.
 

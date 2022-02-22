@@ -1,5 +1,6 @@
 ---
 title: "Grouping or summarizing rows"
+
 description: "In Power Query, you can group or summarize the values in various rows into a single value by grouping the rows according to the values in one or more columns. Power Query has two types of Group By operations: aggregate a column with an aggregate function, or perform an operation."
 author: ptyx507x
 ms.service: powerquery

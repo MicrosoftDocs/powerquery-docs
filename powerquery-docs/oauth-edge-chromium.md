@@ -2,7 +2,7 @@
 title: Enabling Microsoft Edge (Chromium) for OAuth authentication in Power BI Desktop
 description: This article describes how users can install and use Microsoft Edge (Chromium) for OAuth authentication in Power BI Desktop. 
 author: DougKlopfenstein
-ms.service: powerquery
+
 ms.reviewer: dougklo
 ms.date: 10/12/2021
 ms.author: dougklo
