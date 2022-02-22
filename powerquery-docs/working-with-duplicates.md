@@ -2,9 +2,9 @@
 title: Working with duplicate values
 description: Working with duplicate values in Power Query. An article about how to remove and keep duplicates from one or multiple columns.
 author: ptyx507
-ms.service: powerquery
+
 ms.reviewer: kvivek
-ms.date: 04/28/2021
+ms.date: 01/12/2022
 ms.author: dougklo
 ms.custom: edited
 ---
@@ -14,7 +14,7 @@ ms.custom: edited
 You can work with duplicate sets of values through transformations that can remove duplicates from your data or filter your data to show duplicates only, so you can focus on them.
 
 > [!WARNING]
-> Power Query is case-sensitive. When working with duplicate values, Power Query considers the case of the text, which might lead to undesired results. As a workaround, users can apply an uppercase or lowercase transform prior to removing duplicates. 
+> Power Query is case-sensitive. When working with duplicate values, Power Query considers the case of the text, which might lead to undesired results. As a workaround, users can apply an uppercase or lowercase transform prior to removing duplicates.
 
 For this article, the examples use the following table with **id**, **Category**, and **Total** columns.
 
@@ -32,7 +32,7 @@ One of the operations that you can perform is to remove duplicate values from yo
    ![Remove duplicates.](images/me-working-with-duplicates-remove-duplicates.png "Remove duplicates")
 
 > [!WARNING]
-> There's no guarantee that the first instance in a set of duplicates will be chosen when duplicates are removed.
+> There's no guarantee that the first instance in a set of duplicates will be chosen when duplicates are removed. To learn more about how to preserve sorting, go to [Preserve sort](CommonIssues.md#preserving-sort).
 
 ### Remove duplicates from multiple columns
 
@@ -40,14 +40,14 @@ In this example, you want to identify and remove the duplicates by using all of 
 
 ![Initial table with duplicates in multiple columns.](images/me-working-with-duplicates-table-row-duplicates.png "Initial table with duplicates in multiple columns")
 
-You have four rows that are duplicates. Your goal is to remove those duplicate rows so there are only unique rows in your table. Select all columns from your table, and then select **Remove duplicates**. 
+You have four rows that are duplicates. Your goal is to remove those duplicate rows so there are only unique rows in your table. Select all columns from your table, and then select **Remove duplicates**.
 
 The result of that operation will give you the table that you're looking for.
 
 ![Final table with duplicates removed from all columns.](images/me-working-with-duplicates-table-row-duplicates-final.png "Final table with duplicates removed from all columns")
 
 >[!NOTE]
->This operation can also be performed with a subset of columns. 
+>This operation can also be performed with a subset of columns.
 
 ### Remove duplicates from a single column
 
@@ -74,11 +74,11 @@ Another operation you can perform with duplicates is to keep only the duplicates
 
 ### Keep duplicates from multiple columns
 
-In this example, you want to identify and keep the duplicates by using all of the columns from your table. 
+In this example, you want to identify and keep the duplicates by using all of the columns from your table.
 
 ![Initial table for keeping duplicates from multiple columns.](images/me-working-with-duplicates-table-row-duplicates.png "Initial table for keeping duplicates from multiple columns")
 
-You have four rows that are duplicates. Your goal in this example is to keep only the rows that are duplicated in your table. Select all the columns in your table, and then select **Keep duplicates**. 
+You have four rows that are duplicates. Your goal in this example is to keep only the rows that are duplicated in your table. Select all the columns in your table, and then select **Keep duplicates**.
 
 The result of that operation will give you the table that you're looking for.
 

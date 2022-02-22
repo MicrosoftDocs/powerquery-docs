@@ -2,7 +2,7 @@
 title: Power Query SumTotal connector
 description: Provides basic information and prerequisites for the SumTotal connector, and outlines limitations and issues.
 author: bezhan-msft
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 5/25/2021
 ms.author: bezhan

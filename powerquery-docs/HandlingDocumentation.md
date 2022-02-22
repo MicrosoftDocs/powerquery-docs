@@ -3,7 +3,7 @@ title: Adding function documentation
 description: Add function documentation for Power Query connectors
 author: cpopell
 
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 12/12/2019
 ms.author: gepopell

@@ -3,10 +3,9 @@ title: Creating your first connector - Hello World
 description: Create your first connector
 author: cpopell
 
-ms.service: powerquery
-ms.topic: quickstart
+
 ms.date: 11/27/2019
-ms.author: gepopell
+ms.author: dougklo
 ms.custom: intro-internal
 
 LocalizationGroup: Get started
@@ -24,12 +23,12 @@ This sample provides a simple data source extension that can be run in Visual St
 
 Following the instructions in [Installing the PowerQuery SDK](InstallingSDK.md), create a new project called "HelloWorld" and copy in the following M code, and then follow the rest of the instructions to be able to open it in PowerBI.
 
-In the following connector definition you will find:
+In the following connector definition you'll find:
 * A `section` statement.
 * A data source function with metadata establishing it as a data source definition with the Kind `HelloWorld` and Publish `HelloWorld.Publish`.
 * An `Authentication` record declaring that implicit (anonymous) is the only authentication type for this source.
 * A publish record declaring that this connection is in Beta, what text to load from the resx file, the source image, and the source type image.
-* A record associating icon sizes with specific pngs in the build folder.
+* A record associating icon sizes with specific PNGs in the build folder.
 
 ```section HelloWorld;
  

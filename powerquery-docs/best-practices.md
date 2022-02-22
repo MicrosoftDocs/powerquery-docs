@@ -2,11 +2,11 @@
 title: Best practices when working with Power Query
 description: Best practices when working with Power Query
 author: ptyx507
-ms.service: powerquery
+
 ms.reviewer: 
 ms.date: 08/31/2020
 ms.author: dougklo
-ms.custom: intro-internal
+ms.topic: conceptual
 ---
 # Best practices when working with Power Query
 

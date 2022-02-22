@@ -2,7 +2,7 @@
 title: What is the storage structure for analytical dataflows
 description: What is the storage structure for analytical dataflows
 author: radacad
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 12/3/2020
 ms.author: bezhan
@@ -10,7 +10,7 @@ ms.author: bezhan
 
 # What is the storage structure for analytical dataflows? 
 
-[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
+
 
 Analytical dataflows store both data and metadata in Azure Data Lake Storage. Dataflows leverage a standard structure to store and describe data created in the lake, which is called Common Data Model folders. In this article, you'll learn more about the storage standard that dataflows use behind the scenes. 
 

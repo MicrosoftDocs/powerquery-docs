@@ -47,7 +47,11 @@
       "recommendations": true,
       "titleSuffix": "Power Query" 
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "ms.service": {
+        "**.*": "powerquery"
+      }
+    },
     "template": [],
     "dest": "powerquery-docs",
     "markdownEngineName": "markdig"

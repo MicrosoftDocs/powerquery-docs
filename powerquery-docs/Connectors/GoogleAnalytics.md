@@ -2,9 +2,9 @@
 title: Power Query Google Analytics connector
 description: Provides basic information and connection instructions, along with a list of quota limits for Power BI and instructions on validating unexpected data.
 author: DougKlopfenstein
-ms.service: powerquery
+
 ms.topic: conceptual
-ms.date: 10/7/2021
+ms.date: 1/18/2022
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -16,7 +16,7 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power Apps (Dataflows) |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Customer Insights (Dataflows) |
 | Authentication Types Supported | Google Account |
 | Function Reference Documentation | [GoogleAnalytics.Accounts](/powerquery-m/googleanalytics-accounts) |
 | | |

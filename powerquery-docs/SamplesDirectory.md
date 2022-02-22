@@ -3,7 +3,7 @@ title: Power Query connector samples
 description: A list of functional, ODBC, and tutorial samples of Power Query connectors
 author: cpopell
 
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 12/09/2019
 ms.author: gepopell

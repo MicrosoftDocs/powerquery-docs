@@ -2,7 +2,7 @@
 title: Parameters
 description: An article on how to use parameters in Power Query
 author: ptyx507
-ms.service: powerquery
+
 ms.reviewer: 
 ms.date: 08/31/2020
 ms.author: dougklo

@@ -3,7 +3,7 @@ title: Optimize Power Query when expanding table columns
 description: Describes how to use a classic table join with a common key to optimize the number of HTTP calls to the secondary table and expand the selected column in memory.
 author: DougKlopfenstein
 
-ms.service: powerquery
+
 ms.reviewer:
 ms.topic: conceptual
 ms.date: 10/6/2020
