@@ -108,31 +108,31 @@ All of these features will be added to the Dataverse connector in the future, at
 
 ### Common Data Service OData API performance and throttling limits
 
-For information about OData API performance and throttling limits for Common Data Service connections, see [Requests limits and allocations](/power-platform/admin/api-request-limits-allocations). These limitations apply to both the Common Data Source connector (which uses the OData API as an implementation detail) and the [OData Feed](odatafeed.md) connector when accessing the same endpoint.
+For information about OData API performance and throttling limits for Common Data Service connections, go to [Requests limits and allocations](/power-platform/admin/api-request-limits-allocations). These limitations apply to both the Common Data Source (Legacy) connector (which uses the OData API as an implementation detail) and the [OData Feed](odatafeed.md) connector when accessing the same endpoint.
 
 ### Entity retrieval rate
 
-As a guideline, most default entities will be retrieved at a rate of approximately 500 rows per second using the Common Data Service connector. Take this rate into account when deciding whether you want to connect to Common Data Service or export to data lake. If you require faster retrieval rates, consider using the Export to data lake feature or Tabular Data Stream (TDS) endpoint. For more information, see [Alternative Common Data Service connections](#alternative-common-data-service-connections).
+As a guideline, most default entities will be retrieved at a rate of approximately 500 rows per second using the Common Data Service (Legacy) connector. Take this rate into account when deciding whether you want to connect to Common Data Service or export to data lake. If you require faster retrieval rates, consider using the Export to data lake feature or Tabular Data Stream (TDS) endpoint. More information: [Alternative Common Data Service connections](#alternative-common-data-service-connections)
 
 ### Alternative Common Data Service connections
 
 There are several alternative ways of extracting and migrating data from Common Data Service:
 
-* Use the OData connector to move data in and out of Common Data Service. For more information on how to migrate data between Common Data Service environments using the dataflows OData connector, see [Migrate data between Common Data Service environments using the dataflows OData connector](/powerapps/developer/common-data-service/cds-odata-dataflows-migration).
+* Use the OData connector to move data in and out of Common Data Service. For more information on how to migrate data between Common Data Service environments using the dataflows OData connector, go to [Migrate data between Common Data Service environments using the dataflows OData connector](/powerapps/developer/common-data-service/cds-odata-dataflows-migration).
 
-* Use the **Export to data lake** feature in Power Apps to extract data from Common Data Service into Azure Data Lake Storage Gen2, which can then be used to run analytics. For more information about the export to data lake feature, see [Exporting CDS data to Azure Data Lake is Generally Available](https://powerapps.microsoft.com/blog/exporting-cds-data-to-azure-data-lake-preview/#:~:text=Exporting%20CDS%20data%20to%20Azure%20Data%20Lake%20is,BI%20reporting%2C%20ML%2C%20Data%20Warehousing%20and%20other%20).
+* Use the **Export to data lake** feature in Power Apps to extract data from Common Data Service into Azure Data Lake Storage Gen2, which can then be used to run analytics. For more information about the export to data lake feature, go to [Exporting CDS data to Azure Data Lake is Generally Available](https://powerapps.microsoft.com/blog/exporting-cds-data-to-azure-data-lake-preview/#:~:text=Exporting%20CDS%20data%20to%20Azure%20Data%20Lake%20is,BI%20reporting%2C%20ML%2C%20Data%20Warehousing%20and%20other%20).
 
-* Use the Tabular Data Stream (TDS) Protocol endpoint to access read-only data in Common Data Service. For more information about this preview feature and a video on how it works, see [Tabular Data Stream (TDS) Protocol endpoint for Common Data Service (CDS)](https://powerapps.microsoft.com/blog/tabular-data-stream-tds-protocol-endpoint-for-common-data-service-cds/).
+* Use the Tabular Data Stream (TDS) Protocol endpoint to access read-only data in Common Data Service. For more information about this preview feature and a video on how it works, go to [Tabular Data Stream (TDS) Protocol endpoint for Common Data Service (CDS)](https://powerapps.microsoft.com/blog/tabular-data-stream-tds-protocol-endpoint-for-common-data-service-cds/).
 
 >[!Note]
 > Both the Common Data Service connector and the OData APIs are meant to serve analytical scenarios where data volumes are relatively small. The recommended approach for bulk data extraction is “Export to Data Lake”. The TDS endpoint is a better option than the Common Data Service connector and OData endpoint, but is currently in Preview.
 
 ### Querying display columns must include the field in the query
 
-When using this connector, if you are including `<field>_display` columns, you must include `<field>` in the query as well, or the `<field>_display` column may be null.
+When using this connector, if you're including _\<field>_`display` columns, you must include _\<field>_ in the query as well, or the _\<field>_`_display` column might be null. For example:
 
-``` 
-Example: Table.SelectColumns(#"Navigation 1", {"statuscode", "statuscode_display"})
+```powerquery-m
+Table.SelectColumns(#"Navigation 1", {"statuscode", "statuscode_display"})
 ```
 
-If ```statuscode``` is not included, ```statuscode_display``` may be null and err out.
+If `statuscode` isn't included, `statuscode_display` might be null and error out.
