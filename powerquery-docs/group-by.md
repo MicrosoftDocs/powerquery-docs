@@ -1,10 +1,11 @@
 ---
 title: "Grouping or summarizing rows"
-description: "In Power Query, you can group or summarize the values in various rows into a single value by grouping the rows according to the values in one or more columns. Power Query has two types of Group By operations: aggregate a column with an aggregate function, or perform a row operation."
-author: ptyx507
 
+description: "In Power Query, you can group or summarize the values in various rows into a single value by grouping the rows according to the values in one or more columns. Power Query has two types of Group By operations: aggregate a column with an aggregate function, or perform an operation."
+author: ptyx507x
+ms.service: powerquery
 ms.reviewer: kvivek
-ms.date: 12/05/2020
+ms.date: 12/20/2021
 ms.author: dougklo
 ms.custom: edited
 ---
@@ -13,11 +14,11 @@ ms.custom: edited
 
 In Power Query, you can group values in various rows into a single value by grouping the rows according to the values in one or more columns. You can choose from two types of grouping operations:
 
-* Aggregate a column by using an aggregate function.
+* Column groupings.
 
-* Perform a row operation.
+* Row groupings.
 
-For this tutorial, you'll be using the sample table shown in the following image.
+For this tutorial, you'll be using the following sample table.
 
 :::image type="complex" source="images/me-group-by-initial-table.png" alt-text="Sample initial table.":::
   Table with columns showing Year (2020), Country (USA, Panama, or Canada), Product (Shirt or Shorts), Sales channel (Online or Reseller), and Units (various values from 55 to 7500)
@@ -31,7 +32,7 @@ You can find the **Group by** button in three places:
 
    ![Group by on the Home tab.](images/me-group-by-home-icon.png "Group by on the Home tab")
 
-* On the **Transform** tab, in the **Table** group. 
+* On the **Transform** tab, in the **Table** group.
 
    ![Group by on the Transform tab.](images/me-group-by-transform-icon.png "Group by on the Transform tab")
 
@@ -44,24 +45,46 @@ You can find the **Group by** button in three places:
 In this example, your goal is to summarize the total units sold at the country and sales channel level. You'll use the **Country** and **Sales Channel** columns to perform the group by operation.
 
 1. Select **Group by** on the **Home** tab.
-2. Select the **Advanced** option, so you can select multiple columns to group by. 
-3. Select the **Country** and **Sales Channel** columns.
-4. In the New columns section, create a new column where the name is **Total units**, the aggregate operation is **Sum**, and the column used is **Units**.
-5. Hit OK
+2. Select the **Advanced** option, so you can select multiple columns to group by.
+3. Select the **Country** column.
+4. Select **Add grouping**.
+5. Select the **Sales Channel** column.
+6. In **New column name**, enter **Total units**, in **Operation**, select **Sum**, and in **Column**, select **Units**.
+7. Select **OK**
 
 ![Group by dialog box with aggregated columns.](images/me-group-by-add-aggregated-column-window.png "Group by dialog box with aggregated columns")
 
-This operation gives you the table that you're looking for.
+This operation gives you the following table.
 
-![Sample output table with aggregated columns.](images/me-group-by-add-aggregated-column-final.png "Sample output table with aggregated columns")
+![Sample output table with Country, Sales Channel, and Total units columns.](images/me-group-by-add-aggregated-column-final.png "Sample output table with Country, Sales Channel, and Total units columns")
 
-## Perform a row operation to group by one or more columns
+### Operations available
 
-In this example, you want total units sold and&mdash;in addition&mdash;you want two other columns that give you the name and units sold for the top-performing product, summarized at the country and sales channel level. 
+With the **Group by** feature, the available operations can be categorized in two ways:
 
-Your goal is to reach a table that looks like the following image from your original sample table.
+* Row level operation
+* Column level operation
 
-![Sample output table with row operations.](images/me-group-by-row-operation-final-table.png "Sample output table with row operations")
+The following table describes each of these operations.
+
+|Operation Name|Category|Description|
+|-----|------|------|
+|**Sum**|Column operation|Sums up all values from a column of numbers|
+|**Average**|Column operation|Calculates the average value from a column of numbers|
+|**Median**|Column operation|Calculates the median from a column of numbers|
+|**Min**|Column operation|Calculates the minimum value from a column of numbers|
+|**Max**|Column operation|Calculates the maximum value from a column of numbers|
+|**Count distinct values**|Column operation|Calculates the number of distinct values from a column|
+|**Count rows**|Row operation|Calculates the total number of rows from a given group|
+|**Count distinct rows**|Row operation|Calculates the number of distinct rows from a given group|
+|**All rows**|Row operation|Outputs all grouped rows in a table value with no aggregations|
+| | | |
+
+## Perform an operation to group by one or more columns
+
+Starting from the original sample, in this example you'll a column containing the total units and two other columns that give you the name and units sold for the top-performing product, summarized at the country and sales channel level.
+
+![Sample output table with operations.](images/me-group-by-row-operation-final-table.png "Sample output table with operations")
 
 1. Use the following columns as **Group by** columns:
    * Country
@@ -78,7 +101,7 @@ After that operation is complete, notice how the **Products** column has \[Table
 ![Table details preview pane.](images/me-group-by-row-operation-details-preview-pane.png "Table details preview pane")
 
 >[!NOTE]
->The details preview pane might not show all the rows that were used for the group-by operation. You can select the \[Table\] value to see all rows pertaining to the corresponding group-by operation. 
+>The details preview pane might not show all the rows that were used for the group-by operation. You can select the \[Table\] value to see all rows pertaining to the corresponding group-by operation.
 
 Next, you need to extract the row that has the highest value in the **Units** column of the tables inside the new **Products** column, and call that new column **Top performer product**.
 
@@ -133,6 +156,7 @@ The following options are available for fuzzy grouping:
 * **Similarity threshold (optional)**: This option indicates how similar two values must be to be grouped together. The minimum setting of 0 will cause all values to be grouped together. The maximum setting of 1 will only allow values that match exactly to be grouped together. The default is 0.8.
 * **Ignore case**: When comparing text strings, case will be ignored. This option is enabled by default.
 * **Group by combining text parts**: The algorithm will try to combine text parts (such as combining **Micro** and **soft** into **Microsoft**) to group values.
+* **Show similarity scores**: Show similarity scores between the input values and the computed representative values after fuzzy grouping. Requires the addition of an operation such as **All rows** to showcase this information on a row-by-row level.
 * **Transformation table (optional)**: You can select a transformation table that will map values (such as mapping **MSFT** to **Microsoft**) to group them together.
 
 For this example, a transformation table will be used to demonstrate how values can be mapped. The transformation table has two columns:
@@ -147,18 +171,20 @@ The following image shows the transformation table used in this example.
 >[!IMPORTANT]
 >It's important that the transformation table has a the same columns and column names as shown above (they have to be "From" and "To"), otherwise Power Query will not recognize these.
 
-Return to the **Group by** dialog box, expand **Fuzzy group options**, and then select the **Transformation table** drop-down menu.
+Return to the **Group by** dialog box, expand **Fuzzy group options**, change the operation from **Count rows** to **All rows**, enable the **Show similarity scores** option, and then select the **Transformation table** drop-down menu.
 
 ![Fuzzy grouping sample transformation table drop-down menu.](images/me-fuzzy-grouping-sample-transformation-table-window.png "Fuzzy grouping sample transformation table drop-down menu")
 
-After selecting your transformation table, select **OK**. The result of that operation will give you the result shown in the following image.
+After selecting your transformation table, select **OK**. The result of that operation gives you the the following information.
 
 ![Fuzzy grouping sample final table with transform table.](images/me-fuzzy-grouping-sample-final-table.png "")
 
-In this example, the **Ignore case** option was enabled, so the values in the **From** column of the **Transformation table** will be used to look for the text string without considering the case of the string. This transformation operation occurs first, and then the fuzzy grouping operation is performed. 
+In this example, the **Ignore case** option was enabled, so the values in the **From** column of the **Transformation table** are used to look for the text string without considering the case of the string. This transformation operation occurs first, and then the fuzzy grouping operation is performed.
+
+The similarity score is also shown in the table value next to the person column, which reflects exactly how the values were grouped and their respective similarity scores. You have the option to expand this column if needed or use the values from the new Frequency columns for other sorts of transformations.
 
 >[!NOTE]
->When grouping by multiple columns, the transformation table will perform the replace operation in all columns if replacing the value increases the similarity score.
+>When grouping by multiple columns, the transformation table performs the replace operation in all columns if replacing the value increases the similarity score.
 
 ### See also
 
