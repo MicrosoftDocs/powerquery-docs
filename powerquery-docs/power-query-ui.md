@@ -254,6 +254,14 @@ We recommended that you use this feature throughout the development of your quer
 > [!NOTE]
 > To learn more about **Data profiling**, see [Using the data profiling tools](data-profiling-tools.md).
 
+## The advanced editor
+
+If you want to see the code that the Power Query editor is creating with each step, or want to create your own shaping code, you can use the advanced editor. To open the advanced editor, select the **View** tab on the ribbon, and then select **Advanced Editor**. A window appears, showing the existing query code.
+
+![View of the advanced editor, which contains code with no syntax errors.](media/power-query-ui/queryoverview_advancededitor.png)
+
+You can directly edit the code in the **Advanced Editor** window. The editor indicates if your code is free of syntax errors. To close the window, select the **Done** or **Cancel** button.
+
 ## Summary
 
 In this article, you created a series of queries with Power Query that provides a customer-to-supplier ratio analysis at the country level for the Northwind corporation. 
