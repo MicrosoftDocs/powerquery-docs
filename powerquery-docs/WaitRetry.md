@@ -18,11 +18,11 @@ In some situations a data source's behavior does not match that expected by Powe
 In this scenario you'll be working with a REST API that occassionally returns a 500 status code, indicating an internal server error. In these instances, you could wait a few seconds and retry, potentially a few times before you give up.
 
 ## ManualStatusHandling
-If `Web.Contents` gets a 500 status code response, it throws a `DataSource.Error` by default. You can override this behavior by providing a list of codes as an optional argument to `Web.Contents`:
+If [Web.Contents](https://docs.microsoft.com/en-us/powerquery-m/web-contents) gets a 500 status code response, it throws a `DataSource.Error` by default. You can override this behavior by providing a list of codes as an optional argument to `Web.Contents`:
 
 ```
 response = Web.Contents(url, [ManualStatusHandling={404, 500}])
-``` 
+```
 
 By specifying the status codes in this way, Power Query will continue to process the web response as normal. However, normal response processing is often not appropriate in these cases. You'll need to understand that an abnormal response code has been received and perform special logic to handle it. To determine the response code that was returned from the web service, you can access it from the `meta` Record that accompanies the response:
 
@@ -30,10 +30,11 @@ By specifying the status codes in this way, Power Query will continue to process
 responseCode = Value.Metadata(response)[Response.Status]
 ```
 
-Based on whether `responseCode ` is 200 or 500, you can either process the result as normal, or follow your wait-retry logic that you'll flesh out in the next section.
+Based on whether `responseCode` is 200 or 500, you can either process the result as normal, or follow your wait-retry logic that you'll flesh out in the next section.
 
->[!Note] 
-> We recommended that you use `Binary.Buffer` to force Power Query to cache the `Web.Contents` results if you'll be implementing complex logic such as the Wait-Retry pattern shown here. This prevents Power Query's multi-threaded execution from making multiple calls with potentially inconsistent results.
+## IsRetry
+Power Query has a local cache that stores the results of previous calls to Web.Contents. When polling the same URL for a new response, or when retrying after an error status,
+you'll need to ensure that the query ignores any cached results. You can do this by including the `IsRetry` option in the call to the `Web.Contents` function.
 
 ## Value.WaitFor
 `Value.WaitFor()` is a standard [helper function](HelperFunctions.md) that can usually be used with no modification. It works by building a List of retry attempts.
@@ -54,14 +55,16 @@ let
     waitForResult = Value.WaitFor(
         (iteration) =>
             let
-                result = Web.Contents(url, [ManualStatusHandling = {500}]), 
-                buffered = Binary.Buffer(result),
+                result = Web.Contents(url, [ManualStatusHandling = {500}, IsRetry = iteration > 0]),
                 status = Value.Metadata(result)[Response.Status],
-                actualResult = if status = 500 then null else buffered
+                actualResult = if status = 500 then null else result
             in
                 actualResult,
         (iteration) => #duration(0, 0, 0, Number.Power(2, iteration)),
         5)
 in
-    waitForResult,
+    if waitForResult = null then
+        error "Value.WaitFor() Failed after multiple retry attempts"
+    else
+        waitForResult
 ```
