@@ -1,25 +1,25 @@
 ---
 title: Using the wait-retry pattern in Power Query connectors
 description: Use the wait-retry pattern for Power Query connectors
-author: cpopell
+author: mmasson
 
 ms.service: powerquery
 ms.topic: conceptual
 ms.date: 12/12/2019
-ms.author: gepopell
+ms.author: mmasson
 
 LocalizationGroup: reference
 ---
 
 # Wait-Retry Pattern
 
-In some situations a data source's behavior does not match that expected by Power Query's [default HTTP code handling](HandlingStatusCodes.md). The examples below show how to work around this situation.
+In some situations, a data source's behavior doesn't match that expected by Power Query's [default HTTP code handling](HandlingStatusCodes.md). The examples below show how to work around this situation.
 
-In this scenario you'll be working with a REST API that occassionally returns a 500 status code, indicating an internal server error. In these instances, you could wait a few seconds and retry, potentially a few times before you give up.
+In this scenario you'll be working with a REST API that occasionally returns a 500 status code, indicating an internal server error. In these instances, you could wait a few seconds and retry, potentially a few times before you give up.
 
 ## ManualStatusHandling
 
-If [Web.Contents](https://docs.microsoft.com/en-us/powerquery-m/web-contents) gets a 500 status code response, it throws a `DataSource.Error` by default. You can override this behavior by providing a list of codes as an optional argument to `Web.Contents`:
+If `Web.Contents` gets a 500 status code response, it throws a `DataSource.Error` by default. You can override this behavior by providing a list of codes as an optional argument to `Web.Contents`:
 
 ```
 response = Web.Contents(url, [ManualStatusHandling={404, 500}])
@@ -56,7 +56,7 @@ A maximum number of retries can be set by providing a number to the `count` argu
 
 ## Putting It All Together
 
-The following example shows how `ManualStatusHandling` and `Value.WaitFor` can be used to implement a delayed retry in the event of a 500 response. Wait time between retries here is shown as doubling with each try, with a maximum of 5 retries.
+The following example shows how `ManualStatusHandling` and `Value.WaitFor` can be used to implement a delayed retry in the event of a 500 response. Wait time between retries doubles with each try, with a maximum of five retries.
 
 ```
 let
