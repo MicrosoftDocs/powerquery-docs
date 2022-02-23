@@ -34,7 +34,7 @@ Based on whether `responseCode` is 200 or 500, you can either process the result
 
 ## IsRetry
 Power Query has a local cache that stores the results of previous calls to Web.Contents. When polling the same URL for a new response, or when retrying after an error status,
-you'll need to ensure that the query ignores any cached results. You can do this by including the `IsRetry` option in the call to the `Web.Contents` function.
+you'll need to ensure that the query ignores any cached results. You can do this by including the `IsRetry` option in the call to the `Web.Contents` function. In this sample, we'll set `IsRetry` to `true` after the first iteration of the `Value.WaitFor` loop.
 
 ## Value.WaitFor
 `Value.WaitFor()` is a standard [helper function](HelperFunctions.md) that can usually be used with no modification. It works by building a List of retry attempts.
