@@ -305,7 +305,7 @@
       - name: "BQE Core (Beta)"
         href: Connectors/BQECore.md
       - name: "Common Data Service (Legacy)"
-        href: ./connectors/dataverse.md
+        href: ./connectors/commondataservicelegacy.md
       - name: "Data Lake Storage"
         href: Connectors/DataLakeStorage.md
       - name: "Dataverse"
