@@ -41,7 +41,7 @@ The `GetRows` handler returns the result of your data source function (i.e. a ta
 The `GetType` handler returns the M table type of the result of the call to `GetRows`. In the most basic implementation, this handler would call [Value.Type()](/powerquery-m/value-type) over the result of `GetRows`.
 Sources that can determine the schema of the result without evaluating the query (by using fixed metadata, or querying a metadata/schema service) would perform those operations in this handler.
 
-> Note that returning `Value.Type(GetRows())` will result in `GetRows()` being invoked twice. If the type cannot be determined without invoking `GetRows()`, it is recommended the results are stored in a common variable. Please see the sample below for an example.
+> Note that returning `Value.Type(GetRows())` will result in `GetRows()` being invoked twice. If the type cannot be determined without invoking `GetRows()`, it is recommended the results are stored in a common variable.
 
 <!--(TODO - sample)-->
 
