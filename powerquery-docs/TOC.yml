@@ -10,6 +10,8 @@
         href: get-data-experience.md
       - name: "Authentication with a data source"
         href: ConnectorAuthentication.md
+      - name: "Upload a file"
+        href: upload-file.md
       - name: "SharePoint and OneDrive for Business files import"
         href: sharepoint-onedrive-files.md    
       - name: "Lack of support connecting to Microsoft Graph"    
@@ -282,6 +284,8 @@
         href: "Connectors/AdobeAnalytics.md"
       - name: "Amazon Athena"
         href: "Connectors/AmazonAthena.md"
+      - name: "Amazon OpenSearch Project (Beta)"
+        href: "Connectors/AmazonOpenSearchService.md"
       - name: "Amazon Redshift"
         href: Connectors/AmazonRedshift.md
       - name: "Anaplan"
@@ -290,8 +294,6 @@
         href: Connectors/AssembleViews.md
       - name: "Automy Data Analytics (Beta)"
         href: "Connectors/AutomyDataAnalytics.md"
-      - name: "Azure Cosmos DB v2 (Beta)"
-        href: Connectors/Azure Cosmos DB v2.md
       - name: "Azure SQL database"
         href: Connectors/AzureSQLDatabase.md
       - name: "Azure Synapse Analytics (SQL DW)"
@@ -312,6 +314,8 @@
         href: Connectors/Dataflows.md
       - name: "Delta Sharing"
         href: Connectors/DeltaSharing.md
+      - name: "Digital Construction Works Insights (Beta)"
+        href: Connectors/DigitalConstructionWorksInsights.md
       - name: "EQuIS (Beta)"
         href: Connectors/EQuIS.md
       - name: "Essbase"
@@ -360,6 +364,8 @@
           href: /azure/devops/report/powerbi/odataquery-connect?view=azure-devops
       - name: "ODBC"
         href: Connectors/Odbc.md
+      - name: "OpenSearch Project (Beta)"
+        href: Connectors/OpenSearchProject.md
       - name: "Oracle database"
         href: Connectors/OracleDatabase.md
       - name: "PDF"
@@ -548,6 +554,8 @@
           href: HandlingGatewaySupport.md
         - name: "Handling connector signing"
           href: HandlingConnectorSigning.md
+        - name: "Handling proxy support"
+          href: HandlingProxySupport.md
       - name: Connector Certification
         items:
         - name: Overview
