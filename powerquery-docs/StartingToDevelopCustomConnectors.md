@@ -6,7 +6,7 @@ author: cpopell
 
 ms.topic: quickstart
 ms.date: 7/23/2021
-ms.author: gepopell
+ms.author: dougklo
 
 LocalizationGroup: reference
 ---
