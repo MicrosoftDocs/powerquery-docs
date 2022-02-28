@@ -39,8 +39,6 @@ With a gateway, you can connect to on-premises data through these connections:
 
 - A license that supports accessing on-premises data using an on-premises gateway. More information: "Connect to your data" row of the "Explore Power Apps plans" table in the [Power Apps pricing](https://powerapps.microsoft.com/pricing/) page.
 
-- Gateways and on-premises connections can only be created and used in the user's default environment. More information: [Working with environments and Microsoft Power Apps](/power-platform/admin/working-with-environments).
-
 ## Install a gateway
 
 You can install an on-premises data gateway directly from the online service. 
