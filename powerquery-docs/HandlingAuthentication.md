@@ -4,7 +4,7 @@ description: Manage authentication for Power Query connectors
 author: cpopell
 
 ms.topic: conceptual
-ms.date: 01/27/2021
+ms.date: 2/28/2022
 ms.author: dougklo
 
 LocalizationGroup: reference

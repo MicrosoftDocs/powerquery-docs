@@ -63,7 +63,7 @@ For my OData results, I see in the image that the vast majority of the time spen
 
 If we perform all the same operations and build similar visualizations, but with the SQL traces instead of the ODATA ones, we can see how the two data sources compare!
 
-![OData Northwind Query Diagnostics Summary.](images/querydiagnosticssqlhighlevel.png)
+![OData Northwind Query Diagnostics Summary with SQL traces.](images/querydiagnosticssqlhighlevel.png)
 
 If we click the Data Source table, like with the ODATA diagnostics we can see the first evaluation (2.3 in this image) emits metadata queries, with the second evaluation actually retrieving the data we care about. Because we're retrieving very little data in this case the data pulled back takes very little time (less than a tenth of a second for the entire second evaluation to happen, with less than a twentieth of a second for data retrieval itself), but that won't be true in all cases.
 
@@ -75,7 +75,8 @@ As above, we can click the 'Data Source' category on the legend to see the emitt
 
 When you're looking at this, if it seems like time spent is strange--for example, on the OData query you might see that there's a Data Source Query with the following value:
 
-```Request:
+```
+Request:
 https://services.odata.org/V4/Northwind/Northwind.svc/Customers?$filter=ContactTitle%20eq%20%27Sales%20Representative%27&$select=CustomerID%2CCountry HTTP/1.1
 Content-Type: application/json;odata.metadata=minimal;q=1.0,application/json;odata=minimalmetadata;q=0.9,application/atomsvc+xml;q=0.8,application/atom+xml;q=0.8,application/xml;q=0.7,text/plain;q=0.7
 

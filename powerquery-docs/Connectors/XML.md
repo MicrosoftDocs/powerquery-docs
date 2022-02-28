@@ -4,7 +4,7 @@ description: Provides basic information and how to connect to your data, along w
 author: cpopell
 
 ms.topic: conceptual
-ms.date: 9/16/2021
+ms.date: 2/28/2022
 ms.author: dougklo
 LocalizationGroup: reference
 ---
