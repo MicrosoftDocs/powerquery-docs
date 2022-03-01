@@ -39,8 +39,6 @@ With a gateway, you can connect to on-premises data through these connections:
 
 - A license that supports accessing on-premises data using an on-premises gateway. More information: "Connect to your data" row of the "Explore Power Apps plans" table in the [Power Apps pricing](https://powerapps.microsoft.com/pricing/) page.
 
-- Gateways and on-premises connections can only be created and used in the user's default environment. More information: [Working with environments and Microsoft Power Apps](/power-platform/admin/working-with-environments).
-
 ## Install a gateway
 
 You can install an on-premises data gateway directly from the online service. 
@@ -101,7 +99,7 @@ You can change the enterprise gateway used for a given dataflow and change the g
 
    ![Image showing the manage gateways selection in Power BI service](media/manage-gateways-power-bi.png)
 
-2. To add a user to the gateway, select the **Administrators** table and enter the email address of the user you would like to add as an administrator. Using gateways in dataflows requires Admin permission on the gateway. Admins have full control of the gateway, including adding users, setting permissions, creating connections to all available data sources, and deleting the gateway.
+2. To add a user to the gateway, select the **Administrators** table and enter the email address of the user you would like to add as an administrator.Creating or modifying data sources in dataflows requires Admin permissions to the gateway. Admins have full control of the gateway, including adding users, setting permissions, creating connections to all available data sources, and deleting the gateway.
 
 ### Power Apps gateway permissions
 

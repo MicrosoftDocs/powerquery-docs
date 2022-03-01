@@ -4,8 +4,8 @@ description: Understanding the 'Review Script Changes' modal in Power Query Onli
 author: cpopell
 
 ms.topic: conceptual
-ms.date: 4/2/2021
-ms.author: gepopell
+ms.date: 2/28/2022
+ms.author: dougklo
 ms.reviewer: kvivek
 
 LocalizationGroup: reference
