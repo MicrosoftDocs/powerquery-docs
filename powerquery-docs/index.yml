@@ -37,11 +37,11 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Use Power Query
-            url: power-query-quickstart-using-power-bi.md
+            url: /power-query/power-query-ui
           - text: Get data
             url: get-data-experience.md
           - text: Transform data
-            url: power-query-tutorial-shape-combine.md
+            url: /power-query/power-query-ui
 
   # Card
   - title: Working with dataflows

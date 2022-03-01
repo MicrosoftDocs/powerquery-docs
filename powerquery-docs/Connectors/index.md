@@ -2,8 +2,8 @@
 title: List of all Power Query connectors
 description: List of all currently available Power Query connectors
 author: DougKlopfenstein
-
-ms.date: 12/3/2021
+ms.service: powerquery
+ms.date: 2/10/2022
 ms.author: bezhan
 ms.custom: intro-internal
 
@@ -73,9 +73,9 @@ The connectors are listed in alphabetical order in separate tables for each lett
 
 | Connector | Excel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Power BI (Datasets) | Power BI (Dataflows) | Power Apps (Dataflows) | Customer<br/>Insights (Dataflows) | Analysis Services |
 | --- | --- | --- | --- | --- | --- | --- |
-| ![Cognite Data Fusion (Beta).](media/index/cdf-64.png)<br/>**Cognite Data<br/>Fustion<br/>(Beta)**<br/>By Cognite                            | ![Not supported - Cognite Data Fusion (Beta) in Excel](media/index/no.png)  | ![Supported - Cognite Data Fusion (Beta) in Power BI (Datasets)](media/index/yes.png) | ![Not supported - Cognite Data Fusion (Beta) in Power BI (Dataflows)](media/index/no.png)  | ![Not supported - Cognite Data Fusion (Beta) in Power Apps (Dataflows)](media/index/no.png)  | ![Not supported - Cognite Data Fusion (Beta) in Customer Insights (Dataflows)](media/index/no.png)  | ![Not supported - Cognite Data Fusion (Beta) in Analysis Services](media/index/no.png)  |
 | ![Cherwell (Beta).](media/index/cherwell-64.png)<br/>**Cherwell (Beta)**<br/>By Cherwell                            | ![Not supported - Cherwell (Beta) in Excel](media/index/no.png)  | ![Supported - Cherwell (Beta) in Power BI (Datasets)](media/index/yes.png) | ![Not supported - Cherwell (Beta) in Power BI (Dataflows)](media/index/no.png)  | ![Not supported - Cherwell (Beta) in Power Apps (Dataflows)](media/index/no.png)  | ![Not supported - Cherwell (Beta) in Customer Insights (Dataflows)](media/index/no.png)  | ![Not supported - Cherwell (Beta) in Analysis Services](media/index/no.png)  |
-| ![Common Data Service (legacy).](media/index/cds-to-data64.png)<br/>**Common Data<br/>Service (legacy)**<br/>By Microsoft                            | ![Not supported - Common Data Service (legacy) in Excel](media/index/no.png)  | ![Supported - Common Data Service (legacy) in Power BI (Datasets)](media/index/yes.png) | ![Not supported - Common Data Service (legacy) in Power BI (Dataflows)](media/index/no.png)  | ![Not supported - Common Data Service (legacy) in Power Apps (Dataflows)](media/index/no.png)  | ![Not supported - Common Data Service (legacy) in Customer Insights (Dataflows)](media/index/no.png)  | ![Not supported - Common Data Service (legacy) in Analysis Services](media/index/no.png)  |
+| ![Cognite Data Fusion (Beta).](media/index/cdf-64.png)<br/>**Cognite Data<br/>Fustion<br/>(Beta)**<br/>By Cognite                            | ![Not supported - Cognite Data Fusion (Beta) in Excel](media/index/no.png)  | ![Supported - Cognite Data Fusion (Beta) in Power BI (Datasets)](media/index/yes.png) | ![Not supported - Cognite Data Fusion (Beta) in Power BI (Dataflows)](media/index/no.png)  | ![Not supported - Cognite Data Fusion (Beta) in Power Apps (Dataflows)](media/index/no.png)  | ![Not supported - Cognite Data Fusion (Beta) in Customer Insights (Dataflows)](media/index/no.png)  | ![Not supported - Cognite Data Fusion (Beta) in Analysis Services](media/index/no.png)  |
+| ![Common Data Service (legacy).](media/index/cds-to-data64.png)<br/>**Common Data<br/>Service (legacy)**<br/>By Microsoft                            | ![Not supported - Common Data Service (legacy) in Excel](media/index/no.png)  | ![Supported - Common Data Service (legacy) in Power BI (Datasets)](media/index/yes.png) | ![Supported - Common Data Service (legacy) in Power BI (Dataflows)](media/index/yes.png)  | ![Not supported - Common Data Service (legacy) in Power Apps (Dataflows)](media/index/no.png)  | ![Supported - Common Data Service (legacy) in Customer Insights (Dataflows)](media/index/yes.png)  | ![Not supported - Common Data Service (legacy) in Analysis Services](media/index/no.png)  |
 | | | | | | | |
 
 ## D

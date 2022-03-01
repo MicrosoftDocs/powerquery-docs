@@ -54,6 +54,6 @@ Once you're happy with the data extracted from the Web page, select **OK** to go
 ### See also
 
 * [Add a column from examples](../../column-from-example.md)
-* [Shape and combine data](../../power-query-tutorial-shape-combine.md)
+* [Shape and combine data](/power-query/power-query-ui)
 * [Getting data](../../get-data-experience.md)
 * [Troubleshooting the Power Query Web connector](web-troubleshoot.md)
