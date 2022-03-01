@@ -2,7 +2,7 @@
 title: What is Power Query?
 description: Learn what Power Query is, and how it can help you get and transform data
 author: mllopis
-ms.service: powerquery
+
 ms.topic: overview
 ms.date: 10/27/2021
 ms.author: millopis
@@ -52,7 +52,7 @@ All these transformations are made possible by choosing the transformation optio
 
 ![Image showing the transformation commands under the Transform, Home, and Add Column tabs of the Power Query Editor.](images/powerquerytransformationslist.png "The transformation commands under the Transform, Home, and Add Column tabs of the Power Query Editor")
 
-More information: [Quickstart: Using Power Query in Power BI](power-query-quickstart-using-power-bi.md)
+More information: [Quickstart: Using Power Query in Power BI](/power-query/power-query-ui)
 
 ## Dataflows
 
@@ -114,6 +114,6 @@ The following table lists Microsoft products and services where Power Query can 
 
 [Data sources in Power Query](connectors/index.md)  
 [Getting data](get-data-experience.md)  
-[Power Query quickstart](power-query-quickstart-using-power-bi.md)  
-[Shape and combine data using Power Query](power-query-tutorial-shape-combine.md)  
+[Power Query quickstart](/power-query/power-query-ui)  
+[Shape and combine data using Power Query](/power-query/power-query-ui)  
 [What are dataflows](dataflows/overview-dataflows-across-power-platform-dynamics-365.md)

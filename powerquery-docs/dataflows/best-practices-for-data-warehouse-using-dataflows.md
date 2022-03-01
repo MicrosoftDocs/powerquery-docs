@@ -3,7 +3,7 @@ title: Best practices for creating a data warehouse using dataflows
 description: Best practices for creating a data warehouse using dataflows
 author: radacad
 
-ms.service: powerquery
+
 ms.reviewer: kvivek
 ms.topic: conceptual
 ms.date: 12/2/2020
@@ -12,7 +12,7 @@ ms.author: bezhan
 
 # Best practices for creating a data warehouse using dataflows
 
-[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
+
 
 Designing a data warehouse is one of the most common tasks you can do with a dataflow. This article highlights some of the best practices for creating a data warehouse using a dataflow.
 

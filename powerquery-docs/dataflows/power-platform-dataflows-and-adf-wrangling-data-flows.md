@@ -3,7 +3,7 @@ title: How Power Platform dataflows and Azure Data Factory wrangling dataflows r
 description: How Microsoft Power Platform dataflows and Azure Data Factory wrangling dataflows relate to each other.
 author: radacad
 
-ms.service: powerquery
+
 ms.reviewer: kvivek
 ms.topic: conceptual
 ms.date: 12/2/2020
@@ -12,7 +12,7 @@ ms.author: bezhan
 
 # How Microsoft Power Platform dataflows and Azure Data Factory wrangling dataflows relate to each other
 
-[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
+
 
 Microsoft Power Platform dataflows and Azure Data Factory dataflows are often considered to be doing the same thing: extracting data from source systems, transforming the data, and loading the transformed data into a destination. However, there are differences in these two types of dataflows, and you can have a solution implemented that works with a combination of these technologies. This article describes this relationship in more detail.
 

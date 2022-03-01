@@ -2,7 +2,7 @@
 title: Additional connector functionality
 description: Provides information to custom and certified connector developers on adding more connector functionality
 author: bezhan-msft
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 5/12/2021
 ms.author: bezhan

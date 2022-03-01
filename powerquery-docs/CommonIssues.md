@@ -3,7 +3,7 @@ title: Common Authoring Issues in Power Query
 description: How to address common authoring issues in Power Query
 author: cpopell
 
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 12/17/2021
 ms.author: dougklo
@@ -104,3 +104,7 @@ Using Windows authentication with an on-premises gateway requires the gateway ma
 ## Limitation: Cross tenant OAuth2 refresh isn't supported in Power BI service
 
 If you want to connect to a data source from Power BI service using OAuth2, the data source must be in the same tenant as Power BI service. Currently, multi-tenant connection scenarios aren’t supported with OAuth2.
+
+## Limitation: Custom AD FS authentication endpoint isn't supported in Power BI service
+
+The ability to use a custom Active Directory Federation Services (AD FS) authentication endpoint isn't supported in Power BI service. Users might encounter the following error: **The token service reported by the resource is not trusted**.

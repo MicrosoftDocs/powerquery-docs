@@ -2,7 +2,7 @@
 title: TIBCO(R) Data Virtualization connector
 description: Provides basic information, prerequisites, and instructions on how to connect to your TIBCO(R) Data Virtualization Server.
 author: sahuero
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 10/12/2021
 ms.author: dougklo
@@ -46,7 +46,7 @@ Once the connector is installed, configure a data source name (DSN) to specify t
 ## Capabilities Supported
 
 - Import
-- DirectQuery (Power BI only)
+- DirectQuery (Power BI Desktop only)
 - Advanced Connection Properties
 - Advanced
   - Native SQL statement

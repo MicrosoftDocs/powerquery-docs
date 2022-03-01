@@ -2,10 +2,10 @@
 title: Power Query XML connector
 description: Provides basic information and how to connect to your data, along with troubleshooting tips on data shaping and issues with documents containing both text and nodes.
 author: cpopell
-ms.service: powerquery
+
 ms.topic: conceptual
-ms.date: 9/16/2021
-ms.author: gepopell
+ms.date: 2/28/2022
+ms.author: dougklo
 LocalizationGroup: reference
 ---
 

@@ -2,7 +2,7 @@
 title: Diagram view
 description: Diagram view offers a visual way to prepare data in the Power Query editor. With this interface, you can easily create queries and visualize the data preparation process. Diagram view simplifies the experience of getting started with data wrangling. It speeds up the data preparation process and helps you quickly understand the dataflow, both the "big picture view" of how queries are related and the "detailed view" of the specific data preparation steps in a query.
 author: ptyx507
-ms.service: powerquery
+
 ms.reviewer: 
 ms.date: 03/18/2021
 ms.author: dougklo
@@ -38,7 +38,7 @@ By searching and selecting the transform from the shortcut menu, the step gets a
 ![Remove duplicates transform added through the use of the + icon in the query when in the diagram view.](images/step-added-from-diagram-view.png)
 
 >[!NOTE]
-> To learn more about how to author queries in the Query editor using the Power Query editor ribbon or data preview, go to [Power Query Quickstart](power-query-quickstart-using-power-bi.md).
+> To learn more about how to author queries in the Query editor using the Power Query editor ribbon or data preview, go to [Power Query Quickstart](/power-query/power-query-ui).
 
 ## Query level actions 
 

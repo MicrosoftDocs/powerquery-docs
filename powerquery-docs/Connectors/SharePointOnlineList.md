@@ -2,7 +2,7 @@
 title: Power Query SharePoint Online list connector
 description: Provides basic information and how to connect to your data, along with troubleshooting tips for obtaining the root SharePoint address and changing the authentication method.
 author: DougKlopfenstein
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 8/12/2021
 ms.author: bezhan
@@ -126,7 +126,7 @@ The first operation changes the type to `datetimezone`, and the second operation
 
 **This issue is limited to the SharePoint Online list v2.0 connector**
 
-The SharePoint Online list v2.0 connector uses a different API than the v1.0 connector and, as such, is subject to a maximum of 12 join operations per query, as documented in the [SharePoint Online documentation](/sharepoint/install/software-boundaries-and-limits-0?source=docs#list-and-library-limits) under **List view lookup threshold**. This issue will manifest as SharePoint queries failing when more than 12 columns are accessed simultaneously from a SharePoint list.
+The SharePoint Online list v2.0 connector uses a different API than the v1.0 connector and, as such, is subject to a maximum of 12 join operations per query, as documented in the [SharePoint Online documentation](/sharepoint/install/software-boundaries-limits-2019#list-and-library-limits) under **List view lookup threshold**. This issue will manifest as SharePoint queries failing when more than 12 columns are accessed simultaneously from a SharePoint list.
 
 ### Using OData to access a SharePoint Online list
 

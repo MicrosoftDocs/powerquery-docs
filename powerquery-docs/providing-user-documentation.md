@@ -2,7 +2,7 @@
 title: Providing user documentation for your Power Query custom connector
 description: Describes the format and layout of the user documentation that needs to be submitted for your Power Query custom connector.
 author: DougKlopfenstein
-ms.service: powerquery
+
 ms.reviewer: kvivek
 ms.date: 9/16/2021
 ms.author: bezhan

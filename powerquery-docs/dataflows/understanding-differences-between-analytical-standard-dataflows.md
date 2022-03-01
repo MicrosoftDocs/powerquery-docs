@@ -2,7 +2,7 @@
 title: Understanding the differences between dataflow types
 description: Understanding the differences between standard V1, V2 and analytical dataflows.
 author: radacad 
-ms.service: powerquery 
+
 ms.topic: conceptual 
 ms.date: 04/06/2021 
 ms.author: bensack 
@@ -10,7 +10,7 @@ ms.author: bensack
 
 # Understanding the differences between dataflow types
 
-[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
+
 
 Dataflows are used to extract, transform, and load data to a storage destination where it can be leveraged for different scenarios. Because not all storage destinations share the same characteristics, some dataflow features and behaviors differ depending on the storage destination the dataflow loads data into. Before you create a dataflow, it's important to understand how the data is going to be used, and choose the storage destination according to the requirements of your solution.
 

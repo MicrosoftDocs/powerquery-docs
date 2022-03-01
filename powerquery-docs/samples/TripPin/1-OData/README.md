@@ -4,10 +4,10 @@ description: Writing an OData connector for the TripPin sample service
 author: cpopell
 manager: kfile
 
-ms.service: powerquery
+
 ms.topic: tutorial
 ms.date: 8/25/2021
-ms.author: gepopell
+ms.author: dougklo
 
 LocalizationGroup: reference
 ---

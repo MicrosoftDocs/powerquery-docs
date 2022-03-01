@@ -3,7 +3,7 @@ title: Troubleshooting dataflow issue - creating dataflows
 description: Troubleshooting dataflow issue - creating dataflows
 author: radacad
 
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 05/25/2020
 ms.author: bezhan

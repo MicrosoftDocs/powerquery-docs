@@ -3,10 +3,10 @@ title: Versioning for Power Query connectors
 description: Manage versioning for Power Query connectors
 author: cpopell
 
-ms.service: powerquery
+
 ms.topic: conceptual
-ms.date: 03/19/2018
-ms.author: gepopell
+ms.date: 2/28/2022
+ms.author: dougklo
 
 LocalizationGroup: reference
 ---
