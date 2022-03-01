@@ -38,15 +38,15 @@ Create an X509 certificate signing request for the HANA server.
 
 1. Using SSH, connect to the Linux machine that the HANA server runs on as \<sid\>adm.
 
-2. Go to the Home directory _/__usr/sap/\<sid\>/home_.
+2. Go to the Home directory _/usr/sap/\<sid\>/home/.ssl_. The hidden .ssl file already exists if the root CA has already been created.
 
-3. Create a hidden directory with the name _.__ssl_if one doesn't already exist.
+    If you don't already have a CA you can use, you can create a root CA yourself by following the steps outlined in [Securing the Communication between SAP HANA Studio and SAP HANA Server through SSL](https://blogs.sap.com/2015/09/28/securing-the-communication-between-sap-hana-studio-and-sap-hana-server-through-ssl/).
 
-4. Run the following command:
+3. Run the following command:
 
-    **sapgenpse gen_pse -p cert.pse -r csr.txt -k GN-dNSName:\<_HOSTNAME with FQDN_> "CN=\<_HOSTNAME with FQDN_>, O=\<_organization_>, C=\<_country_>"**
+    **sapgenpse gen_pse -p cert.pse -r csr.txt -k GN-dNSName:\<_HOSTNAME with FQDN_> "CN=\<_HOSTNAME with FQDN_>"**
 
-This command creates a certificate signing request and private key. Once signed, the certificate is valid for a year. Fill in \<_HOSTNAME with FQDN_> with the host name and fully qualified domain name (FQDN).
+This command creates a certificate signing request and private key. Fill in \<_HOSTNAME with FQDN_> with the host name and fully qualified domain name (FQDN).
 
 ## Get the certificate signed
 
@@ -56,7 +56,7 @@ Get the certificate signed by a certificate authority (CA) that is trusted by th
 
     **openssl x509 -req -days 365 -in csr.txt -CA CA_Cert.pem -CAkey CA_Key.pem -CAcreateserial -out cert.pem**
 
-    If you don't already have a CA you can use, you can create a root CA yourself by following the steps outlined in [Securing the Communication between SAP HANA Studio and SAP HANA Server through SSL](https://blogs.sap.com/2015/09/28/securing-the-communication-between-sap-hana-studio-and-sap-hana-server-through-ssl/).
+
 
 2. Copy the new file, cert.pem, to the server.
 
@@ -70,11 +70,11 @@ Get the certificate signed by a certificate authority (CA) that is trusted by th
 
     The client must trust the CA used to sign the HANA server's X509 certificate before an encrypted connection can be made to the HANA server from the client's machine.
 
-    There are various ways to ensure this trust relationship exists using Microsoft Management Console (mmc) or the command line. You can import the CA's X509 certificate (trust.pem) into the **Trusted Root Certification Authorities** folder for the user that will establish the connection, or into the same folder for the client machine itself, if that is desirable.
+    There are various ways to ensure this trust relationship exists using Microsoft Management Console (mmc) or the command line. You can import the CA's X509 certificate (cert.pem) into the **Trusted Root Certification Authorities** folder for the user that will establish the connection, or into the same folder for the client machine itself, if that is desirable.
 
     ![Trusted Root Certification Authorities folder.](trusted-root-certification.png)
 
-    You must first convert trust.pem into a .crt file before you can import the certificate into the Trusted Root Certification Authorities folder.
+    You must first convert cert.pem into a .crt file before you can import the certificate into the Trusted Root Certification Authorities folder.
 
 ## Test the connection
 
