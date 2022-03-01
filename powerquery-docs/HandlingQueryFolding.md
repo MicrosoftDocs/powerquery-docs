@@ -47,7 +47,7 @@ Sources that can determine the schema of the result without evaluating the query
 
 ## Basic Handlers
 
-The following handlers can be implemented without handling M `RowExpression` values, and are generally easier for an extension to implement.
+The following handlers can be implemented without handling M `RowExpression` values. Most are generally easier for an extension to implement.
 
 | Handler       | Function Signature                                    | Summary                                                                 |
 |:--------------|:------------------------------------------------------|:------------------------------------------------------------------------|
@@ -58,6 +58,7 @@ The following handlers can be implemented without handling M `RowExpression` val
 |OnSkip         |`(count as number)`                                    |Called when using `Table.Skip`.|
 |OnSort         |`(order as list)`                                      |Called when table is sorted (`Table.Sort`).|
 |OnTake         |`(count as number)`                                    |Called when limiting the number of rows being retrieved (`Table.FirstN`).|
+|OnJoin         |`(joinSide, leftTable, rightTable, joinKeys, joinKind)`|Called when performing a join of two tables. |
 
 ### GetRowCount
 
@@ -92,6 +93,9 @@ Where `Name` is the name of the column, and `Order` is equal to `Order.Ascending
 
 Receives a number indicating the maximum number of rows that should be returned from `GetRows`. See [Table.FirstN](/powerquery-m/table-firstn).
 
+### OnJoin
+Argument `joinSide` indicates whether the handler is being invoked on the `JoinSide.Left` or `JoinSide.Right` of the join. The table argument (that is, `leftTable` or `rightTable`) corresponding to `joinSide` will be a self-reference to the current view.
+
 ## Expression Handlers
 
 The following handlers require processing M `RowExpression` values.
@@ -100,14 +104,11 @@ The following handlers require processing M `RowExpression` values.
 |:--------------|:------------------------------------------------------|:------------------------------------------------------------------------|
 |OnAddColumns   |`(constructors)`                                       |Called when adding a calculated column (`Table.AddColumn`).|
 |OnGroup        |`(keys, aggregates)`                                   |Called for various aggregation transformations. |
-|OnJoin         |`(joinSide, leftTable, rightTable, joinKeys, joinKind)`|Called when performing a join of two tables. |
 |OnSelectRows   |`(selector)`                                           |Called when selecting rows based on an expression (`Table.SelectRows`). |
 <!--
 ### OnAddColumns
 
 ### OnGroup
-
-### OnJoin
 
 ### OnSelectRows
 -->
