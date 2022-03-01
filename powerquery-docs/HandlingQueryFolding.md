@@ -94,7 +94,7 @@ Where `Name` is the name of the column, and `Order` is equal to `Order.Ascending
 Receives a number indicating the maximum number of rows that should be returned from `GetRows`. See [Table.FirstN](/powerquery-m/table-firstn).
 
 ### OnJoin
-Argument `joinSide` indicates whether the handler is being invoked on the `JoinSide.Left` or `JoinSide.Right` of the join. The table argument (i.e. `leftTable` or `rightTable`) corresponding to `joinSide` will be a self-reference to the current view.
+Argument `joinSide` indicates whether the handler is being invoked on the `JoinSide.Left` or `JoinSide.Right` of the join. The table argument (that is, `leftTable` or `rightTable`) corresponding to `joinSide` will be a self-reference to the current view.
 
 ## Expression Handlers
 
