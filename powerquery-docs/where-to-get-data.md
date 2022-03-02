@@ -5,7 +5,7 @@ author: DougKlopfenstein
 
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 1/5/2021
+ms.date: 3/2/2022
 ms.author: dougklo
 
 LocalizationGroup: reference
@@ -13,7 +13,10 @@ LocalizationGroup: reference
 
 # Where to get data
 
-Getting data from available data sources is usually the first encounter you have with Power Query. This article provides basic steps for getting data from each of the products that include Power Query.
+Getting data from available data sources is usually the first encounter you have with Power Query. This article provides basic steps for getting data from each of the Microsoft products that include Power Query.
+
+>[!Note]
+> Each of these Power Query get data experiences contain different feature sets. More information: [Where can you use Power Query?](power-query-what-is-power-query.md#where-can-you-use-power-query)
 
 ## Get data in Power BI Desktop
 
@@ -40,7 +43,7 @@ In Excel, you can also directly select Text/CVS, Web, and Excel worksheet data w
 >[!Note]
 >Not all Excel versions support all of the same Power Query connectors. For a complete list of the Power Query connectors supported by all versions of Excel for Windows and Excel for Mac, go to [Power Query data sources in Excel versions](https://support.microsoft.com/en-us/office/power-query-data-sources-in-excel-versions-e9332067-8e49-46fc-97ff-f2e1bfa0cb16).
 
-## Get data from Power BI service
+## Get data in Power BI service
 
 To get data in Power BI service:
 
@@ -58,9 +61,7 @@ To get data in Power BI service:
 
 6. Select the connector from the list of data sources.
 
-You'll then be asked to fill out information that's required for you to access the data. Go to the [individual connector articles](connectors/index.md) for more information about this required information.
-
-## Get data from Power Apps
+## Get data in Power Apps
 
 There are several places in Power Apps where you can get data, either by importing data to a table or by creating a dataflow.
 
@@ -83,17 +84,17 @@ To import data to an existing table in Power Apps:
 1. On the left side of Power Apps, select **Dataverse** > **Tables**.
 
 2. In the **Tables** pane, either:
-   1. Select a table in the **Tables** pane that you want to import data to, and then select **Data** > **Get data**.
+   * Select a table in the **Tables** pane that you want to import data to, and then select **Data** > **Get data**.
 
-      ![Image with Dataverse tables open, the data context menu open, with the get data option emphasized.](media/where-to-get-data/table-get-data.png)
+      ![Image with Dataverse tables open, a table selected, the data context menu open, with the get data option emphasized.](media/where-to-get-data/table-get-data.png)
 
-   1. Open the table to its individual pane, and then select **Data** > **Get data**.
+   * Open the table to its individual pane, and then select **Data** > **Get data**.
 
-      ![Image with Dataverse tables open, the data context menu open, with the get data option emphasized.](media/where-to-get-data/table-address-get-data.png)
+      ![Image with Dataverse tables open, an individual table open in a pane, the data context menu open, with the get data option emphasized.](media/where-to-get-data/table-address-get-data.png)
 
    In either case, you can also choose to get data from an Excel worksheet without using the **Get data** option.
 
-   [![Image with Dataverse tables open, the data context menu open, with the get data from Excel option emphasized.](media/where-to-get-data/table-data-from-excel.png)
+   ![Image with Dataverse tables open, and individual table open in a pane,the data context menu open, with the get data from Excel option emphasized.](media/where-to-get-data/table-data-from-excel.png)
 
 3. Select the connector from the list of data sources.
 
@@ -117,9 +118,7 @@ To get data in Power Apps when creating a dataflow:
    1. Select **Create**.
    1. Select the connector from the list of data sources.
 
-You'll then be asked to fill out information that's required for you to access the data. Go to the [individual connector articles](connectors/index.md) for more information about this required information.
-
-## Get data from Dynamics 365 Customer Insights
+## Get data in Dynamics 365 Customer Insights
 
 To get data in Customer Insights:
 
@@ -139,9 +138,7 @@ To get data in Customer Insights:
 
 6. Select the connector from the list of data sources.
 
-You'll then be asked to fill out information that's required for you to access the data. Go to the [individual connector articles](connectors/index.md) for more information about this required information.
-
-## Get data from Analysis Services
+## Get data in Analysis Services
 
 With Analysis Services, a solution is developed in Visual Studio with the Analysis Services projects extension. The solution is then deployed to SQL Server Analysis Services, Azure Analysis Services, or a Power BI Premium workspace.
 
@@ -150,3 +147,31 @@ The Analysis Services documentation contains the following information that desc
 * To set up a Visual Studio solution with the Analysis Services projects extension: [Create a tabular model project](/analysis-services/tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project)
 
 * To get data: [Get data](/analysis-services/tutorial-tabular-1400/as-lesson-2-get-data)
+
+## Get data in Power Automate
+
+There are a couple of places in Power Automate where you can get data, either by importing tables or in process adviser.
+
+To get data by importing tables:
+
+1. On the left side of Power Automate, select **Data** > **Tables**. At this point, a new tab with Power Apps will open in your browser.
+
+2. In the Power Apps tab, follow the instructions for importing data to either a new table or to an existing table in the [Power Apps](#get-data-in-power-apps) section.
+
+For information about how to get data in process advisor, go to [Connect to a data source](/power-automate/process-mining-processes-and-data#connect-to-a-data-source).
+
+## Get data in Azure Data Factory
+
+Azure Data Factory doesn't use the same Power Query get data interface as the other apps described in this article. Instead, Azure Data Factory uses its own built-in functionality to import data.
+
+However, Azure Data Factory does use Power Query to transform data in data wrangling. The following Azure Data Factory articles describe how to use Power Query for data wrangling:
+
+* [What is data wrangling?](/azure/data-factory/wrangling-overview)
+* [Power Query activity in Azure Data Factory](/azure/data-factory/control-flow-power-query-activity)
+* [Prepare data with data wrangling](/azure/data-factory/wrangling-tutorial)
+
+## Get data in SQL Server Integration Services
+
+SQL Server Integration Services (SSIS) doesn't use the same Power Query get data interface as the other apps described in this article. Instead, SSIS uses its own built-in functionality to import data.
+
+For information on installing, configuring, and using the Power Query Source for SSIS, go to [Power Query Source](/sql/integration-services/data-flow/power-query-source).
