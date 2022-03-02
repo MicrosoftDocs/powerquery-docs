@@ -70,7 +70,7 @@ The Power Apps per-app plan covers up to a 50-MB database capacity. The Power Ap
 
 ### Power BI Pro
 
-Power BI Pro gives you the ability to create analytical dataflows, but not use any of the premium features. With a Power BI Pro account, you can't use linked or computed entities, you can't use AI capabilities in Power BI, and you can't use DirectQuery to connect to the dataflow. The storage for your dataflows is limited to the space left under your Power BI Pro account, which is a subset of 10-GB storage for all Power BI content.
+Power BI Pro gives you the ability to create analytical dataflows, but not use any of the premium features. With a Power BI Pro account, you can't use linked or computed entities, you can't use AI capabilities in Power BI, and you can't use DirectQuery to connect to the dataflow. The storage for your dataflows is limited to the space left under your Power BI Pro account, which is a subset of 10-GB storage for all Power BI content. At this point in time we do not report the current storage usage of dataflows in the Power BI portal. You will be notified if you're almost reaching the limit of the left over capacity.
 
 ### Power BI Premium
 
