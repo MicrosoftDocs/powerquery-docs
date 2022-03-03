@@ -100,7 +100,7 @@ The following table describes all of the advanced options you can set in Power Q
 | --------------- | ----------- |
 | Role | Provides an Amazon Resource Name (ARN), which uniquely identifies AWS resources. |
 | Batch size | Specifies the maximum number of rows to retrieve at a time from the server when fetching data. A small number translates into more calls to the server when retrieving a large dataset. A large number of rows may improve performance, but could cause high memory usage. The default value is 100 rows. |
-| SQL Statement | For information, go to [Import data from a database using native database query](../native-database-query.md). This option is only available in Power Query Online. |
+| SQL Statement | For information, go to [Import data from a database using native database query](../native-database-query.md). This option is only available in Power BI Desktop. |
 | | |
 
 ## Enable Azure AD Single Sign-On (SSO) for Amazon Redshift
