@@ -65,7 +65,7 @@ To make the connection to a **Snowflake** computing warehouse, take the followin
 
    ![Screenshot of the Navigator with the test schema database open and the DimProduct table selected.](./media/Snowflake/navigator-desktop.png)
 
-7. Select **Import** to import data directly into Power BI, or select **DirectQuery**. More information: [Use DirectQuery in Power BI Desktop](/power-bi/connect-data/desktop-use-directquery)
+7. Select **Import** to import data directly into Power BI, or select **DirectQuery**, then select **OK**. More information: [Use DirectQuery in Power BI Desktop](/power-bi/connect-data/desktop-use-directquery)
 
    >[!Note]
    >Azure Active Directory (Azure AD) Single Sign-On (SSO) only supports DirectQuery.

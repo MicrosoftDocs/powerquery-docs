@@ -62,7 +62,7 @@ To connect to Amazon Redshift data:
 
 5. Once you've selected the elements you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
 
-6. Select either the **Import** or **DirectQuery** data connectivity mode.
+6. Select either the **Import** or **DirectQuery** data connectivity mode, and then select **OK**.
 
    ![Image of connection settings, with Import and DirectQuery as the settings to select.](./media/amazon-redshift/connection-settings.png)
 
