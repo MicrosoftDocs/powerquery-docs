@@ -39,6 +39,8 @@ To use the Dataverse connector, one of TCP ports 1433 or 5558 need to be open to
 ## Capabilities supported
 
 * Server URL
+* Import
+* DirectQuery (Power BI only)
 * Advanced
   * Reorder columns
   * Add display column
