@@ -66,7 +66,7 @@ To connect to Dataverse from Power BI Desktop:
 
    ![Load or transform from navigator.](media/dataverse/navigator.png)
 
-5. Select either the **Import** or **DirectQuery** data connectivity mode. The select **OK**.
+5. Select either the **Import** or **DirectQuery** data connectivity mode. Then select **OK**.
 
    ![Screenshot](media/dataverse/connection-settings.png)
 
