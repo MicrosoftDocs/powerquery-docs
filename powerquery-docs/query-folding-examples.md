@@ -97,7 +97,7 @@ Consulting this data source request can help you better understand the story tha
 - `Table.LastN`: Once Power Query receives all records from the `fact_Sale` table, it uses the Power Query engine to filter the table and keep only the last 10 rows.
 - `Table.SelectColumns`: Power Query will use the output of the `Table.LastN` node and apply a new transform called `Table.SelectColumns`, which selects the specific columns that you want to keep from a table.
 
-For its evaluation, this query had to download all rows and fields from the `fact_Sale` table. This query took an average of 3 minutes and 4 seconds to be processed in a standard instance of Power BI dataflows (which accounts for the evaluation and loading of data to dataflows).
+For its evaluation, this query had to download all rows and fields from the `fact_Sale` table. This query took an average of 6 minutes and 1 second to be processed in a standard instance of Power BI dataflows (which accounts for the evaluation and loading of data to dataflows).
 
 ## Partial query folding example
 
