@@ -4,7 +4,7 @@ description: Provides basic information and connection instructions, along with 
 author: DougKlopfenstein
 
 ms.topic: conceptual
-ms.date: 2/28/2022
+ms.date: 3/2/2022
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -39,6 +39,8 @@ To use the Dataverse connector, one of TCP ports 1433 or 5558 need to be open to
 ## Capabilities supported
 
 * Server URL
+* Import
+* DirectQuery (Power BI only)
 * Advanced
   * Reorder columns
   * Add display column
@@ -63,6 +65,10 @@ To connect to Dataverse from Power BI Desktop:
 4. In **Navigator**, select the data you require, then either load or transform the data.
 
    ![Load or transform from navigator.](media/dataverse/navigator.png)
+
+5. Select either the **Import** or **DirectQuery** data connectivity mode. Then select **OK**.
+
+   ![Screenshot](media/dataverse/connection-settings.png)
 
 ## Connect to Dataverse from Power Query Online
 

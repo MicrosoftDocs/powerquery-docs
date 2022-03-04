@@ -6,8 +6,10 @@
       href: power-query-what-is-power-query.md          
     - name: Get data
       items:
-      - name: "Getting data"
+      - name: "Getting data overview"
         href: get-data-experience.md
+      - name: "Where to get data"
+        href: where-to-get-data.md
       - name: "Authentication with a data source"
         href: ConnectorAuthentication.md
       - name: "Upload a file"
