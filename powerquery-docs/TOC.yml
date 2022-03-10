@@ -270,6 +270,8 @@
         href: error-handling.md
       - name: "Import data using native database query"
         href: native-database-query.md
+      - name: "Query folding on native queries"
+        href: native-query-folding.md
       - name: "Create Power Platform dataflows from queries in Microsoft Excel (Preview)"
         href: new-dataflow-from-template.md
       - name: Optimize Power Query when expanding table columns
