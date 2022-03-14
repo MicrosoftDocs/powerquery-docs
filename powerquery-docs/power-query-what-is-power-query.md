@@ -4,7 +4,7 @@ description: Learn what Power Query is, and how it can help you get and transfor
 author: mllopis
 
 ms.topic: overview
-ms.date: 10/27/2021
+ms.date: 03/14/2022
 ms.author: millopis
 ---
 
@@ -97,6 +97,7 @@ The following table lists Microsoft products and services where Power Query can 
 |Power BI|Yes|Yes|Yes| Yes|
 |Power Apps| Yes |No|Yes| Yes|
 |Power Automate| Yes |No | Yes |No |
+|Power BI Report Server| Yes| Yes|No|No|
 |Azure Data Factory| Yes |No |Yes |Yes|
 |SQL Server Integration Services| Yes| No|No|No|
 |SQL Server Analysis Services| Yes| Yes|No|No|
