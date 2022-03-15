@@ -4,7 +4,7 @@ description: An article that describes why and how to use the new Query plan fea
 author: DougKlopfenstein
 
 ms.topic: quickstart
-ms.date: 11/23/2021
+ms.date: 3/15/2022
 ms.author: dougklo
 ms.reviewer: dougklo
 localizationgroup: reference
@@ -19,11 +19,11 @@ Through a practical example, this article will demonstrate the main use case and
 >[!NOTE]
 >The query plan feature for Power Query is only available in Power Query Online.
 
-![Suggested process to use the query plan feature in Power Query by reviewing the step folding indicators, then review the query plan for a selected step and finally implement any changes derived from reviewing the query plan.](media/query-plan/query-plan-flow.png)
+![Suggested process to use the query plan feature in Power Query by reviewing the query folding indicators, then review the query plan for a selected step and finally implement any changes derived from reviewing the query plan.](media/query-plan/query-plan-flow.png)
 
 This article has been divided in a series of recommended steps in order to interpret the query plan. These steps are:
 
-1. [Review the step folding indicators](#1-review-the-step-folding-indicators).
+1. [Review the query folding indicators](#1-review-the-query-folding-indicators).
 2. [Select the query step to review its query plan](#2-select-the-query-step-to-review-its-query-plan).
 3. [Implement changes to your query](#3-implement-changes-to-your-query).
 
@@ -53,19 +53,19 @@ Use the following steps to create the query in your own Power Query Online envir
 
 After following these steps, your query will look like the one in the following image.
 
-[ ![Sample query with step folding indicators enabled.](media/query-plan/sample-query.png) ](media/query-plan/sample-query.png#lightbox)
+[ ![Sample query with query folding indicators enabled.](media/query-plan/sample-query.png) ](media/query-plan/sample-query.png#lightbox)
 
 This query connects to the SalesOrderHeader table, and selects a few columns from the last five orders with a **TotalDue** value above 1000.
 
 >[!NOTE]
 >This article uses a simplified example to showcase this feature, but the concepts described in this article apply to all queries. We recommend that you have a good knowledge of query folding before reading the query plan. To learn more about query folding, go to [Query folding basics](query-folding-basics.md).
 
-## 1. Review the step folding indicators
+## 1. Review the query folding indicators
 
 >[!NOTE]
 >Before reading this section, we recommend that you review the article on [Step folding indicators](step-folding-indicators.md).
 
-Your first step in this process is to review your query and pay close attention to the step folding indicators. The goal is to review the steps that are marked as not folded. Then you can see if making changes to the overall query could make those transformations fold completely.
+Your first step in this process is to review your query and pay close attention to the query folding indicators. The goal is to review the steps that are marked as not folded. Then you can see if making changes to the overall query could make those transformations fold completely.
 
 ![Step folding indicators for the sample query inside the Applied steps pane.](media/query-plan/step-folding-indicators-sample.png)
 
@@ -135,9 +135,9 @@ Implement the alternative discussed in the previous section:
 
    ![Using the table context menu to select the Keep top rows transform to keep only the top five rows.](media/query-plan/keep-top-rows.png)
 
-After implementing the changes, check the step folding indicators again and see if it's giving you a folded indicator.
+After implementing the changes, check the query folding indicators again and see if it's giving you a folded indicator.
 
-[![All step folding indicators are green and showing that they can be folded. The final table provides the same rows but in a different order.](media/query-plan/alternative-approach.png)](media/query-plan/alternative-approach.png#lightbox)
+[![All query folding indicators are green and showing that they can be folded. The final table provides the same rows but in a different order.](media/query-plan/alternative-approach.png)](media/query-plan/alternative-approach.png#lightbox)
 
 Now it's time to review the query plan of the last step, which is now **Keep top rows**. Now there are only folded nodes. Select **View details** under `Value.NativeQuery` to verify which query is being sent to the database.
 
@@ -145,4 +145,4 @@ Now it's time to review the query plan of the last step, which is now **Keep top
 
 While this article is suggesting what alternative to apply, the main goal is for you to learn how to use the query plan to investigate query folding. This article also provides visibility of what's being sent to your data source and what transforms will be done locally.
 
-You can adjust your code to see the impact that it has in your query. By using the step folding indicators, you'll also have a better idea of which steps are preventing your query from folding.
+You can adjust your code to see the impact that it has in your query. By using the query folding indicators, you'll also have a better idea of which steps are preventing your query from folding.

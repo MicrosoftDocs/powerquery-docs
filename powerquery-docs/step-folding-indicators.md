@@ -1,24 +1,24 @@
 ---
-title: Step folding indicators in Power Query
-description: Step folding indicators in Power Query Online allow you to understand what steps fold and give insight into how to build more performant queries.
-author: ptyx507
+title: Query folding indicators in Power Query
+description: Query folding indicators in Power Query Online allow you to understand what steps fold and give insight into how to build more performant queries.
+author: ptyx507x
 
-ms.date: 11/23/2021
+ms.date: 3/15/2022
 ms.author: dougklo
 ms.reviewer: dougklo
 ---
 
-# Step folding indicators
+# Query folding indicators
 
 > [!NOTE]
 > Before reading this article, we recommended that you read [Query folding in Power Query](query-folding-basics.md) to better understand how folding works in Power Query.
 
 Step folding indicators allow you to understand the steps that fold or not fold. 
 
-Using step folding indicators, when you make a change that breaks folding, it will become obvious. This will allow you to more easily resolve issues quickly, avoid performance issues in the first place, and have better insight into your queries. In most cases you run into, steps will fold, or not fold. There are many cases where the outcome isn't as obvious, discussed in the section on [Step diagnostics indicators](#step-diagnostics-indicators) (Dynamic, Opaque, and Unknown) later in this article.
+Using query folding indicators, when you make a change that breaks folding, it will become obvious. This will allow you to more easily resolve issues quickly, avoid performance issues in the first place, and have better insight into your queries. In most cases you run into, steps will fold, or not fold. There are many cases where the outcome isn't as obvious, discussed in the section on [Step diagnostics indicators](#step-diagnostics-indicators) (Dynamic, Opaque, and Unknown) later in this article.
 
 > [!NOTE]
-> The step folding indicators feature is available only for Power Query Online.
+> The query folding indicators feature is available only for Power Query Online.
 
 ## Interpreting step diagnostics
 
@@ -36,7 +36,7 @@ in
   Navigation
 ```
 
-If you look at how this shows up in step folding indicators, you can see that the first step doesn't fold, the second step is inconclusive, and the third step folds.
+If you look at how this shows up in query folding indicators, you can see that the first step doesn't fold, the second step is inconclusive, and the third step folds.
 
 ![Source and Navigation steps in Folding Indicator pane.](images/interpreting-step-diagnostics-1.png)
 
@@ -55,7 +55,7 @@ in
   #"Capitalized each word"
   ```
   
-In step folding indicators, you will see that you have the exact same indicators as above, except the final step doesn't fold. Everything up to this final step will be performed on the data source, while the final step will be performed locally.
+In query folding indicators, you will see that you have the exact same indicators as above, except the final step doesn't fold. Everything up to this final step will be performed on the data source, while the final step will be performed locally.
 
 ![Source, Navigation, and Capitalize Each Word steps in Folding Indicator pane.](images/interpreting-step-diagnostics-2.png)
 
