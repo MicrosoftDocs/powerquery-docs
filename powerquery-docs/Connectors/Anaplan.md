@@ -58,7 +58,6 @@ The Anaplan connector leverages export actions to download data from your Anapla
 When you run an export action:
 
 -   Only exports that output .csv and .txt files are supported.
--   With every export action run, you need to wait ten minutes to repeat the same export action. The time is calculated from one export run completion until the next export run begins. The 10 minute wait does not apply to different exports.
 -   If you don't see the export action in the Power BI connector, check your role and the export actions in your model.
 
 To run an export action, use the **Navigator** dialog to locate your export.
