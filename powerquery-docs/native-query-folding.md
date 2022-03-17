@@ -5,14 +5,14 @@ author: ptyx507x
 ms.service: powerquery
 ms.reviewer: 
 ms.date: 01/31/2022
-ms.author: v-mescobar
+ms.author: miescobar
 ---
 
 # Query folding on native queries
 
 In Power Query, you're able to define a native query and run it against your data source. The [Import data from a database using native database query](native-database-query.md) article explains how to do this process with multiple data sources. But, by using the process described in that article, your query won't take advantage of any query folding from subsequent query steps.
 
-This article showcases an alternative method to create native queries against your data source using the [Value.NativeQuery](https://docs.microsoft.com/powerquery-m/value-nativequery) function and keep the query folding mechanism active for subsequent steps of your query.
+This article showcases an alternative method to create native queries against your data source using the [Value.NativeQuery](/powerquery-m/value-nativequery) function and keep the query folding mechanism active for subsequent steps of your query.
 
 >[!NOTE]
 >We recommend that you read the documentation on [query folding](query-folding-basics.md) and the [step folding indicators](query-folding-basics.md) to better understand the concepts used throughout this article.
@@ -22,7 +22,7 @@ This article showcases an alternative method to create native queries against yo
 The method described in the next sections applies to the following data connectors:
 
 * [Dataverse](connectors/dataverse.md) *(when using enhanced compute)*
-* [SQL Server](connectors/sqlserver)
+* [SQL Server](connectors/SQLServer.md)
 * [PostgreSQL](connectors/postgresql.md)
 * [Amazon Redshift](connectors/amazonredshift.md)
 * [Google BigQuery](connectors/googlebigquery.md)
@@ -31,7 +31,7 @@ The method described in the next sections applies to the following data connecto
 ## Connect to target from data source
 
 >[!NOTE]
->To showcase this process, this article uses the SQL Server connector and the [AdventureWorks2019 sample database](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
+>To showcase this process, this article uses the SQL Server connector and the [AdventureWorks2019 sample database](/sql/samples/adventureworks-install-configure).
 >The experience may vary from connector to connector, but this article showcases the fundamentals on how to enable query folding capabilities over native queries for the supported connectors.
 
 When connecting to the data source, it's important that you connect to the node or level where you want to execute your native query. For the example in this article, that node will be the database level inside the server.
@@ -70,7 +70,7 @@ The most important component of this formula is the use of the optional record f
 ![New custom step formula with the usage of the Value.NativeQuery function and the explicit SQL query](media/native-query-folding/value-native-query-formula.png)
 
 >[!NOTE]
->You can read more about the Value.NativeQuery function from the [official documentation article](https://docs.microsoft.com/powerquery-m/value-nativequery).
+>You can read more about the Value.NativeQuery function from the [official documentation article](/powerquery-m/value-nativequery).
 
 After you have entered the formula, a warning will be shown that will require you to enable native queries to run for your specific step. You can click continue for this step to be evaluated.
 
