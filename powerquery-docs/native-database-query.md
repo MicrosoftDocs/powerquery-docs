@@ -5,7 +5,7 @@ author: DougKlopfenstein
 
 
 ms.topic: conceptual
-ms.date: 06/05/2020
+ms.date: 3/18/2022
 ms.author: bezhan
 
 LocalizationGroup: reference
@@ -55,6 +55,7 @@ The following Power Query connectors support native database queries.
 | Dataverse | SQL statement |
 | Essbase | MDX statement |
 | FHIR | FHIR Search |
+| Google BigQuery | SQL statement |
 | IBM Db2 database | SQL statement |
 | IBM Informix database (Beta) | SQL statement |
 | MySQL database | SQL statement |

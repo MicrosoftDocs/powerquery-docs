@@ -1,7 +1,7 @@
 ---
 title: "Using an on-premises data gateway in Power Platform dataflows | MicrosoftDocs"
 description: "Learn how to use an on-premises data gateway in Power Platform dataflows"
-ms.date: 10/29/2021
+ms.date: 3/18/2022
 ms.reviewer: dougklo
 
 ms.topic: article
@@ -14,7 +14,7 @@ manager: kvivek
 
 Install an on-premises data gateway to transfer data quickly and securely between a Power Platform dataflow and a data source that isn't in the cloud, such as an on-premises SQL Server database or an on-premises SharePoint site. You can view all gateways for which you have administrative permissions and manage permissions and connections for those gateways.
 
-With a gateway, you can connect to on-premises data through these connections:
+With a gateway, you can connect to on-premises data in Power Platform dataflows through these connections:
 
 - SharePoint
 - SQL Server
