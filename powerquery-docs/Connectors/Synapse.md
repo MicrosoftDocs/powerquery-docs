@@ -43,7 +43,7 @@ To connect to Synapse workspace data:
 
 2. If this is the first time you are connecting to this workspace, you'll be asked to sign in to your Synapse account. To sign in, select **Sign in**.
 
-   ![Authentication dialog box with sign-in button for your organizational account](./media/azure-synpse-analytics-workspace/sign-in.png)
+   ![Authentication dialog box with sign-in button for your organizational account.](./media/azure-synpse-analytics-workspace/sign-in.png)
 
 3. In the **Sign in with Microsoft** window that appears, provide your credentials to sign in to your Synapse account. Then select **Next**.
 
