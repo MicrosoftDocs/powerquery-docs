@@ -13,7 +13,7 @@ ms.reviewer: dougklo
 > [!NOTE]
 > Before reading this article, we recommended that you read [Query folding in Power Query](query-folding-basics.md) to better understand how folding works in Power Query.
 
-Step folding indicators allow you to understand the steps that fold or not fold. 
+Query folding indicators allow you to understand the steps that fold or not fold. 
 
 Using query folding indicators, when you make a change that breaks folding, it will become obvious. This will allow you to more easily resolve issues quickly, avoid performance issues in the first place, and have better insight into your queries. In most cases you run into, steps will fold, or not fold. There are many cases where the outcome isn't as obvious, discussed in the section on [Step diagnostics indicators](#step-diagnostics-indicators) (Dynamic, Opaque, and Unknown) later in this article.
 

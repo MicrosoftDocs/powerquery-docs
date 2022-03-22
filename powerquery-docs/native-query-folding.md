@@ -80,7 +80,7 @@ This SQL statement yields a table with only three rows and two columns.
 
 ## Test query folding
 
-To test the query folding of your query, you can try to apply a filter to any of your columns and see if the step folding indicator in the applied steps section shows the step as folded. For this case, you can filter the DepartmentID column to have values that are not equal to two.
+To test the query folding of your query, you can try to apply a filter to any of your columns and see if the query folding indicator in the applied steps section shows the step as folded. For this case, you can filter the DepartmentID column to have values that are not equal to two.
 
 ![Filtering the DepartmentID column to only have the values that are not equal to two](media/native-query-folding/query-filter.png)
 
