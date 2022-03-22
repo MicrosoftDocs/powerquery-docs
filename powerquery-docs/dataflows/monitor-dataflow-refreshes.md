@@ -12,7 +12,7 @@ ms.author: jeluitwi
 
 # Monitor your Dataflow refreshes with Power BI
 
-When using dataflows in your maker portal environment you have the ability to monitor dataflow refreshes using Power BI. We support all types of dataflows except the ones that are created within a Power BI workspace. We'll guide you step by step to setup your own dashboard to share with everyone within your team. This will provide insights into success rate of refreshes, duration and much more.
+When working with any kind dataflows except Power BI dataflows you have the ability to monitor dataflow refreshes using Power BI. We'll guide you step by step to setup your own dashboard to share with everyone within your team. This will provide insights into success rate of refreshes, duration and much more.
 
 [![Image of a gear.](media/refreshhistory-dashboard/dashboard-preview.PNG)](media/refreshhistory-dashboard/dashboard-preview.PNG)
 
@@ -33,10 +33,10 @@ To setup your monitoring dashboard for dataflow refresh history:
     * Table monitoring
 1. From this point on you can change it however you like and publish it to a workspace of your liking.
 
-## Power BI Dataflows
+## Power BI Dataflows monitoring
 
 When working with Power BI dataflows you may want to check out the following pages for setting up your monitoring solution:
 
-* [Use Dataverse to build a dataflows monitoring report](dataflows/load-dataflow-metadata-into-dataverse-table.md)
-* [Use a Power BI dataset to build a dataflows monitoring report](dataflows/load-dataflow-metadata-into-power-bi-dataset.md)
-* [Use Excel to build a dataflows monitoring report](dataflows/load-dataflow-metadata-into-excel-online.md)
+* [Use Dataverse to build a dataflows monitoring report](./load-dataflow-metadata-into-dataverse-table.md)
+* [Use a Power BI dataset to build a dataflows monitoring report](./load-dataflow-metadata-into-power-bi-dataset.md)
+* [Use Excel to build a dataflows monitoring report](./load-dataflow-metadata-into-excel-online.md)
