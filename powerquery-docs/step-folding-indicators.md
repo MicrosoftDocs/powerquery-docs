@@ -61,7 +61,7 @@ In query folding indicators, you will see that you have the exact same indicator
 
 ## Step diagnostics indicators
 
-Step folding indicators use an underlying query plan, and require it to be able to get information about the query to report it. Currently the query plan only supports tables, so some cases (lists, records, primitives) will not report as folding or not. Similarly, constant tables will report as opaque. 
+Query folding indicators use an underlying query plan, and require it to be able to get information about the query to report it. Currently the query plan only supports tables, so some cases (lists, records, primitives) will not report as folding or not. Similarly, constant tables will report as opaque. 
 
 |Indicator|Icon|Description|
 |---------|----|-------|
