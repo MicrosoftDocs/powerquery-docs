@@ -304,10 +304,10 @@
         href: Connectors/AzureSQLDataWarehouse.md
       - name: "Azure Synapse Analytics workspace (Beta)"
         href: Connectors/synapse.md
-      - name: "Bloomberg Data and Analytics"
-        href: Connectors/BloombergDataAndAnalytics.md
       - name: "BitSight Security Ratings (Beta)"
         href: Connectors/BitSightSecurityRatings.md
+      - name: "Bloomberg Data and Analytics"
+        href: Connectors/BloombergDataAndAnalytics.md
       - name: "BQE Core (Beta)"
         href: Connectors/BQECore.md
       - name: "Common Data Service (Legacy)"
