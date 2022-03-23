@@ -318,6 +318,8 @@
         href: Connectors/Dataflows.md
       - name: "Delta Sharing"
         href: Connectors/DeltaSharing.md
+      - name: "Denodo"
+        href: Connectors/Denodo.md
       - name: "Digital Construction Works Insights (Beta)"
         href: Connectors/DigitalConstructionWorksInsights.md
       - name: "EQuIS (Beta)"
