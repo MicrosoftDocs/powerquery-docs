@@ -14,7 +14,7 @@ Diagram view offers a visual way to prepare data in the Power Query editor. With
 
 This article provides an overview of the capabilities provided by diagram view.
 
-![Example of the Power Query interface with three queries shown in the diagram view.](images/diagram-view-sample.png)
+[![Example of the Power Query interface with three queries shown in the diagram view.](images/diagram-view-sample.png)](images/diagram-view-sample.png#lightbox)
 
 This feature is enabled by selecting **Diagram view** in the **View** tab on the ribbon. With diagram view enabled, the steps pane and queries pane will be collapsed.  
 
@@ -234,7 +234,9 @@ You can also expand or collapse a query by selecting the query level actions fro
 
 To expand all or collapse all queries, select the **Expand all/Collapse all** button next to the layout options in the diagram view pane.
 
-![Expand all/collapse all queries button at the bottom right-hand corner of the diagram view pane next to the layout options.](images/diagram-view-collapse-all-queries-button.png)
+:::image type="content" source="images/diagram-view-collapse-all-queries-button.png" alt-text="Expand all/collapse all queries button at the bottom right-hand corner of the diagram view pane next to the layout options.":::
+
+
 
 You can also right-click any empty space in the diagram view pane and see a context menu to expand all or collapse all queries.
 
@@ -246,31 +248,37 @@ In the collapsed mode, you can quickly look at the steps in the query by hoverin
 
 ## Layout Options
 
-There are four layout options available in the diagram view: zoom out, zoom in, full screen, fit to view, and reset.
+There are five layout options available in the diagram view: zoom out, zoom in, mini-map, full screen, fit to view, and reset.
 
 ### Zoom out/zoom in
 
 With this option, you can adjust the zoom level and zoom out or zoom in to view all the queries in the diagram view.
 
-![Zoom out or zoom in button available at the bottom right-hand corner of the diagram view pane.](images/diagram-view-zoom.png)
+:::image type="content" source="images/diagram-view-zoom.png" alt-text="Zoom out or zoom in button available at the bottom right-hand corner of the diagram view pane.":::
+
+### Mini-map
+
+With this option, you can turn the diagram view mini-map on or off. More information: [Show mini-map](#show-mini-map)
+
+:::image type="content" source="images/show-mini-map-button.png" alt-text="Mini-map button available at the bottom right-hand corner of the diagram view pane.":::
 
 ### Full screen
 
 With this option, you can view all the queries and their relationships through the *Full screen* mode. The diagram view pane expands to full screen and the data preview pane, queries pane, and steps pane remain collapsed.
 
-![Full screen button available at the bottom right-hand corner of the diagram view pane.](images/diagram-view-full-screen.png)
+:::image type="content" source="images/diagram-view-full-screen.png" alt-text="Full screen button available at the bottom right-hand corner of the diagram view pane.":::
 
 ### Fit to view
 
 With this option, you can adjust the zoom level so that all the queries and their relationships can be fully viewed in the diagram view.
 
-![Fit to view button available at the bottom right hand corner of the diagram view pane.](images/diagram-view-fit-to-view.png)
+:::image type="content" source="images/diagram-view-fit-to-view.png" alt-text="Fit to view button available at the bottom right hand corner of the diagram view pane.":::
 
 ### Reset
 
 With this option, you can reset the zoom level back to 100% and also reset the pane to the top-left corner.
 
-![Reset button available at the bottom right-hand corner of the diagram view pane.](images/diagram-view-reset-view.png)
+:::image type="content" source="images/diagram-view-reset-view.png" alt-text="Reset button available at the bottom right-hand corner of the diagram view pane.":::
 
 ## View query relationships
 
@@ -334,7 +342,7 @@ To enable this view, navigate to diagram view settings and select **Compact view
 
 Once the number of queries begin to overflow the diagram view, you can use the scroll bars at the bottom and right side of the diagram view to scroll through the queries. One other method of scrolling is to use the diagram view mini-map control. The mini-map control lets you keep track of the overall dataflow "map", and quickly navigate, while looking at an specific area of the map in the main diagram view area.
 
-To open the mini-map, select **Show mini-map** from the diagram view menu.
+To open the mini-map, either select **Show mini-map** from the diagram view menu or select the mini-map button in the layout options.
 
 ![Diagram view settings with Compact view selected, and the mini-map displayed on the right side.](images/show-mini-map.png)
 
