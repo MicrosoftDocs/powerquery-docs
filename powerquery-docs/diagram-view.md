@@ -25,7 +25,7 @@ This feature is enabled by selecting **Diagram view** in the **View** tab on the
 
 ## Authoring queries using diagram view
 
-Diagram view provides you with a visual interface to create, view, or modify your queries. In diagram view, you can connect to many different types of data sources using the ["Get Data" experience](get-data-experience.md).
+Diagram view provides you with a visual interface to create, view, or modify your queries. In diagram view, you can connect to many different types of data sources using the [get data experience](get-data-experience.md).
 
 Diagram view is also connected to the Data Preview and the ribbon so that you can select columns in the Data Preview.
 
