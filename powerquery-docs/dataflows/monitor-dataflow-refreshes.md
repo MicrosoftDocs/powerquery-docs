@@ -14,7 +14,7 @@ ms.author: jeluitwi
 
 When working with any kind dataflows other than Power BI dataflows, you have the ability to monitor dataflow refreshes using Power BI. This article includes step by step instructions on how to set up your own dashboard to share with everyone on your team. This dashboard provides insights into the success rate of refreshes, duration, and much more.
 
-![Image of the dashboard with dataflow duration, refresh count, and refresh success rate graphs.](media/refreshhistory-dashboard/dashboard-preview.PNG)
+[![Image of the dashboard with dataflow duration, refresh count, and refresh success rate graphs.](media/refreshhistory-dashboard/dashboard-preview.PNG)](media/refreshhistory-dashboard/dashboard-preview.PNG#lightbox)
 
 ## Set up your dashboard
 
