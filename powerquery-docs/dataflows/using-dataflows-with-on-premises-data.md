@@ -138,7 +138,9 @@ There are a few known limitations when using enterprise gateways and dataflows.
 - Dataflows are only supported using enterprise gateways. Personal gateways won't be available for selection in the drop-down lists and settings
     screens.
 
-- Creating new data sources with a gateway in dataflows is only supported for people with *Admins* permissions. *Can use* and *Can use + share* permissions levels aren't currently supported.
+- Creating new data sources with a gateway in dataflows is only supported for people with *Admins* permissions.
+
+- Users with *Can Use* or *Can Use + Share* permissions should be able to leverage existing connections when creating dataflows.
 
 ## Troubleshooting
 
