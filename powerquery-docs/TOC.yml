@@ -228,7 +228,7 @@
           href: dataflows/load-dataflow-metadata-into-power-bi-dataset.md
       - name: Monitor dataflows
         items: 
-          - name: Monitor your Dataflow refreshes with Power BI
+          - name: Monitor your dataflow refreshes with Power BI
             href: dataflows/monitor-dataflow-refreshes.md
       - name: Troubleshooting dataflows
         items: 
