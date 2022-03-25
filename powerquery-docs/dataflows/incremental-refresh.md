@@ -76,7 +76,7 @@ The following list explains the settings in the **Incremental refresh settings**
 > [!NOTE]
 > Dataflow incremental refresh determines dates according to the following logic: if a refresh is scheduled, incremental refresh for dataflows uses the time zone defined in the refresh policy. If no schedule for refreshing exists, incremental refresh uses the time from the computer running the refresh.
 
-After incremental refresh is configured, the dataflow automatically alters your query to include filtering by date. You can edit the automatically generated query by using the advanced editor in Power Query to fine-tune or customize your refresh. Read more about incremental refresh and how it works in the following sections.
+After incremental refresh is configured, the dataflow automatically alters your query to include filtering by date. If the dataflow was created in Power BI, you can also edit the automatically generated query by using the advanced editor in Power Query to fine-tune or customize your refresh. Read more about incremental refresh and how it works in the following sections.
 
 ## Incremental refresh and linked entities vs. computed entities
 
@@ -145,10 +145,6 @@ The next refresh operation, with *Run Date 1/16/2017*, takes the opportunity to 
 Dataflow incremental refresh and dataset incremental refresh are designed to work in tandem. It's acceptable and supported to have an incrementally refreshing entity in a dataflow, fully loaded into a dataset, or a fully loaded entity in a dataflow incrementally loaded to a dataset.
 
 Both approaches work according to your specified definitions in the refresh settings. More information: [Incremental refresh in Power BI Premium](/power-bi/service-premium-incremental-refresh)
-
-## Considerations and limitations
-
-Incremental refresh in Microsoft Power Platform dataflows is only supported in dataflows with an Azure Data Lake Storage account, not in dataflows with Dataverse as the destination.
 
 ### See also
 

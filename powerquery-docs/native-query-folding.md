@@ -15,7 +15,7 @@ In Power Query, you're able to define a native query and run it against your dat
 This article showcases an alternative method to create native queries against your data source using the [Value.NativeQuery](/powerquery-m/value-nativequery) function and keep the query folding mechanism active for subsequent steps of your query.
 
 >[!NOTE]
->We recommend that you read the documentation on [query folding](query-folding-basics.md) and the [step folding indicators](query-folding-basics.md) to better understand the concepts used throughout this article.
+>We recommend that you read the documentation on [query folding](query-folding-basics.md) and the [query folding indicators](query-folding-basics.md) to better understand the concepts used throughout this article.
 
 ## Supported data connectors
 
@@ -80,11 +80,11 @@ This SQL statement yields a table with only three rows and two columns.
 
 ## Test query folding
 
-To test the query folding of your query, you can try to apply a filter to any of your columns and see if the step folding indicator in the applied steps section shows the step as folded. For this case, you can filter the DepartmentID column to have values that are not equal to two.
+To test the query folding of your query, you can try to apply a filter to any of your columns and see if the query folding indicator in the applied steps section shows the step as folded. For this case, you can filter the DepartmentID column to have values that are not equal to two.
 
 ![Filtering the DepartmentID column to only have the values that are not equal to two](media/native-query-folding/query-filter.png)
 
-After adding this filter, you can check that the step folding indicators still show the query folding happening at this new step.
+After adding this filter, you can check that the query folding indicators still show the query folding happening at this new step.
 
 ![Filter step shown as folded back to the data source in the applied steps section](media/native-query-folding/filter-step-folded.png)
 
