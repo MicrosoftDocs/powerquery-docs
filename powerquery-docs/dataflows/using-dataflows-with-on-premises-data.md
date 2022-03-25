@@ -142,6 +142,8 @@ There are a few known limitations when using enterprise gateways and dataflows.
 
 - Users with *Can Use* or *Can Use + Share* permissions should be able to leverage existing connections when creating dataflows.
 
+- The following connectors are supported: *DB2, File System, Apache Impala, Informix, MySQL, Oracle Database, PostgreSQL, SAP ERP, SharePoint, SQL Server, Teradata, Desktop flows, HTTP with Azure AD*
+
 ## Troubleshooting
 
 When you attempt to use an on-premises data source to publish a dataflow, you might come across the following MashupException error:
