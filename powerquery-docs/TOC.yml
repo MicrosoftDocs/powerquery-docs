@@ -226,6 +226,10 @@
           href: dataflows/load-dataflow-metadata-into-excel-online.md
         - name: "Use a Power BI dataset to build a dataflows monitoring report"
           href: dataflows/load-dataflow-metadata-into-power-bi-dataset.md
+      - name: Monitor dataflows
+        items: 
+          - name: Monitor your dataflow refreshes with Power BI
+            href: dataflows/monitor-dataflow-refreshes.md
       - name: Troubleshooting dataflows
         items: 
         - name: "Creating dataflows"
@@ -260,7 +264,7 @@
           href: QueryDiagnosticsFolding.md
       - name: "Why does my query run multiple times?"
         href: multiple-queries.md
-      - name: "Step Folding Indicators"
+      - name: "Query folding indicators"
         href: step-folding-indicators.md
       - name: "Query plan (Preview)"
         href: query-plan.md
