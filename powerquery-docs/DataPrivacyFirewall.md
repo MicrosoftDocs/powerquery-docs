@@ -13,6 +13,9 @@ LocalizationGroup: reference
 
 # Behind the scenes of the Data Privacy Firewall
 
+>[!NOTE]
+>Privacy levels are currently unavailable in Power Platform dataflows. The product team is working towards re-enabling this functionality in the coming weeks.
+
 If you’ve used Power Query for any length of time, you’ve likely experienced it. There you are, querying away, when you suddenly get an error that no amount of online searching, query tweaking, or keyboard bashing can remedy. An error like:
 
 `Formula.Firewall: Query 'Query1' (step 'Source') references other queries or steps, so it may not directly access a data source. Please rebuild this data combination.`
