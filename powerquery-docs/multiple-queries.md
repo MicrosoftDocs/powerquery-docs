@@ -47,7 +47,7 @@ Similar to the evaluations performed for data privacy, the Power Query editor by
 
 ### Miscellaneous Power Query editor background tasks
 
-Various Power Query editor background tasks can also trigger extra data source requests (for example, step folding analysis, column profiling, the automatic refresh of the 1000-row preview that Power Query triggers after loading results to Excel, and so on).
+Various Power Query editor background tasks can also trigger extra data source requests (for example, query folding analysis, column profiling, the automatic refresh of the 1000-row preview that Power Query triggers after loading results to Excel, and so on).
 
 ## Isolating multiple queries
 
