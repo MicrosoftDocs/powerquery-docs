@@ -138,7 +138,24 @@ There are a few known limitations when using enterprise gateways and dataflows.
 - Dataflows are only supported using enterprise gateways. Personal gateways won't be available for selection in the drop-down lists and settings
     screens.
 
-- Creating new data sources with a gateway in dataflows is only supported for people with *Admins* permissions. *Can use* and *Can use + share* permissions levels aren't currently supported.
+- Creating new data sources with a gateway in dataflows is only supported for people with *Admins* permissions.
+
+- Users with *Can Use* or *Can Use + Share* permissions can use existing connections when creating dataflows.
+
+- The following connectors are supported:
+  - [DB2](/connectors/db2/)
+  - [File System](/connectors/filesystem/)
+  - [Apache Impala](/connectors/impala/)
+  - [Informix](/connectors/informix/)
+  - [MySQL](/connectors/mysql/)
+  - [Oracle Database](/connectors/oracle/)
+  - [PostgreSQL](/connectors/postgresql/)
+  - [SAP ERP](/connectors/saperp/)
+  - [SharePoint](/connectors/sharepointonline/)
+  - [SQL Server](/connectors/sql/)
+  - [Teradata](/connectors/teradata/)
+  - [Desktop flows](/connectors/uiflow/)
+  - [HTTP with Azure AD](/connectors/webcontents/)
 
 ## Troubleshooting
 
