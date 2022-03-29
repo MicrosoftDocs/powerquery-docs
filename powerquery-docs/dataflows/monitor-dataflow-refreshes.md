@@ -34,6 +34,20 @@ To set up your monitoring dashboard for dataflow refresh history:
     * Table monitoring
 1. From this point on, you can change the dashboard however you like and publish it to a workspace of your choice.
 
+## Where to find the dataverse tables?
+
+The new tables are available in your environment right away. To find the tables in your environment; do the following:
+
+1. Navigate to [Power Apps](https://make.powerapps.com/).
+1. Open the Dataverse tables overview:    
+![Image of navigating to dataverse section.](media/refreshhistory-dashboard/tables-tab.PNG)
+1. Navigate to the managed tables section:    
+![Image of selecting the managed table section.](media/refreshhistory-dashboard/managed-tables.PNG)
+1. Scroll down to the dataflow refresh history tables:    
+![Image of the 2 dataverse tables containing refresh history.](media/refreshhistory-dashboard/Refresh-History-Tables.PNG)
+
+To use these tables, we suggest you to use Power BI to get data via the Dataverse connector.
+
 ## Power BI dataflows monitoring
 
 When working with Power BI dataflows, you might want to check out the following pages for setting up your monitoring solution:
@@ -41,3 +55,7 @@ When working with Power BI dataflows, you might want to check out the following 
 * [Use Dataverse to build a dataflows monitoring report](./load-dataflow-metadata-into-dataverse-table.md)
 * [Use a Power BI dataset to build a dataflows monitoring report](./load-dataflow-metadata-into-power-bi-dataset.md)
 * [Use Excel to build a dataflows monitoring report](./load-dataflow-metadata-into-excel-online.md)
+
+## Known issues
+
+* In some cases when you try to connect via Power BI to the Dataverse tables manually; the tables appear to be empty. To solve this issue just refresh the preview and you should be good to go.
