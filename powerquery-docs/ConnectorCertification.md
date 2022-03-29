@@ -116,6 +116,7 @@ The connector must follow a set of feature and style rules to meet a usability s
    * Provide [function documentation metadata](HandlingDocumentation.md).
    * Have [TestConnection handler](HandlingGatewaySupport.md).
    * Follow naming conventions (for example, `DataSourceKind.FunctionName`). It should not include words like "Power BI", "Connector" or "API". 
+   * Have the Beta flag set to True on initial release
 
 * The ```FunctionName``` should make sense for the domain (for example "Contents", "Tables", "Document", "Databases", and so on).
 
