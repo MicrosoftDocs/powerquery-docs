@@ -34,19 +34,24 @@ To set up your monitoring dashboard for dataflow refresh history:
     * Table monitoring
 1. From this point on, you can change the dashboard however you like and publish it to a workspace of your choice.
 
-## Where to find the dataverse tables?
+## Where to find the Dataverse tables
 
-The new tables are available in your environment right away. To find the tables in your environment; do the following:
+The new tables are available in your environment right away. To find the tables in your environment, do the following steps:
 
 1. Navigate to [Power Apps](https://make.powerapps.com/).
-1. Open the Dataverse tables overview:    
-![Image of navigating to dataverse section.](media/refreshhistory-dashboard/tables-tab.PNG)
-1. Navigate to the managed tables section:    
-![Image of selecting the managed table section.](media/refreshhistory-dashboard/managed-tables.PNG)
-1. Scroll down to the dataflow refresh history tables:    
-![Image of the 2 dataverse tables containing refresh history.](media/refreshhistory-dashboard/Refresh-History-Tables.PNG)
+1. Open the Dataverse tables overview.
 
-To use these tables, we suggest you to use Power BI to get data via the Dataverse connector.
+   ![Image of navigating to Dataverse section.](media/refreshhistory-dashboard/tables-tab.PNG)
+
+1. Navigate to the managed tables section.
+
+   ![Image of selecting the managed table section.](media/refreshhistory-dashboard/managed-tables.PNG)
+
+1. Scroll down to the dataflow refresh history tables.
+
+   [![Image of the two Dataverse tables containing refresh history.](media/refreshhistory-dashboard/Refresh-History-Tables.PNG)](media/refreshhistory-dashboard/Refresh-History-Tables.PNG#lightbox)
+
+To use these tables, we suggest that you use Power BI to get data through the Dataverse connector.
 
 ## Power BI dataflows monitoring
 
@@ -58,4 +63,4 @@ When working with Power BI dataflows, you might want to check out the following 
 
 ## Known issues
 
-* In some cases when you try to connect via Power BI to the Dataverse tables manually; the tables appear to be empty. To solve this issue just refresh the preview and you should be good to go.
+In some cases when you try to connect to the Dataverse tables manually through Power BI, the tables might appear to be empty. To solve this issue, just refresh the preview and you should be good to go.
