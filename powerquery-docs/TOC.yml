@@ -300,6 +300,8 @@
         href: Connectors/Anaplan.md
       - name: "AssembleViews"
         href: Connectors/AssembleViews.md
+      - name: "Autodesk Construction Cloud (Beta)"
+        href: Connectors/AutodeskConstructionCloud.md
       - name: "Automy Data Analytics (Beta)"
         href: "Connectors/AutomyDataAnalytics.md"
       - name: "Azure SQL database"
