@@ -26,7 +26,9 @@ To set up your monitoring dashboard for dataflow refresh history:
 1. Copy the **Instance url**, which should look something like `contoso.crm.dynamics.com`.
 1. Download the [Power BI Template](https://download.microsoft.com/download/f/1/9/f195fb57-495a-4487-9317-fe00816afd88/dataflow%20refresh%20history%20metrics%20template.pbit).
 1. Open the template file with Power BI Desktop and provide your instance URL.
+
     ![Image of a screen to input your dataverse org URL.](media/refreshhistory-dashboard/template-parameter.PNG)
+
 1. Select **Load**.
 1. If this is the first time you've used this dashboard, you might need to enter your credentials to sign in.
 1. Inside the dashboard, you'll find two tabs with information about errors, duration, and the count of rows that were inserted, upserted, or failed:
