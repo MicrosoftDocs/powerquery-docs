@@ -58,7 +58,7 @@ To connect to Autodesk Construction Cloud data:
 
 7. In **Navigator**, expand the Account you want to pull data from, select the desired tables, and then either select **Load** to load the data or **Transform Data** to continue transforming the data in the Power Query editor.
 
-  ![Navigate to data tables and load or transform data.](./media/autodesk-construction-cloud/acc-table-selection.png)
+   ![Navigate to data tables and load or transform data.](./media/autodesk-construction-cloud/acc-table-selection.png)
   
 ## Connect using Autodesk provided Power BI Templates
 
