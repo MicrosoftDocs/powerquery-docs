@@ -375,7 +375,7 @@
         - name: "OData Feed connector"
           href: Connectors/ODataFeed.md
         - name: "Connecting to Azure DevOps using OData"
-          href: /azure/devops/report/powerbi/odataquery-connect?view=azure-devops
+          href: /azure/devops/report/powerbi/odataquery-connect
       - name: "ODBC"
         href: Connectors/Odbc.md
       - name: "OpenSearch Project (Beta)"
