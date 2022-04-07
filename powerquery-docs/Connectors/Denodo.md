@@ -51,6 +51,26 @@ To make the connection, take the following steps:
 
    ![Denodo connector dialog.](./media/denodo/DenodoConnector.png)
 
+    When creating a Denodo-compatible connection string, we must take into account that the **Driver** field must be omitted, as this is transparently set at connection time by the connector itself.
+
+    The connection string must contain three mandatory parameters: **SERVER**, **PORT** and **DATABASE**:
+
+        SERVER=<Server name>;PORT=<Port number>;DATABASE=<Database name>
+
+    Additionally, it can contain an optional parameter: **SSLmode**:
+
+        SERVER=<Server name>;PORT=<Port number>;DATABASE=<Database name>;SSLmode=<SSL mode>
+
+    Authentication parameters must be omitted, as authentication is configured in later steps.
+
+>[!Note]
+> When writing the connection string, it must be taken into account: 
+> 1. The connection string must keep the correct order of its parameters: SERVER, PORT, DATABASE and SSLMode. 
+> 2. The name of these parameters must always be written in the same way. For example, if you choose to write them in upper case, they must always be written in upper case; if you decide to write them capitalized (writing the first letter of a word in uppercase and the rest of the letters in lowercase) they must always be written that way.
+> 
+> Doing otherwise could prevent Power BI from recognizing different Denodo datasets in a report as belonging to the same Denodo data source and, as a consequence, request separate authentication credentials for each of them.
+
+
 3. The second section, **Enable debug mode**, is an optional field that allows you to add trace information to log files. These files are created by Power BI Desktop when you enable tracing in the application using the **Diagnostics** tab in the **Options** menu. Note that the default value for **Enable debug mode** is false, and in this scenario, there will be no trace data in the log files from Denodo Power BI custom connector.
 
 4. The last section in **Denodo Connector** is **Data connectivity mode**, where you can choose between Import mode or DirectQuery mode.
