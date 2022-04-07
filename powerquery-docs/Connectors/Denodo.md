@@ -59,7 +59,7 @@ To make the connection, take the following steps:
 
 6. Before showing the navigator window that displays a preview of the available data in Denodo Virtual DataPort, you'll be asked for authentication. The Denodo Power BI custom connector supports two authentication types: Windows and Basic.
 
-   * **Windows**: When you decide to use Windows authentication, Power BI Desktop connects to Virtual DataPort using Kerberos authentication.
+   * **Windows**: When you choose to use Windows authentication, Power BI Desktop connects to Virtual DataPort using Kerberos authentication.
 
       ![Denodo Windows authentication in Power BI Desktop.](./media/denodo/DenodoWindowsAuthentication.png)
 
@@ -104,7 +104,7 @@ To make the connection, take the following steps:
       * Using a connection string
 
    You also have to specify the authentication mode. The available authentication methods are:
-      * **Windows**: When you decide to use Windows authentication, Power BI service connects to Virtual DataPort using Kerberos authentication. You need:
+      * **Windows**: When you choose to use Windows authentication, Power BI service connects to Virtual DataPort using Kerberos authentication. You need:
          * In **Data Source Settings**, enter the username and password to create the Kerberos ticket.
          * Kerberos authentication is enabled in the Virtual DataPort server.
          * The Denodo Virtual DataPort database that the DSN connects to must be configured with the option  ODBC/ADO.net authentication type set to Kerberos.
@@ -116,7 +116,7 @@ To make the connection, take the following steps:
 
    ![Denodo SSO using Kerberos.](./media/denodo/DenodoSSO.png)
 
-   There are two options for enabling SSO: **Use SSO via Kerberos for DirectQuery queries** and **Use SSO via Kerberos for DirectQuery And Import queries**. If you're working with DirectQuery based reports, both options use the SSO credentials of the user that signs in to the Power BI service. The difference comes when you work with import based reports. In this scenario, the former option uses the credentials entered in the data source page (**Username** and **Password** fields), while the latter uses the credentials of the dataset owner.
+   There are two options for enabling SSO: **Use SSO via Kerberos for DirectQuery queries** and **Use SSO via Kerberos for DirectQuery And Import queries**. If you're working with _DirectQuery_ based reports, both options use the SSO credentials of the user that signs in to the Power BI service. The difference comes when you work with _Import_ based reports. In this scenario, the former option uses the credentials entered in the data source page (**Username** and **Password** fields), while the latter uses the credentials of the dataset owner.
 
    It's important to note that there are particular prerequisites and considerations that you must take into account in order to use the Kerberos-based SSO. Some of these essential requirements are:
 
@@ -124,7 +124,7 @@ To make the connection, take the following steps:
 
      By default, the Microsoft Power BI Gateway sends the user principal name (UPN) when it performs an SSO authentication operation. Therefore, you'll need to review the attribute that you'll use as a login identifier in Denodo Kerberos Authentication and, if it's different from `userPrincipalName`, adjust the gateway settings according to this value.
 
-   * The Microsoft Power BI Gateway configuration file called Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config, stored at \Program Files\On-premises data gateway has two properties called `ADUserNameLookupProperty` and `ADUserNameReplacementProperty` that allow the gateway to perform local Azure AD lookups at runtime. The `ADUserNameLookupProperty` must specify against which attribute of the local AD it must map the user principal name that comes from Azure AD. So, in this scenario, `ADUserNameLookupProperty` should be `userPrincipalName`. Then, once the user is found, the `ADUserNameReplacementProperty` value indicates the attribute that should be used to authenticate the impersonated user (the attribute that you'll use as the login identifier in Denodo).
+   * The Microsoft Power BI Gateway configuration file called `Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config`, stored at `\Program Files\On-premises data gateway` has two properties called `ADUserNameLookupProperty` and `ADUserNameReplacementProperty` that allow the gateway to perform local Azure AD lookups at runtime. The `ADUserNameLookupProperty` must specify against which attribute of the local AD it must map the user principal name that comes from Azure AD. So, in this scenario, `ADUserNameLookupProperty` should be `userPrincipalName`. Then, once the user is found, the `ADUserNameReplacementProperty` value indicates the attribute that should be used to authenticate the impersonated user (the attribute that you'll use as the login identifier in Denodo).
 
      You should also take into account that changes in this configuration file are at the gateway level, and therefore will affect any source with which SSO authentication is done through the Microsoft Power BI Gateway.
 
