@@ -65,15 +65,15 @@ To make the connection, take the following steps:
 
       In this case:
 
-      * Kerberos authentication is enabled in the Virtual DataPort server.
+      * Kerberos authentication must be enabled in the Virtual DataPort server.
 
-      * The Denodo Virtual DataPort database that the DSN connects to must be configured with the option ODBC/ADO.net authentication type set to Kerberos.
+      * The Denodo Virtual DataPort database that the data source connects to must be configured with the option **ODBC/ADO.net authentication type** set to **Kerberos**.
 
-      * The client, Power BI Desktop, has to belong to the Windows domain because the ODBC driver requests the Kerberos ticket to the ticket cache.
+      * Power BI Desktop must be running in the Windows domain, because the ODBC driver requests the Kerberos ticket from the operating system's ticket cache.
 
-      * In the advanced options of the DSN configuration, consider the type of authentication you want to use.
+      * Make sure the **Advanced Options** page of the DSN configuration contains all the needed configuration for using Kerberos as an authentication method.
 
-        ![Denodo Windows authentication for Power Query Desktop in the advanced options.](./media/denodo/DenodoAdvancedOptionsDSN.png)
+        ![Advanced Options page at the Denodo DSN configuration.](./media/denodo/DenodoAdvancedOptionsDSN.png)
 
    * **Basic**: This authentication type allows you to connect Power BI Desktop to your Virtual DataPort data using your Virtual DataPort server credentials.
 
@@ -106,10 +106,10 @@ To make the connection, take the following steps:
    You also have to specify the authentication mode. The available authentication methods are:
       * **Windows**: When you choose to use Windows authentication, Power BI service connects to Virtual DataPort using Kerberos authentication. You need:
          * In **Data Source Settings**, enter the username and password to create the Kerberos ticket.
-         * Kerberos authentication is enabled in the Virtual DataPort server.
-         * The Denodo Virtual DataPort database that the DSN connects to must be configured with the option  ODBC/ADO.net authentication type set to Kerberos.
-         * In the advanced options of the DSN configuration, consider the type of authentication you want to use.
-         ![Denodo windows authentication in Power Query Online](./media/denodo/DenodoAdvancedOptionsDSN.png)
+         * Kerberos authentication must be enabled in the Virtual DataPort server.
+         * The Denodo Virtual DataPort database that the data source connects to must be configured with the option **ODBC/ADO.net authentication type** set to **Kerberos**.
+         * Make sure the **Advanced Options** page of the DSN configuration contains all the needed configuration for using Kerberos as an authentication method.
+           ![Advanced Options page at the Denodo DSN configuration.](./media/denodo/DenodoAdvancedOptionsDSN.png)
       * **Basic**: This authentication type allows you to create a data source in Power BI service to connect to your Virtual DataPort data using your Virtual DataPort server credentials.
 
 4. If you use Windows authentication, under **Advanced settings** for the data source you can enable the single sign-on (SSO) authentication schema in order to use the same credentials of the user accessing your reports in Power BI for accessing the required data in Denodo.
