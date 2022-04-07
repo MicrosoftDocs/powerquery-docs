@@ -47,7 +47,7 @@ To make the connection, take the following steps:
     * Through DSN (ODBC data source name)
     * Using a connection string
 
-   In the **DSN or Connection String** section of the **Connector Denodo** dialog box, provide the **Data source name (DSN)** or the **Connection String** depending on the type of connection you prefer.
+   In the **DSN or Connection String** section of the **Denodo Connector** dialog box, provide the **Data source name (DSN)** or the **Connection String** depending on the type of connection you prefer.
 
    ![Denodo connector dialog.](./media/denodo/DenodoConnector.png)
 
@@ -61,7 +61,7 @@ To make the connection, take the following steps:
 
    * **Windows**: When you decide to use Windows authentication, Power BI Desktop connects to Virtual DataPort using Kerberos authentication.
 
-      ![Denodo Windows authentication in Power Query Desktop.](./media/denodo/DenodoWindowsAuthentication.png)
+      ![Denodo Windows authentication in Power BI Desktop.](./media/denodo/DenodoWindowsAuthentication.png)
 
       In this case:
 
@@ -77,7 +77,7 @@ To make the connection, take the following steps:
 
    * **Basic**: This authentication type allows you to connect Power BI Desktop to your Virtual DataPort data using your Virtual DataPort server credentials.
 
-      ![Denodo basic authentication in Power Query Desktop.](./media/denodo/DenodoBasicAuthentication.png)
+      ![Denodo basic authentication in Power BI Desktop.](./media/denodo/DenodoBasicAuthentication.png)
 
 7. Once you're done, select **Connect**.
 
@@ -97,7 +97,7 @@ To make the connection, take the following steps:
 
 3. Using the gateway settings page in Power BI service, create a data source for the Denodo Power BI custom connector.
 
-   ![Add Denodo Data source.](./media/denodo/DataSourceSettinsSelectDenodo.png)
+   ![Add Denodo Data source.](./media/denodo/DataSourceSettingsSelectDenodo.png)
 
    In order to create the data source, you have to specify the way to connect to the data source of your choice:
       * Through DSN
@@ -114,7 +114,7 @@ To make the connection, take the following steps:
 
 4. If you use Windows authentication, under **Advanced settings** for the data source you can enable the single sign-on (SSO) authentication schema in order to use the same credentials of the user accessing your reports in Power BI for accessing the required data in Denodo.
 
-   ![Denodo SSO using kerberos.](./media/denodo/DenodoSSO.png)
+   ![Denodo SSO using Kerberos.](./media/denodo/DenodoSSO.png)
 
    There are two options for enabling SSO: **Use SSO via Kerberos for DirectQuery queries** and **Use SSO via Kerberos for DirectQuery And Import queries**. If you're working with DirectQuery based reports, both options use the SSO credentials of the user that signs in to the Power BI service. The difference comes when you work with import based reports. In this scenario, the former option uses the credentials entered in the data source page (**Username** and **Password** fields), while the latter uses the credentials of the dataset owner.
 
@@ -129,7 +129,7 @@ To make the connection, take the following steps:
      You should also take into account that changes in this configuration file are at the gateway level, and therefore will affect any source with which SSO authentication is done through the Microsoft Power BI Gateway.
 
 5. Once a data source is created for the Denodo connector, you can refresh Power BI reports. To publish a report on powerbi.com, you need to:
-   * Open the report in Power Query Desktop.
+   * Open the report in Power BI Desktop.
    * Select **File** > **Publish** > **Publish to Power BI**.
    * Save the report on the computer.
    * Select the workspace where you want to publish.
