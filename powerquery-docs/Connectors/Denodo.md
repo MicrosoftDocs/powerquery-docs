@@ -27,7 +27,7 @@ LocalizationGroup: reference
 
 ## Prerequisites
 
-To use this connector, you must have installed the Denodo platform, and configured and started its service. In case of a connection using ODBC, you must have correctly configured the connection in the ODBC Data Source Administrator.
+To use this connector, you must have installed the Denodo platform, and configured and started its service. In case of a connection using an ODBC DSN, you must have correctly configured the connection in the ODBC Data Source Administrator.
 
 ## Capabilities supported
 
