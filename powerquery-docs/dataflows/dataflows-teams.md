@@ -101,7 +101,7 @@ Supported data sources in dataflows in Teams are:
 * Web API
 
 > [!NOTE]
-> Dataflows in Teams don't support non-premises data sources, such as on premises file locations.
+> Dataflows in Teams don't support on-premises data sources, such as on premises file locations.
 
 The following table lists the major feature differences between dataflows for Dataverse in Teams and dataflows for Dataverse.
 
