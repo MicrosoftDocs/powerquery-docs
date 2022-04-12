@@ -4,7 +4,7 @@ description: Provides basic information, prerequisites, and instructions on how 
 author: dougklopfenstein
 
 ms.topic: conceptual
-ms.date: 3/2/2022
+ms.date: 4/12/2022
 ms.author: dougklo
 ms.reviewer: kvivek
 LocalizationGroup: reference
@@ -19,7 +19,6 @@ LocalizationGroup: reference
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
 | Authentication Types Supported | Amazon Redshift<br />Basic<br/>Microsoft account<br/>Organizational account |
-| | |
 
 >[!Note]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
@@ -102,7 +101,6 @@ The following table describes all of the advanced options you can set in Power Q
 | Provider Name | Provides an Amazon Resource Name (ARN), which uniquely identifies AWS resources. |
 | Batch size | Specifies the maximum number of rows to retrieve at a time from the server when fetching data. A small number translates into more calls to the server when retrieving a large dataset. A large number of rows may improve performance, but could cause high memory usage. The default value is 100 rows. |
 | SQL Statement | For information, go to [Import data from a database using native database query](../native-database-query.md). This option is only available in Power BI Desktop. |
-| | |
 
 ## Enable Azure AD Single Sign-On (SSO) for Amazon Redshift
 
