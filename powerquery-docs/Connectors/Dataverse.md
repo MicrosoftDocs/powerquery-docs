@@ -174,7 +174,7 @@ Instead of using these connectors to access large datasets, we recommend that yo
 
 ### Performance issues related to relationship columns
 
-Similar to the SQL Server connector, there is an option available to disable Navigation properties (relationship columns) in the Dataverse connector. This is not yet available in the user interface, but can be leveraged using the `CreateNavigationProperties=false` parameter in the Dataverse connector function. 
+Similar to the SQL Server connector, there is an option available to disable Navigation properties (relationship columns) in the Dataverse connector to improve performance. This is not yet available in the user interface, but can be leveraged using the `CreateNavigationProperties=false` parameter in the Dataverse connector function. 
 
 ```
  Source = CommonDataService.Database("{crminstance}.crm.dynamics.com",[CreateNavigationProperties=false]),
