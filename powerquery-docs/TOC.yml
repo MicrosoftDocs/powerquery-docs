@@ -28,6 +28,8 @@
         href: power-query-ui.md
       - name: "Using the Applied Steps list"
         href: applied-steps.md
+      - name: "Global search box (Preview)"
+        href: search-box.md
       - name: "Query folding basics"
         href: query-folding-basics.md
       - name: "Query folding examples"
