@@ -1,10 +1,10 @@
 ---
 title: Using custom functions in Power Query
 description: An article on how to create custom functions in Power Query
-author: ptyx507
+author: ptyx507x
 
 ms.reviewer: 
-ms.date: 08/31/2020
+ms.date: 04/13/2022
 ms.author: dougklo
 ms.custom: intro-internal
 ---
@@ -16,7 +16,7 @@ While you can manually create your own Power Query custom function using code as
 This article focuses on this experience provided only through the Power Query user interface and how to get the most out of it.
 
 > [!IMPORTANT]
-> This article outlines how to create a custom function with Power Query using common transforms accessible in the Power Query user interface. It focuses on the core concepts to create custom functions, and links to additional articles in Power Query documenation for more information on specific transforms that are referenced in this article.
+> This article outlines how to create a custom function with Power Query using common transforms accessible in the Power Query user interface. It focuses on the core concepts to create custom functions, and links to additional articles in Power Query documentation for more information on specific transforms that are referenced in this article.
 
 ## Create a custom function from a table reference
 
