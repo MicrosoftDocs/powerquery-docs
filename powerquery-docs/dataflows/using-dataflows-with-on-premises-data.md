@@ -92,6 +92,13 @@ You can change the enterprise gateway used for a given dataflow and change the g
 
 2. To add a user to the gateway, select the **Administrators** table and enter the email address of the user you would like to add as an administrator.Creating or modifying data sources in dataflows requires Admin permissions to the gateway. Admins have full control of the gateway, including adding users, setting permissions, creating connections to all available data sources, and deleting the gateway.
 
+> [!NOTE]
+> 1.	If we detect that an existing data source is available for the selected gateway, the Username and Password fields will be pre-populated 
+<br> a.	If the user presses Next at this point, the user is considered to be using that existing data source, and so they only need to have permissions to that data source
+<br> b.	If the user edits any of the credential fields and presses Next, then the user is considered to be editing that existing data source, at which point they need to be an admin of the gateway
+> 2.	If we don't detect that an existing data source is available for the selected gateway, the Username and Password fields will be blank, and if the user edits the credential fields and presses Next, then the user is considered to be creating a new data source on the gateway, at which point they need to be an admin of the gateway. <br>
+> - If the user has data source user permission on the gateway, then 1.b and 2 cant be achieved hence dataflow cant be created. 
+
 ### Power Apps gateway permissions
 
 1. In the left navigation pane of [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Gateways** and then select the gateway you want.
