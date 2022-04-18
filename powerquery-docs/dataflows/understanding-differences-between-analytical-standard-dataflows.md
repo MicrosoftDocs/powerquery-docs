@@ -55,7 +55,7 @@ You can create analytical dataflows in Power BI. By default, they'll load data t
 
 ![Creating an analytical dataflow in Power BI.](media/analytical-standard-dataflows/create-analytical-dataflow-powerbi.png) 
 
-You can also create analytical dataflows in Power Apps and Dynamics 365 customer insights portals. When you're creating a dataflow in Power Apps portal, you can choose between Dataverse manages analytical storage or in your organization’s Azure Data Lake Storage account. 
+You can also create analytical dataflows in Power Apps and Dynamics 365 customer insights portals. When you're creating a dataflow in Power Apps portal, you can choose between Dataverse managed analytical storage or in your organization’s Azure Data Lake Storage account. 
 
 ![Creating Analytical Dataflow in Power Platform.](media/analytical-standard-dataflows/create-analytical-dataflow-power-platform.png) 
 
@@ -92,7 +92,7 @@ The following table lists some differences between a standard entity and an anal
 | Operation               | Standard             | Analytical                    | 
 | --------------------------------- | --- | ------------------------------------------------------------ | 
 | How to create                     | Power Platform dataflows | Power BI dataflows<br />Power Platform dataflows by selecting the **Analytical Entity** checkbox when creating the dataflow | 
-| Storage options                   | Dataverse      | Azure Data Lake Storage internal for the Power BI dataflows<br />Azure Data Lake Storage external attached to the Power BI or Power Platform dataflows | 
+| Storage options                   | Dataverse      |Power BI provided Azure Data Lake storage for Power BI dataflows, Dataverse provided Azure Data Lake storage for Power Platform dataflows, or customer provided Azure Data Lake storage| 
 | Power Query transformations       | Yes             |Yes                                                          | 
 | AI functions                      | No              | Yes                                                          | 
 | Computed entity                   | No              | Yes                                                          | 

@@ -39,9 +39,11 @@ This option will effectively create a new query with a navigation step directly 
 ![File parameter.](images/me-custom-function-file-parameter.png)
 
 >[!NOTE]
->We recommend that you read the article on [Parameters](power-query-query-parameters.md) to better understand how to create and manage parameters in Power Query.
+> We recommend that you read the article on [Parameters](power-query-query-parameters.md) to better understand how to create and manage parameters in Power Query.
 >
 >Custom functions can be created using any parameters type. There's no requirement for any custom function to have a binary as a parameter.
+>
+>The binary parameter type is only displayed inside the **Parameters** dialog **Type** dropdown menu when you have a query that evaluates to a binary.
 >
 >It's possible to create a custom function without a parameter. This is commonly seen in scenarios where an input can be inferred from the environment where the function is being invoked. For example, a function that takes the environment's current date and time, and creates a specific text string from those values.  
 
