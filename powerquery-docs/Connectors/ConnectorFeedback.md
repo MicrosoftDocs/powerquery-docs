@@ -26,8 +26,8 @@ If you're finding an issue with a Power Query connector, use the dedicated suppo
 
 If you're seeking help with using Microsoft-owned Power Query connectors, visit one of the following resources.
 
-* Community forums for the product you're using Power Query in. For example, for Power BI, this forum would be the [Power BI Community](https://community.powerbi.com/t5/Power-Query/bd-p/power-bi-services) and for PowerPlatform dataflows, the forum would be [Power Apps Community](https://powerusers.microsoft.com/t5/Power-Query/bd-p/PA_PowerQuery)
-* [Power Query website resources](https://powerquery.microsoft.com/resources/)
+* Community forums for the product you're using Power Query in. For example, for Power BI, this forum would be the [Power BI Community](https://community.powerbi.com/t5/Power-Query/bd-p/power-bi-services) and for PowerPlatform dataflows, the forum would be [Power Apps Community](https://powerusers.microsoft.com/t5/Power-Query/bd-p/PA_PowerQuery).
+* [Power Query website resources](https://powerquery.microsoft.com/resources/).
 
 ### Submitting feedback
 
