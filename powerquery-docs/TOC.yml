@@ -334,7 +334,7 @@
         href: Connectors/Essbase.md
       - name: "Excel"
         href: Connectors/Excel.md
-      - name: "FactSet RMS"
+      - name: "FactSet RMS (Beta)"
         href: Connectors/FactSetRMS.md
       - name: "FHIR"
         items:
