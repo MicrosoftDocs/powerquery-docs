@@ -4,7 +4,7 @@ description: Instructions for submitting a Power Query custom connector for cert
 author: bezhan-msft
 
 ms.topic: conceptual
-ms.date: 03/01/2020
+ms.date: 4/14/2022
 ms.author: bezhan
 
 LocalizationGroup: reference
@@ -14,7 +14,7 @@ LocalizationGroup: reference
 
 ## Introduction
 
-This article provides instructions for how to submit your Power Query custom connector for certification. Do not submit your connector for certification unless you've been directed to by your Microsoft contact.
+This article provides instructions for how to submit your Power Query custom connector for certification. Don't submit your connector for certification unless you've been directed to by your Microsoft contact.
 
 ## Prerequisites
 
@@ -26,23 +26,24 @@ The Connector Certification Portal is an experience within [ISV Studio](https://
 
 ### Initial Submission
 
-1. Navigate to [ISV Studio](https://aka.ms/ISVStudio) and log in with your work Microsoft account. Personal accounts aren't supported in this experience.
+1. Navigate to [ISV Studio](https://aka.ms/ISVStudio) and sign in with your work Microsoft account. Personal accounts aren't supported in this experience.
 
 2. Select the **Connector certification** tab on the left to launch the Connector Certification Portal experience.
 
 3. Select **Power Query** as your connector type.
 
-4. Read and agree to our connector Partner Agreement. If there is a separate agreement governing the relationship between your organization and Microsoft, let your Microsoft contact know.
+4. Read and agree to our connector Partner Agreement. If there's a separate agreement governing the relationship between your organization and Microsoft, let your Microsoft contact know.
 
-5. Upload your `.mez` file and complete the form with information on your connector. Submit the form to finish the connector submission process. Once submitted, you can use the Activity Control experience on the right to communicate with your Microsoft contact. 
+5. Upload your `.mez` file and complete the form with information on your connector. Submit the form to finish the connector submission process. Once submitted, you can use the Activity Control experience on the right to communicate with your Microsoft contact.
 
-6. Read the guidelines for providing [documentation](./providing-user-documentation.md) for your custom connector. Create a Markdown (`.md`) file following the custom connector documentation guidelines, leveraging examples from existing documentation if needed. This step is crucial to ensure users know how to use your connector. Once complete, create a .zip archive with the Markdown (`.md`) file and supporting images, and email it to your Microsoft contact. 
+6. Read the guidelines for providing [documentation](./providing-user-documentation.md) for your custom connector. Create a Markdown (`.md`) file following the custom connector documentation guidelines, using examples from existing documentation if needed. This step is crucial to ensure users know how to use your connector. Once complete, create a .zip archive with the Markdown (`.md`) file and supporting images, and email it to your Microsoft contact.
 
-7. In the Activity Control, share a paragraph introducing your connector and explaining its value proposition to users and customers. This entry will be submitted as part of the Power BI blog in the upcoming month's post, announcing the release of your connector. 
+7. In the Activity Control, share a paragraph introducing your connector and explaining its value proposition to users and customers. This entry will be submitted as part of the Power BI blog in the upcoming month's post, announcing the release of your connector.
 
 **Note that we need you to complete all the steps in order to move forward with certification.** If you would like to add teammates to manage your connector, let your Microsoft contact know.
 
-After your connector code review is complete, our team will schedule a demo for your team to walk us through the connector experience. We will be validating the following scenarios:
+After your connector code review is complete, our team will schedule a demo for your team to walk us through the connector experience. We'll be validating the following scenarios:
+
 * You can successfully connect to the service.
 * Your connector correctly displays navigation tables.
 * Your connector correctly authenticates with the expected authentication method.
@@ -54,13 +55,13 @@ Ensure that these scenarios are working successfully before the demo so that the
 
 ### Updates
 
-Updates to your connector submission can be made at any time, except when your connector is in the process of production deployment. When you are submitting an update, ensure that you submit an update to your existing submission, rather than creating a new submission.
+Updates to your connector submission can be made at any time, except when your connector is in the process of production deployment. When you're submitting an update, ensure that you submit an update to your existing submission, rather than creating a new submission.
 
 1. Navigate to the **Connector certification** experience within [ISV Studio](https://aka.ms/ISVStudio).
 
 2. From the list of connectors you manage, select the connector submission to view its connector versions.
 
-3. For an update to a certified connector, select the link to submit a new version in the panel on the right, on top of the existing connector versions. For an update to an existing connector version undergoing certification, select the most recent connector version and on the bottom left, select the **Submit an update** button. 
+3. For an update to a certified connector, select the link to submit a new version in the panel on the right, on top of the existing connector versions. For an update to an existing connector version undergoing certification, select the most recent connector version and on the bottom left, select the **Submit an update** button.
 
 4. You can upload a new version of artifacts and complete the submission form again.
 
