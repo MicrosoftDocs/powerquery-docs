@@ -2,7 +2,7 @@
 title: List of all Power Query connectors
 description: List of all currently available Power Query connectors
 author: DougKlopfenstein
-ms.service: powerquery
+
 ms.date: 2/10/2022
 ms.author: bezhan
 ms.custom: intro-internal
