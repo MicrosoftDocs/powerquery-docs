@@ -50,6 +50,7 @@ First, download the Dataverse [.pbit file](https://download.microsoft.com/downlo
 
 4. Select **Add column** to repeat adding columns for the following values:
 
+   * **Display name**: "Dataflow Id", **Data type**: Text, **Required**: Required.
    * **Display name**: "Refresh Status", **Data type**: Text, **Required**: Required.
    * **Display name**: "Refresh Type", **Data type**: Text, **Required**: Required.
    * **Display name**: "Start Time", **Data type**: Date and Time, **Required**: Required.
