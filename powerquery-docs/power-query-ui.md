@@ -279,7 +279,7 @@ To access the inline Power Query help information in Excel, select the **Help** 
 
 There's a **Help** tab in the Power Query editor running on Power BI Desktop, but at this time all of the options go to locations that supply Power BI information. You can also reach this same Power BI **Help** information in the Power Query editor in Power BI Desktop by selecting **File** > **Help**, and then selecting one of the help options.
 
-### Power Query help in Power BI service, Power Apps, and Customer Insights
+### Power Query help in Power BI service, Power Apps, Customer Insights, and Azure Data Factory
 
 The Power Query **Help** tab in Power BI service, Power Apps, Dynamics 365 Customer Insights, and Azure Data Factory contains links to important sources of information about Power Query.
 
@@ -311,7 +311,7 @@ In addition to the Power Query help functions listed in the previous sections, y
    1. If you are using Power Query Desktop, in the **Query Settings** pane, under **Properties**, select **All properties**.
    1. If you are using Power Query Online, in the **Query Settings** pane, select **Properties**.
 
-These steps will open the inline help information, and let you enter individual properties used by the function you entered in the formula bar.
+These steps will open the inline help information for your selected function, and let you enter individual properties used by the function.
 
 [![Image the Date.AddDays M function description and syntax, along with entry points for each of the function's parameters.](media/power-query-ui/m-inline-help.png)](media/power-query-ui/m-inline-help.png#lightbox)
 
@@ -321,4 +321,4 @@ In this article, you created a series of queries with Power Query that provides 
 
 You learned the components of the Power Query user interface, how to create new queries inside the query editor, reference queries, merge queries, understand the applied steps section, add new columns, and how to use the data profiling tools to better understand your data.
 
-Power Query is a powerful tool used to connect to many different data sources and transform the data into the shape you want. The scenarios outlined in this article are examples to show how users can use Power Query to transform raw data into important actionable business insights.
+Power Query is a powerful tool used to connect to many different data sources and transform the data into the shape you want. The scenarios outlined in this article are examples to show you how you can use Power Query to transform raw data into important actionable business insights.

@@ -26,7 +26,7 @@ You can also use any of the following community resources:
 * Community forums for the product you're using Power Query in. For example, for Power BI, this forum would be the [Power BI Community](https://community.powerbi.com/t5/Power-Query/bd-p/power-bi-services)
 * [Power Query website resources](https://powerquery.microsoft.com/resources/)
 
-For information about the built-in Power Query help support links, go to [Getting Power Query help](power-query-ui.md#getting-power-query-help)
+For information about the built-in Power Query help support links, go to [Getting Power Query help](power-query-ui.md#getting-power-query-help).
 
 ## Submitting feedback
 
