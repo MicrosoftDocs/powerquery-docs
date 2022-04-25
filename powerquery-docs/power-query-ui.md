@@ -265,7 +265,7 @@ If you want to observe the code that the Power Query editor is creating with eac
 
 You can directly edit the code in the **Advanced Editor** window. The editor indicates if your code is free of syntax errors. To close the window, select the **Done** or **Cancel** button.
 
-## Getting Power Query help
+## Accessing Power Query help
 
 There are various levels of help that can be accessed in the Microsoft apps that use Power Query. This section describes these help levels.
 
