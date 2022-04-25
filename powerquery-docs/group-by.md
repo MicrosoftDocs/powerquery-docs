@@ -5,7 +5,7 @@ description: "In Power Query, you can group or summarize the values in various r
 author: ptyx507x
 ms.service: powerquery
 ms.reviewer: kvivek
-ms.date: 12/20/2021
+ms.date: 4/25/2022
 ms.author: dougklo
 ms.custom: edited
 ---
