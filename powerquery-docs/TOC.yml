@@ -338,8 +338,6 @@
         href: Connectors/Essbase.md
       - name: "Excel"
         href: Connectors/Excel.md
-      - name: "FactSet RMS"
-        href: Connectors/FactSetRMS.md
       - name: "FHIR"
         items:
         - name: Overview
@@ -354,8 +352,6 @@
           href: Connectors/FHIR/FHIR-Relationships.md
       - name: "Folder"
         href: Connectors/Folder.md
-      - name: "Funnel (Beta)"
-        href: Connectors/Funnel.md
       - name: "Google Analytics"
         href: Connectors/GoogleAnalytics.md
       - name: "Google BigQuery"
@@ -381,7 +377,7 @@
         - name: "OData Feed connector"
           href: Connectors/ODataFeed.md
         - name: "Connecting to Azure DevOps using OData"
-          href: /azure/devops/report/powerbi/odataquery-connect?view=azure-devops
+          href: /azure/devops/report/powerbi/odataquery-connect
       - name: "ODBC"
         href: Connectors/Odbc.md
       - name: "OpenSearch Project (Beta)"
