@@ -452,6 +452,8 @@
         href: Connectors/twilio.md
       - name: "Usercube"
         href: Connectors/Usercube.md
+      - name: "Vessel Insight"
+        href: Connectors/VesselInsight.md
       - name: "Web"
         items:
         - name: "Web connector"
