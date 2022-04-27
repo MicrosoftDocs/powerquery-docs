@@ -104,7 +104,7 @@ These input parameters are:
 
 When importing aggregated timeseries, the connector will return avg, min, max, and count by default.
 
-If you're importing multiple tags, it can be cumbersome to input the parameters manually for each tag. In this case, we recommend you use **Power Query parameters** for **Start** and **End** date in the Power Query Editor. More information: [Power Query parameters](power-query-query-parameters.md)
+If you're importing multiple tags, it can be cumbersome to input the parameters manually for each tag. In this case, we recommend you use **Power Query parameters** for **Start** and **End** date in the Power Query Editor. More information: [Power Query parameters](../power-query-query-parameters.md)
 
 ### Voyage
 
