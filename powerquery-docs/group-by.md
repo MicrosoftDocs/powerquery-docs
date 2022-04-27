@@ -81,7 +81,7 @@ The following table describes each of these operations.
 |**All rows**|Row operation|Outputs all grouped rows in a table value with no aggregations|
 
 >[!NOTE]
->The operations *Count distinct values* and *Percentile* are only available in Power Query online.
+>The **Count distinct values** and **Percentile** operations are only available in Power Query Online.
 
 ## Perform an operation to group by one or more columns
 
