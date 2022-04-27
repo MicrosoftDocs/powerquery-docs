@@ -98,9 +98,9 @@ These input parameters are:
   * **Latest**: Get latest value only. Returns one value.
   * **Period**: Filter on the time range. Requires setting the **Start** and **End** date described below.
   * **Custom**: Custom query to filter on the number of values to return.
-* **Start** (Time:Period), for example, **2019-10-08T00:00:00Z** (optional): Filter on range by inserting the start date and time here. Possible to set "yesterday" and "today". Requires setting Time:Period.
-* **End** (Time:Period), for example, **2019-10-08T01:00:00Z** (optional): Filter on range by inserting the end date and time here. Possible to set "today" and "now". Requires setting Time:Period.
-* **Custom** (Time:Custom), for example, **|> takebefore now 5** (optional): Add a custom query to filter on the number of values. "|> takebefore now 5" means take five values before the time now. Requires Time:Custom.
+* **Start (Time: Period), e.g. 2019-10-08T00:00:00Z** (optional): Filter on range by inserting the start date and time here. Possible to set **yesterday** and **today**. Requires setting **Time: Period**.
+* **End (Time: Period), e.g. 2019-10-08T01:00:00Z** (optional): Filter on range by inserting the end date and time here. Possible to set **today** and **now**. Requires setting **Time: Period**.
+* **Custom (Time: Custom), e.g. |> takebefore now 5** (optional): Add a custom query to filter on the number of values. **|> takebefore now 5** means take five values before the time now. Requires **Time: Custom**.
 
 When importing aggregated timeseries, the connector will return avg, min, max, and count by default.
 
@@ -115,8 +115,8 @@ When you import voyage data through the **Voyage** node, you can limit the amoun
 These input parameters are:
 
 * **Comma Separated IMOs**: Input one or multiple IMO numbers you want voyage data for.
-* **Start** (Time:Period), for example, **2019-10-08T00:00:00Z** (optional): Filter on range by inserting the start date and time here. Possible to set "yesterday" and "today". Requires setting Time:Period.
-* **End** (Time:Period), for example, **2019-10-08T01:00:00Z** (optional): Filter on range by inserting the end date and time here. Possible to set "today" and "now". Requires setting Time:Period.
+* **Start (Time: Period), e.g. 2019-10-08T00:00:00Z** (optional): Filter on range by inserting the start date and time here. Possible to set **yesterday** and **today**. Requires setting **Time: Period**.
+* **End (Time: Period), e.g. 2019-10-08T01:00:00Z** (optional): Filter on range by inserting the end date and time here. Possible to set **today** and **now**. Requires setting **Time: Period**.
 
 ## Limitations and issues
 
