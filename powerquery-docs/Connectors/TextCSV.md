@@ -176,7 +176,7 @@ If you're requesting text/csv files from the web and also promoting headers, and
 
 ### Working with large CSV files
 
-If you are dealing with large CSV files in the power query online editor and you receive an Internal Error. We suggest to work with a smaller size CSV file first, apply the steps in the editor and once you are done to change the path to the bigger CSV file. This allows you to work more efficient and reduce your chances to encounter a timeout in the online editor. We expect you will not encounter this error during refresh time, as we allow for a longer timeout time.
+If you're dealing with large CSV files in the Power Query Online editor, you might receive an Internal Error. We suggest you work with a smaller sized CSV file first, apply the steps in the editor, and once you're done, change the path to the bigger CSV file. This method lets you work more efficiently and reduces your chances of encountering a timeout in the online editor. We don't expect you to encounter this error during refresh time, as we allow for a longer timeout duration.
 
 ### Unstructured text being interpreted as structured
 
