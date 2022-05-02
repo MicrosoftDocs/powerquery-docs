@@ -49,7 +49,7 @@ The following Power Query connectors support native database queries.
 | Azure Analysis Services database | MDX or DAX query |
 | Azure Database for PostgreSQL | SQL statement |
 | Azure Cosmos DB | SQL statement |
-| Azure SQL Data Warehouse | SQL statement |
+| Azure Synapse Analytics | SQL statement |
 | Azure SQL database | SQL statement |
 | DataWorld.Dataset | dwSQL |
 | Dataverse | SQL statement |
