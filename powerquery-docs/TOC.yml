@@ -228,6 +228,8 @@
           href: dataflows/load-dataflow-metadata-into-excel-online.md
         - name: "Use a Power BI dataset to build a dataflows monitoring report"
           href: dataflows/load-dataflow-metadata-into-power-bi-dataset.md
+        - name: "Automatically retry a dataflow on failure"
+          href: dataflows/automatically-retry-dataflow.md
       - name: Monitor dataflows
         items: 
           - name: Monitor your dataflow refreshes with Power BI
