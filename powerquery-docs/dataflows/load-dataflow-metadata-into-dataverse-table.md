@@ -33,7 +33,7 @@ First, you'll create a new Dataverse table that stores all the metadata from the
 
 ## Download the .pbit file
 
-First, download the Dataverse [.pbit file](https://download.microsoft.com/download/1/4/E/14EDED28-6C58-4055-A65C-23B4DA81C4DE/dataverse-template.pbit).
+First, download the Dataverse [.pbit file](https://download.microsoft.com/download/1/4/E/14EDED28-6C58-4055-A65C-23B4DA81C4DE/dataverse-template-v2.pbit).
 
 ## Create a new table in Dataverse
 
