@@ -94,13 +94,13 @@ You can change the enterprise gateway used for a given dataflow and change the g
 
 The following conditions apply when adding a user to the gateway:
 
-1. If we detect that an existing data source is available for the selected gateway, the Username and Password fields will be pre-populated.
+1. If we detect that an existing data source is available for the selected gateway, the **Username** and **Password** fields will be pre-populated.
 
-   1. If you select **Next** at this point, you are considered to be using that existing data source, and so you only need to have permissions to that data source.
+   1. If you select **Next** at this point, you're considered to be using that existing data source, and so you only need to have permissions to that data source.
 
-   1. If you edit any of the credential fields and select **Next**, then you are considered to be editing that existing data source, at which point you need to be an admin of the gateway.
+   1. If you edit any of the credential fields and select **Next**, then you're considered to be editing that existing data source, at which point you need to be an admin of the gateway.
 
-2. If we don't detect that an existing data source is available for the selected gateway, the Username and Password fields will be blank, and if you edit the credential fields and select **Next**, then you are considered to be creating a new data source on the gateway, at which point you need to be an admin of the gateway. 
+2. If we don't detect that an existing data source is available for the selected gateway, the **Username** and **Password** fields will be blank, and if you edit the credential fields and select **Next**, then you're considered to be creating a new data source on the gateway, at which point you need to be an admin of the gateway. 
 
 If you only have data source user permission on the gateway, then 1.b and 2 can't be achieved and the dataflow can't be created. 
 
