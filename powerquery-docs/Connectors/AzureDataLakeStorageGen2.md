@@ -1,0 +1,91 @@
+---
+title: Azure Data Lake Storage Gen2
+description: Use Power BI to analyze data stored in Azure Data Lake Storage Gen2
+author: dougklopfenstein
+
+ms.topic: conceptual
+ms.date: 4/29/2022
+ms.author: dougklo
+---
+
+# Azure Data Lake Storage Gen2
+
+## Summary
+ 
+| Item | Description |
+| ---- | ----------- |
+| Release State | General Availability |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Authentication Types Supported | Anonymous<br/>Windows<br/>Basic<br/>Organizational Account |
+| Function Reference Documentation | [AzureStorage.DataLake](/powerquery-m/azurestorage-datalake)<br/>[AzureStorage.DataLakeContents](/powerquery-m/azurestorage-datalakecontents) | |
+| | |
+
+>[!Note]
+> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+
+## Prerequisites
+
+* An Azure subscription. Go to [Get Azure free trial](https://azure.microsoft.com/pricing/free-trial/).
+
+* A storage account that has a hierarchical namespace. Follow the instructions at [Create a storage account](/azure/storage/common/storage-account-create) to create one. This article assumes that you've created a storage account named `myadlsg2`.
+
+* Ensure you're granted one of the following roles for the storage account: **Blob Data Reader**, **Blob Data Contributor**, or **Blob Data Owner**.
+
+* A sample data file named `Drivers.txt` located in your storage account. You can download this sample from [Azure Data Lake Git Repository](https://github.com/Azure/usql/tree/master/Examples/Samples/Data/AmbulanceData/Drivers.txt), and then upload that file to your storage account.
+
+## Connect to Azure Data Lake Storage Gen2 from Power Query Desktop
+
+1. Select the **Azure Data Lake Storage Gen2** option in the **Get Data** selection, and then select **Connect**. More information: [Where to get data](../where-to-get-data.md)
+
+    ![Get data page.](media/azure-data-lake-storage-gen2/get-data-page.png)
+
+2. In the **Azure Data Lake Storage Gen2** dialog box, you can provide the URL to your Azure Data Lake Storage Gen2 account, filesystem, or subfolder using the container endpoint format. URLs for Data Lake Storage Gen2 have the following pattern:
+
+    `https://<accountname>.dfs.core.windows.net/<filesystemname>/<subfolder>`
+
+    You can also select whether you want to use the file system view or the Common Data Model folder view.
+
+    Select **OK** to continue.
+
+    ![URL.](media/azure-data-lake-storage-gen2/adls-url.png)
+
+3. If this is the first time you're using this URL address, you'll be asked to select the authentication method.
+
+   If you select the Organizational account method, select **Sign in** to sign into your storage account. You'll be redirected to your organization's sign in page. Follow the prompts to sign into the account. After you've successfully signed in, select **Connect**.
+
+   If you select the Account key method, enter your account key and then select **Connect**.
+
+    ![Sign in page.](media/azure-data-lake-storage-gen2/sign-in.png)
+
+4. The **Navigator** dialog box shows all files under the URL you provided. Verify the information and then select either **Transform Data** to transform the data in Power Query or **Load** to load the data.
+
+    ![File systems.](media/azure-data-lake-storage-gen2/file-systems.png)
+
+## Connect to Azure Data Lake Storage Gen2 from Power Query Online
+
+1. Select the **Azure Data Lake Storage Gen2** option in the **Get Data** selection, and then select **Connect**. More information: [Where to get data](../where-to-get-data.md)
+
+   ![screenshot](media/azure-data-lake-storage-gen2/adls-url-online.png)
+
+2. Select whether you want to use the file system view or the Common Data Model folder view.
+
+3. If needed, select the on-premises data gateway in **Data gateway**.
+
+4. Select **Sign in** to sign into the Azure Data Lake Storage Gen2 account. You'll be redirected to your organization's sign-in page. Follow the prompts to sign in to the account.
+
+5. After you've successfully signed in, select **Next**.
+
+6. The **Navigator** dialog box shows all files under the URL you provided. Verify the information and then select **Transform Data** to transform the data in Power Query.
+
+   [![screenshot](media/azure-data-lake-storage-gen2/file-systems-online.png)](media/azure-data-lake-storage-gen2/file-systems-online.png#lightbox)
+
+## Limitations
+
+Currently, in Power Query Online, the Azure Data Lake Storage Gen2 connector only supports paths with container, and not subfolder or file. For example, https://\<_accountname_>.dfs.core.windows.net/\<_container_> will work, while https://\<_accountname_>.dfs.core.windows.net/\<_container_>/\<_filename_> or https://\<_accountname_>.dfs.core.windows.net/\<_container_>/\<_subfolder_> will fail.
+
+Microsoft doesn't support dataflow or dataset refresh using OAuth2 authentication when the Azure Data Lake Storage Gen2 (ADLS) account is in a different tenant. This limitation only applies to ADLS when the authentication method is OAuth2, that is, when you attempt to connect to a cross-tenant ADLS using an Azure AD account. In this case, we recommend that you use a different authentication method that is not OAuth2/AAD, such as the Key authentication method.
+
+## See also
+
+[Analyze data in Azure Data Lake Storage Gen2 by using Power BI](DataLakeStorage.md)
+[Introduction to Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction)

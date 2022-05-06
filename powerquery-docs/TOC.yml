@@ -305,7 +305,15 @@
       - name: "Autodesk Construction Cloud (Beta)"
         href: Connectors/AutodeskConstructionCloud.md
       - name: "Automy Data Analytics (Beta)"
-        href: "Connectors/AutomyDataAnalytics.md"
+        href: Connectors/AutomyDataAnalytics.md
+      - name: "Azure Data Lake Storage Gen1"
+        href: Connectors/AzureDataLakeStorageGen1.md
+      - name: "Azure Data Lake Storage Gen 2"
+        items:
+        - name: "Overview"
+          href: Connectors/AzureDataLakeStorageGen2.md
+        - name: "Tutorial"
+          href: Connectors/DataLakeStorage.md
       - name: "Azure SQL database"
         href: Connectors/AzureSQLDatabase.md
       - name: "Azure Synapse Analytics (SQL DW)"
@@ -320,8 +328,6 @@
         href: Connectors/BQECore.md
       - name: "Common Data Service (Legacy)"
         href: ./connectors/commondataservicelegacy.md
-      - name: "Data Lake Storage"
-        href: Connectors/DataLakeStorage.md
       - name: "Dataverse"
         href: Connectors/dataverse.md     
       - name: "Dataflows"
