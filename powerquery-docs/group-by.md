@@ -5,7 +5,7 @@ description: "In Power Query, you can group or summarize the values in various r
 author: ptyx507x
 
 ms.reviewer: kvivek
-ms.date: 12/20/2021
+ms.date: 4/25/2022
 ms.author: dougklo
 ms.custom: edited
 ---
@@ -69,16 +69,19 @@ The following table describes each of these operations.
 
 |Operation Name|Category|Description|
 |-----|------|------|
-|**Sum**|Column operation|Sums up all values from a column of numbers|
-|**Average**|Column operation|Calculates the average value from a column of numbers|
-|**Median**|Column operation|Calculates the median from a column of numbers|
-|**Min**|Column operation|Calculates the minimum value from a column of numbers|
-|**Max**|Column operation|Calculates the maximum value from a column of numbers|
+|**Sum**|Column operation|Sums up all values from a column|
+|**Average**|Column operation|Calculates the average value from a column|
+|**Median**|Column operation|Calculates the median from a column|
+|**Min**|Column operation|Calculates the minimum value from a column|
+|**Max**|Column operation|Calculates the maximum value from a column|
+|**Percentile** |Column operation|Calculates the percentile, using an input value from 0 to 100, from a column|
 |**Count distinct values**|Column operation|Calculates the number of distinct values from a column|
 |**Count rows**|Row operation|Calculates the total number of rows from a given group|
 |**Count distinct rows**|Row operation|Calculates the number of distinct rows from a given group|
 |**All rows**|Row operation|Outputs all grouped rows in a table value with no aggregations|
-| | | |
+
+>[!NOTE]
+>The **Count distinct values** and **Percentile** operations are only available in Power Query Online.
 
 ## Perform an operation to group by one or more columns
 
