@@ -4,7 +4,7 @@ description: Use Power BI to analyze data stored in Azure Data Lake Storage Gen2
 author: bensack
 
 ms.topic: conceptual
-ms.date: 01/29/2020
+ms.date: 6/6/2022
 ms.author: bensack
 ---
 
@@ -32,7 +32,7 @@ Before you begin this tutorial, you must have the following prerequisites:
 
 3. From the Power Query **Navigator**, select **Load**.
 
-    ![File systems.](media/azure-data-lake-storage-gen2/file-systems.png)
+    [![File systems.](media/datalakestorage/file-systems.png)](media/azure-data-lake-storage-gen2/file-systems.png#lightbox)
 
 4. After the data has been successfully loaded into Power BI, you'll see the following fields in the **Fields** tab.
 
@@ -44,13 +44,13 @@ Before you begin this tutorial, you must have the following prerequisites:
 
     In the next steps, you'll update the query to convert the imported data to the desired format.
 
-5. From the **Home** tab on the ribbon, select **Edit Queries**.
+5. From the **Home** tab on the ribbon, select **Transform Data**. The Power Query editor then opens, displaying the contents of the file.
 
-    ![Select edit queries.](media/DataLakeStorage/queries.png)
+    [![Select edit queries.](media/DataLakeStorage/queries.png)](media/DataLakeStorage/queries.png#lightbox)
 
-6. In the **Query Editor**, under the **Content** column, select **Binary**. The file will automatically be detected as CSV and you should see an output as shown below. Your data is now available in a format that you can use to create visualizations.
+6. In the Power Query editor, under the **Content** column, select **Binary**. The file will automatically be detected as CSV and you should see an output as shown below. Your data is now available in a format that you can use to create visualizations.
 
-    ![Output.](media/DataLakeStorage/binary.png)
+    [![Output.](media/DataLakeStorage/binary.png)](media/DataLakeStorage/binary.png#lightbox)
 
 7. From the **Home** tab on the ribbon, select **Close & Apply**.
 
@@ -86,7 +86,7 @@ Before you begin this tutorial, you must have the following prerequisites:
 
 ## Publish report to Power BI service
 
-After you've created the visualizations in Power BI Desktop, you can share it with others by publishing it to the Power BI service. For instructions on how to do that, see [Publish from Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-upload-desktop-files/).
+After you've created the visualizations in Power BI Desktop, you can share it with others by publishing it to the Power BI service. For instructions on how to do that, go to [Publish from Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-upload-desktop-files/).
 
 ## See also
 

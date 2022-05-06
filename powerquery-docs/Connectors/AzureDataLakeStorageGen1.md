@@ -4,7 +4,7 @@ description: Learn how to use Power BI Desktop to analyze and visualize data sto
 
 author: dougklopfenstein
 ms.topic: conceptual
-ms.date: 4/29/2022
+ms.date: 5/6/2022
 ms.author: dougklo
 
 ---
@@ -29,7 +29,7 @@ ms.author: dougklo
 
 * **An Azure subscription**. Go to [Get Azure free trial](https://azure.microsoft.com/pricing/free-trial/).
 
-* **A Data Lake Storage Gen1 account**. Follow the instructions at [Get started with Azure Data Lake Storage Gen1 using the Azure portal](data-lake-store-get-started-portal.md). This article assumes that you've already created a Data Lake Storage Gen1 account, called **myadlsg1**, and uploaded a sample data file (**Drivers.txt**) to it. This sample file is available for download from [Azure Data Lake Git Repository](https://github.com/Azure/usql/tree/master/Examples/Samples/Data/AmbulanceData/Drivers.txt).
+* **A Data Lake Storage Gen1 account**. Follow the instructions at [Get started with Azure Data Lake Storage Gen1 using the Azure portal](/azure/data-lake-store/data-lake-store-get-started-portal). This article assumes that you've already created a Data Lake Storage Gen1 account, called **myadlsg1**, and uploaded a sample data file (**Drivers.txt**) to it. This sample file is available for download from [Azure Data Lake Git Repository](https://github.com/Azure/usql/tree/master/Examples/Samples/Data/AmbulanceData/Drivers.txt).
 
 ## Capabilities supported
 
@@ -37,7 +37,7 @@ ms.author: dougklo
 * Advanced options
   * Page size in bytes
 
-## Connect from Power Query Desktop and Analysis Services
+## Connect to Azure Data Lake Storage Gen1
 
 1. Select the **Azure Data Lake Storage Gen1** option in the **Get Data** selection, and then select **Connect**. More information: [Where to get data](../where-to-get-data.md)
 
@@ -65,5 +65,5 @@ Power Query Desktop provides one advanced option that you can add to your query 
 
 ## See also
 
-[Azure Data Lake Storage Gen2](AzureDataLakeStorageGen2)
+[Azure Data Lake Storage Gen2](AzureDataLakeStorageGen2.md)
 [Azure Data Lake Storage Gen1 documentation](/azure/data-lake-store/)

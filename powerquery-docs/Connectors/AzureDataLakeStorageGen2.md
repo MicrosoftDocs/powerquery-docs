@@ -4,7 +4,7 @@ description: Use Power BI to analyze data stored in Azure Data Lake Storage Gen2
 author: dougklopfenstein
 
 ms.topic: conceptual
-ms.date: 4/29/2022
+ms.date: 5/6/2022
 ms.author: dougklo
 ---
 
@@ -59,7 +59,7 @@ ms.author: dougklo
 
 4. The **Navigator** dialog box shows all files under the URL you provided. Verify the information and then select either **Transform Data** to transform the data in Power Query or **Load** to load the data.
 
-    ![File systems.](media/azure-data-lake-storage-gen2/file-systems.png)
+    [![File systems.](media/azure-data-lake-storage-gen2/file-systems.png)](media/azure-data-lake-storage-gen2/file-systems.png#lightbox)
 
 ## Connect to Azure Data Lake Storage Gen2 from Power Query Online
 
