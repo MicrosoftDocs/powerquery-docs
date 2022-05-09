@@ -68,3 +68,15 @@ To make the connection from Power Query Online:
 5. In **Navigator**, select the file information you want, and then select **Transform Data** to continue transforming the data in Power Query Editor.
 
    ![PDF file imported into Power Query online Navigator.](./media/pdf/online-navigator-view.png)
+
+## Limitations and considerations
+
+### Accessing large PDF files
+
+You can use the following strategies to improve performance and reduce timeouts when you access large PDF files. These strategies require that you edit your usage of the [Pdf.Tables](/powerquery-m/pdf-tables) function in either the formula bar or advanced editor.
+
+* Try selecting pages one at a time or one small range at a time using the `StartPage` or `EndPage` options, iterating over the entire document as needed.
+* If the PDF document is one single, huge table, the `MultiPageTables` option can be collecting very large intermediate values, so disabling it might help.
+* Multi-line rows might not be properly identified, so M code might be required to define the pattern, for example using [Table.FillDown](/powerquery-m/table-filldown) or [Table.Group](/powerquery-m/table-group).
+
+A full list of available options can be found in [Pdf.Tables](/powerquery-m/pdf-tables).
