@@ -1,93 +1,91 @@
 ---
-title: Analyze data in Azure Data Lake Storage Gen2 by using Power BI
+title: Azure Data Lake Storage Gen2
 description: Use Power BI to analyze data stored in Azure Data Lake Storage Gen2
-author: bensack
+author: dougklopfenstein
 
 ms.topic: conceptual
-ms.date: 6/6/2022
-ms.author: bensack
+ms.date: 5/9/2022
+ms.author: dougklo
 ---
 
-# Analyze data in Azure Data Lake Storage Gen2 by using Power BI
+# Azure Data Lake Storage Gen2
 
-In this article you'll learn how to use Power BI Desktop to analyze and visualize data that is stored in a storage account that has a hierarchical namespace (Azure Data Lake Storage Gen2).
+## Summary
+ 
+| Item | Description |
+| ---- | ----------- |
+| Release State | General Availability |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Authentication Types Supported | Anonymous<br/>Windows<br/>Basic<br/>Organizational Account |
+| Function Reference Documentation | [AzureStorage.DataLake](/powerquery-m/azurestorage-datalake)<br/>[AzureStorage.DataLakeContents](/powerquery-m/azurestorage-datalakecontents) | |
+| | |
+
+>[!Note]
+> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
 
-Before you begin this tutorial, you must have the following prerequisites:
+* An Azure subscription. Go to [Get Azure free trial](https://azure.microsoft.com/pricing/free-trial/).
 
-> [!div class="checklist"]
->
-> * An Azure subscription. Go to [Get Azure free trial](https://azure.microsoft.com/pricing/free-trial/).
-> * A storage account that has a hierarchical namespace. Follow the instructions at [Create a storage account](/azure/storage/common/storage-account-create) to create one. This article assumes that you've created a storage account named `myadlsg2`.
-> * Ensure you are granted one of the following roles for the storage account: **Blob Data Reader**, **Blob Data Contributor**, or **Blob Data Owner**.
-> * A sample data file named `Drivers.txt` located in your storage account. You can download this sample from [Azure Data Lake Git Repository](https://github.com/Azure/usql/tree/master/Examples/Samples/Data/AmbulanceData/Drivers.txt), and then upload that file to your storage account.
-> * **Power BI Desktop**. You can download this application from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45331).
+* A storage account that has a hierarchical namespace. Follow the instructions at [Create a storage account](/azure/storage/common/storage-account-create) to create one. This article assumes that you've created a storage account named `myadlsg2`.
 
-## Create a report in Power BI Desktop
+* Ensure you're granted one of the following roles for the storage account: **Blob Data Reader**, **Blob Data Contributor**, or **Blob Data Owner**.
 
-1. Launch Power BI Desktop on your computer.
+* A sample data file named `Drivers.txt` located in your storage account. You can download this sample from [Azure Data Lake Git Repository](https://github.com/Azure/usql/tree/master/Examples/Samples/Data/AmbulanceData/Drivers.txt), and then upload that file to your storage account.
 
-2. Follow the instructions in the [Azure Data Lake Storage Gen2 connector article](AzureDataLakeStorageGen2.md#connect-to-azure-data-lake-storage-gen2-from-power-query-desktop) to connect to the sample data.
+## Connect to Azure Data Lake Storage Gen2 from Power Query Desktop
 
-3. From the Power Query **Navigator**, select **Load**.
+1. Select the **Azure Data Lake Storage Gen2** option in the **Get Data** selection, and then select **Connect**. More information: [Where to get data](../where-to-get-data.md)
 
-    [![File systems.](media/datalakestorage/file-systems.png)](media/azure-data-lake-storage-gen2/file-systems.png#lightbox)
+    ![Screenshot of the get data page, with the Azure category selected, and Azure Data Lake Storage Gen2 emphasized.](media/azure-data-lake-storage-gen2/get-data-page.png)
 
-4. After the data has been successfully loaded into Power BI, you'll see the following fields in the **Fields** tab.
+2. In the **Azure Data Lake Storage Gen2** dialog box, you can provide the URL to your Azure Data Lake Storage Gen2 account, filesystem, or subfolder using the container endpoint format. URLs for Data Lake Storage Gen2 have the following pattern:
 
-    ![Fields tab.](media/DataLakeStorage/fields.png)
+    `https://<accountname>.dfs.core.windows.net/<filesystemname>/<subfolder>`
 
-    However, to visualize and analyze the data, you might prefer the data to be available using the following fields.
+    You can also select whether you want to use the file system view or the Common Data Model folder view.
 
-    ![Fields.](media/DataLakeStorage/preferred-fields.png)
+    Select **OK** to continue.
 
-    In the next steps, you'll update the query to convert the imported data to the desired format.
+    ![Screenshot of the Azure Data Lake Storage Gen2 dialog box, with the URL entered.](media/azure-data-lake-storage-gen2/adls-url.png)
 
-5. From the **Home** tab on the ribbon, select **Transform Data**. The Power Query editor then opens, displaying the contents of the file.
+3. If this is the first time you're using this URL address, you'll be asked to select the authentication method.
 
-    [![Select edit queries.](media/DataLakeStorage/queries.png)](media/DataLakeStorage/queries.png#lightbox)
+   If you select the Organizational account method, select **Sign in** to sign into your storage account. You'll be redirected to your organization's sign-in page. Follow the prompts to sign into the account. After you've successfully signed in, select **Connect**.
 
-6. In the Power Query editor, under the **Content** column, select **Binary**. The file will automatically be detected as CSV and you should see an output as shown below. Your data is now available in a format that you can use to create visualizations.
+   If you select the Account key method, enter your account key and then select **Connect**.
 
-    [![Output.](media/DataLakeStorage/binary.png)](media/DataLakeStorage/binary.png#lightbox)
+    ![Screenshot of the sign in dialog box for Azure Data Lake Storage Gen2, with organizational account selected, and ready to be signed in.](media/azure-data-lake-storage-gen2/sign-in.png)
 
-7. From the **Home** tab on the ribbon, select **Close & Apply**.
+4. The **Navigator** dialog box shows all files under the URL you provided. Verify the information and then select either **Transform Data** to transform the data in Power Query or **Load** to load the data.
 
-    ![Close and apply.](media/DataLakeStorage/close-apply.png)
+    [![Screenshot of the Navigator open and containing the data from the Drivers.text file.](media/azure-data-lake-storage-gen2/file-systems.png)](media/azure-data-lake-storage-gen2/file-systems.png#lightbox)
 
-8. Once the query is updated, the **Fields** tab will show the new fields available for visualization.
+## Connect to Azure Data Lake Storage Gen2 from Power Query Online
 
-    ![New fields.](media/DataLakeStorage/new-fields.png)
+1. Select the **Azure Data Lake Storage Gen2** option in the **Get Data** selection, and then select **Connect**. More information: [Where to get data](../where-to-get-data.md)
 
-9. Now you can create a pie chart to represent the drivers in each city for a given country. To do so, make the following selections.
+   ![Screenshot of the Connect to data source page for Azure Data Lake Storage Gen2, with the URL entered.](media/azure-data-lake-storage-gen2/adls-url-online.png)
 
-    From the **Visualizations** tab, select the symbol for a pie chart.
+2. Select whether you want to use the file system view or the Common Data Model folder view.
 
-    ![Select pie chart symbol in Visualizations.](media/DataLakeStorage/visualizations.png)
+3. If needed, select the on-premises data gateway in **Data gateway**.
 
-    In this example, the columns you're going to use are Column 4 (name of the city) and Column 7 (name of the country). Drag these columns from the **Fields** tab to the **Visualizations** tab as shown below.
+4. Select **Sign in** to sign into the Azure Data Lake Storage Gen2 account. You'll be redirected to your organization's sign-in page. Follow the prompts to sign in to the account.
 
-    ![Drag fields.](media/DataLakeStorage/visualizations-drag-fields.png)
+5. After you've successfully signed in, select **Next**.
 
-    The pie chart should now resemble the one shown below.
+6. The **Choose data** page shows all files under the URL you provided. Verify the information and then select **Transform Data** to transform the data in Power Query.
 
-    ![Pie chart.](media/DataLakeStorage/pie-chart.png)
+   [![Screenshot of the Choose data page, containing the data from the Drivers.text file.](media/azure-data-lake-storage-gen2/file-systems-online.png)](media/azure-data-lake-storage-gen2/file-systems-online.png#lightbox)
 
-10. By selecting a specific country from the page level filters, you can now see the number of drivers in each city of the selected country. For example, under the **Visualizations** tab, under **Page level filters**, select **Brazil**.
+## Limitations
 
-    ![Page filters.](media/DataLakeStorage/page-filters.png)
+Currently, in Power Query Online, the Azure Data Lake Storage Gen2 connector only supports paths with container, and not subfolder or file. For example, https://\<_accountname_>.dfs.core.windows.net/\<_container_> will work, while https://\<_accountname_>.dfs.core.windows.net/\<_container_>/\<_filename_> or https://\<_accountname_>.dfs.core.windows.net/\<_container_>/\<_subfolder_> will fail.
 
-11. The pie chart is automatically updated to display the drivers in the cities of Brazil.
-
-    ![Brazil.](media/DataLakeStorage/pie-chart-updated.png)
-
-12. From the **File** menu, select **Save** to save the visualization as a Power BI Desktop file.
-
-## Publish report to Power BI service
-
-After you've created the visualizations in Power BI Desktop, you can share it with others by publishing it to the Power BI service. For instructions on how to do that, go to [Publish from Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-upload-desktop-files/).
+Microsoft doesn't support dataflow or dataset refresh using OAuth2 authentication when the Azure Data Lake Storage Gen2 (ADLS) account is in a different tenant. This limitation only applies to ADLS when the authentication method is OAuth2, that is, when you attempt to connect to a cross-tenant ADLS using an Azure AD account. In this case, we recommend that you use a different authentication method that isn't OAuth2/AAD, such as the Key authentication method.
 
 ## See also
 
-[Azure Data Lake Storage Gen2](AzureDataLakeStorageGen2.md)
+[Analyze data in Azure Data Lake Storage Gen2 by using Power BI](DataLakeStorage.md)
+[Introduction to Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction)

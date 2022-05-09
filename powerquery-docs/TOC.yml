@@ -311,9 +311,9 @@
       - name: "Azure Data Lake Storage Gen 2"
         items:
         - name: "Overview"
-          href: Connectors/AzureDataLakeStorageGen2.md
-        - name: "Tutorial"
           href: Connectors/DataLakeStorage.md
+        - name: "Tutorial"
+          href: Connectors/analyze-data-in-adls-gen2.md
       - name: "Azure SQL database"
         href: Connectors/AzureSQLDatabase.md
       - name: "Azure Synapse Analytics (SQL DW)"

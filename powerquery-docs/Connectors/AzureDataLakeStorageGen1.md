@@ -4,7 +4,7 @@ description: Learn how to use Power BI Desktop to analyze and visualize data sto
 
 author: dougklopfenstein
 ms.topic: conceptual
-ms.date: 5/6/2022
+ms.date: 5/9/2022
 ms.author: dougklo
 
 ---
@@ -45,19 +45,19 @@ ms.author: dougklo
 
 2. In the **Azure Data Lake Store** dialog box, provide the URL to your Data Lake Storage Gen1 account, and then select **OK**.
 
-    ![Sign into Data Lake Storage Gen1](./media/azure-data-lake-storage-gen1/get-data-lake-store-account-signin.png)
+    ![Screenshot of the Azure Data Lake Storage Gen1 dialog box, with the URL entered.](./media/azure-data-lake-storage-gen1/get-data-lake-store-account-signin.png)
 
 3. If this is the first time you're connecting to this database, select **Sign in** to sign into the Azure Data Lake Storage Gen1 account. You'll be redirected to your organization's sign-in page. Follow the prompts to sign in to the account.
 
-   ![URL for Data Lake Storage Gen1](./media/azure-data-lake-storage-gen1/get-data-lake-store-account-url.png)
+   ![Screenshot of the sign in dialog box for Azure Data Lake Storage Gen1, ready to be signed in.](./media/azure-data-lake-storage-gen1/get-data-lake-store-account-url.png)
 
 4. After you've successfully signed in, select **Connect**.
 
-   ![Screenshot of the Azure Data Lake Store dialog box with the Connect option called out.](./media/azure-data-lake-storage-gen1/get-data-lake-store-account-connect.png)
+   ![Screenshot of the sign in dialog box for Azure Data Lake Storage Gen1, with the user signed in and ready to connect.](./media/azure-data-lake-storage-gen1/get-data-lake-store-account-connect.png)
 
 5. The **Navigator** dialog box shows the file that you uploaded to your Azure Data Lake Storage Gen1 account. Verify the information and then select either **Transform Data** to transform the data in Power Query or **Load** to load the data in Power BI Desktop.
 
-   ![Load data from Data Lake Storage Gen1](./media/azure-data-lake-storage-gen1/get-data-lake-store-account-load.png)
+   ![Screenshot of the Navigator open and containing the data from the Drivers.text file.](./media/azure-data-lake-storage-gen1/get-data-lake-store-account-load.png)
 
 ## Connect using advanced options
 
