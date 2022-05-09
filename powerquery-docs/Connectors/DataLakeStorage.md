@@ -11,14 +11,13 @@ ms.author: dougklo
 # Azure Data Lake Storage Gen2
 
 ## Summary
- 
+
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication Types Supported | Anonymous<br/>Windows<br/>Basic<br/>Organizational Account |
-| Function Reference Documentation | [AzureStorage.DataLake](/powerquery-m/azurestorage-datalake)<br/>[AzureStorage.DataLakeContents](/powerquery-m/azurestorage-datalakecontents) | |
-| | |
+| Function Reference Documentation | [AzureStorage.DataLake](/powerquery-m/azurestorage-datalake)<br/>[AzureStorage.DataLakeContents](/powerquery-m/azurestorage-datalakecontents) |
 
 >[!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
@@ -87,5 +86,5 @@ Microsoft doesn't support dataflow or dataset refresh using OAuth2 authenticatio
 
 ## See also
 
-[Analyze data in Azure Data Lake Storage Gen2 by using Power BI](DataLakeStorage.md)
+[Analyze data in Azure Data Lake Storage Gen2 by using Power BI](analyze-data-in-adls-gen2.md)
 [Introduction to Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction)

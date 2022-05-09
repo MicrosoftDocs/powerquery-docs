@@ -65,5 +65,5 @@ Power Query Desktop provides one advanced option that you can add to your query 
 
 ## See also
 
-[Azure Data Lake Storage Gen2](AzureDataLakeStorageGen2.md)
+[Azure Data Lake Storage Gen2](DataLakeStorage.md)
 [Azure Data Lake Storage Gen1 documentation](/azure/data-lake-store/)
