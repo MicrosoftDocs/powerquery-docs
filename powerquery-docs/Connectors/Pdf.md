@@ -75,8 +75,8 @@ To make the connection from Power Query Online:
 
 Here are some strategies to improve performance and reduce timeouts when accessing large PDF files:
 * Try selecting pages one at a time or one small range at a time using the `StartPage` or `EndPage` options, iterating over the entire document as needed.
-* If the PDF document is one single, huge table, the `MultiPageTables` option may be collecting very large intermediate values, so disabling itmay help.
-* Multi-line rows may now be properly identified, so M code may be required to define the pattern, for example using `Table.FillDown` or `Table.Group`.
+* If the PDF document is one single, huge table, the `MultiPageTables` option may be collecting very large intermediate values, so disabling it may help.
+* Multi-line rows may not be properly identified, so M code may be required to define the pattern, for example using `Table.FillDown` or `Table.Group`.
 
-A full list of options available can be found in the `Pdb.Tables` [documentation](/powerquery-m/pdf-tables).
+A full list of options available can be found in the `Pdf.Tables` [documentation](/powerquery-m/pdf-tables).
 
