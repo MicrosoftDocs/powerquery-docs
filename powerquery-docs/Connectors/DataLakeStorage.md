@@ -1,6 +1,6 @@
 ---
 title: Azure Data Lake Storage Gen2
-description: Use Power BI to analyze data stored in Azure Data Lake Storage Gen2
+description: Includes basic information, prerequisites, and information on how to connect to Azure Data Lake Storage Gen2, along with a list of limitations.
 author: dougklopfenstein
 
 ms.topic: conceptual
@@ -31,6 +31,12 @@ ms.author: dougklo
 * Ensure you're granted one of the following roles for the storage account: **Blob Data Reader**, **Blob Data Contributor**, or **Blob Data Owner**.
 
 * A sample data file named `Drivers.txt` located in your storage account. You can download this sample from [Azure Data Lake Git Repository](https://github.com/Azure/usql/tree/master/Examples/Samples/Data/AmbulanceData/Drivers.txt), and then upload that file to your storage account.
+
+## Capabilities supported
+
+* Import
+* File System View
+* CDM Folder View
 
 ## Connect to Azure Data Lake Storage Gen2 from Power Query Desktop
 
@@ -86,5 +92,5 @@ Microsoft doesn't support dataflow or dataset refresh using OAuth2 authenticatio
 
 ## See also
 
-[Analyze data in Azure Data Lake Storage Gen2 by using Power BI](analyze-data-in-adls-gen2.md)
-[Introduction to Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction)
+* [Analyze data in Azure Data Lake Storage Gen2 by using Power BI](analyze-data-in-adls-gen2.md)
+* [Introduction to Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction)

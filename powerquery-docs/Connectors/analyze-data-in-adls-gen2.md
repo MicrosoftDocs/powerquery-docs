@@ -90,4 +90,4 @@ After you've created the visualizations in Power BI Desktop, you can share it wi
 
 ## See also
 
-[Azure Data Lake Storage Gen2](DataLakeStorage.md)
+* [Azure Data Lake Storage Gen2](DataLakeStorage.md)

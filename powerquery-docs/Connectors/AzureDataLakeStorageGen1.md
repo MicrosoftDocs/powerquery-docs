@@ -1,6 +1,6 @@
 ---
 title: Azure Data Lake Storage Gen1
-description: Learn how to use Power BI Desktop to analyze and visualize data stored in Azure Data Lake Storage Gen1.
+description: Includes basic information, prerequisites, and information on how to connect to Azure Data Lake Storage Gen1.
 
 author: dougklopfenstein
 ms.topic: conceptual
@@ -24,6 +24,9 @@ ms.author: dougklo
 | Products | Power BI (Datasets)<br/>Excel</br>Analysis Services |
 | Authentication Types Supported | Organizational Account |
 | Function Reference Documentation | [AzureStorage.DataLake](/powerquery-m/azurestorage-datalake)<br/>[AzureStorage.DataLakeContents](/powerquery-m/azurestorage-datalakecontents) |
+
+>[!Note]
+> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
 
@@ -63,7 +66,11 @@ ms.author: dougklo
 
 Power Query Desktop provides one advanced option that you can add to your query if needed.
 
+| Advanced option | Description |
+| --------------- | ----------- |
+| Page size in bytes |  |
+
 ## See also
 
-[Azure Data Lake Storage Gen2](DataLakeStorage.md)
-[Azure Data Lake Storage Gen1 documentation](/azure/data-lake-store/)
+* [Azure Data Lake Storage Gen2](DataLakeStorage.md)
+* [Azure Data Lake Storage Gen1 documentation](/azure/data-lake-store/)
