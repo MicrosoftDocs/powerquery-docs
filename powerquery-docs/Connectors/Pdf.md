@@ -80,6 +80,6 @@ You can use the following strategies to improve performance and reduce timeouts 
 
 A full list of available options can be found in [Pdf.Tables](/powerquery-m/pdf-tables).
 
-### Manually defining multi-line rows
+### Handling multi-line rows
 
 There might be cases where multi-line rows are not properly identified, so you will need M code to manually define the pattern, for example using [Table.FillDown](/powerquery-m/table-filldown) or [Table.Group](/powerquery-m/table-group).
