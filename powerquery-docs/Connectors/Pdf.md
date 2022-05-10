@@ -82,4 +82,4 @@ A full list of available options can be found in [Pdf.Tables](/powerquery-m/pdf-
 
 ### Handling multi-line rows
 
-There might be cases where multi-line rows are not properly identified, so you will need M code to manually define the pattern, for example using [Table.FillDown](/powerquery-m/table-filldown) or [Table.Group](/powerquery-m/table-group).
+In cases where multi-line rows are not properly identified, you may be able to clean up the data using UI operations or custom M code. For example, you could copy misaligned data to adjacent rows using [Table.FillDown](/powerquery-m/table-filldown), or group and combine adjacent rows using [Table.Group](/powerquery-m/table-group).
