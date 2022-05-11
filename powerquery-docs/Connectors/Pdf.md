@@ -77,6 +77,9 @@ You can use the following strategies to improve performance and reduce timeouts 
 
 * Try selecting pages one at a time or one small range at a time using the `StartPage` or `EndPage` options, iterating over the entire document as needed.
 * If the PDF document is one single, huge table, the `MultiPageTables` option can be collecting very large intermediate values, so disabling it might help.
-* Multi-line rows might not be properly identified, so M code might be required to define the pattern, for example using [Table.FillDown](/powerquery-m/table-filldown) or [Table.Group](/powerquery-m/table-group).
 
 A full list of available options can be found in [Pdf.Tables](/powerquery-m/pdf-tables).
+
+### Handling multi-line rows
+
+In cases where multi-line rows aren't properly identified, you might be able to clean up the data using UI operations or custom M code. For example, you could copy misaligned data to adjacent rows using [Table.FillDown](/powerquery-m/table-filldown), or group and combine adjacent rows using [Table.Group](/powerquery-m/table-group).
