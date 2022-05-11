@@ -348,7 +348,7 @@
         href: Connectors/Excel.md
       - name: "FHIR"
         items:
-        - name: Overview
+        - name: Connect to FHIR
           href: Connectors/FHIR/FHIR.md
         - name: Authentication
           href: Connectors/FHIR/FHIR-Authentication.md
@@ -382,7 +382,7 @@
         href: Connectors/MySQLDatabase.md
       - name: "OData Feed"
         items:
-        - name: "OData Feed connector"
+        - name: "Connect to an OData Feed"
           href: Connectors/ODataFeed.md
         - name: "Connecting to Azure DevOps using OData"
           href: /azure/devops/report/powerbi/odataquery-connect
@@ -404,9 +404,9 @@
         href: Connectors/SalesforceReports.md
       - name: "SAP Business Warehouse"
         items:
-        - name: "SAP Business Warehouse Application Server"
+        - name: "Connect to an SAP Business Warehouse Application Server"
           href: Connectors/sap-bw/application-setup-and-connect.md
-        - name: "SAP Business Warehouse Message Server"
+        - name: "Connect to an SAP Business Warehouse Message Server"
           href: Connectors/sap-bw/message-setup-and-connect.md
         - name: "SAP BW fundamentals"
           href: Connectors/sap-bw/sap-bw-fundamentals.md
@@ -426,7 +426,7 @@
           href: Connectors/sap-bw/sap-bw-troubleshooting.md
       - name: "SAP HANA database"
         items:
-        - name: "Overview"
+        - name: "Connect to an SAP HANA database"
           href: Connectors/sap-hana/overview.md
         - name: "SAP HANA encryption"
           href: Connectors/sap-hana/sap-hana-encryption.md
@@ -464,7 +464,7 @@
         href: Connectors/VesselInsight.md
       - name: "Web"
         items:
-        - name: "Web connector"
+        - name: "Connect to Web data"
           href: Connectors/web/Web.md
         - name: "Web by example"
           href: Connectors/web/web-by-example.md
