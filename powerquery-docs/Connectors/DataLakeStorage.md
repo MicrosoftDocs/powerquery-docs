@@ -44,9 +44,9 @@ ms.author: dougklo
 
     ![Screenshot of the get data page, with the Azure category selected, and Azure Data Lake Storage Gen2 emphasized.](media/azure-data-lake-storage-gen2/get-data-page.png)
 
-2. In the **Azure Data Lake Storage Gen2** dialog box, you can provide the URL to your Azure Data Lake Storage Gen2 account, filesystem, or subfolder using the container endpoint format. URLs for Data Lake Storage Gen2 have the following pattern:
+2. In the **Azure Data Lake Storage Gen2** dialog box, provide the URL to your Azure Data Lake Storage Gen2 account, container, or subfolder using the container endpoint format. URLs for Data Lake Storage Gen2 have the following pattern:
 
-    `https://<accountname>.dfs.core.windows.net/<filesystemname>/<subfolder>`
+    https://\<_accountname_>.dfs.core.windows.net/\<_container_>/\<_subfolder_>
 
     You can also select whether you want to use the file system view or the Common Data Model folder view.
 
@@ -72,15 +72,17 @@ ms.author: dougklo
 
    ![Screenshot of the Connect to data source page for Azure Data Lake Storage Gen2, with the URL entered.](media/azure-data-lake-storage-gen2/adls-url-online.png)
 
-2. Select whether you want to use the file system view or the Common Data Model folder view.
+2. In **Connect to data source**, enter the URL to your Azure Data Lake Storage Gen2 account. Refer to [Limitations](#limitations) to determine the URL to use.
 
-3. If needed, select the on-premises data gateway in **Data gateway**.
+3. Select whether you want to use the file system view or the Common Data Model folder view.
 
-4. Select **Sign in** to sign into the Azure Data Lake Storage Gen2 account. You'll be redirected to your organization's sign-in page. Follow the prompts to sign in to the account.
+4. If needed, select the on-premises data gateway in **Data gateway**.
 
-5. After you've successfully signed in, select **Next**.
+5. Select **Sign in** to sign into the Azure Data Lake Storage Gen2 account. You'll be redirected to your organization's sign-in page. Follow the prompts to sign in to the account.
 
-6. The **Choose data** page shows all files under the URL you provided. Verify the information and then select **Transform Data** to transform the data in Power Query.
+6. After you've successfully signed in, select **Next**.
+
+7. The **Choose data** page shows all files under the URL you provided. Verify the information and then select **Transform Data** to transform the data in Power Query.
 
    [![Screenshot of the Choose data page, containing the data from the Drivers.text file.](media/azure-data-lake-storage-gen2/file-systems-online.png)](media/azure-data-lake-storage-gen2/file-systems-online.png#lightbox)
 

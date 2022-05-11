@@ -312,7 +312,7 @@
         items:
         - name: "Azure Data Lake Storage Gen2 connector"
           href: Connectors/DataLakeStorage.md
-        - name: "Analyze data in ADLS Gen2"
+        - name: "Analyze ADLS Gen2 data"
           href: Connectors/analyze-data-in-adls-gen2.md
       - name: "Azure SQL database"
         href: Connectors/AzureSQLDatabase.md
