@@ -46,7 +46,7 @@ ms.author: dougklo
 
    ![Screenshot of the Get Data dialog box with the Azure Data Lake Store option highlighted and the Connect option called out.](./media/azure-data-lake-storage-gen1/get-data-lake-store-account.png)
 
-2. In the **Azure Data Lake Store** dialog box, provide the URL to your Data Lake Storage Gen1 account, and then select **OK**.
+2. In the **Azure Data Lake Store** dialog box, provide the URL to your Data Lake Storage Gen1 account. Optionally, enter a value in **Page Size in Bytes**. Then select **OK**.
 
     ![Screenshot of the Azure Data Lake Storage Gen1 dialog box, with the URL entered.](./media/azure-data-lake-storage-gen1/get-data-lake-store-account-signin.png)
 
@@ -61,14 +61,6 @@ ms.author: dougklo
 5. The **Navigator** dialog box shows the file that you uploaded to your Azure Data Lake Storage Gen1 account. Verify the information and then select either **Transform Data** to transform the data in Power Query or **Load** to load the data in Power BI Desktop.
 
    ![Screenshot of the Navigator open and containing the data from the Drivers.text file.](./media/azure-data-lake-storage-gen1/get-data-lake-store-account-load.png)
-
-## Connect using advanced options
-
-Power Query Desktop provides one advanced option that you can add to your query if needed.
-
-| Advanced option | Description |
-| --------------- | ----------- |
-| Page size in bytes |  |
 
 ## See also
 
