@@ -167,7 +167,15 @@ You can now check your query to validate that only rows where **Country** is equ
 
 If you have multiple queries or values that require the same set of transformations, you could create a custom function that acts as a reusable piece of logic. Later, this custom function can be invoked against the queries or values of your choice. This custom function could save you time and help you in managing your set of transformations in a central location, which you can modify at any moment.
 
-For example, imagine a query that has several codes as a text string and you want to create a function that will decode those values.
+For example, imagine a query that has several codes as a text string and you want to create a function that will decode those values. As in the sample table below:
+
+|code|
+|-----|
+|PTY-CM1090-LAX|
+|LAX-CM701-PTY|
+|PTY-CM4441-MIA|
+|MIA-UA1257-LAX|
+|LAX-XY2842-MIA|
 
 ![List of codes.](images/me-sample-flight-data.png)
 
