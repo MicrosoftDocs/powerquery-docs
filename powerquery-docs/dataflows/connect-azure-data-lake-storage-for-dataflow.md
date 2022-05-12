@@ -1,12 +1,12 @@
 ---
 title: "Connect Azure Data Lake Storage Gen2 for dataflow storage | MicrosoftDocs"
 description: "Learn how to connect Azure Data Lake Storage Gen2 for dataflow storage"
-ms.date: 2/08/2022
+ms.date: 4/18/2022
 ms.reviewer: dougklo
 
 ms.topic: "how-to"
 author: "Mattp123"
-ms.author: "matp"
+ms.author: "dougklo"
 manager: "kvivek"
 ---
 
@@ -15,7 +15,7 @@ manager: "kvivek"
 You can configure dataflows to store their data in your organization’s Azure Data Lake Storage Gen2 account. This article describes the general steps necessary to do so, and provides guidance and best practices along the way.
 
 > [!IMPORTANT]
-> Dataflow with Analytical tables feature utilizes the Azure Synapse Link for Dataverse service, which may offer varying levels of compliance, privacy, security, and data location commitments. For more information about Azure Synapse Link for Dataverse, go to the [blog article](https://go.microsoft.com/fwlink/?linkid=2109088).
+> Dataflow with Analytical tables feature utilizes the Azure Synapse Link for Dataverse service, which may offer varying levels of compliance, privacy, security, and data location commitments. For more information about Azure Synapse Link for Dataverse, go to [What is Azure Synapse Link for Dataverse?](/power-apps/maker/data-platform/export-to-data-lake).
 
 There are some advantages to configuring dataflows to store their definitions and datafiles in your data lake, such as:
 
