@@ -3,7 +3,7 @@ title: List of all Power Query connectors
 description: List of all currently available Power Query connectors
 author: DougKlopfenstein
 
-ms.date: 2/10/2022
+ms.date: 5/13/2022
 ms.author: bezhan
 ms.custom: intro-internal
 
@@ -341,7 +341,7 @@ The connectors are listed in alphabetical order in separate tables for each lett
 | Connector | Excel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Power BI (Datasets) | Power BI (Dataflows) | Power Apps (Dataflows) | Customer<br/>Insights (Dataflows) | Analysis Services |
 | --- | --- | --- | --- | --- | --- | --- |
 | [![Zendesk (Beta).](media/index/zendesk-64.png)<br/>**Zendesk (Beta)**](./zendesk.md)<br/>By Microsoft                                               | ![Not supported - Zendesk (Beta) in Excel](media/index/no.png)  | ![Supported - Zendesk (Beta) in Power BI (Datasets)](media/index/yes.png) | ![Not supported - Zendesk (Beta) in Power BI (Dataflows)](media/index/no.png)  | ![Not supported - Zendesk (Beta) in Power Apps (Dataflows)](media/index/no.png)  | ![Not supported - Zendesk (Beta) in Customer Insights (Dataflows)](media/index/no.png)  | ![Not supported - Zendesk (Beta) in Analysis Services](media/index/no.png)  |
-| ![Zoho Creator (Beta).](media/index/zoho-creator-64.png)<br/>**Zoho Creater (Beta)**<br/>By Zoho   | ![Not supported - Zoho Creator (Beta) in Excel](media/index/no.png)  | ![Supported - Zoho Creator (Beta) in Power BI (Datasets)](media/index/yes.png) | ![Not supported - Zoho Creator (Beta) in Power BI (Dataflows)](media/index/no.png)  | ![Not supported - Zoho Creator (Beta) in Power Apps (Dataflows)](media/index/no.png)  | ![Not supported - Zoho Creator (Beta) in Customer Insights (Dataflows)](media/index/no.png)  | ![Not supported - Zoho Creator (Beta) in Analysis Services](media/index/no.png)  |
+| ![Zoho Creator (Beta).](media/index/zoho-creator-64.png)<br/>**Zoho Creator (Beta)**<br/>By Zoho   | ![Not supported - Zoho Creator (Beta) in Excel](media/index/no.png)  | ![Supported - Zoho Creator (Beta) in Power BI (Datasets)](media/index/yes.png) | ![Not supported - Zoho Creator (Beta) in Power BI (Dataflows)](media/index/no.png)  | ![Not supported - Zoho Creator (Beta) in Power Apps (Dataflows)](media/index/no.png)  | ![Not supported - Zoho Creator (Beta) in Customer Insights (Dataflows)](media/index/no.png)  | ![Not supported - Zoho Creator (Beta) in Analysis Services](media/index/no.png)  |
 | ![Zucchetti HR Infinity (Beta).](media/index/zucchetti-64.png)<br/>**Zucchetti HR<br/>Infinity (Beta)**<br/>By Zucchetti                 | ![Not supported - Zucchetti HR Infinity (Beta) in Excel](media/index/no.png)  | ![Supported - Zucchetti HR Infinity (Beta) in Power BI (Datasets)](media/index/yes.png) | ![Not supported - Zucchetti HR Infinity (Beta) in Power BI (Dataflows)](media/index/no.png)  | ![Not supported - Zucchetti HR Infinity (Beta) in Power Apps (Dataflows)](media/index/no.png)  | ![Not supported - Zucchetti HR Infinity (Beta) in Customer Insights (Dataflows)](media/index/no.png)  | ![Not supported - Zucchetti HR Infinity (Beta) in Analysis Services](media/index/no.png)  |
 | | | | | | | |
 
