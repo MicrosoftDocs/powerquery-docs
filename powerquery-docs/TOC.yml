@@ -346,6 +346,8 @@
         href: Connectors/Essbase.md
       - name: "Excel"
         href: Connectors/Excel.md
+      - name: "FactSet RMS (Beta)"
+        href: Connectors/FactSetRMS.md
       - name: "FHIR"
         items:
         - name: Connect to FHIR
@@ -360,6 +362,8 @@
           href: Connectors/FHIR/FHIR-Relationships.md
       - name: "Folder"
         href: Connectors/Folder.md
+      - name: "Funnel (Beta)"
+        href: Connectors/Funnel.md
       - name: "Google Analytics"
         href: Connectors/GoogleAnalytics.md
       - name: "Google BigQuery"
