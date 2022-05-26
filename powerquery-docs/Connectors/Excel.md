@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for the connector, alo
 author: cpopell
 
 ms.topic: conceptual
-ms.date: 5/56/2022
+ms.date: 5/26/2022
 ms.author: dougklo
 
 LocalizationGroup: reference
