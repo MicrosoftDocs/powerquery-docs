@@ -85,6 +85,9 @@ If you select one of the suggested tables, each individual table that Power Quer
 
 [![Screenshot of the navigator with table 3 under Suggested tables selected, and the contents of table 3 displayed.](./media/excel/table-three-only.png)](./media/excel/table-three-only.png#lightbox)
 
+>[!Note]
+>If the sheet changes enough, the table might not refresh properly. You might be able to fix the refresh by importing the data again and selecting a new suggested table.
+
 ## Troubleshooting
 
 ### Numeric precision (or "Why did my numbers change?")
