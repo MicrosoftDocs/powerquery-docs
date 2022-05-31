@@ -87,4 +87,4 @@ Open your dataflow and change the gateway to something else. You can select the 
 
 After you apply the change by clicking **OK** repeat steps above to select the desired gateway.
 
-This essentially deletes all the data source bindings for the dataflow. After doing this, you might be asked to set up credentials. When you've set up the gateway and your credentials successfully. This effectively “trims” the data source bindings for the dataflow to just the ones that the dataflow is actually using.
+This essentially deletes all the data source bindings for the dataflow. After doing this, you might be asked to set up credentials. When you've set up the gateway and your credentials successfully, you effectively “trimmed” the data source bindings for the dataflow to just the ones that the dataflow is actually using.
