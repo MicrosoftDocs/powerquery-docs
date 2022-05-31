@@ -65,3 +65,26 @@ After adding the web data source, you can select the gateway in the dataflow fro
 You might be asked to set up credentials. When you've set up the gateway and your credentials successfully, the modules will no longer be disabled."
 
 ![Disabled functions now working.](media/DisabledFunctionWorkingFine.png)
+
+## Deleted or old data sources still show up
+
+Sometimes, when you delete a data source from your dataflow it still shows up on your credentials overview or linage overview. This does not impact the refresh or authoring your dataflow.
+
+![Linage overview](media/troubleshoot-dataflow-deleted-source/linage-overview.png)
+
+**Reason:**
+
+Dataflows keeps deleted dataflow data sources in memory and does not delete them automatically. This requires a trim initiated by the user.
+
+**Resolution:**
+
+In order to trim the data sources you will need to take the following steps:
+
+Open your dataflow and change the gateway to something else. You can select the gateway in the dataflow from **Options** > **Project options**.
+
+![Project options in the dataflow.](media/ProjectOptions.png)
+![Linage overview](media/troubleshoot-dataflow-deleted-source/gateway-selection.png)
+
+After you apply the change by clicking **OK** repeat steps above to select the desired gateway.
+
+This essentially deletes all the data source bindings for the dataflow. After doing this, you might be asked to set up credentials. When you've set up the gateway and your credentials successfully. This effectively “trims” the data source bindings for the dataflow to just the ones that the dataflow is actually using.
