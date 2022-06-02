@@ -68,13 +68,13 @@ You might be asked to set up credentials. When you've set up the gateway and you
 
 ## Deleted or old data sources still show up
 
-Sometimes, when you delete a data source from your dataflow it still shows up on your credentials overview or linage overview. This does not impact the refresh or authoring your dataflow.
+Sometimes, when you delete a data source from your dataflow it still shows up on your credentials overview or lineage overview. This does not impact the refresh or authoring your dataflow.
 
-![Linage overview](media/troubleshoot-dataflow-deleted-source/linage-overview.png)
+![Lineage overview](media/troubleshoot-dataflow-deleted-source/linage-overview.png)
 
 **Reason:**
 
-Dataflows keeps deleted dataflow data sources in memory and does not delete them automatically. This requires a trim initiated by the user.
+Dataflows maintains its association with deleted dataflow data sources and does not delete them automatically. This requires a trim initiated by the user.
 
 **Resolution:**
 
@@ -83,7 +83,7 @@ In order to trim the data sources you will need to take the following steps:
 Open your dataflow and change the gateway to something else. You can select the gateway in the dataflow from **Options** > **Project options**.
 
 ![Project options in the dataflow.](media/ProjectOptions.png)
-![Linage overview](media/troubleshoot-dataflow-deleted-source/gateway-selection.png)
+![Gateway selector](media/troubleshoot-dataflow-deleted-source/gateway-selection.png)
 
 After you apply the change by clicking **OK** repeat steps above to select the desired gateway.
 
