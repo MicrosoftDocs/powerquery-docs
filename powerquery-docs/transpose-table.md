@@ -16,7 +16,7 @@ The transpose table  operation in Power Query rotates your table 90 degrees, tur
 Imagine a table like the one in the following image, with three rows and four columns.
 
 :::image type="complex" source="images/me-transpose-initial-table.png" alt-text="Sample source table to be transposed.":::
-   Table with four columns named Column1 through Column4, with all columns set to the Text data type. Column1 contains Events in row 1, Participants in row 2, and Funds in row 3. Column2 contains Event 1 in row 1, 150 in row 2, and 4000 in row 3. Column3 contains Event 2 in row 1, 450 in row 2, and 10000 in row 3. Column4 contains Event 2 in row 1, 1250 in row 2, and 15000 in row 3.
+   Table with four columns named Column1 through Column4, with all columns set to the Text data type. Column1 contains Events in row 1, Participants in row 2, and Funds in row 3. Column2 contains Event 1 in row 1, 150 in row 2, and 4000 in row 3. Column3 contains Event 2 in row 1, 450 in row 2, and 10000 in row 3. Column4 contains Event 2 in row 1, 1250 in row 2, and 15000 in row 3!
 :::image-end:::
 
 The goal of this example is to transpose that table so you end up with four rows and three columns.
