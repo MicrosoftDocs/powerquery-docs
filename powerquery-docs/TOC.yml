@@ -22,6 +22,8 @@
         href: connector-alternatives.md
       - name: "Change a dataflow gateway"
         href: change-gateway-dataflow.md
+      - name: "Multiple Destinations"
+        href: dataflows/incremental-refresh.md
     - name: Transform data
       items:
       - name: "Use Power Query to transform data"
@@ -159,6 +161,12 @@
       - name: "Use dataflows in solutions"
         href: dataflows/dataflow-solution-awareness.md
       - name: "Use incremental refresh"
+        href: dataflows/incremental-refresh.md
+      - name: "Introduction to dataflows and self-service data prep"
+        href: dataflows/incremental-refresh.md
+      - name: "Comparing Gen1 and Gen2 Dataflows"
+        href: dataflows/incremental-refresh.md
+      - name: "Gen2 Dataflows consideration and limitations"
         href: dataflows/incremental-refresh.md
       - name: "Connect to data sources"
         href: dataflows/data-sources.md
