@@ -11,7 +11,7 @@ ms.custom: edited
 
 # Transpose a table
 
-The transpose table operation in Power Query rotates your table 90 degrees, turning your rows into columns and your columns into rows.
+The transpose table  operation in Power Query rotates your table 90 degrees, turning your rows into columns and your columns into rows.
 
 Imagine a table like the one in the following image, with three rows and four columns.
 
