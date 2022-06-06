@@ -52,7 +52,7 @@ To connect to MicroStrategy using Power BI Desktop:
 
    ![OIDC environment URL example.](./media/micro-strategy-for-power-bi/pbi_oidc_login.png)
 
-5. (optional) Select the authentication mode. This only affects basic authentication.
+5. (optional) Select the authentication mode. This option only affects basic authentication.
 
 6. (optional) Fill out the advanced options, as necessary.
 
@@ -73,7 +73,7 @@ To connect to MicroStrategy using Power BI Desktop:
       >[!Important]
       >To utilize OIDC authentication, you must add the `https://oauth.powerbi.com/views/oauthredirect.html` URL to the list of reply URLs in your IdP settings.
 
-      1. Select **Sign in**. A popup appears with the external sign in site (either MicroStrategyLibrary or OIDC provider).
+      1. Select **Sign in**. A popup appears with the external sign-in site (either MicroStrategyLibrary or OIDC provider).
 
       2. Follow the required steps to authenticate with the chosen method.
 
@@ -96,4 +96,4 @@ To refresh MicroStrategy data using Power BI Online:
 
 4. If necessary, select the name of your on-premises data gateway.
 
-Now follow the steps required to setup the scheduled refresh/refresh in Power BI Online.
+Now follow the steps required to set up the scheduled refresh/refresh in Power BI Online.
