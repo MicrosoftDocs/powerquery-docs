@@ -30,7 +30,8 @@ In the following connector definition you'll find:
 * A publish record declaring that this connection is in Beta, what text to load from the resx file, the source image, and the source type image.
 * A record associating icon sizes with specific PNGs in the build folder.
 
-```section HelloWorld;
+```
+section HelloWorld;
  
 [DataSource.Kind="HelloWorld", Publish="HelloWorld.Publish"]
 shared HelloWorld.Contents = (optional message as text) =>
