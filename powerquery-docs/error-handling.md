@@ -16,7 +16,6 @@ As mentioned in the article on [dealing with errors in Power Query](dealing-with
 >[!Note]
 > To demonstrate this concept, this article will use an Excel Workbook as its data source. The concepts showcased here apply to all values in Power Query and not only the ones coming from an Excel Workbook. 
 
-## Applying conditional logic based on errors
 The sample data source for this demonstration is an Excel Workbook with the following table:
 
 ![Sample data from Excel.](images/me-error-handling-sample-workbook.png)
@@ -29,7 +28,7 @@ Notice how the errors from the Excel workbook are shown with the `[Error]` value
 
 In this case, the goal is to create a new **Final Rate** column that will use the values from the **Standard Rate** column. If there are any errors, then it will use the value from the correspondent **Special Rate** column.
 
-### Add custom column with `try` and `otherwise` syntax
+## Error handling with `try` and `otherwise` syntax
 
 To create a new custom column, go to the **Add column** menu and select **Custom column**. In the **Custom column** window, enter the formula `try [Standard Rate] otherwise [Special Rate]`. Name this new column **Final Rate**.
 
@@ -41,7 +40,7 @@ After adding the correct data types to all of the columns in the table, the foll
 
 ![Final table try otherwise.](images/me-error-handling-try-otherwise-final-table.png)
 
-## Catching an error with `try` and applying custom conditional logic
+## Catch errors
 
 Using the same sample data source as the previous section, the new goal is to create a new column for the **Final Rate**. If the value from the **Standard Rate** exists, then that value will be used. Otherwise the value from the **Special Rate** column will be used, except for the rows with any `#REF!` error. 
 
@@ -54,7 +53,7 @@ When you select any of the whitespace next to the error value, you get the detai
 
 You can only select one cell at a time, so you can effectively only see the error components of one error value at a time. This is where you'll create a new custom column and use the `try` expression.
 
-### Add custom column with `try` syntax
+### `try` syntax approach
 To create a new custom column, go to the **Add column** menu and select **Custom column**. In the **Custom column** window, enter the formula `try [Standard Rate]`. Name this new column **All Errors**.
 
 ![Using try in a custom column.](images/me-error-handling-try-custom-column.png)
@@ -84,7 +83,7 @@ After doing the expand operation, the **All Errors.Error.Message** field display
 
 ![Specific error message.](images/me-error-handling-try-error-message.png)
 
-### Add a conditional column
+#### Add a conditional column
 
 Now with each error message in a new column, you can create a new conditional column with the name **Final Rate** and the following clauses:
 * If the value in the **All Errors.Errors.Message** column equals `null`, then the output will be the value from the **Standard Rate** column.
@@ -96,6 +95,10 @@ Now with each error message in a new column, you can create a new conditional co
 After keeping only the **Account**, **Standard Rate**, **Special Rate**, and **Final Rate** columns, and adding the correct data type for each column, the following image what the final table looks like.
 
 ![Final table with data types.](images/me-error-handling-try-final-table.png)
+
+### `try` and `catch` syntax approach 
+
+Alternatively to the single
 
 ## More resources
 
