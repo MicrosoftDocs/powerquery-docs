@@ -308,6 +308,8 @@
         href: Connectors/AutodeskConstructionCloud.md
       - name: "Automy Data Analytics (Beta)"
         href: Connectors/AutomyDataAnalytics.md
+      - name: "Azure Data Explorer (Kusto)"
+        href: Connectors/AzureDataExplorer.md
       - name: "Azure Data Lake Storage Gen1"
         href: Connectors/AzureDataLakeStorageGen1.md
       - name: "Azure Data Lake Storage Gen 2"
