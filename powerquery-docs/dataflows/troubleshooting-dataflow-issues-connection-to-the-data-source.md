@@ -80,11 +80,12 @@ Dataflows maintains its association with deleted dataflow data sources and does 
 
 In order to trim the data sources you will need to take the following steps:
 
-Open your dataflow and change the gateway to something else. You can select the gateway in the dataflow from **Options** > **Project options**.
-
+1. Open your dataflow
+1. Click **Options**
+1. Select **Project options**
 ![Project options in the dataflow.](media/ProjectOptions.png)
+1. Change the gateway to another gateway. (Doesn't matter which one, as long as it's a different gateway)
 ![Gateway selector](media/troubleshoot-dataflow-deleted-source/gateway-selection.png)
-
-After you apply the change by clicking **OK** repeat steps above to select the desired gateway.
+1. After you apply the change by clicking **OK** repeat step 1-4 to select the original gateway again.
 
 This essentially deletes all the data source bindings for the dataflow. After doing this, you might be asked to set up credentials. When you've set up the gateway and your credentials successfully, you effectively “trimmed” the data source bindings for the dataflow to just the ones that the dataflow is actually using.
