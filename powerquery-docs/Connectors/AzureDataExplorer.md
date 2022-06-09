@@ -81,13 +81,15 @@ To connect to Azure Data Explorer from Power Query Online:
 
    ![Screenshot of the Choose data source page for Azure Data Explorer (Kusto), with the URL for the cluster entered.](media/azure-data-explorer/sign-in-online.png)
 
-3. If needed, select the on-premises data gateway in **Data gateway**.
+3. If you want to use any advance options, select the option and enter the data to use with that option. More information: [Connect using advanced options](#connect-using-advanced-options)
 
-4. If you don't already have a connection to the cluster, select **Sign in**. Sign in with an organizational account.
+4. If needed, select the on-premises data gateway in **Data gateway**.
 
-5. After you've successfully signed in, select **Next**.
+5. If you don't already have a connection to the cluster, select **Sign in**. Sign in with an organizational account.
 
-6. In the **Choose data** page, select the database information you want, then either select **Transform Data** or **Next** to continue transforming the data in the Power Query editor. In this example, StormEvents was selected in the Samples database.
+6. After you've successfully signed in, select **Next**.
+
+7. In the **Choose data** page, select the database information you want, then either select **Transform Data** or **Next** to continue transforming the data in the Power Query editor. In this example, StormEvents was selected in the Samples database.
 
    [![Screenshot of the Choose data page, containing the data from StormEvents in the Samples database.](media/azure-data-explorer/navigator-online.png)](media/azure-data-explorer/navigator-online.png#lightbox)
 
@@ -101,7 +103,7 @@ The following table lists all of the advanced options you can set in Power Query
 | --------------- | ----------- |
 | Limit query result record number | The maximum number of records to return in the result. |
 | Limit query result data size in Bytes | The maximum data size in bytes to return in the result. |
-| Disable result-set truncation | Enable or disable result truncation by using the notruncation request option. |
+| Disable result-set truncation | Enable or disable result truncation by using the `notruncation` request option. |
 | Additional Set Statements | Sets query options for the duration of the query. Query options control how a query executes and returns results. Multiple Set statements can be separated by semicolons. |
 
 ## When to use Import or Direct Query mode
@@ -112,7 +114,7 @@ Use Import mode when:
 
 * Your data set is small.
 * You don't need near real-time data.
-* Your data is already aggregated or you perform aggregation in Kusto
+* Your data is already aggregated or you perform aggregation in Kusto.
 
 Use DirectQuery mode when:
 
