@@ -13,7 +13,7 @@ LocalizationGroup: reference
 
 This article provides information about different types of additional connector functionality that connector developers might want to invest in. For each type, this article outlines availability and instructions to enable the functionality.
 
-If there is connector-specific or platform functionality that requires direct Microsoft engagement or investment, end users and developer partners can express their need through the standard [feedback process](/powerquery-docs/feedback.md).
+If there is connector-specific or platform functionality that requires direct Microsoft engagement or investment, end users and developer partners can express their need through the standard [feedback process](/power-query/feedback.md).
 
 ## Authentication
 
