@@ -300,7 +300,6 @@ The connectors are listed in alphabetical order in separate tables for each lett
 | [![Vessel Insight](media/index/vessel-insights-64.png)<br/>**Vessel Insight**<br/>](./VesselInsight.md)By Kongsberg   | ![Not supported - Vessel Insights (Beta) in Excel](media/index/no.png)  | ![Supported - Vessel Insights (Beta) in Power BI (Datasets)](media/index/yes.png) | ![Not supported - Vessel Insights (Beta) in Power BI (Dataflows)](media/index/no.png)  | ![Not supported - Vessel Insights (Beta) in Power Apps (Dataflows)](media/index/no.png)  | ![Not supported - Vessel Insights (Beta) in Customer Insights (Dataflows)](media/index/no.png)  | ![Not supported - Vessel Insights (Beta) in Analysis Services](media/index/no.png)  |
 | ![Viva Insights.](media/index/workplace-analytics-64.png)<br/>**Viva Insights**<br/>By Microsoft           | ![Not supported - Viva Insights in Excel](media/index/no.png)  | ![Supported - Viva Insights in Power BI (Datasets)](media/index/yes.png) | ![Not supported - Viva Insights in Power BI (Dataflows)](media/index/no.png)  | ![Not supported - Viva Insights in Power Apps (Dataflows)](media/index/no.png)  | ![Not supported - Viva Insights in Customer Insights (Dataflows)](media/index/no.png)  | ![Not supported - Viva Insights in Analysis Services](media/index/no.png)  |
 
-
 ## W
 
 | Connector | Excel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Power BI (Datasets) | Power BI (Dataflows) | Power Apps (Dataflows) | Customer<br/>Insights (Dataflows) | Analysis Services |
