@@ -446,6 +446,8 @@
         href: Connectors/SharePointList.md
       - name: "SharePoint Online list"
         href: Connectors/SharePointOnlineList.md
+      - name: "SingleStore (Beta)"
+        href: Connectors/SingleStore.md
       - name: SIS-CC SDMX
         href: Connectors/SISCCSDMX.md
       - name: "Snowflake"
