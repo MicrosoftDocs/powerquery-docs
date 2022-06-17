@@ -23,7 +23,7 @@ LocalizationGroup: reference
 | Release State | General Availability |
 | Products | Power BI (Datasets) |
 | Authentication Types Supported | BQE Core Account |
-| Function Reference Documentation | - |
+| Function Reference Documentation | &mdash; |
 
 ## Prerequisites
 
