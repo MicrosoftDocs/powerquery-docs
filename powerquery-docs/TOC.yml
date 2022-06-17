@@ -296,7 +296,7 @@
         href: "Connectors/AdobeAnalytics.md"
       - name: "Amazon Athena"
         href: "Connectors/AmazonAthena.md"
-      - name: "Amazon OpenSearch Project (Beta)"
+      - name: "Amazon OpenSearch Service (Beta)"
         href: "Connectors/AmazonOpenSearchService.md"
       - name: "Amazon Redshift"
         href: Connectors/AmazonRedshift.md
@@ -326,7 +326,7 @@
         href: Connectors/BitSightSecurityRatings.md
       - name: "Bloomberg Data and Analytics"
         href: Connectors/BloombergDataAndAnalytics.md
-      - name: "BQE Core (Beta)"
+      - name: "BQE Core"
         href: Connectors/BQECore.md
       - name: "Common Data Service (Legacy)"
         href: ./connectors/commondataservicelegacy.md
@@ -368,7 +368,7 @@
         href: Connectors/GoogleAnalytics.md
       - name: "Google BigQuery"
         href: Connectors/GoogleBigQuery.md
-      - name: "Google Sheets (Beta)"
+      - name: "Google Sheets"
         href: Connectors/GoogleSheets.md
       - name: "Hive LLAP"
         href: Connectors/HiveLlap.md
@@ -446,6 +446,8 @@
         href: Connectors/SharePointList.md
       - name: "SharePoint Online list"
         href: Connectors/SharePointOnlineList.md
+      - name: "SingleStore (Beta)"
+        href: Connectors/SingleStore.md
       - name: SIS-CC SDMX
         href: Connectors/SISCCSDMX.md
       - name: "Snowflake"
@@ -456,7 +458,7 @@
         href: Connectors/SQLServer.md
       - name: "Stripe (Deprecated)"
         href: Connectors/Stripe.md
-      - name: "SumTotal (Beta)"
+      - name: "SumTotal"
         href: Connectors/SumTotal.md
       - name: "Text/CSV"
         href: Connectors/TextCSV.md

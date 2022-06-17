@@ -9,13 +9,13 @@ ms.author: bezhan
 LocalizationGroup: reference
 ---
 
-# Google Sheets (Beta)
+# Google Sheets
 
 ## Summary
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | Beta |
+| Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
 | Authentication Types Supported | Organizational account |
 | Function Reference Documentation | &mdash; |
