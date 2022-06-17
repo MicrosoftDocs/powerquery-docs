@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for the Google Sheets 
 author: bezhan-msft
 
 ms.topic: conceptual
-ms.date: 10/20/2021
+ms.date: 6/15/2022
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -16,10 +16,9 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products | Power BI Desktop |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
 | Authentication Types Supported | Organizational account |
-| Function Reference Documentation | - |
-| | |
+| Function Reference Documentation | &mdash; |
 
 ## Prerequisites
 
