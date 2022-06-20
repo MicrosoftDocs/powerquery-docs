@@ -15,7 +15,7 @@ LocalizationGroup: reference
 
 Versioning is required for certified connectors.
 
-## Version Format in Power Query
+## Version format in Power Query
 
 Versioning in Power Query is a simple metadata record above the section document:
 
