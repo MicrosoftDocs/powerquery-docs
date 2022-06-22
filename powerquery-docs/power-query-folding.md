@@ -7,7 +7,7 @@ ms.reviewer: asaxton
 
 
 ms.topic: conceptual
-ms.date: 11/20/2019
+ms.date: 6/20/2022
 ms.author: dougklo
 ---
 
@@ -93,4 +93,3 @@ For more information about Query Folding and related articles, check out the fol
 - [Best practice guidance for query folding](/power-bi/guidance/power-query-folding)
 - [Use composite models in Power BI Desktop](/power-bi/desktop-composite-models)
 - [Incremental refresh in Power BI Premium](/power-bi/service-premium-incremental-refresh)
-- [Using Table.View to Implement Query Folding](HandlingQueryFolding.md)
