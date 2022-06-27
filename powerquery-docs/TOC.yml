@@ -546,7 +546,7 @@
           href: SamplesDirectory.md#odbc
         - name: "TripPin samples"
           href: SamplesDirectory.md#trippin
-      - name: Advanced concepts
+      - name: Concepts
         items:
         - name: "Additional connector functionality"
           href: additional-connector-functionality.md
@@ -592,6 +592,8 @@
           href: HandlingConnectorSigning.md
         - name: "Handling proxy support"
           href: HandlingProxySupport.md
+        - name: "Versioning"
+          href: HandlingVersioning.md
       - name: Connector Certification
         items:
         - name: Overview
