@@ -121,4 +121,4 @@ Depending on how the query is structured, there could be three possible outcomes
 
 For detailed examples of the three possible outcomes of the query folding mechanism, go to [Query folding examples](query-folding-examples.md).
 
-For information about query folding indicators found in the **Applied Steps** pane, go to [Query folding indicators](query-folding-indicators.md)
+For information about query folding indicators found in the **Applied Steps** pane, go to [Query folding indicators](step-folding-indicators.md)

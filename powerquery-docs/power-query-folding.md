@@ -94,4 +94,4 @@ For more information about query folding and related articles, check out the fol
 - [Query folding guidance in Power BI Desktop](/power-bi/guidance/power-query-folding)
 - [Query folding examples](query-folding-examples.md)
 - [Query folding indicators](step-folding-indicators.md)
-- [Query folding on native queries](native-query-folding)
+- [Query folding on native queries](native-query-folding.md)
