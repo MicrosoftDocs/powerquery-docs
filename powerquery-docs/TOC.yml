@@ -30,10 +30,20 @@
         href: applied-steps.md
       - name: "Global search box (Preview)"
         href: search-box.md
-      - name: "Query folding basics"
+      - name: "Understanding query evaluation"
         href: query-folding-basics.md
-      - name: "Query folding examples"
-        href: query-folding-examples.md
+      - name: Query folding
+        items:
+        - name: "Query folding overview"
+          href: power-query-folding.md
+        - name: "Query folding examples"
+          href: query-folding-examples.md
+        - name: "Query folding indicators"
+          href: step-folding-indicators.md
+        - name: "Query plan (Preview)"
+          href: query-plan.md
+        - name: "Query folding on native queries"
+          href: native-query-folding.md            
       - name: "Using the data profiling tools"
         href: data-profiling-tools.md
       - name: "Using the Queries pane"
@@ -250,8 +260,6 @@
       href: feedback.md
     - name: Advanced topics
       items:
-      - name: "Query folding"
-        href: power-query-folding.md
       - name: "Fuzzy matching"
         href: fuzzy-matching.md 
       - name: "Behind the scenes of the Data Privacy Firewall"
@@ -268,18 +276,12 @@
           href: QueryDiagnosticsFolding.md
       - name: "Why does my query run multiple times?"
         href: multiple-queries.md
-      - name: "Query folding indicators"
-        href: step-folding-indicators.md
-      - name: "Query plan (Preview)"
-        href: query-plan.md
       - name: "Use Query Parameters"
         href: power-query-query-parameters.md
       - name: "Error handling"
         href: error-handling.md
       - name: "Import data using native database query"
         href: native-database-query.md
-      - name: "Query folding on native queries"
-        href: native-query-folding.md
       - name: "Create Power Platform dataflows from queries in Microsoft Excel (Preview)"
         href: new-dataflow-from-template.md
       - name: Optimize Power Query when expanding table columns
