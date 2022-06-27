@@ -30,10 +30,10 @@
         href: applied-steps.md
       - name: "Global search box (Preview)"
         href: search-box.md
-      - name: "Understanding query evaluation"
-        href: query-folding-basics.md
       - name: Query folding
         items:
+        - name: "Understanding query evaluation and folding"
+          href: query-folding-basics.md
         - name: "Query folding overview"
           href: power-query-folding.md
         - name: "Query folding examples"
