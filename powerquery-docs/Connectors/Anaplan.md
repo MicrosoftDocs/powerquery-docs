@@ -20,10 +20,9 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)|
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)|
 | Authentication Types Supported | Basic |
-| Function Reference Documentation | - |
-| | |
+| Function Reference Documentation | &mdash; |
 
 ## Capabilities supported
 

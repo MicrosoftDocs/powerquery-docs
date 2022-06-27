@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for the Delta Sharing 
 author: bezhan
 
 ms.topic: conceptual
-ms.date: 11/10/2021
+ms.date: 6/24/2022
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -19,9 +19,8 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products | Power BI (Datasets) |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
 | Authentication Types Supported | Key (Bearer Token) |
-| | |
 
 ## Prerequisites
 

@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for the BitSight Secur
 author: bezhan-msft
 
 ms.topic: conceptual
-ms.date: 3/23/2022
+ms.date: 6/24/2022
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -21,7 +21,7 @@ regarding the content of this article or have changes you would like to see made
 | Item | Description |
 | ------ | ------ |
 | Release State | Beta |
-| Products | Power BI (Datasets) |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
 | Authentication Types Supported | API key |
 | Function Reference Document | &mdash; |
 
