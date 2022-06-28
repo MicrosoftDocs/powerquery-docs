@@ -4,7 +4,7 @@ description: This article provides information on how to enable query folding ag
 author: ptyx507x
 
 ms.reviewer: 
-ms.date: 01/31/2022
+ms.date: 6/27/2022
 ms.author: miescobar
 ---
 
@@ -61,7 +61,7 @@ SELECT DepartmentID, Name FROM HumanResources.Department WHERE GroupName = 'Rese
 The first step was to define the correct target, which in this case is the database where the SQL code will be run.
 Once a step has the correct target, you can select that step&mdash;in this case, **Source** in **Applied Steps**&mdash;and then select the **fx** button in the formula bar to add a custom step. In this example, replace the `Source` formula with the following formula:
 
-```M
+```powerquery-m
 Value.NativeQuery(Source, "SELECT DepartmentID, Name FROM HumanResources.Department WHERE GroupName = 'Research and Development'  ", null, [EnableFolding = true])
 ```
 
