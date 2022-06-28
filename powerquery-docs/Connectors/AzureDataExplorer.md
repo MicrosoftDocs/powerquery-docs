@@ -131,7 +131,7 @@ The following sections include tips and tricks for using Kusto query language wi
 
 ### Complex queries in Power BI
 
-Complex queries are more easily expressed in Kusto than in Power Query. They should be implemented as [Kusto functions](kusto/query/functions/index.md), and invoked in Power BI. This method is required when using **DirectQuery** with `let` statements in your Kusto query. Because Power BI joins two queries, and `let` statements can't be used with the `join` operator, syntax errors might occur. Therefore, save each portion of the join as a Kusto function and allow Power BI to join these two functions together.
+Complex queries are more easily expressed in Kusto than in Power Query. They should be implemented as [Kusto functions](/azure/data-explorer/kusto/query/functions/), and invoked in Power BI. This method is required when using **DirectQuery** with `let` statements in your Kusto query. Because Power BI joins two queries, and `let` statements can't be used with the `join` operator, syntax errors might occur. Therefore, save each portion of the join as a Kusto function and allow Power BI to join these two functions together.
 
 ### How to simulate a relative date-time operator
 
@@ -175,7 +175,7 @@ You can use any of the following options in your M query:
 | NoTruncate | `[NoTruncate=true]` | Adds the `notruncation` set statement to your query. Enables suppressing truncation of the query results returned to the caller. |
 | AdditionalSetStatements | `[AdditionalSetStatements="set query_datascope=hotcache"]` | Adds the provided set statements to your query. These statements are used to set query options for the duration of the query. Query options control how a query executes and returns results. |
 | CaseInsensitive | `[CaseInsensitive=true]` | Makes the connector generate queries that are case insensitive&mdash;queries use the `=~` operator instead of the `==` operator when comparing values. |
-| ForceUseContains | `[ForceUseContains=true]` | Makes the connector generate queries that use `contains` instead of the default `has` when working with text fields. While `has` is much more performant, it doesn't handle substrings. For more information about the difference between the two operators, go to [string operators](./kusto/query/datatypes-string-operators.md). |
+| ForceUseContains | `[ForceUseContains=true]` | Makes the connector generate queries that use `contains` instead of the default `has` when working with text fields. While `has` is much more performant, it doesn't handle substrings. For more information about the difference between the two operators, go to [string operators](/azure/data-explorer/kusto/query/datatypes-string-operators). |
 | Timeout | `[Timeout=#duration(0,10,0,0)]` | Configures both the client and server timeout of the query to the provided duration. |
 | ClientRequestIdPrefix  | `[ClientRequestIdPrefix="MyReport"]` | Configures a ClientRequestId prefix for all queries sent by the connector. This allows the queries to be identifiable in the cluster as coming from a specific report and/or data source. |
 
@@ -184,11 +184,11 @@ You can use any of the following options in your M query:
 
 ### Reaching Kusto query limits
 
-Kusto queries return, by default, up to 500,000 rows or 64 MB, as described in [query limits](kusto/concepts/querylimits.md). You can override these defaults by using **Advanced options** in the  **Azure Data Explorer (Kusto)** connection window:
+Kusto queries return, by default, up to 500,000 rows or 64 MB, as described in [query limits](/azure/data-explorer/kusto/concepts/querylimits). You can override these defaults by using **Advanced options** in the  **Azure Data Explorer (Kusto)** connection window:
 
 ![advanced options.](media/azure-data-explorer/advanced-options.png)
 
-These options issue [set statements](kusto/query/setstatement.md) with your query to change the default query limits:
+These options issue [set statements](/azure/data-explorer/kusto/query/setstatement) with your query to change the default query limits:
 
 * **Limit query result record number** generates a `set truncationmaxrecords`
 * **Limit query result data size in Bytes** generates a `set truncationmaxsize`
@@ -208,7 +208,7 @@ in
 
 ### Using query parameters
 
-You can use [query parameters](kusto/query/queryparametersstatement.md) to modify your query dynamically.
+You can use [query parameters](/azure/data-explorer/kusto/query/queryparametersstatement) to modify your query dynamically.
 
 #### Using a query parameter in the connection details
 
