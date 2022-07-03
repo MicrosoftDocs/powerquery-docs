@@ -4,7 +4,7 @@ description: An article on how to catch and handle errors in Power Query using t
 author: ptyx507x
 
 ms.reviewer: kvivek
-ms.date: 06/09/2022
+ms.date: 07/03/2022
 ms.author: dougklo
 ---
 
@@ -26,15 +26,17 @@ This table from an Excel Workbook has Excel errors such as **#NULL!**, **#REF!**
 
 Notice how the errors from the Excel workbook are shown with the `[Error]` value in each of the cells.
 
+In this article, you’ll learn how to replace an error with another existing value. In addition, you’ll also learn how to catch an error and use it for your own specific logic.
+
 In this case, the goal is to create a new **Final Rate** column that will use the values from the **Standard Rate** column. If there are any errors, then it will use the value from the correspondent **Special Rate** column.
 
-## Alternate value when finding errors
+## Provide an alternative value when finding errors
+
+In this case, the goal is to create a new **Final Rate** column in the sample data source that will use the values from the **Standard Rate** column. If there are any errors, then it will use the value from the corresponding **Special Rate** column.
 
 To create a new custom column, go to the **Add column** menu and select **Custom column**. In the **Custom column** window, enter the formula `try [Standard Rate] otherwise [Special Rate]`. Name this new column **Final Rate**.
 
 ![try otherwise custom column.](images/me-error-handling-try-otherwise-custom-column.png)
-
-As an alternative approach, you can also enter the formula `try [Standard Rate] catch ()=> [Special Rate]` which is equivalent to the previous formula, but using the catch keyword with a function that requires no parameters.
 
 The formula above will try to evaluate the **Standard Rate** column and will output its value if no errors are found. If errors are found in the **Standard Rate** column, then the output will be the value defined after the `otherwise` statement, which in this case is the **Special Rate** column.
 
@@ -42,7 +44,12 @@ After adding the correct data types to all of the columns in the table, the foll
 
 ![Final table try otherwise.](images/me-error-handling-try-otherwise-final-table.png)
 
-## Catch errors
+>[!NOTE]
+>As an alternative approach, you can also enter the formula `try [Standard Rate] catch ()=> [Special Rate]` which is equivalent to the previous formula, but using the catch keyword with a function that requires no parameters.
+>
+>The `catch` keyword was introduced to Power Query in May of 2022.
+
+## Provide your own conditional error logic
 
 Using the same sample data source as the previous section, the new goal is to create a new column for the **Final Rate**. If the value from the **Standard Rate** exists, then that value will be used. Otherwise the value from the **Special Rate** column will be used, except for the rows with any `#REF!` error.
 
@@ -55,7 +62,7 @@ When you select any of the whitespace next to the error value, you get the detai
 
 You can only select one cell at a time, so you can effectively only see the error components of one error value at a time. This is where you'll create a new custom column and use the `try` expression.
 
-### `try` syntax approach
+### Use `try` with custom logic
 To create a new custom column, go to the **Add column** menu and select **Custom column**. In the **Custom column** window, enter the formula `try [Standard Rate]`. Name this new column **All Errors**.
 
 ![Using try in a custom column.](images/me-error-handling-try-custom-column.png)
@@ -85,8 +92,6 @@ After doing the expand operation, the **All Errors.Error.Message** field display
 
 ![Specific error message.](images/me-error-handling-try-error-message.png)
 
-#### Add a conditional column
-
 Now with each error message in a new column, you can create a new conditional column with the name **Final Rate** and the following clauses:
 * If the value in the **All Errors.Errors.Message** column equals `null`, then the output will be the value from the **Standard Rate** column.
 * Else, if the value in the **All Errors.Errors.Message** column equals `Invalid cell value '#REF!'.`, then the output will be the value from the **Special Rate** column.
@@ -98,7 +103,7 @@ After keeping only the **Account**, **Standard Rate**, **Special Rate**, and **F
 
 ![Final table with data types.](images/me-error-handling-try-final-table.png)
 
-### `try` and `catch` syntax approach
+### Use `try` and `catch` with custom logic
 
 Alternatively to the previous approach, you can create a new single formula in a single *Custom column* dialog with the `try` and `catch` syntax approach as follows:
 
