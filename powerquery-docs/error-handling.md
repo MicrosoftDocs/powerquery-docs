@@ -40,7 +40,7 @@ To create a new custom column, go to the **Add column** menu and select **Custom
 
 The formula above will try to evaluate the **Standard Rate** column and will output its value if no errors are found. If errors are found in the **Standard Rate** column, then the output will be the value defined after the `otherwise` statement, which in this case is the **Special Rate** column.
 
-After adding the correct data types to all of the columns in the table, the following image shows how the final table looks.
+After adding the correct data types to all columns in the table, the following image shows how the final table looks.
 
 ![Final table try otherwise.](images/me-error-handling-try-otherwise-final-table.png)
 
