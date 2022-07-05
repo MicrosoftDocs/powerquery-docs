@@ -20,6 +20,7 @@
       "redirect_url": "/power-query/error-handling",
       "redirect_document_id": "false"
     },
+    {
       "source_path": "powerquery-docs/dataflows/best-practices-for-data-warehouse-using-dataflows.md",
       "redirect_url": "/power-query/dataflows/best-practices-for-dimensional-model-using-dataflows",
       "redirect_document_id": "false"
