@@ -96,3 +96,7 @@ You can easily combine all files within a given folder, as long as they have the
 ### See also
 
 [Combine CSV files](combine-files-csv.md)
+
+[best-practices-for-data-warehouse-using-dataflows.md](best-practices-for-data-warehouse-using-dataflows.md)
+[HandlingQueryFolding.md](HandlingQueryFolding.md)
+[Web.Contents.md](Web.Contents.md)
