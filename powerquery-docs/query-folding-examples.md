@@ -3,7 +3,7 @@ title: Query folding examples in Power Query
 description: Demonstrates the affect of query folding in Power Query. A comparison and analysis of multiple query examples with no folding, partial folding, and full query folding in Power Query.
 author: ptyx507x
 ms.reviewer: 
-ms.date: 3/15/2022
+ms.date: 6/27/2022
 ms.author: dougklo
 ms.topic: conceptual
 ---
@@ -61,7 +61,7 @@ Lastly, inside the **Choose columns** dialog, select the `Sale Key`, `Customer K
 
 The following code sample is the full M script for the query you created:
 
-```
+```powerquery-m
 let
   Source = Sql.Database(ServerName, DatabaseName),
   Navigation = Source{[Schema = "wwi", Item = "fact_Sale"]}[Data],
@@ -122,7 +122,7 @@ In **Keep bottom rows**, enter the value 10, and then select **OK**.
 
 The following code sample is the full M script for the query you created:
 
-```
+```powerquery-m
 let
   Source = Sql.Database(ServerName, DatabaseName),
   Navigation = Source{[Schema = "wwi", Item = "fact_Sale"]}[Data],
@@ -183,7 +183,7 @@ In **Keep top rows**, enter the value 10, and then select **OK**.
 
 The following code sample is the full M script for the query you created:
 
-```
+```powerquery-m
 let
   Source = Sql.Database(ServerName, DatabaseName),
   Navigation = Source{[Schema = "wwi", Item = "fact_Sale"]}[Data],
@@ -292,7 +292,7 @@ Transforms can be grouped into the following categories:
 ## Considerations and suggestions
 
 - Follow the best practices when creating a new query, as stated in [Best practices in Power Query](best-practices.md).
-- Use the query folding indicators to check which steps are preventing your query from folding. Reorder them if necessary to increase folding.
+- Use the [query folding indicators](step-folding-indicators.md) to check which steps are preventing your query from folding. Reorder them if necessary to increase folding.
 - Use the query plan to determine which transforms are happening at the Power Query engine for a particular step. Consider modifying your existing query by re-arranging your steps. Then check the query plan of the last step of your query again and see if the query plan looks better than the previous one. For example, the new query plan has less nodes than the previous one, and most of the nodes are “Streaming” nodes and not “full scan”. For data sources that support folding, any nodes in the query plan other than `Value.NativeQuery` and data source access nodes represent transforms that didn’t fold.
 - When available, you can use the **View Native Query** (or **View data source query**) option to ensure that your query can be folded back to the data source. If this option is disabled for your step, and you're using a source that normally enables it, you've created a step that stops query folding. If you're using a source that doesn't support this option, you can rely on the query folding indicators and query plan.
 - Use the query diagnostics tools to better understand the requests being sent to your data source when query folding capabilities are available for the connector.
