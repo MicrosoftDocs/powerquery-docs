@@ -105,7 +105,7 @@ After keeping only the **Account**, **Standard Rate**, **Special Rate**, and **F
 
 ### Use `try` and `catch` with custom logic
 
-Alternatively to the previous approach, you can create a new single formula in a single *Custom column* dialog with the `try` and `catch` syntax approach as follows:
+Alternatively, you can also create a new custom column using the `try` and `catch` keywords.
 
 `try [Standard Rate] catch (r)=> if r[Message] <> "Invalid cell value '#REF!'." then [Special Rate] else null`
 
