@@ -26,7 +26,7 @@ This table from an Excel Workbook has Excel errors such as **#NULL!**, **#REF!**
 
 Notice how the errors from the Excel workbook are shown with the `[Error]` value in each of the cells.
 
-In this article, you’ll learn how to replace an error with another existing value. In addition, you’ll also learn how to catch an error and use it for your own specific logic.
+In this article, you'll learn how to replace an error with another value. In addition, you'll also learn how to catch an error and use it for your own specific logic.
 
 In this case, the goal is to create a new **Final Rate** column that will use the values from the **Standard Rate** column. If there are any errors, then it will use the value from the correspondent **Special Rate** column.
 
