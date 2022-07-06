@@ -3,28 +3,29 @@ title: Field mapping considerations for standard dataflows
 description: Learn how to get the best outcomes when writing creating dataflows that write their output to Dataverse
 author: bensack
 
-ms.reviewer: kvivek
+ms.reviewer: dougklo
 
 ms.topic: conceptual
-ms.date: 12/3/2020
+ms.date: 7/6/2022
 ms.author: bensack
 ---
 
 # Field mapping considerations for standard dataflows
 
-When loading data into Dataverse tables, you will need to map the source query's columns in the dataflow's editing experience to the destination Dataverse table columns. Beyond maping of data, there are other considerations and best practices to take into account. In this article we cover the different dataflow settings that control the behavior of dataflow refresh and as a result, the data in the destination table.
+When loading data into Dataverse tables, you'll need to map the source query's columns in the dataflow's editing experience to the destination Dataverse table columns. Beyond mapping of data, there are other considerations and best practices to take into account. In this article, we cover the different dataflow settings that control the behavior of dataflow refresh and as a result, the data in the destination table.
 
-## Controling whether dataflows create or upsert records each refresh
+## Controlling whether dataflows create or upsert records each refresh
 
-Each time you refresh a dataflow, it will fetch records from the source, and load them into dataverse. If you run the dataflow more than once, depending on how you configure the dataflow, you may:
-1. Create new records each dataflow refresh, even if such records already exist in the destination table.
-2. Create new records, if they dont already exist in the table, or Update existing records if they already exist in the table. This behavior is called upsert. 
+Each time you refresh a dataflow, it will fetch records from the source and load them into Dataverse. If you run the dataflow more than once&mdash;depending on how you configure the dataflow&mdash;you can:
 
-Using a key column will indicate to the Dataflow to upsert records into the detsination table while not selecting a key will always create new records in the destination table. 
+* Create new records each dataflow refresh, even if such records already exist in the destination table.
+* Create new records if they don't already exist in the table, or update existing records if they already exist in the table. This behavior is called _upsert_.
 
-A key column is a column that's unique and deterministic of a data row in the table. For example, in an Orders table, if the Order ID is a key column, you shouldn't have two rows with the same Order ID. Also, one Order ID, let's say an order with the ID 345, should only represent one row in the table. To choose the key column for the table in Dataverse from the dataflow, you need to set the key field in the Map Tables experience.
+Using a key column will indicate to the dataflow to upsert records into the destination table, while not selecting a key will always create new records in the destination table.
 
-### Choosing a Primary Name and Key Field when creating a new table
+A key column is a column that's unique and deterministic of a data row in the table. For example, in an Orders table, if the Order ID is a key column, you shouldn't have two rows with the same Order ID. Also, one Order ID&mdash;let's say an order with the ID 345&mdash;should only represent one row in the table. To choose the key column for the table in Dataverse from the dataflow, you need to set the key field in the Map Tables experience.
+
+### Choosing a primary name and key field when creating a new table
 
 The following image shows how you can choose the key column to be populated from the source when you create a new table in the dataflow.
 
@@ -33,7 +34,7 @@ The following image shows how you can choose the key column to be populated from
 
 The primary name field that you see in the field mapping is for a label field; this field doesn't need to be unique. The field that's used in the table for checking duplication will be the field that you set in the **Alternate Key** field.
 
-Having a primary key in the table ensures that even if you have duplicate data rows with the same value in the field that's mapped to the primary key, the duplicate entries won't be loaded into the table, and the table will always have a high quality of the data. Having an table with a high quality of data is essential in building reporting solutions based on the table.
+Having a primary key in the table ensures that even if you have duplicate data rows with the same value in the field that's mapped to the primary key, the duplicate entries won't be loaded into the table, and the table will always have a high quality of the data. Having a table with a high quality of data is essential in building reporting solutions based on the table.
 
 ### The primary name field
 
@@ -41,28 +42,27 @@ The primary name field is a display field used in Dataverse. This field is used 
 
 The alternate key field is what is used as the primary key.
 
-### Choosing a key field when loading to an existing table.
+### Choosing a key field when loading to an existing table
 
 When mapping a dataflow query to an existing Dataverse table, you can choose if and which key should be used when loading data into the destination table.
 
-The following image shows how you can choose the key column to be used when upserting records to an existing Dataverse table: 
+The following image shows how you can choose the key column to be used when upserting records to an existing Dataverse table:
 
 > [!div class="mx-imgBorder"]
-> ![Selecting a key to upsert data into Dataverse tables.](media/MultiAK.png)
-
+> [![Selecting a key to upsert data into Dataverse tables.](media/MultiAK.png)](media/MultiAK.png#lightbox)
 
 ## What are good candidates for the key field
 
 The key field is a unique value representing a unique row in the table. It's important to have this field, because it helps you avoid having duplicate records in the table. This field can come from three sources:
 
-- The primary key in the source system (such as OrderID in the example above).
+* The primary key in the source system (such as OrderID in the example above).
 
-- A concatenated field created through Power Query transformations in the dataflow. 
+* A concatenated field created through Power Query transformations in the dataflow.
 
   > [!div class="mx-imgBorder"]
   > ![Merging columns to create a concatenated unique column.](media/MergeColumnsDataflow.png)
 
-- A combination of fields to be selected in the **Alternate Key** option. A combination of fields used as a key field is also called a *composite key*.
+* A combination of fields to be selected in the **Alternate Key** option. A combination of fields used as a key field is also called a _composite key_.
 
   ![Creating a composite key through field mapping.](media/CompositeKeyMapping.png)
 
@@ -72,13 +72,12 @@ If you want to have the data in your table always synchronized with the data fro
 
 Having this option checked means that if there's a data row in the table that doesn't exist in the next dataflow refresh's query output, that row will be removed from the table.
 
-
 > [!div class="mx-imgBorder"]
 > ![Delete rows that no longer exists.](media/DeleteRowsNotExist.png)
 
 ## Known limitations
- 
-- Mapping to [polymorphic lookup](/powerapps/maker/canvas-apps/working-with-references#polymorphic-lookups) fields is currently not supported.
-- Mapping to a multi-level lookup field, a lookup that points to another tables' lookup field, is currently not supported.
-- Mapping to **Status** and **Status Reason** [fields](/powerapps/developer/data-platform/define-custom-state-model-transitions#what-is-the-state-model) is currently not supported.
-- Mapping data into multi-line text that includes line break charecters is not supported and the line breaks will be removed. Instead, you could leverage the line break tag "\<br\>" to load and preserve multi-line text.  
+
+* Mapping to [polymorphic lookup](/powerapps/maker/canvas-apps/working-with-references#polymorphic-lookups) fields is currently not supported.
+* Mapping to a multi-level lookup field, a lookup that points to another tables' lookup field, is currently not supported.
+* Mapping to **Status** and **Status Reason** [fields](/powerapps/developer/data-platform/define-custom-state-model-transitions#what-is-the-state-model) is currently not supported.
+* Mapping data into multi-line text that includes line break characters isn't supported and the line breaks will be removed. Instead, you could use the line break tag "\<br\>" to load and preserve multi-line text.  
