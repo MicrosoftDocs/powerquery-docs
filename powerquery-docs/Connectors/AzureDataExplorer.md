@@ -4,7 +4,7 @@ description: Includes basic information, prerequisites, and information on how t
 author: dougklopfenstein
 
 ms.topic: conceptual
-ms.date: 6/14/2022
+ms.date: 7/6/2022
 ms.author: dougklo
 ---
 
@@ -143,7 +143,7 @@ Instead of this query using the `ago()` operator:
 ```kusto
     StormEvents | where StartTime > (now()-5d)
     StormEvents | where StartTime > ago(5d)
-``` 
+```
 
 Use the following equivalent query:
 
@@ -210,6 +210,12 @@ in
 
 You can use [query parameters](/azure/data-explorer/kusto/query/queryparametersstatement) to modify your query dynamically.
 
+#### Use a query parameter in the query steps
+
+You can use a query parameter in any query step that supports it. For example, filter the results based on the value of a parameter. In this example, select the drop-down menu on the right side of the `State` column in the Power Query editor, select **Text Filters** > **Equals**, then select **ALABAMA** under **Keep rows where 'State'**.
+
+![Filter results using a parameter.](media/azure-data-explorer/filter-using-parameter.png)
+
 #### Using a query parameter in the connection details
 
 Use a query parameter to filter information in the query and optimize query performance.
@@ -218,9 +224,7 @@ In **Advanced Editor**:
 
 1. Find the following section of the query:
 
-    ```powerquery-m
-    Source = AzureDataExplorer.Contents("<Cluster>", "<Database>", "<Query>", [])
-    ```
+    Source = AzureDataExplorer.Contents("_\<Cluster>_", "_\<Database>_", "_\<Query>_", [])
 
    For example:
 
@@ -228,15 +232,13 @@ In **Advanced Editor**:
     Source = AzureDataExplorer.Contents("Help", "Samples", "StormEvents | where State == 'ALABAMA' | take 100", [])
     ```
 
-1. Replace the relevant part of the query with your parameter. Split the query into multiple parts, and concatenate them back using an ampersand (&), along with the parameter.
+2. Insert a query parameter into the Kusto Query Language (KQL) query.
 
-   For example, in the query above, take the `State == 'ALABAMA'` part, and split it to: `State == '` and `'` and place the `State` parameter between them:
+   If you paste a KQL query directly in the connection dialog, the query will be part of the source step in Power Query. You can embed parameters as part of the query using the advanced editor or when editing the source statement in the formula bar. An example query could be `StormEvents | where State == ' " & State & " ' | take 100`. `State` is a parameter and in run time the query will be:
 
-    ```kusto
-    "StormEvents | where State == '" & State & "' | take 100"
-    ```
+    `StormEvents | where State == 'ALABAMA' | take 100`
 
-1. If your query contains quotation marks, encode them correctly. For example, the following query:
+3. If your query contains quotation marks, encode them correctly. For example, the following query in KQL:
 
    ```kusto
    "StormEvents | where State == "ALABAMA" | take 100"
@@ -244,21 +246,15 @@ In **Advanced Editor**:
 
    will appear in the **Advanced Editor** as follows with two quotation marks:
 
-   ```kusto
+   ```powerquery-m
     "StormEvents | where State == ""ALABAMA"" | take 100"
    ```
 
-   It should be replaced with the following query with three quotation marks:
+   If you are using a parameter, such as `State`, it should be replaced with the following query, which contains three quotation marks:
 
    ```kusto
    "StormEvents | where State == """ & State & """ | take 100"
    ```
-
-#### Use a query parameter in the query steps
-
-You can use a query parameter in any query step that supports it. For example, filter the results based on the value of a parameter.
-
-![filter results using a parameter.](media/azure-data-explorer/filter-using-parameter.png)
 
 ### Use Value.NativeQuery for Azure Data Explorer features
 
