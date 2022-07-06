@@ -4,7 +4,7 @@ description: An article that describes why and how to use the new Query plan fea
 author: DougKlopfenstein
 
 ms.topic: quickstart
-ms.date: 3/15/2022
+ms.date: 6/27/2022
 ms.author: dougklo
 ms.reviewer: dougklo
 localizationgroup: reference
@@ -32,7 +32,7 @@ Use the following steps to create the query in your own Power Query Online envir
 1. From **Power Query - Choose data source**, select **Blank query**.
 2. Replace the blank query's script with the following query.
 
-   ```
+   ```powerquery-m
    let
      Source = Sql.Database("servername", "database"),
      Navigation = Source{[Schema = "Sales", Item = "SalesOrderHeader"]}[Data],
@@ -53,7 +53,7 @@ Use the following steps to create the query in your own Power Query Online envir
 
 After following these steps, your query will look like the one in the following image.
 
-[ ![Sample query with query folding indicators enabled.](media/query-plan/sample-query.png) ](media/query-plan/sample-query.png#lightbox)
+[![Sample query with query folding indicators enabled.](media/query-plan/sample-query.png)](media/query-plan/sample-query.png#lightbox)
 
 This query connects to the SalesOrderHeader table, and selects a few columns from the last five orders with a **TotalDue** value above 1000.
 

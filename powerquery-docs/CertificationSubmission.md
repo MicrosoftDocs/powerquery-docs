@@ -42,16 +42,16 @@ The Connector Certification Portal is an experience within [ISV Studio](https://
 
 **Note that we need you to complete all the steps in order to move forward with certification.** If you would like to add teammates to manage your connector, let your Microsoft contact know.
 
-After your connector code review is complete, our team will schedule a demo for your team to walk us through the connector experience. We'll be validating the following scenarios:
-
-* You can successfully connect to the service.
-* Your connector correctly displays navigation tables.
-* Your connector correctly authenticates with the expected authentication method.
-* You can successfully refresh the connector.
-* You can successfully publish to the service.
-* You can successfully refresh end-to-end through the gateway.
-
-Ensure that these scenarios are working successfully before the demo so that the demo goes smooth and doesn't block the release of your connector.
+After your connector code review is complete, you'll need to submit a demo video to us outlining the following scenarios:
+- Load the connector as a custom connector in Power BI Desktop.
+- Select the connector from **Get Data**.
+- Successfully authenticate to the connector.
+- Select a table from the **Navigator** experience.
+- Load the data into Power BI Desktop and create a simple report.
+- Publish the report to the Power BI service.
+- Update the data in your end service backend (any simple data value update).
+- Successfully refresh the dataset in the Power BI service using the connector through the on-premises data gateway. Refresh the report visual. The changed data value should be updated. 
+- Successfully refresh in Power BI Desktop. The changed data value should be updated.
 
 ### Updates
 

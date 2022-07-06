@@ -42,10 +42,9 @@ The following table lists the major features differences between standard datafl
 | Ingestion speed into Dataverse | Baseline performance | Improved performance by a few factors. Actual results may vary and depend on characteristics of the data ingested, and load on Dataverse service at the time of ingestion. |
 | Incremental Refresh policy | Not supported | Supported |
 | Resiliency | When Dataverse service protection limits are encountered, a record will be retried up to 3 times. | When Dataverse service protection limits are encountered, a record will be retried up to 3 times.
+| Power Automate integration | Not supported |  Supported |
 
-
-
-## Analytical dataflows 
+## Analytical dataflows
 
 An analytical dataflow loads data to storage types optimized for analytics&mdash;Azure Data Lake Storage. Microsoft Power Platform environments and Power BI workspaces provide customers with a managed analytical storage location that's bundled with those product licenses. In addition, customers can link their organization’s Azure Data Lake storage account as a destination for dataflows.
 
