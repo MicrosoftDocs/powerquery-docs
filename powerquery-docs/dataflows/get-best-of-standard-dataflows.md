@@ -14,7 +14,7 @@ ms.author: bensack
 
 When loading data into Dataverse tables, you will need to map the source query's columns in the dataflow's editing experience to the destination Dataverse table columns. Beyond maping of data, there are other considerations and best practices to take into account. In this article we cover the different dataflow settings that control the behavior of dataflow refresh and as a result, the data in the destination table.
 
-## Controling whether dataflows create or upsert records each refresh.
+## Controling whether dataflows create or upsert records each refresh
 
 Each time you refresh a dataflow, it will fetch records from the source, and load them into dataverse. If you run the dataflow more than once, depending on how you configure the dataflow, you may:
 1. Create new records each dataflow refresh, even if such records already exist in the destination table.
