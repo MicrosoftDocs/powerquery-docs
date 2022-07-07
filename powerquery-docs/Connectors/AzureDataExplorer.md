@@ -216,6 +216,64 @@ You can use a query parameter in any query step that supports it. For example, f
 
 ![Filter results using a parameter.](media/azure-data-explorer/filter-using-parameter.png)
 
+#### Provide parameters to an ADX function
+
+Kusto functions are a great way to maintain complex Kusto Query Language (KQL) queries. We recommend using functions instead of embedding KQL in Power Query. The main advantage of using function is that the logic is maintained once in an environment that is easy to create and test.
+
+Functions can also receive parameters and so add a lot of flexibility to the Power BI user. Power BI has a lot of ways to slice the data. But all filters and slicers are added after the original KQL and in many cases you'll want to use filtering at an early stage of the query. Using functions and dynamic parameters is a very effective way to customize the final query.
+
+##### Creating a function
+
+You can create the following function in any ADX cluster that you have access to, including a free cluster. The function returns the table `SalesTable` from the help cluster, filtered for sales transactions greater than or smaller than a number provided by the report user.
+
+```kusto
+.create-or-alter  function LargeOrSmallSales(Cutoff:long,Op:string=">")
+{
+    cluster("help").database("ContosoSales").SalesTable
+    | where  (Op==">" and SalesAmount >= Cutoff) or (Op=="<"  and SalesAmount <= Cutoff)
+}
+```
+
+After you create the function, you can test it using:
+
+```kusto
+LargeOrSmallSales(2000,">")
+| summarize Sales=tolong(sum(SalesAmount)) by Country
+```
+
+You can also test it using:
+
+```kusto
+LargeOrSmallSales(20,"<")
+| summarize Sales=tolong(sum(SalesAmount)) by Country
+```
+
+##### Using the function in Power BI
+
+1. Connect to the cluster where you created the function.
+2. In the Power Query navigator, select the function from the list of objects. The connector analyzes the parameters and presents them above the data on the right side of the navigator.
+
+   ![Screenshot with the Cutoff and Op parameters displayed above the data in the navigator.](media/azure-data-explorer/connector-analysis.png)
+
+3. Add values to the parameters and then select **Apply**.
+4. After the preview appears, select **Transform Data**.
+5. Once in the Power Query editor, create two parameters, one for the cutoff value and one for the operator.
+6. Go back to the `LargeOrSmallSales` query and replace the values with the query parameters in the formula bar.
+
+   ![Screenshot with the LargeOrSmallSales function, with emphasis on the Cutoff_Param and Op_Param parameters in the formula bar.](media/azure-data-explorer/query-parameters.png)
+
+7. From the editor, create two static tables (Enter Data) to provide options for the two parameters. For the cutoff, you can create a table with values like 10, 50, 100, 200, 500, 1000, 2000. For the `Op`, a table with two Text values `<` and `>`.
+
+8. The two columns in the tables need to be bound to the query parameters using the **Bind to parameter** selection.
+
+   ![Screenshot with Op being bound to the Op_Param parameter.](media/azure-data-explorer/bound-query-parameters.png)
+
+The final report will include slicers for the two static tables and any visuals from the summary sales.
+
+![Screenshot in Power BI with the Cutoff and Op value selections displayed next to the table.](media/azure-data-explorer/slicers-visuals.png)
+
+The base table is filtered first and then aggregated.
+
 #### Using a query parameter in the connection details
 
 Use a query parameter to filter information in the query and optimize query performance.
