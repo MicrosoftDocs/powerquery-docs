@@ -47,9 +47,9 @@ To connect from Power BI Desktop, take the following steps:
 
 3. You will need provide your credentials to authenticate with your Databricks SQL Warehouse. With the "Azure Databricks" connector, you have 3 options for credentials:
 
-    1. Username / Password (useable for GCP).
-    2. Personal Access Token (useable for AWS). Refer [here](https://docs.microsoft.com/en-us/azure/databricks/sql/user/security/personal-access-tokens) for instructions on generating a Personal Access Token (PAT).
-    3. Azure Active Directory (useable for Azure). Sign into your organizational account via the browser popup.
+    1. Username / Password (useable for AWS or GCP). This option is not available if your organization/account uses 2FA/MFA. 
+    2. Personal Access Token (useable for AWS, Azure or GCP). Refer [here](https://docs.microsoft.com/en-us/azure/databricks/sql/user/security/personal-access-tokens) for instructions on generating a Personal Access Token (PAT).
+    3. Azure Active Directory (useable only for Azure). Sign into your organizational account via the browser popup.
     
 If you are using the "Databricks (Beta)" connector, you have an alternate "OAuth (oidc)" option useable only for Databricks on AWS. 
 
