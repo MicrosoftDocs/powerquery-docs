@@ -1,6 +1,6 @@
 ---
 title: Power Query Impala database connector
-description: Provides basic information and connection instructions, along with tips about combining data from multiple files and subfolders.
+description: Provides basic information for the Impala database connector, along with how to connect to your Impala data.
 author: DougKlopfenstein
 
 ms.topic: conceptual
@@ -81,6 +81,15 @@ To connect to an **Impala** database, take the following steps:
 7. Select **Next** to continue.
 
 8. In **Navigator**, select the data you require, then select **Transform data** to transform the data in the Power Query editor.
+
+## Connect using advanced options
+
+Power Query provides a set of advanced options that you can add to your query if needed. The following table lists all of the advanced options you can set in Power Query.
+
+| Advanced option | Description |
+| --------------- | ----------- |
+| Connection timeout duration | Specifies the maximum time Power Query will wait for a connection to complete. You can enter another value to keep the connection open longer.|
+| Command timeout duration | Specifies the maximum time a command is allowed to run before Power Query abandons the call. |
 
 ## Considerations and limitations
 
