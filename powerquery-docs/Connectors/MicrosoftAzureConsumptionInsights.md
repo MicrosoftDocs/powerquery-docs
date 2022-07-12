@@ -4,23 +4,22 @@ description: Provides information on the deprecation of the Microsoft Azure Cons
 author: bezhan
 
 ms.topic: conceptual
-ms.date: 5/5/2020
+ms.date: 7/11/2022
 ms.author: bezhan
-ms.reviewer: kvivek
+ms.reviewer: dougklo
 LocalizationGroup: reference
 ---
 
 # Microsoft Azure Consumption Insights (Beta) (Deprecated)
- 
+
 ## Summary
 
 | Item | Description |
 | ---- | ----------- |
 | Release State | Deprecated |
-| Products | - |
+| Products | &mdash; |
 | Authentication Types Supported | Organizational account |
-| Function Reference Documentation | - |
-| | |
+| Function Reference Documentation | &mdash; |
 
 ## Deprecation
 
@@ -29,10 +28,8 @@ LocalizationGroup: reference
 
 ### Transition instructions
 
-Users are instructed to use the certified Microsoft Azure Cost Management connector as a replacement. The table and field names are similar and should offer the same functionality. 
+Users are instructed to use the certified [Microsoft Azure Cost Management connector](AzureCostManagement.md) as a replacement. The table and field names are similar and should offer the same functionality.
 
 ### Timeline
 
-The Microsoft Azure Consumption Insights service will stop working in December 2021. Users should transition off the Microsoft Azure Consumption Insights connector to the Microsoft Azure Cost Management connector by December 2021. 
-
-
+The Microsoft Azure Consumption Insights service will stop working in December 2021. Users should transition off the Microsoft Azure Consumption Insights connector to the [Microsoft Azure Cost Management connector](AzureCostManagement.md) by December 2021.

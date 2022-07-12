@@ -4,7 +4,7 @@ description: Provides users alternatives to connect to their data when no out-of
 author: bezhan-msft
 
 ms.topic: conceptual
-ms.date: 4/14/2022
+ms.date: 7/11/2022
 ms.author: bezhan
 
 LocalizationGroup: reference
@@ -22,7 +22,7 @@ For example, the [ODBC](Connectors/ODBC.md) connector can connect to services wi
 
 Using available Power BI out-of-box generic interface connectors to connect through interfaces that the end data source supports lets you connect to many more data sources on the internet than there are specific out-of-box connectors for.
 
-To learn more about connectivity through generic interfaces, go to [Connect to data by using Power BI Desktop generic interfaces](/power-bi/connect-data/desktop-connect-using-generic-interfaces).
+To learn more about connectivity through generic interfaces, go to [Connect to data using generic interfaces](connect-using-generic-interfaces.md).
 
 ## Connectivity through a custom connector
 
