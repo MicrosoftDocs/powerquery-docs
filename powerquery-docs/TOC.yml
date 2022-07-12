@@ -32,10 +32,20 @@
         href: applied-steps.md
       - name: "Global search box (Preview)"
         href: search-box.md
-      - name: "Query folding basics"
-        href: query-folding-basics.md
-      - name: "Query folding examples"
-        href: query-folding-examples.md
+      - name: Query folding
+        items:
+        - name: "Understanding query evaluation and folding"
+          href: query-folding-basics.md
+        - name: "Query folding overview"
+          href: power-query-folding.md
+        - name: "Query folding examples"
+          href: query-folding-examples.md
+        - name: "Query folding indicators"
+          href: step-folding-indicators.md
+        - name: "Query plan (Preview)"
+          href: query-plan.md
+        - name: "Query folding on native queries"
+          href: native-query-folding.md            
       - name: "Using the data profiling tools"
         href: data-profiling-tools.md
       - name: "Using the Queries pane"
@@ -252,8 +262,6 @@
       href: feedback.md
     - name: Advanced topics
       items:
-      - name: "Query folding"
-        href: power-query-folding.md
       - name: "Fuzzy matching"
         href: fuzzy-matching.md 
       - name: "Behind the scenes of the Data Privacy Firewall"
@@ -270,18 +278,12 @@
           href: QueryDiagnosticsFolding.md
       - name: "Why does my query run multiple times?"
         href: multiple-queries.md
-      - name: "Query folding indicators"
-        href: step-folding-indicators.md
-      - name: "Query plan (Preview)"
-        href: query-plan.md
       - name: "Use Query Parameters"
         href: power-query-query-parameters.md
       - name: "Error handling"
         href: error-handling.md
       - name: "Import data using native database query"
         href: native-database-query.md
-      - name: "Query folding on native queries"
-        href: native-query-folding.md
       - name: "Create Power Platform dataflows from queries in Microsoft Excel (Preview)"
         href: new-dataflow-from-template.md
       - name: Optimize Power Query when expanding table columns
@@ -298,7 +300,7 @@
         href: "Connectors/AdobeAnalytics.md"
       - name: "Amazon Athena"
         href: "Connectors/AmazonAthena.md"
-      - name: "Amazon OpenSearch Project (Beta)"
+      - name: "Amazon OpenSearch Service (Beta)"
         href: "Connectors/AmazonOpenSearchService.md"
       - name: "Amazon Redshift"
         href: Connectors/AmazonRedshift.md
@@ -312,6 +314,8 @@
         href: Connectors/AutomyDataAnalytics.md
       - name: "Azure Cost Management"
         href: Connectors/AzureCostManagement.md
+      - name: "Azure Data Explorer (Kusto)"
+        href: Connectors/AzureDataExplorer.md
       - name: "Azure Data Lake Storage Gen1"
         href: Connectors/AzureDataLakeStorageGen1.md
       - name: "Azure Data Lake Storage Gen 2"
@@ -330,7 +334,7 @@
         href: Connectors/BitSightSecurityRatings.md
       - name: "Bloomberg Data and Analytics"
         href: Connectors/BloombergDataAndAnalytics.md
-      - name: "BQE Core (Beta)"
+      - name: "BQE Core"
         href: Connectors/BQECore.md
       - name: "Common Data Service (Legacy)"
         href: ./connectors/commondataservicelegacy.md
@@ -350,6 +354,8 @@
         href: Connectors/Essbase.md
       - name: "Excel"
         href: Connectors/Excel.md
+      - name: "FactSet RMS (Beta)"
+        href: Connectors/FactSetRMS.md
       - name: "FHIR"
         items:
         - name: Connect to FHIR
@@ -364,11 +370,13 @@
           href: Connectors/FHIR/FHIR-Relationships.md
       - name: "Folder"
         href: Connectors/Folder.md
+      - name: "Funnel (Beta)"
+        href: Connectors/Funnel.md
       - name: "Google Analytics"
         href: Connectors/GoogleAnalytics.md
       - name: "Google BigQuery"
         href: Connectors/GoogleBigQuery.md
-      - name: "Google Sheets (Beta)"
+      - name: "Google Sheets"
         href: Connectors/GoogleSheets.md
       - name: "Hive LLAP"
         href: Connectors/HiveLlap.md
@@ -386,6 +394,8 @@
         href: Connectors/MicrosoftAzureConsumptionInsights.md
       - name: "Microsoft Graph Security (Deprecated)"
         href: Connectors/MicrosoftGraphSecurity.md
+      - name: "MicroStrategy for Power BI"
+        href: Connectors/MicroStrategyForPowerBI.md
       - name: "MySQL database"
         href: Connectors/MySQLDatabase.md
       - name: "OData Feed"
@@ -448,6 +458,8 @@
         href: Connectors/SharePointList.md
       - name: "SharePoint Online list"
         href: Connectors/SharePointOnlineList.md
+      - name: "SingleStore (Beta)"
+        href: Connectors/SingleStore.md
       - name: SIS-CC SDMX
         href: Connectors/SISCCSDMX.md
       - name: "Snowflake"
@@ -458,7 +470,7 @@
         href: Connectors/SQLServer.md
       - name: "Stripe (Deprecated)"
         href: Connectors/Stripe.md
-      - name: "SumTotal (Beta)"
+      - name: "SumTotal"
         href: Connectors/SumTotal.md
       - name: "Text/CSV"
         href: Connectors/TextCSV.md
@@ -544,7 +556,7 @@
           href: SamplesDirectory.md#odbc
         - name: "TripPin samples"
           href: SamplesDirectory.md#trippin
-      - name: Advanced concepts
+      - name: Concepts
         items:
         - name: "Additional connector functionality"
           href: additional-connector-functionality.md
@@ -590,6 +602,8 @@
           href: HandlingConnectorSigning.md
         - name: "Handling proxy support"
           href: HandlingProxySupport.md
+        - name: "Versioning"
+          href: HandlingVersioning.md
       - name: Connector Certification
         items:
         - name: Overview

@@ -3,7 +3,7 @@ title: Query folding indicators in Power Query
 description: Query folding indicators in Power Query Online help you understand what steps fold and give insight into how to build more performant queries.
 author: ptyx507x
 
-ms.date: 4/14/2022
+ms.date: 6/27/2022
 ms.author: dougklo
 ms.reviewer: dougklo
 ---
@@ -44,7 +44,7 @@ Conversely, this can also mean that your query folds up to a point and then stop
 
 Modifying the example from above, you can give a transform that never folds&mdash;*Capitalize Each Word*.
 
-```
+```powerquery-m
 let
   Source = Sql.Database("ServerName", "AdventureWorks"),
   Navigation = Source{[Schema = "Production", Item = "Product"]}[Data],
