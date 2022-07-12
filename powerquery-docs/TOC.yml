@@ -311,7 +311,7 @@
       - name: "Automy Data Analytics (Beta)"
         href: Connectors/AutomyDataAnalytics.md
       - name: "Azure Cost Management"
-        href: Connectors/AzureCostManagement
+        href: Connectors/AzureCostManagement.md
       - name: "Azure Data Lake Storage Gen1"
         href: Connectors/AzureDataLakeStorageGen1.md
       - name: "Azure Data Lake Storage Gen 2"

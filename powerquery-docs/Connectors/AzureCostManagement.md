@@ -171,8 +171,8 @@ The following considerations and limitations apply to the Azure Cost Management 
 
   For more information on reusing data sources, go to:
 
-  * [Introduction to datasets across workspaces](service-datasets-across-workspaces.md)
-  * [Create reports based on datasets from different workspaces](service-datasets-discover-across-workspaces.md)
+  * [Introduction to datasets across workspaces](/power-bi/connect-data/service-datasets-across-workspaces)
+  * [Create reports based on datasets from different workspaces](/power-bi/connect-data/service-datasets-discover-across-workspaces)
 
 You might receive a *400 bad request* from the **RI usage details** when you try to refresh the data if you've chosen a date parameter greater than three months. To mitigate the error, take the following steps:
 

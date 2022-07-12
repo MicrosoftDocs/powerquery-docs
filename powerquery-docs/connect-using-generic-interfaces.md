@@ -52,7 +52,7 @@ The following list details a few examples of data sources that Power Query can c
 | ODBC |Hive |[Hive ODBC driver](https://www.magnitude.com/drivers/hive-odbc-jdbc) |
 | ODBC |IBM Netezza |[IBM Netezza information](https://www.ibm.com/support/knowledgecenter/SSULQD_7.2.1/com.ibm.nz.datacon.doc/c_datacon_plg_overview.html) |
 | ODBC |Presto |[Presto ODBC driver](https://www.simba.com/drivers/presto-odbc-jdbc/) |
-| ODBC |Project Online |[Project Online article](desktop-project-online-connect-to-data.md) |
+| ODBC |Project Online |[Project Online article](/power-bi/connect-data/desktop-project-online-connect-to-data) |
 | ODBC |Progress OpenEdge |[Progress OpenEdge ODBC driver blog post](https://www.progress.com/blogs/connect-microsoft-power-bi-to-openedge-via-odbc-driver) |
 | ODBC |Salesforce |[Devart ODBC Driver for Salesforce](https://www.devart.com/odbc/salesforce/) |
 
