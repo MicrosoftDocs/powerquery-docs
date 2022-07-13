@@ -4,7 +4,7 @@ description: Provides basic information and connection instructions, along with 
 author: cpopell
 
 ms.topic: conceptual
-ms.date: 9/16/2021
+ms.date: 7/11/2022
 ms.author: dougklo
 LocalizationGroup: reference
 ---
@@ -18,7 +18,6 @@ LocalizationGroup: reference
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Function Reference Documentation | [File.Contents](/powerquery-m/file-contents)<br/>[Lines.FromBinary](/powerquery-m/lines-frombinary)<br/>[Csv.Document](/powerquery-m/csv-document) |
-| | |
 
 >[!Note]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
@@ -180,7 +179,11 @@ If you're dealing with large CSV files in the Power Query Online editor, you mig
 
 ### Unstructured text being interpreted as structured
 
-In rare cases, a document that has similar comma numbers across paragraphs might be interpreted to be a CSV. If this issue happens, edit the **Source** step in the Query Editor, and select **Text** instead of **CSV** in the **Open File As** dropdown select.
+In rare cases, a document that has similar comma numbers across paragraphs might be interpreted to be a CSV. If this issue happens, edit the **Source** step in the Power Query editor, and select **Text** instead of **CSV** in the **Open File As** dropdown select.
+
+### Columns in Power BI Desktop
+
+When you import a CSV file, Power BI Desktop generates a *columns=x* (where *x* is the number of columns in the CSV file during initial import) as a step in Power Query Editor. If you subsequently add more columns and the data source is set to refresh, any columns beyond the initial *x* count of columns aren't refreshed.
 
 ### Error: Connection closed by host
 
