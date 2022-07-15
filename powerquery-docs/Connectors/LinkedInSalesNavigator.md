@@ -4,7 +4,7 @@ description: Includes basic information, prerequisites, and information on how t
 
 author: dougklopfenstein
 ms.topic: conceptual
-ms.date: 7/11/2022
+ms.date: 7/14/2022
 ms.author: dougklo
 
 ---
@@ -22,15 +22,11 @@ ms.author: dougklo
 
 ## Prerequisites
 
-* An Azure subscription. Go to [Get Azure free trial](https://azure.microsoft.com/pricing/free-trial/).
-
-* An Azure Data Lake Storage Gen1 account. Follow the instructions at [Get started with Azure Data Lake Storage Gen1 using the Azure portal](/azure/data-lake-store/data-lake-store-get-started-portal). This article assumes that you've already created a Data Lake Storage Gen1 account, called **myadlsg1**, and uploaded a sample data file (**Drivers.txt**) to it. This sample file is available for download from [Azure Data Lake Git Repository](https://github.com/Azure/usql/tree/master/Examples/Samples/Data/AmbulanceData/Drivers.txt).
+A LinkedIn Sales Navigator account. If you don't already have an account, sign up for [a free trial](https://business.linkedin.com/sales-solutions/cx/18/08/linkedin-sales-navigator).
 
 ## Capabilities supported
 
 * Import
-* Advanced options
-  * Page size in bytes
 
 ## Connect to LinkedIn Sales Navigator
 
@@ -61,3 +57,7 @@ To connect to LinkedIn Sales Navigator data:
    [![Select data with Navigator](media/linkedin-sales-navigator/navigator.png)](media/linkedin-sales-navigator/navigator.png#lightbox)
 
    Once you've selected the data you require, either select **Transform Data** to continue tranforming the data in the Power Query editor, or select **Load** to load the data into Power BI Desktop. Once in Power BI Desktop, you can create whatever reports you like with your LinkedIn Sales Navigator data.
+
+## Getting help
+
+If you run into problems when connecting to your data, contact [LinkedIn Sales Navigator support](https://www.linkedin.com/help/sales-navigator).
