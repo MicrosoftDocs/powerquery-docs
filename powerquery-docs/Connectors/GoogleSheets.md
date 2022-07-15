@@ -16,7 +16,7 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI Desktop |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
 | Authentication Types Supported | Organizational account |
 | Function Reference Documentation | &mdash; |
 
@@ -55,10 +55,6 @@ To connect to Google Sheets from Power Query Desktop, take the following steps:
 ## Limitations and considerations
 
 This section describes any limitations or considerations of the Google Sheets connector.
-
-### Power Query Online
-
-This connector isn't yet available in Power Query Online and dataflows experiences.
 
 ### Shared drive support
 
