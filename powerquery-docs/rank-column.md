@@ -37,6 +37,17 @@ The teams have shared a list of ways that they want to rank each other:
 
 ### Single column rank
 
+For the first requirement shared by the teams of using only the values from the *Total Points* field where higher values rank higher using **standard competition as the rank method**, you can follow the next steps.
+
+1. With the table already in Power Query, select the *Total Points* column and then click the **Rank column** button from the ribbon inside the *Add column* tab.
+2. A new dialog will appear where the *Rank by* should be the field selected (*Total Points*) and the *Rank criteria* should be "Higher value ranks higher".
+
+![Rank basic dialog with only the Total Points field selected with a rank criteria of Higher value ranks higher](media/rank-column/rank-basic-dialog.png)
+ 
+By default, the rank method for this dialog is the **standard competition**, so you can simply click OK and this will give you a new step with the added Rank column.
+
+![Output of the rank transform where the Total Points field was the only Rank by field and the rank criteria for it was Higher  value ranks higher. Team Ranked 1. Team B ranked second. Team A and Team E ranked third. Team D ranked fifth.](media/rank-column/rank-total-fields-column-standard.png)
+
 ### Single column rank with specific rank method
 
 ### Multiple column rank with specific rank method
