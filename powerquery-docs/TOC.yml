@@ -108,6 +108,8 @@
           href: add-custom-column.md
         - name: "Add a conditional column"
           href: add-conditional-column.md
+        - name: "Add a rank column"
+          href: rank-column.md          
         - name: "Add a cluster values column"
           href: cluster-values.md
       - name: Combine data
