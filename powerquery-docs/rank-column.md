@@ -4,7 +4,7 @@ description: In Power Query, you can add a new column to an existing table that 
 author: ptyx507
 ms.reviewer: 
 ms.date: 07/18/2022
-ms.author: 
+ms.author: miescobar
 ms.custom: 
 ---
 
@@ -40,7 +40,7 @@ The teams have shared a list of ways that they want to rank each other:
 
 A rank method is what establishes the way in which ties will be handled by the ranking algorithm. This option is only available in the advanced section of the **Rank** dialog.
 
-<Image of Rank method>
+-----Image of Rank method----
 
 Below is a table that lists all three available rank methods and a description for each of them.
 
