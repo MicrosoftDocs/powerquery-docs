@@ -31,9 +31,9 @@ For the table below that has the fields *Team*, *Total Points* and *Bonus modifi
 
 The teams have shared a list of ways that they want to rank each other:
 
-* Using only the values from the *Total Points* field where higher values rank higher using **standard competition as the rank method**
-* Using only Using only the values from the *Total Points* field where higher values rank higher using **dense as the rank method**
-* Ranking first by the *Total Points* and then by *Bonus modifier* where higher values rank higher using the standard competition as rank method
+* [Using only the values from the *Total Points* field where higher values rank higher using **standard competition as the rank method**](#single-column-rank)
+* [Using only Using only the values from the *Total Points* field where higher values rank higher using **dense as the rank method**](#single-column-rank-with-specific-rank-method)
+* Ranking first by the *Total Points* and then by *Bonus modifier* where higher values rank higher using the **standard competition as rank method**
 
 ### Single column rank
 
@@ -49,6 +49,14 @@ By default, the rank method for this dialog is the **standard competition**, so 
 ![Output of the rank transform where the Total Points field was the only Rank by field and the rank criteria for it was Higher  value ranks higher. Team Ranked 1. Team B ranked second. Team A and Team E ranked third. Team D ranked fifth.](media/rank-column/rank-total-fields-column-standard.png)
 
 ### Single column rank with specific rank method
+
+For the second requirement shared by the teams of using only Using only the values from the *Total Points* field where higher values rank higher using **dense as the rank method**, you can follow the next steps.
+
+1. With the table already in Power Query, select the *Total Points* column and then click the **Rank column** button from the ribbon inside the *Add column* tab.
+2. A new dialog will appear where the *Rank by* should be the field selected (*Total Points*) and the *Rank criteria* should be "Higher value ranks higher".
+3. Click the **Advanced** radio button on the top of the dialog to enable the advanced section of the dialog and in the Rank method section be sure to change the value from **Standard competition** to **Dense**.
+
+![Advanced section of the rank dialog where the Total Points field is being used with the Higher value ranks higher rank criteria and the rank method being selected is Dense](media/rank-column/rank-total-fields-column-advanced.png)
 
 ### Multiple column rank with specific rank method
 
