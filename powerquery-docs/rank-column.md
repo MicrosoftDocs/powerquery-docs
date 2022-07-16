@@ -46,7 +46,7 @@ For the first requirement shared by the teams of using only the values from the 
  
 By default, the rank method for this dialog is the **standard competition**, so you can simply click OK and this will give you a new step with the added Rank column.
 
-![Output of the rank transform where the Total Points field was the only Rank by field and the rank criteria for it was Higher  value ranks higher. Team Ranked 1. Team B ranked second. Team A and Team E ranked third. Team D ranked fifth.](media/rank-column/rank-total-fields-column-standard.png)
+![Output of the rank transform where the Total Points field was the only Rank by field and the rank criteria for it was Higher value ranks higher. Team C Ranked first. Team B ranked second. Team A and Team E ranked third. Team D ranked fifth.](media/rank-column/rank-total-fields-column-standard.png)
 
 ### Single column rank with specific rank method
 
@@ -58,13 +58,15 @@ For the second requirement shared by the teams of using only Using only the valu
 
 ![Advanced section of the rank dialog where the Total Points field is being used with the Higher value ranks higher rank criteria and the rank method being selected is Dense](media/rank-column/rank-total-fields-column-advanced.png)
 
+After selecting the rank method, you can click the OK button and this will give you a new step with the added Rank column.
+
+![Output of the rank transform where the Total Points field was the only Rank by field, the rank criteria for it was Higher value ranks higher and the rank kind was Dense. Team C ranked first. Team B ranked second. Team A and Team E ranked third. Team D ranked fourth.](media/rank-column/rank-total-dense.png)
+
 ### Multiple column rank with specific rank method
 
 ## Rank methods
 
-A rank method is what establishes the way in which ties will be handled by the ranking algorithm. This option is only available in the advanced section of the **Rank** dialog.
-
------Image of Rank method----
+A rank method is what establishes the strategy in which ties will be handled by the ranking algorithm. This option is only available in the advanced section of the **Rank** dialog.
 
 Below is a table that lists all three available rank methods and a description for each of them.
 
