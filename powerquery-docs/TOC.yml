@@ -10,8 +10,14 @@
         href: get-data-experience.md
       - name: "Where to get data"
         href: where-to-get-data.md
-      - name: "Authentication with a data source"
-        href: ConnectorAuthentication.md
+      - name: Authentication
+        items:  
+        - name: "Authentication in Desktop apps"
+          href: ConnectorAuthentication.md
+        - name: "Authentication in Power Query Online"
+          href: ConnectorAuthentication.md
+        - name: "Auto-login for AAD sources"
+          href: ConnectorAuthentication.md
       - name: "Upload a file"
         href: upload-file.md
       - name: "SharePoint and OneDrive for Business files import"
