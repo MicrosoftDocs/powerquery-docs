@@ -15,7 +15,7 @@
         - name: "Authentication in Desktop apps"
           href: ConnectorAuthentication.md
         - name: "Authentication in Power Query Online"
-          href: ConnectorAuthentication.md
+          href: authentication-pqo.md
         - name: "Auto-login for AAD data sources"
           href: auto-login-aad.md
       - name: "Upload a file"
