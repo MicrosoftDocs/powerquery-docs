@@ -18,4 +18,9 @@ It does this in an effort to expedite the authentication process and minimize th
 
 When selecting a connector that has this capability, it will automatically log you in with the **Organizational account** set as the authentication kind.
 
-![Connect to data source dialog showing the SharePoint folder connector experience where the user Test Account has been automatically logged in using the Organizational account as the authentication kind]()
+![Connect to data source dialog showing the SharePoint folder connector experience where the user Test Account has been automatically logged in using the Organizational account as the authentication kind](media/aad-obo/sample-connect-to-data-source.png)
+
+>[!TIP]
+>If you'd like to authenticate with a different account, you can click the **Switch account** link shown in the dialog.
+
+## How it works
