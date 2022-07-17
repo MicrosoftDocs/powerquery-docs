@@ -16,8 +16,8 @@
           href: ConnectorAuthentication.md
         - name: "Authentication in Power Query Online"
           href: ConnectorAuthentication.md
-        - name: "Auto-login for AAD sources"
-          href: ConnectorAuthentication.md
+        - name: "Auto-login for AAD data sources"
+          href: auto-login-aad.md
       - name: "Upload a file"
         href: upload-file.md
       - name: "SharePoint and OneDrive for Business files import"
