@@ -14,7 +14,7 @@ The auto-login feature for Azure Active Directory data sources uses the informat
 It does this to expedite the authentication process and minimize the time it takes to start working with your data.
 
 >[!NOTE]
->This functionality is currently only available in Power Query Online and is enabled by default in the Power Query Online experience for a select set of connectors. >There is no setting to configure or enable this feature.
+>This functionality is currently only available in Power Query Online and is enabled by default for a select set of connectors. There is no setting to configure or enable this feature.
 
 When selecting a connector that has this capability, it will automatically log you in with the **Organizational account** set as the authentication kind.
 
@@ -23,4 +23,7 @@ When selecting a connector that has this capability, it will automatically log y
 >[!TIP]
 >If you'd like to authenticate with a different account, you can click the **Switch account** link shown in the dialog.
 
-## How it works
+## Further reading
+
+* [Authentication in Power Query Online](/powerquery-docs/authentication-pqo.md)
+* [Microsoft identity platform and OAuth 2.0 On-Behalf-Of flow](https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow)
