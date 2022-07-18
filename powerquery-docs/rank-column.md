@@ -10,7 +10,7 @@ ms.custom:
 
 # Rank column (Preview)
 
-The **Rank column** command adds a new column to a table with the ranking defined by one or more other columns from the table. An more *Rank kind* option can be used to define how ties should be handled.
+The **Rank column** command adds a new column to a table with the ranking defined by one or more other columns from the table. A *Rank kind* option can be used to define how ties should be handled.
 
 ![Rank column entry point in the Power Query ribbon inside the Add column tab](media/rank-column/rank-column-ribbon-entry.png)
 
