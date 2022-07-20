@@ -330,7 +330,7 @@
         href: Connectors/AzureSQLDataWarehouse.md
       - name: "Azure Synapse Analytics workspace (Beta)"
         href: Connectors/synapse.md
-      - name: "BitSight Security Ratings (Beta)"
+      - name: "BitSight Security Ratings"
         href: Connectors/BitSightSecurityRatings.md
       - name: "Bloomberg Data and Analytics"
         href: Connectors/BloombergDataAndAnalytics.md
@@ -348,6 +348,8 @@
         href: Connectors/Denodo.md
       - name: "Digital Construction Works Insights (Beta)"
         href: Connectors/DigitalConstructionWorksInsights.md
+      - name: "Eduframe (Beta)"
+        href: Connectors/Eduframe.md
       - name: "EQuIS (Beta)"
         href: Connectors/EQuIS.md
       - name: "Essbase"
