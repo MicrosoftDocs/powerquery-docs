@@ -10,11 +10,12 @@ ms.author: miescobar
 
 # Auto-login for Azure Active Directory data sources
 
-The auto-login feature for Azure Active Directory data sources uses the information derived from the currently authenticated user in the Power Query Online experience to request a new access token for a selected data source during the connection settings and authentication step of the [Get data](/powerquery-docs/get-data-experience.md#1-connection-settings-and-authentication) process. 
-It does this to expedite the authentication process and minimize the time it takes to start working with your data.
+The auto-login feature attempts to automatically log you in as the current user when connecting to data sources within Power Query that use Azure Active Directory as one of their authentication kinds. It does this to expedite the authentication process and minimize the time it takes to start working with your data.
+
+More technically, the auto-login feature for Azure Active Directory data sources uses the information derived from the currently authenticated user in the Power Query Online experience to request a new access token for a selected data source during the connection settings and authentication step of the [Get data](/powerquery-docs/get-data-experience.md#1-connection-settings-and-authentication) process.
 
 >[!NOTE]
->This functionality is currently only available in Power Query Online and is enabled by default for a select set of connectors. There is no setting to configure or enable this feature.
+>This functionality is currently only available in Power Query Online and is enabled by default for a select set of connectors. No configuration is needed to enable this feature.
 
 When selecting a connector that has this capability, it will automatically log you in with the **Organizational account** set as the authentication kind.
 
