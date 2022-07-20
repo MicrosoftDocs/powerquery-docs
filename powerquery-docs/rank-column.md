@@ -3,14 +3,14 @@ title: Rank column (Preview)
 description: In Power Query, you can add a new column to an existing table that ranks the rows in the table based on the desired sorting of the table and the rank strategy to use for ties.
 author: ptyx507x
 ms.reviewer: 
-ms.date: 07/18/2022
+ms.date: 07/20/2022
 ms.author: miescobar
 ms.custom: 
 ---
 
 # Rank column (Preview)
 
-The **Rank column** command adds a new column to a table with the ranking defined by one or more other columns from the table. A *Rank kind* option can be used to define how ties should be handled.
+The **Rank column** command adds a new column to a table with the ranking defined by one or more other columns from the table. A *Rank method* option can be used to define how ties should be handled.
 
 ![Rank column entry point in the Power Query ribbon inside the Add column tab](media/rank-column/rank-column-ribbon-entry.png)
 
@@ -60,7 +60,7 @@ For the second requirement shared by the teams of using only the values from the
 
 After selecting the rank method, you can select the OK button, and this will give you a new step with the added Rank column.
 
-![Output of the rank transform where the Total Points field was the only Rank by field, the rank criteria for it was Higher value ranks higher and the rank kind was Dense. Team C ranked first. Team B ranked second. Team A and Team E ranked third. Team D ranked fourth.](media/rank-column/rank-total-dense.png)
+![Output of the rank transform where the Total Points field was the only Rank by field, the rank criteria for it was Higher value ranks higher and the rank method was Dense. Team C ranked first. Team B ranked second. Team A and Team E ranked third. Team D ranked fourth.](media/rank-column/rank-total-dense.png)
 
 ### Multiple column rank with specific rank method
 
