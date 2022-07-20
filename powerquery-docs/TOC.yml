@@ -590,8 +590,6 @@
           href: HandlingUnitTesting.md
         - name: "Helper functions"
           href: HelperFunctions.md
-        - name: "Handling errors"
-          href: HandlingErrors.md
         - name: "Handling documentation"
           href: HandlingDocumentation.md
         - name: "Handling navigation tables"

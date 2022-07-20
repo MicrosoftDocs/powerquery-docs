@@ -65,7 +65,6 @@ Generally, the following list describes transformations that prevent query foldi
     ```
 
 - Adding index columns.
-- Changing a column data type.
 
 Note that when a Power Query query encompasses multiple data sources, incompatibility of data source privacy levels can prevent query folding from taking place. For more information, see the [Power BI Desktop privacy levels](/power-bi/desktop-privacy-levels) article.
 
