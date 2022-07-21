@@ -36,9 +36,9 @@ To connect to Anaplan data:
 
 2. In the Anaplan Connector Configuration screen, enter the API and Authentication URLs:
   
-    - **Anaplan API URL**:  https://api.anaplan.com
+    - **Anaplan API URL**:  `https://api.anaplan.com`
 
-    - **Anaplan Auth URL**: https://auth.anaplan.com
+    - **Anaplan Auth URL**: `https://auth.anaplan.com`
 
     ![Connection Configuration.](media/anaplan/connection-configuration.png)
 
