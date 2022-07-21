@@ -20,6 +20,8 @@
         href: connecting-to-graph.md
       - name: "Connectivity without an existing connector"
         href: connector-alternatives.md
+      - name: "Connect using generic interfaces"
+        href: connect-using-generic-interfaces.md
       - name: "Change a dataflow gateway"
         href: change-gateway-dataflow.md
     - name: Transform data
@@ -28,10 +30,22 @@
         href: power-query-ui.md
       - name: "Using the Applied Steps list"
         href: applied-steps.md
-      - name: "Query folding basics"
-        href: query-folding-basics.md
-      - name: "Query folding examples"
-        href: query-folding-examples.md
+      - name: "Global search box (Preview)"
+        href: search-box.md
+      - name: Query folding
+        items:
+        - name: "Understanding query evaluation and folding"
+          href: query-folding-basics.md
+        - name: "Query folding overview"
+          href: power-query-folding.md
+        - name: "Query folding examples"
+          href: query-folding-examples.md
+        - name: "Query folding indicators"
+          href: step-folding-indicators.md
+        - name: "Query plan (Preview)"
+          href: query-plan.md
+        - name: "Query folding on native queries"
+          href: native-query-folding.md            
       - name: "Using the data profiling tools"
         href: data-profiling-tools.md
       - name: "Using the Queries pane"
@@ -226,6 +240,8 @@
           href: dataflows/load-dataflow-metadata-into-excel-online.md
         - name: "Use a Power BI dataset to build a dataflows monitoring report"
           href: dataflows/load-dataflow-metadata-into-power-bi-dataset.md
+        - name: "Automatically retry a dataflow on failure"
+          href: dataflows/automatically-retry-dataflow.md
       - name: Monitor dataflows
         items: 
           - name: Monitor your dataflow refreshes with Power BI
@@ -246,8 +262,6 @@
       href: feedback.md
     - name: Advanced topics
       items:
-      - name: "Query folding"
-        href: power-query-folding.md
       - name: "Fuzzy matching"
         href: fuzzy-matching.md 
       - name: "Behind the scenes of the Data Privacy Firewall"
@@ -264,18 +278,12 @@
           href: QueryDiagnosticsFolding.md
       - name: "Why does my query run multiple times?"
         href: multiple-queries.md
-      - name: "Query folding indicators"
-        href: step-folding-indicators.md
-      - name: "Query plan (Preview)"
-        href: query-plan.md
       - name: "Use Query Parameters"
         href: power-query-query-parameters.md
       - name: "Error handling"
         href: error-handling.md
       - name: "Import data using native database query"
         href: native-database-query.md
-      - name: "Query folding on native queries"
-        href: native-query-folding.md
       - name: "Create Power Platform dataflows from queries in Microsoft Excel (Preview)"
         href: new-dataflow-from-template.md
       - name: Optimize Power Query when expanding table columns
@@ -292,7 +300,7 @@
         href: "Connectors/AdobeAnalytics.md"
       - name: "Amazon Athena"
         href: "Connectors/AmazonAthena.md"
-      - name: "Amazon OpenSearch Project (Beta)"
+      - name: "Amazon OpenSearch Service (Beta)"
         href: "Connectors/AmazonOpenSearchService.md"
       - name: "Amazon Redshift"
         href: Connectors/AmazonRedshift.md
@@ -300,24 +308,36 @@
         href: Connectors/Anaplan.md
       - name: "AssembleViews"
         href: Connectors/AssembleViews.md
+      - name: "Autodesk Construction Cloud (Beta)"
+        href: Connectors/AutodeskConstructionCloud.md
       - name: "Automy Data Analytics (Beta)"
-        href: "Connectors/AutomyDataAnalytics.md"
+        href: Connectors/AutomyDataAnalytics.md
+      - name: "Azure Cost Management"
+        href: Connectors/AzureCostManagement.md
+      - name: "Azure Data Explorer (Kusto)"
+        href: Connectors/AzureDataExplorer.md
+      - name: "Azure Data Lake Storage Gen1"
+        href: Connectors/AzureDataLakeStorageGen1.md
+      - name: "Azure Data Lake Storage Gen 2"
+        items:
+        - name: "Connect to ADLS Gen2"
+          href: Connectors/DataLakeStorage.md
+        - name: "Analyze ADLS Gen2 data"
+          href: Connectors/analyze-data-in-adls-gen2.md
       - name: "Azure SQL database"
         href: Connectors/AzureSQLDatabase.md
       - name: "Azure Synapse Analytics (SQL DW)"
         href: Connectors/AzureSQLDataWarehouse.md
       - name: "Azure Synapse Analytics workspace (Beta)"
         href: Connectors/synapse.md
-      - name: "BitSight Security Ratings (Beta)"
+      - name: "BitSight Security Ratings"
         href: Connectors/BitSightSecurityRatings.md
       - name: "Bloomberg Data and Analytics"
         href: Connectors/BloombergDataAndAnalytics.md
-      - name: "BQE Core (Beta)"
+      - name: "BQE Core"
         href: Connectors/BQECore.md
       - name: "Common Data Service (Legacy)"
         href: ./connectors/commondataservicelegacy.md
-      - name: "Data Lake Storage"
-        href: Connectors/DataLakeStorage.md
       - name: "Dataverse"
         href: Connectors/dataverse.md     
       - name: "Dataflows"
@@ -328,15 +348,19 @@
         href: Connectors/Denodo.md
       - name: "Digital Construction Works Insights (Beta)"
         href: Connectors/DigitalConstructionWorksInsights.md
+      - name: "Eduframe (Beta)"
+        href: Connectors/Eduframe.md
       - name: "EQuIS (Beta)"
         href: Connectors/EQuIS.md
       - name: "Essbase"
         href: Connectors/Essbase.md
       - name: "Excel"
         href: Connectors/Excel.md
+      - name: "FactSet RMS (Beta)"
+        href: Connectors/FactSetRMS.md
       - name: "FHIR"
         items:
-        - name: Overview
+        - name: Connect to FHIR
           href: Connectors/FHIR/FHIR.md
         - name: Authentication
           href: Connectors/FHIR/FHIR-Authentication.md
@@ -348,32 +372,40 @@
           href: Connectors/FHIR/FHIR-Relationships.md
       - name: "Folder"
         href: Connectors/Folder.md
+      - name: "Funnel (Beta)"
+        href: Connectors/Funnel.md
       - name: "Google Analytics"
         href: Connectors/GoogleAnalytics.md
       - name: "Google BigQuery"
         href: Connectors/GoogleBigQuery.md
-      - name: "Google Sheets (Beta)"
+      - name: "Google Sheets"
         href: Connectors/GoogleSheets.md
       - name: "Hive LLAP"
         href: Connectors/HiveLlap.md
       - name: "IBM Db2 database"
         href: Connectors/IBMDb2Database.md
+      - name: "Impala database"
+        href: Connectors/ImpalaDatabase.md
       - name: "JSON"
         href: Connectors/json.md
+      - name: LinkedIn Sales Navigator (Beta)
+        href: Connectors/LinkedInSalesNavigator.md
       - name: "Mailchimp (Deprecated)"
         href: Connectors/Mailchimp.md
       - name: "Microsoft Azure Consumption Insights (Beta) (Deprecated)"
         href: Connectors/MicrosoftAzureConsumptionInsights.md
       - name: "Microsoft Graph Security (Deprecated)"
         href: Connectors/MicrosoftGraphSecurity.md
+      - name: "MicroStrategy for Power BI"
+        href: Connectors/MicroStrategyForPowerBI.md
       - name: "MySQL database"
         href: Connectors/MySQLDatabase.md
       - name: "OData Feed"
         items:
-        - name: "OData Feed connector"
+        - name: "Connect to an OData Feed"
           href: Connectors/ODataFeed.md
         - name: "Connecting to Azure DevOps using OData"
-          href: /azure/devops/report/powerbi/odataquery-connect?view=azure-devops
+          href: /azure/devops/report/powerbi/odataquery-connect
       - name: "ODBC"
         href: Connectors/Odbc.md
       - name: "OpenSearch Project (Beta)"
@@ -392,9 +424,9 @@
         href: Connectors/SalesforceReports.md
       - name: "SAP Business Warehouse"
         items:
-        - name: "SAP Business Warehouse Application Server"
+        - name: "Connect to an SAP Business Warehouse Application Server"
           href: Connectors/sap-bw/application-setup-and-connect.md
-        - name: "SAP Business Warehouse Message Server"
+        - name: "Connect to an SAP Business Warehouse Message Server"
           href: Connectors/sap-bw/message-setup-and-connect.md
         - name: "SAP BW fundamentals"
           href: Connectors/sap-bw/sap-bw-fundamentals.md
@@ -414,7 +446,7 @@
           href: Connectors/sap-bw/sap-bw-troubleshooting.md
       - name: "SAP HANA database"
         items:
-        - name: "Overview"
+        - name: "Connect to an SAP HANA database"
           href: Connectors/sap-hana/overview.md
         - name: "SAP HANA encryption"
           href: Connectors/sap-hana/sap-hana-encryption.md
@@ -428,6 +460,8 @@
         href: Connectors/SharePointList.md
       - name: "SharePoint Online list"
         href: Connectors/SharePointOnlineList.md
+      - name: "SingleStore (Beta)"
+        href: Connectors/SingleStore.md
       - name: SIS-CC SDMX
         href: Connectors/SISCCSDMX.md
       - name: "Snowflake"
@@ -438,7 +472,7 @@
         href: Connectors/SQLServer.md
       - name: "Stripe (Deprecated)"
         href: Connectors/Stripe.md
-      - name: "SumTotal (Beta)"
+      - name: "SumTotal"
         href: Connectors/SumTotal.md
       - name: "Text/CSV"
         href: Connectors/TextCSV.md
@@ -448,9 +482,11 @@
         href: Connectors/twilio.md
       - name: "Usercube"
         href: Connectors/Usercube.md
+      - name: "Vessel Insight"
+        href: Connectors/VesselInsight.md
       - name: "Web"
         items:
-        - name: "Web connector"
+        - name: "Connect to Web data"
           href: Connectors/web/Web.md
         - name: "Web by example"
           href: Connectors/web/web-by-example.md
@@ -522,7 +558,7 @@
           href: SamplesDirectory.md#odbc
         - name: "TripPin samples"
           href: SamplesDirectory.md#trippin
-      - name: Advanced concepts
+      - name: Concepts
         items:
         - name: "Additional connector functionality"
           href: additional-connector-functionality.md
@@ -556,8 +592,6 @@
           href: HandlingUnitTesting.md
         - name: "Helper functions"
           href: HelperFunctions.md
-        - name: "Handling errors"
-          href: HandlingErrors.md
         - name: "Handling documentation"
           href: HandlingDocumentation.md
         - name: "Handling navigation tables"
@@ -568,6 +602,8 @@
           href: HandlingConnectorSigning.md
         - name: "Handling proxy support"
           href: HandlingProxySupport.md
+        - name: "Versioning"
+          href: HandlingVersioning.md
       - name: Connector Certification
         items:
         - name: Overview

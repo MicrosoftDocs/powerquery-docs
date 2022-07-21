@@ -3,7 +3,7 @@ title: "Fuzzy merge"
 description: "Finding approximate matches with Fuzzy Matching in Power Query's merge operations"
 
 author: ptyx507X
-ms.service: powerquery
+
 ms.reviewer: 
 ms.date: 12/22/2021
 ms.author: dougklo

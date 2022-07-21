@@ -4,7 +4,7 @@ description: Provides basic information, prerequisites, and instructions on how 
 author: cpopell
 
 ms.topic: conceptual
-ms.date: 2/28/2022
+ms.date: 6/15/2022
 ms.author: dougklo
 ms.reviewer: kvivek
 LocalizationGroup: reference
@@ -20,10 +20,9 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)|
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)|
 | Authentication Types Supported | Basic |
-| Function Reference Documentation | - |
-| | |
+| Function Reference Documentation | &mdash; |
 
 ## Capabilities supported
 
@@ -37,9 +36,9 @@ To connect to Anaplan data:
 
 2. In the Anaplan Connector Configuration screen, enter the API and Authentication URLs:
   
-    - **Anaplan API URL**:  https://api.anaplan.com
+    - **Anaplan API URL**:  `https://api.anaplan.com`
 
-    - **Anaplan Auth URL**: https://auth.anaplan.com
+    - **Anaplan Auth URL**: `https://auth.anaplan.com`
 
     ![Connection Configuration.](media/anaplan/connection-configuration.png)
 

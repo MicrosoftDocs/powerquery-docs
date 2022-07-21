@@ -20,7 +20,7 @@ regarding the content of this article or have changes you would like to see made
 
 | Item | Description |
 | ------ | ------ |
-| Release State | Beta |
+| Release State | Generally Available |
 | Products | Power BI (Datasets) |
 | Authentication Types Supported | API key |
 | Function Reference Document | &mdash; |

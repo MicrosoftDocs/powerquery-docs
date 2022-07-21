@@ -1,11 +1,11 @@
 ---
 title: Power Query Denodo connector
 description: Provides basic information and prerequisites for the Denodo connector, descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
-author: bezhan-msft, denodo-research-labs
+author: bezhan-msft
+ms.author: bezhan
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 3/29/2022
-ms.author: bezhan
+ms.date: 6/15/2022
 LocalizationGroup: reference
 ---
 
@@ -19,7 +19,7 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products |  Power BI (Datasets)<br/>|
+| Products |  Power BI (Datasets)<br/>Power BI (Dataflows)|
 | Authentication Types Supported | Basic <br/>Windows<br/> |
 
 >[!Note]

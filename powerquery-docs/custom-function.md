@@ -1,26 +1,30 @@
 ---
 title: Using custom functions in Power Query
 description: An article on how to create custom functions in Power Query
-author: ptyx507
+author: ptyx507x
 
 ms.reviewer: 
-ms.date: 08/31/2020
+ms.date: 04/13/2022
 ms.author: dougklo
 ms.custom: intro-internal
 ---
 # Using custom functions
 
-If you find yourself in a situation where you need to apply the same set of transformations to different queries or values, creating a Power Query custom function that can be reused as many times as you need could be beneficial. A Power Query custom function is a mapping from a set of input values to a single output value, and is created from native M functions and operators. 
+If you find yourself in a situation where you need to apply the same set of transformations to different queries or values, creating a Power Query custom function that can be reused as many times as you need could be beneficial. A Power Query custom function is a mapping from a set of input values to a single output value, and is created from native M functions and operators.
 
-While you can manually create your own Power Query custom function using code as shown in [Understanding Power Query M functions](/powerquery-m/understanding-power-query-m-functions), the Power Query user interface offers you features to speed up, simplify, and enhance the process of creating and managing a custom function. 
-This article focuses on this experience provided only through the Power Query user interface and how to get the most out of it.
+While you can manually create your own Power Query custom function using code as shown in [Understanding Power Query M functions](/powerquery-m/understanding-power-query-m-functions), the Power Query user interface offers you features to speed up, simplify, and enhance the process of creating and managing a custom function.
+
+This article focuses on this experience, provided only through the Power Query user interface, and how to get the most out of it.
 
 > [!IMPORTANT]
-> This article outlines how to create a custom function with Power Query using common transforms accessible in the Power Query user interface. It focuses on the core concepts to create custom functions, and links to additional articles in Power Query documenation for more information on specific transforms that are referenced in this article.
+> This article outlines how to create a custom function with Power Query using common transforms accessible in the Power Query user interface. It focuses on the core concepts to create custom functions, and links to additional articles in Power Query documentation for more information on specific transforms that are referenced in this article.
 
 ## Create a custom function from a table reference
 
-You can follow along with this example by downloading the sample files used in this article from the following [download link](https://aka.ms/PQCombineFilesSample). For simplicity, this article will be using the Folder connector. To learn more about the Folder connector, see [Folder](Connectors/folder.md). The goal of this example is to create a custom function that can be applied to all the files in that folder before combining all of the data from all files into a single table.
+>[!NOTE]
+> The following example was created using the desktop experience found in Power BI Desktop and can also be followed using the Power Query experience found in Excel for Windows.
+
+You can follow along with this example by downloading the sample files used in this article from the following [download link](https://aka.ms/PQCombineFilesSample). For simplicity, this article will be using the Folder connector. To learn more about the Folder connector, go to [Folder](Connectors/folder.md). The goal of this example is to create a custom function that can be applied to all the files in that folder before combining all of the data from all files into a single table.
 
 Start by using the Folder connector experience to navigate to the folder where your files are located and select **Transform Data** or **Edit**. This will take you to the Power Query experience. Right-click on the **Binary** value of your choice from the **Content** field and select the **Add as New Query** option. For this example, you'll see that the selection was made for the first file from the list, which happens to be the file *April 2019.csv*.
 
@@ -35,9 +39,11 @@ This option will effectively create a new query with a navigation step directly 
 ![File parameter.](images/me-custom-function-file-parameter.png)
 
 >[!NOTE]
->We recommend that you read the article on [Parameters](power-query-query-parameters.md) to better understand how to create and manage parameters in Power Query.
+> We recommend that you read the article on [Parameters](power-query-query-parameters.md) to better understand how to create and manage parameters in Power Query.
 >
 >Custom functions can be created using any parameters type. There's no requirement for any custom function to have a binary as a parameter.
+>
+>The binary parameter type is only displayed inside the **Parameters** dialog **Type** dropdown menu when you have a query that evaluates to a binary.
 >
 >It's possible to create a custom function without a parameter. This is commonly seen in scenarios where an input can be inferred from the environment where the function is being invoked. For example, a function that takes the environment's current date and time, and creates a specific text string from those values.  
 
@@ -161,7 +167,15 @@ You can now check your query to validate that only rows where **Country** is equ
 
 If you have multiple queries or values that require the same set of transformations, you could create a custom function that acts as a reusable piece of logic. Later, this custom function can be invoked against the queries or values of your choice. This custom function could save you time and help you in managing your set of transformations in a central location, which you can modify at any moment.
 
-For example, imagine a query that has several codes as a text string and you want to create a function that will decode those values.
+For example, imagine a query that has several codes as a text string and you want to create a function that will decode those values, as in the following sample table:
+
+|code|
+|-----|
+|PTY-CM1090-LAX|
+|LAX-CM701-PTY|
+|PTY-CM4441-MIA|
+|MIA-UA1257-LAX|
+|LAX-XY2842-MIA|
 
 ![List of codes.](images/me-sample-flight-data.png)
 

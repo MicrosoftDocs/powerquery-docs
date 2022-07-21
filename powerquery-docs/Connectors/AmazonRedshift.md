@@ -4,7 +4,7 @@ description: Provides basic information, prerequisites, and instructions on how 
 author: dougklopfenstein
 
 ms.topic: conceptual
-ms.date: 3/2/2022
+ms.date: 4/12/2022
 ms.author: dougklo
 ms.reviewer: kvivek
 LocalizationGroup: reference
@@ -19,7 +19,6 @@ LocalizationGroup: reference
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
 | Authentication Types Supported | Amazon Redshift<br />Basic<br/>Microsoft account<br/>Organizational account |
-| | |
 
 >[!Note]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
@@ -33,8 +32,9 @@ LocalizationGroup: reference
 * Import
 * DirectQuery (Power BI Desktop only)
 * Advanced options
-  * Roles
+  * Provider name
   * Batch size
+  * SQL statement
 
 ## Connect to Amazon Redshift data from Power Query Desktop
 
@@ -98,10 +98,9 @@ The following table describes all of the advanced options you can set in Power Q
 
 | Advanced option | Description |
 | --------------- | ----------- |
-| Role | Provides an Amazon Resource Name (ARN), which uniquely identifies AWS resources. |
+| Provider Name | Provides an Amazon Resource Name (ARN), which uniquely identifies AWS resources. |
 | Batch size | Specifies the maximum number of rows to retrieve at a time from the server when fetching data. A small number translates into more calls to the server when retrieving a large dataset. A large number of rows may improve performance, but could cause high memory usage. The default value is 100 rows. |
 | SQL Statement | For information, go to [Import data from a database using native database query](../native-database-query.md). This option is only available in Power BI Desktop. |
-| | |
 
 ## Enable Azure AD Single Sign-On (SSO) for Amazon Redshift
 
@@ -143,8 +142,8 @@ Once you've enabled Azure AD SSO for all data sources, then enable Azure AD SSO 
 
 3. Select a gateway, and then select **Choose Data Source**.
 
-4. Under the **Data Source Settings** tab, enter a value in **Role**. The Role parameter is required when using Azure AD and needs to be specified in **Advanced Settings**.
+4. Under the **Data Source Settings** tab, enter a value in **Provider Name**. The **Provider Name** parameter is required when using Azure AD and needs to be specified in **Advanced settings**.
 
    Also select **Use SSO via Azure AD for DirectQuery queries**.
 
-   ![Image of the Data Source Settings tab with the Role and Use SSO via Azure AD for DirectQuery queries advanced settings emphasized.](./media/amazon-redshift/gateway-settings.png)
+   ![Image of the Data Source Settings tab with the Provider Name and Use SSO via Azure AD for DirectQuery queries advanced settings emphasized.](./media/amazon-redshift/gateway-settings.png)
