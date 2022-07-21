@@ -3,15 +3,18 @@ title: Behind the scenes of the Data Privacy Firewall
 description: Describes the purpose of the Data Privacy Firewall
 author: ehrenMSFT
 
-ms.service: powerquery
+
 ms.topic: conceptual
-ms.date: 11/11/2020
-ms.author: gepopell
+ms.date: 3/25/2022
+ms.author: dougklo
 
 LocalizationGroup: reference
 ---
 
 # Behind the scenes of the Data Privacy Firewall
+
+>[!NOTE]
+>Privacy levels are currently unavailable in Power Platform dataflows. The product team is working towards re-enabling this functionality in the coming weeks.
 
 If you’ve used Power Query for any length of time, you’ve likely experienced it. There you are, querying away, when you suddenly get an error that no amount of online searching, query tweaking, or keyboard bashing can remedy. An error like:
 

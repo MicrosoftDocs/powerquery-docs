@@ -2,10 +2,10 @@
 title: Power Query Text/CSV connector
 description: Provides basic information and connection instructions, along with troubleshooting tips when loading files from the web and when unstructured text is interpreted as structured.
 author: cpopell
-ms.service: powerquery
+
 ms.topic: conceptual
-ms.date: 9/16/2021
-ms.author: gepopell
+ms.date: 7/11/2022
+ms.author: dougklo
 LocalizationGroup: reference
 ---
 
@@ -18,7 +18,6 @@ LocalizationGroup: reference
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Function Reference Documentation | [File.Contents](/powerquery-m/file-contents)<br/>[Lines.FromBinary](/powerquery-m/lines-frombinary)<br/>[Csv.Document](/powerquery-m/csv-document) |
-| | |
 
 >[!Note]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
@@ -153,7 +152,7 @@ The **Open file as** dropdown will let you edit what you want to load the file a
 
 ## Text/CSV by Example
 
-*Text/CSV By Example* in Power Query is a generally available feature in Power BI Desktop. When you use the Text/CSV connector, you'll see an option to **Extract Table Using Examples** on the bottom-left corner of the navigator.
+*Text/CSV By Example* in Power Query is a generally available feature in Power BI Desktop and Power Query Online. When you use the Text/CSV connector, you'll see an option to **Extract Table Using Examples** on the bottom-left corner of the navigator.
 
 ![Using the Extract Table Using Examples option.](./media/text-csv/extract-table-using-examples.png)
 
@@ -168,18 +167,23 @@ Once you’re done constructing that table, you can either select to load or tra
 
 ![Detailed breakdown of steps for data extraction.](./media/text-csv/data-extraction-steps.png)
 
->[!Note]
-This feature is being released soon in Power Query Online. More information: [Text/CSV by example data extraction](/power-platform-release-plan/2021wave1/data-integration/textcsv-example-data-extraction) 
-
 ## Troubleshooting
 
 ### Loading Files from the Web
 
 If you're requesting text/csv files from the web and also promoting headers, and you’re retrieving enough files that you need to be concerned with potential throttling, you should consider wrapping your `Web.Contents` call with `Binary.Buffer()`. In this case, buffering the file before promoting headers will cause the file to only be requested once.
 
+### Working with large CSV files
+
+If you're dealing with large CSV files in the Power Query Online editor, you might receive an Internal Error. We suggest you work with a smaller sized CSV file first, apply the steps in the editor, and once you're done, change the path to the bigger CSV file. This method lets you work more efficiently and reduces your chances of encountering a timeout in the online editor. We don't expect you to encounter this error during refresh time, as we allow for a longer timeout duration.
+
 ### Unstructured text being interpreted as structured
 
-In rare cases, a document that has similar comma numbers across paragraphs might be interpreted to be a CSV. If this issue happens, edit the **Source** step in the Query Editor, and select **Text** instead of **CSV** in the **Open File As** dropdown select.
+In rare cases, a document that has similar comma numbers across paragraphs might be interpreted to be a CSV. If this issue happens, edit the **Source** step in the Power Query editor, and select **Text** instead of **CSV** in the **Open File As** dropdown select.
+
+### Columns in Power BI Desktop
+
+When you import a CSV file, Power BI Desktop generates a *columns=x* (where *x* is the number of columns in the CSV file during initial import) as a step in Power Query Editor. If you subsequently add more columns and the data source is set to refresh, any columns beyond the initial *x* count of columns aren't refreshed.
 
 ### Error: Connection closed by host
 

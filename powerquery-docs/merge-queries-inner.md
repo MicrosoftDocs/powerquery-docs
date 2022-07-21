@@ -2,7 +2,7 @@
 title: "Inner join"
 description: An article on how to perform a merge operation in Power Query using the Inner join kind. 
 author: ptyx507
-ms.service: powerquery
+
 ms.reviewer: 
 ms.date: 07/22/2020
 ms.author: dougklo

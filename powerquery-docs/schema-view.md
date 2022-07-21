@@ -3,7 +3,7 @@ title: "Using Schema view (Preview)"
 description: Schema view optimizes the experience when working on schema-related data operations
 author: JorgeGabuardiMS
 ms.author: dougklo
-ms.service: powerquery
+
 ms.reviewer: 
 ms.date: 09/25/2020
 ---

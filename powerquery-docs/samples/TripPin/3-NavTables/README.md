@@ -4,10 +4,10 @@ description: Adding navigation tables to the TripPin REST connector.
 author: cpopell
 manager: kfile
 
-ms.service: powerquery
+
 ms.topic: tutorial
 ms.date: 5/15/2020
-ms.author: gepopell
+ms.author: dougklo
 
 LocalizationGroup: reference
 ---

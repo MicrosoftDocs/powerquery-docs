@@ -2,7 +2,7 @@
 title: Power Query Assemble Views connector
 description: Includes basic information, prerequisites, and information on how to connect to your AssembleViews data, along with a list of known issues and limitations.
 author: hofax
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 9/16/2021
 ms.author: bezhan
@@ -40,7 +40,7 @@ To connect to Assemble data:
 
 1. Select **Assemble Views** from the **Get Data** experience under the **Online Services** category, and then select **Connect**.
 
-2. In **Assemble Views**, enter your site's URL to sign in. For example, use **https://example.tryassemble.com**.
+2. In **Assemble Views**, enter your site's URL to sign in. For example, use **`https://example.tryassemble.com`**.
 
    a. (Optional) Select a date from which you want to load the data. Leaving this entry blank results in the latest data being pulled each time you refresh.
 

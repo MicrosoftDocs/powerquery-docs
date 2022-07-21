@@ -2,7 +2,7 @@
 title: "Left outer join"
 description: An article on how to do a merge operation in Power Query using the left outer join kind. 
 author: ptyx507
-ms.service: powerquery
+
 ms.reviewer: 
 ms.date: 06/30/2020
 ms.author: dougklo

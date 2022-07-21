@@ -4,10 +4,10 @@ description: Adding a test connection handler for gateway support to your TripPi
 author: cpopell
 manager: kfile
 
-ms.service: powerquery
+
 ms.topic: tutorial
 ms.date: 7/23/2021
-ms.author: gepopell
+ms.author: dougklo
 
 LocalizationGroup: reference
 ---

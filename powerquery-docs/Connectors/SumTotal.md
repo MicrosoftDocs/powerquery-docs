@@ -2,14 +2,14 @@
 title: Power Query SumTotal connector
 description: Provides basic information and prerequisites for the SumTotal connector, and outlines limitations and issues.
 author: bezhan-msft
-ms.service: powerquery
+
 ms.topic: conceptual
-ms.date: 5/25/2021
+ms.date: 6/15/2022
 ms.author: bezhan
 LocalizationGroup: reference
 ---
 
-# SumTotal (Beta)
+# SumTotal
 
 >[!Note]
 >The following connector article is provided by SumTotal, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the SumTotal website and use the support channels there.
@@ -18,11 +18,10 @@ LocalizationGroup: reference
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | Beta |
+| Release State | General Availability |
 | Products | Power BI (Datasets) |
 | Authentication types | OAuth 2.0 |
-| Function Reference Documentation | - |
-| | |
+| Function Reference Documentation | &mdash; |
 
 ## Prerequisites
 

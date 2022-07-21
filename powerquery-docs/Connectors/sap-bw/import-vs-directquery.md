@@ -3,7 +3,7 @@ title: Import vs. DirectQuery for SAP BW
 description: Describes the differences between using Import and DirectQuery mode in Power BI Desktop for SAP BW datasets.
 author: dougklopfenstein
 
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 11/23/2020
 ms.author: bezhan

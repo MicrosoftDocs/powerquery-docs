@@ -3,10 +3,10 @@ title: Start developing custom connectors for Power Query
 description: Create custom Power Query connectors
 author: cpopell
 
-ms.service: powerquery
+
 ms.topic: quickstart
-ms.date: 7/23/2021
-ms.author: gepopell
+ms.date: 2/28/2022
+ms.author: dougklo
 
 LocalizationGroup: reference
 ---

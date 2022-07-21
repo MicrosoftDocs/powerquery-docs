@@ -1,27 +1,18 @@
 ---
 title: "Using an on-premises data gateway in Power Platform dataflows | MicrosoftDocs"
 description: "Learn how to use an on-premises data gateway in Power Platform dataflows"
-ms.date: 10/29/2021
+ms.date: 3/21/2022
 ms.reviewer: dougklo
-ms.service: powerquery
+
 ms.topic: article
 author: Mattp123
-ms.author: matp
+ms.author: dougklo
 manager: kvivek
 ---
 
 # Using an on-premises data gateway in Power Platform dataflows
 
 Install an on-premises data gateway to transfer data quickly and securely between a Power Platform dataflow and a data source that isn't in the cloud, such as an on-premises SQL Server database or an on-premises SharePoint site. You can view all gateways for which you have administrative permissions and manage permissions and connections for those gateways.
-
-With a gateway, you can connect to on-premises data through these connections:
-
-- SharePoint
-- SQL Server
-- Oracle
-- Informix
-- Filesystem
-- DB2
 
 ## Prerequisites
 
@@ -39,11 +30,14 @@ With a gateway, you can connect to on-premises data through these connections:
 
 - A license that supports accessing on-premises data using an on-premises gateway. More information: "Connect to your data" row of the "Explore Power Apps plans" table in the [Power Apps pricing](https://powerapps.microsoft.com/pricing/) page.
 
-- Gateways and on-premises connections can only be created and used in the user's default environment. More information: [Working with environments and Microsoft Power Apps](/power-platform/admin/working-with-environments).
-
 ## Install a gateway
 
 You can install an on-premises data gateway directly from the online service.
+
+>[!NOTE]
+>
+>- It's a good general practice to make sure you're using a supported version of the on-premises data gateway. We release a new update of the on-premises data gateway every month. Currently, Microsoft actively supports only the last six releases of the on-premises data gateway.
+>- Starting April 2022, the minimum required gateway version will be Feburary 2021. Dataflows that refresh using an earlier version of the gateway might stop refreshing.
 
 ### Install a gateway from Power BI service
 
@@ -96,7 +90,19 @@ You can change the enterprise gateway used for a given dataflow and change the g
 
    ![Image showing the manage gateways selection in Power BI service](media/manage-gateways-power-bi.png)
 
-2. To add a user to the gateway, select the **Administrators** table and enter the email address of the user you would like to add as an administrator. Using gateways in dataflows requires Admin permission on the gateway. Admins have full control of the gateway, including adding users, setting permissions, creating connections to all available data sources, and deleting the gateway.
+2. To add a user to the gateway, select the **Administrators** table and enter the email address of the user you would like to add as an administrator. Creating or modifying data sources in dataflows requires Admin permissions to the gateway. Admins have full control of the gateway, including adding users, setting permissions, creating connections to all available data sources, and deleting the gateway.
+
+The following conditions apply when adding a user to the gateway:
+
+1. If we detect that an existing data source is available for the selected gateway, the **Username** and **Password** fields will be pre-populated.
+
+   1. If you select **Next** at this point, you're considered to be using that existing data source, and so you only need to have permissions to that data source.
+
+   1. If you edit any of the credential fields and select **Next**, then you're considered to be editing that existing data source, at which point you need to be an admin of the gateway.
+
+2. If we don't detect that an existing data source is available for the selected gateway, the **Username** and **Password** fields will be blank, and if you edit the credential fields and select **Next**, then you're considered to be creating a new data source on the gateway, at which point you need to be an admin of the gateway. 
+
+If you only have data source user permission on the gateway, then 1.b and 2 can't be achieved and the dataflow can't be created. 
 
 ### Power Apps gateway permissions
 
@@ -133,22 +139,41 @@ You can change the enterprise gateway used for a given dataflow and change the g
 
 There are a few known limitations when using enterprise gateways and dataflows.
 
+- Dataflow refresh might fail if an out-of-date data gateway is used. Starting April 2022, the minimum required data gateway version is February 2021.
+
 - Each dataflow can use only one gateway. As such, all queries should be configured using the same gateway.
 
 - Changing the gateway impacts the entire dataflow.
 
-- If several gateways are needed, the best practice is to build several dataflows (one for each gateway) and use the compute or table reference capabilities to unify the data.
+- If several gateways are needed, the best practice is to build several dataflows (one for each gateway). Then use the compute or table reference capabilities to unify the data.
 
 - Dataflows are only supported using enterprise gateways. Personal gateways won't be available for selection in the drop-down lists and settings
     screens.
 
-- Creating new data sources with a gateway in dataflows is only supported for people with *Admins* permissions. *Can use* and *Can use + share* permissions levels aren't currently supported.
+- Creating new data sources with a gateway in dataflows is only supported for people with *Admins* permissions.
+
+- Users with *Can Use* or *Can Use + Share* permissions can use existing connections when creating dataflows.
+
+- The following connectors are supported:
+  - [DB2](/connectors/db2/)
+  - [File System](/connectors/filesystem/)
+  - [Apache Impala](/connectors/impala/)
+  - [Informix](/connectors/informix/)
+  - [MySQL](/connectors/mysql/)
+  - [Oracle Database](/connectors/oracle/)
+  - [PostgreSQL](/connectors/postgresql/)
+  - [SAP ERP](/connectors/saperp/)
+  - [SharePoint](/connectors/sharepointonline/)
+  - [SQL Server](/connectors/sql/)
+  - [Teradata](/connectors/teradata/)
+  - [Desktop flows](/connectors/uiflow/)
+  - [HTTP with Azure AD](/connectors/webcontents/)
 
 ## Troubleshooting
 
 When you attempt to use an on-premises data source to publish a dataflow, you might come across the following MashupException error:
 
-```
+```M
 AzureDataLakeStorage failed to get the response:
 'The underlying connection was closed: An unexpected error occurred on a send.'
 ```
@@ -157,7 +182,7 @@ This error usually occurs because you're attempting to connect to an Azure Data 
 
 For more information about troubleshooting issues with gateways, or configuring the gateway service for your network, go to the [On-premises data gateway documentation](/data-integration/gateway).
 
-
+If you're experiencing issues with the gateway version you're using, try updating to the latest version as your issue might have been resolved in the latest version. For more information about updating your gateway, go to [Update an on-premises data gateway](/data-integration/gateway/service-gateway-update).
 
 ## Next steps
 

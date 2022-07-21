@@ -1,10 +1,11 @@
 ---
 title: "Fuzzy merge"
 description: "Finding approximate matches with Fuzzy Matching in Power Query's merge operations"
-author: ptyx507
-ms.service: powerquery
+
+author: ptyx507X
+
 ms.reviewer: 
-ms.date: 07/22/2020
+ms.date: 12/22/2021
 ms.author: dougklo
 ms.custom: edited
 ---
@@ -68,6 +69,7 @@ The available options are:
 * **Similarity threshold (optional)**: A value between 0.00 and 1.00 that provides the ability to match records above a given similarity score. A threshold of 1.00 is the same as specifying an exact match criteria. For example, **Grapes** matches with **Graes** (missing the letter *p*) only if the threshold is set to less than 0.90. By default, this value is set to 0.80.
 * **Ignore case**: Allows matching records no matter what the case of the text.
 * **Match by combining text parts**: Allows combining text parts to find matches. For example, **Micro soft** is matched with **Microsoft** if this option is enabled.
+* **Show similarity scores**: Shows similarity scores between the input and the matches values after fuzzy matching.
 * **Number of matches (optional)**: Specifies the maximum number of matching rows that can be returned for every input row.
 * **Transformation table (optional)**: Allows matching records based on custom value mappings. For example, **Grapes** is matched with **Raisins** if a transformation table is provided where the **From** column contains **Grapes** and the **To** column contains **Raisins**.
 
@@ -84,13 +86,20 @@ For this article, the transformation table will look as follows:
 |---|---|
 |apls|Apple|
 
-You can go back to the **Merge** dialog box, and in **Fuzzy matching options** under **Number of matches (optional)**, enter **1**. Under **Transformation table (optional)**, select **Transform Table** from the drop-down menu.
+You can go back to the **Merge** dialog box, and in **Fuzzy matching options** under **Number of matches**, enter **1**. Enable the **Show similarity scores** option, and then, under **Transformation table**, select **Transform Table** from the drop-down menu.
 
 ![Merge dialog box with the number of matches set to 1 and Transformation table set to Transform table.](images/me-merge-fuzzy-matching-custom-merge-window.png "Merge dialog box with the number of matches set to 1 and Transformation table set to Transform table")
 
-After you select **OK**, you'll create a table that looks like the following image, with all values mapped correctly. Note how the example started with nine distinct values, but after the fuzzy merge, there are only four distinct values.
+After you select **OK**, you can go to the merge step. When you expand the column with table values, you'll notice that besides the **Fruit** field you'll also see the **Similarity score field**. Select both and expand them without adding a prefix.
+
+![Table expand dialog for the Fruits column that contains the Fruit and Similarity score fields selected.](images/fuzzy-merge-expand-similarity-score.png "Table expand dialog for the Fruits column that contains the Fruit and Similarity score fields selected")
+
+After expanding these two fields, they'll be added to your table. Note the values you get for the similarity scores of each value. These scores can help you with further transformations if needed to determine if you should lower or raise your similarity threshold.
+
+![Table output after the fuzzy merge process occurred showcasing both the new Fruit and Similarity score fields for each value from the original query](images/me-fuzzy-merge-similarity-scores-results.png)
+
+For this example, the **Similarity score** serves only as additional information and isn't needed in the output of this query, so you can remove it. Note how the example started with nine distinct values, but after the fuzzy merge, there are only four distinct values.
 
 :::image type="complex" source="images/me-merge-fuzzy-matching-sample-output-table-2.png" alt-text="Fuzzy merge survey output table.":::
    Fuzzy merge survey output table with the Question column containing the column distribution graph showing nine distinct answers with all answers unique, and the answers to the survey with all the typos, plural or singular, and case problems. Also contains the Fruit column with the column distribution graph showing four distinct answers with one unique answer and lists all of the fruits properly spelled, singular, and proper case.
 :::image-end:::
-

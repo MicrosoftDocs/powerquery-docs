@@ -3,10 +3,10 @@ title: Handling navigation for Power Query connectors
 description: Manage navigation for Power Query connectors
 author: cpopell
 
-ms.service: powerquery
+
 ms.topic: conceptual
-ms.date: 12/12/2019
-ms.author: gepopell
+ms.date: 6/9/2022
+ms.author: dougklo
 
 LocalizationGroup: reference
 ---
@@ -133,5 +133,5 @@ This code would result in the following Navigator display in Power BI Desktop:
 
 ### Dynamic Navigation Tables
 More complex functionality can be built from these basics. While all of the above examples show hard-coded entities in the nav table, it's easy to see how a nav table could be generated dynamically based on entities that are available to a given user. A few key considerations for dynamic navigation tables include:
-* [Error handling](HandlingErrors.md) to ensure a good experience for users that don't have access to certain endpoints.
+* [Error handling](error-handling.md) to ensure a good experience for users that don't have access to certain endpoints.
 * Node evaluation is lazy by default; leaf nodes are not evaluated until the parent node is expanded. Certain implementations of multi-level dynamic nav tables may result in eager evaluation of the entire tree. Be sure to monitor the number of calls that Power Query is making as it initially renders the navigation table. For example, `Table.InsertRows` is 'lazier' than `Table.FromRecords`, as it does not need to evaluate its arguments.

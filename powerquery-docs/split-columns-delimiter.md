@@ -2,7 +2,7 @@
 title: Split columns by delimiter
 description: An article on how to Split columns by delimiter into new columns or rows using Power Query.
 author: ptyx507
-ms.service: powerquery
+
 ms.reviewer: kvivek
 ms.date: 06/08/2020
 ms.author: dougklo

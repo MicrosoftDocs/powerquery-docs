@@ -2,18 +2,18 @@
 title: Keyboard shortcuts in Power Query
 description: This article provides information about global keyboard shortcuts in Power Query Online.
 author: heydh
-ms.service: powerquery
+
 ms.reviewer: kvivek
 ms.date: 04/09/2021
 ms.author: dhsundar
-ms.custom: intro-internal
+ms.topic: conceptual
 ---
 
 # Keyboard shortcuts in Power Query
 
 Keyboard shortcuts provide a quick way to navigate and allow users to work more efficiently. For users with mobility or vision disabilities, keyboard shortcuts can be easier than using the touchscreen, and are an essential alternative to using the mouse. The table in this article lists all the shortcuts available in Power Query Online.
 
-When using the Query Editor in Power Query Online, you can press Ctrl+? or navigate to the **Keyboard shortcuts** button in the **Help** tab to view the list of keyboard shortcuts.
+When using the Query Editor in Power Query Online, you can navigate to the **Keyboard shortcuts** button in the **Help** tab to view the list of keyboard shortcuts.
 
 ## Query Editor
 
@@ -28,6 +28,7 @@ When using the Query Editor in Power Query Online, you can press Ctrl+? or navig
 | Blank query | Ctrl+M |
 | Advanced editor | Ctrl+Shift+M |
 | Refresh | Alt+F5 |
+| Search | Alt+Q |
 
 ## Data Preview
 

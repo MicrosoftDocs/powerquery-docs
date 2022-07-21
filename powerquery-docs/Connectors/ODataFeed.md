@@ -2,7 +2,7 @@
 title: Power Query OData Feed connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your data using the connector.
 author: dougklopfenstein
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 9/16/2021
 ms.author: bezhan
@@ -85,11 +85,13 @@ Connecting to [Microsoft Graph](/graph/overview) REST [APIs](https://graph.micro
 
 Due to the architecture of OData and other web connectors, joins can be non-performant. While you have the option to use navigation columns when merging between tables from an OData source, you don't have this option when merging with non-Odata sources.
 
-If you are seeing performance issues when merging an OData source, you should apply [Table.Buffer](/powerquery-m/table-buffer) to your OData query in the Advanced Editor, before you merge the data.
+If you're seeing performance issues when merging an OData source, you should apply [Table.Buffer](/powerquery-m/table-buffer) to your OData query in the Advanced Editor, before you merge the data.
 
 ### Test Connection issues
 
-In cases where you're passing in a URL to the OData connector that's not just the service root, for example, if you have a filter on the URL, when you set up refresh in the service you should select **Skip Test Connection**.
+In cases where you're passing in a URL to the OData connector that's not just the service root (for example, if you have a filter on the URL), when you set up refresh in the service you should select **Skip Test Connection**.
+
+When you enter credentials for an OData service into Power BI service (for example, after publishing a PBIX that uses OData.Feed), Power BI service will test the credentials but will ignore any query options that were specified in the M query. These query options might have been specified directly in the formula (for example, using the formula bar or Advanced Editor), or might have been added by the Query Editor by default. You can find the full list of these query options in [OData.Feed](/powerquery-m/odata-feed). The most notable of these options is `Implementation=”2.0”`&mdash;if you're connecting to an OData service that requires this option to work (for example, an OData V4 service), you'll need to enable **Skip Test Connection**.
 
 ### Authenticating to arbitrary services
 
@@ -105,7 +107,7 @@ Contact the service owner. They'll either need to change the authentication conf
 
 ### Maximum URL length
 
-If you're using the OData feed connector to connect to a SharePoint list, SharePoint online list, or Project Online, the maximum URL length for these connections is approximately 2100 characters. Exceeding the character limit results in an 401 error. This maximum URL length is built in the SharePoint front end and can't be changed.
+If you're using the OData feed connector to connect to a SharePoint list, SharePoint online list, or Project Online, the maximum URL length for these connections is approximately 2100 characters. Exceeding the character limit results in a 401 error. This maximum URL length is built in the SharePoint front end and can't be changed.
 
 To get around this limitation, start with the root OData endpoint and then navigate and filter inside Power Query. Power Query filters this URL locally when the URL is too long for SharePoint to handle. For example, start with:
 

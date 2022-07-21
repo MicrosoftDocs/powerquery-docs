@@ -5,9 +5,9 @@ author: peter-myers
 manager: asaxton
 ms.reviewer: asaxton
 
-ms.service: powerquery
+
 ms.topic: conceptual
-ms.date: 11/20/2019
+ms.date: 6/27/2022
 ms.author: dougklo
 ---
 
@@ -65,7 +65,6 @@ Generally, the following list describes transformations that prevent query foldi
     ```
 
 - Adding index columns.
-- Changing a column data type.
 
 Note that when a Power Query query encompasses multiple data sources, incompatibility of data source privacy levels can prevent query folding from taking place. For more information, see the [Power BI Desktop privacy levels](/power-bi/desktop-privacy-levels) article.
 
@@ -88,9 +87,11 @@ If the **View Native Query** option isn't enabled (greyed out), this is evidence
 
 ## Next steps
 
-For more information about Query Folding and related articles, check out the following resources:
+For more information about query folding and related articles, check out the following resources:
 
-- [Best practice guidance for query folding](/power-bi/guidance/power-query-folding)
-- [Use composite models in Power BI Desktop](/power-bi/desktop-composite-models)
-- [Incremental refresh in Power BI Premium](/power-bi/service-premium-incremental-refresh)
-- [Using Table.View to Implement Query Folding](HandlingQueryFolding.md)
+- [Overview of query evaluation and query folding in Power Query](query-folding-basics.md)
+- [Query folding guidance in Power BI Desktop](/power-bi/guidance/power-query-folding)
+- [Query folding examples](query-folding-examples.md)
+- [Query folding indicators](step-folding-indicators.md)
+- [Query plan for Power Query](query-plan.md)
+- [Query folding on native queries](native-query-folding.md)

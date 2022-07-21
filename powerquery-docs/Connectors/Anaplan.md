@@ -2,10 +2,10 @@
 title: Power Query Anaplan connector
 description: Provides basic information, prerequisites, and instructions on how to connect to your Anaplan data, as well as troubleshooting tips.
 author: cpopell
-ms.service: powerquery
+
 ms.topic: conceptual
-ms.date: 9/16/2021
-ms.author: gepopell
+ms.date: 6/15/2022
+ms.author: dougklo
 ms.reviewer: kvivek
 LocalizationGroup: reference
 ---
@@ -20,10 +20,9 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)|
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)|
 | Authentication Types Supported | Basic |
-| Function Reference Documentation | - |
-| | |
+| Function Reference Documentation | &mdash; |
 
 ## Capabilities supported
 
@@ -37,9 +36,9 @@ To connect to Anaplan data:
 
 2. In the Anaplan Connector Configuration screen, enter the API and Authentication URLs:
   
-    - **Anaplan API URL**:  https://api.anaplan.com
+    - **Anaplan API URL**:  `https://api.anaplan.com`
 
-    - **Anaplan Auth URL**: https://auth.anaplan.com
+    - **Anaplan Auth URL**: `https://auth.anaplan.com`
 
     ![Connection Configuration.](media/anaplan/connection-configuration.png)
 
@@ -58,7 +57,6 @@ The Anaplan connector leverages export actions to download data from your Anapla
 When you run an export action:
 
 -   Only exports that output .csv and .txt files are supported.
--   With every export action run, you need to wait ten minutes to repeat the same export action. The time is calculated from one export run completion until the next export run begins. The 10 minute wait does not apply to different exports.
 -   If you don't see the export action in the Power BI connector, check your role and the export actions in your model.
 
 To run an export action, use the **Navigator** dialog to locate your export.

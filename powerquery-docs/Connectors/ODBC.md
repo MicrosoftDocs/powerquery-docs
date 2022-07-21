@@ -2,10 +2,10 @@
 title: Power Query ODBC connector
 description: Provides basic information and prerequisites for the connector, and includes instructions on how to connect to your database using the connector.
 author: cpopell
-ms.service: powerquery
+
 ms.topic: conceptual
-ms.date: 8/20/2021
-ms.author: gepopell
+ms.date: 2/28/2022
+ms.author: dougklo
 LocalizationGroup: reference
 ---
 

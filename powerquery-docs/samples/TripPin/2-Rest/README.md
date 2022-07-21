@@ -4,10 +4,10 @@ description: Starting a REST connector for the TripPin sample service
 author: cpopell
 manager: kfile
 
-ms.service: powerquery
+
 ms.topic: tutorial
 ms.date: 5/15/2019
-ms.author: gepopell
+ms.author: dougklo
 
 LocalizationGroup: reference
 ---

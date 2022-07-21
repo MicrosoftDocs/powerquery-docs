@@ -2,7 +2,7 @@
 title: Additional connector functionality
 description: Provides information to custom and certified connector developers on adding more connector functionality
 author: bezhan-msft
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 5/12/2021
 ms.author: bezhan
@@ -12,6 +12,8 @@ LocalizationGroup: reference
 # Additional connector functionality
 
 This article provides information about different types of additional connector functionality that connector developers might want to invest in. For each type, this article outlines availability and instructions to enable the functionality.
+
+If there's connector-specific or platform functionality that requires direct Microsoft engagement or investment, end users and developer partners can express their need through the standard [feedback process](/power-query/feedback.md).
 
 ## Authentication
 

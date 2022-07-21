@@ -2,10 +2,10 @@
 title: Power Query PostgreSQL connector
 description: Provides basic information, prerequisites, and instructions on how to connect to your database, along with native query folding instructions and troubleshooting tips.
 author: cpopell
-ms.service: powerquery
+
 ms.topic: conceptual
-ms.date: 12/9/2020
-ms.author: gepopell
+ms.date: 2/28/2022
+ms.author: dougklo
 LocalizationGroup: reference
 ---
 
@@ -26,7 +26,7 @@ LocalizationGroup: reference
 
 ## Prerequisites
 
-As of the December 2019 release, NpgSQL 4.0.10 shipped with Power BI Desktop and no additional installation is required. GAC Installation overrides the version provided with Power BI Desktop, which will be the default. Refreshing is supported both through the cloud in the Power BI Service and also on premise through the Gateway. In the Power BI service, NpgSQL 4.0.10 will be used, while on premise refresh will use the local installation of NpgSQL, if available, and otherwise use NpgSQL 4.0.10.
+As of the December 2019 release, NpgSQL 4.0.10 shipped with Power BI Desktop and no additional installation is required. GAC Installation overrides the version provided with Power BI Desktop, which will be the default. Refreshing is supported both through the cloud in the Power BI service and also on premise through the on-premise data gateway. To refresh data from the Power BI service without an on-premise data gateway, PostgreSQL must be hosted in a manner that allows direct connection from the Power BI services on Azure. This is natively supported for PostgreSQL hosted in Microsoft Azure. For other hosting environments, consult your hosting provider about configuring your PostgreSQL for direct access from the internet. If PostgreSQL is configured so that it can't be directly accessed from the internet (recommended for security), you'll need to use an on-premise data gateway for refreshes. In the Power BI service, NpgSQL 4.0.10 will be used, while on premise refresh will use the local installation of NpgSQL, if available, and otherwise use NpgSQL 4.0.10.
 
 For Power BI Desktop versions released before December 2019, you must install the NpgSQL provider on your local machine. To install the NpgSQL provider, go to the [releases page](https://github.com/npgsql/Npgsql/releases) and download the relevant release. The provider architecture (32-bit or 64-bit) needs to match the architecture of the product where you intend to use the connector. When installing, make sure that you select NpgSQL GAC Installation to ensure NpgSQL itself is added to your machine.
 

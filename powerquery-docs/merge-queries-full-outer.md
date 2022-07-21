@@ -2,7 +2,7 @@
 title: "Full outer join"
 description: An article on how to do a merge operation in Power Query using the full outer join kind. 
 author: ptyx507
-ms.service: powerquery
+
 ms.reviewer: 
 ms.date: 07/19/2020
 ms.author: dougklo
