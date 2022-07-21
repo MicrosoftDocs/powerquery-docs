@@ -55,11 +55,15 @@ To make the connection, take the following steps:
 
     The connection string must contain three mandatory parameters: **SERVER**, **PORT** and **DATABASE**:
 
-        SERVER=<Server name>;PORT=<Port number>;DATABASE=<Database name>
+    ```http
+    SERVER=<Server name>;PORT=<Port number>;DATABASE=<Database name>
+    ```
 
     Additionally, it can contain an optional parameter: **SSLmode**:
 
-        SERVER=<Server name>;PORT=<Port number>;DATABASE=<Database name>;SSLmode=<SSL mode>
+    ```http
+    SERVER=<Server name>;PORT=<Port number>;DATABASE=<Database name>;SSLmode=<SSL mode>
+    ```
 
     Authentication parameters must be omitted, as authentication is configured in later steps.
 
