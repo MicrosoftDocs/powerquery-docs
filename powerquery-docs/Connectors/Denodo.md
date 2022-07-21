@@ -51,7 +51,7 @@ To make the connection, take the following steps:
 
    ![Denodo connector dialog.](./media/denodo/DenodoConnector.png)
 
-    When creating a Denodo-compatible connection string, we must take into account that the **Driver** field must be omitted, as this is transparently set at connection time by the connector itself.
+    When creating a Denodo-compatible connection string, you must take into account that the **Driver** field must be omitted, as this is transparently set at connection time by the connector itself.
 
     The connection string must contain three mandatory parameters: **SERVER**, **PORT** and **DATABASE**:
 
