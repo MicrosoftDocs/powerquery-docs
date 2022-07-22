@@ -11,7 +11,7 @@ ms.author: miescobar
 
 In Power Query Online, named connections provide you with a more flexible approach to create and manage connections. A named connection is the definition of a set of components to establish a connection to a particular data source. You can create multiple connections against the same data source with the only differentiation being the name you choose to assign.
 
-![Image of setting a named connection for a Gateway data source]()
+![Example of setting a named connection for a Gateway data source, in this case a SQL Server](media/named-connections/sql-server-named-connection.png)
 
 ## Creating a named connection
 
@@ -23,10 +23,9 @@ Using the SQL Database connector as an example, you can
 >[!TIP]
 > Some connectors provide an auto-login experience. You can learn more about this feature from the article on [auto-login](/powerquery-docs/auto-login-aad.md).
 
-
 ## Components of a connection
 
-Each connection is made up of a set of components. 
+Each connection is made up of a set of components. Below you will find a table with more information for each component.
 
 |Component name|Required or optional|Description|Sample|
 |----------|-------|-----|-----|
