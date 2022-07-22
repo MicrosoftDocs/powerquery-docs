@@ -39,7 +39,7 @@ The teams have shared a list of ways that they want to rank each other:
 
 For the first requirement shared by the teams of using only the values from the `Total Points` field where higher values rank higher using [standard competition](#rank-methods) as the rank method, use the following steps:
 
-1. With the original table already in Power Query, select the `Total Points` column. Then from the **Add column** tab, select **Rank column**.
+1. With the original table already in Power Query, select the `Total Points` column. Then from the Power Query **Add column** tab, select **Rank column**.
 2. In **Rank**, **Rank by** will be the field selected (`Total Points`) and the **Rank criteria** will be **Higher value ranks higher**.
 
    ![Rank basic dialog with only the Total Points field selected with a rank criteria of Higher value ranks higher.](media/rank-column/rank-basic-dialog.png)
@@ -52,9 +52,9 @@ For the first requirement shared by the teams of using only the values from the 
 
 ### Single column rank with specific rank method
 
-For the second requirement shared by the teams of using only the values from the *Total Points* field where higher values rank higher using [dense](#rank-methods) as the rank method**, use the following steps:
+For the second requirement shared by the teams of using only the values from the `Total Points` field where higher values rank higher using [dense](#rank-methods) as the rank method, use the following steps:
 
-1. With the original table already in Power Query, select the `Total Points` column. Then from the **Add column** tab, select **Rank column**.
+1. With the original table already in Power Query, select the `Total Points` column. Then from the Power Query **Add column** tab, select **Rank column**.
 2. In **Rank**, **Rank by** will be the field selected (`Total Points`) and the **Rank criteria** will be **Higher value ranks higher**.
 3. Select **Advanced** at the top of the dialog box. This selection enables the advanced section. In **Rank method**, change the value from **Standard competition** to **Dense**.
 
@@ -70,7 +70,7 @@ For the second requirement shared by the teams of using only the values from the
 
 For the third requirement shared by the teams of ranking first by the `Total Points` and then by `Bonus modifier` where higher values rank higher using the [standard competition](#rank-methods) as rank method, use the following steps:
 
-1. With the original table already in Power Query, select the `Total Points` and then `Bonus modifier` columns. Then from the **Add column** tab, select **Rank column**.
+1. With the original table already in Power Query, select the `Total Points` and then `Bonus modifier` columns. Then from the Power Query **Add column** tab, select **Rank column**.
 2. The rank dialog appears with its advanced section open, with both fields selected in the **Rank by** column. **Total Points** is in the first row and then **Bonus modifier** below it. Both rows use the **Rank criteria** of **Higher value ranks higher**.
 3. Make sure that **Rank method** at the bottom is set to **Standard competition**.
 
