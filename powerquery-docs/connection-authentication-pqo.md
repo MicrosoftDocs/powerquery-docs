@@ -26,12 +26,27 @@ During the [Get Data experience in Power Query Online](/powerquery-docs/get-data
 
 ### Creating a cloud connection
 
-***ME: This is a "how to" section on how to create a cloud connection against an Azure SQL db**
+Using the Azure SQL Database connector as an example, you can the enter the connector parameters in order to establish a connection. For the SQL Server connector, the required parameter is just the server, but you can also input the name of the database and any other advanced parameters available for the connector.
 
-Using the SQL Database connector as an example, you can....
+![Connection settings of the Azure SQL Database connector where the only required parameter is the server](media/named-connections/cloud-connection.png)
+
+After entering the values for the parameters of the connector in the *Connection settings* section, you can proceed with the *Connection credentials* section where you have the ability to create a connection specific to the connection settings previously entered.
+
+![Connection credentials of the Azure SQL Database connector where the user has been authenticated using the auto-login feature](media/named-connections/cloud-connection.png)
+
+The fields available in the *Connection settings* section are:
+
+|Field|Description|Sample value|
+|-----|------|--------|
+| **Connection Name**| You can enter a name to your new connection|Sample Connection|
+| **Data Gateway**| An optional field that lets you bind a gateway to your connection. For cloud connections, there is no gateway binding to the connection| none|
+| **Authentication Kind**| You can select what authentication kind to use that is supported by the connector.|Organizational account|
+| **Credentials**| Depending on the authentication kind selected, you will be available to see a contextual set of fields to input your credentials, a button to launch an OAuth2 flow or even no fields at all for an authentication kind such as *Anonymous*.|Derived from OAuth2 flow and shown as "Test User"|
 
 >[!TIP]
 > Some connectors provide an auto-login experience. You can learn more about this feature from the article on [auto-login](/powerquery-docs/auto-login-aad.md).
+
+After finishing the *Connection settings* section, you can click the **Next** button to move forward within the [*Get Data*](/powerquery-docs/get-data-experience.md#2-data-preview) experience.
 
 ### Creating an On-Premise connection 
 
