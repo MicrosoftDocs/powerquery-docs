@@ -96,11 +96,17 @@ Each connection is made up of a set of components. Below you will find a table w
 
 When Power Query recognizes a set of **connection settings**, it'll try to look up in its respective credentials storage to see if there's a connection that matches those settings to automatically select that connection.
 
-image of the automatic connection lookup
+![Known connection picked up after entering the connection settings for the Kusto connector](media/named-connections/known-connection.png)
 
-To override this behavior, you can click the edit connection link to modify the existing connection or select **Create new connection** from the dropdown menu to create a new named connection.
+To override this behavior, you can take either of the following two actions: 
 
-image of the dropdown
+* Display the dropdown menu to see a list of available connections for the given connection settings and select the one that you'd like to use or create a new one
+
+![Known connections shown in the dropdown menu of the connection field](media/named-connections/known-connections-drop-down.png)
+
+* Click the edit connection link to modify the existing connection or select **Create new connection** from the dropdown menu to create a new named connection
+
+![Edit connection dialog so the user can edit an existing connection](media/named-connections/known-connection-edit.png)
 
 ## More resources
 
