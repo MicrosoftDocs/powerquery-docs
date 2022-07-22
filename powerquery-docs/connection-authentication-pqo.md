@@ -26,13 +26,15 @@ Using the SQL Database connector as an example, you can
 
 ## Components of a connection
 
-Each connection is compromised of a set of components. Some of these
+Each connection is made up of a set of components. 
 
-1. **Data Source kind**: The data source for which the connection is being established to. E.g. SQL Server, File, Folder, Azure Data Lake Storage, etc.
-2. **Data Source path**: This is a string that represents the values or parameters used to establish a connection to your data source. E.g. Server Name, Database Name
-3. **Gateway**: *(optional)* Used when a gateway is needed to establish the connection and execute any query evaluation.
-4. **Authentication**: This encompasses both the authentication method and the credentials used for it. E.g. Windows, OAuth2, Anonymous.
-5. **Privacy level**: *(optional)* By default it is set to none and it establishes the security for each connection which is taken into consideration when queries from different connections are combined.
+|Component name|Required or optional|Description|Sample|
+|----------|-------|-----|-----|
+|**Data Source kind**|Required|The data source for which the connection is being established to| SQL Server, File, Folder, Azure Data Lake Storage|
+|**Data Source path**|Required|This is a string that represents the values or parameters used to establish a connection to your data source.|Server Name, Database Name|
+|**Gateway**| Optional| Used when a gateway is needed to establish the connection and execute any query evaluation| Any gateway|
+| **Authentication**|Required|This encompasses both the authentication method and the credentials used for it|Windows, OAuth2, Anonymous|
+|**Privacy level**|Optional| By default it is set to none and it establishes the security for each connection which is taken into consideration when queries from different connections are combined| None, Public, Organizational, Private|
 
 ### Types of connections
 
@@ -43,11 +45,9 @@ There are two categories of connections:
 |**Cloud**|![Cloud connection icon](media/named-connections/cloud-connection.png) |Any connection for data source that is cloud-based and does not use a gateway|
 |**On-Premise**|![On-Premise connection icon](media/named-connections/on-premise-connection.png) |Any connection that requires a gateway|
 
-This distinction can also be visualized in a portal like the **Connections** list in the Power BI service.
+This distinction can also be visualized in a portal like the **Connections** list in the Power BI service where you are able to verify and modify the existing connections available to you.
 
 ![Connections list in the Data Gateway portal in Power BI](media/named-connections/connections-list.png)
-
-In this portal you are able to verify and modify the existing connections available to you.
 
 ## More resources
 
