@@ -24,22 +24,25 @@ There are two categories of connections:
 
 During the [Get Data experience in Power Query Online](/powerquery-docs/get-data-experience.md#1-connection-settings-and-authentication), you will find a dialog where you can enter a set of information in order to create and establish a connection to your data source. The process is standard for all connectors in Power Query, but some connectors might require more information in order to create such connection.
 
-### Creating a cloud connection 
+### Creating a cloud connection
 
-Using the SQL Database connector as an example, you can
+***ME: This is a "how to" section on how to create a cloud connection against an Azure SQL db**
 
+Using the SQL Database connector as an example, you can....
 
 >[!TIP]
 > Some connectors provide an auto-login experience. You can learn more about this feature from the article on [auto-login](/powerquery-docs/auto-login-aad.md).
 
 ### Creating an On-Premise connection 
 
+***ME: This is a "how to" section on how to create an On-Premises connection against a local SQL Server db using a gateway**
+
 As an alternative, you can also bind a gateway to your connection and therefore converting your connection from a cloud connection to an On-Premise connection.
 
 >[!NOTE]
 > To create a gateway you can read the article on [using an on-premises data gateway in dataflows](/powerquery-docs/dataflows/using-dataflows-with-on-premises-data.md).
 
-The process is simple and straightforward where you can simply 
+The process is simple and straightforward where you can simply....
 
 ## Components of a connection
 
@@ -58,6 +61,7 @@ Each connection is made up of a set of components. Below you will find a table w
 
 ## More resources
 
+* [List of connectors in Power Query](/powerquery-docs/Connectors/index.md)
 * [On-premises data gateways documentation](https://docs.microsoft.com/data-integration/gateway/)
 * [Change the gateway used in a dataflow](/powerquery-docs/change-gateway-dataflow.md)
 * [Troubleshooting dataflow issues: Connection to the data source](/powerquery-docs/dataflows/troubleshooting-dataflow-issues-connection-to-the-data-source.md)
