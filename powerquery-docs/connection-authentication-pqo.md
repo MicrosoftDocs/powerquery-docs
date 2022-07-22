@@ -26,14 +26,13 @@ Using the SQL Database connector as an example, you can
 
 ## Components of a connection
 
-This is where I go deeper into how each component of the named connection is and why they exist.
+Each connection is compromised of a set of components. Some of these
 
 1. **Data Source kind**: The data source for which the connection is being established to. E.g. SQL Server, File, Folder, Azure Data Lake Storage, etc.
 2. **Data Source path**: This is a string that represents the values or parameters used to establish a connection to your data source. E.g. Server Name, Database Name
-3. **Gateway**:
-4. **Credentials**:
-5. **Connector specific optional settings**:
-6. **Privacy level**:
+3. **Gateway**: *(optional)* Used when a gateway is needed to establish the connection and execute any query evaluation.
+4. **Authentication**: This encompasses both the authentication method and the credentials used for it. E.g. Windows, OAuth2, Anonymous.
+5. **Privacy level**: *(optional)* By default it is set to none and it establishes the security for each connection which is taken into consideration when queries from different connections are combined.
 
 ### Types of connections
 
@@ -50,5 +49,8 @@ This distinction can also be visualized in a portal like the **Connections** lis
 
 In this portal you are able to verify and modify the existing connections available to you.
 
->[!NOTE]
->For scenarios where you want to add or change a gateway to a dataflow, you can follow the steps to do so from the article on [change the gateway used in a dataflow project](/powerquery-docs/change-gateway-dataflow.md).
+## More resources
+
+* [On-premises data gateways documentation](https://docs.microsoft.com/data-integration/gateway/)
+* [Change the gateway used in a dataflow](/powerquery-docs/change-gateway-dataflow.md)
+* [Troubleshooting dataflow issues: Connection to the data source](/powerquery-docs/dataflows/troubleshooting-dataflow-issues-connection-to-the-data-source.md)
