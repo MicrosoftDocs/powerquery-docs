@@ -57,7 +57,7 @@ Each connection is made up of a set of components. Below you will find a table w
 |**Privacy level**|Optional| By default it is set to none and it establishes the security for each connection which is taken into consideration when queries from different connections are combined| None, Public, Organizational, Private|
 
 >[!IMPORTANT]
->At the moment, the privacy level will be set to *None* for any new connections created. When you try to combine multiple data sources a new dialog will prompt you to define the data privacy levels of the data sources that you want to combine.
+>At the moment, the privacy level will be set to *None* for any new connections created. When you try to combine multiple data sources, a new dialog will prompt you to define the data privacy levels of the data sources that you want to combine.
 
 ## More resources
 
