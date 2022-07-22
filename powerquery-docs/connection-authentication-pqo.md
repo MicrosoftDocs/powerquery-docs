@@ -26,15 +26,15 @@ During the [Get Data experience in Power Query Online](/powerquery-docs/get-data
 
 ### Creating a cloud connection
 
-Using the Azure SQL Database connector as an example, you can the enter the connector parameters in order to establish a connection. For the SQL Server connector, the required parameter is just the server, but you can also input the name of the database and any other advanced parameters available for the connector.
+Using the Azure SQL Server Database connector as an example, you can the enter the connector parameters in order to establish a connection. For the Azure SQL Server connector, the required parameter is just the server, but you can also input the name of the database and any other advanced parameters available for the connector.
 
-![Connection settings of the Azure SQL Database connector where the only required parameter is the server](media/named-connections/cloud-connection.png)
+![Connection settings of the Azure SQL Server Database connector where the only required parameter is the server](media/named-connections/cloud-connection.png)
 
 After entering the values for the parameters of the connector in the *Connection settings* section, you can proceed with the *Connection credentials* section where you have the ability to create a connection specific to the connection settings previously entered.
 
 ![Connection credentials of the Azure SQL Database connector where the user has been authenticated using the auto-login feature](media/named-connections/cloud-connection.png)
 
-The fields available in the *Connection settings* section are:
+Below you will find a table with the fields and values used in the *Connection settings* section:
 
 |Field|Description|Sample value|
 |-----|------|--------|
@@ -48,16 +48,31 @@ The fields available in the *Connection settings* section are:
 
 After finishing the *Connection settings* section, you can click the **Next** button to move forward within the [*Get Data*](/powerquery-docs/get-data-experience.md#2-data-preview) experience.
 
-### Creating an On-Premise connection 
-
-***ME: This is a "how to" section on how to create an On-Premises connection against a local SQL Server db using a gateway**
+### Creating an On-Premise connection
 
 As an alternative, you can also bind a gateway to your connection and therefore converting your connection from a cloud connection to an On-Premise connection.
 
 >[!NOTE]
 > To create a gateway you can read the article on [using an on-premises data gateway in dataflows](/powerquery-docs/dataflows/using-dataflows-with-on-premises-data.md).
 
-The process is simple and straightforward where you can simply....
+Using now a local SQL Server Database as an example, you can the enter the connector parameters in order to establish a connection. For the SQL Server connector, the required parameter is just the server, but you can also input the name of the database and any other advanced parameters available for the connector.
+
+![Connection settings of the SQL Server Database connector where the only required parameter is the server](media/named-connections/cloud-connection.png)
+
+After entering the values for the parameters of the connector in the *Connection settings* section, you can proceed with the *Connection credentials* section where you have the ability to create a connection specific to the connection settings previously entered.
+
+![Connection credentials of the Azure SQL Database connector where the user has been authenticated using the auto-login feature](media/named-connections/cloud-connection.png)
+
+Below you will find a table with the fields and values used in the *Connection settings* section:
+
+|Field|Description|Sample value|
+|-----|------|--------|
+| **Connection Name**| You can enter a name to your new connection|Sample Gateway Connection|
+| **Data Gateway**| An optional field that lets you bind a gateway to your connection.| My Gateway|
+| **Authentication Kind**| You can select what authentication kind to use that is supported by the connector.|Basic|
+| **Credentials**| Depending on the authentication kind selected, you will be available to see a contextual set of fields to input your credentials, a button to launch an OAuth2 flow or even no fields at all for an authentication kind such as *Anonymous*.|Username and password|
+
+After finishing the *Connection settings* section, you can click the **Next** button to move forward within the [*Get Data*](/powerquery-docs/get-data-experience.md#2-data-preview) experience.
 
 ## Components of a connection
 
