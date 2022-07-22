@@ -89,6 +89,16 @@ Each connection is made up of a set of components. Below you will find a table w
 >[!IMPORTANT]
 >At the moment, the privacy level will be set to *None* for any new connections created. When you try to combine multiple data sources, a new dialog will prompt you to define the data privacy levels of the data sources that you want to combine.
 
+## Known connections
+
+When Power Query recognizes a set of **connection settings**, it'll try to look up in its respective credentials storage to see if there's a connection that matches those settings to automatically select that connection.
+
+image of the automatic connection lookup
+
+To override this behavior, you can click the edit connection link to modify the existing connection or select **Create new connection** from the dropdown menu to create a new named connection.
+
+image of the dropdown
+
 ## More resources
 
 * [List of connectors in Power Query](/powerquery-docs/Connectors/index.md)
