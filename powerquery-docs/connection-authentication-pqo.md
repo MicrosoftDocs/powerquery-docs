@@ -52,8 +52,8 @@ Each connection is made up of a set of components. Below you will find a table w
 |----------|-------|-----|-----|
 |**Data Source kind**|Required|The data source for which the connection is being established to| SQL Server, File, Folder, Azure Data Lake Storage|
 |**Data Source path**|Required|This is a string that represents the values or parameters used to establish a connection to your data source.|Server Name, Database Name|
-|**Gateway**| Optional| Used when a gateway is needed to establish the connection and execute any query evaluation| Any gateway|
 | **Authentication**|Required|This encompasses both the authentication method and the credentials used for it|Windows, OAuth2, Anonymous|
+|**Gateway**| Optional| Used when a gateway is needed to establish the connection and execute any query evaluation| Any gateway|
 |**Privacy level**|Optional| By default it is set to none and it establishes the security for each connection which is taken into consideration when queries from different connections are combined| None, Public, Organizational, Private|
 
 >[!IMPORTANT]
