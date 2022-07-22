@@ -28,11 +28,11 @@ During the [Get Data experience in Power Query Online](/powerquery-docs/get-data
 
 Using the Azure SQL Server Database connector as an example, you can the enter the connector parameters in order to establish a connection. For the Azure SQL Server connector, the required parameter is just the server, but you can also input the name of the database and any other advanced parameters available for the connector.
 
-![Connection settings of the Azure SQL Server Database connector where the only required parameter is the server](media/named-connections/cloud-connection.png)
+![Connection settings of the Azure SQL Server Database connector where the only required parameter is the server](media/named-connections/connection-settings-cloud-connection.png)
 
 After entering the values for the parameters of the connector in the *Connection settings* section, you can proceed with the *Connection credentials* section where you have the ability to create a connection specific to the connection settings previously entered.
 
-![Connection credentials of the Azure SQL Database connector where the user has been authenticated using the auto-login feature](media/named-connections/cloud-connection.png)
+![Connection credentials of the Azure SQL Database connector where the user has been authenticated using the auto-login feature](media/named-connections/connection-credentials-cloud-connection.png)
 
 Below you will find a table with the fields and values used in the *Connection settings* section:
 
@@ -41,7 +41,7 @@ Below you will find a table with the fields and values used in the *Connection s
 | **Connection Name**| You can enter a name to your new connection|Sample Connection|
 | **Data Gateway**| An optional field that lets you bind a gateway to your connection. For cloud connections, there is no gateway binding to the connection| none|
 | **Authentication Kind**| You can select what authentication kind to use that is supported by the connector.|Organizational account|
-| **Credentials**| Depending on the authentication kind selected, you will be available to see a contextual set of fields to input your credentials, a button to launch an OAuth2 flow or even no fields at all for an authentication kind such as *Anonymous*.|Derived from OAuth2 flow and shown as "Test User"|
+| **Credentials**| Depending on the authentication kind selected, you will be available to see a contextual set of fields to input your credentials, a button to launch an OAuth2 flow or even no fields at all for an authentication kind such as *Anonymous*.|Derived from OAuth2 flow, but is shown as a **Sign in** button in the image|
 
 >[!TIP]
 > Some connectors provide an auto-login experience. You can learn more about this feature from the article on [auto-login](/powerquery-docs/auto-login-aad.md).
