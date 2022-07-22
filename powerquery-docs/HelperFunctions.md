@@ -171,9 +171,9 @@ Table.GenerateByPage = (getNextPage as function) as table =>
         // otherwise set the table type based on the columns of the first page
         if (firstRow = null) then
             Table.FromRows({})
-		// check for empty first table
-		else if (Table.IsEmpty(firstRow[Column1])) then
-			firstRow[Column1]
+	// check for empty first table
+        else if (Table.IsEmpty(firstRow[Column1])) then
+            firstRow[Column1]
         else
             Value.ReplaceType(
                 Table.ExpandTableColumn(tableOfPages, "Column1", Table.ColumnNames(firstRow[Column1])),
