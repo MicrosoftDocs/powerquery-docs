@@ -13,15 +13,26 @@ In Power Query Online, named connections provide you with a more flexible approa
 
 ![Example of setting a named connection for a Gateway data source, in this case a SQL Server](media/named-connections/sql-server-named-connection.png)
 
+There are two categories of connections:
+
+|Connection Category Name|Icon|Description|
+|-------------|-----|-----------|
+|**Cloud**|![Cloud connection icon](media/named-connections/cloud-connection.png) |Any connection for data source that is cloud-based and does not use a gateway|
+|**On-Premise**|![On-Premise connection icon](media/named-connections/on-premise-connection.png) |Any connection that requires a gateway|
+
 ## Creating a named connection
 
 During the [Get Data experience in Power Query Online](/powerquery-docs/get-data-experience.md#1-connection-settings-and-authentication), you will find a dialog where you can enter a set of information in order to create and establish a connection to your data source. The process is standard for all connectors in Power Query, but some connectors might require more information in order to create such connection.
+
+### Creating a cloud connection 
 
 Using the SQL Database connector as an example, you can
 
 
 >[!TIP]
 > Some connectors provide an auto-login experience. You can learn more about this feature from the article on [auto-login](/powerquery-docs/auto-login-aad.md).
+
+### Creating an On-Premise connection 
 
 As an alternative, you can also bind a gateway to your connection and therefore converting your connection from a cloud connection to an On-Premise connection.
 
@@ -44,19 +55,6 @@ Each connection is made up of a set of components. Below you will find a table w
 
 >[!IMPORTANT]
 >At the moment, the privacy level will be set to *None* for any new connections created. When you try to combine multiple data sources a new dialog will prompt you to define the data privacy levels of the data sources that you want to combine.
-
-### Types of connections
-
-There are two categories of connections:
-
-|Connection Category Name|Icon|Description|
-|-------------|-----|-----------|
-|**Cloud**|![Cloud connection icon](media/named-connections/cloud-connection.png) |Any connection for data source that is cloud-based and does not use a gateway|
-|**On-Premise**|![On-Premise connection icon](media/named-connections/on-premise-connection.png) |Any connection that requires a gateway|
-
-This distinction can also be visualized in a portal like the **Connections** list in the Power BI service where you are able to verify and modify the existing connections available to you.
-
-![Connections list in the Data Gateway portal in Power BI](media/named-connections/connections-list.png)
 
 ## More resources
 
