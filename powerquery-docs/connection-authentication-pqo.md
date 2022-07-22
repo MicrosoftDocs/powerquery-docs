@@ -23,6 +23,13 @@ Using the SQL Database connector as an example, you can
 >[!TIP]
 > Some connectors provide an auto-login experience. You can learn more about this feature from the article on [auto-login](/powerquery-docs/auto-login-aad.md).
 
+As an alternative, you can also bind a gateway to your connection and therefore converting your connection from a cloud connection to an On-Premise connection.
+
+>[!NOTE]
+> To create a gateway you can read the article on [using an on-premises data gateway in dataflows](/powerquery-docs/dataflows/using-dataflows-with-on-premises-data.md).
+
+The process is simple and straightforward where you can simply 
+
 ## Components of a connection
 
 Each connection is made up of a set of components. Below you will find a table with more information for each component.
@@ -34,6 +41,9 @@ Each connection is made up of a set of components. Below you will find a table w
 |**Gateway**| Optional| Used when a gateway is needed to establish the connection and execute any query evaluation| Any gateway|
 | **Authentication**|Required|This encompasses both the authentication method and the credentials used for it|Windows, OAuth2, Anonymous|
 |**Privacy level**|Optional| By default it is set to none and it establishes the security for each connection which is taken into consideration when queries from different connections are combined| None, Public, Organizational, Private|
+
+>[!IMPORTANT]
+>At the moment, the privacy level will be set to *None* for any new connections created. When you try to combine multiple data sources a new dialog will prompt you to define the data privacy levels of the data sources that you want to combine.
 
 ### Types of connections
 
