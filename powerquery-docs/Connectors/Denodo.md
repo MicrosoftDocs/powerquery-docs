@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for the Denodo connect
 author: bezhan-msft
 
 ms.topic: conceptual
-ms.date: 6/15/2022
+ms.date: 6/24/2022
 ms.author: bezhan
 LocalizationGroup: reference
 ---

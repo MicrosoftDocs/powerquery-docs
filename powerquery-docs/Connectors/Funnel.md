@@ -3,7 +3,7 @@ title: Power Query Funnel connector
 description: Provides basic information, prerequisites, and information on how to connect to your Funnel data, along with a list of known issues and limitations.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 04/03/2022
+ms.date: 6/24/2022
 ms.author: bezhan
 
 LocalizationGroup: reference
@@ -19,7 +19,7 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products | Power BI (Datasets) |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
 | Authentication Types Supported | Funnel Account |
 
 ## Prerequisites
