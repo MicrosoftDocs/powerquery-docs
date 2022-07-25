@@ -4,7 +4,7 @@ description: Describes the format and layout of the user documentation that need
 author: DougKlopfenstein
 
 ms.reviewer: kvivek
-ms.date: 9/16/2021
+ms.date: 7/25/2022
 ms.author: bezhan
 ---
 
@@ -54,6 +54,9 @@ This section should contain a list of the capabilities supported by your custom 
 This section contains the procedures required to connect to data. If your custom connector is only used in Power Query Desktop, only one procedure is required. However, if your custom connector is used on both Power Query Desktop and Power Query Online, you must supply a separate procedure in separate sections for each instance. That is, if your custom connector is only used by Power Query Desktop, you'll have one procedure starting with a second order heading and a single step-by-step procedure. If your custom connector is used by both Power Query Desktop and Power Query Online, you'll have two procedures. Each procedure starts with a second order heading, and contains a separate step-by-step procedure under each heading. For examples of each of these types of procedures, go to [Example connector articles](#example-connector-articles).
 
 The procedure is made up of a numbered list that includes each step required to fill in the information needed to provide a normal connection (not requiring advance options) to the data.
+
+>[!NOTE]
+>All new certified connectors are required to support Power BI dataflows, and must contain sections for connecting to your data in both Power Query Desktop and Power Query Online.
 
 ### Connect using advanced options (optional)
 
