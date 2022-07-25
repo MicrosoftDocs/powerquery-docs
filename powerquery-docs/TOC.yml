@@ -20,6 +20,8 @@
         href: connecting-to-graph.md
       - name: "Connectivity without an existing connector"
         href: connector-alternatives.md
+      - name: "Connect using generic interfaces"
+        href: connect-using-generic-interfaces.md
       - name: "Change a dataflow gateway"
         href: change-gateway-dataflow.md
     - name: Transform data
@@ -310,6 +312,10 @@
         href: Connectors/AutodeskConstructionCloud.md
       - name: "Automy Data Analytics (Beta)"
         href: Connectors/AutomyDataAnalytics.md
+      - name: "Azure Cost Management"
+        href: Connectors/AzureCostManagement.md
+      - name: "Azure Data Explorer (Kusto)"
+        href: Connectors/AzureDataExplorer.md
       - name: "Azure Data Lake Storage Gen1"
         href: Connectors/AzureDataLakeStorageGen1.md
       - name: "Azure Data Lake Storage Gen 2"
@@ -324,7 +330,7 @@
         href: Connectors/AzureSQLDataWarehouse.md
       - name: "Azure Synapse Analytics workspace (Beta)"
         href: Connectors/synapse.md
-      - name: "BitSight Security Ratings (Beta)"
+      - name: "BitSight Security Ratings"
         href: Connectors/BitSightSecurityRatings.md
       - name: "Bloomberg Data and Analytics"
         href: Connectors/BloombergDataAndAnalytics.md
@@ -342,6 +348,8 @@
         href: Connectors/Denodo.md
       - name: "Digital Construction Works Insights (Beta)"
         href: Connectors/DigitalConstructionWorksInsights.md
+      - name: "Eduframe (Beta)"
+        href: Connectors/Eduframe.md
       - name: "EQuIS (Beta)"
         href: Connectors/EQuIS.md
       - name: "Essbase"
@@ -376,8 +384,12 @@
         href: Connectors/HiveLlap.md
       - name: "IBM Db2 database"
         href: Connectors/IBMDb2Database.md
+      - name: "Impala database"
+        href: Connectors/ImpalaDatabase.md
       - name: "JSON"
         href: Connectors/json.md
+      - name: LinkedIn Sales Navigator (Beta)
+        href: Connectors/LinkedInSalesNavigator.md
       - name: "Mailchimp (Deprecated)"
         href: Connectors/Mailchimp.md
       - name: "Microsoft Azure Consumption Insights (Beta) (Deprecated)"
@@ -580,8 +592,6 @@
           href: HandlingUnitTesting.md
         - name: "Helper functions"
           href: HelperFunctions.md
-        - name: "Handling errors"
-          href: HandlingErrors.md
         - name: "Handling documentation"
           href: HandlingDocumentation.md
         - name: "Handling navigation tables"
