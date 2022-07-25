@@ -56,10 +56,6 @@ To connect to Google Sheets from Power Query Desktop, take the following steps:
 
 This section describes any limitations or considerations of the Google Sheets connector.
 
-### Power Query Online
-
-This connector isn't yet available in Power Query Online and dataflows experiences.
-
 ### Shared drive support
 
 This connector does support connecting to shared drives.
