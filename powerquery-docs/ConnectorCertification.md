@@ -67,7 +67,7 @@ To ensure the best experience for our customers, we only consider connectors tha
 
 * The developer must provide an estimate for usage. We suggest that developers of connectors for very boutique products use our [connector self-signing capabilities](#custom-connector-distribution) to provide them directly to the customer.
 
-* The connector must be already made available to customers directly to fulfill a user need or business scenario. This can be done using a Private Preview program by distributing the completed connector directly to end users and organizations through [self-signing](##custom-connector-distribution). Each user or organization should be able to provide feedback and validation that there's a business need for the connector and that the connector is working sucessfully to fulfill their business requirements.
+* The connector must be already made available to customers directly to fulfill a user need or business scenario. This can be done using a Private Preview program by distributing the completed connector directly to end users and organizations through [self-signing](#custom-connector-distribution). Each user or organization should be able to provide feedback and validation that there's a business need for the connector and that the connector is working sucessfully to fulfill their business requirements.
 
 * The connector must be working successfully at an anticipated level of usage by customers.
 
