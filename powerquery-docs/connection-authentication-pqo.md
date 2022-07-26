@@ -9,7 +9,7 @@ ms.author: miescobar
 
 # Connections and authentication in Power Query Online
 
-In Power Query Online, a named connection refers to the unique identifier and associated credentials used to establish a connection to a particular data source. One convenient feature of connections in Power Query is that you can create multiple connections against the same data source with different credentials.
+In Power Query Online, a connection refers to the unique identifier and associated credentials used to establish a connection to a particular data source. One convenient feature of connections in Power Query is that you can create multiple connections against the same data source with different credentials.
 
 ![Example of setting a named connection for a Gateway data source, in this case a SQL Server](media/named-connections/sql-server-named-connection.png)
 
