@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for the SumTotal conne
 author: bezhan-msft
 
 ms.topic: conceptual
-ms.date: 6/15/2022
+ms.date: 6/24/2022
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -19,7 +19,7 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets) |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
 | Authentication types | OAuth 2.0 |
 | Function Reference Documentation | &mdash; |
 
