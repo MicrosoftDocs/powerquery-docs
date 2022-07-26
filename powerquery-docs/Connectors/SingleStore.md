@@ -4,7 +4,7 @@ description: Provides basic information, prerequisites, and instructions on how 
 author: bezhan-msft
 
 ms.topic: conceptual
-ms.date: 6/14/2022
+ms.date: 6/24/2022
 ms.author: bezhan
 ms.reviewer: dougklo
 LocalizationGroup: reference
@@ -20,7 +20,7 @@ LocalizationGroup: reference
 | Item | Description
 |--|--|
 | Release State | Beta |
-| Products | Power BI (Datasets) |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
 | Authentication Types Supported | Basic<br/>Windows |
 
 ## Capabilities Supported
