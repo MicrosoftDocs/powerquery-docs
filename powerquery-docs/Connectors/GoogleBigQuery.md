@@ -33,7 +33,7 @@ You'll need a Google account or a Google service account to sign in to Google Bi
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI only)
+* DirectQuery (Power BI Datasets only)
 
 ## Connect to Google BigQuery data from Power Query Desktop
 
