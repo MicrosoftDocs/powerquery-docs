@@ -17,7 +17,7 @@ More technically, the auto-login feature for Azure Active Directory data sources
 >[!NOTE]
 >This functionality is currently only available in Power Query Online and is enabled by default for a select set of connectors. No configuration is needed to enable this feature.
 
-When selecting a connector that has this capability, it will automatically log you in with the **Organizational account** set as the authentication kind.
+When selecting a connector that has this capability, it will automatically log you in with **Organizational account** set as the authentication kind.
 
 ![Connect to data source dialog showing the SharePoint folder connector experience where the user Test Account has been automatically logged in using the Organizational account as the authentication kind](media/aad-obo/sample-connect-to-data-source.png)
 
