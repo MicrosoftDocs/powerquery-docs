@@ -1,18 +1,36 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
-trigger:
-
-pool:
-  vmImage: ubuntu-latest
-
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+# Cron Schedules have been converted using UTC Time Zone and may need to be updated for your location
+schedules:
+- cron: 0 9 * * 1,2,3,4,5
+  branches:
+    include:
+    - main
+  always: true
+- cron: 0 15 * * 1,2,3,4,5
+  branches:
+    include:
+    - main
+  always: true
+resources:
+  repositories:
+  - repository: self
+    type: git
+    ref: refs/heads/main
+jobs:
+- job: Phase_1
+  displayName: Agent job 1
+  cancelTimeoutInMinutes: 1
+  pool:
+    vmImage: ubuntu-20.04
+  steps:
+  - checkout: self
+  - task: InstallSSHKey@0
+    displayName: Install an SSH key
+    inputs:
+      hostname: $(hostName)
+      sshPublicKey: $(sshPublicKey)
+      sshKeySecureFile: $(sshKeySecureFile)
+  - task: CmdLine@2
+    displayName: Command Line Script
+    inputs:
+      script: "git config --local user.name \"CXWTool Service Account\"\ngit config --local user.email \"cxwtool@microsoft.com\"\n\ngit remote add ssh git@github.com:MicrosoftDocs/powerquery-docs-pr.git\n\ngit checkout main\ngit pull ssh main\n\ngit checkout live\ngit pull ssh live\n\ngit merge main\n\nCONFLICTS=$(git ls-files -u | wc -l)\nif [ \"$CONFLICTS\" -gt 0 ] ; then\n   echo \"There is a merge conflict. Aborting\"\n   git merge --abort\n   exit 1\nelse\n    echo \"Merge OK\"\n   git push ssh live  \nfi\n\n"
+...
