@@ -19,11 +19,7 @@ LocalizationGroup: reference
 
 ## Introduction
 
-With the [Power Query SDK](InstallingSDK.md), everyone is empowered to create a custom Power Query connector to connect to a data source from Power Query. Currently, custom connectors are only supported in Power BI datasets (Power BI Desktop and Power BI Service), and require the use of an on-premises data gateway to refresh through Power BI Service. Custom connectors need to be individually distributed by the developer.
-
-Data source owners who develop a custom connector for their data source may want to distribute their custom connector more broadly to Power Query users. Once a custom connector has been created, used and validated by end users, the data source owner may submit it for Microsoft certification.
-
-Certifying a Power Query custom connector makes the connector available publicly, out-of-box, within Power BI datasets (Power BI Desktop and Power BI Service), Power BI dataflows, and Power BI datamarts. Certified connectors are supported in PowerBI.com and all versions of Power BI Premium. 
+Certifying a Power Query custom connector makes the connector available publicly, out-of-box, within Power BI Desktop. Certified connectors are supported in PowerBI.com and all versions of Power BI Premium, except dataflows. Certification is governed by Microsoft's Connector Certification Program, where Microsoft works with partner developers to extend the data connectivity capabilities of Power BI.
 
 Certified connectors are:
 
@@ -37,17 +33,11 @@ Certified connectors are:
 
 We work with partners to try to make sure that they have support in maintenance, but customer issues with the connector itself will be directed to the partner developer.
 
-## Certified connector and custom connector differences
+Certified connectors are bundled out-of-box in Power BI Desktop. Custom connectors need to be loaded in Power BI Desktop, as described in [Loading your extension in Power BI Desktop](samples/TripPin/1-OData/README.md#loading-your-extension-in-power-bi-desktop). Both can be refreshed through Power BI Desktop or Power BI Service through using an on-premises data gateway by implementing a [TestConnection](samples/trippin/9-testconnection/readme.md).
 
-Certified connectors are bundled out-of-box in Power BI Desktop, and deployed to Power BI Service, Power BI dataflows, and Power BI datamarts. Custom connectors are only supported in Power BI datasets and need to be loaded in Power BI Desktop, as described in [Loading your extension in Power BI Desktop](samples/TripPin/1-OData/README.md#loading-your-extension-in-power-bi-desktop). Both certified and custom connetors can be refreshed through Power BI Desktop or Power BI Service through using an on-premises data gateway by implementing a [TestConnection](samples/trippin/9-testconnection/readme.md). The on-premises data gateway is requried for custom connectors.
+Certified connectors with a `TestConnection` implementation also support end-to-end refresh through the cloud (Power BI Service) without the need of an on-premises data gateway. The Power BI service environment essentially hosts a “cloud gateway” that runs similar to the on-premises gateway. After certification, we will deploy your connector to this environment so that it's available to all Power BI customers. There are additional requirements for connectors that need to use additional components, such as an ODBC-based driver. Be sure to reach out to your Microsoft contact if your connector requires the use of additional components.
 
-Certified connectors in Power BI Desktop with a `TestConnection` implementation also support end-to-end refresh through the cloud (Power BI Service) without the need of an on-premises data gateway. The Power BI service environment essentially hosts a “cloud gateway” that runs similar to the on-premises gateway. After certification, we will deploy your connector to this environment so that it's available to all Power BI customers. 
-
-Both custom and certified connectors with additional components (e.g. ODBC driver) need the additional component to be installed on the end user machine and require the on-premises data gateway, unless the additional component is deployed to Power BI cloud. Currently, we are not certifying and deploying any new additional components to Power BI cloud, so the certification of connectors with a dependency on an additional component will not remove the on-premises data gateway requirement. 
-
-## Custom connector distribution
-
-Custom connectors can and should be distributed to end users before certification.
+## Custom Connector Security and Signing
 
 As M is a versatile language that, as seen in [Handling Authentication](HandlingAuthentication.md), has the capacity to interact with stored credentials, we need to give users a way to only allow trusted connectors to run.
 
