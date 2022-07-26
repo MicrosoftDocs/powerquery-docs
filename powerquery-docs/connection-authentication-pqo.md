@@ -64,7 +64,7 @@ Using now a local SQL Server Database as an example, you can the enter the conne
 
 After entering the values for the parameters of the connector in the *Connection settings* section, you can proceed with the *Connection credentials* section where you have the ability to create a connection specific to the connection settings previously entered.
 
-![Connection credentials of the Azure SQL Database connector where the user has been authenticated using the auto-login feature](media/named-connections/connection-credentials-on-premise-connection.png)
+![Connection credentials of the SQL Server Database connector where the user has entered a data gateway, a new connection name and and the credentials using the Basic authentication kind](media/named-connections/connection-credentials-on-premise-connection.png)
 
 Below you'll find a table with the fields and values used in the *Connection settings* section:
 
