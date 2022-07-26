@@ -76,6 +76,18 @@ Power BI Pro gives you the ability to create analytical dataflows, but not use a
 
 If you use Power BI Premium (capacity-based licensing), you can use all the AI capabilities in Power BI, computed entities and linked entities, with the ability to have a DirectQuery connection to the dataflow, and you can use the enhanced compute engine. However, the dataflow created under a premium capacity license uses only the internal Azure Data Lake Storage, and won't be accessible by other platforms except Power BI itself. You can't create external dataflows just by having a Power BI Premium license; you need to have an Azure subscription for Azure Data Lake Storage as well.
 
+#### Limitations per premium capacity
+
+If you are running refreshes on premium
+
+#### Execution slots
+
+what are executions slots? well that gets into details
+
+#### Strategy to lower execution slots consumption during refresh
+
+TEXT
+
 ### Using your organization's Azure Data Lake Storage account for dataflow storage
 
 To create dataflows that store data in your organization's Azure Data Lake Storage account, in addition to the product licenses above, you must have an Azure subscription. The amount of storage that can be used isn't limited by the dataflow or the product it was created in.
