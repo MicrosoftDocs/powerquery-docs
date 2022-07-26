@@ -78,15 +78,17 @@ If you use Power BI Premium (capacity-based licensing), you can use all the AI c
 
 #### Limitations per premium capacity
 
-If you are running refreshes on premium
+What are the limits per capacity type?
 
 #### Execution slots
 
-what are executions slots? well that gets into details
+what are executions slots? 
+
+How do I know how much execution slots I consume during my refresh?
 
 #### Strategy to lower execution slots consumption during refresh
 
-TEXT
+What can I do to lower my consumption of execution slots? 
 
 ### Using your organization's Azure Data Lake Storage account for dataflow storage
 
