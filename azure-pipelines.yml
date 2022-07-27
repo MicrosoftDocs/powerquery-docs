@@ -34,7 +34,7 @@ jobs:
         git config --local user.name "CXWTool Service Account"
         git config --local user.email "cxwtool@microsoft.com"
         
-        git remote add ssh git@github.com:MicrosoftDocs/partner-center-pr.git
+        git remote add ssh git@github.com:MicrosoftDocs/powerquery-docs-pr.git
         
         git checkout main
         git pull ssh main
