@@ -26,7 +26,7 @@ During the [get data experience in Power Query Online](/powerquery-docs/get-data
 
 ### Creating a cloud connection
 
-Using the Azure SQL Server Database connector as an example, you can enter the connector settings to establish a connection. For the Azure SQL Server connector, the required setting is just the server name, but you can also enter the name of the database and select any other advanced options available for the connector.
+Using the Azure SQL Server database connector as an example, you can enter the connector settings to establish a connection. For the Azure SQL Server connector, the required setting is just the server name, but you can also enter the name of the database and select any other advanced options available for the connector.
 
 ![Connection settings of the Azure SQL Server Database connector where the only required setting is the server name.](media/named-connections/connection-settings-cloud-connection.png)
 
@@ -41,10 +41,10 @@ The following table contains the fields and values used in the **Connection sett
 | **Connection Name**| The name you can enter for your new connection.|Sample Connection|
 | **Data Gateway**| An optional field that lets you bind a gateway to your connection. For cloud connections, there's no gateway binding to the connection.| none|
 | **Authentication Kind**| The authentication kind you select to use that's supported by the connector.|Organizational account|
-| **Credentials**| Depending on the authentication kind you select, there will be available a contextual set of fields to input your credentials, a button to launch an OAuth2 flow or even no fields at all for an authentication kind such as *Anonymous*.|Derived from OAuth2 flow, but is shown as a **Sign in** button in the image|
+| **Credentials**| Depending on the authentication kind you select, there will be available a contextual set of fields to input your credentials, a button to launch an OAuth2 flow, or even no fields at all for an authentication kind such as **Anonymous**.|Derived from OAuth2 flow, but is shown as a **Sign in** button in the image|
 
 >[!NOTE]
->By default, the field for the connection name will try to provide a default name when you create a connection using the information from the connection settings.
+>By default, the field for the connection name tries to provide a default name when you create a connection using the information from the connection settings.
 
 After finishing the **Connection settings** section, you select the **Next** button to move forward in the [get data](get-data-experience.md) experience.
 
@@ -73,7 +73,7 @@ The following table contains the fields and values used in the **Connection sett
 | **Connection Name**| The name you can enter for your new connection|localhost;AdventureWorks2019|
 | **Data Gateway**| An optional field that lets you bind a gateway to your connection.| Mike Test|
 | **Authentication Kind**| The authentication kind you select to use that's supported by the connector.|Basic|
-| **Credentials**| Depending on the authentication kind selected, there will be available a contextual set of fields to input your credentials, a button to launch an OAuth2 flow, or even no fields at all for an authentication kind such as Anonymous.|Username and password|
+| **Credentials**| Depending on the authentication kind selected, there will be available a contextual set of fields to input your credentials, a button to launch an OAuth2 flow, or even no fields at all for an authentication kind such as **Anonymous**.|Username and password|
 
 After finishing the **Connection settings** section, you select the **Next** button to move forward within the [get data](get-data-experience.md) experience.
 
@@ -94,7 +94,7 @@ Each connection is made up of a set of components. The following table contains 
 
 ## Known connections
 
-When Power Query recognizes a set of connection settings, it tries to look up in its respective credentials storage to see if there's a connection that matches those settings and, if so, will automatically select that connection.
+When Power Query recognizes a set of connection settings, it tries to look up in its respective credentials storage to see if there's a connection that matches those settings and, if so, automatically selects that connection.
 
 ![Known connection picked up after entering the connection settings for the Kusto connector.](media/named-connections/known-connection.png)
 
@@ -102,11 +102,11 @@ To override this behavior, you can take either of the following two actions:
 
 * Display the dropdown menu to scan a list of available connections for the given connection settings. You can then select the one that you'd like to use or create a new one.
 
-![Known connections shown in the dropdown menu of the connection field.](media/named-connections/known-connections-drop-down.png)
+   ![Known connections shown in the dropdown menu of the connection field.](media/named-connections/known-connections-drop-down.png)
 
 * Select **Edit connection** to modify the existing connection or select **Create new connection** from the dropdown menu to create a new named connection.
 
-![Edit connection dialog so the user can edit an existing connection.](media/named-connections/known-connection-edit.png)
+   ![Edit connection dialog so the user can edit an existing connection.](media/named-connections/known-connection-edit.png)
 
 ## More resources
 
