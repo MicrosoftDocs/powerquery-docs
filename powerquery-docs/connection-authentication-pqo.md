@@ -64,7 +64,7 @@ Using a local SQL Server database as an example, you enter the connector setting
 
 After entering the values for the connector in **Connection settings**, you can proceed with the **Connection credentials** section. In this section, you can create a connection specific to the connection settings you previously entered.
 
-![Connection credentials of the SQL Server database connector where the user has entered a data gateway, a new connection name, and the credentials using the Basic authentication kind.](media/named-connections/connection-credentials-on-premise-connection.png)
+![Connection credentials of the SQL Server database connector where the user has entered a data gateway, a new connection name, and the credentials using the Basic authentication kind.](media/named-connections/connection-credentials-on-premises-connection.png)
 
 The following table contains the fields and values used in the **Connection settings** section.
 
