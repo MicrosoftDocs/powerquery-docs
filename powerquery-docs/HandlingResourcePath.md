@@ -65,7 +65,7 @@ As `Uri.Type` is an *ascribed type* rather than a *primitive type* in the M lang
 shared GithubSample.Contents = Value.ReplaceType(Github.Contents, type function (url as Uri.type) as any);
 ```
 
-[Data Source Kind]: https://github.com/Microsoft/DataConnectors/blob/master/docs/m-extensions.md#data-source-kind
+[Data Source Kind]: /power-query/handlingdataaccess#data-source-kind
 
 [HelloWorldWithDocs sample]: https://github.com/Microsoft/DataConnectors/blob/master/samples/HelloWorldWithDocs
 
