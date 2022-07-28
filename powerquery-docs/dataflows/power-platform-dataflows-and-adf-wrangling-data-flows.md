@@ -3,7 +3,7 @@ title: How Power Platform dataflows and Azure Data Factory wrangling dataflows r
 description: How Microsoft Power Platform dataflows and Azure Data Factory wrangling dataflows relate to each other.
 author: radacad
 
-ms.service: powerquery
+
 ms.reviewer: kvivek
 ms.topic: conceptual
 ms.date: 12/2/2020
@@ -12,7 +12,7 @@ ms.author: bezhan
 
 # How Microsoft Power Platform dataflows and Azure Data Factory wrangling dataflows relate to each other
 
-[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
+
 
 Microsoft Power Platform dataflows and Azure Data Factory dataflows are often considered to be doing the same thing: extracting data from source systems, transforming the data, and loading the transformed data into a destination. However, there are differences in these two types of dataflows, and you can have a solution implemented that works with a combination of these technologies. This article describes this relationship in more detail.
 
@@ -20,13 +20,13 @@ Microsoft Power Platform dataflows and Azure Data Factory dataflows are often co
 
 Power Platform dataflows are data transformation services empowered by the Power Query engine and hosted in the cloud. These dataflows get data from different data sources and, after applying transformations, store it either in Dataverse or in Azure Data Lake Storage.
 
-![Power Platform dataflows diagram](media/dataflows-power-platform-dynamics-365/dataflow-function.png)
+![Power Platform dataflows diagram.](media/dataflows-power-platform-dynamics-365/dataflow-function.png)
 
 ## Data Factory wrangling dataflows
 
 Data Factory is a cloud-based extract, transform, load (ETL) service that supports many different sources and destinations. There are two types of dataflows under this technology: mapping dataflows and wrangling dataflows. Wrangling dataflows are empowered by the Power Query engine for data transformation.
 
-![Wrangling dataflow](/azure/data-factory/media/wrangling-data-flow/tutorial6.png)
+![Wrangling dataflow.](/azure/data-factory/media/wrangling-data-flow/tutorial6.png)
 
 ## What do they have in common?
 
@@ -42,8 +42,8 @@ The main point is knowing their differences, because then you can think about sc
 | Features                   | Power Platform dataflows                                     | Data Factory wrangling dataflows                       |
 | -------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Destinations               | Dataverse or Azure Data Lake Storage        | Many destinations ([see the list here](https://azure.microsoft.com/blog/new-connectors-available-in-azure-data-factory-v2/)) |
-| Power Query transformation | All Power Query functions are supported                      | A limited set of functions are supported ([see the list here](/azure/data-factory/wrangling-data-flow-functions)) |
-| Sources                    | Many sources are supported                                  | Only a few sources ([see the list here](/azure/data-factory/wrangling-data-flow-functions)) |
+| Power Query transformation | All Power Query functions are supported                      | A limited set of functions are supported ([see the list here](/azure/data-factory/wrangling-functions)) |
+| Sources                    | Many sources are supported                                  | Only a few sources ([see the list here](/azure/data-factory/wrangling-overview#supported-sources)) |
 | Scalability                | Depends on the Premium capacity and the use of the enhanced compute engine | Highly scalable |
 | | |
 

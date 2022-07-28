@@ -3,7 +3,7 @@ title: SAP Business Warehouse fundamentals
 description: Describes basic SAP BW architecture and terminology used when interacting with the Power Query SAP Business Warehouse connector.
 author: dougklopfenstein
 
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 11/23/2020
 ms.author: bezhan
@@ -29,7 +29,7 @@ The OLAP BAPIs provide methods for browsing metadata and master data, and also f
 
 The OLAP Processor is responsible for retrieving, processing, and formatting the data from the SAP BW source objects, which are further described in [SAP BW data source](#sap-bw-data-sources) and [Data objects in SAP BW](#data-objects-in-sap-bw).
 
-![Integration architecture](integration-architecture.png)
+![Integration architecture.](integration-architecture.png)
 
 SAP Business Explorer and other SAP tools use a more direct interface to the SAP BW OLAP Processor called Business Intelligence Consumer Services, commonly known as BICS. BICS isn't available for 3rd party tools.
 

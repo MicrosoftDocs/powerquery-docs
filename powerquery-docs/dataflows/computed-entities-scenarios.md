@@ -2,7 +2,7 @@
 title: Computed entity scenarios and use cases
 description: Computed entity scenarios and use cases.
 author: radacad
-ms.service: powerquery
+
 ms.reviewer: kvivek
 ms.topic: conceptual
 ms.date: 12/2/2020
@@ -23,7 +23,7 @@ Computed entities solve both problems. Computed entities are similar to other en
 
 Computed entities can be created by referencing an entity in the same dataflow or by referencing an entity created in a different dataflow.
 
-![Computed entity](https://docs.microsoft.com/power-bi/transform-model/media/service-dataflows-computed-entities-premium/computed-entities-premium_00.png)
+![Computed entity.](/power-bi/transform-model/media/service-dataflows-computed-entities-premium/computed-entities-premium_00.png)
 
 ## Why use a computed entity?
 
@@ -31,11 +31,11 @@ Performing all transformation steps in one entity can be slow. There can be many
 
 For example, if two entities share even a part of their transformation logic, without a computed entity the transformation will have to be done twice.
 
-![Image showing transformation of data occurring twice](media/SeparateEntities.png)
+![Image showing transformation of data occurring twice.](media/SeparateEntities.png)
 
 However, if a computed entity is used, then the common (shared) part of the transformation will be processed once and stored in Azure Data Lake Storage. The remaining transformations will then be processed from the output of the common transformation. Overall, this processing is much faster.
 
-![Image showing common transformations done once in the computed entity, and stored in the data lake, and the remaining unique tranformations occurring later](media/Computedentityinbetween.png)
+![Image showing common transformations done once in the computed entity, and stored in the data lake, and the remaining unique tranformations occurring later.](media/Computedentityinbetween.png)
 
 
 A computed entity provides one place as the source code for the transformation and speeds up the transformation because it need only be done once instead of multiple times. The load on the data source is also reduced.
@@ -46,17 +46,17 @@ If you're building an aggregated table in Power BI to speed up the data model, y
 
 For example, the following figure shows an Orders entity.
 
-![Orders entity](media/ordersentity.png)
+![Orders entity.](media/ordersentity.png)
 
 Using a reference from this entity, you can build a computed entity.
 
-:::image type="complex" source="media/ordersentityreferenced.png" alt-text="Creating a computed entity":::
+:::image type="complex" source="media/ordersentityreferenced.png" alt-text="Creating a computed entity.":::
    Image showing how to create a computed entity from the Orders entity. First right-click the Orders entity in the Queries pane, select the Reference option from the drop-down menu, which creates the computed entity, which is renamed here to Orders aggregated.
 :::image-end:::
 
 The computed entity can have further transformations. For example, you can use **Group By** to aggregate the data at the customer level.
 
-![Image showing the Customer column in the Orders aggregated entity emphasized](media/ordersaggregatedentity.png)
+![Image showing the Customer column in the Orders aggregated entity emphasized.](media/ordersaggregatedentity.png)
 
 This means that the Orders Aggregated entity will be getting data from the Orders entity, and not from the data source again. Because some of the transformations that need to be done have already been done in the Orders entity, performance is better and data transformation is faster.
 

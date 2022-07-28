@@ -3,7 +3,7 @@ title: Troubleshooting dataflow issue - creating dataflows
 description: Troubleshooting dataflow issue - creating dataflows
 author: radacad
 
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 05/25/2020
 ms.author: bezhan
@@ -19,7 +19,7 @@ This article explains some of the most common errors and issues you might get wh
 
 This problem happens when you try to create a dataflow in **My workspace** in Power BI.
 
-![My workspace](media/MyWorkspace.png)
+![My workspace.](media/MyWorkspace.png)
 
 **Reason:**
 
@@ -41,7 +41,7 @@ You don't have edit rights in the workspace.
 
 Ask the workspace administrators or members to give you an Admin, Member, or Contributor [role](/power-bi/collaborate-share/service-new-workspaces#roles-in-the-new-workspaces).
 
-![Workspace access settings](media/WorkspaceAccess.png)
+![Workspace access settings.](media/WorkspaceAccess.png)
 
 ## I can't create a dataflow in a workspace where I have edit rights
 
@@ -57,11 +57,11 @@ Ask the Power BI tenant administrator to enable access for you by following thes
 
 1. On the **Settings** menu in the Power BI service, select **Admin portal**.
 
-   ![Power BI admin portal](media/PowerBIAdminPortal.png)
+   ![Power BI admin portal.](media/PowerBIAdminPortal.png)
 
 2. On the left pane, select **Tenant settings**, and in the **Dataflow settings** section, turn on the toggle for **Enabled**. Then select **Apply**.
 
-   ![Enable dataflows in tenant settings](media/EnableDataflow.png)
+   ![Enable dataflows in tenant settings.](media/EnableDataflow.png)
 
 ## I only see limited options when I create a dataflow
 
@@ -81,4 +81,4 @@ You're creating the dataflow in an old version of the Power BI workspace, called
 
 Upgrade your Power BI workspace to the new version (v2). More information: [Upgrade classic workspaces to the new workspaces in Power BI](/power-bi/collaborate-share/service-upgrade-workspaces)
 
-![Upgrade the classic workspace](media/UpgradeWorkspace.png)
+![Upgrade the classic workspace.](media/UpgradeWorkspace.png)

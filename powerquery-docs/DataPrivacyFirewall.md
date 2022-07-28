@@ -3,15 +3,18 @@ title: Behind the scenes of the Data Privacy Firewall
 description: Describes the purpose of the Data Privacy Firewall
 author: ehrenMSFT
 
-ms.service: powerquery
+
 ms.topic: conceptual
-ms.date: 11/11/2020
-ms.author: gepopell
+ms.date: 3/25/2022
+ms.author: dougklo
 
 LocalizationGroup: reference
 ---
 
 # Behind the scenes of the Data Privacy Firewall
+
+>[!NOTE]
+>Privacy levels are currently unavailable in Power Platform dataflows. The product team is working towards re-enabling this functionality in the coming weeks.
 
 If you’ve used Power Query for any length of time, you’ve likely experienced it. There you are, querying away, when you suddenly get an error that no amount of online searching, query tweaking, or keyboard bashing can remedy. An error like:
 
@@ -225,23 +228,23 @@ in
 
 Here’s a higher-level view, showing the dependencies.
 
-![Query Dependencies Dialog](images/FirewallQueryDependencies.png)
+![Query Dependencies Dialog.](images/FirewallQueryDependencies.png)
 
 
 ### Let’s partition
 
 Let’s zoom in a bit and include steps in the picture, and start walking through the partitioning logic. Here’s a diagram of the three queries, showing the initial firewall partitions in green. Notice that each step starts in its own partition.
 
-![Initial firewall partitions](images/FirewallStepsPane1.png)
+![Initial firewall partitions.](images/FirewallStepsPane1.png)
 
 Next, we trim parameter partitions. Thus, DbServer gets implicitly included in the Source partition.
 
-![Trimmed firewall partitions](images/FirewallStepsPane2.png)
+![Trimmed firewall partitions.](images/FirewallStepsPane2.png)
 
 
 Now we perform the static grouping. This maintains separation between partitions in separate queries (note for instance that the last two steps of Employees don’t get grouped with the steps of Contacts), as well as between partitions that reference other partitions (such as the last two steps of Employees) and those that don’t (such as the first three steps of Employees).
 
-![Post static-grouping firewall partitions](images/FirewallStepsPane3.png)
+![Post static-grouping firewall partitions.](images/FirewallStepsPane3.png)
 
 
 
@@ -253,7 +256,7 @@ For the sake of illustration, though, let’s look at what would happen if the C
 
 In this case, the Contacts query would not access any data sources. Thus, it would get trimmed during the first part of the dynamic phase.
 
-![Firewall partition after dynamic phase trimming](images/FirewallStepsPane4.png)
+![Firewall partition after dynamic phase trimming.](images/FirewallStepsPane4.png)
 
 
 
@@ -261,7 +264,7 @@ With the Contacts partition removed, the last two steps of Employees would no lo
 
 The resulting partition would look like this.
 
-![Final firewall partitions](images/FirewallStepsPane5.png)
+![Final firewall partitions.](images/FirewallStepsPane5.png)
 
 
 ## Example: Passing data from one data source to another

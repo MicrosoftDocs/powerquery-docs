@@ -3,9 +3,9 @@ title: SAP Business Warehouse connector troubleshooting
 description: Provides troubleshooting tips for errors that might occur when using Power Query to connect to an SAP BW Application Server or SAP BW Message Server.
 author: dougklopfenstein
 
-ms.service: powerquery
+
 ms.topic: conceptual
-ms.date: 11/20/2020
+ms.date: 9/14/2021
 ms.author: bezhan
 
 LocalizationGroup: reference
@@ -319,7 +319,7 @@ User accounts in SAP BW have default settings for how decimal or date/time value
 
 The default settings are maintained in the SAP system in the User Profile for an account, and the user can view or change these settings in the SAP GUI with the menu path **System** > **User Profile** > **Own Data**.
 
-![Decimal notation settings menu](decimal-notation.png)
+![Decimal notation settings menu.](decimal-notation.png)
 
 Power BI Desktop queries the SAP system for the decimal notation of the connected user and uses that notation to format decimal values in the data from SAP BW.
 
@@ -357,7 +357,7 @@ To solve this error, users must ask their SAP admin to grant the SAP BW user bei
    
 You can perform BEx queries in Power BI Desktop by enabling a specific property, as shown in the following image:
    
-![Enable Release for External Access](enable-release.png)
+![Enable Release for External Access.](enable-release.png)
 
 ### MDX interface limitation
 
@@ -389,10 +389,16 @@ In some cases, you might encounter one of the following memory errors:
 * `Message: [DataSource.Error] SAP Business Warehouse: The memory request for [number] bytes could not be complied with.`
 * `Message: The memory request for [number] bytes could not be complied with.`
 
-These memory exceptions are from the SAP BW server and are due to the server running out of available memory to process the query. This might happen when the query returns a large set of results or when the query is too complex for the server to handle, for example, when a query has many crossjoins. 
+These memory exceptions are from the SAP BW server and are due to the server running out of available memory to process the query. This might happen when the query returns a large set of results or when the query is too complex for the server to handle, for example, when a query has many crossjoins.
 
-To resolve this error, the recommendation is to simplify the query or divide it into smaller queries. If possible, push more aggregation to the server. Alternatively, contact your SAP Basis team to increase the resources available in the server. 
+To resolve this error, the recommendation is to simplify the query or divide it into smaller queries. If possible, push more aggregation to the server. Alternatively, contact your SAP Basis team to increase the resources available in the server.
 
-### See also
+### Loading text strings longer than 60 characters in Power BI Desktop fails
 
-* [2777473 - MDX: FAQ for Power BI accessing BW or BW/4HANA](https://apps.support.sap.com/sap/support/knowledge/2777473)
+In some cases you may find that text strings are being truncated to 60 characters in Power BI Desktop.
+
+First, follow the instructions in [2777473 - MDX: FAQ for Power BI accessing BW or BW/4HANA](https://apps.support.sap.com/sap/support/knowledge/2777473) and see if that resolves your issue.
+
+Because the Power Query SAP Business Warehouse connector uses the MDX interface provided by SAP for 3rd party access, you'll need to contact SAP for possible solutions as they own the layer between the MDX interface and the SAP BW server. Ask how "long text is XL" can be specified for your specific scenario.
+
+![Image showing where to set long text is xl setting.](long-text-xl.png)

@@ -2,12 +2,10 @@
 title: What is Power Query?
 description: Learn what Power Query is, and how it can help you get and transform data
 author: mllopis
-ms.service: powerquery
+
 ms.topic: overview
-ms.date: 07/27/2020
+ms.date: 03/14/2022
 ms.author: millopis
-LocalizationGroup: Get started
-ms.custom: edited
 ---
 
 # What is Power Query?
@@ -52,15 +50,15 @@ The transformation engine in Power Query includes many prebuilt transformation f
 
 All these transformations are made possible by choosing the transformation option in the menu, and then applying the options required for that transformation. The following illustration shows a few of the transformations available in Power Query Editor.
 
-![Image showing the transformation commands under the Transform, Home, and Add Column tabs of the Power Query Editor](images/powerquerytransformationslist.png "The transformation commands under the Transform, Home, and Add Column tabs of the Power Query Editor")
+![Image showing the transformation commands under the Transform, Home, and Add Column tabs of the Power Query Editor.](images/powerquerytransformationslist.png "The transformation commands under the Transform, Home, and Add Column tabs of the Power Query Editor")
 
-More information: [Quickstart: Using Power Query in Power BI](power-query-quickstart-using-power-bi.md)
+More information: [Quickstart: Using Power Query in Power BI](/power-query/power-query-ui)
 
 ## Dataflows
 
 Power Query can be used in many products, such as Power BI and Excel. However, using Power Query within a product limits its usage to only that specific product. *Dataflows* are a product-agnostic service version of the Power Query experience that runs in the cloud. Using dataflows, you can get data and transform data in the same way, but instead of sending the output to Power BI or Excel, you can store the output in other storage options such as Dataverse or Azure Data Lake Storage. This way, you can use the output of dataflows in other products and services.
 
-More information: [What are dataflows?](/dataflows/overview-dataflows-across-power-platform-dynamics-365.md)
+More information: [What are dataflows?](./dataflows/overview-dataflows-across-power-platform-dynamics-365.md)
 
 ## Power Query M formula language
 
@@ -96,26 +94,27 @@ The following table lists Microsoft products and services where Power Query can 
 |-------|---------|-------------------|------------------|---------|
 |Excel for Windows|Yes|Yes|No| No|
 |Excel for Mac|Yes|No|No| No|
-|Power BI|Yes|Yes|Yes| Yes
-|Power Apps| Yes |No|Yes| Yes||
+|Power BI|Yes|Yes|Yes| Yes|
+|Power Apps| Yes |No|Yes| Yes|
 |Power Automate| Yes |No | Yes |No |
+|Power BI Report Server| Yes| Yes|No|No|
 |Azure Data Factory| Yes |No |Yes |Yes|
 |SQL Server Integration Services| Yes| No|No|No|
 |SQL Server Analysis Services| Yes| Yes|No|No|
-|Dynamics 365 Customer Insights|Yes|No|Yes|Yes
+|Dynamics 365 Customer Insights|Yes|No|Yes|Yes|
 
-
+| <span>| <span>|
+| --- | --- |
+|<sup>1</sup>**M engine** |The underlying query execution engine that runs queries expressed in the Power Query formula language ("M"). |
+|<sup>2</sup>**Power&nbsp;Query&nbsp;Desktop** |The Power Query experience found in desktop applications. |
+|<sup>3</sup>**Power Query Online** |The Power Query experience found in web browser applications. |
+|<sup>4</sup>**Dataflows** |Power Query as a service that runs in the cloud and is product-agnostic. The stored result can be used in other applications as services. |
 | | |
-|----|--|
-|<sup>1</sup>**M engine**| The underlying query execution engine that runs queries expressed in the Power Query formula language ("M"). |
-|<sup>2</sup>**Power&nbsp;Query&nbsp;Desktop**| The Power Query experience found in desktop applications.|
-|<sup>3</sup>**Power Query Online**| The Power Query experience found in web browser applications.|
-|<sup>4</sup>**Dataflows**| Power Query as a service that runs in the cloud and is product-agnostic. The stored result can be used in other applications as services.|
 
 ### See also
 
 [Data sources in Power Query](connectors/index.md)  
 [Getting data](get-data-experience.md)  
-[Power Query quickstart](power-query-quickstart-using-power-bi.md)  
-[Shape and combine data using Power Query](power-query-tutorial-shape-combine.md)  
+[Power Query quickstart](/power-query/power-query-ui)  
+[Shape and combine data using Power Query](/power-query/power-query-ui)  
 [What are dataflows](dataflows/overview-dataflows-across-power-platform-dynamics-365.md)

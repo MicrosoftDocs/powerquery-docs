@@ -5,32 +5,55 @@ author: bensack
 manager: kfile
 ms.reviewer: ''
 
-ms.service: dataflows
+
 ms.topic: conceptual
-ms.date: 12/2/2020
+ms.date: 7/21/2021
 ms.author: bensack
 
 LocalizationGroup: Data from files
 ---
+
 # Connect to data sources for dataflows
 
-[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
 
-With Microsoft Power Platform dataflows, you can connect to many different data sources to create new dataflows, or add new entities to an existing dataflow.
 
-This article lists many available data sources for creating or adding to dataflows, and describes how to create those dataflows by using these data sources. For an overview of how to create and use dataflows, see [Creating and using dataflows in Power BI](/power-bi/service-dataflows-create-use).
+With Microsoft Power BI and Power Platform dataflows, you can connect to many different data sources to create new dataflows, or add new entities to an existing dataflow.
 
-## Create a dataflow entity from a data source
+This article describes how to create dataflows by using these data sources. For an overview of how to create and use dataflows, go to [Creating a dataflow](/power-bi/service-dataflows-create-use) for Power BI service and [Create and use dataflows in Power Apps](/powerapps/maker/data-platform/create-and-use-dataflows).
 
-To connect to data, open the dataflow authoring tool, and then select **Get data**.
+## Create a dataflow from a data source
 
-![Add entities using the Get data command](media/dataflows-data-sources/dataflows-data-sources-03.png)
+To create a dataflow from a data source, you'll first have to connect to your data.
+
+# [Power BI service](#tab/power-bi-service)
+
+To connect to data in Power BI:
+
+1. Open a workspace.
+2. Select **New**.
+3. Select **Dataflow** from the drop-down menu.
+4. Under **Define new tables**, select **Add new tables**.
+
+![Add tables from the new dataflow command.](media/dataflows-data-sources/dataflows-data-sources-pbi-online.png)
+
+# [Power Apps](#tab/power-apps)
+
+To connect to data in Power Apps:
+
+1. Select **Data** > **Dataflows**.
+2. Select **New Dataflow**.
+3. In the **New Dataflow** dialog box, enter a name for the new dataflow.
+4. Select **Create**.
+
+![Add](media/dataflows-data-sources/dataflows-data-sources-pa-online.png)
+
+---
 
 ## Data sources for dataflows
 
-You can view the available data sources by selecting **Get data** from the dataflow authoring tool, which then displays the **Choose data source** dialog box.
+Once you've created the dataflow from the dataflow authoring tool, you'll be presented with the **Choose data source** dialog box.
 
-![Get data categories for dataflows](media/dataflows-data-sources/dataflows-data-sources-04.png)
+![Get data categories for dataflows.](media/dataflows-data-sources/dataflows-data-sources-04.png)
 
 Data sources for dataflows are organized into the following categories, which appear as tabs in the **Choose data source** dialog box:
 
@@ -42,93 +65,27 @@ Data sources for dataflows are organized into the following categories, which ap
 * Online Services
 * Other
 
-The **All categories** category contains all data sources, from all categories. 
-
-The **File** category includes the following available data connections for dataflows:
-
-* Excel
-* Folder
-* JSON
-* PDF
-* Parquet
-* SharePoint Folder
-* Text/CSV
-* XML
-
-The **Database** category includes the following available data connections for dataflows:
-
-* Access
-* Amazon Redshift
-* Google BigQuery
-* IBM DB2 database
-* Impala
-* MySQL database
-* Oracle database
-* PostgreSQL database
-* SAP BW Application Server
-* SAP BW Message Server
-* SAP HANA database
-* SQL Server database
-* Snowflake
-* Sybase database
-* Teradata database
-* Vertica
-
-The **Power Platform** category includes the following available data connections for dataflows:
-
-* Common Data Service
-* Power Platform dataflows
-
-The **Azure** category includes the following available data connections for dataflows:
-
-* Azure Blobs
-* Azure Data Explorer (Kusto)
-* Azure Data Lake Storage Gen2
-* Azure HDInsight Spark
-* Azure SQL database
-* Azure Synapse Analytics (SQL DW)
-* Azure Tables
-
-The **Online Services** includes the following available data connections for dataflows:
-
-* Microsoft Exchange Online
-* Salesforce objects
-* Salesforce reports
-* SharePoint Online list
-* Smartsheet
-
-The **Other** category includes the following available data connections for dataflows:
-
-* Active Directory
-* FHIR
-* OData
-* Odbc
-* SharePoint list
-* Spark
-* Web API
-* Web page
-* Blank table
-* Blank Query
+For a list of all of the supported data sources in Power Query, see [Connectors in Power Query](../Connectors/index.md).
 
 ## Connect to a data source
 
 To connect to a data source, select the data source. This section uses one example to show how the process works, but each data connection for dataflows is similar in process. Different connectors might require specific credentials or other information, but the flow is similar. In this example, **SQL Server database** is selected from the **Database** data connection category.
 
-![Select SQL Server database from Databases categroy](media/dataflows-data-sources/dataflows-data-sources-05.png)
+![Select SQL Server database from Databases categroy.](media/dataflows-data-sources/dataflows-data-sources-05.png)
 
 A connection window for the selected data connection is displayed. If credentials are required, you're prompted to provide them. The following image shows a server and database being entered to connect to a SQL Server database.
 
-![Credentials or URLs for data connections](media/dataflows-data-sources/dataflows-data-sources-06.png)
+![Credentials or URLs for data connections.](media/dataflows-data-sources/dataflows-data-sources-06.png)
 
 After the server URL or resource connection information is provided, enter the credentials to use for access to the data. You may also need to enter the name of an on-premises data gateway. Then select **Next**.
 
 Power Query Online initiates and establishes the connection to the data source. It then presents the available tables from that data source in the **Navigator** window.
 
-![Navigator window shows tables in the data source](media/dataflows-data-sources/dataflows-data-sources-07.png)
+![Navigator window shows tables in the data source.](media/dataflows-data-sources/dataflows-data-sources-07.png)
 
 You can select tables and data to load by selecting the check box next to each in the left pane. To transform the data you've chosen, select **Transform data** from the bottom of the **Navigator** window. A Power Query Online dialog box appears, where you can edit queries and perform any other transformations you want to the selected data.
 
-![Edit queries and transform in Power Query Editor](media/dataflows-data-sources/dataflows-data-sources-08.png)
+![Edit queries and transform in Power Query Editor.](media/dataflows-data-sources/dataflows-data-sources-08.png)
 
 ## Connecting to additional data sources
 
@@ -139,15 +96,15 @@ You can take the following steps to create a connection to a connector that isn'
 1. Open Power BI Desktop, and then select **Get data**.
 2. Open Power Query Editor in Power BI Desktop, right-click the relevant query, and then select **Advanced Editor**, as shown in the following image. From there, you can copy the M script that appears in the **Advanced Editor** window.
 
-    ![Copy the M script from the Advanced Editor in Power BI Desktop](media/dataflows-data-sources/dataflows-data-sources-09.png) 
+    ![Copy the M script from the Advanced Editor in Power BI Desktop.](media/dataflows-data-sources/dataflows-data-sources-09.png) 
 
 3. Open the Power BI dataflow, and then select **Get data** for a blank query.
 
-    ![Create a blank query for a dataflow](media/dataflows-data-sources/dataflows-data-sources-10.png) 
+    ![Create a blank query for a dataflow.](media/dataflows-data-sources/dataflows-data-sources-10.png) 
 
 4. Paste the copied query into the blank query for the dataflow.
 
-    ![Copy the M script into the editor window](media/dataflows-data-sources/dataflows-data-sources-11.png) 
+    ![Copy the M script into the editor window.](media/dataflows-data-sources/dataflows-data-sources-11.png) 
 
 Your script then connects to the data source you specified.
 

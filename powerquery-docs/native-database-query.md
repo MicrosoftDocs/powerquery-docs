@@ -3,9 +3,9 @@ title: Import data from a database using native database query
 description: Describes the steps you take to import data from a database using a native database query
 author: DougKlopfenstein
 
-ms.service: powerquery
+
 ms.topic: conceptual
-ms.date: 06/05/2020
+ms.date: 3/18/2022
 ms.author: bezhan
 
 LocalizationGroup: reference
@@ -28,7 +28,7 @@ Power Query enables you to specify your native database query in a text box unde
 
    2. Under **Advanced options**, select the **SQL statement** field and paste or enter your native database query, then select **OK**.
 
-      ![Run native database queries](media/native-database-query/database-select-dialog.png)
+      ![Run native database queries.](media/native-database-query/database-select-dialog.png)
 
 3. If this is the first time you're connecting to this server, you'll see a prompt to select the authentication mode to connect to the database. Select an appropriate authentication mode, and continue.
 
@@ -45,14 +45,17 @@ The following Power Query connectors support native database queries.
 
 | Connector | Type of native database query
 | --- | --- |
+| Amazon Redshift | SQL statement |
 | Azure Analysis Services database | MDX or DAX query |
 | Azure Database for PostgreSQL | SQL statement |
 | Azure Cosmos DB | SQL statement |
-| Azure SQL Data Warehouse | SQL statement |
+| Azure Synapse Analytics | SQL statement |
 | Azure SQL database | SQL statement |
 | DataWorld.Dataset | dwSQL |
+| Dataverse | SQL statement |
 | Essbase | MDX statement |
 | FHIR | FHIR Search |
+| Google BigQuery | SQL statement |
 | IBM Db2 database | SQL statement |
 | IBM Informix database (Beta) | SQL statement |
 | MySQL database | SQL statement |
@@ -61,6 +64,7 @@ The following Power Query connectors support native database queries.
 | Oracle database | SQL statement |
 | PostgreSQL | SQL statement |
 | SAP HANA database | SQL statement |
+| Snowflake | SQL statement |
 | SQL Server Analysis Services database | MDX or DAX query |
 | SQL Server database | SQL statement |
 | TIBCO(R) Data Virtualization (Beta) | SQL statement |
@@ -73,17 +77,17 @@ Before using native database query, you should be aware of the limitations and i
 
 ### Query folding
 
-Query folding while using a native database query is limited to the PostgreSQL connector only. No other connectors support query folding if you use a native database query. Also, for folding to work in the PostgreSQL connector, the native database query you enter has to work as a subquery.
+Query folding while using a native database query is limited to only a certain number of Power Query connectors. For more information, go to [Query folding on native queries]( /power-query/native-query-folding).
 
 ### Native database query security
 
 Sometimes, when you attempt to use a query created by another user or through the Advanced Editor or formula bar&mdash;essentially any other path outside of the connector dialogs where the native query input box is shown&mdash;you may get a message that says:
 
-![Native database query message](media/native-database-query/native-permission.png)
+![Native database query message.](media/native-database-query/native-permission.png)
 
 If you see this message, select **Edit Permission**. This selection will open the **Native Database Query** dialog box. You'll be given an opportunity to either run the native database query, or cancel the query.
 
-![Native database query approval](media/native-database-query/approve-query.png)
+![Native database query approval.](media/native-database-query/approve-query.png)
 
 By default, if you run a native database query outside of the connector dialogs, you'll be prompted each time you run a different query text to ensure that the query text that will be executed is approved by you.
 
@@ -114,4 +118,4 @@ You can also revoke the approval of any native database queries that you've prev
 
 3. In the **Edit permissions** dialog box, under **Native Database Queries**, select **Revoke Approvals**.
 
-   ![Revoke native database query approval](media/native-database-query/revoke-native-approval.png)
+   ![Revoke native database query approval.](media/native-database-query/revoke-native-approval.png)

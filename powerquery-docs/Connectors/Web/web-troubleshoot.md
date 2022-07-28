@@ -2,9 +2,9 @@
 title: Troubleshooting the Power Query Web connector
 description: Provides troubleshooting tips for errors that might occur when using the Power Query Web connector to connect to a web site.
 author: dougklopfenstein
-ms.service: powerquery
+
 ms.topic: conceptual
-ms.date: 12/2/2020
+ms.date: 04/28/2021
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -13,7 +13,7 @@ LocalizationGroup: reference
 
 ## Connecting to Microsoft Graph
 
-Connecting to [Microsoft Graph](https://docs.microsoft.com/graph/overview) REST [APIs](https://graph.microsoft.com) from Power Query isn't recommended or supported. See this [article](../../connecting-to-graph.md) for more information.
+Connecting to [Microsoft Graph](/graph/overview) REST [APIs](https://graph.microsoft.com) from Power Query isn't recommended or supported. See this [article](../../connecting-to-graph.md) for more information.
 
 ## Using a gateway with the Web connector
 
@@ -29,7 +29,7 @@ We've strengthened the security of web connections to protect your data. However
 2. Under the **File** tab, select **Options and settings** > **Options**.
 3. In **Options**, under **Global** > **Security**, uncheck **Enable certificate revocation check**.
 
-   ![Image with the Enable certificate revocation check box selected](../../images/web-certificate-revocation.png)
+   ![Image with the Enable certificate revocation check box selected.](../../images/web-certificate-revocation.png)
 
 4. Select **OK**.
 5. Restart Power BI Desktop.
@@ -93,6 +93,24 @@ let
 in
   Navigation
 ```
+
+## Authenticating to arbitrary services
+
+Some services support the ability for the Web connector to authenticate with OAuth/AAD authentication out of the box. However, this won't work in most cases.
+
+When attempting to authenticate, if you see the following error:
+
+“We were unable to connect because this credential type isn’t supported for this resource. Please choose another credential type.”
+
+   ![Error from connecting to an endpoint that doesn't support OAuth with the web connector.](../../images/credential-type-not-supported.png)
+
+Please contact the service owner. They will either need to change the authentication configuration or build a custom connector.
+
+## Web connector uses HTTP 1.1 to communicate
+
+The Power Query Web connector communicates with a data source using HTTP 1.1. If your data source is expecting to communicate using HTTP 1.0, you might receive an error, such as `500 Internal Server Error`.
+
+It's not possible to switch Power Query to use HTTP 1.0. Power Query always sends an `Expect:100-continue` when there's a body to avoid passing a possibly large payload when the initial call itself might fail (for example, due to a lack of permissions). Currently, this behavior can't be changed.
 
 ### See also
 

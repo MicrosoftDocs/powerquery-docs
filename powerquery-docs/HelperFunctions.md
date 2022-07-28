@@ -3,10 +3,10 @@ title: Helper functions for M extensions for Power Query connectors
 description: Use helper functions for Power Query connectors
 author: cpopell
 
-ms.service: powerquery
+
 ms.topic: conceptual
-ms.date: 12/12/2019
-ms.author: gepopell
+ms.date: 2/28/2022
+ms.author: dougklo
 
 LocalizationGroup: reference
 ---
@@ -171,7 +171,10 @@ Table.GenerateByPage = (getNextPage as function) as table =>
         // otherwise set the table type based on the columns of the first page
         if (firstRow = null) then
             Table.FromRows({})
-        else        
+	// check for empty first table
+        else if (Table.IsEmpty(firstRow[Column1])) then
+            firstRow[Column1]
+        else
             Value.ReplaceType(
                 Table.ExpandTableColumn(tableOfPages, "Column1", Table.ColumnNames(firstRow[Column1])),
                 Value.Type(firstRow[Column1])

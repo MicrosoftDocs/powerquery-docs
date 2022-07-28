@@ -1,37 +1,46 @@
 ---
-title: Open a Ticket when a Dataflow Refresh Fails
+title: Open a ticket when a dataflow refresh fails
 description: How to use the dataflows connector in Power Automate to open a ticket when a dataflow refresh fails
 author: miquelladeboer
 
-ms.service: powerquery
+
 ms.reviewer: kvivek
 ms.topic: conceptual
-ms.date: 12/15/2020
+ms.date: 11/16/2021
 ms.author: mideboer
 ---
-# Open a Ticket when a Dataflow Refresh Fails
 
-## Introduction
+# Open a ticket when a dataflow refresh fails
 
-When your dataflow refresh completes or has been taking longer than expected, you may want your support team to investigate. With this tutorial, you can automatically open a support ticket, create a message in a queue or Service Bus or add an item to Azure DevOps to notify your support team.
+When your dataflow refresh completes or has been taking longer than expected, you might want your support team to investigate. With this tutorial, you can automatically open a support ticket, create a message in a queue or Service Bus, or add an item to Azure DevOps to notify your support team.
 
-## Automatically Create a Queue in Azure Service Bus
+In this tutorial, we make use of Azure Service Bus. For instructions on how to set up an Azure Service Bus and create a queue, go to [Use Azure portal to create a Service Bus namespace and a queue](/azure/service-bus-messaging/service-bus-quickstart-portal).
 
-In this template, we make use of Azure Service Bus. To set up an Azure Service Bus and create a queue, see these [instructions](/azure/service-bus-messaging/service-bus-quickstart-portal#create-a-namespace-in-the-azure-portal).
+To automatically create a queue in Azure Service Bus:
 
-* Navigate to [Power Automate Portal](https://flow.microsoft.com)
+1. Navigate to [Power Automate](https://flow.microsoft.com).
+2. Select **Create** > **Automated cloud flow**.
+3. Enter a flow name, and then search for the "When a dataflow refresh completes" connector. Select this connector from the list, and then select **Create**.
+4. Customize the connector. Enter the following information on your dataflow:
 
-* Search for the template "When a dataflow refresh fails, add a new message to the queue". If you encounter difficulty, see these [instructions](/power-automate/get-started-logic-template).
+   * **Group Type**: Select *Environment* when connecting to Power Apps and *Workspace* when connecting to Power BI.
+   * **Group**: Select the Power Apps environment or the Power BI workspace your dataflow is in.
+   * **Dataflow**: Select your dataflow by name.
 
-![example of service bus](media/servicebuscondition.PNG)
+5. Select **New step** to add an action to your flow.
+6. Search for the **Condition** connector, and then select it.
+7. Customize the **Condition** connector. Enter the following information:
 
-* Customize the flow. Actions that require input from you will automatically be expanded.
+   1. In the first cell, add **Refresh Status** from the dataflow connector.
+   2. Leave the second cell as **is equal to**.
+   3. In the third cell, enter **False**.
 
-   The **Dataflow Refresh** trigger is expanded because you need to enter information on your dataflow:
-    * **Group Type**: Select *Environment* when connecting to Power Apps and *Workspace* when connecting to Power BI.
-    * **Group**: Select the Power Apps environment or the Power BI workspace your dataflow is in.
-    * **Dataflow**: Select your dataflow by name.
+8. In the **If Yes** section, select **Add an action**.
+9. Search for the "Send message" connector from Service Bus, and then select it.
 
-* After the conditions, you can specify what happens after success or failure of the dataflow. In this template, in both cases an email is sent with the status of the dataflow refresh. You can also modify the flow or message content. 
+   [![Image of the full flow diagram with the Service Bus send message connector opened.](media/servicebuscondition.PNG)](media/servicebuscondition.PNG#lightbox)
 
-![example of complete flow in service bus](media/ifyesservice.PNG)
+10. Enter a **Connection name** for this message. In **Connection string**, enter the connection string that was generated when you created the Service Bus namespace. Then select **Create**.
+11. Add dataflow information to the content of your message by selecting the field next to **Content**, and then select the dynamic content you want to use from **Dynamic content**.
+
+    [![Image of the Send message connector with the Content field filled in with content from the dyanamic content dialog box.](media/ifyesservice.PNG)](media/ifyesservice.PNG#lightbox)

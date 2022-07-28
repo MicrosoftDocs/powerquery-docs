@@ -3,31 +3,31 @@ title: Power Query Salesforce Reports connector.
 description: Includes basic information, prerequisites, and information on how to connect to your data, along with a list of known issues and limitations.
 author: dougklopfenstein
 
-ms.service: powerquery
+
 ms.topic: conceptual
-ms.date: 12/9/2020
+ms.date: 10/27/2021
 ms.author: bezhan
 
 LocalizationGroup: reference
 ---
 
 # Salesforce Reports
- 
+
 ## Summary
 
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products: Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
-| Authentication Types Supported: Salesforce account |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Authentication Types Supported | Salesforce account |
 | | |
 
 >[!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 >[!Warning]
-> By default, Salesforce does not support Internet Explorer 11, which is used as part of the authentication experience to online services in Power Query Desktop. Please opt-in for [extended support for accessing Lightning Experience Using Microsoft Internet Explorer 11](https://help.salesforce.com/articleView?id=000333934&type=1&mode=1). You may also want to review Salesforce documentation on [configuring Internet Explorer](https://developer.salesforce.com/docs/atlas.en-us.salesforce_supported_browsers_cheatsheet.meta/salesforce_supported_browsers_cheatsheet/getstart_browser_ie.htm). At this time, users will be impaired from authenticating, but stored credentials should continue to work until their existing authentication tokens expire. To resolve this, review "Enabling Microsoft Edge (Chromium) for OAuth Authentication in Power BI Desktop" at the bottom of this document.
- 
+> By default, Salesforce does not support Internet Explorer 11, which is used as part of the authentication experience to online services in Power Query Desktop. Please opt-in for [extended support for accessing Lightning Experience Using Microsoft Internet Explorer 11](https://help.salesforce.com/articleView?id=000333934&type=1&mode=1). You may also want to review Salesforce documentation on [configuring Internet Explorer](https://developer.salesforce.com/docs/atlas.en-us.salesforce_supported_browsers_cheatsheet.meta/salesforce_supported_browsers_cheatsheet/getstart_browser_ie.htm). At this time, users will be impaired from authenticating, but stored credentials should continue to work until their existing authentication tokens expire. To resolve this, go to [Enabling Microsoft Edge (Chromium) for OAuth Authentication in Power BI Desktop](../oauth-edge-chromium.md).
+
 ## Prerequisites
 
 To use the Salesforce Reports connector, you must have a Salesforce account username and password.
@@ -37,9 +37,9 @@ Also, Salesforce API access should be enabled. To verify access settings, go to 
 ## Capabilities Supported
 
 * Production
-* Custom<br/>
-   * Custom domains
-   * CNAME record redirects
+* Custom
+  * Custom domains
+  * CNAME record redirects
 
 ## Connect to Salesforce Reports from Power Query Desktop
 
@@ -47,17 +47,17 @@ To connect to Salesforce Reports data:
 
 1. Select **Salesforce Reports** from the product-specific data connector list, and then select **Connect**.
 
-2. In **Salesforce Reports**, choose the **Production** URL if you use the Salesforce production URL (https://www.salesforce.com) to sign in.
+2. In **Salesforce Reports**, choose the **Production** URL if you use the Salesforce production URL (`https://www.salesforce.com`) to sign in.
 
-   ![Get data from the production URL](media/salesforce-reports/sf-reports-url.png)
+   ![Get data from the production URL.](media/salesforce-reports/sf-reports-url.png)
 
-   You can also select **Custom** and enter a custom URL to sign in. This custom URL might be a custom domain you've created within Salesforce, such as https://contoso.salesforce.com. You can also use the custom URL selection if you're using your own CNAME record that redirects to Salesforce.
+   You can also select **Custom** and enter a custom URL to sign in. This custom URL might be a custom domain you've created within Salesforce, such as `https://contoso.salesforce.com`. You can also use the custom URL selection if you're using your own CNAME record that redirects to Salesforce.
 
    Once you've selected the URL, select **OK** to continue.
 
 3. Select **Sign in** to sign in to your Salesforce account.
 
-   ![Sign in to your Salesforce account](media/salesforce-reports/sf-reports-sign-in.png)
+   ![Sign in to your Salesforce account.](media/salesforce-reports/sf-reports-sign-in.png)
 
    Once you've successfully signed in, select **Connect**.
 
@@ -71,14 +71,14 @@ To connect to Salesforce Reports data:
 
 1. Select **Salesforce reports** from the product-specific data connector list, and then select **Connect**.
 
-2. In **Salesforce reports**, choose the URL you want to use to connect. Select the **Production** URL if you use the Salesforce production URL (https://www.salesforce.com) to sign in.
+2. In **Salesforce reports**, choose the URL you want to use to connect. Select the **Production** URL if you use the Salesforce production URL (`https://www.salesforce.com`) to sign in.
 
-   ![Add Salesforce Reports connection information](media/salesforce-reports/sf-reports-url-online.png)
+   ![Add Salesforce Reports connection information.](media/salesforce-reports/sf-reports-url-online.png)
 
    >[!NOTE]
-   >Currently, you may need to select the **Custom** URL, enter **https://www.salesforce.com** in the text box, and then select **Production** to connect to your data.
+   >Currently, you may need to select the **Custom** URL, enter **`https://www.salesforce.com`** in the text box, and then select **Production** to connect to your data.
 
-   You can also select Custom and enter a custom URL to sign in. This custom URL might be a custom domain you've created within Salesforce, such as https://contoso.salesforce.com. You can also use the custom URL selection if you're using your own CNAME record that redirects to Salesforce.
+   You can also select Custom and enter a custom URL to sign in. This custom URL might be a custom domain you've created within Salesforce, such as `https://contoso.salesforce.com`. You can also use the custom URL selection if you're using your own CNAME record that redirects to Salesforce.
 
    Also, you can select Include relationship columns. This selection alters the query by including columns that might have foreign-key relationships to other tables. If this box is unchecked, you won’t see those columns.
 
@@ -102,14 +102,4 @@ To connect to Salesforce Reports data:
 
 * Lightning URLs aren't supported.
 
-For more information about Salesforce internal API limits, see [Salesforce Developer Limits and Allocations Quick Reference](https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm#!).
-
-## Troubleshooting
-
-### Enabling Microsoft Edge (Chromium) for OAuth Authentication in Power BI Desktop
-
-Starting in December 2020 Power BI Desktop:
-* Install the new Microsoft Edge (Chromium) browser, (at least beta) from https://www.microsoftedgeinsider.com/download.
-* In your Environment Variables, set the System variable `PQ_EnableEdgeChromiumOAuth` to true . Once that is set it will use Edge Chromium for only QuickBooksOnline. For this release, only QuickBooksOnline is enabled by default.
-* To set it for Salesforce, in System Environment Variables set `PQ_ExtendEdgeChromiumOAuthAllowList` to Salesforce
-
+For more information about Salesforce internal API limits, go to [Salesforce Developer Limits and Allocations Quick Reference](https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm#!).

@@ -3,10 +3,10 @@ title: Handling schema for Power Query connectors
 description: Manage schema for Power Query connectors
 author: cpopell
 
-ms.service: powerquery
+
 ms.topic: conceptual
-ms.date: 12/12/2019
-ms.author: gepopell
+ms.date: 2/28/2022
+ms.author: dougklo
 
 LocalizationGroup: reference
 ---
@@ -39,7 +39,7 @@ in
 
 This table is the result:
 
-![Table of TripPin Airline data](images/staticschematable-initial.png)
+![Table of TripPin Airline data.](images/staticschematable-initial.png)
 
 You can use the handy [`Table.Schema`](/powerquery-m/table-schema) function to check the data type of the columns:
 
@@ -52,7 +52,7 @@ in
     Table.Schema(asTable)
 ```
 
-![Result of Table.Schema applied to TripPin Airline data](images/staticschematable-schema.png)
+![Result of Table.Schema applied to TripPin Airline data.](images/staticschematable-schema.png)
 
 Both AirlineCode and Name are of `any` type. `Table.Schema` returns a lot of metadata about the columns in a table, including names, positions, type information, and many advanced properties such as Precision, Scale, and MaxLength. For now you should only concern yourself with the ascribed type (`TypeName`), primitive type (`Kind`), and whether the column value might be null (`IsNullable`).
 
@@ -107,7 +107,7 @@ SchemaTable = #table({"Entity", "SchemaTable"}, {
         {"People", People}
     })
 ```
-![Table of schemas](images/staticschematable-schematable.png)
+![Table of schemas.](images/staticschematable-schematable.png)
 
 ### The SchemaTransformTable Helper Function
 The `SchemaTransformTable` [helper function](HelperFunctions.md#schematransformtable) described below will be used to enforce schemas on your data. It takes the following parameters:

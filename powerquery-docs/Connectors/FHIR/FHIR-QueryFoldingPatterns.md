@@ -1,15 +1,15 @@
 ---
-title: FHIR Power Query Folding Patterns
+title: FHIR Power Query folding patterns
 description: Power Query connector for FHIR query folding patterns
 author: hansenms
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 01/08/2020
 ms.author: mihansen
 LocalizationGroup: reference
 ---
 
-# FHIR Query Folding Patterns
+# FHIR query folding patterns
 
 This article describes Power Query patterns that will allow effective query folding in FHIR. It assumes that you are familiar with with using the [Power Query connector for FHIR](FHIR.md) and understand the basic motivation and principles for [Power Query folding in FHIR](FHIR-QueryFolding.md).
 

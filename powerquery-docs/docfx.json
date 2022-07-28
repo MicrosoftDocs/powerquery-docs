@@ -42,11 +42,16 @@
       "extendBreadcrumb": true,
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/powerquery-docs",
-      "feedback_product_url": "https://powerquery.microsoft.com/en-us/resources/",
+      "feedback_product_url": "https://docs.microsoft.com/power-query/feedback",
       "searchScope": ["Power Query"],
-      "recommendations": true 
+      "recommendations": true,
+      "titleSuffix": "Power Query" 
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "ms.service": {
+        "**.*": "powerquery"
+      }
+    },
     "template": [],
     "dest": "powerquery-docs",
     "markdownEngineName": "markdig"

@@ -3,10 +3,10 @@ title: Handling transformations with Web.Contents for Power Query connectors
 description: Manage transformations with Web.Contents for Power Query connectors
 author: cpopell
 
-ms.service: powerquery
+
 ms.topic: conceptual
-ms.date: 12/11/2019
-ms.author: gepopell
+ms.date: 2/28/2022
+ms.author: dougklo
 
 LocalizationGroup: reference
 ---
@@ -36,7 +36,7 @@ The transformations in this example are:
 
 At the end of the day you're left with data in a simple tabular format that Power BI can consume and easily render:
 
-![Data in tabular form](images/trippin2Airlines.png)
+![Data in tabular form.](images/trippin2Airlines.png)
 
 It's important to note that a sequence of static transformations of this specificity are only applicable to a *single* endpoint. In the example above, this sequence of transformations will only work if `"AirlineCode"` and `"Name"` exist in the REST endpoint response, since they are hard-coded into the M code. Thus, this sequence of transformations may not work if you try to hit the `/Event` endpoint. 
 

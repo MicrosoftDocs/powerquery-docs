@@ -4,10 +4,10 @@ description: Adding navigation tables to the TripPin REST connector.
 author: cpopell
 manager: kfile
 
-ms.service: powerquery
+
 ms.topic: tutorial
 ms.date: 5/15/2020
-ms.author: gepopell
+ms.author: dougklo
 
 LocalizationGroup: reference
 ---
@@ -91,7 +91,7 @@ You can test your `TripPin.Contents` function using your TripPin.query.pq file. 
 TripPin.Contents("https://services.odata.org/v4/TripPinService/")
 ```
 
-![TripPin Table](../../../images/trippin3Table.png)
+![TripPin Table.](../../../images/trippin3Table.png)
 
 ## Creating a Navigation Table
 You'll use the handy [Table.ToNavigationTable](../../../HandlingNavigationTables.md#tabletonavigationtable) function to format your static table into something that Power Query will recognize as a Navigation Table. 
@@ -135,18 +135,18 @@ TripPinNavTable = (url as text) as table =>
         navTable;
 ```
 Running your test query again will give you a similar result as last time&mdash;with a few more columns added.
-![TripPin Table2](../../../images/trippin3Table2.png)
+![TripPin Table2.](../../../images/trippin3Table2.png)
 
 > [!Note]
 > You will not see the **Navigator** window appear in Visual Studio. The **M Query Output** window always displays the underlying table. 
 
 If you copy your extension over to your Power BI Desktop custom connector and invoke the new function from the **Get Data** dialog, you'll see your navigator appear.
 
-![TripPin Navigator](../../../images/trippin3Nav.png)
+![TripPin Navigator.](../../../images/trippin3Nav.png)
 
 If you right click on the root of the navigation tree and select **Edit**, you'll see the same table as you did within Visual Studio.
 
-![TripPin Query](../../../images/trippin3Query.png)
+![TripPin Query.](../../../images/trippin3Query.png)
 
 ## Conclusion
 In this tutorial, you added a [Navigation Table](../../../HandlingNavigationTables.md) to your extension. Navigation Tables are a key feature that make connectors easier to use. In this example your navigation table only has a single level, but the Power Query UI supports displaying navigation tables that have multiple dimensions (even when they are ragged). 

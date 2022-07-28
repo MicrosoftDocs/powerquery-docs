@@ -3,10 +3,10 @@ title: Using a resource path for Power Query connectors
 description: Use a resource path for Power Query connectors
 author: cpopell
 
-ms.service: powerquery
+
 ms.topic: conceptual
-ms.date: 12/11/2019
-ms.author: gepopell
+ms.date: 2/28/2022
+ms.author: dougklo
 
 LocalizationGroup: reference
 ---
@@ -21,7 +21,7 @@ The *Path* value is derived from the *required parameters* of your data source f
 
 You can see an example of how credentials are stored in the **Data source settings** dialog in Power BI Desktop. In this dialog, the Kind is represented by an icon, and the Path value is displayed as text.
 
-![Data source settings dialog](images/datasourcesettingscreds.png)
+![Data source settings dialog.](images/datasourcesettingscreds.png)
 
 >[Note]
 > If you change your data source function's required parameters during development, previously stored credentials will no longer work (because the path values no longer match). You should delete any stored credentials any time you change your data source function parameters. If incompatible credentials are found, you may receive an error at runtime.
@@ -41,14 +41,14 @@ HelloWorldWithDocs.Contents = (message as text, optional count as number) as tab
 The function has a single required parameter (`message`) of type `text`, and will be used to calculate the data source path. The optional parameter (`count`) will be ignored. The path would be displayed as follows:
 
 ### Credential prompt:
-![Credential prompt with path](images/credentialPromptWithPath.png)
+![Credential prompt with path.](images/credentialPromptWithPath.png)
 
 ### Data source settings UI:
-![Data source settings UI](images/dataSourceSettingsJson.png)
+![Data source settings UI.](images/dataSourceSettingsJson.png)
 
 When a Label value is defined, the data source path value won't be shown:
 
-![Data source settings with label](images/dataSourceSettingsLabel.png)
+![Data source settings with label.](images/dataSourceSettingsLabel.png)
 
 >[Note]
 > We currently recommend that you *do not* include a Label for your data source if your function has required parameters, as users won't be able to distinguish between the different credentials they've entered. We are hoping to improve this in the future (that is, allowing data connectors to display their own custom data source paths).
@@ -57,7 +57,7 @@ When a Label value is defined, the data source path value won't be shown:
 
 Because data sources with a Uri-based identifier are so common, there's special handling in the Power Query UI when dealing with Uri-based data source paths. When a Uri-based data source is encountered, the credential dialog provides a dropdown allowing the user to select the base path, rather than the full path (and all paths in-between).
 
-![Setting path that credentials apply to](images/credentialPromptWithUrl.png)
+![Setting path that credentials apply to.](images/credentialPromptWithUrl.png)
 
 As `Uri.Type` is an *ascribed type* rather than a *primitive type* in the M language, you'll need to use the [Value.ReplaceType] function to indicate that your text parameter should be treated as a Uri.
 
@@ -65,7 +65,7 @@ As `Uri.Type` is an *ascribed type* rather than a *primitive type* in the M lang
 shared GithubSample.Contents = Value.ReplaceType(Github.Contents, type function (url as Uri.type) as any);
 ```
 
-[Data Source Kind]: https://github.com/Microsoft/DataConnectors/blob/master/docs/m-extensions.md#data-source-kind
+[Data Source Kind]: /power-query/handlingdataaccess#data-source-kind
 
 [HelloWorldWithDocs sample]: https://github.com/Microsoft/DataConnectors/blob/master/samples/HelloWorldWithDocs
 

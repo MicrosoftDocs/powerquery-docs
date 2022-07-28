@@ -3,10 +3,10 @@ title: Installing the Power Query SDK
 description: Installation and explanation of the Power Query SDK and how to use Custom Connectors
 author: cpopell
 
-ms.service: powerquery
+
 ms.topic: quickstart
-ms.date: 11/26/2019
-ms.author: gepopell
+ms.date: 2/28/2022
+ms.author: dougklo
 
 LocalizationGroup: reference
 ---
@@ -26,12 +26,11 @@ LocalizationGroup: reference
 6. Check the option **(Not Recommended) Allow any extension to load without validation or warning** in Power BI Desktop (under *File | Options and settings | Options | Security | Data Extensions*).
 7. Restart Power BI Desktop.
 
-![Preview Feature](images/newProject.png)
+![Preview Feature.](images/newProject.png)
 
 ## Distribution of Data Connectors
 
 Power BI Desktop users can download extension files and place them in a known directory (steps described above). Power BI Desktop will automatically load the extensions on restart.
-_We are hard at work on Office Store integration to make it easy for users to discover and install data connectors you build. During this preview phase, developers interested in distributing their connectors for use with Power BI can contact us at DataConnectors (at) microsoft.com._
 
 ## Additional links and resources
 * [M Library Functions](/powerquery-m/power-query-m-function-reference)
@@ -48,8 +47,8 @@ Installing the Power Query SDK for Visual Studio will create a new Data Connecto
 
 This creates a new project containing the following files:
 
-* Connector definition file (<connectorName>.pq)
-* A query test file (<connectorName>.query.pq)
+* Connector definition file (\<connectorName>.pq)
+* A query test file (\<connectorName>.query.pq)
 * A string resource file (resources.resx)
 * PNG files of various sizes used to create icons
 

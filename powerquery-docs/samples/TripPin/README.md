@@ -2,12 +2,11 @@
 title: TripPin tutorial sequence
 description: Overview and listing of the TripPin connector development tutorial sequence.
 author: cpopell
-manager: kfile
 
-ms.service: powerquery
 ms.topic: tutorial
-ms.date: 12/2/2019
-ms.author: gepopell
+ms.date: 7/23/2021
+ms.author: dougklo
+ms.custom:
 
 LocalizationGroup: reference
 ---
@@ -22,16 +21,19 @@ This tutorial uses a public [OData](https://www.odata.org/documentation/) servic
 
 The following applications will be used throughout this tutorial:
 
-* [Power BI Desktop](https://www.microsoft.com/en-us/download/details.aspx?id=45331), May 2017 release or later
+* [Power BI Desktop](https://www.microsoft.com/download/details.aspx?id=45331), May 2017 release or later
 * [Power Query SDK for Visual Studio](https://aka.ms/powerquerysdk)
 * [Fiddler](https://www.telerik.com/fiddler)&mdash;Optional, but recommended for viewing and debugging requests to your REST service
 
 It's strongly suggested that you review:
 * [Installing the PowerQuery SDK](../../InstallingSDK.md)
-* [Starting to Develop Custom Connectors](../../StartingToDevelopCustomConnectors.md)
+* [Start developing custom connectors](../../StartingToDevelopCustomConnectors.md)
 * [Creating your first connector: Hello World](../../CreatingFirstConnector.md)
 * [Handling Data Access](../../HandlingDataAccess.md)
 * [Handling Authentication](../../HandlingAuthentication.md)
+
+>[!Note]
+>You can also start trace logging of your work at any time by enabling diagnostics, which is described later on in this tutorial. More information: [Enabling diagnostics](8-Diagnostics/README.md#enabling-diagnostics)
 
 ## Parts
 

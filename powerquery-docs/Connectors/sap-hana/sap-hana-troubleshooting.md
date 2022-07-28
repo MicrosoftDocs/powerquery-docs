@@ -3,7 +3,7 @@ title: SAP HANA database connector troubleshooting
 description: Provides troubleshooting tips for errors that might occur when using Power Query to connect to an SAP HANA database.
 author: dougklopfenstein
 
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 9/01/2020
 ms.author: bezhan
@@ -99,7 +99,7 @@ This message might be because of:
 
    *  Response from SAP:
 
-      ![SAP response to known issue](sap-hana-issue.png)
+      ![SAP response to known issue.](sap-hana-issue.png)
 
    Unfortunately, this is an SAP issue so you'll need to wait for a fix from SAP.
 

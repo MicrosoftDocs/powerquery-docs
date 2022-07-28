@@ -2,7 +2,7 @@
 title: FHIR Power Query Relationships
 description: Power Query connector for FHIR table relationships
 author: hansenms
-ms.service: powerquery
+
 ms.topic: conceptual
 ms.date: 01/08/2020
 ms.author: mihansen
@@ -11,7 +11,7 @@ LocalizationGroup: reference
 
 # FHIR Relationships
 
-This article describes how to establish [relationships](https://docs.microsoft.com/power-bi/desktop-create-and-manage-relationships) between tables that have been imported using the Power Query connector for FHIR.
+This article describes how to establish [relationships](/power-bi/desktop-create-and-manage-relationships) between tables that have been imported using the Power Query connector for FHIR.
 
 ## Introduction
 
@@ -39,35 +39,35 @@ In this section, we'll show an example of establishing a relationship between th
 
 1. When importing data, select the **Patient** and **Observation** tables:
 
-    ![FHIR Navigation Two Resources](FHIR-Navigate-TwoResources.png)
+    ![FHIR Navigation Two Resources.](FHIR-Navigate-TwoResources.png)
 
     Then select **Transform Data**.
 
 1. Expand the **subject** column on `Observation` to reveal `subject.reference`:
 
-    ![Expand subject reference](FHIR-ExpandSubject.png)
+    ![Expand subject reference.](FHIR-ExpandSubject.png)
 
     After expanding, you should see the list of subject references:
 
-    ![Subject references expanded](FHIR-ExpandedSubjectReference.png)
+    ![Subject references expanded.](FHIR-ExpandedSubjectReference.png)
 
 1. Make any other modifications you need to the query and save the modified query.
 
 1. Select **Manage Relationships** in the Power BI client:
 
-    ![Manage relationships](FHIR-ManageRelationships.png)
+    ![Manage relationships.](FHIR-ManageRelationships.png)
 
 1. Establish the relationship. In this simple example, Power BI will likely have detected the relationship automatically:
 
-    ![Autodetected relationship](FHIR-RelationshipEstablished.png)
+    ![Autodetected relationship.](FHIR-RelationshipEstablished.png)
 
     If not, you can add it manually:
 
-    ![Manually add relationship](FHIR-NewRelationship.png)
+    ![Manually add relationship.](FHIR-NewRelationship.png)
 
     You can edit the details of the relationship:
 
-    ![Edit relationship](FHIR-EditRelationship.png)
+    ![Edit relationship.](FHIR-EditRelationship.png)
 
 
 ## Summary

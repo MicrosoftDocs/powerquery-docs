@@ -3,9 +3,9 @@ title: What licenses do you need to use dataflows
 description: What licenses do you need to use dataflows
 author: radacad
 
-ms.service: powerquery
+
 ms.topic: conceptual
-ms.date: 12/3/2020
+ms.date: 03/02/2022
 ms.author: bezhan
 
 LocalizationGroup: Data from files
@@ -13,7 +13,7 @@ LocalizationGroup: Data from files
 
 # What licenses do you need to use dataflows?
 
-[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
+
 
 Dataflows can be created in different portals, such as Power BI and the Power Apps, and can be of either analytical or standard type. In addition, some dataflow features are only available as Premium features. Considering the wide range of products that can use dataflows, and feature availability in each product or dataflow type, it's important to know what licensing options you need to use dataflows.
 
@@ -42,20 +42,20 @@ The following table contains a list of features and the license needed for them 
 | Feature                                                      | Power BI                           | Power Apps                                                   |
 | ------------------------------------------------------------ | ---------------------------------- | ------------------------------------------------------------ |
 | Store data in Dataverse tables (standard dataflow) | N/A                                | Per app plan<br />Per user plan                              |
-| Store data in Azure Data Lake Storage (analytical dataflow)               | Power BI Pro<br />Power BI Premium | N/A                                                          |
+| Store data in Azure Data Lake Storage (analytical dataflow)               | Power BI Pro<br />Power BI Premium | Yes, using analytical dataflows                              |
 | Store data in customer provided Azure Data Lake Storage (analytical dataflow; bring your own Azure Data Lake Storage) | Power BI Pro<br />Power BI Premium | Per app plan<br />Per user plan                              |
 | The enhanced compute engine (running on Power BI Premium capacity / parallel execution of transforms) | Power BI Premium                   | N/A                                                          |
 | DirectQuery connection to dataflow                           | Power BI Premium                   | N/A                                                          |
 | AI capabilities in Power BI                                  | Power BI Premium                   | N/A                                                          |
-| Linked entities                                              | Power BI Premium                   | Analytical dataflows only |
-| Computed entities (in-storage transformations using M)       | Power BI premium                   | Analytical dataflows only |
+| Linked entities                                              | Power BI Premium                   | Yes, using analytical dataflows |
+| Computed entities (in-storage transformations using M)       | Power BI premium                   | Yes, using analytical dataflows |
 | Schedule refresh                                             | Yes                                   | Yes                                                             |
 | Dataflow authoring with Power Query Online                   | Yes                                | Yes                                                          |
 | Dataflow management                                          | Power BI                     | Power Apps                                         |
 | New connectors                                               | Yes                                | Yes                                                          |
 | Standardized schema, built-in support for Common Data Model | Yes                                | Yes                                                          |
-| Dataflows data connector in Power BI Desktop                 | Yes                                | Analytical dataflows only   |
-| Dataflow incremental refresh                                 | Power BI Premium                   | Analytical dataflows only, requires Power Apps Plan2 |
+| Dataflows data connector in Power BI Desktop                 | Yes                                | Yes, using analytical dataflows   |
+| Dataflow incremental refresh                                 | Power BI Premium                   | Yes, using analytical dataflows with Per user Plan |
 | | | |
 
 ## Limitations on each license
@@ -70,7 +70,7 @@ The Power Apps per-app plan covers up to a 50-MB database capacity. The Power Ap
 
 ### Power BI Pro
 
-Power BI Pro gives you the ability to create analytical dataflows, but not use any of the premium features. With a Power BI Pro account, you can't use linked or computed entities, you can't use AI capabilities in Power BI, and you can't use DirectQuery to connect to the dataflow. The storage for your dataflows is limited to the space left under your Power BI Pro account, which is a subset of 10-GB storage for all Power BI content.
+Power BI Pro gives you the ability to create analytical dataflows, but not use any of the premium features. With a Power BI Pro account, you can't use linked or computed entities, you can't use AI capabilities in Power BI, and you can't use DirectQuery to connect to the dataflow. The storage for your dataflows is limited to the space left under your Power BI Pro account, which is a subset of 10-GB storage for all Power BI content. At this point in time, we don't report the current storage usage of dataflows in the [Power BI portal](/power-bi/admin/service-admin-manage-your-data-storage-in-power-bi). You'll be notified if you've almost reached the limit of the left over capacity.
 
 ### Power BI Premium
 

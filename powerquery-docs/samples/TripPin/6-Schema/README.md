@@ -4,10 +4,10 @@ description: Adding a schema with enforcement to your TripPin REST connector.
 author: cpopell
 manager: kfile
 
-ms.service: powerquery
+
 ms.topic: tutorial
 ms.date: 5/15/2020
-ms.author: gepopell
+ms.author: dougklo
 
 LocalizationGroup: reference
 ---
@@ -57,7 +57,7 @@ In the results you'll see four columns returned:
 * AirlineCode
 * Name
 
-![Airlines no schema](../../../images/trippin6AirlineNoSchema.png)
+![Airlines no schema.](../../../images/trippin6AirlineNoSchema.png)
 
 The "@odata.*" columns are part of OData protocol, and not something you'd want or need to show to the end users of your connector.
 `AirlineCode` and `Name` are the two columns you'll want to keep.
@@ -70,7 +70,7 @@ let
 in
     Table.Schema(data)
 ```
-![Airlines Table.Schema](../../../images/trippin6AirlineTableSchema.png)
+![Airlines Table.Schema.](../../../images/trippin6AirlineTableSchema.png)
 
 [Table.Schema](/powerquery-m/table-schema) returns a lot of metadata about the columns in a table, including names, positions, type information, and many advanced properties, such as Precision, Scale, and MaxLength.
 Future lessons will provide design patterns for setting these advanced properties, but for now you need only concern yourself with the ascribed type (`TypeName`), primitive type (`Kind`), and whether the column value might be null (`IsNullable`).
@@ -320,7 +320,7 @@ in
 
 You now see that your Airlines table only has the two columns you defined in its schema:
 
-![Airlines With Schema](../../../images/trippin6AirlineWithSchema.png)
+![Airlines With Schema.](../../../images/trippin6AirlineWithSchema.png)
 
 If you run the same code against the People table...
 
@@ -334,7 +334,7 @@ in
 
 You'll see that the ascribed type you used (`Int64.Type`) was also set correctly.
 
-![People With Schema](../../../images/trippin6PeopleWithSchema.png)
+![People With Schema.](../../../images/trippin6PeopleWithSchema.png)
 
 An important thing to note is that this implementation of `SchemaTransformTable` doesn't modify the types of `list` and `record` columns,
 but the `Emails` and `AddressInfo` columns are still typed as `list`. 
@@ -353,11 +353,11 @@ to display the right UI queues to the end user, and the inference calls can end 
 
 If you view the People table using the [TripPin connector from the previous lesson](../5-Paging/README.md), you'll see that all of the columns have a 'type any' icon (even the columns that contain lists):
 
-![People without Schema](../../../images/trippin6PQNoSchema.png)
+![People without Schema.](../../../images/trippin6PQNoSchema.png)
 
 Running the same query with the TripPin connector from this lesson, you'll now see that the type information is displayed correctly. 
 
-![People with Schema](../../../images/trippin6PQWithSchema.png)
+![People with Schema.](../../../images/trippin6PQWithSchema.png)
 
 ## Next steps
 

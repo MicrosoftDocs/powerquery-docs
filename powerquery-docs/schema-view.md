@@ -2,8 +2,8 @@
 title: "Using Schema view (Preview)"
 description: Schema view optimizes the experience when working on schema-related data operations
 author: JorgeGabuardiMS
-ms.author: jogabuar
-ms.service: powerquery
+ms.author: dougklo
+
 ms.reviewer: 
 ms.date: 09/25/2020
 ---
@@ -14,8 +14,10 @@ Schema view is designed to optimize your flow when working on schema level opera
 
 This article walks you through schema view and the capabilities it offers. 
 
-
 ![Schema view displays a list with your query's columns information including name, type, and a key decorator.](images/schema-view-overview.png)
+
+> [!NOTE]
+> The Schema view feature is available only for Power Query Online.
 
 ## Overview
 When working on data sets with many columns, simple tasks can become incredibly cumbersome because even finding the right column by horizontally scrolling and parsing through all the data is inefficient. Schema view displays your column information in a list that's easy to parse and interact with, making it easier than ever to work on your schema.
@@ -24,7 +26,7 @@ In addition to an optimized column management experience, another key benefit of
 
 You can turn on schema view by selecting **Schema view** in the **View** tab. When you're ready to work on your data again, you can select **Data view** to go back.
 
-![Schema view entry point in the View tab](images/schema-view-entry-point.png)
+![Schema view entry point in the View tab.](images/schema-view-entry-point.png)
 
 
 ## Reordering columns
@@ -35,4 +37,4 @@ One common task when working on your schema is reordering columns. In Schema Vie
 ## Applying transforms
 For more advanced changes to your schema, you can find the most used column-level transforms right at your fingertips directly in the list and in the Schema tools tab. Plus, you can also use transforms available in other tabs on the ribbon. 
 
-![Schema Tools is a contextual tab in the ribbon that's available when in Schema view with the most used column-level transforms](images/schema-tools.png)
+![Schema Tools is a contextual tab in the ribbon that's available when in Schema view with the most used column-level transforms.](images/schema-tools.png)
