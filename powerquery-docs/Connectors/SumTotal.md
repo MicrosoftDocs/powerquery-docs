@@ -21,7 +21,6 @@ LocalizationGroup: reference
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
 | Authentication types | SumTotal credentials using OAuth 2.0 |
-| Function Reference Documentation | &mdash; |
 
 ## Prerequisites
 
@@ -37,7 +36,7 @@ You must have a SumTotal hosted environment with standard permissions to access 
 
 ## Finding your SumTotal hosted URL
 
-Copy the SumTotal hosted root URL in full. This root URL is the unique URL specific to the customer. The URL will be in the format of **https://\<*yourcustomerdomain*>.sumtotal.host/**. Make sure not to copy the rest of the URL. Keep this URL somewhere handy so you can use it later.
+Copy the SumTotal hosted root URL in full. This root URL is the unique URL specific to the customer. The URL will be in the format of `https://<*yourcustomerdomain*>.sumtotal.host/`. Make sure not to copy the rest of the URL. Keep this URL somewhere handy so you can use it later.
 
 ## Connect to SumTotal BI from Power BI Desktop
 
@@ -74,4 +73,4 @@ For information about OData API performance and throttling limits for SumTotal c
 
 ### Table retrieval rate
 
-As a guideline, most default tables are retrieved at approximately 1000 rows per second using the SumTotal connector. If you require faster retrieval rates, consider using the **RowVersionId** filter parameter. You can pass this parameter directly to the environment hosted URL by appending it as a query string parameter. Full url example with **rowVersionId** parameter: `https://{host}.sumtotalystems.com/?rowVersionId=1234`.
+As a guideline, most default tables are retrieved at approximately 1000 rows per second using the SumTotal connector. If you require faster retrieval rates, consider using the **RowVersionId** filter parameter. You can pass this parameter directly to the environment hosted URL by appending it as a query string parameter. Full URL example with **rowVersionId** parameter: `https://{host}.sumtotalystems.com/?rowVersionId=1234`.
