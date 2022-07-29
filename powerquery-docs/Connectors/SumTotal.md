@@ -9,7 +9,7 @@ ms.author: bezhan
 LocalizationGroup: reference
 ---
 
-# SumTotal Power BI connector
+# SumTotal
 
 >[!Note]
 >The following connector article is provided by SumTotal, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the SumTotal website and use the support channels there.
@@ -19,7 +19,7 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Customer Insights (Dataflows) |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
 | Authentication types | SumTotal credentials using OAuth 2.0 |
 
 ## Prerequisites
@@ -30,13 +30,12 @@ You must have a SumTotal hosted environment with standard permissions to access 
 
 * Import
 * Query Multiple OData endpoints
-* Create rich and visual reporting using query data
 * Advanced
   * Optionally filter records by RowVersionId parameter to get incremental data
 
 ## Finding your SumTotal hosted URL
 
-Copy the SumTotal hosted root URL in full. This root URL is the unique URL specific to the customer. The URL will be in the format of `https://<*yourcustomerdomain*>.sumtotal.host/`. Make sure not to copy the rest of the URL. Keep this URL somewhere handy so you can use it later.
+Copy the SumTotal hosted root URL in full. This root URL is the unique URL specific to your instance. The URL will be in the format of `https://<*yourcustomerdomain*>.sumtotal.host/`. Make sure not to copy the rest of the URL. Keep this URL somewhere handy so you can use it later.
 
 ## Connect to SumTotal BI from Power BI Desktop
 
@@ -63,9 +62,9 @@ To connect to SumTotal from Power BI Desktop:
 >[!NOTE]
 >If this is the first time you're connecting to this site, select **Sign in** and input your credentials. Then select **Connect**.
 
-## Limitations and issues
+## Known issues and limitations
 
-This section describes any limitations or issues associated with the SumTotal connector.
+This section describes any issues or limitations associated with the SumTotal connector.
 
 ### SumTotal OData API performance and throttling limits
 
