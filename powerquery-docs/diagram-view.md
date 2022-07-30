@@ -2,8 +2,6 @@
 title: Diagram view
 description: Diagram view offers a visual way to prepare data in the Power Query editor. With this interface, you can easily create queries and visualize the data preparation process. Diagram view simplifies the experience of getting started with data wrangling. It speeds up the data preparation process and helps you quickly understand the dataflow, both the "big picture view" of how queries are related and the "detailed view" of the specific data preparation steps in a query.
 author: ptyx507
-
-ms.reviewer: 
 ms.date: 03/22/2022
 ms.author: dougklo
 ---

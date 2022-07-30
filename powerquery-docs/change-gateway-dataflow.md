@@ -2,7 +2,6 @@
 title: Change the gateway used in a dataflow project
 description: An article that describes how to change the data gateway in Power Query Online dataflow projects.
 author: ptyx507
-
 ms.date: 12/6/2021
 ms.author: dougklo
 ms.reviewer: dougklo

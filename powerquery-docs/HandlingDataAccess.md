@@ -2,12 +2,9 @@
 title: Handling Data Access
 description: How to use connectors to access data using M data source functions
 author: cpopell
-
-
 ms.topic: conceptual
 ms.date: 2/28/2022
 ms.author: dougklo
-
 LocalizationGroup: reference
 ---
 

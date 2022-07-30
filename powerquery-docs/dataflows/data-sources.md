@@ -2,10 +2,6 @@
 title: Connect to data sources for dataflows
 description: Learn how to connect to data sources for dataflows.
 author: bensack
-manager: kfile
-ms.reviewer: ''
-
-
 ms.topic: conceptual
 ms.date: 7/21/2021
 ms.author: bensack

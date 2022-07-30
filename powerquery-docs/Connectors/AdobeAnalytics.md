@@ -2,7 +2,6 @@
 title: Power Query Adobe Analytics connector
 description: Provides basic information and prerequisites for the connector, descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
 author: DougKlopfenstein
-
 ms.topic: conceptual
 ms.date: 1/18/2022
 ms.author: bezhan

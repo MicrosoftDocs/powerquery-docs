@@ -2,7 +2,6 @@
 title: Power Query Bloomberg Data and Analytics connector
 description: Provides basic information and prerequisites for the Bloomberg Data and Analytics connector, descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
 author: kanstantsin-chernik
-
 ms.topic: conceptual
 ms.date: 6/24/2022
 ms.author: bezhan

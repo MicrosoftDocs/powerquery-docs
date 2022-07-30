@@ -2,8 +2,6 @@
 title: "Getting data overview"
 description: "Overviews of the Power Query get data experience and all its components, such as connector parameters, authentication, navigation table, and query destination."
 author: ptyx507x
-
-ms.reviewer: kvivek
 ms.date: 3/2/2022
 ms.author: dougklo
 ms.topic: overview

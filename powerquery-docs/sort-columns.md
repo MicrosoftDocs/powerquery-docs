@@ -2,8 +2,6 @@
 title: Sort columns
 description: With Power Query, you can sort a table by one or multiple columns in the order of your choice. This article demonstrates how to sort columns in Power Query.
 author: ptyx507
-
-ms.reviewer: kvivek
 ms.date: 06/08/2020
 ms.author: dougklo
 ms.custom: edited

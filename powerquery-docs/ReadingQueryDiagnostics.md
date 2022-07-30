@@ -2,12 +2,9 @@
 title: Visualizing and Interpreting Query Diagnostics in Power BI
 description: How to read and interpret Query Diagnostics, and how to properly build visuals that can give insight on performance
 author: cpopell
-
-
 ms.topic: conceptual
 ms.date: 10/31/2019
 ms.author: dougklo
-
 LocalizationGroup: reference
 ---
 

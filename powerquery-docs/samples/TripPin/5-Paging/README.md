@@ -2,13 +2,11 @@
 title: TripPin 5 - Paging
 description: Adding paging to your TripPin REST connector.
 author: cpopell
-manager: kfile
 
 
 ms.topic: tutorial
 ms.date: 5/15/2020
 ms.author: dougklo
-
 LocalizationGroup: reference
 ---
 

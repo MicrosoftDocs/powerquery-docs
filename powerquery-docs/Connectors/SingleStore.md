@@ -2,7 +2,6 @@
 title: Power Query SingleStore connector
 description: Provides basic information, prerequisites, and instructions on how to connect to your SingleStore data.
 author: bezhan-msft
-
 ms.topic: conceptual
 ms.date: 6/24/2022
 ms.author: bezhan

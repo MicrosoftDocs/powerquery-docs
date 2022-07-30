@@ -2,13 +2,11 @@
 title: TripPin 1 - OData
 description: Writing an OData connector for the TripPin sample service
 author: cpopell
-manager: kfile
 
 
 ms.topic: tutorial
 ms.date: 8/25/2021
 ms.author: dougklo
-
 LocalizationGroup: reference
 ---
 

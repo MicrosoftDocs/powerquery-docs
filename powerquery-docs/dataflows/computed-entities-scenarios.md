@@ -2,8 +2,6 @@
 title: Computed entity scenarios and use cases
 description: Computed entity scenarios and use cases.
 author: radacad
-
-ms.reviewer: kvivek
 ms.topic: conceptual
 ms.date: 12/2/2020
 ms.author: bezhan

@@ -2,9 +2,6 @@
 title: Mapping fields with relationships in standard dataflows
 description: Learn how to map fields with relationship fields from the dataflow query to Dataverse tables.
 author: bensack
-
-ms.reviewer: kvivek
-
 ms.topic: conceptual
 ms.date: 12/3/2020
 ms.author: bensack

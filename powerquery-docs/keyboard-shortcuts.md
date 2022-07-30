@@ -2,8 +2,6 @@
 title: Keyboard shortcuts in Power Query
 description: This article provides information about global keyboard shortcuts in Power Query Online.
 author: heydh
-
-ms.reviewer: kvivek
 ms.date: 04/09/2021
 ms.author: dhsundar
 ms.topic: conceptual

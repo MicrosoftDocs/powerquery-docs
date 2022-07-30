@@ -2,13 +2,11 @@
 title: TripPin 7 - Advanced Schema
 description: Adding an advanced schema with typing to your TripPin REST connector.
 author: cpopell
-manager: kfile
 
 
 ms.topic: tutorial
 ms.date: 5/15/2020
 ms.author: dougklo
-
 LocalizationGroup: reference
 ---
 

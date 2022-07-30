@@ -2,12 +2,9 @@
 title: Recording Query Diagnostics in Power BI
 description: How to use Query Diagnostics to record in authoring, preview refresh, and full loading/refresh workflows in Power BI
 author: cpopell
-
-
 ms.topic: conceptual
 ms.date: 2/28/2022
 ms.author: dougklo
-
 LocalizationGroup: reference
 ---
 
