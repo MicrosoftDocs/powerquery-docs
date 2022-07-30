@@ -1,7 +1,8 @@
 ---
 title: Connections and authentication in Power Query Online
 description: This article describes the process and specifics of the authentication process in Power Query Online.
-author: ptyx507xms.date: 7/25/2022
+author: ptyx507x
+ms.date: 7/25/2022
 ms.author: miescobar
 ---
 
