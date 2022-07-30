@@ -2,9 +2,6 @@
 title: Create and use dataflows in Microsoft Teams
 description: How to create and use dataflows in Microsoft Teams
 author: miquelladeboer
-
-
-ms.reviewer: kvivek
 ms.topic: conceptual
 ms.date: 12/2/2020
 ms.author: mideboer

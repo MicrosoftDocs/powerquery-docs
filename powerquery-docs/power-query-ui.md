@@ -7,9 +7,7 @@ author: bezhan-msft
 ms.topic: overview
 ms.date: 4/22/2022
 ms.author: dougklo
-ms.reviewer: kvivek
-
-localizationgroup: reference
+LocalizationGroup: reference
 ---
 
 # The Power Query user interface

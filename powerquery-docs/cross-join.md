@@ -2,8 +2,6 @@
 title: "Cross join"
 description: An article on how to perform a cross-join operation in Power Query. 
 author: ptyx507
-
-ms.reviewer: 
 ms.date: 07/19/2020
 ms.author: dougklo
 ms.custom: edited

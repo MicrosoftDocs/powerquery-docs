@@ -4,7 +4,6 @@ description: Learn how to get the best outcomes when writing creating dataflows 
 author: bensack
 
 ms.reviewer: dougklo
-
 ms.topic: conceptual
 ms.date: 7/6/2022
 ms.author: bensack

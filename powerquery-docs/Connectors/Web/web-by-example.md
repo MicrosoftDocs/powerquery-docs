@@ -2,9 +2,6 @@
 title: Extract data from a Web page by example
 description: Extract data from a Web page by providing an example of what you want to pull
 author: davidiseminger
-ms.reviewer: ''
-
-
 ms.topic: how-to
 ms.date: 12/2/2020
 ms.author: davidi

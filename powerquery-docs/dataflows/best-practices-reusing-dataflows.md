@@ -2,9 +2,6 @@
 title: Best practices for reusing dataflows across environments and workspaces
 description: Best practices for reusing dataflows across environments and workspaces
 author: radacad
-
-
-ms.reviewer: kvivek
 ms.topic: conceptual
 ms.date: 12/2/2020
 ms.author: bezhan

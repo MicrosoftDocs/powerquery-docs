@@ -1,10 +1,7 @@
 ---
 title: "Choose or remove columns"
-
 description: An article on how to choose or remove specific columns from a table. 
 author: ptyx507
-
-ms.reviewer: 
 ms.date: 07/19/2020
 ms.author: dougklo
 ms.custom: edited

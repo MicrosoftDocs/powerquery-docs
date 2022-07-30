@@ -2,11 +2,9 @@
 title: Power Query Excel connector
 description: Provides basic information and prerequisites for the connector, along with troubleshooting tips, how to fix missing or incomplete Excel data, and improve performance.
 author: cpopell
-
 ms.topic: conceptual
 ms.date: 5/26/2022
 ms.author: dougklo
-
 LocalizationGroup: reference
 ---
 

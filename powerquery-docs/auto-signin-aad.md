@@ -2,8 +2,6 @@
 title: Auto sign-in for Azure Active Directory sources
 description: Power Query enables you to automatically sign in to a select set of data sources that use the Azure Active Directory as its authentication kind based on the current authenticated user.
 author: ptyx507x
-
-ms.reviewer: 
 ms.date: 7/18/2022
 ms.author: miescobar
 ---

@@ -1,9 +1,7 @@
 ---
 title: Rank column (Preview)
 description: In Power Query, you can add a new column to an existing table that ranks the rows in the table based on the desired sorting of the table and the rank strategy to use for ties.
-author: ptyx507x
-ms.reviewer: 
-ms.date: 07/20/2022
+author: ptyx507xms.date: 07/20/2022
 ms.author: miescobar
 ms.custom: 
 ---

@@ -2,7 +2,6 @@
 title: Power Query MicroStrategy for Power BI connector
 description: Provides basic information about products that use the MicroStrategy for Power BI connector, supported authentication types, prerequisites, and connection instructions.
 author: pawjastrzebski
-
 ms.topic: conceptual
 ms.date: 6/6/2022
 ms.author: dougklo

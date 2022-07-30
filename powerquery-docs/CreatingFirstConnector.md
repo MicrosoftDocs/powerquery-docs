@@ -2,12 +2,9 @@
 title: Creating your first connector - Hello World
 description: Create your first connector
 author: cpopell
-
-
 ms.date: 11/27/2019
 ms.author: dougklo
 ms.custom: intro-internal
-
 LocalizationGroup: Get started
 ---
 
@@ -19,7 +16,7 @@ This sample provides a simple data source extension that can be run in Visual St
 * Defining a data source kind that:
     * Declares that it uses Implicit (anonymous) authentication.
     * Uses string resources that allow for localization.
-	* Declaring UI metadata so the extension can show up in the Power BI Desktop Get Data dialog.
+    * Declaring UI metadata so the extension can show up in the Power BI Desktop Get Data dialog.
 
 Following the instructions in [Installing the PowerQuery SDK](InstallingSDK.md), create a new project called "HelloWorld" and copy in the following M code, and then follow the rest of the instructions to be able to open it in PowerBI.
 

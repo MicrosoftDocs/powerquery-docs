@@ -2,8 +2,6 @@
 title: "Parse text as JSON or XML"
 description: An article on how to parse or interpret a text string into JSON or XML. 
 author: ptyx507
-
-ms.reviewer: 
 ms.date: 07/30/2020
 ms.author: dougklo
 ---

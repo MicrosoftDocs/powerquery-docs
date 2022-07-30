@@ -2,12 +2,9 @@
 title: Proxy support in the Power Query SDK
 description: Describes how to use the Power Query SDK to handle proxy support for Power Query connectors.
 author: bezhan-msft
-
-
 ms.topic: conceptual
 ms.date: 2/2/2022
 ms.author: bezhan
-
 LocalizationGroup: reference
 ---
 

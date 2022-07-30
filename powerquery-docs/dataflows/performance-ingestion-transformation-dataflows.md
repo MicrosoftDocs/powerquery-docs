@@ -2,9 +2,6 @@
 title: Improve performance and reusability by separating data ingestion from data transformation dataflows
 description: Learn how to improve performance and reusability by separating data ingestion from data transformation dataflows
 author: bensack
-
-ms.reviewer: kvivek
-
 ms.topic: conceptual
 ms.date: 12/3/2020
 ms.author: bensack

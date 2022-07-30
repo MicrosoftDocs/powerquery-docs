@@ -2,7 +2,6 @@
 title: Power Query Digital Construction Works Insights Connector
 description: Provides basic information and prerequisites for the Digital Construction Works Insights connector, descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
 author: bezhan-msft
-
 ms.topic: conceptual
 ms.date: 6/24/2022
 ms.author: bezhan

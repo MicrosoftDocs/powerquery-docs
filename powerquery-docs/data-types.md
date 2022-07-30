@@ -2,8 +2,6 @@
 title: "Data types in Power Query"
 description: A comprehensive article on the concepts of data types in Power Query, how to define data types for values and the importance of the data types. 
 author: ptyx507
-
-ms.reviewer: 
 ms.date: 06/30/2020
 ms.author: dougklo
 ms.custom: edited

@@ -7,7 +7,6 @@ author: cpopell
 ms.topic: quickstart
 ms.date: 2/28/2022
 ms.author: dougklo
-
 LocalizationGroup: reference
 ---
 

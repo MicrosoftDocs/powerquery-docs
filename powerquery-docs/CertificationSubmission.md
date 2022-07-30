@@ -2,11 +2,9 @@
 title: Power Query connector certification submission
 description: Instructions for submitting a Power Query custom connector for certification.
 author: bezhan-msft
-
 ms.topic: conceptual
 ms.date: 4/14/2022
 ms.author: bezhan
-
 LocalizationGroup: reference
 ---
 
