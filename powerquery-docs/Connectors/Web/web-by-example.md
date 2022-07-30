@@ -5,7 +5,6 @@ author: davidiseminger
 ms.topic: how-to
 ms.date: 12/2/2020
 ms.author: davidi
-
 LocalizationGroup: Connect to data
 ---
 # Get webpage data by providing examples
