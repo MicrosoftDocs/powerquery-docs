@@ -15,7 +15,7 @@ ms.author: dougklo
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
-| Authentication Types Supported | Anonymous<br/>Windows<br/>Basic<br/>Organizational Account<br/>SAS Key |
+| Authentication Types Supported | Anonymous<br/>Windows<br/>Basic<br/>Organizational Account<br/>Shared Access Signature (SAS) Key |
 | Function Reference Documentation | [AzureStorage.DataLake](/powerquery-m/azurestorage-datalake)<br/>[AzureStorage.DataLakeContents](/powerquery-m/azurestorage-datalakecontents) |
 
 >[!Note]
