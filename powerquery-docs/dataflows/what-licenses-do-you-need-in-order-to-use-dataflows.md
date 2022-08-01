@@ -5,7 +5,7 @@ author: radacad
 
 
 ms.topic: conceptual
-ms.date: 03/02/2022
+ms.date: 08/01/2022
 ms.author: bezhan
 
 LocalizationGroup: Data from files
@@ -78,17 +78,36 @@ If you use Power BI Premium (capacity-based licensing), you can use all the AI c
 
 #### Limitations per premium capacity
 
-What are the limits per capacity type?
+Dataflows that are using a premium capacity to refresh the data are limited to the maximum number of execution slots they can use. The maximum number of slots is depending on the type of premium capacity you are using. Below we have a table that represents the maximum number of slots that can be consumed by a single refresh a dataflow.
+
+| SKU | v-cores | Number of slots per dataflow |
+| --- | --- | --- |
+|EM1/A1|1|4|
+|EM2/A2|2|8|
+|EM3/A3|4|16|
+|P1/A4|8|32|
+|P2/A5|16|64|
+|P3/A6|32|64|
+|P4/A7|64|64|
+|P5/A8|128|64|
 
 #### Execution slots
 
-what are executions slots? 
+Executions slots are bins of CPU and Memory that are used to execute M-engine evaluations. A premium capacity is split up in execution slots and allows you to run multiple refreshes in parallel. For example, you have a P4 capacity and a dataflow that consumes 84 slots. You refresh your dataflow and the first 64 slots will be allocated for the refresh. The 20 left over evaluations for this dataflow will be parked into a queue. Once one of the evaluations is finished it will start with the next evaluation from the queue. If you start another dataflow on the same premium capacity, while the other is still running, it will get a separate set of slots from the premium capacity and does not have to wait on the other dataflow to start the refresh of your data.
 
-How do I know how much execution slots I consume during my refresh?
+You can use the pointer below to estimate the execution slots consumption of your dataflow refresh:
+
+1. The number of queries executed in the refresh (don't forget the upstream linked entities)
+1. The number of partitions in an incremental refresh query are considered as additional slots used.
 
 #### Strategy to lower execution slots consumption during refresh
 
-What can I do to lower my consumption of execution slots? 
+To lower or improve the efficiency of your consumption of execution slots you can leverage the following strategies:
+
+1. Lower the number of queries in your dataflow.
+1. Evaluate if you really need the upstream linked entities to refresh automatically.
+1. Put incremental refresh queries in separate dataflows.
+1. Strategically schedule your dataflow refreshes based on the consumption of execution slots.
 
 ### Using your organization's Azure Data Lake Storage account for dataflow storage
 
