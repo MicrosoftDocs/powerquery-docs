@@ -35,7 +35,7 @@ shared HelloWorld.Contents = (optional message as text) =>
 
 ## Data Source Kind
 
-Functions marked as `shared` in your extension can be associated with a specific data source by including a `DataSource.Kind` metadata record on the function with the name of a Data Source definition record. 
+Functions marked as `shared` in your extension can be associated with a specific data source by including a `DataSource.Kind` literal attribute on the function with the name of a Data Source definition record. 
 The Data Source record defines the authentication types supported by your data source, and basic branding information (like the display name / label).
 The name of the record becomes is unique identifier. 
 
