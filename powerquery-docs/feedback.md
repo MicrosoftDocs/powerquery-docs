@@ -4,7 +4,7 @@ description: This article describes where users can receive support and share fe
 author: bezhan-msft
 
 ms.reviewer: dougklo
-ms.date: 4/22/2022
+ms.date: 7/30/2022
 ms.author: bezhan
 ---
 
@@ -22,7 +22,6 @@ If you're finding an issue with Power Query, use the dedicated support channels 
 
 You can also use any of the following community resources:
 
-* [Power Query on Microsoft Q&A](/answers/products/pwrqry)
 * Community forums for the product you're using Power Query in. For example, for Power BI, this forum would be the [Power BI Community](https://community.powerbi.com/t5/Power-Query/bd-p/power-bi-services)
 * [Power Query website resources](https://powerquery.microsoft.com/resources/)
 
