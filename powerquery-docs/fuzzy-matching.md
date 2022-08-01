@@ -84,11 +84,11 @@ The transformation table helps you map values from your column to new values bef
 
 Some examples of how the transformation table can be used:
 
-* [Transformation table in Fuzzy Merge queries](merge-queries-fuzzy-match.md#transformation-table)
-* [Transformation table in Group by](group-by.md#fuzzy-grouping)
-* [Transformation table in Cluster values](cluster-values.md#using-the-fuzzy-cluster-options)
+* [Transformation table in fuzzy merge queries](merge-queries-fuzzy-match.md#transformation-table)
+* [Transformation table in group by](group-by.md#fuzzy-grouping)
+* [Transformation table in cluster values](cluster-values.md#using-the-fuzzy-cluster-options)
 
 >[!IMPORTANT]
->When the transformation table is used, the maximum similarity score for the values from the transformation table will be 0.95. This deliberate penalty of 0.05 is in place to distinguish that the original value from such column is not equal to the values that it was compared to since a transformation ocurred.
+>When the transformation table is used, the maximum similarity score for the values from the transformation table is 0.95. This deliberate penalty of 0.05 is in place to distinguish that the original value from such column isn't equal to the values that it was compared to since a transformation occurred.
 >
->For scenarios where you first want to map your values and then perform the fuzzy matching without the 0.05 penalty, it is recommended to replace the values from your column and then perform the fuzzy matching.
+>For scenarios where you first want to map your values and then perform the fuzzy matching without the 0.05 penalty, we recommend that you replace the values from your column and then perform the fuzzy matching.
