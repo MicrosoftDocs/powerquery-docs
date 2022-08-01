@@ -68,7 +68,7 @@ The following table lists the fields for your Data Source definition record.
 
 ## Publish to UI
 
-Similar to the (Data Source)[#data-source-kind] definition record, the Publish record provides the Power Query UI the information it needs to expose this extension in the **Get Data** dialog.
+Similar to the [Data Source](#data-source-kind) definition record, the Publish record provides the Power Query UI the information it needs to expose this extension in the **Get Data** dialog.
 
 **Example:**
 
