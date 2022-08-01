@@ -2,12 +2,9 @@
 title: Adding function documentation
 description: Add function documentation for Power Query connectors
 author: cpopell
-
-
 ms.topic: conceptual
 ms.date: 2/28/2022
 ms.author: dougklo
-
 LocalizationGroup: reference
 ---
 

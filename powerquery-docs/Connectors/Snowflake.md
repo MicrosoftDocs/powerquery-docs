@@ -2,7 +2,6 @@
 title: Power Query Snowflake connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Snowflake database, along with native query folding instructions and troubleshooting tips.
 author: cpopell
-
 ms.topic: conceptual
 ms.date: 3/3/2022
 ms.author: dougklo

@@ -2,11 +2,10 @@
 title: How fuzzy matching works in Power Query
 description: "How-to article on the fuzzy matching feature in Power Query and how to better take advantage of it."
 author: ptyx507x
-
-ms.reviewer: 
 ms.date: 7/30/2022
 ms.author: dougklo
 ---
+
 # How fuzzy matching works in Power Query
 
 Power Query features such as [fuzzy merge](merge-queries-fuzzy-match.md), [cluster values](cluster-values.md), and [fuzzy grouping](group-by.md#fuzzy-grouping) use the same mechanisms to work as fuzzy matching.

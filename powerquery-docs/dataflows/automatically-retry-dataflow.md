@@ -2,7 +2,6 @@
 title: Automatically retry a dataflow on failure
 description: How to use the dataflows connector in Power Automate to automatically retry a dataflow on failure
 author: Luitwieler
-
 ms.reviewer: dougklo
 ms.topic: conceptual
 ms.date: 04/21/2022

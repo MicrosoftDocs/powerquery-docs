@@ -2,8 +2,6 @@
 title: Using the Queries pane
 description: Within Power Query, you maneuver around the different queries in the editor through the queries pane.
 author: jessli20
-
-ms.reviewer: 
 ms.date: 08/04/2020
 ms.author: bezhan
 ---

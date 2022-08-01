@@ -2,8 +2,6 @@
 title: Query folding on native queries
 description: This article provides information on how to enable query folding against queries that use the Value.NativeQuery function.
 author: ptyx507x
-
-ms.reviewer: 
 ms.date: 6/27/2022
 ms.author: miescobar
 ---

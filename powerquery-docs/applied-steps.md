@@ -2,8 +2,6 @@
 title: Applied steps
 description: Applied steps show the transformations to the data.
 author: t-sazaki
-
-ms.reviewer: 
 ms.date: 08/05/2020
 ms.author: bezhan
 ---

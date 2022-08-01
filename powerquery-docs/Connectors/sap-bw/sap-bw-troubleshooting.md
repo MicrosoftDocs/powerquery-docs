@@ -2,12 +2,9 @@
 title: SAP Business Warehouse connector troubleshooting
 description: Provides troubleshooting tips for errors that might occur when using Power Query to connect to an SAP BW Application Server or SAP BW Message Server.
 author: dougklopfenstein
-
-
 ms.topic: conceptual
 ms.date: 9/14/2021
 ms.author: bezhan
-
 LocalizationGroup: reference
 ---
 

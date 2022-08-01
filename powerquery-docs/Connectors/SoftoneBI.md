@@ -6,7 +6,6 @@ author: basilrormose
 ms.topic: 
 ms.date: 6/24/2022
 ms.author: bezhan
-ms.reviewer: kvivek
 LocalizationGroup: reference
 ---
 

@@ -2,7 +2,6 @@
 title: Power Query Usercube connector
 description: Provides basic information and prerequisites for the Usercube connector. Also includes descriptions of the optional input parameters, and discusses limitations and issues you might run into.
 author: bezhan-msft
-
 ms.topic: conceptual
 ms.date: 6/24/2022
 ms.author: bezhan

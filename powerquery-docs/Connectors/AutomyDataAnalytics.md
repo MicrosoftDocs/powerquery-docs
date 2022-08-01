@@ -2,7 +2,6 @@
 title: Power Query Automy Data Analytics Connector
 description: Provides basic information and prerequisites for the Automy Data Analytics connector
 author: bezhan-msft
-
 ms.topic: conceptual
 ms.date: 6/24/2022
 ms.author: bezhan

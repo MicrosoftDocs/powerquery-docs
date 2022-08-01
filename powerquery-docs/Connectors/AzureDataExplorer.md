@@ -2,7 +2,6 @@
 title: Power Query Azure Data Explorer (Kusto) connector
 description: Includes basic information, prerequisites, and information on how to connect to Azure Data Explorer, along with a list of limitations.
 author: dougklopfenstein
-
 ms.topic: conceptual
 ms.date: 7/6/2022
 ms.author: dougklo

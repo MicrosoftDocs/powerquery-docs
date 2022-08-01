@@ -2,9 +2,7 @@
 title: Split columns by lowercase to uppercase
 description: Split columns by lowercase to uppercase
 author: jessli20
-
 ms.topic: conceptual
-
 ms.date: 06/04/2020
 ms.author: bezhan
 ---
