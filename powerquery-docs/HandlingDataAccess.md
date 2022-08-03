@@ -3,7 +3,7 @@ title: Handling Data Access
 description: How to use connectors to access data using M data source functions
 author: cpopell
 ms.topic: conceptual
-ms.date: 2/28/2022
+ms.date: 8/3/2022
 ms.author: dougklo
 LocalizationGroup: reference
 ---
@@ -68,7 +68,7 @@ The following table lists the fields for your Data Source definition record.
 
 ## Publish to UI
 
-Similar to the (Data Source)[#data-source-kind] definition record, the Publish record provides the Power Query UI the information it needs to expose this extension in the **Get Data** dialog.
+Similar to the [Data Source](#data-source-kind) definition record, the Publish record provides the Power Query UI the information it needs to expose this extension in the **Get Data** dialog.
 
 **Example:**
 
