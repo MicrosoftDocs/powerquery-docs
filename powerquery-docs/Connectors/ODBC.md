@@ -101,4 +101,4 @@ Power Query provides a set of advanced options that you can add to your query if
 
 ### Connection string attributes
 
-If a DSN is specified in the ODBC connection string, attributes after the DSN specification will not be included. If you wish to use additional attributes, update them in the DSN itself, as opposed to in the connection string.
+If a DSN is specified in the ODBC connection string, attributes after the DSN specification won't be included. If you want to use additional attributes, update them in the DSN itself, as opposed to in the connection string.
