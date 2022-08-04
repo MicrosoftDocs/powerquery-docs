@@ -1,7 +1,7 @@
 ---
 title: Databricks Power Query Connector
 description: Provides basic information and prerequisites for using the Power Query Databricks connector.
-author: George Chow
+author: bezhan-msft
 
 ms.topic: conceptual
 ms.date: 8/4/2022
@@ -44,14 +44,14 @@ To connect to Databricks from Power Query Desktop, take the following steps:
 
     ![Get Data from Databricks Cloud.](./media/databricks/get-data-dbc.png)
 
-2. You will provide the "Server hostname" and "HTTP Path" for your Databricks SQL Warehouse. Refer [here](https://docs.microsoft.com/azure/databricks/integrations/bi/jdbc-odbc-bi#get-server-hostname-port-http-path-and-jdbc-url) for instructions to look up your "Server hostname" and "HTTP Path". Enter these accordingly. You may optionally supply a default catalog and/or database under **Advanced options**. Select **OK** to continue.
+2. You will provide the "Server hostname" and "HTTP Path" for your Databricks SQL Warehouse. Refer [here](/azure/databricks/integrations/bi/jdbc-odbc-bi#get-server-hostname-port-http-path-and-jdbc-url) for instructions to look up your "Server hostname" and "HTTP Path". Enter these accordingly. You may optionally supply a default catalog and/or database under **Advanced options**. Select **OK** to continue.
 
     ![Specify your Databricks SQL Warehouse.](./media/databricks/dbc-sql-endpoint.png)
 
 3. You will need provide your credentials to authenticate with your Databricks SQL Warehouse. You have 3 options for credentials:
 
     1. Username / Password. This option is not available if your organization/account uses 2FA/MFA. 
-    2. Personal Access Token. Refer [here](https://docs.microsoft.com/azure/databricks/sql/user/security/personal-access-tokens) for instructions on generating a Personal Access Token (PAT).
+    2. Personal Access Token. Refer [here](/azure/databricks/sql/user/security/personal-access-tokens) for instructions on generating a Personal Access Token (PAT).
     3. OAuth (OIDC). Sign into your organizational account via the browser popup.
     
     ![Specify an appropriate token.](./media/databricks/dbc-pat.png)
@@ -67,18 +67,18 @@ To connect to Databricks from Power Query Desktop, take the following steps:
 
 To connect to Databricks from Power Query Online, take the following steps:
 
-1. In the Get Data experience, select the **Dataflow** category. (Refer [here](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-create) for instructions.) Shortlist the available Databricks connector with the Search box. Select the "Databricks" connector for your Databricks SQL Warehouse.
+1. In the Get Data experience, select the **Dataflow** category. (Refer [here](/power-bi/transform-model/dataflows/dataflows-create) for instructions.) Shortlist the available Databricks connector with the Search box. Select the "Databricks" connector for your Databricks SQL Warehouse.
 
     ![Image of the Databricks connectors.](./media/databricks/filtered-connectors.jpeg)
 
-2. Enter the "Server hostname" and "HTTP Path" for your Databricks SQL Warehouse. Refer [here](https://docs.microsoft.com/azure/databricks/integrations/bi/jdbc-odbc-bi#get-server-hostname-port-http-path-and-jdbc-url) for instructions to look up your "Server hostname" and "HTTP Path". You may optionally supply a default catalog and/or database under **Advanced options**. 
+2. Enter the "Server hostname" and "HTTP Path" for your Databricks SQL Warehouse. Refer [here](/azure/databricks/integrations/bi/jdbc-odbc-bi#get-server-hostname-port-http-path-and-jdbc-url) for instructions to look up your "Server hostname" and "HTTP Path". You may optionally supply a default catalog and/or database under **Advanced options**. 
 
     ![Connection Settings and Credentials.](./media/databricks/connect-setting-cred.png)
 
 3. You will also provide your credentials to authenticate with your Databricks SQL Warehouse. There are three options for credentials:
 
     1. Basic. Use this option when authenticating with user name/password. This option is not available if your organization/account uses 2FA/MFA. 
-    2. Account Key. Use this option when authenticating using a Personal Access Token. Refer [here](https://docs.microsoft.com/azure/databricks/sql/user/security/personal-access-tokens) for instructions on generating a Personal Access Token (PAT).
+    2. Account Key. Use this option when authenticating using a Personal Access Token. Refer [here](/azure/databricks/sql/user/security/personal-access-tokens) for instructions on generating a Personal Access Token (PAT).
     3. Organizational account. Use this option when authenticating with OAuth. Sign into your organizational account via the browser popup.
 
 4. Once you successfully connect, a **Navigator** window appears and displays the data available on the server. Select your data in the navigator. Then select **Next** to transform the data in Power Query.
