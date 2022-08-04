@@ -322,6 +322,8 @@
         href: Connectors/AutomyDataAnalytics.md
       - name: "Azure Cost Management"
         href: Connectors/AzureCostManagement.md
+      - name: "Azure Databricks"
+        href: Connectors/DatabricksAzure.md
       - name: "Azure Data Explorer (Kusto)"
         href: Connectors/AzureDataExplorer.md
       - name: "Azure Data Lake Storage Gen1"
@@ -346,6 +348,8 @@
         href: Connectors/BQECore.md
       - name: "Common Data Service (Legacy)"
         href: ./connectors/commondataservicelegacy.md
+      - name: "Databricks"
+        href: Connectors/Databricks.md
       - name: "Dataverse"
         href: Connectors/dataverse.md     
       - name: "Dataflows"
