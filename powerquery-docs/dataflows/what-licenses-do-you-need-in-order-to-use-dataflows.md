@@ -13,8 +13,6 @@ LocalizationGroup: Data from files
 
 # What licenses do you need to use dataflows?
 
-
-
 Dataflows can be created in different portals, such as Power BI and the Power Apps, and can be of either analytical or standard type. In addition, some dataflow features are only available as Premium features. Considering the wide range of products that can use dataflows, and feature availability in each product or dataflow type, it's important to know what licensing options you need to use dataflows.
 
 ## Creating dataflows in Power BI workspaces
@@ -78,7 +76,7 @@ If you use Power BI Premium (capacity-based licensing), you can use all the AI c
 
 #### Limitations per premium capacity
 
-Dataflows that are using a premium capacity to refresh the data are limited to the maximum number of execution slots they can use. The maximum number of slots is depending on the type of premium capacity you are using. Below we have a table that represents the maximum number of slots that can be consumed by all dataflows in a workspace mapped to the capacity.
+Dataflows that are using a premium capacity to refresh the data are limited to the maximum number of execution slots they can use. The maximum number of slots depends on the type of premium capacity you're using. The following table represents the maximum number of slots that can be consumed by all dataflows in a workspace mapped to the capacity.
 
 | SKU | v-cores | Number of execution slots |
 | --- | --- | --- |
@@ -93,20 +91,20 @@ Dataflows that are using a premium capacity to refresh the data are limited to t
 
 #### Execution slots
 
-Executions slots are bins of CPU and Memory that are used to execute M-engine evaluations. A premium capacity is split up in execution slots and allows you to run multiple evaluations in parallel. For example, you have a P4 capacity and a dataflow that consumes 84 slots. You refresh your dataflow and the first 64 slots will be allocated for the refresh. The 20 left over evaluations for this dataflow will be parked into a queue. Once one of the evaluations is finished it will start with the next evaluation from the queue. If you start another dataflow in your workspace on the same premium capacity, while the other is still running, it will get parked in the same queue of the premium capacity and needs to wait on the other dataflows in the workspace to start the refresh of your data.
+Executions slots are bins of CPU and memory that are used to execute M engine evaluations. A premium capacity is split up in execution slots and allows you to run multiple evaluations in parallel. For example, you have a P4 capacity and a dataflow that consumes 84 slots. You refresh your dataflow and the first 64 slots will be allocated for the refresh. The 20 left over evaluations for this dataflow will be parked in a queue. Once one of the evaluations is finished, it will start with the next evaluation from the queue. If you start another dataflow in your workspace on the same premium capacity while the other is still running, it will get parked in the same queue of the premium capacity and needs to wait on the other dataflows in the workspace to start the refresh of your data.
 
-You can use the pointer below to estimate the execution slots consumption of your dataflow refresh:
+You can use the pointers below to estimate the execution slots consumption of your dataflow refresh:
 
-1. The number of queries executed in the refresh (don't forget the upstream linked entities)
-1. The number of partitions in an incremental refresh query are considered as additional slots used.
+* The number of queries executed in the refresh (don't forget the upstream linked entities).
+* The number of partitions in an incremental refresh query are considered as additional slots used.
 
 #### Strategy to lower execution slots consumption during refresh
 
-To lower or improve the efficiency of your consumption of execution slots you can leverage the following strategies:
+To lower or improve the efficiency of your consumption of execution slots, you can use the following strategies:
 
-1. Lower the number of queries in your dataflow by combining queries where possible and only "enable load" for queries that are used downstream.
-1. Evaluate if you really need the upstream linked entities to refresh automatically.
-1. Strategically schedule your dataflow refreshes based on the consumption of execution slots.
+* Lower the number of queries in your dataflow by combining queries where possible and only "enable load" for queries that are used downstream.
+* Evaluate if you really need the upstream linked entities to refresh automatically.
+* Strategically schedule your dataflow refreshes based on the consumption of execution slots.
 
 ### Using your organization's Azure Data Lake Storage account for dataflow storage
 
