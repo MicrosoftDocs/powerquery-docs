@@ -424,6 +424,8 @@
         href: Connectors/Pdf.md
       - name: "PostgreSQL"
         href: Connectors/PostgreSQL.md
+      - name: "Profisee (Beta)"
+        href: Connectors/Profisee.md
       - name: "QuickBooks Online (Beta)"
         href: Connectors/QuickBooksOnline.md
       - name: "Salesforce Objects"
