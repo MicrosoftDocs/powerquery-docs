@@ -33,7 +33,7 @@ The Anaplan Connector enables access to your Anaplan model exports. It also:
 
 * Runs using Anaplan public data integration APIs.
 * Loads export actions saved in your Anaplan models, directly into Power BI.
-* Displays Anaplan models (those not archived) in your default tenant.
+* Displays Anaplan models (those models not archived) in your default tenant.
 * Creates datasets in Power BI Desktop and exports or refreshes them to the Power BI service (cloud).
 
 ## Connect to Anaplan from Power BI Desktop
@@ -66,13 +66,13 @@ The following image shows the **Anaplan Connection Configuration** dialog.
 
 1. Enter the API and authentication (auth) URLs.
 
-   1. If you choose Basic auth, enter the following URLs and then select **OK**.
+   1. If you choose Basic auth, enter the following URLs, and then select **OK**.
 
       **Anaplan API URL**: `https://api.anaplan.com`
 
       **Anaplan Auth URL**: `https://auth.anaplan.com`
 
-   2. If you prefer the Anaplan configured IDP for logging into Anaplan, enter the following URLs and then select **OK**.
+   2. If you prefer the Anaplan configured IDP for logging into Anaplan, enter the following URLs, and then select **OK**.
 
       **Anaplan API URL**: `https://api.anaplan.com`
 
@@ -136,7 +136,7 @@ To run an export action, use the **Navigator** dialog to locate your export.
 
 2. Check the box next to **ƒx Run Export Action** to select your export.
 
-   * When you select **ƒx Run Export Action**, this doesn't trigger the export run. Instead this selection downloads the last version of the exported Anaplan data for preview.
+   * When you select **ƒx Run Export Action**, this selection doesn't trigger the export run. Instead this selection downloads the last version of the exported Anaplan data for preview.
    * A preview displays in the right panel. If the Anaplan export is set to **Admins only**, model users might see a blank preview, but the export will run as normal.
    * You'll see the preview the next time you set an integration with the same export.
    <!--   * See About Default Import and Export files. -->
@@ -190,17 +190,17 @@ From the **Anaplan** dialog:
 
    ![The Anaplan Authentication method dialog with a dropdown and Sign in button.](./media/anaplan/gateway.PNG)
 
-Once you've created a scheduled refresh in PowerBI service:
+Once you've created a scheduled refresh in Power BI service:
 
-* If your scheduled refresh frequency is more than 15 days, you must re-enter your sign in credentials before the end of the 15th day. If you don't, you need to authenticate anew.
+* If your scheduled refresh frequency is more than 15 days, you must reenter your sign-in credentials before the end of the 15th day. If you don't, you need to authenticate anew.
 * We recommend a refresh frequency that's less than every 15 days.
-* Apart from data refreshes, you need to re-enter your sign in credentials every 90 days.
+* Apart from data refreshes, you need to reenter your sign-in credentials every 90 days.
 
 ## Limits, considerations, and troubleshooting
 
 You may get error messages. Here are some common scenarios and steps for resolution.
 
-If you do get an error message, select the refresh icon. This resolves the error in most cases.
+If you do get an error message, select the refresh icon. This refresh resolves the error in most cases.
 
 ### Credential error in the Navigator
 
@@ -219,13 +219,13 @@ To resolve such an error:
 6. Select **Clear Permissions**.
 7. Select **Delete**.
 
-These steps remove expired Anaplan API tokens. You must re-authenticate to proceed.
+These steps remove expired Anaplan API tokens. You must reauthenticate to proceed.
 
 ### Credential error in the Power Query editor
 
 You might experience a credential error in the [Power Query editor](../power-query-ui) when you reopen a Power BI report or when you edit a prior data set.
 
-To resolve this, select either **Close & Apply** or **Refresh Preview**.
+To resolve this error, select either **Close & Apply** or **Refresh Preview**.
 
 [![Power query error.](./media/anaplan/power-query-error.png)](./media/anaplan/power-query-error.png#lightbox)
 
@@ -272,7 +272,7 @@ More information: [Power Query M expression functions](/powerquery-m/expression-
 
 ### Large file download error
 
-If you go beyond the 5 gigabyte (GB) size limit, you'll get the following error.
+If you go beyond the 5 gigabytes (GB) size limit, you'll get the following error.
 
 `Anaplan connector supports file downloads up to 5 GB in size.`
 
