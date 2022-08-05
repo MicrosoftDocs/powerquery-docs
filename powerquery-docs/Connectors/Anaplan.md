@@ -101,7 +101,7 @@ You've chosen either basic authentication or Anaplan-configured IDP.
    1. Select **Sign in**.
    2. From **Welcome to Anaplan**, select **Log in with Single Sign-on (SSO)**.
 
-      ![null](./media/anaplan/sso-login.png)
+      ![Anaplan dialog, with user name and password, along with SSO sign in at the bottom.](./media/anaplan/sso-login.png)
 
    3. On your company's SSO dialog, enter your user name and password.
 
@@ -127,7 +127,7 @@ When you run an export action:
 
 To run an export action, use the **Navigator** dialog to locate your export.
 
-![Run Export Action and Load.](./media/anaplan/export-load.png)
+[![Run Export Action and Load.](./media/anaplan/export-load.png)](./media/anaplan/export-load.png#lightbox)
 
 1. Search your Anaplan models to find and set your export.
 
@@ -151,17 +151,17 @@ Once your data loads into Power BI Desktop, you can perform data visualizations.
 
 [How to make the most of data visualization](https://powerbi.microsoft.com/data-visualization) helps you to select **Columns**, apply **Filters**, perform **Visualizations**, and **Publish**.
 
-![Data and tables.](./media/anaplan/data-and-tables.png)
+[![Data and tables.](./media/anaplan/data-and-tables.png)](./media/anaplan/data-and-tables.png#lightbox)
 
 ### Publish a report to Power BI service
 
 The publish step sends the report from Power BI Desktop to Power BI service.
 
-More information: [Create reports in Power BI](/power-bi/create-reports). You need a report to begin.
+More information: [Create reports in Power BI](/power-bi/create-reports/). You need a report to begin.
 
 To publish a report to Power BI service, select **Publish** from the Power BI Desktop report dialog.
 
-![Microsoft Power BI report dialog with a left menu that displays the Publish option.](./media/anaplan/pbi-report.png)
+[![Microsoft Power BI report dialog with a left menu that displays the Publish option.](./media/anaplan/pbi-report.png)](./media/anaplan/pbi-report.png#lightbox)
 
 The report is now in Power BI service. Sign in to Power BI service to see the report.
 
@@ -169,7 +169,7 @@ The report is now in Power BI service. Sign in to Power BI service to see the re
 
 Once you've created a dataset in Power BI service, you can schedule a data refresh.
 
-First, create a report in the Power BI Desktop. More information: [Create reports in Power BI](/power-bi/create-reports).
+First, create a report in the Power BI Desktop. More information: [Create reports in Power BI](/power-bi/create-reports/).
 
 To refresh your dataset:
 
