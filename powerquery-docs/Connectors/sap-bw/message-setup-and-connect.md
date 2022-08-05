@@ -2,12 +2,9 @@
 title: Power Query SAP Business Warehouse Message Server connector
 description: Power Query SAP Business Warehouse Message Server connector reference
 author: dougklopfenstein
-
-
 ms.topic: conceptual
 ms.date: 11/23/2020
 ms.author: bezhan
-
 LocalizationGroup: reference
 ---
 

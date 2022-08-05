@@ -2,8 +2,6 @@
 title: "Combine CSV files in Power Query" 
 description: "How to combine CSV files in Power Query and Power Query Online"
 author: ptyx507
-
-ms.reviewer: 
 ms.date: 06/30/2020
 ms.author: dougklo
 ms.custom: edited

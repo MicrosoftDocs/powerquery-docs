@@ -2,12 +2,9 @@
 title: Power Query BQE Core connector
 description: Provides basic information, prerequisites, and instructions on how to connect to BQE Core.
 author: cruzgreg
-
-
 ms.topic: conceptual
-ms.date: 6/15/2022
+ms.date: 6/24/2022
 ms.author: bezhan
-
 LocalizationGroup: reference
 ---
 
@@ -21,7 +18,7 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets) |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
 | Authentication Types Supported | BQE Core Account |
 | Function Reference Documentation | &mdash; |
 

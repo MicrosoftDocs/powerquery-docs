@@ -2,11 +2,9 @@
 title: Alternatives to out-of-box connectivity in Power BI Desktop
 description: Provides users alternatives to connect to their data when no out-of-box connector is available
 author: bezhan-msft
-
 ms.topic: conceptual
 ms.date: 7/11/2022
 ms.author: bezhan
-
 LocalizationGroup: reference
 ---
 

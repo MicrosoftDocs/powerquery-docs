@@ -2,12 +2,9 @@
 title: Navigate the query objects
 description: Describes how to navigate the query objects in the Navigator dialog box of the Power Query SAP Business Warehouse connector.
 author: dougklopfenstein
-
-
 ms.topic: conceptual
 ms.date: 11/23/2020
 ms.author: bezhan
-
 LocalizationGroup: reference
 ---
 

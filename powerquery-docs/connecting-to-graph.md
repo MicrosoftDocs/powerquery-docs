@@ -2,11 +2,8 @@
 title: Lack of Support for Microsoft Graph in Power Query
 description: This article describes Power Query's lack of support for connecting to Microsoft Graph
 author: mattmasson
-
-ms.reviewer: kvivek
 ms.date: 4/14/2022
 ms.author: mmasson
-
 ---
 
 # Lack of Support for Microsoft Graph in Power Query
@@ -19,13 +16,13 @@ This article outlines the issues associated with Microsoft Graph connectivity fr
 
 ## Authentication
 
-The built-in Organizational Account authentication flow for Power Query’s `Web.Contents` and `OData.Feed` functions isn't compatible with most Graph endpoints. Specifically, Power Query’s Azure Active Directory (Azure AD) client requests the `user_impersonation` scope, which isn't compatible with Graph’s security model. Graph uses a rich set of permissions that aren't available through our generic Web and OData connectors.
+The built-in Organizational Account authentication flow for Power Query's `Web.Contents` and `OData.Feed` functions isn't compatible with most Graph endpoints. Specifically, Power Query's Azure Active Directory (Azure AD) client requests the `user_impersonation` scope, which isn't compatible with Graph's security model. Graph uses a rich set of permissions that aren't available through our generic Web and OData connectors.
 
 Implementing your own Azure AD credential retrieval flows directly from your query, or using hardcoded or embedded credentials, also isn't recommended for security reasons.
 
-## OData libraries’ incompatibility
+## OData libraries' incompatibility
 
-Certain Graph endpoints and extensions to Graph may require the use of OData libraries and features that aren't supported by Power Query’s built-in `OData.Feed` function because Graph and Power Query might be using two different versions of OData libraries. These issues generally result in errors retrieving the service’s `$metadata` document. You might discover common guidance related to passing the `Implementation = "2.0"` option to the `OData.Feed` function call to ensure the latest supported OData libraries are used. While this approach does resolve certain OData incompatibilities, you might still encounter errors over time as Graph and Power Query adopt new versions of the OData libraries at different times.
+Certain Graph endpoints and extensions to Graph may require the use of OData libraries and features that aren't supported by Power Query's built-in `OData.Feed` function because Graph and Power Query might be using two different versions of OData libraries. These issues generally result in errors retrieving the service's `$metadata` document. You might discover common guidance related to passing the `Implementation = "2.0"` option to the `OData.Feed` function call to ensure the latest supported OData libraries are used. While this approach does resolve certain OData incompatibilities, you might still encounter errors over time as Graph and Power Query adopt new versions of the OData libraries at different times.
 
 ## Performance
 

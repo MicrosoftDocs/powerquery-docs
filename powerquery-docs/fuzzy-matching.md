@@ -1,12 +1,11 @@
 ---
-title: "How fuzzy matching works in Power Query"
+title: How fuzzy matching works in Power Query
 description: "How-to article on the fuzzy matching feature in Power Query and how to better take advantage of it."
-author: ptyx507
-
-ms.reviewer: 
-ms.date: 4/14/2022
+author: ptyx507x
+ms.date: 7/30/2022
 ms.author: dougklo
 ---
+
 # How fuzzy matching works in Power Query
 
 Power Query features such as [fuzzy merge](merge-queries-fuzzy-match.md), [cluster values](cluster-values.md), and [fuzzy grouping](group-by.md#fuzzy-grouping) use the same mechanisms to work as fuzzy matching.
@@ -78,3 +77,18 @@ You can try again by changing the **Similarity score** from 0.6 to a lower numbe
 
 > [!NOTE]
 > Currently, only the [Cluster values](cluster-values.md) feature in Power Query Online provides a new column with the similarity score.
+
+## Special considerations for transformation table
+
+The transformation table helps you map values from your column to new values before performing the fuzzy matching algorithm.
+
+Some examples of how the transformation table can be used:
+
+* [Transformation table in fuzzy merge queries](merge-queries-fuzzy-match.md#transformation-table)
+* [Transformation table in group by](group-by.md#fuzzy-grouping)
+* [Transformation table in cluster values](cluster-values.md#using-the-fuzzy-cluster-options)
+
+>[!IMPORTANT]
+>When the transformation table is used, the maximum similarity score for the values from the transformation table is 0.95. This deliberate penalty of 0.05 is in place to distinguish that the original value from such column isn't equal to the values that it was compared to since a transformation occurred.
+>
+>For scenarios where you first want to map your values and then perform the fuzzy matching without the 0.05 penalty, we recommend that you replace the values from your column and then perform the fuzzy matching.

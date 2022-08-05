@@ -2,11 +2,9 @@
 title: Power Query Anaplan connector
 description: Provides basic information, prerequisites, and instructions on how to connect to your Anaplan data, as well as troubleshooting tips.
 author: cpopell
-
 ms.topic: conceptual
 ms.date: 8/4/2022
 ms.author: dougklo
-ms.reviewer: kvivek
 LocalizationGroup: reference
 ---
 
@@ -79,6 +77,7 @@ The following image shows the **Anaplan Connection Configuration** dialog.
       **Anaplan Auth URL**: `https://us1a.app.anaplan.com`
 
    3. Select **OK**.
+
 
 2. From the next **Anaplan** dialog, choose either **Basic** or **Organizational account** (which triggers Anaplan-configured IDP).
 

@@ -2,7 +2,6 @@
 title: Power Query Text/CSV connector
 description: Provides basic information and connection instructions, along with troubleshooting tips when loading files from the web and when unstructured text is interpreted as structured.
 author: cpopell
-
 ms.topic: conceptual
 ms.date: 7/11/2022
 ms.author: dougklo

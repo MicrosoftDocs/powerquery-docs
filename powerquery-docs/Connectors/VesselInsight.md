@@ -2,9 +2,8 @@
 title: Power Query Vessel Insight connector
 description: Provides basic information and prerequisites for the Vessel Insight connector, descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
 author: bezhan-msft
-
 ms.topic: conceptual
-ms.date: 4/26/2022
+ms.date: 6/24/2022
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -19,7 +18,7 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (datasets) |
+| Products | Power BI (datasets)<br/>Power BI (Dataflows) |
 | Authentication Types Supported | Organizational account |
 
 ## Prerequisites

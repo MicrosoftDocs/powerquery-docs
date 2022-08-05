@@ -2,9 +2,8 @@
 title: Autodesk Construction Cloud Power Query Connector
 description: Includes basic information, prerequisites, and information on how to connect to your Autodesk Construction Cloud data, along with a list of known issues and limitations.
 author: bezhan-msft
-
 ms.topic: conceptual
-ms.date: 04/03/2022
+ms.date: 6/24/2022
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -19,7 +18,7 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products | Power BI (Datasets)  |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)  |
 | Authentication Types Supported | Autodesk account |
 | Function Reference Documentation |&mdash; |
 

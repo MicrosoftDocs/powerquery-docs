@@ -2,9 +2,8 @@
 title: Power Query BitSight Security Ratings connector
 description: Provides basic information and prerequisites for the BitSight Security Ratings connector, descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
 author: bezhan-msft
-
 ms.topic: conceptual
-ms.date: 3/23/2022
+ms.date: 6/24/2022
 ms.author: bezhan
 LocalizationGroup: reference
 ---
