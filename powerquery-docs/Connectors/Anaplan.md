@@ -223,7 +223,7 @@ These steps remove expired Anaplan API tokens. You must reauthenticate to procee
 
 ### Credential error in the Power Query editor
 
-You might experience a credential error in the [Power Query editor](../power-query-ui) when you reopen a Power BI report or when you edit a prior data set.
+You might experience a credential error in the [Power Query editor](../power-query-ui.md) when you reopen a Power BI report or when you edit a prior data set.
 
 To resolve this error, select either **Close & Apply** or **Refresh Preview**.
 
