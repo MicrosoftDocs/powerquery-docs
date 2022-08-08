@@ -105,7 +105,7 @@ Incremental refresh can also be invoked by using APIs. In this case, the API cal
 
 ## Incremental refresh implementation details
 
-Dataflows use partitioning for incremental refresh. After XMLA-endpoints for Power BI Premium are available, the partitions become visible. Incremental refresh in dataflows keeps the minimum number of partitions to meet refresh policy requirements. Old partitions that go out of range are dropped, which maintains a rolling window. Partitions are opportunistically merged, reducing the total number of partitions required. This improves compression and, in some cases, can improve query performance.
+Dataflows use partitioning for incremental refresh. Incremental refresh in dataflows keeps the minimum number of partitions to meet refresh policy requirements. Old partitions that go out of range are dropped, which maintains a rolling window. Partitions are opportunistically merged, reducing the total number of partitions required. This improves compression and, in some cases, can improve query performance.
 
 The examples in this section share the following refresh policy:
 
