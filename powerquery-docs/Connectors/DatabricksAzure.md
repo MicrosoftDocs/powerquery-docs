@@ -52,7 +52,7 @@ To connect to Databricks from Power Query Desktop, take the following steps:
 
 4. Once you successfully connect, the **Navigator** shows the data available to you on the cluster. You can choose either **Transform Data** to transform the data using Power Query or **Load** to load the data in Power Query Desktop.
 
-    ![Image of Power Query navigator loading Databricks Cloud data to desktop app.](./media/databricksazure/navigator-with-filter.jpeg)
+    ![Image of Power Query navigator loading Databricks Cloud data to desktop app.](./media/databricksazure/navigator-with-filter.png)
 
 ## Connect to Databricks data from Power Query Online
 
@@ -60,7 +60,7 @@ To connect to Databricks from Power Query Online, take the following steps:
 
 1. In the Get Data experience, select the **Database** category. (Refer [here](/power-bi/transform-model/dataflows/dataflows-create) for instructions.) Shortlist the available Databricks connectors with the search box. Use the **Azure Databricks** connector for all Databricks SQL Warehouse data unless you've been instructed otherwise by your Databricks rep.  
 
-    ![Image of the Databricks connectors.](./media/databricksazure/filtered-connectors.jpeg)
+    ![Image of the Databricks connectors.](./media/databricksazure/filtered-connectors.png)
 
 2. Enter the **Server hostname** and **HTTP Path** for your Databricks SQL Warehouse. Refer [here](/azure/databricks/integrations/bi/jdbc-odbc-bi#get-server-hostname-port-http-path-and-jdbc-url) for instructions to look up your "Server hostname" and "HTTP Path". You can optionally supply a default catalog and/or database under **Advanced options**.
 
