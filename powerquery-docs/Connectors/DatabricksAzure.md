@@ -35,7 +35,7 @@ To connect to Databricks from Power Query Desktop, take the following steps:
 
     ![Get Data from Databricks Cloud.](./media/databricksazure/get-data-dbc.png)
 
-2. Provide the **Server hostname** and **HTTP Path** for your Databricks SQL Warehouse. Refer [here](/azure/databricks/integrations/bi/jdbc-odbc-bi#get-server-hostname-port-http-path-and-jdbc-url) for instructions to look up your "Server hostname" and "HTTP Path". Enter this information accordingly. You can optionally supply a default catalog and/or database under **Advanced options**. Select **OK** to continue.
+2. Provide the **Server hostname** and **HTTP Path** for your Databricks SQL Warehouse. Refer to [Configure the Databricks ODBC and JDBC drivers](/azure/databricks/integrations/bi/jdbc-odbc-bi) for instructions to look up your "Server hostname" and "HTTP Path". Enter this information accordingly. You can optionally supply a default catalog and/or database under **Advanced options**. Select **OK** to continue.
 
     ![Specify your Databricks SQL Warehouse.](./media/databricksazure/azdbc-sql-endpoint.png)
 
@@ -58,11 +58,11 @@ To connect to Databricks from Power Query Desktop, take the following steps:
 
 To connect to Databricks from Power Query Online, take the following steps:
 
-1. In the Get Data experience, select the **Database** category. (Refer [here](/power-bi/transform-model/dataflows/dataflows-create) for instructions.) Shortlist the available Databricks connectors with the search box. Use the **Azure Databricks** connector for all Databricks SQL Warehouse data unless you've been instructed otherwise by your Databricks rep.  
+1. In the Get Data experience, select the **Database** category. (Refer to [Creating a dataflow](/power-bi/transform-model/dataflows/dataflows-create) for instructions.) Shortlist the available Databricks connectors with the search box. Use the **Azure Databricks** connector for all Databricks SQL Warehouse data unless you've been instructed otherwise by your Databricks rep.  
 
     ![Image of the Databricks connectors.](./media/databricksazure/filtered-connectors.png)
 
-2. Enter the **Server hostname** and **HTTP Path** for your Databricks SQL Warehouse. Refer [here](/azure/databricks/integrations/bi/jdbc-odbc-bi#get-server-hostname-port-http-path-and-jdbc-url) for instructions to look up your "Server hostname" and "HTTP Path". You can optionally supply a default catalog and/or database under **Advanced options**.
+2. Enter the **Server hostname** and **HTTP Path** for your Databricks SQL Warehouse. Refer to [Configure the Databricks ODBC and JDBC drivers](/azure/databricks/integrations/bi/jdbc-odbc-bi) for instructions to look up your "Server hostname" and "HTTP Path". You can optionally supply a default catalog and/or database under **Advanced options**.
 
     ![Connection Settings and Credentials.](./media/databricksazure/azconnect-setting-cred.png)
 
