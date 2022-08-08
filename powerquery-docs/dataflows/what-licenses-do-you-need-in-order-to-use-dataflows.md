@@ -74,9 +74,9 @@ If you use Power BI Premium (capacity-based licensing), you can use all the AI c
 
 #### Limitations per premium capacity
 
-Dataflows that are using a premium capacity to refresh the data are limited to the maximum number of execution slots they can use. The maximum number of slots depends on the type of premium capacity you're using. The following table represents the maximum number of slots that can be consumed by all dataflows in a workspace mapped to the capacity.
+Dataflows that are using a premium capacity to refresh the data are limited to the maximum number of parallel tasks they can perform at a given time. The maximum number of parallel tasks depends on the type of premium capacity you're using. The following table represents the maximum number of parallel tasks that can be executed at a given time by all dataflows in a workspace mapped to the capacity.
 
-| SKU | v-cores | Number of execution slots |
+| SKU | v-cores | Number of parallel tasks |
 | --- | --- | --- |
 |EM1/A1|1|4|
 |EM2/A2|2|8|
@@ -87,22 +87,23 @@ Dataflows that are using a premium capacity to refresh the data are limited to t
 |P4/A7|64|64|
 |P5/A8|128|64|
 
-#### Execution slots
+#### Parallel tasks
 
-Executions slots are bins of CPU and memory that are used to execute M engine evaluations. A premium capacity is split up in execution slots and allows you to run multiple evaluations in parallel. For example, you have a P4 capacity and a dataflow that consumes 84 slots. You refresh your dataflow and the first 64 slots will be allocated for the refresh. The 20 left over evaluations for this dataflow will be parked in a queue. Once one of the evaluations is finished, it will start with the next evaluation from the queue. If you start another dataflow in your workspace on the same premium capacity while the other is still running, it will get parked in the same queue of the premium capacity and needs to wait on the other dataflows in the workspace to start the refresh of your data.
+A premium capacity can run multiple evaluations in parallel. For example, you have a P4 capacity and a dataflow that consists of 84 tasks. You refresh your dataflow and the first 64 tasks will be allocated for the refresh. The 20 left over evaluations for this dataflow will be parked in a queue. Once one of the evaluations is finished, it will start with the next evaluation from the queue. If you start another dataflow in your workspace on the same premium capacity while the other is still running, it will get parked in the same queue of the premium capacity and needs to wait on the other dataflows in the workspace to start the refresh of your data.
 
-You can use the pointers below to estimate the execution slots consumption of your dataflow refresh:
+You can use the pointers below to estimate the number of tasks of your dataflow refresh:
 
 * The number of queries executed in the refresh (don't forget the upstream linked entities).
-* The number of partitions in an incremental refresh query are considered as additional slots used.
+* The number of partitions in an incremental refresh query are considered as additional tasks.
 
-#### Strategy to lower execution slots consumption during refresh
+#### Strategy to lower the number of tasks during refresh
 
-To lower or improve the efficiency of your consumption of execution slots, you can use the following strategies:
+To lower the number of tasks or improve the efficiency of your tasks, you can use the following strategies:
 
 * Lower the number of queries in your dataflow by combining queries where possible and only "enable load" for queries that are used downstream.
 * Evaluate if you really need the upstream linked entities to refresh automatically.
-* Strategically schedule your dataflow refreshes based on the consumption of execution slots.
+* Strategically schedule your dataflow refreshes based on the number of tasks.
+* Make sure your query returns the minimum set of columns and rows to satisfy your data need. The faster and more efficiently the task executes, the sooner the next task can start.
 
 ### Using your organization's Azure Data Lake Storage account for dataflow storage
 
