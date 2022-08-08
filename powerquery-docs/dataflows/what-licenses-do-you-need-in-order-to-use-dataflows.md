@@ -3,15 +3,13 @@ title: What licenses do you need to use dataflows
 description: What licenses do you need to use dataflows
 author: radacad
 ms.topic: conceptual
-ms.date: 03/02/2022
+ms.date: 08/01/2022
 ms.author: bezhan
 
 LocalizationGroup: Data from files
 ---
 
 # What licenses do you need to use dataflows?
-
-
 
 Dataflows can be created in different portals, such as Power BI and the Power Apps, and can be of either analytical or standard type. In addition, some dataflow features are only available as Premium features. Considering the wide range of products that can use dataflows, and feature availability in each product or dataflow type, it's important to know what licensing options you need to use dataflows.
 
@@ -73,6 +71,38 @@ Power BI Pro gives you the ability to create analytical dataflows, but not use a
 ### Power BI Premium
 
 If you use Power BI Premium (capacity-based licensing), you can use all the AI capabilities in Power BI, computed entities and linked entities, with the ability to have a DirectQuery connection to the dataflow, and you can use the enhanced compute engine. However, the dataflow created under a premium capacity license uses only the internal Azure Data Lake Storage, and won't be accessible by other platforms except Power BI itself. You can't create external dataflows just by having a Power BI Premium license; you need to have an Azure subscription for Azure Data Lake Storage as well.
+
+#### Limitations per premium capacity
+
+Dataflows that are using a premium capacity to refresh the data are limited to the maximum number of execution slots they can use. The maximum number of slots depends on the type of premium capacity you're using. The following table represents the maximum number of slots that can be consumed by all dataflows in a workspace mapped to the capacity.
+
+| SKU | v-cores | Number of execution slots |
+| --- | --- | --- |
+|EM1/A1|1|4|
+|EM2/A2|2|8|
+|EM3/A3|4|16|
+|P1/A4|8|32|
+|P2/A5|16|64|
+|P3/A6|32|64|
+|P4/A7|64|64|
+|P5/A8|128|64|
+
+#### Execution slots
+
+Executions slots are bins of CPU and memory that are used to execute M engine evaluations. A premium capacity is split up in execution slots and allows you to run multiple evaluations in parallel. For example, you have a P4 capacity and a dataflow that consumes 84 slots. You refresh your dataflow and the first 64 slots will be allocated for the refresh. The 20 left over evaluations for this dataflow will be parked in a queue. Once one of the evaluations is finished, it will start with the next evaluation from the queue. If you start another dataflow in your workspace on the same premium capacity while the other is still running, it will get parked in the same queue of the premium capacity and needs to wait on the other dataflows in the workspace to start the refresh of your data.
+
+You can use the pointers below to estimate the execution slots consumption of your dataflow refresh:
+
+* The number of queries executed in the refresh (don't forget the upstream linked entities).
+* The number of partitions in an incremental refresh query are considered as additional slots used.
+
+#### Strategy to lower execution slots consumption during refresh
+
+To lower or improve the efficiency of your consumption of execution slots, you can use the following strategies:
+
+* Lower the number of queries in your dataflow by combining queries where possible and only "enable load" for queries that are used downstream.
+* Evaluate if you really need the upstream linked entities to refresh automatically.
+* Strategically schedule your dataflow refreshes based on the consumption of execution slots.
 
 ### Using your organization's Azure Data Lake Storage account for dataflow storage
 
