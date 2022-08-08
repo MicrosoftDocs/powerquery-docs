@@ -3,7 +3,7 @@ title: Azure Data Lake Storage Gen2
 description: Includes basic information, prerequisites, and information on how to connect to Azure Data Lake Storage Gen2, along with a list of limitations.
 author: dougklopfenstein
 ms.topic: conceptual
-ms.date: 5/24/2022
+ms.date: 8/8/2022
 ms.author: dougklo
 ---
 
@@ -15,7 +15,7 @@ ms.author: dougklo
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
-| Authentication Types Supported | Anonymous<br/>Windows<br/>Basic<br/>Organizational Account |
+| Authentication Types Supported | Organizational Account<br/>Account Key<br/>Shared Access Signature (SAS) Key |
 | Function Reference Documentation | [AzureStorage.DataLake](/powerquery-m/azurestorage-datalake)<br/>[AzureStorage.DataLakeContents](/powerquery-m/azurestorage-datalakecontents) |
 
 >[!Note]
