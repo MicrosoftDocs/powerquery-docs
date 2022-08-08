@@ -112,4 +112,4 @@ To override this behavior, you can take either of the following two actions:
 * [List of connectors in Power Query](/Connectors/index.md)
 * [On-premises data gateways documentation](/data-integration/gateway/)
 * [Change the gateway used in a dataflow](change-gateway-dataflow.md)
-* [Troubleshooting dataflow issues: Connection to the data source](/powerquery-docs/dataflows/troubleshooting-dataflow-issues-connection-to-the-data-source.md)
+* [Troubleshooting dataflow issues: Connection to the data source](/power-query/dataflows/troubleshooting-dataflow-issues-connection-to-the-data-source)
