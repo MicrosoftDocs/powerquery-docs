@@ -37,9 +37,11 @@ shared HelloWorld.Contents = (optional message as text) =>
 
 Functions marked as `shared` in your extension can be associated with a specific data source by including a `DataSource.Kind` literal attribute on the function with the name of a Data Source definition record. 
 The Data Source record defines the authentication types supported by your data source, and basic branding information (like the display name / label).
-The name of the record becomes is unique identifier. 
+The name of the record becomes its unique identifier. 
 
-Functions associated with a data source must have the same required function parameters (including name, type, and order). Functions for a specific Data Source Kind can only use credentials associated with that Kind.
+Each function associated with the same data source must have the same required function parameters, including name, type, and order. (For purposes of Data Source Kind, a parameter is not considered required if it is marked `optional` or if its metadata contains `DataSource.Path = false`.)
+
+Functions for a specific Data Source Kind can only use credentials associated with that Kind.
 Credentials are identified at runtime by performing a lookup based on the combination of the function's required parameters.
 For more information about how credentials are identified, see [Data Source Paths](HandlingAuthentication.md#data-source-paths).
 
