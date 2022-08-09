@@ -27,18 +27,18 @@ LocalizationGroup: reference
 
 ## Prerequisites
 
-This connector is for use with a Databricks SQL Warehouse running on either AWS or GCP and using OAuth. If you're using Azure Databricks, use the [Azure Databricks](DatabricksAzure.md) connector. Databricks Community Edition isn't supported.
+This connector is only for use with a Databricks SQL Warehouse running on AWS and using OAuth. If you're using Azure Databricks, use the [Azure Databricks](DatabricksAzure.md) connector. If you aren't using OAuth with your Databricks SQL Warehouse (on AWS or GCP), use the [Azure Databricks](DatabricksAzure.md) connector too. Databricks Community Edition isn't supported.
 
 ## Capabilities supported
 
 * Import
 * DirectQuery (Power BI only)
 
-## Connect to Databricks (AWS or GCP) from Power Query Desktop
+## Connect to Databricks from Power Query Desktop
 
 To connect to Databricks from Power Query Desktop, take the following steps:
 
-1. In the Get Data experience, search for **Databricks** to shortlist the **Databricks (Beta)** connector. You should use the **Databricks** connector here for your Databricks SQL Warehouse data (running on either AWS or GCP) when you're using OAuth for authentication.
+1. In the Get Data experience, search for **Databricks** to shortlist the **Databricks (Beta)** connector. You should only use the **Databricks** connector here for your Databricks SQL Warehouse data (running on AWS) if you're using OAuth for authentication.
 
     ![Get Data from Databricks Cloud.](./media/databricks/get-data-dbc.png)
 
