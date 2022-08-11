@@ -94,7 +94,7 @@ The following table lists the fields for your Publish record.
 
 | Field               | Type    | Details |
 |:--------------------|:--------|:-----------------------------------------|
-| ButtonText          | list    | List of text items. First item defines the name displayed next to the data source's icon in the Power BI **Get Data** dialog. The second is optional; if provided, defines the tool tip that will be displayed if the preceding name is moused-over. |
+| ButtonText          | list    | List of text items. The first item defines the name displayed next to the data source's icon in the Power BI **Get Data** dialog. The second item (optional) defines the tool tip that will be displayed when the preceding name is moused-over. |
 | Category            | text    | Where the extension should be displayed in the **Get Data** dialog. Currently the only category values with special handing are `Azure` and `Database`. All other values will end up under the Other category. |
 | Beta                | logical | **(optional)** When set to true, the UI will display a Preview/Beta identifier next to your connector name and a warning dialog that the implementation of the connector is subject to breaking changes. |
 | LearnMoreUrl        | text    | **(optional)** Url to website containing more information about this data source or connector. |
