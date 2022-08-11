@@ -49,7 +49,7 @@ Table.ToNavigationTable = (
 | keyColumns     | List of column names that act as the primary key for your navigation table.      |
 | nameColumn     | The name of the column that should be used as the display name in the navigator. |
 | dataColumn     | The name of the column that contains the Table or Function to display.           |
-| itemKindColumn | The name of the column to use to determine the type of icon to display. Valid values for the column are `Table` and `Function`.    |
+| itemKindColumn | The name of the column to use to determine the type of icon to display. Valid values for the column are listed in the [Handling Navigation article](https://docs.microsoft.com/en-us/power-query/handlingnavigationtables#values-for-itemkind).    |
 | itemNameColumn | The name of the column to use to determine the type of tooltip to display. Valid values for the column are `Table` and `Function`. |
 | isLeafColumn   | The name of the column used to determine if this is a leaf node, or if the node can be expanded to contain another navigation table. |
 
