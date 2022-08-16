@@ -23,7 +23,7 @@ There are a number of ways to work around this. Here are a few suggestions:
 
 * Perform a sort *after* applying the downstream operation. For example, when grouping rows, sort the nested table in each group before applying further steps. Here's some sample M code that demonstrates this approach: `Table.Group(Sales_SalesPerson, {"TerritoryID"}, {{"SortedRows", each Table.Sort(_, {"SalesYTD", Order.Descending})}})`
 * Buffer the data (using `Table.Buffer`) before applying the downstream operation. In some cases, this operation will cause the downstream operation to preserve the buffered sort order.
-* Use [ranking](/rank-column). For example, instead of using `Table.Distinct`, you could order by the column(s) containing the duplicate values, rank based on a tie-breaker column (such as `modified_date`), and then filter to keep just the rank 1 rows.
+* Use [ranking](rank-column.md). For example, instead of using `Table.Distinct`, you could order by the column(s) containing the duplicate values, rank based on a tie-breaker column (such as `modified_date`), and then filter to keep just the rank 1 rows.
 
 ## Data type inference
 
