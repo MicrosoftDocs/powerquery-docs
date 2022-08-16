@@ -94,11 +94,11 @@ The following table lists the fields for your Publish record.
 
 | Field               | Type    | Details |
 |:--------------------|:--------|:-----------------------------------------|
-| ButtonText          | list    | List of text items that will be displayed next to the data source's icon in the Power BI **Get Data** dialog. |
+| ButtonText          | list    | List of text items. The first item defines the name displayed next to the data source's icon in the Power BI **Get Data** dialog. The second item (optional) defines the tool tip that will be displayed when the preceding name is moused-over. |
 | Category            | text    | Where the extension should be displayed in the **Get Data** dialog. Currently the only category values with special handing are `Azure` and `Database`. All other values will end up under the Other category. |
 | Beta                | logical | **(optional)** When set to true, the UI will display a Preview/Beta identifier next to your connector name and a warning dialog that the implementation of the connector is subject to breaking changes. |
 | LearnMoreUrl        | text    | **(optional)** Url to website containing more information about this data source or connector. |
-| SupportsDirectQuery | logical | **(optional)** Enables Direct Query for your extension.<br>**This is currently only supported for ODBC extensions.** |
+| SupportsDirectQuery | logical | **(optional)** Enables Direct Query for your extension. |
 | SourceImage         | record  | **(optional)** A record containing a list of binary images (sourced from the extension file using the **Extension.Contents** method). The record contains two fields (Icon16, Icon32), each with its own list. Each icon should be a different size. |
 | SourceTypeImage     | record  | **(optional)** Similar to SourceImage, except the convention for many out of the box connectors is to display a sheet icon with the source specific icon in the bottom right corner. Having a different set of icons for SourceTypeImage is optional&mdash;many extensions simply reuse the same set of icons for both fields. |
 | | | |
