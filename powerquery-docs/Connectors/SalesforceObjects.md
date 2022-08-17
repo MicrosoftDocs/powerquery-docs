@@ -102,4 +102,6 @@ To connect to Salesforce Objects data:
 
 * Lightning URLs aren't supported.
 
+* Salesforce limits the number of concurrent queries that can be executed by a single account. ['INVALID_QUERY_LOCATOR ' error](https://help.salesforce.com/s/articleView?id=000323582&type=1) This is a Salesforce limit, and can be encountered when there are multiple concurrent queries against Salesforce using the same account. This includes all client applications (not just the PowerQuery connector) using the Salesforce API. To reduce the likelihood of this error, ensure that the number of Salesforce queries are kept to a minimum, use available options (such as dataflows) to stage the data from Salesforce, and confirm that other uses of the Salesforce API with the same account are not scheduled concurrently.
+
 For more information about Salesforce internal API limits, go to [Salesforce Developer Limits and Allocations Quick Reference](https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm#!).
