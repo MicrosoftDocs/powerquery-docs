@@ -202,6 +202,45 @@ For Power Query Online, you're required to load the data into the Power Query ed
 
 [![Sample query loaded into the query editor](media/query-plan/alternative-approach.png)](media/query-plan/sample-query.png#lightbox)
 
+### Recent Connections
+An alternative to the above Get Data experience in Power Query Online is the **Recent connections** function. Using **Recent connections**, you can access recently used connections by selecting from a list ordered by recency.
+
+#### To use Recent connections
+
+1.	From the **Home** tab on the ribbon, go to the **New Query** group 
+
+2. Select **Recent connections**
+3. Query editor
+
+![Recent connections in ribbon bar ](media/get-data-experience/pqo-recentconnections-ribbon.png)
+
+##### Recent connections - Dropdown
+
+The dropdown contains the 10 most recent connections ordered by recency. Hovering on a specific connection shows additional information about the connection in tooltip with the format “resource path (gateway)”. Select the connection you want to use.
+
+[Recent connections in dropdown with hover](media/get-data-experience/pqo-recentconnections-dropdown.png)
+
+##### Recent connections - Window
+
+If you want to access other recent connections not included in the 10 most recent connections. You can select **More connections...**. The **Recent connections** window will open in the center of the page.
+
+[Recent connections window](media/get-data-experience/pqo-recentconnections-window.png)
+
+You can look for the connection by scrolling down the list. Alternatively, you can search the connection by:
+1.	Connection name (ex. “API 1”)
+2.	Resource path (ex. “https://contoso-my.sharepoint.com/1”)
+3.	Type of connection (ex. “web”)
+
+You can also pin connections to the top by clicking on the “pin” icon while hovering over the target connection. To remove the pin, simply click the pin icon again.
+
+[Recent connections window pinnning](media/get-data-experience/pqo-recentconnections-pin.png)
+
+To remove a connection from the “Recent connections”, right click on the connection and select “Remove from list” from the options.
+
+[Recent connections window removal](media/get-data-experience/pqo-recentconnections-removal.png)
+
+Once you have selected a data connection, you’ll then be brought to Data preview to complete the Get Data experience.
+
 ## Additional information
 
 To better understand how to get data using the different product integrations of Power Query, go to [Where to get data](where-to-get-data.md).
