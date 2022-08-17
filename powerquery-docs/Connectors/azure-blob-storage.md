@@ -52,6 +52,8 @@ To connect to Azure Blob Storage:
 
    ![Screenshot of the sign in dialog box for Azure Blob Storage, with the account key authentication method selected.](./media/azure-blob-storage/sign-in-desktop.png)
 
+   For more information about using and managing authentication, go to [Authentication with a data source](../connectorauthentication.md).
+
    >[!NOTE]
    > If you are signing in from Excel, you can also select the shared access signature (SAS) authentication method.
 
@@ -76,6 +78,8 @@ To connect to Azure Blob Storage:
 4. Select the **Authentication kind** used to access your blob storage. If you've set blob storage for anonymous access, choose **Anonymous**. If you set blob storage to require an account key, choose **Account key**. More information: [Copy your account key from Azure Blob Storage](#copy-your-account-key-from-azure-blob-storage)
 
    ![Screenshot of the Connect to data source page, with the example account name filled in, no gateway selected, and the Account key authentication filled in.](./media/azure-blob-storage/settings-and-credentials.png)
+
+   For more information about using and managing authentication, go to [Authentication with a data source](../connectorauthentication.md).
 
 5. Select **Next**.
 

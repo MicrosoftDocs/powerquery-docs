@@ -67,7 +67,7 @@ To make the connection, take the following steps:
    >[!Note]
    > You must select an on-premises data gateway for this connector, whether the Sybase database is on your local network or online.
 
-4. If this is the first time you're connecting to this Sybase server and database, select the type of credentials for the connection in **Authentication kind**. Choose **Basic** if you plan to use an account that's created in the Sybase database instead of Windows authentication.
+4. If this is the first time you're connecting to this Sybase server and database, select the type of credentials for the connection in **Authentication kind**. Choose **Basic** if you plan to use an account that's created in the Sybase database instead of Windows authentication.  For more information about using and managing authentication, go to [Authentication with a data source](../connectorauthentication.md).
 
 5. Enter your credentials.
 
