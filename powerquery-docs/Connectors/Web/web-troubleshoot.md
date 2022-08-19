@@ -3,7 +3,7 @@ title: Troubleshooting the Power Query Web connector
 description: Provides troubleshooting tips for errors that might occur when using the Power Query Web connector to connect to a web site.
 author: dougklopfenstein
 ms.topic: conceptual
-ms.date: 04/28/2021
+ms.date: 8/19/2022
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -114,4 +114,4 @@ It's not possible to switch Power Query to use HTTP 1.0. Power Query always send
 ### See also
 
 * [Power Query Web connector](web.md)
-* [Troubleshooting the Power Query Web connector](web-troubleshoot.md)
+* [Get webpage data by providing examples](web-by-example.md)
