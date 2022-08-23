@@ -90,6 +90,12 @@ To connect to Salesforce Objects data:
 
 ## Known issues and limitations
 
+* If there are missing tables in the results from the Salesforce Objects connector, one cause may be that the ApiVersion must be specified or updated to be a version that is supported by Salesforce. To specify or update the ApiVersion, use the Advanced Editor and explicitly add the ApiVersion parameter.
+
+For example: ```Source = Salesforce.Data("https://login.salesforce.com/", [ApiVersion = 54.0])```
+
+ApiVersions are periodically deprecated by Salesforce, so ensure that you are specifying a supported ApiVersion.
+
 * There's a limit on the number of fields a query to Salesforce can contain. The limit varies depending on the type of the columns, the number of computed columns, and so on. When you receive the `Query is either selecting too many fields or the filter conditions are too complicated` error, it means that your query exceeds the limit. To avoid this error, use the **Select Query** advanced option and specify fields that you really need.
 
 * Salesforce session settings can block this integration. Ensure that the setting **Lock sessions to the IP address from which they originated** is disabled.
