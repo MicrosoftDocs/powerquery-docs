@@ -85,7 +85,7 @@ Before you begin this tutorial, you must have the following prerequisites:
 
 ## Publish report to Power BI service
 
-After you've created the visualizations in Power BI Desktop, you can share it with others by publishing it to the Power BI service. For instructions on how to do that, go to [Publish from Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-upload-desktop-files/).
+After you've created the visualizations in Power BI Desktop, you can share it with others by publishing it to the Power BI service. For instructions on how to do that, go to [Publish from Power BI Desktop](/power-bi/create-reports/desktop-upload-desktop-files).
 
 ## See also
 
