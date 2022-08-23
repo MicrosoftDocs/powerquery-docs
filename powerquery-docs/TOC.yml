@@ -320,6 +320,8 @@
         href: Connectors/AutodeskConstructionCloud.md
       - name: "Automy Data Analytics (Beta)"
         href: Connectors/AutomyDataAnalytics.md
+      - name: "Azure Blob Storage"
+        href: Connectors/azure-blob-storage.md
       - name: "Azure Cost Management"
         href: Connectors/AzureCostManagement.md
       - name: "Azure Databricks"
@@ -486,6 +488,10 @@
         href: Connectors/Stripe.md
       - name: "SumTotal"
         href: Connectors/SumTotal.md
+      - name: "Sybase database"
+        href: Connectors/sybase-database.md
+      - name: "Teradata database"
+        href: Connectors/teradata.md
       - name: "Text/CSV"
         href: Connectors/TextCSV.md
       - name: "TIBCO(R) Data Virtualization"
