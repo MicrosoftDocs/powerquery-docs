@@ -94,7 +94,7 @@ To connect to Salesforce Objects data:
 
 For example: ```Source = Salesforce.Data("https://login.salesforce.com/", [ApiVersion = 54.0])```
 
-ApiVersions are periodically deprecated by Salesforce, so ensure that you are specifying a supported ApiVersion.
+ApiVersions are periodically deprecated by Salesforce, so ensure that you are specifying a [Salesforce supported ApiVersion](https://na1.salesforce.com/services/data/).
 
 * There's a limit on the number of fields a query to Salesforce can contain. The limit varies depending on the type of the columns, the number of computed columns, and so on. When you receive the `Query is either selecting too many fields or the filter conditions are too complicated` error, it means that your query exceeds the limit. To avoid this error, use the **Select Query** advanced option and specify fields that you really need.
 
