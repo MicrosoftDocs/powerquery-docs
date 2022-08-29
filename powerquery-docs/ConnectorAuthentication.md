@@ -4,7 +4,7 @@ description: How to select credentials for a connector in Power Query to authent
 author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 5/11/2020
-ms.author: bezhan
+ms.author: dougklo
 LocalizationGroup: reference
 ms.custom: edited
 ---

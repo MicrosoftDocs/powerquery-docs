@@ -4,7 +4,7 @@ description: Describes how to troubleshoot and test your ODBC-based Power Query 
 author: cpopell
 ms.topic: conceptual
 ms.date: 1/19/2022
-ms.author: dougklo
+ms.author: miescobar
 LocalizationGroup: reference
 ---
 

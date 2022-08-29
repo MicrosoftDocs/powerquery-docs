@@ -4,7 +4,7 @@ description: How to use connectors to access data using M data source functions
 author: cpopell
 ms.topic: conceptual
 ms.date: 8/3/2022
-ms.author: dougklo
+ms.author: miescobar
 LocalizationGroup: reference
 ---
 

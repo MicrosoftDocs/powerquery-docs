@@ -4,7 +4,7 @@ description: Manage navigation for Power Query connectors
 author: cpopell
 ms.topic: conceptual
 ms.date: 6/9/2022
-ms.author: dougklo
+ms.author: miescobar
 LocalizationGroup: reference
 ---
 

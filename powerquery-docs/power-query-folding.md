@@ -5,7 +5,7 @@ author: peter-myers
 ms.reviewer: asaxton
 ms.topic: conceptual
 ms.date: 6/27/2022
-ms.author: dougklo
+ms.author: miescobar
 ---
 
 # Power Query query folding

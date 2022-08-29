@@ -4,7 +4,7 @@ description: What is the storage structure for analytical dataflows
 author: radacad
 ms.topic: conceptual
 ms.date: 12/3/2020
-ms.author: bezhan
+ms.author: bensack
 ---
 
 # What is the storage structure for analytical dataflows? 

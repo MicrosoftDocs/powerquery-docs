@@ -4,7 +4,7 @@ description: Split columns by uppercase to lowercase
 author: jessli20
 ms.topic: conceptual
 ms.date: 06/04/2020
-ms.author: bezhan
+ms.author: miescobar
 ---
 
 # Split columns by uppercase to lowercase

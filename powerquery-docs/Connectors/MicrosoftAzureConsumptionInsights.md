@@ -1,7 +1,7 @@
 ---
 title: Microsoft Azure Consumption Insights (Beta) (Deprecated)
 description: Provides information on the deprecation of the Microsoft Azure Consumption Insights connector.
-author: bezhan
+author: bezhan-msft
 ms.topic: conceptual
 ms.date: 7/11/2022
 ms.author: bezhan

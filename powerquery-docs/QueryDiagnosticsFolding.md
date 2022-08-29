@@ -4,7 +4,7 @@ description: Using Query Diagnostics to understand what operations are folding v
 author: cpopell
 ms.topic: conceptual
 ms.date: 2/28/2022
-ms.author: dougklo
+ms.author: miescobar
 LocalizationGroup: reference
 ---
 

@@ -3,7 +3,7 @@ title: Fill values in a column
 description: With Power Query, you can use the values in a column to fill down or fill up any empty spaces in the column. This article demonstrates how to perform these transformations in Power Query.
 author: ptyx507
 ms.date: 06/08/2020
-ms.author: dougklo
+ms.author: miescobar
 ms.custom: edited
 ---
 

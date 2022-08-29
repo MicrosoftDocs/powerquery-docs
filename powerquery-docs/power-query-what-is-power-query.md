@@ -5,7 +5,7 @@ author: mllopis
 
 ms.topic: overview
 ms.date: 03/14/2022
-ms.author: millopis
+ms.author: miescobar
 ---
 
 # What is Power Query?

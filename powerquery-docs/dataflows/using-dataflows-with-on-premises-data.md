@@ -6,7 +6,7 @@ ms.reviewer: dougklo
 
 ms.topic: article
 author: Mattp123
-ms.author: dougklo
+ms.author: bensack
 ---
 
 # Using an on-premises data gateway in Power Platform dataflows

@@ -6,7 +6,6 @@ author: DougKlopfenstein
 ms.topic: quickstart
 ms.date: 6/27/2022
 ms.author: dougklo
-ms.reviewer: dougklo
 localizationgroup: reference
 ---
 

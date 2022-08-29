@@ -4,7 +4,7 @@ description: How to sign custom connectors for trusted use with recommended secu
 author: cpopell
 ms.topic: conceptual
 ms.date: 12/1/2021
-ms.author: dougklo
+ms.author: miescobar
 LocalizationGroup: reference
 ---
 

@@ -4,7 +4,7 @@ description: Use the wait-retry pattern for Power Query connectors
 author: mmasson
 ms.topic: conceptual
 ms.date: 2/28/2022
-ms.author: dougklo
+ms.author: miescobar
 LocalizationGroup: reference
 ---
 

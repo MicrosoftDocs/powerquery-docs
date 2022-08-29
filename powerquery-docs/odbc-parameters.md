@@ -4,7 +4,7 @@ description: Describes the parameters that can be used with the Odbc.Datasource 
 author: cpopell
 ms.topic: conceptual
 ms.date: 3/1/2022
-ms.author: dougklo
+ms.author: miescobar
 LocalizationGroup: reference
 ---
 

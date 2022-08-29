@@ -2,7 +2,7 @@
 title: LinkedIn Sales Navigator (Beta)
 description: Includes basic information, prerequisites, and information on how to connect to LinkedIn Sales Navigator.
 
-author: dougklopfenstein
+author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 7/14/2022
 ms.author: dougklo

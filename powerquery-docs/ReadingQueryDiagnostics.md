@@ -4,7 +4,7 @@ description: How to read and interpret Query Diagnostics, and how to properly bu
 author: cpopell
 ms.topic: conceptual
 ms.date: 10/31/2019
-ms.author: dougklo
+ms.author: miescobar
 LocalizationGroup: reference
 ---
 

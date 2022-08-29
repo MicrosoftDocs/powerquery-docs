@@ -4,7 +4,7 @@ description: Troubleshooting dataflow issue - get data from dataflow.
 author: radacad
 ms.topic: conceptual
 ms.date: 12/3/2020
-ms.author: bezhan
+ms.author: bensack
 
 LocalizationGroup: Data from files
 ---

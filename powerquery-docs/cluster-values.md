@@ -3,7 +3,7 @@ title: Cluster values
 description: An article that demonstrates how to create a cluster values column in Power Query
 author: ptyx507
 ms.date: 11/30/2020
-ms.author: dougklo
+ms.author: miescobar
 ---
 
 # Cluster values

@@ -4,7 +4,7 @@ description: Using the output of Microsoft Power Platform dataflows from other A
 author: radacad
 ms.topic: conceptual
 ms.date: 12/3/2020
-ms.author: bezhan
+ms.author: bensack
 ---
 
 # Using the output of Microsoft Power Platform dataflows from other Azure data workloads

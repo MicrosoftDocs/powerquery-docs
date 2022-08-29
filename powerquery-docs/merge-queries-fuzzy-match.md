@@ -4,7 +4,7 @@ description: "Finding approximate matches with Fuzzy Matching in Power Query's m
 
 author: ptyx507X
 ms.date: 12/22/2021
-ms.author: dougklo
+ms.author: miescobar
 ms.custom: edited
 ---
 

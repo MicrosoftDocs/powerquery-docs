@@ -3,7 +3,7 @@ title: Filter by values in a column
 description: In Power Query, you can include or exclude rows according to a specific value by using any of the filter commands in a column.
 author: ptyx507
 ms.date: 06/08/2020
-ms.author: dougklo
+ms.author: miescobar
 ms.custom: edited
 ---
 

@@ -4,7 +4,7 @@ description: Provides an overview of how to use DirectQuery for an ODBC-based Po
 author: cpopell
 ms.topic: conceptual
 ms.date: 1/19/2022
-ms.author: dougklo
+ms.author: miescobar
 LocalizationGroup: reference
 ---
 

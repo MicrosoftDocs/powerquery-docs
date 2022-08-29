@@ -4,7 +4,7 @@ description: Describes how to use the Power Query SDK to handle proxy support fo
 author: bezhan-msft
 ms.topic: conceptual
 ms.date: 2/2/2022
-ms.author: bezhan
+ms.author: miescobar
 LocalizationGroup: reference
 ---
 

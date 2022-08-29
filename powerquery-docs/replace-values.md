@@ -3,7 +3,7 @@ title: Replace values and errors
 description: In Power Query, you can replace values and errors found in one or multiple columns with a value of your choice. This article demonstrates how to do this transformation in Power Query.
 author: ptyx507
 ms.date: 06/08/2020
-ms.author: dougklo
+ms.author: miescobar
 ms.custom: edited
 ---
 

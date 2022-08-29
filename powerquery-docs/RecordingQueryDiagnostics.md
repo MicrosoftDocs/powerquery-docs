@@ -4,7 +4,7 @@ description: How to use Query Diagnostics to record in authoring, preview refres
 author: cpopell
 ms.topic: conceptual
 ms.date: 2/28/2022
-ms.author: dougklo
+ms.author: miescobar
 LocalizationGroup: reference
 ---
 

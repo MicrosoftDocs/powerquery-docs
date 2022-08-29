@@ -4,7 +4,7 @@ description: A list of functional, ODBC, and tutorial samples of Power Query con
 author: cpopell
 ms.topic: conceptual
 ms.date: 2/28/2022
-ms.author: dougklo
+ms.author: miescobar
 LocalizationGroup: reference
 ---
 

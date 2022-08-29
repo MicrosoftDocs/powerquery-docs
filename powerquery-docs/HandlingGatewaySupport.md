@@ -4,7 +4,7 @@ description: Manage gateway support for Power Query connectors, including test c
 author: cpopell
 ms.topic: conceptual
 ms.date: 2/28/2022
-ms.author: dougklo
+ms.author: miescobar
 LocalizationGroup: reference
 ---
 
