@@ -4,7 +4,7 @@ description: Step-by-step instructions for how to use Power Query to add data to
 author: mllopis
 ms.reviewer: dougklo
 ms.topic: how-to
-ms.date: 1/5/2022
+ms.date: 8/18/2022
 ms.author: bensack
 LocalizationGroup: reference
 ---
@@ -80,7 +80,7 @@ Before you start to follow this article:
     ![List of standard and custom tables.](./media/entity-list.png)
 
 > [!WARNING]
-> If you use Power Query to add data to an existing table, all data in that table will be overwritten.
+> Existing data might be altered or deleted when loading data to a Dataverse table while having the **Delete rows that no longer exist in the query output** enabled or a primary key column defined.
 
 If you select **Load to existing table**, you can specify a table into which you add data from the **Customers** table. You could, for example, add the data to the **Account** table with which the Dataverse ships. Under **Column mapping**, you can further specify that data in the **ContactName** column from the **Customers** table should be added to the **Name** column in the **Account** table.
 

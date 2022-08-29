@@ -8,7 +8,7 @@ ms.author: bezhan
 
 # Providing user documentation for your custom connector
 
-Once you've finished designing your Power Query custom connector, you'll need to submit an article that provides instructions on how to use your connector for publication on docs.microsoft.com. This article discusses the layout of such an article and how to format the text of your article.
+Once you've finished designing your Power Query custom connector, you'll need to submit an article that provides instructions on how to use your connector for publication on Microsoft Docs. This article discusses the layout of such an article and how to format the text of your article.
 
 ## Article layout
 
@@ -72,7 +72,7 @@ Any other instructions or information about your connector that hasn't been cove
 
 Your article should be made available on GitHub under the Connectors folder in the Power Query docs repo: <https://github.com/MicrosoftDocs/powerquery-docs/tree/master/powerquery-docs/Connectors>. Ensure that you also add a link to your article in the [list of connectors](./connectors/index.md) referencing the correct logo image uploaded to `/Connectors/media/index` folder. Lastly, ensure that you add a link to your article in the table of contents file (`TOC.yml`). Certified connectors will only be available under **Power BI (Datasets)**.
 
-See the [Microsoft Docs contributor guide](/contribute/) on how you can contribute to our repo.
+See our [contributor guide](/contribute/) on how you can contribute to our repo.
 
 The article should be formatted and submitted as a Markdown file. It should use the Microsoft style for describing procedures and the UI layout.  
 
