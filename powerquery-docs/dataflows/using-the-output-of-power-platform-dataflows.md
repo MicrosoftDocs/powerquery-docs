@@ -6,7 +6,6 @@ ms.topic: conceptual
 ms.date: 01/12/2022
 ms.author: jeluitwi
 
-LocalizationGroup: Data from files
 ---
 
 # Consume data from dataflows

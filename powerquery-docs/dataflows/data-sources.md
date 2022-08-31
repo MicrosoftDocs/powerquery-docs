@@ -6,7 +6,6 @@ ms.topic: conceptual
 ms.date: 7/21/2021
 ms.author: bensack
 
-LocalizationGroup: Data from files
 ---
 
 # Connect to data sources for dataflows

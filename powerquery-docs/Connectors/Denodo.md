@@ -6,7 +6,6 @@ ms.author: bezhan
 ms.service: powerquery
 ms.topic: conceptual
 ms.date: 6/24/2022
-LocalizationGroup: reference
 ---
 
 # Denodo

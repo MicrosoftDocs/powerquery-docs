@@ -5,7 +5,6 @@ author: ptyx507x
 ms.date: 11/27/2019
 ms.author: miescobar
 ms.custom: intro-internal
-LocalizationGroup: Get started
 ---
 
 # Creating your first connector: Hello World

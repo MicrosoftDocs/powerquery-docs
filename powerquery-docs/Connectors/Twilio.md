@@ -5,7 +5,6 @@ author: bezhan-msft
 ms.topic: conceptual
 ms.date: 1/22/2022
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # Twilio (Deprecated) (Beta)

@@ -7,7 +7,6 @@ author: ptyx507x
 ms.topic: tutorial
 ms.date: 6/20/2022
 ms.author: miescobar
-LocalizationGroup: reference
 ---
 
 # TripPin Part 10&mdash;Basic Query Folding

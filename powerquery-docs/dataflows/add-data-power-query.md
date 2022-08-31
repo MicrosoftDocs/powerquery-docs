@@ -6,7 +6,6 @@ ms.reviewer: dougklo
 ms.topic: how-to
 ms.date: 8/18/2022
 ms.author: bensack
-LocalizationGroup: reference
 ---
 
 # Add data to a table in Microsoft Dataverse by using Power Query

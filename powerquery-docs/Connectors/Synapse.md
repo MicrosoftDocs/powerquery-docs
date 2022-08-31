@@ -5,7 +5,6 @@ author: miquelladeboer
 ms.topic: conceptual
 ms.date: 3/21/2022
 ms.author: mideboer
-LocalizationGroup: reference
 ---
 
 # Azure Synapse Analytics workspace (Beta)

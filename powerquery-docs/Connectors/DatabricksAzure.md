@@ -6,7 +6,6 @@ author: bezhan-msft
 ms.topic: conceptual
 ms.date: 8/4/2022
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # Azure Databricks

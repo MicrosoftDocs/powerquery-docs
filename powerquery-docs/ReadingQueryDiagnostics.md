@@ -5,7 +5,6 @@ author: ptyx507x
 ms.topic: conceptual
 ms.date: 10/31/2019
 ms.author: miescobar
-LocalizationGroup: reference
 ---
 
 # Visualizing and Interpreting Query Diagnostics in Power BI

@@ -5,7 +5,6 @@ author: bezhan-msft
 ms.topic: conceptual
 ms.date: 8/12/2022
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # Teradata database

@@ -5,7 +5,6 @@ author: bezhan-msft
 ms.topic: conceptual
 ms.date: 8/16/2022
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # Sybase database

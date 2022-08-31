@@ -5,7 +5,6 @@ author: bezhan-msft
 ms.topic: how-to
 ms.date: 12/2/2020
 ms.author: bezhan
-LocalizationGroup: Connect to data
 ---
 # Get webpage data by providing examples
 

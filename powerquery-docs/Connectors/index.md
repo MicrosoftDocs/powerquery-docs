@@ -5,7 +5,6 @@ author: bezhan-msft
 ms.date: 7/11/2022
 ms.author: bezhan
 ms.custom: intro-internal
-LocalizationGroup: reference
 ---
 
 # Connectors in Power Query

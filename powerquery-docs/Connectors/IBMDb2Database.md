@@ -5,7 +5,6 @@ author: bezhan-msft
 ms.topic: conceptual
 ms.date: 10/7/2021
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # IBM Db2 database

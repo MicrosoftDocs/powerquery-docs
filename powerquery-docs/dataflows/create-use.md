@@ -7,7 +7,6 @@ ms.date: 10/27/2021
 ms.author: bensack
 ms.custom: 
 
-LocalizationGroup: Dataflows
 ---
 
 # Create and use dataflows in Microsoft Power Platform

@@ -9,7 +9,6 @@ ms.topic: how-to
 ms.date: 2/4/2022
 ms.author: davidi
 
-LocalizationGroup: Connect to data
 ---
 
 # Enable encryption for SAP HANA

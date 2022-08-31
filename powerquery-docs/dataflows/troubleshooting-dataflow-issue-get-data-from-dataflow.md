@@ -6,7 +6,6 @@ ms.topic: conceptual
 ms.date: 12/3/2020
 ms.author: bensack
 
-LocalizationGroup: Data from files
 ---
 
 # Troubleshooting dataflow issues: Get data from a dataflow

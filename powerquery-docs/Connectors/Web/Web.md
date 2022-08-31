@@ -5,7 +5,6 @@ author: bezhan-msft
 ms.topic: conceptual
 ms.date: 10/27/2021
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # Web

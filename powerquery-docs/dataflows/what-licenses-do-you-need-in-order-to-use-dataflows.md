@@ -6,7 +6,6 @@ ms.topic: conceptual
 ms.date: 08/01/2022
 ms.author: bensack
 
-LocalizationGroup: Data from files
 ---
 
 # What licenses do you need to use dataflows?

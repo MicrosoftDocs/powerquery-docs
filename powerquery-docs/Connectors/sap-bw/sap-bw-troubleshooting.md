@@ -5,7 +5,6 @@ author: dougklopfenstein
 ms.topic: conceptual
 ms.date: 9/14/2021
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # SAP Business Warehouse connector troubleshooting

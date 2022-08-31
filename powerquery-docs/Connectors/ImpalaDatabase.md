@@ -5,7 +5,6 @@ author: bezhan-msft
 ms.topic: conceptual
 ms.date: 7/11/2022
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # Impala database

@@ -5,7 +5,6 @@ author: dougklopfenstein
 ms.topic: conceptual
 ms.date: 12/9/2020
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # SAP HANA database

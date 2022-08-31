@@ -5,7 +5,6 @@ author: kanstantsin-chernik
 ms.topic: conceptual
 ms.date: 6/24/2022
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # Bloomberg Data and Analytics

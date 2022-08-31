@@ -6,7 +6,6 @@ ms.topic: conceptual
 ms.date: 12/2/2019
 ms.author: bensack
 
-LocalizationGroup: Data from files
 ---
 # Creating computed entities in dataflows
 

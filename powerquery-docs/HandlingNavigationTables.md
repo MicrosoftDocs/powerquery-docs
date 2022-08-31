@@ -5,7 +5,6 @@ author: ptyx507x
 ms.topic: conceptual
 ms.date: 6/9/2022
 ms.author: miescobar
-LocalizationGroup: reference
 ---
 
 # Handling Navigation

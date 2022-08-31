@@ -5,7 +5,6 @@ author: ptyx507x
 ms.topic: conceptual
 ms.date: 1/19/2022
 ms.author: miescobar
-LocalizationGroup: reference
 ---
 
 # Enabling DirectQuery for an ODBC-based connector

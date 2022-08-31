@@ -6,7 +6,6 @@ ms.topic: conceptual
 ms.date: 10/13/2020
 ms.author: bezhan
 ms.custom: intro-internal
-LocalizationGroup: reference
 ---
 
 # Power Query Connector Certification

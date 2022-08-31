@@ -5,7 +5,6 @@ author: bezhan-msft
 ms.topic: conceptual
 ms.date: 3/18/2022
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # Google BigQuery

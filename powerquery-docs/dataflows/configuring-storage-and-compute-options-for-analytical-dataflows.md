@@ -6,7 +6,6 @@ ms.topic: conceptual
 ms.date: 12/2/2020
 ms.author: bensack
 
-LocalizationGroup: Data from files
 ---
 
 # Dataflow storage options

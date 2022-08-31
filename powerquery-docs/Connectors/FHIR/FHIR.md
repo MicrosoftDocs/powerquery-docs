@@ -5,7 +5,6 @@ author: hansenms
 ms.topic: conceptual
 ms.date: 1/18/2022
 ms.author: mihansen
-LocalizationGroup: reference
 ---
 
 # FHIR

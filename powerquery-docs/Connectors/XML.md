@@ -5,7 +5,6 @@ author: bezhan-msft
 ms.topic: conceptual
 ms.date: 2/28/2022
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # XML

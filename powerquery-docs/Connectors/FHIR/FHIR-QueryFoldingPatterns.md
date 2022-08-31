@@ -5,7 +5,6 @@ author: hansenms
 ms.topic: conceptual
 ms.date: 01/08/2020
 ms.author: mihansen
-LocalizationGroup: reference
 ---
 
 # FHIR query folding patterns

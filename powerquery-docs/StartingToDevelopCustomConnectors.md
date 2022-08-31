@@ -7,7 +7,6 @@ author: ptyx507x
 ms.topic: quickstart
 ms.date: 2/28/2022
 ms.author: miescobar
-LocalizationGroup: reference
 ---
 
 # Starting to develop custom connectors

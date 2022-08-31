@@ -5,7 +5,6 @@ author: bezhan-msft
 ms.topic: conceptual
 ms.date: 9/16/2021
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # OData Feed

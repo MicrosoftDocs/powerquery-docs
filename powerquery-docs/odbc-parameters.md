@@ -5,7 +5,6 @@ author: ptyx507x
 ms.topic: conceptual
 ms.date: 3/1/2022
 ms.author: miescobar
-LocalizationGroup: reference
 ---
 
 # Parameters for Odbc.DataSource

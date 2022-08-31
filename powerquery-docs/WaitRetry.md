@@ -5,7 +5,6 @@ author: mattmasson
 ms.topic: conceptual
 ms.date: 2/28/2022
 ms.author: mmasson
-LocalizationGroup: reference
 ---
 
 # Wait-Retry Pattern
