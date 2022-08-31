@@ -5,7 +5,6 @@ author: bensack
 ms.topic: conceptual
 ms.date: 8/11/2022
 ms.author: bensack
-
 ---
 
 # Using incremental refresh with dataflows
