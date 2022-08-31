@@ -1,10 +1,10 @@
 ---
 title: Azure Data Lake Storage Gen2
 description: Includes basic information, prerequisites, and information on how to connect to Azure Data Lake Storage Gen2, along with a list of limitations.
-author: dougklopfenstein
+author: bezhan-msft
 ms.topic: conceptual
 ms.date: 8/8/2022
-ms.author: dougklo
+ms.author: bezhan
 ---
 
 # Azure Data Lake Storage Gen2

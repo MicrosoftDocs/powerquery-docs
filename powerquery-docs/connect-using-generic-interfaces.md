@@ -1,10 +1,10 @@
 ---
 title: Connect to data using generic interfaces
 description: Learn how to connect different data sources with generic interfaces.
-author: davidiseminger
+author: bezhan-msft
 ms.topic: conceptual
 ms.date: 7/11/2022
-ms.author: dougklo
+ms.author: bezhan
 LocalizationGroup: reference
 ---
 

@@ -1,10 +1,10 @@
 ---
 title: Troubleshooting dataflow issues - connection to the data source
 description: Troubleshooting dataflow issues - connection to the data source
-author: radacad
+author: bensack
 ms.topic: conceptual
 ms.date: 6/13/2022
-ms.author: bezhan
+ms.author: bensack
 ---
 
 # Troubleshooting dataflow issues: Connection to the data source

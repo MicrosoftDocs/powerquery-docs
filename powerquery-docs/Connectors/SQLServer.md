@@ -1,10 +1,10 @@
 ---
 title: Power Query SQL Server connector
 description: Includes basic information about products that use the connector, supported authentication types, prerequisites, and connection instructions.
-author: cpopell
+author: bezhan-msft
 ms.topic: conceptual
 ms.date: 3/4/2022
-ms.author: dougklo
+ms.author: bezhan
 LocalizationGroup: reference
 ---
 

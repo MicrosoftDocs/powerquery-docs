@@ -1,9 +1,9 @@
 ---
 title: Creating your first connector - Hello World
 description: Create your first connector
-author: cpopell
+author: ptyx507x
 ms.date: 11/27/2019
-ms.author: dougklo
+ms.author: miescobar
 ms.custom: intro-internal
 LocalizationGroup: Get started
 ---

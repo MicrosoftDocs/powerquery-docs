@@ -1,10 +1,10 @@
 ---
 title: Configuring storage and compute options for analytical dataflows
 description: Configuring storage and compute options for analytical dataflows.
-author: radacad
+author: bensack
 ms.topic: conceptual
 ms.date: 12/2/2020
-ms.author: bezhan
+ms.author: bensack
 
 LocalizationGroup: Data from files
 ---

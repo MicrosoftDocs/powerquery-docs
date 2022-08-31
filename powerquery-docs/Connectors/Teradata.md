@@ -1,10 +1,10 @@
 ---
 title: Power Query Teradata database connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your Teradata database.
-author: DougKlopfenstein
+author: bezhan-msft
 ms.topic: conceptual
 ms.date: 8/12/2022
-ms.author: dougklo
+ms.author: bezhan
 LocalizationGroup: reference
 ---
 

@@ -1,10 +1,10 @@
 ---
 title: Power Query Amazon Redshift connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Amazon Redshift data.
-author: dougklopfenstein
+author: bezhan-msft
 ms.topic: conceptual
 ms.date: 4/12/2022
-ms.author: dougklo
+ms.author: bezhan
 LocalizationGroup: reference
 ---
 

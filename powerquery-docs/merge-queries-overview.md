@@ -3,7 +3,7 @@ title: "Merge queries overview"
 description: An overview of merge queries operations in Power Query, and the basic principles and common uses. 
 author: ptyx507
 ms.date: 06/30/2020
-ms.author: dougklo
+ms.author: miescobar
 ms.topic: overview
 ---
 

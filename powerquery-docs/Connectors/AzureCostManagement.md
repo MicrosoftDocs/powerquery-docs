@@ -2,10 +2,10 @@
 title: Azure Cost Management
 description: Includes basic information, prerequisites, and information on how to connect to Azure Cost Management.
 
-author: dougklopfenstein
+author: bezhan-msft
 ms.topic: conceptual
 ms.date: 7/5/2022
-ms.author: dougklo
+ms.author: bezhan
 
 ---
 

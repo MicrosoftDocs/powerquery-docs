@@ -1,8 +1,8 @@
 ---
 title: "Using Schema view (Preview)"
 description: Schema view optimizes the experience when working on schema-related data operations
-author: JorgeGabuardiMS
-ms.author: dougklo
+author: ptyx507x
+ms.author: miescobar
 ms.date: 09/25/2020
 ---
 

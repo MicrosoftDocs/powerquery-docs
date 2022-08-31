@@ -1,10 +1,10 @@
 ---
 title: What licenses do you need to use dataflows
 description: What licenses do you need to use dataflows
-author: radacad
+author: bensack
 ms.topic: conceptual
 ms.date: 08/01/2022
-ms.author: bezhan
+ms.author: bensack
 
 LocalizationGroup: Data from files
 ---

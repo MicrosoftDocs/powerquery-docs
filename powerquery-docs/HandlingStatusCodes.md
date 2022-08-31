@@ -1,16 +1,16 @@
 ---
 title: Handling status codes with Web.Contents for Power Query connectors
 description: Manage status codes with Web.Contents for Power Query connectors
-author: cpopell
+author: ptyx507x
 ms.topic: conceptual
-ms.date: 2/28/2022
-ms.author: dougklo
+ms.date: 8/29/2022
+ms.author: miescobar
 LocalizationGroup: reference
 ---
 
 # Status Code Handling with `Web.Contents`
 
-The [`Web.Contents`](/powerquery-m/web-contents) function has some built in functionality for dealing with certain HTTP status codes. The default behavior can be overridden in your extension using the `ManualStatusHandling` field in the [options record](/powerquery-m/web-contents#__toc360793395).
+The [`Web.Contents`](/powerquery-m/web-contents) function has some built-in functionality for dealing with certain HTTP status codes. The default behavior can be overridden in your extension using the `ManualStatusHandling` field in the [options record](/powerquery-m/web-contents#__toc360793395).
 
 ## Automatic retry
 
@@ -24,14 +24,14 @@ The [`Web.Contents`](/powerquery-m/web-contents) function has some built in func
 | 504  | Gateway Timeout            |
 | 509  | Bandwidth Limit Exceeded   |
 
-Requests will be retried up to 3 times before failing. The engine uses an exponential back-off algorithm to determine how long to wait until the next retry, unless the response contains a [`Retry-after`](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.37) header. When the header is found, the engine will wait the specified number of seconds before the next retry. The minimum supported wait time is 0.5 seconds, and the maximum value is 120 seconds.
+Requests will be retried up to three times before failing. The engine uses an exponential back-off algorithm to determine how long to wait until the next retry, unless the response contains a [`Retry-after`](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.37) header. When the header is found, the engine will wait the specified number of seconds before the next retry. The minimum supported wait time is 0.5 seconds, and the maximum value is 120 seconds.
 
 >[!Note]
 > The `Retry-after` value must be in the `delta-seconds` format. The `HTTP-date` format is currently not supported. 
 
 ## Authentication exceptions
 
-The following status codes will result in a credentials exception, causing an authentication prompt asking the user to provide credentials (or re-login in the case of an expired OAuth token).
+The following status codes will result in a credentials exception, causing an authentication prompt asking the user to provide credentials (or sign in again in the case of an expired OAuth token).
 
 | Code | Status         |
 |:-----|:---------------|
@@ -43,7 +43,7 @@ The following status codes will result in a credentials exception, causing an au
 
 ## Redirection
 
-The follow status codes will result in an automatic redirect to the URI specified in the [`Location`](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.30) header. A missing `Location` header will result in an error.
+The following status codes will result in an automatic redirect to the URI specified in the [`Location`](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.30) header. A missing `Location` header will result in an error.
 
 | Code | Status             |
 |:-----|:-------------------|

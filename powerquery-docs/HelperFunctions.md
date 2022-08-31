@@ -1,10 +1,10 @@
 ---
 title: Helper functions for M extensions for Power Query connectors
 description: Use helper functions for Power Query connectors
-author: cpopell
+author: ptyx507x
 ms.topic: conceptual
 ms.date: 2/28/2022
-ms.author: dougklo
+ms.author: miescobar
 LocalizationGroup: reference
 ---
 

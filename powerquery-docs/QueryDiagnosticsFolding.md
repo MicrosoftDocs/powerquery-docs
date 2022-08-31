@@ -1,10 +1,10 @@
 ---
 title: Understanding folding with Query Diagnostics
 description: Using Query Diagnostics to understand what operations are folding versus being performed locally
-author: cpopell
+author: ptyx507x
 ms.topic: conceptual
 ms.date: 2/28/2022
-ms.author: dougklo
+ms.author: miescobar
 LocalizationGroup: reference
 ---
 

@@ -1,12 +1,12 @@
 ---
 title: TripPin 4 - Data Source Paths
 description: Improving the navigation table of your TripPin REST connector
-author: cpopell
+author: ptyx507x
 
 
 ms.topic: tutorial
 ms.date: 5/15/2020
-ms.author: dougklo
+ms.author: miescobar
 LocalizationGroup: reference
 ---
 

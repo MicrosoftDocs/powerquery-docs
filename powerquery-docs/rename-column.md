@@ -1,11 +1,11 @@
 ---
 title: Rename columns
 description: Within Power Query, you can rename your column given certain conditions.
-author: jessli20
+author: ptyx507x
 
 ms.reviewer: dougklo
 ms.date: 11/24/2020
-ms.author: bezhan
+ms.author: miescobar
 
 ---
 

@@ -4,7 +4,7 @@ description: An article that describes how to change the data gateway in Power Q
 author: ptyx507
 ms.date: 12/6/2021
 ms.author: dougklo
-ms.reviewer: dougklo
+ms.reviewer: miescobar
 ---
 # Change the gateway used in a dataflow project
 

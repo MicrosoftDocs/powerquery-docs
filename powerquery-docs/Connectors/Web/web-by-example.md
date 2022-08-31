@@ -1,10 +1,10 @@
 ---
 title: Extract data from a Web page by example
 description: Extract data from a Web page by providing an example of what you want to pull
-author: davidiseminger
+author: bezhan-msft
 ms.topic: how-to
 ms.date: 12/2/2020
-ms.author: davidi
+ms.author: bezhan
 LocalizationGroup: Connect to data
 ---
 # Get webpage data by providing examples

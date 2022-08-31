@@ -4,7 +4,7 @@ description: Provides basic information about products that use the MicroStrateg
 author: pawjastrzebski
 ms.topic: conceptual
 ms.date: 6/6/2022
-ms.author: dougklo
+ms.author: bezhan
 LocalizationGroup: reference
 ---
 

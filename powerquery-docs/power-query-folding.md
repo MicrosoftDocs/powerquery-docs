@@ -1,11 +1,11 @@
 ---
 title: Query folding
 description: Understand Power Query query folding, and how to achieve it.
-author: peter-myers
+author: ptyx507x
 ms.reviewer: asaxton
 ms.topic: conceptual
 ms.date: 6/27/2022
-ms.author: dougklo
+ms.author: miescobar
 ---
 
 # Power Query query folding

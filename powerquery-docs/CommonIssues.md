@@ -1,10 +1,10 @@
 ---
 title: Common Authoring Issues in Power Query
 description: How to address common authoring issues in Power Query
-author: cpopell
+author: ptyx507x
 ms.topic: conceptual
 ms.date: 12/17/2021
-ms.author: dougklo
+ms.author: miescobar
 LocalizationGroup: reference
 ---
 

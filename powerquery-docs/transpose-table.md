@@ -3,7 +3,7 @@ title: Transpose table
 description: In Power Query, you can transpose a table by rotating it 90 degrees.
 author: ptyx507
 ms.date: 06/08/2020
-ms.author: dougklo
+ms.author: miescobar
 ms.custom: edited
 ---
 

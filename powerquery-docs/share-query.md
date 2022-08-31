@@ -3,7 +3,7 @@ title: Share a query
 description: An article on how to share queries in Power Query
 author: ptyx507
 ms.date: 06/08/2020
-ms.author: dougklo
+ms.author: miescobar
 ---
 
 # Share a query

@@ -4,7 +4,7 @@ description: Describes the purpose of the Data Privacy Firewall
 author: ehrenMSFT
 ms.topic: conceptual
 ms.date: 3/25/2022
-ms.author: dougklo
+ms.author: ehvonleh
 LocalizationGroup: reference
 ---
 
