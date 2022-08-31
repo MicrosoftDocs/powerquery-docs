@@ -5,12 +5,9 @@ author: bensack
 ms.topic: conceptual
 ms.date: 7/21/2021
 ms.author: bensack
-
 ---
 
 # Connect to data sources for dataflows
-
-
 
 With Microsoft Power BI and Power Platform dataflows, you can connect to many different data sources to create new dataflows, or add new entities to an existing dataflow.
 
