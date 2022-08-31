@@ -5,7 +5,6 @@ author: bensack
 ms.topic: conceptual
 ms.date: 12/2/2019
 ms.author: bensack
-
 ---
 # Creating computed entities in dataflows
 
