@@ -5,7 +5,6 @@ author: luitwieler
 ms.topic: conceptual
 ms.date: 01/12/2022
 ms.author: jeluitwi
-
 ---
 
 # Consume data from dataflows
