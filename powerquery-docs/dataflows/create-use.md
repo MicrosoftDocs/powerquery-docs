@@ -5,8 +5,6 @@ author: bensack
 ms.topic: conceptual
 ms.date: 10/27/2021
 ms.author: bensack
-ms.custom: 
-
 ---
 
 # Create and use dataflows in Microsoft Power Platform
