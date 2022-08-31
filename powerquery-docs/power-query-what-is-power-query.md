@@ -1,7 +1,7 @@
 ---
 title: What is Power Query?
 description: Learn what Power Query is, and how it can help you get and transform data
-author: mllopis
+author: ptyx507x
 
 ms.topic: overview
 ms.date: 03/14/2022

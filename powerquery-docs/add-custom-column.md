@@ -1,7 +1,7 @@
 ---
 title: Add a custom column
 description: An article that demonstrates how to create a custom column in Power Query
-author: ptyx507X
+author: ptyx507x
 ms.date: 12/22/2021
 ms.author: miescobar
 ms.custom: edited

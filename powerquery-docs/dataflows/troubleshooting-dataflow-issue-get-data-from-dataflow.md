@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting dataflow issue - get data from dataflow
 description: Troubleshooting dataflow issue - get data from dataflow.
-author: radacad
+author: bensack
 ms.topic: conceptual
 ms.date: 12/3/2020
 ms.author: bensack

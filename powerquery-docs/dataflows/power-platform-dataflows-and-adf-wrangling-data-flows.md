@@ -1,7 +1,7 @@
 ---
 title: How Power Platform dataflows and Azure Data Factory wrangling dataflows relate to each other
 description: How Microsoft Power Platform dataflows and Azure Data Factory wrangling dataflows relate to each other.
-author: radacad
+author: bensack
 ms.topic: conceptual
 ms.date: 12/2/2020
 ms.author: bensack

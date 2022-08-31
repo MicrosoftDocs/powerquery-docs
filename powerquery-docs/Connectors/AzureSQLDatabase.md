@@ -1,7 +1,7 @@
 ---
 title: Power Query Azure SQL database connector
 description: Includes basic information and prerequisites, instructions on how to connect to your database, and information about advanced connection options.
-author: DougKlopfenstein
+author: bezhan-msft
 ms.topic: conceptual
 ms.date: 12/2/2020
 ms.author: bezhan

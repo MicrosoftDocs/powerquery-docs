@@ -2,7 +2,7 @@
 title: Move columns
 
 description: How to move a column to the location you want in Power Query.
-author: jessli20
+author: ptyx507x
 
 ms.reviewer: dougklo
 ms.date: 11/24/2020

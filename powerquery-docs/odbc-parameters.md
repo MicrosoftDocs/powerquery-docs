@@ -1,7 +1,7 @@
 ---
 title: Parameters for the Odbc.DataSource function
 description: Describes the parameters that can be used with the Odbc.Datasource function in Power Query
-author: cpopell
+author: ptyx507x
 ms.topic: conceptual
 ms.date: 3/1/2022
 ms.author: miescobar

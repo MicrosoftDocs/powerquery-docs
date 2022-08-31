@@ -1,9 +1,9 @@
 ---
 title: Why does my query run multiple times
 description: This article provides information about the various reasons that a Power Query query will sometimes run multiple times.
-author: dougklopfenstein
+author: ptyx507x
 ms.date: 11/10/2021
-ms.author: dougklo
+ms.author: miescobar
 ms.topic: conceptual
 ---
 

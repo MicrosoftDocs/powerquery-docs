@@ -1,7 +1,7 @@
 ---
 title: Versioning for Power Query connectors
 description: Manage versioning for Power Query connectors
-author: cpopell
+author: ptyx507x
 ms.topic: conceptual
 ms.date: 6/20/2022
 ms.author: miescobar

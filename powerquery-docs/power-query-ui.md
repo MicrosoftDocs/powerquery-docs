@@ -1,7 +1,7 @@
 ---
 title: The Power Query user interface
 description: Learn about and how to use the various elements of the Power Query user interface
-author: bezhan-msft
+author: ptyx507x
 
 
 ms.topic: overview

@@ -1,12 +1,12 @@
 ---
 title: TripPin 10 - Basic Query Folding
 description: Initial support for query folding for your TripPin REST connector.
-author: cpopell
+author: ptyx507x
 
 
 ms.topic: tutorial
 ms.date: 6/20/2022
-ms.author: dougklo
+ms.author: miescobar
 LocalizationGroup: reference
 ---
 
