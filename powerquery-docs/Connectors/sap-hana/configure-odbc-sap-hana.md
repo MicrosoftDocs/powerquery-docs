@@ -5,7 +5,6 @@ author: dougklopfenstein
 ms.topic: conceptual
 ms.date: 9/01/2020
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # Configure SSL for ODBC client access to SAP HANA

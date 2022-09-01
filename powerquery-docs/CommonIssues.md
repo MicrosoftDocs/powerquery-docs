@@ -5,7 +5,6 @@ author: ptyx507x
 ms.topic: conceptual
 ms.date: 12/17/2021
 ms.author: miescobar
-LocalizationGroup: reference
 ---
 
 

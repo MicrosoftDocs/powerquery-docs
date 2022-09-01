@@ -5,7 +5,6 @@ author: bezhan-msft
 ms.topic: conceptual
 ms.date: 4/8/2020
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # Mailchimp (Deprecated)

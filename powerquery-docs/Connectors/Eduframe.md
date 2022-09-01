@@ -5,7 +5,6 @@ author: StijnKing
 ms.topic: conceptual
 ms.date: 7/20/2022
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # Eduframe Reporting (Beta)

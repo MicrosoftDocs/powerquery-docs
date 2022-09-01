@@ -5,7 +5,6 @@ author: bezhan-msft
 ms.topic: conceptual
 ms.date: 10/11/2021 
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # Hive LLAP

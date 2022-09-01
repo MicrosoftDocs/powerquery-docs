@@ -5,7 +5,6 @@ author: bezhan-msft
 ms.topic: conceptual
 ms.date: 12/1/2021
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # QuickBooks Online (Beta)

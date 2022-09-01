@@ -7,7 +7,6 @@ author: ptyx507x
 ms.topic: overview
 ms.date: 4/22/2022
 ms.author: miescobar
-LocalizationGroup: reference
 ---
 
 # The Power Query user interface

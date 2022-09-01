@@ -5,7 +5,6 @@ author: bezhan-msft
 ms.topic: conceptual
 ms.date: 7/6/2021
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # Delta Sharing

@@ -7,7 +7,6 @@ ms.topic: tutorial
 ms.date: 12/09/2019
 ms.author: miescobar
 ms.custom: 
-LocalizationGroup: reference
 ---
 
 # GitHub Connector Sample

@@ -5,7 +5,6 @@ author: bezhan-msft
 ms.topic: conceptual
 ms.date: 12/2/2020
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # Azure SQL database

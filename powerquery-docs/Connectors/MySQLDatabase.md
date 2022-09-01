@@ -5,7 +5,6 @@ author: bezhan-msft
 ms.topic: conceptual
 ms.date: 12/08/2020
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # MySQL database

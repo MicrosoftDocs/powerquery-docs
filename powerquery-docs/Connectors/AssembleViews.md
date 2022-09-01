@@ -5,7 +5,6 @@ author: hofax
 ms.topic: conceptual
 ms.date: 6/24/2021
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # Assemble Views

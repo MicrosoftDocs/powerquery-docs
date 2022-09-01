@@ -5,7 +5,6 @@ author: dougklopfenstein
 ms.topic: conceptual
 ms.date: 11/23/2020
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # Import vs. DirectQuery for SAP BW

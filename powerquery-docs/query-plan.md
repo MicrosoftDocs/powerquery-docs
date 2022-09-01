@@ -6,7 +6,6 @@ author: ptyx507x
 ms.topic: quickstart
 ms.date: 6/27/2022
 ms.author: miescobar
-localizationgroup: reference
 ---
 
 # Query plan for Power Query (Preview)

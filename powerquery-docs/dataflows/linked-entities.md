@@ -5,8 +5,6 @@ author: bensack
 ms.topic: conceptual
 ms.date: 2/08/2022
 ms.author: bensack
-
-LocalizationGroup: Data from files
 ---
 # Link entities between dataflows
 

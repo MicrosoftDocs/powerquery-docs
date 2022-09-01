@@ -7,7 +7,6 @@ author: ptyx507x
 ms.topic: tutorial
 ms.date: 7/23/2021
 ms.author: miescobar
-LocalizationGroup: reference
 ---
 
 # TripPin Part 9 - TestConnection

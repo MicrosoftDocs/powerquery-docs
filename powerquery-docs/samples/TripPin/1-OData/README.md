@@ -7,7 +7,6 @@ author: ptyx507x
 ms.topic: tutorial
 ms.date: 8/25/2021
 ms.author: miescobar
-LocalizationGroup: reference
 ---
 
 # TripPin Part 1 - Data Connector for an OData Service

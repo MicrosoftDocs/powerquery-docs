@@ -5,7 +5,6 @@ author: ptyx507x
 ms.topic: conceptual
 ms.date: 8/29/2022
 ms.author: miescobar
-LocalizationGroup: reference
 ---
 
 # Status Code Handling with `Web.Contents`

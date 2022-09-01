@@ -5,7 +5,6 @@ author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 3/2/2022
 ms.author: dougklo
-LocalizationGroup: reference
 ---
 
 # Where to get data

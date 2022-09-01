@@ -5,7 +5,6 @@ author: pawjastrzebski
 ms.topic: conceptual
 ms.date: 6/6/2022
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # MicroStrategy for Power BI

@@ -5,7 +5,6 @@ author: ptyx507x
 ms.topic: conceptual
 ms.date: 12/1/2021
 ms.author: miescobar
-LocalizationGroup: reference
 ---
 
 # Handling Power Query Connector Signing 

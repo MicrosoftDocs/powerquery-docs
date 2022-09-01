@@ -5,7 +5,6 @@ author: ptyx507x
 ms.topic: conceptual
 ms.date: 2/28/2022
 ms.author: miescobar
-LocalizationGroup: reference
 ---
 
 # Handling Schema

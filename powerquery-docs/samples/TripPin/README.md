@@ -7,7 +7,6 @@ ms.topic: tutorial
 ms.date: 7/23/2021
 ms.author: miescobar
 ms.custom:
-LocalizationGroup: reference
 ---
 
 # TripPin Tutorial

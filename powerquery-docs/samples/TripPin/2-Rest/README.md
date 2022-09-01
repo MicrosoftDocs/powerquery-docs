@@ -7,7 +7,6 @@ author: ptyx507x
 ms.topic: tutorial
 ms.date: 5/15/2019
 ms.author: miescobar
-LocalizationGroup: reference
 ---
 
 # TripPin Part 2 - Data Connector for a REST Service

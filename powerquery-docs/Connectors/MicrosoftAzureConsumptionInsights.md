@@ -6,7 +6,6 @@ ms.topic: conceptual
 ms.date: 7/11/2022
 ms.author: bezhan
 ms.reviewer: dougklo
-LocalizationGroup: reference
 ---
 
 # Microsoft Azure Consumption Insights (Beta) (Deprecated)

@@ -7,7 +7,6 @@ author: ptyx507x
 ms.topic: tutorial
 ms.date: 5/15/2020
 ms.author: miescobar
-LocalizationGroup: reference
 ---
 
 # TripPin Part 5 - Paging
