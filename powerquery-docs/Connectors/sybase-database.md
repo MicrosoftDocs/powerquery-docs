@@ -3,7 +3,7 @@ title: Power Query Sybase database connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your Sybase database.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 8/16/2022
+ms.date: 9/2/2022
 ms.author: bezhan
 ---
 
@@ -57,7 +57,7 @@ To make the connection, take the following steps:
 
 To make the connection, take the following steps:
 
-1. Select the **Sybase database** option in the **Power Query - Connect to data source** page. More information: [Where to get data](../where-to-get-data.md)
+1. Select the **Sybase database** option in the **Choose data source** page. More information: [Where to get data](../where-to-get-data.md)
 
 2. Specify the Sybase server to connect to in **Server** and the database where your data is stored in **Database**.
 
