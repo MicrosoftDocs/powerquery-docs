@@ -3,7 +3,7 @@ title: Where to get data
 description: Describes the process of getting data for Power Query from various Microsoft products.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 3/2/2022
+ms.date: 9/2/2022
 ms.author: dougklo
 ---
 
@@ -65,13 +65,13 @@ To import data to a new table in Power Apps:
 
 1. On the left side of Power Apps, select **Dataverse** > **Tables**.
 
-2. In the **Tables** pane, at the top left, select **Data** > **Get data**.
+2. In the **Tables** pane, at the top left, select **Import** > **Import data**.
 
-   [![Image with Dataverse tables open, the data context menu open, with the get data option emphasized.](media/where-to-get-data/get-data-power-apps.png)](media/where-to-get-data/get-data-power-apps.png#lightbox)
+   [![Image with Dataverse tables open, the import context menu open, with the import data option emphasized.](media/where-to-get-data/get-data-power-apps.png)](media/where-to-get-data/get-data-power-apps.png#lightbox)
 
-   You can also choose to get data directly from an Excel worksheet without using the **Get data** option.
+   You can also choose to get data directly from an Excel worksheet without using the **Import data** option.
 
-   [![Image with Dataverse tables open, the data context menu open, with the get data from Excel option emphasized.](media/where-to-get-data/get-data-excel-powerapps.png)](media/where-to-get-data/get-data-excel-powerapps.png#lightbox)
+   [![Image with Dataverse tables open, the import context menu open, with the import data from Excel option emphasized.](media/where-to-get-data/get-data-excel-powerapps.png)](media/where-to-get-data/get-data-excel-powerapps.png#lightbox)
 
 3. Select the connector from the list of data sources.
 
@@ -80,17 +80,17 @@ To import data to an existing table in Power Apps:
 1. On the left side of Power Apps, select **Dataverse** > **Tables**.
 
 2. In the **Tables** pane, either:
-   * Select a table in the **Tables** pane that you want to import data to, and then select **Data** > **Get data**.
+   * Select a table in the **Tables** pane that you want to import data to, and then select **Import** > **Import data**.
 
-      ![Image with Dataverse tables open, a table selected, the data context menu open, with the get data option emphasized.](media/where-to-get-data/table-get-data.png)
+      ![Image with Dataverse tables open, a table selected, the import context menu open, with the import data option emphasized.](media/where-to-get-data/table-get-data.png)
 
-   * Open the table to its individual pane, and then select **Data** > **Get data**.
+   * Open the table to its individual pane, and then select **Import** > **Import data**.
 
-      ![Image with Dataverse tables open, an individual table open in a pane, the data context menu open, with the get data option emphasized.](media/where-to-get-data/table-address-get-data.png)
+      ![Image with Dataverse tables open, an individual table open in a pane, the import context menu open, with the import data option emphasized.](media/where-to-get-data/table-address-get-data.png)
 
-   In either case, you can also choose to get data from an Excel worksheet without using the **Get data** option.
+   In either case, you can also choose to get data from an Excel worksheet without using the **Import data** option.
 
-   ![Image with Dataverse tables open, and individual table open in a pane,the data context menu open, with the get data from Excel option emphasized.](media/where-to-get-data/table-data-from-excel.png)
+   ![Image with Dataverse tables open, and individual table open in a pane,the import context menu open, with the import data from Excel option emphasized.](media/where-to-get-data/table-data-from-excel.png)
 
 3. Select the connector from the list of data sources.
 

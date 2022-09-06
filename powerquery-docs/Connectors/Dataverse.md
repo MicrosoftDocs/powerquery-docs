@@ -3,7 +3,7 @@ title: Power Query Dataverse connector
 description: Provides basic information and connection instructions, along with OData API performance information, table retrieval rate, and alternative means of connecting to Dataverse.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 3/2/2022
+ms.date: 9/2/2022
 ms.author: bezhan
 ---
 
@@ -16,7 +16,6 @@ ms.author: bezhan
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Power Apps (Dataflows)<br/>Excel |
 | Authentication types | Organizational account |
-| | |
 
 >[!Note]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
@@ -29,7 +28,7 @@ You must have read permissions to access data within tables.
 
 To use the Dataverse connector, the **TDS endpoint** setting must be enabled in your environment. More information: [Manage feature settings](/power-platform/admin/settings-features)
 
-To use the Dataverse connector, one of TCP ports 1433 or 5558 need to be open to connect. Port 1433 is used automatically. However, if port 1433 is blocked, you can use port 5558 instead. To enable port 5558, you must append that port number to the Dataverse environment URL, such as *yourenvironmentid.crm.dynamics.com,5558*. More information: [SQL Server connection issue due to closed ports](#sql-server-connection-issue-due-to-closed-ports)
+To use the Dataverse connector, one of TCP ports 1433 or 5558 need to be open to connect. Port 1433 is used automatically. However, if port 1433 is blocked, you can use port 5558 instead. To enable port 5558, you must append that port number to the Dataverse environment URL, such as *yourenvironmentid.crm.dynamics.com, 5558*. More information: [SQL Server connection issue due to closed ports](#sql-server-connection-issue-due-to-closed-ports)
 
 >[!Note]
 > If you are using Power BI Desktop and need to use port 5558, you must create a source with the Dataverse environment URL, such as *yourenvironmentid.crm.dynamics.com,5558*, in Power Query M.
@@ -40,43 +39,36 @@ To use the Dataverse connector, one of TCP ports 1433 or 5558 need to be open to
 * Import
 * DirectQuery (Power BI only)
 * Advanced
-  * Reorder columns
-  * Add display column
+  * Include relationship columns
 
-## Connect to Dataverse from Power BI Desktop
+## Connect to Dataverse from Power Query Desktop
 
 >[!Note]
 > The Power Query Dataverse connector is mostly suited towards analytics workloads, not bulk data extraction. More information: [Alternative Dataverse connections](#alternative-dataverse-connections)
 
-To connect to Dataverse from Power BI Desktop:
+To connect to Dataverse from Power Query Desktop:
 
-1. Select **Get data** from the **Home** tab.
+1. Select the **Dataverse** option from **Get Data**. More information: [Where to get data](../where-to-get-data.md)
 
-2. In the **Get Data** dialog box, select **Power Platform > Dataverse**, and then select **Connect**.
-
-   ![Get data in Power BI Desktop.](media/dataverse/get-data.png)
-
-3. If this attempt is the first time you're connecting to this site, select **Sign in** and input your credentials. Then select **Connect**.
+2. If you're connecting to this site for the first time, select **Sign in** and input your credentials. Then select **Connect**.
 
    ![Sign in to this site.](media/dataverse/sign-in.png)
 
-4. In **Navigator**, select the data you require, then either load or transform the data.
+3. In **Navigator**, select the data you require, then either load or transform the data.
 
    ![Load or transform from navigator.](media/dataverse/navigator.png)
 
-5. Select either the **Import** or **DirectQuery** data connectivity mode. Then select **OK**.
+4. If you're using Power Query from Power BI Desktop, you'll be asked to select either the **Import** or **DirectQuery** data connectivity mode. Then select **OK**.
 
-   ![Screenshot](media/dataverse/connection-settings.png)
+   ![Screenshot of Power BI Desktop connection settings with Import selected and DirectQuery not selected.](media/dataverse/connection-settings.png)
 
 ## Connect to Dataverse from Power Query Online
 
 To connect to Dataverse from Power Query Online:
 
-1. From the **Data sources** page, select **Dataverse**.
+1. Select the **Dataverse** option in the **Choose data source** page. More information: [Where to get data](../where-to-get-data.md)
 
-   ![Get data from Power Query Online.](media/dataverse/get-data-online.png)
-
-2. Leave the server URL address blank. Leaving the address blank will list all of the available environments you have permission to use in the Power Query Navigator window.
+2. In the **Connect to data source** page, leave the server URL address blank. Leaving the address blank lists all of the available environments you have permission to use in the Power Query Navigator window.
 
    ![Enter the server URL.](media/dataverse/enter-url-online.png)
 
@@ -93,11 +85,23 @@ To connect to Dataverse from Power Query Online:
 
    ![Navigation page open with the Application User data selected.](media/dataverse/navigator-online.png)
 
+## Connect using advanced options
+
+Power Query Online provides advanced options that you can add to your query if needed.
+
+The following table lists the advanced options you can set in Power Query Online.
+
+| Advanced option | Description |
+| --------------- | ----------- |
+| Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, you won’t see those columns. More information: [Performance issues related to relationship columns](#performance-issues-related-to-relationship-columns)|
+
+Once you've selected the advanced options you require, select **Next** to connect to Dataverse.
+
 ## Finding your Dataverse environment URL
 
 If you need to use port 5558 to connect to Dataverse, you'll need to find your Dataverse environment URL. Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). In the upper right of the Power Apps page, select the environment you're going to connect to. Select the ![Settings icon.](media/common-data-service/settings-icon.png) settings icon, and then select **Advanced settings**.
 
-In the new browser tab that opens, copy the root of the URL. This root URL is the unique URL for your environment. The URL will be in the format of https://\<*yourenvironmentid*>.crm.dynamics.com/. **Make sure you remove https:// and the trailing / from the URL before pasting it to connect to your environment.** Append port 5558 to the end of the environment URL, for example *yourenvironmentid.crm.dyamics.com,5558*
+In the new browser tab that opens, copy the root of the URL. This root URL is the unique URL for your environment. The URL will be in the format of https://\<*yourenvironmentid*>.crm.dynamics.com/. **Make sure you remove https:// and the trailing / from the URL before pasting it to connect to your environment.** Append port 5558 to the end of the environment URL, for example *yourenvironmentid.crm.dyamics.com,5558*.
 
 ![Location of the Dataverse environment URL.](media/dataverse/cds-env.png)
 
@@ -138,21 +142,21 @@ When connecting with the Dataverse connector, you might encounter an **Unable to
 
 ### Using native database queries with Dataverse
 
-You can connect to Dataverse using a custom SQL statement or a [native database query](../native-database-query.md). While there's no user interface for this experience, you can enter the query using the Power Query Advanced Editor. In order to use a native database query, a **Database** must be specified as the Source. 
+You can connect to Dataverse using a custom SQL statement or a [native database query](../native-database-query.md). While there's no user interface for this experience, you can enter the query using the Power Query Advanced Editor. In order to use a native database query, a **Database** must be specified as the Source.
 
-```
+```powerquery-m
 Source = CommonDataService.Database([DATABASE URL])
 ```
 
 Once a database source has been defined, you can specify a native query using the [Value.NativeQuery](/powerquery-m/value-nativequery) function.
 
-```
+```powerquery-m
 myQuery = Value.NativeQuery(Source, [QUERY], null, [EnableFolding=true])
 ```
 
-Altogether, the query will look like this.
+Altogether, the query looks like this.
 
-```
+```powerquery-m
 let
     Source = CommonDataService.Database("[DATABASE]"),
     myQuery = Value.NativeQuery(Source, "[QUERY]", null, [EnableFolding=true])
@@ -160,19 +164,19 @@ in
     myQuery
 ```
 
-Note that misspelling a column name may result in an error message about query folding instead of missing column.
+Misspelling a column name might result in an error message about query folding instead of missing column.
 
 ### Accessing large datasets
 
 Power BI datasets contained in Dataverse can be very large. If you're using the Power Query Dataverse connector, any specific query that accesses the dataset must return less than 80 MB of data. So you might need to query the data multiple times to access all of the data in the dataset. Using multiple queries can take a considerable amount of time to return all the data.
 
-If you're using the [Common Data Service (Legacy)](CommonDataServiceLegacy.md) connector, you can use a single query to access all of the data in the dataset. This connector works differently and returns the result in “pages” of 5 K records. Although the Common Data Service (Legacy) connector is more efficient in returning large amounts of data, it can still take a significant amount of time to return the result.
+If you're using the [Common Data Service (Legacy)](CommonDataServiceLegacy.md) connector, you can use a single query to access all of the data in the dataset. This connector works differently and returns the result in "pages" of 5 K records. Although the Common Data Service (Legacy) connector is more efficient in returning large amounts of data, it can still take a significant amount of time to return the result.
 
-Instead of using these connectors to access large datasets, we recommend that you use [Azure Synapse Link](/powerapps/maker/data-platform/export-to-data-lake) to access large datasets. Using Azure Synapse Link is even more efficient that either the Power Query Dataverse or Common Data Service (Legacy) connectors, and it is specifically designed around data integration scenarios.
+Instead of using these connectors to access large datasets, we recommend that you use [Azure Synapse Link](/powerapps/maker/data-platform/export-to-data-lake) to access large datasets. Using Azure Synapse Link is even more efficient that either the Power Query Dataverse or Common Data Service (Legacy) connectors, and it's specifically designed around data integration scenarios.
 
 ### Performance issues related to relationship columns
 
-Similar to the SQL Server connector, there's an option available to disable navigation properties (relationship columns) in the Dataverse connector to improve performance. This option is not yet available in the user interface, but can be set using the `CreateNavigationProperties=false` parameter in the Dataverse connector function. 
+Similar to the SQL Server connector, there's an option available to disable navigation properties (relationship columns) in the Dataverse connector to improve performance. This option can be set in the [advanced options](#connect-using-advanced-options) available in Power Query Online, or it can be set using the `CreateNavigationProperties=false` parameter in the Dataverse connector function.
 
 ```powerquery-m
  Source = CommonDataService.Database("{crminstance}.crm.dynamics.com",[CreateNavigationProperties=false]),

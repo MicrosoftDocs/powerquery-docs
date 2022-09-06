@@ -2,7 +2,7 @@
 title: "Full outer join"
 description: An article on how to do a merge operation in Power Query using the full outer join kind. 
 author: ptyx507
-ms.date: 07/19/2020
+ms.date: 9/2/2022
 ms.author: miescobar
 ms.custom: edited
 ---
@@ -49,6 +49,9 @@ The goal is to create a table like the following, where the name of the country 
 
 ![Merge dialog box showing the results of following the previous full outer join procedure.](images/me-merge-operations-full-outer-merge-window.png "Merge dialog box showing the results of following the previous full outer join procedure")
 
+>[!NOTE]
+>You can merge on more than one column by selecting and holding Ctrl and then selecting the columns.
+
 >[!TIP]
 >Take a closer look at the message at the bottom of the dialog box that reads "The selection matches 4 of 4 rows from the first table, and 3 of 4 rows from the second table." This message is crucial for understanding the result that you get from this operation.
 
@@ -65,4 +68,3 @@ After performing this operation, you'll create a table that looks like the follo
 :::image type="complex" source="images/me-merge-operations-full-outer-final-table-2.png" alt-text="Full outer join final table.":::
    Full outer join final table containing Date, a CountryID, and Units derived from the Sales table, and a Country column derived from the Countries table. A fifth row was added to contain data from Spain, but that row contains null in the Date, CountryID, and Units columns since those values didn't exist for Spain in the Sales table.
 :::image-end:::
-

@@ -2,7 +2,7 @@
 title: "Data types in Power Query"
 description: A comprehensive article on the concepts of data types in Power Query, how to define data types for values and the importance of the data types. 
 author: ptyx507
-ms.date: 06/30/2020
+ms.date: 9/2/2022
 ms.author: miescobar
 ms.custom: edited
 ---
@@ -156,6 +156,9 @@ By using these columns, you can verify that your date value has been converted c
 ## Data type conversion matrix
 
 The following matrix is designed to give you a quick look at the feasibility of data type conversion of a value from one data type to another.
+
+>[!NOTE]
+> Conversion in this matrix starts with the original data type in the **Data types** column. Each result of a conversion to the new type is shown in the original data type’s row.
 
 | Data Types         | ![Decimal number.](images/Number_20.png) | ![Currency](images/Currency_20.png) | ![Whole number](images/WholeNumber_20.png) | ![Percentage](images/Percentage_20.png) | ![Date/Time](images/DateTime_20.png) | ![Date](images/Date_20.png) | ![Time](images/Time_20.png) | ![Date/Time/Timezone](images/DateTimeZone_20.png) | ![Duration](images/Duration_20.png) | ![Text](images/Text_20.png) | ![True/False](images/Logical_20.png) |
 |--------------------|----------------|----------|--------------|------------|-----------|------|------|--------------------|----------|------|------------|
