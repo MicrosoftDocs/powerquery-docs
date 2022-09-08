@@ -88,7 +88,7 @@ To connect to SAP HANA data from Power Query Online:
    >[!NOTE]
    > Currently, Power Query Online doesn't support Windows authentication. Windows authentication support is planned to become available in a few months.
 
-5. Select **Use Encrypted Connection** if you're using any encrypted connection, then choose the SSL crypto provider. If your're not using an encrypted connection, clear **Use Encrypted Connection**. More information: [Enable encryption for SAP HANA](sap-hana-encryption.md)
+5. Select **Use Encrypted Connection** if you're using any encrypted connection, then choose the SSL crypto provider. If you're not using an encrypted connection, clear **Use Encrypted Connection**. More information: [Enable encryption for SAP HANA](sap-hana-encryption.md)
 
    ![SAP HANA database online sign-in.](sap-hana-online-signin.png)
 
