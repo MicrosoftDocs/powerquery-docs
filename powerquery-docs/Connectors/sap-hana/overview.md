@@ -3,7 +3,7 @@ title: Power Query SAP HANA database connector
 description: Provides basic information, prerequisites, and instructions on connecting to your data using the SAP HANA database connector.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 9/7/2020
+ms.date: 9/7/2022
 ms.author: bezhan
 ---
 
@@ -70,7 +70,7 @@ To connect to an SAP HANA database from Power Query Desktop:
 
 4. From the **Navigator** dialog box, you can either transform the data in the Power Query editor by selecting **Transform Data**, or load the data by selecting **Load**.
 
-## Connect to an SAP HANA database Power from Query Online
+## Connect to an SAP HANA database from Power Query Online
 
 To connect to SAP HANA data from Power Query Online:
 
