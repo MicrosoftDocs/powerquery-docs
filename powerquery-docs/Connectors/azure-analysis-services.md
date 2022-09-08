@@ -92,7 +92,7 @@ Once you've entered a value in the advanced option, select **OK** in Power Query
 
 ### Error indicates “invalid credentials”
 
-If you've enabled the firewall in Azure Analysis Services and you are getting an “invalid credentials” error, you might need to allowlist the IP addresses of the Power Query Online clusters, even if you've allowed access from the Power BI service in your Azure Analysis Services firewall.
+If you've enabled the firewall in Azure Analysis Services and you're getting an “invalid credentials” error, you might need to allowlist the IP addresses of the Power Query Online clusters, even if you've allowed access from the Power BI service in your Azure Analysis Services firewall.
 
 ![screenshot](./media/azure-analysis-services/aas-firewall-settings.png)
 
