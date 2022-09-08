@@ -2,7 +2,7 @@
 title: Connections and authentication in Power Query Online
 description: This article describes the process and specifics of the authentication process in Power Query Online.
 author: ptyx507x
-ms.date: 8/8/2022
+ms.date: 9/8/2022
 ms.author: miescobar
 ---
 
@@ -55,7 +55,7 @@ After finishing the **Connection settings** section, you select the **Next** but
 As an alternative, you can also bind a gateway to your connection, which converts your connection from a cloud connection to an on-premises connection.
 
 >[!NOTE]
-> To create a gateway you can read the article on [using an on-premises data gateway in dataflows](/dataflows/using-dataflows-with-on-premises-data.md).
+> To create a gateway you can read the article on [using an on-premises data gateway in dataflows](dataflows/using-dataflows-with-on-premises-data.md).
 
 Using a local SQL Server database as an example, you enter the connector settings to establish a connection. For the SQL Server connector, the required setting is just the server name, but you can also enter the name of the database and select any other advanced options available for the connector. For demonstration purposes, both the server name and database have been entered.
 
