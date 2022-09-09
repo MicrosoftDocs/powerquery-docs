@@ -170,6 +170,6 @@ You might see the following error when importing workbooks saved in Excel's "Str
 
 `DataFormat.Error: The specified package is invalid. The main part is missing.`
 
-This error happens when the [ACE driver](Excel.md#legacy-ace-connector) is not installed on the host computer. Workbooks saved in the "Strict Open XML Spreadsheet" format can only be read by ACE. However, because such workbooks use the same file extension as regular Open XML workbooks (.xlsx), we can't use the extension to display the usual "the Access Database Engine OLEDB provider may be required to read this type of file" error message.
+This error happens when the [ACE driver](Excel.md#legacy-ace-connector) isn't installed on the host computer. Workbooks saved in the "Strict Open XML Spreadsheet" format can only be read by ACE. However, because such workbooks use the same file extension as regular Open XML workbooks (.xlsx), we can't use the extension to display the usual `the Access Database Engine OLEDB provider may be required to read this type of file` error message.
 
 To resolve the error, install the ACE driver. If the error is occurring in a cloud service, you'll need to use a gateway running on a computer that has the ACE driver installed.
