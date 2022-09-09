@@ -76,7 +76,7 @@ To make the connection, take the following steps:
 
 6. In **Navigator**, select the data you require, and then select **Transform data**.
 
-   [![Power Query Online Navigator showing the Human Resources employee data.](./media/sql-server-analysis-services/navigator-online.png)](./media/sql-server-analysis-services/navigator-online.png#lightbox)
+   [![Power Query Online Navigator showing the Human Resources employee data.](./media/azure-analysis-services/navigator-online.png)](./media/sql-server-analysis-services/navigator-online.png#lightbox)
 
 ## Connect using advanced options
 
