@@ -97,9 +97,3 @@ If you've enabled the firewall in Azure Analysis Services and you're getting an 
 ![screenshot](./media/azure-analysis-services/aas-firewall-settings.png)
 
 To allowlist the Power Query Online clusters, download the Azure IP ranges and service tags from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=56519). You'll need to allowlist the IP addresses from the **PowerQueryOnline** service tag. For more information on how to configure the server firewall, go to [Quickstart: Configure server firewall - Portal](/azure/analysis-services/analysis-services-qs-firewall/azure/analysis-services/analysis-services-qs-firewall).
-
-## See also
-
-* [Connect to Analysis Services tabular data in Power BI Desktop](/power-bi/connect-data/desktop-analysis-services-tabular-data)
-* [Connect to SSAS multidimensional models in Power BI Desktop](/power-bi/connect-data/desktop-ssas-multidimensional)
-* [Connect to datasets in the Power BI service from Power BI Desktop](/power-bi/connect-data/desktop-report-lifecycle-datasets)
