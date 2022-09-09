@@ -3,7 +3,7 @@ title: Google BigQuery connector
 description: Provides basic information and prerequisites for the Google BigQuery connector for Power Query.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 3/18/2022
+ms.date: 9/9/2022
 ms.author: bezhan
 ---
 
@@ -16,7 +16,6 @@ ms.author: bezhan
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Customer Insights (Dataflows) |
 | Authentication Types Supported | Organizational account<br/>Service account |
-| | |
 
 >[!Note]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
@@ -107,7 +106,6 @@ The following table lists all of the advanced options you can set in Power Query
 | Command timeout duration | How long Power Query waits for a query to complete and return results. The default depends on the driver default. You can enter another value in minutes to keep the connection open longer. |
 | Project ID | The project that you want to run native queries on. This option is only available in Power Query Desktop. |
 | SQL statement | For information, go to [Import data from a database using native database query](../native-database-query.md). In this version of native database query functionality, you need to use fully qualified table names in the format `Database.Schema.Table`, for example `SELECT * FROM DEMO_DB.PUBLIC.DEMO_TABLE`. This option is only available in Power Query Desktop. |
-| | |
 
 Once you've selected the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your Google BigQuery data.
 
@@ -115,9 +113,15 @@ Once you've selected the advanced options you require, select **OK** in Power Qu
 
 This section describes any limitations or considerations of the Google BigQuery connector.
 
-### Connecting to Google Big Query in Power BI Desktop
+### Connecting to Google BigQuery in Power BI Desktop
 
-For more information about limitations and considerations when connecting to Google Big Query, go to [Considerations and limitations](/power-bi/connect-data/desktop-connect-bigquery#considerations-and-limitations).
+There are a few limits and considerations to keep in mind when using the Google BigQuery connector with Power BI:
+
+* The Google BigQuery connector is available in Power BI Desktop and in the Power BI service. In the Power BI service, the connector can be accessed using the Cloud-to-Cloud connection from Power BI to Google BigQuery.
+
+* You can use Power BI with the Google BigQuery **Billing Project**. By default, Power BI uses the first project from the list returned for the user. To customize the behavior of the Billing Project when using it with Power BI, specify the following option in the underlying M in the Source step, which can be customized using the Power Query editor in Power BI Desktop:
+
+   `Source = GoogleBigQuery.Database([BillingProject="Include-Billing-Project-Id-Here"])`
 
 ### Nested fields
 
