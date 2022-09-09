@@ -103,7 +103,7 @@ If you want to connect to an Excel document hosted in Sharepoint, you can do so 
 
 ### Legacy ACE connector
 
-Power Query reads legacy workbooks (such as .xls or .xlsb) use the Access Database Engine (or ACE) OLEDB provider. Because of this, you may come across unexpected behaviors when importing legacy workbooks that don't occur when importing OpenXML workbooks (such as .xlsx). Here are some common examples.
+Power Query reads legacy workbooks (such as .xls or .xlsb) using the Access Database Engine (or ACE) OLEDB provider. Because of this, you may come across unexpected behaviors when importing legacy workbooks that don't occur when importing OpenXML workbooks (such as .xlsx). Here are some common examples.
 
 #### Unexpected value formatting
 
@@ -163,3 +163,13 @@ You'll notice performance degradation when retrieving very large files from Shar
 ### Errors when using the Excel connector to import CSV files
 
 Even though CSV files can be opened in Excel, they're not Excel files. Use the [Text/CSV connector](TextCSV.md) instead.
+
+### Error when importing "Strict Open XML Spreadsheet" workbooks
+
+You might see the following error when importing workbooks saved in Excel's "Strict Open XML Spreadsheet" format:
+
+`DataFormat.Error: The specified package is invalid. The main part is missing.`
+
+This error happens when the [ACE driver](Excel.md#legacy-ace-connector) isn't installed on the host computer. Workbooks saved in the "Strict Open XML Spreadsheet" format can only be read by ACE. However, because such workbooks use the same file extension as regular Open XML workbooks (.xlsx), we can't use the extension to display the usual `the Access Database Engine OLEDB provider may be required to read this type of file` error message.
+
+To resolve the error, install the ACE driver. If the error is occurring in a cloud service, you'll need to use a gateway running on a computer that has the ACE driver installed.
