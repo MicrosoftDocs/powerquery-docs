@@ -36,10 +36,6 @@ The new Power Query SDK can be installed in Visual Studio Code as a Visual Studi
 
 Follow the steps found in the [official GitHub repository](https://github.com/Microsoft/vscode-powerquery-sdk) for the VIsual Studio Code Power Query SDK to install and provide feedback.
 
-## Distribution of Data Connectors
-
-Power BI Desktop users can download extension files and place them in a known directory (steps described above). Power BI Desktop will automatically load the extensions on restart.
-
 ## Connector development process
 
 While you can use either the Visual Studio Code or the Visual Studio SDK, both use a similar process for the development of a connector at a high-level.
@@ -57,15 +53,15 @@ When creating a new project (Visual Studio Power Query SDK) or a new workspace (
 
 Your connector definition file will start with an empty Data Source description. You can learn more information about a Data Source in the context of the Power Query SDK from the the article on [handling data access](/powerquery-docs/HandlingDataAccess.md#data-source-kind).
 
-#### Query test File
+### Testing
+
+The Power Query SDK provides basic query execution capabilities, allowing you to test your extension without having to switch over to Power BI Desktop.
+
+#### Additional query test file
 
 In addition to the extension file, Data Connector projects can have a query file (name.query.pq). This file can be used to run test queries within Visual Studio. The query evaluation will automatically include your extension code, without having to register your .pqx file, allowing you to call/test any shared functions in your extension code.
 
 The query file can contain a single expression (for example, `HelloWorld.Contents()`), a `let` expression (such as what Power Query would generate), or a section document.
-
-### Testing
-
-The Power Query SDK provides basic query execution capabilities, allowing you to test your extension without having to switch over to Power BI Desktop. See [Query File](#query-file) for more details.
 
 ### Build and deploy
 
@@ -89,7 +85,13 @@ More information about M section documents can be found in the [M Language spec
 1. Copy the extension file into [Documents]/Power BI Desktop/Custom Connectors.
 2. Check the option **(Not Recommended) Allow any extension to load without validation or warning** in Power BI Desktop (under *File | Options and settings | Options | Security | Data Extensions*).
 3. Restart Power BI Desktop.
-4. Open the Get Data dialog and search for your custom connector in the list. 
+4. Open the Get Data dialog and search for your custom connector in the list.
+
+## Distribution of Data Connectors
+
+Power BI Desktop users can download extension files and place them in a known directory (steps described in previous section). Power BI Desktop will automatically load the extensions on restart.
+
+Alternatively, as the owner of the data source and connector, you can submit your connector through the [Power Query Connector Certification](/powerquery-docs/ConnectorCertification.md) so it ships with Power BI Desktop on every release.
 
 ## Additional links and resources
 
