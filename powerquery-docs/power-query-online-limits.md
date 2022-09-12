@@ -3,14 +3,13 @@ title: Power Query Online Usage Limits
 description: Authoring and refresh limits for Power Query Online in its various product integrations.
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 2/28/2022
+ms.date: 9/12/2022
 ms.author: miescobar
 ---
 
 # Power Query Online Limits
 
 ## Summary
-
 
 Power Query Online is integrated into a variety of Microsoft products. Since these products target different scenarios, they may set different limits for Power Query Online usage.
 
@@ -45,3 +44,4 @@ During refresh (either scheduled or on-demand), query evaluations return complet
 | Dataflows in PowerApps.com (Production) | 1000 | 8 | 10 |
 | Data Integration in PowerApps.com Admin Portal | 1000 | 24 | 10 |
 | Dataflows in PowerBI.com | 1000 | 100 | 10 |
+| Dataflows in Dynamics 365 Customer Insights | 1000 | 100 | 10 |
