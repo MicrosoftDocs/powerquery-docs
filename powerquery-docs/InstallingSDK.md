@@ -12,6 +12,14 @@ ms.author: miescobar
 
 The Power Query SDK is a set of tools designed to help you create Power Query connectors. These connectors are often referred to as custom connectors or Power Query extensions.
 
+Custom connectors allow you to create new data sources or customize and extend an existing source. Common use cases include:
+
+* Creating a business analyst-friendly view for a REST API.
+* Providing branding for a source that Power Query supports with an existing connector (such as an OData service or ODBC driver).
+* Implementing OAuth v2 authentication flow for a SaaS offering.
+* Exposing a limited or filtered view over your data source to improve usability.
+* Enabling DirectQuery for a data source using an ODBC driver.
+
 There are currently two versions of the Power Query SDK available:
 
 * **Visual Studio Power Query SDK**: Released in 2017 and it's an extension for Visual Studio 2017 and 2019

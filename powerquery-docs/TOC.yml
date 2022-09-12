@@ -530,12 +530,10 @@
         href: web-connection-fiddler.md
     - name: Create custom Power Query connectors
       items:
+      - name: "Power Query SDK Overview"
+        href: InstallingSDK.md
       - name: Quick starts
         items:
-        - name: "Install the Power Query SDK"
-          href: InstallingSDK.md
-        - name: "Start developing custom connectors"
-          href: StartingToDevelopCustomConnectors.md
         - name: "Create your first connector - Hello World"
           href: CreatingFirstConnector.md
       - name: Walkthroughs
