@@ -534,6 +534,8 @@
         href: InstallingSDK.md
       - name: Quick starts
         items:
+        - name: "Using the Power Query SDK"
+          href: power-query-sdk-vs-code.md        
         - name: "Create your first connector - Hello World"
           href: CreatingFirstConnector.md
       - name: Walkthroughs
