@@ -29,4 +29,4 @@ ms.author: bezhan
 
 ### Some objects in the Navigator return empty tables
 
-The Power Query Active Directory connector supports search in the Schema and Domain partitions, but not in the Configuration partition. This limitation is the current design. So if there are any objects that reside in the Configuration partition, Power query doesn't load data for those objects into the Navigator.
+The Power Query Active Directory connector supports search in the Schema and Domain partitions, but not in the Configuration partition. This limitation is the current design. So if there are any objects that reside in the Configuration partition, Power Query doesn't load data for those objects into the Navigator.
