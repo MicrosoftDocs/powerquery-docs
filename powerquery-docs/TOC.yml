@@ -304,6 +304,8 @@
         href: Connectors/index.md
       - name: "Access database"
         href: Connectors/AccessDatabase.md
+      - name: "Active Directory"
+        href: Connectors/active-directory.md
       - name: "Adobe Analytics"
         href: "Connectors/AdobeAnalytics.md"
       - name: "Amazon Athena"
