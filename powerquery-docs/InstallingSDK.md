@@ -20,12 +20,14 @@ Custom connectors allow you to create new data sources or customize and extend a
 * Exposing a limited or filtered view over your data source to improve usability.
 * Enabling DirectQuery for a data source using an ODBC driver.
 
+## Installing the Power Query SDK
+
 There are currently two versions of the Power Query SDK available:
 
 * **Visual Studio Power Query SDK**: Released in 2017 and it's an extension for Visual Studio 2017 and 2019
 * **Visual Studio Code Power Query SDK (Preview)**: Released in 2022 is the new and recommended way to create Power Query connectors.
 
-## Visual Studio Power Query SDK
+### Visual Studio Power Query SDK
 
 Follow the steps below to install the Visual Studio Power Query SDK:
 
@@ -36,7 +38,7 @@ Follow the steps below to install the Visual Studio Power Query SDK:
  
 ![Preview Feature.](images/newProject.png)
 
-## Visual Studio Code Power Query SDK (Preview)
+### Visual Studio Code Power Query SDK (Preview)
 
 >[!NOTE]
 >This new Power Query SDK is currently in public preview as of September of 2022.
