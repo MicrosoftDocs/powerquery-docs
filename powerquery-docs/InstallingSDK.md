@@ -1,5 +1,5 @@
 ---
-title: Installing the Power Query SDK
+title: Power Query SDK Overview
 description: Installation and explanation of the Power Query SDK and how to use Custom Connectors
 author: ptyx507x
 
@@ -8,7 +8,7 @@ ms.date: 9/12/2022
 ms.author: miescobar
 ---
 
-# Installing the Power Query SDK
+# Power Query SDK Overview
 
 The Power Query SDK is a set of tools designed to help you create Power Query connectors. These connectors are often referred to as custom connectors or Power Query extensions.
 
@@ -26,6 +26,8 @@ There are currently two versions of the Power Query SDK available:
 * **Visual Studio Code Power Query SDK (Preview)**: Released in 2022 is the new and recommended way to create Power Query connectors.
 
 ## Visual Studio Power Query SDK
+
+Follow the steps below to install the Visual Studio Power Query SDK:
 
 1. Install the [Power Query SDK](https://aka.ms/powerquerysdk) from the Visual Studio Marketplace.
 2. Create a new data connector project.
