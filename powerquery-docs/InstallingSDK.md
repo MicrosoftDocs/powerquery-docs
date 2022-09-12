@@ -14,7 +14,7 @@ The Power Query SDK is a set of tools designed to help you create Power Query co
 
 There are currently two versions of the Power Query SDK available:
 
-* **Visual Studio Power Query SDK**: Released in 2017 and its an extension for Visual Studio 2017 and 2019
+* **Visual Studio Power Query SDK**: Released in 2017 and it's an extension for Visual Studio 2017 and 2019
 * **Visual Studio Code Power Query SDK (Preview)**: Released in 2022 is the new and recommended way to create Power Query connectors.
 
 ## Visual Studio Power Query SDK
@@ -26,7 +26,6 @@ There are currently two versions of the Power Query SDK available:
  
 ![Preview Feature.](images/newProject.png)
 
-
 ## Visual Studio Code Power Query SDK (Preview)
 
 >[!NOTE]
@@ -34,7 +33,7 @@ There are currently two versions of the Power Query SDK available:
 
 The new Power Query SDK can be installed in Visual Studio Code as a Visual Studio Code extension. During the installation process, the extension will try to download and load some dependencies in order to provide the full functionality.
 
-Follow the steps found in the [official GitHub repository](https://github.com/Microsoft/vscode-powerquery-sdk) for the VIsual Studio Code Power Query SDK to install and provide feedback.
+Follow the steps found in the [official GitHub repository](https://github.com/Microsoft/vscode-powerquery-sdk) for the Visual Studio Code Power Query SDK to install and provide feedback.
 
 ## Connector development process
 
@@ -42,24 +41,24 @@ While you can use either the Visual Studio Code or the Visual Studio SDK, both u
 
 The following sections describe at a high-level the most common process to create a Power Query connector using the SDK.
 
-### Creating a new extension 
+### Creating a new extension
 
-When creating a new project (Visual Studio Power Query SDK) or a new workspace (Visual Studio Code Power Query SDK), you start with the following files:
+When creating a new project (Visual Studio Power Query SDK) or a new workspace (Visual Studio Code Power Query SDK), you start with the following core files:
 
 * Connector definition file (\<connectorName>.pq)
 * A query file (\<connectorName>.query.pq)
 * A string resource file (resources.resx)
 * PNG files of various sizes used to create icons
 
-Your connector definition file will start with an empty Data Source description. You can learn more information about a Data Source in the context of the Power Query SDK from the the article on [handling data access](/powerquery-docs/HandlingDataAccess.md#data-source-kind).
+Your connector definition file will start with an empty Data Source description. You can learn more information about a Data Source in the context of the Power Query SDK from the article on [handling data access](/powerquery-docs/HandlingDataAccess.md#data-source-kind).
 
 ### Testing
 
 The Power Query SDK provides basic query execution capabilities, allowing you to test your extension without having to switch over to Power BI Desktop.
 
-#### Additional query test file
+#### More query test file
 
-In addition to the extension file, Data Connector projects can have a query file (name.query.pq). This file can be used to run test queries within Visual Studio. The query evaluation will automatically include your extension code, without having to register your .pqx file, allowing you to call/test any shared functions in your extension code.
+In addition to the extension file, Data Connector projects can have a query file (name.query.pq). This file can be used to run test queries within Visual Studio. The query evaluation will automatically include your extension code, without having to register your.pqx file, allowing you to call/test any shared functions in your extension code.
 
 The query file can contain a single expression (for example, `HelloWorld.Contents()`), a `let` expression (such as what Power Query would generate), or a section document.
 
@@ -76,24 +75,34 @@ Extensions are defined within an M section document. A section document has a sl
 
 * They begin with a section declaration (for example, `section HelloWorld;`).
 * Each expression ends with a semi-colon (for example, `a = 1;` or `b = let c = 1 + 2 in c;`).
-* All functions and variables are local to the section document, unless they are marked as shared. Shared functions become visible to other queries/functions, and can be thought of as the exports for your extension (that is, they become callable from Power Query).
+* All functions and variables are local to the section document, unless they're marked as shared. Shared functions become visible to other queries/functions, and can be thought of as the exports for your extension (that is, they become callable from Power Query).
 
 More information about M section documents can be found in the [M Language specification](https://docs.microsoft.com/powerquery-m/m-spec-sections).
 
-## Enabling custom connectors in Power BI Desktop
-
-1. Copy the extension file into [Documents]/Power BI Desktop/Custom Connectors.
-2. Check the option **(Not Recommended) Allow any extension to load without validation or warning** in Power BI Desktop (under *File | Options and settings | Options | Security | Data Extensions*).
-3. Restart Power BI Desktop.
-4. Open the Get Data dialog and search for your custom connector in the list.
-
 ## Distribution of Data Connectors
 
-Power BI Desktop users can download extension files and place them in a known directory (steps described in previous section). Power BI Desktop will automatically load the extensions on restart.
+Power Query connectors can be used in Power BI Desktop and/or the Power Query Online experience such as Power BI Dataflows, Power BI datamarts and other experiences.
+
+### Power BI Desktop
+
+Power BI Desktop users can follow the steps below to consume a Power Query custom connector:
+ 
+1. Copy the extension file (.mez or.pqx) into [Documents]/Power BI Desktop/Custom Connectors.
+2. Check the option **(Not Recommended) Allow any extension to load without validation or warning** in Power BI Desktop (under *File | Options and settings | Options | Security | Data Extensions*).
+3. Restart Power BI Desktop.
+
+Power BI Desktop will automatically load the extensions on restart.
 
 Alternatively, as the owner of the data source and connector, you can submit your connector through the [Power Query Connector Certification](/powerquery-docs/ConnectorCertification.md) so it ships with Power BI Desktop on every release.
 
-## Additional links and resources
+### Power Query Online
+
+>[!NOTE]
+>The Power Query team is working hard towards enabling all Power QUery certified connectors in the Power Query Online experience.
+
+Only Power Query certified is shown in the Power Query Online experience. Learn more about the [Power Query Connector Certification](/powerquery-docs/ConnectorCertification.md) program.
+
+## More links and resources
 
 * [M Library Functions](/powerquery-m/power-query-m-function-reference)
 * [M Language Specification](/powerquery-m/power-query-m-language-specification)
