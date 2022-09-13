@@ -304,6 +304,8 @@
         href: Connectors/index.md
       - name: "Access database"
         href: Connectors/AccessDatabase.md
+      - name: "Active Directory"
+        href: Connectors/active-directory.md
       - name: "Adobe Analytics"
         href: "Connectors/AdobeAnalytics.md"
       - name: "Amazon Athena"
@@ -320,6 +322,8 @@
         href: Connectors/AutodeskConstructionCloud.md
       - name: "Automy Data Analytics (Beta)"
         href: Connectors/AutomyDataAnalytics.md
+      - name: "Azure Analysis Services database"
+        href: Connectors/azure-analysis-services.md
       - name: "Azure Blob Storage"
         href: Connectors/azure-blob-storage.md
       - name: "Azure Cost Management"
@@ -482,6 +486,8 @@
         href: Connectors/Snowflake.md
       - name: "SoftOne BI (Beta)"
         href: Connectors/SoftOneBI.md
+      - name: "SQL Server Analysis Services database"
+        href: Connectors/sql-server-analysis-services.md
       - name: "SQL Server database"
         href: Connectors/SQLServer.md
       - name: "Stripe (Deprecated)"
