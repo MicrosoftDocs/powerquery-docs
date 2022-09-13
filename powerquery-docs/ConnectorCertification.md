@@ -59,7 +59,7 @@ To ensure the best experience for our customers, we only consider connectors tha
 
 * The connector must be for a public product.
 
-* The connector must be considered code-complete for an initial release version. The program allows for frequent iterations and updates. Note that Microsoft doesn't directly offer technical consulting for development of custom connectors. However as part of the program, Microsoft can recommend resources for developers to further engage with. Once registered with the program below, reach out to your Microsoft contact to learn more.
+* The connector must be considered code-complete for an initial release version. The program allows for frequent iterations and updates. Note that Microsoft doesn't offer technical assistance or custom connector development consulting. We recommend leveraging public resources such as our SDK documentation and samples repository. If you require further assistance, we can share a list of known 3rd-party industry custom connector development consultants that you may want to engage directly, separate from any Microsoft program or partnership. Note that Microsoft isn't affiliated with any of these consultants and isn't responsible for your use of their services. Microsoft provides the list for your convenience and without any assurances, recommendations, or guarantees. Reach out to your Microsoft certification contact to learn more. 
 
 * The developer must provide an estimate for usage. We suggest that developers of connectors for very boutique products use our [connector self-signing capabilities](#custom-connector-distribution) to provide them directly to the customer.
 
