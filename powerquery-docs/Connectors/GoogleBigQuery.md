@@ -152,12 +152,12 @@ For more information on setting up or using Google service accounts, go to [Crea
 
 ### Authenticating through a Google service account
 
-When authenticating through a Google service account in Power BI Desktop, there's a specific credential format that's required by the connector.
+When you authenticate through a Google service account in Power BI Desktop, there's a specific credential format that's required by the connector.
 
 * Service Account Email: must be in email format
 * Service Account JSON key file contents: once this JSON key is downloaded, all new lines must be removed from the file so that the contents are in one line. Once the JSON file is in that format, the contents can be pasted into this field.
 
-When authenticating through a Google service account in Power BI service or Power Query Online, users need to use "Basic" authentication. The **Username** field maps to the **Service Account Email** field above, and the **Password** field maps to the **Service Account JSON key file contents** field above. The format requirements for each credential remain the same in both Power BI Desktop, Power BI service, and Power Query Online.
+When you authenticate through a Google service account in Power BI service or Power Query Online, users need to use "Basic" authentication. The **Username** field maps to the **Service Account Email** field above, and the **Password** field maps to the **Service Account JSON key file contents** field above. The format requirements for each credential remain the same in both Power BI Desktop, Power BI service, and Power Query Online.
 
 ### Unable to authenticate with Google BigQuery Storage API
 
