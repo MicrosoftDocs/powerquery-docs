@@ -3,7 +3,7 @@ title: Google BigQuery connector
 description: Provides basic information and prerequisites for the Google BigQuery connector for Power Query.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 9/9/2022
+ms.date: 9/14/2022
 ms.author: bezhan
 ---
 
@@ -115,13 +115,23 @@ This section describes any limitations or considerations of the Google BigQuery 
 
 ### Connecting to Google BigQuery in Power BI Desktop
 
-There are a few limits and considerations to keep in mind when using the Google BigQuery connector with Power BI:
+There are a few limits and considerations to keep in mind when using the Google BigQuery connector with Power BI.
 
-* The Google BigQuery connector is available in Power BI Desktop and in the Power BI service. In the Power BI service, the connector can be accessed using the Cloud-to-Cloud connection from Power BI to Google BigQuery.
+#### Connector availability
 
-* You can use Power BI with the Google BigQuery **Billing Project**. By default, Power BI uses the first project from the list returned for the user. To customize the behavior of the Billing Project when using it with Power BI, specify the following option in the underlying M in the Source step, which can be customized using the Power Query editor in Power BI Desktop:
+The Google BigQuery connector is available in Power BI Desktop and in the Power BI service. In the Power BI service, the connector can be accessed using the Cloud-to-Cloud connection from Power BI to Google BigQuery.
 
-   `Source = GoogleBigQuery.Database([BillingProject="Include-Billing-Project-Id-Here"])`
+#### "Access Denied" error
+
+When you try to connect to Google BigQuery from Power BI Desktop, you might get the following error message:
+
+`Datasource.Error: ODBC: ERROR [HY000][Microsoft][BigQuery] (100) Error interacting with REST API: Access Denied: Project <project name>: The user <user name> bigquery.jobs.create permissions in project <project name>.`
+
+In this case, you might need to enter a Billing Project ID in the **Billing Project** advanced option in the Power Query **Connection settings**.
+
+In addition, if you also create a report in Power BI service using a gateway, you might still get this error. In this case, you must manually include the Billing Project ID in the M code for the connection using the Power Query editor or the Power Query formula bar. For example:
+
+`Source = GoogleBigQuery.Database([BillingProject="Include-Billing-Project-Id-Here"])`
 
 ### Nested fields
 
