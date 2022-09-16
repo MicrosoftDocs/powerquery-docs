@@ -484,6 +484,8 @@
         href: Connectors/SingleStore.md
       - name: SIS-CC SDMX
         href: Connectors/SISCCSDMX.md
+      - name: Smartsheet
+        href: Connectors/Smartsheet.md
       - name: "Snowflake"
         href: Connectors/Snowflake.md
       - name: "SoftOne BI (Beta)"
