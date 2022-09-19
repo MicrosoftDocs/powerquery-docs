@@ -12,3 +12,28 @@ ms.author: miescobar
 
 >[!NOTE]
 >This article focuses on the experience available for the Power Query SDK found in Visual Studio Code. You can learn more on how to install the Power Query SDK for Visual Studio from the article on [Installing the SDK](/powerquery-docs/InstallingSDK.md).
+
+## Create a new project
+
+## Bring a legacy connector project to the new SDK
+
+## Settings file
+
+What it is 
+what you can add to it
+
+## Credentials
+
+### Set credential
+
+### List credentials
+
+### Delete credentials
+
+## Evaluate a query
+
+## Results pane
+
+## Build a connector connector file
+
+## Run TestConnection function
