@@ -96,7 +96,7 @@ The informational messages for this task are also shown in the output console.
 
 ## Evaluate a query and the results panel
 
-Before you can evaluate any tests queries, a credential must be set. Using the connector that was created in the previous section, you can open the ***.query.pq** file which serves as your test query file.
+Before you can evaluate any tests queries, a credential must be set. Using the connector that was created in the previous section, you can open the ***.query.pq** file that serves as your test query file.
 
 For this specific connector where the project name was MyConnector, the code looks as follows:
 
@@ -122,7 +122,7 @@ Make sure to save the file after changing its code.
 
 To evaluate this query you have three options:
 
-* Right click the file that's in use and select the option that reads "Evaluate current power query file"
+* Right select the file that's in use and select the option that reads "Evaluate current power query file"
 
 ![Right click the current file to evaluate it](media/power-query-sdk-vs-code/right-click-evaluate.jpg)
 
@@ -130,7 +130,7 @@ To evaluate this query you have three options:
 
 ![Selecting the evaluate current file task from the terminal menu experience](media/power-query-sdk-vs-code/terminal-evaluate.jpg)
 
-* Use the native Run & Debug option from Visual Studio Code, click the hyperlink to create a launch.json file and then evaluate the file
+* Use the native Run & Debug option from Visual Studio Code, select the hyperlink to create a launch.json file and then evaluate the file
 
 ![Create a launch.json file to evaluate queries through the Run and Debug extensibility](media/power-query-sdk-vs-code/create-launch-json.jpg)
 
@@ -140,7 +140,7 @@ After evaluating the query, the results will be displayed in the console at the 
 
 The results panel consists of three tabs:
 
-* **Output tab:** Displays a data preview of the query evaluated. If its a table it'll be displayed as grid.
+* **Output tab:** Displays a data preview of the query evaluated. If it's a table it will be displayed as grid.
 
 ![Output tab in the results panel](media/power-query-sdk-vs-code/results-output.jpg)
 
@@ -152,7 +152,7 @@ The results panel consists of three tabs:
 
 ![Summary tab in the results panel](media/power-query-sdk-vs-code/datasource-output.jpg)
 
-To evaluate a different query you simply need to modify the *.query.pq file, save it and then run the evaluation task again with any of the 3 methods.
+To evaluate a different query you simply need to modify the *.query.pq file, save it and then run the evaluation task again with any of the three methods.
 
 >[!NOTE]
 > The Power Query SDK does not manage any sort of caching mechanism for the evaluations.
@@ -180,7 +180,7 @@ The addition of the two new folders and files is what transforms the current wor
 
 ## Setup workspace
 
-What the Setup workspace task does is effectively create a settings.json file for your workspace which dictates some variables that will be used for your workspace when it comes to evaluations and general settings.
+What the Setup workspace task does is effectively create a settings.json file for your workspace that dictates some variables that will be used for your workspace when it comes to evaluations and general settings.
 
 ## Build a extension file
 
@@ -188,7 +188,7 @@ The build task allows you to create the .mez file for your extension on demand.
 
 ## Run TestConnection function
 
-TestConnection is a function that enables your connector to be refreshed in the Microsoft Cloud through services such as Power BI. It is a record implemented inside of your connector data source record. You can learn more about the implementation of the TestConnection handler from the [sample available for Test connection](https://learn.microsoft.com/power-query/samples/trippin/9-testconnection/readme).
+TestConnection is a function that enables your connector to be refreshed in the Microsoft Cloud through services such as Power BI. It's a record implemented inside of your connector data source record. You can learn more about the implementation of the TestConnection handler from the [sample available for Test connection](https://learn.microsoft.com/power-query/samples/trippin/9-testconnection/readme).
 
 The task to run the TestConnection enables you to test such handler inside the Power Query SDK without having to manually try this handler in the Microsoft Cloud.
 
