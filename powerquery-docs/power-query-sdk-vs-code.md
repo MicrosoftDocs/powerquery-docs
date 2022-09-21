@@ -40,7 +40,13 @@ The Power Query SDK automatically creates the following set of files:
 * A .query.pq file which main purpose is to be used as a way to create test queries that you can later evaluate
 * A .proj file which holds information about the extension project
 
-![Connector files](media/power-query-sdk-vs-code/connector-files.png) 
+![Connector files](media/power-query-sdk-vs-code/connector-files.png)
+
+Once a extension project is recognized by the Power Query SDK, the section for the Power Query SDK will change its appearance and will now display a list of tasks that you can run against your new extension project.
+
+![Tasks inside the Power Query SDK section](media/power-query-sdk-vs-code/ui-driven-tasks.png)
+
+In the following sections this article will showcase these tasks and their main purpose.
 
 ## Credentials
 
