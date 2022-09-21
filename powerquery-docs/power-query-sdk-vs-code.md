@@ -12,13 +12,12 @@ ms.author: miescobar
 
 This article focuses on the experience available for the Power Query SDK found in Visual Studio Code. You can learn more on how to install the Power Query SDK for Visual Studio from the article on [Installing the SDK](/powerquery-docs/InstallingSDK.md).
 
-
 ## Create a new project
 
 >[!TIP]
->Before creating an extension project, it is recommended that you create a new folder (workspace) where you'll store your extension project.
+>Before creating an extension project, it is recommended that you create a new folder where you'll store your extension project. During the creation of a new project, if no folder is selected, the Power Query SDK will help you locate or create a new folder before creating your extension project.
 
-Once in Visual Studio Code, navigate to the folder where you'll want to store your extension project and its files. In the main *Explorer* pane of Visual Studio Code, you will be able to see a section with the name **Power Query SDK**. This section will have only one button that reads *Create an extension project*. Click this button.
+Once in Visual Studio Code, In the main *Explorer* pane of Visual Studio Code, you will be able to see a section with the name **Power Query SDK**. This section will have only one button that reads *Create an extension project*. Click this button.
 
 ![Create a new extension project button in Visual Studio Code](media/power-query-sdk-vs-code/create-new-extension.jpg)
 
@@ -46,30 +45,64 @@ Once a extension project is recognized by the Power Query SDK, the section for t
 
 ![Tasks inside the Power Query SDK section](media/power-query-sdk-vs-code/ui-driven-tasks.jpg)
 
-In the following sections this article will showcase these tasks and their main purpose.
 
 ## Credentials
+
+>[!IMPORTANT] 
+>Before you can evaluate any queries of your data connector, it is required to have a credential set.
 
 The Power Query SDK offers multiple tasks through its user interface to allow you to set, list and delete credentials from your extension project.
 
 ### Set credential
 
+The Power Query SDK is primarily driven by tasks which can be triggered via multiple entry points. Setting a credential can be done in two ways and this is true for most tasks.
+
+1. Through the entry in the Power Query SDK section in the Explorer pane
+
+![Setting a credential through the Power Query SDK section in the Explorer](media/power-query-sdk-vs-code/set-credential.jpg)
+ 
+2. Through the Terminal by selecting the "Run Task..." option and selecting the group of tasks for powerquery
+
+![Setting a credential through the Terminal menu](media/power-query-sdk-vs-code/set-credential-terminal-task.jpg)
+
+
+When you run this task, Visual Studio Code will guide you through a series of prompts to allow you to set the credential. These series of prompts are predictable and will always consist of the same stages:
+
+1. Choose the data source kind
+2. Choose the connector file
+3. Choose the authentication method
+
+ For the existing extension project, the [authentication method](HandlingAuthentication.md) available is anonymous and once the authentication is set a message box confirming that a credential has been generated successfully should be shown at the bottom right corner of the window.
+
+![Credential has been generated successfully](media/power-query-sdk-vs-code/credential-set.jpg)
+
 ### List credentials
 
-### Delete credentials
+Similar to setting a credential, the task to list credentials has two entry points in the same places: Power Query SDK section in the Explorer pane and inside the Terminal menu.
+
+When this task is executed, it showcases the available credentials inside of the output terminal.
+
+![Credentials listed inside the Output console](media/power-query-sdk-vs-code/list-credentials.jpg)
+
+### Clear ALL credentials
+
+Similar to the previous two tasks, the task to list credentials has two entry points in the same places: Power Query SDK section in the Explorer pane and inside the Terminal menu.
+
+This task serves as a way to clear all credentials from your current session in the event that you need to set a new credential to evaluate your queries.
+
+The informational messages for this task are also shown in the output console.
+
+![Informational message for the Clear ALL credentials task](media/power-query-sdk-vs-code/clear-all-credentials.jpg)
+
+
+## Evaluate a query and the results panel
 
 ## Bring a legacy extension project to the new SDK
 
-## Settings file
+## Setup workspace
 
 What it is 
 what you can add to it
-
-
-
-## Evaluate a query
-
-## Results pane
 
 ## Build a extension file
 
