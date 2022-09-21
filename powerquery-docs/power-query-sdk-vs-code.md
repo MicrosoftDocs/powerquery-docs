@@ -154,14 +154,37 @@ The results panel consists of three tabs:
 
 To evaluate a different query you simply need to modify the *.query.pq file, save it and then run the evaluation task again with any of the 3 methods.
 
+>[!NOTE]
+> The Power Query SDK does not manage any sort of caching mechanism for the evaluations.
+
 ## Bring a legacy extension project to the new SDK
+
+This section is created to help connector developers who have extension projects that were created with the legacy [Visual Studio based Power Query SDK](https://marketplace.visualstudio.com/items?itemName=Dakahn.PowerQuerySDK).
+
+To follow along, we recommend downloading the connector projects available from our [DataConnectors repository for the TripPin sample](https://github.com/Microsoft/DataConnectors/tree/master/samples/TripPin/9-TestConnection), specifically the sample 9-TestConnection.
+
+To bring the legacy extension project to the new SDK, follow these steps:
+
+1. Navigate to the folder where your extension project is located with Visual Studio Code's "Open folder" option in the File menu
+2. Setup a workspace using the existing folder and its contents via one of the following two methods:
+
+* The Power Query SDK has a mechanism to recognize the contents of your folder and suggest you to enable the conversion to a Power Query SDK workspace
+
+![Popup in the Visual Studio Code interface that suggests the user an upgrade to the Power Query SDK workspace](media/power-query-sdk-vs-code/upgrade-suggestion.jpg)
+
+* You can run the **Setup workspace** and the **Build Task** from the terminal menu. These will effectively create the **.mez** file and the **settings.json** files needed for the workspace
+
+The addition of the two new folders and files is what transforms the current workspace into a new Power Query SDK workspace.
+
+![Upgrading the extension project to the new Power Query SDK](media/power-query-sdk-vs-code/upgrade-sdk.jpg)
 
 ## Setup workspace
 
-What it's 
-what you can add to it
+What the Setup workspace task does is effectively create a settings.json file for your workspace which dictates some variables that will be used for your workspace when it comes to evaluations and general settings.
 
 ## Build a extension file
+
+The build task allows you to create the .mez file for your extension on demand.
 
 ## Run TestConnection function
 
