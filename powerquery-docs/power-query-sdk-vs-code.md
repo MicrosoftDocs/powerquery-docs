@@ -96,7 +96,7 @@ The informational messages for this task are also shown in the output console.
 
 ## Evaluate a query and the results panel
 
-Before you can evaluate any tests queries, a credential must be set. Using the connector that was created in the previous section, you can open the ***.query.pq** file that serves as your test query file.
+Before you can evaluate any tests queries, a credential must be set. Using the connector that was created in the previous section, you can open the `*.query.pq` file that serves as your test query file.
 
 For this specific connector where the project name was MyConnector, the code looks as follows:
 
