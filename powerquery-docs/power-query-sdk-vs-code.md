@@ -188,6 +188,16 @@ The build task allows you to create the .mez file for your extension on demand.
 
 ## Run TestConnection function
 
+TestConnection is a function that enables your connector to be refreshed in the Microsoft Cloud through services such as Power BI. It is a record implemented inside of your connector data source record. You can learn more about the implementation of the TestConnection handler from the [sample available for Test connection](https://learn.microsoft.com/power-query/samples/trippin/9-testconnection/readme).
+
+The task to run the TestConnection enables you to test such handler inside the Power Query SDK without having to manually try this handler in the Microsoft Cloud.
+
+To run this task, first set a credential for your connector and then run the task either from the Power Query SDK section in the Explorer or through the list of tasks inside the terminal menu.
+
+The result of such task will be displayed in the output terminal at the bottom of the window.
+
+![Result of the Run TestConnection function in the Power Query SDK](media)
+
 ## Feedback and bugs
 
 Do you have any feedback, suggestions or bugs that you'd like to report? Visit our [official public repository on GitHub](https://github.com/microsoft/vscode-powerquery-sdk).
