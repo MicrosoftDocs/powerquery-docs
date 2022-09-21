@@ -196,7 +196,7 @@ To run this task, first set a credential for your connector and then run the tas
 
 The result of such task will be displayed in the output terminal at the bottom of the window.
 
-![Result of the Run TestConnection function in the Power Query SDK](media)
+![Result of the Run TestConnection function in the Power Query SDK](media/power-query-sdk-vs-code/TestConnection.jpg)
 
 ## Feedback and bugs
 
