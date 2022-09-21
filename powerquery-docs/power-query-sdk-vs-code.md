@@ -17,7 +17,7 @@ This article focuses on the experience available for the Power Query SDK found i
 >[!TIP]
 >Before creating an extension project, it is recommended that you create a new folder where you'll store your extension project. During the creation of a new project, if no folder is selected, the Power Query SDK will help you locate or create a new folder before creating your extension project.
 
-Once in Visual Studio Code, In the main *Explorer* pane of Visual Studio Code, you will be able to see a section with the name **Power Query SDK**. This section will have only one button that reads *Create an extension project*. Click this button.
+Once in Visual Studio Code, In the main *Explorer* pane of Visual Studio Code, you'll be able to see a section with the name **Power Query SDK**. This section will have only one button that reads *Create an extension project*. Select this button.
 
 ![Create a new extension project button in Visual Studio Code](media/power-query-sdk-vs-code/create-new-extension.jpg)
 
@@ -35,13 +35,13 @@ The Power Query SDK automatically creates the following set of files:
 * It builds the extension as a **.mez** file and stores it in a new *bin\AnyCPU\Debug* folder
 * A set of connector icons as png files
 * A **resources.resx** that serves as the main storage for strings to be used in the extension
-* A .pq file which holds the main logic of your extension or connector
-* A .query.pq file which main purpose is to be used as a way to create test queries that you can later evaluate
-* A .proj file which holds information about the extension project
+* A .pq file that holds the main logic of your extension or connector
+* A .query.pq file that main purpose is to be used as a way to create test queries that you can later evaluate
+* A .proj file that holds information about the extension project
 
 ![Connector files](media/power-query-sdk-vs-code/connector-files.jpg)
 
-Once a extension project is recognized by the Power Query SDK, the section for the Power Query SDK will change its appearance and will now display a list of tasks that you can run against your new extension project.
+Once a extension project is recognized by the Power Query SDK, the section for the Power Query SDK will change its appearance, and will now display a list of tasks that you can run against your new extension project.
 
 ![Tasks inside the Power Query SDK section](media/power-query-sdk-vs-code/ui-driven-tasks.jpg)
 
@@ -55,7 +55,7 @@ The Power Query SDK offers multiple tasks through its user interface to allow yo
 
 ### Set credential
 
-The Power Query SDK is primarily driven by tasks which can be triggered via multiple entry points. Setting a credential can be done in two ways and this is true for most tasks.
+The Power Query SDK is primarily driven by tasks that can be triggered via multiple entry points. Setting a credential can be done in two ways and this is true for most tasks.
 
 1. Through the entry in the Power Query SDK section in the Explorer pane
 
@@ -88,20 +88,75 @@ When this task is executed, it showcases the available credentials inside of the
 
 Similar to the previous two tasks, the task to list credentials has two entry points in the same places: Power Query SDK section in the Explorer pane and inside the Terminal menu.
 
-This task serves as a way to clear all credentials from your current session in the event that you need to set a new credential to evaluate your queries.
+This task serves as a way to clear all credentials from your current session when you need to set a new credential to evaluate your queries.
 
 The informational messages for this task are also shown in the output console.
 
 ![Informational message for the Clear ALL credentials task](media/power-query-sdk-vs-code/clear-all-credentials.jpg)
 
-
 ## Evaluate a query and the results panel
+
+Before you can evaluate any tests queries, a credential must be set. Using the connector that was created in the previous section, you can open the ***.query.pq** file which serves as your test query file.
+
+For this specific connector where the project name was MyConnector, the code looks as follows:
+
+``
+// Use this file to write queries to test your data connector
+let
+    result = MyConnector.Contents()
+in
+    result
+``
+
+Before evaluating the query, let's change the code to look as follows:
+
+``
+// Use this file to write queries to test your data connector
+let
+    result = MyConnector.Contents("Hello World")
+in
+    result
+``
+
+Make sure to save the file after changing its code.
+
+To evaluate this query you have three options:
+
+* Right click the file that's in use and select the option that reads "Evaluate current power query file"
+
+![Right click the current file to evaluate it](media/power-query-sdk-vs-code/right-click-evaluate.jpg)
+
+* Going through the Terminal menu and selecting the "Evaluate current file" task
+
+![Selecting the evaluate current file task from the terminal menu experience](media/power-query-sdk-vs-code/terminal-evaluate.jpg)
+
+* Use the native Run & Debug option from Visual Studio Code, click the hyperlink to create a launch.json file and then evaluate the file
+
+![Create a launch.json file to evaluate queries through the Run and Debug extensibility](media/power-query-sdk-vs-code/create-launch-json.jpg)
+
+After evaluating the query, the results will be displayed in the console at the bottom of the window and in a new panel called the **results panel** on the right.
+
+![Visual Studio Code window after evaluation has finalized showing the output in the console and the results panel](media/power-query-sdk-vs-code/evaluation-complete.jpg)
+
+The results panel consists of three tabs:
+
+* **Output tab:** Displays a data preview of the query evaluated. If its a table it'll be displayed as grid.
+
+![Output tab in the results panel](media/power-query-sdk-vs-code/results-output.jpg)
+
+* **Summary:** Displays a summary of the Activity that ran the evaluation with statistics around it.
+
+![Summary tab in the results panel](media/power-query-sdk-vs-code/summary-output.jpg)
+
+* **DataSource:** Displays general information about the data source used for the evaluation.
+
+![Summary tab in the results panel](media/power-query-sdk-vs-code/datasource-output.jpg)
 
 ## Bring a legacy extension project to the new SDK
 
 ## Setup workspace
 
-What it is 
+What it's 
 what you can add to it
 
 ## Build a extension file
