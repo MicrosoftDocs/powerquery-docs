@@ -152,6 +152,8 @@ The results panel consists of three tabs:
 
 ![Summary tab in the results panel](media/power-query-sdk-vs-code/datasource-output.jpg)
 
+To evaluate a different query you simply need to modify the *.query.pq file, save it and then run the evaluation task again with any of the 3 methods.
+
 ## Bring a legacy extension project to the new SDK
 
 ## Setup workspace
