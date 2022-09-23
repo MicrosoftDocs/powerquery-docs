@@ -8,7 +8,7 @@ ms.author: bezhan
 
 # Providing user documentation for your custom connector
 
-Once you've finished designing your Power Query custom connector, you'll need to submit an article that provides instructions on how to use your connector for publication on Microsoft Docs. This article discusses the layout of such an article and how to format the text of your article.
+Once you've finished designing your Power Query custom connector, you'll need to submit an article that provides instructions on how to use your connector for publication on Microsoft Learn. This article discusses the layout of such an article and how to format the text of your article.
 
 ## Article layout
 
