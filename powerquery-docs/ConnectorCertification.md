@@ -73,7 +73,7 @@ These prerequisites exist to ensure that connectors undergoing certification hav
 
 ### Process and Timelines
 
-Certified connectors are released with monthly Power BI Desktop releases, so the deadlines for each release work back from each Power BI Desktop release date. The expected duration of the certification process from registration to release varies depending on the quality and complexity of the connector submission, and is outlined in the following steps:
+Certified connectors are released with monthly Power BI Desktop releases, so the deadlines for each release work back from each Power BI Desktop release date. The expected duration of the certification process from registration to release varies depending on the quality and complexity of the connector submission. Microsoft doesn't provide any specific timeline guarantees with regard to any connector review and approval. The hard deadlines for each connector review is outlined in the following steps, but Microsoft doesn't guarantee adherence to these timelines. 
 
 * **Registration**: notification of intent to certify your custom connector. This must occur by the 15th of the month, two months before the targeted Power BI desktop release.
   * For example, for the April Power BI Desktop release, the deadline would be February 15th.
@@ -84,7 +84,7 @@ Certified connectors are released with monthly Power BI Desktop releases, so the
 * **Technical Review**: finalization of the connector files, passing Microsoft review and certification. This review must occur by the 15th of the month before the targeted Power BI Desktop release.
   * For example, for the April Power BI Desktop release, the deadline would be March 15th.
 
-Due to the complexity of the technical reviews and potential delays, rearchitecture, and testing issues, we highly recommend submitting early with a long lead time for the initial release and certification. If you feel like your connector is important to deliver to a few customers with minimal overhead, we recommend [self-signing](#custom-connector-distribution) and providing it that way.
+Due to the complexity of the technical reviews and potential delays, rearchitecture, and testing issues, **we highly recommend submitting early with a long lead time for the initial release and certification**. If you feel like your connector is important to deliver to a few customers with minimal overhead, we recommend [self-signing](#custom-connector-distribution) and providing it that way.
 
 ## Certification Requirements
 
