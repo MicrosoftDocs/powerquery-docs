@@ -37,7 +37,7 @@
     },
     {
       "source_path": "powerquery-docs/startingtodevelopcustomconnectors.md",
-      "redirect_url": "/powerquery-m/installingsdk",
+      "redirect_url": "/power-query/installingsdk",
       "redirect_document_id": "false"
     }
   ]
