@@ -119,7 +119,7 @@ The following list shows the supported features for SAP HANA. Not all features l
 
 * Power BI Desktop supports HANA information models, such as Analytic and Calculation Views, and has optimized navigation.
 
-* With SAP HANA, you can also use SQL commands in the native database query SQL statement to connect to Row and Column Tables in HANA Catalog tables, which isn't included in the Analytic/Calculation Views provided by the Navigator experience. You can also use the [ODBC connector](../odbc.md) to query these tables.
+* With SAP HANA, you can also use SQL commands in the native database query SQL statement to connect to Row and Column Tables in HANA Catalog tables, which aren't included in the Analytic/Calculation Views provided by the Navigator experience. You can also use the [ODBC connector](../odbc.md) to query these tables.
 
 * Power BI Desktop includes Optimized Navigation for HANA Models.
 
@@ -186,7 +186,7 @@ There are multiple ways of specifying parameters:
    { “Seattle”, 1, [ SqlType = "SECONDDATE", Value = #datetime(2022, 5, 27, 17, 43, 7) ] }
    ```
 
-`SqlType` follows the naming convention publicly documented for ODBC types in [SQL Data Types](/sql/odbc/reference/appendixes/sql-data-types). However, only the following subset of SQL data types are supported in the SAP HANA database connector:
+`SqlType` follows the naming convention publicly documented for ODBC types in [SQL Data Types](/sql/odbc/reference/appendixes/sql-data-types). However, only the following subset of SQL data types is supported in the SAP HANA database connector:
 
 * SQL_BIGINT
 * SQL_BINARY
@@ -223,18 +223,18 @@ The following example demonstrates how to provide a list of records (or mix valu
 
 ## Support for dynamic attributes
 
-The way in which the SAP HANA database connector treats calculated columns has been changed based on attributes. The SAP HANA database connector is a "cube" connector, and there are some sets of operations (add items, collapse columns, and so on) that happen in "cube" space. This is exhibited in the Power Query Desktop and Power Query Online user interface by the "cube" icon that replaces the more common "table" icon.
+The way in which the SAP HANA database connector treats calculated columns has been changed based on attributes. The SAP HANA database connector is a "cube" connector, and there are some sets of operations (add items, collapse columns, and so on) that happen in "cube" space. This cube space is exhibited in the Power Query Desktop and Power Query Online user interface by the "cube" icon that replaces the more common "table" icon.
 
 ![Screenshot of the left side of the current view in Power Query, emphasizing the cube icon at the top of the row number column.](cube-space.png)
 
-Before, when you added a table column (or another transformation that internally adds a column), the query would "drop out of cube space", and all operations would be done at a table level. At some point this could cause the query to stop folding. Performing cube operations after adding a column was no longer possible.
+Before, when you added a table column (or another transformation that internally adds a column), the query would "drop out of cube space", and all operations would be done at a table level. At some point, this drop out could cause the query to stop folding. Performing cube operations after adding a column was no longer possible.
 
 With this change, the added columns are treated as "dynamic attributes" within the cube. Having the query remain in cube space for this operation has the advantage of letting you continue using cube operations even after adding columns.
 
 >[!NOTE]
 >This new functionality is only available when you connect to Calculation Views in SAP HANA Server version 2.0 or higher.
 
-The following sample query takes advantage of this new capability. In the past you would get a "the value is not a cube" exception when applying [Cube.CollapseAndRemoveColumns](/powerquery-m/cube-collapseandremovecolumns).
+The following sample query takes advantage of this new capability. In the past, you would get a "the value is not a cube" exception when applying [Cube.CollapseAndRemoveColumns](/powerquery-m/cube-collapseandremovecolumns).
 
 :::code language="powerquery-m" source="dynamic-attributes.m":::
 
