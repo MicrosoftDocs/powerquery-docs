@@ -106,7 +106,7 @@ The following table describes all of the advanced options you can set in Power Q
 
 | Advanced option | Description |
 | --------------- | ----------- |
-| SQL Statement | More information, [Import data from a database using native database query](../native-database-query.md) |
+| SQL Statement | More information, [Import data from a database using native database query](../../native-database-query.md) |
 | Enable column binding | Binds variables to the columns of a SAP HANA result set when fetching data. May potentially improve performance at the cost of slightly higher memory utilization. This option is only available in Power Query Desktop. More information: [Enable column binding](#enable-column-binding) |
 
 ## Supported features for SAP HANA
@@ -214,6 +214,8 @@ There are multiple ways of specifying parameters:
 * SQL_WVARCHAR
 
 The following example demonstrates how to provide a list of parameter values.
+
+[!code-powerquery-m[SAP-HANA](list-of-values.m?highlight=7,10,11)]
 
 :::code language="powerquery-m" source="list-of-values.m" highlight="7,10,11":::
 
