@@ -3,7 +3,7 @@ title: Power Query SAP Business Warehouse Application Server connector
 description: Power Query SAP Business Warehouse Application Server connector reference
 author: dougklopfenstein
 ms.topic: conceptual
-ms.date: 9/27/2022
+ms.date: 9/30/2022
 ms.author: bezhan
 ---
 
@@ -68,7 +68,6 @@ When you install, in **Optional setup steps**, make sure you select **Install as
 * Direct Query
 * Implementation
   * 2.0 (Requires SAP .NET Connector 3.0)
-  * 1.0 (Requires NetWeaver RFC)
 * Advanced
   * Language code
   * Execution mode
@@ -134,7 +133,7 @@ To connect to an SAP BW Application Server from Power Query Online:
 
 ## Connect using router strings
 
-SAP Router is an SAP program that acts as an intermediate station (proxy) in a network connection between SAP systems, or between SAP systems and external networks. SAP router controls the access to your network, and, as such, is a useful enhancement to an existing firewall system (port filter). Figuratively, the firewall forms an impenetrable "wall" around your network. However, since some connections need to penetrate this wall, a "gate" has to be made in the firewall. SAP router assumes control of this gate. In short, SAP router provides you with the means of controlling access to your SAP system.
+SAP router is an SAP program that acts as an intermediate station (proxy) in a network connection between SAP systems, or between SAP systems and external networks. SAP router controls the access to your network, and, as such, is a useful enhancement to an existing firewall system (port filter). Figuratively, the firewall forms an impenetrable "wall" around your network. However, since some connections need to penetrate this wall, a "gate" has to be made in the firewall. SAP router assumes control of this gate. In short, SAP router provides you with the means of controlling access to your SAP system.
 
 ## Router strings in Power Query
 
