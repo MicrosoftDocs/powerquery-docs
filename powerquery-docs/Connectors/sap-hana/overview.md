@@ -215,7 +215,7 @@ There are multiple ways of specifying parameters:
 
 The following example demonstrates how to provide a list of parameter values.
 
-[!code-powerquery-m[SAP-HANA](list-of-values.m?highlight=7,10,11)]
+[!code[Main](list-of-values.m?highlight=7,10,11)]
 
 :::code language="powerquery-m" source="list-of-values.m" highlight="7,10,11":::
 
