@@ -215,13 +215,11 @@ There are multiple ways of specifying parameters:
 
 The following example demonstrates how to provide a list of parameter values.
 
-[!code[Main](list-of-values.m?highlight=7,10,11)]
-
-:::code language="powerquery-m" source="list-of-values.m" highlight="7,10,11":::
+[!code-powerquery-m[Main](list-of-values.m?highlight=7,10,11)]
 
 The following example demonstrates how to provide a list of records (or mix values and records):
 
-:::code language="powerquery-m" source="list-of-records.m" highlight="9,10,11,12,13,21,22,23,24,25,27":::
+[!code-powerquery-m[Main](list-of-records.m?highlight=9-13,21-25,27)]
 
 ## Support for dynamic attributes
 
