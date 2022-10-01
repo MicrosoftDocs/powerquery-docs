@@ -138,10 +138,10 @@ When trying to apply an operation that isn't supported, such as multiplying a te
 
 ![Table with the sales column converted from a Number data type to a Text data type, and the resulting a new column containing both expressions.](images/me-working-with-errors-operation-errors-final-table.png "Table with solution for operation error")
 
-#### Nested values shown as errors
+#### Nested values shown as errors due to Privacy Levels
 
-In Power Query projects that have multiple data sources, each with different privacy levels and where data can't be transferred from one data source to the other, queries that rely on combining data from these data sources will yield errors on nested values (such as records, tables, lists or binaries) that come from any of its data sources. This is because these values are lazily evaluated by the Power Query engine and cannot be staged locally by the Power Query engine hence the engine displays an error for those values with the message below:
+In Power Query projects that have multiple data sources, each with different privacy levels and where data can't be transferred from one data source to the other, queries that rely on combining data from these data sources will yield errors on nested values (such as records, tables, lists, binaries and functions) that come from any of its data sources. This is because these values are lazily evaluated by the Power Query engine and cannot be staged locally by the Power Query engine hence the engine displays an error for those values with the message below:
 
 ***"In the past we would have returned a text value of "[Table]", but we now return this error. Please see https://go.microsoft.com/fwlink/?linkid=2099726 for more information***
 
-A possible workaround to avoid these sort of errors is to change the privacy levels of the data sources involved to one that allows the combination of the data to go between both sources. However, whe combining data between sources, it is recommended that you do so without using values that can are lazily evaluated such as nested values.
+A possible workaround to avoid these sort of errors is to change the privacy levels of the data sources involved to one that allows the combination of the data to go between both sources. However, when combining data between sources, it is recommended that you do so without using values that are lazily evaluated such as nested values.
