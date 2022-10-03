@@ -41,7 +41,7 @@ Follow the steps below to install the Visual Studio Power Query SDK:
 ### Visual Studio Code Power Query SDK (Preview)
 
 >[!NOTE]
->This new Power Query SDK is currently in public preview as of September of 2022.
+>The new Visual Studio Code Power Query SDK is currently in public preview as of September of 2022.
 
 The new Power Query SDK can be installed in Visual Studio Code as a Visual Studio Code extension. During the installation process, the extension tries to download and load some dependencies in order to provide full functionality.
 
