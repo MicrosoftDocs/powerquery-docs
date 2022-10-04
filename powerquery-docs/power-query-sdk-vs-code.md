@@ -25,7 +25,7 @@ This button opens an input field at the top of the Visual Studio Code interface.
 
 ![Creating a new extension project and naming the project.](media/power-query-sdk-vs-code/new-project-name.jpg)
 
-After a few seconds, your Visual Studio Code window opens the main *.pH file for your extension project that contains your connector logic. The Power Query SDK automatically runs some necessary tasks to complete the setup of your workspace. You can check these tasks in the output console in Visual Studio Code.
+After a few seconds, your Visual Studio Code window opens the main *.pq file for your extension project that contains your connector logic. The Power Query SDK automatically runs some necessary tasks to complete the setup of your workspace. You can check these tasks in the output console in Visual Studio Code.
 
 ![Extension project created using the Hello World template.](media/power-query-sdk-vs-code/extension-project-created.jpg)
 
