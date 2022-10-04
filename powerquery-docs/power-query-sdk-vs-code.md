@@ -41,14 +41,14 @@ The Power Query SDK automatically creates the following set of files:
 
 ![List of connector files.](media/power-query-sdk-vs-code/connector-files.jpg)
 
-Once an extension project is recognized by the Power Query SDK, the section for the Power Query SDK changes its appearance, and now displays a list of tasks you can run against your new extension project.
+Once an extension project is recognized by Visual Studio Code, the section for the Power Query SDK changes its appearance, and now displays a list of tasks you can run against your new extension project.
 
 ![Tasks inside the Power Query SDK section.](media/power-query-sdk-vs-code/ui-driven-tasks.jpg)
 
 ## Credentials
 
 >[!IMPORTANT]
->Before you can evaluate any queries of your data connector, it is required to have a credential set.
+>Before you can evaluate any of your data connector's queries, a set of credentials must first be created for the extension project.
 
 The Power Query SDK offers multiple tasks through its user interface to allow you to set, list, and delete credentials from your extension project.
 
@@ -142,7 +142,7 @@ The result panel contains three tabs:
 
    ![Output tab in the results panel.](media/power-query-sdk-vs-code/results-output.jpg)
 
-* **Summary:** Displays a summary of the Activity that ran the evaluation with statistics around it.
+* **Summary:** Displays a summary of the activity that ran the evaluations, along with the statistics associated with that activity.
 
    ![Summary tab in the results panel.](media/power-query-sdk-vs-code/summary-output.jpg)
 
