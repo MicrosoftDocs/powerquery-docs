@@ -105,3 +105,7 @@ If you want to connect to a data source from Power BI service using OAuth2, the 
 ## Limitation: Custom AD FS authentication endpoint isn't supported in Power BI service
 
 The ability to use a custom Active Directory Federation Services (AD FS) authentication endpoint isn't supported in Power BI service. Users might encounter the following error: **The token service reported by the resource is not trusted**.
+
+## Cancel dataflow refresh
+
+Sometimes you start a dataflow refresh however, after starting it you realize you wanted to change one more thing before refreshing your data. In that case you have to wait till the refresh is finished. It is currently not supported to stop a refresh midway as the process already working on getting the data and updating the tables in your workspace or environment.
