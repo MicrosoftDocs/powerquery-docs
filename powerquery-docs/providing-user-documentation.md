@@ -8,7 +8,7 @@ ms.author: bezhan
 
 # Providing user documentation for your custom connector
 
-Once you've finished designing your Power Query custom connector, you'll need to submit an article that provides instructions on how to use your connector for publication on Microsoft Docs. This article discusses the layout of such an article and how to format the text of your article.
+Once you've finished designing your Power Query custom connector, you'll need to submit an article that provides instructions on how to use your connector for publication on Microsoft Learn. This article discusses the layout of such an article and how to format the text of your article.
 
 ## Article layout
 
@@ -30,7 +30,7 @@ After the support note, provide a summary table that contains the following info
 * **Release state**: Indicates whether the connector is in preview or general availability. Use either "Preview" or "General Availability".
 * **Products supported**: Lists the products that can use your custom connector.
 * **Authentication types supported**: Lists the authentication types your custom connector supports.
-* **Function reference docs**: Lists any M formula language docs that are associated with your custom connector.
+* **Function reference documentation**: Lists any M formula language documentation associated with your custom connector.
 
 ![Example summary table.](images/sample-summary.png)
 
@@ -70,7 +70,7 @@ Any other instructions or information about your connector that hasn't been cove
 
 ## Article location and format
 
-Your article should be made available on GitHub under the Connectors folder in the Power Query docs repo: <https://github.com/MicrosoftDocs/powerquery-docs/tree/master/powerquery-docs/Connectors>. Ensure that you also add a link to your article in the [list of connectors](./connectors/index.md) referencing the correct logo image uploaded to `/Connectors/media/index` folder. Lastly, ensure that you add a link to your article in the table of contents file (`TOC.yml`). Certified connectors will only be available under **Power BI (Datasets)**.
+Your article should be made available on GitHub under the Connectors folder in the Power Query documentation repo: <https://github.com/MicrosoftDocs/powerquery-docs/tree/master/powerquery-docs/Connectors>. Ensure that you also add a link to your article in the [list of connectors](./connectors/index.md) referencing the correct logo image uploaded to `/Connectors/media/index` folder. Lastly, ensure that you add a link to your article in the table of contents file (`TOC.yml`). Certified connectors will only be available under **Power BI (Datasets)**.
 
 See our [contributor guide](/contribute/) on how you can contribute to our repo.
 
