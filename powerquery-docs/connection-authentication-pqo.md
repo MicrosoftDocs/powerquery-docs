@@ -2,7 +2,7 @@
 title: Connections and authentication in Power Query Online
 description: This article describes the process and specifics of the authentication process in Power Query Online.
 author: ptyx507x
-ms.date: 9/8/2022
+ms.date: 10/5/2022
 ms.author: miescobar
 ---
 
@@ -21,7 +21,7 @@ There are two categories of connections:
 
 ## Creating a connection
 
-During the [get data experience in Power Query Online](/powerquery-docs/get-data-experience.md#1-connection-settings-and-authentication), you'll find a dialog where you enter information to create and establish a connection to your data source. The process is standard for all connectors in Power Query, but some connectors might require more information in order to create a connection.
+During the [get data experience in Power Query Online](get-data-experience.md#1-connection-settings), you'll find a dialog where you enter information to create and establish a connection to your data source. The process is standard for all connectors in Power Query, but some connectors might require more information in order to create a connection.
 
 ### Creating a cloud connection
 
@@ -48,7 +48,7 @@ The following table contains the fields and values used in the **Connection sett
 After finishing the **Connection settings** section, you select the **Next** button to move forward in the [get data](get-data-experience.md) experience.
 
 >[!TIP]
-> Some connectors provide an auto sign in experience. To learn more about this feature, go to [auto sign in](/powerquery-docs/auto-signin-aad.md).
+> Some connectors provide an auto sign in experience. To learn more about this feature, go to [auto sign in](auto-signin-aad.md).
 
 ### Creating an on-premises connection
 
@@ -109,7 +109,7 @@ To override this behavior, you can take either of the following two actions:
 
 ## More resources
 
-* [List of connectors in Power Query](/Connectors/index.md)
+* [List of connectors in Power Query](Connectors/index.md)
 * [On-premises data gateways documentation](/data-integration/gateway/)
 * [Change the gateway used in a dataflow](change-gateway-dataflow.md)
 * [Troubleshooting dataflow issues: Connection to the data source](/power-query/dataflows/troubleshooting-dataflow-issues-connection-to-the-data-source)

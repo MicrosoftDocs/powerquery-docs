@@ -3,7 +3,7 @@ title: Power Query connector for FHIR
 description: Power Query connector for FHIR reference
 author: hansenms
 ms.topic: conceptual
-ms.date: 1/18/2022
+ms.date: 10/5/2022
 ms.author: mihansen
 ---
 
@@ -20,7 +20,6 @@ If you don't have a FHIR server, you can provision the [Azure API for FHIR](/azu
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
 | Authentication Types Supported | Anonymous<br/>Azure Active Directory |
-| | |
 
 >[!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
@@ -57,7 +56,7 @@ To make a connection to a FHIR server, take the following steps:
 
     ![Image of authentication dialog box with the Organizational account selected and the user not yet signed in.](FHIR-Sign-In.png)
 
-    The connector supports "Anonymous" for FHIR servers with no access controls (for example, public test servers (like http://test.fhir.org/r4) or Azure Active Directory authentication. You must have a [FHIR Data Reader role](#prerequisites) on the FHIR server to read data from the server. Go to [FHIR connector authentication](FHIR-Authentication.md) for details.
+    The connector supports "Anonymous" for FHIR servers with no access controls (for example, public test servers (like `http://test.fhir.org/r4`) or Azure Active Directory authentication. You must have a [FHIR Data Reader role](#prerequisites) on the FHIR server to read data from the server. Go to [FHIR connector authentication](FHIR-Authentication.md) for details.
 
 5. Select the resources you're interested in.
 
