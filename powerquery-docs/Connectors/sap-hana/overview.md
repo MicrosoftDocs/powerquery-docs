@@ -3,7 +3,7 @@ title: Power Query SAP HANA database connector
 description: Provides basic information, prerequisites, and instructions on connecting to your data using the SAP HANA database connector.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 9/30/2022
+ms.date: 10/6/2022
 ms.author: bezhan
 ---
 
@@ -145,8 +145,9 @@ SapHana.Database("myserver:30015", [Implementation = "2.0", EnableColumnBinding 
 
 There are limitations associated with manually adding the `EnableColumnBinding` option:
 
-* Enable column binding only works in Import mode. It doesn't work in DirectQuery mode because DirectQuery blocks access to the Query Editor.
-* In SAP HANA Implementation 2.0, column binding is all or nothing. If some columns can’t be bound, none will be bound, and the user will receive an exception, for example, `DataSource.Error: Column MEASURE_UNIQUE_NAME of type VARCHAR cannot be bound (20002 > 16384)`.
+* Enable column binding works in both Import and DirectQuery mode. However, retrofitting an existing DirectQuery query to use this advanced option isn't possible. Instead, a new query must be created for this feature to work correctly.
+* In SAP HANA Server version 2.0 or later, column binding is all or nothing. If some columns can’t be bound, none will be bound, and the user will receive an exception, for example, `DataSource.Error: Column MEASURE_UNIQUE_NAME of type VARCHAR cannot be bound (20002 > 16384)`. Although `EnableColumnBinding` is an option that can potentially improve performance, when used with SAP HANA Server version 2.0 and later, you shouldn't expect  any improved performance in these server versions.
+* HANA version 1.0 servers don't always report correct column lengths. In this context, `EnableColumnBinding` allows for partial column binding. For some queries, this could mean that no columns are bound. In this case, no performance benefits will be gained.
 
 ## Native query support in the SAP HANA database connector
 
@@ -158,7 +159,7 @@ The Power Query SAP HANA database connector now supports query folding on native
 
 ### Parameters in native queries
 
-The Power Query SAP HANA database connector now supports parameters in native queries. You can specify parameters in native queries by using either the [Value.NativeQuery](/powerquery-m/value-nativequery) syntax or the `Query` option in the [SapHana.Database](/powerquery-m/saphana-database) function to execute simple queries, but not both.
+The Power Query SAP HANA database connector now supports parameters in native queries. You can specify parameters in native queries by using the [Value.NativeQuery](/powerquery-m/value-nativequery) syntax.
 
 Unlike other connectors, the SAP HANA database connector supports `EnableFolding = True` and specifying parameters at the same time.
 
@@ -186,50 +187,43 @@ There are multiple ways of specifying parameters:
    { “Seattle”, 1, [ SqlType = "SECONDDATE", Value = #datetime(2022, 5, 27, 17, 43, 7) ] }
    ```
 
-`SqlType` follows the naming convention publicly documented for ODBC types in [SQL Data Types](/sql/odbc/reference/appendixes/sql-data-types). However, only the following subset of SQL data types is supported in the SAP HANA database connector:
+`SqlType` follows the standard type names defined by SAP HANA. For example, the following list contains the most common types used:
 
-* SQL_BIGINT
-* SQL_BINARY
-* SQL_BIT
-* SQL_CHAR
-* SQL_DATE
-* SQL_DATETIME
-* SQL_DECIMAL
-* SQL_DOUBLE
-* SQL_FLOAT
-* SQL_GUID
-* SQL_INTEGER
-* SQL_LONGVARBINARY
-* SQL_LONGVARCHAR
-* SQL_NUMERIC
-* SQL_REAL
-* SQL_SMALLINT
-* SQL_TIMESTAMP
-* SQL_TINYINT
-* SQL_TYPE_TIME
-* SQL_VARBINARY
-* SQL_VARCHAR
-* SQL_WCHAR
-* SQL_WLONGVARCHAR
-* SQL_WVARCHAR
+* BIGINT
+* BINARY
+* BOOLEAN
+* CHAR
+* DATE
+* DECIMAL
+* DOUBLE
+* INTEGER
+* NVARCHAR
+* SECONDDATE
+* SHORTTEXT
+* SMALLDECIMAL
+* SMALLINT
+* TIME
+* TIMESTAMP
+* VARBINARY
+* VARCHAR
 
 The following example demonstrates how to provide a list of parameter values.
 
-[!code-powerquery-m[Main](list-of-values.m?highlight=7,10,11)]
+[!code-powerquery-m[Main](list-of-values.m?highlight=9,12,13)]
 
 The following example demonstrates how to provide a list of records (or mix values and records):
 
-[!code-powerquery-m[Main](list-of-records.m?highlight=9-13,21-25,27)]
+[!code-powerquery-m[Main](list-of-records.m?highlight=10-14,22-26,28)]
 
 ## Support for dynamic attributes
 
-The way in which the SAP HANA database connector treats calculated columns has been changed based on attributes. The SAP HANA database connector is a "cube" connector, and there are some sets of operations (add items, collapse columns, and so on) that happen in "cube" space. This cube space is exhibited in the Power Query Desktop and Power Query Online user interface by the "cube" icon that replaces the more common "table" icon.
+The way in which the SAP HANA database connector treats calculated columns has been improved. The SAP HANA database connector is a "cube" connector, and there are some sets of operations (add items, collapse columns, and so on) that happen in "cube" space. This cube space is exhibited in the Power Query Desktop and Power Query Online user interface by the "cube" icon that replaces the more common "table" icon.
 
 ![Screenshot of the left side of the current view in Power Query, emphasizing the cube icon at the top of the row number column.](cube-space.png)
 
 Before, when you added a table column (or another transformation that internally adds a column), the query would "drop out of cube space", and all operations would be done at a table level. At some point, this drop out could cause the query to stop folding. Performing cube operations after adding a column was no longer possible.
 
-With this change, the added columns are treated as "dynamic attributes" within the cube. Having the query remain in cube space for this operation has the advantage of letting you continue using cube operations even after adding columns.
+With this change, the added columns are treated as _dynamic attributes_ within the cube. Having the query remain in cube space for this operation has the advantage of letting you continue using cube operations even after adding columns.
 
 >[!NOTE]
 >This new functionality is only available when you connect to Calculation Views in SAP HANA Server version 2.0 or higher.
