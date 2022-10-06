@@ -56,7 +56,7 @@ To make a connection to a FHIR server, take the following steps:
 
     ![Image of authentication dialog box with the Organizational account selected and the user not yet signed in.](FHIR-Sign-In.png)
 
-    The connector supports "Anonymous" for FHIR servers with no access controls (for example, public test servers (like `http://test.fhir.org/r4`) or Azure Active Directory authentication. You must have a [FHIR Data Reader role](#prerequisites) on the FHIR server to read data from the server. Go to [FHIR connector authentication](FHIR-Authentication.md) for details.
+    The connector supports "Anonymous" for FHIR servers with no access controls (for example, public test servers like `http://test.fhir.org/r4`) or Azure Active Directory authentication. You must have a [FHIR Data Reader role](#prerequisites) on the FHIR server to read data from the server. Go to [FHIR connector authentication](FHIR-Authentication.md) for details.
 
 5. Select the resources you're interested in.
 
