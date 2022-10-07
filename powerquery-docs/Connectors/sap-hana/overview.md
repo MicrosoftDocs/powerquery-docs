@@ -3,7 +3,7 @@ title: Power Query SAP HANA database connector
 description: Provides basic information, prerequisites, and instructions on connecting to your data using the SAP HANA database connector.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 10/6/2022
+ms.date: 10/7/2022
 ms.author: bezhan
 ---
 
@@ -146,7 +146,7 @@ SapHana.Database("myserver:30015", [Implementation = "2.0", EnableColumnBinding 
 There are limitations associated with manually adding the `EnableColumnBinding` option:
 
 * Enable column binding works in both Import and DirectQuery mode. However, retrofitting an existing DirectQuery query to use this advanced option isn't possible. Instead, a new query must be created for this feature to work correctly.
-* In SAP HANA Server version 2.0 or later, column binding is all or nothing. If some columns can’t be bound, none will be bound, and the user will receive an exception, for example, `DataSource.Error: Column MEASURE_UNIQUE_NAME of type VARCHAR cannot be bound (20002 > 16384)`. Although `EnableColumnBinding` is an option that can potentially improve performance, when used with SAP HANA Server version 2.0 and later, you shouldn't expect  any improved performance in these server versions.
+* In SAP HANA Server version 2.0 or later, column binding is all or nothing. If some columns can’t be bound, none will be bound, and the user will receive an exception, for example, `DataSource.Error: Column MEASURE_UNIQUE_NAME of type VARCHAR cannot be bound (20002 > 16384)`.
 * SAP HANA version 1.0 servers don't always report correct column lengths. In this context, `EnableColumnBinding` allows for partial column binding. For some queries, this could mean that no columns are bound. When no columns are bound, no performance benefits are gained.
 
 ## Native query support in the SAP HANA database connector

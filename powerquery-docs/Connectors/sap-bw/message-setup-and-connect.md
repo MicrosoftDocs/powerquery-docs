@@ -3,7 +3,7 @@ title: Power Query SAP Business Warehouse Message Server connector
 description: Power Query SAP Business Warehouse Message Server connector reference
 author: dougklopfenstein
 ms.topic: conceptual
-ms.date: 10/6/2022
+ms.date: 10/7/2022
 ms.author: bezhan
 ---
 
@@ -166,7 +166,7 @@ The following table contains examples of some router strings.
 
 * In Power Query, you can use the "router string" syntax to specify a custom port, so router strings with a single station are allowed. Router strings can then be identified as starting with either `/H/` or `/M/`. Any other input is assumed to be a server name/IP address.
 
-* To allow you to use the same router strings you use in other tools, the `G` option in the router string is supported. When provided, it should match the value specified in the "Logon group" parameter.
+* To allow you to use the same router strings you use in other tools, the `/G/` option in the router string is supported. When provided, it should match the value specified in the "Logon group" parameter.
 
 * If a message server port is specified, it will be sent. Under these circumstances, the `SystemId` is omitted from the connection string as it’s no longer required. However, you must still provide a value for `SystemId` even though it won't be used to establish the connection.
 
