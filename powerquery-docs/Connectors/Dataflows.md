@@ -85,6 +85,10 @@ _**There's a difference in the data when I remove duplicates in dataflows&mdash;
 
 There could be a difference in data between design-time and refresh-time. We don't guarantee which instance is being kept during refresh time. For information on how to avoid inconsistencies in your data, go to [Working with duplicates](../working-with-duplicates.md).
 
+_**I'm getting data via the dataflow connector however, I'm receiving an 429 error code&mdash;how can I resolve this?**_
+
+When you are receiving an error code 429  it is possibly due to exceeding the limit of 500 requests per minute. This error typically resolves by itself by waiting a minute or two after the cooldown period ended. This limit is in place to prevent Dataflows and other Power BI functionality from having a degraded performance. Consequences due to the continued high load on the service may result in additional degraded performance, so we ask users to significantly reduce the number of requests to less than 500 (limit) or fix your script/model to this specific limit (500) to efficiently mitigate impact and avoid further issues.
+
 ### See also
 
 * [Using the output of Dataflows from other Power Query experiences](../dataflows/using-output-power-platform-dataflows-other-azure.md)
