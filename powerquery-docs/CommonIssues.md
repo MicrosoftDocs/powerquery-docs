@@ -108,13 +108,13 @@ The ability to use a custom Active Directory Federation Services (AD FS) authent
 
 ## Expression.Error: Evaluation resulted in a stack overflow and cannot continue.
 
-Stack overflow errors can be caused by a bug in your M code. For example, the following function produces a stack overflow because it repeatedly calls back into itself without any kind of end condition. (A function that calls itself like this is known as a "recursive" function.)
+Stack overflow errors can be caused by a bug in your M code. For example, the following function produces a stack overflow because it repeatedly calls back into itself without any kind of end condition. A function that calls itself like this is known as a "recursive" function.
 
 `let f = (x) => @f(x + 1) in f(0)`
 
 Here are some common ways to resolve a stack overflow in your M code.
 * Ensure that your recursive functions actually terminate when the expected end condition is reached.
-* Replace recursion with iteration (for example, by using functions such as `List.Transform`, `List.Generate`, or `List.Accumulate`).
+* Replace recursion with iteration (for example, by using functions such as [List.Transform](/powerquery-m/list-transform), [List.Generate](/powerquery-m/list-generate), or [List.Accumulate](/powerquery-m/list-accumulate)).
 
 ## Expression.Error: Evaluation ran out of memory and can't continue.
 
@@ -122,4 +122,4 @@ Here are some common ways to resolve a stack overflow in your M code.
 
 `Table.Buffer(Table.FromList({1..1000000000}, Splitter.SplitByNothing()))`
 
-To resolve out of memory errors, optimize memory intensive operations like sorts, joins, grouping, and distincts by ensuring they fold to the source, or by removing them altogether where possible. (Sorts, for example, are often unnecessary.)
+To resolve out of memory errors, optimize memory intensive operations like sorts, joins, grouping, and distincts by ensuring they fold to the source, or by removing them altogether where possible. Sorts, for example, are often unnecessary.
