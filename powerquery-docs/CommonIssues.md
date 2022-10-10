@@ -10,7 +10,7 @@ ms.author: miescobar
 
 # Common Issues
 
-## Power query
+## Power Query
 
 ### Preserving sort
 
@@ -112,4 +112,6 @@ The ability to use a custom Active Directory Federation Services (AD FS) authent
 
 ### Cancel dataflow refresh
 
-Sometimes you start a dataflow refresh however, after starting it you realize you wanted to change one more thing before refreshing your data. In that case you have to wait till the refresh is finished. It is currently not supported to stop a refresh midway as the process already working on getting the data and updating the tables in your workspace or environment. We do plan to add support for canceling a dataflow refresh in the future.
+Sometimes you start a dataflow refresh, but after starting it you realize you wanted to change one more thing before refreshing your data. In that case, you have to wait until the refresh is finished. Stopping a refresh midway as the process is already working on getting the data and updating the tables in your workspace or environment isn't currently supported. 
+
+We do plan to add support for canceling a dataflow refresh in the future.
