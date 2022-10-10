@@ -2,7 +2,7 @@
 title: Query folding on native queries
 description: This article provides information on how to enable query folding against queries that use the Value.NativeQuery function.
 author: ptyx507x
-ms.date: 6/27/2022
+ms.date: 9/29/2022
 ms.author: miescobar
 ---
 
@@ -19,12 +19,13 @@ This article showcases an alternative method to create native queries against yo
 
 The method described in the next sections applies to the following data connectors:
 
-* [Dataverse](connectors/dataverse.md) *(when using enhanced compute)*
-* [SQL Server](connectors/SQLServer.md)
-* [PostgreSQL](connectors/postgresql.md)
 * [Amazon Redshift](connectors/amazonredshift.md)
+* [Dataverse](connectors/dataverse.md) *(when using enhanced compute)*
 * [Google BigQuery](connectors/googlebigquery.md)
+* [PostgreSQL](connectors/postgresql.md)
+* [SAP HANA](connectors/sap-hana/overview.md)
 * [Snowflake](connectors/snowflake.md)
+* [SQL Server](connectors/SQLServer.md)
 
 ## Connect to target from data source
 
