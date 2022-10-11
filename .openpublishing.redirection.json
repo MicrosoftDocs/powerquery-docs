@@ -34,6 +34,11 @@
       "source_path": "powerquery-docs/Web.Contents.md",
       "redirect_url": "/powerquery-m/web-contents",
       "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerquery-docs/startingtodevelopcustomconnectors.md",
+      "redirect_url": "/power-query/installingsdk",
+      "redirect_document_id": "false"
     }
   ]
 }
