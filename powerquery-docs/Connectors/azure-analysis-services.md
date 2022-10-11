@@ -3,7 +3,7 @@ title: Power Query Azure Analysis Services database connector
 description: Includes basic information about products that use the Azure Analysis Services database connector, supported authentication types, prerequisites, and connection instructions.
 author: dougklopfenstein
 ms.topic: conceptual
-ms.date: 9/9/2022
+ms.date: 10/5/2022
 ms.author: dougklo
 LocalizationGroup: reference
 ---
@@ -96,4 +96,4 @@ If you've enabled the firewall in Azure Analysis Services and you're getting an 
 
 ![screenshot](./media/azure-analysis-services/aas-firewall-settings.png)
 
-To allowlist the Power Query Online clusters, download the Azure IP ranges and service tags from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=56519). You'll need to allowlist the IP addresses from the **PowerQueryOnline** service tag. For more information on how to configure the server firewall, go to [Quickstart: Configure server firewall - Portal](/azure/analysis-services/analysis-services-qs-firewall/azure/analysis-services/analysis-services-qs-firewall).
+To allowlist the Power Query Online clusters, download the Azure IP ranges and service tags from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=56519). You'll need to allowlist the IP addresses from the **PowerQueryOnline** service tag. For more information on how to configure the server firewall, go to [Quickstart: Configure server firewall - Portal](/azure/analysis-services/analysis-services-qs-firewall).
