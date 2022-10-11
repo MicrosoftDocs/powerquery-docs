@@ -105,21 +105,3 @@ If you want to connect to a data source from Power BI service using OAuth2, the 
 ## Limitation: Custom AD FS authentication endpoint isn't supported in Power BI service
 
 The ability to use a custom Active Directory Federation Services (AD FS) authentication endpoint isn't supported in Power BI service. Users might encounter the following error: **The token service reported by the resource is not trusted**.
-
-## Expression.Error: Evaluation resulted in a stack overflow and cannot continue.
-
-Stack overflow errors can be caused by a bug in your M code. For example, the following function produces a stack overflow because it repeatedly calls back into itself without any kind of end condition. A function that calls itself like this is known as a "recursive" function.
-
-`let f = (x) => @f(x + 1) in f(0)`
-
-Here are some common ways to resolve a stack overflow in your M code.
-* Ensure that your recursive functions actually terminate when the expected end condition is reached.
-* Replace recursion with iteration (for example, by using functions such as [List.Transform](/powerquery-m/list-transform), [List.Generate](/powerquery-m/list-generate), or [List.Accumulate](/powerquery-m/list-accumulate)).
-
-## Expression.Error: Evaluation ran out of memory and can't continue.
-
-"Out of memory" errors (or OOMs) can be caused by doing too many memory intensive operations against very large tables. For example, the following M code produces an OOM because it attempts to load a billion rows into memory at once.
-
-`Table.Buffer(Table.FromList({1..1000000000}, Splitter.SplitByNothing()))`
-
-To resolve out of memory errors, optimize memory intensive operations like sorts, joins, grouping, and distincts by ensuring they fold to the source, or by removing them altogether where possible. Sorts, for example, are often unnecessary.
