@@ -4,7 +4,7 @@ description: A guided tour on how to use the Power Query SDK in Visual Studio Co
 author: ptyx507x
 
 ms.topic: quickstart
-ms.date: 9/20/2022
+ms.date: 10/11/2022
 ms.author: miescobar
 ---
 
