@@ -27,6 +27,8 @@ There are currently two versions of the Power Query SDK available:
 * **Visual Studio Power Query SDK**: Released in 2017 as an extension for Visual Studio 2017 and 2019.
 * **Visual Studio Code Power Query SDK (Preview)**: Released in 2022 as the new and recommended way to create Power Query connectors.
 
+We encourage all developers to install and use the newly released Visual Studio Code Power Query SDK (Preview) as this version will eventually be the default SDK going forward. 
+
 ### Visual Studio Power Query SDK
 
 Follow the steps below to install the Visual Studio Power Query SDK:
