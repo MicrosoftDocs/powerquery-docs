@@ -4,7 +4,7 @@ description: Installation and explanation of the Power Query SDK and how to use 
 author: ptyx507x
 
 ms.topic: quickstart
-ms.date: 9/12/2022
+ms.date: 10/11/2022
 ms.author: miescobar
 ---
 
@@ -43,13 +43,13 @@ Follow the steps below to install the Visual Studio Power Query SDK:
 >[!NOTE]
 >The new Visual Studio Code Power Query SDK is currently in public preview as of September of 2022.
 
-Install the new Visual Studio Code Power Query SDK from the [Visual Studio Code Marketplace](https://aka.ms/powerquerysdk). Select **Install** to install the SDK.
+Install the new Visual Studio Code Power Query SDK from the [Visual Studio Code section of the Visual Studio Marketplace](https://aka.ms/powerquerysdk). Select **Install** to install the SDK.
 
 ## Connector development process
 
-While you can use either the Visual Studio Code or the Visual Studio Power Query SDK, both use a similar process for the development of a connector at a high-level.
+While you can use either the Visual Studio Code or the Visual Studio Power Query SDK, both use a similar process for the development of a connector at a high level.
 
-The following sections describe, at a high-level, the most common process to create a Power Query connector using the SDK.
+The following sections describe, at a high level, the most common process to create a Power Query connector using the SDK.
 
 ### Creating a new extension
 
