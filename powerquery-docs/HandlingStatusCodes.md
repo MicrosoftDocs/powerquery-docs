@@ -3,7 +3,7 @@ title: Handling status codes with Web.Contents for Power Query connectors
 description: Manage status codes with Web.Contents for Power Query connectors
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 8/29/2022
+ms.date: 10/16/2022
 ms.author: miescobar
 ---
 
@@ -38,7 +38,7 @@ The following status codes will result in a credentials exception, causing an au
 | 403  | Forbidden      |
 
 >[!Note]
-> Extensions are able to use the `ManualStatusHandling` option with status codes 401 and 403, which is not something that can be done in `Web.Contents` calls made outside of an extension context (that is, directly from Power Query).
+> Extensions are able to use the `ManualStatusHandling` option with status codes 401 and 403, which is not something that can be done in `Web.Contents` calls made outside of a custom data connector (that is, directly from Power Query).
 
 ## Redirection
 
