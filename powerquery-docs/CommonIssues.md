@@ -10,7 +10,9 @@ ms.author: miescobar
 
 # Common Issues
 
-## Preserving sort
+## Power Query
+
+### Preserving sort
 
 You might assume that if you sort your data, any downstream operations will preserve the sort order.
 
@@ -24,7 +26,7 @@ There are a number of ways to work around this. Here are a few suggestions:
 * Buffer the data (using `Table.Buffer`) before applying the downstream operation. In some cases, this operation will cause the downstream operation to preserve the buffered sort order.
 * Use [ranking](rank-column.md). For example, instead of using `Table.Distinct`, you could order by the column(s) containing the duplicate values, rank based on a tie-breaker column (such as `modified_date`), and then filter to keep just the rank 1 rows.
 
-## Data type inference
+### Data type inference
 
 Sometimes Power Query may incorrectly detect a column's data type. This is due to the fact that Power Query infers data types using only the first 200 rows of data. If the data in the first 200 rows is somehow different than the data after row 200, Power Query can end up picking the wrong type. (Be aware that an incorrect type won't always produce errors. Sometimes the resulting values will simply be incorrect, making the issue harder to detect.)
 
@@ -34,7 +36,7 @@ Or imagine a column that contains textual date values in the first 200 rows, and
 
 Because type detection works on the first 200 rows, but Data Profiling can operate over the entire dataset, you can consider using the Data Profiling functionality to get an early indication in the Query Editor about Errors (from type detection or any number of other reasons) beyond the top N rows.
 
-## Connections forcibly closed by the remote host
+### Connections forcibly closed by the remote host
 
 When connecting to various APIs, you might get the following warning:
 
@@ -44,7 +46,7 @@ If you run into this error, it's most likely a networking issue. Generally, the 
 
 Whether this only reproduces with any data or only larger data sizes, it's likely that there's a network timeout somewhere on the route. If it's only with larger data, customers should consult with the data source owner to see if their APIs support paging, so that they can split their requests into smaller chunks. Failing that, alternative ways to extract data from the API (following data source best practices) should be followed.
 
-## TLS RSA cipher suites are deprecated
+### TLS RSA cipher suites are deprecated
 
 Effective October 30, 2020, the following cipher suites are being deprecated from our servers.
 
@@ -74,7 +76,7 @@ To verify that your server complies with the security protocol, you can perform 
 
 Customers must upgrade their servers before March 1, 2021. For more information about configuring TLS Cipher Suite order, see [Manage Transport Layer Security (TLS)](/windows-server/security/tls/manage-tls).
 
-## Certificate revocation
+### Certificate revocation
 
 An upcoming version of Power BI Desktop will cause SSL connections failure from Desktop when any certificates in the SSL chain are missing certificate revocation status. This  is a change from the current state, where revocation only caused connection failure in the case where the certificate was explicitly revoked. Other certificate issues might include invalid signatures, and certificate expiration.
 
@@ -82,11 +84,11 @@ As there are configurations in which revocation status may be stripped, such as 
 
 It isn't recommended, but users will continue to be able to turn off revocation checks entirely.
 
-## Error: Evaluation was canceled
+### Error: Evaluation was canceled
 
 Power Query will return the message "Evaluation was canceled" when background analysis is disabled and the user switches between queries or closes the Query Editor while a query is in the process of refreshing.
 
-## Error: The key didn't match any rows in the table
+### Error: The key didn't match any rows in the table
 
 There are many reasons why Power Query may return an error that **the key didn't match any rows in the table**. When this error happens, the Mashup Engine is unable to find the table name it's searching for. Reasons why this error may happen include:
 
@@ -94,19 +96,19 @@ There are many reasons why Power Query may return an error that **the key didn't
 * The account used to access the table doesn't have sufficient privileges to read the table.
 * There may be multiple credentials for a single data source, which [isn't supported in Power BI Service](/power-bi/connect-data/refresh-data#accessing-cloud-data-sources). This error may happen, for example, when the data source is a cloud data source and multiple accounts are being used to access the data source at the same time with different credentials. If the data source is on-premises, you'll need to use the on-premises data gateway.
 
-## Limitation: Domain-joined requirement for gateway machines when using Windows authentication
+### Limitation: Domain-joined requirement for gateway machines when using Windows authentication
 
 Using Windows authentication with an on-premises gateway requires the gateway machine to be domain joined. This applies to any connections that are set up with “Windows authentication through the gateway”. Windows accounts that will be used to access a data source might require read access to the shared components in the Windows directory and the gateway installation.
 
-## Limitation: Cross tenant OAuth2 refresh isn't supported in Power BI service
+### Limitation: Cross tenant OAuth2 refresh isn't supported in Power BI service
 
 If you want to connect to a data source from Power BI service using OAuth2, the data source must be in the same tenant as Power BI service. Currently, multi-tenant connection scenarios aren’t supported with OAuth2.
 
-## Limitation: Custom AD FS authentication endpoint isn't supported in Power BI service
+### Limitation: Custom AD FS authentication endpoint isn't supported in Power BI service
 
 The ability to use a custom Active Directory Federation Services (AD FS) authentication endpoint isn't supported in Power BI service. Users might encounter the following error: **The token service reported by the resource is not trusted**.
 
-## Expression.Error: Evaluation resulted in a stack overflow and cannot continue.
+### Expression.Error: Evaluation resulted in a stack overflow and cannot continue.
 
 Stack overflow errors can be caused by a bug in your M code. For example, the following function produces a stack overflow because it repeatedly calls back into itself without any kind of end condition. A function that calls itself like this is known as a "recursive" function.
 
@@ -116,10 +118,18 @@ Here are some common ways to resolve a stack overflow in your M code.
 * Ensure that your recursive functions actually terminate when the expected end condition is reached.
 * Replace recursion with iteration (for example, by using functions such as [List.Transform](/powerquery-m/list-transform), [List.Generate](/powerquery-m/list-generate), or [List.Accumulate](/powerquery-m/list-accumulate)).
 
-## Expression.Error: Evaluation ran out of memory and can't continue.
+### Expression.Error: Evaluation ran out of memory and can't continue.
 
 "Out of memory" errors (or OOMs) can be caused by doing too many memory intensive operations against very large tables. For example, the following M code produces an OOM because it attempts to load a billion rows into memory at once.
 
 `Table.Buffer(Table.FromList({1..1000000000}, Splitter.SplitByNothing()))`
 
 To resolve out of memory errors, optimize memory intensive operations like sorts, joins, grouping, and distincts by ensuring they fold to the source, or by removing them altogether where possible. Sorts, for example, are often unnecessary.
+
+## Dataflows
+
+### Cancel dataflow refresh
+
+Sometimes you start a dataflow refresh, but after starting it you realize you wanted to change one more thing before refreshing your data. In that case, you have to wait until the refresh is finished. Stopping a refresh midway as the process is already working on getting the data and updating the tables in your workspace or environment isn't currently supported. 
+
+We do plan to add support for canceling a dataflow refresh in the future.
