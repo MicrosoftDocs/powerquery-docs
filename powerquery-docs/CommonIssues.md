@@ -108,7 +108,7 @@ If you want to connect to a data source from Power BI service using OAuth2, the 
 
 The ability to use a custom Active Directory Federation Services (AD FS) authentication endpoint isn't supported in Power BI service. Users might encounter the following error: **The token service reported by the resource is not trusted**.
 
-### Expression.Error: Evaluation resulted in a stack overflow and cannot continue.
+### Expression.Error: Evaluation resulted in a stack overflow and cannot continue
 
 Stack overflow errors can be caused by a bug in your M code. For example, the following function produces a stack overflow because it repeatedly calls back into itself without any kind of end condition. A function that calls itself like this is known as a "recursive" function.
 
@@ -118,7 +118,7 @@ Here are some common ways to resolve a stack overflow in your M code.
 * Ensure that your recursive functions actually terminate when the expected end condition is reached.
 * Replace recursion with iteration (for example, by using functions such as [List.Transform](/powerquery-m/list-transform), [List.Generate](/powerquery-m/list-generate), or [List.Accumulate](/powerquery-m/list-accumulate)).
 
-### Expression.Error: Evaluation ran out of memory and can't continue.
+### Expression.Error: Evaluation ran out of memory and can't continue
 
 "Out of memory" errors (or OOMs) can be caused by doing too many memory intensive operations against very large tables. For example, the following M code produces an OOM because it attempts to load a billion rows into memory at once.
 
@@ -130,6 +130,6 @@ To resolve out of memory errors, optimize memory intensive operations like sorts
 
 ### Cancel dataflow refresh
 
-Sometimes you start a dataflow refresh, but after starting it you realize you wanted to change one more thing before refreshing your data. In that case, you have to wait until the refresh is finished. Stopping a refresh midway as the process is already working on getting the data and updating the tables in your workspace or environment isn't currently supported. 
+Sometimes you start a dataflow refresh, but after starting it you realize you wanted to change one more thing before refreshing your data. In that case, you have to wait until the refresh is finished. Stopping a refresh midway as the process is already working on getting the data and updating the tables in your workspace or environment isn't currently supported.
 
 We do plan to add support for canceling a dataflow refresh in the future.
