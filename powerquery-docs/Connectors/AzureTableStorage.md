@@ -19,9 +19,6 @@ ms.author: bezhan
 | Function Reference Documentation | [AzureStorage.Table](/powerquery-m/azurestorage-tables) |
 | | |
 
-> [!Note]
-> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
-
 ## Capabilities Supported
 
 - Import
