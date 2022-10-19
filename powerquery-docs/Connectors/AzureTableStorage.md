@@ -17,7 +17,6 @@ ms.author: bezhan
 | Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Customer Insights (Dataflows)<br/>Analysis Services |
 | Authentication Types Supported | Account Key |
 | Function Reference Documentation | [AzureStorage.Table](/powerquery-m/azurestorage-tables) |
-| | |
 
 ## Capabilities Supported
 
