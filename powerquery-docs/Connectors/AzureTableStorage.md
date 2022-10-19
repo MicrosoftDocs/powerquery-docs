@@ -26,7 +26,7 @@ ms.author: bezhan
 
 To make the connection to a **Azure Table Storage**, follow these steps:
 
-1. Select **Get Data** from the **Home** ribbon in Power BI Desktop, select **Azure** from the categories on the left, select **Azure Table Storage**, and then select **Connect**.
+1. From **Get Data**, select the **Azure** category, select **Azure Table Storage**, and then select **Connect**. More information: [Where to get data](../where-to-get-data.md)
 
    :::image type="content" source="./media/azure-table-storage/desktop-select-azure-table-storage.png" alt-text="Screenshot of the Get Data dialog, showing the Azure Table Storage database selection.":::
 
