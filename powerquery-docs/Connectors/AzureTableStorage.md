@@ -59,23 +59,3 @@ To make the connection, take the following steps:
 1. Select one or multiple tables to import and use, then select **Transform Data** to transform data in the Power Query editor.
 
    :::image type="content" source="./media/azure-table-storage/online-choose-data.png" alt-text="Screenshot of the Azure Table Storage choose data window in Power Query online.":::
-
-## Connect to Azure Table Storage from Excel
-
-1. In the Power Query Editor in Excel, select **New Source**, then select **Azure**, and **Table Storage**
-
-   :::image type="content" source="./media/azure-table-storage/excel-connect-to-table-storage.png" alt-text="Screenshot of the Azure Table Storage option in the new source dropdown in the excel Power Query Editor.":::
-
-1. In the **Azure Table Storage** window that appears, enter the name or the URL of the storage account where your table is located. Don't add the name of the table to the URL.
-
-   :::image type="content" source="./media/azure-table-storage/excel-connect-with-name.png" alt-text="Screenshot of the Azure Table Storage dialog in Excel, showing only the storage name added.":::
-
-1. Select **OK**.
-
-1. Add the account key for your storage account and select **Connect**.
-
-   :::image type="content" source="./media/azure-table-storage/excel-add-account-key.png" alt-text="Screenshot of the Azure Table Storage dialog in Excel, showing an account key entered in the space.":::
-
-1. In **Navigator**, select one or multiple tables to import. Then select **OK**.
-
-   :::image type="content" source="./media/azure-table-storage/excel-load-data.png" alt-text="Screenshot of the Azure Table Storage navigator in Excel, showing one of two tables selected.":::
