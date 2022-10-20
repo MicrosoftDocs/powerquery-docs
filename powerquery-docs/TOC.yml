@@ -488,6 +488,8 @@
         href: Connectors/Smartsheet.md
       - name: "Snowflake"
         href: Connectors/Snowflake.md
+      - name: "Socialbakers Metrics"
+        href: Connectors/Socialbakers.md
       - name: "SoftOne BI (Beta)"
         href: Connectors/SoftOneBI.md
       - name: "SQL Server Analysis Services database"
