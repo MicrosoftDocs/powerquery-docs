@@ -15,7 +15,7 @@ ms.author: bezhan
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Customer Insights (Dataflows)<br/>Analysis Services |
-| Authentication Types Supported | Account Key |
+| Authentication Types Supported | [Account Key](#copy-your-account-key-for-azure-table-storage) |
 | Function Reference Documentation | [AzureStorage.Table](/powerquery-m/azurestorage-tables) |
 
 ## Capabilities Supported
@@ -38,7 +38,7 @@ To make the connection to a **Azure Table Storage**, follow these steps:
 
 1. Select **OK**.
 
-1. Add the account key for your storage account and select **Connect**.
+1. Add the [Azure table storage account key](#copy-your-account-key-for-azure-table-storage) and select **Connect**.
 
    :::image type="content" source="./media/azure-table-storage/desktop-add-your-account-key.png" alt-text="Screenshot of the Azure Table Storage dialog, showing an account key entered in the space.":::
 
@@ -56,6 +56,26 @@ To make the connection, take the following steps:
 
    :::image type="content" source="./media/azure-table-storage/online-connect-to-azure-storage.png" alt-text="Screenshot of the Azure Table Storage window in Power Query online.":::
 
+1. Add your [Azure table storage account key](#copy-your-account-key-for-azure-table-storage), and then select **Next**.
+
 1. Select one or multiple tables to import and use, then select **Transform Data** to transform data in the Power Query editor.
 
    :::image type="content" source="./media/azure-table-storage/online-choose-data.png" alt-text="Screenshot of the Azure Table Storage choose data window in Power Query online.":::
+
+## Copy your account key for Azure Table Storage
+
+Your Azure Table Storage account key is the same as your Azure Blob storage account key. To retrieve your Azure Table Storage account key to use while authenticating your account in Power Query, follow these steps:
+
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+
+1. Locate your Azure Blob Storage account where your table is housed.
+
+1. In the storage account menu pane, under **Security + networking**, select **Access keys**.
+
+   :::image type="content" source="./media/azure-table-storage/access-key-location.png" alt-text="Screenshot of the example storage account in Azure, with Security + networking and Access keys emphasized." lightbox="./media/azure-table-storage/access-key-location.png":::
+
+1. In the **key1** section, locate the **Key** value. Select **Show** next to the key value.
+
+1. Select the **Copy to clipboard** icon to copy the **Key** value.
+
+   :::image type="content" source="./media/azure-table-storage/account-key-location.png" alt-text="Screenshot of the Access keys page, with the Key under key1 shown, and the Copy to clipboard icon emphasized.":::
