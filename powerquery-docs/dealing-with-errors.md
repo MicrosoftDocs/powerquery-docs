@@ -155,6 +155,6 @@ Details: In the past we would have returned a text value of {value}, but we now 
 
 **Possible solutions:**
 
- * Remove the column that yields the error or set the correct data type for such column
+ * Remove the column that contains the error, or set a non-*Any* data type for such a column.
  * Change the privacy levels of the data sources involved to one that allows the combination of the different data sources 
  * Flatten the tables before doing a merge to eliminate columns that contain nested structured values (such as table, record, or list).
