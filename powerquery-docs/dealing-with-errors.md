@@ -157,4 +157,4 @@ Details: In the past we would have returned a text value of {value}, but we now 
 
  * Remove the column that yields the error or set the correct data type for such column
  * Change the privacy levels of the data sources involved to one that allows the combination of the different data sources 
- * Flatten the tables before doing any merge and make sure that the table schema (data types) is correctly enforced as well as not have any complex column types (like type table, record, or list)
+ * Flatten the tables before doing a merge to eliminate columns that contain nested structured values (such as table, record, or list).
