@@ -143,7 +143,7 @@ When trying to apply an operation that isn't supported, such as multiplying a te
 Errors on nested values such as lists, tables and records can occur for two reasons:
 
 * When the Data Privacy Firewall buffers a data source, nested non-scalar values are automatically converted to errors.
-* When in a particular product integration a column with non-scalar values and defined with the *Any* data type tries to be loaded (such as in a Workbook in Excel or the data model in Power BI Desktop) 
+* When a column defined with the *Any* data type contains non-scalar values, such values will be reported as errors during load (such as in a Workbook in Excel or the data model in Power BI Desktop).
 
 ![Error for nested values triggered by formula firewall taken place](media/dealing-with-errors/privacy-buffer-error.png)
 
