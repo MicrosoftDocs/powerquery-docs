@@ -2,7 +2,7 @@
 title: Dealing with errors 
 description: Understanding errors in Power Query and most common step level and cell level errors.
 author: ptyx507
-ms.date: 10/3/2020
+ms.date: 10/24/2020
 ms.author: miescobar
 ms.custom: edited
 ---
@@ -140,8 +140,21 @@ When trying to apply an operation that isn't supported, such as multiplying a te
 
 #### Nested values shown as errors
 
-One of the causes of this error is that when the Data Privacy Firewall buffers a data source, nested non-scalar values (such as tables, records, lists, and functions) are automatically converted to errors.
+Errors on nested values such as lists, tables and records can occur for two reasons:
 
-***"In the past we would have returned a text value of "[Table]", but we now return this error. Please see https://go.microsoft.com/fwlink/?linkid=2099726 for more information***
+* When the Data Privacy Firewall buffers a data source, nested non-scalar values  are automatically converted to errors.
+* When in a particular product integration a column with non-scalar values and defined with the *Any* data type tries to be loaded (such as in a Workbook in Excel or the data model in Power BI Desktop) 
 
-A possible workaround to avoid these sort of errors is to change the privacy levels of the data sources involved to one that allows the combination of the data to go between both sources. However, when combining data between sources, it is recommended that you do so without using values that are lazily evaluated such as nested values.
+![Error for nested values triggered by formula firewall taken place](media/dealing-with-errors/privacy-buffer-error.png)
+
+```
+Expression.Error: We cannot return a value of type {value} in this context
+
+Details: In the past we would have returned a text value of {value}, but we now return this error. Please see https://go.microsoft.com/fwlink/?linkid=2099726 for more information.
+```
+
+**Possible solutions:**
+
+ * Remove the column that yields the error or set the correct data type for such column
+ * Change the privacy levels of the data sources involved to one that allows the combination of the different data sources 
+ * Flatten the tables before doing any merge and make sure that the table schema (data types) is correctly enforced as well as not have any complex column types (like type table, record, or list)
