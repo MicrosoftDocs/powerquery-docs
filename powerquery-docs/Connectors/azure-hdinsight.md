@@ -7,16 +7,16 @@ ms.date: 10/24/2022
 ms.author: bezhan
 ---
 
-# Azure HDInsight
+# Power Query Azure HDInsight connector
 
 ## Summary
 
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Customer Insights (Dataflows)<br/>Analysis Services |
-| Authentication Types Supported | [Account Key](#copy-your-account-key-for-azure-table-storage) |
-| Function Reference Documentation | [AzureStorage.Table](/powerquery-m/azurestorage-tables) |
+| Products | Excel<br/>Power BI (Datasets)<br/>Analysis Services |
+| Authentication Types Supported | Anonymous<br/>Account Key |
+| Function Reference Documentation | [HDFS.Contents](/powerquery-m/hdfs-contents)<br/>[HDFS.Files](/powerquery-m/hdfs-files) |
 
 ## Capabilities Supported
 
