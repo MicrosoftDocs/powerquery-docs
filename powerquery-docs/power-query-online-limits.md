@@ -7,13 +7,13 @@ ms.date: 11/18/2022
 ms.author: miescobar
 ---
 
-# Power Query Online Limits
+# Power Query Online limits
 
 Power Query Online is integrated into a variety of Microsoft products. Since these products target different scenarios, they may set different limits for Power Query Online usage.
 
 Limits are enforced at the beginning of query evaluations. Once an evaluation is underway, only timeout limits are imposed.
 
-## Limit Types
+## Limit types
 
 Hourly Evaluation Count: The maximum number of evaluation requests a user can issue during any 60 minute period
 
@@ -21,7 +21,7 @@ Daily Evaluation Time: The net time a user can spend evaluating queries during a
 
 Concurrent Evaluations: The maximum number of evaluations a user can have running at any given time
 
-## Authoring Limits
+## Authoring limits
 
 Authoring limits are the same across all products. During authoring, query evaluations return previews that may be subsets of the data. Data is not persisted.
 
@@ -31,7 +31,7 @@ Daily Evaluation Time: Currently unrestricted
 
 Per Query Timeout: 10 minutes
 
-## Refresh Limits
+## Refresh limits
 
 During refresh (either scheduled or on-demand), query evaluations return complete results. Data is typically persisted in storage.
 
