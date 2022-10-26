@@ -56,7 +56,7 @@ Not all data sources are the same. The differences are described [later](#facebo
 
 ### Example usage
 
-1. Select the Data Source you would like to work with by selecting the checkbox.
+1. Choose the Data Source you would like to work with by selecting the checkbox.
     - Parameters can be selected on the right section of the Navigator.
 
    ![DataSources](./media/socialbakers/image3.png)
