@@ -28,7 +28,7 @@ Power Query Desktop includes Excel, Power BI (Datasets), and Analysis Services a
 
 To make the connection to **Azure Table Storage**, follow these steps:
 
-1. From **Get Data**, select the **Azure** category, select **Azure Table Storage**, and then select **Connect**. More information: go to [Where to get data](../where-to-get-data.md)
+1. From **Get Data**, select the **Azure** category, select **Azure Table Storage**, and then select **Connect**. More information: [Where to get data](../where-to-get-data.md)
 
    :::image type="content" source="./media/azure-table-storage/desktop-select-azure-table-storage.png" alt-text="Screenshot of the Get Data dialog, showing the Azure Table Storage database selection.":::
 
@@ -54,7 +54,7 @@ Power Query Online includes Power BI (Dataflows), Power Apps (Dataflows), and Cu
 
 To make the connection, take the following steps:
 
-1. Select the **Azure Table Storage** option in the connector selection. More information: go to [Where to get data](../where-to-get-data.md)
+1. Select the **Azure Table Storage** option in the connector selection. More information: [Where to get data](../where-to-get-data.md)
 
 1. In the **Azure Table Storage** dialog that appears, enter the name or URL of the Azure Storage account where the table is housed. Don't add the name of the table to the URL.
 
