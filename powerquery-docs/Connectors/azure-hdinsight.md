@@ -1,5 +1,5 @@
 ---
-title: Power Query Azure HDInsight connector
+title: Power Query Azure HDInsight (HDFS) connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Azure HDInsight, along with native query folding instructions and troubleshooting tips.
 author: bezhan-msft
 ms.topic: conceptual
@@ -7,7 +7,7 @@ ms.date: 10/24/2022
 ms.author: bezhan
 ---
 
-# Power Query Azure HDInsight connector
+# Azure HDInsight (HDFS)
 
 ## Summary
 
@@ -28,7 +28,7 @@ Power query desktop includes Excel, Power BI, and Analysis Services as experienc
 
 To make the connection to an **Azure HDInsight** account, follow these steps:
 
-1. From **Get Data**, select the **Azure** category, select **Azure HDInsight**, and then select **Connect**. For more information, see: [where to get data](../where-to-get-data.md).
+1. From **Get Data**, select the **Azure** category, select **Azure HDInsight**, and then select **Connect**. More information: [where to get data](../where-to-get-data.md)
 
    :::image type="content" source="./media/azure-hdinsight/get-data.png" alt-text="Screenshot of the Get Data dialog, showing the Azure HDInsight database selection.":::
 
@@ -48,7 +48,7 @@ To make the connection to an **Azure HDInsight** account, follow these steps:
 
    :::image type="content" source="./media/azure-hdinsight/enter-account-key.png" alt-text="Screenshot of the Azure HDInsight dialog, showing an account key entered in the space.":::
 
-1. In **Navigator**, select one or more files or folders to import and use in Power Query Desktop. Then select either **Load** to load the table in Power Query Desktop, or **Transform Data** to open the Power Query Editor where you can filter and refine the set of data you want to use, and then load that refined set of data.
+1. In **Navigator**, select one or more files or folders to import and use in your application. Then select either **Load** to load the table, or **Transform Data** to open the Power Query Editor where you can filter and refine the set of data you want to use, and then load that refined set of data.
 
    :::image type="content" source="./media/azure-hdinsight/select-data.png" alt-text="Screenshot of the Azure HDInsight navigator, showing a folder selected.":::
 
