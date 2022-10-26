@@ -28,11 +28,11 @@ Power query desktop includes Excel, Power BI, and Analysis Services as experienc
 
 To make the connection to an **Azure HDInsight** account, follow these steps:
 
-1. From **Get Data**, select the **Azure** category, select **Azure HDInsight**, and then select **Connect**. More information: [Where to get data](../where-to-get-data.md)
+1. From **Get Data**, select the **Azure** category, select **Azure HDInsight**, and then select **Connect**. For more information, see: [where to get data](../where-to-get-data.md).
 
    :::image type="content" source="./media/azure-hdinsight/get-data.png" alt-text="Screenshot of the Get Data dialog, showing the Azure HDInsight database selection.":::
 
-1. In the **Azure HDInsight** window that appears, enter the name of the storage account associated with your HDInsight account. If you don't know it, you can find it using the steps in the [section below]](#copy-your-account-key-for-azure-hdinsight).
+1. In the window that appears, enter the name of the **storage account** associated with your HDInsight account. If you don't know the name of your storage account, you can find it using the steps in the [section below](#copy-your-account-key-for-azure-hdinsight).
 
    :::image type="content" source="./media/azure-hdinsight/enter-account-name.png" alt-text="Screenshot of the Azure HDInsight dialog, showing the name of the storage account added.":::
 
@@ -48,7 +48,7 @@ To make the connection to an **Azure HDInsight** account, follow these steps:
 
    :::image type="content" source="./media/azure-hdinsight/enter-account-key.png" alt-text="Screenshot of the Azure HDInsight dialog, showing an account key entered in the space.":::
 
-1. In **Navigator**, select one or more files or folders to import and use in Power BI Desktop. Then select either **Load** to load the table in Power BI Desktop, or **Transform Data** to open the Power Query Editor where you can filter and refine the set of data you want to use, and then load that refined set of data into Power BI Desktop.
+1. In **Navigator**, select one or more files or folders to import and use in Power Query Desktop. Then select either **Load** to load the table in Power Query Desktop, or **Transform Data** to open the Power Query Editor where you can filter and refine the set of data you want to use, and then load that refined set of data.
 
    :::image type="content" source="./media/azure-hdinsight/select-data.png" alt-text="Screenshot of the Azure HDInsight navigator, showing a folder selected.":::
 
