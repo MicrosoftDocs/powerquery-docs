@@ -347,7 +347,7 @@
       - name: "Azure Synapse Analytics workspace (Beta)"
         href: Connectors/synapse.md
       - name: "Azure Table Storage"
-        href: Connectors/AzureTableStorage.md
+        href: Connectors/azure-table-storage.md
       - name: "BitSight Security Ratings"
         href: Connectors/BitSightSecurityRatings.md
       - name: "Bloomberg Data and Analytics"
