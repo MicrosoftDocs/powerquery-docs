@@ -166,11 +166,11 @@ The current way of using native SQL queries with Denodo is by means of the Power
    * Modify an already-defined Denodo data source adding the native query function to its definition.
    * Create a native-query-enabled data source from scratch, using the New Blank Query option.
 
-In both cases, you will first need to access the data transformation window by going to **Home** > **Transform data** and then either select an existing _query_ (data source) or create a new blank one; then access the advanced editor with **View** > **Advanced Editor**.
+In both cases, you'll first need to access the data transformation window by going to **Home** > **Transform data** and then either select an existing _query_ (data source) or create a new blank one. Then access the advanced editor with **View** > **Advanced Editor**.
 
-Once there, you will be able to apply the `Value.NativeQuery` function to the definition of the data source in replacement of the usual table selection step. This should look similar to:
+Once there, you'll be able to apply the `Value.NativeQuery` function to the definition of the data source in replacement of the usual table selection step. This should look similar to:
 
-```
+```powerquery-m
 let
   Source = Denodo.Contents(<dsn>, null, []),
   Source_DB = Source{[Name=<database_name>, Kind="Database"]}[Data],
@@ -189,12 +189,12 @@ Value.NativeQuery(target as any, query as text, optional parameters as any, opti
 ```
 
 >[!Note]
-> Learn more about the `Value.NativeQuery` function here: /powerquery-m/value-nativequery
+> Learn more about the `Value.NativeQuery` function [here](/powerquery-m/value-nativequery).
 
 Note that, by setting `EnableFolding=true` in the above example, _DirectQuery mode is enabled_ for the defined data source.
 
-When finished, click **Done** and the advanced editor window will close. Then a message will appear asking for permission to execute the new native query: select **Edit Permission** and confirm you want to allow the query to be executed.
+When finished, select **Done** and the advanced editor window will close. Then a message will appear asking for permission to execute the new native query: select **Edit Permission** and confirm you want to allow the query to be executed.
 
 ![Permissions for native query execution.](./media/denodo/EditPermissionNativeQuery.png)
 
-In order to apply the modifications just made in the data transformation window, select **File** > **Apply**. After that you will return to the Power BI main window and your changes will be applied to your data sources.
+In order to apply the modifications just made in the data transformation window, select **File** > **Apply**. After that you'll return to the Power BI main window and your changes will be applied to your data sources.
