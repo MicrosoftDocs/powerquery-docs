@@ -3,7 +3,7 @@ title: Common Authoring Issues in Power Query
 description: How to address common authoring issues in Power Query
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 12/17/2021
+ms.date: 10/27/2022
 ms.author: miescobar
 ---
 
@@ -107,6 +107,10 @@ If you want to connect to a data source from Power BI service using OAuth2, the 
 ### Limitation: Custom AD FS authentication endpoint isn't supported in Power BI service
 
 The ability to use a custom Active Directory Federation Services (AD FS) authentication endpoint isn't supported in Power BI service. Users might encounter the following error: **The token service reported by the resource is not trusted**.
+
+### Limitation: Guest accounts aren't supported
+
+Using guest accounts of a tenant to connect to data using Power Query connectors isn't currently supported.
 
 ### Expression.Error: Evaluation resulted in a stack overflow and cannot continue
 
