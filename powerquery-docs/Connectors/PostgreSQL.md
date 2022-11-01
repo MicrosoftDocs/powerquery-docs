@@ -83,7 +83,7 @@ To make the connection, take the following steps:
 
 3. Select the name of the on-premises data gateway you want to use.
 
-4. Select the **Basic** authentication kind and input your MySQL credentials in the **Username** and **Password** boxes.
+4. Select the **Basic** authentication kind and input your PostgreSQL credentials in the **Username** and **Password** boxes.
 
 5. If your connection isn't encrypted, clear **Use Encrypted Connection**.
 
