@@ -340,7 +340,6 @@
           href: Connectors/DataLakeStorage.md
         - name: "Analyze ADLS Gen2 data"
           href: Connectors/analyze-data-in-adls-gen2.md
-
       - name: Azure HDInsight
         href: Connectors/azure-hdinsight.md
       - name: "Azure SQL database"
