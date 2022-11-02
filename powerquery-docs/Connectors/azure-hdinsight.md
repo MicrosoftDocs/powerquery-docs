@@ -24,7 +24,7 @@ ms.author: bezhan
 
 ## Connect to Azure HDInsight from Power Query Desktop
 
-Power query desktop includes Excel, Power BI, and Analysis Services as experiences.
+Power Query desktop includes Excel, Power BI, and Analysis Services as experiences.
 
 To make the connection to an **Azure HDInsight** account, follow these steps:
 
