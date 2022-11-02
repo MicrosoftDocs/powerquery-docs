@@ -2,7 +2,7 @@
 title: Dealing with errors 
 description: Understanding errors in Power Query and most common step level and cell level errors.
 author: ptyx507
-ms.date: 06/08/2020
+ms.date: 10/24/2020
 ms.author: miescobar
 ms.custom: edited
 ---
@@ -137,3 +137,26 @@ When trying to apply an operation that isn't supported, such as multiplying a te
 **Possible solutions**: Before creating this custom column, change the data type of the **Sales** column to be text.
 
 ![Table with the sales column converted from a Number data type to a Text data type, and the resulting a new column containing both expressions.](images/me-working-with-errors-operation-errors-final-table.png "Table with solution for operation error")
+
+#### Nested values shown as errors
+
+When working with data that contains nested structured values (such as tables, lists, or records), you may sometimes encounter the following error:
+
+![Error for nested values triggered by formula firewall taken place](media/dealing-with-errors/privacy-buffer-error.png)
+
+```
+Expression.Error: We cannot return a value of type {value} in this context
+
+Details: In the past we would have returned a text value of {value}, but we now return this error. Please see https://go.microsoft.com/fwlink/?linkid=2099726 for more information.
+```
+
+These errors usually occur for two reasons:
+
+* When the Data Privacy Firewall buffers a data source, nested non-scalar values are automatically converted to errors.
+* When a column defined with the *Any* data type contains non-scalar values, such values will be reported as errors during load (such as in a Workbook in Excel or the data model in Power BI Desktop).
+
+**Possible solutions:**
+
+ * Remove the column that contains the error, or set a non-*Any* data type for such a column.
+ * Change the privacy levels of the data sources involved to one that allows them to be combined without being buffered.
+ * Flatten the tables before doing a merge to eliminate columns that contain nested structured values (such as table, record, or list).
