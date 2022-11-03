@@ -14,7 +14,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)<br/>Analysis Services |
+| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Customer Insights <br/>Analysis Services |
 | Authentication Types Supported | Anonymous<br/>Account Key |
 | Function Reference Documentation | [HDFS.Contents](/powerquery-m/hdfs-contents)<br/>[HDFS.Files](/powerquery-m/hdfs-files) |
 
