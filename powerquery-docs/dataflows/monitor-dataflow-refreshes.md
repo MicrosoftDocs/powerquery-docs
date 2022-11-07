@@ -53,7 +53,7 @@ The new tables are available in your environment right away. To find the tables 
 
    [![Image of the two Dataverse tables containing refresh history.](media/refreshhistory-dashboard/Refresh-History-Tables.PNG)](media/refreshhistory-dashboard/Refresh-History-Tables.PNG#lightbox)
 
-These tables will store the last 50 or up to 90 days of dataflows refresh history. To use these tables, we suggest that you use Power BI to get data through the Dataverse connector. We suggest to extract this data into a self-managed table if you want to do analysis over a longer period of time.
+These tables will store history for at least the last 50 refreshes. Refresh history records older than 90 days may be removed by the system. To use these tables, we suggest that you use Power BI to get data through the Dataverse connector. We advice to extract this data into a self-managed table if you would like to do analysis over a longer period of time.
 
 ## Power BI dataflows monitoring
 
