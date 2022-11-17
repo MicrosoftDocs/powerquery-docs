@@ -51,11 +51,45 @@ To connect to Assemble data:
 
    Once you've successfully signed in, select **Connect**.
 
-4. In the **Navigator** dialog box, select the Assemble Views that you want to load. For each project, there's a single item for view images named **[Your Project] View Thumbnails**. Select this option if you want to include images in your report. Select **Transform Data** to continue to Power Query.
+4. In the **Navigator** dialog box, search for and expand the project that you want to load. For each project, there's a folder for **Models** and **Views**. 
 
-   ![Select which views to import.](media/assemble-views/assemble-views-selection.png)
+   a. **Models** (New!) - fetches select properties from any or all versions of a model.
 
-5. In Power Query, you'll see a single column named **Rows**. On the header of the column, select the button with two arrows pointing in opposite directions to expand your rows.
+   b. **Views** - fetches all visible columns in a previously saved view.
+
+   ![Find your project and expand it.](media/assemble-views/assemble-views-project-selection.png)
+
+## Loading Data from Models
+1. Expand the **Models** folder. Select each of the models you wish to include. The settings outlined in the following steps must be completed for each selected model.
+
+   ![Select models to include.](media/assemble-views/assemble-views-model-selection.png)
+
+2. Select the versions you wish to load:
+
+   a. **Active version only** – Loads only the active version of the model
+
+   b. **All versions** – Loads all versions of the model
+
+   c. **All except active version** – Loads all previous versions of the model without loading the active version (intended for advanced workflows when previous version data only needs to be loaded once and not included in a refresh)
+
+   d. **Specific versions** – Loads all specific versions of the model that are selected (Specific versions will be selected in the Version Name and Number drop down)
+
+3. Select the properties you wish to fetch by using the search filter or scrolling. By default, Model ID, Model Name, Version ID, Version Name, and Version Number will always be included in the result.
+
+   ![Select properties to include.](media/assemble-views/assemble-views-property-selection.png)
+
+   *Note: when using the search bar, be sure to clear the selection and select all properties before clicking OK, or previous selections will be overwritten.*
+
+4. If using "Specific versions", select the versions you wish to load in the **Version Name and Number (optional)** dropdown, then click **Apply**. Selections in this dropdown will be ignored if any of the other "Load model data" settings are selected.
+
+5. Once the data preview has been displayed, you can either click **Transform Data** to go to the Power Query editor, or **Load** to go straight to the dashboard.
+
+6. If you wish to load multiple models at once, be sure to click **Apply** after setting up each model per the aforementioned steps.
+
+## Loading Data from Views
+1. Expand the **Views** folder. Select the view you wish to include. Additionally select **[Your Project] View Thumbnails** if you want to include images in your report. Select **Transform Data** to continue to Power Query.
+
+2. In Power Query, you'll see a single column named **Rows**. On the header of the column, select the button with two arrows pointing in opposite directions to expand your rows.
 
    ![Data preview pre-transformation.](media/assemble-views/assemble-views-pre-transform.png)
 
@@ -65,7 +99,7 @@ To connect to Assemble data:
 
    b. Select **Close & Apply** to load the datasets.
 
-6. (Optional) If you have chosen to load images, you'll need to update the **Data category** for the image field.
+3. (Optional) If you have chosen to load images, you'll need to update the **Data category** for the image field.
 
    a. Expand the **[Your Project] View Thumbnails** table, and then select the **Image** field.  This selection opens the **Column tools** tab.
 
@@ -78,3 +112,7 @@ To connect to Assemble data:
 * Views with greater than 100,000 rows may not load depending on the number of fields included in the view. To avoid this limitation, we suggest breaking large views into multiple smaller views and appending the queries in your report, or creating relationships in your data model.
 
 * The **view images** feature currently only supports thumbnail sized images because of a row size limitation in Power BI.
+
+* When creating a query using **Models** data, a maximum of 200 properties can be selected.
+
+* When creating a query using **Models** data, A known issue with the Microsoft UI causes the dropdown to only display the first 1,000 properties. We are actively working with Microsoft on a solution.
