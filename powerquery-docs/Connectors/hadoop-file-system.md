@@ -24,7 +24,7 @@ ms.author: bezhan
 
 ## Connect to Hadoop Files (HDFS) from Power Query Desktop
 
-Power Query desktop includes Excel, Power BI, and Analysis Services as experiences.
+Power Query desktop includes Excel and Power BI as experiences.
 
 To make the connection to **Hadoop File (HDFS)**, follow these steps:
 
