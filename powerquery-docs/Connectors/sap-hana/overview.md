@@ -3,7 +3,7 @@ title: Power Query SAP HANA database connector
 description: Provides basic information, prerequisites, and instructions on connecting to your data using the SAP HANA database connector.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 10/7/2022
+ms.date: 11/15/2022
 ms.author: bezhan
 ---
 
@@ -156,6 +156,9 @@ The Power Query SAP HANA database connector supports native queries. For informa
 ### Query folding on native queries
 
 The Power Query SAP HANA database connector now supports query folding on native queries. More information: [Query folding on native queries](../../native-query-folding.md)
+
+>[!NOTE]
+>In the Power Query SAP HANA database connector, native queries don't support duplicate column names when `EnableFolding` is set to true.
 
 ### Parameters in native queries
 
