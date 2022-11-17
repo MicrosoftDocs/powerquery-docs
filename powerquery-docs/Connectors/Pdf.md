@@ -83,4 +83,4 @@ In cases where multi-line rows aren't properly identified, you might be able to 
 
 ### Power BI dataflows in a Premium capacity	
 
-When working with the PDF connector on dataflows in a Premium capacity, the PDF connector does not properly make the connection. To enable the PDF connector to work on dataflows in a Premium capacity, configure that dataflow to use a gateway, and confirm the connection to that dataflow goes through the gateway.
+When working with the PDF connector on dataflows in a Premium capacity, the PDF connector doesn't properly make the connection. To enable the PDF connector to work on dataflows in a Premium capacity, configure that dataflow to use a gateway, and confirm the connection to that dataflow goes through the gateway.
