@@ -48,7 +48,7 @@ To make the connection to **Hadoop File (HDFS)**, follow these steps:
 
    :::image type="content" source="./media/hadoop-file-system/windows-access.png" alt-text="Screenshot of the Hadoop File (HDFS) Windows access dialog.":::
 
-1. If you select **Microsoft account**, then you will first need to sign in.
+1. If you select **Microsoft account**, then you'll first need to sign in.
 
 1. Select the level to apply your Microsoft account credentials on the system, the select **Connect**.
 
