@@ -11,7 +11,7 @@ ms.author: bezhan
 
 ## Introduction
 
-This article provides instructions for how to submit your Power Query custom connector for certification. Don't submit your connector for certification unless you've been directed to by your Microsoft contact.
+This article provides instructions for how to submit your Power Query custom connector for certification. Don't submit your connector for certification unless you've been explicitly directed to by your Microsoft contact.
 
 ## Prerequisites
 
@@ -62,4 +62,6 @@ Updates to your connector submission can be made at any time, except when your c
 
 4. You can upload a new version of artifacts and complete the submission form again.
 
-5. After submitting the connector form, in the **Activity Control** chat feature on the right, submit a short changelog explaining the connector update. This information should be public and written in a customer-facing way, as it will be included in the next Power BI Desktop blog update.
+5. After submitting the connector form, in the **Activity Control** chat feature on the right, submit a short changelog explaining the connector update. This information should be public and written in a customer-facing way, as it will be included verbatim in the next Power BI Desktop blog update.
+
+6. Please also be sure to update your connector-specific documentation in the [connector reference](index.md). You can submit a pull request by clicking the pencil icon on the top right of the screen. Any functionality change should be accompanied by the corresponding documentation update. 
