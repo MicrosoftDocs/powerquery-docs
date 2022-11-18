@@ -401,4 +401,4 @@ Because the Power Query SAP Business Warehouse connector uses the MDX interface 
 
 ### CHAR limit of 60 despite "long text" in SAP BW
 
-There's a known limitation where "long text" characteristics in SAP BW appear with a 60 character limit in Power BI. This character limit is due to a limitation in the MDX interface, and there's no known workaround available.
+There's a known limitation where "long text" characteristics in SAP BW appear with a 60 character limit in Power BI. This character limit is due to a limitation in the MDX interface, and there's no known workaround available. SAP has documented this MDX limitation in this [SAP Note](https://launchpad.support.sap.com/services/pdf/notes/2096749/E).
