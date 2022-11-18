@@ -64,4 +64,4 @@ Updates to your connector submission can be made at any time, except when your c
 
 5. After submitting the connector form, in the **Activity Control** chat feature on the right, submit a short changelog explaining the connector update. This information should be public and written in a customer-facing way, as it will be included verbatim in the next Power BI Desktop blog update.
 
-6. Please also be sure to update your connector-specific documentation in the [connector reference](/index.md). You can submit a pull request by clicking the pencil icon on the top right of the screen. Any functionality change should be accompanied by the corresponding documentation update. 
+6. Also be sure to update your connector-specific documentation in the [connector reference](/index.md). You can submit a pull request by selecting the pencil icon on the top right of the screen. Any functionality change should be accompanied by the corresponding documentation update. 
