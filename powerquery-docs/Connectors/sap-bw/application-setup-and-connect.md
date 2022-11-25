@@ -39,7 +39,7 @@ BW 7.3, BW 7.5 and BW/4HANA 2.0 is supported.
 >We suggest you use the Implementation 2.0 SAP connector whenever possible because it provides significant performance, functionality, and reliability improvements over 1.0.
 
 >[!NOTE]
-> Power Query Online uses the version 2.0 SAP BW Application Server connector by default. However, version 1.0 of the SAP BW Application Server connector works in the M Engine level if you really need to use it.
+> Power Query Online requires both version 1.0 and version 2.0 SAP BW connectors on the Power BI gateway if one is being used. This means both the SAP NetWeaver SDK library and the SAP .NET Connector must be installed on the gateway machine.
 
 ### Prerequisites for version 1.0
 
