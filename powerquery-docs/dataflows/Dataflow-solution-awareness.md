@@ -93,3 +93,4 @@ For security reasons, credentials of connections used by dataflows aren't persis
 * Environment variables can't be used by dataflows.
 * Dataflows don't support adding required components, such as custom tables they load data to. Instead, the custom table should be manually added to the solution.
 * Dataflows can't be deployed by application users (service principals).
+* Incremental refresh configuration isn't currently supported when deploying solutions. After deployment of the dataflow via solution, the incremental refresh configuration should be reapplied.
