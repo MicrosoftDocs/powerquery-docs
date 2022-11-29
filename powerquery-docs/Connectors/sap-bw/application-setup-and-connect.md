@@ -27,7 +27,7 @@ ms.author: bezhan
 ## Prerequisites
 
 >[!IMPORTANT]
-> Version 1.0 of the SAP BW Application Server connector is deprecated. You should begin using only Implementation 2.0 of the SAP BW Application Server connector. All support for version 1.0 will be removed from the connector in the near future.
+> Version 1.0 of the SAP BW Application Server connector has been deprecated. You can only use Implementation 2.0 of the SAP BW Application Server connector for new connections. All support for version 1.0 will be removed from the connector in the near future.
 
 You'll need an SAP account to sign in to the website and download the drivers. If you're unsure, contact the SAP administrator in your organization. The drivers need to be installed on the gateway machine.
 
