@@ -38,21 +38,9 @@ To make the connection to **Hadoop File (HDFS)**, follow these steps:
 
 1. Select **OK**.
 
-1. You can either select anonymous access, windows access, or Microsoft account.
-
-1. If you select **Anonymous**, select the level to apply the settings on your system, then select **Connect**.
+1. You can either select anonymous access, windows access, or Microsoft account, select the level to apply the settings to, and connect. For more information, see: [Authentication with a data source](../ConnectorAuthentication.md).
 
    :::image type="content" source="./media/hadoop-file-system/anonymous-access.png" alt-text="Screenshot of the Hadoop File (HDFS) anonymous access dialog.":::
-
-1. If you select **Windows**, select the level to apply your Windows credentials on the system, the select **Connect**.
-
-   :::image type="content" source="./media/hadoop-file-system/windows-access.png" alt-text="Screenshot of the Hadoop File (HDFS) Windows access dialog.":::
-
-1. If you select **Microsoft account**, then you'll first need to sign in.
-
-1. Select the level to apply your Microsoft account credentials on the system, the select **Connect**.
-
-   :::image type="content" source="./media/hadoop-file-system/microsoft-account-access.png" alt-text="Screenshot of the Hadoop File (HDFS) Microsoft account access dialog.":::
 
 1. In **Navigator**, select one or more files or folders to import and use in your application. Then select either **Load** to load the table, or **Transform Data** to open the Power Query Editor where you can filter and refine the set of data you want to use, and then load that refined set of data.
 
