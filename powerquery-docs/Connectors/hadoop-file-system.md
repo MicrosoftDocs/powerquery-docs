@@ -3,7 +3,7 @@ title: Power Query Hadoop File (HDFS) connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Hadoop File (HDFS), along with native query folding instructions and troubleshooting tips.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 11/17/2022
+ms.date: 11/29/2022
 ms.author: bezhan
 ---
 
