@@ -3,13 +3,16 @@ title: Implementation details
 description: Describes conversion information and specific features available in Implementation 2 of the Power Query SAP Business Warehouse connector.
 author: dougklopfenstein
 ms.topic: conceptual
-ms.date: 11/23/2020
+ms.date: 11/29/2022
 ms.author: bezhan
 ---
 
 # Implementation details
 
 This article describes conversion information and specific features available in Implementation 2 of the Power Query SAP Business Warehouse connector.
+
+>[!IMPORTANT]
+> Version 1.0 of the SAP Business Warehouse connector has been deprecated. New connections will use Implementation 2.0 of the SAP Business Warehouse connector.  All support for version 1.0 will be removed from the connector in the near future. Use the information in this article to update existing version 1.0 reports so they can use Implementation 2.0 of this connector.
 
 ## New options for Implementation 2.0
 

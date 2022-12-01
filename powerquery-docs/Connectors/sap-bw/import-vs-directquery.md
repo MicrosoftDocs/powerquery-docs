@@ -3,7 +3,7 @@ title: Import vs. DirectQuery for SAP BW
 description: Describes the differences between using Import and DirectQuery mode in Power BI Desktop for SAP BW datasets.
 author: dougklopfenstein
 ms.topic: conceptual
-ms.date: 11/23/2020
+ms.date: 11/29/2022
 ms.author: bezhan
 ---
 
@@ -13,10 +13,12 @@ ms.author: bezhan
 > This article discusses the differences between Import and DirectQuery modes in Power BI Desktop. For a description of using Import mode in Power Query Desktop or Power Query Online, go to the following sections:
 >
 >SAP BW Application Server connector:
+>
 >* [Connect to an SAP BW Application Server from Power Query Desktop](application-setup-and-connect.md#connect-to-an-sap-bw-application-server-from-power-query-desktop)
 >* [Connect to an SAP BW Application Server from Power Query Online](application-setup-and-connect.md#connect-to-an-sap-bw-application-server-from-power-query-online)
 >
 >SAP BW Message Server connector:
+>
 >* [Connect to an SAP BW Message Server from Power Query Desktop](message-setup-and-connect.md#connect-to-an-sap-bw-message-server-from-power-query-desktop)
 >* [Connect to an SAP BW Message Server from Power Query Online](message-setup-and-connect.md#connect-to-an-sap-bw-message-server-from-power-query-online)
 
@@ -26,9 +28,9 @@ The main differences between the two connectivity modes are outlined here, as we
 
 ## Import Connections
 
-When you connect to a data source with Power BI Desktop, the navigator will allow you to select a set of tables (for relational sources) or a set of source objects (for multidimensional sources). 
+When you connect to a data source with Power BI Desktop, the navigator will allow you to select a set of tables (for relational sources) or a set of source objects (for multidimensional sources).
 
-For SAP BW connections, you can select the objects you want to include in your query from the tree displayed. You can select an InfoProvider or BEx query for an InfoProvider, expand its key figures and dimensions, and select specific key figures, characteristics, attributes (properties), or hierarchies to be included in your query. 
+For SAP BW connections, you can select the objects you want to include in your query from the tree displayed. You can select an InfoProvider or BEx query for an InfoProvider, expand its key figures and dimensions, and select specific key figures, characteristics, attributes (properties), or hierarchies to be included in your query.
 
 The selection defines a query that will return a flattened data set consisting of columns and rows. The selected characteristics levels, properties and key figures will be represented in the data set as columns. The key figures are aggregated according to the selected characteristics and their levels. A preview of the data is displayed in the navigator. You can edit these queries in Power Query prior to loading the data, for example to apply filters, or aggregate the data, or join different tables.
 
@@ -36,7 +38,7 @@ When the data defined by the queries is loaded, it will be imported into the Pow
 
 As you start creating your visuals in Power BI Desktop, the imported data in the cache will be queried. The querying of cached data is very fast and changes to the visuals will be reflected immediately.
 
-However, the user should take care when building visuals that further aggregate the data, when dealing with non-additive measures. For example, if the query imported each *Sales Office*, and the *Growth %* for each one, then if the user built a visual that will *Sum* the *Growth %* values across all *Sales Offices*, that aggregation will be performed locally, over the cached data. The result wouldn't be the same as requesting the overall *Growth %* from SAP BW, and is probably not what's intended. To avoid such accidental aggregations, it's useful to set the **Default Summarization** for such columns to **Do not summarize**. 
+However, the user should take care when building visuals that further aggregate the data, when dealing with non-additive measures. For example, if the query imported each *Sales Office*, and the *Growth %* for each one, then if the user built a visual that will *Sum* the *Growth %* values across all *Sales Offices*, that aggregation will be performed locally, over the cached data. The result wouldn't be the same as requesting the overall *Growth %* from SAP BW, and is probably not what's intended. To avoid such accidental aggregations, it's useful to set the **Default Summarization** for such columns to **Do not summarize**.
 
 If the data in the underlying source changes, it won't be reflected in your visuals. It will be necessary to do a **Refresh**, which will reimport the data from the underlying source into the Power BI cache.
 
@@ -52,7 +54,7 @@ The navigation experience is slightly different when connecting to an SAP BW sou
 
 For SAP BW queries with variables, you can enter or select values as parameters of the query. Select the **Apply** button to include the specified parameters in the query.
 
-Instead of a data preview, the metadata of the selected InfoCube or BEx Query is displayed. Once you select the **Load** button in **Navigator**, no data will be imported. 
+Instead of a data preview, the metadata of the selected InfoCube or BEx Query is displayed. Once you select the **Load** button in **Navigator**, no data will be imported.
 
 ![Load into DirectQuery.](load-into-directquery.png)
 
@@ -100,7 +102,6 @@ These changes will apply to your report while you interact with it in Power BI D
 In the Power BI service, the query cache for DirectQuery connections is updated on a periodic basis by querying the data source. By default, this update happens every hour, but it can be configured to a different interval in dataset settings. For more information, go to [Data refresh in Power BI](/power-bi/connect-data/refresh-data).
 
 Also, many of the general best practices described in [Using DirectQuery in Power BI](/power-bi/connect-data/desktop-directquery-about) apply equally when using DirectQuery over SAP BW. Additional details specific to SAP BW are described in [Connect to SAP Business Warehouse by using DirectQuery in Power BI](/power-bi/desktop-directquery-sap-bw).
-
 
 ### See also
 
