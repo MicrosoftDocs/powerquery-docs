@@ -82,23 +82,23 @@ When using the Query Editor in Power Query Online, you can navigate to the **Key
 
 | Action | Windows keyboard shortcut | MacOS keyboard shortcut |
 | --- | --- | --- |
-| Expand selected query | Ctrl+Right arrow key | ? |
-| Collapse selected query | Ctrl+Left arrow key | ? |
+| Expand selected query | Ctrl+Right arrow key | Command+Right arrow key |
+| Collapse selected query | Ctrl+Left arrow key | Command+Left arrow key |
 | Move focus from query level to step level | Alt+Down arrow key | Option+Down arrow key |
 | Move focus from step level to query level | Esc | Esc |
 | Expand all queries | Ctrl+Shift+Right arrow key | Command+Shift+Right arrow key |
 | Collapse all queries | Ctrl+Shift+Left arrow key | Command+Shift+Left arrow key |
 | Insert new step using+button (after selected step) | Ctrl+Alt+N | ? |
 | Highlight related queries | Ctrl+Alt+R | ? |
-| Select all queries | Ctrl+A | ? |
-| Copy queries | Ctrl+C | ? |
-| Paste queries | Ctrl+V | ? |
+| Select all queries | Ctrl+A | Command+A |
+| Copy queries | Ctrl+C | Command+C |
+| Paste queries | Ctrl+V | Command+V |
 
 ## Queries pane
 
 | Action | Windows keyboard shortcut | MacOS keyboard shortcut |
 | --- | --- | --- |
 | Select all queries | Ctrl+A | Command+A |
-| Copy queries | Ctrl+C | ? |
-| Paste queries | Ctrl+V | ? |
+| Copy queries | Ctrl+C | Command+C |
+| Paste queries | Ctrl+V | Command+V |
 | Select multiple consecutive queries | Ctrl+Up arrow key and Ctrl+Down arrow key | Command+Up arrow key and Command+Down arrow key |
