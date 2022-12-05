@@ -402,3 +402,14 @@ Because the Power Query SAP Business Warehouse connector uses the MDX interface 
 ### CHAR limit of 60 despite "long text" in SAP BW
 
 There's a known limitation where "long text" characteristics in SAP BW appear with a 60 character limit in Power BI. This character limit is due to a limitation in the MDX interface, and there's no known workaround available. SAP has documented this MDX limitation in this [SAP Note](https://launchpad.support.sap.com/services/pdf/notes/2096749/E).
+
+### Migrating to implementation 2.0 when using Direct Query
+
+Due to the deprecation of implementation 1.0 of the SAP Business Warehouse connector, users may need to update their queries to leverage implementation 2.0. When using Direct Query access to the query editor is restricted, so users cannot easily transition to implementation 2.0 without recreating their entire query. The workaround is to add a system environment variable to allow access to the query editor. Note that the following steps are not officially supported, and should only be used as outlined here.
+
+1. Create a new environment variable by navigating to Windows Explorer -> This PC -> Properties -> Advanced System Settings -> Environment Variables... -> System Variables -> New, or by opening Command Prompt and entering `sysdm.cpl`
+2. Name the environment variable `PBI_AlwaysEnableQueryEditor` and set the value `true`. This will allow access to the query editor even in Direct Query mode.
+3. In the Power Query editor, right-click on the query and select Advanced Editor.
+4. Update the query to use implementation 2.0 by following these [instructions](/power-bi/connect-data/desktop-sap-bw-connector#changing-existing-reports-to-use-implementation-20), starting with Step 3 in that article. 
+
+Your end query should look something like this: `SapBusinessWarehouse.Cubes("server", "system", "clientId", [Implementation = "2.0"])`.
