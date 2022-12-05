@@ -409,7 +409,7 @@ Due to the deprecation of implementation 1.0 of the SAP Business Warehouse conne
 
 1. Create a new environment variable by navigating to Windows Explorer -> This PC -> Properties -> Advanced System Settings -> Environment Variables... -> System Variables -> New, or by opening Command Prompt and entering `sysdm.cpl`
 2. Name the environment variable `PBI_AlwaysEnableQueryEditor` and set the value `true`. This will allow access to the query editor even in Direct Query mode.
-3. In the Power Query editor, right-click on the query and select Advanced Editor.
-4. Update the query to use implementation 2.0 by following these [instructions](/power-bi/connect-data/desktop-sap-bw-connector#changing-existing-reports-to-use-implementation-20), starting with Step 3 in that article. 
+3. In Power BI Desktop, click on Transform Data to open the Power Query editor.
+4. Update the query to use implementation 2.0 by following these [instructions](/power-bi/connect-data/desktop-sap-bw-connector#changing-existing-reports-to-use-implementation-20), starting with Step 2 in that article. 
 
 Your end query should look something like this: `SapBusinessWarehouse.Cubes("server", "system", "clientId", [Implementation = "2.0"])`.
