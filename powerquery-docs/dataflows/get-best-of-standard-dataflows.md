@@ -59,7 +59,7 @@ All Microsoft Dataverse table rows have unique identifiers defined as GUIDs. The
 > * This capability is only available when loading data to existing tables.
 > * The unique identifier field only accepts string containing GUID values, any other data type or value will cause record creation to fail.
 
-To leverage a table’s unique identifier field, select load to existing table in the **Map Tables** page while authoring a dataflow. In the example below we would like to load data into the CustomerTransactions table, and leverage the TransactionID column from the data source as the Unique Identifier of the table.
+To leverage a table’s unique identifier field, select load to existing table in the **Map Tables** page while authoring a dataflow. In the example below, we would like to load data into the CustomerTransactions table, and leverage the TransactionID column from the data source as the Unique Identifier of the table.
  You will notice that in the **Select key** dropdown the unique identifier, which is always named “tablename + id”, of the table can be selected. Since the table name is “CustomerTransactions”, the unique identifier field will be name “CustomerTransactionId”:
 
 > [!div class="mx-imgBorder"]
