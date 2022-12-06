@@ -193,7 +193,7 @@ To configure a new connection in Power BI service:
 
 ### Azure AD Single Sign-On (SSO) for Google BigQuery with an on-premises data gateway
 
-Before you can enable Azure AD SSO for Google BigQuery, you must first enable Azure AD SSO for all data sources that support Azure AD SSO with an on-premises data gateway:
+Before you can enable Azure AD SSO for Google BigQuery, you must first enable Azure AD SSO for all data sources that support Azure AD SSO with an on-premises data gateway, and ensure you have upgraded to at least the December 2022 release of the on-premises data gateway:
 
 1. In Power BI service, select **Admin portal** from the settings list.
 
