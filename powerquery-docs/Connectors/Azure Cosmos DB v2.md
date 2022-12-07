@@ -64,34 +64,34 @@ To connect to Azure Cosmos DB data:
 
     [![The Navigator dialog box shows your data.](./media/azure-cosmosdb/Navigator.png)](./media/azure-cosmosdb/azure-cosmosdb-navigation.png#lightbox)
 
-8. The most optimal way to specify partition key filter (so that aggregate queries can be pushed down to Cosmos DB) is to use Dynamic filtering with Parameters. To use Dynamic filtering with Parameters, you would create a dataset with unique partition key values, create a Parameter, add it as filter on main dataset, bind it to the unique Partition key datset and use it as a Slicer for the main dataset. Please follow the below steps a through e to enable Dynamic filtering with Parameters.
+8. The most optimal way to specify partition key filter (so that aggregate queries can be pushed down to Cosmos DB) is to use **Dynamic filtering with Parameters**. To use Dynamic filtering with Parameters, you would create a dataset with unique partition key values, create a Parameter, add it as filter on main dataset, bind it to the unique Partition key datset and use it as a Slicer for the main dataset. Please follow the below steps a through e to enable Dynamic filtering with Parameters.
 
    **a. Create a dataset with unique partition key values**:
 
-      Click "Transform Data" instead of clicking "Load" on the previous Navigator tab to bring up the Power Query Editor. Right click on the Queries dataset and click Reference to create new dataset. 
+      Click **Transform Data** instead of clicking "Load" on the previous Navigator tab to bring up the Power Query Editor. Right click on the Queries dataset and click Reference to create new dataset. 
 
 
    ![Partition Key dataset in Power Query editor.](./media/azure-cosmosdb/PKeyDataset.png)
 
-   Rename the new Partition Key dataset, right click on the Cosmos DB Partition Key column, click "Remove Other Columns" and then click "Remove Duplicates". 
+   Rename the new Partition Key dataset, right click on the Cosmos DB Partition Key column, click **Remove Other Columns** and then click **Remove Duplicates**. 
 
    ![Unique Partition Keys in Power Query editor.](./media/azure-cosmosdb/UniquePKeys.png)
 
    **b. Create a Parameter for dynamic filtering**:
 
-   Click on "Manage Parameters" in Power Query editor -> New Parameter -> Rename to reflect the filter parameter and input a valid value as "Current Value". Click on "Close & Apply" on top left corner of Power Query editor.
+   Click on **Manage Parameters** in Power Query editor -> **New Parameter** -> Rename to reflect the filter parameter and input a valid value as **Current Value**. Click on **Close & Apply** on top left corner of Power Query editor.
 
    ![Create Parameter in Power Query editor.](./media/azure-cosmosdb/CreateParameter.png)
 
    **c. Apply parameterised filter on main table**:
 
-   Click on dropdown icon of Partition Key column -> Text Filters -> Equals -> Change Filter type from Text to Parameter -> Choose the parameter that was created in the above step b. 
+   Click on dropdown icon of Partition Key column -> **Text Filters** -> **Equals** -> **Change Filter type from Text to Parameter** -> Choose the parameter that was created in the above step b. 
 
    ![Apply parameterised filter](./media/azure-cosmosdb/ParamFilter.png)
 
    **d. Create Partition Key values Slicer with Parameter binding**:
 
-   Click on the "Model" tab -> Click on the Partition Key field -> Properties -> Advanced -> Bind to parameter -> Choose the parameter that was created in the above step b.
+   Click on the **Model** tab -> Click on the Partition Key field -> Properties -> Advanced -> **Bind to parameter** -> Choose the parameter that was created in the above step b.
 
    ![ Parameter Binding](./media/azure-cosmosdb/ParamBinding.png)
 
@@ -118,20 +118,6 @@ The following table lists all of the advanced options you can set in Power Query
 
 
 
-## Instructions, limitations, and known issues
+## Instructions and limitations
 
-You should be aware of the following instructions, limitations, and known issues associated with accessing the current version of Azure Cosmos DB v2 data.
 
-### Instructions
-
-* When using this connector in import mode, set both **Advanced Passdown** and **PBI Mode** to **0** (ADVANCED_PASSDOWN="0", PBI_MODE="0").
-* Don't publish reports on Power BI service that have the Report Developer Mode enabled (REPORT_DEVELOPER_MODE_ON="1").
-* Use the following best practices when working with new large collections in DirectQuery mode:
-  * Temporarily enable the Report Developer Mode (`REPORT_DEVELOPER_MODE_ON="1"`). Enabling this mode allows the discovery of the Data Layout by loading a very small dataset from Cosmos DB.
-  * Once the collection is prepared with the necessary Composite Indexes and the useful Data Engineering aspects related to the Data Shapes are determined, you can switch back to the Regular Mode (`REPORT_DEVELOPER_MODE_ON="0"`) and start the Data Engineering activities targeting the Datasets in their entirety.
-
-### Limitations
-
-* Reports must be filtered on Partition Keys defined on the underlying Cosmos DB Container.
-* If you need to sort on more than one column (`FULL_SORTING_ON="1"`), you need to consider that the sorting will be delegated to Cosmos DB, which doesn't sort on fields that aren't part of Composite Indexes.
-* To assist with the creation of the necessary Composite Indexes, while designing the report in PBI Desktop, the Report Developer Mode needs to be enabled (`REPORT_DEVELOPER_MODE_ON="1"`), which will prompt to Copy to Clipboard the JSON text that could be pasted in the Cosmos DB Portal when specifying the Cosmos DB Collection Composite Index.
