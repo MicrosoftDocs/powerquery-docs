@@ -211,8 +211,6 @@ Once you've enabled Azure AD SSO for all data sources, then enable Azure AD SSO 
 
 3. Select a gateway, and then select **Choose Data Source**.
 
-4. Under the **Data Source Settings** tab, enter a value in **Billing Project ID**. The **Billing Project ID** parameter is required when using Azure AD and needs to be specified in **Advanced settings**.
+4. Under the **Data Source Settings** tab, enter a value in **Billing Project ID**. The **Billing Project ID** parameter is required when using Azure AD and needs to be specified in **Advanced settings**. Also, select **Use SSO via Azure AD for DirectQuery queries**.
 
-   Also select **Use SSO via Azure AD for DirectQuery queries**.
 
-   ![Image of the Data Source Settings tab with the Provider Name and Use SSO via Azure AD for DirectQuery queries advanced settings emphasized.](./media/google-bigquery/gateway-settings.png)
