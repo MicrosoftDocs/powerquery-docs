@@ -96,7 +96,7 @@ After doing the expand operation, the **All Errors.Error.Message** field display
 Now with each error message in a new column, you can create a new conditional column with the name **Final Rate** and the following clauses:
 
 * If the value in the **All Errors.Errors.Message** column equals `null`, then the output will be the value from the **Standard Rate** column.
-* Else, if the value in the **All Errors.Errors.Message** column does not equal `Invalid cell value '#REF!'.`, then the output will be the value from the **Special Rate** column.
+* Else, if the value in the **All Errors.Errors.Message** column doesn't equal `Invalid cell value '#REF!'.`, then the output will be the value from the **Special Rate** column.
 * Else, null.
 
 ![Screenshot of the Add conditional column dialog with all of the error conditions set for the new column.](images/me-error-handling-conditional-column.png)
