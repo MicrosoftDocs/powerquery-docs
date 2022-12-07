@@ -21,8 +21,6 @@ LocalizationGroup: reference
 | Authentication Types Supported | Feed Key |
 | | |
 
->[!Note]
->The Azure Cosmos DB V2 connector release has been delayed. We recommend continuing to use the Azure Cosmos DB V1 connector.
 
 ## Prerequisites
 
@@ -45,79 +43,80 @@ To connect to Azure Cosmos DB data:
 
 4. Select **Azure Cosmos DB v2**, and then select **Connect**.
 
-    ![Select Azure Cosmos DB v2.](./media/azure-cosmosdb/azure-cosmosdb-getdata.png)
+    ![Select Azure Cosmos DB v2.](./media/azure-cosmosdb/getdata.png)
+
+
 
 5. On the **Azure Cosmos DB v2** connection page, for **Cosmos Endpoint**, enter the URI of the Azure Cosmos DB account that you want to use. For **Data Connectivity mode**, choose a mode that's appropriate for your use case, following these general guidelines:
 
    * For smaller datasets, choose **Import**. When using import mode, Power BI works with Cosmos DB to import the contents of the entire dataset for use in your visualizations.
 
-      >[!Note]
-      >For **Import** mode to be setup properly, you need to have both the **Advanced Passdown** and **PBI Mode** advanced options set to **0**. More information: [Connect using advanced options](#connect-using-advanced-options)
 
-   * For larger datasets, choose **DirectQuery**. In DirectQuery mode, no data is downloaded to your workstation. While you create or interact with a visualization, Microsoft Power BI works with Cosmos DB to dynamically query the underlying data source so that you're always viewing current data. More information: [Use DirectQuery in Power BI Desktop](/power-bi/connect-data/desktop-use-directquery)
 
-      >[!Note]
-      >For **DirectQuery** mode to be setup properly, you need to have both the **Advanced Passdown** and **PBI Mode** advanced options set to **1**. More information: [Connect using advanced options](#connect-using-advanced-options)
+   * The **DirectQuery** mode will enable query pushdown, including aggregations to the Cosmos DB container **when a filter on partition key is specified**. The DirectQuery mode will be helpful in scenarios where Cosmos DB Container data is large and it is not feasible to import it all to Power BI cache in the Import mode. It will also be helpful in user scenarios where real-time reporting with the latest Cosmos DB data is a requirement. While you create or interact with a visualization, Microsoft Power BI works with Cosmos DB to dynamically query the underlying data source so that you're always viewing current data. More information: [Use DirectQuery in Power BI Desktop](/power-bi/connect-data/desktop-use-directquery)
+
+
 
    ![Image of connection dialog box showing the Cosmos Endpoint entry and Data connectivity mode set to DirectQuery.](./media/azure-cosmosdb/connection-page.png)
 6. Select **OK**.
 
-7. At the prompt to configure data source authentication, enter the Account Key. Then select **Connect**.
+7. At the prompt to configure data source authentication, enter the Account Key. Then select **Connect**. Your data catalog, databases, and tables appear in the **Navigator** dialog box. In the **Display Options** pane, select the check box for the dataset that you want to use.
 
-    ![Choose an authentication method.](./media/azure-cosmosdb/azure-cosmosdb-authentication.png)
+    [![The Navigator dialog box shows your data.](./media/azure-cosmosdb/Navigator.png)](./media/azure-cosmosdb/azure-cosmosdb-navigation.png#lightbox)
 
-    Your data catalog, databases, and tables appear in the **Navigator** dialog box.
+8. The most optimal way to specify partition key filter (so that aggregate queries can be pushed down to Cosmos DB) is to use Dynamic filtering with Parameters. To use Dynamic filtering with Parameters, you would create a dataset with unique partition key values, create a Parameter, add it as filter on main dataset, bind it to the unique Partition key datset and use it as a Slicer for the main dataset. Please follow the below steps a through e to enable Dynamic filtering with Parameters.
 
-    [![The Navigator dialog box shows your data.](./media/azure-cosmosdb/azure-cosmosdb-navigation.png)](./media/azure-cosmosdb/azure-cosmosdb-navigation.png#lightbox)
+   **a. Create a dataset with unique partition key values**:
 
-8. In the **Display Options** pane, select the check box for the dataset that you want to use.
+      Click "Transform Data" instead of clicking "Load" on the previous Navigator tab to bring up the Power Query Editor. Right click on the Queries dataset and click Reference to create new dataset. 
 
-9. If you want to transform the dataset before you import it, go to the bottom of the dialog box and select **Transform Data**. This selection opens the Power Query editor so that you can filter and refine the set of data you want to use. Also, you could fine-tune the connector options by modifying the passed arguments.
 
-   ![Connection arguments in Power Query editor.](./media/azure-cosmosdb/azure-cosmosdb-connection-arguments.png)
+   ![Partition Key dataset in Power Query editor.](./media/azure-cosmosdb/PKeyDataset.png)
 
-10. Otherwise, select **Load**. After the load is complete, you can create visualizations. If you selected **DirectQuery**, Power BI issues a query to Cosmos DB for the visualization that you requested.
+   Rename the new Partition Key dataset, right click on the Cosmos DB Partition Key column, click "Remove Other Columns" and then click "Remove Duplicates". 
 
-## Connect using advanced options
+   ![Unique Partition Keys in Power Query editor.](./media/azure-cosmosdb/UniquePKeys.png)
+
+   **b. Create a Parameter for dynamic filtering**:
+
+   Click on "Manage Parameters" in Power Query editor -> New Parameter -> Rename to reflect the filter parameter and input a valid value as "Current Value". Click on "Close & Apply" on top left corner of Power Query editor.
+
+   ![Create Parameter in Power Query editor.](./media/azure-cosmosdb/CreateParameter.png)
+
+   **c. Apply parameterised filter on main table**:
+
+   Click on dropdown icon of Partition Key column -> Text Filters -> Equals -> Change Filter type from Text to Parameter -> Choose the parameter that was created in the above step b. 
+
+   ![Apply parameterised filter](./media/azure-cosmosdb/ParamFilter.png)
+
+   **d. Create Partition Key values Slicer with Parameter binding**:
+
+   Click on the "Model" tab -> Click on the Partition Key field -> Properties -> Advanced -> Bind to parameter -> Choose the parameter that was created in the above step b.
+
+   ![ Parameter Binding](./media/azure-cosmosdb/ParamBinding.png)
+
+   Click on "Report" tab and add a Slicer for the Partition Key values
+
+   ![ Slicer](./media/azure-cosmosdb/Slicer.png)
+
+   **e. Add visualizations and apply Partition Key filters from the Slicer**:
+   ![ Visualization](./media/azure-cosmosdb/Visualization.png)
+
+
+## Advanced options
 
 Power Query Desktop provides a set of advanced options that you can add to your query if needed.
-
-![Enter connection information.](./media/azure-cosmosdb/azure-cosmosdb-connector-settings.png)
 
 The following table lists all of the advanced options you can set in Power Query Desktop.
 
 | Advanced option | Description |
 | --------------- | ----------- |
 | Number of Retries | How many times to retry if there are HTTP return codes of `408 - Request Timeout`, `412 - Precondition Failed`, or `429 - Too Many Requests`. The default number of retries is 5. |
-| Advanced Passdown | Attempt to pass down whenever possible. Set to 0 for false or 1 for true. The default value is 1. |
-| PBI mode | Indicates whether the ODBC Driver's behavior is tailored towards the PBI flow support. Set to 0 for false or 1 for true. The default value is 1. |
-| Protocol Type | The format of the data exchanged with Cosmos DB. Set to 0 for text or 1 for binary data. The default value is 1. |
-| Flag indicating if collection schema is explicitly stated as a document | More information: [Schema in a document](#schema-in-a-document) |
-| Name of the database containing schema document if explicitly specified | More information: [Schema in a document](#schema-in-a-document) |
-| Name of the collection containing schema document if explicitly specified | More information: [Schema in a document](#schema-in-a-document) |
-| Name of JSON property to use in looking up the schema document | More information: [Schema in a document](#schema-in-a-document) |
-| Value of the JSON property to use in looking up the schema document | More information: [Schema in a document](#schema-in-a-document) |
-| Name of JSON property in schema document containing the collection schema | More information: [Schema in a document](#schema-in-a-document) |
-| Flag to indicate if error should be thrown if trying to sort more columns than composite index limit | Detects whether the target collection has a Composite Index matching the Sorted Sequence of Columns. Default value is 1 (true). |
-| Flag to indicate if assistive experience should interject if optimal composite indices aren't defined for Sort Passdown | When detecting an error in the six [Schema in a document](#schema-in-a-document) options, prompt whether the JSON of the Composite Index definition will be copied into the clipboard. The contents of the clipboard could then be pasted in the composite index definition in the Cosmos DB Portal. Use this option in the development phase. Default value is 0 (false). |
-| Flag to indicate if all fields in sort clause should be passed down | Indicates if all fields in the sort clause should be passed down. Otherwise, only the field sorted on in a Power BI report or the first field specified in M will be passed down as an optimization. Sorting depends on the composite indexes defined for the collection. Currently the Cosmos DB containers have a maximum of eight composite indexes that can be defined. Default value is 0 (false). |
-| Rest API Version | Sets the REST API version to use. Possible values are `2015-12-16` or `2018-12-31`. The default value is `2018-12-31`. This value can only be set in an advanced query.|
+| Enable AVERAGE function Passdown | Attempt to pass down whenever possible. Set to 0 for false or 1 for true. The default value is 1. |
+| Enable SORT Passdown for multiple columns | Indicates whether the ODBC Driver's behavior is tailored towards the PBI flow support. Set to 0 for false or 1 for true. The default value is 1. |
 | | |
 
-## Schema in a document
 
->[!Note]
->Currently, this section contains preliminary information. Additional information will be added before the connector is officially released.
-
-Flag indicating if collection schema is explicitly stated as a document (default 0, that is, no schema as document)
-
-[![Example of Usage](./media/azure-cosmosdb/azure-cosmosdb-schema-in-collection.png)](./media/azure-cosmosdb/azure-cosmosdb-schema-in-collection.png#lightbox)
-
-* Name of the database containing schema document if explicitly specified
-* Name of the collection containing schema document if explicitly specified
-* Name of JSON property to use in looking up the schema document
-* Value of the JSON property to use in looking up the schema document
-* Name of JSON property in schema document containing the collection schema
 
 ## Instructions, limitations, and known issues
 
@@ -136,8 +135,3 @@ You should be aware of the following instructions, limitations, and known issues
 * Reports must be filtered on Partition Keys defined on the underlying Cosmos DB Container.
 * If you need to sort on more than one column (`FULL_SORTING_ON="1"`), you need to consider that the sorting will be delegated to Cosmos DB, which doesn't sort on fields that aren't part of Composite Indexes.
 * To assist with the creation of the necessary Composite Indexes, while designing the report in PBI Desktop, the Report Developer Mode needs to be enabled (`REPORT_DEVELOPER_MODE_ON="1"`), which will prompt to Copy to Clipboard the JSON text that could be pasted in the Cosmos DB Portal when specifying the Cosmos DB Collection Composite Index.
-
-### Known issues in DirectQuery mode
-
-* Reports with more than eight columns won't work in DirectQuery mode.
-* Aggregate functions aren't passed down. The effect is that SQL expressions Passing Down COUNT, SUM, and so on, will fail and not display a number.
