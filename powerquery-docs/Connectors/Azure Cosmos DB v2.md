@@ -53,7 +53,7 @@ To connect to Azure Cosmos DB data:
 
 
 
-   * The **DirectQuery** mode will enable query pushdown, including aggregations to the Cosmos DB container **when a filter on partition key is specified**. The DirectQuery mode will be helpful in scenarios where Cosmos DB Container data is large and it is not feasible to import it all to Power BI cache in the Import mode. It will also be helpful in user scenarios where real-time reporting with the latest Cosmos DB data is a requirement. While you create or interact with a visualization, Microsoft Power BI works with Cosmos DB to dynamically query the underlying data source so that you're always viewing current data. More information: [Use DirectQuery in Power BI Desktop](/power-bi/connect-data/desktop-use-directquery)
+   * The **DirectQuery** mode will enable **query pushdown**, including aggregations to the Cosmos DB container **when a filter on partition key is specified**. The DirectQuery mode will be helpful in scenarios where Cosmos DB Container data is large and it is not feasible to import it all to Power BI cache in the Import mode. It will also be helpful in user scenarios where real-time reporting with the latest Cosmos DB data is a requirement. While you create or interact with a visualization, Microsoft Power BI works with Cosmos DB to dynamically query the underlying data source so that you're always viewing current data. More information: [Use DirectQuery in Power BI Desktop](/power-bi/connect-data/desktop-use-directquery)
 
 
 
@@ -64,11 +64,11 @@ To connect to Azure Cosmos DB data:
 
     [![The Navigator dialog box shows your data.](./media/azure-cosmosdb/Navigator.png)](./media/azure-cosmosdb/azure-cosmosdb-navigation.png#lightbox)
 
-8. The most optimal way to specify partition key filter (so that aggregate queries can be pushed down to Cosmos DB) is to use **Dynamic filtering with Parameters**. To use Dynamic filtering with Parameters, you would create a dataset with unique partition key values, create a Parameter, add it as filter on main dataset, bind it to the unique Partition key datset and use it as a Slicer for the main dataset. Please follow the below steps a through e to enable Dynamic filtering with Parameters.
+8. The most optimal way to specify Partition Key filter (so that the aggregate queries can be pushed down to Cosmos DB) is to use **Dynamic filtering with Parameters**. To use Dynamic filtering with Parameters, you would **create a dataset with unique partition key values**, **create a Parameter**, **add it as filter on main dataset**, **bind it to the unique Partition key datset** and **use it as a Slicer for the main dataset**. Please follow the below steps to enable Dynamic filtering of Partition Key values with Parameters.
 
    **a. Create a dataset with unique partition key values**:
 
-      Click **Transform Data** instead of clicking "Load" on the previous Navigator tab to bring up the Power Query Editor. Right click on the Queries dataset and click Reference to create new dataset. 
+      Click **Transform Data** instead of clicking "Load" on the previous Navigator tab to bring up the Power Query Editor. Right click on the Queries dataset and click **Reference** to create new dataset. 
 
 
    ![Partition Key dataset in Power Query editor.](./media/azure-cosmosdb/PKeyDataset.png)
@@ -112,8 +112,8 @@ The following table lists all of the advanced options you can set in Power Query
 | Advanced option | Description |
 | --------------- | ----------- |
 | Number of Retries | How many times to retry if there are HTTP return codes of `408 - Request Timeout`, `412 - Precondition Failed`, or `429 - Too Many Requests`. The default number of retries is 5. |
-| Enable AVERAGE function Passdown | Attempt to pass down whenever possible. Set to 0 for false or 1 for true. The default value is 1. |
-| Enable SORT Passdown for multiple columns | Indicates whether the ODBC Driver's behavior is tailored towards the PBI flow support. Set to 0 for false or 1 for true. The default value is 1. |
+| Enable AVERAGE function Passdown | To be added |
+| Enable SORT Passdown for multiple columns | To be added |
 | | |
 
 
