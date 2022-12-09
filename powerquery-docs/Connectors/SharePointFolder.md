@@ -123,3 +123,7 @@ If a filename contains certain special characters, it may lead to authentication
 `# % $`
 
 If these characters are present in the filename, the file owner must rename the file so that it does NOT contain any of these characters.
+
+### Permissions
+
+User requesting document library contents should have access to the SharePoint Site as well as the Document Library, and any folders leading to the requested file.
