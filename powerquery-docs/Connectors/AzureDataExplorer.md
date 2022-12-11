@@ -215,7 +215,7 @@ You can use a query parameter in any query step that supports it. For example, f
 
 ![Filter results using a parameter.](media/azure-data-explorer/filter-using-parameter.png)
 
-#### Provide parameters to an ADX function
+#### Provide parameters to an Azure Data Explorer function
 
 Kusto functions are a great way to maintain complex Kusto Query Language (KQL) queries. We recommend using functions instead of embedding KQL in Power Query. The main advantage of using function is that the logic is maintained once in an environment that is easy to create and test.
 
@@ -223,7 +223,7 @@ Functions can also receive parameters and so add a lot of flexibility to the Pow
 
 ##### Creating a function
 
-You can create the following function in any ADX cluster that you have access to, including a free cluster. The function returns the table `SalesTable` from the help cluster, filtered for sales transactions greater than or smaller than a number provided by the report user.
+You can create the following function in any Azure Data Explorer cluster that you have access to, including a free cluster. The function returns the table `SalesTable` from the help cluster, filtered for sales transactions greater than or smaller than a number provided by the report user.
 
 ```kusto
 .create-or-alter  function LargeOrSmallSales(Cutoff:long,Op:string=">")
