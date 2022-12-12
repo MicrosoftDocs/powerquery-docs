@@ -3,7 +3,7 @@ title: Power Query SharePoint folder connector
 description: Provides basic information, prerequisites, and how to connect to your data, along with troubleshooting tips when combining files and using filename special characters.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 9/16/2021
+ms.date: 12/11/2022
 ms.author: bezhan
 ---
 
@@ -126,4 +126,4 @@ If these characters are present in the filename, the file owner must rename the 
 
 ### Permissions
 
-User requesting document library contents should have access to the SharePoint Site as well as the Document Library, and any folders leading to the requested file.
+When requesting document library contents, you should have access to the SharePoint site as well as the document library and any folders leading to the requested file.
