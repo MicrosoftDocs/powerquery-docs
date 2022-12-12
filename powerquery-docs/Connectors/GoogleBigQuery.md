@@ -3,7 +3,7 @@ title: Google BigQuery connector
 description: Provides basic information and prerequisites for the Google BigQuery connector for Power Query.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 9/14/2022
+ms.date: 12/12/2022
 ms.author: bezhan
 ---
 
@@ -212,5 +212,3 @@ Once you've enabled Azure AD SSO for all data sources, then enable Azure AD SSO 
 3. Select a gateway, and then select **Choose Data Source**.
 
 4. Under the **Data Source Settings** tab, enter a value in **Billing Project ID**. The **Billing Project ID** parameter is required when using Azure AD and needs to be specified in **Advanced settings**. Also, select **Use SSO via Azure AD for DirectQuery queries**.
-
-
