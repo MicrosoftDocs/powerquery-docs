@@ -402,7 +402,7 @@
         href: Connectors/GoogleAnalytics.md
       - name: "Google BigQuery"
         href: Connectors/GoogleBigQuery.md
-      - name: "Google BigQuery (Azure AD)"
+      - name: "Google BigQuery (Azure AD) (Beta)"
         href: Connectors/google-bigquery-aad.md
       - name: "Google Sheets"
         href: Connectors/GoogleSheets.md
