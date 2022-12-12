@@ -14,7 +14,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows) |
+| Products Supported | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows) |
 | Authentication Types Supported | Azure Active Directory |
 
 >[!Note]
@@ -86,7 +86,7 @@ To optimize performance considerations, Google BigQuery does well with large dat
 
 The Google BigQuery (Azure AD) connector supports nested fields, which are loaded as text columns in JSON format.
 
-![Google BigQuery Nested Fields Support.](./media/google-bigquery/GoogleBigQueryNestedFields.png)
+[![Google BigQuery Nested Fields Support.](./media/google-bigquery/GoogleBigQueryNestedFields.png)](./media/google-bigquery/GoogleBigQueryNestedFields.png#lightbox)
 
 Users should select **Transform Data** and then use the JSON parsing capabilities in the Power Query Editor to extract the data.
 
