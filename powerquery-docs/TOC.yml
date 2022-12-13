@@ -356,6 +356,8 @@
         href: Connectors/BloombergDataAndAnalytics.md
       - name: "BQE Core"
         href: Connectors/BQECore.md
+      - name: "CData Connect Cloud (Beta)"
+        href: ./connectors/cdata-connect-cloud.md
       - name: "Common Data Service (Legacy)"
         href: ./connectors/commondataservicelegacy.md
       - name: "Databricks (Beta)"
@@ -400,6 +402,8 @@
         href: Connectors/GoogleAnalytics.md
       - name: "Google BigQuery"
         href: Connectors/GoogleBigQuery.md
+      - name: "Google BigQuery (Azure AD) (Beta)"
+        href: Connectors/google-bigquery-aad.md
       - name: "Google Sheets"
         href: Connectors/GoogleSheets.md
       - name: "Hive LLAP"
