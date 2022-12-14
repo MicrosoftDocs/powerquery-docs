@@ -137,15 +137,12 @@ If this error occurs:
 
 ### SSL Error in Power BI Service
 
-After publishing a report in Power BI service, you need to update the credentials to cloud hive data source to refresh in Power BI service. After filling in the credentials, you might get the error:
+After publishing a report in Power BI service, you need to update the credentials to the Hive data source in the cloud to refresh in Power BI service. After filling in the credentials, you might get the error:
 
 ![Credential Error](media/hivellap/image.png)
 
-If you get this error and you see the following message in fiddler trace, this is an SSL issue. 
+If you get this error and you see the following message in Fiddler trace, this is an SSL issue. 
 
 ODBC: ERROR [HY000] [Microsoft][ThriftExtension] (14) Unexpected response from server during a HTTP connection: Could not refill buffer
 
-
 SSL is by default disabled when connecting directly from powerbi.com. To make it work, you can use a Gateway where you can enable encryption to connect and refresh reports from Power BI service.
-
-
