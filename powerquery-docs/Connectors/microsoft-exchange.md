@@ -3,23 +3,20 @@ title: Microsoft Exchange Power Query Data Connector
 description: Provides basic information and connection instructions for the Microsoft Exchange connector
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 12/07/2022
+ms.date: 12/14/2022
 ms.author: bezhan
 ---
 
 # Microsoft Exchange
 
->[!Note]
->The following connector article is provided by EarthSoft, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the EarthSoft website and use the support channels there.
-
 ## Summary
 
 | Item | Description |
 | ------- | ---------- |
-| Release State | Preview |
+| Release State | GA |
 | Products | Excel <br/> Power BI (Datasets)<br/> Analysis Services |
-| Authentication Types Supported | Basic<br/>Web API (API Token)<br/>Organizational Account |
-| Function Reference Documentation | &mdash; |
+| Authentication Types Supported | Exchange account<br/>Microsoft account |
+| Function Reference Documentation | [Exchange.Contents](/powerquery-m/exchange-contents) |
 
 ## Capabilities Supported
 
