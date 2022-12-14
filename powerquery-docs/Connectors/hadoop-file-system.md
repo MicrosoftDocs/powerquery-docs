@@ -16,7 +16,7 @@ ms.author: bezhan
 | Release State | General Availability |
 | Products | Excel<br/>Power BI (Datasets)|
 | Authentication Types Supported | Anonymous<br/>Windows<br/>Microsoft account |
-| Function Reference Documentation | [HDFS.Contents](/powerquery-m/hdfs-contents)<br/>[HDFS.Files](/powerquery-m/hdfs-files) |
+| Function Reference Documentation | [Hdfs.Contents](/powerquery-m/hdfs-contents)<br/>[Hdfs.Files](/powerquery-m/hdfs-files) |
 
 ## Capabilities Supported
 
@@ -42,6 +42,6 @@ To make the connection to **Hadoop File (HDFS)**, follow these steps:
 
    :::image type="content" source="./media/hadoop-file-system/anonymous-access.png" alt-text="Screenshot of the Hadoop File (HDFS) anonymous access dialog.":::
 
-1. In **Navigator**, select one or more files or folders to import and use in your application. Then select either **Load** to load the table, or **Transform Data** to open the Power Query Editor where you can filter and refine the set of data you want to use, and then load that refined set of data.
+1. Select either **Load** to load the table, or **Transform Data** to open the Power Query Editor where you can filter and refine the set of data you want to use, and then load that refined set of data.
 
 
