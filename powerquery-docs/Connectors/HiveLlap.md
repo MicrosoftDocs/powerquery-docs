@@ -142,7 +142,8 @@ After publishing a report in Power BI service, you need to update the credential
 ![Credential Error](media/hivellap/image.png)
 
 If you get this error and you see the following message in Fiddler trace, this is an SSL issue. 
-
+```
 ODBC: ERROR [HY000] [Microsoft][ThriftExtension] (14) Unexpected response from server during a HTTP connection: Could not refill buffer
-
-SSL is by default disabled when connecting directly from powerbi.com. To make it work, you can use a Gateway where you can enable encryption to connect and refresh reports from Power BI service.
+```
+SSL is by default disabled when connecting directly from powerbi.com. To enable, you can use a Gateway where you can enable encryption to connect and refresh reports from Power BI service.
+[Enable HTTPS on Gateway](https://learn.microsoft.com/en-us/data-integration/gateway/service-gateway-communication#force-https-communication-with-azure-relay)
