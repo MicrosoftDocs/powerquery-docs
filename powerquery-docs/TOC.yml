@@ -406,6 +406,8 @@
         href: Connectors/google-bigquery-aad.md
       - name: "Google Sheets"
         href: Connectors/GoogleSheets.md
+      - name: "Hadoop File (HDFS)"
+        href: Connectors/hadoop-file-system.md
       - name: "Hive LLAP"
         href: Connectors/HiveLlap.md
       - name: "IBM Db2 database"
