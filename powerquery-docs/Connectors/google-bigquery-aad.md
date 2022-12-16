@@ -3,7 +3,7 @@ title: Google BigQuery (Azure AD) (Beta)
 description: Provides basic information and prerequisites for the Google BigQuery (Azure AD) connector for Power Query.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 12/13/2022
+ms.date: 12/15/2022
 ms.author: bezhan
 ---
 
@@ -19,6 +19,9 @@ ms.author: bezhan
 
 >[!Note]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+
+>[!Note]
+>There is a known issue around connecting to Google BigQuery (Azure AD) where connections will fail due to a driver issue. A fix is being identified and this documentation page will be updated once we have a resolution.
 
 ## Prerequisites
 
@@ -111,7 +114,7 @@ If the above steps don't resolve the problem, you can disable the BigQuery Stora
 
 ## Enable Azure AD Single Sign-On (SSO) for Google BigQuery
 
-We support Azure AD SSO through both Power BI Service (cloud) and also through the on-premises data gateway. For more information about enabling Azure AD SSO for all connectors, go to [Overview of single sign-on (SSO) for on-premises data gateways in Power BI](/power-bi/connect-data/service-gateway-sso-overview).
+We support Azure AD SSO through both Power BI Service (cloud) and also through the on-premises data gateway. For more information about enabling Azure AD SSO for all connectors, go to [Overview of single sign-on (SSO) for on-premises data gateways in Power BI](/power-bi/connect-data/service-gateway-sso-overview). Please confirm directly with your Google contact that your system and accounts are set up correctly for Azure AD SSO prior to attempting to connect in Power BI.
 
 ### Azure AD Single Sign-On (SSO) through Power BI service
 
