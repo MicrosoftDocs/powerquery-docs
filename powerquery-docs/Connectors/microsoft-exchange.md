@@ -13,7 +13,7 @@ ms.author: bezhan
 
 | Item | Description |
 | ------- | ---------- |
-| Release State | GA |
+| Release State | General Availability |
 | Products | Excel <br/> Power BI (Datasets)<br/> Analysis Services |
 | Authentication Types Supported | Exchange account<br/>Microsoft account |
 | Function Reference Documentation | [Exchange.Contents](/powerquery-m/exchange-contents) |
