@@ -139,7 +139,7 @@ If this error occurs:
 
 After publishing a report in Power BI service, you need to update the credentials to the Hive data source in the cloud to refresh in Power BI service. After filling in the credentials, you might get the error:
 
-![Credential Error](media/hivellap/image.png)
+![Screenshot of Credential Error.](media/hivellap/image.png)
 
 If you get this error and you see the following message in Fiddler trace, this is an SSL issue. 
 ```
