@@ -58,7 +58,7 @@ Most dataflow capabilities are available in both Power Apps and Power BI. Datafl
 | | |
 
 ## Known limitations
-* Copying dataflows as part of a [Power Platform environments copy](https://learn.microsoft.com/power-platform/admin/copy-environment) operation is not supported.
+* Copying dataflows as part of a [Power Platform environments copy](/power-platform/admin/copy-environment) operation is not supported.
 
 
 More information about dataflows in Power Apps:
