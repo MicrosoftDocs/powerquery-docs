@@ -179,6 +179,16 @@
       "source_path": "powerquery-docs/WaitRetry.md",
       "redirect_url": "/power-query/wait-retry",
       "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/FHIR/FHIR-QueryFolding.md",
+      "redirect_url": "/power-query/connectors/fhir/fhir-query-folding",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/FHIR/FHIR-QueryFoldingPatterns.md",
+      "redirect_url": "/power-query/connectors/fhir/fhir-query-folding-patterns",
+      "redirect_document_id": "true"
     }
   ]
 }
