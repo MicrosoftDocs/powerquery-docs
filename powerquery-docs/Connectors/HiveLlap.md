@@ -113,6 +113,8 @@ More information, [Configure Kerberos-based SSO from Power BI service to on-prem
 
 ## Troubleshooting
 
+### SSL Error in Power BI Desktop
+
 You might come across the following "SSL_connect" error after entering the authentication information for the connector and selecting **Connect**.
 
 ![Unable to connect error with SSL wrong version number](./media/hive-llap/unable-to-connect.png)
@@ -132,3 +134,16 @@ If this error occurs:
 4. Select **OK**, and then in **Data source settings**, select **Close**.
 
 5. Redo the steps in [Connect to Hive LLAP data from Power Query Desktop](#connect-to-hive-llap-data-from-power-query-desktop).
+
+### SSL Error in Power BI Service
+
+After publishing a report in Power BI service, you need to update the credentials to the Hive data source in the cloud to refresh in Power BI service. After filling in the credentials, you might get the error:
+
+![Screenshot of Credential Error.](media/hivellap/image.png)
+
+If you get this error and you see the following message in Fiddler trace, this is an SSL issue. 
+```
+ODBC: ERROR [HY000] [Microsoft][ThriftExtension] (14) Unexpected response from server during a HTTP connection: Could not refill buffer
+```
+SSL is by default disabled when connecting directly from powerbi.com. To enable, you can use on-premises data gateway where you can enable encryption to connect and refresh reports from Power BI service.
+[Enable HTTPS on Gateway](/data-integration/gateway/service-gateway-communication#force-https-communication-with-azure-relay)
