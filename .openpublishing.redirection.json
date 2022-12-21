@@ -39,6 +39,146 @@
       "source_path": "powerquery-docs/startingtodevelopcustomconnectors.md",
       "redirect_url": "/power-query/installingsdk",
       "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerquery-docs/CertificationSubmission.md",
+      "redirect_url": "/power-query/certification-submission",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/CommonIssues.md",
+      "redirect_url": "/power-query/common-issues",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/ConnectorAuthentication.md",
+      "redirect_url": "/power-query/connector-authentication",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/ConnectorCertification.md",
+      "redirect_url": "/power-query/connector-certification",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/CreatingFirstConnector.md",
+      "redirect_url": "/power-query/creating-first-connector",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/DataPrivacyFirewall.md",
+      "redirect_url": "/power-query/data-privacy-firewall",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/HandlingAuthentication.md",
+      "redirect_url": "/power-query/handling-authentication",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/HandlingConnectorSigning.md",
+      "redirect_url": "/power-query/handling-connector-signing",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/HandlingDataAccess.md",
+      "redirect_url": "/power-query/handling-data-access",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/HandlingDocumentation.md",
+      "redirect_url": "/power-query/handling-documentation",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/HandlingGatewaySupport.md",
+      "redirect_url": "/power-query/handling-gateway-support",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/HandlingNavigationTables.md",
+      "redirect_url": "/power-query/handling-navigation-tables",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/HandlingPaging.md",
+      "redirect_url": "/power-query/handling-paging",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/HandlingProxySupport.md",
+      "redirect_url": "/power-query/handling-proxy-support",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/HandlingResourcePath.md",
+      "redirect_url": "/power-query/handling-resource-path",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/HandlingSchema.md",
+      "redirect_url": "/power-query/handling-schema",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/HandlingStatusCodes.md",
+      "redirect_url": "/power-query/handling-status-codes",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/HandlingTransformations.md",
+      "redirect_url": "/power-query/handling-transformations",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/HandlingUnitTesting.md",
+      "redirect_url": "/power-query/handling-unit-testing",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/HandlingVersioning.md",
+      "redirect_url": "/power-query/handling-versioning",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/HelperFunctions.md",
+      "redirect_url": "/power-query/helper-functions",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/InstallingSDK.md",
+      "redirect_url": "/power-query/install-sdk",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/QueryDiagnostics.md",
+      "redirect_url": "/power-query/query-diagnostics",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/QueryDiagnosticsFolding.md",
+      "redirect_url": "/power-query/query-diagnostics-folding",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/ReadingQueryDiagnostics.md",
+      "redirect_url": "/power-query/read-query-diagnostics",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/RecordingQueryDiagnostics.md",
+      "redirect_url": "/power-query/record-query-diagnostics",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/SamplesDirectory.md",
+      "redirect_url": "/power-query/samples-directory",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/WaitRetry.md",
+      "redirect_url": "/power-query/wait-retry",
+      "redirect_document_id": "true"
     }
   ]
 }
