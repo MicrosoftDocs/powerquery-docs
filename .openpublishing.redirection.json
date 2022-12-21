@@ -176,11 +176,6 @@
       "redirect_document_id": "true"
     },
     {
-      "source_path": "powerquery-docs/StartingToDevelopCustomConnectors.md",
-      "redirect_url": "/power-query/start-develop-custom-connectors",
-      "redirect_document_id": "true"
-    },
-    {
       "source_path": "powerquery-docs/WaitRetry.md",
       "redirect_url": "/power-query/wait-retry",
       "redirect_document_id": "true"
