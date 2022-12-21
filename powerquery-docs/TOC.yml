@@ -385,15 +385,15 @@
       - name: "FHIR"
         items:
         - name: Connect to FHIR
-          href: Connectors/FHIR/FHIR.md
+          href: Connectors/fhir/fhir.md
         - name: Authentication
-          href: Connectors/FHIR/FHIR-Authentication.md
+          href: Connectors/fhir/fhir-authentication.md
         - name: Query folding
-          href: Connectors/FHIR/FHIR-QueryFolding.md
+          href: Connectors/fhir/fhir-query-folding.md
         - name: Query folding patterns
-          href: Connectors/FHIR/FHIR-QueryFoldingPatterns.md
+          href: Connectors/fhir/fhir-query-folding-patterns.md
         - name: Data relationships
-          href: Connectors/FHIR/FHIR-Relationships.md
+          href: Connectors/fhir/fhir-relationships.md
       - name: "Folder"
         href: Connectors/Folder.md
       - name: "Funnel (Beta)"
