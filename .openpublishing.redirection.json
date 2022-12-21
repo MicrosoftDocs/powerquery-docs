@@ -181,11 +181,6 @@
       "redirect_document_id": "true"
     },
     {
-      "source_path": "powerquery-docs/Connectors/FHIR/FHIR-Authentication.md",
-      "redirect_url": "/power-query/connectors/fhir/fhir-authentication",
-      "redirect_document_id": "true"
-    },
-    {
       "source_path": "powerquery-docs/Connectors/FHIR/FHIR-QueryFolding.md",
       "redirect_url": "/power-query/connectors/fhir/fhir-query-folding",
       "redirect_document_id": "true"
@@ -193,16 +188,6 @@
     {
       "source_path": "powerquery-docs/Connectors/FHIR/FHIR-QueryFoldingPatterns.md",
       "redirect_url": "/power-query/connectors/fhir/fhir-query-folding-patterns",
-      "redirect_document_id": "true"
-    },
-    {
-      "source_path": "powerquery-docs/Connectors/FHIR/FHIR-Relationships.md",
-      "redirect_url": "/power-query/connectors/fhir/fhir-relationships",
-      "redirect_document_id": "true"
-    },
-    {
-      "source_path": "powerquery-docs/Connectors/FHIR/FHIR.md",
-      "redirect_url": "/power-query/connectors/fhir/fhir",
       "redirect_document_id": "true"
     }
   ]
