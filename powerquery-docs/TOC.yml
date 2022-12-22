@@ -422,6 +422,8 @@
         href: Connectors/Mailchimp.md
       - name: "Microsoft Azure Consumption Insights (Beta) (Deprecated)"
         href: Connectors/MicrosoftAzureConsumptionInsights.md
+      - name: Microsoft Exchange
+        href: Connectors/microsoft-exchange.md
       - name: "Microsoft Graph Security (Deprecated)"
         href: Connectors/MicrosoftGraphSecurity.md
       - name: "MicroStrategy for Power BI"
