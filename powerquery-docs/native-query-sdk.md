@@ -106,7 +106,7 @@ After executing your query, you'll be able to see the preview of your query in t
 
 With the information gathered from the previous paragraphs, the goal now is to translate such information into code for your connector.
 
-The way that you can accomplis this is by adding a new **NativeQueryProperties** record field to your connector's Publish record, which in this case is the  *SqlODBC.Publish* record.
+The way that you can accomplish this is by adding a new **NativeQueryProperties** record field to your connector's Publish record, which in this case is the  *SqlODBC.Publish* record.
 
 The new record field will consist of two fields:
 
