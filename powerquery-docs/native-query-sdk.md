@@ -145,9 +145,9 @@ Such information will be translated to the code below which should be added as a
 ]
 ```
 
-For values that will be passed from what the user entered, you can use the pair value / indexName and for values that are fixed or static and that cannot be passed by the end-user you can use the pair displayName / indexName. In this sense, the **navigationSteps** record consists of two fields: 
+For values that will be passed from what the user entered, you can use the pair value / indexName and for values that are fixed or static and that can't be passed by the end-user you can use the pair displayName / indexName. In this sense, the **navigationSteps** record consists of two fields: 
 * **indices** = defines what fields and what values to use to navigate to the record that contains the target for the Value.NativeQuery function 
-* **access** = defines what field holds the target which is commonly a table
+* **access** = defines what field holds the target, which is commonly a table
 
 
 ### nativeQueryOptions
