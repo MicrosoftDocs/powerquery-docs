@@ -116,6 +116,13 @@ The new record field will consist of two fields:
 
 ### navigationSteps
 
+Your navigation steps can be categorized into two groups. Those values that are entered by the end-user such as the name of the server or the database in this case and those that are derived by the specific connector implementation such as the name of fields that are not displayed to the user during the get data experience such as ```Name```, ```Kind```, ```Data``` and others depending on your connector implementation.
+
+For this case, there was only one navigation step that consisted of two fields:
+
+* **Name** = This is the name of the database that was passed by the end-user. In this case it was AdventureWorks2019, but this should always be passed as-is from what the end-user entered during the get data experience. 
+* **Kind** = This is information that is not visible to the end-user and is specific to the connector / driver implementation. In this case, this value identifies what type of object should be accessed. For this implementation, this will be a fixed value that will consist of the string ``Database``.
+
 ### nativeQueryOptions
 
 ## Build, test and validate the connector
