@@ -48,7 +48,7 @@ In the ```SqlCapabilities``` record of the sample connector, you can find a reco
 ## Manually test the Native Query capabilities of your connector
 
 >[!NOTE]
->For this article, we will be using the [AdventureWorks2019 sample database](https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms), but you can follow along with any SQL Server database of your choice and make the necessary changes when it comes down to specifics of the database chosen.
+>For this article, we will be using the [AdventureWorks2019 sample database](https://learn.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms), but you can follow along with any SQL Server database of your choice and make the necessary changes when it comes down to specifics of the database chosen.
 
 The way that the native query support will be implemented in this article is that the user will be requested to enter three values:
 
@@ -148,7 +148,6 @@ Such information will be translated to the code below which should be added as a
 For values that will be passed from what the user entered, you can use the pair value / indexName and for values that are fixed or static and that can't be passed by the end-user you can use the pair displayName / indexName. In this sense, the **navigationSteps** record consists of two fields: 
 * **indices** = defines what fields and what values to use to navigate to the record that contains the target for the Value.NativeQuery function 
 * **access** = defines what field holds the target, which is commonly a table
-
 
 ### nativeQueryOptions
 
