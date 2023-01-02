@@ -73,7 +73,7 @@ This will bring you to the Power Query editor and a preview of what's effectivel
 ```= Source{[Name="AdventureWorks2019",Kind="Database"]}[Data]```
 
 **Source** is the name of the previous step that, in this case, is simply the published function of your connector with the parameters passed. 
-The List and the record inside of it basically just helps navigate a table to a specific row, which is defined by the criteria from the record where the field *Name* has to be equal to **AdventureWorks2019** and the *Kind* field has to be equal to **Database**. Once such row is located, the [Data] outside of the list {} lets Power Query access the value inside of the **Data** field, which in this case is a table. You can go back to the previous step (Source) to better understand this navigation.
+The List and the record inside of it just helps navigate a table to a specific row, which is defined by the criteria from the record where the field *Name* has to be equal to **AdventureWorks2019** and the *Kind* field has to be equal to **Database**. Once such row is located, the [Data] outside of the list {} lets Power Query access the value inside of the **Data** field, which in this case is a table. You can go back to the previous step (Source) to better understand this navigation.
 
 ![Table that shows the values and fields that were used for the navigation step](media/native-query-sdk/navigation.png)
 
@@ -104,8 +104,18 @@ After executing your query, you'll be able to see the preview of your query in t
 
 ## Implement native query logic in your connector
 
-### Indices and navigation steps
+With the information gathered from the previous paragraphs, the goal now is to translate such information into code for your connector.
 
-#### Static value indices
+The way that you can accomplis this is by adding a new **NativeQueryProperties** record field to your connector's Publish record, which in this case is the  *SqlODBC.Publish* record.
+
+The new record field will consist of two fields:
+
+* **navigationSteps**: This is a definition of how the navigation should be performed / handled by your connector and what parameters are required or needed in order for such navigation to reach your desired target for the **Value.NativeQuery** function.
+* **nativeQueryOptions**: This helps identify how certain optional parameters should be included or added to the **Value.NativeQuery** options record.
+
+
+### navigationSteps
+
+### nativeQueryOptions
 
 ## Build, test and validate the connector
