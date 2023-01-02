@@ -54,7 +54,7 @@ The way that the native query support will be implemented in this article is tha
 
 * Server name
 * Database name
-* Native query against at the database level 
+* Native query at the database level 
 
 Now inside Power BI Desktop, head over to the *Get Data* experience and find the connector with the name **SqlODBC Sample**.
 
