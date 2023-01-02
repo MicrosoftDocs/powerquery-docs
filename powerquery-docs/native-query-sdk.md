@@ -12,7 +12,7 @@ ms.custom:
 >[!NOTE]
 > This article covers advanced topics around the implementation of [native query](native-database-query.md) support for custom connectors as well as [query folding](query-folding-basics.md) on top of them. We suggest that you read the articles around these topics before reading any further.
 
-In Power Query, you are able to execute custom native queries against your data source to retrieve the data that you're looking for. You can also enable the capability to maintain query folding throughout this and subsequent transformation processes done inside of Power Query. 
+In Power Query, you're able to execute custom native queries against your data source to retrieve the data that you're looking for. You can also enable the capability to maintain query folding throughout this and subsequent transformation processes done inside of Power Query. 
 
 The goal of this article is to showcase how you can implement such capability for your custom connector.
 
@@ -23,7 +23,7 @@ The goal of this article is to showcase how you can implement such capability fo
 
 ## Modify the SQLCapabilities of your connector
 
-In the ```SqlCapabilities``` record of the sample conenctor, you can find a record field with the name ```Sql92Translation``` and the value "Passthrough" for it. This new field for the  is necessary for the native query to be passed using Power Query without any validation. 
+In the ```SqlCapabilities``` record of the sample connector, you can find a record field with the name ```Sql92Translation``` and the value "Passthrough" for it. This new field for the  is necessary for the native query to be passed using Power Query without any validation. 
 
 ```
         SqlCapabilities = Diagnostics.LogValue("SqlCapabilities_Options", defaultConfig[SqlCapabilities] & [
@@ -39,16 +39,16 @@ In the ```SqlCapabilities``` record of the sample conenctor, you can find a reco
         ]),
 ```
 
- Make sure that this field appears in your connector before moving forward or you'll face warnings and errors later on when it comes down to using a capability that is not supported because it is not declared by the connector.
+ Make sure that this field appears in your connector before moving forward or you'll face warnings and errors later on when it comes down to using a capability that isn't supported because it isn't declared by the connector.
 
- Build the connector file (as .mez or .pqx) and load it into Power BI Desktop for manual testing and to define the target for your native query.
+ Build the connector file (as .mez or.pqx) and load it into Power BI Desktop for manual testing and to define the target for your native query.
 
 ## Manually test the Native Query capabilities of your connector
 
 >[!NOTE]
 >For this article, we will be using the [AdventureWorks2019 sample database](https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms), but you can follow along with any SQL Server database of your choice and make the necessary changes when it comes down to specifics of the database chosen.
 
-The way that the native query support will be implemented in this article is that the user will be requested to enter 3 values:
+The way that the native query support will be implemented in this article is that the user will be requested to enter three values:
 
 * Server name
 * Database name
@@ -62,7 +62,7 @@ For the connector dialog, enter the parameters for your server and your database
 
 ![Connector dialog with server and database as parameters](media/native-query-sdk/sql-parameters.png)
 
-A new navigator window should appear where you can see the native navigation behavior from the SQL driver that displays the hierarchical view of the server and the databases within it. Right click the **AdventureWorks2019** database and left click the option that reads *Transform data*.
+A new navigator window should appear where you can see the native navigation behavior from the SQL driver that displays the hierarchical view of the server and the databases within it. Right select the **AdventureWorks2019** database and left select the option that reads *Transform data*.
 
 ![Transform data option from contextual menu inside the Navigator window](media/native-query-sdk/transform-data.png)
 
@@ -70,8 +70,8 @@ This will bring you to the Power Query editor and a preview of what's effectivel
 
 ```= Source{[Name="AdventureWorks2019",Kind="Database"]}[Data]```
 
-**Source** is the name of the previous step which, in this case, is simply the published function of your connector with the parameters passed. 
-The List and the record inside of it basically just help navigate a table to a specific row which is defined by the criteria from the record where the field *Name* has to be equal to **AdventureWorks2019** and the *Kind* field has to be equal to **Database**. Once such row is located, the [Data] outside of the list {} lets Power Query access the value inside of the **Data** field which in this case is a table. You can go back to the previous step (Source) to better understand this navigation.
+**Source** is the name of the previous step that, in this case, is simply the published function of your connector with the parameters passed. 
+The List and the record inside of it basically just helps navigate a table to a specific row, which is defined by the criteria from the record where the field *Name* has to be equal to **AdventureWorks2019** and the *Kind* field has to be equal to **Database**. Once such row is located, the [Data] outside of the list {} lets Power Query access the value inside of the **Data** field, which in this case is a table. You can go back to the previous step (Source) to better understand this navigation.
 
 ![Table that shows the values and fields that were used for the navigation step](media/native-query-sdk/navigation.png)
 
@@ -92,11 +92,11 @@ After applying this change, a warning should appear underneath the formula bar r
 
 ![Permission is required to run this native database query warning message](media/native-query-sdk/sample-native-query.png)
 
-Click the *Edit Permission* button to see a new **Native Database Query** dialog that tries to warn you about the possibilities of running native queries. In this case, we know that this SQL Statement is safe and you can click the Run button to execute the command.
+Select the *Edit Permission* button to see a new **Native Database Query** dialog that tries to warn you about the possibilities of running native queries. In this case, we know that this SQL Statement is safe and you can select the Run button to execute the command.
 
 ![Approve a native database query dialog](media/native-query-sdk/native-query-approval.png)
 
-After executing your query, you will be able to see the preview of your query in the Power Query editor and this validates that your connector is capable of running native queries.
+After executing your query, you'll be able to see the preview of your query in the Power Query editor, and this validates that your connector is capable of running native queries.
 
 ![Native query executed in the initial connector development and testing](media/native-query-sdk/start-native-query-validated.png)
 
