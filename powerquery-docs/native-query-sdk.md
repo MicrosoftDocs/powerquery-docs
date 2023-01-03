@@ -11,6 +11,8 @@ ms.custom:
 
 >[!NOTE]
 > This article covers advanced topics around the implementation of [native query](native-database-query.md) support for custom connectors as well as [query folding](query-folding-basics.md) on top of them. We suggest that you read the articles around these topics before reading any further.
+>
+>To learn more about Power Query custom connectors check out the article on [Power Query SDK Overview](install-sdk.md)
 
 In Power Query, you're able to execute custom native queries against your data source to retrieve the data that you're looking for. You can also enable the capability to maintain query folding throughout this and subsequent transformation processes done inside of Power Query. 
 
@@ -151,7 +153,9 @@ For values that will be passed from what the user entered, you can use the pair 
 
 ### nativeQueryOptions
 
-// how this just passes the fields to use for the options record of the Value.NativeQuery function
+The ``nativeQueryOptions`` allows you to pass what optional parameters to pass to the Value.NativeQuery function when using the native query capability for you connector.
+
+To preserve query folding after a native query, and assuming that your connector has query folding capabilities, you can use the sample code below for ```EnableFolding = true```.
 
 ```
     NativeQueryProperties = [
@@ -182,4 +186,15 @@ With these changes in place, build the connector and load it into Power BI Deskt
 
 ## Test and validate the connector
 
-///images
+Now in Power BI Desktop and your new custom connector in place, you can launch the connector from the *Get Data* experience. When launching the connector, you'll notice that the dialog now has a long text field with the name **Native query** and in parenthesis it has the required fields for it to work. Enter the same values that were previously entered when testing the connector in the previous paragraph for the server, database and the SQL statement.
+
+![Connector dialog with the native query long text field shown](media/native-query-sdk/native-query-ui.png)
+
+After you click *OK*, a table preview of the executed native query will be shown in a new dialog.
+
+![Dialog shown a table preview of the executed native query](media/native-query-sdk/native-query-table-preview.png)
+
+You can click *OK* and this will load a new query inside the Power Query editor where you can do further testing of your connector as you please.
+
+>[!NOTE]
+>If your connector has query folding capabilities and has explicitly defined **EnableFolding=true** as part of the optional record for the Value.NativeQuery, then you can further test your connector in the Power Query editor by checking if further transforms fold back to the source or not.
