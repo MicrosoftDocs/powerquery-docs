@@ -148,12 +148,12 @@ Such information will be translated to the code below which should be added as a
 ```
 
 For values that will be passed from what the user entered, you can use the pair value / indexName and for values that are fixed or static and that can't be passed by the end-user you can use the pair displayName / indexName. In this sense, the **navigationSteps** record consists of two fields: 
-* **indices** = defines what fields and what values to use to navigate to the record that co ntains the target for the Value.NativeQuery function 
+* **indices** = defines what fields and what values to use to navigate to the record that contains the target for the Value.NativeQuery function 
 * **access** = defines what field holds the target, which is commonly a table
 
 ### nativeQueryOptions
 
-The ``nativeQueryOptions`` allows you to pass what optional parameters to pass to the Value.NativeQuery function when using the native query capability for you connector.
+The ``nativeQueryOptions`` allows you to pass what optional parameters to pass to the Value.NativeQuery function when using the native query capability for your connector.
 
 To preserve query folding after a native query, and assuming that your connector has query folding capabilities, you can use the sample code below for ```EnableFolding = true```.
 
@@ -190,11 +190,11 @@ Now in Power BI Desktop and your new custom connector in place, you can launch t
 
 ![Connector dialog with the native query long text field shown](media/native-query-sdk/native-query-ui.png)
 
-After you click *OK*, a table preview of the executed native query will be shown in a new dialog.
+After you select *OK*, a table preview of the executed native query will be shown in a new dialog.
 
 ![Dialog shown a table preview of the executed native query](media/native-query-sdk/native-query-table-preview.png)
 
-You can click *OK* and this will load a new query inside the Power Query editor where you can do further testing of your connector as you please.
+You can select *OK* and this will load a new query inside the Power Query editor where you can do further testing of your connector as you please.
 
 >[!NOTE]
 >If your connector has query folding capabilities and has explicitly defined **EnableFolding=true** as part of the optional record for the Value.NativeQuery, then you can further test your connector in the Power Query editor by checking if further transforms fold back to the source or not.
