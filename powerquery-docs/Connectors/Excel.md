@@ -173,3 +173,13 @@ You might see the following error when importing workbooks saved in Excel's "Str
 This error happens when the [ACE driver](Excel.md#legacy-ace-connector) isn't installed on the host computer. Workbooks saved in the "Strict Open XML Spreadsheet" format can only be read by ACE. However, because such workbooks use the same file extension as regular Open XML workbooks (.xlsx), we can't use the extension to display the usual `the Access Database Engine OLEDB provider may be required to read this type of file` error message.
 
 To resolve the error, install the ACE driver. If the error is occurring in a cloud service, you'll need to use a gateway running on a computer that has the ACE driver installed.
+
+### "File contains corrupted data" errors
+
+You might see the following error when importing certain Excel workbooks.
+
+`DataFormat.Error: File contains corrupted data.`
+
+Usually this error indicates there is a problem with the format of the file.
+
+However, sometimes this error can happen when a file appears to be an Open XML file (such as .xlsx), but the ACE driver is actually needed in order to process the file. Go to the [Legacy ACE connector](Excel.md#legacy-ace-connector) section for more information about how to process files that require the ACE driver.

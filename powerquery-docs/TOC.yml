@@ -13,7 +13,7 @@
       - name: Authentication
         items:  
         - name: "Authentication in Desktop apps"
-          href: ConnectorAuthentication.md
+          href: connector-authentication.md
         - name: "Authentication in Power Query Online"
           href: connection-authentication-pqo.md
         - name: "Auto sign in for AAD data sources"
@@ -273,17 +273,17 @@
       - name: "Fuzzy matching"
         href: fuzzy-matching.md 
       - name: "Behind the scenes of the Data Privacy Firewall"
-        href: DataPrivacyFirewall.md
+        href: data-privacy-firewall.md
       - name: "Query Diagnostics"
         items:
         - name: "What is Query Diagnostics for Power Query?"
-          href: QueryDiagnostics.md
+          href: query-diagnostics.md
         - name: "Recording Query Diagnostics"
-          href: RecordingQueryDiagnostics.md
+          href: record-query-diagnostics.md
         - name: "Reading Query Diagnostics"
-          href: ReadingQueryDiagnostics.md
+          href: read-query-diagnostics.md
         - name: "Understanding folding with Query Diagnostics"
-          href: QueryDiagnosticsFolding.md
+          href: query-diagnostics-folding.md
       - name: "Why does my query run multiple times?"
         href: multiple-queries.md
       - name: "Use Query Parameters"
@@ -340,18 +340,24 @@
           href: Connectors/DataLakeStorage.md
         - name: "Analyze ADLS Gen2 data"
           href: Connectors/analyze-data-in-adls-gen2.md
+      - name: Azure HDInsight
+        href: Connectors/azure-hdinsight.md
       - name: "Azure SQL database"
         href: Connectors/AzureSQLDatabase.md
       - name: "Azure Synapse Analytics (SQL DW)"
         href: Connectors/AzureSQLDataWarehouse.md
       - name: "Azure Synapse Analytics workspace (Beta)"
         href: Connectors/synapse.md
+      - name: "Azure Table Storage"
+        href: Connectors/azure-table-storage.md
       - name: "BitSight Security Ratings"
         href: Connectors/BitSightSecurityRatings.md
       - name: "Bloomberg Data and Analytics"
         href: Connectors/BloombergDataAndAnalytics.md
       - name: "BQE Core"
         href: Connectors/BQECore.md
+      - name: "CData Connect Cloud (Beta)"
+        href: ./connectors/cdata-connect-cloud.md
       - name: "Common Data Service (Legacy)"
         href: ./connectors/commondataservicelegacy.md
       - name: "Databricks (Beta)"
@@ -379,15 +385,15 @@
       - name: "FHIR"
         items:
         - name: Connect to FHIR
-          href: Connectors/FHIR/FHIR.md
+          href: Connectors/fhir/fhir.md
         - name: Authentication
-          href: Connectors/FHIR/FHIR-Authentication.md
+          href: Connectors/fhir/fhir-authentication.md
         - name: Query folding
-          href: Connectors/FHIR/FHIR-QueryFolding.md
+          href: Connectors/fhir/fhir-query-folding.md
         - name: Query folding patterns
-          href: Connectors/FHIR/FHIR-QueryFoldingPatterns.md
+          href: Connectors/fhir/fhir-query-folding-patterns.md
         - name: Data relationships
-          href: Connectors/FHIR/FHIR-Relationships.md
+          href: Connectors/fhir/fhir-relationships.md
       - name: "Folder"
         href: Connectors/Folder.md
       - name: "Funnel (Beta)"
@@ -396,8 +402,12 @@
         href: Connectors/GoogleAnalytics.md
       - name: "Google BigQuery"
         href: Connectors/GoogleBigQuery.md
+      - name: "Google BigQuery (Azure AD) (Beta)"
+        href: Connectors/google-bigquery-aad.md
       - name: "Google Sheets"
         href: Connectors/GoogleSheets.md
+      - name: "Hadoop File (HDFS)"
+        href: Connectors/hadoop-file-system.md
       - name: "Hive LLAP"
         href: Connectors/HiveLlap.md
       - name: "IBM Db2 database"
@@ -412,6 +422,8 @@
         href: Connectors/Mailchimp.md
       - name: "Microsoft Azure Consumption Insights (Beta) (Deprecated)"
         href: Connectors/MicrosoftAzureConsumptionInsights.md
+      - name: Microsoft Exchange
+        href: Connectors/microsoft-exchange.md
       - name: "Microsoft Graph Security (Deprecated)"
         href: Connectors/MicrosoftGraphSecurity.md
       - name: "MicroStrategy for Power BI"
@@ -488,6 +500,8 @@
         href: Connectors/Smartsheet.md
       - name: "Snowflake"
         href: Connectors/Snowflake.md
+      - name: "Socialbakers Metrics (Beta)"
+        href: Connectors/Socialbakers.md
       - name: "SoftOne BI (Beta)"
         href: Connectors/SoftOneBI.md
       - name: "SQL Server Analysis Services database"
@@ -531,7 +545,7 @@
       - name: "Power Query online limits"
         href: power-query-online-limits.md
       - name: "Common issues"
-        href: CommonIssues.md
+        href: common-issues.md
       - name: "Review script changes"
         href: review-script-changes.md
       - name: "Connector support and feedback"
@@ -541,13 +555,13 @@
     - name: Create custom Power Query connectors
       items:
       - name: "Power Query SDK Overview"
-        href: InstallingSDK.md
+        href: install-sdk.md
       - name: Quick starts
         items:
         - name: "Using the Power Query SDK"
           href: power-query-sdk-vs-code.md        
         - name: "Create your first connector - Hello World"
-          href: CreatingFirstConnector.md
+          href: creating-first-connector.md
       - name: Walkthroughs
         items:
         - name: TripPin walkthrough
@@ -581,19 +595,19 @@
       - name: Samples
         items:
         - name: "Functional samples"
-          href: SamplesDirectory.md#functionality
+          href: samples-directory.md#functionality
         - name: "ODBC samples"
-          href: SamplesDirectory.md#odbc
+          href: samples-directory.md#odbc
         - name: "TripPin samples"
-          href: SamplesDirectory.md#trippin
+          href: samples-directory.md#trippin
       - name: Concepts
         items:
         - name: "Additional connector functionality"
           href: additional-connector-functionality.md
         - name: "Handling authentication"
-          href: HandlingAuthentication.md
+          href: handling-authentication.md
         - name: "Handling data access"
-          href: HandlingDataAccess.md
+          href: handling-data-access.md
         - name: "ODBC development"
           items:
           - name: "Enabling DirectQuery for an ODBC based connector"
@@ -603,41 +617,41 @@
           - name: "Testing and troubleshooting"
             href: odbc-troubleshooting.md
         - name: "Handling resource path"
-          href: HandlingResourcePath.md
+          href: handling-resource-path.md
         - name: "Handling paging"
-          href: HandlingPaging.md
+          href: handling-paging.md
         - name: "Handling transformations"
-          href: HandlingTransformations.md
+          href: handling-transformations.md
         - name: "Handling schemas"
-          href: HandlingSchema.md
+          href: handling-schema.md
         - name: "Handling status codes"
           items: 
           - name: "Default behavior"
-            href: HandlingStatusCodes.md
+            href: handling-status-codes.md
           - name: "Wait retry pattern"
-            href: WaitRetry.md
+            href: wait-retry.md
         - name: "Handling unit testing"
-          href: HandlingUnitTesting.md
+          href: handling-unit-testing.md
         - name: "Helper functions"
-          href: HelperFunctions.md
+          href: helper-functions.md
         - name: "Handling documentation"
-          href: HandlingDocumentation.md
+          href: handling-documentation.md
         - name: "Handling navigation tables"
-          href: HandlingNavigationTables.md
+          href: handling-navigation-tables.md
         - name: "Handling gateway support"
-          href: HandlingGatewaySupport.md
+          href: handling-gateway-support.md
         - name: "Handling connector signing"
-          href: HandlingConnectorSigning.md
+          href: handling-connector-signing.md
         - name: "Handling proxy support"
-          href: HandlingProxySupport.md
+          href: handling-proxy-support.md
         - name: "Versioning"
-          href: HandlingVersioning.md
+          href: handling-versioning.md
       - name: Connector Certification
         items:
         - name: Overview
-          href: ConnectorCertification.md
+          href: connector-certification.md
         - name: Submission
-          href: CertificationSubmission.md
+          href: certification-submission.md
         - name: "Custom connector documentation"
           href: providing-user-documentation.md
       - name: Custom connector development FAQ

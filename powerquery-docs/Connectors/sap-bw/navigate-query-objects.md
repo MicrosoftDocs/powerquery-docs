@@ -3,7 +3,7 @@ title: Navigate the query objects
 description: Describes how to navigate the query objects in the Navigator dialog box of the Power Query SAP Business Warehouse connector.
 author: dougklopfenstein
 ms.topic: conceptual
-ms.date: 11/23/2020
+ms.date: 11/29/2022
 ms.author: bezhan
 ---
 
@@ -29,7 +29,6 @@ The **Navigator** dialog box displays a hierarchical tree of data objects from t
 | ![Characteristic level symbol.](char-level.png) | Characteristic level |
 | ![Property symbol.](property.png) | Property (Attribute) |
 | ![Hierarchy symbol.](hierarchy.png) | Hierarchy |
-| | |
 
 &nbsp;
 ![Navigator with display options context menu open.](navigator-display-options.png)

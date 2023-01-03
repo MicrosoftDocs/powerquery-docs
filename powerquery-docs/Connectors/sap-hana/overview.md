@@ -3,7 +3,7 @@ title: Power Query SAP HANA database connector
 description: Provides basic information, prerequisites, and instructions on connecting to your data using the SAP HANA database connector.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 10/7/2022
+ms.date: 11/15/2022
 ms.author: bezhan
 ---
 
@@ -108,6 +108,8 @@ The following table describes all of the advanced options you can set in Power Q
 | --------------- | ----------- |
 | SQL Statement | More information, [Import data from a database using native database query](../../native-database-query.md) |
 | Enable column binding | Binds variables to the columns of a SAP HANA result set when fetching data. May potentially improve performance at the cost of slightly higher memory utilization. This option is only available in Power Query Desktop. More information: [Enable column binding](#enable-column-binding) |
+| ConnectionTimeout| A duration that controls how long to wait before abandoning an attempt to make a connection to the server. The default value is 15 seconds. |
+| CommandTimeout | A duration that controls how long the server-side query is allowed to run before it is canceled. The default value is ten minutes. |
 
 ## Supported features for SAP HANA
 
@@ -126,6 +128,8 @@ The following list shows the supported features for SAP HANA. Not all features l
 * Power BI Desktop supports SAP HANA Variables and Input parameters.
 
 * Power BI Desktop supports HDI-container-based Calculation Views.
+
+* The [SapHana.Database](/powerquery-m/saphana-database) function now supports connection and command timeouts. More information: [Connect using advanced options](#connect-using-advanced-options)
 
   * To access your HDI-container-based Calculation Views in Power BI, ensure that the HANA database users you use with Power BI have permission to access the HDI runtime container that stores the views you want to access. To grant this access, create a Role that allows access to your HDI container. Then assign the role to the HANA database user you'll use with Power BI. (This user must also have permission to read from the system tables in the _SYS_BI schema, as usual.) Consult the official SAP documentation for detailed instructions on how to create and assign database roles. This [SAP blog post](https://blogs.sap.com/2018/01/24/the-easy-way-to-make-your-hdi-container-accessible-to-a-classic-database-user/) may be a good place to start.
 
@@ -156,6 +160,9 @@ The Power Query SAP HANA database connector supports native queries. For informa
 ### Query folding on native queries
 
 The Power Query SAP HANA database connector now supports query folding on native queries. More information: [Query folding on native queries](../../native-query-folding.md)
+
+>[!NOTE]
+>In the Power Query SAP HANA database connector, native queries don't support duplicate column names when `EnableFolding` is set to true.
 
 ### Parameters in native queries
 

@@ -81,6 +81,6 @@ A full list of available options can be found in [Pdf.Tables](/powerquery-m/pdf-
 
 In cases where multi-line rows aren't properly identified, you might be able to clean up the data using UI operations or custom M code. For example, you could copy misaligned data to adjacent rows using [Table.FillDown](/powerquery-m/table-filldown), or group and combine adjacent rows using [Table.Group](/powerquery-m/table-group).
 
-### Power BI datasets in a Premium capacity
+### Power BI dataflows in a Premium capacity	
 
-When working with the PDF connector on datasets in a Premium capacity, the PDF connector does not properly make the connection. To enable the PDF connector to work on a dataset in a Premium capacity, configure that dataset to use a gateway, and confirm the connection to that dataset goes through the gateway.
+When working with the PDF connector on dataflows in a Premium capacity, the PDF connector doesn't properly make the connection. To enable the PDF connector to work on dataflows in a Premium capacity, configure that dataflow to use a gateway, and confirm the connection to that dataflow goes through the gateway.

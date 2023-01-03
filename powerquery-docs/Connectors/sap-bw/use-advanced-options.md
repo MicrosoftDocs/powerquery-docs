@@ -3,7 +3,7 @@ title: Use advanced options
 description: Describes how to use the Power Query SAP Business Warehouse connector advanced sign-in options.
 author: dougklopfenstein
 ms.topic: conceptual
-ms.date: 11/23/2020
+ms.date: 11/29/2022
 ms.author: bezhan
 ---
 
@@ -33,9 +33,6 @@ If no language code is specified, the default locale from the **Options** dialog
 
 ## Execution mode
 
->[!NOTE]
-> Execution mode can't be changed in version 1.0 of the SAP BW connector.
-
 The **Execution mode** option specifies the MDX interface is used to execute queries on the server. The following options are valid:
 
 * **BasXml**: Specifies the *bXML flattening mode* option for MDX execution in SAP Business Warehouse.
@@ -45,9 +42,6 @@ The **Execution mode** option specifies the MDX interface is used to execute que
    ![Sign in dialog box showing location of the Execution mode option.](execution-mode.png)
 
 ## Batch size
-
->[!NOTE]
-> Batch size can't be changed in version 1.0 of the SAP BW connector.
 
 Specifies the maximum number of rows to retrieve at a time when executing an MDX statement. A small number translates into more calls to the server when retrieving a large dataset. A large number of rows may improve performance, but could cause memory issues on the SAP BW server. The default value is 50000 rows.
 

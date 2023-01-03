@@ -1,11 +1,11 @@
 ---
 title: Power Query Denodo connector
 description: Provides basic information and prerequisites for the Denodo connector, descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
-author: bezhan-msft
+author: denodo-research-labs
 ms.author: bezhan
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 6/24/2022
+ms.date: 10/24/2022
 ---
 
 # Denodo
@@ -156,3 +156,45 @@ To make the connection, take the following steps:
    * Select **File** > **Publish** > **Publish to Power BI**.
    * Save the report on the computer.
    * Select the workspace where you want to publish.
+
+## Use Native Queries (SQL) in the definition of a data source
+
+Native Queries offer the possibility to import data into Power BI based on the use of SQL queries. 
+
+The current way of using native SQL queries with Denodo is by means of the Power Query `Value.NativeQuery` function in Power BI's advanced editor. This means you can:
+
+   * Modify an already-defined Denodo data source adding the native query function to its definition.
+   * Create a native-query-enabled data source from scratch, using the New Blank Query option.
+
+In both cases, you'll first need to access the data transformation window by going to **Home** > **Transform data** and then either select an existing _query_ (data source) or create a new blank one. Then access the advanced editor with **View** > **Advanced Editor**.
+
+Once there, you'll be able to apply the `Value.NativeQuery` function to the definition of the data source in replacement of the usual table selection step. This should look similar to:
+
+```powerquery-m
+let
+  Source = Denodo.Contents(<dsn>, null, []),
+  Source_DB = Source{[Name=<database_name>, Kind="Database"]}[Data],
+  Source_Data = Value.NativeQuery(Source_DB, <sql_query>, <sql_params>, [EnableFolding=true])
+in
+  Source_Data
+```
+
+![Native Query in advanced editor.](./media/denodo/NativeQueryAdvancedEditor.png)
+
+
+The `Value.NativeQuery` function is defined as:
+
+```
+Value.NativeQuery(target as any, query as text, optional parameters as any, optional options as nullable record) as any
+```
+
+>[!Note]
+> Learn more about the `Value.NativeQuery` function [here](/powerquery-m/value-nativequery).
+
+Note that, by setting `EnableFolding=true` in the above example, _DirectQuery mode is enabled_ for the defined data source.
+
+When finished, select **Done** and the advanced editor window will close. Then a message will appear asking for permission to execute the new native query: select **Edit Permission** and confirm you want to allow the query to be executed.
+
+![Permissions for native query execution.](./media/denodo/EditPermissionNativeQuery.png)
+
+In order to apply the modifications just made in the data transformation window, select **File** > **Apply**. After that you'll return to the Power BI main window and your changes will be applied to your data sources.

@@ -3,7 +3,7 @@ title: SAP Business Warehouse connector troubleshooting
 description: Provides troubleshooting tips for errors that might occur when using Power Query to connect to an SAP BW Application Server or SAP BW Message Server.
 author: dougklopfenstein
 ms.topic: conceptual
-ms.date: 9/14/2021
+ms.date: 12/7/2021
 ms.author: bezhan
 ---
 
@@ -398,3 +398,18 @@ First, follow the instructions in [2777473 - MDX: FAQ for Power BI accessing BW 
 Because the Power Query SAP Business Warehouse connector uses the MDX interface provided by SAP for 3rd party access, you'll need to contact SAP for possible solutions as they own the layer between the MDX interface and the SAP BW server. Ask how "long text is XL" can be specified for your specific scenario.
 
 ![Image showing where to set long text is xl setting.](long-text-xl.png)
+
+### CHAR limit of 60 despite "long text" in SAP BW
+
+There's a known limitation where "long text" characteristics in SAP BW appear with a 60 character limit in Power BI. This character limit is due to a limitation in the MDX interface, and there's no known workaround available. SAP has documented this MDX limitation in this [SAP Note](https://launchpad.support.sap.com/services/pdf/notes/2096749/E).
+
+### Migrating to implementation 2.0 when using Direct Query
+
+Due to the deprecation of implementation 1.0 of the SAP Business Warehouse connector, you might need to update your queries to take advantage of implementation 2.0. When you use Direct Query, access to the query editor is restricted. So you can't easily transition to implementation 2.0 without recreating your entire query. The workaround is to add a system environment variable to allow access to the query editor. Note that the following steps aren't officially supported, and should only be used as outlined here.
+
+1. Create a new environment variable either by navigating to **File Explorer** > **This PC** > **Properties** > **Advanced system settings** > **Environment Variables** > **System Variables** > **New**, or by opening a command prompt and entering `sysdm.cpl` and then selecting **New** under **System Variables**.
+2. Name the environment variable `PBI_AlwaysEnableQueryEditor` and set the value `true`. This variable setting allows access to the query editor even in Direct Query mode.
+3. In Power BI Desktop, in the **Home** tab, select **Transform Data** to open the Power Query editor.
+4. Update the query to use implementation 2.0 by following these [instructions](implementation-details.md#changing-existing-reports-to-use-implementation-20), starting with Step 2 in that article.
+
+Your end query should look something like `SapBusinessWarehouse.Cubes("server", "system", "clientId", [Implementation = "2.0"])`.

@@ -13,7 +13,7 @@ ms.author: mideboer
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | Public Review |
+| Release State | Public Preview |
 | Products | Power BI (Datasets) |
 | Authentication Types Supported | Organizational account |
 
