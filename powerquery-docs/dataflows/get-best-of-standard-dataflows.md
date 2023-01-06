@@ -5,7 +5,7 @@ author: bensack
 
 ms.reviewer: dougklo
 ms.topic: conceptual
-ms.date: 12/7/2022
+ms.date: 1/6/2023
 ms.author: bensack
 ---
 
@@ -29,7 +29,7 @@ A key column is a column that's unique and deterministic of a data row in the ta
 The following image shows how you can choose the key column to be populated from the source when you create a new table in the dataflow.
 
 > [!div class="mx-imgBorder"]
-> ![Primary key and the alternate key are the same.](media/PKAKsame.png)
+> ![Primary key and the alternate key are the same.](media/get-best-of-standard-dataflows/pk-ak-same.png)
 
 The primary name field that you see in the field mapping is for a label field; this field doesn't need to be unique. The field that's used in the table for checking duplication will be the field that you set in the **Alternate Key** field.
 
@@ -48,7 +48,7 @@ When mapping a dataflow query to an existing Dataverse table, you can choose if 
 The following image shows how you can choose the key column to be used when upserting records to an existing Dataverse table:
 
 > [!div class="mx-imgBorder"]
-> [![Selecting a key to upsert data into Dataverse tables.](media/MultiAK.png)](media/MultiAK.png#lightbox)
+> [![Selecting a key to upsert data into Dataverse tables.](media/get-best-of-standard-dataflows/multi-ak.png)](media/get-best-of-standard-dataflows/multi-ak.png#lightbox)
 
 ### Setting a table’s Unique ID column and using it as a key field for upserting records into existing Dataverse tables
 
@@ -64,12 +64,12 @@ To take advantage of a table’s unique identifier field, select **Load to exist
 You'll notice that in the **Select key** dropdown, the unique identifier&mdash;which is always named "tablename + id"&mdash; of the table can be selected. Since the table name is "CustomerTransactions", the unique identifier field will be named "CustomerTransactionId".
 
 > [!div class="mx-imgBorder"]
-> [![Selecting the primary key to upsert data into Dataverse tables.](media/SelectPrimaryKey.png)](media/MultiAK.png#lightbox)
+> [![Selecting the primary key to upsert data into Dataverse tables.](media/get-best-of-standard-dataflows/select-primary-key.png)](media/get-best-of-standard-dataflows/select-primary-key.png#lightbox)
 
 Once selected, the column mapping section is updated to include the unique identifier as a destination column. You can then map the source column representing the unique identifier for each record.
 
 > [!div class="mx-imgBorder"]
-> [![Mapping data to the Unique Identifier column.](media/MapToPrimaryKey.png)](media/MultiAK.png#lightbox)
+> [![Mapping data to the Unique Identifier column.](media/get-best-of-standard-dataflows/map-to-primary-key.png)](media/get-best-of-standard-dataflows/map-to-primary-key.png#lightbox)
 
 ## What are good candidates for the key field
 
@@ -80,11 +80,11 @@ The key field is a unique value representing a unique row in the table. It's imp
 * A concatenated field created through Power Query transformations in the dataflow.
 
   > [!div class="mx-imgBorder"]
-  > ![Merging columns to create a concatenated unique column.](media/MergeColumnsDataflow.png)
+  > ![Merging columns to create a concatenated unique column.](media/get-best-of-standard-dataflows/merge-columns-dataflow.png)
 
 * A combination of fields to be selected in the **Alternate Key** option. A combination of fields used as a key field is also called a _composite key_.
 
-  ![Creating a composite key through field mapping.](media/CompositeKeyMapping.png)
+  ![Creating a composite key through field mapping.](media/get-best-of-standard-dataflows/composite-key-mapping.png)
 
 ## Remove rows that no longer exist
 
@@ -93,12 +93,12 @@ If you want to have the data in your table always synchronized with the data fro
 Having this option checked means that if there's a data row in the table that doesn't exist in the next dataflow refresh's query output, that row will be removed from the table.
 
 > [!div class="mx-imgBorder"]
-> ![Delete rows that no longer exists.](media/DeleteRowsNotExist.png)
+> ![Delete rows that no longer exists.](media/get-best-of-standard-dataflows/delete-rows-not-exist.png)
 
 ## Known limitations
- 
-- Mapping to [polymorphic lookup](/powerapps/maker/canvas-apps/working-with-references#polymorphic-lookups) fields is currently not supported.
-- Mapping to a multi-level lookup field, a lookup that points to another tables' lookup field, is currently not supported.
-- Mapping to **Status** and **Status Reason** [fields](/powerapps/developer/data-platform/define-custom-state-model-transitions#what-is-the-state-model) is currently not supported.
-- Mapping data into multi-line text that includes line break characters isn't supported and the line breaks will be removed. Instead, you could use the line break tag `<br>` to load and preserve multi-line text.
-- Mapping to Choices (Option Sets) columns using labels isn't supported. Instead, use a comma separated list of values (integers) containing the values of the labels. For example, if you have the labels "Choice1,Choice2,Choice3" with corresponding values of "1,2,3", then you should use "1,3" to select the first and last choices.
+
+* Mapping to [polymorphic lookup](/powerapps/maker/canvas-apps/working-with-references#polymorphic-lookups) fields is currently not supported.
+* Mapping to a multi-level lookup field, a lookup that points to another tables' lookup field, is currently not supported.
+* Mapping to **Status** and **Status Reason** [fields](/powerapps/developer/data-platform/define-custom-state-model-transitions#what-is-the-state-model) is currently not supported.
+* Mapping data into multi-line text that includes line break characters isn't supported and the line breaks will be removed. Instead, you could use the line break tag `<br>` to load and preserve multi-line text.
+* Mapping to Choices (Option Sets) columns using labels isn't supported. Instead, use a comma separated list of values (integers) containing the values of the labels. For example, if you have the labels "Choice1,Choice2,Choice3" with corresponding values of "1,2,3", then you should use "1,3" to select the first and last choices.

@@ -11,8 +11,6 @@ ms.author: bensack
 
 # What are dataflows?
 
-
-
 Dataflows are a self-service, cloud-based, data preparation technology. Dataflows enable customers to ingest, transform, and load data into Microsoft Dataverse environments, Power BI workspaces, or your organization's Azure Data Lake Storage account. Dataflows are authored by using Power Query, a unified data connectivity and preparation experience already featured in many Microsoft products, including Excel and Power BI. Customers can trigger dataflows to run either on demand or automatically on a schedule; data is always kept up to date.
 
 ## Dataflows can be created in multiple Microsoft products
@@ -77,19 +75,19 @@ In this scenario, the decision has been made by an organization to use Power App
 
 You can use dataflows as a replacement for other extract, transform, load (ETL) tools to build a data warehouse. In this scenario, the data engineers of a company decide to use dataflows to build their star schema&ndash;designed data warehouse, including fact and dimension tables in Data Lake Storage. Then Power BI is used to generate reports and dashboards by getting data from the dataflows.
 
-![Building a data warehouse by using dataflows.](media/dataflows-build-data-warehouse.png)
+![Building a data warehouse by using dataflows.](media/overview-dataflows/dataflows-build-data-warehouse.png)
 
-### Using dataflows to build a dimensional model 
+### Using dataflows to build a dimensional model
 
 You can use dataflows as a replacement for other ETL tools to build a dimensional model. For example, the data engineers of a company decide to use dataflows to build the star-schema designed dimensional model, including fact and dimension tables in Azure Data Lake Storage Gen2. Then Power BI is used to generate reports and dashboards by getting data from the dataflows.
 
-![Building a dimensional model using dataflows.](media/DataflowDimensionalModel.png)
+![Building a dimensional model using dataflows.](media/overview-dataflows/dataflow-dimensional-model.png)
 
-### Centralize data preparation and reuse of datasets across multiple Power BI solutions 
+### Centralize data preparation and reuse of datasets across multiple Power BI solutions
 
 If multiple Power BI solutions are using the same transformed version of a table, the process to create the table will be repeated multiple times. This increases the load on the source system, consumes more resources, and creates duplicate data with multiple points of failure. Instead, a single dataflow can be created to compute the data for all solutions. Power BI can then reuse the result of the transformation in all solutions. The dataflow, if used in such a way, can be part of a robust Power BI implementation architecture that avoids the Power Query code duplicates and reduces the maintenance costs of the data integration layer.
 
-![Re-use of tables across multiple solutions.](media/reuse-tables-in-solutions.png)
+![Re-use of tables across multiple solutions.](media/overview-dataflows/reuse-tables-in-solutions.png)
 
 ## Next steps
 

@@ -3,7 +3,7 @@ title: Load data in Excel Online and build a dataflows monitoring report with Po
 description: How to use an Excel file and the dataflows connector in Power Automate to create a dataflows monitoring report in Power BI
 author: miquelladeboer
 ms.topic: conceptual
-ms.date: 11/16/2021
+ms.date: 1/6/2023
 ms.author: mideboer
 ---
 
@@ -11,13 +11,13 @@ ms.author: mideboer
 
 This tutorial demonstrates how to use an Excel file and the dataflows connector in Power Automate to create a dataflows monitoring report in Power BI.
 
-![Image of an example Power BI monitoring dashboard.](media/dashboard.PNG)
+![Image of an example Power BI monitoring dashboard.](media/load-dataflow-metadata-into-excel-online/dashboard.png)
 
 First, you'll download the Excel file and save it in OneDrive for Business or SharePoint. Next, you'll create a Power Automate connector that loads metadata from your dataflow to the Excel file in OneDrive for Business or SharePoint. Lastly, you'll connect a Power BI file to the Excel file to visualize the metadata and start monitoring the dataflows.
 
 You can use this dashboard to monitor your dataflows' refresh duration and failure count. With this dashboard, you can track any issues with your dataflows performance and share the data with others.
 
-![Image of an overview of loading data through Excel.](media/excel.PNG)
+![Image of an overview of loading data through Excel.](media/load-dataflow-metadata-into-excel-online/excel.png)
 
 ## Prerequisites
 
@@ -64,7 +64,7 @@ If you don't already have one, create a dataflow. You can create a dataflow in e
    * **File**: Select the file path to the Excel file.
    * **Table**: Select "Dataflow_monitoring".
 
-   ![Image of the Excel Add a row into a table connection, with the fields ready to be filled in.](media/templateexcel.png)
+   ![Image of the Excel Add a row into a table connection, with the fields ready to be filled in.](media/load-dataflow-metadata-into-excel-online/template-excel.png)
 
 8. Add dynamic values to the required fields.
 
@@ -74,7 +74,7 @@ If you don't already have one, create a dataflow. You can create a dataflow in e
 
    2. Select **Dataflow Name** from the **Dynamic content** context box.
 
-      [![Image of the Excel Add a row into a table connector, with the dynamic contents selection dialog box.](media/dynamicexcel1.png)](media/dynamicexcel1.png#lightbox)
+      [![Image of the Excel Add a row into a table connector, with the dynamic contents selection dialog box.](media/load-dataflow-metadata-into-excel-online/dynamic-excel.png)](media/load-dataflow-metadata-into-excel-online/dynamic-excel.png#lightbox)
 
    3. Repeat this process for all required fields.
 
