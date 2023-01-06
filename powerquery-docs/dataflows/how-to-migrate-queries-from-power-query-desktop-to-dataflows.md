@@ -3,7 +3,7 @@ title: How to migrate queries from Power Query in the desktop (Power BI and Exce
 description: How to migrate queries from Power Query in the desktop (Power BI and Excel) to dataflows.
 author: bensack
 ms.topic: conceptual
-ms.date: 12/2/2020
+ms.date: 1/6/2022
 ms.author: bensack
 
 ---
@@ -103,4 +103,4 @@ After migrating your queries to the dataflow, you must refresh the dataflow to g
 
 You can now get data from dataflow entities in Power BI Desktop by using the Power Platform dataflow or Dataverse connectors (depending on what type of dataflow you're using, analytical or standard). More information: [Connect to data created by Power Platform dataflows in Power BI Desktop](/power-bi/desktop-connect-dataflows)
 
-![Get data from dataflows in Power BI Desktop.](media/GetDatafromDataflow.png)
+![Get data from dataflows in Power BI Desktop.](media/get-data-from-dataflow.png)

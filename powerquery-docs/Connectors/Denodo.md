@@ -5,7 +5,7 @@ author: denodo-research-labs
 ms.author: bezhan
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 10/24/2022
+ms.date: 1/6/2023
 ---
 
 # Denodo
@@ -39,7 +39,7 @@ To make the connection, take the following steps:
 
 1. In order to connect to data, select **Get Data** from the **Home** ribbon and select **Denodo** in the **Database** section.
 
-   ![Denodo connector in Power Query Desktop.](./media/denodo/SelectDenodo.png)
+   ![Denodo connector in Power Query Desktop.](./media/denodo/select-denodo.png)
 
 2. There are two ways to connect to the data source of your choice:
 
@@ -48,7 +48,7 @@ To make the connection, take the following steps:
 
    In the **DSN or Connection String** section of the **Denodo Connector** dialog box, provide the **Data source name (DSN)** or the **Connection String** depending on the type of connection you prefer.
 
-   ![Denodo connector dialog.](./media/denodo/DenodoConnector.png)
+   ![Denodo connector dialog.](./media/denodo/denodo-connector.png)
 
     When creating a Denodo-compatible connection string, you must take into account that the **Driver** field must be omitted, as this is transparently set at connection time by the connector itself.
 
@@ -84,7 +84,7 @@ To make the connection, take the following steps:
 
    * **Windows**: When you choose to use Windows authentication, Power BI Desktop connects to Virtual DataPort using Kerberos authentication.
 
-      ![Denodo Windows authentication in Power BI Desktop.](./media/denodo/DenodoWindowsAuthentication.png)
+      ![Denodo Windows authentication in Power BI Desktop.](./media/denodo/denodo-windows-authentication.png)
 
       In this case:
 
@@ -96,17 +96,17 @@ To make the connection, take the following steps:
 
       * Make sure the **Advanced Options** page of the DSN configuration contains all the needed configuration for using Kerberos as an authentication method.
 
-        ![Advanced Options page at the Denodo DSN configuration.](./media/denodo/DenodoAdvancedOptionsDSN.png)
+        ![Advanced Options page at the Denodo DSN configuration.](./media/denodo/denodo-advanced-options-dsn.png)
 
    * **Basic**: This authentication type allows you to connect Power BI Desktop to your Virtual DataPort data using your Virtual DataPort server credentials.
 
-      ![Denodo basic authentication in Power BI Desktop.](./media/denodo/DenodoBasicAuthentication.png)
+      ![Denodo basic authentication in Power BI Desktop.](./media/denodo/denodo-basic-authentication.png)
 
 7. Once you're done, select **Connect**.
 
 8. In **Navigator**, select the data you need from the database you want and choose **Load**, or choose **Transform Data** if you're going to modify the incoming data.
 
-   ![Denodo navigator.](./media/denodo/DenodoNavigator.png)
+   ![Denodo navigator.](./media/denodo/denodo-navigator.png)
 
 ## Connect to an ODBC data source from Power BI service using the on-premises data gateway
 
@@ -116,11 +116,11 @@ To make the connection, take the following steps:
 
 2. Sign in and register your gateway. In the on-premises data gateway app, select the **Status** tab to verify that your gateway is online and ready to be used.
 
-   ![On-premises data gateway with status tab open.](./media/denodo/OnPremisesDataGateway.png)
+   ![On-premises data gateway with status tab open.](./media/denodo/on-premises-data-gateway.png)
 
 3. Using the gateway settings page in Power BI service, create a data source for the Denodo Power BI custom connector.
 
-   ![Add Denodo Data source.](./media/denodo/DataSourceSettingsSelectDenodo.png)
+   ![Add Denodo Data source.](./media/denodo/data-source-settings-select-denodo.png)
 
    In order to create the data source, you have to specify the way to connect to the data source of your choice:
       * Through DSN
@@ -132,12 +132,14 @@ To make the connection, take the following steps:
          * Kerberos authentication must be enabled in the Virtual DataPort server.
          * The Denodo Virtual DataPort database that the data source connects to must be configured with the option **ODBC/ADO.net authentication type** set to **Kerberos**.
          * Make sure the **Advanced Options** page of the DSN configuration contains all the needed configuration for using Kerberos as an authentication method.
-           ![Advanced Options page at the Denodo DSN configuration.](./media/denodo/DenodoAdvancedOptionsDSN.png)
+
+           ![Advanced Options page at the Denodo DSN configuration.](./media/denodo/denodo-advanced-options-dsn.png)
+
       * **Basic**: This authentication type allows you to create a data source in Power BI service to connect to your Virtual DataPort data using your Virtual DataPort server credentials.
 
 4. If you use Windows authentication, under **Advanced settings** for the data source you can enable the single sign-on (SSO) authentication schema in order to use the same credentials of the user accessing your reports in Power BI for accessing the required data in Denodo.
 
-   ![Denodo SSO using Kerberos.](./media/denodo/DenodoSSO.png)
+   ![Denodo SSO using Kerberos.](./media/denodo/denodo-sso.png)
 
    There are two options for enabling SSO: **Use SSO via Kerberos for DirectQuery queries** and **Use SSO via Kerberos for DirectQuery And Import queries**. If you're working with _DirectQuery_ based reports, both options use the SSO credentials of the user that signs in to the Power BI service. The difference comes when you work with _Import_ based reports. In this scenario, the former option uses the credentials entered in the data source page (**Username** and **Password** fields), while the latter uses the credentials of the dataset owner.
 
@@ -179,7 +181,7 @@ in
   Source_Data
 ```
 
-![Native Query in advanced editor.](./media/denodo/NativeQueryAdvancedEditor.png)
+![Native Query in advanced editor.](./media/denodo/native-query-qdvanced-editor.png)
 
 
 The `Value.NativeQuery` function is defined as:
@@ -195,6 +197,6 @@ Note that, by setting `EnableFolding=true` in the above example, _DirectQuery mo
 
 When finished, select **Done** and the advanced editor window will close. Then a message will appear asking for permission to execute the new native query: select **Edit Permission** and confirm you want to allow the query to be executed.
 
-![Permissions for native query execution.](./media/denodo/EditPermissionNativeQuery.png)
+![Permissions for native query execution.](./media/denodo/edit-permission-native-query.png)
 
 In order to apply the modifications just made in the data transformation window, select **File** > **Apply**. After that you'll return to the Power BI main window and your changes will be applied to your data sources.

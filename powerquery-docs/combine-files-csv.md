@@ -2,7 +2,7 @@
 title: "Combine CSV files in Power Query" 
 description: "How to combine CSV files in Power Query and Power Query Online"
 author: ptyx507
-ms.date: 12/9/2022
+ms.date: 1/5/2023
 ms.author: miescobar
 ms.custom: edited
 ---
@@ -48,7 +48,7 @@ After you select **Combine** in the table preview, the **Combine files** dialog 
 ![Combine files dialog box.](media/combine-files-csv/combine-files-csv-combine-files-window.png "Combine files dialog box")
 
 >[!NOTE]
->Power Query automatically detects what connector to use based on the first file found in the list. To learn more about the CSV connector, go to [Text/CSV](connectors/textcsv.md).
+>Power Query automatically detects what connector to use based on the first file found in the list. To learn more about the CSV connector, go to [Text/CSV](connectors/text-csv.md).
 
 For this example, leave all the default settings (**Example file** set to **First file**, and the default values for **File origin**, **Delimiter**, and **Data type detection**).
 

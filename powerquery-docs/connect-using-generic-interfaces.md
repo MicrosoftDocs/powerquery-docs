@@ -3,7 +3,7 @@ title: Connect to data using generic interfaces
 description: Learn how to connect different data sources with generic interfaces.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 7/11/2022
+ms.date: 1/5/2023
 ms.author: bezhan
 ---
 
@@ -17,7 +17,7 @@ You can connect to a multitude of different data sources using built-in connecto
 
 ## Power Query data interfaces
 
-Power Query includes an ever-growing collection of connectors that are built to connect to a specific data source. For example, the [SharePoint list](connectors/SharePointList.md) connector provides specific fields and supporting information during the connection sequence that are designed for SharePoint lists. Other data sources found in the window that appears when you choose to get data (in Power Query Desktop) or choose a data source (in Power Query Online) work in the same way.
+Power Query includes an ever-growing collection of connectors that are built to connect to a specific data source. For example, the [SharePoint list](connectors/sharepoint-list.md) connector provides specific fields and supporting information during the connection sequence that are designed for SharePoint lists. Other data sources found in the window that appears when you choose to get data (in Power Query Desktop) or choose a data source (in Power Query Online) work in the same way.
 
 In addition, you can also connect to data sources that aren't identified in the get data and choose data source lists by using one of the following generic data interfaces:
 
@@ -33,7 +33,7 @@ In the following sections, you can find lists of data sources that can be access
 
 ## Data sources accessible through ODBC
 
-The [ODBC](connectors/ODBC.md) connector in Power Query lets you import data from any third-party ODBC driver simply by specifying a Data Source Name (DSN) or a connection string. As an option, you can also specify a SQL statement to execute against the ODBC driver.
+The [ODBC](connectors/odbc.md) connector in Power Query lets you import data from any third-party ODBC driver simply by specifying a Data Source Name (DSN) or a connection string. As an option, you can also specify a SQL statement to execute against the ODBC driver.
 
 ![Screenshot of the O D B C connector dialog, showing the D S N and Advanced options.](media/connect-using-generic-interfaces/odbc-data-source.png)
 
@@ -68,7 +68,7 @@ The following list details a few examples of the data sources that Power Query c
 
 ## Data sources accessible through OData
 
-The [OData feed](connectors/ODataFeed.md) connector in Power Query lets you import data from any OData URL simply by typing in or pasting the OData URL. You can add multiple URL parts by typing or pasting those links in the text boxes provided in the **OData feed** window.
+The [OData feed](connectors/odata-feed.md) connector in Power Query lets you import data from any OData URL simply by typing in or pasting the OData URL. You can add multiple URL parts by typing or pasting those links in the text boxes provided in the **OData feed** window.
 
 ![Screenshot of the OData Feed dialog, showing the U R L parts and preview fields.](media/connect-using-generic-interfaces/odata-data-source.png)
 

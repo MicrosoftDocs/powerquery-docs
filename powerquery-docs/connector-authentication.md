@@ -3,7 +3,7 @@ title: Authentication with a data source
 description: How to select credentials for a connector in Power Query to authenticate a connection with a data source, how to select the authentication level, and how to edit or delete credentials for specific connectors and sites.
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 5/11/2020
+ms.date: 1/5/2023
 ms.author: miescobar
 ms.custom: edited
 ---
@@ -73,7 +73,7 @@ You can also delete the credentials for a particular website in step 3 by select
 
 ## Connecting with Azure Active Directory using the Web and OData connectors
 
-When connecting to data sources and services that require authentication through OAuth or Azure Active Directory-based authentication, in certain cases where the service is configured correctly, you can use the built-in [Web](Connectors/Web/Web.md) or [OData](Connectors/ODataFeed.md) connectors to authenticate and connect to data without requiring a service-specific or custom connector.
+When connecting to data sources and services that require authentication through OAuth or Azure Active Directory-based authentication, in certain cases where the service is configured correctly, you can use the built-in [Web](connectors/web/web.md) or [OData](connectors/odata-feed.md) connectors to authenticate and connect to data without requiring a service-specific or custom connector.
 
 This section outlines connection symptoms when the service isn't configured properly. It also provides information on how Power Query interacts with the service when it's properly configured.
 

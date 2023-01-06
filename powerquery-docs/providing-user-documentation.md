@@ -2,7 +2,7 @@
 title: Providing user documentation for your Power Query custom connector
 description: Describes the format and layout of the user documentation that needs to be submitted for your Power Query custom connector.
 author: bezhan-msft
-ms.date: 7/25/2022
+ms.date: 1/5/2023
 ms.author: bezhan
 ---
 
@@ -70,7 +70,7 @@ Any other instructions or information about your connector that hasn't been cove
 
 ## Article location and format
 
-Your article should be made available on GitHub under the Connectors folder in the Power Query documentation repo: <https://github.com/MicrosoftDocs/powerquery-docs/tree/master/powerquery-docs/Connectors>. Ensure that you also add a link to your article in the [list of connectors](./connectors/index.md) referencing the correct logo image uploaded to `/Connectors/media/index` folder. Lastly, ensure that you add a link to your article in the table of contents file (`TOC.yml`). Certified connectors will only be available under **Power BI (Datasets)**.
+Your article should be made available on GitHub under the Connectors folder in the Power Query documentation repo: <https://github.com/MicrosoftDocs/powerquery-docs/tree/master/powerquery-docs/connector>. Ensure that you also add a link to your article in the [list of connectors](./connectors/index.md) referencing the correct logo image uploaded to `/connectors/media/index` folder. Lastly, ensure that you add a link to your article in the table of contents file (`TOC.yml`). Certified connectors will only be available under **Power BI (Datasets)**.
 
 See our [contributor guide](/contribute/) on how you can contribute to our repo.
 
@@ -85,5 +85,5 @@ The following articles include instructions on formatting your document in Markd
 
 Here's a couple of example Power Query connector articles that you can use as a starting point:
 
-* [Adobe Analytics](./connectors/adobeanalytics.md) (Power Query Desktop only)
-* [Azure SQL database](./connectors/azuresqldatabase.md) (Power Query Desktop and Power Query Online)
+* [Adobe Analytics](./connectors/adobe-analytics.md) (Power Query Desktop only)
+* [Azure SQL database](./connectors/azure-sql-database.md) (Power Query Desktop and Power Query Online)

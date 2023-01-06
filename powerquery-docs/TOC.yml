@@ -301,245 +301,245 @@
     - name: "Connector reference"
       items:
       - name: "List of all Power Query connectors"
-        href: Connectors/index.md
+        href: connectors/index.md
       - name: "Access database"
-        href: Connectors/AccessDatabase.md
+        href: connectors/access-database.md
       - name: "Active Directory"
-        href: Connectors/active-directory.md
+        href: connectors/active-directory.md
       - name: "Adobe Analytics"
-        href: "Connectors/AdobeAnalytics.md"
+        href: "connectors/adobe-analytics.md"
       - name: "Amazon Athena"
-        href: "Connectors/AmazonAthena.md"
+        href: "connectors/amazon-athena.md"
       - name: "Amazon OpenSearch Service (Beta)"
-        href: "Connectors/AmazonOpenSearchService.md"
+        href: "connectors/amazon-opensearch-service.md"
       - name: "Amazon Redshift"
-        href: Connectors/AmazonRedshift.md
+        href: connectors/amazon-redshift.md
       - name: "Anaplan"
-        href: Connectors/Anaplan.md
-      - name: "AssembleViews"
-        href: Connectors/AssembleViews.md
+        href: connectors/anaplan.md
+      - name: "Assemble Views"
+        href: connectors/assemble-views.md
       - name: "Autodesk Construction Cloud (Beta)"
-        href: Connectors/AutodeskConstructionCloud.md
+        href: connectors/autodesk-construction-cloud.md
       - name: "Automy Data Analytics (Beta)"
-        href: Connectors/AutomyDataAnalytics.md
+        href: connectors/automy-data-analytics.md
       - name: "Azure Analysis Services database"
-        href: Connectors/azure-analysis-services.md
+        href: connectors/azure-analysis-services.md
       - name: "Azure Blob Storage"
-        href: Connectors/azure-blob-storage.md
+        href: connectors/azure-blob-storage.md
       - name: "Azure Cost Management"
-        href: Connectors/AzureCostManagement.md
+        href: connectors/azure-cost-management.md
       - name: "Azure Databricks"
-        href: Connectors/DatabricksAzure.md
+        href: connectors/databricks-azure.md
       - name: "Azure Data Explorer (Kusto)"
-        href: Connectors/AzureDataExplorer.md
+        href: connectors/azure-data-explorer.md
       - name: "Azure Data Lake Storage Gen1"
-        href: Connectors/AzureDataLakeStorageGen1.md
+        href: connectors/azure-data-lake-storage-gen1.md
       - name: "Azure Data Lake Storage Gen 2"
         items:
         - name: "Connect to ADLS Gen2"
-          href: Connectors/DataLakeStorage.md
+          href: connectors/data-lake-storage.md
         - name: "Analyze ADLS Gen2 data"
-          href: Connectors/analyze-data-in-adls-gen2.md
+          href: connectors/analyze-data-in-adls-gen2.md
       - name: Azure HDInsight
-        href: Connectors/azure-hdinsight.md
+        href: connectors/azure-hdinsight.md
       - name: "Azure SQL database"
-        href: Connectors/AzureSQLDatabase.md
+        href: connectors/azure-sql-database.md
       - name: "Azure Synapse Analytics (SQL DW)"
-        href: Connectors/AzureSQLDataWarehouse.md
+        href: connectors/azure-sql-data-warehouse.md
       - name: "Azure Synapse Analytics workspace (Beta)"
-        href: Connectors/synapse.md
+        href: connectors/synapse.md
       - name: "Azure Table Storage"
-        href: Connectors/azure-table-storage.md
+        href: connectors/azure-table-storage.md
       - name: "BitSight Security Ratings"
-        href: Connectors/BitSightSecurityRatings.md
+        href: connectors/bitsight-security-ratings.md
       - name: "Bloomberg Data and Analytics"
-        href: Connectors/BloombergDataAndAnalytics.md
+        href: connectors/bloomberg-data-and-analytics.md
       - name: "BQE Core"
-        href: Connectors/BQECore.md
+        href: connectors/bqecore.md
       - name: "CData Connect Cloud (Beta)"
         href: ./connectors/cdata-connect-cloud.md
       - name: "Common Data Service (Legacy)"
-        href: ./connectors/commondataservicelegacy.md
+        href: ./connectors/common-data-service-legacy.md
       - name: "Databricks (Beta)"
-        href: Connectors/Databricks.md
+        href: connectors/databricks.md
       - name: "Dataverse"
-        href: Connectors/dataverse.md     
+        href: connectors/dataverse.md     
       - name: "Dataflows"
-        href: Connectors/Dataflows.md
+        href: connectors/dataflows.md
       - name: "Delta Sharing"
-        href: Connectors/DeltaSharing.md
+        href: connectors/delta-sharing.md
       - name: "Denodo"
-        href: Connectors/Denodo.md
+        href: connectors/denodo.md
       - name: "Digital Construction Works Insights (Beta)"
-        href: Connectors/DigitalConstructionWorksInsights.md
+        href: connectors/digital-construction-works-insights.md
       - name: "Eduframe (Beta)"
-        href: Connectors/Eduframe.md
+        href: connectors/eduframe.md
       - name: "EQuIS (Beta)"
-        href: Connectors/EQuIS.md
+        href: connectors/equis.md
       - name: "Essbase"
-        href: Connectors/Essbase.md
+        href: connectors/essbase.md
       - name: "Excel"
-        href: Connectors/Excel.md
+        href: connectors/excel.md
       - name: "FactSet RMS (Beta)"
-        href: Connectors/FactSetRMS.md
+        href: connectors/factset-rms.md
       - name: "FHIR"
         items:
         - name: Connect to FHIR
-          href: Connectors/fhir/fhir.md
+          href: connectors/fhir/fhir.md
         - name: Authentication
-          href: Connectors/fhir/fhir-authentication.md
+          href: connectors/fhir/fhir-authentication.md
         - name: Query folding
-          href: Connectors/fhir/fhir-query-folding.md
+          href: connectors/fhir/fhir-query-folding.md
         - name: Query folding patterns
-          href: Connectors/fhir/fhir-query-folding-patterns.md
+          href: connectors/fhir/fhir-query-folding-patterns.md
         - name: Data relationships
-          href: Connectors/fhir/fhir-relationships.md
+          href: connectors/fhir/fhir-relationships.md
       - name: "Folder"
-        href: Connectors/Folder.md
+        href: connectors/folder.md
       - name: "Funnel (Beta)"
-        href: Connectors/Funnel.md
+        href: connectors/funnel.md
       - name: "Google Analytics"
-        href: Connectors/GoogleAnalytics.md
+        href: connectors/google-analytics.md
       - name: "Google BigQuery"
-        href: Connectors/GoogleBigQuery.md
+        href: connectors/google-bigquery.md
       - name: "Google BigQuery (Azure AD) (Beta)"
-        href: Connectors/google-bigquery-aad.md
+        href: connectors/google-bigquery-aad.md
       - name: "Google Sheets"
-        href: Connectors/GoogleSheets.md
+        href: connectors/google-sheets.md
       - name: "Hadoop File (HDFS)"
-        href: Connectors/hadoop-file-system.md
+        href: connectors/hadoop-file-system.md
       - name: "Hive LLAP"
-        href: Connectors/HiveLlap.md
+        href: connectors/hive-llap.md
       - name: "IBM Db2 database"
-        href: Connectors/IBMDb2Database.md
+        href: connectors/ibm-db2-database.md
       - name: "Impala database"
-        href: Connectors/ImpalaDatabase.md
+        href: connectors/impala-database.md
       - name: "JSON"
-        href: Connectors/json.md
+        href: connectors/json.md
       - name: LinkedIn Sales Navigator (Beta)
-        href: Connectors/LinkedInSalesNavigator.md
+        href: connectors/linkedin-sales-navigator.md
       - name: "Mailchimp (Deprecated)"
-        href: Connectors/Mailchimp.md
+        href: connectors/mailchimp.md
       - name: "Microsoft Azure Consumption Insights (Beta) (Deprecated)"
-        href: Connectors/MicrosoftAzureConsumptionInsights.md
+        href: connectors/microsoft-azure-consumption-insights.md
       - name: Microsoft Exchange
-        href: Connectors/microsoft-exchange.md
+        href: connectors/microsoft-exchange.md
       - name: "Microsoft Graph Security (Deprecated)"
-        href: Connectors/MicrosoftGraphSecurity.md
+        href: connectors/microsoft-graph-security.md
       - name: "MicroStrategy for Power BI"
-        href: Connectors/MicroStrategyForPowerBI.md
+        href: connectors/microstrategy-for-power-bi.md
       - name: "MySQL database"
-        href: Connectors/MySQLDatabase.md
+        href: connectors/mysql-database.md
       - name: "OData Feed"
         items:
         - name: "Connect to an OData Feed"
-          href: Connectors/ODataFeed.md
+          href: connectors/odata-feed.md
         - name: "Connecting to Azure DevOps using OData"
           href: /azure/devops/report/powerbi/odataquery-connect
       - name: "ODBC"
-        href: Connectors/Odbc.md
+        href: connectors/odbc.md
       - name: "OpenSearch Project (Beta)"
-        href: Connectors/OpenSearchProject.md
+        href: connectors/opensearch-project.md
       - name: "Oracle database"
-        href: Connectors/OracleDatabase.md
+        href: connectors/oracle-database.md
       - name: "PDF"
-        href: Connectors/Pdf.md
+        href: connectors/pdf.md
       - name: "PostgreSQL"
-        href: Connectors/PostgreSQL.md
+        href: connectors/postgresql.md
       - name: "Profisee (Beta)"
-        href: Connectors/Profisee.md
+        href: connectors/profisee.md
       - name: "QuickBooks Online (Beta)"
-        href: Connectors/QuickBooksOnline.md
+        href: connectors/quickbooks-online.md
       - name: "Salesforce Objects"
-        href: Connectors/SalesforceObjects.md
+        href: connectors/salesforce-objects.md
       - name: "Salesforce Reports"
-        href: Connectors/SalesforceReports.md
+        href: connectors/salesforce-reports.md
       - name: "SAP Business Warehouse"
         items:
         - name: "Connect to an SAP Business Warehouse Application Server"
-          href: Connectors/sap-bw/application-setup-and-connect.md
+          href: connectors/sap-bw/application-setup-and-connect.md
         - name: "Connect to an SAP Business Warehouse Message Server"
-          href: Connectors/sap-bw/message-setup-and-connect.md
+          href: connectors/sap-bw/message-setup-and-connect.md
         - name: "SAP BW fundamentals"
-          href: Connectors/sap-bw/sap-bw-fundamentals.md
+          href: connectors/sap-bw/sap-bw-fundamentals.md
         - name: "Navigate the query objects"
-          href: Connectors/sap-bw/navigate-query-objects.md
+          href: connectors/sap-bw/navigate-query-objects.md
         - name: "Transform and filter an SAP BW dataset"
-          href: Connectors/sap-bw/transform-filter-sap-bw-data.md
+          href: connectors/sap-bw/transform-filter-sap-bw-data.md
         - name: "Implementation details"
-          href: Connectors/sap-bw/implementation-details.md
+          href: connectors/sap-bw/implementation-details.md
         - name: "Import vs. DirectQuery for SAP BW"
-          href: Connectors/sap-bw/import-vs-directquery.md
+          href: connectors/sap-bw/import-vs-directquery.md
         - name: "Windows authentication and single sign-on"
-          href: Connectors/sap-bw/single-sign-on.md
+          href: connectors/sap-bw/single-sign-on.md
         - name: "Use advanced options"
-          href: Connectors/sap-bw/use-advanced-options.md
+          href: connectors/sap-bw/use-advanced-options.md
         - name: "SAP BW connector troubleshooting"
-          href: Connectors/sap-bw/sap-bw-troubleshooting.md
+          href: connectors/sap-bw/sap-bw-troubleshooting.md
       - name: "SAP HANA database"
         items:
         - name: "Connect to an SAP HANA database"
-          href: Connectors/sap-hana/overview.md
+          href: connectors/sap-hana/overview.md
         - name: "SAP HANA encryption"
-          href: Connectors/sap-hana/sap-hana-encryption.md
+          href: connectors/sap-hana/sap-hana-encryption.md
         - name: "Configure ODBC for SAP HANA"
-          href: Connectors/sap-hana/configure-odbc-sap-hana.md
+          href: connectors/sap-hana/configure-odbc-sap-hana.md
         - name: "Troubleshooting"
-          href: Connectors/sap-hana/sap-hana-troubleshooting.md
+          href: connectors/sap-hana/sap-hana-troubleshooting.md
       - name: "SharePoint folder"
-        href: Connectors/SharePointFolder.md
+        href: connectors/sharepoint-folder.md
       - name: "SharePoint list"
-        href: Connectors/SharePointList.md
+        href: connectors/sharepoint-list.md
       - name: "SharePoint Online list"
-        href: Connectors/SharePointOnlineList.md
+        href: connectors/sharepoint-online-list.md
       - name: "SingleStore (Beta)"
-        href: Connectors/SingleStore.md
+        href: connectors/singlestore.md
       - name: SIS-CC SDMX
-        href: Connectors/SISCCSDMX.md
+        href: connectors/sis-cc-sdmx.md
       - name: Smartsheet
-        href: Connectors/Smartsheet.md
+        href: connectors/smartsheet.md
       - name: "Snowflake"
-        href: Connectors/Snowflake.md
+        href: connectors/snowflake.md
       - name: "Socialbakers Metrics (Beta)"
-        href: Connectors/Socialbakers.md
+        href: connectors/socialbakers.md
       - name: "SoftOne BI (Beta)"
-        href: Connectors/SoftOneBI.md
+        href: connectors/softone-bi.md
       - name: "SQL Server Analysis Services database"
-        href: Connectors/sql-server-analysis-services.md
+        href: connectors/sql-server-analysis-services.md
       - name: "SQL Server database"
-        href: Connectors/SQLServer.md
+        href: connectors/sql-server.md
       - name: "Stripe (Deprecated)"
-        href: Connectors/Stripe.md
+        href: connectors/stripe.md
       - name: "SumTotal"
-        href: Connectors/SumTotal.md
+        href: connectors/sumtotal.md
       - name: "Sybase database"
-        href: Connectors/sybase-database.md
+        href: connectors/sybase-database.md
       - name: "Teradata database"
-        href: Connectors/teradata.md
+        href: connectors/teradata.md
       - name: "Text/CSV"
-        href: Connectors/TextCSV.md
+        href: connectors/text-csv.md
       - name: "TIBCO(R) Data Virtualization"
-        href: Connectors/tibco.md
+        href: connectors/tibco.md
       - name: "Twilio (Beta) (Deprecated)"
-        href: Connectors/twilio.md
+        href: connectors/twilio.md
       - name: "Usercube"
-        href: Connectors/Usercube.md
+        href: connectors/usercube.md
       - name: "Vessel Insight"
-        href: Connectors/VesselInsight.md
+        href: connectors/vessel-insight.md
       - name: "Web"
         items:
         - name: "Connect to Web data"
-          href: Connectors/web/Web.md
+          href: connectors/web/Web.md
         - name: "Web by example"
-          href: Connectors/web/web-by-example.md
+          href: connectors/web/web-by-example.md
         - name: "Troubleshooting"
-          href: Connectors/web/web-troubleshoot.md
+          href: connectors/web/web-troubleshoot.md
       - name: "Workforce Dimensions (Beta) (Deprecated)"
-        href: Connectors/WorkforceDimensions.md
+        href: connectors/workforce-dimensions.md
       - name: "XML"
-        href: Connectors/XML.md
+        href: connectors/xml.md
       - name: "Zendesk (Beta)"
-        href: Connectors/Zendesk.md
+        href: connectors/zendesk.md
     - name: Support and troubleshooting
       items:
       - name: "Power Query online limits"
@@ -549,7 +549,7 @@
       - name: "Review script changes"
         href: review-script-changes.md
       - name: "Connector support and feedback"
-        href: Connectors/ConnectorFeedback.md
+        href: connectors/connector-feedback.md
       - name: "Capture web requests with Fiddler"
         href: web-connection-fiddler.md
     - name: Create custom Power Query connectors

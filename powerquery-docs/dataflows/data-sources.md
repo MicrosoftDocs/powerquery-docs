@@ -3,7 +3,7 @@ title: Connect to data sources for dataflows
 description: Learn how to connect to data sources for dataflows.
 author: bensack
 ms.topic: conceptual
-ms.date: 7/21/2021
+ms.date: 1/5/2023
 ms.author: bensack
 ---
 
@@ -57,7 +57,7 @@ Data sources for dataflows are organized into the following categories, which ap
 * Online Services
 * Other
 
-For a list of all of the supported data sources in Power Query, see [Connectors in Power Query](../Connectors/index.md).
+For a list of all of the supported data sources in Power Query, see [Connectors in Power Query](../connectors/index.md).
 
 ## Connect to a data source
 
@@ -124,7 +124,7 @@ This article showed which data sources you can connect to for dataflows. The fol
 * [Creating computed entities in dataflows](computed-entities.md)
 * [Link entities between dataflows](linked-entities.md)
 
-For information about individual Power Query connectors, go to the [connector reference list of Power Query connectors](../Connectors/index.md), and select the connector you want to learn more about.
+For information about individual Power Query connectors, go to the [connector reference list of Power Query connectors](../connectors/index.md), and select the connector you want to learn more about.
 
 Additional information about dataflows and related information can be found in the following articles:
 

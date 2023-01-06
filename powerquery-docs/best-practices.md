@@ -2,7 +2,7 @@
 title: Best practices when working with Power Query
 description: Best practices when working with Power Query
 author: ptyx507
-ms.date: 12/9/2022
+ms.date: 1/5/2023
 ms.author: miescobar
 ms.topic: conceptual
 ---
@@ -21,7 +21,7 @@ Each data connector follows a standard experience as explained in [Getting data]
 ![Sample navigator window.](media/best-practices-power-query/navigator.png)
 
 > [!NOTE]
-> To see the full list of available connectors in Power Query, go to [Connectors in Power Query](Connectors/index.md).
+> To see the full list of available connectors in Power Query, go to [Connectors in Power Query](connectors/index.md).
 
 ## Filter early
 

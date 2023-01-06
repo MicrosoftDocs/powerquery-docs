@@ -36,7 +36,7 @@ To connect to an EQuIS Enterprise site from Power BI Desktop, take the following
 1. Select the EQuIS connector in the connector list, then select **Connect**.
 2. Enter the URL of the EQuIS Enterprise site you are connecting to, then select **OK**.
 
-![Enter URL of EQuIS Enterprise site.](./media/EQuIS/enterprise_connection-ok.png)
+![Enter URL of EQuIS Enterprise site.](./media/equis/enterprise_connection-ok.png)
 
 3. Select the appropriate type of authentication:
     - **Basic**: Enter your EQuIS username and password for the given EQuIS Enterprise site.
@@ -44,7 +44,7 @@ To connect to an EQuIS Enterprise site from Power BI Desktop, take the following
     - **Organizational Account**: If your EQuIS Enterprise site is appropriately configured, you may authenticate with Azure Active Directory
 4. In **Navigator**, browse to the dataset or report you want to load, then select **Load** or **Transform Data**. Visit [Using EQuIS Data](https://help.earthsoft.com/index.htm?pbi-power-bi-adding-datasets.htm) for more information about available datasets. 
 
-![Select dataset in Navigator.](./media/EQuIS/navigator_cropped.png)
+![Select dataset in Navigator.](./media/equis/navigator_cropped.png)
 
 ## Additional Information
 

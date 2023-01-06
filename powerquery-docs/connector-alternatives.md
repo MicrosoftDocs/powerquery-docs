@@ -3,7 +3,7 @@ title: Alternatives to out-of-box connectivity in Power BI Desktop
 description: Provides users alternatives to connect to their data when no out-of-box connector is available
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 7/11/2022
+ms.date: 1/5/2023
 ms.author: bezhan
 ---
 
@@ -15,7 +15,7 @@ While Power BI Desktop offers out-of-box connectivity to over 150 data sources, 
 
 It might be possible to connect to certain data sources without a built-in out-of-box connector by using generic interface connectors.
 
-For example, the [ODBC](Connectors/ODBC.md) connector can connect to services with ODBC interfaces, and the [Web](Connectors/Web/Web.md) connector can connect to services with REST API interfaces.
+For example, the [ODBC](connectors/odbc.md) connector can connect to services with ODBC interfaces, and the [Web](connectors/Web/Web.md) connector can connect to services with REST API interfaces.
 
 Using available Power BI out-of-box generic interface connectors to connect through interfaces that the end data source supports lets you connect to many more data sources on the internet than there are specific out-of-box connectors for.
 

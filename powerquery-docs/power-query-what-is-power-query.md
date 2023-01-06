@@ -4,7 +4,7 @@ description: Learn what Power Query is, and how it can help you get and transfor
 author: ptyx507x
 
 ms.topic: overview
-ms.date: 03/14/2022
+ms.date: 1/5/2023
 ms.author: miescobar
 ---
 

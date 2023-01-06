@@ -2,7 +2,7 @@
 title: "Combine files overview" 
 description: How to combine files in Power Query and Power Query Online
 author: ptyx507
-ms.date: 12/9/2022
+ms.date: 1/5/2023
 ms.author: miescobar
 ms.topic: overview
 ---
@@ -62,7 +62,7 @@ After you select the **Combine** or **Combine files** command, the **Combine fil
    * If you want to use a different file for the example file, you can choose it from the **Example file** drop-down menu.
    * Optional: You can select **Skip files with errors** to exclude from the final output any files that result in errors.
 
-In the following image, Power Query has detected that the first file has a .csv file name extension, so it uses the [Text/CSV](connectors/textcsv.md) connector to interpret the file.
+In the following image, Power Query has detected that the first file has a .csv file name extension, so it uses the [Text/CSV](connectors/text-csv.md) connector to interpret the file.
 
 ![Combine files dialog box.](media/combine-files-overview/combine-files-dialog.png "Combine files dialog box")
 

@@ -4,7 +4,7 @@ description: An article that describes why and how to use the new Query plan fea
 author: ptyx507x
 
 ms.topic: quickstart
-ms.date: 6/27/2022
+ms.date: 1/5/2023
 ms.author: miescobar
 ---
 
@@ -47,7 +47,7 @@ Use the following steps to create the query in your own Power Query Online envir
 6. In the Power Query Editor, select **Configure connection** and provide the credentials to your data source.
 
 >[!NOTE]
->For more information about connecting to a SQL Server, go to [SQL Server database](connectors/sqlserver.md).
+>For more information about connecting to a SQL Server, go to [SQL Server database](connectors/sql-server.md).
 
 After following these steps, your query will look like the one in the following image.
 

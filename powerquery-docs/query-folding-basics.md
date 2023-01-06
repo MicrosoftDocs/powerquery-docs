@@ -2,7 +2,7 @@
 title: Understanding query evaluation and query folding in Power Query
 description: Overview on Power Query query evaluation and query folding mechanisms
 author: migueesc123
-ms.date: 6/27/2022
+ms.date: 1/5/2023
 ms.author: miescobar
 ms.topic: overview
 ---
@@ -111,7 +111,7 @@ Depending on how the query is structured, there could be three possible outcomes
 - **No query folding**:  When the query contains transformations that can't be translated to the native query language of your data source, either because the transformations aren't supported or the connector doesn't support query folding. For this case, Power Query gets the raw data from your data source and uses the Power Query engine to achieve the output you want by processing the required transforms at the Power Query engine level.
 
 >[!NOTE]
->The query folding mechanism is primarily available in connectors for structured data sources such as, but not limited to, [Microsoft SQL Server](Connectors/sqlserver.md) and [OData Feed](Connectors/odatafeed.md). During the optimization phase, the engine might sometimes reorder steps in the query.
+>The query folding mechanism is primarily available in connectors for structured data sources such as, but not limited to, [Microsoft SQL Server](connectors/sql-server.md) and [OData Feed](connectors/odata-feed.md). During the optimization phase, the engine might sometimes reorder steps in the query.
 >
 >Leveraging a data source that has more processing resources and has query folding capabilities can expedite your query loading times as the processing occurs at the data source and not at the Power Query engine.
 

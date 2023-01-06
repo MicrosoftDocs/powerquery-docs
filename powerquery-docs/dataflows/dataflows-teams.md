@@ -3,7 +3,7 @@ title: Create and use dataflows in Microsoft Teams
 description: How to create and use dataflows in Microsoft Teams
 author: miquelladeboer
 ms.topic: conceptual
-ms.date: 12/2/2020
+ms.date: 1/5/2023
 ms.author: mideboer
 ---
 
@@ -110,7 +110,7 @@ The following table lists the major feature differences between dataflows for Da
 | Standard tables | No | Yes |
 | Custom tables | Yes | Yes |
 | Full PQ functionality | Yes | Yes |
-| Supported connectors | [Subset of connectors](../Connectors/index.md)| [All connectors](../Connectors/index.md)|
+| Supported connectors | [Subset of connectors](../connectors/index.md)| [All connectors](../connectors/index.md)|
 | Small data volumes | Yes | Yes |
 | Larger data volumes | No <sup>1</sup> | Yes |
 
