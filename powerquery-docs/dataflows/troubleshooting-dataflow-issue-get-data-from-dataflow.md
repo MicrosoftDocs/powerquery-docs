@@ -3,7 +3,7 @@ title: Troubleshooting dataflow issue - get data from dataflow
 description: Troubleshooting dataflow issue - get data from dataflow.
 author: bensack
 ms.topic: conceptual
-ms.date: 12/3/2020
+ms.date: 1/6/2023
 ms.author: bensack
 ---
 
@@ -39,7 +39,7 @@ Sometimes, you have a Microsoft Power Platform dataflow you created and also ref
 
 You might receive the error message "We reached the end of the buffer" or "DataFormat.Error: We reached the end of the buffer".
 
-![Get data from a standard dataflow.](media/StandardDataflowGetData.png)
+![Get data from a standard dataflow.](media/troubleshoot-dataflow-issue-get-data-from-dataflow/standard-dataflow-get-data.png)
 
 **Reason:**
 
@@ -49,7 +49,7 @@ Only analytical dataflows can be used in a **Get data** operation from a dataflo
 
 If you've created a dataflow that stores data in Dataverse&mdash;that is, a standard dataflow&mdash;you can't see it by using the **Get data** operation from a dataflow. However, you can use [**Get data** from Dataverse](../connectors/dataverse.md#finding-your-dataverse-environment-url) to access it. Or you can create an [analytical dataflow](understanding-differences-between-analytical-standard-dataflows.md) instead, and then access it by using **Get data** from a dataflow.
 
-![Get data from standard dataflow versus analytical dataflows.](media/GetDataStandardAnalyticalDataflow.png)
+![Get data from standard dataflow versus analytical dataflows.](media/troubleshoot-dataflow-issue-get-data-from-dataflow/get-data-standard-analytical-dataflow.png)
 
 ## I can't make a DirectQuery connection to the dataflow
 

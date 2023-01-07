@@ -4,7 +4,7 @@ description: An overview of dataflows across Microsoft Power Platform and Dynami
 author: bensack
 
 ms.topic: overview
-ms.date: 6/10/2021 
+ms.date: 1/6/2023 
 ms.author: bensack
 
 ---
@@ -19,7 +19,7 @@ Dataflows are featured in multiple Microsoft products and don't require a datafl
 
 ### How does the dataflow function?
 
-![How do dataflows function.](media/dataflows-power-platform-dynamics-365/dataflow-function.png)
+![How do dataflows function.](media/overview-dataflows/dataflow-function.png)
 
 The previous image shows an overall view of how a dataflow is defined. A dataflow gets data from different data sources (more than 80 data sources are supported already). Then, based on the transformations configured with the Power Query authoring experience, the dataflow transforms the data by using the dataflow engine. Finally, the data is loaded to the output destination, which can be a Microsoft Power Platform environment, a Power BI workspace, or the organization's Azure Data Lake Storage account.  
 
@@ -27,19 +27,19 @@ The previous image shows an overall view of how a dataflow is defined. A dataflo
 
 Dataflows are cloud-based. When a dataflow is authored and saved, its definition is stored in the cloud. A dataflow also runs in the cloud. However, if a data source is on-premises, an on-premises data gateway can be used to extract the data to the cloud. When a dataflow run is triggered, the data transformation and computation happens in the cloud, and the destination is always in the cloud.
 
-![Dataflows run in the cloud.](media/dataflows-power-platform-dynamics-365/dataflow-cloud.png)
+![Dataflows run in the cloud.](media/overview-dataflows/dataflow-cloud.png)
 
 ### Dataflows use a powerful transformation engine
 
 Power Query is the data transformation engine used in the dataflow. This engine is capable enough to support many advanced transformations. It also uses a straightforward, yet powerful, graphical user interface called Power Query Editor. You can use dataflows with this editor to develop your data integration solutions faster and more easily.
 
-![Power Query transformations.](media/dataflows-power-platform-dynamics-365/power-query-editor.png)
+![Power Query transformations.](media/overview-dataflows/power-query-editor.png)
 
 ### Dataflow integration with Microsoft Power Platform and Dynamics 365
 
 Because a dataflow stores the resulting entities in cloud-based storage, other services can interact with the data produced by dataflows.
 
-![Dataflow integration with Microsoft Power Platform and Dynamics 365.](media/dataflows-power-platform-dynamics-365/dataflow-power-platform.png)
+![Dataflow integration with Microsoft Power Platform and Dynamics 365.](media/overview-dataflows/dataflow-power-platform.png)
 
 For example, Power BI, Power Apps, Power Automate, Power Virtual Agents, and Dynamics 365 applications can get the data produced by the dataflow by connecting to Dataverse, a Power Platform dataflow connector, or directly through the lake, depending on the destination configured at dataflow creation time.
 

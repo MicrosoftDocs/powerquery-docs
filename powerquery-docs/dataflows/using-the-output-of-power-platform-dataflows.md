@@ -36,7 +36,7 @@ A standard dataflow writes the output data to a Dataverse table. [Dataverse](/po
 
 If you'd like to reuse data created by one dataflow in another dataflow, you can do so by using the Dataflow connector in the Power Query editor when you create the new dataflow.
 
-[![Get data from a dataflow.](media/dataflows-linked-entities/linked-entities-03.png)](media/dataflows-linked-entities/linked-entities-03.png#lightbox)
+[![Get data from a dataflow.](media/linked-entities/linked-entities-03.png)](media/linked-entities/linked-entities-03.png#lightbox)
 
 When getting data from the output of another dataflow, a [linked entity](/data-integration/dataflows/dataflows-linked-entities) will be created. Linked entities provide a way to make data created in an upstream dataflow available in a downstream dataflow, without copying the data to the downstream dataflow. Because linked entities are just pointers to entities created in other dataflows, they're kept up to date by the refresh logic of the upstream dataflow. If both dataflows reside in the same workspace or environment, those dataflows will be refreshed together, to keep data in both dataflows always up to date. More information: [Link entities between dataflows](/data-integration/dataflows/dataflows-linked-entities)
 
