@@ -107,6 +107,8 @@ To connect to Google Analytics data:
 
 ## Limitations and issues
 
+You should be aware of the following limitations and issues associated with accessing Google Analytics data.
+
 ### Google Analytics quota limits for Power BI
 
 The standard limitations and quotas for Google Analytics AP requests is documented in [Limits and Quotas on API Requests](https://developers.google.com/analytics/devguides/config/mgmt/v3/limits-quotas). However, Power BI Desktop and Power BI service allow you to use the following enhanced number of queries.
