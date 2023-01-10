@@ -4,7 +4,7 @@ description: Overview and listing of the TripPin connector development tutorial 
 author: ptyx507x
 
 ms.topic: tutorial
-ms.date: 7/23/2021
+ms.date: 1/9/2023
 ms.author: miescobar
 ms.custom:
 ---
@@ -24,6 +24,7 @@ The following applications will be used throughout this tutorial:
 * [Fiddler](https://www.telerik.com/fiddler)&mdash;Optional, but recommended for viewing and debugging requests to your REST service
 
 It's strongly suggested that you review:
+
 * [Installing the PowerQuery SDK](../../InstallingSDK.md)
 * [Start developing custom connectors](../../StartingToDevelopCustomConnectors.md)
 * [Creating your first connector: Hello World](../../CreatingFirstConnector.md)
@@ -31,19 +32,19 @@ It's strongly suggested that you review:
 * [Handling Authentication](../../HandlingAuthentication.md)
 
 >[!Note]
->You can also start trace logging of your work at any time by enabling diagnostics, which is described later on in this tutorial. More information: [Enabling diagnostics](8-Diagnostics/README.md#enabling-diagnostics)
+>You can also start trace logging of your work at any time by enabling diagnostics, which is described later on in this tutorial. More information: [Enabling diagnostics](8-diagnostics/readme.md#enabling-diagnostics)
 
 ## Parts
 
 |Part|Lesson                               |Details|
 |----|:------------------------------------|:----------------------------------------------------|
-|1   |[OData](1-OData/README.md)                     |Create a simple Data Connector over an OData service |
-|2   |[Rest](2-Rest/README.md)                       |Connect to a REST API that returns a JSON response   |
-|3   |[Nav Tables](3-NavTables/README.md)            |Provide a navigation experience for your source    |
-|4   |[Data Source Paths](4-Paths/README.md)         |How credentials are identified for your data source  |
-|5   |[Paging](5-Paging/README.md)                   |Read with a paged response from a web service        |
-|6   |[Enforcing Schema](6-Schema/README.md)         |Enforce table structure and column data types        |
-|7   |[Advanced Schema](7-AdvancedSchema/README.md)  |Dynamically enforce table structure using M types and external metadata |
-|8   |[Diagnostics](8-Diagnostics/README.md)         |Add detailed tracing to the connector                |
-|9   |[Test Connection](9-TestConnection/README.md)  |Implement a TestConnection handler to enable refresh through the gateway |
-|10  |[Basic query Folding](10-TableView1/README.md)|Implement basic query folding handlers               |
+|1   |[OData](1-odata/readme.md)                     |Create a simple Data Connector over an OData service |
+|2   |[Rest](2-rest/readme.md)                       |Connect to a REST API that returns a JSON response   |
+|3   |[Nav Tables](3-navtables/readme.md)            |Provide a navigation experience for your source    |
+|4   |[Data Source Paths](4-paths/readme.md)         |How credentials are identified for your data source  |
+|5   |[Paging](5-aging/readme.md)                   |Read with a paged response from a web service        |
+|6   |[Enforcing Schema](6-schema/readme.md)         |Enforce table structure and column data types        |
+|7   |[Advanced Schema](7-advancedschema/readme.md)  |Dynamically enforce table structure using M types and external metadata |
+|8   |[Diagnostics](8-diagnostics/readme.md)         |Add detailed tracing to the connector                |
+|9   |[Test Connection](9-testconnection/readme.md)  |Implement a TestConnection handler to enable refresh through the gateway |
+|10  |[Basic query Folding](10-tableview1/readme.md)|Implement basic query folding handlers               |

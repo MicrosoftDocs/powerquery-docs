@@ -5,11 +5,11 @@ author: ptyx507x
 
 
 ms.topic: tutorial
-ms.date: 6/20/2022
+ms.date: 1/9/2023
 ms.author: miescobar
 ---
 
-# TripPin Part 10&mdash;Basic Query Folding
+# TripPin part 10 - Basic query folding
 
 This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially&mdash;each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector.
 
@@ -19,6 +19,7 @@ In this lesson, you will:
 > * Learn the basics of query folding 
 > * Learn about the [Table.View](/powerquery-m/table-view) function
 > * Replicate OData query folding handlers for:
+>
   * `$top`
   * `$skip`
   * `$count`
@@ -76,7 +77,7 @@ If you re-run the unit tests, you'll see that the behavior of your function hasn
 your **Table.View** implementation is simply passing through the call to `GetEntity`. Since you haven't implemented
 any transformation handlers (yet), the original `url` parameter remains untouched.
 
-## Initial Implementation of Table.View
+## Initial implementation of Table.View
 
 The above implementation of **Table.View** is simple, but not very useful. The following implementation will be used as
 your baseline&mdash;it doesn't implement any folding functionality, but has the scaffolding you'll need to do it.
@@ -137,7 +138,7 @@ passing along `state` as they go.
 
 Update the `TripPinNavTable` function once again, replacing the call to `TripPin.SuperSimpleView` with a call to the new `TripPin.View` function, and re-run the unit tests. You won't see any new functionality yet, but you now have a solid baseline for testing.
 
-## Implementing Query Folding
+## Implementing query folding
 
 Since the M engine will automatically fall back to local processing when a query can't be folded, you must take some additional steps to validate that your **Table.View** handlers are working correctly.
 
@@ -188,7 +189,7 @@ Fact("Fold $top 0 on Airports",
 
 These tests both use [Table.FirstN](/powerquery-m/table-firstn) to filter to the result set to the first X number of rows. If you run these tests with **Error on Folding Failure** set to `False` (the default), the tests should succeed, but if you run Fiddler (or check the trace logs), you'll notice that the request you send doesn't contain any OData query parameters.
 
-![Diagnostics trace.](../../../images/trippin10UnitTestLog1.png)
+![Diagnostics trace.](../../media/trippin10-unit-test-log-1.png)
 
 If you set **Error on Folding Failure** to `True`, the tests will fail with the `Please try a simpler expression.` error. To fix this, you'll define your first **Table.View** handler for `OnTake`.
 
@@ -232,7 +233,7 @@ CalculateUrl = (state) as text =>
 
 Rerunning the unit tests, you'll notice that the URL you're accessing now contains the `$top` parameter. (Note that due to URL encoding, `$top` appears as `%24top`, but the OData service is smart enough to convert it automatically).
 
-![Diagnostics trace with top.](../../../images/trippin10UnitTestLog2.png)
+![Diagnostics trace with top.](../../media/trippin10-unit-test-log-2.png)
 
 ### Handling Table.Skip with OnSkip
 

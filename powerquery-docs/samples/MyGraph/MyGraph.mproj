@@ -42,31 +42,31 @@
     <!--<Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>-->
-    <Compile Include="MyGraph.pq">
+    <Compile Include="mygraph.pq">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MyGraph16.png">
+    <Compile Include="mygraph16.png">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MyGraph20.png">
+    <Compile Include="mygraph20.png">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MyGraph24.png">
+    <Compile Include="mygraph24.png">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MyGraph32.png">
+    <Compile Include="mygraph32.png">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MyGraph40.png">
+    <Compile Include="mygraph40.png">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MyGraph48.png">
+    <Compile Include="mygraph48.png">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MyGraph64.png">
+    <Compile Include="mygraph64.png">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MyGraph80.png">
+    <Compile Include="mygraph80.png">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="resources.resx">
@@ -75,7 +75,7 @@
     <Compile Include="client_id">
       <SubType>Content</SubType>
     </Compile>
-    <Content Include="MyGraph.query.pq">
+    <Content Include="mygraph.query.pq">
       <SubType>Code</SubType>
     </Content>
   </ItemGroup>

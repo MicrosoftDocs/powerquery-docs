@@ -3,19 +3,20 @@ title: Handling navigation for Power Query connectors
 description: Manage navigation for Power Query connectors
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 6/9/2022
+ms.date: 1/9/2023
 ms.author: miescobar
 ---
 
-# Handling Navigation
+# Handling navigation
 
 Navigation Tables (or nav tables) are a core part of providing a user-friendly experience for your connector. The Power Query experience displays them to the user after they've entered any required parameters for your data source function, and have authenticated with the data source.
 
-![The TripPin navigation table.](images/navtable.png)
+![The TripPin navigation table.](media/handling-navigation-tables/navigation-table.png)
 
 Behind the scenes, a nav table is just a regular M Table value with specific metadata fields defined on its Type. When your data source function returns a table with these fields defined, Power Query will display the navigator dialog. You can actually see the underlying data as a Table value by right-clicking on the root node and selecting **Edit**.
 
 ## Table.ToNavigationTable
+
 You can use the [`Table.ToNavigationTable`](HelperFunctions.md#tabletonavigationtable) function to add the table type metadata needed to create a nav table.
 
 >[!Note]
@@ -43,9 +44,9 @@ The function adds the following metadata to the table type:
 | NavigationTable.IsLeafColumn   | isLeafColumn    |
 | Preview.DelayColumn            | itemNameColumn  |
 
-
 ## Values for ItemKind
-Each of the following item kind values provide a different icon in the navigation table. 
+
+Each of the following item kind values provide a different icon in the navigation table.
 
 * Feed
 * Cube
@@ -64,16 +65,17 @@ Each of the following item kind values provide a different icon in the navigatio
 * DefinedName
 * Record
 
-The image below shows the icons for item kinds in Power BI Desktop. 
+The following screenshot shows the icons for item kinds in Power BI Desktop.
 
-![List of Navigation Table ItemKinds.](images/itemKinds.png)
+![List of Navigation Table ItemKinds.](media/handling-navigation-tables/item-kinds.png)
 
 ## Examples
 
 ### Flat navigation table
+
 The following code sample displays a flat nav table with three tables and a function.
 
-```
+```powerquery-m
 shared NavigationTable.Simple = () =>
     let
         objects = #table(
@@ -93,12 +95,13 @@ shared FunctionCallThatReturnsATable = () =>
 
 This code will result in the following Navigator display in Power BI Desktop:
 
-![A sample of a flat navigation table.](images/navTableSample.png)
+![A sample of a flat navigation table.](media/handling-navigation-tables/navigation-table-sample.png)
 
 ### Multi-level navigation table
-It is possible to use nested navigation tables to create a hierarchical view over your data set. You do this by setting the `IsLeaf` value for that row to `false` (which marks it as a node that can be expanded), and format the `Data` column to also be another nav table. 
 
-```
+It is possible to use nested navigation tables to create a hierarchical view over your data set. You do this by setting the `IsLeaf` value for that row to `false` (which marks it as a node that can be expanded), and format the `Data` column to also be another nav table.
+
+```powerquery-m
 shared NavigationTable.Nested = () as table =>
     let
         objects = #table(
@@ -123,11 +126,14 @@ CreateNavTable = (message as text) as table =>
         NavTable;
 
 ```
+
 This code would result in the following Navigator display in Power BI Desktop:
 
-![A sample of a hierarchical navigation table.](images/navTableNested.png)
+![A sample of a hierarchical navigation table.](media/handling-navigation-tables/navigation-table-nested.png)
 
-### Dynamic Navigation Tables
+### Dynamic navigation tables
+
 More complex functionality can be built from these basics. While all of the above examples show hard-coded entities in the nav table, it's easy to see how a nav table could be generated dynamically based on entities that are available to a given user. A few key considerations for dynamic navigation tables include:
+
 * [Error handling](error-handling.md) to ensure a good experience for users that don't have access to certain endpoints.
-* Node evaluation is lazy by default; leaf nodes are not evaluated until the parent node is expanded. Certain implementations of multi-level dynamic nav tables may result in eager evaluation of the entire tree. Be sure to monitor the number of calls that Power Query is making as it initially renders the navigation table. For example, `Table.InsertRows` is 'lazier' than `Table.FromRecords`, as it does not need to evaluate its arguments.
+* Node evaluation is lazy by default; leaf nodes are not evaluated until the parent node is expanded. Certain implementations of multi-level dynamic nav tables may result in eager evaluation of the entire tree. Be sure to monitor the number of calls that Power Query is making as it initially renders the navigation table. For example, [Table.InsertRows](/powerquery-m/table-insertrows) is 'lazier' than [Table.FromRecords](/powerquery-m/table-fromrecords), as it doesn't need to evaluate its arguments.

@@ -74,7 +74,7 @@
     <Content Include="github.query.pq">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="README.md">
+    <Content Include="readme.md">
       <SubType>Content</SubType>
     </Content>
   </ItemGroup>

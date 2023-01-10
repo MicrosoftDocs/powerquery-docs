@@ -5,11 +5,11 @@ author: ptyx507x
 
 
 ms.topic: tutorial
-ms.date: 8/25/2021
+ms.date: 1/9/2023
 ms.author: miescobar
 ---
 
-# TripPin Part 1 - Data Connector for an OData Service
+# TripPin part 1 - Data connector for an OData service
 
 This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially&mdash;each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector.
 
@@ -21,17 +21,17 @@ In this lesson, you will:
 > * Test your connector in Visual Studio
 > * Register your connector in Power BI Desktop
 
-## Creating a Basic OData Connector
+## Creating a basic OData connector
 
 In this section, you will create a new Data Connector project, provide some basic information, and test it in Visual Studio.
 
 Open Visual Studio, and create a new Project. Under the Power Query folder, select the Data Connector project. For this sample, set the project name to `TripPin`.
 
-![VSProject.](../../../images/vs2017_project.png)
+![VSProject.](../../media/vs2017-project.png)
 
 Open the TripPin.pq file and paste in the following connector definition.
 
-```
+```powerquery-m
 section TripPin;
 
 [DataSource.Kind="TripPin", Publish="TripPin.Publish"]
@@ -69,7 +69,7 @@ TripPin.Publish = [
 
 Open the TripPin.query.pq file. Replace the current contents with a call to your exported function.
 
-```
+```powerquery-m
 TripPin.Feed("https://services.odata.org/v4/TripPinService/")
 ```
 
@@ -81,11 +81,11 @@ Running your query for the first time results in a credential error. In Power Qu
 
 Select the **Anonymous** credential type, and then select **Set Credential**.
 
-![Image of M Query Output dialog, with the Errors tab selected, and the Data Source Path filled in and the Credential Type set to Anonymous.](../../../images/credentialPrompt.png)
+![Image of M Query Output dialog, with the Errors tab selected, and the Data Source Path filled in and the Credential Type set to Anonymous.](../../media/credential-prompt.png)
 
 Select **OK** to close the dialog, and then select the **Start** button once again. You see a query execution status dialog, and finally a Query Result table showing the data returned from your query.
 
-![Query results.](../../../images/trippin1Results.png)
+![Query results.](../../media/trippin1-results.png)
 
 You can try out a few different OData URLs in the test file to see what how different results are returned. For example:
 
@@ -95,7 +95,7 @@ You can try out a few different OData URLs in the test file to see what how diff
 
 The TripPin.query.pq file can contain single statements, let statements, or full section documents.
 
-```
+```powerquery-m
 let
     Source = TripPin.Feed("https://services.odata.org/v4/TripPinService/"),
     People = Source{[Name="People"]}[Data],
@@ -113,7 +113,7 @@ If you add more transformations to your query, you can see how they impact the g
 
 This behavior is important to note. Even though you did not implement explicit folding logic, your connector inherits these capabilities from the [OData.Feed](/powerquery-m/odata-feed) function. M statements are compose-able&mdash;filter contexts will flow from one function to another, whenever possible. This is similar in concept to the way data source functions used within your connector inherit their authentication context and credentials. In later lessons, you'll replace the use of [OData.Feed](/powerquery-m/odata-feed), which has native folding capabilities, with [Web.Contents](/powerquery-m/web-contents), which does not. To get the same level of capabilities, you'll need to use the `Table.View` interface and implement your own explicit folding logic.
 
-## Loading Your Extension in Power BI Desktop
+## Loading your extension in Power BI Desktop
 
 To use your extension in Power BI Desktop, you'll need to copy your connector project's output file (TripPin.mez) to your Custom Connectors directory.
 
@@ -126,23 +126,23 @@ To use your extension in Power BI Desktop, you'll need to copy your connector pr
 
 You can locate your extension by typing its name into the search box.
 
-![Get Data Dialog.](../../../images/trippin1GetData.png)
+![Get Data Dialog.](../../media/trippin1-get-data.png)
 
 Select the function name, and select **Connect**. A third-party message appears&mdash;select **Continue** to continue. The function invocation dialog now appears. Enter the root URL of the service (`https://services.odata.org/v4/TripPinService/`), and select **OK**.
 
-![Invoke Function.](../../../images/trippin1Function.png)
+![Invoke Function.](../../media/trippin1-function.png)
 
 Since this is the first time you are accessing this data source, you'll receive a prompt for credentials. Check that the shortest URL is selected, and then select **Connect**.
 
-![Image of credential prompt set to Anonymous and the level setting set to the shortest URL.](../../../images/trippin1Creds.png)
+![Image of credential prompt set to Anonymous and the level setting set to the shortest URL.](../../media/trippin1-creds.png)
 
 Notice that instead of getting a simple table of data, the navigator appears. This is because the [OData.Feed](/powerquery-m/odata-feed) function returns a table with special metadata on top of it that the Power Query experience knows to display as a navigation table. This walkthrough will cover how you can create and customize your own navigation table in a future lesson.
 
-![Nav Table.](../../../images/trippin1NavTable.png)
+![Nav Table.](../../media/trippin1-nav-table.png)
 
 Select the **Me** table, and then select **Transform Data**. Notice that the columns already have types assigned (well, most of them). This is another feature of the underlying [OData.Feed](/powerquery-m/odata-feed) function. If you watch the requests in [Fiddler](https://www.telerik.com/fiddler), you'll see that you've fetched the service's $metadata document. The engine's OData implementation does this automatically to determine the service's schema, data types, and relationships.
 
-![Me Record.](../../../images/trippin1Me.png)
+![Me Record.](../../media/trippin1-me.png)
 
 ## Conclusion
 
@@ -152,4 +152,4 @@ In the next lesson, you'll replace the use of [OData.Feed](/powerquery-m/odata-f
 
 ## Next steps
 
-[TripPin Part 2 - Data Connector for a REST Service](../2-Rest/README.md)
+[TripPin Part 2 - Data Connector for a REST Service](../2-4est/readme.md)

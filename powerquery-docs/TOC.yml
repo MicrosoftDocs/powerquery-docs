@@ -567,31 +567,31 @@
         - name: TripPin walkthrough
           items:
           - name: "Overview"
-            href: samples/TripPin/README.md
+            href: samples/trippin/readme.md
           - name: "1. OData"
-            href: samples/TripPin/1-OData/README.md
+            href: samples/trippin/1-odata/readme.md
           - name: "2. REST API"
-            href: samples/TripPin/2-Rest/README.md
+            href: samples/trippin/2-rest/readme.md
           - name: "3. Navigation tables"
-            href: samples/TripPin/3-NavTables/README.md
+            href: samples/trippin/3-navtables/readme.md
           - name: "4. Paths"
-            href: samples/TripPin/4-Paths/README.md
+            href: samples/trippin/4-paths/readme.md
           - name: "5. Paging"
-            href: samples/TripPin/5-Paging/README.md
+            href: samples/trippin/5-paging/readme.md
           - name: "6. Schemas"
-            href: samples/TripPin/6-Schema/README.md
+            href: samples/trippin/6-schema/readme.md
           - name: "7. Advanced schemas"
-            href: samples/TripPin/7-AdvancedSchema/README.md
+            href: samples/trippin/7-advancedschema/readme.md
           - name: "8. Diagnostics"
-            href: samples/TripPin/8-Diagnostics/README.md
+            href: samples/trippin/8-diagnostics/readme.md
           - name: "9. Test connection"
-            href: samples/TripPin/9-TestConnection/README.md
+            href: samples/trippin/9-testconnection/readme.md
           - name: "10. Folding"
-            href: samples/TripPin/10-TableView1/README.md
+            href: samples/trippin/10-tableview1/readme.md
         - name: OAuth tutorials
           items:
           - name: "GitHub"
-            href: samples/Github/README.md
+            href: samples/github/readme.md
       - name: Samples
         items:
         - name: "Functional samples"

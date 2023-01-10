@@ -46,7 +46,7 @@
     <Compile Include="Table.ToNavigationTable.pqm">
       <SubType>Content</SubType>
     </Compile>
-    <Content Include="README.md">
+    <Content Include="readme.md">
       <SubType>Content</SubType>
     </Content>
     <Compile Include="Table.GenerateByPage.pqm">

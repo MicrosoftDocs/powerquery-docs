@@ -5,11 +5,11 @@ author: ptyx507x
 
 
 ms.topic: tutorial
-ms.date: 5/15/2020
+ms.date: 1/9/2023
 ms.author: miescobar
 ---
 
-# TripPin Part 8 - Adding Diagnostics
+# TripPin part 8 - Adding diagnostics
 
 This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially&mdash;each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector.
 
@@ -23,7 +23,7 @@ In this lesson, you will:
 
 Power Query users can enable trace logging by selecting the checkbox under **Options | Diagnostics**.
 
-![Enable tracing in Power Query.](../../../images/trippin8EnableTrace.png)
+![Enable tracing in Power Query.](../../media/trippin8-enable-trace.png)
 
 Once enabled, any subsequent queries will cause the M engine to emit trace information to log files located in a fixed user directory.
 
@@ -33,15 +33,15 @@ When running M queries from within the Power Query SDK, tracing is enabled at th
 * **Show Engine Traces**&mdash;this setting controls the output of built-in traces from the M engine. These traces are generally only useful to members of the Power Query team, so you'll typically want to keep this set to `false`.
 * **Show User Traces**&mdash;this setting controls trace information output by your connector. You'll want to set this to `true`.
 
-![Project properties.](../../../images/trippin8ProjectProperties.png)
+![Project properties.](../../media/trippin8-project-properties.png)
 
 Once enabled, you'll start seeing log entries in the M Query Output window, under the Log tab.
 
 ## Diagnostics.Trace
 
-The [Diagnostics.Trace](/powerquery-m/diagnostics-trace) function is used to write messages into the M engine's trace log. 
+The [Diagnostics.Trace](/powerquery-m/diagnostics-trace) function is used to write messages into the M engine's trace log.
 
-```
+```powerquery-m
 Diagnostics.Trace = (traceLevel as number, message as text, value as any, optional delayed as nullable logical as any) => ...
 ```
 
@@ -66,7 +66,7 @@ The `value` parameter is what the function will return. When the `delayed` param
 
 For a practical example of using [Diagnostics.Trace](/powerquery-m/diagnostics-trace) and the impact of the `delayed` parameter, update the TripPin connector's `GetSchemaForEntity` function to wrap the `error` exception:
 
-```
+```powerquery-m
 GetSchemaForEntity = (entity as text) as type =>
     try
         SchemaTable{[Entity=entity]}[Type]
@@ -79,7 +79,7 @@ GetSchemaForEntity = (entity as text) as type =>
 
 You can force an error during evaluation (for test purposes!) by passing an invalid entity name to the `GetEntity` function. Here you change the `withData` line in the `TripPinNavTable` function, replacing `[Name]` with `"DoesNotExist"`.
 
-```
+```powerquery-m
 TripPinNavTable = (url as text) as table =>
     let
         // Use our schema table as the source of top level items in the navigation tree
@@ -100,11 +100,11 @@ TripPinNavTable = (url as text) as table =>
 
 [Enable tracing](#enabling-diagnostics) for your project, and run your test queries. On the `Errors` tab you should see the text of the error you raised:
 
-![Error message.](../../../images/trippin8Error.png)
+![Error message.](../../media/trippin8-error.png)
 
 Also, on the `Log` tab, you should see the same message. Note that if you use different values for the `message` and `value` parameters, these would be different.
 
-![Error log.](../../../images/trippin8ErrorLog.png)
+![Error log.](../../media/trippin8-error-log.png)
 
 Also note that the `Action` field of the log message contains the name (Data Source Kind) of your extension (in this case, `Engine/Extension/TripPin`). This makes it easier to find the messages related to your extension when there are multiple queries involved and/or system (mashup engine) tracing is enabled.
 
@@ -114,7 +114,7 @@ As an example of how the `delayed` parameter works, you'll make some modificatio
 
 First, set the `delayed` value to `false`, but leave the `value` parameter as-is:
 
-```
+```powerquery-m
 Diagnostics.Trace(TraceLevel.Error, message, () => error message, false);
 ```
 
@@ -122,7 +122,7 @@ When you run the query, you'll receive an error that "We cannot convert a value 
 
 Next, remove the function from the `value` parameter:
 
-```
+```powerquery-m
 Diagnostics.Trace(TraceLevel.Error, message, error message, false);
 ```
 
@@ -132,9 +132,9 @@ When you run the query, you'll receive the correct error, but if you check the *
 
 ## Diagnostic helper functions in Diagnostics.pqm
 
-The [Diagnostics.pqm](https://raw.githubusercontent.com/Microsoft/DataConnectors/master/samples/TripPin/8-Diagnostics/Diagnostics.pqm) file included in this project contains a number of helper functions that make tracing easier. As shown in the [previous tutorial](../7-AdvancedSchema/README.md#refactoring-common-code-into-separate-files), you can include this file in your project (remembering to set the Build Action to *Compile*), and then load it in your connector file. The bottom of your connector file should now look something like the code snippet below. Feel free to explore the various functions this module provides, but in this sample, you'll only be using the `Diagnostics.LogValue` and `Diagnostics.LogFailure` functions.
+The [Diagnostics.pqm](https://raw.githubusercontent.com/Microsoft/DataConnectors/master/samples/TripPin/8-Diagnostics/Diagnostics.pqm) file included in this project contains a number of helper functions that make tracing easier. As shown in the [previous tutorial](../7-advancedschema/readme.md#refactoring-common-code-into-separate-files), you can include this file in your project (remembering to set the Build Action to *Compile*), and then load it in your connector file. The bottom of your connector file should now look something like the code snippet below. Feel free to explore the various functions this module provides, but in this sample, you'll only be using the `Diagnostics.LogValue` and `Diagnostics.LogFailure` functions.
 
-```
+```powerquery-m
 // Diagnostics module contains multiple functions. We can take the ones we need.
 Diagnostics = Extension.LoadFunction("Diagnostics.pqm");
 Diagnostics.LogValue = Diagnostics[LogValue];
@@ -145,7 +145,7 @@ Diagnostics.LogFailure = Diagnostics[LogFailure];
 
 The `Diagnostics.LogValue` function is a lot like `Diagnostics.Trace`, and can be used to output the value of what you're evaluating.
 
-```
+```powerquery-m
 Diagnostics.LogValue = (prefix as text, value as any) as any => ...
 ```
 
@@ -159,7 +159,7 @@ The `prefix` parameter is prepended to the log message. You'd use this to figure
 
 As an example, you'll update the `TripPin.Feed` function to trace the `url` and `schema` arguments passed into the function.
 
-```
+```powerquery-m
 TripPin.Feed = (url as text, optional schema as type) as table =>
     let
         _url = Diagnostics.LogValue("Accessing url", url),
@@ -175,10 +175,12 @@ Note that you have to use the new `_url` and `_schema` values in the call to `Ge
 When you run your queries, you should now see new messages in the log.
 
 Accessing url:
-![Accessing url message.](../../../images/trippin8Log.png)
+
+![Accessing url message.](../../media/trippin8-log.png)
 
 Schema type:
-![Schema type message.](../../../images/trippin8TraceWithType.png)
+
+![Schema type message.](../../media/trippin8-trace-with-type.png)
 
 Note that you see the serialized version of the `schema` parameter `type`, rather than what you'd get when you do a simple `Text.FromValue` on a type value (which results in "type").
 
@@ -186,7 +188,7 @@ Note that you see the serialized version of the `schema` parameter `type`, rathe
 
 The `Diagnostics.LogFailure` function can be used to wrap function calls, and will only write to the trace if the function call fails (that is, returns an `error`).
 
-```
+```powerquery-m
 Diagnostics.LogFailure = (text as text, function as function) as any => ...
 ```
 
@@ -194,13 +196,13 @@ Internally, `Diagnostics.LogFailure` adds a `try` operator to the `function` cal
 
 As a (poor) example, modify the `withData` line of the `TripPinNavTable` function to force an error once again:
 
-```
+```powerquery-m
 withData = Table.AddColumn(rename, "Data", each Diagnostics.LogFailure("Error in GetEntity", () => GetEntity(url, "DoesNotExist")), type table),
 ```
 
 In the trace, you can find the resulting error message containing your `text`, and the original error information.
 
-![LogFailure message.](../../../images/trippin8LogFunction.png)
+![LogFailure message.](../../media/trippin8-log-function.png)
 
 Be sure to reset your function to a working state before proceeding with the next tutorial.
 
@@ -214,4 +216,4 @@ When used properly, these functions are extremely useful in debugging issues wit
 
 ## Next steps
 
-[TripPin Part 9 - TestConnection](../9-TestConnection/README.md)
+[TripPin Part 9 - TestConnection](../9-testconnection/readme.md)

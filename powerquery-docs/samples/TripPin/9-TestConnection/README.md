@@ -5,11 +5,11 @@ author: ptyx507x
 
 
 ms.topic: tutorial
-ms.date: 7/23/2021
+ms.date: 1/9/2023
 ms.author: miescobar
 ---
 
-# TripPin Part 9 - TestConnection
+# TripPin part 9 - TestConnection
 
 This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially&mdash;each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector.
 
@@ -25,13 +25,13 @@ This new (preview) functionality allows for Scheduled Refresh of reports that ma
 
 This tutorial will cover the process of enabling your connector for refresh, and provide a quick walkthrough of the steps to configure the gateway. Specifically you'll:
 
-1. Add a TestConnection handler to your connector
-2. Install the On-Premises Data Gateway in Personal mode
-3. Enable Custom Connector support in the Gateway
-4. Publish a workbook that uses your connector to PowerBI.com
-5. Configure scheduled refresh to test your connector
+1. Add a TestConnection handler to your connector.
+2. Install the On-Premises Data Gateway in Personal mode.
+3. Enable Custom Connector support in the Gateway.
+4. Publish a workbook that uses your connector to PowerBI.com.
+5. Configure scheduled refresh to test your connector.
 
-See [Handling Gateway Support](../../../HandlingGatewaySupport.md) for more information on the TestConnection handler.
+Go to [Handling Gateway Support](../../../HandlingGatewaySupport.md) for more information on the TestConnection handler.
 
 ## Background
 
@@ -54,7 +54,7 @@ In some cases you may need to expose a separate `shared` function to provide an 
 
 Since the TripPin data source function has no required arguments, the implementation for TestConnection is fairly simple:
 
-```
+```powerquery-m
 // Data Source Kind description
 TripPin = [
     // TestConnection is required to enable the connector through the Gateway
@@ -80,21 +80,21 @@ After installation is complete, launch the gateway and sign into Power BI. The s
 3. Select the directory you want to load custom connectors from. This will usually be the same directory that you'd use for Power BI Desktop, but the value is configurable.
 4. The page should now list all extension files in your target directory.
 
-![Gateway connector configuration.](../../../images/trippin9Gateway.png)
+![Gateway connector configuration.](../../media/trippin9-gateway.png)
 
-See the [online documentation](/data-integration/gateway/) for more information about the gateway.
+Go to the [online documentation](/data-integration/gateway/) for more information about the gateway.
 
 ## Testing scheduled refresh
 
 Open Power BI Desktop and create a report that imports data using the TripPin connector.
 
-![TripPin Navigator.](../../../images/trippin9Navigator.png)
+![TripPin Navigator.](../../media/trippin9-navigator.png)
 
 Add one or more visuals to your report page (optional), and then publish the report to PowerBI.com.
 
 After publishing, go to PowerBI.com and find the dataset for the report you just published. Select the ellipses, and then select **Schedule Refresh**. Expand the **Gateway connection** and **Data source credentials** sections.
 
-![Data source settings.](../../../images/trippin9Settings1.png)
+![Data source settings.](../../media/trippin9-settings-1.png)
 
 >[!Note]
 > If the dataset configuration page says that the report contains unknown data sources, your gateway/custom connector might not be configured properly. Go to the personal gateway configuration UI and make sure that there are no errors next to the TripPin connector. You may need to restart the gateway (on the **Service Settings** tab) to pick up the latest configuration.
@@ -104,11 +104,11 @@ Select the **Edit credentials** link to bring up the authentication dialog, and 
 >[!Note]
 > If you receive an error similar to the one below ("Failed to update data source credentials"), you most likely have an issue with your TestConnection handler.
 
-![TestConnection error.](../../../images/trippin9TestConnection.png)
+![TestConnection error.](../../media/trippin9-testconnection.png)
 
 After a successful call to TestConnection, the credentials will be accepted. You can now schedule refresh, or select the dataset ellipse and then select **Refresh Now**. You can select the **Refresh history** link to view the status of the refresh (which generally takes a few minutes to get kicked off).
 
-![Successful configuration.](../../../images/trippin9Settings2.png)
+![Successful configuration.](../../media/trippin9-settings-2.png)
 
 ## Conclusion
 
@@ -116,4 +116,4 @@ Congratulations! You now have a production ready custom connector that supports 
 
 ## Next steps
 
-[TripPin Part 10 - Query Folding](../10-TableView1/README.md)
+[TripPin Part 10 - Query Folding](../10-gableview1/readme.md)

@@ -40,7 +40,7 @@
     <Compile Include="TripPin.pq">
       <SubType>Code</SubType>
     </Compile>
-    <Content Include="README.md">
+    <Content Include="readme.md">
       <SubType>Content</SubType>
     </Content>
     <Content Include="TripPin.query.pq">

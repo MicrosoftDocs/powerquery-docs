@@ -119,4 +119,4 @@ Only Power Query certified connectors are shown in the Power Query Online experi
 * [M Library Functions](/powerquery-m/power-query-m-function-reference)
 * [M Language Specification](/powerquery-m/power-query-m-language-specification)
 * [Power BI Developer Center](https://powerbi.microsoft.com/developers/)
-* [Data Connector Tutorial](samples/TripPin/README.md)
+* [Data Connector Tutorial](samples/trippin/readme.md)
