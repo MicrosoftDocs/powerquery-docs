@@ -107,7 +107,7 @@ To connect to Google Analytics data:
 
 ## Limitations and issues
 
-You should be aware of the following limitations and issues associated with accessing Adobe Analytics data.
+You should be aware of the following limitations and issues associated with accessing Google Analytics data.
 
 ### Google Analytics quota limits for Power BI
 
