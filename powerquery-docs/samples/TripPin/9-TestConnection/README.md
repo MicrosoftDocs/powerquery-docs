@@ -116,4 +116,4 @@ Congratulations! You now have a production ready custom connector that supports 
 
 ## Next steps
 
-[TripPin Part 10 - Query Folding](../10-gableview1/readme.md)
+[TripPin Part 10 - Query Folding](../10-tableview1/readme.md)

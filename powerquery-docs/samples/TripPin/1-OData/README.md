@@ -152,4 +152,4 @@ In the next lesson, you'll replace the use of [OData.Feed](/powerquery-m/odata-f
 
 ## Next steps
 
-[TripPin Part 2 - Data Connector for a REST Service](../2-4est/readme.md)
+[TripPin Part 2 - Data Connector for a REST Service](../2-rest/readme.md)

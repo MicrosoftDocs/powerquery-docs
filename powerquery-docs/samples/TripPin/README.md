@@ -42,7 +42,7 @@ It's strongly suggested that you review:
 |2   |[Rest](2-rest/readme.md)                       |Connect to a REST API that returns a JSON response   |
 |3   |[Nav Tables](3-navtables/readme.md)            |Provide a navigation experience for your source    |
 |4   |[Data Source Paths](4-paths/readme.md)         |How credentials are identified for your data source  |
-|5   |[Paging](5-aging/readme.md)                   |Read with a paged response from a web service        |
+|5   |[Paging](5-paging/readme.md)                   |Read with a paged response from a web service        |
 |6   |[Enforcing Schema](6-schema/readme.md)         |Enforce table structure and column data types        |
 |7   |[Advanced Schema](7-advancedschema/readme.md)  |Dynamically enforce table structure using M types and external metadata |
 |8   |[Diagnostics](8-diagnostics/readme.md)         |Add detailed tracing to the connector                |
