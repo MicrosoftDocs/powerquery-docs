@@ -2,7 +2,7 @@
 title: Providing user documentation for your Power Query custom connector
 description: Describes the format and layout of the user documentation that needs to be submitted for your Power Query custom connector.
 author: bezhan-msft
-ms.date: 1/5/2023
+ms.date: 1/9/2023
 ms.author: bezhan
 ---
 
@@ -32,7 +32,7 @@ After the support note, provide a summary table that contains the following info
 * **Authentication types supported**: Lists the authentication types your custom connector supports.
 * **Function reference documentation**: Lists any M formula language documentation associated with your custom connector.
 
-![Example summary table.](images/sample-summary.png)
+![Example summary table.](media/providing-user-documentation/sample-summary.png)
 
 If your custom connector is implemented on various products, but has different capabilities on these products, include the following or similar note in your article after the summary table.
 

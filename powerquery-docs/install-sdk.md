@@ -1,14 +1,14 @@
 ---
-title: Power Query SDK Overview
+title: Power Query SDK overview
 description: Installation and explanation of the Power Query SDK and how to use Custom Connectors
 author: ptyx507x
 
 ms.topic: quickstart
-ms.date: 10/11/2022
+ms.date: 1/9/2023
 ms.author: miescobar
 ---
 
-# Power Query SDK Overview
+# Power Query SDK overview
 
 The Power Query SDK is a set of tools designed to help you create Power Query connectors. These connectors are often referred to as custom connectors or Power Query extensions.
 
@@ -27,7 +27,7 @@ There are currently two versions of the Power Query SDK available:
 * **Visual Studio Power Query SDK**: Released in 2017 as an extension for Visual Studio 2017 and 2019.
 * **Visual Studio Code Power Query SDK (Preview)**: Released in 2022 as the new and recommended way to create Power Query connectors.
 
-We encourage all developers to install and use the newly released Visual Studio Code Power Query SDK (Preview) as this version will eventually be the default SDK going forward. 
+We encourage all developers to install and use the newly released Visual Studio Code Power Query SDK (Preview) as this version will eventually be the default SDK going forward.
 
 ### Visual Studio Power Query SDK
 
@@ -38,7 +38,7 @@ Follow the steps below to install the Visual Studio Power Query SDK:
 3. Define your connector logic.
 4. Build the project to produce an extension file.
 
-![Preview Feature.](images/newProject.png)
+![Preview Feature.](media/install-sdk/new-project.png)
 
 ### Visual Studio Code Power Query SDK (Preview)
 
@@ -91,7 +91,7 @@ Extensions are defined within an M section document. A section document has a sl
 
 More information about M section documents can be found in the [M Language specification](/powerquery-m/m-spec-sections).
 
-## Distribution of Data Connectors
+## Distribution of data connectors
 
 Power Query connectors can be used in Power BI Desktop or the Power Query Online experience, such as Power BI dataflows, Power BI datamarts, and other experiences.
 
