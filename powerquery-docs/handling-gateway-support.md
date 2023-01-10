@@ -3,7 +3,7 @@ title: Gateway Support for Power Query connectors
 description: Manage gateway support for Power Query connectors, including test connection
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 2/28/2022
+ms.date: 1/9/2023
 ms.author: miescobar
 ---
 
@@ -36,12 +36,10 @@ If the invocation of the function results in an error, TestConnection is conside
 
 #### Example: Connector with no required arguments
 
-The code snippet below implements TestConnection for a data source with no required parameters (such as the one found in the [TripPin tutorial](samples/TripPin/README.md)).
-Connectors with no required parameters (referred to as 'Singletons') do not need any user provided input to test a connection (other than credentials).
-In this case, the `dataSourcePath` value would be equal to the name of the Data Source Kind, and can be ignored.
+The code snippet below implements TestConnection for a data source with no required parameters (such as the one found in the [TripPin tutorial](samples/trippin/readme.md)). Connectors with no required parameters (referred to as 'Singletons') do not need any user provided input to test a connection (other than credentials). In this case, the `dataSourcePath` value would be equal to the name of the Data Source Kind, and can be ignored.
 The `TripPin.Contents` function is invoked with no additional parameters.
 
-```
+```powerquery-m
 TripPin = [
     TestConnection = (dataSourcePath) => { "TripPin.Contents" },
     Authentication = [
@@ -53,10 +51,9 @@ TripPin = [
 
 #### Example: Connector with a URL parameter
 
-If your data source function has a single required parameter of the type `Uri.Type`, its `dataSourcePath` will be equal to the URL provided by the user. The snippet below 
-shows the TestConnection implementation from the [Github Sample](samples/Github/README.md).
+If your data source function has a single required parameter of the type `Uri.Type`, its `dataSourcePath` will be equal to the URL provided by the user. The snippet below shows the TestConnection implementation from the [Github Sample](samples/github/readme.md).
 
-```
+```powerquery-m
 GithubSample = [
     TestConnection = (dataSourcePath) => {"GithubSample.Contents", dataSourcePath},
     Authentication = [
@@ -73,9 +70,9 @@ GithubSample = [
 
 If your data source function has multiple parameters, or a single non-URL parameter,
 then the `dataSourcePath` value will be a JSON string containing the parameters. The snippet
-below comes from the [DirectQueryForSQL](https://github.com/Microsoft/DataConnectors/tree/master/samples/DirectQueryForSQL) sample. 
+below comes from the [DirectQueryForSQL](https://github.com/Microsoft/DataConnectors/tree/master/samples/DirectQueryForSQL) sample.
 
-```
+```powerquery-m
 DirectSQL = [
     TestConnection = (dataSourcePath) =>
         let
