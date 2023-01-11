@@ -29,7 +29,7 @@ For Power BI Desktop versions released before December 2019, you must install th
 
 **We recommend NpgSQL 4.0.10. NpgSQL 4.1 and up won't work due to .NET version incompatibilities.**
 
-![Npgsql installer with GAC Installation selected.](../images/Postgres1.png)
+![Npgsql installer with GAC Installation selected.](media/postgresql/postgres-1.png)
 
 ## Capabilities Supported
 

@@ -3,7 +3,7 @@ title: Split columns by uppercase to lowercase
 description: Split columns by uppercase to lowercase
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 06/04/2020
+ms.date: 1/9/2023
 ms.author: miescobar
 ---
 
@@ -18,21 +18,21 @@ You can find the **Split Columns > By Uppercase to Lowercase** option in three p
 
 * **Home tab**&mdash;under the **Split Column** dropdown menu inside the **Transform** group.
 
-   ![Image shows By Uppercase to Lowercase under the Home tab.](images/sc-home-ul.png)
+   ![Image shows By Uppercase to Lowercase under the Home tab.](media/splitcolumns-uppercase-to-lowercase/sc-home-ul.png)
 
 * **Transform tab**&mdash;under the **Split Column** dropdown menu inside the **Text Column** group.
 
-   ![Image shows By Uppercase to Lowercase under the Transform tab.](images/sc-transform-ul.png)
+   ![Image shows By Uppercase to Lowercase under the Transform tab.](media/splitcolumns-uppercase-to-lowercase/sc-transform-ul.png)
 
 * **Right-click a column**&mdash;inside the **Split Column** option.
 
-   ![Image shows By Uppercase to Lowercase when right-clicking a column.](images/sc-rightclick-ul.png)
+   ![Image shows By Uppercase to Lowercase when right-clicking a column.](media/splitcolumns-uppercase-to-lowercase/sc-rightclick-ul.png)
 
-## Split columns by uppercase to lowercase into columns 
+## Split columns by uppercase to lowercase into columns
 
-Your initial table in this example will be the one shown in the image below, with only one column for **Column1**. 
+Your initial table in this example will be the one shown in the image below, with only one column for **Column1**.
 
-![Image showing table with Products/Brands column, with five rows, with the Word column containing the first and second half of the word.](images/sc-before-ul.png)
+![Image showing table with Products/Brands column, with five rows, with the Word column containing the first and second half of the word.](media/splitcolumns-uppercase-to-lowercase/sc-before-ul.png)
 
 This column holds two values:
 
@@ -45,5 +45,4 @@ This single column will split into multiple columns, given every instance of the
 
 Your final table will look like the following image.
 
-![Image showing Products/Brands.1 and Products/Brands.2 columns, with the first and second half of the word separated into the two columns.](images/sc-after-ul.png)
-
+![Image showing Products/Brands.1 and Products/Brands.2 columns, with the first and second half of the word separated into the two columns.](media/splitcolumns-uppercase-to-lowercase/sc-after-ul.png)

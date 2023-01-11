@@ -2,7 +2,7 @@
 title: Query folding indicators in Power Query
 description: Query folding indicators in Power Query Online help you understand what steps fold and give insight into how to build more performant queries.
 author: ptyx507x
-ms.date: 6/27/2022
+ms.date: 1/9/2023
 ms.author: miescobar
 ---
 
@@ -34,7 +34,7 @@ in
 
 If you examine how this code shows up in query folding indicators, you'll note that the first step is inconclusive. But the second step does fold, which means that the query up to that point does fold.
 
-![Source and Navigation steps in Folding Indicator pane.](images/interpreting-step-diagnostics-1.png)
+![Source and Navigation steps in Folding Indicator pane.](media/step-folding-indicators/interpreting-step-diagnostics-1.png)
 
 In this example, the initial steps can't be confirmed to fold (is inconclusive), but the final step generated when you load data initially does fold. How the first steps (**Source**, and sometimes other **Navigation** steps) are handled depends on the connector. With SQL, for example, it's handled as a catalog table value, which doesn't fold. However, as soon as you select data for that connector, it will fold.
 
@@ -53,7 +53,7 @@ in
   
 In the query folding indicators, you have the same indicators as above, except the final step doesn't fold. Everything up to this final step will be performed on the data source, while the final step will be performed locally.
 
-![Source, Navigation, and Capitalize Each Word steps in Folding Indicator pane.](images/interpreting-step-diagnostics-2.png)
+![Source, Navigation, and Capitalize Each Word steps in Folding Indicator pane.](media/step-folding-indicators/interpreting-step-diagnostics-2.png)
 
 ## Step diagnostics indicators
 
@@ -61,30 +61,30 @@ Query folding indicators use an underlying query plan, and require it to be able
 
 |Indicator|Icon|Description|
 |---------|----|-------|
-|**Folding**|![Folding indicator for 'will fold'.](images/folding-small.png)|The folding indicator tells you that the query up to this step will be evaluated by the data source.|
-|**Not folding**|![Folding indicator for 'not folding'.](images/not-folding-small.png)|The not-folding indicator tells you that some part of the query up to this step will be evaluated outside the data source. You can compare it with the last folding indicator, if there is one, to see if you can rearrange your query to be more performant.|
-|**Might fold**|![Folding indicator for 'might fold'.](images/might-fold-small.png)|Might fold indicators are uncommon. They mean that a query "might" fold. They indicate either that folding or not folding will be determined at runtime, when pulling results from the query, and that the query plan is dynamic. These indicators will likely only appear with ODBC or OData connections. |
-|**Opaque**|![Folding indicator for 'opaque, inconclusive folding'.](images/opaque-folding-small.png)|Opaque indicators tell you that the resulting query plan is inconclusive for some reason. It generally indicates that there's a true "constant" table, or that that transform or connector isn't supported by the indicators and query plan tool.|
-|**Unknown**|![Folding indicator for 'no query plan'.](images/no-query-plan-small.png)|Unknown indicators represent an absence of a query plan, either due to an error or attempting to run the query plan evaluation on something other than a table (such as a record, list, or primitive).|
+|**Folding**|![Folding indicator for 'will fold'.](media/step-folding-indicators/folding-small.png)|The folding indicator tells you that the query up to this step will be evaluated by the data source.|
+|**Not folding**|![Folding indicator for 'not folding'.](media/step-folding-indicators/not-folding-small.png)|The not-folding indicator tells you that some part of the query up to this step will be evaluated outside the data source. You can compare it with the last folding indicator, if there is one, to see if you can rearrange your query to be more performant.|
+|**Might fold**|![Folding indicator for 'might fold'.](media/step-folding-indicators/might-fold-small.png)|Might fold indicators are uncommon. They mean that a query "might" fold. They indicate either that folding or not folding will be determined at runtime, when pulling results from the query, and that the query plan is dynamic. These indicators will likely only appear with ODBC or OData connections. |
+|**Opaque**|![Folding indicator for 'opaque, inconclusive folding'.](media/step-folding-indicators/opaque-folding-small.png)|Opaque indicators tell you that the resulting query plan is inconclusive for some reason. It generally indicates that there's a true "constant" table, or that that transform or connector isn't supported by the indicators and query plan tool.|
+|**Unknown**|![Folding indicator for 'no query plan'.](media/step-folding-indicators/no-query-plan-small.png)|Unknown indicators represent an absence of a query plan, either due to an error or attempting to run the query plan evaluation on something other than a table (such as a record, list, or primitive).|
 
 ## Example analysis
 
 For an example analysis, start by connecting to the **Production.Product** table in Adventure Works (SQL). The initial load, similar to the example above, looks like the following image.
 
-![Initial step indicators for loading the Product table.](images/example-step-diagnostics-1.png)
+![Initial step indicators for loading the Product table.](media/step-folding-indicators/example-step-diagnostics-1.png)
 
 Adding more steps that fold will extend that green line on the right side. This extension occurs because this step also folds.
 
-![Adding a remove column step to the previous query, extending the green folding indicator line.](images/example-step-diagnostics-2.png)
+![Adding a remove column step to the previous query, extending the green folding indicator line.](media/step-folding-indicators/example-step-diagnostics-2.png)
 
  Adding a step that doesn't fold displays a different indicator. For example, **Capitalize each word** never folds. The indicator changes, showing that as of this step, it's stopped folding. As mentioned earlier, the previous steps will still fold.
 
- ![Adding a Capitalize Each Word step to break folding.](images/example-step-diagnostics-3.png)
+ ![Adding a Capitalize Each Word step to break folding.](media/step-folding-indicators/example-step-diagnostics-3.png)
 
  Adding more steps downstream that depend on **Capitalize each step** will continue to not fold.
 
- ![Adding more steps that don't fold.](images/example-step-diagnostics-4.png)
+ ![Adding more steps that don't fold.](media/step-folding-indicators/example-step-diagnostics-4.png)
 
  However, if you remove the column you applied the capitalization to so that the optimized query plan can all fold once more, you'll get a result like the following image. However, something like this is uncommon. This image illustrates how it's not just the order of steps, but the actual transformations that apply as well.
 
- ![Showing how removing the problematic column allows things to fold without removing the step.](images/example-step-diagnostics-5.png)
+ ![Showing how removing the problematic column allows things to fold without removing the step.](media/step-folding-indicators/example-step-diagnostics-5.png)

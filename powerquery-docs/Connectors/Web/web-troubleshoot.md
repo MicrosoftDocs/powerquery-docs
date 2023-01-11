@@ -3,7 +3,7 @@ title: Troubleshooting the Power Query Web connector
 description: Provides troubleshooting tips for errors that might occur when using the Power Query Web connector to connect to a web site.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 8/19/2022
+ms.date: 1/9/2023
 ms.author: bezhan
 ---
 
@@ -17,7 +17,7 @@ Connecting to [Microsoft Graph](/graph/overview) REST [APIs](https://graph.micro
 
 Every use of the Web connector to get data from an HTML page requires the use of an on-premises data gateway when published to a Cloud service, whether it's Power BI Service for datasets or dataflows, or Power Apps for dataflows. (Currently, Dynamics 365 Customer Insights doesn't support the use of a gateway.) <!-- The only exception is when using Power BI Desktop with the **New web table inference** option turned on, and then publishing that report to the Power BI service. The **New web table inference** option can be enabled or disabled in Power BI Desktop by going to **File** > **Options and settings** > **Options** > **Preview features**. The option is enabled by default. -->
 
-If you receive a `Please specify how to connect` error message when attempting to connect to an HTML page using the Web connector, ensure that you have Internet Explorer 10 or later installed on the machine that hosts your on-premises data gateway. 
+If you receive a `Please specify how to connect` error message when attempting to connect to an HTML page using the Web connector, ensure that you have Internet Explorer 10 or later installed on the machine that hosts your on-premises data gateway.
 
 ## Capturing web requests and certificate revocation
 
@@ -27,7 +27,7 @@ We've strengthened the security of web connections to protect your data. However
 2. Under the **File** tab, select **Options and settings** > **Options**.
 3. In **Options**, under **Global** > **Security**, uncheck **Enable certificate revocation check**.
 
-   ![Image with the Enable certificate revocation check box selected.](../../images/web-certificate-revocation.png)
+   ![Image with the Enable certificate revocation check box selected.](web-certificate-revocation.png)
 
 4. Select **OK**.
 5. Restart Power BI Desktop.
@@ -71,7 +71,7 @@ You can also get a copy of a `Web.Page` query from Excel. To copy the code from 
 1. Select **From Web** from the **Data** tab.
 2. Enter the address in the **From Web** dialog box, and then select **OK**.
 3. In **Navigator**, choose the data you want to load, and then select **Transform Data**.
-4. In the **Home** tab of Power Query, select **Advanced Editor**. 
+4. In the **Home** tab of Power Query, select **Advanced Editor**.
 5. In the **Advanced Editor**, copy the M formula.
 6. In the app that uses `Web.BrowserContents`, select the **Blank Query** connector.
 7. If you're copying to Power BI Desktop:
@@ -80,7 +80,7 @@ You can also get a copy of a `Web.Page` query from Excel. To copy the code from 
 8. If you're copying to Power Query Online:
     1. In the **Blank Query**, paste the copied `Web.Page` query in the blank query.
     2. Select an on-premises data gateway to use.
-    3. Select **Next**. 
+    3. Select **Next**.
 
 You can also manually enter the following code into a blank query. Ensure that you enter the address of the web page you want to load.
 
@@ -98,9 +98,9 @@ Some services support the ability for the Web connector to authenticate with OAu
 
 When attempting to authenticate, if you see the following error:
 
-“We were unable to connect because this credential type isn’t supported for this resource. Please choose another credential type.”
+"We were unable to connect because this credential type isn’t supported for this resource. Please choose another credential type."
 
-   ![Error from connecting to an endpoint that doesn't support OAuth with the web connector.](../../images/credential-type-not-supported.png)
+   ![Error from connecting to an endpoint that doesn't support OAuth with the web connector.](../media/odata-feed/credential-type-not-supported.png)
 
 Please contact the service owner. They will either need to change the authentication configuration or build a custom connector.
 

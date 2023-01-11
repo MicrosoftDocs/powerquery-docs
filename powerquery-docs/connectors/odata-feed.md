@@ -36,7 +36,7 @@ ms.author: bezhan
 
 To load data from an OData Feed in Power Query Desktop:
 
-1. Select the **OData** or **OData Feed** option in the connector selection. 
+1. Select the **OData** or **OData Feed** option in the connector selection.
 
 2. Choose the **Basic** button and enter a URL address in the text box. This URL should be the root of the OData service you want to connect to. For example, enter `http://services.odata.org/V4/northwind/northwind.svc/`. Then select **OK**.
 
@@ -58,7 +58,7 @@ To load data from an OData Feed in Power Query Desktop:
 
 To load data from an OData Feed in Power Query Online:
 
-1. Select the **OData** or **OData Feed** option in the connector selection. 
+1. Select the **OData** or **OData Feed** option in the connector selection.
 
 2. In the OData dialog that appears, enter a URL in the text box.
 
@@ -98,7 +98,7 @@ When attempting to authenticate, if the following error occurs:
 
 `We were unable to connect because this credential type isn’t supported for this resource. Please choose another credential type.`
 
-   ![Error from connecting to an endpoint that doesn't support OAuth with the web connector.](../images/credential-type-not-supported.png)
+   ![Error from connecting to an endpoint that doesn't support OAuth with the web connector.](media/odata-feed/credential-type-not-supported.png)
 
 Contact the service owner. They'll either need to change the authentication configuration or build a custom connector.
 
