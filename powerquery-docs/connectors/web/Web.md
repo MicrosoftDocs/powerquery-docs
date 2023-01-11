@@ -157,11 +157,11 @@ Normally when you import a local on-premises file in Power Query Desktop, you'll
 
 The following file types are supported by the Web Connector:
 
-* [Access database](../accessdatabase.md)
-* [CSV document](../textcsv.md)
+* [Access database](../access-database.md)
+* [CSV document](../text-csv.md)
 * [Excel workbook](../excel.md)
 * [JSON](../json.md)
-* [Text file](../textcsv.md)
+* [Text file](../text-csv.md)
 * HTML page
 * [XML tables](../xml.md)
 * [PDF](../pdf.md)
