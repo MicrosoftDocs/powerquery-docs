@@ -309,7 +309,7 @@
       - name: "Adobe Analytics"
         href: connectors/adobe-analytics.md
       - name: "Amazon Athena"
-        href: connectors/amazon-athena.md"
+        href: connectors/amazon-athena.md
       - name: "Amazon OpenSearch Service (Beta)"
         href: connectors/amazon-opensearch-service.md
       - name: "Amazon Redshift"
@@ -367,7 +367,7 @@
       - name: "Dataflows"
         href: connectors/dataflows.md
       - name: "Delta Sharing"
-        href: connectors/deltasharing.md
+        href: connectors/delta-sharing.md
       - name: "Denodo"
         href: connectors/denodo.md
       - name: "Digital Construction Works Insights (Beta)"
