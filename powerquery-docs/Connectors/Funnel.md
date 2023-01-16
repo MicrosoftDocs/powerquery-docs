@@ -1,12 +1,12 @@
 ---
 title: Power Query Funnel connector
 description: Provides basic information, prerequisites, and information on how to connect to your data, along with a list of known issues and limitations.
-author: Funnel
+author: bezhan-msft
 
 
 ms.topic: conceptual
-ms.date: 03/08/2022
-ms.author: Funnel
+ms.date: 1/16/2023
+ms.author: bezhan
 
 LocalizationGroup: reference
 ---
@@ -21,13 +21,13 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets) |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
 | Authentication Types Supported | Funnel Workspace |
 | | |
 
 ## Prerequisites
 
-To use the Funnel connector, you need a Funnel subscription. Funnel helps you collect data from all your marketing platform, transform it, and send it to the destinations you want, like Power BI (<https://funnel.io/>).
+To use the Funnel connector, you need a Funnel subscription. Funnel helps you collect data from all your marketing platforms, transform it, and send it to the destinations you want, like Power BI (<https://funnel.io/>).
 
 In the Funnel App, go to your Workspace, navigate to the Microsoft Power BI page in the left navigation (if you can't see it, please contact us). Follow the instructions on the page. You need to create a "Data Share" that contains the fields you want to expose in Power BI.
 
@@ -40,7 +40,7 @@ In the Funnel App, go to your Workspace, navigate to the Microsoft Power BI page
 To connect to Funnel:
 
 1. Select Online Services, find **Funnel** from the product-specific data connector list, and then select **Connect**.
-   ![Select Funnel Connector.](./media/funnel/funnel_connector.png)
+   ![Select Funnel Connector.](./media/funnel/funnel_connector.png#lightbox)
 
 1. Select **Sign in** to sign in to your Funnel Workspace.
 
@@ -63,6 +63,6 @@ To connect to Funnel:
 
 ## Known issues and limitations
 
-* If a Data Share contains too much data for one month the connector will get a TOO_MANY_ROWS error.
+* If a Data Share contains too much data for one month, the connector will get a TOO_MANY_ROWS error.
 
 For more information, please read our [Power BI knowledge base articles](https://help.funnel.io/en/?q=powerbi).
