@@ -57,11 +57,11 @@ To connect to Azure Cosmos DB data:
 
       SELECT SUM(ColumnName) FROM TableName where Product = 'SampleValue'.
 
-      Note: Use [Azure Synapse Link for Azure Cosmos DB](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/powerbi-visualize#building-bi-reports-using-azure-synapse-link) if you would like to execute cross-partitioned aggregate functions against the Cosmos DB container.
+      Note: Use [Azure Synapse Link for Azure Cosmos DB](https://learn.microsoft.com/azure/cosmos-db/nosql/powerbi-visualize#building-bi-reports-using-azure-synapse-link) if you would like to execute cross-partitioned aggregate functions against the Cosmos DB container.
       
       More information: 
 
-      * [Dataset modes in the Power BI service](https://learn.microsoft.com/en-us/power-bi/connect-data/service-dataset-modes-understand)
+      * [Dataset modes in the Power BI service](https://learn.microsoft.com/power-bi/connect-data/service-dataset-modes-understand)
 
       * [Use DirectQuery in Power BI Desktop](/power-bi/connect-data/desktop-use-directquery)
 
@@ -73,7 +73,7 @@ To connect to Azure Cosmos DB data:
 
     [![The Navigator dialog box shows your data.](./media/azure-cosmosdb/Navigator.png)](./media/azure-cosmosdb/azure-cosmosdb-navigation.png#lightbox)
 
-8. The most optimal way to specify Partition Key filter (so that the aggregate functions can be pushed down to Cosmos DB) is to use **[dynamic M Parameters](https://learn.microsoft.com/en-us/power-bi/connect-data/desktop-dynamic-m-query-parameters)**. To use dynamic M Parameters, you would **create a dataset with unique Partition Key values**, **create a Parameter**, **add it as filter on main dataset**, **bind it to the unique Partition key datset** and **use it as a Slicer for the main dataset**. Please follow the below steps to enable dynamic M Parameters for Partition Key filtering.
+8. The most optimal way to specify Partition Key filter (so that the aggregate functions can be pushed down to Cosmos DB) is to use **[dynamic M Parameters](https://learn.microsoft.com/power-bi/connect-data/desktop-dynamic-m-query-parameters)**. To use dynamic M Parameters, you would **create a dataset with unique Partition Key values**, **create a Parameter**, **add it as filter on main dataset**, **bind it to the unique Partition key datset** and **use it as a Slicer for the main dataset**. Please follow the below steps to enable dynamic M Parameters for Partition Key filtering.
 
    **a. Create a dataset with unique partition key values**:
 
