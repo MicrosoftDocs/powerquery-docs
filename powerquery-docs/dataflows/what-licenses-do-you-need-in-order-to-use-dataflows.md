@@ -3,7 +3,7 @@ title: What licenses do you need to use dataflows
 description: What licenses do you need to use dataflows
 author: bensack
 ms.topic: conceptual
-ms.date: 08/01/2022
+ms.date: 01/19/2023
 ms.author: bensack
 ---
 
@@ -58,9 +58,16 @@ The preceding table shows what features each license will give you. The followin
 
 ### Power Apps licenses
 
-If you use a Power Apps license to create dataflows, there's no limitation on the number of dataflows and entities you can create. However, there's a limitation on the size of Dataverse service you can use.
+If you use a Power Apps license to create dataflows, there's no limitation on the number of dataflows and entities you can create. However, there's a limitation on the size of Dataverse service you can use and refresh performance.
 
 The Power Apps per-app plan covers up to a 50-MB database capacity. The Power Apps per-user plan allows you to have a database of 250-MB capacity.
+
+In Power Apps we have the following limitations in place:
+
+- A Dataflow refresh can take a maximum of 24 hours.
+- Each query/partition has a maximum run duration of 2 hours.
+- For each refresh, there is a concurrency limit of 4 queries/partitions that can refresh simultaneously.
+- In total, a single UserObjectId can run 10 query evaluations at the same time.
 
 ### Power BI Pro
 
