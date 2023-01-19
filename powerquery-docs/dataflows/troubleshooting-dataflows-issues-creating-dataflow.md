@@ -78,3 +78,17 @@ You're creating the dataflow in an old version of the Power BI workspace, called
 Upgrade your Power BI workspace to the new version (v2). More information: [Upgrade classic workspaces to the new workspaces in Power BI](/power-bi/collaborate-share/service-upgrade-workspaces)
 
 ![Upgrade the classic workspace.](media/UpgradeWorkspace.png)
+
+## Dataflow name exists already, but I deleted the old one
+
+This problem happens when you try to create a dataflow with a name that already exists or use the name of a recently deleted a dataflow.
+
+   ![Dataflow name exists already](media/DF-Name-Exists.png)
+
+**Reason:**
+
+It can take up to 48 hours till the backend systems deleted all files and references of the deleted dataflow.
+
+**Resolution:**
+
+You can either wait 48 hours with publishing the dataflow or create it now under a different name and rename it later on.
