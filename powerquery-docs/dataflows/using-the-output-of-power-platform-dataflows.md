@@ -2,13 +2,9 @@
 title: Consume data from dataflows
 description: Consume data from dataflows.
 author: luitwieler
-
-
 ms.topic: conceptual
 ms.date: 01/12/2022
 ms.author: jeluitwi
-
-LocalizationGroup: Data from files
 ---
 
 # Consume data from dataflows
@@ -56,7 +52,7 @@ You're probably using a Dataverse table as the destination for your standard dat
 
 _**There's a difference in the data when I remove duplicates in dataflows&mdash;how can I resolve this?**_
 
-There could be a difference in data between design-time and refresh-time. We don't guarantee which instance is being kept during refresh time. For information that will help you avoid inconsistencies in your data, go to [Working with duplicate values](/powerquery-docs/working-with-duplicates).
+There could be a difference in data between design-time and refresh-time. We don't guarantee which instance is being kept during refresh time. For information that will help you avoid inconsistencies in your data, go to [Working with duplicate values](../working-with-duplicates.md).
 
 ## Next Steps
 
@@ -67,4 +63,4 @@ The following articles provide more details about related articles.
 - [Connect to data created by Power BI dataflows in Power BI Desktop (Beta)](/power-bi/desktop-connect-dataflows)
 - [Create and use dataflows in Power Platform](/data-integration/dataflows/dataflows-integration-overview)
 - [Link entities between dataflows (Power Platform)](/data-integration/dataflows/dataflows-linked-entities)
-- [Working with duplicate values in dataflows](/powerquery-docs/working-with-duplicates)
+- [Working with duplicate values in dataflows](../working-with-duplicates.md)

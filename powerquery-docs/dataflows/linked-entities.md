@@ -2,15 +2,9 @@
 title: Link entities between dataflows
 description: Learn how to link entities in dataflows
 author: bensack
-manager: kfile
-ms.reviewer: ''
-
-
 ms.topic: conceptual
 ms.date: 2/08/2022
 ms.author: bensack
-
-LocalizationGroup: Data from files
 ---
 # Link entities between dataflows
 

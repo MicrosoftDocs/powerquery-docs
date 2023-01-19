@@ -1,13 +1,10 @@
 ---
 title: Power Query Mailchimp connector
 description: Provides information on the deprecation of the Mailchimp connector.
-author: bezhan
-
+author: bezhan-msft
 ms.topic: conceptual
 ms.date: 4/8/2020
 ms.author: bezhan
-ms.reviewer: kvivek
-LocalizationGroup: reference
 ---
 
 # Mailchimp (Deprecated)

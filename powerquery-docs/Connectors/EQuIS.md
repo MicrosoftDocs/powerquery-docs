@@ -2,11 +2,9 @@
 title: EarthSoft's EQuIS Power Query Data Connector
 description: Provides basic information and connection instructions for the EQuIS connector.
 author: mathew-weaver
-
 ms.topic: conceptual
-ms.date: 9/16/2021
+ms.date: 6/24/2022
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # EQuIS (Beta)
@@ -19,10 +17,9 @@ LocalizationGroup: reference
 | Item | Description |
 | ------- | ---------- |
 | Release State | Preview |
-| Products | Power BI (Datasets) |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
 | Authentication Types Supported | Basic<br/>Web API (API Token)<br/>Organizational Account |
-| Function Reference Documentation | - |
-| | |
+| Function Reference Documentation | &mdash; |
 
 ## Prerequisites
 

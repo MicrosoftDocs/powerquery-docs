@@ -1,15 +1,12 @@
 ---
 title: TripPin 5 - Paging
 description: Adding paging to your TripPin REST connector.
-author: cpopell
-manager: kfile
+author: ptyx507x
 
 
 ms.topic: tutorial
 ms.date: 5/15/2020
-ms.author: gepopell
-
-LocalizationGroup: reference
+ms.author: miescobar
 ---
 
 # TripPin Part 5 - Paging
@@ -122,47 +119,9 @@ You're now going to make the following changes to your extension:
 > As stated earlier in this tutorial, paging logic will vary between data sources. The implementation here tries to break up the logic into functions that should be reusable for sources that use _next links_ returned in the response.
 
 ### Table.GenerateByPage
-The `Table.GenerateByPage` function can be used to efficiently combine multiple 'pages' of data 
-into a single table. It does this by repeatedly calling the function passed in as the `getNextPage` 
-parameter, until it receives a `null`. The function parameter must take a single argument, and return a `nullable table`.
+To combine the (potentially) multiple pages returned by the source into a single table, we'll use [`Table.GenerateByPage`](../../../HelperFunctions.md#tablegeneratebypage). This function takes as its argument a `getNextPage` function which should do just what its name suggests: fetch the next page of data. `Table.GenerateByPage` will repeatedly call the `getNextPage` function, each time passing it the results produced the last time it was called, until it returns `null` to signal back that no more pages are available. 
 
-`getNextPage = (lastPage) as nullable table => ...`
-
-Each call to `getNextPage` receives the output from the previous call. 
-
-```
-// The getNextPage function takes a single argument and is expected to return a nullable table
-Table.GenerateByPage = (getNextPage as function) as table =>
-    let        
-        listOfPages = List.Generate(
-            () => getNextPage(null),            // get the first page of data
-            (lastPage) => lastPage <> null,     // stop when the function returns null
-            (lastPage) => getNextPage(lastPage) // pass the previous page to the next function call
-        ),
-        // concatenate the pages together
-        tableOfPages = Table.FromList(listOfPages, Splitter.SplitByNothing(), {"Column1"}),
-        firstRow = tableOfPages{0}?
-    in
-        // if we didn't get back any pages of data, return an empty table
-        // otherwise set the table type based on the columns of the first page
-        if (firstRow = null) then
-            Table.FromRows({})
-        else        
-            Value.ReplaceType(
-                Table.ExpandTableColumn(tableOfPages, "Column1", Table.ColumnNames(firstRow[Column1])),
-                Value.Type(firstRow[Column1])
-            );
-```
-
-Some notes about `Table.GenerateByPage`:
-
-- The `getNextPage` function will need to retrieve the next page URL
-(or page number, or whatever other values are used to implement the paging logic).
-This is generally done by adding `meta` values to the page before returning it.
-- The columns and table type of the combined table (i.e. all pages together) are derived from
-the first page of data. The `getNextPage` function should normalize each page of data. 
-- The first call to `getNextPage` receives a null parameter.
-- `getNextPage` must return null when there are no pages left.
+Since this function is not part of Power Query's standard library, you'll need to copy its [source code](../../../HelperFunctions.md#tablegeneratebypage) into your .pq file. 
 
 ### Implementing GetAllPagesByNextLink
 The body of your `GetAllPagesByNextLink` function implements the `getNextPage` function argument for 

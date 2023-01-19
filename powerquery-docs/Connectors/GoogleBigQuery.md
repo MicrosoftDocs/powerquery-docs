@@ -1,12 +1,10 @@
 ---
 title: Google BigQuery connector
 description: Provides basic information and prerequisites for the Google BigQuery connector for Power Query.
-author: bezhan
-
+author: bezhan-msft
 ms.topic: conceptual
-ms.date: 10/7/2021
+ms.date: 12/13/2022
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # Google BigQuery
@@ -18,7 +16,6 @@ LocalizationGroup: reference
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Customer Insights (Dataflows) |
 | Authentication Types Supported | Organizational account<br/>Service account |
-| | |
 
 >[!Note]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
@@ -33,7 +30,7 @@ You'll need a Google account or a Google service account to sign in to Google Bi
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI Desktop only)
+* DirectQuery (Power BI Datasets only)
 
 ## Connect to Google BigQuery data from Power Query Desktop
 
@@ -109,7 +106,6 @@ The following table lists all of the advanced options you can set in Power Query
 | Command timeout duration | How long Power Query waits for a query to complete and return results. The default depends on the driver default. You can enter another value in minutes to keep the connection open longer. |
 | Project ID | The project that you want to run native queries on. This option is only available in Power Query Desktop. |
 | SQL statement | For information, go to [Import data from a database using native database query](../native-database-query.md). In this version of native database query functionality, you need to use fully qualified table names in the format `Database.Schema.Table`, for example `SELECT * FROM DEMO_DB.PUBLIC.DEMO_TABLE`. This option is only available in Power Query Desktop. |
-| | |
 
 Once you've selected the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your Google BigQuery data.
 
@@ -117,9 +113,25 @@ Once you've selected the advanced options you require, select **OK** in Power Qu
 
 This section describes any limitations or considerations of the Google BigQuery connector.
 
-### Connecting to Google Big Query in Power BI Desktop
+### Connecting to Google BigQuery in Power BI Desktop
 
-For more information about limitations and considerations when connecting to Google Big Query, go to [Considerations and limitations](/power-bi/connect-data/desktop-connect-bigquery#considerations-and-limitations).
+There are a few limits and considerations to keep in mind when using the Google BigQuery connector with Power BI.
+
+#### Connector availability
+
+The Google BigQuery connector is available in Power BI Desktop and in the Power BI service. In the Power BI service, the connector can be accessed using the Cloud-to-Cloud connection from Power BI to Google BigQuery.
+
+#### "Access Denied" error
+
+When you try to connect to Google BigQuery from Power BI Desktop, you might get the following error message:
+
+`Datasource.Error: ODBC: ERROR [HY000][Microsoft][BigQuery] (100) Error interacting with REST API: Access Denied: Project <project name>: The user <user name> bigquery.jobs.create permissions in project <project name>.`
+
+In this case, you might need to enter a Billing Project ID in the **Billing Project** advanced option in the Power Query **Connection settings**.
+
+In addition, if you also create a report in Power BI service using a gateway, you might still get this error. In this case, you must manually include the Billing Project ID in the M code for the connection using the Power Query editor or the Power Query formula bar. For example:
+
+`Source = GoogleBigQuery.Database([BillingProject="Include-Billing-Project-Id-Here"])`
 
 ### Nested fields
 
@@ -140,12 +152,12 @@ For more information on setting up or using Google service accounts, go to [Crea
 
 ### Authenticating through a Google service account
 
-When authenticating through a Google service account in Power BI Desktop, there's a specific credential format that's required by the connector.
+When you authenticate through a Google service account in Power BI Desktop, there's a specific credential format that's required by the connector.
 
 * Service Account Email: must be in email format
 * Service Account JSON key file contents: once this JSON key is downloaded, all new lines must be removed from the file so that the contents are in one line. Once the JSON file is in that format, the contents can be pasted into this field.
 
-When authenticating through a Google service account in Power BI service or Power Query Online, users need to use "Basic" authentication. The **Username** field maps to the **Service Account Email** field above, and the **Password** field maps to the **Service Account JSON key file contents** field above. The format requirements for each credential remain the same in both Power BI Desktop, Power BI service, and Power Query Online.
+When you authenticate through a Google service account in Power BI service or Power Query Online, users need to use "Basic" authentication. The **Username** field maps to the **Service Account Email** field above, and the **Password** field maps to the **Service Account JSON key file contents** field above. The format requirements for each credential remain the same in both Power BI Desktop, Power BI service, and Power Query Online.
 
 ### Unable to authenticate with Google BigQuery Storage API
 

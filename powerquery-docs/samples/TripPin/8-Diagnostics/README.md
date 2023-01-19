@@ -1,15 +1,12 @@
 ---
 title: TripPin 8 - Adding Diagnostics
 description: Adding diagnostics to your TripPin REST connector.
-author: cpopell
-manager: kfile
+author: ptyx507x
 
 
 ms.topic: tutorial
 ms.date: 5/15/2020
-ms.author: gepopell
-
-LocalizationGroup: reference
+ms.author: miescobar
 ---
 
 # TripPin Part 8 - Adding Diagnostics

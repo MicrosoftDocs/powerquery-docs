@@ -1,14 +1,10 @@
 ---
 title: Power Query Salesforce Objects connector
 description: Provides basic information, prerequisites, and information on how to connect to your data, along with a list of known issues and limitations.
-author: dougklopfenstein
-
-
+author: bezhan-msft
 ms.topic: conceptual
-ms.date: 10/27/2021
+ms.date: 1/10/2023
 ms.author: bezhan
-
-LocalizationGroup: reference
 ---
 
 # Salesforce Objects
@@ -24,6 +20,9 @@ LocalizationGroup: reference
 
 >[!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+
+>[!Note]
+> We are aware of ending support for certain Salesforce API versions. Once we're ready to share details around upgrading the API versions that this connector uses, we'll publish in the [release plans](/dynamics365/release-plans/).
 
 >[!Warning]
 > By default, Salesforce does not support Internet Explorer 11, which is used as part of the authentication experience to online services in Power Query Desktop. Please opt-in for [extended support for accessing Lightning Experience Using Microsoft Internet Explorer 11](https://help.salesforce.com/articleView?id=000333934&type=1&mode=1). You may also want to review Salesforce documentation on [configuring Internet Explorer](https://developer.salesforce.com/docs/atlas.en-us.salesforce_supported_browsers_cheatsheet.meta/salesforce_supported_browsers_cheatsheet/getstart_browser_ie.htm). At this time, users will be impaired from authenticating, but stored credentials should continue to work until their existing authentication tokens expire. To resolve this, go to [Enabling Microsoft Edge (Chromium) for OAuth Authentication in Power BI Desktop](../oauth-edge-chromium.md).
@@ -93,6 +92,12 @@ To connect to Salesforce Objects data:
 
 ## Known issues and limitations
 
+* If there are missing tables in the results from the Salesforce Objects connector, one cause might be that the ApiVersion must be specified or updated to a version that's supported by Salesforce. To specify or update the ApiVersion, use the Advanced Editor and explicitly add the `ApiVersion` parameter. For example:
+
+   ```Source = Salesforce.Data("https://login.salesforce.com/", [ApiVersion = 54.0])```
+
+   ApiVersions are periodically deprecated by Salesforce, so ensure that you're specifying a [Salesforce supported ApiVersion](https://na1.salesforce.com/services/data/).
+
 * There's a limit on the number of fields a query to Salesforce can contain. The limit varies depending on the type of the columns, the number of computed columns, and so on. When you receive the `Query is either selecting too many fields or the filter conditions are too complicated` error, it means that your query exceeds the limit. To avoid this error, use the **Select Query** advanced option and specify fields that you really need.
 
 * Salesforce session settings can block this integration. Ensure that the setting **Lock sessions to the IP address from which they originated** is disabled.
@@ -104,5 +109,7 @@ To connect to Salesforce Objects data:
 * Custom fields of type "Picklist (Multi-Select)" are not supported by "Create record" and "Update record" operations.
 
 * Lightning URLs aren't supported.
+
+* Salesforce limits the number of concurrent queries that can be executed by a single account. ['INVALID_QUERY_LOCATOR ' error](https://help.salesforce.com/s/articleView?id=000323582&type=1) This is a Salesforce limit, and can be encountered when there are multiple concurrent queries against Salesforce using the same account. This includes all client applications (not just the PowerQuery connector) using the Salesforce API. To reduce the likelihood of this error, ensure that the number of Salesforce queries are kept to a minimum, use available options (such as dataflows) to stage the data from Salesforce, and confirm that other uses of the Salesforce API with the same account are not scheduled concurrently.
 
 For more information about Salesforce internal API limits, go to [Salesforce Developer Limits and Allocations Quick Reference](https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm#!).

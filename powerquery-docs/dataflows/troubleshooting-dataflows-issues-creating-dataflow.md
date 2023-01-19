@@ -1,17 +1,13 @@
 ---
-title: Troubleshooting dataflow issue - creating dataflows
-description: Troubleshooting dataflow issue - creating dataflows
-author: radacad
-
-
+title: Troubleshoot dataflow issues - creating dataflows
+description: Troubleshoot dataflow issues - creating dataflows
+author: bensack
 ms.topic: conceptual
 ms.date: 05/25/2020
-ms.author: bezhan
-
-LocalizationGroup: Data from files
+ms.author: bensack
 ---
 
-# Troubleshooting dataflow issues: Creating dataflows
+# Troubleshoot dataflow issues: Creating dataflows
 
 This article explains some of the most common errors and issues you might get when you want to create a dataflow, and how to fix them.
 

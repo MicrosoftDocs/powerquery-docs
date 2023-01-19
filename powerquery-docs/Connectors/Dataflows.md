@@ -2,11 +2,9 @@
 title: Power Query Dataflow connector
 description: Provides basic information and connection instructions for connecting to a Dataflow.
 author: Luitwieler
-
 ms.topic: conceptual
 ms.date: 01/12/2022
 ms.author: jeluitwi
-LocalizationGroup: reference
 ---
 
 # Dataflows
@@ -16,7 +14,7 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights (Dataflows)|
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights (Dataflows)<br/>Excel|
 | Authentication types | Organizational account |
 | | |
 
@@ -86,6 +84,10 @@ You're probably using a Dataverse table as the destination for your standard dat
 _**There's a difference in the data when I remove duplicates in dataflows&mdash;how can I resolve this?**_
 
 There could be a difference in data between design-time and refresh-time. We don't guarantee which instance is being kept during refresh time. For information on how to avoid inconsistencies in your data, go to [Working with duplicates](../working-with-duplicates.md).
+
+_**I'm getting data via the dataflow connector, but I'm receiving a 429 error code&mdash;how can I resolve this?**_
+
+When you are receiving an error code 429, it's possibly due to exceeding the limit of 1000 requests per minute. This error typically resolves by itself if you wait a minute or two after the cooldown period ended. This limit is in place to prevent dataflows and other Power BI functionality from having a degraded performance. Consequences due to the continued high load on the service might result in additional degraded performance, so we ask users to significantly reduce the number of requests to less than 1000 (limit) or fix your script/model to this specific limit (1000) to efficiently mitigate impact and avoid further issues. You should also avoid nested joins that re-request dataflow data; instead, stage data and perform merges within your dataflow instead of your dataset.
 
 ### See also
 

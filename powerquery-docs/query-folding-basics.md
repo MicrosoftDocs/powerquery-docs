@@ -2,10 +2,8 @@
 title: Understanding query evaluation and query folding in Power Query
 description: Overview on Power Query query evaluation and query folding mechanisms
 author: migueesc123
-
-ms.reviewer: 
-ms.date: 11/11/2021
-ms.author: dougklo
+ms.date: 6/27/2022
+ms.author: miescobar
 ms.topic: overview
 ---
 
@@ -120,3 +118,5 @@ Depending on how the query is structured, there could be three possible outcomes
 ## Next steps
 
 For detailed examples of the three possible outcomes of the query folding mechanism, go to [Query folding examples](query-folding-examples.md).
+
+For information about query folding indicators found in the **Applied Steps** pane, go to [Query folding indicators](step-folding-indicators.md)

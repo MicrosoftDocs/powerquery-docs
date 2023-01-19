@@ -1,19 +1,13 @@
 ---
 title: What licenses do you need to use dataflows
 description: What licenses do you need to use dataflows
-author: radacad
-
-
+author: bensack
 ms.topic: conceptual
-ms.date: 12/3/2020
-ms.author: bezhan
-
-LocalizationGroup: Data from files
+ms.date: 08/01/2022
+ms.author: bensack
 ---
 
 # What licenses do you need to use dataflows?
-
-
 
 Dataflows can be created in different portals, such as Power BI and the Power Apps, and can be of either analytical or standard type. In addition, some dataflow features are only available as Premium features. Considering the wide range of products that can use dataflows, and feature availability in each product or dataflow type, it's important to know what licensing options you need to use dataflows.
 
@@ -70,11 +64,33 @@ The Power Apps per-app plan covers up to a 50-MB database capacity. The Power Ap
 
 ### Power BI Pro
 
-Power BI Pro gives you the ability to create analytical dataflows, but not use any of the premium features. With a Power BI Pro account, you can't use linked or computed entities, you can't use AI capabilities in Power BI, and you can't use DirectQuery to connect to the dataflow. The storage for your dataflows is limited to the space left under your Power BI Pro account, which is a subset of 10-GB storage for all Power BI content.
+Power BI Pro gives you the ability to create analytical dataflows, but not use any of the premium features. With a Power BI Pro account, you can't use linked or computed entities, you can't use AI capabilities in Power BI, and you can't use DirectQuery to connect to the dataflow. The storage for your dataflows is limited to the space left under your Power BI Pro account, which is a subset of 10-GB storage for all Power BI content. At this point in time, we don't report the current storage usage of dataflows in the [Power BI portal](/power-bi/admin/service-admin-manage-your-data-storage-in-power-bi). You'll be notified if you've almost reached the limit of the left over capacity.
 
 ### Power BI Premium
 
 If you use Power BI Premium (capacity-based licensing), you can use all the AI capabilities in Power BI, computed entities and linked entities, with the ability to have a DirectQuery connection to the dataflow, and you can use the enhanced compute engine. However, the dataflow created under a premium capacity license uses only the internal Azure Data Lake Storage, and won't be accessible by other platforms except Power BI itself. You can't create external dataflows just by having a Power BI Premium license; you need to have an Azure subscription for Azure Data Lake Storage as well.
+
+#### Limitations per premium capacity
+
+Dataflows that are using a premium capacity to refresh the data are limited to the maximum number of parallel tasks they can perform at a given time. The maximum number of parallel tasks depends on the type of premium capacity you're using. [This table](/power-bi/developer/embedded/embedded-capacity#sku-memory-and-computing-power) represents the maximum number of parallel tasks that can be executed at a given time by all dataflows in a workspace mapped to the capacity.
+
+#### Parallel tasks
+
+A premium capacity can run multiple evaluations in parallel. For example, you have a P4 capacity and a dataflow that consists of 84 tasks. You refresh your dataflow and the first 64 tasks will be allocated for the refresh. The 20 left over evaluations for this dataflow will be parked in a queue. Once one of the evaluations is finished, it will start with the next evaluation from the queue. If you start another dataflow in your workspace on the same premium capacity while the other is still running, it will get parked in the same queue of the premium capacity and needs to wait on the other dataflows in the workspace to start the refresh of your data.
+
+You can use the pointers below to estimate the number of tasks of your dataflow refresh:
+
+* The number of queries executed in the refresh (don't forget the upstream linked entities).
+* The number of partitions in an incremental refresh query are considered as additional tasks.
+
+#### Strategy to lower the number of tasks during refresh
+
+To lower the number of tasks or improve the efficiency of your tasks, you can use the following strategies:
+
+* Lower the number of queries in your dataflow by combining queries where possible and only "enable load" for queries that are used downstream.
+* Evaluate if you really need the upstream linked entities to refresh automatically.
+* Strategically schedule your dataflow refreshes based on the number of tasks.
+* Make sure your query returns the minimum set of columns and rows to satisfy your data need. The faster and more efficiently the task executes, the sooner the next task can start.
 
 ### Using your organization's Azure Data Lake Storage account for dataflow storage
 

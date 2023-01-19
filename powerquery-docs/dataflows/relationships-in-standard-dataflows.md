@@ -2,9 +2,6 @@
 title: Mapping fields with relationships in standard dataflows
 description: Learn how to map fields with relationship fields from the dataflow query to Dataverse tables.
 author: bensack
-
-ms.reviewer: kvivek
-
 ms.topic: conceptual
 ms.date: 12/3/2020
 ms.author: bensack
@@ -45,7 +42,7 @@ In the preceding image, the Region field is a lookup field to another table name
 
 ## When the field mapping doesn't show the relationship fields
 
-If you've created a lookup field in one table that points to another table, that field might not appear in the mapping of the dataflow. That’s because **both** entities involved in the relationship require a Key field. This best practice would then make sure that the field is mappable in the table mappings of the dataflow.
+If you've created a lookup field in one table that points to another table, that field might not appear in the mapping of the dataflow. That’s because the target entity involved in the relationship requires a Key field to be defined. This best practice would then make sure that the field is mappable in the table mappings of the dataflow.
 
 ## Setting the Key field in the table
 
@@ -63,3 +60,5 @@ After setting the key field, you can see the field in the mapping of the dataflo
  
 - Mapping to [polymorphic lookup](/powerapps/maker/canvas-apps/working-with-references#polymorphic-lookups) fields is currently not supported.
 - Mapping to a multi-level lookup field, a lookup that points to another tables' lookup field, is currently not supported.
+- Lookup fields for Standard Tables, unless they contain alternate key fields as described in this document, won't show up in the Map Tables dialog.
+

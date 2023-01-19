@@ -1,14 +1,12 @@
 ---
 title: TripPin tutorial sequence
 description: Overview and listing of the TripPin connector development tutorial sequence.
-author: cpopell
+author: ptyx507x
 
 ms.topic: tutorial
 ms.date: 7/23/2021
-ms.author: gepopell
+ms.author: miescobar
 ms.custom:
-
-LocalizationGroup: reference
 ---
 
 # TripPin Tutorial

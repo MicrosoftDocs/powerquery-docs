@@ -1,12 +1,10 @@
 ---
 title: Power Query Oracle database connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your Oracle database using the connector.
-author: DougKlopfenstein
-
+author: bezhan-msft
 ms.topic: conceptual
 ms.date: 1/21/2022
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # Oracle database

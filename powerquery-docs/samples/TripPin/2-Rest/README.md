@@ -1,15 +1,12 @@
 ---
 title: TripPin 2 - REST
 description: Starting a REST connector for the TripPin sample service
-author: cpopell
-manager: kfile
+author: ptyx507x
 
 
 ms.topic: tutorial
 ms.date: 5/15/2019
-ms.author: gepopell
-
-LocalizationGroup: reference
+ms.author: miescobar
 ---
 
 # TripPin Part 2 - Data Connector for a REST Service

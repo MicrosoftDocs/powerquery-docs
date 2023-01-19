@@ -1,15 +1,10 @@
 ---
 title: Extract data from a Web page by example
 description: Extract data from a Web page by providing an example of what you want to pull
-author: davidiseminger
-ms.reviewer: ''
-
-
+author: bezhan-msft
 ms.topic: how-to
 ms.date: 12/2/2020
-ms.author: davidi
-
-LocalizationGroup: Connect to data
+ms.author: bezhan
 ---
 # Get webpage data by providing examples
 
@@ -54,6 +49,6 @@ Once you're happy with the data extracted from the Web page, select **OK** to go
 ### See also
 
 * [Add a column from examples](../../column-from-example.md)
-* [Shape and combine data](../../power-query-tutorial-shape-combine.md)
+* [Shape and combine data](/power-query/power-query-ui)
 * [Getting data](../../get-data-experience.md)
 * [Troubleshooting the Power Query Web connector](web-troubleshoot.md)

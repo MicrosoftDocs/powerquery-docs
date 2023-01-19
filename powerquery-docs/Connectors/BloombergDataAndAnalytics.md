@@ -2,11 +2,9 @@
 title: Power Query Bloomberg Data and Analytics connector
 description: Provides basic information and prerequisites for the Bloomberg Data and Analytics connector, descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
 author: kanstantsin-chernik
-
 ms.topic: conceptual
-ms.date: 9/16/2021
+ms.date: 6/24/2022
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # Bloomberg Data and Analytics
@@ -19,9 +17,8 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets) |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
 | Authentication Types Supported | Organizational account |
-| | |
 
 ## Prerequisites
 

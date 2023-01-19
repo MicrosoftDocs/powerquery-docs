@@ -1,12 +1,10 @@
 ---
 title: Power Query Google Analytics connector
 description: Provides basic information and connection instructions, along with a list of quota limits for Power BI and instructions on validating unexpected data.
-author: DougKlopfenstein
-
+author: bezhan-msft
 ms.topic: conceptual
 ms.date: 1/18/2022
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # Google Analytics
@@ -109,7 +107,7 @@ To connect to Google Analytics data:
 
 ## Limitations and issues
 
-You should be aware of the following limitations and issues associated with accessing Adobe Analytics data.
+You should be aware of the following limitations and issues associated with accessing Google Analytics data.
 
 ### Google Analytics quota limits for Power BI
 
@@ -148,7 +146,7 @@ From this record, you can see you have your [Analytics view (profile) ID](https:
 
 You can copy these values into the [Google Analytics Query Explorer](https://ga-dev-tools.appspot.com/query-explorer/) to validate that the same data you're seeing returned by your query is also being returned by the API.
 
-If your error is around a date range, you can easily fix it. Go into the [Advanced Editor](../power-query-quickstart-using-power-bi.md#the-advanced-editor). You'll have an M query that looks something like this (at a minimum&mdash;there may be other transforms on top of it).
+If your error is around a date range, you can easily fix it. Go into the [Advanced Editor](/power-query/power-query-ui#the-advanced-editor). You'll have an M query that looks something like this (at a minimum&mdash;there may be other transforms on top of it).
 
 ```powerquery-m
 let

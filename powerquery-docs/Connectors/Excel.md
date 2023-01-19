@@ -1,13 +1,10 @@
 ---
 title: Power Query Excel connector
 description: Provides basic information and prerequisites for the connector, along with troubleshooting tips, how to fix missing or incomplete Excel data, and improve performance.
-author: cpopell
-
+author: bezhan-msft
 ms.topic: conceptual
-ms.date: 10/27/2021
-ms.author: gepopell
-
-LocalizationGroup: reference
+ms.date: 5/26/2022
+ms.author: bezhan
 ---
 
 # Excel
@@ -20,7 +17,6 @@ LocalizationGroup: reference
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication Types Supported | Anonymous (online)<br/>Basic (online)<br/>Organizational account (online) |
 | Function Reference Documentation | [Excel.Workbook](/powerquery-m/excel-workbook)<br/>[Excel.CurrentWorkbook](/powerquery-m/excel-currentworkbook) |
-| | |
 
 >[!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
@@ -70,6 +66,25 @@ To make the connection from Power Query Online:
 
    ![Excel workbook imported into Power Query online Navigator.](./media/excel/online-navigator-view.png)
 
+## Suggested tables
+
+If you connect to an Excel Workbook that doesn't specifically contain a single table, the Power Query navigator will attempt to create a suggested list of tables that you can choose from. For example, consider the following workbook example that contains data from A1 to C5, more data from D8 to E10, and more from C13 to F16.
+
+![Screenshot of Excel workbook with three sets of data.](./media/excel/workbook-data.png)
+
+When you connect to the data in Power Query, the Power Query navigator creates two lists. The first list contains the entire workbook sheet, and the second list contains three suggested tables.
+
+If you select the entire sheet in the navigator, the workbook is displayed as it appeared in Excel, with all of the blank cells filled with **null**.
+
+[![Screenshot of the navigator with single sheet displayed with nulls in empty cells.](./media/excel/entire-workbook-sheet.png)](./media/excel/entire-workbook-sheet.png#lightbox)
+
+If you select one of the suggested tables, each individual table that Power Query was able to determine from the layout of the workbook is displayed in the navigator. For example, if you select **Table 3**, the data that originally appeared in cells C13 to F16 is displayed.
+
+[![Screenshot of the navigator with table 3 under Suggested tables selected, and the contents of table 3 displayed.](./media/excel/table-three-only.png)](./media/excel/table-three-only.png#lightbox)
+
+>[!Note]
+>If the sheet changes enough, the table might not refresh properly. You might be able to fix the refresh by importing the data again and selecting a new suggested table.
+
 ## Troubleshooting
 
 ### Numeric precision (or "Why did my numbers change?")
@@ -88,7 +103,7 @@ If you want to connect to an Excel document hosted in Sharepoint, you can do so 
 
 ### Legacy ACE connector
 
-Power Query reads legacy workbooks (such as .xls or .xlsb) use the Access Database Engine (or ACE) OLEDB provider. Because of this, you may come across unexpected behaviors when importing legacy workbooks that don't occur when importing OpenXML workbooks (such as .xlsx). Here are some common examples.
+Power Query reads legacy workbooks (such as .xls or .xlsb) using the Access Database Engine (or ACE) OLEDB provider. Because of this, you may come across unexpected behaviors when importing legacy workbooks that don't occur when importing OpenXML workbooks (such as .xlsx). Here are some common examples.
 
 #### Unexpected value formatting
 
@@ -148,3 +163,23 @@ You'll notice performance degradation when retrieving very large files from Shar
 ### Errors when using the Excel connector to import CSV files
 
 Even though CSV files can be opened in Excel, they're not Excel files. Use the [Text/CSV connector](TextCSV.md) instead.
+
+### Error when importing "Strict Open XML Spreadsheet" workbooks
+
+You might see the following error when importing workbooks saved in Excel's "Strict Open XML Spreadsheet" format:
+
+`DataFormat.Error: The specified package is invalid. The main part is missing.`
+
+This error happens when the [ACE driver](Excel.md#legacy-ace-connector) isn't installed on the host computer. Workbooks saved in the "Strict Open XML Spreadsheet" format can only be read by ACE. However, because such workbooks use the same file extension as regular Open XML workbooks (.xlsx), we can't use the extension to display the usual `the Access Database Engine OLEDB provider may be required to read this type of file` error message.
+
+To resolve the error, install the ACE driver. If the error is occurring in a cloud service, you'll need to use a gateway running on a computer that has the ACE driver installed.
+
+### "File contains corrupted data" errors
+
+You might see the following error when importing certain Excel workbooks.
+
+`DataFormat.Error: File contains corrupted data.`
+
+Usually this error indicates there is a problem with the format of the file.
+
+However, sometimes this error can happen when a file appears to be an Open XML file (such as .xlsx), but the ACE driver is actually needed in order to process the file. Go to the [Legacy ACE connector](Excel.md#legacy-ace-connector) section for more information about how to process files that require the ACE driver.

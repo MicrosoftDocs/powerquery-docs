@@ -1,12 +1,10 @@
 ---
 title: Power Query SharePoint Online list connector
 description: Provides basic information and how to connect to your data, along with troubleshooting tips for obtaining the root SharePoint address and changing the authentication method.
-author: DougKlopfenstein
-
+author: bezhan-msft
 ms.topic: conceptual
-ms.date: 8/12/2021
+ms.date: 9/23/2022
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # SharePoint Online list
@@ -46,7 +44,7 @@ To connect to a SharePoint Online list:
 
    If the URL address you enter is invalid, a ![Warning icon.](../images/webwarning.png) warning icon will appear next to the **Site URL** textbox.
 
-   You can also select either the 1.0 implementation of this connector or the beta 2.0 implementation. More information: [Connect to SharePoint Online list v2.0 (Beta)](#connect-to-sharepoint-online-list-v20-beta)
+   You can also select either the 1.0 implementation of this connector or the 2.0 implementation. More information: [Connect to SharePoint Online list v2.0](#connect-to-sharepoint-online-list-v20)
 
    Select **OK** to continue.
 
@@ -80,11 +78,11 @@ To connect to a SharePoint Online list:
 
    ![Navigator with data.](./media/sharepoint-online-list/sharepoint-online-list-navigator-online.png)
 
-## Connect to SharePoint Online list v2.0 (Beta)
+## Connect to SharePoint Online list v2.0
 
-In the October 2020 release of Power BI Desktop, we introduced an updated version of the SharePoint Online list connector. This connector has improved APIs and greater usability, but isn't backwards compatible with usage of the 1.0 connector version.
+In the October 2020 release of Power BI Desktop, we introduced an updated version of the SharePoint Online list connector. This connector has improved APIs and greater usability, but isn't backwards compatible with usage of the 1.0 connector version. The 2.0 connector version is generally available as of September 2022.
 
-To access it, you'll enter the same connector screen through step 2 in [Connect to a SharePoint Online list from Power Query Desktop](#connect-to-a-sharepoint-online-list-from-power-query-desktop). However, make sure you select **2.0 (Beta)** under **Implementation** if it isn't already selected.
+To access it, you'll enter the same connector screen through step 2 in [Connect to a SharePoint Online list from Power Query Desktop](#connect-to-a-sharepoint-online-list-from-power-query-desktop). However, make sure you select **2.0** under **Implementation** if it isn't already selected.
 
    ![A screen showing a sample of SharePoint Online List settings.](./media/sharepoint-online-list/sharepointonlinelistnavigator2.png)
 
@@ -100,6 +98,9 @@ The **All** view includes all user created and system defined columns. You can s
 The default view is what you'll see when looking at the list online in whichever view you've set as *Default* in your settings. If you edit this view to add or remove either user created or system defined columns, or by creating a new view and setting it as default, these changes will propagate through the connector.
 
    [ ![A screen showing a sample of SharePoint Online list default view.](./media/sharepoint-online-list/sharepointonlinelistsettings.png) ](./media/sharepoint-online-list/sharepointonlinelistsettings.png#lightbox)
+   
+>[!Note]
+> If you set the default view in your SharePoint site to **Calendar** view or **Board** view, SharePoint only returns the columns shown in the selected view. In this scenario, Power BI will not retrieve all the columns in the list, even though you choose **All** option. This is by design.
 
 ## Troubleshooting
 
@@ -126,7 +127,7 @@ The first operation changes the type to `datetimezone`, and the second operation
 
 **This issue is limited to the SharePoint Online list v2.0 connector**
 
-The SharePoint Online list v2.0 connector uses a different API than the v1.0 connector and, as such, is subject to a maximum of 12 join operations per query, as documented in the [SharePoint Online documentation](/sharepoint/install/software-boundaries-limits-2019#list-and-library-limits) under **List view lookup threshold**. This issue will manifest as SharePoint queries failing when more than 12 columns are accessed simultaneously from a SharePoint list.
+The SharePoint Online list v2.0 connector uses a different API than the v1.0 connector and, as such, is subject to a maximum of 12 join operations per query, as documented in the [SharePoint Online documentation](/sharepoint/install/software-boundaries-limits-2019#list-and-library-limits) under **List view lookup threshold**. This issue will manifest as SharePoint queries failing when more than 12 columns are accessed simultaneously from a SharePoint list. However, you can work around this situation by creating a default view with less than 12 lookup columns. 
 
 ### Using OData to access a SharePoint Online list
 

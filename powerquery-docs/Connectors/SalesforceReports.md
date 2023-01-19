@@ -1,14 +1,10 @@
 ---
 title: Power Query Salesforce Reports connector.
 description: Includes basic information, prerequisites, and information on how to connect to your data, along with a list of known issues and limitations.
-author: dougklopfenstein
-
-
+author: bezhan-msft
 ms.topic: conceptual
-ms.date: 10/27/2021
+ms.date: 1/10/2023
 ms.author: bezhan
-
-LocalizationGroup: reference
 ---
 
 # Salesforce Reports
@@ -24,6 +20,9 @@ LocalizationGroup: reference
 
 >[!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+
+>[!Note]
+> We are aware of ending support for certain Salesforce API versions. Once we're ready to share details around upgrading the API versions that this connector uses, we'll publish in the [release plans](/dynamics365/release-plans/).
 
 >[!Warning]
 > By default, Salesforce does not support Internet Explorer 11, which is used as part of the authentication experience to online services in Power Query Desktop. Please opt-in for [extended support for accessing Lightning Experience Using Microsoft Internet Explorer 11](https://help.salesforce.com/articleView?id=000333934&type=1&mode=1). You may also want to review Salesforce documentation on [configuring Internet Explorer](https://developer.salesforce.com/docs/atlas.en-us.salesforce_supported_browsers_cheatsheet.meta/salesforce_supported_browsers_cheatsheet/getstart_browser_ie.htm). At this time, users will be impaired from authenticating, but stored credentials should continue to work until their existing authentication tokens expire. To resolve this, go to [Enabling Microsoft Edge (Chromium) for OAuth Authentication in Power BI Desktop](../oauth-edge-chromium.md).

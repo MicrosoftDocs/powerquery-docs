@@ -2,9 +2,6 @@
 title: Create and use dataflows in Microsoft Teams
 description: How to create and use dataflows in Microsoft Teams
 author: miquelladeboer
-
-
-ms.reviewer: kvivek
 ms.topic: conceptual
 ms.date: 12/2/2020
 ms.author: mideboer
@@ -12,9 +9,6 @@ ms.author: mideboer
 
 
 # Create and use dataflows in Microsoft Teams (Preview)
-
-> [!NOTE]
-> We are rolling out dataflows for Microsoft Teams gradually. This feature might not be available in your region yet.
 
 [Microsoft Dataverse for Teams](/powerapps/teams/overview-data-platform) delivers a built-in, low-code data platform for Microsoft Teams. It provides relational data storage, rich data types, enterprise-grade governance, and one-click solution deployment. Dataverse for Teams enables everyone to easily build and deploy apps.
 
@@ -101,7 +95,7 @@ Supported data sources in dataflows in Teams are:
 * Web API
 
 > [!NOTE]
-> Dataflows in Teams don't support non-premises data sources, such as on premises file locations.
+> Dataflows in Teams don't support on-premises data sources, such as on premises file locations.
 
 The following table lists the major feature differences between dataflows for Dataverse in Teams and dataflows for Dataverse.
 

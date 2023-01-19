@@ -45,7 +45,8 @@
       "feedback_product_url": "https://docs.microsoft.com/power-query/feedback",
       "searchScope": ["Power Query"],
       "recommendations": true,
-      "titleSuffix": "Power Query" 
+      "titleSuffix": "Power Query",
+      "ms.topic": "conceptual"
     },
     "fileMetadata": {
       "ms.service": {

@@ -2,11 +2,9 @@
 title: TIBCO(R) Data Virtualization connector
 description: Provides basic information, prerequisites, and instructions on how to connect to your TIBCO(R) Data Virtualization Server.
 author: sahuero
-
 ms.topic: conceptual
-ms.date: 10/12/2021
-ms.author: dougklo
-LocalizationGroup: reference
+ms.date: 6/24/2022
+ms.author: bezhan
 
 ---
 
@@ -20,10 +18,9 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets) |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
 | Authentication Types Supported | Database (Username/Password)<br/>Windows Authentication (NTLM/Kerberos) |
 | Function Reference Documentation | &mdash; |
-| | |
 
 ## Prerequisites
 

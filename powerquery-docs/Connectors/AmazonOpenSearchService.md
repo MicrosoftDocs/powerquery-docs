@@ -2,11 +2,9 @@
 title: Power Query Amazon OpenSearch Service connector
 description: Provides basic information and prerequisites for the Amazon OpenSearch Service connector, includes descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
 author: bezhan-msft
-ms.service: powerquery
 ms.topic: conceptual
-ms.date: 1/22/2022
+ms.date: 10/6/2022
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # Amazon OpenSearch Service (Beta)
@@ -19,15 +17,14 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products | Power BI (Datasets) |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
 | Authentication Types Supported | Basic |
-| | |
 
 ## Prerequisites
 
 * Microsoft Power BI Desktop
-* [OpenSearch](https://docs-beta.opensearch.org/opensearch/install/index/)
-* [OpenSearch SQL ODBC driver](https://docs-beta.opensearch.org/search-plugins/sql/odbc/)
+* [OpenSearch](https://opensearch.org/docs/latest/opensearch/install/index/)
+* [OpenSearch SQL ODBC driver](https://opensearch.org/docs/latest/search-plugins/sql/sql/odbc/)
 
 ## Capabilities supported
 
@@ -54,7 +51,7 @@ LocalizationGroup: reference
 
 ## Troubleshooting
 
-If you get an error indicating the driver wasn't installed, install the [OpenSearch SQL ODBC Driver](https://docs-beta.opensearch.org/search-plugins/sql/odbc/).
+If you get an error indicating the driver wasn't installed, install the [OpenSearch SQL ODBC Driver](https://opensearch.org/docs/latest/search-plugins/sql/sql/odbc/).
 
 If you get a connection error:
 

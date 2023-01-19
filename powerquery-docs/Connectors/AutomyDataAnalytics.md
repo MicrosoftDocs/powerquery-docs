@@ -2,11 +2,9 @@
 title: Power Query Automy Data Analytics Connector
 description: Provides basic information and prerequisites for the Automy Data Analytics connector
 author: bezhan-msft
-
 ms.topic: conceptual
-ms.date: 9/16/2021
+ms.date: 6/24/2022
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # Automy Data Analytics (Beta)
@@ -19,9 +17,8 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products | Power BI Desktop |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
 | Authentication Types Supported | Automy Report Token |
-| | |
 
 ## Prerequisites
 

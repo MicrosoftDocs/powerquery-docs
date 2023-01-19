@@ -1,14 +1,10 @@
 ---
 title: Import data from a database using native database query
 description: Describes the steps you take to import data from a database using a native database query
-author: DougKlopfenstein
-
-
+author: bezhan-msft
 ms.topic: conceptual
-ms.date: 06/05/2020
+ms.date: 3/18/2022
 ms.author: bezhan
-
-LocalizationGroup: reference
 ---
 
 # Import data from a database using native database query
@@ -49,12 +45,13 @@ The following Power Query connectors support native database queries.
 | Azure Analysis Services database | MDX or DAX query |
 | Azure Database for PostgreSQL | SQL statement |
 | Azure Cosmos DB | SQL statement |
-| Azure SQL Data Warehouse | SQL statement |
+| Azure Synapse Analytics | SQL statement |
 | Azure SQL database | SQL statement |
 | DataWorld.Dataset | dwSQL |
 | Dataverse | SQL statement |
 | Essbase | MDX statement |
 | FHIR | FHIR Search |
+| Google BigQuery | SQL statement |
 | IBM Db2 database | SQL statement |
 | IBM Informix database (Beta) | SQL statement |
 | MySQL database | SQL statement |
@@ -76,7 +73,7 @@ Before using native database query, you should be aware of the limitations and i
 
 ### Query folding
 
-Query folding while using a native database query is limited to the PostgreSQL connector only. No other connectors support query folding if you use a native database query. Also, for folding to work in the PostgreSQL connector, the native database query you enter has to work as a subquery.
+Query folding while using a native database query is limited to only a certain number of Power Query connectors. For more information, go to [Query folding on native queries]( /power-query/native-query-folding).
 
 ### Native database query security
 

@@ -1,13 +1,10 @@
 ---
 title: Power Query Anaplan connector
 description: Provides basic information, prerequisites, and instructions on how to connect to your Anaplan data, as well as troubleshooting tips.
-author: cpopell
-
+author: bezhan-msft
 ms.topic: conceptual
-ms.date: 9/16/2021
-ms.author: gepopell
-ms.reviewer: kvivek
-LocalizationGroup: reference
+ms.date: 8/4/2022
+ms.author: bezhan
 ---
 
 # Anaplan
@@ -20,102 +17,263 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)|
-| Authentication Types Supported | Basic |
-| Function Reference Documentation | - |
-| | |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)|
+| Authentication Types Supported | Basic<br/>Organizational account |
+
+## Prerequisites
+
+There are [system requirements](https://www.microsoft.com/download/details.aspx?id=58494) to verify before you install Microsoft Power BI Desktop.
 
 ## Capabilities supported
 
-The connector runs through Anaplan public data integration APIs and allows you to load all Anaplan models (aside from archived ones) and saved export actions into Power BI.
+The Anaplan Connector enables access to your Anaplan model exports. It also:
 
-## Connect to Anaplan from Power Query Desktop
+* Runs using Anaplan public data integration APIs.
+* Loads export actions saved in your Anaplan models, directly into Power BI.
+* Displays Anaplan models (those models not archived) in your default tenant.
+* Creates datasets in Power BI Desktop and exports or refreshes them to the Power BI service (cloud).
 
-To connect to Anaplan data:
+## Connect to Anaplan from Power BI Desktop
 
-1. Select **Anaplan** from the product-specific data connector list, and then select **Connect**.
+### Get data
 
-2. In the Anaplan Connector Configuration screen, enter the API and Authentication URLs:
-  
-    - **Anaplan API URL**:  https://api.anaplan.com
+To access your saved export from Power BI desktop:
 
-    - **Anaplan Auth URL**: https://auth.anaplan.com
+1. Select **Get data** from the ribbon menu, which displays the **Common data sources** menu.
 
-    ![Connection Configuration.](media/anaplan/connection-configuration.png)
+   [![Get data and dropdown.](./media/anaplan/get-data-more.png)](./media/anaplan/get-data-more.png#lightbox)
 
-    After you've entered the API and Auth URL, select **Ok**.
+2. Select **More** from the menu.
 
-3. Sign in to the connector to verify your access to an Anaplan workspace. 
-  
-    ![ID and password dialog.](media/anaplan/Your-id.png)
-  
-    Once you've succeeded, select **Connect**.
+3. In **Get Data**, enter **Anaplan** into the search field, which displays the **Anaplan Connector**.
 
-## Run an export action
+4. Select **Anaplan Connector**.
 
-The Anaplan connector leverages export actions to download data from your Anaplan model. First, ensure that you have an export action set.
+5. Select **Connect**.
+
+### Configure the connector
+
+Configure the connector once you've downloaded it. This step allows you to connect using Anaplan APIs.
+
+The connector uses either basic authentication (user ID, password) or the Anaplan-configured IDP for logging into Anaplan. To use the second method, you must be designated as an Anaplan Single-Sign On (SSO) user in your Anaplan model. You can set your own configuration.
+
+The following image shows the **Anaplan Connection Configuration** dialog.
+
+![Dialog for Anaplan Connection Configuration.](./media/anaplan/main-config.png)
+
+1. Enter the API and authentication (auth) URLs.
+
+   1. If you choose Basic auth, enter the following URLs, and then select **OK**.
+
+      **Anaplan API URL**: `https://api.anaplan.com`
+
+      **Anaplan Auth URL**: `https://auth.anaplan.com`
+
+   2. If you prefer the Anaplan configured IDP for logging into Anaplan, enter the following URLs, and then select **OK**.
+
+      **Anaplan API URL**: `https://api.anaplan.com`
+
+      **Anaplan Auth URL**: `https://us1a.app.anaplan.com`
+
+   3. Select **OK**.
+
+
+2. From the next **Anaplan** dialog, choose either **Basic** or **Organizational account** (which triggers Anaplan-configured IDP).
+
+   ![Anaplan authentication dialog. Arrows show Basic or Organizational account (Anaplan-configured IDP) menu choices.](./media/anaplan/basic-or-sso.png)
+
+### Authenticate
+
+You've chosen either basic authentication or Anaplan-configured IDP.
+
+1. If you chose **Basic** authentication, from the **Anaplan** dialog:
+
+    1. Enter your **User name** and **Password**.
+    2. Select **Connect**.
+    3. Proceed to the next step, **Get data**.
+
+       ![The Anaplan Connect dialog. Here you enter your User name and Password.](./media/anaplan/with-basic.png)
+
+2. If you chose **Organizational account** (Anaplan-configured IDP), from the **Anaplan** dialog:
+
+   1. Select **Sign in**.
+   2. From **Welcome to Anaplan**, select **Log in with Single Sign-on (SSO)**.
+
+      ![Anaplan dialog, with user name and password, along with SSO sign in at the bottom.](./media/anaplan/sso-login.png)
+
+   3. On your company's SSO dialog, enter your user name and password.
+
+   4. Select **Sign In**.
+
+      >[!Note]
+      > Your company's Anaplan-configured IDP service generates this dialog. A common ID management service is Okta.
+
+      ![Sign In dialog for Okta. Okta is one example of a likely identity management tool.](./media/anaplan/okta-example.png)
+
+   5. Select **Connect** on the next **Anaplan** dialog.
+
+      ![The Connect dialog for the Anaplan Power BI connector.](./media/anaplan/org-acct-powerbi.png)
+
+### Run a Power BI export action
+
+The Anaplan connector for Power BI uses exports to download data from your Anaplan model. Make sure you have an export action set. The navigator step is where you load and run these exports.
 
 When you run an export action:
 
--   Only exports that output .csv and .txt files are supported.
--   With every export action run, you need to wait ten minutes to repeat the same export action. The time is calculated from one export run completion until the next export run begins. The 10 minute wait does not apply to different exports.
--   If you don't see the export action in the Power BI connector, check your role and the export actions in your model.
+* Only exports that output .csv and .txt files are supported.
+* If you don't see the export action in the Power BI connector, check your model role and the export actions in your model.
 
-To run an export action, use the **Navigator** dialog to locate your export.
+To run an export action, use the **Navigator** dialog to locate your export.
 
-![Run Export Action and Load.](media/anaplan/Export-load.png)
+[![Run Export Action and Load.](./media/anaplan/export-load.png)](./media/anaplan/export-load.png#lightbox)
 
-1.  Search your Anaplan models to find and set your export. You can also locate for your model name via the search field.
+1. Search your Anaplan models to find and set your export.
 
-2.  Check the box next to **ƒx Run Export Action** to select your export.
-    *   When you select the **ƒx Run Export Action**, this does not trigger the export run. Instead this selection downloads the last version of the exported Anaplan data for preview.
-    *   A preview displays in the right panel. If the Anaplan export is set to **Admins only**, model users may see a blank preview, but the export will run as normal. 
-    *   You'll see the preview the next time you set an integration with same export. 
+   * Select the white chevron, which expands to a drop-down list.
+   * You can also locate for your model name using the search field.
 
-3.  Select **Load** to trigger the export run. The **Load** dialog displays and your data loads.  
+2. Check the box next to **ƒx Run Export Action** to select your export.
 
-## Troubleshooting
+   * When you select **ƒx Run Export Action**, this selection doesn't trigger the export run. Instead this selection downloads the last version of the exported Anaplan data for preview.
+   * A preview displays in the right panel. If the Anaplan export is set to **Admins only**, model users might see a blank preview, but the export will run as normal.
+   * You'll see the preview the next time you set an integration with the same export.
+   <!--   * See About Default Import and Export files. -->
 
-If you get a connector related error message, first, try refreshing.
+3. Select **Load**, which starts the export. The **Load** dialog displays.
+
+Your data then loads.
+
+### Manage your data
+
+Once your data loads into Power BI Desktop, you can perform data visualizations.
+
+[How to make the most of data visualization](https://powerbi.microsoft.com/data-visualization) helps you to select **Columns**, apply **Filters**, perform **Visualizations**, and **Publish**.
+
+[![Data and tables.](./media/anaplan/data-and-tables.png)](./media/anaplan/data-and-tables.png#lightbox)
+
+### Publish a report to Power BI service
+
+The publish step sends the report from Power BI Desktop to Power BI service.
+
+More information: [Create reports in Power BI](/power-bi/create-reports/). You need a report to begin.
+
+To publish a report to Power BI service, select **Publish** from the Power BI Desktop report dialog.
+
+[![Microsoft Power BI report dialog with a left menu that displays the Publish option.](./media/anaplan/pbi-report.png)](./media/anaplan/pbi-report.png#lightbox)
+
+The report is now in Power BI service. Sign in to Power BI service to see the report.
+
+### Schedule a refresh (Power BI service)
+
+Once you've created a dataset in Power BI service, you can schedule a data refresh.
+
+First, create a report in the Power BI Desktop. More information: [Create reports in Power BI](/power-bi/create-reports/).
+
+To refresh your dataset:
+
+1. Select **Add Data Source** (top left of dialog).
+
+2. Select from the **Data Source Type** and **Data Source Information** dropdowns.
+
+3. Select **Apply**.
+
+[![The Microsoft New data source dialog. Arrows point to the button itself and two dropdowns.](./media/anaplan/use1-gateway.png)](./media/anaplan/use1-gateway.png#lightbox)
+
+This image displays an example dataset entitled **New data source**.
+
+From the **Anaplan** dialog:
+
+1. Select  **OAuth2** from the **Authentication method** dropdown menu.
+2. Select **Sign in**.
+
+   ![The Anaplan Authentication method dialog with a dropdown and Sign in button.](./media/anaplan/gateway.PNG)
+
+Once you've created a scheduled refresh in Power BI service:
+
+* If your scheduled refresh frequency is more than 15 days, you must reenter your sign-in credentials before the end of the 15th day. If you don't, you need to authenticate anew.
+* We recommend a refresh frequency that's less than every 15 days.
+* Apart from data refreshes, you need to reenter your sign-in credentials every 90 days.
+
+## Limits, considerations, and troubleshooting
+
+You may get error messages. Here are some common scenarios and steps for resolution.
+
+If you do get an error message, select the refresh icon. This refresh resolves the error in most cases.
 
 ### Credential error in the Navigator
 
-Do one of the following:
--   Clear cache within Power BI (**File**, **Options**, **Clear cache)** and restart the connector, or
--   Select **Cancel** and select **Refresh** (top right).
+`We couldn't authenticate with the credentials provided, please try again.`
 
-    ![Authentication error.](media/anaplan/auth-cred-error.2.png)
+To resolve such an error:
 
-If you still receive a credential error after you clear cache, also clear your recent sources. 
+1. Select **Refresh** (top right).
 
-1. Select **Recent sources**
+   [![Authentication error. This image shows an arrow to highlight the refresh button.](./media/anaplan/auth-cred-error.png)](./media/anaplan/auth-cred-error.png#lightbox)
 
-    ![Select recent sources.](media/anaplan/Recent-sources-1.png)
+2. Select **File**.
+3. Select **Options and settings**.
+4. Select **Data source settings**.
+5. Select the permission **Anaplan Connector** from the list.
+6. Select **Clear Permissions**.
+7. Select **Delete**.
 
-1. Select **Remove from list**
-
-    ![Remove source from list.](media/anaplan/Recent-sources-2.png)
-
-1. Establish the connection to the export again, and your data refreshes.
-
+These steps remove expired Anaplan API tokens. You must reauthenticate to proceed.
 
 ### Credential error in the Power Query editor
 
-If you encounter a credential error in the Power Query editor, select **Close & Apply** or **Refresh Preview** to refresh the data. 
+You might experience a credential error in the [Power Query editor](../power-query-ui.md) when you reopen a Power BI report or when you edit a prior data set.
 
-![Power query error.](media/anaplan/Power-query-error.png)
+To resolve this error, select either **Close & Apply** or **Refresh Preview**.
 
-Your data will refresh, resolving the error. 
+[![Power query error.](./media/anaplan/power-query-error.png)](./media/anaplan/power-query-error.png#lightbox)
 
-![Close & Apply and Refresh Preview icons.](media/anaplan/Power-query-solution.png)
+Your data then refreshes.
 
+### Integration list, display error
+
+Solution: If you don't see your complete list of integrations after you switch your **Workspace**, you can:
+
+* Select the refresh button next to **Integrations**.
+* Refresh your browser.
+
+You can also:
+
+1. Select **Recent sources**.
+
+   ![Select recent sources.](./media/anaplan/recent-sources.png)
+
+2. Select **More**.
+
+3. Right-click on the connection.
+
+4. Select **Remove from list**.
+
+   ![Remove source from list.](./media/anaplan/remove-from-list.png)
+
+5. Connect to the export again. Your data then refreshes.
+
+   [![Close & Apply and Refresh Preview icons.](./media/anaplan/power-query-solution.png)](./media/anaplan/power-query-solution.png#lightbox)
 
 ### Power Query expression error
 
-If you encounter a Power Query expression error, select **Refresh Preview** to refresh the data. 
+`Expression.Error: The key didn't match any rows in the table.`
 
-![Power Query error Key and Table.](media/anaplan/Expression-error.png)
+Select **Refresh Preview**.
 
-Your data will refresh, resolving the error.
+[![Power Query error Key and Table.](./media/anaplan/expression-error.png)](./media/anaplan/expression-error.png#lightbox)
 
-![Refresh preview.](media/anaplan/Refresh-preview.png)
+The first [1,000 rows](https://community.powerbi.com/t5/Desktop/Limit-of-1000-value-reached/td-p/368850) of data then displays.
+
+[![Refresh preview.](./media/anaplan/refresh-preview.png)](./media/anaplan/refresh-preview.png#lightbox)
+
+More information: [Power Query M expression functions](/powerquery-m/expression-functions)
+
+### Large file download error
+
+If you go beyond the 5 gigabytes (GB) size limit, you'll get the following error.
+
+`Anaplan connector supports file downloads up to 5 GB in size.`
+
+[![Error message when a file is too large.](./media/anaplan/file-too-large.png)](./media/anaplan/file-too-large.png#lightbox)
+
+Return to your Anaplan model, decrease the size of your file, and try again.

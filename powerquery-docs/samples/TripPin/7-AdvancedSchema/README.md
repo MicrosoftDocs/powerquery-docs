@@ -1,15 +1,12 @@
 ---
 title: TripPin 7 - Advanced Schema
 description: Adding an advanced schema with typing to your TripPin REST connector.
-author: cpopell
-manager: kfile
+author: ptyx507x
 
 
 ms.topic: tutorial
-ms.date: 5/15/2020
-ms.author: gepopell
-
-LocalizationGroup: reference
+ms.date: 11/12/2022
+ms.author: miescobar
 ---
 
 # TripPin Part 7 - Advanced Schema with M Types
@@ -251,12 +248,20 @@ At this point, your extension almost has as much "common" code as TripPin connec
 The code to do this is included in the snippet below:
 
 ```
-Extension.LoadFunction = (name as text) =>
-    let
-        binary = Extension.Contents(name),
-        asText = Text.FromBinary(binary)
-    in
-        Expression.Evaluate(asText, #shared);
+Extension.LoadFunction = (fileName as text) =>
+  let
+      binary = Extension.Contents(fileName),
+      asText = Text.FromBinary(binary)
+  in
+      try
+        Expression.Evaluate(asText, #shared)
+      catch (e) =>
+        error [
+            Reason = "Extension.LoadFunction Failure",
+            Message.Format = "Loading '#{0}' failed - '#{1}': '#{2}'",
+            Message.Parameters = {fileName, e[Reason], e[Message]},
+            Detail = [File = fileName, Error = e]
+        ];
 
 Table.ChangeType = Extension.LoadFunction("Table.ChangeType.pqm");
 Table.GenerateByPage = Extension.LoadFunction("Table.GenerateByPage.pqm");

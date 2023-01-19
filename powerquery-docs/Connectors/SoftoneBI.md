@@ -4,10 +4,8 @@ description: This article provides information for the SoftOne BI connector and 
 author: basilrormose
 
 ms.topic: 
-ms.date: 9/16/2021
+ms.date: 6/24/2022
 ms.author: bezhan
-ms.reviewer: kvivek
-LocalizationGroup: reference
 ---
 
 # SoftOne BI (Beta)
@@ -20,9 +18,8 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | Preview |
-| Products | Power BI (Datasets) |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
 | Authentication Types Supported | Basic (Soft1/Atlantis Web Services) |
-| | |
 
 ## Prerequisites
 

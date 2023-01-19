@@ -1,12 +1,10 @@
 ---
 title: Power Query OData Feed connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your data using the connector.
-author: dougklopfenstein
-
+author: bezhan-msft
 ms.topic: conceptual
-ms.date: 9/16/2021
+ms.date: 10/5/2022
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # OData Feed
@@ -18,8 +16,7 @@ LocalizationGroup: reference
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication Types Supported | Anonymous<br/>Windows<br/>Basic (requires Gateway)<br/>Web API<br/>Organizational Account |
-| Function Reference Documentation | [OData.Feed](/powerquery-m/odata-feed), [ODataOmitValues.Nulls](/powerquery-m/odataomitvalues-nulls) |
-| | |
+| Function Reference Documentation | [OData.Feed](/powerquery-m/odata-feed), [ODataOmitValues.Nulls](/powerquery-m/odataomitvalues-type) |
 
 >[!Note]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
@@ -28,8 +25,8 @@ LocalizationGroup: reference
 
 * Basic
 * Advanced
-   * URL parts
-   * Open type columns
+  * URL parts
+  * Open type columns
 * Select related tables
 
 >[!Note]
@@ -77,7 +74,7 @@ To load data from an OData Feed in Power Query Online:
 
 ## Connecting to Microsoft Graph
 
-Connecting to [Microsoft Graph](/graph/overview) REST [APIs](https://graph.microsoft.com) from Power Query isn't recommended or supported. See this [article](../connecting-to-graph.md) for more information.
+Connecting to [Microsoft Graph](/graph/overview) REST [APIs](https://graph.microsoft.com) from Power Query isn't recommended or supported. More information: [Lack of support for Microsoft Graph in Power Query](../connecting-to-graph.md)
 
 ## Known Issues and Limitations
 
@@ -85,19 +82,21 @@ Connecting to [Microsoft Graph](/graph/overview) REST [APIs](https://graph.micro
 
 Due to the architecture of OData and other web connectors, joins can be non-performant. While you have the option to use navigation columns when merging between tables from an OData source, you don't have this option when merging with non-Odata sources.
 
-If you are seeing performance issues when merging an OData source, you should apply [Table.Buffer](/powerquery-m/table-buffer) to your OData query in the Advanced Editor, before you merge the data.
+If you're seeing performance issues when merging an OData source, you should apply [Table.Buffer](/powerquery-m/table-buffer) to your OData query in the advanced editor, before you merge the data.
 
 ### Test Connection issues
 
-In cases where you're passing in a URL to the OData connector that's not just the service root, for example, if you have a filter on the URL, when you set up refresh in the service you should select **Skip Test Connection**.
+In cases where you're passing in a URL to the OData connector that's not just the service root (for example, if you have a filter on the URL), when you set up refresh in the service you should select **Skip Test Connection**.
+
+When you enter credentials for an OData service into Power BI service (for example, after publishing a PBIX that uses `OData.Feed`), Power BI service will test the credentials but will ignore any query options that were specified in the M query. These query options might have been specified directly in the formula (for example, using the formula bar or advanced editor), or might have been added by the Power Query editor by default. You can find the full list of these query options in [OData.Feed](/powerquery-m/odata-feed).
 
 ### Authenticating to arbitrary services
 
 Some services support the ability for the OData connector to authenticate with OAuth/AAD authentication out of the box. However, this won't work in most cases.
 
-When attempting to authenticate, if you see the following error:
+When attempting to authenticate, if the following error occurs:
 
-“We were unable to connect because this credential type isn’t supported for this resource. Please choose another credential type.”
+`We were unable to connect because this credential type isn’t supported for this resource. Please choose another credential type.`
 
    ![Error from connecting to an endpoint that doesn't support OAuth with the web connector.](../images/credential-type-not-supported.png)
 
@@ -105,16 +104,12 @@ Contact the service owner. They'll either need to change the authentication conf
 
 ### Maximum URL length
 
-If you're using the OData feed connector to connect to a SharePoint list, SharePoint online list, or Project Online, the maximum URL length for these connections is approximately 2100 characters. Exceeding the character limit results in an 401 error. This maximum URL length is built in the SharePoint front end and can't be changed.
+If you're using the OData feed connector to connect to a SharePoint list, SharePoint online list, or Project Online, the maximum URL length for these connections is approximately 2100 characters. Exceeding the character limit results in a 401 error. This maximum URL length is built in the SharePoint front end and can't be changed.
 
 To get around this limitation, start with the root OData endpoint and then navigate and filter inside Power Query. Power Query filters this URL locally when the URL is too long for SharePoint to handle. For example, start with:
 
-```
-OData.Feed("https://contoso.sharepoint.com/teams/sales/_api/ProjectData")
-```
+`OData.Feed("https://contoso.sharepoint.com/teams/sales/_api/ProjectData")`
 
 instead of
 
-```
-OData.Feed("https://contoso.sharepoint.com/teams/sales/_api/ProjectData/Projects?select=_x0031_MetricName...etc...")
-```
+`OData.Feed("https://contoso.sharepoint.com/teams/sales/_api/ProjectData/Projects?select=_x0031_MetricName...etc...")`

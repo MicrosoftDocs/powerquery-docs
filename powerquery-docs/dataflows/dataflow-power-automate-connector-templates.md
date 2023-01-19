@@ -4,7 +4,6 @@ description: Introduction to Power Automate templates for the dataflows connecto
 author: miquelladeboer
 
 
-ms.reviewer: kvivek
 ms.topic: overview
 ms.date: 11/16/2021
 ms.author: mideboer

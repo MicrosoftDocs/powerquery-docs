@@ -1,18 +1,16 @@
 ---
 title: Power Query SQL Server connector
 description: Includes basic information about products that use the connector, supported authentication types, prerequisites, and connection instructions.
-author: cpopell
-
+author: bezhan-msft
 ms.topic: conceptual
-ms.date: 12/9/2020
-ms.author: gepopell
-LocalizationGroup: reference
+ms.date: 3/4/2022
+ms.author: bezhan
 ---
 
 # SQL Server
- 
+
 ## Summary
- 
+
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
@@ -23,28 +21,29 @@ LocalizationGroup: reference
 
 >[!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
- 
+
 ## Prerequisites
+
 By default, Power BI installs an OLE DB driver for SQL Server. However, for optimal performance, we recommend that the customer installs the [SQL Server Native Client](/sql/relational-databases/native-client/applications/installing-sql-server-native-client) before using the SQL Server connector. SQL Server Native Client 11.0 and SQL Server Native Client 10.0 are both supported in the latest version.
 
- 
 ## Capabilities Supported
+
 * Import
 * DirectQuery (Power BI Desktop)
 * Advanced options
-    * Command timeout in minutes
-    * Native SQL statement
-    * Relationship columns
-    * Navigate using full hierarchy
-    * SQL Server failover support
-    
+  * Command timeout in minutes
+  * Native SQL statement
+  * Relationship columns
+  * Navigate using full hierarchy
+  * SQL Server failover support
+
 ## Connect to SQL Server database from Power Query Desktop
 
 To make the connection, take the following steps:
- 
+
 1. Select the **SQL Server database** option in the connector selection.
- 
-2. In the **SQL Server database** dialog that appears, provide the name of the server and database (optional). 
+
+2. In the **SQL Server database** dialog that appears, provide the name of the server and database (optional).
 
    ![SQL Server database connection builder in Power Query Desktop.](./media/sql-server-database/select-database-desktop.png)
 
@@ -70,10 +69,10 @@ To make the connection, take the following steps:
 ## Connect to SQL Server database from Power Query Online
 
 To make the connection, take the following steps:
- 
+
 1. Select the **SQL Server database** option in the connector selection.
- 
-2. In the **SQL Server database** dialog that appears, provide the name of the server and database (optional). 
+
+2. In the **SQL Server database** dialog that appears, provide the name of the server and database (optional).
 
    ![SQL Server database connection builder in Power Query Online.](./media/sql-server-database/select-database-online.png)
 
@@ -91,11 +90,7 @@ To make the connection, take the following steps:
 
 ## Connect using advanced options
 
-Both Power Query Desktop and Power Query Online provide a set of advanced options that you can add to your query if needed. 
-
-![Display of advanced options available in Power Query Desktop.](./media/sql-server-database/advanced-options.png)
-
-The following table lists all of the advanced options you can set in Power Query Desktop and Power Query Online.
+Both Power Query Desktop and Power Query Online provide a set of advanced options that you can add to your query if needed. The following table lists all of the advanced options you can set in Power Query Desktop and Power Query Online.
 
 | Advanced option | Description |
 | --------------- | ----------- |

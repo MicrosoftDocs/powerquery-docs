@@ -2,24 +2,21 @@
 title: Power Query Google Sheets connector
 description: Provides basic information and prerequisites for the Google Sheets connector, descriptions of the optional input parameters, and discusses limitations and issues you might come across.
 author: bezhan-msft
-
 ms.topic: conceptual
-ms.date: 10/20/2021
+ms.date: 6/24/2022
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
-# Google Sheets (Beta)
+# Google Sheets
 
 ## Summary
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | Beta |
-| Products | Power BI Desktop |
+| Release State | General Availability |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
 | Authentication Types Supported | Organizational account |
-| Function Reference Documentation | - |
-| | |
+| Function Reference Documentation | &mdash; |
 
 ## Prerequisites
 
@@ -56,10 +53,6 @@ To connect to Google Sheets from Power Query Desktop, take the following steps:
 ## Limitations and considerations
 
 This section describes any limitations or considerations of the Google Sheets connector.
-
-### Power Query Online
-
-This connector isn't yet available in Power Query Online and dataflows experiences.
 
 ### Shared drive support
 

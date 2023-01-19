@@ -1,15 +1,13 @@
 ---
 title: Delta Sharing connector
 description: Provides basic information and prerequisites for the Delta Sharing connector for Power Query.
-author: bezhan
-
+author: bezhan-msft
 ms.topic: conceptual
-ms.date: 11/10/2021
+ms.date: 7/6/2021
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
-# Delta Sharing (Beta)
+# Delta Sharing
 
 >[!Note]
 >The following connector article is provided by Databricks, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Databricks website and use the support channels there.
@@ -18,10 +16,9 @@ LocalizationGroup: reference
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | Beta |
+| Release State | General Availability |
 | Products | Power BI (Datasets) |
 | Authentication Types Supported | Key (Bearer Token) |
-| | |
 
 ## Prerequisites
 

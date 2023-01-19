@@ -1,13 +1,10 @@
 ---
 title: Power Query Stripe connector
 description: Provides information on the deprecation of the Stripe connector.
-author: bezhan
-
+author: bezhan-msft
 ms.topic: conceptual
 ms.date: 4/8/2020
 ms.author: bezhan
-ms.reviewer: kvivek
-LocalizationGroup: reference
 ---
 
 # Stripe (Deprecated)

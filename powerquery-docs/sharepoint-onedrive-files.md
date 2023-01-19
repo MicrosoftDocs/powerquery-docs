@@ -2,10 +2,8 @@
 title: SharePoint and OneDrive for Business files import
 description: All available methods in Power Query to get files from your SharePoint or OneDrive for Business accounts.
 author: ptyx507
-
-ms.reviewer: 
 ms.date: 11/18/2020
-ms.author: dougklo
+ms.author: miescobar
 ---
 
 # SharePoint and OneDrive for Business files import

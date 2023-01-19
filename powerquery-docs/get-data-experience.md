@@ -1,23 +1,17 @@
 ---
-title: "Getting data"
+title: "Getting data overview"
 description: "Overviews of the Power Query get data experience and all its components, such as connector parameters, authentication, navigation table, and query destination."
 author: ptyx507x
-ms.service: powerquery
-ms.reviewer: kvivek
-ms.date: 1/1/2022
-ms.author: dougklo
+ms.date: 3/2/2022
+ms.author: miescobar
 ms.topic: overview
 ---
 
-# Getting data
+# Getting data overview
 
 Power Query can connect to many different data sources so you can work with the data you need. This article walks you through the steps for bringing in data to Power Query either in Power Query Desktop or Power Query Online.
 
 Connecting to a data source with Power Query follows a standard set of stages before landing the data at a destination. This article describes each of these stages.
-
-<!--
->[!NOTE]
->To better understand how to get data using the different product integrations of Power Query, go to [Where to get data](where-to-get-data.md)//]-->
 
 >[!IMPORTANT]
 >In some cases, a connector might have all stages of the get data experience, and in other cases a connector might have just a few of them. For more information about the experience of a specific connector, go to the documentation available for the specific connector by searching on the [Connectors in Power Query article](connectors/index.md).
@@ -46,7 +40,7 @@ In comparison, when trying to connect to an Excel file, Power Query requires tha
 
 The connector parameters are commonly used to establish a connection to a data source, and they&mdash;in conjunction with the connector used&mdash;define what's called a *data source path*.
 
->[!Note] 
+>[!Note]
 >Some connectors don't require you to enter any parameters at all. These are called *singleton connectors* and will only have one data source path available per environment. Some examples are Adobe Analytics, MailChimp, and Google Analytics.
 
 ### 2. Authentication
@@ -207,3 +201,7 @@ The table preview dialog box consists of only one section for the data preview. 
 For Power Query Online, you're required to load the data into the Power Query editor where you can further transform and enrich the query if you choose to do so.
 
 [![Sample query loaded into the query editor](media/query-plan/alternative-approach.png)](media/query-plan/sample-query.png#lightbox)
+
+## Additional information
+
+To better understand how to get data using the different product integrations of Power Query, go to [Where to get data](where-to-get-data.md).

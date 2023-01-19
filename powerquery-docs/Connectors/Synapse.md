@@ -2,11 +2,9 @@
 title: Power Query Azure Synapse Analytics workspace connector
 description: Provides basic information and connection instructions for the Azure Synapse Analytics Workspace connector.
 author: miquelladeboer
-
 ms.topic: conceptual
-ms.date: 11/1/2021
+ms.date: 3/21/2022
 ms.author: mideboer
-LocalizationGroup: reference
 ---
 
 # Azure Synapse Analytics workspace (Beta)
@@ -15,10 +13,9 @@ LocalizationGroup: reference
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | Public Review |
+| Release State | Public Preview |
 | Products | Power BI (Datasets) |
-| Authentication Types Supported | Organizational account<br/>Service account |
-| | |
+| Authentication Types Supported | Organizational account |
 
 >[!Note]
 > This Azure Synapse Analytics workspace connector doesn't replace the Azure Synapse Analytics (SQL DW) connector. This connector makes exploring data in Synapse workspaces more accessible. Some capabilities aren't present in this connector, including native query and DirectQuery support.
@@ -40,9 +37,11 @@ To connect to Synapse workspace data:
 
 1. Select **Get Data** from the **Home** ribbon in Power BI Desktop. Select **Azure Synapse Analytics workspace (Beta)**. Then select **Connect**.
 
-   ![Get Data from Synapse Workspaces.](./media/azure-sql-database/get-data-synapse.png)
+   ![Get Data from Synapse Workspaces.](./media/azure-synpse-analytics-workspace/get-data-synapse.png)
 
-2. To sign in to your Synapse account, select **Sign in**.
+2. If this is the first time you are connecting to this workspace, you'll be asked to sign in to your Synapse account. To sign in, select **Sign in**.
+
+   ![Authentication dialog box with sign-in button for your organizational account.](./media/azure-synpse-analytics-workspace/sign-in.png)
 
 3. In the **Sign in with Microsoft** window that appears, provide your credentials to sign in to your Synapse account. Then select **Next**.
 
@@ -50,7 +49,7 @@ To connect to Synapse workspace data:
 
 Once the connection is established, you’ll see a list of the workspaces you have access to. Drill through the workspaces, databases, and tables.
 
-You can **Load** the selected table, which brings the entire table into Power BI Desktop, or you can select **Transform Data** to edit the query, which opens Power Query Editor. You can then filter and refine the set of data you want to use, and then load that refined set of data into Power BI Desktop.
+You can **Load** the selected table, which brings the entire table into Power BI Desktop, or you can select **Transform Data** to edit the query, which opens the Power Query editor. You can then filter and refine the set of data you want to use, and then load that refined set of data into Power BI Desktop.
 
 ## Troubleshooting
 

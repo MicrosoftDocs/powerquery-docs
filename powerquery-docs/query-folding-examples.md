@@ -1,11 +1,9 @@
 ---
 title: Query folding examples in Power Query
 description: Demonstrates the affect of query folding in Power Query. A comparison and analysis of multiple query examples with no folding, partial folding, and full query folding in Power Query.
-author: migueesc123
-
-ms.reviewer: 
-ms.date: 11/4/2021
-ms.author: dougklo
+author: ptyx507x
+ms.date: 6/27/2022
+ms.author: miescobar
 ms.topic: conceptual
 ---
 
@@ -62,7 +60,7 @@ Lastly, inside the **Choose columns** dialog, select the `Sale Key`, `Customer K
 
 The following code sample is the full M script for the query you created:
 
-```
+```powerquery-m
 let
   Source = Sql.Database(ServerName, DatabaseName),
   Navigation = Source{[Schema = "wwi", Item = "fact_Sale"]}[Data],
@@ -74,9 +72,9 @@ in
 
 ### No query folding: Understanding the query evaluation
 
-Under **Applied steps** in the Power Query editor, you’ll notice that the step folding indicators for **Kept bottom rows** and **Choose columns** are marked as steps that will be evaluated outside the data source or, in other words, by the Power Query engine.
+Under **Applied steps** in the Power Query editor, you’ll notice that the query folding indicators for **Kept bottom rows** and **Choose columns** are marked as steps that will be evaluated outside the data source or, in other words, by the Power Query engine.
 
-![Applied steps pane for the query with the step folding indicators showcasing the Kept bottom rows and the Removed other columns steps.](media/query-folding-basics/no-folding-steps.png)
+![Applied steps pane for the query with the query folding indicators showcasing the Kept bottom rows and the Removed other columns steps.](media/query-folding-basics/no-folding-steps.png)
 
 You can right-click the last step of your query, the one named **Choose columns**, and select the option that reads **View Query plan**. The goal of the query plan is to provide you with a detailed view of how your query is run. To learn more about this feature, go to [Query plan](query-plan.md).
 
@@ -97,7 +95,7 @@ Consulting this data source request can help you better understand the story tha
 - `Table.LastN`: Once Power Query receives all records from the `fact_Sale` table, it uses the Power Query engine to filter the table and keep only the last 10 rows.
 - `Table.SelectColumns`: Power Query will use the output of the `Table.LastN` node and apply a new transform called `Table.SelectColumns`, which selects the specific columns that you want to keep from a table.
 
-For its evaluation, this query had to download all rows and fields from the `fact_Sale` table. This query took an average of 3 minutes and 4 seconds to be processed in a standard instance of Power BI dataflows (which accounts for the evaluation and loading of data to dataflows).
+For its evaluation, this query had to download all rows and fields from the `fact_Sale` table. This query took an average of 6 minutes and 1 second to be processed in a standard instance of Power BI dataflows (which accounts for the evaluation and loading of data to dataflows).
 
 ## Partial query folding example
 
@@ -123,7 +121,7 @@ In **Keep bottom rows**, enter the value 10, and then select **OK**.
 
 The following code sample is the full M script for the query you created:
 
-```
+```powerquery-m
 let
   Source = Sql.Database(ServerName, DatabaseName),
   Navigation = Source{[Schema = "wwi", Item = "fact_Sale"]}[Data],
@@ -136,9 +134,9 @@ in
 
 ### Partial query folding example: Understanding the query evaluation
 
-Checking the applied steps pane, you notice that the step folding indicators are showing that the last transform that you added, `Kept bottom rows`, is marked as a step that will be evaluated outside the data source or, in other words, by the Power Query engine.
+Checking the applied steps pane, you notice that the query folding indicators are showing that the last transform that you added, `Kept bottom rows`, is marked as a step that will be evaluated outside the data source or, in other words, by the Power Query engine.
 
-![Applied steps pane for the query with the step folding indicators showcasing that the Kept bottom rows is marked as a step that will be evaluated outside the data source.](media/query-folding-basics/partial-folding-steps.png)
+![Applied steps pane for the query with the query folding indicators showcasing that the Kept bottom rows is marked as a step that will be evaluated outside the data source.](media/query-folding-basics/partial-folding-steps.png)
 
 You can right-click the last step of your query, the one named `Kept bottom rows`, and select the **Query plan** option to better understand how your query might be evaluated.
 
@@ -184,7 +182,7 @@ In **Keep top rows**, enter the value 10, and then select **OK**.
 
 The following code sample is the full M script for the query you created:
 
-```
+```powerquery-m
 let
   Source = Sql.Database(ServerName, DatabaseName),
   Navigation = Source{[Schema = "wwi", Item = "fact_Sale"]}[Data],
@@ -197,7 +195,7 @@ in
 
 ### Full query folding example: Understanding the query evaluation
 
-When checking the applied steps pane, you'll notice that the step folding indicators are showing that the transforms that you added, **Choose columns**, **Sorted rows**, and **Kept top rows**, are marked as steps that will be evaluated at the data source.
+When checking the applied steps pane, you'll notice that the query folding indicators are showing that the transforms that you added, **Choose columns**, **Sorted rows**, and **Kept top rows**, are marked as steps that will be evaluated at the data source.
 
 ![All the query steps have the icon that showcases that they can be folded back to the data source.](media/query-folding-basics/full-folding-steps.png)
 
@@ -293,9 +291,9 @@ Transforms can be grouped into the following categories:
 ## Considerations and suggestions
 
 - Follow the best practices when creating a new query, as stated in [Best practices in Power Query](best-practices.md).
-- Use the step folding indicators to check which steps are preventing your query from folding. Reorder them if necessary to increase folding.
+- Use the [query folding indicators](step-folding-indicators.md) to check which steps are preventing your query from folding. Reorder them if necessary to increase folding.
 - Use the query plan to determine which transforms are happening at the Power Query engine for a particular step. Consider modifying your existing query by re-arranging your steps. Then check the query plan of the last step of your query again and see if the query plan looks better than the previous one. For example, the new query plan has less nodes than the previous one, and most of the nodes are “Streaming” nodes and not “full scan”. For data sources that support folding, any nodes in the query plan other than `Value.NativeQuery` and data source access nodes represent transforms that didn’t fold.
-- When available, you can use the **View Native Query** (or **View data source query**) option to ensure that your query can be folded back to the data source. If this option is disabled for your step, and you're using a source that normally enables it, you've created a step that stops query folding. If you're using a source that doesn't support this option, you can rely on the step folding indicators and query plan.
+- When available, you can use the **View Native Query** (or **View data source query**) option to ensure that your query can be folded back to the data source. If this option is disabled for your step, and you're using a source that normally enables it, you've created a step that stops query folding. If you're using a source that doesn't support this option, you can rely on the query folding indicators and query plan.
 - Use the query diagnostics tools to better understand the requests being sent to your data source when query folding capabilities are available for the connector.
 - When combining data sourced from the use of multiple connectors, Power Query tries to push as much work as possible to both of the data sources while complying with the privacy levels defined for each data source.
 - Read the article on [privacy levels](dataprivacyfirewall.md) to protect your queries from running against a Data Privacy Firewall error.

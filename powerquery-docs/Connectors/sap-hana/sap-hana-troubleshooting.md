@@ -2,13 +2,9 @@
 title: SAP HANA database connector troubleshooting
 description: Provides troubleshooting tips for errors that might occur when using Power Query to connect to an SAP HANA database.
 author: dougklopfenstein
-
-
 ms.topic: conceptual
 ms.date: 9/01/2020
 ms.author: bezhan
-
-LocalizationGroup: reference
 ---
 
 # Troubleshooting

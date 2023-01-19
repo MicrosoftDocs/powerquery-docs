@@ -1,13 +1,10 @@
 ---
 title: Troubleshooting dataflow issues - connection to the data source
 description: Troubleshooting dataflow issues - connection to the data source
-author: radacad
-
-
-ms.reviewer: kvivek
+author: bensack
 ms.topic: conceptual
-ms.date: 12/3/2020
-ms.author: bezhan
+ms.date: 6/13/2022
+ms.author: bensack
 ---
 
 # Troubleshooting dataflow issues: Connection to the data source
@@ -26,7 +23,7 @@ When your entity in the dataflow gets data from an on-premises data source, a ga
 
 **Resolution:**
 
-Select **Select gateway**. If the gateway hasn't been set up yet, see [Install an on-premises data gateway](/data-integration/gateway/service-gateway-install).
+Select **Select gateway**. If the gateway hasn't been set up yet, go to [Install an on-premises data gateway](/data-integration/gateway/service-gateway-install).
 
 ## Error: Please specify how to connect
 
@@ -60,8 +57,38 @@ First, [install and set up an on-premises gateway](/data-integration/gateway/ser
 
 After adding the web data source, you can select the gateway in the dataflow from **Options** > **Project options**.
 
-![Project options in the dataflow.](media/ProjectOptions.png)
+![Project options in the dataflow.](media/troubleshoot-dataflow-deleted-source/ProjectOptions.png)
 
 You might be asked to set up credentials. When you've set up the gateway and your credentials successfully, the modules will no longer be disabled."
 
 ![Disabled functions now working.](media/DisabledFunctionWorkingFine.png)
+
+## Deleted or old data sources still show up
+
+Sometimes when you delete a data source from your dataflow, it still shows up on your credentials overview or lineage overview. This doesn't impact the refresh or authoring of your dataflow.
+
+![Lineage overview.](media/troubleshoot-dataflow-deleted-source/linage-overview.png)
+
+**Reason:**
+
+A dataflow maintains its association with deleted dataflow data sources and doesn't delete them automatically. This requires a trim initiated by the user.
+
+**Resolution:**
+
+In order to trim the data sources, you'll need to take the following steps:
+
+1. Open your dataflow.
+
+1. Select **Options**.
+
+1. Select **Project options**.
+
+   ![Screenshot showing the Options and Project Options selections emphasized.](media/troubleshoot-dataflow-deleted-source/ProjectOptions.png)
+
+1. Change the gateway to another gateway. It doesn't matter which one, as long as it's a different gateway.
+
+   ![Gateway selector.](media/troubleshoot-dataflow-deleted-source/gateway-selection.png)
+
+1. After you apply the change by selecting **OK**, repeat steps 1 through 4 to select the original gateway again.
+
+These steps essentially delete all the data source bindings for the dataflow. After finishing these steps, you might be asked to set up credentials. When you've set up the gateway and your credentials successfully, you effectively "trimmed" the data source bindings for the dataflow to just the ones that the dataflow is actually using.

@@ -2,14 +2,9 @@
 title: Using incremental refresh with dataflows
 description: Learn how to configure incremental refresh for dataflows
 author: bensack
-manager: kfile
-ms.reviewer: ''
-
 ms.topic: conceptual
-ms.date: 12/2/2019
+ms.date: 8/11/2022
 ms.author: bensack
-
-LocalizationGroup: Data from files
 ---
 
 # Using incremental refresh with dataflows
@@ -27,7 +22,7 @@ Incremental refresh is available in dataflows created in Power BI and dataflows 
 
 ![Incremental refresh for dataflows.](media/dataflows-incremental-refresh/dataflows-incremental-refresh-03.png)
 
-Using incremental refresh in dataflows created in Power BI requires that the dataflow reside in a workspace in [Premium capacity](/power-bi/service-premium-what-is). Incremental refresh in Power Apps requires Power Apps Plan 2.
+Using incremental refresh in dataflows created in Power BI requires that the dataflow reside in a workspace in [Premium capacity](/power-bi/service-premium-what-is). Incremental refresh in Power Apps requires Power Apps per-app or per-user plans, and is only available for dataflows with Azure Data Lake Storage as the destination. 
 
 In either Power BI or Power Apps, using incremental refresh requires that source data ingested into the dataflow have a DateTime field on which incremental refresh can filter.
 
@@ -76,7 +71,7 @@ The following list explains the settings in the **Incremental refresh settings**
 > [!NOTE]
 > Dataflow incremental refresh determines dates according to the following logic: if a refresh is scheduled, incremental refresh for dataflows uses the time zone defined in the refresh policy. If no schedule for refreshing exists, incremental refresh uses the time from the computer running the refresh.
 
-After incremental refresh is configured, the dataflow automatically alters your query to include filtering by date. You can edit the automatically generated query by using the advanced editor in Power Query to fine-tune or customize your refresh. Read more about incremental refresh and how it works in the following sections.
+After incremental refresh is configured, the dataflow automatically alters your query to include filtering by date. If the dataflow was created in Power BI, you can also edit the automatically generated query by using the advanced editor in Power Query to fine-tune or customize your refresh. Read more about incremental refresh and how it works in the following sections.
 
 ## Incremental refresh and linked entities vs. computed entities
 
@@ -108,7 +103,7 @@ Incremental refresh can also be invoked by using APIs. In this case, the API cal
 
 ## Incremental refresh implementation details
 
-Dataflows use partitioning for incremental refresh. After XMLA-endpoints for Power BI Premium are available, the partitions become visible. Incremental refresh in dataflows keeps the minimum number of partitions to meet refresh policy requirements. Old partitions that go out of range are dropped, which maintains a rolling window. Partitions are opportunistically merged, reducing the total number of partitions required. This improves compression and, in some cases, can improve query performance.
+Dataflows use partitioning for incremental refresh. Incremental refresh in dataflows keeps the minimum number of partitions to meet refresh policy requirements. Old partitions that go out of range are dropped, which maintains a rolling window. Partitions are opportunistically merged, reducing the total number of partitions required. This improves compression and, in some cases, can improve query performance.
 
 The examples in this section share the following refresh policy:
 
@@ -145,10 +140,6 @@ The next refresh operation, with *Run Date 1/16/2017*, takes the opportunity to 
 Dataflow incremental refresh and dataset incremental refresh are designed to work in tandem. It's acceptable and supported to have an incrementally refreshing entity in a dataflow, fully loaded into a dataset, or a fully loaded entity in a dataflow incrementally loaded to a dataset.
 
 Both approaches work according to your specified definitions in the refresh settings. More information: [Incremental refresh in Power BI Premium](/power-bi/service-premium-incremental-refresh)
-
-## Considerations and limitations
-
-Incremental refresh in Microsoft Power Platform dataflows is only supported in dataflows with an Azure Data Lake Storage account, not in dataflows with Dataverse as the destination.
 
 ### See also
 

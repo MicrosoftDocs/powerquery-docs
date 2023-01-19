@@ -2,11 +2,9 @@
 title: Power Query Usercube connector
 description: Provides basic information and prerequisites for the Usercube connector. Also includes descriptions of the optional input parameters, and discusses limitations and issues you might run into.
 author: bezhan-msft
-
 ms.topic: conceptual
-ms.date: 10/5/2021
+ms.date: 6/24/2022
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # Usercube
@@ -19,10 +17,9 @@ LocalizationGroup: reference
 | Item                             | Description                                                                  |
 | -------------------------------- | ---------------------------------------------------------------------------- |
 | Release State                    | General Availability                                                         |
-| Products                         | Power BI (Datasets)                                                          |
+| Products                         | Power BI (Datasets)<br/>Power BI (Dataflows)                                 |
 | Authentication Types Supported   | Client Credentials                                                           |
 | Function Reference Documentation | &mdash;                                                                      |
-|                                  |                                                                              |
 
 ## Prerequisites
 

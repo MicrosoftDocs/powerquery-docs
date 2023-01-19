@@ -2,12 +2,9 @@
 title: Power Query Amazon Athena connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Amazon Athena
 author: bezhan-msft
-
 ms.topic: conceptual
-ms.date: 9/16/2021
+ms.date: 6/24/2022
 ms.author: bezhan
-ms.reviewer: kvivek
-LocalizationGroup: reference
 ---
 
 # Amazon Athena
@@ -20,9 +17,8 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets) |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
 | Authentication Types Supported | DSN configuration <br /> Organizational account |
-| | |
 
 ## Prerequisites
 

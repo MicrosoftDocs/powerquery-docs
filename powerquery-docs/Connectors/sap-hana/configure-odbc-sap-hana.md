@@ -2,13 +2,9 @@
 title: Configure SSL for ODBC client access to SAP HANA
 description: How to use the ODBC Data Source Administrator to set properties and values required to connect to a database using the Power Query SAP HANA database connector.
 author: dougklopfenstein
-
-
 ms.topic: conceptual
 ms.date: 9/01/2020
 ms.author: bezhan
-
-LocalizationGroup: reference
 ---
 
 # Configure SSL for ODBC client access to SAP HANA

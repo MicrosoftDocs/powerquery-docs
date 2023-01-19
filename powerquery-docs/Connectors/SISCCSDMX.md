@@ -2,11 +2,9 @@
 title: Power Query SIS-CC SDMX connector
 description: Provides basic information and prerequisites for the SIS-CC SDMX connector, descriptions of the optional input parameters, and discusses limitations and issues you might come across.
 author: bezhan-msft
-
 ms.topic: conceptual
-ms.date: 10/5/2021
+ms.date: 6/24/2022
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
 # SIS-CC SDMX 
@@ -19,10 +17,9 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets) |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
 | Authentication Types Supported | Anonymous |
 | Function Reference Documentation | &mdash; |
-| | |
 
 ## Prerequisites
 

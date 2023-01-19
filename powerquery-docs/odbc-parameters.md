@@ -1,14 +1,10 @@
 ---
 title: Parameters for the Odbc.DataSource function
 description: Describes the parameters that can be used with the Odbc.Datasource function in Power Query
-author: cpopell
-
-
+author: ptyx507x
 ms.topic: conceptual
-ms.date: 1/19/2022
-ms.author: dougklo
-
-LocalizationGroup: reference
+ms.date: 3/1/2022
+ms.author: miescobar
 ---
 
 # Parameters for Odbc.DataSource
@@ -36,7 +32,7 @@ The following table describes the options record fields that are only available 
 | `CancelQueryExplicitly` | A logical value that instructs the M engine to explicitly cancel any running calls through the ODBC driver before terminating the connection to the ODBC server.<br/><br/>This field is useful in situations where query execution is managed independently of the network connections to the server, for example in some Spark deployments. In most cases, this value doesn't need to be set because the query in the server is canceled when the network connection to the server is terminated.<br/><br/>Default: false |
 | `ClientConnectionPooling` | A logical value that enables client-side connection pooling for the ODBC driver. Most drivers will want to set this value to true.<br/><br/>Default: false |
 | `CredentialConnectionString` | A text or record value used to specify credential-related connection string properties.<!--<br/><br/>Go to the Credential section for more information.--> |
-| `HideNativeQuery` | A logical value that determines if you can view the SQL query that you’re going to send the driver.<br/><br/>Note: this functionality isn't currently exposed in the Power Query user experience. You would need to manually edit your queries to take advantage of this capability.<br/><br/>Default: false |
+| `HideNativeQuery` | A logical value that controls whether or not the connector shows generated SQL statements in the Power Query user experience. This should only be set to true if the back end data source natively supports SQL-92.<br/><br/>Default: false |
 | `ImplicitTypeConversions` | A table value containing implicit type conversions supported by your driver or backend server. Values in this table are additive to the conversions reported by the driver itself.<br/><br/>This field is typically used with the `SQLGetTypeInfo` field when overriding data type information reported by the driver.<!--<br/><br/>Go to the ImplicitTypeConversions section for more information.--> |
 | `OnError` | An error handling function that receives an `errorRecord` parameter of type `record`.<br/><br/>Common uses of this function include handling SSL connection failures, providing a download link if your driver isn't found on the system, and reporting authentication errors.<!--<br/><br/>Go to the OnError section for more information.--> |
 | `SoftNumbers` | Allows the M engine to select a compatible data type when conversion between two specific numeric types isn't declared as supported in the SQL_CONVERT_* capabilities.<br/><br/>Default: false |
