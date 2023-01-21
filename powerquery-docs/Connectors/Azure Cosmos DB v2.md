@@ -137,7 +137,9 @@ when processing a query. For example, in the following query, TOP is applied in 
 
 * For the SUM aggregate function, Cosmos DB returns undefined as the result set if any of the arguments in SUM are string, boolean, or null. However, if there are null values, the connector passes the query to Cosmos DB in such a way that it asks the data source to replace a null value with zero as part of the SUM calculation.
 
-* For the AVG aggregate function, Cosmos DB returns undefined as result set if any of the arguments in SUM are string, boolean, or null. The connector exposes a connection property to disable passing down the AVG aggregate function to Cosmos DB in case this default Cosmos DB behavior needs to be overridden. When AVG passdown is disabled, it isn't passed down to Cosmos DB, and the connector handles performing the AVG aggregation operation itself. For more information, see EnablePassdownOfAvgAggrFunction in [Advanced options](#advanced-options).
+* For the AVG aggregate function, Cosmos DB returns undefined as result set if any of the arguments in SUM are string, boolean, or null. The connector exposes a connection property to disable passing down the AVG aggregate function to Cosmos DB in case this default Cosmos DB behavior needs to be overridden. When AVG passdown is disabled, it isn't passed down to Cosmos DB, and the connector handles performing the AVG aggregation operation itself. For more information, see "Enable AVERAGE function Passdown" in [Advanced options](#advanced-options).
+
+* Azure Cosmos DB Containers with large partition key are not currently supported in the Connector.
 
 * Aggregation passdown is disabled for the following syntax due to server limitations:
 
