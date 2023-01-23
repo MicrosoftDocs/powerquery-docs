@@ -3,7 +3,7 @@ title: Power Query Web connector
 description: Provides basic information and how to connect to your data, along with the supported file types and instructions on using the on-premises data gateway and authentication types.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 10/27/2021
+ms.date: 1/23/2021
 ms.author: bezhan
 ---
 
@@ -17,7 +17,6 @@ ms.author: bezhan
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights |
 | Authentication Types Supported | Anonymous<br/>Windows<br/>Basic<br/>Web API<br/>Organizational Account |
 | Function Reference Documentation | [Web.Page](/powerquery-m/web-page)<br/>[Web.BrowserContents](/powerquery-m/web-browsercontents) |
-| | |
 
 >[!Note]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
@@ -30,9 +29,9 @@ ms.author: bezhan
 
 * Basic
 * Advanced
-   * URL parts
-   * Command timeout
-   * HTTP request header parameters
+  * URL parts
+  * Command timeout
+  * HTTP request header parameters
 
 ## Load Web data using Power Query Desktop
 
@@ -42,15 +41,15 @@ To load data from a web site with Power Query Desktop:
 
 2. Choose the **Basic** button and enter a URL address in the text box. For example, enter `https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States`. Then select **OK**.
 
-   ![Text file selection.](webbasicurl.png)
+   ![Text file selection.](web-basic-url.png)
 
-   If the URL address you enter is invalid, a ![Warning icon.](webwarning.png) warning icon will appear next to the **URL** textbox.
+   If the URL address you enter is invalid, a ![Warning icon.](web-warning.png) warning icon will appear next to the **URL** textbox.
 
    If you need to construct a more advanced URL before you connect to the website, go to [Load Web data using an advanced URL](#load-web-data-using-an-advanced-url).
 
 3. Select the authentication method to use for this web site. In this example, select **Anonymous**. Then select the level to you want to apply these settings to&mdash;in this case, **https://en.wikipedia.org/**. Then select **Connect**.
 
-   ![Web credentials selection.](webcredentials.png)
+   ![Web credentials selection.](web-credentials.png)
 
    The available authentication methods for this connector are:
 
@@ -64,12 +63,11 @@ To load data from a web site with Power Query Desktop:
 
    * **Organizational account**: Select this authentication method if the web page requires organizational account credentials.
 
-
    >[!Note]
    >When uploading the report to the Power BI service, only the **anonymous**, **Windows** and **basic** authentication methods are available.
 
    The level you select for the authentication method determines what part of a URL will have the authentication method applied to it. If you select the top-level web address, the authentication method you select here will be used for that URL address or any subaddress within that address. However, you might not want to set the top URL address to a specific authentication method because different subaddresses could require different authentication methods. For example, if you were accessing two separate folders of a single SharePoint site and wanted to use different Microsoft Accounts to access each one.
-   
+
    Once you've set the authentication method for a specific web site address, you won't need to select the authentication method for that URL address or any subaddress again. For example, if you select the https://en.wikipedia.org/ address in this dialog, any web page that begins with this address won't require that you select the authentication method again.  
 
    >[!Note]
@@ -77,7 +75,7 @@ To load data from a web site with Power Query Desktop:
 
 4. From the **Navigator** dialog, you can select a table, then either transform the data in the Power Query editor by selecting **Transform Data**, or load the data by selecting **Load**.
 
-   ![Web table selection.](webnavigator.png)
+   ![Web table selection.](web-navigator.png)
 
    The right side of the **Navigator** dialog displays the contents of the table you select to transform or load. If you're uncertain which table contains the data you're interested in, you can select the **Web View** tab. The web view lets you see the entire contents of the web page, and highlights each of the tables that have been detected on that site. You can select the check box above the highlighted table to obtain the data from that table.
 
@@ -129,7 +127,7 @@ To load data from a web site with Power Query Online:
 
 When you select **Get Data > From Web** in Power Query Desktop, in most instances you'll enter URLs in the Basic setting. However, in some cases you may want to assemble a URL from its separate parts, set a timeout for the connection, or provide individualized URL header data. In this case, select the **Advanced** option in the **From Web** dialog box.
 
-![Web advanced URL assembly.](webadvancedurl.png)
+![Web advanced URL assembly.](web-advanced-url.png)
 
 Use the **URL parts** section of the dialog to assemble the URL you want to use to get data. The first part of the URL in the **URL parts** section most likely would consist of the scheme, authority, and path of the URI (for example, `http://contoso.com/products/`). The second text box could include any queries or fragments that you would use to filter the information provided to the web site. If you need to add more than one part, select **Add part** to add another URL fragment text box. As you enter each part of the URL, the complete URL that will be used when you select **OK** is displayed in the **URL preview** box.
 
@@ -139,7 +137,7 @@ You can also add specific request headers to the POST you send to the web site u
 
 | Request Header | Description |
 | --- | --- |
-| Accept | Specifies the response media types that are acceptable. | 
+| Accept | Specifies the response media types that are acceptable. |
 | Accept-Charset | Indicates which character sets are acceptable in the textual response content. |
 | Accept-Encoding | Indicates what response content encodings are acceptable in the response. |
 | Accept-Language | Indicates the set of natural languages that are preferred in the response. |
@@ -149,7 +147,6 @@ You can also add specific request headers to the POST you send to the web site u
 | Prefer | Indicates that particular server behaviors are preferred by the client, but aren't required for successful completion of the request. |
 | Range | Specifies one or more subranges of the selected representation data. |
 | Referer | Specifies a URI reference for the resource from which the target URI was obtained. |
-| | |
 
 ## Import files from the web
 
@@ -168,13 +165,13 @@ The following file types are supported by the Web Connector:
 
 For example, you could use the following steps to import a JSON file on the `https://contoso.com/products` web site:
 
-1. From the **Get Data** dialog box, select the **Web** connector. 
+1. From the **Get Data** dialog box, select the **Web** connector.
 
 2. Choose the **Basic** button and enter the address in the **URL** box, for example:
 
     `http://contoso.com/products/Example_JSON.json`
 
-    ![Import a JSON file from the web.](webJson.png)
+    ![Import a JSON file from the web.](web-json.png)
 
 3. Select **OK**.
 
@@ -182,7 +179,7 @@ For example, you could use the following steps to import a JSON file on the `htt
 
 5. Power Query Editor will now open with the data imported from the JSON file. Select the **View** tab in the Power Query Editor, then select **Formula Bar** to turn on the formula bar in the editor.
 
-    ![Open the Formula Bar.](webFormulaBar.png)
+    ![Open the Formula Bar.](web-formula-bar.png)
 
     As you can see, the Web connector returns the web contents from the URL you supplied, and then automatically wraps the web contents in the appropriate document type specified by the URL (`Json.Document` in this example).
 
