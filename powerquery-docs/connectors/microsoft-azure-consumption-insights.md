@@ -26,8 +26,8 @@ ms.reviewer: dougklo
 
 ### Transition instructions
 
-Users are instructed to use the certified [Microsoft Azure Cost Management connector](AzureCostManagement.md) as a replacement. The table and field names are similar and should offer the same functionality.
+Users are instructed to use the certified [Microsoft Azure Cost Management connector](azure-cost-management.md) as a replacement. The table and field names are similar and should offer the same functionality.
 
 ### Timeline
 
-The Microsoft Azure Consumption Insights service will stop working in December 2021. Users should transition off the Microsoft Azure Consumption Insights connector to the [Microsoft Azure Cost Management connector](AzureCostManagement.md) by December 2021.
+The Microsoft Azure Consumption Insights service will stop working in December 2021. Users should transition off the Microsoft Azure Consumption Insights connector to the [Microsoft Azure Cost Management connector](azure-cost-management.md) by December 2021.

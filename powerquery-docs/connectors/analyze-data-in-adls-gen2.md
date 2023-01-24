@@ -27,7 +27,7 @@ Before you begin this tutorial, you must have the following prerequisites:
 
 1. Launch Power BI Desktop on your computer.
 
-2. Follow the instructions in the [Azure Data Lake Storage Gen2 connector article](DataLakeStorage.md#connect-to-azure-data-lake-storage-gen2-from-power-query-desktop) to connect to the sample data.
+2. Follow the instructions in the [Azure Data Lake Storage Gen2 connector article](data-lake-storage.md#connect-to-azure-data-lake-storage-gen2-from-power-query-desktop) to connect to the sample data.
 
 3. From the Power Query **Navigator**, select **Load**.
 
@@ -89,4 +89,4 @@ After you've created the visualizations in Power BI Desktop, you can share it wi
 
 ## See also
 
-* [Azure Data Lake Storage Gen2](DataLakeStorage.md)
+* [Azure Data Lake Storage Gen2](data-lake-storage.md)

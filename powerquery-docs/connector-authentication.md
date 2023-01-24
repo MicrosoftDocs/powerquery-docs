@@ -73,7 +73,7 @@ You can also delete the credentials for a particular website in step 3 by select
 
 ## Connecting with Azure Active Directory using the Web and OData connectors
 
-When connecting to data sources and services that require authentication through OAuth or Azure Active Directory-based authentication, in certain cases where the service is configured correctly, you can use the built-in [Web](Connectors/Web/Web.md) or [OData](Connectors/ODataFeed.md) connectors to authenticate and connect to data without requiring a service-specific or custom connector.
+When connecting to data sources and services that require authentication through OAuth or Azure Active Directory-based authentication, in certain cases where the service is configured correctly, you can use the built-in [Web](connectors/web/web.md) or [OData](connectors/odata-feed.md) connectors to authenticate and connect to data without requiring a service-specific or custom connector.
 
 This section outlines connection symptoms when the service isn't configured properly. It also provides information on how Power Query interacts with the service when it's properly configured.
 
