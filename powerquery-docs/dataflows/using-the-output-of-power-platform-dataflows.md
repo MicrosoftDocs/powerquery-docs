@@ -26,7 +26,7 @@ Azure Data Lake storage is available in Power BI dataflows and Power Apps analyt
 - [Connect Data Lake Gen 2 storage to a Power BI Workspace](/power-bi/transform-model/dataflows/dataflows-azure-data-lake-storage-integration)
 - [Connect Data Lake Gen 2 storage to a Power Apps Environment](./connect-azure-data-lake-storage-for-dataflow.md)
 
-When you've connected your data lake, you should still use the Dataflows connector. If this connector doesn't meet your needs, you could consider using the [Azure Data Lake connector](../Connectors/DataLakeStorage.md) instead.
+When you've connected your data lake, you should still use the Dataflows connector. If this connector doesn't meet your needs, you could consider using the [Azure Data Lake connector](../connectors/data-lake-storage.md) instead.
 
 ### Dataverse
 

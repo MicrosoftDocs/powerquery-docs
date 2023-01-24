@@ -16,7 +16,7 @@ The following connectors currently support the upload a file feature.
 * [Excel](connectors/excel.md)
 * [JSON](connectors/json.md)
 * [PDF](connectors/pdf.md)
-* [Text / CSV](connectors/textcsv.md)
+* [Text / CSV](connectors/text-csv.md)
 * [XML](connectors/xml.md)
 
 >[!NOTE]

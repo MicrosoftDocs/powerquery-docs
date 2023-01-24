@@ -19,13 +19,13 @@ This article showcases an alternative method to create native queries against yo
 
 The method described in the next sections applies to the following data connectors:
 
-* [Amazon Redshift](connectors/amazonredshift.md)
+* [Amazon Redshift](connectors/amazon-redshift.md)
 * [Dataverse](connectors/dataverse.md) *(when using enhanced compute)*
-* [Google BigQuery](connectors/googlebigquery.md)
+* [Google BigQuery](connectors/google-bigquery.md)
 * [PostgreSQL](connectors/postgresql.md)
 * [SAP HANA](connectors/sap-hana/overview.md)
 * [Snowflake](connectors/snowflake.md)
-* [SQL Server](connectors/SQLServer.md)
+* [SQL Server](connectors/sql-server.md)
 
 ## Connect to target from data source
 

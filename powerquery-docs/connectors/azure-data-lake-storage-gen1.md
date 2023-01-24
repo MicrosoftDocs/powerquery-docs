@@ -72,5 +72,5 @@ Power Query provides an advanced option that you can add to your query if needed
 
 ## See also
 
-* [Azure Data Lake Storage Gen2](DataLakeStorage.md)
+* [Azure Data Lake Storage Gen2](data-lake-storage.md)
 * [Azure Data Lake Storage Gen1 documentation](/azure/data-lake-store/)
