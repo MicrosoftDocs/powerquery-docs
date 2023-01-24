@@ -1,10 +1,10 @@
 ---
 title: What licenses do you need to use dataflows
 description: What licenses do you need to use dataflows
-author: bensack
+author: Luitwieler
 ms.topic: conceptual
-ms.date: 01/19/2023
-ms.author: bensack
+ms.date: 01/24/2023
+ms.author: jeluitwi
 ---
 
 # What licenses do you need to use dataflows?
