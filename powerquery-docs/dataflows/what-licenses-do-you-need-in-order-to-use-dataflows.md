@@ -64,7 +64,7 @@ The Power Apps per-app plan covers up to a 50-MB database capacity. The Power Ap
 
 In Power Apps we have the following limitations in place:
 
-- A Dataflow refresh can take a maximum of 24 hours.
+- A Dataflow refresh can run for a maximum of 24 hours.
 - Each query/partition has a maximum run duration of 4 hours.
 - For each refresh, there is a concurrency limit of 4 queries/partitions that can refresh simultaneously.
 - PQO refresh limits apply for each user. [Learn more](../power-query-online-limits.md#refresh-limits)
