@@ -85,5 +85,5 @@ The following articles include instructions on formatting your document in Markd
 
 Here's a couple of example Power Query connector articles that you can use as a starting point:
 
-* [Adobe Analytics](./connectors/adobeanalytics.md) (Power Query Desktop only)
-* [Azure SQL database](./connectors/azuresqldatabase.md) (Power Query Desktop and Power Query Online)
+* [Adobe Analytics](./connectors/adobe-analytics.md) (Power Query Desktop only)
+* [Azure SQL database](./connectors/azure-sql-database.md) (Power Query Desktop and Power Query Online)

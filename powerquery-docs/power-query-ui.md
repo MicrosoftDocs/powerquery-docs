@@ -57,7 +57,7 @@ The dialog then loads the data from the Customers table into the Power Query edi
 The above experience of connecting to your data, specifying the authentication method, and selecting the specific object or table to connect to is called the *get data experience* and is documented with further detail in the [Getting data](get-data-experience.md) article.
 
 > [!NOTE]
-> To learn more about the OData feed connector, go to [OData feed](Connectors/ODataFeed.md).
+> To learn more about the OData feed connector, go to [OData feed](connectors/odata-feed.md).
 
 ## The Power Query editor user experience
 

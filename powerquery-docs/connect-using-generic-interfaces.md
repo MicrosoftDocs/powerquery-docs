@@ -17,7 +17,7 @@ You can connect to a multitude of different data sources using built-in connecto
 
 ## Power Query data interfaces
 
-Power Query includes an ever-growing collection of connectors that are built to connect to a specific data source. For example, the [SharePoint list](connectors/SharePointList.md) connector provides specific fields and supporting information during the connection sequence that are designed for SharePoint lists. Other data sources found in the window that appears when you choose to get data (in Power Query Desktop) or choose a data source (in Power Query Online) work in the same way.
+Power Query includes an ever-growing collection of connectors that are built to connect to a specific data source. For example, the [SharePoint list](connectors/sharepoint-list.md) connector provides specific fields and supporting information during the connection sequence that are designed for SharePoint lists. Other data sources found in the window that appears when you choose to get data (in Power Query Desktop) or choose a data source (in Power Query Online) work in the same way.
 
 In addition, you can also connect to data sources that aren't identified in the get data and choose data source lists by using one of the following generic data interfaces:
 
@@ -68,7 +68,7 @@ The following list details a few examples of the data sources that Power Query c
 
 ## Data sources accessible through OData
 
-The [OData feed](connectors/ODataFeed.md) connector in Power Query lets you import data from any OData URL simply by typing in or pasting the OData URL. You can add multiple URL parts by typing or pasting those links in the text boxes provided in the **OData feed** window.
+The [OData feed](connectors/odata-feed.md) connector in Power Query lets you import data from any OData URL simply by typing in or pasting the OData URL. You can add multiple URL parts by typing or pasting those links in the text boxes provided in the **OData feed** window.
 
 ![Screenshot of the OData Feed dialog, showing the U R L parts and preview fields.](media/connect-using-generic-interfaces/odata-data-source.png)
 
