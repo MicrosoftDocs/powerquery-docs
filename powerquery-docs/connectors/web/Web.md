@@ -15,23 +15,23 @@ ms.author: bezhan
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights |
-| Authentication Types Supported | Anonymous<br/>Windows<br/>Basic<br/>Web API<br/>Organizational Account |
-| Function Reference Documentation | [Web.Page](/powerquery-m/web-page)<br/>[Web.BrowserContents](/powerquery-m/web-browsercontents) |
+| Authentication Types Supported | [Web.Contents](/powerquery-m/web-contents)<br/>Anonymous<br/>Windows<br/>Basic<br/>Web API<br/>Organizational Account<br/><br/>[Web.BrowserContents](/powerquery-m/web-browsercontents)<br/>Anonymous<br/>Windows (preview feature)<br/>Basic (preview feature)<br/>Web API (preview feature)<br/><br/>[Web.Page](/powerquery-m/web-page)<br/>Anonymous<br/>Windows (current user's credentials only)<br/>Web API |
+| Function Reference Documentation | [Web.Contents](/powerquery-m/web-contents)<br/>[Web.BrowserContents](/powerquery-m/web-browsercontents)<br/>[Web.Page](/powerquery-m/web-page) |
 
 >[!Note]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
 
-* Internet Explorer 10
+* [Web.Page](/powerquery-m/web-page) requires Internet Explorer 10.
 
 ## Capabilities supported
 
-* Basic
+* Connecting to a URL
 * Advanced
-  * URL parts
-  * Command timeout
-  * HTTP request header parameters
+  * Using a combination of text constants and parameters to construct the URL
+  * Specifying a command timeout
+  * Defining HTTP request header parameters ([Web.Contents](/powerquery-m/web-contents) only)
 
 ## Load Web data using Power Query Desktop
 
@@ -182,21 +182,6 @@ For example, you could use the following steps to import a JSON file on the `htt
     ![Open the Formula Bar.](web-formula-bar.png)
 
     As you can see, the Web connector returns the web contents from the URL you supplied, and then automatically wraps the web contents in the appropriate document type specified by the URL (`Json.Document` in this example).
-
-## Handling dynamic web pages
-
-Web pages that load their content dynamically might require special handling. If you notice sporadic errors in your web queries, it's possible that you're trying to access a dynamic web page. One common example of this type of error is:
-
-1. You refresh the site.
-2. You see an error (for example, "the column 'Foo' of the table wasn't found").
-3. You refresh the site again.
-4. No error occurs.
-
-These kinds of issues are usually due to timing. Pages that load their content dynamically can sometimes be inconsistent since the content can change after the browser considers loading complete. Sometimes [Web.BrowserContents](/powerquery-m/web-browsercontents) downloads the HTML after all the dynamic content has loaded. Other times the changes are still in progress when it downloads the HTML, leading to sporadic errors.
-
-The solution is to pass the `WaitFor` option to `Web.BrowserContents`, which indicates either a selector or a length of time that should be waited for before downloading the HTML.
-
-How can you tell if a page is dynamic? Usually it's pretty simple. Open the page in a browser and watch it load. If the content shows up right away, it's a regular HTML page. If it appears dynamically or changes over time, it's a dynamic page.
 
 ## See also
 
