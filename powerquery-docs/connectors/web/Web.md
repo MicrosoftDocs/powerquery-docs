@@ -15,7 +15,7 @@ ms.author: bezhan
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights |
-| Authentication Types Supported | [Web.Contents](/powerquery-m/web-contents)<br/>Anonymous<br/>Windows<br/>Basic<br/>Web API<br/>Organizational Account<br/><br/>[Web.BrowserContents](/powerquery-m/web-browsercontents)<br/>Anonymous<br/>Windows (preview feature)<br/>Basic (preview feature)<br/>Web API (preview feature)<br/><br/>[Web.Page](/powerquery-m/web-page)<br/>Anonymous<br/>Windows (current user's credentials only)<br/>Web API |
+| Authentication Types Supported | [Web.Contents](/powerquery-m/web-contents)<br/>Anonymous<br/>Windows<br/>Basic<br/>Web API<br/>Organizational Account<br/><br/>[Web.BrowserContents](/powerquery-m/web-browsercontents)<br/>Anonymous<br/>Windows ([preview feature](/powerquery-docs/connectors/web/web-troubleshoot#enabling-the-edge-webview2-version-of-webbrowsercontents))<br/>Basic ([preview feature](/powerquery-docs/connectors/web/web-troubleshoot#enabling-the-edge-webview2-version-of-webbrowsercontents))<br/>Web API ([preview feature](/powerquery-docs/connectors/web/web-troubleshoot#enabling-the-edge-webview2-version-of-webbrowsercontents))<br/><br/>[Web.Page](/powerquery-m/web-page)<br/>Anonymous<br/>Windows (current user's credentials only)<br/>Web API |
 | Function Reference Documentation | [Web.Contents](/powerquery-m/web-contents)<br/>[Web.BrowserContents](/powerquery-m/web-browsercontents)<br/>[Web.Page](/powerquery-m/web-page) |
 
 >[!Note]
