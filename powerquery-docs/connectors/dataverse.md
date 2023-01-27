@@ -119,7 +119,7 @@ More information: [Accessing large datasets](#accessing-large-datasets)
 
 ### Dataverse performance and throttling limits
 
-For information about performance and throttling limits for Dataverse connections, go to [Requests limits and allocations](/power-platform/admin/api-request-limits-allocations). These limitations apply to both the Dataverse connector and the [OData Feed](odatafeed.md) connector when accessing the same endpoint.
+For information about performance and throttling limits for Dataverse connections, go to [Requests limits and allocations](/power-platform/admin/api-request-limits-allocations). These limitations apply to both the Dataverse connector and the [OData Feed](odata-feed.md) connector when accessing the same endpoint.
 
 ### Table retrieval rate
 
@@ -170,7 +170,7 @@ Misspelling a column name might result in an error message about query folding i
 
 Power BI datasets contained in Dataverse can be very large. If you're using the Power Query Dataverse connector, any specific query that accesses the dataset must return less than 80 MB of data. So you might need to query the data multiple times to access all of the data in the dataset. Using multiple queries can take a considerable amount of time to return all the data.
 
-If you're using the [Common Data Service (Legacy)](CommonDataServiceLegacy.md) connector, you can use a single query to access all of the data in the dataset. This connector works differently and returns the result in "pages" of 5 K records. Although the Common Data Service (Legacy) connector is more efficient in returning large amounts of data, it can still take a significant amount of time to return the result.
+If you're using the [Common Data Service (Legacy)](common-data-service-legacy.md) connector, you can use a single query to access all of the data in the dataset. This connector works differently and returns the result in "pages" of 5 K records. Although the Common Data Service (Legacy) connector is more efficient in returning large amounts of data, it can still take a significant amount of time to return the result.
 
 Instead of using these connectors to access large datasets, we recommend that you use [Azure Synapse Link](/powerapps/maker/data-platform/export-to-data-lake) to access large datasets. Using Azure Synapse Link is even more efficient that either the Power Query Dataverse or Common Data Service (Legacy) connectors, and it's specifically designed around data integration scenarios.
 

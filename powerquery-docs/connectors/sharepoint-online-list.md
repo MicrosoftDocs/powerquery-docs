@@ -131,4 +131,4 @@ The SharePoint Online list v2.0 connector uses a different API than the v1.0 con
 
 ### Using OData to access a SharePoint Online list
 
-If you use an OData feed to access a SharePoint Online list, there's an approximately 2100 character limitation to the URL you use to connect. More information: [Maximum URL length](OdataFeed.md#maximum-url-length)
+If you use an OData feed to access a SharePoint Online list, there's an approximately 2100 character limitation to the URL you use to connect. More information: [Maximum URL length](odata-feed.md#maximum-url-length)

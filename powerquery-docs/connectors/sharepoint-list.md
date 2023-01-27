@@ -99,7 +99,7 @@ The user can force the interpretation to be consistent by explicitly setting the
 
 ### Using OData to access a SharePoint List
 
-If you use an OData feed to access a SharePoint List, there's an approximately 2100 character limitation to the URL you use to connect. More information: [Maximum URL length](OdataFeed.md#maximum-url-length)
+If you use an OData feed to access a SharePoint List, there's an approximately 2100 character limitation to the URL you use to connect. More information: [Maximum URL length](odata-feed.md#maximum-url-length)
 
 ## Next steps
 

@@ -48,7 +48,7 @@ After you select **Combine** in the table preview, the **Combine files** dialog 
 ![Combine files dialog box.](media/combine-files-csv/combine-files-csv-combine-files-window.png "Combine files dialog box")
 
 >[!NOTE]
->Power Query automatically detects what connector to use based on the first file found in the list. To learn more about the CSV connector, go to [Text/CSV](connectors/textcsv.md).
+>Power Query automatically detects what connector to use based on the first file found in the list. To learn more about the CSV connector, go to [Text/CSV](connectors/text-csv.md).
 
 For this example, leave all the default settings (**Example file** set to **First file**, and the default values for **File origin**, **Delimiter**, and **Data type detection**).
 
