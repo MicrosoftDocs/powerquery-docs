@@ -27,7 +27,7 @@ ms.author: bezhan
 
 ## Prerequisites
 
-* To connect to Active Directory in **Power BI (Dataflows)** you'll need an [**On-premises data gateway**](using-dataflows-with-on-premises-data.md).
+* To connect to Active Directory in **Power BI (Dataflows)** you'll need an [**On-premises data gateway**](../dataflows/using-dataflows-with-on-premises-data.md).
 
 ## Connect to Active Directory from Power Query Desktop
 
@@ -56,7 +56,7 @@ ms.author: bezhan
 
     :::image type="content" source="media/active-directory/get-data-online.png" alt-text="Screenshot of the Choose data source window with Active Directory selected.":::
 
-1. In **Connect to data source**, enter your domain, select connection credentials if you've connected before or select **Create new connection**, select your [**on-premises data gateway**](using-dataflows-with-on-premises-data.md).
+1. In **Connect to data source**, enter your domain, select connection credentials if you've connected before or select **Create new connection**, select your [**on-premises data gateway**](../dataflows/using-dataflows-with-on-premises-data.md).
 
 1. Only **Windows** authentication is available. Add your username in the format **domain\alias**, and add your password. Select **Next**.
 
