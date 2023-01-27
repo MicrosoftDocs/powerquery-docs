@@ -58,9 +58,12 @@ Both [Web.BrowserContents](/powerquery-m/web-browsercontents) and [Web.Page](/po
 If you're using [Web.Page](/powerquery-m/web-page) and receive a `Please specify how to connect` error, ensure that you have Internet Explorer 10 or later installed on the machine that hosts your on-premises data gateway. 
 
 ## Enabling the Edge WebView2 version of Web.BrowserContents
-To enable the updated Edge-based version of Web.BrowserContents in Power BI Desktop, enable the "Web page connector infrastructure update" preview feature.
+[Web.BrowserContents](/powerquery-m/web-browsercontents) was initially built on Chromium, but it is being migrated to Edge's WebView2 control.
+
+To enable the updated Edge-based version of `Web.BrowserContents` in Power BI Desktop, enable the "Web page connector infrastructure update" preview feature.
 
 To enable the updated Edge-based version of Web.BrowserContents on a gateway machine, set the following environment variable:
+
 `set PQ_WebView2Connector=true`
 
 ## Using Web.Page instead of Web.BrowserContents
