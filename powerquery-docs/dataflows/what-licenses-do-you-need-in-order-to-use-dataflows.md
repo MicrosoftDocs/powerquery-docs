@@ -62,12 +62,12 @@ If you use a Power Apps license to create dataflows, there's no limitation on th
 
 The Power Apps per-app plan covers up to a 50-MB database capacity. The Power Apps per-user plan allows you to have a database of 250-MB capacity.
 
-In Power Apps we have the following limitations in place:
+The following limitations are in place in Power Apps:
 
-- A Dataflow refresh can run for a maximum of 24 hours.
-- Each query/partition has a maximum run duration of 4 hours.
-- For each refresh, there is a concurrency limit of 4 queries/partitions that can refresh simultaneously.
-- PQO refresh limits apply for each user. [Learn more](../power-query-online-limits.md#refresh-limits)
+- A dataflow refresh can run for a maximum of 24 hours.
+- Each query/partition has a maximum run duration of four hours.
+- For each refresh, there's a concurrency limit of four queries/partitions that can refresh simultaneously.
+- Power Query Online refresh limits apply for each user. More information: [Refresh limits](../power-query-online-limits.md#refresh-limits)
 
 ### Power BI Pro
 
