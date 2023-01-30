@@ -81,14 +81,14 @@ Upgrade your Power BI workspace to the new version (v2). More information: [Upgr
 
 ## Dataflow name exists already, but I deleted the old one
 
-This problem happens when you try to create a dataflow with a name that already exists or use the name of a recently deleted a dataflow.
+This problem happens when you try to create a dataflow with a name that already exists or use the name of a recently deleted dataflow.
 
-   ![Dataflow name exists already](media/dataflow-error-name-exists.png)
+   ![Dataflow name exists already.](media/dataflow-error-name-exists.png)
 
 **Reason:**
 
-It can take up to 48 hours till the backend systems deleted all files and references of the deleted dataflow.
+It can take up to 48 hours for the backend systems to delete all the files and references to the deleted dataflow.
 
 **Resolution:**
 
-You can either wait 48 hours with publishing the dataflow or create it now under a different name and rename it later on.
+You can either wait 48 hours before publishing the dataflow or create it now under a different name and rename it later on.
