@@ -26,7 +26,7 @@ You can see an example of how credentials are stored in the **Data source settin
 > [!Note]
 > If you change your data source function's required parameters during development, previously stored credentials will no longer work (because the path values no longer match). You should delete any stored credentials any time you change your data source function parameters. If incompatible credentials are found, you may receive an error at runtime.
 
-### Data Source Path Format
+## Data Source Path Format
 
 The _Path_ value for a data source is derived from the data source function's required parameters.
 Required parameters can be excluded from the path by adding `DataSource.Path = false` to the function's metadata ([see below](#excluding-required-parameters-from-your-data-source-path)).
@@ -57,7 +57,7 @@ When a Label value is defined, the data source path value wouldn't be shown:
 > [!Note]
 > We currently recommend you _do not_ include a Label for your data source if your function has required parameters, as users won't be able to distinguish between the different credentials they've entered. We are hoping to improve this in the future (that is, allowing data connectors to display their own custom data source paths).
 
-#### Excluding Required Parameters from your Data Source Path
+### Excluding Required Parameters from your Data Source Path
 
 If you want a function parameter to be required, but not to be included as part of your data source path, you can add `DataSource.Path = false` to the function documentation metadata.
 This property can be added to one or more parameters for your function. This field removes the value from your data source path (meaning that it will no longer be passed to your `TestConnection` function), so it should only be used for parameters that aren't required to identify your data source, or distinguish between user credentials.
@@ -93,7 +93,7 @@ HelloWorldType = type function (
     ];
 ```
 
-### Functions with a Uri parameter
+## Functions with a Uri parameter
 
 Because data sources with a Uri based identifier are so common, there's special handling in the Power Query UI when dealing with Uri based data source paths.
 When a Uri-based data source is encountered, the credential dialog provides a drop-down allowing the user to select the base path, rather than the full path (and all paths in between).
