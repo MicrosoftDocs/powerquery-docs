@@ -2,7 +2,7 @@
 title: Native query support in the Power Query SDK
 description: Generic native query support implementation guide for Power Query custom connectors using the Power Query SDK.
 author: ptyx507
-ms.date: 1/1/2023
+ms.date: 1/27/2023
 ms.author: miescobar
 ms.custom: 
 ---
@@ -50,7 +50,7 @@ In the ```SqlCapabilities``` record of the sample connector, you can find a reco
 ## Manually test the Native Query capabilities of your connector
 
 >[!NOTE]
->For this article, we will be using the [AdventureWorks2019 sample database](https://learn.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms), but you can follow along with any SQL Server database of your choice and make the necessary changes when it comes down to specifics of the database chosen.
+>For this article, we will be using the [AdventureWorks2019 sample database](/sql/samples/adventureworks-install-configure), but you can follow along with any SQL Server database of your choice and make the necessary changes when it comes down to specifics of the database chosen.
 
 The way that the native query support will be implemented in this article is that the user will be requested to enter three values:
 
