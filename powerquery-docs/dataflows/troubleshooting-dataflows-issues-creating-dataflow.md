@@ -83,7 +83,8 @@ Upgrade your Power BI workspace to the new version (v2). More information: [Upgr
 
 This problem happens when you try to create a dataflow with a name that already exists or use the name of a recently deleted dataflow.
 
-   ![Dataflow name exists already.](media/dataflow-error-name-exists.png)
+   ![Screenshot showing Dataflow name exists already.](media/dataflow-error-name-exists.png)
+
 
 **Reason:**
 
