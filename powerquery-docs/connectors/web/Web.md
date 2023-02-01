@@ -3,7 +3,7 @@ title: Power Query Web connector
 description: Provides basic information and how to connect to your data, along with the supported file types and instructions on using the on-premises data gateway and authentication types.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 1/23/2021
+ms.date: 2/1/2023
 ms.author: bezhan
 ---
 
@@ -37,7 +37,7 @@ ms.author: bezhan
 
 To load data from a web site with Power Query Desktop:
 
-1. Select **Get Data > Web** in Power BI or **From Web** in the **Data** ribbon in Excel. 
+1. Select **Get Data > Web** in Power BI or **From Web** in the **Data** ribbon in Excel.
 
 2. Choose the **Basic** button and enter a URL address in the text box. For example, enter `https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States`. Then select **OK**.
 
@@ -68,10 +68,10 @@ To load data from a web site with Power Query Desktop:
 
    The level you select for the authentication method determines what part of a URL will have the authentication method applied to it. If you select the top-level web address, the authentication method you select here will be used for that URL address or any subaddress within that address. However, you might not want to set the top URL address to a specific authentication method because different subaddresses could require different authentication methods. For example, if you were accessing two separate folders of a single SharePoint site and wanted to use different Microsoft Accounts to access each one.
 
-   Once you've set the authentication method for a specific web site address, you won't need to select the authentication method for that URL address or any subaddress again. For example, if you select the https://en.wikipedia.org/ address in this dialog, any web page that begins with this address won't require that you select the authentication method again.  
+   Once you've set the authentication method for a specific web site address, you won't need to select the authentication method for that URL address or any subaddress again. For example, if you select the `https://en.wikipedia.org/` address in this dialog, any web page that begins with this address won't require that you select the authentication method again.  
 
    >[!Note]
-   >If you need to change the authentication method later, go to [Changing the authentication method](web-troubleshoot.md#changing-the-authentication-method). 
+   >If you need to change the authentication method later, go to [Changing the authentication method](web-troubleshoot.md#changing-the-authentication-method).
 
 4. From the **Navigator** dialog, you can select a table, then either transform the data in the Power Query editor by selecting **Transform Data**, or load the data by selecting **Load**.
 
@@ -93,7 +93,7 @@ To load data from a web site with Power Query Online:
 
    In some cases, you might want to use a URL that points at either an API or a file stored on the web. In those scenarios, the Web API connector (or file-specific connectors) would allow you to move forward without using an on-premises data gateway.
 
-   Also note that if your URL points to a file, you should [use the specific file connector](#import-files-from-the-web) instead of the Web page connector. 
+   Also note that if your URL points to a file, you should [use the specific file connector](#import-files-from-the-web) instead of the Web page connector.
 
 2. Enter a URL address in the text box. For this example, enter `https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States`.
 
@@ -133,7 +133,7 @@ Use the **URL parts** section of the dialog to assemble the URL you want to use 
 
 Depending on how long the POST request takes to process data, you may need to prolong the time the request continues to stay connected to the web site. The default timeout for both POST and GET is 100 seconds. If this timeout is too short, you can use the optional **Command timeout in minutes** to extend the number of minutes you stay connected.
 
-You can also add specific request headers to the POST you send to the web site using the optional **HTTP request header parameters** drop-down box. The following table describes the request headers you can select. 
+You can also add specific request headers to the POST you send to the web site using the optional **HTTP request header parameters** drop-down box. The following table describes the request headers you can select.
 
 | Request Header | Description |
 | --- | --- |
