@@ -3,7 +3,7 @@ title: Power Query Salesforce Reports connector.
 description: Includes basic information, prerequisites, and information on how to connect to your data, along with a list of known issues and limitations.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 1/10/2023
+ms.date: 2/2/2023
 ms.author: bezhan
 ---
 
@@ -20,9 +20,6 @@ ms.author: bezhan
 
 >[!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
-
->[!Note]
-> We are aware of ending support for certain Salesforce API versions. Once we're ready to share details around upgrading the API versions that this connector uses, we'll publish in the [release plans](/dynamics365/release-plans/).
 
 >[!Warning]
 > By default, Salesforce does not support Internet Explorer 11, which is used as part of the authentication experience to online services in Power Query Desktop. Please opt-in for [extended support for accessing Lightning Experience Using Microsoft Internet Explorer 11](https://help.salesforce.com/articleView?id=000333934&type=1&mode=1). You may also want to review Salesforce documentation on [configuring Internet Explorer](https://developer.salesforce.com/docs/atlas.en-us.salesforce_supported_browsers_cheatsheet.meta/salesforce_supported_browsers_cheatsheet/getstart_browser_ie.htm). At this time, users will be impaired from authenticating, but stored credentials should continue to work until their existing authentication tokens expire. To resolve this, go to [Enabling Microsoft Edge (Chromium) for OAuth Authentication in Power BI Desktop](../oauth-edge-chromium.md).
@@ -86,6 +83,14 @@ To connect to Salesforce Reports data:
 4. Select **Sign in** to sign in to your Salesforce account. Once you've successfully signed in, select **Next**.
 
 5. In the **Navigator** dialog box, select the Salesforce Reports you want to load. Then select **Transform Data** to transform the data.
+
+## Specifying a Salesforce API version
+
+We require you to specify a supported Salesforce API version to use the Salesforce connector. You can do so by modifying the query using the Power Query Advanced Editor. For example, ```Salesforce.Data("https://login.salesforce.com/", [ApiVersion=48])```.
+
+If you specify a version that is not supported by Salesforce, you will encounter an error message indicating that you have specified an unsupported ApiVersion.
+
+For more information on Salesforce API versions and support, visit the [Salesforce website](https://help.salesforce.com/s/articleView?id=000381744&type=1).
 
 ## Known issues and limitations
 
