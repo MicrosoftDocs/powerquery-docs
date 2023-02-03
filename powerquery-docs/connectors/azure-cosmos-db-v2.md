@@ -82,7 +82,7 @@ To connect to Azure Cosmos DB data:
 
       Rename the new Partition Key dataset, then right-click on the Cosmos DB partition key column. In this example, **Product** is the Cosmos DB partition key column. Select **Remove Other Columns**, and then select **Remove Duplicates**.
 
-      :::image type="content" source="./media/azure-cosmosdb/unique-partition-keys.png" alt-text="Screenshot showing the unique Partition Keys in Power Query editor." lightbox="./media/azure-cosmosdb/unique-p-keys.png":::
+      :::image type="content" source="./media/azure-cosmosdb/unique-partition-keys.png" alt-text="Screenshot showing the unique Partition Keys in Power Query editor." lightbox="./media/azure-cosmosdb/unique-partition-keys.png":::
 
    **b. Create a parameter for dynamic filtering**:
 
