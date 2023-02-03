@@ -4,7 +4,7 @@ description: Provides basic information, prerequisites, and instructions on how 
 author: revinjchalil
 
 ms.topic: conceptual
-ms.date: 1/19/2023
+ms.date: 2/3/2023
 ms.author: rechalil
 ms.reviewer: dougklo
 LocalizationGroup: reference
@@ -70,7 +70,7 @@ To connect to Azure Cosmos DB data:
 
 7. In the **Display Options** pane, select the check box for the dataset that you want to use.
 
-   :::image type="content" source="./media/azure-cosmosdb/navigator.png" alt-text="Screenshot of the Navigator emphasizing the data you've selected." lightbox="./media/azure-cosmosdb/azure-cosmosdb-navigation.png":::
+   :::image type="content" source="./media/azure-cosmosdb/navigator.png" alt-text="Screenshot of the Navigator emphasizing the data you've selected." lightbox="./media/azure-cosmosdb/navigator.png":::
 
 8. The most optimal way to specify the Partition Key filter (so that the aggregate functions can be pushed down to Cosmos DB) is to use [dynamic M parameters](/power-bi/connect-data/desktop-dynamic-m-query-parameters). To use dynamic M parameters, you would create a dataset with unique Partition Key values, create a parameter, add it as filter on main dataset, bind it to the unique Partition key datset, and use it as a slicer for the main dataset. Use the following steps to enable dynamic M parameters for Partition Key filtering.
 
@@ -104,13 +104,13 @@ To connect to Azure Cosmos DB data:
 
       Select the **Report** tab and add a slicer with the unique Partition Key.
 
-      :::image type="content" source="./media/azure-cosmosdb/slicer.png" alt-text="Screenshot of the slicer." lightbox="./media/azure-cosmosdb/slicer.png":::
+      :::image type="content" source="./media/azure-cosmosdb/slicer.png" alt-text="Screenshot of the slicer.":::
 
    **e. Add visualizations and apply Partition Key filter from the slicer**:
 
       Since the chosen partition key value on the slicer is bound to the parameter (as done in step d) and the parameterized filter is applied on the main dataset (as done in step c), the chosen partition key value will be applied as a filter on the main dataset and the query with the partition key filter will be passed down to Cosmos DB in all visualizations.
 
-      :::image type="content" source="./media/azure-cosmosdb/visualization.png" alt-text="Screenshot of the visualization after the partition key filter is applied.":::
+      :::image type="content" source="./media/azure-cosmosdb/visualization.png" alt-text="Screenshot of the visualization after the partition key filter is applied." lightbox="./media/azure-cosmosdb/visualization.png":::
 
 ## Advanced options
 
