@@ -326,6 +326,8 @@
         href: connectors/azure-analysis-services.md
       - name: "Azure Blob Storage"
         href: connectors/azure-blob-storage.md
+      - name: "Azure Cosmos DB v2 (Beta)"
+        href: connectors/azure-cosmos-db-v2.md
       - name: "Azure Cost Management"
         href: connectors/azure-cost-management.md
       - name: "Azure Databricks"

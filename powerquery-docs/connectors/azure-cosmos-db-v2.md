@@ -4,7 +4,7 @@ description: Provides basic information, prerequisites, and instructions on how 
 author: revinjchalil
 
 ms.topic: conceptual
-ms.date: 1/19/2023
+ms.date: 2/3/2023
 ms.author: rechalil
 ms.reviewer: dougklo
 LocalizationGroup: reference
@@ -45,7 +45,7 @@ To connect to Azure Cosmos DB data:
 
 4. Select **Azure Cosmos DB v2 (Beta)**, and then select **Connect**.
 
-   :::image type="content" source="./media/azure-cosmosdb/getdata.png" alt-text="Select Azure Cosmos DB v2.":::
+   :::image type="content" source="./media/azure-cosmosdb/get-data.png" alt-text="Screenshot showing Select Azure Cosmos DB v2 selection.":::
 
 5. On the **Azure Cosmos DB v2** connection page, for **Cosmos Endpoint**, enter the URI of the Azure Cosmos DB account that you want to use. For **Data Connectivity mode**, choose a mode that's appropriate for your use case, following these general guidelines:
 
@@ -70,47 +70,47 @@ To connect to Azure Cosmos DB data:
 
 7. In the **Display Options** pane, select the check box for the dataset that you want to use.
 
-:::image type="content" source="./media/azure-cosmosdb/Navigator.png" alt-text="The Navigator dialog box shows your data." lightbox="./media/azure-cosmosdb/azure-cosmosdb-navigation.png":::
+   :::image type="content" source="./media/azure-cosmosdb/navigator.png" alt-text="Screenshot of the Navigator emphasizing the data you've selected." lightbox="./media/azure-cosmosdb/navigator.png":::
 
 8. The most optimal way to specify the Partition Key filter (so that the aggregate functions can be pushed down to Cosmos DB) is to use [dynamic M parameters](/power-bi/connect-data/desktop-dynamic-m-query-parameters). To use dynamic M parameters, you would create a dataset with unique Partition Key values, create a parameter, add it as filter on main dataset, bind it to the unique Partition key datset, and use it as a slicer for the main dataset. Use the following steps to enable dynamic M parameters for Partition Key filtering.
 
    **a. Create a dataset with unique partition key values**:
 
-      In **Navigator**, select **Transform Data** instead of **Load** to bring up the Power Query Editor. Right-click on the Queries dataset, and then select **Duplicate** to create a new dataset.
+      In **Navigator**, select **Transform Data** instead of **Load** to bring up the Power Query editor. Right-click on the queries dataset, and then select **Duplicate** to create a new dataset.
 
-      :::image type="content" source="./media/azure-cosmosdb/DuplicateDataset.png" alt-text="Partition Key dataset in Power Query editor.":::
+      :::image type="content" source="./media/azure-cosmosdb/duplicate-dataset.png" alt-text="Screenshot showing how to select duplicate from your existing query in the Power Query editor." lightbox="./media/azure-cosmosdb/duplicate-dataset.png":::
 
-      Rename the new Partition Key dataset, right-click on the Cosmos DB Partition Key column. In this example, **Product** is the Cosmos DB Partition Key column. Select **Remove Other Columns**, and then select **Remove Duplicates**.
+      Rename the new Partition Key dataset, then right-click on the Cosmos DB partition key column. In this example, **Product** is the Cosmos DB partition key column. Select **Remove Other Columns**, and then select **Remove Duplicates**.
 
-      :::image type="content" source="./media/azure-cosmosdb/UniquePKeys.png" alt-text="Unique Partition Keys in Power Query editor.":::
+      :::image type="content" source="./media/azure-cosmosdb/unique-partition-keys.png" alt-text="Screenshot showing the unique Partition Keys in Power Query editor." lightbox="./media/azure-cosmosdb/unique-partition-keys.png":::
 
    **b. Create a parameter for dynamic filtering**:
 
       In the Power Query editor, select **Manage Parameters** > **New Parameter**. Rename the new parameter to reflect the filter parameter and input a valid value as **Current Value**.
 
-      :::image type="content" source="./media/azure-cosmosdb/CreateParameter.png" alt-text="Create Parameter in Power Query editor.":::
+      :::image type="content" source="./media/azure-cosmosdb/create-parameter.png" alt-text="Screenshot showing how to create a parameter in the Power Query editor." lightbox="./media/azure-cosmosdb/create-parameter.png":::
 
    **c. Apply parameterized filter on main dataset**:
 
       Select the dropdown icon of the Partition Key column, then select **Text Filters** > **Equals**. Change the filter type from Text to Parameter. Then choose the parameter that was created in step b. Select **Close & Apply** on top left corner of the Power Query editor.
 
-      :::image type="content" source="./media/azure-cosmosdb/ParamFilter.png" alt-text="Apply parameterized filter.":::
+      :::image type="content" source="./media/azure-cosmosdb/param-filter.png" alt-text="Screenshot showing the steps to apply the parameterized filter." lightbox="./media/azure-cosmosdb/param-filter.png":::
 
    **d. Create Partition Key values slicer with parameter binding**:
 
       In Power BI, select the **Model** tab. Then select the Partition Key field. From the **Properties** pane, select **Advanced** > **Bind to parameter**. Choose the parameter that was created in step b.
 
-      :::image type="content" source="./media/azure-cosmosdb/ParamBinding.png" alt-text="Parameter binding.":::
+      :::image type="content" source="./media/azure-cosmosdb/param-binding.png" alt-text="Screenshot showing the steps to bind the parameter." lightbox="./media/azure-cosmosdb/param-binding.png":::
 
       Select the **Report** tab and add a slicer with the unique Partition Key.
 
-      :::image type="content" source="./media/azure-cosmosdb/Slicer.png" alt-text="Slicer.":::
+      :::image type="content" source="./media/azure-cosmosdb/slicer.png" alt-text="Screenshot of the slicer.":::
 
    **e. Add visualizations and apply Partition Key filter from the slicer**:
 
       Since the chosen partition key value on the slicer is bound to the parameter (as done in step d) and the parameterized filter is applied on the main dataset (as done in step c), the chosen partition key value will be applied as a filter on the main dataset and the query with the partition key filter will be passed down to Cosmos DB in all visualizations.
 
-      :::image type="content" source="./media/azure-cosmosdb/Visualization.png" alt-text="Visualization.":::
+      :::image type="content" source="./media/azure-cosmosdb/visualization.png" alt-text="Screenshot of the visualization after the partition key filter is applied." lightbox="./media/azure-cosmosdb/visualization.png":::
 
 ## Advanced options
 
@@ -137,7 +137,7 @@ when processing a query. For example, in the following query, TOP is applied in 
 
 * For the SUM aggregate function, Cosmos DB returns undefined as the result set if any of the arguments in SUM are string, boolean, or null. However, if there are null values, the connector passes the query to Cosmos DB in such a way that it asks the data source to replace a null value with zero as part of the SUM calculation.
 
-* For the AVG aggregate function, Cosmos DB returns undefined as result set if any of the arguments in SUM are string, boolean, or null. The connector exposes a connection property to disable passing down the AVG aggregate function to Cosmos DB in case this default Cosmos DB behavior needs to be overridden. When AVG passdown is disabled, it isn't passed down to Cosmos DB, and the connector handles performing the AVG aggregation operation itself. For more information, see "Enable AVERAGE function Passdown" in [Advanced options](#advanced-options).
+* For the AVG aggregate function, Cosmos DB returns undefined as result set if any of the arguments in SUM are string, boolean, or null. The connector exposes a connection property to disable passing down the AVG aggregate function to Cosmos DB in case this default Cosmos DB behavior needs to be overridden. When AVG passdown is disabled, it isn't passed down to Cosmos DB, and the connector handles performing the AVG aggregation operation itself. For more information, go to "Enable AVERAGE function Passdown" in [Advanced options](#advanced-options).
 
 * Azure Cosmos DB Containers with large partition key are not currently supported in the Connector.
 
