@@ -52,7 +52,7 @@ SqlCapabilities = Diagnostics.LogValue("SqlCapabilities_Options", defaultConfig[
 >[!NOTE]
 >For this article, we'll be using the [AdventureWorks2019 sample database](/sql/samples/adventureworks-install-configure). But you can follow along with any SQL Server database of your choice and make the necessary changes when it comes down to the specifics of the database chosen.
 
-The way the native query support will be implemented in this article is that the user will be requested to enter three values:
+The way native query support will be implemented in this article is that the user will be requested to enter three values:
 
 * Server name
 * Database name
@@ -91,7 +91,7 @@ Replace the formula inside the formula bar with the following formula, and then 
   FROM [Person].[Address]")
 ```
 
-After applying this change, a warning should appear underneath the formula bar requesting permission to run the native query against your data source.
+After you apply this change, a warning should appear underneath the formula bar requesting permission to run the native query against your data source.
 
 :::image type="content" source="media/native-query-sdk/sample-native-query.png" alt-text="Screenshot of the permission is required to run this native database query warning message.":::
 
@@ -99,7 +99,7 @@ Select **Edit Permission**. A new **Native Database Query** dialog is displayed 
 
 :::image type="content" source="media/native-query-sdk/native-query-approval.png" alt-text="Screenshot showing how to approve a native database query dialog.":::
 
-After executing your query, a preview of your query appears in the Power Query editor, and this validates that your connector is capable of running native queries.
+After you run your query, a preview of your query appears in the Power Query editor. This preview validates that your connector is capable of running native queries.
 
 :::image type="content" source="media/native-query-sdk/start-native-query-validated.png" alt-text="Screenshot of the native query executed in initial connector development and testing.":::
 
@@ -107,7 +107,7 @@ After executing your query, a preview of your query appears in the Power Query e
 
 With the information gathered from the previous sections, the goal now is to translate such information into code for your connector.
 
-The way that you can accomplish this is by adding a new **NativeQueryProperties** record field to your connector's **Publish** record, which in this case is the `SqlODBC.Publish` record.
+The way that you can accomplish this translation is by adding a new **NativeQueryProperties** record field to your connector's **Publish** record, which in this case is the `SqlODBC.Publish` record.
 
 The new record field consists of two fields:
 
@@ -120,7 +120,7 @@ Your navigation steps can be categorized into two groups. The first contains tho
 
 For this case, there was only one navigation step that consisted of two fields:
 
-* **Name**: This field is the name of the database that was passed by the end-user. In this case it was `AdventureWorks2019`, but this field should always be passed as-is from what the end-user entered during the get data experience.
+* **Name**: This field is the name of the database that was passed by the end-user. In this case, it was `AdventureWorks2019`, but this field should always be passed as-is from what the end-user entered during the get data experience.
 * **Kind**: This field is information that isn't visible to the end-user and is specific to the connector or driver implementation. In this case, this value identifies what type of object should be accessed. For this implementation, this field will be a fixed value that consists of the string `Database`.
 
 Such information will be translated to the following code. This code should be added as a new field to your `SqlODBC.Publish` record.
