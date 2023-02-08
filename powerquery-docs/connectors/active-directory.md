@@ -27,7 +27,7 @@ ms.author: bezhan
 
 ## Prerequisites
 
-* To connect to Active Directory in **Power BI (Dataflows)** you'll need an [**On-premises data gateway**](../dataflows/using-dataflows-with-on-premises-data.md).
+* To connect to Active Directory in **Power BI (Dataflows)** you'll need an [**on-premises data gateway**](../dataflows/using-dataflows-with-on-premises-data.md).
 
 ## Connect to Active Directory from Power Query Desktop
 
@@ -46,9 +46,9 @@ ms.author: bezhan
 
     :::image type="content" source="media/active-directory/add-credentials.png" alt-text="Screenshot of Windows credentials page with alternate credentials selected and a username and password added.":::
 
-1. In the **Navigator**, review and/or select data from your database. Then select **OK**.
+1. In **Navigator**, review and/or select data from your database. Then select **OK**.
     >[!NOTE]
-    > The navigator does not load data for the configuration partition. See the [limitations section.](#limitations-and-issues)
+    > The navigator doesn't load data for the configuration partition. More information: [Limitations and issues](#limitations-and-issues)
 
 ## Connect to Active Directory from Power Query Online
 
@@ -56,18 +56,18 @@ ms.author: bezhan
 
     :::image type="content" source="media/active-directory/get-data-online.png" alt-text="Screenshot of the Choose data source window with Active Directory selected.":::
 
-1. In **Connect to data source**, enter your domain, select connection credentials if you've connected before or select **Create new connection**, select your [**on-premises data gateway**](../dataflows/using-dataflows-with-on-premises-data.md).
+1. In **Connect to data source**, enter your domain, select connection credentials if you've connected before or select **Create new connection**, and select your [**on-premises data gateway**](../dataflows/using-dataflows-with-on-premises-data.md).
 
 1. Only **Windows** authentication is available. Add your username in the format **domain\alias**, and add your password. Select **Next**.
 
     :::image type="content" source="media/active-directory/connection-settings.png" alt-text="Screenshot of the Connect to data source page, showing a domain added, using a new connection, a data gateway selected and a username and password provided.":::
 
-1. In the **Navigator**, review and/or select data from your database. Then select **OK**.
+1. In **Navigator**, review and/or select data from your database. Then select **OK**.
     >[!NOTE]
-    > The navigator does not load data for the configuration partition. See the [limitations section.](#limitations-and-issues)
+    > The navigator doesn't load data for the configuration partition. More information: [Limitations and issues](#limitations-and-issues)
 
 ## Limitations and issues
 
 ### Some objects in the Navigator return empty tables
 
-The Power Query Active Directory connector supports search in the Schema and Domain partitions, but not in the Configuration partition. This limitation is the current design. So if there are any objects that reside in the Configuration partition, Power Query doesn't load data for those objects into the Navigator.
+The Power Query Active Directory connector supports search in the Schema and Domain partitions, but not in the Configuration partition. This limitation is the current design. So if there are any objects that reside in the Configuration partition, Power Query doesn't load data for those objects into the navigator.
