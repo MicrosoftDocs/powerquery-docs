@@ -86,9 +86,9 @@ To connect to Salesforce Reports data:
 
 ## Specifying a Salesforce API version
 
-We require you to specify a supported Salesforce API version to use the Salesforce connector. You can do so by modifying the query using the Power Query Advanced Editor. For example, ```Salesforce.Data("https://login.salesforce.com/", [ApiVersion=48])```.
+We require you to specify a supported Salesforce API version to use the Salesforce connector. You can do so by modifying the query using the Power Query Advanced Editor. For example, `Salesforce.Data("https://login.salesforce.com/", [ApiVersion=48])`.
 
-If you specify a version that is not supported by Salesforce, you will encounter an error message indicating that you have specified an unsupported ApiVersion.
+If you specify a version that isn't supported by Salesforce, you'll encounter an error message indicating that you have specified an unsupported ApiVersion.
 
 For more information on Salesforce API versions and support, visit the [Salesforce website](https://help.salesforce.com/s/articleView?id=000381744&type=1).
 
