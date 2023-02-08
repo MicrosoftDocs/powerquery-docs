@@ -426,6 +426,8 @@
         href: connectors/microsoft-azure-consumption-insights.md
       - name: Microsoft Exchange
         href: Connectors/microsoft-exchange.md
+      - name: Microsoft Exchange Online
+        href: Connectors/microsoft-exchange-online.md
       - name: "Microsoft Graph Security (Deprecated)"
         href: connectors/microsoft-graph-security.md
       - name: "MicroStrategy for Power BI"
