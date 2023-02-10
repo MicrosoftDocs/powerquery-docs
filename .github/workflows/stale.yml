@@ -13,7 +13,7 @@ jobs:
     - uses: actions/stale@v4
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
-        days-before-pr-stale: 14
+        days-before-pr-stale: 30
         days-before-pr-close: 90
         stale-pr-label: inactive
         close-pr-label: auto-close
@@ -22,7 +22,7 @@ jobs:
         ascending: false
         # start-date: '2021-03-19'
         stale-pr-message: >
-          This pull request has been inactive for at least 14 days. You can make any comment to keep this PR open, or it will be closed automatically.
+          This pull request has been inactive for at least 30 days. You can make any comment to keep this PR open, or it will be closed automatically.
           
           If you are finished with your changes, don't forget to type `#sign-off` to get a review. See the [contributor guide](https://review.docs.microsoft.com/help/contribute/contribute-how-to-write-pull-request-automation?branch=main) for instructions.
           

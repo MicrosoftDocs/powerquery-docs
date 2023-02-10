@@ -1,10 +1,10 @@
 ---
 title: What licenses do you need to use dataflows
 description: What licenses do you need to use dataflows
-author: bensack
+author: Luitwieler
 ms.topic: conceptual
-ms.date: 08/01/2022
-ms.author: bensack
+ms.date: 01/24/2023
+ms.author: jeluitwi
 ---
 
 # What licenses do you need to use dataflows?
@@ -58,9 +58,16 @@ The preceding table shows what features each license will give you. The followin
 
 ### Power Apps licenses
 
-If you use a Power Apps license to create dataflows, there's no limitation on the number of dataflows and entities you can create. However, there's a limitation on the size of Dataverse service you can use.
+If you use a Power Apps license to create dataflows, there's no limitation on the number of dataflows and entities you can create. However, there's a limitation on the size of Dataverse service you can use and refresh performance.
 
 The Power Apps per-app plan covers up to a 50-MB database capacity. The Power Apps per-user plan allows you to have a database of 250-MB capacity.
+
+The following limitations are in place in Power Apps:
+
+- A dataflow refresh can run for a maximum of 24 hours.
+- Each query/partition has a maximum run duration of four hours.
+- For each refresh, there's a concurrency limit of four queries/partitions that can refresh simultaneously.
+- Power Query Online refresh limits apply for each user. More information: [Refresh limits](../power-query-online-limits.md#refresh-limits)
 
 ### Power BI Pro
 
@@ -72,18 +79,7 @@ If you use Power BI Premium (capacity-based licensing), you can use all the AI c
 
 #### Limitations per premium capacity
 
-Dataflows that are using a premium capacity to refresh the data are limited to the maximum number of parallel tasks they can perform at a given time. The maximum number of parallel tasks depends on the type of premium capacity you're using. The following table represents the maximum number of parallel tasks that can be executed at a given time by all dataflows in a workspace mapped to the capacity.
-
-| SKU | v-cores | Number of parallel tasks |
-| --- | --- | --- |
-|EM1/A1|1|4|
-|EM2/A2|2|8|
-|EM3/A3|4|16|
-|P1/A4|8|32|
-|P2/A5|16|64|
-|P3/A6|32|64|
-|P4/A7|64|64|
-|P5/A8|128|64|
+Dataflows that are using a premium capacity to refresh the data are limited to the maximum number of parallel tasks they can perform at a given time. The maximum number of parallel tasks depends on the type of premium capacity you're using. [This table](/power-bi/developer/embedded/embedded-capacity#sku-memory-and-computing-power) represents the maximum number of parallel tasks that can be executed at a given time by all dataflows in a workspace mapped to the capacity.
 
 #### Parallel tasks
 
