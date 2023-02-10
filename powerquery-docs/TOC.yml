@@ -650,6 +650,8 @@
           href: handling-connector-signing.md
         - name: "Handling proxy support"
           href: handling-proxy-support.md
+        - name: "Handling native query support"
+          href: native-query-sdk.md
         - name: "Versioning"
           href: handling-versioning.md
       - name: Connector Certification
