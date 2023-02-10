@@ -114,5 +114,3 @@ To connect to Assemble data:
 * The **view images** feature currently only supports thumbnail sized images because of a row size limitation in Power BI.
 
 * When creating a query using **Models** data, a maximum of 200 properties can be selected.
-
-* When creating a query using **Models** data, A known issue with the Microsoft UI causes the dropdown to only display the first 1,000 properties. We are actively working with Microsoft on a solution.
