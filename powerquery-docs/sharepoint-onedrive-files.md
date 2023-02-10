@@ -1,8 +1,8 @@
 ---
 title: SharePoint and OneDrive for Business files import
 description: All available methods in Power Query to get files from your SharePoint or OneDrive for Business accounts.
-author: ptyx507
-ms.date: 11/18/2020
+author: ptyx507x
+ms.date: 1/11/2023
 ms.author: miescobar
 ---
 
@@ -15,13 +15,16 @@ Power Query offers a series of ways to gain access to files that are hosted on e
 >[!NOTE]
 >Currently, you can only browse for OneDrive for Business files of the authenticated user inside of Power Query Online for PowerApps.
 
+>[!WARNING]
+> This feature requires your browser to allow third party cookies. If your browser has blocked third party cookies, the **Browse** dialog will appear but it'll be completely blank with no option to close the dialog.
+
 Power Query provides a **Browse OneDrive** button next to the **File path or URL** text box when you create a dataflow in PowerApps using any of these connectors:
 
 * [Excel](connectors/excel.md)
 * [JSON](connectors/json.md)
 * [PDF](connectors/pdf.md)
 * [XML](connectors/xml.md)
-* [TXT/CSV](connectors/textcsv.md)
+* [TXT/CSV](connectors/text-csv.md)
 
 ![Browse OneDrive... button inside the Connection settings window for the Excel connector.](images/sp-browse-button.png)
 
@@ -74,7 +77,7 @@ When the **Navigator** dialog box appears, you can select from the list of table
 
 ## SharePoint folder connector
 
-You can read a detailed step-by-step guide on how to connect to the files hosted on your SharePoint site in the [SharePoint folder](connectors/sharepointfolder.md) article.
+You can read a detailed step-by-step guide on how to connect to the files hosted on your SharePoint site in the [SharePoint folder](connectors/sharepoint-folder.md) article.
 
 After successfully establishing the connection, you'll be prompted with a table preview that shows the files in your SharePoint site. Select the **Transform data** button at the bottom right of the window.
 

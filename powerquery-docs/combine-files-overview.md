@@ -2,7 +2,7 @@
 title: "Combine files overview" 
 description: How to combine files in Power Query and Power Query Online
 author: ptyx507
-ms.date: 06/30/2020
+ms.date: 12/9/2022
 ms.author: miescobar
 ms.topic: overview
 ---
@@ -22,7 +22,7 @@ Files can come from a variety of sources, such as (but not limited to):
 
 When working with these sources, you'll notice that they share the same table schema, commonly referred to as the *file system view*. The following screenshot shows an example of the file system view.
 
-![File system view.](images/me-combine-files-overview-file-system-view.png "File system view")
+![File system view.](media/combine-files-overview/combine-files-overview-file-system-view.png "File system view")
 
 In the file system view, the **Content** column contains the binary representation of each file.
 
@@ -41,17 +41,17 @@ Combining files takes place in the following stages:
 
 When you connect to a data source by using any of the previously mentioned connectors, a table preview opens. If you're certain that you want to combine all the files in the folder, select **Combine** in the lower-right corner of the screen.
 
-![Table preview with the Combine option.](images/combinefiles1.png "Table preview with the Combine option")
+![Table preview with the Combine option.](media/combine-files-overview/combinefiles1.png "Table preview with the Combine option")
 
 Alternatively, you can select **Transform data** to access the Power Query Editor and create a subset of the list of files (for example, by using filters on the folder path column to only include files from a specific subfolder). Then combine files by selecting the column that contains the binaries in the **Content** column and then selecting either:
 
 * The **Combine files** command in the **Combine** group on the **Home** tab.
 
-   ![Combine files command on the Home tab.](images/me-combine-files-overview-combine-files-button-home.png "Combine files button on the Home tab")
+   ![Combine files command on the Home tab.](media/combine-files-overview/combine-files-button-home.png "Combine files button on the Home tab")
 
 * The **Combine files** icon in the column header of the column that contains \[Binary\] values.
 
-   ![Combine files icon in the column header.](images/me-combine-files-overview-combine-files-button-header.png "Combine files icon in the column header")
+   ![Combine files icon in the column header.](media/combine-files-overview/combine-files-button-header.png "Combine files icon in the column header")
 
 ## Combine files dialog box
 
@@ -62,9 +62,9 @@ After you select the **Combine** or **Combine files** command, the **Combine fil
    * If you want to use a different file for the example file, you can choose it from the **Example file** drop-down menu.
    * Optional: You can select **Skip files with errors** to exclude from the final output any files that result in errors.
 
-In the following image, Power Query has detected that the first file has a .csv file name extension, so it uses the [Text/CSV](connectors/textcsv.md) connector to interpret the file.
+In the following image, Power Query has detected that the first file has a .csv file name extension, so it uses the [Text/CSV](connectors/text-csv.md) connector to interpret the file.
 
-![Combine files dialog box.](images/me-combine-files-overview-combine-files-dialog.png "Combine files dialog box")
+![Combine files dialog box.](media/combine-files-overview/combine-files-dialog.png "Combine files dialog box")
 
 ## Combined files output
 
@@ -82,7 +82,7 @@ After the **Combine files** process is finished, Power Query automatically perfo
 
 4. Creates a new group with the prefix **Transform file from** and the initial query as the suffix, and organizes all the components used to create these combined files in that group.
 
-   ![Combined files output.](images/me-combine-files-overview-combine-files-output.png "Combined files output")
+   ![Combined files output.](media/combine-files-overview/combine-files-output.png "Combined files output")
 
 You can easily combine all files within a given folder, as long as they have the same file type and structure (including the same columns). You can also apply additional transformation or extraction steps by modifying the automatically generated example query, without having to worry about modifying or creating additional function query steps.
 
