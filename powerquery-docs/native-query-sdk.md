@@ -19,11 +19,11 @@ The goal of this article is to showcase how you can implement such capability fo
 
 ## Prerequisites
 
-This article uses as a starting point a [sample that uses the SQL ODBC driver for its data source](https://github.com/microsoft/DataConnectors/tree/master/samples/NativeQuery/ODBC/SQL%20ODBC/Start). The implementation of the native query capability is currently only supported for ODBC connectors that adhere to the SQL-92 standard.
+This article uses as a starting point a [sample](https://github.com/microsoft/DataConnectors/tree/master/samples/NativeQuery/ODBC/SQL%20ODBC/Start) that uses the SQL ODBC driver for its data source. The implementation of the native query capability is currently only supported for ODBC connectors that adhere to the SQL-92 standard.
 
-The sample connector uses the **SQL Server Native Client 11.0** driver. Make sure that you have this driver installed to follow along this tutorial.
+The sample connector uses the [SQL Server Native Client 11.0](/sql/relational-databases/native-client/applications/installing-sql-server-native-client) driver. Make sure that you have this driver installed to follow along with this tutorial.
 
-You can also view the finished version of the sample connector from the [Finish folder in the GitHub Repository](https://github.com/microsoft/DataConnectors/tree/master/samples/NativeQuery/ODBC/SQL%20ODBC/Finish).
+You can also view the finished version of the sample connector from the [Finish folder](https://github.com/microsoft/DataConnectors/tree/master/samples/NativeQuery/ODBC/SQL%20ODBC/Finish) in the GitHub Repository.
 
 ## Modify the SQLCapabilities of your connector
 
