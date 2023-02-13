@@ -1,10 +1,10 @@
 ---
 title: Troubleshoot dataflow issues - creating dataflows
 description: Troubleshoot dataflow issues - creating dataflows
-author: bensack
+author: luitwieler
 ms.topic: conceptual
-ms.date: 1/6/2023
-ms.author: bensack
+ms.date: 01/25/2023
+ms.author: jeluitwi
 ---
 
 # Troubleshoot dataflow issues: Creating dataflows
@@ -78,3 +78,17 @@ You're creating the dataflow in an old version of the Power BI workspace, called
 Upgrade your Power BI workspace to the new version (v2). More information: [Upgrade classic workspaces to the new workspaces in Power BI](/power-bi/collaborate-share/service-upgrade-workspaces)
 
 ![Upgrade the classic workspace.](media/troubleshooting-dataflows-issues-creating-dataflow/upgrade-workspace.png)
+
+## Dataflow name exists already, but I deleted the old one
+
+This problem happens when you try to create a dataflow with a name that already exists or use the name of a recently deleted dataflow.
+
+   ![Screenshot showing Dataflow name exists already.](media/dataflow-error-name-exists.png)
+
+**Reason:**
+
+It can take up to 48 hours for the backend systems to delete all the files and references to the deleted dataflow.
+
+**Resolution:**
+
+You can either wait 48 hours before publishing the dataflow or create it now under a different name and rename it later on.

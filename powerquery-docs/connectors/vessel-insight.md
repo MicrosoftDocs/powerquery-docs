@@ -3,7 +3,7 @@ title: Power Query Vessel Insight connector
 description: Provides basic information and prerequisites for the Vessel Insight connector, descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 1/6/2023
+ms.date: 2/3/2023
 ms.author: bezhan
 ---
 

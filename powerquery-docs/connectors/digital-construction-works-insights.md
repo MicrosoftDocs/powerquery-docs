@@ -66,6 +66,6 @@ Power Query doesn't support "Always Encrypted" columns.
 
 ### OData.Feed
 
-We use the following default settings when using [OData.Feed](/powerquery-m/odata-feed):
+We use the following default settings when using [OData.Feed](odata-feed.md):
 
 Implementation = "2.0", MoreColumns = true, ODataVersion = 4

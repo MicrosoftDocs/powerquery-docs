@@ -429,6 +429,11 @@
       "source_path": "powerquery-docs/Connectors/WorkforceDimensions.md",
       "redirect_url": "/power-query/connectors/workforce-dimensions",
       "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/connectors/Azure Cosmos DB v2.md",
+      "redirect_url": "/power-query/connectors/azure-cosmos-db-v2",
+      "redirect_document_id": "true"
     }
       ]
 }

@@ -2,183 +2,181 @@
 title: Native query support in the Power Query SDK
 description: Generic native query support implementation guide for Power Query custom connectors using the Power Query SDK.
 author: ptyx507
-ms.date: 1/1/2023
+ms.date: 2/7/2023
 ms.author: miescobar
-ms.custom: 
 ---
 
-# Native query support in Power Query custom connectors 
+# Native query support in Power Query custom connectors
 
 >[!NOTE]
-> This article covers advanced topics around the implementation of [native query](native-database-query.md) support for custom connectors as well as [query folding](query-folding-basics.md) on top of them. We suggest that you read the articles around these topics before reading any further.
+> This article covers advanced topics around the implementation of [native query](native-database-query.md) support for custom connectors, as well as [query folding](query-folding-basics.md) on top of them. This article assumes you already have a working knowledge of these concepts.
 >
->To learn more about Power Query custom connectors check out the article on [Power Query SDK Overview](install-sdk.md)
+>To learn more about Power Query custom connectors, go to [Power Query SDK Overview](install-sdk.md).
 
-In Power Query, you're able to execute custom native queries against your data source to retrieve the data that you're looking for. You can also enable the capability to maintain query folding throughout this and subsequent transformation processes done inside of Power Query. 
+In Power Query, you're able to execute custom native queries against your data source to retrieve the data that you're looking for. You can also enable the capability to maintain query folding throughout this process and subsequent transformation processes done inside of Power Query.
 
 The goal of this article is to showcase how you can implement such capability for your custom connector.
 
->[!NOTE]
-> This article will use as a starting point a [sample that uses the SLQ ODBC driver for its data source](https://github.com/microsoft/DataConnectors/tree/master/samples/NativeQuery/ODBC/SQL%20ODBC/Start). The implementation of the native query capability is currently only supported for ODBC connectors that adhere to the SQL-92 standard. 
->
->The sample connector uses the **SQL Server Native Client 11.0** driver. Make sure that you have this driver installed to follow along this tutorial
->
->You can also see the finished version of the sample connector from the [Finish folder in the GitHub Repository](https://github.com/microsoft/DataConnectors/tree/master/samples/NativeQuery/ODBC/SQL%20ODBC/Finish).
+## Prerequisites
+
+This article uses as a starting point a [sample](https://github.com/microsoft/DataConnectors/tree/master/samples/NativeQuery/ODBC/SQL%20ODBC/Start) that uses the SQL ODBC driver for its data source. The implementation of the native query capability is currently only supported for ODBC connectors that adhere to the SQL-92 standard.
+
+The sample connector uses the [SQL Server Native Client 11.0](/sql/relational-databases/native-client/applications/installing-sql-server-native-client) driver. Make sure that you have this driver installed to follow along with this tutorial.
+
+You can also view the finished version of the sample connector from the [Finish folder](https://github.com/microsoft/DataConnectors/tree/master/samples/NativeQuery/ODBC/SQL%20ODBC/Finish) in the GitHub Repository.
 
 ## Modify the SQLCapabilities of your connector
 
-In the ```SqlCapabilities``` record of the sample connector, you can find a record field with the name ```Sql92Translation``` and the value "Passthrough" for it. This new field for the  is necessary for the native query to be passed using Power Query without any validation. 
+In the `SqlCapabilities` record of the sample connector, you can find a record field with the name `Sql92Translation` and the value **Passthrough** for it. This new field is necessary for the native query to be passed using Power Query without any validation.
 
-```
-        SqlCapabilities = Diagnostics.LogValue("SqlCapabilities_Options", defaultConfig[SqlCapabilities] & [
-            // Place custom overrides here
-            // The values below are required for the SQL Native Client ODBC driver, but might
-            // not be required for your data source.
-                SupportsTop = false,
-                SupportsDerivedTable = true,
-                Sql92Conformance = 8 /* SQL_SC_SQL92_FULL */,
-                GroupByCapabilities = 4 /* SQL_GB_NO_RELATION */,
-                FractionalSecondsScale = 3,
-                Sql92Translation = "PassThrough"
-        ]),
+```powerquery-m
+SqlCapabilities = Diagnostics.LogValue("SqlCapabilities_Options", defaultConfig[SqlCapabilities] & [
+    // Place custom overrides here
+    // The values below are required for the SQL Native Client ODBC driver, but might
+    // not be required for your data source.
+        SupportsTop = false,
+        SupportsDerivedTable = true,
+        Sql92Conformance = 8 /* SQL_SC_SQL92_FULL */,
+        GroupByCapabilities = 4 /* SQL_GB_NO_RELATION */,
+        FractionalSecondsScale = 3,
+        Sql92Translation = "PassThrough"
+]),
 ```
 
- Make sure that this field appears in your connector before moving forward or you'll face warnings and errors later on when it comes down to using a capability that isn't supported because it isn't declared by the connector.
+ Make sure that this field appears in your connector before moving forward. If not, you'll face warnings and errors later on when it comes down to using a capability that isn't supported because it isn't declared by the connector.
 
  Build the connector file (as .mez or.pqx) and load it into Power BI Desktop for manual testing and to define the target for your native query.
 
-## Manually test the Native Query capabilities of your connector
+## Manually test the native query capabilities of your connector
 
 >[!NOTE]
->For this article, we will be using the [AdventureWorks2019 sample database](https://learn.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms), but you can follow along with any SQL Server database of your choice and make the necessary changes when it comes down to specifics of the database chosen.
+>For this article, we'll be using the [AdventureWorks2019 sample database](/sql/samples/adventureworks-install-configure). But you can follow along with any SQL Server database of your choice and make the necessary changes when it comes down to the specifics of the database chosen.
 
-The way that the native query support will be implemented in this article is that the user will be requested to enter three values:
+The way native query support will be implemented in this article is that the user will be requested to enter three values:
 
 * Server name
 * Database name
-* Native query at the database level 
+* Native query at the database level
 
-Now inside Power BI Desktop, head over to the *Get Data* experience and find the connector with the name **SqlODBC Sample**.
+Now inside Power BI Desktop, go to the **Get Data** experience and find the connector with the name **SqlODBC Sample**.
 
-![Connector found inside the get data experience of Power BI Desktop](media/native-query-sdk/connector-get-data.png)
+:::image type="content" source="media/native-query-sdk/connector-get-data.png" alt-text="Screenshot of the connector found inside the get data experience of Power BI Desktop.":::
 
-For the connector dialog, enter the parameters for your server and your database name and hit OK.
+For the connector dialog, enter the parameters for your server and your database name. Then select **OK**.
 
-![Connector dialog with server and database as parameters](media/native-query-sdk/sql-parameters.png)
+:::image type="content" source="media/native-query-sdk/sql-parameters.png" alt-text="Screenshot of connector dialog with server and database as parameters.":::
 
-A new navigator window should appear where you can see the native navigation behavior from the SQL driver that displays the hierarchical view of the server and the databases within it. Right select the **AdventureWorks2019** database and left select the option that reads *Transform data*.
+A new navigator window appears. In **Navigator**, you can view the native navigation behavior from the SQL driver that displays the hierarchical view of the server and the databases within it. Right-click the **AdventureWorks2019** database, then select **Transform Data**.
 
-![Transform data option from contextual menu inside the Navigator window](media/native-query-sdk/transform-data.png)
+:::image type="content" source="media/native-query-sdk/transform-data.png" alt-text="Screenshot of the transform data option from the contextual menu inside the Navigator window.":::
 
-This will bring you to the Power Query editor and a preview of what's effectively the target of your native query since all native queries should run at the database level. Inspect the formula bar of the last step to better understand how your connector should navigate to the target of your native queries before executing them. In this case the formula bar looks as follows:
+This selection brings you to the Power Query editor and a preview of what's effectively the target of your native query since all native queries should run at the database level. Inspect the formula bar of the last step to better understand how your connector should navigate to the target of your native queries before executing them. In this case the formula bar displays the following information:
 
-```= Source{[Name="AdventureWorks2019",Kind="Database"]}[Data]```
+`= Source{[Name="AdventureWorks2019",Kind="Database"]}[Data]`
 
-**Source** is the name of the previous step that, in this case, is simply the published function of your connector with the parameters passed. 
-The List and the record inside of it just helps navigate a table to a specific row, which is defined by the criteria from the record where the field *Name* has to be equal to **AdventureWorks2019** and the *Kind* field has to be equal to **Database**. Once such row is located, the [Data] outside of the list {} lets Power Query access the value inside of the **Data** field, which in this case is a table. You can go back to the previous step (Source) to better understand this navigation.
+**Source** is the name of the previous step that, in this case, is simply the published function of your connector with the parameters passed. The list and the record inside of it just helps navigate a table to a specific row. The row is defined by the criteria from the record where the field **Name** has to be equal to **AdventureWorks2019** and the **Kind** field has to be equal to **Database**. Once the row is located, the `[Data]` outside of the list `{}` lets Power Query access the value inside the **Data** field, which in this case is a table. You can go back to the previous step (**Source**) to better understand this navigation.
 
-![Table that shows the values and fields that were used for the navigation step](media/native-query-sdk/navigation.png)
+:::image type="content" source="media/native-query-sdk/navigation.png" alt-text="Screenshot of a table that shows the values and fields that were used for the navigation step.":::
 
 ### Test native query
 
-With the target now identified, create a custom step after the Navigation step by clicking the fx icon in the formula bar.
+With the target now identified, create a custom step after the navigation step by selecting the **fx** icon in the formula bar.
 
-![fx button inside the formula to create a custom step](media/native-query-sdk/fx-button.png)
+:::image type="content" source="media/native-query-sdk/fx-button.png" alt-text="Screenshot of the fx button inside the formula that's used to create a custom step.":::
 
-Replace the formula inside the formula bar with the formula below and hit Enter:
+Replace the formula inside the formula bar with the following formula, and then select **Enter**.
 
-```
+```powerquery-m
 = Value.NativeQuery( AdventureWorks2019_Database, "SELECT TOP (1000) *
   FROM [Person].[Address]")
 ```
 
-After applying this change, a warning should appear underneath the formula bar requesting permission to run the native query against your data source.
+After you apply this change, a warning should appear underneath the formula bar requesting permission to run the native query against your data source.
 
-![Permission is required to run this native database query warning message](media/native-query-sdk/sample-native-query.png)
+:::image type="content" source="media/native-query-sdk/sample-native-query.png" alt-text="Screenshot of the permission is required to run this native database query warning message.":::
 
-Select the *Edit Permission* button to see a new **Native Database Query** dialog that tries to warn you about the possibilities of running native queries. In this case, we know that this SQL Statement is safe and you can select the Run button to execute the command.
+Select **Edit Permission**. A new **Native Database Query** dialog is displayed that tries to warn you about the possibilities of running native queries. In this case, we know that this SQL Statement is safe, so select **Run** to execute the command.
 
-![Approve a native database query dialog](media/native-query-sdk/native-query-approval.png)
+:::image type="content" source="media/native-query-sdk/native-query-approval.png" alt-text="Screenshot showing how to approve a native database query dialog.":::
 
-After executing your query, you'll be able to see the preview of your query in the Power Query editor, and this validates that your connector is capable of running native queries.
+After you run your query, a preview of your query appears in the Power Query editor. This preview validates that your connector is capable of running native queries.
 
-![Native query executed in the initial connector development and testing](media/native-query-sdk/start-native-query-validated.png)
+:::image type="content" source="media/native-query-sdk/start-native-query-validated.png" alt-text="Screenshot of the native query executed in initial connector development and testing.":::
 
 ## Implement native query logic in your connector
 
-With the information gathered from the previous paragraphs, the goal now is to translate such information into code for your connector.
+With the information gathered from the previous sections, the goal now is to translate such information into code for your connector.
 
-The way that you can accomplish this is by adding a new **NativeQueryProperties** record field to your connector's Publish record, which in this case is the  *SqlODBC.Publish* record.
+The way that you can accomplish this translation is by adding a new **NativeQueryProperties** record field to your connector's **Publish** record, which in this case is the `SqlODBC.Publish` record.
 
-The new record field will consist of two fields:
+The new record field consists of two fields:
 
-* **navigationSteps**: This is a definition of how the navigation should be performed / handled by your connector and what parameters are required or needed in order for such navigation to reach your desired target for the **Value.NativeQuery** function.
-* **nativeQueryOptions**: This helps identify how certain optional parameters should be included or added to the **Value.NativeQuery** options record.
-
+* **navigationSteps**: This field defines how the navigation should be performed or handled by your connector. It also defines what parameters are required or needed in order for such navigation to reach your desired target for the `Value.NativeQuery` function.
+* **nativeQueryOptions**: This field helps identify how certain optional parameters should be included or added to the `Value.NativeQuery` options record.
 
 ### navigationSteps
 
-Your navigation steps can be categorized into two groups. Those values that are entered by the end-user such as the name of the server or the database in this case and those that are derived by the specific connector implementation such as the name of fields that aren't displayed to the user during the get data experience such as ```Name```, ```Kind```, ```Data``` and others depending on your connector implementation.
+Your navigation steps can be categorized into two groups. The first contains those values that are entered by the end-user, such as the name of the server or the database, in this case. The second contains those values that are derived by the specific connector implementation, such as the name of fields that aren't displayed to the user during the get data experience. These fields could include `Name`, `Kind`, `Data`, and others depending on your connector implementation.
 
 For this case, there was only one navigation step that consisted of two fields:
 
-* **Name** = This is the name of the database that was passed by the end-user. In this case it was AdventureWorks2019, but this should always be passed as-is from what the end-user entered during the get data experience. 
-* **Kind** = This is information that isn't visible to the end-user and is specific to the connector / driver implementation. In this case, this value identifies what type of object should be accessed. For this implementation, this will be a fixed value that will consist of the string ``Database``.
+* **Name**: This field is the name of the database that was passed by the end-user. In this case, it was `AdventureWorks2019`, but this field should always be passed as-is from what the end-user entered during the get data experience.
+* **Kind**: This field is information that isn't visible to the end-user and is specific to the connector or driver implementation. In this case, this value identifies what type of object should be accessed. For this implementation, this field will be a fixed value that consists of the string `Database`.
 
-Such information will be translated to the code below which should be added as a new field to your SqlODBC.Publish record.
+Such information will be translated to the following code. This code should be added as a new field to your `SqlODBC.Publish` record.
 
-```
-    NativeQueryProperties = [
-			navigationSteps = {
-				[
-					indices = {
-						[
-							value = "database",
-							indexName = "Name"
-						],
-                        [
-                            displayName = "Database",
-                            indexName = "Kind"
-                        ]
-					},
-					access = "Data"
-				]
-			}
+```powerquery-m
+NativeQueryProperties = [
+    navigationSteps = {
+        [
+            indices = {
+                [
+                    value = "database",
+                    indexName = "Name"
+                ],
+                [
+                    displayName = "Database",
+                    indexName = "Kind"
+                ]
+            },
+            access = "Data"
+        ]
+    }
 ]
 ```
 
-For values that will be passed from what the user entered, you can use the pair value / indexName and for values that are fixed or static and that can't be passed by the end-user you can use the pair displayName / indexName. In this sense, the **navigationSteps** record consists of two fields: 
-* **indices** = defines what fields and what values to use to navigate to the record that contains the target for the Value.NativeQuery function 
-* **access** = defines what field holds the target, which is commonly a table
+For values that will be passed from what the user entered, you can use the pair `value` and `indexName`. For values that are fixed or static and can't be passed by the end-user, you can use the pair `displayName` and `indexName`. In this sense, the **navigationSteps** record consists of two fields:
+
+* **indices**: Defines what fields and what values to use to navigate to the record that contains the target for the `Value.NativeQuery` function.
+* **access**: Defines what field holds the target, which is commonly a table.
 
 ### nativeQueryOptions
 
-The ``nativeQueryOptions`` allows you to pass what optional parameters to pass to the Value.NativeQuery function when using the native query capability for your connector.
+The `nativeQueryOptions` field lets you pass optional parameters to the `Value.NativeQuery` function when using the native query capability for your connector.
 
-To preserve query folding after a native query, and assuming that your connector has query folding capabilities, you can use the sample code below for ```EnableFolding = true```.
+To preserve query folding after a native query, and assuming that your connector has query folding capabilities, you can use the following sample code for `EnableFolding = true`.
 
-```
-    NativeQueryProperties = [
-			navigationSteps = {
-				[
-					indices = {
-						[
-							value = "database",
-							indexName = "Name"
-						],
-                        [
-                            displayName = "Database",
-                            indexName = "Kind"
-                        ]
-					},
-					access = "Data"
-				]
-			},
-		
-			nativeQueryOptions = [
-					EnableFolding = true
-				]
-			]
+```powerquery-m
+NativeQueryProperties = [
+    navigationSteps = {
+        [
+            indices = {
+                [
+                    value = "database",
+                    indexName = "Name"
+                ],
+                [
+                    displayName = "Database",
+                    indexName = "Kind"
+                ]
+            },
+            access = "Data"
+        ]
+    },
+
+    nativeQueryOptions = [
+        EnableFolding = true
+    ]
 ]
 ```
 
@@ -186,15 +184,15 @@ With these changes in place, build the connector and load it into Power BI Deskt
 
 ## Test and validate the connector
 
-Now in Power BI Desktop and your new custom connector in place, you can launch the connector from the *Get Data* experience. When launching the connector, you'll notice that the dialog now has a long text field with the name **Native query** and in parenthesis it has the required fields for it to work. Enter the same values that were previously entered when testing the connector in the previous paragraph for the server, database and the SQL statement.
+In Power BI Desktop with your new custom connector in place, launch the connector from the **Get Data** experience. When launching the connector, you'll notice that the dialog now has a long text field with the name **Native query** and, in parenthesis, it has the required fields for it to work. Enter the same values for the server, database, and the SQL statement that you previously entered when testing the connector.
 
-![Connector dialog with the native query long text field shown](media/native-query-sdk/native-query-ui.png)
+:::image type="content" source="media/native-query-sdk/native-query-ui.png" alt-text="Screenshot of the connector dialog with the native query long text field shown.":::
 
-After you select *OK*, a table preview of the executed native query will be shown in a new dialog.
+After you select **OK**, a table preview of the executed native query is shown in a new dialog.
 
-![Dialog shown a table preview of the executed native query](media/native-query-sdk/native-query-table-preview.png)
+:::image type="content" source="media/native-query-sdk/native-query-table-preview.png" alt-text="Screenshot of the dialog with a table preview of the executed native query.":::
 
-You can select *OK* and this will load a new query inside the Power Query editor where you can do further testing of your connector as you please.
+Select **OK**. A new query will now load inside the Power Query editor where you can do further testing of your connector as required.
 
 >[!NOTE]
->If your connector has query folding capabilities and has explicitly defined **EnableFolding=true** as part of the optional record for the Value.NativeQuery, then you can further test your connector in the Power Query editor by checking if further transforms fold back to the source or not.
+>If your connector has query folding capabilities and has explicitly defined `EnableFolding=true` as part of the optional record for `Value.NativeQuery`, then you can further test your connector in the Power Query editor by checking if further transforms fold back to the source or not.

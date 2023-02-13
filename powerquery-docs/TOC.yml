@@ -307,11 +307,11 @@
       - name: "Active Directory"
         href: connectors/active-directory.md
       - name: "Adobe Analytics"
-        href: "connectors/adobe-analytics.md"
+        href: connectors/adobe-analytics.md
       - name: "Amazon Athena"
-        href: "connectors/amazon-athena.md"
+        href: connectors/amazon-athena.md
       - name: "Amazon OpenSearch Service (Beta)"
-        href: "connectors/amazon-opensearch-service.md"
+        href: connectors/amazon-opensearch-service.md
       - name: "Amazon Redshift"
         href: connectors/amazon-redshift.md
       - name: "Anaplan"
@@ -326,6 +326,8 @@
         href: connectors/azure-analysis-services.md
       - name: "Azure Blob Storage"
         href: connectors/azure-blob-storage.md
+      - name: "Azure Cosmos DB v2 (Beta)"
+        href: connectors/azure-cosmos-db-v2.md
       - name: "Azure Cost Management"
         href: connectors/azure-cost-management.md
       - name: "Azure Databricks"
@@ -357,9 +359,9 @@
       - name: "BQE Core"
         href: connectors/bqecore.md
       - name: "CData Connect Cloud (Beta)"
-        href: ./connectors/cdata-connect-cloud.md
+        href: connectors/cdata-connect-cloud.md
       - name: "Common Data Service (Legacy)"
-        href: ./connectors/common-data-service-legacy.md
+        href: connectors/common-data-service-legacy.md
       - name: "Databricks (Beta)"
         href: connectors/databricks.md
       - name: "Dataverse"
@@ -424,6 +426,8 @@
         href: connectors/microsoft-azure-consumption-insights.md
       - name: Microsoft Exchange
         href: connectors/microsoft-exchange.md
+      - name: Microsoft Exchange Online
+        href: connectors/microsoft-exchange-online.md
       - name: "Microsoft Graph Security (Deprecated)"
         href: connectors/microsoft-graph-security.md
       - name: "MicroStrategy for Power BI"
@@ -438,6 +442,8 @@
           href: /azure/devops/report/powerbi/odataquery-connect
       - name: "ODBC"
         href: connectors/odbc.md
+      - name: "OLE DB"
+        href: connectors/ole-db.md
       - name: "OpenSearch Project (Beta)"
         href: connectors/opensearch-project.md
       - name: "Oracle database"
@@ -529,7 +535,7 @@
       - name: "Web"
         items:
         - name: "Connect to Web data"
-          href: connectors/web/Web.md
+          href: connectors/web/web.md
         - name: "Web by example"
           href: connectors/web/web-by-example.md
         - name: "Troubleshooting"
@@ -644,6 +650,8 @@
           href: handling-connector-signing.md
         - name: "Handling proxy support"
           href: handling-proxy-support.md
+        - name: "Handling native query support"
+          href: native-query-sdk.md
         - name: "Versioning"
           href: handling-versioning.md
       - name: Connector Certification
