@@ -75,7 +75,7 @@ If you don't input parameters for **Vessel Insight Data 2.0**, you'll get the la
 
 For **Voyage**, you need to input IMOs that you want to fetch data for.
 
-![Voyage IMO parameter.](./media/vessel-insight/navigator-options-voyage-IMO.PNG)
+![Voyage IMO parameter.](./media/vessel-insight/navigator-options-voyage-imo.png)
 
 You can **Load** the selected time series data, which brings the one table for each selected time series tag into Power BI Desktop, or you can select **Transform Data** to edit the query, which opens the Power Query editor. You can then filter and refine the set of data you want to use, and then load that refined set of data into Power BI Desktop.
 

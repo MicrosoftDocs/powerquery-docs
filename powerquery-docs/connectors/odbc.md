@@ -3,7 +3,7 @@ title: Power Query ODBC connector
 description: Provides basic information and prerequisites for the connector, and includes instructions on how to connect to your database using the connector.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 2/28/2022
+ms.date: 2/13/2023
 ms.author: bezhan
 ---
 
@@ -17,7 +17,6 @@ ms.author: bezhan
 | Products |  Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication Types Supported | Database (Username/Password)<br/>Windows<br/>Default or Custom |
 | Function Reference Documentation | [Odbc.DataSource](/powerquery-m/odbc-datasource)<br/>[Odbc.Query](/powerquery-m/odbc-query) |
-| | |
 
 >[!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
@@ -42,7 +41,7 @@ To make the connection, take the following steps:
 
 2. In **From ODBC**, select the data source name (DSN) from the **Data source name (DSN)** drop-down box. In this example, a DSN name of **SQL Server Database** was selected.
 
-   ![ODBC connection builder in Power Query Desktop.](./media/odbc/ODBCbuilder.png)
+   ![ODBC connection builder in Power Query Desktop.](./media/odbc/odbc-builder.png)
 
    You can also choose **Advanced options** to enter more optional connection information. More information: [Connect using advanced options](#connect-using-advanced-options)
 
@@ -94,7 +93,6 @@ Power Query provides a set of advanced options that you can add to your query if
 | Connection string (non-credential properties) | Provides an optional connection string that can be used instead of the **Data source name (DSN)** selection in Power BI Desktop. If **Data source name (DSN)** is set to **(None)**, you can enter a connection string here instead. For example, the following connection strings are valid: **dsn=_\<myDSN>_** or **driver=_\<myDriver>_;port=_\<myPortNumber>_;server=_\<myServer>_;database=_\<myDatabase>_;**. The `{ }` characters can be used to escape special characters. Keys for connection strings will vary between different ODBC drivers. Consult your ODBC driver provider for more information about valid connection strings. |
 | SQL statement | Provides a SQL statement, depending on the capabilities of the driver. Ask your vendor for more information, or go to [Import data from a database using native database query](../native-database-query.md). |
 | Supported row reduction clauses | Enables folding support for [Table.FirstN](/powerquery-m/table-firstn). Select **Detect** to find supported row reduction clauses, or select from one of the drop down options (TOP, LIMIT and OFFSET, LIMIT, or ANSI SQL-compatible). This option is not applicable when using a native SQL statement. Only available in Power Query Desktop. |
-| | |
 
 ## Known issues and limitations
 

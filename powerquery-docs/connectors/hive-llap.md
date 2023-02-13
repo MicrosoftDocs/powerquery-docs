@@ -3,7 +3,7 @@ title: Power Query Hive LLAP connector
 description: Provides basic information and prerequisites for the Hive LLAP connector, along with how to connect to your Hive LLAP data.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 11/28/2022 
+ms.date: 2/13/2023 
 ms.author: bezhan
 ---
 
@@ -139,11 +139,13 @@ If this error occurs:
 
 After publishing a report in Power BI service, you need to update the credentials to the Hive data source in the cloud to refresh in Power BI service. After filling in the credentials, you might get the error:
 
-![Screenshot of Credential Error.](media/hivellap/image.png)
+![Screenshot of Credential Error.](media/hive-llap/image.png)
 
-If you get this error and you see the following message in Fiddler trace, this is an SSL issue. 
+If you get this error and you see the following message in Fiddler trace, this is an SSL issue.
+
 ```
 ODBC: ERROR [HY000] [Microsoft][ThriftExtension] (14) Unexpected response from server during a HTTP connection: Could not refill buffer
 ```
+
 SSL is by default disabled when connecting directly from powerbi.com. To enable, you can use on-premises data gateway where you can enable encryption to connect and refresh reports from Power BI service.
 [Enable HTTPS on Gateway](/data-integration/gateway/service-gateway-communication#force-https-communication-with-azure-relay)

@@ -3,7 +3,7 @@ title: Google BigQuery connector
 description: Provides basic information and prerequisites for the Google BigQuery connector for Power Query.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 12/13/2022
+ms.date: 2/13/2023
 ms.author: bezhan
 ---
 
@@ -38,7 +38,7 @@ To connect to Google BigQuery from Power Query Desktop, take the following steps
 
 1. In the Get Data experience, search for and select **Google BigQuery**.
 
-    ![Get Data from Google BigQuery.](./media/google-bigquery/GetData.png)
+    ![Get Data from Google BigQuery.](./media/google-bigquery/get-data.png)
 
 2. If you want to use any advance options, select **Advanced options**. Otherwise, select **OK** to continue. More information: [Connect using advanced options](#connect-using-advanced-options)
 
@@ -46,17 +46,17 @@ To connect to Google BigQuery from Power Query Desktop, take the following steps
 
 3. The Google BigQuery connector supports connecting through an organizational account or a service account sign-in. In this example, you'll use the organizational account to sign in. Select **Sign In** to continue.
 
-    ![Sign in to Google BigQuery.](./media/google-bigquery/SignIn.png)
+    ![Sign in to Google BigQuery.](./media/google-bigquery/sign-in.png)
 
     You can also sign in using a Google service account. In this case, select **Service Account Login** and enter your service account email and your service account JSON key file contents. Then select **Connect**.
 
 4. A **Sign in with Google** dialog appears. Select your Google account and approve connecting to Power BI Desktop.
 
-    ![Sign in to Google.](./media/google-bigquery/SignIntoGoogle.png)
+    ![Sign in to Google.](./media/google-bigquery/sign-into-google.png)
 
 5. Once signed in, select **Connect** to continue.
 
-    ![Connect to Google BigQuery Data.](./media/google-bigquery/ConnectToGoogleBigQueryData.png)
+    ![Connect to Google BigQuery Data.](./media/google-bigquery/connect-to-google-bigquery-data.png)
 
 6. Once you successfully connect, a **Navigator** window appears and displays the data available on the server. Select your data in the navigator. Then select either **Transform Data** to transform the data in Power Query or **Load** to load the data in Power BI Desktop.
 
@@ -78,7 +78,7 @@ To connect to Google BigQuery from Power Query Online, take the following steps:
     >[!NOTE]
     >Although the sign in dialog box says you'll continue to Power BI Desktop once you've signed in, you'll be sent to your online app instead.
 
-    ![Image of Google sign in dialog.](./media/google-bigquery/SignIntoGoogle.png)
+    ![Image of Google sign in dialog.](./media/google-bigquery/sign-into-google.png)
 
 4. If you want to use any advance options, select **Advanced options**. More information: [Connect using advanced options](#connect-using-advanced-options)
 
@@ -139,7 +139,7 @@ To optimize performance considerations, Google BigQuery does well with large dat
 
 The Google BigQuery connector supports nested fields, which are loaded as text columns in JSON format.
 
-![Google BigQuery Nested Fields Support.](./media/google-bigquery/GoogleBigQueryNestedFields.png)
+![Google BigQuery Nested Fields Support.](./media/google-bigquery/google-bigquery-nested-fields.png)
 
 Users should select **Transform Data** and then use the JSON parsing capabilities in the Power Query Editor to extract the data.
 
