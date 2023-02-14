@@ -16,7 +16,7 @@ ms.author: bezhan
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | GA |
+| Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
 | Authentication Types Supported | Autodesk Account |
 | Function Reference Documentation | &mdash; |
@@ -59,35 +59,38 @@ To connect to Assemble data:
 
    ![Find your project and expand it.](media/assemble-views/assemble-views-project-selection.png)
 
-## Loading Data from Models
-1. Expand the **Models** folder. Select each of the models you wish to include. The settings outlined in the following steps must be completed for each selected model.
+## Loading data from Models
+
+1. Expand the **Models** folder. Select each of the models you want to include. The settings outlined in the following steps must be completed for each selected model.
 
    ![Select models to include.](media/assemble-views/assemble-views-model-selection.png)
 
 2. Select the versions you wish to load:
 
-   a. **Active version only** – Loads only the active version of the model
+   a. **Active version only** – Loads only the active version of the model.
 
-   b. **All versions** – Loads all versions of the model
+   b. **All versions** – Loads all versions of the model.
 
-   c. **All except active version** – Loads all previous versions of the model without loading the active version (intended for advanced workflows when previous version data only needs to be loaded once and not included in a refresh)
+   c. **All except active version** – Loads all previous versions of the model without loading the active version (intended for advanced workflows when previous version data only needs to be loaded once and not included in a refresh).
 
-   d. **Specific versions** – Loads all specific versions of the model that are selected (Specific versions will be selected in the Version Name and Number drop down)
+   d. **Specific versions** – Loads all specific versions of the model that are selected (specific versions will be selected in the Version Name and Number drop down).
 
-3. Select the properties you wish to fetch by using the search filter or scrolling. By default, Model ID, Model Name, Version ID, Version Name, and Version Number will always be included in the result.
+3. Select the properties you want to fetch by using the search filter or scrolling. By default, Model ID, Model Name, Version ID, Version Name, and Version Number will always be included in the result.
 
    ![Select properties to include.](media/assemble-views/assemble-views-property-selection.png)
 
-   *Note: when using the search bar, be sure to clear the selection and select all properties before clicking OK, or previous selections will be overwritten.*
+   >[!Note]
+   >When using the search bar, be sure to clear the selection and select all properties before selecting OK, or previous selections will be overwritten.
 
-4. If using "Specific versions", select the versions you wish to load in the **Version Name and Number (optional)** dropdown, then click **Apply**. Selections in this dropdown will be ignored if any of the other "Load model data" settings are selected.
+4. If using "Specific versions", select the versions you want to load in the **Version Name and Number (optional)** dropdown, then select **Apply**. Selections in this dropdown will be ignored if any of the other "Load model data" settings are selected.
 
-5. Once the data preview has been displayed, you can either click **Transform Data** to go to the Power Query editor, or **Load** to go straight to the dashboard.
+5. Once the data preview has been displayed, you can either select **Transform Data** to go to the Power Query editor, or **Load** to go straight to the dashboard.
 
-6. If you wish to load multiple models at once, be sure to click **Apply** after setting up each model per the aforementioned steps.
+6. If you want to load multiple models at once, be sure to select **Apply** after setting up each model per the aforementioned steps.
 
-## Loading Data from Views
-1. Expand the **Views** folder. Select the view you wish to include. Additionally select **[Your Project] View Thumbnails** if you want to include images in your report. Select **Transform Data** to continue to Power Query.
+## Loading data from Views
+
+1. Expand the **Views** folder. Select the view you want to include. Additionally select **[Your Project] View Thumbnails** if you want to include images in your report. Select **Transform Data** to continue to Power Query.
 
 2. In Power Query, you'll see a single column named **Rows**. On the header of the column, select the button with two arrows pointing in opposite directions to expand your rows.
 
