@@ -35,20 +35,20 @@ In the Funnel App, go to your Workspace, navigate to the Microsoft Power BI page
 To connect to Funnel:
 
 1. Select Online Services, find **Funnel** from the product-specific data connector list, and then select **Connect**.
-   ![Select Funnel Connector.](./media/funnel/funnel_connector.png#lightbox)
+   ![Select Funnel Connector.](./media/funnel/funnel-connector.png#lightbox)
 
 1. Select **Sign in** to sign in to your Funnel Workspace.
 
-   ![Sign in to your Funnel Workspace.](media/funnel/funnel_sign_in_1.png)
+   ![Sign in to your Funnel Workspace.](media/funnel/funnel-sign-in-1.png)
 
 1. Sign in with your Google user connected to Funnel or use your Funnel credentials.
-   ![Sign in to your Funnel Workspace step 2.](media/funnel/funnel_sign_in_2.png)
+   ![Sign in to your Funnel Workspace step 2.](media/funnel/funnel-sign-in-2.png)
 
 1. Once you've successfully signed in select **Connect** to continue.
-   ![Successfully signed in to your Funnel Workspace.](media/funnel/funnel_sign_in_3.png)
+   ![Successfully signed in to your Funnel Workspace.](media/funnel/funnel-sign-in-3.png)
 
 1. In the **Navigator** dialog box, choose one or more **Data Shares** from your **Workspaces** to import your data.
-   ![Choose "Data Shares" from Workspaces.](media/funnel/funnel_navigation_table.png)
+   ![Choose "Data Shares" from Workspaces.](media/funnel/funnel-navigation-table.png)
 
    For each Data Share you can enter number of rolling months of data you want.
    > [!NOTE]
