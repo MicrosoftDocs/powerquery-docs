@@ -1,6 +1,6 @@
 ---
 title: Power Query Funnel connector
-description: Provides basic information, prerequisites, and information on how to connect to your data, along with a list of known issues and limitations.
+description: Provides basic information, prerequisites, and information on how to connect to your data using the Funnel connector, along with a list of known issues and limitations.
 author: bezhan-msft
 ms.topic: conceptual
 ms.date: 1/16/2023
