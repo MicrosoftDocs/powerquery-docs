@@ -111,9 +111,9 @@ Power Query doesn't support 'Always Encrypted' columns.
 
 ### Azure Active Directory authentication
 
-Azure Active Directory authentication is only supported in the SQL Server connector if the specified server also supports Azure Active Directory authentication. Otherwise, you may encounter an error that says that "The OAuth authentication method is not supported in this data source".
+Azure Active Directory authentication is only supported in the SQL Server connector if the specified server also supports Azure Active Directory authentication. Otherwise, you might encounter an error that says that "The OAuth authentication method is not supported in this data source".
 
-Note that in Power BI Service, the Azure Active Directory authentication method shows up as "OAuth2"
+Note that in Power BI service, the Azure Active Directory authentication method shows up as "OAuth2".
 
 ## Next steps
 
