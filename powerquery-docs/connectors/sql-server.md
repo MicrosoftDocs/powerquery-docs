@@ -15,7 +15,7 @@ ms.author: bezhan
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
-| Authentication Types Supported | Database (Username/Password)<br/>Windows |
+| Authentication Types Supported | Database (Username/Password)<br/>Windows<br/>Azure Active Directory (if the specified server supports it) |
 | M Function Reference | [Sql.Database](/powerquery-m/sql-database)<br/>[Sql.Databases](/powerquery-m/sql-databases) |
 | | |
 
@@ -108,6 +108,12 @@ Once you've selected the advanced options you require, select **OK** in Power Qu
 ### Always Encrypted columns
 
 Power Query doesn't support 'Always Encrypted' columns.
+
+### Azure Active Directory authentication
+
+Azure Active Directory authentication is only supported in the SQL Server connector if the specified server also supports Azure Active Directory authentication. Otherwise, you might encounter an error that says that "The OAuth authentication method is not supported in this data source".
+
+Note that in Power BI service, the Azure Active Directory authentication method shows up as "OAuth2".
 
 ## Next steps
 
