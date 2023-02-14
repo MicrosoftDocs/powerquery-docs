@@ -2,13 +2,9 @@
 title: Power Query Funnel connector
 description: Provides basic information, prerequisites, and information on how to connect to your data, along with a list of known issues and limitations.
 author: bezhan-msft
-
-
 ms.topic: conceptual
 ms.date: 1/16/2023
 ms.author: bezhan
-
-LocalizationGroup: reference
 ---
 
 # Funnel
@@ -23,7 +19,6 @@ LocalizationGroup: reference
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
 | Authentication Types Supported | Funnel Workspace |
-| | |
 
 ## Prerequisites
 
@@ -57,7 +52,7 @@ To connect to Funnel:
 
    For each Data Share you can enter number of rolling months of data you want.
    > [!NOTE]
-   > The default number of months is 12. If today is 22.03.2022 then you will get data for the period 01.04.2021 - 22.03.2022.
+   > The default number of months is 12. If today is 22.03.2022, then you'll get data for the period 01.04.2021 - 22.03.2022.
 
    You can then either select **Load** to load the data or select **Transform Data** to transform the data.
 
@@ -65,4 +60,4 @@ To connect to Funnel:
 
 * If a Data Share contains too much data for one month, the connector will get a TOO_MANY_ROWS error.
 
-For more information, please read our [Power BI knowledge base articles](https://help.funnel.io/en/?q=powerbi).
+For more information, read our [Power BI knowledge base articles](https://help.funnel.io/en/?q=powerbi).
