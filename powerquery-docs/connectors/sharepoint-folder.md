@@ -62,7 +62,7 @@ To connect to a SharePoint folder:
 
 5. Select **Combine & Transform Data** to combine the data in the files of the selected SharePoint folder and load the data into the Power Query Editor for editing. Or select **Combine & Load** to load the data from all of the files in the SharePoint folder directly into your app.
 
-   ![Combine files from SharePoint folder.](./media/sharepoint-folder/combinefolderfiles.png)
+   ![Combine files from SharePoint folder.](./media/sharepoint-folder/combine-folder-files.png)
 
 >[!Note]
 >The **Combine & Transform Data** and **Combine & Load** buttons are the easiest ways to combine data found in the files of the SharePoint folder you specify. You could also use the **Load** button or the **Transform Data** buttons to combine the files as well, but that requires more manual steps.

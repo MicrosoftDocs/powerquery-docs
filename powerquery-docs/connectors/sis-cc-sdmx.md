@@ -35,7 +35,7 @@ To connect to SDMX Web Service data:
 
 1. Select **Get Data** from the **Home** ribbon in Power BI Desktop. Select **All** from the categories on the left, and then select **SIS-CC SDMX**. Then select **Connect**.
 
-   ![SIS-CC SDMX Get Data.](media/sisccsdmx/sisccsdmxgetdata.jpg)
+   ![SIS-CC SDMX Get Data.](media/sis-cc-sdmx/sis-cc-sdmx-get-data.jpg)
 
 2. Fill in the parameters:
    1. In the **Data query URL**, enter an SDMX REST data query URL (the web service must support the SDMX-CSV format).
@@ -45,11 +45,11 @@ To connect to SDMX Web Service data:
       - Show labels; example: Frequency
       - Optionally, enter a language preference in **Label language preference** using an IETF BCP 47 tag
 
-   ![SIS-CC SDMX Connect to Data.](media/sisccsdmx/sisccsdmxconnector.jpg)
+   ![SIS-CC SDMX Connect to Data.](media/sis-cc-sdmx/sis-cc-sdmx-connector.jpg)
 
 3. If this is the first time you’re connecting to the REST web service in the previous step **Data query URL**, this authentication step is displayed. As the connection is Anonymous, select **Connect**
 
-   ![SIS-CC SDMX Auth](media/sisccsdmx/sisccauth.jpg)
+   ![SIS-CC SDMX Auth](media/sis-cc-sdmx/sis-cc-sdmx-auth.jpg)
 
 4. Select **Load** to import the data into Power BI, or **Transform Data** to edit the query in Power Query Editor where you can refine the query before loading into Power BI.
 
