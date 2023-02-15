@@ -42,7 +42,7 @@ To connect to Vessel Insight:
 
    ![Select sign in button.](./media/vessel-insight/sign-in.png)
 
-4. In the window that appears, provide your Vessel Insight tenant URL in the format ***[companyname]*.kognif.ai**. Then select **Validate**.
+4. In the window that appears, provide your Vessel Insight tenant URL in the format `*[companyname]*.kognif.ai`. Then select **Validate**.
 
     ![Insert Vessel Insight tenant.](./media/vessel-insight/tenant-url.png)
 
