@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for the FactSet RMS co
 author: bezhan-msft
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 6/24/2022
+ms.date: 2/13/2023
 ms.author: bezhan
 ---
 
@@ -48,23 +48,23 @@ To import data using the FactSet RMS connector from Power Query Desktop, take th
 
 2. On the Power BI Desktop home page, select **Get Data** > **More**.
 
-    [![Image of Get Data drop down box with the More option emphasized.](./media/factset-rms/OpenPowerBi.png)](./media/factset-rms/OpenPowerBi.png#lightbox)
+    [![Image of Get Data drop down box with the More option emphasized.](./media/factset-rms/open-power-bi.png)](./media/factset-rms/open-power-bi.png#lightbox)
 
 3. To connect to FactsSetRMS, search for **FactSet** in **Get Data** and select the FactSet RMS connector from the right-hand list.
 
-   ![Image of the Get Data dialog box with FactSet RMS (Beta) emphasized.](./media/factset-rms/SelectFactSetRMS.png)
+   ![Image of the Get Data dialog box with FactSet RMS (Beta) emphasized.](./media/factset-rms/select-factset-rms.png)
 
 4. In the authentication page, you'll be prompted to enter the Username - Serial and the API key. Go to the FactSet Developer Portal for more instructions on setting up an API Key.
 
-   ![Image of the Authentication dialog box with a username and API key entered.](./media/factset-rms/Authentication.png)
+   ![Image of the Authentication dialog box with a username and API key entered.](./media/factset-rms/authentication.png)
 
 5. The connector opens the Power Query navigator with a list of all provided functions. Note that all functions might not be available, depending on your available subscriptions. Your account team can assist with requirements for access to additional products.
 
-   [![Image of the Navigator dialog box with a list of all of the provided functions.](./media/factset-rms/Navigator.png)](./media/factset-rms/Navigator.png#lightbox)
+   [![Image of the Navigator dialog box with a list of all of the provided functions.](./media/factset-rms/navigator.png)](./media/factset-rms/navigator.png#lightbox)
 
 6. Use the Get\* queries to look up parameters for your Notes and create new queries. A form will populate in the query window with parameter fields to narrow your universe and return the relevant data set of interest based on IRN Subject, Author, Date Range, Recommendations and/or Sentiments. Note that the functions contain Get\* queries that are common for IRN Notes, Custom Symbols, and Meetings APIs.
 
-   [![Image of the parameters that are available to the GetNotes function.](./media/factset-rms/Queries.png)](./media/factset-rms/Queries.png#lightbox)
+   [![Image of the parameters that are available to the GetNotes function.](./media/factset-rms/queries.png)](./media/factset-rms/queries.png#lightbox)
 
    The following table describes the Get functions in the connector.
 
@@ -79,4 +79,4 @@ To import data using the FactSet RMS connector from Power Query Desktop, take th
 
 7. Results will be returned as a table with notes and a custom field.
 
-   [![Image that shows the data that was returned as a table.](./media/factset-rms/Result.png)](./media/factset-rms/Result.png#lightbox)
+   [![Image that shows the data that was returned as a table.](./media/factset-rms/result.png)](./media/factset-rms/result.png#lightbox)

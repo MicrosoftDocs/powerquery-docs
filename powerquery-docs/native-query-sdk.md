@@ -2,7 +2,7 @@
 title: Native query support in the Power Query SDK
 description: Generic native query support implementation guide for Power Query custom connectors using the Power Query SDK.
 author: ptyx507
-ms.date: 2/7/2023
+ms.date: 2/14/2023
 ms.author: miescobar
 ---
 
@@ -27,7 +27,7 @@ You can also view the finished version of the sample connector from the [Finish 
 
 ## Modify the SQLCapabilities of your connector
 
-In the `SqlCapabilities` record of the sample connector, you can find a record field with the name `Sql92Translation` and the value **Passthrough** for it. This new field is necessary for the native query to be passed using Power Query without any validation.
+In the `SqlCapabilities` record of the sample connector, you can find a record field with the name `Sql92Translation` and the value **PassThrough** for it. This new field is necessary for the native query to be passed using Power Query without any validation.
 
 ```powerquery-m
 SqlCapabilities = Diagnostics.LogValue("SqlCapabilities_Options", defaultConfig[SqlCapabilities] & [
@@ -144,6 +144,9 @@ NativeQueryProperties = [
     }
 ]
 ```
+
+>[!IMPORTANT]
+>The name of the fields are case sensitive and must be used as shown in the sample above. All information passed to the fields, either `displayName`, `indexName`, or `value` must be derived from the connector's M code.
 
 For values that will be passed from what the user entered, you can use the pair `value` and `indexName`. For values that are fixed or static and can't be passed by the end-user, you can use the pair `displayName` and `indexName`. In this sense, the **navigationSteps** record consists of two fields:
 
