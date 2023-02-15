@@ -3,7 +3,7 @@ title: Power Query SharePoint Online list connector
 description: Provides basic information and how to connect to your data, along with troubleshooting tips for obtaining the root SharePoint address and changing the authentication method.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 9/23/2022
+ms.date: 2/13/2023
 ms.author: bezhan
 ---
 
@@ -17,7 +17,6 @@ ms.author: bezhan
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights |
 | Authentication Types Supported | Anonymous<br/>Windows<br/>Microsoft Account |
 | Function Reference Documentation | [SharePoint.Contents](/powerquery-m/sharepoint-contents)<br/>[SharePoint.Files](/powerquery-m/sharepoint-files)<br/>[SharePoint.Tables](/powerquery-m/sharepoint-tables) |
-| | |
 
 >[!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
@@ -40,9 +39,9 @@ To connect to a SharePoint Online list:
 
 2. Paste the SharePoint site URL you copied in [Determine the site URL](#determine-the-site-url) to the **Site URL** field in the open dialog box.
 
-   ![Folder selection.](./media/sharepoint-online-list/sharepointOnlineListUrl.png)
+   ![Folder selection.](./media/sharepoint-online-list/sharepoint-online-list-url.png)
 
-   If the URL address you enter is invalid, a ![Warning icon.](../images/webwarning.png) warning icon will appear next to the **Site URL** textbox.
+   If the URL address you enter is invalid, a ![Warning icon.](./media/sharepoint-online-list/web-warning.png) warning icon will appear next to the **Site URL** textbox.
 
    You can also select either the 1.0 implementation of this connector or the 2.0 implementation. More information: [Connect to SharePoint Online list v2.0](#connect-to-sharepoint-online-list-v20)
 
@@ -50,13 +49,13 @@ To connect to a SharePoint Online list:
 
 3. If this is the first time you've visited this site address, select the appropriate authentication method. Enter your credentials and chose which level to apply these settings to. Then select **Connect**.
 
-   ![Choose Microsoft account.](./media/sharepoint-list/sharepointlistsignin.png)
+   ![Choose Microsoft account.](./media/sharepoint-list/sharepoint-list-sign-in.png)
 
     For more information about authentication methods and level settings, go to [Authentication with a data source](../connectorauthentication.md).
 
 4. From the **Navigator**, you can select a location, then either transform the data in the Power Query editor by selecting **Transform Data**, or load the data by selecting **Load**.
 
-   ![Select the list checkbox.](./media/sharepoint-online-list/sharepointOnlineListNavigator.png)
+   ![Select the list checkbox.](./media/sharepoint-online-list/sharepoint-online-list-navigator.png)
 
 ## Connect to a SharePoint Online list from Power Query Online
 
@@ -84,7 +83,7 @@ In the October 2020 release of Power BI Desktop, we introduced an updated versio
 
 To access it, you'll enter the same connector screen through step 2 in [Connect to a SharePoint Online list from Power Query Desktop](#connect-to-a-sharepoint-online-list-from-power-query-desktop). However, make sure you select **2.0** under **Implementation** if it isn't already selected.
 
-   ![A screen showing a sample of SharePoint Online List settings.](./media/sharepoint-online-list/sharepointonlinelistnavigator2.png)
+   ![A screen showing a sample of SharePoint Online List settings.](./media/sharepoint-online-list/sharepoint-online-list-navigator-2.png)
 
 With this update to the connector, we're making available two different views for the same data:
 
@@ -93,12 +92,12 @@ With this update to the connector, we're making available two different views fo
 
 The **All** view includes all user created and system defined columns. You can see what columns are included in the following screen.
 
-   ![A screen showing a sample of view settings for a specific view in SharePoint Online list.](./media/sharepoint-online-list/sharepointonlinelistview.png)
+   ![A screen showing a sample of view settings for a specific view in SharePoint Online list.](./media/sharepoint-online-list/sharepoint-online-list-view.png)
 
 The default view is what you'll see when looking at the list online in whichever view you've set as *Default* in your settings. If you edit this view to add or remove either user created or system defined columns, or by creating a new view and setting it as default, these changes will propagate through the connector.
 
-   [ ![A screen showing a sample of SharePoint Online list default view.](./media/sharepoint-online-list/sharepointonlinelistsettings.png) ](./media/sharepoint-online-list/sharepointonlinelistsettings.png#lightbox)
-   
+   [![A screen showing a sample of SharePoint Online list default view.](./media/sharepoint-online-list/sharepoint-online-list-settings.png)](./media/sharepoint-online-list/sharepoint-online-list-settings.png#lightbox)
+
 >[!Note]
 > If you set the default view in your SharePoint site to **Calendar** view or **Board** view, SharePoint only returns the columns shown in the selected view. In this scenario, Power BI will not retrieve all the columns in the list, even though you choose **All** option. This is by design.
 

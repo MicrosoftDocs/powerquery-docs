@@ -3,7 +3,7 @@ title: Power Query Text/CSV connector
 description: Provides basic information and connection instructions, along with troubleshooting tips when loading files from the web and when unstructured text is interpreted as structured.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 7/11/2022
+ms.date: 2/13/2023
 ms.author: bezhan
 ---
 
@@ -30,7 +30,7 @@ To load a local text or CSV file:
 
 1. Select the **Text/CSV** option in **Get Data**. This action launches a local file browser where you can select your text file.
 
-   ![Text file selection.](./media/text-csv/textcsvbrowse.png)
+   ![Text file selection.](./media/text-csv/text-csv-browse.png)
 
    Select **Open** to open the file.
 
@@ -77,11 +77,11 @@ This is sample data.
 
 When you load it, you're presented with a navigation screen that loads each of these lines into their own row.
 
-![Loading data from a simple unstructured text file.](./media/text-csv/textrawnavigator.png)
+![Loading data from a simple unstructured text file.](./media/text-csv/text-raw-navigator.png)
 
 There's only one thing you can configure on this dialog, which is the **File Origin** dropdown select. This dropdown lets you select [which character set](/windows/win32/intl/code-page-identifiers) was used to generate the file. Currently, character set isn't inferred, and UTF-8 will only be inferred if it starts with a [UTF-8 BOM](/globalization/encoding/byte-order-mark).
 
-![File culture selection for Text/CSV.](./media/text-csv/textfileorigindropdown.png)
+![File culture selection for Text/CSV.](./media/text-csv/text-file-origin-dropdown.png)
 
 ### CSV
 
@@ -93,11 +93,11 @@ In addition to file origin, CSV also supports specifying the delimiter and how d
 
 Delimiters available include colon, comma, equals sign, semicolon, space, tab, a custom delimiter (which can be any string), and a fixed width (splitting up text by some standard number of characters).
 
-![Delimiter selection for a csv file.](./media/text-csv/csvdelimeterdropdown.png)
+![Delimiter selection for a csv file.](./media/text-csv/csv-delimiter-dropdown.png)
 
 The final dropdown allows you to select how you want to handle data type detection. It can be done based on the first 200 rows, on the entire data set, or you can choose to not do automatic data type detection and instead let all columns default to 'Text'. Warning: if you do it on the entire data set it may cause the initial load of the data in the editor to be slower.
 
-![Data type inference selection for a csv file.](./media/text-csv/csvdatatypedropdown.png)
+![Data type inference selection for a csv file.](./media/text-csv/csv-datatype-dropdown.png)
 
 Since inference can be incorrect, it's worth double checking settings before loading.
 
@@ -113,7 +113,7 @@ This is a string.	1	ABC123
 This is also a string.	2	DEF456
 ```
 
-![Loading data from a structured text file.](./media/text-csv/textcolumnnavigator.png)
+![Loading data from a structured text file.](./media/text-csv/text-column-navigator.png)
 
 This can be used for any kind of other delimiter-based file.
 
@@ -121,11 +121,11 @@ This can be used for any kind of other delimiter-based file.
 
 When editing the source step, you'll be presented with a slightly different dialog than when initially loading. Depending on what you are currently treating the file as (that is, text or csv) you'll be presented with a screen with a variety of dropdowns.
 
-![Editing the source step on a query accessing a CSV file.](./media/text-csv/csveditsource.png)
+![Editing the source step on a query accessing a CSV file.](./media/text-csv/csv-edit-source.png)
 
 The **Line breaks** dropdown will allow you to select if you want to apply line breaks that are inside quotes or not.
 
-![Editing the line break style for a CSV file.](./media/text-csv/csveditlinebreak.png)
+![Editing the line break style for a CSV file.](./media/text-csv/csv-edit-line-break.png)
 
 For example, if you edit the 'structured' sample provided above, you can add a line break.
 
@@ -138,15 +138,15 @@ This is also a string.	2	"DEF456"
 
 If **Line breaks** is set to **Ignore quoted line breaks**, it will load as if there was no line break (with an extra space).
 
-![Loading of a CSV file with quoted line breaks ignored.](./media/text-csv/csvignorelinebreaks.png)
+![Loading of a CSV file with quoted line breaks ignored.](./media/text-csv/csv-ignore-line-breaks.png)
 
 If **Line breaks** is set to **Apply all line breaks**, it will load an extra row, with the content after the line breaks being the only content in that row (exact output may depend on structure of the file contents).
 
-![Loading of a CSV file with quoted line breaks applied.](./media/text-csv/csvapplylinebreaks.png)
+![Loading of a CSV file with quoted line breaks applied.](./media/text-csv/csv-apply-line-breaks.png)
 
 The **Open file as** dropdown will let you edit what you want to load the file as&mdash;important for troubleshooting. For structured files that aren't technically CSVs (such as a tab separated value file saved as a text file), you should still have **Open file as** set to CSV. This setting also determines which dropdowns are available in the rest of the dialog.
 
-![Changing the type of file.](./media/text-csv/csveditloadas.png)
+![Changing the type of file.](./media/text-csv/csv-edit-load-as.png)
 
 ## Text/CSV by Example
 
@@ -187,21 +187,22 @@ When you import a CSV file, Power BI Desktop generates a *columns=x* (where *x* 
 
 When loading Text/CSV files from a web source and also promoting headers, you might sometimes encounter the following errors: ```“An existing connection was forcibly closed by the remote host”``` or ```“Received an unexpected EOF or 0 bytes from the transport stream.”``` These errors might be caused by the host employing protective measures and closing a connection which might be temporarily paused, for example, when waiting on another data source connection for a join or append operation. To work around these errors, try adding a [Binary.Buffer](/powerquery-m/binary-buffer) (recommended) or [Table.Buffer](/powerquery-m/table-buffer) call, which will download the file, load it into memory, and immediately close the connection. This should prevent any pause during download and keep the host from forcibly closing the connection before the content is retrieved.
 
-The following example illustrates this workaround. This buffering needs to be done before the resulting table is passed to ```Table.PromoteHeaders```.
+The following example illustrates this workaround. This buffering needs to be done before the resulting table is passed to [Table.PromoteHeaders](/powerquery-m/table-promoteheaders).
 
 * Original:
 
-```
+```powerquery-m
 Csv.Document(Web.Contents("https://.../MyFile.csv"))
 ```
 
-* With ```Binary.Buffer```:
+* With `Binary.Buffer`:
 
-```
+```powerquery-m
 Csv.Document(Binary.Buffer(Web.Contents("https://.../MyFile.csv")))
 ```
 
-* With ```Table.Buffer```:
-```
+* With `Table.Buffer`:
+
+```powerquery-m
 Table.Buffer(Csv.Document(Web.Contents("https://.../MyFile.csv")))
 ```

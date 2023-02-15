@@ -34,7 +34,7 @@ To make the connection to **Azure Table Storage**, follow these steps:
 
 1. In the **Azure Table Storage** window that appears, enter the name or the URL of the storage account where your table is located. Don't add the name of the table to the URL.
 
-   :::image type="content" source="./media/azure-table-storage/desktop-connect-with-URL.png" alt-text="Screenshot of the Azure Table Storage dialog, showing full storage url added.":::
+   :::image type="content" source="./media/azure-table-storage/desktop-connect-with-url.png" alt-text="Screenshot of the Azure Table Storage dialog, showing full storage url added.":::
 
    :::image type="content" source="./media/azure-table-storage/desktop-connect-with-name.png" alt-text="Screenshot of the Azure Table Storage dialog, showing only the storage name added.":::
 

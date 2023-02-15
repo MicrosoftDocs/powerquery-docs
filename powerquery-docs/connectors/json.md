@@ -3,7 +3,7 @@ title: Power Query JSON connector
 description: Provides basic information and connection instructions, along with instructions on loading from the web and basic troubleshooting information.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 8/18/2021
+ms.date: 2/13/2023
 ms.author: bezhan
 ---
 
@@ -17,7 +17,6 @@ ms.author: bezhan
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication Types Supported | Anonymous<br/>Basic (Web only)<br/>Organizational Account<br/>Web API (Web only)<br/>Windows |
 | Function Reference Documentation | [Json.Document](/powerquery-m/json-document) |
-| | |
 
 >[!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
@@ -82,7 +81,7 @@ If you see the following message, it might be because the file is invalid, for e
 
 If you're trying to load a JSON Lines file, the following sample M code converts all JSON Lines input to a single flattened table automatically:
 
-```
+```powerquery-m
 let
     // Read the file into a list of lines
     Source = Table.FromColumns({Lines.FromBinary(File.Contents("C:\json-lines-example.json"), null, null)}),
