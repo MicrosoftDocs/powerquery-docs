@@ -3,7 +3,7 @@ title: Power Query connector samples
 description: A list of functional, ODBC, and tutorial samples of Power Query connectors
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 1/9/2023
+ms.date: 2/14/2023
 ms.author: miescobar
 ---
 
@@ -20,7 +20,6 @@ We maintain a list of samples on the DataConnectors repo on GitHub. Each of the 
 | Hello World with Docs | Similar to the Hello World sample, this sample shows how to add documentation to a shared function. | [GitHub Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/HelloWorldWithDocs) |
 | Navigation Tables | This sample provides two examples of how to create a navigation table for your data connector using the `Table.ToNavigationTable` function. | [GitHub Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/NavigationTable) |
 | Unit Testing | This sample shows how you can add simple unit testing to your \<extension>\.query.pq file. | [GitHub Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/UnitTesting) |
-| Relationships | This sample demonstrates the declaration of table relationships that will be detected by Power BI Desktop. | [GitHub Link](https://github.com/Microsoft/DataConnectors/tree/master/samples/Relationships) |
   
 ## OAuth
 

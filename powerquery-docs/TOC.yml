@@ -316,7 +316,7 @@
         href: connectors/amazon-redshift.md
       - name: "Anaplan"
         href: connectors/anaplan.md
-      - name: "Assemble Views"
+      - name: "AssembleViews"
         href: connectors/assemble-views.md
       - name: "Autodesk Construction Cloud (Beta)"
         href: connectors/autodesk-construction-cloud.md
@@ -398,7 +398,7 @@
           href: connectors/fhir/fhir-relationships.md
       - name: "Folder"
         href: connectors/folder.md
-      - name: "Funnel (Beta)"
+      - name: "Funnel"
         href: connectors/funnel.md
       - name: "Google Analytics"
         href: connectors/google-analytics.md

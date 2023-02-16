@@ -3,7 +3,7 @@ title: Power Query Hive LLAP connector
 description: Provides basic information and prerequisites for the Hive LLAP connector, along with how to connect to your Hive LLAP data.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 1/4/2023 
+ms.date: 2/13/2023 
 ms.author: bezhan
 ---
 

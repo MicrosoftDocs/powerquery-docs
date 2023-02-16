@@ -3,7 +3,7 @@ title: Power Query Azure Synapse Analytics (SQL DW) connector
 description: Provides basic information, prerequisites, and supported capabilities for the connector, and instructions on how to connect to your database using the connector.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 1/6/2023
+ms.date: 2/13/2023
 ms.author: bezhan
 ---
 
@@ -93,7 +93,7 @@ To make the connection from Power Query Online:
 
 Both Power Query Desktop and Power Query Online provide a set of advanced options that you can add to your query if needed.
 
-![Display of advanced options available in Power Query Desktop.](./media/azure-sql-database/advanced-options.png)
+![Display of advanced options available in Power Query.](./media/azure-sql-database/advanced-options.png)
 
 The following table lists all of the advanced options you can set in Power Query Desktop and Power Query Online.
 

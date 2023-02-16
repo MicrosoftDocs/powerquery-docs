@@ -3,7 +3,7 @@ title: Power Query SQL Server connector
 description: Includes basic information about products that use the connector, supported authentication types, prerequisites, and connection instructions.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 1/6/2022
+ms.date: 2/13/2023
 ms.author: bezhan
 ---
 
@@ -15,7 +15,7 @@ ms.author: bezhan
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
-| Authentication Types Supported | Database (Username/Password)<br/>Windows |
+| Authentication Types Supported | Database (Username/Password)<br/>Windows<br/>Azure Active Directory (if the specified server supports it) |
 | M Function Reference | [Sql.Database](/powerquery-m/sql-database)<br/>[Sql.Databases](/powerquery-m/sql-databases) |
 
 >[!Note]
@@ -57,7 +57,7 @@ To make the connection, take the following steps:
    >[!Note]
    > If the connection is not encrypted, you'll be prompted with the following dialog.
 
-   ![SQL Server database encryption support.](./media/azure-sql-database/encryption-warning.png)
+   ![SQL Server database encryption support.](./media/sql-server-database/encryption-warning.png)
 
     Select **OK** to connect to the database by using an unencrypted connection, or follow these [instructions](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine) to setup encrypted connections to SQL Server.
 
@@ -106,6 +106,12 @@ Once you've selected the advanced options you require, select **OK** in Power Qu
 ### Always Encrypted columns
 
 Power Query doesn't support 'Always Encrypted' columns.
+
+### Azure Active Directory authentication
+
+Azure Active Directory authentication is only supported in the SQL Server connector if the specified server also supports Azure Active Directory authentication. Otherwise, you might encounter an error that says that "The OAuth authentication method is not supported in this data source".
+
+Note that in Power BI service, the Azure Active Directory authentication method shows up as "OAuth2".
 
 ## Next steps
 

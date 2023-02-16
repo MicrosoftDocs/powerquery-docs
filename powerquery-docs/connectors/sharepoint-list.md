@@ -3,7 +3,7 @@ title: Power Query SharePoint list connector
 description: Provides basic information about how to connect to your data, along with troubleshooting tips for obtaining the root SharePoint address and changing the authentication method.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 1/5/2023
+ms.date: 2/13/2023
 ms.author: bezhan
 ---
 

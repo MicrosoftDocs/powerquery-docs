@@ -33,7 +33,7 @@ The Connector Certification Portal is an experience within [ISV Studio](https://
 
 5. Upload your `.mez` file and complete the form with information on your connector. Submit the form to finish the connector submission process. Once submitted, you can use the Activity Control experience on the right to communicate with your Microsoft contact.
 
-6. Read the guidelines for providing [documentation](./providing-user-documentation.md) for your custom connector. Create a Markdown (`.md`) file following the custom connector documentation guidelines, using examples from existing documentation if needed. This step is crucial to ensure users know how to use your connector. Once complete, create a .zip archive with the Markdown (`.md`) file and supporting images, and email it to your Microsoft contact.
+6. Read the guidelines for providing [documentation](./providing-user-documentation.md) for your custom connector. Create a Markdown (`.md`) file following the custom connector documentation guidelines, using examples from existing documentation if needed. This step is crucial to ensure users know how to use your connector. Once you have the pull request for the public documentation available, email the pull request link to your Microsoft contact.
 
 7. In the Activity Control, share a paragraph introducing your connector and explaining its value proposition to users and customers. This entry will be submitted as part of the Power BI blog in the upcoming month's post, announcing the release of your connector.
 

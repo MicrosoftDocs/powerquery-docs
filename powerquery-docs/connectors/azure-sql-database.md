@@ -3,7 +3,7 @@ title: Power Query Azure SQL database connector
 description: Includes basic information and prerequisites, instructions on how to connect to your database, and information about advanced connection options.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 1/6/2023
+ms.date: 2/13/2023
 ms.author: bezhan
 ---
 
@@ -97,7 +97,7 @@ To connect to an Azure SQL database from Power Query Online, take the following 
 
 Both Power Query Desktop and Power Query Online provide a set of advanced options that you can add to your query if needed.
 
-![Display of advanced options available in Power Query Desktop.](./media/azure-sql-database/advanced-options.png)
+![Display of advanced options available in Power Query.](./media/azure-sql-database/advanced-options.png)
 
 The following table lists all of the advanced options you can set in Power Query Desktop and Power Query Online.
 

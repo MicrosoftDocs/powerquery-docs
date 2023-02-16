@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for the FactSet RMS co
 author: bezhan-msft
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 1/6/2023
+ms.date: 2/13/2023
 ms.author: bezhan
 ---
 
@@ -60,7 +60,7 @@ To import data using the FactSet RMS connector from Power Query Desktop, take th
 
 5. The connector opens the Power Query navigator with a list of all provided functions. Note that all functions might not be available, depending on your available subscriptions. Your account team can assist with requirements for access to additional products.
 
-   [![Image of the Navigator dialog box with a list of all of the provided functions.](./media/factset-rms/navigator.png)](./media/factset-rms/Navigator.png#lightbox)
+   [![Image of the Navigator dialog box with a list of all of the provided functions.](./media/factset-rms/navigator.png)](./media/factset-rms/navigator.png#lightbox)
 
 6. Use the Get\* queries to look up parameters for your Notes and create new queries. A form will populate in the query window with parameter fields to narrow your universe and return the relevant data set of interest based on IRN Subject, Author, Date Range, Recommendations and/or Sentiments. Note that the functions contain Get\* queries that are common for IRN Notes, Custom Symbols, and Meetings APIs.
 

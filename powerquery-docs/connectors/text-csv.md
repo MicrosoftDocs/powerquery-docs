@@ -3,7 +3,7 @@ title: Power Query Text/CSV connector
 description: Provides basic information and connection instructions, along with troubleshooting tips when loading files from the web and when unstructured text is interpreted as structured.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 1/6/2023
+ms.date: 2/13/2023
 ms.author: bezhan
 ---
 
@@ -187,7 +187,7 @@ When you import a CSV file, Power BI Desktop generates a *columns=x* (where *x* 
 
 When loading Text/CSV files from a web source and also promoting headers, you might sometimes encounter the following errors: `"An existing connection was forcibly closed by the remote host"` or `"Received an unexpected EOF or 0 bytes from the transport stream."` These errors might be caused by the host employing protective measures and closing a connection which might be temporarily paused, for example, when waiting on another data source connection for a join or append operation. To work around these errors, try adding a [Binary.Buffer](/powerquery-m/binary-buffer) (recommended) or [Table.Buffer](/powerquery-m/table-buffer) call, which will download the file, load it into memory, and immediately close the connection. This should prevent any pause during download and keep the host from forcibly closing the connection before the content is retrieved.
 
-The following example illustrates this workaround. This buffering needs to be done before the resulting table is passed to ```Table.PromoteHeaders```.
+The following example illustrates this workaround. This buffering needs to be done before the resulting table is passed to [Table.PromoteHeaders](/powerquery-m/table-promoteheaders).
 
 * Original:
 
@@ -195,13 +195,13 @@ The following example illustrates this workaround. This buffering needs to be do
 Csv.Document(Web.Contents("https://.../MyFile.csv"))
 ```
 
-* With ```Binary.Buffer```:
+* With `Binary.Buffer`:
 
 ```powerquery-m
 Csv.Document(Binary.Buffer(Web.Contents("https://.../MyFile.csv")))
 ```
 
-* With ```Table.Buffer```:
+* With `Table.Buffer`:
 
 ```powerquery-m
 Table.Buffer(Csv.Document(Web.Contents("https://.../MyFile.csv")))

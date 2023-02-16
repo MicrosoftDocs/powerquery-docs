@@ -3,7 +3,7 @@ title: Power Query Salesforce Objects connector
 description: Provides basic information, prerequisites, and information on how to connect to your data, along with a list of known issues and limitations.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 1/10/2023
+ms.date: 2/2/2023
 ms.author: bezhan
 ---
 
@@ -89,6 +89,14 @@ To connect to Salesforce Objects data:
 4. Select **Sign in** to sign in to your Salesforce account. Once you've successfully signed in, select **Next**.
 
 5. In the **Navigator** dialog box, select the Salesforce Objects you want to load. Then select **Transform Data** to transform the data.
+
+## Specifying a Salesforce API version
+
+We require you to specify a supported Salesforce API version to use the Salesforce connector. You can do so by modifying the query using the Power Query advanced editor. For example, `Salesforce.Data("https://login.salesforce.com/", [ApiVersion=48])`.
+
+If you specify a version that isn't supported by Salesforce, you'll encounter an error message indicating that you have specified an unsupported ApiVersion.
+
+For more information on Salesforce API versions and support, visit the [Salesforce website](https://help.salesforce.com/s/articleView?id=000381744&type=1).
 
 ## Known issues and limitations
 

@@ -3,7 +3,7 @@ title: Google BigQuery connector
 description: Provides basic information and prerequisites for the Google BigQuery connector for Power Query.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 1/6/2023
+ms.date: 2/13/2023
 ms.author: bezhan
 ---
 

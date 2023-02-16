@@ -3,7 +3,7 @@ title: Power Query MySQL database connector
 description: Provides basic information about products that use the connector, supported authentication types, prerequisites, and connection instructions.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 1/6/2023
+ms.date: 2/13/2023
 ms.author: bezhan
 ---
 
@@ -55,7 +55,7 @@ To make the connection, take the following steps:
    >[!Note]
    > If the connection is not encrypted, you'll be prompted with the following dialog.
 
-   ![MySQL database encryption support.](./media/azure-sql-database/encryption-warning.png)
+   ![MySQL database encryption support.](./media/mysql-database/encryption-warning.png)
 
    Select **OK** to connect to the database by using an unencrypted connection, or follow the [instructions](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine) to set up encrypted connections to SQL Server.
 
