@@ -7,13 +7,13 @@ ms.date: 6/24/2022
 ms.author: bezhan
 ---
 
-# Digital Construction Works Insights (Beta)
+# Digital Construction Works Insights
 
 ## Summary
 
 | Item | Description |
 | ------- | ------------|
-|Release state | Beta |
+|Release state | GA |
 | Products supported | Power BI (Datasets)<br/>Power BI (Dataflows) |
 | Authentication types supported| Digital Construction Works JSON Web Token (JWT) |
 | Function reference docs | &mdash; |
