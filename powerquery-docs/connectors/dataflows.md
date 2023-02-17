@@ -78,7 +78,7 @@ To get DirectQuery to run, you need to have Power BI Premium and adjust a few co
 
 _**My dataflow table doesn't show up in the dataflow connector in Power BI**_
 
-You're probably using a Dataverse table as the destination for your standard dataflow. Use the [Dataverse/CDS connector](../Connectors/Dataverse.md) instead or consider switching to an analytical dataflow.
+You're probably using a Dataverse table as the destination for your standard dataflow. Use the [Dataverse/CDS connector](../connectors/dataverse.md) instead or consider switching to an analytical dataflow.
 
 _**There's a difference in the data when I remove duplicates in dataflows&mdash;how can I resolve this?**_
 

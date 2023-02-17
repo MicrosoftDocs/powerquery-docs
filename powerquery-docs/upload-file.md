@@ -2,7 +2,7 @@
 title: "Upload a file in Power Query Online"
 description: "An overview on how to upload a file when using the Power Query Online experience"
 author: ptyx507
-ms.date: 12/20/2021
+ms.date: 1/5/2023
 ms.author: miescobar
 ms.custom: intro-internal
 ---

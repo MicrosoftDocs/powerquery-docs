@@ -3,7 +3,7 @@ title: Computed entity scenarios and use cases
 description: Computed entity scenarios and use cases.
 author: bensack
 ms.topic: conceptual
-ms.date: 12/2/2020
+ms.date: 1/6/2023
 ms.author: bensack
 ---
 
@@ -29,12 +29,11 @@ Performing all transformation steps in one entity can be slow. There can be many
 
 For example, if two entities share even a part of their transformation logic, without a computed entity the transformation will have to be done twice.
 
-![Image showing transformation of data occurring twice.](media/SeparateEntities.png)
+![Image showing transformation of data occurring twice.](media/computed-entities-scenarios/separate-entities.png)
 
 However, if a computed entity is used, then the common (shared) part of the transformation will be processed once and stored in Azure Data Lake Storage. The remaining transformations will then be processed from the output of the common transformation. Overall, this processing is much faster.
 
-![Image showing common transformations done once in the computed entity, and stored in the data lake, and the remaining unique tranformations occurring later.](media/Computedentityinbetween.png)
-
+![Image showing common transformations done once in the computed entity, and stored in the data lake, and the remaining unique tranformations occurring later.](media/computed-entities-scenarios/computed-entity-in-between.png)
 
 A computed entity provides one place as the source code for the transformation and speeds up the transformation because it need only be done once instead of multiple times. The load on the data source is also reduced.
 
@@ -44,17 +43,17 @@ If you're building an aggregated table in Power BI to speed up the data model, y
 
 For example, the following figure shows an Orders entity.
 
-![Orders entity.](media/ordersentity.png)
+![Orders entity.](media/computed-entities-scenarios/orders-entity.png)
 
 Using a reference from this entity, you can build a computed entity.
 
-:::image type="complex" source="media/ordersentityreferenced.png" alt-text="Creating a computed entity.":::
+:::image type="complex" source="media/computed-entities-scenarios/orders-entity-referenced.png" alt-text="Creating a computed entity.":::
    Image showing how to create a computed entity from the Orders entity. First right-click the Orders entity in the Queries pane, select the Reference option from the drop-down menu, which creates the computed entity, which is renamed here to Orders aggregated.
 :::image-end:::
 
 The computed entity can have further transformations. For example, you can use **Group By** to aggregate the data at the customer level.
 
-![Image showing the Customer column in the Orders aggregated entity emphasized.](media/ordersaggregatedentity.png)
+![Image showing the Customer column in the Orders aggregated entity emphasized.](media/computed-entities-scenarios/orders-aggregated-entity.png)
 
 This means that the Orders Aggregated entity will be getting data from the Orders entity, and not from the data source again. Because some of the transformations that need to be done have already been done in the Orders entity, performance is better and data transformation is faster.
 
@@ -62,8 +61,8 @@ This means that the Orders Aggregated entity will be getting data from the Order
 
 You can also create a computed entity in other dataflows. It can be created by getting data from a dataflow with the Microsoft Power Platform dataflow connector.
 
-:::image type="complex" source="media/getdatafromppdataflows.png" alt-text="<Get data from Power Platform dataflows>":::
-   Image emphasizes the Power Platform dataflows connector from the Power Query choos data source window, with a description that states that one dataflow entity can be built on top of the data from another dataflow entity, which is already persisted in storage.
+:::image type="complex" source="media/computed-entities-scenarios/get-data-from-pp-dataflows.png" alt-text="Get data from Power Platform dataflows":::
+   Image emphasizes the Power Platform dataflows connector from the Power Query choose data source window, with a description that states that one dataflow entity can be built on top of the data from another dataflow entity, which is already persisted in storage.
 :::image-end:::
 
 The concept of the computed entity is to have a table persisted in storage, and other tables sourced from it, so that you can reduce the read time from the data source and share some of the common transformations. This can be achieved by getting data from other dataflows through the dataflow connector or referencing another query in the same dataflow.

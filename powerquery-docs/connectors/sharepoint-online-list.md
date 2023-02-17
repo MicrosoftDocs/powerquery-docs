@@ -49,7 +49,7 @@ To connect to a SharePoint Online list:
 
 3. If this is the first time you've visited this site address, select the appropriate authentication method. Enter your credentials and chose which level to apply these settings to. Then select **Connect**.
 
-   ![Choose Microsoft account.](./media/sharepoint-list/sharepoint-list-sign-in.png)
+   ![Choose Microsoft account.](./media/sharepoint-online-list/sharepoint-online-list-sign-in.png)
 
     For more information about authentication methods and level settings, go to [Authentication with a data source](../connectorauthentication.md).
 
@@ -126,7 +126,7 @@ The first operation changes the type to `datetimezone`, and the second operation
 
 **This issue is limited to the SharePoint Online list v2.0 connector**
 
-The SharePoint Online list v2.0 connector uses a different API than the v1.0 connector and, as such, is subject to a maximum of 12 join operations per query, as documented in the [SharePoint Online documentation](/sharepoint/install/software-boundaries-limits-2019#list-and-library-limits) under **List view lookup threshold**. This issue will manifest as SharePoint queries failing when more than 12 columns are accessed simultaneously from a SharePoint list. However, you can work around this situation by creating a default view with less than 12 lookup columns. 
+The SharePoint Online list v2.0 connector uses a different API than the v1.0 connector and, as such, is subject to a maximum of 12 join operations per query, as documented in the [SharePoint Online documentation](/sharepoint/install/software-boundaries-limits-2019#list-and-library-limits) under **List view lookup threshold**. This issue will manifest as SharePoint queries failing when more than 12 columns are accessed simultaneously from a SharePoint list. However, you can work around this situation by creating a default view with less than 12 lookup columns.
 
 ### Using OData to access a SharePoint Online list
 

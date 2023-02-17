@@ -3,7 +3,7 @@ title: Power Query Connector Certification
 description: Guidelines on connector certification and implementation requirements for Power Query custom connectors
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 10/13/2020
+ms.date: 1/9/2023
 ms.author: bezhan
 ms.custom: intro-internal
 ---
@@ -35,7 +35,7 @@ We work with partners to try to make sure that they have support in maintenance,
 
 ## Certified connector and custom connector differences
 
-Certified connectors are bundled out-of-box in Power BI Desktop, and deployed to Power BI Service, Power BI dataflows, and Power BI datamarts. Custom connectors are only supported in Power BI datasets and need to be loaded in Power BI Desktop, as described in [Loading your extension in Power BI Desktop](samples/TripPin/1-OData/README.md#loading-your-extension-in-power-bi-desktop). Both certified and custom connectors can be refreshed through Power BI Desktop or Power BI Service through using an on-premises data gateway by implementing a [TestConnection](samples/trippin/9-testconnection/readme.md). The on-premises data gateway is required for custom connectors.
+Certified connectors are bundled out-of-box in Power BI Desktop, and deployed to Power BI Service, Power BI dataflows, and Power BI datamarts. Custom connectors are only supported in Power BI datasets and need to be loaded in Power BI Desktop, as described in [Loading your extension in Power BI Desktop](samples/trippin/1-odata/readme.md#loading-your-extension-in-power-bi-desktop). Both certified and custom connectors can be refreshed through Power BI Desktop or Power BI Service through using an on-premises data gateway by implementing a [TestConnection](samples/trippin/9-testconnection/readme.md). The on-premises data gateway is required for custom connectors.
 
 Certified connectors in Power BI Desktop with a `TestConnection` implementation also support end-to-end refresh through the cloud (Power BI Service) without the need of an on-premises data gateway. The Power BI service environment essentially hosts a “cloud gateway” that runs similar to the on-premises gateway. After certification, we'll deploy your connector to this environment so that it's available to all Power BI customers.
 
@@ -45,7 +45,7 @@ Both custom and certified connectors with extra components (for example, ODBC dr
 
 Custom connectors can and should be distributed to end users before certification.
 
-As M is a versatile language that, as seen in [Handling Authentication](HandlingAuthentication.md), has the capacity to interact with stored credentials, we need to give users a way to only allow trusted connectors to run.
+As M is a versatile language that, as seen in [Handling Authentication](handlingauthentication.md), has the capacity to interact with stored credentials, we need to give users a way to only allow trusted connectors to run.
 
 From a developer's perspective, developers need to [self-sign](./handlingconnectorsigning.md) their custom connector and provide their users with the information (thumbprint) to securely load it.
 
@@ -139,7 +139,7 @@ There are specific security considerations that your connector must handle.
 * If `Extension.CurrentCredentials()` is used:
   * Is the usage required? If so, where do the credentials get sent to?
   * Are the requests guaranteed to be made through HTTPS?
-    * You can use the [HTTPS enforcement helper function](HelperFunctions.md#validateurlscheme).
+    * You can use the [HTTPS enforcement helper function](helper-functions.md#validateurlscheme).
   * If the credentials are sent using `Web.Contents()` via GET:
     * Can it be turned into a POST?
     * If GET is required, the connector MUST use the `CredentialQueryString` record in the `Web.Contents()` options record to pass in sensitive credentials.

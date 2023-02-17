@@ -4,7 +4,7 @@ description: How to use the dataflows connector in Power Automate to automatical
 author: Luitwieler
 ms.reviewer: dougklo
 ms.topic: conceptual
-ms.date: 04/21/2022
+ms.date: 1/6/2023
 ms.author: jeluitwi
 ---
 
@@ -31,7 +31,7 @@ To automatically retry a dataflow on failure:
    2. Leave the second cell as **is equal to**.
    3. In the third cell, enter **Failed**.
 
-   [![Image with the conditions set to occur when the Refresh status equals success.](media/autoretrydataflowpowerautomate.png)](media/autoretrydataflowpowerautomate.png#lightbox)
+   [![Image with the conditions set to occur when the Refresh status equals success.](media/automatically-retry-dataflow/auto-retry-dataflow-power-automate.png)](media/automatically-retry-dataflow/auto-retry-dataflow-power-automate.png#lightbox)
 
 8. In the **If Yes** section, select **Add an action**.
 9. Search for the **Refresh a dataflow** connector, and then select it.
@@ -41,4 +41,4 @@ To automatically retry a dataflow on failure:
     2. **Group**: Select the Power Apps environment or the Power BI workspace your dataflow is in.
     3. **Dataflow**: Select the same dataflow as chosen in step 4.
 
-    ![Image with the refresh a dataflow connector in the If yes dialog box.](media/refresh-a-dataflow.png)
+    ![Image with the refresh a dataflow connector in the If yes dialog box.](media/automatically-retry-dataflow/refresh-a-dataflow.png)

@@ -3,7 +3,7 @@ title: Using the wait-retry pattern in Power Query connectors
 description: Use the wait-retry pattern for Power Query connectors
 author: mattmasson
 ms.topic: conceptual
-ms.date: 2/28/2022
+ms.date: 2/16/2023
 ms.author: mmasson
 ---
 
@@ -36,7 +36,7 @@ you'll need to ensure that the query ignores any cached results. You can do this
 
 ## Value.WaitFor
 
-`Value.WaitFor()` is a standard [helper function](HelperFunctions.md) that can usually be used with no modification. It works by building a List of retry attempts.
+`Value.WaitFor()` is a standard [helper function](helper-functions.md) that can usually be used with no modification. It works by building a List of retry attempts.
 
 ### `producer` Argument
 
