@@ -2,7 +2,7 @@
 title: Connections and authentication in Power Query Online
 description: This article describes the process and specifics of the authentication process in Power Query Online.
 author: ptyx507x
-ms.date: 10/5/2022
+ms.date: 1/5/2023
 ms.author: miescobar
 ---
 
@@ -109,7 +109,7 @@ To override this behavior, you can take either of the following two actions:
 
 ## More resources
 
-* [List of connectors in Power Query](Connectors/index.md)
+* [List of connectors in Power Query](connectors/index.md)
 * [On-premises data gateways documentation](/data-integration/gateway/)
 * [Change the gateway used in a dataflow](change-gateway-dataflow.md)
 * [Troubleshooting dataflow issues: Connection to the data source](/power-query/dataflows/troubleshooting-dataflow-issues-connection-to-the-data-source)

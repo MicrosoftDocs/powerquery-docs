@@ -3,21 +3,23 @@ title: Helper functions for M extensions for Power Query connectors
 description: Use helper functions for Power Query connectors
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 2/28/2022
+ms.date: 1/9/2023
 ms.author: miescobar
 ---
 
 # Helper Functions
+
 This topic contains a number of helper functions commonly used in M extensions.
 These functions may eventually be moved to the official M library, but for now can be copied into your extension file code.
-You shouldn't mark any of these functions as `shared` within your extension code. 
+You shouldn't mark any of these functions as `shared` within your extension code.
 
 ## Navigation Tables
 
 ### Table.ToNavigationTable
+
 This function adds the table type metadata needed for your extension to return a table value that Power Query can recognize as a Navigation Tree. See [Navigation Tables](HandlingNavigationTables.md) for more information.
 
-```
+```powerquery-m
 Table.ToNavigationTable = (
     table as table,
     keyColumns as list,
@@ -54,7 +56,7 @@ Table.ToNavigationTable = (
 
 **Example usage:**
 
-```
+```powerquery-m
 shared MyExtension.Contents = () =>
     let
         objects = #table(
@@ -72,9 +74,10 @@ shared MyExtension.Contents = () =>
 ## URI Manipulation
 
 ### Uri.FromParts
+
 This function constructs a full URL based on individual fields in the record. It acts as the reverse of [Uri.Parts](/powerquery-m/uri-parts).
 
-```
+```powerquery-m
 Uri.FromParts = (parts) =>
     let
         port = if (parts[Scheme] = "https" and parts[Port] = 443) or (parts[Scheme] = "http" and parts[Port] = 80) then "" else ":" & Text.From(parts[Port]),
@@ -86,11 +89,12 @@ Uri.FromParts = (parts) =>
 ```
 
 ### Uri.GetHost
+
 This function returns the scheme, host, and default port (for HTTP/HTTPS) for a given URL. For example, `https://bing.com/subpath/query?param=1&param2=hello` would become `https://bing.com:443`.
 
 This is particularly useful for building `ResourcePath`.
 
-```
+```powerquery-m
 Uri.GetHost = (url) =>
     let
         parts = Uri.Parts(url),
@@ -103,14 +107,13 @@ Uri.GetHost = (url) =>
 
 This function checks if the user entered an HTTPS URL and raises an error if they don't. This is required for user entered URLs for certified connectors.
 
-
-```
+```powerquery-m
 ValidateUrlScheme = (url as text) as text => if (Uri.Parts(url)[Scheme] <> "https") then error "Url scheme must be HTTPS" else url;
 ```
 
 To apply it, just wrap your `url` parameter in your data access function.
 
-```
+```powerquery-m
 DataAccessFunction = (url as text) as table =>
     let
         _url = ValidateUrlScheme(url),
@@ -122,9 +125,10 @@ DataAccessFunction = (url as text) as table =>
 ## Retrieving Data
 
 ### Value.WaitFor
-This function is useful when making an asynchronous HTTP request and you need to poll the server until the request is complete. 
 
-```
+This function is useful when making an asynchronous HTTP request and you need to poll the server until the request is complete.
+
+```powerquery-m
 Value.WaitFor = (producer as function, interval as function, optional count as number) as any =>
     let
         list = List.Generate(
@@ -137,12 +141,13 @@ Value.WaitFor = (producer as function, interval as function, optional count as n
 ```
 
 ### Table.GenerateByPage
+
 This function is used when an API returns data in an incremental/paged format, which
 is common for many REST APIs. The `getNextPage` argument is a function that takes in 
 a single parameter, which will be the result of the previous call to `getNextPage`, and
-should return a `nullable table`. 
+should return a `nullable table`.
 
-```
+```powerquery-m
 getNextPage = (lastPage) as nullable table => ...`
 ```
 
@@ -150,7 +155,7 @@ getNextPage = (lastPage) as nullable table => ...`
 all pages into a single table. When the result of the first call to `getNextPage` is null,
 an empty table is returned.
 
-```
+```powerquery-m
 // The getNextPage function takes a single argument and is expected to return a nullable table
 Table.GenerateByPage = (getNextPage as function) as table =>
     let        
@@ -167,7 +172,7 @@ Table.GenerateByPage = (getNextPage as function) as table =>
         // otherwise set the table type based on the columns of the first page
         if (firstRow = null) then
             Table.FromRows({})
-	// check for empty first table
+    // check for empty first table
         else if (Table.IsEmpty(firstRow[Column1])) then
             firstRow[Column1]
         else
@@ -187,9 +192,9 @@ the first page of data. The `getNextPage` function should normalize each page of
 - The first call to `getNextPage` receives a null parameter.
 - `getNextPage` must return null when there are no pages left.
 
-An example of using this function can be found in the [Github sample](samples/Github/README.md), and the [TripPin paging sample](samples/TripPin/5-Paging/README.md).
+An example of using this function can be found in the [Github sample](samples/github/readme.md), and the [TripPin paging sample](samples/trippin/5-paging/readme.md).
 
-```
+```powerquery-m
 Github.PagedTable = (url as text) => Table.GenerateByPage((previous) =>
     let
         // If we have a previous page, get its Next link from metadata on the page.
@@ -207,7 +212,7 @@ Github.PagedTable = (url as text) => Table.GenerateByPage((previous) =>
 
 ### SchemaTransformTable
 
-```
+```powerquery-m
 EnforceSchema.Strict = 1;               // Add any missing columns, remove extra columns, set table type
 EnforceSchema.IgnoreExtraColumns = 2;   // Add missing columns, do not remove extra columns
 EnforceSchema.IgnoreMissingColumns = 3; // Do not add or remove columns
@@ -267,7 +272,8 @@ SchemaTransformTable = (table as table, schema as table, optional enforceSchema 
 ```
 
 ### Table.ChangeType
-```
+
+```powerquery-m
 let
     // table should be an actual Table.Type, or a List.Type of Records
     Table.ChangeType = (table, tableType as type) as nullable table =>

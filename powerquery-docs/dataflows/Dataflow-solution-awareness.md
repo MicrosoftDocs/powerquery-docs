@@ -4,7 +4,7 @@ description: Provides an overview of dataflows in solutions, and includes specia
 author: bensack
 ms.author: bensack
 ms.topic: conceptual 
-ms.date: 12/01/2021 
+ms.date: 1/6/2023 
 
 ---
 
@@ -39,11 +39,11 @@ Follow these steps to add a dataflow to a solution.
 
 3. Select the solution you'll add your dataflow to, and from the context menu select **Edit**.
 
-   [![Screen showing the list of solutions.](./media/dataflows-solution-awareness/Solutions_02_EditSolution.png)](./media/dataflows-solution-awareness/Solutions_02_EditSolution.png#lightbox)
+   [![Screen showing the list of solutions.](./media/dataflows-solution-awareness/solutions-02-edit-solution.png)](./media/dataflows-solution-awareness/solutions-02-edit-solution.png#lightbox)
 
 4. Select **Add Exiting** > **Automation** > **Dataflow**.
 
-   [![Screen showing add existing dataflow option highlighted.](./media/dataflows-solution-awareness/Solutions_03_AddExistingDataflow.png)](./media/dataflows-solution-awareness/Solutions_03_AddExistingDataflow.png#lightbox)
+   [![Screen showing add existing dataflow option highlighted.](./media/dataflows-solution-awareness/solutions-03-add-existing-dataflow.png)](./media/dataflows-solution-awareness/solutions-03-add-existing-dataflow.png#lightbox)
 
 5. Optional: If your dataflow loads data into a custom Dataverse table, add the custom table to the solution as well.
 
@@ -51,7 +51,7 @@ Follow these steps to add a dataflow to a solution.
 
    Once both the dataflow and table it loads data to are added to the solution, it has the two artifacts added to the solution. In this case, the artifacts are **cr0c8_FullOrderDetails** and **Import Sales Data**.
 
-    [![Screenshot showing the two artifacts added to the solution](./media/dataflows-solution-awareness/Solutions_06_ComponentsAdded.png)](./media/dataflows-solution-awareness/Solutions_06_ComponentsAdded.png#lightbox)
+    [![Screenshot showing the two artifacts added to the solution](./media/dataflows-solution-awareness/solutions-06-components-added.png)](./media/dataflows-solution-awareness/solutions-06-components-added.png#lightbox)
 
    To save your work, be sure to publish all customizations. Now, the solution is ready for you to export from the source environment and import to the destination environment.
 
@@ -65,23 +65,23 @@ For security reasons, credentials of connections used by dataflows aren't persis
 
 1. On the left navigation pane, select the down arrow next to **Dataverse** and select **Dataflows**. Identify the dataflow that was imported, and select **Edit** from the context menu.
 
-   [![Screenshot showing navigation to dataflow tab.](./media/dataflows-solution-awareness/Solutions_dataflows_after_Import_02.png)](./media/dataflows-solution-awareness/Solutions_dataflows_after_Import_02.png#lightbox)
+   [![Screenshot showing navigation to dataflow tab.](./media/dataflows-solution-awareness/solutions-dataflows-after-import-02.png)](./media/dataflows-solution-awareness/solutions-dataflows-after-import-02.png#lightbox)
 
 2. In the Dataflow list, locate and double-click the dataflow that was added as part of the solution you’ve imported.
 
 3. You'll be asked to enter credentials required for the dataflow.
 
-   [![Screenshot showing power query prompting for credentials.](./media/dataflows-solution-awareness/Solutions_dataflows_after_Import_03.png)](./media/dataflows-solution-awareness/Solutions_dataflows_after_Import_03.png#lightbox)
+   [![Screenshot showing power query prompting for credentials.](./media/dataflows-solution-awareness/solutions-dataflows-after-import-03.png)](./media/dataflows-solution-awareness/solutions-dataflows-after-import-03.png#lightbox)
 
    Once the credentials for the connection have been updated, all queries that use that connection automatically load.
 
 4. If your dataflow loads data in Dataverse tables, select **Next** to review the mapping configuration.
 
-   [![Screenshot showing all queries with data loaded after connection credentials have been provided.](./media/dataflows-solution-awareness/Solutions_dataflows_after_Import_05.png)](./media/dataflows-solution-awareness/Solutions_dataflows_after_Import_05.png#lightbox)
+   [![Screenshot showing all queries with data loaded after connection credentials have been provided.](./media/dataflows-solution-awareness/solutions-dataflows-after-import-05.png)](./media/dataflows-solution-awareness/solutions-dataflows-after-import-05.png#lightbox)
 
 5. The mapping configuration is also saved as part of the solution. Since you also added the destination table to the solutions, there's no need to recreate the table in this environment and you can publish the dataflow.
 
-   [![Screenshot showing map tables experience with pre-configured selections.](./media/dataflows-solution-awareness/Solutions_dataflows_after_Import_06.png)](./media/dataflows-solution-awareness/Solutions_dataflows_after_Import_06.png#lightbox)
+   [![Screenshot showing map tables experience with pre-configured selections.](./media/dataflows-solution-awareness/solutions-dataflows-after-import-06.png)](./media/dataflows-solution-awareness/solutions-dataflows-after-import-06.png#lightbox)
 
    That's it. Your dataflow now refreshes and loads data to the destination table.
 
@@ -94,4 +94,4 @@ For security reasons, credentials of connections used by dataflows aren't persis
 * Dataflows don't support adding required components, such as custom tables they load data to. Instead, the custom table should be manually added to the solution.
 * Dataflows can't be deployed by application users (service principals).
 * Incremental refresh configuration isnt supported when deploying solutions. After deployment of the dataflow via solution, the incremental refresh configuration should be reapplied.
-* Linked tables to other dataflows aren't supported when deploying solutions. After deployment of the dataflow via solution, please edit the dataflow and edit the connection to the linked dataflow. 
+* Linked tables to other dataflows aren't supported when deploying solutions. After deployment of the dataflow via solution, please edit the dataflow and edit the connection to the linked dataflow.

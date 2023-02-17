@@ -3,7 +3,7 @@ title: Proxy support in the Power Query SDK
 description: Describes how to use the Power Query SDK to handle proxy support for Power Query connectors.
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 2/2/2022
+ms.date: 1/9/2023
 ms.author: miescobar
 ---
 
@@ -44,7 +44,7 @@ If the proxy isn't configured, `Web.DefaultProxy` returns an empty record.
 
 To use `Web.DefaultProxy` in the connector code, a boolean type variable can be used to opt in or out of using this functionality. In this example, `Web.DefaultProxy` is invoked in the connector code if the optional boolean parameter `UseWebDefaultProxy` is set to true (defaults to false).
 
-```M
+```powerquery-m
 UseWebDefaultProxyOption = options[UseWebDefaultProxy]?,
 ProxyUriRecord = if UseWebDefaultProxyOption then Web.DefaultProxy(Host) else null,
 ProxyOptions = if Record.FieldCount(ProxyUriRecord) > 0 then
@@ -57,7 +57,7 @@ ProxyOptions = if Record.FieldCount(ProxyUriRecord) > 0 then
 
 Once the `UseWebDefaultProxy` is set to true and `ProxyUriRecord` is fetched, a record can be created to set the `Proxy` (configuration parameter supported by the driver, which can vary) with the `ProxyUri` field returned by `Web.DefaultProxy`. It can be named something like `ProxyOptions`. This record can then be appended to the base `ConnectionString`, and include the proxy details along with it.
 
-```M
+```powerquery-m
 Databases = Odbc.DataSource(ConnectionString & ProxyOptions, Options)
 ```
 
@@ -65,7 +65,7 @@ Databases = Odbc.DataSource(ConnectionString & ProxyOptions, Options)
 
 If there are multiple configuration parameters used by the driver for setting the proxy details (like host and port details being handled separately), `Uri.Parts` can be used.
 
-```M
+```powerquery-m
 UseWebDefaultProxyOption = options[UseWebDefaultProxy]?,
 ProxyRecord = if UseWebDefaultProxyOption then Web.DefaultProxy(Host) else null,
 UriRecord = if ProxyRecord <> null then Uri.Parts(ProxyRecord) else null,

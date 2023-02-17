@@ -4,7 +4,7 @@ description: An article that describes why and how to use the new Query plan fea
 author: ptyx507x
 
 ms.topic: quickstart
-ms.date: 6/27/2022
+ms.date: 1/5/2023
 ms.author: miescobar
 ---
 

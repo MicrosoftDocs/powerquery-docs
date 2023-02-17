@@ -3,7 +3,7 @@ title: Consume data from dataflows
 description: Consume data from dataflows.
 author: luitwieler
 ms.topic: conceptual
-ms.date: 01/12/2022
+ms.date: 1/5/2023
 ms.author: jeluitwi
 ---
 
@@ -17,7 +17,7 @@ There are multiple types of dataflows available for you to create. You can choos
 
 ## Storage type
 
-A dataflow can write to multiple output destination types. In short, you should be using the [Dataflows connector](../Connectors/Dataflows.md) unless your destination is a Dataverse table. Then you use the [Dataverse/CDS connector](../Connectors/Dataverse.md).
+A dataflow can write to multiple output destination types. In short, you should be using the [Dataflows connector](../connectors/dataflows.md) unless your destination is a Dataverse table. Then you use the [Dataverse/CDS connector](../connectors/dataverse.md).
 
 ### Azure Data Lake Storage
 
@@ -30,13 +30,13 @@ When you've connected your data lake, you should still use the Dataflows connect
 
 ### Dataverse
 
-A standard dataflow writes the output data to a Dataverse table. [Dataverse](/powerapps/maker/data-platform/data-platform-intro) lets you securely store and manage data that's used by business applications. After you load data in the Dataverse table, you can consume the data using the [Dataverse connector](../Connectors/Dataverse.md).
+A standard dataflow writes the output data to a Dataverse table. [Dataverse](/powerapps/maker/data-platform/data-platform-intro) lets you securely store and manage data that's used by business applications. After you load data in the Dataverse table, you can consume the data using the [Dataverse connector](../connectors/dataverse.md).
 
 ## Dataflows can get data from other dataflows
 
 If you'd like to reuse data created by one dataflow in another dataflow, you can do so by using the Dataflow connector in the Power Query editor when you create the new dataflow.
 
-[![Get data from a dataflow.](media/dataflows-linked-entities/linked-entities-03.png)](media/dataflows-linked-entities/linked-entities-03.png#lightbox)
+[![Get data from a dataflow.](media/linked-entities/linked-entities-03.png)](media/linked-entities/linked-entities-03.png#lightbox)
 
 When getting data from the output of another dataflow, a [linked entity](/data-integration/dataflows/dataflows-linked-entities) will be created. Linked entities provide a way to make data created in an upstream dataflow available in a downstream dataflow, without copying the data to the downstream dataflow. Because linked entities are just pointers to entities created in other dataflows, they're kept up to date by the refresh logic of the upstream dataflow. If both dataflows reside in the same workspace or environment, those dataflows will be refreshed together, to keep data in both dataflows always up to date. More information: [Link entities between dataflows](/data-integration/dataflows/dataflows-linked-entities)
 
@@ -48,7 +48,7 @@ When you use the output of a dataflow in other dataflows or datasets, you can cr
 
 _**My dataflow table doesn't show up in the dataflow connector in Power BI**_
 
-You're probably using a Dataverse table as the destination for your standard dataflow. Use the [Dataverse/CDS connector](../Connectors/Dataverse.md) instead or consider switching to an analytical dataflow.
+You're probably using a Dataverse table as the destination for your standard dataflow. Use the [Dataverse/CDS connector](../connectors/dataverse.md) instead or consider switching to an analytical dataflow.
 
 _**There's a difference in the data when I remove duplicates in dataflows&mdash;how can I resolve this?**_
 

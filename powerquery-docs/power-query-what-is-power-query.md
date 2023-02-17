@@ -4,7 +4,7 @@ description: Learn what Power Query is, and how it can help you get and transfor
 author: ptyx507x
 
 ms.topic: overview
-ms.date: 03/14/2022
+ms.date: 1/9/2023
 ms.author: miescobar
 ---
 
@@ -12,7 +12,7 @@ ms.author: miescobar
 
 Power Query is a data transformation and data preparation engine. Power Query comes with a graphical interface for getting data from sources and a Power Query Editor for applying transformations. Because the engine is available in many products and services, the destination where the data will be stored depends on where Power Query was used. Using Power Query, you can perform the extract, transform, and load (ETL) processing of data.
 
-:::image type="complex" source="images/whatispowerquery.png" alt-text="Power Query input, transformation, and destination":::
+:::image type="complex" source="media/power-query-what-is-power-query/what-is-power-query.png" alt-text="Power Query input, transformation, and destination":::
    Diagram with symbolized data sources on the right, passing though Power query for transformation, and then going to various destinations, such as Azure Data Lake Storage, Dataverse, Microsoft Excel, or Power BI.
 :::image-end:::
 
@@ -50,7 +50,7 @@ The transformation engine in Power Query includes many prebuilt transformation f
 
 All these transformations are made possible by choosing the transformation option in the menu, and then applying the options required for that transformation. The following illustration shows a few of the transformations available in Power Query Editor.
 
-![Image showing the transformation commands under the Transform, Home, and Add Column tabs of the Power Query Editor.](images/powerquerytransformationslist.png "The transformation commands under the Transform, Home, and Add Column tabs of the Power Query Editor")
+![Image showing the transformation commands under the Transform, Home, and Add Column tabs of the Power Query Editor.](media/power-query-what-is-power-query/power-query-transformations-list.png "The transformation commands under the Transform, Home, and Add Column tabs of the Power Query Editor")
 
 More information: [Quickstart: Using Power Query in Power BI](/power-query/power-query-ui)
 
@@ -109,7 +109,6 @@ The following table lists Microsoft products and services where Power Query can 
 |<sup>2</sup>**Power&nbsp;Query&nbsp;Desktop** |The Power Query experience found in desktop applications. |
 |<sup>3</sup>**Power Query Online** |The Power Query experience found in web browser applications. |
 |<sup>4</sup>**Dataflows** |Power Query as a service that runs in the cloud and is product-agnostic. The stored result can be used in other applications as services. |
-| | |
 
 ### See also
 
