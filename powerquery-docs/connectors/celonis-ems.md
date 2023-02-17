@@ -1,3 +1,13 @@
+---
+title: Power Query Celonis EMS connector
+description: Provides basic information, prerequisites, and connection steps for Celonis EMS
+author: capono
+
+ms.date: 02/17/2023 
+ms.author: 
+LocalizationGroup: reference
+---
+
 # Celonis EMS
 
   
