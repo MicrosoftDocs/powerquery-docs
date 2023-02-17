@@ -2,7 +2,7 @@
 title: Using custom functions in Power Query
 description: An article on how to create custom functions in Power Query
 author: ptyx507x
-ms.date: 12/9/2022
+ms.date: 1/5/2023
 ms.author: miescobar
 ms.custom: intro-internal
 ---
@@ -22,7 +22,7 @@ This article focuses on this experience, provided only through the Power Query u
 >[!NOTE]
 > The following example was created using the desktop experience found in Power BI Desktop and can also be followed using the Power Query experience found in Excel for Windows.
 
-You can follow along with this example by downloading the sample files used in this article from the following [download link](https://aka.ms/PQCombineFilesSample). For simplicity, this article will be using the Folder connector. To learn more about the Folder connector, go to [Folder](Connectors/folder.md). The goal of this example is to create a custom function that can be applied to all the files in that folder before combining all of the data from all files into a single table.
+You can follow along with this example by downloading the sample files used in this article from the following [download link](https://aka.ms/PQCombineFilesSample). For simplicity, this article will be using the Folder connector. To learn more about the Folder connector, go to [Folder](connectors/folder.md). The goal of this example is to create a custom function that can be applied to all the files in that folder before combining all of the data from all files into a single table.
 
 Start by using the Folder connector experience to navigate to the folder where your files are located and select **Transform Data** or **Edit**. This will take you to the Power Query experience. Right-click on the **Binary** value of your choice from the **Content** field and select the **Add as New Query** option. For this example, you'll see that the selection was made for the first file from the list, which happens to be the file *April 2019.csv*.
 

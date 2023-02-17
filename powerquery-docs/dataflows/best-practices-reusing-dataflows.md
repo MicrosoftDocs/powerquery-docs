@@ -3,13 +3,11 @@ title: Best practices for reusing dataflows across environments and workspaces
 description: Best practices for reusing dataflows across environments and workspaces
 author: bensack
 ms.topic: conceptual
-ms.date: 12/2/2020
+ms.date: 1/6/2023
 ms.author: bensack
 ---
 
 # Best practices for reusing dataflows across environments and workspaces
-
-
 
 This article discusses a collection of best practices for reusing dataflows effectively and efficiently. Read this article to avoid design pitfalls and potential performance issues as you develop dataflows for reuse.
 
@@ -19,7 +17,7 @@ If a dataflow performs all the actions, it's hard to reuse its entities in other
 
 If you have data transformation dataflows, you can split them into dataflows that do common transformations. Each dataflow can do just a few actions. These few actions per dataflow ensure that the output of that dataflow is reusable by other dataflows.
 
-:::image type="complex" source="media/multilayereddf.png" alt-text="Dataflow doing only a few actions.":::
+:::image type="complex" source="media/best-practices-reusing-dataflows/multi-layered-dataflow.png" alt-text="Dataflow doing only a few actions.":::
    Image with data being extracted from a data source to staging dataflows, where the entities are either stored in Dataverse or Azure Data Lake storage, then the data is moved to transformation dataflows where the data is transformed and converted to the data warehouse structure, and then the data is loaded to a Power BI dataset.
 :::image-end:::
 
@@ -27,7 +25,7 @@ If you have data transformation dataflows, you can split them into dataflows tha
 
 Each workspace (or environment) is available only for members of that workspace. If you build all your dataflows in one workspace, you're minimizing the reuse of your dataflows. You can have some generic workspaces for dataflows that are processing company-wide entities. You can also have some workspace for dataflows to process entities across multiple departments. And you can also have some workspaces for dataflows to be used only in specific departments.
 
-![Image showing separate workspaces.](media/SeparateWorkspaces.png)
+![Image showing separate workspaces.](media/best-practices-reusing-dataflows/separate-workspaces.png)
 
 ## Set the correct access levels on workspaces
 
@@ -37,13 +35,11 @@ To give access to dataflows in other workspaces to use the output of a dataflow 
 
 ## Endorsement on the dataflow in Power BI
 
-There can be many dataflows created in a tenant organization, and it can be hard for the users to know which dataflow is most reliable. Authors of a dataflow, or those who have edit access to it, can endorse the dataflow at three levels: no endorsement, promoted, or certified. 
+There can be many dataflows created in a tenant organization, and it can be hard for the users to know which dataflow is most reliable. Authors of a dataflow, or those who have edit access to it, can endorse the dataflow at three levels: no endorsement, promoted, or certified.
 
 These levels of endorsement help users find reliable dataflows easier and faster. The dataflow with a higher endorsement level appears first. The Power BI administrator can delegate the ability to endorse dataflows to the certified level to other people. More information: [Endorsement - Promoting and certifying Power BI content](/power-bi/collaborate-share/service-endorsement-overview)
 
 ![Endorsement on dataflows.](/power-bi/transform-model/media/service-dataflows-promote-certify/powerbi-dataflow-endorsement-power-query.png)
-
-
 
 ## Separate entities in multiple dataflows
 

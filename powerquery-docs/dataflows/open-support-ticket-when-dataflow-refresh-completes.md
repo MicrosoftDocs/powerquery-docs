@@ -3,7 +3,7 @@ title: Open a ticket when a dataflow refresh fails
 description: How to use the dataflows connector in Power Automate to open a ticket when a dataflow refresh fails
 author: miquelladeboer
 ms.topic: conceptual
-ms.date: 11/16/2021
+ms.date: 1/6/2023
 ms.author: mideboer
 ---
 
@@ -35,9 +35,9 @@ To automatically create a queue in Azure Service Bus:
 8. In the **If Yes** section, select **Add an action**.
 9. Search for the "Send message" connector from Service Bus, and then select it.
 
-   [![Image of the full flow diagram with the Service Bus send message connector opened.](media/servicebuscondition.PNG)](media/servicebuscondition.PNG#lightbox)
+   [![Image of the full flow diagram with the Service Bus send message connector opened.](media/open-support-ticket/service-bus-condition.png)](media/open-support-ticket/service-bus-condition.png#lightbox)
 
 10. Enter a **Connection name** for this message. In **Connection string**, enter the connection string that was generated when you created the Service Bus namespace. Then select **Create**.
 11. Add dataflow information to the content of your message by selecting the field next to **Content**, and then select the dynamic content you want to use from **Dynamic content**.
 
-    [![Image of the Send message connector with the Content field filled in with content from the dyanamic content dialog box.](media/ifyesservice.PNG)](media/ifyesservice.PNG#lightbox)
+    [![Image of the Send message connector with the Content field filled in with content from the dyanamic content dialog box.](media/open-support-ticket/if-yes-service.png)](media/open-support-ticket/if-yes-service.png#lightbox)

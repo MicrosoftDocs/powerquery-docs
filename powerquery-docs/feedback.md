@@ -4,7 +4,7 @@ description: This article describes where users can receive support and share fe
 author: bezhan-msft
 
 ms.reviewer: dougklo
-ms.date: 7/30/2022
+ms.date: 1/5/2023
 ms.author: bezhan
 ---
 
@@ -12,7 +12,7 @@ ms.author: bezhan
 
 This article describes how to get support or submit feedback for Power Query.
 
-For **Power Query connectors**, go to [Feedback and support for Power Query connectors](Connectors/ConnectorFeedback.md).
+For **Power Query connectors**, go to [Feedback and support for Power Query connectors](connectors/connector-feedback.md).
 
 For **Power Query documentation**, you can submit feedback through the **Submit and view feedback for - This page** link at the bottom of each article. 
 

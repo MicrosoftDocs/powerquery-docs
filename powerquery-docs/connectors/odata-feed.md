@@ -42,7 +42,7 @@ To load data from an OData Feed in Power Query Desktop:
 
    ![OData URL selection.](media/odata-feed/odata-basic-url.png)
 
-   If the URL address you enter is invalid, a ![Warning icon.](../images/webwarning.png) warning icon will appear next to the **URL** textbox.
+   If the URL address you enter is invalid, a ![Warning icon.](./media/odata-feed/web-warning.png) warning icon will appear next to the **URL** textbox.
 
 3. If this is the first time you're connecting using the OData Feed, select the authentication type, input your credentials (if necessary), and select the level to apply the authentication settings to. Then select **Connect**.
 
@@ -58,7 +58,7 @@ To load data from an OData Feed in Power Query Desktop:
 
 To load data from an OData Feed in Power Query Online:
 
-1. Select the **OData** or **OData Feed** option in the connector selection. 
+1. Select the **OData** or **OData Feed** option in the connector selection.
 
 2. In the OData dialog that appears, enter a URL in the text box.
 

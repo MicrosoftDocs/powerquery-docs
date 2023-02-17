@@ -3,7 +3,7 @@ title: Handling unit testing for Power Query connectors
 description: Manage unit testing for Power Query connectors
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 2/28/2022
+ms.date: 1/9/2023
 ms.author: miescobar
 ---
 
@@ -15,7 +15,7 @@ Unit testing is accomplished in the context of Visual Studio's [Power Query SDK]
 
 Consider a very simple extension that exports three functions:
 
-```
+```powerquery-m
 section Unittesting;
 
 shared UnitTesting.ReturnsABC = () => "ABC";
@@ -23,9 +23,9 @@ shared UnitTesting.Returns123 = () => "123";
 shared UnitTesting.ReturnTableWithFiveRows = () => Table.Repeat(#table({"a"},{{1}}),5);
 ```
 
-This unit test code is made up of a number of Facts, and a bunch of common code for the unit test framework (`ValueToText`, `Fact`, `Facts`, `Facts.Summarize`). The following code provides an example set of Facts (see [UnitTesting.query.pq](https://github.com/Microsoft/DataConnectors/tree/master/samples/UnitTesting) for the common code):
+This unit test code is made up of a number of Facts, and a bunch of common code for the unit test framework (`ValueToText`, `Fact`, `Facts`, `Facts.Summarize`). The following code provides an example set of Facts (go to [UnitTesting.query.pq](https://github.com/Microsoft/DataConnectors/tree/master/samples/UnitTesting) for the common code):
 
-```
+```powerquery-m
 section UnitTestingTests;
 
 shared MyExtension.UnitTest = 
@@ -58,13 +58,14 @@ shared MyExtension.UnitTest =
     report = Facts.Summarize(facts)
 ][report];
 ```
+
 Running the sample in Visual Studio will evaluate all of the Facts and give you a visual summary of the pass rates:
 
-![Example of pass rates.](images/UnitTesting1.png)
+![Example of pass rates.](media/handling-unit-testing/unit-testing-1.png)
 
 Implementing unit testing early in the connector development process enables you to follow the principles of test-driven development. Imagine that you need to write a function called `Uri.GetHost` that returns only the host data from a URI. You might start by writing a test case to verify that the function appropriately performs the expected function:
 
-```
+```powerquery-m
 Fact("Returns host from URI",
     "https://bing.com",
     Uri.GetHost("https://bing.com/subpath/query?param=1&param2=hello")
@@ -79,7 +80,7 @@ Additional tests can be written to ensure that the function appropriately handle
 
 An early version of the function might pass some but not all tests:
 
-```
+```powerquery-m
 Uri.GetHost = (url) =>
     let
         parts = Uri.Parts(url)
@@ -87,8 +88,8 @@ Uri.GetHost = (url) =>
         parts[Scheme] & "://" & parts[Host]
 ```
 
-![Some tests fail.](images/UnitTestingFailure.png)
+![Some tests fail.](media/handling-unit-testing/unit-testing-failure.png)
 
-The [final version of the function](HelperFunctions.md) should pass all unit tests. This also makes it easy to ensure that future updates to the function do not accidentally remove any of its basic functionality.
+The [final version of the function](helper-functions.md) should pass all unit tests. This also makes it easy to ensure that future updates to the function do not accidentally remove any of its basic functionality.
 
-![All tests pass.](images/UnitTestingPass.png)
+![All tests pass.](media/handling-unit-testing/unit-testing-pass.png)

@@ -3,23 +3,23 @@ title: Adding function documentation
 description: Add function documentation for Power Query connectors
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 2/28/2022
+ms.date: 1/9/2023
 ms.author: miescobar
 ---
 
-# Adding Function Documentation
+# Adding function documentation
 
-Power Query will automatically generate an invocation UI for you based on the arguments for your function. By default, this UI will contain the name of your function, and an input for each of your parameters. 
+Power Query will automatically generate an invocation UI for you based on the arguments for your function. By default, this UI will contain the name of your function, and an input for each of your parameters.
 
-![DefaultFunctionPrompt.](images/defaultFunctionPrompt.png "Function prompt")
+![DefaultFunctionPrompt.](media/handling-documentation/default-function-prompt.png "Function prompt")
 
-Similarly, evaluating the name of your function, without specifying parameters, will display information about it. 
+Similarly, evaluating the name of your function, without specifying parameters, will display information about it.
 
-![DefaultFunctionInfo.](images/defaultFunctionInfo.png "Function info")
+![DefaultFunctionInfo.](media/handling-documentation/default-function-info.png "Function info")
 
-You might notice that built-in functions typically provide a better user experience, with descriptions, tooltips, and even sample values. You can take advantage of this same mechanism by defining specific meta values on your function type. This topic describes the meta fields that are used by Power Query, and how you can make use of them in your extensions. 
+You might notice that built-in functions typically provide a better user experience, with descriptions, tooltips, and even sample values. You can take advantage of this same mechanism by defining specific meta values on your function type. This topic describes the meta fields that are used by Power Query, and how you can make use of them in your extensions.
 
-![CsvDocument.](images/csvDocument.png "Function info for Csv.Document")
+![CsvDocument.](media/handling-documentation/csv-document.png "Function info for Csv.Document")
 
 ## Function Types
 
@@ -28,7 +28,7 @@ You can provide documentation for your function by defining custom *type* values
 1. Define a type for each parameter.
 2. Define a type for your function.
 3. Add various `Documentation.*` fields to your types metadata record.
-3. Call [Value.ReplaceType](/powerquery-m/value-replacetype) to ascribe the type to your shared function.
+4. Call [Value.ReplaceType](/powerquery-m/value-replacetype) to ascribe the type to your shared function.
 
 You can find more information about types and metadata values in the [M Language Specification](/powerquery-m/power-query-m-language-specification).
 
@@ -36,7 +36,8 @@ Using this approach allows you to supply descriptions and display names for your
 
 The Power Query experience retrieves documentation from meta values on the type of your function, using a combination of calls to [Value.Type](/powerquery-m/value-type), [Type.FunctionParameters](/powerquery-m/type-functionparameters), and [Value.Metadata](/powerquery-m/value-metadata).
 
-### Function Documentation
+### Function documentation
+
 The following table lists the Documentation fields that can be set in the metadata for your *function*. All fields are optional.
 
 | Field                         | Type    | Details                                                                                                                                                                                                                                                                                                                    |
@@ -45,7 +46,8 @@ The following table lists the Documentation fields that can be set in the metada
 | Documentation.LongDescription | text    | Full description of what the function does, displayed in the function info. |
 | Documentation.Name     | text    | Text to display across the top of the function invocation dialog. |
 
-### Parameter Documentation
+### Parameter documentation
+
 The following table lists the Documentation fields that can be set in the metadata for your *function parameters*. All fields are optional.
 
 | Field                          | Type    | Details                                                                                                                                                                                                                                                                                                                    |
@@ -57,10 +59,11 @@ The following table lists the Documentation fields that can be set in the metada
 | Formatting.IsMultiLine | boolean | Allows you to create a multi-line input, for example for pasting in native queries. |
 | Formatting.IsCode | boolean | Formats the input field for code, commonly with multi-line inputs. Uses a code-like font rather than the standard font.|
 
-### Basic Example
+### Basic example
+
 The following code snippet (and resulting dialogs) are from the [HelloWorldWithDocs](https://github.com/Microsoft/DataConnectors/tree/master/samples/HelloWorldWithDocs) sample.
 
-```
+```powerquery-m
 [DataSource.Kind="HelloWorldWithDocs", Publish="HelloWorldWithDocs.Publish"]
 shared HelloWorldWithDocs.Contents = Value.ReplaceType(HelloWorldImpl, HelloWorldType);
 
@@ -98,17 +101,17 @@ HelloWorldImpl = (message as text, optional count as number) as table =>
         table;
 ```
 
-This code results in the following dialogs in Power BI. 
+This code results in the following dialogs in Power BI.
 
 **Function invocation**
-![FunctionPrompt.](images/helloWorldWithDocs.png "Hello world with docs prompt")
+![FunctionPrompt.](media/handling-documentation/hello-world-with-docs.png "Hello world with docs prompt")
 
 **Function info**
-![FunctionInfo.](images/helloWorldWithDocsInfo.png "Hello world with docs function info")
+![FunctionInfo.](media/handling-documentation/hello-world-with-docs-info.png "Hello world with docs function info")
 
-### Multi-Line Example
+### Multi-line example
 
-```
+```powerquery-m
 [DataSource.Kind="HelloWorld", Publish="HelloWorld.Publish"]
 shared HelloWorld.Contents =
     let
@@ -132,6 +135,6 @@ shared HelloWorld.Contents =
         Value.ReplaceType(HelloWorldFunction, HelloWorldType);
 ```
 
-This code (with associated publish information, etc.) results in the following dialogue in Power BI. New lines will be represented in text with '#(lf)', or 'line feed'.
+This code (with associated publish information, and so on) results in the following dialogue in Power BI. New lines will be represented in text with '#(lf)', or 'line feed'.
 
-![Multi-line input builder.](images/helloWorldMultiline.png)
+![Multi-line input builder.](media/handling-documentation/hello-world-multiline.png)

@@ -3,7 +3,7 @@ title: Split columns by non-digit to digit
 description: Split columns by non-digit to digit
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 06/04/2020
+ms.date: 1/9/2023
 ms.author: miescobar
 ---
 
@@ -18,26 +18,26 @@ You can find the **Split Columns > By Non-Digit to Digit** option in three place
 
 * **Home tab**&mdash;under the **Split Column** dropdown menu inside the **Transform** group.
 
-   ![Image shows By Non-Digit to Digit under the Home tab.](images/sc-home-ndtd.png)
+   ![Image shows By Non-Digit to Digit under the Home tab.](media/splitcolumns-nondigit-to-digit/sc-home-ndtd.png)
 
 * **Transform tab**&mdash;under the **Split Column** dropdown menu inside the **Text Column** group.
 
-   ![Image shows By Non-Digit to Digit under the Transform tab.](images/sc-transform-ndtd.png)
+   ![Image shows By Non-Digit to Digit under the Transform tab.](media/splitcolumns-nondigit-to-digit/sc-transform-ndtd.png)
 
 * **Right-click a column**&mdash;inside the **Split Column** option.
 
-   ![Image shows By Non-Digit to Digit when right-clicking a column.](images/sc-rightclick-ndtd.png)
+   ![Image shows By Non-Digit to Digit when right-clicking a column.](media/splitcolumns-nondigit-to-digit/sc-rightclick-ndtd.png)
 
-## Split columns by non-digit to digit into columns 
+## Split columns by non-digit to digit into columns
 
 The initial table in this example will be the one shown in the image below, with a column for **Pets** and other extra columns.
 In this example, you'll only focus on the **Pets** column.
 
-![Image showing table with Animal and other columns, with four rows, with the Pets column containing the animal type and number.](images/sc-before-ndtd.png)
+![Image showing table with Animal and other columns, with four rows, with the Pets column containing the animal type and number.](media/splitcolumns-nondigit-to-digit/sc-before-ndtd.png)
 
 This column holds two values in each row:
 
-* **AnimalType**&mdash;The first part is the type of animal. 
+* **AnimalType**&mdash;The first part is the type of animal.
 * **Number**&mdash;The animal number that came into the person's life.
 
 In this example, you want to split this column into the two columns described in the list above. Select the column and then select the option to split the column by non-digit to digit.
@@ -46,4 +46,4 @@ This single column will split into multiple columns, given every instance of a d
 
 Your final table will look like the following image.
 
-![Image showing Animal.1 and Animal.2 columns, with the animal type and number separated into the two columns.](images/sc-after-ndtd.png)
+![Image showing Animal.1 and Animal.2 columns, with the animal type and number separated into the two columns.](media/splitcolumns-nondigit-to-digit/sc-after-ndtd.png)

@@ -3,11 +3,11 @@ title: Using a resource path for Power Query connectors
 description: Use a resource path for Power Query connectors
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 2/28/2022
+ms.date: 1/9/2023
 ms.author: miescobar
 ---
 
-# Handling Resource Path
+# Handling resource path
 
 The M engine identifies a data source using a combination of its *Kind* and *Path*. When a data source is encountered during a query evaluation, the M engine will try to find matching credentials. If no credentials are found, the engine returns a special error that results in a credential prompt in Power Query.
 
@@ -17,12 +17,12 @@ The *Path* value is derived from the *required parameters* of your data source f
 
 You can see an example of how credentials are stored in the **Data source settings** dialog in Power BI Desktop. In this dialog, the Kind is represented by an icon, and the Path value is displayed as text.
 
-![Data source settings dialog.](images/datasourcesettingscreds.png)
+![Data source settings dialog.](media/handling-authentication/data-source-settings-creds.png)
 
 >[Note]
 > If you change your data source function's required parameters during development, previously stored credentials will no longer work (because the path values no longer match). You should delete any stored credentials any time you change your data source function parameters. If incompatible credentials are found, you may receive an error at runtime.
 
-## Data Source Path Format
+## Data source path format
 
 The *Path* value for a data source is derived from the data source function's required parameters.
 
@@ -37,14 +37,14 @@ HelloWorldWithDocs.Contents = (message as text, optional count as number) as tab
 The function has a single required parameter (`message`) of type `text`, and will be used to calculate the data source path. The optional parameter (`count`) will be ignored. The path would be displayed as follows:
 
 ### Credential prompt:
-![Credential prompt with path.](images/credentialPromptWithPath.png)
+![Credential prompt with path.](media/handling-authentication/credential-prompt-with-path.png)
 
 ### Data source settings UI:
-![Data source settings UI.](images/dataSourceSettingsJson.png)
+![Data source settings UI.](media/handling-authentication/data-source-settings-json.png)
 
 When a Label value is defined, the data source path value won't be shown:
 
-![Data source settings with label.](images/dataSourceSettingsLabel.png)
+![Data source settings with label.](media/handling-authentication/data-source-settings-label.png)
 
 >[Note]
 > We currently recommend that you *do not* include a Label for your data source if your function has required parameters, as users won't be able to distinguish between the different credentials they've entered. We are hoping to improve this in the future (that is, allowing data connectors to display their own custom data source paths).
@@ -53,7 +53,7 @@ When a Label value is defined, the data source path value won't be shown:
 
 Because data sources with a Uri-based identifier are so common, there's special handling in the Power Query UI when dealing with Uri-based data source paths. When a Uri-based data source is encountered, the credential dialog provides a dropdown allowing the user to select the base path, rather than the full path (and all paths in-between).
 
-![Setting path that credentials apply to.](images/credentialPromptWithUrl.png)
+![Setting path that credentials apply to.](media/handling-authentication/credential-prompt-with-url.png)
 
 As `Uri.Type` is an *ascribed type* rather than a *primitive type* in the M language, you'll need to use the [Value.ReplaceType] function to indicate that your text parameter should be treated as a Uri.
 
