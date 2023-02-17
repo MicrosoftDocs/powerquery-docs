@@ -17,7 +17,7 @@ Behind the scenes, a nav table is just a regular M Table value with specific met
 
 ## Table.ToNavigationTable
 
-You can use the [`Table.ToNavigationTable`](HelperFunctions.md#tabletonavigationtable) function to add the table type metadata needed to create a nav table.
+You can use the [`Table.ToNavigationTable`](helper-functions.md#tabletonavigationtable) function to add the table type metadata needed to create a nav table.
 
 >[!Note]
 > You currently need to copy and paste this function into your M extension. In the future it will likely be moved into the M standard library.

@@ -117,7 +117,7 @@ SchemaTable = #table({"Entity", "SchemaTable"}, {
 
 ### The SchemaTransformTable helper function
 
-The `SchemaTransformTable` [helper function](HelperFunctions.md#schematransformtable) described below will be used to enforce schemas on your data. It takes the following parameters:
+The `SchemaTransformTable` [helper function](helper-functions.md#schematransformtable) described below will be used to enforce schemas on your data. It takes the following parameters:
 
 |Parameter    |Type  |Description|
 |:------------|:-----|:----------|
@@ -221,7 +221,7 @@ SchemaTable = #table({"Entity", "Type"}, {
 });
 ```
 
-You can rely on a common function ([`Table.ChangeType`](HelperFunctions.md#tablechangetype)) to enforce a schema on your data, much like you used `SchemaTransformTable` in the earlier exercise. Unlike `SchemaTransformTable`, `Table.ChangeType` takes an actual M table type as an argument, and will apply your schema *recursively* for all nested types. Its signature is:
+You can rely on a common function ([`Table.ChangeType`](helper-functions.md#tablechangetype)) to enforce a schema on your data, much like you used `SchemaTransformTable` in the earlier exercise. Unlike `SchemaTransformTable`, `Table.ChangeType` takes an actual M table type as an argument, and will apply your schema *recursively* for all nested types. Its signature is:
 
 ```powerquery-m
 Table.ChangeType = (table, tableType as type) as nullable table => ...

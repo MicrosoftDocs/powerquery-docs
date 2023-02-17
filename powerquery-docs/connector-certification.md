@@ -139,7 +139,7 @@ There are specific security considerations that your connector must handle.
 * If `Extension.CurrentCredentials()` is used:
   * Is the usage required? If so, where do the credentials get sent to?
   * Are the requests guaranteed to be made through HTTPS?
-    * You can use the [HTTPS enforcement helper function](HelperFunctions.md#validateurlscheme).
+    * You can use the [HTTPS enforcement helper function](helper-functions.md#validateurlscheme).
   * If the credentials are sent using `Web.Contents()` via GET:
     * Can it be turned into a POST?
     * If GET is required, the connector MUST use the `CredentialQueryString` record in the `Web.Contents()` options record to pass in sensitive credentials.

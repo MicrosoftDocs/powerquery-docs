@@ -90,6 +90,6 @@ Uri.GetHost = (url) =>
 
 ![Some tests fail.](media/handling-unit-testing/unit-testing-failure.png)
 
-The [final version of the function](HelperFunctions.md) should pass all unit tests. This also makes it easy to ensure that future updates to the function do not accidentally remove any of its basic functionality.
+The [final version of the function](helper-functions.md) should pass all unit tests. This also makes it easy to ensure that future updates to the function do not accidentally remove any of its basic functionality.
 
 ![All tests pass.](media/handling-unit-testing/unit-testing-pass.png)

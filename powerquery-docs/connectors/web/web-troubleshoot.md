@@ -120,7 +120,7 @@ We've strengthened the security of web connections to protect your data. However
 2. Under the **File** tab, select **Options and settings** > **Options**.
 3. In **Options**, under **Global** > **Security**, uncheck **Enable certificate revocation check**.
 
-   ![Screenshot of the Enable certificate revocation check box selected.](../../images/web-certificate-revocation.png)
+   ![Screenshot of the Enable certificate revocation check box selected.](web-certificate-revocation.png)
 
 4. Select **OK**.
 5. Restart Power BI Desktop.
@@ -142,7 +142,7 @@ When attempting to authenticate, if you see the following error:
 
 “We were unable to connect because this credential type isn’t supported for this resource. Please choose another credential type.”
 
-   ![Error from connecting to an endpoint that doesn't support OAuth with the web connector.](../../images/credential-type-not-supported.png)
+   ![Error from connecting to an endpoint that doesn't support OAuth with the web connector.](./credential-type-not-supported.png)
 
 Contact the service owner. They'll either need to change the authentication configuration or build a custom connector.
 
