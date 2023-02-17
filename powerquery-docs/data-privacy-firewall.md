@@ -20,7 +20,7 @@ Or maybe:
 
 `Formula.Firewall: Query 'Query1' (step 'Source') is accessing data sources that have privacy levels which cannot be used together. Please rebuild this data combination.`
 
-These `Formula.Firewall` errors are the result of Power Query's Data Privacy Firewall (aka the Firewall), which at times may seem like it exists solely to frustrate data analysts the world over. Believe it or not, however, the Firewall serves an important purpose. In this article, we'll delve under the hood to better understand how it works. Armed with greater understanding, you'll hopefully be able to better diagnose and fix Firewall errors in the future.
+These `Formula.Firewall` errors are the result of Power Query's Data Privacy Firewall (also known as the Firewall), which at times may seem like it exists solely to frustrate data analysts the world over. Believe it or not, however, the Firewall serves an important purpose. In this article, we'll delve under the hood to better understand how it works. Armed with greater understanding, you'll hopefully be able to better diagnose and fix Firewall errors in the future.
 
 ## What is it?
 
@@ -38,7 +38,7 @@ As part of folding, PQ sometimes may determine that the most efficient way to ex
 
 This is how unintentional data leakage can happen.
 
-Imagine if you were joining SQL data that included employee Social Security Numbers with the results of an external OData feed, and you suddenly discovered that the Social Security Numbers from SQL were being sent to the OData service. Bad news, right?
+Imagine if you were joining SQL data that included employee Social Security Numbers with the results of an external OData feed, and you suddenly discovered that the Social Security Numbers from SQL where being sent to the OData service. Bad news, right?
 
 This is the kind of scenario the Firewall is intended to prevent.
 
@@ -64,7 +64,7 @@ If you're not familiar with steps, you can view them on the right of the Power Q
 
 ### Partitions that reference other partitions
 
-When a query is evaluated with the Firewall on, the Firewall divides the query and all its dependencies into partitions (that is, groups of steps). Any time one partition references something in another partition, the Firewall replaces the reference with a call to a special function called `Value.Firewall`. In other words, the Firewall doesn't allow partitions to access each other randomly. All references are modified to go through the Firewall. Think of the Firewall as a gatekeeper. A partition that references another partition must get the Firewall's permission to do so, and the Firewall controls whether or not the referenced data will be allowed into the partition.
+When a query is evaluated with the Firewall on, the Firewall divides the query and all its dependencies into partitions (that is, groups of steps). Anytime one partition references something in another partition, the Firewall replaces the reference with a call to a special function called `Value.Firewall`. In other words, the Firewall doesn't allow partitions to access each other randomly. All references are modified to go through the Firewall. Think of the Firewall as a gatekeeper. A partition that references another partition must get the Firewall's permission to do so, and the Firewall controls whether or not the referenced data will be allowed into the partition.
 
 This all may seem pretty abstract, so let's look at an example.
 
@@ -106,11 +106,11 @@ This is how the Firewall maintains control over the data flowing between partiti
 
 ### Partitions that directly access data sources
 
-Let's say you define a query Query1 with one step (note that this single-step query will correspond to one Firewall partition), and that this single step accesses two data sources: a SQL database table and a CSV file. How does the Firewall deal with this, since there's no partition reference, and thus no call to `Value.Firewall` for it to intercept? Let's review to the rule stated earlier:
+Let's say you define a query Query1 with one step (note that this single-step query corresponds to one Firewall partition), and that this single step accesses two data sources: a SQL database table and a CSV file. How does the Firewall deal with this, since there's no partition reference, and thus no call to `Value.Firewall` for it to intercept? Let's review to the rule stated earlier:
 
 * A partition may either access compatible data sources, or reference other partitions, but not both.
 
-In order for your single-partition-but-two-data-sources query to be allowed to run, its two data sources must be "compatible". In other words, it needs to be okay for data to be shared between them. In terms of the Power Query UI, this means the privacy levels of the SQL and CSV data sources need to both be Public, or both be Organizational. If they are both marked Private, or one is marked Public and one is marked Organizational, or they are marked using some other combination of privacy levels, then it's not safe for them to both be evaluated in the same partition. Doing so would mean unsafe data leakage could occur (due to folding), and the Firewall would have no way to prevent it.
+In order for your single-partition-but-two-data-sources query to be allowed to run, its two data sources must be "compatible". In other words, it needs to be okay for data to be shared between them. In terms of the Power Query UI, this means the privacy levels of the SQL and CSV data sources need to both be Public, or both be Organizational. If they're both marked Private, or one is marked Public and one is marked Organizational, or they're marked using some other combination of privacy levels, then it's not safe for them to both be evaluated in the same partition. Doing so would mean unsafe data leakage could occur (due to folding), and the Firewall would have no way to prevent it.
 
 What happens if you try to access incompatible data sources in the same partition?
 
@@ -124,7 +124,7 @@ Note that this _compatibility_ requirement only applies within a given partition
 
 Let's say you define a query with one step (which will again correspond to one partition) that accesses two other queries (that is, two other partitions). What if you wanted, in the same step, to also directly access a SQL database? Why can't a partition reference other partitions and directly access compatible data sources?
 
-As you saw earlier, when one partition references another partition, the Firewall acts as the gatekeeper for all the data flowing into the partition. To do so, it must be able to control what data is allowed in. If there are data sources being accessed within the partition, as well as data flowing in from other partitions, it loses its ability to be the gatekeeper, since the data flowing in could be leaked to one of the internally accessed data sources without it knowing about it. Thus the Firewall prevents a partition that accesses other partitions from being allowed to directly access any data sources.
+As you saw earlier, when one partition references another partition, the Firewall acts as the gatekeeper for all the data flowing into the partition. To do so, it must be able to control what data is allowed in. If there are data sources being accessed within the partition, and data flowing in from other partitions, it loses its ability to be the gatekeeper, since the data flowing in could be leaked to one of the internally accessed data sources without it knowing about it. Thus the Firewall prevents a partition that accesses other partitions from being allowed to directly access any data sources.
 
 So what happens if a partition tries to reference other partitions and also directly access data sources?
 
@@ -138,7 +138,7 @@ As you can probably guess from the above information, how queries are partitione
 
 So how exactly do queries get partitioned?
 
-This section is probably the most important for understanding why you're seeing Firewall errors, as well as understanding how to resolve them (where possible).
+This section is probably the most important for understanding why you're seeing Firewall errors, and understanding how to resolve them (where possible).
 
 Here's a high-level summary of the partitioning logic.
 
@@ -235,7 +235,7 @@ Next, we trim parameter partitions. Thus, DbServer gets implicitly included in t
 
 ![Trimmed firewall partitions.](media/data-privacy-firewall/firewall-steps-pane-2.png)
 
-Now we perform the static grouping. This maintains separation between partitions in separate queries (note for instance that the last two steps of Employees don't get grouped with the steps of Contacts), as well as between partitions that reference other partitions (such as the last two steps of Employees) and those that don't (such as the first three steps of Employees).
+Now we perform the static grouping. This maintains separation between partitions in separate queries (note for instance that the last two steps of Employees don't get grouped with the steps of Contacts), and between partitions that reference other partitions (such as the last two steps of Employees) and those that don't (such as the first three steps of Employees).
 
 ![Post static-grouping firewall partitions.](media/data-privacy-firewall/firewall-steps-pane-3.png)
 
@@ -245,7 +245,7 @@ Now we enter the dynamic phase. In this phase, the above static partitions are e
 
 For the sake of illustration, though, let's look at what would happen if the Contacts query, instead of coming from a text file, were hard-coded in M (perhaps via the **Enter Data** dialog).
 
-In this case, the Contacts query would not access any data sources. Thus, it would get trimmed during the first part of the dynamic phase.
+In this case, the Contacts query wouldn't access any data sources. Thus, it would get trimmed during the first part of the dynamic phase.
 
 ![Firewall partition after dynamic phase trimming.](media/data-privacy-firewall/firewall-steps-pane-4.png)
 
@@ -285,7 +285,7 @@ At this point you run into trouble. Evaluating **Search** produces a Firewall er
 
 `Formula.Firewall: Query 'Search' (step 'Source') references other queries or steps, so it may not directly access a data source. Please rebuild this data combination.`
 
-This is because the Source step of **Search** is referencing a data source (bing.com) and also referencing another query/partition (**Company**). It is violating the rule mentioned above ("a partition may either access compatible data sources, or reference other partitions, but not both").
+This is because the Source step of **Search** is referencing a data source (bing.com) and also referencing another query/partition (**Company**). It's violating the rule mentioned above ("a partition may either access compatible data sources, or reference other partitions, but not both").
 
 What to do? One option is to disable the Firewall altogether (via the Privacy option labeled **Ignore the Privacy Levels and potentially improve performance**). But what if you want to leave the Firewall enabled?
 
