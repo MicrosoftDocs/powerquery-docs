@@ -219,11 +219,11 @@ GetAuthorizationUrlFromWwwAuthenticate = (url as text) as text =>
                     // Trim and replace the double quotes inserted before the url
                     Text.Replace(Text.Trim(Text.Trim(Text.AfterDelimiter(authorizationUri, "=")), ","), """", "")
                 else
-                    error Error.Record("DataSource.Error", "Unexpected WWW-Authenticate header format or value during authentication."), [
+                    error Error.Record("DataSource.Error", "Unexpected WWW-Authenticate header format or value during authentication.", [
                         #"WWW-Authenticate" = wwwAuthenticate
                     ])
         else
-            error Error.Unexpected("Unexpected response from server during authentication."));
+            error Error.Unexpected("Unexpected response from server during authentication.");
 
 <... snip ...>
 
