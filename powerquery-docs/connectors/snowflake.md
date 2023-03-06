@@ -106,6 +106,12 @@ The following table lists all of the advanced options you can set in Power Query
 
 Once you've selected the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your Snowflake database.
 
+## Limitations and known issues
+
+### Hyphens in database names
+
+If a database name has a hyphen in it, you may encounter an ```ODBC: ERROR[42000] SQL compilation error```. This is a known issue and there is no known workaround available. A fix is being investigated and the documentation here will be updated when the fix is ready.
+
 ## Additional information
 
 - [Connect to Snowflake in Power BI Service](/power-bi/connect-data/service-connect-snowflake)
