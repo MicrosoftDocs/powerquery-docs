@@ -13,7 +13,7 @@ Dataflows can be created in different portals, such as Power BI and the Power Ap
 
 ## Creating dataflows in Power BI workspaces
 
-If you want to create dataflows in Power BI workspaces, you need to have a paid Power BI Pro license. A Power BI free license won't give you the ability to create dataflows. Depending on the features you use, a Power BI Premium or embedded capacity is required.
+If you want to create dataflows in Power BI workspaces, you need to have a paid Power BI Pro license. A Power BI free license won't give you the ability to create dataflows. Depending on the features you use, Power BI Premium (per user) or embedded capacity is required.
 
 A Power BI Pro account is available on a user-monthly basis. Multiple options are available for premium or embedded capacities.
 
