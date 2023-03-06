@@ -16,7 +16,6 @@ ms.author: bezhan
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication Types Supported | Salesforce account |
-| | |
 
 >[!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
