@@ -159,6 +159,10 @@ The following table provides a summary list of suggestions to improve performanc
 | Consider using incremental refresh to improve performance | Power BI refreshes the complete dataset with each refresh. If you're working with large volume of data, refreshing the full dataset on each refresh may not be optimal. In this scenario, you can use incremental refresh, so you're refreshing only a subset of data. For more details, go to [Incremental refresh in Power BI](/power-bi/service-premium-incremental-refresh). |
 | | |
 
+## Comparison to Analysis for Office (AFO)
+
+There are fundamental differences between the Analysis for Office (AFO) tool and the Power Query SAP Business Warehouse connector, so the outputs of data may differ. AFO doesn't use MDX, but rather they use a proprietary protocol developed by SAP that is not available for 3rd parties, such as the Power Query SAP Business Warehouse connector. SAP only certifies connectors that use the MDX interface. AFO uses a multidimensional querying strategy, which navigates the data differently whereas the Power Query SAP Business Warehouse connector needs to flatten the data so it can be represented as a table, so even though it's the same data, it is queried, represented, and ultimately outputted differently. 
+
 ### See also
 
 * [SAP Business Warehouse Application Server](application-setup-and-connect.md)
