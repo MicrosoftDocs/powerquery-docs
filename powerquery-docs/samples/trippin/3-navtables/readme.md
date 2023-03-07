@@ -93,7 +93,7 @@ TripPin.Contents("https://services.odata.org/v4/TripPinService/")
 
 ## Creating a navigation table
 
-You'll use the handy [Table.ToNavigationTable](../../../helper-functions#tabletonavigationtable) function to format your static table into something that Power Query will recognize as a navigation table. Since this function is not part of Power Query's standard library, you'll need to copy its source code into your .pq file.
+You'll use the handy [Table.ToNavigationTable](../../../helper-functions.md#tabletonavigationtable) function to format your static table into something that Power Query will recognize as a navigation table. Since this function is not part of Power Query's standard library, you'll need to copy its source code into your .pq file.
 
 With this helper function in place, next update your `TripPinNavTable` function to add the navigation table fields.
 
