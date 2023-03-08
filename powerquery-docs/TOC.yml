@@ -434,8 +434,6 @@
         href: connectors/microstrategy-for-power-bi.md
       - name: "MySQL database"
         href: connectors/mysql-database.md
-      - name: "Parquet"
-        href: connectors/parquet.md
       - name: "OData Feed"
         items:
         - name: "Connect to an OData Feed"
@@ -450,6 +448,8 @@
         href: connectors/opensearch-project.md
       - name: "Oracle database"
         href: connectors/oracle-database.md
+      - name: "Parquet"
+        href: connectors/parquet.md
       - name: "PDF"
         href: connectors/pdf.md
       - name: "PostgreSQL"
