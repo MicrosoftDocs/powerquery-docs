@@ -18,9 +18,6 @@ The connectors are listed in alphabetical order in separate tables for each lett
 >[!Note]
 >The Excel column in the following table indicates all connectors that are available on at least one version of Excel. However, not all Excel versions support all of these indicated Power Query connectors. For a complete list of the Power Query connectors supported by all versions of Excel, go to [Power Query data sources in Excel versions]( https://support.microsoft.com/en-us/office/power-query-data-sources-in-excel-versions-e9332067-8e49-46fc-97ff-f2e1bfa0cb16).
 
->[!Note]
-> There is an issue in Power BI dataflows with connectors that require a gateway to connect. We've updated the table below to indicate these connectors aren't supported in Power BI dataflows. Once this issue has been resolved, we will update again to re-issue support for these connectors in Power BI dataflows.
-
 ## A
 
 | Connector | Excel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Power BI (Datasets) | Power BI (Dataflows) | Power Apps (Dataflows) | Customer<br/>Insights (Dataflows) | Analysis Services |
