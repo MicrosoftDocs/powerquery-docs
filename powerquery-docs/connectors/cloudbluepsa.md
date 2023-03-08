@@ -1,15 +1,20 @@
 ---
 title: Power Query CloudBlue PSA connector
-description: Provides basic information and prerequisites for the connector, descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
-author: LefterisIoannidis
+description: Provides basic information and prerequisites for the operation of connector in conjuction with the API.
+author: bezhan-msft
+
 
 ms.topic: conceptual
 ms.date: 07/03/2022
-ms.author: MohammadSadeghipour
+ms.author: bezhan 
 LocalizationGroup: reference
 ---
 
 # CloudBluePSA
+
+>[!Note]
+The following connector article is provided by CloudBluePSA, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the CloudBluePSA website and use the support channels there.
+
 
 ## Summary
 
@@ -35,18 +40,18 @@ To connect to CloudBlue PSA data:
 
 2. Click in the **Search** box and start typing **CloudBluePSA**, then select **CloudBluePSA** from the list on the right, and select **Connect**.
 
-    ![Get Data from CloudBlue PSA.](./media/cloudbluepsa/getdata.png)
+    ![Get Data from CloudBlue PSA.](./media/cloudblue-psa/getdata.png)
 
 
 3. In the **Retrieve all pages of data** window that appears, copy and paste the **URL** generated on the **GET** side of the API endpoint of your choice, and below on the **Filter** dialog box, copy and paste the constructed filter on the same API endpoint. For example:
 
     ### URL: ### 
-    [https://INSTANCE_URL/webapi/v1.3/tickets/getticketsreport](code-in-docs.md)
+    https://INSTANCE_URL/webapi/v1.3/tickets/getticketsreport
     
     ### Filter ### 
-    [{  "pageno": 1,  "pagesize": 10,  "filters": [{"field": "Type", "op": "cn", "data": "n"}], "filterop": "AND",  "sortcolumn": "Name",  "sortorder": "Asc",  "resulttype": "Json",  "includeccysymbols": true,  "gridcolumns": "RefNumber,Type,Name"}](code-in-docs.md)
+    {  "pageno": 1,  "pagesize": 10,  "filters": [{"field": "Type", "op": "cn", "data": "n"}], "filterop": "AND",  "sortcolumn": "Name",  "sortorder": "Asc",  "resulttype": "Json",  "includeccysymbols": true,  "gridcolumns": "RefNumber,Type,Name"}
 
-    ![Retrieve all pages of data from CloudBlue PSA.](./media/cloudbluepsa/retrieveallpagesofdata.png)
+    ![Retrieve all pages of data from CloudBlue PSA.](./media/cloudblue-psa/retrieveallpagesofdata.png)
 
 3. Click **OK**.
 
@@ -56,13 +61,13 @@ To connect to CloudBlue PSA data:
 
 6. Expand the **Data** column, then selecting **OK**.
 
-    ![Expand Data Column.](./media/cloudbluepsa/expand1.png)
+    ![Expand Data Column.](./media/cloudblue-psa/expand1.png)
 
 
 7. Expand the **Column1.1** column. This time, on the list of columns all the grid columns included in the filter are displayed. Select as many columns as required then select **OK**. 
 All the selected data is now displayed, and can be reshaped and used to create reports as required.
 
-    ![Expand Data Column1.1.](./media/cloudbluepsa/expand1.1.png)
+    ![Expand Data Column1.1.](./media/cloudblue-psa/expand1.1.png)
 
 
 8. Select **Close & Apply**. You can now start using your data.
