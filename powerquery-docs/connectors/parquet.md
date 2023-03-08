@@ -37,7 +37,7 @@ An online account with a Parquet database file.
 
 To connect to a Parquet file from Power Query Desktop, take the following steps:
 
-1. Select the **Parquet** option in the connector selection. More information: [Where to get data](where-to-get-data.md)
+1. Select the **Parquet** option in the connector selection. More information: [Where to get data](../where-to-get-data.md)
 
 2. In **Parquet**, provide the URL for the location of the Parquet file. Enter a path and filename if you are connecting to a local file. You can also select **Advanced** and build the URL from parts. In the example used in this article, the Parquet file is located in Azure Blob Storage.
 
