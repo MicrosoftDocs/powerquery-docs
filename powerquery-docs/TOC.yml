@@ -434,6 +434,8 @@
         href: connectors/microstrategy-for-power-bi.md
       - name: "MySQL database"
         href: connectors/mysql-database.md
+      - name: "Parquet"
+        href: connectors/parquet.md
       - name: "OData Feed"
         items:
         - name: "Connect to an OData Feed"
