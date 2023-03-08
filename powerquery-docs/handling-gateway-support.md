@@ -29,7 +29,10 @@ Where `dataSourcePath` is the [Data Source Path](HandlingAuthentication.md#data-
 * The name of the function to call (this function must be marked as `#shared`, and is usually your primary data source function).
 * One or more arguments to pass to your function.
 
-If the invocation of the function results in an error, TestConnection is considered to have failed, and the credential won't be persisted.
+If the invocation of the function results in an error, TestConnection is considered to have failed, and the credential won't be persisted. Otherwise, normally, any other response equates to a successful TestConnection.
+
+The exception to the above is when the function returns a `Table.View` that implements view handler `OnTestConnection`. When this occurs, that handler will be invoked. If it returns true, the TestConnection will be considered successful; false or an error equate to a failure of the TestConnection.
+
 
 >[!Note]
 > As stated above, the function name provided by TestConnection must be a `shared` member.
