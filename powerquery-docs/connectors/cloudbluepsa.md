@@ -40,7 +40,7 @@ To connect to CloudBlue PSA data:
 
 2. Click in the **Search** box and start typing **CloudBluePSA**, then select **CloudBluePSA** from the list on the right, and select **Connect**.
 
-    ![Get Data from CloudBlue PSA.](./media/cloudblue-psa/getdata.png)
+    ![Get Data from CloudBlue PSA.](./media/cloudbluepsa/getdata.png)
 
 
 3. In the **Retrieve all pages of data** window that appears, copy and paste the **URL** generated on the **GET** side of the API endpoint of your choice, and below on the **Filter** dialog box, copy and paste the constructed filter on the same API endpoint. For example:
@@ -51,7 +51,7 @@ To connect to CloudBlue PSA data:
     ### Filter ### 
     {  "pageno": 1,  "pagesize": 10,  "filters": [{"field": "Type", "op": "cn", "data": "n"}], "filterop": "AND",  "sortcolumn": "Name",  "sortorder": "Asc",  "resulttype": "Json",  "includeccysymbols": true,  "gridcolumns": "RefNumber,Type,Name"}
 
-    ![Retrieve all pages of data from CloudBlue PSA.](./media/cloudblue-psa/retrieveallpagesofdata.png)
+    ![Retrieve all pages of data from CloudBlue PSA.](./media/cloudbluepsa/retrieveallpagesofdata.png)
 
 3. Click **OK**.
 
@@ -61,13 +61,13 @@ To connect to CloudBlue PSA data:
 
 6. Expand the **Data** column, then selecting **OK**.
 
-    ![Expand Data Column.](./media/cloudblue-psa/expand1.png)
+    ![Expand Data Column.](./media/cloudbluepsa/expand1.png)
 
 
 7. Expand the **Column1.1** column. This time, on the list of columns all the grid columns included in the filter are displayed. Select as many columns as required then select **OK**. 
 All the selected data is now displayed, and can be reshaped and used to create reports as required.
 
-    ![Expand Data Column1.1.](./media/cloudblue-psa/expand1.1.png)
+    ![Expand Data Column1.1.](./media/cloudbluepsa/expand1.1.png)
 
 
 8. Select **Close & Apply**. You can now start using your data.
