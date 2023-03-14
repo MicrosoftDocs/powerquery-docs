@@ -53,31 +53,28 @@ To connect to Assemble data:
 
 4. In the **Navigator** dialog box, search for and expand the project that you want to load. For each project, there's a folder for **Models** and **Views**. 
 
-   a. **Models** (New!) - fetches select properties from any or all versions of a model.
+   - **Models** (New!) - fetches select properties from any or all versions of a model.
 
-   b. **Views** - fetches all visible columns in a previously saved view.
+   - **Views** - fetches all visible columns in a previously saved view.
 
-   ![Find your project and expand it.](media/assemble-views/assemble-views-project-selection.png)
+   ![Screenshot that shows where to find your project and expand it.](media/assemble-views/assemble-views-project-selection.png)
 
 ## Loading data from Models
 
 1. Expand the **Models** folder. Select each of the models you want to include. The settings outlined in the following steps must be completed for each selected model.
 
-   ![Select models to include.](media/assemble-views/assemble-views-model-selection.png)
+   ![Screenshot that shows where to select models to include.](media/assemble-views/assemble-views-model-selection.png)
 
 2. Select the versions you wish to load:
 
-   a. **Active version only** – Loads only the active version of the model.
-
-   b. **All versions** – Loads all versions of the model.
-
-   c. **All except active version** – Loads all previous versions of the model without loading the active version (intended for advanced workflows when previous version data only needs to be loaded once and not included in a refresh).
-
-   d. **Specific versions** – Loads all specific versions of the model that are selected (specific versions will be selected in the Version Name and Number drop down).
+   - **Active version only** – Loads only the active version of the model.
+   - **All versions** – Loads all versions of the model.
+   - **All except active version** – Loads all previous versions of the model without loading the active version (intended for advanced workflows when previous version data only needs to be loaded once and not included in a refresh).
+   - **Specific versions** – Loads all specific versions of the model that are selected (specific versions will be selected in the Version Name and Number drop down).
 
 3. Select the properties you want to fetch by using the search filter or scrolling. By default, Model ID, Model Name, Version ID, Version Name, and Version Number will always be included in the result.
 
-   ![Select properties to include.](media/assemble-views/assemble-views-property-selection.png)
+   ![Screenshot that shows where to select properties to include.](media/assemble-views/assemble-views-property-selection.png)
 
    >[!Note]
    >When using the search bar, be sure to clear the selection and select all properties before selecting OK, or previous selections will be overwritten.
