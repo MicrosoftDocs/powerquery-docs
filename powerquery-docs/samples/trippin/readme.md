@@ -4,7 +4,7 @@ description: Overview and listing of the TripPin connector development tutorial 
 author: ptyx507x
 
 ms.topic: tutorial
-ms.date: 1/9/2023
+ms.date: 3/13/2023
 ms.author: miescobar
 ms.custom:
 ---
@@ -25,11 +25,11 @@ The following applications will be used throughout this tutorial:
 
 It's strongly suggested that you review:
 
-* [Installing the PowerQuery SDK](../../InstallingSDK.md)
-* [Start developing custom connectors](../../StartingToDevelopCustomConnectors.md)
-* [Creating your first connector: Hello World](../../CreatingFirstConnector.md)
-* [Handling Data Access](../../HandlingDataAccess.md)
-* [Handling Authentication](../../HandlingAuthentication.md)
+* [Installing the PowerQuery SDK](../../install-sdk.md#installing-the-power-query-sdk)
+* [Start developing custom connectors](../../install-sdk.md#connector-development-process)
+* [Creating your first connector: Hello World](../../creating-first-connector.md)
+* [Handling Data Access](../../handling-data-access.md)
+* [Handling Authentication](../../handling-authentication.md)
 
 >[!Note]
 >You can also start trace logging of your work at any time by enabling diagnostics, which is described later on in this tutorial. More information: [Enabling diagnostics](8-diagnostics/readme.md#enabling-diagnostics)

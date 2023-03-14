@@ -3,7 +3,7 @@ title: FHIR Power Query authentication
 description: FHIR Power Query authentication
 author: hansenms
 ms.topic: conceptual
-ms.date: 8/9/2021
+ms.date: 3/14/2023
 ms.author: mihansen
 ---
 
@@ -16,7 +16,7 @@ This article explains authenticated access to FHIR servers using the Power Query
 
 ## Anonymous access
 
-There are many [publicly accessible FHIR servers](https://wiki.hl7.org/index.php?title=Publicly_Available_FHIR_Servers_for_testing). To enable testing with these public servers, the Power Query connector for FHIR supports the "Anonymous" authentication scheme. For example to access the public https://vonk.fire.ly server:
+There are many [publicly accessible FHIR servers](https://confluence.hl7.org/display/FHIR/Public+Test+Servers). To enable testing with these public servers, the Power Query connector for FHIR supports the "Anonymous" authentication scheme. For example to access the public https://vonk.fire.ly server:
 
 1. Enter the URL of the public Vonk server.
 

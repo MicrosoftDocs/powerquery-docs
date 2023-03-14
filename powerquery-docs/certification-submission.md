@@ -3,7 +3,7 @@ title: Power Query connector certification submission
 description: Instructions for submitting a Power Query custom connector for certification.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 4/14/2022
+ms.date: 3/13/2023
 ms.author: bezhan
 ---
 
@@ -40,6 +40,7 @@ The Connector Certification Portal is an experience within [ISV Studio](https://
 **Note that we need you to complete all the steps in order to move forward with certification.** If you would like to add teammates to manage your connector, let your Microsoft contact know.
 
 After your connector code review is complete, you'll need to submit a demo video to us outlining the following scenarios:
+
 - Load the connector as a custom connector in Power BI Desktop.
 - Select the connector from **Get Data**.
 - Successfully authenticate to the connector.
@@ -47,7 +48,7 @@ After your connector code review is complete, you'll need to submit a demo video
 - Load the data into Power BI Desktop and create a simple report.
 - Publish the report to the Power BI service.
 - Update the data in your end service backend (any simple data value update).
-- Successfully refresh the dataset in the Power BI service using the connector through the on-premises data gateway. Refresh the report visual. The changed data value should be updated. 
+- Successfully refresh the dataset in the Power BI service using the connector through the on-premises data gateway. Refresh the report visual. The changed data value should be updated.
 - Successfully refresh in Power BI Desktop. The changed data value should be updated.
 
 ### Updates
@@ -64,4 +65,4 @@ Updates to your connector submission can be made at any time, except when your c
 
 5. After submitting the connector form, in the **Activity Control** chat feature on the right, submit a short changelog explaining the connector update. This information should be public and written in a customer-facing way, as it will be included verbatim in the next Power BI Desktop blog update.
 
-6. Also be sure to update your connector-specific documentation in the [connector reference](/index.md). You can submit a pull request by selecting the pencil icon on the top right of the screen. Any functionality change should be accompanied by the corresponding documentation update. 
+6. Also be sure to update your connector-specific documentation in the [connector reference](connectors/index.md). You can submit a pull request by selecting the pencil icon on the top right of the screen. Any functionality change should be accompanied by the corresponding documentation update.
