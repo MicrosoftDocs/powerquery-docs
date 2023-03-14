@@ -89,6 +89,4 @@ It might be possible to read small files from other sources. However, you are li
 
 `Error: Parquet.Document cannot be used with streamed binary values.`
 
-In this case, you are basically copying the file into your computer’s RAM, so the limits are whatever limits you have on that particular resource. Most real-world uses of Parquet exceed such limits.
-
-A workaround for this limitation would be to buffer the Parquet file in memory using the [Binary.Buffer](/powerquery-m/binary-buffer) function to buffer the file in memory. However, performance may suffer from using this workaround.
+In this case, a workaround for this limitation would be to use the [Binary.Buffer](/powerquery-m/binary-buffer) function to buffer the file in memory. However, performance may suffer from using this workaround.
