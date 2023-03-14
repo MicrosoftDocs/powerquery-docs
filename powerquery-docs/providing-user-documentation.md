@@ -2,7 +2,7 @@
 title: Providing user documentation for your Power Query custom connector
 description: Describes the format and layout of the user documentation that needs to be submitted for your Power Query custom connector.
 author: bezhan-msft
-ms.date: 7/25/2022
+ms.date: 2/9/2023
 ms.author: bezhan
 ---
 
@@ -32,7 +32,7 @@ After the support note, provide a summary table that contains the following info
 * **Authentication types supported**: Lists the authentication types your custom connector supports.
 * **Function reference documentation**: Lists any M formula language documentation associated with your custom connector.
 
-![Example summary table.](images/sample-summary.png)
+![Example summary table.](media/providing-user-documentation/sample-summary.png)
 
 If your custom connector is implemented on various products, but has different capabilities on these products, include the following or similar note in your article after the summary table.
 
@@ -70,7 +70,9 @@ Any other instructions or information about your connector that hasn't been cove
 
 ## Article location and format
 
-Your article should be made available on GitHub under the Connectors folder in the Power Query documentation repo: <https://github.com/MicrosoftDocs/powerquery-docs/tree/master/powerquery-docs/Connectors>. Ensure that you also add a link to your article in the [list of connectors](./connectors/index.md) referencing the correct logo image uploaded to `/Connectors/media/index` folder. Lastly, ensure that you add a link to your article in the table of contents file (`TOC.yml`). Certified connectors will only be available under **Power BI (Datasets)**.
+The filename format for your connector article should contain only lowercase letters, with a hyphen between words. For example, the filename for the Azure Blob Storage connector is azure-blob-storage.md. If your connector name uses acronyms, the entire acronym counts as one word. For example the filename for the Hive LLAP connector is hive-llap.md.
+
+Your article should be made available on GitHub under the connectors folder in the Power Query documentation repo: <https://github.com/MicrosoftDocs/powerquery-docs/tree/master/powerquery-docs/connectors>. Ensure that you also add a link to your article in the [list of connectors](./connectors/index.md) referencing the correct logo image uploaded to the `/connectors/media/index` folder. Lastly, ensure that you add a link to your article in the table of contents file (`TOC.yml`). Certified connectors will only be available under **Power BI (Datasets)**.
 
 See our [contributor guide](/contribute/) on how you can contribute to our repo.
 

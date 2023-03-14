@@ -3,7 +3,7 @@ title: Authentication with a data source
 description: How to select credentials for a connector in Power Query to authenticate a connection with a data source, how to select the authentication level, and how to edit or delete credentials for specific connectors and sites.
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 5/11/2020
+ms.date: 1/5/2023
 ms.author: miescobar
 ms.custom: edited
 ---

@@ -398,7 +398,7 @@
           href: connectors/fhir/fhir-relationships.md
       - name: "Folder"
         href: connectors/folder.md
-      - name: "Funnel (Beta)"
+      - name: "Funnel"
         href: connectors/funnel.md
       - name: "Google Analytics"
         href: connectors/google-analytics.md
@@ -425,9 +425,9 @@
       - name: "Microsoft Azure Consumption Insights (Beta) (Deprecated)"
         href: connectors/microsoft-azure-consumption-insights.md
       - name: Microsoft Exchange
-        href: Connectors/microsoft-exchange.md
+        href: connectors/microsoft-exchange.md
       - name: Microsoft Exchange Online
-        href: Connectors/microsoft-exchange-online.md
+        href: connectors/microsoft-exchange-online.md
       - name: "Microsoft Graph Security (Deprecated)"
         href: connectors/microsoft-graph-security.md
       - name: "MicroStrategy for Power BI"
@@ -525,7 +525,7 @@
       - name: "Text/CSV"
         href: connectors/text-csv.md
       - name: "TIBCO(R) Data Virtualization"
-        href: Connectors/tibco.md
+        href: connectors/tibco.md
       - name: "Twilio (Beta) (Deprecated)"
         href: connectors/twilio.md
       - name: "Usercube"
@@ -555,7 +555,7 @@
       - name: "Review script changes"
         href: review-script-changes.md
       - name: "Connector support and feedback"
-        href: Connectors/ConnectorFeedback.md
+        href: connectors/connector-feedback.md
       - name: "Capture web requests with Fiddler"
         href: web-connection-fiddler.md
     - name: Create custom Power Query connectors
@@ -573,31 +573,31 @@
         - name: TripPin walkthrough
           items:
           - name: "Overview"
-            href: samples/TripPin/README.md
+            href: samples/trippin/readme.md
           - name: "1. OData"
-            href: samples/TripPin/1-OData/README.md
+            href: samples/trippin/1-odata/readme.md
           - name: "2. REST API"
-            href: samples/TripPin/2-Rest/README.md
+            href: samples/trippin/2-rest/readme.md
           - name: "3. Navigation tables"
-            href: samples/TripPin/3-NavTables/README.md
+            href: samples/trippin/3-navtables/readme.md
           - name: "4. Paths"
-            href: samples/TripPin/4-Paths/README.md
+            href: samples/trippin/4-paths/readme.md
           - name: "5. Paging"
-            href: samples/TripPin/5-Paging/README.md
+            href: samples/trippin/5-paging/readme.md
           - name: "6. Schemas"
-            href: samples/TripPin/6-Schema/README.md
+            href: samples/trippin/6-schema/readme.md
           - name: "7. Advanced schemas"
-            href: samples/TripPin/7-AdvancedSchema/README.md
+            href: samples/trippin/7-advancedschema/readme.md
           - name: "8. Diagnostics"
-            href: samples/TripPin/8-Diagnostics/README.md
+            href: samples/trippin/8-diagnostics/readme.md
           - name: "9. Test connection"
-            href: samples/TripPin/9-TestConnection/README.md
+            href: samples/trippin/9-testconnection/readme.md
           - name: "10. Folding"
-            href: samples/TripPin/10-TableView1/README.md
+            href: samples/trippin/10-tableview1/readme.md
         - name: OAuth tutorials
           items:
           - name: "GitHub"
-            href: samples/Github/README.md
+            href: samples/github/readme.md
       - name: Samples
         items:
         - name: "Functional samples"
@@ -650,6 +650,8 @@
           href: handling-connector-signing.md
         - name: "Handling proxy support"
           href: handling-proxy-support.md
+        - name: "Handling native query support"
+          href: native-query-sdk.md
         - name: "Versioning"
           href: handling-versioning.md
       - name: Connector Certification

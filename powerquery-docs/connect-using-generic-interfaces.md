@@ -3,7 +3,7 @@ title: Connect to data using generic interfaces
 description: Learn how to connect different data sources with generic interfaces.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 7/11/2022
+ms.date: 1/5/2023
 ms.author: bezhan
 ---
 
@@ -33,7 +33,7 @@ In the following sections, you can find lists of data sources that can be access
 
 ## Data sources accessible through ODBC
 
-The [ODBC](connectors/ODBC.md) connector in Power Query lets you import data from any third-party ODBC driver simply by specifying a Data Source Name (DSN) or a connection string. As an option, you can also specify a SQL statement to execute against the ODBC driver.
+The [ODBC](connectors/odbc.md) connector in Power Query lets you import data from any third-party ODBC driver simply by specifying a Data Source Name (DSN) or a connection string. As an option, you can also specify a SQL statement to execute against the ODBC driver.
 
 ![Screenshot of the O D B C connector dialog, showing the D S N and Advanced options.](media/connect-using-generic-interfaces/odbc-data-source.png)
 

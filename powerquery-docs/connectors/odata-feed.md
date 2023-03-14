@@ -3,7 +3,7 @@ title: Power Query OData Feed connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your data using the connector.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 10/5/2022
+ms.date: 2/13/2023
 ms.author: bezhan
 ---
 
@@ -36,13 +36,13 @@ ms.author: bezhan
 
 To load data from an OData Feed in Power Query Desktop:
 
-1. Select the **OData** or **OData Feed** option in the connector selection. 
+1. Select the **OData** or **OData Feed** option in the connector selection.
 
 2. Choose the **Basic** button and enter a URL address in the text box. This URL should be the root of the OData service you want to connect to. For example, enter `http://services.odata.org/V4/northwind/northwind.svc/`. Then select **OK**.
 
    ![OData URL selection.](media/odata-feed/odata-basic-url.png)
 
-   If the URL address you enter is invalid, a ![Warning icon.](../images/webwarning.png) warning icon will appear next to the **URL** textbox.
+   If the URL address you enter is invalid, a ![Warning icon.](./media/odata-feed/web-warning.png) warning icon will appear next to the **URL** textbox.
 
 3. If this is the first time you're connecting using the OData Feed, select the authentication type, input your credentials (if necessary), and select the level to apply the authentication settings to. Then select **Connect**.
 
@@ -58,7 +58,7 @@ To load data from an OData Feed in Power Query Desktop:
 
 To load data from an OData Feed in Power Query Online:
 
-1. Select the **OData** or **OData Feed** option in the connector selection. 
+1. Select the **OData** or **OData Feed** option in the connector selection.
 
 2. In the OData dialog that appears, enter a URL in the text box.
 
@@ -98,7 +98,7 @@ When attempting to authenticate, if the following error occurs:
 
 `We were unable to connect because this credential type isn’t supported for this resource. Please choose another credential type.`
 
-   ![Error from connecting to an endpoint that doesn't support OAuth with the web connector.](../images/credential-type-not-supported.png)
+   ![Error from connecting to an endpoint that doesn't support OAuth with the web connector.](media/odata-feed/credential-type-not-supported.png)
 
 Contact the service owner. They'll either need to change the authentication configuration or build a custom connector.
 

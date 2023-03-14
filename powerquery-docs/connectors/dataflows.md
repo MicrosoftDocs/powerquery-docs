@@ -3,7 +3,7 @@ title: Power Query Dataflow connector
 description: Provides basic information and connection instructions for connecting to a Dataflow.
 author: Luitwieler
 ms.topic: conceptual
-ms.date: 01/12/2022
+ms.date: 2/13/2023
 ms.author: jeluitwi
 ---
 
@@ -16,7 +16,6 @@ ms.author: jeluitwi
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights (Dataflows)<br/>Excel|
 | Authentication types | Organizational account |
-| | |
 
 >[!Note]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
@@ -41,7 +40,7 @@ To get data from Dataflows in Power BI Desktop:
 
 2. In the **Get Data** dialog box, select **Power Platform > Dataflows**, and then select **Connect**.
 
-   ![Get data from Power BI Desktop.](media/Dataflows/GetDatafromDataflow.png)
+   ![Get data from Power BI Desktop.](media/dataflows/get-data-from-dataflow.png)
 
 3. If this attempt is the first time you're connecting to this site, select **Sign in** and input your credentials. Then select **Connect**.
 
@@ -79,7 +78,7 @@ To get DirectQuery to run, you need to have Power BI Premium and adjust a few co
 
 _**My dataflow table doesn't show up in the dataflow connector in Power BI**_
 
-You're probably using a Dataverse table as the destination for your standard dataflow. Use the [Dataverse/CDS connector](../Connectors/Dataverse.md) instead or consider switching to an analytical dataflow.
+You're probably using a Dataverse table as the destination for your standard dataflow. Use the [Dataverse/CDS connector](../connectors/dataverse.md) instead or consider switching to an analytical dataflow.
 
 _**There's a difference in the data when I remove duplicates in dataflows&mdash;how can I resolve this?**_
 

@@ -15,7 +15,7 @@ This article explains some of the most common errors and issues you might get wh
 
 This problem happens when you try to create a dataflow in **My workspace** in Power BI.
 
-![My workspace.](media/MyWorkspace.png)
+![My workspace.](media/troubleshooting-dataflows-issues-creating-dataflow/my-workspace.png)
 
 **Reason:**
 
@@ -37,13 +37,13 @@ You don't have edit rights in the workspace.
 
 Ask the workspace administrators or members to give you an Admin, Member, or Contributor [role](/power-bi/collaborate-share/service-new-workspaces#roles-in-the-new-workspaces).
 
-![Workspace access settings.](media/WorkspaceAccess.png)
+![Workspace access settings.](media/troubleshooting-dataflows-issues-creating-dataflow/workspace-access.png)
 
 ## I can't create a dataflow in a workspace where I have edit rights
 
 This problem happens when you're in an organizational workspace that you've created, or someone else has created and you have Admin, Member, or Contributor access. You want to create a dataflow in this scenario, but you can't.
 
-**Reason:** 
+**Reason:**
 
 The access to dataflow creation was disabled by the Power BI administrator.
 
@@ -53,21 +53,21 @@ Ask the Power BI tenant administrator to enable access for you by following thes
 
 1. On the **Settings** menu in the Power BI service, select **Admin portal**.
 
-   ![Power BI admin portal.](media/PowerBIAdminPortal.png)
+   ![Power BI admin portal.](media/troubleshooting-dataflows-issues-creating-dataflow/power-bi-admin-portal.png)
 
 2. On the left pane, select **Tenant settings**, and in the **Dataflow settings** section, turn on the toggle for **Enabled**. Then select **Apply**.
 
-   ![Enable dataflows in tenant settings.](media/EnableDataflow.png)
+   ![Enable dataflows in tenant settings.](media/troubleshooting-dataflows-issues-creating-dataflow/enable-dataflow.png)
 
 ## I only see limited options when I create a dataflow
 
 When creating a dataflow, sometimes you don't see all the options that are available. For example, you might see only the options shown in the following image.
 
-![Create dataflow menu where only the "Define new entities" and "Import model" options appear](media/DataflowCreationLimited.png)
+![Create dataflow menu where only the "Define new entities" and "Import model" options appear](media/troubleshooting-dataflows-issues-creating-dataflow/dataflow-creation-limited.png)
 
 However, more options are actually available, as shown in the following image.
 
-![Create dataflow menu where "Define new entities", "Import model", "Link entities from other dataflows", and "Attach a Common Data Model folder" options appear](media/DataflowCreationFull.png)
+![Create dataflow menu where "Define new entities", "Import model", "Link entities from other dataflows", and "Attach a Common Data Model folder" options appear](media/troubleshooting-dataflows-issues-creating-dataflow/dataflow-creation-full.png)
 
 **Reason:**
 
@@ -77,14 +77,13 @@ You're creating the dataflow in an old version of the Power BI workspace, called
 
 Upgrade your Power BI workspace to the new version (v2). More information: [Upgrade classic workspaces to the new workspaces in Power BI](/power-bi/collaborate-share/service-upgrade-workspaces)
 
-![Upgrade the classic workspace.](media/UpgradeWorkspace.png)
+![Upgrade the classic workspace.](media/troubleshooting-dataflows-issues-creating-dataflow/upgrade-workspace.png)
 
 ## Dataflow name exists already, but I deleted the old one
 
 This problem happens when you try to create a dataflow with a name that already exists or use the name of a recently deleted dataflow.
 
    ![Screenshot showing Dataflow name exists already.](media/dataflow-error-name-exists.png)
-
 
 **Reason:**
 

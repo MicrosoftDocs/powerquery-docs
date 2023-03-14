@@ -3,7 +3,7 @@ title: Power Query PostgreSQL connector
 description: Provides basic information, prerequisites, and instructions on how to connect to your database, along with native query folding instructions and troubleshooting tips.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 2/28/2022
+ms.date: 2/13/2023
 ms.author: bezhan
 ---
 
@@ -17,9 +17,8 @@ ms.author: bezhan
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication Types Supported | Database (Username/Password) |
 | Function Reference Documentation | [PostgreSQL.Database](/powerquery-m/postgresql-database) |
-| | |
 
-> [!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
@@ -30,7 +29,7 @@ For Power BI Desktop versions released before December 2019, you must install th
 
 **We recommend NpgSQL 4.0.10. NpgSQL 4.1 and up won't work due to .NET version incompatibilities.**
 
-![Npgsql installer with GAC Installation selected.](../images/Postgres1.png)
+![Npgsql installer with GAC Installation selected.](media/postgresql/postgres-1.png)
 
 ## Capabilities Supported
 
@@ -63,7 +62,7 @@ Once the matching Npgsql provider is installed, you can connect to a PostgreSQL 
    >[!Note]
    > If the connection is not encrypted, you'll be prompted with the following message.
 
-   ![Azure SQL database encryption support.](../images/EncryptionWarning.png)
+   ![Azure SQL database encryption support.](./media/postgresql/encryption-warning.png)
 
    Select **OK** to connect to the database by using an unencrypted connection, or follow the instructions in [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine) to set up encrypted connections to PostgreSQL database.
 
@@ -97,16 +96,14 @@ Power Query Desktop provides a set of advanced options that you can add to your 
 
 ![Advanced options included in the PostgreSQL connection dialog box.](./media/postgresql/postgresql-advanced-options.png)
 
-
 The following table lists all of the advanced options you can set in Power Query Desktop.
 
-| Advanced option	| Description |
+| Advanced option | Description |
 | --------------- | ----------- |
 | Command timeout in minutes | If your connection lasts longer than 10 minutes (the default timeout), you can enter another value in minutes to keep the connection open longer. This option is only available in Power Query Desktop. |
 | SQL statement | For information, go to [Import data from a database using native database query](../native-database-query.md). |
 | Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, you won’t see those columns. |
 | Navigate using full hierarchy | If checked, the navigator displays the complete hierarchy of tables in the database you're connecting to. If cleared, the navigator displays only the tables whose columns and rows contain data. |
-| | |
 
 Once you've selected the advanced options you require, select **OK** in Power Query Desktop to connect to your PostgreSQL database.
 
@@ -118,7 +115,6 @@ In the rare case that folding doesn't work with native query folding enabled, yo
 
 Sample:
 `Value.NativeQuery(target as any, query, null, [EnableFolding=false])`
-
 
 ## Troubleshooting
 
