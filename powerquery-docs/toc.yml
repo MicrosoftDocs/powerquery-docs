@@ -362,7 +362,7 @@
         href: connectors/cdata-connect-cloud.md
       - name: "Common Data Service (Legacy)"
         href: connectors/common-data-service-legacy.md
-      - name: "Databricks (Beta)"
+      - name: "Databricks"
         href: connectors/databricks.md
       - name: "Dataverse"
         href: connectors/dataverse.md     
