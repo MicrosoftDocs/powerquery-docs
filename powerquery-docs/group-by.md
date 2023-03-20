@@ -1,6 +1,5 @@
 ---
-title: "Grouping or summarizing rows"
-
+title: "How to GROUP BY or summarize rows"
 description: "In Power Query, you can group or summarize the values in various rows into a single value by grouping the rows according to the values in one or more columns. Power Query has two types of Group By operations: aggregate a column with an aggregate function, or perform an operation."
 author: ptyx507x
 ms.date: 12/12/2022
@@ -83,7 +82,7 @@ The following table describes each of these operations.
 
 ## Perform an operation to group by one or more columns
 
-Starting from the original sample, in this example you'll a column containing the total units and two other columns that give you the name and units sold for the top-performing product, summarized at the country and sales channel level.
+Starting from the original sample, in this example you'll create a column containing the total units and two other columns that give you the name and units sold for the top-performing product, summarized at the country and sales channel level.
 
 ![Sample output table with operations.](media/group-by/row-operation-final-table.png "Sample output table with operations")
 
