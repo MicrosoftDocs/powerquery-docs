@@ -20,9 +20,6 @@ ms.author: bezhan
 >[!Note]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
->[!Note]
->There is a known issue around connecting to Google BigQuery (Azure AD) where connections will fail due to a driver issue. A fix is being identified and this documentation page will be updated once we have a resolution.
-
 ## Prerequisites
 
 You'll need an Azure Active Directory account to sign in to Google BigQuery (Azure AD).
