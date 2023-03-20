@@ -90,7 +90,7 @@ Starting from the original sample, in this example you'll create a column contai
    * Country
    * Sales Channel
 
-2. Create two new columns by doing the following:
+2. Create two new columns by following these steps:
    1. Aggregate the **Units** column by using the **Sum** operation. Name this column **Total units**.
    1. Add a new **Products** column by using the **All rows** operation.
 
@@ -176,13 +176,13 @@ Return to the **Group by** dialog box, expand **Fuzzy group options**, change th
 
 ![Fuzzy grouping sample transformation table drop-down menu.](media/group-by/fuzzy-grouping-sample-transformation-table-window.png "Fuzzy grouping sample transformation table drop-down menu")
 
-After selecting your transformation table, select **OK**. The result of that operation gives you the the following information.
+After you select the transformation table, select **OK**. The result of that operation gives you the following information:
 
-![Fuzzy grouping sample final table with transform table.](media/group-by/fuzzy-grouping-sample-final-table.png "")
+![Fuzzy grouping sample final table with transform table.](media/group-by/fuzzy-grouping-sample-final-table.png)
 
 In this example, the **Ignore case** option was enabled, so the values in the **From** column of the **Transformation table** are used to look for the text string without considering the case of the string. This transformation operation occurs first, and then the fuzzy grouping operation is performed.
 
-The similarity score is also shown in the table value next to the person column, which reflects exactly how the values were grouped and their respective similarity scores. You have the option to expand this column if needed or use the values from the new Frequency columns for other sorts of transformations.
+The similarity score is also shown in the table value next to the person column, which reflects exactly how the values were grouped and their respective similarity scores. You can expand this column if needed or use the values from the new Frequency columns for other sorts of transformations.
 
 >[!NOTE]
 >When grouping by multiple columns, the transformation table performs the replace operation in all columns if replacing the value increases the similarity score.
