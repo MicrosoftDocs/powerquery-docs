@@ -176,4 +176,4 @@ These permissions typically are provided in the `BigQuery.User` role. More infor
 If the above steps don't resolve the problem, you can disable the BigQuery Storage API.
 
 ### Unable to use DateTime type data in Direct Query mode
-When adding DateTime type data to a table view, it will shows "Invalid query" error, if you want to use time data of the DateTime directly, now it can't be achieved in both Power Query and Power BI Desktop with Direct Query.
+There's a known issue where the DateTime type isn't supported through Direct Query. Selecting a column with the DateTime type will cause an "Invalid query" error or a visual error.
