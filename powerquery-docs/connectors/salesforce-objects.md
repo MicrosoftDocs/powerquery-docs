@@ -47,7 +47,7 @@ To connect to Salesforce Objects data:
 
    ![Get data from the production URL.](media/salesforce-objects/sf-objects-url.png)
 
-   You can also select **Custom** and enter a custom URL to sign in. This custom URL might be a custom domain you've created within Salesforce, such as `https://contoso.salesforce.com`. You can also use the custom URL selection if you're using your own CNAME record that redirects to Salesforce.
+   You can also select **Custom** and enter a custom URL to sign in. This custom URL might be a custom domain you've created within Salesforce, such as `https://contoso.salesforce.com`(do not use the lightning URL). You can also use the custom URL selection if you're using your own CNAME record that redirects to Salesforce.
 
    Also, you can select **Include relationship columns**. This selection alters the query by including columns that might have foreign-key relationships to other tables. If this box is unchecked, you won’t see those columns.
 
