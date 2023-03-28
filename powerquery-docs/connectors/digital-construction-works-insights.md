@@ -13,7 +13,7 @@ ms.author: bezhan
 
 | Item | Description |
 | ------- | ------------|
-|Release state | GA |
+| Release state | General availability |
 | Products supported | Power BI (Datasets)<br/>Power BI (Dataflows) |
 | Authentication types supported| Digital Construction Works JSON Web Token (JWT) |
 | Function reference docs | &mdash; |
