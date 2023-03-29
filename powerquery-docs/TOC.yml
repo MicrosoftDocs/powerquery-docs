@@ -510,6 +510,8 @@
         href: connectors/socialbakers.md
       - name: "SoftOne BI (Beta)"
         href: connectors/softone-bi.md
+      - name: "SolarWinds Service Desk (Beta)"
+        href: connectors/solarwinds-service-desk.md
       - name: "SQL Server Analysis Services database"
         href: connectors/sql-server-analysis-services.md
       - name: "SQL Server database"
