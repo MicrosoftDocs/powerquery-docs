@@ -13,7 +13,7 @@ Dataflows can be created in different portals, such as Power BI and the Power Ap
 
 ## Creating dataflows in Power BI workspaces
 
-If you want to create dataflows in Power BI workspaces, you need to have a paid Power BI Pro license. A Power BI free license won't give you the ability to create dataflows. Depending on the features you use, a Power BI Premium or embedded capacity is required.
+If you want to create dataflows in Power BI workspaces, you need to have a paid Power BI Pro license. A Power BI free license won't give you the ability to create dataflows. Depending on the features you use, Power BI Premium (per user) or embedded capacity is required.
 
 A Power BI Pro account is available on a user-monthly basis. Multiple options are available for premium or embedded capacities.
 
@@ -36,20 +36,20 @@ The following table contains a list of features and the license needed for them 
 | Feature                                                      | Power BI                           | Power Apps                                                   |
 | ------------------------------------------------------------ | ---------------------------------- | ------------------------------------------------------------ |
 | Store data in Dataverse tables (standard dataflow) | N/A                                | Per app plan<br />Per user plan                              |
-| Store data in Azure Data Lake Storage (analytical dataflow)               | Power BI Pro<br />Power BI Premium | Yes, using analytical dataflows                              |
-| Store data in customer provided Azure Data Lake Storage (analytical dataflow; bring your own Azure Data Lake Storage) | Power BI Pro<br />Power BI Premium | Per app plan<br />Per user plan                              |
-| The enhanced compute engine (running on Power BI Premium capacity / parallel execution of transforms) | Power BI Premium                   | N/A                                                          |
-| DirectQuery connection to dataflow                           | Power BI Premium                   | N/A                                                          |
-| AI capabilities in Power BI                                  | Power BI Premium                   | N/A                                                          |
-| Linked entities                                              | Power BI Premium                   | Yes, using analytical dataflows |
-| Computed entities (in-storage transformations using M)       | Power BI premium                   | Yes, using analytical dataflows |
+| Store data in Azure Data Lake Storage (analytical dataflow)               | Yes | Yes, using analytical dataflows                              |
+| Store data in customer provided Azure Data Lake Storage (analytical dataflow; bring your own Azure Data Lake Storage) | Yes | Per app plan<br />Per user plan      |
+| The enhanced compute engine (running on Power BI Premium capacity / parallel execution of transforms) | Power BI Premium only                   | N/A                                                          |
+| DirectQuery connection to dataflow                           | Power BI Premium only                | N/A                                                          |
+| AI capabilities in Power BI                                  | Power BI Premium only                | N/A                                                          |
+| Linked entities                                              | Power BI Premium only                | Yes, using analytical dataflows |
+| Computed entities (in-storage transformations using M)       | Power BI Premium only                | Yes, using analytical dataflows |
 | Schedule refresh                                             | Yes                                   | Yes                                                             |
 | Dataflow authoring with Power Query Online                   | Yes                                | Yes                                                          |
-| Dataflow management                                          | Power BI                     | Power Apps                                         |
+| Dataflow management                                          | Yes | Yes                                         |
 | New connectors                                               | Yes                                | Yes                                                          |
 | Standardized schema, built-in support for Common Data Model | Yes                                | Yes                                                          |
 | Dataflows data connector in Power BI Desktop                 | Yes                                | Yes, using analytical dataflows   |
-| Dataflow incremental refresh                                 | Power BI Premium                   | Yes, using analytical dataflows with Per user Plan |
+| Dataflow incremental refresh                                 | Power BI Premium only               | Yes, using analytical dataflows with Per user Plan |
 | | | |
 
 ## Limitations on each license
