@@ -1,10 +1,10 @@
 ---
 title: Keyboard shortcuts in Power Query
 description: This article provides information about global keyboard shortcuts in Power Query Online.
-author: heydh
-ms.date: 2/14/2023
-ms.author: dhsundar
+author: ptyx507x
+ms.author: miescobar
 ms.topic: conceptual
+ms.date: 3/20/2023
 ---
 
 # Keyboard shortcuts in Power Query
@@ -70,7 +70,7 @@ When using the Query Editor in Power Query Online, you can navigate to the **Key
 | Copy cells/rows/columns | Ctrl+C | Command+C |
 | Paste cells/rows/columns | Ctrl+V | Command+V |
 | Save entered data | Ctrl+Enter | Command+Return |
-| Show suggestions (when available) | Ctrl+Space |  |
+| Show suggestions (when available) | Ctrl+Space | Ctrl+Space |
 
 ## Multi-line text editor (Blank query/Advanced editor)
 
@@ -88,8 +88,8 @@ When using the Query Editor in Power Query Online, you can navigate to the **Key
 | Move focus from step level to query level | Esc | Esc |
 | Expand all queries | Ctrl+Shift+Right arrow key | Command+Shift+Right arrow key |
 | Collapse all queries | Ctrl+Shift+Left arrow key | Command+Shift+Left arrow key |
-| Insert new step using+button (after selected step) | Ctrl+Alt+N |  |
-| Highlight related queries | Ctrl+Alt+R |  |
+| Insert new step using+button (after selected step) | Ctrl+Alt+N | Command+Options+N |
+| Highlight related queries | Ctrl+Alt+R | Command +Options+R  |
 | Select all queries | Ctrl+A | Command+A |
 | Copy queries | Ctrl+C | Command+C |
 | Paste queries | Ctrl+V | Command+V |

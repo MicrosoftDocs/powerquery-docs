@@ -4,7 +4,7 @@ description: A guided tour on how to use the Power Query SDK in Visual Studio Co
 author: ptyx507x
 
 ms.topic: quickstart
-ms.date: 10/11/2022
+ms.date: 3/13/2023
 ms.author: miescobar
 ---
 
@@ -194,7 +194,7 @@ To run this task, first set a credential for your connector and then run the tas
 
 The result of this task is displayed in the output terminal at the bottom of the window.
 
-![Result of the Run TestConnection function in the Power Query SDK.](media/power-query-sdk-vs-code/TestConnection.jpg)
+![Result of the Run TestConnection function in the Power Query SDK.](media/power-query-sdk-vs-code/testconnection.jpg)
 
 ## Feedback and bugs
 
