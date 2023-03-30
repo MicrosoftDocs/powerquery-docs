@@ -31,7 +31,7 @@ To connect to SolarWinds Service Desk:
 
    ![Get Data from SolarWinds Service Desk](./media/solarwinds-service-desk/get-data.png)
 
-2. Sign in with [JSON Web Token](#prerequisites) and then select **Connect** to verify your access to SolarWinds Service Desk.
+2. Sign in with JSON web token you generated as described in prerequisites, and then select **Connect** to verify your access to SolarWinds Service Desk.
 
    ![Auth Key Dialog](./media/solarwinds-service-desk/auth-key.png)
 
