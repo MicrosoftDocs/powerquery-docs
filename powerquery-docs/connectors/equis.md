@@ -7,7 +7,7 @@ ms.date: 6/24/2022
 ms.author: bezhan
 ---
 
-# EQuIS (Beta)
+# EQuIS
 
 >[!Note]
 >The following connector article is provided by EarthSoft, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the EarthSoft website and use the support channels there.
@@ -52,4 +52,4 @@ To connect to an EQuIS Enterprise site from Power BI Desktop, take the following
 * When using reports in a facility group, non-administrator users must have permission to all facilities contained in the facility group.
 * Only "grid" reports will be available in the **Navigator**.
 * All datasets consumed by the EQuIS connector will use camelCase for column names.
-* The current version of the EQuIS connector will retrieve a dataset in a single request and is limited to 1,048,576 rows in a single dataset (this limitation might be removed in a future version of the connector).
+* The current version of the EQuIS connector will retrieve a dataset in a single API request (this logic may be optimized in a future version of the connector).
