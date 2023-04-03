@@ -130,4 +130,4 @@ When requesting document library contents, you should have Read access to the Sh
 
 ### Azure Active Directory authentication
 
-Azure Active Directory authentication (AAD) is not supported for on-premises SharePoint sources.
+Azure Active Directory authentication (AAD) isn't supported for on-premises SharePoint sources.
