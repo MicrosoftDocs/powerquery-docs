@@ -2,7 +2,7 @@
 title: List of all Power Query connectors
 description: List of all currently available Power Query connectors
 author: bezhan-msft
-ms.date: 3/14/2023
+ms.date: 3/31/2023
 ms.author: bezhan
 ms.custom: intro-internal
 ---
@@ -212,7 +212,7 @@ The connectors are listed in alphabetical order in separate tables for each lett
 
 | Connector | Excel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Power BI (Datasets) | Power BI (Dataflows) | Power Apps (Dataflows) | Customer<br/>Insights (Dataflows) | Analysis Services |
 | --- | --- | --- | --- | --- | --- | --- |
-| [![Parquet.](media/index/parquet-64.png)<br/>**Parquet**](parquet.md)<br/>By Microsoft                                                                         | ![Not supported - Parquet in Excel](media/index/no.png)  | ![Supported - Parquet in Power BI (Datasets)](media/index/yes.png) <sup>3</sup>  | ![Not supported - Parquet in Power BI (Dataflows)](media/index/no.png)  | ![Supported - Parquet in Power Apps (Dataflows)](media/index/yes.png) | ![Supported - Parquet in Customer Insights (Dataflows)](media/index/yes.png)  | ![Not supported - Parquet in Analysis Services](media/index/no.png)  |
+| [![Parquet.](media/index/parquet-64.png)<br/>**Parquet**](parquet.md)<br/>By Microsoft                                                                         | ![Not supported - Parquet in Excel](media/index/no.png)  | ![Supported - Parquet in Power BI (Datasets)](media/index/yes.png) <sup>3</sup>  | ![Supported - Parquet in Power BI (Dataflows)](media/index/yes.png)  | ![Supported - Parquet in Power Apps (Dataflows)](media/index/yes.png) | ![Supported - Parquet in Customer Insights (Dataflows)](media/index/yes.png)  | ![Not supported - Parquet in Analysis Services](media/index/no.png)  |
 | ![Palantir Foundry.](media/index/foundry-64.png)<br/>**Palantir Foundry**</br>By Palantir   | ![Not supported - Palantir Foundry in Excel](media/index/no.png)  | ![Supported - Palantir Foundry in Power BI (Datasets)](media/index/yes.png) | ![Supported - Palantir Foundry in Power BI (Dataflows)](media/index/yes.png)  | ![Not supported - Palantir Foundry in Power Apps (Dataflows)](media/index/no.png)  | ![Not supported - Palantir Foundry in Customer Insights (Dataflows)](media/index/no.png)  | ![Not supported - Palantir Foundry in Analysis Service](media/index/no.png)  |
 | ![Paxata.](media/index/paxata-64.png)<br/>**Paxata**<br/>By Paxata                                                     | ![Not supported - Paxata in Excel](media/index/no.png)  | ![Supported - Paxata in Power BI (Datasets)](media/index/yes.png) | ![Supported - Paxata in Power BI (Dataflows)](media/index/yes.png)  | ![Not supported - Paxata in Power Apps (Dataflows)](media/index/no.png)  | ![Not supported - Paxata in Customer Insights (Dataflows)](media/index/no.png)  | ![Not supported - Paxata in Analysis Services](media/index/no.png)  |
 | [![PDF.](media/index/pdffile-64.png)<br/>**PDF**](pdf.md)<br/>By Microsoft                                                                     | ![Supported - PDF in Excel](media/index/yes.png) | ![Supported - PDF in Power BI (Datasets)](media/index/yes.png) <sup>2</sup> | ![Supported - PDF in Power BI (Dataflows)](media/index/yes.png) <sup>2</sup> | ![Supported - PDF in Power Apps (Dataflows)](media/index/yes.png) <sup>1</sup> | ![Supported - PDF in Customer Insights (Dataflows)](media/index/yes.png) | ![Not supported - PDF in Analysis Services](media/index/no.png)  |

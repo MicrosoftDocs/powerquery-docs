@@ -23,10 +23,6 @@ LocalizationGroup: reference
 > [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
-## Prerequisites
-
-An online account with a Parquet database file.
-
 ## Capabilities supported
 
 * Import
@@ -45,7 +41,7 @@ To connect to a Parquet file from Power Query Desktop, take the following steps:
 
 3. Select **OK**.
 
-4. If you're connecting to this database for the first time, select the authentication type, input your credentials, and select the level to apply the authentication settings to. Then select **Connect**.
+4. If you're connecting to this data source for the first time, select the authentication type, input your credentials, and select the level to apply the authentication settings to. Then select **Connect**.
 
    :::image type="content" source="./media/parquet/enter-credentials.png" alt-text="Screenshot with the Account key authentication method selected.":::
 
@@ -73,7 +69,7 @@ To connect to a Parquet file from Power Query Online, take the following steps:
 
 3. If you're connecting to a local file, select the name of your on-premises data gateway. If the data is online, you don't need to provide an on-premises data gateway.
 
-4. If you're connecting to this database for the first time, select the authentication kind and input your credentials. From Power Query Online, select one of the following authentication kinds:
+4. If you're connecting to this data source for the first time, select the authentication kind and input your credentials. From Power Query Online, select one of the following authentication kinds:
 
    * Anonymous (online)
    * Account key (online)
@@ -83,7 +79,7 @@ To connect to a Parquet file from Power Query Online, take the following steps:
 
 ## Known issues and limitations
 
-The Power Query Parquet connector only supports reading files from the local filesystem and Azure Data Lake Storage Gen2.
+The Power Query Parquet connector only supports reading files from the local filesystem, Azure Blob Storage, and Azure Data Lake Storage Gen2.
 
 It might be possible to read small files from other sources using the [Binary.Buffer](/powerquery-m/binary-buffer) function to buffer the file in memory. However, if the file is too large you're likely to get the following error:
 
