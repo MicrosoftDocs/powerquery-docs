@@ -17,7 +17,7 @@ LocalizationGroup: reference
 | ------- | ------------|
 |Release state | General Availability |
 | Products supported | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
-| Authentication types supported| Anonymous (ADLS and Blob)<br/>Account key (Blob)<br/>Basic (ADLS)<br/>Organizational account (ADLS)<br/>Shared access signature (SAS) (Blob)<br/>Web API (ADLS)<br/>Windows (ADLS) |
+| Authentication types supported| Anonymous (online)<br/>Account key (online)<br/>Basic (online)<br/>Organizational account (online)<br/>Shared access signature (SAS) (online)<br/>Web API (online)<br/>Windows (online) |
 | Function reference docs | &mdash; |
 
 > [!NOTE]
