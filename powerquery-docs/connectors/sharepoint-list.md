@@ -102,7 +102,7 @@ If you use an OData feed to access a SharePoint List, there's an approximately 2
 
 ### Azure Active Directory authentication
 
-Azure Active Directory authentication (AAD) is not supported for on-premises SharePoint sources.
+Azure Active Directory authentication (AAD) isn't supported for on-premises SharePoint sources.
 
 ## Next steps
 
