@@ -3,7 +3,7 @@ title: "Create and use dataflows in Microsoft Power Platform"
 description: Learn how to use dataflows in Microsoft Power Platform.
 author: bensack
 ms.topic: conceptual
-ms.date: 1/6/2023
+ms.date: 3/31/2023
 ms.author: bensack
 ---
 
@@ -31,7 +31,7 @@ With dataflows, Microsoft brings the self-service data preparation capabilities 
 
 * **Advanced Analytics and AI with Azure**: Power Platform dataflows store data in Dataverse or Azure Data Lake Storage&mdash;which means that data ingested through dataflows is now available to data engineers and data scientists to leverage the full power of Azure Data Services, such as Azure Machine Learning, Azure Databricks, and Azure Synapse Analytics for advanced analytics and AI. This enables business analysts, data engineers, and data scientists to collaborate on the same data within their organization.
 
-* **Support for Common Data Model**: Common Data Model is a set of a standardized data schemas and a metadata system to allow consistency of data and its meaning across applications and business processes. Dataflows support Common Data Model by offering easy mapping from any data in any shape into the standard Common Data Model entities, such as Account and Contact. Dataflows also land the data, both standard and custom entities, in schematized Common Data Model form. Business analysts can take advantage of the standard schema and its semantic consistency, or customize their entities based on their unique needs. Common Data Model continues to evolve as part of the [Open Data Initiative](https://www.microsoft.com/open-data-initiative).
+* **Support for Common Data Model**: Common Data Model is a set of a standardized data schemas and a metadata system to allow consistency of data and its meaning across applications and business processes. Dataflows support Common Data Model by offering easy mapping from any data in any shape into the standard Common Data Model entities, such as Account and Contact. Dataflows also land the data, both standard and custom entities, in schematized Common Data Model form. Business analysts can take advantage of the standard schema and its semantic consistency, or customize their entities based on their unique needs. Common Data Model continues to evolve as part of the [Open Data Initiative](https://dynamics.microsoft.com/open-data-initiative/).
 
 ## Dataflow capabilities in Microsoft Power Platform services
 
