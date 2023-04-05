@@ -448,6 +448,8 @@
         href: connectors/opensearch-project.md
       - name: "Oracle database"
         href: connectors/oracle-database.md
+      - name: "Parquet"
+        href: connectors/parquet.md
       - name: "PDF"
         href: connectors/pdf.md
       - name: "PostgreSQL"
