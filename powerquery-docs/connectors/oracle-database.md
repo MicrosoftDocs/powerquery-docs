@@ -281,7 +281,7 @@ Once you've selected the advanced options you require, select **OK** in Power Qu
 
 ## Known issues and limitations
 
-Power BI sessions might still be active on your Oracle database for approximately 30 minutes after a dataset refresh to that Oracle database. Only after approximately 30 minutes do those sessions become inactive/removed on the Oracle database. This behavior is by design.
+Power BI sessions can still be active on your Oracle database for approximately 30 minutes after a dataset refresh to that Oracle database. Only after approximately 30 minutes do those sessions become inactive/removed on the Oracle database. This behavior is by design.
 
 ## Troubleshooting
 
