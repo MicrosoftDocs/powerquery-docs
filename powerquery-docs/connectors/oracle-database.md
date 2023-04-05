@@ -3,7 +3,7 @@ title: Power Query Oracle database connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your Oracle database using the connector.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 1/21/2022
+ms.date: 4/5/2023
 ms.author: bezhan
 ---
 
@@ -34,7 +34,7 @@ Before you can connect to an Oracle database using Power Query, you need to inst
 >[!Note]
 >Choose a version of Oracle Data Access Client (ODAC) that's compatible with your Oracle Server. For instance, ODAC 12.x doesn't always support Oracle Server version 9. Choose the Windows installer of the Oracle Client. During the setup of the Oracle client, make sure you enable *Configure ODP.NET and/or Oracle Providers for ASP.NET* at machine-wide level by selecting the corresponding checkbox during the setup wizard. Some versions of the Oracle client wizard selects the checkbox by default, others do'nt. Make sure that checkbox is selected so that Power Query can connect to your Oracle database.
 
-To connect to an Oracle database with the [on-premises data gateway](/data-integration/gateway/), the correct Oracle client software must be installed on the computer running the gateway. The Oracle client software you use depends on the Oracle server version, but will always match the 64-bit gateway. For more information, go to [Manage your data source - Oracle](/power-bi/connect-data/service-gateway-onprem-manage-oracle).
+To connect to an Oracle database with the [on-premises data gateway](/data-integration/gateway/), the correct Oracle client software must be installed on the computer running the gateway. The Oracle client software you use depends on the Oracle server version, but always matches the 64-bit gateway. For more information, go to [Manage your data source - Oracle](/power-bi/connect-data/service-gateway-onprem-manage-oracle).
 
 ## Capabilities Supported
 
@@ -61,7 +61,7 @@ To make the connection, take the following steps:
 
 3. If you're connecting from Power BI Desktop, select either the **Import** or **DirectQuery** data connectivity mode. The rest of these example steps use the Import data connectivity mode. To learn more about DirectQuery, go to [Use DirectQuery in Power BI Desktop](/power-bi/connect-data/desktop-use-directquery).
 
-4. If this is the first time you're connecting to this Oracle database, select the authentication type you want to use, and then enter your credentials. For more information about authentication, go to [Authentication with a data source](../connectorauthentication.md).
+4. If you're connecting to this Oracle database for the first time, select the authentication type you want to use, and then enter your credentials. For more information about authentication, go to [Authentication with a data source](../connectorauthentication.md).
 
    ![Enter your Oracle database credentials.](./media/oracle-database/sign-in.png)
 
@@ -82,7 +82,7 @@ To make the connection, take the following steps:
    > [!Note]
    > You must select an on-premises data gateway for this connector, whether the Oracle database is on your local network or on a web site.
 
-4. If this is the first time you're connecting to this Oracle database, select the type of credentials for the connection in **Authentication kind**. Choose **Basic** if you plan to use an account that's created within Oracle instead of Windows authentication.
+4. If you're connecting to this Oracle database for the first time, select the type of credentials for the connection in **Authentication kind**. Choose **Basic** if you plan to use an account that's created within Oracle instead of Windows authentication.
 
 5. Enter your credentials.
 
@@ -130,7 +130,7 @@ To download your client credentials:
 
 3. Review and accept the Oracle license agreement, then select **Download ODAC1931_x64.zip**.
 
-4. You'll be asked to sign in to your Oracle account. This account might be different from your Oracle Cloud account, so be sure to enter the correct user name and password.
+4. You're asked to sign in to your Oracle account. This account might be different from your Oracle Cloud account, so be sure to enter the correct user name and password.
 
    The Oracle ODAC OUI zip file is then downloaded to your Windows default download location.
 
@@ -223,7 +223,7 @@ Open the tnsnames.ora file in the wallets folder. The file contains a list of AD
 
    ![Image of the Oracle database dialog box with contosomart_high as the server name and import mode selected.](media/oracle-database/adb-enter-server.png)
 
-5. If this is the first time you're signing in to this server from Power BI Desktop, you'll be asked to enter your credentials. Select **Database**, then enter the user name and password for the Oracle database. The credentials you enter here are the user name and password for the specific Oracle Autonomous Database you want to connect to. In this example, the database's initial administrator user name and password are used. Then select **Connect**.
+5. If you're signing in to this server from Power BI Desktop for the first time, you're asked to enter your credentials. Select **Database**, then enter the user name and password for the Oracle database. The credentials you enter here are the user name and password for the specific Oracle Autonomous Database you want to connect to. In this example, the database's initial administrator user name and password are used. Then select **Connect**.
 
    ![Image of the credentials dialog box, with Database selected, and the default database user name and password entered.](media/oracle-database/adb-credentials.png)
 
@@ -275,11 +275,15 @@ The following table lists all of the advanced options you can set in Power Query
 | --------------- | ----------- |
 | Command timeout in minutes | If your connection lasts longer than 10 minutes (the default timeout), you can enter another value in minutes to keep the connection open longer. This option is only available in Power Query Desktop. |
 | SQL statement | For information, go to [Import data from a database using native database query](../native-database-query.md). |
-| Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, these columns won't appear. |
+| Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, these columns don't appear. |
 | Navigate using full hierarchy | If checked, the navigator displays the complete hierarchy of tables in the database you're connecting to. If cleared, the navigator displays only the tables whose columns and rows contain data. |
 | | |
 
-Once you've selected the advanced options you require, select **OK** in Power Query Desktop to connect to your Oracle database.
+Once you've selected the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your Oracle database.
+
+## Known issues and limitations
+
+Power BI sessions might still active on your Oracle database for approximately 30 minutes after a dataset refresh to that Oracle database. Only after approximately 30 minutes do those sessions become inactive/removed on the Oracle database. This behavior is by design.
 
 ## Troubleshooting
 
