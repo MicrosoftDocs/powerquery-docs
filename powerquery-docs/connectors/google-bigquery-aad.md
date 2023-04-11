@@ -109,9 +109,9 @@ These permissions typically are provided in the `BigQuery.User` role. More infor
 
 If the above steps don't resolve the problem, you can disable the BigQuery Storage API.
 
-### Unable to use DateTime type data in Direct Query mode
+### Unable to use DateTime type data in DirectQuery mode
 
-There's a known issue where the DateTime type isn't supported through Direct Query. Selecting a column with the DateTime type will cause an "Invalid query" error or a visual error.
+There's a known issue where the DateTime type isn't supported through DirectQuery. Selecting a column with the DateTime type will cause an "Invalid query" error or a visual error.
 
 ## Enable Azure AD Single Sign-On (SSO) for Google BigQuery
 
