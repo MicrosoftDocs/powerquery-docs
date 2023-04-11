@@ -6,7 +6,7 @@ author: ptyx507x
 ms.topic: overview
 ms.date: 1/9/2023
 ms.author: miescobar
-ms.search.form: DataflowGen2 Overview
+ms.search.form: DataflowGen2 Overview, product-data-integration
 ---
 
 # What is Power Query?
