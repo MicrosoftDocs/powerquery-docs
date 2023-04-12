@@ -36,6 +36,11 @@ To make the connection to **Dynamics 365**, follow these steps:
 
    :::image type="content" source="./media/dynamics-365/enter-web-api-url.png" alt-text="Screenshot of the Dynamics 365 dialog, showing an example format web api url.":::
 
+   >[!NOTE]
+   > - The url format will be something like `https://<tenant>.crm.dynamics.com/api/data/v9.0.`
+   > - The exact format of the URL you will use to connect depends on your region and the version of CDS for Apps you're using. For more information see: [Web API URL and versions (docs.com)](/power-apps/developer/data-platform/webapi/compose-http-requests-handle-errors#web-api-url-and-versions).
+   > - If you select the Advanced option, you can append certain additional parameters to the query to control what data is returned. For more information see: [Query Data using the Web API (docs.com)](/power-apps/developer/data-platform/webapi/query-data-web-api).
+
 1. Select **OK**.
 
 1. To authenticate, you can can either select Anonymous, Windows, Basic, Web API, or Organizational account. Enter your credentials and select **Connect**.
