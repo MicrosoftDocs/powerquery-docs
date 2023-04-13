@@ -1,13 +1,13 @@
 ---
-title: Power Query Dynamics 365 (online) connector
-description: Provides basic information, prerequisites, and instructions on how to connect to Dynamics 365 (online).
+title: Power Query Dynamics 365 Online (legacy) connector
+description: Provides basic information, prerequisites, and instructions on how to connect to Dynamics 365 Online (legacy).
 author: bezhan-msft
 ms.topic: conceptual
 ms.date: 04/12/2023
 ms.author: bezhan
 ---
 
-# Dynamics 365 (online)
+# Dynamics 365 Online (legacy)
 
 ## Summary
 
@@ -22,19 +22,17 @@ ms.author: bezhan
 
 - Import
 
-## Connect to Dynamics 365 (online) from Power Query Desktop
+## Connect to Dynamics 365 Online (legacy) from Excel and Power BI Desktop
 
-Power Query desktop includes Excel and Power BI as experiences.
-
-To make the connection to **Dynamics 365**, follow these steps:
+To make the connection to **Dynamics 365 Online (legacy)**, follow these steps:
 
 1. From **Get Data**, select the **Online Services** category, select **Dynamics 365 Online (legacy)**, and then select **Connect**. More information: [where to get data](../where-to-get-data.md)
 
-   :::image type="content" source="./media/dynamics-365/get-data.png" alt-text="Screenshot of the Get Data dialog, showing the Dynamics 365 database selection.":::
+   :::image type="content" source="./media/dynamics-365/get-data.png" alt-text="Screenshot of the Get Data dialog, showing the Dynamics 365 Online (legacy) database selection.":::
 
-1. In the window that appears, enter the server name of your Dynamics 365 instance. You can select **Advanced** to enter additional URL parts.
+1. In the window that appears, enter the server name of your Dynamics 365 Online (legacy) instance. You can select **Advanced** to enter additional URL parts.
 
-   :::image type="content" source="./media/dynamics-365/enter-web-api-url.png" alt-text="Screenshot of the Dynamics 365 dialog, showing an example format web api url.":::
+   :::image type="content" source="./media/dynamics-365/enter-web-api-url.png" alt-text="Screenshot of the Dynamics 365 Online (legacy) dialog, showing an example format web api url.":::
 
    >[!NOTE]
    > - The url format will be something like `https://<tenant>.crm.dynamics.com/api/data/v9.0.`
@@ -45,6 +43,6 @@ To make the connection to **Dynamics 365**, follow these steps:
 
 1. To authenticate, you can can either select Anonymous, Windows, Basic, Web API, or Organizational account. Enter your credentials and select **Connect**.
 
-    :::image type="content" source="./media/dynamics-365/access.png" alt-text="Screenshot of the Dynamics 365 Online anonymous access dialog, showing the other options along the side.":::
+    :::image type="content" source="./media/dynamics-365/access.png" alt-text="Screenshot of the Dynamics 365 Online (legacy) anonymous access dialog, showing the other options along the side.":::
 
 1. In **Navigator**, select one or more files or folders to import and use in your application. Then select either **Load** to load the table, or **Transform Data** to open the Power Query Editor where you can filter and refine the set of data you want to use, and then load that refined set of data.
