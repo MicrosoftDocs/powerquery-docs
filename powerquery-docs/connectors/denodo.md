@@ -200,3 +200,24 @@ When finished, select **Done** and the advanced editor window will close. Then a
 ![Permissions for native query execution.](./media/denodo/edit-permission-native-query.png)
 
 In order to apply the modifications just made in the data transformation window, select **File** > **Apply**. After that you'll return to the Power BI main window and your changes will be applied to your data sources.
+
+## Troubleshooting
+
+### Loading data when a field in a Denodo view has more than 42 relations with other views.
+
+If a Denodo view being imported as a data source into Power BI has more than 42 relations with other views, Power BI may display the following error when accessing the data transformation window: 
+
+`Preview.Error: The type of the current preview value is too complex to display.`
+
+This is due to a limitation in the Microsoft Power Query platform. In order to work around it, select the failing data source (_query_) in the data transformation window and access the advanced editor with **View** > **Advanced Editor**. Then edit the data source expression in M language adding the following property to the `options` argument of the `Denodo.Contents` function call:
+
+```
+CreateNavigationProperties=false
+```
+So your call would look similar to:
+
+```
+  Source = Denodo.Contents(<dsn>, null, [CreateNavigationProperties=false])
+```
+
+This property will instruct Power BI not to try and generate navigation properties from the relationships registered for the Denodo view accessed in this data source. So if you need some of these relationships to be actually present in your Power BI data model, _you will need to manually register them afterwards_.
