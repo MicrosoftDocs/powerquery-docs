@@ -76,11 +76,25 @@ To make the connection, take the following steps:
 
 3. The second section, **Enable debug mode**, is an optional field that allows you to add trace information to log files. These files are created by Power BI Desktop when you enable tracing in the application using the **Diagnostics** tab in the **Options** menu. Note that the default value for **Enable debug mode** is false, and in this scenario, there will be no trace data in the log files from Denodo Power BI custom connector.
 
-4. The last section in **Denodo Connector** is **Data connectivity mode**, where you can choose between Import mode or DirectQuery mode.
+4. The third section, **Native Query**, is an optional field where you can enter a query. If this query field is used, the resulting dataset will be the result of the query instead of a table or a set of tables.
+    
+    You can write a query that queries only one of the databases that the datasource is associated with.
+    
+    ``` sql
+    SELECT title, name FROM film JOIN language ON film.language_id = language.language_id WHERE film.language_id = 1
+    ```
 
-5. Once you're done, select **OK**.
+    If you want to write a query that queries more than one database you have to specify in the query the database that owns each table.
 
-6. Before showing the navigator window that displays a preview of the available data in Denodo Virtual DataPort, you'll be asked for authentication. The Denodo Power BI custom connector supports two authentication types: Windows and Basic.
+    ``` sql
+    SELECT i_item_sk, country FROM sakila.country, ewd.item
+    ```
+
+5. The last section in **Denodo Connector** is **Data connectivity mode**, where you can choose between Import mode or DirectQuery mode.
+
+6. Once you're done, select **OK**.
+
+7. Before showing the navigator window that displays a preview of the available data in Denodo Virtual DataPort, you'll be asked for authentication. The Denodo Power BI custom connector supports two authentication types: Windows and Basic.
 
    * **Windows**: When you choose to use Windows authentication, Power BI Desktop connects to Virtual DataPort using Kerberos authentication.
 
@@ -102,9 +116,9 @@ To make the connection, take the following steps:
 
       ![Denodo basic authentication in Power BI Desktop.](./media/denodo/denodo-basic-authentication.png)
 
-7. Once you're done, select **Connect**.
+8. Once you're done, select **Connect**.
 
-8. In **Navigator**, select the data you need from the database you want and choose **Load**, or choose **Transform Data** if you're going to modify the incoming data.
+9. In **Navigator**, select the data you need from the database you want and choose **Load**, or choose **Transform Data** if you're going to modify the incoming data.
 
    ![Denodo navigator.](./media/denodo/denodo-navigator.png)
 
@@ -158,48 +172,6 @@ To make the connection, take the following steps:
    * Select **File** > **Publish** > **Publish to Power BI**.
    * Save the report on the computer.
    * Select the workspace where you want to publish.
-
-## Use Native Queries (SQL) in the definition of a data source
-
-Native Queries offer the possibility to import data into Power BI based on the use of SQL queries. 
-
-The current way of using native SQL queries with Denodo is by means of the Power Query `Value.NativeQuery` function in Power BI's advanced editor. This means you can:
-
-   * Modify an already-defined Denodo data source adding the native query function to its definition.
-   * Create a native-query-enabled data source from scratch, using the New Blank Query option.
-
-In both cases, you'll first need to access the data transformation window by going to **Home** > **Transform data** and then either select an existing _query_ (data source) or create a new blank one. Then access the advanced editor with **View** > **Advanced Editor**.
-
-Once there, you'll be able to apply the `Value.NativeQuery` function to the definition of the data source in replacement of the usual table selection step. This should look similar to:
-
-```powerquery-m
-let
-  Source = Denodo.Contents(<dsn>, null, []),
-  Source_DB = Source{[Name=<database_name>, Kind="Database"]}[Data],
-  Source_Data = Value.NativeQuery(Source_DB, <sql_query>, <sql_params>, [EnableFolding=true])
-in
-  Source_Data
-```
-
-![Native Query in advanced editor.](./media/denodo/native-query-qdvanced-editor.png)
-
-
-The `Value.NativeQuery` function is defined as:
-
-```
-Value.NativeQuery(target as any, query as text, optional parameters as any, optional options as nullable record) as any
-```
-
->[!Note]
-> Learn more about the `Value.NativeQuery` function [here](/powerquery-m/value-nativequery).
-
-Note that, by setting `EnableFolding=true` in the above example, _DirectQuery mode is enabled_ for the defined data source.
-
-When finished, select **Done** and the advanced editor window will close. Then a message will appear asking for permission to execute the new native query: select **Edit Permission** and confirm you want to allow the query to be executed.
-
-![Permissions for native query execution.](./media/denodo/edit-permission-native-query.png)
-
-In order to apply the modifications just made in the data transformation window, select **File** > **Apply**. After that you'll return to the Power BI main window and your changes will be applied to your data sources.
 
 ## Troubleshooting
 
