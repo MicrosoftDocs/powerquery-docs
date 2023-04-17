@@ -5,7 +5,7 @@ author: denodo-research-labs
 ms.author: bezhan
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 2/13/2023
+ms.date: 4/17/2023
 ---
 
 # Denodo
@@ -84,7 +84,7 @@ To make the connection, take the following steps:
     SELECT title, name FROM film JOIN language ON film.language_id = language.language_id WHERE film.language_id = 1
     ```
 
-    If you want to write a query that queries more than one database you have to specify in the query the database that owns each table.
+    If you want to write a query that queries more than one database, you have to specify in the query the database that owns each table.
 
     ``` sql
     SELECT i_item_sk, country FROM sakila.country, ewd.item
@@ -177,11 +177,11 @@ To make the connection, take the following steps:
 
 ### Loading data when a field in a Denodo view has more than 42 relations with other views.
 
-If a Denodo view being imported as a data source into Power BI has more than 42 relations with other views, Power BI may display the following error when accessing the data transformation window: 
+If a Denodo view being imported as a data source into Power BI has more than 42 relations with other views, Power BI might display the following error when accessing the data transformation window: 
 
 `Preview.Error: The type of the current preview value is too complex to display.`
 
-This is due to a limitation in the Microsoft Power Query platform. In order to work around it, select the failing data source (_query_) in the data transformation window and access the advanced editor with **View** > **Advanced Editor**. Then edit the data source expression in M language adding the following property to the `options` argument of the `Denodo.Contents` function call:
+This error is due to a limitation in the Microsoft Power Query platform. In order to work around it, select the failing data source (_query_) in the data transformation window and access the advanced editor with **View** > **Advanced Editor**. Then edit the data source expression in M language adding the following property to the `options` argument of the `Denodo.Contents` function call:
 
 ```
 CreateNavigationProperties=false
