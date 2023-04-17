@@ -376,7 +376,7 @@
         href: connectors/digital-construction-works-insights.md
       - name: "Eduframe (Beta)"
         href: connectors/eduframe.md
-      - name: "EQuIS (Beta)"
+      - name: "EQuIS"
         href: connectors/equis.md
       - name: "Essbase"
         href: connectors/essbase.md
