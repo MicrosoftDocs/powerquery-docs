@@ -1,6 +1,15 @@
+---
+title: SolarWinds Service Desktop (Beta)
+description: Provides basic information, prerequisites, and instructions on how to connect to the SolarWinds Service Desktop connector.
+author: giladsmg
+ms.author: bezhan
+ms.topic: conceptual
+ms.date: 5/1/2023
+---
+
 # SolarWinds Service Desk (Beta)
 
-This connector lets you import incident records from SolarWinds Service Desk to Microsoft Power BI. You can import records from the past two years. You will have raw data on the topics
+This connector lets you import incident records from SolarWinds Service Desk to Microsoft Power BI. You can import records from the past two years. You'll will have raw data on the topics
 most relevant to your organization, which you can then analyze and review by viewing it in a
 variety of formats, such as tables, graphs, and charts.
 
@@ -31,7 +40,7 @@ To connect to SolarWinds Service Desk:
 
    ![Get Data from SolarWinds Service Desk](./media/solarwinds-service-desk/get-data.png)
 
-2. Sign in with JSON web token you generated as described in prerequisites, and then select **Connect** to verify your access to SolarWinds Service Desk.
+2. Sign in with the JSON web token you generated as described in prerequisites, and then select **Connect** to verify your access to SolarWinds Service Desk.
 
    ![Auth Key Dialog](./media/solarwinds-service-desk/auth-key.png)
 
@@ -43,20 +52,20 @@ To connect to SolarWinds Service Desk:
 
 Users should be aware of the following limitations and issues associated with accessing SolarWinds Service Desk:
 
-* You can import only once per day; that is, once every 24 hours. If you attempt to refresh prior to the allowed 24-hour cycle, you will receive an error message.
+* You can import only once per day; that is, once every 24 hours. If you attempt to refresh prior to the allowed 24-hour cycle, you'll receive an error message.
 
   ![Error_message](./media/solarwinds-service-desk/error_message.png)
 
-* There is no limit on the number of users who can pull data, but each user can refresh only once every 24 hours.
+* There's no limit on the number of users who can pull data, but each user can refresh only once every 24 hours.
 
 * Only incident data is imported, providing historical details from January 1, 2020 to date.
-  The incident fields that are imported are limited. If you need to import a field that is not available you can request that it be added.
-  If you have any questions about what can be imported or issues with the PowerBI integration, please email  Rinat.Gil@solarwinds.com.
+  The incident fields that are imported are limited. If you need to import a field that's not available, you can request that it be added.
+  If you have any questions about what can be imported or issues with the PowerBI integration, email Rinat.Gil@solarwinds.com.
 
 ### Credential error in the Navigator
 
 If a credential error occurs in the Navigator, clear your recent data source settings.
-1. In Power BI Desktop, select **File** > **Data source settings**:
+1. In Power BI Desktop, select **File** > **Data source settings**.
 
    ![Select SolarWinds Service Desk datasource](./media/solarwinds-service-desk/datasource-clear.png)
 
