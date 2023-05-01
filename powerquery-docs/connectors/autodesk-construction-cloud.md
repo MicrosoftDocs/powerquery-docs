@@ -7,7 +7,7 @@ ms.date: 6/24/2022
 ms.author: bezhan
 ---
 
-# Autodesk Construction Cloud (Beta)
+# Autodesk Construction Cloud
 
 >[!Note]
 >The following connector article is provided by Autodesk, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Autodesk website and use the support channels there.
@@ -16,7 +16,7 @@ ms.author: bezhan
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | Beta |
+| Release State | GA |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)  |
 | Authentication Types Supported | Autodesk account |
 | Function Reference Documentation |&mdash; |
@@ -34,7 +34,7 @@ To use the Autodesk Construction Cloud connector, you must have an Autodesk acco
 
 To connect to Autodesk Construction Cloud data:
 
-1. Select **Get Data** from the **Home** ribbon in Power BI Desktop. Select **Other** from the categories on the left, select **Autodesk Construction Cloud**, and then select **Connect**.
+1. Select **Get Data** from the **Home** ribbon in Power BI Desktop. Select **Online Services** from the categories on the left, select **Autodesk Construction Cloud**, and then select **Connect**.
 
 2. If this is the first time you're getting data through the Autodesk Construction Cloud connector, a preview connector notice will be displayed. Select **Don't warn me again with this connector** if you don't want this message to be displayed again, and then select **Continue**.
 
@@ -54,9 +54,13 @@ To connect to Autodesk Construction Cloud data:
 
    ![Signed in and ready to connect.](./media/autodesk-construction-cloud/acc-sign-in-success.png)
 
-7. In **Navigator**, expand the Account you want to pull data from, select the desired tables, and then either select **Load** to load the data or **Transform Data** to continue transforming the data in the Power Query editor.
+7. In **Navigator**, expand the Account you want to pull data from which will display an **Account Extract** folder and a **Project Extracts** folder. **Account Extract** will contain the data extract of the most recent account level extract if you have proper access and have ran an account level data extract. **Project Extracts** will contain a listing of each project in the account you have access to which you can then expand to see the relevant tables in that specific projects extracts if you have run a data extraction.
 
-   ![Navigate to data tables and load or transform data.](./media/autodesk-construction-cloud/acc-table-selection.png)
+   ![Navigate to the desired data extraction.](./media/autodesk-construction-cloud/acc-extract-selection.png)
+
+8. Once you navigate to the desired Account or Project extract, select the desired tables, and then either select **Load** to load the data or **Transform Data** to continue transforming the data in the Power Query editor.
+
+   ![Navigate to data tables and load or transform data.](./media/autodesk-construction-cloud/acc-table-selection-account.png)
   
 ## Connect using Autodesk provided Power BI Templates
 
