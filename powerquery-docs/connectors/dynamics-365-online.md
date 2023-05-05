@@ -3,11 +3,13 @@ title: Power Query Dynamics 365 Online (legacy) connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Dynamics 365 Online (legacy).
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 04/12/2023
+ms.date: 05/05/2023
 ms.author: bezhan
 ---
 
 # Dynamics 365 Online (legacy)
+
+This article provides basic information, prerequisites, and instructions on how to connect to Dynamics 365 Online (legacy) from Power Query.
 
 ## Summary
 
@@ -17,7 +19,7 @@ ms.author: bezhan
 | Products | Excel <br/> Power BI (Datasets)<br/> Analysis Services|
 | Authentication Types Supported | Anonymous<br/>Windows<br/>Basic<br/>Web API<br/>Organizational account |
 
-## Capabilities Supported
+## Capabilities supported
 
 - Import
 
