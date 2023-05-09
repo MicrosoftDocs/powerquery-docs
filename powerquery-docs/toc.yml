@@ -418,6 +418,8 @@
         href: connectors/ibm-db2-database.md
       - name: "Impala database"
         href: connectors/impala-database.md
+      - name: "inwink"
+        href: connectors/inwink (Beta).md
       - name: "JSON"
         href: connectors/json.md
       - name: LinkedIn Sales Navigator (Beta)
