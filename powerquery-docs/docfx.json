@@ -42,7 +42,7 @@
       "extendBreadcrumb": true,
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/powerquery-docs",
-      "feedback_product_url": "https://docs.microsoft.com/power-query/feedback",
+      "feedback_product_url": "/power-query/feedback",
       "searchScope": ["Power Query"],
       "recommendations": true,
       "titleSuffix": "Power Query",
