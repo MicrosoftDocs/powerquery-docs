@@ -43,12 +43,12 @@ To connect to Windsor&#46;ai:
 
 4. Enter your [Windsor.ai API Key](<https://onboard.windsor.ai>) and choose the desired **Date Range**. 
    
-   ![Enter API Key and choose the desired Date Range](/media/windsor/windsor-enter-api-key.PNG)
+   ![Enter API Key and choose the desired Date Range](./media/windsor/windsor-enter-api-key.PNG)
 
 5. In the **Navigator** dialog box you'll now see all the available objects for the chosen data source. Clicking on a table will allow you to preview the available data. 
 Check one or more tables from the list and click on **Load**. 
    
-   ![Windsor Navigation Table](/media/windsor/windsor-navigator.PNG)
+   ![Windsor Navigation Table](./media/windsor/windsor-navigator.PNG)
 
 
 ## Known issues and limitations
