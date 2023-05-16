@@ -35,7 +35,7 @@ To connect to Windsor&#46;ai:
 
 1. Select **Get Data** from the **Home** ribbon in Power BI Desktop, then search for **Windsor**. 
    
-   ![Search for Windsor connector](/media/windsor/windsor-get-data.png)
+   ![Search for Windsor connector](./media/windsor/windsor-get-data.png)
 
 2. Choose the data source that you want to connect to (i.e. Twitter by Windsor&#46;ai) and click *Connect*.
 
