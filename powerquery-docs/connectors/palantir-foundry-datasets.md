@@ -38,7 +38,7 @@ To connect to Palantir Foundry from Power Query Desktop, take the following step
 1. Select the **Palantir Foundry** option in the connector selection.
 2. In **Connection Settings**, provide the **Base URL** of your Foundry environment. For example, `https://<subdomain>.palantirfoundry.com/`. Optionally, provide a **Dataset RID** and **Branch**.
 
-   ![Enter Palantir Foundry connection settings.](./media/palantir-foundry-datasets/connection-settings.png)
+   ![Enter Palantir Foundry connection settings in Power Query Desktop](./media/palantir-foundry-datasets/connection-settings.png)
 
 3. Select either the **Import** or **DirectQuery** data connectivity mode.
 4. Select **OK**.
@@ -49,7 +49,7 @@ To connect to Palantir Foundry from Power Query Desktop, take the following step
    For more details on these authentication options, see Foundry's documentation: [Power BI: Authenticate with Foundry](https://www.palantir.com/docs/foundry/analytics-connectivity/power-bi-getting-started/#authenticate-with-foundry)
 6. In **Navigator**, select the dataset(s) you want, then select either **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
 
-   ![Power Query Desktop Navigator showing the selected dataset.](./media/palantir-foundry-datasets/select-data.png)
+   ![Power Query Desktop Navigator showing the selected dataset](./media/palantir-foundry-datasets/select-data.png)
 
 ## Connect to Palantir Foundry from Power Query Online
 
@@ -61,7 +61,7 @@ To connect to Palantir Foundry from Power Query Online, take the following steps
 1. Select the **Palantir Foundry** option in the connector selection.
 2. In **Connection Settings**, provide the Base URL that matches a connection already configured on your on-premises data gateway. For example, `https://<subdomain>.palantirfoundry.com/`. Optionally, provide a **Dataset RID** and **Branch**.
 
-    ![Enter Palantir Foundry connection settings.](./media/palantir-foundry-datasets/online-connection-settings.png)
+    ![Enter Palantir Foundry connection settings in Power Query Online](./media/palantir-foundry-datasets/online-connection-settings.png)
     
     Ensure that the **Connection** dropdown shows the name of your on-premises gateway.
 3. Select **Next** to continue.
