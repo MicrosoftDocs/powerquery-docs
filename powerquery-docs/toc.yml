@@ -450,6 +450,8 @@
         href: connectors/opensearch-project.md
       - name: "Oracle database"
         href: connectors/oracle-database.md
+      - name: "Palantir Foundry"
+        href: connectors/palantir-foundry-datasets.md
       - name: "Parquet"
         href: connectors/parquet.md
       - name: "PDF"
