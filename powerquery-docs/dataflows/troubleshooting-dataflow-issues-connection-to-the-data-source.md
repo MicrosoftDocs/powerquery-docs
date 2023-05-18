@@ -1,13 +1,10 @@
 ---
 title: Troubleshooting dataflow issues - connection to the data source
 description: Troubleshooting dataflow issues - connection to the data source
-author: radacad
-
-ms.service: powerquery
-ms.reviewer: kvivek
+author: bensack
 ms.topic: conceptual
-ms.date: 12/3/2020
-ms.author: bezhan
+ms.date: 6/13/2022
+ms.author: bensack
 ---
 
 # Troubleshooting dataflow issues: Connection to the data source
@@ -18,7 +15,7 @@ When you create a dataflow, sometimes you get an error connecting to the data so
 
 This problem can happen when you move a query from Power Query in desktop tools to Power Query in the dataflow, and you get the error "An on-premises data gateway is required to connect."
 
-![Gateway selection error.](media/GatewaySelectError.png)
+![Gateway selection error.](media/troubleshooting-dataflow-issues-connection-to-the-data-source/gateway-select-error.png)
 
 **Reason:**
 
@@ -26,13 +23,13 @@ When your entity in the dataflow gets data from an on-premises data source, a ga
 
 **Resolution:**
 
-Select **Select gateway**. If the gateway hasn't been set up yet, see [Install an on-premises data gateway](/data-integration/gateway/service-gateway-install).
+Select **Select gateway**. If the gateway hasn't been set up yet, go to [Install an on-premises data gateway](/data-integration/gateway/service-gateway-install).
 
 ## Error: Please specify how to connect
 
 This problem happens when you're connected to a data source, but haven't set up the credentials or connection details yet. It can happen when you migrate queries into a dataflow.
 
-![Configure a connection.](media/ConfigureConnection.png)
+![Configure a connection.](media/troubleshooting-dataflow-issues-connection-to-the-data-source/configure-connection.png)
 
 **Reason:**
 
@@ -46,7 +43,7 @@ Select **Configure connection**. Set up the connection details and credentials.
 
 Sometimes, when you migrate your queries from Power Query in desktop tools to the dataflow, you get an error saying that a module is disabled in this context. One example of this situation is when your query uses functions such as `Web.Page` or `Web.BrowserContents`.
 
-![Disabled module.](media/DisabledModule.png)
+![Disabled module.](media/troubleshooting-dataflow-issues-connection-to-the-data-source/disabled-module.png)
 
 **Reason:**
 
@@ -56,12 +53,42 @@ Disabled modules are related to functions that require an on-premises data gatew
 
 First, [install and set up an on-premises gateway](/data-integration/gateway/service-gateway-install). Then add a web data source for the web URL you're connecting to.
 
-![Add a web data source.](media/WebDataSourceInGateway.png)
+![Add a web data source.](media/troubleshooting-dataflow-issues-connection-to-the-data-source/web-data-source-in-gateway.png)
 
 After adding the web data source, you can select the gateway in the dataflow from **Options** > **Project options**.
 
-![Project options in the dataflow.](media/ProjectOptions.png)
+![Project options in the dataflow.](media/troubleshooting-dataflow-issues-connection-to-the-data-source/project-options.png)
 
 You might be asked to set up credentials. When you've set up the gateway and your credentials successfully, the modules will no longer be disabled."
 
-![Disabled functions now working.](media/DisabledFunctionWorkingFine.png)
+![Disabled functions now working.](media/troubleshooting-dataflow-issues-connection-to-the-data-source/disabled-function-working-fine.png)
+
+## Deleted or old data sources still show up
+
+Sometimes when you delete a data source from your dataflow, it still shows up on your credentials overview or lineage overview. This doesn't impact the refresh or authoring of your dataflow.
+
+![Lineage overview.](media/troubleshooting-dataflow-issues-connection-to-the-data-source/linage-overview.png)
+
+**Reason:**
+
+A dataflow maintains its association with deleted dataflow data sources and doesn't delete them automatically. This requires a trim initiated by the user.
+
+**Resolution:**
+
+In order to trim the data sources, you'll need to take the following steps:
+
+1. Open your dataflow.
+
+1. Select **Options**.
+
+1. Select **Project options**.
+
+   ![Screenshot showing the Options and Project Options selections emphasized.](media/troubleshooting-dataflow-issues-connection-to-the-data-source/project-options.png)
+
+1. Change the gateway to another gateway. It doesn't matter which one, as long as it's a different gateway.
+
+   ![Gateway selector.](media/troubleshooting-dataflow-issues-connection-to-the-data-source/gateway-selection.png)
+
+1. After you apply the change by selecting **OK**, repeat steps 1 through 4 to select the original gateway again.
+
+These steps essentially delete all the data source bindings for the dataflow. After finishing these steps, you might be asked to set up credentials. When you've set up the gateway and your credentials successfully, you effectively "trimmed" the data source bindings for the dataflow to just the ones that the dataflow is actually using.

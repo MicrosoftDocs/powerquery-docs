@@ -1,25 +1,25 @@
 ---
 title: Load data in a Dataverse table and build a dataflows monitoring report with Power BI
 description: How to use the dataflows connector in Power Automate to create a dataflows monitoring report with Power BI
-author: miquelladeboer
+author: luitwieler
 
-ms.service: powerquery
-ms.reviewer: kvivek
+
+ms.reviewer: dougklo
 ms.topic: conceptual
-ms.date: 11/12/2021
-ms.author: mideboer
+ms.date: 1/6/2023
+ms.author: jeluitwi
 ---
 # Load data in a Dataverse table and build a dataflows monitoring report with Power BI
 
 This tutorial demonstrates how to load data in a Dataverse table to create a dataflows monitoring report in Power BI.
 
-![Image of an example Power BI data monitoring dashboard.](media/dashboard.PNG)
+![Image of an example Power BI data monitoring dashboard.](media/load-dataflow-metadata-into-dataverse-table/dashboard.png)
 
 You can use this dashboard to monitor your dataflows' refresh duration and failure count. With this dashboard, you can track any issues with your dataflows performance and share the data with others.
 
 First, you'll create a new Dataverse table that stores all the metadata from the dataflow run. For every refresh of a dataflow, a record is added to this table. You can also store metadata for multiple dataflow runs in the same table. After the table is created, you'll connect the Power BI file to the Dataverse table.
 
-![Dataverse tutorial overview.](media/dataverse.PNG)
+![Dataverse tutorial overview.](media/load-dataflow-metadata-into-dataverse-table/dataverse.png)
 
 ## Prerequisites
 
@@ -33,7 +33,7 @@ First, you'll create a new Dataverse table that stores all the metadata from the
 
 ## Download the .pbit file
 
-First, download the Dataverse [.pbit file](https://download.microsoft.com/download/1/4/E/14EDED28-6C58-4055-A65C-23B4DA81C4DE/dataverse-template.pbit).
+First, download the Dataverse [.pbit file](https://download.microsoft.com/download/1/4/E/14EDED28-6C58-4055-A65C-23B4DA81C4DE/dataverse-template-v2.pbit).
 
 ## Create a new table in Dataverse
 
@@ -41,7 +41,7 @@ First, download the Dataverse [.pbit file](https://download.microsoft.com/downlo
 
 2. On the left navigation pane expand **Data**, select **Tables**, and then select **New table**.
 
-   [![Image with the new table dialog opened.](media/new-table-dialog.png)](media/new-table-dialog.png#lightbox)
+   [![Image with the new table dialog opened.](media/load-dataflow-metadata-into-dataverse-table/new-table-dialog.png)](media/load-dataflow-metadata-into-dataverse-table/new-table-dialog.png#lightbox)
 
 3. In the **New table** pane:
    1. Enter **Dataflows Monitoring** in **Display name**.
@@ -50,12 +50,13 @@ First, download the Dataverse [.pbit file](https://download.microsoft.com/downlo
 
 4. Select **Add column** to repeat adding columns for the following values:
 
+   * **Display name**: "Dataflow Id", **Data type**: Text, **Required**: Required.
    * **Display name**: "Refresh Status", **Data type**: Text, **Required**: Required.
    * **Display name**: "Refresh Type", **Data type**: Text, **Required**: Required.
    * **Display name**: "Start Time", **Data type**: Date and Time, **Required**: Required.
    * **Display name**: "End Time", **Data type**: Date and Time, **Required**: Required.
 
-   [![Image with the new column dialog opened.](media/new-column-dialog.png)](media/new-column-dialog.png#lightbox)
+   [![Image with the new column dialog opened.](media/load-dataflow-metadata-into-dataverse-table/new-column-dialog.png)](media/load-dataflow-metadata-into-dataverse-table/new-column-dialog.png#lightbox)
 
 ## Create a dataflow
 
@@ -76,16 +77,16 @@ If you don't already have one, create a dataflow. You can create a dataflow in e
 6. Search for the "Add a new row" connector from Dataverse, and then select it.
 7. In **Add a new row**, select **Choose a table** and then choose **Dataflows Monitoring** from the list.
 
-   ![Image with the dataflows monitoring fields in the add a new row dialog box.](media/table-choice.png)
+   ![Image with the dataflows monitoring fields in the add a new row dialog box.](media/load-dataflow-metadata-into-dataverse-table/table-choice.png)
 
 8. For every required field, you need to add a dynamic value. This value is the output of the metadata of the dataflow that's run.
     1. Select the field next to **Dataflow Name** and then select **Dataflow Name** from the dynamic content.
 
-       [![Image with the dataflow name dynamic content added to the dataflow name field.](media/dynamic.png)](media/dynamic.png#lightbox)
+       [![Image with the dataflow name dynamic content added to the dataflow name field.](media/load-dataflow-metadata-into-dataverse-table/dynamic.png)](media/load-dataflow-metadata-into-dataverse-table/dynamic.png#lightbox)
 
     2. Repeat this process for all required fields.
 
-       ![Image of the Add a new row connector with all the fields filled in with dynamic content.](media/final.PNG)  
+       ![Image of the Add a new row connector with all the fields filled in with dynamic content.](media/load-dataflow-metadata-into-dataverse-table/final.png)  
 
 9. Save the flow.
 

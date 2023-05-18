@@ -2,15 +2,9 @@
 title: Link entities between dataflows
 description: Learn how to link entities in dataflows
 author: bensack
-manager: kfile
-ms.reviewer: ''
-
-ms.service: dataflows
 ms.topic: conceptual
-ms.date: 8/31/2021
+ms.date: 1/6/2023
 ms.author: bensack
-
-LocalizationGroup: Data from files
 ---
 # Link entities between dataflows
 
@@ -43,19 +37,19 @@ Linked entities are available in both Power Apps Plan 1 and Plan 2.
 
 There are a few ways to link entities between dataflows. To link entities in Power BI, you must sign in with your Power BI credentials.
 
-You can select **Get data** from the dataflow authoring tool, which displays a dialog box for selecting the categories and each data source. Then select the **Power Platform dataflows** connector. 
+You can select **Get data** from the dataflow authoring tool, which displays a dialog box for selecting the categories and each data source. Then select the **Power Platform dataflows** connector.
 
-![Image showing how to select the Power Platform connector in Power BI.](media/dataflows-linked-entities/linked-entities-03.png)
+![Image showing how to select the Power Platform connector in Power BI.](media/linked-entities/linked-entities-03.png)
 
 A connection window for the selected data connection is displayed. If credentials are required, you're prompted to provide them.
 
 In Power BI, you can select **Add linked entities** from the dataflow authoring tool.
 
-![Image showing how to add linked entities in the Power BI dataflow authoring tool.](media/dataflows-linked-entities/linked-entities-00.png)
+![Image showing how to add linked entities in the Power BI dataflow authoring tool.](media/linked-entities/linked-entities-00.png)
 
 You can also select **Add linked entities** from the **Add entities** menu in the Power BI service.
 
-![Image showing how to add linked entities from the menu in the Power BI service.](media/dataflows-linked-entities/linked-entities-01.png)
+![Image showing how to add linked entities from the menu in the Power BI service.](media/linked-entities/linked-entities-01.png)
 
 A **Navigator** window opens, and you can choose a set of entities you can connect to. The window displays entities for which you have permissions across all workspaces and environments in your organization.
 
@@ -95,6 +89,7 @@ There are a few limitations to keep in mind when working with linked entities:
 * The dataflow must be in a [new Power BI workspace](/power-bi/service-create-the-new-workspaces) or a Power Apps environment.
 * A linked entity can't be joined with a regular entity that gets its data from an on-premises data source.
 * When using M parameters to address linked entities, if the source dataflow is refreshed, it doesn't automatically affect the data in the destination dataflow.
+* Attempting to connect two dataflow entities between two workspaces of different storage types&mdash;Bring Your Own Storage Account (BYOSA) and Internal&mdash;isn't supported.
 
 ## Next steps
 
@@ -119,4 +114,4 @@ For more information about Power Query and scheduled refresh, you can read these
 
 For more information about Common Data Model, you can read its overview article:
 
-* [Common Data Model - overview ](/powerapps/common-data-model/overview)
+* [Common Data Model - overview](/powerapps/common-data-model/overview)

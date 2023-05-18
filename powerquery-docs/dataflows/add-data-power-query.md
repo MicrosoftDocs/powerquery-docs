@@ -1,14 +1,11 @@
 ---
-title: Add data to a table in Microsoft Dataverse by using Power Query | Microsoft Docs
+title: Add data to a table in Microsoft Dataverse by using Power Query
 description: Step-by-step instructions for how to use Power Query to add data to a new or existing table in Microsoft Dataverse from another data source.
-author: mllopis
+author: bensack
 ms.reviewer: dougklo
-ms.service: powerquery
 ms.topic: how-to
-ms.date: 9/1/2021
-ms.author: millopis
-
-LocalizationGroup: reference
+ms.date: 1/6/2023
+ms.author: bensack
 ---
 
 # Add data to a table in Microsoft Dataverse by using Power Query
@@ -39,22 +36,23 @@ Before you start to follow this article:
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-1. In the navigation pane, select **Data** to expand it, and then select **Tables**.
+1. In the navigation pane, select **Dataverse** to expand it, and then select **Tables**.
 
-    > ![Tables area.](./media/view-entities-portal.png)
+    ![Tables area.](./media/add-data-power-query/view-entities-portal.png)
 
-1. In the command menu, select **Get data**.
+1. In the command menu, select **Data** > **Get data**.
 
 1. In the list of data sources, select **OData**.
 
-    > ![Choose the OAuth connector.](./media/choose-odata.png)
+    ![Choose the OAuth connector.](./media/add-data-power-query/choose-odata.png)
 
-1. Under **Connection settings**, type or paste this URL, and then select **Next**:<br>
-`https://services.odata.org/V4/Northwind/Northwind.svc/`
+1. Under **Connection settings**, type or paste this URL, and then select **Next**:
 
-1. In the list of tables, select the **Customers** check box, and then select **Transform data**.
+   `https://services.odata.org/V4/Northwind/Northwind.svc/`
 
-    > ![Select the Customers table.](./media/select-table.png)
+1. In the list of tables, select the **Customers** check box, and then select **Next**.
+
+    ![Select the Customers table.](./media/add-data-power-query/select-table.png)
 
 1. (optional) Modify the schema to suit your needs by choosing which columns to include, transforming the table in one or more ways, adding an index or conditional column, or making other changes.
 
@@ -64,7 +62,7 @@ Before you start to follow this article:
 
 1. Under **Load settings**, select **Load to new table**.
 
-    > ![Load to new table.](./media/new-entity-name.png)
+    ![Load to new table.](./media/add-data-power-query/new-entity-name.png)
 
     You can give the new table a different name or display name, but leave the default values to follow this tutorial exactly.
 
@@ -72,20 +70,19 @@ Before you start to follow this article:
 
     You can specify a different primary-name column, map a different column in the source table to each column in the table that you're creating, or both. You can also specify whether Text columns in your query output should be created as either Multiline Text or Single-Line Text in the Dataverse. To follow this tutorial exactly, leave the default column mapping.
 
-1. Select **Refresh manually** for Power Query - Refresh Settings, and then select **Create**.
+1. Select **Refresh manually** for Power Query - Refresh Settings, and then select **Publish**.
 
-1. Under **Data** (near the left edge), select **Tables** to show the list of tables in your database.
+1. Under **Dataverse** (near the left edge), select **Tables** to show the list of tables in your database.
 
     The **Customers** table that you created from an OData feed appears as a custom table.
 
-    > ![List of standard and custom tables.](./media/entity-list.png)
+    ![List of standard and custom tables.](./media/add-data-power-query/entity-list.png)
 
 > [!WARNING]
-> If you use Power Query to add data to an existing table, all data in that table will be overwritten.
+> Existing data might be altered or deleted when loading data to a Dataverse table while having the **Delete rows that no longer exist in the query output** enabled or a primary key column defined.
 
 If you select **Load to existing table**, you can specify a table into which you add data from the **Customers** table. You could, for example, add the data to the **Account** table with which the Dataverse ships. Under **Column mapping**, you can further specify that data in the **ContactName** column from the **Customers** table should be added to the **Name** column in the **Account** table.
 
-  > [!div class="mx-imgBorder"]
-  > ![Specify the name of the new table.](./media/existing-entity.png)
+![Specify the name of the new table.](./media/add-data-power-query/existing-entity.png)
 
 If an [error message about permissions](/powerapps/maker/data-platform/troubleshoot-power-query-issues) appears, contact your administrator.

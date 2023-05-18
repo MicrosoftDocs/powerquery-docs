@@ -1,0 +1,680 @@
+- name: Power Query documentation
+  href: index.yml
+  expanded: true
+  items:  
+    - name: "What is Power Query?"
+      href: power-query-what-is-power-query.md          
+    - name: Get data
+      items:
+      - name: "Getting data overview"
+        href: get-data-experience.md
+      - name: "Where to get data"
+        href: where-to-get-data.md
+      - name: Authentication
+        items:  
+        - name: "Authentication in Desktop apps"
+          href: connector-authentication.md
+        - name: "Authentication in Power Query Online"
+          href: connection-authentication-pqo.md
+        - name: "Auto sign in for AAD data sources"
+          href: auto-signin-aad.md
+      - name: "Upload a file"
+        href: upload-file.md
+      - name: "SharePoint and OneDrive for Business files import"
+        href: sharepoint-onedrive-files.md    
+      - name: "Lack of support connecting to Microsoft Graph"    
+        href: connecting-to-graph.md
+      - name: "Connectivity without an existing connector"
+        href: connector-alternatives.md
+      - name: "Connect using generic interfaces"
+        href: connect-using-generic-interfaces.md
+      - name: "Change a dataflow gateway"
+        href: change-gateway-dataflow.md
+    - name: Transform data
+      items:
+      - name: "Use Power Query to transform data"
+        href: power-query-ui.md
+      - name: "Using the Applied Steps list"
+        href: applied-steps.md
+      - name: "Global search box (Preview)"
+        href: search-box.md
+      - name: Query folding
+        items:
+        - name: "Understanding query evaluation and folding"
+          href: query-folding-basics.md
+        - name: "Query folding overview"
+          href: power-query-folding.md
+        - name: "Query folding examples"
+          href: query-folding-examples.md
+        - name: "Query folding indicators"
+          href: step-folding-indicators.md
+        - name: "Query plan (Preview)"
+          href: query-plan.md
+        - name: "Query folding on native queries"
+          href: native-query-folding.md            
+      - name: "Using the data profiling tools"
+        href: data-profiling-tools.md
+      - name: "Using the Queries pane"
+        href: queries-pane.md
+      - name: "Diagram view"
+        href: diagram-view.md
+      - name: "Using Schema view (Preview)"
+        href: schema-view.md
+      - name: "Share a query"
+        href: share-query.md   
+      - name: "Using custom functions"
+        href: custom-function.md        
+      - name: Transform table
+        items:
+        - name: "Promote or demote column headers"
+          href: table-promote-demote-headers.md
+        - name: "Filter by row position"
+          href: filter-row-position.md
+        - name: "Filter by values"
+          href: filter-values.md
+        - name: "Choose or remove columns"
+          href: choose-remove-columns.md
+        - name: "Grouping or summarizing rows"
+          href: group-by.md
+        - name: "Unpivot column"
+          href: unpivot-column.md
+        - name: "Pivot column"
+          href: pivot-columns.md
+        - name: "Transpose table"
+          href: transpose-table.md
+        - name: "Reverse rows"
+          href: reverse-rows.md        
+        - name: "Data types"
+          href: data-types.md
+        - name: "Dealing with errors"
+          href: dealing-with-errors.md
+        - name: "Working with duplicates"
+          href: working-with-duplicates.md
+      - name: Transform columns
+        items:
+        - name: "Fill values in a column"
+          href: fill-values-column.md
+        - name: "Sort columns"
+          href: sort-columns.md
+        - name: "Rename column"
+          href: rename-column.md
+        - name: "Move columns"
+          href: move-columns.md
+        - name: "Replace values"
+          href: replace-values.md
+        - name: "Parse text as JSON or XML"
+          href: parse-json-xml.md          
+      - name: Add columns
+        items:
+        - name: "Add a column from examples"
+          href: column-from-example.md
+        - name: "Add an index column"
+          href: add-index-column.md
+        - name: "Add a custom column"
+          href: add-custom-column.md
+        - name: "Add a conditional column"
+          href: add-conditional-column.md
+        - name: "Add a rank column"
+          href: rank-column.md          
+        - name: "Add a cluster values column"
+          href: cluster-values.md
+      - name: Combine data
+        items:
+        - name: "Append queries"
+          href: append-queries.md
+        - name: Combine files
+          items:
+          - name: "Overview"
+            href: combine-files-overview.md
+          - name: "CSV documents"
+            href: combine-files-csv.md
+        - name: Merge queries
+          items:
+          - name: "Overview"
+            href: merge-queries-overview.md
+          - name: "Left outer join"
+            href: merge-queries-left-outer.md
+          - name: "Right outer join"
+            href: merge-queries-right-outer.md
+          - name: "Full outer join"
+            href: merge-queries-full-outer.md   
+          - name: "Inner join"
+            href: merge-queries-inner.md             
+          - name: "Left anti join"
+            href: merge-queries-left-anti.md 
+          - name: "Right anti join"
+            href: merge-queries-right-anti.md 
+          - name: "Fuzzy merge"
+            href: merge-queries-fuzzy-match.md
+          - name: "Cross join"
+            href: cross-join.md
+      - name: Split columns
+        items:
+        - name: "By delimiter"
+          href: split-columns-delimiter.md
+        - name: "By number of characters"
+          href: split-columns-number-characters.md
+        - name: "By positions"
+          href: split-columns-positions.md
+        - name: "By lowercase to uppercase"
+          href: splitcolumns-lowercase-to-uppercase.md
+        - name: "By uppercase to lowercase"
+          href: splitcolumns-uppercase-to-lowercase.md
+        - name: "By digit to non-digit"
+          href: splitcolumns-digit-to-nondigit.md
+        - name: "By non-digit to digit"
+          href: splitcolumns-nondigit-to-digit.md
+    - name: Dataflows
+      items:
+      - name: "Overview of dataflows"
+        href: dataflows/overview-dataflows-across-power-platform-dynamics-365.md
+      - name: "Analytical vs. standard dataflows"
+        href: dataflows/understanding-differences-between-analytical-standard-dataflows.md        
+      - name: "Create and use dataflows"
+        href: dataflows/create-use.md
+      - name: "Create and use dataflows in Teams"
+        href: dataflows/dataflows-teams.md
+      - name: "Consume data from dataflows"
+        href: dataflows/using-the-output-of-power-platform-dataflows.md
+      - name: "Use dataflows in solutions"
+        href: dataflows/dataflow-solution-awareness.md
+      - name: "Use incremental refresh"
+        href: dataflows/incremental-refresh.md
+      - name: "Connect to data sources"
+        href: dataflows/data-sources.md
+      - name: "Dataflow licenses"
+        href: dataflows/what-licenses-do-you-need-in-order-to-use-dataflows.md
+      - name: "Migrate queries to dataflows"
+        href: dataflows/how-to-migrate-queries-from-power-query-desktop-to-dataflows.md
+      - name: "Use an on-premises data gateway"
+        href: dataflows/using-dataflows-with-on-premises-data.md
+      - name: Analytical dataflows
+        items:
+        - name: "Create computed entities"
+          href: dataflows/computed-entities.md
+        - name: "Link entities between dataflows"
+          href: dataflows/linked-entities.md
+        - name: "Connect Azure Data Lake for dataflow storage"
+          href: dataflows/connect-azure-data-lake-storage-for-dataflow.md
+        - name: Storage structure
+          items: 
+          - name: "Common Data Model storage structure"
+            href: dataflows/what-is-the-cdm-storage-structure-for-analytical-dataflows.md
+          - name: "Configure storage and compute"
+            href: dataflows/configuring-storage-and-compute-options-for-analytical-dataflows.md
+        - name: Best practices for dataflows
+          items: 
+          - name: "Scenarios for computed entities"
+            href: dataflows/computed-entities-scenarios.md
+          - name: "Developing complex dataflows"
+            href: dataflows/best-practices-developing-complex-dataflows.md
+          - name: "Reusing dataflows"
+            href: dataflows/best-practices-reusing-dataflows.md
+          - name: "Dimensional model"
+            href: dataflows/best-practices-for-dimensional-model-using-dataflows.md
+          - name: "Performance"
+            href: dataflows/performance-ingestion-transformation-dataflows.md
+        - name: "Get dataflows data from Azure services"
+          href: dataflows/using-output-power-platform-dataflows-other-azure.md
+      - name: Standard dataflows
+        items: 
+        - name: "Relationships and lookups"
+          href: dataflows/relationships-in-standard-dataflows.md
+        - name: "Field mapping"
+          href: dataflows/get-best-of-standard-dataflows.md
+        - name: "Security and Roles"
+          href: dataflows/security-role-standard-dataflows.md
+        - name: "Sync Excel data"
+          href: dataflows/sync-excel-cds-dataflow.md
+        - name: "Add data to a table in Dataverse"
+          href: dataflows/add-data-power-query.md
+      - name: Integration
+        items: 
+        - name: "Data Factory dataflows"
+          href: dataflows/power-platform-dataflows-and-adf-wrangling-data-flows.md
+      - name: Power Automate templates for dataflows
+        items: 
+        - name: "Overview of Power Automate templates for dataflows"
+          href: dataflows/dataflow-power-automate-connector-templates.md
+        - name: "Send notification when a dataflow refresh completes"
+          href: dataflows/send-notification-when-dataflow-refresh-completes.md
+        - name: "Open a ticket when a dataflow refresh fails"
+          href: dataflows/open-support-ticket-when-dataflow-refresh-completes.md
+        - name: "Trigger dataflows and Power BI datasets sequentially"
+          href: dataflows/trigger-dataflows-and-power-bi-dataset-sequentially.md
+        - name: "Use Dataverse to build a dataflows monitoring report"
+          href: dataflows/load-dataflow-metadata-into-dataverse-table.md
+        - name: "Use Excel to build a dataflows monitoring report"
+          href: dataflows/load-dataflow-metadata-into-excel-online.md
+        - name: "Use a Power BI dataset to build a dataflows monitoring report"
+          href: dataflows/load-dataflow-metadata-into-power-bi-dataset.md
+        - name: "Automatically retry a dataflow on failure"
+          href: dataflows/automatically-retry-dataflow.md
+      - name: Monitor dataflows
+        items: 
+          - name: Monitor your dataflow refreshes with Power BI
+            href: dataflows/monitor-dataflow-refreshes.md
+      - name: Troubleshooting dataflows
+        items: 
+        - name: "Creating dataflows"
+          href: dataflows/troubleshooting-dataflows-issues-creating-dataflow.md
+        - name: "Getting data from dataflows"
+          href: dataflows/troubleshooting-dataflow-issue-get-data-from-dataflow.md
+        - name: "Connecting to the data source"
+          href: dataflows/troubleshooting-dataflow-issues-connection-to-the-data-source.md
+    - name: Keyboard shortcuts
+      href: keyboard-shortcuts.md
+    - name: Best practices
+      href: best-practices.md
+    - name: Feedback and support
+      href: feedback.md
+    - name: Advanced topics
+      items:
+      - name: "Fuzzy matching"
+        href: fuzzy-matching.md 
+      - name: "Behind the scenes of the Data Privacy Firewall"
+        href: data-privacy-firewall.md
+      - name: "Query Diagnostics"
+        items:
+        - name: "What is Query Diagnostics for Power Query?"
+          href: query-diagnostics.md
+        - name: "Recording Query Diagnostics"
+          href: record-query-diagnostics.md
+        - name: "Reading Query Diagnostics"
+          href: read-query-diagnostics.md
+        - name: "Understanding folding with Query Diagnostics"
+          href: query-diagnostics-folding.md
+      - name: "Why does my query run multiple times?"
+        href: multiple-queries.md
+      - name: "Use Query Parameters"
+        href: power-query-query-parameters.md
+      - name: "Error handling"
+        href: error-handling.md
+      - name: "Import data using native database query"
+        href: native-database-query.md
+      - name: "Create Power Platform dataflows from queries in Microsoft Excel (Preview)"
+        href: new-dataflow-from-template.md
+      - name: Optimize Power Query when expanding table columns
+        href: optimize-expanding-table-columns.md
+      - name: "Using Microsoft Edge for OAuth in Power BI Desktop"
+        href: oauth-edge-chromium.md
+    - name: "Connector reference"
+      items:
+      - name: "List of all Power Query connectors"
+        href: connectors/index.md
+      - name: "Access database"
+        href: connectors/access-database.md
+      - name: "Active Directory"
+        href: connectors/active-directory.md
+      - name: "Adobe Analytics"
+        href: connectors/adobe-analytics.md
+      - name: "Amazon Athena"
+        href: connectors/amazon-athena.md
+      - name: "Amazon OpenSearch Service (Beta)"
+        href: connectors/amazon-opensearch-service.md
+      - name: "Amazon Redshift"
+        href: connectors/amazon-redshift.md
+      - name: "Anaplan"
+        href: connectors/anaplan.md
+      - name: "AssembleViews"
+        href: connectors/assemble-views.md
+      - name: "Autodesk Construction Cloud (Beta)"
+        href: connectors/autodesk-construction-cloud.md
+      - name: "Automy Data Analytics (Beta)"
+        href: connectors/automy-data-analytics.md
+      - name: "Azure Analysis Services database"
+        href: connectors/azure-analysis-services.md
+      - name: "Azure Blob Storage"
+        href: connectors/azure-blob-storage.md
+      - name: "Azure Cosmos DB v2 (Beta)"
+        href: connectors/azure-cosmos-db-v2.md
+      - name: "Azure Cost Management"
+        href: connectors/azure-cost-management.md
+      - name: "Azure Databricks"
+        href: connectors/databricks-azure.md
+      - name: "Azure Data Explorer (Kusto)"
+        href: connectors/azure-data-explorer.md
+      - name: "Azure Data Lake Storage Gen1"
+        href: connectors/azure-data-lake-storage-gen1.md
+      - name: "Azure Data Lake Storage Gen 2"
+        items:
+        - name: "Connect to ADLS Gen2"
+          href: connectors/data-lake-storage.md
+        - name: "Analyze ADLS Gen2 data"
+          href: connectors/analyze-data-in-adls-gen2.md
+      - name: Azure HDInsight
+        href: connectors/azure-hdinsight.md
+      - name: "Azure SQL database"
+        href: connectors/azure-sql-database.md
+      - name: "Azure Synapse Analytics (SQL DW)"
+        href: connectors/azure-sql-data-warehouse.md
+      - name: "Azure Synapse Analytics workspace (Beta)"
+        href: connectors/synapse.md
+      - name: "Azure Table Storage"
+        href: connectors/azure-table-storage.md
+      - name: "BitSight Security Ratings"
+        href: connectors/bitsight-security-ratings.md
+      - name: "Bloomberg Data and Analytics"
+        href: connectors/bloomberg-data-and-analytics.md
+      - name: "BQE Core"
+        href: connectors/bqecore.md
+      - name: "CData Connect Cloud (Beta)"
+        href: connectors/cdata-connect-cloud.md
+      - name: "Common Data Service (Legacy)"
+        href: connectors/common-data-service-legacy.md
+      - name: "Databricks (Beta)"
+        href: connectors/databricks.md
+      - name: "Dataverse"
+        href: connectors/dataverse.md     
+      - name: "Dataflows"
+        href: connectors/dataflows.md
+      - name: "Delta Sharing"
+        href: connectors/delta-sharing.md
+      - name: "Denodo"
+        href: connectors/denodo.md
+      - name: "Digital Construction Works Insights (Beta)"
+        href: connectors/digital-construction-works-insights.md
+      - name: "Dynamics 365 Online (legacy)"
+        href: connectors/dynamics-365-online.md
+      - name: "Eduframe (Beta)"
+        href: connectors/eduframe.md
+      - name: "EQuIS (Beta)"
+        href: connectors/equis.md
+      - name: "Essbase"
+        href: connectors/essbase.md
+      - name: "Excel"
+        href: connectors/excel.md
+      - name: "FactSet RMS (Beta)"
+        href: connectors/factset-rms.md
+      - name: "FHIR"
+        items:
+        - name: Connect to FHIR
+          href: connectors/fhir/fhir.md
+        - name: Authentication
+          href: connectors/fhir/fhir-authentication.md
+        - name: Query folding
+          href: connectors/fhir/fhir-query-folding.md
+        - name: Query folding patterns
+          href: connectors/fhir/fhir-query-folding-patterns.md
+        - name: Data relationships
+          href: connectors/fhir/fhir-relationships.md
+      - name: "Folder"
+        href: connectors/folder.md
+      - name: "Funnel"
+        href: connectors/funnel.md
+      - name: "Google Analytics"
+        href: connectors/google-analytics.md
+      - name: "Google BigQuery"
+        href: connectors/google-bigquery.md
+      - name: "Google BigQuery (Azure AD) (Beta)"
+        href: connectors/google-bigquery-aad.md
+      - name: "Google Sheets"
+        href: connectors/google-sheets.md
+      - name: "Hadoop File (HDFS)"
+        href: connectors/hadoop-file-system.md
+      - name: "Hive LLAP"
+        href: connectors/hive-llap.md
+      - name: "IBM Db2 database"
+        href: connectors/ibm-db2-database.md
+      - name: "Impala database"
+        href: connectors/impala-database.md
+      - name: "JSON"
+        href: connectors/json.md
+      - name: LinkedIn Sales Navigator (Beta)
+        href: connectors/linkedin-sales-navigator.md
+      - name: "Mailchimp (Deprecated)"
+        href: connectors/mailchimp.md
+      - name: "Microsoft Azure Consumption Insights (Beta) (Deprecated)"
+        href: connectors/microsoft-azure-consumption-insights.md
+      - name: Microsoft Exchange
+        href: connectors/microsoft-exchange.md
+      - name: Microsoft Exchange Online
+        href: connectors/microsoft-exchange-online.md
+      - name: "Microsoft Graph Security (Deprecated)"
+        href: connectors/microsoft-graph-security.md
+      - name: "MicroStrategy for Power BI"
+        href: connectors/microstrategy-for-power-bi.md
+      - name: "MySQL database"
+        href: connectors/mysql-database.md
+      - name: "OData Feed"
+        items:
+        - name: "Connect to an OData Feed"
+          href: connectors/odata-feed.md
+        - name: "Connecting to Azure DevOps using OData"
+          href: /azure/devops/report/powerbi/odataquery-connect
+      - name: "ODBC"
+        href: connectors/odbc.md
+      - name: "OLE DB"
+        href: connectors/ole-db.md
+      - name: "OpenSearch Project (Beta)"
+        href: connectors/opensearch-project.md
+      - name: "Oracle database"
+        href: connectors/oracle-database.md
+      - name: "Parquet"
+        href: connectors/parquet.md
+      - name: "PDF"
+        href: connectors/pdf.md
+      - name: "PostgreSQL"
+        href: connectors/postgresql.md
+      - name: "Profisee (Beta)"
+        href: connectors/profisee.md
+      - name: "QuickBooks Online (Beta)"
+        href: connectors/quickbooks-online.md
+      - name: "Salesforce Objects"
+        href: connectors/salesforce-objects.md
+      - name: "Salesforce Reports"
+        href: connectors/salesforce-reports.md
+      - name: "SAP Business Warehouse"
+        items:
+        - name: "Connect to an SAP Business Warehouse Application Server"
+          href: connectors/sap-bw/application-setup-and-connect.md
+        - name: "Connect to an SAP Business Warehouse Message Server"
+          href: connectors/sap-bw/message-setup-and-connect.md
+        - name: "SAP BW fundamentals"
+          href: connectors/sap-bw/sap-bw-fundamentals.md
+        - name: "Navigate the query objects"
+          href: connectors/sap-bw/navigate-query-objects.md
+        - name: "Transform and filter an SAP BW dataset"
+          href: connectors/sap-bw/transform-filter-sap-bw-data.md
+        - name: "Implementation details"
+          href: connectors/sap-bw/implementation-details.md
+        - name: "Import vs. DirectQuery for SAP BW"
+          href: connectors/sap-bw/import-vs-directquery.md
+        - name: "Windows authentication and single sign-on"
+          href: connectors/sap-bw/single-sign-on.md
+        - name: "Use advanced options"
+          href: connectors/sap-bw/use-advanced-options.md
+        - name: "SAP BW connector troubleshooting"
+          href: connectors/sap-bw/sap-bw-troubleshooting.md
+      - name: "SAP HANA database"
+        items:
+        - name: "Connect to an SAP HANA database"
+          href: connectors/sap-hana/overview.md
+        - name: "SAP HANA encryption"
+          href: connectors/sap-hana/sap-hana-encryption.md
+        - name: "Configure ODBC for SAP HANA"
+          href: connectors/sap-hana/configure-odbc-sap-hana.md
+        - name: "Troubleshooting"
+          href: connectors/sap-hana/sap-hana-troubleshooting.md
+      - name: "SharePoint folder"
+        href: connectors/sharepoint-folder.md
+      - name: "SharePoint list"
+        href: connectors/sharepoint-list.md
+      - name: "SharePoint Online list"
+        href: connectors/sharepoint-online-list.md
+      - name: "SingleStore (Beta)"
+        href: connectors/singlestore.md
+      - name: SIS-CC SDMX
+        href: connectors/sis-cc-sdmx.md
+      - name: Smartsheet
+        href: connectors/smartsheet.md
+      - name: "Snowflake"
+        href: connectors/snowflake.md
+      - name: "Socialbakers Metrics (Beta)"
+        href: connectors/socialbakers.md
+      - name: "SoftOne BI (Beta)"
+        href: connectors/softone-bi.md
+      - name: "SQL Server Analysis Services database"
+        href: connectors/sql-server-analysis-services.md
+      - name: "SQL Server database"
+        href: connectors/sql-server.md
+      - name: "Stripe (Deprecated)"
+        href: connectors/stripe.md
+      - name: "SumTotal"
+        href: connectors/sumtotal.md
+      - name: "Sybase database"
+        href: connectors/sybase-database.md
+      - name: "Teradata database"
+        href: connectors/teradata.md
+      - name: "Text/CSV"
+        href: connectors/text-csv.md
+      - name: "TIBCO(R) Data Virtualization"
+        href: connectors/tibco.md
+      - name: "Twilio (Beta) (Deprecated)"
+        href: connectors/twilio.md
+      - name: "Usercube"
+        href: connectors/usercube.md
+      - name: "Vessel Insight"
+        href: connectors/vessel-insight.md
+      - name: "Web"
+        items:
+        - name: "Connect to Web data"
+          href: connectors/web/web.md
+        - name: "Web by example"
+          href: connectors/web/web-by-example.md
+        - name: "Troubleshooting"
+          href: connectors/web/web-troubleshoot.md
+      - name: "Workforce Dimensions (Beta) (Deprecated)"
+        href: connectors/workforce-dimensions.md
+      - name: "XML"
+        href: connectors/xml.md
+      - name: "Zendesk (Beta)"
+        href: connectors/zendesk.md
+    - name: Support and troubleshooting
+      items:
+      - name: "Power Query online limits"
+        href: power-query-online-limits.md
+      - name: "Common issues"
+        href: common-issues.md
+      - name: "Review script changes"
+        href: review-script-changes.md
+      - name: "Connector support and feedback"
+        href: connectors/connector-feedback.md
+      - name: "Capture web requests with Fiddler"
+        href: web-connection-fiddler.md
+    - name: Create custom Power Query connectors
+      items:
+      - name: "Power Query SDK Overview"
+        href: install-sdk.md
+      - name: Quick starts
+        items:
+        - name: "Using the Power Query SDK"
+          href: power-query-sdk-vs-code.md        
+        - name: "Create your first connector - Hello World"
+          href: creating-first-connector.md
+      - name: Walkthroughs
+        items:
+        - name: TripPin walkthrough
+          items:
+          - name: "Overview"
+            href: samples/trippin/readme.md
+          - name: "1. OData"
+            href: samples/trippin/1-odata/readme.md
+          - name: "2. REST API"
+            href: samples/trippin/2-rest/readme.md
+          - name: "3. Navigation tables"
+            href: samples/trippin/3-navtables/readme.md
+          - name: "4. Paths"
+            href: samples/trippin/4-paths/readme.md
+          - name: "5. Paging"
+            href: samples/trippin/5-paging/readme.md
+          - name: "6. Schemas"
+            href: samples/trippin/6-schema/readme.md
+          - name: "7. Advanced schemas"
+            href: samples/trippin/7-advancedschema/readme.md
+          - name: "8. Diagnostics"
+            href: samples/trippin/8-diagnostics/readme.md
+          - name: "9. Test connection"
+            href: samples/trippin/9-testconnection/readme.md
+          - name: "10. Folding"
+            href: samples/trippin/10-tableview1/readme.md
+        - name: OAuth tutorials
+          items:
+          - name: "GitHub"
+            href: samples/github/readme.md
+      - name: Samples
+        items:
+        - name: "Functional samples"
+          href: samples-directory.md#functionality
+        - name: "ODBC samples"
+          href: samples-directory.md#odbc
+        - name: "TripPin samples"
+          href: samples-directory.md#trippin
+      - name: Concepts
+        items:
+        - name: "Additional connector functionality"
+          href: additional-connector-functionality.md
+        - name: "Handling authentication"
+          href: handling-authentication.md
+        - name: "Handling data access"
+          href: handling-data-access.md
+        - name: "ODBC development"
+          items:
+          - name: "Enabling DirectQuery for an ODBC based connector"
+            href: odbc.md
+          - name: "Parameters for Odbc.DataSource"
+            href: odbc-parameters.md
+          - name: "Testing and troubleshooting"
+            href: odbc-troubleshooting.md
+        - name: "Handling resource path"
+          href: handling-resource-path.md
+        - name: "Handling paging"
+          href: handling-paging.md
+        - name: "Handling transformations"
+          href: handling-transformations.md
+        - name: "Handling schemas"
+          href: handling-schema.md
+        - name: "Handling status codes"
+          items: 
+          - name: "Default behavior"
+            href: handling-status-codes.md
+          - name: "Wait retry pattern"
+            href: wait-retry.md
+        - name: "Handling unit testing"
+          href: handling-unit-testing.md
+        - name: "Helper functions"
+          href: helper-functions.md
+        - name: "Handling documentation"
+          href: handling-documentation.md
+        - name: "Handling navigation tables"
+          href: handling-navigation-tables.md
+        - name: "Handling gateway support"
+          href: handling-gateway-support.md
+        - name: "Handling connector signing"
+          href: handling-connector-signing.md
+        - name: "Handling proxy support"
+          href: handling-proxy-support.md
+        - name: "Handling native query support"
+          href: native-query-sdk.md
+        - name: "Versioning"
+          href: handling-versioning.md
+      - name: Connector Certification
+        items:
+        - name: Overview
+          href: connector-certification.md
+        - name: Submission
+          href: certification-submission.md
+        - name: "Custom connector documentation"
+          href: providing-user-documentation.md
+      - name: Custom connector development FAQ
+        href: custom-connector-development-faq.yml
+    - name: Resources
+      items:
+      - name: "Power BI documentation"
+        href: /power-bi/
+      - name: "M function reference"
+        href: /powerquery-m/power-query-m-function-reference
+      - name: "M language document"
+        href: /powerquery-m/power-query-m-language-specification
+      - name: "M type reference"
+        href: /powerquery-m/power-query-m-type-system

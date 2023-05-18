@@ -1,16 +1,14 @@
 ---
 title: Providing user documentation for your Power Query custom connector
 description: Describes the format and layout of the user documentation that needs to be submitted for your Power Query custom connector.
-author: DougKlopfenstein
-ms.service: powerquery
-ms.reviewer: kvivek
-ms.date: 9/16/2021
+author: bezhan-msft
+ms.date: 2/9/2023
 ms.author: bezhan
 ---
 
 # Providing user documentation for your custom connector
 
-Once you've finished designing your Power Query custom connector, you'll need to submit an article that provides instructions on how to use your connector for publication on docs.microsoft.com. This article discusses the layout of such an article and how to format the text of your article.
+Once you've finished designing your Power Query custom connector, you'll need to submit an article that provides instructions on how to use your connector for publication on Microsoft Learn. This article discusses the layout of such an article and how to format the text of your article.
 
 ## Article layout
 
@@ -32,9 +30,9 @@ After the support note, provide a summary table that contains the following info
 * **Release state**: Indicates whether the connector is in preview or general availability. Use either "Preview" or "General Availability".
 * **Products supported**: Lists the products that can use your custom connector.
 * **Authentication types supported**: Lists the authentication types your custom connector supports.
-* **Function reference docs**: Lists any M formula language docs that are associated with your custom connector.
+* **Function reference documentation**: Lists any M formula language documentation associated with your custom connector.
 
-![Example summary table.](images/sample-summary.png)
+![Example summary table.](media/providing-user-documentation/sample-summary.png)
 
 If your custom connector is implemented on various products, but has different capabilities on these products, include the following or similar note in your article after the summary table.
 
@@ -55,6 +53,9 @@ This section contains the procedures required to connect to data. If your custom
 
 The procedure is made up of a numbered list that includes each step required to fill in the information needed to provide a normal connection (not requiring advance options) to the data.
 
+>[!NOTE]
+>All new certified connectors are required to support Power BI dataflows, and must contain sections for connecting to your data in both Power Query Desktop and Power Query Online.
+
 ### Connect using advanced options (optional)
 
 If your custom connector contains advanced options that can be used to connect to the data, this information should be covered in a separate section of the documentation. Each of the advanced options should be documented, and the purpose of each advanced option explained in this section.
@@ -69,9 +70,11 @@ Any other instructions or information about your connector that hasn't been cove
 
 ## Article location and format
 
-Your article should be made available on GitHub under the Connectors folder in the Power Query docs repo: <https://github.com/MicrosoftDocs/powerquery-docs/tree/master/powerquery-docs/Connectors>. Ensure that you also add a link to your article in the [list of connectors](./connectors/index.md) referencing the correct logo image uploaded to `/Connectors/media/index` folder. Lastly, ensure that you add a link to your article in the table of contents file (`TOC.yml`). Certified connectors will only be available under **Power BI (Datasets)**.
+The filename format for your connector article should contain only lowercase letters, with a hyphen between words. For example, the filename for the Azure Blob Storage connector is azure-blob-storage.md. If your connector name uses acronyms, the entire acronym counts as one word. For example the filename for the Hive LLAP connector is hive-llap.md.
 
-See the [Microsoft Docs contributor guide](/contribute/) on how you can contribute to our repo.
+Your article should be made available on GitHub under the connectors folder in the Power Query documentation repo: <https://github.com/MicrosoftDocs/powerquery-docs/tree/master/powerquery-docs/connectors>. Ensure that you also add a link to your article in the [list of connectors](./connectors/index.md) referencing the correct logo image uploaded to the `/connectors/media/index` folder. Lastly, ensure that you add a link to your article in the table of contents file (`TOC.yml`). Certified connectors will only be available under **Power BI (Datasets)**.
+
+See our [contributor guide](/contribute/) on how you can contribute to our repo.
 
 The article should be formatted and submitted as a Markdown file. It should use the Microsoft style for describing procedures and the UI layout.  
 
@@ -84,5 +87,5 @@ The following articles include instructions on formatting your document in Markd
 
 Here's a couple of example Power Query connector articles that you can use as a starting point:
 
-* [Adobe Analytics](./connectors/adobeanalytics.md) (Power Query Desktop only)
-* [Azure SQL database](./connectors/azuresqldatabase.md) (Power Query Desktop and Power Query Online)
+* [Adobe Analytics](./connectors/adobe-analytics.md) (Power Query Desktop only)
+* [Azure SQL database](./connectors/azure-sql-database.md) (Power Query Desktop and Power Query Online)

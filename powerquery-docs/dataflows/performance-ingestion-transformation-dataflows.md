@@ -2,11 +2,8 @@
 title: Improve performance and reusability by separating data ingestion from data transformation dataflows
 description: Learn how to improve performance and reusability by separating data ingestion from data transformation dataflows
 author: bensack
-
-ms.reviewer: kvivek
-ms.service: dataflows
 ms.topic: conceptual
-ms.date: 12/3/2020
+ms.date: 1/6/2023
 ms.author: bensack
 ---
 
@@ -19,12 +16,12 @@ One of the best practices for dataflow implementations is separating the respons
 In many scenarios, the on-premises data source is a slow data source. Especially considering that the gateway exists as the middle layer between the dataflow and the data source.
 
 > [!div class="mx-imgBorder"]
-> ![Getting data directly from the on-premises data source.](media/1/DFfromOnePremDS.png)
+> ![Getting data directly from the on-premises data source.](media/performance-ingestion-transformation-dataflows/df-from-one-prem-ds.png)
 
 Using analytical dataflows for data ingestion minimizes the get data process from the source and focuses on loading data to Azure Data Lake Storage. Once in storage, other dataflows can be created that leverage the ingestion dataflow's output. The dataflow engine can read the data and do the transformations directly from the data lake, without contacting the original data source or gateway.
 
 > [!div class="mx-imgBorder"]
-> ![Data ingestion dataflow.](media/1/IngestionOnePremDS.png)
+> ![Data ingestion dataflow.](media/performance-ingestion-transformation-dataflows/ingestion-one-prem-ds.png)
 
 ## Slow data source
 
@@ -37,7 +34,7 @@ The separation of the two layers&mdash;data ingestion and transformation&mdash;i
 This separation isn't only useful because of the performance improvement, it's also helpful for the scenarios where an old legacy data source system has been migrated to a new system. In those cases, only the data ingestion dataflows need to be changed. The data transformation dataflows remain intact for this type of change.
 
 > [!div class="mx-imgBorder"]
-> ![Changing the data source.](media/1/DFChangeDataSource.png)
+> ![Changing the data source.](media/performance-ingestion-transformation-dataflows/df-change-data-source.png)
 
 ## Reuse in other tools and services
 

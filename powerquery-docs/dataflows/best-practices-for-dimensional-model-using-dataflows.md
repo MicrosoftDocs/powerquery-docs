@@ -1,17 +1,13 @@
 ---
 title: Best practices for creating a dimensional model using dataflows
 description: Best practices for creating a dimensional model using dataflows
-author: radacad
-ms.service: powerquery
-ms.reviewer: kvivek
+author: bensack
 ms.topic: conceptual
-ms.date: 12/2/2020
-ms.author: bezhan
+ms.date: 1/6/2023
+ms.author: bensack
 ---
 
 # Best practices for creating a dimensional model using dataflows
-
-[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
 
 Designing a dimensional model is one of the most common tasks you can do with a dataflow. This article highlights some of the best practices for creating a dimensional model using a dataflow.
 
@@ -30,7 +26,7 @@ Next, you can create other dataflows that source their data from staging dataflo
 - Having an intermediate copy of the data for reconciliation purpose, in case the source system data changes.
 - Making the transformation dataflows source-independent.
 
-:::image type="complex" source="media/StagingDataflows.png" alt-text="Staging dataflows.":::
+:::image type="complex" source="media/best-practices-for-dimensional-model/staging-dataflows.png" alt-text="Staging dataflows.":::
    Image emphasizing staging dataflows and staging storage, and showing the data being accessed from the data source by the staging dataflow, and entities being stored in either Cadavers or Azure Data Lake Storage. The entities are then shown being transformed along with other dataflows, which are then sent out as queries.
 :::image-end:::
 
@@ -40,7 +36,7 @@ When you've separated your transformation dataflows from the staging dataflows, 
 
 This separation also helps in case the source system connection is slow. The transformation dataflow won't need to wait for a long time to get records coming through a slow connection from the source system. The staging dataflow has already done that part, and the data will be ready for the transformation layer.
 
-![Image similar to the previous image, except transformations are emphasized, and the data is being sent to the data warehouse.](media/TransformationDataflows.png)
+![Image similar to the previous image, except transformations are emphasized, and the data is being sent to the data warehouse.](media/best-practices-for-dimensional-model/transformation-dataflows.png)
 
 ## Layered Architecture
 
@@ -48,17 +44,17 @@ A layered architecture is an architecture in which you perform actions in separa
 
 The following image shows a multi-layered architecture for dataflows in which their entities are then used in Power BI datasets.
 
-![multi-layered architecture.](media/MultiLayeredDF.png)
+![multi-layered architecture.](media/best-practices-for-dimensional-model/multi-layered-dataflow.png)
 
 ## Use a computed entity as much as possible
 
 When you use the result of a dataflow in another dataflow, you're using the concept of the computed entity, which means getting data from an "already-processed-and-stored" entity. The same thing can happen inside a dataflow. When you reference an entity from another entity, you can use the computed entity. This is helpful when you have a set of transformations that need to be done in multiple entities, which are called *common transformations*.
 
-![Computed entity sourced from a data source used to process common transformations.](media/ComputedEntityInBetween.png)
+![Computed entity sourced from a data source used to process common transformations.](media/best-practices-for-dimensional-model/computed-entity-in-between.png)
 
 In the previous image, the computed entity gets the data directly from the source. However, in the architecture of staging and transformation dataflows, it's likely that the computed entities are sourced from the staging dataflows.
 
-![Computed entity sourced from dataflows used to process common transformations.](media/ComputedEntityFromDataflows.png)
+![Computed entity sourced from dataflows used to process common transformations.](media/best-practices-for-dimensional-model/computed-entity-from-dataflows.png)
 
 ## Build a star schema
 
@@ -73,11 +69,11 @@ It isn't ideal to bring data in the same layout of the operational system into a
 When building dimension tables, make sure you have a key for each one. This key ensures that there are no many-to-many (or in other words, "weak") relationships among dimensions. You can create the key by applying some transformation to make sure a column or a combination of columns is returning unique rows in the dimension. Then that combination of columns can be marked as a key in the entity in the dataflow.
 
 > [!div class="mx-imgBorder"]
-> ![Mark a column as a key value.](media/MarkAsKey.png)
+> ![Mark a column as a key value.](media/best-practices-for-dimensional-model/mark-as-key.png)
 
 ### Do an incremental refresh for large fact tables
 
-Fact tables are always the largest tables in the dimensional model. We recommend that you reduce the number of rows transferred for these tables. If you have a very large fact table, ensure that you use incremental refresh for that entity. An incremental refresh can be done in the Power BI dataset, and also the dataflow entities. 
+Fact tables are always the largest tables in the dimensional model. We recommend that you reduce the number of rows transferred for these tables. If you have a very large fact table, ensure that you use incremental refresh for that entity. An incremental refresh can be done in the Power BI dataset, and also the dataflow entities.
 
 You can use incremental refresh to refresh only part of the data, the part that has changed. There are multiple options to choose which part of the data to be refreshed and which part to be persisted. More information: [Using incremental refresh with Power BI dataflows](/power-bi/transform-model/service-dataflows-incremental-refresh)
 
@@ -87,4 +83,4 @@ You can use incremental refresh to refresh only part of the data, the part that 
 
 In the source system, you often have a table that you use for generating both fact and dimension tables in the data warehouse. These tables are good candidates for computed entities and also intermediate dataflows. The common part of the process&mdash;such as data cleaning, and removing extra rows and columns&mdash;can be done once. By using a reference from the output of those actions, you can produce the dimension and fact tables. This approach will use the computed entity for the common transformations.
 
-![Image showing an Orders query with the reference option being used to create a new query called Orders aggregated.](media/OrdersEntityReferenced.png)
+![Image showing an Orders query with the reference option being used to create a new query called Orders aggregated.](media/best-practices-for-dimensional-model/orders-entity-referenced.png)

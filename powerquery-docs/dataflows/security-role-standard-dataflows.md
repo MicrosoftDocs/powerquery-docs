@@ -2,9 +2,6 @@
 title: Security roles and permission levels in standard dataflows
 description: Describes the security roles and permission levels used in standard dataflows.
 author: bensack
-
-ms.reviewer: kvivek
-ms.service: dataflows
 ms.topic: conceptual
 ms.date: 12/3/2020
 ms.author: bensack
@@ -12,7 +9,7 @@ ms.author: bensack
 
 # Security roles and permission levels in standard dataflows
 
-[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
+
 
 If someone in the team has created a dataflow and wants to share it with other team members, how does it work? What are the roles and permission level options available? This article takes you through the roles and permission levels related to standard dataflows.
 

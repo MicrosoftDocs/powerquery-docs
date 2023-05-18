@@ -1,18 +1,13 @@
 ---
 title: Using the output of Power Platform dataflows from other Azure data workloads
 description: Using the output of Microsoft Power Platform dataflows from other Azure data workloads.
-author: radacad
-
-ms.service: powerquery
-ms.reviewer: kvivek
+author: bensack
 ms.topic: conceptual
-ms.date: 12/3/2020
-ms.author: bezhan
+ms.date: 1/6/2023
+ms.author: bensack
 ---
 
 # Using the output of Microsoft Power Platform dataflows from other Azure data workloads
-
-[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
 
 Depending on the storage for the output of the Microsoft Power Platform dataflows, you can use that output in other Azure services.
 
@@ -32,16 +27,15 @@ If you've connected an external Azure Data Lake Storage storage to the Power Pla
 In any of these services, use Azure Data Lake Storage as the source. You'll be able to enter the details of your storage and connect to the data in it. The data is stored in CSV format, and is readable through any of these tools and services. The following screenshot shows how Azure Data Lake Storage is a source option for Azure Data Factory.
 
 > [!div class="mx-imgBorder"]
-> ![Using the output of Power Platform dataflows in external Data Lake Storage.](media/ADFSourcedFromADLSGen2.png)
+> ![Using the output of Power Platform dataflows in external Data Lake Storage.](media/using-output-power-platform-dataflows-other-azure/adf-sourced-from-adls-gen2.png)
 
 ## Dataflows with Dataverse
 
 If you're using standard dataflows that store the data in Dataverse, you can still connect to Dataverse from many Azure services. The following image shows that in Azure Data Factory, the output of a dataflow from Dataverse can be used as a source.
 
 > [!div class="mx-imgBorder"]
-> ![Using the output of Power Platform dataflows from Dataverse.](media/ADFSourcedFromCDS.png)
+> ![Using the output of Power Platform dataflows from Dataverse.](media/using-output-power-platform-dataflows-other-azure/adf-sourced-from-cds.png)
 
 ## Dataflows with internal Azure Data Lake Storage
 
 When you use the internal Data Lake storage that's provided by Power Platform dataflows, that storage is exclusively limited to the Power Platform tools and isn't accessible from other Azure data workloads.
-

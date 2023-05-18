@@ -7,14 +7,13 @@ summary: Power Query is the data connectivity and data preparation technology th
 metadata: 
   title: Power Query documentation
   description: Power Query is used to filter, combine, and mash-up data from one or more supported data sources.  
-  ms.service: power-query
+  
   ms.topic: landing-page
   ms.collection: 
   author: dougklopfenstein
-  ms.author: bezhan
+  ms.author: dougklo
   ms.custom: 
-  manager: mtillman
-  ms.date: 03/10/2020
+    ms.date: 03/10/2020
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | whats-new
 
@@ -37,11 +36,11 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Use Power Query
-            url: power-query-quickstart-using-power-bi.md
+            url: /power-query/power-query-ui
           - text: Get data
             url: get-data-experience.md
           - text: Transform data
-            url: power-query-tutorial-shape-combine.md
+            url: /power-query/power-query-ui
 
   # Card
   - title: Working with dataflows

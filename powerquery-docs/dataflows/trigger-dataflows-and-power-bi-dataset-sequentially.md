@@ -2,11 +2,8 @@
 title: Trigger dataflows and Power BI datasets sequentially
 description: How to use the dataflows connector in Power Automate to trigger dataflows and Power BI datasets sequentially
 author: miquelladeboer
-
-ms.service: powerquery
-ms.reviewer: kvivek
 ms.topic: conceptual
-ms.date: 11/12/2021
+ms.date: 1/6/2023
 ms.author: mideboer
 ---
 
@@ -43,7 +40,7 @@ To trigger dataflows sequentially:
    2. Leave the second cell as **is equal to**.
    3. In the third cell, enter **Success**.
 
-   [![Image with the conditions set to occur when the Refresh status equals success.](media/emailyesnosuccess.PNG)](media/emailyesnosuccess.PNG#lightbox)
+   [![Image with the conditions set to occur when the Refresh status equals success.](media/trigger-dataflows-and-power-bi-dataset-sequentially/email-yes-no-success.png)](media/trigger-dataflows-and-power-bi-dataset-sequentially/email-yes-no-success.png#lightbox)
 
 8. In the **If Yes** section, select **Add an action**.
 9. Search for the "Refresh a dataflow" connector, and then select it.
@@ -53,4 +50,4 @@ To trigger dataflows sequentially:
     * **Group**: Select the Power Apps environment or the Power BI workspace your dataflow is in.
     * **Dataflow**: Select your dataflow by name.
 
-    ![Image with the refresh a dataflow connector in the If yes dialog box.](media/refresh-a-dataflow.png)
+    ![Image with the refresh a dataflow connector in the If yes dialog box.](media/trigger-dataflows-and-power-bi-dataset-sequentially/refresh-a-dataflow.png)

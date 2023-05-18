@@ -2,11 +2,8 @@
 title: Load data in a Power BI streaming dataset and build a dataflows monitoring report with Power BI
 description: How to use the dataflows connector in Power Automate to create a dataflows monitoring report in Power BI
 author: miquelladeboer
-
-ms.service: powerquery
-ms.reviewer: kvivek
 ms.topic: conceptual
-ms.date: 12/16/2020
+ms.date: 1/6/2023
 ms.author: mideboer
 ---
 
@@ -14,13 +11,13 @@ ms.author: mideboer
 
 This tutorial demonstrates how to load data in a Power BI streaming dataset to create a dataflows monitoring report in Power BI.
 
-![Image with an example of a monitoring dashboard.](media/dashboard.PNG)
+![Image with an example of a monitoring dashboard.](media/load-dataflow-metadata-into-power-bi-dataset/dashboard.png)
 
 First, you'll create a new streaming dataset in Power BI. This dataset collects all the metadata from the dataflow run, and for every refresh of a dataflow, a record is added to this dataset. You can run multiple dataflows all to the same dataset. Lastly, you can build a Power BI report on the data to visualize the metadata and start monitoring the dataflows.
 
 You can use this dashboard to monitor your dataflows' refresh duration and failure count. With this dashboard, you can track any issues with your dataflows performance and share the data with others.
 
-![Image with an overview of the Power BI streaming dataset.](media/powerbi.PNG)
+![Image with an overview of the Power BI streaming dataset.](media/load-dataflow-metadata-into-power-bi-dataset/power-bi.png)
 
 ## Prerequisites
 
@@ -38,11 +35,11 @@ You can use this dashboard to monitor your dataflows' refresh duration and failu
 
 3. From the workspace, select **New** > **Streaming dataset**.
 
-   ![Image emphasizing the streaming dataset selection from the New menu.](media/select-streaming-dataset.png)
+   ![Image emphasizing the streaming dataset selection from the New menu.](media/load-dataflow-metadata-into-power-bi-dataset/select-streaming-dataset.png)
 
 4. From **New streaming dataset**, select the **API** tile, and then select **Next**.
 
-   ![Image of the new streaming dataset dialog box with the API tile.](media/new-api-tile.png)
+   ![Image of the new streaming dataset dialog box with the API tile.](media/load-dataflow-metadata-into-power-bi-dataset/new-api-tile.png)
 
 5. In the new pane, turn **Historic data analysis** on.
 
@@ -56,7 +53,7 @@ You can use this dashboard to monitor your dataflows' refresh duration and failu
    * **Value**: "Start Time", **Data type**: Date and Time.
    * **Value**: "End Time", **Data type**: Date and Time.
 
-![example of add streaming dataset.](media/addstreamingdatset.PNG)
+![example of add streaming dataset.](media/load-dataflow-metadata-into-power-bi-dataset/add-streaming-datset.png)
 
 ## Create a dataflow
 
@@ -86,7 +83,7 @@ If you do not already have one, create a dataflow. You can create a dataflow in 
    * **Dataset**: Select the streaming dataset **Dataflow Monitoring** that you previously created in [Create a new streaming dataset in Power BI](#create-a-new-streaming-dataset-in-power-bi).
    * **Table**: Select **RealTimeData**.
 
-   ![Example of Power BI template.](media/template-power-bi.PNG)
+   ![Example of Power BI template.](media/load-dataflow-metadata-into-power-bi-dataset/template-power-bi.png)
   
 8. Add dynamic values to the required fields.
 
@@ -96,7 +93,7 @@ If you do not already have one, create a dataflow. You can create a dataflow in 
 
    2. Select **Dataflow Name** from the **Dynamic content** context box.
 
-      [![Image of the Add rows to a dataset connector with the dynamic content ready to be selected.](media/dynamic-streaming.png)](media/dynamic-streaming.png#lightbox)
+      [![Image of the Add rows to a dataset connector with the dynamic content ready to be selected.](media/load-dataflow-metadata-into-power-bi-dataset/dynamic-streaming.png)](media/load-dataflow-metadata-into-power-bi-dataset/dynamic-streaming.png#lightbox)
 
    3. Repeat this process for all required fields.
 

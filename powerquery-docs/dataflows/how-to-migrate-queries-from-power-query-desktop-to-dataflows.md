@@ -1,11 +1,10 @@
 ---
 title: How to migrate queries from Power Query in the desktop (Power BI and Excel) to dataflows
 description: How to migrate queries from Power Query in the desktop (Power BI and Excel) to dataflows.
-author: radacad
-ms.service: powerquery
+author: bensack
 ms.topic: conceptual
-ms.date: 12/2/2020
-ms.author: gepopell
+ms.date: 1/6/2023
+ms.author: bensack
 
 ---
 # How to migrate queries from Power Query in the desktop (Power BI and Excel) to dataflows
@@ -23,12 +22,12 @@ To migrate queries from Power Query in the desktop tools:
    * In Power BI Desktop on the **Home** tab, select **Transform data**.
 
      > [!div class="mx-imgBorder"]
-     > ![Open Power Query Editor.](media/OpeningPowerQueryEditor.png)
+     > ![Open Power Query Editor.](media/how-to-migrate-queries/opening-power-query-editor.png)
 
    * In Excel on the **Data** tab, select **Get Data**> **Launch Power Query Editor**.
 
      > [!div class="mx-imgBorder"]
-     > ![Open Power Query Editor from Excel.](media/LaunchQueryEditorfromExcel.png)
+     > ![Open Power Query Editor from Excel.](media/how-to-migrate-queries/launch-query-editor-from-excel.png)
 
 2. Copy the queries:
 
@@ -38,7 +37,7 @@ To migrate queries from Power Query in the desktop tools:
    2. Select **Ctrl**+C.
 
       > [!div class="mx-imgBorder"]
-      > ![Select and copy folders.](media/SelectFolders.png)
+      > ![Select and copy folders.](media/how-to-migrate-queries/select-folders.png)
 
    If you don't have folders:
 
@@ -46,24 +45,24 @@ To migrate queries from Power Query in the desktop tools:
    1. Select **Ctrl**+C.
 
       > [!div class="mx-imgBorder"]
-      > ![Select and copy queries.](media/SelectQueries.png)
+      > ![Select and copy queries.](media/how-to-migrate-queries/select-queries.png)
 
 3. Paste the copied queries into a dataflow:
 
-   1. Create a dataflow, if you don't have one already. 
+   1. Create a dataflow, if you don't have one already.
 
       > [!div class="mx-imgBorder"]
-      > ![Create a Power BI dataflow.](media/CreatePBIDataflow.png)
+      > ![Create a Power BI dataflow.](media/how-to-migrate-queries/create-pbi-dataflow.png)
 
    2. Open the dataflow in Power Query Editor, and in the **Queries** pane, select **Ctrl**+V to paste the copied folders or queries.
 
       > [!div class="mx-imgBorder"]
-      > ![Paste queries or folders into the dataflow.](media/PasteInDataflow.png)
+      > ![Paste queries or folders into the dataflow.](media/how-to-migrate-queries/paste-in-dataflow.png)
 
    The image below shows an example of successfully copied folders.
-   
+
    > [!div class="mx-imgBorder"]
-   > ![Copy and paste is done successfully.](media/CopiedSuccessfully.png)
+   > ![Copy and paste is done successfully.](media/how-to-migrate-queries/copied-successfully.png)
 
 4. Connect the on-premises data gateway.
 
@@ -72,13 +71,13 @@ To migrate queries from Power Query in the desktop tools:
    A dataflow, as a cloud-based service, requires the on-premises data gateway to connect to the on-premises data source. You need to [install and configure the gateway](/data-integration/gateway/service-gateway-install) for that source system, and then add [the data source for it](/data-integration/gateway/service-gateway-manage). After you've completed these steps, you can select the on-premises data gateway when you create the entity in the dataflow.
 
    > [!div class="mx-imgBorder"]
-   > ![Gateway setup.](media/SetupGatewayForCopiedQuery.png)
+   > ![Gateway setup.](media/how-to-migrate-queries/setup-gateway-for-copied-query.png)
 
    The gateway isn't needed for data sources residing in the cloud, such as an Azure SQL database.
 
 5. Configure the connection to the data source by selecting **Configure connection** and entering credentials or anything else you need to connect to the data source at this stage.
 
-   ![Configure the connection.](media/ConfigureConnection.png)
+   ![Configure the connection.](media/how-to-migrate-queries/configure-connection.png)
 
 6. Verify the connection:
 
@@ -86,10 +85,10 @@ To migrate queries from Power Query in the desktop tools:
 
 ## Some Power Query Desktop functions require a gateway in Power Query Online
 
-Some of the functions might require a gateway, even if their source is not located on-premises. Among these are functions such as `Web.BrowserContents ` and `Web.Page`. If this happens, you might get an error message indicating which specific function isn't supported. The figure below shows an example of one of these scenarios.
+Some of the functions might require a gateway, even if their source is not located on-premises. Among these are functions such as [Web.BrowserContents](/powerquery-m/web-browsercontents) and [Web.Page](/powerquery-m/web-page). If this happens, you might get an error message indicating which specific function isn't supported. The figure below shows an example of one of these scenarios.
 
 > [!div class="mx-imgBorder"]
-> ![Unsupported functions in the dataflow.](media/MigrateToDataflowError.png)
+> ![Unsupported functions in the dataflow.](media/how-to-migrate-queries/migrate-to-dataflow-error.png)
 
 If a scenario like this happens, you have two options. You can set up the gateway for that data source, or you can update the query in the Power Query Editor for the dataflow by using a set of steps that are supported without the need for the gateway.
 
@@ -98,11 +97,10 @@ If a scenario like this happens, you have two options. You can set up the gatewa
 After migrating your queries to the dataflow, you must refresh the dataflow to get data loaded into these entities. You can refresh a dataflow manually or configure an automatic refresh based on the schedule of your choice.
 
 > [!div class="mx-imgBorder"]
-> ![Refresh the dataflow.](media/scheduleRefresh.png)
+> ![Refresh the dataflow.](media/how-to-migrate-queries/schedule-refresh.png)
 
 ## Get data from Power Query Desktop
 
 You can now get data from dataflow entities in Power BI Desktop by using the Power Platform dataflow or Dataverse connectors (depending on what type of dataflow you're using, analytical or standard). More information: [Connect to data created by Power Platform dataflows in Power BI Desktop](/power-bi/desktop-connect-dataflows)
 
-
-![Get data from dataflows in Power BI Desktop.](media/GetDatafromDataflow.png)
+![Get data from dataflows in Power BI Desktop.](media/how-to-migrate-queries/get-data-from-dataflow.png)

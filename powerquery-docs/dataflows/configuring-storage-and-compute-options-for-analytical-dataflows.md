@@ -1,19 +1,13 @@
 ---
 title: Configuring storage and compute options for analytical dataflows
 description: Configuring storage and compute options for analytical dataflows.
-author: radacad
-
-ms.service: powerquery
+author: bensack
+ms.author: bensack
 ms.topic: conceptual
 ms.date: 12/2/2020
-ms.author: bezhan
-
-LocalizationGroup: Data from files
 ---
 
 # Dataflow storage options
-
-[!INCLUDE [CDS note](../includes/cc-data-platform-banner.md)]
 
 [Standard dataflows](understanding-differences-between-analytical-standard-dataflows.md) always load data into Dataverse tables in an environment. [Analytical dataflows](understanding-differences-between-analytical-standard-dataflows.md) always load data into Azure Data Lake Storage accounts. For both dataflow types, there's no need to provision or manage the storage. Dataflow storage, by default, is provided and managed by products the dataflow is created in.
 

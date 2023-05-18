@@ -1,12 +1,10 @@
 ---
 title: Split columns by digit to non-digit
 description: Split columns by digit to non-digit
-author: jessli20
-
+author: ptyx507x
 ms.topic: conceptual
-ms.service: powerquery
-ms.date: 06/04/2020
-ms.author: bezhan
+ms.date: 1/9/2023
+ms.author: miescobar
 ---
 
 # Split columns by digit to non-digit
@@ -20,22 +18,22 @@ You can find the **Split Columns: By Digit to Non-Digit** option in three places
 
 * **Home tab**&mdash;under the **Split Column** dropdown menu inside the **Transform** group.
 
-   ![Image shows By Digit to Non-Digit under the Home tab.](images/sc-home-dtnd.png)
+   ![Image shows By Digit to Non-Digit under the Home tab.](media/splitcolumns-digit-to-nondigit/sc-home-dtnd.png)
 
 * **Transform tab**&mdash;under the **Split Column** dropdown menu inside the **Text Column** group.
 
-   ![Image shows By Digit to Non-Digit under the Transform tab.](images/sc-transform-dtnd.png)
+   ![Image shows By Digit to Non-Digit under the Transform tab.](media/splitcolumns-digit-to-nondigit/sc-transform-dtnd.png)
 
 * **Right-click a column**&mdash;inside the **Split Column** option.
 
-   ![Image shows By Digit to Non-Digit when right-clicking a column.](images/sc-rightclick-dtnd.png)
+   ![Image shows By Digit to Non-Digit when right-clicking a column.](media/splitcolumns-digit-to-nondigit/sc-rightclick-dtnd.png)
 
 ## Split columns by digit to non-digit into columns
 
 The initial table in this example will be the one shown in the image below, with a column for **Pets** and other extra columns.
 This example will only focus on the **Pets** column.
 
-![Image showing table with Pets and Age columns, with four rows, with the Pets column containing the rank of the animal.](images/sc-before-dtnd.png)
+![Image showing table with Pets and Age columns, with four rows, with the Pets column containing the rank of the animal.](media/splitcolumns-digit-to-nondigit/sc-before-dtnd.png)
 
 This column holds two values in each row:
 
@@ -48,5 +46,4 @@ This single column will split into multiple columns, given every instance of a d
 
 Your final table will look like the following image.
 
-![Image showing Pets.1, Pets.2 and Age columns, with the rank and type of pet separated into the two columns.](images/sc-after-dtnd.png)
-
+![Image showing Pets.1, Pets.2 and Age columns, with the rank and type of pet separated into the two columns.](media/splitcolumns-digit-to-nondigit/sc-after-dtnd.png)

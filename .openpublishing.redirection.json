@@ -14,6 +14,426 @@
       "source_path": "powerquery-docs/power-query-tutorial-shape-combine.md",
       "redirect_url": "/power-query/power-query-ui",
       "redirect_document_id": "false"
-    }    
-  ]
+    },
+    {
+      "source_path": "powerquery-docs/HandlingErrors.md",
+      "redirect_url": "/power-query/error-handling",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerquery-docs/dataflows/best-practices-for-data-warehouse-using-dataflows.md",
+      "redirect_url": "/power-query/dataflows/best-practices-for-dimensional-model-using-dataflows",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerquery-docs/HandlingQueryFolding.md",
+      "redirect_url": "/power-query/power-query-folding",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerquery-docs/Web.Contents.md",
+      "redirect_url": "/powerquery-m/web-contents",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerquery-docs/startingtodevelopcustomconnectors.md",
+      "redirect_url": "/power-query/installingsdk",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerquery-docs/CertificationSubmission.md",
+      "redirect_url": "/power-query/certification-submission",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/CommonIssues.md",
+      "redirect_url": "/power-query/common-issues",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/ConnectorAuthentication.md",
+      "redirect_url": "/power-query/connector-authentication",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/ConnectorCertification.md",
+      "redirect_url": "/power-query/connector-certification",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/CreatingFirstConnector.md",
+      "redirect_url": "/power-query/creating-first-connector",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/DataPrivacyFirewall.md",
+      "redirect_url": "/power-query/data-privacy-firewall",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/HandlingAuthentication.md",
+      "redirect_url": "/power-query/handling-authentication",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/HandlingConnectorSigning.md",
+      "redirect_url": "/power-query/handling-connector-signing",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/HandlingDataAccess.md",
+      "redirect_url": "/power-query/handling-data-access",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/HandlingDocumentation.md",
+      "redirect_url": "/power-query/handling-documentation",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/HandlingGatewaySupport.md",
+      "redirect_url": "/power-query/handling-gateway-support",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/HandlingNavigationTables.md",
+      "redirect_url": "/power-query/handling-navigation-tables",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/HandlingPaging.md",
+      "redirect_url": "/power-query/handling-paging",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/HandlingProxySupport.md",
+      "redirect_url": "/power-query/handling-proxy-support",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/HandlingResourcePath.md",
+      "redirect_url": "/power-query/handling-resource-path",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/HandlingSchema.md",
+      "redirect_url": "/power-query/handling-schema",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/HandlingStatusCodes.md",
+      "redirect_url": "/power-query/handling-status-codes",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/HandlingTransformations.md",
+      "redirect_url": "/power-query/handling-transformations",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/HandlingUnitTesting.md",
+      "redirect_url": "/power-query/handling-unit-testing",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/HandlingVersioning.md",
+      "redirect_url": "/power-query/handling-versioning",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/HelperFunctions.md",
+      "redirect_url": "/power-query/helper-functions",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/InstallingSDK.md",
+      "redirect_url": "/power-query/install-sdk",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/QueryDiagnostics.md",
+      "redirect_url": "/power-query/query-diagnostics",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/QueryDiagnosticsFolding.md",
+      "redirect_url": "/power-query/query-diagnostics-folding",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/ReadingQueryDiagnostics.md",
+      "redirect_url": "/power-query/read-query-diagnostics",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/RecordingQueryDiagnostics.md",
+      "redirect_url": "/power-query/record-query-diagnostics",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/SamplesDirectory.md",
+      "redirect_url": "/power-query/samples-directory",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/WaitRetry.md",
+      "redirect_url": "/power-query/wait-retry",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/FHIR/FHIR-QueryFolding.md",
+      "redirect_url": "/power-query/connectors/fhir/fhir-query-folding",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/FHIR/FHIR-QueryFoldingPatterns.md",
+      "redirect_url": "/power-query/connectors/fhir/fhir-query-folding-patterns",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/AccessDatabase.md",
+      "redirect_url": "/power-query/connectors/access-database",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/AdobeAnalytics.md",
+      "redirect_url": "/power-query/connectors/adobe-analytics",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/AmazonAthena.md",
+      "redirect_url": "/power-query/connectors/amazon-athena",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/AmazonOpenSearchService.md",
+      "redirect_url": "/power-query/connectors/amazon-opensearch-service",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/AmazonRedshift.md",
+      "redirect_url": "/power-query/connectors/amazon-redshift",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/AssembleViews.md",
+      "redirect_url": "/power-query/connectors/assemble-views",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/AutodeskConstructionCloud.md",
+      "redirect_url": "/power-query/connectors/autodesk-construction-cloud",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/AutomyDataAnalytics.md",
+      "redirect_url": "/power-query/connectors/automy-data-analytics",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/AzureCostManagement.md",
+      "redirect_url": "/power-query/connectors/azure-cost-management",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/AzureDataExplorer.md",
+      "redirect_url": "/power-query/connectors/azure-data-explorer",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/AzureDataLakeStorageGen1.md",
+      "redirect_url": "/power-query/connectors/azure-data-lake-storage-gen1",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/AzureSQLDatabase.md",
+      "redirect_url": "/power-query/connectors/azure-sql-database",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/AzureSQLDataWarehouse.md",
+      "redirect_url": "/power-query/connectors/azure-sql-data-warehouse",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/BitSightSecurityRatings.md",
+      "redirect_url": "/power-query/connectors/bitsight-security-ratings",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/BloombergDataAndAnalytics.md",
+      "redirect_url": "/power-query/connectors/bloomberg-data-and-analytics",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/CommonDataServiceLegacy.md",
+      "redirect_url": "/power-query/connectors/common-data-service-legacy",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/ConnectorFeedback.md",
+      "redirect_url": "/power-query/connectors/connector-feedback",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/DatabricksAzure.md",
+      "redirect_url": "/power-query/connectors/databricks-azure",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/DataLakeStorage.md",
+      "redirect_url": "/power-query/connectors/data-lake-storage",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/DeltaSharing.md",
+      "redirect_url": "/power-query/connectors/delta-sharing",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/DigitalConstructionWorksInsights.md",
+      "redirect_url": "/power-query/connectors/digital-construction-works-insights",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/FactSetRMS.md",
+      "redirect_url": "/power-query/connectors/factset-rms",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/GoogleAnalytics.md",
+      "redirect_url": "/power-query/connectors/google-analytics",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/GoogleBigQuery.md",
+      "redirect_url": "/power-query/connectors/google-bigquery",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/GoogleSheets.md",
+      "redirect_url": "/power-query/connectors/google-sheets",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/HiveLlap.md",
+      "redirect_url": "/power-query/connectors/hive-llap",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/IBMDb2Database.md",
+      "redirect_url": "/power-query/connectors/ibm-db2-database",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/ImpalaDatabase.md",
+      "redirect_url": "/power-query/connectors/impala-database",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/LinkedInSalesNavigator.md",
+      "redirect_url": "/power-query/connectors/linkedin-sales-navigator",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/MicrosoftAzureConsumptionInsights.md",
+      "redirect_url": "/power-query/connectors/microsoft-azure-consumption-insights",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/MicrosoftGraphSecurity.md",
+      "redirect_url": "/power-query/connectors/microsoft-graph-security",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/MicroStrategyForPowerBI.md",
+      "redirect_url": "/power-query/connectors/microstrategy-for-power-bi",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/MySQLDatabase.md",
+      "redirect_url": "/power-query/connectors/mysql-database",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/ODataFeed.md",
+      "redirect_url": "/power-query/connectors/odata-feed",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/OpenSearchProject.md",
+      "redirect_url": "/power-query/connectors/opensearch-project",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/OracleDatabase.md",
+      "redirect_url": "/power-query/connectors/oracle-database",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/QuickBooksOnline.md",
+      "redirect_url": "/power-query/connectors/quickbooks-online",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/SalesforceObjects.md",
+      "redirect_url": "/power-query/connectors/salesforce-objects",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/SalesforceReports.md",
+      "redirect_url": "/power-query/connectors/salesforce-reports",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/SharePointFolder.md",
+      "redirect_url": "/power-query/connectors/sharepoint-folder",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/SharePointList.md",
+      "redirect_url": "/power-query/connectors/sharepoint-list",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/SharePointOnlineList.md",
+      "redirect_url": "/power-query/connectors/sharepoint-online-list",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/SISCCSDMX.md",
+      "redirect_url": "/power-query/connectors/sis-cc-sdmx",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/SoftoneBI.md",
+      "redirect_url": "/power-query/connectors/softone-bi",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/SQLServer.md",
+      "redirect_url": "/power-query/connectors/sql-server",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/TextCSV.md",
+      "redirect_url": "/power-query/connectors/text-csv",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/VesselInsight.md",
+      "redirect_url": "/power-query/connectors/vessel-insight",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/Connectors/WorkforceDimensions.md",
+      "redirect_url": "/power-query/connectors/workforce-dimensions",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/connectors/Azure Cosmos DB v2.md",
+      "redirect_url": "/power-query/connectors/azure-cosmos-db-v2",
+      "redirect_document_id": "true"
+    }
+      ]
 }

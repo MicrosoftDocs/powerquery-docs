@@ -1,0 +1,131 @@
+### YamlMime:FAQ
+metadata:
+  title: Custom connector development FAQ
+  description: This article contains frequently asked questions about developing Power Query custom connectors that are collected in one spot.
+  author: ptyx507x
+  ms.reviewer: bezhan
+  ms.topic: conceptual
+  ms.date: 2/18/2022
+  ms.author: miescobar
+
+title: Custom connector development FAQ
+summary: |
+  Here are some answers to common questions that might occur while developing custom Power Query connectors.
+
+sections:
+  - name: General
+    questions:
+      - question: |
+          Is it possible to show a warning if...?
+        answer: |
+          Outside of documented warning patterns, we currently don't provide a way to return out of band warnings, such as a large table or large metadata warning.
+
+      - question: |
+          Is it possible to present table partition information by adding another level to the navigation hierarchy, and let users select one or more partitions?
+        answer: |
+          It's possible if end users frequently want to retrieve a single partition of data. However, this functionality can't be added to an already existing connector. In essence, this change would break an already existing connector.
+
+  - name: Troubleshooting
+    questions:
+      - question: |
+          The custom connector I've been developing works fine in Power BI Desktop. But when I try to run it in Power BI service, I can't set credentials or configure the data source. What's wrong?
+        answer: |
+          There could be several reasons why you're seeing this behavior. Some common errors that might occur while running the connector on Power BI service are:
+
+          * Failed to update data source credentials
+          * An exception occurred while trying to get `OAuthProvider` from `DataSourceReference`
+          * The given data source kind isn't supported
+
+          Before you begin troubleshooting this behavior, first collect a copy of the custom connector (.pq or .mez file). If you have a .mez file, rename the file to .zip and extract the .pq file.
+
+          To troubleshoot the custom connector:
+
+          1. Open the custom connector file (.pq) in a text editor of your choice.
+
+          2. Find the `TestConnection` function. The `TestConnection` function is required for scheduled refresh in the Power BI service, but isn't used in Power BI Desktop. Check the .pq file for a `TestConnection` implementation, and confirm that the parameters match the connector's data source function. More information: [Handling gateway support](HandlingGatewaySupport.md)
+
+          3. If the connector uses OAuth, check for the `state` parameter. A common cause of service-only failures is a missing `state` parameter in the connector's `StartLogin` implementation. This parameter isn't used in Power BI Desktop, but is required in the Power BI service. The `state` parameter must be passed into the call to [Uri.BuildQueryString](/powerquery-m/uri-buildquerystring). The following example demonstrates the correct implementation of `state`.
+
+          ```powerquery-m
+          StartLogin = (resourceUrl, state, display) =>
+            let
+                authorizeUrl = authorize_uri & "?" & Uri.BuildQueryString([
+                    response_type = "code",
+                    client_id = client_id,
+                    state = state,                 //correct implementation
+                    redirect_uri = redirect_uri,
+                    resource = resource
+                ])
+            in
+                [
+                    LoginUri = authorizeUrl,
+                    CallbackUri = redirect_uri,
+                    WindowHeight = 720,
+                    WindowWidth = 1024,
+                    Context = null
+                ];
+          ```
+
+      - question: |
+          When a schema or database opens in the Power Query navigator, it starts immediately fetching all of the tables under the database instead of waiting for a table to be selected. What is causing this behavior?  
+        answer: |
+          This behavior might be a side effect of how you're building your navigation table. If you're creating new records with [Table.TransformRows](/powerquery-m/table-transformrows), this usage usually results in eager evaluation of the data tables. However, values produced by [Table.AddColumn](/powerquery-m/table-addcolumn) are produced lazily. so, in the following example code, "each GetSchemas(url, [name])" won't be evaluated unless the user query actually references this data.
+          ```powerquery-m
+          GetShares = (server_host as text) as table =>
+              let
+                  url =  server_host & "/shares",
+                  shares = GetItems(url),
+                  withData = Table.AddColumn(shares, "Data", each GetSchemas(url, [name])),
+                  withItemKind = Table.AddColumn(withData, "ItemKind", each "Folder"),
+                  withItemName = Table.AddColumn(withItemKind, "ItemName", each "Folder"),
+                  withIsLeaf = Table.AddColumn(withItemName, "IsLeaf", each false),
+                  renamed = Table.RenameColumns(withIsLeaf, {{"name", "Name"}, {"key", "Key"}}),
+                  navTable = Table.ToNavigationTable(renamed, {"Key"}, "Name", "Data", "ItemKind", "ItemName", "IsLeaf")
+              in
+                  navTable;
+          ```
+
+      - question: |
+          A single table can consist of multiple partitioned files. The current implementation downloads all the files before showing a preview. Is there a way to avoid downloading all the files, and only download files until there's enough rows for the preview?
+        answer: |
+          This behavior is a side effect of using [Table.Combine](/powerquery-m/table-combine). An alternative method is to build a "table of tables" and use the [Table.ExpandTableColumn](/powerquery-m/table-expandtablecolumn) function. This method lazily expands partitions as needed. For example:
+
+          ```powerquery-m
+          GetFiles = (tables_url as text, table_name as text) as table =>
+              let
+                  // parse raw ndjson and get the list of parquet files
+                  // resp format: line 1: protocol, line 2: schema, line 3..:file info
+                  resp = Lines.FromBinary(SendRequest(tables_url & "/" & table_name & "/query", [
+                      Headers= [#"Content-Type"="application/json"],
+                      Content= Text.ToBinary("{}")
+                  ]), null, null, 1252),
+                  protocol = resp{0}, // TODO: Add protocol version check
+                  schema = Json.Document(Json.Document(resp{1})[metaData][schemaString])[fields],
+                  columnNames = List.Transform(schema, each [name]),
+
+                  fileInfos = List.Range(resp, 2),
+                  fileUrls = List.Transform(fileInfos, each Json.Document(_)[file][url]),
+                  numFiles = List.Count(fileUrls),
+
+                  toTable = Table.FromList(fileUrls, Splitter.SplitByNothing(), {"FileUrl"}),
+                  processPartition = Table.AddColumn(toTable, "Data", each Parquet.Document(Binary.Buffer(ProtectSensitiveQueryParameters([FileUrl], [ManualCredentials = true])))),
+                  removeFileUrl = Table.RemoveColumns(processPartition, {"FileUrl"}),
+                  expanded = Table.ExpandTableColumn(removeFileUrl, "Data", columnNames)
+              in
+                  if numFiles = 0 then #table(columnNames, {}) else expanded;
+
+          ProtectSensitiveQueryParameters = (url as text, options as record) =>
+              let
+                  uriParts = Uri.Parts(uri),
+                  uriWithoutQuery = Uri.FromParts(uriParts & [Query = []]),
+                  modifiedOptions = options & [
+                      CredentialQuery = uriParts[Query],
+                  ]
+              in
+                  Web.Contents(uriWithoutQuery, modifiedOptions);
+          ```
+additionalContent: |
+  ## Additional information
+
+    >[!Note]
+    >Reach out to your Microsoft contact if you are interested in engaging a recommended 3rd party custom connector developer consultant.

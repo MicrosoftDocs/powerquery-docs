@@ -1,13 +1,10 @@
 ---
 title: Best practices for designing and developing complex dataflows
 description: Best practices for designing and developing complex dataflows
-author: radacad
-
-ms.service: powerquery
-ms.reviewer: kvivek
+author: bensack
 ms.topic: conceptual
-ms.date: 12/2/2020
-ms.author: bezhan
+ms.date: 1/6/2023
+ms.author: bensack
 ---
 
 # Best practices for designing and developing complex dataflows
@@ -20,9 +17,9 @@ Don't do everything in one dataflow. Not only does a single, complex dataflow ma
 
 ## Split data transformation dataflows from staging/extraction dataflows
 
-Having some dataflows just for extracting data (that is, [staging dataflows](best-practices-for-data-warehouse-using-dataflows.md#staging-dataflows)) and others just for transforming data is helpful not only for creating a multilayered architecture, it's also helpful for reducing the complexity of dataflows. Some steps just extract data from the data source, such as get data, navigation, and data type changes. By separating the staging dataflows and transformation dataflows, you make your dataflows simpler to develop.
+Having some dataflows just for extracting data (that is, [staging dataflows](best-practices-for-dimensional-model-using-dataflows.md#staging-dataflows)) and others just for transforming data is helpful not only for creating a multilayered architecture, it's also helpful for reducing the complexity of dataflows. Some steps just extract data from the data source, such as get data, navigation, and data type changes. By separating the staging dataflows and transformation dataflows, you make your dataflows simpler to develop.
 
-:::image type="complex" source="media/multilayereddf.png" alt-text="Multilayered dataflow architecture.":::
+:::image type="complex" source="media/best-practices-developing-complex-dataflows/multi-layered-dataflow.png" alt-text="Multilayered dataflow architecture.":::
    Image showing data being extracted from a data source to staging dataflows, where the enities are either stored in Dataverse or Azure Data Lake storage, then the data is moved to transformation dataflows where the data is transformed and converted to the data warehouse structure, and then the data is moved to the dataset.
 :::image-end:::
 
@@ -32,7 +29,7 @@ Custom functions are helpful in scenarios where a certain number of steps have t
 
 Having a custom function helps by having only a single version of the source code, so you don't have to duplicate the code. As a result, maintaining the Power Query transformation logic and the whole dataflow will be much easier. For more information, see the following blog post: [Custom Functions Made Easy in Power BI Desktop](https://radacad.com/custom-functions-made-easy-in-power-bi-desktop#:~:text=It%20is%20easy%20to%20consume,the%20output%20column%20as%20Holidays.).
 
-![Custom functions.](media/custom-function.png)
+![Custom functions.](media/best-practices-developing-complex-dataflows/custom-function.png)
 
 ## Place queries into folders
 
