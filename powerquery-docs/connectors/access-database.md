@@ -25,7 +25,7 @@ ms.author: bezhan
 
 If you're connecting to an Access database from Power Query Online, the system that contains the on-premises data gateway must have the 64-bit version of the [Access Database Engine 2016 OLEDB provider](https://www.microsoft.com/download/details.aspx?id=54920) installed.
 
-If you're loading an Access database to Power BI Desktop, the versions of the Access Database Engine 2010 OLEDB provider and Power BI Desktop on that machine must match (that is, either 32-bit or 64-bit). For more information, go to [Import Access database to Power BI Desktop](#import-access-database-to-power-bi-desktop).
+If you're loading an Access database to Power BI Desktop, the versions of the Access Database Engine 2016 OLEDB provider and Power BI Desktop on that machine must match (that is, either 32-bit or 64-bit). For more information, go to [Import Access database to Power BI Desktop](#import-access-database-to-power-bi-desktop).
 
 ## Capabilities Supported
 
@@ -84,12 +84,12 @@ When you attempt to connect to a local Access database using Power Query Online,
 
 A 64-bit version of the Access Database Engine 2016 OLEDB provider must be installed on your on-premises data gateway machine to be able to load Access database files. If you already have a 64-bit version of Microsoft Office installed on the same machine as the gateway, the Access Database Engine 2016 OLEDB provider is already installed. If not, you can download the driver from the following location:
 
-[https://www.microsoft.com/en-us/download/details.aspx?id=54920](https://www.microsoft.com/en-us/download/details.aspx?id=54920)
+[Access Database Engine 2016 OLEDB provider](https://www.microsoft.com/download/details.aspx?id=54920)
 
 >[!Note]
->Microsoft Office has stopped supporting the Access Database Engine 2010 OLEDB provider as part of end-of-life for Office 2010. However, some legacy use cases, such as using 32-bit Office and 64-bit PBI Desktop, may require the continued use of the older 2010 version. In these cases, you can still download the 2010 version from the following location:
+>Microsoft Office has stopped supporting the Access Database Engine 2010 OLEDB provider as part of end-of-life for Office 2010. However, some legacy use cases, such as using 32-bit Office and 64-bit PBI Desktop, might require the continued use of the older 2010 version. In these cases, you can still download the 2010 version from the following location:
 >
->[https://www.microsoft.com/en-us/download/details.aspx?id=13255](https://www.microsoft.com/en-us/download/details.aspx?id=13255)
+>[Access Database Engine 2010 OLEDB provider](https://www.microsoft.com/download/details.aspx?id=13255)
 
 ### Import Access database to Power BI Desktop
 
