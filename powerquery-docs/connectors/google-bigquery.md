@@ -100,7 +100,7 @@ The following table lists all of the advanced options you can set in Power Query
 
 | Advanced option | Description |
 | --------------- | ----------- |
-| Billing Project ID | A project against which Power Query will run queries. Permissions and billing are tied to this project. |
+| Billing Project ID | A project against which Power Query will run queries. Permissions and billing are tied to this project. If no Billing Project ID is provided, by default the first available project returned by Google APIs will be used. |
 | Use Storage Api | A flag that enables using the [Storage API of Google BigQuery](https://cloud.google.com/bigquery/docs/reference/storage). This option is true by default. This option can be set to false to not use the Storage API and use REST APIs instead. |
 | Connection timeout duration | The standard connection setting (in seconds) that controls how long Power Query waits for a connection to complete. You can change this value if your connection doesn't complete before 15 seconds (the default value.) |
 | Command timeout duration | How long Power Query waits for a query to complete and return results. The default depends on the driver default. You can enter another value in minutes to keep the connection open longer. |
@@ -174,3 +174,6 @@ You can resolve this issue by adjusting the user permissions for the BigQuery St
 These permissions typically are provided in the `BigQuery.User` role. More information, [Google BigQuery Predefined roles and permissions](https://cloud.google.com/bigquery/docs/access-control)
 
 If the above steps don't resolve the problem, you can disable the BigQuery Storage API.
+
+### Unable to use DateTime type data in Direct Query mode
+There's a known issue where the DateTime type isn't supported through Direct Query. Selecting a column with the DateTime type will cause an "Invalid query" error or a visual error.

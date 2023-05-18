@@ -7,6 +7,7 @@ author: ptyx507x
 ms.topic: overview
 ms.date: 1/5/2023
 ms.author: miescobar
+ms.search.form: DataflowGen2 Overview
 ---
 
 # The Power Query user interface

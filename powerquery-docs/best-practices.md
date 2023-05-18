@@ -5,6 +5,7 @@ author: ptyx507
 ms.date: 1/5/2023
 ms.author: miescobar
 ms.topic: conceptual
+ms.search.form: DataflowGen2 Overview
 ---
 # Best practices when working with Power Query
 

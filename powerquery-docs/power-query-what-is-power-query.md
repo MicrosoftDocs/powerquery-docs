@@ -4,8 +4,9 @@ description: Learn what Power Query is, and how it can help you get and transfor
 author: ptyx507x
 
 ms.topic: overview
-ms.date: 1/9/2023
+ms.date: 5/17/2023
 ms.author: miescobar
+ms.search.form: DataflowGen2 Overview, product-data-integration
 ---
 
 # What is Power Query?
@@ -93,7 +94,7 @@ The following table lists Microsoft products and services where Power Query can 
 |Product|M engine<sup>1</sup>|Power Query<br>Desktop<sup>2</sup>|Power Query<br>Online<sup>3</sup>|Dataflows<sup>4</sup>|
 |-------|---------|-------------------|------------------|---------|
 |Excel for Windows|Yes|Yes|No| No|
-|Excel for Mac|Yes|No|No| No|
+|Excel for Mac|Yes|Yes|No| No|
 |Power BI|Yes|Yes|Yes| Yes|
 |Power Apps| Yes |No|Yes| Yes|
 |Power Automate| Yes |No | Yes |No |

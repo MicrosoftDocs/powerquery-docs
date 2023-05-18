@@ -17,7 +17,7 @@ The list of supported authentication types is defined as part of an extension's 
 
 | Authentication Kind | Field         | Description                                                                                                                                                    |
 | :------------------ | :------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Implicit            |               | The Implicit (anonymous) authentication kind doesn't have any fields.                                                                                         |
+| Anonymous           |               | The Anonymous (also called `Implicit`) authentication kind doesn't have any fields.                                                                                         |
 | OAuth               | StartLogin    | Function that provides the URL and state information for starting an OAuth flow.<br/></br>Go to the [Implementing an OAuth Flow](#implementing-an-oauth-flow) section. |
 |                     | FinishLogin   | Function that extracts the access_token and other properties related to the OAuth flow.                                                                        |
 |                     | Refresh       | **(optional)** Function that retrieves a new access token from a refresh token.                                                                                |
@@ -34,7 +34,7 @@ The list of supported authentication types is defined as part of an extension's 
 | Key                 | KeyLabel      | **(optional)** A text value to replace the default label for the _API Key_ text box on the credentials UI.                                                     |
 |                     | Label         | **(optional)** A text value that allows you to override the default label for this AuthenticationKind.                                                         |
 
-The following sample shows the Authentication record for a connector that supports OAuth, Key, Windows, Basic (Username and Password), and anonymous credentials.
+The following sample shows the Authentication record for a connector that supports OAuth, Key, Windows, Basic (Username and Password), and Anonymous credentials.
 
 **Example:**
 
@@ -49,7 +49,7 @@ Authentication = [
     Key = [],
     UsernamePassword = [],
     Windows = [],
-    Implicit = []
+    Anonymous = []
 ]
 ```
 
@@ -219,11 +219,11 @@ GetAuthorizationUrlFromWwwAuthenticate = (url as text) as text =>
                     // Trim and replace the double quotes inserted before the url
                     Text.Replace(Text.Trim(Text.Trim(Text.AfterDelimiter(authorizationUri, "=")), ","), """", "")
                 else
-                    error Error.Record("DataSource.Error", "Unexpected WWW-Authenticate header format or value during authentication."), [
+                    error Error.Record("DataSource.Error", "Unexpected WWW-Authenticate header format or value during authentication.", [
                         #"WWW-Authenticate" = wwwAuthenticate
                     ])
         else
-            error Error.Unexpected("Unexpected response from server during authentication."));
+            error Error.Unexpected("Unexpected response from server during authentication.");
 
 <... snip ...>
 
