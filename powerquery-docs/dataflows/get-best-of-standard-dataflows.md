@@ -95,6 +95,9 @@ Having this option checked means that if there's a data row in the table that do
 > [!div class="mx-imgBorder"]
 > ![Delete rows that no longer exists.](media/get-best-of-standard-dataflows/delete-rows-not-exist.png)
 
+> [!NOTE]
+> Standard V2 Dataflows rely on the createdon and modifiedon fields in order to remove rows that dont exist in the dataflows output, from the destination table. If those columns do not exist in the destination table, records will not be deleted.
+
 ## Known limitations
 
 * Mapping to [polymorphic lookup](/powerapps/maker/canvas-apps/working-with-references#polymorphic-lookups) fields is currently not supported.
