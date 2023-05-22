@@ -48,17 +48,17 @@ When a Label value is defined, the data source path value isn't shown:
 
 :::image type="content" source="media/handling-authentication/data-source-settings-label.png" alt-text="Screenshot of the data source settings with a label defined.":::
 
->[Note]
+>[!NOTE]
 > We currently recommend that you _do not_ include a Label for your data source if your function has required parameters, as users won't be able to distinguish between the different credentials they've entered. We are hoping to improve this in the future (that is, allowing data connectors to display their own custom data source paths).
 
-### Excluding Required Parameters from your Data Source Path
+### Excluding required parameters from your data source path
 
 If you want a function parameter to be required, but not to be included as part of your data source path, you can add `DataSource.Path = false` to the function documentation metadata. This property can be added to one or more parameters for your function. This field removes the value from your data source path (meaning that it's no longer passed to your `TestConnection` function), so it should only be used for parameters that aren't required to identify your data source, or distinguish between user credentials.
 
 For example, the connector in the [HelloWorldWithDocs sample](https://github.com/Microsoft/DataConnectors/tree/master/samples/HelloWorldWithDocs) would require different credentials for different `message` values.
 Adding `DataSource.Path = false` to the `message` parameter removes it from the data source path calculation, effectively making the connector a "singleton". All calls to `HelloWorldWithDocs.Contents` are treated as the same data source, and the user only provides credentials once.
 
-```powerquery
+```powerquery-m
 HelloWorldType = type function (
     message as (type text meta [
         DataSource.Path = false,

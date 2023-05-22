@@ -38,7 +38,7 @@ The following sample shows the Authentication record for a connector that suppor
 
 **Example:**
 
-```powerquery
+```powerquery-m
 Authentication = [
     OAuth = [
         StartLogin = StartLogin,
@@ -170,7 +170,7 @@ If the data source's Azure AD resource is different than the domain value (for e
 
 #### Aad authentication kind samples
 
-In this case, the data source supports global cloud Azure AD using the common tenant (no Azure B2B support).
+In the following case, the data source supports global cloud Azure AD using the common tenant (no Azure B2B support).
 
 ```powerquery-m
 Authentication = [
@@ -181,7 +181,7 @@ Authentication = [
 ]
 ```
 
-In this case, the data source supports tenant discovery based on OpenID Connect (OIDC) or similar protocol. This allows the connector to determine the correct Azure AD endpoint to use based on one or more parameters in the data source path. This dynamic discovery approach allows the connector to support Azure B2B.
+In the following case, the data source supports tenant discovery based on OpenID Connect (OIDC) or similar protocol. This ability allows the connector to determine the correct Azure AD endpoint to use based on one or more parameters in the data source path. This dynamic discovery approach allows the connector to support Azure B2B.
 
 ```powerquery-m
 
