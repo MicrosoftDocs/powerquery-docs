@@ -14,7 +14,7 @@ ms.search.form: DataflowGen2 Overview, product-data-integration
 Power Query is a data transformation and data preparation engine. Power Query comes with a graphical interface for getting data from sources and a Power Query Editor for applying transformations. Because the engine is available in many products and services, the destination where the data will be stored depends on where Power Query was used. Using Power Query, you can perform the extract, transform, and load (ETL) processing of data.
 
 :::image type="complex" source="media/power-query-what-is-power-query/what-is-power-query.png" alt-text="Power Query input, transformation, and destination":::
-   Diagram with symbolized data sources on the left, passing through Power Query for transformation in the center, and then going to four destinations on the right: Microsoft Azure Data Lake Storage, Microsoft Dataverse, Microsoft Excel and Microsoft Power BI.
+Diagram with symbolized data sources on the left, passing through Power Query for transformation in the center, and then going to four destinations on the right: Microsoft Azure Data Lake Storage, Microsoft Dataverse, Microsoft Excel and Microsoft Power BI.
 :::image-end:::
 
 ## How Power Query helps with data acquisition
