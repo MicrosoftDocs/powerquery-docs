@@ -352,7 +352,7 @@
         href: connectors/synapse.md
       - name: "Azure Table Storage"
         href: connectors/azure-table-storage.md
-      - name: "BitSight Security Ratings"
+      - name: "Bitsight Security Ratings"
         href: connectors/bitsight-security-ratings.md
       - name: "Bloomberg Data and Analytics"
         href: connectors/bloomberg-data-and-analytics.md
