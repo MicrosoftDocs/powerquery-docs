@@ -33,7 +33,7 @@ To connect using the Atlas SQL interface :
    - Navigate to your federated database instance. In Atlas, select **Data Federation** from the left navigation panel.
    - Click **Connect** to open the federated database instance connection modal.
    - Select **Connect using the Atlas SQL Interface**.
-   - Select **PowerBI Desktop**.
+   - Select **Power BI Connector**.
    - Copy your federated database name and MongoDB URI. You'll need them in a later step.
 
 2. Select **Get Data** from the **Home** ribbon in Power BI Desktop.
