@@ -1,8 +1,16 @@
+---
+title: MongoDB Atlas SQL interface connector (Beta)  
+description: Provides basic information, prerequisites, and instructions for using the MongoDB Atlas SQL interface connector.  
+author: bucaojit  
+ms.author:  
+ms.topic: conceptual  
+ms.date: 5/23/2023  
+---
+
 # MongoDB Atlas SQL interface
 
-> [!Note] The following connector article is provided by MongoDB, the owner of this connector and a member of the 
-> Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or 
-> have changes you would like to see made to this article, visit the MongoDB website and use the support channels there.
+> [!Note]
+> The following connector article is provided by MongoDB, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the MongoDB website and use the support channels there.
 
 ## Summary
 
@@ -16,8 +24,7 @@
 To use the MongoDB Atlas SQL connector, you must have an 
 [Atlas federated database](https://www.mongodb.com/docs/atlas/data-federation/) setup.
 > [!NOTE]
-> If some or all of your data comes from an Atlas cluster, you must use MongoDB version 5.0 or greater for that cluster 
-> to take advantage of Atlas SQL.
+> If some or all of your data comes from an Atlas cluster, you must use MongoDB version 5.0 or greater for that cluster to take advantage of Atlas SQL.
 
 We also recommend to install the MongoDB Atlas SQL ODBC Driver before using the MongoDB Atlas SQL connector.
 
@@ -54,10 +61,8 @@ To connect using the Atlas SQL interface :
    
    Select **Continue**. 
 6. Enter your Atlas MongoDB Database access username and password and select **Connect**.
-   > [!NOTE]
-   > Once you enter your username and password for a particular Atlas federated database, Power BI Desktop uses those 
-   > same credentials in subsequent connection attempts. You can modify those credentials by going to **File > Options 
-   > and settings > Data source settings**.  
+> [!NOTE]
+> Once you enter your username and password for a particular Atlas federated database, Power BI Desktop uses those same credentials in subsequent connection attempts. You can modify those credentials by going to **File > Options and settings > Data source settings**.  
 
 7. In **Navigator**, select one or multiple elements to import and use in Power BI Desktop. 
    Then select either **Load** to load the table in Power BI Desktop, or **Transform Data** to open the Power Query 
