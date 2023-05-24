@@ -1,5 +1,5 @@
 ---
-title: Palantir Foundry Power Query
+title: Palantir Foundry Power Query Connector
 description: Provides basic information and prerequisites for using the Palantir Foundry Power Query connector.
 author: mshafer
 ms.date: 5/17/2023
@@ -35,12 +35,12 @@ This connector works with any active Palantir Foundry environment. Ensure you've
 
 To connect to Palantir Foundry from Power Query Desktop, take the following steps:
 
-1. Select the **Palantir Foundry** option in the connector selection.
+1. In the **Get Data** experience, select the **Palantir Foundry** option in the connector selection.
 2. In **Connection Settings**, provide the **Base URL** of your Foundry environment. For example, `https://<subdomain>.palantirfoundry.com/`. Optionally, provide a **Dataset RID** and **Branch**.
 
    ![Enter Palantir Foundry connection settings in Power Query Desktop.](./media/palantir-foundry-datasets/connection-settings.png)
 
-3. Select either the **Import** or **DirectQuery** data connectivity mode.
+3. Select either the **Import** or **Direct Query** data connectivity mode.
 4. Select **OK**.
 5. If you're connecting to Foundry for the first time, select the authentication type: **Foundry OAuth** (recommended) or **Foundry Token**. After signing in (Foundry OAuth) or entering a token (Foundry Token), select **Connect**.
 
