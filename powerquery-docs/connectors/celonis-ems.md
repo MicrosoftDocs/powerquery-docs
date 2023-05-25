@@ -25,7 +25,7 @@ LocalizationGroup: reference
 
 ## Prerequisites
 
-Before you can sign in to [Celonis EMS](https://www.celonis.com/ems/platform/?utm_source=google&utm_medium=cpc&utm_campaign=evergreen&utm_content=en_maxconvvalueems_platform_eta&creative=605673291817&keyword=celonis%20ems&matchtype=e&network=g&device=c&_bt=605673291817&_bk=celonis%20ems&_bm=e&_bn=g&_bg=134342462066&gclid=CjwKCAjw1ICZBhAzEiwAFfvFhD5aEPA6iavBUsBG1p0WeGEVi9OF5qcOaohHqNgpbuWa-f9ZHwCtHhoCSqYQAvD_BwE), you must have a Celonis EMS account (username/password).
+Before you can sign in to [Celonis EMS](https://celon.is/EMS-Platform), you must have a Celonis EMS account (username/password).
 
 
 ## Capabilities Supported
