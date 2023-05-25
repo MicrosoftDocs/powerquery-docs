@@ -4,11 +4,11 @@ description: Provides basic information, prerequisites, and connection steps for
 author: capono
 
 ms.date: 02/17/2023 
-ms.author: 
+ms.author: bezhan
 LocalizationGroup: reference
 ---
 
-# Celonis EMS
+# Celonis EMS (Beta)
 
   
 
@@ -16,8 +16,8 @@ LocalizationGroup: reference
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | General Availability |
-| Products | Power BI (Datasets) |
+| Release State | Beta |
+| Products | Power BI (Datasets) </br> Power BI (Dataflows) |
 | Authentication Types Supported | Organizational Account |
 | Function Reference Documentation | [Web.Contents](https://learn.microsoft.com/en-us/powerquery-m/web-contents) </br> [Parquet.Document](xxx) </br> [Json.Document](https://learn.microsoft.com/en-us/powerquery-m/json-document) </br> [Json.FromValue](https://learn.microsoft.com/en-us/powerquery-m/json-fromvalue)|
 
