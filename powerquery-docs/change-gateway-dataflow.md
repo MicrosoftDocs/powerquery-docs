@@ -24,9 +24,10 @@ This query previously used a gateway named "Gateway A" to connect to the folder.
 To change the gateway:
 
 1. From the **Home** tab in Power Query, select **Options**.
-   ![Options icon and selection in Power Query Home tab](media\change-gateway\new-settings.png)
 
-2. In the **Options** dialog box, select the gateway to use for your project, in this case, Gateway B.
+   ![Options icon and selection in Power Query Home tab.](media\change-gateway\new-settings.png)
+
+2. In the **Options** dialog box, select **Data load**, and then select the gateway to use for your project, in this case, Gateway B.
 
    ![Image of Project options dialog box with the drop-down menu listing None, Gateway A, and Gateway B.](media\change-gateway\options-dialog-change-gateway.png)
 
@@ -52,7 +53,7 @@ The best way to validate the data source path is to go into the query where your
 
 ## Modify authentication
 
-To modify the credentials used against your data source, select **Get data** in the Power Query editor ribbon to launch the **Choose data source** dialog box, then define a new or existing connection to your data source. In this example, the connector that's' used is the Folder connector.
+To modify the credentials used against your data source, select **Get data** in the Power Query editor ribbon to launch the **Choose data source** dialog box, then define a new or existing connection to your data source. In this example, the connector that's used is the Folder connector.
 
 ![Choose data source dialog with the folder connector emphasized.](media\change-gateway\choose-data-source.png)
 
