@@ -318,7 +318,7 @@
         href: connectors/anaplan.md
       - name: "AssembleViews"
         href: connectors/assemble-views.md
-      - name: "Autodesk Construction Cloud (Beta)"
+      - name: "Autodesk Construction Cloud"
         href: connectors/autodesk-construction-cloud.md
       - name: "Automy Data Analytics (Beta)"
         href: connectors/automy-data-analytics.md
