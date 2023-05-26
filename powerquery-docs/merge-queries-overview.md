@@ -60,6 +60,18 @@ First select the **CountryID** column in the **Sales** table, select **Ctrl**, a
    ![Merge dialog box with the Left table for merge set to Sales, with the CountryID and StateID columns selected, and the Right table for merge set to Countries, with the CountryID and StateID columns selected. The Join kind is set to Left outer.
 :::image-end:::
 
+### Use the column pair suggestion
+
+When selecting the left and right table in the Merge dialog, you can check the lightbulb icon on the top right corner of the dialog to see if there are any suggestions when it comes to column-pair-mapping between both tables.
+
+There can be many suggestions in place but, for this scenario, there is only one suggestion by the feature where it maps the column CountryID from the Sales table to the CountryID column from the Countries table. You can click it and the column-pair-mapping will be automatically applied to your dialog.
+
+![Merge dialog showcasing the suggested pairing of columns for the Sales and Countries tables where they are joined by the CountryID columns in both tables](media/merge-queries-overview/suggested-pairing.png)
+
+>[!NOTE]
+>Only the column-pair-mapping is suggested. Other options of this dialog such as the join kind or fuzzy matching configuration are out of the scope of this suggestion.
+
+
 ### Expand or aggregate the new merged table column
 
 After selecting **OK** in the **Merge** dialog box, the base table of your query will have all the columns from your left table. Also, a new column will be added with the same name as your right table. This column holds the values corresponding to the right table on a row-by-row basis.
