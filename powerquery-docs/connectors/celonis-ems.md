@@ -19,7 +19,7 @@ LocalizationGroup: reference
 | Release State | Beta |
 | Products | Power BI (Datasets) </br> Power BI (Dataflows) |
 | Authentication Types Supported | Organizational Account |
-| Function Reference Documentation | [Web.Contents](https://learn.microsoft.com/en-us/powerquery-m/web-contents) </br> [Parquet.Document](xxx) </br> [Json.Document](https://learn.microsoft.com/en-us/powerquery-m/json-document) </br> [Json.FromValue](https://learn.microsoft.com/en-us/powerquery-m/json-fromvalue)|
+| Function Reference Documentation | [Web.Contents](/powerquery-m/web-contents) </br> [Parquet.Document](xxx) </br> [Json.Document](/powerquery-m/json-document) </br> [Json.FromValue](/powerquery-m/json-fromvalue)|
 
   
 
@@ -57,7 +57,7 @@ To make the connection, take the following steps:
 
 1. Enter your **Application Key** or your **Personal API Key** generated in the Celonis EMS.
 
-![Authentication](media/celonis-ems/authentication.png)
+![Enter Key for Authentication](media/celonis-ems/authentication.png)
 
   
 4. Once you're done, select **Connect**.
@@ -65,7 +65,7 @@ To make the connection, take the following steps:
   
 5. Upon a successful connection, the **Navigator** opens with the list of packages available in the given EMS team. Select the **Knowledge Model Record** you want to import and click **Load**.
 
-![Navigator](media/celonis-ems/navigator.png)
+![Navigate to package](media/celonis-ems/navigator.png)
 
 ## Limitations and issues
 
