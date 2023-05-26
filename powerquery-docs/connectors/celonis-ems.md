@@ -19,7 +19,7 @@ LocalizationGroup: reference
 | Release State | Beta |
 | Products | Power BI (Datasets) </br> Power BI (Dataflows) |
 | Authentication Types Supported | Organizational Account |
-| Function Reference Documentation | [Web.Contents](/powerquery-m/web-contents) </br> [Parquet.Document](xxx) </br> [Json.Document](/powerquery-m/json-document) </br> [Json.FromValue](/powerquery-m/json-fromvalue)|
+| Function Reference Documentation | [Web.Contents](/powerquery-m/web-contents) </br> [Parquet.Document](/power-query/connectors/parquet) </br> [Json.Document](/powerquery-m/json-document) </br> [Json.FromValue](/powerquery-m/json-fromvalue)|
 
   
 
