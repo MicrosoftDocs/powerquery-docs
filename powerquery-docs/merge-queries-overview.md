@@ -2,7 +2,7 @@
 title: "Merge queries overview"
 description: An overview of merge queries operations in Power Query, and the basic principles and common uses. 
 author: ptyx507
-ms.date: 12/12/2022
+ms.date: 5/26/2023
 ms.author: miescobar
 ms.topic: overview
 ---
@@ -59,6 +59,18 @@ First select the **CountryID** column in the **Sales** table, select **Ctrl**, a
 :::image type="complex" source="media/merge-queries-overview/merge-window-multiple-columns-sample.png" alt-text="Merge dialog box with settings for the left and right tables.":::
    ![Merge dialog box with the Left table for merge set to Sales, with the CountryID and StateID columns selected, and the Right table for merge set to Countries, with the CountryID and StateID columns selected. The Join kind is set to Left outer.
 :::image-end:::
+
+### Use the column pair suggestion
+
+When selecting the left and right table in the Merge dialog, you can check the lightbulb icon on the top right corner of the dialog to see if there are any suggestions when it comes to column-pair-mapping between both tables.
+
+There can be many suggestions in place but, for this scenario, there's only one suggestion by the feature, where it maps the column CountryID from the Sales table to the CountryID column from the Countries table. You can select it and the column-pair-mapping will be automatically applied to your dialog.
+
+:::image type="content" source="media/merge-queries-overview/suggested-pairing.png" alt-text="Screenshot of Merge dialog showcasing the suggested pairing of columns for the Sales and Countries tables where they are joined by the CountryID columns in both tables.":::
+
+>[!NOTE]
+>Only the column-pair-mapping is suggested. Other options in this dialog, such as the join kind or fuzzy matching configuration, are out of scope for this suggestion.
+
 
 ### Expand or aggregate the new merged table column
 
