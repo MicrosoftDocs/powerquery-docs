@@ -64,12 +64,12 @@ First select the **CountryID** column in the **Sales** table, select **Ctrl**, a
 
 When selecting the left and right table in the Merge dialog, you can check the lightbulb icon on the top right corner of the dialog to see if there are any suggestions when it comes to column-pair-mapping between both tables.
 
-There can be many suggestions in place but, for this scenario, there is only one suggestion by the feature where it maps the column CountryID from the Sales table to the CountryID column from the Countries table. You can click it and the column-pair-mapping will be automatically applied to your dialog.
+There can be many suggestions in place but, for this scenario, there's only one suggestion by the feature, where it maps the column CountryID from the Sales table to the CountryID column from the Countries table. You can select it and the column-pair-mapping will be automatically applied to your dialog.
 
-![Merge dialog showcasing the suggested pairing of columns for the Sales and Countries tables where they are joined by the CountryID columns in both tables](media/merge-queries-overview/suggested-pairing.png)
+:::image type="content" source="media/merge-queries-overview/suggested-pairing.png" alt-text="Screenshot of Merge dialog showcasing the suggested pairing of columns for the Sales and Countries tables where they are joined by the CountryID columns in both tables.":::
 
 >[!NOTE]
->Only the column-pair-mapping is suggested. Other options of this dialog such as the join kind or fuzzy matching configuration are out of the scope of this suggestion.
+>Only the column-pair-mapping is suggested. Other options in this dialog, such as the join kind or fuzzy matching configuration, are out of scope for this suggestion.
 
 
 ### Expand or aggregate the new merged table column
