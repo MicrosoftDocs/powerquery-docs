@@ -16,7 +16,7 @@ ms.author: bezhan
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | GA |
+| Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)  |
 | Authentication Types Supported | Autodesk account |
 | Function Reference Documentation |&mdash; |
@@ -54,7 +54,7 @@ To connect to Autodesk Construction Cloud data:
 
    ![Signed in and ready to connect.](./media/autodesk-construction-cloud/acc-sign-in-success.png)
 
-7. In **Navigator**, expand the Account you want to pull data from which will display an **Account Extract** folder and a **Project Extracts** folder. **Account Extract** will contain the data extract of the most recent account level extract if you have proper access and have ran an account level data extract. **Project Extracts** will contain a listing of each project in the account you have access to which you can then expand to see the relevant tables in that specific projects extracts if you have run a data extraction.
+7. In **Navigator**, expand the Account you want to pull data from, which will display an **Account Extract** folder and a **Project Extracts** folder. **Account Extract** will contain the data extract of the most recent account level extract if you have proper access and have ran an account level data extract. **Project Extracts** will contain a listing of each project in the account you have access to, which you can then expand to see the relevant tables in that specific project's extracts if you have run a data extraction.
 
    ![Navigate to the desired data extraction.](./media/autodesk-construction-cloud/acc-extract-selection.png)
 
