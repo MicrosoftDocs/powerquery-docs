@@ -37,7 +37,7 @@ Follow these steps to create and save a query:
 2. Click Export > Power BI in the left-hand navigation.
 
 3. Click **“Create new query”** to get started.
-![Get started with query manager](./media/supermetrics/sm_get_started_with_query_manager.png "Get started with query manager")
+![Get started with Supermetrics hub](./media/supermetrics/sm_get_started_with_query_manager.png "Get started with query manager")
 
 4. Select a data source and log in to your account to create a connection between your data source and Supermetrics. [Find detailed instructions in our support center](https://supermetrics.com/docs/product-power-bi-getting-started/).
    Some public data sources, including Facebook Public Data, don’t need you to log in. If you’re using one of these, skip this step.
