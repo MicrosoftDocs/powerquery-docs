@@ -298,7 +298,7 @@ The connectors are listed in alphabetical order in separate tables for each lett
 
 | Connector | Excel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Power BI (Datasets) | Power BI (Dataflows) | Power Apps (Dataflows) | Customer<br/>Insights (Dataflows) | Analysis Services |
 | --- | --- | --- | --- | --- | --- | --- |
-| [![Usercube.](media/index/usercube-64.png)<br/>**Usercube**](./usercube.md)<br/>By Usercube | ![Not supported - Usercube (Beta) in Excel](media/index/no.png)  | ![Supported - Usercube (Beta) in Power BI (Datasets)](media/index/yes.png) | ![Supported - Usercube (Beta) in Power BI (Dataflows)](media/index/yes.png)  | ![Not supported - Usercube (Beta) in Power Apps (Dataflows)](media/index/no.png)  | ![Not supported - Usercube (Beta) in Customer Insights (Dataflows)](media/index/no.png)  | ![Not supported - Usercube (Beta) in Analysis Services](media/index/no.png)  |
+| [![Netwrix Usercube.](media/index/usercube-64.png)<br/>**Netwrix Usercube**](./usercube.md)<br/>By Netwrix | ![Not supported - Netwrix Usercube in Excel](media/index/no.png)  | ![Supported - Netwrix Usercube in Power BI (Datasets)](media/index/yes.png) | ![Supported - Netwrix Usercube in Power BI (Dataflows)](media/index/yes.png)  | ![Not supported - Netwrix Usercube in Power Apps (Dataflows)](media/index/no.png)  | ![Not supported - Netwrix Usercube in Customer Insights (Dataflows)](media/index/no.png)  | ![Not supported - Netwrix Usercube in Analysis Services](media/index/no.png)  |
 
 ## V
 

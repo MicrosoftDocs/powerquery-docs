@@ -436,6 +436,8 @@
         href: connectors/microstrategy-for-power-bi.md
       - name: "MySQL database"
         href: connectors/mysql-database.md
+      - name: "Netwrix Usercube"
+        href: connectors/usercube.md
       - name: "OData Feed"
         items:
         - name: "Connect to an OData Feed"
@@ -532,8 +534,6 @@
         href: connectors/tibco.md
       - name: "Twilio (Beta) (Deprecated)"
         href: connectors/twilio.md
-      - name: "Usercube"
-        href: connectors/usercube.md
       - name: "Vessel Insight"
         href: connectors/vessel-insight.md
       - name: "Web"
