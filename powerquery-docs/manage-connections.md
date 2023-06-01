@@ -1,8 +1,8 @@
 ---
 title: "Manage connections (Preview)"
-description: Overview of the manage connections feature in Power Query Online that allows you to disconnect or unbind connections from your project
+description: Overview of the manage connections feature in Power Query Online that allows you to disconnect connections from your project
 author: ptyx507
-ms.date: 5/31/2023
+ms.date: 6/1/2023
 ms.author: miescobar
 ms.topic: overview
 ---
