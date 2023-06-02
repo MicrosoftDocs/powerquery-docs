@@ -1,16 +1,16 @@
 ---
 title: Power Query CloudBlue PSA connector
-description: Provides basic information and prerequisites for the operation of connector in conjuction with the API.
-author: bezhan-msft
+description: Provides basic information and prerequisites for the operation of the CloudBlue PSA connector in conjuction with the API.
+author: mohsad06
 
 
 ms.topic: conceptual
-ms.date: 07/03/2022
+ms.date: 07/03/2023
 ms.author: bezhan 
 LocalizationGroup: reference
 ---
 
-# CloudBluePSA
+# CloudBluePSA (Beta)
 
 >[!Note]
 The following connector article is provided by CloudBluePSA, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the CloudBluePSA website and use the support channels there.
@@ -21,15 +21,18 @@ The following connector article is provided by CloudBluePSA, the owner of this c
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (datasets)
+| Products | Power BI (datasets) | Power BI (Dataflows)
 | Authentication Types Supported | API Key |
 | Function Reference Documentation | [CloudBluePSA Connector.Help](https://help.harmonypsa.com/articles/#!cloudblue-psa-4-28-publication/using-the-power-bi-connector)
 | | |
+
 ## Prerequisites
-Before you can use the CloudBluePSA connector, you must have an CloudBlue PSA instance (username/password) and an API key.
+
+Before you can use the CloudBluePSA connector, you must have an CloudBlue PSA instance (username/password) and an API key. Simply log in to your PSA instance which is usually at a URL similar to YOUR_COMPANY_NAME.cloudbluepsa.io and then navigate to Setup > Employees > Find employees, add a new API user which gives you an API key.
 
 
 ## Capabilities
+
 * Import
 
 ## Connect to CloudBlue PSA
@@ -57,7 +60,7 @@ To connect to CloudBlue PSA data:
 
 4. Provide your **API key** generated in CloudBluePSA and select **Connect**.
 
-5. Select **Transform Data**.
+5. You need to select **Transform Data** and this selection opens the Power Query Editor.  
 
 6. Expand the **Data** column, then selecting **OK**.
 
@@ -73,7 +76,7 @@ All the selected data is now displayed, and can be reshaped and used to create r
 8. Select **Close & Apply**. You can now start using your data.
 
  
-  ## Next Steps
+  ## Additional Resources
  You may also find the following CloudBlue PSA information useful:
 
  * [CloudBlue PSA Help Centre](https://help.harmonypsa.com/home/en-gb/)
