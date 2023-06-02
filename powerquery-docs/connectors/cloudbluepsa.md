@@ -5,7 +5,7 @@ author: mohsad06
 
 
 ms.topic: conceptual
-ms.date: 07/03/2023
+ms.date: 3/7/2023
 ms.author: bezhan 
 LocalizationGroup: reference
 ---
@@ -21,10 +21,10 @@ The following connector article is provided by CloudBluePSA, the owner of this c
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (datasets) | Power BI (Dataflows)
+| Products | Power BI (datasets) | Power BI (Dataflows) |
 | Authentication Types Supported | API Key |
-| Function Reference Documentation | [CloudBluePSA Connector.Help](https://help.harmonypsa.com/articles/#!cloudblue-psa-4-28-publication/using-the-power-bi-connector)
-| | |
+| Function Reference Documentation | [CloudBluePSA Connector.Help](https://help.harmonypsa.com/articles/#!cloudblue-psa-4-28-publication/using-the-power-bi-connector) |
+
 
 ## Prerequisites
 
