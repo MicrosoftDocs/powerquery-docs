@@ -21,7 +21,7 @@ The following connector article is provided by CloudBluePSA, the owner of this c
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (datasets) | Power BI (Dataflows) |
+| Products | Power BI (datasets)<br/>Power BI (Dataflows) |
 | Authentication Types Supported | API Key |
 | Function Reference Documentation | [CloudBluePSA Connector.Help](https://help.harmonypsa.com/articles/#!cloudblue-psa-4-28-publication/using-the-power-bi-connector) |
 
