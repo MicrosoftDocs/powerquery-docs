@@ -262,6 +262,8 @@
           href: dataflows/troubleshooting-dataflow-issue-get-data-from-dataflow.md
         - name: "Connecting to the data source"
           href: dataflows/troubleshooting-dataflow-issues-connection-to-the-data-source.md
+    - name: Power Query template
+      href: power-query-template.md
     - name: Keyboard shortcuts
       href: keyboard-shortcuts.md
     - name: Best practices
