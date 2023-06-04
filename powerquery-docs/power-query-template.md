@@ -1,5 +1,5 @@
 ---
-title: Power Query templates
+title: Power Query templates (Preview)
 description: Learn how to import and export Power Query templates that help you move entire Power Query projects across environments that support the template functionality.
 author: ptyx507x
 
@@ -8,7 +8,7 @@ ms.date: 6/4/2023
 ms.author: miescobar
 ---
 
-# Power Query templates
+# Power Query templates (Preview)
 
 A Power Query template is a file that encompasses the mashup document and its associated metadata for a single Power Query project. 
 
