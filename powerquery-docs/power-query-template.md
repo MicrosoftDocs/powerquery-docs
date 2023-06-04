@@ -29,11 +29,11 @@ It is meant to be used as a simple means to package your entire Power Query proj
 
 Inside of the Home tab of the ribbon, you can find a group with the name *Share* where the **Export template** button is located.
 
-![Export template button located inside the Share group of the Home tab in the ribbon](export.png)
+![Export template button located inside the Share group of the Home tab in the ribbon](media/power-query-template/export.png)
 
 Clicking this button will prompt a new dialog where you can enter the name of the template as well as the description that will be used for such template.
 
-![Export template dialog to set the name and the description for the template](export-dialog.png)
+![Export template dialog to set the name and the description for the template](media/power-query-template/export-dialog.png)
 
 This operation will download a file with the extension *.pqt* which is your Power Query template file.
 
@@ -44,7 +44,7 @@ This operation will download a file with the extension *.pqt* which is your Powe
 
 The option to import from a template is only available in Power Query projects with no queries or parameters set. In the home screen of the Power Query editor, you'll be able to see a clickable link that reads **Import from Power Query template**.
 
-![Import from a Power Query template link in the Power Query home page or canvas](import-template.png)
+![Import from a Power Query template link in the Power Query home page or canvas](media/power-query-template/import-template.png)
 
 Clicking the **Import from Power Query template** button will trigger an experience to help you upload your Power Query template and immediately load the project with all its queries, parameters and settings.
 
