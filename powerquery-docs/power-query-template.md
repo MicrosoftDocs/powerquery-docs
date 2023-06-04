@@ -25,7 +25,7 @@ It's meant to be used as a simple means to package your entire Power Query proje
 >[!NOTE]
 >The following guide applies to all Power Query Online hosts.
 >
->For Power Query in Excel for Windows, follow the guide on [exporting queries in Excel to a Power Query template](https://learn.microsoft.com/en-us/power-query/new-dataflow-from-template#exporting-queries-in-excel-to-a-power-query-template).
+>For Power Query in Excel for Windows, follow the guide on [exporting queries in Excel to a Power Query template](new-dataflow-from-template.md#exporting-queries-in-excel-to-a-power-query-template).
 
 Inside of the Home tab of the ribbon, you can find a group with the name *Share* where the **Export template** button is located.
 
