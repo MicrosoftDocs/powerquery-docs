@@ -2,7 +2,7 @@
 title: MongoDB Atlas SQL interface connector (Beta)  
 description: Provides basic information, prerequisites, and instructions for using the MongoDB Atlas SQL interface connector.  
 author: bucaojit  
-ms.author:  
+ms.author: bezhan
 ms.topic: conceptual  
 ms.date: 5/23/2023  
 ---
