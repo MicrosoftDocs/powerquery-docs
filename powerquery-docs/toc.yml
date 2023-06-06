@@ -318,7 +318,7 @@
         href: connectors/anaplan.md
       - name: "AssembleViews"
         href: connectors/assemble-views.md
-      - name: "Autodesk Construction Cloud (Beta)"
+      - name: "Autodesk Construction Cloud"
         href: connectors/autodesk-construction-cloud.md
       - name: "Automy Data Analytics (Beta)"
         href: connectors/automy-data-analytics.md
@@ -352,7 +352,7 @@
         href: connectors/synapse.md
       - name: "Azure Table Storage"
         href: connectors/azure-table-storage.md
-      - name: "BitSight Security Ratings"
+      - name: "Bitsight Security Ratings"
         href: connectors/bitsight-security-ratings.md
       - name: "Bloomberg Data and Analytics"
         href: connectors/bloomberg-data-and-analytics.md
@@ -374,6 +374,8 @@
         href: connectors/denodo.md
       - name: "Digital Construction Works Insights (Beta)"
         href: connectors/digital-construction-works-insights.md
+      - name: "Dynamics 365 Online (legacy)"
+        href: connectors/dynamics-365-online.md
       - name: "Eduframe (Beta)"
         href: connectors/eduframe.md
       - name: "EQuIS (Beta)"
@@ -448,6 +450,8 @@
         href: connectors/opensearch-project.md
       - name: "Oracle database"
         href: connectors/oracle-database.md
+      - name: "Parquet"
+        href: connectors/parquet.md
       - name: "PDF"
         href: connectors/pdf.md
       - name: "PostgreSQL"

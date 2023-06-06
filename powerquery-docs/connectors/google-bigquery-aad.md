@@ -109,6 +109,10 @@ These permissions typically are provided in the `BigQuery.User` role. More infor
 
 If the above steps don't resolve the problem, you can disable the BigQuery Storage API.
 
+### Unable to use DateTime type data in DirectQuery mode
+
+There's a known issue where the DateTime type isn't supported through DirectQuery. Selecting a column with the DateTime type will cause an "Invalid query" error or a visual error.
+
 ## Enable Azure AD Single Sign-On (SSO) for Google BigQuery
 
 We support Azure AD SSO through both Power BI Service (cloud) and also through the on-premises data gateway. For more information about enabling Azure AD SSO for all connectors, go to [Overview of single sign-on (SSO) for on-premises data gateways in Power BI](/power-bi/connect-data/service-gateway-sso-overview). Confirm directly with your Google contact that your system and accounts are set up correctly for Azure AD SSO prior to attempting to connect in Power BI.

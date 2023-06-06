@@ -4,8 +4,9 @@ description: Learn what Power Query is, and how it can help you get and transfor
 author: ptyx507x
 
 ms.topic: overview
-ms.date: 1/9/2023
+ms.date: 5/17/2023
 ms.author: miescobar
+ms.search.form: DataflowGen2 Overview, product-data-integration
 ---
 
 # What is Power Query?
@@ -13,7 +14,7 @@ ms.author: miescobar
 Power Query is a data transformation and data preparation engine. Power Query comes with a graphical interface for getting data from sources and a Power Query Editor for applying transformations. Because the engine is available in many products and services, the destination where the data will be stored depends on where Power Query was used. Using Power Query, you can perform the extract, transform, and load (ETL) processing of data.
 
 :::image type="complex" source="media/power-query-what-is-power-query/what-is-power-query.png" alt-text="Power Query input, transformation, and destination":::
-   Diagram with symbolized data sources on the right, passing though Power query for transformation, and then going to various destinations, such as Azure Data Lake Storage, Dataverse, Microsoft Excel, or Power BI.
+   Diagram with symbolized data sources on the right, passing though Power Query for transformation, and then going to various destinations, such as Azure Data Lake Storage, Dataverse, Microsoft Excel, or Power BI.
 :::image-end:::
 
 ## How Power Query helps with data acquisition
@@ -93,7 +94,7 @@ The following table lists Microsoft products and services where Power Query can 
 |Product|M engine<sup>1</sup>|Power Query<br>Desktop<sup>2</sup>|Power Query<br>Online<sup>3</sup>|Dataflows<sup>4</sup>|
 |-------|---------|-------------------|------------------|---------|
 |Excel for Windows|Yes|Yes|No| No|
-|Excel for Mac|Yes|No|No| No|
+|Excel for Mac|Yes|Yes|No| No|
 |Power BI|Yes|Yes|Yes| Yes|
 |Power Apps| Yes |No|Yes| Yes|
 |Power Automate| Yes |No | Yes |No |

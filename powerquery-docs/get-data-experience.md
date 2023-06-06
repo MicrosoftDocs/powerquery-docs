@@ -5,6 +5,7 @@ author: ptyx507x
 ms.date: 1/5/2023
 ms.author: miescobar
 ms.topic: overview
+ms.search.form: DataflowGen2 Overview
 ---
 
 # Getting data overview

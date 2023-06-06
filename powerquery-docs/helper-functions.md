@@ -148,7 +148,7 @@ a single parameter, which will be the result of the previous call to `getNextPag
 should return a `nullable table`.
 
 ```powerquery-m
-getNextPage = (lastPage) as nullable table => ...`
+getNextPage = (lastPage) as nullable table => ...;
 ```
 
 `getNextPage` is called repeatedly until it returns `null`. The function will collate 

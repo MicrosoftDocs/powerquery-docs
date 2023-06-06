@@ -29,7 +29,7 @@ https://services.odata.org/V4/Northwind/Northwind.svc/Customers?$filter=ContactT
 HTTP/1.1 200 OK
 ```
 
-We can see we're filtering the table for ContactTitle equallying 'Sales Representative', and we're only returning two columns--Customer ID and Country. Country, of course, is needed for the grouping operation, which since it isn't being performed by the ODATA endpoint must be performed locally. We can conclude what folds and doesn't fold here.
+We can see we're filtering the table for ContactTitle equaling 'Sales Representative', and we're only returning two columns--Customer ID and Country. Country, of course, is needed for the grouping operation, which since it isn't being performed by the ODATA endpoint must be performed locally. We can conclude what folds and doesn't fold here.
 
 Similarly, if we look at the specific and final query emitted in the SQL diagnostics, we see something slightly different:
 

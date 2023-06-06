@@ -20,7 +20,7 @@ ms.author: bezhan
 
 ## Prerequisites
 
-None
+Essbase 11.1.2.x version is supported.
 
 ## Capabilities Supported
 

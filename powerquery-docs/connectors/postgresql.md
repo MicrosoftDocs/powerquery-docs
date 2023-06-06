@@ -31,6 +31,10 @@ For Power BI Desktop versions released before December 2019, you must install th
 
 ![Npgsql installer with GAC Installation selected.](media/postgresql/postgres-1.png)
 
+For Power Apps, you must install the NpgSQL provider on your local machine. To install the NpgSQL provider, go to the [releases page](https://github.com/npgsql/Npgsql/releases) and download the relevant version. **Download and run the installer (the NpgSQL-[version number].msi) file**. Ensure you select the NpgSQL GAC Installation and on completion restart your machine for this installation to take effect.
+
+
+
 ## Capabilities Supported
 
 - Import
