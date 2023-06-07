@@ -21,7 +21,7 @@ variety of formats, such as tables, graphs, and charts.
 | Item                           | Description                                  |
 |--------------------------------|----------------------------------------------|
 | Release state                  | Beta                                         |
-| Products                       | Power BI (Datasets)                          |
+| Products                       | Power BI (Datasets)<br/>Power BI (Dataflows) |
 | Authentication Types Supported | SolarWinds Service Desk JSON Web Token (JWT) |
 
 ## Prerequisites
