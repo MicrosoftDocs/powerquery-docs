@@ -37,7 +37,7 @@ This connector is only for use with a Databricks SQL Warehouse running on AWS an
 
 To connect to Databricks from Power Query Desktop, take the following steps:
 
- In the Get Data experience, search for **Databricks** to shortlist the **Databricks** connector. You should only use the **Databricks** connector here for your Databricks SQL Warehouse data (running on AWS) if you're using OAuth for authentication.
+1. In the Get Data experience, search for **Databricks** to shortlist the **Databricks** connector. You should only use the **Databricks** connector here for your Databricks SQL Warehouse data (running on AWS) if you're using OAuth for authentication.
 
     ![Get Data from Databricks Cloud.](./media/databricks/get-data-dbc.png)
 
