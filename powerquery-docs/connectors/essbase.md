@@ -3,7 +3,7 @@ title: Power Query Essbase connector
 description: Provides basic information and prerequisites for the Essbase connector.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 2/13/2023 
+ms.date: 6/9/2023 
 ms.author: bezhan
 ---
 
@@ -25,7 +25,7 @@ Essbase 11.1.2.x version is supported.
 ## Capabilities Supported
 
 - Import
-- Direct Query
+- Direct Query (Power BI Datasets)
 - Advanced options
   - Command timeout in minutes
   - Server

@@ -3,12 +3,12 @@ title: Power Query Oracle database connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your Oracle database using the connector.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 4/5/2023
+ms.date: 6/9/2023
 ms.author: bezhan
 ---
 
 # Oracle database
- 
+
 ## Summary
 
 | Item | Description |
@@ -38,7 +38,7 @@ To connect to an Oracle database with the [on-premises data gateway](/data-integ
 ## Capabilities Supported
 
 * Import
-* DirectQuery
+* DirectQuery (Power BI Datasets)
 * Advanced options
   * Command timeout in minutes
   * SQL statement

@@ -3,7 +3,7 @@ title: Power Query Amazon Redshift connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Amazon Redshift data.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 4/12/2022
+ms.date: 6/9/2023
 ms.author: bezhan
 ---
 
@@ -27,7 +27,7 @@ ms.author: bezhan
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI Desktop only)
+* DirectQuery (Power BI Datasets)
 * Advanced options
   * Provider name
   * Batch size

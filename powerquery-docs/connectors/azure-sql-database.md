@@ -3,7 +3,7 @@ title: Power Query Azure SQL database connector
 description: Includes basic information and prerequisites, instructions on how to connect to your database, and information about advanced connection options.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 2/13/2023
+ms.date: 6/9/2023
 ms.author: bezhan
 ---
 
@@ -28,7 +28,7 @@ By default, Power BI installs an OLE DB driver for Azure SQL database. However, 
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI only)
+* DirectQuery (Power BI Datasets)
 * Advanced options
   * Command timeout in minutes
   * Native SQL statement

@@ -3,7 +3,7 @@ title: Power Query Amazon Athena connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Amazon Athena
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 6/24/2022
+ms.date: 6/9/2023
 ms.author: bezhan
 ---
 
@@ -29,7 +29,7 @@ ms.author: bezhan
 ## Capabilities supported
 
 * Import
-* DirectQuery
+* DirectQuery (Power BI Datasets)
 
 ## Connect to Amazon Athena
 
