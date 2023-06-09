@@ -3,7 +3,7 @@ title: Google BigQuery connector
 description: Provides basic information and prerequisites for the Google BigQuery connector for Power Query.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 2/13/2023
+ms.date: 6/9/2023
 ms.author: bezhan
 ---
 
@@ -30,7 +30,7 @@ You'll need a Google account or a Google service account to sign in to Google Bi
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI Datasets only)
+* DirectQuery (Power BI Datasets)
 
 ## Connect to Google BigQuery data from Power Query Desktop
 

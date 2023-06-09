@@ -3,7 +3,7 @@ title: Power Query Dataflow connector
 description: Provides basic information and connection instructions for connecting to a Dataflow.
 author: Luitwieler
 ms.topic: conceptual
-ms.date: 2/13/2023
+ms.date: 6/9/2023
 ms.author: jeluitwi
 ---
 
@@ -27,7 +27,7 @@ You must have an existing Dataflow with maker permissions to access the portal, 
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI Desktop only)
+* DirectQuery (Power BI Datasets)
 
 >[!Note]
 >DirectQuery requires Power BI premium. More information: [Premium features of dataflows](/power-bi/transform-model/dataflows/dataflows-premium-features)

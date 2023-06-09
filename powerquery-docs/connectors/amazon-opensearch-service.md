@@ -3,7 +3,7 @@ title: Power Query Amazon OpenSearch Service connector
 description: Provides basic information and prerequisites for the Amazon OpenSearch Service connector, includes descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 10/6/2022
+ms.date: 6/9/2023
 ms.author: bezhan
 ---
 
@@ -29,7 +29,7 @@ ms.author: bezhan
 ## Capabilities supported
 
 * Import
-* DirectQuery
+* DirectQuery (Power BI Datasets)
 
 ## Connect to OpenSearch Project
 

@@ -2,7 +2,7 @@
 title: Palantir Foundry Power Query connector
 description: Provides basic information and prerequisites for using the Palantir Foundry Power Query connector.
 author: mshafer
-ms.date: 5/17/2023
+ms.date: 6/9/2023
 ms.author: bezhan
 ---
 
@@ -29,7 +29,7 @@ This connector works with any active Palantir Foundry environment. Ensure you've
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI only)
+* DirectQuery (Power BI Datasets)
 
 ## Connect to Palantir Foundry from Power Query Desktop
 

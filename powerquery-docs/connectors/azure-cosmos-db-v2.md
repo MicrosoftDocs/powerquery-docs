@@ -4,7 +4,7 @@ description: Provides basic information, prerequisites, and instructions on how 
 author: revinjchalil
 
 ms.topic: conceptual
-ms.date: 2/3/2023
+ms.date: 6/9/2023
 ms.author: rechalil
 ms.reviewer: dougklo
 LocalizationGroup: reference
@@ -27,7 +27,7 @@ LocalizationGroup: reference
 ## Capabilities supported
 
 * Import
-* DirectQuery
+* DirectQuery (Power BI Datasets)
 * Advanced options
   * Number of Retries
   * Enable "AVERAGE" function Passdown

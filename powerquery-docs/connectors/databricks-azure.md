@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for using Power Query'
 author: bezhan-msft
 
 ms.topic: conceptual
-ms.date: 8/4/2022
+ms.date: 6/9/2023
 ms.author: bezhan
 ---
 
@@ -24,7 +24,7 @@ ms.author: bezhan
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI only)
+* DirectQuery (Power BI Datasets)
 
 ## Connect to Databricks (AWS, Azure or GCP) from Power Query Desktop
 
