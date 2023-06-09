@@ -5,7 +5,7 @@ author: denodo-research-labs
 ms.author: bezhan
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 4/17/2023
+ms.date: 6/9/2023
 ---
 
 # Denodo
@@ -31,7 +31,7 @@ To use this connector, you must have installed the Denodo platform, and configur
 ## Capabilities supported
 
 * Import
-* DirectQuery
+* DirectQuery (Power BI Datasets)
 
 ## Connect to an ODBC data source from Power Query Desktop
 

@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for using the Power Qu
 author: bezhan-msft
 
 ms.topic: conceptual
-ms.date: 8/4/2022
+ms.date: 6/9/2023
 ms.author: bezhan
 ---
 
@@ -31,7 +31,7 @@ This connector is only for use with a Databricks SQL Warehouse running on AWS an
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI only)
+* DirectQuery (Power BI Datasets)
 
 ## Connect to Databricks from Power Query Desktop
 

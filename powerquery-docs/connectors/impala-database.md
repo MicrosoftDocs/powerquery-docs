@@ -3,7 +3,7 @@ title: Power Query Impala database connector
 description: Provides basic information for the Impala database connector, along with how to connect to your Impala data.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 7/11/2022
+ms.date: 6/9/2023
 ms.author: bezhan
 ---
 
@@ -24,7 +24,7 @@ ms.author: bezhan
 ## Capabilities Supported
 
 * Import
-* DirectQuery (Power BI Desktop only)
+* DirectQuery (Power BI Datasets)
 * Advanced options
   * Connection timeout duration
   * Command timeout duration

@@ -3,7 +3,7 @@ title: Google BigQuery (Azure AD) (Beta)
 description: Provides basic information and prerequisites for the Google BigQuery (Azure AD) connector for Power Query.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 1/6/2023
+ms.date: 6/9/2023
 ms.author: bezhan
 ---
 
@@ -27,7 +27,7 @@ You'll need an Azure Active Directory account to sign in to Google BigQuery (Azu
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI Datasets only)
+* DirectQuery (Power BI Datasets)
 
 ## Connect to Google BigQuery (Azure AD) data from Power Query Desktop
 
