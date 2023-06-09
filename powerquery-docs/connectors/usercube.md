@@ -1,16 +1,16 @@
 ---
-title: Power Query Usercube connector
-description: Provides basic information and prerequisites for the Usercube connector. Also includes descriptions of the optional input parameters, and discusses limitations and issues you might run into.
+title: Power Query Netwrix Usercube connector
+description: Provides basic information and prerequisites for the Netwrix Usercube connector. Also includes descriptions of the optional input parameters, and discusses limitations and issues you might run into.
 author: bezhan-msft
 ms.topic: conceptual
 ms.date: 6/24/2022
 ms.author: bezhan
 ---
 
-# Usercube
+# Netwrix Usercube
 
 >[!Note]
->The following connector article is provided by Usercube, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Usercube website and use the support channels there.
+>The following connector article is provided by Netwrix, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Netwrix website and use the support channels there.
  
 ## Summary
 
@@ -23,30 +23,30 @@ ms.author: bezhan
 
 ## Prerequisites
 
-You must have a Usercube instance with the *PowerBI* option.
+You must have a Netwrix Usercube instance with the *PowerBI* option.
 
 ## Capabilities supported
 
 - Import
 
-## Connect to Usercube from Power Query Desktop
+## Connect to Netwrix Usercube from Power Query Desktop
 
-To connect to a Usercube server:
+To connect to a Netwrix Usercube server:
 
 1. Launch Power BI Desktop and enter the **Get Data** experience.
 
-2. From the **Other** category, select **Usercube**, and then select **Connect**.
+2. From the **Other** category, select **Netwrix Usercube**, and then select **Connect**.
 
    ![Get Data.](media/usercube/usercube-get-data.png)
 
-3. You'll be prompted to specify your Usercube server's URL.
+3. You'll be prompted to specify your Netwrix Usercube server's URL.
 
-   ![Usercube Server.](media/usercube/usercube-server.png)
+   ![Netwrix Usercube Server.](media/usercube/usercube-server.png)
 
-4. Enter the client credentials. The *Client Id* must be built from the *Identifier* of an *OpenIdClient* element. This element is defined in the configuration of your Usercube instance. To this identifier, you must concatenate the `@` character and the domain name of the Usercube instance.
+4. Enter the client credentials. The *Client Id* must be built from the *Identifier* of an *OpenIdClient* element. This element is defined in the configuration of your Netwrix Usercube instance. To this identifier, you must concatenate the `@` character and the domain name of the Netwrix Usercube instance.
 
    ![Client credentials.](media/usercube/usercube-client-credentials.png)
 
-5. In **Navigator**, select the data you require. Then, either select **Transform data** to transform the data in the  Power Query Editor, or choose **Load** to load the data in Power BI.
+5. In **Navigator**, select the data you require. Then, either select **Transform data** to transform the data in the Power Query Editor, or choose **Load** to load the data in Power BI.
 
-   ![Usercube import data navigator](./media/usercube/usercube-import-data-navigator.png)
+   ![Netwrix Usercube import data navigator](./media/usercube/usercube-import-data-navigator.png)
