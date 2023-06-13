@@ -2,7 +2,7 @@
 title: "Manage connections (Preview)"
 description: Overview of the manage connections feature in Power Query Online that allows you to disconnect connections from your project
 author: ptyx507
-ms.date: 6/1/2023
+ms.date: 6/13/2023
 ms.author: miescobar
 ms.topic: overview
 ---
@@ -12,7 +12,7 @@ ms.topic: overview
 >[!NOTE]
 >This feature is currently only available in Power Query Online and is in public preview.
 
-Power Query allows you to [connect to a multitude of data sources](https://learn.microsoft.com/en-us/power-query/connectors/). When you connect to a data source, you fundamentally create a connection to it, which consists of your data source, credentials, and more information such as privacy levels and optional parameters for such data source. The Manage connections dialog is one centralized way in your Power query project to manage the connections that are being reference by your project.
+Power Query allows you to [connect to a multitude of data sources](connectors/index.md). When you connect to a data source, you fundamentally create a connection to it, which consists of your data source, credentials, and more information such as privacy levels and optional parameters for such data source. The Manage connections dialog is one centralized way in your Power query project to manage the connections that are being reference by your project.
 
 The entry to the **Manage connections** dialog is available in the Home tab of the ribbon in the *Data sources* group.
 
