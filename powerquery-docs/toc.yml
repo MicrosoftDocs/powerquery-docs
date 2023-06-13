@@ -28,6 +28,8 @@
         href: connector-alternatives.md
       - name: "Connect using generic interfaces"
         href: connect-using-generic-interfaces.md
+      - name: "Manage connections"
+        href: manage-connections.md  
       - name: "Change a dataflow gateway"
         href: change-gateway-dataflow.md
     - name: Transform data

@@ -16,11 +16,11 @@ Power Query allows you to [connect to a multitude of data sources](connectors/in
 
 The entry to the **Manage connections** dialog is available in the Home tab of the ribbon in the *Data sources* group.
 
-![Entry point for the Manage connections dialog inside of the Home tab of the ribbon](media/manage-connections/entry-point.png)
+![Manage connections button in Data sources group of Home tab of the ribbon.](media/manage-connections/entry-point.png)
 
 Manage connections dialog displays a list of all connections being referenced in your Power Query project and the ability to disconnect any of the connections from your project.
 
-![Manage connections dialog showcasing multiple connections in its dialog](media/manage-connections/manage-connections-dialog.png)
+![Manage connections dialog showcasing multiple connections in its dialog.](media/manage-connections/manage-connections-dialog.png)
 
 ## Disconnect a connection
 
@@ -28,11 +28,16 @@ Right next to the name of connection, and before the *Source type* column, you f
 
 When you disconnect a connection, you're simply removing the reference of the connection from your project. This means that the definition of the connection won't be removed from the back-end and it will not be used in your project.
 
-![Disconnect icon next to a connection in the Manage Connections dialog](media/manage-connections/disconnect-icon.png)
+![Disconnect icon next to a connection in the Manage Connections dialog.](media/manage-connections/disconnect-icon.png)
 
 A new prompt asks you to confirm that you wish to disconnect the connection.
 
-![Prompt to confirm the disconnect action](media/manage-connections/confirmation-prompt.png)
+![Prompt to confirm the disconnect action.](media/manage-connections/confirmation-prompt.png)
 
 >[!NOTE]
 >If you wish to delete a connection from within a specific product integration, such as Microsoft Power BI or Microsoft Fabric, be sure to check out the documentation from each product on how a centralized connections portal can be leveraged.
+
+## More Resources
+
+* [Get Data experience in Power Query](get-data-experience.md)
+* [Connectors available in Power Query](connectors/index.md)
