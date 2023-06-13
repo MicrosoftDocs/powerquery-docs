@@ -61,7 +61,8 @@ To connect using the Atlas SQL interface:
    -  Your federated **Database** name. _Required_  
      Use the name of the federated database obtained [in the prerequisites](#obtaining-connection-information-for-your-federated-database-instance).
    
-   Select **Continue**.  
+   Select **OK**.  
+
 ![Atlas SQL connection dialogue](./media/mongodb/mongodb_connection_dialogue.png)
    
 5. Enter your Atlas MongoDB Database access username and password and select **Connect**.  
@@ -87,7 +88,8 @@ To connect using the Atlas SQL interface:
      Use the name of the federated database obtained [in the prerequisites](#obtaining-connection-information-for-your-federated-database-instance).
    - Enter a **Connection name**
    - Choose a **Data gateway**
-   - Enter your Atlas MongoDB Database access username and password and select **Next**.  
+   - Enter your Atlas MongoDB Database access username and password and select **Next**.
+
 ![Connection Settings](./media/mongodb/mongodb_connect_to_data_source.png)
 3. In the **Navigator** screen, select the data you require, and then select **Transform data**. This selection opens the Power Query editor so that you can filter and refine the set of data you want to use.  
 ![Navigator](./media/mongodb/mongodb_choose_data.png)
