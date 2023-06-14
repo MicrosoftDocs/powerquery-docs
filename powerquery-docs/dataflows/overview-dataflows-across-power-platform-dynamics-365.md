@@ -37,7 +37,7 @@ Power Query is the data transformation engine used in the dataflow. This engine 
 
 ### Dataflow integration with Microsoft Power Platform and Dynamics 365
 
-Because a dataflow stores the resulting entities in cloud-based storage, other services can interact with the data produced by dataflows.
+Because a dataflow stores the resulting tables in cloud-based storage, other services can interact with the data produced by dataflows.
 
 ![Dataflow integration with Microsoft Power Platform and Dynamics 365.](media/overview-dataflows/dataflow-power-platform.png)
 
