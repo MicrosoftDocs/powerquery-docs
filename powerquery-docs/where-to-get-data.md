@@ -11,8 +11,6 @@ ms.author: dougklo
 
 Getting data from available data sources is usually the first encounter you have with Power Query. This article provides basic steps for getting data from each of the Microsoft products that include Power Query.
 
-:::image type="content" source="<folderPath>" alt-text="<alt text>":::
-
 >[!Note]
 > Each of these Power Query get data experiences contain different feature sets. More information: [Where can you use Power Query?](power-query-what-is-power-query.md#where-can-you-use-power-query)
 
@@ -39,7 +37,7 @@ You'll then be asked to fill out information that's required for you to access t
 In Excel, you can also directly select Text/CVS, Web, and Excel worksheet data without using the **Get Data** option. You can also select from a data source that was recently used and from existing connections or tables.
 
 >[!Note]
->Not all Excel versions support all of the same Power Query connectors. For a complete list of the Power Query connectors supported by all versions of Excel for Windows and Excel for Mac, go to [Power Query data sources in Excel versions](/office/power-query-data-sources-in-excel-versions-e9332067-8e49-46fc-97ff-f2e1bfa0cb16).
+>Not all Excel versions support all of the same Power Query connectors. For a complete list of the Power Query connectors supported by all versions of Excel for Windows and Excel for Mac, go to [Power Query data sources in Excel versions](https://support.microsoft.com/office/power-query-data-sources-in-excel-versions-e9332067-8e49-46fc-97ff-f2e1bfa0cb16).
 
 ## Get data in Power BI service
 
@@ -144,7 +142,7 @@ To get data in Data Factory:
 
 2. From your Data Factory workspace, select **New** > **Dataflow Gen2 (Preview)** to create a new dataflow.
 
-   :::image type="content" source="./media/where-to-get-data/select-open-dataflow.png" alt-text="Screenshot showing the workspace where you choose to create a new dataflow." lightbox="./media/connector-azure-blob-storage/select-open-dataflow.png":::
+   :::image type="content" source="./media/where-to-get-data/select-open-dataflow.png" alt-text="Screenshot showing the workspace where you choose to create a new dataflow." lightbox="./media/where-to-get-data/select-open-dataflow.png":::
 
 3. In Power Query, either select **Get data** in the ribbon or select **Get data from another source** in the current view.
 
