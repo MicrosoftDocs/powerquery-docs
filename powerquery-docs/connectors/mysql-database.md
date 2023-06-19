@@ -3,7 +3,7 @@ title: Power Query MySQL database connector
 description: Provides basic information about products that use the connector, supported authentication types, prerequisites, and connection instructions.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 2/13/2023
+ms.date: 6/16/2023
 ms.author: bezhan
 ---
 
@@ -23,7 +23,7 @@ ms.author: bezhan
 
 ## Prerequisites
 
-Users need to install the [Oracle MySQL Connector/NET](https://dev.mysql.com/downloads/connector/net/) package prior to using this connector in Power BI Desktop. This component must also be installed on the machine running the on-premises data gateway in order to use this connector in Power Query Online (dataflows) or Power BI Service.
+Users need to install the [Oracle MySQL Connector/NET](https://dev.mysql.com/downloads/connector/net/) package prior to using this connector in Power BI Desktop. Currently, only version 8.0.26 is supported; other newer versions might cause a `This connector requires one or more additional components to be installed before it can be used.` error message. This component must also be installed on the machine running the on-premises data gateway in order to use this connector in Power Query Online (dataflows) or Power BI Service.
 
 ## Capabilities Supported
 
