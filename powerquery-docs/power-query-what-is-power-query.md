@@ -4,7 +4,7 @@ description: Learn what Power Query is, and how it can help you get and transfor
 author: ptyx507x
 
 ms.topic: overview
-ms.date: 5/17/2023
+ms.date: 6/19/2023
 ms.author: miescobar
 ms.search.form: DataflowGen2 Overview, product-data-integration
 ---
@@ -100,6 +100,7 @@ The following table lists Microsoft products and services where Power Query can 
 |Power Automate| Yes |No | Yes |No |
 |Power BI Report Server| Yes| Yes|No|No|
 |Azure Data Factory| Yes |No |Yes |Yes|
+|Data Factory in Microsoft Fabric|Yes|No|Yes|Yes|
 |SQL Server Integration Services| Yes| No|No|No|
 |SQL Server Analysis Services| Yes| Yes|No|No|
 |Dynamics 365 Customer Insights|Yes|No|Yes|Yes|
