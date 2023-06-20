@@ -31,7 +31,7 @@ You can find the **Export template** button inside of the **Home** tab of the Po
 
 :::image type="content" source="media/power-query-template/export.png" alt-text="Screenshot that shows the Export Template button located inside the Share group of the Home tab in the ribbon." lightbox="media/power-query-template/export.png":::
 
-When you select this button, the **Export template** dialog apprears. In this dialog, you can enter the name of the template and the description that is used for the template.
+When you select this button, the **Export template** dialog appears. In this dialog, you can enter the name of the template and the description that is used for the template.
 
 :::image type="content" source="media/power-query-template/export-dialog.png" alt-text="Screenshot that shows the Export Template dialog, where you set the name and the description for the template.":::
 
