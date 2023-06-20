@@ -17,19 +17,19 @@ The following connector article is provided by CloudBluePSA, the owner of this c
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products | Power BI (datasets)<br/>Power BI (Dataflows) |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
 | Authentication Types Supported | API Key |
 | Function Reference Documentation | [CloudBluePSA Connector.Help](https://help.harmonypsa.com/articles/#!cloudblue-psa-4-28-publication/using-the-power-bi-connector) |
 
 ## Prerequisites
 
-Before you can use the CloudBluePSA connector, you must have an CloudBluePSA instance (username/password) and an API key. Simply log in to your PSA instance, which is usually at a URL similar to YOUR_COMPANY_NAME.cloudbluepsa.io, and then navigate to Setup > Employees > Find employees, and add a new API user, which gives you an API key.
+Before you can use the CloudBluePSA connector, you must have an CloudBluePSA instance (username/password) and an API key. Simply sign in to your PSA instance, which is usually at a URL similar to `YOUR_COMPANY_NAME.cloudbluepsa.io`, and then navigate to Setup > Employees > Find employees, and add a new API user, which gives you an API key.
 
 ## Capabilities
 
 * Import
 
-## Connect to CloudBluePSA
+## Connect to CloudBluePSA from Power Query Desktop
 
 To connect to CloudBluePSA data:
 
@@ -59,7 +59,7 @@ To connect to CloudBluePSA data:
 
     ![Screenshot of the Expand Data Column dialog.](./media/cloudbluepsa/expand-1.png)
 
-7. Expand the **Column1.1** column. This time, on the list of columns all the grid columns included in the filter are displayed. Select as many columns as required, and then select **OK**. 
+7. Expand the **Column1.1** column. This time, on the list of columns, all the grid columns included in the filter are displayed. Select as many columns as required, and then select **OK**. 
 All the selected data is now displayed, and can be reshaped and used to create reports as required.
 
     ![Screenshot showing the expanded Data Column1.1.](./media/cloudbluepsa/expand-1-1.png)
@@ -69,35 +69,32 @@ All the selected data is now displayed, and can be reshaped and used to create r
 ## Connect to CloudBluePSA from PowerQuery Online
 
 To connect to CloudBluePSA:
- 
 
 1. From **Choose data source**, start typing on the Seach box **CloudBluePSA**.
 
-    ![Screenshot showing how to search for the connector in Power Query Online](./media/cloudbluepsa/pq-search-box.png).
+    ![Screenshot showing how to search for the connector in Power Query Online.](./media/cloudbluepsa/pq-search-box.png).
  
 
-2. In **Connect to data source** section, provide the **URL** and **Filter** as defined and generated in your instance, as shown in the example inside each text box.Finally paste your **API key** in the "Account Key" field.
+2. In **Connect to data source**, provide the **URL** and **Filter** as defined and generated in your instance, as shown in the example inside each text box. Finally paste your **API key** in the **Account Key** field.
 
-    ![Screenshot showing how to complete the Connect to data source](./media/cloudbluepsa/pq-connect-to-data-source.png).
- 
+    ![Screenshot showing how to complete the Connect to data source.](./media/cloudbluepsa/pq-connect-to-data-source.png).
 
 3. Select **Next**.
- 
 
-4. In the **Navigator** screen click the **Expand** button next to **Data** column and the **OK**.
+4. In the **Navigator** screen, select the **Expand** button next to the **Data** column, and then select **OK**.
 
-    ![Screenshot showing how to expand the Data Column](./media/cloudbluepsa/pq-expand-1.png).
- 
+    ![Screenshot showing how to expand the Data Column.](./media/cloudbluepsa/pq-expand-1.png).
 
-5. Two new columns will appear. Click the **Expand** button next to **Column1.1** column and then select **OK**. You can now start using your data.
+5. Two new columns now appear. Select the **Expand** button next to the **Column1.1** column and then select **OK**. You can now start using your data.
 
-    ![Screenshot showing how to expand the Column1.1 Column](./media/cloudbluepsa/pq-expand-1-1.png).
- 
-  ## Additional Resources
- You might also find the following CloudBluePSA information useful:
+    ![Screenshot showing how to expand the Column1.1 Column.](./media/cloudbluepsa/pq-expand-1-1.png).
 
- * [CloudBluePSA Help Centre](https://help.harmonypsa.com/home/en-gb/)
- * [Connecting PowerBI to the API](https://help.harmonypsa.com/articles/#!cloudblue-psa-4-28-publication/connecting-powerbi-to-the-api)
- * [API](https://help.harmonypsa.com/articles/#!cloudblue-psa-4-28-publication/api)
-    * [Creating an API Key](https://help.harmonypsa.com/articles/#!cloudblue-psa-4-28-publication/creating-an-api-key)
-    * [Using the API](https://help.harmonypsa.com/articles/#!cloudblue-psa-4-28-publication/using-the-api)
+## Additional Resources
+
+You might also find the following CloudBluePSA information useful:
+
+* [CloudBluePSA Help Centre](https://help.harmonypsa.com/home/en-gb/)
+* [Connecting PowerBI to the API](https://help.harmonypsa.com/articles/#!cloudblue-psa-4-28-publication/connecting-powerbi-to-the-api)
+* [API](https://help.harmonypsa.com/articles/#!cloudblue-psa-4-28-publication/api)
+  * [Creating an API Key](https://help.harmonypsa.com/articles/#!cloudblue-psa-4-28-publication/creating-an-api-key)
+  * [Using the API](https://help.harmonypsa.com/articles/#!cloudblue-psa-4-28-publication/using-the-api)
