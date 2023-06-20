@@ -91,7 +91,7 @@ To connect to CloudBluePSA:
 
 5. Two new columns will appear. Click the **Expand** button next to **Column1.1** column and then select **OK**. You can now start using your data.
 
-    ![Screenshot showing how to expand the Data Column](./media/cloudbluepsa/pq-expand-1-1.png).
+    ![Screenshot showing how to expand the Column1.1 Column](./media/cloudbluepsa/pq-expand-1-1.png).
  
   ## Additional Resources
  You might also find the following CloudBluePSA information useful:
