@@ -65,6 +65,33 @@ All the selected data is now displayed, and can be reshaped and used to create r
     ![Screenshot showing the expanded Data Column1.1.](./media/cloudbluepsa/expand-1-1.png)
 
 8. Select **Close & Apply**. You can now start using your data.
+
+## Connect to CloudBluePSA from PowerQuery Online
+
+To connect to CloudBluePSA:
+ 
+
+1. From **Choose data source**, start typing on the Seach box **CloudBluePSA**.
+
+    ![Screenshot showing how to search for the connector in Power Query Online](./media/cloudbluepsa/pq-search-box.png).
+ 
+
+2. In **Connect to data source** section, provide the **URL** and **Filter** as defined and generated in your instance, as shown in the example inside each text box.Finally paste your **API key** in the "Account Key" field.
+
+    ![Screenshot showing how to complete the Connect to data source](./media/cloudbluepsa/pq-connect-to-data-source.png).
+ 
+
+3. Select **Next**.
+ 
+
+4. In the **Navigator** screen click the **Expand** button next to **Data** column and the **OK**.
+
+    ![Screenshot showing how to expand the Data Column](./media/cloudbluepsa/pq-expand-1.png).
+ 
+
+5. Two new columns will appear. Click the **Expand** button next to **Column1.1** column and then select **OK**. You can now start using your data.
+
+    ![Screenshot showing how to expand the Data Column](./media/cloudbluepsa/pq-expand-1-1.png).
  
   ## Additional Resources
  You might also find the following CloudBluePSA information useful:
