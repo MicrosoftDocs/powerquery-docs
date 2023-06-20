@@ -96,7 +96,7 @@ Having this option checked means that if there's a data row in the table that do
 > ![Delete rows that no longer exists.](media/get-best-of-standard-dataflows/delete-rows-not-exist.png)
 
 > [!NOTE]
-> Standard V2 Dataflows rely on the createdon and modifiedon fields in order to remove rows that dont exist in the dataflows output, from the destination table. If those columns do not exist in the destination table, records will not be deleted.
+> Standard V2 dataflows rely on the **createdon** and **modifiedon** fields in order to remove rows that don't exist in the dataflows output, from the destination table. If those columns don't exist in the destination table, records aren't deleted.
 
 ## Known limitations
 
