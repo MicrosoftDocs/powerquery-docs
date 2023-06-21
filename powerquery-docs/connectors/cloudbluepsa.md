@@ -72,22 +72,22 @@ To connect to CloudBluePSA:
 
 1. From **Choose data source**, start typing on the Seach box **CloudBluePSA**.
 
-    ![Screenshot showing how to search for the connector in Power Query Online.](./media/cloudbluepsa/pq-search-box.png).
+    ![Screenshot showing how to search for the connector in Power Query Online.](./media/cloudbluepsa/power-query-search-box.png)
  
 
 2. In **Connect to data source**, provide the **URL** and **Filter** as defined and generated in your instance, as shown in the example inside each text box. Finally paste your **API key** in the **Account Key** field.
 
-    ![Screenshot showing how to complete the Connect to data source.](./media/cloudbluepsa/pq-connect-to-data-source.png).
+    ![Screenshot showing how to complete the Connect to data source.](./media/cloudbluepsa/power-query-connect-to-data-source.png)
 
 3. Select **Next**.
 
 4. In the **Navigator** screen, select the **Expand** button next to the **Data** column, and then select **OK**.
 
-    ![Screenshot showing how to expand the Data Column.](./media/cloudbluepsa/pq-expand-1.png).
+    ![Screenshot showing how to expand the Data Column.](./media/cloudbluepsa/power-query-expand-1.png)
 
 5. Two new columns now appear. Select the **Expand** button next to the **Column1.1** column and then select **OK**. You can now start using your data.
 
-    ![Screenshot showing how to expand the Column1.1 Column.](./media/cloudbluepsa/pq-expand-1-1.png).
+    ![Screenshot showing how to expand the Column1.1 Column.](./media/cloudbluepsa/power-query-expand-1-1.png)
 
 ## Additional Resources
 
