@@ -3,7 +3,7 @@ title: Power Query SQL Server connector
 description: Includes basic information about products that use the connector, supported authentication types, prerequisites, and connection instructions.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 2/13/2023
+ms.date: 6/9/2023
 ms.author: bezhan
 ---
 
@@ -28,7 +28,7 @@ By default, Power BI installs an OLE DB driver for SQL Server. However, for opti
 ## Capabilities Supported
 
 * Import
-* DirectQuery (Power BI Desktop)
+* DirectQuery (Power BI Datasets)
 * Advanced options
   * Command timeout in minutes
   * Native SQL statement

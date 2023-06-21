@@ -93,34 +93,9 @@ TripPin.Contents("https://services.odata.org/v4/TripPinService/")
 
 ## Creating a navigation table
 
-You'll use the handy [Table.ToNavigationTable](../../../handling-navigation-tables.md#tabletonavigationtable) function to format your static table into something that Power Query will recognize as a navigation table.
+You'll use the handy [Table.ToNavigationTable](../../../helper-functions.md#tabletonavigationtable) function to format your static table into something that Power Query will recognize as a navigation table. Since this function is not part of Power Query's standard library, you'll need to copy its source code into your .pq file.
 
-```powerquery-m
-Table.ToNavigationTable = (
-    table as table,
-    keyColumns as list,
-    nameColumn as text,
-    dataColumn as text,
-    itemKindColumn as text,
-    itemNameColumn as text,
-    isLeafColumn as text
-) as table =>
-    let
-        tableType = Value.Type(table),
-        newTableType = Type.AddTableKey(tableType, keyColumns, true) meta 
-        [
-            NavigationTable.NameColumn = nameColumn, 
-            NavigationTable.DataColumn = dataColumn,
-            NavigationTable.ItemKindColumn = itemKindColumn, 
-            Preview.DelayColumn = itemNameColumn, 
-            NavigationTable.IsLeafColumn = isLeafColumn
-        ],
-        navigationTable = Value.ReplaceType(table, newTableType)
-    in
-        navigationTable;
-```
-
-After copying this into your extension file, you'll update your `TripPinNavTable` function to add the navigation table fields.
+With this helper function in place, next update your `TripPinNavTable` function to add the navigation table fields.
 
 ```powerquery-m
 TripPinNavTable = (url as text) as table =>

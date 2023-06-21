@@ -3,7 +3,7 @@ title: Power Query SAP Business Warehouse Application Server connector
 description: Power Query SAP Business Warehouse Application Server connector reference
 author: dougklopfenstein
 ms.topic: conceptual
-ms.date: 3/14/2023
+ms.date: 6/9/2023
 ms.author: bezhan
 ---
 
@@ -49,7 +49,7 @@ When you install, in **Optional setup steps**, make sure you select **Install as
 ## Capabilities Supported
 
 * Import
-* Direct Query
+* Direct Query (Power BI Datasets)
 * Advanced
   * Language code
   * Execution mode

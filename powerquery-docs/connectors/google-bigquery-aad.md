@@ -3,7 +3,7 @@ title: Google BigQuery (Azure AD) (Beta)
 description: Provides basic information and prerequisites for the Google BigQuery (Azure AD) connector for Power Query.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 1/6/2023
+ms.date: 6/9/2023
 ms.author: bezhan
 ---
 
@@ -27,7 +27,7 @@ You'll need an Azure Active Directory account to sign in to Google BigQuery (Azu
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI Datasets only)
+* DirectQuery (Power BI Datasets)
 
 ## Connect to Google BigQuery (Azure AD) data from Power Query Desktop
 
@@ -108,6 +108,10 @@ You can resolve this issue by adjusting the user permissions for the BigQuery St
 These permissions typically are provided in the `BigQuery.User` role. More information, [Google BigQuery Predefined roles and permissions](https://cloud.google.com/bigquery/docs/access-control)
 
 If the above steps don't resolve the problem, you can disable the BigQuery Storage API.
+
+### Unable to use DateTime type data in DirectQuery mode
+
+There's a known issue where the DateTime type isn't supported through DirectQuery. Selecting a column with the DateTime type will cause an "Invalid query" error or a visual error.
 
 ## Enable Azure AD Single Sign-On (SSO) for Google BigQuery
 

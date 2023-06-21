@@ -3,7 +3,7 @@ title: Power Query IBM Db2 database connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your IBM Db2 database.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 10/7/2021
+ms.date: 6/9/2023
 ms.author: bezhan
 ---
 
@@ -17,7 +17,6 @@ ms.author: bezhan
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights |
 | Authentication Types Supported | Basic<br/>Database<br/>Windows |
 | Function Reference Documentation | [DB2.Database](/powerquery-m/db2-database) |
-| | |
 
 >[!Note]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
@@ -29,7 +28,7 @@ By default, the IBM Db2 database connector uses the Microsoft driver to connect 
 ## Capabilities Supported
 
 * Import
-* DirectQuery (Power BI Desktop only)
+* DirectQuery (Power BI Datasets)
 * Advanced options
   * Driver (IBM or Microsoft)
   * Command timeout in minutes

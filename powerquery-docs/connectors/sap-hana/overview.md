@@ -3,7 +3,7 @@ title: Power Query SAP HANA database connector
 description: Provides basic information, prerequisites, and instructions on connecting to your data using the SAP HANA database connector.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 11/15/2022
+ms.date: 6/9/2023
 ms.author: bezhan
 ---
 
@@ -29,14 +29,14 @@ To use SAP HANA in Power BI Desktop or Excel, you must have the SAP HANA ODBC dr
 
 To use SAP HANA in Excel, you must have either the 32-bit or 64-bit SAP HANA ODBC driver (depending on whether you're using the 32-bit or 64-bit version of Excel) installed on the local client computer.
 
-This feature is only available in Excel for Windows if you have Office 2019 or a [Microsoft 365 subscription](https://products.office.com/en-us/buy/compare-microsoft-office-products). If you're a Microsoft 365 subscriber, [make sure you have the latest version of Office](https://support.office.com/en-us/article/how-do-i-upgrade-office-ee68f6cf-422f-464a-82ec-385f65391350).
+This feature is only available in Excel for Windows if you have Office 2019 or a [Microsoft 365 subscription](https://products.office.com/buy/compare-microsoft-office-products). If you're a Microsoft 365 subscriber, [make sure you have the latest version of Office](https://support.office.com/article/how-do-i-upgrade-office-ee68f6cf-422f-464a-82ec-385f65391350).
 
 HANA 1.0 SPS 12rev122.09, 2.0 SPS 3rev30 and BW/4HANA 2.0 is supported.
 
 ## Capabilities Supported
 
 * Import
-* Direct Query
+* Direct Query (Power BI Datasets)
 * Advanced
   * SQL Statement
 

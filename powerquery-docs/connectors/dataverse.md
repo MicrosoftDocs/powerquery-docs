@@ -3,7 +3,7 @@ title: Power Query Dataverse connector
 description: Provides basic information and connection instructions, along with OData API performance information, table retrieval rate, and alternative means of connecting to Dataverse.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 1/5/2023
+ms.date: 6/9/2023
 ms.author: bezhan
 ---
 
@@ -37,7 +37,7 @@ To use the Dataverse connector, one of TCP ports 1433 or 5558 need to be open to
 
 * Server URL
 * Import
-* DirectQuery (Power BI only)
+* DirectQuery (Power BI Datasets)
 * Advanced
   * Include relationship columns
 

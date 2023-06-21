@@ -4,11 +4,11 @@ description: Provides basic information and prerequisites for using the Power Qu
 author: bezhan-msft
 
 ms.topic: conceptual
-ms.date: 8/4/2022
+ms.date: 6/9/2023
 ms.author: bezhan
 ---
 
-# Databricks (Beta)
+# Databricks
 
 >[!Note]
 >The following connector article is provided by Databricks, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Databricks website and use the support channels there.
@@ -17,7 +17,7 @@ ms.author: bezhan
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | Beta |
+| Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
 | Authentication Types Supported | Azure Active Directory<br/>Organizational Account<br/>Personal Access Token |
 
@@ -31,13 +31,13 @@ This connector is only for use with a Databricks SQL Warehouse running on AWS an
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI only)
+* DirectQuery (Power BI Datasets)
 
 ## Connect to Databricks from Power Query Desktop
 
 To connect to Databricks from Power Query Desktop, take the following steps:
 
-1. In the Get Data experience, search for **Databricks** to shortlist the **Databricks (Beta)** connector. You should only use the **Databricks** connector here for your Databricks SQL Warehouse data (running on AWS) if you're using OAuth for authentication.
+1. In the Get Data experience, search for **Databricks** to shortlist the **Databricks** connector. You should only use the **Databricks** connector here for your Databricks SQL Warehouse data (running on AWS) if you're using OAuth for authentication.
 
     ![Get Data from Databricks Cloud.](./media/databricks/get-data-dbc.png)
 

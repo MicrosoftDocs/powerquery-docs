@@ -3,7 +3,7 @@ title: Power Query Teradata database connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your Teradata database.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 9/2/2022
+ms.date: 6/9/2023
 ms.author: bezhan
 ---
 
@@ -28,7 +28,7 @@ Before you can connect to a Teradata database, you need the [.NET Data Provider 
 ## Capabilities Supported
 
 * Import
-* DirectQuery (Power BI Desktop only)
+* DirectQuery (Power BI Datasets)
 * Advanced options
   * Command timeout in minutes
   * SQL statement

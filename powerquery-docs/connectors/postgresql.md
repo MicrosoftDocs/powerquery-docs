@@ -3,7 +3,7 @@ title: Power Query PostgreSQL connector
 description: Provides basic information, prerequisites, and instructions on how to connect to your database, along with native query folding instructions and troubleshooting tips.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 2/13/2023
+ms.date: 6/9/2023
 ms.author: bezhan
 ---
 
@@ -31,10 +31,14 @@ For Power BI Desktop versions released before December 2019, you must install th
 
 ![Npgsql installer with GAC Installation selected.](media/postgresql/postgres-1.png)
 
+For Power Apps, you must install the NpgSQL provider on your local machine. To install the NpgSQL provider, go to the [releases page](https://github.com/npgsql/Npgsql/releases) and download the relevant version. **Download and run the installer (the NpgSQL-[version number].msi) file**. Ensure you select the NpgSQL GAC Installation and on completion restart your machine for this installation to take effect.
+
+
+
 ## Capabilities Supported
 
 - Import
-- DirectQuery (Power BI only)
+- DirectQuery (Power BI Datasets)
 - Advanced options
   - Command timeout in minutes
   - Native SQL statement
