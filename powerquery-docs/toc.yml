@@ -364,6 +364,8 @@
         href: connectors/cdata-connect-cloud.md
       - name: "Celonis EMS (Beta)"
         href: connectors/celonis-ems.md
+      - name: "CloudBluePSA (Beta)"
+        href: connectors/cloudbluepsa.md
       - name: "Common Data Service (Legacy)"
         href: connectors/common-data-service-legacy.md
       - name: "Databricks"
