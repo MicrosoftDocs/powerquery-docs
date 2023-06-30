@@ -31,7 +31,7 @@ In this example, you'll merge both tables, with the **Sales** table as the left 
 |-----------|------------------|
 |CountryID|id|
 
-The goal is to create a table like the following, where the name of the country appears as a new **Country** column in the **Sales** table. Because of how the right outer join works, all rows from the right table will be brought in, but only matching rows from the left table will be kept.
+The goal is to create a table like the following, where the name of the country/region appears as a new **Country** column in the **Sales** table. Because of how the right outer join works, all rows from the right table will be brought in, but only matching rows from the left table will be kept.
 
 ![Right outer join final table with Date, CountryID, Units, and Country header columns, and a single row with data for Panama.](media/merge-queries-right-outer/right-outer-final-table.png "Right outer join final table with Date, CountryID, Units, and Country header columns, and a single row with data for Panama")
 

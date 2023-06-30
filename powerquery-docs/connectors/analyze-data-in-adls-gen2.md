@@ -59,13 +59,13 @@ Before you begin this tutorial, you must have the following prerequisites:
 
     ![Screenshot of the Fields pane in Power BI, with Query1 now displaying Column1 through Column8.](media/data-lake-storage/new-fields.png)
 
-9. Now you can create a pie chart to represent the drivers in each city for a given country. To do so, make the following selections.
+9. Now you can create a pie chart to represent the drivers in each city for a given country/region. To do so, make the following selections.
 
     From the **Visualizations** tab, select the symbol for a pie chart.
 
     ![Screenshot of the Visualizations pane, with the pie chart symbol emphasized.](media/data-lake-storage/visualizations.png)
 
-    In this example, the columns you're going to use are Column 4 (name of the city) and Column 7 (name of the country). Drag these columns from the **Fields** tab to the **Visualizations** tab as shown below.
+    In this example, the columns you're going to use are Column 4 (name of the city) and Column 7 (name of the country/region). Drag these columns from the **Fields** tab to the **Visualizations** tab as shown below.
 
     ![Screenshot with Column4 dragged and dropped in Details and Column7 dragged and dropped in Values in the Visualization pane, and Column7 also dragged and dropped into Filters on this page in the Filters pane.](media/data-lake-storage/visualizations-drag-fields.png)
 
@@ -73,9 +73,9 @@ Before you begin this tutorial, you must have the following prerequisites:
 
     ![Screenshot of pie chart showing the percentages of each slice of the pie, along with color coding of each of the locations, and a column containing all locations and their color code on the right side.](media/data-lake-storage/pie-chart.png)
 
-10. If you select a specific country from the page level filters, the number of drivers in each city of the selected country will be displayed. For example, under the **Visualizations** tab, under **Page level filters**, select **Brazil**.
+10. If you select a specific country/region from the page level filters, the number of drivers in each city of the selected country/region will be displayed. For example, under the **Visualizations** tab, under **Page level filters**, select **Brazil**.
 
-    ![Screenshot of the Filters on this page pane, with Brazil selected as the country to display.](media/data-lake-storage/page-filters.png)
+    ![Screenshot of the Filters on this page pane, with Brazil selected as the country/region to display.](media/data-lake-storage/page-filters.png)
 
 11. The pie chart is automatically updated to display the drivers in the cities of Brazil.
 

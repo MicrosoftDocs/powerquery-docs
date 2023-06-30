@@ -51,7 +51,7 @@ Once you connect and choose authentication, select the **Customers** table from 
 
 ![Northwind navigation.](media/record-query-diagnostics/diagnostics-odata-selecttable.png)
 
-This will present you with the Customers table in the Power Query interface. Let's say that we want to know how many Sales Representatives there are in different countries. First, right-click on **Sales Representative** under the **Contact Title** column, mouse over **Text Filters**, and select **Equals**.
+This will present you with the Customers table in the Power Query interface. Let's say that we want to know how many Sales Representatives there are in different countries/regions. First, right-click on **Sales Representative** under the **Contact Title** column, mouse over **Text Filters**, and select **Equals**.
 
 ![Apply text filter to contact title.](media/record-query-diagnostics/diagnostics-odata-filter.png)
 
