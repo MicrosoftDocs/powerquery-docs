@@ -22,7 +22,7 @@ ms.author: bezhan
 
 ## Prerequisites
 
-You'll need an Azure Active Directory account to sign in to Google BigQuery (Azure AD).
+You need an Azure Active Directory account to sign in to Google BigQuery (Azure AD).
 
 ## Capabilities supported
 
@@ -125,13 +125,13 @@ If the above steps don't resolve the problem, you can disable the BigQuery Stora
 
 ### Unable to use DateTime type data in DirectQuery mode
 
-There's a known issue where the DateTime type isn't supported through DirectQuery. Selecting a column with the DateTime type will cause an "Invalid query" error or a visual error.
+There's a known issue where the DateTime type isn't supported through DirectQuery. Selecting a column with the DateTime type causes an "Invalid query" error or a visual error.
 
-## Enable Azure AD Single Sign-On (SSO) for Google BigQuery
+## Enable Azure AD single sign-on (SSO) for Google BigQuery
 
 We support Azure AD SSO through both Power BI Service (cloud) and also through the on-premises data gateway. For more information about enabling Azure AD SSO for all connectors, go to [Overview of single sign-on (SSO) for on-premises data gateways in Power BI](/power-bi/connect-data/service-gateway-sso-overview). Confirm directly with your Google contact that your system and accounts are set up correctly for Azure AD SSO prior to attempting to connect in Power BI.
 
-### Azure AD Single Sign-On (SSO) through Power BI service
+### Azure AD single sign-on (SSO) through Power BI service
 
 To configure a new connection in Power BI service:
 
@@ -143,9 +143,9 @@ To configure a new connection in Power BI service:
 
    :::image type="content" source="./media/google-bigquery/gbq-sso.png" alt-text="Screenshot of the Google BigQuery SSO option with the Enabled button enabled.":::
 
-### Azure AD Single Sign-On (SSO) for Google BigQuery with an on-premises data gateway
+### Azure AD single sign-on (SSO) for Google BigQuery with an on-premises data gateway
 
-Before you can enable Azure AD SSO for Google BigQuery, you must first enable Azure AD SSO for all data sources that support Azure AD SSO with an on-premises data gateway, and ensure you have upgraded to at least the December 2022 release of the on-premises data gateway:
+Before you can enable Azure AD SSO for Google BigQuery, you must first enable Azure AD SSO for all data sources that support Azure AD SSO with an on-premises data gateway. Also, ensure you've upgraded to at least the December 2022 release of the on-premises data gateway:
 
 1. In Power BI service, select **Admin portal** from the settings list.
 
