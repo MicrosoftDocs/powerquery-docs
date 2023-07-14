@@ -3,7 +3,7 @@ title: Power Query Azure Synapse Analytics (SQL DW) connector
 description: Provides basic information, prerequisites, and supported capabilities for the connector, and instructions on how to connect to your database using the connector.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 6/9/2023
+ms.date: 7/13/2023
 ms.author: bezhan
 ---
 
@@ -14,7 +14,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication Types Supported | Windows (Power BI Desktop, Excel, online service with gateway)<br/>Database (Power BI Desktop, Excel)<br/>Microsoft Account (all)<br/>Basic (online service) |
 | Function Reference Documentation | [Sql.Database](/powerquery-m/sql-database)<br/>[Sql.Databases](/powerquery-m/sql-databases) |
 
@@ -84,7 +84,7 @@ To make the connection from Power Query Online:
 4. If required, select the name of your on-premises data gateway.
 
 5. If the connection is not encrypted, clear the **Use Encrypted Connection** check box.
- 
+
 6. Select **Next** to continue.
 
 7. In **Navigator**, select the data you require, and then select **Transform data**.

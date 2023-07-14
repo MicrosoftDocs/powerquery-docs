@@ -4,7 +4,7 @@ description: Provides basic information, prerequisites, and instructions on how 
 author: giladsmg
 ms.author: bezhan
 ms.topic: conceptual
-ms.date: 5/1/2023
+ms.date: 7/14/2023
 ---
 
 # SolarWinds Service Desk (Beta)
@@ -21,7 +21,7 @@ variety of formats, such as tables, graphs, and charts.
 | Item                           | Description                                  |
 |--------------------------------|----------------------------------------------|
 | Release state                  | Beta                                         |
-| Products                       | Power BI (Datasets)<br/>Power BI (Dataflows) |
+| Products                       | Power BI (Datasets)<br/>Power BI (Dataflows)<br/> Fabric (Dataflow Gen2) |
 | Authentication Types Supported | SolarWinds Service Desk JSON Web Token (JWT) |
 
 ## Prerequisites
@@ -65,6 +65,7 @@ Users should be aware of the following limitations and issues associated with ac
 ### Credential error in the Navigator
 
 If a credential error occurs in the Navigator, clear your recent data source settings.
+
 1. In Power BI Desktop, select **File** > **Data source settings**.
 
    ![Screenshot of Select SolarWinds Service Desk datasource.](./media/solarwinds-service-desk/data-source-clear.png)

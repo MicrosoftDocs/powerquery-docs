@@ -3,7 +3,7 @@ title: Power Query Google Sheets connector
 description: Provides basic information and prerequisites for the Google Sheets connector, descriptions of the optional input parameters, and discusses limitations and issues you might come across.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 2/13/2023
+ms.date: 7/13/2023
 ms.author: bezhan
 ---
 
@@ -14,7 +14,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Organizational account |
 | Function Reference Documentation | &mdash; |
 

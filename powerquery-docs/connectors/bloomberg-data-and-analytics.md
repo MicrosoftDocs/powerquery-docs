@@ -3,7 +3,7 @@ title: Power Query Bloomberg Data and Analytics connector
 description: Provides basic information and prerequisites for the Bloomberg Data and Analytics connector, descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
 author: kanstantsin-chernik
 ms.topic: conceptual
-ms.date: 6/24/2022
+ms.date: 7/13/2023
 ms.author: bezhan
 ---
 
@@ -17,21 +17,22 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Organizational account |
 
 ## Prerequisites
 
 Your organization must subscribe to Bloomberg PORT Enterprise and you must be a Bloomberg Anywhere user and have a Bloomberg biometric authentication device (B-Unit).
- 
+
 ## Capabilities Supported
+
 * Import
 
 ## Connect to Bloomberg Data and Analytics
 
 To connect to Bloomberg Data and Analytics:
 
-1. In Power BI Desktop, select **Home** > **Get Data**. 
+1. In Power BI Desktop, select **Home** > **Get Data**.
 
 2. Select **Other** from the categories on the left, select **Bloomberg Data and Analytics**, and then select **Connect**.
 
@@ -66,4 +67,3 @@ Once the connection is established, you will see data available for preview in *
 You can **Load** the selected table, or you can select **Transform Data** to edit the query, which opens Power Query Editor. You can then filter and refine the set of data you want to use, and then load that refined set of data into Power BI Desktop.
 
 ![Load or transform data.](./media/bloomberg-data-and-analytics/button-select.png)
-

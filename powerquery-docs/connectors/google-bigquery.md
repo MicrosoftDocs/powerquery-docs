@@ -3,7 +3,7 @@ title: Google BigQuery connector
 description: Provides basic information and prerequisites for the Google BigQuery connector for Power Query.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 6/9/2023
+ms.date: 7/13/2023
 ms.author: bezhan
 ---
 
@@ -14,11 +14,11 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Customer Insights (Dataflows) |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Customer Insights (Dataflows) |
 | Authentication Types Supported | Organizational account<br/>Service account |
 
->[!Note]
->Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+> [!NOTE]
+> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 > [!NOTE]
 > Effective July 2021, Google will discontinue support for sign-ins to Google accounts from embedded browser frameworks. Due to this change, you will need to [update](https://powerbi.microsoft.com/downloads/) your Power BI Desktop version to June 2021 to support signing in to Google.
@@ -75,8 +75,8 @@ To connect to Google BigQuery from Power Query Online, take the following steps:
     ![Image of sign in dialog box.](./media/google-bigquery/sign-in-online.png)
 
 3. A **Sign in with Google** dialog appears. Select your Google account and approve connecting.
-    >[!NOTE]
-    >Although the sign in dialog box says you'll continue to Power BI Desktop once you've signed in, you'll be sent to your online app instead.
+    > [!NOTE]
+    > Although the sign in dialog box says you'll continue to Power BI Desktop once you've signed in, you'll be sent to your online app instead.
 
     ![Image of Google sign in dialog.](./media/google-bigquery/sign-into-google.png)
 
@@ -176,4 +176,5 @@ These permissions typically are provided in the `BigQuery.User` role. More infor
 If the above steps don't resolve the problem, you can disable the BigQuery Storage API.
 
 ### Unable to use DateTime type data in Direct Query mode
+
 There's a known issue where the DateTime type isn't supported through Direct Query. Selecting a column with the DateTime type will cause an "Invalid query" error or a visual error.

@@ -3,7 +3,7 @@ title: Power Query MicroStrategy for Power BI connector
 description: Provides basic information about products that use the MicroStrategy for Power BI connector, supported authentication types, prerequisites, and connection instructions.
 author: pawjastrzebski
 ms.topic: conceptual
-ms.date: 6/6/2022
+ms.date: 7/7/2023
 ms.author: bezhan
 ---
 
@@ -17,7 +17,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets) |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Basic<br />OAuth 2.0 |
 
 ## Prerequisites

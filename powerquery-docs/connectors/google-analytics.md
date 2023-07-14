@@ -3,30 +3,29 @@ title: Power Query Google Analytics connector
 description: Provides basic information and connection instructions, along with a list of quota limits for Power BI and instructions on validating unexpected data.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 6/20/2023
+ms.date: 7/13/2023
 ms.author: bezhan
 ---
 
 # Google Analytics
- 
+
 ## Summary
 
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Customer Insights (Dataflows) |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Customer Insights (Dataflows) |
 | Authentication Types Supported | Google Account |
 | Function Reference Documentation | [GoogleAnalytics.Accounts](/powerquery-m/googleanalytics-accounts) |
-| | |
 
->[!Note]
->Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+> [!NOTE]
+> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 > [!NOTE]
 > Effective July 2021, Google will discontinue support for sign-ins to Google accounts from embedded browser frameworks. Due to this change, you will need to [update](https://powerbi.microsoft.com/downloads/) your Power BI Desktop version to June 2021 to support signing in to Google.
 
-> [!Note]
->This connector uses V4 of the Google Analytics API.
+> [!NOTE]
+> This connector uses V4 of the Google Analytics API.
 
 ## Prerequisites
 
@@ -89,8 +88,8 @@ To connect to Google Analytics data:
 
 4. In the **Sign in with Google** window that appears, provide your credentials to sign in to your Google Analytics account. You can either supply an email address or phone number. Then select **Next**.
 
-   >[!Note]
-   >Currently, the Google Analytics sign-in dialog boxes indicate that you are signing in to Power Query Desktop. This wording will be changed in the future.
+   > [!NOTE]
+   > Currently, the Google Analytics sign-in dialog boxes indicate that you are signing in to Power Query Desktop. This wording will be changed in the future.
 
    ![Sign in to Adobe Analytics from Power Query Online.](./media/google-analytics/google-sign-in.png)
 

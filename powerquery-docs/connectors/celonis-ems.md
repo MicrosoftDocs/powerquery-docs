@@ -2,7 +2,7 @@
 title: Power Query Celonis EMS connector
 description: Provides basic information, prerequisites, and connection steps for Celonis EMS.
 author: capono
-ms.date: 02/17/2023 
+ms.date: 7/13/2023 
 ms.author: bezhan
 ---
 
@@ -13,7 +13,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products | Power BI (Datasets) </br> Power BI (Dataflows) |
+| Products | Power BI (Datasets) </br> Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Organizational Account |
 | Function Reference Documentation | [Web.Contents](/powerquery-m/web-contents) </br> [Parquet.Document](/power-query/connectors/parquet) </br> [Json.Document](/powerquery-m/json-document) </br> [Json.FromValue](/powerquery-m/json-fromvalue)|
 
@@ -55,4 +55,3 @@ You should be aware of the following limitations and issues associated with acce
 * Celonis EMS has a built-in limit of 200 K rows and 20 columns returned per record.
 
 * Only defined records can be imported. Auto-generated records are excluded here.
-

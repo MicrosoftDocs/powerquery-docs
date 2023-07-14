@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for the FactSet RMS co
 author: bezhan-msft
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 2/13/2023
+ms.date: 7/13/2023
 ms.author: bezhan
 ---
 
@@ -15,7 +15,7 @@ ms.author: bezhan
 | Item | Description |
 | ------- | ------------|
 |Release state | Beta |
-| Products supported | Power BI (Datasets)<br/>Power BI (Dataflows) |
+| Products supported | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication types supported| Basic |
 | Function reference docs | https://developer.factset.com/api-catalog/irn-notes-api|
 

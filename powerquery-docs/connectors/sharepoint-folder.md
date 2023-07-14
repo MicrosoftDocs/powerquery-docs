@@ -3,7 +3,7 @@ title: Power Query SharePoint folder connector
 description: Provides basic information, prerequisites, and how to connect to your data, along with troubleshooting tips when combining files and using filename special characters.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 12/11/2022
+ms.date: 7/14/2023
 ms.author: bezhan
 ---
 
@@ -14,10 +14,9 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights |
+| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
 | Authentication Types Supported | Anonymous<br/>Microsoft Account<br/>Windows |
 | Function Reference Documentation | [SharePoint.Contents](/powerquery-m/sharepoint-contents)<br/>[SharePoint.Files](/powerquery-m/sharepoint-files) |
-| | |
 
 >[!Note]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.

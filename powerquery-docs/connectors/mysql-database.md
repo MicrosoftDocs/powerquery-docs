@@ -3,7 +3,7 @@ title: Power Query MySQL database connector
 description: Provides basic information about products that use the connector, supported authentication types, prerequisites, and connection instructions.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 6/16/2023
+ms.date: 7/14/2023
 ms.author: bezhan
 ---
 
@@ -14,7 +14,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication Types Supported | Windows (Power BI Desktop, Excel, online service with gateway)<br/>Database (Power BI Desktop, Excel)<br/>Basic (online service with gateway) |
 | Function Reference Documentation | [MySQL.Database](/powerquery-m/mysql-database) |
 

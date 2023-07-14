@@ -3,7 +3,7 @@ title: Power Query IBM Db2 database connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your IBM Db2 database.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 6/9/2023
+ms.date: 7/13/2023
 ms.author: bezhan
 ---
 
@@ -14,7 +14,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights |
+| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
 | Authentication Types Supported | Basic<br/>Database<br/>Windows |
 | Function Reference Documentation | [DB2.Database](/powerquery-m/db2-database) |
 
@@ -111,7 +111,6 @@ The following table lists all of the advanced options you can set in Power Query
 | SQL statement | For information, go to [Import data from a database using native database query](../native-database-query.md). |
 | Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, you won’t see those columns. |
 | Navigate using full hierarchy | If checked, the navigator displays the complete hierarchy of tables in the database you're connecting to. If cleared, the navigator displays only the tables whose columns and rows contain data. |
-| | |
 
 Once you've selected the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your IBM Db2 database.
 

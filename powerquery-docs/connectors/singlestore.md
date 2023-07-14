@@ -3,7 +3,7 @@ title: Power Query SingleStore connector
 description: Provides basic information, prerequisites, and instructions on how to connect to your SingleStore data.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 6/9/2023
+ms.date: 7/14/2023
 ms.author: bezhan
 ---
 
@@ -17,7 +17,7 @@ ms.author: bezhan
 | Item | Description
 |--|--|
 | Release State | Beta |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Basic<br/>Windows |
 
 ## Capabilities Supported

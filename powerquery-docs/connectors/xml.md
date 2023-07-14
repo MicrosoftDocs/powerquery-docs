@@ -3,7 +3,7 @@ title: Power Query XML connector
 description: Provides basic information and how to connect to your data, along with troubleshooting tips on data shaping and issues with documents containing both text and nodes.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 2/28/2022
+ms.date: 7/14/2023
 ms.author: bezhan
 ---
 
@@ -14,9 +14,8 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Function Reference Documentation | [Xml.Tables](/powerquery-m/xml-tables)<br/>[Xml.Document](/powerquery-m/xml-document) |
-| | |
 
 >[!Note]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.

@@ -3,12 +3,11 @@ title: Power Query CData Connect Cloud connector
 description: Provides basic information, prerequisites, and connection steps for CData Connect Cloud.
 author: bezhan-msft
 
-ms.date: 12/11/2022 
+ms.date: 7/13/2023 
 ms.author: bezhan
-LocalizationGroup: reference
 ---
 
-# CData Connect Cloud (Beta)
+# CData Connect Cloud
 
 > [!NOTE]
 > The following connector article is provided by CData, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the CData website and use the support channels there.
@@ -17,8 +16,8 @@ LocalizationGroup: reference
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | Beta |
-| Products Supported | Power BI (Datasets) </br> Power BI (Dataflows) |
+| Release State | General Availability |
+| Products Supported | Power BI (Datasets) </br> Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | CData account (OAuth) |
 | Function Reference Docs | &mdash; |
 

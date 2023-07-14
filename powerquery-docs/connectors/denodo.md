@@ -5,7 +5,7 @@ author: denodo-research-labs
 ms.author: bezhan
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 6/9/2023
+ms.date: 7/13/2023
 ---
 
 # Denodo
@@ -18,7 +18,7 @@ ms.date: 6/9/2023
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products |  Power BI (Datasets)<br/>Power BI (Dataflows)|
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Basic <br/>Windows<br/> |
 
 >[!Note]

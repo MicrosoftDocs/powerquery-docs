@@ -3,11 +3,11 @@ title: EarthSoft's EQuIS Power Query Data Connector
 description: Provides basic information and connection instructions for the EQuIS connector.
 author: mathew-weaver
 ms.topic: conceptual
-ms.date: 6/24/2022
+ms.date: 7/13/2023
 ms.author: bezhan
 ---
 
-# EQuIS (Beta)
+# EQuIS
 
 >[!Note]
 >The following connector article is provided by EarthSoft, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the EarthSoft website and use the support channels there.
@@ -16,8 +16,8 @@ ms.author: bezhan
 
 | Item | Description |
 | ------- | ---------- |
-| Release State | Preview |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
+| Release State | General Availability |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Basic<br/>Web API (API Token)<br/>Organizational Account |
 | Function Reference Documentation | &mdash; |
 
@@ -36,13 +36,13 @@ To connect to an EQuIS Enterprise site from Power BI Desktop, take the following
 1. Select the EQuIS connector in the connector list, then select **Connect**.
 2. Enter the URL of the EQuIS Enterprise site you are connecting to, then select **OK**.
 
-![Enter URL of EQuIS Enterprise site.](./media/equis/enterprise_connection-ok.png)
+   ![Enter URL of EQuIS Enterprise site.](./media/equis/enterprise_connection-ok.png)
 
 3. Select the appropriate type of authentication:
-    - **Basic**: Enter your EQuIS username and password for the given EQuIS Enterprise site.
-    - **API Token**: Enter an API Token that you generated in EQuIS Enterprise (visit [User Profile](https://help.earthsoft.com/index.htm?ent-user_profile_editor.htm)).
-    - **Organizational Account**: If your EQuIS Enterprise site is appropriately configured, you may authenticate with Azure Active Directory
-4. In **Navigator**, browse to the dataset or report you want to load, then select **Load** or **Transform Data**. Visit [Using EQuIS Data](https://help.earthsoft.com/index.htm?pbi-power-bi-adding-datasets.htm) for more information about available datasets. 
+   * **Basic**: Enter your EQuIS username and password for the given EQuIS Enterprise site.
+   * **API Token**: Enter an API Token that you generated in EQuIS Enterprise (visit [User Profile](https://help.earthsoft.com/index.htm?ent-user_profile_editor.htm)).
+   * **Organizational Account**: If your EQuIS Enterprise site is appropriately configured, you may authenticate with Azure Active Directory
+4. In **Navigator**, browse to the dataset or report you want to load, then select **Load** or **Transform Data**. Visit [Using EQuIS Data](https://help.earthsoft.com/index.htm?pbi-power-bi-adding-datasets.htm) for more information about available datasets.
 
 ![Select dataset in Navigator.](./media/equis/navigator_cropped.png)
 

@@ -3,7 +3,7 @@ title: Power Query OData Feed connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your data using the connector.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 2/13/2023
+ms.date: 7/14/2023
 ms.author: bezhan
 ---
 
@@ -14,7 +14,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication Types Supported | Anonymous<br/>Windows<br/>Basic (requires Gateway)<br/>Web API<br/>Organizational Account |
 | Function Reference Documentation | [OData.Feed](/powerquery-m/odata-feed), [ODataOmitValues.Nulls](/powerquery-m/odataomitvalues-type) |
 

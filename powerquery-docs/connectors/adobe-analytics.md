@@ -3,7 +3,7 @@ title: Power Query Adobe Analytics connector
 description: Provides basic information and prerequisites for the connector, descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 1/18/2022
+ms.date: 7/13/2023
 ms.author: bezhan
 ---
 
@@ -14,15 +14,16 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Customer Insights (Dataflows) |
+| Products | Power BI (datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Customer Insights (Dataflows) |
 | Authentication Types Supported | Organizational account |
 | Function Reference Documentation | [AdobeAnalytics.Cubes](/powerquery-m/adobeanalytics-cubes) |
-| | |
+
 ## Prerequisites
+
 Before you can sign in to Adobe Analytics, you must have an Adobe Analytics account (username/password).
 
- 
 ## Capabilities Supported
+
 * Import
 
 ## Connect to Adobe Analytics data
@@ -38,7 +39,6 @@ To connect to Adobe Analytics data:
 3. To sign in to your Adobe Analytics account, select **Sign in**.
 
    ![Select sign in button.](./media/adobe-analytics/sign-in.png)
-
 
 4. In the Adobe Analytics window that appears, provide your credentials to sign in to your Adobe Analytics account. You can either supply a username (which is usually an email address), or select **Continue with Google** or **Continue with Facebook**.
 
@@ -106,8 +106,8 @@ You may also find the following Adobe Analytics information useful:
 
 * [Adobe Analytics 1.4 APIs](https://github.com/AdobeDocs/analytics-1.4-apis)
 * [Adobe Analytics Reporting API](https://github.com/AdobeDocs/analytics-1.4-apis/tree/master/docs/reporting-api)
-   * [Metrics](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/reporting-api/metrics.md)
-   * [Elements](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/reporting-api/elements.md)
-   * [Segments](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/segments-api/data_types/r_segment.md)
+  * [Metrics](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/reporting-api/metrics.md)
+  * [Elements](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/reporting-api/elements.md)
+  * [Segments](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/segments-api/data_types/r_segment.md)
 * [GetReportSuites](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/admin-api/methods/company/r_GetReportSuites.md)
 * [Adobe Analytics support](https://helpx.adobe.com/support/analytics.html)

@@ -4,7 +4,7 @@ description: Includes basic information, prerequisites, and information on how t
 
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 1/5/2023
+ms.date: 7/13/2023
 ms.author: bezhan
 
 ---
@@ -21,7 +21,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Excel</br>Analysis Services |
+| Products | Excel</br>Power BI (Datasets)<br/>Analysis Services |
 | Authentication Types Supported | Organizational Account |
 | Function Reference Documentation | [AzureStorage.DataLake](/powerquery-m/azurestorage-datalake)<br/>[AzureStorage.DataLakeContents](/powerquery-m/azurestorage-datalakecontents) |
 
