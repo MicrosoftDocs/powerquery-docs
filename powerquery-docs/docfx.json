@@ -40,6 +40,7 @@
     "globalMetadata": {
       "breadcrumb_path": "/power-query/breadcrumb/toc.json",
       "extendBreadcrumb": true,
+      "uhfHeaderId": "MSDocsHeader-PowerPlatform",
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/powerquery-docs",
       "feedback_product_url": "/power-query/feedback",
