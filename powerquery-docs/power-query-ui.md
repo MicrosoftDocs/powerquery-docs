@@ -198,13 +198,13 @@ After creating this new query, change the name of the query to **Country Analysi
 
 ## Merging queries
 
-A **merge queries** operation joins two existing tables together based on matching values from one or multiple columns. In this example, the goal is to join both the **Customers** and **Suppliers** tables into one table only for the countries that have both **Customers** and **Suppliers**.
+A **merge queries** operation joins two existing tables together based on matching values from one or multiple columns. In this example, the goal is to join both the **Customers** and **Suppliers** tables into one table only for the countries/regions that have both **Customers** and **Suppliers**.
 
 Inside the **Country Analysis** query, select the **Merge queries** option from the **Home** tab in the ribbon.
 
 ![Merge queries from ribbon.](media/power-query-ui/pqui-merge-queries.png)
 
-A new dialog for the **Merge** operation appears. You can then select the query to merge with your current query. Select the **Suppliers** query and select the **Country** field from both queries. Finally, select the **Inner** join kind, as you only want the countries where you have **Customers** and **Suppliers** for this analysis.
+A new dialog for the **Merge** operation appears. You can then select the query to merge with your current query. Select the **Suppliers** query and select the **Country** field from both queries. Finally, select the **Inner** join kind, as you only want the countries/regions where you have **Customers** and **Suppliers** for this analysis.
 
 ![Merge queries dialog.](media/power-query-ui/pqui-merge-queries-dialog.png)
 
@@ -242,7 +242,7 @@ With the data for customers and suppliers in a single table, you can now calcula
 
 [![Add new column.](media/power-query-ui/pqui-add-column.png)](media/power-query-ui/pqui-add-column.png#lightbox)
 
-This change creates a new column called **Integer-division** that you can rename to **Ratio**. This change is the final step of your query, and provides the customer-to-supplier ratio for the countries where the data has customers and suppliers.
+This change creates a new column called **Integer-division** that you can rename to **Ratio**. This change is the final step of your query, and provides the customer-to-supplier ratio for the countries/regions where the data has customers and suppliers.
 
 ## Data profiling
 
