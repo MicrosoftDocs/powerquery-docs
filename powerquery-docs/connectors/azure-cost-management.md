@@ -4,7 +4,7 @@ description: Includes basic information, prerequisites, and information on how t
 
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 10/5/2022
+ms.date: 7/13/2023
 ms.author: bezhan
 
 ---
@@ -16,7 +16,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets) |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Organizational Account |
 | Function Reference Documentation | &mdash; |
 

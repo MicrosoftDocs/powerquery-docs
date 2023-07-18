@@ -3,7 +3,7 @@ title: Google BigQuery (Azure AD) (Beta)
 description: Provides basic information and prerequisites for the Google BigQuery (Azure AD) connector for Power Query.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 6/9/2023
+ms.date: 7/13/2023
 ms.author: bezhan
 ---
 
@@ -14,11 +14,11 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products Supported | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows) |
+| Products Supported | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows) |
 | Authentication Types Supported | Azure Active Directory |
 
->[!Note]
->Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+> [!NOTE]
+> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
 

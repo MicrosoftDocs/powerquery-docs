@@ -3,7 +3,7 @@ title: Power Query connector for FHIR
 description: Power Query connector for FHIR reference
 author: hansenms
 ms.topic: conceptual
-ms.date: 10/5/2022
+ms.date: 7/14/2023
 ms.author: mihansen
 ---
 
@@ -18,7 +18,7 @@ If you don't have a FHIR server, you can provision the [Azure API for FHIR](/azu
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
 | Authentication Types Supported | Anonymous<br/>Azure Active Directory |
 
 >[!Note]
@@ -38,15 +38,15 @@ To make a connection to a FHIR server, take the following steps:
 
 1. Select the **Get Data** button.
 
-    ![Image with the Get Data selection highlighted in the Home tab of Power BI Desktop.](FHIR-GetData.png)
+    ![Image with the Get Data selection highlighted in the Home tab of Power BI Desktop.](fhir-getdata.png)
 
 2. Select **Other** > **FHIR**, and then select **Connect**.
 
-    ![Image of the Get Data dialog box with the Other category and the FHIR connector emphasized.](FHIR-GetData-More.png)
+    ![Image of the Get Data dialog box with the Other category and the FHIR connector emphasized.](fhir-getdata-more.png)
 
 3. Enter the URL for your FHIR server.
 
-    ![Image with the FHIR connection details.](FHIR-Connection-Details.png)
+    ![Image with the FHIR connection details.](fhir-connection-details.png)
 
     You can optionally enter an initial query for the FHIR server, if you know exactly what data you're looking for.
 
@@ -54,27 +54,27 @@ To make a connection to a FHIR server, take the following steps:
 
 4. Decide on your authentication scheme.
 
-    ![Image of authentication dialog box with the Organizational account selected and the user not yet signed in.](FHIR-Sign-In.png)
+    ![Image of authentication dialog box with the Organizational account selected and the user not yet signed in.](fhir-sign-in.png)
 
-    The connector supports "Anonymous" for FHIR servers with no access controls (for example, public test servers like `http://test.fhir.org/r4`) or Azure Active Directory authentication. You must have a [FHIR Data Reader role](#prerequisites) on the FHIR server to read data from the server. Go to [FHIR connector authentication](FHIR-Authentication.md) for details.
+    The connector supports "Anonymous" for FHIR servers with no access controls (for example, public test servers like `http://test.fhir.org/r4`) or Azure Active Directory authentication. You must have a [FHIR Data Reader role](#prerequisites) on the FHIR server to read data from the server. Go to [FHIR connector authentication](fhir-authentication.md) for details.
 
 5. Select the resources you're interested in.
 
-    ![Image of the Navigator with the FHIR Patient resource selected, and the patient records shown in the display window.](FHIR-Navigator.png)
+    ![Image of the Navigator with the FHIR Patient resource selected, and the patient records shown in the display window.](fhir-navigator.png)
 
     Select **Transform Data** to shape the data.
 
 6. Shape the data as needed, for example, expand the postal code.
 
-    ![Image of the Power Query Editor with the patient data shown, the address column selected, and the postal code selected for expansion.](FHIR-ShapeData.png)
+    ![Image of the Power Query Editor with the patient data shown, the address column selected, and the postal code selected for expansion.](fhir-shapedata.png)
 
 7. Save the query when shaping is complete.
 
-    ![Image of the Power Query Editor with the postal code expanded and the Close & Apply selection in the Home tab emphasized.](FHIR-SaveQuery.png)
+    ![Image of the Power Query Editor with the postal code expanded and the Close & Apply selection in the Home tab emphasized.](fhir-savequery.png)
 
 8. Create dashboards with data, for example, make a plot of the patient locations based on postal code.
 
-    ![Image of the Power Query Desktop with the address.postalCode emphasized in the Location box, with a map showing each patient postal code as a dot on the map.](FHIR-PlotPatientlocations.png)
+    ![Image of the Power Query Desktop with the address.postalCode emphasized in the Location box, with a map showing each patient postal code as a dot on the map.](fhir-plotpatientlocations.png)
 
 ## Connect to a FHIR server from Power Query Online
 
@@ -82,11 +82,11 @@ To make a connection to a FHIR server, take the following steps:
 
 1. In **Power Query - Choose data source**, select the **Other** category, and then select **FHIR**.
 
-   ![Image of the Choose data source dialog box with the Other category and the FHIR connector emphasized.](FHIR-GetData-online.png)
+   ![Image of the Choose data source dialog box with the Other category and the FHIR connector emphasized.](fhir-getdata-online.png)
 
 2. In the **FHIR** dialog, enter the URL for your FHIR server.  
 
-   ![Image with the FHIR URL filled in.](./FHIR-Access-online.png)
+   ![Image with the FHIR URL filled in.](./fhir-access-online.png)
 
     You can optionally enter an initial query for the FHIR server, if you know exactly what data you're looking for.
 
@@ -98,26 +98,26 @@ To make a connection to a FHIR server, take the following steps:
 
 6. Select the resources you're interested in.
 
-   ![Image of the Navigator with the FHIR Patient box filled in, and the patient records shown on the right hand side.](./FHIR-Navigator-online.png)
+   ![Image of the Navigator with the FHIR Patient box filled in, and the patient records shown on the right hand side.](./fhir-navigator-online.png)
 
    Select **Transform data** to shape the data.
 
 7. Shape the data as needed, for example, expand the postal code.
 
-   ![Image of the Power Query Editor with the address column selected, and the postal code selected for expansion.](./FHIR-ShapeData-online.png)
+   ![Image of the Power Query Editor with the address column selected, and the postal code selected for expansion.](./fhir-shapedata-online.png)
 
 8. Save the query when shaping is complete.
 
-   ![Image of the Power Query Editor with the Save & Close button emphasized.](./FHIR-SaveQuery-online.png)
+   ![Image of the Power Query Editor with the Save & Close button emphasized.](./fhir-savequery-online.png)
 
    >[!Note]
-   > In some cases, query folding can't be obtained purely through data shaping with the graphical user interface (GUI), as shown in the previous image. To learn more about query folding when using the FHIR connector, see [FHIR query folding](./FHIR-QueryFolding.md).
+   > In some cases, query folding can't be obtained purely through data shaping with the graphical user interface (GUI), as shown in the previous image. To learn more about query folding when using the FHIR connector, see [FHIR query folding](./fhir-queryfolding.md).
 
 ## Next Steps
 
 In this article, you've learned how to use the Power Query connector for FHIR to access FHIR data. Next explore the authentication features of the Power Query connector for FHIR.
 
 >[!div class="nextstepaction"]
->[FHIR connector authentication](FHIR-Authentication.md)
+>[FHIR connector authentication](fhir-authentication.md)
 
 > FHIR&reg; and the FHIR Flame icon are the registered trademarks of HL7 and are used with the permission of HL7. Use of the FHIR trademark does not constitute endorsement of this product by HL7.

@@ -362,7 +362,7 @@
         href: connectors/bloomberg-data-and-analytics.md
       - name: "BQE Core"
         href: connectors/bqecore.md
-      - name: "CData Connect Cloud (Beta)"
+      - name: "CData Connect Cloud"
         href: connectors/cdata-connect-cloud.md
       - name: "Celonis EMS (Beta)"
         href: connectors/celonis-ems.md
@@ -386,7 +386,7 @@
         href: connectors/dynamics-365-online.md
       - name: "Eduframe (Beta)"
         href: connectors/eduframe.md
-      - name: "EQuIS (Beta)"
+      - name: "EQuIS"
         href: connectors/equis.md
       - name: "Essbase"
         href: connectors/essbase.md
@@ -468,7 +468,7 @@
         href: connectors/pdf.md
       - name: "PostgreSQL"
         href: connectors/postgresql.md
-      - name: "Profisee (Beta)"
+      - name: "Profisee"
         href: connectors/profisee.md
       - name: "QuickBooks Online (Beta)"
         href: connectors/quickbooks-online.md
@@ -516,9 +516,9 @@
         href: connectors/sharepoint-online-list.md
       - name: "SingleStore (Beta)"
         href: connectors/singlestore.md
-      - name: SIS-CC SDMX
+      - name: "SIS-CC SDMX (Beta)"
         href: connectors/sis-cc-sdmx.md
-      - name: Smartsheet
+      - name: "Smartsheet"
         href: connectors/smartsheet.md
       - name: "Snowflake"
         href: connectors/snowflake.md
@@ -546,7 +546,7 @@
         href: connectors/tibco.md
       - name: "Twilio (Beta) (Deprecated)"
         href: connectors/twilio.md
-      - name: "Usercube"
+      - name: "Usercube (Beta)"
         href: connectors/usercube.md
       - name: "Vessel Insight"
         href: connectors/vessel-insight.md

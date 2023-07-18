@@ -3,7 +3,7 @@ title: Power Query Azure Table Storage connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Azure Table Storage, along with native query folding instructions and troubleshooting tips.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 10/26/2022
+ms.date: 7/13/2023
 ms.author: bezhan
 ---
 
@@ -14,7 +14,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Customer Insights (Dataflows)<br/>Analysis Services |
+| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Customer Insights (Dataflows)<br/>Analysis Services |
 | Authentication Types Supported | [Account Key](#copy-your-account-key-for-azure-table-storage) |
 | Function Reference Documentation | [AzureStorage.Table](/powerquery-m/azurestorage-tables) |
 

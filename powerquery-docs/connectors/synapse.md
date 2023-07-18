@@ -3,7 +3,7 @@ title: Power Query Azure Synapse Analytics workspace connector
 description: Provides basic information and connection instructions for the Azure Synapse Analytics Workspace connector.
 author: miquelladeboer
 ms.topic: conceptual
-ms.date: 3/21/2022
+ms.date: 7/14/2023
 ms.author: mideboer
 ---
 
@@ -13,8 +13,8 @@ ms.author: mideboer
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | Public Preview |
-| Products | Power BI (Datasets) |
+| Release State | Beta |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Organizational account |
 
 >[!Note]

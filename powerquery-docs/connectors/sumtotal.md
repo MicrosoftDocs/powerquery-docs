@@ -3,7 +3,7 @@ title: Power Query SumTotal connector
 description: Provides basic information and prerequisites for the SumTotal connector, and outlines limitations and issues.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 7/29/2022
+ms.date: 7/14/2023
 ms.author: bezhan
 ---
 
@@ -17,7 +17,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication types | SumTotal credentials using OAuth 2.0 |
 
 ## Prerequisites

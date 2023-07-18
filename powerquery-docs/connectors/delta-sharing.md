@@ -3,7 +3,7 @@ title: Delta Sharing connector
 description: Provides basic information and prerequisites for the Delta Sharing connector for Power Query.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 7/6/2021
+ms.date: 7/13/2023
 ms.author: bezhan
 ---
 
@@ -17,7 +17,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets) |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Key (Bearer Token) |
 
 ## Prerequisites

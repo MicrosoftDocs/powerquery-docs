@@ -3,7 +3,7 @@ title: Power Query SQL Server Analysis Services database connector
 description: Includes basic information about products that use the SQL Server Analysis Services database connector, supported authentication types, prerequisites, and connection instructions.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 9/8/2022
+ms.date: 7/14/2022
 ms.author: bezhan
 LocalizationGroup: reference
 ---
@@ -15,7 +15,7 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power Apps (Dataflows)<br/>Excel<br/>Analysis Services |
+| Products | Excel<br/>Power BI (Datasets)<br/>Power Apps (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Analysis Services |
 | Authentication Types Supported | Basic<br/>Microsoft account<br/>Organizational account<br/>Windows |
 | M Function Reference | [Sql.Database](/powerquery-m/sql-database)<br/>[Sql.Databases](/powerquery-m/sql-databases) |
 

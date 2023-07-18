@@ -3,7 +3,7 @@ title: Power Query Anaplan connector
 description: Provides basic information, prerequisites, and instructions on how to connect to your Anaplan data, as well as troubleshooting tips.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 8/4/2022
+ms.date: 7/13/2023
 ms.author: bezhan
 ---
 
@@ -17,7 +17,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)|
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Basic<br/>Organizational account |
 
 ## Prerequisites
@@ -26,7 +26,7 @@ There are [system requirements](https://www.microsoft.com/download/details.aspx?
 
 ## Capabilities supported
 
-The Anaplan Connector enables access to your Anaplan model exports. It also:
+The Anaplan Connector enables access to your Anaplan model exports. It also:
 
 * Runs using Anaplan public data integration APIs.
 * Loads export actions saved in your Anaplan models, directly into Power BI.
@@ -55,7 +55,7 @@ To access your saved export from Power BI desktop:
 
 Configure the connector once you've downloaded it. This step allows you to connect using Anaplan APIs.
 
-The connector uses either basic authentication (user ID, password) or the Anaplan-configured IDP for logging into Anaplan. To use the second method, you must be designated as an Anaplan Single-Sign On (SSO) user in your Anaplan model. You can set your own configuration.
+The connector uses either basic authentication (user ID, password) or the Anaplan-configured IDP for logging into Anaplan. To use the second method, you must be designated as an Anaplan Single-Sign On (SSO) user in your Anaplan model. You can set your own configuration.
 
 The following image shows the **Anaplan Connection Configuration** dialog.
 
@@ -76,7 +76,6 @@ The following image shows the **Anaplan Connection Configuration** dialog.
       **Anaplan Auth URL**: `https://us1a.app.anaplan.com`
 
    3. Select **OK**.
-
 
 2. From the next **Anaplan** dialog, choose either **Basic** or **Organizational account** (which triggers Anaplan-configured IDP).
 
@@ -116,14 +115,14 @@ You've chosen either basic authentication or Anaplan-configured IDP.
 
 ### Run a Power BI export action
 
-The Anaplan connector for Power BI uses exports to download data from your Anaplan model. Make sure you have an export action set. The navigator step is where you load and run these exports.
+The Anaplan connector for Power BI uses exports to download data from your Anaplan model. Make sure you have an export action set. The navigator step is where you load and run these exports.
 
 When you run an export action:
 
 * Only exports that output .csv and .txt files are supported.
 * If you don't see the export action in the Power BI connector, check your model role and the export actions in your model.
 
-To run an export action, use the **Navigator** dialog to locate your export.
+To run an export action, use the **Navigator** dialog to locate your export.
 
 [![Run Export Action and Load.](./media/anaplan/export-load.png)](./media/anaplan/export-load.png#lightbox)
 
@@ -183,7 +182,7 @@ This image displays an example dataset entitled **New data source**.
 
 From the **Anaplan** dialog:
 
-1. Select  **OAuth2** from the **Authentication method** dropdown menu.
+1. Select  **OAuth2** from the **Authentication method** dropdown menu.
 2. Select **Sign in**.
 
    ![The Anaplan Authentication method dialog with a dropdown and Sign in button.](./media/anaplan/gateway.PNG)
@@ -231,9 +230,9 @@ Your data then refreshes.
 
 ### Integration list, display error
 
-Solution: If you don't see your complete list of integrations after you switch your **Workspace**, you can:
+Solution: If you don't see your complete list of integrations after you switch your **Workspace**, you can:
 
-* Select the refresh button next to **Integrations**.
+* Select the refresh button next to **Integrations**.
 * Refresh your browser.
 
 You can also:

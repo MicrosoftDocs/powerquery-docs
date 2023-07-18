@@ -3,7 +3,7 @@ title: Power Query Common Data Service (Legacy) connector
 description: Provides basic information and instructions on connecting to data using the Common Data Service (Legacy) connector.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 1/5/2023
+ms.date: 7/13/2023
 ms.author: bezhan
 ---
 
@@ -17,7 +17,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Dynamics 365 Customer Insights |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Dynamics 365 Customer Insights |
 | Authentication types | Organizational account |
 | | |
 

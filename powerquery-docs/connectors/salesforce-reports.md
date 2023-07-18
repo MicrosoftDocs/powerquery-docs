@@ -3,7 +3,7 @@ title: Power Query Salesforce Reports connector.
 description: Includes basic information, prerequisites, and information on how to connect to your data, along with a list of known issues and limitations.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 3/6/2023
+ms.date: 7/14/2023
 ms.author: bezhan
 ---
 
@@ -14,7 +14,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication Types Supported | Salesforce account |
 
 >[!Note]

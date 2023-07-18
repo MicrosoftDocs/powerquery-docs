@@ -3,7 +3,7 @@ title: Power Query Socialbakers connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Socialbakers.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 10/20/2022
+ms.date: 7/14/2023
 ms.author: bezhan
 ---
 
@@ -17,7 +17,7 @@ ms.author: bezhan
 | Item | Description |
 | --- | --- |
 | Release state | Beta |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Basic |
 | Function Reference Documentation | &mdash; |
 
