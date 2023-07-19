@@ -95,5 +95,6 @@ In order to trim the data sources, you'll need to take the following steps:
 These steps essentially delete all the data source bindings for the dataflow. After finishing these steps, you might be asked to set up credentials. When you've set up the gateway and your credentials successfully, you effectively "trimmed" the data source bindings for the dataflow to just the ones that the dataflow is actually using.
 
 
-Note: 
-For dataflows with cloud data sources without on-premises data gateway, when the datasource name changes, there would be an old data source connection still existing which can be removed by going to Manage Connections and Gateways page > Connections > Remove the old/unused data source connection and then go to the Dataflow > Edit Tables and then click Save & Close for the Dataflows to be updated to current data source connection and remove older connection 
+> [!NOTE] 
+> For dataflows with cloud data sources without on-premises data gateway, when the data source name changes, an old data source connection still exists. You can remove this connection by going to the Manage Connections and Gateways page > Connections > Remove the old/unused data source connection. Then go to the Dataflow > Edit Tables and select **Save & Close** for the Dataflows to be updated to the current data source connection and to remove the older connection. 
+
