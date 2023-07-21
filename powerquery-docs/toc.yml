@@ -428,6 +428,8 @@
         href: connectors/impala-database.md
       - name: "JSON"
         href: connectors/json.md
+      - name: "KQL database"
+        href: connectors/kql-database.md
       - name: LinkedIn Sales Navigator (Beta)
         href: connectors/linkedin-sales-navigator.md
       - name: "Mailchimp (Deprecated)"
