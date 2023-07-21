@@ -23,7 +23,7 @@ ms.author: bezhan
 
 ## Prerequisites
 
-To use the EQuIS connector, you must have a valid user account in an EQuIS Enterprise site (version 7.0.0.19300 or later) that includes a REST API license. Your user account must be a member of the REST API role. To verify user account configuration, go to the **Roles** tab in your [user profile](https://help.earthsoft.com/index.htm?ent-user_profile_editor.htm) and verify that you are a member of the REST API role.
+To use the EQuIS connector, you must have a valid user account in an EQuIS Enterprise site (version 7.0.0.19300 or later) that includes a REST API license. Your user account must be a member of the REST API role. To verify user account configuration, go to the **Roles** tab in your [user profile](https://help.earthsoft.com/index.htm?ent-user_profile_editor.htm) and verify that you're a member of the REST API role.
 
 ## Capabilities supported
 
@@ -34,7 +34,7 @@ To use the EQuIS connector, you must have a valid user account in an EQuIS Enter
 To connect to an EQuIS Enterprise site from Power BI Desktop, take the following steps:
 
 1. Select the EQuIS connector in the connector list, then select **Connect**.
-2. Enter the URL of the EQuIS Enterprise site you are connecting to, then select **OK**.
+2. Enter the URL of the EQuIS Enterprise site you're connecting to, then select **OK**.
 
    ![Enter URL of EQuIS Enterprise site.](./media/equis/enterprise_connection-ok.png)
 
@@ -50,6 +50,6 @@ To connect to an EQuIS Enterprise site from Power BI Desktop, take the following
 
 * For best functionality and performance, EarthSoft recommends that you use the EQuIS connector with the latest build of EQuIS Enterprise.
 * When using reports in a facility group, non-administrator users must have permission to all facilities contained in the facility group.
-* Only "grid" reports will be available in the **Navigator**.
-* All datasets consumed by the EQuIS connector will use camelCase for column names.
-* The current version of the EQuIS connector will retrieve a dataset in a single request and is limited to 1,048,576 rows in a single dataset (this limitation might be removed in a future version of the connector).
+* Only "grid" reports are available in the **Navigator**.
+* All datasets consumed by the EQuIS connector use camelCase for column names.
+* The current version of the EQuIS connector retrieves a dataset in a single API request (this logic might be optimized in a future version of the connector).
