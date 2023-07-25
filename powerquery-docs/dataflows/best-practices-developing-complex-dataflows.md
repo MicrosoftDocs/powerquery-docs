@@ -31,6 +31,9 @@ Having a custom function helps by having only a single version of the source cod
 
 ![Custom functions.](media/best-practices-developing-complex-dataflows/custom-function.png)
 
+> [!NOTE]
+> Sometimes you might receive a notification that tells you a premium capacity is required to refresh a dataflow with a custom function. You can ignore this message and reopen the dataflow editor. This usually solves your problem unless your function refers to a "load enabled" query.
+
 ## Place queries into folders
 
 Using folders for queries helps to group related queries together. When developing the dataflow, spend a little more time to arrange queries in folders that make sense. Using this approach, you can find queries more easily in the future and maintaining the code will be much easier.
