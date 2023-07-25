@@ -11,8 +11,8 @@ ms.author: mihansen
 
 This article explains authenticated access to FHIR servers using the Power Query connector for FHIR. The connector supports anonymous access to publicly accessible FHIR servers and authenticated access to FHIR servers using Azure Active Directory authentication. The [Azure API for FHIR](/azure/healthcare-apis) is secured with Azure Active Directory.
 
->[!Note]
->If you are connecting to a FHIR server from an online service, such as Power BI service, you can only use an organizational account.
+> [!NOTE]
+> If you are connecting to a FHIR server from an online service, such as Power BI service, you can only use an organizational account.
 
 ## Anonymous access
 
