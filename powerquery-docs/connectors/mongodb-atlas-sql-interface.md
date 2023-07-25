@@ -4,7 +4,7 @@ description: Provides basic information, prerequisites, and instructions for usi
 author: bucaojit  
 ms.author: bezhan
 ms.topic: conceptual  
-ms.date: 7/14/2023  
+ms.date: 7/25/2023  
 ---
 
 # MongoDB Atlas SQL interface
@@ -112,4 +112,4 @@ You might also find the following information useful:
 - [Query with Atlas SQL](https://www.mongodb.com/docs/atlas/data-federation/query/query-with-sql/)
 - [Set Up and Query Data Federation](https://www.mongodb.com/docs/atlas/data-federation/)
 - [Schema Management](https://www.mongodb.com/docs/atlas/data-federation/query/sql/schema-management/)
-- [SQL Reference](https://www.mongodb.com/docs/atlas/data-federation/query/sql/reference/)
+- [SQL Reference](https://www.mongodb.com/docs/atlas/data-federation/query/sql/powerbi/connect/)
