@@ -77,7 +77,7 @@ To connect to a KQL database from Power Query Online:
 
 6. In **Choose data**, select the data you require, and then select **Transform Data**.
 
-   :::image type="content" source="media/kql-database/choose-data.png" alt-text="Screenshot of the connect to data source page, with connection setting ready to fill in.":::
+   :::image type="content" source="media/kql-database/choose-data.png" alt-text="Screenshot of the choose data page, with storm events selected.":::
 
 ## Connect using advanced options
 
