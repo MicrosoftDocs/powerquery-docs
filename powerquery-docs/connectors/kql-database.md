@@ -3,7 +3,7 @@ title: Power Query KQL database connector
 description: Includes basic information, prerequisites, and information on how to connect to a KQL database, along with a list of limitations.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 7/20/2023
+ms.date: 7/27/2023
 ms.author: bezhan
 ---
 
@@ -39,7 +39,7 @@ To connect to a KQL database from Power Query Desktop:
 
 2. In **KQL Database**, fill on the cluster and any optional fields, such as **Database**.
 
-   :::image type="content" source="media/kql-database/enter-data-desktop.png" alt-text="Screenshot of the get data page, with the Microsoft Fabric (preview) category selected, and KQL Desktop (preview) emphasized.":::
+   :::image type="content" source="media/kql-database/enter-data-desktop.png" alt-text="Screenshot of the Kusto page, showing the cluster and optional fields ready to be filled in.":::
 
    To get the cluster URI, navigate to your KQL database in the Fabric service and copy the Query URI.
 
@@ -67,7 +67,7 @@ To connect to a KQL database from Power Query Online:
 
    To get the cluster URI, navigate to your KQL database in the Fabric service and copy the Query URI.
 
-   :::image type="content" source="media/kql-database/copy-uri-desktop.png" alt-text="Screenshot of the KQL database home page with the Query copy URI option emphasized.":::
+   :::image type="content" source="media/kql-database/copy-uri-desktop.png" alt-text="Screenshot of the MyKQLDatabase KQL database home page with the Query copy URI option emphasized.":::
 
 3. If necessary, enter an on-premises data gateway if you're going to be using on-premises data. For example, if you're going to combine data from dataflows and an on-premises SQL Server database.
 
