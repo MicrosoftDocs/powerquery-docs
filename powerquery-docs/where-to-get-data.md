@@ -3,7 +3,7 @@ title: Where to get data
 description: Describes the process of getting data for Power Query from various Microsoft products.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 6/16/2023
+ms.date: 7/27/2023
 ms.author: dougklo
 ---
 
@@ -55,7 +55,13 @@ To get data in Power BI service:
 
 5. From **Define new tables**, select **Add new tables**.
 
-6. Select the connector from the list of data sources.
+6. In the **Choose data source** page, use **Search** to search for the name of the connector, or select **View more** on the right hand side the connector to see a list of all the connectors available in Power BI service.
+
+   :::image type="content" source="media/where-to-get-data/power-bi-service-search-view-more.png" alt-text="Screenshot of the Choose data source page with the search box and the view more selection emphasized." lightbox="media/where-to-get-data/power-bi-service-search-view-more.png":::
+
+7. If you choose to view more connectors, you can still use **Search** to search for the name of the connector, or choose a category to see a list of connectors associated with that category.
+
+   :::image type="content" source="media/where-to-get-data/power-bi-service-view-more.png" alt-text="Screenshot of the Choose data soource page displayed after selecting view more, including the categories at the top and the list of connectors below." lightbox="media/where-to-get-data/power-bi-service-view-more.png":::
 
 ## Get data in Power Apps
 
@@ -73,7 +79,13 @@ To import data to a new table in Power Apps:
 
    :::image type="content" source="media/where-to-get-data/get-data-excel-powerapps.png" alt-text="Image with Dataverse tables open, the import context menu open, with the import data from Excel option emphasized." lightbox="media/where-to-get-data/get-data-excel-powerapps.png":::
 
-3. Select the connector from the list of data sources.
+3. In the **Choose data source** page, use **Search** to search for the name of the connector, or select **View more** on the right hand side the connector to see a list of all the connectors available in Power BI service.
+
+   :::image type="content" source="media/where-to-get-data/power-apps-search-view-more.png" alt-text="Screenshot of the Power Apps Choose data source page with the search box and the view more selection emphasized." lightbox="media/where-to-get-data/power-apps-search-view-more.png":::
+
+4. If you choose to view more connectors, you can still use **Search** to search for the name of the connector, or choose a category to see a list of connectors associated with that category.
+
+   :::image type="content" source="media/where-to-get-data/power-apps-view-more.png" alt-text="Screenshot of the Power Apps Choose data soource page displayed after selecting view more, including the categories at the top and the list of connectors below." lightbox="media/where-to-get-data/power-apps-view-more.png":::
 
 To import data to an existing table in Power Apps:
 
@@ -132,7 +144,13 @@ To get data in Customer Insights:
 
 5. Select **Next**.
 
-6. Select the connector from the list of data sources.
+6. In the **Choose data source** page, use **Search** to search for the name of the connector, or select **View more** on the right hand side the connector to see a list of all the connectors available in Power BI service.
+
+   :::image type="content" source="media/where-to-get-data/customer-insights-search-view-more.png" alt-text="Screenshot of the Customer Insights Choose data source page with the search box and the view more selection emphasized." lightbox="media/where-to-get-data/customer-insights-search-view-more.png":::
+
+7. If you choose to view more connectors, you can still use **Search** to search for the name of the connector, or choose a category to see a list of connectors associated with that category.
+
+   :::image type="content" source="media/where-to-get-data/customer-insights-view-more.png" alt-text="Screenshot of the Customer Insights Choose data soource page displayed after selecting view more, including the categories at the top and the list of connectors below." lightbox="media/where-to-get-data/customer-insights-view-more.png":::
 
 ## Get data from Data Factory in Microsoft Fabric (Preview)
 
@@ -148,7 +166,13 @@ To get data in Data Factory:
 
    :::image type="content" source="./media/where-to-get-data/get-data.png" alt-text="Screenshot showing the Power Query workspace with the Get data option emphasized.":::
 
-4. Select the connector from the list of data sources.
+4. In the **Choose data source** page, use **Search** to search for the name of the connector, or select **View more** on the right hand side the connector to see a list of all the connectors available in Power BI service.
+
+   :::image type="content" source="media/where-to-get-data/data-factory-search-view-more.png" alt-text="Screenshot of the Data Factory Choose data source page with the search box and the view more selection emphasized." lightbox="media/where-to-get-data/data-factory-search-view-more.png":::
+
+5. If you choose to view more connectors, you can still use **Search** to search for the name of the connector, or choose a category to see a list of connectors associated with that category.
+
+   :::image type="content" source="media/where-to-get-data/data-factory-view-more.png" alt-text="Screenshot of the Data Factory Choose data soource page displayed after selecting view more, including the categories at the top and the list of connectors below." lightbox="media/where-to-get-data/data-factory-view-more.png":::
 
 ## Get data in Analysis Services
 
