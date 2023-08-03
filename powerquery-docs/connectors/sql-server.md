@@ -101,7 +101,13 @@ Both Power Query Desktop and Power Query Online provide a set of advanced option
 
 Once you've selected the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your SQL Server database.
 
-## Troubleshooting
+## Known issues and limitations
+
+### Certificate errors
+
+When using the SQL Server database connector, if encryption is disabled and the SQL Server certificate isn't trusted on the client (Power BI Desktop or on-premises data gateway), you'll experience the following error.
+
+```A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The certificate chain was issued by an authority that is not trusted.```
 
 ### Always Encrypted columns
 
