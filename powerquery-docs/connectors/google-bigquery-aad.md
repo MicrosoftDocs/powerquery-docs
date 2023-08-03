@@ -92,7 +92,7 @@ This section describes any limitations or considerations of the Google BigQuery 
 
 ### OIDC configurations
 
-The Google BigQuery (Azure AD) connector utilizes Azure AD JWT tokens to connect Azure AD-based authentication with Google's Workforce Federation feature. Hence, the setup on the authentication side must be OIDC-based set up to align with the Azure AD JWT tokens. Reach out to your Google BigQuery point-of-contact for further information on authentication setup and support on the Google side. 
+The Google BigQuery (Azure AD) connector utilizes Azure AD JWT tokens to connect Azure AD-based authentication with Google's Workforce Federation feature. So, the setup on the authentication side must be an OIDC-based set up to align with the Azure AD JWT tokens. Reach out to your Google BigQuery point-of-contact for further information on authentication setup and support on the Google side. 
 
 ### Connecting to Google BigQuery (Azure AD) in Power BI Desktop
 
