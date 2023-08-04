@@ -91,7 +91,7 @@ To delete a series of steps, right-click the first step of the series and select
 
 Select **Delete** in the new window.
 
-:::image type="content" source="media/applied-steps/applied-steps-delete-until-end-warning.png" alt-text="Screenshot of the delete until end warning asking if you're sure you want to delete the steps.":::
+:::image type="content" source="media/applied-steps/applied-steps-delete-until-end-warning.png" alt-text="Screenshot of the delete until end warning asking if you're sure you want to delete the steps." lightbox="media/applied-steps/applied-steps-delete-until-end-warning.png":::
 
 The following image shows the **Applied steps** list after using the **Delete until end**.
 
@@ -143,7 +143,7 @@ In the window, change the step name and description, then select **OK** to save 
 
 Adding a description to a step adds a small icon next to the step to denote that the step has a description. In Power Query Desktop, you can hover over this icon to display the description as a tooltip.
 
-:::image type="content" source="media/applied-steps/step-description.png" alt-text="Screenshot of the Query settings pane with the description icon and the cursor hovering over a step to reveal the step name and step description in Power Query Desktop." lightbox="media/applied-steps/step-description.png":::
+:::image type="content" source="media/applied-steps/step-description.png" alt-text="Screenshot of the Query settings pane with the description icon and the cursor hovering over a step to reveal the step name and step description in Power Query Desktop.":::
 
 In Power Query Online, the step description is included in the informational display that appears when you hover over any of the steps in the applied steps list.
 
