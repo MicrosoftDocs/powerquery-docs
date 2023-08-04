@@ -2,7 +2,7 @@
 title: Applied steps
 description: Applied steps show the transformations to the data.
 author: bezhan-msft
-ms.date: 8/3/2023
+ms.date: 8/4/2023
 ms.author: bezhan
 ---
 
@@ -57,7 +57,7 @@ When you right-click on a step in the applied steps list, a step menu pops up. T
 
 ### Edit settings
 
-The **Edit settings** option lets you change specific settings for each individual step in the **Applied settings** list. Not all steps have settings that can be changed. If no settings are available, this option will be grayed out. For the steps that do, selecting the **Edit settings** option brings up the settings page for that particular step. For example, if the step is for an OData source, the **OData** source page is displayed where you can enter the OData source URL. As another example, if the step is for a fuzzy cluster column, the **Cluster values** page is displayed, where you can change the column to create the fuzzy clusters from.
+The **Edit settings** option lets you change specific settings for each individual step in the **Applied settings** list. Not all steps have settings that can be changed. If no settings are available, this option is grayed out in the step menu. For the steps that do have settings that can be changed, selecting the **Edit settings** option brings up the settings page for that particular step. For example, if the step is for an OData source, the **OData** source page is displayed, where you can enter the OData source URL. As another example, if the step is for a fuzzy cluster column, the **Cluster values** page is displayed, where you can change the column to create the fuzzy clusters from.
 
 :::image type="content" source="media/applied-steps/applied-steps-edit-settings.png" alt-text="Screenshot of the step menu with the edit settings option emphasized.":::
 
