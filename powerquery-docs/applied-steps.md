@@ -2,7 +2,7 @@
 title: Applied steps
 description: Applied steps show the transformations to the data.
 author: bezhan-msft
-ms.date: 12/9/2022
+ms.date: 8/3/2023
 ms.author: bezhan
 ---
 
@@ -44,22 +44,36 @@ The full list of the step parts are:
 * Step icon: Automatically assigned to the step, based on its type, and can't be changed by the user. The step icon isn't available in Power Query Desktop.
 * Step name: A name automatically assigned to the step. The step name can be changed using the step menu. More information: [Rename step](#rename-step)
 * Step description: A description of the step. Typically, no description is added when the step is created. However, the step description can be added using the step menu. More information: [Edit step names and their descriptions](#edit-step-names-and-their-descriptions)
-* Step settings: Change any settings that are specific to the selected step. Not all steps have settings. For the ones that do, selecting the step settings icon brings up the settings page for that particular step. For example, if the step is for an OData source, the OData source page is displayed where you can enter the OData source URL. As another example, if the step is for a fuzzy cluster column, the Cluster values page is displayed, where you specify the column to create the fuzzy clusters from.
+* Step settings: Change any settings that are specific to the selected step. Not all steps have settings. More information: [Edit settings](#edit-settings)
 * Query folding indicator: Provides a graphic representation of the query folding status of the selected step. This indicator isn't available in Power Query Desktop. More information: [Query folding indicators](step-folding-indicators.md)
 
 In Power Query Online, if you hover the mouse cursor over one of the applied steps, an informational display opens, listing the step name, step label, step description, step settings, information about the step query folding, and a learn more link to the [Query folding indicators](step-folding-indicators.md) article. For more information about query folding, go to [Power Query query folding](power-query-folding.md). The step label is automatically generated when the step is created, and indicates the step type, as does the step icon. The step label and the step icon can't be changed.
 
 :::image type="content" source="media/applied-steps/applied-steps-hover.png" alt-text="Image pointing out the step icon, step name, step label, step description, step settings, and query folding description items in the applied steps informational display." lightbox="media/applied-steps/applied-steps-hover.png":::
 
-## Rename step
+## Step menu selections
+
+When you right-click on a step in the applied steps list, a step menu pops up. The following sections describe each of the options available in the step menu.
+
+### Edit settings
+
+The **Edit settings** option lets you change specific settings for each individual step in the **Applied settings** list. Not all steps have settings that can be changed. If no settings are available, this option will be grayed out. For the steps that do, selecting the **Edit settings** option brings up the settings page for that particular step. For example, if the step is for an OData source, the **OData** source page is displayed where you can enter the OData source URL. As another example, if the step is for a fuzzy cluster column, the **Cluster values** page is displayed, where you can change the column to create the fuzzy clusters from.
+
+:::image type="content" source="media/applied-steps/applied-steps-edit-settings.png" alt-text="Screenshot of the step menu with the edit settings option emphasized.":::
+
+You can also edit the settings for any step that contains the step settings icon. The two places where the icon appears is in the applied settings step, and in the informational display for the step. Just select the icon and the settings page for that particular step is displayed.
+
+:::image type="content" source="media/applied-steps/applied-steps-settings.png" alt-text="Image pointing out the step settings icon in the applied steps list and the step informational display." lightbox="media/applied-steps/applied-steps-settings.png":::
+
+### Rename step
 
 To rename a step, right-click the step and select **Rename**.
 
 :::image type="content" source="media/applied-steps/applied-steps-rename.png" alt-text="Screenshot of the step menu with the rename option emphasized.":::
 
-Enter in the name you want, and then either select **Enter** or click away from the step.
+Enter in the name you want, and then either select **Enter** or select away from the step.
 
-## Delete step
+### Delete step
 
 To delete a step, right-click the step and select **Delete**.
 
@@ -69,7 +83,7 @@ Alternatively, select the **X** next to the step.
 
 :::image type="content" source="media/applied-steps/applied-steps-delete-x.png" alt-text="Screenshot of the applied steps list with the X next to the step emphasized.":::
 
-## Delete until end
+### Delete until end
 
 To delete a series of steps, right-click the first step of the series and select **Delete until end**. This action deletes the selected step and all the subsequent steps.
 
@@ -83,7 +97,7 @@ The following image shows the **Applied steps** list after using the **Delete un
 
 :::image type="content" source="media/applied-steps/applied-steps-delete-until-end-after.png" alt-text="Screenshot of the Applied steps list with the steps showing the remaining step after deleting until end.":::
 
-## Insert step after
+### Insert step after
 
 To add a new step, right-click on the last step in the list and select **Insert step after**.
 
@@ -95,13 +109,13 @@ To insert a new intermediate step, right-click on a step and select **Insert ste
 
 To set a transformation for the new step, select the new step in the list and make the change to the data. It automatically links the transformation to the selected step.
 
-## Move step
+### Move step
 
-To move a step up one position in the list, right-click the step and select **Move up**.
+To move a step up one position in the list, right-click the step and select **Move before**.
 
 :::image type="content" source="media/applied-steps/applied-steps-move-up.png" alt-text="Screenshot of the step menu with Move up option emphasized.":::
 
-To move a step down one position in the list, right-click the step and select **Move down**.
+To move a step down one position in the list, right-click the step and select **Move after**.
 
 :::image type="content" source="media/applied-steps/applied-steps-move-down.png" alt-text="Screenshot of the step menu with the Move down option emphasized.":::
 
@@ -109,7 +123,7 @@ Alternatively, or to move more than a single position, drag and drop the step to
 
 :::image type="content" source="media/applied-steps/applied-steps-drag-and-drop-step.png" alt-text="Screeshot of the Applied steps list with the Rename step being dragged to a new position in the list.":::
 
-## Extract the previous steps into query
+### Extract the previous steps into query
 
 You can also separate a series of transformations into a different query. This allows the query to be referenced for other sources, which can be helpful if you're trying to apply the same transformation to multiple datasets. To extract all the previous steps into a new query, right-click the first step you do *not* want to include in the query and select **Extract Previous**.
 
@@ -117,7 +131,7 @@ You can also separate a series of transformations into a different query. This a
 
 Name the new query and select **OK**. To access the new query, navigate to the **Queries pane** on the left side of the screen.
 
-## Edit step names and their descriptions
+### Edit step names and their descriptions
 
 To edit the step, right-click the step and select **Properties**.
 
@@ -127,7 +141,10 @@ In the window, change the step name and description, then select **OK** to save 
 
 :::image type="content" source="media/applied-steps/applied-steps-properties-window.png" alt-text="Screenshot of the Step properties page with a new column name, a changed description, and OK emphasized.":::
 
->[!NOTE]
-> Adding a description to a step adds a small icon next to the step to denote that the step has a description. You can hover over this icon to display the description as a tooltip.
->
->:::image type="content" source="media/applied-steps/step-description.png" alt-text="Screenshot of the Query settings pane with the description icon and the cursor hovering over a step to reveal the step name and step description." lightbox="media/applied-steps/step-description.png":::
+Adding a description to a step adds a small icon next to the step to denote that the step has a description. In Power Query Desktop, you can hover over this icon to display the description as a tooltip.
+
+:::image type="content" source="media/applied-steps/step-description.png" alt-text="Screenshot of the Query settings pane with the description icon and the cursor hovering over a step to reveal the step name and step description in Power Query Desktop." lightbox="media/applied-steps/step-description.png":::
+
+In Power Query Online, the step description is included in the informational display that appears when you hover over any of the steps in the applied steps list.
+
+:::image type="content" source="media/applied-steps/step-description-online.png" alt-text="Screenshot with the step description icon emphasized and the informational display open with the step description emphasized." lightbox="media/applied-steps/step-description-online.png":::
