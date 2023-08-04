@@ -3,7 +3,7 @@ title: Using incremental refresh with dataflows
 description: Learn how to configure incremental refresh for dataflows
 author: bensack
 ms.topic: conceptual
-ms.date: 1/6/2023
+ms.date: 6/13/2023
 ms.author: bensack
 ---
 
@@ -28,11 +28,11 @@ In either Power BI or Power Apps, using incremental refresh requires that source
 
 ## Configuring incremental refresh for dataflows
 
-A dataflow can contain many entities. Incremental refresh is set up at the entity level, allowing one dataflow to hold both fully refreshed entities and incrementally refreshed entities.
+A dataflow can contain many tables. Incremental refresh is set up at the table level, allowing one dataflow to hold both fully refreshed tables and incrementally refreshed tables.
 
-To set up an incremental-refreshed entity, start by configuring your entity as you would any other entity.
+To set up an incremental-refreshed table, start by configuring your table as you would any other table.
 
-After the dataflow is created and saved, select **Incremental refresh** ![Incremental refresh.](media/incremental-refresh/dataflows-incremental-refresh-icon.png) in the entity view, as shown in the following image.
+After the dataflow is created and saved, select **Incremental refresh** ![Incremental refresh.](media/incremental-refresh/dataflows-incremental-refresh-icon.png) in the table view, as shown in the following image.
 
 ![Incremental refresh icon for dataflows.](media/incremental-refresh/dataflows-incremental-refresh-01.png)
 
@@ -42,11 +42,11 @@ When you select the icon, the **Incremental refresh settings** window appears. T
 
 The following list explains the settings in the **Incremental refresh settings** window.
 
-* **Incremental refresh on/off toggle**: Turns the incremental refresh policy on or off for the entity.
-* **Filter field drop-down**: Selects the query field on which the entity should be filtered for increments. This field only contains DateTime fields. You can't use incremental refresh if your entity doesn't contain a DateTime field.
+* **Incremental refresh on/off toggle**: Turns the incremental refresh policy on or off for the table.
+* **Filter field drop-down**: Selects the query field on which the table should be filtered for increments. This field only contains DateTime fields. You can't use incremental refresh if your table doesn't contain a DateTime field.
 * **Store/refresh rows from the past**: The example in the previous image illustrates these next few settings.
 
-   In this example, we define a refresh policy to store five years of data in total and incrementally refresh 10 days of data. Assuming that the entity is refreshed daily, the following actions are carried out for each refresh operation:
+   In this example, we define a refresh policy to store five years of data in total and incrementally refresh 10 days of data. Assuming that the table is refreshed daily, the following actions are carried out for each refresh operation:
 
   * Add a new day of data.
 
@@ -73,13 +73,13 @@ The following list explains the settings in the **Incremental refresh settings**
 
 After incremental refresh is configured, the dataflow automatically alters your query to include filtering by date. If the dataflow was created in Power BI, you can also edit the automatically generated query by using the advanced editor in Power Query to fine-tune or customize your refresh. Read more about incremental refresh and how it works in the following sections.
 
-## Incremental refresh and linked entities vs. computed entities
+## Incremental refresh and linked tables vs. computed tables
 
-For *linked* entities, incremental refresh updates the source entity. Because linked entities are simply a pointer to the original entity, incremental refresh has no impact on the linked entity. When the source entity is refreshed according to its defined refresh policy, any linked entity should assume the data in the source is refreshed.
+For *linked* tables, incremental refresh updates the source table. Because linked tables are simply a pointer to the original table, incremental refresh has no impact on the linked table. When the source table is refreshed according to its defined refresh policy, any linked table should assume the data in the source is refreshed.
 
-*Computed* entities are based on queries running over a data store, which can be another dataflow. As such, computed entities behave the same way as linked entities.
+*Computed* tables are based on queries running over a data store, which can be another dataflow. As such, computed tables behave the same way as linked tables.
 
-Because computed entities and linked entities behave similarly, the requirements and configuration steps are the same for both. One difference is that for computed entities, in certain configurations, incremental refresh can't run in an optimized fashion because of the way partitions are built.
+Because computed tables and linked tables behave similarly, the requirements and configuration steps are the same for both. One difference is that for computed tables, in certain configurations, incremental refresh can't run in an optimized fashion because of the way partitions are built.
 
 ## Changing between incremental and full refresh
 
@@ -137,7 +137,7 @@ The next refresh operation, with *Run Date 1/16/2017*, takes the opportunity to 
 
 ## Dataflow incremental refresh and datasets
 
-Dataflow incremental refresh and dataset incremental refresh are designed to work in tandem. It's acceptable and supported to have an incrementally refreshing entity in a dataflow, fully loaded into a dataset, or a fully loaded entity in a dataflow incrementally loaded to a dataset.
+Dataflow incremental refresh and dataset incremental refresh are designed to work in tandem. It's acceptable and supported to have an incrementally refreshing table in a dataflow, fully loaded into a dataset, or a fully loaded table in a dataflow incrementally loaded to a dataset.
 
 Both approaches work according to your specified definitions in the refresh settings. More information: [Incremental refresh in Power BI Premium](/power-bi/service-premium-incremental-refresh)
 
@@ -146,9 +146,9 @@ Both approaches work according to your specified definitions in the refresh sett
 This article described incremental refresh for dataflows. Here are some more articles that might be useful:
 
 * [Self-service data prep in Power BI](create-use.md)
-* [Creating computed entities in dataflows](computed-entities.md)
+* [Creating computed tables in dataflows](computed-tables.md)
 * [Connect to data sources for dataflows](data-sources.md)
-* [Link entities between dataflows](linked-entities.md)
+* [Link tables between dataflows](linked-tables.md)
 * [Create and use dataflows in Power BI](/power-bi/service-dataflows-create-use)
 * [Using dataflows with on-premises data sources](/power-bi/service-dataflows-on-premises-gateways)
 * [Developer resources for Power BI dataflows](/power-bi/service-dataflows-developer-resources)

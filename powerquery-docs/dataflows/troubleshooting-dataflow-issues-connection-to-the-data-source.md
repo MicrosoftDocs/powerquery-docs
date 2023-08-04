@@ -19,7 +19,7 @@ This problem can happen when you move a query from Power Query in desktop tools 
 
 **Reason:**
 
-When your entity in the dataflow gets data from an on-premises data source, a gateway is needed for the connection, but the gateway hasn't been selected.
+When your table in the dataflow gets data from an on-premises data source, a gateway is needed for the connection, but the gateway hasn't been selected.
 
 **Resolution:**
 

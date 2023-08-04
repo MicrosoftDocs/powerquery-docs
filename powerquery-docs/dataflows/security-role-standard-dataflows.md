@@ -3,7 +3,7 @@ title: Security roles and permission levels in standard dataflows
 description: Describes the security roles and permission levels used in standard dataflows.
 author: bensack
 ms.topic: conceptual
-ms.date: 12/3/2020
+ms.date: 6/14/2023
 ms.author: bensack
 ---
 
@@ -27,8 +27,8 @@ There are multiple roles used to configure the security level for standard dataf
 | Security role              | Privileges                     | Description                                                  |
 | -------------------------- | ------------------------------ | ------------------------------------------------------------ |
 | Environment Maker          | Create dataflows  | Required to create any dataflow. Standard dataflows require additional roles depending on Dataverse tables permissions   |
-| Basic User   | Write to non-custom entities | Has all the rights to work with non-custom entities          |
-| System Customizer          | Create custom entities         | Custom entities this user creates will be visible to this user only |
+| Basic User   | Write to non-custom tables | Has all the rights to work with non-custom tables          |
+| System Customizer          | Create custom tables         | Custom tables this user creates will be visible to this user only |
 | Members of the environment | Get data from dataflows        | Every member in the environment can get data from the dataflows in that environment |
 
 ## Row-level security isn't supported
@@ -39,7 +39,7 @@ If you haven't heard of row-level security before, here's a quick introduction. 
 
 ## Steps to assign roles
 
-The steps in the following procedure are sourced from [Configure user security to resources in an environment](/power-platform/admin/database-security). 
+The steps in the following procedure are sourced from [Configure user security to resources in an environment](/power-platform/admin/database-security).
 
 Verify that the user you want to assign a security role to is present in the environment. If not, add the user to the environment. You can assign a security role as part of the process of adding the user. More information: [Add users to an environment](/power-platform/admin/add-users-to-environment)
 
@@ -49,7 +49,7 @@ To add a security role to a user who is already present in an environment:
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 
-2. Select **Environments** > [select an environment] > **Settings** > **Users + permissions** > **Users**.
+2. Select **Environments** > [select an environment] > **Settings** > **Users + permissions** > **Users**.
 
 3. Select **Manage users in Dynamics 365**.
 
@@ -66,4 +66,4 @@ To add a security role to a user who is already present in an environment:
    > [!div class="mx-imgBorder"]
    > ![Manage user roles.](/power-platform/admin/media/manage-user-roles.png)
 
-6. Select **OK**.
+6. Select **OK**.

@@ -96,7 +96,7 @@ There are a few considerations and limitations to keep in mind when working with
 - Once a storage account is linked, changing the environment's name isn't supported and dataflows linked to the that storage account will fail. Changing back the environment's name will re-enable those dataflows.
 - By default, any member of the environment can access dataflow data using the Power Platform Dataflows Connector. However, only the owners of a dataflow can access its files directly in Azure Data Lake Storage Gen2. To authorize more people to access the dataflows data directly in the lake, you must authorize them to the dataflow's **CDM Folder** in the data lake or the data lake itself.
 - When a dataflow is deleted, its **CDM Folder** in the lake will also be deleted.
-- Attempting to connect two dataflow entities between two workspaces of different storage types&mdash;Bring Your Own Storage Account (BYOSA) and Internal&mdash;isn't supported.
+- Attempting to connect two dataflow tables between two workspaces of different storage types&mdash;Bring Your Own Storage Account (BYOSA) and Internal&mdash;isn't supported.
 
 > [!IMPORTANT]
 > You shouldn't change files created by dataflows in your organization's lake or add files to a dataflow's **CDM Folder**. Changing files might damage dataflows or alter their behavior and is not supported. Power Platform Dataflows only grants read access to files it creates in the lake. If you authorize other people or services to the filesystem used by Power Platform Dataflows, only grant them read access to files or folders in that filesystem.

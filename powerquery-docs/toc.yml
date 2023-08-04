@@ -192,10 +192,10 @@
         href: dataflows/using-dataflows-with-on-premises-data.md
       - name: Analytical dataflows
         items:
-        - name: "Create computed entities"
-          href: dataflows/computed-entities.md
-        - name: "Link entities between dataflows"
-          href: dataflows/linked-entities.md
+        - name: "Create computed tables"
+          href: dataflows/computed-tables.md
+        - name: "Link tables between dataflows"
+          href: dataflows/linked-tables.md
         - name: "Connect Azure Data Lake for dataflow storage"
           href: dataflows/connect-azure-data-lake-storage-for-dataflow.md
         - name: Storage structure
@@ -206,8 +206,8 @@
             href: dataflows/configuring-storage-and-compute-options-for-analytical-dataflows.md
         - name: Best practices for dataflows
           items: 
-          - name: "Scenarios for computed entities"
-            href: dataflows/computed-entities-scenarios.md
+          - name: "Scenarios for computed tables"
+            href: dataflows/computed-tables-scenarios.md
           - name: "Developing complex dataflows"
             href: dataflows/best-practices-developing-complex-dataflows.md
           - name: "Reusing dataflows"
