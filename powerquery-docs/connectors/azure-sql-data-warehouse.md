@@ -3,7 +3,7 @@ title: Power Query Azure Synapse Analytics (SQL DW) connector
 description: Provides basic information, prerequisites, and supported capabilities for the connector, and instructions on how to connect to your database using the connector.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 7/13/2023
+ms.date: 8/7/2023
 ms.author: bezhan
 ---
 
@@ -105,7 +105,7 @@ The following table lists all of the advanced options you can set in Power Query
 | Navigate using full hierarchy | If checked, the navigator displays the complete hierarchy of tables in the database you're connecting to. If cleared, the navigator displays only the tables whose columns and rows contain data. |
 | Enable SQL Server Failover support | If checked, when a node in the Azure SQL [failover group](/azure/azure-sql/database/auto-failover-group-overview?tabs=azure-powershell) isn't available, Power Query moves from that node to another when failover occurs. If cleared, no failover occurs. |
 
-Once you've selected the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your Azure SQL database.
+Once you've selected the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to Azure Synapse Analytics.
 
 ## Troubleshooting
 
