@@ -190,6 +190,8 @@
         href: dataflows/how-to-migrate-queries-from-power-query-desktop-to-dataflows.md
       - name: "Use an on-premises data gateway"
         href: dataflows/using-dataflows-with-on-premises-data.md
+      - name: "Data exfiltration best practices for dataflows"
+        href: dataflows/data-exfiltration-best-practices.md
       - name: Analytical dataflows
         items:
         - name: "Create computed tables"
