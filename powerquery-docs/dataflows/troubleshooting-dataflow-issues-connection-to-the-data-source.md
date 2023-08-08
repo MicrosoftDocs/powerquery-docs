@@ -96,5 +96,4 @@ These steps essentially delete all the data source bindings for the dataflow. Af
 
 
 > [!NOTE] 
-> For dataflows with cloud data sources without on-premises data gateway, when the data source name changes, an old data source connection still exists. You can remove this connection by going to the Manage Connections and Gateways page > Connections > Remove the old/unused data source connection. Then go to the Dataflow > Edit Tables and select **Save & Close** for the Dataflows to be updated to the current data source connection and to remove the older connection. 
-
+> For dataflows with cloud data sources without an on-premises data gateway, when the data source name changes, an old data source connection still exists. To remove this connection, in the Power BI service, select the settings icon, go to **Manage Connections and Gateways** > **Connections**, select the ellipsis menu by the connection name, then select **Remove** to remove the old/unused data source connection. Then go to the Home page, select the workspace, select the dataflow, and then select **Edit** from the ellipsis menu by the dataflow name. In the **Table name** page, select **Edit tables**. Then in the Power Query editor, select **Save & Close** for the dataflows to be updated to the current data source connection and to remove the older connection. 
