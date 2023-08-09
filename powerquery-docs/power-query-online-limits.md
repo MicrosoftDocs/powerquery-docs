@@ -43,3 +43,8 @@ During refresh (either scheduled or on-demand), query evaluations return complet
 | Data Integration in PowerApps.com Admin Portal | 1000 | 24 | 20 |
 | Dataflows in PowerBI.com | 1000 | 100 | 20 |
 | Dataflows in Dynamics 365 Customer Insights | 1000 | 100 | 20 |
+
+## Dataflows limits
+
+Dataflows is a workload that leverages Power Query Online. Dataflows is integrated into Power BI, PowerApps, Microsoft Fabric, and Dynamics 365 Customer Insights.
+For a single dataflow we have a limit of 50 tables. If you need more than 50 tables, you can create multiple dataflows. If you exceed the limit, you will see an error message during publishing and refreshing.
