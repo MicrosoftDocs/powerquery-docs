@@ -1,10 +1,10 @@
 ---
 title: Power Query Planview OKR (Beta) connector
-description: Provides basic information and prerequisites for the connector, describes the connection process, and discusses limitations and issues you might encounter.
+description: Provides basic information and prerequisites for Planview OKR connector
 author: jsilva
 ms.topic: conceptual
 ms.date: 8/7/2023
-ms.author: jsilva
+ms.author: bezhan
 ---
 
 # Planview OKR (Beta)
@@ -64,7 +64,7 @@ To load data from Planview OKR in Power Query Online:
 
 2. In the dialog that appears, enter the Planview OKR URL location in the text box and the rest of details like below.
 
-   ![](media/planview-okr/power-query-planview-okr.png)
+   ![Image with details for Power Query Online](media/planview-okr/power-query-planview-okr.png)
 
 3. If this is the first time you're connecting using Planview OKR (Beta), you will need to sign in into your Planview Admin account.
 4. 
