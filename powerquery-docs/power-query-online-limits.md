@@ -3,7 +3,7 @@ title: Power Query Online Usage Limits
 description: Authoring and refresh limits for Power Query Online in its various product integrations.
 author: Luitwieler
 ms.topic: conceptual
-ms.date: 11/18/2022
+ms.date: 8/10/2023
 ms.author: jeluitwi
 ---
 
@@ -47,4 +47,4 @@ During refresh (either scheduled or on-demand), query evaluations return complet
 ## Dataflow limits
 
 Dataflow is a workload that leverages Power Query Online. Dataflow is integrated into Power BI, PowerApps, Microsoft Fabric, and Dynamics 365 Customer Insights.
-For a single dataflow we have a limit of 50 tables. If you need more than 50 tables, you can create multiple dataflows. If you exceed the limit, you will see an error message during publishing and refreshing.
+A single dataflow has a limit of 50 tables. If you need more than 50 tables, you can create multiple dataflows. If you exceed the limit, an error message occurs during publishing and refreshing.
