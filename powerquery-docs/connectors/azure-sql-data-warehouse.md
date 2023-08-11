@@ -15,7 +15,7 @@ ms.author: bezhan
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
-| Authentication Types Supported | Windows (Power BI Desktop, Excel, online service with gateway)<br/>Database (Power BI Desktop, Excel)<br/>Microsoft Account (all)<br/>Basic (online service)<br/>Service principal |
+| Authentication Types Supported | Database (Power BI Desktop, Excel)<br/>Microsoft Account (all)<br/>Basic (online service)<br/>Service principal |
 | Function Reference Documentation | [Sql.Database](/powerquery-m/sql-database)<br/>[Sql.Databases](/powerquery-m/sql-databases) |
 
 >[!Note]
@@ -41,7 +41,7 @@ By default, Power BI installs an OLE DB driver for Azure Synapse Analytics (SQL 
 
 To make the connection from Power Query Desktop:
 
-1. Select the **Azure Synapse Analytics SQL DW** option in the connector selection.
+1. Select the **Azure Synapse Analytics SQL** option in the connector selection.
 
 2. In the **SQL Server database** dialog that appears, provide the name of the server and database (optional). In this example, `TestAzureSQLServer` is the server name and `AdventureWorks2012` is the database.
 
@@ -57,10 +57,12 @@ To make the connection from Power Query Desktop:
 
    ![Azure Synapse Analytics (SQL DW) authentication.](./media/azure-sql-database/enter-credentials.png)
 
+   > [!NOTE]
+   > Although the Windows authentication type is displayed, Azure Synapse Analytics SQL doesn't support the Windows authentication type. Use either the **Database** or the **Microsoft account** authentication types.
+
    For more information about authentication methods, go to [Authentication with a data source](../connectorauthentication.md).
 
-   >[!Note]
-   >  If the connection is not encrypted, you'll be prompted with the following dialog.
+   If the connection is not encrypted, you'll be prompted with the following dialog.
 
    ![Azure Synapse Analytics (SQL DW) encryption support.](./media/azure-sql-database/encryption-warning.png)
 
