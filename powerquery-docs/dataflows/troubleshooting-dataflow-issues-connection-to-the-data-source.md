@@ -89,6 +89,11 @@ In order to trim the data sources, you'll need to take the following steps:
 
    ![Gateway selector.](media/troubleshooting-dataflow-issues-connection-to-the-data-source/gateway-selection.png)
 
+
 1. After you apply the change by selecting **OK**, repeat steps 1 through 4 to select the original gateway again.
 
 These steps essentially delete all the data source bindings for the dataflow. After finishing these steps, you might be asked to set up credentials. When you've set up the gateway and your credentials successfully, you effectively "trimmed" the data source bindings for the dataflow to just the ones that the dataflow is actually using.
+
+
+> [!NOTE] 
+> For dataflows with cloud data sources without an on-premises data gateway, when the data source name changes, an old data source connection still exists. To remove this connection, in the Power BI service, select the settings icon, go to **Manage Connections and Gateways** > **Connections**, select the ellipsis menu by the connection name, then select **Remove** to remove the old/unused data source connection. Then go to the **Home** page, select the workspace, select the dataflow to open it, and then in the **Table name** page, select **Edit tables**. Then in the Power Query editor, select **Save & Close** for the dataflows to be updated to the current data source connection and to remove the older connection. 
