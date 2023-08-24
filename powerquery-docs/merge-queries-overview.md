@@ -60,6 +60,9 @@ First select the **CountryID** column in the **Sales** table, select **Ctrl**, a
    ![Merge dialog box with the Left table for merge set to Sales, with the CountryID and StateID columns selected, and the Right table for merge set to Countries, with the CountryID and StateID columns selected. The Join kind is set to Left outer.
 :::image-end:::
 
+>[!NOTE]
+> When selecting multiple columns for a join, the order you select the columns in each table must match. For example, the first column selected in the left table is matched with the first column selected in the right table, and so on. Otherwise, you will observe incorrect join results.
+
 ### Use the column pair suggestion
 
 When selecting the left and right table in the Merge dialog, you can check the lightbulb icon on the top right corner of the dialog to see if there are any suggestions when it comes to column-pair-mapping between both tables.
