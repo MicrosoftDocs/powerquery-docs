@@ -1,8 +1,8 @@
 ---
 title: "Manage connections (Preview)"
-description: Overview of the manage connections feature in Power Query Online that allows you to disconnect connections from your project.
+description: Overview of the manage connections feature in Power Query Online that allows you to unlink and edit connections from your project.
 author: ptyx507
-ms.date: 6/13/2023
+ms.date: 8/25/2023
 ms.author: miescobar
 ms.topic: overview
 ---
@@ -18,24 +18,34 @@ The entry to the **Manage connections** dialog is available in the Power Query *
 
 :::image type="content" source="media/manage-connections/entry-point.png" alt-text="Screenshot of the Manage connections button in the Data sources group of the Power Query ribbon Home tab.":::
 
-**Manage connections** displays a list of all connections being referenced in your Power Query project. It also notes the ability to disconnect from any of the connections in your project.
+**Manage connections** displays a list of all connections being referenced in your Power Query project. It also notes the ability to unlink and edit from any of the connections in your project.
 
 :::image type="content" source="media/manage-connections/manage-connections-dialog.png" alt-text="Screenshot of the Manage connections dialog showcasing multiple connections on its page." lightbox="media/manage-connections/manage-connections-dialog.png":::
 
-## Disconnect a connection
+## Unlink a connection
 
-Right next to the name of connection, and before the **Source type** column, there's an icon to disconnect the connection.
+Right next to the name of connection, and before the **Source type** column, there's an icon to unlink the connection.
 
-When you disconnect a connection, you're simply removing the reference of the connection from your project. This means that the definition of the connection isn't removed from the back-end and it can't be used in your project.
+When you unlink a connection, you're simply removing the reference of the connection from your project. This means that the definition of the connection isn't removed from the back-end and it can't be used in your project.
 
-:::image type="content" source="media/manage-connections/disconnect-icon.png" alt-text="Screenshot emphasizing the disconnect icon next to a connection in the Manage Connections dialog.":::
+:::image type="content" source="media/manage-connections/disconnect-icon.png" alt-text="Screenshot emphasizing the unlink icon next to a connection in the Manage Connections dialog.":::
 
-A new prompt then asks you to confirm that you want to disconnect the connection.
+A new prompt then asks you to confirm that you want to unlink the connection.
 
-:::image type="content" source="media/manage-connections/confirmation-prompt.png" alt-text="Screenshot of the prompt asking you to confirm the disconnect action.":::
+:::image type="content" source="media/manage-connections/confirmation-prompt.png" alt-text="Screenshot of the prompt asking you to confirm the unlink action.":::
 
 >[!NOTE]
 >If you want to delete a connection from within a specific product integration, such as Microsoft Power BI or Microsoft Fabric, be sure to check out the documentation for each product on how a centralized connections portal can be used.
+
+## Edit a connection
+
+Right next to the name of connection, and before the **Source type** column, there's an icon to edit the connection. 
+
+The edit functionality allows you to change the following values:
+
+* **Data gateway:** If your data source requires a data gateway, select the gateway using the dropdown list from this field.
+* **Authentication kind & credentials:** Depending on the connector, you're presented with multiple authentication kind options that are available to establish a connection, as well as fields where you enter your credentials.
+
 
 ## More Resources
 
