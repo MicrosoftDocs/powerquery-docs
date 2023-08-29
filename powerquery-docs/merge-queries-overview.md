@@ -61,7 +61,7 @@ First select the **CountryID** column in the **Sales** table, select **Ctrl**, a
 :::image-end:::
 
 >[!NOTE]
-> When selecting multiple columns for a join, the order you select the columns in each table must match. For example, the first column selected in the left table is matched with the first column selected in the right table, and so on. Otherwise, you will observe incorrect join results.
+> When selecting multiple columns for a join, the order you select the columns in each table must match. For example, the first column selected in the left table is matched with the first column selected in the right table, and so on. Otherwise, you'll observe incorrect join results.
 
 ### Use the column pair suggestion
 
