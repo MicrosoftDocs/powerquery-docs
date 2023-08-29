@@ -134,6 +134,5 @@ For more guidelines on accessing Vessel Insight data, go to [The Getting started
 
 You might also find the following Vessel Insight information useful:
 
-* [About Vessel Insight Power BI connector](https://www.kongsberg.com/digital/solutions/vessel-insight/vessel-insight-power-bi-connector/)
 * [About Vessel Insight](https://www.kongsberg.com/digital/solutions/vessel-insight/)
 * [Vessel Insight API](https://developer.kognif.ai/)
