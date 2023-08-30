@@ -107,14 +107,14 @@ After you run your query, a preview of your query appears in the Power Query edi
 
 With the information gathered from the previous sections, the goal now is to translate such information into code for your connector.
 
-The way that you can accomplish this translation is by adding a new **NativeQueryProperties** record field to your connector's **Publish** record, which in this case is the `SqlODBC.Publish` record.
+The way that you can accomplish this translation is by adding a new **NativeQueryProperties** record field to your connector's **Publish** record, which in this case is the `SqlODBC.Publish` record. The `NativeQueryProperties` record plays a crucial role in defining how the connector will interact with the `Value.NativeQuery` function.
 
 The new record field consists of two fields:
 
-* **navigationSteps**: This field defines how the navigation should be performed or handled by your connector. It also defines what parameters are required or needed in order for such navigation to reach your desired target for the `Value.NativeQuery` function.
-* **nativeQueryOptions**: This field helps identify how certain optional parameters should be included or added to the `Value.NativeQuery` options record.
+* **NavigationSteps**: This field defines how the navigation should be performed or handled by your connector. It contains a list of records that outline the steps for navigating to the specific data you want to query using the `Value.NativeQuery` function. Within each record, it defines what parameters are required or needed in order for such navigation to reach your desired target.
+* **DefaultOptions**: This field helps identify how certain optional parameters should be included or added to the `Value.NativeQuery` options record. It provides a set of default options that can be used when querying the data source.
 
-### navigationSteps
+### NavigationSteps
 
 Your navigation steps can be categorized into two groups. The first contains those values that are entered by the end-user, such as the name of the server or the database, in this case. The second contains those values that are derived by the specific connector implementation, such as the name of fields that aren't displayed to the user during the get data experience. These fields could include `Name`, `Kind`, `Data`, and others depending on your connector implementation.
 
@@ -127,57 +127,57 @@ Such information will be translated to the following code. This code should be a
 
 ```powerquery-m
 NativeQueryProperties = [
-    navigationSteps = {
+    NavigationSteps = {
         [
-            indices = {
+            Indices = {
                 [
-                    value = "database",
-                    indexName = "Name"
+                    FieldDisplayName = "database",
+                    IndexName = "Name"
                 ],
                 [
-                    displayName = "Database",
-                    indexName = "Kind"
+                    ConstantValue = "Database",
+                    IndexName = "Kind"
                 ]
             },
-            access = "Data"
+            FieldAccess = "Data"
         ]
     }
 ]
 ```
 
 >[!IMPORTANT]
->The name of the fields are case sensitive and must be used as shown in the sample above. All information passed to the fields, either `displayName`, `indexName`, or `value` must be derived from the connector's M code.
+>The name of the fields are case sensitive and must be used as shown in the sample above. All information passed to the fields, either `ConstantValue`, `IndexName`, or `FieldDisplayName` must be derived from the connector's M code.
 
-For values that will be passed from what the user entered, you can use the pair `value` and `indexName`. For values that are fixed or static and can't be passed by the end-user, you can use the pair `displayName` and `indexName`. In this sense, the **navigationSteps** record consists of two fields:
+For values that will be passed from what the user entered, you can use the pair `FieldDisplayName` and `IndexName`. For values that are fixed or predefined and can't be passed by the end-user, you can use the pair `ConstantValue` and `IndexName`. In this sense, the **NavigationSteps** record consists of two fields:
 
-* **indices**: Defines what fields and what values to use to navigate to the record that contains the target for the `Value.NativeQuery` function.
-* **access**: Defines what field holds the target, which is commonly a table.
+* **Indices**: Defines what fields and what values to use to navigate to the record that contains the target for the `Value.NativeQuery` function.
+* **FieldAccess**: Defines what field holds the target, which is commonly a table.
 
-### nativeQueryOptions
+### DefaultOptions
 
-The `nativeQueryOptions` field lets you pass optional parameters to the `Value.NativeQuery` function when using the native query capability for your connector.
+The `DefaultOptions` field lets you pass optional parameters to the `Value.NativeQuery` function when using the native query capability for your connector.
 
 To preserve query folding after a native query, and assuming that your connector has query folding capabilities, you can use the following sample code for `EnableFolding = true`.
 
 ```powerquery-m
 NativeQueryProperties = [
-    navigationSteps = {
+    NavigationSteps = {
         [
-            indices = {
+            Indices = {
                 [
-                    value = "database",
-                    indexName = "Name"
+                    FieldDisplayName = "database",
+                    IndexName = "Name"
                 ],
                 [
-                    displayName = "Database",
-                    indexName = "Kind"
+                    ConstantValue = "Database",
+                    IndexName = "Kind"
                 ]
             },
-            access = "Data"
+            FieldAccess = "Data"
         ]
     },
 
-    nativeQueryOptions = [
+    DefaultOptions = [
         EnableFolding = true
     ]
 ]
