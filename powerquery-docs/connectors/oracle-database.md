@@ -3,7 +3,7 @@ title: Power Query Oracle database connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your Oracle database using the connector.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 7/14/2023
+ms.date: 9/1/2023
 ms.author: bezhan
 ---
 
@@ -15,7 +15,7 @@ ms.author: bezhan
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
-| Authentication Types Supported | Windows (desktop/online)<br/>Database (desktop)<br/>Basic (online) |
+| Authentication Types Supported | Windows (desktop/online)<br/>Database (desktop)<br/>Basic (online) <br/>Azure Active Directory (desktop/online)|
 | Function Reference Documentation | [Oracle.Database](/powerquery-m/oracle-database) |
 
 >[!Note]
@@ -25,15 +25,12 @@ ms.author: bezhan
 
 Supported Oracle versions:
 
-* Oracle Server 9 and later
-* Oracle Data Access Client (ODAC) software 11.2 and later
+* Oracle Database Server 12c (12.1.0.2) and later
+* Oracle Autonomous Database - all versions
 
-Before you can connect to an Oracle database using Power Query, you need to install the Oracle client software v8.1.7 or greater on your computer. To install the 32-bit Oracle client software, go to [32-bit Oracle Data Access Components (ODAC) with Oracle Developer Tools for Visual Studio (12.1.0.2.4)](https://www.oracle.com/technetwork/topics/dotnet/utilsoft-086879.html). To install the 64-bit Oracle client, go to [64-bit ODAC 12c Release 4 (12.1.0.2.4) Xcopy for Windows x64](https://www.oracle.com/technetwork/database/windows/downloads/index-090165.html).
+Before you can connect to an Oracle database using Power Query, you need to install the Oracle Client for Microsoft Tools (OCMT). 
 
->[!Note]
->Choose a version of Oracle Data Access Client (ODAC) that's compatible with your Oracle Server. For instance, ODAC 12.x doesn't always support Oracle Server version 9. Choose the Windows installer of the Oracle Client. During the setup of the Oracle client, make sure you enable *Configure ODP.NET and/or Oracle Providers for ASP.NET* at machine-wide level by selecting the corresponding checkbox during the setup wizard. Some versions of the Oracle client wizard selects the checkbox by default, others do'nt. Make sure that checkbox is selected so that Power Query can connect to your Oracle database.
-
-To connect to an Oracle database with the [on-premises data gateway](/data-integration/gateway/), the correct Oracle client software must be installed on the computer running the gateway. The Oracle client software you use depends on the Oracle server version, but always matches the 64-bit gateway. For more information, go to [Manage your data source - Oracle](/power-bi/connect-data/service-gateway-onprem-manage-oracle).
+To connect to an Oracle database with the [on-premises data gateway](/data-integration/gateway/), 64-bit OCMT must be installed on the computer running the gateway. For more information, go to [Manage your data source - Oracle](/power-bi/connect-data/service-gateway-onprem-manage-oracle).
 
 ## Capabilities Supported
 
@@ -45,63 +42,77 @@ To connect to an Oracle database with the [on-premises data gateway](/data-integ
   * Include relationship columns
   * Navigate using full hierarchy
 
-## Connect to an Oracle database from Power Query Desktop
+## Download and install Oracle Client for Microsoft Tools
+Oracle Client for Microsoft Tools installs and configures Oracle Data Provider for .NET (ODP.NET) to support 32-bit and 64-bit Microsoft tool connections with Oracle on-premises and cloud databases, including Oracle Autonomous Database (ADB). OCMT is a graphical installer that automates the Oracle Database Client setup process. It supports connecting with Power BI Desktop, Power BI service, Excel, SQL Server Analysis Services, SQL Server Data Tools, SQL Server Integration Services, SQL Server Reporting Services, and BizTalk Server.
+
+OCMT is free software. It can be downloaded from the Oracle Client for Microsoft Tools page. For 64-bit Power BI Desktop and Power BI service, use 64-bit OCMT. For 32-bit Power BI Desktop, use 32-bit OCMT.
+
+Even if you already have an Oracle Client or ODP.NET installed on your Power BI client, it is highly recommended you use the OCMT installer to properly complete all the configuration steps Power BI requires to work with Oracle database.
+*	[OCMT 64-bit and 32-bit downloads](https://www.oracle.com/database/technologies/appdev/ocmt.html)
+*	[OCMT installation and setup instructions](https://www.oracle.com/a/ocom/docs/database/oracle-client-for-microsoft-tools-install-instructions.pdf)
+
+## Connect to an on-premises Oracle database from Power Query Desktop
 
 To make the connection, take the following steps:
 
 1. Select the **Oracle database** option in the connector selection.
 
-2. Specify the Oracle Server to connect to in **Server**. If a SID is required, specify it by using the format *ServerName/SID*, where *SID* is the unique name of the database. If the *ServerName/SID* format doesn't work, use *ServerName/ServiceName*, where *ServiceName* is the alias you use to connect.
+2. Specify the Oracle net service name/TNS alias or Easy Connect (Plus) connection string to connect to in **Server**. Easy Connect is the simplest to use by setting the **Server** value to your Oracle Database server *Hostname/ServiceName*, where *ServiceName* is the global database name. The screen shot below uses a net service name.
 
    ![Enter Oracle database connection.](./media/oracle-database/select-database.png)
 
-   >[!Note]
-   > If you are using a local database, or autonomous database connections, you may need to place the server name in quotation marks to avoid connection errors.
-
 3. If you're connecting from Power BI Desktop, select either the **Import** or **DirectQuery** data connectivity mode. The rest of these example steps use the Import data connectivity mode. To learn more about DirectQuery, go to [Use DirectQuery in Power BI Desktop](/power-bi/connect-data/desktop-use-directquery).
 
-4. If you're connecting to this Oracle database for the first time, select the authentication type you want to use, and then enter your credentials. For more information about authentication, go to [Authentication with a data source](../connectorauthentication.md).
+4. If you're connecting to this Oracle database for the first time, select the authentication type you want to use, and then enter your credentials. The authentication types available are:
+* Windows authentication (Windows)
+* Username and password (Database)
+* Azure Active Directory (Microsoft account)
+
+For more information about authentication, go to [Authentication with a data source](../connectorauthentication.md).
 
    ![Enter your Oracle database credentials.](./media/oracle-database/sign-in.png)
 
 5. In **Navigator**, select the data you require, then either select **Load** to load the data or **Transform Data** to transform the data.
 
-## Connect to an Oracle database from Power Query Online
+## Connect to an on-premises Oracle database from Power Query Online
 
 To make the connection, take the following steps:
 
-1. Select the **Oracle database** option in the data sources selection.
+1.	[Install and setup an on-premises data gateway](https://learn.microsoft.com/en-us/data-integration/gateway/service-gateway-install#download-and-install-a-standard-gateway).
 
-2. In the **Oracle database** dialog that appears, specify the Oracle Server to connect to in **Server**. If a SID is required, specify it by using the format *ServerName/SID*, where *SID* is the unique name of the database. If the *ServerName/SID* format doesn't work, use *ServerName/ServiceName*, where *ServiceName* is the alias you use to connect.
+2. From Power Query Online, select the **Oracle database** option in the data sources selection.
+
+3. In the **Oracle database** dialog that appears, specify the Oracle net service name/TNS alias, Easy Connect Plus connection string, or connect descriptor to connect to in **Server**.
 
    ![Enter Oracle database online connection.](./media/oracle-database/select-database-online.png)
 
-3. Select the name of your on-premises data gateway.
+4. Provide a **Connection name**, such as "testoracleserver".
+
+5. Select the name of your on-premises data gateway.
 
    > [!Note]
    > You must select an on-premises data gateway for this connector, whether the Oracle database is on your local network or on a web site.
 
-4. If you're connecting to this Oracle database for the first time, select the type of credentials for the connection in **Authentication kind**. Choose **Basic** if you plan to use an account that's created within Oracle instead of Windows authentication.
+6. If you're connecting to this Oracle database for the first time, select the type of credentials for the connection in **Authentication kind**. Choose **Basic** if you plan to login with an Oracle username and password. Choose **Windows** when using Windows operating system authentication and with both the Oracle client and server running on Windows.
 
-5. Enter your credentials.
+6. Enter your credentials.
 
-6. Select **Next** to continue.
+7. Select **Next** to continue.
 
-7. In **Navigator**, select the data you require, then select **Transform data** to transform the data in Power Query Editor.
+8. In **Navigator**, select the data you require, then select **Transform data** to transform the data in Power Query Editor.
 
 ## Connect to an Oracle Autonomous Database
 
 >[!Note]
->Currently, you can connect to an Oracle Autonomous Database from Excel, Power BI Desktop, Power BI service, and Power Apps using the procedures in this section.
+>Currently, you can connect to an Oracle Autonomous Database from Excel, Power BI Desktop, Power BI service, Power Apps, SQL Server Analysis Services, and BizTalk Server using the procedures in this section. These tools use unmanaged ODP.NET to connect. Other Microsoft tools, including SQL Server Data Tools, SQL Server Integration Services, and SQL Server Reporting Services, use managed ODP.NET to connect to Oracle Autonomous Database using largely similar procedures.
 
-To connect to an Oracle Autonomous Database, you need the following accounts and apps:
+To connect Power BI to an Oracle Autonomous Database, you need the following accounts and apps:
 
-* An Oracle.com account ([Get an Oracle.com Account](https://docs.oracle.com/en/cloud/get-started/subscriptions-cloud/csgsg/get-oracle-com-account.html))
-* An Oracle Cloud account ([About Oracle Cloud Accounts](https://docs.oracle.com/en/cloud/get-started/subscriptions-cloud/csgsg/oracle-cloud-accounts.html))
-* An Oracle Autonomous Database ([Oracle Autonomous Database](https://www.oracle.com/ie/autonomous-database/))
-* Power BI Desktop ([Get Power BI Desktop](/power-bi/fundamentals/desktop-get-the-desktop))
-* Power BI service account ([Licensing the Power BI service for users in your organization](/power-bi/admin/service-admin-licensing-organization))
-* On-premises data gateway ([Download and install a standard gateway](/data-integration/gateway/service-gateway-install#download-and-install-a-standard-gateway))
+* An Oracle.com account ([Oracle.com Account Signup](https://profile.oracle.com/myprofile/account/create-account.jspx))
+* An Oracle Cloud account ([Oracle Cloud Account Signup](http://signup.cloud.oracle.com/))
+* An Oracle Autonomous Database ([Get an Always Free Autonomous Database](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/autonomous-always-free.html))
+* Power BI Desktop ([Get Power BI Desktop](/power-bi/fundamentals/desktop-get-the-desktop)) or Power BI service account ([Licensing the Power BI service for users in your organization](/power-bi/admin/service-admin-licensing-organization))
+* On-premises data gateway if using Power BI service ([Download and install a standard gateway](/data-integration/gateway/service-gateway-install#download-and-install-a-standard-gateway))
 
 ### Download your client credentials
 
@@ -121,88 +132,22 @@ To download your client credentials:
 
    ![Wallet password](media/oracle-database/adb-wallet-password.png)
 
-### Download and install the Oracle Data Access Components runtime
-
-1. Go to the [Oracle Data Access Components Runtime Downloads](https://www.oracle.com/database/technologies/dotnet-odacdeploy-downloads.html) page.
-
-2. If you're using a 64-bit version of Power BI Desktop, under **64-bit ODAC OUI**, select the latest version of the ODAC installer, which is currently **64-bit ODAC 19.3.1**. If you're using a 32-bit version of Power BI Desktop, go to the download page for the 32-bit version from the link on the Oracle page. We recommend that you use the 64-bit version of Power BI Desktop. The examples in this article use the 64-bit version.
-
-3. Review and accept the Oracle license agreement, then select **Download ODAC1931_x64.zip**.
-
-4. You're asked to sign in to your Oracle account. This account might be different from your Oracle Cloud account, so be sure to enter the correct user name and password.
-
-   The Oracle ODAC OUI zip file is then downloaded to your Windows default download location.
-
-5. From the default download location, extract the files from the zip file and place them in a convenient folder of your choice.
-
-6. Open a Windows command prompt (cmd.exe) in administrator mode.
-
-7. In the command prompt, navigate to the folder where you extracted the ODAC OUI files.
-
-8. Run setup.exe.
-
-9. In **Specify Oracle Home User**, select **Use Windows Built-in Account**. Then select **Next**.
-
-   ![Image with Use Windows Built-in Account selected in the Specify Oracle Home User dialog box.](media/oracle-database/driver-install-step-1.png)
-
-10. In **Specify Installation Location**, select the location for the Oracle base folder. Select **Browse** to browse to the folder you want to use, then select **Select**. Then select **Next**.
-
-    ![Image with the browser open and a new location listed for the Oracle base.](media/oracle-database/driver-install-step-2.png)
-
-11. In **Available Product Components**, only select **Oracle Data Provider for .NET**. Then select **Next**.
-
-    ![Image with Oracle Data Provider for .Net selected.](media/oracle-database/driver-install-step-3.png)
-
-12. The installer then performs some prerequisite checks to ensure your system meets the minimum installation and configuration requirements. Once this check is finished, select **Next**.
-
-13. The installer then presents a summary of the actions it's going to take. To continue, select **Install**.
-
-14. Once the installer has finished installing all of your driver components, select **Close**.
-
-### Configure the unmanaged ODP.NET
-
-1. In the command prompt, go to \<_install-folder_\>\odp.net\bin\4. In this example, the location is `c:\oracle\driver\odp.net\bin\4`.
-
-2. Enter the following commands:
-
-   `OraProvCfg /action:gac /providerpath:"Oracle.DataAccess.dll"`
-
-   `OraProvCfg /action:config /product:odp /frameworkversion:v4.0.30319 /providerpath:"Oracle.DataAccess.dll"`
-
-   ![Image with Command prompt open and the two ODAC commands successfully completed.](media/oracle-database/adb-odac-config.png)
-
-### Set the environment variables
-
-1. Search for **Environment Variables** in the Windows Start menu **Search** option, and select **Edit the system environment variables**.
-
-2. From **System Properties**, select **Environment Variables**.
-
-3. In **Environment Variables**, under **System variables**, select **New**.
-
-4. In **New System Variable**, enter `TNS_ADMIN` in **Variable name**, and the location where you'll unzip your ADB wallet in **Variable value**. Then select **OK**.
-
-5. Select **OK**.
-
-6. In **Environment Variables**, select **OK**.
-
-7. In **System Properties**, select **OK**.
-
 ### Configure Oracle ADB credentials
 
 1. On your Windows machine, go to the folder where you downloaded your Oracle ADB credentials from [Download your client credentials](#download-your-client-credentials).
 
-2. Unzip the credentials into a folder. In this example, the credentials are extracted to c:\data\wallet\wallet_contosomart.
+2. Unzip the credentials into the directory you specified in OCMT as the *Oracle Configuration File Directory*. In this example, the credentials are extracted to c:\data\wallet\wallet_contosomart.
 
    ![Image with the wallet files unzipped in the wallet folder.](media/oracle-database/adb-wallet-unzipped.png)
 
    >[!Note]
-   >The tnsnames.ora file is used to connect to Oracle autonomous databases.
+   >The tnsnames.ora file defines your Oracle Autonomous Database address and connection information.
 
 3. Open sqlnet.ora in an editor, such as Notepad.
 
 4. Under **WALLET_LOCATION**, change the path to your wallet folder under the Directory option. In this example:
 
-   `WALLET_LOCATION = (SOURCE = (METHOD = file) (METHOD_DATA = (DIRECTORY="c:\data\wallet\Wallet_ContosoMart")))`
+   `WALLET_LOCATION = (SOURCE = (METHOD = file) (METHOD_DATA = (DIRECTORY=c:\data\wallet\Wallet_ContosoMart)))`
 
 5. Save and close the sqlnet.ora file.
 
@@ -210,7 +155,7 @@ Open the tnsnames.ora file in the wallets folder. The file contains a list of AD
 
    ![Image with three example TNS names, contosomart_high, contosomart_low, and contosomart_medium.](media/oracle-database/adb-tnsnames.png)
 
-### Initial test of the connection
+### Connect Power BI Desktop to Oracle ADB
 
 1. Open Power BI Desktop.
 
@@ -218,13 +163,16 @@ Open the tnsnames.ora file in the wallets folder. The file contains a list of AD
 
 3. From **Get Data**, select **Database** > **Oracle database**.
 
-4. Enter the name of the Oracle Autonomous Database server you want to connect to. In this example, the server is contosomart_high. Then select **OK**.
+4. Enter the net service name of the Oracle Autonomous Database server you want to connect to. In this example, the **Server** is contosomart_high. Then select **OK**.
 
    ![Image of the Oracle database dialog box with contosomart_high as the server name and import mode selected.](media/oracle-database/adb-enter-server.png)
 
 5. If you're signing in to this server from Power BI Desktop for the first time, you're asked to enter your credentials. Select **Database**, then enter the user name and password for the Oracle database. The credentials you enter here are the user name and password for the specific Oracle Autonomous Database you want to connect to. In this example, the database's initial administrator user name and password are used. Then select **Connect**.
 
    ![Image of the credentials dialog box, with Database selected, and the default database user name and password entered.](media/oracle-database/adb-credentials.png)
+
+   >[!Note]
+   >You can use Azure Active Directory authentication to sign-on to Oracle Autonomous Database via the **Microsoft account** option.
 
 At this point, the **Navigator** appears and displays the connection data.
 
@@ -240,29 +188,30 @@ If this error occurs, be sure that the wallet folder path you supplied in sqlnet
 
 ### Configure the gateway
 
-1. In Power BI service, select the gear icon in the upper right-hand side, then select **Manage gateways**.
+1. [Install and setup an on-premises data gateway](https://learn.microsoft.com/en-us/data-integration/gateway/service-gateway-install#download-and-install-a-standard-gateway).
+2. In Power BI service, select the gear icon in the upper right-hand side, then select **Manage gateways**.
 
    [![Image of the Power BI service open, the gear icon selected, and the Manage gateways menu with Manage gateways emphasized.](media/oracle-database/adb-manage-gateways.png)](media/oracle-database/adb-manage-gateways.png#lightbox)
 
-2. In **Add Data Source**, select **Add data sources to use the gateway**.
+3. In **Add Data Source**, select **Add data sources to use the gateway**.
 
    [![Image of the Add data source window in Power BI service, with Add data source to use the gateway emphasized.](media/oracle-database/adb-add-data-source.png)](media/oracle-database/adb-add-data-source.png#lightbox)
 
-3. In **Data Source Name**, enter the name you want to use as the data source setting.
+4. In **Data Source Name**, enter the name you want to use as the data source setting.
 
-4. In **Data Source Type**, select **Oracle**.
+5. In **Data Source Type**, select **Oracle**.
 
-5. In **Server**, enter the name of the Oracle Autonomous Database server.
+6. In **Server**, enter the net service name of the Oracle Autonomous Database server to connect to.
 
-6. In **Authentication Method**, select **Basic**.
+7. In **Authentication Method**, select **Basic**.
 
-7. Enter the user name and password for the Oracle Autonomous Database. In this example, the default database administrator user name and password are used.
+8. Enter the user name and password for the Oracle Autonomous Database. In this example, the default database administrator user name (ADMIN) and password are used.
 
-8. Select **Add**.
+9. Select **Add**.
 
    ![Image of the Data Source Settings window, with all of the data source settings filled in.](media/oracle-database/adb-set-data-sources.png)
 
-If everything has been installed and configured correctly, a **Connection Successful** message appears. You can now connect to the Oracle Autonomous Database using the steps described in [Connect to an Oracle database from Power Query Online](#connect-to-an-oracle-database-from-power-query-online).
+If everything has been installed and configured correctly, a **Connection Successful** message appears. You can now connect to the Oracle Autonomous Database using the same steps described in [Connect to an on-premises Oracle database from Power Query Online](#connect-to-an-oracle-database-from-power-query-online).
 
 ## Connect using advanced options
 
@@ -293,15 +242,13 @@ You might come across any of several errors from Oracle when the naming syntax i
 * ORA-12170: TNS: connect timeout occurred.
 * ORA-12504: TNS: listener was not given the SERVICE_NAME in CONNECT_DATA.
 
-These errors might occur if the Oracle client either isn't installed or isn't configured properly. If it's installed, verify the tnsnames.ora file is properly configured and you're using the proper net_service_name. You also need to make sure the net_service_name is the same between the machine that uses Power BI Desktop and the machine that runs the gateway. More information: [Prerequisites](#prerequisites)
+These errors might occur if the Oracle tnsnames.ora database connect descriptor is misconfigured, the net service name provided is misspelled, or the Oracle database listener is not running or not reachable, such as a firewall blocking the listener or database port. Be sure you are meeting the minimum installation prerequisites. More information: [Prerequisites](#prerequisites)
 
-You might also come across a compatibility issue between the Oracle server version and the Oracle Data Access Client version. Typically, you want these versions to match, as some combinations are incompatible. For instance, ODAC 12.x doesn't support Oracle Server version 9.
+Visit the [Oracle Database Error Help Portal](https://docs.oracle.com/en/error-help/db/) to review common causes and resolutions for the specific Oracle error you encounter. Enter your Oracle error in the portal search bar.
 
-If you downloaded Power BI Desktop from the Microsoft Store, you might be unable to connect to Oracle databases because of an Oracle driver issue. If you come across this issue, the error message returned is: *Object reference not set.* To address the issue, do one of these steps:
+If you downloaded Power BI Desktop from the Microsoft Store, you might be unable to connect to Oracle databases because of an Oracle driver issue. If you come across this issue, the error message returned is: *Object reference not set.* To address the issue, do the following:
 
 * Download Power BI Desktop from the Download Center instead of Microsoft Store.
-
-* If you want to use the version from Microsoft Store: on your local computer, copy oraons.dll from *12.X.X\client_X* to *12.X.X\client_X\bin*, where *X* represents version and directory numbers.
 
 If the *Object reference not set* error message occurs in Power BI when you connect to an Oracle database using the on-premises data gateway, follow the instructions in [Manage your data source - Oracle](/power-bi/connect-data/service-gateway-onprem-manage-oracle).
 
