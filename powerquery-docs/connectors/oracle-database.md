@@ -78,7 +78,7 @@ For more information about authentication, go to [Authentication with a data sou
 
 To make the connection, take the following steps:
 
-1.	[Install and setup an on-premises data gateway](https://learn.microsoft.com/en-us/data-integration/gateway/service-gateway-install#download-and-install-a-standard-gateway).
+1.	[Install and setup an on-premises data gateway](/data-integration/gateway/service-gateway-install#download-and-install-a-standard-gateway).
 
 2. From Power Query Online, select the **Oracle database** option in the data sources selection.
 
@@ -188,7 +188,7 @@ If this error occurs, be sure that the wallet folder path you supplied in sqlnet
 
 ### Configure the gateway
 
-1. [Install and setup an on-premises data gateway](https://learn.microsoft.com/en-us/data-integration/gateway/service-gateway-install#download-and-install-a-standard-gateway).
+1. [Install and setup an on-premises data gateway](/data-integration/gateway/service-gateway-install#download-and-install-a-standard-gateway).
 2. In Power BI service, select the gear icon in the upper right-hand side, then select **Manage gateways**.
 
    [![Image of the Power BI service open, the gear icon selected, and the Manage gateways menu with Manage gateways emphasized.](media/oracle-database/adb-manage-gateways.png)](media/oracle-database/adb-manage-gateways.png#lightbox)
@@ -211,7 +211,7 @@ If this error occurs, be sure that the wallet folder path you supplied in sqlnet
 
    ![Image of the Data Source Settings window, with all of the data source settings filled in.](media/oracle-database/adb-set-data-sources.png)
 
-If everything has been installed and configured correctly, a **Connection Successful** message appears. You can now connect to the Oracle Autonomous Database using the same steps described in [Connect to an on-premises Oracle database from Power Query Online](#connect-to-an-oracle-database-from-power-query-online).
+If everything has been installed and configured correctly, a **Connection Successful** message appears. You can now connect to the Oracle Autonomous Database using the same steps described in [Connect to an on-premises Oracle database from Power Query Online](power-query/connectors/oracle-database#connect-to-an-oracle-database-from-power-query-online).
 
 ## Connect using advanced options
 
