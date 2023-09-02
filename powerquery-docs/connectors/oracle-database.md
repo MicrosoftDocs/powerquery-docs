@@ -211,7 +211,7 @@ If this error occurs, be sure that the wallet folder path you supplied in sqlnet
 
    ![Image of the Data Source Settings window, with all of the data source settings filled in.](media/oracle-database/adb-set-data-sources.png)
 
-If everything has been installed and configured correctly, a **Connection Successful** message appears. You can now connect to the Oracle Autonomous Database using the same steps described in [Connect to an on-premises Oracle database from Power Query Online](power-query/connectors/oracle-database#connect-to-an-oracle-database-from-power-query-online).
+If everything has been installed and configured correctly, a **Connection Successful** message appears. You can now connect to the Oracle Autonomous Database using the same steps described in [Connect to an on-premises Oracle database from Power Query Online](/power-query/connectors/oracle-database#connect-to-an-oracle-database-from-power-query-online).
 
 ## Connect using advanced options
 
