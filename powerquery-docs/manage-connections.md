@@ -26,9 +26,9 @@ The entry to the **Manage connections** dialog is available in the Power Query *
 
 Right next to the name of connection, and before the **Source type** column, there's an icon to unlink the connection.
 
-When you unlink a connection, you're simply removing the reference of the connection from your project. Unlinking means that the definition of the connection isn't removed from the back-end and it can't be used in your project.
+When you unlink a connection, you're simply removing the reference of the connection from your project. Unlinking means that the definition of the connection isn't removed from the back-end, but it can't be used in your project.
 
-:::image type="content" source="media/manage-connections/disconnect-icon.png" alt-text="Screenshot emphasizing the unlink icon next to a connection in the Manage Connections dialog.":::
+:::image type="content" source="media/manage-connections/disconnect-icon.png" alt-text="Screenshot emphasizing the unlink icon next to a connection in the Manage Connections dialog." lightbox="media/manage-connections/disconnect-icon.png":::
 
 A new prompt then asks you to confirm that you want to unlink the connection.
 
@@ -39,16 +39,16 @@ A new prompt then asks you to confirm that you want to unlink the connection.
 
 ## Edit a connection
 
-Right next to the name of connection, and before the disconnect icon, there's an icon to edit the connection. 
+Right next to the name of connection, and before the disconnect icon, there's an icon to edit the connection.
 
-![Edit connection icon inside the Manage Connections dialog](media/manage-connections/edit-connection-button.png)
+:::image type="content" source="media/manage-connections/edit-connection-button.png" alt-text="Screenshot of the Manage Connections dialog with the edit connection icons emphasized." lightbox="media/manage-connections/edit-connection-button.png":::
 
 The edit functionality allows you to change the following values:
 
 * **Data gateway:** If your data source uses a data gateway, you can modify the gateway using the dropdown list from this field.
 * **Authentication kind & credentials:** Depending on the connector, you're presented with multiple authentication kind options that are available to establish a connection, and fields where you enter your credentials.
 
-![Edit connections dialog for the selected OData connection](media/manage-connections/edit-connection-dialog.png)
+:::image type="content" source="media/manage-connections/edit-connection-dialog.png" alt-text="Screenshot of the edit connections dialog for the selected OData connection.":::
 
 ## More Resources
 
