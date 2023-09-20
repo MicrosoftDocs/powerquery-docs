@@ -3,7 +3,7 @@ title: Behind the scenes of the Data Privacy Firewall
 description: Describes the purpose of the Data Privacy Firewall
 author: ehrenMSFT
 ms.topic: conceptual
-ms.date: 1/9/2023
+ms.date: 9/20/2023
 ms.author: ehvonleh
 ---
 
@@ -156,7 +156,7 @@ Here's a high-level summary of the partitioning logic.
     * Grouping (Static)
       * Partitions are merged, while maintaining separation between:
         * Partitions in different queries
-        * Partitions that reference other partitions vs. those that don't
+        * Partitions that reference multiple partitions vs. those that don't
 * Dynamic Phase
   * This phase depends on evaluation results, including information about data sources accessed by various partitions.
   * Trimming
@@ -235,7 +235,7 @@ Next, we trim parameter partitions. Thus, DbServer gets implicitly included in t
 
 ![Trimmed firewall partitions.](media/data-privacy-firewall/firewall-steps-pane-2.png)
 
-Now we perform the static grouping. This maintains separation between partitions in separate queries (note for instance that the last two steps of Employees don't get grouped with the steps of Contacts), and between partitions that reference other partitions (such as the last two steps of Employees) and those that don't (such as the first three steps of Employees).
+Now we perform the static grouping. This maintains separation between partitions in separate queries (note for instance that the last two steps of Employees don't get grouped with the steps of Contacts), and between partitions that reference multiple partitions (such as the last two steps of Employees) and those that don't (such as the first three steps of Employees).
 
 ![Post static-grouping firewall partitions.](media/data-privacy-firewall/firewall-steps-pane-3.png)
 
