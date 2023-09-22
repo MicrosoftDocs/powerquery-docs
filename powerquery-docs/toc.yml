@@ -10,6 +10,8 @@
         href: get-data-experience.md
       - name: "Where to get data"
         href: where-to-get-data.md
+      - name: "Get data experience"
+        href: get-data-ui.md
       - name: Authentication
         items:  
         - name: "Authentication in Desktop apps"
@@ -678,13 +680,13 @@
           href: handling-versioning.md
       - name: Connector Certification
         items:
-        - name: Overview
+        - name: "Overview"
           href: connector-certification.md
-        - name: Submission
+        - name: "Submission"
           href: certification-submission.md
         - name: "Custom connector documentation"
           href: providing-user-documentation.md
-      - name: Custom connector development FAQ
+      - name: "Custom connector development FAQ"
         href: custom-connector-development-faq.yml
     - name: Resources
       items:
