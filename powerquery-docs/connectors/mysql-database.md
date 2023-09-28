@@ -23,13 +23,15 @@ ms.author: bezhan
 
 ## Prerequisites
 
-You need to install the [Oracle MySQL Connector/NET](https://dev.mysql.com/downloads/connector/net/) package prior to using this connector in Power BI Desktop. This component must also be installed on the machine running the on-premises data gateway in order to use this connector in Power Query Online (dataflows) or Power BI service. The MySQL connector supports any correctly installed MySQL Connector/NET package. To determine if the package has installed correctly, open a PowerShell window and run the following command:
+You need to install the [Oracle MySQL Connector/NET](https://dev.mysql.com/downloads/connector/net/) package prior to using this connector in Power BI Desktop. This component must also be installed on the machine running the on-premises data gateway in order to use this connector in Power Query Online (dataflows) or Power BI service. The MySQL connector requires the MySQL Connector/NET package to be correctly installed. To determine if the package has installed correctly, open a PowerShell window and run the following command:
 
 `[System.Data.Common.DbProviderFactories]::GetFactoryClasses()|ogv`
 
-If the package was installed correctly, the MySQL Data Provider is displayed in the resulting dialog. For example:
+If the package is installed correctly, the MySQL Data Provider is displayed in the resulting dialog. For example:
 
 :::image type="content" source="./media/mysql-database/data-provider.png" alt-text="Screenshot of the data provider dialog with the MySQL data provider emphasized." lightbox="./media/mysql-database/data-provider.png":::
+
+If the package doesn't install correctly, work with your MySQL support team or reach out to MySQL.
 
 ## Capabilities Supported
 
