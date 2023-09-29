@@ -36,11 +36,11 @@ To establish a connection, take the following steps:
 
 1. Select the **Azure HDInsight on AKS Trino** option in the connector selection.
 
-2. In the **Azure HDInsight on AKS Trino** dialog that appears, provide the Trino cluster URL.
+2. In the **Azure HDInsight on AKS Trino** dialog that appears, provide the **Azure Trino URL**.
 
    ![Connect to Azure HDInsight on AKS Trino](media/azure-hdinsight-on-aks-trino/azure-hdinsight-on-aks-trino-connect.png)
 
-3. Select either the **DirectQuery** (recommended for Trino big data) or **Import** data connectivity mode.
+3. Select the connectivity mode: **Direct Query** (recommended for Trino big data) or **Import**.
 
    ![Select Query Mode to Azure HDInsight on AKS Trino](media/azure-hdinsight-on-aks-trino/azure-hdinsight-on-aks-trino-querymode.png)
 
@@ -60,7 +60,7 @@ To connect to an Azure SQL database from Power Query Online, take the following 
 
 1. Select the **Azure HDInsight on AKS Trino** option in the connector selection.
 
-2. In the **Azure HDInsight on AKS Trino** dialog that appears, provide the Trino cluster URL.
+2. In the options that appear, provide the **Azure Trino URL**.
 
    ![Enter the Azure SQL database online connection.](media/azure-hdinsight-on-aks-trino/azure-hdinsight-on-aks-trino-online-connect.png)
 
@@ -72,7 +72,7 @@ To connect to an Azure SQL database from Power Query Online, take the following 
 
 6. Select **Next** to continue.
 
-7. In **Navigator**, select the data you require, and then select **Transform data**.
+7. In **Navigator**, select the table you require, and then select **Transform data**.
 
    ![Power Query Online Navigator showing the Human Resources employee data.](./media/azure-hdinsight-on-aks-trino/azure-hdinsight-on-aks-trino-online-navigator.png)
 
