@@ -46,7 +46,7 @@ To establish a connection, take the following steps:
 
 4. Select OK.
 
-5. If this is the first time you're connecting to this Trino cluster, select **Sign in** to authenticate. Then select **Connect**.
+5. If it is the first time you're connecting to this Trino cluster, select **Sign in** to authenticate. Then select **Connect**.
 
    ![Authentication to Azure HDInsight on AKS Trino](media/azure-hdinsight-on-aks-trino/azure-hdinsight-on-aks-trino-authentication.png)
 
@@ -68,7 +68,7 @@ To connect to an Azure SQL database from Power Query Online, take the following 
 
 4. To configure the connection options, select **Advanced options**. More information: [Connect using advanced options](#connect-using-advanced-options)
 
-5. If this is the first time you're connecting to this Trino cluster in **Authentiation kind** select **Organizational Account**, and select **Sign in**.
+5. If it is the first time you're connecting to this Trino cluster in **Authentication kind** select **Organizational Account**, and select **Sign in**.
 
 6. Select **Next** to continue.
 
@@ -84,7 +84,7 @@ Both Power Query Desktop and Power Query Online provide a set of advanced option
 |Advanced option|Description|
 |-|-|
 |SQL statement|For information, go to [Import data from a database using native database query](../native-database-query.md).|
-|Session properties|Allows Trino session properties to be passed with the connection to the Trino cluster. Session property should specify key value pairs separated by a colon, and each pair should be separated by a comma. Example: `distributed_sort:true,colocated_join:false`|
+|Session properties|Allows Trino session properties to be passed with the connection to the Trino cluster. Session property should specify key value pairs separated by a colon, and each pair separated by a comma. Example: `distributed_sort:true,colocated_join:false`|
 |Default catalog/schema|Providing a catalog and schema sets the context of the connection to within a specific Trino catalog and schema.|
 
 Once you've selected the advanced options you require, select OK in Power Query Desktop or Next in Power Query Online to connect to the Trino cluster.
@@ -93,7 +93,7 @@ Once you've selected the advanced options you require, select OK in Power Query 
 
 ### Types Support
 
-The Azure HDInsight on AKS Trino supports the following types. Other types, such as **uuid**, **P4HyperLogLog** will need to be transformed or cast to be usable with the connector.
+The Azure HDInsight on AKS Trino supports the following types. Other types, such as **uuid**, **P4HyperLogLog** needs to be transformed or cast to be usable with the connector.
 
 * bigint
 * integer
