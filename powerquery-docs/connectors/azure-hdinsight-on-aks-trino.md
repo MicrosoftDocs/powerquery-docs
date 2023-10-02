@@ -32,6 +32,8 @@ ms.author: gefisher
 
 ## Connect to Azure HDInsight on AKS Trino from Power Query Desktop
 
+For general steps describing to access Power Query connections see: [Where to get data](../where-to-get-data.md).
+
 To establish a connection, take the following steps:
 
 1. In the Get Data experience, select Azure from the categories on the left, then select **Azure HDInsight on AKS Trino**.
@@ -57,6 +59,8 @@ To establish a connection, take the following steps:
    ![Navigate to the catalog and schema](media/azure-hdinsight-on-aks-trino/azure-hdinsight-on-aks-trino-navigator.png)
 
 ## Connect to Azure HDInsight on AKS Trino from Power Query Online
+
+For general steps describing to access Power Query connections see: [Where to get data](../where-to-get-data.md).
 
 To connect to an Azure HDInsight on AKS Trino cluster from Power Query Online, take the following steps:
 
