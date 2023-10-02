@@ -50,7 +50,7 @@ To establish a connection, take the following steps:
 
 4. Select OK.
 
-5. If you're connecting to this Trino cluster for the first time select **Sign in** to authenticate. Then select **Connect**.
+5. If you're connecting to this Trino cluster for the first time, select **Sign in** to authenticate. Then select **Connect**.
 
    ![Authentication to Azure HDInsight on AKS Trino](media/azure-hdinsight-on-aks-trino/azure-hdinsight-on-aks-trino-authentication.png)
 
