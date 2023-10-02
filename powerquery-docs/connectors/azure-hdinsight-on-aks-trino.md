@@ -15,7 +15,7 @@ ms.author: gefisher
 |-|-|
 |Release State|Preview|
 |Products|Power BI (Datasets)<br />Power BI (Dataflows)<br />Fabric (Dataflow Gen2)|
-|Authentication Types Supported|Azure Active Directory (Microsoft Entra ID)|
+|Authentication Types Supported|Organizational account|
 
 ## Prerequisites
 
@@ -34,9 +34,11 @@ ms.author: gefisher
 
 To establish a connection, take the following steps:
 
-1. Select the **Azure HDInsight on AKS Trino** option in the connector selection.
+1. In the Get Data experience, select Azure from the categories on the left, then select **Azure HDInsight on AKS Trino**.
 
-2. In the **Azure HDInsight on AKS Trino** dialog that appears, provide the **Azure Trino URL**.
+   ![Choose the Azure HDInsight on AKS Trino.](media/azure-hdinsight-on-aks-trino/azure-hdinsight-on-aks-trino-get-data.png)
+
+2. In the **Azure HDInsight on AKS Trino** dialog that appears, provide the **Azure Trino URL** (Trino cluster URL).
 
    ![Connect to Azure HDInsight on AKS Trino](media/azure-hdinsight-on-aks-trino/azure-hdinsight-on-aks-trino-connect.png)
 
@@ -60,15 +62,17 @@ To connect to an Azure SQL database from Power Query Online, take the following 
 
 1. Select the **Azure HDInsight on AKS Trino** option in the connector selection.
 
+   ![Select the **Azure HDInsight on AKS Trino** option in the connector selection.](media/azure-hdinsight-on-aks-trino/azure-hdinsight-on-aks-trino-online-get-data.png)
+
 2. In the options that appear, provide the **Azure Trino URL**.
 
-   ![Enter the Azure SQL database online connection.](media/azure-hdinsight-on-aks-trino/azure-hdinsight-on-aks-trino-online-connect.png)
+   ![Enter the Azure HDInsight on AKS TRino online connection.](media/azure-hdinsight-on-aks-trino/azure-hdinsight-on-aks-trino-online-connect.png)
 
 3. If necessary, select the name of your on-premises data gateway.
 
 4. To configure the connection options, select **Advanced options**. More information: [Connect using advanced options](#connect-using-advanced-options)
 
-5. If it's the first time you're connecting to this Trino cluster in **Authentication kind** select **Organizational Account**, and select **Sign in**.
+5. If you're connecting to this Trino cluster for the first time select **Sign in**.
 
 6. Select **Next** to continue.
 
