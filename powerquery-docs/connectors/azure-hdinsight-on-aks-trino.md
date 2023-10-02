@@ -54,7 +54,7 @@ To establish a connection, take the following steps:
 
 9. In **Navigator**, expand the catalog and schema to reveal the table you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
 
-   :::image type="content" source="media/azure-hdinsight-on-aks-trino/azure-hdinsight-on-aks-trino-navigator.png" alt-text="Screenshot of the Navigator dialog with the catalog and schema selected, and the data being displayed.":::
+   :::image type="content" source="media/azure-hdinsight-on-aks-trino/azure-hdinsight-on-aks-trino-navigator.png" alt-text="Screenshot of the Navigator dialog with the catalog and schema selected, and the data being displayed." lightbox="media/azure-hdinsight-on-aks-trino/azure-hdinsight-on-aks-trino-navigator.png":::
 
 ## Connect to Azure HDInsight on AKS Trino from Power Query Online
 
@@ -78,7 +78,7 @@ To connect to an Azure HDInsight on AKS Trino cluster from Power Query Online, t
 
 9. In **Navigator**, select the table you require, and then select **Transform data**.
 
-   :::image type="content" source="media/azure-hdinsight-on-aks-trino/azure-hdinsight-on-aks-trino-online-navigator.png" alt-text="Screenshot of the online navigator with the catlog and schema selected, and the data being displayed.":::
+   :::image type="content" source="media/azure-hdinsight-on-aks-trino/azure-hdinsight-on-aks-trino-online-navigator.png" alt-text="Screenshot of the online navigator with the catlog and schema selected, and the data being displayed." lightbox="media/azure-hdinsight-on-aks-trino/azure-hdinsight-on-aks-trino-online-navigator.png":::
 
 ## Connect using advanced options
 
