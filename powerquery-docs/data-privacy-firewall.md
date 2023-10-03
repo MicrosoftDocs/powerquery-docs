@@ -154,9 +154,10 @@ Here's a high-level summary of the partitioning logic.
       * Note that "removing" a partition effectively includes it in whatever other partitions reference it.
       * Trimming parameter partitions allows parameter references used within data source function calls (for example, `Web.Contents(myUrl)`) to work, instead of throwing "partition can't reference data sources and other steps" errors.
     * Grouping (Static)
-      * Partitions are merged, while maintaining separation between:
-        * Partitions in different queries
-        * Partitions that reference multiple partitions vs. those that don't
+      * Partitions will only be merged if both are in the same query.
+      * A partition will be merged into another if it references the partition it is being merged into and either:
+        * It does not reference any other partitions.
+        * Or both it and the partition it is being merged into reference other partitions.
 * Dynamic Phase
   * This phase depends on evaluation results, including information about data sources accessed by various partitions.
   * Trimming
