@@ -9,17 +9,17 @@ ms.author: bensack
 
 # Security roles and permission levels required to create standard dataflows
 
-Dataflows are created within an environment, and standard dataflows load data to new, existing, or standard Dataverse tables that also reside in the environment. Depeding on the scenario, a dataflow creator may need different or multiple roles to create and refresh a datalfow successfully. This article walks you through the roles and permission levels related to standard dataflows, and provides links to articles to learn how to manage them.
+Dataflows are created within an environment, and standard dataflows load data to new, existing, or standard Dataverse tables that also reside in the environment. Depending on the scenario, a dataflow creator might need different or multiple roles to create and refresh a dataflow successfully. This article walks you through the roles and permission levels related to standard dataflows, and provides links to articles to learn how to manage them.
 
 ## Roles required to create standard dataflows
 
-Some roles are needed to create dataflows, and others are required to contorl which tables a dataflow creator can create/update. The following table describes each role, along with the level of permission associated with that role.
+Some roles are needed to create dataflows, and others are required to control which tables a dataflow creator can create or update. The following table describes each role, along with the level of permission associated with that role.
 
 | Security role              | Privileges                     | Description                                                  |
 | -------------------------- | ------------------------------ | ------------------------------------------------------------ |
-| Environment Maker          | Create dataflows  | Required to create any dataflow. Standard dataflows require additional roles depending on Dataverse tables permissions   |
-| Basic User   | Write to non-custom tables | Has all the rights to work with non-custom tables          |
-| System Customizer          | Create custom tables         | Custom tables this user creates will be visible to this user only |
+| Environment Maker          | Create dataflows  | Required to create any dataflow. Standard dataflows require additional roles depending on Dataverse tables permissions.   |
+| Basic User   | Write to non-custom tables | Has all the rights to work with non-custom tables.         |
+| System Customizer          | Create custom tables         | Custom tables this user creates are visible to this user only. |
 
 ## Steps to assign roles
 
@@ -56,9 +56,9 @@ To add a security role to a user who is already present in an environment:
 
 The current version of standard dataflows doesn't support row-level security.
 
-If you haven't heard of row-level security before, here's a quick introduction. If you have users with different levels of access to the same table, you can filter the data at the row level. For example, in the Orders table, you might have a SalesTerritory column, and you might want to filter the data in a way that users from California could only see records from the Orders table that belongs to California. This is possible through row-level security.
+If you haven't heard of row-level security before, here's a quick introduction. If you have users with different levels of access to the same table, you can filter the data at the row level. For example, in the Orders table, you might have a SalesTerritory column. Also, you might want to filter the data in a way that users from California could only see records from the Orders table that belongs to California. This is possible through row-level security.
 
-## Sharing or Co-Authoring datalfows
+## Sharing or co-authoring datalfows
 
-Currently, it is not possible for two different users to collaborate on the same dataflow. Only the creator (owner) of the dataflow can edit it. In the event a datalfow needs to be transfered to a different user, and environment administrators can change the owner of the dataflow from one user to another. For security reasons, transfering ownership will remove the connection associated with the dataflow and require the new owner to update the credentials used by the dataflow.
+Currently, it's not possible for two different users to collaborate on the same dataflow. Only the creator (owner) of the dataflow can edit it. In the event a datalfow needs to be transferred to a different user, an environment administrator can change the owner of the dataflow from one user to another. For security reasons, transferring ownership removes the connection associated with the dataflow and requires the new owner to update the credentials used by the dataflow.
 
