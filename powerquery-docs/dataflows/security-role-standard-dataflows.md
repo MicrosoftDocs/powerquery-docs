@@ -56,9 +56,9 @@ To add a security role to a user who is already present in an environment:
 
 The current version of standard dataflows doesn't support row-level security.
 
-If you haven't heard of row-level security before, here's a quick introduction. If you have users with different levels of access to the same table, you can filter the data at the row level. For example, in the Orders table, you might have a SalesTerritory column. Also, you might want to filter the data in a way that users from California could only see records from the Orders table that belongs to California. This is possible through row-level security.
+If you haven't heard of row-level security before, here's a quick introduction. If you have users with different levels of access to the same table, you can filter the data at the row level. For example, in the Orders table, you might have a SalesTerritory column. Also, you might want to filter the data in a way that users from California could only see records from the Orders table that belongs to California. This difference is possible through row-level security.
 
-## Sharing or co-authoring datalfows
+## Sharing or coauthoring dataflows
 
-Currently, it's not possible for two different users to collaborate on the same dataflow. Only the creator (owner) of the dataflow can edit it. In the event a datalfow needs to be transferred to a different user, an environment administrator can change the owner of the dataflow from one user to another. For security reasons, transferring ownership removes the connection associated with the dataflow and requires the new owner to update the credentials used by the dataflow.
+Currently, it's not possible for two different users to collaborate on the same dataflow. Only the creator (owner) of the dataflow can edit it. In the event a dataflow needs to be transferred to a different user, an environment administrator can change the owner of the dataflow from one user to another. For security reasons, transferring ownership removes the connection associated with the dataflow and requires the new owner to update the credentials used by the dataflow.
 
