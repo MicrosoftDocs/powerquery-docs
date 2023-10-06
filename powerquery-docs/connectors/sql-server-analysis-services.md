@@ -15,7 +15,7 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)<br/>Power Apps (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Analysis Services |
+| Products | Excel<br/>Power BI (Datasets)<br/>Power Apps (Dataflows)<br/>Analysis Services |
 | Authentication Types Supported | Basic<br/>Microsoft account<br/>Organizational account<br/>Windows |
 | M Function Reference | [Sql.Database](/powerquery-m/sql-database)<br/>[Sql.Databases](/powerquery-m/sql-databases) |
 
