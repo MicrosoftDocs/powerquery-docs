@@ -3,7 +3,7 @@ title: FHIR Power Query authentication
 description: FHIR Power Query authentication
 author: hansenms
 ms.topic: conceptual
-ms.date: 3/14/2023
+ms.date: 7/25/2023
 ms.author: mihansen
 ---
 
@@ -11,30 +11,30 @@ ms.author: mihansen
 
 This article explains authenticated access to FHIR servers using the Power Query connector for FHIR. The connector supports anonymous access to publicly accessible FHIR servers and authenticated access to FHIR servers using Azure Active Directory authentication. The [Azure API for FHIR](/azure/healthcare-apis) is secured with Azure Active Directory.
 
->[!Note]
->If you are connecting to a FHIR server from an online service, such as Power BI service, you can only use an organizational account.
+> [!NOTE]
+> If you are connecting to a FHIR server from an online service, such as Power BI service, you can only use an organizational account.
 
 ## Anonymous access
 
-There are many [publicly accessible FHIR servers](https://confluence.hl7.org/display/FHIR/Public+Test+Servers). To enable testing with these public servers, the Power Query connector for FHIR supports the "Anonymous" authentication scheme. For example to access the public https://vonk.fire.ly server:
+There are many [publicly accessible FHIR servers](https://confluence.hl7.org/display/FHIR/Public+Test+Servers). To enable testing with these public servers, the Power Query connector for FHIR supports the "Anonymous" authentication scheme. For example to access the public `https://server.fire.ly` server:
 
-1. Enter the URL of the public Vonk server.
+1. Enter the URL of the public Firely server.
 
-    ![Access public Vonk server.](FHIR-Access-Vonk.png)
+   :::image type="content" source="fhir-access-firely.png" alt-text="Screenshot of the URL filled in with the public Firely FHIR server.":::
 
 1. Select **Anonymous** authentication scheme.
 
-    ![Vonk anonymous authentication.](FHIR-Access-Vonk-Anonymous.png)
+   :::image type="content" source="fhir-access-firely-anonymous.png" alt-text="Screenshot demonstrating the anonymous authentication selection to access the Firely FHIR server.":::
 
-After that, follow the steps to [query and shape your data](FHIR.md).
+After that, follow the steps to [query and shape your data](fhir.md).
 
 ## Azure Active Directory (organizational) authentication
 
-The Power Query connector for FHIR supports OAuth authentication for FHIR servers that are secured with [Azure Active Directory](https://azure.microsoft.com/services/active-directory/). 
+The Power Query connector for FHIR supports OAuth authentication for FHIR servers that are secured with [Azure Active Directory](https://azure.microsoft.com/services/active-directory/).
 
 To use Azure Active Directory authentication, select **Organizational account** when connecting.
 
-![FHIR Sign In.](FHIR-Sign-In.png)
+:::image type="content" source="fhir-sign-in.png" alt-text="Screenshot of the authentication dialog with the Organizational account selected for sign in.":::
 
 There are some restrictions to be aware of:
 
@@ -44,9 +44,9 @@ There are some restrictions to be aware of:
 
 * If your FHIR service isn't the Azure API for FHIR (for example, if you're running the [open source Microsoft FHIR server for Azure](https://github.com/Microsoft/fhir-server)), you'll have registered an [Azure Active Directory resource application](/azure/healthcare-apis/register-resource-azure-ad-client-app) for the FHIR server. You must pre-authorize the Power BI client application to be able to access this resource application.
 
-    ![Pre Authorize Power BI.](FHIR-PreAuthorize-PowerBI.png)
+   :::image type="content" source="fhir-preauthorize-powerbi.png" alt-text="Screenshot demonstrating how to preauthorize the Power BI client application." lightbox="fhir-preauthorize-powerbi.png":::
 
-    The client ID for the Power BI client is `a672d62c-fc7b-4e81-a576-e60dc46e951d`.
+   The client ID for the Power BI client is `a672d62c-fc7b-4e81-a576-e60dc46e951d`.
 
 * The Power Query (for example, Power BI) client will only request a single scope: `user_impersonation`. This scope must be available and the FHIR server can't rely on other scopes.
 
@@ -55,4 +55,4 @@ There are some restrictions to be aware of:
 In this article, you've learned how to use the Power Query connector for FHIR authentication features. Next, explore query folding.
 
 >[!div class="nextstepaction"]
->[FHIR Power Query folding](FHIR-QueryFolding.md)
+>[FHIR Power Query folding](fhir-queryfolding.md)

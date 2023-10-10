@@ -3,7 +3,7 @@ title: Power Query Digital Construction Works Insights Connector
 description: Provides basic information and prerequisites for the Digital Construction Works Insights connector, descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 1/5/2023
+ms.date: 7/13/2023
 ms.author: bezhan
 ---
 
@@ -14,7 +14,7 @@ ms.author: bezhan
 | Item | Description |
 | ------- | ------------|
 | Release state | General availability |
-| Products supported | Power BI (Datasets)<br/>Power BI (Dataflows) |
+| Products supported | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication types supported| Digital Construction Works JSON Web Token (JWT) |
 | Function reference docs | &mdash; |
 

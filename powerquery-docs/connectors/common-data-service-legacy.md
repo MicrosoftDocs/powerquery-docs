@@ -3,7 +3,7 @@ title: Power Query Common Data Service (Legacy) connector
 description: Provides basic information and instructions on connecting to data using the Common Data Service (Legacy) connector.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 1/5/2023
+ms.date: 7/13/2023
 ms.author: bezhan
 ---
 
@@ -17,7 +17,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Dynamics 365 Customer Insights |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Dynamics 365 Customer Insights |
 | Authentication types | Organizational account |
 | | |
 
@@ -107,9 +107,9 @@ More information: [Accessing large datasets](#accessing-large-datasets)
 
 For information about OData API performance and throttling limits for Dataverse connections, go to [Requests limits and allocations](/power-platform/admin/api-request-limits-allocations). These limitations apply to both the Common Data Source (Legacy) connector (which uses the OData API as an implementation detail) and the [OData Feed](odata-feed.md) connector when accessing the same endpoint.
 
-### Entity retrieval rate
+### Table retrieval rate
 
-As a guideline, most default entities will be retrieved at a rate of approximately 500 rows per second using the Common Data Service (Legacy) connector. Take this rate into account when deciding whether you want to connect to Dataverse or export to data lake. If you require faster retrieval rates, consider using the Export to data lake feature or the Dataverse connector. More information: [Alternative Dataverse connections](#alternative-dataverse-connections)
+As a guideline, most default tables are retrieved at a rate of approximately 500 rows per second using the Common Data Service (Legacy) connector. Take this rate into account when deciding whether you want to connect to Dataverse or export to data lake. If you require faster retrieval rates, consider using the Export to data lake feature or the Dataverse connector. More information: [Alternative Dataverse connections](#alternative-dataverse-connections)
 
 ### Alternative Dataverse connections
 

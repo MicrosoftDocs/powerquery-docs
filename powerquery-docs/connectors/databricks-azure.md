@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for using Power Query'
 author: bezhan-msft
 
 ms.topic: conceptual
-ms.date: 6/9/2023
+ms.date: 7/13/2023
 ms.author: bezhan
 ---
 
@@ -18,7 +18,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Azure Active Directory<br/>Organizational Account<br/>Personal Access Token |
 
 ## Capabilities supported
@@ -74,3 +74,8 @@ To connect to Databricks from Power Query Online, take the following steps:
 4. Once you successfully connect, the **Navigator** appears and displays the data available on the server. Select your data in the navigator. Then select **Next** to transform the data in Power Query.
 
     ![Image of Power Query navigator loading Databricks Cloud data to online app.](./media/databricksazure/pq-choose-data.png)
+
+## Limitations
+
+* The Azure Databricks connector supports [web proxy](/power-bi/connect-data/desktop-troubleshooting-sign-in#using-default-system-credentials-for-web-proxy). However, automatic proxy settings defined in .pac files aren't supported.
+* In the Azure Databricks connector, the `Databricks.Query` data source isn't supported in combination with Power BI dataset's DirectQuery mode.

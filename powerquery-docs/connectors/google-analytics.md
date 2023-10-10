@@ -3,30 +3,29 @@ title: Power Query Google Analytics connector
 description: Provides basic information and connection instructions, along with a list of quota limits for Power BI and instructions on validating unexpected data.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 6/20/2023
+ms.date: 7/13/2023
 ms.author: bezhan
 ---
 
 # Google Analytics
- 
+
 ## Summary
 
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Customer Insights (Dataflows) |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Customer Insights (Dataflows) |
 | Authentication Types Supported | Google Account |
 | Function Reference Documentation | [GoogleAnalytics.Accounts](/powerquery-m/googleanalytics-accounts) |
-| | |
-
->[!Note]
->Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 > [!NOTE]
-> Effective July 2021, Google will discontinue support for sign-ins to Google accounts from embedded browser frameworks. Due to this change, you will need to [update](https://powerbi.microsoft.com/downloads/) your Power BI Desktop version to June 2021 to support signing in to Google.
+> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
-> [!Note]
->This connector uses V4 of the Google Analytics API.
+> [!NOTE]
+> Effective July 2023, Google has deprecated use of the Google Analytics API. For more information, go to the [Google announcement](https://support.google.com/analytics/answer/11583528?hl=en). The Power Query Google Analytics connector supports the legacy Universal Analytics scenario through V4 of the now-deprecated Google Universal Analytics API by using the `Implementation = "1.0"` setting. The connector also supports Google Analytics 4 scenarios through V1 of the Google Analytics Data API by using the now-default `Implementation = "2.0"` setting.
+
+> [!NOTE]
+> Effective July 2021, Google discontinued support for sign-ins to Google accounts from embedded browser frameworks. Due to this change, you need to [update](https://powerbi.microsoft.com/downloads/) your Power BI Desktop version to June 2021 or later to support signing in to Google.
 
 ## Prerequisites
 
@@ -36,6 +35,7 @@ Before you can sign in to Google Analytics, you must have a Google Analytics acc
 
 * Import
 * Google Analytics 4 (Data API)
+* Google Universal Analytics (deprecated)
 
 ## Connect to Google Analytics data from Power Query Desktop
 
@@ -89,8 +89,8 @@ To connect to Google Analytics data:
 
 4. In the **Sign in with Google** window that appears, provide your credentials to sign in to your Google Analytics account. You can either supply an email address or phone number. Then select **Next**.
 
-   >[!Note]
-   >Currently, the Google Analytics sign-in dialog boxes indicate that you are signing in to Power Query Desktop. This wording will be changed in the future.
+   > [!NOTE]
+   > Currently, the Google Analytics sign-in dialog boxes indicate that you are signing in to Power Query Desktop. This wording will be changed in the future.
 
    ![Sign in to Adobe Analytics from Power Query Online.](./media/google-analytics/google-sign-in.png)
 

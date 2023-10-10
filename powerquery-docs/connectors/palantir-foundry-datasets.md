@@ -2,7 +2,7 @@
 title: Palantir Foundry Power Query connector
 description: Provides basic information and prerequisites for using the Palantir Foundry Power Query connector.
 author: mshafer
-ms.date: 6/9/2023
+ms.date: 7/14/2023
 ms.author: bezhan
 ---
 
@@ -16,7 +16,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Organizational Account (Power BI Desktop)<br/>Personal Access Token |
 
 ## Prerequisites

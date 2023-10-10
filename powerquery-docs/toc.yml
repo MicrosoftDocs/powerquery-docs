@@ -10,6 +10,8 @@
         href: get-data-experience.md
       - name: "Where to get data"
         href: where-to-get-data.md
+      - name: "Get data experience"
+        href: get-data-ui.md
       - name: Authentication
         items:  
         - name: "Authentication in Desktop apps"
@@ -28,6 +30,8 @@
         href: connector-alternatives.md
       - name: "Connect using generic interfaces"
         href: connect-using-generic-interfaces.md
+      - name: "Manage connections"
+        href: manage-connections.md  
       - name: "Change a dataflow gateway"
         href: change-gateway-dataflow.md
     - name: Transform data
@@ -188,12 +192,14 @@
         href: dataflows/how-to-migrate-queries-from-power-query-desktop-to-dataflows.md
       - name: "Use an on-premises data gateway"
         href: dataflows/using-dataflows-with-on-premises-data.md
+      - name: "Data exfiltration best practices for dataflows"
+        href: dataflows/data-exfiltration-best-practices.md
       - name: Analytical dataflows
         items:
-        - name: "Create computed entities"
-          href: dataflows/computed-entities.md
-        - name: "Link entities between dataflows"
-          href: dataflows/linked-entities.md
+        - name: "Create computed tables"
+          href: dataflows/computed-tables.md
+        - name: "Link tables between dataflows"
+          href: dataflows/linked-tables.md
         - name: "Connect Azure Data Lake for dataflow storage"
           href: dataflows/connect-azure-data-lake-storage-for-dataflow.md
         - name: Storage structure
@@ -204,8 +210,8 @@
             href: dataflows/configuring-storage-and-compute-options-for-analytical-dataflows.md
         - name: Best practices for dataflows
           items: 
-          - name: "Scenarios for computed entities"
-            href: dataflows/computed-entities-scenarios.md
+          - name: "Scenarios for computed tables"
+            href: dataflows/computed-tables-scenarios.md
           - name: "Developing complex dataflows"
             href: dataflows/best-practices-developing-complex-dataflows.md
           - name: "Reusing dataflows"
@@ -360,10 +366,12 @@
         href: connectors/bloomberg-data-and-analytics.md
       - name: "BQE Core"
         href: connectors/bqecore.md
-      - name: "CData Connect Cloud (Beta)"
+      - name: "CData Connect Cloud"
         href: connectors/cdata-connect-cloud.md
       - name: "Celonis EMS (Beta)"
         href: connectors/celonis-ems.md
+      - name: "CloudBluePSA (Beta)"
+        href: connectors/cloudbluepsa.md
       - name: "Common Data Service (Legacy)"
         href: connectors/common-data-service-legacy.md
       - name: "Databricks"
@@ -382,7 +390,7 @@
         href: connectors/dynamics-365-online.md
       - name: "Eduframe (Beta)"
         href: connectors/eduframe.md
-      - name: "EQuIS (Beta)"
+      - name: "EQuIS"
         href: connectors/equis.md
       - name: "Essbase"
         href: connectors/essbase.md
@@ -424,6 +432,8 @@
         href: connectors/impala-database.md
       - name: "JSON"
         href: connectors/json.md
+      - name: "KQL database"
+        href: connectors/kql-database.md
       - name: LinkedIn Sales Navigator (Beta)
         href: connectors/linkedin-sales-navigator.md
       - name: "Mailchimp (Deprecated)"
@@ -464,7 +474,7 @@
         href: connectors/pdf.md
       - name: "PostgreSQL"
         href: connectors/postgresql.md
-      - name: "Profisee (Beta)"
+      - name: "Profisee"
         href: connectors/profisee.md
       - name: "QuickBooks Online (Beta)"
         href: connectors/quickbooks-online.md
@@ -512,9 +522,9 @@
         href: connectors/sharepoint-online-list.md
       - name: "SingleStore (Beta)"
         href: connectors/singlestore.md
-      - name: SIS-CC SDMX
+      - name: "SIS-CC SDMX (Beta)"
         href: connectors/sis-cc-sdmx.md
-      - name: Smartsheet
+      - name: "Smartsheet"
         href: connectors/smartsheet.md
       - name: "Snowflake"
         href: connectors/snowflake.md
@@ -542,7 +552,7 @@
         href: connectors/tibco.md
       - name: "Twilio (Beta) (Deprecated)"
         href: connectors/twilio.md
-      - name: "Usercube"
+      - name: "Usercube (Beta)"
         href: connectors/usercube.md
       - name: "Vessel Insight"
         href: connectors/vessel-insight.md
@@ -670,13 +680,13 @@
           href: handling-versioning.md
       - name: Connector Certification
         items:
-        - name: Overview
+        - name: "Overview"
           href: connector-certification.md
-        - name: Submission
+        - name: "Submission"
           href: certification-submission.md
         - name: "Custom connector documentation"
           href: providing-user-documentation.md
-      - name: Custom connector development FAQ
+      - name: "Custom connector development FAQ"
         href: custom-connector-development-faq.yml
     - name: Resources
       items:

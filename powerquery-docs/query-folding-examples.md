@@ -226,7 +226,6 @@ The refresh time for each query was as follows:
 |No query folding| None| 361|
 |Partial query folding| Partial| 184|
 |Full query folding| Full| 31|
-| | | |
 
 ![Chart that compares the refresh time of the no folding query with 361 seconds, the partial query folding with 184 seconds, and the fully folded query with 31 seconds.](media/query-folding-basics/outcome-timing.png)
 
@@ -248,7 +247,6 @@ The following table lists the number of rows requested from the `fact_Sale` tabl
 |No query folding| None|  3644356 |Request for all fields and all records from the `fact_Sale` table|
 |Partial query folding| Partial| 3644356|Request for all records, but only required fields from the `fact_Sale` table after it was sorted by the `Sale Key` field|
 |Full query folding| Full| 10| Request for only the required fields and the TOP 10 records of the `fact_Sale` table after being sorted in descending order by the `Sale Key` field|
-| | | | |
 
 ![Chart with the amount of rows collected from the database for no query folding, partial query folding, and full query folding.](media/query-folding-basics/data-in-transit.png)
 
@@ -257,7 +255,7 @@ When requesting data from a data source, the data source needs to compute the re
 For the showcased examples, Power Query had to request over 3.6 million rows from the data source for the no query folding and partial query folding examples. For the full query folding example, it only requested 10 rows. For the fields requested, the no query folding example requested all the available fields from the table. Both the partial query folding and the full query folding examples only submitted a request for exactly the fields that they needed.
 
 >[!CAUTION]
->We recommend that you implement incremental refresh solutions that leverage query folding for queries or entities with large amounts of data. Different product integrations of Power Query implement timeouts to terminate long running queries. Some data sources also implement timeouts on long running sessions, trying to execute expensive queries against their servers. More information: [Using incremental refresh with dataflows](/power-query/dataflows/incremental-refresh) and [Incremental refresh for datasets](/power-bi/connect-data/incremental-refresh-overview)
+>We recommend that you implement incremental refresh solutions that leverage query folding for queries or tables with large amounts of data. Different product integrations of Power Query implement timeouts to terminate long running queries. Some data sources also implement timeouts on long running sessions, trying to execute expensive queries against their servers. More information: [Using incremental refresh with dataflows](/power-query/dataflows/incremental-refresh) and [Incremental refresh for datasets](/power-bi/connect-data/incremental-refresh-overview)
 
 ### Transforms executed by the Power Query engine
 
@@ -270,7 +268,6 @@ The following table showcases the nodes from the query plans of the previous que
 |No query folding| None|  `Table.LastN`, `Table.SelectColumns` |
 |Partial query folding| Partial| `Table.LastN` |
 |Full query folding| Full| &mdash;|
-| | | |
 
 ![Chart with the total transforms run by the Power Query engine for no query folding, partial query folding, and full query folding.](media/query-folding-basics/total-local-transforms.png)
 
@@ -283,7 +280,6 @@ Transforms can be grouped into the following categories:
 |**Remote**|Operators that are data source nodes. The evaluation of these operators occurs outside of Power Query. |
 |**Streaming**|Operators are pass-through operators. For example, `Table.SelectRows` with a simple filter can usually filter the results as they pass through the operator, and won’t need to gather all rows before moving the data. `Table.SelectColumns` and `Table.ReorderColumns` are other examples of these sort of operators. |
 |**Full scan**|Operators that need to gather all the rows before the data can move on to the next operator in the chain. For example, to sort data, Power Query needs to gather all the data. Other examples of full scan operators are `Table.Group`, `Table.NestedJoin`, and `Table.Pivot`. |
-| | |
 
 >[!TIP]
 >While not every transform is the same from a performance standpoint, in most cases, having fewer transforms is usually better.

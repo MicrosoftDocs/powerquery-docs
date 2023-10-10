@@ -4,23 +4,24 @@ description: Provides basic information, prerequisites, and instructions for usi
 author: bucaojit  
 ms.author: bezhan
 ms.topic: conceptual  
-ms.date: 5/23/2023  
+ms.date: 7/25/2023  
 ---
 
 # MongoDB Atlas SQL interface
 
-> [!Note]
+> [!NOTE]
 > The following connector article is provided by MongoDB, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the MongoDB website and use the support channels there.
 
 ## Summary
 
-| Item                               | Description                                  |
-|------------------------------------|----------------------------------------------|
-| Release State                      | Beta                                         |
-| Products                           | Power BI (Datasets)<br/>Power BI (Dataflows) |
-| Authentication Types Supported     | Database (Username/Password)                 |
+| Item                               | Description                                                             |
+|------------------------------------|-------------------------------------------------------------------------|
+| Release State                      | Beta                                                                    |
+| Products                           | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Authentication Types Supported     | Database (Username/Password)                                            |
 
 ## Prerequisites
+
 To use the MongoDB Atlas SQL connector, you must have an [Atlas federated database](https://www.mongodb.com/docs/atlas/data-federation/) setup.
 
 ### Obtaining connection information for your federated database instance
@@ -38,7 +39,7 @@ We also recommend that you install the MongoDB Atlas SQL ODBC Driver before usin
 
 ## Capabilities Supported
 
-* Import
+- Import
 
 ## Connect to MongoDB Atlas federated database using Atlas SQL interface from Power Query Desktop
 
@@ -53,19 +54,19 @@ To connect using the Atlas SQL interface:
 3. If you're connecting to the MongoDB Atlas SQL connector for the first time, a third-party notice is displayed. 
    Select **"Don't warn me again with this connector"** if you don't want this message to be displayed again.
 
-   Select **Continue**. 
+   Select **Continue**.
 
 4. In the MongoDB Atlas SQL window that appears, fill in the following values:
 
-   - The **MongoDB URI**. _Required_.   
+   - The **MongoDB URI**. _Required_.
      Use the MongoDB URI obtained [in the prerequisites](#obtaining-connection-information-for-your-federated-database-instance).  Make sure that it doesn't contain your username and password. URIs containing username and/or passwords are rejected.
-   -  Your federated **Database** name. _Required_  
+   - Your federated **Database** name. _Required_  
      Use the name of the federated database obtained [in the prerequisites](#obtaining-connection-information-for-your-federated-database-instance).
-   
+
    Select **OK**.  
 
    ![Atlas SQL connection dialogue](./media/mongodb/mongodb_connection_dialogue.png)
-   
+
 5. Enter your Atlas MongoDB Database access username and password and select **Connect**.  
 
    ![Authentication](./media/mongodb/mongodb_authentication.png)  
@@ -84,7 +85,7 @@ To connect using the Atlas SQL interface:
 
 1. Select **MongoDB Atlas SQL** from the **Power Query - Choose data source** page.
 2. On the **Connection settings** page, fill in the following values:
-    - The **MongoDB URI**. _Required_.   
+    - The **MongoDB URI**. _Required_.
       Use the MongoDB URI obtained [in the prerequisites](#obtaining-connection-information-for-your-federated-database-instance).  Make sure that it doesn't contain your username and password. URIs containing username and/or passwords are rejected.
     - Your federated **Database** name. _Required_  
       Use the name of the federated database obtained [in the prerequisites](#obtaining-connection-information-for-your-federated-database-instance).
@@ -107,7 +108,8 @@ Start by checking your credentials and that you have no network issues accessing
 ## Next steps
 
 You might also find the following information useful:
-* [Query with Atlas SQL](https://www.mongodb.com/docs/atlas/data-federation/query/query-with-sql/)
-* [Set Up and Query Data Federation](https://www.mongodb.com/docs/atlas/data-federation/)
-* [Schema Management](https://www.mongodb.com/docs/atlas/data-federation/query/sql/schema-management/)
-* [SQL Reference](https://www.mongodb.com/docs/atlas/data-federation/query/sql/reference/)
+
+- [Query with Atlas SQL](https://www.mongodb.com/docs/atlas/data-federation/query/query-with-sql/)
+- [Set Up and Query Data Federation](https://www.mongodb.com/docs/atlas/data-federation/)
+- [Schema Management](https://www.mongodb.com/docs/atlas/data-federation/query/sql/schema-management/)
+- [SQL Reference](https://www.mongodb.com/docs/atlas/data-federation/query/sql/powerbi/connect/)

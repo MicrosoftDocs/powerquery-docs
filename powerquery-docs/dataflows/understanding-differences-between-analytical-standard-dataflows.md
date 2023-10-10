@@ -3,7 +3,7 @@ title: Understanding the differences between dataflow types
 description: Understanding the differences between standard V1, V2 and analytical dataflows.
 author: bensack
 ms.topic: conceptual 
-ms.date: 1/6/2023 
+ms.date: 6/14/2023 
 ms.author: bensack 
 --- 
 
@@ -11,7 +11,7 @@ ms.author: bensack
 
 Dataflows are used to extract, transform, and load data to a storage destination where it can be leveraged for different scenarios. Because not all storage destinations share the same characteristics, some dataflow features and behaviors differ depending on the storage destination the dataflow loads data into. Before you create a dataflow, it's important to understand how the data is going to be used, and choose the storage destination according to the requirements of your solution.
 
-Selecting a storage destination of a dataflow determines the dataflow's type. A dataflow that loads data into Dataverse tables is categorized as a *standard dataflow*. Dataflows that load data to analytical entities is categorized as an *analytical dataflow*.
+Selecting a storage destination of a dataflow determines the dataflow's type. A dataflow that loads data into Dataverse tables is categorized as a *standard dataflow*. Dataflows that load data to analytical tables is categorized as an *analytical dataflow*.
 
 Dataflows created in Power BI are always analytical dataflows. Dataflows created in Power Apps can either be standard or analytical, depending on your selection when creating the dataflow.
 
@@ -69,31 +69,31 @@ The following articles discuss how to use AI functions in a dataflow:
 
 Note that the features listed above are Power BI specific and are not available when creating a dataflow in the Power Apps or Dynamics 365 customer insights portals.  
 
-### Computed entities
+### Computed tables
 
-One of the reasons to use a computed entity is the ability to process large amounts of data. The computed entity helps in those scenarios. If you have an entity in a dataflow, and another entity in the same dataflow uses the first entity's output, this will create a computed entity.
+One of the reasons to use a computed table is the ability to process large amounts of data. The computed table helps in those scenarios. If you have an table in a dataflow, and another table in the same dataflow uses the first table's output, this action creates a computed table.
 
-The computed entity helps with the performance of the data transformations. Instead of re-doing the transformations needed in the first entity multiple times, the transformation will be done only once in the computed entity. Then the result will be used multiple times in other entities.
+The computed table helps with the performance of the data transformations. Instead of re-doing the transformations needed in the first table multiple times, the transformation is done only once in the computed table. Then the result is used multiple times in other tables.
 
-![Computed entity in an analytical dataflow.](media/understanding-differences-between-analytical-standard-dataflows/computed-entity-in-dataflow.png)
+![Computed table in an analytical dataflow.](media/understanding-differences-between-analytical-standard-dataflows/computed-entity-in-dataflow.png)
 
-To learn more about computed entities, go to [Using computed entities on Power BI Premium](/power-bi/service-dataflows-computed-entities-premium).
+To learn more about computed tables, go to [Creating computed tables in dataflows](computed-tables.md).
 
-Computed entities are available only in an analytical dataflow.
+Computed tables are available only in an analytical dataflow.
 
 ## Standard vs. analytical dataflows
 
-The following table lists some differences between a standard entity and an analytical entity.
+The following table lists some differences between a standard table and an analytical table.
 
 | Operation               | Standard             | Analytical                    |
 | --------------------------------- | --- | ------------------------------------------------------------ |
-| How to create                     | Power Platform dataflows | Power BI dataflows<br />Power Platform dataflows by selecting the **Analytical Entity** checkbox when creating the dataflow |
+| How to create                     | Power Platform dataflows | Power BI dataflows<br />Power Platform dataflows by selecting the **Analytical entities only** checkbox when creating the dataflow |
 | Storage options                   | Dataverse      |Power BI provided Azure Data Lake storage for Power BI dataflows, Dataverse provided Azure Data Lake storage for Power Platform dataflows, or customer provided Azure Data Lake storage|
 | Power Query transformations       | Yes             |Yes                                                          |
 | AI functions                      | No              | Yes                                                          |
-| Computed entity                   | No              | Yes                                                          |
+| Computed table                   | No              | Yes                                                          |
 | Can be used in other applications | Yes, through Dataverse | Power BI dataflows: Only in Power BI<br />Power Platform dataflows or Power BI external dataflows: Yes, through Azure Data Lake Storage |
-| Mapping to standard Entity        | Yes              | Yes                                                         |
+| Mapping to standard table        | Yes              | Yes                                                         |
 | Incremental load                  | Default incremental-load<br />Possible to change using the **Delete rows that no longer exist in the query output** checkbox at the load settings | Default full-load <br />Possible to set up incremental refresh by setting up the incremental refresh in the dataflow settings |
 | Scheduled Refresh                 | Yes              | Yes, the possibility of notifying the dataflow owners upon the failure |
 

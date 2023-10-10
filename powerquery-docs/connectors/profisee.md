@@ -5,19 +5,19 @@ author: bezhan-msft
 ms.author: bezhan
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 8/5/2022
+ms.date: 7/14/2023
 LocalizationGroup: reference
 ---
 
-# Profisee (Beta)
+# Profisee
 
 >[!Note]
 >The following connector article is provided by Profisee, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the [Profisee support site](https://support.profisee.com/aspx/ProfiseeCustomerHome) and use the support channels there.
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | Beta |
-| Products | Power BI (datasets)<br>Power BI (dataflows)
+| Release State | General Availability |
+| Products | Power BI (Datasets)<br>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Organizational account |
 
 >[!Note]

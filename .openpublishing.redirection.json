@@ -434,6 +434,21 @@
       "source_path": "powerquery-docs/connectors/Azure Cosmos DB v2.md",
       "redirect_url": "/power-query/connectors/azure-cosmos-db-v2",
       "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/dataflows/computed-entities-scenarios.md",
+      "redirect_url": "/power-query/dataflows/computed-tables-scenarios",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/dataflows/computed-entities.md",
+      "redirect_url": "/power-query/dataflows/computed-tables",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/dataflows/linked-entities.md",
+      "redirect_url": "/power-query/dataflows/linked-tables",
+      "redirect_document_id": "true"
     }
       ]
 }

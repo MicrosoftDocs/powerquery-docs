@@ -3,7 +3,7 @@ title: Power Query Azure Analysis Services database connector
 description: Includes basic information about products that use the Azure Analysis Services database connector, supported authentication types, prerequisites, and connection instructions.
 author: dougklopfenstein
 ms.topic: conceptual
-ms.date: 10/5/2022
+ms.date: 7/13/2023
 ms.author: dougklo
 LocalizationGroup: reference
 ---
@@ -15,7 +15,7 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
+| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
 | Authentication Types Supported | Basic<br/>Microsoft account<br/>Organizational account<br/>Windows |
 | M Function Reference | [AnalysisServices.Database](/powerquery-m/analysisservices-database)<br/>[AnalysisServices.Databases](/powerquery-m/analysisservices-databases) |
 

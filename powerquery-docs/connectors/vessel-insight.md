@@ -3,7 +3,7 @@ title: Power Query Vessel Insight connector
 description: Provides basic information and prerequisites for the Vessel Insight connector, descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 2/3/2023
+ms.date: 7/14/2023
 ms.author: bezhan
 ---
 
@@ -17,7 +17,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (datasets)<br/>Power BI (Dataflows) |
+| Products | Power BI (datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Organizational account |
 
 ## Prerequisites
@@ -134,6 +134,5 @@ For more guidelines on accessing Vessel Insight data, go to [The Getting started
 
 You might also find the following Vessel Insight information useful:
 
-* [About Vessel Insight Power BI connector](https://www.kongsberg.com/digital/solutions/vessel-insight/vessel-insight-power-bi-connector/)
 * [About Vessel Insight](https://www.kongsberg.com/digital/solutions/vessel-insight/)
 * [Vessel Insight API](https://developer.kognif.ai/)
