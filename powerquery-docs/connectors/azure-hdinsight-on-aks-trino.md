@@ -38,21 +38,21 @@ To establish a connection, take the following steps:
 
    :::image type="content" source="media/azure-hdinsight-on-aks-trino/azure-hdinsight-on-aks-trino-get-data.png" alt-text="Screenshot of the Get data dialog with the Azure category and the Azure HDInsight on AKS Trino connector emphasized.":::
 
-3. In the **Azure HDInsight on AKS Trino** dialog that appears, provide the **Azure Trino URL** (Trino cluster URL).
+2. In the **Azure HDInsight on AKS Trino** dialog that appears, provide the **Azure Trino URL** (Trino cluster URL).
 
    :::image type="content" source="media/azure-hdinsight-on-aks-trino/azure-hdinsight-on-aks-trino-connect.png" alt-text="Screenshot of the Azure HDInsight on AKS Trino connection page.":::
 
-5. Select the connectivity mode: **Direct Query** (recommended for Trino big data) or **Import**.
+3. Select the connectivity mode: **Direct Query** (recommended for Trino big data) or **Import**.
 
    :::image type="content" source="media/azure-hdinsight-on-aks-trino/azure-hdinsight-on-aks-trino-querymode.png" alt-text="Screenshot of the data connection type section of the connection page with DirectQuery selected.":::
 
-6. Select OK.
+4. Select OK.
 
-7. If you're connecting to this Trino cluster for the first time, select **Sign in** to authenticate. Then select **Connect**.
+5. If you're connecting to this Trino cluster for the first time, select **Sign in** to authenticate. Then select **Connect**.
 
    :::image type="content" source="media/azure-hdinsight-on-aks-trino/azure-hdinsight-on-aks-trino-authentication.png" alt-text="Screenshot of the authentication dialog where you sign in to your organizational account.":::
 
-9. In **Navigator**, expand the catalog and schema to reveal the table you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
+6. In **Navigator**, expand the catalog and schema to reveal the table you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
 
    :::image type="content" source="media/azure-hdinsight-on-aks-trino/azure-hdinsight-on-aks-trino-navigator.png" alt-text="Screenshot of the Navigator dialog with the catalog and schema selected, and the data being displayed." lightbox="media/azure-hdinsight-on-aks-trino/azure-hdinsight-on-aks-trino-navigator.png":::
 
@@ -64,21 +64,21 @@ To connect to an Azure HDInsight on AKS Trino cluster from Power Query Online, t
 
    :::image type="content" source="media/azure-hdinsight-on-aks-trino/azure-hdinsight-on-aks-trino-online-get-data.png" alt-text="Screenshot of the Choose data source dialog with a search for Trino, and the Azure HDInsight on AKS Trino connector displayed.":::
 
-3. In the options that appear, provide the **Azure Trino URL**.
+2. In the options that appear, provide the **Azure Trino URL**.
 
-:::image type="content" source="media/azure-hdinsight-on-aks-trino/azure-hdinsight-on-aks-trino-online-connect.png" alt-text="Screenshot of the connection dialog for Azure HDInsight on AKS Trino.":::
+   :::image type="content" source="media/azure-hdinsight-on-aks-trino/azure-hdinsight-on-aks-trino-online-connect.png" alt-text="Screenshot of the connection dialog for Azure HDInsight on AKS Trino.":::
 
-5. If necessary, select the name of your on-premises data gateway.
+3. If necessary, select the name of your on-premises data gateway.
 
-6. To configure the connection options, select **Advanced options**. More information: [Connect using advanced options](#connect-using-advanced-options)
+4. To configure the connection options, select **Advanced options**. More information: [Connect using advanced options](#connect-using-advanced-options)
 
-7. If you're connecting to this Trino cluster for the first time select **Sign in**.
+5. If you're connecting to this Trino cluster for the first time, select **Sign in**.
 
-8. Select **Next** to continue.
+6. Select **Next** to continue.
 
-9. In **Navigator**, select the table you require, and then select **Transform data**.
+7. In **Navigator**, select the table you require, and then select **Transform data**.
 
-   :::image type="content" source="media/azure-hdinsight-on-aks-trino/azure-hdinsight-on-aks-trino-online-navigator.png" alt-text="Screenshot of the online navigator with the catlog and schema selected, and the data being displayed." lightbox="media/azure-hdinsight-on-aks-trino/azure-hdinsight-on-aks-trino-online-navigator.png":::
+   :::image type="content" source="media/azure-hdinsight-on-aks-trino/azure-hdinsight-on-aks-trino-online-navigator.png" alt-text="Screenshot of the online navigator with the catalog and schema selected, and the data being displayed." lightbox="media/azure-hdinsight-on-aks-trino/azure-hdinsight-on-aks-trino-online-navigator.png":::
 
 ## Connect using advanced options
 
