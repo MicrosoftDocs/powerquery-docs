@@ -352,7 +352,7 @@
           href: connectors/analyze-data-in-adls-gen2.md
       - name: Azure HDInsight
         href: connectors/azure-hdinsight.md
-      - name: Azure HDInsight on AKS Trino
+      - name: Azure HDInsight on AKS Trino (Beta)
         href: connectors/azure-hdinsight-on-aks-trino.md
       - name: "Azure SQL database"
         href: connectors/azure-sql-database.md
