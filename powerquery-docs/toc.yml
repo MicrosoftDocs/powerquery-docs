@@ -470,8 +470,8 @@
         href: connectors/parquet.md
       - name: "PDF"
         href: connectors/pdf.md
-      - name: "Planview OKR"
-        href: planview-okr.md
+      - name: "Planview OKR (Beta)"
+        href: connectors/planview-okr.md
       - name: "PostgreSQL"
         href: connectors/postgresql.md
       - name: "Profisee"
