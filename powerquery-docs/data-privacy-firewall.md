@@ -3,7 +3,7 @@ title: Behind the scenes of the Data Privacy Firewall
 description: Describes the purpose of the Data Privacy Firewall
 author: ehrenMSFT
 ms.topic: conceptual
-ms.date: 10/12/2023
+ms.date: 10/23/2023
 ms.author: ehvonleh
 ---
 
@@ -157,7 +157,9 @@ Here's a high-level summary of the partitioning logic.
       * Partitions are merged. In the resulting merged partitions, the following will be separate:
         * Partitions in different queries.
         * Partitions that don't reference other partitions (these are likely to access a data source).
-        * Partitions that reference other partitions (these are not allowed to access a data source).
+        * Partitions that reference other partitions (these should not access a data source).
+      * Special Case:
+        * The query's final output partition will not have other partitions merged into it.
 * Dynamic Phase
   * This phase depends on evaluation results, including information about data sources accessed by various partitions.
   * Trimming
