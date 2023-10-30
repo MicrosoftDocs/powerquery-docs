@@ -2,7 +2,7 @@
 title: List of all Power Query connectors
 description: List of all currently available Power Query connectors
 author: bezhan-msft
-ms.date: 7/14/2023
+ms.date: 10/30/2023
 ms.author: bezhan
 ms.custom: intro-internal
 ---
@@ -182,6 +182,7 @@ The connectors are listed in alphabetical order in separate tables for each lett
 
 | Connector | Excel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Power BI (Datasets) | Power BI (Dataflows) | Fabric (Dataflow Gen2) | Power Apps (Dataflows) | Customer<br/>Insights (Dataflows) | Analysis Services |
 | --- | --- | --- | --- | --- | --- | --- | --- |
+| [![Lakehouse (Beta).](media/index/lakehouse-64.png)<br/>**Lakehouse (Beta)**](lakehouse.md)<br/>By Microsoft | ![Not supported - Lakehouse in Excel](media/index/no.png) | ![Supported - Lakehouse in Power BI (Datasets)](media/index/yes.png) | ![Not supported - Lakehouse in Power BI (Dataflows)](media/index/no.png) | ![Supported - Lakehouse in Fabric (Dataflow Gen2)](media/index/yes.png) | ![Not supported - Lakehouse in Power Apps (Dataflows)](media/index/no.png) | ![Not supported - Lakehouse in Customer Insights (Dataflows)](media/index/no.png) | ![Not supported - Lakehouse in Analysis Services](media/index/no.png)
 | ![Linkar PICK Style/MultiValue Databases (Beta).](media/index/linkar-connector-64.png)<br/>**Linkar PICK Style/MultiValue Databases (Beta)**<br/>By Kosday Solutions | ![Not supported - Linkar PICK Style/MultiValue Databases (Beta) in Excel](media/index/no.png)  | ![Supported - Linkar PICK Style/MultiValue Databases (Beta) in Power BI (Datasets)](media/index/yes.png) | ![Supported - Linkar PICK Style/MultiValue Databases (Beta) in Power BI (Dataflows)](media/index/yes.png) | ![Supported - Linkar PICK Style/MultiValue Databases (Beta) in Fabric (Dataflow Gen2)](media/index/yes.png) | ![Not supported - Linkar PICK Style/MultiValue Databases (Beta) in Power Apps (Dataflows)](media/index/no.png)  | ![Not supported - Linkar PICK Style/MultiValue Databases (Beta) in Customer Insights (Dataflows)](media/index/no.png)  | ![Not supported - Linkar PICK Style/MultiValue Databases (Beta) in Analysis Services](media/index/no.png)  |
 | [![LinkedIn Sales Navigator (Beta).](media/index/li-64.png)<br/>**LinkedIn Sales Navigator (Beta)**](linkedin-sales-navigator.md)<br/>By Microsoft | ![Not supported - LinkedIn Sales Navigator (Beta) in Excel](media/index/no.png)  | ![Supported - LinkedIn Sales Navigator (Beta) in Power BI (Datasets)](media/index/yes.png) | ![Not supported - LinkedIn Sales Navigator (Beta) in Power BI (Dataflows)](media/index/no.png) | ![Not supported - LinkedIn Sales Navigator (Beta) in Fabric (Dataflow Gen2)](media/index/no.png) | ![Not supported - LinkedIn Sales Navigator (Beta) in Power Apps (Dataflows)](media/index/no.png)  | ![Not supported - LinkedIn Sales Navigator (Beta) in Customer Insights (Dataflows)](media/index/no.png)  | ![Not supported - LinkedIn Sales Navigator (Beta) in Analysis Services](media/index/no.png)  |
 
