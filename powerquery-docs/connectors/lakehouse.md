@@ -35,7 +35,7 @@ To get data from a Lakehouse in Power BI Desktop:
 
 2. In the **OneLake data hub**, select the lakehouse you want to connect to. Optionally, you can use the **All**, **My data**, or **Endorsed in your org** buttons to filter the Lakehouses displayed in the dialog. Then select **Connect**.
 
-   :::image type="content" source="media/lakehouse/onelake-data-hub.png" alt-text="Screenshot of the OneLake data hub dialog with the all button selected, and a list of all the available Lakehouses.":::
+   :::image type="content" source="media/lakehouse/onelake-data-hub.png" alt-text="Screenshot of the OneLake data hub dialog with the all button selected, and a list of all the available Lakehouses." lightbox="media/lakehouse/onelake-data-hub.png":::
 
    > [!NOTE]
    > You can also select **Choose SQL endpoint** to select the SQL endpoint of the Lakehouse.
@@ -52,12 +52,12 @@ To get data from a Lakehouse in Power Query Online:
 
    :::image type="content" source="media/lakehouse/pqo-select-data-source.png" alt-text="Screenshot of the new source page, with the Microsoft Fabric category selected, and the Lakehouse connector emphasized." lightbox="media/lakehouse/pqo-select-data-source.png":::
 
-1. In **Connect to data source**, select **Sign in** to sign in to your organizational account.
+2. In **Connect to data source**, select **Sign in** to sign in to your organizational account.
 
-   :::image type="content" source="media/lakehouse/connect-data-source.png" alt-text="Screenshot of the connect to data source screen." lightbox="media/lakehouse/connect-data-source.png":::
+   :::image type="content" source="media/lakehouse/connect-data-source.png" alt-text="Screenshot of the connect to data source screen.":::
 
-1. Once you've signed in, select **Next**.
+3. Once you've signed in, select **Next**.
 
-1. In **Choose data**, select the data items that you want to transform, and then select **Create**.
+4. In **Choose data**, select the data items that you want to transform, and then select **Create**.
 
    :::image type="content" source="media/lakehouse/choose-data-item.png" alt-text="Screenshot of the choose data screen with the test examples item selected and the corresponding data on the right side." lightbox="media/lakehouse/choose-data-item.png":::
