@@ -1,7 +1,7 @@
-- name: Docs
-  tocHref: /
-  topicHref: /
+- name: Power Platform
+  tocHref: /power-query/
+  topicHref: /power-platform/index
   items:
   - name: Power Query
     tocHref: /power-query/
-    topicHref: /power-query/
+    topicHref: /power-query/index
