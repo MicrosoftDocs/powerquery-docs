@@ -14,7 +14,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)|
+| Products | Power BI (Datasets)<br/>Fabric (Dataflow Gen2)|
 | Authentication types | Organizational account |
 
 ## Prerequisites

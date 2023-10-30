@@ -560,6 +560,8 @@
         href: connectors/usercube.md
       - name: "Vessel Insight"
         href: connectors/vessel-insight.md
+      - name: "Warehouse"
+        href: connectors/warehouse.md
       - name: "Web"
         items:
         - name: "Connect to Web data"
