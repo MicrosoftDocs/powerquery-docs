@@ -356,6 +356,8 @@
         href: connectors/azure-hdinsight-on-aks-trino.md
       - name: "Azure SQL database"
         href: connectors/azure-sql-database.md
+      - name: "Azure Resource Graph"
+        href: connectors/azure-resource-graph.md
       - name: "Azure Synapse Analytics (SQL DW)"
         href: connectors/azure-sql-data-warehouse.md
       - name: "Azure Synapse Analytics workspace (Beta)"
