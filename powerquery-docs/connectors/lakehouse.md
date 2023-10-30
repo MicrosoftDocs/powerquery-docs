@@ -48,7 +48,7 @@ To get data from a Lakehouse in Power BI Desktop:
 
 To get data from a Lakehouse in Power Query Online:
 
-1. From the **New source** page, select **Microsoft Fabric** > **Lakehouse**.
+1. From the **New source** page, select **Microsoft Fabric** > **Lakehouse**. More information: [Where to get data](../where-to-get-data.md)
 
    :::image type="content" source="media/lakehouse/pqo-select-data-source.png" alt-text="Screenshot of the new source page, with the Microsoft Fabric category selected, and the Lakehouse connector emphasized." lightbox="media/lakehouse/pqo-select-data-source.png":::
 
