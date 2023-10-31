@@ -1,5 +1,5 @@
 ---
-title: Azure Resource Graph
+title: Azure Resource Graph (Preview)
 description: Includes basic information, prerequisites, and information on how to connect to Azure Resource Graph.
 
 author: alhudso-msft
@@ -9,13 +9,13 @@ ms.author: alhudso
 
 ---
 
-# Azure Resource Graph
+# Azure Resource Graph (Preview)
 
 ## Summary
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | General Availability |
+| Release State | Public Preview |
 | Products | Power BI Datasets (Desktop + Service)</br>Power BI Dataflow<br/>Fabric Dataflow Gen 2 |
 | Authentication Types Supported | Organizational Account |
 
