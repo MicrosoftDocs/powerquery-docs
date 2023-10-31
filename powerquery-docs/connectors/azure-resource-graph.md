@@ -43,6 +43,20 @@ To connect to Azure Resource Graph from Power Query Desktop:
 
 4. In **Navigator**, select the tables you require, then either load or transform the data.
 
+# Connect to Azure Resource Graph from Power Query Online
+
+To connect to Azure Resource Graph from Power Query Online:
+
+1. In **Choose data source**, search for **Azure Resource Graph**, and then select **Azue Resource Graph**. More information: [Where to get data](../where-to-get-data.md)
+
+2. In **Connect to data source**, fill in the query and any optional fields, such as **Scope**.
+
+3. Sign in to your organizational account.
+
+4. When you've successfully signed in, select **Next**.
+
+5. In **Choose data**, select the data you require, and then select **Transform Data**.
+
 >[!Note]
 > Expect longer load times for large query results.
 
