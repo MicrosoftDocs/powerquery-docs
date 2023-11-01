@@ -80,7 +80,7 @@ The following table lists all of the advanced options you can set in Power Query
 | Use Storage Api | A flag that enables using the [Storage API of Google BigQuery](https://cloud.google.com/bigquery/docs/reference/storage). This option is true by default. This option can be set to false to not use the Storage API and use REST APIs instead. |
 | Connection timeout duration | The standard connection setting (in seconds) that controls how long Power Query waits for a connection to complete. You can change this value if your connection doesn't complete before 15 seconds (the default value.) |
 | Command timeout duration | How long Power Query waits for a query to complete and return results. The default depends on the driver default. You can enter another value in minutes to keep the connection open longer. |
-| Audience Uri | |
+| Audience Uri | The URI that contains the *\<workforce pool ID>* that must be changed to the workforce-pool name used when setting up the [OIDC configuration](#oidc-configurations). The format for the Audience Uri value is `//iam.googleapis.com/locations/global/workforcePools/<workforce pool ID>/providers/azuread`. The default value for the *\<workforce pool ID>* is `powerquery-<TenantId>`, where *\<TenantId>* is your current Power BI tenant ID. If you update the Audience Uri, the string you enter will be used as-is. |
 | ProjectID | The project that you want to run native queries on. This option is only available in Power Query Desktop. |
 | Native query | For information, go to [Import data from a database using native database query](../native-database-query.md). In this version of native database query functionality, you need to use fully qualified table names in the format `Database.Schema.Table`, for example `SELECT * FROM DEMO_DB.PUBLIC.DEMO_TABLE`. This option is only available in Power Query Desktop. |
 
@@ -92,7 +92,7 @@ This section describes any limitations or considerations of the Google BigQuery 
 
 ### OIDC configurations
 
-The Google BigQuery (Azure AD) connector utilizes Azure AD JWT tokens to connect Azure AD-based authentication with Google's Workforce Federation feature. So, the setup on the authentication side must be an OIDC-based set up to align with the Azure AD JWT tokens. Reach out to your Google BigQuery point-of-contact for further information on authentication setup and support on the Google side. 
+The Google BigQuery (Azure AD) connector utilizes Azure AD JWT tokens to connect Azure AD-based authentication with Google's Workforce Federation feature. So, the setup on the authentication side must be an [OIDC-based set up](https://cloud.google.com/sdk/gcloud/reference/iam/workforce-pools/providers/create-oidc) to align with the Azure AD JWT tokens. Reach out to your Google BigQuery point-of-contact for further information on authentication setup and support on the Google side.
 
 ### Connecting to Google BigQuery (Azure AD) in Power BI Desktop
 
