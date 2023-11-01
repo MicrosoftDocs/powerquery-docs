@@ -392,6 +392,8 @@
         href: connectors/dynamics-365-online.md
       - name: "Eduframe (Beta)"
         href: connectors/eduframe.md
+      - name: "Emplifi Metrics (Beta)"
+        href: connectors/emplifi-metrics.md
       - name: "EQuIS"
         href: connectors/equis.md
       - name: "Essbase"
