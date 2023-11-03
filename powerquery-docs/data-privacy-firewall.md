@@ -154,7 +154,7 @@ Here's a high-level summary of the partitioning logic.
       * Note that "removing" a partition effectively includes it in whatever other partitions reference it.
       * Trimming parameter partitions allows parameter references used within data source function calls (for example, `Web.Contents(myUrl)`) to work, instead of throwing "partition can't reference data sources and other steps" errors.
     * Grouping (Static)
-      * Partitions are merged. The goal is to merge the partitions in bottom-up dependency order so that in the resulting merged partitions, the following will be separate:
+      * Partitions are merged in bottom-up dependency order. In the resulting merged partitions, the following will be separate:
         * Partitions in different queries
         * Partitions that don't reference other partitions (and are thus allowed to access a data source)
         * Partitions that reference other partitions (and are thus prohibited from accessing a data source)
