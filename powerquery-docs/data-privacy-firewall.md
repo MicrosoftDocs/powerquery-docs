@@ -3,7 +3,7 @@ title: Behind the scenes of the Data Privacy Firewall
 description: Describes the purpose of the Data Privacy Firewall
 author: ehrenMSFT
 ms.topic: conceptual
-ms.date: 1/9/2023
+ms.date: 11/3/2023
 ms.author: ehvonleh
 ---
 
@@ -154,9 +154,10 @@ Here's a high-level summary of the partitioning logic.
       * Note that "removing" a partition effectively includes it in whatever other partitions reference it.
       * Trimming parameter partitions allows parameter references used within data source function calls (for example, `Web.Contents(myUrl)`) to work, instead of throwing "partition can't reference data sources and other steps" errors.
     * Grouping (Static)
-      * Partitions are merged, while maintaining separation between:
+      * Partitions are merged in bottom-up dependency order. In the resulting merged partitions, the following will be separate:
         * Partitions in different queries
-        * Partitions that reference other partitions vs. those that don't
+        * Partitions that don't reference other partitions (and are thus allowed to access a data source)
+        * Partitions that reference other partitions (and are thus prohibited from accessing a data source)
 * Dynamic Phase
   * This phase depends on evaluation results, including information about data sources accessed by various partitions.
   * Trimming
