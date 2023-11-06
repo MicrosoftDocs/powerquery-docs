@@ -110,7 +110,7 @@ Alternatively, as the owner of the data source and connector, you can submit you
 ### Power Query Online
 
 >[!NOTE]
->The Power Query team is working hard towards enabling all Power QUery certified connectors in the Power Query Online experience.
+>The Power Query team is working hard towards enabling all Power Query certified connectors in the Power Query Online experience.
 
 Only Power Query certified connectors are shown in the Power Query Online experience. To learn more about the Power Query connector certification program, go to [Power Query Connector Certification](ConnectorCertification.md).
 
