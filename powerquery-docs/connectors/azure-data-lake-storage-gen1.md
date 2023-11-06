@@ -22,7 +22,7 @@ ms.author: bezhan
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Excel</br>Power BI (Datasets)<br/>Analysis Services |
-| Authentication Types Supported | Organizational Account |
+| Authentication Types Supported | Organizational Account <br/>Service Principal |
 | Function Reference Documentation | [AzureStorage.DataLake](/powerquery-m/azurestorage-datalake)<br/>[AzureStorage.DataLakeContents](/powerquery-m/azurestorage-datalakecontents) |
 
 >[!Note]
