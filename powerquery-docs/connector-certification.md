@@ -49,7 +49,7 @@ As M is a versatile language that, as seen in [Handling Authentication](handling
 
 From a developer's perspective, developers need to [self-sign](./handlingconnectorsigning.md) their custom connector and provide their users with the information (thumbprint) to securely load it.
 
-From a user's perspective, users need to use the thumbprint from the developer to securely [trust and load the custom connector](/power-bi/connect-data/desktop-trusted-third-party-connectors) for use. Alternatively, users can opt to lower their security settings to allow loading of code not certified by Microsoft or another developer, but this isn't recommended.
+From a user's perspective, users need to use the thumbprint from the developer to securely [trust and load the custom connector](/power-bi/connect-data/desktop-trusted-third-party-connectors) for use. Alternatively, users can opt to lower their security settings to allow loading of code not certified by Microsoft or another developer, but this option isn't recommended.
 
 ## Certification Overview
 
@@ -63,7 +63,7 @@ To ensure the best experience for our customers, we only consider connectors tha
 
 * The developer must provide an estimate for usage. We suggest that developers of connectors for very boutique products use our [connector self-signing capabilities](#custom-connector-distribution) to provide them directly to the customer.
 
-* The connector must be already made available to customers directly to fulfill a user need or business scenario. This can be done using a Private Preview program by distributing the completed connector directly to end users and organizations through [self-signing](#custom-connector-distribution). Each user or organization should be able to provide feedback and validation that there's a business need for the connector and that the connector is working successfully to fulfill their business requirements.
+* The connector must be already made available to customers directly to fulfill a user need or business scenario. This criteria can be fulfilled using a Private Preview program by distributing the completed connector directly to end users and organizations through [self-signing](#custom-connector-distribution). Each user or organization should be able to provide feedback and validation that there's a business need for the connector and that the connector is working successfully to fulfill their business requirements.
 
 * The connector must be working successfully at an anticipated level of usage by customers.
 
@@ -75,7 +75,7 @@ These prerequisites exist to ensure that connectors undergoing certification hav
 
 Certified connectors are released with monthly Power BI Desktop releases, so the deadlines for each release work back from each Power BI Desktop release date. The expected duration of the certification process from registration to release varies depending on the quality and complexity of the connector submission. Microsoft doesn't provide any specific timeline guarantees with regard to any connector review and approval. The hard deadlines for each connector review is outlined in the following steps, but Microsoft doesn't guarantee adherence to these timelines. 
 
-* **Registration**: notification of intent to certify your custom connector. This must occur by the 15th of the month, two months before the targeted Power BI desktop release.
+* **Registration**: notification of intent to certify your custom connector. This registration must occur by the 15th of the month, two months before the targeted Power BI desktop release.
   * For example, for the April Power BI Desktop release, the deadline would be February 15th.
 
 * **Submission**: submission of connector files for Microsoft review. This submission must occur by the 1st of the month before the targeted Power BI desktop release.
@@ -146,7 +146,7 @@ There are specific security considerations that your connector must handle.
 
 * If [Diagnostics.* functions](/powerquery-m/diagnostics-trace) are used:
   * Validate what is being traced; data **must not contain PII or large amounts of unnecessary data**.
-  * If you implemented significant tracing in development, you should implement a variable or feature flag that determines if tracing should be on. This must be **turned off** prior to submitting for certification.
+  * If you implemented significant tracing in development, you should implement a variable or feature flag that determines if tracing should be on. This tracing must be **turned off** prior to submitting for certification.
 
 * If ```Expression.Evaluate()``` is used:
   * Validate where the expression is coming from and what it is (that is, can dynamically construct calls to `Extension.CurrentCredentials()` and so on).
