@@ -37,7 +37,7 @@ We work with partners to try to make sure that they have support in maintenance,
 
 Certified connectors are bundled out-of-box in Power BI Desktop, and deployed to Power BI Service, Power BI dataflows, and Power BI datamarts. Custom connectors are only supported in Power BI datasets and need to be loaded in Power BI Desktop, as described in [Loading your extension in Power BI Desktop](samples/trippin/1-odata/readme.md#loading-your-extension-in-power-bi-desktop). Both certified and custom connectors can be refreshed through Power BI Desktop or Power BI Service through using an on-premises data gateway by implementing a [TestConnection](samples/trippin/9-testconnection/readme.md). The on-premises data gateway is required for custom connectors.
 
-Certified connectors in Power BI Desktop with a `TestConnection` implementation also support end-to-end refresh through the cloud (Power BI Service) without the need of an on-premises data gateway. The Power BI service environment essentially hosts a “cloud gateway” that runs similar to the on-premises gateway. After certification, we'll deploy your connector to this environment so that it's available to all Power BI customers.
+Certified connectors in Power BI Desktop with a `TestConnection` implementation also support end-to-end refresh through the cloud (Power BI Service) without the need of an on-premises data gateway. The Power BI service environment essentially hosts a “cloud gateway” that runs similar to the on-premises gateway. After certification, we deploy your connector to this environment so that it's available to all Power BI customers.
 
 Both custom and certified connectors with extra components (for example, ODBC driver) need the extra component to be installed on the end user machine and require the on-premises data gateway, unless the extra component is deployed to Power BI cloud. Currently, we aren't certifying and deploying any new extra components to Power BI cloud, so the certification of connectors with a dependency on an extra component won't remove the on-premises data gateway requirement.
 
@@ -76,13 +76,13 @@ These prerequisites exist to ensure that connectors undergoing certification hav
 Certified connectors are released with monthly Power BI Desktop releases, so the deadlines for each release work back from each Power BI Desktop release date. The expected duration of the certification process from registration to release varies depending on the quality and complexity of the connector submission. Microsoft doesn't provide any specific timeline guarantees with regard to any connector review and approval. The hard deadlines for each connector review is outlined in the following steps, but Microsoft doesn't guarantee adherence to these timelines. 
 
 * **Registration**: notification of intent to certify your custom connector. This registration must occur by the 15th of the month, two months before the targeted Power BI desktop release.
-  * For example, for the April Power BI Desktop release, the deadline would be February 15th.
+  * For example, for the April Power BI Desktop release, the deadline would be February 15.
 
 * **Submission**: submission of connector files for Microsoft review. This submission must occur by the 1st of the month before the targeted Power BI desktop release.
-  * For example, for the April Power BI Desktop release, the deadline would be March 1st.
+  * For example, for the April Power BI Desktop release, the deadline would be March 1.
 
 * **Technical Review**: finalization of the connector files, passing Microsoft review and certification. This review must occur by the 15th of the month before the targeted Power BI Desktop release.
-  * For example, for the April Power BI Desktop release, the deadline would be March 15th.
+  * For example, for the April Power BI Desktop release, the deadline would be March 15.
 
 Due to the complexity of the technical reviews and potential delays, rearchitecture, and testing issues, **we highly recommend submitting early with a long lead time for the initial release and certification**. If you feel like your connector is important to deliver to a few customers with minimal overhead, we recommend [self-signing](#custom-connector-distribution) and providing it that way.
 
@@ -104,7 +104,7 @@ Ensure the connector files that you submit include all of the following:
   * If there's no set schema (for example, databases), the report needs to include a query for each "type" of table that the connector may handle.
 
 * Test account to your data source
-  * We'll use the test account to test and troubleshoot your connector.
+  * We use the test account to test and troubleshoot your connector.
   * Provide a test account that is persistent, so we can use the same account to certify any future updates.
 
 * Testing instructions
