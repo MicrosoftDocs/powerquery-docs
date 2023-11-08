@@ -2,9 +2,9 @@
 title: Azure Resource Graph (Preview)
 description: Includes basic information, prerequisites, and information on how to connect to Azure Resource Graph.
 
-author: alhudso-msft
+author: ahudson8
 ms.topic: conceptual
-ms.date: 10/30/2023
+ms.date: 11/08/2023
 ms.author: alhudso
 
 ---
@@ -19,11 +19,14 @@ ms.author: alhudso
 | Products | Power BI Datasets (Desktop + Service)</br>Power BI Dataflow<br/>Fabric Dataflow Gen 2 |
 | Authentication Types Supported | Organizational Account |
 
+> [!NOTE]
+> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+
 ## Prerequisites
 
 * An Azure subscription. Go to [Get Azure free trial](https://azure.microsoft.com/pricing/free-trial/).
 
-* You must have appropriate rights in [Azure role-based access control (Azure RBAC)](https://learn.microsoft.com/en-us/azure/role-based-access-control/overview) with at least read access to the resources you want to query.
+* You must have appropriate rights in [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview) with at least read access to the resources you want to query.
 
 ## Capabilities supported
 
@@ -43,11 +46,11 @@ To connect to Azure Resource Graph from Power Query Desktop:
 
 4. In **Navigator**, select the tables you require, then either load or transform the data.
 
-# Connect to Azure Resource Graph from Power Query Online
+## Connect to Azure Resource Graph from Power Query Online
 
 To connect to Azure Resource Graph from Power Query Online:
 
-1. In **Choose data source**, search for **Azure Resource Graph**, and then select **Azue Resource Graph**. More information: [Where to get data](../where-to-get-data.md)
+1. In **Choose data source**, search for **Azure Resource Graph**, and then select **Azure Resource Graph**. More information: [Where to get data](../where-to-get-data.md)
 
 2. In **Connect to data source**, fill in the query and any optional fields, such as **Scope**.
 
@@ -73,5 +76,5 @@ Power Query provides an advanced option that you can add to your query if needed
 
 ## See also
 
-* [Azure Resource Graph Overview](https://learn.microsoft.com/en-us/azure/governance/resource-graph/overview)
-* [Starter Azure Resource Graph query samples](https://learn.microsoft.com/en-us/azure/governance/resource-graph/samples/starter?tabs=azure-cli)
+* [Azure Resource Graph Overview](/azure/governance/resource-graph/overview)
+* [Starter Azure Resource Graph query samples](/azure/governance/resource-graph/samples/starter?tabs=azure-cli)
