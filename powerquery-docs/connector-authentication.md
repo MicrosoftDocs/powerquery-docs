@@ -121,7 +121,7 @@ Host: pbi.crm.dynamics.com
 Connection: Keep-Alive
 ```
 
-The service is then expected to respond with a **401** response with a **WWW_Authenticate** header indicating the Azure AD authorization URI to use. This response should include the tenant to sign into, or **/common/** if the resource isn’t associated with a specific tenant.
+The service is then expected to respond with a **401** response with a **WWW-Authenticate** header indicating the Azure AD authorization URI to use. This response should include the tenant to sign into, or **/common/** if the resource isn’t associated with a specific tenant.
 
 ```
 HTTP/1.1 401 Unauthorized
