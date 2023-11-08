@@ -3,7 +3,7 @@ title: Power Query Dataflow connector
 description: Provides basic information and connection instructions for connecting to a Dataflow.
 author: Luitwieler
 ms.topic: conceptual
-ms.date: 7/13/2023
+ms.date: 11/03/2023
 ms.author: jeluitwi
 ---
 
@@ -83,6 +83,10 @@ You're probably using a Dataverse table as the destination for your standard dat
 _**There's a difference in the data when I remove duplicates in dataflows&mdash;how can I resolve this?**_
 
 There could be a difference in data between design-time and refresh-time. We don't guarantee which instance is being kept during refresh time. For information on how to avoid inconsistencies in your data, go to [Working with duplicates](../working-with-duplicates.md).
+
+_**I'm using the Dataflow connector in DirectQuery mode&mdash;is case insensitive search supported?**_
+
+No, case insensitive search on columns isn't supported in DirectQuery mode. If you need to use case insensitive search, you can use import mode instead. For more information, go to [DirectQuery in Power BI](/power-bi/connect-data/desktop-directquery-about).
 
 _**I'm getting data via the dataflow connector, but I'm receiving a 429 error code&mdash;how can I resolve this?**_
 
