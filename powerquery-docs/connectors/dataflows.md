@@ -84,9 +84,9 @@ _**There's a difference in the data when I remove duplicates in dataflows&mdash;
 
 There could be a difference in data between design-time and refresh-time. We don't guarantee which instance is being kept during refresh time. For information on how to avoid inconsistencies in your data, go to [Working with duplicates](../working-with-duplicates.md).
 
-_**I am using the Dataflow connector in direct query mode, is case insensitive search supported?**_
+_**I'm using the Dataflow connector in DirectQuery mode&mdash;is case insensitive search supported?**_
 
-No, case insensitive search on columns is not supported in direct query mode. If you need to use case insensitive search, you can use import mode instead. For more information, see [DirectQuery in Power BI](/power-bi/connect-data/desktop-directquery-about).
+No, case insensitive search on columns isn't supported in DirectQuery mode. If you need to use case insensitive search, you can use import mode instead. For more information, go to [DirectQuery in Power BI](/power-bi/connect-data/desktop-directquery-about).
 
 _**I'm getting data via the dataflow connector, but I'm receiving a 429 error code&mdash;how can I resolve this?**_
 
