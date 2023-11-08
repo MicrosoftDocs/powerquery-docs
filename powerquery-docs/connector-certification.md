@@ -161,6 +161,13 @@ Ensure that your connector is code complete and has been tested in both authorin
 
 To get started, complete our [registration form](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2DcOSp0ibhKolmfRqZYZ51UN1MzQ0ZYNVlIMUM4MUQ1SUpPTEo3SFg1VC4u), and a Microsoft contact will reach out to begin the process.
 
+## After Certification
+
+After your connector has been certified and released through Power BI Desktop and Power BI Service, there are a few things that you should do to ensure you can correctly use the production-deployed publicly-available certified connector. 
+* You and end users should use the certified connector version included in Power BI Desktop, and the on-premises data gateway, and remove any existing .mez or .pqx files (custom connectors) used prior to certification. Failure to do so may result in your testing custom connector being used by Power Query inadvertently instead of the newly certified connector.
+* Custom connectors should only be used to test new versions of the connector.
+* When working with end users and customers, ensure that they understand the custom connector version used in testing prior to certification should be removed after testing is complete and the new certified connector version is available.
+
 ## Template Apps (Recommended)
 
 Once you've developed a connector to a data source, consider helping customers get up and running quickly by creating a [template app](/power-bi/service-template-apps-overview). A template app provides customers a prebuilt report connected to their data that they can use out-of-the-box or customize as necessary.
