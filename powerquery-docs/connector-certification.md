@@ -37,7 +37,7 @@ We work with partners to try to make sure that they have support in maintenance,
 
 Certified connectors are bundled out-of-box in Power BI Desktop, and deployed to Power BI Service, Power BI dataflows, and Power BI datamarts. Custom connectors are only supported in Power BI datasets and need to be loaded in Power BI Desktop, as described in [Loading your extension in Power BI Desktop](samples/trippin/1-odata/readme.md#loading-your-extension-in-power-bi-desktop). Both certified and custom connectors can be refreshed through Power BI Desktop or Power BI Service through using an on-premises data gateway by implementing a [TestConnection](samples/trippin/9-testconnection/readme.md). The on-premises data gateway is required for custom connectors.
 
-Certified connectors in Power BI Desktop with a `TestConnection` implementation also support end-to-end refresh through the cloud (Power BI Service) without the need of an on-premises data gateway. The Power BI service environment essentially hosts a “cloud gateway” that runs similar to the on-premises gateway. After certification, we'll deploy your connector to this environment so that it's available to all Power BI customers.
+Certified connectors in Power BI Desktop with a `TestConnection` implementation also support end-to-end refresh through the cloud (Power BI Service) without the need of an on-premises data gateway. The Power BI service environment essentially hosts a “cloud gateway” that runs similar to the on-premises gateway. After certification, we deploy your connector to this environment so that it's available to all Power BI customers.
 
 Both custom and certified connectors with extra components (for example, ODBC driver) need the extra component to be installed on the end user machine and require the on-premises data gateway, unless the extra component is deployed to Power BI cloud. Currently, we aren't certifying and deploying any new extra components to Power BI cloud, so the certification of connectors with a dependency on an extra component won't remove the on-premises data gateway requirement.
 
@@ -49,7 +49,7 @@ As M is a versatile language that, as seen in [Handling Authentication](handling
 
 From a developer's perspective, developers need to [self-sign](./handlingconnectorsigning.md) their custom connector and provide their users with the information (thumbprint) to securely load it.
 
-From a user's perspective, users need to use the thumbprint from the developer to securely [trust and load the custom connector](/power-bi/connect-data/desktop-trusted-third-party-connectors) for use. Alternatively, users can opt to lower their security settings to allow loading of code not certified by Microsoft or another developer, but this isn't recommended.
+From a user's perspective, users need to use the thumbprint from the developer to securely [trust and load the custom connector](/power-bi/connect-data/desktop-trusted-third-party-connectors) for use. Alternatively, users can opt to lower their security settings to allow loading of code not certified by Microsoft or another developer, but this option isn't recommended.
 
 ## Certification Overview
 
@@ -63,7 +63,7 @@ To ensure the best experience for our customers, we only consider connectors tha
 
 * The developer must provide an estimate for usage. We suggest that developers of connectors for very boutique products use our [connector self-signing capabilities](#custom-connector-distribution) to provide them directly to the customer.
 
-* The connector must be already made available to customers directly to fulfill a user need or business scenario. This can be done using a Private Preview program by distributing the completed connector directly to end users and organizations through [self-signing](#custom-connector-distribution). Each user or organization should be able to provide feedback and validation that there's a business need for the connector and that the connector is working successfully to fulfill their business requirements.
+* The connector must be already made available to customers directly to fulfill a user need or business scenario. This criteria can be fulfilled using a Private Preview program by distributing the completed connector directly to end users and organizations through [self-signing](#custom-connector-distribution). Each user or organization should be able to provide feedback and validation that there's a business need for the connector and that the connector is working successfully to fulfill their business requirements.
 
 * The connector must be working successfully at an anticipated level of usage by customers.
 
@@ -75,14 +75,14 @@ These prerequisites exist to ensure that connectors undergoing certification hav
 
 Certified connectors are released with monthly Power BI Desktop releases, so the deadlines for each release work back from each Power BI Desktop release date. The expected duration of the certification process from registration to release varies depending on the quality and complexity of the connector submission. Microsoft doesn't provide any specific timeline guarantees with regard to any connector review and approval. The hard deadlines for each connector review is outlined in the following steps, but Microsoft doesn't guarantee adherence to these timelines. 
 
-* **Registration**: notification of intent to certify your custom connector. This must occur by the 15th of the month, two months before the targeted Power BI desktop release.
-  * For example, for the April Power BI Desktop release, the deadline would be February 15th.
+* **Registration**: notification of intent to certify your custom connector. This registration must occur by the 15th of the month, two months before the targeted Power BI desktop release.
+  * For example, for the April Power BI Desktop release, the deadline would be February 15.
 
 * **Submission**: submission of connector files for Microsoft review. This submission must occur by the 1st of the month before the targeted Power BI desktop release.
-  * For example, for the April Power BI Desktop release, the deadline would be March 1st.
+  * For example, for the April Power BI Desktop release, the deadline would be March 1.
 
 * **Technical Review**: finalization of the connector files, passing Microsoft review and certification. This review must occur by the 15th of the month before the targeted Power BI Desktop release.
-  * For example, for the April Power BI Desktop release, the deadline would be March 15th.
+  * For example, for the April Power BI Desktop release, the deadline would be March 15.
 
 Due to the complexity of the technical reviews and potential delays, rearchitecture, and testing issues, **we highly recommend submitting early with a long lead time for the initial release and certification**. If you feel like your connector is important to deliver to a few customers with minimal overhead, we recommend [self-signing](#custom-connector-distribution) and providing it that way.
 
@@ -104,7 +104,7 @@ Ensure the connector files that you submit include all of the following:
   * If there's no set schema (for example, databases), the report needs to include a query for each "type" of table that the connector may handle.
 
 * Test account to your data source
-  * We'll use the test account to test and troubleshoot your connector.
+  * We use the test account to test and troubleshoot your connector.
   * Provide a test account that is persistent, so we can use the same account to certify any future updates.
 
 * Testing instructions
@@ -146,7 +146,7 @@ There are specific security considerations that your connector must handle.
 
 * If [Diagnostics.* functions](/powerquery-m/diagnostics-trace) are used:
   * Validate what is being traced; data **must not contain PII or large amounts of unnecessary data**.
-  * If you implemented significant tracing in development, you should implement a variable or feature flag that determines if tracing should be on. This must be **turned off** prior to submitting for certification.
+  * If you implemented significant tracing in development, you should implement a variable or feature flag that determines if tracing should be on. This tracing must be **turned off** prior to submitting for certification.
 
 * If ```Expression.Evaluate()``` is used:
   * Validate where the expression is coming from and what it is (that is, can dynamically construct calls to `Extension.CurrentCredentials()` and so on).
@@ -160,6 +160,13 @@ If you're interested in pursuing certification of your custom connector, ensure 
 Ensure that your connector is code complete and has been tested in both authoring in Power BI Desktop, and refreshing and consumption in Power BI Service. Ensure you have tested full end-to-end refresh in Power BI Service through the use of an on-premises data gateway.
 
 To get started, complete our [registration form](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2DcOSp0ibhKolmfRqZYZ51UN1MzQ0ZYNVlIMUM4MUQ1SUpPTEo3SFg1VC4u), and a Microsoft contact will reach out to begin the process.
+
+## After Certification
+
+After your connector is certified and released through Power BI Desktop and Power BI service, there are a few things that you should do to ensure you can correctly use the production-deployed publicly available certified connector. 
+* You and end users should use the certified connector version included in Power BI Desktop, and the on-premises data gateway, and remove any existing .mez or .pqx files (custom connectors) used prior to certification. Failure to do so might result in your testing custom connector being used by Power Query inadvertently instead of the newly certified connector.
+* Custom connectors should only be used to test new versions of the connector.
+* When working with end users and customers, ensure that they understand the custom connector version used in testing prior to certification should be removed after testing is complete and the new certified connector version is available.
 
 ## Template Apps (Recommended)
 
