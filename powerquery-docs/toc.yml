@@ -1,9 +1,10 @@
+items:
 - name: Power Query documentation
   href: index.yml
   expanded: true
   items:  
     - name: "What is Power Query?"
-      href: power-query-what-is-power-query.md          
+      href: power-query-what-is-power-query.md
     - name: Get data
       items:
       - name: "Getting data overview"
@@ -24,7 +25,7 @@
         href: upload-file.md
       - name: "SharePoint and OneDrive for Business files import"
         href: sharepoint-onedrive-files.md    
-      - name: "Lack of support connecting to Microsoft Graph"    
+      - name: "Lack of support connecting to Microsoft Graph"
         href: connecting-to-graph.md
       - name: "Connectivity without an existing connector"
         href: connector-alternatives.md
@@ -55,7 +56,7 @@
         - name: "Query plan (Preview)"
           href: query-plan.md
         - name: "Query folding on native queries"
-          href: native-query-folding.md            
+          href: native-query-folding.md
       - name: "Using the data profiling tools"
         href: data-profiling-tools.md
       - name: "Using the Queries pane"
@@ -65,9 +66,9 @@
       - name: "Using Schema view (Preview)"
         href: schema-view.md
       - name: "Share a query"
-        href: share-query.md   
+        href: share-query.md
       - name: "Using custom functions"
-        href: custom-function.md        
+        href: custom-function.md
       - name: Transform table
         items:
         - name: "Promote or demote column headers"
@@ -87,7 +88,7 @@
         - name: "Transpose table"
           href: transpose-table.md
         - name: "Reverse rows"
-          href: reverse-rows.md        
+          href: reverse-rows.md
         - name: "Data types"
           href: data-types.md
         - name: "Dealing with errors"
@@ -107,7 +108,7 @@
         - name: "Replace values"
           href: replace-values.md
         - name: "Parse text as JSON or XML"
-          href: parse-json-xml.md          
+          href: parse-json-xml.md
       - name: Add columns
         items:
         - name: "Add a column from examples"
@@ -119,7 +120,7 @@
         - name: "Add a conditional column"
           href: add-conditional-column.md
         - name: "Add a rank column"
-          href: rank-column.md          
+          href: rank-column.md
         - name: "Add a cluster values column"
           href: cluster-values.md
       - name: Combine data
@@ -141,9 +142,9 @@
           - name: "Right outer join"
             href: merge-queries-right-outer.md
           - name: "Full outer join"
-            href: merge-queries-full-outer.md   
+            href: merge-queries-full-outer.md
           - name: "Inner join"
-            href: merge-queries-inner.md             
+            href: merge-queries-inner.md
           - name: "Left anti join"
             href: merge-queries-left-anti.md 
           - name: "Right anti join"
@@ -173,7 +174,7 @@
       - name: "Overview of dataflows"
         href: dataflows/overview-dataflows-across-power-platform-dynamics-365.md
       - name: "Analytical vs. standard dataflows"
-        href: dataflows/understanding-differences-between-analytical-standard-dataflows.md        
+        href: dataflows/understanding-differences-between-analytical-standard-dataflows.md
       - name: "Create and use dataflows"
         href: dataflows/create-use.md
       - name: "Create and use dataflows in Teams"
@@ -203,7 +204,7 @@
         - name: "Connect Azure Data Lake for dataflow storage"
           href: dataflows/connect-azure-data-lake-storage-for-dataflow.md
         - name: Storage structure
-          items: 
+          items:
           - name: "Common Data Model storage structure"
             href: dataflows/what-is-the-cdm-storage-structure-for-analytical-dataflows.md
           - name: "Configure storage and compute"
@@ -379,7 +380,7 @@
       - name: "Databricks"
         href: connectors/databricks.md
       - name: "Dataverse"
-        href: connectors/dataverse.md     
+        href: connectors/dataverse.md
       - name: "Dataflows"
         href: connectors/dataflows.md
       - name: "Delta Sharing"
@@ -599,7 +600,7 @@
       - name: Quick starts
         items:
         - name: "Using the Power Query SDK"
-          href: power-query-sdk-vs-code.md        
+          href: power-query-sdk-vs-code.md
         - name: "Create your first connector - Hello World"
           href: creating-first-connector.md
       - name: Walkthroughs
@@ -665,7 +666,7 @@
         - name: "Handling schemas"
           href: handling-schema.md
         - name: "Handling status codes"
-          items: 
+          items:
           - name: "Default behavior"
             href: handling-status-codes.md
           - name: "Wait retry pattern"
