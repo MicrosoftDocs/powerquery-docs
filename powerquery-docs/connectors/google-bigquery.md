@@ -178,3 +178,10 @@ If the above steps don't resolve the problem, you can disable the BigQuery Stora
 ### Unable to use DateTime type data in Direct Query mode
 
 There's a known issue where the DateTime type isn't supported through Direct Query. Selecting a column with the DateTime type will cause an "Invalid query" error or a visual error.
+
+### Limitations on querying column which name is the same as table name
+
+When querying a column which name is the same as the table name, BigQuery will interpret the column as a struct that includes all columns in the table, instead of the specified column. For example, SELECT debug FROM dataset.debug will return a struct with all columns in the debug table, instead of the specified debug column. This is usually not intuitive behavior and a fix is being investigated. There are three workarounds available.
+* Workaround 1 - Wrapping the table with a view which doesn't conflict the column name - ```CREATE VIEW dataset.new_view AS SELECT * FROM dataset.debug```
+* Workaround 2 - Renaming the column to avoid conflicts with the table name - ```ALTER TABLE dataset.debug RENAME COLUMN debug to new_debug```
+* Workaround 3 - Change SELECT query to use table.column to reference the conflict column - ```SELECT debug.debug FROM dataset.debug```
