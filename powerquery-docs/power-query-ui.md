@@ -118,7 +118,7 @@ The schema view offers you a quick and straightforward way to interact only with
 
 For example, in schema view, select the check mark next to the **Orders** and **CustomerDemographics** columns, and from the ribbon select the **Remove columns** action. This selection applies a transformation to remove these columns from your data.
 
-:::image type="content" source="media/power-query-ui/pqui-remove-columns.png" alt-text="Screenshot of the Orders and CustomerDemographics columns selected, and the Remove columns option emphasized.":::
+:::image type="content" source="media/power-query-ui/pqui-remove-columns.png" alt-text="Screenshot of the Orders and CustomerDemographics columns selected, and the Remove columns option emphasized." lightbox="media/power-query-ui/pqui-remove-columns.png":::
 
 ### What is diagram view
 
@@ -194,7 +194,7 @@ Now that you have a query for customers and a query for suppliers, your next goa
 
 After creating this new query, change the name of the query to **Country Analysis** and disable the load of the **Customers** table by unmarking the **Enable load** option from the **Suppliers** query.
 
-:::image type="content" source="media/power-query-ui/pqui-disable-load.png" alt-text="Screenshot of the third query name changed to Country Analysis and the Suppliers Enable load option unmarked and emphasized.":::
+:::image type="content" source="media/power-query-ui/pqui-disable-load.png" alt-text="Screenshot of the third query name changed to Country Analysis and the Suppliers Enable load option unmarked and emphasized." lightbox="media/power-query-ui/pqui-disable-load.png":::
 
 ## Merging queries
 
@@ -311,7 +311,7 @@ In addition to the Power Query help functions listed in the previous sections, y
 
 These steps open the inline help information for your selected function, and let you enter individual properties used by the function.
 
-:::image type="content" source="media/power-query-ui/m-inline-help.png" alt-text="Screenshot of the Date.AddDays M function description and syntax, along with entry points for each of the function's parameters.":::
+:::image type="content" source="media/power-query-ui/m-inline-help.png" alt-text="Screenshot of the Date.AddDays M function description and syntax, along with entry points for each of the function's parameters." lightbox="media/power-query-ui/m-inline-help.png":::
 
 ## Summary
 
