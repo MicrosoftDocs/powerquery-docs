@@ -16,11 +16,11 @@ ms.author: alhudso
 | Item | Description |
 | ---- | ----------- |
 | Release State | Public Preview |
-| Products | Power BI Datasets (Desktop + Service)</br>Power BI Dataflow<br/>Fabric Dataflow Gen 2 |
+| Products | Power BI Datasets (Desktop + Service)</br>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Organizational Account |
 
 > [!NOTE]
-> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+> Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
 
@@ -34,15 +34,15 @@ ms.author: alhudso
 * Advanced options
   * Scope by subscription(s) and/or management group(s)
 
-## Connect to a Azure Resource Graph from Power Query Desktop
+## Connect to Azure Resource Graph from Power Query Desktop
 
 To connect to Azure Resource Graph from Power Query Desktop:
 
 1. In **Get Data**, select **Azure Resource Graph**, and then select **Connect**. More information: [Where to get data](../where-to-get-data.md)
 
-2. In **Azure Resource Graph** dialog box, fill in the query and any optional fields, such as **Scope**.
+2. In the **Azure Resource Graph** dialog box, fill in the query and any optional fields, such as **Scope**.
 
-3. If this attempt is the first time you're connecting to this site, select **Sign in** and input your credentials. Then select **Connect**.
+3. If you're connecting to this site for the first time, select **Sign in** and input your credentials. Then select **Connect**.
 
 4. In **Navigator**, select the tables you require, then either load or transform the data.
 
@@ -69,8 +69,8 @@ Power Query provides an advanced option that you can add to your query if needed
 
 |Advanced option|Description|
 |---------------|-----------|
-|Scope|Specify whether you want to query at the subscription or management level. If you do not select either subscription or management, the query will automatically apply to the tenant level by default.|
-|Subscription Id(s)|Specify any specific subscriptions you want to query against. Enter each subscription id separated by commas. This field is required if you select the subscription scope.|
+|Scope|Specify whether you want to query at the subscription or management level. If you don't select either subscription or management, the query automatically applies to the tenant level by default.|
+|Subscription Id(s)|Specify any specific subscriptions you want to query against. Enter each subscription ID separated by commas. This field is required if you select the subscription scope.|
 |Management Group Id(s)|Specify any specific management groups you want to query against. Enter each management group separated by commas. This field is required if you select management group scope.|
 |$resultTruncated|If you would like to retrieve more than 1000 records, set **$resultTruncated** to FALSE. By default, ARG returns only up to 1000 records.|
 
