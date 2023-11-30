@@ -1,5 +1,5 @@
 ---
-title: Azure Resource Graph (Preview)
+title: Azure Resource Graph (Beta)
 description: Includes basic information, prerequisites, and information on how to connect to Azure Resource Graph.
 
 author: ahudson8
@@ -9,13 +9,13 @@ ms.author: alhudso
 
 ---
 
-# Azure Resource Graph (Preview)
+# Azure Resource Graph (Beta)
 
 ## Summary
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | Public Preview |
+| Release State | Preview |
 | Products | Power BI Datasets (Desktop + Service)</br>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Organizational Account |
 
@@ -29,7 +29,7 @@ ms.author: alhudso
 * You must have appropriate rights in [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview) with at least read access to the resources you want to query.
 
 > [!NOTE]
-> If you participated in the private preview, be sure to delete the AzureResourceGraph.mez preview file. Failure to do so might result in your testing custom connector being used by Power Query inadvertently instead of the newly certified connector.
+> If you participated in the private preview, be sure to delete the AzureResourceGraph.mez preview file. Failure to do so might result in your test custom connector being used by Power Query inadvertently instead of the newly certified connector.
 
 ## Capabilities supported
 
