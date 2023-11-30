@@ -28,25 +28,26 @@ ms.author: alhudso
 
 * You must have appropriate rights in [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview) with at least read access to the resources you want to query.
 
+> [!NOTE]
+> If you participated in the private preview, be sure to delete the AzureResourceGraph.mez preview file. Failure to do so might result in your testing custom connector being used by Power Query inadvertently instead of the newly certified connector.
+
 ## Capabilities supported
 
 * Import
 * Advanced options
   * Scope by subscription(s) and/or management group(s)
 
-> [!NOTE]
-> If you participated in the ARG Connector Private Preview, be sure to delete the AzureResourceGraph.mez preview file. Failure to do so might result in your testing custom connector being used by Power Query inadvertently instead of the newly certified connector.
-
 ## Connect to Azure Resource Graph from Power Query Desktop
 
 To connect to Azure Resource Graph from Power Query Desktop:
 
-1. In **Get Data**, select **Azure Resource Graph**, and then select **Connect**. More information: [Where to get data](../where-to-get-data.md)
+1. In **Choose data source**, select Azure or search for **Azure Resource Graph**, and then select **Azure Resource Graph**. More information: [Where to get data](../where-to-get-data.md)
 
-![ARG Get Data.](./media/azure-resource-graph/getdata.png)
+:::image type="content" source="./media/azure-resource-graph/get-data-here.png" alt-text="Screenshot of the Get Data dialog with the Azure Resource Graph connector emphasized.":::
 
 2. In the **Azure Resource Graph** dialog box, fill in the query and any optional fields, such as **Scope**.
-![ARG Add Info.](./media/azure-resource-graph/enterinfo.png)
+
+:::image type="content" source="./media/azure-resource-graph/enter-info.png" alt-text="Screenshot of the Input Dialog Box with the Azure Resource Graph connector emphasized.":::
 
 > [!NOTE]
 > You can scope queries to either subscription or management group level, **if neither option is chosen the query will execute at the tenant level by default.**
@@ -55,13 +56,11 @@ To connect to Azure Resource Graph from Power Query Desktop:
 
 4. In **Navigator**, select the tables you require, then either load or transform the data.
 
-![Load ARG Data.](./media/azure-resource-graph/take20load.png)
-
 ## Connect to Azure Resource Graph from Power Query Online
 
 To connect to Azure Resource Graph from Power Query Online:
 
-1. In **Choose data source**, search for **Azure Resource Graph**, and then select **Azure Resource Graph**. More information: [Where to get data](../where-to-get-data.md)
+1. In **Choose data source**, select Azure or search for **Azure Resource Graph**, and then select **Azure Resource Graph**. More information: [Where to get data](../where-to-get-data.md)
 
 2. In **Connect to data source**, fill in the query and any optional fields, such as **Scope**.
 
@@ -72,7 +71,7 @@ To connect to Azure Resource Graph from Power Query Online:
 5. In **Choose data**, select the data you require, and then select **Transform Data**.
 
 > [!NOTE]
-> Expect longer wait times are large query results.
+> Expect longer wait times for large query results.
 
 ## Connect using advanced options
 
