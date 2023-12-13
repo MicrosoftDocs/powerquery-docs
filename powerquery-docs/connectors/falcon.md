@@ -34,13 +34,13 @@ To connect to Falcon data from Power Query Desktop, take the following steps::
 
 2. From the **Other** category, select **Falcon**, and then select **Connect**.
 
-   ![Get Data.](Falcon_Get_Data.png)
+   ![Get Data.](media/falcon/Falcon_Get_Data.png)
 
 3. In the sign in screen, enter your Falcon email and your personal access token. Select **Connect**.
 
-   ![Login.](Falcon_Sign_in.png)
+   ![Login.](media/falcon/Falcon_Sign_in.png)
 
-4. In **Navigatir**, select any of the 7 tables provided by Falcon.
+4. In **Navigator** section, select any of the 9 tables provided by Falcon and then select **load**.
    * Calendar
    * Effect
    * Phases
@@ -51,8 +51,4 @@ To connect to Falcon data from Power Query Desktop, take the following steps::
    * Status
    * Users
 
-   ![Navigator.](Falcon_Navigator.png)
-
-5. Select **Connect**, and then select a module. For reference, review the API Reference under the [Core API Documentation](https://api-explorer.bqecore.com/).
-
-6. From the Navigator, select the tables to load, and then select **Transform Data** to transform the data in Power Query.
+   ![Navigator.](media/falcon/Falcon_Navigator.png)
