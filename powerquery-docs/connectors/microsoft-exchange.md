@@ -3,7 +3,7 @@ title: Microsoft Exchange Power Query Data Connector
 description: Provides basic information and connection instructions for the Microsoft Exchange connector
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 12/14/2022
+ms.date: 12/18/2023
 ms.author: bezhan
 ---
 
@@ -17,6 +17,9 @@ ms.author: bezhan
 | Products | Excel <br/> Power BI (Datasets)<br/> Analysis Services |
 | Authentication Types Supported | Exchange account<br/>Microsoft account |
 | Function Reference Documentation | [Exchange.Contents](/powerquery-m/exchange-contents) |
+
+> [!NOTE]
+> The Power Query Microsoft Exchange connector doesn't support scheduled refresh of on-premises data sources in Power BI datasets or Excel.
 
 ## Capabilities Supported
 
@@ -48,4 +51,4 @@ To make the connection to **Microsoft Exchange**, follow these steps:
 
 1. In **Navigator**, select the data to import and use in your application. Then select either **Load** to load the table, or **Transform Data** to open the Power Query Editor where you can filter and refine the set of data you want to use, and then load that refined set of data.
 
-   :::image type="content" source="./media/microsoft-exchange/select-data.png" alt-text="Screenshot of the Microsoft Exchange navigator, showing calendar and mail selected.":::
+   :::image type="content" source="./media/microsoft-exchange/select-data.png" alt-text="Screenshot of the Microsoft Exchange navigator, showing calendar and mail selected." lightbox="./media/microsoft-exchange/select-data.png":::
