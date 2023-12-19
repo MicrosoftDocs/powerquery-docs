@@ -44,7 +44,7 @@
       "feedback_github_repo": "MicrosoftDocs/powerquery-docs",
       "feedback_product_url": "/power-query/feedback",
       "feedback_help_link_url": "/power-query/feedback",
-      "feedback_help_link_type": "ask-the-community"
+      "feedback_help_link_type": "ask-the-community",
       "searchScope": ["Power Query"],
       "recommendations": true,
       "titleSuffix": "Power Query",
