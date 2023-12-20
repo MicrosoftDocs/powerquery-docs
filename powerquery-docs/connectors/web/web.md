@@ -63,8 +63,6 @@ To load data from a web site with Power Query Desktop:
 
    * **Organizational account**: Select this authentication method if the web page requires organizational account credentials.
 
-   >[!Note]
-   >When uploading the report to the Power BI service, only the **anonymous**, **Windows** and **basic** authentication methods are available.
 
    The level you select for the authentication method determines what part of a URL will have the authentication method applied to it. If you select the top-level web address, the authentication method you select here will be used for that URL address or any subaddress within that address. However, you might not want to set the top URL address to a specific authentication method because different subaddresses could require different authentication methods. For example, if you were accessing two separate folders of a single SharePoint site and wanted to use different Microsoft Accounts to access each one.
 
