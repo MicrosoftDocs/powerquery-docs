@@ -159,7 +159,7 @@ If you're interested in pursuing certification of your custom connector, ensure 
 
 Ensure that your connector is code complete and has been tested in both authoring in Power BI Desktop, and refreshing and consumption in Power BI Service. Ensure you have tested full end-to-end refresh in Power BI Service through the use of an on-premises data gateway.
 
-To get started, complete our [registration form](https://forms.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2DcOSp0ibhKolmfRqZYZ51UN1MzQ0ZYNVlIMUM4MUQ1SUpPTEo3SFg1VC4u), and a Microsoft contact will reach out to begin the process.
+To get started, complete our [registration form](https://aka.ms/PQConnectorRegistrationForm), and a Microsoft contact will reach out to begin the process.
 
 ## After Certification
 
