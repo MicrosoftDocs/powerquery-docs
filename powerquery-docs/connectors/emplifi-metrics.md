@@ -3,8 +3,8 @@ title: Power Query Emplifi Metrics (Beta) connector
 description: Provides basic information and prerequisites for the operation of the Emplifi Metrics connector.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 10/31/2023
-ms.author: bezhan 
+ms.date: 1/8/2024
+ms.author: dougklo 
 ---
 
 # Emplifi Metrics (Beta)

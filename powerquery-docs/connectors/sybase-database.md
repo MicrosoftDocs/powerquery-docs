@@ -3,8 +3,8 @@ title: Power Query Sybase database connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your Sybase database.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 9/2/2022
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # Sybase database
@@ -17,7 +17,7 @@ ms.author: bezhan
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication Types Supported | Database<br/>Windows |
 
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
@@ -63,7 +63,7 @@ To make the connection, take the following steps:
 
 3. Select the name of your on-premises data gateway.
 
-   >[!Note]
+   > [!NOTE]
    > You must select an on-premises data gateway for this connector, whether the Sybase database is on your local network or online.
 
 4. If this is the first time you're connecting to this Sybase server and database, select the type of credentials for the connection in **Authentication kind**. Choose **Basic** if you plan to use an account that's created in the Sybase database instead of Windows authentication.  For more information about using and managing authentication, go to [Authentication with a data source](../connectorauthentication.md).

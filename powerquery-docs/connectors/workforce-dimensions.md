@@ -3,12 +3,12 @@ title: Workforce Dimensions (Beta) (Deprecated)
 description: Provides information on the deprecation of the Workforce Dimensions connector.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 11/2/2021
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # Workforce Dimensions (Beta) (Deprecated)
- 
+
 ## Summary
 
 | Item | Description |
@@ -17,7 +17,6 @@ ms.author: bezhan
 | Products | - |
 | Authentication Types Supported | - |
 | Function Reference Documentation | - |
-| | |
 
 ## Deprecation
 

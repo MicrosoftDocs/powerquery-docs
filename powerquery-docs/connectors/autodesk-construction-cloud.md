@@ -3,13 +3,13 @@ title: Autodesk Construction Cloud Power Query Connector
 description: Includes basic information, prerequisites, and information on how to connect to your Autodesk Construction Cloud data, along with a list of known issues and limitations.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 7/13/2023
-ms.author: bezhan
+ms.date: 1/8/2023
+ms.author: dougklo
 ---
 
 # Autodesk Construction Cloud
 
->[!Note]
+> [!NOTE]
 >The following connector article is provided by Autodesk, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Autodesk website and use the support channels there.
 
 ## Summary
@@ -75,7 +75,7 @@ To use the Power BI Templates:
 
    ![Provide ACC Account name and select server region.](./media/autodesk-construction-cloud/acc-template-prompt.png)
 
-   >[!Note]
+   > [!NOTE]
    >The **Account Name** is the name of the ACC account you want to connect to, not your user account name. You can find the Account name on the Account Admin portal just to the right of the Account Admin drop down or under **Settings**. The Account name also appears on the Insight (Account) page just to the right of the Insight dropdown in the upper left hand corner.
 
    ![Account name can be found on the Account Admin portal.](./media/autodesk-construction-cloud/acc-template-account-name.png)

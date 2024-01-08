@@ -3,8 +3,8 @@ title: Power Query Dataverse connector
 description: Provides basic information and connection instructions, along with OData API performance information, table retrieval rate, and alternative means of connecting to Dataverse.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 7/13/2023
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # Dataverse
@@ -17,7 +17,7 @@ ms.author: bezhan
 | Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
 | Authentication types | Organizational account<br/>Service Principal |
 
->[!Note]
+> [!NOTE]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
@@ -30,7 +30,7 @@ To use the Dataverse connector, the **TDS endpoint** setting must be enabled in 
 
 To use the Dataverse connector, one of TCP ports 1433 or 5558 need to be open to connect. Port 1433 is used automatically. However, if port 1433 is blocked, you can use port 5558 instead. To enable port 5558, you must append that port number to the Dataverse environment URL, such as *yourenvironmentid.crm.dynamics.com, 5558*. More information: [SQL Server connection issue due to closed ports](#sql-server-connection-issue-due-to-closed-ports)
 
->[!Note]
+> [!NOTE]
 > If you are using Power BI Desktop and need to use port 5558, you must create a source with the Dataverse environment URL, such as *yourenvironmentid.crm.dynamics.com,5558*, in Power Query M.
 
 ## Capabilities supported
@@ -43,7 +43,7 @@ To use the Dataverse connector, one of TCP ports 1433 or 5558 need to be open to
 
 ## Connect to Dataverse from Power Query Desktop
 
->[!Note]
+> [!NOTE]
 > The Power Query Dataverse connector is mostly suited towards analytics workloads, not bulk data extraction. More information: [Alternative Dataverse connections](#alternative-dataverse-connections)
 
 To connect to Dataverse from Power Query Desktop:
@@ -133,7 +133,7 @@ There are several alternative ways of extracting and migrating data from Dataver
 
 * Use the OData connector to move data in and out of Dataverse. For more information on how to migrate data between Dataverse environments using the dataflows OData connector, go to [Migrate data between Dataverse environments using the dataflows OData connector](/powerapps/developer/common-data-service/cds-odata-dataflows-migration).
 
->[!Note]
+> [!NOTE]
 > Both the Dataverse connector and the OData APIs are meant to serve analytical scenarios where data volumes are relatively small. The recommended approach for bulk data extraction is “Azure Synapse Link”.
 
 ### SQL Server connection issue due to closed ports

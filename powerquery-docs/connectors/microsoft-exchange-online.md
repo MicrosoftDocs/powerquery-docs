@@ -4,7 +4,7 @@ description: Provides basic information and connection instructions for the Micr
 author: bezhan-msft
 ms.topic: conceptual
 ms.date: 7/14/2023
-ms.author: bezhan
+ms.author: dougklo
 ---
 
 # Microsoft Exchange Online

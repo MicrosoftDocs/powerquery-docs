@@ -3,13 +3,13 @@ title: SoftOne BI connector
 description: This article provides information for the SoftOne BI connector and a tutorial for usage.
 author: basilrormose
 ms.topic: 
-ms.date: 7/14/2023
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # SoftOne BI (Beta)
 
->[!Note]
+> [!NOTE]
 >The following connector article is provided by SoftOne, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the SoftOne website and use the support channels there.
 
 ## Summary
@@ -30,7 +30,7 @@ The SoftOne BI connector is supported from Soft1 Series 5 version 500.521.11424 
 
 * Import
 
-## Connection instructions 
+## Connection instructions
 
 SoftOne provides many templates as Power BI template files (.pbit) that you can use or customize which will provide you with a start to your BI project. For example, Sales & Collections, and Finance.
 

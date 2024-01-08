@@ -3,8 +3,8 @@ title: Power Query CData Connect Cloud connector
 description: Provides basic information, prerequisites, and connection steps for CData Connect Cloud.
 author: bezhan-msft
 
-ms.date: 7/13/2023 
-ms.author: bezhan
+ms.date: 1/8/2024 
+ms.author: dougklo
 ---
 
 # CData Connect Cloud

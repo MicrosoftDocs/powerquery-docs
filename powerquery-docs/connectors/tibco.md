@@ -3,14 +3,14 @@ title: TIBCO(R) Data Virtualization connector
 description: Provides basic information, prerequisites, and instructions on how to connect to your TIBCO(R) Data Virtualization Server.
 author: sahuero
 ms.topic: conceptual
-ms.date: 7/14/2023
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 
 ---
 
 # TIBCO(R) Data Virtualization
 
->[!Note]
+> [!NOTE]
 >The following connector article is provided by TIBCO, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the TIBCO website and use the support channels there.
 
 ## Summary
@@ -32,12 +32,12 @@ The Power BI Connector for TIBCO(R) Data Virtualization must first be downloaded
 
 Once the connector is installed, configure a data source name (DSN) to specify the connection properties needed to connect to the TIBCO(R) Data Virtualization server.
 
->[!Note]
+> [!NOTE]
 > The DSN architecture (32-bit or 64-bit) needs to match the architecture of the product where you intend to use the connector.
 
 ![TDV DSN Configuration.](./media/tibco/tdv_dsn.png)
 
->[!Note]
+>[!NOTE]
 >Power BI Connector for TIBCO(R) Data Virtualization is the driver used by the TIBCO(R) Data Virtualization connector to connect Power BI Desktop to TDV.
 
 ## Capabilities Supported
@@ -81,7 +81,6 @@ The following table lists all of the advanced options you can set in Power Query
 | --------------- | ----------- |
 | Advanced Connection Properties | Takes a semi-colon separated list of connection properties. This option is used to specify other connection properties not configured in the DSN. |
 | SQL statement | For information, go to [Import data from a database using native database query](../native-database-query.md). |
-| | |
 
 Once you've selected the advanced options you require, select **OK** in Power Query Desktop to connect to your TIBCO(R) Data Virtualization Server.
 

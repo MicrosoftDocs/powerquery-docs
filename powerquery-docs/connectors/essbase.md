@@ -3,8 +3,8 @@ title: Power Query Essbase connector
 description: Provides basic information and prerequisites for the Essbase connector.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 6/9/2023 
-ms.author: bezhan
+ms.date: 1/8/2024 
+ms.author: dougklo
 ---
 
 # Essbase
@@ -127,7 +127,7 @@ There are three options to reduce the number of queries sent. In Power BI Deskto
 
 Selecting the **Disabling cross highlighting/filtering by default** option under **Reduce number of queries sent by** disables cross highlighting/filtering by default. When disabled, member lists in the filter don't get updated when filtering members in other levels of the same dimension. Selecting the **Slicer selections** option under **Show an Apply button and only send queries once for** section displays the **Apply** button when a slicer selection is changed. Selecting the **Filter selections** option under **Show an Apply button and only send queries once for** section displays the **Apply** button when a filter selection is changed.
 
->[!Note]
+> [!NOTE]
 > These options apply only to the current file you are working on. **Current File** option settings are saved with the file and restored when opening the same file.
 
 ## Iterative filter application when adding dimension levels in import mode

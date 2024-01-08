@@ -2,15 +2,15 @@
 title: Power Query Denodo connector
 description: Provides basic information and prerequisites for the Denodo connector, descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
 author: denodo-research-labs
-ms.author: bezhan
+ms.author: dougklo
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 7/13/2023
+ms.date: 1/8/2024
 ---
 
 # Denodo
 
->[!Note]
+> [!NOTE]
 >The following connector article is provided by Denodo, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Denodo website and use the support channels there.
 
 ## Summary
@@ -21,7 +21,7 @@ ms.date: 7/13/2023
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Basic <br/>Windows<br/> |
 
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
@@ -66,20 +66,20 @@ To make the connection, take the following steps:
 
     Authentication parameters must be omitted, as authentication is configured in later steps.
 
->[!Note]
-> When writing the connection string, it must be taken into account: 
-> 1. The connection string must keep the correct order of its parameters: SERVER, PORT, DATABASE and SSLMode. 
-> 2. The name of these parameters must always be written in the same way. For example, if you choose to write them in upper case, they must always be written in upper case; if you decide to write them capitalized (writing the first letter of a word in uppercase and the rest of the letters in lowercase) they must always be written that way.
-> 
-> Doing otherwise could prevent Power BI from recognizing different Denodo datasets in a report as belonging to the same Denodo data source and, as a consequence, request separate authentication credentials for each of them.
-
+   > [!NOTE]
+   > When writing the connection string, it must be taken into account:
+   >
+   > * The connection string must keep the correct order of its parameters: SERVER, PORT, DATABASE and SSLMode.
+   > * The name of these parameters must always be written in the same way. For example, if you choose to write them in upper case, they must always be written in upper case; if you decide to write them capitalized (writing the first letter of a word in uppercase and the rest of the letters in lowercase) they must always be written that way.
+   >
+   > Doing otherwise could prevent Power BI from recognizing different Denodo datasets in a report as belonging to the same Denodo data source and, as a consequence, request separate authentication credentials for each of them.
 
 3. The second section, **Enable debug mode**, is an optional field that allows you to add trace information to log files. These files are created by Power BI Desktop when you enable tracing in the application using the **Diagnostics** tab in the **Options** menu. Note that the default value for **Enable debug mode** is false, and in this scenario, there will be no trace data in the log files from Denodo Power BI custom connector.
 
 4. The third section, **Native Query**, is an optional field where you can enter a query. If this query field is used, the resulting dataset will be the result of the query instead of a table or a set of tables.
-    
+
     You can write a query that queries only one of the databases that the datasource is associated with.
-    
+
     ``` sql
     SELECT title, name FROM film JOIN language ON film.language_id = language.language_id WHERE film.language_id = 1
     ```
@@ -186,6 +186,7 @@ This error is due to a limitation in the Microsoft Power Query platform. In orde
 ```
 CreateNavigationProperties=false
 ```
+
 So your call would look similar to:
 
 ```

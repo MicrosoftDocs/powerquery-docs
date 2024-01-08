@@ -1,10 +1,10 @@
 ---
-title: Microsoft Exchange Power Query Data Connector
+title: Power Query Microsoft Exchange connector
 description: Provides basic information and connection instructions for the Microsoft Exchange connector
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 12/18/2023
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # Microsoft Exchange

@@ -3,8 +3,8 @@ title: Power Query Socialbakers connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Socialbakers.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 7/14/2023
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # Socialbakers (Beta)
@@ -74,14 +74,14 @@ Not all data sources are the same. The differences are described [later](#facebo
         - **Profiles YouTube:** `Emplifi (<profile_id>)`
 3. Once all required parameters are selected, select **Apply**.
 
-   >[!NOTE]
+   > [!NOTE]
    > Not all parameters are explicitly mandatory, but they could be needed for specific selections. For example, the profile selection is optional, but you still need to select some profiles to get any data.
 
    ![Preview.](./media/socialbakers/image4.png)
 
 4. Once all data and metrics are selected, use the **Load** button to load the data to the report. It's also possible to **Transform Data** before loading it into the report.
 
-   >[!NOTE]
+   > [!NOTE]
    > It's possible to select more than one data source by checking more of the boxes, setting their parameters, and then selecting **Load**.
 
 #### Facebook Ads Data Source

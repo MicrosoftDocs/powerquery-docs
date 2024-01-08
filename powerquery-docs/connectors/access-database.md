@@ -3,8 +3,8 @@ title: Power Query Access database connector
 description: Provides basic information, prerequisites, and connection instructions, along with tips about using the on-premises data gateway and fixing mismatched bit versions.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 7/13/2023
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # Access database
@@ -18,7 +18,7 @@ ms.author: bezhan
 | Authentication Types Supported | Anonymous<br/>Windows<br/>Basic<br/>Organizational Account |
 | Function Reference Documentation | [Access.Database](/powerquery-m/access-database) |
 
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
@@ -61,7 +61,7 @@ To make the connection from Power Query desktop:
 
 4. Select the name of your on-premises data gateway.
 
-      >[!Note]
+      > [!NOTE]
       > You must select an on-premises data gateway for this connector, whether the Access database is on your local network or on a web site.
 
 5. Select the type of credentials for the connection to the Access database in **Authentication kind**.
@@ -86,7 +86,7 @@ A 64-bit version of the Access Database Engine 2016 OLEDB provider must be insta
 
 [Access Database Engine 2016 OLEDB provider](https://www.microsoft.com/download/details.aspx?id=54920)
 
->[!Note]
+> [!NOTE]
 >Microsoft Office has stopped supporting the Access Database Engine 2010 OLEDB provider as part of end-of-life for Office 2010. However, some legacy use cases, such as using 32-bit Office and 64-bit PBI Desktop, might require the continued use of the older 2010 version. In these cases, you can still download the 2010 version from the following location:
 >
 >[Access Database Engine 2010 OLEDB provider](https://www.microsoft.com/download/details.aspx?id=13255)

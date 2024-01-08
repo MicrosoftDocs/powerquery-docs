@@ -3,15 +3,15 @@ title: Implementation details
 description: Describes conversion information and specific features available in Implementation 2 of the Power Query SAP Business Warehouse connector.
 author: dougklopfenstein
 ms.topic: conceptual
-ms.date: 11/29/2022
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # Implementation details
 
 This article describes conversion information and specific features available in Implementation 2 of the Power Query SAP Business Warehouse connector.
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > Version 1.0 of the SAP Business Warehouse connector has been deprecated. New connections will use Implementation 2.0 of the SAP Business Warehouse connector.  All support for version 1.0 will be removed from the connector in the near future. Use the information in this article to update existing version 1.0 reports so they can use Implementation 2.0 of this connector.
 
 ## New options for Implementation 2.0
@@ -85,7 +85,7 @@ The limitations for using this functionality are:
 * Only available in Import mode.
 * The account used to connect to the SAP BW server should have enough permissions to call BAPI_IOBJ_GETDETAIL.
 
-```
+```powerquery-m
 let
    Source = SapBusinessWarehouse.Cubes("sapbwtestserver", "00", "837", [ExecutionMode=SapBusinessWarehouseExecutionMode.BasXmlGzip, Implementation="2.0"]),
    #"$INFOCUBE" = Source{[Name="$INFOCUBE"]}[Data],
@@ -115,7 +115,7 @@ The key column will be of type date, and can be used for filtering. Filtering on
 
 ## Support for SAP BW features
 
-The following table lists all SAP BW features that aren't fully supported or will behave differently when using the Power Query SAP BW connector.
+The following table lists all SAP BW features that aren't fully supported or behave differently when using the Power Query SAP BW connector.
 
 | Feature | Description |
 | ------- | ----------- |
@@ -140,7 +140,6 @@ The following table lists all SAP BW features that aren't fully supported or wil
 |End user language setting | The locale used to connect to SAP BW is set as part of the connection details, and doesn't reflect the locale of the final report consumer. |
 | Text Variables | SAP BW allows field names to contain placeholders for variables (for example, "$YEAR$ Actuals") that would then get replaced by the selected value. For example, the field appears as "2016 Actuals" in BEx tools, if the year 2016 were selected for the variable.<br/><br/>The column name in Power Query won't be changed depending on the variable value, and so would appear as "$YEAR$ Actuals". However, the column name can then be changed in Power Query. |
 | Customer Exit Variables | Customer Exit variables aren't exposed by the public API, and are therefore not supported by Power Query. |
-| | |
 
 ## Performance Considerations
 
@@ -157,11 +156,10 @@ The following table provides a summary list of suggestions to improve performanc
 | Use RSRT to monitor and troubleshoot slow running queries | Your SAP Admin can use the Query Monitor in SAP BW (transaction RSRT) to analyze performance issues with SAP BW queries. Review SAP note 1591837 for more information. |
 | Avoid Restricted Key Figures and Calculated Key Figures | Both are computed during query execution and can slow down query performance. |
 | Consider using incremental refresh to improve performance | Power BI refreshes the complete dataset with each refresh. If you're working with large volume of data, refreshing the full dataset on each refresh may not be optimal. In this scenario, you can use incremental refresh, so you're refreshing only a subset of data. For more details, go to [Incremental refresh in Power BI](/power-bi/service-premium-incremental-refresh). |
-| | |
 
 ## Comparison to Analysis for Office (AFO)
 
-There are fundamental differences between the Analysis for Office (AFO) tool and the Power Query SAP Business Warehouse connector, so the outputs of data might differ. AFO doesn't use MDX, but instead uses a proprietary protocol developed by SAP that isn't available for 3rd parties, such as the Power Query SAP Business Warehouse connector. SAP only certifies connectors that use the MDX interface. AFO uses a multidimensional querying strategy, which navigates the data differently whereas the Power Query SAP Business Warehouse connector needs to flatten the data so it can be represented as a table. So even though it's the same data, it's queried, represented, and ultimately outputted differently. 
+There are fundamental differences between the Analysis for Office (AFO) tool and the Power Query SAP Business Warehouse connector, so the outputs of data might differ. AFO doesn't use MDX, but instead uses a proprietary protocol developed by SAP that isn't available for 3rd parties, such as the Power Query SAP Business Warehouse connector. SAP only certifies connectors that use the MDX interface. AFO uses a multidimensional querying strategy, which navigates the data differently whereas the Power Query SAP Business Warehouse connector needs to flatten the data so it can be represented as a table. So even though it's the same data, it's queried, represented, and ultimately outputted differently.
 
 ### See also
 

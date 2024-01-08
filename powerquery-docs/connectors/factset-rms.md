@@ -4,8 +4,8 @@ description: Provides basic information and prerequisites for the FactSet RMS co
 author: bezhan-msft
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 7/13/2023
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # FactSet RMS (Beta)

@@ -3,8 +3,8 @@ title: Power Query Smartsheet connector
 description: Provides basic information, prerequisites, and connection instructions, along with troubleshooting information for the Smartsheet connector.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 7/14/2023
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # Smartsheet
@@ -18,7 +18,7 @@ ms.author: bezhan
 | Authentication Types Supported | Organizational account |
 | Function Reference Documentation | &mdash; |
 
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Capabilities Supported

@@ -3,8 +3,8 @@ title: Power Query Google Analytics connector
 description: Provides basic information and connection instructions, along with a list of quota limits for Power BI and instructions on validating unexpected data.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 7/13/2023
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # Google Analytics
@@ -145,6 +145,7 @@ Content-Length: -1
 
 <Content placeholder>
 ```
+
 From this record, you can see you have your [Analytics view (profile) ID](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#ids), your list of [metrics](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#metrics) (in this case, just `ga:users`), your list of [dimensions](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#dimensions) (in this case, just referral source), the [start-date](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#startDate) and [end-date](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#endDate), the [start-index](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#startIndex), [max-results](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#maxResults) (set to 1000 for the editor by default), and the [quotaUser](https://developers.google.com/analytics/devguides/reporting/core/v3/reference#quotaUser).
 
 You can copy these values into the [Google Analytics Query Explorer](https://ga-dev-tools.appspot.com/query-explorer/) to validate that the same data you're seeing returned by your query is also being returned by the API.

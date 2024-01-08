@@ -3,8 +3,8 @@ title: Power Query SharePoint list connector
 description: Provides basic information about how to connect to your data, along with troubleshooting tips for obtaining the root SharePoint address and changing the authentication method.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 7/14/2023
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # SharePoint list
@@ -18,10 +18,10 @@ ms.author: bezhan
 | Authentication Types Supported | Anonymous<br/>Windows<br/>Microsoft Account |
 | Function Reference Documentation | [SharePoint.Contents](/powerquery-m/sharepoint-contents)<br/>[SharePoint.Files](/powerquery-m/sharepoint-files)<br/>[SharePoint.Tables](/powerquery-m/sharepoint-tables) |
 
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
->[!NOTE]
+> [!NOTE]
 >AAD/OAuth for SharePoint on-premises isn’t supported using the on-premises data gateway.
 
 ## Capabilities supported

@@ -3,13 +3,13 @@ title: Power Query Funnel connector
 description: Provides basic information, prerequisites, and information on how to connect to your data using the Funnel connector, along with a list of known issues and limitations.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 7/13/2023
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # Funnel
 
->[!Note]
+> [!NOTE]
 >The following connector article is provided by Funnel, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Funnel website and use the support channels there.
 
 ## Summary
@@ -55,6 +55,7 @@ To connect to Funnel:
    ![Choose "Data Shares" from Workspaces.](media/funnel/funnel-navigation-table.png)
 
    For each Data Share you can enter number of rolling months of data you want.
+
    > [!NOTE]
    > The default number of months is 12. If today is 22.03.2022, then you'll get data for the period 01.04.2021 - 22.03.2022.
 

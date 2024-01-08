@@ -4,8 +4,8 @@ description: This article describes where users can receive support and share fe
 author: bezhan-msft
 
 ms.reviewer: dougklo
-ms.date: 04/17/2022
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: miescobar
 ---
 
 # Power Query connector feedback

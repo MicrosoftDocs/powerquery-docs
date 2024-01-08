@@ -3,8 +3,8 @@ title: Power Query Azure Data Explorer (Kusto) connector
 description: Includes basic information, prerequisites, and information on how to connect to Azure Data Explorer, along with a list of limitations.
 author: bezhan-msft
 ms.topic: conceptual
-ms.date: 7/13/2023
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # Azure Data Explorer (Kusto)
@@ -18,7 +18,7 @@ ms.author: bezhan
 | Authentication Types Supported | Organizational Account |
 | Function Reference Documentation | &mdash; |
 
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
@@ -51,7 +51,7 @@ To connect to Azure Data Explorer from Power Query Desktop:
 
 3. If you want to use any advance options, select the option and enter the data to use with that option. More information: [Connect using advanced options](#connect-using-advanced-options)
 
-   >[!Note]
+   > [!NOTE]
    >You might need to scroll down to display all of the advanced options and the data connectivity selection.
 
 4. Select either the **Import** or **DirectQuery** data connectivity mode (Power BI Desktop only). More information: [When to use Import or Direct Query mode](#when-to-use-import-or-direct-query-mode)

@@ -4,12 +4,12 @@ description: Describes the differences between using Import and DirectQuery mode
 author: dougklopfenstein
 ms.topic: conceptual
 ms.date: 11/29/2022
-ms.author: bezhan
+ms.author: dougklo
 ---
 
 # Import vs. DirectQuery for SAP BW
 
->[!NOTE]
+> [!NOTE]
 > This article discusses the differences between Import and DirectQuery modes in Power BI Desktop. For a description of using Import mode in Power Query Desktop or Power Query Online, go to the following sections:
 >
 >SAP BW Application Server connector:
@@ -72,7 +72,7 @@ While you work with a report in the Power BI service, the underlying data source
 
 For SAP BW queries with variables, end users can edit parameters of the query.
 
->[!NOTE]
+> [!NOTE]
 >For the end user to edit parameters, the dataset needs to be published to a premium workspace, in DirectQuery mode, and single sign-on (SSO) needs to be enabled.
 
 ## General Recommendations
