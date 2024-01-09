@@ -1,7 +1,7 @@
 ---
 title: Applied steps
 description: Applied steps show the transformations to the data.
-author: bezhan-msft
+author: ptyx507x
 ms.date: 1/8/2024
 ms.author: miescobar
 ---

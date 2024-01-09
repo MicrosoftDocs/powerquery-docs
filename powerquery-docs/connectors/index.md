@@ -1,7 +1,7 @@
 ---
 title: List of all Power Query connectors
 description: List of all currently available Power Query connectors
-author: bezhan-msft
+author: DougKlopfenstein
 ms.date: 1/8/2024
 ms.author: dougklo
 ms.custom: intro-internal

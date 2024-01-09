@@ -1,7 +1,7 @@
 ---
 title: Power Query MySQL database connector
 description: Provides basic information about products that use the connector, supported authentication types, prerequisites, and connection instructions.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 1/8/2024
 ms.author: dougklo

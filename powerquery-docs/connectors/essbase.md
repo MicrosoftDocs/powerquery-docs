@@ -1,7 +1,7 @@
 ---
 title: Power Query Essbase connector
 description: Provides basic information and prerequisites for the Essbase connector.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 1/8/2024 
 ms.author: dougklo

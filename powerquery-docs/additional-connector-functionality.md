@@ -1,7 +1,7 @@
 ---
 title: Additional connector functionality
 description: Provides information to custom and certified connector developers on adding more connector functionality
-author: bezhan-msft
+author: ptyx507x
 ms.topic: conceptual
 ms.date: 1/8/2024
 ms.author: miescobar

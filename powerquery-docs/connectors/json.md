@@ -1,7 +1,7 @@
 ---
 title: Power Query JSON connector
 description: Provides basic information and connection instructions, along with instructions on loading from the web and basic troubleshooting information.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 1/8/2024
 ms.author: dougklo

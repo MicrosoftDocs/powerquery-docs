@@ -1,7 +1,7 @@
 ---
 title: Power Query SIS-CC SDMX connector
 description: Provides basic information and prerequisites for the SIS-CC SDMX connector, descriptions of the optional input parameters, and discusses limitations and issues you might come across.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 1/8/2024
 ms.author: dougklo

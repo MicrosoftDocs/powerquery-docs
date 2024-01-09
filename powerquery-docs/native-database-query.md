@@ -1,7 +1,7 @@
 ---
 title: Import data from a database using native database query
 description: Describes the steps you take to import data from a database using a native database query
-author: bezhan-msft
+author: ptyx507x
 ms.topic: conceptual
 ms.date: 1/8/2024
 ms.author: miescobar

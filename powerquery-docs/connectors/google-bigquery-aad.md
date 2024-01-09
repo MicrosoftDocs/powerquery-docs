@@ -1,7 +1,7 @@
 ---
 title: Google BigQuery (Azure AD) (Beta)
 description: Provides basic information and prerequisites for the Google BigQuery (Azure AD) connector for Power Query.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 1/8/2024
 ms.author: dougklo

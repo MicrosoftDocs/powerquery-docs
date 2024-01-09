@@ -1,7 +1,7 @@
 ---
 title: Azure Databricks Power Query connector
 description: Provides basic information and prerequisites for using Power Query's Azure Databricks connector.
-author: bezhan-msft
+author: DougKlopfenstein
 
 ms.topic: conceptual
 ms.date: 1/8/2024

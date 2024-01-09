@@ -2,7 +2,7 @@
 title: Azure Data Lake Storage Gen1
 description: Includes basic information, prerequisites, and information on how to connect to Azure Data Lake Storage Gen1.
 
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 1/8/2024
 ms.author: dougklo

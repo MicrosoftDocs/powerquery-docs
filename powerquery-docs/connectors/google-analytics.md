@@ -1,7 +1,7 @@
 ---
 title: Power Query Google Analytics connector
 description: Provides basic information and connection instructions, along with a list of quota limits for Power BI and instructions on validating unexpected data.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 1/8/2024
 ms.author: dougklo

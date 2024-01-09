@@ -1,7 +1,7 @@
 ---
 title: Power Query SharePoint folder connector
 description: Provides basic information, prerequisites, and how to connect to your data, along with troubleshooting tips when combining files and using filename special characters.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 1/8/2024
 ms.author: dougklo

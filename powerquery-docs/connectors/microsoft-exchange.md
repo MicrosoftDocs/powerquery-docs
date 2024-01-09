@@ -1,7 +1,7 @@
 ---
 title: Power Query Microsoft Exchange connector
 description: Provides basic information and connection instructions for the Microsoft Exchange connector
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 1/8/2024
 ms.author: dougklo
