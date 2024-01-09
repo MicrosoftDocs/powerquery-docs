@@ -3,7 +3,7 @@ title: Where to get data
 description: Describes the process of getting data for Power Query from various Microsoft products.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 12/11/2023
+ms.date: 1/9/2024
 ms.author: dougklo
 ---
 
