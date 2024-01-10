@@ -1,10 +1,10 @@
 ---
 title: Power Query SingleStore connector
 description: Provides basic information, prerequisites, and instructions on how to connect to your SingleStore data.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/14/2023
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # SingleStore (Beta)
@@ -57,7 +57,7 @@ To connect Microsoft Power BI Desktop to SingleStore DB or Managed Service:
 
        ![Select Basic authentication.](./media/singlestore/ss-db-basic.png)
 
-5. Once authenticated—for Import or DirectQuery mode—in the **Navigator** dialog box, choose the desired tables and select the **Load** button.
+5. Once authenticated&mdash;for Import or DirectQuery mode&mdash;in the **Navigator** dialog box, choose the desired tables and select the **Load** button.
 
     ![Select tables in the Navigator dialog and select Load.](./media/singlestore/ss-nav-load.png)
 
@@ -65,7 +65,7 @@ You can now use Power BI to explore SingleStore data.
 
 ## Create a Custom SQL Report
 
->[!NOTE]
+> [!NOTE]
 > Any user that creates a custom SQL report must only have read-only access to the SingleStore databases.
 
 To create a new custom SQL report:
@@ -80,7 +80,7 @@ To create a new custom SQL report:
 
     Submit the query.
 
-    >[!NOTE]
+    > [!NOTE]
     > If you're using the server for the first time, select **Edit Credentials** and enter the credentials. Go to **Step 4** in [Connect to SingleStore](#connect-to-singlestore) for more information.
 
 4. Verify the data to load, and select **Close & Apply**.

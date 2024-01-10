@@ -3,15 +3,15 @@ title: Use advanced options
 description: Describes how to use the Power Query SAP Business Warehouse connector advanced sign-in options.
 author: dougklopfenstein
 ms.topic: conceptual
-ms.date: 11/29/2022
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # Use advanced options
 
 When you create a connection to an SAP Business Warehouse server, you can optionally specify a language code, execution mode, batch size, and an MDX Statement. Also, you can select whether you want to enable characteristic structures.
 
->[!NOTE]
+> [!NOTE]
 > Although the images in this article illustrate the advanced options in the SAP Business Warehouse Application Server connector, they work the same way in the SAP Business Warehouse Message Server connector.
 
 ## Language code
@@ -24,7 +24,7 @@ The expected value is a two-letter language code as defined in the SAP system. I
 
 After you set the language code, Power Query displays the descriptive names of the data objects in SAP BW in the specified language, including the field names for the selected objects.
 
->[!NOTE]
+> [!NOTE]
 > Not all listed languages might be configured in your SAP BW system, and object descriptions might not be translated in all languages.
 
 ![Navigator showing language change for descriptive and field names.](navigator-language-option.png)
@@ -47,12 +47,12 @@ Specifies the maximum number of rows to retrieve at a time when executing an MDX
 
 ## MDX Statement
 
->[!NOTE]
->The MDX statement option is not available in Power Query Online. 
+> [!NOTE]
+>The MDX statement option isn't available in Power Query Online.
 
 Instead of using the navigator to browse through and select from available data objects in SAP BW, a user who's familiar with the MDX query language can specify an MDX statement for direct execution in SAP BW. However, be aware that no further query folding will be applied when using a custom MDX statement.
 
-The statement for the example used here would look as shown in the following sample, based on the technical names of the objects and properties in SAP BW. 
+The statement for the example used here would look as shown in the following sample, based on the technical names of the objects and properties in SAP BW.
 
 ```
 SELECT {[0EFUZM0P10X72MBPOYVBYIMLB].[0EFUZM0P10X72MBPOYVBYISWV]} ON COLUMNS ,
@@ -86,7 +86,7 @@ The transaction offers different execution modes/interfaces for the MDX statemen
 ![Shows Flattening selected in Execute in Export mode.](select-flattening.png)
 
 The transaction will display the result set of the MDX statement and useful runtime metrics.
- 
+
 ![Displays the result set of the MDX statement.](mdx-result-set.png)
 
 ## Enable characteristic structures
@@ -108,5 +108,3 @@ If selected, the connector produces only the available measures. For example:
 * [Navigate the query objects](navigate-query-objects.md)
 * [Transform and filter SAP BW dataset](transform-filter-sap-bw-data.md)
 * [SAP Business Warehouse connector troubleshooting](sap-bw-troubleshooting.md)
-
-

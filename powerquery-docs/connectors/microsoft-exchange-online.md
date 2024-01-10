@@ -1,10 +1,10 @@
 ---
 title: Microsoft Exchange Online Power Query Data Connector
 description: Provides basic information and connection instructions for the Microsoft Exchange Online connector
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 7/14/2023
-ms.author: bezhan
+ms.author: dougklo
 ---
 
 # Microsoft Exchange Online

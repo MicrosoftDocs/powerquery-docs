@@ -1,10 +1,10 @@
 ---
 title: Power Query SQL Server connector
 description: Includes basic information about products that use the connector, supported authentication types, prerequisites, and connection instructions.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/14/2023
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # SQL Server
@@ -18,7 +18,7 @@ ms.author: bezhan
 | Authentication Types Supported | Database (Username/Password)<br/>Windows<br/>Azure Active Directory (if the specified server supports it) |
 | M Function Reference | [Sql.Database](/powerquery-m/sql-database)<br/>[Sql.Databases](/powerquery-m/sql-databases) |
 
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
@@ -54,7 +54,7 @@ To make the connection, take the following steps:
 
    ![SQL Server database authentication.](./media/sql-server-database/signin-desktop.png)
 
-   >[!Note]
+   > [!NOTE]
    > If the connection is not encrypted, you'll be prompted with the following dialog.
 
    ![SQL Server database encryption support.](./media/sql-server-database/encryption-warning.png)

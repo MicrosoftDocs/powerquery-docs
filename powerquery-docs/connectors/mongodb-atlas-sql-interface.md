@@ -2,9 +2,9 @@
 title: MongoDB Atlas SQL interface connector (Beta)  
 description: Provides basic information, prerequisites, and instructions for using the MongoDB Atlas SQL interface connector.  
 author: bucaojit  
-ms.author: bezhan
+ms.author: dougklo
 ms.topic: conceptual  
-ms.date: 7/25/2023  
+ms.date: 1/8/2024  
 ---
 
 # MongoDB Atlas SQL interface
@@ -101,9 +101,7 @@ To connect using the Atlas SQL interface:
 
 ## Troubleshooting
 
-When the connection can't be established successfully, the generic error message 
-`The driver returned invalid (or failed to return) SQL_DRIVER_ODBC_VER: 03.80` is displayed.
-Start by checking your credentials and that you have no network issues accessing your federated database.
+When the connection can't be established successfully, the generic error message `The driver returned invalid (or failed to return) SQL_DRIVER_ODBC_VER: 03.80` is displayed. Start by checking your credentials and that you have no network issues accessing your federated database.
 
 ## Next steps
 

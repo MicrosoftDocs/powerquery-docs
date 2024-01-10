@@ -1,10 +1,10 @@
 ---
 title: Power Query OData Feed connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your data using the connector.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/14/2023
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # OData Feed
@@ -18,7 +18,7 @@ ms.author: bezhan
 | Authentication Types Supported | Anonymous<br/>Windows<br/>Basic (requires Gateway)<br/>Web API<br/>Organizational Account |
 | Function Reference Documentation | [OData.Feed](/powerquery-m/odata-feed), [ODataOmitValues.Nulls](/powerquery-m/odataomitvalues-type) |
 
->[!Note]
+> [!NOTE]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Capabilities supported
@@ -29,7 +29,7 @@ ms.author: bezhan
   * Open type columns
 * Select related tables
 
->[!Note]
+> [!NOTE]
 > Microsoft Graph is not supported. More information: [Lack of Support for Microsoft Graph in Power Query](../connecting-to-graph.md)
 
 ## Load data from an OData Feed in Power Query Desktop

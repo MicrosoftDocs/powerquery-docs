@@ -1,10 +1,10 @@
 ---
 title: Power Query Teradata database connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your Teradata database.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/14/2023
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # Teradata database
@@ -18,7 +18,7 @@ ms.author: bezhan
 | Authentication Types Supported | Database<br/>Windows |
 | Function Reference Documentation | [Teradata.Database](/powerquery-m/teradata-database) |
 
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
@@ -67,7 +67,7 @@ To make the connection, take the following steps:
 
 3. Select the name of your on-premises data gateway.
 
-   >[!Note]
+   > [!NOTE]
    > You must select an on-premises data gateway for this connector, whether the Teradata database is on your local network or online.
 
 4. If this is the first time you're connecting to this Teradata database, select the type of credentials for the connection in **Authentication kind**. Choose **Basic** if you plan to use an account that's created in the Teradata database instead of Windows authentication. For more information about using and managing authentication, go to [Authentication with a data source](../connectorauthentication.md).

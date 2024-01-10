@@ -1,11 +1,11 @@
 ---
 title: Power Query feedback
 description: This article describes where users can receive support and share feedback for Power Query. 
-author: bezhan-msft
+author: ptyx507x
 
 ms.reviewer: dougklo
-ms.date: 1/5/2023
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: miescobar
 ---
 
 # Power Query feedback
@@ -14,7 +14,7 @@ This article describes how to get support or submit feedback for Power Query.
 
 For **Power Query connectors**, go to [Feedback and support for Power Query connectors](connectors/connector-feedback.md).
 
-For **Power Query documentation**, you can submit feedback through the **Submit and view feedback for - This page** link at the bottom of each article. 
+For **Power Query documentation**, you can submit feedback through the **Submit and view feedback for - This page** link at the bottom of each article.
 
 ## Support and troubleshooting
 

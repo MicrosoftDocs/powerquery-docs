@@ -1,10 +1,10 @@
 ---
 title: Power Query Oracle database connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your Oracle database using the connector.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 9/1/2023
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # Oracle database
@@ -18,7 +18,7 @@ ms.author: bezhan
 | Authentication Types Supported | Windows (desktop/online)<br/>Database (desktop)<br/>Basic (online) <br/>Azure Active Directory (desktop/online)|
 | Function Reference Documentation | [Oracle.Database](/powerquery-m/oracle-database) |
 
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
@@ -28,7 +28,7 @@ Supported Oracle versions:
 * Oracle Database Server 12c (12.1.0.2) and later
 * Oracle Autonomous Database - all versions
 
-Before you can connect to an Oracle database using Power Query, you need to install the Oracle Client for Microsoft Tools (OCMT). 
+Before you can connect to an Oracle database using Power Query, you need to install the Oracle Client for Microsoft Tools (OCMT).
 
 To connect to an Oracle database with the [on-premises data gateway](/data-integration/gateway/), 64-bit OCMT must be installed on the computer running the gateway. For more information, go to [Manage your data source - Oracle](/power-bi/connect-data/service-gateway-onprem-manage-oracle).
 
@@ -106,7 +106,7 @@ To make the connection, take the following steps:
 
 ## Connect to an Oracle Autonomous Database
 
->[!Note]
+> [!NOTE]
 >Currently, you can connect to an Oracle Autonomous Database from Excel, Power BI Desktop, Power BI service, Fabric (Dataflow Gen2), Power Apps, SQL Server Analysis Services, and BizTalk Server using the procedures in this section. These tools use unmanaged ODP.NET to connect. Other Microsoft tools, including SQL Server Data Tools, SQL Server Integration Services, and SQL Server Reporting Services, use managed ODP.NET to connect to Oracle Autonomous Database using largely similar procedures.
 
 To connect Power BI to an Oracle Autonomous Database, you need the following accounts and apps:

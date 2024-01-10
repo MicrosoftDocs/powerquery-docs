@@ -1,10 +1,10 @@
 ---
 title: OLE DB Power Query Data Connector
 description: Provides basic information and connection instructions for the OLE DB connector.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 01/26/2023
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # OLE DB
@@ -18,7 +18,7 @@ ms.author: bezhan
 | Authentication Types Supported | Exchange account<br/>Microsoft account |
 | Function Reference Documentation | [Exchange.Contents](/powerquery-m/exchange-contents) |
 
->[!NOTE]
+> [!NOTE]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Capabilities Supported
@@ -37,10 +37,10 @@ To make the connection to **OLE DB**, follow these steps:
 
 1. In the **OLE DB** window that appears, enter your connection string. Optionally, you can provide other SQL query information in the **Advanced options** tab.
 
-   >[!TIP]
+   > [!TIP]
    > Avoid using credential or security properties in this connection string, as you'll enter them in the next menu.
 
-   :::image type="content" source="./media/ole-db/enter-address.png" alt-text="Screenshot of the OLE DB dialog, showing connection string entered as 'Provider=SQLOLEDB;Data Source=(local);InitialCatalog=Adventureworks.'":::
+   :::image type="content" source="./media/ole-db/enter-address.png" alt-text="Screenshot of the OLE DB dialog, showing connection string entered as Provider=SQLOLEDB;Data Source=(local);InitialCatalog=Adventureworks.":::
 
 1. Select **OK**.
 
@@ -53,4 +53,3 @@ To make the connection to **OLE DB**, follow these steps:
    :::image type="content" source="./media/ole-db/database-credentials.png" alt-text="Screenshot of the OLE DB dialog, showing username, password, and optional connection string properties entered.":::
 
 1. In **Navigator**, review and select data from your database. Then select either **Load** to load the table, or **Transform Data** to open the Power Query Editor where you can filter and refine the set of data you want to use, and then load that refined set of data.
-

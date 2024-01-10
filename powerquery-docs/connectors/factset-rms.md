@@ -1,11 +1,11 @@
 ---
 title: Power Query FactSet RMS connector
 description: Provides basic information and prerequisites for the FactSet RMS connector, and includes descriptions of the optional input parameters.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 7/13/2023
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # FactSet RMS (Beta)

@@ -1,10 +1,10 @@
 ---
 title: Power Query Impala database connector
 description: Provides basic information for the Impala database connector, along with how to connect to your Impala data.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/13/2023
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # Impala database
@@ -18,7 +18,7 @@ ms.author: bezhan
 | Authentication Types Supported | Anonymous<br/>Database<br/>Windows |
 | Function Reference Documentation | &mdash; |
 
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Capabilities Supported
@@ -49,7 +49,7 @@ To connect to an **Impala** database, take the following steps:
 
    For more information about authentication methods, go to [Authentication with a data source](../connectorauthentication.md).
 
-   >[!Note]
+   > [!NOTE]
    >  If the connection isn't encrypted, you'll be prompted with the following message. Select **OK** if you want to use an unencrypted connection.
 
    ![Image of the encryption support dialog, emphasizing that a connection could not be made and asking whether to use an unencrypted connection.](media/impala-database/encryption-warning.png)

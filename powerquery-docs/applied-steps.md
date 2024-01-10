@@ -1,9 +1,9 @@
 ---
 title: Applied steps
 description: Applied steps show the transformations to the data.
-author: bezhan-msft
-ms.date: 8/4/2023
-ms.author: bezhan
+author: ptyx507x
+ms.date: 1/8/2024
+ms.author: miescobar
 ---
 
 # Using the Applied Steps list

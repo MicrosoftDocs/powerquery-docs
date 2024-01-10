@@ -1,10 +1,10 @@
 ---
 title: Power Query PDF connector
 description: Provides basic information and prerequisites for the connector, along with information on how to connect to PDF files.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/14/2023
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # PDF
@@ -18,11 +18,11 @@ ms.author: bezhan
 | Authentication Types Supported | Anonymous (online)<br/>Basic (online)<br/>Organizational account (online)</br>Windows (online) |
 | Function Reference Documentation | [Pdf.Tables](/powerquery-m/pdf-tables) |
 
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
->[!Note]
-> PDF is not supported in Power BI Premium.
+>[!NOTE]
+> PDF isn't supported in Power BI Premium.
 
 ## Prerequisites
 

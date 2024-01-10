@@ -1,10 +1,10 @@
 ---
 title: Power Query JSON connector
 description: Provides basic information and connection instructions, along with instructions on loading from the web and basic troubleshooting information.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/13/2023
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # JSON
@@ -18,7 +18,7 @@ ms.author: bezhan
 | Authentication Types Supported | Anonymous<br/>Basic (Web only)<br/>Organizational Account<br/>Web API (Web only)<br/>Windows |
 | Function Reference Documentation | [Json.Document](/powerquery-m/json-document) |
 
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Capabilities supported

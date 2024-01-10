@@ -1,11 +1,10 @@
 ---
 title: Power Query SQL Server Analysis Services database connector
 description: Includes basic information about products that use the SQL Server Analysis Services database connector, supported authentication types, prerequisites, and connection instructions.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 10/6/2023
-ms.author: bezhan
-LocalizationGroup: reference
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # SQL Server Analysis Services database
@@ -19,7 +18,7 @@ LocalizationGroup: reference
 | Authentication Types Supported | Basic<br/>Microsoft account<br/>Organizational account<br/>Windows |
 | M Function Reference | [Sql.Database](/powerquery-m/sql-database)<br/>[Sql.Databases](/powerquery-m/sql-databases) |
 
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
@@ -43,7 +42,7 @@ To make the connection, take the following steps:
 
    ![SQL Server Analysis Services database connection builder in Power Query Desktop.](./media/sql-server-analysis-services/select-database-desktop.png)
 
-   >[!NOTE]
+   > [!NOTE]
    > Only Power BI Desktop will display the **Import** and **Connect live** options. If you're connecting using Power BI Desktop, selecting **Connect live** uses a live connection to load the connected data directly to Power BI Desktop. In this case, you can't use Power Query to transform your data before loading the data to Power BI Desktop. For the purposes of this article, the **Import** option is selected. For more information about using a live connection in Power BI Desktop, go to [Connect to Analysis Services tabular data in Power BI Desktop](/power-bi/connect-data/desktop-analysis-services-tabular-data).
 
 3. Select **OK**.

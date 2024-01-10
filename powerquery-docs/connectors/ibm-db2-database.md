@@ -1,10 +1,10 @@
 ---
 title: Power Query IBM Db2 database connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your IBM Db2 database.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/13/2023
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # IBM Db2 database
@@ -18,7 +18,7 @@ ms.author: bezhan
 | Authentication Types Supported | Basic<br/>Database<br/>Windows |
 | Function Reference Documentation | [DB2.Database](/powerquery-m/db2-database) |
 
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites

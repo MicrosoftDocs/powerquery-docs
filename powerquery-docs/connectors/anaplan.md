@@ -1,15 +1,15 @@
 ---
 title: Power Query Anaplan connector
 description: Provides basic information, prerequisites, and instructions on how to connect to your Anaplan data, as well as troubleshooting tips.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/13/2023
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # Anaplan
 
->[!Note]
+> [!NOTE]
 >The following connector article is provided by Anaplan, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Anaplan website and use the support channels there.
 
 ## Summary
@@ -104,7 +104,7 @@ You've chosen either basic authentication or Anaplan-configured IDP.
 
    4. Select **Sign In**.
 
-      >[!Note]
+      > [!NOTE]
       > Your company's Anaplan-configured IDP service generates this dialog. A common ID management service is Okta.
 
       ![Sign In dialog for Okta. Okta is one example of a likely identity management tool.](./media/anaplan/okta-example.png)

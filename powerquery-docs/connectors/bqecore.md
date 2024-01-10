@@ -4,12 +4,12 @@ description: Provides basic information, prerequisites, and instructions on how 
 author: cruzgreg
 ms.topic: conceptual
 ms.date: 7/13/2023
-ms.author: bezhan
+ms.author: dougklo
 ---
 
 # BQE Core
 
->[!Note]
+> [!NOTE]
 >The following connector article is provided by BQE, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the BQE website and use the support channels there.
 
 ## Summary

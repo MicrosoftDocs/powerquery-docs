@@ -1,10 +1,10 @@
 ---
 title: Power Query Snowflake connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Snowflake database, along with native query folding instructions and troubleshooting tips.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/14/2023
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # Snowflake
@@ -64,7 +64,7 @@ To make the connection to a **Snowflake** computing warehouse, take the followin
 
 7. Select **Import** to import data directly into Power BI, or select **DirectQuery**, then select **OK**. More information: [Use DirectQuery in Power BI Desktop](/power-bi/connect-data/desktop-use-directquery)
 
-   >[!Note]
+   > [!NOTE]
    >Azure Active Directory (Azure AD) Single Sign-On (SSO) only supports DirectQuery.
 
    ![Screenshot of Connection settings, which contains the Import and DirectQuery selections.](./media/snowflake/connection-settings-desktop.png)

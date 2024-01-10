@@ -1,10 +1,10 @@
 ---
 title: Troubleshooting the Power Query Web connector
 description: Provides troubleshooting tips for errors that might occur when using the Power Query Web connector to connect to a web site.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 2/1/2023
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # Troubleshooting the Web connector
@@ -87,7 +87,7 @@ In Power BI Desktop, you can use the older `Web.Page` function by clearing the *
 3. Clear the **Enable web table inference** option, and then select **OK**.
 4. Restart Power BI Desktop.
 
-    >[!NOTE]
+    > [!NOTE]
     >Currently, you can't turn off the use of `Web.BrowserContents` in Power BI Desktop optimized for Power BI Report Server.
 
 You can also get a copy of a `Web.Page` query from Excel. To copy the code from Excel:
@@ -129,7 +129,7 @@ We've strengthened the security of web connections to protect your data. However
 4. Select **OK**.
 5. Restart Power BI Desktop.
 
->[!IMPORTANT]
+> [!IMPORTANT]
 >Be aware that unchecking **Enable certificate revocation check** will make web connections less secure.
 
 To set this scenario in Group Policy, use the "DisableCertificateRevocationCheck" key under the registry path "Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Power BI Desktop". Setting "DisableCertificateRevocationCheck" to 0 will always enable the check (stopping Fiddler and similar software from working) and setting "DisableCertificateRevocationCheck" to 1 will always disable the check (enabling Fiddler and similar software).
@@ -144,11 +144,11 @@ Some services support the ability for the Web connector to authenticate with OAu
 
 When attempting to authenticate, if you see the following error:
 
-“We were unable to connect because this credential type isn’t supported for this resource. Please choose another credential type.”
+`We were unable to connect because this credential type isn’t supported for this resource. Please choose another credential type.`
 
    ![Error from connecting to an endpoint that doesn't support OAuth with the web connector.](./credential-type-not-supported.png)
 
-Contact the service owner. They'll either need to change the authentication configuration or build a custom connector.
+Contact the service owner. They either need to change the authentication configuration or build a custom connector.
 
 ## Web connector uses HTTP 1.1 to communicate
 

@@ -2,8 +2,8 @@
 title: Power Query Celonis EMS connector
 description: Provides basic information, prerequisites, and connection steps for Celonis EMS.
 author: capono
-ms.date: 7/13/2023 
-ms.author: bezhan
+ms.date: 1/8/2024 
+ms.author: dougklo
 ---
 
 # Celonis EMS (Beta)
