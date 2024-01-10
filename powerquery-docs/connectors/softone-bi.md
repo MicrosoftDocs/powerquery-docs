@@ -2,7 +2,7 @@
 title: SoftOne BI connector
 description: This article provides information for the SoftOne BI connector and a tutorial for usage.
 author: basilrormose
-ms.topic: 
+ms.topic: conceptual
 ms.date: 1/8/2024
 ms.author: dougklo
 ---
