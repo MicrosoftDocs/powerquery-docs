@@ -9,7 +9,7 @@ ms.author:
 
 # Looker
 
-![Here's the Looker logo](./media/google-bigquery/Looker64.png)
+![Here's the Looker logo](./media/index/looker-64.png)
 
 ## Summary
 
