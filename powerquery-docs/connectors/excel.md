@@ -183,3 +183,7 @@ You might see the following error when importing certain Excel workbooks.
 Usually this error indicates there is a problem with the format of the file.
 
 However, sometimes this error can happen when a file appears to be an Open XML file (such as .xlsx), but the ACE driver is actually needed in order to process the file. Go to the [Legacy ACE connector](excel.md#legacy-ace-connector) section for more information about how to process files that require the ACE driver.
+
+## Known issues and limitations
+
+Power Query Online is unable to access encrypted files. Since Excel files labeled with sensitivity types other than "Public" or "Non-Business" are encrypted, they aren't accessible through Power Query Online.
