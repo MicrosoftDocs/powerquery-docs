@@ -186,4 +186,4 @@ However, sometimes this error can happen when a file appears to be an Open XML f
 
 ## Known issues and limitations
 
-Power Query Online is unable to access encrypted files. Since Excel files labeled with sensitivity types other than 'Public' or 'Non-Business' are encrypted, they are not accessible through Power Query Online.
+Power Query Online is unable to access encrypted files. Since Excel files labeled with sensitivity types other than "Public" or "Non-Business" are encrypted, they aren't accessible through Power Query Online.
