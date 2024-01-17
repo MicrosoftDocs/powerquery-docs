@@ -3,7 +3,7 @@ title: Power Query SharePoint folder connector
 description: Provides basic information, prerequisites, and how to connect to your data, along with troubleshooting tips when combining files and using filename special characters.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/17/2024
 ms.author: dougklo
 ---
 
@@ -127,6 +127,6 @@ If these characters are present in the filename, the file owner must rename the 
 
 When requesting document library contents, you should have Read access to the SharePoint site as well as the document library and any folders leading to the requested file.
 
-### Azure Active Directory authentication
+### Microsoft Entra ID authentication
 
-Azure Active Directory authentication (AAD) isn't supported for on-premises SharePoint sources.
+Microsoft Entra ID authentication (AAD) isn't supported for on-premises SharePoint sources.

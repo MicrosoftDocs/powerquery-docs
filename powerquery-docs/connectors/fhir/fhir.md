@@ -3,7 +3,7 @@ title: Power Query connector for FHIR
 description: Power Query connector for FHIR reference
 author: hansenms
 ms.topic: conceptual
-ms.date: 7/25/2023
+ms.date: 1/17/2024
 ms.author: mihansen
 ---
 
@@ -56,7 +56,7 @@ To make a connection to a FHIR server, take the following steps:
 
    :::image type="content" source="fhir-sign-in.png" alt-text="Screenshot of the authentication dialog with the Organizational account selected and the user not yet signed in.":::
 
-    The connector supports "Anonymous" for FHIR servers with no access controls (for example, public test servers like `http://test.fhir.org/r4`) or Azure Active Directory authentication. You must have a [FHIR Data Reader role](#prerequisites) on the FHIR server to read data from the server. Go to [FHIR connector authentication](fhir-authentication.md) for details.
+    The connector supports "Anonymous" for FHIR servers with no access controls (for example, public test servers like `http://test.fhir.org/r4`) or Microsoft Entra ID (organizational) authentication. You must have a [FHIR Data Reader role](#prerequisites) on the FHIR server to read data from the server. Go to [FHIR connector authentication](fhir-authentication.md) for details.
 
 5. Select the resources you're interested in.
 

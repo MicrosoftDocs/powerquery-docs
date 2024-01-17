@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for using Power Query'
 author: DougKlopfenstein
 
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/17/2024
 ms.author: dougklo
 ---
 
@@ -19,7 +19,7 @@ ms.author: dougklo
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
-| Authentication Types Supported | Azure Active Directory<br/>Organizational Account<br/>Personal Access Token |
+| Authentication Types Supported | Azure Active Directory<br/>Personal Access Token<br/>Username / Password |
 
 ## Capabilities supported
 

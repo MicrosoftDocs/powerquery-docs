@@ -100,9 +100,9 @@ The user can force the interpretation to be consistent by explicitly setting the
 
 If you use an OData feed to access a SharePoint List, there's an approximately 2100 character limitation to the URL you use to connect. More information: [Maximum URL length](odata-feed.md#maximum-url-length)
 
-### Azure Active Directory authentication
+### Microsoft Entra ID authentication
 
-Azure Active Directory authentication (AAD) isn't supported for on-premises SharePoint sources.
+Microsoft Entra ID authentication (AAD) isn't supported for on-premises SharePoint sources.
 
 ## Next steps
 
