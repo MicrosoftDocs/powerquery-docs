@@ -3,7 +3,7 @@ title: Power Query OData Feed connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your data using the connector.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/17/2024
 ms.author: dougklo
 ---
 
@@ -92,7 +92,7 @@ When you enter credentials for an OData service into Power BI service (for examp
 
 ### Authenticating to arbitrary services
 
-Some services support the ability for the OData connector to authenticate with OAuth/AAD authentication out of the box. However, this won't work in most cases.
+Some services support the ability for the OData connector to authenticate with OAuth/Microsoft Entra ID authentication out of the box. However, this won't work in most cases.
 
 When attempting to authenticate, if the following error occurs:
 

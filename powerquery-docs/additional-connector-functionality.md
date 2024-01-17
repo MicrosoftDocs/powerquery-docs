@@ -3,7 +3,7 @@ title: Additional connector functionality
 description: Provides information to custom and certified connector developers on adding more connector functionality
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/17/2024
 ms.author: miescobar
 ---
 
@@ -31,9 +31,9 @@ This change will expose Windows authentication as an option in the Power BI Desk
 
 This section outlines options available for implementing single sign-on (SSO) functionality into your certified connector. Currently, there is no support for "plug and play" extensibility for SSO. Enabling SSO would require changes and collaboration both on the Microsoft and data source or connector sides, so reach out to your Microsoft contact prior to starting work.
 
-#### Azure Active Directory SSO
+#### Microsoft Entra ID SSO
 
-Azure Active Directory (Azure AD)-based SSO is supported in cloud scenarios. The data source must accept Azure AD access tokens, as the Power BI Azure AD user token will be exchanged with a data source token from Azure AD. If you have a certified connector, reach out to your Microsoft contact to learn more.
+Microsoft Entra ID-based SSO is supported in cloud scenarios. The data source must accept Microsoft Entra ID access tokens, as the Power BI Microsoft Entra ID user token is exchanged with a data source token from Microsoft Entra ID. If you have a certified connector, reach out to your Microsoft contact to learn more.
 
 #### Kerberos SSO
 

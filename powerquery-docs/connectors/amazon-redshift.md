@@ -3,7 +3,7 @@ title: Power Query Amazon Redshift connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Amazon Redshift data.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/17/2024
 ms.author: dougklo
 ---
 
@@ -99,11 +99,11 @@ The following table describes all of the advanced options you can set in Power Q
 | Batch size | Specifies the maximum number of rows to retrieve at a time from the server when fetching data. A small number translates into more calls to the server when retrieving a large dataset. A large number of rows may improve performance, but could cause high memory usage. The default value is 100 rows. |
 | SQL Statement | For information, go to [Import data from a database using native database query](../native-database-query.md). This option is only available in Power BI Desktop. |
 
-## Enable Azure AD Single Sign-On (SSO) for Amazon Redshift
+## Enable Microsoft Entra ID Single Sign-On (SSO) for Amazon Redshift
 
-We support Azure AD SSO through both Power BI Service (cloud) and also through the on-premises data gateway. For more information about enabling Azure AD SSO for all connectors, go to [Overview of single sign-on (SSO) for on-premises data gateways in Power BI](/power-bi/connect-data/service-gateway-sso-overview).
+We support Microsoft Entra ID SSO through both Power BI Service (cloud) and also through the on-premises data gateway. For more information about enabling Microsoft Entra ID SSO for all connectors, go to [Overview of single sign-on (SSO) for on-premises data gateways in Power BI](/power-bi/connect-data/service-gateway-sso-overview).
 
-### Azure AD Single Sign-On (SSO) through Power BI service
+### Microsoft Entra ID Single Sign-On (SSO) through Power BI service
 
 To configure a new connection in Power BI service:
 
@@ -115,9 +115,9 @@ To configure a new connection in Power BI service:
 
    ![Image of the Redshift SSO option with the Enabled button enabled.](./media/amazon-redshift/redshift-sso.png)
 
-### Azure AD Single Sign-On (SSO) for Amazon Redshift with an on-premises data gateway
+### Microsoft Entra ID Single Sign-On (SSO) for Amazon Redshift with an on-premises data gateway
 
-Before you can enable Azure AD SSO for Amazon Redshift, you must first enable Azure AD SSO for all data sources that support Azure AD SSO with an on-premises data gateway:
+Before you can enable Microsoft Entra ID SSO for Amazon Redshift, you must first enable Microsoft Entra ID SSO for all data sources that support Microsoft Entra ID SSO with an on-premises data gateway:
 
 1. In Power BI service, select **Admin portal** from the settings list.
 
@@ -125,9 +125,9 @@ Before you can enable Azure AD SSO for Amazon Redshift, you must first enable Az
 
 2. Under **Tenant settings**, enable **Azure AD Single-Sign On (SSO) for Gateway**.
 
-   ![Image of the Azure AD SSO for gateway dialog, with the Enabled selection enabled.](./media/amazon-redshift/aad-sso-for-gateway.png)
+   ![Image of the Microsoft Entra ID SSO for gateway dialog, with the Enabled selection enabled.](./media/amazon-redshift/aad-sso-for-gateway.png)
 
-Once you've enabled Azure AD SSO for all data sources, then enable Azure AD SSO for Amazon Redshift:
+Once you've enabled Microsoft Entra ID SSO for all data sources, then enable Microsoft Entra ID SSO for Amazon Redshift:
 
 1. Enable the **Redshift SSO** option.
 
@@ -139,7 +139,7 @@ Once you've enabled Azure AD SSO for all data sources, then enable Azure AD SSO 
 
 3. Select a gateway, and then select **Choose Data Source**.
 
-4. Under the **Data Source Settings** tab, enter a value in **Provider Name**. The **Provider Name** parameter is required when using Azure AD and needs to be specified in **Advanced settings**.
+4. Under the **Data Source Settings** tab, enter a value in **Provider Name**. The **Provider Name** parameter is required when using Microsoft Entra ID and needs to be specified in **Advanced settings**.
 
    Also select **Use SSO via Azure AD for DirectQuery queries**.
 
