@@ -22,7 +22,7 @@ ms.author: dougklo
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 > [!NOTE]
->AAD/OAuth for SharePoint on-premises isn’t supported using the on-premises data gateway.
+>Microsoft Entra ID/OAuth for SharePoint on-premises isn’t supported using the on-premises data gateway.
 
 ## Capabilities supported
 
@@ -129,4 +129,4 @@ When requesting document library contents, you should have Read access to the Sh
 
 ### Microsoft Entra ID authentication
 
-Microsoft Entra ID authentication (AAD) isn't supported for on-premises SharePoint sources.
+Microsoft Entra ID authentication isn't supported for on-premises SharePoint sources.

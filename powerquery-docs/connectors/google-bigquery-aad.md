@@ -59,7 +59,7 @@ To connect to Google BigQuery (Azure AD) from Power Query Online, take the follo
 
    :::image type="content" source="media/google-bigquery-aad/choose-data-source.png" alt-text="Screenshot of the Choose data source dialog with the Google BigQuery (Azure AD) connector emphasized.":::
 
-2. In the **Google BigQuery (Azure AAD)** dialog, you may need to either create a new connection or select an existing connection. If you're creating a new connection, enter the **Billing Project ID**. If you're using on-premises data, select an on-premises data gateway.
+2. In the **Google BigQuery (Azure AD)** dialog, you may need to either create a new connection or select an existing connection. If you're creating a new connection, enter the **Billing Project ID**. If you're using on-premises data, select an on-premises data gateway.
 
    :::image type="content" source="media/google-bigquery-aad/connect-to-data-source.png" alt-text="Screenshot of the Connect to data source dialog where you enter your Google BigQuery (Azure AD) connection settings and credentials.":::
 

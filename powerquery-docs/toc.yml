@@ -19,7 +19,7 @@ items:
           href: connector-authentication.md
         - name: "Authentication in Power Query Online"
           href: connection-authentication-pqo.md
-        - name: "Auto sign in for AAD data sources"
+        - name: "Auto sign in for Microsoft Entra ID data sources"
           href: auto-signin-aad.md
       - name: "Upload a file"
         href: upload-file.md

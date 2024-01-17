@@ -3,7 +3,7 @@ title: Troubleshooting the Power Query Web connector
 description: Provides troubleshooting tips for errors that might occur when using the Power Query Web connector to connect to a web site.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/17/2024
 ms.author: dougklo
 ---
 
@@ -140,7 +140,7 @@ In some cases, you may need to change the authentication method you use to acces
 
 ## Authenticating to arbitrary services
 
-Some services support the ability for the Web connector to authenticate with OAuth/AAD authentication out of the box. However, this won't work in most cases.
+Some services support the ability for the Web connector to authenticate with OAuth/Microsoft Entra ID authentication out of the box. However, this won't work in most cases.
 
 When attempting to authenticate, if you see the following error:
 
