@@ -3,7 +3,7 @@ title: Behind the scenes of the Data Privacy Firewall
 description: Describes the purpose of the Data Privacy Firewall
 author: ehrenMSFT
 ms.topic: conceptual
-ms.date: 1/4/2024
+ms.date: 1/22/2024
 ms.author: ehvonleh
 ---
 
@@ -166,11 +166,7 @@ Here's a high-level summary of the partitioning logic.
       * Doesn't reference any partitions that access data sources
       * Isn't cyclic
   * Grouping (Dynamic)
-    * Now that unnecessary partitions have been trimmed, try to create Source partitions that are as large as possible.
-    * Merge partitions in bottom-up dependency order. In the resulting merged partitions, the following will be separate:
-      * Partitions in different queries
-      * Partitions that don't reference other partitions (and are thus allowed to access a data source)
-      * Partitions that reference other partitions (and are thus prohibited from accessing a data source)
+    * Now that unnecessary partitions have been trimmed, try to create Source partitions that are as large as possible. Partitions are merged using the same rules described in the static grouping phase above.
 
 ## What does all this mean?
 
