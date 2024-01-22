@@ -166,7 +166,7 @@ Here's a high-level summary of the partitioning logic.
       * Doesn't reference any partitions that access data sources
       * Isn't cyclic
   * Grouping (Dynamic)
-    * Now that unnecessary partitions have been trimmed, try to create Source partitions that are as large as possible. Partitions are merged using the same rules described in the static grouping phase above.
+    * Now that unnecessary partitions have been trimmed, try to create Source partitions that are as large as possible. This is done by merging the partitions using the same rules described in the static grouping phase above.
 
 ## What does all this mean?
 
