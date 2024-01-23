@@ -9,16 +9,16 @@ ms.topic: overview
 
 # Overview of query evaluation and query folding in Power Query
 
-This article provides a basic overview of how M queries are processed and turned into data source requests.
+This article provides an overview of how M queries are processed and turned into data source requests.
 
 ## Power Query M script
 
-Any query, whether created by Power Query, manually written by you in the advanced editor, or entered using a blank document, consists of functions and syntax from the [Power Query M formula language](/powerquery-m/). This query gets interpreted and evaluated by the Power Query engine to output its results. The M script serves as the set of instructions needed to evaluate the query.
+Any query, whether created by Power Query, manually written in the advanced editor, or entered using a blank document, consists of functions and syntax from the [Power Query M formula language](/powerquery-m/). Queries get interpreted and evaluated by the Power Query engine to output results. The M script serves as the set of instructions needed to evaluate queries.
 
 >[!TIP]
 >You can think of the M script as a recipe that describes how to prepare your data.
 
-The most common way to create an M script is by using the Power Query editor. For example, when you connect to a data source, such as a SQL Server database, you'll notice on the right-hand side of your screen that there's a section called [applied steps](applied-steps.md). This section displays all the steps or transforms used in your query. In this sense, the Power Query editor serves as an interface to help you create the appropriate M script for the transforms that you're after, and ensures that the code you use is valid.
+The most common way to create an M script is by using the Power Query editor. The Power Query editor serves as an interface to help you create the appropriate M script for the transforms that you're after and ensures valid code. On the right-hand side, you'll notice a section called [applied steps](applied-steps.md). This section displays all the steps or transforms used in your query. 
 
 >[!NOTE]
 > The M script is used in the Power Query editor to:
@@ -36,7 +36,7 @@ The previous image emphasizes the applied steps section, which contains the foll
 - **Sorted rows**: Sorts the table using one or more columns.
 - **Kept top rows**: Filters the table to only keep a certain number of rows from the top of the table.
 
-This set of step names is a friendly way to view the M script that Power Query has created for you. There are several ways to view the full M script. In Power Query, you can select **Advanced Editor** in the **View** tab. You can also select **Advanced Editor** from the **Query** group in the **Home** tab. In some versions of Power Query, you can also change the view of the formula bar to show the query script by going into the **View** tab and from the **Layout** group, select **Script view** > **Query script**.
+This set of step names is a friendly way to view the M script that Power Query has created for you. There are several ways to view the full M script. In Power Query, you can select **Advanced Editor** in the **View** tab. You can also select **Advanced Editor** from the **Query** group in the **Home** tab. In some versions of Power Query, you can also change the view of the formula bar to show the query script by going into the **View** tab, and from the **Layout** group, select **Script view** > **Query script**.
 
 ![Image with the full M script and the corresponding names of the applied steps.](media/query-folding-basics/m-script-applied-steps.png)
 
@@ -46,10 +46,10 @@ Any changes that you make to your query through the Power Query editor will auto
 
 ![Image with the applied step name changed to Top 20 rows, which also updates the M script.](media/query-folding-basics/change-step-name.png)
 
-While we recommend that you use the Power Query editor to create all or most of the M script for you, you can manually add or modify pieces of your M script. To learn more about the M language, go to the [official docs site for the M language](/powerquery-m/).
+While we recommend that you use the Power Query editor to create most of the M script, you can manually add or modify pieces of your M script. To learn more about the M language, go to the [official docs site for the M language](/powerquery-m/).
 
 >[!NOTE]
-> M script, also referred to as M code, is a term used for any code that uses the M language. In the context of this article, M script also refers to the code found inside a Power Query query and accessible through the advanced editor window or through the script view in the formula bar.
+> M script, also referred to as M code, is a term used for any code that uses the M language. In the context of this article, M script also refers to the code found inside a Power Query query and accessible through the advanced editor window or the script view in the formula bar.
 
 ## Query evaluation in Power Query
 
@@ -66,7 +66,7 @@ The following diagram explores the process that occurs when a query is evaluated
 >[!NOTE]
 >While this example showcases a query with a SQL Database as a data source, the concept applies to queries with or without a data source.
 
-When Power Query reads your M script, it runs the script through an optimization process to more efficiently evaluate your query. In this process, it determines which steps (transforms) from your query can be offloaded to your data source. It also determines which other steps need to be evaluated using the Power Query engine.
+When Power Query reads your M script, it runs the script through an optimization process to evaluate your query. In this process, it determines which steps (transforms) from your query can be offloaded to your data source. It also determines which other steps need to be evaluated using the Power Query engine.
 This optimization process is called *query folding*, where Power Query tries to push as much of the possible execution to the data source to optimize your query's execution.
 
 >[!IMPORTANT]
@@ -102,7 +102,7 @@ When you use the [get data experience](get-data-experience.md), Power Query guid
 However, the steps that follow in your query are the steps or transforms that the query folding mechanism attempts to optimize. It then checks if they can be offloaded to your data source instead of being processed using the Power Query engine.
 
 >[!IMPORTANT]
-> All data source functions, commonly shown as the **Source** step of a query, queries the data at the data source in its native language. The query folding mechanism is utilized on all transforms applied to your query after your data source function so they can be translated and combined into a single data source query or as many transforms that can be offloaded to the data source.
+> All data source functions, commonly shown as the **Source** step of a query, query the data at the data source in its native language. The query folding mechanism is utilized on all transforms applied to your query after your data source function so they can be translated and combined into a single data source query or as many transforms that can be offloaded to the data source.
 
 Depending on how the query is structured, there could be three possible outcomes to the query folding mechanism:
 
@@ -113,7 +113,7 @@ Depending on how the query is structured, there could be three possible outcomes
 >[!NOTE]
 >The query folding mechanism is primarily available in connectors for structured data sources such as, but not limited to, [Microsoft SQL Server](connectors/sql-server.md) and [OData Feed](connectors/odata-feed.md). During the optimization phase, the engine might sometimes reorder steps in the query.
 >
->Leveraging a data source that has more processing resources and has query folding capabilities can expedite your query loading times as the processing occurs at the data source and not at the Power Query engine.
+>Leveraging a data source that has more processing resources and query folding capabilities can expedite your query loading times as the processing occurs at the data source and not at the Power Query engine.
 
 ## Next steps
 
