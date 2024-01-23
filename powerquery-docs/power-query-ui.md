@@ -68,7 +68,7 @@ The Power Query editor represents the Power Query user interface. In this user i
 
 1. **Ribbon**: the ribbon navigation experience, which provides multiple tabs to add transforms, select options for your query, and access different ribbon buttons to complete various tasks.
 2. **Queries pane**: a view of all your available queries.
-3. **Current view**: your main working view, that by default, displays a preview of the data for your query. You can also enable the [diagram view](diagram-view.md) along with the data preview view. You can also switch between the [schema view](schema-view.md) and the data preview view while maintaining the diagram view.
+3. **Current view**: your main working view, which by default, displays a preview of the data for your query. You can also enable the [diagram view](diagram-view.md) along with the data preview view. You can also switch between the [schema view](schema-view.md) and the data preview view while maintaining the diagram view.
 4. **Query settings**: a view of the currently selected query with relevant information, such as query name, query steps, and various indicators.
 5. **Status bar**: a bar displaying relevant important information about your query, such as execution time, total columns and rows, and processing status. This bar also contains buttons to change your current view.
 
@@ -93,7 +93,7 @@ You can switch back to the standard ribbon view by selecting the expand icon at 
 
 ### Expand and collapse panes
 
-You might notice that throughout the Power Query user interface there are icons that help you collapse or expand certain views or sections. For example, there's an icon on the top right-hand corner of the Queries pane that collapses the queries pane when selected, and expands the pane when selected again.
+You might notice that throughout the Power Query user interface, there are icons that help you collapse or expand certain views or sections. For example, there's an icon on the top right-hand corner of the Queries pane that collapses the queries pane when selected, and expands the pane when selected again.
 
 :::image type="content" source="media/power-query-ui/pqui-collapse-queries-pane.png" alt-text="Screenshot emphasizing the icon on the Queries pane used to collapse and expand the queries pane." lightbox="media/power-query-ui/pqui-collapse-queries-pane.png":::
 
@@ -122,13 +122,13 @@ For example, in schema view, select the check mark next to the **Orders** and **
 
 ### What is diagram view
 
-You can now switch back to the data preview view and enable diagram view to use a more visual perspective of your data and query.
+You can now switch back to the data preview view and enable the diagram view to use a more visual perspective of your data and query.
 
 :::image type="content" source="media/power-query-ui/pqui-diagram-view.png" alt-text="Screenshot emphasizing the diagram view and data preview view icons.":::
 
-The diagram view helps you visualize how your query is structured and how it might interact with other queries in your project. Each step in your query has a distinct icon to help you recognize the transform that was used. There are also lines that connect steps to illustrate dependencies. Since both data preview view and diagram view are enabled, the diagram view displays on top of the data preview.
+The diagram view helps you visualize how your query is structured and how it might interact with other queries in your project. Each step in your query has a distinct icon to help you recognize the transform that was used. There are also lines that connect steps to illustrate dependencies. Since both the data preview view and diagram view are enabled, the diagram view displays on top of the data preview.
 
-:::image type="content" source="media/power-query-ui/pqui-data-preview-diagram-view.png" alt-text="Screenshot of the Power Query work space showing the diagram view with data preview." lightbox="media/power-query-ui/pqui-data-preview-diagram-view.png":::
+:::image type="content" source="media/power-query-ui/pqui-data-preview-diagram-view.png" alt-text="Screenshot of the Power Query workspace showing the diagram view with data preview." lightbox="media/power-query-ui/pqui-data-preview-diagram-view.png":::
 
 > [!NOTE]
 > To learn more about diagram view, go to [Diagram view](diagram-view.md).
@@ -137,15 +137,15 @@ The diagram view helps you visualize how your query is structured and how it mig
 
 With diagram view enabled, select the plus sign. You can search for a new transform to add to your query. Search for **Group by** and select the transform.
 
-:::image type="content" source="media/power-query-ui/pqui-diagram-view-group-by.png" alt-text="Screenshot with a search for group by in the diagram view.":::
+:::image type="content" source="media/power-query-ui/pqui-diagram-view-group-by.png" alt-text="Screenshot with a search for a group by in the diagram view.":::
 
-The **Group by** dialog then appears. You can set the **Group by** operation to group by the country and count the number of customer rows per country.
+The **Group by** dialog then appears. You can set the **Group by** operation to group by country and count the number of customer rows per country.
 
 1. Keep the **Basic** radio button selected.
 2. Select **Country** to group by.
 3. Enter **Customers** as the new column name and select **Count rows** as the operation.
 
-:::image type="content" source="media/power-query-ui/pqui-group-by.png" alt-text="Screenshot of the basic Group dialog with the customers data entered.":::
+:::image type="content" source="media/power-query-ui/pqui-group-by.png" alt-text="Screenshot of the basic Group dialog with the customers' data entered.":::
 
 Select **OK** to perform the operation. Your data preview refreshes to show the total number of customers by country.
 
@@ -173,15 +173,15 @@ Select **Create** to add the new query to the Power Query editor. Expand the **Q
 
 Open the **Group by** dialog again, this time by selecting the **Group by** button on the ribbon under the **Transform** tab.
 
-:::image type="content" source="media/power-query-ui/pqui-group-by-transform-ribbon.png" alt-text="Screensot of part of the Transform tab ribbon with Group by emphasized.":::
+:::image type="content" source="media/power-query-ui/pqui-group-by-transform-ribbon.png" alt-text="Screenshot of part of the Transform tab ribbon with Group by emphasized.":::
 
-In the **Group by** dialog, set the **Group by** operation to group by the country and count the number of supplier rows per country.
+In the **Group by** dialog, set the **Group by** operation to group by country and count the number of supplier rows per country.
 
 1. Keep the **Basic** radio button selected.
 2. Select **Country** to group by.
 3. Enter **Suppliers** in **New column name** and select **Count rows** in **Operation**.
 
-:::image type="content" source="media/power-query-ui/pqui-group-by-suppliers.png" alt-text="Screenshot of the basic Group dialog with the suppliers data entered.":::
+:::image type="content" source="media/power-query-ui/pqui-group-by-suppliers.png" alt-text="Screenshot of the basic Group dialog with the suppliers' data entered.":::
 
 > [!NOTE]
 > To learn more about the **Group by** transform, go to [Grouping or summarizing rows](group-by.md).
@@ -202,7 +202,7 @@ A **merge queries** operation joins two existing tables together based on matchi
 
 Inside the **Country Analysis** query, select the **Merge queries** option from the **Home** tab in the ribbon.
 
-:::image type="content" source="media/power-query-ui/pqui-merge-queries.png" alt-text="Screenshot of the Power Query work space with the Country Analysis query selected, and the Merge queries option in the Home tab emphasized." lightbox="media/power-query-ui/pqui-merge-queries.png":::
+:::image type="content" source="media/power-query-ui/pqui-merge-queries.png" alt-text="Screenshot of the Power Query workspace with the Country Analysis query selected, and the Merge queries option in the Home tab emphasized." lightbox="media/power-query-ui/pqui-merge-queries.png":::
 
 A new dialog for the merge operation appears. You can then select the query to merge with your current query. In the **Right table for merge**, select the **Suppliers** query and then select the **Country** field from both queries. Finally, select the **Inner** join kind, as you only want the countries/regions where you have **Customers** and **Suppliers** for this analysis.
 
@@ -223,11 +223,11 @@ The result of this **expand** operation is a table with only 12 rows. Rename the
 
 Every transformation that is applied to your query is saved as a step in the **Applied steps** section of the query settings pane. If you ever need to check how your query is transformed from step to step, you can select a step and preview how your query resolves at that specific point.
 
-You can also right-click a query and select the **Properties** option to change the name of the query or add a description for the query. For example, right-click the **Merge queries** step from the **Country Analysis** query and change the name of the query to be **Merge with Suppliers** and the description to be **Getting data from the Suppliers query for Suppliers by Country**.
+You can also right-click a query and select the **Properties** option to change the name of the query or add a description for the query. For example, right-click the **Merge queries** step from the **Country Analysis** query and change the name of the query to **Merge with Suppliers** and the description to **Getting data from the Suppliers query for Suppliers by Country**.
 
 :::image type="content" source="media/power-query-ui/pqui-step-properties.png" alt-text="Screenshot of the Step properties dialog with the changed name and description filled in.":::
 
-After this change, you can hover over the merge query icon in diagram view or hover over the new icon next to your step in the Applied steps pane to read its description.
+After this change, you can hover over the merge query icon in the diagram view or hover over the new icon next to your step in the Applied steps pane to read its description.
 
 :::image type="content" source="media/power-query-ui/pqui-step-hover.png" alt-text="Screenshot showing where to hover to view the step properties.":::
 
@@ -240,7 +240,7 @@ Before moving on to the next section, disable the **Diagram view** to only use t
 
 With the data for customers and suppliers in a single table, you can now calculate the ratio of customers-to-suppliers for each country. Select the last step of the **Country Analysis** query, and then select both the **Customers** and **Suppliers** columns. In the **Add column tab** in the ribbon and inside the **From number** group, select **Standard**, and then **Divide (Integer)** from the dropdown.
 
-:::image type="content" source="media/power-query-ui/pqui-add-column.png" alt-text="Screenshot of the Power Query work space with the Add column tab and Standard selected, and Divide (Integer) option emphasized." lightbox="media/power-query-ui/pqui-add-column.png":::
+:::image type="content" source="media/power-query-ui/pqui-add-column.png" alt-text="Screenshot of the Power Query workspace with the Add column tab and Standard selected, and Divide (Integer) option emphasized." lightbox="media/power-query-ui/pqui-add-column.png":::
 
 This change creates a new column called **Integer-division** that you can rename to **Ratio**. This change is the final step of your query, and provides the customer-to-supplier ratio for the countries/regions where the data has customers and suppliers.
 
@@ -248,7 +248,7 @@ This change creates a new column called **Integer-division** that you can rename
 
 Another Power Query feature that can help you better understand your data is **Data Profiling**. By enabling the data profiling features, you get feedback about the data inside your query fields, such as value distribution, column quality, and more.
 
-We recommended that you use this feature throughout the development of your queries, but you can always enable and disable the feature at your convenience. The following image shows all the data profiling tools enabled for your **Country Analysis** query.
+We recommend that you use this feature throughout the development of your queries, but you can always enable and disable the feature at your convenience. The following image shows all the data profiling tools enabled for your **Country Analysis** query.
 
 :::image type="content" source="media/power-query-ui/pqui-data-profiling.png" alt-text="Screenshot of the data profiling information with details for the Ratio column at the bottom.":::
 
@@ -292,7 +292,7 @@ The options in the help tab include links to:
 - [Power Query blog](https://powerquery.microsoft.com/blog/): Links to the Power Query blog
 - [Power Query community](https://community.powerbi.com/t5/Power-Query/bd-p/power-bi-services): Links to the Power Query community.
 - **Submit an idea**: Links to the ideas website of the Microsoft product that Power Query is currently running in.
-- **Send feedback**: Opens a window in Power Query. The window asks you to rate your experience with Power Query, and to provide any additional information you would like to supply.
+- **Send feedback**: Opens a window in Power Query. The window asks you to rate your experience with Power Query and to provide any additional information you would like to supply.
 
 > [!NOTE]
 >Currently, Azure Analysis Services doesn't contain any inline Power Query help links. However, you can get help for Power Query M functions. More information is contained in the next section.
