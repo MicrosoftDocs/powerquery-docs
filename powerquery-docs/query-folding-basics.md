@@ -33,6 +33,8 @@ The previous image emphasizes the applied steps section, which contains the foll
 - **Sorted rows**: Sorts the table using one or more columns.
 - **Kept top rows**: Filters the table to only keep a certain number of rows from the top of the table.
 
+## View M script
+
 This set of step names is a friendly way to view the M script that Power Query has created for you. There are several ways to view the full M script. In Power Query, you can select **Advanced Editor** in the **View** tab. You can also select **Advanced Editor** from the **Query** group in the **Home** tab. In some versions of Power Query, you can also change the view of the formula bar to show the query script by going into the **View** tab, and from the **Layout** group, select **Script view** > **Query script**.
 
 ![Image with the full M script and the corresponding names of the applied steps.](media/query-folding-basics/m-script-applied-steps.png)
