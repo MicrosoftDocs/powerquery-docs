@@ -77,11 +77,11 @@ Power Query uses a newer interface that is available in SAP BW version 7.01 or h
 
 The flattened data set is aggregated in SAP BW at the level of the selected characteristics and properties.
 
-Even with these improvements, the resulting dataset can become very large and time-consuming to process.
+Even with these improvements, the resulting data set can become very large and time-consuming to process.
 
 **Performance recommendation**
 
-Only include the characteristics and properties that you ultimately need. Aim for higher levels of aggregation, that is, do you need Material-level details in your report, or is MaterialGroup-level enough? What hierarchy levels are required in Power BI? Try to create smaller datasets, with higher levels of aggregation, or multiple smaller datasets, that can be joined together later.
+Only include the characteristics and properties that you ultimately need. Aim for higher levels of aggregation, that is, do you need Material-level details in your report, or is MaterialGroup-level enough? What hierarchy levels are required in Power BI? Try to create smaller semantic models, with higher levels of aggregation, or multiple smaller semantic models, that can be joined together later.
 
 ## Query parameters
 
@@ -101,9 +101,9 @@ The value **#** means unassigned; in the example any data record without an assi
 
 **Performance recommendation**
 
-Filters based on parameter values get processed in the SAP BW data source, not in Power BI. This type of processing can have performance advantages for larger datasets when loading or refreshing SAP BW data into Power BI. The time it takes to load data from SAP BW into Power BI increases with the size of the dataset, for example, the number of columns and rows in the flattened result set. To reduce the number of columns, only select the key figures, characteristics, and properties in the navigator that you eventually want to see.
+Filters based on parameter values get processed in the SAP BW data source, not in Power BI. This type of processing can have performance advantages for larger semantic modelss when loading or refreshing SAP BW data into Power BI. The time it takes to load data from SAP BW into Power BI increases with the size of the semantic model, for example, the number of columns and rows in the flattened result set. To reduce the number of columns, only select the key figures, characteristics, and properties in the navigator that you eventually want to see.
 
-Similarly, to reduce the number of rows, use the available parameters on the query to narrow the dataset, or to split up a larger dataset into multiple, smaller datasets that can be joined together in the Power BI Desktop data model.
+Similarly, to reduce the number of rows, use the available parameters on the query to narrow the semantic model, or to split up a larger semantic model into multiple, smaller semantic models that can be joined together in the Power BI Desktop data model.
 
 In many cases, it may also be possible to work with the author of the BEx Query in SAP BW to clone and modify an existing query and optimize it for performance by adding additional characteristic restrictions or removing unnecessary characteristics.
 

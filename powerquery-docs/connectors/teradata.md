@@ -3,7 +3,7 @@ title: Power Query Teradata database connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your Teradata database.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
@@ -14,7 +14,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication Types Supported | Database<br/>Windows |
 | Function Reference Documentation | [Teradata.Database](/powerquery-m/teradata-database) |
 
@@ -28,7 +28,7 @@ Before you can connect to a Teradata database, you need the [.NET Data Provider 
 ## Capabilities Supported
 
 * Import
-* DirectQuery (Power BI Datasets)
+* DirectQuery (Power BI semantic models)
 * Advanced options
   * Command timeout in minutes
   * SQL statement

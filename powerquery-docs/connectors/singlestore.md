@@ -3,7 +3,7 @@ title: Power Query SingleStore connector
 description: Provides basic information, prerequisites, and instructions on how to connect to your SingleStore data.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
@@ -17,13 +17,13 @@ ms.author: dougklo
 | Item | Description
 |--|--|
 | Release State | Beta |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Basic<br/>Windows |
 
 ## Capabilities Supported
 
 * Import
-* DirectQuery (Power BI Datasets)
+* DirectQuery (Power BI semantic models)
 
 ## Connect to SingleStore
 
@@ -85,7 +85,7 @@ To create a new custom SQL report:
 
 4. Verify the data to load, and select **Close & Apply**.
 
-5. If you've worked with the dataset before and it's cached in memory, refresh the report to reset the local cache. On the **Home** ribbon, select **Refresh**.
+5. If you've worked with the semantic model before and it's cached in memory, refresh the report to reset the local cache. On the **Home** ribbon, select **Refresh**.
 
 To update the existing custom SQL reports, select the **Refresh** button on the **Home** ribbon.
 

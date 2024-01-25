@@ -3,7 +3,7 @@ title: Power Query Lakehouse (Beta) connector
 description: Provides basic information and connection instructions for connecting to a Lakehouse.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 10/30/2023
+ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
@@ -14,7 +14,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products | Power BI (Datasets)<br/>Fabric (Dataflow Gen2)|
+| Products | Power BI (Semantic models)<br/>Fabric (Dataflow Gen2)|
 | Authentication types | Organizational account |
 
 ## Prerequisites

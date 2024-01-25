@@ -247,7 +247,7 @@ items:
           href: dataflows/send-notification-when-dataflow-refresh-completes.md
         - name: "Open a ticket when a dataflow refresh fails"
           href: dataflows/open-support-ticket-when-dataflow-refresh-completes.md
-        - name: "Trigger dataflows and Power BI datasets sequentially"
+        - name: "Trigger dataflows and Power BI semantic models sequentially"
           href: dataflows/trigger-dataflows-and-power-bi-dataset-sequentially.md
         - name: "Use Dataverse to build a dataflows monitoring report"
           href: dataflows/load-dataflow-metadata-into-dataverse-table.md

@@ -4,7 +4,7 @@ description: Includes basic information, prerequisites, and information on how t
 
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/24/2024
 ms.author: dougklo
 
 ---
@@ -21,7 +21,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel</br>Power BI (Datasets)<br/>Analysis Services |
+| Products | Excel</br>Power BI (Semantic models)<br/>Analysis Services |
 | Authentication Types Supported | Organizational Account |
 | Function Reference Documentation | [AzureStorage.DataLake](/powerquery-m/azurestorage-datalake)<br/>[AzureStorage.DataLakeContents](/powerquery-m/azurestorage-datalakecontents) |
 

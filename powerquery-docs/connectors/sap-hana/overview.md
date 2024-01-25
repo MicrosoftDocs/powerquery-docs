@@ -3,7 +3,7 @@ title: Power Query SAP HANA database connector
 description: Provides basic information, prerequisites, and instructions on connecting to your data using the SAP HANA database connector.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
@@ -14,7 +14,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Analysis Services |
+| Products | Excel<br/>Power BI (Semantic modelss)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Analysis Services |
 | Authentication Types Supported | Basic<br/>Database<br/>Windows |
 | Function Reference Documentation | [SapHana.Database](/powerquery-m/saphana-database) |
 
@@ -36,7 +36,7 @@ HANA 1.0 SPS 12rev122.09, 2.0 SPS 3rev30 and BW/4HANA 2.0 is supported.
 ## Capabilities Supported
 
 * Import
-* Direct Query (Power BI Datasets)
+* Direct Query (Power BI semantic models)
 * Advanced
   * SQL Statement
 

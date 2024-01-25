@@ -3,7 +3,7 @@ title: Power Query Dataverse connector
 description: Provides basic information and connection instructions, along with OData API performance information, table retrieval rate, and alternative means of connecting to Dataverse.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
@@ -14,7 +14,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
 | Authentication types | Organizational account<br/>Service Principal |
 
 > [!NOTE]
@@ -37,7 +37,7 @@ To use the Dataverse connector, one of TCP ports 1433 or 5558 need to be open to
 
 * Server URL
 * Import
-* DirectQuery (Power BI Datasets)
+* DirectQuery (Power BI semantic models)
 * Advanced
   * Include relationship columns
 
@@ -113,7 +113,7 @@ There are certain Tabular Data Stream (TDS) data types that are supported in ODa
 
 All of these features will be added to the Dataverse connector in the future, at which time the Common Data Service (Legacy) connector will be deprecated.
 
-More information: [Accessing large datasets](#accessing-large-datasets)
+More information: [Accessing large semantic models](#accessing-large-semantic-models)
 
 ## Limitations and issues
 
@@ -166,13 +166,13 @@ in
 
 Misspelling a column name might result in an error message about query folding instead of missing column.
 
-### Accessing large datasets
+### Accessing large semantic models
 
-Power BI datasets contained in Dataverse can be very large. If you're using the Power Query Dataverse connector, any specific query that accesses the dataset must return less than 80 MB of data. So you might need to query the data multiple times to access all of the data in the dataset. Using multiple queries can take a considerable amount of time to return all the data.
+Power BI semantic models contained in Dataverse can be very large. If you're using the Power Query Dataverse connector, any specific query that accesses the model must return less than 80 MB of data. So you might need to query the data multiple times to access all of the data in the model. Using multiple queries can take a considerable amount of time to return all the data.
 
-If you're using the [Common Data Service (Legacy)](common-data-service-legacy.md) connector, you can use a single query to access all of the data in the dataset. This connector works differently and returns the result in "pages" of 5 K records. Although the Common Data Service (Legacy) connector is more efficient in returning large amounts of data, it can still take a significant amount of time to return the result.
+If you're using the [Common Data Service (Legacy)](common-data-service-legacy.md) connector, you can use a single query to access all of the data in the semantic model. This connector works differently and returns the result in "pages" of 5 K records. Although the Common Data Service (Legacy) connector is more efficient in returning large amounts of data, it can still take a significant amount of time to return the result.
 
-Instead of using these connectors to access large datasets, we recommend that you use [Azure Synapse Link](/powerapps/maker/data-platform/export-to-data-lake) to access large datasets. Using Azure Synapse Link is even more efficient that either the Power Query Dataverse or Common Data Service (Legacy) connectors, and it's specifically designed around data integration scenarios.
+Instead of using these connectors to access large semantic models, we recommend that you use [Azure Synapse Link](/powerapps/maker/data-platform/export-to-data-lake) to access large modelss. Using Azure Synapse Link is even more efficient that either the Power Query Dataverse or Common Data Service (Legacy) connectors, and it's specifically designed around data integration scenarios.
 
 ### Performance issues related to relationship columns
 

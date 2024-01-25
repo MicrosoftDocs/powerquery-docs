@@ -3,7 +3,7 @@ title: "Create Power Platform dataflows from queries in Microsoft Excel (Preview
 description: Easily create Microsoft Power Platform dataflows from queries in Microsoft Excel.
 author: bensack
 ms.author: bensack
-ms.date: 1/9/2023
+ms.date: 1/24/2024
 ---
 
 # Create Power Microsoft Platform dataflows from queries in Microsoft Excel (Preview)
@@ -19,7 +19,7 @@ This article walks you through how to export queries from Excel into a Power Que
 
 ## Overview
 
-Working with large datasets or long-running queries can be cumbersome every time you have to manually trigger a data refresh in Excel because it takes resources from your computer to do this, and you have to wait until the computation is done to get the latest data. Moving these data operations into a Power Platform dataflow is an effective way to free up your computer's resources and to have the latest data easily available for you to consume in Excel.
+Working with large data sets or long-running queries can be cumbersome every time you have to manually trigger a data refresh in Excel because it takes resources from your computer to do this, and you have to wait until the computation is done to get the latest data. Moving these data operations into a Power Platform dataflow is an effective way to free up your computer's resources and to have the latest data easily available for you to consume in Excel.
 
 It only takes two quick steps to do this:
 

@@ -3,7 +3,7 @@ title: Power Query Active Directory connector
 description: Provides basic information, prerequisites, and connection instructions, along with troubleshooting information for the Active Directory connector.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/17/2024
 ms.author: dougklo
 ---
 
@@ -14,7 +14,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Excel<br/>Analysis Services |
+| Products | Excel<br/>Power BI (Semantic Models)<br/>Power BI (Dataflows)<br/>Excel<br/>Analysis Services |
 | Authentication Types Supported | Windows |
 | Function Reference Documentation | [ActiveDirectory.Domains](/powerquery-m/activedirectory-domains) |
 

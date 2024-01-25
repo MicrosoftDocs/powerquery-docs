@@ -6,7 +6,7 @@ author: luitwieler
 
 ms.reviewer: dougklo
 ms.topic: conceptual
-ms.date: 1/6/2023
+ms.date: 1/24/2024
 ms.author: jeluitwi
 ---
 
@@ -60,7 +60,7 @@ These tables will store history for at least the last 50 refreshes. Refresh hist
 When working with Power BI dataflows, you might want to check out the following pages for setting up your monitoring solution:
 
 * [Use Dataverse to build a dataflows monitoring report](./load-dataflow-metadata-into-dataverse-table.md)
-* [Use a Power BI dataset to build a dataflows monitoring report](./load-dataflow-metadata-into-power-bi-dataset.md)
+* [Use a Power BI semantic model to build a dataflows monitoring report](./load-dataflow-metadata-into-power-bi-dataset.md)
 * [Use Excel to build a dataflows monitoring report](./load-dataflow-metadata-into-excel-online.md)
 
 ## Known issues

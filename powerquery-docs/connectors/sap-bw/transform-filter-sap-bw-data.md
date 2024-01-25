@@ -60,7 +60,6 @@ The following examples show some descriptions of various cube functions:
 * `Cube.Dimensions`: Returns a table with the set of dimensions for the cube.
 * `Cube.Measures`: Returns a table with the set of measures for the cube.
 
-
 ### See also
 
 * [Power Query M formula language reference](/powerquery-m/)

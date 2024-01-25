@@ -3,7 +3,7 @@ title: Power Query KQL database connector
 description: Includes basic information, prerequisites, and information on how to connect to a KQL database, along with a list of limitations.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
@@ -14,7 +14,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | Preview |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows) |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows) |
 | Authentication Types Supported | Organizational Account |
 
 > [!NOTE]
@@ -27,7 +27,7 @@ You must have read permissions on the KQL database.
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI Datasets)
+* DirectQuery (Power BI semantic models)
 
 ## Connect to a KQL database from Power Query Desktop
 

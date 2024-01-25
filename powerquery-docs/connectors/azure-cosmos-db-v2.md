@@ -4,7 +4,7 @@ description: Provides basic information, prerequisites, and instructions on how 
 author: revinjchalil
 
 ms.topic: conceptual
-ms.date: 7/13/2023
+ms.date: 1/24/2024
 ms.author: rechalil
 ms.reviewer: dougklo
 LocalizationGroup: reference
@@ -17,7 +17,7 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Feed Key |
 
 ## Prerequisites
@@ -27,7 +27,7 @@ LocalizationGroup: reference
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI Datasets)
+* DirectQuery (Power BI semantic models)
 * Advanced options
   * Number of Retries
   * Enable "AVERAGE" function Passdown
@@ -49,18 +49,18 @@ To connect to Azure Cosmos DB data:
 
 5. On the **Azure Cosmos DB v2** connection page, for **Cosmos Endpoint**, enter the URI of the Azure Cosmos DB account that you want to use. For **Data Connectivity mode**, choose a mode that's appropriate for your use case, following these general guidelines:
 
-   * For smaller datasets, choose **Import**. When using import mode, Power BI works with Cosmos DB to import the contents of the entire dataset for use in your visualizations.
+   * For smaller semantic models, choose **Import**. When using import mode, Power BI works with Cosmos DB to import the contents of the entire model for use in your visualizations.
 
    * **DirectQuery** mode enables **query pushdown** to the Cosmos DB container for execution and improves the performance of the connector. For partitioned Cosmos DB containers, a SQL query with an aggregate function is passed down to Cosmos DB if the query also contains a filter (WHERE clause) on the Partition Key. For example, if the partition key is defined to be "Product", then a SQL query that can be passed down and be executed on Cosmos DB server can be:
 
       `SELECT SUM(ColumnName) FROM TableName where Product = 'SampleValue'`
 
-   >[!Note]
+   > [!NOTE]
    >Use [Azure Synapse Link for Azure Cosmos DB](/azure/cosmos-db/nosql/powerbi-visualize#building-bi-reports-using-azure-synapse-link) if you would like to execute cross-partitioned aggregate functions against the Cosmos DB container.
 
    More information:
 
-   * [Dataset modes in the Power BI service](/power-bi/connect-data/service-dataset-modes-understand)
+   * [Semantic model modes in the Power BI service](/power-bi/connect-data/service-dataset-modes-understand)
 
    * [Use DirectQuery in Power BI Desktop](/power-bi/connect-data/desktop-use-directquery)
 
@@ -68,19 +68,19 @@ To connect to Azure Cosmos DB data:
 
 6. At the prompt to configure data source authentication, enter the Account Key. Then select **Connect**. Your data catalog, databases, and tables appear in the **Navigator** dialog box.
 
-7. In the **Display Options** pane, select the check box for the dataset that you want to use.
+7. In the **Display Options** pane, select the check box for the semantic model that you want to use.
 
    :::image type="content" source="./media/azure-cosmosdb/navigator.png" alt-text="Screenshot of the Navigator emphasizing the data you've selected." lightbox="./media/azure-cosmosdb/navigator.png":::
 
-8. The most optimal way to specify the Partition Key filter (so that the aggregate functions can be pushed down to Cosmos DB) is to use [dynamic M parameters](/power-bi/connect-data/desktop-dynamic-m-query-parameters). To use dynamic M parameters, you would create a dataset with unique Partition Key values, create a parameter, add it as filter on main dataset, bind it to the unique Partition key datset, and use it as a slicer for the main dataset. Use the following steps to enable dynamic M parameters for Partition Key filtering.
+8. The most optimal way to specify the Partition Key filter (so that the aggregate functions can be pushed down to Cosmos DB) is to use [dynamic M parameters](/power-bi/connect-data/desktop-dynamic-m-query-parameters). To use dynamic M parameters, you would create a semantic model with unique Partition Key values, create a parameter, add it as a filter on the main semantic model, bind it to the unique Partition key semantic model, and use it as a slicer for the main semantic model. Use the following steps to enable dynamic M parameters for Partition Key filtering.
 
-   **a. Create a dataset with unique partition key values**:
+   **a. Create a semantic model with unique partition key values**:
 
-      In **Navigator**, select **Transform Data** instead of **Load** to bring up the Power Query editor. Right-click on the queries dataset, and then select **Duplicate** to create a new dataset.
+      In **Navigator**, select **Transform Data** instead of **Load** to bring up the Power Query editor. Right-click on the queries semantic model, and then select **Duplicate** to create a new model.
 
       :::image type="content" source="./media/azure-cosmosdb/duplicate-dataset.png" alt-text="Screenshot showing how to select duplicate from your existing query in the Power Query editor." lightbox="./media/azure-cosmosdb/duplicate-dataset.png":::
 
-      Rename the new Partition Key dataset, then right-click on the Cosmos DB partition key column. In this example, **Product** is the Cosmos DB partition key column. Select **Remove Other Columns**, and then select **Remove Duplicates**.
+      Rename the new Partition Key model, then right-click on the Cosmos DB partition key column. In this example, **Product** is the Cosmos DB partition key column. Select **Remove Other Columns**, and then select **Remove Duplicates**.
 
       :::image type="content" source="./media/azure-cosmosdb/unique-partition-keys.png" alt-text="Screenshot showing the unique Partition Keys in Power Query editor." lightbox="./media/azure-cosmosdb/unique-partition-keys.png":::
 
@@ -90,7 +90,7 @@ To connect to Azure Cosmos DB data:
 
       :::image type="content" source="./media/azure-cosmosdb/create-parameter.png" alt-text="Screenshot showing how to create a parameter in the Power Query editor." lightbox="./media/azure-cosmosdb/create-parameter.png":::
 
-   **c. Apply parameterized filter on main dataset**:
+   **c. Apply parameterized filter on the main semantic model**:
 
       Select the dropdown icon of the Partition Key column, then select **Text Filters** > **Equals**. Change the filter type from Text to Parameter. Then choose the parameter that was created in step b. Select **Close & Apply** on top left corner of the Power Query editor.
 
@@ -108,7 +108,7 @@ To connect to Azure Cosmos DB data:
 
    **e. Add visualizations and apply Partition Key filter from the slicer**:
 
-      Since the chosen partition key value on the slicer is bound to the parameter (as done in step d) and the parameterized filter is applied on the main dataset (as done in step c), the chosen partition key value will be applied as a filter on the main dataset and the query with the partition key filter will be passed down to Cosmos DB in all visualizations.
+      Since the chosen partition key value on the slicer is bound to the parameter (as done in step d) and the parameterized filter is applied on the main semantic model (as done in step c), the chosen partition key value is applied as a filter on the main model and the query with the partition key filter is passed down to Cosmos DB in all visualizations.
 
       :::image type="content" source="./media/azure-cosmosdb/visualization.png" alt-text="Screenshot of the visualization after the partition key filter is applied." lightbox="./media/azure-cosmosdb/visualization.png":::
 

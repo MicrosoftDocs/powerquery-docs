@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for using the Power Qu
 author: DougKlopfenstein
 
 ms.topic: conceptual
-ms.date: 1/17/2024
+ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
@@ -18,7 +18,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Azure Active Directory<br/>Personal Access Token<br/> OAuth (OIDC) |
 
 > [!NOTE]
@@ -31,7 +31,7 @@ This connector is only for use with a Databricks SQL Warehouse running on AWS an
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI Datasets)
+* DirectQuery (Power BI semantic models)
 
 ## Connect to Databricks from Power Query Desktop
 

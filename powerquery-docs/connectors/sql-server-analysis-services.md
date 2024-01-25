@@ -3,7 +3,7 @@ title: Power Query SQL Server Analysis Services database connector
 description: Includes basic information about products that use the SQL Server Analysis Services database connector, supported authentication types, prerequisites, and connection instructions.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
@@ -14,7 +14,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)<br/>Power Apps (Dataflows)<br/>Analysis Services |
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power Apps (Dataflows)<br/>Analysis Services |
 | Authentication Types Supported | Basic<br/>Microsoft account<br/>Organizational account<br/>Windows |
 | M Function Reference | [Sql.Database](/powerquery-m/sql-database)<br/>[Sql.Databases](/powerquery-m/sql-databases) |
 
@@ -28,7 +28,7 @@ Analysis Services must be installed along with your SQL Server. For information 
 ## Capabilities Supported
 
 * Import
-* Connect live (Power BI Desktop)
+* Connect live (Power BI semantic models)
 * Advanced options
   * MDX or DAX query
 
@@ -89,4 +89,4 @@ Once you've entered a value in the advanced option, select **OK** in Power Query
 
 * [Connect to Analysis Services tabular data in Power BI Desktop](/power-bi/connect-data/desktop-analysis-services-tabular-data)
 * [Connect to SSAS multidimensional models in Power BI Desktop](/power-bi/connect-data/desktop-ssas-multidimensional)
-* [Connect to datasets in the Power BI service from Power BI Desktop](/power-bi/connect-data/desktop-report-lifecycle-datasets)
+* [Connect to semantic models in the Power BI service from Power BI Desktop](/power-bi/connect-data/desktop-report-lifecycle-datasets)
