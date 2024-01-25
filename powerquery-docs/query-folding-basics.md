@@ -13,18 +13,15 @@ This article provides an overview of how M queries are processed and turned into
 
 ## Power Query M script
 
-Any query, whether created by Power Query, manually written in the advanced editor, or entered using a blank document, consists of functions and syntax from the [Power Query M formula language](/powerquery-m/). Queries get interpreted and evaluated by the Power Query engine to output results. The M script serves as the set of instructions needed to evaluate queries.
+Any query, whether created by Power Query, manually written in the advanced editor, or entered using a blank document, consists of functions and syntax from the [Power Query M formula language](/powerquery-m/). While we recommend that you use the Power Query editor to create most of the M script, you can manually modify your M script. M script, also referred to as M code, is a term used for any code that uses the M language. In the context of this article, M script also refers to the code found inside a Power Query query and accessible through the advanced editor window or the script view in the formula bar.
 
->[!TIP]
->You can think of the M script as a recipe that describes how to prepare your data.
+The M script serves as the set of instructions needed by the Power Query engine to evaluate queries and output results. You can think of the M script as a recipe that describes how to prepare your data.
 
-The most common way to create an M script is by using the Power Query editor. The Power Query editor serves as an interface to help you create the appropriate M script for the transforms that you're after and ensures valid code. On the right-hand side, you'll notice a section called [applied steps](applied-steps.md). This section displays all the steps or transforms used in your query. 
+## Applied steps 
 
->[!NOTE]
-> The M script is used in the Power Query editor to:
->
-> - Display the query as a series of steps and allow the creation or modification of new steps.
-> - Display a diagram view.
+The most common way to create an M script is by using the Power Query editor. The Power Query editor interprets the M script and displays the query as a series of steps. M script allows you to display a diagram view and to create or modify new steps.
+
+The Power Query editor serves as an interface to help you create the appropriate M script for the transforms that you're after and ensures valid code. On the right-hand side, you'll notice a section called [applied steps](applied-steps.md). This section displays all the steps or transforms used in your query. 
 
 ![Image of the applied steps and the data preview view.](media/query-folding-basics/applied-steps-section.png)
 
@@ -40,16 +37,11 @@ This set of step names is a friendly way to view the M script that Power Query h
 
 ![Image with the full M script and the corresponding names of the applied steps.](media/query-folding-basics/m-script-applied-steps.png)
 
-Most of the names found in the **Applied steps** pane are also being used as is in the M script. Steps of a query are named using something called *identifiers* in the M language. Sometimes extra characters are wrapped around step names in M, but these characters aren’t shown in the applied steps. An example is `#"Kept top rows"`, which is categorized as a *quoted identifier* because of these extra characters. A quoted identifier can be used to allow any sequence of zero or more Unicode characters to be used as an identifier, including keywords, whitespace, comments, operators, and punctuators. To learn more about *identifiers* in the M language, go to [lexical structure](/powerquery-m/m-spec-lexical-structure#identifiers).
+Most of the names found in the **Applied steps** pane are also being used as is in the M script. The steps of a query are [identifiers](/powerquery-m/m-spec-lexical-structure#identifiers) in the M language. Sometimes extra characters are wrapped around step names in M, but these characters aren’t shown in the applied steps. An example is `#"Kept top rows"`, which is categorized as a *quoted identifier* because of these extra characters. A quoted identifier can be used to allow any sequence of zero or more Unicode characters to be used as an identifier, including keywords, whitespace, comments, operators, and punctuators.
 
-Any changes that you make to your query through the Power Query editor will automatically update the M script for your query. For example, using the previous image as the starting point, if you change the **Kept top rows** step name to be **Top 20 rows**, this change will automatically be updated in the script view.
+Changes made to the query through the Power Query editor will automatically update the M script of your query. For example, using the previous image as the starting point, if you change the **Kept top rows** step name to **Top 20 rows**, the script view will automatically update.
 
 ![Image with the applied step name changed to Top 20 rows, which also updates the M script.](media/query-folding-basics/change-step-name.png)
-
-While we recommend that you use the Power Query editor to create most of the M script, you can manually add or modify pieces of your M script. To learn more about the M language, go to the [official docs site for the M language](/powerquery-m/).
-
->[!NOTE]
-> M script, also referred to as M code, is a term used for any code that uses the M language. In the context of this article, M script also refers to the code found inside a Power Query query and accessible through the advanced editor window or the script view in the formula bar.
 
 ## Query evaluation in Power Query
 
@@ -64,15 +56,15 @@ The following diagram explores the process that occurs when a query is evaluated
 5. The results derived from the previous point are loaded to a destination.
 
 >[!NOTE]
->While this example showcases a query with a SQL Database as a data source, the concept applies to queries with or without a data source.
+>While this example showcases a query with an SQL Database as a data source, the concept applies to queries with or without a data source.
 
 When Power Query reads your M script, it runs the script through an optimization process to evaluate your query. In this process, it determines which steps (transforms) from your query can be offloaded to your data source. It also determines which other steps need to be evaluated using the Power Query engine.
 This optimization process is called *query folding*, where Power Query tries to push as much of the possible execution to the data source to optimize your query's execution.
 
 >[!IMPORTANT]
->All rules from the [Power Query M formula language (also known as the M language)](/powerquery-m/) are followed. Most notably, *lazy evaluation* plays an important role during the optimization process. In this process, Power Query understands what specific transforms from your query need to be evaluated. Power Query also understands what other transforms don't need to be evaluated because they're not needed in the output of your query.
+>All rules from the [Power Query M language](/powerquery-m/) are followed. *lazy evaluation* is important during the optimization process because this is when Power Query understands that only specific transforms from your query need to be evaluated because they are needed in the query output.
 >
->Furthermore, when multiple sources are involved, the data privacy level of each data source is taken into consideration when evaluating the query. More information: [Behind the scenes of the Data Privacy Firewall](dataprivacyfirewall.md)
+>When multiple sources are involved, the data privacy level of each data source is taken into consideration when evaluating the query. To learn more, go to [Behind the scenes of the Data Privacy Firewall](dataprivacyfirewall.md)
 
 The following diagram demonstrates the steps that take place in this optimization process.
 
@@ -87,7 +79,7 @@ The following diagram demonstrates the steps that take place in this optimizatio
 7. The results derived from the previous point are loaded to a destination.
 
 >[!NOTE]
->Depending on the transformations and data source used in the M script, Power Query determines if it will stream or buffer the incoming data.
+>Depending on the transformations and data source used in the M script, Power Query will stream or buffer the incoming data.
 
 ## Query folding overview
 
@@ -106,9 +98,9 @@ However, the steps that follow in your query are the steps or transforms that th
 
 Depending on how the query is structured, there could be three possible outcomes to the query folding mechanism:
 
-- **Full query folding**: When all of your query transformations get pushed back to the data source and minimal processing occurs at the Power Query engine.
-- **Partial query folding**: When only a few transformations in your query, and not all, can be pushed back to the data source. In this case, only a subset of your transformations is done at your data source and the rest of your query transformations occur in the Power Query engine.
-- **No query folding**:  When the query contains transformations that can't be translated to the native query language of your data source, either because the transformations aren't supported or the connector doesn't support query folding. For this case, Power Query gets the raw data from your data source and uses the Power Query engine to achieve the output you want by processing the required transforms at the Power Query engine level.
+- **Full query folding**: All of your query transformations get pushed back to the data source and minimal processing occurs at the Power Query engine.
+- **Partial query folding**: Only a few transformations in your query can be pushed back to the data source. In this case, only a subset of your transformations is done at your data source and the rest of your query transformations occur in the Power Query engine.
+- **No query folding**:  The query contains transformations that can't be translated to the native query language of your data source, either because the transformations aren't supported or the connector doesn't support query folding. Power Query gets the raw data from your data source and uses the Power Query engine to achieve the output you want by processing the required transforms at the Power Query engine level.
 
 >[!NOTE]
 >The query folding mechanism is primarily available in connectors for structured data sources such as, but not limited to, [Microsoft SQL Server](connectors/sql-server.md) and [OData Feed](connectors/odata-feed.md). During the optimization phase, the engine might sometimes reorder steps in the query.
