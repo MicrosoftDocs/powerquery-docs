@@ -91,6 +91,8 @@ When you use the [get data experience](get-data-experience.md), Power Query guid
 >[!IMPORTANT]
 > All data source functions, commonly shown as the **Source** step of a query, query the data at the data source in its native language. The query folding mechanism is utilized on all transforms applied to your query after your data source function so they can be translated and combined into a single data source query or as many transforms that can be offloaded to the data source.
 
+## Query folding results
+
 Depending on how the query is structured, there could be three possible outcomes to the query folding mechanism:
 
 - **Full query folding**: All of your query transformations get pushed back to the data source and minimal processing occurs at the Power Query engine.
