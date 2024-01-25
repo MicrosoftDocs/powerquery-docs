@@ -13,15 +13,13 @@ This article provides an overview of how M queries are processed and turned into
 
 ## Power Query M script
 
-Any query, whether created by Power Query, manually written in the advanced editor, or entered using a blank document, consists of functions and syntax from the [Power Query M formula language](/powerquery-m/). M script, also referred to as M code, is any code that uses the M language inside a Power Query query. While we recommend that you use the Power Query editor to create most of the M script, you can manually modify your M script.
+Any query, whether created by Power Query, manually written in the advanced editor, or entered using a blank document, consists of functions and syntax from the [Power Query M formula language](/powerquery-m/). M script, also referred to as M code, is any code that uses the M language inside a Power Query query. While we recommend that you use the Power Query editor to create most of the M script, you can manually modify your M script. 
 
 The M script is accessible through the advanced editor window or the script view in the formula bar. M script serves as the set of instructions needed by the Power Query engine to evaluate queries and output results. You can think of the M script as a recipe that describes how to prepare your data.
 
 ## Applied steps 
 
-The most common way to create an M script is by using the Power Query editor. The Power Query editor interprets the M script and displays the query as a series of steps. M script allows you to display a diagram view and to create or modify new steps.
-
-The Power Query editor serves as an interface to help you create the appropriate M script for the transforms that you're after and ensures valid code. On the right-hand side, you'll notice a section called [applied steps](applied-steps.md). This section displays all the steps or transforms used in your query. 
+The Power Query editor serves as an interface to help you create the appropriate M script for the transforms that you're after and ensures valid code. The Power Query editor interprets the M script and displays the query as a series of steps. On the right-hand side, you'll notice a section called [applied steps](applied-steps.md). This section displays all the steps or transforms used in your query. 
 
 ![Image of the applied steps and the data preview view.](media/query-folding-basics/applied-steps-section.png)
 
