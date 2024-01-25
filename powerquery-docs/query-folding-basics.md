@@ -19,7 +19,7 @@ The M script is accessible through the advanced editor window or the script view
 
 ## Applied steps 
 
-The Power Query editor serves as an interface to help you create the appropriate M script for the transforms that you're after and ensures valid code. The Power Query editor interprets the M script and displays the query as a series of steps. On the right-hand side, you'll notice a section called [applied steps](applied-steps.md). This section displays all the steps or transforms used in your query. 
+The Power Query editor serves as an interface to help you create the appropriate M script for the transforms that you're after and ensures valid code. The Power Query editor interprets the M script and displays the query as a series of steps. On the right-hand side, you'll notice a section called [applied steps](applied-steps.md). This section displays all the steps or transforms used in your query. This set of step names is a friendly way to view the M script that Power Query has created for you. 
 
 ![Image of the applied steps and the data preview view.](media/query-folding-basics/applied-steps-section.png)
 
@@ -33,7 +33,7 @@ The previous image emphasizes the applied steps section, which contains the foll
 
 ## Access the M script
 
-This set of step names is a friendly way to view the M script that Power Query has created for you. There are several ways to view the full M script. In Power Query, you can select **Advanced Editor** in the **View** tab. You can also select **Advanced Editor** from the **Query** group in the **Home** tab. In some versions of Power Query, you can also change the view of the formula bar to show the query script by going into the **View** tab, and from the **Layout** group, select **Script view** > **Query script**.
+There are several ways to view the full M script. In Power Query, you can select **Advanced Editor** in the **View** tab. You can also select **Advanced Editor** from the **Query** group in the **Home** tab. In some versions of Power Query, you can also change the view of the formula bar to show the query script by going into the **View** tab, and from the **Layout** group, select **Script view** > **Query script**.
 
 ![Image with the full M script and the corresponding names of the applied steps.](media/query-folding-basics/m-script-applied-steps.png)
 
