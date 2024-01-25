@@ -13,9 +13,9 @@ This article provides an overview of how M queries are processed and turned into
 
 ## Power Query M script
 
-Any query, whether created by Power Query, manually written in the advanced editor, or entered using a blank document, consists of functions and syntax from the [Power Query M formula language](/powerquery-m/). While we recommend that you use the Power Query editor to create most of the M script, you can manually modify your M script. M script, also referred to as M code, is a term used for any code that uses the M language. In the context of this article, M script also refers to the code found inside a Power Query query and accessible through the advanced editor window or the script view in the formula bar.
+Any query, whether created by Power Query, manually written in the advanced editor, or entered using a blank document, consists of functions and syntax from the [Power Query M formula language](/powerquery-m/). M script, also referred to as M code, is any code that uses the M language inside a Power Query query. While we recommend that you use the Power Query editor to create most of the M script, you can manually modify your M script.
 
-The M script serves as the set of instructions needed by the Power Query engine to evaluate queries and output results. You can think of the M script as a recipe that describes how to prepare your data.
+The M script is accessible through the advanced editor window or the script view in the formula bar. M script serves as the set of instructions needed by the Power Query engine to evaluate queries and output results. You can think of the M script as a recipe that describes how to prepare your data.
 
 ## Applied steps 
 
@@ -33,7 +33,7 @@ The previous image emphasizes the applied steps section, which contains the foll
 - **Sorted rows**: Sorts the table using one or more columns.
 - **Kept top rows**: Filters the table to only keep a certain number of rows from the top of the table.
 
-## View M script
+## Access the M script
 
 This set of step names is a friendly way to view the M script that Power Query has created for you. There are several ways to view the full M script. In Power Query, you can select **Advanced Editor** in the **View** tab. You can also select **Advanced Editor** from the **Query** group in the **Home** tab. In some versions of Power Query, you can also change the view of the formula bar to show the query script by going into the **View** tab, and from the **Layout** group, select **Script view** > **Query script**.
 
