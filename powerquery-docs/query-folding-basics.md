@@ -39,7 +39,9 @@ This set of step names is a friendly way to view the M script that Power Query h
 
 ![Image with the full M script and the corresponding names of the applied steps.](media/query-folding-basics/m-script-applied-steps.png)
 
-Most of the names found in the **Applied steps** pane are also being used as is in the M script. The steps of a query are [identifiers](/powerquery-m/m-spec-lexical-structure#identifiers) in the M language. Sometimes extra characters are wrapped around step names in M, but these characters aren’t shown in the applied steps. An example is `#"Kept top rows"`, which is categorized as a *quoted identifier* because of these extra characters. A quoted identifier can be used to allow any sequence of zero or more Unicode characters to be used as an identifier, including keywords, whitespace, comments, operators, and punctuators.
+Most of the names found in the **Applied steps** pane are also being used as is in the M script. The steps of a query are [identifiers](/powerquery-m/m-spec-lexical-structure#identifiers) in the M language. Sometimes extra characters are wrapped around step names in M, but these characters aren’t shown in the applied steps. 
+
+An example is `#"Kept top rows"`, which is categorized as a *quoted identifier* because of these extra characters. A quoted identifier can be used to allow any sequence of zero or more Unicode characters to be used as an identifier, including keywords, whitespace, comments, operators, and punctuators.
 
 Changes made to the query through the Power Query editor will automatically update the M script of your query. For example, using the previous image as the starting point, if you change the **Kept top rows** step name to **Top 20 rows**, the script view will automatically update.
 
