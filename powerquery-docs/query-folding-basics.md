@@ -58,8 +58,11 @@ The following diagram explores the process that occurs when a query is evaluated
 >[!NOTE]
 >While this example showcases a query with an SQL Database as a data source, the concept applies to queries with or without a data source.
 
-When Power Query reads your M script, it runs the script through an optimization process to evaluate your query. In this process, it determines which steps (transforms) from your query can be offloaded to your data source. It also determines which other steps need to be evaluated using the Power Query engine.
-This optimization process is called *query folding*, where Power Query tries to push as much of the possible execution to the data source to optimize your query's execution.
+## Query folding
+
+When Power Query reads your M script, it runs the script through an optimization process to evaluate your query. This optimization process is called *query folding*. The goal of query folding is to determine which steps (transforms) from your query can be offloaded to your data source that can compute the transformations of your query and which other steps need to be evaluated using the Power Query engine.
+
+The query folding mechanism in Power Query translates your M script to a language that can be interpreted and executed by your data source. It then pushes the evaluation to your data source and sends the result of that evaluation to Power Query. This operation often provides a much faster query execution than extracting all the required data from your data source and running all transforms required in the Power Query engine.
 
 >[!IMPORTANT]
 >All rules from the [Power Query M language](/powerquery-m/) are followed. *lazy evaluation* is important during the optimization process because this is when Power Query understands that only specific transforms from your query need to be evaluated because they are needed in the query output.
@@ -81,17 +84,7 @@ The following diagram demonstrates the steps that take place in this optimizatio
 >[!NOTE]
 >Depending on the transformations and data source used in the M script, Power Query will stream or buffer the incoming data.
 
-## Query folding overview
-
-The goal of query folding is to offload or push as much of the evaluation of a query to a data source that can compute the transformations of your query.
-
-The query folding mechanism accomplishes this goal by translating your M script to a language that can be interpreted and executed by your data source. It then pushes the evaluation to your data source and sends the result of that evaluation to Power Query.
-
-This operation often provides a much faster query execution than extracting all the required data from your data source and running all transforms required in the Power Query engine.
-
 When you use the [get data experience](get-data-experience.md), Power Query guides you through the process that ultimately lets you connect to your data source. When doing so, Power Query uses a series of functions in the M language categorized as [accessing data functions](/powerquery-m/accessing-data-functions). These specific functions use mechanisms and protocols to connect to your data source using a language that your data source can understand.
-
-However, the steps that follow in your query are the steps or transforms that the query folding mechanism attempts to optimize. It then checks if they can be offloaded to your data source instead of being processed using the Power Query engine.
 
 >[!IMPORTANT]
 > All data source functions, commonly shown as the **Source** step of a query, query the data at the data source in its native language. The query folding mechanism is utilized on all transforms applied to your query after your data source function so they can be translated and combined into a single data source query or as many transforms that can be offloaded to the data source.
