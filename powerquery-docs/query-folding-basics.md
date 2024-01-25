@@ -67,7 +67,7 @@ When Power Query reads your M script, it runs the script through an optimization
 The query folding mechanism in Power Query translates your M script to a language that can be interpreted and executed by your data source. It then pushes the evaluation to your data source and sends the result of that evaluation to Power Query. This operation often provides a much faster query execution than extracting all the required data from your data source and running all transforms required in the Power Query engine.
 
 >[!IMPORTANT]
->All rules from the [Power Query M language](/powerquery-m/) are followed. *lazy evaluation* is important during the optimization process because this is when Power Query understands that only specific transforms from your query need to be evaluated because they are needed in the query output.
+>All rules from the [Power Query M language](/powerquery-m/) are followed. Most notably, *lazy evaluation* is important during the optimization process because this is when Power Query understands that only specific transforms from your query need to be evaluated because they are needed in the query output.
 >
 >When multiple sources are involved, the data privacy level of each data source is taken into consideration when evaluating the query. To learn more, go to [Behind the scenes of the Data Privacy Firewall](dataprivacyfirewall.md)
 
