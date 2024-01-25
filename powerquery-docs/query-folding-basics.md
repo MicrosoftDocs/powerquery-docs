@@ -71,6 +71,8 @@ The query folding mechanism in Power Query translates your M script to a languag
 >
 >When multiple sources are involved, the data privacy level of each data source is taken into consideration when evaluating the query. To learn more, go to [Behind the scenes of the Data Privacy Firewall](dataprivacyfirewall.md)
 
+### The optimization process
+
 The following diagram demonstrates the steps that take place in this optimization process.
 
 ![Query evaluation diagram that explains the optimization process.](media/query-folding-basics/diagram-2.png)
