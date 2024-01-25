@@ -79,6 +79,8 @@ The following diagram demonstrates the steps that take place in this optimizatio
 
 ![Query evaluation diagram that explains the optimization process.](media/query-folding-basics/diagram-2.png)
 
+The steps highlighted in red in the diagram in detail: 
+
 1. The M script, found inside the advanced editor, is submitted to the Power Query engine. Other important information is also supplied, such as credentials and data source privacy levels.
 2. The Query folding mechanism submits metadata requests to the data source to determine the capabilities of the data source, table schemas, relationships between different tables at the data source, and more.
 3. Based on the metadata received, the query folding mechanism determines what information to extract from the data source and what set of transformations need to happen inside the Power Query engine. It sends the instructions to two other components that take care of retrieving the data from the data source and transforming the incoming data in the Power Query engine if necessary.
