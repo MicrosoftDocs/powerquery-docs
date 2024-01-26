@@ -47,7 +47,7 @@ You need to create a solution before you can add a dataflow to it. More informat
 
 5. Proceed to create a new dataflow.
 
-   :::image type="content" source="media/dataflows-solution-awareness/create-dataflow.png" alt-text="Screenshot of the dataflow added to the solution.":::
+   :::image type="content" source="media/dataflows-solution-awareness/create-dataflow.png" alt-text="Screenshot of the dataflow added to the solution." lightbox="media/dataflows-solution-awareness/create-dataflow.png":::
 
 ## Add an existing dataflow to a solution
 
