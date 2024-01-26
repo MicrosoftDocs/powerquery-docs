@@ -105,7 +105,7 @@ For security reasons, credentials of connections used by dataflows aren't persis
 
 4. If your dataflow loads data in Dataverse tables, select **Next** to review the mapping configuration.
 
-   :::image type="content" source="media/dataflows-solution-awareness/solutions-dataflows-after-import-05.png" alt-text="Screenshot showing all queries with data loaded after connection credentials are provided." lightbox="media/dataflows-solution-awareness/solutions-dataflows-after-import-05.pn":::
+   :::image type="content" source="media/dataflows-solution-awareness/solutions-dataflows-after-import-05.png" alt-text="Screenshot showing all queries with data loaded after connection credentials are provided." lightbox="media/dataflows-solution-awareness/solutions-dataflows-after-import-05.png":::
 
 5. The mapping configuration is also saved as part of the solution. Since you also added the destination table to the solutions, there's no need to recreate the table in this environment and you can publish the dataflow.
 
