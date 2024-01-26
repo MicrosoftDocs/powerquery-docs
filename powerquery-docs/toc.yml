@@ -503,7 +503,7 @@ items:
           href: connectors/sap-bw/sap-bw-fundamentals.md
         - name: "Navigate the query objects"
           href: connectors/sap-bw/navigate-query-objects.md
-        - name: "Transform and filter an SAP BW dataset"
+        - name: "Transform and filter an SAP BW data set"
           href: connectors/sap-bw/transform-filter-sap-bw-data.md
         - name: "Implementation details"
           href: connectors/sap-bw/implementation-details.md

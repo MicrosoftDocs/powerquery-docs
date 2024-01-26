@@ -81,7 +81,7 @@ You should import data to Power BI whenever possible. Importing data takes advan
 
 However, DirectQuery provides the following advantages when connecting to SAP BW:
 
-* Provides the ability to access SAP BW data using SSO, to ensure that security defined in the underlying SAP BW source is always applied. When accessing SAP BW using SSO, the user’s data access permissions in SAP will apply, which may produce different results for different users. Data that a user isn't authorized to view will be trimmed by SAP BW. 
+* Provides the ability to access SAP BW data using SSO, to ensure that security defined in the underlying SAP BW source is always applied. When accessing SAP BW using SSO, the user’s data access permissions in SAP will apply, which may produce different results for different users. Data that a user isn't authorized to view will be trimmed by SAP BW.
 
 * Ensures that the latest data can easily be seen, even if it's changing frequently in the underlying SAP BW source.
 

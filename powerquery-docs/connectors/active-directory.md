@@ -14,7 +14,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Semantic Models)<br/>Power BI (Dataflows)<br/>Excel<br/>Analysis Services |
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Excel<br/>Analysis Services |
 | Authentication Types Supported | Windows |
 | Function Reference Documentation | [ActiveDirectory.Domains](/powerquery-m/activedirectory-domains) |
 

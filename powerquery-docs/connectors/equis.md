@@ -42,7 +42,7 @@ To connect to an EQuIS Enterprise site from Power BI Desktop, take the following
    * **Basic**: Enter your EQuIS username and password for the given EQuIS Enterprise site.
    * **API Token**: Enter an API Token that you generated in EQuIS Enterprise (visit [User Profile](https://help.earthsoft.com/index.htm?ent-user_profile_editor.htm)).
    * **Organizational Account**: If your EQuIS Enterprise site is appropriately configured, you may authenticate with Microsoft Entra ID.
-4. In **Navigator**, browse to the data set or report you want to load, then select **Load** or **Transform Data**. Visit [Using EQuIS Data](https://help.earthsoft.com/index.htm?pbi-power-bi-adding-datasets.htm) for more information about available semantic models.
+4. In **Navigator**, browse to the data set or report you want to load, then select **Load** or **Transform Data**. Visit [Using EQuIS Data](https://help.earthsoft.com/index.htm?pbi-power-bi-adding-datasets.htm) for more information about available data sets.
 
 ![Select data set in Navigator.](./media/equis/navigator_cropped.png)
 

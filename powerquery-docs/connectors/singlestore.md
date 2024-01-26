@@ -85,7 +85,7 @@ To create a new custom SQL report:
 
 4. Verify the data to load, and select **Close & Apply**.
 
-5. If you've worked with the semantic model before and it's cached in memory, refresh the report to reset the local cache. On the **Home** ribbon, select **Refresh**.
+5. If you've worked with the data set before and it's cached in memory, refresh the report to reset the local cache. On the **Home** ribbon, select **Refresh**.
 
 To update the existing custom SQL reports, select the **Refresh** button on the **Home** ribbon.
 

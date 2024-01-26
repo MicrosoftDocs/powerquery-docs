@@ -155,7 +155,7 @@ The following table provides a summary list of suggestions to improve performanc
 | Avoid use of navigation attributes in BEx query | A query with a navigation attribute has to run an additional join, compared with a query with the same object as a characteristic in order to arrive at the values. |
 | Use RSRT to monitor and troubleshoot slow running queries | Your SAP Admin can use the Query Monitor in SAP BW (transaction RSRT) to analyze performance issues with SAP BW queries. Review SAP note 1591837 for more information. |
 | Avoid Restricted Key Figures and Calculated Key Figures | Both are computed during query execution and can slow down query performance. |
-| Consider using incremental refresh to improve performance | Power BI refreshes the complete semantic model with each refresh. If you're working with large volume of data, refreshing the full semantic model on each refresh might not be optimal. In this scenario, you can use incremental refresh, so you're refreshing only a subset of data. For more details, go to [Incremental refresh in Power BI](/power-bi/service-premium-incremental-refresh). |
+| Consider using incremental refresh to improve performance | Power BI refreshes the complete data set with each refresh. If you're working with large volume of data, refreshing the full data set on each refresh might not be optimal. In this scenario, you can use incremental refresh, so you're refreshing only a subset of data. For more details, go to [Incremental refresh in Power BI](/power-bi/service-premium-incremental-refresh). |
 
 ## Comparison to Analysis for Office (AFO)
 
