@@ -2,7 +2,7 @@
 title: Palantir Foundry Power Query connector
 description: Provides basic information and prerequisites for using the Palantir Foundry Power Query connector.
 author: mshafer
-ms.date: 1/8/2024
+ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
@@ -16,7 +16,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Organizational Account (Power BI Desktop)<br/>Personal Access Token |
 
 ## Prerequisites
@@ -29,7 +29,7 @@ This connector works with any active Palantir Foundry environment. Ensure you've
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI Datasets)
+* DirectQuery (Power BI semantic models)
 
 ## Connect to Palantir Foundry from Power Query Desktop
 
@@ -48,9 +48,9 @@ To connect to Palantir Foundry from Power Query Desktop, take the following step
 
    For more details on these authentication options, go to Foundry's [Power BI: Authenticate with Foundry](https://www.palantir.com/docs/foundry/analytics-connectivity/power-bi-getting-started/#authenticate-with-foundry) documentation.
 
-6. In **Navigator**, select the dataset(s) you want, then select either **Load** to load the data or **Transform Data** to continue transforming the data in the Power Query editor.
+6. In **Navigator**, select the data set(s) you want, then select either **Load** to load the data or **Transform Data** to continue transforming the data in the Power Query editor.
 
-   ![Screenshot of the Power Query Desktop Navigator showing the selected dataset.](./media/palantir-foundry-datasets/select-data.png)
+   ![Screenshot of the Power Query Desktop Navigator showing the selected data set.](./media/palantir-foundry-datasets/select-data.png)
 
 ## Connect to Palantir Foundry from Power Query Online
 
@@ -69,7 +69,7 @@ To connect to Palantir Foundry from Power Query Online, take the following steps
 3. Select **Next** to continue.
 4. In **Navigator**, select the data you require, and then select **Transform data**.
 
-   ![Screenshot of the Power Query Online Navigator showing the selected dataset.](./media/palantir-foundry-datasets/online-select-data.png)
+   ![Screenshot of the Power Query Online Navigator showing the selected data set.](./media/palantir-foundry-datasets/online-select-data.png)
 
 ### Troubleshooting
 

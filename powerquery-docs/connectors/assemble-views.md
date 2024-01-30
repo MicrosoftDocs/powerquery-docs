@@ -3,7 +3,7 @@ title: Power Query Assemble Views connector
 description: Includes basic information, prerequisites, and information on how to connect to your Assemble Views data, along with a list of known issues and limitations.
 author: hofax
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
@@ -17,7 +17,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Autodesk Account |
 | Function Reference Documentation | &mdash; |
 
@@ -97,7 +97,7 @@ To connect to Assemble data:
 
       ![Don't keep original column name as prefix.](media/assemble-views/assemble-views-transform-1.png)
 
-   b. Select **Close & Apply** to load the datasets.
+   b. Select **Close & Apply** to load the  data sets.
 
 3. (Optional) If you have chosen to load images, you'll need to update the **Data category** for the image field.
 

@@ -3,7 +3,7 @@ title: Where to get data
 description: Describes the process of getting data for Power Query from various Microsoft products.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/9/2024
+ms.date: 1/18/2024
 ms.author: dougklo
 ---
 
@@ -18,7 +18,7 @@ Getting data from available data sources is usually the first encounter you have
 
 The procedures for where to start getting data in Power BI Desktop are described in [Data sources in Power BI Desktop](/power-bi/connect-data/desktop-data-sources).
 
-In Power BI Desktop, you can also directly select an Excel worksheet, a Power BI dataset, a SQL server database, or Dataverse data without using the **Get data** option. You can also enter data directly in a table, or select from a data source that was recently used.
+In Power BI Desktop, you can also directly select an Excel worksheet, a Power BI semantic model, a SQL server database, or Dataverse data without using the **Get data** option. You can also enter data directly in a table, or select from a data source that was recently used.
 
 :::image type="content" source="media/where-to-get-data/power-bi-desktop-data-select.png" alt-text="Screenshot of the Data field in the Home ribbon of Power BI Desktop":::
 

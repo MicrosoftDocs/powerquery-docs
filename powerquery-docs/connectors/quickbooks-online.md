@@ -3,7 +3,7 @@ title: Power Query QuickBooks Online connector
 description: Provides basic information, prerequisites, and instructions on how to connect to your database, along with known issues that may affect the connection.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
@@ -16,7 +16,7 @@ The Power BI QuickBooks Online connector enables connecting to your QuickBooks O
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products | Power BI (Datasets) |
+| Products | Power BI (Semantic models) |
 | Authentication Types Supported | QuickBooks Online account |
 
 > [!WARNING]

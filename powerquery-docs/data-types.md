@@ -2,14 +2,14 @@
 title: "Data types in Power Query"
 description: A comprehensive article on the concepts of data types in Power Query, how to define data types for values and the importance of the data types. 
 author: ptyx507
-ms.date: 12/9/2022
+ms.date: 1/24/2024
 ms.author: miescobar
 ms.custom: edited
 ---
 
 # Data types in Power Query
 
-Data types in Power Query are used to classify values to have a more structured dataset. Data types are defined at the field level&mdash;values inside a field are set to ***conform*** to the data type of the field.
+Data types in Power Query are used to classify values to have a more structured data set. Data types are defined at the field level&mdash;values inside a field are set to ***conform*** to the data type of the field.
 
 The data type of a column is displayed on the left side of the column heading with an icon that symbolizes the data type.
 

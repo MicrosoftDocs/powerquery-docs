@@ -62,7 +62,7 @@ How can you tell if a page is dynamic? Usually it's pretty simple. Open the page
 
 ## Using a gateway with the Web connector
 
-Both [Web.BrowserContents](/powerquery-m/web-browsercontents) and [Web.Page](/powerquery-m/web-page) require the use of an on-premises data gateway when published to a cloud service, such as Power BI datasets or dataflows, or Power Apps dataflows. (Currently, Dynamics 365 Customer Insights doesn't support the use of a gateway.)
+Both [Web.BrowserContents](/powerquery-m/web-browsercontents) and [Web.Page](/powerquery-m/web-page) require the use of an on-premises data gateway when published to a cloud service, such as Power BI semantic models or dataflows, or Power Apps dataflows. (Currently, Dynamics 365 Customer Insights doesn't support the use of a gateway.)
 
 If you're using [Web.Page](/powerquery-m/web-page) and receive a `Please specify how to connect` error, ensure that you have Internet Explorer 10 or later installed on the machine that hosts your on-premises data gateway. 
 

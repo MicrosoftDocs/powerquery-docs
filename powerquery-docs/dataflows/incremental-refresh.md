@@ -3,7 +3,7 @@ title: Using incremental refresh with dataflows
 description: Learn how to configure incremental refresh for dataflows
 author: bensack
 ms.topic: conceptual
-ms.date: 6/13/2023
+ms.date: 1/26/2024
 ms.author: bensack
 ---
 
@@ -135,9 +135,9 @@ The next refresh operation, with *Run Date 1/16/2017*, takes the opportunity to 
 
 ![Recovery from prolonged failure in dataflows.](media/incremental-refresh/dataflows-incremental-refresh-06.png)
 
-## Dataflow incremental refresh and datasets
+## Dataflow incremental refresh and data sets
 
-Dataflow incremental refresh and dataset incremental refresh are designed to work in tandem. It's acceptable and supported to have an incrementally refreshing table in a dataflow, fully loaded into a dataset, or a fully loaded table in a dataflow incrementally loaded to a dataset.
+Dataflow incremental refresh and data set incremental refresh are designed to work in tandem. It's acceptable and supported to have an incrementally refreshing table in a dataflow, fully loaded into a data set, or a fully loaded table in a dataflow incrementally loaded to a data set.
 
 Both approaches work according to your specified definitions in the refresh settings. More information: [Incremental refresh in Power BI Premium](/power-bi/service-premium-incremental-refresh)
 

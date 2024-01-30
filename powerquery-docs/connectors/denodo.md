@@ -5,7 +5,7 @@ author: denodo-research-labs
 ms.author: dougklo
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 1/17/2024
+ms.date: 1/24/2024
 ---
 
 # Denodo
@@ -18,7 +18,7 @@ ms.date: 1/17/2024
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Basic <br/>Windows<br/> |
 
 > [!NOTE]
@@ -31,7 +31,7 @@ To use this connector, you must have installed the Denodo platform, and configur
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI Datasets)
+* DirectQuery (Power BI Semantic models)
 
 ## Connect to an ODBC data source from Power Query Desktop
 
@@ -72,11 +72,11 @@ To make the connection, take the following steps:
    > * The connection string must keep the correct order of its parameters: SERVER, PORT, DATABASE and SSLMode.
    > * The name of these parameters must always be written in the same way. For example, if you choose to write them in upper case, they must always be written in upper case; if you decide to write them capitalized (writing the first letter of a word in uppercase and the rest of the letters in lowercase) they must always be written that way.
    >
-   > Doing otherwise could prevent Power BI from recognizing different Denodo datasets in a report as belonging to the same Denodo data source and, as a consequence, request separate authentication credentials for each of them.
+   > Doing otherwise could prevent Power BI from recognizing different Denodo data sets in a report as belonging to the same Denodo data source and, as a consequence, request separate authentication credentials for each of them.
 
 3. The second section, **Enable debug mode**, is an optional field that allows you to add trace information to log files. These files are created by Power BI Desktop when you enable tracing in the application using the **Diagnostics** tab in the **Options** menu. Note that the default value for **Enable debug mode** is false, and in this scenario, there will be no trace data in the log files from Denodo Power BI custom connector.
 
-4. The third section, **Native Query**, is an optional field where you can enter a query. If this query field is used, the resulting dataset will be the result of the query instead of a table or a set of tables.
+4. The third section, **Native Query**, is an optional field where you can enter a query. If this query field is used, the resulting data set will be the result of the query instead of a table or a set of tables.
 
     You can write a query that queries only one of the databases that the datasource is associated with.
 
@@ -155,7 +155,7 @@ To make the connection, take the following steps:
 
    ![Denodo SSO using Kerberos.](./media/denodo/denodo-sso.png)
 
-   There are two options for enabling SSO: **Use SSO via Kerberos for DirectQuery queries** and **Use SSO via Kerberos for DirectQuery And Import queries**. If you're working with _DirectQuery_ based reports, both options use the SSO credentials of the user that signs in to the Power BI service. The difference comes when you work with _Import_ based reports. In this scenario, the former option uses the credentials entered in the data source page (**Username** and **Password** fields), while the latter uses the credentials of the dataset owner.
+   There are two options for enabling SSO: **Use SSO via Kerberos for DirectQuery queries** and **Use SSO via Kerberos for DirectQuery And Import queries**. If you're working with _DirectQuery_ based reports, both options use the SSO credentials of the user that signs in to the Power BI service. The difference comes when you work with _Import_ based reports. In this scenario, the former option uses the credentials entered in the data source page (**Username** and **Password** fields), while the latter uses the credentials of the data set owner.
 
    It's important to note that there are particular prerequisites and considerations that you must take into account in order to use the Kerberos-based SSO. Some of these essential requirements are:
 

@@ -4,7 +4,7 @@ description: Provides basic information, prerequisites, and instructions on how 
 author: giladsmg
 ms.author: dougklo
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/24/2024
 ---
 
 # SolarWinds Service Desk (Beta)
@@ -21,7 +21,7 @@ variety of formats, such as tables, graphs, and charts.
 | Item                           | Description                                  |
 |--------------------------------|----------------------------------------------|
 | Release state                  | Beta                                         |
-| Products                       | Power BI (Datasets)<br/>Power BI (Dataflows)<br/> Fabric (Dataflow Gen2) |
+| Products                       | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/> Fabric (Dataflow Gen2) |
 | Authentication Types Supported | SolarWinds Service Desk JSON Web Token (JWT) |
 
 ## Prerequisites

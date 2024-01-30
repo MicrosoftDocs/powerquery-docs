@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for using Power Query'
 author: DougKlopfenstein
 
 ms.topic: conceptual
-ms.date: 1/17/2024
+ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
@@ -18,13 +18,13 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Azure Active Directory<br/>Personal Access Token<br/>Username / Password |
 
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI Datasets)
+* DirectQuery (Power BI semantic models)
 
 ## Connect to Databricks (AWS, Azure or GCP) from Power Query Desktop
 
@@ -78,4 +78,4 @@ To connect to Databricks from Power Query Online, take the following steps:
 ## Limitations
 
 * The Azure Databricks connector supports [web proxy](/power-bi/connect-data/desktop-troubleshooting-sign-in#using-default-system-credentials-for-web-proxy). However, automatic proxy settings defined in .pac files aren't supported.
-* In the Azure Databricks connector, the `Databricks.Query` data source isn't supported in combination with Power BI dataset's DirectQuery mode.
+* In the Azure Databricks connector, the `Databricks.Query` data source isn't supported in combination with Power BI semantic model's DirectQuery mode.

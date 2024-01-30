@@ -16,7 +16,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products | Power BI (Datasets) </br> Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Products | Power BI (Semantic models) </br> Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Organizational Account |
 | Function Reference Documentation | [Web.Contents](/powerquery-m/web-contents) </br> [Parquet.Document](/power-query/connectors/parquet) </br> [Json.Document](/powerquery-m/json-document) </br> [Json.FromValue](/powerquery-m/json-fromvalue)|
 

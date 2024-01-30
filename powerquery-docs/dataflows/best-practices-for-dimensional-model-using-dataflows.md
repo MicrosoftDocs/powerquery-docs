@@ -42,7 +42,7 @@ This separation also helps in case the source system connection is slow. The tra
 
 A layered architecture is an architecture in which you perform actions in separate layers. The staging and transformation dataflows can be two layers of a multi-layered dataflow architecture. Trying to do actions in layers ensures the minimum maintenance required. When you want to change something, you just need to change it in the layer in which it's located. The other layers should all continue to work fine.
 
-The following image shows a multi-layered architecture for dataflows in which their tables are then used in Power BI datasets.
+The following image shows a multi-layered architecture for dataflows in which their tables are then used in Power BI semantic models.
 
 :::image type="content" source="media/best-practices-for-dimensional-model/multi-layered-dataflow.png" alt-text="Image with multi-layered architecture, where staging dataflows and transformation dataflows are in separate layers.":::
 
@@ -73,7 +73,7 @@ When building dimension tables, make sure you have a key for each one. This key 
 
 ### Do an incremental refresh for large fact tables
 
-Fact tables are always the largest tables in the dimensional model. We recommend that you reduce the number of rows transferred for these tables. If you have a very large fact table, ensure that you use incremental refresh for that table. An incremental refresh can be done in the Power BI dataset, and also the dataflow tables.
+Fact tables are always the largest tables in the dimensional model. We recommend that you reduce the number of rows transferred for these tables. If you have a very large fact table, ensure that you use incremental refresh for that table. An incremental refresh can be done in the Power BI semantic model, and also the dataflow tables.
 
 You can use incremental refresh to refresh only part of the data, the part that has changed. There are multiple options to choose which part of the data to be refreshed and which part to be persisted. More information: [Using incremental refresh with Power BI dataflows](/power-bi/transform-model/service-dataflows-incremental-refresh)
 
