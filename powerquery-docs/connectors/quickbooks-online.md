@@ -1,10 +1,10 @@
 ---
 title: Power Query QuickBooks Online connector
 description: Provides basic information, prerequisites, and instructions on how to connect to your database, along with known issues that may affect the connection.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 12/1/2021
-ms.author: bezhan
+ms.date: 1/24/2024
+ms.author: dougklo
 ---
 
 # QuickBooks Online (Beta)
@@ -16,11 +16,10 @@ The Power BI QuickBooks Online connector enables connecting to your QuickBooks O
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products | Power BI (Datasets) |
+| Products | Power BI (Semantic models) |
 | Authentication Types Supported | QuickBooks Online account |
-| | |
 
->[!Warning]
+> [!WARNING]
 > QuickBooks Online has deprecated support for Internet Explorer 11, which Power Query Desktop uses for authentication to online services. To be able to log in to Quickbooks Online from Power BI Desktop, go to [Enabling Microsoft Edge (Chromium) for OAuth Authentication in Power BI Desktop](../oauth-edge-chromium.md).
 
 ## Prerequisites

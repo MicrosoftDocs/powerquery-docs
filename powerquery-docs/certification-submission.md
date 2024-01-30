@@ -1,10 +1,10 @@
 ---
 title: Power Query connector certification submission
 description: Instructions for submitting a Power Query custom connector for certification.
-author: bezhan-msft
+author: ptyx507x
 ms.topic: conceptual
-ms.date: 3/13/2023
-ms.author: bezhan
+ms.date: 1/18/2024
+ms.author: miescobar
 ---
 
 # Power Query connector submission
@@ -48,7 +48,7 @@ After your connector code review is complete, you'll need to submit a demo video
 - Load the data into Power BI Desktop and create a simple report.
 - Publish the report to the Power BI service.
 - Update the data in your end service backend (any simple data value update).
-- Successfully refresh the dataset in the Power BI service using the connector through the on-premises data gateway. Refresh the report visual. The changed data value should be updated.
+- Successfully refresh the semantic model in the Power BI service using the connector through the on-premises data gateway. Refresh the report visual. The changed data value should be updated.
 - Successfully refresh in Power BI Desktop. The changed data value should be updated.
 
 ### Updates

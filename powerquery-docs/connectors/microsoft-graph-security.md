@@ -1,10 +1,10 @@
 ---
 title: Power Query Microsoft Graph Security connector
 description: Provides information on the deprecation of the Microsoft Graph Security connector.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 8/7/2023
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # Microsoft Graph Security (Deprecated)

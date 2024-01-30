@@ -4,7 +4,7 @@ description: Learn what Power Query is, and how it can help you get and transfor
 author: ptyx507x
 
 ms.topic: overview
-ms.date: 6/19/2023
+ms.date: 1/24/2024
 ms.author: miescobar
 ms.search.form: DataflowGen2 Overview, product-data-integration
 ---
@@ -27,7 +27,7 @@ Business users spend up to 80&nbsp;percent of their time on data preparation, wh
 |Experiences for data connectivity are too fragmented     | Consistency of experience, and parity of query capabilities over all data sources.        |
 |Data often needs to be reshaped before consumption     | Highly interactive and intuitive experience for rapidly and iteratively building queries over any data source, of any size.        |
 |Any shaping is one-off and not repeatable     |  When using Power Query to access and transform data, you define a repeatable process (query) that can be easily refreshed in the future to get up-to-date data. <br/>In the event that you need to modify the process or query to account for underlying data or schema changes, you can use the same interactive and intuitive experience you used when you initially defined the query.     |
-|Volume (data sizes), velocity (rate of change), and variety (breadth of data sources and data shapes)     |  Power Query offers the ability to work against a subset of the entire dataset to define the required data transformations, allowing you to easily filter down and transform your data to a manageable size. <br/>Power Query queries can be refreshed manually or by taking advantage of scheduled refresh capabilities in specific products (such as Power BI) or even programmatically (by using the Excel object model). <br/>Because Power Query provides connectivity to hundreds of data sources and over 350 different types of data transformations for each of these sources, you can work with data from any source and in any shape.      |
+|Volume (data sizes), velocity (rate of change), and variety (breadth of data sources and data shapes)     |  Power Query offers the ability to work against a subset of the entire data set to define the required data transformations, allowing you to easily filter down and transform your data to a manageable size. <br/>Power Query queries can be refreshed manually or by taking advantage of scheduled refresh capabilities in specific products (such as Power BI) or even programmatically (by using the Excel object model). <br/>Because Power Query provides connectivity to hundreds of data sources and over 350 different types of data transformations for each of these sources, you can work with data from any source and in any shape.      |
 
 ## Power Query experiences
 
@@ -42,7 +42,7 @@ Currently, two Power Query experiences are available:
 * **Power Query Online**&mdash;Found in integrations such as Power BI dataflows, Microsoft Power Platform dataflows, Azure Data Factory wrangling dataflows, and many more that provide the experience through an online webpage.
 * **Power Query for Desktop**&mdash;Found in integrations such as Power Query for Excel and Power BI Desktop. 
 
->[!NOTE]
+> [!NOTE]
 >Although two Power Query experiences exist, they both provide almost the same user experience in every scenario.
 
 ## Transformations

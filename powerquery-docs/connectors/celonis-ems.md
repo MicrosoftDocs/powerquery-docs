@@ -2,8 +2,8 @@
 title: Power Query Celonis EMS connector
 description: Provides basic information, prerequisites, and connection steps for Celonis EMS.
 author: capono
-ms.date: 7/13/2023 
-ms.author: bezhan
+ms.date: 1/8/2024 
+ms.author: dougklo
 ---
 
 # Celonis EMS (Beta)
@@ -16,7 +16,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products | Power BI (Datasets) </br> Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Products | Power BI (Semantic models) </br> Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Organizational Account |
 | Function Reference Documentation | [Web.Contents](/powerquery-m/web-contents) </br> [Parquet.Document](/power-query/connectors/parquet) </br> [Json.Document](/powerquery-m/json-document) </br> [Json.FromValue](/powerquery-m/json-fromvalue)|
 

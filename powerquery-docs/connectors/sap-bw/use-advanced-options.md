@@ -3,15 +3,15 @@ title: Use advanced options
 description: Describes how to use the Power Query SAP Business Warehouse connector advanced sign-in options.
 author: dougklopfenstein
 ms.topic: conceptual
-ms.date: 11/29/2022
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # Use advanced options
 
 When you create a connection to an SAP Business Warehouse server, you can optionally specify a language code, execution mode, batch size, and an MDX Statement. Also, you can select whether you want to enable characteristic structures.
 
->[!NOTE]
+> [!NOTE]
 > Although the images in this article illustrate the advanced options in the SAP Business Warehouse Application Server connector, they work the same way in the SAP Business Warehouse Message Server connector.
 
 ## Language code
@@ -24,7 +24,7 @@ The expected value is a two-letter language code as defined in the SAP system. I
 
 After you set the language code, Power Query displays the descriptive names of the data objects in SAP BW in the specified language, including the field names for the selected objects.
 
->[!NOTE]
+> [!NOTE]
 > Not all listed languages might be configured in your SAP BW system, and object descriptions might not be translated in all languages.
 
 ![Navigator showing language change for descriptive and field names.](navigator-language-option.png)
@@ -43,16 +43,16 @@ The **Execution mode** option specifies the MDX interface is used to execute que
 
 ## Batch size
 
-Specifies the maximum number of rows to retrieve at a time when executing an MDX statement. A small number translates into more calls to the server when retrieving a large dataset. A large number of rows may improve performance, but could cause memory issues on the SAP BW server. The default value is 50000 rows.
+Specifies the maximum number of rows to retrieve at a time when executing an MDX statement. A small number translates into more calls to the server when retrieving a large data set. A large number of rows may improve performance, but could cause memory issues on the SAP BW server. The default value is 50000 rows.
 
 ## MDX Statement
 
->[!NOTE]
->The MDX statement option is not available in Power Query Online. 
+> [!NOTE]
+>The MDX statement option isn't available in Power Query Online.
 
 Instead of using the navigator to browse through and select from available data objects in SAP BW, a user who's familiar with the MDX query language can specify an MDX statement for direct execution in SAP BW. However, be aware that no further query folding will be applied when using a custom MDX statement.
 
-The statement for the example used here would look as shown in the following sample, based on the technical names of the objects and properties in SAP BW. 
+The statement for the example used here would look as shown in the following sample, based on the technical names of the objects and properties in SAP BW.
 
 ```
 SELECT {[0EFUZM0P10X72MBPOYVBYIMLB].[0EFUZM0P10X72MBPOYVBYISWV]} ON COLUMNS ,
@@ -75,7 +75,7 @@ The SAP BW connector will display a preview of the data that is returned by the 
 
 To validate and troubleshoot an MDX statement, SAP BW provides the *MDXTEST* transaction for SAP GUI for Windows users. Further, the MDXTEST transaction can be a useful tool for analyzing server errors or performance concerns as a result of processing that occurs within the SAP BW system.
 
-For more detailed information on this transaction, go to [MDX Test Environment](https://help.sap.com/viewer/64e2cdef95134a2b8870ccfa29cbedc3/7.3.15/en-US/19fdd486b13c43e2ad9f562a3222a480.html). 
+For more detailed information on this transaction, go to [MDX Test Environment](https://help.sap.com/viewer/64e2cdef95134a2b8870ccfa29cbedc3/7.3.15/en-US/19fdd486b13c43e2ad9f562a3222a480.html).
 
 ![Troubleshooting an MDX statement with MDXTEST in the SAPGUI.](mdxtest-in-sapgui.png)
 
@@ -86,7 +86,7 @@ The transaction offers different execution modes/interfaces for the MDX statemen
 ![Shows Flattening selected in Execute in Export mode.](select-flattening.png)
 
 The transaction will display the result set of the MDX statement and useful runtime metrics.
- 
+
 ![Displays the result set of the MDX statement.](mdx-result-set.png)
 
 ## Enable characteristic structures
@@ -106,7 +106,5 @@ If selected, the connector produces only the available measures. For example:
 ### See also
 
 * [Navigate the query objects](navigate-query-objects.md)
-* [Transform and filter SAP BW dataset](transform-filter-sap-bw-data.md)
+* [Transform and filter SAP BW data set](transform-filter-sap-bw-data.md)
 * [SAP Business Warehouse connector troubleshooting](sap-bw-troubleshooting.md)
-
-

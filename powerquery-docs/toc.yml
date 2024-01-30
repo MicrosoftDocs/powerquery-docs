@@ -19,7 +19,7 @@ items:
           href: connector-authentication.md
         - name: "Authentication in Power Query Online"
           href: connection-authentication-pqo.md
-        - name: "Auto sign in for AAD data sources"
+        - name: "Auto sign in for Microsoft Entra ID data sources"
           href: auto-signin-aad.md
       - name: "Upload a file"
         href: upload-file.md
@@ -247,7 +247,7 @@ items:
           href: dataflows/send-notification-when-dataflow-refresh-completes.md
         - name: "Open a ticket when a dataflow refresh fails"
           href: dataflows/open-support-ticket-when-dataflow-refresh-completes.md
-        - name: "Trigger dataflows and Power BI datasets sequentially"
+        - name: "Trigger dataflows and Power BI semantic models sequentially"
           href: dataflows/trigger-dataflows-and-power-bi-dataset-sequentially.md
         - name: "Use Dataverse to build a dataflows monitoring report"
           href: dataflows/load-dataflow-metadata-into-dataverse-table.md
@@ -357,7 +357,7 @@ items:
         href: connectors/azure-hdinsight-on-aks-trino.md
       - name: "Azure SQL database"
         href: connectors/azure-sql-database.md
-      - name: "Azure Resource Graph"
+      - name: "Azure Resource Graph (Beta)"
         href: connectors/azure-resource-graph.md
       - name: "Azure Synapse Analytics (SQL DW)"
         href: connectors/azure-sql-data-warehouse.md
@@ -503,7 +503,7 @@ items:
           href: connectors/sap-bw/sap-bw-fundamentals.md
         - name: "Navigate the query objects"
           href: connectors/sap-bw/navigate-query-objects.md
-        - name: "Transform and filter an SAP BW dataset"
+        - name: "Transform and filter an SAP BW data set"
           href: connectors/sap-bw/transform-filter-sap-bw-data.md
         - name: "Implementation details"
           href: connectors/sap-bw/implementation-details.md

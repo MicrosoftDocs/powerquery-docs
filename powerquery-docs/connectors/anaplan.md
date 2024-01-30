@@ -1,15 +1,15 @@
 ---
 title: Power Query Anaplan connector
 description: Provides basic information, prerequisites, and instructions on how to connect to your Anaplan data, as well as troubleshooting tips.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/13/2023
-ms.author: bezhan
+ms.date: 1/24/2024
+ms.author: dougklo
 ---
 
 # Anaplan
 
->[!Note]
+> [!NOTE]
 >The following connector article is provided by Anaplan, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Anaplan website and use the support channels there.
 
 ## Summary
@@ -17,7 +17,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Basic<br/>Organizational account |
 
 ## Prerequisites
@@ -31,7 +31,7 @@ The Anaplan Connector enables access to your Anaplan model exports. It also:
 * Runs using Anaplan public data integration APIs.
 * Loads export actions saved in your Anaplan models, directly into Power BI.
 * Displays Anaplan models (those models not archived) in your default tenant.
-* Creates datasets in Power BI Desktop and exports or refreshes them to the Power BI service (cloud).
+* Creates semantic models in Power BI Desktop and exports or refreshes them to the Power BI service (cloud).
 
 ## Connect to Anaplan from Power BI Desktop
 
@@ -104,7 +104,7 @@ You've chosen either basic authentication or Anaplan-configured IDP.
 
    4. Select **Sign In**.
 
-      >[!Note]
+      > [!NOTE]
       > Your company's Anaplan-configured IDP service generates this dialog. A common ID management service is Okta.
 
       ![Sign In dialog for Okta. Okta is one example of a likely identity management tool.](./media/anaplan/okta-example.png)
@@ -164,11 +164,11 @@ The report is now in Power BI service. Sign in to Power BI service to see the re
 
 ### Schedule a refresh (Power BI service)
 
-Once you've created a dataset in Power BI service, you can schedule a data refresh.
+Once you've created a semantic model in Power BI service, you can schedule a data refresh.
 
 First, create a report in the Power BI Desktop. More information: [Create reports in Power BI](/power-bi/create-reports/).
 
-To refresh your dataset:
+To refresh your semantic model:
 
 1. Select **Add Data Source** (top left of dialog).
 
@@ -178,7 +178,7 @@ To refresh your dataset:
 
 [![The Microsoft New data source dialog. Arrows point to the button itself and two dropdowns.](./media/anaplan/use1-gateway.png)](./media/anaplan/use1-gateway.png#lightbox)
 
-This image displays an example dataset entitled **New data source**.
+This image displays an example semantic model entitled **New data source**.
 
 From the **Anaplan** dialog:
 

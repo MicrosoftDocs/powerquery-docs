@@ -4,8 +4,8 @@ description: Includes basic information and prerequisites, instructions on how t
 author: DougKlopfenstein
 
 ms.topic: conceptual
-ms.date: 7/14/2023
-ms.author: bezhan
+ms.date: 1/24/2024
+ms.author: dougklo
 LocalizationGroup: reference
 ---
 
@@ -16,7 +16,7 @@ LocalizationGroup: reference
 | Item | Description |
 | ------- | ------------|
 |Release state | General Availability |
-| Products supported | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
+| Products supported | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
 | Authentication types supported| Anonymous (online)<br/>Account key (online)<br/>Basic (online)<br/>Organizational account (online)<br/>Shared access signature (SAS) (online)<br/>Web API (online)<br/>Windows (online) |
 | Function reference docs | &mdash; |
 

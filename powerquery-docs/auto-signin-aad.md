@@ -1,16 +1,16 @@
 ---
-title: Auto sign-in for Azure Active Directory sources
-description: Power Query enables you to automatically sign in to a select set of data sources that use the Azure Active Directory as its authentication kind based on the current authenticated user.
+title: Auto sign-in for Microsoft Entra ID sources
+description: Power Query enables you to automatically sign in to a select set of data sources that use the Microsoft Entra ID as its authentication kind based on the current authenticated user.
 author: ptyx507x
-ms.date: 10/5/2022
+ms.date: 1/17/2024
 ms.author: miescobar
 ---
 
-# Auto sign in for Azure Active Directory data sources
+# Auto sign in for Microsoft Entra ID data sources
 
-The auto sign-in feature attempts to automatically sign you in as the current user when connecting to data sources in Power Query that use Azure Active Directory as one of their authentication kinds. It does this auto sign-in to expedite the authentication process and minimize the time it takes to start working with your data.
+The auto sign-in feature attempts to automatically sign you in as the current user when connecting to data sources in Power Query that use Microsoft Entra ID as one of their authentication kinds. It does this auto sign-in to expedite the authentication process and minimize the time it takes to start working with your data.
 
-More technically, the auto sign-in feature for Azure Active Directory data sources uses the information derived from the currently authenticated user in the Power Query Online experience. This information is then used to request a new access token for a selected data source during the connection settings and authentication steps of the [get data](get-data-experience.md#1-connection-settings) process.
+More technically, the auto sign-in feature for Microsoft Entra ID data sources uses the information derived from the currently authenticated user in the Power Query Online experience. This information is then used to request a new access token for a selected data source during the connection settings and authentication steps of the [get data](get-data-experience.md#1-connection-settings) process.
 
 >[!NOTE]
 >This functionality is currently only available in Power Query Online and is enabled by default for a select set of connectors. No configuration is needed to enable this feature.

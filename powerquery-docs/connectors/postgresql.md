@@ -1,10 +1,10 @@
 ---
 title: Power Query PostgreSQL connector
 description: Provides basic information, prerequisites, and instructions on how to connect to your database, along with native query folding instructions and troubleshooting tips.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 8/9/2023
-ms.author: bezhan
+ms.date: 1/24/2024
+ms.author: dougklo
 ---
 
 # PostgreSQL
@@ -14,7 +14,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication Types Supported | Database (Username/Password) |
 | Function Reference Documentation | [PostgreSQL.Database](/powerquery-m/postgresql-database) |
 
@@ -36,7 +36,7 @@ For Power Apps, you must install the NpgSQL provider on your local machine. To i
 ## Capabilities Supported
 
 - Import
-- DirectQuery (Power BI Datasets)
+- DirectQuery (Power BI semantic models)
 - Advanced options
   - Command timeout in minutes
   - Native SQL statement

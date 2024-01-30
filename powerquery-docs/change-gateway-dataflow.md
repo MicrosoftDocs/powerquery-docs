@@ -34,11 +34,11 @@ To change the gateway:
    >[!Tip]
    >If there were recent changes to your gateways, select the small refresh icon to the right of the drop-down menu to update the list of available gateways.
 
-3. After selecting the correct gateway for the project, in this case Gateway B, select **OK** to go back to the Power Query editor.
+3. After selecting the correct gateway for the project, in this case, Gateway B, select **OK** to go back to the Power Query editor.
 
 ## Validate your data source path
 
-After changing your data gateway, we recommended that you check your data source paths to make sure that your queries are connecting to your data sources as expected.
+After changing your data gateway, we recommend that you check your data source paths to make sure that your queries are connecting to your data sources as expected.
 
 >[!Note]
 >The M engine identifies a data source using a combination of its *kind* and *path*.

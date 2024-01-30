@@ -3,8 +3,8 @@ title: Navigate the query objects
 description: Describes how to navigate the query objects in the Navigator dialog box of the Power Query SAP Business Warehouse connector.
 author: dougklopfenstein
 ms.topic: conceptual
-ms.date: 11/29/2022
-ms.author: bezhan
+ms.date: 1/26/2024
+ms.author: dougklo
 ---
 
 # Navigate the query objects
@@ -33,13 +33,13 @@ The **Navigator** dialog box displays a hierarchical tree of data objects from t
 &nbsp;
 ![Navigator with display options context menu open.](navigator-display-options.png)
 
->[!NOTE]
+> [!NOTE]
 >The navigator shows InfoCubes and BEx queries. For BEx queries, you may need to go into Business Explorer, open the desired query and check **Allow External Access to this Query: By OLE DB for OLAP** for the query to be available in the navigator.
 
 ![Image showing the Allow External Access to this query: By OLE DB for OLAP check box.](enable-release.png)
 
->[!NOTE]
->In Power BI Desktop, objects below an InfoCube or BEx Query node, such as the key figures, characteristics, and properties are only shown in Import connectivity mode, not in DirectQuery mode. In DirectQuery mode, all the available objects are mapped to a Power BI model and will be available for use in any visual.
+> [!NOTE]
+>In Power BI Desktop, objects below an InfoCube or BEx Query node, such as the key figures, characteristics, and properties are only shown in Import connectivity mode, not in DirectQuery mode. In DirectQuery mode, all the available objects are mapped to a Power BI model and are available for use in any visual.
 
 In the navigator, you can select from different display options to view the available query objects in SAP BW:
 
@@ -48,7 +48,7 @@ query. Another approach to viewing selected items is to select the column names 
 
 * **Enable data previews**: This value is the default. This option allows you to control whether a preview of the data should be displayed on the right-hand side in the **Navigator** dialog box. Disabling data previews reduces the amount of server interaction and response time. In Power BI Desktop, data preview is only available in Import connectivity mode.
 
-* **Technical names**: SAP BW supports the notion of *technical names* for query objects, as opposed to the descriptive names that are shown by default. Technical names uniquely identify an object within SAP BW. With the option selected, the technical names will appear next to the descriptive name of the object. 
+* **Technical names**: SAP BW supports the notion of *technical names* for query objects, as opposed to the descriptive names that are shown by default. Technical names uniquely identify an object within SAP BW. With the option selected, the technical names will appear next to the descriptive name of the object.
 
 ## Characteristic hierarchies
 
@@ -64,7 +64,7 @@ For characteristics with hierarchies, the properties selected for that character
 
 When you pick a measure, you have an option to select the units/currency, formatted value, and format string. In the screenshot below, it's useful to get the formatted value for COGS. This helps us follow the same formatting standard across all the reports.
 
->[!NOTE]
+> [!NOTE]
 > Measure properties are not available in Power BI Desktop in DirectQuery mode.
 
 ![Navigator showing the Format string, Formatting value, and Units of measure measure properties selected.](measure-properties.png)
@@ -77,11 +77,11 @@ Power Query uses a newer interface that is available in SAP BW version 7.01 or h
 
 The flattened data set is aggregated in SAP BW at the level of the selected characteristics and properties.
 
-Even with these improvements, the resulting dataset can become very large and time-consuming to process.
+Even with these improvements, the resulting data set can become very large and time-consuming to process.
 
 **Performance recommendation**
 
-Only include the characteristics and properties that you ultimately need. Aim for higher levels of aggregation, that is, do you need Material-level details in your report, or is MaterialGroup-level enough? What hierarchy levels are required in Power BI? Try to create smaller datasets, with higher levels of aggregation, or multiple smaller datasets, that can be joined together later.
+Only include the characteristics and properties that you ultimately need. Aim for higher levels of aggregation. For example, do you need Material-level details in your report, or is MaterialGroup-level enough? What hierarchy levels are required in Power BI? Try to create smaller data sets, with higher levels of aggregation, or multiple smaller data sets, that can be joined together later.
 
 ## Query parameters
 
@@ -101,9 +101,9 @@ The value **#** means unassigned; in the example any data record without an assi
 
 **Performance recommendation**
 
-Filters based on parameter values get processed in the SAP BW data source, not in Power BI. This type of processing can have performance advantages for larger datasets when loading or refreshing SAP BW data into Power BI. The time it takes to load data from SAP BW into Power BI increases with the size of the dataset, for example, the number of columns and rows in the flattened result set. To reduce the number of columns, only select the key figures, characteristics, and properties in the navigator that you eventually want to see.
+Filters based on parameter values get processed in the SAP BW data source, not in Power BI. This type of processing can have performance advantages for larger data sets when loading or refreshing SAP BW data into Power BI. The time it takes to load data from SAP BW into Power BI increases with the size of the data set, for example, the number of columns and rows in the flattened result set. To reduce the number of columns, only select the key figures, characteristics, and properties in the navigator that you eventually want to see.
 
-Similarly, to reduce the number of rows, use the available parameters on the query to narrow the dataset, or to split up a larger dataset into multiple, smaller datasets that can be joined together in the Power BI Desktop data model.
+Similarly, to reduce the number of rows, use the available parameters on the query to narrow the data set, or to split up a larger data set into multiple, smaller data sets that can be joined together in the Power BI Desktop data model.
 
 In many cases, it may also be possible to work with the author of the BEx Query in SAP BW to clone and modify an existing query and optimize it for performance by adding additional characteristic restrictions or removing unnecessary characteristics.
 
@@ -119,4 +119,4 @@ In Power Query Desktop, you can also select **Load** to bring the entire data se
 
 ### See also
 
-* [Transform and filter an SAP BW dataset](transform-filter-sap-bw-data.md)
+* [Transform and filter an SAP BW data set](transform-filter-sap-bw-data.md)

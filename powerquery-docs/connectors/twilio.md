@@ -1,14 +1,14 @@
 ---
 title: Power Query Twilio connector
 description: Provides information on the deprecation of the Twilio connector.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/22/2022
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # Twilio (Deprecated) (Beta)
- 
+
 ## Summary
 
 | Item | Description |
@@ -17,7 +17,6 @@ ms.author: bezhan
 | Products | - |
 | Authentication Types Supported | - |
 | Function Reference Documentation | - |
-| | |
 
 ## Deprecation
 

@@ -2,14 +2,14 @@
 title: SoftOne BI connector
 description: This article provides information for the SoftOne BI connector and a tutorial for usage.
 author: basilrormose
-ms.topic: 
-ms.date: 7/14/2023
-ms.author: bezhan
+ms.topic: conceptual
+ms.date: 1/24/2024
+ms.author: dougklo
 ---
 
 # SoftOne BI (Beta)
 
->[!Note]
+> [!NOTE]
 >The following connector article is provided by SoftOne, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the SoftOne website and use the support channels there.
 
 ## Summary
@@ -17,12 +17,12 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Basic (Soft1/Atlantis Web Services) |
 
 ## Prerequisites
 
-You'll need to have the Soft1 ERP/CRM or Atlantis ERP product installed with a licensed SoftOne BI connector module. A web account must be configured in the application with access to the SoftOne BI Connector service. This account information and your installation serial number will be validated during authentication by the SoftOne BI connector.
+You must have the Soft1 ERP/CRM or Atlantis ERP product installed with a licensed SoftOne BI connector module. A web account must be configured in the application with access to the SoftOne BI Connector service. This account information and your installation serial number are validated during authentication by the SoftOne BI connector.
 
 The SoftOne BI connector is supported from Soft1 Series 5 version 500.521.11424 or later and Atlantis ERP version 3.3.2697.1 or later.
 
@@ -30,9 +30,9 @@ The SoftOne BI connector is supported from Soft1 Series 5 version 500.521.11424 
 
 * Import
 
-## Connection instructions 
+## Connection instructions
 
-SoftOne provides many templates as Power BI template files (.pbit) that you can use or customize which will provide you with a start to your BI project. For example, Sales & Collections, and Finance.
+SoftOne provides many templates as Power BI template files (.pbit) that you can use or customize which provides you with a start to your BI project. For example, Sales & Collections, and Finance.
 
 To connect in Power BI Desktop using a new report, follow the steps below. If you're connecting from a report created using one of the SoftOne BI templates, see [Using a provided template](#using-a-provided-template) later in this article.
 
@@ -45,7 +45,7 @@ To load data from your installation with Power Query Desktop:
     > [!div class="mx-imgBorder"]
     > ![Select the SoftOne BI connector.](media/softone-bi/softone-bi-select.png)
 
-1. Select **Sign in**. An authentication form will display.
+1. Select **Sign in**. An authentication form is displayed.
 
     > [!div class="mx-imgBorder"]
     > ![Enter your installation serial number and Web Account credentials.](media/softone-bi/softone-bi-login.png)
@@ -60,7 +60,7 @@ To load data from your installation with Power Query Desktop:
     > [!div class="mx-imgBorder"]
     > ![Connect to your data store.](media/softone-bi/softone-bi-connect-data-store.png)
 
-    Selecting **Connect** will take you to the navigation table and display the available tables from the data store from which you may select the data required.
+    Selecting **Connect** takes you to the navigation table and display the available tables from the data store from which you can select the data required.
 
 1. In the navigator, you should now see the tables in your data store. Fetching the tables can take some time.
 
@@ -72,11 +72,11 @@ To load data from your installation with Power Query Desktop:
     > [!div class="mx-imgBorder"]
     > ![No data tables - data has not been uploaded.](media/softone-bi/softone-bi-no-data.png)
 
-    In this case, you'll need to go back to your application and upload your data.
+    In this case, you need to go back to your application and upload your data.
 
 ### Using a provided template
 
-1. Open the selected template, Power BI Desktop will attempt to load the data from the data store, and will prompt for credentials.
+1. Open the selected template, Power BI Desktop attempts to load the data from the data store, and prompts for credentials.
 
     > [!div class="mx-imgBorder"]
     > ![Enter your credentials.](media/softone-bi/softone-bi-open-template.png)
@@ -91,9 +91,9 @@ To load data from your installation with Power Query Desktop:
     > [!div class="mx-imgBorder"]
     > ![Connect to your data store.](media/softone-bi/softone-bi-connect-data-store.png)
 
-    Power BI Desktop will fetch the data from the data store.
+    Power BI Desktop then fetches the data from the data store.
 
-1. After the refresh has completed, you're ready to start customizing the report or to publish it as is to the Power BI Service.
+1. After the refresh completes, you're ready to start customizing the report or to publish it as is to the Power BI Service.
 
     > [!div class="mx-imgBorder"]
     > ![Sales overview.](media/softone-bi/softone-bi-sales-overview.png)

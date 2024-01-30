@@ -1,10 +1,10 @@
 ---
 title: Power Query OData Feed connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your data using the connector.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/14/2023
-ms.author: bezhan
+ms.date: 1/24/2024
+ms.author: dougklo
 ---
 
 # OData Feed
@@ -14,11 +14,11 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication Types Supported | Anonymous<br/>Windows (requires Gateway)<br/>Basic (requires Gateway)<br/>Web API<br/>Organizational Account |
 | Function Reference Documentation | [OData.Feed](/powerquery-m/odata-feed), [ODataOmitValues.Nulls](/powerquery-m/odataomitvalues-type) |
 
->[!Note]
+> [!NOTE]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Capabilities supported
@@ -29,7 +29,7 @@ ms.author: bezhan
   * Open type columns
 * Select related tables
 
->[!Note]
+> [!NOTE]
 > Microsoft Graph is not supported. More information: [Lack of Support for Microsoft Graph in Power Query](../connecting-to-graph.md)
 
 ## Load data from an OData Feed in Power Query Desktop
@@ -92,7 +92,7 @@ When you enter credentials for an OData service into Power BI service (for examp
 
 ### Authenticating to arbitrary services
 
-Some services support the ability for the OData connector to authenticate with OAuth/AAD authentication out of the box. However, this won't work in most cases.
+Some services support the ability for the OData connector to authenticate with OAuth/Microsoft Entra ID authentication out of the box. However, this won't work in most cases.
 
 When attempting to authenticate, if the following error occurs:
 

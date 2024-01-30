@@ -1,10 +1,10 @@
 ---
 title: Power Query Oracle database connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your Oracle database using the connector.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 9/1/2023
-ms.author: bezhan
+ms.date: 1/24/2024
+ms.author: dougklo
 ---
 
 # Oracle database
@@ -14,11 +14,11 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
-| Authentication Types Supported | Windows (desktop/online)<br/>Database (desktop)<br/>Basic (online) <br/>Azure Active Directory (desktop/online)|
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Authentication Types Supported | Windows (desktop/online)<br/>Database (desktop)<br/>Basic (online) <br/>Microsoft account (desktop)|
 | Function Reference Documentation | [Oracle.Database](/powerquery-m/oracle-database) |
 
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
@@ -28,14 +28,14 @@ Supported Oracle versions:
 * Oracle Database Server 12c (12.1.0.2) and later
 * Oracle Autonomous Database - all versions
 
-Before you can connect to an Oracle database using Power Query, you need to install the Oracle Client for Microsoft Tools (OCMT). 
+Before you can connect to an Oracle database using Power Query, you need to install the Oracle Client for Microsoft Tools (OCMT).
 
 To connect to an Oracle database with the [on-premises data gateway](/data-integration/gateway/), 64-bit OCMT must be installed on the computer running the gateway. For more information, go to [Manage your data source - Oracle](/power-bi/connect-data/service-gateway-onprem-manage-oracle).
 
 ## Capabilities Supported
 
 * Import
-* DirectQuery (Power BI Datasets)
+* DirectQuery (Power BI semantic models)
 * Advanced options
   * Command timeout in minutes
   * SQL statement
@@ -67,9 +67,9 @@ To make the connection, take the following steps:
 
 4. If you're connecting to this Oracle database for the first time, select the authentication type you want to use, and then enter your credentials. The authentication types available are:
 
-   * Windows authentication (Windows)
-   * Username and password (Database)
-   * Azure Active Directory (Microsoft account)
+   * Windows (Windows authentication)
+   * Database (Username and password)
+   * Microsoft account (Microsoft Entra ID)
 
    For more information about authentication, go to [Authentication with a data source](../connectorauthentication.md).
 
@@ -106,7 +106,7 @@ To make the connection, take the following steps:
 
 ## Connect to an Oracle Autonomous Database
 
->[!Note]
+> [!NOTE]
 >Currently, you can connect to an Oracle Autonomous Database from Excel, Power BI Desktop, Power BI service, Fabric (Dataflow Gen2), Power Apps, SQL Server Analysis Services, and BizTalk Server using the procedures in this section. These tools use unmanaged ODP.NET to connect. Other Microsoft tools, including SQL Server Data Tools, SQL Server Integration Services, and SQL Server Reporting Services, use managed ODP.NET to connect to Oracle Autonomous Database using largely similar procedures.
 
 To connect Power BI to an Oracle Autonomous Database, you need the following accounts and apps:
@@ -175,7 +175,7 @@ Open the tnsnames.ora file in the wallets folder. The file contains a list of AD
    ![Image of the credentials dialog box, with Database selected, and the default database user name and password entered.](media/oracle-database/adb-credentials.png)
 
    > [!NOTE]
-   > You can use Azure Active Directory authentication to sign-on to Oracle Autonomous Database via the **Microsoft account** option.
+   > You can use Microsoft Entra ID authentication to sign-on to Oracle Autonomous Database via the **Microsoft account** option.
 
 At this point, the **Navigator** appears and displays the connection data.
 
@@ -233,7 +233,7 @@ Once you've selected the advanced options you require, select **OK** in Power Qu
 
 ## Known issues and limitations
 
-Power BI sessions can still be active on your Oracle database for approximately 30 minutes after a dataset refresh to that Oracle database. Only after approximately 30 minutes do those sessions become inactive/removed on the Oracle database. This behavior is by design.
+Power BI sessions can still be active on your Oracle database for approximately 30 minutes after a semantic model refresh to that Oracle database. Only after approximately 30 minutes do those sessions become inactive/removed on the Oracle database. This behavior is by design.
 
 ## Troubleshooting
 

@@ -1,10 +1,10 @@
 ---
 title: Power Query Excel connector
 description: Provides basic information and prerequisites for the connector, along with troubleshooting tips, how to fix missing or incomplete Excel data, and improve performance.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/13/2023
-ms.author: bezhan
+ms.date: 1/24/2024
+ms.author: dougklo
 ---
 
 # Excel
@@ -14,11 +14,11 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication Types Supported | Anonymous (online)<br/>Basic (online)<br/>Organizational account (online) |
 | Function Reference Documentation | [Excel.Workbook](/powerquery-m/excel-workbook)<br/>[Excel.CurrentWorkbook](/powerquery-m/excel-currentworkbook) |
 
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
@@ -82,7 +82,7 @@ If you select one of the suggested tables, each individual table that Power Quer
 
 [![Screenshot of the navigator with table 3 under Suggested tables selected, and the contents of table 3 displayed.](./media/excel/table-three-only.png)](./media/excel/table-three-only.png#lightbox)
 
->[!Note]
+> [!NOTE]
 >If the sheet changes enough, the table might not refresh properly. You might be able to fix the refresh by importing the data again and selecting a new suggested table.
 
 ## Troubleshooting
@@ -183,3 +183,9 @@ You might see the following error when importing certain Excel workbooks.
 Usually this error indicates there is a problem with the format of the file.
 
 However, sometimes this error can happen when a file appears to be an Open XML file (such as .xlsx), but the ACE driver is actually needed in order to process the file. Go to the [Legacy ACE connector](excel.md#legacy-ace-connector) section for more information about how to process files that require the ACE driver.
+
+## Known issues and limitations
+
+* Power Query Online is unable to access encrypted Excel files. Since Excel files labeled with sensitivity types other than "Public" or "Non-Business" are encrypted, they aren't accessible through Power Query Online.
+* Power Query Online doesn't support password-protected Excel files. 
+

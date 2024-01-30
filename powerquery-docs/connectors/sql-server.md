@@ -1,10 +1,10 @@
 ---
 title: Power Query SQL Server connector
 description: Includes basic information about products that use the connector, supported authentication types, prerequisites, and connection instructions.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/14/2023
-ms.author: bezhan
+ms.date: 1/24/2024
+ms.author: dougklo
 ---
 
 # SQL Server
@@ -14,11 +14,11 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
-| Authentication Types Supported | Database (Username/Password)<br/>Windows<br/>Azure Active Directory (if the specified server supports it) |
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Authentication Types Supported | Database (Username/Password)<br/>Windows<br/>Organizational account (if the specified server supports it) |
 | M Function Reference | [Sql.Database](/powerquery-m/sql-database)<br/>[Sql.Databases](/powerquery-m/sql-databases) |
 
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
@@ -28,7 +28,7 @@ By default, Power BI installs an OLE DB driver for SQL Server. However, for opti
 ## Capabilities Supported
 
 * Import
-* DirectQuery (Power BI Datasets)
+* DirectQuery (Power BI semantic models)
 * Advanced options
   * Command timeout in minutes
   * Native SQL statement
@@ -54,7 +54,7 @@ To make the connection, take the following steps:
 
    ![SQL Server database authentication.](./media/sql-server-database/signin-desktop.png)
 
-   >[!Note]
+   > [!NOTE]
    > If the connection is not encrypted, you'll be prompted with the following dialog.
 
    ![SQL Server database encryption support.](./media/sql-server-database/encryption-warning.png)
@@ -113,11 +113,11 @@ When using the SQL Server database connector, if encryption is disabled and the 
 
 Power Query doesn't support 'Always Encrypted' columns.
 
-### Azure Active Directory authentication
+### Microsoft Entra ID authentication
 
-Azure Active Directory authentication is only supported in the SQL Server connector if the specified server also supports Azure Active Directory authentication. Otherwise, you might encounter an error that says that "The OAuth authentication method is not supported in this data source".
+Microsoft Entra ID (Organizational account) authentication is only supported in the SQL Server connector if the specified server also supports Microsoft Entra ID authentication. Otherwise, you might encounter an error that says that "The OAuth authentication method is not supported in this data source".
 
-Note that in Power BI service, the Azure Active Directory authentication method shows up as "OAuth2".
+Note that in Power BI service, the Microsoft Entra ID authentication method shows up as "OAuth2".
 
 ## Next steps
 

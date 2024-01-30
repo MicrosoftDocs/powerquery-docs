@@ -3,7 +3,7 @@ title: Power Query Azure Analysis Services database connector
 description: Includes basic information about products that use the Azure Analysis Services database connector, supported authentication types, prerequisites, and connection instructions.
 author: dougklopfenstein
 ms.topic: conceptual
-ms.date: 7/13/2023
+ms.date: 1/18/2024
 ms.author: dougklo
 LocalizationGroup: reference
 ---
@@ -15,11 +15,11 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
 | Authentication Types Supported | Basic<br/>Microsoft account<br/>Organizational account<br/>Windows |
 | M Function Reference | [AnalysisServices.Database](/powerquery-m/analysisservices-database)<br/>[AnalysisServices.Databases](/powerquery-m/analysisservices-databases) |
 
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
@@ -31,7 +31,7 @@ LocalizationGroup: reference
 ## Capabilities Supported
 
 * Import
-* Connect live (Power BI Desktop)
+* Connect live (Power BI semantic models)
 * Advanced options
   * MDX or DAX query
 
@@ -45,7 +45,7 @@ To make the connection, take the following steps:
 
    ![SQL Server database connection builder in Power Query Desktop.](./media/azure-analysis-services/select-database-desktop.png)
 
-   >[!NOTE]
+   > [!NOTE]
    > Only Power BI Desktop will display the **Import** and **Connect live** options. If you're connecting using Power BI Desktop, selecting **Connect live** uses a live connection to load the connected data directly to Power BI Desktop. In this case, you can't use Power Query to transform your data before loading the data to Power BI Desktop. For the purposes of this article, the **Import** option is selected. For more information about using a live connection in Power BI Desktop, go to [Connect to Analysis Services tabular data in Power BI Desktop](/power-bi/connect-data/desktop-analysis-services-tabular-data).
 
 3. Select **OK**.

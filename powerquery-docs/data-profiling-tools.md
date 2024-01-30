@@ -2,7 +2,7 @@
 title: Using the data profiling tools
 description: Overview of the Data Quality, Column Distribution, and Column Profile features found inside the Power Query Editor
 author: ptyx507
-ms.date: 8/9/2023
+ms.date: 1/24/2024
 ms.author: miescobar
 ms.custom: edited
 ---
@@ -30,7 +30,7 @@ After you enable the options, you'll see something like the following image in P
 ![Data profiling tools enabled.](media/data-profiling-tools/data-preview-tools-enabled-v2.png "Data profiling tools enabled")
 
 > [!NOTE]
->By default, Power Query performs this data profiling over the first 1,000 rows of your data. To have it operate over the entire dataset, select the **Column profiling based on top 1000 rows** message in the lower-left corner of your editor window to change column profiling to **Column profiling based on entire dataset**.
+>By default, Power Query performs this data profiling over the first 1,000 rows of your data. To have it operate over the entire data set, select the **Column profiling based on top 1000 rows** message in the lower-left corner of your editor window to change column profiling to **Column profiling based on entire data set**.
 
 ## Column quality
 

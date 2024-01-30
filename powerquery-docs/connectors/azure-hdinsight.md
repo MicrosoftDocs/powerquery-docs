@@ -1,10 +1,10 @@
 ---
 title: Power Query Azure HDInsight (HDFS) connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Azure HDInsight, along with native query folding instructions and troubleshooting tips.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 12/14/2022
-ms.author: bezhan
+ms.date: 1/24/2024
+ms.author: dougklo
 ---
 
 # Azure HDInsight (HDFS)
@@ -14,7 +14,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Customer Insights <br/>Analysis Services |
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Customer Insights <br/>Analysis Services |
 | Authentication Types Supported | Anonymous<br/>Account Key |
 | Function Reference Documentation | [Hdfs.Contents](/powerquery-m/hdfs-contents)<br/>[Hdfs.Files](/powerquery-m/hdfs-files) |
 

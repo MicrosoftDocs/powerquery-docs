@@ -27,7 +27,7 @@ The M engine provides two ODBC-related data source functions: [Odbc.DataSource](
 
 The [Odbc.DataSource](/powerquery-m/odbc-datasource) function provides a default navigation table with all databases, tables, and views from your system. This function also supports query folding, and allows for a range of customization options. Most ODBC-based extensions use this function as their primary extensibility function. The function accepts two arguments&mdash;a connection string, and an options record to provide behavior overrides.
 
-The [Odbc.Query](/powerquery-m/odbc-query) function allows you to execute SQL statements through an ODBC driver. It acts as a passthrough for query execution. Unlike the [Odbc.DataSource](/powerquery-m/odbc-datasource) function, it doesn't provide query folding functionality, and requires that SQL queries be provided by the connector (or end user). When building a custom connector, this function is typically used internally to run queries to retrieve metadata that might not be exposed through regular ODBC channels. The function accepts two arguments&mdash;a connection string, and a SQL query.
+The [Odbc.Query](/powerquery-m/odbc-query) function allows you to execute SQL statements through an ODBC driver. It acts as a passthrough for query execution. Unlike the [Odbc.DataSource](/powerquery-m/odbc-datasource) function, it doesn't provide query folding functionality, and requires that SQL queries be provided by the connector (or end user). When building a custom connector, this function is typically used internally to run queries to retrieve metadata that might not be exposed through regular ODBC channels. The function accepts two arguments&mdash;a connection string, and an SQL query.
 
 ## Data source function guidelines
 
@@ -45,7 +45,7 @@ Custom connectors can accept any number of function arguments. But to remain con
 
 By default, all required parameters for your data source function are factored into the Data Source Path value used to identify user credentials.
 
-While the UI for the built-in [Odbc.DataSource](/powerquery-m/odbc-datasource) function provides a dropdown that allows the user to select a DSN, this functionality isn't available through extensibility. If your data source configuration is complex enough to require a fully customizable configuration dialog, we recommended that you require your end users to pre-configure a system DSN, and have your function take in the DSN name as a text field.
+While the UI for the built-in [Odbc.DataSource](/powerquery-m/odbc-datasource) function provides a dropdown that allows the user to select a DSN, this functionality isn't available through extensibility. If your data source configuration is complex enough to require a fully customizable configuration dialog, we recommend that you require your end users to pre-configure a system DSN, and have your function take in the DSN name as a text field.
 
 ## Next steps
 

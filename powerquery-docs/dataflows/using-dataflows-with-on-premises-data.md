@@ -1,7 +1,7 @@
 ---
 title: "Using an on-premises data gateway in Power Platform dataflows | MicrosoftDocs"
 description: "Learn how to use an on-premises data gateway in Power Platform dataflows"
-ms.date: 1/5/2023
+ms.date: 1/17/2024
 ms.reviewer: dougklo
 
 ms.topic: article
@@ -166,7 +166,7 @@ There are a few known limitations when using enterprise gateways and dataflows.
   - [SQL Server](/connectors/sql/)
   - [Teradata](/connectors/teradata/)
   - [Desktop flows](/connectors/uiflow/)
-  - [HTTP with Azure AD](/connectors/webcontents/)
+  - [HTTP with Microsoft Entra ID](/connectors/webcontents/)
 
 ## Troubleshooting
 

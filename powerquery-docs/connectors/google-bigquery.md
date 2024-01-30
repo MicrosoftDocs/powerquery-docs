@@ -1,10 +1,10 @@
 ---
 title: Google BigQuery connector
 description: Provides basic information and prerequisites for the Google BigQuery connector for Power Query.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/13/2023
-ms.author: bezhan
+ms.date: 1/24/2024
+ms.author: dougklo
 ---
 
 # Google BigQuery
@@ -14,7 +14,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Customer Insights (Dataflows) |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Customer Insights (Dataflows) |
 | Authentication Types Supported | Organizational account<br/>Service account |
 
 > [!NOTE]
@@ -30,7 +30,7 @@ You'll need a Google account or a Google service account to sign in to Google Bi
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI Datasets)
+* DirectQuery (Power BI semantic models)
 
 ## Connect to Google BigQuery data from Power Query Desktop
 
@@ -135,7 +135,7 @@ In addition, if you also create a report in Power BI service using a gateway, yo
 
 ### Nested fields
 
-To optimize performance considerations, Google BigQuery does well with large datasets when denormalized, flattened, and nested.
+To optimize performance considerations, Google BigQuery does well with large data sets when denormalized, flattened, and nested.
 
 The Google BigQuery connector supports nested fields, which are loaded as text columns in JSON format.
 

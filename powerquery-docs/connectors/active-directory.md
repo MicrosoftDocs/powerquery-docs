@@ -1,10 +1,10 @@
 ---
 title: Power Query Active Directory connector
 description: Provides basic information, prerequisites, and connection instructions, along with troubleshooting information for the Active Directory connector.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/13/2023
-ms.author: bezhan
+ms.date: 1/17/2024
+ms.author: dougklo
 ---
 
 # Active Directory
@@ -14,11 +14,11 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Excel<br/>Analysis Services |
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Excel<br/>Analysis Services |
 | Authentication Types Supported | Windows |
 | Function Reference Documentation | [ActiveDirectory.Domains](/powerquery-m/activedirectory-domains) |
 
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Capabilities Supported
@@ -41,13 +41,13 @@ ms.author: bezhan
 
 1. You can choose to use your current windows credentials or enter alternate credentials. Then select **Connect**.
 
-    >[!TIP]
+    > [!TIP]
     >You may need to add the domain suffix to your username. For example: domain\username.
 
     :::image type="content" source="media/active-directory/add-credentials.png" alt-text="Screenshot of Windows credentials page with alternate credentials selected and a username and password added.":::
 
 1. In **Navigator**, review and/or select data from your database. Then select **OK**.
-    >[!NOTE]
+    > [!NOTE]
     > The navigator doesn't load data for the configuration partition. More information: [Limitations and issues](#limitations-and-issues)
 
 ## Connect to Active Directory from Power Query Online
@@ -63,7 +63,7 @@ ms.author: bezhan
     :::image type="content" source="media/active-directory/connection-settings.png" alt-text="Screenshot of the Connect to data source page, showing a domain added, using a new connection, a data gateway selected and a username and password provided.":::
 
 1. In **Navigator**, review and/or select data from your database. Then select **OK**.
-    >[!NOTE]
+    > [!NOTE]
     > The navigator doesn't load data for the configuration partition. More information: [Limitations and issues](#limitations-and-issues)
 
 ## Limitations and issues

@@ -1,16 +1,16 @@
 ---
 title: Databricks Power Query Connector
 description: Provides basic information and prerequisites for using the Power Query Databricks connector.
-author: bezhan-msft
+author: DougKlopfenstein
 
 ms.topic: conceptual
-ms.date: 7/13/2023
-ms.author: bezhan
+ms.date: 1/24/2024
+ms.author: dougklo
 ---
 
 # Databricks
 
->[!Note]
+> [!NOTE]
 >The following connector article is provided by Databricks, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Databricks website and use the support channels there.
 
 ## Summary
@@ -18,10 +18,10 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
-| Authentication Types Supported | Azure Active Directory<br/>Organizational Account<br/>Personal Access Token |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Authentication Types Supported | Azure Active Directory<br/>Personal Access Token<br/> OAuth (OIDC) |
 
->[!Note]
+> [!NOTE]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
@@ -31,7 +31,7 @@ This connector is only for use with a Databricks SQL Warehouse running on AWS an
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI Datasets)
+* DirectQuery (Power BI semantic models)
 
 ## Connect to Databricks from Power Query Desktop
 
