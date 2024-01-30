@@ -35,9 +35,9 @@ You need to create a solution before you can add a dataflow to it. More informat
 
 2. Select **Solutions** from the navigation bar.
 
-   :::image type="content" source="media/dataflows-solution-awareness/select-solutions.png" alt-text="Screenshot of the Power Apps home page with the Solutions selection emphasized":::
+   :::image type="content" source="media/dataflows-solution-awareness/select-solutions.png" alt-text="Screenshot of the Power Apps home page with the Solutions selection emphasized.":::
 
-3. Select the solution you’d like to add a new dataflow to, and from the context menu select**Edit**.
+3. Select the solution you’d like to add a new dataflow to, and from the context menu select **Edit**.
 
    :::image type="content" source="media/dataflows-solution-awareness/edit-solution.png" alt-text="Screenshot of the solution page with a selected solution with the Edit option emphasized." lightbox="media/dataflows-solution-awareness/edit-solution.png":::
 
