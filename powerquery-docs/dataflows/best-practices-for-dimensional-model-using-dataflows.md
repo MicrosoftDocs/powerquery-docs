@@ -15,15 +15,15 @@ Designing a dimensional model is one of the most common tasks you can do with a 
 
 One of the key points in any data integration system is to reduce the number of reads from the source operational system. In the traditional data integration architecture, this reduction is done by creating a new database called a *staging database*. The purpose of the staging database is to load data as-is from the data source into the staging database on a regular schedule.
 
-The rest of the data integration will then use the staging database as the source for further transformation and converting it to the dimensional model structure.
+The rest of the data integration will then use the staging database as the source for further transformation and convert it to the dimensional model structure.
 
-We recommended that you follow the same approach using dataflows. Create a set of dataflows that are responsible for just loading data as-is from the source system (and only for the tables you need). The result is then stored in the storage structure of the dataflow (either Azure Data Lake Storage or Dataverse). This change ensures that the read operation from the source system is minimal.
+We recommend that you follow the same approach using dataflows. Create a set of dataflows that are responsible for just loading data as-is from the source system (and only for the tables you need). The result is then stored in the storage structure of the dataflow (either Azure Data Lake Storage or Dataverse). This change ensures that the read operation from the source system is minimal.
 
 Next, you can create other dataflows that source their data from staging dataflows. The benefits of this approach include:
 
 - Reducing the number of read operations from the source system, and reducing the load on the source system as a result.
 - Reducing the load on data gateways if an on-premises data source is used.
-- Having an intermediate copy of the data for reconciliation purpose, in case the source system data changes.
+- Having an intermediate copy of the data for reconciliation purposes, in case the source system data changes.
 - Making the transformation dataflows source-independent.
 
 :::image type="complex" source="media/best-practices-for-dimensional-model/staging-dataflows.png" alt-text="Staging dataflows.":::
@@ -32,7 +32,7 @@ Next, you can create other dataflows that source their data from staging dataflo
 
 ## Transformation dataflows
 
-When you've separated your transformation dataflows from the staging dataflows, the transformation will be independent from the source. This separation helps if you're migrating the source system to a new system. All you need to do in that case is to change the staging dataflows. The transformation dataflows are likely to work without any problem, because they're sourced only from the staging dataflows.
+When you've separated your transformation dataflows from the staging dataflows, the transformation will be independent of the source. This separation helps if you're migrating the source system to a new system. All you need to do in that case is to change the staging dataflows. The transformation dataflows are likely to work without any problem because they're sourced only from the staging dataflows.
 
 This separation also helps in case the source system connection is slow. The transformation dataflow won't need to wait for a long time to get records coming through a slow connection from the source system. The staging dataflow has already done that part, and the data will be ready for the transformation layer.
 
@@ -48,7 +48,7 @@ The following image shows a multi-layered architecture for dataflows in which th
 
 ## Use a computed table as much as possible
 
-When you use the result of a dataflow in another dataflow, you're using the concept of the computed table, which means getting data from an "already-processed-and-stored" table. The same thing can happen inside a dataflow. When you reference an table from another table, you can use the computed table. This is helpful when you have a set of transformations that need to be done in multiple tables, which are called *common transformations*.
+When you use the result of a dataflow in another dataflow, you're using the concept of the computed table, which means getting data from an "already-processed-and-stored" table. The same thing can happen inside a dataflow. When you reference a table from another table, you can use the computed table. This is helpful when you have a set of transformations that need to be done in multiple tables, which are called *common transformations*.
 
 :::image type="content" source="media/best-practices-for-dimensional-model/computed-entity-in-between.png" alt-text="Image showing the computed table sourced from a data source used to process common transformations.":::
 
@@ -58,7 +58,7 @@ In the previous image, the computed table gets the data directly from the source
 
 ## Build a star schema
 
-The best dimensional model is a star schema model that has dimensions and fact tables designed in a way to minimize the amount of time to query the data from the model, and also makes it easy to understand for the data visualizer.
+The best dimensional model is a star schema model that has dimensions and fact tables designed in a way to minimize the amount of time to query the data from the model and also makes it easy to understand for the data visualizer.
 
 It isn't ideal to bring data in the same layout of the operational system into a BI system. The data tables should be remodeled. Some of the tables should take the form of a dimension table, which keeps the descriptive information. Some of the tables should take the form of a fact table, to keep the aggregatable data. The best layout for fact tables and dimension tables to form is a star schema. More information: [Understand star schema and the importance for Power BI](/power-bi/guidance/star-schema)
 

@@ -64,7 +64,7 @@ With many actions performed in Power Query that might result in a *Column Name C
    ![Using the promote rows to headers to showcase the column name disambiguation.](media/rename-column/promote-rows-duplicate-name.png)
 
    > [!NOTE]
-   > To learn more about how to promote headers from your first row, go to[Promote or demote column headers](table-promote-demote-headers.md).
+   > To learn more about how to promote headers from your first row, go to [Promote or demote column headers](table-promote-demote-headers.md).
 
 * **Expanding a column with a field name that also exists in the current table**: This can happen, for example, when you perform a merge operation and the column with the merged table has field names that also exist in the table. When you try to expand the fields from that column, Power Query automatically tries to disambiguate to prevent *Column Name Conflict* errors.
 
