@@ -1,3 +1,10 @@
+---
+title: Power Query OneStream connector
+description: Provides support, prerequisites, and instructions on how to connect to your OneStream data.
+author: Michele Roscelli
+ms.author: mroscelli
+---
+
 # OneStream
 
 > [!NOTE]
@@ -33,7 +40,7 @@ The OneStream Connector enables secure access to your OneStream applications. Wi
 ![Get Data](./media/onestream/pbi-get-data.png)
 
 2. Type "OneStream" in the search box to find the custom OneStream connector.
-![OneStream Connector](./media/onestream/os-connecetor-search.png)
+![OneStream Connector](./media/onestream/os-connector-search.png)
 
 3. Select **OneStream**
 
@@ -139,4 +146,4 @@ This function retrieves data from a OneStream Cube.
 * Specify the OneStream Dimension Type you want to retrieve.
 * Specify the Scenario Type. Use Default or All to use the selected cube default dimensions and retrieve the default properties.
 * Include Descriptions can be set to True or False.
-![Get Adapter](./media/onestream/os-connector-get-dimension.png)
+![Get Dimension](./media/onestream/os-connector-get-dimension.png)
