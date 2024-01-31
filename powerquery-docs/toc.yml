@@ -643,6 +643,26 @@ items:
           href: samples-directory.md#odbc
         - name: "TripPin samples"
           href: samples-directory.md#trippin
+      - name: Power Query SDK Test Framework
+        items:
+        - name: "Overview"
+          href: testframework/readme.md
+        - name: "Introduction"
+          href: testframework/1-intro/readme.md
+        - name: "Setup"
+          href: testframework/2-setup/readme.md
+        - name: "Preparing Data"
+          href: testframework/3-data/readme.md
+        - name: "Test Suite"
+          href: testframework/4-tests/readme.md
+        - name: "Test Format Spec"
+          href: testframework/5-testformat/readme.md
+        - name: "Connector Testing"
+          href: testframework/6-connector/readme.md
+        - name: "Adding Tests"
+          href: testframework/7-adding/readme.md
+        - name: "Pipeline Setup Guide"
+          href: testframework/8-pipeline/readme.md
       - name: Concepts
         items:
         - name: "Additional connector functionality"
