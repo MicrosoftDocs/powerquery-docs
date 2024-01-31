@@ -1,6 +1,6 @@
 ---
 title: Preparing the data
-description: Overview of Power Query SDK Testing Framework
+description: Uploading the test data to your data source
 author: ryan-syed
 
 ms.topic: reference
@@ -30,25 +30,24 @@ The test data used for the framework is a modified version of the [NewYork City 
 
 The February 2023 green trip data was converted into a CSV file and 10,000 rows were sampled from it. CSV data was chosen due to its large applicability to nearly all other data sources, making it easier to import.
 
-The definition for each field might be slightly different from the information found in [NYC Taxi and Limousine green dataset - Azure Open Datasets](/azure/open-datasets/dataset-taxi-green?tabs=azureml-opendatasets) and [data_dictionary_trip_records_green.pdf (nyc.gov)](https://www.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_green.pdf). Review the following information carefully before importing the data.
+Review the following information carefully before importing the data:
 
-[TODO: add links to both the csv files]
-[TODO: Add a link to Schema sql https://dev.azure.com/powerbi/Power%20Query/_git/DataConnectors?path=/PowerQuerySDKTestFramework/data/schema/PQSDKTestFrameworkDataSchema.sql&_a=contents&version=GBmaster]
+The definition for each field might be slightly different from the information found in [NYC Taxi and Limousine green dataset - Azure Open Datasets](/azure/open-datasets/dataset-taxi-green?tabs=azureml-opendatasets) and [data_dictionary_trip_records_green.pdf (nyc.gov)](https://www.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_green.pdf).
 
-The dataset for our testing is split into two csv files: NycTaxiGreen and TaxiZoneLookup.
+The dataset for our testing is split into two csv files: [NycTaxiGreen](https://github.com/microsoft/DataConnectors/tree/master/testframework/data/nyc_taxi_tripdata.csv) and [TaxiZoneLookup](https://github.com/microsoft/DataConnectors/tree/master/testframework/data/taxi+_zone_lookup.csv).
 
 ### Getting the test data
 
-[TODO: Add link to the git repo and point to the position for the test data]
-[TODO: Add link for schema definition for NycTaxiGreen and TaxiZoneLookup tables]
+The test data is placed in the [Data Connectors git repo](https://github.com/microsoft/DataConnectors/tree/master/testframework/data/). Test data is provided in the form of csv along with the [schema definition](https://github.com/microsoft/DataConnectors/tree/master/testframework/data/PQSDKTestFrameworkDataSchema.sql) for [NycTaxiGreen](https://github.com/microsoft/DataConnectors/tree/master/testframework/data/nyc_taxi_tripdata.csv) and [TaxiZoneLookup](https://github.com/microsoft/DataConnectors/tree/master/testframework/data/taxi+_zone_lookup.csv) tables. This data should be loaded to your data source as separate tables and you need to ensure that the schema corresponds to the datatypes defined in your data source.
 
-The test data is placed in the Data Connectors git repo. Test data is provided in the form of csv along with the schema definition for NycTaxiGreen and TaxiZoneLookup tables. This data should be loaded to your data source as separate tables and you need to ensure that the schema corresponds to the datatypes defined in your data source.
+You can also review additional [details regarding the test data](https://github.com/microsoft/DataConnectors/tree/master/testframework/data/PQSDKTestData.md).
 
 Resources:
 
-* NycTaxiGreen
-* TaxiZoneLookup
-* Schema definition
+* [NycTaxiGreen](https://github.com/microsoft/DataConnectors/tree/master/testframework/data/nyc_taxi_tripdata.csv)
+* [TaxiZoneLookup](https://github.com/microsoft/DataConnectors/tree/master/testframework/data/taxi+_zone_lookup.csv)
+* [Schema definition](https://github.com/microsoft/DataConnectors/tree/master/testframework/data/PQSDKTestFrameworkDataSchema.sql)
+* [Test Data documentation](https://github.com/microsoft/DataConnectors/tree/master/testframework/data/PQSDKTestData.md)
 
 ### NycTaxiGreen Table Description
 

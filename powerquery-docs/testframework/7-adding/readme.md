@@ -1,6 +1,6 @@
 ---
-title: Preparing the data
-description: Overview of PowerQuery SDK Testing Framework
+title: Adding your tests
+description: Adding tests to verify your extension connector and understanding various options while working with the test framework
 author: ryan-syed
 
 ms.topic: reference
@@ -22,6 +22,8 @@ In this lesson, you will:
 > * Running tests with various configurations and options
 
 ## Creating custom tests
+
+[TODO: pqtest.md link]
 
 If you wish to add any tests specific to the connector then you can add them to the *DatasourceSpecific* folder. You could also choose to extend the tests in Sanity/Standard Tests folder. Create a PQ file and place it in any directory of the tests directory. Run the test first time to generate the PQOut output file. Subsequent runs will validate the output generated with the PQOut output file. Please review the documentation in [pqtest.md](https://dev.azure.com/powerbi/Power%20Query/_git/DataConnectors?path=/PowerQuerySDKTestFramework/docs/PowerQuerySdkTools/Tools/PQTest/pqtest.md&_a=preview&version=GBmaster) in the DataConnectors repo for more information on using the compare command.
 

@@ -1,6 +1,6 @@
 ---
-title: Preparing the data
-description: Overview of PowerQuery SDK Testing Framework
+title: Testing your extension connector
+description: Test your extension connector using the provided Test Suite
 author: ryan-syed
 
 ms.topic: reference

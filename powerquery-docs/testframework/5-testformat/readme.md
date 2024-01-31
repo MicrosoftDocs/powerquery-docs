@@ -1,6 +1,6 @@
 ---
-title: Preparing the data
-description: Overview of PowerQuery SDK Testing Framework
+title: Test Format Specification
+description: Understanding various file formats and their functionality within Power Query SDK Test Framework
 author: ryan-syed
 
 ms.topic: reference

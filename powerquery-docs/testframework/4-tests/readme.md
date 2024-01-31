@@ -1,6 +1,6 @@
 ---
 title: Getting the test suite
-description: 
+description: Overview of the Test Suite
 author: ryan-syed
 
 ms.topic: reference
@@ -33,30 +33,27 @@ To ensure that you can run these prebuilt tests, the below prerequisites must be
 [TODO: Get the details of the repo]
 
 * Clone the [DataConnectors](https://github.com/microsoft/DataConnectors) repo.
-* Load the provided test data in the data source. This step was discussed in the previous section. If you not completed, refer to [Power Query SDK Test Framework part 3 - Test Data](../3-data/readme.md) section and come back to this page once done.
+* Load the provided [test data](https://github.com/microsoft/DataConnectors/tree/master/testframework/data/) in the data source. This step was discussed in the previous section. If you not completed, refer to [Power Query SDK Test Framework part 3 - Test Data](../3-data/readme.md) section and come back to this page once done.
 
-### Clone the DataConnectors repo
+### DataConnectors repo and the test suite
 
 [TODO: Find the correct path for the repo and the docs]
 
-Clone the [DataConnectors repo](https://github.com/microsoft/DataConnectors). Refer the [DataConnectors README]() for information on Custom Connectors built with the Power Query SDK and how to build the projects in the repo.
+The [tests](https://github.com/microsoft/DataConnectors/tree/master/testframework/tests) are part of the [DataConnectors repo](https://github.com/microsoft/DataConnectors). Refer the [DataConnectors README](https://github.com/microsoft/DataConnectors/blob/master/README.md) for information on Custom Connectors built with the Power Query SDK and how to build the projects in the repo.
 
 ### PQ SDK Test Framework - Test Suites
 
 [TODO: Is prebuilt the right terminology here?]
 
-The PQ SDK Test Framework consists of prebuilt test suite to easily validate any extension connector.
+The PQ SDK Test Framework consists of prebuilt [test suite](https://github.com/microsoft/DataConnectors/tree/master/testframework/tests/TestSuites) to easily validate any extension connector.
 
 The test suite consists of the following tests:
 
-**Sanity**: The sanity test set validates that the tests are able to connect to the data source and the test tables with correct schema exist in the datasource. There are also tests that validate the rowcount and data of NYCTaxiGreen and TaxiZoneLookup tables in the datasource.
+**Sanity**: The [sanity test set](https://github.com/microsoft/DataConnectors/tree/master/testframework/tests/TestSuites/Sanity) validates that the tests are able to connect to the data source and the test tables with correct schema exist in the datasource. There are also tests that validate the rowcount and data of NYCTaxiGreen and TaxiZoneLookup tables in the datasource.
 
-**Standard**: The standard set contains various tests needed to validate the connector. There are tests to test the datatypes, and functions/operators for Math, Date, Time, Text etc. There are also tests to validate joins between the two tables as well.
+**Standard**: The [standard set](https://github.com/microsoft/DataConnectors/tree/master/testframework/tests/TestSuites/Standard) contains various tests needed to validate the connector. There are tests to test the datatypes, and functions/operators for Math, Date, Time, Text etc. There are also tests to validate joins between the two tables as well.
 
-**DatasourceSpecific**: These tests are specific to a connector. There are tests provided for sample datasources. However, any tests specific to connector can be added by creating a folder under it.
-
-[TODO: we need to discuss updates for the test suite with Matt]
-
+[TODO: Add details regarding the test suite update and changelog]
 ## Updates for the test suite
 
 ## Conclusion

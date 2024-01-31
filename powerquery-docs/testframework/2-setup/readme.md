@@ -1,6 +1,6 @@
 ---
 title: Power Query SDK Testing Framework Setup guide
-description: 
+description: Setting up development environment for Power Query SDK Test Framework
 author: ryan-syed
 
 ms.topic: reference
