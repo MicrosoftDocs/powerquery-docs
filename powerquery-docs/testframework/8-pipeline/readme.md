@@ -19,9 +19,9 @@ In this lesson, you will:
 > [!div class="checklist"]
 >
 > * Overview of setting up the pipeline
-> * Setup an agent
+> * Setup a pipeline agent
 > * Learn to configure the connector including driver and credentials setup
-> * Run the tests
+> * Run the tests to verify your extension connector
 > * Generate the report of the test run
 
 ## Pipeline Setup Guide for Power Query connectors
@@ -150,4 +150,6 @@ steps:
 
 ## Conclusion
 
-[TODO: Add conclusion]
+This lesson showed you how to setup and configure the pipeline to leverage Power Query SDK Test Framework, the provide test suite and your own tests to verify your extension connector.
+
+Overall, you should now be able to reliably make changes to your extension and verify it during the development and release.
