@@ -2,10 +2,10 @@
 title: Azure Blob Storage
 description: Includes basic information, prerequisites, and information on how to connect to Azure Blob Storage.
 
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 8/15/2022
-ms.author: bezhan
+ms.date: 1/18/2024
+ms.author: dougklo
 
 ---
 
@@ -16,11 +16,11 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Excel<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
-| Authentication Types Supported | Anonymous<br/>Account key<br/>Organizational account<br/>Shared access signature (SAS) |
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Authentication Types Supported | Anonymous<br/>Account key<br/>Organizational account<br/>Shared access signature (SAS)<br/>Service principal |
 | Function Reference Documentation | [AzureStorage.BlobContents](/powerquery-m/azurestorage-blobcontents)<br/>[AzureStorage.Blobs](/powerquery-m/azurestorage-blobs) |
 
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
@@ -29,8 +29,8 @@ ms.author: bezhan
 
 * An Azure Blob Storage account. Follow the instructions at [Create a storage account](/azure/storage/common/storage-account-create?tabs=azure-portal). This article assumes that you've already created an Azure Blob Storage account, and uploaded data files to it.
 
->[!NOTE]
-> If you are connecting to an Azure Blob Storage account from Power BI, the Azure Blob storage account must be in the same region as your Power BI account.
+> [!NOTE]
+> If you're connecting to an Azure Blob Storage account from Power BI, the Azure Blob storage account must be in the same region as your Power BI account.
 
 ## Capabilities supported
 
@@ -54,7 +54,7 @@ To connect to Azure Blob Storage:
 
    For more information about using and managing authentication, go to [Authentication with a data source](../connectorauthentication.md).
 
-   >[!NOTE]
+   > [!NOTE]
    > If you are signing in from Excel, you can also select the shared access signature (SAS) authentication method.
 
 4. Select **Connect**.

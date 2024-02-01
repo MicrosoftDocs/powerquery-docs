@@ -3,13 +3,13 @@ title: Connect to data sources for dataflows
 description: Learn how to connect to data sources for dataflows.
 author: bensack
 ms.topic: conceptual
-ms.date: 1/5/2023
+ms.date: 6/13/2023
 ms.author: bensack
 ---
 
 # Connect to data sources for dataflows
 
-With Microsoft Power BI and Power Platform dataflows, you can connect to many different data sources to create new dataflows, or add new entities to an existing dataflow.
+With Microsoft Power BI and Power Platform dataflows, you can connect to many different data sources to create new dataflows, or add new tables to an existing dataflow.
 
 This article describes how to create dataflows by using these data sources. For an overview of how to create and use dataflows, go to [Creating a dataflow](/power-bi/service-dataflows-create-use) for Power BI service and [Create and use dataflows in Power Apps](/powerapps/maker/data-platform/create-and-use-dataflows).
 
@@ -121,8 +121,8 @@ This article showed which data sources you can connect to for dataflows. The fol
 
 * [Self-service data prep in Power BI](create-use.md)
 * [Using incremental refresh with dataflows](incremental-refresh.md)
-* [Creating computed entities in dataflows](computed-entities.md)
-* [Link entities between dataflows](linked-entities.md)
+* [Creating computed tables in dataflows](computed-tables.md)
+* [Link tables between dataflows](linked-tables.md)
 
 For information about individual Power Query connectors, go to the [connector reference list of Power Query connectors](../connectors/index.md), and select the connector you want to learn more about.
 

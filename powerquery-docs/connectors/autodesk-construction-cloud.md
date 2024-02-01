@@ -1,23 +1,23 @@
 ---
 title: Autodesk Construction Cloud Power Query Connector
 description: Includes basic information, prerequisites, and information on how to connect to your Autodesk Construction Cloud data, along with a list of known issues and limitations.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 6/24/2022
-ms.author: bezhan
+ms.date: 1/18/2023
+ms.author: dougklo
 ---
 
-# Autodesk Construction Cloud (Beta)
+# Autodesk Construction Cloud
 
->[!Note]
+> [!NOTE]
 >The following connector article is provided by Autodesk, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Autodesk website and use the support channels there.
 
 ## Summary
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | Beta |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)  |
+| Release State | General Availability |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)  |
 | Authentication Types Supported | Autodesk account |
 | Function Reference Documentation |&mdash; |
 
@@ -34,7 +34,7 @@ To use the Autodesk Construction Cloud connector, you must have an Autodesk acco
 
 To connect to Autodesk Construction Cloud data:
 
-1. Select **Get Data** from the **Home** ribbon in Power BI Desktop. Select **Other** from the categories on the left, select **Autodesk Construction Cloud**, and then select **Connect**.
+1. Select **Get Data** from the **Home** ribbon in Power BI Desktop. Select **Online Services** from the categories on the left, select **Autodesk Construction Cloud**, and then select **Connect**.
 
 2. If this is the first time you're getting data through the Autodesk Construction Cloud connector, a preview connector notice will be displayed. Select **Don't warn me again with this connector** if you don't want this message to be displayed again, and then select **Continue**.
 
@@ -54,9 +54,13 @@ To connect to Autodesk Construction Cloud data:
 
    ![Signed in and ready to connect.](./media/autodesk-construction-cloud/acc-sign-in-success.png)
 
-7. In **Navigator**, expand the Account you want to pull data from, select the desired tables, and then either select **Load** to load the data or **Transform Data** to continue transforming the data in the Power Query editor.
+7. In **Navigator**, expand the Account you want to pull data from, which will display an **Account Extract** folder and a **Project Extracts** folder. **Account Extract** will contain the data extract of the most recent account level extract if you have proper access and have ran an account level data extract. **Project Extracts** will contain a listing of each project in the account you have access to, which you can then expand to see the relevant tables in that specific project's extracts if you have run a data extraction.
 
-   ![Navigate to data tables and load or transform data.](./media/autodesk-construction-cloud/acc-table-selection.png)
+   ![Navigate to the desired data extraction.](./media/autodesk-construction-cloud/acc-extract-selection.png)
+
+8. Once you navigate to the desired Account or Project extract, select the desired tables, and then either select **Load** to load the data or **Transform Data** to continue transforming the data in the Power Query editor.
+
+   ![Navigate to data tables and load or transform data.](./media/autodesk-construction-cloud/acc-table-selection-account.png)
   
 ## Connect using Autodesk provided Power BI Templates
 
@@ -71,7 +75,7 @@ To use the Power BI Templates:
 
    ![Provide ACC Account name and select server region.](./media/autodesk-construction-cloud/acc-template-prompt.png)
 
-   >[!Note]
+   > [!NOTE]
    >The **Account Name** is the name of the ACC account you want to connect to, not your user account name. You can find the Account name on the Account Admin portal just to the right of the Account Admin drop down or under **Settings**. The Account name also appears on the Insight (Account) page just to the right of the Insight dropdown in the upper left hand corner.
 
    ![Account name can be found on the Account Admin portal.](./media/autodesk-construction-cloud/acc-template-account-name.png)

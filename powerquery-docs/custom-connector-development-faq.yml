@@ -3,7 +3,6 @@ metadata:
   title: Custom connector development FAQ
   description: This article contains frequently asked questions about developing Power Query custom connectors that are collected in one spot.
   author: ptyx507x
-  ms.reviewer: bezhan
   ms.topic: conceptual
   ms.date: 2/18/2022
   ms.author: miescobar

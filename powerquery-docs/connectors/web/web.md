@@ -1,10 +1,10 @@
 ---
 title: Power Query Web connector
 description: Provides basic information and how to connect to your data, along with the supported file types and instructions on using the on-premises data gateway and authentication types.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 3/14/2023
-ms.author: bezhan
+ms.date: 1/25/2024
+ms.author: dougklo
 ---
 
 # Web
@@ -14,11 +14,11 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights |
-| Authentication Types Supported | [Web.Contents](/powerquery-m/web-contents)<br/>Anonymous<br/>Windows<br/>Basic<br/>Web API<br/>Organizational Account<br/><br/>[Web.BrowserContents](/powerquery-m/web-browsercontents)<br/>Anonymous<br/>Windows ([preview feature](web-troubleshoot.md#enabling-the-edge-webview2-version-of-webbrowsercontents))<br/>Basic ([preview feature](web-troubleshoot.md#enabling-the-edge-webview2-version-of-webbrowsercontents))<br/>Web API ([preview feature](web-troubleshoot.md#enabling-the-edge-webview2-version-of-webbrowsercontents))<br/><br/>[Web.Page](/powerquery-m/web-page)<br/>Anonymous<br/>Windows (current user's credentials only)<br/>Web API |
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
+| Authentication Types Supported | [Web.Contents](/powerquery-m/web-contents):<br/>Anonymous<br/>Windows<br/>Basic<br/>Web API<br/>Organizational Account<br/>Service Principal<br/><br/>[Web.BrowserContents](/powerquery-m/web-browsercontents):<br/>Anonymous<br/>Windows ([preview feature](web-troubleshoot.md#enabling-the-edge-webview2-version-of-webbrowsercontents))<br/>Basic ([preview feature](web-troubleshoot.md#enabling-the-edge-webview2-version-of-webbrowsercontents))<br/>Web API ([preview feature](web-troubleshoot.md#enabling-the-edge-webview2-version-of-webbrowsercontents))<br/><br/>[Web.Page](/powerquery-m/web-page):<br/>Anonymous<br/>Windows (current user's credentials only)<br/>Web API |
 | Function Reference Documentation | [Web.Contents](/powerquery-m/web-contents)<br/>[Web.BrowserContents](/powerquery-m/web-browsercontents)<br/>[Web.Page](/powerquery-m/web-page) |
 
->[!Note]
+> [!NOTE]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
@@ -63,14 +63,14 @@ To load data from a web site with Power Query Desktop:
 
    * **Organizational account**: Select this authentication method if the web page requires organizational account credentials.
 
-   >[!Note]
+   > [!NOTE]
    >When uploading the report to the Power BI service, only the **anonymous**, **Windows** and **basic** authentication methods are available.
 
    The level you select for the authentication method determines what part of a URL will have the authentication method applied to it. If you select the top-level web address, the authentication method you select here will be used for that URL address or any subaddress within that address. However, you might not want to set the top URL address to a specific authentication method because different subaddresses could require different authentication methods. For example, if you were accessing two separate folders of a single SharePoint site and wanted to use different Microsoft Accounts to access each one.
 
    Once you've set the authentication method for a specific web site address, you won't need to select the authentication method for that URL address or any subaddress again. For example, if you select the `https://en.wikipedia.org/` address in this dialog, any web page that begins with this address won't require that you select the authentication method again.  
 
-   >[!Note]
+   > [!NOTE]
    >If you need to change the authentication method later, go to [Changing the authentication method](web-troubleshoot.md#changing-the-authentication-method).
 
 4. From the **Navigator** dialog, you can select a table, then either transform the data in the Power Query editor by selecting **Transform Data**, or load the data by selecting **Load**.

@@ -21,7 +21,7 @@ The data wasn't loaded into the table.
 
 **Resolution:**
 
-In the desktop tools, such as Power Query in Excel and Power Query in Power BI Desktop, the loading of data into tables happens automatically (unless you disable it). This behavior is a bit different in Power Query in dataflows. In dataflow entities, the data won't be loaded unless you refresh the data.
+In the desktop tools, such as Power Query in Excel and Power Query in Power BI Desktop, the loading of data into tables happens automatically (unless you disable it). This behavior is a bit different in Power Query in dataflows. In dataflow tables, the data won't be loaded unless you refresh the data.
 
 You have to set up a scheduled refresh for a dataflow, or&mdash;if you want to just have a single refresh&mdash;use the manual refresh option.
 
@@ -29,7 +29,7 @@ You have to set up a scheduled refresh for a dataflow, or&mdash;if you want to j
 
 ![Schedule refresh for dataflows.](/power-bi/transform-model/media/service-dataflows-create-use/dataflows-create-use_14.png)
 
-After a dataflow is refreshed, the data in entities will be visible in the **Navigator** window of other tools and services.
+After a dataflow is refreshed, the data in tables is visible in the **Navigator** window of other tools and services.
 
 More information: [Refreshing a dataflow in Power BI](/power-bi/transform-model/dataflows/dataflows-configure-consume#refreshing-a-dataflow) and [Set the refresh frequency in Power Apps](/powerapps/maker/common-data-service/create-and-use-dataflows#set-the-refresh-frequency)
 

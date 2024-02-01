@@ -1,23 +1,23 @@
 ---
 title: Power Query SIS-CC SDMX connector
 description: Provides basic information and prerequisites for the SIS-CC SDMX connector, descriptions of the optional input parameters, and discusses limitations and issues you might come across.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 6/24/2022
-ms.author: bezhan
+ms.date: 1/24/2024
+ms.author: dougklo
 ---
 
-# SIS-CC SDMX 
+# SIS-CC SDMX (Beta)
 
->[!Note]
+> [!NOTE]
 >The following connector article is provided by the Statistical Information System Collaboration Community (SIS-CC), the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the SIS-CC website and use the support channels there.
 
 ## Summary
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
+| Release State | Beta |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Anonymous |
 | Function Reference Documentation | &mdash; |
 

@@ -2,10 +2,10 @@
 title: LinkedIn Sales Navigator (Beta)
 description: Includes basic information, prerequisites, and information on how to connect to LinkedIn Sales Navigator.
 
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/14/2022
-ms.author: bezhan
+ms.date: 1/24/2024
+ms.author: dougklo
 
 ---
 
@@ -16,7 +16,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products | Power BI (Datasets) |
+| Products | Power BI (Semantic models) |
 | Authentication Types Supported | Organizational Account |
 | Function Reference Documentation | &mdash; |
 

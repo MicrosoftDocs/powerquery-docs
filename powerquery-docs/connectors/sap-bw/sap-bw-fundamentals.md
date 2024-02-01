@@ -3,8 +3,8 @@ title: SAP Business Warehouse fundamentals
 description: Describes basic SAP BW architecture and terminology used when interacting with the Power Query SAP Business Warehouse connector.
 author: dougklopfenstein
 ms.topic: conceptual
-ms.date: 11/23/2020
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # SAP BW fundamentals
@@ -13,7 +13,7 @@ This article describes basic terminology used when describing interactions betwe
 
 ## Integration Architecture
 
-From a technical point of view, the integration between applications and SAP BW is based on the so-called Online Analytical Processing (OLAP) Business Application Programming Interfaces (BAPI). 
+From a technical point of view, the integration between applications and SAP BW is based on the so-called Online Analytical Processing (OLAP) Business Application Programming Interfaces (BAPI).
 
 The OLAP BAPIs are delivered with SAP BW and provide 3rd-parties and developers with standardized interfaces that enable them to access the data and metadata of SAP BW with their own front-end tools.
 
@@ -37,9 +37,9 @@ Typically, when a 3rd party tool like Power Query connects using the OLAP BAPIs,
 
 There's one catalog with the technical name `$INFOCUBE` that contains all InfoProviders in the SAP BW system. This catalog is shown as a node in the navigator of Power Query. By expanding this node in the navigator, you can select from the available InfoProviders in the SAP BW system.
 
-The other catalogs represent InfoProviders for which at least one Query exists. By expanding one of these nodes in the navigator, you can select from the available queries associated with the InfoProvider. 
+The other catalogs represent InfoProviders for which at least one Query exists. By expanding one of these nodes in the navigator, you can select from the available queries associated with the InfoProvider.
 
-BEx Queries offer some advantages and additional functionality to create customized data sources to meet end-user requirements. For example, you can parameterize queries with variables that can limit the data set to what's important to the end user. Or, you can recalculate key figures using formulas. 
+BEx Queries offer some advantages and additional functionality to create customized data sources to meet end-user requirements. For example, you can parameterize queries with variables that can limit the data set to what's important to the end user. Or, you can recalculate key figures using formulas.
 
 Although BEx Queries have advantages as data sources (go to [Performance considerations](implementation-details.md#performance-considerations)), you don't need a Query for every report. You'll need to weigh the cost of developing and maintaining additional Queries against their reporting requirements.
 
@@ -51,7 +51,7 @@ SAP BW comes with built-in tools for creating data models based on different dat
 
    InfoProviders can be seen as uniform data providers from the viewpoint of a query definition. Their data can therefore be analyzed in a uniform way.
 
-* **InfoCube** is a type of InfoProvider. An InfoCube describes, from an analysis point of view, a self-contained dataset, for a business-orientated area, for example Purchasing. You can analyze an InfoCube directly as an InfoProvider with analysis and reporting tools, including Power BI or Power Platform apps.
+* **InfoCube** is a type of InfoProvider. An InfoCube describes, from an analysis point of view, a self-contained data set, for a business-orientated area, for example Purchasing. You can analyze an InfoCube directly as an InfoProvider with analysis and reporting tools, including Power BI or Power Platform apps.
 
    An InfoCube consists of a set of relational tables that are arranged according to an enhanced star schema. This means there's a (large) fact table that contains the key figures for the InfoCube, and also several (smaller) dimension tables that surround it.
 
@@ -65,7 +65,7 @@ SAP BW comes with built-in tools for creating data models based on different dat
 
 * **Characteristics** refer to master data with their **attributes** and **text descriptions**, and in some cases **hierarchies**. The characteristics of an InfoCube are stored in dimensions.
 
-   For example, the *Customer* dimension could have the characteristics *Sold-to-party*, *Ship-to-party*, and *Payer*. 
+   For example, the *Customer* dimension could have the characteristics *Sold-to-party*, *Ship-to-party*, and *Payer*.
 
    The characteristic *Sold-to-party* could have the attributes *Country*, *Region*, *City*, *Street*, and *Industry*. The text description of the characteristic would be the *Name* of the *Sold-to-party*.
 

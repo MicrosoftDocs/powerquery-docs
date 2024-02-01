@@ -1,33 +1,38 @@
+items:
 - name: Power Query documentation
   href: index.yml
   expanded: true
   items:  
     - name: "What is Power Query?"
-      href: power-query-what-is-power-query.md          
+      href: power-query-what-is-power-query.md
     - name: Get data
       items:
       - name: "Getting data overview"
         href: get-data-experience.md
       - name: "Where to get data"
         href: where-to-get-data.md
+      - name: "Get data experience"
+        href: get-data-ui.md
       - name: Authentication
         items:  
         - name: "Authentication in Desktop apps"
           href: connector-authentication.md
         - name: "Authentication in Power Query Online"
           href: connection-authentication-pqo.md
-        - name: "Auto sign in for AAD data sources"
+        - name: "Auto sign in for Microsoft Entra ID data sources"
           href: auto-signin-aad.md
       - name: "Upload a file"
         href: upload-file.md
       - name: "SharePoint and OneDrive for Business files import"
         href: sharepoint-onedrive-files.md    
-      - name: "Lack of support connecting to Microsoft Graph"    
+      - name: "Lack of support connecting to Microsoft Graph"
         href: connecting-to-graph.md
       - name: "Connectivity without an existing connector"
         href: connector-alternatives.md
       - name: "Connect using generic interfaces"
         href: connect-using-generic-interfaces.md
+      - name: "Manage connections"
+        href: manage-connections.md  
       - name: "Change a dataflow gateway"
         href: change-gateway-dataflow.md
     - name: Transform data
@@ -51,7 +56,7 @@
         - name: "Query plan (Preview)"
           href: query-plan.md
         - name: "Query folding on native queries"
-          href: native-query-folding.md            
+          href: native-query-folding.md
       - name: "Using the data profiling tools"
         href: data-profiling-tools.md
       - name: "Using the Queries pane"
@@ -61,9 +66,9 @@
       - name: "Using Schema view (Preview)"
         href: schema-view.md
       - name: "Share a query"
-        href: share-query.md   
+        href: share-query.md
       - name: "Using custom functions"
-        href: custom-function.md        
+        href: custom-function.md
       - name: Transform table
         items:
         - name: "Promote or demote column headers"
@@ -83,7 +88,7 @@
         - name: "Transpose table"
           href: transpose-table.md
         - name: "Reverse rows"
-          href: reverse-rows.md        
+          href: reverse-rows.md
         - name: "Data types"
           href: data-types.md
         - name: "Dealing with errors"
@@ -103,7 +108,7 @@
         - name: "Replace values"
           href: replace-values.md
         - name: "Parse text as JSON or XML"
-          href: parse-json-xml.md          
+          href: parse-json-xml.md
       - name: Add columns
         items:
         - name: "Add a column from examples"
@@ -115,7 +120,7 @@
         - name: "Add a conditional column"
           href: add-conditional-column.md
         - name: "Add a rank column"
-          href: rank-column.md          
+          href: rank-column.md
         - name: "Add a cluster values column"
           href: cluster-values.md
       - name: Combine data
@@ -137,9 +142,9 @@
           - name: "Right outer join"
             href: merge-queries-right-outer.md
           - name: "Full outer join"
-            href: merge-queries-full-outer.md   
+            href: merge-queries-full-outer.md
           - name: "Inner join"
-            href: merge-queries-inner.md             
+            href: merge-queries-inner.md
           - name: "Left anti join"
             href: merge-queries-left-anti.md 
           - name: "Right anti join"
@@ -169,7 +174,7 @@
       - name: "Overview of dataflows"
         href: dataflows/overview-dataflows-across-power-platform-dynamics-365.md
       - name: "Analytical vs. standard dataflows"
-        href: dataflows/understanding-differences-between-analytical-standard-dataflows.md        
+        href: dataflows/understanding-differences-between-analytical-standard-dataflows.md
       - name: "Create and use dataflows"
         href: dataflows/create-use.md
       - name: "Create and use dataflows in Teams"
@@ -188,24 +193,26 @@
         href: dataflows/how-to-migrate-queries-from-power-query-desktop-to-dataflows.md
       - name: "Use an on-premises data gateway"
         href: dataflows/using-dataflows-with-on-premises-data.md
+      - name: "Data exfiltration best practices for dataflows"
+        href: dataflows/data-exfiltration-best-practices.md
       - name: Analytical dataflows
         items:
-        - name: "Create computed entities"
-          href: dataflows/computed-entities.md
-        - name: "Link entities between dataflows"
-          href: dataflows/linked-entities.md
+        - name: "Create computed tables"
+          href: dataflows/computed-tables.md
+        - name: "Link tables between dataflows"
+          href: dataflows/linked-tables.md
         - name: "Connect Azure Data Lake for dataflow storage"
           href: dataflows/connect-azure-data-lake-storage-for-dataflow.md
         - name: Storage structure
-          items: 
+          items:
           - name: "Common Data Model storage structure"
             href: dataflows/what-is-the-cdm-storage-structure-for-analytical-dataflows.md
           - name: "Configure storage and compute"
             href: dataflows/configuring-storage-and-compute-options-for-analytical-dataflows.md
         - name: Best practices for dataflows
           items: 
-          - name: "Scenarios for computed entities"
-            href: dataflows/computed-entities-scenarios.md
+          - name: "Scenarios for computed tables"
+            href: dataflows/computed-tables-scenarios.md
           - name: "Developing complex dataflows"
             href: dataflows/best-practices-developing-complex-dataflows.md
           - name: "Reusing dataflows"
@@ -240,7 +247,7 @@
           href: dataflows/send-notification-when-dataflow-refresh-completes.md
         - name: "Open a ticket when a dataflow refresh fails"
           href: dataflows/open-support-ticket-when-dataflow-refresh-completes.md
-        - name: "Trigger dataflows and Power BI datasets sequentially"
+        - name: "Trigger dataflows and Power BI semantic models sequentially"
           href: dataflows/trigger-dataflows-and-power-bi-dataset-sequentially.md
         - name: "Use Dataverse to build a dataflows monitoring report"
           href: dataflows/load-dataflow-metadata-into-dataverse-table.md
@@ -262,6 +269,8 @@
           href: dataflows/troubleshooting-dataflow-issue-get-data-from-dataflow.md
         - name: "Connecting to the data source"
           href: dataflows/troubleshooting-dataflow-issues-connection-to-the-data-source.md
+    - name: Power Query template (preview)
+      href: power-query-template.md
     - name: Keyboard shortcuts
       href: keyboard-shortcuts.md
     - name: Best practices
@@ -318,7 +327,7 @@
         href: connectors/anaplan.md
       - name: "AssembleViews"
         href: connectors/assemble-views.md
-      - name: "Autodesk Construction Cloud (Beta)"
+      - name: "Autodesk Construction Cloud"
         href: connectors/autodesk-construction-cloud.md
       - name: "Automy Data Analytics (Beta)"
         href: connectors/automy-data-analytics.md
@@ -344,28 +353,36 @@
           href: connectors/analyze-data-in-adls-gen2.md
       - name: Azure HDInsight
         href: connectors/azure-hdinsight.md
+      - name: Azure HDInsight on AKS Trino (Beta)
+        href: connectors/azure-hdinsight-on-aks-trino.md
       - name: "Azure SQL database"
         href: connectors/azure-sql-database.md
+      - name: "Azure Resource Graph (Beta)"
+        href: connectors/azure-resource-graph.md
       - name: "Azure Synapse Analytics (SQL DW)"
         href: connectors/azure-sql-data-warehouse.md
       - name: "Azure Synapse Analytics workspace (Beta)"
         href: connectors/synapse.md
       - name: "Azure Table Storage"
         href: connectors/azure-table-storage.md
-      - name: "BitSight Security Ratings"
+      - name: "Bitsight Security Ratings"
         href: connectors/bitsight-security-ratings.md
       - name: "Bloomberg Data and Analytics"
         href: connectors/bloomberg-data-and-analytics.md
       - name: "BQE Core"
         href: connectors/bqecore.md
-      - name: "CData Connect Cloud (Beta)"
+      - name: "CData Connect Cloud"
         href: connectors/cdata-connect-cloud.md
+      - name: "Celonis EMS (Beta)"
+        href: connectors/celonis-ems.md
+      - name: "CloudBluePSA (Beta)"
+        href: connectors/cloudbluepsa.md
       - name: "Common Data Service (Legacy)"
         href: connectors/common-data-service-legacy.md
-      - name: "Databricks (Beta)"
+      - name: "Databricks"
         href: connectors/databricks.md
       - name: "Dataverse"
-        href: connectors/dataverse.md     
+        href: connectors/dataverse.md
       - name: "Dataflows"
         href: connectors/dataflows.md
       - name: "Delta Sharing"
@@ -378,7 +395,9 @@
         href: connectors/dynamics-365-online.md
       - name: "Eduframe (Beta)"
         href: connectors/eduframe.md
-      - name: "EQuIS (Beta)"
+      - name: "Emplifi Metrics (Beta)"
+        href: connectors/emplifi-metrics.md
+      - name: "EQuIS"
         href: connectors/equis.md
       - name: "Essbase"
         href: connectors/essbase.md
@@ -422,6 +441,10 @@
         href: connectors/inwink.md
       - name: "JSON"
         href: connectors/json.md
+      - name: "KQL database"
+        href: connectors/kql-database.md
+      - name: "Lakehouse (Beta)"
+        href: connectors/lakehouse.md
       - name: LinkedIn Sales Navigator (Beta)
         href: connectors/linkedin-sales-navigator.md
       - name: "Mailchimp (Deprecated)"
@@ -436,6 +459,8 @@
         href: connectors/microsoft-graph-security.md
       - name: "MicroStrategy for Power BI"
         href: connectors/microstrategy-for-power-bi.md
+      - name: "MongoDB Atlas SQL interface (Beta)"
+        href: connectors/mongodb-atlas-sql-interface.md
       - name: "MySQL database"
         href: connectors/mysql-database.md
       - name: "OData Feed"
@@ -452,13 +477,17 @@
         href: connectors/opensearch-project.md
       - name: "Oracle database"
         href: connectors/oracle-database.md
+      - name: "Palantir Foundry"
+        href: connectors/palantir-foundry-datasets.md
       - name: "Parquet"
         href: connectors/parquet.md
       - name: "PDF"
         href: connectors/pdf.md
+      - name: "Planview OKR (Beta)"
+        href: connectors/planview-okr.md
       - name: "PostgreSQL"
         href: connectors/postgresql.md
-      - name: "Profisee (Beta)"
+      - name: "Profisee"
         href: connectors/profisee.md
       - name: "QuickBooks Online (Beta)"
         href: connectors/quickbooks-online.md
@@ -476,7 +505,7 @@
           href: connectors/sap-bw/sap-bw-fundamentals.md
         - name: "Navigate the query objects"
           href: connectors/sap-bw/navigate-query-objects.md
-        - name: "Transform and filter an SAP BW dataset"
+        - name: "Transform and filter an SAP BW data set"
           href: connectors/sap-bw/transform-filter-sap-bw-data.md
         - name: "Implementation details"
           href: connectors/sap-bw/implementation-details.md
@@ -506,9 +535,9 @@
         href: connectors/sharepoint-online-list.md
       - name: "SingleStore (Beta)"
         href: connectors/singlestore.md
-      - name: SIS-CC SDMX
+      - name: "SIS-CC SDMX (Beta)"
         href: connectors/sis-cc-sdmx.md
-      - name: Smartsheet
+      - name: "Smartsheet"
         href: connectors/smartsheet.md
       - name: "Snowflake"
         href: connectors/snowflake.md
@@ -516,6 +545,8 @@
         href: connectors/socialbakers.md
       - name: "SoftOne BI (Beta)"
         href: connectors/softone-bi.md
+      - name: "SolarWinds Service Desk (Beta)"
+        href: connectors/solarwinds-service-desk.md
       - name: "SQL Server Analysis Services database"
         href: connectors/sql-server-analysis-services.md
       - name: "SQL Server database"
@@ -534,10 +565,12 @@
         href: connectors/tibco.md
       - name: "Twilio (Beta) (Deprecated)"
         href: connectors/twilio.md
-      - name: "Usercube"
+      - name: "Usercube (Beta)"
         href: connectors/usercube.md
       - name: "Vessel Insight"
         href: connectors/vessel-insight.md
+      - name: "Warehouse (Beta)"
+        href: connectors/warehouse.md
       - name: "Web"
         items:
         - name: "Connect to Web data"
@@ -571,7 +604,7 @@
       - name: Quick starts
         items:
         - name: "Using the Power Query SDK"
-          href: power-query-sdk-vs-code.md        
+          href: power-query-sdk-vs-code.md
         - name: "Create your first connector - Hello World"
           href: creating-first-connector.md
       - name: Walkthroughs
@@ -637,7 +670,7 @@
         - name: "Handling schemas"
           href: handling-schema.md
         - name: "Handling status codes"
-          items: 
+          items:
           - name: "Default behavior"
             href: handling-status-codes.md
           - name: "Wait retry pattern"
@@ -662,13 +695,13 @@
           href: handling-versioning.md
       - name: Connector Certification
         items:
-        - name: Overview
+        - name: "Overview"
           href: connector-certification.md
-        - name: Submission
+        - name: "Submission"
           href: certification-submission.md
         - name: "Custom connector documentation"
           href: providing-user-documentation.md
-      - name: Custom connector development FAQ
+      - name: "Custom connector development FAQ"
         href: custom-connector-development-faq.yml
     - name: Resources
       items:

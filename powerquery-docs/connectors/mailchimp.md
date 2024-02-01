@@ -1,10 +1,10 @@
 ---
 title: Power Query Mailchimp connector
 description: Provides information on the deprecation of the Mailchimp connector.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 4/8/2020
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # Mailchimp (Deprecated)
@@ -17,8 +17,7 @@ ms.author: bezhan
 | Products | - |
 | Authentication Types Supported | - |
 | Function Reference Documentation | - |
-| | |
 
 ## Deprecation
 
-This connector is deprecated, and won't be supported soon. We recommend you transition off existing connections using this connector, and don't use this connector for new connections. 
+This connector is deprecated, and won't be supported soon. We recommend you transition off existing connections using this connector, and don't use this connector for new connections.

@@ -2,7 +2,7 @@
 title: Change the gateway used in a dataflow project
 description: An article that describes how to change the data gateway in Power Query Online dataflow projects.
 author: ptyx507
-ms.date: 12/6/2021
+ms.date: 5/25/2023
 ms.author: dougklo
 ms.reviewer: miescobar
 ---
@@ -24,22 +24,21 @@ This query previously used a gateway named "Gateway A" to connect to the folder.
 To change the gateway:
 
 1. From the **Home** tab in Power Query, select **Options**.
-2. From the drop-down menu, select **Project Options**.
 
-   ![Drop-down menu found in the Options button inside the Power Query Home tab with the Project options button emphasized.](media\change-gateway\project-options.png)
+   ![Screenshot of Options icon and selection in Power Query Home tab.](media\change-gateway\new-settings.png)
 
-3. In the **Project options** dialog box, select the gateway to use for your project, in this case, Gateway B.
+2. In the **Options** dialog box, select **Data load**, and then select the gateway to use for your project, in this case, Gateway B.
 
-   ![Image of Project options dialog box with the drop-down menu listing None, Gateway A, and Gateway B.](media\change-gateway\project-options-dialog-change-gateway.png)
+   ![Screenshot of Project options dialog box with the drop-down menu listing None, Gateway A, and Gateway B.](media\change-gateway\options-dialog-change-gateway.png)
 
    >[!Tip]
    >If there were recent changes to your gateways, select the small refresh icon to the right of the drop-down menu to update the list of available gateways.
 
-4. After selecting the correct gateway for the project, in this case Gateway B, select **OK** to go back to the Power Query editor.
+3. After selecting the correct gateway for the project, in this case, Gateway B, select **OK** to go back to the Power Query editor.
 
 ## Validate your data source path
 
-After changing your data gateway, we recommended that you check your data source paths to make sure that your queries are connecting to your data sources as expected.
+After changing your data gateway, we recommend that you check your data source paths to make sure that your queries are connecting to your data sources as expected.
 
 >[!Note]
 >The M engine identifies a data source using a combination of its *kind* and *path*.
@@ -54,7 +53,7 @@ The best way to validate the data source path is to go into the query where your
 
 ## Modify authentication
 
-To modify the credentials used against your data source, select **Get data** in the Power Query editor ribbon to launch the **Choose data source** dialog box, then define a new or existing connection to your data source. For the purpose of this example, the connector that's' used is the Folder connector.
+To modify the credentials used against your data source, select **Get data** in the Power Query editor ribbon to launch the **Choose data source** dialog box, then define a new or existing connection to your data source. In this example, the connector that's used is the Folder connector.
 
 ![Choose data source dialog with the folder connector emphasized.](media\change-gateway\choose-data-source.png)
 

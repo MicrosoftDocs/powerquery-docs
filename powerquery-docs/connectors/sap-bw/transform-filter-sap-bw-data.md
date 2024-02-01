@@ -1,23 +1,23 @@
 ---
-title: Transform and filter an SAP BW dataset
-description: Describes various ways to transform and filter SAP BW datasets in the Power Query Editor.
+title: Transform and filter an SAP BW data set
+description: Describes various ways to transform and filter SAP BW data sets in the Power Query Editor.
 author: dougklopfenstein
 ms.topic: conceptual
-ms.date: 11/23/2020
-ms.author: bezhan
+ms.date: 1/25/2024
+ms.author: dougklo
 ---
 
-# Transform and filter an SAP BW dataset
+# Transform and filter an SAP BW data set
 
-With Power Query Editor, you can apply additional data transformations and filtering steps before you bring the dataset from SAP BW into the Power BI Desktop or Microsoft Power Platform data model.
+With Power Query Editor, you can apply additional data transformations and filtering steps before you bring the data set from SAP BW into the Power BI Desktop or Microsoft Power Platform data model.
 
 In Power Query Editor, the *Applied Steps* for the query are shown in the **Query Settings** pane on the right. To modify or review a step, select the gear icon next to a step.
 
-For example, if you select the gear icon next to **Added Items**, you can review the selected data objects in SAP BW, or modify the specified query parameters. This way it's possible to filter a dataset using a characteristic that isn't included in the result set.
+For example, if you select the gear icon next to **Added Items**, you can review the selected data objects in SAP BW, or modify the specified query parameters. This way it's possible to filter a data set using a characteristic that isn't included in the result set.
 
 ![Add items dialog.](add-items-dialog.png)
 
-You can apply additional filters on the dataset by selecting the drop-down menu for one of the columns. 
+You can apply additional filters on the data set by selecting the drop-down menu for one of the columns. 
 
 ![Filter from column.](filter-from-column.png)
 
@@ -25,7 +25,7 @@ Another easy way to set a filter is to right-click on one of the values in the t
 
 ![Filter from a value in the table.](filter-from-table-value.png)
 
-For example, you could filter the dataset to only include records for Calendar Year/Month FEB 2003, or apply a text filter to only include records where Calendar Year/Month contains 2003.
+For example, you could filter the data set to only include records for Calendar Year/Month FEB 2003, or apply a text filter to only include records where Calendar Year/Month contains 2003.
 
 Not every filter will get folded into the query against SAP BW. You can determine if a filter is folded into the query by examining the icon in the top-left corner of the data table, directly above the number 1 of the first data record.
 
@@ -59,7 +59,6 @@ The following examples show some descriptions of various cube functions:
 * `Cube.Parameters`: Returns a table with the set of parameters that can be applied to the cube.
 * `Cube.Dimensions`: Returns a table with the set of dimensions for the cube.
 * `Cube.Measures`: Returns a table with the set of measures for the cube.
-
 
 ### See also
 

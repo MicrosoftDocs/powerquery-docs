@@ -3,14 +3,14 @@ title: Behind the scenes of the Data Privacy Firewall
 description: Describes the purpose of the Data Privacy Firewall
 author: ehrenMSFT
 ms.topic: conceptual
-ms.date: 1/9/2023
+ms.date: 11/3/2023
 ms.author: ehvonleh
 ---
 
 # Behind the scenes of the Data Privacy Firewall
 
 >[!NOTE]
->Privacy levels are currently unavailable in Power Platform dataflows. The product team is working towards re-enabling this functionality in the coming weeks.
+>Privacy levels are currently unavailable in Power Platform dataflows, but the product team is working towards enabling this functionality.
 
 If you've used Power Query for any length of time, you've likely experienced it. There you are, querying away, when you suddenly get an error that no amount of online searching, query tweaking, or keyboard bashing can remedy. An error like:
 
@@ -38,7 +38,7 @@ As part of folding, PQ sometimes may determine that the most efficient way to ex
 
 This is how unintentional data leakage can happen.
 
-Imagine if you were joining SQL data that included employee Social Security Numbers with the results of an external OData feed, and you suddenly discovered that the Social Security Numbers from SQL where being sent to the OData service. Bad news, right?
+Imagine if you were joining SQL data that included employee Social Security Numbers with the results of an external OData feed, and you suddenly discovered that the Social Security Numbers from SQL were being sent to the OData service. Bad news, right?
 
 This is the kind of scenario the Firewall is intended to prevent.
 
@@ -64,7 +64,7 @@ If you're not familiar with steps, you can view them on the right of the Power Q
 
 ### Partitions that reference other partitions
 
-When a query is evaluated with the Firewall on, the Firewall divides the query and all its dependencies into partitions (that is, groups of steps). Anytime one partition references something in another partition, the Firewall replaces the reference with a call to a special function called `Value.Firewall`. In other words, the Firewall doesn't allow partitions to access each other randomly. All references are modified to go through the Firewall. Think of the Firewall as a gatekeeper. A partition that references another partition must get the Firewall's permission to do so, and the Firewall controls whether or not the referenced data will be allowed into the partition.
+When a query is evaluated with the Firewall on, the Firewall divides the query and all its dependencies into partitions (that is, groups of steps). Anytime one partition references something in another partition, the Firewall replaces the reference with a call to a special function called `Value.Firewall`. In other words, the Firewall doesn't allow partitions to access each other directly. All references are modified to go through the Firewall. Think of the Firewall as a gatekeeper. A partition that references another partition must get the Firewall's permission to do so, and the Firewall controls whether or not the referenced data will be allowed into the partition.
 
 This all may seem pretty abstract, so let's look at an example.
 
@@ -110,7 +110,7 @@ Let's say you define a query Query1 with one step (note that this single-step qu
 
 * A partition may either access compatible data sources, or reference other partitions, but not both.
 
-In order for your single-partition-but-two-data-sources query to be allowed to run, its two data sources must be "compatible". In other words, it needs to be okay for data to be shared between them. In terms of the Power Query UI, this means the privacy levels of the SQL and CSV data sources need to both be Public, or both be Organizational. If they're both marked Private, or one is marked Public and one is marked Organizational, or they're marked using some other combination of privacy levels, then it's not safe for them to both be evaluated in the same partition. Doing so would mean unsafe data leakage could occur (due to folding), and the Firewall would have no way to prevent it.
+In order for your single-partition-but-two-data-sources query to be allowed to run, its two data sources must be "compatible". In other words, it needs to be okay for data to be shared bidirectionally between them. This means that the privacy levels of both sources need to be Public, or both be Organizational, since these are the only two combinations that allow sharing in both directions. If both sources are marked Private, or one is marked Public and one is marked Organizational, or they're marked using some other combination of privacy levels, then bidirectional sharing isn't allowed, and it's thus not safe for them to both be evaluated in the same partition. Doing so would mean unsafe data leakage could occur (due to folding), and the Firewall would have no way to prevent it.
 
 What happens if you try to access incompatible data sources in the same partition?
 
@@ -154,9 +154,10 @@ Here's a high-level summary of the partitioning logic.
       * Note that "removing" a partition effectively includes it in whatever other partitions reference it.
       * Trimming parameter partitions allows parameter references used within data source function calls (for example, `Web.Contents(myUrl)`) to work, instead of throwing "partition can't reference data sources and other steps" errors.
     * Grouping (Static)
-      * Partitions are merged, while maintaining separation between:
+      * Partitions are merged in bottom-up dependency order. In the resulting merged partitions, the following will be separate:
         * Partitions in different queries
-        * Partitions that reference other partitions vs. those that don't
+        * Partitions that don't reference other partitions (and are thus allowed to access a data source)
+        * Partitions that reference other partitions (and are thus prohibited from accessing a data source)
 * Dynamic Phase
   * This phase depends on evaluation results, including information about data sources accessed by various partitions.
   * Trimming

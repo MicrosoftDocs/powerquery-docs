@@ -67,7 +67,7 @@ After creating your query from the steps above, imagine that your initial table 
    Table with the same original Country, 6/1/2020, 7/1/2020, and 8/1/2020 columns, with the addition of a 9/1/2020 column. The Country column still contains the USA, Canada, and Panama values, but also has UK added to the fourth row and Mexico added to the fifth row.
 :::image-end:::
 
-Notice that you've added a new column for the date 9/1/2020 (September 1, 2020), and two new rows for the countries UK and Mexico.
+Notice that you've added a new column for the date 9/1/2020 (September 1, 2020), and two new rows for the countries/regions UK and Mexico.
 
 If you refresh your query, you'll notice that the operation will be done on the updated column, but won't affect the column that wasn't originally selected (**Country**, in this example). This means that any new column that's added to the source table will be unpivoted as well.
 

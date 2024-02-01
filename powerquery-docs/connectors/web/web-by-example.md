@@ -1,10 +1,10 @@
 ---
 title: Extract data from a Web page by example
 description: Extract data from a Web page by providing an example of what you want to pull
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: how-to
-ms.date: 12/2/2020
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 # Get webpage data by providing examples
 
@@ -14,7 +14,7 @@ There's a solution. With the *Get Data from Web by example* feature, you can ess
 
 ![Get data from web by example.](web-by-example_01.png)
 
->[!NOTE]
+> [!NOTE]
 >Prices listed in the images are for example purposes only.
 
 ## Using Get Data from Web by example

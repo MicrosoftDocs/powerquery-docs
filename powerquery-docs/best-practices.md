@@ -2,7 +2,7 @@
 title: Best practices when working with Power Query
 description: Best practices when working with Power Query
 author: ptyx507
-ms.date: 1/5/2023
+ms.date: 1/18/2024
 ms.author: miescobar
 ms.topic: conceptual
 ms.search.form: DataflowGen2 Overview
@@ -17,7 +17,7 @@ Power Query offers a vast number of data connectors. These connectors range from
 
 Using the best connector for the task will provide you with the best experience and performance. For example, using the SQL Server connector instead of the ODBC connector when connecting to a SQL Server database not only provides you with a much better **Get Data** experience, but the SQL Server connector also offers you features that can improve your experience and performance, such as query folding. To read more about query folding, go to [Power Query query folding](power-query-folding.md).
 
-Each data connector follows a standard experience as explained in [Getting data](get-data-experience.md). This standardized experience has a stage called **Data Preview**. In this stage, you're provided with a user-friendly window to select the data that you want to get from your data source, if the connector allows it, and a simple data preview of that data. You can even select multiple datasets from your data source through the **Navigator** window, as shown in the following image.
+Each data connector follows a standard experience as explained in [Getting data](get-data-experience.md). This standardized experience has a stage called **Data Preview**. In this stage, you're provided with a user-friendly window to select the data that you want to get from your data source, if the connector allows it, and a simple data preview of that data. You can even select multiple data sets from your data source through the **Navigator** window, as shown in the following image.
 
 ![Sample navigator window.](media/best-practices-power-query/navigator.png)
 
@@ -145,22 +145,22 @@ Some examples of transformations that can help you make your query resilient to 
 
 * If your query has a dynamic number of rows with data, but a fixed number of rows that serve as the footer that should be removed, you can use the **Remove bottom rows** feature.
 
-   >[!NOTE]
+   > [!NOTE]
    > To learn more about filtering your data by row position, go to [Filter a table by row position](filter-row-position.md).
 
-* If your query has a dynamic number of columns, but you only need to select specific columns from your dataset, you can use the **Choose columns** feature.
+* If your query has a dynamic number of columns, but you only need to select specific columns from your data set, you can use the **Choose columns** feature.
 
-   >[!NOTE]
+   > [!NOTE]
    > To learn more about choosing or removing columns, go to [Choose or remove columns](choose-remove-columns.md).
 
 * If your query has a dynamic number of columns and you need to unpivot only a subset of your columns, you can use the **unpivot only selected columns** feature.
 
-   >[!NOTE]
+   > [!NOTE]
    > To learn more about the options to unpivot your columns, go to [Unpivot columns](unpivot-column.md).
 
 * If your query has a step that changes the data type of a column, but some cells yield errors as the values don't conform to the desired data type, you could remove the rows that yielded error values.
 
-   >[!NOTE]
+   > [!NOTE]
    > To more about working and dealing with errors, go to [Dealing with errors](dealing-with-errors.md#remove-errors).
 
 ## Use parameters

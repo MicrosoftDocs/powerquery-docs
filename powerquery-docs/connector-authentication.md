@@ -3,7 +3,7 @@ title: Authentication with a data source
 description: How to select credentials for a connector in Power Query to authenticate a connection with a data source, how to select the authentication level, and how to edit or delete credentials for specific connectors and sites.
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 1/5/2023
+ms.date: 1/17/2024
 ms.author: miescobar
 ms.custom: edited
 ---
@@ -33,7 +33,6 @@ In connectors that require you to enter a URL, you'll be asked to select the lev
 The level you select for the authentication method you chose for this connector determines what part of a URL will have the authentication method applied to it. If you select the top-level web address, the authentication method you select for this connector will be used for that URL address or any subaddress within that address.
 
 However, you might not want to set the top-level address to a specific authentication method because different subaddresses can require different authentication methods. One example might be if you were accessing two separate folders of a single SharePoint site and wanted to use different Microsoft accounts to access each one.
-
 
 After you've set the authentication method for a connector's specific address, you won't need to select the authentication method for that connector using that URL address or any subaddress again. For example, let's say you select the `https://contoso.com/` address as the level you want the Web connector URL settings to apply to. Whenever you use a [Web connector](connectors/web/web.md) to access any webpage that begins with this address, you won't be required to select the authentication method again.
 
@@ -71,9 +70,9 @@ You can also delete the credentials for a particular website in step 3 by select
 
 2. Make the required changes, and then select **Next**.
 
-## Connecting with Azure Active Directory using the Web and OData connectors
+## Connecting with Microsoft Entra ID using the Web and OData connectors
 
-When connecting to data sources and services that require authentication through OAuth or Azure Active Directory-based authentication, in certain cases where the service is configured correctly, you can use the built-in [Web](connectors/web/web.md) or [OData](connectors/odata-feed.md) connectors to authenticate and connect to data without requiring a service-specific or custom connector.
+When connecting to data sources and services that require authentication through OAuth or Microsoft Entra ID-based authentication, in certain cases where the service is configured correctly, you can use the built-in [Web](connectors/web/web.md) or [OData](connectors/odata-feed.md) connectors to authenticate and connect to data without requiring a service-specific or custom connector.
 
 This section outlines connection symptoms when the service isn't configured properly. It also provides information on how Power Query interacts with the service when it's properly configured.
 
@@ -87,11 +86,11 @@ One example of this is the Northwind OData service.
 
    ![Connect to Northwind.](media/connector-authentication/northwind-odata.png)
 
-2) Select **OK** to enter the authentication experience. Normally, because Northwind isn’t an authenticated service, you would just use **Anonymous**. To demonstrate lack of support for Azure Active Directory, choose **Organizational account**, and then select **Sign in**.
+2) Select **OK** to enter the authentication experience. Normally, because Northwind isn’t an authenticated service, you would just use **Anonymous**. To demonstrate lack of support for Microsoft Entra ID, choose **Organizational account**, and then select **Sign in**.
 
    ![Northwind authentication.](media/connector-authentication/northwind-auth.png)
 
-3) You'll encounter the error, indicating that OAuth or Azure Active Directory authentication isn't supported in the service.
+3) You'll encounter the error, indicating that OAuth or Microsoft Entra ID authentication isn't supported in the service.
 
    ![Northwind error.](media/connector-authentication/northwind-error.png)
 
@@ -121,7 +120,7 @@ Host: pbi.crm.dynamics.com
 Connection: Keep-Alive
 ```
 
-The service is then expected to respond with a **401** response with a **WWW_Authenticate** header indicating the Azure AD authorization URI to use. This response should include the tenant to sign into, or **/common/** if the resource isn’t associated with a specific tenant.
+The service is then expected to respond with a **401** response with a **WWW-Authenticate** header indicating the Microsoft Entra ID authorization URI to use. This response should include the tenant to sign into, or **/common/** if the resource isn’t associated with a specific tenant.
 
 ```
 HTTP/1.1 401 Unauthorized
@@ -133,17 +132,16 @@ Date: Wed, 15 Aug 2018 15:02:04 GMT
 Content-Length: 49
 ```
 
-Power Query can then initiate the OAuth flow against the **authorization_uri**. Power Query requests an Azure AD Resource or Audience value equal to the domain of the URL being requested. This value would be the value you use for your Azure Application ID URL value in your API/service registration. For example, if accessing `https://api.myservice.com/path/to/data/api`, Power Query would expect your Application ID URL value to be equal to `https://api.myservice.com`.
+Power Query can then initiate the OAuth flow against the **authorization_uri**. Power Query requests a Microsoft Entra IDResource or Audience value equal to the domain of the URL being requested. This value would be the value you use for your Azure Application ID URL value in your API/service registration. For example, if accessing `https://api.myservice.com/path/to/data/api`, Power Query would expect your Application ID URL value to be equal to `https://api.myservice.com`.
 
-The following Azure Active Directory client IDs are used by Power Query. You might need to explicitly allow these client IDs to access your service and API, depending on your overall Azure Active Directory settings.
+The following Microsoft Entra ID client IDs are used by Power Query. You might need to explicitly allow these client IDs to access your service and API, depending on your overall Microsoft Entra ID settings.
 
 | Client ID  | Title | Description |
 | ---------- | ----- | ----------- |
 | a672d62c-fc7b-4e81-a576-e60dc46e951d | Power Query for Excel | Public client, used in Power BI Desktop and Gateway. |
 | b52893c8-bc2e-47fc-918b-77022b299bbc | Power BI Data Refresh | Confidential client, used in Power BI service. |
 | 7ab7862c-4c57-491e-8a45-d52a7e023983 | Power Apps and Power Automate | Confidential client, used in Power Apps and Power Automate. |
-| | | |
 
-You might need to explicitly allow these client IDs to access your service and API, depending on your overall Azure Active Directory settings. Go to step 8 of [Add a scope](/azure/active-directory/develop/quickstart-configure-app-expose-web-apis#add-a-scope) for more details.
+You might need to explicitly allow these client IDs to access your service and API, depending on your overall Microsoft Entra ID settings. Go to step 8 of [Add a scope](/azure/active-directory/develop/quickstart-configure-app-expose-web-apis#add-a-scope) for more details.
 
-If you need more control over the OAuth flow (for example, if your service must respond with a `302` rather than a `401`), or if your application’s Application ID URL or Azure AD Resource value don't match the URL of your service, then you’d need to use a custom connector. For more information about using our built-in Azure AD flow, go to [Azure Active Directory authentication](HandlingAuthentication.md#azure-active-directory-authentication).
+If you need more control over the OAuth flow (for example, if your service must respond with a `302` rather than a `401`), or if your application’s Application ID URL or Microsoft Entra ID Resource value don't match the URL of your service, then you’d need to use a custom connector. For more information about using our built-in Microsoft Entra ID flow, go to [AMicrosoft Entra ID authentication](HandlingAuthentication.md#azure-active-directory-authentication).

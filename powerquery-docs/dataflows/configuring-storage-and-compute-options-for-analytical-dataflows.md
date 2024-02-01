@@ -4,7 +4,7 @@ description: Configuring storage and compute options for analytical dataflows.
 author: bensack
 ms.author: bensack
 ms.topic: conceptual
-ms.date: 12/2/2020
+ms.date: 1/26/2024
 ---
 
 # Dataflow storage options
@@ -37,11 +37,11 @@ To configure dataflows created in Power Apps to store data in your organization'
 
 * After a dataflow is created, its storage location can't be changed.
 
-* Linked and computed entities features are only available when both dataflows are in the same storage account.
+* Linked and computed table features are only available when both dataflows are in the same storage account.
 
 ## The enhanced compute engine
 
-In Power BI, in addition to the standard dataflow engine, an enhanced compute engine is available for the dataflows created in Power BI Premium workspaces. You can configure this setting in the Power BI admin portal, under the Premium capacity settings. The enhanced compute engine is available in Premium P1 or A3 capacities and above. The enhanced compute engine reduces the refresh time required for long-running extract, transform, load (ETL) steps over computed entities, such as joins, distinct, filters, and group by. It also provides the ability to perform DirectQuery over entities from the Power BI dataset. More information: [The enhanced compute engine](/power-bi/transform-model/service-dataflows-enhanced-compute-engine)
+In Power BI, in addition to the standard dataflow engine, an enhanced compute engine is available for the dataflows created in Power BI Premium workspaces. You can configure this setting in the Power BI admin portal, under the Premium capacity settings. The enhanced compute engine is available in Premium P1 or A3 capacities and above. The enhanced compute engine reduces the refresh time required for long-running extract, transform, load (ETL) steps over computed tables, such as joins, distinct, filters, and group by. It also provides the ability to perform DirectQuery over tables from the Power BI semantic model. More information: [The enhanced compute engine](/power-bi/transform-model/service-dataflows-enhanced-compute-engine)
 
 ![The enhanced compute engine.](/power-bi/transform-model/media/service-dataflows-enhanced-compute-engine/enhanced-compute-engine-01.png)
 
@@ -49,8 +49,8 @@ In Power BI, in addition to the standard dataflow engine, an enhanced compute en
 
 The articles below provide further information that can be helpful.
 
-- [Connect Azure Data Lake Storage Gen2 for dataflow storage (Power BI dataflows)](/power-bi/service-dataflows-connect-azure-data-lake-storage-gen2)
-- [Connect Azure Data Lake Storage Gen2 for dataflow storage (Power Platform dataflows)](/powerapps/maker/common-data-service/connect-azure-data-lake-storage-for-dataflow)-->
-- [Creating computed entities in dataflows](computed-entities.md)
-- [The enhanced compute engine](/power-bi/transform-model/service-dataflows-enhanced-compute-engine)
-- [Understanding the differences between standard and analytical dataflows ](understanding-differences-between-analytical-standard-dataflows.md)
+* [Connect Azure Data Lake Storage Gen2 for dataflow storage (Power BI dataflows)](/power-bi/service-dataflows-connect-azure-data-lake-storage-gen2)
+* [Connect Azure Data Lake Storage Gen2 for dataflow storage (Power Platform dataflows)](/powerapps/maker/common-data-service/connect-azure-data-lake-storage-for-dataflow)
+* [Creating computed tables in dataflows](computed-tables.md)
+* [The enhanced compute engine](/power-bi/transform-model/service-dataflows-enhanced-compute-engine)
+* [Understanding the differences between standard and analytical dataflows](understanding-differences-between-analytical-standard-dataflows.md)

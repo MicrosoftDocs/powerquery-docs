@@ -3,13 +3,13 @@ title: FHIR Power Query folding patterns
 description: Power Query connector for FHIR query folding patterns
 author: hansenms
 ms.topic: conceptual
-ms.date: 01/08/2020
+ms.date: 7/25/2023
 ms.author: mihansen
 ---
 
 # FHIR query folding patterns
 
-This article describes Power Query patterns that will allow effective query folding in FHIR. It assumes that you are familiar with with using the [Power Query connector for FHIR](FHIR.md) and understand the basic motivation and principles for [Power Query folding in FHIR](FHIR-QueryFolding.md).
+This article describes Power Query patterns that will allow effective query folding in FHIR. It assumes that you are familiar with with using the [Power Query connector for FHIR](fhir.md) and understand the basic motivation and principles for [Power Query folding in FHIR](fhir-queryfolding.md).
 
 ## How to use this document
 
@@ -778,4 +778,4 @@ Query folding turns Power Query filtering expressions into FHIR search parameter
 In this article, we reviewed some classes of filtering expressions that will fold to FHIR search parameters. Next read about establishing relationships between FHIR resources.
 
 >[!div class="nextstepaction"]
->[FHIR Power Query relationships](FHIR-Relationships.md)
+>[FHIR Power Query relationships](fhir-relationships.md)

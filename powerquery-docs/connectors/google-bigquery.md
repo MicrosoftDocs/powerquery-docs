@@ -1,10 +1,10 @@
 ---
 title: Google BigQuery connector
 description: Provides basic information and prerequisites for the Google BigQuery connector for Power Query.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 2/13/2023
-ms.author: bezhan
+ms.date: 1/24/2024
+ms.author: dougklo
 ---
 
 # Google BigQuery
@@ -14,11 +14,11 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Customer Insights (Dataflows) |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Customer Insights (Dataflows) |
 | Authentication Types Supported | Organizational account<br/>Service account |
 
->[!Note]
->Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+> [!NOTE]
+> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 > [!NOTE]
 > Effective July 2021, Google will discontinue support for sign-ins to Google accounts from embedded browser frameworks. Due to this change, you will need to [update](https://powerbi.microsoft.com/downloads/) your Power BI Desktop version to June 2021 to support signing in to Google.
@@ -30,7 +30,7 @@ You'll need a Google account or a Google service account to sign in to Google Bi
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI Datasets only)
+* DirectQuery (Power BI semantic models)
 
 ## Connect to Google BigQuery data from Power Query Desktop
 
@@ -75,8 +75,8 @@ To connect to Google BigQuery from Power Query Online, take the following steps:
     ![Image of sign in dialog box.](./media/google-bigquery/sign-in-online.png)
 
 3. A **Sign in with Google** dialog appears. Select your Google account and approve connecting.
-    >[!NOTE]
-    >Although the sign in dialog box says you'll continue to Power BI Desktop once you've signed in, you'll be sent to your online app instead.
+    > [!NOTE]
+    > Although the sign in dialog box says you'll continue to Power BI Desktop once you've signed in, you'll be sent to your online app instead.
 
     ![Image of Google sign in dialog.](./media/google-bigquery/sign-into-google.png)
 
@@ -100,7 +100,7 @@ The following table lists all of the advanced options you can set in Power Query
 
 | Advanced option | Description |
 | --------------- | ----------- |
-| Billing Project ID | A project against which Power Query will run queries. Permissions and billing are tied to this project. |
+| Billing Project ID | A project against which Power Query will run queries. Permissions and billing are tied to this project. If no Billing Project ID is provided, by default the first available project returned by Google APIs will be used. |
 | Use Storage Api | A flag that enables using the [Storage API of Google BigQuery](https://cloud.google.com/bigquery/docs/reference/storage). This option is true by default. This option can be set to false to not use the Storage API and use REST APIs instead. |
 | Connection timeout duration | The standard connection setting (in seconds) that controls how long Power Query waits for a connection to complete. You can change this value if your connection doesn't complete before 15 seconds (the default value.) |
 | Command timeout duration | How long Power Query waits for a query to complete and return results. The default depends on the driver default. You can enter another value in minutes to keep the connection open longer. |
@@ -135,7 +135,7 @@ In addition, if you also create a report in Power BI service using a gateway, yo
 
 ### Nested fields
 
-To optimize performance considerations, Google BigQuery does well with large datasets when denormalized, flattened, and nested.
+To optimize performance considerations, Google BigQuery does well with large data sets when denormalized, flattened, and nested.
 
 The Google BigQuery connector supports nested fields, which are loaded as text columns in JSON format.
 
@@ -176,4 +176,13 @@ These permissions typically are provided in the `BigQuery.User` role. More infor
 If the above steps don't resolve the problem, you can disable the BigQuery Storage API.
 
 ### Unable to use DateTime type data in Direct Query mode
+
 There's a known issue where the DateTime type isn't supported through Direct Query. Selecting a column with the DateTime type will cause an "Invalid query" error or a visual error.
+
+### Limitations on querying column that has the same name as table name
+
+When querying a column that has the same name as the table name, BigQuery interprets the column as a `struct` that includes all columns in the table instead of the specified column. For example, `SELECT debug FROM dataset.debug` returns a `struct` with all columns in the debug table, instead of the specified debug column. This behavior is usually not intuitive and a fix is being investigated. There are three workarounds available:
+
+* Workaround 1: Wrap the table with a view that doesn't conflict the column name&mdash;`CREATE VIEW dataset.new_view AS SELECT * FROM dataset.debug`
+* Workaround 2: Rename the column to avoid conflicts with the table name&mdash;`ALTER TABLE dataset.debug RENAME COLUMN debug to new_debug`
+* Workaround 3: Change the SELECT query to use table.column to reference the conflict column&mdash;`SELECT debug.debug FROM dataset.debug`

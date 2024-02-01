@@ -2,7 +2,7 @@
 title: Lack of Support for Microsoft Graph in Power Query
 description: This article describes Power Query's lack of support for connecting to Microsoft Graph
 author: mattmasson
-ms.date: 4/14/2022
+ms.date: 1/17/2024
 ms.author: mmasson
 ---
 
@@ -16,9 +16,9 @@ This article outlines the issues associated with Microsoft Graph connectivity fr
 
 ## Authentication
 
-The built-in Organizational Account authentication flow for Power Query's `Web.Contents` and `OData.Feed` functions isn't compatible with most Graph endpoints. Specifically, Power Query's Azure Active Directory (Azure AD) client requests the `user_impersonation` scope, which isn't compatible with Graph's security model. Graph uses a rich set of permissions that aren't available through our generic Web and OData connectors.
+The built-in Organizational Account authentication flow for Power Query's `Web.Contents` and `OData.Feed` functions isn't compatible with most Graph endpoints. Specifically, Power Query's Microsoft Entra ID client requests the `user_impersonation` scope, which isn't compatible with Graph's security model. Graph uses a rich set of permissions that aren't available through our generic Web and OData connectors.
 
-Implementing your own Azure AD credential retrieval flows directly from your query, or using hardcoded or embedded credentials, also isn't recommended for security reasons.
+Implementing your own Microsoft Entra ID credential retrieval flows directly from your query, or using hardcoded or embedded credentials, also isn't recommended for security reasons.
 
 ## OData libraries' incompatibility
 
@@ -30,4 +30,4 @@ The Microsoft Graph API is designed to support many application scenarios, but i
 
 ## Using a custom connector
 
-Some Power Query users have enabled Graph connectivity through custom connectors, limiting their functionality to certain parts of the Graph API. This approach allows connector developers to resolve general authentication issues by defining their own Azure AD client with Graph specific permissions. Some custom connectors work around OData challenges by using `Web.Contents` and simulating OData support within their connector logic. However, this approach isn't recommended as users frequently hit the performance and scalability issues described above. Developers who take this route should continue with these limitations in mind.
+Some Power Query users have enabled Graph connectivity through custom connectors, limiting their functionality to certain parts of the Graph API. This approach allows connector developers to resolve general authentication issues by defining their own Microsoft Entra ID client with Graph specific permissions. Some custom connectors work around OData challenges by using `Web.Contents` and simulating OData support within their connector logic. However, this approach isn't recommended as users frequently hit the performance and scalability issues described above. Developers who take this route should continue with these limitations in mind.

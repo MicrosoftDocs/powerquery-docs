@@ -1,10 +1,10 @@
 ---
 title: Microsoft Exchange Online Power Query Data Connector
 description: Provides basic information and connection instructions for the Microsoft Exchange Online connector
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 01/25/2023
-ms.author: bezhan
+ms.date: 1/24/2024
+ms.author: dougklo
 ---
 
 # Microsoft Exchange Online
@@ -14,10 +14,9 @@ ms.author: bezhan
 | Item | Description |
 | ------- | ---------- |
 | Release State | General Availability |
-| Products | Excel <br/> Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/> Analysis Services |
+| Products | Excel <br/> Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/> Analysis Services |
 | Authentication Types Supported | Exchange account<br/>Microsoft account |
 | Function Reference Documentation | [Exchange.Contents](/powerquery-m/exchange-contents) |
-| | |
 
 ## Capabilities Supported
 
@@ -25,7 +24,7 @@ ms.author: bezhan
 
 ## Connect to Microsoft Exchange Online from Power Query Desktop
 
-Power Query Desktop includes Excel, Power BI (Datasets), and Analysis Services as experiences.
+Power Query Desktop includes Excel, Power BI (semantic models), and Analysis Services as experiences.
 
 To make the connection to **Microsoft Exchange Online**, follow these steps:
 

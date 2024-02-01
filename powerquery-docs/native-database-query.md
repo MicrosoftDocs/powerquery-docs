@@ -1,17 +1,17 @@
 ---
 title: Import data from a database using native database query
 description: Describes the steps you take to import data from a database using a native database query
-author: bezhan-msft
+author: ptyx507x
 ms.topic: conceptual
-ms.date: 3/18/2022
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: miescobar
 ---
 
 # Import data from a database using native database query
 
 Power Query gives you the flexibility to import data from wide variety of databases that it supports. It can run native database queries, which can save you the time it takes to build queries using the Power Query interface. This feature is especially useful for using complex queries that already exist&mdash;and that you might not want to or know how to rebuild using the Power Query interface.
 
->[!Note]
+> [!NOTE]
 > One intent of native database queries is to be non-side effecting. However, Power Query does not guarantee that the query will not affect the database. If you run a native database query written by another user, you will be prompted to ensure that you're aware of the queries that will be evaluated with your credentials. For more information, see [Native database query security](#native-database-query-security).
 
 Power Query enables you to specify your native database query in a text box under **Advanced options** when connecting to a database. In the example below, you'll import data from a SQL Server database using a native database query entered in the **SQL statement** text box. The procedure is similar in all other databases with native database query that Power Query supports.
@@ -28,7 +28,7 @@ Power Query enables you to specify your native database query in a text box unde
 
 3. If this is the first time you're connecting to this server, you'll see a prompt to select the authentication mode to connect to the database. Select an appropriate authentication mode, and continue.
 
-   >[!Note]
+   > [!NOTE]
    > If you don't have access to the data source (both Server and Database), you'll see a prompt to request access to the server and database (if access-request information is specified in Power BI for the data source). 
 
 4. If the connection is established, the result data is returned in the Power Query Editor.
@@ -65,7 +65,6 @@ The following Power Query connectors support native database queries.
 | SQL Server database | SQL statement |
 | TIBCO(R) Data Virtualization (Beta) | SQL statement |
 | Vena (Beta) | Model Query (MQL) |
-| | |
 
 ## Limitations and issues
 
@@ -87,7 +86,7 @@ If you see this message, select **Edit Permission**. This selection will open th
 
 By default, if you run a native database query outside of the connector dialogs, you'll be prompted each time you run a different query text to ensure that the query text that will be executed is approved by you.
 
->[!Note]
+> [!NOTE]
 > Native database queries that you insert in your get data operation won't ask you whether you want to run the query or not. They'll just run.
 
 You can turn off the native database query security messages if the native database query is run in either Power BI Desktop or Excel. To turn off the security messages:
@@ -112,6 +111,6 @@ You can also revoke the approval of any native database queries that you've prev
 
 3. Select **Edit permissions**.
 
-3. In the **Edit permissions** dialog box, under **Native Database Queries**, select **Revoke Approvals**.
+4. In the **Edit permissions** dialog box, under **Native Database Queries**, select **Revoke Approvals**.
 
    ![Revoke native database query approval.](media/native-database-query/revoke-native-approval.png)

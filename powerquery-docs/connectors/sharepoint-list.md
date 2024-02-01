@@ -1,10 +1,10 @@
 ---
 title: Power Query SharePoint list connector
 description: Provides basic information about how to connect to your data, along with troubleshooting tips for obtaining the root SharePoint address and changing the authentication method.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 2/13/2023
-ms.author: bezhan
+ms.date: 1/24/2024
+ms.author: dougklo
 ---
 
 # SharePoint list
@@ -14,15 +14,15 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication Types Supported | Anonymous<br/>Windows<br/>Microsoft Account |
 | Function Reference Documentation | [SharePoint.Contents](/powerquery-m/sharepoint-contents)<br/>[SharePoint.Files](/powerquery-m/sharepoint-files)<br/>[SharePoint.Tables](/powerquery-m/sharepoint-tables) |
 
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
->[!NOTE]
->AAD/OAuth for SharePoint on-premises isn’t supported using the on-premises data gateway.
+> [!NOTE]
+>Microsoft Entra ID/OAuth for SharePoint on-premises isn’t supported using the on-premises data gateway.
 
 ## Capabilities supported
 
@@ -100,9 +100,9 @@ The user can force the interpretation to be consistent by explicitly setting the
 
 If you use an OData feed to access a SharePoint List, there's an approximately 2100 character limitation to the URL you use to connect. More information: [Maximum URL length](odata-feed.md#maximum-url-length)
 
-### Azure Active Directory authentication
+### Microsoft Entra ID authentication
 
-Azure Active Directory authentication (AAD) isn't supported for on-premises SharePoint sources.
+Microsoft Entra ID authentication isn't supported for on-premises SharePoint sources.
 
 ## Next steps
 
