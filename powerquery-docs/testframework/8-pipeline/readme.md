@@ -18,12 +18,11 @@ In this lesson, you will:
 
 > [!div class="checklist"]
 >
-> * Structure of the pipleine
-> * Agent prerequisites
-> * Networking configuration
-> * Fetching credentials
-> * Power Query Test Framework executable setup
-> * Drivers for your extension connector
+> * Overview of setting up the pipeline
+> * Setup an agent
+> * Learn to configure the connector including driver and credentials setup
+> * Run the tests
+> * Generate the report of the test run
 
 ## Pipeline Setup Guide for Power Query connectors
 
@@ -149,5 +148,6 @@ steps:
     displayName: 'Run Connector Tests'
 ```
 
-[TODO: Conclusion for this page and the reference]
 ## Conclusion
+
+[TODO: Add conclusion]
