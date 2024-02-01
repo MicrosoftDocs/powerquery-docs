@@ -18,6 +18,7 @@ Now that you have setup the environment, uploaded the test data and set up the t
 In this lesson, you will:
 
 > [!div class="checklist"]
+>
 > * Learn the types of file formats used within the test framework and their functionality
 
 ## Specification for Tests in PQ/PQOut format

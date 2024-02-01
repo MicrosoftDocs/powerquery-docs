@@ -16,6 +16,7 @@ This multi-part reference covers the setup and running of a standard suite of te
 In this lesson, you will:
 
 > [!div class="checklist"]
+>
 > * Learn about the dataset used in the standard suite of the tests
 > * Download a copy of the test data
 > * Upload the data to your choice of database for the connector you intend to test
@@ -26,9 +27,8 @@ This lesson covers the test data that is used by the test suite to verify your c
 
 The test data used for the framework is a modified version of the [NewYork City Taxi & Limousine Commission (TLC)](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page) green trip record data.
 
-[TODO: Do we also mention about sampling of the taxi zone lookup csv]
-
-The February 2023 green trip data was converted into a CSV file and 10,000 rows were sampled from it. CSV data was chosen due to its large applicability to nearly all other data sources, making it easier to import.
+The February 2023 green trip data was converted into "NycTaxiGreen" CSV file and 10,000 rows were sampled from it. Similaryly, "TaxiZoneLookup" CSV file contains 265 rows from the taxi zone lookup table
+CSV data was chosen due to its large applicability to nearly all other data sources, making it easier to import.
 
 Review the following information carefully before importing the data:
 
@@ -55,11 +55,11 @@ The following table provides further information about each field in the *NycTax
 
 |Name                         |Type       | Description                                                                                                                                                                                              |
 |-----------------------------|:----------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| RecordID                    | Integer   | The original record ID order. The CSV starts with it out-of-order due to the random sampling. <br><br>This field can be used as the primary key of the table.                                            |
+| RecordID                    | Integer   | The original record ID order. The CSV starts with it out-of-order due to the random sampling. This field can be used as the primary key of the table.                                                    |
 | VendorID                    | Integer   | Code indicating provider.                                                                                                                                                                                |
 | lpep_pickup_datetime        | Timestamp | Timezone information isn't included. If the data source requires one, UTC should be used.                                                                                                                |
 | lpep_dropoff_datetime       | Timestamp | Timezone information isn't included. If the data source requires one, UTC should be used.                                                                                                                |
-| store_and_fwd_flag          | Boolean   | A true/false field. Some data sources might import this field as a character or string if the field type isn't specified. <br><br>For the purposes of testing, this field should be specified as Boolean |
+| store_and_fwd_flag          | Boolean   | A true/false field. Some data sources might import this field as a character or string if the field type isn't specified. For the purposes of testing, this field should be specified as Boolean         |
 | RatecodeID                  | Integer   | Rate code in effect at end of trip                                                                                                                                                                       |
 | PULocationID                | Integer   | TLC Taxi Zone when the taximeter engaged                                                                                                                                                                 |
 | DOLocationID                | Integer   | TLC Taxi Zone when the taximeter disengaged                                                                                                                                                              |
@@ -82,7 +82,7 @@ The following table provides further information about each field in the *TaxiZo
 
 |Name          |Type     | Description                                                                                                                                                                 |
 |--------------|:--------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| LocationId   | Integer | Location ID for any location. It to maps to the PULocationID & DOLocationID in the NycTaxiGreen table. <br><br>This field can be used as the primary key of the table.      |
+| LocationId   | Integer | Location ID for any location. It to maps to the PULocationID & DOLocationID in the NycTaxiGreen table. This field can be used as the primary key of the table.              |
 | Borough      | String  | Borough for the location                                                                                                                                                    |
 | Zone         | String  | Name of the Zone for the location                                                                                                                                           |
 | service_zone | String  | Name of the Service Zone for the location                                                                                                                                   |

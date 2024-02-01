@@ -18,20 +18,28 @@ Now you might want to add more tests for your extension connector to verify othe
 In this lesson, you will:
 
 > [!div class="checklist"]
+>
 > * Creating tests for your connector
 > * Running tests with various configurations and options
 
 ## Creating custom tests
 
-[TODO: pqtest.md link]
+[TODO: Figure out path for pqtest.md]
 
-If you wish to add any tests specific to the connector then you can add them to the *DatasourceSpecific* folder. You could also choose to extend the tests in Sanity/Standard Tests folder. Create a PQ file and place it in any directory of the tests directory. Run the test first time to generate the PQOut output file. Subsequent runs will validate the output generated with the PQOut output file. Please review the documentation in [pqtest.md](https://dev.azure.com/powerbi/Power%20Query/_git/DataConnectors?path=/PowerQuerySDKTestFramework/docs/PowerQuerySdkTools/Tools/PQTest/pqtest.md&_a=preview&version=GBmaster) in the DataConnectors repo for more information on using the compare command.
+Below are sample instructions on how custom tests can be added:
+
+* Create a `Custom` folder under `testframework\tests\TesSuites`.
+* Create a PQ file with the M Query that needs to be tested and place it in the `Custom` directory.
+* Create a settings file `CustomSettings.json` under `testframework\tests\ConnectorConfigs\<Connector Name>\Settings` folder. Add the paths for test folder `"QueryFilePath": "TestSuites/Custom"` and the parameter query file `"ParameterQueryFilePath": "ParameterQueries/<Connector Name>/<Connector Name>.parameterquery.pq"` in it.
+* Run the test first time to generate the PQOut output file.
+* Subsequent runs will validate the output generated with the PQOut output file.
+* Please review the documentation in [pqtest.md](https://dev.azure.com/powerbi/Power%20Query/_git/DataConnectors?path=/PowerQuerySDKTestFramework/docs/PowerQuerySdkTools/Tools/PQTest/pqtest.md&_a=preview&version=GBmaster) in the DataConnectors repo for more information on creating new tests using the compare command.
 
 ## Reference for various configurations and options
 
 [TODO: pqtest.md link]
 
-You can refer []() for various options and examples while running the compare command.
+You can refer [pqtest.md]() for various options and examples while running the compare command.
 
 ## Conclusion
 
@@ -41,4 +49,4 @@ In the next lesson, you'll learn to automate running of the tests by setting up 
 
 ## Next steps
 
-[Power Query SDK Testing Framework part 8 - Pipeline Guide](../9-pipeline/readme.md)
+[Power Query SDK Testing Framework part 8 - Pipeline Guide](../8-pipeline/readme.md)

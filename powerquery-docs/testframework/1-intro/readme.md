@@ -16,6 +16,7 @@ This multi-part reference covers the setup and running of a standard suite of te
 In this lesson, you will:
 
 > [!div class="checklist"]
+>
 > * Learn about the Power Query SDK Test Framework
 > * Goals for creating the test framework
 > * Summary of the reference guide
@@ -26,13 +27,12 @@ Power Query SDK Test Framework is a ready-to-go test harness with prebuilt tests
 
 ## Goals
 
-[TODO: Should this line included? We also envision this to plug into the connector certification process and enhance the experience of the partners.]
-
-The goal of Power Query SDK Test Framework is to provide a robust testing solution integrated with the VS Code SDK to test extension connectors. This framework would greatly improve the developer experience for the development of the connectors. It would also bring standardization to rather fragmented test practices, eventually increasing the quality bar and decreasing sustainment efforts of the connectors. We also envision to plug it into the connector certification process and enhance the experience of the partners.
+The goal of Power Query SDK Test Framework is to provide a robust testing solution integrated with the VS Code SDK to test extension connectors. This framework would greatly improve the developer experience for the development of the connectors. It would also bring standardization to rather fragmented test practices, eventually increasing the quality bar and decreasing sustainment efforts of the connectors.
 
 ## Summary of the reference guide
 
 In this guide:
+
 * You gain an understanding of the Power Query SDK Test Framework
 * Learn to set up the development environment by installing the Test Framework
 * Fetch the dataset used in the test suite and upload it to a data source based on your extension connector

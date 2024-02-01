@@ -16,6 +16,7 @@ This multi-part reference covers the setup and running of a standard suite of te
 In this lesson, you will:
 
 > [!div class="checklist"]
+>
 > * Learn to install Power Query SDK extension for Visual Studio Code
 > * Verify that the Power Query SDK Testing Framework is available
 
@@ -35,7 +36,7 @@ Where x.x.x is the current version of Power Query SDK extension.
 
 The SdkTools NuGet package is found under:
 
-<extension path>\.nuget\Microsoft.PowerQuery.SdkTools.2.xxx.x\tools
+<extension_path>\.nuget\Microsoft.PowerQuery.SdkTools.2.xxx.x\tools
 
 If you don't have a ".NuGet" folder, be sure to load a connector workspace in VS Code to trigger the SDK's autodownload mechanism. The SdkTools NuGet contains the Power Query SDK Test Framework. If the NuGet is still not downloaded, then retry the steps after updating the [Power Query SDK for Visual Studio](https://aka.ms/powerquerysdk) extension.
 
