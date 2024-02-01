@@ -22,7 +22,7 @@ In this lesson, you will:
 
 ## Installing Power Query SDK extension
 
-Power Query SDK Testing Framework comes bundled with [Power Query SDK for Visual Studio](https://aka.ms/powerquerysdk). Follow the steps in [Installing the PowerQuery SDK](./../install-sdk.md#installing-the-power-query-sdk) to get it setup for Visual Studio Code.
+Power Query SDK Testing Framework comes bundled with [Power Query SDK for Visual Studio](https://aka.ms/powerquerysdk). Follow the steps in [Installing the PowerQuery SDK](./../../install-sdk.md#installing-the-power-query-sdk) to get it setup for Visual Studio Code.
 
 ## Locate Power Query SDK for VS Code install directory
 
