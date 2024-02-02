@@ -46,7 +46,7 @@ To connect to inwink data:
 
 5. Once the connection is established, you can preview and select Tables within the **Navigator**.
 
-   :::image type="content" source="./media/inwink/navaigate-data.png" alt-text="Screenshot of the tables to select in the Power Query navigator." lightbox="./media/inwink/navigate-data.png":::
+   :::image type="content" source="./media/inwink/navigate-data.png" alt-text="Screenshot of the tables to select in the Power Query navigator." lightbox="./media/inwink/navigate-data.png":::
 
 You can select **Load** on the selected tables, which brings all the tables into Power BI Desktop, or you can select **Transform Data** to edit the query, which opens the Power Query editor. You can then filter and refine the set of data you want to use, and then load that refined set of data into Power BI Desktop.
 
