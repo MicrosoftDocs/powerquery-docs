@@ -39,13 +39,13 @@ To connect to inwink data:
 
 4. Connect using your user email and password.
 
-   :::image type="content" source="./media/inwink/auth2.png" alt-text="screenshot of the second inwink authentiction dialog.":::
+   :::image type="content" source="./media/inwink/auth2.png" alt-text="screenshot of the second inwink authentication dialog.":::
 
 5. Once the connection is established, you can preview and select Tables within the **Navigator**.
 
    :::image type="content" source="./media/inwink/nav-data.png" alt-text="Screenshot of the tables to select in the Power Query navigator." lightbox="./media/inwink/nav-data.png":::
 
-You can **Load** the selected tables, which brings all the tables into Power BI Desktop, or you can select **Transform Data** to edit the query, which opens the Power Query editor. You can then filter and refine the set of data you want to use, and then load that refined set of data into Power BI Desktop.
+You can select **Load** on the selected tables, which brings all the tables into Power BI Desktop, or you can select **Transform Data** to edit the query, which opens the Power Query editor. You can then filter and refine the set of data you want to use, and then load that refined set of data into Power BI Desktop.
 
 ## Limitations and issues
 
