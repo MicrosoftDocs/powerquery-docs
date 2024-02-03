@@ -9,7 +9,7 @@ ms.author: v-ryansyed
 ms.custom:
 ---
 
-# Power Query SDK Testing Framework part 4 - Test Suite
+# Power Query SDK Test Framework part 4 - Test Suite
 
 This multi-part reference covers the setup and running of a standard suite of tests for Power Query connector developers. The reference is meant to be followed sequentially—to ensure that your environment is set up for testing your extension connector.
 
@@ -54,4 +54,4 @@ In the next lesson, you'll learn about the various file formats, and their purpo
 
 ## Next steps
 
-[Power Query SDK Testing Framework part 5 - Test Format Specification](../5-testformat/readme.md)
+[Power Query SDK Test Framework part 5 - Test Format Specification](../5-testformat/readme.md)

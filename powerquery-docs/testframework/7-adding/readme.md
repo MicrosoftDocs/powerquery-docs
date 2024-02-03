@@ -9,7 +9,7 @@ ms.author: v-ryansyed
 ms.custom:
 ---
 
-# Power Query SDK Testing Framework part 7 - Adding your tests and understanding various options
+# Power Query SDK Test Framework part 7 - Adding your tests and understanding various options
 
 This multi-part reference covers the setup and running of a standard suite of tests for Power Query connector developers. The reference is meant to be done sequentially&mdash; to ensure that your environment is setup for testing your custom connector.
 
@@ -49,4 +49,4 @@ In the next lesson, you'll learn to automate running of the tests by setting up 
 
 ## Next steps
 
-[Power Query SDK Testing Framework part 8 - Pipeline Guide](../8-pipeline/readme.md)
+[Power Query SDK Test Framework part 8 - Pipeline Guide](../8-pipeline/readme.md)

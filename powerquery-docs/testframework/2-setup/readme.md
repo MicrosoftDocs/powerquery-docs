@@ -1,5 +1,5 @@
 ---
-title: Power Query SDK Testing Framework Setup guide
+title: Power Query SDK Test Framework Setup guide
 description: Setting up development environment for Power Query SDK Test Framework
 author: ryan-syed
 
@@ -18,11 +18,11 @@ In this lesson, you will:
 > [!div class="checklist"]
 >
 > * Learn to install Power Query SDK extension for Visual Studio Code
-> * Verify that the Power Query SDK Testing Framework is available
+> * Verify that the Power Query SDK Test Framework is available
 
 ## Installing Power Query SDK extension
 
-Power Query SDK Testing Framework comes bundled with [Power Query SDK for Visual Studio](https://aka.ms/powerquerysdk). Follow the steps in [Installing the PowerQuery SDK](./../../install-sdk.md#installing-the-power-query-sdk) to get it setup for Visual Studio Code.
+Power Query SDK Test Framework comes bundled with [Power Query SDK for Visual Studio](https://aka.ms/powerquerysdk). Follow the steps in [Installing the PowerQuery SDK](./../../install-sdk.md#installing-the-power-query-sdk) to get it setup for Visual Studio Code.
 
 ## Locate Power Query SDK for VS Code install directory
 
@@ -30,13 +30,13 @@ Install the Power Query SDK for VS Code and use it to create a new connector pro
 
 The default location of the extension folder is:
 
-%UserProfile%\.vscode\extensions\powerquery.vscode-powerquery-sdk-x.x.x-win32-x64
+`%UserProfile%\.vscode\extensions\powerquery.vscode-powerquery-sdk-x.x.x-win32-x64`
 
-Where x.x.x is the current version of Power Query SDK extension.
+Where `x.x.x`` is the current version of Power Query SDK extension.
 
 The SdkTools NuGet package is found under:
 
-<extension_path>\.nuget\Microsoft.PowerQuery.SdkTools.2.xxx.x\tools
+`<extension_path>\.nuget\Microsoft.PowerQuery.SdkTools.2.xxx.x\tools`
 
 If you don't have a ".NuGet" folder, be sure to load a connector workspace in VS Code to trigger the SDK's autodownload mechanism. The SdkTools NuGet contains the Power Query SDK Test Framework. If the NuGet is still not downloaded, then retry the steps after updating the [Power Query SDK for Visual Studio](https://aka.ms/powerquerysdk) extension.
 

@@ -1,6 +1,6 @@
 ---
-title: Intro to Power Query SDK Testing Framework
-description: Overview of Power Query SDK Testing Framework
+title: Intro to Power Query SDK Test Framework
+description: Overview of Power Query SDK Test Framework
 author: ryan-syed
 
 ms.topic: reference
@@ -18,7 +18,7 @@ In this lesson, you will:
 > [!div class="checklist"]
 >
 > * Learn about the Power Query SDK Test Framework
-> * Goals for creating the test framework
+> * Goals for creating the Test Framework
 > * Summary of the reference guide
 
 ## Overview of Power Query SDK Test Framework
@@ -35,7 +35,7 @@ In this guide:
 
 * You gain an understanding of the Power Query SDK Test Framework
 * Learn to set up the development environment by installing the Test Framework
-* Fetch the dataset used in the test suite and upload it to a data source based on your extension connector
+* Fetch the dataset used in the Test Suite and upload it to a data source based on your extension connector
 * Understand test format specifications that are, the file formats and their functionality within the Test Framework
 * Fetch and run the test suite that contains the tests to validate your extension connector
 * Run individual tests with different configurations

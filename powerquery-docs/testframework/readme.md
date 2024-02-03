@@ -1,5 +1,5 @@
 ---
-title: Power Query SDK Testing Framework reference sequence
+title: Power Query SDK Test Framework reference sequence
 description: Overview and listing of the PowerQuery SDK Testing Framework reference sequence.
 author: ryan-syed
 
@@ -27,7 +27,7 @@ We suggest that you review:
 
 |Part|Lesson                                                   |Details                                                                                                |
 |----|:--------------------------------------------------------|:------------------------------------------------------------------------------------------------------|
-|1   |[Introduction](1-intro/readme.md)                        | What is Power Query SDK Testing Framework                                                             |
+|1   |[Introduction](1-intro/readme.md)                        | What is Power Query SDK Test Framework                                                                |
 |2   |[Setup](2-setup/readme.md)                               | Setup your environment                                                                                |
 |3   |[Preparing Data](3-data/readme.md)                       | Preparing the test data                                                                               |
 |4   |[Test Suite](4-tests/readme.md)                          | Fetching and understanding the Test Suite                                                             |
