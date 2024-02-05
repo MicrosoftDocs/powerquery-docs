@@ -3,7 +3,7 @@ title: Power Query Common Data Service (Legacy) connector
 description: Provides basic information and instructions on connecting to data using the Common Data Service (Legacy) connector.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/24/2024
+ms.date: 2/1/2024
 ms.author: dougklo
 ---
 
@@ -34,17 +34,13 @@ You must have a Common Data Service (Legacy) environment with maker permissions 
   * Reorder columns
   * Add display column
 
-## Connect to Common Data Service (Legacy) from Power BI Desktop
+## Connect to Common Data Service (Legacy) from Power Query Desktop
 
-To connect to Common Data Service (Legacy) from Power BI Desktop:
+To connect to Common Data Service (Legacy) from Power Query Desktop:
 
-1. Select **Get data** from the **Home** tab.
+1. Select **Common Data Service (Legacy)** in the get data experience. The get data experience in Power Query Desktop varies between apps. For more information about the Power Query Desktop get data experience for your app, go to [Where to get data](../where-to-get-data.md).
 
-2. In the **Get Data** dialog box, select **Power Platform** > **Common Data Service (Legacy)**, and then select **Connect**.
-
-   ![Get data in Power BI Desktop.](media/common-data-service/get-data.png)
-
-3. Enter the Common Data Service (Legacy) environment URL of the data you want to load. Use the format https://\<_yourenvironmentid_>.crm.dynamics.com/. More information: [Finding your Dataverse environment URL](#finding-your-common-data-service-legacy-environment-url)
+2. Enter the Common Data Service (Legacy) environment URL of the data you want to load. Use the format https://\<_yourenvironmentid_>.crm.dynamics.com/. More information: [Finding your Dataverse environment URL](#finding-your-common-data-service-legacy-environment-url)
 
    ![Server URL selection.](media/common-data-service/enter-url.png)
 
@@ -54,11 +50,11 @@ To connect to Common Data Service (Legacy) from Power BI Desktop:
 
    When you've finished filling in the information, select **OK**.
 
-4. If this attempt is the first time you're connecting to this site, select **Sign in** and input your credentials. Then select **Connect**.
+3. If this attempt is the first time you're connecting to this site, select **Sign in** and input your credentials. Then select **Connect**.
 
    ![Sign in to this site.](media/common-data-service/sign-in.png)
 
-5. In **Navigator**, select the data you require, then either load or transform the data.
+4. In **Navigator**, select the data you require, then either load or transform the data.
 
    ![Load or transform from navigator.](media/common-data-service/navigator.png)
 
@@ -66,9 +62,9 @@ To connect to Common Data Service (Legacy) from Power BI Desktop:
 
 To connect to Common Data Service (Legacy) from Power Query Online:
 
-1. From the **Data sources** page, select **Common Data Service (Legacy)**.
+1. Select the **Common Data Service (Legacy)** option in the get data experience.  Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../where-to-get-data.md).
 
-   ![Get data from Power Query Online.](media/common-data-service/get-data-online.png)
+   :::image type="content" source="media/common-data-service/get-data-online.png" alt-text="Screenshot of the get data choose data source window in Power Query Online.":::
 
 2. Enter the server URL address of the data you want to load.
 

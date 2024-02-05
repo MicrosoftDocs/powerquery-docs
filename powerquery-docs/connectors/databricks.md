@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for using the Power Qu
 author: DougKlopfenstein
 
 ms.topic: conceptual
-ms.date: 1/24/2024
+ms.date: 2/1/2024
 ms.author: dougklo
 ---
 
@@ -64,13 +64,15 @@ To connect to Databricks from Power Query Desktop, take the following steps:
 
 To connect to Databricks from Power Query Online, take the following steps:
 
-1. In the Get Data experience, select the **Dataflow** category. (Refer to [Creating a dataflow](/power-bi/transform-model/dataflows/dataflows-create) for instructions.) Shortlist the available Databricks connector with the search box. Select the **Databricks** connector for your Databricks SQL Warehouse.
+1. Select the **Databricks** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../where-to-get-data.md).
 
-    ![Image of the Databricks connectors.](./media/databricks/filtered-connectors.png)
+   Shortlist the available Databricks connector with the search box. Select the **Databricks** connector for your Databricks SQL Warehouse.
+
+   ![Image of the Databricks connectors.](./media/databricks/filtered-connectors.png)
 
 2. Enter the **Server hostname** and **HTTP Path** for your Databricks SQL Warehouse. Refer to [Configure the Databricks ODBC and JDBC drivers](/azure/databricks/integrations/bi/jdbc-odbc-bi) for instructions to look up your "Server hostname" and "HTTP Path". You can optionally supply a default catalog and/or database under **Advanced options**.
 
-    ![Connection Settings and Credentials.](./media/databricks/connect-setting-cred.png)
+   ![Connection Settings and Credentials.](./media/databricks/connect-setting-cred.png)
 
 3. Provide your credentials to authenticate with your Databricks SQL Warehouse. There are three options for credentials:
 
