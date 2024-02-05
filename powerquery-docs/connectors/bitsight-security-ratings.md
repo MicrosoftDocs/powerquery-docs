@@ -17,7 +17,7 @@ ms.author: dougklo
 | Item | Description |
 | ------ | ------ |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | API key |
 | Function Reference Document | &mdash; |
 

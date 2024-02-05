@@ -3,7 +3,7 @@ title: Power Query Azure HDInsight on AKS Trino connector
 description: Provides instructions for using the Azure HDInsight on AKS Trino connector, including descriptions of the optional input parameters, and connector limitations.
 author: georgewfisher
 ms.topic: conceptual
-ms.date: 9/21/2023
+ms.date: 1/24/2024
 ms.author: gefisher
 ---
 
@@ -14,7 +14,7 @@ ms.author: gefisher
 |Item|Description|
 |-|-|
 |Release State|Preview|
-|Products|Power BI (Datasets)<br />Power BI (Dataflows)<br />Fabric (Dataflow Gen2)|
+|Products|Power BI (Semantic models)<br />Power BI (Dataflows)<br />Fabric (Dataflow Gen2)|
 |Authentication Types Supported|Organizational account|
 
 ## Prerequisites
@@ -24,7 +24,7 @@ ms.author: gefisher
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI Datasets)
+* DirectQuery (Power BI semantic models)
 * Advanced options
   * Native SQL statement
   * Session properties

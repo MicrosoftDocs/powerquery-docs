@@ -3,7 +3,7 @@ title: Power Query Access database connector
 description: Provides basic information, prerequisites, and connection instructions, along with tips about using the on-premises data gateway and fixing mismatched bit versions.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/18/2024
 ms.author: dougklo
 ---
 
@@ -14,7 +14,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication Types Supported | Anonymous<br/>Windows<br/>Basic<br/>Organizational Account |
 | Function Reference Documentation | [Access.Database](/powerquery-m/access-database) |
 

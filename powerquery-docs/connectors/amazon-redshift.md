@@ -3,7 +3,7 @@ title: Power Query Amazon Redshift connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Amazon Redshift data.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/17/2024
+ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
@@ -14,7 +14,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
 | Authentication Types Supported | Amazon Redshift<br />Basic<br/>Microsoft account<br/>Organizational account |
 
 > [!NOTE]
@@ -27,7 +27,7 @@ ms.author: dougklo
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI Datasets)
+* DirectQuery (Power BI semantic models)
 * Advanced options
   * Provider name
   * Batch size
@@ -96,7 +96,7 @@ The following table describes all of the advanced options you can set in Power Q
 | Advanced option | Description |
 | --------------- | ----------- |
 | Provider Name | Provides an Amazon Resource Name (ARN), which uniquely identifies AWS resources. |
-| Batch size | Specifies the maximum number of rows to retrieve at a time from the server when fetching data. A small number translates into more calls to the server when retrieving a large dataset. A large number of rows may improve performance, but could cause high memory usage. The default value is 100 rows. |
+| Batch size | Specifies the maximum number of rows to retrieve at a time from the server when fetching data. A small number translates into more calls to the server when retrieving a large data set. A large number of rows may improve performance, but could cause high memory usage. The default value is 100 rows. |
 | SQL Statement | For information, go to [Import data from a database using native database query](../native-database-query.md). This option is only available in Power BI Desktop. |
 
 ## Enable Microsoft Entra ID Single Sign-On (SSO) for Amazon Redshift

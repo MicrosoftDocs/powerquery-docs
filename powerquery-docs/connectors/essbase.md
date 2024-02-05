@@ -3,7 +3,7 @@ title: Power Query Essbase connector
 description: Provides basic information and prerequisites for the Essbase connector.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/8/2024 
+ms.date: 1/24/2024 
 ms.author: dougklo
 ---
 
@@ -14,7 +14,7 @@ ms.author: dougklo
 | Item                             | Description                                                                  |
 | -------------------------------- | ---------------------------------------------------------------------------- |
 | Release State                    | General Availability                                                         |
-| Products                         | Power BI (Datasets)                                                          |
+| Products                         | Power BI (Semantic models)                                                   |
 | Authentication Types Supported   | Basic (Username/Password)                                                    |
 | Function Reference Documentation | [Essbase.Cubes](/powerquery-m/essbase-cubes)                                 |
 
@@ -25,7 +25,7 @@ Essbase 11.1.2.x version is supported.
 ## Capabilities Supported
 
 - Import
-- Direct Query (Power BI Datasets)
+- Direct Query (Power BI semantic models)
 - Advanced options
   - Command timeout in minutes
   - Server

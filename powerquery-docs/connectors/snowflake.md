@@ -3,7 +3,7 @@ title: Power Query Snowflake connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Snowflake database, along with native query folding instructions and troubleshooting tips.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/17/2024
+ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
@@ -14,7 +14,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows) |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows) |
 | Authentication Types Supported | Snowflake (Username/Password), Microsoft account (Microsoft Entra ID) |
 | Function Reference Documentation | &mdash; |
 
@@ -24,7 +24,7 @@ ms.author: dougklo
 ## Capabilities Supported
 
 - Import
-- DirectQuery (Power BI Datasets)
+- DirectQuery (Power BI semantic models)
 - Advanced options
   - Specify a text value to use as Role name
   - Relationship columns

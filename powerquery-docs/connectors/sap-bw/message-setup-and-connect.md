@@ -3,7 +3,7 @@ title: Power Query SAP Business Warehouse Message Server connector
 description: Power Query SAP Business Warehouse Message Server connector reference
 author: dougklopfenstein
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/25/2024
 ms.author: dougklo
 ---
 
@@ -17,7 +17,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows) |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows) |
 | Authentication Types Supported | Windows (desktop)<br/>Database (desktop)<br/>Basic (online) |
 | Function Reference Documentation | [SapBusinessWarehouse.Cubes](/powerquery-m/sapbusinesswarehouse-cubes)<br/>[Sapbusinesswarehouseexecutionmode.DataStream](/powerquery-m/sapbusinesswarehouseexecutionmode-type)<br/>[SapBusinessWarehouseExecutionMode.BasXml](/powerquery-m/sapbusinesswarehouseexecutionmode-type)<br/>[SapBusinessWarehouseExecutionMode.BasXmlGzip](/powerquery-m/sapbusinesswarehouseexecutionmode-type) |
 
@@ -43,7 +43,7 @@ When you install, in **Optional setup steps**, make sure you select **Install as
 ## Capabilities Supported
 
 * Import
-* Direct Query (Power BI Datasets)
+* Direct Query (Power BI semantic models)
 * Advanced
   * Language code
   * Execution mode

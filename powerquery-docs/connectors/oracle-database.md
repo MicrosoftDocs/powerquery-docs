@@ -3,7 +3,7 @@ title: Power Query Oracle database connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your Oracle database using the connector.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/17/2024
+ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
@@ -14,7 +14,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication Types Supported | Windows (desktop/online)<br/>Database (desktop)<br/>Basic (online) <br/>Microsoft account (desktop)|
 | Function Reference Documentation | [Oracle.Database](/powerquery-m/oracle-database) |
 
@@ -35,7 +35,7 @@ To connect to an Oracle database with the [on-premises data gateway](/data-integ
 ## Capabilities Supported
 
 * Import
-* DirectQuery (Power BI Datasets)
+* DirectQuery (Power BI semantic models)
 * Advanced options
   * Command timeout in minutes
   * SQL statement
@@ -233,7 +233,7 @@ Once you've selected the advanced options you require, select **OK** in Power Qu
 
 ## Known issues and limitations
 
-Power BI sessions can still be active on your Oracle database for approximately 30 minutes after a dataset refresh to that Oracle database. Only after approximately 30 minutes do those sessions become inactive/removed on the Oracle database. This behavior is by design.
+Power BI sessions can still be active on your Oracle database for approximately 30 minutes after a semantic model refresh to that Oracle database. Only after approximately 30 minutes do those sessions become inactive/removed on the Oracle database. This behavior is by design.
 
 ## Troubleshooting
 

@@ -3,7 +3,7 @@ title: Power Query Microsoft Exchange connector
 description: Provides basic information and connection instructions for the Microsoft Exchange connector
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
@@ -14,12 +14,12 @@ ms.author: dougklo
 | Item | Description |
 | ------- | ---------- |
 | Release State | General Availability |
-| Products | Excel <br/> Power BI (Datasets)<br/> Analysis Services |
+| Products | Excel <br/> Power BI (Semantic models)<br/> Analysis Services |
 | Authentication Types Supported | Exchange account<br/>Microsoft account |
 | Function Reference Documentation | [Exchange.Contents](/powerquery-m/exchange-contents) |
 
 > [!NOTE]
-> The Power Query Microsoft Exchange connector doesn't support scheduled refresh of on-premises data sources in Power BI datasets or Excel.
+> The Power Query Microsoft Exchange connector doesn't support scheduled refresh of on-premises data sources in Power BI semantic models or Excel.
 
 ## Capabilities Supported
 
@@ -27,7 +27,7 @@ ms.author: dougklo
 
 ## Connect to Microsoft Exchange from Power Query Desktop
 
-Power Query Desktop includes Excel, Power BI (Datasets), and Analysis Services as experiences.
+Power Query Desktop includes Excel, Power BI (semantic models), and Analysis Services as experiences.
 
 To make the connection to **Microsoft Exchange**, follow these steps:
 

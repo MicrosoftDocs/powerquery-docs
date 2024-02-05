@@ -3,7 +3,7 @@ title: Best practices for designing and developing complex dataflows
 description: Best practices for designing and developing complex dataflows
 author: bensack
 ms.topic: conceptual
-ms.date: 6/13/2023
+ms.date: 1/26/2024
 ms.author: bensack
 ---
 
@@ -20,7 +20,7 @@ Don't do everything in one dataflow. Not only does a single, complex dataflow ma
 Having some dataflows just for extracting data (that is, [staging dataflows](best-practices-for-dimensional-model-using-dataflows.md#staging-dataflows)) and others just for transforming data is helpful not only for creating a multilayered architecture, it's also helpful for reducing the complexity of dataflows. Some steps just extract data from the data source, such as get data, navigation, and data type changes. By separating the staging dataflows and transformation dataflows, you make your dataflows simpler to develop.
 
 :::image type="complex" source="media/best-practices-developing-complex-dataflows/multi-layered-dataflow.png" alt-text="Multilayered dataflow architecture.":::
-   Image showing data being extracted from a data source to staging dataflows, where the tables are either stored in Dataverse or Azure Data Lake storage. Then the data is moved to transformation dataflows where the data is transformed and converted to the data warehouse structure. Then the data is moved to the dataset.
+   Image showing data being extracted from a data source to staging dataflows, where the tables are either stored in Dataverse or Azure Data Lake storage. Then the data is moved to transformation dataflows where the data is transformed and converted to the data warehouse structure. Then the data is moved to the semantic model.
 :::image-end:::
 
 ## Use custom functions

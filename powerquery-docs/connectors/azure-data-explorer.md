@@ -3,7 +3,7 @@ title: Power Query Azure Data Explorer (Kusto) connector
 description: Includes basic information, prerequisites, and information on how to connect to Azure Data Explorer, along with a list of limitations.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/17/2024
+ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
@@ -14,7 +14,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
 | Authentication Types Supported | Organizational Account |
 | Function Reference Documentation | &mdash; |
 
@@ -30,7 +30,7 @@ ms.author: dougklo
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI Datasets)
+* DirectQuery (Power BI semantic models)
 * Advanced options
   * Limit query result record number
   * Limit query result data size in Bytes

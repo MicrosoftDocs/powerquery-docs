@@ -3,7 +3,7 @@ title: Power Query Azure SQL database connector
 description: Includes basic information and prerequisites, instructions on how to connect to your database, and information about advanced connection options.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
@@ -14,7 +14,7 @@ ms.author: dougklo
 | Item | Description |
 | ------- | ------------|
 |Release state | General Availability |
-| Products supported | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Products supported | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication types supported| Windows (Power BI Desktop, Excel, Power Query Online with gateway)<br/>Database (Power BI Desktop, Excel)<br/>Microsoft Account (all)<br/> Basic (Power Query Online)<br/>Service Principal |
 | Function reference docs | [Sql.Database](/powerquery-m/sql-database)<br/>[Sql.Databases](/powerquery-m/sql-databases) |
 
@@ -28,7 +28,7 @@ By default, Power BI installs an OLE DB driver for Azure SQL database. However, 
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI Datasets)
+* DirectQuery (Power BI semantic models)
 * Advanced options
   * Command timeout in minutes
   * Native SQL statement

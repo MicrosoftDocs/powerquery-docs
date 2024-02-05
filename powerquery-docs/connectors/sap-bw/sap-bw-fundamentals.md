@@ -51,7 +51,7 @@ SAP BW comes with built-in tools for creating data models based on different dat
 
    InfoProviders can be seen as uniform data providers from the viewpoint of a query definition. Their data can therefore be analyzed in a uniform way.
 
-* **InfoCube** is a type of InfoProvider. An InfoCube describes, from an analysis point of view, a self-contained dataset, for a business-orientated area, for example Purchasing. You can analyze an InfoCube directly as an InfoProvider with analysis and reporting tools, including Power BI or Power Platform apps.
+* **InfoCube** is a type of InfoProvider. An InfoCube describes, from an analysis point of view, a self-contained data set, for a business-orientated area, for example Purchasing. You can analyze an InfoCube directly as an InfoProvider with analysis and reporting tools, including Power BI or Power Platform apps.
 
    An InfoCube consists of a set of relational tables that are arranged according to an enhanced star schema. This means there's a (large) fact table that contains the key figures for the InfoCube, and also several (smaller) dimension tables that surround it.
 

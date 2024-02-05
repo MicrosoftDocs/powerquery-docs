@@ -3,7 +3,7 @@ title: Google BigQuery (Azure AD) (Beta)
 description: Provides basic information and prerequisites for the Google BigQuery (Azure AD) connector for Power Query.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/17/2024
+ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
@@ -14,7 +14,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products Supported | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows) |
+| Products Supported | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows) |
 | Authentication Types Supported | Organizational account |
 
 > [!NOTE]
@@ -27,7 +27,7 @@ You need a Microsoft Entra ID account to sign in to Google BigQuery (Azure AD).
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI Datasets)
+* DirectQuery (Power BI Semantic models)
 
 ## Connect to Google BigQuery (Azure AD) data from Power Query Desktop
 
@@ -100,7 +100,7 @@ There are a few limits and considerations to keep in mind when using the Google 
 
 #### Nested fields
 
-To optimize performance considerations, Google BigQuery does well with large datasets when denormalized, flattened, and nested.
+To optimize performance considerations, Google BigQuery does well with large data sets when denormalized, flattened, and nested.
 
 The Google BigQuery (Azure AD) connector supports nested fields, which are loaded as text columns in JSON format.
 

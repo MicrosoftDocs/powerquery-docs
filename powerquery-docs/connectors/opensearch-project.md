@@ -3,7 +3,7 @@ title: Power Query OpenSearchProject Connector
 description: Provides basic information and prerequisites for the OpenSearchProject connector, includes descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
@@ -17,7 +17,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Basic |
 
 ## Prerequisites
@@ -29,7 +29,7 @@ ms.author: dougklo
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI Datasets)
+* DirectQuery (Power BI semantic models)
 
 ## Connect to OpenSearch Project
 

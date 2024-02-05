@@ -4,7 +4,7 @@ description: Within Power Query, you can rename your column given certain condit
 author: ptyx507x
 
 ms.reviewer: dougklo
-ms.date: 12/12/2022
+ms.date: 1/24/2024
 ms.author: miescobar
 
 ---
@@ -12,9 +12,9 @@ ms.author: miescobar
 
 # Rename columns
 
-In Power Query, you can rename columns to format the dataset in a clear and concise way. 
+In Power Query, you can rename columns to format the data set in a clear and concise way.
 
-As an example, let's start with a dataset that has two columns.
+As an example, let's start with a data set that has two columns.
 
 |Column 1|Column 2|
 -------|-----
@@ -63,7 +63,7 @@ With many actions performed in Power Query that might result in a *Column Name C
 
    ![Using the promote rows to headers to showcase the column name disambiguation.](media/rename-column/promote-rows-duplicate-name.png)
 
-   >[!NOTE]
+   > [!NOTE]
    > To learn more about how to promote headers from your first row, go to [Promote or demote column headers](table-promote-demote-headers.md).
 
 * **Expanding a column with a field name that also exists in the current table**: This can happen, for example, when you perform a merge operation and the column with the merged table has field names that also exist in the table. When you try to expand the fields from that column, Power Query automatically tries to disambiguate to prevent *Column Name Conflict* errors.

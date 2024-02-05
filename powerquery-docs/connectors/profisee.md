@@ -5,7 +5,7 @@ author: DougKlopfenstein
 ms.author: dougklo
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/24/2024
 LocalizationGroup: reference
 ---
 
@@ -17,7 +17,7 @@ LocalizationGroup: reference
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Products | Power BI (Semantic models)<br>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Organizational account |
 
 > [!NOTE]

@@ -3,7 +3,7 @@ title: "Create and use dataflows in Microsoft Power Platform"
 description: Learn how to use dataflows in Microsoft Power Platform.
 author: bensack
 ms.topic: conceptual
-ms.date: 6/14/2023
+ms.date: 1/25/2024
 ms.author: bensack
 ---
 
@@ -19,7 +19,7 @@ To make data preparation easier and to help you get more value out of your data,
 
 With dataflows, Microsoft brings the self-service data preparation capabilities of Power Query into the Power BI and Power Apps online services, and expands existing capabilities in the following ways:
 
-* **Self-service data prep for big data with dataflows**: Dataflows can be used to easily ingest, cleanse, transform, integrate, enrich, and schematize data from a large and ever-growing array of transactional and observational sources, encompassing all data preparation logic. Previously, extract, transform, load (ETL) logic could only be included within datasets in Power BI, copied over and over between datasets, and bound to dataset management settings.
+* **Self-service data prep for big data with dataflows**: Dataflows can be used to easily ingest, cleanse, transform, integrate, enrich, and schematize data from a large and ever-growing array of transactional and observational sources, encompassing all data preparation logic. Previously, extract, transform, load (ETL) logic could only be included within semantic models in Power BI, copied over and over between semantic models, and bound to semantic model management settings.
 
   With dataflows, ETL logic is elevated to a first-class artifact within Microsoft Power Platform services, and includes dedicated authoring and management experiences. Business analysts, BI professionals, and data scientists can use dataflows to handle the most complex data preparation challenges and build on each other's work, thanks to a revolutionary model-driven calculation engine. This engine takes care of all the transformation and dependency logic-cutting time, cost, and expertise to a fraction of what's traditionally been required for those tasks. You can create dataflows by using the well-known, self-service data preparation experience of Power Query. Dataflows are created and easily managed in app workspaces or environments, in Power BI or Power Apps, respectively, enjoying all the capabilities these services have to offer, such as permission management and scheduled refreshes.
 

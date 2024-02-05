@@ -4,7 +4,7 @@ description: Includes basic information, prerequisites, and information on how t
 
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/24/2024
 ms.author: dougklo
 
 ---
@@ -16,7 +16,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products | Power BI (Datasets) |
+| Products | Power BI (Semantic models) |
 | Authentication Types Supported | Organizational Account |
 | Function Reference Documentation | &mdash; |
 

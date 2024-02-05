@@ -3,7 +3,7 @@ title: Power Query SQL Server connector
 description: Includes basic information about products that use the connector, supported authentication types, prerequisites, and connection instructions.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/17/2024
+ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
@@ -14,7 +14,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication Types Supported | Database (Username/Password)<br/>Windows<br/>Organizational account (if the specified server supports it) |
 | M Function Reference | [Sql.Database](/powerquery-m/sql-database)<br/>[Sql.Databases](/powerquery-m/sql-databases) |
 
@@ -28,7 +28,7 @@ By default, Power BI installs an OLE DB driver for SQL Server. However, for opti
 ## Capabilities Supported
 
 * Import
-* DirectQuery (Power BI Datasets)
+* DirectQuery (Power BI semantic models)
 * Advanced options
   * Command timeout in minutes
   * Native SQL statement

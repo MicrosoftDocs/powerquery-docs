@@ -5,7 +5,7 @@ author: miquelladeboer
 
 
 ms.topic: overview
-ms.date: 11/16/2021
+ms.date: 1/26/2024
 ms.author: mideboer
 
 ---
@@ -28,11 +28,11 @@ This section discusses some use cases with provided tutorials to help you quicks
 
 * When a dataflow refresh fails, send a message to Azure Service Bus queue to open a support ticket.
 
-[Refresh dataflows and datasets sequentially](trigger-dataflows-and-power-bi-dataset-sequentially.md):
+[Refresh dataflows and semantic models sequentially](trigger-dataflows-and-power-bi-dataset-sequentially.md):
 
 * When you select a button, start a dataflow refresh.
 * When an analytical dataflow refresh succeeds, start a standard dataflow refresh.
-* When a dataflow refresh succeeds, start a Power BI dataset refresh.
+* When a dataflow refresh succeeds, start a Power BI semantic model refresh.
 * When a file in SharePoint is updated, start a dataflow refresh.
 
 Save dataflow refresh metadata and build a dataflows monitoring dashboard:

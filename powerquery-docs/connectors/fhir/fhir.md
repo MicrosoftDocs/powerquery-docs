@@ -3,7 +3,7 @@ title: Power Query connector for FHIR
 description: Power Query connector for FHIR reference
 author: hansenms
 ms.topic: conceptual
-ms.date: 1/17/2024
+ms.date: 1/24/2024
 ms.author: mihansen
 ---
 
@@ -18,7 +18,7 @@ If you don't have a FHIR server, you can provision the [Azure API for FHIR](/azu
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
 | Authentication Types Supported | Anonymous<br/>Organizational account |
 
 > [!NOTE]

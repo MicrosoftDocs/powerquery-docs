@@ -3,7 +3,7 @@ title: Power Query Warehouse (Beta) connector
 description: Provides basic information and connection instructions for connecting to a Warehouse.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 10/30/2023
+ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
@@ -14,8 +14,11 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products | Power BI (Datasets)<br/>Fabric (Dataflow Gen2)|
+| Products | Power BI (Semantic models)<br/>Fabric (Dataflow Gen2)|
 | Authentication types | Organizational account |
+
+> [!NOTE]
+>Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
 
