@@ -3,7 +3,7 @@ title: Behind the scenes of the Data Privacy Firewall
 description: Describes the purpose of the Data Privacy Firewall
 author: ehrenMSFT
 ms.topic: conceptual
-ms.date: 11/3/2023
+ms.date: 2/5/2024
 ms.author: ehvonleh
 ---
 
@@ -240,7 +240,17 @@ Now we perform the static grouping. This maintains separation between partitions
 
 ![Post static-grouping firewall partitions.](media/data-privacy-firewall/firewall-steps-pane-3.png)
 
-Now we enter the dynamic phase. In this phase, the above static partitions are evaluated. Partitions that don't access any data sources are trimmed. Partitions are then grouped to create source partitions that are as large as possible. However, in this sample scenario, all the remaining partitions access data sources, and there isn't any further grouping that can be done. The partitions in our sample thus won't change during this phase.
+Now we enter the dynamic phase. In this phase, the above static partitions are evaluated. Partitions that don't access any data sources are trimmed. Partitions are then grouped to create source partitions that are as large as possible.
+
+### Why the dynamic phase?
+
+While simple references to other partitions can be detected using static analysis, determining what more complex logic does (such as a function invocation) requires evaluating the relevant code, thus the dynamic phase. 
+
+However, during the dynamic phase, a partition cannot simply be evaluated in its entirety, as the firewall is not yet fully initialized so cannot guarantee that undesired cross source folding will be prevented. Instead, evaluation within a partition is performed selectively. Data source functions are identified before logic that could result in data flowing between them is evaluated, and the latter only takes place if the sources’ privacy levels are determined to be compatible. 
+
+During the dynamic phase, conditional expressions that could affect partitioning are evaluated and then rewritten to be fixed. This ensures that, when the larger expression is later evaluated in full, the partition boundaries stay in the correct places. 
+
+In this sample scenario, all the remaining partitions access data sources, and there isn't any further grouping that can be done. The partitions in our sample thus won't change during the dynamic phase.
 
 ### Let's pretend
 
