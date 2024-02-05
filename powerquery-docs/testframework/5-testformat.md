@@ -127,4 +127,4 @@ In the next lesson, you'll create queries and settings to work with your data so
 
 ## Next steps
 
-[Power Query SDK Test Framework part 6 - Testing your extension connector](../6-connector/readme.md)
+[Power Query SDK Test Framework part 6 - Testing your extension connector](../6-connector.md)

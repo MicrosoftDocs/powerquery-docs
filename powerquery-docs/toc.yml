@@ -646,23 +646,23 @@ items:
       - name: Power Query SDK Test Framework
         items:
         - name: "Overview"
-          href: testframework/readme.md
+          href: testframework/test-framework.md
         - name: "Introduction"
-          href: testframework/1-intro/readme.md
+          href: testframework/1-intro.md
         - name: "Setup"
-          href: testframework/2-setup/readme.md
+          href: testframework/2-setup.md
         - name: "Preparing Data"
-          href: testframework/3-data/readme.md
+          href: testframework/3-data.md
         - name: "Test Suite"
-          href: testframework/4-tests/readme.md
+          href: testframework/4-tests.md
         - name: "Test Format Spec"
-          href: testframework/5-testformat/readme.md
+          href: testframework/5-testformat.md
         - name: "Connector Testing"
-          href: testframework/6-connector/readme.md
+          href: testframework/6-connector.md
         - name: "Adding Tests"
-          href: testframework/7-adding/readme.md
+          href: testframework/7-adding.md
         - name: "Pipeline Setup Guide"
-          href: testframework/8-pipeline/readme.md
+          href: testframework/8-pipeline.md
       - name: Concepts
         items:
         - name: "Additional connector functionality"

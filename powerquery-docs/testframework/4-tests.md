@@ -54,4 +54,4 @@ In the next lesson, you'll learn about the various file formats, and their purpo
 
 ## Next steps
 
-[Power Query SDK Test Framework part 5 - Test Format Specification](../5-testformat/readme.md)
+[Power Query SDK Test Framework part 5 - Test Format Specification](../5-testformat.md)

@@ -50,4 +50,4 @@ In the next lesson, you'll set up the development environment for the Testing Fr
 
 ## Next steps
 
-[Power Query SDK Test Framework part 2 - Setup](../2-setup/readme.md)
+[Power Query SDK Test Framework part 2 - Setup](../2-setup.md)

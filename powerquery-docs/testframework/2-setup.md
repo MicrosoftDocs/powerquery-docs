@@ -50,4 +50,4 @@ In the next lesson, you'll learn about the test data that is used by the standar
 
 ## Next steps
 
-[Power Query SDK Test Framework part 3 - Test Data](../3-data/readme.md)
+[Power Query SDK Test Framework part 3 - Test Data](../3-data.md)

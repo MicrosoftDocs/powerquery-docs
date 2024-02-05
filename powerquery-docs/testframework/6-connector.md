@@ -181,4 +181,4 @@ In the next lesson, you'll understand how to add more tests. You're also going t
 
 ## Next steps
 
-[Power Query SDK Test Framework part 7 - Adding your tests and understanding various options](../7-adding/readme.md)
+[Power Query SDK Test Framework part 7 - Adding your tests and understanding various options](../7-adding.md)

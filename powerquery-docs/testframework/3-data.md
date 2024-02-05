@@ -27,8 +27,8 @@ This lesson covers the test data that is used by the test suite to verify your c
 
 The test data used for the framework is a modified version of the [NewYork City Taxi & Limousine Commission (TLC)](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page) green trip record data.
 
-The February 2023 green trip data was converted into "NycTaxiGreen" CSV file and 10,000 rows were sampled from it. Similaryly, "TaxiZoneLookup" CSV file contains 265 rows from the taxi zone lookup table
-CSV data was chosen due to its large applicability to nearly all other data sources, making it easier to import.
+The February 2023 green trip data was converted into "NycTaxiGreen" CSV file and 10,000 rows were sampled from it. Similarly, "TaxiZoneLookup" CSV file contains 265 rows from the taxi zone lookup table.
+CSV data format was chosen due to its large applicability to nearly all other data sources, making it easier to import.
 
 Review the following information carefully before importing the data:
 
@@ -39,6 +39,10 @@ The dataset for our testing is split into two csv files: [NycTaxiGreen](https://
 ### Getting the test data
 
 The test data is placed in the [Data Connectors git repo](https://github.com/microsoft/DataConnectors/tree/master/testframework/data/). Test data is provided in the form of csv along with the [schema definition](https://github.com/microsoft/DataConnectors/tree/master/testframework/data/PQSDKTestFrameworkDataSchema.sql) for [NycTaxiGreen](https://github.com/microsoft/DataConnectors/tree/master/testframework/data/nyc_taxi_tripdata.csv) and [TaxiZoneLookup](https://github.com/microsoft/DataConnectors/tree/master/testframework/data/taxi+_zone_lookup.csv) tables. This data should be loaded to your data source as separate tables and you need to ensure that the schema corresponds to the datatypes defined in your data source.
+
+>[!NOTE]
+> All decimal values while uploading to the datasource should have a **scale of 2** (i.e. the number of digits after the decimal point should be 2).
+> All timestamp values should be uploaded to the datasouce in `MM/DD/YYYY HH24:MI:SS` format.
 
 You can also review additional [details regarding the test data](https://github.com/microsoft/DataConnectors/tree/master/testframework/data/PQSDKTestData.md).
 
@@ -65,16 +69,16 @@ The following table provides further information about each field in the *NycTax
 | DOLocationID                | Integer   | TLC Taxi Zone when the taximeter disengaged                                                                                                                                                              |
 | passenger_count             | Integer   | Number of passengers in vehicle                                                                                                                                                                          |
 | trip_distance               | Double    | Elapsed trip distance in miles                                                                                                                                                                           |
-| fare_amount                 | Double    | Time-and-distance fare. Two decimal places.                                                                                                                                                              |
-| extra                       | Double    | Misc charges. Two decimal places.                                                                                                                                                                        |
-| mta_tax                     | Double    | MTA tax added. Two decimal places.                                                                                                                                                                       |
-| tip_amount                  | Double    | Tip amount. Two decimal places.                                                                                                                                                                          |
-| tolls_amount                | Double    | Total number of tolls paid on the trip. Two decimal places.                                                                                                                                              |
-| improvement_surcharge       | Double    | An improvement surcharge. Two decimal places.                                                                                                                                                            |
-| total_amount                | Double    | Total price charged to customers. Doesn't include tips. Two decimal places.                                                                                                                              |
+| fare_amount                 | Double    | Time-and-distance fare. **Two decimal** places.                                                                                                                                                          |
+| extra                       | Double    | Misc charges. **Two decimal** places.                                                                                                                                                                    |
+| mta_tax                     | Double    | MTA tax added. **Two decimal** places.                                                                                                                                                                   |
+| tip_amount                  | Double    | Tip amount. **Two decimal** places.                                                                                                                                                                      |
+| tolls_amount                | Double    | Total number of tolls paid on the trip. **Two decimal** places.                                                                                                                                          |
+| improvement_surcharge       | Double    | An improvement surcharge. **Two decimal** places.                                                                                                                                                        |
+| total_amount                | Double    | Total price charged to customers. Doesn't include tips. **Two decimal** places.                                                                                                                          |
 | payment_type                | Integer   | A numeric code for how the passenger paid                                                                                                                                                                |
 | trip_type                   | Integer   | A numeric code for whether the taxi was hailed or dispatched                                                                                                                                             |
-| congestion_surcharge        | Double    | An extra charge for congestion. Two decimal places.                                                                                                                                                      |
+| congestion_surcharge        | Double    | An extra charge for congestion. **Two decimal** places.                                                                                                                                                  |
 
 ### TaxiZoneLookup Table Description
 
@@ -95,4 +99,4 @@ In the next lesson, you'll gain an understanding of different sections of the te
 
 ## Next steps
 
-[PowerQuery SDK Test Framework part 4 - Test Suite](../4-tests/readme.md)
+[PowerQuery SDK Test Framework part 4 - Test Suite](../4-tests.md)

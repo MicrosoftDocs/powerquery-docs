@@ -49,4 +49,4 @@ In the next lesson, you'll learn to automate running of the tests by setting up 
 
 ## Next steps
 
-[Power Query SDK Test Framework part 8 - Pipeline Guide](../8-pipeline/readme.md)
+[Power Query SDK Test Framework part 8 - Pipeline Guide](../8-pipeline.md)

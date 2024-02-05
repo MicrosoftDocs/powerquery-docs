@@ -27,11 +27,11 @@ We suggest that you review:
 
 |Part|Lesson                                                   |Details                                                                                                |
 |----|:--------------------------------------------------------|:------------------------------------------------------------------------------------------------------|
-|1   |[Introduction](1-intro/readme.md)                        | What is Power Query SDK Test Framework                                                                |
-|2   |[Setup](2-setup/readme.md)                               | Setup your environment                                                                                |
-|3   |[Preparing Data](3-data/readme.md)                       | Preparing the test data                                                                               |
-|4   |[Test Suite](4-tests/readme.md)                          | Fetching and understanding the Test Suite                                                             |
-|5   |[Test Format Spec](5-testformat/readme.md)               | Understanding various file formats used within the test framework                                     |
-|6   |[Connector Testing](6-connector/readme.md)               | Testing your extension connector                                                                      |
-|7   |[Adding Tests](7-adding/readme.md)                       | Adding your own tests and understanding various options and configurations within the test framework  |
-|8   |[Pipeline Setup Guide](8-pipeline/readme.md)             | Running the tests in pipeline                                                                         |
+|1   |[Introduction](1-intro.md)                               | What is Power Query SDK Test Framework                                                                |
+|2   |[Setup](2-setup.md)                                      | Setup your environment                                                                                |
+|3   |[Preparing Data](3-data.md)                              | Preparing the test data                                                                               |
+|4   |[Test Suite](4-tests.md)                                 | Fetching and understanding the Test Suite                                                             |
+|5   |[Test Format Spec](5-testformat.md)                      | Understanding various file formats used within the test framework                                     |
+|6   |[Connector Testing](6-connector.md)                      | Testing your extension connector                                                                      |
+|7   |[Adding Tests](7-adding.md)                              | Adding your own tests and understanding various options and configurations within the test framework  |
+|8   |[Pipeline Setup Guide](8-pipeline.md)                    | Running the tests in pipeline                                                                         |
