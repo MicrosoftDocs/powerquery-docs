@@ -7,10 +7,9 @@ ms.topic: conceptual
 ms.date: 1/26/2024 
 
 ---
-
 # Overview of solution-aware dataflows
 
-When you include your dataflows in a solution, their definitions become portable, making it easier to move them from one environment to another, saving time required to author the dataflow.
+When you include your dataflows in a solution, their definitions become portable, making it easier to move them from one environment to another, saving the time required to author the dataflow.
 
 A typical use case is for an independent software vendor (ISV) to develop a solution containing a dataflow that extracts and transforms data from a data source to Dataverse tables, in a sandbox environment. The ISV would then move that dataflow and destination tables to a test environment to test with their test data source to validate that the solution works well and is ready for production. After testing completes, the ISV would provide the dataflow and tables to clients who will import them into their production environment to operate on client’s data. This process is much easier when you add both the dataflows and tables they load data to into solutions, and then move the solutions and their contents between environments.
 
