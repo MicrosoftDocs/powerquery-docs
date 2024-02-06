@@ -15,7 +15,7 @@ ms.author: dougklo
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
-| Authentication types | Organizational account<br/>Service Principal |
+| Authentication types | Organizational account<br/>Service principal |
 
 > [!NOTE]
 > The service principal authentication type isn't supported when using an on-premises data gateway or a virtual network (VNet) data gateway.
@@ -34,7 +34,7 @@ To use the Dataverse connector, the **TDS endpoint** setting must be enabled in 
 To use the Dataverse connector, one of TCP ports 1433 or 5558 need to be open to connect. Port 1433 is used automatically. However, if port 1433 is blocked, you can use port 5558 instead. To enable port 5558, you must append that port number to the Dataverse environment URL, such as *yourenvironmentid.crm.dynamics.com, 5558*. More information: [SQL Server connection issue due to closed ports](#sql-server-connection-issue-due-to-closed-ports)
 
 > [!NOTE]
-> If you're using Power BI Desktop and need to use port 5558, you must create a source with the Dataverse environment URL, such as *yourenvironmentid.crm.dynamics.com,5558*, in Power Query M.
+> If you're using Power BI Desktop and need to use port 5558, you must create a source with the Dataverse environment URL, such as *yourenvironmentid.crm.dynamics.com,5558*, in Power Query M. More information: [Finding your Dataverse environment URL](#finding-your-dataverse-environment-url)
 
 ## Capabilities supported
 
@@ -175,7 +175,7 @@ Power BI semantic models contained in Dataverse can be very large. If you're usi
 
 If you're using the [Common Data Service (Legacy)](common-data-service-legacy.md) connector, you can use a single query to access all of the data in the semantic model. This connector works differently and returns the result in "pages" of 5-K records. Although the Common Data Service (Legacy) connector is more efficient in returning large amounts of data, it can still take a significant amount of time to return the result.
 
-Instead of using these connectors to access large semantic models, we recommend that you use [Azure Synapse Link](/powerapps/maker/data-platform/export-to-data-lake) to access large models. Using Azure Synapse Link is even more efficient that either the Power Query Dataverse or Common Data Service (Legacy) connectors, and is specifically designed around data integration scenarios.
+Instead of using these connectors to access large semantic models, we recommend that you use [Azure Synapse Link](/powerapps/maker/data-platform/export-to-data-lake) to access large models. Using Azure Synapse Link is even more efficient than either the Power Query Dataverse or Common Data Service (Legacy) connectors, and is specifically designed around data integration scenarios.
 
 ### Performance issues related to relationship columns
 
