@@ -119,19 +119,24 @@ Microsoft Entra ID (Organizational account) authentication is only supported in 
 
 Note that in Power BI service, the Microsoft Entra ID authentication method shows up as "OAuth2".
 
-### Configuring SQLTrustedServers setting when utilizing On-premises Data Gateway or Power BI Desktop
+### Configure SQLTrustedServers setting when using an on-premises data gateway or Power BI Desktop
 
-While establishing a connection to an on-premises SQL Server using the On-premises Data Gateway or Power BI Desktop, and the SQL Server utilizes a self-signed certificate, it is possible that the refresh operation for the Fabric Semantic Model or Dataflow fails with the following error message:
+When establishing a connection to an on-premises SQL Server using the on-premises data gateway or Power BI Desktop and the SQL Server utilizes a self-signed certificate, it's possible that the refresh operation for the Fabric semantic model or dataflow can fail with the following error message:
 
 ```Microsoft SQL: A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The certificate chain was issued by an authority that is not trusted.)```
 
-To troubleshoot this error, update the Gateway configurations to update the SqlTrustedServers setting by following the steps below: 
-1.	On the local machine where the On-premises Data Gateway is installed, navigate to C:\Program Files\On-premises data gateway.
-2.	Make a backup of the configuration file named:  Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config.
-3.	Edit the original Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config configuration file.
-4.	Locate the SqlTrustedServers entry and update its value with the SQL servers to trust and connect. 
-5.	The value contains a comma-delimited list of server names and supports “*” as a wild card.  So for instance in the example: <setting name="SqlTrustedServers" serializeAs="String"> <value>montegoref*,mysvr</value> </setting> , the value “montegoref*,mysvr” will match “montegoref6”, “montegorefazure” and “mysvr” but will not match mysvr.microsoft.com.
+To troubleshoot this error, change the gateway configurations to update the `SqlTrustedServers` setting using the following steps:
 
+1. On the local machine where the on-premises data gateway is installed, navigate to C:\Program Files\On-premises data gateway.
+2. Make a backup of the configuration file named Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config.
+3. Open the original Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config configuration file and locate the `SqlTrustedServers` entry.
+4. Update the `SqlTrustedServers` value with the names of the SQL servers to trust and connect to.
+
+   The value contains a comma-delimited list of server names and supports **\*** as a wild card. So for instance in the following example:
+
+   `<setting name="SqlTrustedServers" serializeAs="String"> <value>montegoref*,mysvr</value> </setting>`
+
+   the value `montegoref*,mysvr` matches `montegoref6`, `montegorefazure`, and `mysvr`, but doesn't match `mysvr.microsoft.com`.
 
 ## Next steps
 
