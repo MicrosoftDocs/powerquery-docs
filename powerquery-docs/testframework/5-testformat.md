@@ -23,7 +23,7 @@ In this lesson, you will:
 
 ## Specification for Tests in PQ/PQOut format
 
-The tests for verifying extension connectors with the PQSDK Test Framework should be written in PQ/PQOut Format.  
+The tests for verifying extension connectors with the Power Query SDK Test Framework should be written in PQ/PQOut Format.  
 
 Following are the types of files that you need to be aware of while working with Power Query SDK Test Framework:
 
@@ -35,7 +35,7 @@ Following are the types of files that you need to be aware of while working with
 
 ### Test Query File also known as PQ file with .query.pq extension
 
-The Test Query File (.query.pq) file contains a single Power Query M formula language query. The mashup query is composed of variables, expressions, and values encapsulated by a let expression with custom connector Data Source function name and required meta data to execute.
+The Test Query File (*".query.pq"*) file contains a single Power Query M formula language query. The mashup query is composed of variables, expressions, and values encapsulated by a let expression with custom connector Data Source function name and required meta data to execute.
 
 ```powerquery-m
 let
@@ -51,7 +51,7 @@ in
 
 ### Output File also known as PQOut file with *".query.pqout"* extension
 
-The Output File (.query.pqout) contains the generated output as a result of running “compare” command for a test.
+The Output File (*".query.pqout"*) contains the generated output as a result of running “compare” command for a test.
 
 *Example for an Output File (PQOut) [Ex: SnowflakeFirstNTests.query.pqout]:*
 
@@ -63,7 +63,7 @@ The Output File (.query.pqout) contains the generated output as a result of runn
 
 To make the test cases, run independently of the data source, support for PQ/test query file can be split into two parts: the parameter query file, and the test query file.  
 
-The Parameter query is data source specific and retrieves test data from data source and is specific to a data source. If you would like to run the tests for another connector, the connector developer needs to update this file to point to that specific data source.
+The Parameter query is data source specific and retrieves test data from the data source. If you would like to run the tests for another connector, the connector developer needs to update this file to point to that specific data source.
 
 *Example for a Parameter Query File [Ex: Taxi.parameterquery.pq]:*
 
@@ -92,9 +92,9 @@ in
 
 ### Optional Settings file with *".settings"* extension
 
-The optional settings file is a Json file, which allows the command line parameters as key value pairs.
+The optional settings file is a Json file, which contains the configuration parameters as key value pairs.
 
-*Example for a Settings Files when the optional parameter query file is specified:*
+*Example for a Settings Files when the optional parameter query file specified:*
 
 ```json
 {
@@ -107,7 +107,7 @@ The optional settings file is a Json file, which allows the command line paramet
 
 ### Optional Diagnostics file with *".diagnostics"* extension
 
-The optional diagnostic file contains a list of Command Text that gets generated when an M Query is folded. Use it for regression testing of Query folding.  
+The optional diagnostic file contains a list of Command Text that get generated when an M Query is folded. Use it for regression testing of Query folding.  
 
 *Example for a diagnostic file [Ex: SnowflakeFirstNTestSettings.diagnostics]:*
 
@@ -127,4 +127,4 @@ In the next lesson, you'll create queries and settings to work with your data so
 
 ## Next steps
 
-[Power Query SDK Test Framework part 6 - Testing your extension connector](../6-connector.md)
+[Power Query SDK Test Framework part 6 - Testing your extension connector](./6-connector.md)

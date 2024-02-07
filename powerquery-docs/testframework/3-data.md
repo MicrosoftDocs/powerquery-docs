@@ -99,4 +99,4 @@ In the next lesson, you'll gain an understanding of different sections of the te
 
 ## Next steps
 
-[PowerQuery SDK Test Framework part 4 - Test Suite](../4-tests.md)
+[PowerQuery SDK Test Framework part 4 - Test Suite](./4-tests.md)

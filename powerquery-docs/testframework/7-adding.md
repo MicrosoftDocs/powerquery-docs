@@ -39,7 +39,7 @@ Below are sample instructions on how custom tests can be added:
 
 [TODO: pqtest.md link]
 
-You can refer [pqtest.md]() for various options and examples while running the compare command.
+You can refer [pqtest.md](TBD) for various options and examples while running the compare command.
 
 ## Conclusion
 
@@ -49,4 +49,4 @@ In the next lesson, you'll learn to automate running of the tests by setting up 
 
 ## Next steps
 
-[Power Query SDK Test Framework part 8 - Pipeline Guide](../8-pipeline.md)
+[Power Query SDK Test Framework part 8 - Pipeline Guide](./8-pipeline.md)

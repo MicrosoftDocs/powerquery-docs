@@ -15,10 +15,10 @@ This multi-part reference covers the setup and running of a standard suite of te
 
 So far, you're done with the following steps:
 
-* Set up the environment
-* Uploaded the test data
-* Set up the test suite, and
-* Are familiar with various file formats and their functionality
+* Setting up the environment
+* Uploading the test data
+* Downloading the test suite, and
+* Aware of various file formats and their functionality
 
 You're finally ready to start verifying your extension connector with the test suite.
 
@@ -37,10 +37,12 @@ In this lesson, you will:
 
 Navigate to the `testframework\tests` and open the `RunPQSDKTestSuitesSettings.json` file in cloned repo folder and set the following values:
 
-```PowerShell
-// Set the paths for PQTest.exe wand Extension in the config
-"PQTestExePath":"<Replace with the path to PQTest.exe. Ex: 'C:\\Users\\ContosoUser\\.vscode\\extensions\\powerquery.vscode-powerquery-sdk-0.2.3-win32-x64\\.nuget\\Microsoft.PowerQuery.SdkTools.2.114.4\\tools\\PQTest.exe'>",
-$Extension = "<Replace with path to the extension mez file Ex: C:\\dev\\ConnectorName\\ConnectorName.mez'>"
+[TODO: The extension path seems wrong]
+
+```json
+// Set the paths for PQTest.exe and Extension in the config
+"PQTestExePath":"<Replace with the path to PQTest.exe. Ex: 'C:\\Users\\ContosoUser\\.vscode\\extensions\\powerquery.vscode-powerquery-sdk-x.x.x-win32-x64\\.nuget\\Microsoft.PowerQuery.SdkTools.x.xxx.x\\tools\\PQTest.exe'>",
+"ExtensionPath":"<Replace with path to the extension mez file Ex: C:\\dev\\ConnectorName\\ConnectorName.mez'>"
 ```
 
 > [!NOTE]
@@ -48,7 +50,7 @@ $Extension = "<Replace with path to the extension mez file Ex: C:\\dev\\Connecto
 
 ## Update parameter queries and settings file with the details specific to your data source extension connector
 
-Running the PowerShell script `.\RunPQSDKTestSuites.ps1` creates the parameter queries and test Settings by creating a folder with the `<extension name>` and `Settings` & `ParameterQueries` folders under it.
+Running the PowerShell script `.\RunPQSDKTestSuites.ps1` creates the parameter queries and test Settings by creating a folder with the `<Extension Name>` and `Settings` & `ParameterQueries` folders under it.
 
 ```PowerShell
 - testframework\tests\ConnectorConfigs\<Extension Name>\ParameterQueries
@@ -75,24 +77,26 @@ Ensure the credentials are set up for your connector following the instructions 
 Alternatively, use this `credential-template` command to generate a credential template in json format for your connector that can be passed into the `set-credential` command. Refer the [credential-template](https://dev.azure.com/powerbi/Power%20Query/_git/PowerQuerySdkTools?path=/Tools/PQTest/pqtest.md&_a=preview&version=GBmain&anchor=credential-template)  section in the pqtest.md file on the usage to set up the credentials for your connector.
 
 ```PowerShell
-<Path to PQText.exe> credential-template -e <Path to Extension.exe> -q "<Replace with path to any parameter query file>" --prettyPrint --authenticationKind <Specify the authentication kind (Anonymous, UsernamePassword, Key, Windows, OAuth2)>
+<Path to PQTest.exe>.\PQTest.exe credential-template -e <Path to Extension.exe> -q "<Replace with path to any parameter query file>" --prettyPrint --authenticationKind <Specify the authentication kind (Anonymous, UsernamePassword, Key, Windows, OAuth2)>
 Example:
 C:\Users\ContosoUser\.vscode\extensions\powerquery.vscode-powerquery-sdk-0.2.3-win32-x64\.nuget\Microsoft.PowerQuery.SdkTools.2.114.4\tools\PQTest.exe credential-template -e "C:\dev\Contoso\Contoso.mez" -q "C:\dev\DataConnectors\testframework\tests\TestSuites\ParameterQueries\Contoso\Contoso.parameterquery.pq" --prettyPrint --authenticationKind UsernamePassword
 ```
 
-Take the output from the above command and replace the Username and Password values with correct credentials and save  it as json file (Ex: contoso_cred.json).
+Take the output from the above command and replace the placeholder values with correct credentials and save it as json file (Ex: contoso_cred.json).
 
 Then, use this `set-credential` command to store credentials that is used by the `compare` commands to run the tests. Using the existing PowerShell window, set the credentials for your extension using the json credential file generated in the previous step. Refer the [set-credential](https://dev.azure.com/powerbi/Power%20Query/_git/PowerQuerySdkTools?path=/Tools/PQTest/pqtest.md&_a=preview&version=GBmain&anchor=set-credential) section in pqtest.md file on the usage to set up the credentials for your connector.
 
 ```PowerShell
-Get-Content "<Replace with path to the json credential file>" | & $PQTestExe set-credential -e "$Extension" -q "<Replace with the path to any parameter query file>
+$PQTestExe = "C:\Users\ContosoUser\.vscode\extensions\powerquery.vscode-powerquery-sdk-x.x.x-win32-x64\.nuget\Microsoft.PowerQuery.SdkTools.x.xxx.x\tools\PQTest.exe"
+$Extension = "C:\dev\Contoso\Contoso.mez"
+Get-Content "<Replace with path to the json credential file>" | & $PQTestExe set-credential -e $Extension -q "<Replace with the path to any parameter query file>"
 Example:
-Get-Content "C:\dev\Misc\contoso_cred.json" | C:\Users\ContosoUser\.vscode\extensions\powerquery.vscode-powerquery-sdk-0.2.3-win32-x64\.nuget\Microsoft.PowerQuery.SdkTools.2.114.4\tools\PQTest.exe  set-credential -p -e "$Extension" -q "C:\dev\DataConnectors\testframework\tests\TestSuites\Contoso\ParameterQueries\Contoso.parameterquery.pq"
+Get-Content "C:\dev\Misc\contoso_cred.json" | & C:\Users\ContosoUser\.vscode\extensions\powerquery.vscode-powerquery-sdk-x.x.x-win32-x64\.nuget\Microsoft.PowerQuery.SdkTools.x.xxx.x\tools\PQTest.exe  set-credential -p -e "C:\dev\Contoso\Contoso.mez" -q "C:\dev\DataConnectors\testframework\tests\TestSuites\Contoso\ParameterQueries\Contoso.parameterquery.pq"
 ```
 
 ## Validate the test data is set up correctly by running the Sanity Tests
 
-To ensure that the changes are working and the data setup is done correctly, run Sanity Tests as:
+To ensure that the changes are working and the data setup is done correctly, run Sanity Tests using the `RunPQSDKTestSuites.ps1` utility present in the `testframework\tests\TestSuites` directory as follows:
 
 ```PowerShell
 # Run the Sanity Tests
@@ -120,7 +124,7 @@ Total Tests: 6 | Passed: 6 | Failed: 0 | Total Duration: 00d:00h:00m:01s
 
 ### Run using RunPQSDKTestSuites.ps1 utility
 
-To run all the Sanity & Standard Tests or a set of tests defined by settings file, use the `RunPQSDKTestSuites.ps1` utility present in the `testframework\tests\TestSuites` directory. Using the same PowerShell window, run the below command to execute the tests:
+To run all the Sanity & Standard Tests or a set of tests defined by settings file run the following command to execute the tests:
 
 ```PowerShell
 # Run all the Sanity & Standard Tests
@@ -148,7 +152,7 @@ Example:
 ```
 
 [TODO: Is pqtest.md going to be a part of DataConnectors repo]
-Review the documentation in [pqtest.md](https://dev.azure.com/powerbi/Power%20Query/_git/DataConnectors?path=/PowerQuerySDKTestFramework/docs/PowerQuerySdkTools/Tools/PQTest/pqtest.md&_a=preview&version=GBmaster) in the [DataConnectors repo](https://github.com/microsoft/DataConnectors/) for more information on running tests with PQTest.exe.
+Review the documentation in [pqtest.md](TBD) in the [DataConnectors repo](https://github.com/microsoft/DataConnectors/) for more information on running tests with PQTest.exe.
 
 ## Running query folding tests
 
@@ -181,4 +185,4 @@ In the next lesson, you'll understand how to add more tests. You're also going t
 
 ## Next steps
 
-[Power Query SDK Test Framework part 7 - Adding your tests and understanding various options](../7-adding.md)
+[Power Query SDK Test Framework part 7 - Adding your tests and understanding various options](./7-adding.md)

@@ -18,9 +18,9 @@ In this lesson, you will:
 > [!div class="checklist"]
 >
 > * Download the test suite
-> * Learn about the different section of the suite
+> * Learn about the different sections of the suite
 
-Next you would need the Test Suite to:
+You need the Test Suite to:
 
 * Verify that the dataset is uploaded correctly, and
 * Validate your connector.
@@ -30,11 +30,11 @@ Next you would need the Test Suite to:
 To ensure that you can run tests included in test framework, the below prerequisites must be completed:
 
 * Clone the [DataConnectors](https://github.com/microsoft/DataConnectors) repo.
-* Load the provided [test data](https://github.com/microsoft/DataConnectors/tree/master/testframework/data/) in the data source. This step was discussed in the previous section. If you not completed, refer to [Power Query SDK Test Framework part 3 - Test Data](../3-data/readme.md) section and come back to this page once done.
+* Load the provided [test data](https://github.com/microsoft/DataConnectors/tree/master/testframework/data/) in the data source. This step was discussed in the previous section. If you not completed, refer to [Power Query SDK Test Framework part 3 - Test Data](../3-data.md) section and come back to this page once done.
 
 ### DataConnectors repo and the test suite
 
-The [tests](https://github.com/microsoft/DataConnectors/tree/master/testframework/tests) are part of the [DataConnectors repo](https://github.com/microsoft/DataConnectors). Refer the [DataConnectors README](https://github.com/microsoft/DataConnectors/blob/master/README.md) for information on Custom Connectors built with the Power Query SDK and how to build the projects in the repo.
+The [tests](https://github.com/microsoft/DataConnectors/tree/master/testframework/tests) are part of the [DataConnectors repo](https://github.com/microsoft/DataConnectors).
 
 ### PQ SDK Test Framework - Test Suites
 
@@ -44,7 +44,7 @@ The test suite consists of the following tests:
 
 **Sanity**: The [sanity test set](https://github.com/microsoft/DataConnectors/tree/master/testframework/tests/TestSuites/Sanity) validates that the tests are able to connect to the data source and the test tables with correct schema exist in the datasource. There are also tests that validate the rowcount and data of NYCTaxiGreen and TaxiZoneLookup tables in the datasource.
 
-**Standard**: The [standard set](https://github.com/microsoft/DataConnectors/tree/master/testframework/tests/TestSuites/Standard) contains various tests needed to validate the connector. There are tests to test the datatypes, and functions/operators for Math, Date, Time, Text etc. There are also tests to validate joins between the two tables as well.
+**Standard**: The [standard set](https://github.com/microsoft/DataConnectors/tree/master/testframework/tests/TestSuites/Standard) contains various tests needed to validate the connector. There are tests to validate the datatypes, and functions/operators for Math, Date, Time, Text etc. There are also tests to validate joins between the two tables as well.
 
 ## Conclusion
 
@@ -54,4 +54,4 @@ In the next lesson, you'll learn about the various file formats, and their purpo
 
 ## Next steps
 
-[Power Query SDK Test Framework part 5 - Test Format Specification](../5-testformat.md)
+[Power Query SDK Test Framework part 5 - Test Format Specification](./5-testformat.md)
