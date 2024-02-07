@@ -59,7 +59,7 @@ To make the connection, take the following steps:
 
    ![SQL Server database encryption support.](./media/sql-server-database/encryption-warning.png)
 
-    Select **OK** to connect to the database by using an unencrypted connection, or follow these [instructions](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine) to setup encrypted connections to SQL Server.
+    Select **OK** to connect to the database by using an unencrypted connection, or follow these [instructions](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine) to setup encrypted connections to SQL Server. Additionally, when encryption is enabled for SQL servers using self-signed certifacates, review this [section](#sql-server-certificate-isnt-trusted-on-the-client-power-bi-desktop-or-on-premises-data-gateway) to add the SQL servers to the Power Query Desktop client's trust list.
 
 6. In **Navigator**, select the database information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
 
