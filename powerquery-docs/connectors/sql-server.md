@@ -127,9 +127,9 @@ When establishing a connection to an on-premises SQL Server using the on-premise
 
 To troubleshoot this error, change the gateway configurations to update the `SqlTrustedServers` setting using the following steps:
 
-1. On the local machine where the on-premises data gateway is installed, navigate to C:\Program Files\On-premises data gateway.
-2. Make a backup of the configuration file named Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config.
-3. Open the original Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config configuration file and locate the `SqlTrustedServers` entry.
+1. On the local machine where the on-premises data gateway is installed, navigate to **C:\Program Files\On-premises data gateway**.
+2. Make a backup of the configuration file named **Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config**.
+3. Open the original **Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config** configuration file and locate the `SqlTrustedServers` entry.
 4. Update the `SqlTrustedServers` value with the names of the SQL servers to trust and connect to.
 
    The value contains a comma-delimited list of server names and supports **\*** as a wild card. So for instance in the following example:
