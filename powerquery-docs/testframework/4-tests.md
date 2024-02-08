@@ -30,7 +30,7 @@ You need the Test Suite to:
 To ensure that you can run tests included in test framework, the below prerequisites must be completed:
 
 * Clone the [DataConnectors](https://github.com/microsoft/DataConnectors) repo.
-* Load the provided [test data](https://github.com/microsoft/DataConnectors/tree/master/testframework/data/) in the data source. This step was discussed in the previous section. If you not completed, refer to [Power Query SDK Test Framework part 3 - Test Data](../3-data.md) section and come back to this page once done.
+* Load the provided [test data](https://github.com/microsoft/DataConnectors/tree/master/testframework/data/) in the data source. This step was discussed in the previous section. If you not completed, refer to [Power Query SDK Test Framework part 3 - Test Data](./3-data.md) section and come back to this page once done.
 
 ### DataConnectors repo and the test suite
 
