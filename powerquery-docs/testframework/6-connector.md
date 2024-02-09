@@ -133,6 +133,14 @@ Example:
 PS C:\dev\DataConnectors\testframework\tests\TestSuites> .\RunPQSDKTestSuites.ps1
 ```
 
+To know more about the `RunPQSDKTestSuites.ps1` utility, run the `Get-Help` command as:
+
+```PowerShell
+Get-help .\RunPQSDKTestSuites.ps1 -Detailed
+Example:
+PS C:\dev\DataConnectors\testframework\tests\TestSuites> Get-help .\RunPQSDKTestSuites.ps1 -Detailed
+```
+
 ### Run using the PQTest.exe
 
 Use the below command in the same PowerShell window to run a particular tests directly using PQTest.exe:
