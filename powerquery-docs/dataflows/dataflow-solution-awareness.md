@@ -92,7 +92,7 @@ For security reasons, credentials of connections used by dataflows aren't persis
 * Dataflows can't use connection references for any connector.
 * Environment variables can't be used by dataflows.
 * Dataflows don't support adding required components, such as custom tables they load data to. Instead, the custom table should be manually added to the solution.
-* Dataflows can't be deployed by application users (service principals). The solution will import, but the imported dataflows can't be edited or reassigned.
-* Dataflows deployed by a guest user can't be reassigned. Only the guest user importing the solution will be able to edit the dataflow.
+* Dataflows can't be deployed by application users (service principals).
+* Dataflows can't be deployed by guest users.
 * Incremental refresh configuration isnt supported when deploying solutions. After deployment of the dataflow via solution, the incremental refresh configuration should be reapplied.
 * Linked tables to other dataflows aren't supported when deploying solutions. After deployment of the dataflow via solution, please edit the dataflow and edit the connection to the linked dataflow.
