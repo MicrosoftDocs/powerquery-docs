@@ -3,7 +3,7 @@ title: OLE DB Power Query Data Connector
 description: Provides basic information and connection instructions for the OLE DB connector.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
@@ -14,7 +14,7 @@ ms.author: dougklo
 | Item | Description |
 | ------- | ---------- |
 | Release State | General Availability |
-| Products | Excel <br/> Power BI (Datasets)<br/> Analysis Services |
+| Products | Excel <br/> Power BI (Semantic modelss)<br/> Analysis Services |
 | Authentication Types Supported | Exchange account<br/>Microsoft account |
 | Function Reference Documentation | [Exchange.Contents](/powerquery-m/exchange-contents) |
 
@@ -27,7 +27,7 @@ ms.author: dougklo
 
 ## Connect to OLE DB from Power Query Desktop
 
-Power Query Desktop includes Excel, Power BI (Datasets), and Analysis Services as experiences.
+Power Query Desktop includes Excel, Power BI (semantic models), and Analysis Services as experiences.
 
 To make the connection to **OLE DB**, follow these steps:
 

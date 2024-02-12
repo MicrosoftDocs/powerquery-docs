@@ -43,7 +43,7 @@ The **Execution mode** option specifies the MDX interface is used to execute que
 
 ## Batch size
 
-Specifies the maximum number of rows to retrieve at a time when executing an MDX statement. A small number translates into more calls to the server when retrieving a large dataset. A large number of rows may improve performance, but could cause memory issues on the SAP BW server. The default value is 50000 rows.
+Specifies the maximum number of rows to retrieve at a time when executing an MDX statement. A small number translates into more calls to the server when retrieving a large data set. A large number of rows may improve performance, but could cause memory issues on the SAP BW server. The default value is 50000 rows.
 
 ## MDX Statement
 
@@ -75,7 +75,7 @@ The SAP BW connector will display a preview of the data that is returned by the 
 
 To validate and troubleshoot an MDX statement, SAP BW provides the *MDXTEST* transaction for SAP GUI for Windows users. Further, the MDXTEST transaction can be a useful tool for analyzing server errors or performance concerns as a result of processing that occurs within the SAP BW system.
 
-For more detailed information on this transaction, go to [MDX Test Environment](https://help.sap.com/viewer/64e2cdef95134a2b8870ccfa29cbedc3/7.3.15/en-US/19fdd486b13c43e2ad9f562a3222a480.html). 
+For more detailed information on this transaction, go to [MDX Test Environment](https://help.sap.com/viewer/64e2cdef95134a2b8870ccfa29cbedc3/7.3.15/en-US/19fdd486b13c43e2ad9f562a3222a480.html).
 
 ![Troubleshooting an MDX statement with MDXTEST in the SAPGUI.](mdxtest-in-sapgui.png)
 
@@ -106,5 +106,5 @@ If selected, the connector produces only the available measures. For example:
 ### See also
 
 * [Navigate the query objects](navigate-query-objects.md)
-* [Transform and filter SAP BW dataset](transform-filter-sap-bw-data.md)
+* [Transform and filter SAP BW data set](transform-filter-sap-bw-data.md)
 * [SAP Business Warehouse connector troubleshooting](sap-bw-troubleshooting.md)

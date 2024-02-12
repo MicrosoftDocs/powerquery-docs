@@ -3,7 +3,7 @@ title: Troubleshooting the Power Query Web connector
 description: Provides troubleshooting tips for errors that might occur when using the Power Query Web connector to connect to a web site.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/17/2024
 ms.author: dougklo
 ---
 
@@ -62,7 +62,7 @@ How can you tell if a page is dynamic? Usually it's pretty simple. Open the page
 
 ## Using a gateway with the Web connector
 
-Both [Web.BrowserContents](/powerquery-m/web-browsercontents) and [Web.Page](/powerquery-m/web-page) require the use of an on-premises data gateway when published to a cloud service, such as Power BI datasets or dataflows, or Power Apps dataflows. (Currently, Dynamics 365 Customer Insights doesn't support the use of a gateway.)
+Both [Web.BrowserContents](/powerquery-m/web-browsercontents) and [Web.Page](/powerquery-m/web-page) require the use of an on-premises data gateway when published to a cloud service, such as Power BI semantic models or dataflows, or Power Apps dataflows. (Currently, Dynamics 365 Customer Insights doesn't support the use of a gateway.)
 
 If you're using [Web.Page](/powerquery-m/web-page) and receive a `Please specify how to connect` error, ensure that you have Internet Explorer 10 or later installed on the machine that hosts your on-premises data gateway. 
 
@@ -140,7 +140,7 @@ In some cases, you may need to change the authentication method you use to acces
 
 ## Authenticating to arbitrary services
 
-Some services support the ability for the Web connector to authenticate with OAuth/AAD authentication out of the box. However, this won't work in most cases.
+Some services support the ability for the Web connector to authenticate with OAuth/Microsoft Entra ID authentication out of the box. However, this won't work in most cases.
 
 When attempting to authenticate, if you see the following error:
 

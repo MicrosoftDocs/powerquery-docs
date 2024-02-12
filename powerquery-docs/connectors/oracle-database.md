@@ -3,7 +3,7 @@ title: Power Query Oracle database connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your Oracle database using the connector.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
@@ -14,8 +14,8 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
-| Authentication Types Supported | Windows (desktop/online)<br/>Database (desktop)<br/>Basic (online) <br/>Azure Active Directory (desktop/online)|
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Authentication Types Supported | Windows (desktop/online)<br/>Database (desktop)<br/>Basic (online) <br/>Microsoft account (desktop)|
 | Function Reference Documentation | [Oracle.Database](/powerquery-m/oracle-database) |
 
 > [!NOTE]
@@ -35,7 +35,7 @@ To connect to an Oracle database with the [on-premises data gateway](/data-integ
 ## Capabilities Supported
 
 * Import
-* DirectQuery (Power BI Datasets)
+* DirectQuery (Power BI semantic models)
 * Advanced options
   * Command timeout in minutes
   * SQL statement
@@ -67,9 +67,9 @@ To make the connection, take the following steps:
 
 4. If you're connecting to this Oracle database for the first time, select the authentication type you want to use, and then enter your credentials. The authentication types available are:
 
-   * Windows authentication (Windows)
-   * Username and password (Database)
-   * Azure Active Directory (Microsoft account)
+   * Windows (Windows authentication)
+   * Database (Username and password)
+   * Microsoft account (Microsoft Entra ID)
 
    For more information about authentication, go to [Authentication with a data source](../connectorauthentication.md).
 
@@ -175,7 +175,7 @@ Open the tnsnames.ora file in the wallets folder. The file contains a list of AD
    ![Image of the credentials dialog box, with Database selected, and the default database user name and password entered.](media/oracle-database/adb-credentials.png)
 
    > [!NOTE]
-   > You can use Azure Active Directory authentication to sign-on to Oracle Autonomous Database via the **Microsoft account** option.
+   > You can use Microsoft Entra ID authentication to sign-on to Oracle Autonomous Database via the **Microsoft account** option.
 
 At this point, the **Navigator** appears and displays the connection data.
 
@@ -233,7 +233,7 @@ Once you've selected the advanced options you require, select **OK** in Power Qu
 
 ## Known issues and limitations
 
-Power BI sessions can still be active on your Oracle database for approximately 30 minutes after a dataset refresh to that Oracle database. Only after approximately 30 minutes do those sessions become inactive/removed on the Oracle database. This behavior is by design.
+Power BI sessions can still be active on your Oracle database for approximately 30 minutes after a semantic model refresh to that Oracle database. Only after approximately 30 minutes do those sessions become inactive/removed on the Oracle database. This behavior is by design.
 
 ## Troubleshooting
 

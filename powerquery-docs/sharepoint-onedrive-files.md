@@ -2,7 +2,7 @@
 title: SharePoint and OneDrive for Business files import
 description: All available methods in Power Query to get files from your SharePoint or OneDrive for Business accounts.
 author: ptyx507x
-ms.date: 1/11/2023
+ms.date: 1/24/2024
 ms.author: miescobar
 ---
 
@@ -12,10 +12,10 @@ Power Query offers a series of ways to gain access to files that are hosted on e
 
 ## Browse files
 
->[!NOTE]
+> [!NOTE]
 >Currently, you can only browse for OneDrive for Business files of the authenticated user inside of Power Query Online for PowerApps.
 
->[!WARNING]
+> [!WARNING]
 > This feature requires your browser to allow third party cookies. If your browser has blocked third party cookies, the **Browse** dialog will appear but it'll be completely blank with no option to close the dialog.
 
 Power Query provides a **Browse OneDrive** button next to the **File path or URL** text box when you create a dataflow in PowerApps using any of these connectors:
@@ -67,10 +67,10 @@ To use the link you just copied in Power Query, take the following steps:
 
    ![Screenshot of the Power BI Desktop credential prompt, emphasizing Windows or Organizational account selection.](media/sharepoint-onedrive-files/odb-links_06.png)
 
-   >[!CAUTION]
+   > [!CAUTION]
    >When working with files hosted on OneDrive for Home, the file that you want to connect to needs to be publicly available. When setting the authentication method for this connection, select the **Anonymous** option.
 
-When the **Navigator** dialog box appears, you can select from the list of tables, sheets, and ranges found in the Excel workbook. From there, you can use the OneDrive for Business file just like any other Excel file. You can create reports and use it in datasets like you would with any other data source.
+When the **Navigator** dialog box appears, you can select from the list of tables, sheets, and ranges found in the Excel workbook. From there, you can use the OneDrive for Business file just like any other Excel file. You can create reports and use it in data sets like you would with any other data source.
 
 > [!NOTE]
 > To use a OneDrive for Business file as a data source in the Power BI service, with **Service Refresh** enabled for that file, make sure you select **OAuth2** as the **Authentication method** when configuring your refresh settings. Otherwise, you may encounter an error (such as, *Failed to update data source credentials*) when you attempt to connect or to refresh. Selecting **OAuth2** as the authentication method remedies that credentials error.
@@ -95,7 +95,7 @@ For example, from the table shown in the previous image, you can select the seco
 
 ![Contents of a CSV file with the name 02-February.csv that were automatically interpreted by Power Query as shown in the Applied steps section.](media/sharepoint-onedrive-files/sp-file-preview-me.png)
 
->[!NOTE]
+> [!NOTE]
 >You can interact with the table by applying filters, sortings, and other transforms before navigating to the file of your choice. Once you've finished these transforms, select the **Binary** value you want to view. 
 
 ### OneDrive for Business experience
@@ -124,7 +124,7 @@ This experience is provided through the [`SharePoint.Contents`](/powerquery-m/sh
 
    `SharePoint.Contents("https://contoso.sharepoint.com/marketing/data")`
 
-   >[!NOTE]
+   > [!NOTE]
    >By default, this function tries to use SharePoint API Version 14 to connect. If you aren't certain of the API version being used by your SharePoint site, you might want to try using the following example code: `SharePoint.Contents("https://contoso.sharepoint.com/marketing/data", [ApiVersion="Auto"])`.
 
 3. Power Query will request that you add an authentication method for your connection. Use the same authentication method that you'd use for the SharePoint files connector.
@@ -143,5 +143,5 @@ This experience is provided through the [`SharePoint.Contents`](/powerquery-m/sh
 
      ![Table preview after navigating to the Sales Reports folder.](media/sharepoint-onedrive-files/sp-navigate-level-3-me.png)
 
->[!NOTE]
+> [!NOTE]
 > The experience provided by the `SharePoint.Contents` function is optimal for SharePoint and OneDrive for Business environments with a large number of files.
