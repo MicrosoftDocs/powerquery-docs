@@ -1,5 +1,5 @@
 ---
-title: Additional connector functionality
+title: More connector functionality
 description: Provides information to custom and certified connector developers on adding more connector functionality
 author: ptyx507x
 ms.topic: conceptual
@@ -25,11 +25,11 @@ Windows authentication is supported. To enable Windows-based authentication in y
 Windows = [ SupportsAlternateCredentials = true ]
 ```
 
-This change will expose Windows authentication as an option in the Power BI Desktop authentication experience. The **SupportsAlternateCredentials** flag will expose the option to "Connect using alternative credentials". After this flag is enabled, you can specify explicit Windows account credentials (username and password). You can use this feature to test impersonation by providing your own account credentials.
+This change exposes Windows authentication as an option in the Power BI Desktop authentication experience. The **SupportsAlternateCredentials** flag exposes the option to "Connect using alternative credentials". After this flag is enabled, you can specify explicit Windows account credentials (username and password). You can use this feature to test impersonation by providing your own account credentials.
 
 ### Single sign-on authentication
 
-This section outlines options available for implementing single sign-on (SSO) functionality into your certified connector. Currently, there is no support for "plug and play" extensibility for SSO. Enabling SSO would require changes and collaboration both on the Microsoft and data source or connector sides, so reach out to your Microsoft contact prior to starting work.
+This section outlines options available for implementing single sign-on (SSO) functionality into your certified connector. Currently, there's no support for "plug and play" extensibility for SSO. Enabling SSO would require changes and collaboration both on the Microsoft and data source or connector sides, so reach out to your Microsoft contact prior to starting work.
 
 #### Microsoft Entra ID SSO
 
@@ -39,4 +39,4 @@ Microsoft Entra ID-based SSO is supported in cloud scenarios. The data source mu
 
 Some Power Query connectors offer end users the ability to specify [native database queries](native-database-query.md) under **Advanced options** in the connection experience. Custom connector developers may be interested in offering native database query support in their connector.
 
-For information on how to implement native database query support in your connector, follow the walk through in the [handling native query support](native-query-sdk.md) article.
+For information on how to implement native database query support in your connector, follow the walk-through in the [handling native query support](native-query-sdk.md) article.
