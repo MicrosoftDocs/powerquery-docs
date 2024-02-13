@@ -1,5 +1,5 @@
 ---
-title: More connector functionality
+title: Additional connector functionality
 description: Provides information to custom and certified connector developers on adding more connector functionality
 author: ptyx507x
 ms.topic: conceptual
