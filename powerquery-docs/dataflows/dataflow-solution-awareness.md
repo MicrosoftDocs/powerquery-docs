@@ -4,7 +4,7 @@ description: Provides an overview of dataflows in solutions, and includes specia
 author: bensack
 ms.author: bensack
 ms.topic: conceptual 
-ms.date: 1/26/2024 
+ms.date: 2/13/2024 
 
 ---
 # Overview of solution-aware dataflows
@@ -20,7 +20,7 @@ Dataflows added to a solution are known as *solution-aware* dataflows. You can a
 > * Only dataflows created in Power Platform environments can be solution-aware.
 > * The data loaded by dataflows to their destination isn't portable as part of solutions, only the dataflow definitions are. To recreate the data after a dataflow was deployed as part of a solution, you need to refresh the dataflow.
 
-## Add a new dataflow to a solution
+## Add a new dataflow to a solution (Preview)
 
 Follow these steps to add a dataflow to a solution.
 
