@@ -3,7 +3,7 @@ title: Power Query Web connector
 description: Provides basic information and how to connect to your data, along with the supported file types and instructions on using the on-premises data gateway and authentication types.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/25/2024
+ms.date: 2/14/2024
 ms.author: dougklo
 ---
 
@@ -17,6 +17,9 @@ ms.author: dougklo
 | Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
 | Authentication Types Supported | [Web.Contents](/powerquery-m/web-contents):<br/>Anonymous<br/>Windows<br/>Basic<br/>Web API<br/>Organizational Account<br/>Service Principal<br/><br/>[Web.BrowserContents](/powerquery-m/web-browsercontents):<br/>Anonymous<br/>Windows ([preview feature](web-troubleshoot.md#enabling-the-edge-webview2-version-of-webbrowsercontents))<br/>Basic ([preview feature](web-troubleshoot.md#enabling-the-edge-webview2-version-of-webbrowsercontents))<br/>Web API ([preview feature](web-troubleshoot.md#enabling-the-edge-webview2-version-of-webbrowsercontents))<br/><br/>[Web.Page](/powerquery-m/web-page):<br/>Anonymous<br/>Windows (current user's credentials only)<br/>Web API |
 | Function Reference Documentation | [Web.Contents](/powerquery-m/web-contents)<br/>[Web.BrowserContents](/powerquery-m/web-browsercontents)<br/>[Web.Page](/powerquery-m/web-page) |
+
+> [!NOTE]
+> POST requests can only be made anonymously when using `Web.Contents`.
 
 > [!NOTE]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
