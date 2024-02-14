@@ -27,7 +27,7 @@ In this guide:
 * Learn to set up the development environment by installing the Test Framework
 * Fetch the dataset used in the Test Suite and upload it to a data source based on your extension connector
 * Understand test format specifications that are, the file formats and their functionality within the Test Framework
-* Fetch and run the test suite that contains the tests to validate your extension connector
+* Fetch and run the test suite that contains the tests for validating your extension connector
 * Run individual tests with different configurations
 * Add your own tests to verify your connector specific functionality
 * Automate tests run by setting up a pipeline for the tests

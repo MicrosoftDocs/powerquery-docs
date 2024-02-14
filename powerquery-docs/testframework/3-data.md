@@ -44,7 +44,7 @@ The test data is placed in the [Data Connectors git repo](https://github.com/mic
 > All decimal values while uploading to the datasource should have a **scale of 2** (i.e. the number of digits after the decimal point should be 2).
 > All timestamp values should be uploaded to the datasouce in `MM/DD/YYYY HH24:MI:SS` format.
 
-You can also review additional [details regarding the test data](https://github.com/microsoft/DataConnectors/tree/master/testframework/data/PQSDKTestData.md).
+You can also review the [details regarding the test data](https://github.com/microsoft/DataConnectors/tree/master/testframework/data/PQSDKTestData.md).
 
 Resources:
 

@@ -31,7 +31,7 @@ Following is the typical workflow to work with the Test Framework for a Power Qu
 * **Clone the DataConnectors GitHub Repo:** Clone the [DataConnectors GitHub](https://github.com/microsoft/DataConnectors/tree/master) repo to access the [Test Data](https://github.com/microsoft/DataConnectors/tree/master/testframework/data/) and [Tests](https://github.com/microsoft/DataConnectors/tree/master/testframework/tests/) contained in the test framework. Refer to [PowerQuery SDK Test Framework part 4 - Test Suite](./4-tests.md) for further details on the tests.
 * **Load the Test Data to the Data Source:** The connector developer has to load the test data consisting of two csv files as tables to their data source ensuring the schema matches the SQL schema file provided. Refer to [Power Query SDK Test Framework part 3 - Test Data](./3-data.md) for further details.
 * **Configure and run the tests:** The connector developer has to then run the tests using the provided *"RunPQSDKTestSuites"* PowerShell utility, which uses *"PQTest*" compare command to run the tests. Refer to [Power Query SDK Test Framework part 6 - Testing your extension connector](./6-connector.md) for further details.
-* **Reporting & CI/CD:** The default test report is generated in console and there are also options to generate the report in summary, detailed, trx and json formats. The TRX (Visual Studio Test Results File) format is useful to view the results when they're run as part of a pipeline. Refer to [Power Query SDK Test Framework part 8 - Pipeline Guide](./8-pipeline.md) for further details.
+* **Reporting & CI/CD:** The default test report is generated in console and there are also options to generate the report in summary, detailed, trx, and json formats. The TRX (Visual Studio Test Results File) format is useful to view the results when they're run as part of a pipeline. Refer to [Power Query SDK Test Framework part 8 - Pipeline Guide](./8-pipeline.md) for further details.
 
 ## Goals of the Test Framework
 
@@ -49,7 +49,7 @@ The goals of the Test Framework Initial Release are to provide:
 |Part|Lesson                                                   |Details                                                                                                |
 |----|:--------------------------------------------------------|:------------------------------------------------------------------------------------------------------|
 |1   |[Introduction](1-intro.md)                               | What is Power Query SDK Test Framework                                                                |
-|2   |[Setup](2-setup.md)                                      | Set up your environment                                                                                |
+|2   |[Setup](2-setup.md)                                      | Set up your environment                                                                               |
 |3   |[Preparing Data](3-data.md)                              | Preparing the test data                                                                               |
 |4   |[Test Suite](4-tests.md)                                 | Fetching and understanding the Test Suite                                                             |
 |5   |[Test Format Spec](5-testformat.md)                      | Understanding various file formats used within the test framework                                     |

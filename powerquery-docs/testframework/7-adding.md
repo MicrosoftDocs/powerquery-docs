@@ -11,7 +11,7 @@ ms.custom:
 
 # Power Query SDK Test Framework part 7 - Adding your tests and understanding various options
 
-This multi-part reference covers the setup and running of a standard suite of tests for Power Query connector developers. The reference is meant to be done sequentially&mdash; to ensure that your environment is setup for testing your custom connector.
+This multi-part reference covers the setup and running of a standard suite of tests for Power Query connector developers. The reference is meant to be done sequentially—to ensure that your environment is set up for testing your custom connector.
 
 Now you might want to add more tests for your extension connector to verify other use cases or the standardized test suite doesn't fit your needs.
 
@@ -26,14 +26,14 @@ In this lesson, you will:
 
 [TODO: Figure out path for pqtest.md]
 
-Below are sample instructions on how custom tests can be added:
+The instructions for adding custom tests are as follows:
 
 * Create a `Custom` folder under `testframework\tests\TesSuites`.
 * Create a PQ file with the M Query that needs to be tested and place it in the `Custom` directory.
 * Create a settings file `CustomSettings.json` under `testframework\tests\ConnectorConfigs\<Connector Name>\Settings` folder. Add the paths for test folder `"QueryFilePath": "TestSuites/Custom"` and the parameter query file `"ParameterQueryFilePath": "ParameterQueries/<Connector Name>/<Connector Name>.parameterquery.pq"` in it.
 * Run the test first time to generate the PQOut output file.
-* Subsequent runs will validate the output generated with the PQOut output file.
-* Please review the documentation in [pqtest.md](https://dev.azure.com/powerbi/Power%20Query/_git/DataConnectors?path=/PowerQuerySDKTestFramework/docs/PowerQuerySdkTools/Tools/PQTest/pqtest.md&_a=preview&version=GBmaster) in the DataConnectors repo for more information on creating new tests using the compare command.
+* Subsequent runs validate the output generated with the PQOut output file.
+* Review the documentation in [pqtest.md](https://dev.azure.com/powerbi/Power%20Query/_git/DataConnectors?path=/PowerQuerySDKTestFramework/docs/PowerQuerySdkTools/Tools/PQTest/pqtest.md&_a=preview&version=GBmaster) in the DataConnectors repo for more information on creating new tests using the compare command.
 
 ## Reference for various configurations and options
 

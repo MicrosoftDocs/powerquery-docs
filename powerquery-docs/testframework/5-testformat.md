@@ -31,7 +31,7 @@ Following are the types of files that you need to be aware of while working with
 * Output File also known as PQOut file with *".query.pqout"* extension
 * Optional Parameter Query file with *".parameterquery.pq"* extension
 * Optional Settings file with *".settings"* extension
-* Optional Diagnostics file with *".diagnostics"* extension.
+* Optional Diagnostics file with *".diagnostics"* extension
 
 ### Test Query File also known as PQ file with .query.pq extension
 
@@ -51,7 +51,7 @@ in
 
 ### Output File also known as PQOut file with *".query.pqout"* extension
 
-The Output File (*".query.pqout"*) contains the generated output as a result of running “compare” command for a test.
+The Output File (*".query.pqout"*) contains the generated output as a result of running *"compare"* command for a test.
 
 *Example for an Output File (PQOut) [Ex: SnowflakeFirstNTests.query.pqout]:*
 
@@ -107,7 +107,7 @@ The optional settings file is a Json file, which contains the configuration para
 
 ### Optional Diagnostics file with *".diagnostics"* extension
 
-The optional diagnostic file contains a list of Command Text that get generated when an M Query is folded. Use it for regression testing of Query folding.  
+The optional diagnostic file currently contains a list of Command Text that gets generated when an M Query is folded. Use it for regression testing of Query folding.  
 
 *Example for a diagnostic file [Ex: SnowflakeFirstNTestSettings.diagnostics]:*
 

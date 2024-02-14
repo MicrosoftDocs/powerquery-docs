@@ -22,8 +22,8 @@ In this lesson, you will:
 
 You need the Test Suite to:
 
-* Verify that the dataset is uploaded correctly, and
-* Validate your connector.
+* Validate that the dataset is uploaded correctly, and
+* Validate your connector
 
 ## Initial Setup
 
@@ -36,9 +36,9 @@ To ensure that you can run tests included in test framework, the below prerequis
 
 The [tests](https://github.com/microsoft/DataConnectors/tree/master/testframework/tests) are part of the [DataConnectors repo](https://github.com/microsoft/DataConnectors).
 
-### PQ SDK Test Framework - Test Suites
+### Power Query SDK Test Framework - Test Suites
 
-The PQ SDK Test Framework consists of a [test suite](https://github.com/microsoft/DataConnectors/tree/master/testframework/tests/TestSuites) to easily validate any extension connector.
+The Test Framework consists of a [test suite](https://github.com/microsoft/DataConnectors/tree/master/testframework/tests/TestSuites) to easily validate any extension connector.
 
 The test suite consists of the following tests:
 
