@@ -63,7 +63,7 @@ In this guide:
 |----|:--------------------------------------------------------|:------------------------------------------------------------------------------------------------------|
 |1   |[Setup](1-setup.md)                                      | Set up your environment                                                                               |
 |2   |[Preparing Data](2-data.md)                              | Preparing the test data                                                                               |
-|3   |[Test Suite](3-data.md)                                 | Fetching and understanding the Test Suite                                                             |
+|3   |[Test Suite](3-tests.md)                                 | Fetching and understanding the Test Suite                                                             |
 |4   |[Test Format Spec](4-testformat.md)                      | Understanding various file formats used within the test framework                                     |
 |5   |[Connector Testing](5-connector.md)                      | Testing your extension connector                                                                      |
 |6   |[Adding Tests](6-adding.md)                              | Adding your own tests and understanding various options and configurations within the test framework  |
