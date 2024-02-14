@@ -700,7 +700,7 @@ items:
         - name: "Preparing Data"
           href: testframework/2-data.md
         - name: "Test Suite"
-          href: testframework/3-data.md
+          href: testframework/3-tests.md
         - name: "Test Format Spec"
           href: testframework/4-testformat.md
         - name: "Connector Testing"
