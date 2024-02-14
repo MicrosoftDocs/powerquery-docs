@@ -35,7 +35,7 @@ When you're connecting to a SharePoint site, you'll be asked to enter the site U
 
 To connect to a SharePoint Online list:
 
-1. From **Get Data**, select **SharePoint Online list**.
+1. Select **SharePoint Online list** in the get data experience. The get data experience in Power Query Desktop varies between apps. For more information about the Power Query Desktop get data experience for your app, go to [Where to get data](../where-to-get-data.md).
 
 2. Paste the SharePoint site URL you copied in [Determine the site URL](#determine-the-site-url) to the **Site URL** field in the open dialog box.
 
@@ -61,7 +61,9 @@ To connect to a SharePoint Online list:
 
 To connect to a SharePoint Online list:
 
-1. From the **Data sources** page, select **SharePoint Online list**.
+1. Select the **SharePoint Online list** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../where-to-get-data.md).
+
+   :::image type="content" source="./media/sharepoint-online-list/get-data-online.png" alt-text="Screenshot of the get data window with SharePoint Online list emphasized.":::
 
 2. Paste the SharePoint site URL you copied in [Determine the site URL](#determine-the-site-url) to the **Site URL** field in the open dialog box.
 

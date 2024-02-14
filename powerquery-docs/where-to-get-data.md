@@ -3,7 +3,7 @@ title: Where to get data
 description: Describes the process of getting data for Power Query from various Microsoft products.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/18/2024
+ms.date: 1/31/2024
 ms.author: dougklo
 ---
 
@@ -47,7 +47,7 @@ To get data in Power BI service:
 
 2. From the Workspace context menu, select the workspace you want to use.
 
-3. From the workspace (in this example, TestWorkspace01), select the context menu next to **+New**.
+3. From the workspace (in this example, TestWorkspace01), select the context menu next to **New**.
 
 4. From the **New** context menu, select **Dataflow**.
 

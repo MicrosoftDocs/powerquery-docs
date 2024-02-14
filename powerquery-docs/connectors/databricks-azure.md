@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for using Power Query'
 author: DougKlopfenstein
 
 ms.topic: conceptual
-ms.date: 1/24/2024
+ms.date: 2/1/2024
 ms.author: dougklo
 ---
 
@@ -57,7 +57,9 @@ To connect to Databricks from Power Query Desktop, take the following steps:
 
 To connect to Databricks from Power Query Online, take the following steps:
 
-1. In the Get Data experience, select the **Database** category. (Refer to [Creating a dataflow](/power-bi/transform-model/dataflows/dataflows-create) for instructions.) Shortlist the available Databricks connectors with the search box. Use the **Azure Databricks** connector for all Databricks SQL Warehouse data unless you've been instructed otherwise by your Databricks rep.  
+1. Select the **Azure Databricks** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../where-to-get-data.md).
+
+    Shortlist the available Databricks connectors with the search box. Use the **Azure Databricks** connector for all Databricks SQL Warehouse data unless you've been instructed otherwise by your Databricks rep.  
 
     ![Image of the Databricks connectors.](./media/databricksazure/filtered-connectors.png)
 

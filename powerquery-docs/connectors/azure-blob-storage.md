@@ -4,7 +4,7 @@ description: Includes basic information, prerequisites, and information on how t
 
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/18/2024
+ms.date: 1/31/2024
 ms.author: dougklo
 
 ---
@@ -40,9 +40,7 @@ ms.author: dougklo
 
 To connect to Azure Blob Storage:
 
-1. From **Get Data**, select the **Azure** category, select **Azure Blob Storage**, and then select **Connect**. More information: [Where to get data](../where-to-get-data.md)
-
-   ![Screenshot of the Get Data dialog box with the Azure Blob Storage option highlighted and the Connect option called out.](./media/azure-blob-storage/get-data.png)
+1. Select **Azure Blob Storage** in the get data experience. The get data experience in Power Query Desktop varies between apps. For more information about the Power Query Desktop get data experience for your app, go to [Where to get data](../where-to-get-data.md).
 
 2. In **Azure Blob Storage**, enter the account name or URL of your Azure Blob Storage account. Then select **OK**.
 
@@ -67,7 +65,7 @@ To connect to Azure Blob Storage:
 
 To connect to Azure Blob Storage:
 
-1. From **Choose data source**, select the **Azure** category, and then select **Azure Blobs**.
+1. Select the **Azure Blobs** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../where-to-get-data.md).
 
    [![Screenshot of the Choose data source page, with the Azure category selected, and Azure Blobs emphasized.](./media/azure-blob-storage/choose-data-source.png)](./media/azure-blob-storage/choose-data-source.png#lightbox)
 

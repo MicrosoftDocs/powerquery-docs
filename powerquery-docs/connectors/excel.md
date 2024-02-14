@@ -3,7 +3,7 @@ title: Power Query Excel connector
 description: Provides basic information and prerequisites for the connector, along with troubleshooting tips, how to fix missing or incomplete Excel data, and improve performance.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/24/2024
+ms.date: 2/7/2024
 ms.author: dougklo
 ---
 
@@ -37,7 +37,8 @@ ACE can't be installed in cloud service environments. So if you're seeing this e
 
 To make the connection from Power Query Desktop:
 
-1. Select the **Excel** option in the connector selection.
+1. Select **Excel Workbook** in the get data experience. The get data experience in Power Query Desktop varies between apps. For more information about the Power Query Desktop get data experience for your app, go to [Where to get data](../where-to-get-data.md).
+
 2. Browse for and select the Excel workbook you want to load. Then select **Open**.
 
    ![Select the Excel workbook from File Explorer.](./media/excel/connect-desktop.png)
@@ -52,11 +53,13 @@ To make the connection from Power Query Desktop:
 
 To make the connection from Power Query Online:
 
-1. Select the **Excel** option in the connector selection.
+1. Select the **Excel workbook** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../where-to-get-data.md).
+
+   :::image type="content" source="./media/excel/get-data-online.png" alt-text="Screenshot of the get data window with Excel workbook emphasized.":::
 
 2. In the Excel dialog box that appears, provide the path to the Excel workbook.
 
-   ![Connection information to access the Excel workbook.](./media/excel/connect-online.png)
+   :::image type="content" source="./media/excel/connect-online.png" alt-text="Screenshot of the connection information to access the Excel workbook.":::
 
 3. If necessary, select an on-premises data gateway to access the Excel workbook.
 
@@ -64,7 +67,7 @@ To make the connection from Power Query Online:
 
 5. In **Navigator**, select the workbook information you want, and then  **Transform Data** to continue transforming the data in Power Query Editor.
 
-   ![Excel workbook imported into Power Query online Navigator.](./media/excel/online-navigator-view.png)
+   :::image type="content" source="./media/excel/online-navigator-view.png" alt-text="Screenshot of the Excel workbook imported into the Power Query online Navigator.":::
 
 ## Suggested tables
 
