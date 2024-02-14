@@ -695,22 +695,20 @@ items:
         items:
         - name: "Overview"
           href: testframework/test-framework.md
-        - name: "Introduction"
-          href: testframework/1-intro.md
         - name: "Setup"
-          href: testframework/2-setup.md
+          href: testframework/1-setup.md
         - name: "Preparing Data"
-          href: testframework/3-data.md
+          href: testframework/2-data.md
         - name: "Test Suite"
-          href: testframework/4-tests.md
+          href: testframework/3-data.mdd
         - name: "Test Format Spec"
-          href: testframework/5-testformat.md
+          href: testframework/4-testformat.md
         - name: "Connector Testing"
-          href: testframework/6-connector.md
+          href: testframework/5-connector.md
         - name: "Adding Tests"
-          href: testframework/7-adding.md
+          href: testframework/6-adding.md
         - name: "Pipeline Setup Guide"
-          href: testframework/8-pipeline.md
+          href: testframework/7-pipeline.md
       - name: Connector Certification
         items:
         - name: "Overview"

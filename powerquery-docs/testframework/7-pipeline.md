@@ -8,7 +8,7 @@ ms.date: 01/09/2024
 ms.author: v-jbrandrick
 ---
 
-# Power Query SDK Test Framework part 8 - Pipeline Guide
+# Power Query SDK Test Framework part 7 - Pipeline Guide
 
 This multi-part reference covers the setup and running of a standard suite of tests for Power Query connector developers. The reference is meant to be done sequentially—to ensure that your environment is set up for testing your custom connector.
 

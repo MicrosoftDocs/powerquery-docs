@@ -9,7 +9,7 @@ ms.author: v-ryansyed
 ms.custom:
 ---
 
-# Power Query SDK Test Framework part 2 - Setup
+# Power Query SDK Test Framework part 1 - Setup
 
 This multi-part reference covers the setup and running of a standard suite of tests for Power Query connector developers. The reference is meant to be followed sequentially—to ensure that your environment is set up for testing your extension connector.
 
@@ -50,4 +50,4 @@ In the next lesson, you'll learn about the test data that is used by the standar
 
 ## Next steps
 
-[Power Query SDK Test Framework part 3 - Test Data](./3-data.md)
+[Power Query SDK Test Framework part 2 - Test Data](./2-data.md)
