@@ -12,10 +12,9 @@ ms.custom:
 # Credentials
 
 Data source credentials can be cached and reused across commands. By default, this cache is stored in a local file under
-`%LOCALAPPDATA%/Microsoft/pqtest` and
-[encrypted with the current user key](https://docs.microsoft.com/en-us/dotnet/standard/security/how-to-use-data-protection).
+`%LOCALAPPDATA%/Microsoft/pqtest` and [encrypted with the current user key](/dotnet/standard/security/how-to-use-data-protection).
 
-As an alternative to local file storage, you can store credentials in an [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/). You
+As an alternative to local file storage, you can store credentials in an [Azure Key Vault](/azure/key-vault/). You
 can enable this option using the `--keyVault / -kv` option, provide a key vault name as the option argument, and setting the environment variables
 specified in the following table:
 
@@ -215,6 +214,6 @@ The interactive mode can be used for the `OAuth` and `Aad` authentication kinds.
 OAuth dialog that can be used to test your OAuth implementation.
 
 Interactive OAuth flows use the WebView2 (Microsoft Edge Chromium) browser component, which might need to be installed separately.
-More details can be found in the [Power Query OAuth documentation for Power BI Desktop](https://docs.microsoft.com/power-query/oauth-edge-chromium).
+More details can be found in the [Power Query OAuth documentation for Power BI Desktop](/power-query/oauth-edge-chromium).
 
 The `--useLegacyBrowser` option can be used to force an IE11 embedded browser window.
