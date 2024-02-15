@@ -699,6 +699,8 @@ items:
           href: powerquery-sdktools/whats-new.md
         - name: PQTest.exe
           items:
+            - name: Overview
+              href: powerquery-sdktools/pqtest-overview.md
             - name: Commands and options
               href: powerquery-sdktools/pqtest-commands-and-options.md
             - name: General usage
