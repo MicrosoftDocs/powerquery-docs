@@ -691,6 +691,22 @@ items:
           href: native-query-sdk.md
         - name: "Versioning"
           href: handling-versioning.md
+      - name: PowerQuerySdkTools
+        items:
+        - name: Overview
+          href: powerquery-sdktools/overview.md
+        - name: What's New
+          href: powerquery-sdktools/whats-new.md
+        - name: PQTest.exe
+          items:
+            - name: Commands and options
+              href: powerquery-sdktools/pqtest-commands-and-options.md
+            - name: General usage
+              href: powerquery-sdktools/pqtest-general-usage.md
+            - name: Credentials
+              href: powerquery-sdktools/pqtest-credentials.md
+            - name: Compare
+              href: powerquery-sdktools/pqtest-compare.md
       - name: Connector Certification
         items:
         - name: "Overview"
