@@ -18,6 +18,7 @@ As an alternative to local file storage, you can store credentials in an [Azure 
 can enable this option using the `--keyVault / -kv` option, provide a key vault name as the option argument, and setting the environment variables
 specified in the following table:
 
+>[!NOTE]
 > When using Azure Key Vault, credentials are stored as a single binary object, rather than individual secrets.
 
 | Variable                   | Details                                                                               | Sample                               |
@@ -36,52 +37,6 @@ set PQTEST_AZURE_TENANT_ID="c265f4e8-a32f-4548-a21e-3542ec65134a"
 set PQTEST_AZURE_KEY_VAULT_URL="https://myvault.vault.azure.net"
 
 pqtest list-credential --keyVault secretName
-
-## credential-template
-
-Use this command to generate a credential template in json format that can be passed into the `set-credential` command. 
-The command requires you provide an [extension](#extension) and [data source information](#data-source). If the data
-source supports more than one Authentication Kind, you need to specify which authentication kind to use with the `--authenticationKind / -ak` option.
-
-The output template has placeholder values identified with `$$<key name>$$` that should be replaced before passing them to the `set-credential` command.
-
-For example, `MyConnector` supports both Anonymous and UsernamePassword authentication kinds.
-
-To generate an `Anonymous` credential, the following command would be used:
-
-```cmd
-pqtest credential-template --extension MyConnector.mez --queryFile MyConnectorQuery.m --prettyPrint --authenticationKind Anonymous
-```
-
-Note the output json value doesn't contain any placeholder values as the `Anonymous` kind doesn't require any.
-
-```json
-{
-  "AuthenticationKind": "Anonymous",
-  "AuthenticationProperties": {},
-  "PrivacySetting": "None",
-  "Permissions": []
-}
-```
-
-The following command would be used to generate a UsernamePassword credential for the same connector:
-
-```cmd
-pqtest credential-template --extension MyConnector.mez --queryFile MyConnectorQuery.m --prettyPrint --authenticationKind UsernamePassword
-```
-
-The resulting template contains `$$USERNAME$$` and `$$PASSWORD$$` placeholder values.
-
-```json
-{
-  "AuthenticationKind": "UsernamePassword",
-  "AuthenticationProperties": {
-    "Username": "$$USERNAME$$",
-    "Password": "$$PASSWORD$$"
-  },
-  "PrivacySetting": "None",
-  "Permissions": []
-}
 ```
 
 ## Credential-template
@@ -100,7 +55,8 @@ To generate an `Anonymous` credential, the following command would be used:
 pqtest credential-template --extension MyConnector.mez --queryFile MyConnectorQuery.m --prettyPrint --authenticationKind Anonymous
 ```
 
-Note the output json value doesn't contain any placeholder values as the `Anonymous` kind doesn't require any.
+>[!NOTE]
+>The output json value doesn't contain any placeholder values as the `Anonymous` kind doesn't require any.
 
 ```json
 {
@@ -169,7 +125,8 @@ pqtest credential-template -e MyConnector.mez -q MyConnectorQuery.m -p -ak Anony
 }
 ```
 
-> Note: `Anonymous` and `Windows` credentials can be set using [automatic credentials](#automatic-credentials).
+>[!NOTE]
+>`Anonymous` and `Windows` credentials can be set using [automatic credentials](#automatic-credentials).
 
 Here's an example of setting a credential from a file stored on disk (using redirected input):
 
@@ -194,9 +151,10 @@ pqtest set-credential -e MyConnector.mez -q MyConnectorQuery.m -p < mySavedCrede
 
 You can set `Anonymous` and `Windows` credentials without providing a [credential template](#credential-template).
 
-> Note: `Windows` credentials set in this way default to using the current user's identity. Use the
-> [credential-template command](#credential-template) to generate a json credential that can be modified to use an
-> alternative windows account credentials.
+>[!NOTE]
+>`Windows` credentials set in this way default to using the current user's identity. Use the
+>[credential-template command](#credential-template) to generate a json credential that can be modified to use an
+>alternative windows account credentials.
 
 ```cmd
 pqtest set-credential -e MyConnector.mez -q MyConnectorQuery.m -p --authenticationKind windows
