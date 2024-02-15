@@ -691,12 +691,8 @@ items:
           href: native-query-sdk.md
         - name: "Versioning"
           href: handling-versioning.md
-      - name: PowerQuerySdkTools
+      - name: Power Query SDK Tools
         items:
-        - name: Overview
-          href: powerquery-sdktools/overview.md
-        - name: What's New
-          href: powerquery-sdktools/whats-new.md
         - name: PQTest.exe
           items:
             - name: Overview
