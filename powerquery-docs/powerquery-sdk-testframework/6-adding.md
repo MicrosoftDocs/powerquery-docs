@@ -24,8 +24,6 @@ In this lesson, you will:
 
 ## Creating custom tests
 
-[TODO: Figure out path for pqtest.md]
-
 The instructions for adding custom tests are as follows:
 
 * Create a `Custom` folder under `testframework\tests\TesSuites`.
@@ -33,13 +31,10 @@ The instructions for adding custom tests are as follows:
 * Create a settings file `CustomSettings.json` under `testframework\tests\ConnectorConfigs\<Connector Name>\Settings` folder. Add the paths for test folder `"QueryFilePath": "TestSuites/Custom"` and the parameter query file `"ParameterQueryFilePath": "ParameterQueries/<Connector Name>/<Connector Name>.parameterquery.pq"` in it.
 * Run the test first time to generate the PQOut output file.
 * Subsequent runs validate the output generated with the PQOut output file.
-* Review the documentation in [pqtest.md](https://dev.azure.com/powerbi/Power%20Query/_git/DataConnectors?path=/PowerQuerySDKTestFramework/docs/PowerQuerySdkTools/Tools/PQTest/pqtest.md&_a=preview&version=GBmaster) in the DataConnectors repo for more information on creating new tests using the compare command.
 
 ## Reference for various configurations and options
 
-[TODO: pqtest.md link]
-
-You can refer [pqtest.md](TBD) for various options and examples while running the compare command.
+You can refer [pqtest-compare](../powerquery-sdktools/pqtest-compare.md) for various options and examples while running the compare command.
 
 ## Conclusion
 

@@ -149,8 +149,7 @@ Example:
  C:\Users\ContosoUser\.vscode\extensions\powerquery.vscode-powerquery-sdk-0.2.3-win32-x64\.nuget\Microsoft.PowerQuery.SdkTools.2.114.4\tools\PQTest.exe compare -p -e "$Extension" -pa "C:\dev\DataConnectors\testframework\tests\TestSuites\Contoso\ParameterQueries\Contoso.parameterquery.pq" -q "C:\dev\DataConnectors\testframework\tests\TestSuites\Standard\Datatypes\Cast.query.pq"
 ```
 
-[TODO: Is pqtest.md going to be a part of DataConnectors repo]
-Review the documentation in [pqtest.md](TBD) in the [DataConnectors repo](https://github.com/microsoft/DataConnectors/) for more information on running tests with *"PQTest.exe"*.
+Review the documentation in [pqtest-overview](../powerquery-sdktools/pqtest-overview.md) for more information on running tests with *"PQTest.exe"*.
 
 ## Running query folding tests
 
