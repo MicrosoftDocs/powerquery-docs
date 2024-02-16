@@ -3,7 +3,7 @@ title: Power Query Azure SQL database connector
 description: Includes basic information and prerequisites, instructions on how to connect to your database, and information about advanced connection options.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 2/7/2024
+ms.date: 2/16/2024
 ms.author: dougklo
 ---
 
@@ -17,6 +17,9 @@ ms.author: dougklo
 | Products supported | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication types supported| Windows (Power BI Desktop, Excel, Power Query Online with gateway)<br/>Database (Power BI Desktop, Excel)<br/>Microsoft Account (all)<br/> Basic (Power Query Online)<br/>Service Principal |
 | Function reference docs | [Sql.Database](/powerquery-m/sql-database)<br/>[Sql.Databases](/powerquery-m/sql-databases) |
+
+> [!NOTE]
+>The service principal authentication type isn't supported when using an on-premises data gateway or a virtual network (VNet) data gateway.
 
 > [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
