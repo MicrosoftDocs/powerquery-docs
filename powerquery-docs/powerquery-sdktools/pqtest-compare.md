@@ -132,7 +132,7 @@ represents the table returned from the parameter query.
 
 Let say we have the following test query:
 
-```Power Query M
+```powerquery-m
 let
     Source = Snowflake.Databases("...", "..."),
     Database = Source{[Name="...",Kind="Database"]}[Data],
@@ -145,7 +145,7 @@ To convert it to a test and parameter query we need to split them as follows:
 
 Parameter Query:
 
-```Power Query M
+```powerquery-m
 let
     Source = Snowflake.Databases("...", "..."),
     Database = Source{[Name="...",Kind="Database"]}[Data],
@@ -157,7 +157,7 @@ in
 
 Test Query:
 
-```Power Query M
+```powerquery-m
 (Source) => let
     SelectColumns = Table.RemoveColumns(Source, { "VendorID" })
 in
@@ -210,7 +210,7 @@ The following example shows how to subscribe to the ODBC channel, which captures
 
 The ODBC diagnostic channel can be used to verify that a query is folding and that its generating the correct SQL.
 
-```Power Query M
+```powerquery-m
 let
     Source = AzureSpark.Tables("...")
     T1 = Source{[Schema="default",Item="DATABASE"]}[Data],
