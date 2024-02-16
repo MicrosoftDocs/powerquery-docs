@@ -120,11 +120,11 @@ the output file and returns the result.
 The parameter query is a query that is combined with a test query at runtime, with the parameter query running first. This functionality lets you
  split the PQ/test query file into two parts: the parameter query file, and the test query file.
 
-## Agnostic data source testing with parameter and test query format
+### Agnostic data source testing with parameter and test query format
 
 An example of a use case where this functionality would be useful is to create a data source agnostic test suite.
 The user can use their parameter query to retrieve data from the data source, and have the test query be generic M. If the connector
-developer would like to run the tests for another connector, they only need to update this file to point to that specific data source.
+developer would like to run the tests for another connector, they only need to add/update the parameter query to point to that specific data source.
 
 A key difference when using a parameter query is that the test query follows a different format.
 Instead of being a formula expression it must be an M function that takes one input parameter, which
@@ -136,9 +136,9 @@ Let say we have the following test query:
 let
     Source = Snowflake.Databases("...", "..."),
     Database = Source{[Name="...",Kind="Database"]}[Data],
-    Schemas = Table.RemoveColumns(Database, { "Data" })
+    SelectColumns = Table.RemoveColumns(Database, { "Data" })
 in
-    Schemas
+    SelectColumns
 ```
 
 To convert it to a test and parameter query we need to split them as follows:
@@ -148,18 +148,20 @@ Parameter Query:
 ```Power Query M
 let
     Source = Snowflake.Databases("...", "..."),
-    Database = Source{[Name="...",Kind="Database"]}[Data]
+    Database = Source{[Name="...",Kind="Database"]}[Data],
+    Schema = Database{[Name="...",Kind="Schema"]}[Data],
+    Taxi_Table = Schema{[Name="...",Kind="Table"]}[Data],
 in
-    Database
+    Taxi_Table
 ```
 
 Test Query:
 
 ```Power Query M
 (Source) => let
-    Schemas = Table.RemoveColumns(Source, { "Data" })
+    SelectColumns = Table.RemoveColumns(Source, { "VendorID" })
 in
-    Schemas
+    SelectColumns
 ```
 
 ### Example 4 - Using parameter query and test query
@@ -206,7 +208,7 @@ The following example shows how to subscribe to the ODBC channel, which captures
 > pqtest.exe compare -e contoso.mez -q contoso.query.pq -dc "Odbc"
 ```
 
-This diagnostic channel can be used to verify that a query is folding and that its generated SQL is correct.
+The ODBC diagnostic channel can be used to verify that a query is folding and that its generating the correct SQL.
 
 ```Power Query M
 let
@@ -233,18 +235,18 @@ The query now folds and generates the following ODBC command text in the *".diag
 
 ## Using a settings file
 
-Any command line input parameter for the `compare` command can be inserted via a JSON settings file. The JSON can have
+Any command line input parameter for the `compare` command can also be passed via a JSON settings file. The JSON can have
 the following options:
 
-| Option                  | Type   | Description                                                                                                                                                                                                                                          |
-| :---------------------- | :----- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ExtensionPaths          | array  | Array of paths that point to connector file (mez/pqx)                                                                                                                                                                                                |
-| FailOnMissingOutputFile | bool   | Compare doesn't generate a PQOut file and fails if it doesn't exist                                                                                                                                                                                  |
-| FailOnFoldingFailure    | bool   | Compare fails if a query folding error is thrown                                                                                                                                                                                                 |
-| ParameterQueryFilePath  | string | Query file that contains M expressions, which is combined at runtime with the test query file. A common use case is to have a single parameter query file to specify an M expression to retrieve the data for multiple test queries. |
-| QueryFilePath           | string | Query file that contains M expression (.pq) to be tested                                                                                                                                                                                             |
-| TrxReportPath           | string | Generates a TRX (Visual Studio Test Results File) results file and separate JSON files for each test in a given path                                                                                                                                                                   |
-| DiagnosticChannels      | array  | Name of diagnostic channels to be attached to the test run (for example, Odbc for capturing query folding statements).                                                                                                                                       |
+| Option                  | Type   | Description                                                                                                                                                                                                                         |
+| :---------------------- | :----- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ExtensionPaths          | array  | Array of paths that point to connector file (mez/pqx)                                                                                                                                                                               |
+| FailOnMissingOutputFile | bool   | Compare doesn't generate a PQOut file and fails if it doesn't exist                                                                                                                                                                 |
+| FailOnFoldingFailure    | bool   | Compare fails if a query folding error is thrown                                                                                                                                                                                    |
+| ParameterQueryFilePath  | string | Query file that contains M expressions, which is combined at runtime with the test query file. A common use case is to have a single parameter query file to specify an M expression to retrieve the data for multiple test queries.|
+| QueryFilePath           | string | Query file that contains M expression (.pq) to be tested                                                                                                                                                                            |
+| TrxReportPath           | string | Generates a TRX (Visual Studio Test Results File) results file and separate JSON files for each test in a given path                                                                                                                |
+| DiagnosticChannels      | array  | Name of diagnostic channels to be attached to the test run (for example, Odbc for capturing query folding statements).                                                                                                              |
 
 In the case that both command line input and settings option are provided, the command line input is prioritized.
 
@@ -294,7 +296,7 @@ pqtest.exe compare -e contoso.mez -q .\test
 
 A test can be ignored when running a battery of tests by changing the extension of the `*.query.pq` file with `.query.pq.ignore`.
 
-#### Example 8 - Ignore a test when running a battery of tests
+### Example 8 - Ignore a test when running a battery of tests
 
 Assuming a folder named `test` that contains the following files:
 
