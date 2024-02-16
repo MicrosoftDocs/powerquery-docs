@@ -3,7 +3,7 @@ title: Power Query Online Usage Limits
 description: Authoring and refresh limits for Power Query Online in its various product integrations.
 author: Luitwieler
 ms.topic: conceptual
-ms.date: 8/10/2023
+ms.date: 2/16/2024
 ms.author: jeluitwi
 ---
 
@@ -23,7 +23,7 @@ Concurrent Evaluations: The maximum number of evaluations a user can have runnin
 
 ## Authoring limits
 
-Authoring limits are the same across all products. During authoring, query evaluations return previews that may be subsets of the data. Data is not persisted.
+*Authoring* is the act of everything the user does while developing in the Power Query editor, such as creating, modifying, or testing queries. The data that's shown in the editor is a preview that might not reflect the full data set. The data isn't persisted until the user saves or applies the query. Authoring limits are the same across all products.
 
 Hourly Evaluation Count: 1000
 
