@@ -16,7 +16,7 @@ The **Conditional column** command is located on the **Add column** tab, in the 
 
 ## Adding a conditional column
 
-In this example, you'll be using the table shown in the following image.
+In this example, you use the table shown in the following image.
 
 :::image type="content" source="media/add-conditional-column/add-conditional-column-sample-table-start.png" alt-text="Screenshot of the sample table to use when adding a conditional column.":::
 
