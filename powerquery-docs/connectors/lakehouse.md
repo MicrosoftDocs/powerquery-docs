@@ -3,7 +3,7 @@ title: Power Query Lakehouse (Beta) connector
 description: Provides basic information and connection instructions for connecting to a Lakehouse.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 10/30/2023
+ms.date: 2/7/2024
 ms.author: dougklo
 ---
 
@@ -14,7 +14,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products | Power BI (Datasets)<br/>Fabric (Dataflow Gen2)|
+| Products | Power BI (Semantic models)<br/>Fabric (Dataflow Gen2)|
 | Authentication types | Organizational account |
 
 ## Prerequisites
@@ -48,7 +48,7 @@ To get data from a Lakehouse in Power BI Desktop:
 
 To get data from a Lakehouse in Power Query Online:
 
-1. From the **New source** page, select **Microsoft Fabric** > **Lakehouse**. More information: [Where to get data](../where-to-get-data.md)
+1. Select the **Lakehouse** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../where-to-get-data.md).
 
    :::image type="content" source="media/lakehouse/pqo-select-data-source.png" alt-text="Screenshot of the new source page, with the Microsoft Fabric category selected, and the Lakehouse connector emphasized." lightbox="media/lakehouse/pqo-select-data-source.png":::
 

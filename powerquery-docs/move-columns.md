@@ -5,14 +5,14 @@ description: How to move a column to the location you want in Power Query.
 author: ptyx507x
 
 ms.reviewer: dougklo
-ms.date: 1/9/2023
+ms.date: 1/24/2024
 ms.author: miescobar
 
 ---
 
 # Move columns
 
-A common process when preparing data is to move columns in the dataset.
+A common process when preparing data is to move columns in the data set.
 
 To accomplish this move, you can either select the **Move** option or *drag and drop* the column.
 
@@ -51,7 +51,7 @@ The new location of the column is now one column to the right of its original lo
 
 ![Table with the column moved one column to the right.](media/move-columns/move-column-move-after-done.png)
 
-If you want to move the column to the most left space of the dataset, then select **To beginning**.
+If you want to move the column to the most left space of the data set, then select **To beginning**.
 
 ![Select the To beginning option.](media/move-columns/move-column-move-to-beginning.png)
 
@@ -59,7 +59,7 @@ The new location of the column is now on the far left side of the table.
 
 ![Table with the column moved to the far left side of the table.](media/move-columns/move-column-move-to-beginning-done.png)
 
-If you want to move the column to the most right space of the dataset, then select **To end**.
+If you want to move the column to the most right space of the data set, then select **To end**.
 
 ![Select the To end option.](media/move-columns/move-column-move-to-end.png)
 
@@ -69,7 +69,7 @@ The new location of the column is now on the far right side of the table.
 
 ## Drag and drop
 
-Another way to move a column through the dataset is to drag and drop the column.
+Another way to move a column through the data set is to drag and drop the column.
 Move the column to the place where you would like to place it.
 
 ![Using drag and drop to move the column.](media/move-columns/move-column-drag-and-drop.png)

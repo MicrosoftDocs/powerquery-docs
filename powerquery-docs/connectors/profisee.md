@@ -1,26 +1,26 @@
 ---
 title: Power Query Profisee connector
 description: Provides basic information and prerequisites for the Profisee connector, descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
-author: bezhan-msft
-ms.author: bezhan
+author: DougKlopfenstein
+ms.author: dougklo
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 7/14/2023
+ms.date: 1/24/2024
 LocalizationGroup: reference
 ---
 
 # Profisee
 
->[!Note]
+> [!NOTE]
 >The following connector article is provided by Profisee, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the [Profisee support site](https://support.profisee.com/aspx/ProfiseeCustomerHome) and use the support channels there.
 
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Products | Power BI (Semantic models)<br>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Organizational account |
 
->[!Note]
+> [!NOTE]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
@@ -60,7 +60,7 @@ To use the Profisee connector:
 
    ![Step 5 Profisee](media/profisee/pconnector5.png)
 
-7. Once connected, the **Navigator** is displayed. This display lists all entities in your Profisee instance. You can scroll through the navigator to locate specific entities, or search for entities by name using the search bar.
+7. Once connected, the **Navigator** is displayed. This display lists all entities in your Profisee instance. You can scroll through the navigator to locate specific entities, or search for entities by name using the search bar.
 
    ![Step 6 Profisee](media/profisee/pconnector6.png)
 
@@ -72,5 +72,5 @@ To use the Profisee connector:
 
    ![Step 8 Profisee](media/profisee/pconnector8.png)
 
->[!NOTE]
+> [!NOTE]
  >Relationships in Profisee aren't created in the model in Power BI. After the entities are loaded, you can view the model and create or modify relationships as desired.

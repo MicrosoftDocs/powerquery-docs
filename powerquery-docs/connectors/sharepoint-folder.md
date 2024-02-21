@@ -1,10 +1,10 @@
 ---
 title: Power Query SharePoint folder connector
 description: Provides basic information, prerequisites, and how to connect to your data, along with troubleshooting tips when combining files and using filename special characters.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/14/2023
-ms.author: bezhan
+ms.date: 1/24/2024
+ms.author: dougklo
 ---
 
 # SharePoint folder
@@ -14,15 +14,15 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
 | Authentication Types Supported | Anonymous<br/>Microsoft Account<br/>Windows |
 | Function Reference Documentation | [SharePoint.Contents](/powerquery-m/sharepoint-contents)<br/>[SharePoint.Files](/powerquery-m/sharepoint-files) |
 
->[!Note]
+> [!NOTE]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
->[!NOTE]
->AAD/OAuth for SharePoint on-premises isn’t supported using the on-premises data gateway.
+> [!NOTE]
+>Microsoft Entra ID/OAuth for SharePoint on-premises isn’t supported using the on-premises data gateway.
 
 ## Capabilities supported
 
@@ -63,7 +63,7 @@ To connect to a SharePoint folder:
 
    ![Combine files from SharePoint folder.](./media/sharepoint-folder/combine-folder-files.png)
 
->[!Note]
+> [!NOTE]
 >The **Combine & Transform Data** and **Combine & Load** buttons are the easiest ways to combine data found in the files of the SharePoint folder you specify. You could also use the **Load** button or the **Transform Data** buttons to combine the files as well, but that requires more manual steps.
 
 ## Connect to a SharePoint folder from Power Query Online
@@ -88,7 +88,7 @@ To connect to a SharePoint folder:
 
 7. Select **Combine** to combine the data in the files of the selected SharePoint folder and load the data into the Power Query Editor for editing.
 
-    >[!Note]
+    > [!NOTE]
     >The **Combine** button is the easiest way to combine data found in the files of the SharePoint folder you specify. You could also use the **Transform Data** buttons to combine the files as well, but that requires more manual steps.
 
 ## Troubleshooting
@@ -127,6 +127,6 @@ If these characters are present in the filename, the file owner must rename the 
 
 When requesting document library contents, you should have Read access to the SharePoint site as well as the document library and any folders leading to the requested file.
 
-### Azure Active Directory authentication
+### Microsoft Entra ID authentication
 
-Azure Active Directory authentication (AAD) isn't supported for on-premises SharePoint sources.
+Microsoft Entra ID authentication isn't supported for on-premises SharePoint sources.

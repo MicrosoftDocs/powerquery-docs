@@ -2,10 +2,10 @@
 title: Azure Cost Management
 description: Includes basic information, prerequisites, and information on how to connect to Azure Cost Management.
 
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/13/2023
-ms.author: bezhan
+ms.date: 1/24/2024
+ms.author: dougklo
 
 ---
 
@@ -16,7 +16,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Organizational Account |
 | Function Reference Documentation | &mdash; |
 
@@ -171,14 +171,14 @@ The following considerations and limitations apply to the Azure Cost Management 
 
   For more information on reusing data sources, go to:
 
-  * [Introduction to datasets across workspaces](/power-bi/connect-data/service-datasets-across-workspaces)
-  * [Create reports based on datasets from different workspaces](/power-bi/connect-data/service-datasets-discover-across-workspaces)
+  * [Introduction to semantic models across workspaces](/power-bi/connect-data/service-datasets-across-workspaces)
+  * [Create reports based on semantic models from different workspaces](/power-bi/connect-data/service-datasets-discover-across-workspaces)
 
 You might receive a *400 bad request* from the **RI usage details** when you try to refresh the data if you've chosen a date parameter greater than three months. To mitigate the error, take the following steps:
 
 1. In Power BI Desktop, select **Home > Transform data**.
 
-2. In Power Query Editor, select the **RI usage details** dataset and select **Advanced Editor**.
+2. In Power Query Editor, select the **RI usage details** semantic model and select **Advanced Editor**.
 
 3. Update the Power Query code as shown in the following paragraph(s), which will split the calls into three-month chunks. Make sure you note and retain your enrollment number, or billing account/billing profile ID.
 

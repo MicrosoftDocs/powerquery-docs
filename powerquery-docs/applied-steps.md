@@ -1,9 +1,9 @@
 ---
 title: Applied steps
 description: Applied steps show the transformations to the data.
-author: bezhan-msft
-ms.date: 8/4/2023
-ms.author: bezhan
+author: ptyx507x
+ms.date: 1/18/2024
+ms.author: miescobar
 ---
 
 # Using the Applied Steps list
@@ -125,7 +125,7 @@ Alternatively, or to move more than a single position, drag and drop the step to
 
 ### Extract the previous steps into query
 
-You can also separate a series of transformations into a different query. This allows the query to be referenced for other sources, which can be helpful if you're trying to apply the same transformation to multiple datasets. To extract all the previous steps into a new query, right-click the first step you do *not* want to include in the query and select **Extract Previous**.
+You can also separate a series of transformations into a different query. This allows the query to be referenced for other sources, which can be helpful if you're trying to apply the same transformation to multiple data sets. To extract all the previous steps into a new query, right-click the first step you do *not* want to include in the query and select **Extract Previous**.
 
 :::image type="content" source="media/applied-steps/applied-steps-extract-previous.png" alt-text="Screenshot of the step menu with the Extract previous option emphasized.":::
 

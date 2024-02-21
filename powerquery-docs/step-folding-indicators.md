@@ -9,7 +9,7 @@ ms.author: miescobar
 # Query folding indicators
 
 > [!NOTE]
-> Before reading this article, we recommended that you read [Overview of query evaluation and query folding in Power Query](query-folding-basics.md) to better understand how folding works in Power Query.
+> Before reading this article, we recommend that you read [Overview of query evaluation and query folding in Power Query](query-folding-basics.md) to better understand how folding works in Power Query.
 
 Query folding indicators help you understand the steps that fold or don't fold.
 
@@ -57,7 +57,7 @@ In the query folding indicators, you have the same indicators as above, except t
 
 ## Step diagnostics indicators
 
-Query folding indicators use an underlying query plan, and require it to be able to get information about the query to report it. Currently the query plan only supports tables, so some cases (lists, records, primitives) won't report as folding or not. Similarly, constant tables report as opaque.
+Query folding indicators use an underlying query plan, and require it to be able to get information about the query to report it. Currently, the query plan only supports tables, so some cases (lists, records, primitives) won't report as folding or not. Similarly, constant tables report as opaque.
 
 |Indicator|Icon|Description|
 |---------|----|-------|

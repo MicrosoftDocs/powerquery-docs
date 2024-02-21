@@ -3,7 +3,7 @@ title: Consume data from dataflows
 description: Consume data from dataflows.
 author: luitwieler
 ms.topic: conceptual
-ms.date: 6/14/2023
+ms.date: 1/25/2024
 ms.author: jeluitwi
 ---
 
@@ -42,7 +42,7 @@ When you get data from the output of another dataflow, a [linked table](linked-t
 
 ## Separating data transformation from data consumption
 
-When you use the output of a dataflow in other dataflows or datasets, you can create an abstraction between the data transformation layer and the rest of the data model. This abstraction is important because it creates a multi-role architecture, in which the Power Query customer can focus on building the data transformations, and data modelers can focus on data modeling.
+When you use the output of a dataflow in other dataflows or data sets, you can create an abstraction between the data transformation layer and the rest of the data model. This abstraction is important because it creates a multi-role architecture, in which the Power Query customer can focus on building the data transformations, and data modelers can focus on data modeling.
 
 ## Frequently asked questions
 

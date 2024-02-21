@@ -3,7 +3,7 @@ title: Common Authoring Issues in Power Query
 description: How to address common authoring issues in Power Query
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 10/27/2022
+ms.date: 1/18/2024
 ms.author: miescobar
 ---
 
@@ -34,7 +34,7 @@ For example, imagine a column that contains integers in the first 200 rows (such
 
 Or imagine a column that contains textual date values in the first 200 rows, and other kinds of text values after row 200. In this case, Power Query will infer the data type of the column to be Date. This inference will result in the non-date text values being treated as type conversion errors.
 
-Because type detection works on the first 200 rows, but Data Profiling can operate over the entire dataset, you can consider using the Data Profiling functionality to get an early indication in the Query Editor about Errors (from type detection or any number of other reasons) beyond the top N rows.
+Because type detection works on the first 200 rows, but Data Profiling can operate over the entire data set, you can consider using the Data Profiling functionality to get an early indication in the Query Editor about Errors (from type detection or any number of other reasons) beyond the top N rows.
 
 ### Connections forcibly closed by the remote host
 

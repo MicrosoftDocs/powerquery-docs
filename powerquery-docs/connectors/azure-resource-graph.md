@@ -4,7 +4,7 @@ description: Includes basic information, prerequisites, and information on how t
 
 author: ahudson8
 ms.topic: conceptual
-ms.date: 11/08/2023
+ms.date: 1/24/2024
 ms.author: alhudso
 
 ---
@@ -16,7 +16,7 @@ ms.author: alhudso
 | Item | Description |
 | ---- | ----------- |
 | Release State | Preview |
-| Products | Power BI Datasets (Desktop + Service)</br>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Products | Power BI Semantic models (Desktop + Service)</br>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Organizational Account |
 
 > [!NOTE]
@@ -43,14 +43,14 @@ To connect to Azure Resource Graph from Power Query Desktop:
 
 1. In **Choose data source**, select Azure or search for **Azure Resource Graph**, and then select **Azure Resource Graph**. More information: [Where to get data](../where-to-get-data.md)
 
-:::image type="content" source="./media/azure-resource-graph/get-data-here.png" alt-text="Screenshot of the Get Data dialog with the Azure Resource Graph connector emphasized.":::
+   :::image type="content" source="./media/azure-resource-graph/get-data-here.png" alt-text="Screenshot of the Get Data dialog with the Azure Resource Graph connector emphasized.":::
 
 2. In the **Azure Resource Graph** dialog box, fill in the query and any optional fields, such as **Scope**.
 
-:::image type="content" source="./media/azure-resource-graph/enter-info.png" alt-text="Screenshot of the Input Dialog Box with the Azure Resource Graph connector emphasized.":::
+   :::image type="content" source="./media/azure-resource-graph/enter-info.png" alt-text="Screenshot of the Input Dialog Box with the Azure Resource Graph connector emphasized.":::
 
-> [!NOTE]
-> You can scope queries to either subscription or management group level, **if neither option is chosen the query will execute at the tenant level by default.**
+   > [!NOTE]
+   > You can scope queries to either subscription or management group level, **if neither option is chosen the query will execute at the tenant level by default.**
 
 3. If you're connecting to this site for the first time, select **Sign in** and input your credentials. Then select **Connect**.
 

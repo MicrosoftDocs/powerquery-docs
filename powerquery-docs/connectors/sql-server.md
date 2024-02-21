@@ -1,10 +1,10 @@
 ---
 title: Power Query SQL Server connector
 description: Includes basic information about products that use the connector, supported authentication types, prerequisites, and connection instructions.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/14/2023
-ms.author: bezhan
+ms.date: 2/16/2024
+ms.author: dougklo
 ---
 
 # SQL Server
@@ -14,21 +14,17 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
-| Authentication Types Supported | Database (Username/Password)<br/>Windows<br/>Azure Active Directory (if the specified server supports it) |
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Authentication Types Supported | Database (Username/Password)<br/>Windows<br/>Organizational account (if the specified server supports it) |
 | M Function Reference | [Sql.Database](/powerquery-m/sql-database)<br/>[Sql.Databases](/powerquery-m/sql-databases) |
 
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
-
-## Prerequisites
-
-By default, Power BI installs an OLE DB driver for SQL Server. However, for optimal performance, we recommend that the customer installs the [SQL Server Native Client](/sql/relational-databases/native-client/applications/installing-sql-server-native-client) before using the SQL Server connector. SQL Server Native Client 11.0 and SQL Server Native Client 10.0 are both supported in the latest version.
 
 ## Capabilities Supported
 
 * Import
-* DirectQuery (Power BI Datasets)
+* DirectQuery (Power BI semantic models)
 * Advanced options
   * Command timeout in minutes
   * Native SQL statement
@@ -50,16 +46,16 @@ To make the connection, take the following steps:
 
 4. Select **OK**.
 
-5. If this is the first time you're connecting to this database, select the authentication type, input your credentials, and select the level to apply the authentication settings to. Then select **Connect**.
+5. If you're connecting to this database for the first time, select the authentication type, input your credentials, and select the level to apply the authentication settings to. Then select **Connect**.
 
    ![SQL Server database authentication.](./media/sql-server-database/signin-desktop.png)
 
-   >[!Note]
-   > If the connection is not encrypted, you'll be prompted with the following dialog.
+   > [!NOTE]
+   > If the connection isn't encrypted, you'll be prompted with the following dialog.
 
    ![SQL Server database encryption support.](./media/sql-server-database/encryption-warning.png)
 
-    Select **OK** to connect to the database by using an unencrypted connection, or follow these [instructions](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine) to setup encrypted connections to SQL Server.
+    Select **OK** to connect to the database by using an unencrypted connection, or follow these [instructions](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine) to set up encrypted connections to SQL Server. Additionally, when encryption is enabled for SQL servers using self-signed certificates, review this [section](#sql-server-certificate-isnt-trusted-on-the-client-power-bi-desktop-or-on-premises-data-gateway) to add the SQL servers to the Power Query Desktop client's trust list.
 
 6. In **Navigator**, select the database information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
 
@@ -77,9 +73,9 @@ To make the connection, take the following steps:
 
 3. If needed, select an on-premises data gateway.
 
-4. If this is the first time you're connecting to this database, select the authentication kind and input your credentials.
+4. If you're connecting to this database for the first time, select the authentication kind and input your credentials.
 
-5. If the connection is not encrypted, and the connection dialog contains a **Use Encrypted Connection** check box, clear the check box.
+5. If the connection isn't encrypted, and the connection dialog contains a **Use Encrypted Connection** check box, clear the check box.
 
 6. Select **Next** to continue.
 
@@ -95,29 +91,44 @@ Both Power Query Desktop and Power Query Online provide a set of advanced option
 | --------------- | ----------- |
 | Command timeout in minutes | If your connection lasts longer than 10 minutes (the default timeout), you can enter another value in minutes to keep the connection open longer. This option is only available in Power Query Desktop. |
 | SQL statement | For information, go to [Import data from a database using native database query](../native-database-query.md). |
-| Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, you won’t see those columns. |
+| Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, you can't see those columns. |
 | Navigate using full hierarchy | If checked, the Navigator displays the complete hierarchy of tables in the database you're connecting to. If cleared, Navigator displays only the tables whose columns and rows contain data. |
-| Enable SQL Server Failover support | If checked, when a node in the SQL Server [failover group](/sql/sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server) isn't available, Power Query moves from that node to another when failover occurs. If cleared, no failover will occur. |
+| Enable SQL Server Failover support | If checked, when a node in the SQL Server [failover group](/sql/sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server) isn't available, Power Query moves from that node to another when failover occurs. If cleared, no failover occurs. |
 
-Once you've selected the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your SQL Server database.
+Once you select the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your SQL Server database.
 
 ## Known issues and limitations
 
-### Certificate errors
+### SQL Server certificate isn't trusted on the client (Power BI Desktop or on-premises data gateway)
 
-When using the SQL Server database connector, if encryption is disabled and the SQL Server certificate isn't trusted on the client (Power BI Desktop or on-premises data gateway), you'll experience the following error.
+When establishing a connection to an on-premises SQL Server using the on-premises data gateway or Power BI Desktop and the SQL Server utilizes a self-signed certificate, it's possible that the refresh operation for a Fabric semantic model or dataflow can fail with the following error message:
 
-```A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The certificate chain was issued by an authority that is not trusted.```
+```Microsoft SQL: A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The certificate chain was issued by an authority that is not trusted.)```
+
+To troubleshoot this error when using on-premises data gateway, change the gateway configurations to update the `SqlTrustedServers` setting using the following steps:
+
+1. On the local machine where the on-premises data gateway is installed, navigate to **C:\Program Files\On-premises data gateway**.
+2. Make a backup of the configuration file named **Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config**.
+3. Open the original **Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config** configuration file and locate the `SqlTrustedServers` entry.
+4. Update the `SqlTrustedServers` value with the names of the SQL servers to trust and connect to.
+
+   The value contains a comma-delimited list of server names and supports **\*** as a wild card. So for instance in the following example:
+
+   `<setting name="SqlTrustedServers" serializeAs="String"> <value>contososql*,mysvr</value> </setting>`
+
+   the value `contososql*,mysvr` matches `contososql6`, `contososqlazure`, and `mysvr`, but doesn't match `mysvr.microsoft.com`.
+
+To troubleshoot this error when using Power BI Desktop, modify the value of the environment variable `PBI_SQL_TRUSTED_SERVERS` to include the SQL Servers. The supported values are the same as outlined for gateway configuration (as described in step 4 above).
 
 ### Always Encrypted columns
 
 Power Query doesn't support 'Always Encrypted' columns.
 
-### Azure Active Directory authentication
+### Microsoft Entra ID authentication
 
-Azure Active Directory authentication is only supported in the SQL Server connector if the specified server also supports Azure Active Directory authentication. Otherwise, you might encounter an error that says that "The OAuth authentication method is not supported in this data source".
+Microsoft Entra ID (Organizational account) authentication is only supported in the SQL Server connector if the specified server also supports Microsoft Entra ID authentication. Otherwise, you might encounter a "The OAuth authentication method isn't supported in this data source" error.
 
-Note that in Power BI service, the Azure Active Directory authentication method shows up as "OAuth2".
+Note that in Power BI service, the Microsoft Entra ID authentication method shows up as "OAuth2."
 
 ## Next steps
 

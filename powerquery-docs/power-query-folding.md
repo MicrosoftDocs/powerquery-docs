@@ -4,13 +4,13 @@ description: Understand Power Query query folding, and how to achieve it.
 author: ptyx507x
 ms.reviewer: asaxton
 ms.topic: conceptual
-ms.date: 6/27/2022
+ms.date: 1/24/2024
 ms.author: miescobar
 ---
 
 # Power Query query folding
 
-This article targets data modelers developing models in Power Pivot or Power BI Desktop. It describes what Power Query query folding is, and why it's important in your data model designs. This article also describes the data sources and transformations that can achieve query folding, and how to determine that your Power Query queries can be folded—whether fully or partially.
+This article targets data modelers developing models in Power Pivot or Power BI Desktop. It describes what Power Query query folding is, and why it's important in your data model designs. This article also describes the data sources and transformations that can achieve query folding, and how to determine that your Power Query queries can be folded&mdash;whether fully or partially.
 
 _Query folding_ is the ability for a Power Query query to generate a single query statement to retrieve and transform source data. The Power Query mashup engine strives to achieve query folding whenever possible for reasons of efficiency.
 
@@ -20,7 +20,7 @@ Query folding is an important topic for data modeling for several reasons:
 - **DirectQuery and Dual storage mode tables:** Each DirectQuery and Dual storage mode table (Power BI only) must be based on a Power Query query that can be folded.
 - **Incremental refresh:** Incremental data refresh (Power BI only) will be efficient, in terms of resource utilization and refresh duration. In fact, the Power BI **Incremental Refresh** configuration window will notify you of a warning should it determine that query folding for the table can't be achieved. If it can't be achieved, the goal of incremental refresh is defeated. The mashup engine would then be required to retrieve all source rows, and then apply filters to determine incremental changes.
 
-Query folding may occur for an entire Power Query query, or for a subset of its steps. When query folding cannot be achieved—either partially or fully—the Power Query mashup engine must compensate by processing data transformations itself. This process can involve retrieving source query results, which for large datasets is very resource intensive and slow.
+Query folding may occur for an entire Power Query query, or for a subset of its steps. When query folding cannot be achieved&mdash;either partially or fully&mdash;the Power Query mashup engine must compensate by processing data transformations itself. This process can involve retrieving source query results, which for large data sets is very resource intensive and slow.
 
 We recommend that you strive to achieve efficiency in your model designs by ensuring query folding occurs whenever possible.
 

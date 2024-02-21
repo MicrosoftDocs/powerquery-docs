@@ -1,23 +1,23 @@
 ---
 title: Power Query Usercube connector
 description: Provides basic information and prerequisites for the Usercube connector. Also includes descriptions of the optional input parameters, and discusses limitations and issues you might run into.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/14/2022
-ms.author: bezhan
+ms.date: 1/24/2024
+ms.author: dougklo
 ---
 
 # Usercube (Beta)
 
->[!Note]
+> [!NOTE]
 >The following connector article is provided by Usercube, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Usercube website and use the support channels there.
- 
+
 ## Summary
 
 | Item                             | Description                                                                  |
 | -------------------------------- | ---------------------------------------------------------------------------- |
 | Release State                    | Beta                                                                         |
-| Products                         | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)      |
+| Products                         | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)      |
 | Authentication Types Supported   | Client Credentials                                                           |
 | Function Reference Documentation | &mdash;                                                                      |
 

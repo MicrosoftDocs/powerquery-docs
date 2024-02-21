@@ -1,10 +1,10 @@
 ---
 title: Azure Data Lake Storage Gen2
 description: Includes basic information, prerequisites, and information on how to connect to Azure Data Lake Storage Gen2, along with a list of limitations.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/7/2023
-ms.author: bezhan
+ms.date: 2/16/2024
+ms.author: dougklo
 ---
 
 # Azure Data Lake Storage Gen2
@@ -14,11 +14,14 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication Types Supported | Organizational Account<br/>Account Key<br/>Shared Access Signature (SAS) Key<br/>Service principal |
 | Function Reference Documentation | [AzureStorage.DataLake](/powerquery-m/azurestorage-datalake)<br/>[AzureStorage.DataLakeContents](/powerquery-m/azurestorage-datalakecontents) |
 
->[!Note]
+> [!NOTE]
+>The service principal authentication type isn't supported when using an on-premises data gateway or a virtual network (VNet) data gateway.
+
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
@@ -39,9 +42,7 @@ ms.author: bezhan
 
 ## Connect to Azure Data Lake Storage Gen2 from Power Query Desktop
 
-1. Select the **Azure Data Lake Storage Gen2** option in the **Get Data** selection, and then select **Connect**. More information: [Where to get data](../where-to-get-data.md)
-
-    ![Screenshot of the get data page, with the Azure category selected, and Azure Data Lake Storage Gen2 emphasized.](media/azure-data-lake-storage-gen2/get-data-page.png)
+1. Select **Azure Data Lake Storage Gen2** in the get data experience. The get data experience in Power Query Desktop varies between apps. For more information about the Power Query Desktop get data experience for your app, go to [Where to get data](../where-to-get-data.md).
 
 2. In the **Azure Data Lake Storage Gen2** dialog box, provide the URL to your Azure Data Lake Storage Gen2 account, container, or subfolder using the container endpoint format. URLs for Data Lake Storage Gen2 have the following pattern:
 
@@ -67,11 +68,13 @@ ms.author: bezhan
 
 ## Connect to Azure Data Lake Storage Gen2 from Power Query Online
 
-1. Select the **Azure Data Lake Storage Gen2** option in the **Get Data** selection, and then select **Connect**. More information: [Where to get data](../where-to-get-data.md)
+1. Select the **Azure Data Lake Storage Gen2** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../where-to-get-data.md).
 
-   ![Screenshot of the Connect to data source page for Azure Data Lake Storage Gen2, with the URL entered.](media/azure-data-lake-storage-gen2/adls-url-online.png)
+   :::image type="content" source="media/azure-data-lake-storage-gen2/get-data-online.png" alt-text="Screenshot of the get data window with Azure Data Lake Storage Gen2 emphasized.":::
 
 2. In **Connect to data source**, enter the URL to your Azure Data Lake Storage Gen2 account. Refer to [Limitations](#limitations) to determine the URL to use.
+
+   ![Screenshot of the Connect to data source page for Azure Data Lake Storage Gen2, with the URL entered.](media/azure-data-lake-storage-gen2/adls-url-online.png)
 
 3. Select whether you want to use the file system view or the Common Data Model folder view.
 
@@ -93,7 +96,7 @@ Currently, in Power Query Online, the Azure Data Lake Storage Gen2 connector onl
 
 ### Refresh authentication
 
-Microsoft doesn't support dataflow or dataset refresh using OAuth2 authentication when the Azure Data Lake Storage Gen2 (ADLS) account is in a different tenant. This limitation only applies to ADLS when the authentication method is OAuth2, that is, when you attempt to connect to a cross-tenant ADLS using an Azure AD account. In this case, we recommend that you use a different authentication method that isn't OAuth2/AAD, such as the Key authentication method.
+Microsoft doesn't support dataflow or semantic model refresh using OAuth2 authentication when the Azure Data Lake Storage Gen2 (ADLS) account is in a different tenant. This limitation only applies to ADLS when the authentication method is OAuth2, that is, when you attempt to connect to a cross-tenant ADLS using an Microsoft Entra ID account. In this case, we recommend that you use a different authentication method that isn't OAuth2/Microsoft Entra ID, such as the Key authentication method.
 
 ### Proxy and firewall requirements
 

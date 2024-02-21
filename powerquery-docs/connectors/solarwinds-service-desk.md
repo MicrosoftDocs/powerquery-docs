@@ -2,9 +2,9 @@
 title: SolarWinds Service Desktop (Beta)
 description: Provides basic information, prerequisites, and instructions on how to connect to the SolarWinds Service Desktop connector.
 author: giladsmg
-ms.author: bezhan
+ms.author: dougklo
 ms.topic: conceptual
-ms.date: 7/14/2023
+ms.date: 1/24/2024
 ---
 
 # SolarWinds Service Desk (Beta)
@@ -21,7 +21,7 @@ variety of formats, such as tables, graphs, and charts.
 | Item                           | Description                                  |
 |--------------------------------|----------------------------------------------|
 | Release state                  | Beta                                         |
-| Products                       | Power BI (Datasets)<br/>Power BI (Dataflows)<br/> Fabric (Dataflow Gen2) |
+| Products                       | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/> Fabric (Dataflow Gen2) |
 | Authentication Types Supported | SolarWinds Service Desk JSON Web Token (JWT) |
 
 ## Prerequisites
@@ -70,5 +70,5 @@ If a credential error occurs in the Navigator, clear your recent data source set
 
    ![Screenshot of Select SolarWinds Service Desk datasource.](./media/solarwinds-service-desk/data-source-clear.png)
 
-2. Select the SolarWinds Service Desk data source, and then select **Clear permissions**. 
+2. Select the SolarWinds Service Desk data source, and then select **Clear permissions**.
 3. Establish the connection to the Navigator again.

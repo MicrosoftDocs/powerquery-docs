@@ -3,13 +3,13 @@ title: Power Query SAP Business Warehouse Application Server connector
 description: Power Query SAP Business Warehouse Application Server connector reference
 author: dougklopfenstein
 ms.topic: conceptual
-ms.date: 7/14/2023
-ms.author: bezhan
+ms.date: 1/24/2024
+ms.author: dougklo
 ---
 
 # SAP Business Warehouse Application Server
 
->[!NOTE]
+> [!NOTE]
 >The SAP Business Warehouse (BW) Application Server connector is now certified for SAP BW/4HANA as of June 2020.
 
 ## Summary
@@ -17,16 +17,16 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Analysis Services |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Analysis Services |
 | Authentication Types Supported | Windows (desktop)<br/>Database (desktop)<br/>Basic (online) |
 | Function Reference Documentation | [SapBusinessWarehouse.Cubes](/powerquery-m/sapbusinesswarehouse-cubes)<br/>[Sapbusinesswarehouseexecutionmode.DataStream](/powerquery-m/sapbusinesswarehouseexecutionmode-type)<br/>[SapBusinessWarehouseExecutionMode.BasXml](/powerquery-m/sapbusinesswarehouseexecutionmode-type)<br/>[SapBusinessWarehouseExecutionMode.BasXmlGzip](/powerquery-m/sapbusinesswarehouseexecutionmode-type) |
 
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > Version 1.0 of the SAP BW Application Server connector has been deprecated. New connections will use Implementation 2.0 of the SAP BW Application Server connector. All support for version 1.0 will be removed from the connector in the near future.
 
 You'll need an SAP account to sign in to the website and download the drivers. If you're unsure, contact the SAP administrator in your organization. The drivers need to be installed on the gateway machine.
@@ -40,13 +40,13 @@ When you install, in **Optional setup steps**, make sure you select **Install as
 
 ![Select install assemblies to GAC.](install-to-gac.png)
 
->[!NOTE]
+> [!NOTE]
 >As of late 2023, the SAP BW Application Server connector contains support for SAP .NET Connector 3.1.
 
 ## Capabilities Supported
 
 * Import
-* Direct Query (Power BI Datasets)
+* Direct Query (Power BI semantic models)
 * Advanced
   * Language code
   * Execution mode

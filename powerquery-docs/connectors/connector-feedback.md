@@ -1,11 +1,11 @@
 ---
 title: Power Query connector feedback
 description: This article describes where users can receive support and share feedback for Power Query Connectors. 
-author: bezhan-msft
+author: ptyx507x
 
 ms.reviewer: dougklo
-ms.date: 04/17/2022
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: miescobar
 ---
 
 # Power Query connector feedback

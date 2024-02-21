@@ -1,15 +1,15 @@
 ---
 title: Power Query Common Data Service (Legacy) connector
 description: Provides basic information and instructions on connecting to data using the Common Data Service (Legacy) connector.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/13/2023
-ms.author: bezhan
+ms.date: 2/1/2024
+ms.author: dougklo
 ---
 
 # Common Data Service (Legacy)
 
->[!Note]
+> [!NOTE]
 >The Common Data Service (Legacy) connector has be superseded by the Power Query [Dataverse](dataverse.md) connector. In most cases, we recommend that you use the Dataverse connector instead of the Common Data Service (Legacy) connector. However, there may be limited cases where it's necessary to choose the Common Data Service (Legacy) connector. These cases are described in [When to use the Common Data Service (Legacy) connector](#when-to-use-the-common-data-service-legacy-connector).
 
 ## Summary
@@ -17,11 +17,10 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Dynamics 365 Customer Insights |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Dynamics 365 Customer Insights |
 | Authentication types | Organizational account |
-| | |
 
->[!Note]
+> [!NOTE]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
@@ -35,17 +34,13 @@ You must have a Common Data Service (Legacy) environment with maker permissions 
   * Reorder columns
   * Add display column
 
-## Connect to Common Data Service (Legacy) from Power BI Desktop
+## Connect to Common Data Service (Legacy) from Power Query Desktop
 
-To connect to Common Data Service (Legacy) from Power BI Desktop:
+To connect to Common Data Service (Legacy) from Power Query Desktop:
 
-1. Select **Get data** from the **Home** tab.
+1. Select **Common Data Service (Legacy)** in the get data experience. The get data experience in Power Query Desktop varies between apps. For more information about the Power Query Desktop get data experience for your app, go to [Where to get data](../where-to-get-data.md).
 
-2. In the **Get Data** dialog box, select **Power Platform** > **Common Data Service (Legacy)**, and then select **Connect**.
-
-   ![Get data in Power BI Desktop.](media/common-data-service/get-data.png)
-
-3. Enter the Common Data Service (Legacy) environment URL of the data you want to load. Use the format https://\<_yourenvironmentid_>.crm.dynamics.com/. More information: [Finding your Dataverse environment URL](#finding-your-common-data-service-legacy-environment-url)
+2. Enter the Common Data Service (Legacy) environment URL of the data you want to load. Use the format https://\<_yourenvironmentid_>.crm.dynamics.com/. More information: [Finding your Dataverse environment URL](#finding-your-common-data-service-legacy-environment-url)
 
    ![Server URL selection.](media/common-data-service/enter-url.png)
 
@@ -55,11 +50,11 @@ To connect to Common Data Service (Legacy) from Power BI Desktop:
 
    When you've finished filling in the information, select **OK**.
 
-4. If this attempt is the first time you're connecting to this site, select **Sign in** and input your credentials. Then select **Connect**.
+3. If this attempt is the first time you're connecting to this site, select **Sign in** and input your credentials. Then select **Connect**.
 
    ![Sign in to this site.](media/common-data-service/sign-in.png)
 
-5. In **Navigator**, select the data you require, then either load or transform the data.
+4. In **Navigator**, select the data you require, then either load or transform the data.
 
    ![Load or transform from navigator.](media/common-data-service/navigator.png)
 
@@ -67,9 +62,9 @@ To connect to Common Data Service (Legacy) from Power BI Desktop:
 
 To connect to Common Data Service (Legacy) from Power Query Online:
 
-1. From the **Data sources** page, select **Common Data Service (Legacy)**.
+1. Select the **Common Data Service (Legacy)** option in the get data experience.  Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../where-to-get-data.md).
 
-   ![Get data from Power Query Online.](media/common-data-service/get-data-online.png)
+   :::image type="content" source="media/common-data-service/get-data-online.png" alt-text="Screenshot of the get data choose data source window in Power Query Online.":::
 
 2. Enter the server URL address of the data you want to load.
 
@@ -99,7 +94,7 @@ There are certain Tabular Data Stream (TDS) data types that are supported in ODa
 
 All of these features will be added to the Dataverse connector in the future, at which time the Common Data Service (Legacy) connector will be deprecated.
 
-More information: [Accessing large datasets](#accessing-large-datasets)
+More information: [Accessing large semantic models](#accessing-large-semantic-models)
 
 ## Limitations and issues
 
@@ -121,7 +116,7 @@ There are several alternative ways of extracting and migrating data from Dataver
 
 * Use the Dataverse connector to access read-only data in Dataverse. For more information about this feature, go to [View table data in Power BI Desktop](/powerapps/maker/data-platform/view-entity-data-power-bi).
 
->[!Note]
+> [!NOTE]
 > Both the Dataverse connector and the OData APIs are meant to serve analytical scenarios where data volumes are relatively small. The recommended approach for bulk data extraction is “Azure Synapse Link”.
 
 ### Querying display columns must include the field in the query
@@ -134,10 +129,10 @@ Table.SelectColumns(#"Navigation 1", {"statuscode", "statuscode_display"})
 
 If `statuscode` isn't included, `statuscode_display` might be null and error out.
 
-### Accessing large datasets
+### Accessing large semantic models
 
-Power BI datasets contained in Dataverse can be very large. If you're using the Power Query [Dataverse](dataverse.md) connector, any specific query that accesses the dataset must return less than 80 MB of data. So you might need to query the data multiple times to access all of the data in the dataset. Using multiple queries can take a considerable amount of time to return all the data.
+Power BI semantic models contained in Dataverse can be very large. If you're using the Power Query [Dataverse](dataverse.md) connector, any specific query that accesses the model must return less than 80 MB of data. So you might need to query the data multiple times to access all of the data in the model. Using multiple queries can take a considerable amount of time to return all the data.
 
-If you're using the Common Data Service (Legacy) connector, you can use a single query to access all of the data in the dataset. This connector works differently and returns the result in “pages” of 5 K records. Although the Common Data Service (Legacy) connector is more efficient in returning large amounts of data, it can still take a significant amount of time to return the result.
+If you're using the Common Data Service (Legacy) connector, you can use a single query to access all of the data in the semantic model. This connector works differently and returns the result in “pages” of 5 K records. Although the Common Data Service (Legacy) connector is more efficient in returning large amounts of data, it can still take a significant amount of time to return the result.
 
-Instead of using these connectors to access large datasets, we recommend that you use [Azure Synapse Link](/powerapps/maker/data-platform/export-to-data-lake) to access large datasets. Using Azure Synapse Link is even more efficient that either the Power Query Dataverse or Common Data Service (Legacy) connectors, and it is specifically designed around data integration scenarios.
+Instead of using these connectors to access large semantic models, we recommend that you use [Azure Synapse Link](/powerapps/maker/data-platform/export-to-data-lake) to access large models. Using Azure Synapse Link is even more efficient that either the Power Query Dataverse or Common Data Service (Legacy) connectors, and it is specifically designed around data integration scenarios.

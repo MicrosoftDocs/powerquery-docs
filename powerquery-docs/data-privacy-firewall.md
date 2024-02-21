@@ -3,14 +3,14 @@ title: Behind the scenes of the Data Privacy Firewall
 description: Describes the purpose of the Data Privacy Firewall
 author: ehrenMSFT
 ms.topic: conceptual
-ms.date: 11/3/2023
+ms.date: 1/22/2024
 ms.author: ehvonleh
 ---
 
 # Behind the scenes of the Data Privacy Firewall
 
 >[!NOTE]
->Privacy levels are currently unavailable in Power Platform dataflows. The product team is working towards re-enabling this functionality in the coming weeks.
+>Privacy levels are currently unavailable in Power Platform dataflows, but the product team is working towards enabling this functionality.
 
 If you've used Power Query for any length of time, you've likely experienced it. There you are, querying away, when you suddenly get an error that no amount of online searching, query tweaking, or keyboard bashing can remedy. An error like:
 
@@ -166,13 +166,7 @@ Here's a high-level summary of the partitioning logic.
       * Doesn't reference any partitions that access data sources
       * Isn't cyclic
   * Grouping (Dynamic)
-    * Now that unnecessary partitions have been trimmed, try to create Source partitions that are as large as possible.
-    * Merge all partitions with their input partitions if each of its inputs:
-      * Is part of the same query
-      * Doesn't reference any other partitions
-      * Is only referenced by the current partition
-      * Isn't the result (that is, final step) of a query
-      * Isn't cyclic
+    * Now that unnecessary partitions have been trimmed, try to create Source partitions that are as large as possible. This is done by merging the partitions using the same rules described in the static grouping phase above.
 
 ## What does all this mean?
 
