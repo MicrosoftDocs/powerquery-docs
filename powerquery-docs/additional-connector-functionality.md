@@ -33,7 +33,7 @@ This section outlines options available for implementing single sign-on (SSO) fu
 
 #### Microsoft Entra ID SSO
 
-Microsoft Entra ID-based SSO is supported in cloud scenarios. The data source must accept Microsoft Entra ID access tokens, as the Power BI Microsoft Entra ID user token is exchanged with a data source token from Microsoft Entra ID. As a requirement, your connector must support the [Aad authentication kind](https://learn.microsoft.com/power-query/handling-authentication#microsoft-entra-id-authentication). If you have a certified connector, reach out to your Microsoft contact to learn more.
+Microsoft Entra ID-based SSO is supported in cloud scenarios. The data source must accept Microsoft Entra ID access tokens, as the Power BI Microsoft Entra ID user token is exchanged with a data source token from Microsoft Entra ID. As a requirement, your connector must support the [Aad authentication kind](/power-query/handling-authentication#microsoft-entra-id-authentication). If you have a certified connector, reach out to your Microsoft contact to learn more.
 
 ## Native database query support
 
