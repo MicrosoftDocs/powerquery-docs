@@ -15,7 +15,7 @@ ms.author: dougklo
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
-| Authentication Types Supported | [Web.Contents](/powerquery-m/web-contents):<br/>Anonymous<br/>Windows<br/>Basic<br/>Web API<br/>Organizational Account<br/>Service Principal<br/><br/>[Web.BrowserContents](/powerquery-m/web-browsercontents):<br/>Anonymous<br/>Windows ([preview feature](web-troubleshoot.md#enabling-the-edge-webview2-version-of-webbrowsercontents))<br/>Basic ([preview feature](web-troubleshoot.md#enabling-the-edge-webview2-version-of-webbrowsercontents))<br/>Web API ([preview feature](web-troubleshoot.md#enabling-the-edge-webview2-version-of-webbrowsercontents))<br/><br/>[Web.Page](/powerquery-m/web-page):<br/>Anonymous<br/>Windows (current user's credentials only)<br/>Web API |
+| Authentication Types Supported | [Web.Contents](/powerquery-m/web-contents):<br/>Anonymous<br/>Windows<br/>Basic<br/>Web API<br/>Organizational Account<br/>Service Principal<br/><br/>[Web.BrowserContents](/powerquery-m/web-browsercontents):<br/>Anonymous<br/>Windows<br/>Basic<br/>Web API<br/><br/>[Web.Page](/powerquery-m/web-page):<br/>Anonymous<br/>Windows (current user's credentials only)<br/>Web API |
 | Function Reference Documentation | [Web.Contents](/powerquery-m/web-contents)<br/>[Web.BrowserContents](/powerquery-m/web-browsercontents)<br/>[Web.Page](/powerquery-m/web-page) |
 
 > [!NOTE]
@@ -30,6 +30,7 @@ ms.author: dougklo
 ## Prerequisites
 
 * [Web.Page](/powerquery-m/web-page) requires Internet Explorer 10.
+* [Web.BrowserContents](/powerquery-m/web-browsercontents) requires Microsoft Edge's WebView2 runtime.
 
 ## Capabilities supported
 
