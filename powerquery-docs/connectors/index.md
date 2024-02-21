@@ -13,7 +13,7 @@ The following table contains a list of all the connectors currently available fo
 
 A checkmark indicates the connector is currently supported in the listed service; an X indicates that the connector is not currently supported in the listed service.
 
-The connectors are listed in alphabetical order in separate tables for each letter in the alphabet. Use the **In this article** list on the right side of this article to go to any of the alphabetized tables.
+The connectors are listed in alphabetical order in separate tables for each letter in the alphabet. Use the **In this article** list on the right side of this article to go to any of the alphabetized tables. Go to [Supported Azure data services](/data-integration/vnet/use-data-gateways-sources-power-bi#supported-azure-data-services) to learn more about which connectors are supported by the VNET data gateway.
 
 > [!NOTE]
 >The Excel column in the following table indicates all connectors that are available on at least one version of Excel. However, not all Excel versions support all of these indicated Power Query connectors. For a complete list of the Power Query connectors supported by all versions of Excel, go to [Power Query data sources in Excel versions](https://support.microsoft.com/office/power-query-data-sources-in-excel-versions-e9332067-8e49-46fc-97ff-f2e1bfa0cb16).
