@@ -2,7 +2,7 @@
 title: Test harness
 description: Overview of PQTest test harness
 author: ryan-syed
-ms.topic: conceptual
+ms.topic: overview
 ms.date: 02/14/2024
 ms.author: v-ryansyed
 ---
