@@ -12,7 +12,7 @@ ms.author: v-ryansyed
 Data source credentials can be cached and reused across commands. By default, this cache is stored in a local file under
 %LOCALAPPDATA%/Microsoft/pqtest and [encrypted with the current user key](/dotnet/standard/security/how-to-use-data-protection).
 
-As an alternative to local file storage, you can store credentials in an [Azure Key Vault](/azure/key-vault/). You can enable this option using the **--keyVault** / **-kv** option, providing a key vault name as the option argument, and setting the environment variables specified in the following table:
+As an alternative to local file storage, you can store credentials in an [Azure Key Vault](/azure/key-vault/). You can enable this option using the **\-\-keyVault** / **-kv** option, providing a key vault name as the option argument, and setting the environment variables specified in the following table:
 
 > [!NOTE]
 > When using Azure Key Vault, credentials are stored as a single binary object, rather than individual secrets.
@@ -31,20 +31,20 @@ Example of using the **keyVault** option:
 **set PQTEST_AZURE_TENANT_ID="c265f4e8-a32f-4548-a21e-3542ec65134a"**
 **set PQTEST_AZURE_KEY_VAULT_URL="https://myvault.vault.azure.net"**
 
-**pqtest list-credential --keyVault secretName**
+**pqtest list-credential \-\-keyVault secretName**
 
 ## Credential-template
 
 Use this command to generate a credential template in JSON format that can be passed into the **set-credential** command. The command requires you to provide an [extension](pqtest-general-usage.md#extension) and [data source information](pqtest-general-usage.md#data-source). If the data
-source supports more than one authentication kind, you need to specify which authentication kind to use with the **--authenticationKind** / **-ak** option.
+source supports more than one authentication kind, you need to specify which authentication kind to use with the **\-\-authenticationKind** / **-ak** option.
 
-The output template has placeholder values identified with a **$$**\<*key name*>**$$** that should be replaced before passing them to the **set-credential** command.
+The output template has placeholder values identified with a **\$$**\<*key name*>**$$** that should be replaced before passing them to the **set-credential** command.
 
 For example, `MyConnector` supports both Anonymous and UsernamePassword authentication kinds.
 
 To generate an `Anonymous` credential, the following command would be used:
 
-**pqtest credential-template --extension MyConnector.mez --queryFile MyConnectorQuery.m --prettyPrint --authenticationKind Anonymous**
+**pqtest credential-template \-\-extension MyConnector.mez \-\-queryFile MyConnectorQuery.m \-\-prettyPrint \-\-authenticationKind Anonymous**
 
 > [!NOTE]
 >The output JSON value doesn't contain any placeholder values as the `Anonymous` kind doesn't require any.
@@ -60,7 +60,7 @@ To generate an `Anonymous` credential, the following command would be used:
 
 The following command would be used to generate a UsernamePassword credential for the same connector:
 
-**pqtest credential-template --extension MyConnector.mez --queryFile MyConnectorQuery.m --prettyPrint --authenticationKind UsernamePassword**
+**pqtest credential-template \-\-extension MyConnector.mez \-\-queryFile MyConnectorQuery.m \-\-prettyPrint \-\-authenticationKind UsernamePassword**
 
 The resulting template contains `$$USERNAME$$` and `$$PASSWORD$$` placeholder values.
 
@@ -134,9 +134,9 @@ You can set `Anonymous` and `Windows` credentials without providing a [credentia
 > [!NOTE]
 >`Windows` credentials set in this way default to using the current user's identity. Use the [credential-template command](#credential-template) to generate a JSON credential that can be modified to use an alternative windows account credentials.
 
-**pqtest set-credential -e MyConnector.mez -q MyConnectorQuery.m -p --authenticationKind windows**
+**pqtest set-credential -e MyConnector.mez -q MyConnectorQuery.m -p \-\-authenticationKind windows**
 
-**pqtest set-credential -e MyConnector.mez -q MyConnectorQuery.m -p --authenticationKind anonymous**
+**pqtest set-credential -e MyConnector.mez -q MyConnectorQuery.m -p \-\-authenticationKind anonymous**
 
 ### Interactive mode
 
