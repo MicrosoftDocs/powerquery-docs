@@ -13,7 +13,7 @@ ms.custom:
 
 This multi-part reference covers the setup and running of a standard suite of tests for Power Query connector developers. The reference is meant to be followed sequentially—to ensure that your environment is set up for testing your extension connector.
 
-In this lesson, you will:
+In this section, you will:
 
 > [!div class="checklist"]
 >
@@ -44,9 +44,9 @@ If you don't have a *".NuGet"* folder, be sure to load a connector workspace in 
 
 ## Conclusion
 
-This lesson covered the setup of Power Query SDK Test Framework.
+This section covered the setup of Power Query SDK Test Framework.
 
-In the next lesson, you'll learn about the test data that is used by the standard test suite within the testing framework.
+In the next section, you'll learn about the test data that is used by the standard test suite within the testing framework.
 
 ## Next steps
 

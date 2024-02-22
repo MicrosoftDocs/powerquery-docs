@@ -13,7 +13,7 @@ ms.custom:
 
 This multi-part reference covers the setup and running of a standard suite of tests for Power Query connector developers. The reference is meant to be followed sequentially—to ensure that your environment is set up for testing your extension connector.
 
-This reference uses Power Query SDK Test Framework, a standardized test suite, and a modified version of the [NewYork City Taxi & Limousine Commission (TLC)](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page) green trip record data. The subsequent lessons walk through the steps to get your environment setup to validate your extension connector.
+This reference uses Power Query SDK Test Framework, a standardized test suite, and a modified version of the [NewYork City Taxi & Limousine Commission (TLC)](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page) green trip record data. The subsequent sections walk through the steps to get your environment setup to validate your extension connector.
 
 The Test Framework allows Power Query SDK Developers to have access to standard tests and a test harness to verify the direct query (DQ) capabilities of an extension connector. With this new capability, developers have a standard way of verifying connectors and a platform for adding custom tests. We envision this as the first step in enhancing the productivity of the testing workflow provided by the Power Query SDK.
 
@@ -59,7 +59,7 @@ In this guide:
 
 ## Parts
 
-|Part|Lesson                                                   |Details                                                                                                |
+|Part|section                                                   |Details                                                                                                |
 |----|:--------------------------------------------------------|:------------------------------------------------------------------------------------------------------|
 |1   |[Setup](1-setup.md)                                      | Set up your environment                                                                               |
 |2   |[Preparing Data](2-data.md)                              | Preparing the test data                                                                               |

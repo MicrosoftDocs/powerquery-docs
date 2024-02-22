@@ -13,7 +13,7 @@ ms.custom:
 
 This multi-part reference covers the setup and running of a standard suite of tests for Power Query connector developers. The reference is meant to be followed sequentially—to ensure that your environment is set up for testing your extension connector.
 
-In this lesson, you will:
+In this section, you will:
 
 > [!div class="checklist"]
 >
@@ -48,9 +48,9 @@ The test suite consists of the following tests:
 
 ## Conclusion
 
-This lesson gave you an overview of the test suite and where to download it from.
+This section gave you an overview of the test suite and where to download it from.
 
-In the next lesson, you'll learn about the various file formats, and their purpose with the Test Framework.
+In the next section, you'll learn about the various file formats, and their purpose with the Test Framework.
 
 ## Next steps
 

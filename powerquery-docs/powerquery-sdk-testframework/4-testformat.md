@@ -15,7 +15,7 @@ This multi-part reference covers the setup and running of a standard suite of te
 
 Now that you have setup the environment, uploaded the test data and set up the test suite, you're ready to start verifying your extension connector with the test suite. Before running the tests, you need to understand different types of files and formats within the test framework.
 
-In this lesson, you will:
+In this section, you will:
 
 > [!div class="checklist"]
 >
@@ -121,9 +121,9 @@ The optional diagnostic file currently contains a list of Command Text that gets
 
 ## Conclusion
 
-This lesson introduced you to various file formats that you need to be familiar while working with Power Query SDK Test Framework.
+This section introduced you to various file formats that you need to be familiar while working with Power Query SDK Test Framework.
 
-In the next lesson, you'll create queries and settings to work with your data source for your extension connector.
+In the next section, you'll create queries and settings to work with your data source for your extension connector.
 
 ## Next steps
 

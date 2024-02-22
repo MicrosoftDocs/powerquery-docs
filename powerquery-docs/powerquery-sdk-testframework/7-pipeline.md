@@ -14,7 +14,7 @@ This multi-part reference covers the setup and running of a standard suite of te
 
 This guide provides you with the steps that are needed for setting up a pipeline for Power Query SDK Test Framework.
 
-In this lesson, you will:
+In this section, you will:
 
 > [!div class="checklist"]
 >
@@ -150,6 +150,6 @@ steps:
 
 ## Conclusion
 
-This lesson showed you how to set up and configure the pipeline to use Power Query SDK Test Framework, the provided test suite and also your own tests to validate your extension connector.
+This section showed you how to set up and configure the pipeline to use Power Query SDK Test Framework, the provided test suite and also your own tests to validate your extension connector.
 
 Overall, you should now be able to reliably make changes to your extension and validate it during the development and release.

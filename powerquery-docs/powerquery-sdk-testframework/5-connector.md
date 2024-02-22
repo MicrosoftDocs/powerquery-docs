@@ -22,7 +22,7 @@ So far, you're done with the following steps:
 
 You're finally ready to start verifying your extension connector with the test suite.
 
-In this lesson, you will:
+In this section, you will:
 
 > [!div class="checklist"]
 >
@@ -176,9 +176,9 @@ Example:
 
 ## Conclusion
 
-This lesson covered the steps to set up the parameter queries and settings files, which are then required to validate your extension connector by running the sanity and standardized set of tests.
+This section covered the steps to set up the parameter queries and settings files, which are then required to validate your extension connector by running the sanity and standardized set of tests.
 
-In the next lesson, you'll understand how to add more tests. You're also going to learn about the various commands and options available within the test framework and various customizable settings for your testing needs.
+In the next section, you'll understand how to add more tests. You're also going to learn about the various commands and options available within the test framework and various customizable settings for your testing needs.
 
 ## Next steps
 

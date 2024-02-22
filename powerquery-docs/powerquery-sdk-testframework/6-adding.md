@@ -15,7 +15,7 @@ This multi-part reference covers the setup and running of a standard suite of te
 
 Now you might want to add more tests for your extension connector to verify other use cases or the standardized test suite doesn't fit your needs.
 
-In this lesson, you will:
+In this section, you will:
 
 > [!div class="checklist"]
 >
@@ -38,9 +38,9 @@ You can refer [pqtest-compare](../powerquery-sdktools/pqtest-compare.md) for var
 
 ## Conclusion
 
-This lesson showed how and where to add more tests for your connector. You also have a reference for various configurations and options used by the compare command.
+This section showed how and where to add more tests for your connector. You also have a reference for various configurations and options used by the compare command.
 
-In the next lesson, you'll learn to automate running of the tests by setting up a pipeline with the tests using the test framework.
+In the next section, you'll learn to automate running of the tests by setting up a pipeline with the tests using the test framework.
 
 ## Next steps
 

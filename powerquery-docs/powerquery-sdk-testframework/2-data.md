@@ -13,7 +13,7 @@ ms.custom:
 
 This multi-part reference covers the setup and running of a standard suite of tests for Power Query connector developers. The reference is meant to be followed sequentially—to ensure that your environment is set up for testing your extension connector.
 
-In this lesson, you will:
+In this section, you will:
 
 > [!div class="checklist"]
 >
@@ -21,7 +21,7 @@ In this lesson, you will:
 > * Download a copy of the test data
 > * Upload the data to your choice of database for the connector you intend to test
 
-This lesson covers the test data that is used by the test suite to verify your connector.
+This section covers the test data that is used by the test suite to verify your connector.
 
 ## Overview of the dataset
 
@@ -93,9 +93,9 @@ The following table provides further information about each field in the *TaxiZo
 
 ## Conclusion
 
-This lesson described the test data used within the standardized test suite and its schema. Your database should now be populated with tables based on the specified csv files with the correct schema.
+This section described the test data used within the standardized test suite and its schema. Your database should now be populated with tables based on the specified csv files with the correct schema.
 
-In the next lesson, you'll gain an understanding of different sections of the test suite that helps you validate the setup of the dataset and your extension connector.
+In the next section, you'll gain an understanding of different sections of the test suite that helps you validate the setup of the dataset and your extension connector.
 
 ## Next steps
 
