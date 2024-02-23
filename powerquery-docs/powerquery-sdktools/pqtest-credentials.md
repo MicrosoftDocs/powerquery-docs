@@ -144,9 +144,15 @@ You can set `Anonymous` and `Windows` credentials without providing a [credentia
 > [!NOTE]
 >`Windows` credentials set in this way default to using the current user's identity. Use the [credential-template command](#credential-template) to generate a JSON credential that can be modified to use an alternative windows account credentials.
 
+To generate an `Windows` credential, the following command would be used:
+
 ```PowerShell
 <Path to PQTest.exe>.\PQTest.exe set-credential -e MyConnector.mez -q MyConnectorQuery.m -p --authenticationKind windows
+```
 
+To generate an `Anonymous` credential, the following command would be used:
+
+```PowerShell
 <Path to PQTest.exe>.\PQTest.exe set-credential -e MyConnector.mez -q MyConnectorQuery.m -p --authenticationKind anonymous
 ```
 
