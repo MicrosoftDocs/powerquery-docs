@@ -25,7 +25,7 @@ The tests for verifying extension connectors with the Power Query SDK test frame
 
 The following list describes the types of files that you need to be aware of while working with the Power Query SDK test framework:
 
-* Query file, also known as a PQ file, with a \.query.pq extension.
+* Test query file, also known as a PQ file, with a \.query.pq extension.
 * Output file, also known as a PQOut file, with a \.query.pqout extension.
 * Optional parameter query file with a \.parameterquery.pq extension.
 * Optional settings file with a \.settings extension.

@@ -28,8 +28,6 @@ The test data used for the framework is a modified version of the [NewYork City 
 The February 2023 green trip data was converted into "NycTaxiGreen" CSV file and 10,000 rows were sampled from it. Similarly, the "TaxiZoneLookup" CSV file contains 265 rows from the taxi zone lookup table.
 CSV data format was chosen due to its large applicability to nearly all other data sources, making it easier to import.
 
-Review the following information carefully before importing the data:
-
 The definition for each field might be slightly different from the information found in [NYC Taxi and Limousine green dataset - Azure Open Datasets](/azure/open-datasets/dataset-taxi-green?tabs=azureml-opendatasets) and [data_dictionary_trip_records_green.pdf (nyc.gov)](https://www.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_green.pdf).
 
 The dataset for our testing is split into two csv files: [NycTaxiGreen](https://github.com/microsoft/DataConnectors/tree/master/testframework/data/nyc_taxi_tripdata.csv) and [TaxiZoneLookup](https://github.com/microsoft/DataConnectors/tree/master/testframework/data/taxi+_zone_lookup.csv).
