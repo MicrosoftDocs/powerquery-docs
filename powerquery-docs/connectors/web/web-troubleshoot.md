@@ -71,6 +71,10 @@ If you're using [Web.Page](/powerquery-m/web-page) and receive a `Please specify
 
 If you're using [Web.BrowserContents](/powerquery-m/web-browsercontents) and receive a `We were unable to find the WebView2 runtime` error, ensure that you have the WebView2 runtime installed on the machine that hosts your on-premises data gateway. The error message should provide a link to the WebView2 runtime installer. If you've installed the runtime but are still seeing the error, ensure that the gateway service account (usually PBIEgwService) has access to the install location of the WebView2 runtime (for example, C:\Program Files (x86)\Microsoft\EdgeWebView).
 
+## "We encountered an error when initializing the web browser" errors when using Web.BrowserContents
+
+This error can occur if the process calling [Web.BrowserContents](/powerquery-m/web-browsercontents) is running in elevated mode, since WebView2 currently doesn't support running with administrator privileges.
+
 ## Using Web.Page instead of Web.BrowserContents
 
 In cases where you need to use `Web.Page` instead of `Web.BrowserContents`, you can still manually use `Web.Page`.
