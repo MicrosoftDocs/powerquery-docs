@@ -33,13 +33,10 @@ In this section, you:
 
 ## Set the PQTest.exe and extension paths in the RunPQSDKTestSuitesSettings.json file
 
-Navigate to \testframework\tests and open the RunPQSDKTestSuitesSettings.json file in the cloned repo folder. Then set the following values:
+Navigate to \testframework\tests and open the RunPQSDKTestSuitesSettings.json file in the cloned repo folder. Then set the paths for PQTest.exe and the extension in the config file:
 
-```json
-// Set the paths for PQTest.exe and Extension in the config
-"PQTestExePath":"<Replace with the path to PQTest.exe. Ex: 'C:\\Users\\ContosoUser\\.vscode\\extensions\\powerquery.vscode-powerquery-sdk-x.x.x-win32-x64\\.nuget\\Microsoft.PowerQuery.SdkTools.x.xxx.x\\tools\\PQTest.exe'>",
-"ExtensionPath":"<Replace with path to the extension mez file Ex: C:\\dev\\ConnectorName\\ConnectorName.mez'>"
-```
+* **PQTestExePath**: Replace with the path to PQTest.ext. For example, C:\\Users\\\<*UserName*>\\.vscode\\extensions\\powerquery.vscode-powerquery-sdk-*x.x.x*-win32-x64\\.nuget\\Microsoft.PowerQuery.SdkTools.*x.xxx.x*\\tools\\PQTest.exe, where \<*Username*> is the name of your user profile folder, *x.x.x* is the current version of Power Query SDK extension, and *x.xxx.x* is the current version of Power Query SDK tools.
+* **ExtensionPath**: Replace with the path to the extension mez file. For example, C:\\dev\\\<*ConnectorName*>\\\<*ConnectorName*>.mez, where \<*ConnectorName*> is the name of your connector.
 
 > [!NOTE]
 > You can find further information about all the variables that you can set in the RunPQSDKTestSuitesSettings.json file in the provided \testframework\tests\RunPQSDKTestSuitesSettingsTemplate.json template.
