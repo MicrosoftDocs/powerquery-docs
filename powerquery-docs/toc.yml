@@ -691,23 +691,23 @@ items:
           href: native-query-sdk.md
         - name: "Versioning"
           href: handling-versioning.md
-      - name: Power Query SDK Test Framework
+      - name: Power Query SDK test framework
         items:
         - name: "Overview"
           href: powerquery-sdk-testframework/test-framework.md
         - name: "1. Setup"
           href: powerquery-sdk-testframework/1-setup.md
-        - name: "2. Preparing Data"
+        - name: "2. Preparing data"
           href: powerquery-sdk-testframework/2-data.md
-        - name: "3. Test Suite"
+        - name: "3. Test suite"
           href: powerquery-sdk-testframework/3-tests.md
-        - name: "4. Test Format Specification"
+        - name: "4. Test format specification"
           href: powerquery-sdk-testframework/4-testformat.md
-        - name: "5. Connector Testing"
+        - name: "5. Connector testing"
           href: powerquery-sdk-testframework/5-connector.md
-        - name: "6. Adding Tests"
+        - name: "6. Adding tests"
           href: powerquery-sdk-testframework/6-adding.md
-        - name: "7. Pipeline Setup Guide"
+        - name: "7. Pipeline setup guide"
           href: powerquery-sdk-testframework/7-pipeline.md
       - name: Connector Certification
         items:
