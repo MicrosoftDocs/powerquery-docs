@@ -20,18 +20,20 @@ As an alternative to local file storage, you can store credentials in an [Azure 
 | Variable                   | Details                                                                               | Sample                               |
 | -------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------ |
 | PQTEST_AZURE_CLIENT_ID     | ID (GUID) for the Microsoft Entra ID application authorized to access your key vault. | c265f4e8-a32f-4548-a21e-3542ec65134a |
-| PQTEST_AZURE_CLIENT_SECRET | Client secret for your Microsoft Entra ID application.                                | PLACEHOLDER                          |
+| PQTEST_AZURE_CLIENT_SECRET | Client secret for your Microsoft Entra ID application.                                | \<client-secret-placeholder>         |
 | PQTEST_AZURE_TENANT_ID     | ID (GUID) for the tenant that owns the Azure Key Vault.                               | c265f4e8-a32f-4548-a21e-3542ec65134a |
 | PQTEST_AZURE_KEY_VAULT_URL | URL to the key vault.                                                                 | `https://<myvault>.vault.azure.net`  |
 
 Example of using the **keyVault** option:
 
-**set PQTEST_AZURE_CLIENT_ID="c265f4e8-a32f-4548-a21e-3542ec65134a"**
-**set PQTEST_AZURE_CLIENT_SECRET="PLACEHOLDER"**
-**set PQTEST_AZURE_TENANT_ID="c265f4e8-a32f-4548-a21e-3542ec65134a"**
-**set PQTEST_AZURE_KEY_VAULT_URL="https://myvault.vault.azure.net"**
+```PowerShell
+set PQTEST_AZURE_CLIENT_ID="c265f4e8-a32f-4548-a21e-3542ec65134a"
+set PQTEST_AZURE_CLIENT_SECRET="<client-secret-placeholder>"
+set PQTEST_AZURE_TENANT_ID="c265f4e8-a32f-4548-a21e-3542ec65134a"
+set PQTEST_AZURE_KEY_VAULT_URL="https://myvault.vault.azure.net"
 
-**pqtest list-credential \-\-keyVault secretName**
+<Path to PQTest.exe>.\PQTest.exe list-credential --keyVault secretName
+```
 
 ## Credential-template
 
@@ -44,7 +46,9 @@ For example, `MyConnector` supports both Anonymous and UsernamePassword authenti
 
 To generate an `Anonymous` credential, the following command would be used:
 
-**pqtest credential-template \-\-extension MyConnector.mez \-\-queryFile MyConnectorQuery.m \-\-prettyPrint \-\-authenticationKind Anonymous**
+```PowerShell
+<Path to PQTest.exe>.\PQTest.exe credential-template --extension MyConnector.mez --queryFile MyConnectorQuery.m --prettyPrint --authenticationKind Anonymous
+```
 
 > [!NOTE]
 >The output JSON value doesn't contain any placeholder values as the `Anonymous` kind doesn't require any.
@@ -60,7 +64,9 @@ To generate an `Anonymous` credential, the following command would be used:
 
 The following command would be used to generate a UsernamePassword credential for the same connector:
 
-**pqtest credential-template \-\-extension MyConnector.mez \-\-queryFile MyConnectorQuery.m \-\-prettyPrint \-\-authenticationKind UsernamePassword**
+```PowerShell
+<Path to PQTest.exe>.\PQTest.exe credential-template --extension MyConnector.mez --queryFile MyConnectorQuery.m --prettyPrint --authenticationKind UsernamePassword
+```
 
 The resulting template contains `$$USERNAME$$` and `$$PASSWORD$$` placeholder values.
 
@@ -92,7 +98,9 @@ When setting a credential using the JSON template, the input must be piped into 
 
 Here's an example of setting an `Anonymous` credential by piping the result of the **credential-template** command into **set-credential**:
 
-**pqtest credential-template -e MyConnector.mez -q MyConnectorQuery.m -p -ak Anonymous | pqtest set-credential -e MyConnector.mez -q MyConnectorQuery.m -p**
+```PowerShell
+<Path to PQTest.exe>.\PQTest.exe credential-template -e MyConnector.mez -q MyConnectorQuery.m -p -ak Anonymous | pqtest set-credential -e MyConnector.mez -q MyConnectorQuery.m -p
+```
 
 ```json
 {
@@ -112,7 +120,9 @@ Here's an example of setting an `Anonymous` credential by piping the result of t
 
 Here's an example of setting a credential from a file stored on disk (using redirected input):
 
-**pqtest set-credential -e MyConnector.mez -q MyConnectorQuery.m -p < mySavedCredential.json**
+```PowerShell
+<Path to PQTest.exe>.\PQTest.exe set-credential -e MyConnector.mez -q MyConnectorQuery.m -p < mySavedCredential.json
+```
 
 ```json
 {
@@ -134,9 +144,11 @@ You can set `Anonymous` and `Windows` credentials without providing a [credentia
 > [!NOTE]
 >`Windows` credentials set in this way default to using the current user's identity. Use the [credential-template command](#credential-template) to generate a JSON credential that can be modified to use an alternative windows account credentials.
 
-**pqtest set-credential -e MyConnector.mez -q MyConnectorQuery.m -p \-\-authenticationKind windows**
+```PowerShell
+<Path to PQTest.exe>.\PQTest.exe set-credential -e MyConnector.mez -q MyConnectorQuery.m -p --authenticationKind windows
 
-**pqtest set-credential -e MyConnector.mez -q MyConnectorQuery.m -p \-\-authenticationKind anonymous**
+<Path to PQTest.exe>.\PQTest.exe set-credential -e MyConnector.mez -q MyConnectorQuery.m -p --authenticationKind anonymous
+```
 
 ### Interactive mode
 

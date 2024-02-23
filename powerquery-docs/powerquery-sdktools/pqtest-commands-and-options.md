@@ -13,21 +13,21 @@ ms.author: v-ryansyed
 
 The following table lists all the commands for PQTest.exe:
 
-| Command             | Description                                                                                                          |
-| :------------------ | :--------------------------------------------------------------------------------------------------------------------|
-| credential-template | Generates a template for setting data source credentials.                                                            |
-| compare             | Executes PQ (test file) and compares the results with PQOut (test output file) if it exists or generates one for you.|
-| delete-credential   | Deletes credentials from the credential store.                                                                       |
-| discover            | Returns data source discovery results for a given expression.                                                        |
-| info                | Returns all extension module information.                                                                            |
-| list-credential     | Returns all credentials in the credential store.                                                                     |
-| oauth               | Displays OAuth client information for a given expression or data source.                                             |
-| refresh-credential  | Refreshes OAuth credentials in the credential store.                                                                 |
-| run-test            | Executes tests and returns the results.                                                                              |
-| set-credential      | Sets a credential and saves it into the credential store.                                                            |
-| test-connection     | Performs a TestConnection call for a given connector.                                                                |
-| validate            | Validates the connector's TestConnection implementation.                                                             |
-| version             | Returns product version information.                                                                                 |
+| Command             | Description                                                                                                                                                       |
+| :------------------ | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| credential-template | Generates a template for setting data source credentials.                                                                                                         |
+| compare             | Executes PQ (test file) and compares the results with PQOut (test output file). If the test output file doesn't exist, it will automatically be generated for you.|
+| delete-credential   | Deletes credentials from the credential store.                                                                                                                    |
+| discover            | Returns data source discovery results for a given expression.                                                                                                     |
+| info                | Returns all extension module information.                                                                                                                         |
+| list-credential     | Returns all credentials in the credential store.                                                                                                                  |
+| oauth               | Displays OAuth client information for a given expression or data source.                                                                                          |
+| refresh-credential  | Refreshes OAuth credentials in the credential store.                                                                                                              |
+| run-test            | Executes tests and returns the results.                                                                                                                           |
+| set-credential      | Sets a credential and saves it into the credential store.                                                                                                         |
+| test-connection     | Performs a TestConnection call for a given connector.                                                                                                             |
+| validate            | Validates the connector's TestConnection implementation.                                                                                                          |
+| version             | Returns product version information.                                                                                                                              |
 
 ## Options
 
