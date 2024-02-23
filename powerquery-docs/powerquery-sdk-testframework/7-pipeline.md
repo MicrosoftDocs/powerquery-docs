@@ -98,7 +98,7 @@ To automate credential access for PQTest, we recommend using a key vault. This w
 
 Now that you have a way to get secrets, you can add them to PQTest's credential cache.
 
-1. Use the **credential-template** command to create a JSON template. This template contains placeholder text (\$$USERNAME$$, \$$REFRESH_TOKEN\$$, and so on), which can be dynamically altered through string replace functions.
+1. Use the **credential-template** command to create a JSON template. This template contains placeholder text (`$$USERNAME$$`, `$$REFRESH_TOKEN$$`, and so on), which can be dynamically altered through string replace functions.
 
     ```powerquery-m
     $keyVaultOutput = invoke-expression 'Get-AzKeyVaultSecret -VaultName $keyVaultName -Name $secretName -AsPlainText'
@@ -121,11 +121,11 @@ Note: The list-credential command can be used to confirm the credential are prop
 
 Tests can be run through the command using the **compare** command. For example, to run a single test:
 
-**.\PQTest.exe compare -e <connector file> -q <query file> -p"**
+**.\PQTest.exe compare -e \<connector file> -q \<query file> -p"**
 
 To run multiple tests:
 
-**.\PQTest.exe compare -e <connector file> -q <query folder> -sq <base query file> -p"**
+**.\PQTest.exe compare -e \<connector file> -q \<query folder> -sq \<base query file> -p"**
 
 ### Automating Scripts
 
