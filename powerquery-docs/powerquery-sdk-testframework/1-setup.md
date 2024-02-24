@@ -34,7 +34,7 @@ Where *x.x.x* is the current version of Power Query SDK extension.
 
 The SdkTools NuGet package is found under:
 
-\<*extension_path*>\.nuget\Microsoft.PowerQuery.SdkTools.2.*xxx.x*\tools`
+\<*extension_path*>\.nuget\Microsoft.PowerQuery.SdkTools.2.*xxx.x*\tools
 
 Where *xxx.x* is the current version of Power Query SDK Tools.
 

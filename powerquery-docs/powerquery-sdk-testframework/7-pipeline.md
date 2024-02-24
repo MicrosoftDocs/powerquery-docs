@@ -69,15 +69,13 @@ The PQTest executable can be found in the NuGet packages \tools folder. Use the 
 
 ### Drivers
 
-For ODBC connectors, any drivers need to be added to an ODBC Drivers folder alongside PQTest.exe.
+For ODBC connectors, any drivers need to be added to an ODBC Drivers folder at the following path:
 
-```
-Microsoft.PowerQuery.SdkTools folder
-    tools
-        ODBC Drivers
-            <drivers>
-        PQTest.exe
-```
+\<*power_query_sdk_extension_path*>\Microsoft.PowerQuery.SdkTools.2.*xxx.x*\tools\ODBC Drivers\<drivers>
+
+Example for Contoso driver, the path could be as follows :
+
+C:\Users\ContosoUser\.vscode\extensions\powerquery.vscode-powerquery-sdk-0.2.3-win32-x64\.nuget\Microsoft.PowerQuery.SdkTools.2.126.3\tools\ODBC Driver\Contoso
 
 ## Credentials
 
