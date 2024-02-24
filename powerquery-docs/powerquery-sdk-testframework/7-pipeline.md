@@ -100,7 +100,7 @@ Now that you have a way to get secrets, you can add them to PQTest's credential 
 
 1. Use the **credential-template** command to create a JSON template. This template contains placeholder text (`$$USERNAME$$`, `$$REFRESH_TOKEN$$`, and so on), which can be dynamically altered through string replace functions.
 
-    ```powerquery-m
+    ```PowerShell
     $keyVaultOutput = invoke-expression 'Get-AzKeyVaultSecret -VaultName $keyVaultName -Name $secretName -AsPlainText'
     $jsonTemplate = invoke-expression "$pqTestExe credential-template -e $extensionFile -q $queryFile -ak $authenticationType"
     $jsonCredential = $jsonTemplate.Replace('$$USERNAME$$', $credentialName)
@@ -109,7 +109,7 @@ Now that you have a way to get secrets, you can add them to PQTest's credential 
 
 2. Pass the altered JSON template to the **set-credential** command using either pipe (|) or input (<).
 
-    ```powerquery-m
+    ```PowerShell
     $jsonCredential | & $pqTestExe set-credential -e $extensionFile -q $queryFile
     ```
 
@@ -121,17 +121,17 @@ Note: The list-credential command can be used to confirm the credential are prop
 
 Tests can be run through the command using the **compare** command. For example, to run a single test:
 
-**.\PQTest.exe compare -e \<connector file> -q \<query file> -p"**
+`.\PQTest.exe compare -e <connector file> -q <query file> -p`
 
 To run multiple tests:
 
-**.\PQTest.exe compare -e \<connector file> -q \<query folder> -sq \<base query file> -p"**
+`.\PQTest.exe compare -e <connector file> -q <query folder> -sq <base query file> -p`
 
 ### Automating Scripts
 
 Scripts can be automated by running them from a pipeline task. For Azure Pipelines, the [PowerShell task](/azure/devops/pipelines/tasks/reference/powershell-v2) can be used:
 
-```powerquery-m
+```yaml
 # Example Azure pipeline for running connector tests using PQTest.
 # Azure Pipelines reference: https://aka.ms/yaml
 trigger: none
