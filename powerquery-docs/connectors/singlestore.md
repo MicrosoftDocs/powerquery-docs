@@ -7,7 +7,7 @@ ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
-# SingleStore (Beta)
+# SingleStore
 
 > [!NOTE]
 > The following connector article is provided by SingleStore, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the SingleStore website and use the support channels there.
@@ -16,7 +16,7 @@ ms.author: dougklo
 
 | Item | Description
 |--|--|
-| Release State | Beta |
+| Release State | General Availability |
 | Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Basic<br/>Windows |
 
@@ -31,7 +31,7 @@ To connect Microsoft Power BI Desktop to SingleStore DB or Managed Service:
 
 1. In the **Home** ribbon, from the **Get Data** list, select **More**.
 
-2. In the **Get Data** dialog, select **SingleStore Direct Query Connector 1.0**.
+2. In the **Get Data** dialog, select **SingleStore Direct Query Connector**.
 
     ![Locate the SingleStore Connectors in Get Data dialog.](./media/singlestore/ss-get-data-connector.png)
 
@@ -41,7 +41,7 @@ To connect Microsoft Power BI Desktop to SingleStore DB or Managed Service:
 
     ![Enter server IP / hostname and database and select the connectivity mode.](./media/singlestore/ss-db-select-mode.png)
 
-4. In the **SingleStore Direct Query Connector 1.0** dialog box, in the left pane, select the authentication type (either **Windows** or **Basic**).
+4. In the **SingleStore Direct Query Connector** dialog box, in the left pane, select the authentication type (either **Windows** or **Basic**).
 
     > [!NOTE]
     > SingleStoreDB Cloud users can only use **Basic** authentication.
@@ -95,4 +95,4 @@ To modify the credentials used to connect to SingleStore:
 
 1. In the **File** ribbon, select **Options and settings** > **Data source settings**.
 
-2. In the **Data source settings** dialog, select **SingleStore DirectQuery Connector 1.0**, and then select **Edit Permissions**.
+2. In the **Data source settings** dialog, select **SingleStore Direct Query Connector**, and then select **Edit Permissions**.
