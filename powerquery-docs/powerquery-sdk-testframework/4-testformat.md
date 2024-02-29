@@ -125,4 +125,4 @@ In the next section, you create queries and settings to work with your data sour
 
 ## Next steps
 
-[Power Query SDK Test Framework part 5 - Testing your extension connector](./5-connector.md)
+[Power Query SDK test framework part 5 - Testing your extension connector](./5-connector.md)
