@@ -7,7 +7,7 @@ ms.date: 01/19/2024
 ms.author: v-ryansyed
 ---
 
-# Power Query SDK test framework part 2 - Test Data
+# Power Query SDK test framework part 2 - Test data
 
 This multi-part reference covers the setup and running of a standard suite of tests for Power Query connector developers. The reference is meant to be followed sequentially to ensure that your environment is set up for testing your extension connector.
 
@@ -49,7 +49,7 @@ Resources:
 * [Schema definition](https://github.com/microsoft/DataConnectors/tree/master/testframework/data/PQSDKTestFrameworkDataSchema.sql)
 * [Test Data documentation](https://github.com/microsoft/DataConnectors/tree/master/testframework/data/PQSDKTestData.md)
 
-### NycTaxiGreen Table Description
+### NycTaxiGreen table description
 
 The following table provides further information about each field in the "NycTaxiGreen" table:
 
@@ -76,7 +76,7 @@ The following table provides further information about each field in the "NycTax
 | trip_type                   | Integer   | A numeric code for whether the taxi was hailed or dispatched.                                                                                                                                            |
 | congestion_surcharge        | Double    | An extra charge for congestion. **Two decimal** places.                                                                                                                                                  |
 
-### TaxiZoneLookup Table Description
+### TaxiZoneLookup table description
 
 The following table provides further information about each field in the "TaxiZoneLookup" table:
 
@@ -95,4 +95,4 @@ In the next section, you gain an understanding of different sections of the test
 
 ## Next steps
 
-[PowerQuery SDK Test Framework part 3 - Test Suite](./3-tests.md)
+[PowerQuery SDK test framework part 3 - Test suite](./3-tests.md)
