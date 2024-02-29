@@ -17,9 +17,12 @@ Install an on-premises data gateway to transfer data quickly and securely betwee
 
 ### Power BI service
 
-- A Power BI service account. Don't have one? [Sign up for 60 days free](/power-bi/fundamentals/service-get-started#sign-up-for-the-power-bi-service).
+- A Power BI Pro license or a PPU license.  Don't have one? [Sign up for 60 days free](/power-bi/fundamentals/service-get-started#sign-up-for-the-power-bi-service).
 
-- Administrative permissions on a gateway. These permissions are provided by default for gateways you install. Administrators can grant other people permissions for gateways.
+- In order to create a dataflow that queries an on premise data source, you need one of the following:
+  - Administrator permissions on a gateway.
+  - Connection creator permissions on the gateway.
+  - A gateway connection for the data source(s) you intend to use already created on the gateway for which you are a user.
 
 ### Power Apps
 
@@ -33,7 +36,7 @@ Install an on-premises data gateway to transfer data quickly and securely betwee
 
 You can install an on-premises data gateway directly from the online service.
 
->[!NOTE]
+> [!NOTE]
 >
 >- It's a good general practice to make sure you're using a supported version of the on-premises data gateway. We release a new update of the on-premises data gateway every month. Currently, Microsoft actively supports only the last six releases of the on-premises data gateway.
 >- Starting April 2022, the minimum required gateway version will be Feburary 2021. Dataflows that refresh using an earlier version of the gateway might stop refreshing.
