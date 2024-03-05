@@ -81,7 +81,7 @@ The reports will display data from the past month instead of the last two years.
 Incremental Refresh saves download time after your initial download is performed. To set up incremental refresh, follow these steps:
 
 1. On the Home menu bar, click Transform Data. A Power Query Editor opens.
-2. Open Manage Parameters > Create parameters. Create two new DateTime parameters named RangeEnd and RangeStart ,with one month set as the range between them. These new parameters reduce download time. See: [create-parameters](https://learn.microsoft.com/en-us/power-bi/connect-data/incremental-refresh-configure#create-parameters) for instructions.
+2. Open Manage Parameters > Create parameters. Create two new DateTime parameters named RangeEnd and RangeStart ,with one month set as the range between them. These new parameters reduce download time. See: [create-parameters](/power-bi/connect-data/incremental-refresh-configure#create-parameters) for instructions.
 
    ![Screenshot create parameters.](./media/solarwinds-service-desk/create-parameters.png)
 
@@ -103,7 +103,7 @@ The following line displays:
    ![Screenshot open incremental refresh.](./media/solarwinds-service-desk/open-incremental-refresh.png)
 
     a. Archive data starting 2 Years before refresh date. Note: Do not exceed 2 years.
-    b. Incrementally refresh data starting 1 Days before the refresh date. See: [define-policy](https://learn.microsoft.com/en-us/power-bi/connect-data/incremental-refresh-configure#define-policy) for instructions.
+    b. Incrementally refresh data starting 1 Days before the refresh date. See: [define-policy](/power-bi/connect-data/incremental-refresh-configure#define-policy) for instructions.
    ![Screenshot set incremental refresh.](./media/solarwinds-service-desk/set-incremental-refresh.png)
 
 ## Publishing reports
@@ -121,7 +121,7 @@ You can refresh each semantic model for the first time. The refresh will downloa
 
 SolarWinds suggests setting the first large download with a scheduled refresh. Optionally, you can run it manually by clicking Refresh the semantic model.
 
-For instructions on configuring a scheduled refresh see: [scheduled-refresh](https://learn.microsoft.com/en-us/power-bi/connect-data/refresh-scheduled-refresh).
+For instructions on configuring a scheduled refresh see: [scheduled-refresh](/power-bi/connect-data/refresh-scheduled-refresh).
 
 After the first refresh, future refreshes will be much quicker and will download only the new records from SWSD.
 
