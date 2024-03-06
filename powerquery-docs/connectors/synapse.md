@@ -3,7 +3,7 @@ title: Power Query Azure Synapse Analytics workspace connector
 description: Provides basic information and connection instructions for the Azure Synapse Analytics Workspace connector.
 author: miquelladeboer
 ms.topic: conceptual
-ms.date: 3/21/2022
+ms.date: 1/24/2024
 ms.author: mideboer
 ---
 
@@ -13,14 +13,14 @@ ms.author: mideboer
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | Public Preview |
-| Products | Power BI (Datasets) |
+| Release State | Beta |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Organizational account |
 
->[!Note]
+> [!NOTE]
 > This Azure Synapse Analytics workspace connector doesn't replace the Azure Synapse Analytics (SQL DW) connector. This connector makes exploring data in Synapse workspaces more accessible. Some capabilities aren't present in this connector, including native query and DirectQuery support.
 
->[!Note]
+> [!NOTE]
 > This connector supports access to all data in your Synapse workspace, including Synapse Serverless, Synapse on-demand, and Spark tables.
 
 ## Prerequisites

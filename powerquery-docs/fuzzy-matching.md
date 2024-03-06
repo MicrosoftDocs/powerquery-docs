@@ -2,7 +2,7 @@
 title: How fuzzy matching works in Power Query
 description: "How-to article on the fuzzy matching feature in Power Query and how to better take advantage of it."
 author: ptyx507x
-ms.date: 12/9/2022
+ms.date: 1/24/2024
 ms.author: miescobar
 ---
 
@@ -18,7 +18,7 @@ The best scenario for applying the fuzzy match algorithm is when all text string
 
 Because the word `Apples` in the second string is only a small part of the whole text string, that comparison yields a lower similarity score.
 
-For example, the following dataset consists of responses from a survey that had only one question&mdash;"What is your favorite fruit?"
+For example, the following data set consists of responses from a survey that had only one question&mdash;"What is your favorite fruit?"
 
 |Fruit|
 |-----|

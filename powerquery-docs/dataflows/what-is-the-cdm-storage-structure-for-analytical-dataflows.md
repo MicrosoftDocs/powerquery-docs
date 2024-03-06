@@ -15,7 +15,7 @@ Analytical dataflows store both data and metadata in Azure Data Lake Storage. Da
 
 If the [dataflow is standard](understanding-differences-between-analytical-standard-dataflows.md#standard-dataflows), then the data is stored in Dataverse. Dataverse is like a database system; it has the concept of tables, views, and so on. Dataverse is a structured data storage option used by standard dataflows.
 
-However, when the dataflow is [analytical](understanding-differences-between-analytical-standard-dataflows.md#analytical-dataflows), the data is stored in Azure Data Lake Storage. A dataflow’s data and metadata is stored in a Common Data Model folder. Since a storage account might have multiple dataflows stored in it, a hierarchy of folders and subfolders has been introduced to help organize the data. Depending on the product the dataflow was created in, the folders and subfolders may represent workspaces (or environments), and then the dataflow’s Common Data Model folder. Inside the Common Data Model folder, both schema and data of the dataflow entities are stored. This structure follows the standards defined for Common Data Model.
+However, when the dataflow is [analytical](understanding-differences-between-analytical-standard-dataflows.md#analytical-dataflows), the data is stored in Azure Data Lake Storage. A dataflow’s data and metadata is stored in a Common Data Model folder. Since a storage account might have multiple dataflows stored in it, a hierarchy of folders and subfolders has been introduced to help organize the data. Depending on the product the dataflow was created in, the folders and subfolders may represent workspaces (or environments), and then the dataflow’s Common Data Model folder. Inside the Common Data Model folder, both schema and data of the dataflow tables are stored. This structure follows the standards defined for Common Data Model.
 
 ![Analytical dataflow stores the data in the Common Data Model structure.](media/what-is-the-cdm-storage-structure/analytical-dataflow-stores-data-in-cdm-format.png)
 
@@ -23,19 +23,19 @@ However, when the dataflow is [analytical](understanding-differences-between-ana
 
 [Common Data Model](/common-data-model/) is a metadata structure defined to bring conformity and consistency for using data across multiple platforms. Common Data Model isn't data storage, it's the way that data is stored and defined.
 
-Common Data Model folders define how an entity's schema and its data should be stored. In Azure Data Lake Storage, data is organized in folders. Folders can represent a workspace or environment. Under those folders, subfolders for each dataflow are created.
+Common Data Model folders define how a table's schema and its data should be stored. In Azure Data Lake Storage, data is organized in folders. Folders can represent a workspace or environment. Under those folders, subfolders for each dataflow are created.
 
 ![Workspace folder structure.](media/what-is-the-cdm-storage-structure/folders-workspace-and-dataflows.png)
 
 ## What's in a dataflow folder?
 
-Each dataflow folder contains a subfolder for each entity and a metadata file named `model.json`.  
+Each dataflow folder contains a subfolder for each table and a metadata file named `model.json`.  
 
 ![What's in a dataflow folder?](media/what-is-the-cdm-storage-structure/cdm-folder.png)
 
 ### The metadata file: model.json
 
-The `model.json` file is the metadata definition of the dataflow. This is the one file that contains all the dataflow metadata. It includes a list of entities, the columns, and their data types in each entity, the relationship between entities, and so on. You can export this file from a dataflow easily, even if you don't have access to the Common Data Model folder structure.
+The `model.json` file is the metadata definition of the dataflow. This is the one file that contains all the dataflow metadata. It includes a list of tables, the columns, and their data types in each table, the relationship between tables, and so on. You can export this file from a dataflow easily, even if you don't have access to the Common Data Model folder structure.
 
 ![Export the model.json file from a dataflow.](media/what-is-the-cdm-storage-structure/dataflow-export-json.png)
 
@@ -47,7 +47,7 @@ To learn exactly what the model.json metadata file includes, go to [The metadata
 
 ### Data files
 
-In addition to the metadata file, the dataflow folder includes other subfolders. A dataflow stores the data for each entity in a subfolder with the entity's name. Data for an entity might be split into multiple data partitions, stored in CSV format.
+In addition to the metadata file, the dataflow folder includes other subfolders. A dataflow stores the data for each table in a subfolder with the table's name. Data for a table might be split into multiple data partitions, stored in CSV format.
 
 ## How to see or access Common Data Model folders
 

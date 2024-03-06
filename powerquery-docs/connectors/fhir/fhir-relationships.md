@@ -3,7 +3,7 @@ title: FHIR Power Query Relationships
 description: Power Query connector for FHIR table relationships
 author: hansenms
 ms.topic: conceptual
-ms.date: 01/08/2020
+ms.date: 7/25/2023
 ms.author: mihansen
 ---
 
@@ -37,36 +37,37 @@ In this section, we'll show an example of establishing a relationship between th
 
 1. When importing data, select the **Patient** and **Observation** tables:
 
-    ![FHIR Navigation Two Resources.](FHIR-Navigate-TwoResources.png)
+   :::image type="content" source="fhir-navigate-tworesources.png" alt-text="Screenshot with the Patient and Observation tables selected in the Power Query Navigator dialog." lightbox="fhir-navigate-tworesources.png":::
 
-    Then select **Transform Data**.
+   Then select **Transform Data**.
 
 1. Expand the **subject** column on `Observation` to reveal `subject.reference`:
 
-    ![Expand subject reference.](FHIR-ExpandSubject.png)
+   :::image type="content" source="fhir-expandsubject.png" alt-text="Screenshot of the Power Query editor with the subject column selected and expanded to reveal the columns drop down menu." lightbox="fhir-expandsubject.png":::
 
-    After expanding, you should see the list of subject references:
+   After expanding, you should see the list of subject references:
 
-    ![Subject references expanded.](FHIR-ExpandedSubjectReference.png)
+   :::image type="content" source="fhir-expandedsubjectreference.png" alt-text="Screenshot of the Power Query editor showing the new expanded subject references column." lightbox="fhir-expandedsubjectreference.png":::
 
 1. Make any other modifications you need to the query and save the modified query.
 
 1. Select **Manage Relationships** in the Power BI client:
 
-    ![Manage relationships.](FHIR-ManageRelationships.png)
+   :::image type="content" source="fhir-managerelationships.png" alt-text="Screenshot of the Power Query editor, with the Manage relationships option in the Home tab emphasized." lightbox="fhir-managerelationships.png":::
 
 1. Establish the relationship. In this simple example, Power BI will likely have detected the relationship automatically:
 
-    ![Autodetected relationship.](FHIR-RelationshipEstablished.png)
+   :::image type="content" source="fhir-relationshipestablished.png" alt-text="Screenshot of the Manage relationships dialog, with the relationship automatically detected and displayed." lightbox="fhir-relationshipestablished.png":::
 
-    If not, you can add it manually:
+   If not, you can add it manually:
 
-    ![Manually add relationship.](FHIR-NewRelationship.png)
+   :::image type="content" source="fhir-newrelationship.png" alt-text="Screenshot of the Manage relationships dialog, with no detected relationships, and the new button emphasized." lightbox="fhir-newrelationship.png":::
 
-    You can edit the details of the relationship:
+   You can edit the details of the relationship:
 
-    ![Edit relationship.](FHIR-EditRelationship.png)
+   :::image type="content" source="fhir-editrelationship.png" alt-text="Screenshot of the Edit relationships dialog, with the Observation and Patient columns selected." lightbox="fhir-editrelationship.png":::
 
+    ![Edit relationship.](fhir-editrelationship.png)
 
 ## Summary
 
@@ -77,4 +78,4 @@ Resources in FHIR are related. These relationships need to be established on dat
 In this article, you've learned how to establish relationships between tables imported with the Power Query connector for FHIR. Next, explore query folding with the Power Query connector for FHIR.
 
 >[!div class="nextstepaction"]
->[FHIR Power Query folding](FHIR-QueryFolding.md)
+>[FHIR Power Query folding](fhir-queryfolding.md)

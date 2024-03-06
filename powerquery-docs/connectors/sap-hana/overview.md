@@ -1,10 +1,10 @@
 ---
 title: Power Query SAP HANA database connector
 description: Provides basic information, prerequisites, and instructions on connecting to your data using the SAP HANA database connector.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 11/15/2022
-ms.author: bezhan
+ms.date: 1/24/2024
+ms.author: dougklo
 ---
 
 # SAP HANA database
@@ -14,11 +14,11 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Analysis Services |
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Analysis Services |
 | Authentication Types Supported | Basic<br/>Database<br/>Windows |
 | Function Reference Documentation | [SapHana.Database](/powerquery-m/saphana-database) |
 
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
@@ -29,14 +29,14 @@ To use SAP HANA in Power BI Desktop or Excel, you must have the SAP HANA ODBC dr
 
 To use SAP HANA in Excel, you must have either the 32-bit or 64-bit SAP HANA ODBC driver (depending on whether you're using the 32-bit or 64-bit version of Excel) installed on the local client computer.
 
-This feature is only available in Excel for Windows if you have Office 2019 or a [Microsoft 365 subscription](https://products.office.com/en-us/buy/compare-microsoft-office-products). If you're a Microsoft 365 subscriber, [make sure you have the latest version of Office](https://support.office.com/en-us/article/how-do-i-upgrade-office-ee68f6cf-422f-464a-82ec-385f65391350).
+This feature is only available in Excel for Windows if you have Office 2019 or a [Microsoft 365 subscription](https://products.office.com/buy/compare-microsoft-office-products). If you're a Microsoft 365 subscriber, [make sure you have the latest version of Office](https://support.office.com/article/how-do-i-upgrade-office-ee68f6cf-422f-464a-82ec-385f65391350).
 
 HANA 1.0 SPS 12rev122.09, 2.0 SPS 3rev30 and BW/4HANA 2.0 is supported.
 
 ## Capabilities Supported
 
 * Import
-* Direct Query
+* Direct Query (Power BI semantic models)
 * Advanced
   * SQL Statement
 
@@ -82,12 +82,12 @@ To connect to SAP HANA data from Power Query Online:
 
 4. Select the name of the on-premises data gateway to use for accessing the database.
 
-   >[!NOTE]
+   > [!NOTE]
    > You must use an on-premises data gateway with this connector, whether your data is local or online.
 
 5. Choose the authentication kind you want to use to access your data. You'll also need to enter a username and password.
 
-   >[!NOTE]
+   > [!NOTE]
    > Currently, Power Query Online only supports Basic authentication.
 
 6. Select **Use Encrypted Connection** if you're using any encrypted connection, then choose the SSL crypto provider. If you're not using an encrypted connection, clear **Use Encrypted Connection**. More information: [Enable encryption for SAP HANA](sap-hana-encryption.md)
@@ -161,7 +161,7 @@ The Power Query SAP HANA database connector supports native queries. For informa
 
 The Power Query SAP HANA database connector now supports query folding on native queries. More information: [Query folding on native queries](../../native-query-folding.md)
 
->[!NOTE]
+> [!NOTE]
 >In the Power Query SAP HANA database connector, native queries don't support duplicate column names when `EnableFolding` is set to true.
 
 ### Parameters in native queries
@@ -232,7 +232,7 @@ Before, when you added a table column (or another transformation that internally
 
 With this change, the added columns are treated as _dynamic attributes_ within the cube. Having the query remain in cube space for this operation has the advantage of letting you continue using cube operations even after adding columns.
 
->[!NOTE]
+> [!NOTE]
 >This new functionality is only available when you connect to Calculation Views in SAP HANA Server version 2.0 or higher.
 
 The following sample query takes advantage of this new capability. In the past, you would get a "the value is not a cube" exception when applying [Cube.CollapseAndRemoveColumns](/powerquery-m/cube-collapseandremovecolumns).
@@ -243,7 +243,7 @@ The following sample query takes advantage of this new capability. In the past, 
 
 * [Enable encryption for SAP HANA](sap-hana-encryption.md)
 
-The following articles contain more information that you may find useful when connecting to an SAP HANA debase.
+The following articles contain more information that you might find useful when connecting to an SAP HANA debase.
 
 * [Manage your data source - SAP HANA](/power-bi/connect-data/service-gateway-enterprise-manage-sap)
 * [Use Kerberos for single sign-on (SSO) to SAP HANA](/power-bi/connect-data/service-gateway-sso-kerberos-sap-hana)

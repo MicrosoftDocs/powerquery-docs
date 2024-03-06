@@ -2,7 +2,7 @@
 title: Using the data profiling tools
 description: Overview of the Data Quality, Column Distribution, and Column Profile features found inside the Power Query Editor
 author: ptyx507
-ms.date: 12/9/2022
+ms.date: 1/24/2024
 ms.author: miescobar
 ms.custom: edited
 ---
@@ -17,16 +17,20 @@ The data profiling tools provide new and intuitive ways to clean, transform, and
 
 * Column profile
 
-To enable the data profiling tools, go to the **View** tab on the ribbon. Enable the options you want in the **Data preview** group, as shown in the following image.
+To enable the data profiling tools, go to the **View** tab on the ribbon. In Power Query Desktop, enable the options you want in the **Data preview** group, as shown in the following image.
 
 ![Data profiling tools.](media/data-profiling-tools/enable-data-preview-tools.png "Data profiling tools")
+
+In Power Query Online, select **Data view**, then enable the options you want in the drop-down list.
+
+:::image type="content" source="media/data-profiling-tools/enable-data-preview-tools-online.png" alt-text="<alt text>":::
 
 After you enable the options, you'll see something like the following image in Power Query Editor.
 
 ![Data profiling tools enabled.](media/data-profiling-tools/data-preview-tools-enabled-v2.png "Data profiling tools enabled")
 
->[!NOTE]
->By default, Power Query will perform this data profiling over the first 1,000 rows of your data. To have it operate over the entire dataset, check the lower-left corner of your editor window to change how column profiling is performed.
+> [!NOTE]
+>By default, Power Query performs this data profiling over the first 1,000 rows of your data. To have it operate over the entire data set, select the **Column profiling based on top 1000 rows** message in the lower-left corner of your editor window to change column profiling to **Column profiling based on entire data set**.
 
 ## Column quality
 

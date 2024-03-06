@@ -1,15 +1,15 @@
 ﻿---
 title: Power Query SumTotal connector
 description: Provides basic information and prerequisites for the SumTotal connector, and outlines limitations and issues.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/29/2022
-ms.author: bezhan
+ms.date: 1/24/2024
+ms.author: dougklo
 ---
 
 # SumTotal
 
->[!Note]
+> [!NOTE]
 >The following connector article is provided by SumTotal, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the SumTotal website and use the support channels there.
 
 ## Summary
@@ -17,7 +17,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication types | SumTotal credentials using OAuth 2.0 |
 
 ## Prerequisites
@@ -37,7 +37,7 @@ Copy the SumTotal hosted root URL in full. This root URL is the unique URL speci
 
 ## Connect to SumTotal BI from Power BI Desktop
 
->[!NOTE]
+> [!NOTE]
 >The Power Query SumTotal connector is currently only suited towards OData API endpoints. For more information, go to [SumTotal's OData API functionality](https://marketplace.sumtotalsystems.com/Home/ODataAPI).
 
 To connect to SumTotal from Power BI Desktop:
@@ -50,14 +50,14 @@ To connect to SumTotal from Power BI Desktop:
 
 3. Enter the server URL address of the data you want to load.
 
-   >[!NOTE]
+   > [!NOTE]
    >You'll be prompted with a script error, which loads JS/CSS scripts the login form uses. Select **Yes**.
 
 4. When the table is loaded in **Navigator**, you'll be presented with the list of OData API entities that are currently supported by the connector. You can select to load one or multiple entities.
 
 5. When you've finished selecting entities, select **Load** or **Transform Data**.
 
->[!NOTE]
+> [!NOTE]
 >If this is the first time you're connecting to this site, select **Sign in** and input your credentials. Then select **Connect**.
 
 ## Known issues and limitations

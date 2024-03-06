@@ -1,10 +1,10 @@
 ---
 title: Power Query Azure Data Explorer (Kusto) connector
 description: Includes basic information, prerequisites, and information on how to connect to Azure Data Explorer, along with a list of limitations.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 12/11/2022
-ms.author: bezhan
+ms.date: 2/7/2024
+ms.author: dougklo
 ---
 
 # Azure Data Explorer (Kusto)
@@ -14,23 +14,23 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
 | Authentication Types Supported | Organizational Account |
 | Function Reference Documentation | &mdash; |
 
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
 
 * An Azure subscription. Go to [Get Azure free trial](https://azure.microsoft.com/pricing/free-trial/).
 
-* An organizational email account that is a member of Azure Active directory. This article uses this account to connect to the [Azure Data Explorer help cluster](https://dataexplorer.azure.com/clusters/help/databases/Samples) samples.
+* An organizational email account that is a member of Microsoft Entra ID. This article uses this account to connect to the [Azure Data Explorer help cluster](https://dataexplorer.azure.com/clusters/help/databases/Samples) samples.
 
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI only)
+* DirectQuery (Power BI semantic models)
 * Advanced options
   * Limit query result record number
   * Limit query result data size in Bytes
@@ -41,9 +41,7 @@ ms.author: bezhan
 
 To connect to Azure Data Explorer from Power Query Desktop:
 
-1. In **Get Data**, select **Azure** > **Azure Data Explorer (Kusto)**, and then select **Connect**. More information: [Where to get data](../where-to-get-data.md)
-
-    ![Screenshot of the get data page, with the Azure category selected, and Azure Data Explorer emphasized.](media/azure-data-explorer/get-data-desktop.png)
+1. Select **Azure Data Explorer (Kusto)** in the get data experience. The get data experience in Power Query Desktop varies between apps. For more information about the Power Query Desktop get data experience for your app, go to [Where to get data](../where-to-get-data.md).
 
 2. In **Azure Data Explorer (Kusto)**, provide the name of your Azure Data Explorer cluster. For this example, use `https://help.kusto.windows.net` to access the sample help cluster. For other clusters, the URL is in the form https://_\<ClusterName>_._\<Region>_.kusto.windows.net.
 
@@ -51,7 +49,7 @@ To connect to Azure Data Explorer from Power Query Desktop:
 
 3. If you want to use any advance options, select the option and enter the data to use with that option. More information: [Connect using advanced options](#connect-using-advanced-options)
 
-   >[!Note]
+   > [!NOTE]
    >You might need to scroll down to display all of the advanced options and the data connectivity selection.
 
 4. Select either the **Import** or **DirectQuery** data connectivity mode (Power BI Desktop only). More information: [When to use Import or Direct Query mode](#when-to-use-import-or-direct-query-mode)
@@ -72,7 +70,9 @@ To connect to Azure Data Explorer from Power Query Desktop:
 
 To connect to Azure Data Explorer from Power Query Online:
 
-1. Select the **Azure Data Explorer (Kusto)** option from **Choose data source**. More information: [Where to get data](../where-to-get-data.md)
+1. Select the **Azure Data Explorer (Kusto)** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../where-to-get-data.md).
+
+   :::image type="content" source="media/azure-data-explorer/get-data-online.png" alt-text="Screenshot of the get data window with Azure Data Explorer emphasized.":::
 
 2. In **Connect to data source**, provide the name of your Azure Data Explorer cluster. For this example, use `https://help.kusto.windows.net` to access the sample help cluster. For other clusters, the URL is in the form https://_\<ClusterName>_._\<Region>_.kusto.windows.net.
 

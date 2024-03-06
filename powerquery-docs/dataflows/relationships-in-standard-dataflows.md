@@ -59,3 +59,5 @@ After setting the key field, you can see the field in the mapping of the dataflo
 - Mapping to [polymorphic lookup](/powerapps/maker/canvas-apps/working-with-references#polymorphic-lookups) fields is currently not supported.
 - Mapping to a multi-level lookup field, a lookup that points to another tables' lookup field, is currently not supported.
 - Lookup fields for Standard Tables, unless they contain alternate key fields as described in this document, won't show up in the Map Tables dialog.
+- Dataflows don't guarantee correct loading order when loading data to tables configured as hierarchical data structures.
+- The order of query execution, or loading order to Dataverse tables isn't guaranteed. We recommend that you separate child and parent tables into two dataflows, and first refresh the dataflow containing child artifacts. 

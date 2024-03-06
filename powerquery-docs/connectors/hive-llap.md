@@ -1,10 +1,10 @@
 ---
 title: Power Query Hive LLAP connector
 description: Provides basic information and prerequisites for the Hive LLAP connector, along with how to connect to your Hive LLAP data.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 2/13/2023 
-ms.author: bezhan
+ms.date: 1/24/2024 
+ms.author: dougklo
 ---
 
 # Hive LLAP
@@ -14,7 +14,7 @@ ms.author: bezhan
 | Item                             | Description                                                                  |
 | -------------------------------- | ---------------------------------------------------------------------------- |
 | Release State                    | General Availability                                                         |
-| Products                         | Power BI (Datasets)<br/>Power BI (Dataflows)                                 |
+| Products                         | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported   | Basic (Username/Password)<br/>Windows                                        |
 | Function Reference Documentation | &mdash;                                                                      |
 
@@ -25,7 +25,7 @@ An Apache Hive LLAP username and password.
 ## Capabilities Supported
 
 - Import
-- Direct Query
+- Direct Query (Power BI semantic models)
 - Thrift Transport Protocol
   - HTTP
   - Standard

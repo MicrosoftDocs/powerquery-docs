@@ -67,7 +67,7 @@ When creating a dataflow, sometimes you don't see all the options that are avail
 
 However, more options are actually available, as shown in the following image.
 
-![Create dataflow menu where "Define new entities", "Import model", "Link entities from other dataflows", and "Attach a Common Data Model folder" options appear](media/troubleshooting-dataflows-issues-creating-dataflow/dataflow-creation-full.png)
+![Create dataflow menu where "Define new tables", "Link tables from other dataflows", "Import model", and "Attach a Common Data Model folder" options appear](media/troubleshooting-dataflows-issues-creating-dataflow/dataflow-creation-full.png)
 
 **Reason:**
 

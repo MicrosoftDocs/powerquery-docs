@@ -1,25 +1,23 @@
 ---
 title: Power Query Bitsight Security Ratings connector
 description: Provides basic information and prerequisites for the Bitsight Security Ratings connector, descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 6/24/2022
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # Bitsight Security Ratings
 
->[!Note]
->The following connector article is provided by Bitsight, the owner of this connector and a 
-member of the Microsoft Power Query Connector Certification Program. If you have questions 
-regarding the content of this article or have changes you would like to see made to this article, visit the Bitsight website and use the support channels there.
+> [!NOTE]
+>The following connector article is provided by Bitsight, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Bitsight website and use the support channels there.
 
 ## Summary
 
 | Item | Description |
 | ------ | ------ |
-| Release State | Generally Available |
-| Products | Power BI (Datasets) |
+| Release State | General Availability |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | API key |
 | Function Reference Document | &mdash; |
 
@@ -29,7 +27,7 @@ A user must have a Bitsight Security Ratings product in order to access the Bits
 
 Users must also have the March 2021 release of Power BI Desktop or later.
 
-## Capabilities Supported
+## Capabilities supported
 
 * Import
 
@@ -49,7 +47,7 @@ To connect to Bitsight:
 
 You can **Load** the selected table, which brings the entire table into Power BI Desktop, or you can select **Transform Data** to edit the query, which opens the Power Query editor. You can then filter and refine the set of data you want to use, and then load that refined set of data into Power BI Desktop.
 
-## Limitations and Issues
+## Limitations and issues
 
 ### Bitsight for Security Performance Management
 

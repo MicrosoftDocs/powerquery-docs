@@ -4,8 +4,8 @@ description: Includes basic information and prerequisites, instructions on how t
 author: DougKlopfenstein
 
 ms.topic: conceptual
-ms.date: 3/31/2023
-ms.author: bezhan
+ms.date: 2/7/2024
+ms.author: dougklo
 LocalizationGroup: reference
 ---
 
@@ -16,7 +16,7 @@ LocalizationGroup: reference
 | Item | Description |
 | ------- | ------------|
 |Release state | General Availability |
-| Products supported | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
+| Products supported | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
 | Authentication types supported| Anonymous (online)<br/>Account key (online)<br/>Basic (online)<br/>Organizational account (online)<br/>Shared access signature (SAS) (online)<br/>Web API (online)<br/>Windows (online) |
 | Function reference docs | &mdash; |
 
@@ -33,7 +33,7 @@ LocalizationGroup: reference
 
 To connect to a Parquet file from Power Query Desktop, take the following steps:
 
-1. Select the **Parquet** option in the connector selection. More information: [Where to get data](../where-to-get-data.md)
+1. Select **Parquet** in the get data experience. The get data experience in Power Query Desktop varies between apps. For more information about the Power Query Desktop get data experience for your app, go to [Where to get data](../where-to-get-data.md).
 
 2. In **Parquet**, provide the URL for the location of the Parquet file. Enter a path and filename if you're connecting to a local file. You can also select **Advanced** and build the URL from parts. In the example used in this article, the Parquet file is located in Azure Blob Storage.
 
@@ -61,7 +61,9 @@ To connect to a Parquet file from Power Query Desktop, take the following steps:
 
 To connect to a Parquet file from Power Query Online, take the following steps:
 
-1. Select the **Parquet** option in the connector selection.
+1. Select the **Parquet** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../where-to-get-data.md).
+
+   :::image type="content" source="./media/parquet/get-data-online.png" alt-text="Screenshot of the get data window with Parquet emphasized.":::
 
 2. In **Parquet**, provide the name of the server and database. Or enter a path and filename if you're connecting to a local file.
 

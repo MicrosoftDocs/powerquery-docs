@@ -1,10 +1,10 @@
 ---
 title: Google BigQuery connector
 description: Provides basic information and prerequisites for the Google BigQuery connector for Power Query.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 2/13/2023
-ms.author: bezhan
+ms.date: 2/6/2024
+ms.author: dougklo
 ---
 
 # Google BigQuery
@@ -14,31 +14,29 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Customer Insights (Dataflows) |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Customer Insights (Dataflows) |
 | Authentication Types Supported | Organizational account<br/>Service account |
 
->[!Note]
->Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+> [!NOTE]
+> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 > [!NOTE]
-> Effective July 2021, Google will discontinue support for sign-ins to Google accounts from embedded browser frameworks. Due to this change, you will need to [update](https://powerbi.microsoft.com/downloads/) your Power BI Desktop version to June 2021 to support signing in to Google.
+> Effective July 2021, Google discontinued support for sign-ins to Google accounts from embedded browser frameworks. Due to this change, you need to [update](https://powerbi.microsoft.com/downloads/) your Power BI Desktop version to June 2021 or later to support signing in to Google.
 
 ## Prerequisites
 
-You'll need a Google account or a Google service account to sign in to Google BigQuery.
+You need a Google account or a Google service account to sign in to Google BigQuery.
 
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI Datasets only)
+* DirectQuery (Power BI semantic models)
 
 ## Connect to Google BigQuery data from Power Query Desktop
 
 To connect to Google BigQuery from Power Query Desktop, take the following steps:
 
-1. In the Get Data experience, search for and select **Google BigQuery**.
-
-    ![Get Data from Google BigQuery.](./media/google-bigquery/get-data.png)
+1. Select **Google BigQuery** in the get data experience. The get data experience in Power Query Desktop varies between apps. For more information about the Power Query Desktop get data experience for your app, go to [Where to get data](../where-to-get-data.md).
 
 2. If you want to use any advance options, select **Advanced options**. Otherwise, select **OK** to continue. More information: [Connect using advanced options](#connect-using-advanced-options)
 
@@ -66,17 +64,17 @@ To connect to Google BigQuery from Power Query Desktop, take the following steps
 
 To connect to Google BigQuery from Power Query Online, take the following steps:
 
-1. In the Get Data experience, select the **Database** category, and then select **Google BigQuery**.
+1. Select the **Google BigQuery** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../where-to-get-data.md).
 
-    ![Image of Get Data dialog box with emphasis on the Database connector category and the Google BigQuery connector.](./media/google-bigquery/get-data-online.png)
+   :::image type="content" source="./media/google-bigquery/get-data-online.png" alt-text="Screenshot of the Get Data dialog with emphasis on the Google BigQuery connector." lightbox="./media/google-bigquery/get-data-online.png":::
 
 2. In the **Google BigQuery Database** dialog, you may need to either create a new connection or select an existing connection. If you're using on-premises data, select an on-premises data gateway. Then select **Sign in**.
 
     ![Image of sign in dialog box.](./media/google-bigquery/sign-in-online.png)
 
 3. A **Sign in with Google** dialog appears. Select your Google account and approve connecting.
-    >[!NOTE]
-    >Although the sign in dialog box says you'll continue to Power BI Desktop once you've signed in, you'll be sent to your online app instead.
+    > [!NOTE]
+    > Although the sign in dialog box says you'll continue to Power BI Desktop once you've signed in, you'll be sent to your online app instead.
 
     ![Image of Google sign in dialog.](./media/google-bigquery/sign-into-google.png)
 
@@ -135,7 +133,7 @@ In addition, if you also create a report in Power BI service using a gateway, yo
 
 ### Nested fields
 
-To optimize performance considerations, Google BigQuery does well with large datasets when denormalized, flattened, and nested.
+To optimize performance considerations, Google BigQuery does well with large data sets when denormalized, flattened, and nested.
 
 The Google BigQuery connector supports nested fields, which are loaded as text columns in JSON format.
 
@@ -176,4 +174,13 @@ These permissions typically are provided in the `BigQuery.User` role. More infor
 If the above steps don't resolve the problem, you can disable the BigQuery Storage API.
 
 ### Unable to use DateTime type data in Direct Query mode
+
 There's a known issue where the DateTime type isn't supported through Direct Query. Selecting a column with the DateTime type will cause an "Invalid query" error or a visual error.
+
+### Limitations on querying column that has the same name as table name
+
+When querying a column that has the same name as the table name, BigQuery interprets the column as a `struct` that includes all columns in the table instead of the specified column. For example, `SELECT debug FROM dataset.debug` returns a `struct` with all columns in the debug table, instead of the specified debug column. This behavior is usually not intuitive and a fix is being investigated. There are three workarounds available:
+
+* Workaround 1: Wrap the table with a view that doesn't conflict the column name&mdash;`CREATE VIEW dataset.new_view AS SELECT * FROM dataset.debug`
+* Workaround 2: Rename the column to avoid conflicts with the table name&mdash;`ALTER TABLE dataset.debug RENAME COLUMN debug to new_debug`
+* Workaround 3: Change the SELECT query to use table.column to reference the conflict column&mdash;`SELECT debug.debug FROM dataset.debug`

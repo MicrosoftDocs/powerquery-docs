@@ -1,10 +1,10 @@
 ---
 title: Power Query OData Feed connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your data using the connector.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 2/13/2023
-ms.author: bezhan
+ms.date: 2/7/2024
+ms.author: dougklo
 ---
 
 # OData Feed
@@ -14,11 +14,11 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
-| Authentication Types Supported | Anonymous<br/>Windows<br/>Basic (requires Gateway)<br/>Web API<br/>Organizational Account |
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Authentication Types Supported | Anonymous<br/>Windows (requires Gateway)<br/>Basic (requires Gateway)<br/>Web API<br/>Organizational Account |
 | Function Reference Documentation | [OData.Feed](/powerquery-m/odata-feed), [ODataOmitValues.Nulls](/powerquery-m/odataomitvalues-type) |
 
->[!Note]
+> [!NOTE]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Capabilities supported
@@ -29,14 +29,14 @@ ms.author: bezhan
   * Open type columns
 * Select related tables
 
->[!Note]
+> [!NOTE]
 > Microsoft Graph is not supported. More information: [Lack of Support for Microsoft Graph in Power Query](../connecting-to-graph.md)
 
 ## Load data from an OData Feed in Power Query Desktop
 
 To load data from an OData Feed in Power Query Desktop:
 
-1. Select the **OData** or **OData Feed** option in the connector selection.
+1. Select **OData** or **OData Feed** in the get data experience. The get data experience in Power Query Desktop varies between apps. For more information about the Power Query Desktop get data experience for your app, go to [Where to get data](../where-to-get-data.md).
 
 2. Choose the **Basic** button and enter a URL address in the text box. This URL should be the root of the OData service you want to connect to. For example, enter `http://services.odata.org/V4/northwind/northwind.svc/`. Then select **OK**.
 
@@ -58,17 +58,19 @@ To load data from an OData Feed in Power Query Desktop:
 
 To load data from an OData Feed in Power Query Online:
 
-1. Select the **OData** or **OData Feed** option in the connector selection.
+1. Select the **OData** or **OData Feed** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../where-to-get-data.md).
+
+   :::image type="content" source="media/odata-feed/get-data-online.png" alt-text="Screenshot of the get data window with OData emphasized.":::
 
 2. In the OData dialog that appears, enter a URL in the text box.
 
-   ![OData online sign in.](media/odata-feed/odata-online-sign-in.png)
+   :::image type="content" source="media/odata-feed/odata-online-sign-in.png" alt-text="Screenshot of the OData online sign in page.":::
 
 3. If this is the first time you're connecting using the OData Feed, select the authentication kind and enter your credentials (if necessary). Then select **Next**.
 
 4. From the **Navigator** dialog, you can select a table, then transform the data in the Power Query Editor by selecting **Transform Data**.
 
-   ![Web table selection.](media/odata-feed/odata-navigator.png)
+   :::image type="content" source="media/odata-feed/odata-navigator.png" alt-text="Screenshot of the online navigator with the alphabetical list of products selected and displayed." lightbox="media/odata-feed/odata-navigator.png":::
 
    If you have multiple tables that have a direct relationship to one or more of the already selected tables, you can select the **Select Related Tables** button. When you do, all tables that have a direct relationship to one or more of the already selected tables will be imported as well.
 
@@ -92,7 +94,7 @@ When you enter credentials for an OData service into Power BI service (for examp
 
 ### Authenticating to arbitrary services
 
-Some services support the ability for the OData connector to authenticate with OAuth/AAD authentication out of the box. However, this won't work in most cases.
+Some services support the ability for the OData connector to authenticate with OAuth/Microsoft Entra ID authentication out of the box. However, this won't work in most cases.
 
 When attempting to authenticate, if the following error occurs:
 

@@ -1,10 +1,10 @@
 ---
 title: Power Query SharePoint Online list connector
 description: Provides basic information and how to connect to your data, along with troubleshooting tips for obtaining the root SharePoint address and changing the authentication method.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 2/13/2023
-ms.author: bezhan
+ms.date: 2/16/2024
+ms.author: dougklo
 ---
 
 # SharePoint Online list
@@ -14,11 +14,14 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights |
-| Authentication Types Supported | Anonymous<br/>Windows<br/>Microsoft Account |
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
+| Authentication Types Supported | Anonymous<br/>Windows<br/>Microsoft Account<br/>Service Principal |
 | Function Reference Documentation | [SharePoint.Contents](/powerquery-m/sharepoint-contents)<br/>[SharePoint.Files](/powerquery-m/sharepoint-files)<br/>[SharePoint.Tables](/powerquery-m/sharepoint-tables) |
 
->[!Note]
+> [!NOTE]
+>The service principal authentication type isn't supported when using an on-premises data gateway or a virtual network (VNet) data gateway.
+
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Capabilities supported
@@ -35,7 +38,7 @@ When you're connecting to a SharePoint site, you'll be asked to enter the site U
 
 To connect to a SharePoint Online list:
 
-1. From **Get Data**, select **SharePoint Online list**.
+1. Select **SharePoint Online list** in the get data experience. The get data experience in Power Query Desktop varies between apps. For more information about the Power Query Desktop get data experience for your app, go to [Where to get data](../where-to-get-data.md).
 
 2. Paste the SharePoint site URL you copied in [Determine the site URL](#determine-the-site-url) to the **Site URL** field in the open dialog box.
 
@@ -61,7 +64,9 @@ To connect to a SharePoint Online list:
 
 To connect to a SharePoint Online list:
 
-1. From the **Data sources** page, select **SharePoint Online list**.
+1. Select the **SharePoint Online list** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../where-to-get-data.md).
+
+   :::image type="content" source="./media/sharepoint-online-list/get-data-online.png" alt-text="Screenshot of the get data window with SharePoint Online list emphasized.":::
 
 2. Paste the SharePoint site URL you copied in [Determine the site URL](#determine-the-site-url) to the **Site URL** field in the open dialog box.
 
@@ -98,7 +103,7 @@ The default view is what you'll see when looking at the list online in whichever
 
    [![A screen showing a sample of SharePoint Online list default view.](./media/sharepoint-online-list/sharepoint-online-list-settings.png)](./media/sharepoint-online-list/sharepoint-online-list-settings.png#lightbox)
 
->[!Note]
+> [!NOTE]
 > If you set the default view in your SharePoint site to **Calendar** view or **Board** view, SharePoint only returns the columns shown in the selected view. In this scenario, Power BI will not retrieve all the columns in the list, even though you choose **All** option. This is by design.
 
 ## Troubleshooting
@@ -115,7 +120,7 @@ The backend API for SharePoint uses UTC time and sends this UTC time directly to
 
 To get time into local time, the user must do the same conversion the SharePoint client does. An example of the column operations that would do this are:
 
-```
+```powerquery-m
 #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"Datewithtime", type datetimezone}}),
 #"Timezone Shifted" = Table.TransformColumns(#"Changed Type", {"Datewithtime", DateTimeZone.ToLocal})
 ```
@@ -124,7 +129,8 @@ The first operation changes the type to `datetimezone`, and the second operation
 
 ### SharePoint join limit
 
-**This issue is limited to the SharePoint Online list v2.0 connector**
+> [!NOTE]
+>This issue is limited to the SharePoint Online list v2.0 connector.
 
 The SharePoint Online list v2.0 connector uses a different API than the v1.0 connector and, as such, is subject to a maximum of 12 join operations per query, as documented in the [SharePoint Online documentation](/sharepoint/install/software-boundaries-limits-2019#list-and-library-limits) under **List view lookup threshold**. This issue will manifest as SharePoint queries failing when more than 12 columns are accessed simultaneously from a SharePoint list. However, you can work around this situation by creating a default view with less than 12 lookup columns.
 

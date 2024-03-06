@@ -1,27 +1,27 @@
 ---
 title: Databricks Power Query Connector
 description: Provides basic information and prerequisites for using the Power Query Databricks connector.
-author: bezhan-msft
+author: DougKlopfenstein
 
 ms.topic: conceptual
-ms.date: 8/4/2022
-ms.author: bezhan
+ms.date: 2/1/2024
+ms.author: dougklo
 ---
 
-# Databricks (Beta)
+# Databricks
 
->[!Note]
+> [!NOTE]
 >The following connector article is provided by Databricks, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Databricks website and use the support channels there.
 
 ## Summary
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | Beta |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
-| Authentication Types Supported | Azure Active Directory<br/>Organizational Account<br/>Personal Access Token |
+| Release State | General Availability |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Authentication Types Supported | Azure Active Directory<br/>Personal Access Token<br/> OAuth (OIDC) |
 
->[!Note]
+> [!NOTE]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
@@ -31,13 +31,13 @@ This connector is only for use with a Databricks SQL Warehouse running on AWS an
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI only)
+* DirectQuery (Power BI semantic models)
 
 ## Connect to Databricks from Power Query Desktop
 
 To connect to Databricks from Power Query Desktop, take the following steps:
 
-1. In the Get Data experience, search for **Databricks** to shortlist the **Databricks (Beta)** connector. You should only use the **Databricks** connector here for your Databricks SQL Warehouse data (running on AWS) if you're using OAuth for authentication.
+1. In the Get Data experience, search for **Databricks** to shortlist the **Databricks** connector. You should only use the **Databricks** connector here for your Databricks SQL Warehouse data (running on AWS) if you're using OAuth for authentication.
 
     ![Get Data from Databricks Cloud.](./media/databricks/get-data-dbc.png)
 
@@ -64,13 +64,15 @@ To connect to Databricks from Power Query Desktop, take the following steps:
 
 To connect to Databricks from Power Query Online, take the following steps:
 
-1. In the Get Data experience, select the **Dataflow** category. (Refer to [Creating a dataflow](/power-bi/transform-model/dataflows/dataflows-create) for instructions.) Shortlist the available Databricks connector with the search box. Select the **Databricks** connector for your Databricks SQL Warehouse.
+1. Select the **Databricks** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../where-to-get-data.md).
 
-    ![Image of the Databricks connectors.](./media/databricks/filtered-connectors.png)
+   Shortlist the available Databricks connector with the search box. Select the **Databricks** connector for your Databricks SQL Warehouse.
+
+   ![Image of the Databricks connectors.](./media/databricks/filtered-connectors.png)
 
 2. Enter the **Server hostname** and **HTTP Path** for your Databricks SQL Warehouse. Refer to [Configure the Databricks ODBC and JDBC drivers](/azure/databricks/integrations/bi/jdbc-odbc-bi) for instructions to look up your "Server hostname" and "HTTP Path". You can optionally supply a default catalog and/or database under **Advanced options**.
 
-    ![Connection Settings and Credentials.](./media/databricks/connect-setting-cred.png)
+   ![Connection Settings and Credentials.](./media/databricks/connect-setting-cred.png)
 
 3. Provide your credentials to authenticate with your Databricks SQL Warehouse. There are three options for credentials:
 

@@ -1,10 +1,10 @@
 ---
 title: Power Query Azure Synapse Analytics (SQL DW) connector
 description: Provides basic information, prerequisites, and supported capabilities for the connector, and instructions on how to connect to your database using the connector.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 2/13/2023
-ms.author: bezhan
+ms.date: 2/16/2024
+ms.author: dougklo
 ---
 
 # Azure Synapse Analytics (SQL DW)
@@ -14,11 +14,14 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
-| Authentication Types Supported | Windows (Power BI Desktop, Excel, online service with gateway)<br/>Database (Power BI Desktop, Excel)<br/>Microsoft Account (all)<br/>Basic (online service) |
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Authentication Types Supported | Database (Power BI Desktop, Excel)<br/>Microsoft Account (all)<br/>Basic (online service)<br/>Service principal |
 | Function Reference Documentation | [Sql.Database](/powerquery-m/sql-database)<br/>[Sql.Databases](/powerquery-m/sql-databases) |
 
->[!Note]
+> [!NOTE]
+>The service principal authentication type isn't supported when using an on-premises data gateway or a virtual network (VNet) data gateway.
+
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
@@ -28,19 +31,20 @@ By default, Power BI installs an OLE DB driver for Azure Synapse Analytics (SQL 
 ## Capabilities Supported
 
 * Import
-* DirectQuery (Power BI only)
+* DirectQuery (Power BI semantic models)
 * Advanced options
   * Command timeout in minutes
   * Native SQL statement
   * Relationship columns
   * Navigate using full hierarchy
   * SQL Server failover support
+  * Enable cross database folding
 
 ## Connect to Azure Synapse Analytics (SQL DW) from Power Query Desktop
 
 To make the connection from Power Query Desktop:
 
-1. Select the **Azure Synapse Analytics (SQL DW)** option in the connector selection.
+1. Select the **Azure Synapse Analytics SQL** option in the connector selection.
 
 2. In the **SQL Server database** dialog that appears, provide the name of the server and database (optional). In this example, `TestAzureSQLServer` is the server name and `AdventureWorks2012` is the database.
 
@@ -56,10 +60,12 @@ To make the connection from Power Query Desktop:
 
    ![Azure Synapse Analytics (SQL DW) authentication.](./media/azure-sql-database/enter-credentials.png)
 
+   > [!NOTE]
+   > Although the Windows authentication type is displayed, Azure Synapse Analytics SQL doesn't support the Windows authentication type. Use either the **Database** or the **Microsoft account** authentication types.
+
    For more information about authentication methods, go to [Authentication with a data source](../connectorauthentication.md).
 
-   >[!Note]
-   >  If the connection is not encrypted, you'll be prompted with the following dialog.
+   If the connection is not encrypted, you'll be prompted with the following dialog.
 
    ![Azure Synapse Analytics (SQL DW) encryption support.](./media/azure-sql-database/encryption-warning.png)
 
@@ -84,7 +90,7 @@ To make the connection from Power Query Online:
 4. If required, select the name of your on-premises data gateway.
 
 5. If the connection is not encrypted, clear the **Use Encrypted Connection** check box.
- 
+
 6. Select **Next** to continue.
 
 7. In **Navigator**, select the data you require, and then select **Transform data**.
@@ -99,13 +105,14 @@ The following table lists all of the advanced options you can set in Power Query
 
 | Advanced option | Description |
 | --------------- | ----------- |
-| Command timeout in minutes | If your connection lasts longer than 10 minutes (the default timeout), you can enter another value in minutes to keep the connection open longer. This option is only available in Power Query Desktop. |
+| Command timeout in minutes | If your connection lasts longer than 10 minutes (the default timeout), you can enter another value in minutes to keep the connection open longer. |
 | SQL statement | For information, go to [Import data from a database using native database query](../native-database-query.md). |
 | Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, you won’t see those columns. |
 | Navigate using full hierarchy | If checked, the navigator displays the complete hierarchy of tables in the database you're connecting to. If cleared, the navigator displays only the tables whose columns and rows contain data. |
 | Enable SQL Server Failover support | If checked, when a node in the Azure SQL [failover group](/azure/azure-sql/database/auto-failover-group-overview?tabs=azure-powershell) isn't available, Power Query moves from that node to another when failover occurs. If cleared, no failover occurs. |
+ Enable cross database folding | This option is only available in Power Query Online. |
 
-Once you've selected the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your Azure SQL database.
+Once you've selected the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to Azure Synapse Analytics.
 
 ## Troubleshooting
 

@@ -3,13 +3,13 @@ title: Consume data from dataflows
 description: Consume data from dataflows.
 author: luitwieler
 ms.topic: conceptual
-ms.date: 1/5/2023
+ms.date: 1/25/2024
 ms.author: jeluitwi
 ---
 
 # Consume data from dataflows
 
-The ways you can consume data from Microsoft dataflows depends on several factors, like storage and type of dataflow. In this article, you'll learn how to choose the right dataflow for your needs.
+The ways you can consume data from Microsoft dataflows depends on several factors, like storage and type of dataflow. In this article, you learn how to choose the right dataflow for your needs.
 
 ## Type of dataflow
 
@@ -36,13 +36,13 @@ A standard dataflow writes the output data to a Dataverse table. [Dataverse](/po
 
 If you'd like to reuse data created by one dataflow in another dataflow, you can do so by using the Dataflow connector in the Power Query editor when you create the new dataflow.
 
-[![Get data from a dataflow.](media/linked-entities/linked-entities-03.png)](media/linked-entities/linked-entities-03.png#lightbox)
+:::image type="content" source="media/linked-tables/linked-tables-03.png" alt-text="Screenshot showing how to get data from a dataflow." lightbox="media/linked-tables/linked-tables-03.png":::
 
-When getting data from the output of another dataflow, a [linked entity](/data-integration/dataflows/dataflows-linked-entities) will be created. Linked entities provide a way to make data created in an upstream dataflow available in a downstream dataflow, without copying the data to the downstream dataflow. Because linked entities are just pointers to entities created in other dataflows, they're kept up to date by the refresh logic of the upstream dataflow. If both dataflows reside in the same workspace or environment, those dataflows will be refreshed together, to keep data in both dataflows always up to date. More information: [Link entities between dataflows](/data-integration/dataflows/dataflows-linked-entities)
+When you get data from the output of another dataflow, a [linked table](linked-tables.md) is created. Linked tables provide a way to make data created in an upstream dataflow available in a downstream dataflow, without copying the data to the downstream dataflow. Because linked tables are just pointers to tables created in other dataflows, they're kept up to date by the refresh logic of the upstream dataflow. If both dataflows reside in the same workspace or environment, those dataflows are refreshed together, to keep data in both dataflows always up to date. More information: [Link tables between dataflows](linked-tables.md)
 
 ## Separating data transformation from data consumption
 
-When you use the output of a dataflow in other dataflows or datasets, you can create an abstraction between the data transformation layer and the rest of the data model. This abstraction is important because it creates a multi-role architecture, in which the Power Query customer can focus on building the data transformations, and data modelers can focus on data modeling.
+When you use the output of a dataflow in other dataflows or data sets, you can create an abstraction between the data transformation layer and the rest of the data model. This abstraction is important because it creates a multi-role architecture, in which the Power Query customer can focus on building the data transformations, and data modelers can focus on data modeling.
 
 ## Frequently asked questions
 
@@ -59,8 +59,6 @@ There could be a difference in data between design-time and refresh-time. We don
 The following articles provide more details about related articles.
 
 - [Creating and using dataflows in Power BI](/power-bi/service-dataflows-create-use)
-- [Link entities between dataflows in Power BI](/power-bi/service-dataflows-linked-entities)
 - [Connect to data created by Power BI dataflows in Power BI Desktop (Beta)](/power-bi/desktop-connect-dataflows)
 - [Create and use dataflows in Power Platform](/data-integration/dataflows/dataflows-integration-overview)
-- [Link entities between dataflows (Power Platform)](/data-integration/dataflows/dataflows-linked-entities)
 - [Working with duplicate values in dataflows](../working-with-duplicates.md)

@@ -1,10 +1,10 @@
 ---
-title: Microsoft Exchange Power Query Data Connector
+title: Power Query Microsoft Exchange connector
 description: Provides basic information and connection instructions for the Microsoft Exchange connector
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 12/14/2022
-ms.author: bezhan
+ms.date: 1/24/2024
+ms.author: dougklo
 ---
 
 # Microsoft Exchange
@@ -14,9 +14,12 @@ ms.author: bezhan
 | Item | Description |
 | ------- | ---------- |
 | Release State | General Availability |
-| Products | Excel <br/> Power BI (Datasets)<br/> Analysis Services |
+| Products | Excel <br/> Power BI (Semantic models)<br/> Analysis Services |
 | Authentication Types Supported | Exchange account<br/>Microsoft account |
 | Function Reference Documentation | [Exchange.Contents](/powerquery-m/exchange-contents) |
+
+> [!NOTE]
+> The Power Query Microsoft Exchange connector doesn't support scheduled refresh of on-premises data sources in Power BI semantic models or Excel.
 
 ## Capabilities Supported
 
@@ -24,7 +27,7 @@ ms.author: bezhan
 
 ## Connect to Microsoft Exchange from Power Query Desktop
 
-Power Query Desktop includes Excel, Power BI (Datasets), and Analysis Services as experiences.
+Power Query Desktop includes Excel, Power BI (semantic models), and Analysis Services as experiences.
 
 To make the connection to **Microsoft Exchange**, follow these steps:
 
@@ -48,4 +51,4 @@ To make the connection to **Microsoft Exchange**, follow these steps:
 
 1. In **Navigator**, select the data to import and use in your application. Then select either **Load** to load the table, or **Transform Data** to open the Power Query Editor where you can filter and refine the set of data you want to use, and then load that refined set of data.
 
-   :::image type="content" source="./media/microsoft-exchange/select-data.png" alt-text="Screenshot of the Microsoft Exchange navigator, showing calendar and mail selected.":::
+   :::image type="content" source="./media/microsoft-exchange/select-data.png" alt-text="Screenshot of the Microsoft Exchange navigator, showing calendar and mail selected." lightbox="./media/microsoft-exchange/select-data.png":::

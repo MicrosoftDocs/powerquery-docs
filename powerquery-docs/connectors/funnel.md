@@ -1,15 +1,15 @@
 ---
 title: Power Query Funnel connector
 description: Provides basic information, prerequisites, and information on how to connect to your data using the Funnel connector, along with a list of known issues and limitations.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/16/2023
-ms.author: bezhan
+ms.date: 1/24/2024
+ms.author: dougklo
 ---
 
 # Funnel
 
->[!Note]
+> [!NOTE]
 >The following connector article is provided by Funnel, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Funnel website and use the support channels there.
 
 ## Summary
@@ -17,7 +17,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows) |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Funnel Workspace |
 
 ## Prerequisites
@@ -35,7 +35,7 @@ In the Funnel App, go to your Workspace, navigate to the Microsoft Power BI page
 To connect to Funnel:
 
 1. Select Online Services, find **Funnel** from the product-specific data connector list, and then select **Connect**.
-   
+
    ![Select Funnel Connector.](./media/funnel/funnel-connector.png#lightbox)
 
 1. Select **Sign in** to sign in to your Funnel Workspace.
@@ -43,18 +43,19 @@ To connect to Funnel:
    ![Sign in to your Funnel Workspace.](media/funnel/funnel-sign-in-1.png)
 
 1. Sign in with your Google user connected to Funnel or use your Funnel credentials.
-   
+
    ![Sign in to your Funnel Workspace step 2.](media/funnel/funnel-sign-in-2.png)
 
 1. Once you've successfully signed in select **Connect** to continue.
-   
+
    ![Successfully signed in to your Funnel Workspace.](media/funnel/funnel-sign-in-3.png)
 
 1. In the **Navigator** dialog box, choose one or more **Data Shares** from your **Workspaces** to import your data.
-   
+
    ![Choose "Data Shares" from Workspaces.](media/funnel/funnel-navigation-table.png)
 
    For each Data Share you can enter number of rolling months of data you want.
+
    > [!NOTE]
    > The default number of months is 12. If today is 22.03.2022, then you'll get data for the period 01.04.2021 - 22.03.2022.
 

@@ -2,16 +2,16 @@
 title: Azure Data Lake Storage Gen1
 description: Includes basic information, prerequisites, and information on how to connect to Azure Data Lake Storage Gen1.
 
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/5/2023
-ms.author: bezhan
+ms.date: 1/24/2024
+ms.author: dougklo
 
 ---
 
 # Azure Data Lake Storage Gen1
 
->[!Note]
+> [!NOTE]
 > On Feb 29, 2024 Azure Data Lake Storage Gen1 will be retired. For more information, go to [the official announcement](https://azure.microsoft.com/updates/action-required-switch-to-azure-data-lake-storage-gen2-by-29-february-2024/). If you use Azure Data Lake Storage Gen1, make sure to migrate to Azure Data Lake Storage Gen2 prior to that date. To learn how, go to [Migrate Azure Data Lake Storage from Gen1 to Gen2](/azure/storage/blobs/data-lake-storage-migrate-gen1-to-gen2).
 >
 >Unless you already have an Azure Data Lake Storage Gen1 account, you can't create new ones.
@@ -21,11 +21,11 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Excel</br>Analysis Services |
+| Products | Excel</br>Power BI (Semantic models)<br/>Analysis Services |
 | Authentication Types Supported | Organizational Account |
 | Function Reference Documentation | [AzureStorage.DataLake](/powerquery-m/azurestorage-datalake)<br/>[AzureStorage.DataLakeContents](/powerquery-m/azurestorage-datalakecontents) |
 
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
