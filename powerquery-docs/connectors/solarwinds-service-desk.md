@@ -12,7 +12,7 @@ ms.date: 2/15/2024
 This connector lets you incrementally import incidents and different asset records from SolarWinds Service Desk (SWSD) to Microsoft Power BI. The import provides raw data on the topics most relevant to your organization. You can then review and analyze the data by viewing it in various formats, such as tables, graphs, and charts.
 
 > [!NOTE]
-> The following connector article is provided by SolarWinds, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or want to request change to it, visit the [SolarWinds Service Desk - Power BI Connector](https://documentation.solarwinds.com/en/success_center/swsd/default.htm#powerbi.htm?cshid=swsd_powerbi) documentation website.
+> The following connector article is provided by SolarWinds, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or want to request changes to it, visit the [SolarWinds Service Desk - Power BI Connector](https://documentation.solarwinds.com/en/success_center/swsd/default.htm#powerbi.htm?cshid=swsd_powerbi) documentation website.
 
 ## Summary
 
@@ -40,13 +40,13 @@ The following instructions contain special steps for customers who previously us
 
 2. Sign in with the JSON web token you generated as described in prerequisites, and then select **Connect** to verify your access to SWSD.
 
-   :::image type="content" source="./media/solarwinds-service-desk/auth-key.png" alt-text="Screenshot of Auth Key Dialog." lightbox="./media/solarwinds-service-desk/auth-key.png":::
+   :::image type="content" source="./media/solarwinds-service-desk/auth-key.png" alt-text="Screenshot of Auth Key Dialog.":::
 
 3. In the **Navigator** dialog box, select the tables you want to import. Then select **Load**.
 
-   :::image type="content" source="./media/solarwinds-service-desk/nav-data.png" alt-text="Screenshot of SolarWinds Service Desk Navigator.":::
+   :::image type="content" source="./media/solarwinds-service-desk/nav-data.png" alt-text="Screenshot of SolarWinds Service Desk Navigator." lightbox="./media/solarwinds-service-desk/nav-data.png":::
 
-4. After completion of the previous steps, you should see your chosen models load under Data view. The records you have just imported were created in SWSD during last month.
+4. After you complete the previous steps, you should see your chosen models load under Data view. The records you have just imported were created in SWSD during the last month.
 
 ### Extra steps for previous users of the BETA connector
 
@@ -110,8 +110,9 @@ Incremental refresh saves download time after your initial download is performed
 
    :::image type="content" source="./media/solarwinds-service-desk/open-incremental-refresh.png" alt-text="Screenshot open incremental refresh.":::
 
-    a. Archive data starting two years before the refresh date. Don't exceed two years.
-    b. Incrementally refresh data starting one day before the refresh date. For instructions, go to [define-policy](/power-bi/connect-data/incremental-refresh-configure#define-policy).
+   1. Archive data starting two years before the refresh date. Don't exceed two years.
+
+   1. Incrementally refresh data starting one day before the refresh date. For instructions, go to [define-policy](/power-bi/connect-data/incremental-refresh-configure#define-policy).
 
    :::image type="content" source="./media/solarwinds-service-desk/set-incremental-refresh.png" alt-text="Screenshot set incremental refresh.":::
 
