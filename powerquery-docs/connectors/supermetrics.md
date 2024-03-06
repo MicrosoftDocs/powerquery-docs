@@ -27,20 +27,23 @@ ms.author: bezhan
 
 
 ## Prerequisites
->Before using the connector, you need to log in to the  [Supermetrics Hub](https://hub.supermetrics.com) — doing this will automatically create an account for you —  and save at least one query. 
+>Before using the connector, you need to create an account in the [Supermetrics Hub](https://hub.supermetrics.com)  and save at least one query.
 
 Follow these steps to create and save a query:
 
-
 1. [Log in to the Supermetrics Hub](https://hub.supermetrics.com/) using SSO (via either a Microsoft account or a Google Account).
 
-2. Click Export > Power BI in the left-hand navigation.
+2. If you don’t see the Power BI page, open the left-hand navigation and go to Destinations > Power BI.
 
 3. Click **“Create new query”** to get started.
 ![Get started with Supermetrics hub](./media/supermetrics/sm_get_started_with_query_manager.png "Get started with query manager")
 
-4. Select a data source and log in to your account to create a connection between your data source and Supermetrics. [Find detailed instructions in our support center](https://supermetrics.com/docs/product-power-bi-getting-started/).
-   Some public data sources, including Facebook Public Data, don’t need you to log in. If you’re using one of these, skip this step.
+4. Select a data source and log in to your account to create a connection between your data source and Supermetrics. [Find detailed instructions in our support center](https://supermetrics.com/docs/product-power-bi-getting-started/)
+
+Some public data sources, including Facebook Public Data, don’t need you to log in. If you’re using one of these, skip this step.
+
+Note: If you are trying to get data from popular data sources, such as Google Ads, Google Analytics 4, Facebook Insights, LinkedIn Ads, once you add a connection to the data source with Supermetrics, you can have a quick start with one of the [template reports](https://supermetrics.com/template-gallery?page=1&search=&destination=567736) we offer.
+
 
 5. Define the query settings for the data you’d like to see in your reports:
     - Pick accounts to fetch data from.
@@ -49,8 +52,6 @@ Follow these steps to create and save a query:
     - Choose how to split the records, e.g. by date or campaign name.
 
 6. Click **Run** to check if you get the expected records and click **Save**. Name your query and schema and confirm. Schema is like a folder to your queries.
-
-![Get started with query manager](./media/supermetrics/sm-save-query-qmanager.png "Saving queries in Supermetrics Query Manager")
 
 The queries you save in the Hub will be available to you in Power BI Desktop once you sign in to the Supermetrics connector. Feel free to connect multiple data sources and save queries in each to be able to create a combined report, say, from your Ads accounts across multiple marketing sources.
 
@@ -66,7 +67,7 @@ To connect to Supermetrics
 
 2. Navigate to the **Home** ribbon and click **Get Data**.
 
-3. Search for Supermetrics. Select it, and click **Connect**.
+3. Search for Supermetrics. Select it, and click **Connect**.  The first time you use the connector, sign in with the same Microsoft account or Google Account that you used in Supermetrics Hub.
 ![Select the connector from list](./media/supermetrics/sm_connectors_list.png "Select the connector from list")
 
 4. If you’re connecting to Supermetrics for the first time, you’ll see a third-party notice. Select **Don't warn me again with this connector** if you don't want this message to be displayed again, and then click **Continue**.
