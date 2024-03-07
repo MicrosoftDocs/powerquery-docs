@@ -3,7 +3,7 @@ title: Authentication in desktop apps
 description: How to select credentials for a connector in Power Query Desktop to authenticate a connection with a data source, how to select the authentication level, and how to edit or delete credentials for specific connectors and sites.
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 3/5/2024
+ms.date: 3/7/2024
 ms.author: miescobar
 ---
 
@@ -125,14 +125,14 @@ Content-Length: 49
 
 Power Query can then initiate the OAuth flow against the **authorization_uri**. Power Query requests a Microsoft Entra ID Resource or Audience value equal to the domain of the URL being requested. This value would be the value you use for your Azure Application ID URL value in your API/service registration. For example, if accessing `https://api.myservice.com/path/to/data/api`, Power Query would expect your Application ID URL value to be equal to `https://api.myservice.com`.
 
-The following Microsoft Entra ID client IDs are used by Power Query. You might need to explicitly allow these client IDs to access your service and API, depending on your overall Microsoft Entra ID settings.
+If you need more control over the OAuth flow (for example, if your service must respond with a `302` rather than a `401`), or if your application’s Application ID URL or Microsoft Entra ID Resource value don't match the URL of your service, then you’d need to use a custom connector. For more information about using our built-in Microsoft Entra ID flow, go to [Microsoft Entra ID authentication](handling-authentication.md#microsoft-entra-id-authentication).
+
+### Microsoft Entra ID client IDs
+
+The following Microsoft Entra ID client IDs are used by Power Query. You might need to explicitly allow these client IDs to access your service and API, depending on your overall Microsoft Entra ID settings. Go to step 8 of [Add a scope](/azure/active-directory/develop/quickstart-configure-app-expose-web-apis#add-a-scope) for more details.
 
 | Client ID  | Title | Description |
 | ---------- | ----- | ----------- |
-| a672d62c-fc7b-4e81-a576-e60dc46e951d | Power Query for Excel | Public client, used in Power BI Desktop and Gateway. |
+| a672d62c-fc7b-4e81-a576-e60dc46e951d | Power Query for Excel | Public client, used in Power BI Desktop and the gateway. |
 | b52893c8-bc2e-47fc-918b-77022b299bbc | Power BI Data Refresh | Confidential client, used in Power BI service. |
 | 7ab7862c-4c57-491e-8a45-d52a7e023983 | Power Apps and Power Automate | Confidential client, used in Power Apps and Power Automate. |
-
-You might need to explicitly allow these client IDs to access your service and API, depending on your overall Microsoft Entra ID settings. Go to step 8 of [Add a scope](/azure/active-directory/develop/quickstart-configure-app-expose-web-apis#add-a-scope) for more details.
-
-If you need more control over the OAuth flow (for example, if your service must respond with a `302` rather than a `401`), or if your application’s Application ID URL or Microsoft Entra ID Resource value don't match the URL of your service, then you’d need to use a custom connector. For more information about using our built-in Microsoft Entra ID flow, go to [Microsoft Entra ID authentication](handling-authentication.md#microsoft-entra-id-authentication).
