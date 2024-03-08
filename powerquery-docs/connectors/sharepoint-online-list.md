@@ -3,7 +3,7 @@ title: Power Query SharePoint Online list connector
 description: Provides basic information and how to connect to your data, along with troubleshooting tips for obtaining the root SharePoint address and changing the authentication method.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/24/2024
+ms.date: 2/16/2024
 ms.author: dougklo
 ---
 
@@ -17,6 +17,9 @@ ms.author: dougklo
 | Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
 | Authentication Types Supported | Anonymous<br/>Windows<br/>Microsoft Account<br/>Service Principal |
 | Function Reference Documentation | [SharePoint.Contents](/powerquery-m/sharepoint-contents)<br/>[SharePoint.Files](/powerquery-m/sharepoint-files)<br/>[SharePoint.Tables](/powerquery-m/sharepoint-tables) |
+
+> [!NOTE]
+>The service principal authentication type isn't supported when using an on-premises data gateway or a virtual network (VNet) data gateway.
 
 > [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
@@ -35,7 +38,7 @@ When you're connecting to a SharePoint site, you'll be asked to enter the site U
 
 To connect to a SharePoint Online list:
 
-1. From **Get Data**, select **SharePoint Online list**.
+1. Select **SharePoint Online list** in the get data experience. The get data experience in Power Query Desktop varies between apps. For more information about the Power Query Desktop get data experience for your app, go to [Where to get data](../where-to-get-data.md).
 
 2. Paste the SharePoint site URL you copied in [Determine the site URL](#determine-the-site-url) to the **Site URL** field in the open dialog box.
 
@@ -61,7 +64,9 @@ To connect to a SharePoint Online list:
 
 To connect to a SharePoint Online list:
 
-1. From the **Data sources** page, select **SharePoint Online list**.
+1. Select the **SharePoint Online list** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../where-to-get-data.md).
+
+   :::image type="content" source="./media/sharepoint-online-list/get-data-online.png" alt-text="Screenshot of the get data window with SharePoint Online list emphasized.":::
 
 2. Paste the SharePoint site URL you copied in [Determine the site URL](#determine-the-site-url) to the **Site URL** field in the open dialog box.
 

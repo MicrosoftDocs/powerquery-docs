@@ -3,7 +3,7 @@ title: Power Query Azure Data Explorer (Kusto) connector
 description: Includes basic information, prerequisites, and information on how to connect to Azure Data Explorer, along with a list of limitations.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/24/2024
+ms.date: 2/7/2024
 ms.author: dougklo
 ---
 
@@ -41,9 +41,7 @@ ms.author: dougklo
 
 To connect to Azure Data Explorer from Power Query Desktop:
 
-1. In **Get Data**, select **Azure** > **Azure Data Explorer (Kusto)**, and then select **Connect**. More information: [Where to get data](../where-to-get-data.md)
-
-    ![Screenshot of the get data page, with the Azure category selected, and Azure Data Explorer emphasized.](media/azure-data-explorer/get-data-desktop.png)
+1. Select **Azure Data Explorer (Kusto)** in the get data experience. The get data experience in Power Query Desktop varies between apps. For more information about the Power Query Desktop get data experience for your app, go to [Where to get data](../where-to-get-data.md).
 
 2. In **Azure Data Explorer (Kusto)**, provide the name of your Azure Data Explorer cluster. For this example, use `https://help.kusto.windows.net` to access the sample help cluster. For other clusters, the URL is in the form https://_\<ClusterName>_._\<Region>_.kusto.windows.net.
 
@@ -72,7 +70,9 @@ To connect to Azure Data Explorer from Power Query Desktop:
 
 To connect to Azure Data Explorer from Power Query Online:
 
-1. Select the **Azure Data Explorer (Kusto)** option from **Choose data source**. More information: [Where to get data](../where-to-get-data.md)
+1. Select the **Azure Data Explorer (Kusto)** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../where-to-get-data.md).
+
+   :::image type="content" source="media/azure-data-explorer/get-data-online.png" alt-text="Screenshot of the get data window with Azure Data Explorer emphasized.":::
 
 2. In **Connect to data source**, provide the name of your Azure Data Explorer cluster. For this example, use `https://help.kusto.windows.net` to access the sample help cluster. For other clusters, the URL is in the form https://_\<ClusterName>_._\<Region>_.kusto.windows.net.
 

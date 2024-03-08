@@ -3,7 +3,7 @@ title: Power Query CloudBluePSA connector
 description: Provides basic information and prerequisites for the operation of the CloudBluePSA connector in conjunction with the API.
 author: mohsad06
 ms.topic: conceptual
-ms.date: 1/24/2024
+ms.date: 2/1/2024
 ms.author: dougklo
 ---
 

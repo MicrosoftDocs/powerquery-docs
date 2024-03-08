@@ -40,9 +40,11 @@
     "globalMetadata": {
       "breadcrumb_path": "/power-query/breadcrumb/toc.json",
       "uhfHeaderId": "MSDocsHeader-PowerPlatform",
-      "feedback_system": "GitHub",
+      "feedback_system": "Standard",
       "feedback_github_repo": "MicrosoftDocs/powerquery-docs",
       "feedback_product_url": "/power-query/feedback",
+      "feedback_help_link_url": "https://community.fabric.microsoft.com/t5/Power-Query/bd-p/power-bi-services",
+      "feedback_help_link_type": "ask-the-community",
       "searchScope": ["Power Query"],
       "recommendations": true,
       "titleSuffix": "Power Query",

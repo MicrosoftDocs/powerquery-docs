@@ -3,7 +3,7 @@ title: Google BigQuery connector
 description: Provides basic information and prerequisites for the Google BigQuery connector for Power Query.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/24/2024
+ms.date: 2/6/2024
 ms.author: dougklo
 ---
 
@@ -21,11 +21,11 @@ ms.author: dougklo
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 > [!NOTE]
-> Effective July 2021, Google will discontinue support for sign-ins to Google accounts from embedded browser frameworks. Due to this change, you will need to [update](https://powerbi.microsoft.com/downloads/) your Power BI Desktop version to June 2021 to support signing in to Google.
+> Effective July 2021, Google discontinued support for sign-ins to Google accounts from embedded browser frameworks. Due to this change, you need to [update](https://powerbi.microsoft.com/downloads/) your Power BI Desktop version to June 2021 or later to support signing in to Google.
 
 ## Prerequisites
 
-You'll need a Google account or a Google service account to sign in to Google BigQuery.
+You need a Google account or a Google service account to sign in to Google BigQuery.
 
 ## Capabilities supported
 
@@ -36,9 +36,7 @@ You'll need a Google account or a Google service account to sign in to Google Bi
 
 To connect to Google BigQuery from Power Query Desktop, take the following steps:
 
-1. In the Get Data experience, search for and select **Google BigQuery**.
-
-    ![Get Data from Google BigQuery.](./media/google-bigquery/get-data.png)
+1. Select **Google BigQuery** in the get data experience. The get data experience in Power Query Desktop varies between apps. For more information about the Power Query Desktop get data experience for your app, go to [Where to get data](../where-to-get-data.md).
 
 2. If you want to use any advance options, select **Advanced options**. Otherwise, select **OK** to continue. More information: [Connect using advanced options](#connect-using-advanced-options)
 
@@ -66,9 +64,9 @@ To connect to Google BigQuery from Power Query Desktop, take the following steps
 
 To connect to Google BigQuery from Power Query Online, take the following steps:
 
-1. In the Get Data experience, select the **Database** category, and then select **Google BigQuery**.
+1. Select the **Google BigQuery** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../where-to-get-data.md).
 
-    ![Image of Get Data dialog box with emphasis on the Database connector category and the Google BigQuery connector.](./media/google-bigquery/get-data-online.png)
+   :::image type="content" source="./media/google-bigquery/get-data-online.png" alt-text="Screenshot of the Get Data dialog with emphasis on the Google BigQuery connector." lightbox="./media/google-bigquery/get-data-online.png":::
 
 2. In the **Google BigQuery Database** dialog, you may need to either create a new connection or select an existing connection. If you're using on-premises data, select an on-premises data gateway. Then select **Sign in**.
 
