@@ -3,7 +3,7 @@ title: Power Query Access database connector
 description: Provides basic information, prerequisites, and connection instructions, along with tips about using the on-premises data gateway and fixing mismatched bit versions.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/18/2024
+ms.date: 3/8/2024
 ms.author: dougklo
 ---
 
@@ -85,11 +85,6 @@ When you attempt to connect to a local Access database using Power Query Online,
 A 64-bit version of the Access Database Engine 2016 OLEDB provider must be installed on your on-premises data gateway machine to be able to load Access database files. If you already have a 64-bit version of Microsoft Office installed on the same machine as the gateway, the Access Database Engine 2016 OLEDB provider is already installed. If not, you can download the driver from the following location:
 
 [Access Database Engine 2016 OLEDB provider](https://www.microsoft.com/download/details.aspx?id=54920)
-
-> [!NOTE]
->Microsoft Office has stopped supporting the Access Database Engine 2010 OLEDB provider as part of end-of-life for Office 2010. However, some legacy use cases, such as using 32-bit Office and 64-bit PBI Desktop, might require the continued use of the older 2010 version. In these cases, you can still download the 2010 version from the following location:
->
->[Access Database Engine 2010 OLEDB provider](https://www.microsoft.com/download/details.aspx?id=13255)
 
 ### Import Access database to Power BI Desktop
 
