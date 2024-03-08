@@ -313,31 +313,6 @@ These steps open the inline help information for your selected function, and let
 
 :::image type="content" source="media/power-query-ui/m-inline-help.png" alt-text="Screenshot of the Date.AddDays M function description and syntax, along with entry points for each of the function's parameters." lightbox="media/power-query-ui/m-inline-help.png":::
 
-## Loading your transformed data
-
-Once you have transformed your data, you can then load your changes. Depending on where you arrived from when transforming your data, you might have slightly different experience loading your transformed data.
-
-From Power Query in Excel, you load your transformed data by selecting **Close & Load** from the **Home** tab.
-
-:::image type="content" source="media/get-data-ui/excel-close-load.png" alt-text="Screenshot of the Power Query dialog with the Close and Load option emphasized.":::
-
-From Power Query in Power BI Desktop, you load your transformed data by selecting **Close & Apply** from the **Home** tab.
-
-:::image type="content" source="media/get-data-ui/power-bi-desktop-apply.png" alt-text="<alt text>":::
-
-From Power Query in Power Apps, there are a few extra steps you take before you can publish your transformed data:
-
-1. Once you've made your changes to the data in Power Query, select **Next**.
-1. In the **Map tables** page, make any changes you require to the **Load settings** and **Column mapping** sections. Then select **Next**.
-1. In the **Refresh settings** page, select the refresh settings you want to use.
-1. Select **Publish** to publish your transformed data. Optionally, you can select either **Publish now** or **Publish latter**.
-
-:::image type="content" source="media/power-query-ui/publish-now-later.png" alt-text="Screenshot of the Power Query get data refresh settings page with Publish now and Publish later selections shown.":::
-
-:::image type="content" source="media/get-data-ui/online-save-close.png" alt-text="<alt text>":::
-
-:::image type="content" source="media/get-data-ui/analysis-services-import.png" alt-text="Screenshot of the Power Query dialog with the import option emphasized.":::
-
 ## Summary
 
 In this article, you created a series of queries with Power Query that provides a customer-to-supplier ratio analysis at the country level for the Northwind corporation.
