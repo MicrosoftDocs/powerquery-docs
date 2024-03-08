@@ -84,7 +84,7 @@ The **Blank query** module lets you write or paste your own M script to create a
 
 ## Save and load your data
 
-Once you have transformed your data, you can then save your changes and load the data. Depending on where you arrived from when transforming your data, you might have slightly different ways of saving and loading your changes.
+Once your data is transformed, you can then save your changes and load the data. Depending on where you arrived from when transforming your data, you might have slightly different ways of saving and loading your changes.
 
 For example, if you open the Power Query editor from Excel, you save and load your changes using the **Close & Load** option in the **Home** tab.
 
