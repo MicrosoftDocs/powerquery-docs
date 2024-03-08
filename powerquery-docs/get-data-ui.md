@@ -3,7 +3,7 @@ title: Get data UI
 description: Describes the new modern UI of the Power Query Online get data experience.
 author: TauseefSiddique
 ms.topic: conceptual
-ms.date: 9/22/2023
+ms.date: 3/8/2024
 ms.author: dougklo
 ---
 
@@ -82,18 +82,24 @@ The **Blank query** module lets you write or paste your own M script to create a
 
 :::image type="content" source="media/get-data-ui/blank-query.png" alt-text="Blank Table Module Screenshot":::
 
-## Saving your data
+## Save and load your data
 
-Once you have transformed your data, you can then save your changes. Depending on where you arrived from when transforming your data, you might have slightly different ways of saving your changes.
+Once you have transformed your data, you can then save your changes and load the data. Depending on where you arrived from when transforming your data, you might have slightly different ways of saving and loading your changes.
 
-From Power Query in Excel, you save your changes by selecting **Close & Load** from the home tab.
+For example, if you open the Power Query editor from Excel, you save and load your changes using the **Close & Load** option in the **Home** tab.
 
-:::image type="content" source="media/get-data-ui/excel-close-load.png" alt-text="Screenshot of the Power Query dialog with the Close and Load option emphasized.":::
+:::image type="content" source="media/get-data-ui/excel-close-load.png" alt-text="Screenshot of the Close and Load option.":::
 
-From Power Query in Power BI Desktop
+If you open the Power Query editor from Power BI Desktop, you save and load your changes using the **Close & Apply** option in the **Home** tab.
 
-:::image type="content" source="media/get-data-ui/power-bi-desktop-apply.png" alt-text="<alt text>":::
+:::image type="content" source="media/get-data-ui/power-bi-desktop-apply.png" alt-text="Screenshot of the Close and Apply option.":::
 
-:::image type="content" source="media/get-data-ui/online-save-close.png" alt-text="<alt text>":::
+If you open the Power Query editor online, you save and load your changes using the **Save & close** button in the lower right side of the Power Query editor.
 
-:::image type="content" source="media/get-data-ui/analysis-services-import.png" alt-text="Screenshot of the Power Query dialog with the import option emphasized.":::
+:::image type="content" source="media/get-data-ui/online-save-close.png" alt-text="Screenshot of the Save & close button in Power Query Online.":::
+
+If you open the Power Query editor in Analysis Services, you can save and load your changes by either using the **Import** button or the **Home** > **Close & Apply** option in the Power Query editor ribbon.
+
+:::image type="content" source="media/get-data-ui/analysis-services-import.png" alt-text="Screenshot of the Import button in Analysis Services.":::
+
+:::image type="content" source="media/get-data-ui/analysis-services-close-and-apply.png" alt-text="Screenshot of the Close & Apply button in Analysis Services.":::
