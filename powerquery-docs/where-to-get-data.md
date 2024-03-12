@@ -3,7 +3,7 @@ title: Where to get data
 description: Describes the process of getting data for Power Query from various Microsoft products.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/31/2024
+ms.date: 3/12/2024
 ms.author: dougklo
 ---
 
@@ -30,11 +30,9 @@ To get data in Excel for Windows or Excel for Mac:
 
 2. Scroll through the category selections in the get data context menu, and select the connector you want to use.
 
-   :::image type="content" source="media/where-to-get-data/get-data-excel.png" alt-text="Screenshot shows the Get Data drop-down list of categories and the connectors shown under the From File category.":::
-
 You're then asked to fill out the required information for you to access the data. Go to the [individual connector articles](connectors/index.md) for more information about this required information.
 
-In Excel, you can also directly select Text/CSV, Web, and Excel worksheet data without using the **Get Data** option. You can also select from a data source that was recently used and from existing connections or tables.
+In Excel for Windows, you can also directly select Text/CSV, Web, and Excel worksheet data without using the **Get Data** option. You can also select from a data source that was recently used and from existing connections or tables.
 
 > [!NOTE]
 >Not all Excel versions support all of the same Power Query connectors. For a complete list of the Power Query connectors supported by all versions of Excel for Windows and Excel for Mac, go to [Power Query data sources in Excel versions](https://support.microsoft.com/office/power-query-data-sources-in-excel-versions-e9332067-8e49-46fc-97ff-f2e1bfa0cb16).
