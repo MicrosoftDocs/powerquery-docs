@@ -12,8 +12,7 @@ Diagram view offers a visual way to prepare data in the Power Query editor. With
 
 This article provides an overview of the capabilities provided by diagram view.
 
-[![Example of the Power Query interface with three queries shown in the diagram view.](media/diagram-view/diagram-view-sample.png)](media/diagram-view/diagram-view-sample.png#lightbox)
-
+:::image type="content" source="media/diagram-view/diagram-view-sample.png" lightbox="media/diagram-view/diagram-view-sample.png" alt-text="Example of the Power Query interface with three queries shown in the diagram view.":::
 This feature is enabled by selecting **Diagram view** in the **View** tab on the ribbon. With diagram view enabled, the steps pane and queries pane will be collapsed.  
 
 ![Diagram view option inside the View tab in the Power Query ribbon.](media/diagram-view/enabling-diagram-view.png)

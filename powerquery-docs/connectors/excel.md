@@ -79,8 +79,7 @@ When you connect to the data in Power Query, the Power Query navigator creates t
 
 If you select the entire sheet in the navigator, the workbook is displayed as it appeared in Excel, with all of the blank cells filled with **null**.
 
-[![Screenshot of the navigator with single sheet displayed with nulls in empty cells.](./media/excel/entire-workbook-sheet.png)](./media/excel/entire-workbook-sheet.png#lightbox)
-
+:::image type="content" source="./media/excel/entire-workbook-sheet.png" lightbox="./media/excel/entire-workbook-sheet.png" alt-text="Screenshot of the navigator with single sheet displayed with nulls in empty cells.":::
 If you select one of the suggested tables, each individual table that Power Query was able to determine from the layout of the workbook is displayed in the navigator. For example, if you select **Table 3**, the data that originally appeared in cells C13 to F16 is displayed.
 
 [![Screenshot of the navigator with table 3 under Suggested tables selected, and the contents of table 3 displayed.](./media/excel/table-three-only.png)](./media/excel/table-three-only.png#lightbox)

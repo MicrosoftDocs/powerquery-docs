@@ -224,7 +224,6 @@ You can then transform that query into a function by doing a right-click on the 
 
 After a few more transformations, you can see that you've reached your desired output and leveraged the logic for such a transformation from a custom function.
 
- [![Final output query after invoking a custom function.](media/best-practices-power-query/invoked-custom-function.png)](media/best-practices-power-query/invoked-custom-function.png#lightbox)
-
+ :::image type="content" source="media/best-practices-power-query/invoked-custom-function.png" lightbox="media/best-practices-power-query/invoked-custom-function.png" alt-text="Final output query after invoking a custom function.":::
 >[!NOTE]
 > To learn more about how to create and use custom functions in Power Query from the article [Custom Functions](custom-function.md).

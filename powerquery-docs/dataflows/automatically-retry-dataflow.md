@@ -31,8 +31,7 @@ To automatically retry a dataflow on failure:
    2. Leave the second cell as **is equal to**.
    3. In the third cell, enter **Failed**.
 
-   [![Image with the conditions set to occur when the Refresh status equals success.](media/automatically-retry-dataflow/auto-retry-dataflow-power-automate.png)](media/automatically-retry-dataflow/auto-retry-dataflow-power-automate.png#lightbox)
-
+   :::image type="content" source="media/automatically-retry-dataflow/auto-retry-dataflow-power-automate.png" lightbox="media/automatically-retry-dataflow/auto-retry-dataflow-power-automate.png" alt-text="Image with the conditions set to occur when the Refresh status equals success.":::
 8. In the **If Yes** section, select **Add an action**.
 9. Search for the **Refresh a dataflow** connector, and then select it.
 10. Customize the connector:
