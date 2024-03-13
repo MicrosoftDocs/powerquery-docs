@@ -29,13 +29,13 @@ The stages for getting data in the Power Query Desktop experiences are:
 
 4. Query destination
 
-![Flow diagram illustrating the four stages of getting data.](media/get-data-experience/getting-data-flow-diagram.png "Flow diagram illustrating the four stages of getting data")
+:::image type="content" source="media/get-data-experience/getting-data-flow-diagram.png" alt-text="Flow diagram illustrating the four stages of getting data.":::
 
 ### 1. Connection settings
 
 Most connectors initially require at least one parameter to initialize a connection to the data source. For example, the SQL Server connector requires at least the host name to establish a connection to the SQL Server database.
 
-![SQL Server connector parameters.](media/get-data-experience/connector-parameters.png "SQL Server connector parameters")
+:::image type="content" source="media/get-data-experience/connector-parameters.png" alt-text="SQL Server connector parameters.":::
 
 In comparison, when trying to connect to an Excel file, Power Query requires that you use the file path to find the file you want to connect to.
 
@@ -59,7 +59,7 @@ The currently available methods of authentication for Power Query are:
 
 For example, the available authentication methods for the SQL Server database connector are Windows, Database, and Microsoft account.
 
-![SQL Server database connector authentication methods.](media/get-data-experience/authentication.png "SQL Server database connector authentication methods")
+:::image type="content" source="media/get-data-experience/authentication.png" alt-text="SQL Server database connector authentication methods.":::
 
 ### 3. Data preview
 
@@ -84,7 +84,7 @@ The **Navigator** window consists of two main sections:
 
 * The data preview pane on the right side of the window shows a preview of the data from the object you selected.
 
-   ![SQL Server connector navigator window in Power Query Desktop.](media/get-data-experience/navigator.png "SQL Server connector navigator window")
+   :::image type="content" source="media/get-data-experience/navigator.png" alt-text="SQL Server connector navigator window in Power Query Desktop.":::
 
 ##### Object limitation workaround
 
@@ -106,7 +106,7 @@ In the interim, you can use the following workaround:
 
 The table preview dialog box consists of only one section for the data preview. An example of a connector that provides this experience and window is the [Folder](connectors/folder.md) connector.
 
-![Table preview dialog box.](media/get-data-experience/combine-files.png "Table preview dialog box")
+:::image type="content" source="media/get-data-experience/combine-files.png" alt-text="Table preview dialog box.":::
 
 ### 4. Query destination
 
@@ -124,7 +124,7 @@ The stages for getting data in Power Query Online are:
 
 3. Query editor
 
-![Flow diagram with the three stages of getting data in Power Query Online.](media/get-data-experience/getting-data-pqo-flow.png "Flow diagram with the three stages of getting data in Power Query Online")
+:::image type="content" source="media/get-data-experience/getting-data-pqo-flow.png" alt-text="Flow diagram with the three stages of getting data in Power Query Online.":::
 
 ### 1. Connection settings and authentication
 
@@ -195,7 +195,7 @@ The **Navigator** window consists of two main sections:
 
 The table preview dialog box consists of only one section for the data preview. An example of a connector that provides this experience and window is the [Folder](connectors/folder.md) connector.
 
-![Table preview dialog box.](media/get-data-experience/combine-files.png "Table preview dialog box")
+:::image type="content" source="media/get-data-experience/combine-files.png" alt-text="Table preview dialog box.":::
 
 ### 3. Query editor
 

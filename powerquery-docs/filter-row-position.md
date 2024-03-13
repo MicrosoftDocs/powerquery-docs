@@ -19,11 +19,11 @@ There are two places where you can find the **Keep rows** buttons:
 
 - On the **Home** tab, in the **Reduce Rows** group.
 
-   ![Keep rows button on the Home tab.](media/filter-row-position/keep-rows-home-tab.png "Keep rows button on the Home tab")
+   :::image type="content" source="media/filter-row-position/keep-rows-home-tab.png" alt-text="Keep rows button on the Home tab.":::
 
 - On the table menu.
 
-   ![Keep rows buttons on the table menu.](media/filter-row-position/keep-rows-contextual-menu.png "Keep rows buttons on the table menu")
+   :::image type="content" source="media/filter-row-position/keep-rows-contextual-menu.png" alt-text="Keep rows buttons on the table menu.":::
 
 >[!NOTE]
 >In the data preview section in the middle of the Power Query window, you can see the position of your rows on the left side of the table. Each row position is represented by a number. The top row starts with position 1.
@@ -36,11 +36,11 @@ Imagine the following table that comes out of a system with a fixed layout.
 
 This report always contains seven rows of data, and below the data it has a section for comments with an unknown number of rows. In this example, you only want to keep the first seven rows of data. To do that, select **Keep top rows** from the table menu. In the **Keep top rows** dialog box, enter **7** in the **Number of rows** box.
 
-![Keep top rows dialog box.](media/filter-row-position/keep-top-rows-window.png "Keep top rows dialog box")
+:::image type="content" source="media/filter-row-position/keep-top-rows-window.png" alt-text="Keep top rows dialog box.":::
 
 The result of that change will give you the output table you're looking for. After you set the data types for your columns, your table will look like the following image.
 
-![Final sample table for keep top rows with seven rows of data retained and the units column set to the Number data type.](media/filter-row-position/keep-rows-final.png "Final sample table for keep top rows with seven rows of data retained and the units column set to the Number data type")
+:::image type="content" source="media/filter-row-position/keep-rows-final.png" alt-text="Final sample table for keep top rows with seven rows of data retained and the units column set to the Number data type.":::
 
 ### Keep bottom rows
 
@@ -54,7 +54,7 @@ This report always contains seven rows of data at the end of the report page. Ab
 
 To do that, select **Keep bottom rows** from the table menu. In the **Keep bottom rows** dialog box, enter **8** in the **Number of rows** box.
 
-![Keep bottom rows dialog box.](media/filter-row-position/keep-bottom-rows-window.png "Keep bottom rows dialog box")
+:::image type="content" source="media/filter-row-position/keep-bottom-rows-window.png" alt-text="Keep bottom rows dialog box.":::
 
 The result of that operation will give you eight rows, but now your header row is part of the table.
 
@@ -80,7 +80,7 @@ This report always contains five rows for the header, one row of column headers 
 
 To do that, select **Keep range of rows** from the table menu. In the **Keep range of rows** dialog box, enter **6** in the **First row** box and **8** in the **Number of rows** box.
 
-![Keep range of rows dialog box.](media/filter-row-position/keep-range-rows-window.png "Keep range of rows dialog box")
+:::image type="content" source="media/filter-row-position/keep-range-rows-window.png" alt-text="Keep range of rows dialog box.":::
 
 Similar to the previous example for keeping bottom rows, the result of this operation gives you eight rows with your column headers as part of the table. Any rows above the **First row** that you defined (row 6) are removed.
 
@@ -100,11 +100,11 @@ There are two places where you can find the **Remove rows** buttons:
 
 - On the **Home** tab, in the **Reduce Rows** group.
 
-   ![Remove rows button on the Home tab.](media/filter-row-position/remove-rows-home-tab.png "Remove rows button on the Home tab")
+   :::image type="content" source="media/filter-row-position/remove-rows-home-tab.png" alt-text="Remove rows button on the Home tab.":::
 
 - On the table menu.
 
-   ![Remove rows operations on the table menu.](media/filter-row-position/remove-rows-contextual-menu.png "Remove rows operations on the table menu")
+   :::image type="content" source="media/filter-row-position/remove-rows-contextual-menu.png" alt-text="Remove rows operations on the table menu.":::
 
 ### Remove top rows
 
@@ -118,7 +118,7 @@ This report always contains a fixed header from row 1 to row 5 of the table. In 
 
 To do that, select **Remove top rows** from the table menu. In the **Remove top rows** dialog box, enter **5** in the **Number of rows** box.
 
-![Remove top rows dialog box.](media/filter-row-position/remove-top-rows-window.png "Remove top rows dialog box")
+:::image type="content" source="media/filter-row-position/remove-top-rows-window.png" alt-text="Remove top rows dialog box.":::
 
 In the same way as the previous examples for "Keep bottom rows" and "Keep a range of rows," the result of this operation gives you eight rows with your column headers as part of the table.
 
@@ -142,7 +142,7 @@ This report always contains a fixed section or footer that occupies the last fiv
 
 To do that, select **Remove bottom rows** from the table menu. In the **Remove top rows** dialog box, enter **5** in the **Number of rows** box.
 
-![Remove bottom rows dialog box.](media/filter-row-position/remove-bottom-rows-window.png "Remove bottom rows dialog box")
+:::image type="content" source="media/filter-row-position/remove-bottom-rows-window.png" alt-text="Remove bottom rows dialog box.":::
 
 The result of that change will give you the output table that you're looking for. After you set data types for your columns, your table will look like the following image.
 
@@ -172,7 +172,7 @@ To do that, select **Remove alternate rows** from the table menu. In the **Remov
 
   After you remove one row, you keep the next row. The process starts again for the next row.
 
-![Remove alternate rows dialog box.](media/filter-row-position/remove-alternate-rows-window.png "Remove alternate rows dialog box")
+:::image type="content" source="media/filter-row-position/remove-alternate-rows-window.png" alt-text="Remove alternate rows dialog box.":::
 
 The result of that selection will give you the output table that you're looking for. After you set the data types to your columns, your table will look like the following image.
 

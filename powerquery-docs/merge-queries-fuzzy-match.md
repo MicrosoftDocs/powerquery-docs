@@ -48,7 +48,7 @@ The goal is to create a table like the following, where you've standardized all 
 
 To do the fuzzy merge, you start by doing a merge. In this case, you'll use a left outer join, where the left table is the one from the survey and the right table is the **Fruits** reference table. At the bottom of the dialog box, select the **Use fuzzy matching to perform the merge** check box.
 
-![Use fuzzy matching to perform the merge option.](media/merge-queries-fuzzy-match/simple-merge-window.png "Use fuzzy matching to perform the merge option")
+:::image type="content" source="media/merge-queries-fuzzy-match/simple-merge-window.png" alt-text="Use fuzzy matching to perform the merge option.":::
 
 After you select **OK**, you can see a new column in your table because of this merge operation. If you expand it, you'll notice that there's one row that doesn't have any values in it. That's exactly what the dialog box message in the previous image stated when it said "The selection matches 8 of 9 rows from the first table."
 
@@ -60,7 +60,7 @@ After you select **OK**, you can see a new column in your table because of this 
 
 You can modify the **Fuzzy matching options** to tweak how the approximate match should be done. First, select the **Merge queries** command, and then in the **Merge** dialog box, expand **Fuzzy matching options**.
 
-![Fuzzy matching options.](media/merge-queries-fuzzy-match/fuzzy-matching-options.png "Fuzzy matching options")
+:::image type="content" source="media/merge-queries-fuzzy-match/fuzzy-matching-options.png" alt-text="Fuzzy matching options.":::
 
 The available options are:
 
@@ -90,7 +90,7 @@ You can go back to the **Merge** dialog box, and in **Fuzzy matching options** u
 
 After you select **OK**, you can go to the merge step. When you expand the column with table values, you'll notice that besides the **Fruit** field you'll also see the **Similarity score field**. Select both and expand them without adding a prefix.
 
-![Table expand dialog for the Fruits column that contains the Fruit and Similarity score fields selected.](media/merge-queries-fuzzy-match/expand-similarity-score.png "Table expand dialog for the Fruits column that contains the Fruit and Similarity score fields selected")
+:::image type="content" source="media/merge-queries-fuzzy-match/expand-similarity-score.png" alt-text="Table expand dialog for the Fruits column that contains the Fruit and Similarity score fields selected.":::
 
 After expanding these two fields, they'll be added to your table. Note the values you get for the similarity scores of each value. These scores can help you with further transformations if needed to determine if you should lower or raise your similarity threshold.
 

@@ -45,11 +45,11 @@ The goal is to create a table like the following, where the name of the country/
 5. In the **Join kind** section, select **Right outer**.
 6. Select **OK**.
 
-![Merge dialog box showing the results of following the previous right outer join procedure.](media/merge-queries-right-outer/right-outer-merge-window.png "Merge dialog box showing the results of following the previous right outer join procedure")
+:::image type="content" source="media/merge-queries-right-outer/right-outer-merge-window.png" alt-text="Merge dialog box showing the results of following the previous right outer join procedure.":::
 
 From the newly created **Countries** column, expand the **Country** field. Don't select the **Use original column name as prefix** check box.
 
-![Expand table column for Country.](media/merge-queries-right-outer/right-outer-expand-field.png "Expand table column for Country")
+:::image type="content" source="media/merge-queries-right-outer/right-outer-expand-field.png" alt-text="Expand table column for Country.":::
 
 After performing this operation, you'll create a table that looks like the following image.
 

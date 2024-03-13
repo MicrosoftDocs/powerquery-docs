@@ -16,11 +16,11 @@ When you attempt to connect to a data source using a new connector for the first
 
 Different connectors show different authentication methods. For example, the OData Feed connector in Power BI Desktop and Excel displays the following authentication method dialog box.
 
-![OData Feed authentication method.](media/connector-authentication/odata-authentication.png "OData Feed authentication method")
+:::image type="content" source="media/connector-authentication/odata-authentication.png" alt-text="OData Feed authentication method.":::
 
 If you're using a connector from an online app, such as the Power BI service or Power Apps, you'll see an authentication method dialog box for the OData Feed connector that looks something like the following image.
 
-![OData Feed online authentication method.](media/connector-authentication/odata-online-authentication.png "OData Feed online authentication method")
+:::image type="content" source="media/connector-authentication/odata-online-authentication.png" alt-text="OData Feed online authentication method.":::
 
 As you can see, a different selection of authentication methods is presented from an online app. Also, some connectors might ask you to enter the name of an on-premises data gateway to be able to connect to your data.
 
@@ -28,7 +28,7 @@ As you can see, a different selection of authentication methods is presented fro
 
 In connectors that require you to enter a URL, you'll be asked to select the level to which the authentication method will be applied. For example, if you select the Web connector with a URL of `https://contoso.com/2020data/List_of_countries_and_capitals`, the default level setting for your authentication method will be `https://contoso.com`.
 
-![Default level setting.](media/connector-authentication/url-level-setting.png "Default level setting")
+:::image type="content" source="media/connector-authentication/url-level-setting.png" alt-text="Default level setting.":::
 
 The level you select for the authentication method you chose for this connector determines what part of a URL will have the authentication method applied to it. If you select the top-level web address, the authentication method you select for this connector will be used for that URL address or any subaddress within that address.
 
@@ -46,17 +46,17 @@ In some cases, you might need to change the authentication method you use in a c
 
     - In Power BI Desktop, on the **File** tab, select **Options and settings** > **Data source settings**.
 
-        ![Power BI Desktop data source settings.](media/connector-authentication/pbi-edit.png "Power BI Desktop data source settings")
+        :::image type="content" source="media/connector-authentication/pbi-edit.png" alt-text="Power BI Desktop data source settings.":::
 
     - In Excel, on the **Data** tab, select **Get Data** > **Data Source Settings**. 
 
-        ![Excel data source settings.](media/connector-authentication/excel-edit.png "Excel data source settings")
+        :::image type="content" source="media/connector-authentication/excel-edit.png" alt-text="Excel data source settings.":::
 
 2. In the **Data source settings** dialog box, select **Global permissions**, choose the website where you want to change the permission setting, and then select **Edit Permissions**.
 
 3. In the **Edit Permissions** dialog box, under **Credentials**, select **Edit**. 
 
-    ![Edit permissions.](media/connector-authentication/edit-permission.png "Edit permissions")
+    :::image type="content" source="media/connector-authentication/edit-permission.png" alt-text="Edit permissions.":::
 
 4. Change the credentials to the type required by the website, select **Save**, and then select **OK**.
 
@@ -66,7 +66,7 @@ You can also delete the credentials for a particular website in step 3 by select
 
 1. Select the connector, and then select **Edit connection**.
 
-    ![Edit the online authentication methods.](media/connector-authentication/pq-edit-connection.png "Edit the online authentication methods")
+    :::image type="content" source="media/connector-authentication/pq-edit-connection.png" alt-text="Edit the online authentication methods.":::
 
 2. Make the required changes, and then select **Next**.
 
