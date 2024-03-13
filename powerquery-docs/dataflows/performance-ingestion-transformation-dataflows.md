@@ -3,7 +3,7 @@ title: Improve performance and reusability by separating data ingestion from dat
 description: Learn how to improve performance and reusability by separating data ingestion from data transformation dataflows
 author: bensack
 ms.topic: conceptual
-ms.date: 1/6/2023
+ms.date: 3/13/2024
 ms.author: bensack
 ---
 
@@ -42,7 +42,7 @@ Separation of data ingestion dataflows from data transformation dataflows is hel
 
 ## Optimize the data ingestion dataflow
 
-Consider optimizing the data ingestion dataflow whenever possible. As an example, if all the data from the source isn't needed, and the data source supports query folding, then filtering data and getting only a required subset is a good approach. To learn more about query folding, go to [Power Query query folding](../power-query-folding.md).
+Consider optimizing the data ingestion dataflow whenever possible. As an example, if all the data from the source isn't needed, and the data source supports query folding, then filtering data and getting only a required subset is a good approach. To learn more about query folding, go to [Overview of query evaluation and query folding in Power Query](../query-folding-basics.md).
 
 ## Create the data ingestion dataflows as analytical dataflows
 

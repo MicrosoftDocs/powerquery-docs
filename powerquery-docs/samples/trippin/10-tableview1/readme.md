@@ -5,7 +5,7 @@ author: ptyx507x
 
 
 ms.topic: tutorial
-ms.date: 1/9/2023
+ms.date: 3/13/2024
 ms.author: miescobar
 ---
 
@@ -38,7 +38,7 @@ To understand more about the query capabilities that an OData service might offe
 >[!Note]
 >As stated above, the **OData.Feed** function will automatically provide query folding capabilities. Since the TripPin series is treating the OData service as a regular REST API, using [Web.Contents](/powerquery-m/web-contents) rather than **OData.Feed**, you'll need to implement the query folding handlers yourself. For real world usage, we recommend that you use **OData.Feed** whenever possible.
 
-Go to [Power Query query folding](../../../power-query-folding.md) for more information about query folding.
+Go to [Overview of query evaluation and query folding in Power Query](../../../query-folding-basics.md) for more information about query folding.
 
 ## Using Table.View
 
