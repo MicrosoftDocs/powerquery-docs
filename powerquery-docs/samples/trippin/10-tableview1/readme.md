@@ -161,7 +161,7 @@ Fact("Fold $top 1 on Airlines",
 
 The remaining sections of this tutorial each add a new **Table.View** handler. You're taking a [Test Driven Development (TDD)](https://en.wikipedia.org/wiki/Test-driven_development) approach, where you first add failing unit tests, and then implement the M code to resolve them.
 
-Each of the following handler sections describe the functionality provided by the handler, the OData equivalent query syntax, the unit tests, and the implementation. Using the scaffolding code described previously, each handler implementation requires two changes:
+The following handler sections describe the functionality provided by the handler, the OData equivalent query syntax, the unit tests, and the implementation. Using the scaffolding code described previously, each handler implementation requires two changes:
 
 * Adding the handler to **Table.View** that updates the `state` record.
 * Modifying `CalculateUrl` to retrieve the values from the `state` and add to the url and/or query string parameters.
