@@ -46,7 +46,7 @@ You can also copy the full code of your query.
 With the code of your query in your clipboard, you can share this query through the means of your choice. The recipient of this code needs to create a blank query and follow the same steps as described in the previous paragraph. But instead of copying the code, the recipient will replace the code found in their blank query with the code that you provided.
 
 >[!NOTE]
->To create a blank query, go to the **Got Data** window and select **Blank query** from the options.
+>To create a blank query, go to the **Get Data** window and select **Blank query** from the options.
 
 ## Other alternatives
 
