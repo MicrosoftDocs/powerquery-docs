@@ -57,4 +57,4 @@ Some Power Query product integrations might offer more ways to share queries suc
 
 We recommend that you read the documentation of the product integration that you're interested in to learn more about the query sharing capabilities found in those products.
 
-As an alternative, the modern Power Query user interface offers the capability to export Power Query templates. You can read more about the templates experience from the article on [Power Query templates](/powerquery-docs/power-query-template.md).
+As an alternative, the modern Power Query user interface offers the capability to export Power Query templates. You can read more about the templates experience from the article on [Power Query templates](power-query-template.md).
