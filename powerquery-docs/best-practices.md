@@ -73,7 +73,7 @@ By default, Power Query offers an automatic data type detection for unstructured
 
 ## Explore your data
 
-Before you start preparing you data and adding new transformation steps, we recommend that you enable the Power Query [data profiling tools](data-profiling-tools.md) to easily discover information about your data.
+Before you start preparing your data and adding new transformation steps, we recommend that you enable the Power Query [data profiling tools](data-profiling-tools.md) to easily discover information about your data.
 
 ![Data preview or data profiling tools in Power Query.](media/best-practices-power-query/data-preview-tools-enabled-v2.png)
 
