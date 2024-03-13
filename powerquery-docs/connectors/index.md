@@ -21,6 +21,9 @@ The connectors are listed in alphabetical order in separate tables for each lett
 > [!NOTE]
 >There's a known issue resulting in an `Expression.Error: The import [connector name] matches no exports` error where connectors requiring a gateway aren't working in dataflows and datamarts in Premium workspaces. There's ongoing work towards a fix and the documentation will be updated when a fix is released.
 
+> [!NOTE]
+>Starting March 31, 2024, support for government cloud data sources using Organizational account will stop in non-governmental Power BI environments. To use government cloud data sources with organizational account, use the government Power BI environment.
+
 ## A
 
 | Connector | Excel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Power BI (Semantic models) | Power BI (Dataflows) | Fabric (Dataflow Gen2) | Power Apps (Dataflows) | Customer<br/>Insights (Dataflows) | Analysis Services |
