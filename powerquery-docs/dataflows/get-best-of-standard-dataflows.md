@@ -73,8 +73,7 @@ The key field is a unique value representing a unique row in the table. It's imp
 * The primary key in the source system (such as OrderID in the prior example).
   concatenated field created through Power Query transformations in the dataflow.
 
-  > [!div class="mx-imgBorder"]
-  > :::image type="content" source="media/get-best-of-standard-dataflows/merge-columns-dataflow.png" alt-text="Merging columns to create a concatenated unique column.":::
+  :::image type="content" source="media/get-best-of-standard-dataflows/merge-columns-dataflow.png" alt-text="Merging columns to create a concatenated unique column.":::
 
 * A combination of fields to be selected in the **Alternate Key** option. A combination of fields used as a key field is also called a _composite key_.
 
@@ -86,8 +85,7 @@ If you want to have the data in your table always synchronized with the data fro
 
 The option means that if there's a data row in the table that doesn't exist in the next dataflow refresh's query output, that row gets removed from the table.
 
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="media/get-best-of-standard-dataflows/delete-rows-not-exist.png" alt-text="Delete rows that no longer exists.":::
+:::image type="content" source="media/get-best-of-standard-dataflows/delete-rows-not-exist.png" alt-text="Delete rows that no longer exists.":::
 
 > [!NOTE]
 > Standard V2 dataflows rely on the `createdon` and `modifiedon` fields in order to remove rows that don't exist in the dataflows output, from the destination table. If those columns don't exist in the destination table, records aren't deleted.

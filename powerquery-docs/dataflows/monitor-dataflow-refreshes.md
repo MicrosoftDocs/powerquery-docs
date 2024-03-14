@@ -22,7 +22,7 @@ To set up your monitoring dashboard for dataflow refresh history:
 
 1. Navigate to [Power Apps](https://make.powerapps.com/).
 1. Select the environment you want to monitor.
-1. Open :::image type="content" source="media/monitor-dataflow-refreshes/gear-icon.png" alt-text="Image of a gear."::: **Settings** > **Session Details**.
+1. Open :::image type="icon" source="media/monitor-dataflow-refreshes/gear-icon.png"::: **Settings** > **Session Details**.
 1. Copy the **Instance url**, which should look something like `contoso.crm.dynamics.com`.
 1. Download the [Power BI Template](https://download.microsoft.com/download/f/1/9/f195fb57-495a-4487-9317-fe00816afd88/dataflow%20refresh%20history%20metrics%20template.pbit).
 1. Open the template file with Power BI Desktop and provide your instance URL.
@@ -52,7 +52,8 @@ The new tables are available in your environment right away. To find the tables 
 1. Scroll down to the dataflow refresh history tables.
 
    :::image type="content" source="media/monitor-dataflow-refreshes/refresh-history-tables.png" lightbox="media/monitor-dataflow-refreshes/refresh-history-tables.png" alt-text="Image of the two Dataverse tables containing refresh history.":::
-These tables will store history for at least the last 50 refreshes. Refresh history records older than 90 days may be removed by the system. To use these tables, we suggest that you use Power BI to get data through the Dataverse connector. We also suggest that you extract this data into a self-managed table if you would like to do analysis over a longer period of time.
+   
+These tables will store history for at least the last 50 refreshes. Refresh history records older than 90 days may be removed by the system. To use these tables, we suggest that you use Power BI to get data through the Dataverse connector. We also suggest that you extract this data into a self-managed table if you would like to perform analysis over a longer period of time.
 
 ## Power BI dataflows monitoring
 
