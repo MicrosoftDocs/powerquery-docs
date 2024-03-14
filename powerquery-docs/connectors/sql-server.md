@@ -97,7 +97,7 @@ Both Power Query Desktop and Power Query Online provide a set of advanced option
 
 Once you select the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your SQL Server database.
 
-## Known issues and limitations
+## Limitations
 
 ### SQL Server certificate isn't trusted on the client (Power BI Desktop or on-premises data gateway)
 
