@@ -40,4 +40,4 @@ To automatically retry a dataflow on failure:
     2. **Group**: Select the Power Apps environment or the Power BI workspace your dataflow is in.
     3. **Dataflow**: Select the same dataflow as chosen in step 4.
 
-    ![Image with the refresh a dataflow connector in the If yes dialog box.](media/automatically-retry-dataflow/refresh-a-dataflow.png)
+    :::image type="content" source="media/automatically-retry-dataflow/refresh-a-dataflow.png" alt-text="Image with the refresh a dataflow connector in the If yes dialog box.":::

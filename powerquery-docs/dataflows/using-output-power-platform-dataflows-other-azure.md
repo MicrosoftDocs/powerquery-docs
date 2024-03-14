@@ -32,7 +32,7 @@ In any of these services, use Azure Data Lake Storage as the source. You'll be a
 
 If you're using standard dataflows that store the data in Dataverse, you can still connect to Dataverse from many Azure services. The following image shows that in Azure Data Factory, the output of a dataflow from Dataverse can be used as a source.
 
-![Using the output of Power Platform dataflows from Dataverse.](media/using-output-power-platform-dataflows-other-azure/adf-sourced-from-cds.png)
+:::image type="content" source="media/using-output-power-platform-dataflows-other-azure/adf-sourced-from-cds.png" alt-text="Using the output of Power Platform dataflows from Dataverse.":::
 
 ## Dataflows with internal Azure Data Lake Storage
 

@@ -64,7 +64,7 @@ This query connects to the SalesOrderHeader table, and selects a few columns fro
 
 Your first step in this process is to review your query and pay close attention to the query folding indicators. The goal is to review the steps that are marked as not folded. Then you can see if making changes to the overall query could make those transformations fold completely.
 
-![Query folding indicators for the sample query inside the Applied steps pane.](media/query-plan/step-folding-indicators-sample.png)
+:::image type="content" source="media/query-plan/step-folding-indicators-sample.png" alt-text="Query folding indicators for the sample query inside the Applied steps pane.":::
 
 For this example, the only step that can't be folded is **Kept bottom rows**, which is easy to identify through the *not folded* step indicator. This step is also the last step of the query.
 
@@ -122,11 +122,11 @@ Implement the alternative discussed in the previous section:
 2. Remove the *Kept bottom rows* step.
 3. Sort the **SalesOrderID** column in descending order.
 
-   ![Sorting the SalesOrderID column in descending order using the autofilter menu.](media/query-plan/sort-descending.png)
+   :::image type="content" source="media/query-plan/sort-descending.png" alt-text="Sorting the SalesOrderID column in descending order using the autofilter menu.":::
 
 4. Select the table icon on the top-left corner of the data preview view and select the option that reads Keep top rows. In the dialog, pass the number five as the argument and hit OK.
 
-   ![Using the table context menu to select the Keep top rows transform to keep only the top five rows.](media/query-plan/keep-top-rows.png)
+   :::image type="content" source="media/query-plan/keep-top-rows.png" alt-text="Using the table context menu to select the Keep top rows transform to keep only the top five rows.":::
 
 After implementing the changes, check the query folding indicators again and see if it's giving you a folded indicator.
 

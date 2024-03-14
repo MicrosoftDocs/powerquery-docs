@@ -75,7 +75,7 @@ Be sure to undo this step before resuming normal testing.
 
 The next step is to disable background analysis. Background analysis is controlled by the **Allow data preview to download in the background** setting described in [Disable Power Query background refresh](/power-bi/guidance/power-query-background-refresh) for Power BI. You can also disable this option in Excel.
 
-![Image showing Query options in Excel with background analysis disabled](./media/multiple-queries/data-previews.png)
+:::image type="content" source="./media/multiple-queries/data-previews.png" alt-text="Image showing Query options in Excel with background analysis disabled.":::
 
 ### Buffer your table
 
@@ -83,7 +83,7 @@ Optionally, you can also use `Table.Buffer` to force all the data to be read, wh
 
 1. In the Power Query editor formula bar, select the **fx** button to add a new step.
 
-   ![Image with the location of the fx button emphasized](./media/multiple-queries/fx-button.png)
+   :::image type="content" source="./media/multiple-queries/fx-button.png" alt-text="Image with the location of the fx button emphasized.":::
 
 2. In the formula bar, surround the name of the previous step with Table.Buffer(\<_previous step name goes here_>). For example, if the previous step was named `Source`, the formula bar will display `= Source`. Edit the step in the formula bar to say `= Table.Buffer(Source)`.
 
@@ -93,4 +93,4 @@ More information: [Table.Buffer](/powerquery-m/table-buffer)
 
 To run the test, do a refresh in the Power Query editor.
 
-![Image with the location of the refresh button emphasized](./media/multiple-queries/refresh-preview.png)
+:::image type="content" source="./media/multiple-queries/refresh-preview.png" alt-text="Image with the location of the refresh button emphasized.":::

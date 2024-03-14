@@ -26,7 +26,7 @@ The following connectors currently support the upload a file feature.
 
 When you select a connector that offers the *Upload file* experience, you will notice a radio button on the top that enables this feature.
 
-![Upload file option in the connection settings section of the connect to a data source dialog](media/upload-file/upload-file-option.png)
+:::image type="content" source="media/upload-file/upload-file-option.png" alt-text="Upload file option in the connection settings section of the connect to a data source dialog.":::
 
 When you select **Upload file**, the option underneath opens a simple dialog to let you either drag a file or browse in your local file system to upload a file.
 
@@ -45,7 +45,7 @@ Before you select the next button, you need to change the authentication kind fr
 
 After going through the authentication process, a **You are currently signed in message** underneath the **Authentication Kind** selection let's you know that you've successfully signed in. After you've signed in, select **Next**. The file is then stored in your personal Microsoft OneDrive for Business account, and a new query is created from the file that you've uploaded.
 
-![Connect to data source page with a user authenticated using the organizational account authentication kind.](media/upload-file/connection-credentials-signed-in.png)
+:::image type="content" source="media/upload-file/connection-credentials-signed-in.png" alt-text="Connect to data source page with a user authenticated using the organizational account authentication kind.":::
 
 ### Drag and drop experience in the query editor
 
@@ -55,4 +55,4 @@ When using the Power Query editor, you can drop a file on either the [diagram vi
 
 When dropping the file on either of the previously mentioned sections, a dialog with the appropriate connector settings page will be shown, based on the file extension of the file that's being uploaded.
 
-![Text / CSV connector settings page shown after dropping a text file on the diagram view of the Power Query editor](media/upload-file/drag-drop-txt.png)
+:::image type="content" source="media/upload-file/drag-drop-txt.png" alt-text="Text / CSV connector settings page shown after dropping a text file on the diagram view of the Power Query editor.":::

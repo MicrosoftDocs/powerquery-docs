@@ -32,7 +32,7 @@ The first step is to create a Power Query template with your queries in Excel.
 
 1. Start the Power Query editor from **Data** tab > **Get Data** > **Launch Power Query Editor**.
 
-    ![Launch the Power Query editor in Excel from the Get Data dropdown.](media/new-dataflow-from-template/excel-launch-pq-editor.png)
+    :::image type="content" source="media/new-dataflow-from-template/excel-launch-pq-editor.png" alt-text="Launch the Power Query editor in Excel from the Get Data dropdown.":::
 
 2. Once Power Query loads, select **File** > **Export Template**.
 

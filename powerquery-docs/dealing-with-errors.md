@@ -142,7 +142,7 @@ When trying to apply an operation that isn't supported, such as multiplying a te
 
 When working with data that contains nested structured values (such as tables, lists, or records), you may sometimes encounter the following error:
 
-![Error for nested values triggered by formula firewall taken place](media/dealing-with-errors/privacy-buffer-error.png)
+:::image type="content" source="media/dealing-with-errors/privacy-buffer-error.png" alt-text="Error for nested values triggered by formula firewall taken place.":::
 
 ```
 Expression.Error: We cannot return a value of type {value} in this context

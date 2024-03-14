@@ -137,4 +137,4 @@ shared HelloWorld.Contents =
 
 This code (with associated publish information, and so on) results in the following dialogue in Power BI. New lines will be represented in text with '#(lf)', or 'line feed'.
 
-![Multi-line input builder.](media/handling-documentation/hello-world-multiline.png)
+:::image type="content" source="media/handling-documentation/hello-world-multiline.png" alt-text="Multi-line input builder.":::

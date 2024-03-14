@@ -94,7 +94,7 @@ After you select **OK**, you can go to the merge step. When you expand the colum
 
 After expanding these two fields, they'll be added to your table. Note the values you get for the similarity scores of each value. These scores can help you with further transformations if needed to determine if you should lower or raise your similarity threshold.
 
-![Table output after the fuzzy merge process occurred showcasing both the new Fruit and Similarity score fields for each value from the original query](media/merge-queries-fuzzy-match/similarity-scores-results.png)
+:::image type="content" source="media/merge-queries-fuzzy-match/similarity-scores-results.png" alt-text="Table output after the fuzzy merge process occurred showcasing both the new Fruit and Similarity score fields for each value from the original query.":::
 
 For this example, the **Similarity score** serves only as additional information and isn't needed in the output of this query, so you can remove it. Note how the example started with nine distinct values, but after the fuzzy merge, there are only four distinct values.
 

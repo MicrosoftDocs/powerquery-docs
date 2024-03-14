@@ -94,13 +94,13 @@ In the interim, you can use the following workaround:
 
 1. Right-click on the root node of the **Navigator**, and then select **Transform Data**.
 
-   ![Selecting the root node in Navigator and selecting transform data from the drop-down menu.](media/get-data-experience/navigator-transform-data.png)
+   :::image type="content" source="media/get-data-experience/navigator-transform-data.png" alt-text="Selecting the root node in Navigator and selecting transform data from the drop-down menu.":::
 
 2. Power Query Editor then opens with the full navigation table in the table preview area. This view doesn't have a limit on the number of objects, and you can use filters or any other Power Query transforms to explore the list and find the rows you want (for example, based on the **Name** column).
 
 3. Upon finding the item you want, you can get at the contents by selecting the data link (such as the **Table** link in the following image).
 
-    ![Selecting the Table link to view the contents.](media/get-data-experience/select-table-link.png)
+    :::image type="content" source="media/get-data-experience/select-table-link.png" alt-text="Selecting the Table link to view the contents.":::
 
 #### Table preview dialog box
 
@@ -112,7 +112,7 @@ The table preview dialog box consists of only one section for the data preview. 
 
 This is the stage in which you specify where to load the query. The options vary from integration to integration, but the one option that's always available is loading data to the Power Query editor to further transform and enrich the query.
 
-![Get data load destinations in navigator window and table preview](media/get-data-experience/get-data-load-to.png)
+:::image type="content" source="media/get-data-experience/get-data-load-to.png" alt-text="Get data load destinations in navigator window and table preview.":::
 
 ## Power Query Online experience
 
@@ -149,7 +149,7 @@ The first time that you use Power Query to connect to a specific data source, yo
 >[!NOTE]
 >Some connectors offer specific fields inside the connection credentials section to enable or define any sort of security related to the connection that needs to be established. For example, the SQL Server connector offers the **Use Encrypted Connection** field.
 
-![Connect to data source dialog with all information to create a new connection entered.](media/get-data-experience/connect-to-data-source-pqo-credentials-entered.png)
+:::image type="content" source="media/get-data-experience/connect-to-data-source-pqo-credentials-entered.png" alt-text="Connect to data source dialog with all information to create a new connection entered.":::
 
 The primary information required by all connectors to define a connection are:
 
@@ -166,11 +166,11 @@ The primary information required by all connectors to define a connection are:
 
 Once you've defined a connection in Power Query Online, you can reuse the same connection later on without reentering all this information again. The **Connection** field offers a dropdown menu where you select your already defined connections. Once you've selected your already defined connection, you don't need to enter any other details before selecting **Next**.
 
-![Connect to data source dialog box where the connection name was picked from the dropdown menu inside the connection field.](media/get-data-experience/pqo-pick-connection.png)
+:::image type="content" source="media/get-data-experience/pqo-pick-connection.png" alt-text="Connect to data source dialog box where the connection name was picked from the dropdown menu inside the connection field.":::
 
 After you select a connection from this menu, you can also make changes to the credentials, privacy level, and other connector-specific fields for your data source in your project. Select **Edit connection**, and then change any of the provided fields.
 
-![Connect to data source dialog where the connection name was picked from the dropdown menu inside the connection field](media/get-data-experience/connect-to-data-source-pqo-pick-connection.png)
+:::image type="content" source="media/get-data-experience/connect-to-data-source-pqo-pick-connection.png" alt-text="Connect to data source dialog where the connection name was picked from the dropdown menu inside the connection field.":::
 
 ### 2. Data preview
 

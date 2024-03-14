@@ -26,7 +26,7 @@ To connect to data in Power BI:
 3. Select **Dataflow** from the drop-down menu.
 4. Under **Define new tables**, select **Add new tables**.
 
-![Add tables from the new dataflow command.](media/data-sources/dataflows-data-sources-pbi-online.png)
+:::image type="content" source="media/data-sources/dataflows-data-sources-pbi-online.png" alt-text="Add tables from the new dataflow command.":::
 
 # [Power Apps](#tab/power-apps)
 
@@ -37,7 +37,7 @@ To connect to data in Power Apps:
 3. In the **New Dataflow** dialog box, enter a name for the new dataflow.
 4. Select **Create**.
 
-![Add](media/data-sources/dataflows-data-sources-pa-online.png)
+:::image type="content" source="media/data-sources/dataflows-data-sources-pa-online.png" alt-text="Add.":::
 
 ---
 

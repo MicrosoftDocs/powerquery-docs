@@ -49,4 +49,4 @@ To trigger dataflows sequentially:
     * **Group**: Select the Power Apps environment or the Power BI workspace your dataflow is in.
     * **Dataflow**: Select your dataflow by name. This dataflow is the standard dataflow you want to refresh after the initial analytical dataflow is refreshed.
 
-    ![Image with the refresh a dataflow connector in the If yes dialog box.](media/trigger-dataflows-and-power-bi-dataset-sequentially/refresh-a-dataflow.png)
+    :::image type="content" source="media/trigger-dataflows-and-power-bi-dataset-sequentially/refresh-a-dataflow.png" alt-text="Image with the refresh a dataflow connector in the If yes dialog box.":::

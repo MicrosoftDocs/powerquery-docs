@@ -16,8 +16,8 @@ There are two categories of connections:
 
 |Connection category name|Icon|Description|
 |-------------|-----|-----------|
-|**Cloud**|![Cloud connection icon.](media/named-connections/cloud-connection.png) |Any connection for data source that's cloud-based and doesn't use a gateway.|
-|**On-premises**|![On-premises connection icon.](media/named-connections/on-premises-connection.png) |Any connection that requires a gateway.|
+|**Cloud**|:::image type="content" source="media/named-connections/cloud-connection.png" alt-text="Cloud connection icon."::: |Any connection for data source that's cloud-based and doesn't use a gateway.|
+|**On-premises**|:::image type="content" source="media/named-connections/on-premises-connection.png" alt-text="On-premises connection icon."::: |Any connection that requires a gateway.|
 
 ## Creating a connection
 
@@ -27,11 +27,11 @@ During the [get data experience in Power Query Online](get-data-experience.md#1-
 
 Using the Azure SQL Server database connector as an example, you can enter the connector settings to establish a connection. For the Azure SQL Server connector, the required setting is just the server name, but you can also enter the name of the database and select any other advanced options available for the connector.
 
-![Connection settings of the Azure SQL Server Database connector where the only required setting is the server name.](media/named-connections/connection-settings-cloud-connection.png)
+:::image type="content" source="media/named-connections/connection-settings-cloud-connection.png" alt-text="Connection settings of the Azure SQL Server Database connector where the only required setting is the server name.":::
 
 After entering the values for the connector settings in the *Connection settings* section, you can proceed with the **Connection credentials** section. In this section, you can create a connection specific to the connection settings you previously entered.
 
-![Connection credentials of the Azure SQL Database connector where the user has been authenticated using the auto sign in feature.](media/named-connections/connection-credentials-cloud-connection.png)
+:::image type="content" source="media/named-connections/connection-credentials-cloud-connection.png" alt-text="Connection credentials of the Azure SQL Database connector where the user has been authenticated using the auto sign in feature.":::
 
 The following table contains the fields and values used in the **Connection settings** section.
 
@@ -59,7 +59,7 @@ As an alternative, you can also bind a gateway to your connection, which convert
 
 Using a local SQL Server database as an example, you enter the connector settings to establish a connection. For the SQL Server connector, the required setting is just the server name, but you can also enter the name of the database and select any other advanced options available for the connector. For demonstration purposes, both the server name and database have been entered.
 
-![Connection settings of the SQL Server database connector where the server and database settings have been entered.](media/named-connections/connection-settings-on-premises-connection.png)
+:::image type="content" source="media/named-connections/connection-settings-on-premises-connection.png" alt-text="Connection settings of the SQL Server database connector where the server and database settings have been entered.":::
 
 After entering the values for the connector in **Connection settings**, you can proceed with the **Connection credentials** section. In this section, you can create a connection specific to the connection settings you previously entered.
 
@@ -95,17 +95,17 @@ Each connection is made up of a set of components. The following table contains 
 
 When Power Query recognizes a set of connection settings, it tries to look up in its respective credentials storage to see if there's a connection that matches those settings and, if so, automatically selects that connection.
 
-![Known connection picked up after entering the connection settings for the Kusto connector.](media/named-connections/known-connection.png)
+:::image type="content" source="media/named-connections/known-connection.png" alt-text="Known connection picked up after entering the connection settings for the Kusto connector.":::
 
 To override this behavior, you can take either of the following two actions:
 
 * Display the dropdown menu to scan a list of available connections for the given connection settings. You can then select the one that you'd like to use or create a new one.
 
-   ![Known connections shown in the dropdown menu of the connection field.](media/named-connections/known-connections-drop-down.png)
+   :::image type="content" source="media/named-connections/known-connections-drop-down.png" alt-text="Known connections shown in the dropdown menu of the connection field.":::
 
 * Select **Edit connection** to modify the existing connection or select **Create new connection** from the dropdown menu to create a new named connection.
 
-   ![Edit connection dialog so the user can edit an existing connection.](media/named-connections/known-connection-edit.png)
+   :::image type="content" source="media/named-connections/known-connection-edit.png" alt-text="Edit connection dialog so the user can edit an existing connection.":::
 
 ## More resources
 

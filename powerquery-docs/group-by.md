@@ -119,7 +119,7 @@ The result of that formula creates a new column with \[Record\] values. These re
 
 :::image type="content" source="media/group-by/row-operation-custom-column-details-preview-pane.png" alt-text="Result of the custom column formula with Table.Max.":::
 
-With this new **Top performer product** column that contains \[Record\] values, you can select the ![expand.](media/group-by/expand-icon.png) expand icon, select the **Product** and **Units** fields, and then select **OK**.
+With this new **Top performer product** column that contains \[Record\] values, you can select the :::image type="content" source="media/group-by/expand-icon.png" alt-text="expand."::: expand icon, select the **Product** and **Units** fields, and then select **OK**.
 
 :::image type="content" source="media/group-by/row-operation-custom-column-expand-window.png" alt-text="Expand operation for record value on the Top performer product column.":::
 
@@ -178,7 +178,7 @@ Return to the **Group by** dialog box, expand **Fuzzy group options**, change th
 
 After you select the transformation table, select **OK**. The result of that operation gives you the following information:
 
-![Fuzzy grouping sample final table with transform table.](media/group-by/fuzzy-grouping-sample-final-table.png)
+:::image type="content" source="media/group-by/fuzzy-grouping-sample-final-table.png" alt-text="Fuzzy grouping sample final table with transform table.":::
 
 In this example, the **Ignore case** option was enabled, so the values in the **From** column of the **Transformation table** are used to look for the text string without considering the case of the string. This transformation operation occurs first, and then the fuzzy grouping operation is performed.
 

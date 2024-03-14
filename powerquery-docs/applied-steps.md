@@ -10,7 +10,7 @@ ms.author: miescobar
 
 The **Applied steps** list is part of the **Query settings** pane in Power Query. Any transformations to your data are dislayed in the **Applied steps** list. For instance, if you change the first column name, the new column name is displayed in the **Applied steps** list as **Renamed columns**.
 
-:::image type="content" source="media/applied-steps/applied-steps-new-column-name.png" alt-text="Screenshot of the Power Query editor with Renamed columns in Applied steps and the column being renamed emphasized" lightbox="media/applied-steps/applied-steps-new-column-name.png":::
+:::image type="content" source="media/applied-steps/applied-steps-new-column-name.png" alt-text="Screenshot of the Power Query editor with Renamed columns in Applied steps and the column being renamed emphasized." lightbox="media/applied-steps/applied-steps-new-column-name.png":::
 
 Selecting any step displays the results of that particular step, so you can see exactly how your data changes as you add steps to the query.
 

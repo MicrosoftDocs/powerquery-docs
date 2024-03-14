@@ -84,15 +84,15 @@ One example of this is the Northwind OData service.
 
 1) Enter the Northwind endpoint in the "Get Data" experience using the OData connector.
 
-   ![Connect to Northwind.](media/connector-authentication/northwind-odata.png)
+   :::image type="content" source="media/connector-authentication/northwind-odata.png" alt-text="Connect to Northwind.":::
 
 2) Select **OK** to enter the authentication experience. Normally, because Northwind isn’t an authenticated service, you would just use **Anonymous**. To demonstrate lack of support for Microsoft Entra ID, choose **Organizational account**, and then select **Sign in**.
 
-   ![Northwind authentication.](media/connector-authentication/northwind-auth.png)
+   :::image type="content" source="media/connector-authentication/northwind-auth.png" alt-text="Northwind authentication.":::
 
 3) You'll encounter the error, indicating that OAuth or Microsoft Entra ID authentication isn't supported in the service.
 
-   ![Northwind error.](media/connector-authentication/northwind-error.png)
+   :::image type="content" source="media/connector-authentication/northwind-error.png" alt-text="Northwind error.":::
 
 ### Supported workflow
 
@@ -100,15 +100,15 @@ One example of a supported service working properly with OAuth is CRM, for examp
 
 1) Enter the URL in the "Get Data" experience using the OData connector.
 
-   ![CRM authentication.](media/connector-authentication/crm-auth.png)
+   :::image type="content" source="media/connector-authentication/crm-auth.png" alt-text="CRM authentication.":::
 
 2) Select **Organizational Account**, and then select **Sign-in** to proceed to connect using OAuth.
 
-   ![CRM authentication dialog.](media/connector-authentication/crm-auth-dialog.png)
+   :::image type="content" source="media/connector-authentication/crm-auth-dialog.png" alt-text="CRM authentication dialog.":::
 
 3) The request succeeds and the OAuth flow continues to allow you to authenticate successfully.
 
-   ![CRM authentication success.](media/connector-authentication/crm-auth-success.png)
+   :::image type="content" source="media/connector-authentication/crm-auth-success.png" alt-text="CRM authentication success.":::
 
 When you select **Sign-in** in Step 2 above, Power Query sends a request to the provided URL endpoint with an Authorization header with an empty bearer token.
 
