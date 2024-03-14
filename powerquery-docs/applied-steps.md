@@ -2,13 +2,13 @@
 title: Applied steps
 description: Applied steps show the transformations to the data.
 author: ptyx507x
-ms.date: 1/18/2024
+ms.date: 3/13/2024
 ms.author: miescobar
 ---
 
 # Using the Applied Steps list
 
-The **Applied steps** list is part of the **Query settings** pane in Power Query. Any transformations to your data is dislayed in the **Applied steps** list. For instance, if you change the first column name, the new column name is displayed in the **Applied steps** list as **Renamed columns**.
+The **Applied steps** list is part of the **Query settings** pane in Power Query. Any transformations to your data are dislayed in the **Applied steps** list. For instance, if you change the first column name, the new column name is displayed in the **Applied steps** list as **Renamed columns**.
 
 :::image type="content" source="media/applied-steps/applied-steps-new-column-name.png" alt-text="Screenshot of the Power Query editor with Renamed columns in Applied steps and the column being renamed emphasized" lightbox="media/applied-steps/applied-steps-new-column-name.png":::
 
@@ -47,7 +47,7 @@ The full list of the step parts are:
 * Step settings: Change any settings that are specific to the selected step. Not all steps have settings. More information: [Edit settings](#edit-settings)
 * Query folding indicator: Provides a graphic representation of the query folding status of the selected step. This indicator isn't available in Power Query Desktop. More information: [Query folding indicators](step-folding-indicators.md)
 
-In Power Query Online, if you hover the mouse cursor over one of the applied steps, an informational display opens, listing the step name, step label, step description, step settings, information about the step query folding, and a learn more link to the [Query folding indicators](step-folding-indicators.md) article. For more information about query folding, go to [Power Query query folding](power-query-folding.md). The step label is automatically generated when the step is created, and indicates the step type, as does the step icon. The step label and the step icon can't be changed.
+In Power Query Online, if you hover the mouse cursor over one of the applied steps, an informational display opens, listing the step name, step label, step description, step settings, information about the step query folding, and a learn more link to the [Query folding indicators](step-folding-indicators.md) article. For more information about query folding, go to [Overview of query evaluation and query folding in Power Query](query-folding-basics.md). The step label is automatically generated when the step is created, and indicates the step type, as does the step icon. The step label and the step icon can't be changed.
 
 :::image type="content" source="media/applied-steps/applied-steps-hover.png" alt-text="Image pointing out the step icon, step name, step label, step description, step settings, and query folding description items in the applied steps informational display." lightbox="media/applied-steps/applied-steps-hover.png":::
 

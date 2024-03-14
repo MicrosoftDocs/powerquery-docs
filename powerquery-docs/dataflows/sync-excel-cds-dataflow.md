@@ -15,8 +15,7 @@ One of the common scenarios that happens when you integrate data into Dataverse 
 
 If you're using a relational data base system as a source, normally you have key columns in the tables, and the data is in a proper format to be loaded into Dataverse. However, the data from the Excel files aren't always that clean. You often have an Excel file with sheets of data without having any key column. In [Field mapping considerations for standard dataflows](get-best-of-standard-dataflows.md), you can see that if there's a key column in the source, it can be easily used as the alternate key in the field mapping of the dataflow.
 
-> [!div class="mx-imgBorder"]
-> ![Alternate key configuration.](media/sync-excel-cds-dataflows/alternate-key-configuration.png)
+![Alternate key configuration.](media/sync-excel-cds-dataflows/alternate-key-configuration.png)
 
 Having a key column is important for the table in Dataverse. The key column is the row identifier; this column contains unique values in each row. Having a key column helps in avoiding duplicate rows, and it also helps in synchronizing the data with the source system. If a row is removed from the source system, having a key column is helpful to find it and remove it from Dataverse as well.
 
@@ -28,15 +27,13 @@ If you don't have a key column in your data source (Excel, text file, or any oth
 
    The first step to create the key column is to remove all unnecessary rows, clean the data, remove empty rows, and remove any possible duplicates.
 
-   > [!div class="mx-imgBorder"]
-   > ![clean data.](media/sync-excel-cds-dataflows/clean-data.png)
+   ![clean data.](media/sync-excel-cds-dataflows/clean-data.png)
 
 2. Add an index column.
 
    After the data is cleaned, the next step is to assign a key column to it. You can use **Add Index Column** from the **Add Column** tab for this purpose.
 
-   > [!div class="mx-imgBorder"]
-   > ![Add Index Column.](media/sync-excel-cds-dataflows/add-index-column.png)
+   ![Add Index Column.](media/sync-excel-cds-dataflows/add-index-column.png)
 
 When you add the index column, you have some options to customize it, for example, customizations on the starting number or the number of values to jump each time. The default start value is zero, and it increments one value each time.
 
@@ -44,8 +41,7 @@ When you add the index column, you have some options to customize it, for exampl
 
 Now that you have the key column(s), you can assign the dataflow's field mapping to the Alternate Key.
 
-> [!div class="mx-imgBorder"]
-> ![Setting the Alternate key fields.](media/sync-excel-cds-dataflows/index-alternate-key.png)
+![Setting the Alternate key fields.](media/sync-excel-cds-dataflows/index-alternate-key.png)
 
 The setting is simple, you just need to set the alternate key. However, if you have multiple files or tables, it has one other step to consider.
 
@@ -55,17 +51,14 @@ If you have just one Excel file (or sheet or table), then the steps in the previ
 
 If you're getting data from multiple Excel files, then the **Combine Files** option of Power Query will automatically append all the data together, and your output will look like the following image.
 
-> [!div class="mx-imgBorder"]
-> ![Image showing multiple files that have been appended together.](media/sync-excel-cds-dataflows/two-files.png)
+![Image showing multiple files that have been appended together.](media/sync-excel-cds-dataflows/two-files.png)
 
 As shown in the preceding image, besides the append result, Power Query also brings in the Source.Name column, which contains the file name. The Index value in each file might be unique, but it's not unique across multiple files. However, the combination of the Index column and the Source.Name column is a unique combination. Choose a composite alternate key for this scenario.
 
-> [!div class="mx-imgBorder"]
-> ![composite key.](media/sync-excel-cds-dataflows/composite-index-key.png)
+![composite key.](media/sync-excel-cds-dataflows/composite-index-key.png)
 
 ## Delete rows that no longer exists in the query output
 
 The last step is to select the **Delete rows that no longer exist in the query output**. This option compares the data in the Dataverse table with the data coming from the source based on the alternate key (which might be a composite key), and remove the rows that no longer exist. As a result, your data in Dataverse will be always synchronized with your data source.
 
-> [!div class="mx-imgBorder"]
-> ![delete rows no longer exists.](media/sync-excel-cds-dataflows/delete-rows-not-exist.png)
+![delete rows no longer exists.](media/sync-excel-cds-dataflows/delete-rows-not-exist.png)

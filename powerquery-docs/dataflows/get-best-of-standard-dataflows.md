@@ -27,8 +27,7 @@ A key column is a column that's unique and deterministic of a data row in the ta
 
 The following image shows how you can choose the key column to be populated from the source when you create a new table in the dataflow.
 
-> [!div class="mx-imgBorder"]
-> ![Primary key and the alternate key are the same.](media/get-best-of-standard-dataflows/pk-ak-same.png)
+![Primary key and the alternate key are the same.](media/get-best-of-standard-dataflows/pk-ak-same.png)
 
 The primary name field that you see in the field mapping is for a label field; this field doesn't need to be unique. The field that's used in the table for checking duplication will be the field that you set in the **Alternate Key** field.
 
@@ -62,6 +61,7 @@ To take advantage of a table’s unique identifier field, select **Load to exist
 You'll notice that in the **Select key** dropdown, the unique identifier&mdash;which is always named "tablename + id"&mdash; of the table can be selected. Since the table name is "CustomerTransactions", the unique identifier field will be named "CustomerTransactionId".
 
 :::image type="content" source="media/get-best-of-standard-dataflows/select-primary-key.png" lightbox="media/get-best-of-standard-dataflows/select-primary-key.png" alt-text="Selecting the primary key to upsert data into Dataverse tables.":::
+
 Once selected, the column mapping section is updated to include the unique identifier as a destination column. You can then map the source column representing the unique identifier for each record.
 
 :::image type="content" source="media/get-best-of-standard-dataflows/map-to-primary-key.png" lightbox="media/get-best-of-standard-dataflows/map-to-primary-key.png" alt-text="Mapping data to the Unique Identifier column.":::
@@ -70,8 +70,7 @@ Once selected, the column mapping section is updated to include the unique ident
 The key field is a unique value representing a unique row in the table. It's important to have this field, because it helps you avoid having duplicate records in the table. This field can come from three sources:
 
 * The primary key in the source system (such as OrderID in the example above).
-
-* A concatenated field created through Power Query transformations in the dataflow.
+  concatenated field created through Power Query transformations in the dataflow.
 
   > [!div class="mx-imgBorder"]
   > ![Merging columns to create a concatenated unique column.](media/get-best-of-standard-dataflows/merge-columns-dataflow.png)
@@ -83,8 +82,7 @@ The key field is a unique value representing a unique row in the table. It's imp
 ## Remove rows that no longer exist
 
 If you want to have the data in your table always synchronized with the data from the source system, choose the **Delete rows that no longer exist in the query output** option. However, be aware that this option slows down the dataflow because there's a need for a row comparison based on the primary key (alternate Key in the field mapping of the dataflow) for this action to occur.
-
-Having this option checked means that if there's a data row in the table that doesn't exist in the next dataflow refresh's query output, that row will be removed from the table.
+ving this option checked means that if there's a data row in the table that doesn't exist in the next dataflow refresh's query output, that row will be removed from the table.
 
 > [!div class="mx-imgBorder"]
 > ![Delete rows that no longer exists.](media/get-best-of-standard-dataflows/delete-rows-not-exist.png)

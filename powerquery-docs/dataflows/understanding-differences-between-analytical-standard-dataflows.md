@@ -25,8 +25,7 @@ A standard dataflow loads data to Dataverse tables. Standard dataflows can only 
 
 We've been working on significant updates to standard dataflows to improve their performance and reliability. These improvements will eventually be available to all standard dataflows. But in the interim, we'll differentiate between existing standard dataflows (version 1) and new standard dataflows (version 2) by adding a version indicator in Power Apps.
 
-> [!div class="mx-imgBorder"]
-> ![Standard dataflow versions.](media/understanding-differences-between-analytical-standard-dataflows/standard-dataflow-version-indication.png)
+![Standard dataflow versions.](media/understanding-differences-between-analytical-standard-dataflows/standard-dataflow-version-indication.png)
 
 ### Standard dataflow versions feature comparison
 

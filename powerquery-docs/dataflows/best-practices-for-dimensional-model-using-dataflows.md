@@ -68,8 +68,7 @@ It isn't ideal to bring data in the same layout of the operational system into a
 
 When building dimension tables, make sure you have a key for each one. This key ensures that there are no many-to-many (or in other words, "weak") relationships among dimensions. You can create the key by applying some transformation to make sure a column or a combination of columns is returning unique rows in the dimension. Then that combination of columns can be marked as a key in the table in the dataflow.
 
-> [!div class="mx-imgBorder"]
-> ![Mark a column as a key value.](media/best-practices-for-dimensional-model/mark-as-key.png)
+![Mark a column as a key value.](media/best-practices-for-dimensional-model/mark-as-key.png)
 
 ### Do an incremental refresh for large fact tables
 
