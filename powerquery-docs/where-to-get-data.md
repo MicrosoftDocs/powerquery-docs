@@ -20,7 +20,7 @@ The procedures for where to start getting data in Power BI Desktop are described
 
 In Power BI Desktop, you can also directly select an Excel worksheet, a Power BI semantic model, a SQL server database, or Dataverse data without using the **Get data** option. You can also enter data directly in a table, or select from a data source that was recently used.
 
-:::image type="content" source="media/where-to-get-data/power-bi-desktop-data-select.png" alt-text="Screenshot of the Data field in the Home ribbon of Power BI Desktop":::
+:::image type="content" source="media/where-to-get-data/power-bi-desktop-data-select.png" alt-text="Screenshot of the Data field in the Home ribbon of Power BI Desktop.":::
 
 ## Get data in Excel (Windows or Mac)
 

@@ -37,7 +37,7 @@ To set up Fiddler to capture secure HTTP addresses:
 
 7. In the root certificate dialog box, select **Yes**.
 
-   ![Select yes in the root certificate dialog box](./media/web-connection-fiddler/fiddler-root-certificate.png)
+   :::image type="content" source="./media/web-connection-fiddler/fiddler-root-certificate.png" alt-text="Select yes in the root certificate dialog box.":::
 
 8. When asked to confirm that you want to add the certificate to your PCs Trusted Root List, select **Yes**.
 
@@ -71,7 +71,7 @@ To return your system to its original configuration:
 4. Select **Actions**.
 5. Select **Reset All Certificates**.
 
-   ![Image showing how to reset all certificates and return your system to its original configuration](media/web-connection-fiddler/reset-all-certificates.png)
+   :::image type="content" source="media/web-connection-fiddler/reset-all-certificates.png" alt-text="Image showing how to reset all certificates and return your system to its original configuration.":::
 
 6. In **Reset All Certificates**, select **OK**.
 7. In **Do you want to allow this app to make changes to your device?**, select **Yes**.

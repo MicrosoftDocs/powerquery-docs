@@ -76,7 +76,7 @@ In the **Pivot column** dialog box, select the **Product** column as the value c
 
 The result of this operation will yield the result shown in the following image.
 
-:::image type="complex" source="media/pivot-columns/no-aggregation-final.png" alt-text="Pivot columns Don't aggregate result":::
+:::image type="complex" source="media/pivot-columns/no-aggregation-final.png" alt-text="Pivot columns Don't aggregate result.":::
    Table containing Country, First Place, second Place, and Third Place columns, with the Country column containing Canada in row 1, Panama in row 2, and USA in row 3.
 :::image-end:::
 
@@ -84,13 +84,13 @@ The result of this operation will yield the result shown in the following image.
 
 The way the **Don't aggregate** option works is that it grabs a single value for the pivot operation to be placed as the value for the intersection of the column and row pair. For example, let's say you have a table like the one in the following image.
 
-:::image type="complex" source="media/pivot-columns/dont-aggregate-error-initial.png" alt-text="Pivot column don't aggregate error example initial table":::
+:::image type="complex" source="media/pivot-columns/dont-aggregate-error-initial.png" alt-text="Pivot column don't aggregate error example initial table.":::
    Table with a Country, Date, and Value columns. The Country column contains USA in the first three rows, Canada in the next three rows, and Panama in the last three rows. The Date column contains a date of 6/1/2020 in all rows. The value column contains various whole numbers between 20 and 785.
 :::image-end:::
 
 You want to pivot that table by using the **Date** column, and you want to use the values from the **Value** column. Because this pivot would make your table have just the **Country** values on rows and the **Dates** as columns, you'd get an error for every single cell value because there are multiple rows for every combination of **Country** and **Date**. The outcome of the **Pivot column** operation will yield the results shown in the following image.
 
-:::image type="complex" source="media/pivot-columns/dont-aggregate-error-final.png" alt-text="Pivot column don't aggregate error example final table":::
+:::image type="complex" source="media/pivot-columns/dont-aggregate-error-final.png" alt-text="Pivot column don't aggregate error example final table.":::
    Power Query Editor pane showing a table with Country and 6/1/2020 columns. The Country column contains Canada in the first row, Panama in the second row, and USA in the third row. All of the rows under the 6/1/2020 column contain Errors. Under the table is another pane that shows the expression error with the "There are too many elements in the enumeration to complete the operation" message.
 :::image-end:::
 

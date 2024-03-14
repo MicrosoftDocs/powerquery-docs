@@ -15,11 +15,11 @@ One of the best practices for dataflow implementations is separating the respons
 
 In many scenarios, the on-premises data source is a slow data source. Especially considering that the gateway exists as the middle layer between the dataflow and the data source.
 
-![Getting data directly from the on-premises data source.](media/performance-ingestion-transformation-dataflows/df-from-one-prem-ds.png)
+:::image type="content" source="media/performance-ingestion-transformation-dataflows/df-from-one-prem-ds.png" alt-text="Getting data directly from the on-premises data source.":::
 
 Using analytical dataflows for data ingestion minimizes the get data process from the source and focuses on loading data to Azure Data Lake Storage. Once in storage, other dataflows can be created that leverage the ingestion dataflow's output. The dataflow engine can read the data and do the transformations directly from the data lake, without contacting the original data source or gateway.
 
-![Data ingestion dataflow.](media/performance-ingestion-transformation-dataflows/ingestion-one-prem-ds.png)
+:::image type="content" source="media/performance-ingestion-transformation-dataflows/ingestion-one-prem-ds.png" alt-text="Data ingestion dataflow.":::
 
 ## Slow data source
 
@@ -31,7 +31,7 @@ The separation of the two layers&mdash;data ingestion and transformation&mdash;i
 
 This separation isn't only useful because of the performance improvement, it's also helpful for the scenarios where an old legacy data source system has been migrated to a new system. In those cases, only the data ingestion dataflows need to be changed. The data transformation dataflows remain intact for this type of change.
 
-![Changing the data source.](media/performance-ingestion-transformation-dataflows/df-change-data-source.png)
+:::image type="content" source="media/performance-ingestion-transformation-dataflows/df-change-data-source.png" alt-text="Changing the data source.":::
 
 ## Reuse in other tools and services
 

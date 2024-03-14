@@ -41,11 +41,11 @@ To add a security role to a user who is already present in an environment:
 
 4. Select the user from the list of users in the environment, and then select **Manage roles**.
 
-   ![Select Manage roles.](/power-platform/admin/media/select-manage-roles.png)
+   :::image type="content" source="/power-platform/admin/media/select-manage-roles.png" alt-text="Select Manage roles.":::
 
 5. Assign one or more security roles to the user.
 
-   ![Manage user roles.](/power-platform/admin/media/manage-user-roles.png)
+   :::image type="content" source="/power-platform/admin/media/manage-user-roles.png" alt-text="Manage user roles.":::
 
 6. Select **OK**.
 

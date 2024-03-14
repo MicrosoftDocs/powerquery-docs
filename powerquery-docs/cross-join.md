@@ -44,7 +44,7 @@ In the **Custom column** dialog box, enter whatever name you like in the **New c
 >
 >You can check the name of your queries in the **Query settings** pane on the right side of your screen or in the **Queries** pane on the left side.
 
-After you select **OK** in the **Custom column** dialog box, a new column is added to the table. In the new column heading, select **Expand** ![Expand.](media/cross-join/expand-icon.png) to expand the contents of this newly created column, and then select **OK**.
+After you select **OK** in the **Custom column** dialog box, a new column is added to the table. In the new column heading, select **Expand** :::image type="icon" source="media/cross-join/expand-icon.png"::: to expand the contents of this newly created column, and then select **OK**.
 
 :::image type="content" source="media/cross-join/new-table-column.png" alt-text="Cross-join custom column added.":::
 

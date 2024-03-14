@@ -94,12 +94,12 @@ A *join kind* specifies how a merge operation will be performed. The following t
 
 |Join kind| Icon| Description|
 |---------------|-----|-----------|
-|[Left outer](merge-queries-left-outer.md)| ![Left outer.](media/merge-queries-overview/join-kind-left-outer-icon.jpg)| All rows from the left table, matching rows from the right table|
-|[Right outer](merge-queries-right-outer.md)| ![Right outer.](media/merge-queries-overview/join-kind-right-outer-icon.jpg)| All rows from the right table, matching rows from the left table|
-|[Full outer](merge-queries-full-outer.md)| ![Full outer.](media/merge-queries-overview/join-kind-full-outer-icon.jpg)| All rows from both tables|
-|[Inner](merge-queries-inner.md)| ![Inner.](media/merge-queries-overview/join-kind-inner-icon.jpg)| Only matching rows from both tables|
-|[Left anti](merge-queries-left-anti.md)| ![Left anti.](media/merge-queries-overview/join-kind-left-anti-icon.jpg)| Only rows from the left table|
-|[Right anti](merge-queries-right-anti.md)| ![Right anti.](media/merge-queries-overview/join-kind-right-anti-icon.jpg)| Only rows from the right table|
+|[Left outer](merge-queries-left-outer.md)| :::image type="content" source="media/merge-queries-overview/join-kind-left-outer-icon.jpg" alt-text="Left outer.":::| All rows from the left table, matching rows from the right table|
+|[Right outer](merge-queries-right-outer.md)| :::image type="content" source="media/merge-queries-overview/join-kind-right-outer-icon.jpg" alt-text="Right outer.":::| All rows from the right table, matching rows from the left table|
+|[Full outer](merge-queries-full-outer.md)| :::image type="content" source="media/merge-queries-overview/join-kind-full-outer-icon.jpg" alt-text="Full outer.":::| All rows from both tables|
+|[Inner](merge-queries-inner.md)| :::image type="content" source="media/merge-queries-overview/join-kind-inner-icon.jpg" alt-text="Inner.":::| Only matching rows from both tables|
+|[Left anti](merge-queries-left-anti.md)| :::image type="content" source="media/merge-queries-overview/join-kind-left-anti-icon.jpg" alt-text="Left anti.":::| Only rows from the left table|
+|[Right anti](merge-queries-right-anti.md)| :::image type="content" source="media/merge-queries-overview/join-kind-right-anti-icon.jpg" alt-text="Right anti.":::| Only rows from the right table|
 
 ## Fuzzy matching
 
