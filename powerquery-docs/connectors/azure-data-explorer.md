@@ -64,8 +64,7 @@ To connect to Azure Data Explorer from Power Query Desktop:
 
 7. In **Navigator**, select the database information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in the Power Query editor. In this example, StormEvents was selected in the Samples database.
 
-    [![Screenshot of the Navigator open and containing the data from StormEvents in the Samples database.](media/azure-data-explorer/navigator-desktop.png)](media/azure-data-explorer/navigator-desktop.png#lightbox)
-
+    :::image type="content" source="media/azure-data-explorer/navigator-desktop.png" lightbox="media/azure-data-explorer/navigator-desktop.png" alt-text="Screenshot of the Navigator open and containing the data from StormEvents in the Samples database.":::
 ## Connect to Azure Data Explorer from Power Query Online
 
 To connect to Azure Data Explorer from Power Query Online:

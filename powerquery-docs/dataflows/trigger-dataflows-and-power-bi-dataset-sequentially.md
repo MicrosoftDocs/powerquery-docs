@@ -40,8 +40,7 @@ To trigger dataflows sequentially:
    2. Leave the second cell as **is equal to**.
    3. In the third cell, enter **Success**.
 
-   [![Image with the conditions set to occur when the Refresh status equals success.](media/trigger-dataflows-and-power-bi-dataset-sequentially/email-yes-no-success.png)](media/trigger-dataflows-and-power-bi-dataset-sequentially/email-yes-no-success.png#lightbox)
-
+   :::image type="content" source="media/trigger-dataflows-and-power-bi-dataset-sequentially/email-yes-no-success.png" lightbox="media/trigger-dataflows-and-power-bi-dataset-sequentially/email-yes-no-success.png" alt-text="Image with the conditions set to occur when the Refresh status equals success.":::
 8. In the **If Yes** section, select **Add an action**.
 9. Search for the "Refresh a dataflow" connector, and then select it.
 10. Customize the connector:

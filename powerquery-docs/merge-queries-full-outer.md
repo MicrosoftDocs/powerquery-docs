@@ -47,7 +47,7 @@ The goal is to create a table like the following, where the name of the country 
 5. In the **Join kind** section, select **Full outer**.
 6. Select **OK**
 
-![Merge dialog box showing the results of following the previous full outer join procedure.](media/merge-queries-full-outer/full-outer-merge-window.png "Merge dialog box showing the results of following the previous full outer join procedure")
+:::image type="content" source="media/merge-queries-full-outer/full-outer-merge-window.png" alt-text="Merge dialog box showing the results of following the previous full outer join procedure.":::
 
 >[!NOTE]
 >You can merge on more than one column by selecting and holding Ctrl and then selecting the columns.
@@ -61,7 +61,7 @@ In the **Countries** table, you have the **Country** Spain with **id** of 4, but
 
 From the newly created **Countries** column after the merge operation, expand the **Country** field. Don't select the **Use original column name as prefix** check box.
 
-![Expand table column for Country.](media/merge-queries-full-outer/full-outer-expand-field.png "Expand table column for Country")
+:::image type="content" source="media/merge-queries-full-outer/full-outer-expand-field.png" alt-text="Expand table column for Country.":::
 
 After performing this operation, you'll create a table that looks like the following image.
 
