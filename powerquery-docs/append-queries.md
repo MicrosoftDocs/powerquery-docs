@@ -21,7 +21,7 @@ You can find the **Append queries** command on the **Home** tab in the **Combine
 * **Append queries** displays the **Append** dialog box to add additional tables to the current query.
 * **Append queries as new** displays the **Append** dialog box to create a new query by appending multiple tables.
 
-![Append queries commands.](media/append-queries/append-queries-icons.png "Append queries commands")
+:::image type="content" source="media/append-queries/append-queries-icons.png" alt-text="Append queries commands.":::
 
 The append operation requires at least two tables. The **Append** dialog box has two modes:
 
@@ -45,7 +45,7 @@ For the example in this article, we'll use the following two tables with sample 
 
 To append these tables, first select the **Online Sales** table. On the **Home** tab, select **Append queries**, which creates a new step in the **Online Sales** query. The **Online Sales** table will be the primary table. The table to append to the primary table will be **Store Sales**.
 
-![Append two tables.](media/append-queries/append-queries-sample-two-tables-window.png "Append two tables")
+:::image type="content" source="media/append-queries/append-queries-sample-two-tables-window.png" alt-text="Append two tables.":::
 
 Power Query performs the append operation based on the names of the column headers found on both tables, and not based on their relative position in the headers sections of their respective tables. The final table will have all columns from all tables appended.
 
@@ -61,7 +61,7 @@ In this example, you want to append not only the **Online Sales** and **Store Sa
 
 The new approach for this example is to select **Append queries as new**, and then in the **Append** dialog box, select the **Three or more tables** option button. In the **Available table(s)** list, select each table you want to append, and then select **Add**. After all the tables you want appear in the **Tables to append** list, select **OK**.
 
-![Three or more tables mode.](media/append-queries/append-queries-sample-three-more-tables-window.png "Three or more tables mode")
+:::image type="content" source="media/append-queries/append-queries-sample-three-more-tables-window.png" alt-text="Three or more tables mode.":::
 
 After selecting **OK**, a new query will be created with all your tables appended.
 

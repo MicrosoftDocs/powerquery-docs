@@ -25,7 +25,7 @@ The goal of this example is to transpose that table so you end up with four rows
 
 On the **Transform** tab in the ribbon, select **Transpose**.
 
-![Transpose command on the Transform tab.](media/transpose-table/transpose-button.png "Transpose command on the Transform tab")
+:::image type="content" source="media/transpose-table/transpose-button.png" alt-text="Transpose command on the Transform tab.":::
 
 The result of that operation will look like the following image.
 
@@ -38,7 +38,7 @@ The result of that operation will look like the following image.
 
 The headers you need in this example are in the first row of the table. To promote the first row to headers, select the table icon in the upper-left corner of the data preview, and then select **Use first row as headers**.
 
-![Promote the first row to be table headers.](media/transpose-table/transpose-promote-headers.png "Promote the first row to be table headers")
+:::image type="content" source="media/transpose-table/transpose-promote-headers.png" alt-text="Promote the first row to be table headers.":::
 
 The result of that operation will give you the output that you're looking for.
 

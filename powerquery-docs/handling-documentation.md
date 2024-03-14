@@ -11,15 +11,15 @@ ms.author: miescobar
 
 Power Query will automatically generate an invocation UI for you based on the arguments for your function. By default, this UI will contain the name of your function, and an input for each of your parameters.
 
-![DefaultFunctionPrompt.](media/handling-documentation/default-function-prompt.png "Function prompt")
+:::image type="content" source="media/handling-documentation/default-function-prompt.png" alt-text="DefaultFunctionPrompt.":::
 
 Similarly, evaluating the name of your function, without specifying parameters, will display information about it.
 
-![DefaultFunctionInfo.](media/handling-documentation/default-function-info.png "Function info")
+:::image type="content" source="media/handling-documentation/default-function-info.png" alt-text="DefaultFunctionInfo.":::
 
 You might notice that built-in functions typically provide a better user experience, with descriptions, tooltips, and even sample values. You can take advantage of this same mechanism by defining specific meta values on your function type. This topic describes the meta fields that are used by Power Query, and how you can make use of them in your extensions.
 
-![CsvDocument.](media/handling-documentation/csv-document.png "Function info for Csv.Document")
+:::image type="content" source="media/handling-documentation/csv-document.png" alt-text="CsvDocument.":::
 
 ## Function Types
 
@@ -104,10 +104,10 @@ HelloWorldImpl = (message as text, optional count as number) as table =>
 This code results in the following dialogs in Power BI.
 
 **Function invocation**
-![FunctionPrompt.](media/handling-documentation/hello-world-with-docs.png "Hello world with docs prompt")
+:::image type="content" source="media/handling-documentation/hello-world-with-docs.png" alt-text="FunctionPrompt.":::
 
 **Function info**
-![FunctionInfo.](media/handling-documentation/hello-world-with-docs-info.png "Hello world with docs function info")
+:::image type="content" source="media/handling-documentation/hello-world-with-docs-info.png" alt-text="FunctionInfo.":::
 
 ### Multi-line example
 
