@@ -37,15 +37,15 @@ This table contains values by country and date in a simple table. In this exampl
 1. Select the column that you want to pivot.
 2. On the **Transform** tab in the **Any column** group, select **Pivot column**.
 
-   ![Pivot column command.](media/pivot-columns/pivot-columns-icon.png "Pivot column command")
+   :::image type="content" source="media/pivot-columns/pivot-columns-icon.png" alt-text="Pivot column command.":::
 
 3. In the **Pivot column** dialog box, in the **Value column** list, select **Value**.
 
-   ![Pivot columns dialog box.](media/pivot-columns/basic-menu.png "Pivot columns dialog box")
+   :::image type="content" source="media/pivot-columns/basic-menu.png" alt-text="Pivot columns dialog box.":::
 
    By default, Power Query will try to do a sum as the aggregation, but you can select the **Advanced** option to see other available aggregations.
 
-   ![Pivot columns aggregations.](media/pivot-columns/pivot-columns-aggregations.png "Pivot columns aggregations")
+   :::image type="content" source="media/pivot-columns/pivot-columns-aggregations.png" alt-text="Pivot columns aggregations.":::
 
 The available options are:
 

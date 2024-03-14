@@ -51,8 +51,7 @@ To make the connection, take the following steps:
 
 5. In **Navigator**, select the data you require, then either select **Load** to load the data or **Transform Data** to transform the data.
 
-   [![Select the data you require from the database](./media/sybase-database/navigator-desktop.png)](./media/sybase-database/navigator-desktop.png#lightbox)
-
+   :::image type="content" source="./media/sybase-database/navigator-desktop.png" lightbox="./media/sybase-database/navigator-desktop.png" alt-text="Select the data you require from the database":::
 ## Connect to a Sybase database from Power Query Online
 
 To make the connection, take the following steps:
@@ -72,8 +71,7 @@ To make the connection, take the following steps:
 
 6. Select **Use Encrypted Connection** if you want to use an encrypted connection, or clear the option if you want to use an unencrypted connection.
 
-   [![Enter Sybase database online connection.](./media/sybase-database/data-source-online.png)](./media/sybase-database/data-source-online.png#lightbox)
-
+   :::image type="content" source="./media/sybase-database/data-source-online.png" lightbox="./media/sybase-database/data-source-online.png" alt-text="Enter Sybase database online connection.":::
 7. Select **Next** to continue.
 
 8. In **Navigator**, select the data you require, then select **Transform data** to transform the data in the Power Query editor.

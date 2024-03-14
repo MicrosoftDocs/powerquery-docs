@@ -23,11 +23,11 @@ The fill down operation takes a column and traverses through the values in it to
 
 In the following example, you want to fill down on the **Date** column. To do that, you can right-click to select the **Date** column, and then select **Fill** > **Down**.
 
-![Column shortcut menu for the fill down operation.](media/fill-values-column/right-click.png "Column shortcut menu for the fill down operation")
+:::image type="content" source="media/fill-values-column/right-click.png" alt-text="Column shortcut menu for the fill down operation.":::
 
 The result of that operation will look like the following image.
 
-![Sample table after performing the fill down operation with null cells below the two original date values now filled with the dates.](media/fill-values-column/date-filled-down.png "Sample table after performing the fill down operation")
+:::image type="content" source="media/fill-values-column/date-filled-down.png" alt-text="Sample table after performing the fill down operation with null cells below the two original date values now filled with the dates.":::
 
 ## Fill up
 
@@ -35,31 +35,31 @@ In the same way as the fill down operation, fill up works on a column. But by co
 
 In the following example, you want to fill the **Comments** column from the bottom up. You'll notice that your **Comments** column doesn't have null values. Instead it has what appears to be empty cells. Before you can do the fill up operation, you need to transform those empty cells into null values: select the column, go to the **Transform** tab, and then select **Replace values**.
 
-![Replace values button on the Transform tab.](media/fill-values-column/replace-values.png "Replace values button on the Transform tab")
+:::image type="content" source="media/fill-values-column/replace-values.png" alt-text="Replace values button on the Transform tab.":::
 
 In the **Replace values** dialog box, leave **Value to find** blank. For **Replace with**, enter **null**.
 
-![Replace values dialog box.](media/fill-values-column/replace-values-window.png "Replace values dialog box")
+:::image type="content" source="media/fill-values-column/replace-values-window.png" alt-text="Replace values dialog box.":::
 
 More information: [Replace values](replace-values.md)
 
 After all empty cells are replaced with **null**, select the **Comments** column, go to the **Transform** tab, and then select **Fill** > **Up**.
 
-![Fill up on the Transform tab.](media/fill-values-column/fill-up-icon.png "Fill up on the Transform tab")
+:::image type="content" source="media/fill-values-column/fill-up-icon.png" alt-text="Fill up on the Transform tab.":::
 
 The result of that operation will look like the following image.
 
-![Sample table after performing the fill up operation with null cells above the two original comment values now filled with comments.](media/fill-values-column/fill-up-final.png "Sample table after performing the fill up operation")
+:::image type="content" source="media/fill-values-column/fill-up-final.png" alt-text="Sample table after performing the fill up operation with null cells above the two original comment values now filled with comments.":::
 
 ## Cleaning up your table
 
 1. Filter the **Units** column to show only rows that aren't equal to **null**.
 
-   ![Filter the table for non-null values.](media/fill-values-column/filter-null-values.png "Filter the table for non-null values")
+   :::image type="content" source="media/fill-values-column/filter-null-values.png" alt-text="Filter the table for non-null values.":::
 
 2. Rename the **Comments** column as **Sales Person**.
 
-   ![Column renamed.](media/fill-values-column/rename-column.png "Column renamed")
+   :::image type="content" source="media/fill-values-column/rename-column.png" alt-text="Column renamed.":::
 
 3. Remove the **Sales Person:** values from the **Sales Person** column so you only get the names of the salespeople.
 

@@ -55,8 +55,7 @@ To make the connection, take the following steps:
 
 6. In **Navigator**, select the data you require, then either select **Load** to load the data or **Transform Data** to transform the data.
 
-   [![Select the data you require from the database](./media/teradata-database/navigator-teradata.png)](./media/teradata-database/navigator-teradata.png#lightbox)
-
+   :::image type="content" source="./media/teradata-database/navigator-teradata.png" lightbox="./media/teradata-database/navigator-teradata.png" alt-text="Select the data you require from the database":::
 ## Connect to a Teradata database from Power Query Online
 
 To make the connection, take the following steps:
@@ -82,8 +81,7 @@ To make the connection, take the following steps:
 
 8. In **Navigator**, select the data you require, then select **Transform data** to transform the data in the Power Query editor.
 
-   [![Select the data you want to transform in the Navigator](./media/teradata-database/navigator-online.png)](./media/teradata-database/navigator-online.png#lightbox)
-
+   :::image type="content" source="./media/teradata-database/navigator-online.png" lightbox="./media/teradata-database/navigator-online.png" alt-text="Select the data you want to transform in the Navigator":::
 ## Connect using advanced options
 
 Power Query provides a set of advanced options that you can add to your query if needed.

@@ -41,8 +41,7 @@ To access your saved export from Power BI desktop:
 
 1. Select **Get data** from the ribbon menu, which displays the **Common data sources** menu.
 
-   [![Get data and dropdown.](./media/anaplan/get-data-more.png)](./media/anaplan/get-data-more.png#lightbox)
-
+   :::image type="content" source="./media/anaplan/get-data-more.png" lightbox="./media/anaplan/get-data-more.png" alt-text="Get data and dropdown.":::
 2. Select **More** from the menu.
 
 3. In **Get Data**, enter **Anaplan** into the search field, which displays the **Anaplan Connector**.
@@ -124,8 +123,7 @@ When you run an export action:
 
 To run an export action, use the **Navigator** dialog to locate your export.
 
-[![Run Export Action and Load.](./media/anaplan/export-load.png)](./media/anaplan/export-load.png#lightbox)
-
+:::image type="content" source="./media/anaplan/export-load.png" lightbox="./media/anaplan/export-load.png" alt-text="Run Export Action and Load.":::
 1. Search your Anaplan models to find and set your export.
 
    * Select the white chevron, which expands to a drop-down list.
@@ -148,8 +146,7 @@ Once your data loads into Power BI Desktop, you can perform data visualizations.
 
 [How to make the most of data visualization](https://powerbi.microsoft.com/data-visualization) helps you to select **Columns**, apply **Filters**, perform **Visualizations**, and **Publish**.
 
-[![Data and tables.](./media/anaplan/data-and-tables.png)](./media/anaplan/data-and-tables.png#lightbox)
-
+:::image type="content" source="./media/anaplan/data-and-tables.png" lightbox="./media/anaplan/data-and-tables.png" alt-text="Data and tables.":::
 ### Publish a report to Power BI service
 
 The publish step sends the report from Power BI Desktop to Power BI service.
@@ -158,8 +155,7 @@ More information: [Create reports in Power BI](/power-bi/create-reports/). You n
 
 To publish a report to Power BI service, select **Publish** from the Power BI Desktop report dialog.
 
-[![Microsoft Power BI report dialog with a left menu that displays the Publish option.](./media/anaplan/pbi-report.png)](./media/anaplan/pbi-report.png#lightbox)
-
+:::image type="content" source="./media/anaplan/pbi-report.png" lightbox="./media/anaplan/pbi-report.png" alt-text="Microsoft Power BI report dialog with a left menu that displays the Publish option.":::
 The report is now in Power BI service. Sign in to Power BI service to see the report.
 
 ### Schedule a refresh (Power BI service)
@@ -207,8 +203,7 @@ To resolve such an error:
 
 1. Select **Refresh** (top right).
 
-   [![Authentication error. This image shows an arrow to highlight the refresh button.](./media/anaplan/auth-cred-error.png)](./media/anaplan/auth-cred-error.png#lightbox)
-
+   :::image type="content" source="./media/anaplan/auth-cred-error.png" lightbox="./media/anaplan/auth-cred-error.png" alt-text="Authentication error. This image shows an arrow to highlight the refresh button.":::
 2. Select **File**.
 3. Select **Options and settings**.
 4. Select **Data source settings**.
@@ -224,8 +219,7 @@ You might experience a credential error in the [Power Query editor](../power-que
 
 To resolve this error, select either **Close & Apply** or **Refresh Preview**.
 
-[![Power query error.](./media/anaplan/power-query-error.png)](./media/anaplan/power-query-error.png#lightbox)
-
+:::image type="content" source="./media/anaplan/power-query-error.png" lightbox="./media/anaplan/power-query-error.png" alt-text="Power query error.":::
 Your data then refreshes.
 
 ### Integration list, display error
@@ -259,12 +253,10 @@ You can also:
 
 Select **Refresh Preview**.
 
-[![Power Query error Key and Table.](./media/anaplan/expression-error.png)](./media/anaplan/expression-error.png#lightbox)
-
+:::image type="content" source="./media/anaplan/expression-error.png" lightbox="./media/anaplan/expression-error.png" alt-text="Power Query error Key and Table.":::
 The first [1,000 rows](https://community.powerbi.com/t5/Desktop/Limit-of-1000-value-reached/td-p/368850) of data then displays.
 
-[![Refresh preview.](./media/anaplan/refresh-preview.png)](./media/anaplan/refresh-preview.png#lightbox)
-
+:::image type="content" source="./media/anaplan/refresh-preview.png" lightbox="./media/anaplan/refresh-preview.png" alt-text="Refresh preview.":::
 More information: [Power Query M expression functions](/powerquery-m/expression-functions)
 
 ### Large file download error
@@ -273,6 +265,5 @@ If you go beyond the 5 gigabytes (GB) size limit, you'll get the following error
 
 `Anaplan connector supports file downloads up to 5 GB in size.`
 
-[![Error message when a file is too large.](./media/anaplan/file-too-large.png)](./media/anaplan/file-too-large.png#lightbox)
-
+:::image type="content" source="./media/anaplan/file-too-large.png" lightbox="./media/anaplan/file-too-large.png" alt-text="Error message when a file is too large.":::
 Return to your Anaplan model, decrease the size of your file, and try again.

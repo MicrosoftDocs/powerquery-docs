@@ -53,8 +53,7 @@ To make the connection, take the following steps:
 
 5. In **Navigator**, select the database information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in the Power Query editor.
 
-   [![Power Query Navigator showing some of the Sales Targets data.](./media/sql-server-analysis-services/navigator-desktop.png)](./media/sql-server-analysis-services/navigator-desktop.png#lightbox)
-
+   :::image type="content" source="./media/sql-server-analysis-services/navigator-desktop.png" lightbox="./media/sql-server-analysis-services/navigator-desktop.png" alt-text="Power Query Navigator showing some of the Sales Targets data.":::
 ## Connect to SQL Server Analysis Services database from Power Query Online
 
 To make the connection, take the following steps:

@@ -142,85 +142,83 @@ The following procedure demonstrates how to reduce the chances of retrieving mor
 
 2. Expand the tree to drill down to your desired server, application, and database until it exposes the measures and dimensions for your database. For now, select your measures and only one dimension level. Pick the most important dimension level. In later steps, you'll build the result by incrementally adding more dimensions levels.
 
-   [![Selecting most important dimension and measures](./media/essbase/iterative-import-selecting-most-important-dimension-and-measures.png)](./media/essbase/iterative-import-selecting-most-important-dimension-and-measures.png#lightbox)
-
+   :::image type="content" source="./media/essbase/iterative-import-selecting-most-important-dimension-and-measures.png" lightbox="./media/essbase/iterative-import-selecting-most-important-dimension-and-measures.png" alt-text="Selecting most important dimension and measures":::
 3. Select **Load** to import the selected measures and dimension level.
 
-   [![Import loaded](./media/essbase/iterative-import-loaded.png)](./media/essbase/iterative-import-loaded.png#lightbox)
-
+   :::image type="content" source="./media/essbase/iterative-import-loaded.png" lightbox="./media/essbase/iterative-import-loaded.png" alt-text="Import loaded":::
 ### Editing queries to add more dimension levels
 
 Now that you have a starting point, you can start adding more dimension levels and applying filters as you go.
 
 1. Select **Edit Queries** on the Power BI Desktop ribbon to start the process.
 
-   [![Select Edit Queries](./media/essbase/iterative-import-select-edit-queries.png)](./media/essbase/iterative-import-select-edit-queries.png#lightbox)
+   :::image type="content" source="./media/essbase/iterative-import-select-edit-queries.png" lightbox="./media/essbase/iterative-import-select-edit-queries.png" alt-text="Select Edit Queries":::
 
-2. If you have members you want to filter on in the initial dimension, select the column properties button :::image type="content" source="./media/essbase/column-properties.png" alt-text="Column Property Button."::: to display the list of available dimension members at this level. Select only the dimension members you need at this level and then select **OK** to apply the filter.
+2. If you have members you want to filter on in the initial dimension, select the column properties button ![Column Property Button](./media/essbase/column-properties.png) to display the list of available dimension members at this level. Select only the dimension members you need at this level and then select **OK** to apply the filter.
 
-   [![Apply filter](./media/essbase/iterative-import-apply-filter.png)](./media/essbase/iterative-import-apply-filter.png#lightbox)
+   :::image type="content" source="./media/essbase/iterative-import-apply-filter.png" lightbox="./media/essbase/iterative-import-apply-filter.png" alt-text="Apply filter":::
 
-3. The resulting data is now updated with the applied filter. **Applied Steps** now contains a new step (**Filtered Rows**) for the filter you set. You can select the settings button :::image type="content" source="./media/essbase/setting-button.png" alt-text="Setting button."::: for the step to modify the filter at a later time.
+3. The resulting data is now updated with the applied filter. **Applied Steps** now contains a new step (**Filtered Rows**) for the filter you set. You can select the settings button ![Setting button](./media/essbase/setting-button.png) for the step to modify the filter at a later time.
 
-   [![Modify filter](./media/essbase/iterative-import-modifier-filter.png)](./media/essbase/iterative-import-modifier-filter.png#lightbox)
+   :::image type="content" source="./media/essbase/iterative-import-modifier-filter.png" lightbox="./media/essbase/iterative-import-modifier-filter.png" alt-text="Modify filter":::
 
 4. Now you'll add a new dimension level. In this case, you're going to add the next level down for the same dimension you initially chose. Select **Add Items** on the ribbon to bring up the **Navigator** dialog box.
 
-   [![Select Add Items](./media/essbase/iterative-import-select-add-items.png)](./media/essbase/iterative-import-select-add-items.png#lightbox)
+   :::image type="content" source="./media/essbase/iterative-import-select-add-items.png" lightbox="./media/essbase/iterative-import-select-add-items.png" alt-text="Select Add Items":::
 
 5. Navigate to the same dimension, but this time select the next level below the first level. Then select **OK** to add the dimension level to the result.
 
-   [![Select and add new dimensions](./media/essbase/iterative-import-select-and-add-new-dimensions.png)](./media/essbase/iterative-import-select-and-add-new-dimensions.png#lightbox)
+   :::image type="content" source="./media/essbase/iterative-import-select-and-add-new-dimensions.png" lightbox="./media/essbase/iterative-import-select-and-add-new-dimensions.png" alt-text="Select and add new dimensions":::
 
 6. The result grid now has the data from the new dimension level. Notice that because you've applied a filter at the top level, only the related members in the second level are returned.
 
-   [![Grid showing new dimension level](./media/essbase/iterative-import-grid-showing-new-dimension.png)](./media/essbase/iterative-import-grid-showing-new-dimension.png#lightbox)
+   :::image type="content" source="./media/essbase/iterative-import-grid-showing-new-dimension.png" lightbox="./media/essbase/iterative-import-grid-showing-new-dimension.png" alt-text="Grid showing new dimension level":::
 
 7. You can now apply a filter to the second-level dimension as you did for the first level.
 
-   [![Apply filter on second level](./media/essbase/iterative-import-apply-filter-on-second-level.png)](./media/essbase/iterative-import-apply-filter-on-second-level.png#lightbox)
+   :::image type="content" source="./media/essbase/iterative-import-apply-filter-on-second-level.png" lightbox="./media/essbase/iterative-import-apply-filter-on-second-level.png" alt-text="Apply filter on second level":::
 
 8. In this way, each subsequent step ensures only the members and data you need are retrieved from the server.
 
-   [![Filter applied](./media/essbase/iterative-import-filter-applied.png)](./media/essbase/iterative-import-filter-applied.png#lightbox)
+   :::image type="content" source="./media/essbase/iterative-import-filter-applied.png" lightbox="./media/essbase/iterative-import-filter-applied.png" alt-text="Filter applied":::
 
 9. Now let's add a new dimension level by repeating the previous steps. Select **Add Items** on the ribbon bar again.
 
-   [![Select Add Items again](./media/essbase/iterative-import-select-add-items-again.png)](./media/essbase/iterative-import-select-add-items-again.png#lightbox)
+   :::image type="content" source="./media/essbase/iterative-import-select-add-items-again.png" lightbox="./media/essbase/iterative-import-select-add-items-again.png" alt-text="Select Add Items again":::
 
 10. Navigate to the dimension level you want, select it, and then select **OK** to add the dimension level to the result.
 
-    [![Select desired dimension again](./media/essbase/iterative-import-select-desired-dimension-again.png)](./media/essbase/iterative-import-select-desired-dimension-again.png#lightbox)
+    :::image type="content" source="./media/essbase/iterative-import-select-desired-dimension-again.png" lightbox="./media/essbase/iterative-import-select-desired-dimension-again.png" alt-text="Select desired dimension again":::
 
 11. The new dimension level is added to the result.
 
-    [![New dimension added](./media/essbase/iterative-import-new-dimension-added.png)](./media/essbase/iterative-import-new-dimension-added.png#lightbox)
+    :::image type="content" source="./media/essbase/iterative-import-new-dimension-added.png" lightbox="./media/essbase/iterative-import-new-dimension-added.png" alt-text="New dimension added":::
 
 12. Apply a filter to this dimension level, as needed.
 
-    [![Apply filter to new dimension](./media/essbase/iterative-import-apply-filter-to-new-dimension.png)](./media/essbase/iterative-import-apply-filter-to-new-dimension.png#lightbox)
+    :::image type="content" source="./media/essbase/iterative-import-apply-filter-to-new-dimension.png" lightbox="./media/essbase/iterative-import-apply-filter-to-new-dimension.png" alt-text="Apply filter to new dimension":::
 
 13. Observe the result.
 
-    [![Observe the result](./media/essbase/iterative-import-observe-the-result.png)](./media/essbase/iterative-import-observe-the-result.png#lightbox)
+    :::image type="content" source="./media/essbase/iterative-import-observe-the-result.png" lightbox="./media/essbase/iterative-import-observe-the-result.png" alt-text="Observe the result":::
 
 ### Applying your changes and loading the data
 
 1. When you've added all the dimension levels you want and have set all the required filters, select **Close** in the upper right corner to close the editor.
 
-   [![Select close button](./media/essbase/iterative-import-select-close-button.png)](./media/essbase/iterative-import-select-close-button.png#lightbox)
+   :::image type="content" source="./media/essbase/iterative-import-select-close-button.png" lightbox="./media/essbase/iterative-import-select-close-button.png" alt-text="Select close button":::
 
 2. Select **Yes** to apply your changes.
 
-   [![Select yes button](./media/essbase/iterative-import-select-yes-button.png)](./media/essbase/iterative-import-select-yes-button.png#lightbox)
+   :::image type="content" source="./media/essbase/iterative-import-select-yes-button.png" lightbox="./media/essbase/iterative-import-select-yes-button.png" alt-text="Select yes button":::
 
 3. Wait for the changes to be applied.
 
-   [![Wait for the changes](./media/essbase/iterative-import-wait-for-the-changes.png)](./media/essbase/iterative-import-wait-for-the-changes.png#lightbox)
+   :::image type="content" source="./media/essbase/iterative-import-wait-for-the-changes.png" lightbox="./media/essbase/iterative-import-wait-for-the-changes.png" alt-text="Wait for the changes":::
 
 4. Observe the new dimension levels in the **Fields** pane.
 
-   [![Observe the new dimensions](./media/essbase/iterative-import-observe-the-new-dimensions.png)](./media/essbase/iterative-import-observe-the-new-dimensions.png#lightbox)
+   :::image type="content" source="./media/essbase/iterative-import-observe-the-new-dimensions.png" lightbox="./media/essbase/iterative-import-observe-the-new-dimensions.png" alt-text="Observe the new dimensions":::
 
 You're now ready to create reports and visualizations.
 
@@ -228,13 +226,12 @@ You're now ready to create reports and visualizations.
 
 When interacting in DirectQuery mode with a multidimensional cube data source (like Oracle's Essbase), Power BI displays the cube's dimensions and levels in the **Fields** pane.
 
-[![Dimension and levels](./media/essbase/iterative-dq-dimensions-and-levels.png)](./media/essbase/iterative-DQ-dimensions-and-levels.png#lightbox)
-
+:::image type="content" source="./media/essbase/iterative-dq-dimensions-and-levels.png" lightbox="./media/essbase/iterative-DQ-dimensions-and-levels.png" alt-text="Dimension and levels":::
 To view and filter based on dimension members:
 
 1. Drag-and-drop a dimension level from the Fields pane over to the Filters pane. You can drag the dimension level to the **Add data fields here** area under **Filters on this visual**, **Filters on this page**, or **Filters on all pages**, depending on your needs.
 
-   [![Add fields here](./media/essbase/iterative-dq-add-fields-here.png)](./media/essbase/iterative-DQ-add-fields-here.png#lightbox)
+   :::image type="content" source="./media/essbase/iterative-dq-add-fields-here.png" lightbox="./media/essbase/iterative-DQ-add-fields-here.png" alt-text="Add fields here":::
 
 2. Once a dimension's level is in the **Filter** pane and the filter type is set to **Basic filtering**, you'll notice that the members of that dimension's level are displayed as a list of available filters.
 
@@ -244,17 +241,17 @@ To view and filter based on dimension members:
 
    Type some characters in the search field for that filter to find members in the list.
 
-   [![Check members you want](./media/essbase/iterative-dq-check-members-you-want.png)](./media/essbase/iterative-DQ-check-members-you-want.png#lightbox)
+   :::image type="content" source="./media/essbase/iterative-dq-check-members-you-want.png" lightbox="./media/essbase/iterative-DQ-check-members-you-want.png" alt-text="Check members you want":::
 
 4. When you have filters for two or more levels of the same dimension, you'll notice that selecting members from a higher level in the dimension changes the members available in the lower levels of that dimension.
 
     This cross highlighting/filtering behavior can be disabled by checking the **Disabling cross highlighting/filtering by default** option, as described in [Query reductions options](#query-reductions-options).
 
-   [![Notice member for filtering changed](./media/essbase/iterative-dq-notice-member-for-filtering-changed.png)](./media/essbase/iterative-DQ-notice-member-for-filtering-changed.png#lightbox)
+   :::image type="content" source="./media/essbase/iterative-dq-notice-member-for-filtering-changed.png" lightbox="./media/essbase/iterative-DQ-notice-member-for-filtering-changed.png" alt-text="Notice member for filtering changed":::
 
 5. When you've finished choosing the members you want in the dimension level filter, it's a good time to add that dimension level to your visualization. Check the matching dimension level in the **Fields** pane and it's then added to your current visualization.
 
-   [![Add new dimensions](./media/essbase/iterative-dq-add-new-dimensions.png)](./media/essbase/iterative-DQ-add-new-dimensions.png#lightbox)
+   :::image type="content" source="./media/essbase/iterative-dq-add-new-dimensions.png" lightbox="./media/essbase/iterative-DQ-add-new-dimensions.png" alt-text="Add new dimensions":::
 
 For more information about adding filters, go to [Add a filter to a report in Power BI](/power-bi/power-bi-report-add-filter).
 
@@ -418,8 +415,8 @@ Loading a dimension returns the error message "Essbase Error (1200549): Repeated
 4. Determine which dimension should be the "Accounts" dimension type. Right-click it and select **Edit member properties…**.
 5. Select the Dimension Type field and set it to **Accounts**. Select **OK**.
 
-   [![Account Dimension](./media/essbase/account-dimension.png)](./media/essbase/account-dimension.png#lightbox)
-
+   :::image type="content" source="./media/essbase/account-dimension.png" lightbox="./media/essbase/account-dimension.png" alt-text="Account Dimension":::
+   
 6. Verify and Save the outline.
 
 **Validation**

@@ -80,8 +80,7 @@ To connect to an SAP BW Application Server:
 
 4. From the **Navigator** dialog box, select the items you want to use. When you select one or more items from the server, the **Navigator** dialog box creates a preview of the output table. For more information about navigating the SAP BW Application Server query objects in Power Query, go to [Navigate the query objects](navigate-query-objects.md).
 
-   [![Navigator view from Power Query Desktop.](navigator-desktop.png)](navigator-desktop.png#lightbox)
-
+   :::image type="content" source="navigator-desktop.png" lightbox="navigator-desktop.png" alt-text="Navigator view from Power Query Desktop.":::
 5. From the **Navigator** dialog box, you can either transform the data in the Power Query Editor by selecting **Transform Data**, or load the data by selecting **Load**.
 
 ## Connect to an SAP BW Application Server from Power Query Online
@@ -106,8 +105,7 @@ To connect to an SAP BW Application Server from Power Query Online:
 
 8. From the **Navigator** dialog box, you can transform the data in the Power Query Editor by selecting **Transform Data**.
 
-   [![Navigator view from Power Query Online.](navigator-online.png)](navigator-online.png#lightbox)
-
+   :::image type="content" source="navigator-online.png" lightbox="navigator-online.png" alt-text="Navigator view from Power Query Online.":::
 ## Connect using router strings
 
 SAP router is an SAP program that acts as an intermediate station (proxy) in a network connection between SAP systems, or between SAP systems and external networks. SAP router controls the access to your network, and, as such, is a useful enhancement to an existing firewall system (port filter). Figuratively, the firewall forms an impenetrable "wall" around your network. However, since some connections need to penetrate this wall, a "gate" has to be made in the firewall. SAP router assumes control of this gate. In short, SAP router provides you with the means of controlling access to your SAP system.

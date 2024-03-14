@@ -56,8 +56,7 @@ To make the connection, take the following steps:
 
 5. In **Navigator**, select the database information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in the Power Query editor.
 
-   [![Power Query Navigator showing some of the Sales Targets data.](./media/azure-analysis-services/navigator-desktop.png)](./media/azure-analysis-services/navigator-desktop.png#lightbox)
-
+   :::image type="content" source="./media/azure-analysis-services/navigator-desktop.png" lightbox="./media/azure-analysis-services/navigator-desktop.png" alt-text="Power Query Navigator showing some of the Sales Targets data.":::
 ## Connect to Azure Analysis Services database from Power Query Online
 
 To make the connection, take the following steps:
@@ -76,8 +75,7 @@ To make the connection, take the following steps:
 
 6. In **Navigator**, select the data you require, and then select **Transform data**.
 
-   [![Power Query Online Navigator showing the Human Resources employee data.](./media/azure-analysis-services/navigator-online.png)](./media/sql-server-analysis-services/navigator-online.png#lightbox)
-
+   :::image type="content" source="./media/azure-analysis-services/navigator-online.png" lightbox="./media/sql-server-analysis-services/navigator-online.png" alt-text="Power Query Online Navigator showing the Human Resources employee data.":::
 ## Connect using advanced options
 
 Power Query provides an advanced option that you can add to your query if needed.

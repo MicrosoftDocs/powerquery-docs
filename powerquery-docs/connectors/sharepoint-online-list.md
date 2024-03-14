@@ -101,8 +101,7 @@ The **All** view includes all user created and system defined columns. You can s
 
 The default view is what you'll see when looking at the list online in whichever view you've set as *Default* in your settings. If you edit this view to add or remove either user created or system defined columns, or by creating a new view and setting it as default, these changes will propagate through the connector.
 
-   [![A screen showing a sample of SharePoint Online list default view.](./media/sharepoint-online-list/sharepoint-online-list-settings.png)](./media/sharepoint-online-list/sharepoint-online-list-settings.png#lightbox)
-
+   :::image type="content" source="./media/sharepoint-online-list/sharepoint-online-list-settings.png" lightbox="./media/sharepoint-online-list/sharepoint-online-list-settings.png" alt-text="A screen showing a sample of SharePoint Online list default view.":::
 > [!NOTE]
 > If you set the default view in your SharePoint site to **Calendar** view or **Board** view, SharePoint only returns the columns shown in the selected view. In this scenario, Power BI will not retrieve all the columns in the list, even though you choose **All** option. This is by design.
 

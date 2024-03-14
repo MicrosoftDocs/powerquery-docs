@@ -2,7 +2,7 @@
 title: Best practices when working with Power Query
 description: Best practices when working with Power Query
 author: ptyx507
-ms.date: 1/18/2024
+ms.date: 3/13/2024
 ms.author: miescobar
 ms.topic: conceptual
 ms.search.form: DataflowGen2 Overview
@@ -15,7 +15,7 @@ This article contains some tips and tricks to make the most out of your data wra
 
 Power Query offers a vast number of data connectors. These connectors range from data sources such as TXT, CSV, and Excel files, to databases such as Microsoft SQL Server, and popular SaaS services such as Microsoft Dynamics 365 and Salesforce. If you don't see your data source listed in the **Get Data** window, you can always use the ODBC or OLEDB connector to connect to your data source.
 
-Using the best connector for the task will provide you with the best experience and performance. For example, using the SQL Server connector instead of the ODBC connector when connecting to a SQL Server database not only provides you with a much better **Get Data** experience, but the SQL Server connector also offers you features that can improve your experience and performance, such as query folding. To read more about query folding, go to [Power Query query folding](power-query-folding.md).
+Using the best connector for the task will provide you with the best experience and performance. For example, using the SQL Server connector instead of the ODBC connector when connecting to a SQL Server database not only provides you with a much better **Get Data** experience, but the SQL Server connector also offers you features that can improve your experience and performance, such as query folding. To read more about query folding, go to [Overview of query evaluation and query folding in Power Query](query-folding-basics.md).
 
 Each data connector follows a standard experience as explained in [Getting data](get-data-experience.md). This standardized experience has a stage called **Data Preview**. In this stage, you're provided with a user-friendly window to select the data that you want to get from your data source, if the connector allows it, and a simple data preview of that data. You can even select multiple data sets from your data source through the **Navigator** window, as shown in the following image.
 
@@ -26,7 +26,7 @@ Each data connector follows a standard experience as explained in [Getting data]
 
 ## Filter early
 
-It's always recommended to filter your data in the early stages of your query or as early as possible. Some connectors will take advantage of your filters through query folding, as described in [Power Query query folding](power-query-folding.md). It's also a best practice to filter out any data that isn't relevant for your case. This will let you better focus on your task at hand by only showing data that’s relevant in the data preview section.
+It's always recommended to filter your data in the early stages of your query or as early as possible. Some connectors will take advantage of your filters through query folding, as described in [Overview of query evaluation and query folding in Power Query](query-folding-basics.md). It's also a best practice to filter out any data that isn't relevant for your case. This will let you better focus on your task at hand by only showing data that’s relevant in the data preview section.
 
 You can use the auto filter menu that displays a distinct list of the values found in your column to select the values that you want to keep or filter out. You can also use the search bar to help you find the values in your column.
 
@@ -73,7 +73,7 @@ By default, Power Query offers an automatic data type detection for unstructured
 
 ## Explore your data
 
-Before you start preparing you data and adding new transformation steps, we recommend that you enable the Power Query [data profiling tools](data-profiling-tools.md) to easily discover information about your data.
+Before you start preparing your data and adding new transformation steps, we recommend that you enable the Power Query [data profiling tools](data-profiling-tools.md) to easily discover information about your data.
 
 ![Data preview or data profiling tools in Power Query.](media/best-practices-power-query/data-preview-tools-enabled-v2.png)
 
@@ -224,7 +224,6 @@ You can then transform that query into a function by doing a right-click on the 
 
 After a few more transformations, you can see that you've reached your desired output and leveraged the logic for such a transformation from a custom function.
 
- [![Final output query after invoking a custom function.](media/best-practices-power-query/invoked-custom-function.png)](media/best-practices-power-query/invoked-custom-function.png#lightbox)
-
+ :::image type="content" source="media/best-practices-power-query/invoked-custom-function.png" lightbox="media/best-practices-power-query/invoked-custom-function.png" alt-text="Final output query after invoking a custom function.":::
 >[!NOTE]
 > To learn more about how to create and use custom functions in Power Query from the article [Custom Functions](custom-function.md).
