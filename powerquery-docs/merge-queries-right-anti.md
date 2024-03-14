@@ -47,7 +47,7 @@ The goal is to create a table like the following, where only the rows from the r
 5. In the **Join kind** section, select **Right anti**.
 6. Select **OK**.
 
-![Merge dialog box showing the results of following the previous right anti join procedure.](media/merge-queries-right-anti/right-anti-merge-window.png "Merge dialog box showing the results of following the previous right anti join procedure")
+:::image type="content" source="media/merge-queries-right-anti/right-anti-merge-window.png" alt-text="Merge dialog box showing the results of following the previous right anti join procedure.":::
 
 >[!TIP]
 >Take a closer look at the message at the bottom of the dialog box that reads "The selection excludes 1 of 2 rows from the second table." This message is crucial to understanding the result that you get from this operation.
@@ -56,7 +56,7 @@ In the **Countries** table, you have the **Country** Spain with an **id** of 4, 
 
 From the newly created **Countries** column, expand the **Country** field. Don't select the **Use original column name as prefix** check box.
 
-![Expand table column for Country.](media/merge-queries-right-anti/right-anti-expand-field.png "Expand table column for Country")
+:::image type="content" source="media/merge-queries-right-anti/right-anti-expand-field.png" alt-text="Expand table column for Country.":::
 
 After performing this operation, you'll create a table that looks like the following image. The newly expanded **Country** field doesn't have any values. That's because the right anti join doesn't bring any values from the left table&mdash;it only keeps rows from the right table.
 

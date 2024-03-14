@@ -17,17 +17,16 @@ The global search box offers you the ability to search for:
 
 The global search box is located at the top center of the Power Query editor. The search box follows the same design principles that you find in [Microsoft Search in Office](https://support.microsoft.com/office/find-what-you-need-with-microsoft-search-in-office-2457d4d8-48a8-4ad4-ab89-5a0657aa8446), but contextualized to Power Query.
 
-[![Global search box located at the top center of the Power Query editor window.](media/search-box/search-box.png)](media/search-box/search-box.png#lightbox)
-
+:::image type="content" source="media/search-box/search-box.png" lightbox="media/search-box/search-box.png" alt-text="Global search box located at the top center of the Power Query editor window.":::
 ## Search results
 
 To make use of the global search box, select the search box or press Alt + Q. Before you enter anything, you'll be presented with some default options to choose from.
 
-![Global search box showcasing the default results before typing](media/search-box/default-view.png)
+:::image type="content" source="media/search-box/default-view.png" alt-text="Global search box showcasing the default results before typing.":::
 
 When you start entering something to search for, the results will be updated in real time, displaying queries, actions, and get data connectors that match the text that you've entered.
 
-![Results in the global search box for a query where the string to search for was the letter e.](media/search-box/results-for-e.png)
+:::image type="content" source="media/search-box/results-for-e.png" alt-text="Results in the global search box for a query where the string to search for was the letter e.":::
 
 For scenarios where you'd like to see all available options for a given search query, you can also select the **See more results for** option. This option is positioned as the last result of the search box query when there are multiple matches to your query.
 

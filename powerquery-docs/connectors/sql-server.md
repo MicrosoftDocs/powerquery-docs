@@ -40,7 +40,7 @@ To make the connection, take the following steps:
 
 2. In the **SQL Server database** dialog that appears, provide the name of the server and database (optional).
 
-   ![SQL Server database connection builder in Power Query Desktop.](./media/sql-server-database/select-database-desktop.png)
+   :::image type="content" source="./media/sql-server-database/select-database-desktop.png" alt-text="SQL Server database connection builder in Power Query Desktop.":::
 
 3. Select either the **Import** or **DirectQuery** data connectivity mode (Power BI Desktop only).
 
@@ -48,18 +48,18 @@ To make the connection, take the following steps:
 
 5. If you're connecting to this database for the first time, select the authentication type, input your credentials, and select the level to apply the authentication settings to. Then select **Connect**.
 
-   ![SQL Server database authentication.](./media/sql-server-database/signin-desktop.png)
+   :::image type="content" source="./media/sql-server-database/signin-desktop.png" alt-text="SQL Server database authentication.":::
 
    > [!NOTE]
    > If the connection isn't encrypted, you'll be prompted with the following dialog.
 
-   ![SQL Server database encryption support.](./media/sql-server-database/encryption-warning.png)
+   :::image type="content" source="./media/sql-server-database/encryption-warning.png" alt-text="SQL Server database encryption support.":::
 
     Select **OK** to connect to the database by using an unencrypted connection, or follow these [instructions](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine) to set up encrypted connections to SQL Server. Additionally, when encryption is enabled for SQL servers using self-signed certificates, review this [section](#sql-server-certificate-isnt-trusted-on-the-client-power-bi-desktop-or-on-premises-data-gateway) to add the SQL servers to the Power Query Desktop client's trust list.
 
 6. In **Navigator**, select the database information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
 
-   ![Power Query Navigator showing the employee data.](./media/sql-server-database/navigator-desktop.png)
+   :::image type="content" source="./media/sql-server-database/navigator-desktop.png" alt-text="Power Query Navigator showing the employee data.":::
 
 ## Connect to SQL Server database from Power Query Online
 
@@ -69,7 +69,7 @@ To make the connection, take the following steps:
 
 2. In the **SQL Server database** dialog that appears, provide the name of the server and database (optional).
 
-   ![SQL Server database connection builder in Power Query Online.](./media/sql-server-database/select-database-online.png)
+   :::image type="content" source="./media/sql-server-database/select-database-online.png" alt-text="SQL Server database connection builder in Power Query Online.":::
 
 3. If needed, select an on-premises data gateway.
 
@@ -81,7 +81,7 @@ To make the connection, take the following steps:
 
 7. In **Navigator**, select the data you require, and then select **Transform data**.
 
-   ![Power Query Online Navigator showing the Human Resources employee data.](./media/sql-server-database/navigator-online.png)
+   :::image type="content" source="./media/sql-server-database/navigator-online.png" alt-text="Power Query Online Navigator showing the Human Resources employee data.":::
 
 ## Connect using advanced options
 
@@ -97,7 +97,7 @@ Both Power Query Desktop and Power Query Online provide a set of advanced option
 
 Once you select the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your SQL Server database.
 
-## Known issues and limitations
+## Limitations
 
 ### SQL Server certificate isn't trusted on the client (Power BI Desktop or on-premises data gateway)
 

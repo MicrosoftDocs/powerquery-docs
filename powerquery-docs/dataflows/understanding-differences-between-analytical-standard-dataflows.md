@@ -19,14 +19,13 @@ Dataflows created in Power BI are always analytical dataflows. Dataflows created
 
 A standard dataflow loads data to Dataverse tables. Standard dataflows can only be created in Power Apps. One benefit of creating this type of dataflow is that any application that depends on data in Dataverse can work with the data created by standard dataflows. Typical applications that leverage Dataverse tables are Power Apps, Power Automate, AI Builder and Power Virtual Agents.  
 
-![Creating a standard dataflow.](media/understanding-differences-between-analytical-standard-dataflows/create-standard-dataflow.png)
+:::image type="content" source="media/understanding-differences-between-analytical-standard-dataflows/create-standard-dataflow.png" alt-text="Creating a standard dataflow.":::
 
 ### Standard dataflows versions
 
 We've been working on significant updates to standard dataflows to improve their performance and reliability. These improvements will eventually be available to all standard dataflows. But in the interim, we'll differentiate between existing standard dataflows (version 1) and new standard dataflows (version 2) by adding a version indicator in Power Apps.
 
-> [!div class="mx-imgBorder"]
-> ![Standard dataflow versions.](media/understanding-differences-between-analytical-standard-dataflows/standard-dataflow-version-indication.png)
+:::image type="content" source="media/understanding-differences-between-analytical-standard-dataflows/standard-dataflow-version-indication.png" alt-text="Standard dataflow versions.":::
 
 ### Standard dataflow versions feature comparison
 
@@ -49,17 +48,17 @@ Analytical dataflows are capable additional analytical features. For example, in
 
 You can create analytical dataflows in Power BI. By default, they'll load data to Power BI’s managed storage. But you can also configure Power BI to store the data in the organization’s Azure Data Lake Storage.
 
-![Creating an analytical dataflow in Power BI.](media/understanding-differences-between-analytical-standard-dataflows/create-analytical-dataflow-powerbi.png)
+:::image type="content" source="media/understanding-differences-between-analytical-standard-dataflows/create-analytical-dataflow-powerbi.png" alt-text="Creating an analytical dataflow in Power BI.":::
 
 You can also create analytical dataflows in Power Apps and Dynamics 365 customer insights portals. When you're creating a dataflow in Power Apps portal, you can choose between Dataverse managed analytical storage or in your organization’s Azure Data Lake Storage account.
 
-![Creating Analytical Dataflow in Power Platform.](media/understanding-differences-between-analytical-standard-dataflows/create-analytical-dataflow-power-platform.png)
+:::image type="content" source="media/understanding-differences-between-analytical-standard-dataflows/create-analytical-dataflow-power-platform.png" alt-text="Creating Analytical Dataflow in Power Platform.":::
 
 ### AI Integration
 
 Sometimes, depending on the requirement, you might need to apply some AI and machine learning functions on the data through the dataflow. These functionalities are available in Power BI dataflows and require a Premium workspace.
 
-![AI insights in an analytical dataflow.](media/understanding-differences-between-analytical-standard-dataflows/dataflow-ai-functions.png)
+:::image type="content" source="media/understanding-differences-between-analytical-standard-dataflows/dataflow-ai-functions.png" alt-text="AI insights in an analytical dataflow.":::
 
 The following articles discuss how to use AI functions in a dataflow:
 
@@ -75,7 +74,7 @@ One of the reasons to use a computed table is the ability to process large amoun
 
 The computed table helps with the performance of the data transformations. Instead of re-doing the transformations needed in the first table multiple times, the transformation is done only once in the computed table. Then the result is used multiple times in other tables.
 
-![Computed table in an analytical dataflow.](media/understanding-differences-between-analytical-standard-dataflows/computed-entity-in-dataflow.png)
+:::image type="content" source="media/understanding-differences-between-analytical-standard-dataflows/computed-entity-in-dataflow.png" alt-text="Computed table in an analytical dataflow.":::
 
 To learn more about computed tables, go to [Creating computed tables in dataflows](computed-tables.md).
 

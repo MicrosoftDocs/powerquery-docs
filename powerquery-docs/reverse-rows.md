@@ -19,7 +19,7 @@ Imagine a table with two columns, **ID** and **Country**, as shown in the follow
 
 On the **Transform** tab, select **Reverse rows**.
 
-![Reverse rows command on the Transform tab.](media/reverse-rows/reverse-rows-icon.png "Reverse rows command on the Transform tab")
+:::image type="content" source="media/reverse-rows/reverse-rows-icon.png" alt-text="Reverse rows command on the Transform tab.":::
 
 The result of this operation will look as follows.
 

@@ -47,8 +47,6 @@ items:
         items:
         - name: "Understanding query evaluation and folding"
           href: query-folding-basics.md
-        - name: "Query folding overview"
-          href: power-query-folding.md
         - name: "Query folding examples"
           href: query-folding-examples.md
         - name: "Query folding indicators"
