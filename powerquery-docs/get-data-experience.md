@@ -201,8 +201,7 @@ The table preview dialog box consists of only one section for the data preview. 
 
 For Power Query Online, you're required to load the data into the Power Query editor where you can further transform and enrich the query if you choose to do so.
 
-[![Sample query loaded into the query editor](media/query-plan/alternative-approach.png)](media/query-plan/sample-query.png#lightbox)
-
+:::image type="content" source="media/query-plan/alternative-approach.png" lightbox="media/query-plan/sample-query.png" alt-text="Sample query loaded into the query editor":::
 ## Additional information
 
 To better understand how to get data using the different product integrations of Power Query, go to [Where to get data](where-to-get-data.md).

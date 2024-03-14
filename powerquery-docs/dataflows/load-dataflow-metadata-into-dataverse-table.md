@@ -41,8 +41,7 @@ First, download the Dataverse [.pbit file](https://download.microsoft.com/downlo
 
 2. On the left navigation pane expand **Data**, select **Tables**, and then select **New table**.
 
-   [![Image with the new table dialog opened.](media/load-dataflow-metadata-into-dataverse-table/new-table-dialog.png)](media/load-dataflow-metadata-into-dataverse-table/new-table-dialog.png#lightbox)
-
+   :::image type="content" source="media/load-dataflow-metadata-into-dataverse-table/new-table-dialog.png" lightbox="media/load-dataflow-metadata-into-dataverse-table/new-table-dialog.png" alt-text="Image with the new table dialog opened.":::
 3. In the **New table** pane:
    1. Enter **Dataflows Monitoring** in **Display name**.
    1. Under **Primary Name Column**, enter **Dataflow name** in **Display name**.
@@ -56,8 +55,7 @@ First, download the Dataverse [.pbit file](https://download.microsoft.com/downlo
    * **Display name**: "Start Time", **Data type**: Date and Time, **Required**: Required.
    * **Display name**: "End Time", **Data type**: Date and Time, **Required**: Required.
 
-   [![Image with the new column dialog opened.](media/load-dataflow-metadata-into-dataverse-table/new-column-dialog.png)](media/load-dataflow-metadata-into-dataverse-table/new-column-dialog.png#lightbox)
-
+   :::image type="content" source="media/load-dataflow-metadata-into-dataverse-table/new-column-dialog.png" lightbox="media/load-dataflow-metadata-into-dataverse-table/new-column-dialog.png" alt-text="Image with the new column dialog opened.":::
 ## Create a dataflow
 
 If you don't already have one, create a dataflow. You can create a dataflow in either [Power BI dataflows](/power-bi/transform-model/dataflows/dataflows-introduction-self-service) or [Power Apps dataflows](/powerapps/maker/common-data-service/create-and-use-dataflows).
@@ -82,8 +80,7 @@ If you don't already have one, create a dataflow. You can create a dataflow in e
 8. For every required field, you need to add a dynamic value. This value is the output of the metadata of the dataflow that's run.
     1. Select the field next to **Dataflow Name** and then select **Dataflow Name** from the dynamic content.
 
-       [![Image with the dataflow name dynamic content added to the dataflow name field.](media/load-dataflow-metadata-into-dataverse-table/dynamic.png)](media/load-dataflow-metadata-into-dataverse-table/dynamic.png#lightbox)
-
+       :::image type="content" source="media/load-dataflow-metadata-into-dataverse-table/dynamic.png" lightbox="media/load-dataflow-metadata-into-dataverse-table/dynamic.png" alt-text="Image with the dataflow name dynamic content added to the dataflow name field.":::
     2. Repeat this process for all required fields.
 
        ![Image of the Add a new row connector with all the fields filled in with dynamic content.](media/load-dataflow-metadata-into-dataverse-table/final.png)  

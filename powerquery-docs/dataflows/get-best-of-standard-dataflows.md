@@ -2,7 +2,6 @@
 title: Field mapping considerations for standard dataflows
 description: Learn how to get the best outcomes when writing creating dataflows that write their output to Dataverse
 author: bensack
-
 ms.reviewer: dougklo
 ms.topic: conceptual
 ms.date: 1/6/2023
@@ -46,7 +45,7 @@ When mapping a dataflow query to an existing Dataverse table, you can choose if 
 
 The following image shows how you can choose the key column to be used when upserting records to an existing Dataverse table:
 
-[![Selecting a key to upsert data into Dataverse tables.](media/get-best-of-standard-dataflows/multi-ak.png)](media/get-best-of-standard-dataflows/multi-ak.png#lightbox)
+:::image type="content" source="media/get-best-of-standard-dataflows/multi-ak.png" lightbox="media/get-best-of-standard-dataflows/multi-ak.png" alt-text="Selecting a key to upsert data into Dataverse tables.":::
 
 ### Setting a table’s Unique ID column and using it as a key field for upserting records into existing Dataverse tables
 
@@ -60,13 +59,12 @@ All Microsoft Dataverse table rows have unique identifiers defined as GUIDs. The
 To take advantage of a table’s unique identifier field, select **Load to existing table** in the **Map Tables** page while authoring a dataflow. In the example shown in the image below, we would like to load data into the **CustomerTransactions** table, and use the **TransactionID** column from the data source as the unique identifier of the table.
 
 You'll notice that in the **Select key** dropdown, the unique identifier&mdash;which is always named "tablename + id"&mdash; of the table can be selected. Since the table name is "CustomerTransactions", the unique identifier field will be named "CustomerTransactionId".
-[!div class="mx-imgBorder"]
-> [![Selecting the primary key to upsert data into Dataverse tables.](media/get-best-of-standard-dataflows/select-primary-key.png)](media/get-best-of-standard-dataflows/select-primary-key.png#lightbox)
 
+:::image type="content" source="media/get-best-of-standard-dataflows/select-primary-key.png" lightbox="media/get-best-of-standard-dataflows/select-primary-key.png" alt-text="Selecting the primary key to upsert data into Dataverse tables.":::
 
-> [!div class="mx-imgBorder"]
-> [![Mapping data to the Unique Identifier column.](media/get-best-of-standard-dataflows/map-to-primary-key.png)](media/get-best-of-standard-dataflows/map-to-primary-key.png#lightbox)
+Once selected, the column mapping section is updated to include the unique identifier as a destination column. You can then map the source column representing the unique identifier for each record.
 
+:::image type="content" source="media/get-best-of-standard-dataflows/map-to-primary-key.png" lightbox="media/get-best-of-standard-dataflows/map-to-primary-key.png" alt-text="Mapping data to the Unique Identifier column.":::
 ## What are good candidates for the key field
 
 The key field is a unique value representing a unique row in the table. It's important to have this field, because it helps you avoid having duplicate records in the table. This field can come from three sources:

@@ -93,8 +93,7 @@ If you do not already have one, create a dataflow. You can create a dataflow in 
 
    2. Select **Dataflow Name** from the **Dynamic content** context box.
 
-      [![Image of the Add rows to a dataset connector with the dynamic content ready to be selected.](media/load-dataflow-metadata-into-power-bi-dataset/dynamic-streaming.png)](media/load-dataflow-metadata-into-power-bi-dataset/dynamic-streaming.png#lightbox)
-
+      :::image type="content" source="media/load-dataflow-metadata-into-power-bi-dataset/dynamic-streaming.png" lightbox="media/load-dataflow-metadata-into-power-bi-dataset/dynamic-streaming.png" alt-text="Image of the Add rows to a dataset connector with the dynamic content ready to be selected.":::
    3. Repeat this process for all required fields.
 
 9. Save the flow.

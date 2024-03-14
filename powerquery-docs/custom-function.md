@@ -211,4 +211,4 @@ You can then transform that query into a function by doing a right-click on the 
 
 After a few more transformations, you can see that you've reached your desired output and leveraged the logic for such a transformation from a custom function.
 
- [![Final output query after invoking a custom function.](media/custom-function/invoked-custom-function.png)](media/custom-function/invoked-custom-function.png#lightbox)
+ :::image type="content" source="media/custom-function/invoked-custom-function.png" lightbox="media/custom-function/invoked-custom-function.png" alt-text="Final output query after invoking a custom function.":::

@@ -13,8 +13,7 @@ In Power Query, you'll be creating many different queries. Whether it be from ge
 
 You'll be using the **Queries** pane to navigate through the queries.
 
-[![Queries Pane Basic.](media/queries-pane/queries-pane-basic.png)](media/queries-pane/queries-pane-basic.png#lightbox)
-
+:::image type="content" source="media/queries-pane/queries-pane-basic.png" lightbox="media/queries-pane/queries-pane-basic.png" alt-text="Queries Pane Basic.":::
 ## Navigating with the Queries pane
 
 The most basic usage of the **Queries** pane is to navigate to all of the queries.
