@@ -48,7 +48,7 @@ To make the connection from Power Query Desktop:
 
 2. In the **SQL Server database** dialog that appears, provide the name of the server and database (optional). In this example, `TestAzureSQLServer` is the server name and `AdventureWorks2012` is the database.
 
-    ![Enter Azure Synapse Analytics (SQL DW) connection.](./media/azure-sql-database/signin.png)
+    :::image type="content" source="./media/azure-sql-database/signin.png" alt-text="Enter Azure Synapse Analytics (SQL DW) connection.":::
 
 3. Select either the **Import** or **DirectQuery** data connectivity mode.
 
@@ -58,7 +58,7 @@ To make the connection from Power Query Desktop:
 
 5. If this is the first time you're connecting to this database, select the authentication type, input your credentials, and select the level to apply the authentication settings to. Then select **Connect**.
 
-   ![Azure Synapse Analytics (SQL DW) authentication.](./media/azure-sql-database/enter-credentials.png)
+   :::image type="content" source="./media/azure-sql-database/enter-credentials.png" alt-text="Azure Synapse Analytics (SQL DW) authentication.":::
 
    > [!NOTE]
    > Although the Windows authentication type is displayed, Azure Synapse Analytics SQL doesn't support the Windows authentication type. Use either the **Database** or the **Microsoft account** authentication types.
@@ -67,7 +67,7 @@ To make the connection from Power Query Desktop:
 
    If the connection is not encrypted, you'll be prompted with the following dialog.
 
-   ![Azure Synapse Analytics (SQL DW) encryption support.](./media/azure-sql-database/encryption-warning.png)
+   :::image type="content" source="./media/azure-sql-database/encryption-warning.png" alt-text="Azure Synapse Analytics (SQL DW) encryption support.":::
 
    Select **OK** to connect to the database by using an unencrypted connection, or follow the instructions in [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine) to set up encrypted connections to Azure Synapse Analytics (SQL DW).
 
@@ -81,7 +81,7 @@ To make the connection from Power Query Online:
 
 2. In the **Azure Synapse Analytics (SQL DW)** dialog that appears, provide the name of the server and database (optional). In this example, `TestAzureSQLServer` is the server name and `AdventureWorks2012` is the database.
 
-   ![Enter Data Warehouse online connection.](./media/azure-sql-database/dw-service-signin.png)
+   :::image type="content" source="./media/azure-sql-database/dw-service-signin.png" alt-text="Enter Data Warehouse online connection.":::
 
    You can also select and enter advanced options that will modify the connection query, such as a command timeout or a native query (SQL statement). More information: [Connect using advanced options](#connect-using-advanced-options)
 
@@ -99,7 +99,7 @@ To make the connection from Power Query Online:
 
 Both Power Query Desktop and Power Query Online provide a set of advanced options that you can add to your query if needed.
 
-![Display of advanced options available in Power Query.](./media/azure-sql-database/advanced-options.png)
+:::image type="content" source="./media/azure-sql-database/advanced-options.png" alt-text="Display of advanced options available in Power Query.":::
 
 The following table lists all of the advanced options you can set in Power Query Desktop and Power Query Online.
 

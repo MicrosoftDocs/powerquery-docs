@@ -52,11 +52,11 @@ To import data using the FactSet RMS connector from Power Query Desktop, take th
 
 3. To connect to FactsSetRMS, search for **FactSet** in **Get Data** and select the FactSet RMS connector from the right-hand list.
 
-   ![Image of the Get Data dialog box with FactSet RMS (Beta) emphasized.](./media/factset-rms/select-factset-rms.png)
+   :::image type="content" source="./media/factset-rms/select-factset-rms.png" alt-text="Image of the Get Data dialog box with FactSet RMS (Beta) emphasized.":::
 
 4. In the authentication page, you'll be prompted to enter the Username - Serial and the API key. Go to the FactSet Developer Portal for more instructions on setting up an API Key.
 
-   ![Image of the Authentication dialog box with a username and API key entered.](./media/factset-rms/authentication.png)
+   :::image type="content" source="./media/factset-rms/authentication.png" alt-text="Image of the Authentication dialog box with a username and API key entered.":::
 
 5. The connector opens the Power Query navigator with a list of all provided functions. Note that all functions might not be available, depending on your available subscriptions. Your account team can assist with requirements for access to additional products.
 

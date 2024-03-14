@@ -37,7 +37,7 @@ To connect to CloudBluePSA data:
 
 1. Select the **Search** box and start typing **CloudBluePSA**. Then select **CloudBluePSA** from the list on the right, and select **Connect**.
 
-   ![Screenshot of the Get Data dialog for CloudBluePSA.](./media/cloudbluepsa/get-data.png)
+   :::image type="content" source="./media/cloudbluepsa/get-data.png" alt-text="Screenshot of the Get Data dialog for CloudBluePSA.":::
 
 1. In the **Retrieve all pages of data** window that appears, copy and paste the **URL** generated on the **GET** side of the API endpoint of your choice. Then in **Filter**, copy and paste the constructed filter on the same API endpoint. For example:
 
@@ -47,7 +47,7 @@ To connect to CloudBluePSA data:
    **Filter:**\ 
    `{  "pageno": 1,  "pagesize": 10,  "filters": [{"field": "Type", "op": "cn", "data": "n"}], "filterop": "AND",  "sortcolumn": "Name",  "sortorder": "Asc",  "resulttype": "Json",  "includeccysymbols": true,  "gridcolumns": "RefNumber,Type,Name"}`
 
-   ![Screenshot showing Retrieve all pages of data for CloudBluePSA.](./media/cloudbluepsa/retrieve-all-pages-of-data.png)
+   :::image type="content" source="./media/cloudbluepsa/retrieve-all-pages-of-data.png" alt-text="Screenshot showing Retrieve all pages of data for CloudBluePSA.":::
 
 1. Select **OK**.
 
@@ -72,11 +72,11 @@ To connect to CloudBluePSA:
 
 1. From **Choose data source**, start typing in the search box: **CloudBluePSA**.
 
-   ![Screenshot showing how to search for the connector in Power Query Online.](./media/cloudbluepsa/power-query-search-box.png)
+   :::image type="content" source="./media/cloudbluepsa/power-query-search-box.png" alt-text="Screenshot showing how to search for the connector in Power Query Online.":::
 
 1. In **Connect to data source**, provide the **URL** and **Filter** as defined and generated in your instance, as shown in the example inside each text box. Finally paste your **API key** in the **Account Key** field.
 
-   ![Screenshot showing how to complete the Connect to data source.](./media/cloudbluepsa/power-query-connect-to-data-source.png)
+   :::image type="content" source="./media/cloudbluepsa/power-query-connect-to-data-source.png" alt-text="Screenshot showing how to complete the Connect to data source.":::
 
 1. Select **Next**.
 

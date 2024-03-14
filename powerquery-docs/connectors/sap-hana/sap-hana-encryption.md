@@ -26,7 +26,7 @@ There are four phases to enabling encryption for SAP HANA. We cover these phases
 
 Ensure your HANA server is configured to use CommonCryptoLib as its cryptographic provider.
 
-![OpenSSL cryptographic provider.](common-crypto.png)
+:::image type="content" source="common-crypto.png" alt-text="OpenSSL cryptographic provider.":::
 
 ## Create a certificate signing request
 
@@ -68,7 +68,7 @@ Get the certificate signed by a certificate authority (CA) that is trusted by th
 
     There are various ways to ensure this trust relationship exists using Microsoft Management Console (mmc) or the command line. You can import the CA's X509 certificate (cert.pem) into the **Trusted Root Certification Authorities** folder for the user that will establish the connection, or into the same folder for the client machine itself, if that is desirable.
 
-    ![Trusted Root Certification Authorities folder.](trusted-root-certification.png)
+    :::image type="content" source="trusted-root-certification.png" alt-text="Trusted Root Certification Authorities folder.":::
 
     You must first convert cert.pem into a .crt file before you can import the certificate into the Trusted Root Certification Authorities folder.
 
@@ -79,7 +79,7 @@ Get the certificate signed by a certificate authority (CA) that is trusted by th
 
 Before you can validate a server certificate in the Power BI service online, you must have a data source already set up for the [on-premises data gateway](/data-integration/gateway/). If you don't already have a data source set up to test the connection, you'll have to create one. To set up the data source on the gateway:
 
-1. From the Power BI service, select the ![setup icon.](setup.png) setup icon.
+1. From the Power BI service, select the :::image type="content" source="setup.png" alt-text="setup icon."::: setup icon.
 
 2. From the drop-down list, select **Manage gateways**.
 
@@ -101,11 +101,11 @@ Test the connection in Power BI Desktop or the Power BI service.
 
     - Power BI Desktop
 
-        ![Validate server certificate - service.](validate-server-certificate-service.png)
+        :::image type="content" source="validate-server-certificate-service.png" alt-text="Validate server certificate - service.":::
 
     - Power BI service
 
-        ![Validate server certificate - desktop.](validate-server-certificate-desktop.png)
+        :::image type="content" source="validate-server-certificate-desktop.png" alt-text="Validate server certificate - desktop.":::
 
 2. Verify that you can successfully establish an encrypted connection to the server with the **Validate server certificate** option enabled, by loading data in Power BI Desktop or refreshing a published report in Power BI service.
 

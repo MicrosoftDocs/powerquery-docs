@@ -47,7 +47,7 @@ To connect to Azure Blob Storage:
 
 2. In **Azure Blob Storage**, enter the account name or URL of your Azure Blob Storage account. Then select **OK**.
 
-    ![Screenshot of the Azure Blob Storage dialog box where you enter the account name or the URL.](./media/azure-blob-storage/enter-account-name.png)
+    :::image type="content" source="./media/azure-blob-storage/enter-account-name.png" alt-text="Screenshot of the Azure Blob Storage dialog box where you enter the account name or the URL.":::
 
 3. If this is the first time you're connecting to this account, select either the **Anonymous** or **Account key** authentication method to sign into the Azure Blob Storage account. More information: [Copy your account key from Azure Blob Storage](#copy-your-account-key-from-azure-blob-storage)
 

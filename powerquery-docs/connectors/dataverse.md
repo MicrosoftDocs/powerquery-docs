@@ -55,15 +55,15 @@ To connect to Dataverse from Power Query Desktop:
 
 2. If you're connecting to this site for the first time, select **Sign in** and input your credentials. Then select **Connect**.
 
-   ![Sign in to this site.](media/dataverse/sign-in.png)
+   :::image type="content" source="media/dataverse/sign-in.png" alt-text="Sign in to this site.":::
 
 3. In **Navigator**, select the data you require, then either load or transform the data.
 
-   ![Load or transform from navigator.](media/dataverse/navigator.png)
+   :::image type="content" source="media/dataverse/navigator.png" alt-text="Load or transform from navigator.":::
 
 4. If you're using Power Query from Power BI Desktop, you're asked to select either the **Import** or **DirectQuery** data connectivity mode. Then select **OK**.
 
-   ![Screenshot of Power BI Desktop connection settings with Import selected and DirectQuery not selected.](media/dataverse/connection-settings.png)
+   :::image type="content" source="media/dataverse/connection-settings.png" alt-text="Screenshot of Power BI Desktop connection settings with Import selected and DirectQuery not selected.":::
 
 ## Connect to Dataverse from Power Query Online
 
@@ -73,7 +73,7 @@ To connect to Dataverse from Power Query Online:
 
 2. In the **Connect to data source** page, leave the server URL address blank. Leaving the address blank lists all of the available environments you have permission to use in the Power Query Navigator window.
 
-   ![Enter the server URL.](media/dataverse/enter-url-online.png)
+   :::image type="content" source="media/dataverse/enter-url-online.png" alt-text="Enter the server URL.":::
 
    >[!Note]
    >If you need to use port 5558 to access your data, you'll need to load a specific environment with port 5558 appended at the end in the server URL address. In this case, go to [Finding your Dataverse environment URL](#finding-your-dataverse-environment-url) for instructions on obtaining the correct server URL address.
@@ -86,7 +86,7 @@ To connect to Dataverse from Power Query Online:
 
 6. In the navigation page, select the data you require, and then select **Transform Data**.
 
-   ![Navigation page open with the Application User data selected.](media/dataverse/navigator-online.png)
+   :::image type="content" source="media/dataverse/navigator-online.png" alt-text="Navigation page open with the Application User data selected.":::
 
 ## Connect using advanced options
 
@@ -102,11 +102,11 @@ Once you select the advanced options you require, select **Next** to connect to 
 
 ## Finding your Dataverse environment URL
 
-If you need to use port 5558 to connect to Dataverse, you have to find your Dataverse environment URL. Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). In the upper right of the Power Apps page, select the environment you're going to connect to. Select the ![Settings icon.](media/common-data-service/settings-icon.png) settings icon, and then select **Advanced settings**.
+If you need to use port 5558 to connect to Dataverse, you have to find your Dataverse environment URL. Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). In the upper right of the Power Apps page, select the environment you're going to connect to. Select the :::image type="content" source="media/common-data-service/settings-icon.png" alt-text="Settings icon."::: settings icon, and then select **Advanced settings**.
 
 In the new browser tab that opens, copy the root of the URL. This root URL is the unique URL for your environment. The URL is in the format of https://\<*yourenvironmentid*>.crm.dynamics.com/. **Make sure you remove https:// and the trailing / from the URL before pasting it to connect to your environment.** Append port 5558 to the end of the environment URL, for example *yourenvironmentid.crm.dyamics.com,5558*.
 
-![Location of the Dataverse environment URL.](media/dataverse/cds-env.png)
+:::image type="content" source="media/dataverse/cds-env.png" alt-text="Location of the Dataverse environment URL.":::
 
 ## When to use the Common Data Service (Legacy) connector
 

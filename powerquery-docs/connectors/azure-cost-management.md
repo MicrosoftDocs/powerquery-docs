@@ -46,7 +46,7 @@ To connect to the **Azure Cost Management**:
 
 3. Select **Azure Cost Management**.
 
-    ![Get data](media/azure-cost-management/get-data.png)
+    :::image type="content" source="media/azure-cost-management/get-data.png" alt-text="Get data.":::
 
 4. In the dialog that appears, for the **Choose Scope** drop down, use **Manually Input Scope** for **Microsoft Customer Agreements**, or use **Enrollment Number** for **Enterprise Agreements (EA)**.
 
@@ -66,7 +66,7 @@ To connect to a billing account, you need to retrieve your **Billing account ID*
 
 4. Under **Billing profile**, copy the **ID**.
 
-    :::image type="content" source="media/azure-cost-management/billing-profile.png" alt-text="Screenshot of Cost management billing profile":::
+    :::image type="content" source="media/azure-cost-management/billing-profile.png" alt-text="Screenshot of Cost management billing profile.":::
 
 5. For **Choose Scope**, select **Manually Input Scope** and input the connection string as shown in the example below, replacing *{billingAccountId}* with the data copied from the previous steps.
 
@@ -76,7 +76,7 @@ To connect to a billing account, you need to retrieve your **Billing account ID*
 
 6. Enter the number of months and select **OK**.
 
-    :::image type="content" source="media/azure-cost-management/number-of-months.png" alt-text="Screenshot of Azure Cost Management with number of months input":::
+    :::image type="content" source="media/azure-cost-management/number-of-months.png" alt-text="Screenshot of Azure Cost Management with number of months input.":::
 
     Alternatively, if you want to download less than a month's worth of data you can set *Number of months* to zero, then specify a date range using *Start Date* and *End Date* values that equate to less than 31 days.
 
@@ -96,7 +96,7 @@ To connect to a **billing profile**, you must retrieve your **Billing profile ID
 
 5. Under **Billing account**, copy the **ID**.
 
-    :::image type="content" source="media/azure-cost-management/copy-id.png" alt-text="Screenshot of Azure Cost Management billing account information":::
+    :::image type="content" source="media/azure-cost-management/copy-id.png" alt-text="Screenshot of Azure Cost Management billing account information.":::
 
 6. For **Choose Scope**, select **Manually Input Scope** and input the connection string as shown in the example below, replacing *{billingAccountId}* and *{billingProfileId}* with the data copied from the previous steps.
 
@@ -120,7 +120,7 @@ To connect with an Enterprise Agreement (EA) account, you can get your enrollmen
 
 5. Enter the number of months and then select **OK**.
 
-    ![Screenshot shows the Azure Cost Management properties with a scope of Enrollment number.](media/azure-cost-management/get-data-enterprise-agreement.png)
+    :::image type="content" source="media/azure-cost-management/get-data-enterprise-agreement.png" alt-text="Screenshot shows the Azure Cost Management properties with a scope of Enrollment number.":::
 
 6. When prompted, sign in with your Azure user account and password. You must use an Enterprise Administrator account for Enterprise Agreements.
 
@@ -147,7 +147,7 @@ Once you successfully authenticate, a **Navigator** window appears with the foll
 
 You can select a table to see a preview dialog. You can select one or more tables by selecting the boxes beside their name. Then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
 
-![Screenshot shows the Navigator dialog box.](media/azure-cost-management/navigator-enrollment.png)
+:::image type="content" source="media/azure-cost-management/navigator-enrollment.png" alt-text="Screenshot shows the Navigator dialog box.":::
 
 When you select **Load**, the data is loaded into Power BI Desktop.
 

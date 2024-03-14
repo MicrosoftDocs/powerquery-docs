@@ -38,7 +38,7 @@ To use the Socialbakers (Emplifi) Connector, you must have Socialbakers (Emplifi
 
 When the connector is started for the first time, authentication is needed. Enter your **Token** and **Secret** to the new modal window. Credentials can be provided to you by the Emplifi Support team.
 
-![Authentication.](./media/socialbakers/image.png)
+:::image type="content" source="./media/socialbakers/image.png" alt-text="Authentication.":::
 
 Once you sign in, the authentication information is automatically stored by Power BI for future use. It can be found under **File** > **Options and settings** > **Data source settings** > **Global permissions**.
 

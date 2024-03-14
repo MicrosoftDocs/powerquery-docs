@@ -38,7 +38,7 @@ To use the SAP BW Application Server connector in Power BI Desktop or Power Quer
 <a name="app-gac-install"></a>
 When you install, in **Optional setup steps**, make sure you select **Install assemblies to GAC**.
 
-![Select install assemblies to GAC.](install-to-gac.png)
+:::image type="content" source="install-to-gac.png" alt-text="Select install assemblies to GAC.":::
 
 > [!NOTE]
 >As of late 2023, the SAP BW Application Server connector contains support for SAP .NET Connector 3.1.
@@ -68,11 +68,11 @@ To connect to an SAP BW Application Server:
 
     When you've finished filling in the relevant information, select **OK**.
 
-   ![Enter the SAP Business Warehouse Application Server information.](get-data-app.png)
+   :::image type="content" source="get-data-app.png" alt-text="Enter the SAP Business Warehouse Application Server information.":::
 
 3. When accessing the database for the first time, the SAP BW Application Server requires database user credentials. Power Query Desktop offers two authentication modes for SAP BW connections&mdash;user name/password authentication (Database), and Windows authentication (single sign-on). SAML authentication isn't currently supported. Select either **Windows** or **Database**. If you select **Database** authentication, enter your user name and password. If you select **Windows** authentication, go to [Windows Authentication and single sign-on](single-sign-on.md) to learn more about the requirements for Windows authentication.
 
-   ![Enter the server credentials.](sign-in-app.png)
+   :::image type="content" source="sign-in-app.png" alt-text="Enter the server credentials.":::
 
    Then select **Connect**.
 
@@ -96,7 +96,7 @@ To connect to an SAP BW Application Server from Power Query Online:
 
 4. Set **Authentication Kind** to **Basic**. Enter your user name and password.
 
-   ![SAP BW Application Server online sign-in.](get-data-online-power-apps-app.png)
+   :::image type="content" source="get-data-online-power-apps-app.png" alt-text="SAP BW Application Server online sign-in.":::
 
 5. You can also select from a set of [advanced options](use-advanced-options.md) to fine-tune your query.
 

@@ -41,13 +41,13 @@ To make the connection, take the following steps:
 
 2. Specify the Sybase server to connect to in **Server** and the database where your data is stored in **Database**.
 
-   ![Enter the Sybase database connection.](./media/sybase-database/connection-settings.png)
+   :::image type="content" source="./media/sybase-database/connection-settings.png" alt-text="Enter the Sybase database connection.":::
 
 3. Select **OK**.
 
 4. If this is the first time you're connecting to this Sybase server and database, select the authentication type you want to use, enter your credentials, and then select **Connect**. For more information about using and managing authentication, go to [Authentication with a data source](../connectorauthentication.md).
 
-   ![Enter your Sybase database credentials.](./media/sybase-database/enter-credentials.png)
+   :::image type="content" source="./media/sybase-database/enter-credentials.png" alt-text="Enter your Sybase database credentials.":::
 
 5. In **Navigator**, select the data you require, then either select **Load** to load the data or **Transform Data** to transform the data.
 

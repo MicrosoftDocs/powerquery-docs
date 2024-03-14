@@ -52,7 +52,7 @@ For further information, go to [Secure Login](https://help.sap.com/viewer/a017d0
 
    Validate the settings with your SAP Administrator. 
 
-   ![Windows authentication.](windows-authentication.png)
+   :::image type="content" source="windows-authentication.png" alt-text="Windows authentication.":::
 
 5. Select **Connect**.
 

@@ -43,25 +43,25 @@ To connect to a SharePoint folder:
 
 1. From **Get Data**, select **SharePoint folder**.
 
-2. Paste the SharePoint site URL you copied in [Determine the site URL](#determine-the-site-url) to the **Site URL** text box in the **SharePoint folder** dialog box. In this example, the site URL is `https://contoso.sharepoint.com/marketing/data`. If the site URL you enter is invalid, a ![warning icon.](./media/sharepoint-folder/warning.png) warning icon will appear next to the URL text box.
+2. Paste the SharePoint site URL you copied in [Determine the site URL](#determine-the-site-url) to the **Site URL** text box in the **SharePoint folder** dialog box. In this example, the site URL is `https://contoso.sharepoint.com/marketing/data`. If the site URL you enter is invalid, a :::image type="content" source="./media/sharepoint-folder/warning.png" alt-text="warning icon."::: warning icon will appear next to the URL text box.
 
-   ![SharePoint folder selection.](./media/sharepoint-folder/url-select.png)
+   :::image type="content" source="./media/sharepoint-folder/url-select.png" alt-text="SharePoint folder selection.":::
 
    Select **OK** to continue.
 
 3. If this is the first time you've visited this site address, select the appropriate authentication method. Enter your credentials and choose which level to apply these settings to. Then select **Connect**.
 
-   ![SharePoint folder desktop authentication.](./media/sharepoint-folder/signin.png)
+   :::image type="content" source="./media/sharepoint-folder/signin.png" alt-text="SharePoint folder desktop authentication.":::
 
    For more information about authentication methods and level settings, go to [Authentication with a data source](../connectorauthentication.md).
 
 4. When you select the SharePoint folder you want to use, the file information about all of the files in that SharePoint folder are displayed. In addition, file information about any files in any subfolders is also displayed.
 
-   ![Image of the Navigator showing the folder information.](./media/sharepoint-folder/folder-info.png)
+   :::image type="content" source="./media/sharepoint-folder/folder-info.png" alt-text="Image of the Navigator showing the folder information.":::
 
 5. Select **Combine & Transform Data** to combine the data in the files of the selected SharePoint folder and load the data into the Power Query Editor for editing. Or select **Combine & Load** to load the data from all of the files in the SharePoint folder directly into your app.
 
-   ![Combine files from SharePoint folder.](./media/sharepoint-folder/combine-folder-files.png)
+   :::image type="content" source="./media/sharepoint-folder/combine-folder-files.png" alt-text="Combine files from SharePoint folder.":::
 
 > [!NOTE]
 >The **Combine & Transform Data** and **Combine & Load** buttons are the easiest ways to combine data found in the files of the SharePoint folder you specify. You could also use the **Load** button or the **Transform Data** buttons to combine the files as well, but that requires more manual steps.
@@ -74,7 +74,7 @@ To connect to a SharePoint folder:
 
 2. Paste the SharePoint site URL you copied in [Determine the site URL](#determine-the-site-url) to the **Site URL** text box in the **SharePoint folder** dialog box. In this example, the site URL is `https://contoso.sharepoint.com/marketing/data`.
 
-   ![Online folder selection and sign in.](./media/sharepoint-folder/online-signin.png)
+   :::image type="content" source="./media/sharepoint-folder/online-signin.png" alt-text="Online folder selection and sign in.":::
 
 3. If the SharePoint folder is on-premises, enter the name of an on-premises data gateway.
 
@@ -84,7 +84,7 @@ To connect to a SharePoint folder:
 
 6. When you select the SharePoint folder you want to use, the file information about all of the files in that SharePoint folder are displayed. In addition, file information about any files in any subfolders is also displayed.
 
-   ![Image of the online Navigator showing the folder information.](./media/sharepoint-folder/folder-info-online.png)
+   :::image type="content" source="./media/sharepoint-folder/folder-info-online.png" alt-text="Image of the online Navigator showing the folder information.":::
 
 7. Select **Combine** to combine the data in the files of the selected SharePoint folder and load the data into the Power Query Editor for editing.
 
@@ -101,15 +101,15 @@ In some cases, you might have multiple folders on your SharePoint site containin
 
 1. In the list of files from the SharePoint folder you chose, select **Transform Data**.
 
-   ![List of SharePoint folder files.](./media/sharepoint-folder/list-folder-files.png)
+   :::image type="content" source="./media/sharepoint-folder/list-folder-files.png" alt-text="List of SharePoint folder files.":::
 
 2. In the Power Query editor, scroll down to find the files you want to keep.  
 
-   ![Find the files to keep.](./media/sharepoint-folder/transform-file-table.png)
+   :::image type="content" source="./media/sharepoint-folder/transform-file-table.png" alt-text="Find the files to keep.":::
 
 3. In the example shown in the screenshot above, the required files are the last rows in the table. Select **Remove Rows**, enter the value of the last row before the files to keep (in this case 903), and select **OK**.
 
-   ![Remove rows.](./media/sharepoint-folder/remove-rows.png)
+   :::image type="content" source="./media/sharepoint-folder/remove-rows.png" alt-text="Remove rows.":::
 
 4. Once you've removed all the unnecessary files, select **Combine Files** from the **Home** ribbon to combine the data from all of the remaining files.
 

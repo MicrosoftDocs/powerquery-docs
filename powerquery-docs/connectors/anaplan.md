@@ -59,7 +59,7 @@ The connector uses either basic authentication (user ID, password) or the Anapla
 
 The following image shows the **Anaplan Connection Configuration** dialog.
 
-![Dialog for Anaplan Connection Configuration.](./media/anaplan/main-config.png)
+:::image type="content" source="./media/anaplan/main-config.png" alt-text="Dialog for Anaplan Connection Configuration.":::
 
 1. Enter the API and authentication (auth) URLs.
 
@@ -79,7 +79,7 @@ The following image shows the **Anaplan Connection Configuration** dialog.
 
 2. From the next **Anaplan** dialog, choose either **Basic** or **Organizational account** (which triggers Anaplan-configured IDP).
 
-   ![Anaplan authentication dialog. Arrows show Basic or Organizational account (Anaplan-configured IDP) menu choices.](./media/anaplan/basic-or-sso.png)
+   :::image type="content" source="./media/anaplan/basic-or-sso.png" alt-text="Anaplan authentication dialog. Arrows show Basic or Organizational account (Anaplan-configured IDP) menu choices.":::
 
 ### Authenticate
 
@@ -91,7 +91,7 @@ You've chosen either basic authentication or Anaplan-configured IDP.
     2. Select **Connect**.
     3. Proceed to the next step, **Get data**.
 
-       ![The Anaplan Connect dialog. Here you enter your User name and Password.](./media/anaplan/with-basic.png)
+       :::image type="content" source="./media/anaplan/with-basic.png" alt-text="The Anaplan Connect dialog. Here you enter your User name and Password.":::
 
 2. If you chose **Organizational account** (Anaplan-configured IDP), from the **Anaplan** dialog:
 
@@ -107,11 +107,11 @@ You've chosen either basic authentication or Anaplan-configured IDP.
       > [!NOTE]
       > Your company's Anaplan-configured IDP service generates this dialog. A common ID management service is Okta.
 
-      ![Sign In dialog for Okta. Okta is one example of a likely identity management tool.](./media/anaplan/okta-example.png)
+      :::image type="content" source="./media/anaplan/okta-example.png" alt-text="Sign In dialog for Okta. Okta is one example of a likely identity management tool.":::
 
    5. Select **Connect** on the next **Anaplan** dialog.
 
-      ![The Connect dialog for the Anaplan Power BI connector.](./media/anaplan/org-acct-powerbi.png)
+      :::image type="content" source="./media/anaplan/org-acct-powerbi.png" alt-text="The Connect dialog for the Anaplan Power BI connector.":::
 
 ### Run a Power BI export action
 
@@ -185,7 +185,7 @@ From the **Anaplan** dialog:
 1. Select  **OAuth2** from the **Authentication method** dropdown menu.
 2. Select **Sign in**.
 
-   ![The Anaplan Authentication method dialog with a dropdown and Sign in button.](./media/anaplan/gateway.PNG)
+   :::image type="content" source="./media/anaplan/gateway.PNG" alt-text="The Anaplan Authentication method dialog with a dropdown and Sign in button.":::
 
 Once you've created a scheduled refresh in Power BI service:
 
@@ -239,7 +239,7 @@ You can also:
 
 1. Select **Recent sources**.
 
-   ![Select recent sources.](./media/anaplan/recent-sources.png)
+   :::image type="content" source="./media/anaplan/recent-sources.png" alt-text="Select recent sources.":::
 
 2. Select **More**.
 
@@ -247,7 +247,7 @@ You can also:
 
 4. Select **Remove from list**.
 
-   ![Remove source from list.](./media/anaplan/remove-from-list.png)
+   :::image type="content" source="./media/anaplan/remove-from-list.png" alt-text="Remove source from list.":::
 
 5. Connect to the export again. Your data then refreshes.
 

@@ -40,7 +40,7 @@ To make the connection, take the following steps:
 
 2. In the **SQL Server Analysis Services database** dialog that appears, provide the name of the server and database (optional).
 
-   ![SQL Server Analysis Services database connection builder in Power Query Desktop.](./media/sql-server-analysis-services/select-database-desktop.png)
+   :::image type="content" source="./media/sql-server-analysis-services/select-database-desktop.png" alt-text="SQL Server Analysis Services database connection builder in Power Query Desktop.":::
 
    > [!NOTE]
    > Only Power BI Desktop will display the **Import** and **Connect live** options. If you're connecting using Power BI Desktop, selecting **Connect live** uses a live connection to load the connected data directly to Power BI Desktop. In this case, you can't use Power Query to transform your data before loading the data to Power BI Desktop. For the purposes of this article, the **Import** option is selected. For more information about using a live connection in Power BI Desktop, go to [Connect to Analysis Services tabular data in Power BI Desktop](/power-bi/connect-data/desktop-analysis-services-tabular-data).
@@ -49,7 +49,7 @@ To make the connection, take the following steps:
 
 4. If you're connecting to this database for the first time, select the authentication type and input your credentials. Then select **Connect**.
 
-   ![SQL Server Analysis Services database authentication.](./media/sql-server-analysis-services/credentials-desktop.png)
+   :::image type="content" source="./media/sql-server-analysis-services/credentials-desktop.png" alt-text="SQL Server Analysis Services database authentication.":::
 
 5. In **Navigator**, select the database information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in the Power Query editor.
 
@@ -63,7 +63,7 @@ To make the connection, take the following steps:
 
 2. In the **Connect to data source** page, provide the name of the server and database (optional).
 
-   ![SQL Server Analysis Services database connection builder in Power Query Online.](./media/sql-server-analysis-services/connection-settings-credentials.png)
+   :::image type="content" source="./media/sql-server-analysis-services/connection-settings-credentials.png" alt-text="SQL Server Analysis Services database connection builder in Power Query Online.":::
 
 3. If needed, select an on-premises data gateway.
 
@@ -73,7 +73,7 @@ To make the connection, take the following steps:
 
 6. In **Navigator**, select the data you require, and then select **Transform data**.
 
-   ![Power Query Online Navigator showing some Financial Perspective data.](./media/sql-server-analysis-services/navigator-online.png)
+   :::image type="content" source="./media/sql-server-analysis-services/navigator-online.png" alt-text="Power Query Online Navigator showing some Financial Perspective data.":::
 
 ## Connect using advanced options
 

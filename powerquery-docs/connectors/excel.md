@@ -41,13 +41,13 @@ To make the connection from Power Query Desktop:
 
 2. Browse for and select the Excel workbook you want to load. Then select **Open**.
 
-   ![Select the Excel workbook from File Explorer.](./media/excel/connect-desktop.png)
+   :::image type="content" source="./media/excel/connect-desktop.png" alt-text="Select the Excel workbook from File Explorer.":::
 
    If the Excel workbook is online, use the [Web connector](web/web.md) to connect to the workbook.
 
 3. In **Navigator**, select the workbook information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
 
-   ![Excel workbook imported into Power Query Desktop Navigator.](./media/excel/desktop-navigator-view.png)
+   :::image type="content" source="./media/excel/desktop-navigator-view.png" alt-text="Excel workbook imported into Power Query Desktop Navigator.":::
 
 ## Connect to an Excel workbook from Power Query Online
 
@@ -73,7 +73,7 @@ To make the connection from Power Query Online:
 
 If you connect to an Excel Workbook that doesn't specifically contain a single table, the Power Query navigator will attempt to create a suggested list of tables that you can choose from. For example, consider the following workbook example that contains data from A1 to C5, more data from D8 to E10, and more from C13 to F16.
 
-![Screenshot of Excel workbook with three sets of data.](./media/excel/workbook-data.png)
+:::image type="content" source="./media/excel/workbook-data.png" alt-text="Screenshot of Excel workbook with three sets of data.":::
 
 When you connect to the data in Power Query, the Power Query navigator creates two lists. The first list contains the entire workbook sheet, and the second list contains three suggested tables.
 
