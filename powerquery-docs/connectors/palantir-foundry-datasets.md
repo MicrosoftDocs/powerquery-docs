@@ -38,19 +38,19 @@ To connect to Palantir Foundry from Power Query Desktop, take the following step
 1. In the **Get Data** experience, select the **Palantir Foundry** option in the connector selection.
 2. In **Connection Settings**, provide the **Base URL** of your Foundry environment. For example, `https://<subdomain>.palantirfoundry.com/`. Optionally, provide a **Dataset RID** and **Branch**.
 
-   ![Screenshot of the Palantir Foundry connection settings in Power Query Desktop.](./media/palantir-foundry-datasets/connection-settings.png)
+   :::image type="content" source="./media/palantir-foundry-datasets/connection-settings.png" alt-text="Screenshot of the Palantir Foundry connection settings in Power Query Desktop.":::
 
 3. Select either the **Import** or **DirectQuery** data connectivity mode.
 4. Select **OK**.
 5. If you're connecting to Foundry for the first time, select either the **Foundry OAuth** (recommended) or **Foundry Token** authentication type. After signing in (Foundry OAuth) or entering a token (Foundry Token), select **Connect**.
 
-   ![Screenshot of the Palantir Foundry authentication.](./media/palantir-foundry-datasets/oauth.png)
+   :::image type="content" source="./media/palantir-foundry-datasets/oauth.png" alt-text="Screenshot of the Palantir Foundry authentication.":::
 
    For more details on these authentication options, go to Foundry's [Power BI: Authenticate with Foundry](https://www.palantir.com/docs/foundry/analytics-connectivity/power-bi-getting-started/#authenticate-with-foundry) documentation.
 
 6. In **Navigator**, select the data set(s) you want, then select either **Load** to load the data or **Transform Data** to continue transforming the data in the Power Query editor.
 
-   ![Screenshot of the Power Query Desktop Navigator showing the selected data set.](./media/palantir-foundry-datasets/select-data.png)
+   :::image type="content" source="./media/palantir-foundry-datasets/select-data.png" alt-text="Screenshot of the Power Query Desktop Navigator showing the selected data set.":::
 
 ## Connect to Palantir Foundry from Power Query Online
 
@@ -62,14 +62,14 @@ To connect to Palantir Foundry from Power Query Online, take the following steps
 1. Select the **Palantir Foundry** option in the connector selection.
 2. In **Connection Settings**, provide the Base URL that matches a connection already configured on your on-premises data gateway. For example, `https://<subdomain>.palantirfoundry.com/`. Optionally, provide a **Dataset RID** and **Branch**.
 
-    ![Screenshot of the Palantir Foundry connection settings in Power Query Online.](./media/palantir-foundry-datasets/online-connection-settings.png)
+    :::image type="content" source="./media/palantir-foundry-datasets/online-connection-settings.png" alt-text="Screenshot of the Palantir Foundry connection settings in Power Query Online.":::
 
     Ensure that the **Connection** dropdown shows the name of your on-premises gateway.
 
 3. Select **Next** to continue.
 4. In **Navigator**, select the data you require, and then select **Transform data**.
 
-   ![Screenshot of the Power Query Online Navigator showing the selected data set.](./media/palantir-foundry-datasets/online-select-data.png)
+   :::image type="content" source="./media/palantir-foundry-datasets/online-select-data.png" alt-text="Screenshot of the Power Query Online Navigator showing the selected data set.":::
 
 ### Troubleshooting
 

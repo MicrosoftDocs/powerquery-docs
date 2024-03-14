@@ -31,13 +31,13 @@ To load a local JSON file:
 
 1. Select the **JSON** option in the **Get Data** selection. This selection launches a local file browser where you can select your JSON file.
 
-   ![Image of the file browser with two JSON files to choose from.](./media/json/json-get-data.png)
+   :::image type="content" source="./media/json/json-get-data.png" alt-text="Image of the file browser with two JSON files to choose from.":::
 
 2. Select **Open** to open the file.
 
 Loading the JSON file will automatically launch the Power Query Editor. Power Query uses automatic table detection to seamlessly flatten the JSON data into a table. From the editor, you can then continue to transform the data if you want, or you can just close and apply. More information: [Automatic table detection from JSON files](#automatic-table-detection-from-json-files)
 
-![Image of the Power Query editor with the JSON data flattened into a table.](./media/json/convert-table.png)
+:::image type="content" source="./media/json/convert-table.png" alt-text="Image of the Power Query editor with the JSON data flattened into a table.":::
 
 ## Load a local JSON file from Power Query Online
 
@@ -57,7 +57,7 @@ To load a local JSON file:
 
 Loading the JSON file will automatically launch the Power Query Editor. Power Query uses automatic table detection to seamlessly flatten the JSON data into a table. From the editor, you can then continue to transform the data if you want, or you can just save and close to load the data. More information: [Automatic table detection from JSON files](#automatic-table-detection-from-json-files)
 
-![Image of the online Power Query editor with the JSON data flattened into a table.](./media/json/convert-table-online.png)
+:::image type="content" source="./media/json/convert-table-online.png" alt-text="Image of the online Power Query editor with the JSON data flattened into a table.":::
 
 ## Load from the web
 
@@ -67,17 +67,17 @@ To load a JSON file from the web, select the [Web connector](./web/web.md), ente
 
 Importing data from JSON files (or Web APIs) can be challenging for end users. Here is an example of JSON file with multiple levels of nested data.
 
-![Image of the contents of a JSON file with nested data.](./media/json/sample-json-file.png)
+:::image type="content" source="./media/json/sample-json-file.png" alt-text="Image of the contents of a JSON file with nested data.":::
 
 With the addition of automatic table detection capabilities, using the JSON connector in Power Query will automatically apply transformation steps to flatten the JSON data into a table. Previously, users had to flatten records and lists manually.
 
-![Automatic table detection](./media/json/automatic-table-detection.png)
+:::image type="content" source="./media/json/automatic-table-detection.png" alt-text="Automatic table detection.":::
 
 ## Troubleshooting
 
 If you see the following message, it might be because the file is invalid, for example, it's not really a JSON file, or is malformed. Or you might be trying to load a JSON Lines file.
 
-![Image of the unable to connect message.](./media/json/unable-connect.png)
+:::image type="content" source="./media/json/unable-connect.png" alt-text="Image of the unable to connect message.":::
 
 If you're trying to load a JSON Lines file, the following sample M code converts all JSON Lines input to a single flattened table automatically:
 

@@ -43,7 +43,7 @@ To make the connection, take the following steps:
 
 2. Specify the Teradata server to connect to in **Server**.
 
-   ![Enter the Teradata database connection.](./media/teradata-database/get-data-teradata.png)
+   :::image type="content" source="./media/teradata-database/get-data-teradata.png" alt-text="Enter the Teradata database connection.":::
 
 3. If you're connecting from Power BI Desktop, select either the **Import** or **DirectQuery** data connectivity mode. The rest of these example steps use the Import data connectivity mode. To learn more about DirectQuery, go to [Use DirectQuery in Power BI Desktop](/power-bi/connect-data/desktop-use-directquery).
 
@@ -51,7 +51,7 @@ To make the connection, take the following steps:
 
 5. If this is the first time you're connecting to this Teradata database, select the authentication type you want to use, enter your credentials, and then select **Connect**. For more information about using and managing authentication, go to [Authentication with a data source](../connectorauthentication.md).
 
-   ![Enter your Teradata database credentials.](./media/teradata-database/sign-in-teradata.png)
+   :::image type="content" source="./media/teradata-database/sign-in-teradata.png" alt-text="Enter your Teradata database credentials.":::
 
 6. In **Navigator**, select the data you require, then either select **Load** to load the data or **Transform Data** to transform the data.
 
@@ -75,7 +75,7 @@ To make the connection, take the following steps:
 
 6. Select **Use Encrypted Connection** if you want to use an encrypted connection, or clear the option if you want to use an unencrypted connection.
 
-   ![Enter Teradata database online connection.](./media/teradata-database/data-source-online.png)
+   :::image type="content" source="./media/teradata-database/data-source-online.png" alt-text="Enter Teradata database online connection.":::
 
 7. Select **Next** to continue.
 
