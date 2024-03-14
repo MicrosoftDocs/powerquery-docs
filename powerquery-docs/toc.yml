@@ -423,7 +423,7 @@ items:
         href: connectors/google-analytics.md
       - name: "Google BigQuery"
         href: connectors/google-bigquery.md
-      - name: "Google BigQuery (Azure AD) (Beta)"
+      - name: "Google BigQuery (Microsoft Entra ID) (Beta)"
         href: connectors/google-bigquery-aad.md
       - name: "Google Sheets"
         href: connectors/google-sheets.md
