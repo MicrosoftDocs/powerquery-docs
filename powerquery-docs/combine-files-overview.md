@@ -22,7 +22,7 @@ Files can come from a variety of sources, such as (but not limited to):
 
 When working with these sources, you'll notice that they share the same table schema, commonly referred to as the *file system view*. The following screenshot shows an example of the file system view.
 
-![File system view.](media/combine-files-overview/combine-files-overview-file-system-view.png "File system view")
+:::image type="content" source="media/combine-files-overview/combine-files-overview-file-system-view.png" alt-text="File system view.":::
 
 In the file system view, the **Content** column contains the binary representation of each file.
 
@@ -47,11 +47,11 @@ Alternatively, you can select **Transform data** to access the Power Query Edito
 
 * The **Combine files** command in the **Combine** group on the **Home** tab.
 
-   ![Combine files command on the Home tab.](media/combine-files-overview/combine-files-button-home.png "Combine files button on the Home tab")
+   :::image type="content" source="media/combine-files-overview/combine-files-button-home.png" alt-text="Combine files command on the Home tab.":::
 
 * The **Combine files** icon in the column header of the column that contains \[Binary\] values.
 
-   ![Combine files icon in the column header.](media/combine-files-overview/combine-files-button-header.png "Combine files icon in the column header")
+   :::image type="content" source="media/combine-files-overview/combine-files-button-header.png" alt-text="Combine files icon in the column header.":::
 
 ## Combine files dialog box
 
@@ -64,7 +64,7 @@ After you select the **Combine** or **Combine files** command, the **Combine fil
 
 In the following image, Power Query has detected that the first file has a .csv file name extension, so it uses the [Text/CSV](connectors/text-csv.md) connector to interpret the file.
 
-![Combine files dialog box.](media/combine-files-overview/combine-files-dialog.png "Combine files dialog box")
+:::image type="content" source="media/combine-files-overview/combine-files-dialog.png" alt-text="Combine files dialog box.":::
 
 ## Combined files output
 
@@ -82,7 +82,7 @@ After the **Combine files** process is finished, Power Query automatically perfo
 
 4. Creates a new group with the prefix **Transform file from** and the initial query as the suffix, and organizes all the components used to create these combined files in that group.
 
-   ![Combined files output.](media/combine-files-overview/combine-files-output.png "Combined files output")
+   :::image type="content" source="media/combine-files-overview/combine-files-output.png" alt-text="Combined files output.":::
 
 You can easily combine all files within a given folder, as long as they have the same file type and structure (including the same columns). You can also apply additional transformation or extraction steps by modifying the automatically generated example query, without having to worry about modifying or creating additional function query steps.
 

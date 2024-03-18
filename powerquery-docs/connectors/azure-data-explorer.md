@@ -64,8 +64,7 @@ To connect to Azure Data Explorer from Power Query Desktop:
 
 7. In **Navigator**, select the database information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in the Power Query editor. In this example, StormEvents was selected in the Samples database.
 
-    [![Screenshot of the Navigator open and containing the data from StormEvents in the Samples database.](media/azure-data-explorer/navigator-desktop.png)](media/azure-data-explorer/navigator-desktop.png#lightbox)
-
+    :::image type="content" source="media/azure-data-explorer/navigator-desktop.png" lightbox="media/azure-data-explorer/navigator-desktop.png" alt-text="Screenshot of the Navigator open and containing the data from StormEvents in the Samples database.":::
 ## Connect to Azure Data Explorer from Power Query Online
 
 To connect to Azure Data Explorer from Power Query Online:
@@ -185,7 +184,7 @@ You can use any of the following options in your M query:
 
 Kusto queries return, by default, up to 500,000 rows or 64 MB, as described in [query limits](/azure/data-explorer/kusto/concepts/querylimits). You can override these defaults by using **Advanced options** in the  **Azure Data Explorer (Kusto)** connection window:
 
-![advanced options.](media/azure-data-explorer/advanced-options.png)
+:::image type="content" source="media/azure-data-explorer/advanced-options.png" alt-text="advanced options.":::
 
 These options issue [set statements](/azure/data-explorer/kusto/query/setstatement) with your query to change the default query limits:
 
@@ -213,7 +212,7 @@ You can use [query parameters](/azure/data-explorer/kusto/query/queryparameterss
 
 You can use a query parameter in any query step that supports it. For example, filter the results based on the value of a parameter. In this example, select the drop-down menu on the right side of the `State` column in the Power Query editor, select **Text Filters** > **Equals**, then select **ALABAMA** under **Keep rows where 'State'**.
 
-![Filter results using a parameter.](media/azure-data-explorer/filter-using-parameter.png)
+:::image type="content" source="media/azure-data-explorer/filter-using-parameter.png" alt-text="Filter results using a parameter.":::
 
 #### Provide parameters to an Azure Data Explorer function
 
@@ -252,7 +251,7 @@ LargeOrSmallSales(20,"<")
 1. Connect to the cluster where you created the function.
 2. In the Power Query navigator, select the function from the list of objects. The connector analyzes the parameters and presents them above the data on the right side of the navigator.
 
-   ![Screenshot with the Cutoff and Op parameters displayed above the data in the navigator.](media/azure-data-explorer/connector-analysis.png)
+   :::image type="content" source="media/azure-data-explorer/connector-analysis.png" alt-text="Screenshot with the Cutoff and Op parameters displayed above the data in the navigator.":::
 
 3. Add values to the parameters and then select **Apply**.
 4. After the preview appears, select **Transform Data**.
@@ -269,7 +268,7 @@ LargeOrSmallSales(20,"<")
 
 The final report will include slicers for the two static tables and any visuals from the summary sales.
 
-![Screenshot in Power BI with the Cutoff and Op value selections displayed next to the table.](media/azure-data-explorer/slicers-visuals.png)
+:::image type="content" source="media/azure-data-explorer/slicers-visuals.png" alt-text="Screenshot in Power BI with the Cutoff and Op value selections displayed next to the table.":::
 
 The base table is filtered first and then aggregated.
 

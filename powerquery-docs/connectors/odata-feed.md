@@ -40,17 +40,17 @@ To load data from an OData Feed in Power Query Desktop:
 
 2. Choose the **Basic** button and enter a URL address in the text box. This URL should be the root of the OData service you want to connect to. For example, enter `http://services.odata.org/V4/northwind/northwind.svc/`. Then select **OK**.
 
-   ![OData URL selection.](media/odata-feed/odata-basic-url.png)
+   :::image type="content" source="media/odata-feed/odata-basic-url.png" alt-text="OData URL selection.":::
 
-   If the URL address you enter is invalid, a ![Warning icon.](./media/odata-feed/web-warning.png) warning icon will appear next to the **URL** textbox.
+   If the URL address you enter is invalid, a :::image type="content" source="./media/odata-feed/web-warning.png" alt-text="Warning icon."::: warning icon will appear next to the **URL** textbox.
 
 3. If this is the first time you're connecting using the OData Feed, select the authentication type, input your credentials (if necessary), and select the level to apply the authentication settings to. Then select **Connect**.
 
-   ![OData credentials selection.](media/odata-feed/odata-sign-in.png)
+   :::image type="content" source="media/odata-feed/odata-sign-in.png" alt-text="OData credentials selection.":::
 
 4. From the **Navigator** dialog, you can select a table, then either transform the data in the Power Query Editor by selecting **Transform Data**, or load the data by selecting **Load**.
 
-   ![Web table selection.](media/odata-feed/odata-navigator.png)
+   :::image type="content" source="media/odata-feed/odata-navigator.png" alt-text="Web table selection.":::
 
    If you have multiple tables that have a direct relationship to one or more of the already selected tables, you can select the **Select Related Tables** button. When you do, all tables that have a direct relationship to one or more of the already selected tables will be imported as well.
 

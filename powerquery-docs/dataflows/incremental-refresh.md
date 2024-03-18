@@ -32,7 +32,7 @@ A dataflow can contain many tables. Incremental refresh is set up at the table l
 
 To set up an incremental-refreshed table, start by configuring your table as you would any other table.
 
-After the dataflow is created and saved, select **Incremental refresh** ![Incremental refresh.](media/incremental-refresh/dataflows-incremental-refresh-icon.png) in the table view, as shown in the following image.
+After the dataflow is created and saved, select **Incremental refresh** :::image type="content" source="media/incremental-refresh/dataflows-incremental-refresh-icon.png" alt-text="Incremental refresh."::: in the table view, as shown in the following image.
 
 ![Incremental refresh icon for dataflows.](media/incremental-refresh/dataflows-incremental-refresh-01.png)
 

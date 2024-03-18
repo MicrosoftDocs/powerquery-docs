@@ -51,8 +51,7 @@ Use the following steps to create the query in your own Power Query Online envir
 
 After following these steps, your query will look like the one in the following image.
 
-[![Sample query with query folding indicators enabled.](media/query-plan/sample-query.png)](media/query-plan/sample-query.png#lightbox)
-
+:::image type="content" source="media/query-plan/sample-query.png" lightbox="media/query-plan/sample-query.png" alt-text="Sample query with query folding indicators enabled.":::
 This query connects to the SalesOrderHeader table, and selects a few columns from the last five orders with a **TotalDue** value above 1000.
 
 >[!NOTE]
@@ -65,7 +64,7 @@ This query connects to the SalesOrderHeader table, and selects a few columns fro
 
 Your first step in this process is to review your query and pay close attention to the query folding indicators. The goal is to review the steps that are marked as not folded. Then you can see if making changes to the overall query could make those transformations fold completely.
 
-![Query folding indicators for the sample query inside the Applied steps pane.](media/query-plan/step-folding-indicators-sample.png)
+:::image type="content" source="media/query-plan/step-folding-indicators-sample.png" alt-text="Query folding indicators for the sample query inside the Applied steps pane.":::
 
 For this example, the only step that can't be folded is **Kept bottom rows**, which is easy to identify through the *not folded* step indicator. This step is also the last step of the query.
 
@@ -75,14 +74,12 @@ The goal now is to review this step and understand what's being folded back to t
 
 You've identified the **Kept bottom rows** step as a step of interest since it doesn't fold back to the data source. Right-click the step and select the **View Query plan** option. This action displays a new dialog that contains a diagram for the query plan of the selected step.
 
-[![Query plan dialog that showcases a diagram view for the query plan with nodes connected by lines.](media/query-plan/query-plan-diagram-sample-query.png)](media/query-plan/query-plan-diagram-sample-query.png#lightbox)
-
+:::image type="content" source="media/query-plan/query-plan-diagram-sample-query.png" lightbox="media/query-plan/query-plan-diagram-sample-query.png" alt-text="Query plan dialog that showcases a diagram view for the query plan with nodes connected by lines.":::
 Power Query tries to optimize your query by taking advantage of lazy evaluation and query folding, as mentioned in [Query folding basics](query-folding-basics.md). This query plan represents the optimized translation of your M query into the native query that's sent to the data source. It also includes any transforms that are performed by the Power Query Engine. The order in which the nodes appear follows the order of your query starting from the last step or output of your query, which is represented on the far left of the diagram and in this case is the *Table.LastN* node that represents the *Kept bottom rows* step.
 
 At the bottom of the dialog, there's a bar with icons that help you zoom in or out of the query plan view, and other buttons to help you manage the view. For the previous image, the *Fit to view* option from this bar was used to better appreciate the nodes.
 
-[![Query plan dialog with the nodes magnified for a better view.](media/query-plan/query-plan-fit-to-screen.png)](media/query-plan/query-plan-fit-to-screen.png#lightbox)
-
+:::image type="content" source="media/query-plan/query-plan-fit-to-screen.png" lightbox="media/query-plan/query-plan-fit-to-screen.png" alt-text="Query plan dialog with the nodes magnified for a better view.":::
 >[!NOTE]
 >The query plan represents the optimized plan. When the engine is evaluating a query, it tries to fold all operators into a data source. In some cases, it might even do some internal reordering of the steps to maximize folding. With this in mind, the nodes/operators left in this optimized query plan typically contain the "folded" data source query and any operators that couldn't be folded and are evaluated locally.
 
@@ -95,12 +92,10 @@ You can identify the nodes in this diagram as two groups:
 
 The following image shows the folded nodes inside the red rectangle. The rest of the nodes couldn't be folded back to the data source. You'll need to review the rest of the nodes since the goal is to attempt to have those nodes fold back to the data source.
 
-[![Query plan view controls at the bottom of the dialog with the fit to view option selected.](media/query-plan/query-plan-folded-nodes.png)](media/query-plan/query-plan-folded-nodes.png#lightbox)
-
+:::image type="content" source="media/query-plan/query-plan-folded-nodes.png" lightbox="media/query-plan/query-plan-folded-nodes.png" alt-text="Query plan view controls at the bottom of the dialog with the fit to view option selected.":::
 You can select **View details** at the bottom of some nodes to display extended information. For example, the details of the `Value.NativeQuery` node show the native query (in SQL) that will be sent to the data source.
 
-[![Details view for the Value.NativeQuery node in the query plan.](media/query-plan/query-plan-view-details.png)](media/query-plan/query-plan-view-details.png#lightbox)
-
+:::image type="content" source="media/query-plan/query-plan-view-details.png" lightbox="media/query-plan/query-plan-view-details.png" alt-text="Details view for the Value.NativeQuery node in the query plan.":::
 The query shown here might not be exactly the same query sent to the data source, but it's a good approximation. For this case, it tells you exactly what columns will be queried from the SalesOrderHeader table and then how it will filter that table using the TotalDue field to only get rows where the value for that field is larger than 1000. The node next to it, [Table.LastN](/powerquery-m/table-lastn), is calculated locally by the Power Query engine, as it can't be folded.
 
 >[!NOTE]
@@ -127,16 +122,15 @@ Implement the alternative discussed in the previous section:
 2. Remove the *Kept bottom rows* step.
 3. Sort the **SalesOrderID** column in descending order.
 
-   ![Sorting the SalesOrderID column in descending order using the autofilter menu.](media/query-plan/sort-descending.png)
+   :::image type="content" source="media/query-plan/sort-descending.png" alt-text="Sorting the SalesOrderID column in descending order using the autofilter menu.":::
 
 4. Select the table icon on the top-left corner of the data preview view and select the option that reads Keep top rows. In the dialog, pass the number five as the argument and hit OK.
 
-   ![Using the table context menu to select the Keep top rows transform to keep only the top five rows.](media/query-plan/keep-top-rows.png)
+   :::image type="content" source="media/query-plan/keep-top-rows.png" alt-text="Using the table context menu to select the Keep top rows transform to keep only the top five rows.":::
 
 After implementing the changes, check the query folding indicators again and see if it's giving you a folded indicator.
 
-[![All query folding indicators are green and showing that they can be folded. The final table provides the same rows but in a different order.](media/query-plan/alternative-approach.png)](media/query-plan/alternative-approach.png#lightbox)
-
+:::image type="content" source="media/query-plan/alternative-approach.png" lightbox="media/query-plan/alternative-approach.png" alt-text="All query folding indicators are green and showing that they can be folded. The final table provides the same rows but in a different order.":::
 Now it's time to review the query plan of the last step, which is now **Keep top rows**. Now there are only folded nodes. Select **View details** under `Value.NativeQuery` to verify which query is being sent to the database.
 
 [![New query plan after making the changes to the query, which now showcases only folded nodes, with Value.NativeQuery showing the full SQL statement that evaluates the query.](media/query-plan/alternative-query-plan.png)](media/query-plan/alternative-query-plan.png#lightbox)

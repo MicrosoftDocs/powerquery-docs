@@ -44,7 +44,7 @@ To connect to Salesforce Reports data:
 
 2. In **Salesforce Reports**, choose the **Production** URL if you use the Salesforce production URL (`https://www.salesforce.com`) to sign in.
 
-   ![Get data from the production URL.](media/salesforce-reports/sf-reports-url.png)
+   :::image type="content" source="media/salesforce-reports/sf-reports-url.png" alt-text="Get data from the production URL.":::
 
    You can also select **Custom** and enter a custom URL to sign in. This custom URL might be a custom domain you've created within Salesforce, such as `https://contoso.salesforce.com`. You can also use the custom URL selection if you're using your own CNAME record that redirects to Salesforce.
 
@@ -52,7 +52,7 @@ To connect to Salesforce Reports data:
 
 3. Select **Sign in** to sign in to your Salesforce account.
 
-   ![Sign in to your Salesforce account.](media/salesforce-reports/sf-reports-sign-in.png)
+   :::image type="content" source="media/salesforce-reports/sf-reports-sign-in.png" alt-text="Sign in to your Salesforce account.":::
 
    Once you've successfully signed in, select **Connect**.
 
@@ -68,7 +68,7 @@ To connect to Salesforce Reports data:
 
 2. In **Salesforce reports**, choose the URL you want to use to connect. Select the **Production** URL if you use the Salesforce production URL (`https://www.salesforce.com`) to sign in.
 
-   ![Add Salesforce Reports connection information.](media/salesforce-reports/sf-reports-url-online.png)
+   :::image type="content" source="media/salesforce-reports/sf-reports-url-online.png" alt-text="Add Salesforce Reports connection information.":::
 
    > [!NOTE]
    >Currently, you may need to select the **Custom** URL, enter **`https://www.salesforce.com`** in the text box, and then select **Production** to connect to your data.

@@ -47,7 +47,7 @@ To connect to Azure Blob Storage:
 
 2. In **Azure Blob Storage**, enter the account name or URL of your Azure Blob Storage account. Then select **OK**.
 
-    ![Screenshot of the Azure Blob Storage dialog box where you enter the account name or the URL.](./media/azure-blob-storage/enter-account-name.png)
+    :::image type="content" source="./media/azure-blob-storage/enter-account-name.png" alt-text="Screenshot of the Azure Blob Storage dialog box where you enter the account name or the URL.":::
 
 3. If this is the first time you're connecting to this account, select either the **Anonymous** or **Account key** authentication method to sign into the Azure Blob Storage account. More information: [Copy your account key from Azure Blob Storage](#copy-your-account-key-from-azure-blob-storage)
 
@@ -62,8 +62,7 @@ To connect to Azure Blob Storage:
 
 5. The **Navigator** dialog box shows the files that you uploaded to your Azure Blob Storage account. Select the containers you want to use, and then select either **Transform Data** to transform the data in Power Query or **Load** to load the data.
 
-   [![Screenshot of the Navigator open and containing the data from the Azure Blob Storage container.](./media/azure-blob-storage/navigator-desktop.png)](./media/azure-blob-storage/navigator-desktop.png#lightbox)
-
+   :::image type="content" source="./media/azure-blob-storage/navigator-desktop.png" lightbox="./media/azure-blob-storage/navigator-desktop.png" alt-text="Screenshot of the Navigator open and containing the data from the Azure Blob Storage container.":::
 ## Connect to Azure Blob Storage from Power Query Online
 
 To connect to Azure Blob Storage:

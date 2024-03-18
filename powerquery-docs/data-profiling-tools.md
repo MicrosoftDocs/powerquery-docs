@@ -19,7 +19,7 @@ The data profiling tools provide new and intuitive ways to clean, transform, and
 
 To enable the data profiling tools, go to the **View** tab on the ribbon. In Power Query Desktop, enable the options you want in the **Data preview** group, as shown in the following image.
 
-![Data profiling tools.](media/data-profiling-tools/enable-data-preview-tools.png "Data profiling tools")
+:::image type="content" source="media/data-profiling-tools/enable-data-preview-tools.png" alt-text="Data profiling tools.":::
 
 In Power Query Online, select **Data view**, then enable the options you want in the drop-down list.
 
@@ -48,7 +48,7 @@ The column quality feature labels values in rows in five categories:
 
 These indicators are displayed directly underneath the name of the column as part of a small bar chart, as shown in the following image.
 
-![Enhanced view of the bar chart with data quality indicators and labels above each column in the table.](media/data-profiling-tools/data-quality.png "Enhanced view of the bar chart with data quality indicators and labels")
+:::image type="content" source="media/data-profiling-tools/data-quality.png" alt-text="Enhanced view of the bar chart with data quality indicators and labels above each column in the table.":::
 
 The number of records in each column quality category is also displayed as a percentage.
 
@@ -60,17 +60,17 @@ By hovering over any of the columns, you are presented with the numerical distri
 
 This feature provides a set of visuals underneath the names of the columns that showcase the frequency and distribution of the values in each of the columns. The data in these visualizations is sorted in descending order from the value with the highest frequency.
 
-![Column distribution.](media/data-profiling-tools/column-distribution.png "Column distribution")
+:::image type="content" source="media/data-profiling-tools/column-distribution.png" alt-text="Column distribution.":::
 
 By hovering over the distribution data in any of the columns, you get information about the overall data in the column (with distinct count and unique values). You can also select the ellipsis button and choose from a menu of available operations.
 
-![Column distributions options.](media/data-profiling-tools/column-distribution-hover.png "Column distributions options")
+:::image type="content" source="media/data-profiling-tools/column-distribution-hover.png" alt-text="Column distributions options.":::
 
 ## Column profile
 
 This feature provides a more in-depth look at the data in a column. Apart from the column distribution chart, it contains a column statistics chart. This information is displayed underneath the data preview section, as shown in the following image.
 
-![Column profile.](media/data-profiling-tools/column-profile.png "Column profile")
+:::image type="content" source="media/data-profiling-tools/column-profile.png" alt-text="Column profile.":::
 
 ### Filter by value
 
@@ -80,19 +80,19 @@ You can interact with the value distribution chart on the right side and select 
 
 Right-click to display a set of available transformations for that value.
 
-![Displays shortcut menu with available tranformations for a single bar in the value distribution bar chart.](media/data-profiling-tools/column-profile-right-click.png "Displays shortcut menu with available tranformations")
+:::image type="content" source="media/data-profiling-tools/column-profile-right-click.png" alt-text="Displays shortcut menu with available tranformations for a single bar in the value distribution bar chart.":::
 
 ### Copy data
 
 In the upper-right corner of both the column statistics and value distribution sections, you can select the ellipsis button (...) to display a **Copy** shortcut menu. Select it to copy the data displayed in either section to the clipboard.
 
-![Copy column statistics.](media/data-profiling-tools/copy-column-statistics.png "Copy column statistics")
+:::image type="content" source="media/data-profiling-tools/copy-column-statistics.png" alt-text="Copy column statistics.":::
 
 ### Group by value
 
 When you select the ellipsis button (...) in the upper-right corner of the value distribution chart, in addition to **Copy** you can select **Group by**. This feature groups the values in your chart by a set of available options.
 
-![Group by value distribution.](media/data-profiling-tools/value-distribution-group-by.png "Group by value distribution")
+:::image type="content" source="media/data-profiling-tools/value-distribution-group-by.png" alt-text="Group by value distribution.":::
 
 The image below shows a column of product names that have been grouped by text length. After the values have been grouped in the chart, you can interact with individual values in the chart as described in [Filter by value](#filter-by-value).
 

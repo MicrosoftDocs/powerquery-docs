@@ -11,7 +11,7 @@ ms.topic: overview
 
 A merge queries operation joins two existing tables together based on matching values from one or multiple columns. You can choose to use different types of joins, depending on the output you want.
 
-![Diagram showing two empty tables on top merged to a table on the bottom with all columns from the left table and one from the right table.](media/merge-queries-overview/merge-operation-diagram-overview.png "Diagram showing two empty tables on top merged to a table on the bottom with all columns from the left table and one from the right table")
+:::image type="content" source="media/merge-queries-overview/merge-operation-diagram-overview.png" alt-text="Diagram showing two empty tables on top merged to a table on the bottom with all columns from the left table and one from the right table.":::
 
 ## Merging queries
 
@@ -20,7 +20,7 @@ You can find the **Merge queries** command on the **Home** tab, in the **Combine
 * **Merge queries**: Displays the **Merge** dialog box, with the selected query as the left table of the merge operation.
 * **Merge queries as new**: Displays the **Merge** dialog box without any preselected tables for the merge operation.
 
-![Merge queries commands in the Home tab.](media/merge-queries-overview/merge-icons.png "Merge queries commands in the Home tab")
+:::image type="content" source="media/merge-queries-overview/merge-icons.png" alt-text="Merge queries commands in the Home tab.":::
 
 ### Identify tables for merging
 
@@ -29,7 +29,7 @@ The merge operation requires two tables:
 * **Left table for merge**: The first selection, from top to bottom of your screen.
 * **Right table for merge**: The second selection, from top to bottom of your screen.
 
-![Merge dialog box.](media/merge-queries-overview/merge-window.png "Merge dialog box")
+:::image type="content" source="media/merge-queries-overview/merge-window.png" alt-text="Merge dialog box.":::
 
 >[!NOTE]
 >The position&mdash;left or right&mdash;of the tables becomes very important when you select the correct join kind to use.
@@ -94,12 +94,12 @@ A *join kind* specifies how a merge operation will be performed. The following t
 
 |Join kind| Icon| Description|
 |---------------|-----|-----------|
-|[Left outer](merge-queries-left-outer.md)| ![Left outer.](media/merge-queries-overview/join-kind-left-outer-icon.jpg)| All rows from the left table, matching rows from the right table|
-|[Right outer](merge-queries-right-outer.md)| ![Right outer.](media/merge-queries-overview/join-kind-right-outer-icon.jpg)| All rows from the right table, matching rows from the left table|
-|[Full outer](merge-queries-full-outer.md)| ![Full outer.](media/merge-queries-overview/join-kind-full-outer-icon.jpg)| All rows from both tables|
-|[Inner](merge-queries-inner.md)| ![Inner.](media/merge-queries-overview/join-kind-inner-icon.jpg)| Only matching rows from both tables|
-|[Left anti](merge-queries-left-anti.md)| ![Left anti.](media/merge-queries-overview/join-kind-left-anti-icon.jpg)| Only rows from the left table|
-|[Right anti](merge-queries-right-anti.md)| ![Right anti.](media/merge-queries-overview/join-kind-right-anti-icon.jpg)| Only rows from the right table|
+|[Left outer](merge-queries-left-outer.md)| :::image type="content" source="media/merge-queries-overview/join-kind-left-outer-icon.jpg" alt-text="Left outer.":::| All rows from the left table, matching rows from the right table|
+|[Right outer](merge-queries-right-outer.md)| :::image type="content" source="media/merge-queries-overview/join-kind-right-outer-icon.jpg" alt-text="Right outer.":::| All rows from the right table, matching rows from the left table|
+|[Full outer](merge-queries-full-outer.md)| :::image type="content" source="media/merge-queries-overview/join-kind-full-outer-icon.jpg" alt-text="Full outer.":::| All rows from both tables|
+|[Inner](merge-queries-inner.md)| :::image type="content" source="media/merge-queries-overview/join-kind-inner-icon.jpg" alt-text="Inner.":::| Only matching rows from both tables|
+|[Left anti](merge-queries-left-anti.md)| :::image type="content" source="media/merge-queries-overview/join-kind-left-anti-icon.jpg" alt-text="Left anti.":::| Only rows from the left table|
+|[Right anti](merge-queries-right-anti.md)| :::image type="content" source="media/merge-queries-overview/join-kind-right-anti-icon.jpg" alt-text="Right anti.":::| Only rows from the right table|
 
 ## Fuzzy matching
 

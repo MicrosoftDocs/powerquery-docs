@@ -20,7 +20,7 @@ The get data experience allows you to discover and connect to your data.
 
 The procedures for where to start getting data in Power BI Desktop are described in [Data sources in Power BI Desktop](/power-bi/connect-data/desktop-data-sources).
 
-:::image type="content" source="media/where-to-get-data/power-bi-desktop-data-select.png" alt-text="Screenshot of the Data field in the Home ribbon of Power BI Desktop":::
+:::image type="content" source="media/where-to-get-data/power-bi-desktop-data-select.png" alt-text="Screenshot of the Data field in the Home ribbon of Power BI Desktop.":::
 
 The new modular experience in Power Query Online is separated into different modules located on the left side navigation bar. These modules include:
 
@@ -54,7 +54,7 @@ The OneLake data hub makes it easy to find, explore, and use the Fabric data ite
 
 The **new** module provides a full list of connectors that you can select from. On this page, you can search for a connector across all categories by using the search bar at the top of page. You can also navigate across the categories to find a specific connector to integrate with. Selecting a connector here opens the connection settings window, which begins the process of connecting. For more information on using connectors, go to [Getting data overview](get-data-experience.md).
 
-:::image type="content" source="media/get-data-ui/new.png" alt-text="New Module Screenshot" lightbox="media/get-data-ui/new.png":::
+:::image type="content" source="media/get-data-ui/new.png" alt-text="New Module Screenshot." lightbox="media/get-data-ui/new.png":::
 
 ## Upload
 
@@ -68,16 +68,16 @@ The **Upload** module lets you upload your files directly. The following connect
 
 This module is an extension of this capability and lets you select the browse button to upload a local file, or even drag and drop a file. For more information on uploading files, go to [Upload a file](upload-file.md).
 
-:::image type="content" source="media/get-data-ui/upload.png" alt-text="Upload Module Screenshot" lightbox="media/get-data-ui/upload.png":::
+:::image type="content" source="media/get-data-ui/upload.png" alt-text="Upload Module Screenshot." lightbox="media/get-data-ui/upload.png":::
 
 ## Blank table
 
 The **Blank table** module provides a quick start in creating a table in a dataflow.
 
-:::image type="content" source="media/get-data-ui/blank-table.png" alt-text="Blank Query Module Screenshot" lightbox="media/get-data-ui/blank-table.png":::
+:::image type="content" source="media/get-data-ui/blank-table.png" alt-text="Blank Query Module Screenshot." lightbox="media/get-data-ui/blank-table.png":::
 
 ## Blank query
 
 The **Blank query** module lets you write or paste your own M script to create a new query.
 
-:::image type="content" source="media/get-data-ui/blank-query.png" alt-text="Blank Table Module Screenshot":::
+:::image type="content" source="media/get-data-ui/blank-query.png" alt-text="Blank Table Module Screenshot.":::

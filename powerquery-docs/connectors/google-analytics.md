@@ -43,7 +43,7 @@ To connect to Google Analytics data:
 
 1. Select **Get Data** from the **Home** ribbon in Power BI Desktop. Select **Online Services** from the categories on the left, and then select **Google Analytics**. Then select **Connect**.
 
-   ![Get Data from Google Analytics.](./media/google-analytics/get-ga-data.png)
+   :::image type="content" source="./media/google-analytics/get-ga-data.png" alt-text="Get Data from Google Analytics.":::
 
 2. If this is the first time you're getting data through the Google Analytics connector, a third-party notice is displayed. Select **Don't warn me again with this connector** if you don't want this message to be displayed again. Then select **Continue**.
 
@@ -51,29 +51,29 @@ To connect to Google Analytics data:
 
 4. To sign in to your Google Analytics account, select **Sign in**.
 
-   ![Select sign in button.](./media/google-analytics/sign-in.png)
+   :::image type="content" source="./media/google-analytics/sign-in.png" alt-text="Select sign in button.":::
 
 5. In the **Sign in with Google** window that appears, provide your credentials to sign in to your Google Analytics account. You can either supply an email address or phone number. Then select **Next**.
 
-   ![Sign in to Adobe Analytics.](./media/google-analytics/google-sign-in.png)
+   :::image type="content" source="./media/google-analytics/google-sign-in.png" alt-text="Sign in to Adobe Analytics.":::
 
 6. Enter your Google Analytics password and select **Next**.
 
-   ![Enter your password.](./media/google-analytics/enter-password.png)
+   :::image type="content" source="./media/google-analytics/enter-password.png" alt-text="Enter your password.":::
 
 7. When asked if you want Power BI Desktop to access your Google account, select **Allow**.
 
-   ![Allow access to your Google account.](./media/google-analytics/access-account.png)
+   :::image type="content" source="./media/google-analytics/access-account.png" alt-text="Allow access to your Google account.":::
 
 8. Once you've successfully signed in, select **Connect**.
 
-   ![Signed in and ready to connect.](./media/google-analytics/signed-in.png)
+   :::image type="content" source="./media/google-analytics/signed-in.png" alt-text="Signed in and ready to connect.":::
 
 Once the connection is established, you’ll see a list of the accounts you have access to. Drill through the account, properties, and views to see a selection of values, categorized in display folders.
 
 You can **Load** the selected table, which brings the entire table into Power BI Desktop, or you can select **Transform Data** to edit the query, which opens Power Query Editor. You can then filter and refine the set of data you want to use, and then load that refined set of data into Power BI Desktop.
 
-![Load or transform data.](./media/adobe-analytics/button-select.png)
+:::image type="content" source="./media/adobe-analytics/button-select.png" alt-text="Load or transform data.":::
 
 ## Connect to Google Analytics data from Power Query Online
 
@@ -83,7 +83,7 @@ To connect to Google Analytics data:
 
 2. From the connection page, enter a connection name and choose an on-premises data gateway if necessary.
 
-   ![Image showing the connection page with a connection name and no gateway selected.](./media/google-analytics/ga-connect.png)
+   :::image type="content" source="./media/google-analytics/ga-connect.png" alt-text="Image showing the connection page with a connection name and no gateway selected.":::
 
 3. Select **Sign in** to sign in to your Google account.
 
@@ -92,15 +92,15 @@ To connect to Google Analytics data:
    > [!NOTE]
    > Currently, the Google Analytics sign-in dialog boxes indicate that you are signing in to Power Query Desktop. This wording will be changed in the future.
 
-   ![Sign in to Adobe Analytics from Power Query Online.](./media/google-analytics/google-sign-in.png)
+   :::image type="content" source="./media/google-analytics/google-sign-in.png" alt-text="Sign in to Adobe Analytics from Power Query Online.":::
 
 5. Enter your Google Analytics password and select **Next**.
 
-   ![Enter your password from Power Query Online.](./media/google-analytics/enter-password.png)
+   :::image type="content" source="./media/google-analytics/enter-password.png" alt-text="Enter your password from Power Query Online.":::
 
 6. When asked if you want Power BI Desktop to access your Google account, select **Allow**.
 
-   ![Allow access to your Google account from Power Query Online.](./media/google-analytics/access-account.png)
+   :::image type="content" source="./media/google-analytics/access-account.png" alt-text="Allow access to your Google account from Power Query Online.":::
 
 7. Once you've successfully signed in, select **Next**.
 

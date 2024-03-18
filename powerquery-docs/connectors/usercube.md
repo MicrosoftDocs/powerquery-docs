@@ -37,16 +37,16 @@ To connect to a Usercube server:
 
 2. From the **Other** category, select **Usercube**, and then select **Connect**.
 
-   ![Get Data.](media/usercube/usercube-get-data.png)
+   :::image type="content" source="media/usercube/usercube-get-data.png" alt-text="Get Data.":::
 
 3. You'll be prompted to specify your Usercube server's URL.
 
-   ![Usercube Server.](media/usercube/usercube-server.png)
+   :::image type="content" source="media/usercube/usercube-server.png" alt-text="Usercube Server.":::
 
 4. Enter the client credentials. The *Client Id* must be built from the *Identifier* of an *OpenIdClient* element. This element is defined in the configuration of your Usercube instance. To this identifier, you must concatenate the `@` character and the domain name of the Usercube instance.
 
-   ![Client credentials.](media/usercube/usercube-client-credentials.png)
+   :::image type="content" source="media/usercube/usercube-client-credentials.png" alt-text="Client credentials.":::
 
 5. In **Navigator**, select the data you require. Then, either select **Transform data** to transform the data in the  Power Query Editor, or choose **Load** to load the data in Power BI.
 
-   ![Usercube import data navigator](./media/usercube/usercube-import-data-navigator.png)
+   :::image type="content" source="./media/usercube/usercube-import-data-navigator.png" alt-text="Usercube import data navigator.":::

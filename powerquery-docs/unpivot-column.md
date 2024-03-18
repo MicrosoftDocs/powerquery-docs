@@ -37,9 +37,9 @@ Power Query will always create the attribute-value pair by using two columns:
 
 There are multiple places in the user interface where you can find **Unpivot columns**. You can right-click the columns that you want to unpivot, or you can select the command from the **Transform** tab in the ribbon.
 
-![Right-click operation to unpivot columns.](media/unpivot-column/unpivot-right-click.png "Right-click operation to unpivot columns")
+:::image type="content" source="media/unpivot-column/unpivot-right-click.png" alt-text="Right-click operation to unpivot columns.":::
 
-![Unpivot columns command on the Transform tab.](media/unpivot-column/unpivot-transform-tab.png "Unpivot columns command on the Transform tab")
+:::image type="content" source="media/unpivot-column/unpivot-transform-tab.png" alt-text="Unpivot columns command on the Transform tab.":::
 
 There are three ways that you can unpivot columns from a table:
 
@@ -81,7 +81,7 @@ The following image shows what your query will look like after the refresh with 
 
 You can also select the columns that you don't want to unpivot and unpivot the rest of the columns in the table. This operation is where **Unpivot other columns** comes into play.
 
-![Table with the Country column shortcut menu selected and the Unpivot other columns command in the menu is emphasized.](media/unpivot-column/unpivot-other-columns.png "Table with the Country column shortcut menu selected and the Unpivot other columns command in the menu is emphasized")
+:::image type="content" source="media/unpivot-column/unpivot-other-columns.png" alt-text="Table with the Country column shortcut menu selected and the Unpivot other columns command in the menu is emphasized.":::
 
 The result of that operation will yield exactly the same result as the one you got from **Unpivot columns**.
 
@@ -126,10 +126,10 @@ Notice how this operation will yield the same output as the previous examples.
 
 After doing a refresh, if our source table changes to have a new **9/1/2020** column and new rows for UK and Mexico, the output of the query will be different from the previous examples. Say that our source table, after a refresh, changes to the table in the following image.
 
-![Unpivot updated source table.](media/unpivot-column/unpivot-updated-source-table.png "Unpivot updated source table")
+:::image type="content" source="media/unpivot-column/unpivot-updated-source-table.png" alt-text="Unpivot updated source table.":::
 
 The output of our query will look like the following image.
 
-![Unpivot only selected columns updated final table.](media/unpivot-column/unpivot-only-selected-columns-updated-final-table.png "Unpivot only selected columns updated final table")
+:::image type="content" source="media/unpivot-column/unpivot-only-selected-columns-updated-final-table.png" alt-text="Unpivot only selected columns updated final table.":::
 
 It looks like this because the unpivot operation was applied only on the **6/1/2020**, **7/1/2020**, and **8/1/2020** columns, so the column with the header **9/1/2020** remains unchanged.
