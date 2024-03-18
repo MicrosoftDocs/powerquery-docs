@@ -533,7 +533,7 @@ items:
         href: connectors/sharepoint-list.md
       - name: "SharePoint Online list"
         href: connectors/sharepoint-online-list.md
-      - name: "SingleStore (Beta)"
+      - name: "SingleStore"
         href: connectors/singlestore.md
       - name: "SIS-CC SDMX (Beta)"
         href: connectors/sis-cc-sdmx.md
