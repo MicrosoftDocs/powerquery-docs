@@ -652,7 +652,7 @@ items:
         - name: "Handling authentication"
           href: handling-authentication.md
         - name: "Configure Microsoft Entra ID for your connector"
-          href: configure-entra-for-connector.md
+          href: configure-microsoft-entra-for-connector.md
         - name: "Handling data access"
           href: handling-data-access.md
         - name: "ODBC development"
