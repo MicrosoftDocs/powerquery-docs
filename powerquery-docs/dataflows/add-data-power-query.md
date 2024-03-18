@@ -38,13 +38,13 @@ Before you start to follow this article:
 
 1. In the navigation pane, select **Dataverse** to expand it, and then select **Tables**.
 
-    ![Tables area.](./media/add-data-power-query/view-entities-portal.png)
+    :::image type="content" source="./media/add-data-power-query/view-entities-portal.png" alt-text="Tables area.":::
 
 1. In the command menu, select **Data** > **Get data**.
 
 1. In the list of data sources, select **OData**.
 
-    ![Choose the OAuth connector.](./media/add-data-power-query/choose-odata.png)
+    :::image type="content" source="./media/add-data-power-query/choose-odata.png" alt-text="Choose the OAuth connector.":::
 
 1. Under **Connection settings**, type or paste this URL, and then select **Next**:
 
@@ -52,7 +52,7 @@ Before you start to follow this article:
 
 1. In the list of tables, select the **Customers** check box, and then select **Next**.
 
-    ![Select the Customers table.](./media/add-data-power-query/select-table.png)
+    :::image type="content" source="./media/add-data-power-query/select-table.png" alt-text="Select the Customers table.":::
 
 1. (optional) Modify the schema to suit your needs by choosing which columns to include, transforming the table in one or more ways, adding an index or conditional column, or making other changes.
 
@@ -62,7 +62,7 @@ Before you start to follow this article:
 
 1. Under **Load settings**, select **Load to new table**.
 
-    ![Load to new table.](./media/add-data-power-query/new-entity-name.png)
+    :::image type="content" source="./media/add-data-power-query/new-entity-name.png" alt-text="Load to new table.":::
 
     You can give the new table a different name or display name, but leave the default values to follow this tutorial exactly.
 
@@ -76,13 +76,13 @@ Before you start to follow this article:
 
     The **Customers** table that you created from an OData feed appears as a custom table.
 
-    ![List of standard and custom tables.](./media/add-data-power-query/entity-list.png)
+    :::image type="content" source="./media/add-data-power-query/entity-list.png" alt-text="List of standard and custom tables.":::
 
 > [!WARNING]
 > Existing data might be altered or deleted when loading data to a Dataverse table while having the **Delete rows that no longer exist in the query output** enabled or a primary key column defined.
 
 If you select **Load to existing table**, you can specify a table into which you add data from the **Customers** table. You could, for example, add the data to the **Account** table with which the Dataverse ships. Under **Column mapping**, you can further specify that data in the **ContactName** column from the **Customers** table should be added to the **Name** column in the **Account** table.
 
-![Specify the name of the new table.](./media/add-data-power-query/existing-entity.png)
+:::image type="content" source="./media/add-data-power-query/existing-entity.png" alt-text="Specify the name of the new table.":::
 
 If an [error message about permissions](/powerapps/maker/data-platform/troubleshoot-power-query-issues) appears, contact your administrator.

@@ -315,7 +315,7 @@ User accounts in SAP BW have default settings for how decimal or date/time value
 
 The default settings are maintained in the SAP system in the User Profile for an account, and the user can view or change these settings in the SAP GUI with the menu path **System** > **User Profile** > **Own Data**.
 
-![Decimal notation settings menu.](decimal-notation.png)
+:::image type="content" source="decimal-notation.png" alt-text="Decimal notation settings menu.":::
 
 Power BI Desktop queries the SAP system for the decimal notation of the connected user and uses that notation to format decimal values in the data from SAP BW.
 
@@ -353,7 +353,7 @@ To solve this error, users must ask their SAP admin to grant the SAP BW user bei
 
 You can perform BEx queries in Power BI Desktop by enabling a specific property, as shown in the following image:
 
-![Enable Release for External Access.](enable-release.png)
+:::image type="content" source="enable-release.png" alt-text="Enable Release for External Access.":::
 
 ### MDX interface limitation
 
@@ -397,7 +397,7 @@ First, follow the instructions in [2777473 - MDX: FAQ for Power BI accessing BW 
 
 Because the Power Query SAP Business Warehouse connector uses the MDX interface provided by SAP for 3rd party access, you'll need to contact SAP for possible solutions as they own the layer between the MDX interface and the SAP BW server. Ask how "long text is XL" can be specified for your specific scenario.
 
-![Image showing where to set long text is xl setting.](long-text-xl.png)
+:::image type="content" source="long-text-xl.png" alt-text="Image showing where to set long text is xl setting.":::
 
 ### CHAR limit of 60 despite "long text" in SAP BW
 

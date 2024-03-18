@@ -47,7 +47,7 @@ The goal is to create a table like the following, where only the rows from the l
 5. In the **Join kind** section, select **Left anti**.
 6. Select **OK**.
 
-![Merge dialog box showing the results of following the previous left anti join procedure.](media/merge-queries-left-anti/left-anti-merge-window.png "Merge dialog box showing the results of following the previous left anti join procedure")
+:::image type="content" source="media/merge-queries-left-anti/left-anti-merge-window.png" alt-text="Merge dialog box showing the results of following the previous left anti join procedure.":::
 
 >[!TIP]
 >Take a closer look at the message at the bottom of the dialog box that reads "The selection excludes 1 of 4 rows from the first table." This message is crucial to understanding the result that you get from this operation.
@@ -58,7 +58,7 @@ In the **Countries** table, you have the **Country** Spain with an **id** of 4, 
 
 From the newly created **Countries** column, expand the **Country** field. Don't select the **Use original column name as prefix** check box.
 
-![Expand table column for Country.](media/merge-queries-left-anti/left-anti-expand-field.png "Expand table column for Country")
+:::image type="content" source="media/merge-queries-left-anti/left-anti-expand-field.png" alt-text="Expand table column for Country.":::
 
 After doing this operation, you'll create a table that looks like the following image. The newly expanded **Country** field doesn't have any values. That's because the left anti join doesn't bring any values from the right table&mdash;it only keeps rows from the left table.
 

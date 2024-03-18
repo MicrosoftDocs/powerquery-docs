@@ -61,7 +61,7 @@ To make the connection, take the following steps:
 
 2. Specify the Oracle net service name/TNS alias or Easy Connect (Plus) connection string to connect to in **Server**. Easy Connect is the simplest to use by setting the **Server** value to your Oracle Database server *Hostname/ServiceName*, where *ServiceName* is the global database name. The following screenshot uses a net service name.
 
-   ![Enter Oracle database connection.](./media/oracle-database/select-database.png)
+   :::image type="content" source="./media/oracle-database/select-database.png" alt-text="Enter Oracle database connection.":::
 
 3. If you're connecting from Power BI Desktop, select either the **Import** or **DirectQuery** data connectivity mode. The rest of these example steps use the Import data connectivity mode. To learn more about DirectQuery, go to [Use DirectQuery in Power BI Desktop](/power-bi/connect-data/desktop-use-directquery).
 
@@ -73,7 +73,7 @@ To make the connection, take the following steps:
 
    For more information about authentication, go to [Authentication with a data source](../connectorauthentication.md).
 
-   ![Enter your Oracle database credentials.](./media/oracle-database/sign-in.png)
+   :::image type="content" source="./media/oracle-database/sign-in.png" alt-text="Enter your Oracle database credentials.":::
 
 5. In **Navigator**, select the data you require, then either select **Load** to load the data or **Transform Data** to transform the data.
 
@@ -87,7 +87,7 @@ To make the connection, take the following steps:
 
 3. In the **Oracle database** dialog that appears, specify the Oracle net service name/TNS alias, Easy Connect Plus connection string, or connect descriptor to connect to in **Server**.
 
-   ![Enter Oracle database online connection.](./media/oracle-database/select-database-online.png)
+   :::image type="content" source="./media/oracle-database/select-database-online.png" alt-text="Enter Oracle database online connection.":::
 
 4. Provide a **Connection name**, such as "testoracleserver".
 
@@ -125,15 +125,15 @@ To download your client credentials:
 
 1. In your Oracle Autonomous database details page, select **DB Connection**.
 
-   ![DB Connection](media/oracle-database/adb-db-connection.png)
+   :::image type="content" source="media/oracle-database/adb-db-connection.png" alt-text="DB Connection.":::
 
 2. From the **Database Connection** page, select **Download Wallet**.
 
-   ![Download wallet](media/oracle-database/adb-download-wallet.png)
+   :::image type="content" source="media/oracle-database/adb-download-wallet.png" alt-text="Download wallet.":::
 
 3. Enter a password you would like to use with this wallet, confirm the password, then select **Download**.
 
-   ![Wallet password](media/oracle-database/adb-wallet-password.png)
+   :::image type="content" source="media/oracle-database/adb-wallet-password.png" alt-text="Wallet password.":::
 
 ### Configure Oracle ADB credentials
 
@@ -141,7 +141,7 @@ To download your client credentials:
 
 2. Unzip the credentials into the directory you specified in OCMT as the *Oracle Configuration File Directory*. In this example, the credentials are extracted to c:\data\wallet\wallet_contosomart.
 
-   ![Image with the wallet files unzipped in the wallet folder.](media/oracle-database/adb-wallet-unzipped.png)
+   :::image type="content" source="media/oracle-database/adb-wallet-unzipped.png" alt-text="Image with the wallet files unzipped in the wallet folder.":::
 
    > [!NOTE]
    > The tnsnames.ora file defines your Oracle Autonomous Database address and connection information.

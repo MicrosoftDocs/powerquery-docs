@@ -21,11 +21,11 @@ In the following example, Power Query wasn't able to determine the column header
 
 Before you can promote the headers, you need to remove the first four rows of the table. To make that happen, select the table menu in the upper-left corner of the preview window, and then select **Remove top rows**.
 
-![Remove top rows of sample table.](media/table-promote-demote-headers/promote-remove-top-rows.png "Remove top rows of sample table")
+:::image type="content" source="media/table-promote-demote-headers/promote-remove-top-rows.png" alt-text="Remove top rows of sample table.":::
 
 In the **Remove top rows** window, enter **4** in the **Number of rows** box.
 
-![Remove top rows window.](media/table-promote-demote-headers/promote-remove-top-rows-window.png "Remove top rows window")
+:::image type="content" source="media/table-promote-demote-headers/promote-remove-top-rows-window.png" alt-text="Remove top rows window.":::
 
 > [!NOTE]
 > To learn more about **Remove top rows** and other table operations, go to [Filter by row position](filter-row-position.md).
@@ -40,15 +40,15 @@ From here, you have a number of places where you can select the promote headers 
 
 * On the **Home** tab, in the **Transform** group.
 
-   ![Promote headers button on the Home tab.](media/table-promote-demote-headers/promote-home-tab.png "Promote headers button on the Home tab")
+   :::image type="content" source="media/table-promote-demote-headers/promote-home-tab.png" alt-text="Promote headers button on the Home tab.":::
 
 * On the **Transform** tab, in the **Table** group.
 
-   ![Promote headers button on the Transform tab.](media/table-promote-demote-headers/promote-transform-tab.png "Promote headers button on the Transform tab")
+   :::image type="content" source="media/table-promote-demote-headers/promote-transform-tab.png" alt-text="Promote headers button on the Transform tab.":::
 
 * On the table menu.
 
-   ![Promote headers button on the shortcut menu.](media/table-promote-demote-headers/promote-table-menu.png "Promote headers button on the shortcut menu")
+   :::image type="content" source="media/table-promote-demote-headers/promote-table-menu.png" alt-text="Promote headers button on the shortcut menu.":::
 
 After you do the promote headers operation, your table will look like the following image.
 
@@ -63,7 +63,7 @@ After you do the promote headers operation, your table will look like the follow
 
 In the following example, the column headers are incorrect: they're actually part of the table's data. You need to demote the headers to be part of the rows of the table.
 
-![Table with part of the data currently used as the column headers.](media/table-promote-demote-headers/demote-sample-table.png "Table with part of the data currently used as the column headers")
+:::image type="content" source="media/table-promote-demote-headers/demote-sample-table.png" alt-text="Table with part of the data currently used as the column headers.":::
 
 ### Locations of the demote headers operation
 
@@ -75,7 +75,7 @@ You have a number of places where you can select the demote headers operation:
 
 * On the **Transform** tab, in the **Table** group.
 
-   ![Demote headers button on the Transform tab.](media/table-promote-demote-headers/demote-transform-tab.png "Demote headers button on the Transform tab")
+   :::image type="content" source="media/table-promote-demote-headers/demote-transform-tab.png" alt-text="Demote headers button on the Transform tab.":::
 
 After you do this operation, your table will look like the following image.
 

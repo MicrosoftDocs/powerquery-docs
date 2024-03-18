@@ -15,7 +15,7 @@ Microsoft Power Platform dataflows and Azure Data Factory dataflows are often co
 
 Power Platform dataflows are data transformation services empowered by the Power Query engine and hosted in the cloud. These dataflows get data from different data sources and, after applying transformations, store it either in Dataverse or in Azure Data Lake Storage.
 
-![Power Platform dataflows diagram.](media/overview-dataflows/dataflow-function.png)
+:::image type="content" source="media/overview-dataflows/dataflow-function.png" alt-text="Power Platform dataflows diagram.":::
 
 ## Data Factory wrangling dataflows
 

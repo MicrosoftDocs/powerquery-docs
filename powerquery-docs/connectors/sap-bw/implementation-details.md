@@ -109,7 +109,7 @@ In the example above, this means that:
 
 To manually add the key in Import mode, just expand **Properties** and select the key.
 
-![Selecting the Key property in the Power Query navigator.](key-property.png)
+:::image type="content" source="key-property.png" alt-text="Selecting the Key property in the Power Query navigator.":::
 
 The key column will be of type date, and can be used for filtering. Filtering on this column will fold to the server.
 

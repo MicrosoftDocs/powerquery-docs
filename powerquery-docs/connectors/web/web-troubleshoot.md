@@ -123,7 +123,7 @@ We've strengthened the security of web connections to protect your data. However
 2. Under the **File** tab, select **Options and settings** > **Options**.
 3. In **Options**, under **Global** > **Security**, uncheck **Enable certificate revocation check**.
 
-   ![Screenshot of the Enable certificate revocation check box selected.](web-certificate-revocation.png)
+   :::image type="content" source="web-certificate-revocation.png" alt-text="Screenshot of the Enable certificate revocation check box selected.":::
 
 4. Select **OK**.
 5. Restart Power BI Desktop.

@@ -26,15 +26,15 @@ In this example, you're going to load data from an Excel file that's located on 
 
 2. Select the **Build** tab, and then select **Dataflows (Preview)**.
 
-   ![Navigate to dataflows page in Teams.](media/dataflows-teams/navigate-dataflows-page.png)
+   :::image type="content" source="media/dataflows-teams/navigate-dataflows-page.png" alt-text="Navigate to dataflows page in Teams.":::
 
 3. To create a new dataflow, select the **New** button.
 
-   ![Creating a new dataflow.](media/dataflows-teams/create-dataflow-teams.png)
+   :::image type="content" source="media/dataflows-teams/create-dataflow-teams.png" alt-text="Creating a new dataflow.":::
 
 4. Select the **Excel workbook** connector.
 
-   ![Select a connector.](media/dataflows-teams/choose-connector-teams.png)
+   :::image type="content" source="media/dataflows-teams/choose-connector-teams.png" alt-text="Select a connector.":::
 
 5. Enter a URL address in **File path or URL**, or use the **Browse OneDrive** button to navigate through your OneDrive folders. Select the file you want, and then select the **Next** button. For more information about using the OneDrive connection or getting data, see [SharePoint and OneDrive for Business files import](../sharepoint-onedrive-files.md) or [Getting data](../get-data-experience.md) from other sources.
 
@@ -42,11 +42,11 @@ In this example, you're going to load data from an Excel file that's located on 
 
 7. Clean and transform your data using Power Query. You can use the out-of-the box transformations to delete missing values, delete unnecessary columns, or to filter your data. With Power Query, you can apply more than 300 different transformations on your data. To learn more about Power Query transformations, see [Use Power Query to transform data](../power-query-ui.md). After you're finished with preparing your data, select **Next**.
 
-   ![Clean and transform data with Power Query.](media/dataflows-teams/data-prep-dataflows-teams.png)
+   :::image type="content" source="media/dataflows-teams/data-prep-dataflows-teams.png" alt-text="Clean and transform data with Power Query.":::
 
 8. In **Map tables**, select **Load to new table** to create a new table in Dataverse for Teams. You can also choose to load your data into an existing table. In the **Map tables** screen, you can also specify a **Unique primary name column** and an **Alternate key column (optional)**. In this example, leave these selections with the default values. To learn more about mapping your data and the different settings, see [Field mapping considerations for standard dataflows](get-best-of-standard-dataflows.md).
 
-   ![Mapping of data to Dataverse for Teams.](media/dataflows-teams/data-mapping-teams.png)
+   :::image type="content" source="media/dataflows-teams/data-mapping-teams.png" alt-text="Mapping of data to Dataverse for Teams.":::
 
 9. Select **Create** to finish your dataflow. Once you’ve created your dataflow, data begins loading into Dataverse for Teams. This process can take some time and you can use the management page to check the status. When a dataflow completes a run, its data is available to use.
 
@@ -54,7 +54,7 @@ In this example, you're going to load data from an Excel file that's located on 
 
 You can manage any dataflow you created from the **Dataflows (Preview)** tab. Here, you can see the status of all dataflows, when your dataflow was last refreshed, and take action from the action bar.
 
-![Dataflows management page.](media/dataflows-teams/manage-dataflow-teams.png)
+:::image type="content" source="media/dataflows-teams/manage-dataflow-teams.png" alt-text="Dataflows management page.":::
 
 In the **Last Refresh** column, you can see when your data was last refreshed. If your refresh failed, an error indication appears. If you select the error indication, the details of the error and recommended steps to address it appear.
 
@@ -64,7 +64,7 @@ In the **Status** column, you can see the current status of the dataflow. Possib
 
 To navigate to the action bar, select the three dots “…” next to your dataflow.
 
-![Take an action on your dataflow.](media/dataflows-teams/action-bar.png)
+:::image type="content" source="media/dataflows-teams/action-bar.png" alt-text="Take an action on your dataflow.":::
 
 Here you can:
 
@@ -76,7 +76,7 @@ Here you can:
 
 Select **Show refresh history** to see information about the last refresh of your dataflow. When the dataflow refresh is successful, you can see how many rows were added or updated in Dataverse. When your dataflow refresh wasn't successful, you can investigate why with the help of the error message.
 
-![Refresh history of a dataflow.](media/dataflows-teams/refresh-message-teams.png)
+:::image type="content" source="media/dataflows-teams/refresh-message-teams.png" alt-text="Refresh history of a dataflow.":::
 
 ## Dataflows in Teams is a lightweight version
 

@@ -35,7 +35,7 @@ In this example, you'll merge both tables, with the **Sales** table as the left 
 
 The goal is to create a table like the following, where the name of the country appears as a new **Country** column in the **Sales** table as long as the **CountryID** exists in the **Countries** table. If there are no matches between the left and right tables, a *null* value is the result of the merge for that row. In the following image, this is shown to be the case for **CountryID** 4, which was brought in from the **Sales** table.
 
-![Left outer join final table with the Country column added with the value of the fourth row of that column set to null.](media/merge-queries-left-outer/left-outer-final-table.png "Left outer join final table with the Country column added with the value of the fourth row of that column set to null")
+:::image type="content" source="media/merge-queries-left-outer/left-outer-final-table.png" alt-text="Left outer join final table with the Country column added with the value of the fourth row of that column set to null.":::
 <!--markdownlint-disable MD036-->
 **To do a left outer join**
 <!--markdownlint-enable MD036-->
@@ -46,11 +46,11 @@ The goal is to create a table like the following, where the name of the country 
 5. In the **Join kind** section, select **Left outer**.
 6. Select **OK**.
 
-![Merge dialog box showing the results of following the previous left outer join procedure.](media/merge-queries-left-outer/left-outer-merge-window.png "Merge dialog box showing the results of following the previous left outer join procedure")
+:::image type="content" source="media/merge-queries-left-outer/left-outer-merge-window.png" alt-text="Merge dialog box showing the results of following the previous left outer join procedure.":::
 
 From the newly created **Countries** column, expand the **Country** field. Don't select the **Use original column name as prefix** check box.
 
-![Expand table column for Country.](media/merge-queries-left-outer/left-outer-expand-field.png "Expand table column for Country")
+:::image type="content" source="media/merge-queries-left-outer/left-outer-expand-field.png" alt-text="Expand table column for Country.":::
 
 After performing this operation, you'll create a table that looks like the following image.
 

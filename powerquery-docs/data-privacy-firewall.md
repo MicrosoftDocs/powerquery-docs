@@ -218,7 +218,7 @@ in
 
 Here's a higher-level view, showing the dependencies.
 
-![Query Dependencies Dialog.](media/data-privacy-firewall/firewall-query-dependencies.png)
+:::image type="content" source="media/data-privacy-firewall/firewall-query-dependencies.png" alt-text="Query Dependencies Dialog.":::
 
 ### Let's partition
 

@@ -25,13 +25,13 @@ In addition to an optimized column management experience, another key benefit of
 
 You can turn on schema view by selecting **Schema view** in the **View** tab. When you're ready to work on your data again, you can select **Data view** to go back.
 
-![Schema view entry point in the View tab.](media/schema-view/schema-view-entry-point.png)
+:::image type="content" source="media/schema-view/schema-view-entry-point.png" alt-text="Schema view entry point in the View tab.":::
 
 ## Reordering columns
 
 One common task when working on your schema is reordering columns. In Schema View this can easily be done by dragging columns in the list and dropping in the right location until you achieve the desired column order.
 
-![Columns in Schema view can be reordered by dragging them and dropping them in the desired position.](media/schema-view/schema-view-drag.png)
+:::image type="content" source="media/schema-view/schema-view-drag.png" alt-text="Columns in Schema view can be reordered by dragging them and dropping them in the desired position.":::
 
 ## Applying transforms
 

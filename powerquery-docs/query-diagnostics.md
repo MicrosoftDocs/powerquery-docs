@@ -15,11 +15,11 @@ With Query Diagnostics, you can achieve a better understanding of what Power Que
 
 To use Query Diagnostics, go to the **Tools** tab in the Power Query editor ribbon.
 
-![Query Diagnostics.](media/query-diagnostics/diagnostics-toolbar.png)
+:::image type="content" source="media/query-diagnostics/diagnostics-toolbar.png" alt-text="Query Diagnostics.":::
 
 By default, Query Diagnostics might require administrative rights to run (depending on IT policy). If you find yourself unable to run Query Diagnostics, open the Power BI options page, and in the **Diagnostics** tab, select **Enable in Query Editor (does not require running as admin)**. This selection constrains you from being able to trace diagnostics when doing a full refresh into Power BI rather than the Power Query editor, but does allow you to still use it when previewing, authoring, and so on.
 
-![Query Diagnostics options.](media/query-diagnostics/diagnostics-options.png)
+:::image type="content" source="media/query-diagnostics/diagnostics-options.png" alt-text="Query Diagnostics options.":::
 
 Whenever you start diagnostics, Power Query begins tracing any evaluations that you cause. The evaluation that most users think of is when you press refresh, or when you retrieve data for the first time, but there are many actions that can cause evaluations, depending on the connector. For example, with the SQL connector, when you retrieve a list of values to filter, that would kick off an evaluation as well&mdash;but it doesn't associate with a user query, and that's represented in the diagnostics. Other system-generated queries might include the navigator or the get data experience.
 

@@ -60,7 +60,7 @@ To make the connection to a **Snowflake** computing warehouse, take the followin
 
 6. In **Navigator**, select one or multiple elements to import and use in Power BI Desktop. Then select either **Load** to load the table in Power BI Desktop, or **Transform Data** to open the Power Query Editor where you can filter and refine the set of data you want to use, and then load that refined set of data into Power BI Desktop.
 
-   ![Screenshot of the Navigator with the test schema database open and the DimProduct table selected.](./media/snowflake/navigator-desktop.png)
+   :::image type="content" source="./media/snowflake/navigator-desktop.png" alt-text="Screenshot of the Navigator with the test schema database open and the DimProduct table selected.":::
 
 7. Select **Import** to import data directly into Power BI, or select **DirectQuery**, then select **OK**. More information: [Use DirectQuery in Power BI Desktop](/power-bi/connect-data/desktop-use-directquery)
 
@@ -77,7 +77,7 @@ To make the connection, take the following steps:
 
 2. In the **Snowflake** dialog that appears, enter the name of the server and warehouse.
 
-   ![Snowflake connection builder in Power Query Online.](./media/snowflake/snowflake-pqo-advanced.png)
+   :::image type="content" source="./media/snowflake/snowflake-pqo-advanced.png" alt-text="Snowflake connection builder in Power Query Online.":::
 
 3. Enter any values in the advanced options you want to use. If there are any advanced options not represented in the UI, you can edit them in the **Advanced Editor** in Power Query later.
 
@@ -87,7 +87,7 @@ To make the connection, take the following steps:
 
 6. In **Navigator**, select the data you require, then select **Transform data** to transform the data in Power Query Editor.
 
-   ![Screenshot of the online Navigator with the test schema database open and the DimProduct table selected.](./media/snowflake/navigator-online.png)
+   :::image type="content" source="./media/snowflake/navigator-online.png" alt-text="Screenshot of the online Navigator with the test schema database open and the DimProduct table selected.":::
 
 ## Connect using advanced options
 

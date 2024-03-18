@@ -47,8 +47,6 @@ items:
         items:
         - name: "Understanding query evaluation and folding"
           href: query-folding-basics.md
-        - name: "Query folding overview"
-          href: power-query-folding.md
         - name: "Query folding examples"
           href: query-folding-examples.md
         - name: "Query folding indicators"
@@ -545,7 +543,7 @@ items:
         href: connectors/socialbakers.md
       - name: "SoftOne BI (Beta)"
         href: connectors/softone-bi.md
-      - name: "SolarWinds Service Desk (Beta)"
+      - name: "SolarWinds Service Desk"
         href: connectors/solarwinds-service-desk.md
       - name: "SQL Server Analysis Services database"
         href: connectors/sql-server-analysis-services.md

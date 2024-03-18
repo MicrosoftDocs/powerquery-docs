@@ -18,7 +18,7 @@ When you create a connection to an SAP Business Warehouse server, you can option
 
 You can optionally specify a language code when establishing a connection to the SAP BW server.
 
-![Entering a two-digit language code in the advanced options.](language-code.png)
+:::image type="content" source="language-code.png" alt-text="Entering a two-digit language code in the advanced options.":::
 
 The expected value is a two-letter language code as defined in the SAP system. In Power Query Desktop, select the Help icon (question mark) next to the Language Code field for a list of valid values.
 
@@ -27,7 +27,7 @@ After you set the language code, Power Query displays the descriptive names of t
 > [!NOTE]
 > Not all listed languages might be configured in your SAP BW system, and object descriptions might not be translated in all languages.
 
-![Navigator showing language change for descriptive and field names.](navigator-language-option.png)
+:::image type="content" source="navigator-language-option.png" alt-text="Navigator showing language change for descriptive and field names.":::
 
 If no language code is specified, the default locale from the **Options** dialog will be used and mapped to a valid SAP language code. To view or override the current locale in Power BI Desktop, open the **File** > **Options and settings** > **Options** dialog box and select **Current File** > **Regional settings**. To view or override the current locale in Power Query Online, open the **Home** > **Options** > **Project options** dialog box. If you do override the locale, your setting gets persisted in your M query and would be honored if you copy-paste your query from Power Query Desktop to Power Query Online.
 
@@ -39,7 +39,7 @@ The **Execution mode** option specifies the MDX interface is used to execute que
 * **BasXmlGzip**: Specifies the *Gzip compressed bXML flattening mode* option for MDX execution in SAP Business Warehouse. This option is recommended for low latency or high volume queries. The default value for the execution mode option.
 * **DataStream**: Specifies the *DataStream flattening mode* option for MDX execution in SAP Business Warehouse.
 
-   ![Sign in dialog box showing location of the Execution mode option.](execution-mode.png)
+   :::image type="content" source="execution-mode.png" alt-text="Sign in dialog box showing location of the Execution mode option.":::
 
 ## Batch size
 
@@ -67,33 +67,33 @@ DIMENSION PROPERTIES
 [0D_VENTOR].[50D_VENDOR] ON ROWS FROM [0D_PU_C01/0D_PU_C01_Q0013]
 ```
 
-![Example MDX statement shown in MDX statement option.](example-mdx-statement.png)
+:::image type="content" source="example-mdx-statement.png" alt-text="Example MDX statement shown in MDX statement option.":::
 
 The SAP BW connector will display a preview of the data that is returned by the MDX statement. You can then either select **Load** to load the data (Power Query Desktop only), or select **Transform Data** to further manipulate the data set in the Power Query Editor.
 
-![MDX data displayed in the navigator preview.](mdx-preview-data.png)
+:::image type="content" source="mdx-preview-data.png" alt-text="MDX data displayed in the navigator preview.":::
 
 To validate and troubleshoot an MDX statement, SAP BW provides the *MDXTEST* transaction for SAP GUI for Windows users. Further, the MDXTEST transaction can be a useful tool for analyzing server errors or performance concerns as a result of processing that occurs within the SAP BW system.
 
 For more detailed information on this transaction, go to [MDX Test Environment](https://help.sap.com/viewer/64e2cdef95134a2b8870ccfa29cbedc3/7.3.15/en-US/19fdd486b13c43e2ad9f562a3222a480.html).
 
-![Troubleshooting an MDX statement with MDXTEST in the SAPGUI.](mdxtest-in-sapgui.png)
+:::image type="content" source="mdxtest-in-sapgui.png" alt-text="Troubleshooting an MDX statement with MDXTEST in the SAPGUI.":::
 
 MDXTEST can also be used to construct an MDX statement. The transaction screen includes panels on the left that assist the user in browsing to a query object in SAP BW and generating an MDX statement.
 
 The transaction offers different execution modes/interfaces for the MDX statement. Select *Flattening (basXML)* to mimic how Power Query would execute the query in SAP BW. This interface in SAP BW creates the row set dynamically using the selections of the MDX statement. The resulting dynamic table that's returned to Power Query Desktop has a very compact form that reduces memory consumption.
 
-![Shows Flattening selected in Execute in Export mode.](select-flattening.png)
+:::image type="content" source="select-flattening.png" alt-text="Shows Flattening selected in Execute in Export mode.":::
 
 The transaction will display the result set of the MDX statement and useful runtime metrics.
 
-![Displays the result set of the MDX statement.](mdx-result-set.png)
+:::image type="content" source="mdx-result-set.png" alt-text="Displays the result set of the MDX statement.":::
 
 ## Enable characteristic structures
 
 The **Enable characteristic structures** selection changes the way characteristic structures are displayed in the navigator. A structure is an SAP BW object that can be used when building BEX queries. In the BEX UX they look like the following image.
 
-![Structure used when building BEX queries.](characteristic-structures.png)
+:::image type="content" source="characteristic-structures.png" alt-text="Structure used when building BEX queries.":::
 
 If the **Enable characteristic structures** selection is clear (default), the connector will produce a cartesian product of each dimension on the structure with each available measure. For example:
 
@@ -101,7 +101,7 @@ If the **Enable characteristic structures** selection is clear (default), the co
 
 If selected, the connector produces only the available measures. For example:
 
-![Image of the navigator showing only the Net Value stat curr and Number of documents values displayed.](enable-characteristic-structure.png)
+:::image type="content" source="enable-characteristic-structure.png" alt-text="Image of the navigator showing only the Net Value stat curr and Number of documents values displayed.":::
 
 ### See also
 
