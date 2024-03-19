@@ -2,7 +2,7 @@
 title: Connections and authentication in Power Query Online
 description: This article describes the process and specifics of the authentication process in Power Query Online.
 author: ptyx507x
-ms.date: 1/5/2023
+ms.date: 3/7/2024
 ms.author: miescobar
 ---
 
@@ -42,19 +42,19 @@ The following table contains the fields and values used in the **Connection sett
 | **Authentication Kind**| The authentication kind you select to use that's supported by the connector.|Organizational account|
 | **Credentials**| Depending on the authentication kind you select, there will be available a contextual set of fields to input your credentials, a button to launch an OAuth2 flow, or even no fields at all for an authentication kind such as **Anonymous**.|Derived from OAuth2 flow, but is shown as a **Sign in** button in the image|
 
->[!NOTE]
+> [!NOTE]
 >By default, the field for the connection name tries to provide a default name when you create a connection using the information from the connection settings.
 
 After finishing the **Connection settings** section, you select the **Next** button to move forward in the [get data](get-data-experience.md) experience.
 
->[!TIP]
+> [!TIP]
 > Some connectors provide an auto sign in experience. To learn more about this feature, go to [auto sign in](auto-signin-aad.md).
 
 ### Creating an on-premises connection
 
 As an alternative, you can also bind a gateway to your connection, which converts your connection from a cloud connection to an on-premises connection.
 
->[!NOTE]
+> [!NOTE]
 > To create a gateway you can read the article on [using an on-premises data gateway in dataflows](dataflows/using-dataflows-with-on-premises-data.md).
 
 Using a local SQL Server database as an example, you enter the connector settings to establish a connection. For the SQL Server connector, the required setting is just the server name, but you can also enter the name of the database and select any other advanced options available for the connector. For demonstration purposes, both the server name and database have been entered.
@@ -88,7 +88,7 @@ Each connection is made up of a set of components. The following table contains 
 |**Gateway**| Optional| Used when a gateway is needed to establish the connection and execute any query evaluation.| Any gateway|
 |**Privacy level**|Optional| Establishes the security for each connection, which is taken into consideration when queries from different connections are combined.| None, Public, Organizational, Private|
 
->[!IMPORTANT]
+> [!IMPORTANT]
 >Currently, the privacy level is set to **None** for any new connections created. When you try to combine multiple data sources, a new dialog prompts you to define the data privacy levels of the data sources that you want to combine.
 
 ## Known connections
@@ -109,7 +109,8 @@ To override this behavior, you can take either of the following two actions:
 
 ## More resources
 
+* [Microsoft Entra ID client IDs](connector-authentication.md#microsoft-entra-id-client-ids)
 * [List of connectors in Power Query](connectors/index.md)
 * [On-premises data gateways documentation](/data-integration/gateway/)
 * [Change the gateway used in a dataflow](change-gateway-dataflow.md)
-* [Troubleshooting dataflow issues: Connection to the data source](/power-query/dataflows/troubleshooting-dataflow-issues-connection-to-the-data-source)
+* [Troubleshooting dataflow issues: Connection to the data source](dataflows/troubleshooting-dataflow-issues-connection-to-the-data-source.md)
