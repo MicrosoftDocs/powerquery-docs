@@ -80,7 +80,7 @@ The **Blank table** module provides a quick start in creating a table in a dataf
 
 The **Blank query** module lets you write or paste your own M script to create a new query.
 
-:::image type="content" source="media/get-data-ui/blank-query.png" alt-text="Blank Table Module Screenshot":::
+:::image type="content" source="media/get-data-ui/blank-query.png" alt-text="Screenshot of a Blank Table Module." lightbox="media/get-data-ui/blank-query.png":::
 
 ## Save and load your data
 
