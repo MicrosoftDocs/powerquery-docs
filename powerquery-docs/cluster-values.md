@@ -12,11 +12,11 @@ Cluster values automatically create groups with similar values using a fuzzy mat
 
 Consider a sample table with an **id** column that contains a set of IDs and a **Person** column containing a set of variously spelled and capitalized versions of the names Miguel, Mike, William, and Bill.
 
-![Table with nine rows of entries that contain various spellings and captilizations of the name Miguel and William.](media/cluster-values/fuzzy-grouping-sample-source-table.png)
+:::image type="content" source="media/cluster-values/fuzzy-grouping-sample-source-table.png" alt-text="Table with nine rows of entries that contain various spellings and captilizations of the name Miguel and William.":::
 
 In this example, the outcome you're looking for is a table with a new column that shows the right groups of values from the **Person** column and not all the different variations of the same words.
 
-![Clustered values as a new column called Cluster in the initial table.](media/cluster-values/cluster-column-initial-result.png)
+:::image type="content" source="media/cluster-values/cluster-column-initial-result.png" alt-text="Clustered values as a new column called Cluster in the initial table.":::
 
 > [!NOTE]
 > The Cluster values feature is available only for Power Query Online.
@@ -25,15 +25,15 @@ In this example, the outcome you're looking for is a table with a new column tha
 
 To cluster values, first select the **Person** column, go to the **Add column** tab in the ribbon, and then select the **Cluster values** option.
 
-![Cluster values icon inside the Add column tab in the Power Query online ribbon.](media/cluster-values/cluster-column-icon.png)
+:::image type="content" source="media/cluster-values/cluster-column-icon.png" alt-text="Cluster values icon inside the Add column tab in the Power Query online ribbon.":::
 
 In the **Cluster values** dialog box, confirm the column that you want to use to create the clusters from, and enter the new name of the column. For this case, name this new column **Cluster**.
 
-![Cluster values window with the column Person selected and the New column named as Cluster.](media/cluster-values/cluster-column-window-default.png)
+:::image type="content" source="media/cluster-values/cluster-column-window-default.png" alt-text="Cluster values window with the column Person selected and the New column named as Cluster.":::
 
 The result of that operation yields the result shown in the next image.
 
-![Clustered values as a new column called Cluster in the initial table.](media/cluster-values/cluster-column-initial-result.png)
+:::image type="content" source="media/cluster-values/cluster-column-initial-result.png" alt-text="Clustered values as a new column called Cluster in the initial table.":::
 
 >[!NOTE]
 >For each cluster of values, Power Query picks the most frequent instance from the selected column as the "canonical" instance. If multiple instances occur with the same frequency, Power Query picks the first one.
@@ -60,7 +60,7 @@ For this example, a new transformation table with the name **My transform table*
 
 Using the previously created query, double-click the **Clustered values** step, then in the **Cluster values** dialog box, expand **Fuzzy cluster options**. Under *Fuzzy cluster options*, enable the **Show similarity scores** option. For **Transformation table (optional)**, select the query that has the transform table.
 
-![Fuzzy cluster column with sample transformation table drop-down menu.](media/cluster-values/cluster-column-fuzzy-cluster-options-with-transform-table.png)
+:::image type="content" source="media/cluster-values/cluster-column-fuzzy-cluster-options-with-transform-table.png" alt-text="Fuzzy cluster column with sample transformation table drop-down menu.":::
 
 After selecting your transformation table and enabling the **Show similarity scores** option, select **OK**. The result of that operation will give you a table that contains the same **id** and **Person** columns as the original table, but also includes two new columns on the right called **Cluster** and **Person_Cluster_Similarity**. The **Cluster** column contains the properly spelled and capitalized versions of the names Miguel for versions of Miguel and Mike, and William for versions of Bill, Billy, and William. The **Person_Cluster_Similarity** column contains the similarity scores for each of the names.
 

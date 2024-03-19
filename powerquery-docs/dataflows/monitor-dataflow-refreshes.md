@@ -6,7 +6,7 @@ author: luitwieler
 
 ms.reviewer: dougklo
 ms.topic: conceptual
-ms.date: 1/6/2023
+ms.date: 1/24/2024
 ms.author: jeluitwi
 ---
 
@@ -22,12 +22,12 @@ To set up your monitoring dashboard for dataflow refresh history:
 
 1. Navigate to [Power Apps](https://make.powerapps.com/).
 1. Select the environment you want to monitor.
-1. Open ![Image of a gear.](media/monitor-dataflow-refreshes/gear-icon.png) **Settings** > **Session Details**.
+1. Open :::image type="icon" source="media/monitor-dataflow-refreshes/gear-icon.png"::: **Settings** > **Session Details**.
 1. Copy the **Instance url**, which should look something like `contoso.crm.dynamics.com`.
 1. Download the [Power BI Template](https://download.microsoft.com/download/f/1/9/f195fb57-495a-4487-9317-fe00816afd88/dataflow%20refresh%20history%20metrics%20template.pbit).
 1. Open the template file with Power BI Desktop and provide your instance URL.
 
-    ![Image of a screen to input your dataverse org URL.](media/monitor-dataflow-refreshes/template-parameter.png)
+    :::image type="content" source="media/monitor-dataflow-refreshes/template-parameter.png" alt-text="Image of a screen to input your dataverse org URL.":::
 
 1. Select **Load**.
 1. If this is the first time you've used this dashboard, you might need to enter your credentials to sign in.
@@ -43,24 +43,24 @@ The new tables are available in your environment right away. To find the tables 
 1. Navigate to [Power Apps](https://make.powerapps.com/).
 1. Open the Dataverse tables overview.
 
-   ![Image of navigating to Dataverse section.](media/monitor-dataflow-refreshes/tables-tab.png)
+   :::image type="content" source="media/monitor-dataflow-refreshes/tables-tab.png" alt-text="Image of navigating to Dataverse section.":::
 
 1. Navigate to the managed tables section.
 
-   ![Image of selecting the managed table section.](media/monitor-dataflow-refreshes/managed-tables.png)
+   :::image type="content" source="media/monitor-dataflow-refreshes/managed-tables.png" alt-text="Image of selecting the managed table section.":::
 
 1. Scroll down to the dataflow refresh history tables.
 
-   [![Image of the two Dataverse tables containing refresh history.](media/monitor-dataflow-refreshes/refresh-history-tables.png)](media/monitor-dataflow-refreshes/refresh-history-tables.png#lightbox)
-
-These tables will store history for at least the last 50 refreshes. Refresh history records older than 90 days may be removed by the system. To use these tables, we suggest that you use Power BI to get data through the Dataverse connector. We also suggest that you extract this data into a self-managed table if you would like to do analysis over a longer period of time.
+   :::image type="content" source="media/monitor-dataflow-refreshes/refresh-history-tables.png" lightbox="media/monitor-dataflow-refreshes/refresh-history-tables.png" alt-text="Image of the two Dataverse tables containing refresh history.":::
+   
+These tables will store history for at least the last 50 refreshes. Refresh history records older than 90 days may be removed by the system. To use these tables, we suggest that you use Power BI to get data through the Dataverse connector. We also suggest that you extract this data into a self-managed table if you would like to perform analysis over a longer period of time.
 
 ## Power BI dataflows monitoring
 
 When working with Power BI dataflows, you might want to check out the following pages for setting up your monitoring solution:
 
 * [Use Dataverse to build a dataflows monitoring report](./load-dataflow-metadata-into-dataverse-table.md)
-* [Use a Power BI dataset to build a dataflows monitoring report](./load-dataflow-metadata-into-power-bi-dataset.md)
+* [Use a Power BI semantic model to build a dataflows monitoring report](./load-dataflow-metadata-into-power-bi-dataset.md)
 * [Use Excel to build a dataflows monitoring report](./load-dataflow-metadata-into-excel-online.md)
 
 ## Known issues

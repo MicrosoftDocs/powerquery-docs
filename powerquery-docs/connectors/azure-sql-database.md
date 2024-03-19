@@ -1,10 +1,10 @@
 ---
 title: Power Query Azure SQL database connector
 description: Includes basic information and prerequisites, instructions on how to connect to your database, and information about advanced connection options.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/13/2023
-ms.author: bezhan
+ms.date: 2/16/2024
+ms.author: dougklo
 ---
 
 # Azure SQL database
@@ -14,9 +14,12 @@ ms.author: bezhan
 | Item | Description |
 | ------- | ------------|
 |Release state | General Availability |
-| Products supported | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Products supported | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Excel<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication types supported| Windows (Power BI Desktop, Excel, Power Query Online with gateway)<br/>Database (Power BI Desktop, Excel)<br/>Microsoft Account (all)<br/> Basic (Power Query Online)<br/>Service Principal |
 | Function reference docs | [Sql.Database](/powerquery-m/sql-database)<br/>[Sql.Databases](/powerquery-m/sql-databases) |
+
+> [!NOTE]
+>The service principal authentication type isn't supported when using an on-premises data gateway or a virtual network (VNet) data gateway.
 
 > [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
@@ -28,7 +31,7 @@ By default, Power BI installs an OLE DB driver for Azure SQL database. However, 
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI Datasets)
+* DirectQuery (Power BI semantic models)
 * Advanced options
   * Command timeout in minutes
   * Native SQL statement
@@ -40,11 +43,11 @@ By default, Power BI installs an OLE DB driver for Azure SQL database. However, 
 
 To connect to an Azure SQL database from Power Query Desktop, take the following steps:
 
-1. Select the **Azure SQL database** option in the connector selection.
+1. Select **Azure SQL database** in the get data experience. The get data experience in Power Query Desktop varies between apps. For more information about the Power Query Desktop get data experience for your app, go to [Where to get data](../where-to-get-data.md).
 
 2. In **SQL Server database**, provide the name of the server and database (optional).
 
-   ![Enter Azure SQL database connection.](./media/azure-sql-database/signin.png)
+   :::image type="content" source="./media/azure-sql-database/signin.png" alt-text="Enter Azure SQL database connection.":::
 
 3. Select either the **Import** or **DirectQuery** data connectivity mode.
 
@@ -54,30 +57,32 @@ To connect to an Azure SQL database from Power Query Desktop, take the following
 
 6. If this is the first time you're connecting to this database, select the authentication type, input your credentials, and select the level to apply the authentication settings to. Then select **Connect**.
 
-   ![Azure SQL database authentication.](./media/azure-sql-database/enter-credentials.png)
+   :::image type="content" source="./media/azure-sql-database/enter-credentials.png" alt-text="Azure SQL database authentication.":::
 
    For more information about authentication methods, go to [Authentication with a data source](../connectorauthentication.md).
 
-   >[!Note]
+   > [!NOTE]
    >  If the connection is not encrypted, you'll be prompted with the following message.
 
-   ![Azure SQL database encryption support.](./media/azure-sql-database/encryption-warning.png)
+   :::image type="content" source="./media/azure-sql-database/encryption-warning.png" alt-text="Azure SQL database encryption support.":::
 
    Select **OK** to connect to the database by using an unencrypted connection, or follow the instructions in [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine) to set up encrypted connections to Azure SQL database.
 
 7. In **Navigator**, select the database information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
 
-   ![Power Query Desktop Navigator showing the Human Resources employee data.](./media/azure-sql-database/navigator-desktop.png)
+   :::image type="content" source="./media/azure-sql-database/navigator-desktop.png" alt-text="Power Query Desktop Navigator showing the Human Resources employee data.":::
 
 ## Connect to Azure SQL database from Power Query Online
 
 To connect to an Azure SQL database from Power Query Online, take the following steps:
 
-1. Select the **Azure SQL database** option in the connector selection.
+1. Select the **Azure SQL database** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../where-to-get-data.md).
+
+   :::image type="content" source="./media/azure-sql-database/get-data-online.png" alt-text="Screenshot of the get data window with Azure SQL database emphasized.":::
 
 2. In **Azure SQL database**, provide the name of the server and database.
 
-   ![Enter the Azure SQL database online connection.](./media/azure-sql-database/service-signin.png)
+   :::image type="content" source="./media/azure-sql-database/service-signin.png" alt-text="Enter the Azure SQL database online connection.":::
 
    You can also select and enter advanced options that will modify the connection query, such as a command timeout or a native query (SQL statement). More information: [Connect using advanced options](#connect-using-advanced-options)
 
@@ -91,13 +96,13 @@ To connect to an Azure SQL database from Power Query Online, take the following 
 
 7. In **Navigator**, select the data you require, and then select **Transform data**.
 
-   ![Power Query Online Navigator showing the Human Resources employee data.](./media/azure-sql-database/navigator-online.png)
+   :::image type="content" source="./media/azure-sql-database/navigator-online.png" alt-text="Power Query Online Navigator showing the Human Resources employee data.":::
 
 ## Connect using advanced options
 
 Both Power Query Desktop and Power Query Online provide a set of advanced options that you can add to your query if needed.
 
-![Display of advanced options available in Power Query.](./media/azure-sql-database/advanced-options.png)
+:::image type="content" source="./media/azure-sql-database/advanced-options.png" alt-text="Display of advanced options available in Power Query.":::
 
 The following table lists all of the advanced options you can set in Power Query Desktop and Power Query Online.
 

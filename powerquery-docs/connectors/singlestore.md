@@ -1,10 +1,10 @@
 ---
 title: Power Query SingleStore connector
 description: Provides basic information, prerequisites, and instructions on how to connect to your SingleStore data.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/14/2023
-ms.author: bezhan
+ms.date: 1/24/2024
+ms.author: dougklo
 ---
 
 # SingleStore (Beta)
@@ -17,13 +17,13 @@ ms.author: bezhan
 | Item | Description
 |--|--|
 | Release State | Beta |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Basic<br/>Windows |
 
 ## Capabilities Supported
 
 * Import
-* DirectQuery (Power BI Datasets)
+* DirectQuery (Power BI semantic models)
 
 ## Connect to SingleStore
 
@@ -33,13 +33,13 @@ To connect Microsoft Power BI Desktop to SingleStore DB or Managed Service:
 
 2. In the **Get Data** dialog, select **SingleStore Direct Query Connector 1.0**.
 
-    ![Locate the SingleStore Connectors in Get Data dialog.](./media/singlestore/ss-get-data-connector.png)
+    :::image type="content" source="./media/singlestore/ss-get-data-connector.png" alt-text="Locate the SingleStore Connectors in Get Data dialog.":::
 
 3. In the **SingleStore database** dialog box, enter the IP address or hostname of the SingleStore cluster in **Server**. In **Database**, enter the database name.
 
     Under **Data Connectivity** mode, select the Import or DirectQuery mode, and then select **OK**.
 
-    ![Enter server IP / hostname and database and select the connectivity mode.](./media/singlestore/ss-db-select-mode.png)
+    :::image type="content" source="./media/singlestore/ss-db-select-mode.png" alt-text="Enter server IP / hostname and database and select the connectivity mode.":::
 
 4. In the **SingleStore Direct Query Connector 1.0** dialog box, in the left pane, select the authentication type (either **Windows** or **Basic**).
 
@@ -51,21 +51,21 @@ To connect Microsoft Power BI Desktop to SingleStore DB or Managed Service:
        > [!NOTE]
        > You need to run Power BI with the user account that maps to the SingleStore DB user.
 
-       ![Select Windows authentication.](./media/singlestore/ss-db-windows.png)
+       :::image type="content" source="./media/singlestore/ss-db-windows.png" alt-text="Select Windows authentication.":::
 
     * For **Basic** authentication, enter the username and password used to connect to SingleStore, and then select the **Connect** button.
 
-       ![Select Basic authentication.](./media/singlestore/ss-db-basic.png)
+       :::image type="content" source="./media/singlestore/ss-db-basic.png" alt-text="Select Basic authentication.":::
 
-5. Once authenticated—for Import or DirectQuery mode—in the **Navigator** dialog box, choose the desired tables and select the **Load** button.
+5. Once authenticated&mdash;for Import or DirectQuery mode&mdash;in the **Navigator** dialog box, choose the desired tables and select the **Load** button.
 
-    ![Select tables in the Navigator dialog and select Load.](./media/singlestore/ss-nav-load.png)
+    :::image type="content" source="./media/singlestore/ss-nav-load.png" alt-text="Select tables in the Navigator dialog and select Load.":::
 
 You can now use Power BI to explore SingleStore data.
 
 ## Create a Custom SQL Report
 
->[!NOTE]
+> [!NOTE]
 > Any user that creates a custom SQL report must only have read-only access to the SingleStore databases.
 
 To create a new custom SQL report:
@@ -80,12 +80,12 @@ To create a new custom SQL report:
 
     Submit the query.
 
-    >[!NOTE]
+    > [!NOTE]
     > If you're using the server for the first time, select **Edit Credentials** and enter the credentials. Go to **Step 4** in [Connect to SingleStore](#connect-to-singlestore) for more information.
 
 4. Verify the data to load, and select **Close & Apply**.
 
-5. If you've worked with the dataset before and it's cached in memory, refresh the report to reset the local cache. On the **Home** ribbon, select **Refresh**.
+5. If you've worked with the data set before and it's cached in memory, refresh the report to reset the local cache. On the **Home** ribbon, select **Refresh**.
 
 To update the existing custom SQL reports, select the **Refresh** button on the **Home** ribbon.
 

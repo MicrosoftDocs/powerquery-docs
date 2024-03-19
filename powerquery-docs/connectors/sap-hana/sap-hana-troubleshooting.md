@@ -3,8 +3,8 @@ title: SAP HANA database connector troubleshooting
 description: Provides troubleshooting tips for errors that might occur when using Power Query to connect to an SAP HANA database.
 author: dougklopfenstein
 ms.topic: conceptual
-ms.date: 9/01/2020
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # Troubleshooting
@@ -34,8 +34,8 @@ If you’re on a 64-bit machine, but Excel or Power BI Desktop is 32-bit (like t
 
 Note that the driver needs to match the bit version of your Excel or Power BI Desktop. If you’re using:
 
-* 32-bit Excel/Power BI Desktop, you'll need the 32-bit ODBC driver (HDBODBC32).
-* 64-bit Excel/Power BI Desktop, you'll need the 64-bit ODBC driver (HDBODBC).
+- 32-bit Excel/Power BI Desktop, you'll need the 32-bit ODBC driver (HDBODBC32).
+- 64-bit Excel/Power BI Desktop, you'll need the 64-bit ODBC driver (HDBODBC).
 
 The driver is usually installed by running hdbsetup.exe.
 
@@ -65,8 +65,8 @@ To capture an SAP HANA trace:
 
 5. Once done, zip up the traces:
 
-   * From the **Log File Path** in the **Tracing** tab of the ODBC Data Source Administrator.
-   * From the HANA trace based on the path configured with the command **hdbodbc_cons32.exe config trace filename**.
+   - From the **Log File Path** in the **Tracing** tab of the ODBC Data Source Administrator.
+   - From the HANA trace based on the path configured with the command **hdbodbc_cons32.exe config trace filename**.
 
 6. Disable tracing by using the following command:
 
@@ -74,30 +74,27 @@ To capture an SAP HANA trace:
 
 When capturing an SAP HANA trace, note the following considerations:
 
-* The trace commands should be run as the user that will be running the Mashup process that accesses the SAP HANA server.
-* The trace file path you specify should be writable by the user that runs the Mashup process.
+- The trace commands should be run as the user that will be running the Mashup process that accesses the SAP HANA server.
+- The trace file path you specify should be writable by the user that runs the Mashup process.
 
 For example:
 
-* To capture non-SSO connections from gateway, make sure you use the gateway service user. That is, run the command-line window as the gateway user when you want to execute the hdodbc_cons.exe calls. Make sure that the gateway server user can write to the log file location you specify.
-* To capture SSO connections from Gateway, use the SSO user.
+- To capture non-SSO connections from gateway, make sure you use the gateway service user. That is, run the command-line window as the gateway user when you want to execute the hdodbc_cons.exe calls. Make sure that the gateway server user can write to the log file location you specify.
+- To capture SSO connections from Gateway, use the SSO user.
 
 ## SAP HANA: insufficient privilege
 
 This message might be because of:
 
-* The user legitimately not having enough privileges on the view they're trying to access.
-* The following known issue:
+- The user legitimately not having enough privileges on the view they're trying to access.
+- The following known issue:
 
-   **Issue**: Not able to connect to SAP Hana from PBI Desktop using SAP client 2.0 37.02, but if you downgrade the client version to 1.00.120.128, it works.
+  **Issue**: Not able to connect to SAP HANA from PBI Desktop using SAP client 2.0 37.02, but if you downgrade the client version to 1.00.120.128, it works.
 
-   `ERROR MESSAGE: External error: ERROR [S1000] [SAP AG][LIBODBCHDB DLL][HDBODBC] General error;258 insufficient privilege: [2950] user is not authorized`
+  `ERROR MESSAGE: External error: ERROR [S1000] [SAP AG][LIBODBCHDB DLL][HDBODBC] General error;258 insufficient privilege: [2950] user is not authorized`
 
-   *  Response from SAP:
+  - Response from SAP:
 
-      ![SAP response to known issue.](sap-hana-issue.png)
+    :::image type="content" source="sap-hana-issue.png" alt-text="SAP response to known issue.":::
 
-   Unfortunately, this is an SAP issue so you'll need to wait for a fix from SAP.
-
-
-
+  Unfortunately, this is an SAP issue so you'll need to wait for a fix from SAP.

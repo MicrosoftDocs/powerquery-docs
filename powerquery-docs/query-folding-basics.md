@@ -26,7 +26,7 @@ The most common way to create an M script is by using the Power Query editor. Fo
 > - Display the query as a series of steps and allow the creation or modification of new steps.
 > - Display a diagram view.
 
-![Image of the applied steps and the data preview view.](media/query-folding-basics/applied-steps-section.png)
+:::image type="content" source="media/query-folding-basics/applied-steps-section.png" alt-text="Image of the applied steps and the data preview view.":::
 
 The previous image emphasizes the applied steps section, which contains the following steps:
 
@@ -38,7 +38,7 @@ The previous image emphasizes the applied steps section, which contains the foll
 
 This set of step names is a friendly way to view the M script that Power Query has created for you. There are several ways to view the full M script. In Power Query, you can select **Advanced Editor** in the **View** tab. You can also select **Advanced Editor** from the **Query** group in the **Home** tab. In some versions of Power Query, you can also change the view of the formula bar to show the query script by going into the **View** tab and from the **Layout** group, select **Script view** > **Query script**.
 
-![Image with the full M script and the corresponding names of the applied steps.](media/query-folding-basics/m-script-applied-steps.png)
+:::image type="content" source="media/query-folding-basics/m-script-applied-steps.png" alt-text="Image with the full M script and the corresponding names of the applied steps.":::
 
 Most of the names found in the **Applied steps** pane are also being used as is in the M script. Steps of a query are named using something called *identifiers* in the M language. Sometimes extra characters are wrapped around step names in M, but these characters aren’t shown in the applied steps. An example is `#"Kept top rows"`, which is categorized as a *quoted identifier* because of these extra characters. A quoted identifier can be used to allow any sequence of zero or more Unicode characters to be used as an identifier, including keywords, whitespace, comments, operators, and punctuators. To learn more about *identifiers* in the M language, go to [lexical structure](/powerquery-m/m-spec-lexical-structure#identifiers).
 

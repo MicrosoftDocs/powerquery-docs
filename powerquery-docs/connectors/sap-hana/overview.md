@@ -1,10 +1,10 @@
 ---
 title: Power Query SAP HANA database connector
 description: Provides basic information, prerequisites, and instructions on connecting to your data using the SAP HANA database connector.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/14/2023
-ms.author: bezhan
+ms.date: 1/24/2024
+ms.author: dougklo
 ---
 
 # SAP HANA database
@@ -14,11 +14,11 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Analysis Services |
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Analysis Services |
 | Authentication Types Supported | Basic<br/>Database<br/>Windows |
 | Function Reference Documentation | [SapHana.Database](/powerquery-m/saphana-database) |
 
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
@@ -36,7 +36,7 @@ HANA 1.0 SPS 12rev122.09, 2.0 SPS 3rev30 and BW/4HANA 2.0 is supported.
 ## Capabilities Supported
 
 * Import
-* Direct Query (Power BI Datasets)
+* Direct Query (Power BI semantic models)
 * Advanced
   * SQL Statement
 
@@ -48,7 +48,7 @@ To connect to an SAP HANA database from Power Query Desktop:
 
 2. Enter the name and port of the SAP HANA server you want to connect to. The example in the following figure uses `SAPHANATestServer` on port `30015`.
 
-   ![Enter the SAP HANA server information.](sap-hana-server.png)
+   :::image type="content" source="sap-hana-server.png" alt-text="Enter the SAP HANA server information.":::
 
    By default, the port number is set to support a single container database. If your SAP HANA database can contain more than one multitenant database container, select **Multi-container system database (30013)**. If you want to connect to a tenant database or a database with a non-default instance number, select **Custom** from the **Port** drop-down menu.
 
@@ -60,7 +60,7 @@ To connect to an SAP HANA database from Power Query Desktop:
 
 3. If you're accessing a database for the first time, you'll be asked to enter your credentials for authentication. In this example, the SAP HANA server requires database user credentials, so select **Database** and enter your user name and password. If necessary, enter your server certificate information.
 
-   ![Enter the server credentials.](sap-hana-signin.png)
+   :::image type="content" source="sap-hana-signin.png" alt-text="Enter the server credentials.":::
 
    Also, you may need to validate the server certificate. For more information about using validate server certificate selections, see [Using SAP HANA encryption](sap-hana-encryption.md). In Power BI Desktop and Excel, the validate server certificate selection is enabled by default. If you've already set up these selections in ODBC Data Source Administrator, clear the **Validate server certificate** check box. To learn more about using ODBC Data Source Administrator to set up these selections, go to [Configure SSL for ODBC client access to SAP HANA](configure-odbc-sap-hana.md).
 
@@ -82,17 +82,17 @@ To connect to SAP HANA data from Power Query Online:
 
 4. Select the name of the on-premises data gateway to use for accessing the database.
 
-   >[!NOTE]
+   > [!NOTE]
    > You must use an on-premises data gateway with this connector, whether your data is local or online.
 
 5. Choose the authentication kind you want to use to access your data. You'll also need to enter a username and password.
 
-   >[!NOTE]
+   > [!NOTE]
    > Currently, Power Query Online only supports Basic authentication.
 
 6. Select **Use Encrypted Connection** if you're using any encrypted connection, then choose the SSL crypto provider. If you're not using an encrypted connection, clear **Use Encrypted Connection**. More information: [Enable encryption for SAP HANA](sap-hana-encryption.md)
 
-   ![SAP HANA database online sign-in.](sap-hana-online-signin.png)
+   :::image type="content" source="sap-hana-online-signin.png" alt-text="SAP HANA database online sign-in.":::
 
 7. Select **Next** to continue.
 
@@ -161,7 +161,7 @@ The Power Query SAP HANA database connector supports native queries. For informa
 
 The Power Query SAP HANA database connector now supports query folding on native queries. More information: [Query folding on native queries](../../native-query-folding.md)
 
->[!NOTE]
+> [!NOTE]
 >In the Power Query SAP HANA database connector, native queries don't support duplicate column names when `EnableFolding` is set to true.
 
 ### Parameters in native queries
@@ -232,7 +232,7 @@ Before, when you added a table column (or another transformation that internally
 
 With this change, the added columns are treated as _dynamic attributes_ within the cube. Having the query remain in cube space for this operation has the advantage of letting you continue using cube operations even after adding columns.
 
->[!NOTE]
+> [!NOTE]
 >This new functionality is only available when you connect to Calculation Views in SAP HANA Server version 2.0 or higher.
 
 The following sample query takes advantage of this new capability. In the past, you would get a "the value is not a cube" exception when applying [Cube.CollapseAndRemoveColumns](/powerquery-m/cube-collapseandremovecolumns).
@@ -243,7 +243,7 @@ The following sample query takes advantage of this new capability. In the past, 
 
 * [Enable encryption for SAP HANA](sap-hana-encryption.md)
 
-The following articles contain more information that you may find useful when connecting to an SAP HANA debase.
+The following articles contain more information that you might find useful when connecting to an SAP HANA debase.
 
 * [Manage your data source - SAP HANA](/power-bi/connect-data/service-gateway-enterprise-manage-sap)
 * [Use Kerberos for single sign-on (SSO) to SAP HANA](/power-bi/connect-data/service-gateway-sso-kerberos-sap-hana)

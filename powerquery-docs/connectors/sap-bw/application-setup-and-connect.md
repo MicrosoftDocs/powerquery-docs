@@ -3,13 +3,13 @@ title: Power Query SAP Business Warehouse Application Server connector
 description: Power Query SAP Business Warehouse Application Server connector reference
 author: dougklopfenstein
 ms.topic: conceptual
-ms.date: 7/14/2023
-ms.author: bezhan
+ms.date: 1/24/2024
+ms.author: dougklo
 ---
 
 # SAP Business Warehouse Application Server
 
->[!NOTE]
+> [!NOTE]
 >The SAP Business Warehouse (BW) Application Server connector is now certified for SAP BW/4HANA as of June 2020.
 
 ## Summary
@@ -17,16 +17,16 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Analysis Services |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Analysis Services |
 | Authentication Types Supported | Windows (desktop)<br/>Database (desktop)<br/>Basic (online) |
 | Function Reference Documentation | [SapBusinessWarehouse.Cubes](/powerquery-m/sapbusinesswarehouse-cubes)<br/>[Sapbusinesswarehouseexecutionmode.DataStream](/powerquery-m/sapbusinesswarehouseexecutionmode-type)<br/>[SapBusinessWarehouseExecutionMode.BasXml](/powerquery-m/sapbusinesswarehouseexecutionmode-type)<br/>[SapBusinessWarehouseExecutionMode.BasXmlGzip](/powerquery-m/sapbusinesswarehouseexecutionmode-type) |
 
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > Version 1.0 of the SAP BW Application Server connector has been deprecated. New connections will use Implementation 2.0 of the SAP BW Application Server connector. All support for version 1.0 will be removed from the connector in the near future.
 
 You'll need an SAP account to sign in to the website and download the drivers. If you're unsure, contact the SAP administrator in your organization. The drivers need to be installed on the gateway machine.
@@ -38,15 +38,15 @@ To use the SAP BW Application Server connector in Power BI Desktop or Power Quer
 <a name="app-gac-install"></a>
 When you install, in **Optional setup steps**, make sure you select **Install assemblies to GAC**.
 
-![Select install assemblies to GAC.](install-to-gac.png)
+:::image type="content" source="install-to-gac.png" alt-text="Select install assemblies to GAC.":::
 
->[!NOTE]
+> [!NOTE]
 >As of late 2023, the SAP BW Application Server connector contains support for SAP .NET Connector 3.1.
 
 ## Capabilities Supported
 
 * Import
-* Direct Query (Power BI Datasets)
+* Direct Query (Power BI semantic models)
 * Advanced
   * Language code
   * Execution mode
@@ -68,11 +68,11 @@ To connect to an SAP BW Application Server:
 
     When you've finished filling in the relevant information, select **OK**.
 
-   ![Enter the SAP Business Warehouse Application Server information.](get-data-app.png)
+   :::image type="content" source="get-data-app.png" alt-text="Enter the SAP Business Warehouse Application Server information.":::
 
 3. When accessing the database for the first time, the SAP BW Application Server requires database user credentials. Power Query Desktop offers two authentication modes for SAP BW connections&mdash;user name/password authentication (Database), and Windows authentication (single sign-on). SAML authentication isn't currently supported. Select either **Windows** or **Database**. If you select **Database** authentication, enter your user name and password. If you select **Windows** authentication, go to [Windows Authentication and single sign-on](single-sign-on.md) to learn more about the requirements for Windows authentication.
 
-   ![Enter the server credentials.](sign-in-app.png)
+   :::image type="content" source="sign-in-app.png" alt-text="Enter the server credentials.":::
 
    Then select **Connect**.
 
@@ -80,8 +80,7 @@ To connect to an SAP BW Application Server:
 
 4. From the **Navigator** dialog box, select the items you want to use. When you select one or more items from the server, the **Navigator** dialog box creates a preview of the output table. For more information about navigating the SAP BW Application Server query objects in Power Query, go to [Navigate the query objects](navigate-query-objects.md).
 
-   [![Navigator view from Power Query Desktop.](navigator-desktop.png)](navigator-desktop.png#lightbox)
-
+   :::image type="content" source="navigator-desktop.png" lightbox="navigator-desktop.png" alt-text="Navigator view from Power Query Desktop.":::
 5. From the **Navigator** dialog box, you can either transform the data in the Power Query Editor by selecting **Transform Data**, or load the data by selecting **Load**.
 
 ## Connect to an SAP BW Application Server from Power Query Online
@@ -96,7 +95,7 @@ To connect to an SAP BW Application Server from Power Query Online:
 
 4. Set **Authentication Kind** to **Basic**. Enter your user name and password.
 
-   ![SAP BW Application Server online sign-in.](get-data-online-power-apps-app.png)
+   :::image type="content" source="get-data-online-power-apps-app.png" alt-text="SAP BW Application Server online sign-in.":::
 
 5. You can also select from a set of [advanced options](use-advanced-options.md) to fine-tune your query.
 
@@ -106,8 +105,7 @@ To connect to an SAP BW Application Server from Power Query Online:
 
 8. From the **Navigator** dialog box, you can transform the data in the Power Query Editor by selecting **Transform Data**.
 
-   [![Navigator view from Power Query Online.](navigator-online.png)](navigator-online.png#lightbox)
-
+   :::image type="content" source="navigator-online.png" lightbox="navigator-online.png" alt-text="Navigator view from Power Query Online.":::
 ## Connect using router strings
 
 SAP router is an SAP program that acts as an intermediate station (proxy) in a network connection between SAP systems, or between SAP systems and external networks. SAP router controls the access to your network, and, as such, is a useful enhancement to an existing firewall system (port filter). Figuratively, the firewall forms an impenetrable "wall" around your network. However, since some connections need to penetrate this wall, a "gate" has to be made in the firewall. SAP router assumes control of this gate. In short, SAP router provides you with the means of controlling access to your SAP system.

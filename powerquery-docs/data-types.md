@@ -2,18 +2,18 @@
 title: "Data types in Power Query"
 description: A comprehensive article on the concepts of data types in Power Query, how to define data types for values and the importance of the data types. 
 author: ptyx507
-ms.date: 12/9/2022
+ms.date: 1/24/2024
 ms.author: miescobar
 ms.custom: edited
 ---
 
 # Data types in Power Query
 
-Data types in Power Query are used to classify values to have a more structured dataset. Data types are defined at the field level&mdash;values inside a field are set to ***conform*** to the data type of the field.
+Data types in Power Query are used to classify values to have a more structured data set. Data types are defined at the field level&mdash;values inside a field are set to ***conform*** to the data type of the field.
 
 The data type of a column is displayed on the left side of the column heading with an icon that symbolizes the data type.
 
-![Shows common data type icons displayed on the left side of the table column heading in the data preview pane.](media/data-types/data-types-icons.png "Common data type icons in the data preview pane")
+:::image type="content" source="media/data-types/data-types-icons.png" alt-text="Shows common data type icons displayed on the left side of the table column heading in the data preview pane.":::
 
 >[!NOTE]
 >Power Query provides a set of contextual transformations and options based on the data type of the column. For example, when you select a column with a data type of Date, you get transformations and options that apply to that specific data type. These transformations and options occur throughout the Power Query interface, such as on the **Transform** and **Add column** tabs and the smart filter options. 
@@ -46,7 +46,7 @@ Data type detection occurs automatically when connecting to:
 
 You can also use the **Detect data type** command in the **Any column** group on the **Transform** tab to automatically detect the data types of the columns in your table.
 
-![Detect data type command on the Transform tab.](media/data-types/detect-data-type-icon-any-column.png "Detect data type command on the Transform tab")
+:::image type="content" source="media/data-types/detect-data-type-icon-any-column.png" alt-text="Detect data type command on the Transform tab.":::
 
 ## How to define a column data type
 
@@ -54,15 +54,15 @@ You can define or change the data type of a column in any of four places:
 
 * On the **Home** tab, in the **Transform** group, on the **Data type** drop-down menu.
 
-   ![Data type menu on the Home tab.](media/data-types/home-tab.png "Data type menu on the Home tab")
+   :::image type="content" source="media/data-types/home-tab.png" alt-text="Data type menu on the Home tab.":::
 
 * On the **Transform** tab, in the **Any column** group, on the **Data type** drop-down menu.
 
-   ![Data type menu on the Transform tab.](media/data-types/transform-tab.png "Data type menu on the Transform tab")
+   :::image type="content" source="media/data-types/transform-tab.png" alt-text="Data type menu on the Transform tab.":::
 
 * By selecting the icon on the left side of the column heading.
 
-   ![Data type menu in the column heading.](media/data-types/column-header-icon.png "Data type menu in the column heading")
+   :::image type="content" source="media/data-types/column-header-icon.png" alt-text="Data type menu in the column heading.":::
 
 * On the column shortcut menu, under **Change Type**.
 
@@ -81,7 +81,7 @@ By default, this setting is enabled. To disable or enable this setting, follow t
 
 On the **Home** tab, select **Options**, and then select **Project options**. In the **Project options** window, select the **Automatically detect column types and headers for unstructured sources** check box.
 
-   ![Automatically detect data type option in project options.](media/data-types/project-options-auto-detect.png "Automatically detect data type option in project options")
+   :::image type="content" source="media/data-types/project-options-auto-detect.png" alt-text="Automatically detect data type option in project options.":::
 
 **To configure automatic data type detection in Power Query for Desktop**
 
@@ -93,11 +93,11 @@ You can define this behavior both at the global and per-file level in the **Opti
   * **Detect column types and headers for unstructured sources according to each file's setting**
   * **Never detect column types and headers for unstructured sources**
 
-   ![Global type detection.](media/data-types/power-query-desktop-options-global-auto-detect.png "Global type detection")
+   :::image type="content" source="media/data-types/power-query-desktop-options-global-auto-detect.png" alt-text="Global type detection.":::
 
 * **Current file**: On the left pane under **Current file**, select **Data load**. On the right pane under **Type detection**, select whether you want to enable or disable type detection for the current file.
 
-   ![Automatically detect data type option in Power Query for Desktop.](media/data-types/power-query-desktop-options-auto-detect.png "Automatically detect data type option in Power Query for Desktop")
+   :::image type="content" source="media/data-types/power-query-desktop-options-auto-detect.png" alt-text="Automatically detect data type option in Power Query for Desktop.":::
 
 ## Document or project locale
 
@@ -112,11 +112,11 @@ When Power Query defines a column data type or converts from one data type to an
 
 * In Power Query Online, this interpretation is defined in **Project options**, under **Locale**.
 
-   ![Locale setting in Power Query Online.](media/data-types/project-options-locale.png "Locale setting in Power Query Online")
+   :::image type="content" source="media/data-types/project-options-locale.png" alt-text="Locale setting in Power Query Online.":::
 
 * In Power Query for Desktop, Power Query automatically recognizes your operating system regional format and uses that to interpret the values for data type conversion. To override this locale configuration, open the query **Options** window, and in the left pane under **Current file**, select **Regional settings**. From here, you can change the locale to the setting you want.
 
-   ![Locale setting in Power Query for Desktop.](media/data-types/power-query-desktop-locale.png "Locale setting in Power Query for Desktop")
+   :::image type="content" source="media/data-types/power-query-desktop-locale.png" alt-text="Locale setting in Power Query for Desktop.":::
 
 This locale setting is important for interpreting text values into a specific data type. For example, imagine that you have your locale set as **English (United States)**, but a column in one of your CSV files has dates formatted in the United Kingdom format of day/month/year.
 
@@ -124,17 +124,17 @@ This locale setting is important for interpreting text values into a specific da
 
 When you try setting the data type of the **Date** column to be **Date**, you get error values.
 
-![Data type conversion error.](media/data-types/locale-sample-error.png "Data type conversion error")
+:::image type="content" source="media/data-types/locale-sample-error.png" alt-text="Data type conversion error.":::
 
 These errors occur because the locale being used is trying to interpret the date in the English (United States) format, which is month/day/year. Because there's no month 22 in the calendar, it causes an error.
 
 Instead of trying to just select the Date data type, you can right-click the column heading, select **Change type**, and then select **Using locale**.
 
-![Using locale on the column shortcut menu.](media/data-types/locale-sample-right-click.png "Using locale on the column shortcut menu")
+:::image type="content" source="media/data-types/locale-sample-right-click.png" alt-text="Using locale on the column shortcut menu.":::
 
 In the **Change column type with locale** dialog box, you select the data type that you want to set, but you also select which locale to use, which in this case needs to be **English (United Kingdom)**.
 
-![Change column type with locale.](media/data-types/change-column-type-locale.png "Change column type with locale")
+:::image type="content" source="media/data-types/change-column-type-locale.png" alt-text="Change column type with locale.":::
 
 Using this locale, Power Query will be able to interpret values correctly and convert those values to the right data type.
 
@@ -144,11 +144,11 @@ Using this locale, Power Query will be able to interpret values correctly and co
 
 The formatting of the values is driven by the globalization value. If you have any doubts about the value displayed by Power Query, you can verify the conversion of date values by adding new columns for the day, month, and year from the value. To do this, select the **Date** column and go to the **Add column** tab on the ribbon. In the **Date and time column** group, you'll see the options for a date column.
 
-![Selecting portions of the date column value to be placed in a new column.](media/data-types/power-query-add-column-date.png "Selecting portions of the date column value to be placed in a new column")
+:::image type="content" source="media/data-types/power-query-add-column-date.png" alt-text="Selecting portions of the date column value to be placed in a new column.":::
 
 From here, you can extract parts of the date value, such as the year number, the month number, the day number, or even more columns extracted from the **Date** column.
 
-![Date parts.](media/data-types/power-query-add-column-date-parts.png "Date parts")
+:::image type="content" source="media/data-types/power-query-add-column-date-parts.png" alt-text="Date parts.":::
 
 By using these columns, you can verify that your date value has been converted correctly.
 

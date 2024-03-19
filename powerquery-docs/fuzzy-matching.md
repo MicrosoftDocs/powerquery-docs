@@ -2,7 +2,7 @@
 title: How fuzzy matching works in Power Query
 description: "How-to article on the fuzzy matching feature in Power Query and how to better take advantage of it."
 author: ptyx507x
-ms.date: 12/9/2022
+ms.date: 1/24/2024
 ms.author: miescobar
 ---
 
@@ -18,7 +18,7 @@ The best scenario for applying the fuzzy match algorithm is when all text string
 
 Because the word `Apples` in the second string is only a small part of the whole text string, that comparison yields a lower similarity score.
 
-For example, the following dataset consists of responses from a survey that had only one question&mdash;"What is your favorite fruit?"
+For example, the following data set consists of responses from a survey that had only one question&mdash;"What is your favorite fruit?"
 
 |Fruit|
 |-----|
@@ -38,7 +38,7 @@ The survey provided one single textbox to input the value and had no validation.
 
 Now you're tasked with clustering the values. To do that task, load the previous table of fruits into Power Query, select the column, and then select the **Cluster values** option in the **Add column** tab in the ribbon.
 
-![Cluster values option inside the Add column tab in the ribbon available after selecting the Fruit column from the table.](media/fuzzy-matching/cluster-values-icon.png)
+:::image type="content" source="media/fuzzy-matching/cluster-values-icon.png" alt-text="Cluster values option inside the Add column tab in the ribbon available after selecting the Fruit column from the table.":::
 
 The **Cluster values** dialog box appears, where you can specify the name of the new column. Name this new column **Cluster** and select **OK**.
 
@@ -46,13 +46,13 @@ The **Cluster values** dialog box appears, where you can specify the name of the
 
 By default, Power Query uses a similarity threshold of 0.8 (or 80%) and the result of the previous operation yields the following table with a new **Cluster** column.
 
-![Default output with a new Cluster column after performing the Cluster values operation on the Fruit column with default values.](media/fuzzy-matching/cluster-values-default-output.png)
+:::image type="content" source="media/fuzzy-matching/cluster-values-default-output.png" alt-text="Default output with a new Cluster column after performing the Cluster values operation on the Fruit column with default values.":::
 
 While the clustering has been done, it's not giving you the expected results for all the rows. Row number two (2) still has the value `Blue berries are simply the best`, but it should be clustered to `Blueberries`, and something similar happens to the text strings `Strawberries = <3`, `fav fruit is bananas`, and `My favorite fruit, by far, is Apples. I simply love them!`.
 
 To determine what's causing this clustering, double-click **Clustered values** in the **Applied steps** panel to bring back the **Cluster values** dialog box. Inside this dialog box, expand **Fuzzy cluster options**. Enable the **Show similarity scores** option, and then select **OK**.
 
-![Cluster values window with the fuzzy cluster options displayed and the show similarity scores option selected.](media/fuzzy-matching/window-with-show-similarity-score.png)
+:::image type="content" source="media/fuzzy-matching/window-with-show-similarity-score.png" alt-text="Cluster values window with the fuzzy cluster options displayed and the show similarity scores option selected.":::
 
 Enabling the **Show similarity scores** option creates a new column in your table. This column shows you the exact similarity score between the defined cluster and the original value.
 

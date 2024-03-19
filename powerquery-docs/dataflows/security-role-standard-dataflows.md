@@ -37,18 +37,15 @@ To add a security role to a user who is already present in an environment:
 
 3. Select **Manage users in Dynamics 365**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Select Manage users in Dynamics 365.](/power-platform/admin/media/manage-users-dynamics-365.png)
+   ![Select Manage users in Dynamics 365.](/power-platform/admin/media/manage-users-dynamics-365.png)
 
 4. Select the user from the list of users in the environment, and then select **Manage roles**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Select Manage roles.](/power-platform/admin/media/select-manage-roles.png)
+   :::image type="content" source="/power-platform/admin/media/select-manage-roles.png" alt-text="Select Manage roles.":::
 
 5. Assign one or more security roles to the user.
 
-   > [!div class="mx-imgBorder"]
-   > ![Manage user roles.](/power-platform/admin/media/manage-user-roles.png)
+   :::image type="content" source="/power-platform/admin/media/manage-user-roles.png" alt-text="Manage user roles.":::
 
 6. Select **OK**.
 
@@ -60,5 +57,5 @@ If you haven't heard of row-level security before, here's a quick introduction. 
 
 ## Sharing or coauthoring dataflows
 
-Currently, it's not possible for two different users to collaborate on the same dataflow. Only the creator (owner) of the dataflow can edit it. In the event a dataflow needs to be transferred to a different user, an environment administrator can change the owner of the dataflow from one user to another. For security reasons, transferring ownership removes the connection associated with the dataflow and requires the new owner to update the credentials used by the dataflow.
+Currently, it's not possible for two different users to collaborate on the same dataflow. Only the creator (owner) of the dataflow can edit it. In the event a dataflow needs to be transferred to a different user, an environment administrator can change the owner of the dataflow from one user to another, as long as the current owner is still a member of the organization. For security reasons, transferring ownership removes the connection associated with the dataflow and requires the new owner to update the credentials used by the dataflow.
 

@@ -1,10 +1,10 @@
 ---
 title: Power Query Impala database connector
 description: Provides basic information for the Impala database connector, along with how to connect to your Impala data.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/13/2023
-ms.author: bezhan
+ms.date: 1/24/2024
+ms.author: dougklo
 ---
 
 # Impala database
@@ -14,17 +14,17 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
 | Authentication Types Supported | Anonymous<br/>Database<br/>Windows |
 | Function Reference Documentation | &mdash; |
 
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Capabilities Supported
 
 * Import
-* DirectQuery (Power BI Datasets)
+* DirectQuery (Power BI semantic models)
 * Advanced options
   * Connection timeout duration
   * Command timeout duration
@@ -37,11 +37,11 @@ To connect to an **Impala** database, take the following steps:
 
 2. Select **Database** from the categories on the left, select **Impala** on the right, and then select **Connect**.
 
-    ![Image of the Get Data dialog with the Database category and Impala connector selected.](media/impala-database/get-data.png)
+    :::image type="content" source="media/impala-database/get-data.png" alt-text="Image of the Get Data dialog with the Database category and Impala connector selected.":::
 
 3. In the **Impala** window that appears, type or paste the name of your Impala server into the box. You can **Import** data directly into Power BI or you can use **DirectQuery**. Learn more about [using DirectQuery](/power-bi/connect-data/desktop-use-directquery). Then select **OK**.
 
-    ![Image of the Impala dialog with a Server name entered and the Import data connectivity mode selected.](media/impala-database/server-selection.png)
+    :::image type="content" source="media/impala-database/server-selection.png" alt-text="Image of the Impala dialog with a Server name entered and the Import data connectivity mode selected.":::
 
 4. When prompted, enter your credentials or connect anonymously. The Impala connector supports Anonymous, Database (user name and password), and Windows authentication.
 
@@ -49,7 +49,7 @@ To connect to an **Impala** database, take the following steps:
 
    For more information about authentication methods, go to [Authentication with a data source](../connectorauthentication.md).
 
-   >[!Note]
+   > [!NOTE]
    >  If the connection isn't encrypted, you'll be prompted with the following message. Select **OK** if you want to use an unencrypted connection.
 
    ![Image of the encryption support dialog, emphasizing that a connection could not be made and asking whether to use an unencrypted connection.](media/impala-database/encryption-warning.png)
@@ -66,7 +66,7 @@ To connect to an **Impala** database, take the following steps:
 
 2. In **Connect to data source**, provide the name of the server and a port number if required.
 
-   ![Enter the impala database online connection.](./media/impala-database/service-signin.png)
+   :::image type="content" source="./media/impala-database/service-signin.png" alt-text="Enter the impala database online connection.":::
 
 3. If required, select the name of your on-premises data gateway.
 

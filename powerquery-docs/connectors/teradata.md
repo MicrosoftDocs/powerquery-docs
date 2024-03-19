@@ -1,10 +1,10 @@
 ---
 title: Power Query Teradata database connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your Teradata database.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/14/2023
-ms.author: bezhan
+ms.date: 1/24/2024
+ms.author: dougklo
 ---
 
 # Teradata database
@@ -14,11 +14,11 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication Types Supported | Database<br/>Windows |
 | Function Reference Documentation | [Teradata.Database](/powerquery-m/teradata-database) |
 
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
@@ -28,7 +28,7 @@ Before you can connect to a Teradata database, you need the [.NET Data Provider 
 ## Capabilities Supported
 
 * Import
-* DirectQuery (Power BI Datasets)
+* DirectQuery (Power BI semantic models)
 * Advanced options
   * Command timeout in minutes
   * SQL statement
@@ -43,7 +43,7 @@ To make the connection, take the following steps:
 
 2. Specify the Teradata server to connect to in **Server**.
 
-   ![Enter the Teradata database connection.](./media/teradata-database/get-data-teradata.png)
+   :::image type="content" source="./media/teradata-database/get-data-teradata.png" alt-text="Enter the Teradata database connection.":::
 
 3. If you're connecting from Power BI Desktop, select either the **Import** or **DirectQuery** data connectivity mode. The rest of these example steps use the Import data connectivity mode. To learn more about DirectQuery, go to [Use DirectQuery in Power BI Desktop](/power-bi/connect-data/desktop-use-directquery).
 
@@ -51,12 +51,11 @@ To make the connection, take the following steps:
 
 5. If this is the first time you're connecting to this Teradata database, select the authentication type you want to use, enter your credentials, and then select **Connect**. For more information about using and managing authentication, go to [Authentication with a data source](../connectorauthentication.md).
 
-   ![Enter your Teradata database credentials.](./media/teradata-database/sign-in-teradata.png)
+   :::image type="content" source="./media/teradata-database/sign-in-teradata.png" alt-text="Enter your Teradata database credentials.":::
 
 6. In **Navigator**, select the data you require, then either select **Load** to load the data or **Transform Data** to transform the data.
 
-   [![Select the data you require from the database](./media/teradata-database/navigator-teradata.png)](./media/teradata-database/navigator-teradata.png#lightbox)
-
+   :::image type="content" source="./media/teradata-database/navigator-teradata.png" lightbox="./media/teradata-database/navigator-teradata.png" alt-text="Select the data you require from the database":::
 ## Connect to a Teradata database from Power Query Online
 
 To make the connection, take the following steps:
@@ -67,7 +66,7 @@ To make the connection, take the following steps:
 
 3. Select the name of your on-premises data gateway.
 
-   >[!Note]
+   > [!NOTE]
    > You must select an on-premises data gateway for this connector, whether the Teradata database is on your local network or online.
 
 4. If this is the first time you're connecting to this Teradata database, select the type of credentials for the connection in **Authentication kind**. Choose **Basic** if you plan to use an account that's created in the Teradata database instead of Windows authentication. For more information about using and managing authentication, go to [Authentication with a data source](../connectorauthentication.md).
@@ -76,14 +75,13 @@ To make the connection, take the following steps:
 
 6. Select **Use Encrypted Connection** if you want to use an encrypted connection, or clear the option if you want to use an unencrypted connection.
 
-   ![Enter Teradata database online connection.](./media/teradata-database/data-source-online.png)
+   :::image type="content" source="./media/teradata-database/data-source-online.png" alt-text="Enter Teradata database online connection.":::
 
 7. Select **Next** to continue.
 
 8. In **Navigator**, select the data you require, then select **Transform data** to transform the data in the Power Query editor.
 
-   [![Select the data you want to transform in the Navigator](./media/teradata-database/navigator-online.png)](./media/teradata-database/navigator-online.png#lightbox)
-
+   :::image type="content" source="./media/teradata-database/navigator-online.png" lightbox="./media/teradata-database/navigator-online.png" alt-text="Select the data you want to transform in the Navigator":::
 ## Connect using advanced options
 
 Power Query provides a set of advanced options that you can add to your query if needed.

@@ -38,7 +38,7 @@ Follow the steps below to install the Visual Studio Power Query SDK:
 3. Define your connector logic.
 4. Build the project to produce an extension file.
 
-![Preview Feature.](media/install-sdk/new-project.png)
+:::image type="content" source="media/install-sdk/new-project.png" alt-text="Preview Feature.":::
 
 ### Visual Studio Code Power Query SDK (Preview)
 

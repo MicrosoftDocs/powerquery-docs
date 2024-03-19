@@ -1,9 +1,9 @@
 ---
 title: Providing user documentation for your Power Query custom connector
 description: Describes the format and layout of the user documentation that needs to be submitted for your Power Query custom connector.
-author: bezhan-msft
-ms.date: 2/9/2023
-ms.author: bezhan
+author: ptyx507x
+ms.date: 1/17/2024
+ms.author: miescobar
 ---
 
 # Providing user documentation for your custom connector
@@ -18,7 +18,7 @@ This section describes the general layout of the Power Query connector articles.
 
 Right after the title of the article, insert the following note.
 
->[!Note]
+> [!NOTE]
 >The following connector article is provided by \<_company name_>, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the \<_company name_> website and use the support channels there.
 
 Replace \<_company name_> with your company name.
@@ -32,11 +32,11 @@ After the support note, provide a summary table that contains the following info
 * **Authentication types supported**: Lists the authentication types your custom connector supports.
 * **Function reference documentation**: Lists any M formula language documentation associated with your custom connector.
 
-![Example summary table.](media/providing-user-documentation/sample-summary.png)
+:::image type="content" source="media/providing-user-documentation/sample-summary.png" alt-text="Example summary table.":::
 
 If your custom connector is implemented on various products, but has different capabilities on these products, include the following or similar note in your article after the summary table.
 
->[!Note]
+> [!NOTE]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ### Prerequisites
@@ -53,7 +53,7 @@ This section contains the procedures required to connect to data. If your custom
 
 The procedure is made up of a numbered list that includes each step required to fill in the information needed to provide a normal connection (not requiring advance options) to the data.
 
->[!NOTE]
+> [!NOTE]
 >All new certified connectors are required to support Power BI dataflows, and must contain sections for connecting to your data in both Power Query Desktop and Power Query Online.
 
 ### Connect using advanced options (optional)
@@ -72,7 +72,7 @@ Any other instructions or information about your connector that hasn't been cove
 
 The filename format for your connector article should contain only lowercase letters, with a hyphen between words. For example, the filename for the Azure Blob Storage connector is azure-blob-storage.md. If your connector name uses acronyms, the entire acronym counts as one word. For example the filename for the Hive LLAP connector is hive-llap.md.
 
-Your article should be made available on GitHub under the connectors folder in the Power Query documentation repo: <https://github.com/MicrosoftDocs/powerquery-docs/tree/master/powerquery-docs/connectors>. Ensure that you also add a link to your article in the [list of connectors](./connectors/index.md) referencing the correct logo image uploaded to the `/connectors/media/index` folder. Lastly, ensure that you add a link to your article in the table of contents file (`TOC.yml`). Certified connectors will only be available under **Power BI (Datasets)**.
+Your article should be made available on GitHub under the connectors folder in the Power Query documentation repo: <https://github.com/MicrosoftDocs/powerquery-docs/tree/master/powerquery-docs/connectors>. Ensure that you also add a link to your article in the [list of connectors](./connectors/index.md) referencing the correct logo image uploaded to the `/connectors/media/index` folder. Lastly, ensure that you add a link to your article in the table of contents file (`TOC.yml`). Certified connectors will only be available under **Power BI (Semantic Models)**.
 
 See our [contributor guide](/contribute/) on how you can contribute to our repo.
 

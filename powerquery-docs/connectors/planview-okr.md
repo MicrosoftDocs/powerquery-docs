@@ -3,8 +3,8 @@ title: Power Query Planview OKR (Beta) connector
 description: Provides basic information and prerequisites for Planview OKR connector
 author: jsilva
 ms.topic: conceptual
-ms.date: 10/10/2023
-ms.author: bezhan
+ms.date: 1/24/2024
+ms.author: dougklo
 ---
 
 # Planview OKR (Beta)
@@ -14,7 +14,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | Preview |
-| Products | Power BI (Datasets) <br/> Power BI (Dataflows) <br/> Fabric (Dataflow Gen2) |
+| Products | Power BI (Semantic models) <br/> Power BI (Dataflows) <br/> Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Planview Admin account |
 
 ## Prerequisites
@@ -67,7 +67,7 @@ To load data from Planview OKR in Power Query Online:
 
 3. If you're connecting using Planview OKR for the first time, you need to sign in into your Planview Admin account.
 
-   :::image type="content" source="./media/planview-okr/planview-okr-sign-in.png" alt-text="./media/planview-okr/planview-okr-sign-in.png":::
+   :::image type="content" source="./media/planview-okr/planview-okr-sign-in.png" alt-text="./media/planview-okr/planview-okr-sign-in.png.":::
 
 4. After you sign in, select **Next**.
 

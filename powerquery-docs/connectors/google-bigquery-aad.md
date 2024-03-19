@@ -1,47 +1,47 @@
 ---
-title: Google BigQuery (Azure AD) (Beta)
-description: Provides basic information and prerequisites for the Google BigQuery (Azure AD) connector for Power Query.
-author: bezhan-msft
+title: Google BigQuery (Microsoft Entra ID) (Beta)
+description: Provides basic information and prerequisites for the Google BigQuery (Microsoft Entra ID) connector for Power Query.
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/13/2023
-ms.author: bezhan
+ms.date: 3/14/2024
+ms.author: dougklo
 ---
 
-# Google BigQuery (Azure AD) (Beta)
+# Google BigQuery (Microsoft Entra ID) (Beta)
 
 ## Summary
 
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products Supported | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows) |
-| Authentication Types Supported | Azure Active Directory |
+| Products Supported | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows) |
+| Authentication Types Supported | Organizational account |
 
 > [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
 
-You need an Azure Active Directory account to sign in to Google BigQuery (Azure AD).
+You need a Microsoft Entra ID account to sign in to Google BigQuery (Microsoft Entra ID).
 
 ## Capabilities supported
 
 * Import
-* DirectQuery (Power BI Datasets)
+* DirectQuery (Power BI Semantic models)
 
-## Connect to Google BigQuery (Azure AD) data from Power Query Desktop
+## Connect to Google BigQuery (Microsoft Entra ID) data from Power Query Desktop
 
-To connect to Google BigQuery (Azure AD) from Power Query Desktop, take the following steps:
+To connect to Google BigQuery (Microsoft Entra ID) from Power Query Desktop, take the following steps:
 
-1. In the Get Data experience, search for and select **Google BigQuery (Azure AD)**. More information: [Where to get data](../where-to-get-data.md)
+1. In the Get Data experience, search for and select **Google BigQuery (Microsoft Entra ID)**. More information: [Where to get data](../where-to-get-data.md)
 
-   :::image type="content" source="media/google-bigquery-aad/get-data-desktop.png" alt-text="Screenshot with the Get Data dialog, with emphasis on the Google BigQuery (Azure AD) connector.":::
+   :::image type="content" source="media/google-bigquery-aad/get-data-desktop.png" alt-text="Screenshot with the Get Data dialog, with emphasis on the Google BigQuery (Microsoft Entra ID) connector.":::
 
 2. Specify a **Billing Project ID**, which is required for the use of this connector. If you want to use any advanced options, select **Advanced options**. Otherwise, select either **Import** or **DirectQuery**, and then select **OK** to continue. More information: [Connect using advanced options](#connect-using-advanced-options)
 
-   :::image type="content" source="media/google-bigquery-aad/project-id-desktop.png" alt-text="Screenshot of the Google BigQuery (Azure AD) dialog, where you enter your billing project ID, select Import or DirectQuery, and optionally select advanced options.":::
+   :::image type="content" source="media/google-bigquery-aad/project-id-desktop.png" alt-text="Screenshot of the Google BigQuery (Microsoft Entra ID) dialog, where you enter your billing project ID, select Import or DirectQuery, and optionally select advanced options.":::
 
-3. The Google BigQuery (Azure AD) connector supports connecting through an Azure Active Directory account. Select **Sign In** to continue.
+3. The Google BigQuery (Microsoft Entra ID) connector supports connecting through a Microsoft Entra ID account. Select **Sign In** to continue.
 
    :::image type="content" source="media/google-bigquery-aad/sign-in-desktop.png" alt-text="Screenshot of the authentication dialog, indicating that you aren't currently signed in.":::
 
@@ -51,17 +51,17 @@ To connect to Google BigQuery (Azure AD) from Power Query Desktop, take the foll
 
 5. Once you successfully connect, a **Navigator** window appears and displays the data available on the server. Select your data in the navigator. Then select either **Transform Data** to transform the data in Power Query or **Load** to load the data in Power BI Desktop.
 
-## Connect to Google BigQuery (Azure AD) data from Power Query Online
+## Connect to Google BigQuery (Microsoft Entra ID) data from Power Query Online
 
-To connect to Google BigQuery (Azure AD) from Power Query Online, take the following steps:
+To connect to Google BigQuery (Microsoft Entra ID) from Power Query Online, take the following steps:
 
-1. In the Get Data experience, do a search for **Google**, and then select **Google BigQuery (Azure AD)**. More information: [Where to get data](../where-to-get-data.md)
+1. In the Get Data experience, do a search for **Google**, and then select **Google BigQuery (Microsoft Entra ID)**. More information: [Where to get data](../where-to-get-data.md)
 
-   :::image type="content" source="media/google-bigquery-aad/choose-data-source.png" alt-text="Screenshot of the Choose data source dialog with the Google BigQuery (Azure AD) connector emphasized.":::
+   :::image type="content" source="media/google-bigquery-aad/choose-data-source.png" alt-text="Screenshot of the Choose data source dialog with the Google BigQuery (Microsoft Entra ID) connector emphasized.":::
 
-2. In the **Google BigQuery (Azure AAD)** dialog, you may need to either create a new connection or select an existing connection. If you're creating a new connection, enter the **Billing Project ID**. If you're using on-premises data, select an on-premises data gateway.
+2. In the **Google BigQuery (Microsoft Entra ID)** dialog, you may need to either create a new connection or select an existing connection. If you're creating a new connection, enter the **Billing Project ID**. If you're using on-premises data, select an on-premises data gateway.
 
-   :::image type="content" source="media/google-bigquery-aad/connect-to-data-source.png" alt-text="Screenshot of the Connect to data source dialog where you enter your Google BigQuery (Azure AD) connection settings and credentials.":::
+   :::image type="content" source="media/google-bigquery-aad/connect-to-data-source.png" alt-text="Screenshot of the Connect to data source dialog where you enter your Google BigQuery (Microsoft Entra ID) connection settings and credentials.":::
 
 3. If you want to use any advanced options, select **Advanced options**. More information: [Connect using advanced options](#connect-using-advanced-options)
 
@@ -88,21 +88,21 @@ Once you've selected the advanced options you require, select **OK** in Power Qu
 
 ## Limitations and considerations
 
-This section describes any limitations or considerations of the Google BigQuery (Azure AD) connector.
+This section describes any limitations or considerations of the Google BigQuery (Microsoft Entra ID) connector.
 
 ### OIDC configurations
 
-The Google BigQuery (Azure AD) connector utilizes Azure AD JWT tokens to connect Azure AD-based authentication with Google's Workforce Federation feature. So, the setup on the authentication side must be an [OIDC-based set up](https://cloud.google.com/sdk/gcloud/reference/iam/workforce-pools/providers/create-oidc) to align with the Azure AD JWT tokens. Reach out to your Google BigQuery point-of-contact for further information on authentication setup and support on the Google side.
+The Google BigQuery (Microsoft Entra ID) connector utilizes Microsoft Entra ID JWT tokens to connect Microsoft Entra ID-based authentication with Google's Workforce Federation feature. So, the setup on the authentication side must be an [OIDC-based set up](https://cloud.google.com/sdk/gcloud/reference/iam/workforce-pools/providers/create-oidc) to align with the Microsoft Entra ID JWT tokens. Reach out to your Google BigQuery point-of-contact for further information on authentication setup and support on the Google side.
 
-### Connecting to Google BigQuery (Azure AD) in Power BI Desktop
+### Connecting to Google BigQuery (Microsoft Entra ID) in Power BI Desktop
 
 There are a few limits and considerations to keep in mind when using the Google BigQuery connector with Power BI.
 
 #### Nested fields
 
-To optimize performance considerations, Google BigQuery does well with large datasets when denormalized, flattened, and nested.
+To optimize performance considerations, Google BigQuery does well with large data sets when denormalized, flattened, and nested.
 
-The Google BigQuery (Azure AD) connector supports nested fields, which are loaded as text columns in JSON format.
+The Google BigQuery (Microsoft Entra ID) connector supports nested fields, which are loaded as text columns in JSON format.
 
 :::image type="content" source="./media/google-bigquery/google-bigquery-nested-fields.png" alt-text="Screenshot of the Google BigQuery nested fields support." lightbox="./media/google-bigquery/google-bigquery-nested-fields.png":::
 
@@ -113,7 +113,7 @@ Users should select **Transform Data** and then use the JSON parsing capabilitie
 
 ### Unable to authenticate with Google BigQuery Storage API
 
-The Google BigQuery (Azure AD) connector uses [Google BigQuery Storage API](https://cloud.google.com/bigquery/docs/reference/storage) by default. This feature is controlled by the advanced option called [UseStorageApi](#connect-using-advanced-options). You might encounter issues with this feature if you use granular permissions. In this scenario, you might see the following error message or fail to get any data from your query:
+The Google BigQuery (Microsoft Entra ID) connector uses [Google BigQuery Storage API](https://cloud.google.com/bigquery/docs/reference/storage) by default. This feature is controlled by the advanced option called [UseStorageApi](#connect-using-advanced-options). You might encounter issues with this feature if you use granular permissions. In this scenario, you might see the following error message or fail to get any data from your query:
 
 `ERROR [HY000] [Microsoft][BigQuery] (131) Unable to authenticate with Google BigQuery Storage API. Check your account permissions`
 
@@ -131,11 +131,11 @@ If the above steps don't resolve the problem, you can disable the BigQuery Stora
 
 There's a known issue where the DateTime type isn't supported through DirectQuery. Selecting a column with the DateTime type causes an "Invalid query" error or a visual error.
 
-## Enable Azure AD single sign-on (SSO) for Google BigQuery
+## Enable Microsoft Entra ID single sign-on (SSO) for Google BigQuery
 
-We support Azure AD SSO through both Power BI Service (cloud) and also through the on-premises data gateway. For more information about enabling Azure AD SSO for all connectors, go to [Overview of single sign-on (SSO) for on-premises data gateways in Power BI](/power-bi/connect-data/service-gateway-sso-overview). Confirm directly with your Google contact that your system and accounts are set up correctly for Azure AD SSO prior to attempting to connect in Power BI.
+We support Microsoft Entra ID SSO through both Power BI Service (cloud) and also through the on-premises data gateway. For more information about enabling Microsoft Entra ID SSO for all connectors, go to [Overview of single sign-on (SSO) for on-premises data gateways in Power BI](/power-bi/connect-data/service-gateway-sso-overview). Confirm directly with your Google contact that your system and accounts are set up correctly for Microsoft Entra ID SSO prior to attempting to connect in Power BI.
 
-### Azure AD single sign-on (SSO) through Power BI service
+### Microsoft Entra ID single sign-on (SSO) through Power BI service
 
 To configure a new connection in Power BI service:
 
@@ -147,17 +147,17 @@ To configure a new connection in Power BI service:
 
    :::image type="content" source="./media/google-bigquery/gbq-sso.png" alt-text="Screenshot of the Google BigQuery SSO option with the Enabled button enabled.":::
 
-### Azure AD single sign-on (SSO) for Google BigQuery with an on-premises data gateway
+### Microsoft Entra ID single sign-on (SSO) for Google BigQuery with an on-premises data gateway
 
-Before you can enable Azure AD SSO for Google BigQuery, you must first enable Azure AD SSO for all data sources that support Azure AD SSO with an on-premises data gateway. Also, ensure you've upgraded to at least the December 2022 release of the on-premises data gateway:
+Before you can enable Microsoft Entra ID SSO for Google BigQuery, you must first enable Microsoft Entra ID SSO for all data sources that support Microsoft Entra ID SSO with an on-premises data gateway. Also, ensure you've upgraded to at least the December 2022 release of the on-premises data gateway:
 
 1. In Power BI service, select **Admin portal** from the settings list.
 
    :::image type="content" source="./media/google-bigquery/admin-portal.png" alt-text="Another screenshot of the Settings menu with the Admin portal emphasized.":::
 
-2. Under **Tenant settings**, enable **Azure AD Single-Sign On (SSO) for Gateway**.
+2. Under **Integration settings**, enable **Azure AD Single-Sign On (SSO) for Gateway**.
 
-Once you've enabled Azure AD SSO for all data sources, then enable Azure AD SSO for Google BigQuery:
+Once you've enabled Microsoft Entra ID SSO for all data sources, then enable Microsoft Entra ID SSO for Google BigQuery:
 
 1. Enable the **Google BigQuery SSO** option.
 
@@ -167,4 +167,4 @@ Once you've enabled Azure AD SSO for all data sources, then enable Azure AD SSO 
 
 3. Select a gateway, and then select **Choose Data Source**.
 
-4. Under the **Data Source Settings** tab, enter a value in **Billing Project ID**. The **Billing Project ID** parameter is required when using Azure AD and needs to be specified in **Advanced settings**. Also, select **Use SSO via Azure AD for DirectQuery queries**.
+4. Under the **Data Source Settings** tab, enter a value in **Billing Project ID**. The **Billing Project ID** parameter is required when using Microsoft Entra ID and needs to be specified in **Advanced settings**. Also, select **Use SSO via Azure AD for DirectQuery queries**.

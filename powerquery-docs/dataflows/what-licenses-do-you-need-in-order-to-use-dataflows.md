@@ -78,7 +78,7 @@ If you use Power BI Premium (capacity-based licensing), you can use all the AI c
 
 #### Limitations per premium capacity
 
-Dataflows that are using a premium capacity to refresh the data are limited to the maximum number of parallel tasks they can perform at a given time. The maximum number of parallel tasks depends on the type of premium capacity you're using. [This table](/power-bi/developer/embedded/embedded-capacity#sku-memory-and-computing-power) represents the maximum number of parallel tasks that can be run at a given time by all dataflows in a workspace mapped to the capacity.
+Dataflows that are using a premium capacity to refresh the data are limited to the maximum number of parallel tasks they can perform at a given time. The maximum number of parallel tasks depends on the type of premium capacity you're using. [This table](/power-bi/enterprise/service-premium-what-is#dataflows-gen1) represents the maximum number of parallel tasks that can be run at a given time by all dataflows in a workspace mapped to the capacity.
 
 #### Parallel tasks
 

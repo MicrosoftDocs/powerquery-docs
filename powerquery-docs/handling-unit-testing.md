@@ -88,8 +88,8 @@ Uri.GetHost = (url) =>
         parts[Scheme] & "://" & parts[Host]
 ```
 
-![Some tests fail.](media/handling-unit-testing/unit-testing-failure.png)
+:::image type="content" source="media/handling-unit-testing/unit-testing-failure.png" alt-text="Some tests fail.":::
 
 The [final version of the function](helper-functions.md) should pass all unit tests. This also makes it easy to ensure that future updates to the function do not accidentally remove any of its basic functionality.
 
-![All tests pass.](media/handling-unit-testing/unit-testing-pass.png)
+:::image type="content" source="media/handling-unit-testing/unit-testing-pass.png" alt-text="All tests pass.":::

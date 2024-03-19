@@ -1,10 +1,10 @@
 ---
 title: Power Query Web connector
 description: Provides basic information and how to connect to your data, along with the supported file types and instructions on using the on-premises data gateway and authentication types.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/14/2023
-ms.author: bezhan
+ms.date: 2/16/2024
+ms.author: dougklo
 ---
 
 # Web
@@ -14,16 +14,23 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
-| Authentication Types Supported | [Web.Contents](/powerquery-m/web-contents)<br/>Anonymous<br/>Windows<br/>Basic<br/>Web API<br/>Organizational Account<br/>Service Principal<br/>[Web.BrowserContents](/powerquery-m/web-browsercontents)<br/>Anonymous<br/>Windows ([preview feature](web-troubleshoot.md#enabling-the-edge-webview2-version-of-webbrowsercontents))<br/>Basic ([preview feature](web-troubleshoot.md#enabling-the-edge-webview2-version-of-webbrowsercontents))<br/>Web API ([preview feature](web-troubleshoot.md#enabling-the-edge-webview2-version-of-webbrowsercontents))<br/><br/>[Web.Page](/powerquery-m/web-page)<br/>Anonymous<br/>Windows (current user's credentials only)<br/>Web API |
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
+| Authentication Types Supported | [Web.Contents](/powerquery-m/web-contents):<br/>Anonymous<br/>Windows<br/>Basic<br/>Web API<br/>Organizational Account<br/>Service Principal<br/><br/>[Web.BrowserContents](/powerquery-m/web-browsercontents):<br/>Anonymous<br/>Windows<br/>Basic<br/>Web API<br/><br/>[Web.Page](/powerquery-m/web-page):<br/>Anonymous<br/>Windows (current user's credentials only)<br/>Web API |
 | Function Reference Documentation | [Web.Contents](/powerquery-m/web-contents)<br/>[Web.BrowserContents](/powerquery-m/web-browsercontents)<br/>[Web.Page](/powerquery-m/web-page) |
 
->[!Note]
+> [!NOTE]
+>The service principal authentication type isn't supported when using an on-premises data gateway or a virtual network (VNet) data gateway.
+
+> [!NOTE]
+> POST requests can only be made anonymously when using `Web.Contents`.
+
+> [!NOTE]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
 
 * [Web.Page](/powerquery-m/web-page) requires Internet Explorer 10.
+* [Web.BrowserContents](/powerquery-m/web-browsercontents) requires Microsoft Edge's WebView2 runtime.
 
 ## Capabilities supported
 
@@ -41,15 +48,15 @@ To load data from a web site with Power Query Desktop:
 
 2. Choose the **Basic** button and enter a URL address in the text box. For example, enter `https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States`. Then select **OK**.
 
-   ![Text file selection.](web-basic-url.png)
+   :::image type="content" source="web-basic-url.png" alt-text="Text file selection.":::
 
-   If the URL address you enter is invalid, a ![Warning icon.](web-warning.png) warning icon will appear next to the **URL** textbox.
+   If the URL address you enter is invalid, a :::image type="content" source="web-warning.png" alt-text="Warning icon."::: warning icon will appear next to the **URL** textbox.
 
    If you need to construct a more advanced URL before you connect to the website, go to [Load Web data using an advanced URL](#load-web-data-using-an-advanced-url).
 
 3. Select the authentication method to use for this web site. In this example, select **Anonymous**. Then select the level to you want to apply these settings to&mdash;in this case, **https://en.wikipedia.org/**. Then select **Connect**.
 
-   ![Web credentials selection.](web-credentials.png)
+   :::image type="content" source="web-credentials.png" alt-text="Web credentials selection.":::
 
    The available authentication methods for this connector are:
 
@@ -63,19 +70,16 @@ To load data from a web site with Power Query Desktop:
 
    * **Organizational account**: Select this authentication method if the web page requires organizational account credentials.
 
-   >[!Note]
-   >When uploading the report to the Power BI service, only the **anonymous**, **Windows** and **basic** authentication methods are available.
-
    The level you select for the authentication method determines what part of a URL will have the authentication method applied to it. If you select the top-level web address, the authentication method you select here will be used for that URL address or any subaddress within that address. However, you might not want to set the top URL address to a specific authentication method because different subaddresses could require different authentication methods. For example, if you were accessing two separate folders of a single SharePoint site and wanted to use different Microsoft Accounts to access each one.
 
    Once you've set the authentication method for a specific web site address, you won't need to select the authentication method for that URL address or any subaddress again. For example, if you select the `https://en.wikipedia.org/` address in this dialog, any web page that begins with this address won't require that you select the authentication method again.  
 
-   >[!Note]
+   > [!NOTE]
    >If you need to change the authentication method later, go to [Changing the authentication method](web-troubleshoot.md#changing-the-authentication-method).
 
 4. From the **Navigator** dialog, you can select a table, then either transform the data in the Power Query editor by selecting **Transform Data**, or load the data by selecting **Load**.
 
-   ![Web table selection.](web-navigator.png)
+   :::image type="content" source="web-navigator.png" alt-text="Web table selection.":::
 
    The right side of the **Navigator** dialog displays the contents of the table you select to transform or load. If you're uncertain which table contains the data you're interested in, you can select the **Web View** tab. The web view lets you see the entire contents of the web page, and highlights each of the tables that have been detected on that site. You can select the check box above the highlighted table to obtain the data from that table.
 
@@ -87,7 +91,7 @@ To load data from a web site with Power Query Online:
 
 1. From the **Get Data** dialog box, select either **Web page** or **Web API**.
 
-   ![Select either the Web page or Web API connector.](select-web-page-api.png)
+   :::image type="content" source="select-web-page-api.png" alt-text="Select either the Web page or Web API connector.":::
 
    In most cases, you'll want to select the Web page connector. For security reasons, you'll need to use an [on-premises data gateway](/data-integration/gateway/) with this connector. The Web Page connector requires a gateway because HTML pages are retrieved using a browser control, which involves potential security concerns. This concern isn't an issue with Web API connector, as it doesn't use a browser control.
 
@@ -97,15 +101,15 @@ To load data from a web site with Power Query Online:
 
 2. Enter a URL address in the text box. For this example, enter `https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States`.
 
-   ![Enter the web page URL.](online-sign-in.png)
+   :::image type="content" source="online-sign-in.png" alt-text="Enter the web page URL.":::
 
 3. Select the name of your on-premises data gateway.
 
-   ![Enter your on-premises data gateway.](enter-gateway.png)
+   :::image type="content" source="enter-gateway.png" alt-text="Enter your on-premises data gateway.":::
 
 4. Select the authentication method you'll use to connect to the web page.
 
-   ![Select the authentication method.](online-authentication.png)
+   :::image type="content" source="online-authentication.png" alt-text="Select the authentication method.":::
 
    The available authentication methods for this connector are:
 
@@ -121,13 +125,13 @@ To load data from a web site with Power Query Online:
 
 5. From the **Navigator** dialog, you can select a table, then transform the data in the Power Query Editor by selecting **Transform Data**.
 
-   ![Navigator dialog box showing states from the web page.](online-navigator.png)
+   :::image type="content" source="online-navigator.png" alt-text="Navigator dialog box showing states from the web page.":::
 
 ## Load Web data using an advanced URL
 
 When you select **Get Data > From Web** in Power Query Desktop, in most instances you'll enter URLs in the Basic setting. However, in some cases you may want to assemble a URL from its separate parts, set a timeout for the connection, or provide individualized URL header data. In this case, select the **Advanced** option in the **From Web** dialog box.
 
-![Web advanced URL assembly.](web-advanced-url.png)
+:::image type="content" source="web-advanced-url.png" alt-text="Web advanced URL assembly.":::
 
 Use the **URL parts** section of the dialog to assemble the URL you want to use to get data. The first part of the URL in the **URL parts** section most likely would consist of the scheme, authority, and path of the URI (for example, `http://contoso.com/products/`). The second text box could include any queries or fragments that you would use to filter the information provided to the web site. If you need to add more than one part, select **Add part** to add another URL fragment text box. As you enter each part of the URL, the complete URL that will be used when you select **OK** is displayed in the **URL preview** box.
 
@@ -171,7 +175,7 @@ For example, you could use the following steps to import a JSON file on the `htt
 
     `http://contoso.com/products/Example_JSON.json`
 
-    ![Import a JSON file from the web.](web-json.png)
+    :::image type="content" source="web-json.png" alt-text="Import a JSON file from the web.":::
 
 3. Select **OK**.
 
@@ -179,7 +183,7 @@ For example, you could use the following steps to import a JSON file on the `htt
 
 5. Power Query Editor will now open with the data imported from the JSON file. Select the **View** tab in the Power Query Editor, then select **Formula Bar** to turn on the formula bar in the editor.
 
-    ![Open the Formula Bar.](web-formula-bar.png)
+    :::image type="content" source="web-formula-bar.png" alt-text="Open the Formula Bar.":::
 
     As you can see, the Web connector returns the web contents from the URL you supplied, and then automatically wraps the web contents in the appropriate document type specified by the URL (`Json.Document` in this example).
 

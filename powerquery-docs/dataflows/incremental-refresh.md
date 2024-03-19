@@ -3,7 +3,7 @@ title: Using incremental refresh with dataflows
 description: Learn how to configure incremental refresh for dataflows
 author: bensack
 ms.topic: conceptual
-ms.date: 6/13/2023
+ms.date: 1/26/2024
 ms.author: bensack
 ---
 
@@ -32,7 +32,7 @@ A dataflow can contain many tables. Incremental refresh is set up at the table l
 
 To set up an incremental-refreshed table, start by configuring your table as you would any other table.
 
-After the dataflow is created and saved, select **Incremental refresh** ![Incremental refresh.](media/incremental-refresh/dataflows-incremental-refresh-icon.png) in the table view, as shown in the following image.
+After the dataflow is created and saved, select **Incremental refresh** :::image type="content" source="media/incremental-refresh/dataflows-incremental-refresh-icon.png" alt-text="Incremental refresh."::: in the table view, as shown in the following image.
 
 ![Incremental refresh icon for dataflows.](media/incremental-refresh/dataflows-incremental-refresh-01.png)
 
@@ -135,9 +135,9 @@ The next refresh operation, with *Run Date 1/16/2017*, takes the opportunity to 
 
 ![Recovery from prolonged failure in dataflows.](media/incremental-refresh/dataflows-incremental-refresh-06.png)
 
-## Dataflow incremental refresh and datasets
+## Dataflow incremental refresh and data sets
 
-Dataflow incremental refresh and dataset incremental refresh are designed to work in tandem. It's acceptable and supported to have an incrementally refreshing table in a dataflow, fully loaded into a dataset, or a fully loaded table in a dataflow incrementally loaded to a dataset.
+Dataflow incremental refresh and data set incremental refresh are designed to work in tandem. It's acceptable and supported to have an incrementally refreshing table in a dataflow, fully loaded into a data set, or a fully loaded table in a dataflow incrementally loaded to a data set.
 
 Both approaches work according to your specified definitions in the refresh settings. More information: [Incremental refresh in Power BI Premium](/power-bi/service-premium-incremental-refresh)
 

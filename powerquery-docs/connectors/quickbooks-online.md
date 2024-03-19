@@ -1,10 +1,10 @@
 ---
 title: Power Query QuickBooks Online connector
 description: Provides basic information, prerequisites, and instructions on how to connect to your database, along with known issues that may affect the connection.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 12/1/2021
-ms.author: bezhan
+ms.date: 1/24/2024
+ms.author: dougklo
 ---
 
 # QuickBooks Online (Beta)
@@ -16,11 +16,10 @@ The Power BI QuickBooks Online connector enables connecting to your QuickBooks O
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products | Power BI (Datasets) |
+| Products | Power BI (Semantic models) |
 | Authentication Types Supported | QuickBooks Online account |
-| | |
 
->[!Warning]
+> [!WARNING]
 > QuickBooks Online has deprecated support for Internet Explorer 11, which Power Query Desktop uses for authentication to online services. To be able to log in to Quickbooks Online from Power BI Desktop, go to [Enabling Microsoft Edge (Chromium) for OAuth Authentication in Power BI Desktop](../oauth-edge-chromium.md).
 
 ## Prerequisites
@@ -39,31 +38,31 @@ To connect to QuickBooks Online:
 
 1. In the **Get Data** dialog box, enter **QuickBooks** in the **Search** box, select **QuickBooks Online (Beta)** from the product-specific data connector list, and then select **Connect**.
 
-   ![Get data from QuickBooks Online.](media/quickbooks-online/qb-get-data.png)
+   :::image type="content" source="media/quickbooks-online/qb-get-data.png" alt-text="Get data from QuickBooks Online.":::
 
 2. Select **Continue** in the **Preview connector** message.
 
-   ![Preview connector.](media/quickbooks-online/qb-preview-connector.png)
+   :::image type="content" source="media/quickbooks-online/qb-preview-connector.png" alt-text="Preview connector.":::
 
 3. Select **Sign in** to sign into your QuickBooks Online account.
 
-   ![Sign in to your account.](media/quickbooks-online/qb-signin.png)
+   :::image type="content" source="media/quickbooks-online/qb-signin.png" alt-text="Sign in to your account.":::
 
 4. In the following dialog, enter your QuickBooks credentials. You may be required to provide 2FA (two factor authentication code) as well.
 
-   ![Enter your credentials.](media/quickbooks-online/qb-intuit-signin.png)
+   :::image type="content" source="media/quickbooks-online/qb-intuit-signin.png" alt-text="Enter your credentials.":::
 
 5. In the following dialog, select a company and then select **Next**.
 
-   ![Select a company.](media/quickbooks-online/qb-select-company.png)
+   :::image type="content" source="media/quickbooks-online/qb-select-company.png" alt-text="Select a company.":::
 
 6. Once you've successfully signed in, select **Connect**.
 
-   ![Connect to QuickBooks Online.](media/quickbooks-online/qb-connect.png)
+   :::image type="content" source="media/quickbooks-online/qb-connect.png" alt-text="Connect to QuickBooks Online.":::
 
 7. In the **Navigator** dialog box, select the QuickBooks tables you want to load. You can then either load or transform the data.
 
-   ![Select QuickBooks tables.](media/quickbooks-online/qb-navigator-window.png)
+   :::image type="content" source="media/quickbooks-online/qb-navigator-window.png" alt-text="Select QuickBooks tables.":::
 
 ## Known issues
 

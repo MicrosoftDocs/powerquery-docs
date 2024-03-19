@@ -4,7 +4,7 @@
 // OAuth configuration settings
 //
 
-// TODO: set AAD client ID value in the client_id file
+// TODO: set Microsft Entra ID client ID value in the client_id file
 client_id = Text.FromBinary(Extension.Contents("client_id")); 
 redirect_uri = "https://oauth.powerbi.com/views/oauthredirect.html";
 token_uri = "https://login.microsoftonline.com/organizations/oauth2/v2.0/token";
@@ -75,12 +75,12 @@ MyGraph.Icons = [
 //
 // OAuth implementation
 //
-// See the following links for more details on AAD/Graph OAuth:
+// See the following links for more details on Microsoft Entra ID/Graph OAuth:
 // * https://docs.microsoft.com/en-us/azure/active-directory/active-directory-protocols-oauth-code 
 // * https://graph.microsoft.io/en-us/docs/authorization/app_authorization
 //
 // StartLogin builds a record containing the information needed for the client
-// to initiate an OAuth flow. Note for the AAD flow, the display parameter is
+// to initiate an OAuth flow. Note for the Microsoft Entra ID flow, the display parameter is
 // not used.
 //
 // resourceUrl: Derived from the required arguments to the data source function
@@ -125,7 +125,7 @@ StartLogin = (resourceUrl, state, display) =>
         ];
 
 // FinishLogin is called when the OAuth flow reaches the specified redirect_uri. 
-// Note for the AAD flow, the context and state parameters are not used. 
+// Note for the Microsoft Entra ID flow, the context and state parameters are not used. 
 //
 // context:     The value of the Context field returned by StartLogin. Use this to 
 //              pass along information derived during the StartLogin call (such as

@@ -1,10 +1,10 @@
 ---
 title: Power Query Socialbakers connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Socialbakers.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/14/2023
-ms.author: bezhan
+ms.date: 3/14/2024
+ms.author: dougklo
 ---
 
 # Socialbakers (Beta)
@@ -17,7 +17,7 @@ ms.author: bezhan
 | Item | Description |
 | --- | --- |
 | Release state | Beta |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Basic |
 | Function Reference Documentation | &mdash; |
 
@@ -38,7 +38,7 @@ To use the Socialbakers (Emplifi) Connector, you must have Socialbakers (Emplifi
 
 When the connector is started for the first time, authentication is needed. Enter your **Token** and **Secret** to the new modal window. Credentials can be provided to you by the Emplifi Support team.
 
-![Authentication.](./media/socialbakers/image.png)
+:::image type="content" source="./media/socialbakers/image.png" alt-text="Authentication.":::
 
 Once you sign in, the authentication information is automatically stored by Power BI for future use. It can be found under **File** > **Options and settings** > **Data source settings** > **Global permissions**.
 
@@ -61,7 +61,8 @@ Not all data sources are the same. The differences are described [later](#facebo
 
    ![DataSources](./media/socialbakers/image3.png)
 
-2. Enter the data and select the metrics in the Parameters section. For more details about the metrics, visit the [Socialbakers API documentation](https://api.socialbakers.com).
+2. Enter the data and select the metrics in the Parameters section.
+
     - An example selection follows below:
         - **Start Date:** `07/01/2021`
         - **End Date:** `07/30/2021`
@@ -72,16 +73,17 @@ Not all data sources are the same. The differences are described [later](#facebo
         - **Profiles Facebook:** `Emplifi (<profile_id>)`
         - **Profiles Instagram:** `Emplifi (<profile_id>)`
         - **Profiles YouTube:** `Emplifi (<profile_id>)`
+
 3. Once all required parameters are selected, select **Apply**.
 
-   >[!NOTE]
+   > [!NOTE]
    > Not all parameters are explicitly mandatory, but they could be needed for specific selections. For example, the profile selection is optional, but you still need to select some profiles to get any data.
 
    ![Preview.](./media/socialbakers/image4.png)
 
 4. Once all data and metrics are selected, use the **Load** button to load the data to the report. It's also possible to **Transform Data** before loading it into the report.
 
-   >[!NOTE]
+   > [!NOTE]
    > It's possible to select more than one data source by checking more of the boxes, setting their parameters, and then selecting **Load**.
 
 #### Facebook Ads Data Source
@@ -97,10 +99,6 @@ By selecting the specific month(s), you're narrowing down all your Facebook Ad A
 ![SelectedMonth.](./media/socialbakers/image6.png)
 
 You can select the specific Ad Accounts in the Parameters section under the **"Accounts"** parameter, along with the **Campaigns** selection.
-
-## Troubleshooting
-
-If any error occurs, check the [documentation](https://api.socialbakers.com/) and make sure you're following the guidelines of the API.
 
 ## Additional instructions
 

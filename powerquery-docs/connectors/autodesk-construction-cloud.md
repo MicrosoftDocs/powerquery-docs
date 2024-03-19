@@ -1,15 +1,15 @@
 ---
 title: Autodesk Construction Cloud Power Query Connector
 description: Includes basic information, prerequisites, and information on how to connect to your Autodesk Construction Cloud data, along with a list of known issues and limitations.
-author: bezhan-msft
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/13/2023
-ms.author: bezhan
+ms.date: 1/18/2023
+ms.author: dougklo
 ---
 
 # Autodesk Construction Cloud
 
->[!Note]
+> [!NOTE]
 >The following connector article is provided by Autodesk, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Autodesk website and use the support channels there.
 
 ## Summary
@@ -17,7 +17,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)  |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)  |
 | Authentication Types Supported | Autodesk account |
 | Function Reference Documentation |&mdash; |
 
@@ -40,27 +40,27 @@ To connect to Autodesk Construction Cloud data:
 
 3. Select the Autodesk server **region** (US or EU), and then select **OK**.
   
-   ![Select server region.](./media/autodesk-construction-cloud/acc-region-selection.png)
+   :::image type="content" source="./media/autodesk-construction-cloud/acc-region-selection.png" alt-text="Select server region.":::
 
 4. To sign in to your Autodesk account, select **Sign in**.
   
-   ![Select sign in button.](./media/autodesk-construction-cloud/acc-sign-in.png)
+   :::image type="content" source="./media/autodesk-construction-cloud/acc-sign-in.png" alt-text="Select sign in button.":::
 
 5. In the Autodesk window that appears, provide your credentials to sign in to your Autodesk account.
   
-   ![Sign in to Autodesk.](./media/autodesk-construction-cloud/acc-adsk-login.png)
+   :::image type="content" source="./media/autodesk-construction-cloud/acc-adsk-login.png" alt-text="Sign in to Autodesk.":::
 
 6. Once you've successfully signed in, select **Connect**.
 
-   ![Signed in and ready to connect.](./media/autodesk-construction-cloud/acc-sign-in-success.png)
+   :::image type="content" source="./media/autodesk-construction-cloud/acc-sign-in-success.png" alt-text="Signed in and ready to connect.":::
 
 7. In **Navigator**, expand the Account you want to pull data from, which will display an **Account Extract** folder and a **Project Extracts** folder. **Account Extract** will contain the data extract of the most recent account level extract if you have proper access and have ran an account level data extract. **Project Extracts** will contain a listing of each project in the account you have access to, which you can then expand to see the relevant tables in that specific project's extracts if you have run a data extraction.
 
-   ![Navigate to the desired data extraction.](./media/autodesk-construction-cloud/acc-extract-selection.png)
+   :::image type="content" source="./media/autodesk-construction-cloud/acc-extract-selection.png" alt-text="Navigate to the desired data extraction.":::
 
 8. Once you navigate to the desired Account or Project extract, select the desired tables, and then either select **Load** to load the data or **Transform Data** to continue transforming the data in the Power Query editor.
 
-   ![Navigate to data tables and load or transform data.](./media/autodesk-construction-cloud/acc-table-selection-account.png)
+   :::image type="content" source="./media/autodesk-construction-cloud/acc-table-selection-account.png" alt-text="Navigate to data tables and load or transform data.":::
   
 ## Connect using Autodesk provided Power BI Templates
 
@@ -73,12 +73,12 @@ To use the Power BI Templates:
 
 2. Provide your ACC Account name and select the server region.
 
-   ![Provide ACC Account name and select server region.](./media/autodesk-construction-cloud/acc-template-prompt.png)
+   :::image type="content" source="./media/autodesk-construction-cloud/acc-template-prompt.png" alt-text="Provide ACC Account name and select server region.":::
 
-   >[!Note]
+   > [!NOTE]
    >The **Account Name** is the name of the ACC account you want to connect to, not your user account name. You can find the Account name on the Account Admin portal just to the right of the Account Admin drop down or under **Settings**. The Account name also appears on the Insight (Account) page just to the right of the Insight dropdown in the upper left hand corner.
 
-   ![Account name can be found on the Account Admin portal.](./media/autodesk-construction-cloud/acc-template-account-name.png)
+   :::image type="content" source="./media/autodesk-construction-cloud/acc-template-account-name.png" alt-text="Account name can be found on the Account Admin portal.":::
 
 3. If prompted, follow steps 4 through 6 in the previous procedure to sign-in and connect.
 

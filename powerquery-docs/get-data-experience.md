@@ -29,13 +29,13 @@ The stages for getting data in the Power Query Desktop experiences are:
 
 4. Query destination
 
-![Flow diagram illustrating the four stages of getting data.](media/get-data-experience/getting-data-flow-diagram.png "Flow diagram illustrating the four stages of getting data")
+:::image type="content" source="media/get-data-experience/getting-data-flow-diagram.png" alt-text="Flow diagram illustrating the four stages of getting data.":::
 
 ### 1. Connection settings
 
 Most connectors initially require at least one parameter to initialize a connection to the data source. For example, the SQL Server connector requires at least the host name to establish a connection to the SQL Server database.
 
-![SQL Server connector parameters.](media/get-data-experience/connector-parameters.png "SQL Server connector parameters")
+:::image type="content" source="media/get-data-experience/connector-parameters.png" alt-text="SQL Server connector parameters.":::
 
 In comparison, when trying to connect to an Excel file, Power Query requires that you use the file path to find the file you want to connect to.
 
@@ -59,7 +59,7 @@ The currently available methods of authentication for Power Query are:
 
 For example, the available authentication methods for the SQL Server database connector are Windows, Database, and Microsoft account.
 
-![SQL Server database connector authentication methods.](media/get-data-experience/authentication.png "SQL Server database connector authentication methods")
+:::image type="content" source="media/get-data-experience/authentication.png" alt-text="SQL Server database connector authentication methods.":::
 
 ### 3. Data preview
 
@@ -84,7 +84,7 @@ The **Navigator** window consists of two main sections:
 
 * The data preview pane on the right side of the window shows a preview of the data from the object you selected.
 
-   ![SQL Server connector navigator window in Power Query Desktop.](media/get-data-experience/navigator.png "SQL Server connector navigator window")
+   :::image type="content" source="media/get-data-experience/navigator.png" alt-text="SQL Server connector navigator window in Power Query Desktop.":::
 
 ##### Object limitation workaround
 
@@ -94,25 +94,25 @@ In the interim, you can use the following workaround:
 
 1. Right-click on the root node of the **Navigator**, and then select **Transform Data**.
 
-   ![Selecting the root node in Navigator and selecting transform data from the drop-down menu.](media/get-data-experience/navigator-transform-data.png)
+   :::image type="content" source="media/get-data-experience/navigator-transform-data.png" alt-text="Selecting the root node in Navigator and selecting transform data from the drop-down menu.":::
 
 2. Power Query Editor then opens with the full navigation table in the table preview area. This view doesn't have a limit on the number of objects, and you can use filters or any other Power Query transforms to explore the list and find the rows you want (for example, based on the **Name** column).
 
 3. Upon finding the item you want, you can get at the contents by selecting the data link (such as the **Table** link in the following image).
 
-    ![Selecting the Table link to view the contents.](media/get-data-experience/select-table-link.png)
+    :::image type="content" source="media/get-data-experience/select-table-link.png" alt-text="Selecting the Table link to view the contents.":::
 
 #### Table preview dialog box
 
 The table preview dialog box consists of only one section for the data preview. An example of a connector that provides this experience and window is the [Folder](connectors/folder.md) connector.
 
-![Table preview dialog box.](media/get-data-experience/combine-files.png "Table preview dialog box")
+:::image type="content" source="media/get-data-experience/combine-files.png" alt-text="Table preview dialog box.":::
 
 ### 4. Query destination
 
 This is the stage in which you specify where to load the query. The options vary from integration to integration, but the one option that's always available is loading data to the Power Query editor to further transform and enrich the query.
 
-![Get data load destinations in navigator window and table preview](media/get-data-experience/get-data-load-to.png)
+:::image type="content" source="media/get-data-experience/get-data-load-to.png" alt-text="Get data load destinations in navigator window and table preview.":::
 
 ## Power Query Online experience
 
@@ -124,7 +124,7 @@ The stages for getting data in Power Query Online are:
 
 3. Query editor
 
-![Flow diagram with the three stages of getting data in Power Query Online.](media/get-data-experience/getting-data-pqo-flow.png "Flow diagram with the three stages of getting data in Power Query Online")
+:::image type="content" source="media/get-data-experience/getting-data-pqo-flow.png" alt-text="Flow diagram with the three stages of getting data in Power Query Online.":::
 
 ### 1. Connection settings and authentication
 
@@ -149,7 +149,7 @@ The first time that you use Power Query to connect to a specific data source, yo
 >[!NOTE]
 >Some connectors offer specific fields inside the connection credentials section to enable or define any sort of security related to the connection that needs to be established. For example, the SQL Server connector offers the **Use Encrypted Connection** field.
 
-![Connect to data source dialog with all information to create a new connection entered.](media/get-data-experience/connect-to-data-source-pqo-credentials-entered.png)
+:::image type="content" source="media/get-data-experience/connect-to-data-source-pqo-credentials-entered.png" alt-text="Connect to data source dialog with all information to create a new connection entered.":::
 
 The primary information required by all connectors to define a connection are:
 
@@ -166,11 +166,11 @@ The primary information required by all connectors to define a connection are:
 
 Once you've defined a connection in Power Query Online, you can reuse the same connection later on without reentering all this information again. The **Connection** field offers a dropdown menu where you select your already defined connections. Once you've selected your already defined connection, you don't need to enter any other details before selecting **Next**.
 
-![Connect to data source dialog box where the connection name was picked from the dropdown menu inside the connection field.](media/get-data-experience/pqo-pick-connection.png)
+:::image type="content" source="media/get-data-experience/pqo-pick-connection.png" alt-text="Connect to data source dialog box where the connection name was picked from the dropdown menu inside the connection field.":::
 
 After you select a connection from this menu, you can also make changes to the credentials, privacy level, and other connector-specific fields for your data source in your project. Select **Edit connection**, and then change any of the provided fields.
 
-![Connect to data source dialog where the connection name was picked from the dropdown menu inside the connection field](media/get-data-experience/connect-to-data-source-pqo-pick-connection.png)
+:::image type="content" source="media/get-data-experience/connect-to-data-source-pqo-pick-connection.png" alt-text="Connect to data source dialog where the connection name was picked from the dropdown menu inside the connection field.":::
 
 ### 2. Data preview
 
@@ -195,14 +195,13 @@ The **Navigator** window consists of two main sections:
 
 The table preview dialog box consists of only one section for the data preview. An example of a connector that provides this experience and window is the [Folder](connectors/folder.md) connector.
 
-![Table preview dialog box.](media/get-data-experience/combine-files.png "Table preview dialog box")
+:::image type="content" source="media/get-data-experience/combine-files.png" alt-text="Table preview dialog box.":::
 
 ### 3. Query editor
 
 For Power Query Online, you're required to load the data into the Power Query editor where you can further transform and enrich the query if you choose to do so.
 
-[![Sample query loaded into the query editor](media/query-plan/alternative-approach.png)](media/query-plan/sample-query.png#lightbox)
-
+:::image type="content" source="media/query-plan/alternative-approach.png" lightbox="media/query-plan/sample-query.png" alt-text="Sample query loaded into the query editor":::
 ## Additional information
 
 To better understand how to get data using the different product integrations of Power Query, go to [Where to get data](where-to-get-data.md).

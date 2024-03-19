@@ -13,19 +13,19 @@ With Power Query, you can replace one value with another value wherever that val
 
 - On the cell shortcut menu. Right-click the cell to replace the selected value in the column with another value.
 
-   ![Shortcut menu for replacing the selected value.](media/replace-values/right-click.png "Shortcut menu for replacing the selected value")
+   :::image type="content" source="media/replace-values/right-click.png" alt-text="Shortcut menu for replacing the selected value.":::
 
 - On the column shortcut menu.
 
-   ![Shortcut menu for replacing the selected column.](media/replace-values/right-click-column.png "Shortcut menu for replacing the selected column")
+   :::image type="content" source="media/replace-values/right-click-column.png" alt-text="Shortcut menu for replacing the selected column.":::
 
 - On the **Home** tab, in the **Transform** group.
 
-   ![Replace values on the Home tab.](media/replace-values/home-tab.png "Replace values on the Home tab")
+   :::image type="content" source="media/replace-values/home-tab.png" alt-text="Replace values on the Home tab.":::
 
 - On the **Transform** tab, in the **Any column** group.
 
-   ![Replace values on the Transform tab.](media/replace-values/transform-tab.png "Replace values on the Transform tab")
+   :::image type="content" source="media/replace-values/transform-tab.png" alt-text="Replace values on the Transform tab.":::
 
 The replace values operation has two modes:
 
@@ -34,7 +34,7 @@ The replace values operation has two modes:
 
 Advanced options are only available in columns of the Text data type. Within that set of options is the **Replace using special characters** option.
 
-![Replace using special characters option.](media/replace-values/replace-using-special-characters.png "Replace using special characters option")
+:::image type="content" source="media/replace-values/replace-using-special-characters.png" alt-text="Replace using special characters option.":::
 
 ## Replace entire cell contents
 
@@ -44,7 +44,7 @@ Imagine a table like the following, where you have columns for **Account ID**, *
 
 The value of **-1** in the **Sales Goal** column is an error in the source and needs to be replaced with the standard sales goal defined by the business for these instances, which is 250,000. To do that, right-click the **-1** value, and then select **Replace values**. This action will bring up the **Replace values** dialog box with **Value to find** set to **-1**. Now all you need to do is enter **250000** in the **Replace with** box.
 
-![Replace values for a non-text column.](media/replace-values/replace-values-numeric.png "Replace values for a non-text column")
+:::image type="content" source="media/replace-values/replace-values-numeric.png" alt-text="Replace values for a non-text column.":::
 
 The outcome of that operation will give you the result that you're looking for.
 
@@ -54,7 +54,7 @@ The outcome of that operation will give you the result that you're looking for.
 
 Continuing with the previous table, let's say you want to remove the text string "Category Name: " from the **Category Name** column. To do that, go to the **Transform** group on the **Home** tab, and select **Replace values**. In the **Replace values** dialog box, enter the text string **Category Name:** (followed by a space) in the **Value to find** box, leave the **Replace with** box empty, and then select **OK**.
 
-![Replace values for a text column.](media/replace-values/replace-values-text.png "Replace values for a text column")
+:::image type="content" source="media/replace-values/replace-values-text.png" alt-text="Replace values for a text column.":::
 
 The result of that operation gives you the table in the following image.
 

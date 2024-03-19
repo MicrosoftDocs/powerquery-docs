@@ -3,8 +3,8 @@ title: SAP Business Warehouse connector troubleshooting
 description: Provides troubleshooting tips for errors that might occur when using Power Query to connect to an SAP BW Application Server or SAP BW Message Server.
 author: dougklopfenstein
 ms.topic: conceptual
-ms.date: 12/7/2021
-ms.author: bezhan
+ms.date: 1/8/2024
+ms.author: dougklo
 ---
 
 # SAP Business Warehouse connector troubleshooting
@@ -13,7 +13,7 @@ This article provides troubleshooting situations (and possible solutions) for wo
 
 ## Collect SAP BW advanced traces
 
->[!NOTE]
+> [!NOTE]
 > Collecting a trace of a query sent to the SAP BW server requires some options and settings that can only be provided by using Power BI Desktop. If you don't already have a copy of Power BI Desktop, you can obtain a copy at the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=58494). You can set all of the required options and settings for advanced traces using this free version.
 
 Many times when an error occurs, it may be advantageous to collect a trace of the query that was sent to the SAP BW server and its response. The following procedure shows how to set up advanced traces for issues that occur using the SAP BW connector.
@@ -276,7 +276,7 @@ The following symptoms occur:
 
 * Error message&mdash;`[Expression.Error] The import [XXXX] matches no exports.`
 * In the logs&mdash;`Message: [Expression.Error] The key didn't match any rows in the table.`
-* StackTrace: 
+* StackTrace:
 
    ```
    at Microsoft.Mashup.Engine1.Runtime.TableValue.get_Item(Value key)
@@ -291,14 +291,14 @@ One possible workaround is to:
 
 2. Add an environment variable called PBI_AlwaysEnableQueryEditor with a value of true. This setting will allow access to the query editor even in DirectQuery mode.
 
-   >[!NOTE]
+   > [!NOTE]
    >This environment variable is unsupported, so should only be used as outlined here.
 
 3. Right-click on the "Cube" query and select **Advanced Editor**.
 
-4. The query there should have a line that starts with "{Cube.ApplyParameter, "[!V000004]" *(the missing parameter)*. Remove that line. 
+4. The query there should have a line that starts with "{Cube.ApplyParameter, "[!V000004]" *(the missing parameter)*". Remove that line.
 
-5. Select **Done**. 
+5. Select **Done**.
 
 6. Close the Power Query Editor.
 
@@ -308,14 +308,14 @@ If the above workaround doesn't work, the only alternative fix is for you to rec
 
 ### Numeric data from SAP BW
 
->[!NOTE]
+> [!NOTE]
 > The following information only applies when using Implementation 1.0 of the SAP BW connector or Implementation 2.0 of the SAP BW connector with Flattening mode (when ExecutionMode=67).
 
 User accounts in SAP BW have default settings for how decimal or date/time values are formatted when displayed to the user in the SAP GUI.
 
 The default settings are maintained in the SAP system in the User Profile for an account, and the user can view or change these settings in the SAP GUI with the menu path **System** > **User Profile** > **Own Data**.
 
-![Decimal notation settings menu.](decimal-notation.png)
+:::image type="content" source="decimal-notation.png" alt-text="Decimal notation settings menu.":::
 
 Power BI Desktop queries the SAP system for the decimal notation of the connected user and uses that notation to format decimal values in the data from SAP BW.
 
@@ -350,19 +350,19 @@ Customers who have reported this issue found that the call to `BAPI_USER_GET_DET
 To solve this error, users must ask their SAP admin to grant the SAP BW user being used in Power BI the right to execute `BAPI_USER_GET_DETAIL`. It’s also worth verifying that the user has the required `DCPFM` value, as described earlier in this troubleshooting solution.
 
 ### Connectivity for SAP BEx queries
-   
+
 You can perform BEx queries in Power BI Desktop by enabling a specific property, as shown in the following image:
-   
-![Enable Release for External Access.](enable-release.png)
+
+:::image type="content" source="enable-release.png" alt-text="Enable Release for External Access.":::
 
 ### MDX interface limitation
 
 A limitation of the MDX interface is that long variables lose their technical name and are replaced by V00000#.
 
 ### No data preview in Navigator window
-   
+
 In some cases, the **Navigator** dialog box doesn't display a data preview and instead provides an *object reference not set to an instance of an object* error message.
-   
+
 SAP users need access to specific BAPI function modules to get metadata and retrieve data from SAP BW's InfoProviders. These modules include:
 
 * BAPI_MDPROVIDER_GET_CATALOGS
@@ -397,7 +397,7 @@ First, follow the instructions in [2777473 - MDX: FAQ for Power BI accessing BW 
 
 Because the Power Query SAP Business Warehouse connector uses the MDX interface provided by SAP for 3rd party access, you'll need to contact SAP for possible solutions as they own the layer between the MDX interface and the SAP BW server. Ask how "long text is XL" can be specified for your specific scenario.
 
-![Image showing where to set long text is xl setting.](long-text-xl.png)
+:::image type="content" source="long-text-xl.png" alt-text="Image showing where to set long text is xl setting.":::
 
 ### CHAR limit of 60 despite "long text" in SAP BW
 

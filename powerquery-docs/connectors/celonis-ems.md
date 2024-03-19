@@ -2,8 +2,8 @@
 title: Power Query Celonis EMS connector
 description: Provides basic information, prerequisites, and connection steps for Celonis EMS.
 author: capono
-ms.date: 7/13/2023 
-ms.author: bezhan
+ms.date: 1/8/2024 
+ms.author: dougklo
 ---
 
 # Celonis EMS (Beta)
@@ -16,7 +16,7 @@ ms.author: bezhan
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products | Power BI (Datasets) </br> Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Products | Power BI (Semantic models) </br> Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Organizational Account |
 | Function Reference Documentation | [Web.Contents](/powerquery-m/web-contents) </br> [Parquet.Document](/power-query/connectors/parquet) </br> [Json.Document](/powerquery-m/json-document) </br> [Json.FromValue](/powerquery-m/json-fromvalue)|
 
@@ -35,21 +35,21 @@ To make the connection, take the following steps:
 
 1. Select **Get Data** from the **Home** ribbon in Power BI Desktop. Select **Celonis EMS** in the connector selection and then select **Connect**.
 
-   ![Screenshot of Get Data dialog showing the Celonis EMS connector selected.](media/celonis-ems/get-data.png)
+   :::image type="content" source="media/celonis-ems/get-data.png" alt-text="Screenshot of Get Data dialog showing the Celonis EMS connector selected.":::
 
 1. The **Celonis EMS** dialog now appears, with an example URL. Enter your Celonis EMS Team URL and then select **OK**.
 
-   ![Screenshot of the Celonis EMS dialog with the Celonis EMS URL entered.](media/celonis-ems/set-url.png)
+   :::image type="content" source="media/celonis-ems/set-url.png" alt-text="Screenshot of the Celonis EMS dialog with the Celonis EMS URL entered.":::
 
 1. Enter your **Application Key** or your **Personal API Key** generated in the Celonis EMS.
 
-   ![Screenshot of the authentication dialog where you enter your key for authentication.](media/celonis-ems/authentication.png)
+   :::image type="content" source="media/celonis-ems/authentication.png" alt-text="Screenshot of the authentication dialog where you enter your key for authentication.":::
   
 1. Once you're done, select **Connect**.
   
 1. Upon a successful connection, the **Navigator** opens with the list of packages available in the given EMS team. Select the **Knowledge Model Record** you want to import and then select **Load**.
 
-   ![Navigate to package](media/celonis-ems/navigator.png)
+   :::image type="content" source="media/celonis-ems/navigator.png" alt-text="Navigate to package.":::
 
 ## Limitations and issues
 
