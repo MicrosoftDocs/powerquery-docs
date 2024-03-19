@@ -32,7 +32,7 @@ The following instructions show how to add custom tests:
 
 ## Reference for various configurations and options
 
-You can refer to [pqtest-compare](../powerquery-sdktools/pqtest-compare.md) for various options and examples while running the **compare** command.
+You can refer to [pqtest-compare](../sdk-tools/pqtest-compare.md) for various options and examples while running the **compare** command.
 
 ## Conclusion
 
