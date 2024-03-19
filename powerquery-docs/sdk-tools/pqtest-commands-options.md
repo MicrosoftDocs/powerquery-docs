@@ -9,6 +9,8 @@ ms.author: v-ryansyed
 
 # Commands and options
 
+PQTest offers a suite of commands, each with its own set of options, to streamline your testing process. Detailed explanations and usage instructions for these commands are outlined in the sections that follow.
+
 ## Commands
 
 The following table lists all the commands for PQTest.exe:
