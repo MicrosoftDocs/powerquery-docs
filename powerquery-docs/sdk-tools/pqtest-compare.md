@@ -9,12 +9,12 @@ ms.author: v-ryansyed
 
 # Regression testing with the compare command
 
-The PQTest **compare** command is a powerful tool for regression testing, enabling you to thoroughly evaluate the functions of the connector and the generation of command text. To illustrate its versatility, the subsequent sections will provide a variety of examples tailored to different scenarios.
+The PQTest ***compare*** command is a powerful tool for regression testing, enabling you to thoroughly evaluate the functions of the connector and the generation of command text. To illustrate its versatility, the subsequent sections will provide a variety of examples tailored to different scenarios.
 
 ## Basic queries
 
 The simplest form of testing is to add a single query expression to a .query.pq file, which you can execute using the
-**compare** command. PQTest evaluates the expression and generate a .pqout (output) file with the same name. For any
+***compare*** command. PQTest evaluates the expression and generate a .pqout (output) file with the same name. For any
 subsequent runs, it compares the output generated from evaluation of .query.pq file with the pqout (output) file with
 the same name and returns the output of the evaluation.
 
