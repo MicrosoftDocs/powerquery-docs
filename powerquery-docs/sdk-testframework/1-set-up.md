@@ -7,9 +7,9 @@ ms.date: 01/19/2024
 ms.author: v-ryansyed
 ---
 
-# Power Query SDK test framework part 1 - set-up
+# Power Query SDK test framework part 1 - Set-up
 
-This multi-part reference covers the set-up and running of a standard suite of tests for Power Query connector developers. This reference is meant to be followed sequentially to ensure that your environment is set-up for testing your extension connector.
+This multi-part reference covers the set-up and running of a standard suite of tests for Power Query connector developers. This reference is meant to be followed sequentially to ensure that your environment is set up for testing your extension connector.
 
 In this section, you:
 
@@ -30,21 +30,21 @@ The default location of the extension folder is:
 
 %UserProfile%\.vscode\extensions\powerquery.vscode-powerquery-sdk-*x.x.x*-win32-x64
 
-Where "*x.x.x*" is the current version of Power Query SDK extension.
+Where "*x.x.x*" is the current version of Power Query SDK extension
 
 The SdkTools NuGet package is found under:
 
 \<*extension_path*>\.nuget\Microsoft.PowerQuery.SdkTools.2.*xxx.x*\tools
 
-Where "*xxx.x*" is the current version of Power Query SDK Tools.
+Where "*xxx.x*" is the current version of Power Query SDK Tools
 
-If you don't have a ".NuGet" folder, be sure to load a connector workspace in Visual Studio Code to trigger the SDK's autodownload mechanism. The SdkTools NuGet contains the Power Query SDK test framework.
+If you don't have a ".nuget" folder, be sure to load a connector workspace in Visual Studio Code to trigger the SDK's autodownload mechanism. The SdkTools NuGet contains the Power Query SDK test framework.
 
 ## Conclusion
 
 This section covered the set-up of the Power Query SDK test framework.
 
-In the next section, you learn about the test data that's used by the standard test suite within the testing framework.
+The next section will teach you about the test data used by the standard test suite in the testing framework.
 
 ## Next steps
 
