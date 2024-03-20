@@ -1,5 +1,5 @@
 ---
-title: Power Query SDK test framework set up guide
+title: Power Query SDK test framework setup guide
 description: Setting up the development environment for the Power Query SDK test framework
 author: ryan-syed
 ms.topic: reference
@@ -7,9 +7,9 @@ ms.date: 01/19/2024
 ms.author: v-ryansyed
 ---
 
-# Power Query SDK test framework part 1 - Set up
+# Power Query SDK test framework part 1 - set-up
 
-This multi-part reference covers the set up and running of a standard suite of tests for Power Query connector developers. This reference is meant to be followed sequentially to ensure that your environment is set up for testing your extension connector.
+This multi-part reference covers the set-up and running of a standard suite of tests for Power Query connector developers. This reference is meant to be followed sequentially to ensure that your environment is set-up for testing your extension connector.
 
 In this section, you:
 
@@ -20,7 +20,7 @@ In this section, you:
 
 ## Install Power Query SDK extension
 
-The Power Query SDK test framework comes bundled with [Power Query SDK for Visual Studio](https://aka.ms/powerquerysdk). Follow the steps in [Installing the PowerQuery SDK](./../install-sdk.md#installing-the-power-query-sdk) to get it set up for Visual Studio Code.
+The Power Query SDK test framework comes bundled with [Power Query SDK for Visual Studio](https://aka.ms/powerquerysdk). Follow the steps in [Installing the PowerQuery SDK](./../install-sdk.md#installing-the-power-query-sdk) to get it set-up for Visual Studio Code.
 
 ## Locate the Power Query SDK for Visual Studio Code install directory
 
@@ -42,7 +42,7 @@ If you don't have a ".NuGet" folder, be sure to load a connector workspace in Vi
 
 ## Conclusion
 
-This section covered the set up of the Power Query SDK test framework.
+This section covered the set-up of the Power Query SDK test framework.
 
 In the next section, you learn about the test data that's used by the standard test suite within the testing framework.
 

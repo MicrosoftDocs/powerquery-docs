@@ -9,7 +9,7 @@ ms.author: v-jbrandrick
 
 # Power Query SDK test framework part 7 - Pipeline guide
 
-This multi-part reference covers the setup and running of a standard suite of tests for Power Query connector developers. The reference is meant to be done sequentially to ensure that your environment is set up for testing your custom connector.
+This multi-part reference covers the set-up and running of a standard suite of tests for Power Query connector developers. The reference is meant to be done sequentially to ensure that your environment is set-up for testing your custom connector.
 
 This guide provides you with the steps that are needed for setting up a pipeline for the Power Query SDK test framework.
 
@@ -18,14 +18,14 @@ In this section, you:
 > [!div class="checklist"]
 >
 > * Overview of setting up the pipeline
-> * Set up a pipeline agent
-> * Learn to configure the connector, including driver and credentials setup
+> * set-up a pipeline agent
+> * Learn to configure the connector, including driver and credentials set-up
 > * Run the tests to verify your extension connector
 > * Generate the report of the test run
 
-## Pipeline setup guide for Power Query connectors
+## Pipeline set-up guide for Power Query connectors
 
-This guide provides you with the steps that are needed for setting up a pipeline for the Power Query SDK test framework. On a high level, it requires setting up an agent, configuring the connector being tested including any drivers setup, configuring the credentials for PQTest with the supported authentication mechanism, running the tests, and reporting the results. This document uses Azure Pipelines and resources for all of its examples. However these concepts can be applied to other pipeline architectures.
+This guide provides you with the steps that are needed for setting up a pipeline for the Power Query SDK test framework. On a high level, it requires setting up an agent, configuring the connector being tested including any drivers set-up, configuring the credentials for PQTest with the supported authentication mechanism, running the tests, and reporting the results. This document uses Azure Pipelines and resources for all of its examples. However these concepts can be applied to other pipeline architectures.
 
 The pipeline uses the following structure:
 
@@ -34,7 +34,7 @@ The pipeline uses the following structure:
 3. Run the tests retrieved in the prior step.
 4. Update the results and logs.
 
-The Azure Pipelines documentation describes [how to setup a basic pipeline](/azure/devops/pipelines/create-first-pipeline). Refer to the following sections for advice on setting up these features.
+The Azure Pipelines documentation describes [how to set-up a basic pipeline](/azure/devops/pipelines/create-first-pipeline). Refer to the following sections for advice on setting up these features.
 
 * Agent Prerequisites
   * Networking
@@ -81,7 +81,7 @@ C:\Users\ContosoUser\.vscode\extensions\powerquery.vscode-powerquery-sdk-0.2.3-w
 
 Credentials are passed to PQTest using either the Visual Studio Code extension or the **set-credential** command through the command line. Once set, these credentials can be reused for multiple test runs.
 
-Depending on the type of authentication, these credentials might only need to be set once (Username/Password) or kept updated (OAuth2 refresh token). The former case can be set up easily by using the Visual Studio Code interface. The latter case can be accomplished by creating a script.
+Depending on the type of authentication, these credentials might only need to be set once (Username/Password) or kept updated (OAuth2 refresh token). The former case can be set-up easily by using the Visual Studio Code interface. The latter case can be accomplished by creating a script.
 
 ## Scripts
 
@@ -144,6 +144,6 @@ steps:
 
 ## Conclusion
 
-This section showed you how to set up and configure the pipeline to use the Power Query SDK test framework, using the provided test suite and also your own tests to validate your extension connector.
+This section showed you how to set-up and configure the pipeline to use the Power Query SDK test framework, using the provided test suite and also your own tests to validate your extension connector.
 
 Overall, you should now be able to reliably make changes to your extension and validate it during the development and release.
