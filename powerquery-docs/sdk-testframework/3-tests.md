@@ -9,7 +9,7 @@ ms.author: v-ryansyed
 
 # Power Query SDK test framework part 3 - Test suite
 
-This multi-part reference covers the set-up and running of a standard suite of tests for Power Query connector developers. The reference is meant to be followed sequentially to ensure that your environment is set up for testing your extension connector.
+This multi-part reference covers the setup and running of a standard suite of tests for Power Query connector developers. The reference is meant to be followed sequentially to ensure that your environment is set up for testing your extension connector.
 
 In this section, you:
 
@@ -23,7 +23,7 @@ You need the test suite to:
 * Validate that the dataset is uploaded correctly.
 * Validate your connector.
 
-## Initial set-up
+## Initial setup
 
 To ensure that you can run tests included in the test framework, the following prerequisites must be completed:
 
