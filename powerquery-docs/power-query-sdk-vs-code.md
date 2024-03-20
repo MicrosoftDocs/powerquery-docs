@@ -25,7 +25,7 @@ This button opens an input field at the top of the Visual Studio Code interface.
 
 :::image type="content" source="media/power-query-sdk-vs-code/new-project-name.jpg" alt-text="Creating a new extension project and naming the project.":::
 
-After a few seconds, your Visual Studio Code window opens the main *.pq file for your extension project that contains your connector logic. The Power Query SDK automatically runs some necessary tasks to complete the setup of your workspace. You can check these tasks in the output console in Visual Studio Code.
+After a few seconds, your Visual Studio Code window opens the main *.pq file for your extension project that contains your connector logic. The Power Query SDK automatically runs some necessary tasks to complete the set up of your workspace. You can check these tasks in the output console in Visual Studio Code.
 
 :::image type="content" source="media/power-query-sdk-vs-code/extension-project-created.jpg" alt-text="Extension project created using the Hello World template.":::
 
@@ -176,9 +176,9 @@ The addition of two new folders and files is what transforms the current workspa
 
 :::image type="content" source="media/power-query-sdk-vs-code/upgrade-sdk.jpg" alt-text="Upgrading the extension project to the new Power Query SDK.":::
 
-### Setup workspace
+### Set up workspace
 
-What the Setup workspace task does is effectively create a settings.json file for your workspace that dictates some variables that will be used for your workspace when it comes to evaluations and general settings.
+What the Set up workspace task does is effectively create a settings.json file for your workspace that dictates some variables that will be used for your workspace when it comes to evaluations and general settings.
 
 ### Build an extension file
 
