@@ -9,11 +9,11 @@ ms.author: v-ryansyed
 
 # Power Query SDK test framework part 5 - Testing your extension connector
 
-This multi-part reference covers the set-up and running of a standard suite of tests for Power Query connector developers. This reference is meant to be done sequentially to ensure that your environment is set-up for testing your custom connector.
+This multi-part reference covers the setup and running of a standard suite of tests for Power Query connector developers. This reference is meant to be done sequentially to ensure that your environment is set-up for testing your custom connector.
 
 So far, you completed the following steps:
 
-* set-up the environment
+* Set up the environment
 * Uploaded the test data
 * Downloaded the test suite
 * Learned various file formats and their functionality
@@ -65,7 +65,7 @@ Alternatively, to manually create the parameter query files and settings files f
 
 ## Set the credentials for your extension connector
 
-Ensure the credentials are set-up for your connector following the instructions for the [set-credential](/power-query/sdk-tools/pqtest-credentials) command.
+Ensure the credentials are set up for your connector following the instructions for the [set-credential](/power-query/sdk-tools/pqtest-credentials) command.
 
 Alternatively, use the **credential-template** command to generate a credential template in JSON format for your connector that can be passed into the **set-credential** command. Refer the [credential-template](/power-query/sdk-tools/pqtest-credentials#credential-template) section on the usage to generate a credential template.
 
@@ -77,7 +77,7 @@ C:\Users\ContosoUser\.vscode\extensions\powerquery.vscode-powerquery-sdk-0.2.3-w
 
 Take the output from the previous command and replace the placeholder values with correct credentials and save it as a JSON file (for example, contoso_cred.json).
 
-Then, use this **set-credential** command to store credentials that are used by the **compare** command to run the tests. Using the existing PowerShell window, set the credentials for your extension using the JSON credential file generated in the previous step. Refer the [set-credential](/power-query/sdk-tools/pqtest-credentials#set-credential) section on the usage to set-up the credentials for your connector.
+Then, use this **set-credential** command to store credentials that are used by the **compare** command to run the tests. Using the existing PowerShell window, set the credentials for your extension using the JSON credential file generated in the previous step. Refer the [set-credential](/power-query/sdk-tools/pqtest-credentials#set-credential) section on the usage to set up the credentials for your connector.
 
 ```PowerShell
 $PQTestExe = "C:\Users\ContosoUser\.vscode\extensions\powerquery.vscode-powerquery-sdk-x.x.x-win32-x64\.nuget\Microsoft.PowerQuery.SdkTools.x.xxx.x\tools\PQTest.exe"
