@@ -127,7 +127,7 @@ To run multiple tests:
 
 ### Automating Scripts
 
-Scripts can be automated by running them from a pipeline task. For Azure Pipelines, the [PowerShell task](/azure/devops/pipelines/tasks/reference/powershell-v2?view=azure-pipelines) can be used:
+Scripts can be automated by running them from a pipeline task. For Azure Pipelines, the [PowerShell task](/azure/devops/pipelines/tasks/reference/powershell-v2) can be used:
 
 ```yaml
 # Example Azure pipeline for running connector tests using PQTest.
