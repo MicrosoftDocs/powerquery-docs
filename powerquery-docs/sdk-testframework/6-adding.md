@@ -9,7 +9,7 @@ ms.author: v-ryansyed
 
 # Power Query SDK test framework part 6 - Adding your tests and understanding various options
 
-This multi-part reference covers the set-up and running of a standard suite of tests for Power Query connector developers. The reference is meant to be done sequentially to ensure that your environment is set-up for testing your custom connector.
+This multi-part reference covers the set up and running of a standard suite of tests for Power Query connector developers. The reference is meant to be done sequentially to ensure that your environment is set up for testing your custom connector.
 
 Now you might want to add more tests for your extension connector to verify other use cases or the standardized test suite doesn't fit your needs.
 

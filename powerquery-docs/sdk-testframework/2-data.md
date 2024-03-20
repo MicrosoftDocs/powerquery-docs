@@ -9,7 +9,7 @@ ms.author: v-ryansyed
 
 # Power Query SDK test framework part 2 - Test data
 
-This multi-part reference covers the set-up and running of a standard suite of tests for Power Query connector developers. The reference is meant to be followed sequentially to ensure that your environment is set-up for testing your extension connector.
+This multi-part reference covers the setup and running of a standard suite of tests for Power Query connector developers. The reference is meant to be followed sequentially to ensure that your environment is set-up for testing your extension connector.
 
 In this section, you:
 
@@ -91,7 +91,7 @@ The following table provides further information about each field in the "TaxiZo
 
 This section described the test data used within the standardized test suite and its schema. Your database should now be populated with tables based on the specified CSV files with the correct schema.
 
-In the next section, you gain an understanding of different sections of the test suite that helps you validate the set-up of the dataset and your extension connector.
+In the next section, you gain an understanding of different sections of the test suite that helps you validate the setup of the dataset and your extension connector.
 
 ## Next steps
 

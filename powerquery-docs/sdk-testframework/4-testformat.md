@@ -9,7 +9,7 @@ ms.author: v-ryansyed
 
 # Power Query SDK test framework part 4 - Test format specification
 
-This multi-part reference covers the set-up and running of a standard suite of tests for Power Query connector developers. The reference is meant to be done sequentially to ensure that your environment is set-up for testing your custom connector.
+This multi-part reference covers the setup and running of a standard suite of tests for Power Query connector developers. The reference is meant to be done sequentially to ensure that your environment is set-up for testing your custom connector.
 
 Now that you've set-up the environment, uploaded the test data, and set-up the test suite, you're ready to start verifying your extension connector with the test suite. Before running the tests, you need to understand different types of files and formats within the test framework.
 
