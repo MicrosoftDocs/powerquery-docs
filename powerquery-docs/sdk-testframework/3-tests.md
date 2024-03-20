@@ -9,7 +9,7 @@ ms.author: v-ryansyed
 
 # Power Query SDK test framework part 3 - Test suite
 
-This multi-part reference covers the set-up and running of a standard suite of tests for Power Query connector developers. The reference is meant to be followed sequentially to ensure that your environment is set-up for testing your extension connector.
+This multi-part reference covers the set-up and running of a standard suite of tests for Power Query connector developers. The reference is meant to be followed sequentially to ensure that your environment is set up for testing your extension connector.
 
 In this section, you:
 
@@ -27,12 +27,12 @@ You need the test suite to:
 
 To ensure that you can run tests included in the test framework, the following prerequisites must be completed:
 
-* Clone the [DataConnectors](https://github.com/microsoft/DataConnectors) repo.
-* Load the provided [test data](https://github.com/microsoft/DataConnectors/tree/master/testframework/data/) in the data source. This step was discussed in the previous article. If you haven't completed loading the test dta, refer to [Power Query SDK test framework part 2 - Test data](./2-data.md) section and come back to this page once done.
+* Clone the [Data connectors](https://github.com/microsoft/DataConnectors) repo.
+* Load the provided [test data](https://github.com/microsoft/DataConnectors/tree/master/testframework/data/) in the data source. This step was discussed in the previous article. If you need to load the test data, refer to the [Power Query SDK test framework part 2 - Test data](./2-data.md) section and return to this page once you're done.
 
-### DataConnectors repo and the test suite
+### Data connectors repo and the test suite
 
-The [tests](https://github.com/microsoft/DataConnectors/tree/master/testframework/tests) are part of the [DataConnectors repo](https://github.com/microsoft/DataConnectors).
+The [tests](https://github.com/microsoft/DataConnectors/tree/master/testframework/tests) are part of the [Data connectors repo](https://github.com/microsoft/DataConnectors).
 
 ### Power Query SDK test framework - test suites
 
@@ -40,7 +40,7 @@ The test framework consists of a [test suite](https://github.com/microsoft/DataC
 
 The test suite consists of the following tests:
 
-**Sanity**: The [sanity test set](https://github.com/microsoft/DataConnectors/tree/master/testframework/tests/TestSuites/Sanity) validates that the tests are able to connect to the data source and the test tables with the correct schema existing in the data source. There are also tests that validate the row count and data of the NYCTaxiGreen and TaxiZoneLookup tables in the data source.
+**Sanity**: The [sanity test set](https://github.com/microsoft/DataConnectors/tree/master/testframework/tests/TestSuites/Sanity) checks if the tests can connect to the data source and if the test tables exist with the correct schema. There are also tests that validate the row count and data of the NYCTaxiGreen and TaxiZoneLookup tables in the data source.
 
 **Standard**: The [standard set](https://github.com/microsoft/DataConnectors/tree/master/testframework/tests/TestSuites/Standard) contains various tests needed to validate the connector. There are tests to validate the data types and the functions/operators for Math, Date, Time, Text, and so on. There are also tests to validate joins between the two tables.
 
