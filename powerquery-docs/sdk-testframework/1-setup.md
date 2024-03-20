@@ -30,19 +30,19 @@ The default location of the extension folder is:
 
 %UserProfile%\.vscode\extensions\powerquery.vscode-powerquery-sdk-*x.x.x*-win32-x64
 
-Where *x.x.x* is the current version of Power Query SDK extension.
+Where "*x.x.x*" is the current version of Power Query SDK extension.
 
 The SdkTools NuGet package is found under:
 
 \<*extension_path*>\.nuget\Microsoft.PowerQuery.SdkTools.2.*xxx.x*\tools
 
-Where *xxx.x* is the current version of Power Query SDK Tools.
+Where "*xxx.x*" is the current version of Power Query SDK Tools.
 
-If you don't have a .NuGet folder, be sure to load a connector workspace in Visual Studio Code to trigger the SDK's autodownload mechanism. The SdkTools NuGet contains the Power Query SDK test framework.
+If you don't have a ".NuGet" folder, be sure to load a connector workspace in Visual Studio Code to trigger the SDK's autodownload mechanism. The SdkTools NuGet contains the Power Query SDK test framework.
 
 ## Conclusion
 
-This section covered the set up of the Power Query SDK test framework.
+This section covered the set-up of the Power Query SDK test framework.
 
 In the next section, you learn about the test data that's used by the standard test suite within the testing framework.
 
