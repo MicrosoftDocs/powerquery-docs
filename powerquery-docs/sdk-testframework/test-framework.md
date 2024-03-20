@@ -59,7 +59,7 @@ In this guide, you:
 
 |Part|section                                                   |Details                                                                                                |
 |----|:--------------------------------------------------------|:-------------------------------------------------------------------------------------------------------|
-|1   |[Set-up](1-set-up.md)                                      | Set up your environment.                                                                               |
+|1   |[Setup](1-set-up.md)                                     | Set up your environment.                                                                               |
 |2   |[Preparing data](2-data.md)                              | Preparing the test data.                                                                               |
 |3   |[Test suite](3-tests.md)                                 | Fetching and understanding the test suite.                                                             |
 |4   |[Test format spec](4-testformat.md)                      | Understanding various file formats used in the test framework.                                         |
