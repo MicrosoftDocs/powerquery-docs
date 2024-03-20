@@ -9,7 +9,7 @@ ms.author: v-ryansyed
 
 # Power Query SDK test framework reference
 
-This multi-part reference covers the setup and running of a standard suite of tests for Power Query connector developers. The reference is meant to be followed sequentially to ensure that your environment is set up for testing your extension connector.
+This multi-part reference covers the set up and running of a standard suite of tests for Power Query connector developers. The reference is meant to be followed sequentially to ensure that your environment is set up for testing your extension connector.
 
 This reference uses the Power Query SDK test framework, a standardized test suite, and a modified version of the [NewYork City Taxi & Limousine Commission (TLC)](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page) green trip record data. The subsequent sections walk through the steps to get your environment set up to validate your extension connector.
 
@@ -59,10 +59,10 @@ In this guide, you:
 
 |Part|section                                                   |Details                                                                                                |
 |----|:--------------------------------------------------------|:-------------------------------------------------------------------------------------------------------|
-|1   |[Setup](1-setup.md)                                      | Set up your environment.                                                                               |
+|1   |[Set up](1-set-up.md)                                      | Set up your environment.                                                                               |
 |2   |[Preparing data](2-data.md)                              | Preparing the test data.                                                                               |
 |3   |[Test suite](3-tests.md)                                 | Fetching and understanding the test suite.                                                             |
 |4   |[Test format spec](4-testformat.md)                      | Understanding various file formats used in the test framework.                                         |
 |5   |[Connector testing](5-connector.md)                      | Testing your extension connector.                                                                      |
 |6   |[Adding tests](6-adding.md)                              | Adding your own tests and understanding various options and configurations in the test framework.      |
-|7   |[Pipeline setup guide](7-pipeline.md)                    | Running the tests in a pipeline.                                                                         |
+|7   |[Pipeline set up guide](7-pipeline.md)                    | Running the tests in a pipeline.                                                                         |

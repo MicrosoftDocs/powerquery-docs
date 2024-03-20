@@ -698,7 +698,7 @@ items:
         - name: "Overview"
           href: sdk-testframework/test-framework.md
         - name: "1. Setup"
-          href: sdk-testframework/1-setup.md
+          href: sdk-testframework/1-set-up.md
         - name: "2. Preparing data"
           href: sdk-testframework/2-data.md
         - name: "3. Test suite"
