@@ -14,13 +14,13 @@ ms.author: dougklo
 
 ## Summary
 
-| Item | Description
-|--|--|
+| Item | Description |
+| --- | --- |
 | Release State | General Availability |
 | Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Basic<br/>Windows |
 
-## Capabilities Supported
+## Capabilities supported
 
 * Import
 * DirectQuery (Power BI semantic models)
@@ -63,7 +63,7 @@ To connect Microsoft Power BI Desktop to SingleStore DB or Managed Service:
 
 You can now use Power BI to explore SingleStore data.
 
-## Create a Custom SQL Report
+## Create a custom SQL report
 
 > [!NOTE]
 > Any user that creates a custom SQL report must only have read-only access to the SingleStore databases.
@@ -89,7 +89,7 @@ To create a new custom SQL report:
 
 To update the existing custom SQL reports, select the **Refresh** button on the **Home** ribbon.
 
-## Modify Credentials
+## Modify credentials
 
 To modify the credentials used to connect to SingleStore:
 
