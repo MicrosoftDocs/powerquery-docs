@@ -3,7 +3,7 @@ title: Authentication in desktop apps
 description: How to select credentials for a connector in Power Query Desktop to authenticate a connection with a data source, how to select the authentication level, and how to edit or delete credentials for specific connectors and sites.
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 3/7/2024
+ms.date: 3/20/2024
 ms.author: miescobar
 ---
 
@@ -104,7 +104,7 @@ One example of a supported service working properly with OAuth is CRM, for examp
 When you select **Sign-in** in Step 2 above, Power Query sends a request to the provided URL endpoint with an authorization header with an empty bearer token.
 
 ```
-GET https://*.crm.dynamics.com/api/data/v8.2 HTTP/1.1
+GET https://contoso.crm.dynamics.com/api/data/v8.2 HTTP/1.1
 Authorization: Bearer
 User-Agent: Microsoft.Data.Mashup (https://go.microsoft.com/fwlink/?LinkID=304225)
 Host: pbi.crm.dynamics.com
