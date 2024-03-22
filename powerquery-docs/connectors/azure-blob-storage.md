@@ -80,7 +80,7 @@ To connect to Azure Blob Storage:
    * **Anonymous**: Your blob storage is set up for anonymous access. Select **Next** to continue.
    * **Account key**: Your blob storage is set up to require an account key. Enter the account key in the provided text box and select **Next** to continue. More information: [Copy your account key from Azure Blob Storage](#copy-your-account-key-from-azure-blob-storage)
    * **Organizational account**: Select **Sign in** to sign into your storage account. You're redirected to your organization's sign-in page. Follow the prompts to sign into the account. Once you're signed in, select **Next** to continue.
-   * **Shared Access Signature (SAS)**: To retrieve your SAS token, go to [portal.azure.com](portal.azure.com), navigate to your resource, and, under **Security + networking**, select **Shared access signature** and scroll down to view the SAS token. Paste the value into the **SAS token** box and select **Next**.
+   * **Shared Access Signature (SAS)**: To retrieve your SAS token, go to [portal.azure.com](https://portal.azure.com), navigate to your resource, and, under **Security + networking**, select **Shared access signature** and scroll down to view the SAS token. Paste the value into the **SAS token** box and select **Next**.
    * **Service principal**: Enter the tenant ID, service principal client ID, and service principal key, and then select **Next**.
 
    For more information about using and managing authentication, go to [Connections and authentication in Power Query Online](../connection-authentication-pqo.md).
