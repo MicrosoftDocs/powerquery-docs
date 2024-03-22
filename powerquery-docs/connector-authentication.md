@@ -51,15 +51,15 @@ To edit the authentication method in Power BI Desktop or Excel:
 
       :::image type="content" source="media/connector-authentication/excel-edit.png" alt-text="Screenshot of the Excel workbook with the Data Source Settings option emphasized.":::
 
-2. In the **Data source settings** dialog box, select **Global permissions**, choose the website where you want to change the permission setting, and then select **Edit Permissions**.
+2. In the **Data source settings** dialog box, select **Global permissions**, choose the data source where you want to change the permission setting, and then select **Edit Permissions**.
 
 3. In the **Edit Permissions** dialog box, under **Credentials**, select **Edit**.
 
    :::image type="content" source="media/connector-authentication/edit-permission.png" alt-text="Screenshot of the Edit Permissions dialog, with places to change the credentials and privacy level." lightbox="media/connector-authentication/edit-permission.png":::
 
-4. Change the credentials to the type required by the website, select **Save**, and then select **OK**.
+4. Change the credentials to the type required by the data source, select **Save**, and then select **OK**.
 
-You can also delete the credentials for a particular website in step 3 by selecting **Clear Permissions** for a selected website, or by selecting **Clear All Permissions** for all of the listed websites.
+You can also delete the credentials for a particular data source in step 3 by selecting **Clear Permissions** for a selected data source, or by selecting **Clear All Permissions** for all of the listed data sources.
 
 ## Connecting with Microsoft Entra ID using the Web and OData connectors
 
