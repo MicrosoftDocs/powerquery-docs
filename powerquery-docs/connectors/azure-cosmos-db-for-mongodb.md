@@ -1,15 +1,11 @@
 ---
 title: Azure Cosmos DB for MongoDB Data Connector
-description: Includes basic information and prerequisites, instructions on how to connect to your database, and information about advanced connection options.
+description: Includes basic information and prerequisites, instructions on how to connect to your Azure Cosmos for Mongo database, and information about advanced connection options.
 author: jlarue26
-ms.topic:
-ms.date:
-ms.author:
+ms.topic: conceptual
+ms.date: 3/22/2024
+ms.author: dougklo
 ---
-
-<style>
-.gray,.green,.paused,.pending,.red,.yellow{border-radius:4px;padding-left:5px;padding-right:5px;color:#000}.green{background-color:#75e875}.gray{background-color:#c8c8c8}.red{background-color:#ef5343}.yellow{background-color:#ffca3a}.paused{background-color:#92e1e8}.pending{background-color:#e2afde}
-</style>
 
 # Azure Cosmos DB for MongoDB
 
@@ -20,7 +16,7 @@ ms.author:
 | Release state                    | Beta                                                                                                                                                                           |
 | Products supported               | Power BI (Semantic models)<br/>Power BI (Dataflows)                                                                                                                            |
 | Authentication types supported   | Basic (username / password) for all of </br>Power BI Desktop, </br>Power Query Online with gateway, and </br>Power Query Online                                                |
-| Function Reference Documentation | [Direct Query Function Support](#direct-query-support)</br>[Power Query M function reference](https://learn.microsoft.com/en-us/powerquery-m/power-query-m-function-reference) |
+| Function Reference Documentation | [Direct Query Function Support](#direct-query-support)</br>[Power Query M function reference](/powerquery-m/power-query-m-function-reference) |
 
 ## Prerequisites
 
@@ -69,11 +65,11 @@ Note that **Native Mongo Queries** are only supported in **Direct Query** mode.
 
 1. Choose **Advanced Editor**. The **Advanced Editor** dialog will appear showing the initial query that would be used to fetch all the data in the selected collection.
 
-   ![Native Mongo Query Initial Advanced Editor](./media/azure-cosmos-db-for-mongodb/native-query-advanced-editor-before.png)
+   ![Native Mongo Query Initial Advanced Editor Before](./media/azure-cosmos-db-for-mongodb/native-query-advanced-editor-before.png)
 
 1. The `Value.NativeQuery` function takes two arguments: a Source, and the query itself. The Source variable is populated with all the information needed to connect to the database. If desired, update the name of the collection that the query will run against. The collection does not have to be the same as the one selected in the **Navigator**.
 
-   ![Native Mongo Query Initial Advanced Editor](./media/azure-cosmos-db-for-mongodb/native-query-advanced-editor-after.png)
+   ![Native Mongo Query Initial Advanced Editor After](./media/azure-cosmos-db-for-mongodb/native-query-advanced-editor-after.png)
 
 1. The second argument is a valid MongoDB query, enclosed in double-quotation marks. Quotation marks within the query are escaped with an additional quotation mark e.g. `"num1"` to `""$num1""`
 
@@ -85,7 +81,7 @@ Note that **Native Mongo Queries** are only supported in **Direct Query** mode.
 
 1. Once the **Power Query Editor** is closed and the changes applied, the resultant table will appear in the **Data** pane.
 
-   ![Native Mongo Query Transform Data Type](./media/azure-cosmos-db-for-mongodb/native-query-final-result.png)
+   ![Native Mongo Query Transform Data Type Final Result](./media/azure-cosmos-db-for-mongodb/native-query-final-result.png)
 
 Refer to [Troubleshooting & Limitations](#troubleshooting--limitations) for limitations of the `Value.NativeQuery` function.
 
@@ -103,7 +99,7 @@ Refer to [Troubleshooting & Limitations](#troubleshooting--limitations) for limi
 
 ## Troubleshooting & Limitations
 
-- As [Power Query Text functions](https://learn.microsoft.com/en-us/powerquery-m/text-functions) are not yet supported, neither is using **Text Filters** on a column when **Transforming Data** in **Direct Query** mode.
+- As [Power Query Text functions](/powerquery-m/text-functions) are not yet supported, neither is using **Text Filters** on a column when **Transforming Data** in **Direct Query** mode.
 
   - Examples of such filters: _Begins With_, _Ends With_, _Contains_, etc.
   - An error message will appear similar to _Unsupported Operation: Unsupported function invocation: 'Text.StartsWith'_
