@@ -30,6 +30,9 @@
   >[!Note]
   >The Microsoft Office 365 menu also contains downloadable report templates for Power BI, which can be used with this connector.
 
+- In order to refresh data, an **on-premises data gateway** must be available. You can follow [this link](https://learn.microsoft.com/en-us/data-integration/gateway/service-gateway-install) to learn how to install it; we recommend installing it on a managed machine that is always on.
+  - Note that the ODBC driver is also required to be installed on this same machine.
+
 
 ## Capabilities Supported
 
