@@ -399,6 +399,8 @@ items:
         href: connectors/equis.md
       - name: "Essbase"
         href: connectors/essbase.md
+      - name: "Exact Online Premium"
+        href: connectors/exact-online-premium.md
       - name: "Excel"
         href: connectors/excel.md
       - name: "FactSet RMS (Beta)"

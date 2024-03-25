@@ -1,0 +1,81 @@
+# Exact Online Premium
+
+>[!Note]
+>The following connector article is provided by Exact Online, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Exact Online website and use the support channels there.
+
+
+## Summary
+
+| Item                             | Description                                      |
+| -------------------------------- | ------------------------------------------------ |
+| Release State                    | General Availability                             |
+| Products                         | Power BI (Semantic models)                       |
+| Authentication Types Supported   | OAuth                                            |
+| Function Reference Documentation | [Web.Contents](https://learn.microsoft.com/en-us/powerquery-m/web-contents)<br/>[Odbc.DataSource](https://learn.microsoft.com/en-us/powerquery-m/odbc-datasource)                             |
+
+
+## Prerequisites
+
+- An **Exact Online Premium subscription** is required.
+
+- You need to have the **ODBC Connector version 18** installed. Go to the [download page](https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16) to download the latest driver.
+
+- In Exact Online, in the firewall settings, your IP address needs to be whitelisted.
+  - Open the **Master data** screen
+  - Locate the **Microsoft Office 365** section and select **Power BI Connector: IP Whitelisting**
+
+    ![Image with login highlighted, showing the sign in button.](./media/exact-online-premium/exact-online-premium-o365-menu.png)
+  - Add the IP address to the list
+
+  >[!Note]
+  >The Microsoft Office 365 menu also contains downloadable report templates for Power BI, which can be used with this connector.
+
+
+## Capabilities Supported
+
+- Import
+- Direct Query (Power BI semantic models)
+
+
+## Connect to Exact Online Premium
+
+To connect to Exact Online Premium:
+
+1. Select **Get Data** from the **Home** ribbon in Power BI Desktop. Select **Database** from the categories on the left, select **Exact Online Premium**, and then select **Connect**.
+
+   ![Get Data screen showing Exact Online Premium connector under Database section.](./media/exact-online-premium/exact-online-premium-select-connector.png)
+
+2. If this is the first time you're getting data through the Exact Online Premium connector, a preview connector notice will be displayed. Select **Don't warn me again with this connector** if you don't want this message to be displayed again, and then select **Continue**.
+
+3. To sign in to your Exact Online Premium account, select **Sign in**.
+
+   ![Image with login highlighted, showing the sign in button.](./media/exact-online-premium/exact-online-premium-not-signed-in.png)
+
+4. In the window that appears, provide your user name and password to sign in to your Exact Online Premium account and select **Next**.
+
+   ![Exact Online login screen.](./media/exact-online-premium/exact-online-premium-login.png)
+
+5. Once you've successfully signed in, select **Connect**.
+
+   ![Exact Online login screen.](./media/exact-online-premium/exact-online-premium-signed-in.png)
+
+6. In **Navigator**, select the information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in the Power Query editor.
+
+   ![Exact Online login screen.](./media/exact-online-premium/exact-online-premium-navigator.png)
+
+7. Finally, select the data usage mode (import or direct query)
+
+
+## Limitations and issues
+
+You should be aware of the following limitations and issues associated with accessing Exact Online Premium data.
+
+* ODBC: ERROR [42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Cannot open server '*(servername)*' requested by the login. Client with IP address '*(ip address)*' is not allowed to access the server.
+
+  This likely happens because the IP address is not whitelisted. Follow the whitelisting steps under Prerequisites above to resolve.
+
+
+## Next steps
+
+You can find additional information and templates for this connector on our [documentation page](https://support.exactonline.com/community/s/knowledge-base#All-All-HNO-Concept-premium-powerbi-powerbi-introductionc).
+
