@@ -114,6 +114,8 @@ Refer to [Troubleshooting & Limitations](#troubleshooting--limitations) for limi
 
 - Power BI drops the milliseconds from date types when applying a built in filter. Thus if a date type has milliseconds in it then those built in filters will not work.
 
+- Negative OLE times (Dates from before 1899, December 30th) for Date.From, DateTime.From, and DateTimeZone.From do not work.
+
 - Field names that contain special characters are not supported (e.g. `$`, `.`, `@`, etc.).
 
 - When a divide by 0 is encountered using **Direct Query**, the query will fail. This differs from the usual `#infinity` Power BI result, but aligns with MongoDB behavior.
