@@ -11,26 +11,23 @@
 | Release State                    | General Availability                             |
 | Products                         | Power BI (Semantic models)                       |
 | Authentication Types Supported   | OAuth                                            |
-| Function Reference Documentation | [Web.Contents](https://learn.microsoft.com/en-us/powerquery-m/web-contents)<br/>[Odbc.DataSource](https://learn.microsoft.com/en-us/powerquery-m/odbc-datasource)                             |
+| Function Reference Documentation | [Web.Contents](https://learn.microsoft.com/powerquery-m/web-contents)<br/>[Odbc.DataSource](https://learn.microsoft.com/powerquery-m/odbc-datasource)                             |
 
 
 ## Prerequisites
 
 - An **Exact Online Premium subscription** is required.
 
-- You need to have the **ODBC Connector version 18** installed. Go to the [download page](https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16) to download the latest driver.
+- You need to have the **ODBC Connector version 18** installed. Go to the [download page](https://learn.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) to download the latest driver.
 
-- In Exact Online, in the firewall settings, your IP address needs to be whitelisted.
+- In Exact Online, your IP address needs to be allowed access.
   - Open the **Master data** screen
-  - Locate the **Microsoft Office 365** section and select **Power BI Connector: IP Whitelisting**
-
-    ![Image with login highlighted, showing the sign in button.](./media/exact-online-premium/exact-online-premium-o365-menu.png)
-  - Add the IP address to the list
+  - Locate the **Microsoft Office 365** section and add the IP address to the Power BI access list
 
   >[!Note]
   >The Microsoft Office 365 menu also contains downloadable report templates for Power BI, which can be used with this connector.
 
-- In order to refresh data, an **on-premises data gateway** must be available. You can follow [this link](https://learn.microsoft.com/en-us/data-integration/gateway/service-gateway-install) to learn how to install it; we recommend installing it on a managed machine that is always on.
+- In order to refresh data, an **on-premises data gateway** must be available. You can follow [this link](https://learn.microsoft.com/data-integration/gateway/service-gateway-install) to learn how to install it; we recommend installing it on a managed machine that is always on.
   - Note that the ODBC driver is also required to be installed on this same machine.
 
 
@@ -60,11 +57,11 @@ To connect to Exact Online Premium:
 
 5. Once you've successfully signed in, select **Connect**.
 
-   ![Exact Online login screen.](./media/exact-online-premium/exact-online-premium-signed-in.png)
+   ![Image with user signed in, showing the Connect button.](./media/exact-online-premium/exact-online-premium-signed-in.png)
 
 6. In **Navigator**, select the information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in the Power Query editor.
 
-   ![Exact Online login screen.](./media/exact-online-premium/exact-online-premium-navigator.png)
+   ![Navigator screen showing Exact Online content.](./media/exact-online-premium/exact-online-premium-navigator.png)
 
 7. Finally, select the data usage mode (import or direct query)
 
@@ -75,7 +72,7 @@ You should be aware of the following limitations and issues associated with acce
 
 * ODBC: ERROR [42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Cannot open server '*(servername)*' requested by the login. Client with IP address '*(ip address)*' is not allowed to access the server.
 
-  This likely happens because the IP address is not whitelisted. Follow the whitelisting steps under Prerequisites above to resolve.
+  This likely happens because the IP address is not on the allowed list for Power BI. Follow the steps under Prerequisites above to resolve.
 
 
 ## Next steps
