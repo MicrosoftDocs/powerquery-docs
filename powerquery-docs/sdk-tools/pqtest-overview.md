@@ -1,5 +1,5 @@
 ---
-title: Test harness
+title: PQTest
 description: Overview of PQTest test harness
 author: ryan-syed
 ms.topic: overview
