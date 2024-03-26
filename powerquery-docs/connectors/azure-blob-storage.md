@@ -4,7 +4,7 @@ description: Includes basic information, prerequisites, and information on how t
 
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 3/22/2024
+ms.date: 3/26/2024
 ms.author: dougklo
 
 ---
@@ -31,9 +31,6 @@ ms.author: dougklo
 * An Azure subscription. Go to [Get Azure free trial](https://azure.microsoft.com/pricing/free-trial/).
 
 * An Azure Blob Storage account. Follow the instructions at [Create a storage account](/azure/storage/common/storage-account-create?tabs=azure-portal). This article assumes that you already created an Azure Blob Storage account, and uploaded data files to it.
-
-> [!NOTE]
-> If you're connecting to an Azure Blob Storage account from Power BI, the Azure Blob storage account must be in the same region as your Power BI account.
 
 ## Capabilities supported
 
@@ -108,3 +105,16 @@ To retrieve your Azure Blob Storage account key to use while authenticating your
 5. Select the **Copy to clipboard** icon to copy the **Key** value.
 
    :::image type="content" source="./media/azure-blob-storage/account-key-location.png" alt-text="Screenshot of the Access keys page, with the Key under key1 shown, and the Copy to clipboard icon emphasized.":::
+
+## Limitations
+
+The following limitations apply to the Power Query Azure Blob Storage connector.
+
+### Power Query Online and Azure Storage are in the same region
+
+Direct access to an Azure Storage account with the firewall enabled and in the same region as Power Query Online isn't supported. This limitation arises because Power Query services, when deployed in the same region as the Azure storage account, use private Azure IP addresses for communication. For further details, refer to the [Azure documentation on storage network security](/azure/storage/common/storage-network-security?tabs=azure-portal#grant-access-from-an-internet-ip-range).
+
+To work around this limitation and enable access to Azure Storage from Power Query Online in the same region, use one of the following methods:
+
+* Utilize an [On-premises data gateway](/data-integration/gateway/), which serves as a bridge between Power Query Online and Azure Storage.
+* Use a [Virtual Network (VNet) data gateway](/data-integration/vnet/overview).
