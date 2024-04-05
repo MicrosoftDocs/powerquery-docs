@@ -443,6 +443,8 @@ items:
         href: connectors/kql-database.md
       - name: "Lakehouse (Beta)"
         href: connectors/lakehouse.md
+      - name: LEAP (Beta)
+        href: connectors/leap.md 
       - name: LinkedIn Sales Navigator (Beta)
         href: connectors/linkedin-sales-navigator.md
       - name: "Mailchimp (Deprecated)"
