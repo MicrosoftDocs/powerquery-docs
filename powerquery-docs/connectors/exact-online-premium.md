@@ -1,8 +1,16 @@
-# Exact Online Premium
+---
+title: Power Query Exact Online Premium connector
+description: Provides basic information and prerequisites for the Exact Online Premium connector, supported authentication types, outlines limitations and issues.
+author: jonburchel
+ms.topic: conceptual
+ms.date: 04/05/2024
+ms.author: jburchel
+---
+
+# Exact Online Premium Power Query custom connector
 
 >[!Note]
 >The following connector article is provided by Exact Online, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Exact Online website and use the support channels there.
-
 
 ## Summary
 
@@ -11,14 +19,13 @@
 | Release State                    | General Availability                             |
 | Products                         | Power BI (Semantic models)                       |
 | Authentication Types Supported   | OAuth                                            |
-| Function Reference Documentation | [Web.Contents](https://learn.microsoft.com/powerquery-m/web-contents)<br/>[Odbc.DataSource](https://learn.microsoft.com/powerquery-m/odbc-datasource)                             |
-
+| Function Reference Documentation | [Web.Contents](/powerquery-m/web-contents)<br/>[Odbc.DataSource](/powerquery-m/odbc-datasource)   |
 
 ## Prerequisites
 
 - An **Exact Online Premium subscription** is required.
 
-- You need to have the **ODBC Connector version 18** installed. Go to the [download page](https://learn.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) to download the latest driver.
+- You need to have the **ODBC Connector version 18** installed. Go to the [download page](/sql/connect/odbc/download-odbc-driver-for-sql-server) to download the latest driver.
 
 - In Exact Online, your IP address needs to be allowed access.
   - Open the **Master data** screen
@@ -27,15 +34,13 @@
   >[!Note]
   >The Microsoft Office 365 menu also contains downloadable report templates for Power BI, which can be used with this connector.
 
-- In order to refresh data, an **on-premises data gateway** must be available. You can follow [this link](https://learn.microsoft.com/data-integration/gateway/service-gateway-install) to learn how to install it; we recommend installing it on a managed machine that is always on.
+- In order to refresh data, an **on-premises data gateway** must be available. You can follow [this link](/data-integration/gateway/service-gateway-install) to learn how to install it; we recommend installing it on a managed machine that is always on.
   - Note that the ODBC driver is also required to be installed on this same machine.
-
 
 ## Capabilities Supported
 
 - Import
 - Direct Query (Power BI semantic models)
-
 
 ## Connect to Exact Online Premium
 
@@ -74,8 +79,6 @@ You should be aware of the following limitations and issues associated with acce
 
   This likely happens because the IP address is not on the allowed list for Power BI. Follow the steps under Prerequisites above to resolve.
 
-
 ## Next steps
 
 You can find additional information and templates for this connector on our [documentation page](https://support.exactonline.com/community/s/knowledge-base#All-All-HNO-Concept-premium-powerbi-powerbi-introductionc).
-

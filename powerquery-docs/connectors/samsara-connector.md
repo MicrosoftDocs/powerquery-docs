@@ -1,8 +1,17 @@
-# Samsara
+---
+title: Power Query Samsara connector
+description: Provides basic information and prerequisites for the Samsara connector, supported authentication types, outlines limitations and issues.
+author: jonburchel
+ms.topic: conceptual
+ms.date: 04/05/2024
+ms.author: jburchel
+---
+
+# Samsara Power Query custom connector
 
 ## Support Note
 
-> [!Note]
+> [!NOTE]
 > The following connector article is provided by Samsara, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Samsara website and use the support channels there.
 
 ## Summary
@@ -12,7 +21,7 @@
 |Release State|General Availability|
 |Products     |Power BI (datasets) & Power BI (dataflow)|
 |Authentication Types SUpported|Web API|
-|Function Reference Documentation|[Power Query M Formula Language](https://learn.microsoft.com/en-us/powerquery-m/)| 
+|Function Reference Documentation|[Power Query M Formula Language](/powerquery-m/)| 
 
 
 Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
@@ -47,10 +56,10 @@ For additional guidelines on accessing Samsara data, see Samsara's [Developer Gu
 
 ## Additional Information
 
-You may also find the following Samsara information useful: 
+You may also find the following Samsara information useful:
 
 - [Samsara Power BI Connector Product Guide](https://kb.samsara.com/hc/en-us/articles/19262879010189-Integrate-with-Power-BI)
 - [Samsara Power BI Connector Developer Guide](https://developers.samsara.com/docs/pbi-custom-connector)
 
 ## Feedback
-> Submit and view feedback for [this product](https://learn.microsoft.com/en-us/power-query/feedback)
+> Submit and view feedback for [this product](/power-query/feedback)
