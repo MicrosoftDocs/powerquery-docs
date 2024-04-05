@@ -60,6 +60,4 @@ You may also find the following Samsara information useful:
 
 - [Samsara Power BI Connector Product Guide](https://kb.samsara.com/hc/en-us/articles/19262879010189-Integrate-with-Power-BI)
 - [Samsara Power BI Connector Developer Guide](https://developers.samsara.com/docs/pbi-custom-connector)
-
-## Feedback
-> Submit and view feedback for [this product](/power-query/feedback)
+- [Submit and view feedback](/power-query/feedback)
