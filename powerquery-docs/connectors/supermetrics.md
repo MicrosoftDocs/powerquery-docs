@@ -9,8 +9,6 @@ ms.author: jburchel
 
 # Supermetrics Power Query custom connector
 
-## Support note
-
 >[!Note]
 >The following connector article is provided by Supermetrics, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the https://supermetrics.com/ website and use the support channels there.
 

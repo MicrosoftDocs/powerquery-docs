@@ -9,8 +9,6 @@ ms.author: jburchel
 
 # Samsara Power Query custom connector
 
-## Support Note
-
 > [!NOTE]
 > The following connector article is provided by Samsara, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Samsara website and use the support channels there.
 
