@@ -116,6 +116,8 @@ Refer to [Troubleshooting & Limitations](#troubleshooting--limitations) for limi
 
 - Negative OLE times (Dates from before 1899, December 30th) for Date.From, DateTime.From, and DateTimeZone.From do not work.
 
+- Using the Power BI `DateTimeZone.From` function will result in a _(400): Bad Request_ error from the CosmosDB server as the `dateFromString` functionality has not been added to CosmosDB for MongoDB.
+
 - Field names that contain special characters are not supported (e.g. `$`, `.`, `@`, etc.).
 
 - When a divide by 0 is encountered using **Direct Query**, the query will fail. This differs from the usual `#infinity` Power BI result, but aligns with MongoDB behavior.
