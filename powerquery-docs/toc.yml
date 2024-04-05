@@ -497,6 +497,8 @@ items:
         href: connectors/salesforce-objects.md
       - name: "Salesforce Reports"
         href: connectors/salesforce-reports.md
+      - name: "Samsara"
+        href: connectors/samsara.md
       - name: "SAP Business Warehouse"
         items:
         - name: "Connect to an SAP Business Warehouse Application Server"
@@ -589,6 +591,8 @@ items:
         href: connectors/xml.md
       - name: "Zendesk (Beta)"
         href: connectors/zendesk.md
+      - name: "Zendesk Data (Beta)"
+        href: connectors/zendesk-data.md
     - name: Support and troubleshooting
       items:
       - name: "Power Query online limits"
