@@ -557,6 +557,8 @@ items:
         href: connectors/stripe.md
       - name: "SumTotal"
         href: connectors/sumtotal.md
+      - name: "Supermetrics"
+        href: connectors/supermetrics.md
       - name: "Sybase database"
         href: connectors/sybase-database.md
       - name: "Teradata database"
