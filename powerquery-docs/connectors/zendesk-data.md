@@ -1,10 +1,10 @@
 ---
 title: Power Query Zendesk Data (Beta) connector
 description: Provides basic information and prerequisites for the connector, describes the connection process, and discusses limitations and issues you might encounter.
-author: Jin Huang
+author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 4/5/2024
-ms.author: 
+ms.author: dougklo
 ---
 
 # Zendesk Data (Beta)
