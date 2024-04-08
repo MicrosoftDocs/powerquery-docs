@@ -78,7 +78,7 @@ To connect to Supermetrics
    :::image type="content" source="media/supermetrics/sm_signin_page.png" alt-text="Connection selector":::
 
 7. Once you sign in, select **Continue**.
-   :::image type="content" source="media/supermetrics/sm_thanks_page.png " "alt-text="Thank you message":::
+   :::image type="content" source="media/supermetrics/sm_thanks_page.png" "alt-text="Thank you message":::
 
 8. Select **Connect**.  
    :::image type="content" source="media/supermetrics/sm_signed_in.png" alt-text="You are currently signed in.":::
