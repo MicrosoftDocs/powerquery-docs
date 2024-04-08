@@ -75,13 +75,13 @@ To connect to Supermetrics
    :::image type="content" source="media/supermetrics/sm_connect_to_supermetrics.png" alt-text="Connecting to Supermetrics.":::
 
 6. Use single sign-on (SSO) in the Supermetrics window that appears: Select **Sign in with Microsoft** or **Sign in with Google** and choose the account that you used to sign in to the Supermetrics Hub.
-   :::image type="content" source="media/supermetrics/sm_signin_page.png" alt-text="Connection selector":::
+   :::image type="content" source="media/supermetrics/sm_signin_page.png" alt-text="Screenshot showing the connection selector.":::
 
 7. Once you sign in, select **Continue**.
-   :::image type="content" source="media/supermetrics/sm_thanks_page.png" "alt-text="Thank you message":::
+   :::image type="content" source="media/supermetrics/sm_thanks_page.png" alt-text="Screenshot showing the thank you message.":::
 
 8. Select **Connect**.  
-   :::image type="content" source="media/supermetrics/sm_signed_in.png" alt-text="You are currently signed in.":::
+   :::image type="content" source="media/supermetrics/sm_signed_in.png" alt-text="Screenshot showing the that you are currently signed in.":::
 
 9. Once the Navigator dialog box loads, you're able to preview all the queries you saved in your Supermetrics account on the Hub. They'll be organized in folders by the data source on the left. Select the checkboxes next to any queries with data you’d like to use for your report.  
    :::image type="content" source="media/supermetrics/sm_navigator.png" alt-text="Navigator view with the list of teams, groups and queries.":::  
