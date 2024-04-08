@@ -34,27 +34,27 @@ To connect to LEAP data from Power Query Desktop, take the following steps:
 
 1. Select **Get Data** from the **Home** ribbon in Power BI Desktop. Select **Online Services** from the categories on the left, select **LEAP (Beta)**, and then select **Connect**.
 
-   ![Screenshot of Online Services category and the LEAP connector highlighted.](./media/leap/desktop-leap-get-data.png)
+   :::image type="content" source="/media/leap/desktop-leap-get-data.png" alt-text="Screenshot of Online Services category and the LEAP connector highlighted.":::
 
 1. If you're getting data through the LEAP connector for the first time, a preview connector notice is displayed. Select **Don't warn me again with this connector** if you don't want this message to be displayed again, and then select **Continue**.
 
 1. To sign in to your LEAP Admin user account, select **Sign in**.
 
-   ![Screenshot of the LEAP account highlighted, and showing the sign in button.](./media/leap/desktop-leap-sign-in.png)
+   :::image type="content" source="/media/leap/desktop-leap-sign-in.png" alt-text="Screenshot of the LEAP account highlighted, and showing the sign in button.":::
 
 1. In the LEAP window that appears, provide your credentials to sign in to your LEAP Admin user account.
 
-   ![Screenshot of the sign in screen for LEAP.](./media/leap/desktop-leap-sign-in-auth.png)
+   :::image type="content" source="media/leap/desktop-leap-sign-in-auth.png" alt-text="Screenshot of the sign in screen for LEAP.":::
 
 1. Select **Sign in**.
 
 1. Once you've successfully signed in, select **Connect**.
 
-   ![Screenshot of the user signed in and ready to connect.](./media/leap/desktop-leap-signed-in.png)
+   :::image type="content" source="/media/leap/desktop-leap-signed-in.png" alt-text="Screenshot of the user signed in and ready to connect.":::
 
 1. In **Navigator**, select the information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in the Power Query editor.
 
-   ![Power Query Navigator showing LEAP data.](./media/leap/desktop-leap-navigator.png)
+   :::image type="content" source="/media/leap/desktop-leap-navigator.png" alt-text="Power Query Navigator showing LEAP data.":::
 
 ## Load data from LEAP in Power Query Online
 

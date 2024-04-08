@@ -48,25 +48,25 @@ To connect to Exact Online Premium:
 
 1. Select **Get Data** from the **Home** ribbon in Power BI Desktop. Select **Database** from the categories on the left, select **Exact Online Premium**, and then select **Connect**.
 
-   ![Get Data screen showing Exact Online Premium connector under Database section.](./media/exact-online-premium/exact-online-premium-select-connector.png)
+  :::image type=content source="media/exact-online-premium/exact-online-premium-select-connector.png" alt-text="Get Data screen showing Exact Online Premium connector under Database section.":::
 
 2. If this is the first time you're getting data through the Exact Online Premium connector, a preview connector notice will be displayed. Select **Don't warn me again with this connector** if you don't want this message to be displayed again, and then select **Continue**.
 
 3. To sign in to your Exact Online Premium account, select **Sign in**.
 
-   ![Image with login highlighted, showing the sign in button.](./media/exact-online-premium/exact-online-premium-not-signed-in.png)
+  :::image type=content source="media/exact-online-premium/exact-online-premium-not-signed-in.png" alt-text="Image with login highlighted, showing the sign in button.":::
 
 4. In the window that appears, provide your user name and password to sign in to your Exact Online Premium account and select **Next**.
 
-   ![Exact Online login screen.](./media/exact-online-premium/exact-online-premium-login.png)
+  :::image type=content source="media/exact-online-premium/exact-online-premium-login.png" alt-text="Exact Online login screen.":::
 
 5. Once you've successfully signed in, select **Connect**.
 
-   ![Image with user signed in, showing the Connect button.](./media/exact-online-premium/exact-online-premium-signed-in.png)
+  :::image type=content source="media/exact-online-premium/exact-online-premium-signed-in.png" alt-text="Image with user signed in, showing the Connect button.":::
 
 6. In **Navigator**, select the information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in the Power Query editor.
 
-   ![Navigator screen showing Exact Online content.](./media/exact-online-premium/exact-online-premium-navigator.png)
+  :::image type=content source="media/exact-online-premium/exact-online-premium-navigator.png" alt-text="Navigator screen showing Exact Online content.":::
 
 7. Finally, select the data usage mode (import or direct query)
 
