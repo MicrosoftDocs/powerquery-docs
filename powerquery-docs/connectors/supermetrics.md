@@ -34,7 +34,7 @@ Follow these steps to create and save a query:
 2. If you don’t see the Power BI page, open the left-hand navigation and go to Destinations > Power BI.
 
 3. Select **“Create new query”** to get started.
-   :::image type="content" source="media/supermetrics/sm_get_started_with_query_manager.png "Get started with query manager"" alt-text="Get started with Supermetrics hub.":::
+   :::image type="content" source="media/supermetrics/sm_get_started_with_query_manager.png" alt-text="Get started with Supermetrics hub.":::
 
 4. Select a data source and sign in to your account to create a connection between your data source and Supermetrics. [Find detailed instructions in our support center](https://supermetrics.com/docs/product-power-bi-getting-started/)
 
@@ -78,7 +78,7 @@ To connect to Supermetrics
    :::image type="content" source="media/supermetrics/sm_signin_page.png" alt-text="Connection selector":::
 
 7. Once you sign in, select **Continue**.
-   :::image type="content" source="media/supermetrics/sm_thanks_page.png "Thank you message"" alt-text="Thank you message":::
+   :::image type="content" source="media/supermetrics/sm_thanks_page.png " "alt-text="Thank you message":::
 
 8. Select **Connect**.  
    :::image type="content" source="media/supermetrics/sm_signed_in.png" alt-text="You are currently signed in.":::
