@@ -4,7 +4,7 @@ description: Provides prerequisites, capabilities supported and connection instr
 author: innovation-team
 ms.topic: conceptual
 ms.date: 4/11/2024
-ms.author: innovation-team
+ms.author:
 ---
 
 # Wolters Kluwer CCH Tagetik 
@@ -53,7 +53,7 @@ To connect to Wolters Kluwer CCH Tagetik data:
 
     The connector uses ad-hoc credentials (username and password) defined in CCH Tagetik defined in CCH Tagetik to access and retrieve data through OData APIs.
 
-    [![Get data and dropdown.](./media/wolters-kluwer-cch-tagetik/authentication-credentials.png)](./media/wolters-kluwer-cch-tagetik/authentication-credentials.png#lightbox)
+    [![authenticationCredentials.](./media/wolters-kluwer-cch-tagetik/authentication-credentials.png)](./media/wolters-kluwer-cch-tagetik/authentication-credentials.png#lightbox)
 
 6. Once authentication is complete the connector displays the **Navigator Dialog** containing a list of sources based on the parameters previously entered.
 
