@@ -3,7 +3,7 @@ title: Handling navigation for Power Query connectors
 description: Manage navigation for Power Query connectors
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 1/9/2023
+ms.date: 4/11/2024
 ms.author: miescobar
 ---
 
@@ -49,10 +49,6 @@ The function adds the following metadata to the table type:
 Each of the following item kind values provide a different icon in the navigation table.
 
 * Feed
-* Cube
-* CubeDatabase
-* CubeView
-* CubeViewFolder
 * Database
 * DatabaseServer
 * Dimension
@@ -61,13 +57,8 @@ Each of the following item kind values provide a different icon in the navigatio
 * Function
 * View
 * Sheet
-* Subcube
 * DefinedName
 * Record
-
-The following screenshot shows the icons for item kinds in Power BI Desktop.
-
-:::image type="content" source="media/handling-navigation-tables/item-kinds.png" alt-text="List of Navigation Table ItemKinds.":::
 
 ## Examples
 
