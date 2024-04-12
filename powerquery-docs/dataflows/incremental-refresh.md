@@ -32,7 +32,7 @@ A dataflow can contain many tables. Incremental refresh is set up at the table l
 
 To set up an incremental-refreshed table, start by configuring your table as you would any other table.
 
-After the dataflow is created and saved, select **Incremental refresh** ![Incremental refresh.](media/incremental-refresh/dataflows-incremental-refresh-icon.png) in the table view, as shown in the following image.
+After the dataflow is created and saved, select **Incremental refresh** :::image type="content" source="media/incremental-refresh/dataflows-incremental-refresh-icon.png" alt-text="Incremental refresh."::: in the table view, as shown in the following image.
 
 ![Incremental refresh icon for dataflows.](media/incremental-refresh/dataflows-incremental-refresh-01.png)
 
@@ -44,6 +44,8 @@ The following list explains the settings in the **Incremental refresh settings**
 
 * **Incremental refresh on/off toggle**: Turns the incremental refresh policy on or off for the table.
 * **Filter field drop-down**: Selects the query field on which the table should be filtered for increments. This field only contains DateTime fields. You can't use incremental refresh if your table doesn't contain a DateTime field.
+  > [!IMPORTANT]
+  > Choose an unchanging date field for the incremental refresh filter. If the field value changes (for example, with a _date modified_ field), this can lead to [refresh failures because of duplicate values](/power-bi/connect-data/incremental-refresh-troubleshoot#problem-refresh-fails-because-of-duplicate-values) in the data.
 * **Store/refresh rows from the past**: The example in the previous image illustrates these next few settings.
 
    In this example, we define a refresh policy to store five years of data in total and incrementally refresh 10 days of data. Assuming that the table is refreshed daily, the following actions are carried out for each refresh operation:

@@ -44,7 +44,7 @@ The goal is to create a table like the following, where the name of the country 
 5. In the **Join kind** section, select **Inner**.
 6. Select **OK**.
 
-![Merge dialog box showing the results of following the previous inner join procedure.](media/merge-queries-inner/inner-merge-window.png "Merge dialog box showing the results of following the previous inner join procedure")
+:::image type="content" source="media/merge-queries-inner/inner-merge-window.png" alt-text="Merge dialog box showing the results of following the previous inner join procedure.":::
 
 >[!TIP]
 >Take a closer look at the message at the bottom of the dialog box that reads "The selection matches 1 of 4 rows from the first table, and 1 of 2 rows from the second table." This message is crucial to understanding the result that you get from this operation.
@@ -55,7 +55,7 @@ In the **Countries** table, you have the **Country** Spain with the **id** 4, bu
 
 From the newly created **Countries** column, expand the **Country** field. Don't select the **Use original column name as prefix** check box.
 
-![Expand table column for Country.](media/merge-queries-inner/inner-expand-field.png "Expand table column for Country")
+:::image type="content" source="media/merge-queries-inner/inner-expand-field.png" alt-text="Expand table column for Country.":::
 
 After performing this operation, you'll create a table that looks like the following image.
 

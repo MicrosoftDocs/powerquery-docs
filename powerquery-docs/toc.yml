@@ -47,8 +47,6 @@ items:
         items:
         - name: "Understanding query evaluation and folding"
           href: query-folding-basics.md
-        - name: "Query folding overview"
-          href: power-query-folding.md
         - name: "Query folding examples"
           href: query-folding-examples.md
         - name: "Query folding indicators"
@@ -425,7 +423,7 @@ items:
         href: connectors/google-analytics.md
       - name: "Google BigQuery"
         href: connectors/google-bigquery.md
-      - name: "Google BigQuery (Azure AD) (Beta)"
+      - name: "Google BigQuery (Microsoft Entra ID) (Beta)"
         href: connectors/google-bigquery-aad.md
       - name: "Google Sheets"
         href: connectors/google-sheets.md
@@ -437,6 +435,8 @@ items:
         href: connectors/ibm-db2-database.md
       - name: "Impala database"
         href: connectors/impala-database.md
+      - name: "inwink (Beta)"
+        href: connectors/inwink.md
       - name: "JSON"
         href: connectors/json.md
       - name: "KQL database"
@@ -531,7 +531,7 @@ items:
         href: connectors/sharepoint-list.md
       - name: "SharePoint Online list"
         href: connectors/sharepoint-online-list.md
-      - name: "SingleStore (Beta)"
+      - name: "SingleStore"
         href: connectors/singlestore.md
       - name: "SIS-CC SDMX (Beta)"
         href: connectors/sis-cc-sdmx.md
@@ -543,7 +543,7 @@ items:
         href: connectors/socialbakers.md
       - name: "SoftOne BI (Beta)"
         href: connectors/softone-bi.md
-      - name: "SolarWinds Service Desk (Beta)"
+      - name: "SolarWinds Service Desk"
         href: connectors/solarwinds-service-desk.md
       - name: "SQL Server Analysis Services database"
         href: connectors/sql-server-analysis-services.md
@@ -649,6 +649,8 @@ items:
           href: additional-connector-functionality.md
         - name: "Handling authentication"
           href: handling-authentication.md
+        - name: "Configure Microsoft Entra ID for your connector"
+          href: configure-microsoft-entra-for-connector.md
         - name: "Handling data access"
           href: handling-data-access.md
         - name: "ODBC development"
@@ -691,6 +693,38 @@ items:
           href: native-query-sdk.md
         - name: "Versioning"
           href: handling-versioning.md
+      - name: Power Query SDK test framework
+        items:
+        - name: "Overview"
+          href: sdk-testframework/test-framework.md
+        - name: "1. Setup"
+          href: sdk-testframework/1-set-up.md
+        - name: "2. Preparing data"
+          href: sdk-testframework/2-data.md
+        - name: "3. Test suite"
+          href: sdk-testframework/3-tests.md
+        - name: "4. Test format specification"
+          href: sdk-testframework/4-testformat.md
+        - name: "5. Connector testing"
+          href: sdk-testframework/5-connector.md
+        - name: "6. Adding tests"
+          href: sdk-testframework/6-adding.md
+        - name: "7. Pipeline setup guide"
+          href: sdk-testframework/7-pipeline.md
+      - name: Power Query SDK tools
+        items:
+        - name: PQTest.exe
+          items:
+            - name: Overview
+              href: sdk-tools/pqtest-overview.md
+            - name: Commands and options
+              href: sdk-tools/pqtest-commands-options.md
+            - name: General usage
+              href: sdk-tools/pqtest-general-usage.md
+            - name: Credentials
+              href: sdk-tools/pqtest-credentials.md
+            - name: Compare
+              href: sdk-tools/pqtest-compare.md
       - name: Connector Certification
         items:
         - name: "Overview"

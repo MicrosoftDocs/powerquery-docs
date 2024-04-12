@@ -18,15 +18,15 @@ You can find the **Split Columns > By Non-Digit to Digit** option in three place
 
 * **Home tab**&mdash;under the **Split Column** dropdown menu inside the **Transform** group.
 
-   ![Image shows By Non-Digit to Digit under the Home tab.](media/splitcolumns-nondigit-to-digit/sc-home-ndtd.png)
+   :::image type="content" source="media/splitcolumns-nondigit-to-digit/sc-home-ndtd.png" alt-text="Image shows By Non-Digit to Digit under the Home tab.":::
 
 * **Transform tab**&mdash;under the **Split Column** dropdown menu inside the **Text Column** group.
 
-   ![Image shows By Non-Digit to Digit under the Transform tab.](media/splitcolumns-nondigit-to-digit/sc-transform-ndtd.png)
+   :::image type="content" source="media/splitcolumns-nondigit-to-digit/sc-transform-ndtd.png" alt-text="Image shows By Non-Digit to Digit under the Transform tab.":::
 
 * **Right-click a column**&mdash;inside the **Split Column** option.
 
-   ![Image shows By Non-Digit to Digit when right-clicking a column.](media/splitcolumns-nondigit-to-digit/sc-rightclick-ndtd.png)
+   :::image type="content" source="media/splitcolumns-nondigit-to-digit/sc-rightclick-ndtd.png" alt-text="Image shows By Non-Digit to Digit when right-clicking a column.":::
 
 ## Split columns by non-digit to digit into columns
 

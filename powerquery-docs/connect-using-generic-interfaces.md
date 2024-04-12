@@ -3,7 +3,7 @@ title: Connect to data using generic interfaces
 description: Learn how to connect different data sources with generic interfaces.
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 3/13/2024
 ms.author: miescobar
 ---
 

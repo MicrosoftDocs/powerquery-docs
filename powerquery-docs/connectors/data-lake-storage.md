@@ -3,7 +3,7 @@ title: Azure Data Lake Storage Gen2
 description: Includes basic information, prerequisites, and information on how to connect to Azure Data Lake Storage Gen2, along with a list of limitations.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/24/2024
+ms.date: 2/16/2024
 ms.author: dougklo
 ---
 
@@ -18,7 +18,7 @@ ms.author: dougklo
 | Authentication Types Supported | Organizational Account<br/>Account Key<br/>Shared Access Signature (SAS) Key<br/>Service principal |
 | Function Reference Documentation | [AzureStorage.DataLake](/powerquery-m/azurestorage-datalake)<br/>[AzureStorage.DataLakeContents](/powerquery-m/azurestorage-datalakecontents) |
 
->[!Note]
+> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
@@ -39,9 +39,7 @@ ms.author: dougklo
 
 ## Connect to Azure Data Lake Storage Gen2 from Power Query Desktop
 
-1. Select the **Azure Data Lake Storage Gen2** option in the **Get Data** selection, and then select **Connect**. More information: [Where to get data](../where-to-get-data.md)
-
-    ![Screenshot of the get data page, with the Azure category selected, and Azure Data Lake Storage Gen2 emphasized.](media/azure-data-lake-storage-gen2/get-data-page.png)
+1. Select **Azure Data Lake Storage Gen2** in the get data experience. The get data experience in Power Query Desktop varies between apps. For more information about the Power Query Desktop get data experience for your app, go to [Where to get data](../where-to-get-data.md).
 
 2. In the **Azure Data Lake Storage Gen2** dialog box, provide the URL to your Azure Data Lake Storage Gen2 account, container, or subfolder using the container endpoint format. URLs for Data Lake Storage Gen2 have the following pattern:
 
@@ -67,11 +65,13 @@ ms.author: dougklo
 
 ## Connect to Azure Data Lake Storage Gen2 from Power Query Online
 
-1. Select the **Azure Data Lake Storage Gen2** option in the **Get Data** selection, and then select **Connect**. More information: [Where to get data](../where-to-get-data.md)
+1. Select the **Azure Data Lake Storage Gen2** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../where-to-get-data.md).
 
-   ![Screenshot of the Connect to data source page for Azure Data Lake Storage Gen2, with the URL entered.](media/azure-data-lake-storage-gen2/adls-url-online.png)
+   :::image type="content" source="media/azure-data-lake-storage-gen2/get-data-online.png" alt-text="Screenshot of the get data window with Azure Data Lake Storage Gen2 emphasized.":::
 
 2. In **Connect to data source**, enter the URL to your Azure Data Lake Storage Gen2 account. Refer to [Limitations](#limitations) to determine the URL to use.
+
+   ![Screenshot of the Connect to data source page for Azure Data Lake Storage Gen2, with the URL entered.](media/azure-data-lake-storage-gen2/adls-url-online.png)
 
 3. Select whether you want to use the file system view or the Common Data Model folder view.
 
@@ -104,6 +104,15 @@ If you're using a proxy with your gateway, you might need to configure the Micro
 To enable connectivity from your network to the Azure data lake, you might need to enable list specific IP addresses on the gateway machine. For example, if your network has any firewall rules in place that might block these attempts, you'll need to unblock the outbound network connections for your Azure data lake. To enable list the required outbound addresses, use the **AzureDataLake** service tag. More information: [Virtual network service tags](/azure/virtual-network/service-tags-overview)
 
 Dataflows also support the "Bring Your Own" data lake option, which means you create your own data lake, manage your permissions, and you explicitly connect it to your dataflow. In this case, when you're connecting to your development or production environment using an Organizational account, you must enable one of the following roles for the storage account: Blob Data Reader, Blob Data Contributor, or Blob Data Owner.
+
+### Power Query Online and Azure Storage are in the same region
+
+Direct access to an Azure Storage account with the firewall enabled and in the same region as Power Query Online isn't supported. This limitation arises because Power Query services, when deployed in the same region as the Azure storage account, use private Azure IP addresses for communication. For further details, refer to the [Azure documentation on storage network security](/azure/storage/common/storage-network-security?tabs=azure-portal#grant-access-from-an-internet-ip-range).
+
+To work around this limitation and enable access to Azure Storage from Power Query Online in the same region, use one of the following methods:
+
+* Utilize an [On-premises data gateway](/data-integration/gateway/), which serves as a bridge between Power Query Online and Azure Storage.
+* Use a [Virtual Network (VNet) data gateway](/data-integration/vnet/overview).
 
 ## See also
 

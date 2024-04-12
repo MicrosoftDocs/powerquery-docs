@@ -4,13 +4,12 @@ description: Provides an overview of dataflows in solutions, and includes specia
 author: bensack
 ms.author: bensack
 ms.topic: conceptual 
-ms.date: 1/26/2024 
+ms.date: 2/13/2024 
 
 ---
-
 # Overview of solution-aware dataflows
 
-When you include your dataflows in a solution, their definitions become portable, making it easier to move them from one environment to another, saving time required to author the dataflow.
+When you include your dataflows in a solution, their definitions become portable, making it easier to move them from one environment to another, saving the time required to author the dataflow.
 
 A typical use case is for an independent software vendor (ISV) to develop a solution containing a dataflow that extracts and transforms data from a data source to Dataverse tables, in a sandbox environment. The ISV would then move that dataflow and destination tables to a test environment to test with their test data source to validate that the solution works well and is ready for production. After testing completes, the ISV would provide the dataflow and tables to clients who will import them into their production environment to operate on client’s data. This process is much easier when you add both the dataflows and tables they load data to into solutions, and then move the solutions and their contents between environments.
 
@@ -21,7 +20,7 @@ Dataflows added to a solution are known as *solution-aware* dataflows. You can a
 > * Only dataflows created in Power Platform environments can be solution-aware.
 > * The data loaded by dataflows to their destination isn't portable as part of solutions, only the dataflow definitions are. To recreate the data after a dataflow was deployed as part of a solution, you need to refresh the dataflow.
 
-## Add a new dataflow to a solution
+## Add a new dataflow to a solution (Preview)
 
 Follow these steps to add a dataflow to a solution.
 

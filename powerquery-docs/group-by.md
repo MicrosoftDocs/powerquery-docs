@@ -2,7 +2,7 @@
 title: "How to GROUP BY or summarize rows"
 description: "In Power Query, you can group or summarize the values in various rows into a single value by grouping the rows according to the values in one or more columns. Power Query has two types of Group By operations: aggregate a column with an aggregate function, or perform an operation."
 author: ptyx507x
-ms.date: 12/12/2022
+ms.date: 03/29/2024
 ms.author: miescobar
 ms.custom: edited
 ---
@@ -27,15 +27,15 @@ You can find the **Group by** button in three places:
 
 * On the **Home** tab, in the **Transform** group.
 
-   ![Group by on the Home tab.](media/group-by/home-icon.png "Group by on the Home tab")
+   :::image type="content" source="media/group-by/home-icon.png" alt-text="Group by on the Home tab.":::
 
 * On the **Transform** tab, in the **Table** group.
 
-   ![Group by on the Transform tab.](media/group-by/transform-icon.png "Group by on the Transform tab")
+   :::image type="content" source="media/group-by/transform-icon.png" alt-text="Group by on the Transform tab.":::
 
 * On the shortcut menu when you right-click to select columns.
 
-   ![Group by on the shortcut menu.](media/group-by/right-click-icon.png "Group by on the shortcut menu")
+   :::image type="content" source="media/group-by/right-click-icon.png" alt-text="Group by on the shortcut menu.":::
 
 ## Use an aggregate function to group by one or more columns
 
@@ -49,7 +49,7 @@ In this example, your goal is to summarize the total units sold at the country a
 6. In **New column name**, enter **Total units**, in **Operation**, select **Sum**, and in **Column**, select **Units**.
 7. Select **OK**
 
-![Group by dialog box with aggregated columns.](media/group-by/add-aggregated-column-window.png "Group by dialog box with aggregated columns")
+:::image type="content" source="media/group-by/add-aggregated-column-window.png" alt-text="Group by dialog box with aggregated columns.":::
 
 This operation gives you the following table.
 
@@ -84,7 +84,7 @@ The following table describes each of these operations.
 
 Starting from the original sample, in this example you'll create a column containing the total units and two other columns that give you the name and units sold for the top-performing product, summarized at the country and sales channel level.
 
-![Sample output table with operations.](media/group-by/row-operation-final-table.png "Sample output table with operations")
+:::image type="content" source="media/group-by/row-operation-final-table.png" alt-text="Sample output table with operations.":::
 
 1. Use the following columns as **Group by** columns:
    * Country
@@ -94,11 +94,11 @@ Starting from the original sample, in this example you'll create a column contai
    1. Aggregate the **Units** column by using the **Sum** operation. Name this column **Total units**.
    1. Add a new **Products** column by using the **All rows** operation.
 
-   ![Group by dialog box with a non-aggregate column.](media/group-by/row-operation-window.png "Group by dialog box with a non-aggregate column")
+   :::image type="content" source="media/group-by/row-operation-window.png" alt-text="Group by dialog box with a non-aggregate column.":::
 
 After that operation is complete, notice how the **Products** column has \[Table\] values inside each cell. Each \[Table\] value contains all the rows that were grouped by the **Country** and **Sales Channel** columns from your original table. You can select the white space inside the cell to see a preview of the contents of the table at the bottom of the dialog box.
 
-![Table details preview pane.](media/group-by/row-operation-details-preview-pane.png "Table details preview pane")
+:::image type="content" source="media/group-by/row-operation-details-preview-pane.png" alt-text="Table details preview pane.":::
 
 >[!NOTE]
 >The details preview pane might not show all the rows that were used for the group-by operation. You can select the \[Table\] value to see all rows pertaining to the corresponding group-by operation.
@@ -109,19 +109,19 @@ Next, you need to extract the row that has the highest value in the **Units** co
 
 With the new **Products** column with \[Table\] values, you create a new custom column by going to the **Add Column** tab on the ribbon and selecting **Custom column** from the **General** group.
 
-![Add a custom column.](media/group-by/add-custom-column-icon.png "Add a custom column")
+:::image type="content" source="media/group-by/add-custom-column-icon.png" alt-text="Add a custom column.":::
 
 Name your new column **Top performer product**. Enter the formula `Table.Max([Products], "Units" )` under **Custom column formula**.
 
-![Custom column formula with Table.Max.](media/group-by/row-operation-custom-column-formula.png "Custom column formula with Table.Max")
+:::image type="content" source="media/group-by/row-operation-custom-column-formula.png" alt-text="Custom column formula with Table.Max.":::
 
 The result of that formula creates a new column with \[Record\] values. These record values are essentially a table with just one row. These records contain the row with the maximum value for the **Units** column of each \[Table\] value in the **Products** column.
 
-![Result of the custom column formula with Table.Max.](media/group-by/row-operation-custom-column-details-preview-pane.png "Result of the custom column formula with Table.Max")
+:::image type="content" source="media/group-by/row-operation-custom-column-details-preview-pane.png" alt-text="Result of the custom column formula with Table.Max.":::
 
-With this new **Top performer product** column that contains \[Record\] values, you can select the ![expand.](media/group-by/expand-icon.png) expand icon, select the **Product** and **Units** fields, and then select **OK**.
+With this new **Top performer product** column that contains \[Record\] values, you can select the :::image type="content" source="media/group-by/expand-icon.png" alt-text="expand."::: expand icon, select the **Product** and **Units** fields, and then select **OK**.
 
-![Expand operation for record value on the Top performer product column.](media/group-by/row-operation-custom-column-expand-window.png "Expand operation for record value on the Top performer product column")
+:::image type="content" source="media/group-by/row-operation-custom-column-expand-window.png" alt-text="Expand operation for record value on the Top performer product column.":::
 
 After removing your **Products** column and setting the data type for both newly expanded columns, your result will resemble the following image.
 
@@ -134,7 +134,7 @@ After removing your **Products** column and setting the data type for both newly
 
 To demonstrate how to do "fuzzy grouping," consider the sample table shown in the following image.
 
-![Table with nine rows of entries that contain various spellings and capitalizations of the name Miguel and William.](media/group-by/fuzzy-grouping-sample-source-table.png "Table with nine rows of entries that contain various spellings and capitalizations of the name Miguel and William")
+:::image type="content" source="media/group-by/fuzzy-grouping-sample-source-table.png" alt-text="Table with nine rows of entries that contain various spellings and capitalizations of the name Miguel and William.":::
 
 The goal of fuzzy grouping is to do a group-by operation that uses an approximate match algorithm for text strings. Power Query uses the Jaccard similarity algorithm to measure the similarity between pairs of instances. Then it applies agglomerative hierarchical clustering to group instances together. The following image shows the output that you expect, where the table will be grouped by the **Person** column.
 
@@ -142,7 +142,7 @@ The goal of fuzzy grouping is to do a group-by operation that uses an approximat
 
 To do the fuzzy grouping, you perform the same steps previously described in this article. The only difference is that this time, in the **Group by** dialog box, you select the **Use fuzzy grouping** check box.
 
-![Fuzzy grouping check box in the Group by dialog box.](media/group-by/fuzzy-grouping-button-group-by-window.png "Fuzzy grouping check box in the Group by dialog box")
+:::image type="content" source="media/group-by/fuzzy-grouping-button-group-by-window.png" alt-text="Fuzzy grouping check box in the Group by dialog box.":::
 
 For each group of rows, Power Query will pick the most frequent instance as the "canonical" instance. If multiple instances occur with the same frequency, Power Query will pick the first one. After you select **OK** in the **Group by** dialog box, you'll get the result that you were expecting.
 
@@ -150,7 +150,7 @@ For each group of rows, Power Query will pick the most frequent instance as the 
 
 However, you have more control over the fuzzy grouping operation by expanding **Fuzzy group options**.
 
-![Fuzzy group options.](media/group-by/fuzzy-grouping-fuzzy-group-options.png "Fuzzy group options")
+:::image type="content" source="media/group-by/fuzzy-grouping-fuzzy-group-options.png" alt-text="Fuzzy group options.":::
 
 The following options are available for fuzzy grouping:
 
@@ -174,11 +174,11 @@ The following image shows the transformation table used in this example.
 
 Return to the **Group by** dialog box, expand **Fuzzy group options**, change the operation from **Count rows** to **All rows**, enable the **Show similarity scores** option, and then select the **Transformation table** drop-down menu.
 
-![Fuzzy grouping sample transformation table drop-down menu.](media/group-by/fuzzy-grouping-sample-transformation-table-window.png "Fuzzy grouping sample transformation table drop-down menu")
+:::image type="content" source="media/group-by/fuzzy-grouping-sample-transformation-table-window.png" alt-text="Fuzzy grouping sample transformation table drop-down menu.":::
 
 After you select the transformation table, select **OK**. The result of that operation gives you the following information:
 
-![Fuzzy grouping sample final table with transform table.](media/group-by/fuzzy-grouping-sample-final-table.png)
+:::image type="content" source="media/group-by/fuzzy-grouping-sample-final-table.png" alt-text="Fuzzy grouping sample final table with transform table.":::
 
 In this example, the **Ignore case** option was enabled, so the values in the **From** column of the **Transformation table** are used to look for the text string without considering the case of the string. This transformation operation occurs first, and then the fuzzy grouping operation is performed.
 

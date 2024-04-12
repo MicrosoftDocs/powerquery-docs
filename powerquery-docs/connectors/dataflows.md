@@ -3,7 +3,7 @@ title: Power Query Dataflow connector
 description: Provides basic information and connection instructions for connecting to a Dataflow.
 author: Luitwieler
 ms.topic: conceptual
-ms.date: 1/24/2024
+ms.date: 2/6/2024
 ms.author: jeluitwi
 ---
 
@@ -17,7 +17,7 @@ ms.author: jeluitwi
 | Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights (Dataflows)|
 | Authentication types | Organizational account |
 
->[!Note]
+> [!NOTE]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
@@ -29,38 +29,34 @@ You must have an existing Dataflow with maker permissions to access the portal, 
 * Import
 * DirectQuery (Power BI semantic models)
 
->[!Note]
+> [!NOTE]
 >DirectQuery requires Power BI premium. More information: [Premium features of dataflows](/power-bi/transform-model/dataflows/dataflows-premium-features)
 
-## Get data from Dataflows in Power BI Desktop
+## Get data from Dataflows in Power Query Desktop
 
-To get data from Dataflows in Power BI Desktop:
+To get data from Dataflows in Power Query Desktop:
 
-1. Select **Get data** from the **Home** tab.
+1. Select **Dataflows** in the get data experience. The get data experience in Power Query Desktop varies between apps. For more information about the Power Query Desktop get data experience for your app, go to [Where to get data](../where-to-get-data.md).
 
-2. In the **Get Data** dialog box, select **Power Platform > Dataflows**, and then select **Connect**.
+2. If you're connecting to this site for the first time, select **Sign in** and input your credentials. Then select **Connect**.
 
-   ![Get data from Power BI Desktop.](media/dataflows/get-data-from-dataflow.png)
+   :::image type="content" source="media/dataflows/sign-in.png" alt-text="Sign in to this site.":::
 
-3. If this attempt is the first time you're connecting to this site, select **Sign in** and input your credentials. Then select **Connect**.
+3. In **Navigator**, select the Dataflow you require, then either load or transform the data.
 
-   ![Sign in to this site.](media/dataflows/sign-in.png)
-
-4. In **Navigator**, select the Dataflow you require, then either load or transform the data.
-
-   ![Load or transform from navigator.](media/dataflows/navigate.png)
+   :::image type="content" source="media/dataflows/navigate.png" alt-text="Load or transform from navigator.":::
 
 ## Get data from Dataflows in Power Query Online
 
 To get data from Dataflows in Power Query Online:
 
-1. From the **Data sources** page, select **Dataflows**.
+1. Select the **Dataflows** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../where-to-get-data.md).
 
-   ![Get data from Power Query Online.](media/dataflows/pqo-select-datasource.png)
+   :::image type="content" source="media/dataflows/pqo-select-datasource.png" alt-text="Get data from Power Query Online.":::
 
 2. Adjust the connection name.
 
-   ![Enter the server URL.](media/dataflows/pqo-sign-in.png)
+   :::image type="content" source="media/dataflows/pqo-sign-in.png" alt-text="Enter the server URL.":::
 
 3. If necessary, enter an on-premises data gateway if you're going to be using on-premises data. For example, if you're going to combine data from Dataflows and an on-premises SQL Server database.
 

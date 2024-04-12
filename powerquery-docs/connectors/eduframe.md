@@ -34,13 +34,13 @@ To connect to Eduframe Reporting data:
 
 1. Select **Get Data** from the **Home** ribbon in Power BI Desktop. Select **Online Services** from the categories on the left, select **Eduframe (Beta)**, and then select **Connect**.
 
-   ![Image with Online Services category and the Eduframe connector highlighted.](./media/eduframe-reporting/get-eduframe-data.png)
+   :::image type="content" source="./media/eduframe-reporting/get-eduframe-data.png" alt-text="Image with Online Services category and the Eduframe connector highlighted.":::
 
 2. If this is the first time you're getting data through the Eduframe connector, a preview connector notice will be displayed. Select **Don't warn me again with this connector** if you don't want this message to be displayed again, and then select **Continue**.
 
 3. Enter the Eduframe domain that you want to access (this domain is the URL without the .eduframe.nl), and if you want to exclude personal information. Then select **OK**.
 
-   ![Image with Eduframe domain filled out and ready to select OK.](./media/eduframe-reporting/eduframe-domain.png)
+   :::image type="content" source="./media/eduframe-reporting/eduframe-domain.png" alt-text="Image with Eduframe domain filled out and ready to select OK.":::
 
 4. To sign in to your Eduframe account, select **Sign in**.
 
@@ -50,7 +50,7 @@ To connect to Eduframe Reporting data:
 
 6. Next it will show a window where you have to approve this integration with Power BI. Select **approve**.
 
-   ![Image with the power BI integration approval.](./media/eduframe-reporting/eduframe-approve.png)
+   :::image type="content" source="./media/eduframe-reporting/eduframe-approve.png" alt-text="Image with the power BI integration approval.":::
 
 7. Once you've successfully signed in, select **Connect**.
 

@@ -25,7 +25,7 @@ The OLAP BAPIs provide methods for browsing metadata and master data, and also f
 
 The OLAP Processor is responsible for retrieving, processing, and formatting the data from the SAP BW source objects, which are further described in [SAP BW data source](#sap-bw-data-sources) and [Data objects in SAP BW](#data-objects-in-sap-bw).
 
-![Integration architecture.](integration-architecture.png)
+:::image type="content" source="integration-architecture.png" alt-text="Integration architecture.":::
 
 SAP Business Explorer and other SAP tools use a more direct interface to the SAP BW OLAP Processor called Business Intelligence Consumer Services, commonly known as BICS. BICS isn't available for 3rd party tools.
 

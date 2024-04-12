@@ -3,7 +3,7 @@ title: Power Query Active Directory connector
 description: Provides basic information, prerequisites, and connection instructions, along with troubleshooting information for the Active Directory connector.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/17/2024
+ms.date: 1/31/2024
 ms.author: dougklo
 ---
 
@@ -31,9 +31,7 @@ ms.author: dougklo
 
 ## Connect to Active Directory from Power Query Desktop
 
-1. Select the **Active Directory** option under **Other** in the **Get Data** selection, and then select **Connect**. More information: [Where to get data](../where-to-get-data.md)
-
-    :::image type="content" source="media/active-directory/get-data.png" alt-text="Screenshot of the Get Data window with Active Directory selected.":::
+1. Select **Active Directory** in the get data experience. The get data experience in Power Query Desktop varies between apps. For more information about the Power Query Desktop get data experience from your app, go to [Where to get data](../where-to-get-data.md).
 
 1. In the **Active Directory** dialog box, provide the domain for your Active Directory.
 
@@ -52,7 +50,7 @@ ms.author: dougklo
 
 ## Connect to Active Directory from Power Query Online
 
-1. Select the **Active Directory** option under **Other** in the **Choose data source** selection, and then select **Connect**. More information: [Where to get data](../where-to-get-data.md)
+1. Select the **Active Directory** option in the get data experience.  Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../where-to-get-data.md).
 
     :::image type="content" source="media/active-directory/get-data-online.png" alt-text="Screenshot of the Choose data source window with Active Directory selected.":::
 

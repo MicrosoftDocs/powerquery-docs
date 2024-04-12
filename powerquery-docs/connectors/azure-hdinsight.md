@@ -3,7 +3,7 @@ title: Power Query Azure HDInsight (HDFS) connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Azure HDInsight, along with native query folding instructions and troubleshooting tips.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/24/2024
+ms.date: 2/1/2024
 ms.author: dougklo
 ---
 
@@ -28,9 +28,7 @@ Power Query desktop includes Excel, Power BI, and Analysis Services as experienc
 
 To make the connection to an **Azure HDInsight** account, follow these steps:
 
-1. From **Get Data**, select the **Azure** category, select **Azure HDInsight**, and then select **Connect**. More information: [where to get data](../where-to-get-data.md)
-
-   :::image type="content" source="./media/azure-hdinsight/get-data.png" alt-text="Screenshot of the Get Data dialog, showing the Azure HDInsight database selection.":::
+1. Select **Azure HDInsight (HDFS)** in the get data experience. The get data experience in Power Query Desktop varies between apps. For more information about the Power Query Desktop get data experience for your app, go to [Where to get data](../where-to-get-data.md).
 
 1. In the window that appears, enter the name of the **storage account** associated with your HDInsight account. If you don't know the name of your storage account, you can find it using the steps in the [section below](#copy-your-account-key-for-azure-hdinsight).
 
@@ -58,7 +56,7 @@ Power Query Online includes Power BI (Dataflows) and Customer Insights (Dataflow
 
 To make the connection, take the following steps:
 
-1. Select the **Azure HDInsight** option in the connector selection. More information: [Where to get data](../where-to-get-data.md)
+1. Select the **Azure HDInsight (HDFS)** option in the get data experience.  Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../where-to-get-data.md).
 
    :::image type="content" source="./media/azure-hdinsight/online-select-azure-hdinsight.png" alt-text="Screenshot of the Azure HDInsight icon in Power Query online.":::
 

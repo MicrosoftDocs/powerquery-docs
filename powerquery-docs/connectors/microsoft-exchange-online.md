@@ -3,7 +3,7 @@ title: Microsoft Exchange Online Power Query Data Connector
 description: Provides basic information and connection instructions for the Microsoft Exchange Online connector
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/24/2024
+ms.date: 2/6/2024
 ms.author: dougklo
 ---
 
@@ -28,9 +28,7 @@ Power Query Desktop includes Excel, Power BI (semantic models), and Analysis Ser
 
 To make the connection to **Microsoft Exchange Online**, follow these steps:
 
-1. From **Get Data**, select the **Online Services** category, select **Microsoft Exchange Online**, and then select **Connect**. More information: [Where to get data](../where-to-get-data.md)
-
-   :::image type="content" source="./media/microsoft-exchange-online/get-data.png" alt-text="Screenshot of the Get Data dialog, showing Microsoft Exchange Online selected.":::
+1. Select **Microsoft Exchange Online** in the get data experience. The get data experience in Power Query Desktop varies between apps. For more information about the Power Query Desktop get data experience for your app, go to [Where to get data](../where-to-get-data.md).
 
 1. In the **Microsoft Exchange Online** window that appears, enter the mailbox address for the account you would like to access.
 
@@ -56,7 +54,7 @@ Power Query Online includes Power BI (Dataflows) and Customer Insights (Dataflow
 
 To make the connection, take the following steps:
 
-1. Select the **Microsoft Exchange Online** option in the connector selection. More information: [Where to get data](../where-to-get-data.md)
+1. Select the **Microsoft Exchange Online** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../where-to-get-data.md).
 
    :::image type="content" source="./media/microsoft-exchange-online/get-data-online.png" alt-text="Screenshot of the choose data source window, with the Online services tab opened and Microsoft Exchange Online selected.":::
 

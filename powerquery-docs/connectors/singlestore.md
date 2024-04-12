@@ -7,20 +7,20 @@ ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
-# SingleStore (Beta)
+# SingleStore
 
 > [!NOTE]
 > The following connector article is provided by SingleStore, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the SingleStore website and use the support channels there.
 
 ## Summary
 
-| Item | Description
-|--|--|
-| Release State | Beta |
+| Item | Description |
+| --- | --- |
+| Release State | General Availability |
 | Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Basic<br/>Windows |
 
-## Capabilities Supported
+## Capabilities supported
 
 * Import
 * DirectQuery (Power BI semantic models)
@@ -31,17 +31,17 @@ To connect Microsoft Power BI Desktop to SingleStore DB or Managed Service:
 
 1. In the **Home** ribbon, from the **Get Data** list, select **More**.
 
-2. In the **Get Data** dialog, select **SingleStore Direct Query Connector 1.0**.
+2. In the **Get Data** dialog, select **SingleStore Direct Query Connector**.
 
-    ![Locate the SingleStore Connectors in Get Data dialog.](./media/singlestore/ss-get-data-connector.png)
+    :::image type="content" source="./media/singlestore/ss-get-data-connector.png" alt-text="Locate the SingleStore Connectors in Get Data dialog.":::
 
 3. In the **SingleStore database** dialog box, enter the IP address or hostname of the SingleStore cluster in **Server**. In **Database**, enter the database name.
 
     Under **Data Connectivity** mode, select the Import or DirectQuery mode, and then select **OK**.
 
-    ![Enter server IP / hostname and database and select the connectivity mode.](./media/singlestore/ss-db-select-mode.png)
+    :::image type="content" source="./media/singlestore/ss-db-select-mode.png" alt-text="Enter server IP / hostname and database and select the connectivity mode.":::
 
-4. In the **SingleStore Direct Query Connector 1.0** dialog box, in the left pane, select the authentication type (either **Windows** or **Basic**).
+4. In the **SingleStore Direct Query Connector** dialog box, in the left pane, select the authentication type (either **Windows** or **Basic**).
 
     > [!NOTE]
     > SingleStoreDB Cloud users can only use **Basic** authentication.
@@ -51,19 +51,19 @@ To connect Microsoft Power BI Desktop to SingleStore DB or Managed Service:
        > [!NOTE]
        > You need to run Power BI with the user account that maps to the SingleStore DB user.
 
-       ![Select Windows authentication.](./media/singlestore/ss-db-windows.png)
+       :::image type="content" source="./media/singlestore/ss-db-windows.png" alt-text="Select Windows authentication.":::
 
     * For **Basic** authentication, enter the username and password used to connect to SingleStore, and then select the **Connect** button.
 
-       ![Select Basic authentication.](./media/singlestore/ss-db-basic.png)
+       :::image type="content" source="./media/singlestore/ss-db-basic.png" alt-text="Select Basic authentication.":::
 
 5. Once authenticated&mdash;for Import or DirectQuery mode&mdash;in the **Navigator** dialog box, choose the desired tables and select the **Load** button.
 
-    ![Select tables in the Navigator dialog and select Load.](./media/singlestore/ss-nav-load.png)
+    :::image type="content" source="./media/singlestore/ss-nav-load.png" alt-text="Select tables in the Navigator dialog and select Load.":::
 
 You can now use Power BI to explore SingleStore data.
 
-## Create a Custom SQL Report
+## Create a custom SQL report
 
 > [!NOTE]
 > Any user that creates a custom SQL report must only have read-only access to the SingleStore databases.
@@ -89,10 +89,10 @@ To create a new custom SQL report:
 
 To update the existing custom SQL reports, select the **Refresh** button on the **Home** ribbon.
 
-## Modify Credentials
+## Modify credentials
 
 To modify the credentials used to connect to SingleStore:
 
 1. In the **File** ribbon, select **Options and settings** > **Data source settings**.
 
-2. In the **Data source settings** dialog, select **SingleStore DirectQuery Connector 1.0**, and then select **Edit Permissions**.
+2. In the **Data source settings** dialog, select **SingleStore Direct Query Connector**, and then select **Edit Permissions**.
