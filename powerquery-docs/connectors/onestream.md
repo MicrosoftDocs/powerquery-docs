@@ -2,7 +2,7 @@
 title: Power Query OneStream connector
 description: Provides support, prerequisites, and instructions on how to connect to your OneStream data.
 author: os-mik
-ms.author: mroscelli
+ms.author: 
 ---
 
 # OneStream
@@ -138,7 +138,7 @@ This function retrieves data from a OneStream Cube.
 
 * Specify the Workspace and Adapter Name (mandatory parameters)
 * Table Name and Parameters are optional
-* Refer to a configured dashboard adapter inside OneStreame to make sure you are inserting the right values.
+* Refer to a configured dashboard adapter inside OneStream to make sure you are inserting the right values.
 ![Get Adapter](./media/onestream/os-connector-get-adapter.png)
 
 ### Get Dimension and Get Member Properties
