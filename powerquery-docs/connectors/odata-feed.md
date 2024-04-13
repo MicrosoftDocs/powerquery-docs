@@ -3,7 +3,7 @@ title: Power Query OData Feed connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your data using the connector.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 2/7/2024
+ms.date: 4/12/2024
 ms.author: dougklo
 ---
 
@@ -80,11 +80,11 @@ Connecting to [Microsoft Graph](/graph/overview) REST [APIs](https://graph.micro
 
 ## Known Issues and Limitations
 
-### Joins
+### Connections closed when joining with OData / Web sources
 
-Due to the architecture of OData and other web connectors, joins can be non-performant. While you have the option to use navigation columns when merging between tables from an OData source, you don't have this option when merging with non-Odata sources.
+Due to the architecture of OData and other web connectors, joins can be very slow. This can sometimes cause the source to fail the connection such as 'An existing connection was forcibly closed by the remote host'. While you have the option to use navigation columns when merging between tables from an OData source, you don't havet his option when merging with non-OData sources. If you're seeing such issues when merging an OData or Web source, and are uanble to use a navigation column instead, you should apply [Table.Buffer](/powerquery-m/table-buffer) to your query in the advanced editor before you merge the data.
 
-If you're seeing performance issues when merging an OData source, you should apply [Table.Buffer](/powerquery-m/table-buffer) to your OData query in the advanced editor, before you merge the data.
+We recommend buffering the smaller of the queries being merged to optimize the performance. If you are seeing this when merging an OData/Web source with a non-web-related source, you can also try switching the order of the queries in the Join. 
 
 ### Test Connection issues
 
