@@ -82,9 +82,9 @@ Connecting to [Microsoft Graph](/graph/overview) REST [APIs](https://graph.micro
 
 ### Connections closed when joining with OData / Web sources
 
-Due to the architecture of OData and other web connectors, joins can be very slow. This can sometimes cause the source to fail the connection such as 'An existing connection was forcibly closed by the remote host'. While you have the option to use navigation columns when merging between tables from an OData source, you don't havet his option when merging with non-OData sources. If you're seeing such issues when merging an OData or Web source, and are uanble to use a navigation column instead, you should apply [Table.Buffer](/powerquery-m/table-buffer) to your query in the advanced editor before you merge the data.
+Due to the architecture of OData and other web connectors, joins can be very slow. A slow join can sometimes cause the source to fail the connection, causing an error such as 'An existing connection was forcibly closed by the remote host'. While you have the option to use navigation columns when merging between tables from an OData source, you don't have his option when merging with non-OData sources. If you're seeing such issues when merging an OData or Web source, and are uanble to use a navigation column instead, you should apply [Table.Buffer](/powerquery-m/table-buffer) to your query in the advanced editor before you merge the data.
 
-We recommend buffering the smaller of the queries being merged to optimize the performance. If you are seeing this when merging an OData/Web source with a non-web-related source, you can also try switching the order of the queries in the Join. 
+We recommend buffering the smaller of the queries being merged to optimize the performance. If you're seeing this when merging an OData/Web source with a non-web-related source, you can also try switching the order of the queries in the join. 
 
 ### Test Connection issues
 
