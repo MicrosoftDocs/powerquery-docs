@@ -1,11 +1,10 @@
 ---
-title: Configure LinkedIn Learning Power BI Connector 
+title: Configure LinkedIn Learning Power BI Connector
 description: Describes how to configure LinkedIn Learning Power BI connector. 
 author: lmasterson
+ms.topic: conceptual
+ms.date: 04/11/2024
 ms.author: 
-ms.date: 04/09/2024
-ms.topic: article
-ms.service: linkedin
 ---
 
 # LinkedIn Learning - Power BI Connector
@@ -25,7 +24,7 @@ ms.service: linkedin
 
 The Power BI Connector is a specialized data connector designed and developed to establish a direct connection between Power BI and the LinkedIn Learning APIs. Through this integration, users can access essential insights and engagement metrics, including course completions, hours of content viewed, and active learning days.
 
-These insights can be aggregated based on various entities, such as individuals, groups, accounts, or content objects like courses and videos. By analyzing these metrics, organizations can effectively measure the impact and success of their learning and development initiatives.
+These insights can be aggregated, based on various entities, such as individuals, groups, accounts, or content objects like courses and videos. Organizations analyzing these metrics can effectively measure the effect and success of their learning and development initiatives.
 
 ## Capabilities Supported
 
@@ -37,19 +36,19 @@ These insights can be aggregated based on various entities, such as individuals,
 ### Advantages
 
 * No need to download or receive CSV files.​
-* Ability to query data periods greater than 1 year.
+* Ability to query data periods greater than one year.
 * No requirement for coding solutions to connect to the LinkedIn Learning API for learner and asset data.
 
 ### Limitations
 
-* Learner activation and license data are not accessible in our reporting API. Consequently, this data will not be available in the Power BI Connector.
+* Learner license status isn't accessible in our reporting API. So this data isn't available in the Power BI Connector.
 
 ## Prerequisites
 
 The scenario outlined in this tutorial assumes that you already have the following prerequisites:
 
 * A Microsoft Windows PC ​
-* Microsoft Power BI Desktop: [Click Here](https://powerbi.microsoft.com/en-us/downloads/)
+* Microsoft Power BI Desktop: [Download here](https://powerbi.microsoft.com/en-us/downloads/)
 * LinkedIn Learning admin access
 
 ## Steps to Configure LinkedIn Learning Power BI Connector
@@ -60,7 +59,7 @@ The following steps outline the process for configuring the LinkedIn Learning Po
 > Before starting this configuration, ensure that you have already generated the API Keys to obtain the **Client ID and Client Secret** required for the Power BI Connector.
 >
 >
-> [**Click Here: For steps on how to provision API Keys**](https://learn.microsoft.com/en-us/linkedin/learning/reporting/reporting-docs/reporting-api#provision-api-keys)
+> [**Select Here: For steps on how to provision API Keys**](linkedin/learning/reporting/reporting-docs/reporting-api#provision-api-keys)
 >
 > Please ensure when generating the API keys you have selected the **"content & report"** checkboxes.
 
@@ -68,33 +67,33 @@ The following steps outline the process for configuring the LinkedIn Learning Po
 
 To obtain your Client ID & Client Secret from LinkedIn Learning, follow these steps:
 
-1. Login to LinkedIn Learning, if you are not already in the **Admin** screen, select **Go to Admin**, then click **Me > Integrate**.
+1. Sign-in to LinkedIn Learning, if you aren't already in the **Admin** screen, select **Go to Admin**, then select **Me > Integrate**.
 
     ![linkedin-learning-integration-settings-navigation-screen](media/linkedin-learning/client-id-secret-location.png)
 
-2. In the **Access content and reports via API** you will be able to locate the client ID and Secret you have generated for the Power BI Connector.
+2. Within the **Access content and reports via API**, the client ID and Secret that was generated for the Power BI Connector will be located here.
 
-3. Next, open Power BI, select **File**, then click **Get Data**
+3. Next, open Power BI, select **File**, then select **Get Data**
 
-4. In the search box look for **"LinkedIn Learning"**
+4. In the search box, look for **"LinkedIn Learning"**
 
       ![linkedin-learning-get-data-search](media/linkedin-learning/power-bi-get-data.png)
 
-5. Once you have selected the **LinkedIn Learning Connector**; You'll be prompted to input the **Client ID & Client Secret** that was generated within LinkedIn Learning.
+5. Select the **LinkedIn Learning Connector**; When prompted input the **Client ID & Client Secret** that was generated within LinkedIn Learning.
 
 ![linkedin-learning-clientID-ClientSecret](media/linkedin-learning/power-bi-clientID-ClientSecret.png)
 
 > [!NOTE]
 > The **Client ID and Client Secret** are stored within Power BI and only need to be entered once. However, you can update them under Transform Data and then Data Source Settings.
 
-Once you have successfully connected, you'll' see the data tables available to load into Power BI.
+Once successfully connected, the data tables that are available to load into Power BI are now visible.
 ![linkedin-learning-datatables-options](media/linkedin-learning/power-bi-datatables-options.png)
 
 ### Overview of Data Tables
 
 To load data into tables, follow these steps;
 
-1. Click on **Get Data**
+1. Select on **Get Data**
 2. Select the **LinkedIn Learning data connector**
 3. Then select the tables you would like to load or create
 
@@ -106,33 +105,33 @@ To load data into tables, follow these steps;
 
 **API endpoint documentation;**
 
-* LinkedIn Learning API documentation [Click Here](https://learn.microsoft.com/en-us/linkedin/learning/overview/)
-* Account Popular Courses [Click Here](https://learn.microsoft.com/en-us/linkedin/learning/integrations/learning-activity-reports#account-popular-courses-report)
-* Account Popular Custom Content [Click Here](https://learn.microsoft.com/en-us/linkedin/learning/integrations/learning-activity-reports#learner-custom-content-activity-detail-report)
-* Account Total Activity Summary [Click Here](https://learn.microsoft.com/en-us/linkedin/learning/integrations/learning-activity-reports#account-total-activity-summary-report)
-* Content Summary [Click Here](https://learn.microsoft.com/en-us/linkedin/learning/integrations/learning-activity-reports#content-summary-report)
-* Learner Activity Summary [Click Here](https://learn.microsoft.com/en-us/linkedin/learning/integrations/learning-activity-reports#learner-activity-summary-report)
-* Learner Course Activity Detail [Click Here](https://learn.microsoft.com/en-us/linkedin/learning/integrations/learning-activity-reports#learner-course-activity-detail-report)
-* Learner Custom Content Activity Detail [Click Here](https://learn.microsoft.com/en-us/linkedin/learning/integrations/learning-activity-reports#account-popular-custom-content-report)
-* Learner Detail [Click Here](https://learn.microsoft.com/en-us/linkedin/learning/integrations/learning-activity-reports#learner-detail-report)
-* Learner Summary [Click Here](https://learn.microsoft.com/en-us/linkedin/learning/integrations/learning-activity-reports#learner-summary-report)
-* Organization Summary [Click Here](https://learn.microsoft.com/en-us/linkedin/learning/integrations/learning-activity-reports#organization-summary-report)
+* LinkedIn Learning API documentation [Located Here](/linkedin/learning/overview/)
+* Account Popular Courses [Located Here](/linkedin/learning/integrations/learning-activity-reports#account-popular-courses-report)
+* Account Popular Custom Content [Located Here](/linkedin/learning/integrations/learning-activity-reports#learner-custom-content-activity-detail-report)
+* Account Total Activity Summary [Located Here](/linkedin/learning/integrations/learning-activity-reports#account-total-activity-summary-report)
+* Content Summary [Located Here](/linkedin/learning/integrations/learning-activity-reports#content-summary-report)
+* Learner Activity Summary [Located Here](/linkedin/learning/integrations/learning-activity-reports#learner-activity-summary-report)
+* Learner Course Activity Detail [Located Here](/linkedin/learning/integrations/learning-activity-reports#learner-course-activity-detail-report)
+* Learner Custom Content Activity Detail [Located Here](/linkedin/learning/integrations/learning-activity-reports#account-popular-custom-content-report)
+* Learner Detail [Located Here](/linkedin/learning/integrations/learning-activity-reports#learner-detail-report)
+* Learner Summary [Located Here](/linkedin/learning/integrations/learning-activity-reports#learner-summary-report)
+* Organization Summary [Located Here](/linkedin/learning/integrations/learning-activity-reports#organization-summary-report)
 
 All data tables, except for Learning Assets, represent learner activity reports. The Learning Assets table provides our full catalog of courses, including all languages.
 
-Despite the multiple possible queries available in the learning assets API endpoint, **all assets are loaded with complete information.** Additional details on the endpoint can be found in our API documentation. [Click Here](https://learn.microsoft.com/en-us/linkedin/learning/integrations/locale-and-type-api)
+Despite the multiple possible queries available in the learning assets API endpoint, **all assets are loaded with complete information.** More details on the endpoint can be found in our API documentation. [Located Here](/linkedin/learning/integrations/locale-and-type-api)
 
 ### Data Refresh options
 
 In Power BI, there are two main options to refresh data to ensure that the latest up-to-date information is available:
 
-* **On-Demand Refresh:** This allows users to manually trigger a refresh of the dataset whenever they need to update the data. This can be done directly from the Power BI Service interface or through the Power BI Desktop application. On-demand refresh is useful when immediate access to the latest data is required, or when the data source does not support scheduled refreshes.
+* **On-Demand Refresh:** Allows users to manually trigger a refresh of the dataset whenever they need to update the data. On-demand refresh can be done directly from the Power BI Service interface or through the Power BI Desktop application. On-demand refresh is useful when immediate access to the latest data is required, or when the data source doesn't support scheduled refreshes.
 
 ![linkedin-learning-on-demand-refresh](media/linkedin-learning/data-refresh-option-one.png)
 
 * **Scheduled Refresh:** This option allows you to set up a refresh schedule for your dataset in Power BI Service. You can define how often you want the data to be refreshed, such as daily, weekly, or even multiple times per day.
 
- Scheduled refreshes can be configured to run at specific times or intervals to ensure that the data is always current.
+ A scheduled refresh can be configured to run at specific times or intervals to ensure that the data is always current.
 
 This option is suitable for regularly updated datasets where the data source supports scheduled refresh.
 
@@ -142,7 +141,7 @@ This option is suitable for regularly updated datasets where the data source sup
 
 To update the data tables, you can either schedule a refresh or perform an on-demand refresh.
 
-1. Click on the dataset name you wish to refresh.
+1. Select on the dataset name you wish to refresh.
 
     ![linkedin-learning-reporting-api-keys-completed](media/linkedin-learning/data-refresh-select-table.png)
 
@@ -161,7 +160,7 @@ Incremental refresh improves update performance and offers several benefits. Thi
 
 ![linkedin-learning-incremental-refresh](media/linkedin-learning/incremental-refresh-one.png)
 
-Additional information on incremental refresh can be found [Here](https://learn.microsoft.com/en-us/power-bi/connect-data/incremental-refresh-overview)
+Additional information on incremental refresh. [Located Here](https://learn.microsoft.com/en-us/power-bi/connect-data/incremental-refresh-overview)
 
 * Incremental updates are configured table by table and **require editing the query of each table in Power BI Desktop**.
 
@@ -170,10 +169,10 @@ Additional information on incremental refresh can be found [Here](https://learn.
 
 #### Setting Up Incremental Refresh
 
-To setup the incremental refresh, follow these steps:
+To set up the incremental refresh, follow these steps:
 
 1. Right-click on the **"Specific table name"**
-2. Click **"Edit Query"**
+2. Select **"Edit Query"**
 
 ![linkedin-learning-incremental-refresh-edit-query](media/linkedin-learning/incremental-refresh-edit-query.png)
 
@@ -194,14 +193,14 @@ To setup the incremental refresh, follow these steps:
     4. Enter values as follows:
         1. Type: **Date/Time**
         2. Suggested Values: **Any value**
-        3. Current Value: **Todays date**
+        3. Current Value: **Present date**
         4. Repeat the same to create the **RangeStart** parameter but ensure that **Current Value** is set to the date from which the data needs to be queried.
 
 ![linkedin-learning-manage-parameters-select-option](media/linkedin-learning/manage-parameters-select-option.png)
 
 5. After creating the parameters, move them to the top of the query section.
 
-6. Then, click on the table name and then within applied steps, select **"Source"**.
+6. Then, select on the table name and then within applied steps, select **"Source"**.
 ![linkedin-learning-incremental-data-range-table-select](media/linkedin-learning/incremental-data-range-table-select.png)
 
 7. In the source function, set the parameters as shown: **"= LinkedInLearning.Contents(RangeStart, RangeEnd)"**
@@ -217,9 +216,9 @@ To setup the incremental refresh, follow these steps:
 ![linkedin-learning-date-range-filtering](media/linkedin-learning/date-range-filtering.png)
 
 11. Create a **datetime filter**.
-    1. Select the dropdown arrow of the "Week column".
-    2. Select "Date/Time Filters".
-    3. Select "Custom Filter".
+    1. Select the dropdown arrow of the "Week column."
+    2. Select "Date/Time Filters."
+    3. Select "Custom Filter."
     4. Enter values as follows:
         1. Select **Basic**.
         2. Choose **"is after or equal to"**.
@@ -230,15 +229,15 @@ To setup the incremental refresh, follow these steps:
 
 ![linkedin-learning-filtering-date-week-column](media/linkedin-learning/filtering-date-week-column.png)
 
-12. Save and close the Power Query Editor. Please note that this process may take time depending on the number of tables and the date range.
+12. Save and close the Power Query Editor. This process might take time depending on the number of tables and the date range.
 
 13. The next step is to enable the incremental refresh for each table.
 
     1. Right-click on the **"Specific table name"**.
     2. Select **"Incremental Refresh"**.
-    3. Click **"Incrementally refresh this table"**.
-    4. Configure based on preferece.
-    5. Click **"Apply"**.
+    3. Select **"Incrementally refresh this table"**.
+    4. Configure based on preference.
+    5. Select **"Apply"**.
 
 ![linkedin-learning-reporting-api-keys-completed](media/linkedin-learning/incremental-refresh-on-each-table.png)
 
@@ -248,7 +247,7 @@ To setup the incremental refresh, follow these steps:
 
 #### Data Columns / JSON
 
-The following columns are used by the data connector and should not be deleted, as doing so may cause errors during data refresh:
+The following columns are used by the data connector and shouldn't be deleted, as doing so might cause errors during data refresh:
 
 * epoch week
 * week
@@ -266,8 +265,8 @@ If you encounter the **"expand"** symbol while editing a query, it indicates tha
 
 Expanding the column **adds a step in the query settings.**
 
-* You can expand as many columns as needed, which will duplicate rows.
-* Expanding columns is particularly important for displaying skills in learning assets and custom properties in learner detail reports.
+* Expanding columns can be done when needed, which duplicates rows.
+* Expanding columns is important for displaying skills in learning assets and custom properties in learner detail reports.
 
 **Congratulations!** Your learning admins can now gain key insights and engagement metrics through their Microsoft Power BI application.
 
@@ -277,26 +276,26 @@ Expanding the column **adds a step in the query settings.**
 
 If the data update fails when attempting to refresh data:
 
-1. Click on the warning sign to see the details of the error message to diagnose issue.
+1. Select on the warning sign to see the details of the error message to diagnose issue.
 
     ![linkedin-learning-data-update-fail](media/linkedin-learning/data-update-fail.png)
 
-2. Review the details of the error message. This will help you identify and address any issues preventing the data refresh.
+2. Review the details of the error message. Reviewing this message helps identify and address any issues preventing the data refresh.
 ![linkedin-learning-data-update-error-message](media/linkedin-learning/data-update-error-message.png)
 
 ## Frequently Asked Questions
 
-Please review our [LinkedIn Learning Reporting API FAQ](reporting-api-faq.md)
+For further information, review our [LinkedIn Learning Reporting API FAQ.](/linkedin/learning/reporting/reporting-docs/reporting-api-faq)
 
-## Additional resources
+## Extra resources
 
-* LinkedIn Learning API documentation [Click Here](https://learn.microsoft.com/en-us/linkedin/learning/overview/)
-* Microsoft Power BI: [Click Here](https://www.microsoft.com/en-us/power-platform/products/power-bi/)
+* LinkedIn Learning API documentation [Located Here](/linkedin/learning/overview/)
+* Microsoft Power BI: [Located Here](https://www.microsoft.com/en-us/power-platform/products/power-bi/)
 
 ## Disclaimer
 
-LinkedIn Learning is constantly investing in our reporting infrastructure. In the future, there may be changes to the Reporting API that may require
-adjustments to how data is queried. These updates may require you to make some updates on your platform. We intend to provide detailed guidance in advance of any potential changes to ensure that you have enough time to make necessary changes in your application.
+LinkedIn Learning is constantly investing in our reporting infrastructure. In the future, there might be changes to the Reporting API that might require
+adjustments to how data is queried. These updates might require you to make some updates on your platform. We intend to provide detailed guidance in advance of any potential changes to ensure that you have enough time to make necessary changes in your application.
 
 [Back-to-Top](#overview)
 ****
