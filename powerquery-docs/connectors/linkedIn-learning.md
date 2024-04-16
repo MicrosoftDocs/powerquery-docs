@@ -4,7 +4,7 @@ description: Describes how to configure LinkedIn Learning Power BI connector.
 author: lmasterson
 ms.topic: conceptual
 ms.date: 04/11/2024
-ms.author: 
+ms.author: lmasterson
 ---
 
 # LinkedIn Learning - Power BI Connector
@@ -59,7 +59,7 @@ The following steps outline the process for configuring the LinkedIn Learning Po
 > Before starting this configuration, ensure that you have already generated the API Keys to obtain the **Client ID and Client Secret** required for the Power BI Connector.
 >
 >
-> [**Select Here: For steps on how to provision API Keys**](linkedin/learning/reporting/reporting-docs/reporting-api#provision-api-keys)
+> [**Select Here: For steps on how to provision API Keys**](linkedin/learning/reporting/reporting-docs/reporting-api)
 >
 > Please ensure when generating the API keys you have selected the **"content & report"** checkboxes.
 
@@ -143,24 +143,24 @@ To update the data tables, you can either schedule a refresh or perform an on-de
 
 1. Select on the dataset name you wish to refresh.
 
-    ![linkedin-learning-reporting-api-keys-completed](media/linkedin-learning/data-refresh-select-table.png)
+    ![select-dataset-to-be-refreshed](media/linkedin-learning/data-refresh-select-table.png)
 
 2. Select refresh option:
     1. Refresh now
     1. Schedule refresh
 
-![linkedin-learning-reporting-api-keys-completed](media/linkedin-learning/data-refresh-selected-table-button.png)
+![refresh-button-option-select](media/linkedin-learning/data-refresh-selected-table-button.png)
 
 ### Incremental Refresh (Optional)
 
 > [!NOTE]
-> Before beginning, ensure you have a plan that supports incremental refreshes **Incremental refresh is supported for Power BI Premium, Premium per user, Power BI Pro, and Power BI Embedded models.** [Click Here](https://learn.microsoft.com/en-us/power-bi/connect-data/incremental-refresh-overview#supported-plans)
+> Before beginning, ensure you have a plan that supports incremental refreshes **Incremental refresh is supported for Power BI Premium, Premium per user, Power BI Pro, and Power BI Embedded models.** [Click Here](../dataflows/incremental-refresh.md)
 
 Incremental refresh improves update performance and offers several benefits. This refresh method works by defining a data window for data archival, incremental refresh, and real-time data (when supported).
 
 ![linkedin-learning-incremental-refresh](media/linkedin-learning/incremental-refresh-one.png)
 
-Additional information on incremental refresh. [Located Here](https://learn.microsoft.com/en-us/power-bi/connect-data/incremental-refresh-overview)
+Additional information on incremental refresh. [Located Here](../dataflows/incremental-refresh.md)
 
 * Incremental updates are configured table by table and **require editing the query of each table in Power BI Desktop**.
 
@@ -290,7 +290,7 @@ For further information, review our [LinkedIn Learning Reporting API FAQ.](/link
 ## Extra resources
 
 * LinkedIn Learning API documentation [Located Here](/linkedin/learning/overview/)
-* Microsoft Power BI: [Located Here](https://www.microsoft.com/en-us/power-platform/products/power-bi/)
+* Microsoft Power BI: [Located Here](https://www.microsoft.com/power-platform/products/power-bi/)
 
 ## Disclaimer
 
