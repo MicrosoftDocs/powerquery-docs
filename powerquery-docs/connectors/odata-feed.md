@@ -82,9 +82,9 @@ Connecting to [Microsoft Graph](/graph/overview) REST [APIs](https://graph.micro
 
 ### Connections closed when joining with OData / Web sources
 
-Due to the architecture of OData and other web connectors, joins can be very slow. A slow join can sometimes cause the source to fail the connection, resulting an error such as 'An existing connection was forcibly closed by the remote host'. While you have the option to use navigation columns when merging between tables from an OData source, you don't have his option when merging with non-OData sources. If you're seeing such issues when merging an OData or Web source, and are uanble to use a navigation column instead, you should apply [Table.Buffer](/powerquery-m/table-buffer) to your query in the advanced editor before you merge the data.
+Due to the architecture of OData and other web connectors, joins can be slow. A slow join can sometimes cause the source to fail the connection, resulting an error such as 'An existing connection was forcibly closed by the remote host'. While you have the option to use navigation columns when merging between tables from an OData source, you don't have his option when merging with non-OData sources. If you're seeing such issues when merging an OData or Web source, and are unable to use a navigation column instead, you should apply [Table.Buffer](/powerquery-m/table-buffer) to your query in the advanced editor before you merge the data.
 
-We recommend buffering the smaller of the queries being merged to optimize the performance.You can also try switching the order of the queries in the join to optimize the query.
+We recommend buffering the smaller of the queries being merged to optimize the performance. You can also try switching the order of the queries in the join to optimize the query.
 
 ### Test Connection issues
 
@@ -106,7 +106,7 @@ Contact the service owner. They'll either need to change the authentication conf
 
 ### Maximum URL length
 
-If you're using the OData feed connector to connect to a SharePoint list, SharePoint online list, or Project Online, the maximum URL length for these connections is approximately 2100 characters. Exceeding the character limit results in a 401 error. This maximum URL length is built in the SharePoint front end and can't be changed.
+If you're using the OData feed connector to connect to a SharePoint list, SharePoint online list, or Project Online, the maximum URL length for these connections is approximately 2,100 characters. Exceeding the character limit results in a 401 error. This maximum URL length is built in the SharePoint front end and can't be changed.
 
 To get around this limitation, start with the root OData endpoint and then navigate and filter inside Power Query. Power Query filters this URL locally when the URL is too long for SharePoint to handle. For example, start with:
 
