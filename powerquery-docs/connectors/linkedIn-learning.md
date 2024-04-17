@@ -4,7 +4,7 @@ description: Describes how to configure LinkedIn Learning Power BI connector.
 author: lmasterson
 ms.topic: conceptual
 ms.date: 04/11/2024
-ms.author: lmasterson
+ms.author: jburchel
 ---
 
 # LinkedIn Learning - Power BI Connector
@@ -59,7 +59,7 @@ The following steps outline the process for configuring the LinkedIn Learning Po
 > Before starting this configuration, ensure that you have already generated the API Keys to obtain the **Client ID and Client Secret** required for the Power BI Connector.
 >
 >
-> [**Select Here: For steps on how to provision API Keys**](linkedin/learning/reporting/reporting-docs/reporting-api)
+> [**Select Here: For steps on how to provision API Keys**](/linkedin/learning/reporting/reporting-docs/reporting-api)
 >
 > Please ensure when generating the API keys you have selected the **"content & report"** checkboxes.
 
