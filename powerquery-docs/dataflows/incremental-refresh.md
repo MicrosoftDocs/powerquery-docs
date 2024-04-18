@@ -75,6 +75,10 @@ The following list explains the settings in the **Incremental refresh settings**
 
 After incremental refresh is configured, the dataflow automatically alters your query to include filtering by date. If the dataflow was created in Power BI, you can also edit the automatically generated query by using the advanced editor in Power Query to fine-tune or customize your refresh. Read more about incremental refresh and how it works in the following sections.
 
+> [!NOTE]
+> When you edit the dataflow, the Power Query editor connects to the data source directly and doesn't show the data cached/filtered in the dataflow after being processed by the incremental refresh policy.
+> To check the data cached inside the dataflow, connect from Power BI Desktop to the dataflow after configuring the incremental refresh policy and refreshing the dataflow.
+
 ## Incremental refresh and linked tables vs. computed tables
 
 For *linked* tables, incremental refresh updates the source table. Because linked tables are simply a pointer to the original table, incremental refresh has no impact on the linked table. When the source table is refreshed according to its defined refresh policy, any linked table should assume the data in the source is refreshed.
