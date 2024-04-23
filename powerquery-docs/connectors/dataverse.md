@@ -171,7 +171,7 @@ Misspelling a column name might result in an error message about query folding i
 
 ### Accessing large semantic models
 
-Power BI semantic models contained in Dataverse can be very large. If you're using the Power Query Dataverse connector, any specific query that accesses the model must return less than 80 MB of data. So you might need to query the data multiple times to access all of the data in the model. Using multiple queries can take a considerable amount of time to return all the data.
+Power BI semantic models contained in Dataverse can be very large. If you're using the Power Query Dataverse connector, any specific query must complete within 5 minutes else it will time-out. So you might need to query the data multiple times to access all of the data in the model. Using multiple queries can take a considerable amount of time to return all the data.
 
 If you're using the [Common Data Service (Legacy)](common-data-service-legacy.md) connector, you can use a single query to access all of the data in the semantic model. This connector works differently and returns the result in "pages" of 5-K records. Although the Common Data Service (Legacy) connector is more efficient in returning large amounts of data, it can still take a significant amount of time to return the result.
 
