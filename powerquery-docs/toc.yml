@@ -371,7 +371,7 @@ items:
         href: connectors/bqecore.md
       - name: "CData Connect Cloud"
         href: connectors/cdata-connect-cloud.md
-      - name: "Celonis EMS (Beta)"
+      - name: "Celonis EMS"
         href: connectors/celonis-ems.md
       - name: "CloudBluePSA (Beta)"
         href: connectors/cloudbluepsa.md
