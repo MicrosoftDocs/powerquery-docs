@@ -6,7 +6,7 @@ ms.date: 1/8/2024
 ms.author: dougklo
 ---
 
-# Celonis EMS (Beta)
+# Celonis EMS
 
 > [!NOTE]
 > The following connector article is provided by Celonis, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Celonis website and use the support channels there.
@@ -15,7 +15,7 @@ ms.author: dougklo
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | Beta |
+| Release State | General Availability |
 | Products | Power BI (Semantic models) </br> Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Organizational Account |
 | Function Reference Documentation | [Web.Contents](/powerquery-m/web-contents) </br> [Parquet.Document](/power-query/connectors/parquet) </br> [Json.Document](/powerquery-m/json-document) </br> [Json.FromValue](/powerquery-m/json-fromvalue)|
@@ -53,7 +53,7 @@ To make the connection, take the following steps:
 
 ## Limitations and issues
 
-You should be aware of the following limitations and issues associated with accessing Celonis EMS data:
+You should be aware of the following limitations and issues associated with accessing Celonis EMS 1 data (does not apply for Celonis OCPM):
 
 * Celonis EMS has a built-in limit of 200-K rows and 20 columns returned per record.
 
