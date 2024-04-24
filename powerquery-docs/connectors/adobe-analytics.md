@@ -1,9 +1,9 @@
 ---
 title: Power Query Adobe Analytics connector
-description: Provides basic information and prerequisites for the connector, descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
+description: Provides basic information and prerequisites for the connector, descriptions of the optional input parameters, and limitations and issues you might encounter.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/18/2024
+ms.date: 4/24/2024
 ms.author: dougklo
 ---
 
@@ -96,9 +96,9 @@ You should be aware of the following limitations and issues associated with acce
 
 Import from Adobe Analytics will stop and display an error message whenever the Adobe Analytics connector hits any of the API limits listed above.
 
-When accessing your data using the Adobe Analytics connector, follow the guidelines provided under the [Best Practices](https://www.adobe.io/apis/experiencecloud/analytics/docs.html#!AdobeDocs/analytics-2.0-apis/master/reporting-guide.md) heading.
+When accessing your data using the Adobe Analytics connector, follow the guidelines provided under the [Best Practices](https://developer.adobe.com/analytics-apis/docs/2.0/guides/faq/#what-are-some-best-practices-and-guidelines-when-using-the-apis) heading.
 
-For additional guidelines on accessing Adobe Analytics data, see [Recommended usage guidelines](https://helpx.adobe.com/analytics/kb/recommended-usage-guidelines.html).
+For additional guidelines on accessing Adobe Analytics data, see [Recommended usage guidelines](https://experienceleague.adobe.com/en/docs/analytics/analyze/admin-overview/use-cases).
 
 ## Next steps
 
