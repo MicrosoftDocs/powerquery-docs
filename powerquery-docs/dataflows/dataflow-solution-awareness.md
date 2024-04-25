@@ -20,7 +20,7 @@ Dataflows added to a solution are known as *solution-aware* dataflows. You can a
 > * Only dataflows created in Power Platform environments can be solution-aware.
 > * The data loaded by dataflows to their destination isn't portable as part of solutions, only the dataflow definitions are. To recreate the data after a dataflow was deployed as part of a solution, you need to refresh the dataflow.
 
-## Add a new dataflow to a solution (Preview)
+## Add a new dataflow to a solution
 
 Follow these steps to add a dataflow to a solution.
 
