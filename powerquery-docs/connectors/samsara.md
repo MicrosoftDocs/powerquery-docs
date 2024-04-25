@@ -28,11 +28,11 @@ Some capabilities might be present in one product but not others due to deployme
 
 Before you can sign in to Samsara, you must have a Samsara account. 
 
-## Capabilities Supported
+## Capabilities supported
 
 - Import
 
-## Connect to Samsara Data
+## Connect to Samsara data
 
 To connect to Samsara data:
 
@@ -43,7 +43,7 @@ To connect to Samsara data:
 5. Once the connection is established, you can preview and select multiple tables available in the connector.
    1. You can Load the selected table, which brings the entire table into Power BI Desktop, or you can select Transform Data to edit the query, which opens Power Query Editor. You can then filter and refine the set of data you want to use, and then load that refined set of data into Power BI Desktop.
 
-## Limitations and Issues
+## Limitations and known issues
 
 You should be aware of the following limitations and issues associated with accessing Samsara data.
 - The initial data sync that grabs historical data might take some time to process.
@@ -52,7 +52,7 @@ You should be aware of the following limitations and issues associated with acce
 
 For more guidelines on accessing Samsara data, see Samsara's [Developer Guide](https://developers.samsara.com/docs/rest-api-overview).
 
-## Additional Information
+## Additional information
 
 You might also find the following Samsara information useful:
 
