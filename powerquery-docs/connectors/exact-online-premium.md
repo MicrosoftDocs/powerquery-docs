@@ -54,15 +54,15 @@ To connect to Exact Online Premium:
 
 1. To sign in to your Exact Online Premium account, select **Sign in**.
 
-   :::image type="content" source="media/exact-online-premium/exact-online-premium-not-signed-in.png" alt-text="Image with login highlighted, showing the sign in button.":::
+   :::image type="content" source="media/exact-online-premium/exact-online-premium-not-signed-in.png" alt-text="Screenshot with login highlighted, showing the sign in button.":::
 
 1. In the window that appears, provide your user name and password to sign in to your Exact Online Premium account and select **Next**.
 
-   :::image type="content" source="media/exact-online-premium/exact-online-premium-login.png" alt-text="Exact Online login screen.":::
+   :::image type="content" source="media/exact-online-premium/exact-online-premium-login.png" alt-text="Screenshot showing Exact Online login screen.":::
 
 1. Once you've successfully signed in, select **Connect**.
 
-   :::image type="content" source="media/exact-online-premium/exact-online-premium-signed-in.png" alt-text="Image with user signed in, showing the Connect button.":::
+   :::image type="content" source="media/exact-online-premium/exact-online-premium-signed-in.png" alt-text="Screenshot with user signed in, showing the Connect button.":::
 
 1. In **Navigator**, select the information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in the Power Query editor.
 
