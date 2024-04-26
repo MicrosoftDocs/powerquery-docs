@@ -58,7 +58,7 @@ The following steps outline the process for configuring the LinkedIn Learning Po
 >
 > [**Select Here: For steps on how to provision API Keys**](/linkedin/learning/reporting/reporting-docs/reporting-api)
 >
-> Please ensure when generating the API keys you have selected the **"content & report"** checkboxes.
+> Ensure when generating the API keys you have selected the **"content & report"** checkboxes.
 
 ### Authentication
 
@@ -66,13 +66,13 @@ To obtain your Client ID & Client Secret from LinkedIn Learning, follow these st
 
 1. Sign-in to LinkedIn Learning, if you aren't already in the **Admin** screen, select **Go to Admin**, then select **Me > Integrate**.
 
-   :::image type="content" source="./media/linkedin-learning/client-id-secret-location.png" alt-text="Screenshot with Client Id and Client Secret location within LinkedIn Learning integrate settings.":::
+   :::image type="content" source="./media/linkedin-learning/client-id-secret-location.png" alt-text="Screenshot with Client ID and Client Secret location within LinkedIn Learning integrate settings.":::
 
 2. Within the **Access content and reports via API**, the client ID and Secret that was generated for the Power BI Connector will be located here.
 
-3. Next, open Power BI, select **File**, then select **Get Data**
+3. Next, open Power BI, select **File**, then select **Get Data**.
 
-4. In the search box, look for **"LinkedIn Learning"**
+4. In the search box, look for **"LinkedIn Learning"**.
 
    :::image type="content" source="./media/linkedin-learning/power-bi-get-data.png" alt-text="Screenshot of the get data search box with returned search results when LinkedIn Learning is searched.":::
 
@@ -95,7 +95,7 @@ To load data into tables, follow these steps:
 2. Select the **LinkedIn Learning data connector**
 3. Then select the tables you would like to load or create
 
-   :::image type="content" source="./media/linkedin-learning/data-tables-steps-power-bi.png" lightbox="./media/linkedin-learning/data-tables-steps-power-bi.png" alt-text="Screenshot highlighing the steps needed to be done in order to load LinkedIn Learning data into tables.":::
+   :::image type="content" source="./media/linkedin-learning/data-tables-steps-power-bi.png" lightbox="./media/linkedin-learning/data-tables-steps-power-bi.png" alt-text="Screenshot highlighting the steps needed to be done in order to load LinkedIn Learning data into tables.":::
 
 > [!NOTE]
 > By default 1 year’s worth of data will load for each data table. Please be aware that this may take some time to load.
@@ -156,7 +156,7 @@ To update the data tables, you can either schedule a refresh or perform an on-de
 
 Incremental refresh improves update performance and offers several benefits. This refresh method works by defining a data window for data archival, incremental refresh, and real-time data (when supported).
 
-:::image type="content" source="./media/linkedin-learning/incremental-refresh-one.png" alt-text="Screenshot of how an incremental refresh is performed.":::
+:::image type="content" source="./media/linkedin-learning/incremental-refresh-one.png" lightbox="./media/linkedin-learning/incremental-refresh-one.png" alt-text="Screenshot of how an incremental refresh is performed.":::
 
 Additional information on incremental refresh. [Located Here](../dataflows/incremental-refresh.md)
 
@@ -239,7 +239,7 @@ To set up the incremental refresh, follow these steps:
     4. Configure based on preference.
     5. Select **"Apply"**.
 
-       :::image type="content" source="./media/linkedin-learning/incremental-refresh-on-each-table.png" alt-text="Screenshot of the incremental refresh option.":::
+       :::image type="content" source="./media/linkedin-learning/incremental-refresh-on-each-table.png" lightbox="./media/linkedin-learning/incremental-refresh-on-each-table.png" alt-text="Screenshot of the incremental refresh option.":::
 
 > [!TIP]
 > **Archive Data:** Defines the range when you no longer want to see data.
@@ -270,7 +270,7 @@ Expanding the column **adds a step in the query settings.**
 
 **Congratulations!** Your learning admins can now gain key insights and engagement metrics through their Microsoft Power BI application.
 
-## Common issues & troubleshooting tips
+## Common issues and troubleshooting tips
 
 If the data update fails when attempting to refresh data:
 
