@@ -215,7 +215,7 @@ To set up the incremental refresh, follow these steps:
 
 10. In each table or query select **Navigation** within the Applied Steps section.
 1. 
-    [ ![Screenshot of the filtering available for the date, week column.](./media/linkedin-learning/date-range-filtering.png) ](./media/linkedin-learning/date-range-filtering.png)
+    [ ![Screenshot of the filtering range available for the date, week column.](./media/linkedin-learning/date-range-filtering.png) ](./media/linkedin-learning/date-range-filtering.png)
 
 11. Create a **datetime filter**.
     1. Select the dropdown arrow of the "Week column."
