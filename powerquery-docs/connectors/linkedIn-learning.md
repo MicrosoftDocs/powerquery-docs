@@ -173,7 +173,6 @@ To set up the incremental refresh, follow these steps:
 2. Select **"Edit Query"**
 
    :::image type="content" source="./media/linkedin-learning/incremental-refresh-edit-query.png" alt-text="Screenshot of where the edit query option is within Power BI.":::
-   ![]()
 
 > [!NOTE]
 > Two parameters of type datetime are needed: **RangeStart**  and **RangeEnd.** > **The names of parameters cannot be changed.**
@@ -228,7 +227,7 @@ To set up the incremental refresh, follow these steps:
         5. Choose **"is before"**.
         6. Ensure parameter is set, then select **"RangeEnd"**.
 
-           :::image type="content" source="./media/linkedin-learning/filtering-date-week-column.png" lightbox=="./media/linkedin-learning/filtering-date-week-column.png" alt-text="Screenshot of the filtering available for the date, week column.":::
+           :::image type="content" source="./media/linkedin-learning/filtering-date-week-column.png" lightbox="./media/linkedin-learning/filtering-date-week-column.png" alt-text="Screenshot of the filtering available for the date, week column.":::
 
 12. Save and close the Power Query Editor. This process might take time depending on the number of tables and the date range.
 
