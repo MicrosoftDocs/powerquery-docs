@@ -371,7 +371,7 @@ items:
         href: connectors/bqecore.md
       - name: "CData Connect Cloud"
         href: connectors/cdata-connect-cloud.md
-      - name: "Celonis EMS (Beta)"
+      - name: "Celonis EMS"
         href: connectors/celonis-ems.md
       - name: "CloudBluePSA (Beta)"
         href: connectors/cloudbluepsa.md
@@ -399,6 +399,8 @@ items:
         href: connectors/equis.md
       - name: "Essbase"
         href: connectors/essbase.md
+      - name: "Exact Online Premium"
+        href: connectors/exact-online-premium.md
       - name: "Excel"
         href: connectors/excel.md
       - name: "FactSet RMS (Beta)"
@@ -445,6 +447,8 @@ items:
         href: connectors/lakehouse.md
       - name: LinkedIn Learning
         href: connectors/linkedin-learning.md
+      - name: LEAP (Beta)
+        href: connectors/leap.md 
       - name: LinkedIn Sales Navigator (Beta)
         href: connectors/linkedin-sales-navigator.md
       - name: "Mailchimp (Deprecated)"
@@ -495,6 +499,8 @@ items:
         href: connectors/salesforce-objects.md
       - name: "Salesforce Reports"
         href: connectors/salesforce-reports.md
+      - name: "Samsara"
+        href: connectors/samsara.md
       - name: "SAP Business Warehouse"
         items:
         - name: "Connect to an SAP Business Warehouse Application Server"
@@ -555,6 +561,8 @@ items:
         href: connectors/stripe.md
       - name: "SumTotal"
         href: connectors/sumtotal.md
+      - name: "Supermetrics"
+        href: connectors/supermetrics.md
       - name: "Sybase database"
         href: connectors/sybase-database.md
       - name: "Teradata database"
@@ -585,6 +593,8 @@ items:
         href: connectors/xml.md
       - name: "Zendesk (Beta)"
         href: connectors/zendesk.md
+      - name: "Zendesk Data (Beta)"
+        href: connectors/zendesk-data.md
     - name: Support and troubleshooting
       items:
       - name: "Power Query online limits"
