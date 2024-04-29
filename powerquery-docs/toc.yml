@@ -445,6 +445,8 @@ items:
         href: connectors/kql-database.md
       - name: "Lakehouse (Beta)"
         href: connectors/lakehouse.md
+      - name: LinkedIn Learning
+        href: connectors/linkedin-learning.md
       - name: LEAP (Beta)
         href: connectors/leap.md 
       - name: LinkedIn Sales Navigator (Beta)
