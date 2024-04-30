@@ -33,6 +33,9 @@ If the package is installed correctly, the MySQL Data Provider is displayed in t
 
 If the package doesn't install correctly, work with your MySQL support team or reach out to MySQL.
 
+> [!NOTE]
+> The MySQL connector is not supported on the **Personal Mode** of the on-premises data gateway, it is only supported on the on-premises data gateway **(standard mode)**
+
 ## Capabilities Supported
 
 * Import
