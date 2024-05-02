@@ -48,7 +48,7 @@ The IRIS ODBC driver can be downloaded (from the [WRC distributions page](https:
 
 7.	The navigation window opens, and presents a Table folder (this is where the HSAA tables will reside) and a Cube folder (this is where you will find the cubes).
 
-Please visit the [documentation](https://docs.intersystems.com/latest/csp/docbook/DocBook.UI.Page.cls?KEY=HSAA_powerbi) for connection, usage, and troubleshooting instructions.
+Please visit the [documentation](https://docs.intersystems.com/hslatest/csp/docbook/DocBook.UI.Page.cls?KEY=HSAA_powerbi) for connection, usage, and troubleshooting instructions.
 
 ## Considerations and limitations
 
