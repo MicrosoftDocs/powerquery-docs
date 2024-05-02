@@ -35,20 +35,20 @@ The IRIS ODBC driver can be downloaded (from the [WRC distributions page](https:
 1.	Identify the Health Insight server connection details – Server, Super server port and Namespace.
 
 2.	Open Power BI Desktop, click on Get Data and More.
-    ![Desktop image](./media/intersystems-healthinsight/Picture1.png)
+    ![Desktop image](./media/intersystem-healthinsight/Picture1.png)
 
 4.  The Get Data screen opens, select Database and then search the listing to find Intersystems Health Insight. Then click the  Connect button.
-    ![GetData image](./media/intersystems-healthinsight/Picture2.png)  
+    ![GetData image](./media/intersystem-healthinsight/Picture2.png)  
 
 5.  The connection screen will open. Here, Host (IP Address) is the IP address of the host for your InterSystems Health Insight instance, Port is the instance’s superserver port, and Namespace is the namespace where your Health Insight data is located. Answer Yes or No to the questions related to connecting via SSL and hiding system tables. Then select the desired connectivity 
-    ![ISCHSHI image](./media/intersystems-healthinsight/Picture3.png) 
+    ![ISCHSHI image](./media/intersystem-healthinsight/Picture3.png) 
 
 6.	Upon your first connection to the Health Insight instance, an authentication dialog will appear. Choose Basic and enter your InterSystems Health Insight credentials.
-    ![Signon image](./media/intersystems-healthinsight/Picture4.png) 
+    ![Signon image](./media/intersystem-healthinsight/Picture4.png) 
 
 7.	The navigation window opens, and presents a Table folder (this is where the HSAA tables will reside) and a Cube folder (this is where you will find the cubes).
 
-Please visit the [documentation](https://docs.intersystems.com/hs20241/csp/docbook/DocBook.UI.Page.cls?KEY=HSAA_powerbi) for connection, usage, and troubleshooting instructions.
+Please visit the [documentation](https://docs.intersystems.com/latest/csp/docbook/DocBook.UI.Page.cls?KEY=HSAA_powerbi) for connection, usage, and troubleshooting instructions.
 
 ## Considerations and limitations
 
