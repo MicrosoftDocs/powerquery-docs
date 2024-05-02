@@ -84,6 +84,6 @@ This CAST statement limits the schema maximum length that is sent to Power BI. E
 
 You can either create your own views or use the CreateViewEntry utility to create a view for any Health Insight table with this issue. 
 
-# Further assistance
+## Further assistance
 
 For further assistance please contact InterSystems' [Worldwide Response Center](https://wrc.intersystems.com).
