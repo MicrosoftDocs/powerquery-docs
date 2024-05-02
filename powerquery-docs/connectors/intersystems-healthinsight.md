@@ -1,6 +1,6 @@
 ---
 title: Intersystems Health Insight
-description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your data using the connector.
+description: Provides basic details about using the Intersystems Health Insight connector.
 author: jbolinsk
 ms.topic: conceptual
 ms.date: 5/2/2024
@@ -75,7 +75,7 @@ When using Power BI in Direct Query mode, attempting to create filters, slicers,
 For example, Gender_Code in HSAA.Patient has a maximum length of 32,000 and will cause errors in Direct Query mode. You can correct this issue by exposing the property in a view via a CAST statement like the following: 
 
  
-CAST(*fieldname* AS VARCHAR(4000)) as <fieldname> 
+CAST(*fieldname* AS VARCHAR(4000)) as *fieldname*
  
 
 ...where *fieldname* is the long string in question. 
