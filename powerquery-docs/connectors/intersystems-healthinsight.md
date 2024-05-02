@@ -1,7 +1,7 @@
 ---
 title: Intersystems Health Insight
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your data using the connector.
-author: Julie Bolinsky
+author: jbolinsk
 ms.topic: conceptual
 ms.date: 5/2/2024
 ms.author: jbolinsk
@@ -59,10 +59,10 @@ When using Power BI in Direct Query mode, attempting to create filters, slicers,
 You can correct this issue by exposing the Boolean in a view via a CAST statement like the following: 
 
  
-CAST((CASE WHEN <fieldname>=1 then 1 ELSE 0 END) as INTEGER) as <fieldname> 
+CAST((CASE WHEN *fieldname*=1 then 1 ELSE 0 END) as INTEGER) as *fieldname* 
  
 
-...where <fieldname> is the Boolean in question. 
+...where *fieldname* is the Boolean in question. 
 
 This CAST statement exposes the Boolean as an Integer, which Power BI can handle without error. Any NULLs are defaulted to 0. 
 
@@ -75,10 +75,10 @@ When using Power BI in Direct Query mode, attempting to create filters, slicers,
 For example, Gender_Code in HSAA.Patient has a maximum length of 32,000 and will cause errors in Direct Query mode. You can correct this issue by exposing the property in a view via a CAST statement like the following: 
 
  
-CAST(<fieldname> AS VARCHAR(4000)) as <fieldname> 
+CAST(*fieldname* AS VARCHAR(4000)) as <fieldname> 
  
 
-...where <fieldname> is the long string in question. 
+...where *fieldname* is the long string in question. 
 
 This CAST statement limits the schema maximum length that is sent to Power BI. Ensure that you do not eliminate important data via this CAST statement. As an example, you might confirm that your Gender_Code data never exceeds 4000 characters in length, meaning that you can shorten the maximum length that is sent to Power BI without consequence. 
 
