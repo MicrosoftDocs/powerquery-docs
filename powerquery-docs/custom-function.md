@@ -2,7 +2,7 @@
 title: Using custom functions in Power Query
 description: An article on how to create custom functions in Power Query
 author: ptyx507x
-ms.date: 5/1/2024
+ms.date: 5/3/2024
 ms.author: miescobar
 ms.custom: intro-internal
 ---
@@ -62,7 +62,7 @@ This operation effectively creates a new function that links with the **Transfor
 
 :::image type="content" source="media/custom-function/transform-sample-file-function-window.png" alt-text="Screenshot fo the Create function window for the Transform file.":::
 
-After creating the function, notice that a new group is created for you with the name of your function. This new group contains:
+After you create the function, notice that a new group is created for you with the name of your function. This new group contains:
 
 * All parameters that were referenced in your **Transform Sample file** query.
 * Your **Transform Sample file** query, commonly known as the *sample query*.
@@ -76,7 +76,7 @@ With your new function created, select the query with the name **Transform Sampl
 
 The first transformation that needs to happen to this query is one that interprets the binary. You can right-click the binary from the preview pane and select the **CSV** option to interpret the binary as a CSV file.
 
-:::image type="content" source="media/custom-function/custom-function-csv.png" alt-text="Screenshot of the binary drop down menu with CSV emphasized.":::
+:::image type="content" source="media/custom-function/custom-function-csv.png" alt-text="Screenshot of the binary drop-down menu with CSV emphasized.":::
 
 The format of all the CSV files in the folder is the same. They all have a header that spans the first top four rows. The column headers are located in row 5 and the data starts from row 6 downwards, as shown in the next image.
 
@@ -118,13 +118,13 @@ After you select **OK**, a new column with the name **Output Table** is created.
 > [!NOTE]
 > To learn more about how to choose or remove columns from a table, go to [Choose or remove columns](choose-remove-columns.md).
 
-Your function was applied to every single row from the table using the values from the **Content** column as the argument for your function. Now that the data is transformed into the shape that you're looking for, you can expand the **Output Table** column by selecting the expand icon. Don't use any prefix for the expanded columns.
+Your function was applied to every single row from the table using the values from the **Content** column as the argument for your function. Now that the data is transformed into the shape that you're looking for, you can expand the **Output Table** column by selecting the Expand icon. Don't use any prefix for the expanded columns.
 
 :::image type="content" source="media/custom-function/invoked-custom-function-expanded-window.png" alt-text="Screenshot of the expanded output table dialog with all of the table columns selected.":::
 
 You can verify that you have data from all files in the folder by checking the values in the **Name** or **Date** column. For this case, you can check the values from the **Date** column, as each file only contains data for a single month from a given year. If you see more than one, it means that you successfully combined data from multiple files into a single table.
 
-:::image type="content" source="media/custom-function/invoked-custom-function-all-data-expanded.png" alt-text="Screenshot of the with the date drop down validating that the final table contains data from all files." lightbox="media/custom-function/invoked-custom-function-all-data-expanded.png":::
+:::image type="content" source="media/custom-function/invoked-custom-function-all-data-expanded.png" alt-text="Screenshot with the date drop-down validating that the final table contains data from all files." lightbox="media/custom-function/invoked-custom-function-all-data-expanded.png":::
 
 > [!NOTE]
 >What you've read so far is fundamentally the same process that happens during the **Combine files** experience, but done manually.
