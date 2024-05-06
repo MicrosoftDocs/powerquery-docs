@@ -185,8 +185,8 @@ When querying a column that has the same name as the table name, BigQuery interp
 * Workaround 2: Rename the column to avoid conflicts with the table name&mdash;`ALTER TABLE dataset.debug RENAME COLUMN debug to new_debug`
 * Workaround 3: Change the SELECT query to use table.column to reference the conflict column&mdash;`SELECT debug.debug FROM dataset.debug`
 
-### Materialized views are not supported in the Power BI Desktop navigator
+### Materialized views aren't supported in the Power BI Desktop navigator
 
-It is a known issue that the Google BigQuery connector does not currently support materialized views in the Power BI Desktop navigator.
+A known issue is that the Google BigQuery connector doesn't currently support materialized views in the Power BI Desktop navigator.
 
 * Workaround: Utilize native query SQL statements to fetch materialized views from Google BigQuery.
