@@ -34,7 +34,7 @@ In this example, you merge both tables, with the **Sales** table as the left tab
 
 The goal is to create a table like the following, where the name of the country appears as a new **Country** column in the **Sales** table as long as the **CountryID** exists in the **Countries** table. If there are no matches between the left and right tables, a *null* value is the result of the merge for that row. In the following image, this null value is shown to be the case for **CountryID** 4, which was brought in from the **Sales** table.
 
-:::image type="content" source="media/merge-queries-left-outer/left-outer-final-table.png" alt-text="Left outer join's final table with the Country column added with the value of the fourth row of that column set to null.":::
+:::image type="content" source="media/merge-queries-left-outer/left-outer-final-table.png" alt-text="Screenshot showing the left outer joins final table with the Country column added with the value of the fourth row of that column set to null.":::
 <!--markdownlint-disable MD036-->
 **To do a left outer join**
 <!--markdownlint-enable MD036-->
