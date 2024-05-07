@@ -62,7 +62,7 @@ The result of that operation gives you a table with the two columns that you're 
 
 In this example, your initial table is shown in the following image, with the columns **Cost Center** and **Accounts**.
 
-:::image type="content" source="media/split-columns-delimiter/into-rows-original.png" alt-text="Screenshot of the sample source table for splitting columns into rows." lightbox="media/split-columns-delimiter/into-rows-original.png":::
+:::image type="content" source="media/split-columns-delimiter/into-rows-original.png" alt-text="Screenshot of the sample source table for splitting columns into rows.":::
 
 The **Accounts** column has values in pairs separated by a comma. These pairs are separated by a semicolon. The goal of this example is to split this column into new rows by using the semicolon as the delimiter.
 
