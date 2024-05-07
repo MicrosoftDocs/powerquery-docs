@@ -86,7 +86,7 @@ The result of that operation gives you a table with the same number of columns, 
 
 Your table still requires one last split column operation. You need to split the **Accounts** column by the first comma that it finds. This split creates a column for the account name and another one for the account number.
 
-To do that split, select the **Accounts** column and then select **Split Column > By Delimiter**. Inside the **Split column** window, apply the following configuration:
+To do that split in Power Query Online, select the **Accounts** column and then select **Split Column > By Delimiter**. Inside the **Split column** window, apply the following configuration:
 
 * **Basic/Advanced**: Advanced
 * **Select or enter delimiter**: Comma
