@@ -48,7 +48,7 @@ To connect to Samsara data:
 You should be aware of the following limitations and issues associated with accessing Samsara data.
 - The initial data sync that grabs historical data might take some time to process.
 - The data tables are created using Samsara APIs behind the scenes. If one of the APIs returns a 5xx or 4xx error (except 429s) when the connector is trying to refresh the data tables, the matching table isn't created and is skipped.
-- Limit on how far back you can retrieve Samsara data in Power BI: Last six months.
+- Limit on how far back you can retrieve Samsara data in Power BI: last six months.
 
 For more guidelines on accessing Samsara data, see Samsara's [Developer Guide](https://developers.samsara.com/docs/rest-api-overview).
 
@@ -57,5 +57,5 @@ For more guidelines on accessing Samsara data, see Samsara's [Developer Guide](h
 You might also find the following Samsara information useful:
 
 - [Samsara Power BI Connector Product Guide](https://kb.samsara.com/hc/en-us/articles/19262879010189-Integrate-with-Power-BI)
-- [Samsara Power BI Connector Developer Guide](https://developers.samsara.com/docs/pbi-custom-connector)
+- [Samsara Data Connectors guide](https://developers.samsara.com/docs/data-connectors)
 - [Submit and view feedback](/power-query/feedback)
