@@ -90,7 +90,7 @@ The way the **Don't aggregate** option works is that it grabs a single value for
 
 You want to pivot that table by using the **Date** column, and you want to use the values from the **Value** column. Because this pivot makes your table have just the **Country** values on rows and the **Dates** as columns, you get an error for every single cell value because there are multiple rows for every combination of **Country** and **Date**. The outcome of this **Pivot column** operation yields the results shown in the following image.
 
-:::image type="complex" source="media/pivot-columns/dont-aggregate-error-final.png" alt-text="Pivot column don't aggregate error example final table.":::
+:::image type="complex" source="media/pivot-columns/dont-aggregate-error-final.png" alt-text="Pivot column don't aggregate error example final table." lightbox="media/pivot-columns/dont-aggregate-error-final.png":::
    Power Query editor pane showing a table with Country and date value columns. The Country column contains Canada in the first row, Panama in the second row, and USA in the third row. All of the rows under the date value column contain Errors, with one error selected. Under the table is another pane that shows the expression error with the "There are too many elements in the enumeration to complete the operation" message.
 :::image-end:::
 
