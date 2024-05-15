@@ -2,7 +2,7 @@
 title: Creating your first connector - Hello World
 description: Create your first connector
 author: ptyx507x
-ms.date: 11/27/2019
+ms.date: 5/15/2024
 ms.author: miescobar
 ms.custom: intro-internal
 ---
@@ -10,14 +10,14 @@ ms.custom: intro-internal
 # Creating your first connector: Hello World
 
 ## Hello World sample
-This sample provides a simple data source extension that can be run in Visual Studio, and loaded in Power BI Desktop. As an overview, this sample shows the following:
+This sample provides a simple data source extension that can be run in Visual Studio Code, and loaded in Power BI Desktop. As an overview, this sample shows the following:
 * Exporting function (`HelloWorld.Contents`), which takes an option text parameter.
 * Defining a data source kind that:
     * Declares that it uses Implicit (anonymous) authentication.
     * Uses string resources that allow for localization.
     * Declaring UI metadata so the extension can show up in the Power BI Desktop Get Data dialog.
 
-Following the instructions in [Installing the PowerQuery SDK](InstallingSDK.md), create a new project called "HelloWorld" and copy in the following M code, and then follow the rest of the instructions to be able to open it in PowerBI.
+Following the instructions in [Installing the PowerQuery SDK](InstallingSDK.md), create a new connector called "HelloWorld", copy in the following M code and paste it in the HelloWorld.pq file of your connector workspace, and then follow the rest of the instructions to be able to open it in Power BI.
 
 In the following connector definition you'll find:
 * A `section` statement.
@@ -56,7 +56,7 @@ HelloWorld.Icons = [
 ];
 ```
 
-Once you've built the file and copied it to the correct directory, following the instructions in [Installing the PowerQuery SDK](InstallingSDK.md) tutorial, open PowerBI. You can search for "hello" to find your connector in the **Get Data** dialog. 
+Once you've built the file and copied it to the correct directory, following the instructions in [Installing the PowerQuery SDK](InstallingSDK.md) tutorial, open Power BI. You can search for "hello" to find your connector in the **Get Data** dialog. 
 
 
 
