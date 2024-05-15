@@ -1,10 +1,10 @@
 ---
 title: Using incremental refresh with dataflows
 description: Learn how to configure incremental refresh for dataflows
-author: bensack
+author: Luitwieler
 ms.topic: conceptual
 ms.date: 1/26/2024
-ms.author: bensack
+ms.author: jeluitwi
 ---
 
 # Using incremental refresh with dataflows

@@ -1,10 +1,10 @@
 ---
 title: Computed table scenarios and use cases
 description: Computed table scenarios and use cases.
-author: bensack
+author: Luitwieler
 ms.topic: conceptual
 ms.date: 6/13/2023
-ms.author: bensack
+ms.author: jeluitwi
 ---
 
 # Computed table scenarios and use cases
