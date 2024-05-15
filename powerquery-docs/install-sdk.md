@@ -8,7 +8,7 @@ ms.date: 5/15/2024
 ms.author: miescobar
 ---
 
-# What is the Power Query SDK?
+# Develop a connector using the Power Query SDK
 
 The Power Query SDK is a set of tools designed to help you create Power Query connectors. These connectors are often referred to as custom connectors or Power Query extensions.
 
@@ -22,7 +22,7 @@ Custom connectors let you create new data sources or customize and extend an exi
 
 ## Installing the Power Query SDK
 
-Install the new Visual Studio Code Power Query SDK from the [Visual Studio Code section of the Visual Studio Marketplace](https://aka.ms/powerquerysdk). Select **Install** to install the SDK.
+Install the Visual Studio Code Power Query SDK from the [Visual Studio Code section of the Visual Studio Marketplace](https://aka.ms/powerquerysdk). Select **Install** to install the SDK.
 
 ## Connector development process
 

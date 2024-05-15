@@ -4,13 +4,9 @@ description: A guided tour on how to use the Power Query SDK in Visual Studio Co
 author: ptyx507x
 
 ms.topic: quickstart
-ms.date: 3/13/2023
+ms.date: 5/15/2024
 ms.author: miescobar
 ---
-
-# Using the Power Query SDK
-
-This article focuses on the experience available for the Power Query SDK found in Visual Studio Code. You can learn more on how to install the Power Query SDK for Visual Studio from the article on [Installing the SDK](InstallingSDK.md).
 
 ## Create a new project
 
