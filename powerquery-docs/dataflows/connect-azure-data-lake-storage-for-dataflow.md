@@ -2,8 +2,8 @@
 title: Connect Azure Data Lake Storage Gen2 for dataflow storage
 description: Learn how to connect Azure Data Lake Storage Gen2 for dataflow storage
 ms.date: 1/17/2024
-ms.author: bensack
-author: bensack
+ms.author: jeluitwi
+author: Luitwieler
 ms.topic: how-to
 ---
 

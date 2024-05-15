@@ -1,10 +1,10 @@
 ---
 title: Best practices for creating a dimensional model using dataflows
 description: Best practices for creating a dimensional model using dataflows
-author: bensack
+author: Luitwieler
 ms.topic: conceptual
 ms.date: 6/14/2023
-ms.author: bensack
+ms.author: jeluitwi
 ---
 
 # Best practices for creating a dimensional model using dataflows
