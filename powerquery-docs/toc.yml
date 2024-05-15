@@ -727,10 +727,8 @@ items:
             href: samples/trippin/9-testconnection/readme.md
           - name: "10. Folding"
             href: samples/trippin/10-tableview1/readme.md
-        - name: OAuth tutorials
-          items:
-          - name: "GitHub"
-            href: samples/github/readme.md
+        - name: "OAuth tutorial (GitHub)"
+          href: samples/github/readme.md
       - name: Connector Certification
         items:
         - name: "Overview"
