@@ -1,14 +1,14 @@
 ---
-title: Power Query SDK overview
+title: What is the Power Query SDK?
 description: Installation and explanation of the Power Query SDK and how to use Custom Connectors
 author: ptyx507x
 
 ms.topic: quickstart
-ms.date: 1/9/2023
+ms.date: 5/15/2024
 ms.author: miescobar
 ---
 
-# Power Query SDK overview
+# What is the Power Query SDK?
 
 The Power Query SDK is a set of tools designed to help you create Power Query connectors. These connectors are often referred to as custom connectors or Power Query extensions.
 
@@ -21,29 +21,6 @@ Custom connectors let you create new data sources or customize and extend an exi
 * Enabling DirectQuery for a data source using an ODBC driver.
 
 ## Installing the Power Query SDK
-
-There are currently two versions of the Power Query SDK available:
-
-* **Visual Studio Power Query SDK**: Released in 2017 as an extension for Visual Studio 2017 and 2019.
-* **Visual Studio Code Power Query SDK (Preview)**: Released in 2022 as the new and recommended way to create Power Query connectors.
-
-We encourage all developers to install and use the newly released Visual Studio Code Power Query SDK (Preview) as this version will eventually be the default SDK going forward.
-
-### Visual Studio Power Query SDK
-
-Follow the steps below to install the Visual Studio Power Query SDK:
-
-1. Install the [Power Query SDK](https://marketplace.visualstudio.com/items?itemName=Dakahn.PowerQuerySDK) from the Visual Studio Marketplace.
-2. Create a new data connector project.
-3. Define your connector logic.
-4. Build the project to produce an extension file.
-
-:::image type="content" source="media/install-sdk/new-project.png" alt-text="Preview Feature.":::
-
-### Visual Studio Code Power Query SDK (Preview)
-
->[!NOTE]
->The new Visual Studio Code Power Query SDK is currently in public preview as of September of 2022.
 
 Install the new Visual Studio Code Power Query SDK from the [Visual Studio Code section of the Visual Studio Marketplace](https://aka.ms/powerquerysdk). Select **Install** to install the SDK.
 
@@ -108,9 +85,6 @@ Power BI Desktop will automatically load the extensions on restart.
 Alternatively, as the owner of the data source and connector, you can submit your connector to the [Power Query Connector Certification](ConnectorCertification.md) program so it ships with Power BI Desktop on every release.
 
 ### Power Query Online
-
->[!NOTE]
->The Power Query team is working hard towards enabling all Power Query certified connectors in the Power Query Online experience.
 
 Only Power Query certified connectors are shown in the Power Query Online experience. To learn more about the Power Query connector certification program, go to [Power Query Connector Certification](ConnectorCertification.md).
 

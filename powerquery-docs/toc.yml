@@ -699,7 +699,7 @@ items:
             href: native-query-sdk.md
           - name: "Versioning"
             href: handling-versioning.md
-      - name: Samples & Walkthroughs
+      - name: Connector Samples & Walkthroughs
         items:
         - name: "Samples list"
           href: samples-directory.md
@@ -739,7 +739,7 @@ items:
           href: certification-submission.md
         - name: "Custom connector documentation"
           href: providing-user-documentation.md
-      - name: "Custom connector development FAQ"
+      - name: "Connector development FAQ"
         href: custom-connector-development-faq.yml
     - name: Resources
       items:
