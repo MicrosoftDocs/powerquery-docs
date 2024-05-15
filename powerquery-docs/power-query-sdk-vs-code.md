@@ -7,6 +7,7 @@ ms.topic: quickstart
 ms.date: 5/15/2024
 ms.author: miescobar
 ---
+# Power Query SDK Overview
 
 The purpose of this article is to give you an overview of the overall capabilities and develoment experience found inside of the Power Query SDK for Visual Studio Code.
 
