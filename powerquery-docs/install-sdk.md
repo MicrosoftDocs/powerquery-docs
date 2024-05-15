@@ -1,6 +1,6 @@
 ---
-title: What is the Power Query SDK?
-description: Installation and explanation of the Power Query SDK and how to use Custom Connectors
+title: Develop a connector using the Power Query SDK
+description: 
 author: ptyx507x
 
 ms.topic: quickstart

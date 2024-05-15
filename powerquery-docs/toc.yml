@@ -608,11 +608,11 @@ items:
       - name: "Capture web requests with Fiddler"
         href: web-connection-fiddler.md
     - name: Create Power Query connectors
-      items:
+      items: 
+      - name: "Develop a connector using the Power Query SDK"
+        href: install-sdk.md
       - name: "Power Query SDK"
         items:
-        - name: "What is the Power Query SDK?"
-          href: install-sdk.md
         - name: "Power Query SDK Overview"
           href: power-query-sdk-vs-code.md
         - name: "Creating your first connector project - Hello World"
