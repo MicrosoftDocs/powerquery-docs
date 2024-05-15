@@ -1,10 +1,10 @@
 ---
 title: Trigger dataflows and Power BI semantic models sequentially
 description: How to use the dataflows connector in Power Automate to trigger dataflows and Power BI semantic models sequentially
-author: miquelladeboer
+author: Luitwieler
 ms.topic: conceptual
 ms.date: 3/4/2024
-ms.author: mideboer
+ms.author: jeluitwi
 ---
 
 # Trigger dataflows and Power BI semantic models sequentially
