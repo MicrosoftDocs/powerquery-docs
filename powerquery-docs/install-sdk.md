@@ -1,6 +1,6 @@
 ---
 title: Develop a connector using the Power Query SDK
-description: 
+description: Using the Power Query SDK to create new Power Query connectors
 author: ptyx507x
 
 ms.topic: quickstart
@@ -26,13 +26,11 @@ Install the Visual Studio Code Power Query SDK from the [Visual Studio Code sect
 
 ## Connector development process
 
-While you can use either the Visual Studio Code or the Visual Studio Power Query SDK, both use a similar process for the development of a connector at a high level.
-
 The following sections describe, at a high level, the most common process to create a Power Query connector using the SDK.
 
 ### Creating a new extension
 
-When creating a new project (Visual Studio Power Query SDK) or a new workspace (Visual Studio Code Power Query SDK), you start with the following core files:
+When creating a new workspace (Visual Studio Code Power Query SDK), you start with the following core files:
 
 * Connector definition file (\<connectorName>.pq)
 * A query file (\<connectorName>.query.pq)
@@ -47,7 +45,7 @@ The Power Query SDK provides basic query execution capabilities, allowing you to
 
 #### Query test file
 
-In addition to the extension file, Data Connector projects can have a query file (name.query.pq). This file can be used to run test queries within Visual Studio. The query evaluation will automatically include your extension code, without having to register your.pqx file, allowing you to call or test any shared functions in your extension code.
+In addition to the extension file, Data Connector projects can have a query file (name.query.pq). This file can be used to run test queries within Visual Studio Code. The query evaluation will automatically include your extension code, without having to register your.pqx file, allowing you to call or test any shared functions in your extension code.
 
 The query file can contain a single expression (for example, `HelloWorld.Contents()`), a `let` expression (such as what Power Query would generate), or a section document.
 
