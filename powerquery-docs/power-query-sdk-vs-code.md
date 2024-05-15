@@ -1,5 +1,5 @@
 ---
-title: Using the Power Query SDK 
+title: Power Query SDK Overview
 description: A guided tour on how to use the Power Query SDK in Visual Studio Code and the core functionality provided through it
 author: ptyx507x
 
@@ -7,6 +7,8 @@ ms.topic: quickstart
 ms.date: 5/15/2024
 ms.author: miescobar
 ---
+
+The purpose of this article is to give you an overview of the overall capabilities and develoment experience found inside of the Power Query SDK for Visual Studio Code.
 
 ## Create a new project
 
