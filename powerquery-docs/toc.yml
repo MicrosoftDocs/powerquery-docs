@@ -617,38 +617,6 @@ items:
           href: power-query-sdk-vs-code.md
         - name: "Creating your first connector project - Hello World"
           href: creating-first-connector.md
-        - name: Power Query SDK test framework
-          items:
-          - name: "Overview"
-            href: sdk-testframework/test-framework.md
-          - name: "1. Setup"
-            href: sdk-testframework/1-set-up.md
-          - name: "2. Preparing data"
-            href: sdk-testframework/2-data.md
-          - name: "3. Test suite"
-            href: sdk-testframework/3-tests.md
-          - name: "4. Test format specification"
-            href: sdk-testframework/4-testformat.md
-          - name: "5. Connector testing"
-            href: sdk-testframework/5-connector.md
-          - name: "6. Adding tests"
-            href: sdk-testframework/6-adding.md
-          - name: "7. Pipeline setup guide"
-            href: sdk-testframework/7-pipeline.md
-        - name: Power Query SDK tools
-          items:
-          - name: PQTest.exe
-            items:
-              - name: Overview
-                href: sdk-tools/pqtest-overview.md
-              - name: Commands and options
-                href: sdk-tools/pqtest-commands-options.md
-              - name: General usage
-                href: sdk-tools/pqtest-general-usage.md
-              - name: Credentials
-                href: sdk-tools/pqtest-credentials.md
-              - name: Compare
-                href: sdk-tools/pqtest-compare.md
         - name: Concepts
           items:
           - name: "Additional connector functionality"
@@ -699,6 +667,38 @@ items:
             href: native-query-sdk.md
           - name: "Versioning"
             href: handling-versioning.md
+        - name: Power Query SDK test framework
+          items:
+          - name: "Overview"
+            href: sdk-testframework/test-framework.md
+          - name: "1. Setup"
+            href: sdk-testframework/1-set-up.md
+          - name: "2. Preparing data"
+            href: sdk-testframework/2-data.md
+          - name: "3. Test suite"
+            href: sdk-testframework/3-tests.md
+          - name: "4. Test format specification"
+            href: sdk-testframework/4-testformat.md
+          - name: "5. Connector testing"
+            href: sdk-testframework/5-connector.md
+          - name: "6. Adding tests"
+            href: sdk-testframework/6-adding.md
+          - name: "7. Pipeline setup guide"
+            href: sdk-testframework/7-pipeline.md
+        - name: Power Query SDK tools
+          items:
+          - name: PQTest.exe
+            items:
+              - name: Overview
+                href: sdk-tools/pqtest-overview.md
+              - name: Commands and options
+                href: sdk-tools/pqtest-commands-options.md
+              - name: General usage
+                href: sdk-tools/pqtest-general-usage.md
+              - name: Credentials
+                href: sdk-tools/pqtest-credentials.md
+              - name: Compare
+                href: sdk-tools/pqtest-compare.md
       - name: Connector Samples & Walkthroughs
         items:
         - name: "Samples list"
