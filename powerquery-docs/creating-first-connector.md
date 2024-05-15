@@ -1,6 +1,6 @@
 ---
 title: Creating your first connector - Hello World
-description: Create your first connector
+description: Create your first connector.
 author: ptyx507x
 ms.date: 5/15/2024
 ms.author: miescobar
@@ -9,8 +9,11 @@ ms.custom: intro-internal
 
 # Creating your first connector: Hello World
 
+This sample provides a simple data source extension that can be run in Visual Studio Code, and loaded in Power BI Desktop.
+
 ## Hello World sample
-This sample provides a simple data source extension that can be run in Visual Studio Code, and loaded in Power BI Desktop. As an overview, this sample shows the following:
+
+ As an overview, this sample shows:
 * Exporting function (`HelloWorld.Contents`), which takes an option text parameter.
 * Defining a data source kind that:
     * Declares that it uses Implicit (anonymous) authentication.
@@ -19,7 +22,7 @@ This sample provides a simple data source extension that can be run in Visual St
 
 Following the instructions in [Installing the PowerQuery SDK](InstallingSDK.md), create a new connector called "HelloWorld", copy in the following M code and paste it in the HelloWorld.pq file of your connector workspace, and then follow the rest of the instructions to be able to open it in Power BI.
 
-In the following connector definition you'll find:
+In the following connector definition you find:
 * A `section` statement.
 * A data source function with metadata establishing it as a data source definition with the Kind `HelloWorld` and Publish `HelloWorld.Publish`.
 * An `Authentication` record declaring that implicit (anonymous) is the only authentication type for this source.
@@ -60,12 +63,12 @@ Once you've built the file and copied it to the correct directory, following the
 
 
 
-This step will bring up an authentication dialog. Since there's no authentication options and the function takes no parameters, there's no further steps in these dialogs.
+This step brings up an authentication dialog. Since there's no authentication options and the function takes no parameters, there's no further steps in these dialogs.
 
 
 
-Press **Connect** and the dialog will tell you that it's a "Preview connector", since `Beta` is set to true in the query. Since there's no authentication, the authentication screen will present a tab for Anonymous authentication with no fields. Press **Connect** again to finish.
+Press **Connect** and the dialog tells you that it's a "Preview connector", since `Beta` is set to true in the query. Since there's no authentication, the authentication screen presents a tab for Anonymous authentication with no fields. Press **Connect** again to finish.
 
-Finally, the query editor will come up showing what you expect&mdash;a function that returns the text "Hello world".
+Finally, the query editor comes up showing what you expect&mdash;a function that returns the text "Hello world".
 
 For the fully implemented sample, see the [Hello World Sample](https://github.com/Microsoft/DataConnectors/tree/master/samples/HelloWorld) in the Data Connectors sample repo.
