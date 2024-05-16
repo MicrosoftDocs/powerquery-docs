@@ -31,7 +31,7 @@ The goal is to perform a cross-join operation with these two tables to create a 
 
 ## Perform a cross join
 
-To do a cross-join operation in Power Query, first go to the **Product** table. From the **Add column** tab on the ribbon, select **Custom column**. More information: [Add a custom column](add-custom-column.md)
+To do a cross-join operation in Power Query, first go to the **Product** table. From the **Add column** tab on the ribbon, select **Custom column**. For more information, go to [Add a custom column](add-custom-column.md).
 
 :::image type="content" source="media/cross-join/add-column-icon.png" alt-text="Screenshot of the Power Query Add column tab with the Custom column option emphasized.":::
 
