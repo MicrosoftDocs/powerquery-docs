@@ -50,4 +50,4 @@ After you select **OK** in the **Custom column** dialog box, a new column is add
 
 After you select **OK**, you reached your goal of creating a table with all possible combinations of **Product** and **Colors**.
 
-:::image type="content" source="media/cross-join/cross-join-final-table-2.png" alt-text="Screenshot of the final table with each of the three products (shirt, jeans, and leggings) each listed with four colors (red, blue, black, and white).":::
+:::image type="content" source="media/cross-join/cross-join-final-table-2.png" alt-text="Screenshot of the final table with the three products (shirt, jeans, and leggings) each listed with four colors (red, blue, black, and white).":::
