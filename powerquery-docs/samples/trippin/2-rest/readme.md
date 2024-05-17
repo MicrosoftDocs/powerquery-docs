@@ -5,7 +5,7 @@ author: ptyx507x
 
 
 ms.topic: tutorial
-ms.date: 1/9/2023
+ms.date: 5/16/2024
 ms.author: miescobar
 ---
 
@@ -26,13 +26,13 @@ This lesson converts the OData based connector for the [TripPin service](https:/
 
 Before you remove the OData functions from your connector, let's do a quick review of what it currently does (mostly behind the scenes) to retrieve data from the service.
 
-Open the TripPin connector project from [Part 1](../1-odata/readme.md) in Visual Studio. Open the Query file and paste in the following query:
+Open the TripPin extension project from [Part 1](../1-odata/readme.md) in Visual Studio Code. Open the Query file and paste in the following query:
 
 ```
 TripPin.Feed("https://services.odata.org/v4/TripPinService/Me")
 ```
 
-Open Fiddler and then select the Start button in Visual Studio.
+Open Fiddler and then evaluate the current power query file in Visual Studio Code.
 
 In Fiddler, you'll see three requests to the server:
 
@@ -72,7 +72,7 @@ Note the request headers that were sent along with the requests and the JSON for
 }
 ```
 
-When the query finishes evaluating, the M Query Output window should show the Record value for the Me singleton. 
+When the query finishes evaluating, the PQTest result window should show the Record value for the Me singleton. 
 
 ![OData results.](../../media/trippin2-odata-result.png)
 
@@ -102,7 +102,7 @@ TripPinImpl = (url as text) =>
         json;
 ```
 
-You can now test this out in Visual Studio using the query file.
+Remember to build your connector now that you've made changes to the connector file and then you can evaluate the query file (TripPin.query.pq).
 The result of the /Me record now resembles the raw JSON that you saw in the Fiddler request.
 
 If you watch Fiddler when running the new function, you'll also notice that the evaluation now makes a single web request, rather than three. Congratulations&mdash;you've achieved a 300% performance increase! Of course, you've now lost all the type and schema information, but there's no need to focus on that part just yet.
@@ -114,7 +114,7 @@ Update your query to access some of the TripPin Entities/Tables, such as:
 * `https://services.odata.org/v4/TripPinService/Me/Trips`
 
 You'll notice that the paths that used to return nicely formatted tables now return a top level "value" field with an embedded [List].
-You'll need to do some transformations on the result to make it usable for Power BI scenarios.
+You'll need to do some transformations on the result to make it usable for end user consumption scenarios.
 
 ![List results.](../../media/trippin2-raw-list.png)
 
