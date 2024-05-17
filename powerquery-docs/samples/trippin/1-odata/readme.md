@@ -29,7 +29,7 @@ Open Visual Studio Code. We recommend that you create a new workspace and then c
 
 ![Create a Power Query SDK extension project](../../media/pq-sdk-create-extension-project.png)
 
-After selecting this button, you're be prompted to enter the name of the new project. Name this new project `TripPin`.
+After selecting this button, you're prompted to enter the name of the new project. Name this new project `TripPin`.
 
 ![New extension project created called TripPin using the Power Query SDK.](../../media/TripPin-project-created-pq-sdk.png)
 
@@ -77,11 +77,11 @@ Open the TripPin.query.pq file. Replace the current contents with a call to your
 TripPin.Feed("https://services.odata.org/v4/TripPinService/")
 ```
 
-Before you can test your connector, you have to build it. To do this, go to the **Terminal** and select the option that reads **Run Build Task...** (Keyboard shortcut **Ctrl + Shift + B**). We recommend choosing the **MakePQX** option, but either option available to build should work.
+Before you can test your connector, you have to build it. To do this, go to the **Terminal** and select the **Run Build Task...** option (Keyboard shortcut **Ctrl + Shift + B**). We recommend choosing the **MakePQX** option, but either option available to build should work.
 
 ![Running a build task before testing the connector.](../../media/pq-sdk-run-build-task.png)
 
-The outcome of this operation creates a new **Bin** folder where your built connector is be stored as **TripPin.mez**.
+The outcome of this operation creates a new **Bin** folder where your built connector is stored as **TripPin.mez**.
 
 ![New bin folder created where the connector file with a mez extension and a name TripPin.mez is located at.](../../media/pq-sdk-new-bin-folder.png)
 
@@ -108,7 +108,7 @@ The output dialog displays a message of the results from your evaluation as well
 
 The **PQTest result** window consists of three tabs:
 * **Output**: Displays a preview of your data in a grid.
-* **Summary**: General evaluation details such as StartTime, EndTime, Duration, the file that was used for the evaluation, the status and more.
+* **Summary**: General evaluation details such as StartTime, EndTime, Duration, the file that was used for the evaluation, the status, and more.
 * **DataSource**: Provides information about the Data Source that was used from the Kind, the Function Name, and the path.
 
 
