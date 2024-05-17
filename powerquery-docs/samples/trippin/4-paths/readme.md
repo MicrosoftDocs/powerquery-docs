@@ -5,7 +5,7 @@ author: ptyx507x
 
 
 ms.topic: tutorial
-ms.date: 1/9/2023
+ms.date: 5/17/2024
 ms.author: miescobar
 ---
 
@@ -80,7 +80,7 @@ TripPin.Feed = (url as text) =>
         json;
 ```
 
-If you update the `TripPin.Contents()` call in your `TripPin.query.pq` file and run it in Visual Studio, you'll see a new credential prompt. Note that there is now a single Data Source Path value&mdash;TripPin.
+If you update the `TripPin.Contents()` call in your `TripPin.query.pq` file and run it in Visual Studio Code, you'll see a new credential prompt. Note that there is now a single Data Source Path value&mdash;TripPin.
 
 ![Credentials with no path.](../../media/trippin4-new-prompt.png)
 
