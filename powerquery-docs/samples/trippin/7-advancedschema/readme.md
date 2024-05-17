@@ -5,11 +5,14 @@ author: ptyx507x
 
 
 ms.topic: tutorial
-ms.date: 1/9/2023
+ms.date: 5/17/2023
 ms.author: miescobar
 ---
 
 # TripPin part 7 - Advanced schema with M types
+
+>[!NOTE]
+>This content currently references content from a legacy implementation for unit testing. The content will be updated in the near future to cover the new [Power Query SDK test framework](/powerquery-docs/sdk-testframework/test-framework.md).
 
 This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially&mdash;each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector.
 
