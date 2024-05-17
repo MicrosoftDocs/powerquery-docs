@@ -83,7 +83,7 @@ Before you can test your connector, you have to build it. To do this, go to the 
 
 The outcome of this operation creates a new folder called *bin* where your built connector will be stored as **TripPin.mez**.
 
-![Running a build task before testing the connector.](../../media/pq-sdk-new-bin-folder.png)
+![New bin folder created where the connector file with a mez extension and a name TripPin.mez is located at.](../../media/pq-sdk-new-bin-folder.png)
 
 The \<project>.query.pq file is used to test out your extension without having to deploy it to your Power BI Desktop's bin folder.  Using the tools available inside the Power Query SDK:
 1. Select the option to **Set credential**
