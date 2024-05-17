@@ -23,9 +23,9 @@ In this lesson, you will:
 
 ## Creating a basic OData connector
 
-In this section, you will create a new Data Connector project, provide some basic information, and test it in the Power Query SDK.
+In this section, you create a new Data Connector project, provide some basic information, and test it in the Power Query SDK.
 
-Open Visual Studio Code, we recommend that you create a new workspace and then create a new extension project. To create the new extension project, open the explorer and in the **Power Query SDK** section click the button that reads "Create an extension project".
+Open Visual Studio Code, we recommend that you create a new workspace and then create a new extension project. To create the new extension project, open the explorer and in the **Power Query SDK** section select the button that reads "Create an extension project".
 
 ![Create a Power Query SDK extension project](../../media/pq-sdk-create-extension-project.png)
 
@@ -69,7 +69,7 @@ TripPin.Publish = [
 * A declaration that Implicit (Anonymous) is the only authentication type for this source
 * A function (`TripPinImpl`) with an implementation that calls [OData.Feed](/powerquery-m/odata-feed)
 * A shared function (`TripPin.Feed`) that sets the parameter type to `Uri.Type`
-* A Data Source publishing record that will allow the connector to appear in the Power Query **Get Data** dialog 
+* A Data Source publishing record that allows the connector to appear in the Power Query **Get Data** dialog 
 
 Open the TripPin.query.pq file. Replace the current contents with a call to your exported function.
 
@@ -81,7 +81,7 @@ Before you can test your connector, you have to build it. To do this, go to the 
 
 ![Running a build task before testing the connector.](../../media/pq-sdk-run-build-task.png)
 
-The outcome of this operation will create a new folder called *bin* where your built connector will be stored as **TripPin.mez**.
+The outcome of this operation creates a new folder called *bin* where your built connector will be stored as **TripPin.mez**.
 
 ![Running a build task before testing the connector.](../../media/pq-sdk-new-bin-folder.png)
 
@@ -98,17 +98,17 @@ In the output dialog you see a message that confirms that you've set a credentia
 >[!NOTE]
 >You can always clear the credentials using the **Clear ALL credentials** command or check the available credentials using the **List credentials** command within the Power Query SDK tools.
 
-With the credential now in place, you can select the **TripPin.query.pq** file and either right click in the document to *Evaluate current power query file* or use the option to *Evaluate current file* from the Power Query SDK tools.
+With the credential now in place, you can select the **TripPin.query.pq** file and either right select in the document to *Evaluate current power query file* or use the option to *Evaluate current file* from the Power Query SDK tools.
 
 ![Multiple alternatives to evaluate the current Power Query file](../../media/pq-sdk-evaluate-current-file.png)
 
-The output dialog will display a message of the results from your evaluation as well as a new window with the name **PQTest result**.
+The output dialog displays a message of the results from your evaluation as well as a new window with the name **PQTest result**.
 
 ![PQTest result window displaying the results of the evaluation executed](../../media/pq-sdk-test-result-window.png)
 
 The **PQTest result** window consists of three tabs:
 * **Output**: Displays a preview of your data in a grid.
-* **Summary**: General evaluation details such as StartTime, EndTime, Duration, the file that was used for the evaluation as well as the status and more.
+* **Summary**: General evaluation details such as StartTime, EndTime, Duration, the file that was used for the evaluation and the status and more.
 * **DataSource**: Provides information about the Data Source that was used from the Kind, the Function Name, and the path.
 
 
@@ -139,7 +139,7 @@ One thing to note if you look at the URLs is that you can see the query folding 
 
 If you add more transformations to your query, you can see how they impact the generated URL.
 
-This behavior is important to note. Even though you did not implement explicit folding logic, your connector inherits these capabilities from the [OData.Feed](/powerquery-m/odata-feed) function. M statements are compose-able&mdash;filter contexts will flow from one function to another, whenever possible. This is similar in concept to the way data source functions used within your connector inherit their authentication context and credentials. In later lessons, you'll replace the use of [OData.Feed](/powerquery-m/odata-feed), which has native folding capabilities, with [Web.Contents](/powerquery-m/web-contents), which does not. To get the same level of capabilities, you'll need to use the `Table.View` interface and implement your own explicit folding logic.
+This behavior is important to note. Even though you didn't implement explicit folding logic, your connector inherits these capabilities from the [OData.Feed](/powerquery-m/odata-feed) function. M statements are compose-able&mdash;filter contexts will flow from one function to another, whenever possible. This is similar in concept to the way data source functions used within your connector inherit their authentication context and credentials. In later lessons, you'll replace the use of [OData.Feed](/powerquery-m/odata-feed), which has native folding capabilities, with [Web.Contents](/powerquery-m/web-contents), which doesn't. To get the same level of capabilities, you'll need to use the `Table.View` interface and implement your own explicit folding logic.
 
 ## Loading your extension in Power BI Desktop
 
@@ -159,7 +159,7 @@ Select the function name, and select **Connect**. A third-party message appears&
 
 ![Invoke Function.](../../media/trippin1-function.png)
 
-Since this is the first time you are accessing this data source, you'll receive a prompt for credentials. Check that the shortest URL is selected, and then select **Connect**.
+Since this is the first time you're accessing this data source, you'll receive a prompt for credentials. Check that the shortest URL is selected, and then select **Connect**.
 
 ![Image of credential prompt set to Anonymous and the level setting set to the shortest URL.](../../media/trippin1-creds.png)
 
@@ -173,9 +173,9 @@ Select the **Me** table, and then select **Transform Data**. Notice that the col
 
 ## Conclusion
 
-This lesson walked you through the creation of a simple connector based on the [OData.Feed](/powerquery-m/odata-feed) library function. As you saw, very little logic is needed to enable a fully functional connector over the `OData` base function. Other extensibility enabled functions, such as [ODBC.DataSource](/powerquery-m/odbc-datasource), provide similar capabilities.
+This lesson walked you through the creation of a simple connector based on the [OData.Feed](/powerquery-m/odata-feed) library function. As you saw, little logic is needed to enable a fully functional connector over the `OData` base function. Other extensibility enabled functions, such as [ODBC.DataSource](/powerquery-m/odbc-datasource), provide similar capabilities.
 
-In the next lesson, you'll replace the use of [OData.Feed](/powerquery-m/odata-feed) with a less capable function&mdash;[Web.Contents](/powerquery-m/web-contents). Each lesson will implement more connector features, including paging, metadata/schema detection, and query folding to the OData query syntax, until your custom connector supports the same range of capabilities as [OData.Feed](/powerquery-m/odata-feed).
+In the next lesson, you'll replace the use of [OData.Feed](/powerquery-m/odata-feed) with a less capable function&mdash;[Web.Contents](/powerquery-m/web-contents). Each lesson implements more connector features, including paging, metadata/schema detection, and query folding to the OData query syntax, until your custom connector supports the same range of capabilities as [OData.Feed](/powerquery-m/odata-feed).
 
 ## Next steps
 
