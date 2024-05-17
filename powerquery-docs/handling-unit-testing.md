@@ -3,15 +3,18 @@ title: Handling unit testing for Power Query connectors
 description: Manage unit testing for Power Query connectors
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 1/9/2023
+ms.date: 5/16/2024
 ms.author: miescobar
 ---
 
 # Handling Unit Testing
 
+>[!NOTE]
+> This content is applicable to the legacy Power Query SDK in Visual Studio. Today the new Power Query SDK in VS Code contains a fully-featured [test framework](/powerquery-docs/sdk-testframework/test-framework.md) which we encourage you to test and learn more.
+
 For both simple and complex connectors, adding unit tests is a best practice and highly recommended.
 
-Unit testing is accomplished in the context of Visual Studio's [Power Query SDK](https://marketplace.visualstudio.com/items?itemName=Dakahn.PowerQuerySDK). Each test is defined as a `Fact` that has a name, an expected value, and an actual value. In most cases, the "actual value" will be an M expression that tests part of your expression.
+Unit testing is accomplished in the context of Visual Studio's Power Query SDK. Each test is defined as a `Fact` that has a name, an expected value, and an actual value. In most cases, the "actual value" will be an M expression that tests part of your expression.
 
 Consider a very simple extension that exports three functions:
 
