@@ -70,7 +70,7 @@ TripPinNavTable = (url as text) as table =>
         source;
 ```
 
-Finally you declare a new shared function, `TripPin.Contents`, that will be used as your main data source function. You'll also remove the `Publish` value from `TripPin.Feed` so that it no longer shows up in the **Get Data** dialog.
+Finally you declare a new shared function, `TripPin.Contents`, that's used as your main data source function. You also remove the `Publish` value from `TripPin.Feed` so that it no longer shows up in the **Get Data** dialog.
 
 ```powerquery-m
 [DataSource.Kind="TripPin"]
@@ -83,7 +83,7 @@ shared TripPin.Contents =  Value.ReplaceType(TripPinNavTable, type function (url
 > [!NOTE]
 > Your extension can mark multiple functions as `shared`, with or without associating them with a `DataSource.Kind`. However, when you associate a function with a specific `DataSource.Kind`, each function **must** have the same set of *required* parameters, with the same name and type. This is because the data source function parameters are combined to make a 'key' used for looking up cached credentials.
 
-Build your connector after finalizing all the changes and test your `TripPin.Contents` function using the TripPin.query.pq file. You can continue to use the previously created credential or you can set a new one and then evaluate your current power query file.
+Build your connector after finalizing all the changes and test your `TripPin.Contents` function using the TripPin.query.pq file. You can continue to use the previously created credential or you can set a new one and then evaluate your current Power Query file.
 
 ```powerquery-m
 TripPin.Contents("https://services.odata.org/v4/TripPinService/")
@@ -93,7 +93,7 @@ TripPin.Contents("https://services.odata.org/v4/TripPinService/")
 
 ## Creating a navigation table
 
-You'll use the handy [Table.ToNavigationTable](../../../helper-functions.md#tabletonavigationtable) function to format your static table into something that Power Query recognizes as a navigation table. Since this function isn't part of Power Query's standard library, you'll need to copy its source code into your.pq file.
+Use the handy [Table.ToNavigationTable](../../../helper-functions.md#tabletonavigationtable) function to format your static table into something that Power Query recognizes as a navigation table. Since this function isn't part of Power Query's standard library, you need to copy its source code into your .pq file.
 
 With this helper function in place, next update your `TripPinNavTable` function to add the navigation table fields.
 
@@ -109,13 +109,13 @@ TripPinNavTable = (url as text) as table =>
         navTable;
 ```
 
-Running your test query again, after building your connector again, will give you a similar result as last time&mdash;with a few more columns added.
+Running your test query again, after building your connector again, gives you a similar result as last time&mdash;with a few more columns added.
 ![TripPin Table2.](../../media/trippin3-table2.png)
 
 > [!NOTE]
-> You will not see the **Navigator** window appear in the PQTest result window of Visual Studio Code. The **M Query Output** window always displays the underlying table.
+> You don't see the **Navigator** window appear in the PQTest result window of Visual Studio Code. The **M Query Output** window always displays the underlying table.
 
-If you copy your extension over to your Power BI Desktop custom connector and invoke the new function from the **Get Data** dialog, you see your navigator appear.
+If you copy your extension over to your Power BI Desktop custom connector and invoke the new function from the **Get Data** dialog, your navigator appears.
 
 ![TripPin Navigator.](../../media/trippin3-nav.png)
 
