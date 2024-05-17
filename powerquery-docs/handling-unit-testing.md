@@ -10,7 +10,7 @@ ms.author: miescobar
 # Handling Unit Testing
 
 >[!NOTE]
-> This content is applicable to the legacy Power Query SDK in Visual Studio. Today the new Power Query SDK in VS Code contains a fully-featured [test framework](sdk-testframework/test-framework.md) which we encourage you to test and learn more.
+> This content is applicable to the legacy Power Query SDK in Visual Studio. Today the new Power Query SDK in Visual Studio Code contains a fully-featured [test framework](sdk-testframework/test-framework.md) which we encourage you to test and learn more.
 
 For both simple and complex connectors, adding unit tests is a best practice and highly recommended.
 

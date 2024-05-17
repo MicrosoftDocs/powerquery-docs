@@ -18,7 +18,7 @@ In this lesson, you will:
 > [!div class="checklist"]
 > * Create a new Data Connector project using the Power Query SDK
 > * Author a base function to pull data from a source
-> * Test your connector in the Power Query SDk
+> * Test your connector in the Power Query SDK
 > * Register your connector in Power BI Desktop
 
 ## Creating a basic OData connector
