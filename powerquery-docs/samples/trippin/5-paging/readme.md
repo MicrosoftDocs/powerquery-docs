@@ -26,7 +26,7 @@ defines a way of doing pagination using [odata.nextLink](https://docs.oasis-open
 To simplify [previous iterations](../4-paths/readme.md) of the connector, the `TripPin.Feed` function wasn't _page aware_. It simply parsed whatever JSON was returned from the request and formatted it as a table. Those familiar with the OData protocol might have noticed that many incorrect assumptions were made on the [format of the response](https://docs.oasis-open.org/odata/odata-json-format/v4.0/cs01/odata-json-format-v4.0-cs01.html#_Toc365464681)
 (such as assuming there's a `value` field containing an array of records).
 
-In this lesson, you'll improve your response handling logic by making it page aware.
+In this lesson, you improve your response handling logic by making it page aware.
 Future tutorials make the page handling logic more robust and able to handle multiple response formats (including errors from the service).
 
 >[!Note]
@@ -41,7 +41,7 @@ When implementing paging support, you'll need to know the following things about
 * How do you know when to stop paging? 
 * Are there parameters related to paging that you should be aware of? (such as "page size")
 
-The answer to these questions impact the way you implement your paging logic. While there's some amount of code reuse
+The answer to these questions impacts the way you implement your paging logic. While there's some amount of code reuse
 across paging implementations (such as the use of [Table.GenerateByPage](../../../helper-functions.md#tablegeneratebypage), most connectors will
 end up requiring custom logic.
 
@@ -82,7 +82,7 @@ in
     withRowCount
 ```
 
-Turn on fiddler, and run the query in the Power Query SDK. You'll notice that the query returns a table with eight rows (index 0 to 7).
+Turn on Fiddler, and run the query in the Power Query SDK. Note that the query returns a table with eight rows (index 0 to 7).
 
 ![QueryWithoutPaging.](../../media/trippin5-people.png)
 
@@ -117,7 +117,7 @@ You're now going to make the following changes to your extension:
 
 To combine the (potentially) multiple pages returned by the source into a single table, we'll use [`Table.GenerateByPage`](../../../helper-functions.md#tablegeneratebypage). This function takes as its argument a `getNextPage` function that should do just what its name suggests: fetch the next page of data. `Table.GenerateByPage` will repeatedly call the `getNextPage` function, each time passing it the results produced the last time it was called, until it returns `null` to signal back that no more pages are available.
 
-Since this function isn't part of Power Query's standard library, you'll need to copy its [source code](../../../helper-functions.md#tablegeneratebypage) into your.pq file.
+Since this function isn't part of Power Query's standard library, you'll need to copy its [source code](../../../helper-functions.md#tablegeneratebypage) into your .pq file.
 
 ### Implementing GetAllPagesByNextLink
 
