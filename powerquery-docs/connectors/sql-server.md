@@ -120,7 +120,7 @@ To troubleshoot this error when using on-premises data gateway, change the gatew
 
 To troubleshoot this error when using Power BI Desktop, modify the value of the environment variable `PBI_SQL_TRUSTED_SERVERS` to include the SQL Servers. The supported values are the same as outlined for gateway configuration (as described in step 4 above).
 
-For connections to SQL Server from Power BI Desktop and on-premises data gateway versions equal or above February 2024, you will either have to ask your SQL administrators to acquire a certificate from a well-known certificate authority, or you will have to go use the solution mentioned above of adding the environment variable _PBI_SQL_TRUSTED_SERVERS_ or change the setting _SqlTrustedServers_ on the gateway config file. If you do not do any of the above you won't be able to connect successfully.
+For connections to SQL Server from Power BI Desktop and on-premises data gateway versions equal or above February 2024, you either have to ask your SQL administrators to acquire a certificate from a well-known certificate authority, or you have to use the solution mentioned above of adding the environment variable _PBI_SQL_TRUSTED_SERVERS_, or change the setting _SqlTrustedServers_ on the gateway config file. If you don't do any of these changes, you won't be able to connect successfully.
 
 ### Always Encrypted columns
 
