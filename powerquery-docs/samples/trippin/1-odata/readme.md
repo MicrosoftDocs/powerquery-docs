@@ -25,11 +25,11 @@ In this lesson, you will:
 
 In this section, you create a new Data Connector project, provide some basic information, and test it in the Power Query SDK.
 
-Open Visual Studio Code, we recommend that you create a new workspace and then create a new extension project. To create the new extension project, open the explorer and in the **Power Query SDK** section select the button that reads "Create an extension project".
+Open Visual Studio Code. We recommend that you create a new workspace and then create a new extension project. To create the new extension project, open the explorer and in the **Power Query SDK** section select the **Create an extension project** button.
 
 ![Create a Power Query SDK extension project](../../media/pq-sdk-create-extension-project.png)
 
-After clicking this button,you'll be prompted to enter the name of the new project. Name this new project `TripPin`.
+After selecting this button, you're be prompted to enter the name of the new project. Name this new project `TripPin`.
 
 ![New extension project created called TripPin using the Power Query SDK.](../../media/TripPin-project-created-pq-sdk.png)
 
@@ -77,28 +77,28 @@ Open the TripPin.query.pq file. Replace the current contents with a call to your
 TripPin.Feed("https://services.odata.org/v4/TripPinService/")
 ```
 
-Before you can test your connector, you have to build it. To do this, go to the Terminal and select the option that reads **Run Build Task...** (Keyboard shortcut ```Ctrl + Shift + B```). We recommend choosing the MakePQX option, but either option available to build should work.
+Before you can test your connector, you have to build it. To do this, go to the **Terminal** and select the option that reads **Run Build Task...** (Keyboard shortcut **Ctrl + Shift + B**). We recommend choosing the **MakePQX** option, but either option available to build should work.
 
 ![Running a build task before testing the connector.](../../media/pq-sdk-run-build-task.png)
 
-The outcome of this operation creates a new folder called *bin* where your built connector will be stored as **TripPin.mez**.
+The outcome of this operation creates a new **Bin** folder where your built connector is be stored as **TripPin.mez**.
 
 ![New bin folder created where the connector file with a mez extension and a name TripPin.mez is located at.](../../media/pq-sdk-new-bin-folder.png)
 
 The \<project>.query.pq file is used to test out your extension without having to deploy it to your Power BI Desktop's bin folder.  Using the tools available inside the Power Query SDK:
-1. Select the option to **Set credential**
-2. Select TripPin as the data source
-3. Select the **TripPin.query.pq** file as the query/test file
-4. Select *anonymous* as the authentication kind 
+1. Select the option to **Set credential**.
+2. Select **TripPin** as the data source.
+3. Select the **TripPin.query.pq** file as the query/test file.
+4. Select *anonymous* as the authentication kind.
 
-In the output dialog you see a message that confirms that you've set a credential for the data source and the details for such credential created.
+In the output dialog, a message appears that confirms that you've set a credential for the data source and the details for each credential created.
 
 ![Output dialog displaying the details of the newly created authentication for the TripPin connectur using the url passed in the .query.pq file](../../media/pq-sdk-credential-set.png)
 
 >[!NOTE]
 >You can always clear the credentials using the **Clear ALL credentials** command or check the available credentials using the **List credentials** command within the Power Query SDK tools.
 
-With the credential now in place, you can select the **TripPin.query.pq** file and either right select in the document to *Evaluate current power query file* or use the option to *Evaluate current file* from the Power Query SDK tools.
+With the credential now in place, you select the **TripPin.query.pq** file and either right select in the document to *Evaluate current power query file* or use the option to *Evaluate current file* from the Power Query SDK tools.
 
 ![Multiple alternatives to evaluate the current Power Query file](../../media/pq-sdk-evaluate-current-file.png)
 
@@ -108,7 +108,7 @@ The output dialog displays a message of the results from your evaluation as well
 
 The **PQTest result** window consists of three tabs:
 * **Output**: Displays a preview of your data in a grid.
-* **Summary**: General evaluation details such as StartTime, EndTime, Duration, the file that was used for the evaluation and the status and more.
+* **Summary**: General evaluation details such as StartTime, EndTime, Duration, the file that was used for the evaluation, the status and more.
 * **DataSource**: Provides information about the Data Source that was used from the Kind, the Function Name, and the path.
 
 
@@ -130,7 +130,7 @@ in
 ```
 
 >[!IMPORTANT]
->Make sure to always save your files as you work. If you make changes to your TripPin.pq file, you should always trigger a subsequent build task to make sure that you are testing against the latest version of your connector
+>Make sure to always save your files as you work. If you make changes to your TripPin.pq file, you should always trigger a subsequent build task to make sure that you're testing against the latest version of your connector.
 
 Open [Fiddler](https://www.telerik.com/fiddler) to capture HTTP traffic, and run the query. You should see a few different requests to services.odata.org, generated by the mashup container process. You can see that accessing the root URL of the service results in a 302 status and a redirect to the longer version of the URL. Following redirects is another behavior you get “for free” from the base library functions.
 
@@ -145,7 +145,7 @@ This behavior is important to note. Even though you didn't implement explicit fo
 
 To use your extension in Power BI Desktop, you'll need to copy your connector project's output file (TripPin.mez) to your Custom Connectors directory.
 
-1. Create a `[My Documents]\Power BI Desktop\Custom Connectors` directory.
+1. Create a **[My Documents]\Power BI Desktop\Custom Connectors** directory.
 2. Copy the extension file (**TripPin.mez**) into this directory.
 3. Check the option **(Not Recommended) Allow any extension to load without validation or warning** in Power BI Desktop (under **File** > **Options and settings** > **Options** > **Security** > **Data Extensions**).
 4. Restart Power BI Desktop.
