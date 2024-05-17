@@ -32,9 +32,9 @@ Open the TripPin extension project from [Part 1](../1-odata/readme.md) in Visual
 TripPin.Feed("https://services.odata.org/v4/TripPinService/Me")
 ```
 
-Open Fiddler and then evaluate the current power query file in Visual Studio Code.
+Open Fiddler and then evaluate the current Power Query file in Visual Studio Code.
 
-In Fiddler, you'll see three requests to the server:
+In Fiddler, there are three requests to the server:
 
 ![Fiddler OData requests.](../../media/trippin2-fiddler.png)
 
@@ -102,7 +102,7 @@ TripPinImpl = (url as text) =>
         json;
 ```
 
-Remember to build your connector now that you've made changes to the connector file and then you can evaluate the query file (TripPin.query.pq).
+Remember to build your connector now that you've made changes to the connector file. Then you can evaluate the query file (TripPin.query.pq).
 The result of the /Me record now resembles the raw JSON that you saw in the Fiddler request.
 
 If you watch Fiddler when running the new function, you'll also notice that the evaluation now makes a single web request, rather than three. Congratulations&mdash;you've achieved a 300% performance increase! You've now lost all the type and schema information, but there's no need to focus on that part yet.
@@ -202,7 +202,7 @@ Select **Save** and your table will appear. While this isn't a navigation table 
 
 Data combination checks don't occur when accessing multiple data sources from within an extension. Since all data source calls made from within the extension inherit the same authorization context, it's assumed they are "safe" to combine. Your extension will always be treated as a single data source when it comes to data combination rules. Users would still receive the regular privacy prompts when combining your source with other M sources. 
 
-If you run Fiddler and select the **Refresh Preview** button in the Query Editor, you'll notice separate web requests for each item in your navigation table. This indicates that an eager evaluation is occurring, which isn't ideal when building navigation tables with many elements. Subsequent lessons show how to build a proper navigation table that supports lazy evaluation.
+If you run Fiddler and select the **Refresh Preview** button in the Query Editor, note the separate web requests for each item in your navigation table. This indicates that an eager evaluation is occurring, which isn't ideal when building navigation tables with many elements. Subsequent lessons show how to build a proper navigation table that supports lazy evaluation.
 
 ## Conclusion
 
