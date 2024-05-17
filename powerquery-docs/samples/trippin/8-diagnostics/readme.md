@@ -11,6 +11,9 @@ ms.author: miescobar
 
 # TripPin part 8 - Adding diagnostics
 
+>[!NOTE]
+>This content currently references content from a legacy implementation for unit testing in Visual Studio. The content will be updated in the near future to cover the new Power Query SDK in Visual Studio Code.
+
 This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially&mdash;each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector.
 
 In this lesson, you will:

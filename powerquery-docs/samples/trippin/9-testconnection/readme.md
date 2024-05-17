@@ -5,7 +5,7 @@ author: ptyx507x
 
 
 ms.topic: tutorial
-ms.date: 1/25/2024
+ms.date: 5/17/2024
 ms.author: miescobar
 ---
 
@@ -23,10 +23,10 @@ In this lesson, you'll:
 Custom connector support was added to the April 2018 release of the [personal on-premises data gateway](/data-integration/gateway/service-gateway-install#download-and-install-a-personal-mode-gateway).
 This new (preview) functionality allows for Scheduled Refresh of reports that make use of your custom connector.
 
-This tutorial will cover the process of enabling your connector for refresh, and provide a quick walkthrough of the steps to configure the gateway. Specifically you'll:
+This tutorial covers the process of enabling your connector for refresh, and provide a quick walkthrough of the steps to configure the gateway. Specifically you'll:
 
 1. Add a TestConnection handler to your connector.
-2. Install the On-Premises Data Gateway in Personal mode.
+2. Install the on-premises Data Gateway in Personal mode.
 3. Enable Custom Connector support in the Gateway.
 4. Publish a workbook that uses your connector to PowerBI.com.
 5. Configure scheduled refresh to test your connector.
@@ -47,7 +47,7 @@ The third item is handled by invoking the TestConnection handler defined for you
 
 ## Adding a TestConnection handler
 
-The TestConnection handler is added to the Data Source Kind declaration record (the same place you declare its supported authentication type(s)).
+The TestConnection handler is added to the Data Source Kind declaration record (the same place you declare its supported authentication types).
 The handler is a `function` with a single parameter of type `any`, which returns a `list`.
 The first value in the list is the function that will be called to actually test the connection. This is generally the same as your main data source function.
 In some cases you may need to expose a separate `shared` function to provide an efficient connection test, however, this should generally be avoided.
@@ -67,7 +67,7 @@ TripPin = [
 ```
 
 > [!NOTE]
-> Future versions of the Power Query SDK will provide a way to validate the TestConnection handler from Visual Studio. Currently, the only mechanism that uses TestConnection is the on-premises data gateway.
+> You can validate your implementation of TestConnection within the Power Query SDK using the command for **Run TestConnection function**.
 
 ## Enabling custom connectors in the personal gateway
 
@@ -92,7 +92,7 @@ Open Power BI Desktop and create a report that imports data using the TripPin co
 
 Add one or more visuals to your report page (optional), and then publish the report to PowerBI.com.
 
-After publishing, go to PowerBI.com and find the semantic model for the report you just published. Select the ellipses, and then select **Schedule Refresh**. Expand the **Gateway connection** and **Data source credentials** sections.
+After publishing, go to PowerBI.com and find the semantic model for the report you published. Select the ellipses, and then select **Schedule Refresh**. Expand the **Gateway connection** and **Data source credentials** sections.
 
 ![Data source settings.](../../media/trippin9-settings-1.png)
 
