@@ -27,11 +27,11 @@ In this section, you create a new Data Connector project, provide some basic inf
 
 Open Visual Studio Code. We recommend that you create a new workspace and then create a new extension project. To create the new extension project, open the explorer and in the **Power Query SDK** section select the **Create an extension project** button.
 
-![Create a Power Query SDK extension project](../../media/pq-sdk-create-extension-project.png)
+![Screenshot emphasizing the option to create a Power Query SDK extension project.](../../media/power-query-sdk-create-extension-project.png)
 
 After selecting this button, you're prompted to enter the name of the new project. Name this new project `TripPin`.
 
-![New extension project created called TripPin using the Power Query SDK.](../../media/TripPin-project-created-pq-sdk.png)
+![Screenshot of the new extension project created called TripPin using the Power Query SDK.](../../media/trippin-project-created-power-query-sdk.png)
 
 Open the TripPin.pq file and paste in the following connector definition.
 
@@ -79,11 +79,11 @@ TripPin.Feed("https://services.odata.org/v4/TripPinService/")
 
 Before you can test your connector, you have to build it. To do this, go to the **Terminal** and select the **Run Build Task...** option (Keyboard shortcut **Ctrl + Shift + B**). We recommend choosing the **MakePQX** option, but either option available to build should work.
 
-![Running a build task before testing the connector.](../../media/pq-sdk-run-build-task.png)
+![Screenshot demonstrating running a build task before testing the connector.](../../media/power-query-sdk-run-build-task.png)
 
 The outcome of this operation creates a new **Bin** folder where your built connector is stored as **TripPin.mez**.
 
-![New bin folder created where the connector file with a mez extension and a name TripPin.mez is located at.](../../media/pq-sdk-new-bin-folder.png)
+![Screenshot of the new bin folder created where the connector file with a mez extension and a name TripPin.mez is located at.](../../media/power-query-sdk-new-bin-folder.png)
 
 The \<project>.query.pq file is used to test out your extension without having to deploy it to your Power BI Desktop's bin folder.  Using the tools available inside the Power Query SDK:
 1. Select the option to **Set credential**.
@@ -93,18 +93,18 @@ The \<project>.query.pq file is used to test out your extension without having t
 
 In the output dialog, a message appears that confirms that you've set a credential for the data source and the details for each credential created.
 
-![Output dialog displaying the details of the newly created authentication for the TripPin connectur using the url passed in the .query.pq file](../../media/pq-sdk-credential-set.png)
+![Screenshot of the output dialog displaying the details of the newly created authentication for the TripPin connectur using the url passed in the .query.pq file.](../../media/power-query-sdk-credential-set.png)
 
 >[!NOTE]
 >You can always clear the credentials using the **Clear ALL credentials** command or check the available credentials using the **List credentials** command within the Power Query SDK tools.
 
 With the credential now in place, you select the **TripPin.query.pq** file and either right select in the document to *Evaluate current power query file* or use the option to *Evaluate current file* from the Power Query SDK tools.
 
-![Multiple alternatives to evaluate the current Power Query file](../../media/pq-sdk-evaluate-current-file.png)
+![Screenshot of the multiple alternatives to evaluate the current Power Query file.](../../media/power-query-sdk-evaluate-current-file.png)
 
 The output dialog displays a message of the results from your evaluation as well as a new window with the name **PQTest result**.
 
-![PQTest result window displaying the results of the evaluation executed](../../media/pq-sdk-test-result-window.png)
+![Screenshot of the PQTest result window displaying the results of the evaluation executed.](../../media/power-query-sdk-test-result-window.png)
 
 The **PQTest result** window consists of three tabs:
 * **Output**: Displays a preview of your data in a grid.
