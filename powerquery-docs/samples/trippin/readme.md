@@ -4,7 +4,7 @@ description: Overview and listing of the TripPin connector development tutorial 
 author: ptyx507x
 
 ms.topic: tutorial
-ms.date: 3/13/2023
+ms.date: 5/16/2024
 ms.author: miescobar
 ms.custom:
 ---
@@ -20,7 +20,7 @@ This tutorial uses a public [OData](https://www.odata.org/documentation/) servic
 The following applications will be used throughout this tutorial:
 
 * [Power BI Desktop](https://www.microsoft.com/download/details.aspx?id=45331), May 2017 release or later
-* [Power Query SDK for Visual Studio](https://aka.ms/powerquerysdk)
+* [Power Query SDK for Visual Studio Code](https://aka.ms/powerquerysdk)
 * [Fiddler](https://www.telerik.com/fiddler)&mdash;Optional, but recommended for viewing and debugging requests to your REST service
 
 It's strongly suggested that you review:
