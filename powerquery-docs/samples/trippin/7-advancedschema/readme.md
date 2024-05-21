@@ -180,7 +180,7 @@ SchemaTable = #table({"Entity", "Type"}, {
 ## Enforcing a schema using types
 
 You'll rely on a common function (`Table.ChangeType`) to enforce a schema on your data, much like you used `SchemaTransformTable` in the [previous lesson](../6-schema/readme.md).
-Unlike `SchemaTransformTable`, `Table.ChangeType` takes in an actual M table type as an argument, and will apply your schema _recursively_ for all nested types. It's signature looks like this:
+Unlike `SchemaTransformTable`, `Table.ChangeType` takes in an actual M table type as an argument, and will apply your schema _recursively_ for all nested types. Its signature looks like this:
 
 ```powerquery-m
 Table.ChangeType = (table, tableType as type) as nullable table => ...
