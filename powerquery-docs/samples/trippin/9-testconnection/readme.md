@@ -23,7 +23,7 @@ In this lesson, you'll:
 Custom connector support was added to the April 2018 release of the [personal on-premises data gateway](/data-integration/gateway/service-gateway-install#download-and-install-a-personal-mode-gateway).
 This new (preview) functionality allows for Scheduled Refresh of reports that make use of your custom connector.
 
-This tutorial covers the process of enabling your connector for refresh, and provide a quick walkthrough of the steps to configure the gateway. Specifically you'll:
+This tutorial covers the process of enabling your connector for refresh, and provides a quick walkthrough of the steps to configure the gateway. Specifically you'll:
 
 1. Add a TestConnection handler to your connector.
 2. Install the on-premises Data Gateway in Personal mode.
