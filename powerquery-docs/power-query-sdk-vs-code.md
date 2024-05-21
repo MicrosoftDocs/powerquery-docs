@@ -9,7 +9,7 @@ ms.author: miescobar
 ---
 # Power Query SDK Overview
 
-The purpose of this article is to give you an overview of the overall capabilities and develoment experience found inside of the Power Query SDK for Visual Studio Code.
+The purpose of this article is to give you an overview of the overall capabilities and development experience found inside of the Power Query SDK for Visual Studio Code.
 
 ## Create a new project
 
@@ -162,7 +162,7 @@ To follow along, we recommend downloading the connector projects available from 
 
 To bring the legacy extension project to the new SDK, follow these steps:
 
-1. In Visual Studio code, select **File** > **Open folder**, then navigate to the folder where your extension project is located.
+1. In Visual Studio Code, select **File** > **Open folder**, then navigate to the folder where your extension project is located.
 2. Set up a workspace using the existing folder and its contents using one of the following two methods:
 
    * The Power Query SDK has a mechanism to recognize the contents of your folder and suggests that you enable the conversion to a new Power Query SDK workspace.
