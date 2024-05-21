@@ -267,7 +267,7 @@ GetPage = (url as text, optional schema as table) as table =>
         withSchema meta [NextLink = nextLink];
 ```
 
->[Note]
+> [!NOTE]
 > This `GetPage` implementation uses [Table.FromRecords](/powerquery-m/table-fromrecords) to convert the list of records in the JSON response to a table.
 > A major downside to using [Table.FromRecords](/powerquery-m/table-fromrecords) is that it assumes all records in the list have the same set of fields.
 > This works for the TripPin service, since the OData records are guarenteed to contain the same fields, but this might not be the case for all REST APIs. 
