@@ -15,7 +15,7 @@ ms.author: dougklo
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
-| Authentication Types Supported | Windows (Power BI Desktop, Excel, online service with gateway)<br/>Database (Power BI Desktop, Excel)<br/>Basic (online service with gateway) |
+| Authentication Types Supported | Windows (Power BI Desktop, Excel, online service with gateway)<br/>Database (Power BI Desktop, Excel)<br/>Basic (online service with and without gateway) |
 | Function Reference Documentation | [MySQL.Database](/powerquery-m/mysql-database) |
 
 > [!NOTE]
@@ -23,7 +23,7 @@ ms.author: dougklo
 
 ## Prerequisites
 
-You need to install the [Oracle MySQL Connector/NET](https://dev.mysql.com/downloads/connector/net/) package prior to using this connector in Power BI Desktop. This component must also be installed on the machine running the on-premises data gateway in order to use this connector in Power Query Online (dataflows) or Power BI service. The MySQL connector requires the MySQL Connector/NET package to be correctly installed. To determine if the package has installed correctly, open a PowerShell window and run the following command:
+You need to install the [Oracle MySQL Connector/NET](https://dev.mysql.com/downloads/connector/net/) package prior to using this connector in Power BI Desktop. For Power Query Online (dataflows) or Power BI service, if your MySQL server is not cloud accessible and an on-premises data gateway is needed, the component Oracle MySQL Connector/NET must also be correctly installed on the machine running the on-premises data gateway. To determine if the package has installed correctly, open a PowerShell window and run the following command:
 
 `[System.Data.Common.DbProviderFactories]::GetFactoryClasses()|ogv`
 
