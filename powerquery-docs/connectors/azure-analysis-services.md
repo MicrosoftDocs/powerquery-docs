@@ -32,6 +32,7 @@ LocalizationGroup: reference
 
 * Import
 * Connect live (Power BI semantic models)
+* Direct Query (composite models on Power BI)
 * Advanced options
   * MDX or DAX query
 
