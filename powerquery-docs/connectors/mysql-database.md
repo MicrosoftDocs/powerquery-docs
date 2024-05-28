@@ -33,6 +33,9 @@ If the package is installed correctly, the MySQL Data Provider is displayed in t
 
 If the package doesn't install correctly, work with your MySQL support team or reach out to MySQL.
 
+> [!NOTE]
+> The MySQL connector isn't supported on the **Personal Mode** of the on-premises data gateway. It's only supported on the on-premises data gateway **(standard mode)**
+
 ## Capabilities Supported
 
 * Import
@@ -81,7 +84,7 @@ To make the connection, take the following steps:
 
    :::image type="content" source="./media/mysql-database/service-signin.png" alt-text="Screenshot of the Connection settings dialog with server and database sample entries filled in.":::
 
-3. If necessary, include the name of your on-premises data gateway.
+3. If the MySQL server is not accessible from the cloud, include the name of your on-premises data gateway (personal mode is not supported).
 
 4. Select the **Basic** authentication kind and input your MySQL credentials in the **Username** and **Password** boxes.
 
@@ -105,3 +108,18 @@ The following table lists all of the advanced options you can set in Power Query
 | Navigate using full hierarchy | If checked, the navigator displays the complete hierarchy of tables in the database you're connecting to. If cleared, the navigator displays only the tables whose columns and rows contain data. |
 
 Once you've selected the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your MySQL database.
+
+## Limitations
+
+The following limitations apply to the Power Query MySQL database connector.
+
+### MySQL connections cannot be used with personal gateways.
+
+If the MySQL database is not accessible from the cloud, configure MySQL on-premises connections by upgrading to an Enterprise Gateway instead of using a personal On-premises Data Gateway. For cloud-based MySQL servers, a gateway is not required.
+
+### It is not possible to mashup MySQL on-premises data with R and Python. 
+
+For cases where Python or R is used with a MySQL database on-premises connection, use one of the following methods:
+
+- Make the MySQL server database accessible from the cloud.
+- Move the MySQL on-premises data to a different dataset and use the Enterprise Gateway exclusively for that purpose. 

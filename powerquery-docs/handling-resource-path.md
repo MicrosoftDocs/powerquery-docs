@@ -1,13 +1,13 @@
 ---
-title: Using a resource path for Power Query connectors
-description: Use a resource path for Power Query connectors
+title: Using a Data source path for Power Query connectors
+description: Use a Data source path for Power Query connectors
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 5/22/2023
+ms.date: 5/15/2024
 ms.author: miescobar
 ---
 
-# Handling resource path
+# Handling Data source path
 
 The M engine identifies a data source using a combination of its _Kind_ and _Path_. When a data source is encountered during a query evaluation, the M engine tries to find matching credentials. If no credentials are found, the engine returns a special error that results in a credential prompt in Power Query.
 

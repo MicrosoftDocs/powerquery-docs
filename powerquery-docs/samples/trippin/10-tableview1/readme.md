@@ -3,11 +3,14 @@ title: TripPin 10 - Basic Query Folding
 description: Initial support for query folding for your TripPin REST connector.
 author: ptyx507x
 ms.topic: tutorial
-ms.date: 3/13/2024
+ms.date: 5/17/2024
 ms.author: miescobar
 ---
 
 # TripPin part 10 - Basic query folding
+
+>[!NOTE]
+>This content currently references content from a legacy implementation for logs in Visual Studio. The content will be updated in the near future to cover the new Power Query SDK in Visual Studio Code.
 
 This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially&mdash;each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector.
 

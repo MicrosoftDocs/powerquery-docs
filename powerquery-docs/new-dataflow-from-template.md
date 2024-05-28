@@ -1,8 +1,8 @@
 ---
 title: "Create Power Platform dataflows from queries in Microsoft Excel (Preview)"
 description: Easily create Microsoft Power Platform dataflows from queries in Microsoft Excel.
-author: bensack
-ms.author: bensack
+author: Luitwieler
+ms.author: jeluitwi
 ms.date: 1/24/2024
 ---
 

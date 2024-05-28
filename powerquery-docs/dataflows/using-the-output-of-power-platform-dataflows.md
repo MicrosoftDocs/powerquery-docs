@@ -1,7 +1,7 @@
 ---
 title: Consume data from dataflows
 description: Consume data from dataflows.
-author: luitwieler
+author: Luitwieler
 ms.topic: conceptual
 ms.date: 1/25/2024
 ms.author: jeluitwi
