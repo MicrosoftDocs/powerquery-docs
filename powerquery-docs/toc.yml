@@ -477,6 +477,8 @@ items:
         href: connectors/odbc.md
       - name: "OLE DB"
         href: connectors/ole-db.md
+      - name: "OneStream (Beta)"
+        href: connectors/onestream.md
       - name: "OpenSearch Project (Beta)"
         href: connectors/opensearch-project.md
       - name: "Oracle database"
