@@ -3,6 +3,8 @@ title: Power Query OneStream connector
 description: Provides support, prerequisites, and instructions on how to connect to your OneStream data.
 author: os-mik
 ms.author: dougklo
+ms.date: 05/29/2024
+ms.topic: conceptual
 ---
 
 # OneStream (Beta)
