@@ -36,7 +36,7 @@ The OneStream Connector enables secure access to your OneStream applications. Wi
 
 ### Get Data
 
-1. Open Power BI Desktop and select "Get Data".
+1. Open Power BI Desktop and select **Get Data**.
 
    :::image type="content" source="./media/onestream/pbi-get-data.png" alt-text="Screenshot of the get data experience.":::
 
@@ -58,9 +58,9 @@ The OneStream Connector enables secure access to your OneStream applications. Wi
 
 ### Authenticate
 
-1. Select **"Sign In"** to start the authentication process.
+1. Select **Sign In** to start the authentication process.
 
-2. It redirects and opens OneStream Identity Server on your default browser for login.
+2. This selection redirects and opens OneStream Identity Server on your default browser for login.
 
 3. Log in to your OneStream Account.
 
@@ -87,7 +87,7 @@ After selecting the function you want to use, follow through to [load the data](
 
 ### Load data
 
-1. Based on the requirement, provide the values for the given function. You can toggle the parameters to just the required ones or use all of them if necessary. Power BI will display a preview of data for the table that would be returned.
+1. Based on the requirements, provide the values for the given function. You can toggle the parameters to just the required ones or use all of them if necessary. Power BI displays a preview of data for the table that would be returned.
 
 2. After providing the parameters, either load or transform the data.
 
@@ -147,7 +147,7 @@ This function retrieves data from a OneStream Cube.
 * All the parameters can be specified via OneStream Member Script (for example, 2023.Base for time), except View and Currency which require a single member.
 * Currency refers to the Consolidation dimension in OneStream, so you can use Local or Aggregate for example.
 
-:::image type="content" source="./media/onestream/os-connector-get-cube.png" alt-text="Screenshot of the navigator dialog with a Get Cube Data function emphasized." lightbox=./media/onestream/os-connector-get-cube.png:::
+:::image type="content" source="./media/onestream/os-connector-get-cube.png" alt-text="Screenshot of the navigator dialog with a Get Cube Data function emphasized." lightbox="./media/onestream/os-connector-get-cube.png":::
 
 ### Get custom adapter
 
