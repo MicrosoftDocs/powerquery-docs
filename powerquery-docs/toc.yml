@@ -577,7 +577,7 @@ items:
           href: connectors/web/web-by-example.md
         - name: "Troubleshooting"
           href: connectors/web/web-troubleshoot.md
-      - name: "Wolters Kluwer CCH Tagetik"
+      - name: "Wolters Kluwer CCH Tagetik (Beta)"
         href: connectors/wolters-kluwer-cch-tagetik.md
       - name: "Workforce Dimensions (Beta) (Deprecated)"
         href: connectors/workforce-dimensions.md
