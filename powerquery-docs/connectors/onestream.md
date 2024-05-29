@@ -38,21 +38,21 @@ The OneStream Connector enables secure access to your OneStream applications. Wi
 
 1. Open Power BI Desktop and select "Get Data".
 
-![Get Data](./media/onestream/pbi-get-data.png)
+   :::image type="content" source="./media/onestream/pbi-get-data.png" alt-text="Screenshot of the get data experience.":::
 
-3. Type **OneStream** in the search box to find the custom OneStream connector.
+2. Type **OneStream** in the search box to find the custom OneStream connector.
 
-![OneStream Connector](./media/onestream/os-connector-search.png)
+   :::image type="content" source="./media/onestream/os-connector-search.png" alt-text="Screenshot of the get data dialog with OneStream entered in the search box.":::
 
-4. Select **OneStream**.
+3. Select **OneStream**.
 
-5. Select **Connect**.
+4. Select **Connect**.
 
 ### Configure the connector
 
 1. Enter your OneStream environment URL. Ensure that the Environment URL is entered with a leading **https://** (as shown in the following screenshot). Otherwise, connection attempts don't work properly.
 
-![Connector configuration](./media/onestream/os-connector-config.png)
+   :::image type="content" source="./media/onestream/os-connector-config.png" alt-text="Screenshot of the connector configuration dialog with the environmental URL entered.":::
 
 2. Select **OK**.
 
@@ -64,11 +64,11 @@ The OneStream Connector enables secure access to your OneStream applications. Wi
 
 3. Log in to your OneStream Account.
 
-![OIS Login](./media/onestream/os-connector-login.png)
+   :::image type="content" source="./media/onestream/os-connector-login.png" alt-text="Screenshot of the authentication dialog with the OneStream login dialog displayed.":::
 
 4. After successful login, select **Connect**.
 
-![Connect](./media/onestream/os-connector-connect.png)
+   :::image type="content" source="./media/onestream/os-connector-connect.png" alt-text="Screenshot of the authentication dialog with the user signed in.":::
 
 ### OneStream navigator
 
@@ -79,7 +79,7 @@ After successful login, the OneStream connector shows the navigator with 4 types
 * [Get Dimension](#get-dimension-and-get-member-properties)
 * [Get Member Properties](#get-dimension-and-get-member-properties)
 
-![Sample function](./media/onestream/os-connector-get-dimension.png)
+:::image type="content" source="./media/onestream/os-connector-get-dimension.png" alt-text="Screenshot of the navigator dialog with Get Dimension selected." lightbox="./media/onestream/os-connector-get-dimension.png":::
 
 Refer to the [best practices](#best-practices-and-functions-help) if you need help configuring the functions.
 
@@ -116,15 +116,15 @@ The OneStream connector has a limitation of 2 million rows per call. Executing a
 
 2. Choose the appropriate Power BI workspace and select **Select**.
 
-   ![Select Workspace for publication](./media/onestream/pbi-publish.png)
+   :::image type="content" source="./media/onestream/pbi-publish.png" alt-text="Screenshot of Power BI Desktop with the publish button, the workspace, and the publish select button emphasized." lightbox="./media/onestream/pbi-publish.png":::
 
 3. After a successful publication, a "Success" message with a link to navigate to the Power BI Service is displayed.
 
-   ![Successfully published model](./media/onestream/pbi-publish-success.png)
+   :::image type="content" source="./media/onestream/pbi-publish-success.png" alt-text="Screenshot of the publishing to Power BI dialog, with the success message and an emphasized link.":::
 
 4. Select the link to view all reports from Power BI Desktop in the Power BI service, as well as create dashboards in the Power BI service.
 
-![Refresh data model on service](./media/onestream/pbi-publish-access.png)
+   :::image type="content" source="./media/onestream/pbi-publish-access.png" alt-text="Screenshot of the refresh data model on the service with the refresh icon emphasized." lightbox="./media/onestream/pbi-publish-access.png":::
 
 ## Best practices and functions help
 
@@ -147,7 +147,7 @@ This function retrieves data from a OneStream Cube.
 * All the parameters can be specified via OneStream Member Script (for example, 2023.Base for time), except View and Currency which require a single member.
 * Currency refers to the Consolidation dimension in OneStream, so you can use Local or Aggregate for example.
 
-![Get Cube](./media/onestream/os-connector-get-cube.png)
+:::image type="content" source="./media/onestream/os-connector-get-cube.png" alt-text="Screenshot of the navigator dialog with a Get Cube Data function emphasized." lightbox=./media/onestream/os-connector-get-cube.png:::
 
 ### Get custom adapter
 
@@ -155,7 +155,7 @@ This function retrieves data from a OneStream Cube.
 * Table Name and Parameters are optional.
 * Refer to a configured dashboard adapter inside OneStream to make sure you are inserting the right values.
 
-![Get Adapter](./media/onestream/os-connector-get-adapter.png)
+:::image type="content" source="./media/onestream/os-connector-get-adapter.png" alt-text="Screenshot of the navigator dialog with a Get Custom Adapter Data function emphasized." lightbox="./media/onestream/os-connector-get-adapter.png":::
 
 ### Get dimension and get member properties
 
@@ -163,4 +163,4 @@ This function retrieves data from a OneStream Cube.
 * Specify the Scenario Type. Use Default or All to use the selected cube default dimensions and retrieve the default properties.
 * Include Descriptions can be set to True or False.
 
-![Get Dimension](./media/onestream/os-connector-get-dimension.png)
+:::image type="content" source="./media/onestream/os-connector-get-dimension.png" alt-text="Screenshot of the navigator dialog with a Get Dimension function emphasized." lightbox="./media/onestream/os-connector-get-dimension.png":::
