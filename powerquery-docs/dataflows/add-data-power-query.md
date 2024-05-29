@@ -97,7 +97,7 @@ After selecting which Dataverse table to load data into, you then choose the imp
 
 After you select a destination Dataverse table and specify the import method, the columns are grouped into mapped, possible match, and unmapped. You can toggle between these groupings by selecting the **Mapped**, **Possible match**, or **Unmapped** tabs at the top or stay in the default **Show all** tab that lists all mappings.  
 
-:::image type="content" source="./media/add-data-power-query/column-mapping.png" alt-text="Screenshot of the Choose destination settings dialog with the column mapping choices displayed.":::
+:::image type="content" source="./media/add-data-power-query/column-mapping.png" alt-text="Screenshot of the Choose destination settings dialog with the column mapping choices displayed." lightbox="./media/add-data-power-query/column-mapping.png":::
 
 The source and destination column mappings are grouped as follows:
 
