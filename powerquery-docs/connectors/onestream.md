@@ -36,7 +36,7 @@ The OneStream Connector enables secure access to your OneStream applications. Wi
 
 ### Get Data
 
-1. Open Power BI Desktop and select **Get Data**.
+1. Open Power BI Desktop and select **Get data from other sources**.
 
    :::image type="content" source="./media/onestream/pbi-get-data.png" alt-text="Screenshot of the get data experience.":::
 
