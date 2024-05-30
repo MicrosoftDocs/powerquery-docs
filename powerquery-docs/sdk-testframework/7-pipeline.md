@@ -1,7 +1,7 @@
 ---
 title: Setting up a pipeline for testing Power Query connectors
 description: High level guide for setting up a pipeline for the automated testing of Power Query connectors
-author: v-jbrandrick
+author: Julian-Brandrick
 ms.topic: reference
 ms.date: 01/09/2024
 ms.author: v-jbrandrick
