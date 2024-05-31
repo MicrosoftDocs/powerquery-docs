@@ -36,7 +36,7 @@ The result of that operation is shown in the following image.
 :::image type="content" source="media/cluster-values/cluster-column-initial-result.png" alt-text="Screenshot of the clustered values as a new column called Cluster in the initial table.":::
 
 > [!NOTE]
->For each cluster of values, Power Query picks the most frequent instance from the selected column as the "canonical" instance. If multiple instances occur with the same frequency, Power Query picks the first one. For more information, got to [Fuzzy matching precepts](fuzzy-matching.md#fuzzy-matching-precepts).
+>For each cluster of values, Power Query picks the most frequent instance from the selected column as the "canonical" instance. If multiple instances occur with the same frequency, Power Query picks the first one.
 
 ## Using the fuzzy cluster options
 
