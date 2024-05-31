@@ -25,7 +25,7 @@ In this example, the outcome you're looking for is a table with a new column tha
 
 To cluster values, first select the **Person** column, go to the **Add column** tab in the ribbon, and then select the **Cluster values** option.
 
-:::image type="content" source="media/cluster-values/cluster-column-icon.png" alt-text="Screenshot of the cluster values icon inside the Add column tab in the Power Query online ribbon.":::
+:::image type="content" source="media/cluster-values/cluster-column-icon.png" alt-text="Screenshot of the cluster values icon inside the Add column tab in the Power Query online ribbon." lightbox="media/cluster-values/cluster-column-icon.png":::
 
 In the **Cluster values** dialog box, confirm the column that you want to use to create the clusters from, and enter the new name of the column. For this case, name this new column **Cluster**.
 

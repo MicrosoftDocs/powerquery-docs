@@ -56,7 +56,7 @@ To determine what's causing this clustering, double-click **Clustered values** i
 
 Enabling the **Show similarity scores** option creates a new column in your table. This column shows you the exact similarity score between the defined cluster and the original value.
 
-:::image type="content" source="media/fuzzy-matching/values-with-show-similarity-score.png" alt-text="Screenshot of the table with a new similarity score column named Fruit_Cluster_Similarity.":::
+:::image type="content" source="media/fuzzy-matching/values-with-show-similarity-score.png" alt-text="Screenshot of the table with a new similarity score column named Fruit_Cluster_Similarity." lightbox="media/fuzzy-matching/values-with-show-similarity-score.png":::
 
 Upon closer inspection, Power Query couldn't find any other values in the similarity threshold for the text strings `Blue berries are simply the best`,`Strawberries = <3`, `fav fruit is bananas`, and `My favorite fruit, by far, is Apples. I simply love them!`.
 
@@ -66,14 +66,14 @@ Go back to the **Cluster values** dialog box one more time by double-clicking **
 
 This change gets you closer to the result that you're looking for, except for the text string `My favorite fruit, by far, is Apples. I simply love them!`. When you changed the **Similarity threshold** value from **0.8** to **0.6**, Power Query was now able to use the values with a similarity score that starts from 0.6 all the way up to 1.
 
-:::image type="content" source="media/fuzzy-matching/values-with-show-similarity-score-60.png" alt-text="Screenshot of the table after defining the similarity threshold at 0.6 with new values assigned in the Cluster column.":::
+:::image type="content" source="media/fuzzy-matching/values-with-show-similarity-score-60.png" alt-text="Screenshot of the table after defining the similarity threshold at 0.6 with new values assigned in the Cluster column." lightbox="media/fuzzy-matching/values-with-show-similarity-score-60.png":::
 
 > [!NOTE]
 >Power Query always uses the value closest to the threshold to define the clusters. The threshold defines the lower limit of the similarity score that's acceptable to assign the value to a cluster.
 
 You can try again by changing the **Similarity score** from 0.6 to a lower number until you get the results that you're looking for. In this case, change the **Similarity score** to **0.5**. This change yields the exact result that you're expecting with the text string `My favorite fruit, by far, is Apples. I simply love them!` now assigned to the cluster `Apples`.
 
-:::image type="content" source="media/fuzzy-matching/values-with-show-similarity-score-50.png" alt-text="Screenshot of the table with all the correct values in the Cluster column.":::
+:::image type="content" source="media/fuzzy-matching/values-with-show-similarity-score-50.png" alt-text="Screenshot of the table with all the correct values in the Cluster column." lightbox="media/fuzzy-matching/values-with-show-similarity-score-50.png":::
 
 > [!NOTE]
 > Currently, only the [Cluster values](cluster-values.md) feature in Power Query Online provides a new column with the similarity score.
@@ -84,9 +84,9 @@ The transformation table helps you map values from your column to new values bef
 
 Some examples of how the transformation table can be used:
 
+* [Transformation table in cluster values](cluster-values.md#using-the-fuzzy-cluster-options)
 * [Transformation table in fuzzy merge queries](merge-queries-fuzzy-match.md#transformation-table)
 * [Transformation table in group by](group-by.md#fuzzy-grouping)
-* [Transformation table in cluster values](cluster-values.md#using-the-fuzzy-cluster-options)
 
 > [!IMPORTANT]
 >When the transformation table is used, the maximum similarity score for the values from the transformation table is 0.95. This deliberate penalty of 0.05 is in place to distinguish that the original value from such column isn't equal to the values that it was compared to since a transformation occurred.

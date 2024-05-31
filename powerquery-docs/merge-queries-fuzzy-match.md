@@ -101,6 +101,8 @@ For this example, the **Similarity score** serves only as additional information
    Screenshot of the fuzzy merge survey output table with the Question column containing the column distribution graph showing nine distinct answers with all answers unique, and the answers to the survey with all the typos, plural or singular, and case problems. Also contains the Fruit column with the column distribution graph showing four distinct answers with one unique answer and lists all of the fruits properly spelled, singular, and proper case.
 :::image-end:::
 
+For more information about how transformation tables work, go to [Transformation table precepts](cluster-values.md#transformation-table-precepts).
+
 ## Related content
 
 * [Fuzzy matching](fuzzy-matching.md)
