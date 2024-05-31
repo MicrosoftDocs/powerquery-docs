@@ -15,7 +15,7 @@ In Power Query, you can group values in various rows into a single value by grou
 
 * Row groupings.
 
-For this tutorial, you are using the following sample table.
+For this tutorial, you're using the following sample table.
 
 :::image type="complex" source="media/group-by/initial-table.png" alt-text="Sample initial table.":::
   Screenshot of a table with columns showing Year (2020), Country (USA, Panama, or Canada), Product (Shirt or Shorts), Sales channel (Online or Reseller), and Units (various values from 55 to 7500)
@@ -138,7 +138,7 @@ To demonstrate how to do "fuzzy grouping," consider the sample table shown in th
 
 The goal of fuzzy grouping is to do a group-by operation that uses an approximate match algorithm for text strings. Power Query uses the Jaccard similarity algorithm to measure the similarity between pairs of instances. Then it applies agglomerative hierarchical clustering to group instances together. The following image shows the output that you expect, where the table is grouped by the **Person** column.
 
-:::image type="content" source="media/group-by/fuzzy-grouping-sample-final-table-no-transform-table.png" alt-text="Screenshot of a table showing entries for Person as "Miguel" and "Mike," and Frequency as 3 and 2, respectively.":::
+:::image type="content" source="media/group-by/fuzzy-grouping-sample-final-table-no-transform-table.png" alt-text="Screenshot of a table showing entries for Person as Miguel and Mike, and Frequency as 3 and 2, respectively.":::
 
 To do the fuzzy grouping, you perform the same steps previously described in this article. The only difference is that this time, in the **Group by** dialog box, you select the **Use fuzzy grouping** check box.
 
