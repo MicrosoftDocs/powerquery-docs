@@ -477,6 +477,8 @@ items:
         href: connectors/odbc.md
       - name: "OLE DB"
         href: connectors/ole-db.md
+      - name: "OneStream (Beta)"
+        href: connectors/onestream.md
       - name: "OpenSearch Project (Beta)"
         href: connectors/opensearch-project.md
       - name: "Oracle database"
@@ -587,6 +589,8 @@ items:
           href: connectors/web/web-by-example.md
         - name: "Troubleshooting"
           href: connectors/web/web-troubleshoot.md
+      - name: "Wolters Kluwer CCH Tagetik (Beta)"
+        href: connectors/wolters-kluwer-cch-tagetik.md
       - name: "Workforce Dimensions (Beta) (Deprecated)"
         href: connectors/workforce-dimensions.md
       - name: "XML"
@@ -607,19 +611,103 @@ items:
         href: connectors/connector-feedback.md
       - name: "Capture web requests with Fiddler"
         href: web-connection-fiddler.md
-    - name: Create custom Power Query connectors
-      items:
-      - name: "Power Query SDK Overview"
+    - name: Create Power Query connectors
+      items: 
+      - name: "Develop a connector using the Power Query SDK"
         href: install-sdk.md
-      - name: Quick starts
+      - name: "Power Query SDK"
         items:
-        - name: "Using the Power Query SDK"
+        - name: "Power Query SDK Overview"
           href: power-query-sdk-vs-code.md
-        - name: "Create your first connector - Hello World"
+        - name: "Creating your first connector project - Hello World"
           href: creating-first-connector.md
-      - name: Walkthroughs
+        - name: Concepts
+          items:
+          - name: "Additional connector functionality"
+            href: additional-connector-functionality.md
+          - name: "Handling authentication"
+            href: handling-authentication.md
+          - name: "Configure Microsoft Entra ID for your connector"
+            href: configure-microsoft-entra-for-connector.md
+          - name: "Handling data access"
+            href: handling-data-access.md
+          - name: "ODBC development"
+            items:
+            - name: "Enabling DirectQuery for an ODBC based connector"
+              href: odbc.md
+            - name: "Parameters for Odbc.DataSource"
+              href: odbc-parameters.md
+            - name: "Testing and troubleshooting"
+              href: odbc-troubleshooting.md
+          - name: "Handling resource path"
+            href: handling-resource-path.md
+          - name: "Handling paging"
+            href: handling-paging.md
+          - name: "Handling transformations"
+            href: handling-transformations.md
+          - name: "Handling schemas"
+            href: handling-schema.md
+          - name: "Handling status codes"
+            items:
+            - name: "Default behavior"
+              href: handling-status-codes.md
+            - name: "Wait retry pattern"
+              href: wait-retry.md
+          - name: "Handling unit testing"
+            href: handling-unit-testing.md
+          - name: "Helper functions"
+            href: helper-functions.md
+          - name: "Handling documentation"
+            href: handling-documentation.md
+          - name: "Handling navigation tables"
+            href: handling-navigation-tables.md
+          - name: "Handling gateway support"
+            href: handling-gateway-support.md
+          - name: "Handling connector signing"
+            href: handling-connector-signing.md
+          - name: "Handling proxy support"
+            href: handling-proxy-support.md
+          - name: "Handling native query support"
+            href: native-query-sdk.md
+          - name: "Versioning"
+            href: handling-versioning.md
+        - name: Power Query SDK test framework
+          items:
+          - name: "Overview"
+            href: sdk-testframework/test-framework.md
+          - name: "1. Setup"
+            href: sdk-testframework/1-set-up.md
+          - name: "2. Preparing data"
+            href: sdk-testframework/2-data.md
+          - name: "3. Test suite"
+            href: sdk-testframework/3-tests.md
+          - name: "4. Test format specification"
+            href: sdk-testframework/4-testformat.md
+          - name: "5. Connector testing"
+            href: sdk-testframework/5-connector.md
+          - name: "6. Adding tests"
+            href: sdk-testframework/6-adding.md
+          - name: "7. Pipeline setup guide"
+            href: sdk-testframework/7-pipeline.md
+        - name: Power Query SDK tools
+          items:
+          - name: PQTest.exe
+            items:
+              - name: Overview
+                href: sdk-tools/pqtest-overview.md
+              - name: Commands and options
+                href: sdk-tools/pqtest-commands-options.md
+              - name: General usage
+                href: sdk-tools/pqtest-general-usage.md
+              - name: Credentials
+                href: sdk-tools/pqtest-credentials.md
+              - name: Compare
+                href: sdk-tools/pqtest-compare.md
+      - name: Connector Samples & Walkthroughs
         items:
-        - name: TripPin walkthrough
+        - name: "Samples list"
+          href: samples-directory.md
+        - name: "TripPin Walkthrough"
           items:
           - name: "Overview"
             href: samples/trippin/readme.md
@@ -643,100 +731,8 @@ items:
             href: samples/trippin/9-testconnection/readme.md
           - name: "10. Folding"
             href: samples/trippin/10-tableview1/readme.md
-        - name: OAuth tutorials
-          items:
-          - name: "GitHub"
-            href: samples/github/readme.md
-      - name: Samples
-        items:
-        - name: "Functional samples"
-          href: samples-directory.md#functionality
-        - name: "ODBC samples"
-          href: samples-directory.md#odbc
-        - name: "TripPin samples"
-          href: samples-directory.md#trippin
-      - name: Concepts
-        items:
-        - name: "Additional connector functionality"
-          href: additional-connector-functionality.md
-        - name: "Handling authentication"
-          href: handling-authentication.md
-        - name: "Configure Microsoft Entra ID for your connector"
-          href: configure-microsoft-entra-for-connector.md
-        - name: "Handling data access"
-          href: handling-data-access.md
-        - name: "ODBC development"
-          items:
-          - name: "Enabling DirectQuery for an ODBC based connector"
-            href: odbc.md
-          - name: "Parameters for Odbc.DataSource"
-            href: odbc-parameters.md
-          - name: "Testing and troubleshooting"
-            href: odbc-troubleshooting.md
-        - name: "Handling resource path"
-          href: handling-resource-path.md
-        - name: "Handling paging"
-          href: handling-paging.md
-        - name: "Handling transformations"
-          href: handling-transformations.md
-        - name: "Handling schemas"
-          href: handling-schema.md
-        - name: "Handling status codes"
-          items:
-          - name: "Default behavior"
-            href: handling-status-codes.md
-          - name: "Wait retry pattern"
-            href: wait-retry.md
-        - name: "Handling unit testing"
-          href: handling-unit-testing.md
-        - name: "Helper functions"
-          href: helper-functions.md
-        - name: "Handling documentation"
-          href: handling-documentation.md
-        - name: "Handling navigation tables"
-          href: handling-navigation-tables.md
-        - name: "Handling gateway support"
-          href: handling-gateway-support.md
-        - name: "Handling connector signing"
-          href: handling-connector-signing.md
-        - name: "Handling proxy support"
-          href: handling-proxy-support.md
-        - name: "Handling native query support"
-          href: native-query-sdk.md
-        - name: "Versioning"
-          href: handling-versioning.md
-      - name: Power Query SDK test framework
-        items:
-        - name: "Overview"
-          href: sdk-testframework/test-framework.md
-        - name: "1. Setup"
-          href: sdk-testframework/1-set-up.md
-        - name: "2. Preparing data"
-          href: sdk-testframework/2-data.md
-        - name: "3. Test suite"
-          href: sdk-testframework/3-tests.md
-        - name: "4. Test format specification"
-          href: sdk-testframework/4-testformat.md
-        - name: "5. Connector testing"
-          href: sdk-testframework/5-connector.md
-        - name: "6. Adding tests"
-          href: sdk-testframework/6-adding.md
-        - name: "7. Pipeline setup guide"
-          href: sdk-testframework/7-pipeline.md
-      - name: Power Query SDK tools
-        items:
-        - name: PQTest.exe
-          items:
-            - name: Overview
-              href: sdk-tools/pqtest-overview.md
-            - name: Commands and options
-              href: sdk-tools/pqtest-commands-options.md
-            - name: General usage
-              href: sdk-tools/pqtest-general-usage.md
-            - name: Credentials
-              href: sdk-tools/pqtest-credentials.md
-            - name: Compare
-              href: sdk-tools/pqtest-compare.md
+        - name: "OAuth tutorial (GitHub)"
+          href: samples/github/readme.md
       - name: Connector Certification
         items:
         - name: "Overview"
@@ -745,7 +741,7 @@ items:
           href: certification-submission.md
         - name: "Custom connector documentation"
           href: providing-user-documentation.md
-      - name: "Custom connector development FAQ"
+      - name: "Connector development FAQ"
         href: custom-connector-development-faq.yml
     - name: Resources
       items:

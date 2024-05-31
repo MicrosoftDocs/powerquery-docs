@@ -15,7 +15,7 @@ ms.author: dougklo
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
-| Authentication Types Supported | Windows (Power BI Desktop, Excel, online service with gateway)<br/>Database (Power BI Desktop, Excel)<br/>Basic (online service with gateway) |
+| Authentication Types Supported | Windows (Power BI Desktop, Excel, online service with gateway)<br/>Database (Power BI Desktop, Excel)<br/>Basic (online service with and without gateway) |
 | Function Reference Documentation | [MySQL.Database](/powerquery-m/mysql-database) |
 
 > [!NOTE]
@@ -23,7 +23,7 @@ ms.author: dougklo
 
 ## Prerequisites
 
-You need to install the [Oracle MySQL Connector/NET](https://dev.mysql.com/downloads/connector/net/) package prior to using this connector in Power BI Desktop. This component must also be installed on the machine running the on-premises data gateway in order to use this connector in Power Query Online (dataflows) or Power BI service. The MySQL connector requires the MySQL Connector/NET package to be correctly installed. To determine if the package has installed correctly, open a PowerShell window and run the following command:
+You need to install the [Oracle MySQL Connector/NET](https://dev.mysql.com/downloads/connector/net/) package prior to using this connector in Power BI Desktop. For Power Query Online (dataflows) or Power BI service, if your MySQL server is not cloud accessible and an on-premises data gateway is needed, the component Oracle MySQL Connector/NET must also be correctly installed on the machine running the on-premises data gateway. To determine if the package has installed correctly, open a PowerShell window and run the following command:
 
 `[System.Data.Common.DbProviderFactories]::GetFactoryClasses()|ogv`
 
@@ -84,7 +84,7 @@ To make the connection, take the following steps:
 
    :::image type="content" source="./media/mysql-database/service-signin.png" alt-text="Screenshot of the Connection settings dialog with server and database sample entries filled in.":::
 
-3. If necessary, include the name of your on-premises data gateway.
+3. If the MySQL server is not accessible from the cloud, include the name of your on-premises data gateway (personal mode is not supported).
 
 4. Select the **Basic** authentication kind and input your MySQL credentials in the **Username** and **Password** boxes.
 
@@ -108,3 +108,18 @@ The following table lists all of the advanced options you can set in Power Query
 | Navigate using full hierarchy | If checked, the navigator displays the complete hierarchy of tables in the database you're connecting to. If cleared, the navigator displays only the tables whose columns and rows contain data. |
 
 Once you've selected the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your MySQL database.
+
+## Limitations
+
+The following limitations apply to the Power Query MySQL database connector.
+
+### MySQL connections cannot be used with personal gateways.
+
+If the MySQL database is not accessible from the cloud, configure MySQL on-premises connections by upgrading to an Enterprise Gateway instead of using a personal On-premises Data Gateway. For cloud-based MySQL servers, a gateway is not required.
+
+### It is not possible to mashup MySQL on-premises data with R and Python. 
+
+For cases where Python or R is used with a MySQL database on-premises connection, use one of the following methods:
+
+- Make the MySQL server database accessible from the cloud.
+- Move the MySQL on-premises data to a different dataset and use the Enterprise Gateway exclusively for that purpose. 

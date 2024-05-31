@@ -5,7 +5,7 @@ author: ptyx507x
 
 
 ms.topic: tutorial
-ms.date: 1/9/2023
+ms.date: 5/17/2024
 ms.author: miescobar
 ---
 
@@ -80,14 +80,14 @@ TripPin.Feed = (url as text) =>
         json;
 ```
 
-If you update the `TripPin.Contents()` call in your `TripPin.query.pq` file and run it in Visual Studio, you'll see a new credential prompt. Note that there is now a single Data Source Path value&mdash;TripPin.
+If you update the `TripPin.Contents()` call in your `TripPin.query.pq` file and run it in Visual Studio Code, you'll see a new credential prompt. Note that there's now a single Data Source Path value&mdash;TripPin.
 
 ![Credentials with no path.](../../media/trippin4-new-prompt.png)
 
 ## Improving the navigation table
 
 In the [first tutorial](../1-odata/readme.md) you used the built-in `OData` functions to connect to the TripPin service.
-This gave you a really nice looking navigation table, based on the TripPin service document, with no additional code on your side.
+This gave you a nice looking navigation table, based on the TripPin service document, with no more code on your side.
 The [OData.Feed](/powerquery-m/odata-feed) function automatically did the hard work for you.
 Since you're "roughing it" by using [Web.Contents](/powerquery-m/web-contents) rather than [OData.Feed](/powerquery-m/odata-feed), you'll need to recreate this navigation table yourself.
 
@@ -138,8 +138,8 @@ When dynamically building URL paths, make sure you're clear where your forward s
 Note that [Uri.Combine](/powerquery-m/uri-combine) uses the following rules when combining paths:
 
 * When the `relativeUri` parameter starts with a /, it will replace the entire path of the `baseUri` parameter
-* If the `relativeUri` parameter _does not_ start with a / and `baseUri` ends with a /, the path is appended
-* If the `relativeUri` parameter _does not_ start with a / and `baseUri` _does not_ end with a /, the last segment of the path is replaced
+* If the `relativeUri` parameter _doesn't_ start with a / and `baseUri` ends with a /, the path is appended
+* If the `relativeUri` parameter _doesn't_ start with a / and `baseUri` _doesn't_ end with a /, the last segment of the path is replaced
 
 The following image shows examples of this:
 

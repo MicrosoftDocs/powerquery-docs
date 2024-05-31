@@ -1,10 +1,10 @@
 ---
 title: Troubleshooting dataflow issues - connection to the data source
 description: Troubleshooting dataflow issues - connection to the data source
-author: bensack
+author: Luitwieler
 ms.topic: conceptual
 ms.date: 6/13/2022
-ms.author: bensack
+ms.author: jeluitwi
 ---
 
 # Troubleshooting dataflow issues: Connection to the data source

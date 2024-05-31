@@ -1,10 +1,10 @@
 ---
 title: Best practices for reusing dataflows across environments and workspaces
 description: Best practices for reusing dataflows across environments and workspaces
-author: bensack
+author: Luitwieler
 ms.topic: conceptual
 ms.date: 1/26/2024
-ms.author: bensack
+ms.author: jeluitwi
 ---
 
 # Best practices for reusing dataflows across environments and workspaces

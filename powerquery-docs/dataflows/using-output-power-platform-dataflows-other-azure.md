@@ -1,10 +1,10 @@
 ---
 title: Using the output of Power Platform dataflows from other Azure data workloads
 description: Using the output of Microsoft Power Platform dataflows from other Azure data workloads.
-author: bensack
+author: Luitwieler
 ms.topic: conceptual
 ms.date: 1/6/2023
-ms.author: bensack
+ms.author: jeluitwi
 ---
 
 # Using the output of Microsoft Power Platform dataflows from other Azure data workloads

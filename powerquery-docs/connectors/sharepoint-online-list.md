@@ -19,9 +19,6 @@ ms.author: dougklo
 | Function Reference Documentation | [SharePoint.Contents](/powerquery-m/sharepoint-contents)<br/>[SharePoint.Files](/powerquery-m/sharepoint-files)<br/>[SharePoint.Tables](/powerquery-m/sharepoint-tables) |
 
 > [!NOTE]
->The service principal authentication type isn't supported when using an on-premises data gateway or a virtual network (VNet) data gateway.
-
-> [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Capabilities supported
