@@ -75,7 +75,7 @@ You might notice that the transformation table in the previous section appeared 
 
 For example, in the original table used in this article, versions of Miguel (both "miguel" and Miguel) in the **Person** column make up the majority of instances of the name Miguel and Mike. In addition, the name Miguel with initial caps makes up the majority of the name Miguel. So associating Miguel and its derivatives and Mike and its derivatives in the transform table results in the name Miguel being used in the **Cluster** column.
 
-However, for the names William, Bill, and "billy", there's no majority of values since all three are unique. Since William appears first, William is used in the **Cluster** column. If "billy" had appeared first in the table, then "billy" would be used in the **Cluster** column. Also, because there's no majority of values, the case used by the individual names is used.
+However, for the names William, Bill, and "billy", there's no majority of values since all three are unique. Since William appears first, William is used in the **Cluster** column. If "billy" had appeared first in the table, then "billy" would be used in the **Cluster** column. Also, because there's no majority of values, the case used by the individual names is used. That is, if William is first, William with an upper case "W" is used as the result value; if "billy" is first, "billy" with a lower case "b" is used.
 
 ## Related content
 

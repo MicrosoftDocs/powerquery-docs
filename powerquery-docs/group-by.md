@@ -84,7 +84,7 @@ The following table describes each of these operations.
 
 Starting from the original sample, in this example you create a column containing the total units and two other columns that give you the name and units sold for the top-performing product, summarized at the country and sales channel level.
 
-:::image type="content" source="media/group-by/row-operation-final-table.png" alt-text="Screenshot of the sample output table with operations." lightbox="media/group-by/row-operation-final-table.png":::
+:::image type="content" source="media/group-by/row-operation-final-table.png" alt-text="Screenshot of the sample output table with operations.":::
 
 1. Use the following columns as **Group by** columns:
    * Country
@@ -125,7 +125,7 @@ With this new **Top performer product** column that contains \[Record\] values, 
 
 After you remove your **Products** column and setting the data type for both newly expanded columns, your result will resemble the following image.
 
-:::image type="content" source="media/group-by/row-operation-final-table-2.png" alt-text="Screenshot of the final table with all transformations." lightbox="media/group-by/row-operation-final-table-2.png":::
+:::image type="content" source="media/group-by/row-operation-final-table-2.png" alt-text="Screenshot of the final table with all transformations.":::
 
 ## Fuzzy grouping
 
