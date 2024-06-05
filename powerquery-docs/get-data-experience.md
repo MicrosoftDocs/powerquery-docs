@@ -107,7 +107,7 @@ In the interim, you can use the following workaround:
 
 The table preview dialog box consists of only one section for the data preview. An example of a connector that provides this experience and window is the [Folder](connectors/folder.md) connector.
 
-:::image type="content" source="media/get-data-experience/combine-files.png" alt-text="Screenshot of the Folder connector table preview dialog box.":::
+:::image type="content" source="media/get-data-experience/combine-files.png" alt-text="Screenshot of the Folder connector table preview dialog box." lightbox="media/get-data-experience/combine-files.png":::
 
 ### 4. Query destination
 
