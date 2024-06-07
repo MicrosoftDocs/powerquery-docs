@@ -65,5 +65,5 @@ From the newly created **Countries** column after the merge operation, expand th
 After performing this operation, you'll create a table that looks like the following image.
 
 :::image type="complex" source="media/merge-queries-full-outer/full-outer-final-table-2.png" alt-text="Full outer join final table.":::
-   Full outer join final table containing Date, a CountryID, and Units derived from the Sales table, and a Country column derived from the Countries table. A fifth row was added to contain data from Spain, but that row contains null in the Date, CountryID, and Units columns since those values didn't exist for Spain in the Sales table.
+   Screenshot of the full outer join final table containing Date, a CountryID, and Units derived from the Sales table, and a Country column derived from the Countries table. A fifth row was added to contain data from Spain, but that row contains null in the Date, CountryID, and Units columns since those values didn't exist for Spain in the Sales table.
 :::image-end:::
