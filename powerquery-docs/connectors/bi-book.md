@@ -45,4 +45,4 @@ To connect to BI Book from Power Query Desktop, take the following steps:
 
 5. In **Navigator**, select the BI Book files and tables you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
 
-   :::image type="content" source="./media/azure-sql-database/navigator-desktop.png" alt-text="Power Query Desktop Navigator showing the Human Resources employee data.":::
+   :::image type="content" source="./media/bi-book/navigate.png" alt-text="BI Book Power Query Desktop Navigator.":::
