@@ -28,7 +28,7 @@ To use the Autodesk Construction Cloud connector, you must have an Autodesk acco
 ## Capabilities Supported
 
 * Import
-* Supports US and EU Autodesk Construction Cloud servers
+* Supports United States, Europe, and Australia Autodesk Construction Cloud servers
 
 ## Connect to Autodesk Construction Cloud data
 
@@ -38,7 +38,7 @@ To connect to Autodesk Construction Cloud data:
 
 2. If this is the first time you're getting data through the Autodesk Construction Cloud connector, a preview connector notice will be displayed. Select **Don't warn me again with this connector** if you don't want this message to be displayed again, and then select **Continue**.
 
-3. Select the Autodesk server **region** (US or EU), and then select **OK**.
+3. Select the Autodesk server **region** (United States, Europe, or Australia), and then select **OK**.
   
    :::image type="content" source="./media/autodesk-construction-cloud/acc-region-selection.png" alt-text="Select server region.":::
 
