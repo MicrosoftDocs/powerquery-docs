@@ -87,5 +87,4 @@ To use the Power BI Templates:
 
 You should be aware of the following limitations and issues associated with accessing Autodesk data.
 
-* Autodesk returns a 404 error status if you don't have any request in the last 30 days.
 * This connector pulls data from the last run Data Connector extract and not the live data from the account.
