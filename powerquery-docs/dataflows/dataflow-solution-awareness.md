@@ -120,3 +120,4 @@ For security reasons, credentials of connections used by dataflows aren't persis
 * Application users can't deploy dataflows (service principals).
 * Incremental refresh configuration isn't supported when deploying solutions. After deployment of the dataflow via solution, the incremental refresh configuration should be reapplied.
 * Linked tables to other dataflows aren't supported when deploying solutions. After deployment of the dataflow via solution, edit the dataflow and edit the connection to the linked dataflow.
+* Dataflows can't be deployed to environments in administration mode.
