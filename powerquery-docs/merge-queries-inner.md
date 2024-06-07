@@ -57,6 +57,6 @@ From the newly created **Countries** column, expand the **Country** field. Don't
 
 :::image type="content" source="media/merge-queries-inner/inner-expand-field.png" alt-text="Screenshot of the expanded table options with the Country column selected.":::
 
-After performing this operation, you've create a table that looks like the following image.
+After performing this operation, the resulting table looks like the following image.
 
 :::image type="content" source="media/merge-queries-inner/inner-final-table-2.png" alt-text="Screenshot of the final table with Date, CountryID, Units, and Country column headers, and a single row of data for the country Panama.":::
