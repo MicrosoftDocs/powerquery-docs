@@ -120,4 +120,7 @@ For security reasons, credentials of connections used by dataflows aren't persis
 * Application users can't deploy dataflows (service principals).
 * Incremental refresh configuration isn't supported when deploying solutions. After deployment of the dataflow via solution, the incremental refresh configuration should be reapplied.
 * Linked tables to other dataflows aren't supported when deploying solutions. After deployment of the dataflow via solution, edit the dataflow and edit the connection to the linked dataflow.
+* To enable dataflow import, the Dataflows plugin performs unmanaged customizations during the asynchronous import step. These modifications are essential for a successful import.
+* Dataflows do not support block of unmanaged customizations. See, [Block unmanaged customizations in Dataverse environments](/power-platform/alm/block-unmanaged-customizations#known-limitations)
+* Dataflows do not support preferred solution. See, [Set a preferred solution](/power-apps/maker/data-platform/preferred-solution#limitations)
 * Dataflows can't be deployed to environments in administration mode.
