@@ -64,8 +64,10 @@ To connect to Autodesk Construction Cloud data:
   
 ## Connect using Autodesk provided Power BI Templates
 
-* Download the latest Power BI Templates from the Template Gallery within Data Connector
-:::image type="content" source="./media/autodesk-construction-cloud/acc-powerbi-template-gallery.png" alt-text="Power BI Template Gallery in Data Connector":::
+* Download the latest Power BI Templates from the Template Gallery within **Data Connector**.
+
+  :::image type="content" source="./media/autodesk-construction-cloud/acc-powerbi-template-gallery.png" alt-text="Power BI Template Gallery in Data Connector":::
+
 * Only templates with **"...(Connector).."** in the file name are set up to work with this connector.
 
 To use the Power BI Templates:
