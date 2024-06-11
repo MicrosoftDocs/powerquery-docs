@@ -10,7 +10,7 @@ ms.author: miescobar
 
 In Power Query, you can transform columns into attribute-value pairs, where columns become rows.
 
-:::image type="complex" source="media/unpivot-column/unpivot-operation-diagram.png" alt-text="Unpivot columns diagram." lightbox="media/unpivot-column/unpivot-operation-diagram.png":::
+:::image type="complex" source="media/unpivot-column/unpivot-operation-diagram.png" alt-text="Unpivot columns diagram.":::
    Diagram showing the left table with a blank column and rows, and the Attributes values A1, A2, and A3 as column headers. In this table, the A1 column contains the values V1, V4, and V7. The A2 column contains the values V2, V5, and V8. The A3 column contains the values V3, V6, and V9. With the columns unpivoted, the right table of the diagram contains a blank column and rows, an Attributes column with nine rows with A1, A2, and A3 repeated three times, and a Values column with values V1 through V9.  
 :::image-end:::
 
