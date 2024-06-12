@@ -20,7 +20,7 @@ This article uses sample data to show how to do a merge operation with the left 
 
   :::image type="content" source="media/merge-queries-left-outer/left-outer-join-sales-table.png" alt-text="Screenshot of the sales table containing Date, CountryID, and Units columns, with CountryID set to 1 in rows 1 and 2, 3 in row 3, and 4 in row 4.":::
 
-* **Countries**: This table is a reference table with the fields **ID** and **Country**. The **id** field represents the unique identifier for each record.
+* **Countries**: This table is a reference table with the fields **ID** and **Country**. The **ID** field represents the unique identifier for each record.
 
    :::image type="complex" source="media/merge-queries-left-outer/left-outer-join-countries-table.png" alt-text="Screenshot of the sample Country table for left outer join.":::
       Countries table with ID set to 1 in row 1, 2 in row 2, and 3 in row 3, and Country set to USA in row 1, Canada in row 2, and Panama in row 3.
@@ -41,7 +41,7 @@ To do a left outer join:
 1. Select the **Sales** query, and then select **Merge queries**.
 2. In the **Merge** dialog box, under **Right table for merge**, select **Countries**.
 3. In the **Sales** table, select the **CountryID** column.
-4. In the **Countries** table, select the **id** column.
+4. In the **Countries** table, select the **ID** column.
 5. In the **Join kind** section, select **Left outer**.
 6. Select **OK**.
 
