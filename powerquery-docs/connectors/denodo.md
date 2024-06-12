@@ -173,6 +173,18 @@ To make the connection, take the following steps:
    * Save the report on the computer.
    * Select the workspace where you want to publish.
 
+## Advanced configuration
+
+### Use of the ConnectionTimeout parameter.
+
+If you want to control how long to wait before abandoning an attempt to make a connection to a server you can use the  `ConnectionTimeout` parameter. 
+
+This parameter can only be used from the **Advanced Editor**. To do so, the `ConnectionTimeout` parameter must be added in the record options, associating a value of type `Duration` to it.
+
+> Learn more about the `Duration` type [here](/powerquery-m/sharpduration).
+
+   :::image type="content" source="./media/denodo/denodo-connectiontimeout.png" alt-text="Use of the ConnectionTimeout parameter.":::
+
 ## Troubleshooting
 
 ### Loading data when a field in a Denodo view has more than 42 relations with other views.
