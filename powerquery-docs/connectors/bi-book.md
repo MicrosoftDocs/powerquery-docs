@@ -1,7 +1,7 @@
 ---
 title: Power Query BI Book connector
 description: Includes basic information and prerequisites, instructions on how to connect to your BI Book company's data.
-author: oscar.winberg@greenstep.fi
+author: winbergo
 ms.topic: conceptual
 ms.date: 6/7/2024
 ms.author: dougklo
