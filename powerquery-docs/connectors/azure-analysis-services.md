@@ -87,7 +87,8 @@ Power Query provides an advanced option that you can add to your query if needed
 Once you've entered a value in the advanced option, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your Azure Analysis Services database.
 
 ## Connect using Direct Query for composite models
-It is possible to convert an AAS Live Connect model on Power BI into a Direct Query composite model, in order to combine the data from the AAS cube with other data in DirectQuery or import mode from other sources. Report authors who want to combine the data from their enterprise AAS models with other data they own, such as an Excel spreadsheet, or want to personalize or enrich the metadata from their enterprise AAS model, will find this functionality especially useful. Refer to [Composite models on Power BI semantic models and Analysis Services](https://learn.microsoft.com/power-bi/transform-model/desktop-composite-models#composite-models-on-power-bi-semantic-models-and-analysis-services) for additional details.
+
+It's possible to convert an Azure Analysis Services Live Connect model on Power BI into a DirectQuery composite model in order to combine the data from the Azure Analysis Services cube with other data in DirectQuery or import mode from other sources. Report authors who want to combine the data from their enterprise Azure Analysis Services models with other data they own, such as an Excel spreadsheet, or want to personalize or enrich the metadata from their enterprise AAS model, will find this functionality especially useful. Refer to [Composite models on Power BI semantic models and Analysis Services](/power-bi/transform-model/desktop-composite-models#composite-models-on-power-bi-semantic-models-and-analysis-services) for additional details.
 
 ## Troubleshooting
 
