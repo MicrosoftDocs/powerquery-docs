@@ -363,6 +363,8 @@ items:
         href: connectors/synapse.md
       - name: "Azure Table Storage"
         href: connectors/azure-table-storage.md
+      - name: "BI Book"
+        href: connectors/bi-book.md
       - name: "Bitsight Security Ratings"
         href: connectors/bitsight-security-ratings.md
       - name: "Bloomberg Data and Analytics"
