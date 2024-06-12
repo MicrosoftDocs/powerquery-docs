@@ -2,7 +2,7 @@
 title: "Inner join"
 description: An article on how to perform a merge operation in Power Query using the Inner join kind. 
 author: ptyx507
-ms.date: 6/7/2024
+ms.date: 6/12/2024
 ms.author: miescobar
 ms.custom: edited
 ---
@@ -51,7 +51,7 @@ To perform an inner join:
 
 In the **Sales** table, you have a **CountryID** of 1 and 2, but neither of these values are found in the **Countries** table. Therefore, the match only found one of four rows in the left (first) table.
 
-In the **Countries** table, you have the **Country** Spain with the **ID** 4, but there are no records for a **CountryID** of 4 in the **Sales** table. Therefore only one of two rows from the right (second) table found a match.
+In the **Countries** table, you have the **Country** Spain with the **ID** 4, but there are no records for a **CountryID** of 4 in the **Sales** table. Therefore, only one of two rows from the right (second) table found a match.
 
 From the newly created **Countries** column, expand the **Country** field. Don't select the **Use original column name as prefix** check box.
 
