@@ -71,7 +71,7 @@ To make the connection, take the following steps:
 
    :::image type="content" source="./media/sql-server-database/select-database-online.png" alt-text="SQL Server database connection builder in Power Query Online.":::
 
-3. If needed, select an on-premises data gateway.
+3. If the SQL server isn't online, select an on-premises data gateway. Additionally, if using the port with servername, use the value `servername*` as the server name in the connection settings.
 
 4. If you're connecting to this database for the first time, select the authentication kind and input your credentials.
 
