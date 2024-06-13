@@ -41,7 +41,7 @@ To set up Fiddler to capture secure HTTP addresses:
 
 9. In the **HTTPS** tab, select **OK**.
 
-10. In the Fiddler traffic pane, select one of the current traces, and then press **Ctrl + X**. This action clears all of the current traces from the traffic pane.
+10. In the Fiddler traffic pane, select one of the current traces, and then press **Ctrl+X**. This action clears all of the current traces from the traffic pane.
 
     :::image type="content" source="./media/web-connection-fiddler/clear-fiddler-pane.png" alt-text="Screenshot of the Fiddler traffic pane where you use Ctrl + X to clear all traces from the pane":::
 
