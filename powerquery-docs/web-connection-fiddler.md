@@ -2,17 +2,15 @@
 title: Capture web requests with Fiddler
 description: Describes how to set up Fiddler to capture secure HTTP addresses and monitor web traffic when troubleshooting Power Query communications issues.
 author: DougKlopfenstein
-
-ms.date: 8/3/2021
+ms.date: 6/13/2024
 ms.author: dougklo
-
 ---
 
 # Capture web requests with Fiddler
 
 When diagnosing issues that might occur when Power Query communicates with your data, you might be asked to supply a Fiddler trace. The information provided by Fiddler can be of significant use when troubleshooting connectivity issues.
 
->[!Note]
+> [!NOTE]
 >This article assumes that you are already familiar with how Fiddler works in general.
 
 ## Set up Fiddler to capture secure HTTP addresses
@@ -35,9 +33,9 @@ To set up Fiddler to capture secure HTTP addresses:
 
 6. Select **Decrypt HTTPS traffic**.
 
-7. In the root certificate dialog box, select **Yes**.
+7. In the root certificate dialog, select **Yes**.
 
-   :::image type="content" source="./media/web-connection-fiddler/fiddler-root-certificate.png" alt-text="Select yes in the root certificate dialog box.":::
+   :::image type="content" source="./media/web-connection-fiddler/fiddler-root-certificate.png" alt-text="Screenshot of the root certificate dialog where you select yes to trust the Fiddler root certificate.":::
 
 8. When asked to confirm that you want to add the certificate to your PCs Trusted Root List, select **Yes**.
 
@@ -45,23 +43,23 @@ To set up Fiddler to capture secure HTTP addresses:
 
 10. In the Fiddler traffic pane, select one of the current traces, and then press **Ctrl + X**. This action clears all of the current traces from the traffic pane.
 
-    ![On your keyboard, press Ctrl + X to clear all traces from Fiddler's traffic pane](./media/web-connection-fiddler/clear-fiddler-pane.png)
+    :::image type="content" source="./media/web-connection-fiddler/clear-fiddler-pane.png" alt-text="Screenshot of the Fiddler traffic pane where you use Ctrl + X to clear all traces from the pane":::
 
 ## Guidelines for capturing web requests
 
-Because Fiddler captures all network traffic during the recorded session, be sure to close all other apps and web pages before capturing a fiddler trace. Closing all other apps and web pages clears away most extra web traffic that's not associated with the issue you're trying to capture.
+Because Fiddler captures all network traffic during the recorded session, be sure to close all other apps and web pages before capturing a fiddler trace. Closing all other apps and web pages clears away most extra web traffic not associated with the issue you're trying to capture.
 
-Once you've closed all other apps and web pages not associated with the issue, clear the Fiddler traffic pane as described in step 10 in the previous procedure. Then select **File** > **Capture traffic** just before starting the operation in question. After the issue occurs, immediately clear the check mark next to **File** > **Capture traffic** to stop the capture.
+Once you close all other apps and web pages not associated with the issue, clear the Fiddler traffic pane as described in step 10 in the previous procedure. Then select **File** > **Capture traffic** just before starting the operation in question. After the issue occurs, immediately clear the check mark next to **File** > **Capture traffic** to stop the capture.
 
 These actions minimize the number of messages we have to dig through, and also helps focus the investigation. It also avoids capturing other potentially sensitive information that you don't want to share.
 
-If you're only running Power Query and Fiddler, this minimum setup should yield a sequence of HTTP requests and responses from whatever backend you're communicating with, for example Power BI service, SharePoint, or Azure. The requests, responses, headers, response codes, and sometimes the payload will all provide clues we can use to troubleshoot your issue.
+If you're only running Power Query and Fiddler, this minimum setup should yield a sequence of HTTP requests and responses from whatever backend you're communicating with, for example Power BI service, SharePoint, or Azure. The requests, responses, headers, response codes, and sometimes the payload all provide clues we can use to troubleshoot your issue.
 
 To save the capture session to a log file, select **File** > **Save** > **All Sessions**. You might also be asked to compress the log file (.zip) before sending it.
 
 ## Return your system to its original configuration
 
-Once you've finished providing Fiddler log files and troubleshooting has completed, you'll want to return your system to its original configuration and remove Fiddler as the middleman.
+Once you finish providing Fiddler log files and troubleshooting is complete, you can return your system to its original configuration and remove Fiddler as the middleman.
 
 To return your system to its original configuration:
 
@@ -71,7 +69,7 @@ To return your system to its original configuration:
 4. Select **Actions**.
 5. Select **Reset All Certificates**.
 
-   :::image type="content" source="media/web-connection-fiddler/reset-all-certificates.png" alt-text="Image showing how to reset all certificates and return your system to its original configuration.":::
+   :::image type="content" source="media/web-connection-fiddler/reset-all-certificates.png" alt-text="Screenshot showing how to reset all certificates and return your system to its original configuration.":::
 
 6. In **Reset All Certificates**, select **OK**.
 7. In **Do you want to allow this app to make changes to your device?**, select **Yes**.
@@ -81,7 +79,7 @@ To return your system to its original configuration:
 11. In **Success**, select **OK**.
 12. In **Options**, select **OK**.
 
-## See also
+## Related content
 
 - [Query diagnostics](QueryDiagnostics.md)
 - [Power Query feedback](feedback.md)
