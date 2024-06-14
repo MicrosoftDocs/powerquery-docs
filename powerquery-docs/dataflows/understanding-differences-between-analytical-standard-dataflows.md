@@ -69,7 +69,7 @@ You can also create analytical dataflows in Power Apps and Dynamics 365 customer
 
 Sometimes, depending on the requirement, you might need to apply some AI and machine learning functions on the data through the dataflow. These functionalities are available in Power BI dataflows and require a Premium workspace.
 
-:::image type="content" source="media/understanding-differences-between-analytical-standard-dataflows/dataflow-ai-functions.png" alt-text="Screenshot of the Power Query ribbon displayed when transforming an analytical dataflow with the AI insights option emphasized.":::
+:::image type="content" source="media/understanding-differences-between-analytical-standard-dataflows/dataflow-ai-functions.png" alt-text="Screenshot of the Power Query ribbon displayed when transforming an analytical dataflow with the AI insights option emphasized." lightbox="media/understanding-differences-between-analytical-standard-dataflows/dataflow-ai-functions.png":::
 
 The following articles discuss how to use AI functions in a dataflow:
 
