@@ -123,4 +123,4 @@ For security reasons, credentials of connections used by dataflows aren't persis
 * To enable dataflow import, the Dataflows plugin performs unmanaged customizations during the asynchronous import step. These modifications are essential for a successful import.
 * Dataflows do not support block of unmanaged customizations. See, [Block unmanaged customizations in Dataverse environments](/power-platform/alm/block-unmanaged-customizations#known-limitations)
 * Dataflows do not support preferred solution. See, [Set a preferred solution](/power-apps/maker/data-platform/preferred-solution#limitations)
-* Dataflows can't be deployed to environments in administration mode.
+* For dataflows to import successfully into an environment, either the environment can't be in administration mode, or background operations need to be enabled.
