@@ -1,10 +1,10 @@
 ---
 title: Looker connector
 description: Provides basic information and prerequisites for the Looker connector for Power Query.
-author:
+author: kenrickyap
 ms.topic: conceptual
 ms.date: 1/02/2024
-ms.author:
+ms.author: dougklo
 ---
 
 # Looker
