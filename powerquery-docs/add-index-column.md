@@ -11,7 +11,7 @@ ms.custom: edited
 
 The **Index column** command adds a new column to the table with explicit position values, and is usually created to support other transformation patterns.
 
-![Add index column command on the Add column tab.](media/add-index-column/add-index-column-icon.png "Add index column command on the Add column tab")
+:::image type="content" source="media/add-index-column/add-index-column-icon.png" alt-text="Add index column command on the Add column tab.":::
 
 By default, the starting index will start from the value 0 and have an increment of 1 per row.
 
@@ -22,31 +22,31 @@ You can also configure the behavior of this step by selecting the **Custom** opt
 * **Starting index**: Specifies the initial index value.
 * **Increment**: Specifies how much to increment each index value.
 
-![Add index column dialog box.](media/add-index-column/add-index-column-window.png "Add index column dialog box")
+:::image type="content" source="media/add-index-column/add-index-column-window.png" alt-text="Add index column dialog box.":::
 
 For the example in this article, you start with the following table that has only one column, but notice the data pattern in the column.
 
-![Sample initial table with a recurring pattern every third row.](media/add-index-column/add-index-column-start-table.png "Sample initial table")
+:::image type="content" source="media/add-index-column/add-index-column-start-table.png" alt-text="Sample initial table with a recurring pattern every third row.":::
 
 Let's say that your goal is to transform that table into the one shown in the following image, with the columns **Date**, **Account**, and **Sale**.
 
-![Sample output table with three columns created from the recurring pattern of every third row in the intial single column table.](media/add-index-column/add-index-column-sample-output-table.png "Sample output table")
+:::image type="content" source="media/add-index-column/add-index-column-sample-output-table.png" alt-text="Sample output table with three columns created from the recurring pattern of every third row in the intial single column table.":::
 
 ## Step 1. Add an index column
 
 You first need to add a new **Index** column to your table that starts from 0.
 
-![Index column that starts from zero.](media/add-index-column/add-index-column-new-index.png "Index column that starts from zero")
+:::image type="content" source="media/add-index-column/add-index-column-new-index.png" alt-text="Index column that starts from zero.":::
 
 ## Step 2. Add a modulo column from the index column
 
 The next step is to select the newly added index column, and then on the **Add column** tab, select **Standard** > **Modulo**.
 
-![Modulo button on the Add column tab.](media/add-index-column/add-index-column-add-modulo-column.png "Modulo button on the Add column tab")
+:::image type="content" source="media/add-index-column/add-index-column-add-modulo-column.png" alt-text="Modulo button on the Add column tab.":::
 
 In the **Modulo** dialog box, enter the number from which to find the remainder for each value in the column. In this case, your pattern repeats itself every three rows, so you'll enter **3**.
 
-![Modulo dialog box.](media/add-index-column/add-index-column-add-modulo-window.png "Modulo dialog box")
+:::image type="content" source="media/add-index-column/add-index-column-add-modulo-window.png" alt-text="Modulo dialog box.":::
 
 The result of that operation will give you a new column named **Modulo**.
 
@@ -76,7 +76,7 @@ Your table now has three columns where:
 
 To achieve the table you want, you need to pivot the **Modulo** column by using the values from **Column1** where these values don't get aggregated. On the **Transform** tab, select the **Modulo** column, and then select **Pivot column** from the **Any column** group. In the **Pivot column** dialog box, select the **Advanced** option button. Make sure **Value column** is set to **Column1** and **Aggregate values function** is set to **Don't aggregate**.
 
-![Pivot column dialog box.](media/add-index-column/add-index-column-pivot-column.png "Pivot column dialog box")
+:::image type="content" source="media/add-index-column/add-index-column-pivot-column.png" alt-text="Pivot column dialog box.":::
 
 More information: [Pivot columns](pivot-columns.md)
 
@@ -90,4 +90,4 @@ You can now delete the **Integer-division** column and promote the first row of 
 
 After defining the correct data types for your columns, you'll create a table that looks like the following table, with exactly the three columns that you needed and the shape that you were looking for.
 
-![Final sample output table with no Integer-division column and promoted first row headers.](media/add-index-column/add-index-column-final-table.png "Final sample table")
+:::image type="content" source="media/add-index-column/add-index-column-final-table.png" alt-text="Final sample output table with no Integer-division column and promoted first row headers.":::

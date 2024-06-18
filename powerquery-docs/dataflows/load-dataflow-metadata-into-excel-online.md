@@ -1,23 +1,23 @@
 ---
 title: Load data in Excel Online and build a dataflows monitoring report with Power BI
 description: How to use an Excel file and the dataflows connector in Power Automate to create a dataflows monitoring report in Power BI
-author: miquelladeboer
+author: Luitwieler
 ms.topic: conceptual
 ms.date: 1/6/2023
-ms.author: mideboer
+ms.author: jeluitwi
 ---
 
 # Load data in Excel Online and build a dataflows monitoring report with Power BI
 
 This tutorial demonstrates how to use an Excel file and the dataflows connector in Power Automate to create a dataflows monitoring report in Power BI.
 
-![Image of an example Power BI monitoring dashboard.](media/load-dataflow-metadata-into-excel-online/dashboard.png)
+:::image type="content" source="media/load-dataflow-metadata-into-excel-online/dashboard.png" alt-text="Image of an example Power BI monitoring dashboard.":::
 
 First, you'll download the Excel file and save it in OneDrive for Business or SharePoint. Next, you'll create a Power Automate connector that loads metadata from your dataflow to the Excel file in OneDrive for Business or SharePoint. Lastly, you'll connect a Power BI file to the Excel file to visualize the metadata and start monitoring the dataflows.
 
 You can use this dashboard to monitor your dataflows' refresh duration and failure count. With this dashboard, you can track any issues with your dataflows performance and share the data with others.
 
-![Image of an overview of loading data through Excel.](media/load-dataflow-metadata-into-excel-online/excel.png)
+:::image type="content" source="media/load-dataflow-metadata-into-excel-online/excel.png" alt-text="Image of an overview of loading data through Excel.":::
 
 ## Prerequisites
 

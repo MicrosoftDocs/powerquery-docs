@@ -1,11 +1,11 @@
 ---
 title: An overview of dataflows across Microsoft Power Platform and Dynamics 365 products
 description: An overview of dataflows across Microsoft Power Platform and Dynamics 365 products
-author: bensack
+author: Luitwieler
 
 ms.topic: overview
-ms.date: 6/16/2023 
-ms.author: bensack
+ms.date: 1/25/2024 
+ms.author: jeluitwi
 
 ---
 
@@ -86,7 +86,7 @@ You can use dataflows as a replacement for other ETL tools to build a dimensiona
 
 :::image type="content" source="media/overview-dataflows/dataflow-dimensional-model.png" alt-text="Image of how to build a dimensional model using dataflows.":::
 
-### Centralize data preparation and reuse of datasets across multiple Power BI solutions
+### Centralize data preparation and reuse of semantic models across multiple Power BI solutions
 
 If multiple Power BI solutions are using the same transformed version of a table, the process to create the table will be repeated multiple times. This increases the load on the source system, consumes more resources, and creates duplicate data with multiple points of failure. Instead, a single dataflow can be created to compute the data for all solutions. Power BI can then reuse the result of the transformation in all solutions. The dataflow, if used in such a way, can be part of a robust Power BI implementation architecture that avoids the Power Query code duplicates and reduces the maintenance costs of the data integration layer.
 

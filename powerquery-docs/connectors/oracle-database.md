@@ -3,7 +3,7 @@ title: Power Query Oracle database connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your Oracle database using the connector.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
@@ -14,8 +14,8 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
-| Authentication Types Supported | Windows (desktop/online)<br/>Database (desktop)<br/>Basic (online) <br/>Azure Active Directory (desktop/online)|
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Authentication Types Supported | Windows (desktop/online)<br/>Database (desktop)<br/>Basic (online) <br/>Microsoft account (desktop)|
 | Function Reference Documentation | [Oracle.Database](/powerquery-m/oracle-database) |
 
 > [!NOTE]
@@ -35,7 +35,7 @@ To connect to an Oracle database with the [on-premises data gateway](/data-integ
 ## Capabilities Supported
 
 * Import
-* DirectQuery (Power BI Datasets)
+* DirectQuery (Power BI semantic models)
 * Advanced options
   * Command timeout in minutes
   * SQL statement
@@ -61,19 +61,19 @@ To make the connection, take the following steps:
 
 2. Specify the Oracle net service name/TNS alias or Easy Connect (Plus) connection string to connect to in **Server**. Easy Connect is the simplest to use by setting the **Server** value to your Oracle Database server *Hostname/ServiceName*, where *ServiceName* is the global database name. The following screenshot uses a net service name.
 
-   ![Enter Oracle database connection.](./media/oracle-database/select-database.png)
+   :::image type="content" source="./media/oracle-database/select-database.png" alt-text="Enter Oracle database connection.":::
 
 3. If you're connecting from Power BI Desktop, select either the **Import** or **DirectQuery** data connectivity mode. The rest of these example steps use the Import data connectivity mode. To learn more about DirectQuery, go to [Use DirectQuery in Power BI Desktop](/power-bi/connect-data/desktop-use-directquery).
 
 4. If you're connecting to this Oracle database for the first time, select the authentication type you want to use, and then enter your credentials. The authentication types available are:
 
-   * Windows authentication (Windows)
-   * Username and password (Database)
-   * Azure Active Directory (Microsoft account)
+   * Windows (Windows authentication)
+   * Database (Username and password)
+   * Microsoft account (Microsoft Entra ID)
 
    For more information about authentication, go to [Authentication with a data source](../connectorauthentication.md).
 
-   ![Enter your Oracle database credentials.](./media/oracle-database/sign-in.png)
+   :::image type="content" source="./media/oracle-database/sign-in.png" alt-text="Enter your Oracle database credentials.":::
 
 5. In **Navigator**, select the data you require, then either select **Load** to load the data or **Transform Data** to transform the data.
 
@@ -87,7 +87,7 @@ To make the connection, take the following steps:
 
 3. In the **Oracle database** dialog that appears, specify the Oracle net service name/TNS alias, Easy Connect Plus connection string, or connect descriptor to connect to in **Server**.
 
-   ![Enter Oracle database online connection.](./media/oracle-database/select-database-online.png)
+   :::image type="content" source="./media/oracle-database/select-database-online.png" alt-text="Enter Oracle database online connection.":::
 
 4. Provide a **Connection name**, such as "testoracleserver".
 
@@ -125,15 +125,15 @@ To download your client credentials:
 
 1. In your Oracle Autonomous database details page, select **DB Connection**.
 
-   ![DB Connection](media/oracle-database/adb-db-connection.png)
+   :::image type="content" source="media/oracle-database/adb-db-connection.png" alt-text="DB Connection.":::
 
 2. From the **Database Connection** page, select **Download Wallet**.
 
-   ![Download wallet](media/oracle-database/adb-download-wallet.png)
+   :::image type="content" source="media/oracle-database/adb-download-wallet.png" alt-text="Download wallet.":::
 
 3. Enter a password you would like to use with this wallet, confirm the password, then select **Download**.
 
-   ![Wallet password](media/oracle-database/adb-wallet-password.png)
+   :::image type="content" source="media/oracle-database/adb-wallet-password.png" alt-text="Wallet password.":::
 
 ### Configure Oracle ADB credentials
 
@@ -141,7 +141,7 @@ To download your client credentials:
 
 2. Unzip the credentials into the directory you specified in OCMT as the *Oracle Configuration File Directory*. In this example, the credentials are extracted to c:\data\wallet\wallet_contosomart.
 
-   ![Image with the wallet files unzipped in the wallet folder.](media/oracle-database/adb-wallet-unzipped.png)
+   :::image type="content" source="media/oracle-database/adb-wallet-unzipped.png" alt-text="Image with the wallet files unzipped in the wallet folder.":::
 
    > [!NOTE]
    > The tnsnames.ora file defines your Oracle Autonomous Database address and connection information.
@@ -175,7 +175,7 @@ Open the tnsnames.ora file in the wallets folder. The file contains a list of AD
    ![Image of the credentials dialog box, with Database selected, and the default database user name and password entered.](media/oracle-database/adb-credentials.png)
 
    > [!NOTE]
-   > You can use Azure Active Directory authentication to sign-on to Oracle Autonomous Database via the **Microsoft account** option.
+   > You can use Microsoft Entra ID authentication to sign-on to Oracle Autonomous Database via the **Microsoft account** option.
 
 At this point, the **Navigator** appears and displays the connection data.
 
@@ -233,7 +233,7 @@ Once you've selected the advanced options you require, select **OK** in Power Qu
 
 ## Known issues and limitations
 
-Power BI sessions can still be active on your Oracle database for approximately 30 minutes after a dataset refresh to that Oracle database. Only after approximately 30 minutes do those sessions become inactive/removed on the Oracle database. This behavior is by design.
+Power BI sessions can still be active on your Oracle database for approximately 30 minutes after a semantic model refresh to that Oracle database. Only after approximately 30 minutes do those sessions become inactive/removed on the Oracle database. This behavior is by design.
 
 ## Troubleshooting
 

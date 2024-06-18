@@ -3,7 +3,7 @@ title: Implementation details
 description: Describes conversion information and specific features available in Implementation 2 of the Power Query SAP Business Warehouse connector.
 author: dougklopfenstein
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
@@ -26,9 +26,9 @@ Implementation 2.0 supports the following options:
 
     The default value is `SapBusinessWarehouseExecutionMode.BasXmlGzip`.
 
-    Using `SapBusinessWarehouseExecutionMode.BasXmlGzip` may improve performance when experiencing high latency for large datasets.
+    Using `SapBusinessWarehouseExecutionMode.BasXmlGzip` may improve performance when experiencing high latency for large data sets.
 
-* *BatchSize* specifies the maximum number of rows to retrieve at a time when executing an MDX statement. A small number translates into more calls to the server while retrieving a large dataset. A large number of rows may improve performance, but could cause memory issues on the SAP BW server. The default value is 50000 rows.
+* *BatchSize* specifies the maximum number of rows to retrieve at a time when executing an MDX statement. A small number translates into more calls to the server while retrieving a large data set. A large number of rows may improve performance, but could cause memory issues on the SAP BW server. The default value is 50000 rows.
 
 * *EnableStructures* indicates whether characteristic structures are recognized. The default value for this option is false. Affects the list of objects available for selection. Not supported in Native query mode.
 
@@ -41,11 +41,11 @@ The following list describes some of the additional improvements that come with 
 * Improved performance.
 * Ability to retrieve several million rows of data, and fine-tuning through the batch size parameter.
 * Ability to switch execution modes.
-* Support for compressed mode. Especially beneficial for high latency connections or large datasets.
+* Support for compressed mode. Especially beneficial for high latency connections or large data sets.
 * Improved detection of `Date` variables.
 * Expose `Date` (ABAP type DATS) and `Time` (ABAP type TIMS) dimensions as dates and times respectively, instead of text values. More information: [Support for typed dates in SAP BW](#support-for-typed-dates-in-sap-bw)
 * Better exception handling. Errors that occur in BAPI calls are now surfaced.
-* Column folding in BasXml and BasXmlGzip modes. For example, if the generated MDX query retrieves 40 columns but the current selection only needs 10, this request will be passed onto the server to retrieve a smaller dataset.
+* Column folding in BasXml and BasXmlGzip modes. For example, if the generated MDX query retrieves 40 columns but the current selection only needs 10, this request will be passed onto the server to retrieve a smaller data set.
 
 ### Changing existing reports to use Implementation 2.0
 
@@ -109,7 +109,7 @@ In the example above, this means that:
 
 To manually add the key in Import mode, just expand **Properties** and select the key.
 
-![Selecting the Key property in the Power Query navigator.](key-property.png)
+:::image type="content" source="key-property.png" alt-text="Selecting the Key property in the Power Query navigator.":::
 
 The key column will be of type date, and can be used for filtering. Filtering on this column will fold to the server.
 
@@ -147,7 +147,7 @@ The following table provides a summary list of suggestions to improve performanc
 
 | Suggestion | Description |
 | ---------- | ----------- |
-| Limit characteristics and properties (attribute) selection | The time it takes to load data from SAP BW into Power Query increases with the size of the dataset, that is, the number of columns and rows in the flattened result set. To reduce the number of columns, only select the characteristics and properties in the navigator that you eventually want to see in your report or dashboard. |
+| Limit characteristics and properties (attribute) selection | The time it takes to load data from SAP BW into Power Query increases with the size of the data set, that is, the number of columns and rows in the flattened result set. To reduce the number of columns, only select the characteristics and properties in the navigator that you eventually want to see in your report or dashboard. |
 | Make use of parameters | Using filters/parameters contributes to reducing the size of the result set, which significantly improves query runtimes.<br/><br/>Parameters are especially valuable when used with large dimensions, where there's many members, such as customers, materials, or document numbers. |
 | Limit number of key figures | Selecting many key figures from a BEx query/BW model can have a significant performance impact during query execution because of the time being spent on loading metadata for units. Only include the key figures that you need in Power Query. |
 | Split up very large queries into multiple, smaller queries | For very large queries against InfoCubes or BEx queries, it may be beneficial to split up the query. For example, one query might be getting the key figures, while another query (or several other queries) is getting the characteristics data. You can join the individual query results in Power Query. |
@@ -155,7 +155,7 @@ The following table provides a summary list of suggestions to improve performanc
 | Avoid use of navigation attributes in BEx query | A query with a navigation attribute has to run an additional join, compared with a query with the same object as a characteristic in order to arrive at the values. |
 | Use RSRT to monitor and troubleshoot slow running queries | Your SAP Admin can use the Query Monitor in SAP BW (transaction RSRT) to analyze performance issues with SAP BW queries. Review SAP note 1591837 for more information. |
 | Avoid Restricted Key Figures and Calculated Key Figures | Both are computed during query execution and can slow down query performance. |
-| Consider using incremental refresh to improve performance | Power BI refreshes the complete dataset with each refresh. If you're working with large volume of data, refreshing the full dataset on each refresh may not be optimal. In this scenario, you can use incremental refresh, so you're refreshing only a subset of data. For more details, go to [Incremental refresh in Power BI](/power-bi/service-premium-incremental-refresh). |
+| Consider using incremental refresh to improve performance | Power BI refreshes the complete data set with each refresh. If you're working with large volume of data, refreshing the full data set on each refresh might not be optimal. In this scenario, you can use incremental refresh, so you're refreshing only a subset of data. For more details, go to [Incremental refresh in Power BI](/power-bi/service-premium-incremental-refresh). |
 
 ## Comparison to Analysis for Office (AFO)
 

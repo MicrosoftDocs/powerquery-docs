@@ -1,19 +1,22 @@
 ---
 title: Handling unit testing for Power Query connectors
-description: Manage unit testing for Power Query connectors
+description: Manage unit testing for Power Query connectors in Visual Studio
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 1/9/2023
+ms.date: 5/16/2024
 ms.author: miescobar
 ---
 
 # Handling Unit Testing
 
+>[!NOTE]
+> This content is applicable to the legacy Power Query SDK in Visual Studio. Today the new Power Query SDK in Visual Studio Code contains a fully-featured [test framework](sdk-testframework/test-framework.md) which we encourage you to test and learn more.
+
 For both simple and complex connectors, adding unit tests is a best practice and highly recommended.
 
-Unit testing is accomplished in the context of Visual Studio's [Power Query SDK](https://marketplace.visualstudio.com/items?itemName=Dakahn.PowerQuerySDK). Each test is defined as a `Fact` that has a name, an expected value, and an actual value. In most cases, the "actual value" will be an M expression that tests part of your expression.
+Unit testing is accomplished in the context of Visual Studio's Power Query SDK. Each test is defined as a `Fact` that has a name, an expected value, and an actual value. In most cases, the "actual value" will be an M expression that tests part of your expression.
 
-Consider a very simple extension that exports three functions:
+Consider a simple extension that exports three functions:
 
 ```powerquery-m
 section Unittesting;
@@ -23,7 +26,7 @@ shared UnitTesting.Returns123 = () => "123";
 shared UnitTesting.ReturnTableWithFiveRows = () => Table.Repeat(#table({"a"},{{1}}),5);
 ```
 
-This unit test code is made up of a number of Facts, and a bunch of common code for the unit test framework (`ValueToText`, `Fact`, `Facts`, `Facts.Summarize`). The following code provides an example set of Facts (go to [UnitTesting.query.pq](https://github.com/Microsoft/DataConnectors/tree/master/samples/UnitTesting) for the common code):
+This unit test code is made up of many Facts, and a bunch of common code for the unit test framework (`ValueToText`, `Fact`, `Facts`, `Facts.Summarize`). The following code provides an example set of Facts (go to [UnitTesting.query.pq](https://github.com/Microsoft/DataConnectors/tree/master/samples/UnitTesting) for the common code):
 
 ```powerquery-m
 section UnitTestingTests;
@@ -59,7 +62,7 @@ shared MyExtension.UnitTest =
 ][report];
 ```
 
-Running the sample in Visual Studio will evaluate all of the Facts and give you a visual summary of the pass rates:
+Running the sample in Visual Studio evaluates all of the Facts and give you a visual summary of the pass rates:
 
 ![Example of pass rates.](media/handling-unit-testing/unit-testing-1.png)
 
@@ -76,7 +79,7 @@ Fact("Handles port number appropriately",
 )
 ```
 
-Additional tests can be written to ensure that the function appropriately handles edge cases.
+More tests can be written to ensure that the function appropriately handles edge cases.
 
 An early version of the function might pass some but not all tests:
 
@@ -88,8 +91,8 @@ Uri.GetHost = (url) =>
         parts[Scheme] & "://" & parts[Host]
 ```
 
-![Some tests fail.](media/handling-unit-testing/unit-testing-failure.png)
+:::image type="content" source="media/handling-unit-testing/unit-testing-failure.png" alt-text="Some tests fail.":::
 
-The [final version of the function](helper-functions.md) should pass all unit tests. This also makes it easy to ensure that future updates to the function do not accidentally remove any of its basic functionality.
+The [final version of the function](helper-functions.md) should pass all unit tests. This also makes it easy to ensure that future updates to the function don't accidentally remove any of its basic functionalities.
 
-![All tests pass.](media/handling-unit-testing/unit-testing-pass.png)
+:::image type="content" source="media/handling-unit-testing/unit-testing-pass.png" alt-text="All tests pass.":::

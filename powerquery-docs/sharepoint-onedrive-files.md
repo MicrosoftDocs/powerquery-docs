@@ -2,7 +2,7 @@
 title: SharePoint and OneDrive for Business files import
 description: All available methods in Power Query to get files from your SharePoint or OneDrive for Business accounts.
 author: ptyx507x
-ms.date: 1/11/2023
+ms.date: 1/24/2024
 ms.author: miescobar
 ---
 
@@ -12,10 +12,10 @@ Power Query offers a series of ways to gain access to files that are hosted on e
 
 ## Browse files
 
->[!NOTE]
+> [!NOTE]
 >Currently, you can only browse for OneDrive for Business files of the authenticated user inside of Power Query Online for PowerApps.
 
->[!WARNING]
+> [!WARNING]
 > This feature requires your browser to allow third party cookies. If your browser has blocked third party cookies, the **Browse** dialog will appear but it'll be completely blank with no option to close the dialog.
 
 Power Query provides a **Browse OneDrive** button next to the **File path or URL** text box when you create a dataflow in PowerApps using any of these connectors:
@@ -26,15 +26,15 @@ Power Query provides a **Browse OneDrive** button next to the **File path or URL
 * [XML](connectors/xml.md)
 * [TXT/CSV](connectors/text-csv.md)
 
-![Browse OneDrive... button inside the Connection settings window for the Excel connector.](media/sharepoint-onedrive-files/sp-browse-button.png)
+:::image type="content" source="media/sharepoint-onedrive-files/sp-browse-button.png" alt-text="Browse OneDrive... button inside the Connection settings window for the Excel connector.":::
 
 When you select this button, you'll be prompted to go through the authentication process. After completing this process, a new window appears with all the files inside the OneDrive for Business of the authenticated user.
 
-![New window to browse the files from the OneDrive for Business of the authenticated user.](media/sharepoint-onedrive-files/sp-browse-window.png)
+:::image type="content" source="media/sharepoint-onedrive-files/sp-browse-window.png" alt-text="New window to browse the files from the OneDrive for Business of the authenticated user.":::
 
 You can select the file of your choice, and then select the **Open** button. After selecting **Open**, you'll be taken back to the initial connection settings page where you'll see that the **File path or URL** text box now holds the exact URL to the file you've selected from OneDrive for Business.
 
-![Connection settings window with the url to the selected file hosted on OneDrive for Business.](media/sharepoint-onedrive-files/sp-browse-url.png)
+:::image type="content" source="media/sharepoint-onedrive-files/sp-browse-url.png" alt-text="Connection settings window with the url to the selected file hosted on OneDrive for Business.":::
 
 You can select the **Next** button at the bottom-right corner of the window to continue the process and get your data.
 
@@ -67,10 +67,10 @@ To use the link you just copied in Power Query, take the following steps:
 
    ![Screenshot of the Power BI Desktop credential prompt, emphasizing Windows or Organizational account selection.](media/sharepoint-onedrive-files/odb-links_06.png)
 
-   >[!CAUTION]
+   > [!CAUTION]
    >When working with files hosted on OneDrive for Home, the file that you want to connect to needs to be publicly available. When setting the authentication method for this connection, select the **Anonymous** option.
 
-When the **Navigator** dialog box appears, you can select from the list of tables, sheets, and ranges found in the Excel workbook. From there, you can use the OneDrive for Business file just like any other Excel file. You can create reports and use it in datasets like you would with any other data source.
+When the **Navigator** dialog box appears, you can select from the list of tables, sheets, and ranges found in the Excel workbook. From there, you can use the OneDrive for Business file just like any other Excel file. You can create reports and use it in data sets like you would with any other data source.
 
 > [!NOTE]
 > To use a OneDrive for Business file as a data source in the Power BI service, with **Service Refresh** enabled for that file, make sure you select **OAuth2** as the **Authentication method** when configuring your refresh settings. Otherwise, you may encounter an error (such as, *Failed to update data source credentials*) when you attempt to connect or to refresh. Selecting **OAuth2** as the authentication method remedies that credentials error.
@@ -81,11 +81,11 @@ You can read a detailed step-by-step guide on how to connect to the files hosted
 
 After successfully establishing the connection, you'll be prompted with a table preview that shows the files in your SharePoint site. Select the **Transform data** button at the bottom right of the window.
 
-![Table preview after connecting to a SharePoint site using the SharePoint folder connector showing the files found in the SharePoint site.](media/sharepoint-onedrive-files/sp-folder-preview.png)
+:::image type="content" source="media/sharepoint-onedrive-files/sp-folder-preview.png" alt-text="Table preview after connecting to a SharePoint site using the SharePoint folder connector showing the files found in the SharePoint site.":::
 
 Selecting the **Transform Data** button will take you to a view of the data called the *File system view*. Each of the rows in this table represents a file that was found in your SharePoint site.
 
-![Table preview of the files in the SharePoint site after selecting the Transform data button.](media/sharepoint-onedrive-files/sp-transform-data-me.png)
+:::image type="content" source="media/sharepoint-onedrive-files/sp-transform-data-me.png" alt-text="Table preview of the files in the SharePoint site after selecting the Transform data button.":::
 
 The table has a column named **Content** that contains your file in a binary format. The values in the **Content** column have a different color than the rest of the values in the other columns of the table, which indicates that they're selectable.
 
@@ -95,7 +95,7 @@ For example, from the table shown in the previous image, you can select the seco
 
 ![Contents of a CSV file with the name 02-February.csv that were automatically interpreted by Power Query as shown in the Applied steps section.](media/sharepoint-onedrive-files/sp-file-preview-me.png)
 
->[!NOTE]
+> [!NOTE]
 >You can interact with the table by applying filters, sortings, and other transforms before navigating to the file of your choice. Once you've finished these transforms, select the **Binary** value you want to view. 
 
 ### OneDrive for Business experience
@@ -124,7 +124,7 @@ This experience is provided through the [`SharePoint.Contents`](/powerquery-m/sh
 
    `SharePoint.Contents("https://contoso.sharepoint.com/marketing/data")`
 
-   >[!NOTE]
+   > [!NOTE]
    >By default, this function tries to use SharePoint API Version 14 to connect. If you aren't certain of the API version being used by your SharePoint site, you might want to try using the following example code: `SharePoint.Contents("https://contoso.sharepoint.com/marketing/data", [ApiVersion="Auto"])`.
 
 3. Power Query will request that you add an authentication method for your connection. Use the same authentication method that you'd use for the SharePoint files connector.
@@ -143,5 +143,5 @@ This experience is provided through the [`SharePoint.Contents`](/powerquery-m/sh
 
      ![Table preview after navigating to the Sales Reports folder.](media/sharepoint-onedrive-files/sp-navigate-level-3-me.png)
 
->[!NOTE]
+> [!NOTE]
 > The experience provided by the `SharePoint.Contents` function is optimal for SharePoint and OneDrive for Business environments with a large number of files.

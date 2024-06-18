@@ -1,10 +1,10 @@
 ---
 title: Best practices for reusing dataflows across environments and workspaces
 description: Best practices for reusing dataflows across environments and workspaces
-author: bensack
+author: Luitwieler
 ms.topic: conceptual
-ms.date: 6/14/2023
-ms.author: bensack
+ms.date: 1/26/2024
+ms.author: jeluitwi
 ---
 
 # Best practices for reusing dataflows across environments and workspaces
@@ -18,7 +18,7 @@ If a dataflow performs all the actions, it's hard to reuse its tables in other d
 If you have data transformation dataflows, you can split them into dataflows that do common transformations. Each dataflow can do just a few actions. These few actions per dataflow ensure that the output of that dataflow is reusable by other dataflows.
 
 :::image type="complex" source="media/best-practices-reusing-dataflows/multi-layered-dataflow.png" alt-text="Dataflow doing only a few actions.":::
-   Image with data being extracted from a data source to staging dataflows, where the tables are either stored in Dataverse or Azure Data Lake storage. Then the data is moved to transformation dataflows where the data is transformed and converted to the data warehouse structure. Finally, the data is loaded to a Power BI dataset.
+   Image with data being extracted from a data source to staging dataflows, where the tables are either stored in Dataverse or Azure Data Lake storage. Then the data is moved to transformation dataflows where the data is transformed and converted to the data warehouse structure. Finally, the data is loaded to a Power BI semantic model.
 :::image-end:::
 
 ## Use multiple workspaces
@@ -29,9 +29,9 @@ Each workspace (or environment) is available only for members of that workspace.
 
 ## Set the correct access levels on workspaces
 
-To give access to dataflows in other workspaces to use the output of a dataflow in a workspace, you just need to give them View access in the workspace. To learn more about other roles in a Power BI workspace, go to [Roles in the new workspaces](/power-bi/collaborate-share/service-new-workspaces#roles-in-the-new-workspaces).
+To give access to dataflows in other workspaces to use the output of a dataflow in a workspace, you just need to give them View access in the workspace. To learn more about other roles in a Power BI workspace, go to [Roles in the new workspaces](/power-bi/collaborate-share/service-roles-new-workspaces).
 
-:::image type="content" source="/power-bi/collaborate-share/media/service-create-the-new-workspaces/power-bi-workspace-add-members.png" alt-text="Screenshot showing how to access to the Power BI workspace.":::
+:::image type="content" source="media/best-practices-reusing-dataflows/power-bi-workspace-add-members.png" alt-text="Screenshot showing how to access to the Power BI workspace.":::
 
 ## Endorsement on the dataflow in Power BI
 
@@ -39,7 +39,7 @@ There can be many dataflows created in a tenant organization, and it can be hard
 
 These levels of endorsement help users find reliable dataflows easier and faster. The dataflow with a higher endorsement level appears first. The Power BI administrator can delegate the ability to endorse dataflows to the certified level to other people. More information: [Endorsement - Promoting and certifying Power BI content](/power-bi/collaborate-share/service-endorsement-overview)
 
-:::image type="content" source="/power-bi/transform-model/media/service-dataflows-promote-certify/powerbi-dataflow-endorsement-power-query.png" alt-text="Screenshot of the Power Query Navigator showing the promoted and certified endorsement labels on specific dataflows.":::
+:::image type="content" source="media/best-practices-reusing-dataflows/dataflow-endorsement-power-query.png" alt-text="Screenshot of the Power Query Navigator showing the promoted and certified endorsement labels on specific dataflows." lightbox="media/best-practices-reusing-dataflows/dataflow-endorsement-power-query.png":::
 
 ## Separate tables in multiple dataflows
 

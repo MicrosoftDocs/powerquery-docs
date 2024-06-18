@@ -3,7 +3,7 @@ title: Power Query MicroStrategy for Power BI connector
 description: Provides basic information about products that use the MicroStrategy for Power BI connector, supported authentication types, prerequisites, and connection instructions.
 author: pawjastrzebski
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
@@ -17,7 +17,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Basic<br />OAuth 2.0 |
 
 ## Prerequisites
@@ -41,14 +41,14 @@ To connect to MicroStrategy using Power BI Desktop:
 
 4. Enter a valid MicroStrategy Library URL, for example, `https://.../MicroStrategyLibrary`.
 
-   ![Standard environment URL example.](./media/micro-strategy-for-power-bi/pbi-standard-login.png)
+   :::image type="content" source="./media/micro-strategy-for-power-bi/pbi-standard-login.png" alt-text="Standard environment URL example.":::
 
    > [!NOTE]
    >If you want to utilize OIDC authentication, you must add a **#OIDCMode** string to the end of the URL.
    >
    >OIDC authentication is available starting in version 2.4.5 of the connector.
 
-   ![OIDC environment URL example.](./media/micro-strategy-for-power-bi/pbi-oidc-login.png)
+   :::image type="content" source="./media/micro-strategy-for-power-bi/pbi-oidc-login.png" alt-text="OIDC environment URL example.":::
 
 5. (optional) Select the authentication mode. This option only affects basic authentication.
 
@@ -86,9 +86,9 @@ To connect to MicroStrategy using Power BI Desktop:
 
 To refresh MicroStrategy data using Power BI Online:
 
-1. Publish the dataset imported with Power BI Desktop using the **MicroStrategy for Power BI** connector.
+1. Publish the semantic model imported with Power BI Desktop using the **MicroStrategy for Power BI** connector.
 
-2. Open the **Settings** page for the published dataset.
+2. Open the **Settings** page for the published semantic model.
 
 3. If this is the first time you're connecting to this database, select the authentication type and enter your credentials.
 

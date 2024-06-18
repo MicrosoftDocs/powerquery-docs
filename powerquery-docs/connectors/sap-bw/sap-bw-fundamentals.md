@@ -25,7 +25,7 @@ The OLAP BAPIs provide methods for browsing metadata and master data, and also f
 
 The OLAP Processor is responsible for retrieving, processing, and formatting the data from the SAP BW source objects, which are further described in [SAP BW data source](#sap-bw-data-sources) and [Data objects in SAP BW](#data-objects-in-sap-bw).
 
-![Integration architecture.](integration-architecture.png)
+:::image type="content" source="integration-architecture.png" alt-text="Integration architecture.":::
 
 SAP Business Explorer and other SAP tools use a more direct interface to the SAP BW OLAP Processor called Business Intelligence Consumer Services, commonly known as BICS. BICS isn't available for 3rd party tools.
 
@@ -51,7 +51,7 @@ SAP BW comes with built-in tools for creating data models based on different dat
 
    InfoProviders can be seen as uniform data providers from the viewpoint of a query definition. Their data can therefore be analyzed in a uniform way.
 
-* **InfoCube** is a type of InfoProvider. An InfoCube describes, from an analysis point of view, a self-contained dataset, for a business-orientated area, for example Purchasing. You can analyze an InfoCube directly as an InfoProvider with analysis and reporting tools, including Power BI or Power Platform apps.
+* **InfoCube** is a type of InfoProvider. An InfoCube describes, from an analysis point of view, a self-contained data set, for a business-orientated area, for example Purchasing. You can analyze an InfoCube directly as an InfoProvider with analysis and reporting tools, including Power BI or Power Platform apps.
 
    An InfoCube consists of a set of relational tables that are arranged according to an enhanced star schema. This means there's a (large) fact table that contains the key figures for the InfoCube, and also several (smaller) dimension tables that surround it.
 

@@ -3,7 +3,7 @@ title: Power Query SharePoint list connector
 description: Provides basic information about how to connect to your data, along with troubleshooting tips for obtaining the root SharePoint address and changing the authentication method.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
@@ -14,7 +14,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication Types Supported | Anonymous<br/>Windows<br/>Microsoft Account |
 | Function Reference Documentation | [SharePoint.Contents](/powerquery-m/sharepoint-contents)<br/>[SharePoint.Files](/powerquery-m/sharepoint-files)<br/>[SharePoint.Tables](/powerquery-m/sharepoint-tables) |
 
@@ -22,7 +22,7 @@ ms.author: dougklo
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 > [!NOTE]
->AAD/OAuth for SharePoint on-premises isn’t supported using the on-premises data gateway.
+>Microsoft Entra ID/OAuth for SharePoint on-premises isn’t supported using the on-premises data gateway.
 
 ## Capabilities supported
 
@@ -42,21 +42,21 @@ To connect to a SharePoint list:
 
 2. Paste the SharePoint site URL you copied in [Determine the site URL](#determine-the-site-url) to the **Site URL** field in the open dialog box.
 
-   ![Image of the SharePoint lists dialog with the Site URL filled in.](./media/sharepoint-list/sharepoint-list-url.png)
+   :::image type="content" source="./media/sharepoint-list/sharepoint-list-url.png" alt-text="Image of the SharePoint lists dialog with the Site URL filled in.":::
 
-   If the URL address you enter is invalid, a ![Warning icon.](./media/sharepoint-list/web-warning.png) warning icon will appear next to the **Site URL** textbox.
+   If the URL address you enter is invalid, a :::image type="content" source="./media/sharepoint-list/web-warning.png" alt-text="Warning icon."::: warning icon will appear next to the **Site URL** textbox.
 
    Select **OK** to continue.
 
 3. If this is the first time you've visited this site address, select the appropriate authentication method. Enter your credentials and chose which level to apply these settings to. Then select **Connect**.
 
-   ![Choose Microsoft account.](./media/sharepoint-list/sharepoint-list-sign-in.png)
+   :::image type="content" source="./media/sharepoint-list/sharepoint-list-sign-in.png" alt-text="Choose Microsoft account.":::
 
     For more information about authentication methods and level settings, go to [Authentication with a data source](../connectorauthentication.md).
 
 4. From the **Navigator**, you can select a location, then either transform the data in the Power Query editor by selecting **Transform Data**, or load the data by selecting **Load**.
 
-   ![Select the list checkbox.](./media/sharepoint-list/sharepoint-list-navigator.png)
+   :::image type="content" source="./media/sharepoint-list/sharepoint-list-navigator.png" alt-text="Select the list checkbox.":::
 
 ## Connect to a SharePoint list from Power Query Online
 
@@ -66,7 +66,7 @@ To connect to a SharePoint list:
 
 2. Paste the SharePoint site URL you copied in [Determine the site URL](#determine-the-site-url) to the **Site URL** field in the open dialog box.
 
-   ![Image of the online SharePoint list page with the Site URL information filled in.](./media/sharepoint-list/sharepoint-list-url-online.png)
+   :::image type="content" source="./media/sharepoint-list/sharepoint-list-url-online.png" alt-text="Image of the online SharePoint list page with the Site URL information filled in.":::
 
 3. Enter the name of an on-premises data gateway if needed.
 
@@ -76,7 +76,7 @@ To connect to a SharePoint list:
 
 6. From the **Navigator**, you can select a location, then transform the data in the Power Query editor by selecting **Next**.
 
-   ![Select the list checkbox in navigator.](./media/sharepoint-list/sharepoint-list-navigator-online.png)
+   :::image type="content" source="./media/sharepoint-list/sharepoint-list-navigator-online.png" alt-text="Select the list checkbox in navigator.":::
 
 ## Troubleshooting
 
@@ -90,19 +90,19 @@ When using the SharePoint list connector, Boolean values are represented inconsi
 
 This issue only happens when the **Data Type** is not explicitly set for a column in the Query View of Power BI Desktop. You can tell that the data type isn't set by seeing the "ABC 123" image on the column and "Any" data type in the ribbon as shown below.
 
-![Data type any on a boolean column.](./media/sharepoint-list/boolean-any.png)
+:::image type="content" source="./media/sharepoint-list/boolean-any.png" alt-text="Data type any on a boolean column.":::
 
 The user can force the interpretation to be consistent by explicitly setting the data type for the column through the Power Query Editor. For example, the following image shows the column with an explicit Boolean type.
 
-![Column with explicit boolean type.](./media/sharepoint-list/boolean-explicit.png)
+:::image type="content" source="./media/sharepoint-list/boolean-explicit.png" alt-text="Column with explicit boolean type.":::
 
 ### Using OData to access a SharePoint List
 
 If you use an OData feed to access a SharePoint List, there's an approximately 2100 character limitation to the URL you use to connect. More information: [Maximum URL length](odata-feed.md#maximum-url-length)
 
-### Azure Active Directory authentication
+### Microsoft Entra ID authentication
 
-Azure Active Directory authentication (AAD) isn't supported for on-premises SharePoint sources.
+Microsoft Entra ID authentication isn't supported for on-premises SharePoint sources.
 
 ## Next steps
 

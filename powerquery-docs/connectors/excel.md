@@ -3,7 +3,7 @@ title: Power Query Excel connector
 description: Provides basic information and prerequisites for the connector, along with troubleshooting tips, how to fix missing or incomplete Excel data, and improve performance.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 2/7/2024
 ms.author: dougklo
 ---
 
@@ -14,7 +14,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Excel<br/>Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
+| Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
 | Authentication Types Supported | Anonymous (online)<br/>Basic (online)<br/>Organizational account (online) |
 | Function Reference Documentation | [Excel.Workbook](/powerquery-m/excel-workbook)<br/>[Excel.CurrentWorkbook](/powerquery-m/excel-currentworkbook) |
 
@@ -37,26 +37,29 @@ ACE can't be installed in cloud service environments. So if you're seeing this e
 
 To make the connection from Power Query Desktop:
 
-1. Select the **Excel** option in the connector selection.
+1. Select **Excel Workbook** in the get data experience. The get data experience in Power Query Desktop varies between apps. For more information about the Power Query Desktop get data experience for your app, go to [Where to get data](../where-to-get-data.md).
+
 2. Browse for and select the Excel workbook you want to load. Then select **Open**.
 
-   ![Select the Excel workbook from File Explorer.](./media/excel/connect-desktop.png)
+   :::image type="content" source="./media/excel/connect-desktop.png" alt-text="Select the Excel workbook from File Explorer.":::
 
    If the Excel workbook is online, use the [Web connector](web/web.md) to connect to the workbook.
 
 3. In **Navigator**, select the workbook information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
 
-   ![Excel workbook imported into Power Query Desktop Navigator.](./media/excel/desktop-navigator-view.png)
+   :::image type="content" source="./media/excel/desktop-navigator-view.png" alt-text="Excel workbook imported into Power Query Desktop Navigator.":::
 
 ## Connect to an Excel workbook from Power Query Online
 
 To make the connection from Power Query Online:
 
-1. Select the **Excel** option in the connector selection.
+1. Select the **Excel workbook** option in the get data experience. Different apps have different ways of getting to the Power Query Online get data experience. For more information about how to get to the Power Query Online get data experience from your app, go to [Where to get data](../where-to-get-data.md).
+
+   :::image type="content" source="./media/excel/get-data-online.png" alt-text="Screenshot of the get data window with Excel workbook emphasized.":::
 
 2. In the Excel dialog box that appears, provide the path to the Excel workbook.
 
-   ![Connection information to access the Excel workbook.](./media/excel/connect-online.png)
+   :::image type="content" source="./media/excel/connect-online.png" alt-text="Screenshot of the connection information to access the Excel workbook.":::
 
 3. If necessary, select an on-premises data gateway to access the Excel workbook.
 
@@ -64,20 +67,19 @@ To make the connection from Power Query Online:
 
 5. In **Navigator**, select the workbook information you want, and then  **Transform Data** to continue transforming the data in Power Query Editor.
 
-   ![Excel workbook imported into Power Query online Navigator.](./media/excel/online-navigator-view.png)
+   :::image type="content" source="./media/excel/online-navigator-view.png" alt-text="Screenshot of the Excel workbook imported into the Power Query online Navigator.":::
 
 ## Suggested tables
 
 If you connect to an Excel Workbook that doesn't specifically contain a single table, the Power Query navigator will attempt to create a suggested list of tables that you can choose from. For example, consider the following workbook example that contains data from A1 to C5, more data from D8 to E10, and more from C13 to F16.
 
-![Screenshot of Excel workbook with three sets of data.](./media/excel/workbook-data.png)
+:::image type="content" source="./media/excel/workbook-data.png" alt-text="Screenshot of Excel workbook with three sets of data.":::
 
 When you connect to the data in Power Query, the Power Query navigator creates two lists. The first list contains the entire workbook sheet, and the second list contains three suggested tables.
 
 If you select the entire sheet in the navigator, the workbook is displayed as it appeared in Excel, with all of the blank cells filled with **null**.
 
-[![Screenshot of the navigator with single sheet displayed with nulls in empty cells.](./media/excel/entire-workbook-sheet.png)](./media/excel/entire-workbook-sheet.png#lightbox)
-
+:::image type="content" source="./media/excel/entire-workbook-sheet.png" lightbox="./media/excel/entire-workbook-sheet.png" alt-text="Screenshot of the navigator with single sheet displayed with nulls in empty cells.":::
 If you select one of the suggested tables, each individual table that Power Query was able to determine from the layout of the workbook is displayed in the navigator. For example, if you select **Table 3**, the data that originally appeared in cells C13 to F16 is displayed.
 
 [![Screenshot of the navigator with table 3 under Suggested tables selected, and the contents of table 3 displayed.](./media/excel/table-three-only.png)](./media/excel/table-three-only.png#lightbox)
@@ -183,3 +185,9 @@ You might see the following error when importing certain Excel workbooks.
 Usually this error indicates there is a problem with the format of the file.
 
 However, sometimes this error can happen when a file appears to be an Open XML file (such as .xlsx), but the ACE driver is actually needed in order to process the file. Go to the [Legacy ACE connector](excel.md#legacy-ace-connector) section for more information about how to process files that require the ACE driver.
+
+## Known issues and limitations
+
+* Power Query Online is unable to access encrypted Excel files. Since Excel files labeled with sensitivity types other than "Public" or "Non-Business" are encrypted, they aren't accessible through Power Query Online.
+* Power Query Online doesn't support password-protected Excel files. 
+

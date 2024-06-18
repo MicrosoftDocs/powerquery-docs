@@ -3,7 +3,7 @@ title: Power Query Vessel Insight connector
 description: Provides basic information and prerequisites for the Vessel Insight connector, descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
@@ -17,7 +17,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Organizational account |
 
 ## Prerequisites
@@ -34,31 +34,31 @@ To connect to Vessel Insight:
 
 1. Select **Get Data** from the **Home** ribbon in Power BI Desktop. Select **Other** from the categories on the left, select **Vessel Insight**, and then select **Connect**.
 
-   ![Get Data from Vessel Insight.](./media/vessel-insight/get-vi-data.png)
+   :::image type="content" source="./media/vessel-insight/get-vi-data.png" alt-text="Get Data from Vessel Insight.":::
 
 2. If this is the first time you're getting data through the Vessel Insight connector, a third-party notice will be displayed. Select **Don't warn me again with this connector** if you don't want this message to be displayed again, and then select **Continue**.
 
 3. To sign in to your Vessel Insight account, select **Sign in**.
 
-   ![Select sign in button.](./media/vessel-insight/sign-in.png)
+   :::image type="content" source="./media/vessel-insight/sign-in.png" alt-text="Select sign in button.":::
 
 4. In the window that appears, provide your Vessel Insight tenant URL in the format `<companyname>.kognif.ai`. Then select **Validate**.
 
-    ![Insert Vessel Insight tenant.](./media/vessel-insight/tenant-url.png)
+    :::image type="content" source="./media/vessel-insight/tenant-url.png" alt-text="Insert Vessel Insight tenant.":::
 
 5. In the window that appears, provide your credentials to sign in to your Vessel Insight account.
 
-   ![Sign in to Vessel Insight.](./media/vessel-insight/vi-sign-in.png)
+   :::image type="content" source="./media/vessel-insight/vi-sign-in.png" alt-text="Sign in to Vessel Insight.":::
 
    If you entered an email address and password, select **Continue**.
 
 6. Once you've successfully signed in, select **Save**.
 
-   ![Signed in and ready to connect.](./media/vessel-insight/signed-in.png)
+   :::image type="content" source="./media/vessel-insight/signed-in.png" alt-text="Signed in and ready to connect.":::
 
 Once the connection is established, you can preview and select data within the **Navigator** dialog box to create a single tabular output.
 
-![Select data using Navigator.](./media/vessel-insight/navigator-view.png)
+:::image type="content" source="./media/vessel-insight/navigator-view.png" alt-text="Select data using Navigator.":::
 
 You can select the following options in the navigator:
 
@@ -71,15 +71,15 @@ You can provide any optional input parameters required for the selected items. F
 
 If you don't input parameters for **Vessel Insight Data 2.0**, you'll get the latest value by default.
 
-![Default value.](./media/vessel-insight/navigator-default.png)
+:::image type="content" source="./media/vessel-insight/navigator-default.png" alt-text="Default value.":::
 
 For **Voyage**, you need to input IMOs that you want to fetch data for.
 
-![Voyage IMO parameter.](./media/vessel-insight/navigator-options-voyage-imo.png)
+:::image type="content" source="./media/vessel-insight/navigator-options-voyage-imo.png" alt-text="Voyage IMO parameter.":::
 
 You can **Load** the selected time series data, which brings the one table for each selected time series tag into Power BI Desktop, or you can select **Transform Data** to edit the query, which opens the Power Query editor. You can then filter and refine the set of data you want to use, and then load that refined set of data into Power BI Desktop.
 
-![Load or transform data.](./media/vessel-insight/load-transform.png)
+:::image type="content" source="./media/vessel-insight/load-transform.png" alt-text="Load or transform data.":::
 
 ## Optional input parameters
 
@@ -87,7 +87,7 @@ You can **Load** the selected time series data, which brings the one table for e
 
 When you import time series data through the Vessel Insight Data 2.0 node and you've selected the tags you want to load or transform in the Power Query **Navigator**, you can also limit the amount of data by selecting a set of optional input parameters.
 
-![Optional input parameters for Vessel Insight Data.](./media/vessel-insight/navigator-options.png)
+:::image type="content" source="./media/vessel-insight/navigator-options.png" alt-text="Optional input parameters for Vessel Insight Data.":::
 
 These input parameters are:
 
@@ -108,7 +108,7 @@ If you're importing multiple tags, it can be cumbersome to input the parameters 
 
 When you import voyage data through the **Voyage** node, you can limit the amount of data for the **History** and **Location History** table by setting a set of optional input parameters.
 
-![Optional input parameters for voyage .](./media/vessel-insight/navigator-options-voyage.png)
+:::image type="content" source="./media/vessel-insight/navigator-options-voyage.png" alt-text="Optional input parameters for voyage .":::
 
 These input parameters are:
 

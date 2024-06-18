@@ -1,10 +1,10 @@
 ---
 title: What is the storage structure for analytical dataflows
 description: What is the storage structure for analytical dataflows
-author: bensack
+author: Luitwieler
 ms.topic: conceptual
 ms.date: 1/6/2023
-ms.author: bensack
+ms.author: jeluitwi
 ---
 
 # What is the storage structure for analytical dataflows?
@@ -17,7 +17,7 @@ If the [dataflow is standard](understanding-differences-between-analytical-stand
 
 However, when the dataflow is [analytical](understanding-differences-between-analytical-standard-dataflows.md#analytical-dataflows), the data is stored in Azure Data Lake Storage. A dataflow’s data and metadata is stored in a Common Data Model folder. Since a storage account might have multiple dataflows stored in it, a hierarchy of folders and subfolders has been introduced to help organize the data. Depending on the product the dataflow was created in, the folders and subfolders may represent workspaces (or environments), and then the dataflow’s Common Data Model folder. Inside the Common Data Model folder, both schema and data of the dataflow tables are stored. This structure follows the standards defined for Common Data Model.
 
-![Analytical dataflow stores the data in the Common Data Model structure.](media/what-is-the-cdm-storage-structure/analytical-dataflow-stores-data-in-cdm-format.png)
+:::image type="content" source="media/what-is-the-cdm-storage-structure/analytical-dataflow-stores-data-in-cdm-format.png" alt-text="Analytical dataflow stores the data in the Common Data Model structure.":::
 
 ## What is the Common Data Model storage structure?
 
@@ -25,7 +25,7 @@ However, when the dataflow is [analytical](understanding-differences-between-ana
 
 Common Data Model folders define how a table's schema and its data should be stored. In Azure Data Lake Storage, data is organized in folders. Folders can represent a workspace or environment. Under those folders, subfolders for each dataflow are created.
 
-![Workspace folder structure.](media/what-is-the-cdm-storage-structure/folders-workspace-and-dataflows.png)
+:::image type="content" source="media/what-is-the-cdm-storage-structure/folders-workspace-and-dataflows.png" alt-text="Workspace folder structure.":::
 
 ## What's in a dataflow folder?
 
@@ -37,11 +37,11 @@ Each dataflow folder contains a subfolder for each table and a metadata file nam
 
 The `model.json` file is the metadata definition of the dataflow. This is the one file that contains all the dataflow metadata. It includes a list of tables, the columns, and their data types in each table, the relationship between tables, and so on. You can export this file from a dataflow easily, even if you don't have access to the Common Data Model folder structure.
 
-![Export the model.json file from a dataflow.](media/what-is-the-cdm-storage-structure/dataflow-export-json.png)
+:::image type="content" source="media/what-is-the-cdm-storage-structure/dataflow-export-json.png" alt-text="Export the model.json file from a dataflow.":::
 
 You can use this JSON file to migrate (or import) your dataflow into another workspace or environment.
 
-![Migrate a dataflow into another workspace or environment.](media/what-is-the-cdm-storage-structure/dataflow-migrate-to-another-workspace.png)
+:::image type="content" source="media/what-is-the-cdm-storage-structure/dataflow-migrate-to-another-workspace.png" alt-text="Migrate a dataflow into another workspace or environment.":::
 
 To learn exactly what the model.json metadata file includes, go to [The metadata file (model.json) for Common Data Model](/common-data-model/model-json).
 
@@ -53,7 +53,7 @@ In addition to the metadata file, the dataflow folder includes other subfolders.
 
 If you're using dataflows that use storage provided by the product they were created in, you won't have access to those folders directly. In such cases, getting data from the dataflows requires using the Microsoft Power Platform dataflow connector available in the **Get data** experience in the Power BI service, Power Apps, and Dynamics 35 Customer Insights products, or in Power BI Desktop.
 
-![Connect to data for an analytical dataflow.](media/what-is-the-cdm-storage-structure/get-data-from-analytical-dataflow.png)
+:::image type="content" source="media/what-is-the-cdm-storage-structure/get-data-from-analytical-dataflow.png" alt-text="Connect to data for an analytical dataflow.":::
 
 To learn how dataflows and the internal Data Lake Storage integration work, go to [Dataflows and Azure Data Lake integration (Preview)](/power-bi/transform-model/service-dataflows-azure-data-lake-integration).
 

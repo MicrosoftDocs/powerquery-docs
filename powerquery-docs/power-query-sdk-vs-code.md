@@ -1,16 +1,15 @@
 ---
-title: Using the Power Query SDK 
+title: Power Query SDK Overview
 description: A guided tour on how to use the Power Query SDK in Visual Studio Code and the core functionality provided through it
 author: ptyx507x
 
 ms.topic: quickstart
-ms.date: 3/13/2023
+ms.date: 5/15/2024
 ms.author: miescobar
 ---
+# Power Query SDK Overview
 
-# Using the Power Query SDK
-
-This article focuses on the experience available for the Power Query SDK found in Visual Studio Code. You can learn more on how to install the Power Query SDK for Visual Studio from the article on [Installing the SDK](InstallingSDK.md).
+The purpose of this article is to give you an overview of the overall capabilities and development experience found inside of the Power Query SDK for Visual Studio Code.
 
 ## Create a new project
 
@@ -19,15 +18,15 @@ This article focuses on the experience available for the Power Query SDK found i
 
 Once in Visual Studio Code, in the main **Explorer** pane of Visual Studio Code there's a section with the name **Power Query SDK**. This section has only one button that reads **Create an extension project**. Select this button.
 
-![Create a new extension project button in Visual Studio Code.](media/power-query-sdk-vs-code/create-new-extension.jpg)
+:::image type="content" source="media/power-query-sdk-vs-code/create-new-extension.jpg" alt-text="Create a new extension project button in Visual Studio Code.":::
 
 This button opens an input field at the top of the Visual Studio Code interface. Enter the name of your new extension project, and then select **Enter**.
 
-![Creating a new extension project and naming the project.](media/power-query-sdk-vs-code/new-project-name.jpg)
+:::image type="content" source="media/power-query-sdk-vs-code/new-project-name.jpg" alt-text="Creating a new extension project and naming the project.":::
 
-After a few seconds, your Visual Studio Code window opens the main *.pq file for your extension project that contains your connector logic. The Power Query SDK automatically runs some necessary tasks to complete the setup of your workspace. You can check these tasks in the output console in Visual Studio Code.
+After a few seconds, your Visual Studio Code window opens the main *.pq file for your extension project that contains your connector logic. The Power Query SDK automatically runs some necessary tasks to complete the set up of your workspace. You can check these tasks in the output console in Visual Studio Code.
 
-![Extension project created using the Hello World template.](media/power-query-sdk-vs-code/extension-project-created.jpg)
+:::image type="content" source="media/power-query-sdk-vs-code/extension-project-created.jpg" alt-text="Extension project created using the Hello World template.":::
 
 The Power Query SDK automatically creates the following set of files:
 
@@ -39,11 +38,11 @@ The Power Query SDK automatically creates the following set of files:
 * A .query.pq file whose main purpose is to be used as a way to create test queries that you can later evaluate.
 * A .proj file that holds information about the extension project.
 
-![List of connector files.](media/power-query-sdk-vs-code/connector-files.jpg)
+:::image type="content" source="media/power-query-sdk-vs-code/connector-files.jpg" alt-text="List of connector files.":::
 
 Once an extension project is recognized by Visual Studio Code, the section for the Power Query SDK changes its appearance, and now displays a list of tasks you can run against your new extension project.
 
-![Tasks inside the Power Query SDK section.](media/power-query-sdk-vs-code/ui-driven-tasks.jpg)
+:::image type="content" source="media/power-query-sdk-vs-code/ui-driven-tasks.jpg" alt-text="Tasks inside the Power Query SDK section.":::
 
 ## Credentials
 
@@ -58,11 +57,11 @@ The Power Query SDK is primarily driven by tasks that can be triggered through m
 
 * Through the entry in the **Power Query SDK** section in the explorer pane.
 
-   ![Setting a credential through the Power Query SDK section in the Explorer.](media/power-query-sdk-vs-code/set-credential.jpg)
+   :::image type="content" source="media/power-query-sdk-vs-code/set-credential.jpg" alt-text="Setting a credential through the Power Query SDK section in the Explorer.":::
 
 * Through the **Terminal** by selecting the **Run Task** option and then selecting the **Set credential** task.
 
-   ![Setting a credential through the Terminal menu.](media/power-query-sdk-vs-code/set-credential-terminal-task.jpg)
+   :::image type="content" source="media/power-query-sdk-vs-code/set-credential-terminal-task.jpg" alt-text="Setting a credential through the Terminal menu.":::
 
 When you run this task, Visual Studio Code will guide you through a series of prompts to allow you to set the credential. These series of prompts are predictable and always consist of the same stages:
 
@@ -72,7 +71,7 @@ When you run this task, Visual Studio Code will guide you through a series of pr
 
 For the existing extension project, the [authentication method](HandlingAuthentication.md) available is anonymous. Once the authentication is set, a message that confirms a credential has been generated successfully is displayed at the bottom right corner of the window.
 
-![Credential has been generated successfully.](media/power-query-sdk-vs-code/credential-set.jpg)
+:::image type="content" source="media/power-query-sdk-vs-code/credential-set.jpg" alt-text="Credential has been generated successfully.":::
 
 ### List credentials
 
@@ -80,7 +79,7 @@ Similar to setting a credential, the task to list credentials has two entry poin
 
 When this task is executed, it showcases the available credentials inside the output terminal.
 
-![Credentials listed inside the Output console.](media/power-query-sdk-vs-code/list-credentials.jpg)
+:::image type="content" source="media/power-query-sdk-vs-code/list-credentials.jpg" alt-text="Credentials listed inside the Output console.":::
 
 ### Clear ALL credentials
 
@@ -90,7 +89,7 @@ This task serves as a way to clear all credentials from your current session whe
 
 The informational messages for this task are also shown in the output console.
 
-![Informational message for the Clear ALL credentials task.](media/power-query-sdk-vs-code/clear-all-credentials.jpg)
+:::image type="content" source="media/power-query-sdk-vs-code/clear-all-credentials.jpg" alt-text="Informational message for the Clear ALL credentials task.":::
 
 ## Evaluate a query and the results panel
 
@@ -122,33 +121,33 @@ To evaluate this query, you have three options:
 
 * Right select the file that's in use and select the **Evaluate current power query file** option.
 
-![Right click the current file to evaluate it.](media/power-query-sdk-vs-code/right-click-evaluate.jpg)
+:::image type="content" source="media/power-query-sdk-vs-code/right-click-evaluate.jpg" alt-text="Right click the current file to evaluate it.":::
 
 * Go through the **Terminal** menu and select the **Evaluate current file** task.
 
-![Selecting the evaluate current file task from the terminal menu experience.](media/power-query-sdk-vs-code/terminal-evaluate.jpg)
+:::image type="content" source="media/power-query-sdk-vs-code/terminal-evaluate.jpg" alt-text="Selecting the evaluate current file task from the terminal menu experience.":::
 
 * Use the native **Run and Debug** option from Visual Studio Code, select the hyperlink to create a launch.json file, and then evaluate the file.
 
-![Create a launch.json file to evaluate queries through the Run and Debug extensibility.](media/power-query-sdk-vs-code/create-launch-json.jpg)
+:::image type="content" source="media/power-query-sdk-vs-code/create-launch-json.jpg" alt-text="Create a launch.json file to evaluate queries through the Run and Debug extensibility.":::
 
 After evaluating the query, the results are displayed in the console at the bottom of the window and in a new panel called the **result** panel on the right.
 
-![Visual Studio Code window after evaluation has finalized showing the output in the console and the result panel.](media/power-query-sdk-vs-code/evaluation-complete.jpg)
+:::image type="content" source="media/power-query-sdk-vs-code/evaluation-complete.jpg" alt-text="Visual Studio Code window after evaluation has finalized showing the output in the console and the result panel.":::
 
 The result panel contains three tabs:
 
 * **Output tab:** Displays a data preview of the query evaluated. If the data is a table, it's displayed as grid.
 
-   ![Output tab in the results panel.](media/power-query-sdk-vs-code/results-output.jpg)
+   :::image type="content" source="media/power-query-sdk-vs-code/results-output.jpg" alt-text="Output tab in the results panel.":::
 
 * **Summary:** Displays a summary of the activity that ran the evaluations, along with the statistics associated with that activity.
 
-   ![Summary tab in the results panel.](media/power-query-sdk-vs-code/summary-output.jpg)
+   :::image type="content" source="media/power-query-sdk-vs-code/summary-output.jpg" alt-text="Summary tab in the results panel.":::
 
 * **DataSource:** Displays general information about the data source used for the evaluation.
 
-   ![DataSource tab in the results panel.](media/power-query-sdk-vs-code/datasource-output.jpg)
+   :::image type="content" source="media/power-query-sdk-vs-code/datasource-output.jpg" alt-text="DataSource tab in the results panel.":::
 
 To evaluate a different query, you just modify the *.query.pq file, save it, and then run the evaluation task again with any of the three methods.
 
@@ -163,22 +162,22 @@ To follow along, we recommend downloading the connector projects available from 
 
 To bring the legacy extension project to the new SDK, follow these steps:
 
-1. In Visual Studio code, select **File** > **Open folder**, then navigate to the folder where your extension project is located.
+1. In Visual Studio Code, select **File** > **Open folder**, then navigate to the folder where your extension project is located.
 2. Set up a workspace using the existing folder and its contents using one of the following two methods:
 
    * The Power Query SDK has a mechanism to recognize the contents of your folder and suggests that you enable the conversion to a new Power Query SDK workspace.
 
-      ![Popup in the Visual Studio Code interface that suggests the user an upgrade to the Power Query SDK workspace.](media/power-query-sdk-vs-code/upgrade-suggestion.jpg)
+      :::image type="content" source="media/power-query-sdk-vs-code/upgrade-suggestion.jpg" alt-text="Popup in the Visual Studio Code interface that suggests the user an upgrade to the Power Query SDK workspace.":::
 
    * Run the **Setup workspace** and the **Build Task** from the terminal menu. These will effectively create the **.mez** file and the **settings.json** files needed for the workspace.
 
 The addition of two new folders and files is what transforms the current workspace into a new Power Query SDK workspace.
 
-![Upgrading the extension project to the new Power Query SDK.](media/power-query-sdk-vs-code/upgrade-sdk.jpg)
+:::image type="content" source="media/power-query-sdk-vs-code/upgrade-sdk.jpg" alt-text="Upgrading the extension project to the new Power Query SDK.":::
 
-### Setup workspace
+### Set up workspace
 
-What the Setup workspace task does is effectively create a settings.json file for your workspace that dictates some variables that will be used for your workspace when it comes to evaluations and general settings.
+What the Set up workspace task does is effectively create a settings.json file for your workspace that dictates some variables that will be used for your workspace when it comes to evaluations and general settings.
 
 ### Build an extension file
 
@@ -194,7 +193,7 @@ To run this task, first set a credential for your connector and then run the tas
 
 The result of this task is displayed in the output terminal at the bottom of the window.
 
-![Result of the Run TestConnection function in the Power Query SDK.](media/power-query-sdk-vs-code/testconnection.jpg)
+:::image type="content" source="media/power-query-sdk-vs-code/testconnection.jpg" alt-text="Result of the Run TestConnection function in the Power Query SDK.":::
 
 ## Feedback and bugs
 

@@ -3,7 +3,7 @@ title: Power Query connector certification submission
 description: Instructions for submitting a Power Query custom connector for certification.
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 5/24/2024
 ms.author: miescobar
 ---
 
@@ -19,11 +19,11 @@ After you've been approved for certification, ensure that your connector meets t
 
 ## Submitting to the Connector Certification Portal
 
-The Connector Certification Portal is an experience within [ISV Studio](https://aka.ms/ISVStudio) that allows Microsoft partners and ISVs to submit, view, and manage connectors submitted for certification. After submission, communication between Microsoft and the partner connector developer will be through the Connector Certification Portal.
+The Connector Certification Portal is an experience within that allows Microsoft partners and ISVs to submit, view, and manage connectors submitted for certification. After submission, communication between Microsoft and the partner connector developer will be through the Connector Certification Portal.
 
 ### Initial Submission
 
-1. Navigate to [ISV Studio](https://aka.ms/ISVStudio) and sign in with your work Microsoft account. Personal accounts aren't supported in this experience.
+1. Navigate to the [Connector Certification Portal](https://connectorcertification.azurewebsites.net/) and sign in with your work Microsoft account. Personal accounts aren't supported in this experience.
 
 2. Select the **Connector certification** tab on the left to launch the Connector Certification Portal experience.
 
@@ -48,14 +48,14 @@ After your connector code review is complete, you'll need to submit a demo video
 - Load the data into Power BI Desktop and create a simple report.
 - Publish the report to the Power BI service.
 - Update the data in your end service backend (any simple data value update).
-- Successfully refresh the dataset in the Power BI service using the connector through the on-premises data gateway. Refresh the report visual. The changed data value should be updated.
+- Successfully refresh the semantic model in the Power BI service using the connector through the on-premises data gateway. Refresh the report visual. The changed data value should be updated.
 - Successfully refresh in Power BI Desktop. The changed data value should be updated.
 
 ### Updates
 
 Updates to your connector submission can be made at any time, except when your connector is in the process of production deployment. When you're submitting an update, ensure that you submit an update to your existing submission, rather than creating a new submission.
 
-1. Navigate to the **Connector certification** experience within [ISV Studio](https://aka.ms/ISVStudio).
+1. Navigate to the **Connector certification** experience within the [Connector Dertification Portal](https://connectorcertification.azurewebsites.net/).
 
 2. From the list of connectors you manage, select the connector submission to view its connector versions.
 

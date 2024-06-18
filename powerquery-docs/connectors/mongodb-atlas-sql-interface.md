@@ -4,7 +4,7 @@ description: Provides basic information, prerequisites, and instructions for usi
 author: bucaojit  
 ms.author: dougklo
 ms.topic: conceptual  
-ms.date: 1/8/2024  
+ms.date: 1/24/2024  
 ---
 
 # MongoDB Atlas SQL interface
@@ -14,11 +14,11 @@ ms.date: 1/8/2024
 
 ## Summary
 
-| Item                               | Description                                                             |
-|------------------------------------|-------------------------------------------------------------------------|
-| Release State                      | Beta                                                                    |
-| Products                           | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
-| Authentication Types Supported     | Database (Username/Password)                                            |
+| Item                           | Description                                                                    |
+|--------------------------------|--------------------------------------------------------------------------------|
+| Release State                  | Beta                                                                           |
+| Products                       | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Authentication Types Supported | Database (Username/Password)                                                   |
 
 ## Prerequisites
 

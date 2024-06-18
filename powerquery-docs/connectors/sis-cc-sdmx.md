@@ -3,7 +3,7 @@ title: Power Query SIS-CC SDMX connector
 description: Provides basic information and prerequisites for the SIS-CC SDMX connector, descriptions of the optional input parameters, and discusses limitations and issues you might come across.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
@@ -17,7 +17,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Anonymous |
 | Function Reference Documentation | &mdash; |
 
@@ -35,7 +35,7 @@ To connect to SDMX Web Service data:
 
 1. Select **Get Data** from the **Home** ribbon in Power BI Desktop. Select **All** from the categories on the left, and then select **SIS-CC SDMX**. Then select **Connect**.
 
-   ![SIS-CC SDMX Get Data.](media/sis-cc-sdmx/sis-cc-sdmx-get-data.jpg)
+   :::image type="content" source="media/sis-cc-sdmx/sis-cc-sdmx-get-data.jpg" alt-text="SIS-CC SDMX Get Data.":::
 
 2. Fill in the parameters:
    1. In the **Data query URL**, enter an SDMX REST data query URL (the web service must support the SDMX-CSV format).
@@ -45,11 +45,11 @@ To connect to SDMX Web Service data:
       - Show labels; example: Frequency
       - Optionally, enter a language preference in **Label language preference** using an IETF BCP 47 tag
 
-   ![SIS-CC SDMX Connect to Data.](media/sis-cc-sdmx/sis-cc-sdmx-connector.jpg)
+   :::image type="content" source="media/sis-cc-sdmx/sis-cc-sdmx-connector.jpg" alt-text="SIS-CC SDMX Connect to Data.":::
 
 3. If this is the first time you’re connecting to the REST web service in the previous step **Data query URL**, this authentication step is displayed. As the connection is Anonymous, select **Connect**
 
-   ![SIS-CC SDMX Auth](media/sis-cc-sdmx/sis-cc-sdmx-auth.jpg)
+   :::image type="content" source="media/sis-cc-sdmx/sis-cc-sdmx-auth.jpg" alt-text="SIS-CC SDMX Auth.":::
 
 4. Select **Load** to import the data into Power BI, or **Transform Data** to edit the query in Power Query Editor where you can refine the query before loading into Power BI.
 

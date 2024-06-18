@@ -1,9 +1,9 @@
 ---
 title: TIBCO(R) Data Virtualization connector
 description: Provides basic information, prerequisites, and instructions on how to connect to your TIBCO(R) Data Virtualization Server.
-author: sahuero
+author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/24/2024
 ms.author: dougklo
 
 ---
@@ -18,7 +18,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Database (Username/Password)<br/>Windows Authentication (NTLM/Kerberos) |
 | Function Reference Documentation | &mdash; |
 
@@ -28,7 +28,7 @@ To access the TIBCO eDelivery site, you must have purchased TIBCO software. Ther
 
 The Power BI Connector for TIBCO(R) Data Virtualization must first be downloaded from [https://edelivery.tibco.com](https://edelivery.tibco.com) and installed on the machine running Power BI Desktop. The eDelivery site downloads a ZIP file (for example, TIB_tdv_drivers_\<_VERSION_>_all.zip*.zip where \<_VERSION_>=TDV Version) that contains an installer program that installs all TDV client drivers, including the Power BI Connector.
 
-![TDV Setup.](./media/tibco/tdv-setup.png)
+:::image type="content" source="./media/tibco/tdv-setup.png" alt-text="TDV Setup.":::
 
 Once the connector is installed, configure a data source name (DSN) to specify the connection properties needed to connect to the TIBCO(R) Data Virtualization server.
 
@@ -43,7 +43,7 @@ Once the connector is installed, configure a data source name (DSN) to specify t
 ## Capabilities Supported
 
 - Import
-- DirectQuery (Power BI Datasets)
+- DirectQuery (Power BI semantic models)
 - Advanced Connection Properties
 - Advanced
   - Native SQL statement
@@ -56,7 +56,7 @@ Once the matching connector is installed and a DSN is configured, you can connec
 
 2. In the **Power BI Connector for TIBCO(R) Data Virtualization** dialog that appears, provide the Data Source Name.
 
-   ![TDV connection builder in Power BI.](./media/tibco/tdv-datasourcename.png)
+   :::image type="content" source="./media/tibco/tdv-datasourcename.png" alt-text="TDV connection builder in Power BI.":::
 
 3. Select either the **Import** or **DirectQuery** data connectivity mode.
 
@@ -65,7 +65,7 @@ Once the matching connector is installed and a DSN is configured, you can connec
    - **Basic**: Username/password are submitted when creating the connection.
    - **Windows**: Authenticates using the current Windows user.  This authentication type requires the **SSO** connection property to be set.  When using Kerberos, the **Use Platform Kerberos API** must be set to true to use the current Windows user.
 
-    ![TDV Authentication.](./media/tibco/tdv-auth.png)
+    :::image type="content" source="./media/tibco/tdv-auth.png" alt-text="TDV Authentication.":::
 
 5. In **Navigator**, select the database information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
 
@@ -100,6 +100,6 @@ To use this feature:
 
 5. Select the option to **Use SSO via Kerberos for DirectQuery queries** or **Use SSO via Kerberos for DirectQuery and Import queries**.
 
-   ![Add data source dialog showing the Kerberos advanced settings in TDV.](./media/tibco/kerberos-sso.png)
+   :::image type="content" source="./media/tibco/kerberos-sso.png" alt-text="Add data source dialog showing the Kerberos advanced settings in TDV.":::
 
 More information: [Configure Kerberos-based SSO from Power BI service to on-premises data sources](/power-bi/connect-data/service-gateway-sso-kerberos)

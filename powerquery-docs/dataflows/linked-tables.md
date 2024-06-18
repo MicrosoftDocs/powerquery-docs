@@ -1,16 +1,16 @@
 ---
 title: Link tables between dataflows
 description: Learn how to link tables in dataflows
-author: bensack
+author: Luitwieler
 ms.topic: conceptual
 ms.date: 6/14/2023
-ms.author: bensack
+ms.author: jeluitwi
 ---
 # Link tables between dataflows
 
 With dataflows in Microsoft Power Platform, you can have a single organizational data storage source where business analysts can prep and manage their data once, and then reuse it between different analytics apps in the organization.
 
-When you link tables between dataflows, you can reuse tables that have already been ingested, cleansed, and transformed by dataflows that are owned by others, without the need to maintain that data. The linked tables simply point to the tables in other dataflows, and *don't* copy or duplicate the data.
+When you link tables between dataflows, you can reuse tables that have already been ingested, cleansed, and transformed by dataflows that are owned by others, without the need to maintain that data. The linked tables simply point to the tables in other dataflows, and only makes a copy of the data when the destination dataflow is in another workspace or environment.
 
 Linked tables are read-only, so if you want to create transformations for a linked table, you must create a new computed table with a reference to the linked table.
 

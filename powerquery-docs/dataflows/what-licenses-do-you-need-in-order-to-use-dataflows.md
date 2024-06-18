@@ -64,6 +64,7 @@ The Power Apps per-app plan covers up to a 50-MB database capacity. The Power Ap
 The following limitations are in place in Power Apps:
 
 - A dataflow refresh can run for a maximum of 24 hours.
+- A dataflow can be refreshed up to 48 times per 24 hours (once every 30 minutes).
 - Each query/partition has a maximum run duration of four hours.
 - For each refresh, there's a concurrency limit of four queries/partitions that can refresh simultaneously.
 - Power Query Online refresh limits apply for each user. More information: [Refresh limits](../power-query-online-limits.md#refresh-limits)
@@ -78,7 +79,7 @@ If you use Power BI Premium (capacity-based licensing), you can use all the AI c
 
 #### Limitations per premium capacity
 
-Dataflows that are using a premium capacity to refresh the data are limited to the maximum number of parallel tasks they can perform at a given time. The maximum number of parallel tasks depends on the type of premium capacity you're using. [This table](/power-bi/developer/embedded/embedded-capacity#sku-memory-and-computing-power) represents the maximum number of parallel tasks that can be run at a given time by all dataflows in a workspace mapped to the capacity.
+Dataflows that are using a premium capacity to refresh the data are limited to the maximum number of parallel tasks they can perform at a given time. The maximum number of parallel tasks depends on the type of premium capacity you're using. [This table](/power-bi/enterprise/service-premium-what-is#dataflows-gen1) represents the maximum number of parallel tasks that can be run at a given time by all dataflows in a workspace mapped to the capacity.
 
 #### Parallel tasks
 

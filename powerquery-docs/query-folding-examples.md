@@ -2,7 +2,7 @@
 title: Query folding examples in Power Query
 description: Demonstrates the affect of query folding in Power Query. A comparison and analysis of multiple query examples with no folding, partial folding, and full query folding in Power Query.
 author: ptyx507x
-ms.date: 6/27/2022
+ms.date: 1/18/2024
 ms.author: miescobar
 ms.topic: conceptual
 ---
@@ -21,7 +21,7 @@ Imagine a scenario where, using the [Wide World Importers database for Azure Syn
 - Description
 - Quantity
 
->[!NOTE]
+> [!NOTE]
 >For demonstration purposes, this article uses the database outlined on the tutorial on loading the Wide World Importers database into Azure Synapse Analytics. The main difference in this article is the `fact_Sale` table only holds data for the year 2000, with a total of 3,644,356 rows.
 >
 >While the results might not exactly match the results that you get by following the tutorial from the Azure Synapse Analytics documentation, the goal of this article is to showcase the core concepts and impact that query folding can have in your queries.
@@ -36,23 +36,23 @@ This article showcases three ways to achieve the same output with different leve
 
 ## No query folding example
 
->[!IMPORTANT]
+> [!IMPORTANT]
 >Queries that rely solely on unstructured data sources or that don't have a compute engine, such as CSV or Excel files, don't have query folding capabilities. This means that Power Query evaluates all the required data transformations using the Power Query engine.
 
 After connecting to your database and navigating to the `fact_Sale` table, you select the **Keep bottom rows** transform found inside the **Reduce rows** group of the **Home** tab.
 
-![Keep bottom rows transform found inside the Reduce rows group of the home tab.](media/query-folding-basics/keep-bottom-rows-ui.png)
+:::image type="content" source="media/query-folding-basics/keep-bottom-rows-ui.png" alt-text="Keep bottom rows transform found inside the Reduce rows group of the home tab.":::
 
 After selecting this transform, a new dialog appears. In this new dialog, you can enter the number of rows that you'd like to keep. For this case, enter the value 10, and then select **OK**.
 
 ![Entering the value 10 inside the Keep bottom rows dialog.](media/query-folding-basics/keep-bottom-rows-dialog.png)
 
->[!TIP]
+> [!TIP]
 >For this case, performing this operation yields the result of the last ten sales. In most scenarios, we recommend that you provide a more explicit logic that defines which rows are considered last by applying a sort operation on the table.
 
 Next, select the **Choose columns** transform found inside the **Manage columns** group of the **Home** tab. You can then select the columns you want to keep from your table and remove the rest.
 
-![Selecting the Choose columns transform for the no query folding example.](media/query-folding-basics/choose-columns-ui.png)
+:::image type="content" source="media/query-folding-basics/choose-columns-ui.png" alt-text="Selecting the Choose columns transform for the no query folding example.":::
 
 Lastly, inside the **Choose columns** dialog, select the `Sale Key`, `Customer Key`, `Invoice Date Key`, `Description`, and `Quantity` columns, and then select **OK**.
 
@@ -74,7 +74,7 @@ in
 
 Under **Applied steps** in the Power Query editor, you’ll notice that the query folding indicators for **Kept bottom rows** and **Choose columns** are marked as steps that will be evaluated outside the data source or, in other words, by the Power Query engine.
 
-![Applied steps pane for the query with the query folding indicators showcasing the Kept bottom rows and the Removed other columns steps.](media/query-folding-basics/no-folding-steps.png)
+:::image type="content" source="media/query-folding-basics/no-folding-steps.png" alt-text="Applied steps pane for the query with the query folding indicators showcasing the Kept bottom rows and the Removed other columns steps.":::
 
 You can right-click the last step of your query, the one named **Choose columns**, and select the option that reads **View Query plan**. The goal of the query plan is to provide you with a detailed view of how your query is run. To learn more about this feature, go to [Query plan](query-plan.md).
 
@@ -101,7 +101,7 @@ For its evaluation, this query had to download all rows and fields from the `fac
 
 After connecting to the database and navigating to the `fact_Sale` table, you start by selecting the columns that you want to keep from your table. Select the **Choose columns** transform found inside the **Manage columns** group from the **Home** tab. This transform helps you to explicitly select the columns that you want to keep from your table and remove the rest.
 
-![Selecting the Choose columns transform for the partial query folding example.](media/query-folding-basics/choose-columns-ui.png)
+:::image type="content" source="media/query-folding-basics/choose-columns-ui.png" alt-text="Selecting the Choose columns transform for the partial query folding example.":::
 
 Inside the **Choose columns** dialog, select the `Sale Key`, `Customer Key`, `Invoice Date Key`, `Description`, and `Quantity` columns and then select **OK**.
 
@@ -136,7 +136,7 @@ in
 
 Checking the applied steps pane, you notice that the query folding indicators are showing that the last transform that you added, `Kept bottom rows`, is marked as a step that will be evaluated outside the data source or, in other words, by the Power Query engine.
 
-![Applied steps pane for the query with the query folding indicators showcasing that the Kept bottom rows is marked as a step that will be evaluated outside the data source.](media/query-folding-basics/partial-folding-steps.png)
+:::image type="content" source="media/query-folding-basics/partial-folding-steps.png" alt-text="Applied steps pane for the query with the query folding indicators showcasing that the Kept bottom rows is marked as a step that will be evaluated outside the data source.":::
 
 You can right-click the last step of your query, the one named `Kept bottom rows`, and select the **Query plan** option to better understand how your query might be evaluated.
 
@@ -162,7 +162,7 @@ For its evaluation, this query had to download all rows and only the required fi
 
 After connecting to the database and navigating to the `fact_Sale` table, start by selecting the columns that you want to keep from your table. Select the **Choose columns** transform found inside the **Manage columns** group from the **Home** tab. This transform helps you to explicitly select the columns that you want to keep from your table and remove the rest.
 
-![Selecting the Choose columns transform for the full query folding example.](media/query-folding-basics/choose-columns-ui.png)
+:::image type="content" source="media/query-folding-basics/choose-columns-ui.png" alt-text="Selecting the Choose columns transform for the full query folding example.":::
 
 In **Choose columns**, select the `Sale Key`, `Customer Key`, `Invoice Date Key`, `Description`, and `Quantity` columns, and then select **OK**.
 
@@ -174,11 +174,11 @@ You now create logic that will sort the table to have the last sales at the top 
 
 Next, select the table contextual menu and choose the **Keep top rows** transform.
 
-![Keep top rows option inside the table context menu.](media/query-folding-basics/full-folding-keep-top-rows.png)
+:::image type="content" source="media/query-folding-basics/full-folding-keep-top-rows.png" alt-text="Keep top rows option inside the table context menu.":::
 
 In **Keep top rows**, enter the value 10, and then select **OK**.
 
-![Keep top rows dialog with the value of ten entered as the input value to only keep the top ten rows of the table.](media/query-folding-basics/full-folding-keep-top-rows-dialog.png)
+:::image type="content" source="media/query-folding-basics/full-folding-keep-top-rows-dialog.png" alt-text="Keep top rows dialog with the value of ten entered as the input value to only keep the top ten rows of the table.":::
 
 The following code sample is the full M script for the query you created:
 
@@ -197,7 +197,7 @@ in
 
 When checking the applied steps pane, you'll notice that the query folding indicators are showing that the transforms that you added, **Choose columns**, **Sorted rows**, and **Kept top rows**, are marked as steps that will be evaluated at the data source.
 
-![All the query steps have the icon that showcases that they can be folded back to the data source.](media/query-folding-basics/full-folding-steps.png)
+:::image type="content" source="media/query-folding-basics/full-folding-steps.png" alt-text="All the query steps have the icon that showcases that they can be folded back to the data source.":::
 
 You can right-click the last step of your query, the one named **Kept top rows**, and select the option that reads **Query plan**.
 
@@ -210,7 +210,7 @@ Consulting this data source query can help you better understand the story that 
 - `Sql.Database`: Connects to the database and sends metadata requests to understand its capabilities.
 - `Value.NativeQuery`: Represents the request that was generated by Power Query to fulfill the query. Power Query submits the data requests in a native SQL statement to the data source. For this case, that represents a request for only the top 10 records of the `fact_Sale` table, with only the required fields after being sorted in descending order using the `Sale Key` field.
 
->[!NOTE]
+> [!NOTE]
 >While there's no clause that can be used to SELECT the bottom rows of a table in the T-SQL language, there's a TOP clause that retrieves the top rows of a table.
 
 For its evaluation, this query only downloads 10 rows, with only the fields that you requested from the `fact_Sale` table. This query took an average of 31 seconds to be processed in a standard instance of Power BI dataflows (which accounts for the evaluation and loading of data to dataflows).
@@ -254,8 +254,8 @@ When requesting data from a data source, the data source needs to compute the re
 
 For the showcased examples, Power Query had to request over 3.6 million rows from the data source for the no query folding and partial query folding examples. For the full query folding example, it only requested 10 rows. For the fields requested, the no query folding example requested all the available fields from the table. Both the partial query folding and the full query folding examples only submitted a request for exactly the fields that they needed.
 
->[!CAUTION]
->We recommend that you implement incremental refresh solutions that leverage query folding for queries or tables with large amounts of data. Different product integrations of Power Query implement timeouts to terminate long running queries. Some data sources also implement timeouts on long running sessions, trying to execute expensive queries against their servers. More information: [Using incremental refresh with dataflows](/power-query/dataflows/incremental-refresh) and [Incremental refresh for datasets](/power-bi/connect-data/incremental-refresh-overview)
+> [!CAUTION]
+>We recommend that you implement incremental refresh solutions that leverage query folding for queries or tables with large amounts of data. Different product integrations of Power Query implement timeouts to terminate long running queries. Some data sources also implement timeouts on long running sessions, trying to execute expensive queries against their servers. More information: [Using incremental refresh with dataflows](/power-query/dataflows/incremental-refresh) and [Incremental refresh for semantic models](/power-bi/connect-data/incremental-refresh-overview)
 
 ### Transforms executed by the Power Query engine
 
@@ -281,7 +281,7 @@ Transforms can be grouped into the following categories:
 |**Streaming**|Operators are pass-through operators. For example, `Table.SelectRows` with a simple filter can usually filter the results as they pass through the operator, and won’t need to gather all rows before moving the data. `Table.SelectColumns` and `Table.ReorderColumns` are other examples of these sort of operators. |
 |**Full scan**|Operators that need to gather all the rows before the data can move on to the next operator in the chain. For example, to sort data, Power Query needs to gather all the data. Other examples of full scan operators are `Table.Group`, `Table.NestedJoin`, and `Table.Pivot`. |
 
->[!TIP]
+> [!TIP]
 >While not every transform is the same from a performance standpoint, in most cases, having fewer transforms is usually better.
 
 ## Considerations and suggestions

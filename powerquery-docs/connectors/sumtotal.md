@@ -3,7 +3,7 @@ title: Power Query SumTotal connector
 description: Provides basic information and prerequisites for the SumTotal connector, and outlines limitations and issues.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 1/24/2024
 ms.author: dougklo
 ---
 
@@ -17,7 +17,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication types | SumTotal credentials using OAuth 2.0 |
 
 ## Prerequisites
@@ -46,7 +46,7 @@ To connect to SumTotal from Power BI Desktop:
 
 2. In the **Get Data** dialog box, select **Other > SumTotal**, and then select **Connect**.
 
-   ![Screenshot](media/sumtotal/sumtotal-get-data.png)
+   :::image type="content" source="media/sumtotal/sumtotal-get-data.png" alt-text="Screenshot.":::
 
 3. Enter the server URL address of the data you want to load.
 

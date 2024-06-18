@@ -17,7 +17,7 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | Beta |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Automy Report Token |
 
 ## Prerequisites
@@ -34,13 +34,13 @@ To connect to Automy Data Analytics data:
 
 1. Select **Get Data** from the **Home** ribbon in Power BI Desktop. Select **Online Services** from the categories on the left, select **Automy Data Analytics**, and then select **Connect**.
 
-   ![Get Data from Automy Data Analytics](./media/automy-data-analytics/get-ada-data.png)
+   :::image type="content" source="./media/automy-data-analytics/get-ada-data.png" alt-text="Get Data from Automy Data Analytics.":::
 
 2. If this is the first time you're connecting to the Automy Data Analytics connector, a third-party notice will be displayed. Select **Don't warn me again with this connector** if you don't want this message to be displayed again, and then select **Continue**.
 
 3. Sign in to the connector with API Key to verify your access to Automy.
 
-   ![API Key Dialog](./media/automy-data-analytics/auth-ada-key.png)
+   :::image type="content" source="./media/automy-data-analytics/auth-ada-key.png" alt-text="API Key Dialog.":::
 
    Once you've succeeded, select **Connect**.
 
@@ -51,11 +51,11 @@ To connect to Automy Data Analytics data:
 
 5. In the **Navigator** dialog box, select the Automy tables you want. You can then either load or transform the data.
 
-   ![Get Data from Automy Data Analytics Navigator](./media/automy-data-analytics/nav-ada-data.png)
+   :::image type="content" source="./media/automy-data-analytics/nav-ada-data.png" alt-text="Get Data from Automy Data Analytics Navigator.":::
 
    If you’re selecting functions, be sure to select **Transform Data** so that you can add parameters to the functions you’ve selected. More information: [Using parameters](../power-query-query-parameters.md)
 
-   ![Load or transform data in Automy Data Analytics](./media/automy-data-analytics/param-ada-function.png)
+   :::image type="content" source="./media/automy-data-analytics/param-ada-function.png" alt-text="Load or transform data in Automy Data Analytics.":::
 
 ## Limitations and issues
 
@@ -75,6 +75,6 @@ If a credential error occurs in the Navigator, clear your recent data source set
 
 1. In Power BI Desktop, select **File** > **Data source settings**.
 
-   ![Select Automy sources](./media/automy-data-analytics/datasource-ada-clear.png)
+   :::image type="content" source="./media/automy-data-analytics/datasource-ada-clear.png" alt-text="Select Automy sources.":::
 
 2. Select the data source, and then select **Clear permissions**. Establish the connection to the navigation again.

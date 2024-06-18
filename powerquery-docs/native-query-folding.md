@@ -47,7 +47,7 @@ At the navigator window in Power Query, right-click the database node in the nav
 
 Once your query lands in the Power Query editor, only the **Source** step should show in the Applied steps pane. This step contains a table with all the available objects in your database, similar to how they were displayed in the Navigator window.
 
-![Query with only the source step](media/native-query-folding/pqo-sample-query-navigation-deleted.png)
+:::image type="content" source="media/native-query-folding/pqo-sample-query-navigation-deleted.png" alt-text="Query with only the source step.":::
 
 ## Use Value.NativeQuery function
 
@@ -66,7 +66,7 @@ Value.NativeQuery(Source, "SELECT DepartmentID, Name FROM HumanResources.Departm
 
 The most important component of this formula is the use of the optional record for the forth parameter of the function that has the **EnableFolding** record field set to *true*.
 
-![New custom step formula with the usage of the Value.NativeQuery function and the explicit SQL query](media/native-query-folding/value-native-query-formula.png)
+:::image type="content" source="media/native-query-folding/value-native-query-formula.png" alt-text="New custom step formula with the usage of the Value.NativeQuery function and the explicit SQL query.":::
 
 >[!NOTE]
 >You can read more about the Value.NativeQuery function from the [official documentation article](/powerquery-m/value-nativequery).
@@ -75,17 +75,17 @@ After you have entered the formula, a warning will be shown that will require yo
 
 This SQL statement yields a table with only three rows and two columns.
 
-![Native query evaluated against the target database](media/native-query-folding/native-query-executed-sample.png)
+:::image type="content" source="media/native-query-folding/native-query-executed-sample.png" alt-text="Native query evaluated against the target database.":::
 
 ## Test query folding
 
 To test the query folding of your query, you can try to apply a filter to any of your columns and see if the query folding indicator in the applied steps section shows the step as folded. For this case, you can filter the DepartmentID column to have values that are not equal to two.
 
-![Filtering the DepartmentID column to only have the values that are not equal to two](media/native-query-folding/query-filter.png)
+:::image type="content" source="media/native-query-folding/query-filter.png" alt-text="Filtering the DepartmentID column to only have the values that are not equal to two.":::
 
 After adding this filter, you can check that the query folding indicators still show the query folding happening at this new step.
 
-![Filter step shown as folded back to the data source in the applied steps section](media/native-query-folding/filter-step-folded.png)
+:::image type="content" source="media/native-query-folding/filter-step-folded.png" alt-text="Filter step shown as folded back to the data source in the applied steps section.":::
 
 To further validate what query is being sent to the data source, you can right-click the **Filtered rows** step and select the option that reads *View query plan* to check the query plan for that step.
 
@@ -93,7 +93,7 @@ In the query plan view, you can see that a node with the name Value.NativeQuery 
 
 The native query is wrapped around another SELECT statement to create  a subquery of the original. Power Query will do its best to create the most optimal query given the transforms used and the native query provided.
 
-![Query plan for the Filtered rows step](media/native-query-folding/query-plan.png)
+:::image type="content" source="media/native-query-folding/query-plan.png" alt-text="Query plan for the Filtered rows step.":::
 
 >[!TIP]
 >For scenarios where you get errors because query folding wasn't possible, it is recommended that you try validating your steps as a subquery of your original native query to check if there might be any syntax or context conflicts.

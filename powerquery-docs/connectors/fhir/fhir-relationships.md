@@ -67,7 +67,7 @@ In this section, we'll show an example of establishing a relationship between th
 
    :::image type="content" source="fhir-editrelationship.png" alt-text="Screenshot of the Edit relationships dialog, with the Observation and Patient columns selected." lightbox="fhir-editrelationship.png":::
 
-    ![Edit relationship.](fhir-editrelationship.png)
+    :::image type="content" source="fhir-editrelationship.png" alt-text="Edit relationship.":::
 
 ## Summary
 

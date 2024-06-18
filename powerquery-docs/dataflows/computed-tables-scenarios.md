@@ -1,10 +1,10 @@
 ---
 title: Computed table scenarios and use cases
 description: Computed table scenarios and use cases.
-author: bensack
+author: Luitwieler
 ms.topic: conceptual
 ms.date: 6/13/2023
-ms.author: bensack
+ms.author: jeluitwi
 ---
 
 # Computed table scenarios and use cases
@@ -61,7 +61,7 @@ This means that the Orders Aggregated table is getting data from the Orders tabl
 
 You can also create a computed table in other dataflows. It can be created by getting data from a dataflow with the Microsoft Power Platform dataflow connector.
 
-:::image type="complex" source="media/computed-tables-scenarios/get-data-from-pp-dataflows.png" alt-text="Get data from Power Platform dataflows":::
+:::image type="complex" source="media/computed-tables-scenarios/get-data-from-pp-dataflows.png" alt-text="Get data from Power Platform dataflows.":::
    Image emphasizes the Power Platform dataflows connector from the Power Query choose data source window. Also included is a description that states that one dataflow table can be built on top of the data from another dataflow table, which is already persisted in storage.
 :::image-end:::
 
