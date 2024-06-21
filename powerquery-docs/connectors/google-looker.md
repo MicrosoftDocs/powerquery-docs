@@ -38,7 +38,7 @@ To connect to Looker from Power Query Desktop, follow these steps:
 
 1. In the **Get Data** experience, search for and select **Looker**.
 
-2. In **Host** enter your Looker instance URL, e.g. https://example.cloud.looker.com
+2. In **Host**, enter your Looker instance URL, for example, https://example.cloud.looker.com.
 
 3. The default value of **Disable Preview Optimization** if left blank is True. This is the recommended setting. Setting the value to False will result in a potentially expensive preview query being sent to Looker. Read more in the [Looker documentation](https://cloud.google.com/looker/docs/powerbi-connector#preview_optimization).
 
