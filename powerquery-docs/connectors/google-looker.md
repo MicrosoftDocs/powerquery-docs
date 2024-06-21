@@ -24,7 +24,7 @@ ms.author: dougklo
 
 ## Prerequisites
 
-You'll need an account on a Looker-hosted Looker instance in order to connect to Looker. See more [here](https://cloud.google.com/looker/docs/powerbi-connector#requirements).
+To connect to Looker, you'll need an account on a Looker-hosted Looker instance. See details in the [Looker documentation](https://cloud.google.com/looker/docs/powerbi-connector#requirements).
 
 You'll also need to confirm that a Looker admin has enabled the Power BI connector on this Looker instance. See details in the [Looker documentation](https://cloud.google.com/looker/docs/powerbi-connector#enable_connector).
 
