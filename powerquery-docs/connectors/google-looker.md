@@ -60,4 +60,4 @@ To connect to Looker from Power Query Desktop, take the following steps:
 
 ## Limitations and considerations
 
-Please see [here](https://cloud.google.com/looker/docs/powerbi-connector#things_to_consider) for additional limitations and considerations of the Looker connector.
+Please see the [Looker documentation](https://cloud.google.com/looker/docs/powerbi-connector#things_to_consider) for additional limitations and considerations of the Looker connector.
