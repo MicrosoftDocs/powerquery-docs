@@ -3,7 +3,7 @@ title: Looker connector
 description: Provides basic information and prerequisites for the Looker connector for Power Query.
 author: kenrickyap
 ms.topic: conceptual
-ms.date: 1/02/2024
+ms.date: 6/21/2024
 ms.author: dougklo
 ---
 
@@ -16,8 +16,11 @@ ms.author: dougklo
 | Item | Description |
 | ---- | ----------- |
 | Release State | General Availability |
-| Products | Power BI (Datasets)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Customer Insights (Dataflows) |
+| Products | Power BI (Semantic models) |
 | Authentication Types Supported | Organizational account |
+
+> [!NOTE]
+> The following connector article is provided by Google, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the [Google website](https://cloud.google.com/looker/docs/best-practices/looker-support-details) and use the support channels there.
 
 > [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
@@ -28,7 +31,7 @@ To connect to Looker, you'll need an account on a Looker-hosted Looker instance.
 
 You'll also need to confirm that a Looker admin has enabled the Power BI connector on this Looker instance. See details in the [Looker documentation](https://cloud.google.com/looker/docs/powerbi-connector#enable_connector).
 
-## Capabilities supported
+## Supported Capabilities
 
 * DirectQuery
 
