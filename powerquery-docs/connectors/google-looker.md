@@ -56,7 +56,7 @@ To connect to Looker from Power Query Desktop, follow these steps:
 
 9. Once you're signed in, select **Connect** to continue.
 
-10. Once you successfully connect, a **Navigator** window appears and displays the data available in your Looker instance. First select and a Looker model. Within each model, you will see the available Explores. Select the Explore you would like to connect to and click **Load**.
+10. Once you successfully connect, a **Navigator** window appears and displays the data available in your Looker instance. First, select a Looker model. Within each model, you will see the available Explores. Select the Explore that you would like to connect to, and click **Load**.
 
 ## Limitations and considerations
 
