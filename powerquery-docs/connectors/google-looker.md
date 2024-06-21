@@ -34,7 +34,7 @@ You'll also need to confirm that a Looker admin has enabled the Power BI connect
 
 ## Connect to Looker data from Power Query Desktop
 
-To connect to Looker from Power Query Desktop, take the following steps:
+To connect to Looker from Power Query Desktop, follow these steps:
 
 1. In the Get Data experience, search for and select **Looker**.
 
