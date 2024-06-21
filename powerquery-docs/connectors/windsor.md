@@ -2,6 +2,7 @@
 title: Power Query Windsor connector
 description: Provides basic information and prerequisites for the Windsor connector, supported authentication types, outlines limitations and issues.
 author: lanceris
+ms.author: miescobar
 ms.topic: conceptual
 ms.date: 06/19/2024
 ---
