@@ -4,7 +4,7 @@ description: Step-by-step instructions for how to use Power Query to add data to
 author: Luitwieler
 ms.reviewer: dougklo
 ms.topic: how-to
-ms.date: 5/29/2024
+ms.date: 6/24/2024
 ms.author: jeluitwi
 ---
 
@@ -103,7 +103,7 @@ The source and destination column mappings are grouped as follows:
 
 * **Mapped**: High confidence semantic match between the meanings of the column names and both column data types are the same.
 
-* **Unmapped**: There are no high confidence semantic column matches found for this column. If this column is a required column, you must manually select a source column to map this data to before proceeding.
+* **Unmapped**: There's no high confidence semantic column matches found for this column. If this column is a required column, you must manually select a source column to map this data to before proceeding.
 
 * **Possible match**: Semantic match between the meanings of the column names, but the source and destination column data types are different.
 
