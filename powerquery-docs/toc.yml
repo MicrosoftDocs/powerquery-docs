@@ -477,6 +477,8 @@ items:
         href: connectors/odbc.md
       - name: "OLE DB"
         href: connectors/ole-db.md
+      - name: "OneStream (Beta)"
+        href: connectors/onestream.md
       - name: "OpenSearch Project (Beta)"
         href: connectors/opensearch-project.md
       - name: "Oracle database"
@@ -587,6 +589,8 @@ items:
           href: connectors/web/web-by-example.md
         - name: "Troubleshooting"
           href: connectors/web/web-troubleshoot.md
+      - name: "Wolters Kluwer CCH Tagetik (Beta)"
+        href: connectors/wolters-kluwer-cch-tagetik.md
       - name: "Workforce Dimensions (Beta) (Deprecated)"
         href: connectors/workforce-dimensions.md
       - name: "XML"
