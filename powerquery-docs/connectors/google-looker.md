@@ -31,7 +31,7 @@ To connect to Looker, you'll need an account on a Looker-hosted Looker instance.
 
 You'll also need to confirm that a Looker admin has enabled the Power BI connector on this Looker instance. See details in the [Looker documentation](https://cloud.google.com/looker/docs/powerbi-connector#enable_connector).
 
-## Supported Capabilities
+## Supported capabilities
 
 * DirectQuery
 
