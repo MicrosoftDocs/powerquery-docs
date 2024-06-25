@@ -61,6 +61,8 @@ To connect to Looker from Power Query Desktop, follow these steps:
 
 10. Once you successfully connect, a **Navigator** window appears and displays the data available in your Looker instance. First, select a Looker model. Within each model, you will see the available Explores. Select the Explore that you would like to connect to, and click **Load**.
 
+    ![Image showing navigation window](./media/google-looker/navigator-view-desktop.png)
+
 ## Limitations and considerations
 
 Please see the [Looker documentation](https://cloud.google.com/looker/docs/powerbi-connector#things_to_consider) for additional limitations and considerations of the Looker connector.
