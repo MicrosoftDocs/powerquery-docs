@@ -7,19 +7,21 @@ ms.date: 3/14/2024
 ms.author: dougklo
 ---
 
-# Socialbakers (Beta)
+# Socialbakers (Deprecated)
+
+Sunset of Socialbakers API Connector is scheduled for August 1st, 2024. Please make sure to make required changes beforehand. Contact your Emplifi representative for more info.
 
 > [!NOTE]
 > The following connector article is provided by Socialbakers (now Emplifi), the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Emplifi website and use the support channels there.
 
 ## Summary
 
-| Item | Description |
-| --- | --- |
-| Release state | Beta |
-| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
-| Authentication Types Supported | Basic |
-| Function Reference Documentation | &mdash; |
+| Item                             | Description                                                                    |
+| -------------------------------- | ------------------------------------------------------------------------------ |
+| Release state                    | Beta                                                                           |
+| Products                         | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Authentication Types Supported   | Basic                                                                          |
+| Function Reference Documentation | &mdash;                                                                        |
 
 > [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
@@ -57,22 +59,23 @@ Not all data sources are the same. The differences are described [later](#facebo
 ### Example usage
 
 1. Choose the Data Source you would like to work with by selecting the checkbox.
-    - Parameters can be selected on the right section of the Navigator.
+
+   - Parameters can be selected on the right section of the Navigator.
 
    ![DataSources](./media/socialbakers/image3.png)
 
-2. Enter the data and select the metrics in the Parameters section.
+2. Enter the data and select the metrics in the Parameters section. For more details about the metrics, visit the [Socialbakers API documentation](https://api.emplifi.io).
 
-    - An example selection follows below:
-        - **Start Date:** `07/01/2021`
-        - **End Date:** `07/30/2021`
-        - **End Today:** `No`
-        - **Metrics:** `engagement_rate (FB, IG, TW, YT, VK), likes(FB, IG, TW, YT)`
-        - **Time dimension:** `day`
-        - **Dimensions:** `profile`
-        - **Profiles Facebook:** `Emplifi (<profile_id>)`
-        - **Profiles Instagram:** `Emplifi (<profile_id>)`
-        - **Profiles YouTube:** `Emplifi (<profile_id>)`
+   - An example selection follows below:
+     - **Start Date:** `07/01/2021`
+     - **End Date:** `07/30/2021`
+     - **End Today:** `No`
+     - **Metrics:** `engagement_rate (FB, IG, TW, YT, VK), likes(FB, IG, TW, YT)`
+     - **Time dimension:** `day`
+     - **Dimensions:** `profile`
+     - **Profiles Facebook:** `Emplifi (<profile_id>)`
+     - **Profiles Instagram:** `Emplifi (<profile_id>)`
+     - **Profiles YouTube:** `Emplifi (<profile_id>)`
 
 3. Once all required parameters are selected, select **Apply**.
 
@@ -99,6 +102,10 @@ By selecting the specific month(s), you're narrowing down all your Facebook Ad A
 ![SelectedMonth.](./media/socialbakers/image6.png)
 
 You can select the specific Ad Accounts in the Parameters section under the **"Accounts"** parameter, along with the **Campaigns** selection.
+
+## Troubleshooting
+
+If any error occurs, check the [documentation](https://api.emplifi.io/) and make sure you're following the guidelines of the API.
 
 ## Additional instructions
 
