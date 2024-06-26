@@ -4,7 +4,7 @@ description: Describes what privacy levels and privacy level options are and how
 author: ptyx507x
 ms.author: miescobar
 ms.topic: conceptual
-ms.date: 5/23/2024
+ms.date: 6/26/2024
 ---
 
 # Privacy levels
@@ -79,6 +79,7 @@ You can also set a connection's privacy level using the **Manage connections** o
 To set the privacy level using the **Manage connections** option:
 
 1. Select **Manage connections** in the **Home** tab of the online Power Query editor.
+1. Select either **Current project** or **Global permissions**. For more information about the differences between the current project and global permissions, go to [Manage connections](manage-connections.md).
 1. Select a connection.
 1. Select the **Edit** icon next to the name of the connection.
 1. Select the privacy level you want to use.
@@ -193,3 +194,8 @@ To allow combining data from multiple sources in Power Query Online:
 1. In the **Options** dialog, under **Project**, select **Privacy**.
 1. Select **Allow combining data from multiple sources. This could expose sensitive or confidential data to an unauthorized person**.
 1. Select **OK**.
+
+## Related content
+
+* [Behind the scenes of the Data Privacy Firewall](data-privacy-firewall.md)
+* [Manage connections](manage-connections.md)
