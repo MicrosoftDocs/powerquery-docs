@@ -28,7 +28,7 @@ To use the Autodesk Construction Cloud connector, you must have an Autodesk acco
 ## Capabilities Supported
 
 * Import
-* Supports US and EU Autodesk Construction Cloud servers
+* Supports United States, Europe, and Australia Autodesk Construction Cloud servers
 
 ## Connect to Autodesk Construction Cloud data
 
@@ -38,7 +38,7 @@ To connect to Autodesk Construction Cloud data:
 
 2. If this is the first time you're getting data through the Autodesk Construction Cloud connector, a preview connector notice will be displayed. Select **Don't warn me again with this connector** if you don't want this message to be displayed again, and then select **Continue**.
 
-3. Select the Autodesk server **region** (US or EU), and then select **OK**.
+3. Select the Autodesk server **region** (United States, Europe, or Australia), and then select **OK**.
   
    :::image type="content" source="./media/autodesk-construction-cloud/acc-region-selection.png" alt-text="Select server region.":::
 
@@ -64,7 +64,10 @@ To connect to Autodesk Construction Cloud data:
   
 ## Connect using Autodesk provided Power BI Templates
 
-* Download the latest Power BI Templates here: [https://construction.autodesk.com/templates/power-bi/](https://construction.autodesk.com/templates/power-bi/).
+* Download the latest Power BI Templates from the Template Gallery within **Data Connector**.
+
+  :::image type="content" source="./media/autodesk-construction-cloud/acc-powerbi-template-gallery.png" alt-text="Screenshot showing the Power BI Template Gallery in Data Connector":::
+
 * Only templates with **"...(Connector).."** in the file name are set up to work with this connector.
 
 To use the Power BI Templates:
@@ -86,5 +89,4 @@ To use the Power BI Templates:
 
 You should be aware of the following limitations and issues associated with accessing Autodesk data.
 
-* Autodesk returns a 404 error status if you don't have any request in the last 30 days.
 * This connector pulls data from the last run Data Connector extract and not the live data from the account.
