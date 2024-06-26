@@ -305,6 +305,8 @@ items:
         href: optimize-expanding-table-columns.md
       - name: "Using Microsoft Edge for OAuth in Power BI Desktop"
         href: oauth-edge-chromium.md
+      - name: "Privacy levels"
+        href: privacy-levels.md
     - name: "Connector reference"
       items:
       - name: "List of all Power Query connectors"
