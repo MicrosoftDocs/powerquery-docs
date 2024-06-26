@@ -88,7 +88,7 @@ The edit functionality allows you to change the following values:
 * **Authentication kind & credentials**: Depending on the connector, you're presented with multiple authentication kind options that are available to establish a connection, and fields where you enter your credentials.
 * **Privacy level**: Specifies isolation levels that determine the degree to which one data source is isolated from other data sources.
 
-:::image type="content" source="media/manage-connections/global-edit-connection-dialog.png" alt-text="Screenshot of the edit connections dialog for the selected OData connection.":::
+:::image type="content" source="media/manage-connections/global-edit-connection-dialog.png" alt-text="Screenshot of the global edit connections dialog for the selected OData connection.":::
 
 ### Delete a connection in global permissions
 
@@ -97,7 +97,7 @@ The edit functionality allows you to change the following values:
 
 Next to the name of the connection, after the edit icon, there's an icon to delete the connection.
 
-:::image type="content" source="media/manage-connections/delete-connection-button.png" alt-text="Screenshot of the Manage Connections dialog with the global permissions edit connection icons emphasized." lightbox="media/manage-connections/delete-connection-button.png":::
+:::image type="content" source="media/manage-connections/delete-connection-button.png" alt-text="Screenshot of the Manage Connections dialog with the global permissions delete connection icons emphasized." lightbox="media/manage-connections/delete-connection-button.png":::
 
 When you select the delete icon next to the connection name, you're asked to verify whether you want the connection deleted. If you do, select **Delete**. Once the connection is deleted, it can't be undone.
 
