@@ -71,4 +71,4 @@ Please see the [Looker documentation](https://cloud.google.com/looker/docs/power
 
 For any issues with the Looker connector, refer to the official [Looker API Troubleshooting Guide](https://cloud.google.com/looker/docs/api-troubleshooting) for detailed information on common error messages and their resolutions.
 
-If issues persist, gather error details and contact Looker support using the [Looker Support Details Guide](https://cloud.google.com/looker/docs/best-practices/looker-support-details). You can also seek help from the [Looker Studio Community](https://support.google.com/looker-studio/community?hl=en&sjid=12736577235379517573-NC).
+If issues persist, gather error details and contact Looker Support using the [Looker Support Details Guide](https://cloud.google.com/looker/docs/best-practices/looker-support-details). You can also seek help from the [Looker Studio Community](https://support.google.com/looker-studio/community?hl=en&sjid=12736577235379517573-NC).
