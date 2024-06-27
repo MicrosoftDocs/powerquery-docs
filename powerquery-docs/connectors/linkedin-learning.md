@@ -49,6 +49,8 @@ The scenario outlined in this tutorial assumes that you already have the followi
 * Microsoft Power BI Desktop: [Download here](https://powerbi.microsoft.com/downloads/)
 * LinkedIn Learning admin access
 
+We recommend that you use the latest version of Power BI to ensure that you have access to the latest version of the LinkedIn Learning Connector.
+
 ## Steps to configure LinkedIn Learning Power BI connector
 
 The following steps outline the process for configuring the LinkedIn Learning Power BI Connector:
@@ -68,7 +70,7 @@ To obtain your Client ID & Client Secret from LinkedIn Learning, follow these st
 
    :::image type="content" source="./media/linkedin-learning/client-id-secret-location.png" alt-text="Screenshot with Client ID and Client Secret location within LinkedIn Learning integrate settings.":::
 
-2. Within the **Access content and reports via API**, the client ID and Secret that was generated for the Power BI Connector will be located here.
+2. Within the **Access content and reports via API**, the client ID and Secret that was generated for the Power BI Connector is locatable here.
 
 3. Next, open Power BI, select **File**, then select **Get Data**.
 
@@ -76,9 +78,20 @@ To obtain your Client ID & Client Secret from LinkedIn Learning, follow these st
 
    :::image type="content" source="./media/linkedin-learning/power-bi-get-data.png" alt-text="Screenshot of the get data search box with returned search results when LinkedIn Learning is searched.":::
 
-5. Select the **LinkedIn Learning Connector**; when prompted input the **Client ID & Client Secret** that was generated within LinkedIn Learning.
+5. Select the **LinkedIn Learning** Connector.
 
    :::image type="content" source="./media/linkedin-learning/power-bi-client-id-client-secret.png" alt-text="Screenshot of where the Client ID and Client Secret should be inputted within Power BI.":::
+
+6. When prompted input the **Client ID** & **Client Secret** that was generated within LinkedIn Learning into the **Connection credentials** section.
+**Start_date** and **end_date** datetime parameters are **optional** and not required for successful connection.
+
+    1. Select **Basic** for the Authentication kind.
+    2. Input the **Client ID** into the **Username** section.
+    3. Input the **Client Secret** into the **Password** section.
+
+> [!TIP]
+> The start_date parameter can be used to download more than one years' worth of data and the end_date parameter can be used in conjunction with start_date parameter to set a data window.
+> If left empty, the start_date parameter will automatically be set to current date minus 1 year and the end_date parameter will be set to current date and is continuously refreshed during data updates.
 
 > [!NOTE]
 > The **Client ID and Client Secret** are stored within Power BI and only need to be entered once. However, you can update them under Transform Data and then Data Source Settings.
