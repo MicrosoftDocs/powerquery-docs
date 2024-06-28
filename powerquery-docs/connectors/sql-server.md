@@ -120,6 +120,11 @@ To troubleshoot this error when using on-premises data gateway, change the gatew
 
 To troubleshoot this error when using Power BI Desktop, modify the value of the environment variable `PBI_SQL_TRUSTED_SERVERS` to include the SQL Servers. The supported values are the same as outlined for gateway configuration (as described in step 4 above).
 
+For connections to SQL Server from Power BI Desktop and on-premises data gateway versions starting with February 2024 or later, follow one of these options:
+- Follow the solution mentioned previously to add the environment variable `PBI_SQL_TRUSTED_SERVERS`.
+- Ask your SQL administrators to acquire a certificate from a well-known certificate authority.
+- Change the setting `SqlTrustedServers` on the gateway config file. 
+
 ### Always Encrypted columns
 
 Power Query doesn't support 'Always Encrypted' columns.
