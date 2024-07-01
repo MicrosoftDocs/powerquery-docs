@@ -7,7 +7,7 @@ ms.date: 6/7/2024
 ms.author: dougklo
 ---
 
-# BuildingConnected
+# BuildingConnected (Beta)
 
 > [!NOTE]
 >The following connector article is provided by Autodesk, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Autodesk website and use the support channels there.
@@ -48,19 +48,18 @@ To connect to BuildingConnected data:
   
    :::image type="content" source="./media/buildingconnected/buildingconnected-adsk-login.png" alt-text="Screenshot showing Sign in to Autodesk dialog.":::
 
-5. Once you've successfully signed in, select **Connect**.
+5. Once you successfully sign in, select **Connect**.
 
    :::image type="content" source="./media/buildingconnected/buildingconnected-sign-in-success.png" alt-text="Screenshot showing Signed in and ready to connect dialog.":::
 
-6. In the **Navigator**, select the data type you want to load to see a preview in the right pane. You can then load or transform the data. **If you select Load, all records are loaded in to the Power BI model**. It may take several minutes for all records to load depending on the number of objects.
+6. In the **Navigator**, select the data type you want to load to see a preview in the right pane. You can then load or transform the data. **If you select Load, all records are loaded in to the Power BI model**. It might take several minutes for all records to load depending on the number of objects.
 
    :::image type="content" source="./media/buildingconnected/buildingconnected-data-types.png" alt-text="Screenshot showing Navigate to the desired data type.":::
 
-7. Optionally, you can use the Range Start and Range End inputs on the BuildingConnected function to load data based on the updatedAt query parameter. This allows you to implement incremental refresh to load only updated data once the initial data load has been injested. To use the input dialog for these dates, select a table and transform it to load it in to Power Query. Then select the gear to the right of the Source step. **Range Start** and **Range End** are optional parameters. Using **Range Start** only provides all records updated on or after the provided **Range Start** date. Using Range End only provides all records updated on or before the provided **Range End** date. Providing both dates constrains to records updated between the two dates.
+7. Optionally, you can use the Range Start and Range End inputs on the BuildingConnected function to load data based on the updatedAt query parameter. This allows you to implement incremental refresh to load only updated data once the initial data load has been ingested. To use the input dialog for these dates, select a table and transform it to load it in to Power Query. Then select the gear to the right of the Source step. **Range Start** and **Range End** are optional parameters. Using **Range Start** only provides all records updated on or after the provided **Range Start** date. Using Range End only provides all records updated on or before the provided **Range End** date. Providing both dates constrains to records updated between the two dates.
 
    :::image type="content" source="./media/buildingconnected/buildingconnected-updatedAt.png" alt-text="Screenshot showing Optional range start and range end query parameters.":::
 
 8. Some data types contain nested records and lists that might need to be expanded to see all data fields. Expand each Record and List items as needed to see all fields.
 
    :::image type="content" source="./media/buildingconnected/buildingconnected-expand-nested-items.png" alt-text="Screenshot showing Expand nested records.":::
-  
