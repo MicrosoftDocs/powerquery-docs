@@ -439,6 +439,8 @@ items:
         href: connectors/ibm-db2-database.md
       - name: "Impala database"
         href: connectors/impala-database.md
+      - name: "Intersystems Health Insight"
+        href: connectors/intersystems-healthinsight.md
       - name: "inwink (Beta)"
         href: connectors/inwink.md
       - name: "JSON"
