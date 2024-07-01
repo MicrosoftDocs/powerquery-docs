@@ -54,11 +54,11 @@ To connect to BuildingConnected data:
 
 6. In the **Navigator**, select the data type you want to load to see a preview in the right pane. You can then load or transform the data. **If you select Load, all records are loaded in to the Power BI model**. It might take several minutes for all records to load depending on the number of objects.
 
-   :::image type="content" source="./media/buildingconnected/buildingconnected-data-types.png" alt-text="Screenshot showing Navigate to the desired data type.":::
+   :::image type="content" source="./media/buildingconnected/buildingconnected-data-types.png" alt-text="Screenshot showing Navigate to the desired data type." lightbox="./media/buildingconnected/buildingconnected-data-types.png":::
 
 7. Optionally, you can use the Range Start and Range End inputs on the BuildingConnected function to load data based on the updatedAt query parameter. This allows you to implement incremental refresh to load only updated data once the initial data load has been ingested. To use the input dialog for these dates, select a table and transform it to load it in to Power Query. Then select the gear to the right of the Source step. **Range Start** and **Range End** are optional parameters. Using **Range Start** only provides all records updated on or after the provided **Range Start** date. Using Range End only provides all records updated on or before the provided **Range End** date. Providing both dates constrains to records updated between the two dates.
 
-   :::image type="content" source="./media/buildingconnected/buildingconnected-updatedAt.png" alt-text="Screenshot showing Optional range start and range end query parameters.":::
+   :::image type="content" source="./media/buildingconnected/buildingconnected-updatedAt.png" alt-text="Screenshot showing Optional range start and range end query parameters." lightbox="./media/buildingconnected/buildingconnected-updatedAt.png":::
 
 8. Some data types contain nested records and lists that might need to be expanded to see all data fields. Expand each Record and List items as needed to see all fields.
 
