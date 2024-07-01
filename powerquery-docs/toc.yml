@@ -372,7 +372,7 @@ items:
       - name: "BQE Core"
         href: connectors/bqecore.md
       - name: "BuildingConnected (Beta)"
-        href: buildingconnected.md
+        href: connectors/buildingconnected.md
       - name: "CData Connect Cloud"
         href: connectors/cdata-connect-cloud.md
       - name: "Celonis EMS"
