@@ -47,11 +47,10 @@ Follow these steps to create and save a query:
 
 ## Capabilities supported
 * Import 
-* Data import from multiple sources
 
 ## Connection instructions
 To connect to Windsor
-1. Open Power BI Desktop.
+1. Open Power Query.
 
 2. Go to the **Home** ribbon and select **Get Data**.
 
@@ -80,7 +79,7 @@ To connect to Windsor
 
     If you make changes to only one of the fields, other settings remain the same as you saved them on the Windsor Onboard.
 
-    Once you see the dataset you’d like to use, select **Load** to use it in Power BI Desktop, or **Transform Data** to refine it in the Power Query Editor first.
+    Once you see the dataset you’d like to use, select **Load** to use it in Power Query, or **Transform Data** to refine it in the Power Query Editor first.
 
 ## Limitations
 - Windsor Onboard must be used to create and manage queries
