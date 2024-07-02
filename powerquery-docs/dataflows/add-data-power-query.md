@@ -40,7 +40,7 @@ Before you start to follow this article:
 
     :::image type="content" source="./media/add-data-power-query/view-entities-portal.png" alt-text="Tables area.":::
 
-1. In the command menu, select **Data** > **Get data**.
+1. In the command menu, select **Import** > **Import data**.
 
 1. In the list of data sources, select **OData**.
 
