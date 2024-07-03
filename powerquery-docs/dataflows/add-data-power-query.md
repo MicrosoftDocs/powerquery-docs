@@ -36,7 +36,7 @@ Before you start to follow this article:
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-1. In the navigation pane, select **Dataverse** to expand it, and then select **Tables**.
+1. In the navigation pane, select **Tables**.
 
     :::image type="content" source="./media/add-data-power-query/view-entities-portal.png" alt-text="Tables area.":::
 
