@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.date: 06/19/2024
 ---
 
-# Windsor Power Query custom connector
+# Windsor (Beta) Power Query custom connector
 
 >[!Note]
 >The following connector article is provided by Windsor, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the https://windsor.ai/ website and use the support channels there.
