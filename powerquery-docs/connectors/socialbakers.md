@@ -9,7 +9,7 @@ ms.author: dougklo
 
 # Socialbakers (Deprecated)
 
-Sunset of Socialbakers API Connector is scheduled for August 1st, 2024. Please make sure to make required changes beforehand. Contact your Emplifi representative for more info.
+Sunset of Socialbakers API Connector is scheduled for August 1, 2024. Please make sure to make the required changes beforehand. Contact your Emplifi representative for more info.
 
 > [!NOTE]
 > The following connector article is provided by Socialbakers (now Emplifi), the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Emplifi website and use the support channels there.

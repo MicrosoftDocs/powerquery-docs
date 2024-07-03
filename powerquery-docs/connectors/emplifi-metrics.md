@@ -9,7 +9,7 @@ ms.author: dougklo
 
 # Emplifi Metrics (Deprecated)
 
-Sunset of Emplifi API Connector is scheduled for August 1st, 2024. Please make sure to make required changes beforehand. Contact your Emplifi representative for more info.
+Sunset of Emplifi API Connector is scheduled for August 1, 2024. Please make sure to make the required changes beforehand. Contact your Emplifi representative for more info.
 
 ## Summary
 
