@@ -2,7 +2,7 @@ items:
 - name: Power Query documentation
   href: index.yml
   expanded: true
-  items:  
+  items:
     - name: "What is Power Query?"
       href: power-query-what-is-power-query.md
     - name: Get data
@@ -14,7 +14,7 @@ items:
       - name: "Get data experience"
         href: get-data-ui.md
       - name: Authentication
-        items:  
+        items:
         - name: "Authentication in Desktop apps"
           href: connector-authentication.md
         - name: "Authentication in Power Query Online"
@@ -24,7 +24,7 @@ items:
       - name: "Upload a file"
         href: upload-file.md
       - name: "SharePoint and OneDrive for Business files import"
-        href: sharepoint-onedrive-files.md    
+        href: sharepoint-onedrive-files.md
       - name: "Lack of support connecting to Microsoft Graph"
         href: connecting-to-graph.md
       - name: "Connectivity without an existing connector"
@@ -32,7 +32,7 @@ items:
       - name: "Connect using generic interfaces"
         href: connect-using-generic-interfaces.md
       - name: "Manage connections"
-        href: manage-connections.md  
+        href: manage-connections.md
       - name: "Change a dataflow gateway"
         href: change-gateway-dataflow.md
     - name: Transform data
@@ -144,9 +144,9 @@ items:
           - name: "Inner join"
             href: merge-queries-inner.md
           - name: "Left anti join"
-            href: merge-queries-left-anti.md 
+            href: merge-queries-left-anti.md
           - name: "Right anti join"
-            href: merge-queries-right-anti.md 
+            href: merge-queries-right-anti.md
           - name: "Fuzzy merge"
             href: merge-queries-fuzzy-match.md
           - name: "Cross join"
@@ -208,7 +208,7 @@ items:
           - name: "Configure storage and compute"
             href: dataflows/configuring-storage-and-compute-options-for-analytical-dataflows.md
         - name: Best practices for dataflows
-          items: 
+          items:
           - name: "Scenarios for computed tables"
             href: dataflows/computed-tables-scenarios.md
           - name: "Developing complex dataflows"
@@ -222,7 +222,7 @@ items:
         - name: "Get dataflows data from Azure services"
           href: dataflows/using-output-power-platform-dataflows-other-azure.md
       - name: Standard dataflows
-        items: 
+        items:
         - name: "Relationships and lookups"
           href: dataflows/relationships-in-standard-dataflows.md
         - name: "Field mapping"
@@ -234,11 +234,11 @@ items:
         - name: "Add data to a table in Dataverse"
           href: dataflows/add-data-power-query.md
       - name: Integration
-        items: 
+        items:
         - name: "Data Factory dataflows"
           href: dataflows/power-platform-dataflows-and-adf-wrangling-data-flows.md
       - name: Power Automate templates for dataflows
-        items: 
+        items:
         - name: "Overview of Power Automate templates for dataflows"
           href: dataflows/dataflow-power-automate-connector-templates.md
         - name: "Send notification when a dataflow refresh completes"
@@ -256,11 +256,11 @@ items:
         - name: "Automatically retry a dataflow on failure"
           href: dataflows/automatically-retry-dataflow.md
       - name: Monitor dataflows
-        items: 
+        items:
           - name: Monitor your dataflow refreshes with Power BI
             href: dataflows/monitor-dataflow-refreshes.md
       - name: Troubleshooting dataflows
-        items: 
+        items:
         - name: "Creating dataflows"
           href: dataflows/troubleshooting-dataflows-issues-creating-dataflow.md
         - name: "Getting data from dataflows"
@@ -278,7 +278,7 @@ items:
     - name: Advanced topics
       items:
       - name: "Fuzzy matching"
-        href: fuzzy-matching.md 
+        href: fuzzy-matching.md
       - name: "Behind the scenes of the Data Privacy Firewall"
         href: data-privacy-firewall.md
       - name: "Query Diagnostics"
@@ -397,7 +397,7 @@ items:
         href: connectors/dynamics-365-online.md
       - name: "Eduframe (Beta)"
         href: connectors/eduframe.md
-      - name: "Emplifi Metrics (Beta)"
+      - name: "Emplifi Metrics (Deprecated)"
         href: connectors/emplifi-metrics.md
       - name: "EQuIS"
         href: connectors/equis.md
@@ -454,7 +454,7 @@ items:
       - name: LinkedIn Learning
         href: connectors/linkedin-learning.md
       - name: LEAP (Beta)
-        href: connectors/leap.md 
+        href: connectors/leap.md
       - name: LinkedIn Sales Navigator (Beta)
         href: connectors/linkedin-sales-navigator.md
       - name: "Mailchimp (Deprecated)"
@@ -555,7 +555,7 @@ items:
         href: connectors/smartsheet.md
       - name: "Snowflake"
         href: connectors/snowflake.md
-      - name: "Socialbakers Metrics (Beta)"
+      - name: "Socialbakers Metrics (Deprecated)"
         href: connectors/socialbakers.md
       - name: "SoftOne BI (Beta)"
         href: connectors/softone-bi.md
@@ -618,7 +618,7 @@ items:
       - name: "Capture web requests with Fiddler"
         href: web-connection-fiddler.md
     - name: Create Power Query connectors
-      items: 
+      items:
       - name: "Develop a connector using the Power Query SDK"
         href: install-sdk.md
       - name: "Power Query SDK"
