@@ -33,6 +33,7 @@ You'll also need to confirm that a Looker admin has enabled the Power BI connect
 
 ## Supported capabilities
 
+* Import Mode
 * DirectQuery
 
 ## Connect to Looker data from Power Query Desktop
@@ -47,7 +48,10 @@ To connect to Looker from Power Query Desktop, follow these steps:
 
 1. The default value of **Show Hidden Fields** if left blank is False. This will mimic the default visual behavior on Looker where fields with the hidden tag will not be shown. If this parameter is set to True, all fields will be visible in the Power BI report, including those with hidden tags.
 
-1. Select **Direct Query**. Selecting Import may also result in a potentially expensive query that includes all fields from all the views that are referenced in the Looker Explore. In addition, with Import, you lose the ability to have Looker correctly evaluate the measures in the Explore.
+1. It is recommended to select **Direct Query**. Selecting **Import** may result in a potentially expensive query that includes all fields from all the views that are referenced in the Looker Explore. In addition, Import mode comes with certain limitations:
+
+   * You lose the ability to have Looker correctly evaluate the measures in the Explore.
+   * You lose the ability to interact with Filters-only and Parameter fields.
 
 1. Select **OK** to continue.
 
@@ -63,8 +67,6 @@ To connect to Looker from Power Query Desktop, follow these steps:
 
    ![Image showing navigation window](./media/google-looker/navigator-view-desktop.png)
 
-   > [!NOTE]
-   >The "This table is empty." message is expected, as currently no preview is available for. The table will not be empty once you load the model.
 
 ## Limitations and considerations
 
