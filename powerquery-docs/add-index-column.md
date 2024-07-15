@@ -2,7 +2,7 @@
 title: Add an index column
 description: An article on how to add an index column in Power Query and practical uses for Index columns.
 author: ptyx507
-ms.date: 7/12/2024
+ms.date: 7/15/2024
 ms.author: miescobar
 ---
 
