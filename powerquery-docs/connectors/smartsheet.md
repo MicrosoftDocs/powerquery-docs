@@ -13,8 +13,8 @@ ms.author: dougklo
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | General Availability |
-| Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
+| Release State | Beta |
+| Products | Power BI Dataflow<br/>Fabric Dataflow Gen2 |
 | Authentication Types Supported | Smartsheet account |
 | Function Reference Documentation | &mdash; |
 
@@ -66,3 +66,7 @@ The Smartsheet connector supports the Smartsheet US region (https://app.smartshe
 Once the connection is established, you'll see the folders and workspaces you have access to within the **Navigator** dialog. Select the data you want to import and then select **Load**. 
 
    ![Select data using Navigator.](./media/smartsheet/navigator-view.png)
+
+## Getting Help
+
+If you run into problems when connecting to your data, [Contact Support](https://help.smartsheet.com/contact).
