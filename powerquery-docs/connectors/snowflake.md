@@ -97,7 +97,7 @@ The following table lists all of the advanced options you can set in Power Query
 
 | Advanced option | Description |
 | --------------- | ----------- |
-| Role name | Specifies the role that the report uses via the driver. This role must be available to the user, otherwise no role will be set. |
+| Role name | Specifies the role that the report uses via the driver. This role must be available to the user, otherwise no role is set. |
 | Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, you won’t see those columns. |
 | Connection timeout in seconds | Specifies how long to wait for a response when interacting with the Snowflake service before returning an error. Default is 0 (no timeout).|
 | Command timeout in seconds | Specifies how long to wait for a query to complete before returning an error. Default is 0 (no timeout). |
@@ -106,11 +106,22 @@ The following table lists all of the advanced options you can set in Power Query
 
 Once you've selected the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your Snowflake database.
 
+## Troubleshooting
+
+### Error: SQL compilation error: Object does not exist, or operation cannot be performed
+
+The error occurs when the system can't find the specified object. Often, this error is due to the user having an invalid database name set as their default database.
+
+Ensure that a valid default database name is used for the property DEFAULT_NAMESPACE:
+ `DESC USER`*`username`*
+
+To update the default database name: `alter user`*`username`*` set DEFAULT_NAMESPACE=<database name>.<schema name>`. For more information, see the Snowflake documentation - https://docs.snowflake.com/en/sql-reference/sql/alter-user
+
 ## Limitations and known issues
 
 ### Hyphens in database names
 
-If a database name has a hyphen in it, you may encounter an ```ODBC: ERROR[42000] SQL compilation error```. This is a known issue and there is no known workaround available. A fix is being investigated and the documentation here will be updated when the fix is ready.
+If a database name has a hyphen in it, you can encounter an ```ODBC: ERROR[42000] SQL compilation error```. This is a known issue and there's no known workaround available. A fix is being investigated and the documentation here will be updated when the fix is ready.
 
 ## Additional information
 
