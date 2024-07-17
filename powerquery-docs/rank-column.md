@@ -56,7 +56,7 @@ For the second requirement in the shared list, use only the values from the `Tot
 2. In **Rank**, select `Total Points` for **Rank by** and **Rank values from high to low** for the **Rank criteria**.
 3. Select **Advanced** at the top of the dialog box. This selection enables the advanced section. In **Rank method**, change the value from **Standard competition** to **Dense**.
 
-   :::image type="content" source="media/rank-column/rank-total-fields-column-advanced.png" alt-text="Rank transform with dense rank method selected.":::
+   :::image type="complex" source="media/rank-column/rank-total-fields-column-advanced.png" alt-text="Rank transform with dense rank method selected.":::
    Screenshot of the advanced section of the rank dialog where the Total Points field is being used with the Higher value ranks higher rank criteria and the rank method being selected is Dense.
 :::image-end:::
 
