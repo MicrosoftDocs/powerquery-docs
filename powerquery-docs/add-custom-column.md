@@ -1,10 +1,9 @@
 ---
 title: Add a custom column
-description: An article that demonstrates how to create a custom column in Power Query
+description: An article that demonstrates how to create a custom column in Power Query using the Power Query M formula language.
 author: ptyx507x
-ms.date: 12/9/2022
+ms.date: 7/18/2024
 ms.author: miescobar
-ms.custom: edited
 ---
 
 # Add a custom column
@@ -13,7 +12,7 @@ If you need more flexibility for adding new columns than the ones provided out o
 
 Imagine that you have a table with the following set of columns.
 
-![Sample initial table with Date, Country, Units, Unit Price and percent discount columns.](media/add-custom-column/add-custom-column-initial-table.png "Sample initial table")
+:::image type="content" source="media/add-custom-column/add-custom-column-initial-table.png" alt-text="Screenshot of the sample initial table with Date, Country, Units, Unit Price and percent discount columns.":::
 
 Using the **Units**, **Unit Price**, and **Discount** columns, you'd like to create two new columns:
 
@@ -22,19 +21,19 @@ Using the **Units**, **Unit Price**, and **Discount** columns, you'd like to cre
 
 The goal is to create a table with new columns that contain the total sales before the discount and the total sales after the discount.
 
-:::image type="content" source="media/add-custom-column/add-custom-column-example-table.png" alt-text="Create custom Total Sale before Discount and Total Sale after Discount columns in a table.":::
+:::image type="content" source="media/add-custom-column/add-custom-column-example-table.png" alt-text="Screenshot of the table with the custom Total Sale before Discount and Total Sale after Discount columns created." lightbox="media/add-custom-column/add-custom-column-example-table.png":::
 
 ## Create a custom column
 
 On the **Add column** tab, select **Custom column**.
 
-:::image type="content" source="media/add-custom-column/add-custom-column-icon.png" alt-text="Custom column command on the Add column tab.":::
+:::image type="content" source="media/add-custom-column/add-custom-column-icon.png" alt-text="Screenshot of the Custom column command on the Add column tab.":::
 
-The **Custom column** dialog box appears. This dialog box is where you define the formula to create your column.
+The **Custom column** dialog appears. This dialog is where you define the formula to create your column.
 
-:::image type="content" source="media/add-custom-column/add-custom-column-window.png" alt-text="Custom column dialog box.":::
+:::image type="content" source="media/add-custom-column/add-custom-column-window.png" alt-text="Screenshot of the Custom column dialog where you customize your column.":::
 
-The **Custom column** dialog box contains:
+The **Custom column** dialog contains:
 
 * The initial name of your custom column in the **New column name** box. You can rename this column.
 
@@ -46,31 +45,31 @@ The **Custom column** dialog box contains:
 
 To add a new custom column, select a column from the **Available columns** list. Then, select the **Insert column** button below the list to add it to the custom column formula. You can also add a column by selecting it in the list. Alternatively, you can write your own formula by using the Power Query M formula language in **Custom column formula**.
 
->[!Note]
->If a syntax error occurs when you create your custom column, you'll see a yellow warning icon, along with an error message and reason.
+> [!NOTE]
+>If a syntax error occurs when you create your custom column, a yellow warning icon appears, along with an error message and reason.
 
 ### Adding the Total Sale before Discount column
 
 The formula you can use to create the **Total Sale before Discount** column is `[Units] * [Unit Price]`. In **Data type**, select the **Currency** data type.
 
-:::image type="content" source="media/add-custom-column/add-custom-column-total-sale-before-discount.png" alt-text="Custom column formula for Total Sale before Discount.":::
+:::image type="content" source="media/add-custom-column/add-custom-column-total-sale-before-discount.png" alt-text="Screenshot of the Custom column formula for Total Sale before Discount.":::
 
 The result of that operation adds a new **Total Sale before Discount** column to your table.
 
-:::image type="content" source="media/add-custom-column/add-custom-column-total-sale-before-discount-column.png" alt-text="Table with new custom column called Total Sale before Discount showing the price without the discount.":::
+:::image type="content" source="media/add-custom-column/add-custom-column-total-sale-before-discount-column.png" alt-text="Screenshot of the table with new custom column called Total Sale before Discount showing the price without the discount.":::
 
->[!NOTE]
->If you're using Power Query Desktop, you'll notice that the **Data type** field isn't available in **Custom column**. This means that you'll need to define a data type for any custom columns after creating the columns. More information: [Data types in Power Query](data-types.md#how-to-define-a-column-data-type)
+> [!NOTE]
+>If you're using Power Query Desktop, the **Data type** field isn't available in **Custom column**. This means that you need to define a data type for any custom columns after creating the columns. More information: [Data types in Power Query](data-types.md#how-to-define-a-column-data-type)
 
 ### Adding the Total Sale after Discount column
 
 The formula that you can use to create the **Total Sale before Discount** is `[Total Sale before Discount]* (1-[Discount])`. Set the data type of this new column to **Currency**.
 
-:::image type="content" source="media/add-custom-column/add-custom-column-total-sale-after-discount.png" alt-text="Custom column formula for Total Sale after Discount.":::
+:::image type="content" source="media/add-custom-column/add-custom-column-total-sale-after-discount.png" alt-text="Screenshot of the Custom column formula for Total Sale after Discount.":::
 
 The result of that operation adds a new **Total Sale after Discount** column to your table.
 
-:::image type="content" source="media/add-custom-column/add-custom-column-total-sale-after-discount-column.png" alt-text="Table with new custom column called Total Sale after Discount showing the price with the discount applied.":::
+:::image type="content" source="media/add-custom-column/add-custom-column-total-sale-after-discount-column.png" alt-text="Screenshot of the table with new custom column called Total Sale after Discount showing the price with the discount applied." lightbox="media/add-custom-column/add-custom-column-total-sale-after-discount-column.png":::
 
 ## Modify an existing custom column
 
@@ -82,10 +81,10 @@ To modify your custom column, select the **Added custom** step in the **Applied 
 
 The **Custom column** dialog box appears with the custom column formula you created.
 
->[!NOTE]
->Depending on the formula you've used for your custom column, Power Query changes the settings behavior of your step for a more simplified and native experience. For this example, the **Added custom** step changed its behavior from a standard custom column step to a *Multiplication* experience because the formula from that step only multiplies the values from two columns.
+> [!NOTE]
+>Depending on the formula you used for your custom column, Power Query changes the settings behavior of your step for a more simplified and native experience. For this example, the **Added custom** step changed its behavior from a standard custom column step to a *Multiplication* experience because the formula from that step only multiplies the values from two columns.
 
 ## Next steps
 
-* You can create a custom column in other ways, such as creating a column based on examples you provide to Power Query Editor. More information: [Add a column from an example](column-from-example.md)
+* You can create a custom column in other ways, such as creating a column based on examples you provide to the Power Query editor. More information: [Add a column from an example](column-from-example.md)
 * For Power Query M reference information, go to [Power Query M function reference](/powerquery-m/power-query-m-function-reference).
