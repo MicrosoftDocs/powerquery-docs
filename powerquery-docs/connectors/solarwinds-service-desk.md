@@ -110,9 +110,9 @@ Incremental refresh saves download time after your initial download is performed
 
    :::image type="content" source="./media/solarwinds-service-desk/open-incremental-refresh.png" alt-text="Screenshot open incremental refresh.":::
 
-   1. Archive data starting two years before the refresh date. Don't exceed two years.
+   a. Set the option for archiving data to meet your reporting needs. Enter a number in the first field and use the dropdown to select a time frame.
 
-   1. Incrementally refresh data starting one day before the refresh date. For instructions, go to [define-policy](/power-bi/connect-data/incremental-refresh-configure#define-policy).
+   b. Incrementally refresh data starting 1 Days before the refresh date. See [define-policy](/power-bi/connect-data/incremental-refresh-configure#define-policy) for instructions.
 
    :::image type="content" source="./media/solarwinds-service-desk/set-incremental-refresh.png" alt-text="Screenshot set incremental refresh.":::
 
