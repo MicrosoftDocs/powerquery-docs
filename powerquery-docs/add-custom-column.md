@@ -84,7 +84,7 @@ The **Custom column** dialog box appears with the custom column formula you crea
 > [!NOTE]
 >Depending on the formula you used for your custom column, Power Query changes the settings behavior of your step for a more simplified and native experience. For this example, the **Added custom** step changed its behavior from a standard custom column step to a *Multiplication* experience because the formula from that step only multiplies the values from two columns.
 
-## Next steps
+## Related content
 
 * You can create a custom column in other ways, such as creating a column based on examples you provide to the Power Query editor. More information: [Add a column from an example](column-from-example.md)
 * For Power Query M reference information, go to [Power Query M function reference](/powerquery-m/power-query-m-function-reference).
