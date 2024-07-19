@@ -61,7 +61,7 @@ Before you start to follow this article:
 
 1. Under **Load settings**, select **Load to new table**.
 
-    :::image type="content" source="./media/add-data-power-query/new-entity-name.png" alt-text="Screenshot of the Map tables windows with Load to new table emphasized.":::
+    :::image type="content" source="./media/add-data-power-query/new-entity-name.png" alt-text="Screenshot of the Map tables windows with Load to new table emphasized." lightbox="./media/add-data-power-query/new-entity-name.png":::
 
     You can give the new table a different name or display name, but leave the default values to follow this tutorial exactly.
 
