@@ -37,7 +37,7 @@ When connecting to the data source, it's important that you connect to the node 
 
 :::image type="content" source="media/native-query-folding/connection-settings.png" alt-text="Screenshot of the connection settings dialog for the connection to the AdventureWorks2019 database on a local instance of SQL Server.":::
 
-After you define the connection settings and supplying the credentials for your connection, the navigation dialog for your data source opens. In that dialog are all the available objects that you can connect to.
+After you define the connection settings and supplying the credentials for your connection, the navigation dialog for your data source opens. The navigation dialog contains all the available objects that you can connect to.
 
 From this list, you need to select the object where the native query is run (also known as the target). For this example, that object is the database level.
 
