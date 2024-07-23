@@ -123,6 +123,10 @@ To update the default database name: `alter user`*`username`*` set DEFAULT_NAMES
 
 If a database name has a hyphen in it, you can encounter an ```ODBC: ERROR[42000] SQL compilation error```. This is a known issue and there's no known workaround available. A fix is being investigated and the documentation here will be updated when the fix is ready.
 
+### Slicer visual for Boolean datatype
+
+The slicer visual for the Boolean data type isn't functioning as expected in the June 2024 release. This is a known issue. As a temporary solution, users can convert the Boolean data type in their reports to text by navigating to: Transfer -> Data Type -> Text. A fix will be provided in October 2024 release.
+
 ## Additional information
 
 - [Connect to Snowflake in Power BI Service](/power-bi/connect-data/service-connect-snowflake)
