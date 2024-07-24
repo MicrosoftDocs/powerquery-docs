@@ -1,9 +1,9 @@
 ---
 title: What licenses do you need to use dataflows
-description: What licenses do you need to use dataflows
+description: Describes the various licenses you need for various apps for you to use either analytical or standard dataflows.
 author: Luitwieler
 ms.topic: conceptual
-ms.date: 6/14/2023
+ms.date: 7/24/2024
 ms.author: jeluitwi
 ---
 
@@ -83,7 +83,7 @@ Dataflows that are using a premium capacity to refresh the data are limited to t
 
 #### Parallel tasks
 
-A premium capacity can run multiple evaluations in parallel. For example, you have a P4 capacity and a dataflow that consists of 84 tasks. You refresh your dataflow and the first 64 tasks are allocated for the refresh. The 20 left over evaluations for this dataflow are parked in a queue. Once one of the evaluations is finished, it starts with the next evaluation from the queue. If you start another dataflow in your workspace on the same premium capacity while the other is still running, it gets parked in the same queue of the premium capacity and needs to wait on the other dataflows in the workspace to start the refresh of your data.
+A premium capacity can run multiple evaluations in parallel. For example, you have a P4 capacity and a dataflow that consists of 84 tasks. You refresh your dataflow and the first 64 tasks are allocated for the refresh. The 20 left over evaluations for this dataflow are parked in a queue. Once one of the evaluations is finished, it starts with the next evaluation from the queue. If you start another dataflow in your workspace on the same premium capacity while the other is still running, it gets parked in the same queue of the premium capacity. The new dataflow needs to wait on the other dataflows in the workspace to start the refresh of your data.
 
 You can use the following pointers to estimate the number of tasks of your dataflow refresh:
 
@@ -101,9 +101,9 @@ To lower the number of tasks or improve the efficiency of your tasks, you can us
 
 ### Using your organization's Azure Data Lake Storage account for dataflow storage
 
-To create dataflows that store data in your organization's Azure Data Lake Storage account, in addition to the product licenses above, you must have an Azure subscription. The amount of storage that can be used isn't limited by the dataflow or the product it was created in.
+To create dataflows that store data in your organization's Azure Data Lake Storage account, in addition to the previously listed product licenses, you must have an Azure subscription. The amount of storage that can be used isn't limited by the dataflow or the product it was created in.
 
-## Next step
+## Related content
 
 If you want to read more details about the concepts discussed in this article, go to any of the following links.
 
