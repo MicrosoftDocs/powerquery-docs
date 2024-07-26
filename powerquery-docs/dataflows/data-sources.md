@@ -26,7 +26,7 @@ To connect to data in Power BI:
 3. Select **Dataflow** from the drop-down menu.
 4. Under **Define new tables**, select **Add new tables**.
 
-:::image type="content" source="media/data-sources/dataflows-data-sources-pbi-online.png" alt-text="Screenshot of the Power BI service where you add tables from the new dataflow command.":::
+:::image type="content" source="media/data-sources/dataflows-data-sources-pbi-online.png" alt-text="Screenshot of the Power BI service where you add tables from the new dataflow command. lightbox="media/data-sources/dataflows-data-sources-pbi-online.png"":::
 
 # [Power Apps](#tab/power-apps)
 
@@ -37,7 +37,7 @@ To connect to data in Power Apps:
 3. In the **New Dataflow** dialog box, enter a name for the new dataflow.
 4. Select **Create**.
 
-:::image type="content" source="media/data-sources/dataflows-data-sources-pa-online.png" alt-text="Screenshot of the Power Apps new dataflow dialog, where you select the name of your new dataflow.":::
+:::image type="content" source="media/data-sources/dataflows-data-sources-pa-online.png" alt-text="Screenshot of the Power Apps new dataflow dialog, where you select the name of your new dataflow." lightbox="media/data-sources/dataflows-data-sources-pa-online.png":::
 
 ---
 
@@ -67,7 +67,7 @@ For a list of all of the supported data sources in Power Query, go to [Connector
 
 To connect to a data source, select the data source. This section uses one example to show how the process works, but each data connection for dataflows is similar in process. Different connectors might require specific credentials or other information, but the flow is similar. In this example, **SQL Server database** is selected from the **Database** data connection category.
 
-:::image type="content" source="media/data-sources/dataflows-data-sources-05.png" alt-text="Screenshot of the New source page with the database tab selected and the SQL Server database connector emphasized.":::
+:::image type="content" source="media/data-sources/dataflows-data-sources-05.png" alt-text="Screenshot of the New source page with the database tab selected and the SQL Server database connector emphasized." lightbox="media/data-sources/dataflows-data-sources-05.png":::
 
 A connection window for the selected data connection is displayed. If credentials are required, you're prompted to provide them. The following image shows a server and database being entered to connect to a SQL Server database.
 
@@ -77,11 +77,11 @@ After the server URL or resource connection information is provided, enter the c
 
 Power Query Online initiates and establishes the connection to the data source. It then presents the available tables from that data source in the **Navigator** window.
 
-:::image type="content" source="media/data-sources/dataflows-data-sources-07.png" alt-text="Screenshot of the navigator window showing the tables in the data source.":::
+:::image type="content" source="media/data-sources/dataflows-data-sources-07.png" alt-text="Screenshot of the navigator window showing the tables in the data source." lightbox="media/data-sources/dataflows-data-sources-07.png":::
 
 You can select tables and data to load by selecting the check box next to each in the left pane. To transform the data you chose, select **Transform data** from the bottom of the **Navigator** window. A Power Query editor page appears, where you can edit queries and perform any other transformations you want to the selected data.
 
-:::image type="content" source="media/data-sources/dataflows-data-sources-08.png" alt-text="Screenshot of the Power Query editor where you edit queries and transform data.":::
+:::image type="content" source="media/data-sources/dataflows-data-sources-08.png" alt-text="Screenshot of the Power Query editor where you edit queries and transform data." lightbox="media/data-sources/dataflows-data-sources-08.png":::
 
 ## Related content
 
