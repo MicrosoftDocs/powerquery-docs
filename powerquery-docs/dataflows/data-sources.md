@@ -97,8 +97,8 @@ For information about individual Power Query connectors, go to the [connector re
 The following articles discuss how to use Power Query connectors in more detail:
 
 * [Where to get data](../where-to-get-data.md)
-* [Alternatives to out-of-box connectivity in Power BI Desktop](../connector-alternatives)
-* [Connect to data using generic interfaces](../connect-using-generic-interfaces)
+* [Alternatives to out-of-box connectivity in Power BI Desktop](../connector-alternatives.md)
+* [Connect to data using generic interfaces](../connect-using-generic-interfaces.md)
 
 Additional information about dataflows and related information can be found in the following articles:
 
