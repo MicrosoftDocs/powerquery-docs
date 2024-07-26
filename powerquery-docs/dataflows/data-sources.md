@@ -45,11 +45,11 @@ To connect to data in Power Apps:
 
 Once you create the dataflow from the dataflow authoring tool, you're presented with the **Choose data source** page. Either use **Search** to search for the name of the connector, or select **View more** to see a list of all the connectors available in Power BI service.
 
-:::image type="content" source="media/data-sources/power-bi-service-search-view-more.png" alt-text="Screenshot of the Choose data source page with the search box and the view more selection emphasized." lightbox="media/where-to-get-data/power-bi-service-search-view-more.png":::
+:::image type="content" source="media/data-sources/power-bi-service-search-view-more.png" alt-text="Screenshot of the Choose data source page with the search box and the view more selection emphasized." lightbox="media/data-sources/power-bi-service-search-view-more.png":::
 
 If you choose to view more connectors, you can still use **Search** to search for the name of the connector, or choose a category to see a list of connectors associated with that category.
 
-:::image type="content" source="media/data-sources/power-bi-service-view-more.png" alt-text="Screenshot of the Choose data source page displayed after selecting view more, including the categories at the top and then the list of connectors." lightbox="media/where-to-get-data/power-bi-service-view-more.png":::
+:::image type="content" source="media/data-sources/power-bi-service-view-more.png" alt-text="Screenshot of the Choose data source page displayed after selecting view more, including the categories at the top and then the list of connectors." lightbox="media/data-sources/power-bi-service-view-more.png":::
 
 The following categories appear as tabs in the **New source** page:
 
@@ -96,9 +96,9 @@ For information about individual Power Query connectors, go to the [connector re
 
 The following articles discuss how to use Power Query connectors in more detail:
 
-* [Where to get data](where-to-get-data.md)
-* [Alternatives to out-of-box connectivity in Power BI Desktop](connector-alternatives)
-* [Connect to data using generic interfaces](connect-using-generic-interfaces)
+* [Where to get data](../where-to-get-data.md)
+* [Alternatives to out-of-box connectivity in Power BI Desktop](../connector-alternatives)
+* [Connect to data using generic interfaces](../connect-using-generic-interfaces)
 
 Additional information about dataflows and related information can be found in the following articles:
 
