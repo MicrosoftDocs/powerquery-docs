@@ -1,21 +1,21 @@
 ---
-title: Azure Resource Graph (Beta)
+title: Azure Resource Graph
 description: Includes basic information, prerequisites, and information on how to connect to Azure Resource Graph.
 
 author: ahudson8
 ms.topic: conceptual
-ms.date: 1/24/2024
+ms.date: 7/29/2024
 ms.author: alhudso
 
 ---
 
-# Azure Resource Graph (Beta)
+# Azure Resource Graph
 
 ## Summary
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | Preview |
+| Release State | General Availability |
 | Products | Power BI Semantic models (Desktop + Service)</br>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Organizational Account |
 
@@ -28,7 +28,7 @@ ms.author: alhudso
 
 * You must have appropriate rights in [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview) with at least read access to the resources you want to query.
 
-> [!NOTE]
+> [!Tip]
 > If you participated in the private preview, be sure to delete the AzureResourceGraph.mez preview file. Failure to do so might result in your test custom connector being used by Power Query inadvertently instead of the newly certified connector.
 
 ## Capabilities supported
@@ -86,5 +86,7 @@ Power Query provides an advanced option that you can add to your query if needed
 
 ## See also
 
-* [Azure Resource Graph Overview](/azure/governance/resource-graph/overview)
-* [Starter Azure Resource Graph query samples](/azure/governance/resource-graph/samples/starter?tabs=azure-cli)
+For more information about the Azure Resource Graph (ARG) Power BI connector please refer to these resources: 
+
+* [ARG Quickstart Guide for Power BI connector](/azure/governance/resource-graph/power-bi-connector-quickstart?tabs=power-bi-desktop)
+* [Troubleshooting Guide for ARG Power BI connector](azure/governance/resource-graph/troubleshoot/power-bi-connector)
