@@ -190,3 +190,9 @@ When querying a column that has the same name as the table name, BigQuery interp
 A known issue is that the Google BigQuery connector doesn't currently support materialized views in the Power BI Desktop navigator.
 
 * Workaround: Utilize native query SQL statements to fetch materialized views from Google BigQuery.
+
+### HTTP Error 403: quotaExceeded (Quota exceeded: Your user exceeded quota for concurrent project.lists requests)
+
+* The quota is exceeded across the customer account usage of project.lists API calls to Google. When multiple reports refresh simultaneously, it might trigger an error in different queries or reports. To prevent the error, schedule report refreshes at staggered intervals.
+* Update query to include a Billing Project ID - `GoogleBigQuery.Database([BillingProject="Include-Billing-Project-Id-Here"])`.
+* Calls to `GoogleBigQuery.Database` should be in the same query as the schema and table selection to avoid the error.
