@@ -89,4 +89,4 @@ Power Query provides an advanced option that you can add to your query if needed
 For more information about the Azure Resource Graph (ARG) Power BI connector please refer to these resources: 
 
 * [ARG Quickstart Guide for Power BI connector](/azure/governance/resource-graph/power-bi-connector-quickstart?tabs=power-bi-desktop)
-* [Troubleshooting Guide for ARG Power BI connector](azure/governance/resource-graph/troubleshoot/power-bi-connector)
+* [Troubleshooting Guide for ARG Power BI connector](/azure/governance/resource-graph/troubleshoot/power-bi-connector)
