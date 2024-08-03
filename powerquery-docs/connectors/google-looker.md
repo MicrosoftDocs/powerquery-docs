@@ -48,10 +48,7 @@ To connect to Looker from Power Query Desktop, follow these steps:
 
 1. The default value of **Show Hidden Fields** if left blank is False. This will mimic the default visual behavior on Looker where fields with the hidden tag will not be shown. If this parameter is set to True, all fields will be visible in the Power BI report, including those with hidden tags.
 
-1. It is recommended to select **Direct Query**. Selecting **Import** may result in a potentially expensive query that includes all fields from all the views that are referenced in the Looker Explore. In addition, Import mode comes with certain limitations:
-
-   * You lose the ability to have Looker correctly evaluate the measures in the Explore.
-   * You lose the ability to interact with Filters-only and Parameter fields.
+1. It is recommended to select **Direct Query**. Selecting **Import** may result in a potentially expensive query that includes all fields from all the views that are referenced in the Looker Explore. In addition, Import mode comes with certain [limitations](#import-mode-limitations).
 
 1. Select **OK** to continue.
 
@@ -67,8 +64,34 @@ To connect to Looker from Power Query Desktop, follow these steps:
 
    ![Image showing navigation window](./media/google-looker/navigator-view-desktop.png)
 
-
 ## Limitations and considerations
+
+### Import Mode Limitations
+
+When using the Import Mode of the Looker connector, users should be aware of the following limitations:
+
+* **Performance Issues with Large Models**:
+  * Import Mode reports attempting to access larger models may experience performance degradation.
+  * If the "Get Data" process does not resolve or times out, it is recommended that users switch to "Direct Query Mode" to improve performance and reliability.
+
+* **Disabled Fields**:
+  * In Import Mode, filter-only fields and parameter fields are disabled. Therefore, these fields should not be used when operating in this mode.
+
+* **Evaluation of Measures**:
+  * Import Mode does not allow Looker to correctly evaluate measures within the Explore. This limitation can impact the accuracy and functionality of your reports.
+
+Given these limitations, it is generally better to use Direct Query Mode when possible to ensure optimal performance and functionality.
+
+### Query Folding Limitations
+
+Please note that the following Table functions are not foldable:
+
+* Table.Distinct
+* Table.Join
+* Table.NestedJoin
+* Table.Skip
+
+### Additional Limitations and Considerations
 
 Please see the [Looker documentation](https://cloud.google.com/looker/docs/powerbi-connector#things_to_consider) for additional limitations and considerations of the Looker connector.
 
