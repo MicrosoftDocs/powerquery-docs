@@ -3,7 +3,7 @@ title: Understanding the differences between dataflow types
 description: Understanding the differences between standard V1, V2 and analytical dataflows.
 author: Luitwieler
 ms.topic: conceptual 
-ms.date: 6/14/2023 
+ms.date: 6/14/2024 
 ms.author: jeluitwi 
 --- 
 
