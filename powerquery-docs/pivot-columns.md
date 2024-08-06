@@ -2,7 +2,7 @@
 title: Pivot columns feature description
 description: Describes how to uses an aggregation calculation on table column values and then pivots the column into a new table.
 author: ptyx507
-ms.date: 5/15/2022
+ms.date: 5/15/2024
 ms.author: miescobar
 ms.topic: conceptual
 ---
