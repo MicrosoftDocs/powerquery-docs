@@ -1,5 +1,5 @@
 ---
-title: MongoDB Atlas SQL interface connector (Beta)  
+title: MongoDB Atlas SQL interface connector
 description: Provides basic information, prerequisites, and instructions for using the MongoDB Atlas SQL interface connector.  
 author: bucaojit  
 ms.author: dougklo
@@ -16,7 +16,7 @@ ms.date: 1/24/2024
 
 | Item                           | Description                                                                    |
 |--------------------------------|--------------------------------------------------------------------------------|
-| Release State                  | Beta                                                                           |
+| Release State                  | General Availability                                                           |
 | Products                       | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Database (Username/Password)                                                   |
 
@@ -40,6 +40,7 @@ We also recommend that you install the MongoDB Atlas SQL ODBC Driver before usin
 ## Capabilities Supported
 
 - Import
+- DirectQuery (Power BI semantic models)
 
 ## Connect to MongoDB Atlas federated database using Atlas SQL interface from Power Query Desktop
 
