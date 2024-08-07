@@ -35,7 +35,7 @@ To use the MongoDB Atlas SQL connector, you must have an [Atlas federated databa
 > [!NOTE]
 > If some or all of your data comes from an Atlas cluster, you must use MongoDB version 5.0 or greater for that cluster to take advantage of Atlas SQL.
 
-We also recommend that you install the MongoDB Atlas SQL ODBC Driver before using the MongoDB Atlas SQL connector.
+The [MongoDB Atlas SQL ODBC Driver](https://www.mongodb.com/try/download/odbc-driver) is required to use the MongoDB Atlas SQL Connector.
 
 ## Capabilities Supported
 
@@ -63,6 +63,12 @@ To connect using the Atlas SQL interface:
      Use the MongoDB URI obtained [in the prerequisites](#obtaining-connection-information-for-your-federated-database-instance).  Make sure that it doesn't contain your username and password. URIs containing username and/or passwords are rejected.
    - Your federated **Database** name. _Required_  
      Use the name of the federated database obtained [in the prerequisites](#obtaining-connection-information-for-your-federated-database-instance).
+   - A SQL query. _Optional_ \
+     Enter a native Atlas SQL query to execute immediately. If the **Database** is the same as above, you may omit it from the query.
+     ```
+     SELECT * FROM orders
+     ```
+   - Select either Import or DirectQuery for your desired Data Connectivity mode
 
    Select **OK**.  
 
