@@ -14,11 +14,14 @@ ms.date: 1/24/2024
 
 ## Summary
 
-| Item                           | Description                                                                    |
-|--------------------------------|--------------------------------------------------------------------------------|
-| Release State                  | General Availability                                                           |
-| Products                       | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
-| Authentication Types Supported | Database (Username/Password)                                                   |
+| Item                           | Description                                                                                                 |
+|--------------------------------|-------------------------------------------------------------------------------------------------------------|
+| Release State                  | General Availability                                                                                        |
+| Products                       | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)                              |
+| Authentication Types Supported | Database (Username/Password)<br/>X.509 Certificates<br/>OAuth (OIDC)<br/>AWS Identity and Access Management |
+
+> [!NOTE]
+> When using authentication mechanisms other than Username/Password (such as X.509 Certificates, OAuth (OIDC), or AWS IAM), you can leave the username and password fields blank in the connection dialogue. The appropriate credentials will be handled through the chosen authentication method.
 
 ## Prerequisites
 
