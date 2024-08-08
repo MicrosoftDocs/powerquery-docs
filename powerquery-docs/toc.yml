@@ -597,7 +597,7 @@ items:
           href: connectors/web/web-troubleshoot.md
       - name: "Windsor (Beta)"
         href: connectors/windsor.md
-      - name: "Wolters Kluwer CCH Tagetik (Beta)"
+      - name: "Wolters Kluwer CCH Tagetik"
         href: connectors/wolters-kluwer-cch-tagetik.md
       - name: "Workforce Dimensions (Beta) (Deprecated)"
         href: connectors/workforce-dimensions.md
