@@ -43,7 +43,7 @@ To connect to an Azure Cosmos DB for MongoDB Vcore from Power Query Desktop, tak
 
 1. If this is the first time you're connecting to this database, input your username and password before selecting **Connect**.
 
-   ![Azure Cosmos DB for MongoDB Vcore database authentication.](./media/azure-cosmos-db-for-mongodb/enter-credentials.png)
+   ![Azure Cosmos DB for MongoDB Vcore database authentication.](./media/azure-cosmos-db-for-mongodb-vcore/enter-credentials.png)
 
 1. In **Navigator**, select the database information you want. A list of collections will appear under each database. Select one or more collections then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor. Note that the list of databases and collections are affected if the optional **Database Name** and **Collection Name** were previously supplied.
 
