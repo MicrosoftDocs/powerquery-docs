@@ -7,7 +7,7 @@ ms.date: 3/22/2024
 ms.author: dougklo
 ---
 
-# Azure Cosmos DB for MongoDB
+# Azure Cosmos DB for MongoDB Vcore
 
 ## Summary
 
@@ -49,7 +49,7 @@ To connect to an Azure Cosmos DB for MongoDB Vcore from Power Query Desktop, tak
 
    ![Azure Cosmos DB for MongoDB Vcore load or transform](./media/azure-cosmos-db-for-mongodb-vcore/navigator-desktop.png)
 
-## Connect to Azure Cosmos DB for MongoDB database from Power Query Online
+## Connect to Azure Cosmos DB for MongoDB Vcore database from Power Query Online
 
 **TO-DO** once connector is available for testing in Power BI Service
 
