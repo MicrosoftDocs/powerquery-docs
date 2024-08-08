@@ -38,7 +38,6 @@ Before you can use this connector to get SolarWinds Service Desk data, you must 
 > Customers can now follow new records in SolarWinds Service Desk and their progress.
 
 > **Customer effects**: Every refresh you perform will pull all records changes, including new records or records where their data was changed during the date range you set. This may change your reports in Power BI Desktop and the Power BI Service.
-> Customer that already set their environment and has existing report based on this connector, this information is important, New Customers can start follow this Installation guide.
 
 The following instructions contain special steps for customers who previously used the BETA SWSD Power BI connector to create reports and want to connect those reports with the new out-of-the-box version.
 
