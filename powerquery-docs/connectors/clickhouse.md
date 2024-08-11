@@ -1,10 +1,10 @@
 ---
 title: Power Query ClickHouse connector
 description: Provides basic information, prerequisites, and instructions on how to connect to ClickHouse
-author: Bentsi Leviav
-ms.topic: conceptual
-ms.date: 8/11/2024
-ms.author: bentsileviav
+author: bentsileviav
+#ms.topic: conceptual
+#ms.date: 8/11/2024
+#ms.author: bentsileviav
 ---
 
 # ClickHouse
@@ -98,5 +98,5 @@ Why such a gateway is required?
 Steps required for the integration:
 
 1. Follow all steps listed in the PowerBI desktop usage above.
-2. Install the data gateway, detailed instructions can be found in [Install an on-premises data gateway](https://learn.microsoft.com/en-us/data-integration/gateway/service-gateway-install).
-3. Follow [this Microsoft example on how to configure your Power BI service to work with the Gateway](https://learn.microsoft.com/en-us/power-bi/connect-data/service-gateway-sql-tutorial#connect-the-dataset-to-the-sql-server-database)
+2. Install the data gateway, detailed instructions can be found in [Install an on-premises data gateway](/data-integration/gateway/service-gateway-install).
+3. Follow [this Microsoft example on how to configure your Power BI service to work with the Gateway](/power-bi/connect-data/service-gateway-sql-tutorial#connect-the-dataset-to-the-sql-server-database)
