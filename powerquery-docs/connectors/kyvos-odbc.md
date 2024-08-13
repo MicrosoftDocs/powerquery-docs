@@ -14,7 +14,7 @@
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites 
-This connector is designed for use with Microsoft Power BI and works most effectively when the Kyvos ODBC Driver 4.0 is installed on the machine running the Power BI application.
+This connector is designed for use with Microsoft Power BI and works most effectively when the [Kyvos ODBC Driver](https://www.kyvosinsights.com/kyvos-odbc-driver/) is installed on the machine running the Power BI application.
 
 ## Capabilities supported 
 - DirectQuery (Power BI semantic models)
