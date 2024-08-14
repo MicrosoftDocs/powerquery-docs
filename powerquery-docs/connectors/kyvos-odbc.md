@@ -1,3 +1,12 @@
+---
+title: Kyvos ODBC Connector
+description: Provides basic information, prerequisites, and instructions on how to connect to Kyvos ODBC Connector.
+author: DougKlopfenstein
+ms.topic: conceptual
+ms.date: 8/14/2024
+ms.author: dougklo
+---
+
 # Kyvos ODBC Connector 
 
 > [!NOTE]
