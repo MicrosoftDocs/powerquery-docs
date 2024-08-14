@@ -53,7 +53,7 @@ To connect to Kyvos from Power BI Service, perform the following steps.
      1.	Enter the Gateway cluster name. 
      2.	Enter the Connection name.
      3.	Select the **Kyvos ODBC** from the **Connection Type** list.
-     4.	Enter the **Kyvos Server** name. The format must be <Server_Name> or <IP>:<Port> 
+     4.	Enter the **Kyvos Server** name. Enter Server details
      5.	Enter the **HTTP Path** as kyvos/sql.
      6.	Enter the **Enabled** or **Disabled** option from the **Use SSL** list. 
  ![Screenshot of the NewConnection dialog, showing the Kyvos ODBC Connector selection.](./media/kyvos-odbc/NewConnection.png)
