@@ -42,7 +42,7 @@ To connect to Bloomberg Data and Analytics:
 
 4. Once you have written your query, select **OK** to execute it. The Bloomberg Data and Analytics connector now supports both **Bloomberg Query Language (BQL)** and **SQL** for data retrieval. This enhancement enables the connector to intelligently select the appropriate data source based on the query type you use.
 
-   With the introduction of SQL support, you gain the benefit of [Query Folding](https://learn.microsoft.com/en-us/power-query/query-folding-examples) in the Query Editor. This performance optimization, which reduces data transfer, is available exclusively for SQL queries.
+   With the introduction of SQL support, you gain the benefit of [Query Folding](learn.microsoft.com/en-us/power-query/query-folding-examples) in the Query Editor. This performance optimization, which reduces data transfer, is available exclusively for SQL queries.
 
    > [!NOTE]
    >The latest version of the connector introduces a unified query function, Bloomberg.Query(), in the formula bar. This function accepts both BQL and SQL, providing a streamlined experience. For existing reports developed with earlier versions, the BQL.Query() function remains operational and fully supported. Each function has its own authentication. To avoid logging in more than once, it is best practice to use Bloomberg.Query().
