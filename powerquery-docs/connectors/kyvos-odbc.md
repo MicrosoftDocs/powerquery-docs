@@ -25,7 +25,7 @@ To connect to Kyvos from Power BI Desktop, perform the following steps.
 1. Open Power BI Desktop, navigate to **Get Data**, select the Kyvos ODBC connector, and click **Connect**.
 ![Screenshot of the Get Data dialog, showing the Kyvos ODBC Connector selection.](./media/kyvos-odbc/GetData.png)
 2. In the **Kyvos ODBC Connector** dialog box, provide the following details:
-   1. **Kyvos Server**: Server Name or IP Address along with the Port Number
+   1. **Kyvos Server**: Enter server details
    2. **HTTP Path**: kyvos/sql
    3. **Use SSL**: Enabled or Disabled
    4. **Data Connectivity mode**: DirectQuery
