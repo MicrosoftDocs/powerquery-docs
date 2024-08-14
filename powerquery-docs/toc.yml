@@ -469,7 +469,7 @@ items:
         href: connectors/microsoft-graph-security.md
       - name: "MicroStrategy for Power BI"
         href: connectors/microstrategy-for-power-bi.md
-      - name: "MongoDB Atlas SQL interface (Beta)"
+      - name: "MongoDB Atlas SQL interface"
         href: connectors/mongodb-atlas-sql-interface.md
       - name: "MySQL database"
         href: connectors/mysql-database.md
