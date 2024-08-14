@@ -469,7 +469,7 @@ items:
         href: connectors/microsoft-graph-security.md
       - name: "MicroStrategy for Power BI"
         href: connectors/microstrategy-for-power-bi.md
-      - name: "MongoDB Atlas SQL interface (Beta)"
+      - name: "MongoDB Atlas SQL interface"
         href: connectors/mongodb-atlas-sql-interface.md
       - name: "MySQL database"
         href: connectors/mysql-database.md
@@ -597,7 +597,7 @@ items:
           href: connectors/web/web-troubleshoot.md
       - name: "Windsor (Beta)"
         href: connectors/windsor.md
-      - name: "Wolters Kluwer CCH Tagetik (Beta)"
+      - name: "Wolters Kluwer CCH Tagetik"
         href: connectors/wolters-kluwer-cch-tagetik.md
       - name: "Workforce Dimensions (Beta) (Deprecated)"
         href: connectors/workforce-dimensions.md
