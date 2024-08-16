@@ -61,4 +61,4 @@ The result of that operation gives you the table in the following image.
 
 ## Replace errors
 
-For information on replacing errors, go to [Replace errors](dealing-with-errors.md#replace-errors).
+For information on handling cell level errors, including replacing errors, go to [Handling errors at the cell level](dealing-with-errors.md#handling-errors-at-the-cell-level).
