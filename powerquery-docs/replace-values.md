@@ -61,4 +61,4 @@ The result of that operation gives you the table in the following image.
 
 ## Replace errors
 
-For information on replacing errors, go to [Replace errors](dealing-with-errors.md#replace-errors)
+For information on replacing errors, go to [Replace errors](dealing-with-errors.md#replace-errors).
