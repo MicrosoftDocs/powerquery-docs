@@ -15,9 +15,9 @@ ms.author: dougklo
 ## Summary 
 | Item | Description |
 | ------ | ------ |
-|Release State | General Availability |
+|Release State | Beta |
 |Products| Power BI (Semantic models), Power BI (Dataflows) |
-|Authentication Types Supported Google Drive| Username and Password OAuth (OIDC) |
+|Authentication Types Supported| Username and Password OAuth (OIDC) |
 
 > [!NOTE]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
