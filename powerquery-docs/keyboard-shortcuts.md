@@ -14,11 +14,11 @@ Keyboard shortcuts provide a quick way to navigate and allow users to work more 
 When using the Query Editor in Power Query Online, you can navigate to the **Keyboard shortcuts** button in the **Help** tab to view the list of keyboard shortcuts.
 
 > [!NOTE]
->These shortcuts have been tested with Microsoft Edge on Windows and MacOS. While we try to provide support for all browsers, other browsers can make or implement their own shortcuts. Because we can't control how other browsers behave, we can't guarantee that all the shortcuts in this list work on all browsers.
+>These shortcuts have been tested with Microsoft Edge on Windows and macOS. While we try to provide support for all browsers, other browsers can make or implement their own shortcuts. Because we can't control how other browsers behave, we can't guarantee that all the shortcuts in this list work on all browsers.
 
 ## Query Editor
 
-| Action | Windows Keyboard shortcut | MacOS keyboard shortcut |
+| Action | Windows Keyboard shortcut | macOS keyboard shortcut |
 | --- | --- | --- |
 | Get data | Ctrl+Alt+D | Control+Option+D |
 | Enter data | Ctrl+Alt+T | Command+Option+T |
@@ -33,7 +33,7 @@ When using the Query Editor in Power Query Online, you can navigate to the **Key
 
 ## Data Preview
 
-| Action | Windows keyboard shortcut | MacOS keyboard shortcut |
+| Action | Windows keyboard shortcut | macOS keyboard shortcut |
 | --- | --- | --- |
 | Copy cells/rows/columns | Ctrl+C | Command+C |
 | Select all cells | Ctrl+A | Command+A |
@@ -41,7 +41,7 @@ When using the Query Editor in Power Query Online, you can navigate to the **Key
 
 ##### When the focus is on the column header
 
-| Action | Windows keyboard shortcut | MacOS keyboard shortcut |
+| Action | Windows keyboard shortcut | macOS keyboard shortcut |
 | --- | --- | --- |
 | Filter menu | Alt+Down arrow key | Option+Down arrow key |
 | Change column type menu | Ctrl+Down arrow key | Command+Down arrow key |
@@ -52,7 +52,7 @@ When using the Query Editor in Power Query Online, you can navigate to the **Key
 
 ##### When the focus is on the cell
 
-| Action | Windows keyboard shortcut | MacOS keyboard shortcut |
+| Action | Windows keyboard shortcut | macOS keyboard shortcut |
 | --- | --- | --- |
 | Select first cell of the row | Home | Fn+Left arrow key |
 | Select last cell of the row | End | Fn+Right arrow key |
@@ -65,7 +65,7 @@ When using the Query Editor in Power Query Online, you can navigate to the **Key
 
 ## Editable grid (Enter data/Blank table)
 
-| Action | Windows keyboard shortcut| MacOS keyboard shortcut |
+| Action | Windows keyboard shortcut| macOS keyboard shortcut |
 | --- | --- | --- |
 | Copy cells/rows/columns | Ctrl+C | Command+C |
 | Paste cells/rows/columns | Ctrl+V | Command+V |
@@ -74,13 +74,13 @@ When using the Query Editor in Power Query Online, you can navigate to the **Key
 
 ## Multi-line text editor (Blank query/Advanced editor)
 
-| Action | Windows keyboard shortcut| MacOS keyboard shortcut |
+| Action | Windows keyboard shortcut| macOS keyboard shortcut |
 | --- | --- | --- |
 | Toggle tab behavior | Ctrl+M | Control+Shift+M |
 
 ## Diagram view
 
-| Action | Windows keyboard shortcut | MacOS keyboard shortcut |
+| Action | Windows keyboard shortcut | macOS keyboard shortcut |
 | --- | --- | --- |
 | Expand selected query | Ctrl+Right arrow key | Command+Right arrow key |
 | Collapse selected query | Ctrl+Left arrow key | Command+Left arrow key |
@@ -96,7 +96,7 @@ When using the Query Editor in Power Query Online, you can navigate to the **Key
 
 ## Queries pane
 
-| Action | Windows keyboard shortcut | MacOS keyboard shortcut |
+| Action | Windows keyboard shortcut | macOS keyboard shortcut |
 | --- | --- | --- |
 | Select all queries | Ctrl+A | Command+A |
 | Copy queries | Ctrl+C | Command+C |
