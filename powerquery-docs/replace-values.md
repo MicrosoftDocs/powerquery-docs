@@ -47,7 +47,7 @@ The value of **-1** in the **Sales Goal** column is an error in the source and n
 
 The outcome of that operation gives you the result that you're looking for.
 
-:::image type="content" source="media/replace-values/original-after-numeric-replace.png" alt-text="Screenshot of the output sample table after the -1 value in the first row of the Sales Goal column was replaced with 250000":::
+:::image type="content" source="media/replace-values/original-after-numeric-replace.png" alt-text="Screenshot of the output sample table after the -1 value in the first row of the Sales Goal column was replaced with 250000.":::
 
 ## Replace instances of a text string
 
