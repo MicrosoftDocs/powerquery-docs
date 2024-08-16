@@ -4,7 +4,7 @@ description: This article provides information about global keyboard shortcuts i
 author: ptyx507x
 ms.author: miescobar
 ms.topic: conceptual
-ms.date: 3/20/2023
+ms.date: 8/16/2024
 ---
 
 # Keyboard shortcuts in Power Query
@@ -13,15 +13,15 @@ Keyboard shortcuts provide a quick way to navigate and allow users to work more 
 
 When using the Query Editor in Power Query Online, you can navigate to the **Keyboard shortcuts** button in the **Help** tab to view the list of keyboard shortcuts.
 
->[!NOTE]
->These shortcuts have been tested with Microsoft Edge on Windows and MacOS. While we try to provide support for all browsers, other browsers can make or implement their own shortcuts. Because we can't control how other browsers behave, we can't guarantee that all the shortcuts in this list will work on all browsers.
+> [!NOTE]
+>These shortcuts have been tested with Microsoft Edge on Windows and MacOS. While we try to provide support for all browsers, other browsers can make or implement their own shortcuts. Because we can't control how other browsers behave, we can't guarantee that all the shortcuts in this list work on all browsers.
 
 ## Query Editor
 
 | Action | Windows Keyboard shortcut | MacOS keyboard shortcut |
 | --- | --- | --- |
-| Get Data | Ctrl+Alt+D | Control+Option+D |
-| Enter Data | Ctrl+Alt+T | Command+Option+T |
+| Get data | Ctrl+Alt+D | Control+Option+D |
+| Enter data | Ctrl+Alt+T | Command+Option+T |
 | Add custom column | Ctrl+Alt+C | Command+Option+C |
 | Choose column | Ctrl+K | Command+K |
 | Go to column | Ctrl+G | Command+G |
@@ -78,7 +78,7 @@ When using the Query Editor in Power Query Online, you can navigate to the **Key
 | --- | --- | --- |
 | Toggle tab behavior | Ctrl+M | Control+Shift+M |
 
-## Diagram View
+## Diagram view
 
 | Action | Windows keyboard shortcut | MacOS keyboard shortcut |
 | --- | --- | --- |
