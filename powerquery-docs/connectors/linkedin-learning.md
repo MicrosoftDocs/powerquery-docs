@@ -98,7 +98,7 @@ To obtain your Client ID & Client Secret from LinkedIn Learning, follow these st
 
 Once successfully connected, the data tables that are available to load into Power BI are now visible.
 
-:::image type="content" source="./media/linkedin-learning/power-bi-data-tables-options.png" alt-text="Screenshot of LinkedIn Learning data tables that are available to be loaded into Power BI.":::
+:::image type="content" source="./media/linkedin-learning/power-bi-data-tables-options_19_8_update.png" alt-text="Screenshot of LinkedIn Learning data tables that are available to be loaded into Power BI.":::
 
 ### Overview of data tables
 
