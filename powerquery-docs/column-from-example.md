@@ -72,7 +72,7 @@ Your last step is to remove the **First Name**, **Last Name**, and **Monthly Inc
 
 ## Tips and considerations
 
-When providing examples, Power Query offers a helpful list of available fields, values, and suggested transformations for the selected columns. You can view this list by selecting any cell of the new column and begin entering a value.
+When providing examples, Power Query offers a helpful list of available fields, values, and suggested transformations for the selected columns. You can view this list by selecting any cell of the new column and either begin entering a value or selecting F2 on your keyboard. You could also use your mouse and double-click on one of the cells in the new column.
 
 :::image type="content" source="media/column-from-example/add-column-from-example-suggestions.png" alt-text="Screenshot showing the column from example suggestions." lightbox="media/column-from-example/add-column-from-example-suggestions.png":::
 
