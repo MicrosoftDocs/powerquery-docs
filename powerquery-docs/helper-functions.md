@@ -3,21 +3,19 @@ title: Helper functions for M extensions for Power Query connectors
 description: Use helper functions for Power Query connectors
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 1/9/2023
+ms.date: 8/22/2024
 ms.author: miescobar
 ---
 
-# Helper Functions
+# Helper functions
 
-This topic contains a number of helper functions commonly used in M extensions.
-These functions may eventually be moved to the official M library, but for now can be copied into your extension file code.
-You shouldn't mark any of these functions as `shared` within your extension code.
+This article contains a number of helper functions commonly used in M extensions. These functions might eventually be moved to the official M library, but for now can be copied into your extension file code. You shouldn't mark any of these functions as `shared` within your extension code.
 
-## Navigation Tables
+## Navigation tables
 
 ### Table.ToNavigationTable
 
-This function adds the table type metadata needed for your extension to return a table value that Power Query can recognize as a Navigation Tree. See [Navigation Tables](HandlingNavigationTables.md) for more information.
+This function adds the table type metadata needed for your extension to return a table value that Power Query can recognize as a navigation tree. For more information, go to [Navigation tables](HandlingNavigationTables.md).
 
 ```powerquery-m
 Table.ToNavigationTable = (
@@ -49,8 +47,8 @@ Table.ToNavigationTable = (
 | table          | Your navigation table.   |
 | keyColumns     | List of column names that act as the primary key for your navigation table.      |
 | nameColumn     | The name of the column that should be used as the display name in the navigator. |
-| dataColumn     | The name of the column that contains the Table or Function to display.           |
-| itemKindColumn | The name of the column to use to determine the type of icon to display. Valid values for the column are listed in the [Handling Navigation article](handlingnavigationtables.md#values-for-itemkind).    |
+| dataColumn     | The name of the column that contains the table or function to display.           |
+| itemKindColumn | The name of the column to use to determine the type of icon to display. Valid values for the column are listed in the [handling navigation article](handlingnavigationtables.md#values-for-itemkind).    |
 | itemNameColumn | The name of the column to use to determine the type of tooltip to display. Valid values for the column are `Table` and `Function`. |
 | isLeafColumn   | The name of the column used to determine if this is a leaf node, or if the node can be expanded to contain another navigation table. |
 
@@ -71,7 +69,7 @@ shared MyExtension.Contents = () =>
         NavTable;
 ```
 
-## URI Manipulation
+## URI manipulation
 
 ### Uri.FromParts
 
@@ -122,7 +120,7 @@ DataAccessFunction = (url as text) as table =>
         source;
 ```
 
-## Retrieving Data
+## Retrieving data
 
 ### Value.WaitFor
 
@@ -142,18 +140,13 @@ Value.WaitFor = (producer as function, interval as function, optional count as n
 
 ### Table.GenerateByPage
 
-This function is used when an API returns data in an incremental/paged format, which
-is common for many REST APIs. The `getNextPage` argument is a function that takes in 
-a single parameter, which will be the result of the previous call to `getNextPage`, and
-should return a `nullable table`.
+This function is used when an API returns data in an incremental/paged format, which is common for many REST APIs. The `getNextPage` argument is a function that takes in a single parameter, which is the result of the previous call to `getNextPage`, and should return a `nullable table`.
 
 ```powerquery-m
 getNextPage = (lastPage) as nullable table => ...;
 ```
 
-`getNextPage` is called repeatedly until it returns `null`. The function will collate 
-all pages into a single table. When the result of the first call to `getNextPage` is null,
-an empty table is returned.
+`getNextPage` is called repeatedly until it returns `null`. The function collate s all pages into a single table. When the result of the first call to `getNextPage` is null, an empty table is returned.
 
 ```powerquery-m
 // The getNextPage function takes a single argument and is expected to return a nullable table
@@ -184,15 +177,12 @@ Table.GenerateByPage = (getNextPage as function) as table =>
 
 Additional notes:
 
-- The `getNextPage` function will need to retrieve the next page URL
-(or page number, or whatever other values are used to implement the paging logic).
-This is generally done by adding `meta` values to the page before returning it.
-- The columns and table type of the combined table (that is, all pages together) are derived from
-the first page of data. The `getNextPage` function should normalize each page of data. 
+- The `getNextPage` function needs to retrieve the next page URL (or page number, or whatever other values are used to implement the paging logic). This process is generally done by adding `meta` values to the page before returning it.
+- The columns and table type of the combined table (that is, all pages together) are derived from the first page of data. The `getNextPage` function should normalize each page of data.
 - The first call to `getNextPage` receives a null parameter.
 - `getNextPage` must return null when there are no pages left.
 
-An example of using this function can be found in the [Github sample](samples/github/readme.md), and the [TripPin paging sample](samples/trippin/5-paging/readme.md).
+An example of using this function can be found in the [GitHub sample](samples/github/readme.md), and the [TripPin paging sample](samples/trippin/5-paging/readme.md).
 
 ```powerquery-m
 Github.PagedTable = (url as text) => Table.GenerateByPage((previous) =>
@@ -214,8 +204,8 @@ Github.PagedTable = (url as text) => Table.GenerateByPage((previous) =>
 
 ```powerquery-m
 EnforceSchema.Strict = 1;               // Add any missing columns, remove extra columns, set table type
-EnforceSchema.IgnoreExtraColumns = 2;   // Add missing columns, do not remove extra columns
-EnforceSchema.IgnoreMissingColumns = 3; // Do not add or remove columns
+EnforceSchema.IgnoreExtraColumns = 2;   // Add missing columns, don't remove extra columns
+EnforceSchema.IgnoreMissingColumns = 3; // Don't add or remove columns
 
 SchemaTransformTable = (table as table, schema as table, optional enforceSchema as number) as table =>
     let
@@ -263,7 +253,7 @@ SchemaTransformTable = (table as table, schema as table, optional enforceSchema 
                 schemaNames & extraNames,
 
         // Select the final list of columns.
-        // These will be ordered according to the schema table.
+        // These are ordered according to the schema table.
         reordered = Table.SelectColumns(result, fullList, MissingField.Ignore),
         enforcedTypes = EnforceTypes(reordered, schema),
         withType = if (_enforceSchema = EnforceSchema.Strict) then Value.ReplaceType(enforcedTypes, SchemaToTableType(schema)) else enforcedTypes
@@ -310,7 +300,7 @@ let
 
             reordered = Table.SelectColumns(_table, schema[Name], MissingField.UseNull),
 
-            // process primitive values - this will call Table.TransformColumnTypes
+            // process primitive values - this calls Table.TransformColumnTypes
             map = (t) => if Type.Is(t, type table) or Type.Is(t, type list) or Type.Is(t, type record) or t = type any then null else t,        
             mapped = Table.TransformColumns(schema, {"Type", map}),
             omitted = Table.SelectRows(mapped, each [Type] <> null),
@@ -319,17 +309,17 @@ let
             primativeTransforms = Table.ToRows(removeMissing),
             changedPrimatives = Table.TransformColumnTypes(reordered, primativeTransforms),
         
-            // Get the list of transforms we'll use for Record types
+            // Get the list of transforms we use for Record types
             recordColumns = Table.SelectRows(schema, each Type.Is([Type], type record)),
             recordTypeTransformations = Table.AddColumn(recordColumns, "RecordTransformations", each (r) => Record.ChangeType(r, [Type]), type function),
             recordChanges = Table.ToRows(Table.SelectColumns(recordTypeTransformations, {"Name", "RecordTransformations"})),
 
-            // Get the list of transforms we'll use for List types
+            // Get the list of transforms we use for List types
             listColumns = Table.SelectRows(schema, each Type.Is([Type], type list)),
             listTransforms = Table.AddColumn(listColumns, "ListTransformations", each (t) => List.ChangeType(t, [Type]), Function.Type),
             listChanges = Table.ToRows(Table.SelectColumns(listTransforms, {"Name", "ListTransformations"})),
 
-            // Get the list of transforms we'll use for Table types
+            // Get the list of transforms we use for Table types
             tableColumns = Table.SelectRows(schema, each Type.Is([Type], type table)),
             tableTransforms = Table.AddColumn(tableColumns, "TableTransformations", each (t) => @Table.ChangeType(t, [Type]), Function.Type),
             tableChanges = Table.ToRows(Table.SelectColumns(tableTransforms, {"Name", "TableTransformations"})),
@@ -385,7 +375,7 @@ let
             type table (toType) meta previousMeta,
 
     // Returns a list of transformations that can be passed to Table.TransformColumns, or Record.TransformFields
-    // Format: {"Column", (f) => ...) .... ex: {"A", Number.From}
+    // Format: {"Column", (f) => ...} .... ex: {"A", Number.From}
     GetTransformsForType = (_type as type) as list =>
         let
             fieldsOrColumns = if (Type.Is(_type, type record)) then Type.RecordFields(_type)
