@@ -11,7 +11,7 @@ ms.author: miescobar
 
 This article contains a number of helper functions commonly used in M extensions. These functions might eventually be moved to the official M library, but for now can be copied into your extension file code. You shouldn't mark any of these functions as `shared` within your extension code.
 
-## Navigation Tables
+## Navigation tables
 
 ### Table.ToNavigationTable
 
@@ -69,7 +69,7 @@ shared MyExtension.Contents = () =>
         NavTable;
 ```
 
-## URI Manipulation
+## URI manipulation
 
 ### Uri.FromParts
 
@@ -120,7 +120,7 @@ DataAccessFunction = (url as text) as table =>
         source;
 ```
 
-## Retrieving Data
+## Retrieving data
 
 ### Value.WaitFor
 
