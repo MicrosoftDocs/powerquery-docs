@@ -1,13 +1,13 @@
 ---
-title: Azure Cosmos DB for MongoDB Vcore Data Connector
-description: Includes basic information and prerequisites, instructions on how to connect to your Azure Cosmos for Mongo Vcore database, and information about advanced connection options.
+title: Azure Cosmos DB for MongoDB vCore Data Connector
+description: Includes basic information and prerequisites, instructions on how to connect to your Azure Cosmos for Mongo vCore database, and information about advanced connection options.
 author: jlarue26
 ms.topic: conceptual
 ms.date: 3/22/2024
 ms.author: dougklo
 ---
 
-# Azure Cosmos DB for MongoDB Vcore
+# Azure Cosmos DB for MongoDB vCore
 
 ## Summary
 
@@ -27,15 +27,15 @@ ms.author: dougklo
   - [Supported Power Query Functions](#direct-query-support)
 - [Native Mongo Queries](#native-mongo-queries)
 
-## Connect to Azure Cosmos DB for MongoDB Vcore database from Power Query Desktop
+## Connect to Azure Cosmos DB for MongoDB vCore database from Power Query Desktop
 
-To connect to an Azure Cosmos DB for MongoDB Vcore from Power Query Desktop, take the following steps:
+To connect to an Azure Cosmos DB for MongoDB vCore from Power Query Desktop, take the following steps:
 
-1. Select **Azure Cosmos DB for MongoDB Vcore** in the **Get Data** experience. The **Get Data** experience in Power Query Desktop varies between apps. For more information about the Power Query Desktop **Get Data** experience for your app, go to [Where to get data](../where-to-get-data.md).
+1. Select **Azure Cosmos DB for MongoDB vCore** in the **Get Data** experience. The **Get Data** experience in Power Query Desktop varies between apps. For more information about the Power Query Desktop **Get Data** experience for your app, go to [Where to get data](../where-to-get-data.md).
 
-1. In **Azure Cosmos DB for MongoDB Vcore**, provide the Cosmos DB endpoint. Optionally provide a **Database Name** and a **Collection Name**. If a database name is not provided, the upcoming **Navigator** screen will show all databases and their respective collections. Specifying both database and collection names will only show that collection. Specifying a collection name without a database name results in a connection error.
+1. In **Azure Cosmos DB for MongoDB vCore**, provide the Cosmos DB endpoint. Optionally provide a **Database Name** and a **Collection Name**. If a database name is not provided, the upcoming **Navigator** screen will show all databases and their respective collections. Specifying both database and collection names will only show that collection. Specifying a collection name without a database name results in a connection error.
 
-   ![Enter Azure Cosmos DB for MongoDB Vcore database connection.](./media/azure-cosmos-db-for-mongodb-vcore/signin.png)
+   ![Enter Azure Cosmos DB for MongoDB vCore database connection.](./media/azure-cosmos-db-for-mongodb-vcore/signin.png)
 
 1. Select either the **Import** or **DirectQuery** data connectivity mode.
 
@@ -43,13 +43,13 @@ To connect to an Azure Cosmos DB for MongoDB Vcore from Power Query Desktop, tak
 
 1. If this is the first time you're connecting to this database, input your username and password before selecting **Connect**.
 
-   ![Azure Cosmos DB for MongoDB Vcore database authentication.](./media/azure-cosmos-db-for-mongodb-vcore/enter-credentials.png)
+   ![Azure Cosmos DB for MongoDB vCore database authentication.](./media/azure-cosmos-db-for-mongodb-vcore/enter-credentials.png)
 
 1. In **Navigator**, select the database information you want. A list of collections will appear under each database. Select one or more collections then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor. Note that the list of databases and collections are affected if the optional **Database Name** and **Collection Name** were previously supplied.
 
-   ![Azure Cosmos DB for MongoDB Vcore load or transform](./media/azure-cosmos-db-for-mongodb-vcore/navigator-desktop.png)
+   ![Azure Cosmos DB for MongoDB vCore load or transform](./media/azure-cosmos-db-for-mongodb-vcore/navigator-desktop.png)
 
-## Connect to Azure Cosmos DB for MongoDB Vcore database from Power Query Online
+## Connect to Azure Cosmos DB for MongoDB vCore database from Power Query Online
 
 **TO-DO** once connector is available for testing in Power BI Service
 
