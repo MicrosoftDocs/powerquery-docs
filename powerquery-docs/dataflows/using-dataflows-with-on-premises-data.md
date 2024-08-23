@@ -14,8 +14,8 @@ ms.author: jeluitwi
 Install an on-premises data gateway to transfer data quickly and securely between a Power Platform dataflow and a data source that isn't in the cloud, such as an on-premises SQL Server database or an on-premises SharePoint site. You can view all gateways for which you have administrative permissions and manage permissions and connections for those gateways.
 
 ## Prerequisites
-
 ### Power BI service
+- You must have a [currently supported gateway installed](/data-integration/gateway/service-gateway-monthly-updates) to use with Dataflows. The minimum version that works with Power BI Dataflow is **3000.210.14**.
 
 - A Power BI Pro license or a PPU license.  Don't have one? [Sign up for 60 days free](/power-bi/fundamentals/service-get-started#sign-up-for-the-power-bi-service).
 
@@ -25,6 +25,7 @@ Install an on-premises data gateway to transfer data quickly and securely betwee
   - A gateway connection for the data source(s) you intend to use already created on the gateway for which you are a user.
 
 ### Power Apps
+- You must have a [currently supported gateway installed](/data-integration/gateway/service-gateway-monthly-updates) to use with Dataflows. The minimum version that works with Power Apps Dataflow is **3000.210.14**.
 
 - A Power Apps account. Don't have one? [Sign up for 30 days free](/powerapps/maker/signup-for-powerapps).
 

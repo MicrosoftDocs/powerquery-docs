@@ -3,11 +3,11 @@ title: Wolters Kluwer CCH Tagetik connector
 description: Provides prerequisites, capabilities supported, and connection instructions to your Wolters Kluwer CCH Tagetik data.
 author: innovation-team
 ms.topic: conceptual
-ms.date: 4/11/2024
+ms.date: 07/25/2024
 ms.author: dougklo
 ---
 
-# Wolters Kluwer CCH Tagetik (Beta)
+# Wolters Kluwer CCH Tagetik
 
 > [!NOTE]
 >The following connector article is provided by Wolters Kluwer CCH Tagetik, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Wolters Kluwer website and use the support channels there.
@@ -16,7 +16,7 @@ ms.author: dougklo
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | Beta |
+| Release State | General Availability |
 | Products | Power BI (Semantic Models)|
 | Authentication Types Supported | Basic |
 

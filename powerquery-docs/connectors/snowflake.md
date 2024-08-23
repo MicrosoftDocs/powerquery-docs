@@ -56,7 +56,7 @@ To make the connection to a **Snowflake** computing warehouse, take the followin
    > [!NOTE]
    > Once you enter your username and password for a particular **Snowflake** server, Power BI Desktop uses those same credentials in subsequent connection attempts. You can modify those credentials by going to **File > Options and settings > Data source settings**. More information: [Change the authentication method](../connector-authentication.md#change-the-authentication-method)
 
-   If you want to use the Microsoft account option, the Snowflake Microsoft Entra ID integration must be configured on the Snowflake side. More information: [Power BI SSO to Snowflake - Getting Started](https://docs.snowflake.com/en/user-guide/oauth-powerbi.html#getting-started)
+   If you want to use the Microsoft account option, the Snowflake Microsoft Entra ID integration must be configured on the Snowflake side. More information: [Power BI SSO to Snowflake - Getting Started](https://docs.snowflake.com/en/user-guide/oauth-powerbi#getting-started)
 
 6. In **Navigator**, select one or multiple elements to import and use in Power BI Desktop. Then select either **Load** to load the table in Power BI Desktop, or **Transform Data** to open the Power Query Editor where you can filter and refine the set of data you want to use, and then load that refined set of data into Power BI Desktop.
 
@@ -97,7 +97,7 @@ The following table lists all of the advanced options you can set in Power Query
 
 | Advanced option | Description |
 | --------------- | ----------- |
-| Role name | Specifies the role that the report uses via the driver. This role must be available to the user, otherwise no role will be set. |
+| Role name | Specifies the role that the report uses via the driver. This role must be available to the user, otherwise no role is set. |
 | Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, you won’t see those columns. |
 | Connection timeout in seconds | Specifies how long to wait for a response when interacting with the Snowflake service before returning an error. Default is 0 (no timeout).|
 | Command timeout in seconds | Specifies how long to wait for a query to complete before returning an error. Default is 0 (no timeout). |
@@ -106,11 +106,26 @@ The following table lists all of the advanced options you can set in Power Query
 
 Once you've selected the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your Snowflake database.
 
+## Troubleshooting
+
+### Error: SQL compilation error: Object does not exist, or operation cannot be performed
+
+The error occurs when the system can't find the specified object. Often, this error is due to the user having an invalid database name set as their default database.
+
+Ensure that a valid default database name is used for the property DEFAULT_NAMESPACE:
+ `DESC USER`*`username`*
+
+To update the default database name: `alter user`*`username`*` set DEFAULT_NAMESPACE=<database name>.<schema name>`. For more information, see the Snowflake documentation - https://docs.snowflake.com/en/sql-reference/sql/alter-user
+
 ## Limitations and known issues
 
 ### Hyphens in database names
 
-If a database name has a hyphen in it, you may encounter an ```ODBC: ERROR[42000] SQL compilation error```. This is a known issue and there is no known workaround available. A fix is being investigated and the documentation here will be updated when the fix is ready.
+If a database name has a hyphen in it, you can encounter an ```ODBC: ERROR[42000] SQL compilation error```. This is a known issue and there's no known workaround available. A fix is being investigated and the documentation here will be updated when the fix is ready.
+
+### Slicer visual for Boolean datatype
+
+The slicer visual for the Boolean data type isn't functioning as expected in the June 2024 release. This is a known issue. As a temporary solution, users can convert the Boolean data type in their reports to text by navigating to: Transfer -> Data Type -> Text. A fix will be provided in October 2024 release.
 
 ## Additional information
 

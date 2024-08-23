@@ -46,7 +46,7 @@ Before you start to follow this article:
 
     :::image type="content" source="./media/add-data-power-query/choose-odata.png" alt-text="Screenshot of the Power Query Data sources selection open and the OData connector emphasized." lightbox="./media/add-data-power-query/choose-odata.png":::
 
-1. Under **Connection settings**, type or paste this URL, and then select **Next**:
+1. Under **Connection settings**, type or paste the following URL, and then select **Next**:
 
    `https://services.odata.org/V4/Northwind/Northwind.svc/`
 

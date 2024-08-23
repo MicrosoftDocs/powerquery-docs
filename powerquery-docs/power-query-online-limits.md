@@ -41,7 +41,8 @@ During refresh (either scheduled or on-demand), query evaluations return complet
 | Dataflows in PowerApps.com (Trial)| 500 | 2 | 8 |
 | Dataflows in PowerApps.com (Production) | 1000 | 8 | 20 |
 | Data Integration in PowerApps.com Admin Portal | 1000 | 24 | 20 |
-| Dataflows in PowerBI.com | 1000 | 100 | 20 |
+| Power BI Dataflows in PowerBI.com | 1000 | 100 | 20 |
+| Data Factory Dataflow Gen2 in Microsoft Fabric | 5000 | 100 | [SKU Limits](/power-bi/enterprise/service-premium-what-is#dataflows-gen1) |
 | Dataflows in Dynamics 365 Customer Insights | 1000 | 100 | 20 |
 
 ## Dataflow limits
@@ -51,3 +52,5 @@ Dataflow is a workload that leverages Power Query Online. Dataflow is integrated
 A single dataflow has a limit of 50 tables. If you need more than 50 tables, you can create multiple dataflows. If you exceed the limit, an error message occurs during publishing and refreshing.
 
 There is no maximum size limit for a single dataflow table. However, when a table gets too big, a possible timeout could occur when accessing the table. In this case, use the Table.*xxx*N functions (such as [Table.FirstN](/powerquery-m/table-firstn), [Table.LastN](/powerquery-m/table-lastn), [Table.RemoveFirstN](/powerquery-m/table-removefirstn), [Table.RemoveLastN](/powerquery-m/table-removelastn), and so on) or other filters to reduce the scope and size of the data.
+
+We suggest not having more than 100 dataflows (Gen1 or Gen2) per workspace.

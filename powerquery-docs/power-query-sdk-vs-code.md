@@ -197,6 +197,6 @@ The result of this task is displayed in the output terminal at the bottom of the
 
 ## Feedback and bugs
 
-Do you have any feedback, suggestions, or bugs that you'd like to report? Visit our [official public repository on GitHub](https://github.com/microsoft/vscode-powerquery-sdk).
+If you need help developing your custom connector or have any feedback, suggestions, or bugs that you'd like to report, visit our [official public repository on GitHub](https://github.com/microsoft/vscode-powerquery-sdk). 
 
-You can use the [Power BI Community forum](https://community.powerbi.com/t5/Power-Query/bd-p/power-bi-services) to post general questions around Power Query, the M language, and custom connector development.
+You can also use the [Power BI Community forum](https://community.powerbi.com/t5/Power-Query/bd-p/power-bi-services) to post general questions around Power Query, the M language, and custom connector development.

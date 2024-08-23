@@ -42,7 +42,7 @@ To connect to Google BigQuery from Power Query Desktop, take the following steps
 
     :::image type="content" source="./media/google-bigquery/sign-in-advanced-options.png" alt-text="Image showing initial dialog box with the advanced options selection.":::
 
-3. The Google BigQuery connector supports connecting through an organizational account or a service account sign-in. In this example, you'll use the organizational account to sign in. Select **Sign In** to continue.
+3. The Google BigQuery connector supports connecting through an organizational account or a service account sign-in. In this example, use the organizational account to sign in. Select **Sign In** to continue.
 
     :::image type="content" source="./media/google-bigquery/sign-in.png" alt-text="Sign in to Google BigQuery.":::
 
@@ -68,7 +68,7 @@ To connect to Google BigQuery from Power Query Online, take the following steps:
 
    :::image type="content" source="./media/google-bigquery/get-data-online.png" alt-text="Screenshot of the Get Data dialog with emphasis on the Google BigQuery connector." lightbox="./media/google-bigquery/get-data-online.png":::
 
-2. In the **Google BigQuery Database** dialog, you may need to either create a new connection or select an existing connection. If you're using on-premises data, select an on-premises data gateway. Then select **Sign in**.
+2. In the **Google BigQuery Database** dialog, you might need to either create a new connection or select an existing connection. If you're using on-premises data, select an on-premises data gateway. Then select **Sign in**.
 
     :::image type="content" source="./media/google-bigquery/sign-in-online.png" alt-text="Image of sign in dialog box.":::
 
@@ -105,7 +105,7 @@ The following table lists all of the advanced options you can set in Power Query
 | Project ID | The project that you want to run native queries on. This option is only available in Power Query Desktop. |
 | SQL statement | For information, go to [Import data from a database using native database query](../native-database-query.md). In this version of native database query functionality, you need to use fully qualified table names in the format `Database.Schema.Table`, for example `SELECT * FROM DEMO_DB.PUBLIC.DEMO_TABLE`. This option is only available in Power Query Desktop. |
 
-Once you've selected the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your Google BigQuery data.
+Once you select the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your Google BigQuery data.
 
 ## Limitations and considerations
 
@@ -150,12 +150,12 @@ For more information on setting up or using Google service accounts, go to [Crea
 
 ### Authenticating through a Google service account
 
-When you authenticate through a Google service account in Power BI Desktop, there's a specific credential format that's required by the connector.
+When you authenticate through a Google service account in Power BI Desktop, there's a specific credential format required by the connector.
 
 * Service Account Email: must be in email format
 * Service Account JSON key file contents: once this JSON key is downloaded, all new lines must be removed from the file so that the contents are in one line. Once the JSON file is in that format, the contents can be pasted into this field.
 
-When you authenticate through a Google service account in Power BI service or Power Query Online, users need to use "Basic" authentication. The **Username** field maps to the **Service Account Email** field above, and the **Password** field maps to the **Service Account JSON key file contents** field above. The format requirements for each credential remain the same in both Power BI Desktop, Power BI service, and Power Query Online.
+When you authenticate through a Google service account in Power BI service or Power Query Online, users need to use "Basic" authentication. The **Username** field maps to the **Service Account Email** field, and the **Password** field maps to the **Service Account JSON key file contents** field. The format requirements for each credential remain the same in both Power BI Desktop, Power BI service, and Power Query Online.
 
 ### Unable to authenticate with Google BigQuery Storage API
 
@@ -175,11 +175,11 @@ If the above steps don't resolve the problem, you can disable the BigQuery Stora
 
 ### Unable to use DateTime type data in Direct Query mode
 
-There's a known issue where the DateTime type isn't supported through Direct Query. Selecting a column with the DateTime type will cause an "Invalid query" error or a visual error.
+There's a known issue where the DateTime type isn't supported through Direct Query. Selecting a column with the DateTime type causes an "Invalid query" error or a visual error.
 
 ### Limitations on querying column that has the same name as table name
 
-When querying a column that has the same name as the table name, BigQuery interprets the column as a `struct` that includes all columns in the table instead of the specified column. For example, `SELECT debug FROM dataset.debug` returns a `struct` with all columns in the debug table, instead of the specified debug column. This behavior is usually not intuitive and a fix is being investigated. There are three workarounds available:
+When querying a column that has the same name as the table name, BigQuery interprets the column as a `struct` that includes all columns in the table instead of the specified column. For example, `SELECT debug FROM dataset.debug` returns a `struct` with all columns in the debug table, instead of the specified debug column. This behavior isn't intuitive and a fix is being investigated. There are three workarounds available:
 
 * Workaround 1: Wrap the table with a view that doesn't conflict the column name&mdash;`CREATE VIEW dataset.new_view AS SELECT * FROM dataset.debug`
 * Workaround 2: Rename the column to avoid conflicts with the table name&mdash;`ALTER TABLE dataset.debug RENAME COLUMN debug to new_debug`
@@ -190,3 +190,9 @@ When querying a column that has the same name as the table name, BigQuery interp
 A known issue is that the Google BigQuery connector doesn't currently support materialized views in the Power BI Desktop navigator.
 
 * Workaround: Utilize native query SQL statements to fetch materialized views from Google BigQuery.
+
+### HTTP Error 403: quotaExceeded (Quota exceeded: Your user exceeded quota for concurrent project.lists requests)
+
+* The quota is exceeded across the customer account usage of project.lists API calls to Google. When multiple reports refresh simultaneously, it might trigger an error in different queries or reports. To prevent the error, schedule report refreshes at staggered intervals.
+* Update query to include a Billing Project ID - `GoogleBigQuery.Database([BillingProject="Include-Billing-Project-Id-Here"])`.
+* Calls to `GoogleBigQuery.Database` should be in the same query as the schema and table selection to avoid the error.

@@ -1,15 +1,14 @@
 ---
 title: Why does my query run multiple times
-description: This article provides information about the various reasons that a Power Query query will sometimes run multiple times.
+description: This article provides information about the various reasons that a Power Query query sometimes runs multiple times.
 author: ptyx507x
-ms.date: 11/10/2021
+ms.date: 8/22/2024
 ms.author: miescobar
-ms.topic: conceptual
 ---
 
 # Why does my query run multiple times?
 
-When refreshing in Power Query, there's a lot done behind the scenes to attempt to give you a smooth user experience, and to execute your queries efficiently and securely. However, in some cases you might notice that multiple data source requests are being triggered by Power Query when data is refreshed. Sometimes these requests are normal, but other times they can be prevented.
+When you refresh in Power Query, there's a lot done behind the scenes to attempt to give you a smooth user experience, and to execute your queries efficiently and securely. However, in some cases you might notice that multiple data source requests are triggered by Power Query when data is refreshed. Sometimes these requests are normal, but other times they can be prevented.
 
 ## When multiple requests occur
 
@@ -21,15 +20,20 @@ Connectors can make multiple calls to a data source for various reasons, includi
 
 ### Multiple queries referencing a single data source
 
-Multiple requests to the same data source can occur if multiple queries pull from that data source. These requests can happen even in a case where only one query references the data source. If that query is referenced by one or more other queries, then each query&mdash;along with all the queries it depends on&mdash;is evaluated independently.
+Multiple requests to the same data source can occur if multiple queries pull from that data source. These requests can happen even in a case where only one query references the data source. If one or more other queries reference that query, then each query&mdash;along with all the queries it depends on&mdash;is evaluated independently.
 
-In a desktop environment, a single refresh of all the tables in the data model is run using a single shared cache. Caching can reduce the likelihood of multiple requests to the same data source, since one query can benefit from the same request having already been run and cached for a different query. Even here, though, you can get multiple requests either because the data source isn't cached (for example, local CSV files), the request to the data source is different than a request that was already cached because of downstream operations (which can alter folding), the cache is too small (which is relatively unlikely), or because the queries are running at roughly the same time.
+In a desktop environment, a single refresh of all the tables in the data model is run using a single shared cache. Caching can reduce the likelihood of multiple requests to the same data source, since one query can benefit from the same request having already been run and cached for a different query. Even here, though, you can get multiple requests because:
 
-In a cloud environment, each query is refreshed using its own separate cache, so a query can’t benefit from the same request having already been cached for a different query.
+* The data source isn't cached (for example, local CSV files).
+* The request to the data source is different than a request that was already cached because of downstream operations (which can alter folding).
+* The cache is too small (which is relatively unlikely).
+* The queries are running at roughly the same time.
+
+In a cloud environment, each query is refreshed using its own separate cache. So a query can’t benefit from the same request having already been cached for a different query.
 
 ### Folding
 
-Sometimes Power Query’s folding layer may generate multiple requests to a data source, based on the operations being performed downstream. In such cases, you might avoid multiple requests by using `Table.Buffer`. More information: [Buffer your table](#buffer-your-table)
+Sometimes Power Query’s folding layer can generate multiple requests to a data source, based on the operations being performed downstream. In such cases, you might avoid multiple requests by using `Table.Buffer`. More information: [Buffer your table](#buffer-your-table)
 
 ### Loading to the Power BI Desktop model
 
@@ -37,11 +41,11 @@ In Power BI Desktop, Analysis Services (AS) refreshes data by using two evaluati
 
 ### Data privacy analysis
 
-Data privacy does its own evaluations of each query to determine whether the queries are safe to run together. This evaluation can sometimes cause multiple requests to a data source. A telltale sign that a given request is coming from data privacy analysis is that it will have a “TOP 1000” condition (although not all data sources support such a condition). In general, disabling data privacy&mdash;assuming that's acceptable&mdash;would eliminate the "TOP 1000" or other data privacy-related requests during refresh. More information: [Disable the data privacy firewall](#disable-the-data-privacy-firewall)
+Data privacy does its own evaluations of each query to determine whether the queries are safe to run together. This evaluation can sometimes cause multiple requests to a data source. A telltale sign that a given request is coming from data privacy analysis is that it has a "TOP 1000" condition (although not all data sources support such a condition). In general, disabling data privacy&mdash;assuming that's acceptable&mdash;would eliminate the "TOP 1000" or other data privacy-related requests during refresh. More information: [Disable the data privacy firewall](#disable-the-data-privacy-firewall)
 
-### Background data downloads (also known as “background analysis”)
+### Background data downloads (also known as "background analysis")
 
-Similar to the evaluations performed for data privacy, the Power Query editor by default will download a preview of the first 1000 rows of each query step. Downloading these rows helps ensure the data preview is ready to display as soon as a step is selected, but it can also cause duplicate data source requests. More information: [Disable background analysis](#disable-background-analysis)
+Similar to the evaluations performed for data privacy, the Power Query editor by default downloads a preview of the first 1,000 rows of each query step. Downloading these rows helps ensure the data preview is ready to display as soon as a step is selected, but it can also cause duplicate data source requests. More information: [Disable background analysis](#disable-background-analysis)
 
 ### Miscellaneous Power Query editor background tasks
 
@@ -57,7 +61,7 @@ You can isolate instances of multiple queries by turning off specific parts of t
 * With [column profiling](data-profiling-tools.md) and any other background tasks disabled
 * \[Optional] Doing a `Table.Buffer`
 
-In this example, you’ll have only a single M evaluation that happens when you refresh the Power Query editor preview. If the duplicate requests occur at this point, then they’re somehow inherent in the way the query is authored. If not, and if you enable the settings above one-by-one, you can then observe at what point the duplicate requests start occurring.
+In this example, you have only a single M evaluation that happens when you refresh the Power Query editor preview. If the duplicate requests occur at this point, then they’re somehow inherent in the way the query is authored. If not, and if you enable the previously described settings one-by-one, you can then observe at what point the duplicate requests start occurring.
 
 The following sections describe these steps in more detail.
 
@@ -85,7 +89,7 @@ Optionally, you can also use `Table.Buffer` to force all the data to be read, wh
 
    :::image type="content" source="./media/multiple-queries/fx-button.png" alt-text="Image with the location of the fx button emphasized.":::
 
-2. In the formula bar, surround the name of the previous step with Table.Buffer(\<_previous step name goes here_>). For example, if the previous step was named `Source`, the formula bar will display `= Source`. Edit the step in the formula bar to say `= Table.Buffer(Source)`.
+2. In the formula bar, surround the name of the previous step with Table.Buffer(\<_previous step name goes here_>). For example, if the previous step was named `Source`, the formula bar displays `= Source`. Edit the step in the formula bar to say `= Table.Buffer(Source)`.
 
 More information: [Table.Buffer](/powerquery-m/table-buffer)
 
