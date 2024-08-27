@@ -3,7 +3,7 @@ title: Rename columns
 description: Within Power Query, you can rename your column given certain conditions.
 author: ptyx507x
 ms.reviewer: dougklo
-ms.date: 8/26/2024
+ms.date: 8/27/2024
 ms.author: miescobar
 ---
 
@@ -44,7 +44,7 @@ There are three ways to rename a column in Power Query.
 
    :::image type="content" source="media/rename-column/transform-tab.png" alt-text="Screenshot of the Rename column option found inside the Any column in the Transform tab.":::
 
-A## Avoiding duplicate column names
+## Avoiding duplicate column names
 
 Power Query requires table column names to be unique across all columns. This requirement means that if you try to rename a column to a column name that already exists in the table, an error with the message *Column Name Conflict* appears. You must rename the column to something else.
 
