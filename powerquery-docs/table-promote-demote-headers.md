@@ -36,7 +36,7 @@ The result of that operation leaves the headers as the first row of your table.
 
 ### Locations of the promote headers operation
 
-From here, you have few places where you can select the promote headers operation:
+From here, you have a few places where you can select the promote headers operation:
 
 * On the **Home** tab, in the **Transform** group.
 
@@ -67,7 +67,7 @@ In the following example, the column headers are incorrect; they're actually par
 
 ### Locations of the demote headers operation
 
-You have couple of places where you can select the demote headers operation:
+You have a couple of places where you can select the demote headers operation:
 
 * On the **Home** tab, in the **Transform** group.
 
