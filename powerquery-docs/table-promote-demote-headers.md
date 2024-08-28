@@ -9,14 +9,14 @@ ms.custom: edited
 
 # Promote or demote column headers
 
-When creating a new query from unstructured data sources such as text files, Power Query analyzes the contents of the file. If Power Query identifies a different pattern for the first row, it tries to promote the first row of data to be the column headings for your table. However, Power Query might not identify the pattern correctly 100&nbsp;percent of the time, so this article explains how you can manually promote or demote column headers from rows.
+When you create a new query from unstructured data sources such as text files, Power Query analyzes the contents of the file. If Power Query identifies a different pattern for the first row, it tries to promote the first row of data to be the column headings for your table. However, Power Query might not identify the pattern correctly 100&nbsp;percent of the time, so this article explains how you can manually promote or demote column headers from rows.
 
 ## To promote rows to column headers
 
 In the following example, Power Query wasn't able to determine the column headers for the table because the table contains a set of header rows for the first three rows. The actual column headers for the table are contained in row 5.
 
 :::image type="complex" source="media/table-promote-demote-headers/promote-sample-table.png" alt-text="Initial sample table for promote rows to column headers.":::
-   Screenshot of the table with the columns (Column1, Column2, Column3 and Column4) all set to the Text data type, with four rows containing a header at the top, a column header in row 5, and seven data rows at the bottom.
+   Screenshot of the table with the columns (Column1, Column2, Column3 and Column4) all set to the Text data type, with four rows containing a header at the top, a column header in row 5, and 7 data rows at the bottom.
 :::image-end:::
 
 Before you can promote the headers, you need to remove the first four rows of the table. To make that happen, select the table menu in the upper-left corner of the preview window, and then select **Remove top rows**.
@@ -36,7 +36,7 @@ The result of that operation leaves the headers as the first row of your table.
 
 ### Locations of the promote headers operation
 
-From here, you have a number of places where you can select the promote headers operation:
+From here, you have few places where you can select the promote headers operation:
 
 * On the **Home** tab, in the **Transform** group.
 
@@ -67,7 +67,7 @@ In the following example, the column headers are incorrect; they're actually par
 
 ### Locations of the demote headers operation
 
-You have a number of places where you can select the demote headers operation:
+You have couple of places where you can select the demote headers operation:
 
 * On the **Home** tab, in the **Transform** group.
 
@@ -84,7 +84,7 @@ After you do this operation, your table looks like the following image.
 As a last step, select each column and type a new name for it. The end result resembles the following image.
 
 :::image type="complex" source="media/table-promote-demote-headers/demote-final-table.png" alt-text="Final table after renaming column headers." lightbox="media/table-promote-demote-headers/demote-final-table.png":::
-   Screenshot of the final table after renaming column headers to Date, Country, Total Units, and Total Revenue,. The Renamed columns step is emphasized in the Query settings pane and the M code is shown in the formula bar.
+   Screenshot of the final table after renaming column headers to Date, Country, Total Units, and Total Revenue. The Renamed columns step is emphasized in the Query settings pane and the M code is shown in the formula bar.
 :::image-end:::
 
 ### Related content
