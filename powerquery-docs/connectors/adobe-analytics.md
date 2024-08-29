@@ -94,13 +94,13 @@ You should be aware of the following limitations and issues associated with acce
 
 * The default rate limit for an Adobe Analytics Company is 120 requests per minute per user (the limit is enforced as 12 requests every 6 seconds).
 
+* This connector isn't supported with an on-premises data gateway. However it is supported when using the [VNET data gateway](/data-integration/vnet/use-data-gateways-sources-power-bi#supported-azure-data-services).
+
 Import from Adobe Analytics will stop and display an error message whenever the Adobe Analytics connector hits any of the API limits listed above.
 
 When accessing your data using the Adobe Analytics connector, follow the guidelines provided under the [Best Practices](https://developer.adobe.com/analytics-apis/docs/2.0/guides/faq/#what-are-some-best-practices-and-guidelines-when-using-the-apis) heading.
 
 For additional guidelines on accessing Adobe Analytics data, see [Recommended usage guidelines](https://experienceleague.adobe.com/en/docs/analytics/analyze/admin-overview/use-cases).
-
-* This connector is not supported with on-premises data gateway, However it is supported when using [VNET gateway](https://learn.microsoft.com/en-us/data-integration/vnet/use-data-gateways-sources-power-bi#supported-azure-data-services)
 
 ## Next steps
 
