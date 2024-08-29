@@ -55,7 +55,7 @@ After your connector code review is complete, you'll need to submit a demo video
 
 Updates to your connector submission can be made at any time, except when your connector is in the process of production deployment. When you're submitting an update, ensure that you submit an update to your existing submission, rather than creating a new submission.
 
-1. Navigate to the **Connector certification** experience within the [Connector Dertification Portal](https://connectorcertification.azurewebsites.net/).
+1. Navigate to the **Connector certification** experience within the [Connector Certification Portal](https://connectorcertification.azurewebsites.net/).
 
 2. From the list of connectors you manage, select the connector submission to view its connector versions.
 
