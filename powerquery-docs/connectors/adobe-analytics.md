@@ -100,6 +100,8 @@ When accessing your data using the Adobe Analytics connector, follow the guideli
 
 For additional guidelines on accessing Adobe Analytics data, see [Recommended usage guidelines](https://experienceleague.adobe.com/en/docs/analytics/analyze/admin-overview/use-cases).
 
+* This connector is not supported with on-premises data gateway, However it is supported when using [VNET gateway](https://learn.microsoft.com/en-us/data-integration/vnet/use-data-gateways-sources-power-bi#supported-azure-data-services)
+
 ## Next steps
 
 You may also find the following Adobe Analytics information useful:
