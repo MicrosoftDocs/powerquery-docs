@@ -36,7 +36,7 @@ To connect to Bloomberg Data and Analytics:
 
 2. Select **Bloomberg Data and Analytics**, and then select **Connect**.
 
-   :::image type="content" source="./media/bloomberg-data-and-analytics/get-data.png" alt-text="Get data from Bloomberg Data and Analytics.":::
+   :::image type="content" source="./media/bloomberg-data-and-analytics/get-data.png" alt-text="Screenshot that shows get data from Bloomberg Data and Analytics.":::
 
 3. If this is the first time you're connecting to the Bloomberg Data and Analytics connector, a third-party notice will be displayed. Select **Don't warn me again with this connector** if you don't want this message to be displayed again, and then select **Continue**.
 
