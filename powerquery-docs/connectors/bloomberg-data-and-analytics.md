@@ -50,7 +50,8 @@ To connect to Bloomberg Data and Analytics:
 
    - **Bloomberg Query Language (BQL) Example:**
    
-    To learn more about BQL, contact your Bloomberg Sales representative.\
+    To learn more about BQL, contact your Bloomberg Sales representative.
+    
     :::image type="content" source="./media/bloomberg-data-and-analytics/bql-example.png" alt-text="Example BQL query.":::
 
     **4b. SQL Query Example:**\
