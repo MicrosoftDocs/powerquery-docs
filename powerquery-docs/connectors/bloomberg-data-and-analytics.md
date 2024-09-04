@@ -63,7 +63,7 @@ To connect to Bloomberg Data and Analytics:
    :::image type="content" source="./media/bloomberg-data-and-analytics/sign-in.png" alt-text="Screenshot that shows the sign in button.":::
 6. In the window that appears, provide your credentials to sign in to your Bloomberg account. Enter a terminal username and password, then select **Next**.
 
-    :::image type="content" source="./media/bloomberg-data-and-analytics/bb-sign-in.png" alt-text="Sign in to Bloomberg.":::
+    :::image type="content" source="./media/bloomberg-data-and-analytics/bb-sign-in.png" alt-text="Screenshot that shows how to sign in to Bloomberg.":::
 
 7. Enter your Bloomberg B-Unit Mobile App code or B-Unit code and select **Submit**.
 
