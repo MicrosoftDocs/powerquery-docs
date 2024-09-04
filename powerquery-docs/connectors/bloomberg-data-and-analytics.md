@@ -75,7 +75,8 @@ To connect to Bloomberg Data and Analytics:
 
 9. After the connection is established, you will see data available for preview in the **Navigator**.
 
-   **9a. Bloomberg Query Language (BQL) Example:**\
+   - **Bloomberg Query Language (BQL) Example:**
+   
    :::image type="content" source="./media/bloomberg-data-and-analytics/bql-load.png" alt-text="Select BQL tables in the navigator view.":::\
    **9b. SQL Query Example:**\
    :::image type="content" source="./media/bloomberg-data-and-analytics/sql-load.png" alt-text="Select SQL tables in the navigator view.":::
