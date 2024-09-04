@@ -71,7 +71,7 @@ To connect to Bloomberg Data and Analytics:
 
 8. Once you've successfully signed in, select **Connect**.
 
-   :::image type="content" source="./media/bloomberg-data-and-analytics/sign-in.png" alt-text="Select connect button.":::
+   :::image type="content" source="./media/bloomberg-data-and-analytics/sign-in.png" alt-text="Screenshot that shows the connect button.":::
 
 9. After the connection is established, you will see data available for preview in the **Navigator**.
 
