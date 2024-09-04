@@ -67,7 +67,7 @@ To connect to Bloomberg Data and Analytics:
 
 7. Enter your Bloomberg B-Unit Mobile App code or B-Unit code and select **Submit**.
 
-    :::image type="content" source="./media/bloomberg-data-and-analytics/mobile-app.png" alt-text="Enter your auth code.":::
+    :::image type="content" source="./media/bloomberg-data-and-analytics/mobile-app.png" alt-text="Screenshot that shows where to enter your auth code.":::
 
 8. Once you've successfully signed in, select **Connect**.
 
