@@ -52,7 +52,7 @@ To connect to Bloomberg Data and Analytics:
    
     To learn more about BQL, contact your Bloomberg Sales representative.
     
-    :::image type="content" source="./media/bloomberg-data-and-analytics/bql-example.png" alt-text="Example BQL query.":::
+    :::image type="content" source="./media/bloomberg-data-and-analytics/bql-example.png" alt-text="Screenshot of an example BQL query.":::
 
     **4b. SQL Query Example:**\
     :::image type="content" source="./media/bloomberg-data-and-analytics/sql-example.png" alt-text="Example SQL query.":::
