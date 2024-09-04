@@ -85,4 +85,4 @@ To connect to Bloomberg Data and Analytics:
 
    You can **Load** the data, or you can select **Transform Data**, which opens the Power Query Editor. The editor allows you to filter and refine the set of data before loading it into Power BI Desktop.
 
-   :::image type="content" source="./media/bloomberg-data-and-analytics/load-transform.png" alt-text="Load or transform data.":::
+   :::image type="content" source="./media/bloomberg-data-and-analytics/load-transform.png" alt-text="Screenshot that shows the load or transform data buttons.":::
