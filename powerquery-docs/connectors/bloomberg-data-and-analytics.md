@@ -81,7 +81,7 @@ To connect to Bloomberg Data and Analytics:
 
    - **SQL Query Example:**
    
-   :::image type="content" source="./media/bloomberg-data-and-analytics/sql-load.png" alt-text="Select SQL tables in the navigator view.":::
+   :::image type="content" source="./media/bloomberg-data-and-analytics/sql-load.png" alt-text="Screenshot that shows where to select SQL tables in the navigator view.":::
 
    You can **Load** the data, or you can select **Transform Data**, which opens the Power Query Editor. The editor allows you to filter and refine the set of data before loading it into Power BI Desktop.
 
