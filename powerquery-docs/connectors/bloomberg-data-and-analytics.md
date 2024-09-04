@@ -48,7 +48,8 @@ To connect to Bloomberg Data and Analytics:
    >The latest version of the connector introduces a unified query function, Bloomberg.Query(), in the formula bar. This function accepts both BQL and SQL, providing a streamlined experience. For existing reports developed with earlier versions, the BQL.Query() function remains operational and fully supported. Each function has its own authentication. To avoid logging in more than once, it is best practice to use Bloomberg.Query().
    :::image type="content" source="./media/bloomberg-data-and-analytics/function-bar.png" alt-text="Function bar queries.":::
 
-   **4a. Bloomberg Query Language (BQL) Example:**\
+   - **Bloomberg Query Language (BQL) Example:**
+   
     To learn more about BQL, contact your Bloomberg Sales representative.\
     :::image type="content" source="./media/bloomberg-data-and-analytics/bql-example.png" alt-text="Example BQL query.":::
 
