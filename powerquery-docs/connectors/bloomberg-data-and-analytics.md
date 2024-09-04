@@ -54,7 +54,8 @@ To connect to Bloomberg Data and Analytics:
     
     :::image type="content" source="./media/bloomberg-data-and-analytics/bql-example.png" alt-text="Screenshot of an example BQL query.":::
 
-    **4b. SQL Query Example:**\
+    - **SQL Query Example:**
+    
     :::image type="content" source="./media/bloomberg-data-and-analytics/sql-example.png" alt-text="Example SQL query.":::
 
 5. To sign in to your Bloomberg account, select **Sign in**.
