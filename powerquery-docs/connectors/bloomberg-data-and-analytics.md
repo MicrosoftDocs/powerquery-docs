@@ -60,7 +60,7 @@ To connect to Bloomberg Data and Analytics:
 
 5. To sign in to your Bloomberg account, select **Sign in**.
 
-   :::image type="content" source="./media/bloomberg-data-and-analytics/sign-in.png" alt-text="Select sign in button":::
+   :::image type="content" source="./media/bloomberg-data-and-analytics/sign-in.png" alt-text="Screenshot that shows the sign in button.":::
 6. In the window that appears, provide your credentials to sign in to your Bloomberg account. Enter a terminal username and password, then select **Next**.
 
     :::image type="content" source="./media/bloomberg-data-and-analytics/bb-sign-in.png" alt-text="Sign in to Bloomberg.":::
