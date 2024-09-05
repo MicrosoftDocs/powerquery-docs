@@ -123,6 +123,8 @@ The connector must follow a set of feature and style rules to meet a usability s
   * Provide [function documentation metadata](HandlingDocumentation.md).
   * Have [TestConnection handler](HandlingGatewaySupport.md).
   * Follow naming conventions (for example, `DataSourceKind.FunctionName`). It shouldn't include words like "Power BI", "Connector" or "API".
+  * Return data in tabular format, organized into tables with columns, as for a relational data source. Multidimensional formats based on cubes, dimensions, and measures are not supported. 
+  * Behave the same in Import and DirectQuery mode, returning identical results.
   * Have the Beta flag set to True on initial release.
 
 * The ```FunctionName``` should make sense for the domain (for example "Contents", "Tables", "Document", "Databases", and so on).
