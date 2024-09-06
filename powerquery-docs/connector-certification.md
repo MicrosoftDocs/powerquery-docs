@@ -3,7 +3,7 @@ title: Power Query Connector Certification
 description: Guidelines on connector certification and implementation requirements for Power Query custom connectors
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 1/18/2024
+ms.date: 9/5/2024
 ms.author: miescobar
 ms.custom: intro-internal
 ---
@@ -59,7 +59,7 @@ To ensure the best experience for our customers, we only consider connectors tha
 
 * The connector must be for a public product.
 
-* The connector must be considered code-complete for an initial release version. The program allows for frequent iterations and updates. Note that Microsoft doesn't offer technical assistance or custom connector development consulting. We recommend leveraging public resources such as our SDK documentation and samples repository. If you require further assistance, we can share a list of known 3rd-party industry custom connector development consultants that you may want to engage directly, separate from any Microsoft program or partnership. Note that Microsoft isn't affiliated with any of these consultants and isn't responsible for your use of their services. Microsoft provides the list for your convenience and without any assurances, recommendations, or guarantees. Reach out to your Microsoft certification contact to learn more. 
+* The connector must be considered code-complete for an initial release version. The program allows for frequent iterations and updates. Microsoft doesn't offer technical assistance or custom connector development consulting. We recommend using public resources such as our SDK documentation and samples repository. If you require further assistance, we can share a list of known 3rd-party industry custom connector development consultants that you may want to engage directly, separate from any Microsoft program or partnership. Microsoft isn't affiliated with any of these consultants and isn't responsible for your use of their services. Microsoft provides the list for your convenience and without any assurances, recommendations, or guarantees. Reach out to your Microsoft certification contact to learn more. 
 
 * The developer must provide an estimate for usage. We suggest that developers of connectors for very boutique products use our [connector self-signing capabilities](#custom-connector-distribution) to provide them directly to the customer.
 
@@ -73,12 +73,12 @@ These prerequisites exist to ensure that connectors undergoing certification hav
 
 ### Process and Timelines
 
-Certified connectors are released with monthly Power BI Desktop releases, so the deadlines for each release work back from each Power BI Desktop release date. The expected duration of the certification process from registration to release varies depending on the quality and complexity of the connector submission. Microsoft doesn't provide any specific timeline guarantees with regard to any connector review and approval. The hard deadlines for each connector review is outlined in the following steps, but Microsoft doesn't guarantee adherence to these timelines. 
+Certified connectors are released with monthly Power BI Desktop releases, so the deadlines for each release work back from each Power BI Desktop release date. The expected duration of the certification process from registration to release varies depending on the quality and complexity of the connector submission. Microsoft doesn't provide any specific timeline guarantees regarding any connector review and approval. The hard deadlines for each connector review are outlined in the following steps, but Microsoft doesn't guarantee adherence to these timelines. 
 
 * **Registration**: notification of intent to certify your custom connector. This registration must occur by the 15th of the month, two months before the targeted Power BI desktop release.
   * For example, for the April Power BI Desktop release, the deadline would be February 15.
 
-* **Submission**: submission of connector files for Microsoft review. This submission must occur by the 1st of the month before the targeted Power BI desktop release.
+* **Submission**: submission of connector files for Microsoft review. This submission must occur by the first of the month before the targeted Power BI desktop release.
   * For example, for the April Power BI Desktop release, the deadline would be March 1.
 
 * **Technical Review**: finalization of the connector files, passing Microsoft review and certification. This review must occur by the 15th of the month before the targeted Power BI Desktop release.
@@ -123,7 +123,7 @@ The connector must follow a set of feature and style rules to meet a usability s
   * Provide [function documentation metadata](HandlingDocumentation.md).
   * Have [TestConnection handler](HandlingGatewaySupport.md).
   * Follow naming conventions (for example, `DataSourceKind.FunctionName`). It shouldn't include words like "Power BI", "Connector" or "API".
-  * Return data in tabular format, organized into tables with columns, as for a relational data source. Multidimensional formats based on cubes, dimensions, and measures are not supported. 
+  * Return data in tabular format, organized into tables with columns, as for a relational data source. Multidimensional formats based on cubes, dimensions, and measures aren't supported. 
   * Behave the same in Import and DirectQuery mode, returning identical results.
   * Have the Beta flag set to True on initial release.
 
@@ -152,14 +152,14 @@ There are specific security considerations that your connector must handle.
 
 * If ```Expression.Evaluate()``` is used:
   * Validate where the expression is coming from and what it is (that is, can dynamically construct calls to `Extension.CurrentCredentials()` and so on).
-  * The ```Expression``` should not be user provided nor take user input.
-  * The ```Expression``` should not be dynamic (that is, retrieved from a web call).
+  * The ```Expression``` shouldn't be user provided nor take user input.
+  * The ```Expression``` shouldn't be dynamic (that is, retrieved from a web call).
 
 ## Registering for Certification
 
-If you're interested in pursuing certification of your custom connector, ensure that your scenario and connector meet the [prerequisites](#prerequisites) and [requirements](#certification-requirements) outlined in this article. Failure to do so will cause delays in certification as our team will require you to fix any issues or inconsistencies prior to moving forward with certification.
+If you're interested in pursuing certification of your custom connector, ensure that your scenario and connector meet the [prerequisites](#prerequisites) and [requirements](#certification-requirements) outlined in this article. Failure to do so will cause delays in certification as our team requires you to fix any issues or inconsistencies prior to moving forward with certification.
 
-Ensure that your connector is code complete and has been tested in both authoring in Power BI Desktop, and refreshing and consumption in Power BI Service. Ensure you have tested full end-to-end refresh in Power BI Service through the use of an on-premises data gateway.
+Ensure that your connector is code complete and has been tested in both authoring in Power BI Desktop, and refreshing and consumption in Power BI Service. Ensure you have tested full end-to-end refresh in Power BI Service by using an on-premises data gateway.
 
 To get started, complete our [registration form](https://aka.ms/PQConnectorRegistrationForm), and a Microsoft contact will reach out to begin the process.
 
