@@ -449,6 +449,8 @@ items:
         href: connectors/json.md
       - name: "KQL database"
         href: connectors/kql-database.md
+      - name: "Kyvos ODBC (Beta)"
+        href: connectors/kyvos-odbc.md
       - name: "Lakehouse (Beta)"
         href: connectors/lakehouse.md
       - name: LinkedIn Learning
