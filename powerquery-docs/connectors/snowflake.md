@@ -121,7 +121,7 @@ To update the default database name: `alter user`*`username`*` set DEFAULT_NAMES
 
 ### Hyphens in database names
 
-If a database name has a hyphen in it, you can encounter an ```ODBC: ERROR[42000] SQL compilation error```. This issue is addressed in September 2024 release.
+If a database name has a hyphen in it, you can encounter an ```ODBC: ERROR[42000] SQL compilation error```. This issue is addressed in the September 2024 release.
 
 ### Slicer visual for Boolean datatype
 
