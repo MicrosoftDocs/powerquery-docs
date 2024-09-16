@@ -84,8 +84,8 @@ Power Query connectors can be loaded into three experiences:
 * **Power Query Desktop**: within experiences like Power BI Desktop.
 
 You can learn more about how to use your custom connector for self-distribution using the articles below:
-* [Load a Power Query custom connector in Power BI Desktop](https://learn.microsoft.com/power-bi/connect-data/desktop-connector-extensibility)
-* [Enable and use custom connectors in the Power BI Service](https://learn.microsoft.com/power-bi/connect-data/service-gateway-custom-connectors)
+* [Load a Power Query custom connector in Power BI Desktop](/power-bi/connect-data/desktop-connector-extensibility)
+* [Enable and use custom connectors in the Power BI Service](/power-bi/connect-data/service-gateway-custom-connectors)
 
 ### Connector Certification
 
