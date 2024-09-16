@@ -4,7 +4,7 @@ description: Using the Power Query SDK to create new Power Query connectors
 author: ptyx507x
 
 ms.topic: quickstart
-ms.date: 5/15/2024
+ms.date: 9/16/2024
 ms.author: miescobar
 ---
 
@@ -41,7 +41,9 @@ Your connector definition file will start with an empty data source description.
 
 ### Testing
 
-The Power Query SDK provides basic query execution capabilities, allowing you to test your extension without having to switch over to Power BI Desktop.
+The Power Query SDK provides basic query execution capabilities, allowing you to test your extension without having to switch over to a different client application. You can further test your connector in an application such as:
+
+* [Power BI Desktop](power-bi/connect-data/desktop-connector-extensibility)
 
 #### Query test file
 
@@ -51,12 +53,7 @@ The query file can contain a single expression (for example, `HelloWorld.Conten
 
 ### Build and deploy
 
-Building your project produces your .mez file or extension file.
-
-Power Query extensions are bundled in a ZIP file and given a .mez file extension. At runtime, Power BI Desktop loads extensions from [Documents]\Microsoft Power BI Desktop\Custom Connectors.
-
->[!NOTE]
-> Data Connector projects don't support custom post build steps to copy the extension file to your [Documents]\Microsoft Power BI Desktop\Custom Connectors directory. If this is something you want to do, you might want to use a third party extension.
+Building your project produces your .mez file or extension file. Power Query extensions are bundled in a ZIP file and given a .mez file extension. 
 
 Extensions are defined within an M section document. A section document has a slightly different format from the query document(s) generated in Power Query. Code you import from Power Query typically requires modification to fit into a section document, but the changes are minor. Section document differences you should be aware of include:
 
@@ -66,25 +63,38 @@ Extensions are defined within an M section document. A section document has a sl
 
 More information about M section documents can be found in the [M Language specification](/powerquery-m/m-spec-sections).
 
-## Distribution of data connectors
+## Distribution of Power Query connectors
 
-Power Query connectors can be used in Power BI Desktop or the Power Query Online experience, such as Power BI dataflows, Power BI datamarts, and other experiences.
+You have 2 paths in which you can distribute your connector:
+* Self-distribution
+* Connector certification
 
-### Power BI Desktop
+### Self-distribution
 
-Power BI Desktop users can follow the steps below to consume a Power Query custom connector:
+A self-service mechanism where you can leverage Power Query custom connectors in applicable product experiences
 
-1. Copy the extension file (.mez or.pqx) into [Documents]/Power BI Desktop/Custom Connectors.
-2. In Power BI Desktop, select the **(Not Recommended) Allow any extension to load without validation or warning** option under **File** > **Options and settings** > **Options** > **Security** > **Data Extensions**.
-3. Restart Power BI Desktop.
+With your connector created, you can send this file as you wish to your users and they can leverage the connector in applicable product experiences such as Microsoft Power BI.
 
-Power BI Desktop will automatically load the extensions on restart.
+#### Microsoft Power BI
+ Microsoft Power BI Desktop and the Microsoft Power BI Service for Semantic models for refresh and connectivity in the cloud.
 
-Alternatively, as the owner of the data source and connector, you can submit your connector to the [Power Query Connector Certification](ConnectorCertification.md) program so it ships with Power BI Desktop on every release.
+You can learn more about how to leverage your custom connector for self-distribution using the articles below:
+* [Load a Power Query custom connector in Power BI Desktop](https://learn.microsoft.com/power-bi/connect-data/desktop-connector-extensibility)
+* [Enable and use custom connectors in the Power BI Service](https://learn.microsoft.com/power-bi/connect-data/service-gateway-custom-connectors)
 
-### Power Query Online
+Power Query connectors can be loaded into two three experiences:
+* **On-Premises Data Gateway**: Your connector can be loaded through the gateway to be leveraged in the Microsoft Fabric and Microsoft Power BI services
+* **Power Query Online**: within experiences such as Power BI Datamarts, Fabric Dataflow Gen2, and many others
+* Power BI Desktop:
 
-Only Power Query certified connectors are shown in the Power Query Online experience. To learn more about the Power Query connector certification program, go to [Power Query Connector Certification](ConnectorCertification.md).
+### Connector Certification
+
+The Data Factory connector certification program allows you to submit your connector to Microsoft for certification where Microsoft takes care of publishing and distributing your connector within both Microsoft Fabric and Microsoft Power BI for applicable products and experiences:
+* **Power Query Desktop**:  Microsoft Power BI Desktop.
+* **Power Query Online**: Microsoft Fabric Dataflow Gen2, Microsoft Fabric Warehouse, Microsoft Power BI Datamarts, Microsoft Power BI Dataflow Gen1 and others
+* **On-premises Data Gateway**: For both Microsoft Fabric and Microsoft Power BI that leverage a gateway for authenticated refresh or connectivity.
+
+Learn more about the [Data Factory Connector Certification program](https://learn.microsoft.com/fabric/data-factory/connector-certification)
 
 ## More links and resources
 
