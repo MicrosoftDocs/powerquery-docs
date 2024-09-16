@@ -43,7 +43,7 @@ Your connector definition file starts with an empty data source description. You
 
 The Power Query SDK provides basic query execution capabilities, allowing you to test your extension without having to switch over to a different client application. You can further test your connector in an application such as:
 
-* [Power BI Desktop](../power-bi/connect-data/desktop-connector-extensibility.md)
+* [Power BI Desktop](../power-bi/connect-data/desktop-connector-extensibility)
 
 #### Query test file
 
