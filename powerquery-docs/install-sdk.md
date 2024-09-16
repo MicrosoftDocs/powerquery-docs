@@ -94,7 +94,7 @@ The Data Factory connector certification program allows you to submit your conne
 * **Power Query Online**: Microsoft Fabric Dataflow Gen2, Microsoft Fabric Warehouse, Microsoft Power BI Datamarts, Microsoft Power BI Dataflow Gen1, and others
 * **On-premises Data Gateway**: For both Microsoft Fabric and Microsoft Power BI that use a gateway for authenticated refresh or connectivity.
 
-Learn more about the [Data Factory Connector Certification program](https://learn.microsoft.com/fabric/data-factory/connector-certification)
+Learn more about the [Data Factory Connector Certification program](/fabric/data-factory/connector-certification)
 
 ## More links and resources
 
