@@ -37,7 +37,7 @@ When creating a new workspace (Visual Studio Code Power Query SDK), you start wi
 * A string resource file (resources.resx)
 * PNG files of various sizes used to create icons
 
-Your connector definition file will start with an empty data source description. You can learn more about a data source in the context of the Power Query SDK from the article on [handling data access](HandlingDataAccess.md#data-source-kind).
+Your connector definition file starts with an empty data source description. You can learn more about a data source in the context of the Power Query SDK from the article on [handling data access](HandlingDataAccess.md#data-source-kind).
 
 ### Testing
 
@@ -71,19 +71,19 @@ You have 2 paths in which you can distribute your connector:
 
 ### Self-distribution
 
-A self-service mechanism where you can leverage Power Query custom connectors in applicable product experiences
+A self-service mechanism where you can apply Power Query custom connectors in applicable product experiences
 
-With your connector created, you can send this file as you wish to your users and they can leverage the connector in applicable product experiences such as Microsoft Power BI.
+With your connector created, you can send this file as you wish to your users and they can use the connector in applicable product experiences such as Microsoft Power BI.
 
 #### Microsoft Power BI
  Microsoft Power BI Desktop and the Microsoft Power BI Service for Semantic models for refresh and connectivity in the cloud.
 
-You can learn more about how to leverage your custom connector for self-distribution using the articles below:
+You can learn more about how to use your custom connector for self-distribution using the articles below:
 * [Load a Power Query custom connector in Power BI Desktop](https://learn.microsoft.com/power-bi/connect-data/desktop-connector-extensibility)
 * [Enable and use custom connectors in the Power BI Service](https://learn.microsoft.com/power-bi/connect-data/service-gateway-custom-connectors)
 
 Power Query connectors can be loaded into two three experiences:
-* **On-Premises Data Gateway**: Your connector can be loaded through the gateway to be leveraged in the Microsoft Fabric and Microsoft Power BI services
+* **On-Premises Data Gateway**: Your connector can be loaded through the gateway to be used in the Microsoft Fabric and Microsoft Power BI services
 * **Power Query Online**: within experiences such as Power BI Datamarts, Fabric Dataflow Gen2, and many others
 * Power BI Desktop:
 
@@ -91,8 +91,8 @@ Power Query connectors can be loaded into two three experiences:
 
 The Data Factory connector certification program allows you to submit your connector to Microsoft for certification where Microsoft takes care of publishing and distributing your connector within both Microsoft Fabric and Microsoft Power BI for applicable products and experiences:
 * **Power Query Desktop**:  Microsoft Power BI Desktop.
-* **Power Query Online**: Microsoft Fabric Dataflow Gen2, Microsoft Fabric Warehouse, Microsoft Power BI Datamarts, Microsoft Power BI Dataflow Gen1 and others
-* **On-premises Data Gateway**: For both Microsoft Fabric and Microsoft Power BI that leverage a gateway for authenticated refresh or connectivity.
+* **Power Query Online**: Microsoft Fabric Dataflow Gen2, Microsoft Fabric Warehouse, Microsoft Power BI Datamarts, Microsoft Power BI Dataflow Gen1, and others
+* **On-premises Data Gateway**: For both Microsoft Fabric and Microsoft Power BI that use a gateway for authenticated refresh or connectivity.
 
 Learn more about the [Data Factory Connector Certification program](https://learn.microsoft.com/fabric/data-factory/connector-certification)
 
