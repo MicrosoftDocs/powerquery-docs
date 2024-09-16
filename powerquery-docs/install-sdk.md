@@ -76,16 +76,16 @@ A self-service mechanism where you can apply Power Query custom connectors in ap
 With your connector created, you can send this file as you wish to your users and they can use the connector in applicable product experiences such as Microsoft Power BI.
 
 #### Microsoft Power BI
- Microsoft Power BI Desktop and the Microsoft Power BI Service for Semantic models for refresh and connectivity in the cloud.
-
-You can learn more about how to use your custom connector for self-distribution using the articles below:
-* [Load a Power Query custom connector in Power BI Desktop](https://learn.microsoft.com/power-bi/connect-data/desktop-connector-extensibility)
-* [Enable and use custom connectors in the Power BI Service](https://learn.microsoft.com/power-bi/connect-data/service-gateway-custom-connectors)
+ You can use your own custom connector in the Microsoft Power BI Desktop and the Microsoft Power BI Service for Semantic models for refresh and connectivity in the cloud.
 
 Power Query connectors can be loaded into two three experiences:
 * **On-Premises Data Gateway**: Your connector can be loaded through the gateway to be used in the Microsoft Fabric and Microsoft Power BI services
 * **Power Query Online**: within experiences such as Power BI Datamarts, Fabric Dataflow Gen2, and many others
-* Power BI Desktop:
+* **Power Query Desktop**: within experiences like Power BI Desktop.
+
+You can learn more about how to use your custom connector for self-distribution using the articles below:
+* [Load a Power Query custom connector in Power BI Desktop](https://learn.microsoft.com/power-bi/connect-data/desktop-connector-extensibility)
+* [Enable and use custom connectors in the Power BI Service](https://learn.microsoft.com/power-bi/connect-data/service-gateway-custom-connectors)
 
 ### Connector Certification
 
