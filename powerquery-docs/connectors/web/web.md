@@ -22,6 +22,9 @@ ms.author: dougklo
 >The service principal authentication type isn't supported when using an on-premises data gateway or a virtual network (VNet) data gateway.
 
 > [!NOTE]
+>The service principal authentication only works in the web connector for SharePoint sites if the relevant SharePoint tenant has been configured as described in the prerequisites here: https://learn.microsoft.com/en-us/fabric/data-factory/connector-sharepoint-online-list-copy-activity#prerequisites
+
+> [!NOTE]
 > POST requests can only be made anonymously when using `Web.Contents`.
 
 > [!NOTE]
