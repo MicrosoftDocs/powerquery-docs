@@ -449,6 +449,8 @@ items:
         href: connectors/json.md
       - name: "KQL database"
         href: connectors/kql-database.md
+      - name: "Kyvos ODBC (Beta)"
+        href: connectors/kyvos-odbc.md
       - name: "Lakehouse (Beta)"
         href: connectors/lakehouse.md
       - name: LinkedIn Learning
@@ -741,14 +743,6 @@ items:
             href: samples/trippin/10-tableview1/readme.md
         - name: "OAuth tutorial (GitHub)"
           href: samples/github/readme.md
-      - name: Connector Certification
-        items:
-        - name: "Overview"
-          href: connector-certification.md
-        - name: "Submission"
-          href: certification-submission.md
-        - name: "Custom connector documentation"
-          href: providing-user-documentation.md
       - name: "Connector development FAQ"
         href: custom-connector-development-faq.yml
     - name: Resources

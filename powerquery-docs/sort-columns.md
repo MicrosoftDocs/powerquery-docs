@@ -2,7 +2,7 @@
 title: Sort columns
 description: With Power Query, you can sort a table by one or multiple columns in the order of your choice. This article demonstrates how to sort columns in Power Query.
 author: ptyx507
-ms.date: 8/8/2023
+ms.date: 8/27/2024
 ms.author: miescobar
 ms.custom: edited
 ---
@@ -35,23 +35,23 @@ When sorted using sort descending, an alphabetical column is sorted in the follo
 
 ## To sort a table by using columns
 
-To sort the table, first select the column to be sorted. After the column has been selected, you can select the sort operation from one of two places:
+To sort the table, first select the column to be sorted. After the column is selected, you can select the sort operation from one of two places:
 
 - On the **Home** tab, in the **Sort** group, there are icons to sort your column in either ascending or descending order.
 
   :::image type="content" source="media/sort-columns/sort-group.png" alt-text="Screenshot of the Power Query ribbon with the Home tab selected and the sort group emphasized." lightbox="media/sort-columns/sort-group.png":::
 
-- From the column heading drop-down menu. Next to the name of the column there's a drop-down menu indicator :::image type="icon" source="media/sort-columns/col-head-drop-down-menu.png":::. When you select the icon, you'll see the option to sort the column.
+- From the column heading drop-down menu. Next to the name of the column there's a drop-down menu indicator :::image type="icon" source="media/sort-columns/col-head-drop-down-menu.png":::. When you select the icon, the option to sort the column is displayed.
 
-  :::image type="content" source="media/sort-columns/sort-icons.png" alt-text="Screenshot of the column heading drop down menu with Sort ascending and Sort descending options emphasized.":::
+  :::image type="content" source="media/sort-columns/sort-icons.png" alt-text="Screenshot of the column heading drop-down menu with Sort ascending and Sort descending options emphasized.":::
 
-In this example, first you need to sort the **Competition** column. You'll perform the operation by using the buttons in the **Sort** group on the **Home** tab. This action creates a new step in the **Applied steps** section named **Sorted rows**.
+In this example, first you need to sort the **Competition** column. You perform the operation by using the buttons in the **Sort** group on the **Home** tab. This action creates a new step in the **Applied steps** section named **Sorted rows**.
 
 :::image type="content" source="media/sort-columns/sort-step.png" alt-text="Screenshot of the Power Query editor with the sorted rows step in the Applied steps list emphasized." lightbox="media/sort-columns/sort-step.png":::
 
 A visual indicator, displayed as an arrow pointing up, gets added to the **Competitor** drop-down menu icon to show that the column is being sorted in ascending order.
 
-Now you'll sort the **Position** field in ascending order as well, but this time you'll use the **Position** column heading drop-down menu.
+Now sort the **Position** field in ascending order as well, but this time use the **Position** column heading drop-down menu.
 
 :::image type="content" source="media/sort-columns/sort-by-column-position.png" alt-text="Screenshot of the sort commands in the Position column drop-down menu." lightbox="media/sort-columns/sort-by-column-position.png":::
 
