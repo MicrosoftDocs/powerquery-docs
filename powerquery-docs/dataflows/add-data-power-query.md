@@ -4,7 +4,7 @@ description: Step-by-step instructions for how to use Power Query to add data to
 author: Luitwieler
 ms.reviewer: dougklo
 ms.topic: how-to
-ms.date: 6/24/2024
+ms.date: 9/20/2024
 ms.author: jeluitwi
 ---
 
