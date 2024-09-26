@@ -18,7 +18,7 @@ ms.author: gefisher
 |Authentication Types Supported|Organizational account|
 
 > [!NOTE]
-> Azure HDInsight on AKS will be retired on January 31, 2025. Learn more from [here](https://learn.microsoft.com/en-us/azure/hdinsight-aks/trino/trino-overview). This connector is under deprecation accordingly. Please transition off existing connections using this connector, and don't use this connector for new connections.
+> Azure HDInsight on AKS will be retired on January 31, 2025. Learn more from [here](/azure/hdinsight-aks/trino/trino-overview). This connector is under deprecation accordingly. Please transition off existing connections using this connector, and don't use this connector for new connections.
 
 ## Prerequisites
 
