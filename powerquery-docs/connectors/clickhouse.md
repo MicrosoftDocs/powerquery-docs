@@ -2,9 +2,9 @@
 title: Power Query ClickHouse connector
 description: Provides basic information, prerequisites, and instructions on how to connect to ClickHouse
 author: bentsileviav
-#ms.topic: conceptual
-#ms.date: 8/11/2024
-#ms.author: dougklo
+ms.topic: conceptual
+ms.date: 9/30/2024
+ms.author: dougklo
 ---
 
 # ClickHouse (Beta)
