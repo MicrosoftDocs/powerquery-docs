@@ -4,7 +4,7 @@ description: Step-by-step instructions for how to use Power Query to add data to
 author: Luitwieler
 ms.reviewer: dougklo
 ms.topic: how-to
-ms.date: 9/20/2024
+ms.date: 10/3/2024
 ms.author: jeluitwi
 ---
 
@@ -120,3 +120,5 @@ Currently, AI Assisted mapping can only detect type mismatches between columns. 
 * **Lookup Values**: High confidence in semantic match between source and destination, but at least one record in the source contains a value not present in the lookup value set by the destination column.
 
 If an [error message about permissions](/powerapps/maker/data-platform/troubleshoot-power-query-issues) appears, contact your administrator.
+
+Suggestions for table selection and column mapping are provided by a solution that might be unavailable in a specific Power Platform environment. If this solution can't be detected, suggestions for table selection and column mapping aren't provided by the system. However, you can continue to proceed manually.
