@@ -4,7 +4,7 @@ description: Includes basic information, prerequisites, and information on how t
 
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 3/26/2024
+ms.date: 10/4/2024
 ms.author: dougklo
 
 ---
@@ -46,11 +46,11 @@ To connect to Azure Blob Storage:
 
     :::image type="content" source="./media/azure-blob-storage/enter-account-name.png" alt-text="Screenshot of the Azure Blob Storage dialog box where you enter the account name or the URL.":::
 
-3. If you're connecting to this account for the first time, select either the **Anonymous**, **Account key**, or **Shared access signature (SAS)** authentication method to sign into the Azure Blob Storage account. More information: [Copy your account key from Azure Blob Storage](#copy-your-account-key-from-azure-blob-storage)
+3. If you're connecting to this account for the first time, select either the **Anonymous**, **Organizational account**, **Account key**, or **Shared access signature (SAS)** authentication method to sign into the Azure Blob Storage account. More information: [Copy your account key from Azure Blob Storage](#copy-your-account-key-from-azure-blob-storage)
 
    :::image type="content" source="./media/azure-blob-storage/sign-in-desktop.png" alt-text="Screenshot of the sign in dialog box for Azure Blob Storage, with the account key authentication method selected.":::
 
-   For more information about using and managing authentication, go to [Authentication with a data source](../connectorauthentication.md).
+   For more information about using and managing authentication, go to [Authentication in desktop apps](../connectorauthentication.md).
 
 4. Select **Connect**.
 
