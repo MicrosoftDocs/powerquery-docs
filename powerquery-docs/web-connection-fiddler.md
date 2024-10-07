@@ -2,7 +2,7 @@
 title: Capture web requests with Fiddler
 description: Describes how to set up Fiddler to capture secure HTTP addresses and monitor web traffic when troubleshooting Power Query communications issues.
 author: DougKlopfenstein
-ms.date: 6/13/2024
+ms.date: 10/7/2024
 ms.author: dougklo
 ---
 
@@ -12,6 +12,9 @@ When diagnosing issues that might occur when Power Query communicates with your 
 
 > [!NOTE]
 >This article assumes that you are already familiar with how Fiddler works in general.
+
+> [!NOTE]
+> Fiddler is a 3rd party software not owned by Microsoft. There are multiple versions of Fiddler available. Currently, one version is free, but the other versions require that you purchase a license. Visit the [Fiddler website](https://www.telerik.com/fiddler) for more information about these versions and the licensing requirements for each one.
 
 ## Set up Fiddler to capture secure HTTP addresses
 
