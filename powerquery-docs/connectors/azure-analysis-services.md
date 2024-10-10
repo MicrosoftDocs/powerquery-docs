@@ -16,7 +16,7 @@ LocalizationGroup: reference
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights |
-| Authentication Types Supported | Microsoft account<br/>Organizational account |
+| Authentication Types Supported | Basic (suported in Power Apps only)<br/>Microsoft account<br/>Organizational account<br/>Windows (supported in Power Apps only) |
 | M Function Reference | [AnalysisServices.Database](/powerquery-m/analysisservices-database)<br/>[AnalysisServices.Databases](/powerquery-m/analysisservices-databases) |
 
 > [!NOTE]
