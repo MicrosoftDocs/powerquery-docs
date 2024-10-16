@@ -38,11 +38,11 @@ ms.author: dougklo
 
 1. On the Power BI Desktop start screen, select **Get Data**.
 
-   :::image type="content" source="./media/clickhouse/powerbi_05.png" alt-text="Getting started with Power BI Desktop.":::
+   :::image type="content" source="./media/clickhouse/powerbi-05.png" alt-text="Getting started with Power BI Desktop.":::
 
 1. Search for **ClickHouse**.
 
-   :::image type="content" source="./media/clickhouse/powerbi_06.png" alt-text="Choosing the data source.":::
+   :::image type="content" source="./media/clickhouse/powerbi-06.png" alt-text="Choosing the data source.":::
 
 1. Select the connector, and fill the following boxes:
 
@@ -52,16 +52,16 @@ ms.author: dougklo
    * **Options**: Any ODBC option as listed in the [ClickHouse ODBC GitHub Page](https://github.com/ClickHouse/clickhouse-odbc#configuration).
    * **Data Connectivity mode**: Choose **DirectQuery** for querying ClickHouse directly. In case you have a small load, you can choose import mode, and the entire data is loaded to Power BI.
 
-   :::image type="content" source="./media/clickhouse/powerbi_07.png" alt-text="Filling ClickHouse instance information.":::
+   :::image type="content" source="./media/clickhouse/powerbi-07.png" alt-text="Filling ClickHouse instance information.":::
 
 1. Specify your username and password.
 
-   :::image type="content" source="./media/clickhouse/powerbi_08.png" alt-text="Username and password prompt.":::
+   :::image type="content" source="./media/clickhouse/powerbi-08.png" alt-text="Username and password prompt.":::
 
 Finally, you should see the databases and tables in the **Navigator** view. Select the desired table and select **Load** to
 import the data from ClickHouse.
 
-:::image type="content" source="./media/clickhouse/powerbi_09.png" alt-text="Navigator view.":::
+:::image type="content" source="./media/clickhouse/powerbi-09.png" alt-text="Navigator view.":::
 
 Once the import is complete, your ClickHouse Data should be accessible in Power BI as usual.
 
