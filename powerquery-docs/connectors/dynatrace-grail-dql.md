@@ -1,3 +1,11 @@
+---
+title: Connect PowerBI to Dynatrace Grail
+description: The connector allows PowerBI users to access a Dynatrace environment on which they have the necessary permissions to run DQL queries.
+author: gordon_dt
+ms.date: 
+ms.author: 
+---
+
 # Microsoft documentation to connect PowerBI to Dynatrace Grail.
 
 The following connector article is provided by Dynatrace, the owner of
@@ -13,9 +21,9 @@ visit the Dynatrace website and use the support channels there.
 |Authentication Types Supported|      Windows (Power BI Desktop)|
 |Function Reference Documentation|    Source|
 
-# Prerequisites
+## Prerequisites
 
-## Dynatrace environment
+### Dynatrace environment
 
 It is assumed that a Dynatrace environment is already configured for
 connection from PowerBI Desktop.
@@ -28,7 +36,7 @@ sure the environment is set to the new version and not previous classic
 as the latest version contains a Grail data lakehouse and is set up for
 the authentication requirements for the connector.
 
-## Setting up the connector
+### Setting up the connector
 
 Please follow the steps below to set up the Dynatrace Grail DQL
 Connector for the Power BI Desktop.
@@ -47,7 +55,7 @@ available on request from Dynatrace.
 ![Security setting](./media/dynatrace-grail-dql/sec1.png)
 
 --------------------------------------------------------
-# Capabilities Supported
+## Capabilities Supported
 
 | Number | Capability                                  |
 | ------ | ------------------------------------------- |
@@ -55,7 +63,7 @@ available on request from Dynatrace.
 | 2      | Option to enter a DQL query when connecting - limited to a maximum of 1 million rows. |
 --------------------------------------------------------
 
-# Connection to Dynatrace Grail from PowerBI Desktop
+## Connection to Dynatrace Grail from PowerBI Desktop
 
 To connect to a Dynatrace SaaS instance from Power Query Desktop, take
 the following steps:
@@ -104,7 +112,7 @@ the following steps:
 
 ![show](./media/dynatrace-grail-dql/connector11_white.png)
 
-## Troubleshooting
+### Troubleshooting
 
 -   The latest version ("New" not "Classic") of Dynatrace SaaS is
     required.
