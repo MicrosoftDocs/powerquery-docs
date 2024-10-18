@@ -46,7 +46,7 @@ To connect to Wolters Kluwer CCH Tagetik data:
    * **URL** is your Wolters Kluwer CCH Tagetik environment endpoint.
    * **Database** is the code of the database.
    * **Analytical Workspace** (optional) is the code of the analytical workspace.
-   * **Analytical Workspace Dataset** (optional) is the code of the analytical workspace dataset.
+   * **Analytical Workspace Dataset or Financial Model** (optional) is the code of the analytical workspace dataset or the code of the financial model.
 
    :::image type="content" source="./media/wolters-kluwer-cch-tagetik/window-parameters.png" alt-text="Screenshot of the Wolters Kluwer CCH Tagetik connector parameter dialog.":::
 
