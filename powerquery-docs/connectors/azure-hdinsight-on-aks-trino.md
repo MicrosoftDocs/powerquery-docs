@@ -3,22 +3,22 @@ title: Power Query Azure HDInsight on AKS Trino connector
 description: Provides instructions for using the Azure HDInsight on AKS Trino connector, including descriptions of the optional input parameters, and connector limitations.
 author: georgewfisher
 ms.topic: conceptual
-ms.date: 9/24/2024
+ms.date: 10/24/2024
 ms.author: gefisher
 ---
 
-# Azure HDInsight on AKS Trino (Beta) (Deprecating)
+# Azure HDInsight on AKS Trino (Beta) (Deprecated)
 
 ## Summary
 
 |Item|Description|
 |-|-|
-|Release State|Preview|
+|Release State|Deprecated|
 |Products|Power BI (Semantic models)<br />Power BI (Dataflows)<br />Fabric (Dataflow Gen2)|
 |Authentication Types Supported|Organizational account|
 
 > [!NOTE]
-> Azure HDInsight on AKS will be retired on January 31, 2025. Learn more from [here](/azure/hdinsight-aks/trino/trino-overview). This connector is under deprecation accordingly. Please transition off existing connections using this connector, and don't use this connector for new connections.
+> Azure HDInsight on AKS will be retired on January 31, 2025. Learn more from [here](/azure/hdinsight-aks/trino/trino-overview). This connector is deprecated, and will no longer work since the week of Nov 11, 2024. Please transition off existing connections using this connector.
 
 ## Prerequisites
 
