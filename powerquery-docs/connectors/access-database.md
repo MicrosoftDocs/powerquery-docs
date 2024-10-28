@@ -3,7 +3,7 @@ title: Power Query Access database connector
 description: Provides basic information, prerequisites, and connection instructions, along with tips about using the on-premises data gateway and fixing mismatched bit versions.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 3/8/2024
+ms.date: 10/28/2024
 ms.author: dougklo
 ---
 
@@ -23,9 +23,9 @@ ms.author: dougklo
 
 ## Prerequisites
 
-If you're connecting to an Access database from Power Query Online, the system that contains the on-premises data gateway must have the 64-bit version of the [Access Database Engine 2016 OLEDB provider](https://www.microsoft.com/download/details.aspx?id=54920) installed.
+If you're connecting to an Access database from Power Query Online, the system that contains the on-premises data gateway must have the 64-bit version of the Access Database Engine OLEDB provider installed.
 
-If you're loading an Access database to Power BI Desktop, the versions of the Access Database Engine 2016 OLEDB provider and Power BI Desktop on that machine must match (that is, either 32-bit or 64-bit). For more information, go to [Import Access database to Power BI Desktop](#import-access-database-to-power-bi-desktop).
+If you're loading an Access database to Power BI Desktop, the versions of the Access Database Engine OLEDB provider and Power BI Desktop on that machine must match (that is, either 32-bit or 64-bit). For more information, go to [Import Access database to Power BI Desktop](#import-access-database-to-power-bi-desktop).
 
 ## Capabilities Supported
 
@@ -80,10 +80,10 @@ When you attempt to connect to a local Access database using Power Query Online,
 
 ### On-premises data gateway error
 
-A 64-bit version of the Access Database Engine 2016 OLEDB provider must be installed on your on-premises data gateway machine to be able to load Access database files. If you already have a 64-bit version of Microsoft Office installed on the same machine as the gateway, the Access Database Engine 2016 OLEDB provider is already installed. If not, you can download the driver from the following location:
+A 64-bit version of the Access Database Engine OLEDB provider must be installed on your on-premises data gateway machine to be able to load Access database files. If you already have a 64-bit version of Microsoft Office installed on the same machine as the gateway, the Access Database Engine OLEDB provider is already installed. If not, you can download the driver from the following location:
 
-[Access Database Engine 2016 OLEDB provider](https://www.microsoft.com/download/details.aspx?id=54920)
+[Access 365 Runtime](https://support.microsoft.com/office/download-and-install-microsoft-365-access-runtime-185c5a32-8ba9-491e-ac76-91cbe3ea09c9)
 
 ### Import Access database to Power BI Desktop
 
-In some cases, you might get a `The 'Microsoft.ACE.OLEDB.12.0' provider is not registered` error when attempting to import an Access database file to Power BI Desktop. This error can be caused by using mismatched bit versions of Power BI Desktop and the Access Database Engine 2016 OLEDB provider. For more information about how you can fix this mismatch, go to [Troubleshoot importing Access and Excel .xls files in Power BI Desktop](/power-bi/connect-data/desktop-access-database-errors).
+In some cases, you might get a `The 'Microsoft.ACE.OLEDB.12.0' provider is not registered` error when attempting to import an Access database file to Power BI Desktop. This error can be caused by using mismatched bit versions of Power BI Desktop and the Access Database Engine OLEDB provider. For more information about how you can fix this mismatch, go to [Troubleshoot importing Access and Excel .xls files in Power BI Desktop](/power-bi/connect-data/desktop-access-database-errors).
