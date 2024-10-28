@@ -1,19 +1,19 @@
 ---
-title: Google BigQuery (Microsoft Entra ID) (Beta)
+title: Google BigQuery (Microsoft Entra ID)
 description: Provides basic information and prerequisites for the Google BigQuery (Microsoft Entra ID) connector for Power Query.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 3/14/2024
+ms.date: 10/14/2024
 ms.author: dougklo
 ---
 
-# Google BigQuery (Microsoft Entra ID) (Beta)
+# Google BigQuery (Microsoft Entra ID)
 
 ## Summary
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | Beta |
+| Release State | General Availability |
 | Products Supported | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows) |
 | Authentication Types Supported | Organizational account |
 
@@ -77,7 +77,7 @@ The following table lists all of the advanced options you can set in Power Query
 
 | Advanced option | Description |
 | --------------- | ----------- |
-| Use Storage Api | A flag that enables using the [Storage API of Google BigQuery](https://cloud.google.com/bigquery/docs/reference/storage). This option is true by default. This option can be set to false to not use the Storage API and use REST APIs instead. |
+| Use Storage API | A flag that enables using the [Storage API of Google BigQuery](https://cloud.google.com/bigquery/docs/reference/storage). This option is true by default. This option can be set to false to not use the Storage API and use REST APIs instead. |
 | Connection timeout duration | The standard connection setting (in seconds) that controls how long Power Query waits for a connection to complete. You can change this value if your connection doesn't complete before 15 seconds (the default value.) |
 | Command timeout duration | How long Power Query waits for a query to complete and return results. The default depends on the driver default. You can enter another value in minutes to keep the connection open longer. |
 | Audience Uri | The URI that contains the *\<workforce pool ID>* that must be changed to the workforce-pool name used when setting up the [OIDC configuration](#oidc-configurations). The format for the Audience Uri value is `//iam.googleapis.com/locations/global/workforcePools/<workforce pool ID>/providers/azuread`. The default value for the *\<workforce pool ID>* is `powerquery-<TenantId>`, where *\<TenantId>* is your current Power BI tenant ID. If you update the Audience Uri, the string you enter will be used as-is. |
