@@ -1,5 +1,5 @@
 ---
-title: Google BigQuery (Microsoft Entra ID) (Beta)
+title: Google BigQuery (Microsoft Entra ID)
 description: Provides basic information and prerequisites for the Google BigQuery (Microsoft Entra ID) connector for Power Query.
 author: DougKlopfenstein
 ms.topic: conceptual
@@ -7,13 +7,13 @@ ms.date: 3/14/2024
 ms.author: dougklo
 ---
 
-# Google BigQuery (Microsoft Entra ID) (Beta)
+# Google BigQuery (Microsoft Entra ID)
 
 ## Summary
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | Beta |
+| Release State | General Availability |
 | Products Supported | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows) |
 | Authentication Types Supported | Organizational account |
 
