@@ -353,7 +353,7 @@ items:
           href: connectors/analyze-data-in-adls-gen2.md
       - name: Azure HDInsight
         href: connectors/azure-hdinsight.md
-      - name: Azure HDInsight on AKS Trino (Beta)
+      - name: Azure HDInsight on AKS Trino (Beta) (Deprecated)
         href: connectors/azure-hdinsight-on-aks-trino.md
       - name: "Azure SQL database"
         href: connectors/azure-sql-database.md
@@ -431,7 +431,7 @@ items:
         href: connectors/google-analytics.md
       - name: "Google BigQuery"
         href: connectors/google-bigquery.md
-      - name: "Google BigQuery (Microsoft Entra ID) (Beta)"
+      - name: "Google BigQuery (Microsoft Entra ID)"
         href: connectors/google-bigquery-aad.md
       - name: "Google Sheets"
         href: connectors/google-sheets.md
