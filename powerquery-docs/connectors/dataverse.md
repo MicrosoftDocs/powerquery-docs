@@ -120,6 +120,10 @@ More information: [Accessing large semantic models](#accessing-large-semantic-mo
 
 ## Limitations and issues
 
+### Excel host specific
+
+The Power Query Dataverse connector inside Excel does not currently support sovereign cloud clusters (e.g. China, Germany, US).
+
 ### Dataverse performance and throttling limits
 
 For information about performance and throttling limits for Dataverse connections, go to [Requests limits and allocations](/power-platform/admin/api-request-limits-allocations). These limitations apply to both the Dataverse connector and the [OData Feed](odata-feed.md) connector when accessing the same endpoint.
