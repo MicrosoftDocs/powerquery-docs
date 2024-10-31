@@ -66,6 +66,10 @@ To get data from Dataflows in Power Query Online:
 
 6. In the navigation page, select the data you require, and then select **Transform Data**.
 
+## Known issues and limitations
+
+The Power Query Dataflows connector inside Excel does not currently support sovereign cloud clusters (e.g. China, Germany, US).
+
 ## Frequently asked questions
 
 _**DirectQuery is not working for me in Power BI&mdash;what should I do?**_
