@@ -122,7 +122,7 @@ More information: [Accessing large semantic models](#accessing-large-semantic-mo
 
 ### Excel host specific
 
-The Power Query Dataverse connector inside Excel does not currently support sovereign cloud clusters (e.g. China, Germany, US).
+The Power Query Dataverse connector inside Excel doesn't currently support sovereign cloud clusters (for example, China, Germany, US).
 
 ### Dataverse performance and throttling limits
 
