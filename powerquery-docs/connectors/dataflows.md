@@ -68,7 +68,7 @@ To get data from Dataflows in Power Query Online:
 
 ## Known issues and limitations
 
-The Power Query Dataflows connector inside Excel does not currently support sovereign cloud clusters (e.g. China, Germany, US).
+The Power Query Dataflows connector inside Excel doesn't currently support sovereign cloud clusters (for example, China, Germany, US).
 
 ## Frequently asked questions
 
