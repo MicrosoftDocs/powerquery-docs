@@ -3,11 +3,14 @@ title: Load data in a Power BI streaming dataset and build a dataflows monitorin
 description: How to use the dataflows connector in Power Automate to create a dataflows monitoring report in Power BI
 author: Luitwieler
 ms.topic: conceptual
-ms.date: 1/6/2023
+ms.date: 11/8/2023
 ms.author: jeluitwi
 ---
 
 # Load data in a Power BI streaming dataset and build a dataflows monitoring report with Power BI
+
+> [!NOTE]
+> Microsoft has announced the retirement of real-time streaming in Power BI. Beginning October 31, 2024, creation of new real time semantic models is no longer supported. This includes Push semantic model, Streaming semantic model, PubNub streaming semantic model, and Streaming data tile. Beginning October 31, 2027, existing real-time semantic models will be retired and no longer supported. We are working with existing customers on migration, and this date is subject to change. For more information, go to [Announcing the retirement of real-time streaming in Power BI](https://powerbi.microsoft.com/blog/announcing-the-retirement-of-real-time-streaming-in-power-bi/).
 
 This tutorial demonstrates how to load data in a Power BI streaming dataset to create a dataflows monitoring report in Power BI.
 
