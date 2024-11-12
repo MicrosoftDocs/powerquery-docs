@@ -234,7 +234,7 @@ You can also right-click any empty space in the diagram view pane to display a c
 
 In the collapsed mode, you can quickly look at the steps in the query by hovering over the number of steps in the query. You can select these steps to navigate to that specific step within the query.  
 
-:::image type="content" source="media/diagram-view/diagram-view-collapsed-queries.png" alt-text="Callout showing the available steps in the Customers query after hovering over the number of steps label in the query.":::
+:::image type="content" source="media/diagram-view/diagram-view-collapsed-queries.png" alt-text="Callout showing the available steps in the Customers query after hovering over the number of steps label in the query." lightbox="media/diagram-view/diagram-view-collapsed-queries.png":::
 
 ## Layout Options
 
@@ -302,7 +302,7 @@ The second way to modify diagram view settings is to right-click over a blank pa
 
 Diagram view shows **step labels** by default.
 
-:::image type="content" source="media/diagram-view/diagram-view-step-labels.png" alt-text="Screenshot of the Step labels displayed in diagram view.":::
+:::image type="content" source="media/diagram-view/diagram-view-step-labels.png" alt-text="Screenshot of the Step labels displayed in diagram view." lightbox="media/diagram-view/diagram-view-step-labels.png":::
 
 You can change diagram view settings to show **step names** to match the **applied steps** within the **query settings** pane.
 
@@ -310,7 +310,7 @@ You can change diagram view settings to show **step names** to match the **appli
 
 The step names are now displayed in the diagram view.
 
-:::image type="content" source="media/diagram-view/diagram-view-step-names.png" alt-text="Step names are displayed in diagram view.":::
+:::image type="content" source="media/diagram-view/diagram-view-step-names.png" alt-text="Step names are displayed in diagram view." lightbox="media/diagram-view/diagram-view-step-names.png":::
 
 ### Auto-highlight related queries
 
@@ -346,7 +346,7 @@ Right-click and hold the rectangle on the mini-map, then move the rectangle to m
 
 When the **Show animations** menu item is selected, the transitions of the sizes and positions of the queries are animated. These transitions are easiest to see when collapsing or expanding the queries or when changing the dependencies of existing queries. When cleared, the transitions are immediate. Animations are turned on by default.
 
-:::image type="content" source="media/diagram-view/show-animations.gif" alt-text="Animation showing the difference between Show animations being selected or being cleared." lightbox="media/diagram-view/show-animations.gif":::
+:::image type="content" source="media/diagram-view/show-animations.gif" alt-text="Animation showing the difference between Show animations being selected or being cleared.":::
 
 ## Maximize data preview
 
