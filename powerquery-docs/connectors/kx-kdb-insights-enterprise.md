@@ -74,7 +74,7 @@ To make the connection, follow these steps:
 
 ## Navigator options
 
-The [parameters](https://code.kx.com/insights/1.11/enterprise/integrations/powerbi/powerbi-import.html#parameters) available on the Navigator allow you to leverage the power of kdb Insights Enterprise analytics to filter, group, and aggregate data by restricting the data being loaded and bringing you the performance of the _kdb Insights database_.
+The [parameters](https://code.kx.com/insights/enterprise/integrations/powerbi/powerbi-import.html#parameters) available on the Navigator allow you to leverage the power of kdb Insights Enterprise analytics to filter, group, and aggregate data by restricting the data being loaded and bringing you the performance of the _kdb Insights database_.
 
 
     | **Parameter** | **Details**                                                                      |
