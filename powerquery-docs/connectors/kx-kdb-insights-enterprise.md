@@ -9,7 +9,7 @@ ms.author: lnorris
 # KX kdb Insights Enterprise Power Query Connector
 
 > [!NOTE]
-> The following connector article is provided by KX Systems Inc., the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the [KX](www.kx.com) website and use the support channels there.
+> The following connector article is provided by KX Systems Inc., the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the [KX](https://www.kx.com) website and use the support channels there.
 
 
 ## Summary
