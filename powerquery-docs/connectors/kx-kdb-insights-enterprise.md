@@ -12,11 +12,11 @@ author: lnorris
 
 ## Summary
 
-| Item	                         | Description          |
-| ------------------------------ | -------------------- |
-| Release State                  | General Availability |
-| Products                       | Power BI             |
-| Authentication Types Supported | Database (Username/Password)<br/>OAuth
+| Item	                        | Description                 |
+| ------------------------------ | --------------------------- |
+| Release State                  | General Availability        |
+| Products                       | Power BI                    |
+| Authentication Types Supported | Username/Password<br/>OAuth |
 
 The connector enables Microsoft Power BI users to remotely connect, explore, query data, preview tables, and harness the power and performance of kdb Insights Enterprise analytics before importing datasets into Power BI for visualization.
 
