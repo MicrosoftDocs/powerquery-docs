@@ -1,6 +1,6 @@
 ---
 title: KX kdb Insights Enterprise Power Query Connector
-description: Provides basic information, prerequisites, and instructions on how to connect to ClickHouse
+description: Provides basic information, prerequisites, and instructions on how to connect to kdb Insights Enterprise
 author: lnorris
 ---
 
