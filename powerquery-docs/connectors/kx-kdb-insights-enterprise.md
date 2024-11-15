@@ -2,6 +2,8 @@
 title: KX kdb Insights Enterprise Power Query Connector
 description: Provides basic information, prerequisites, and instructions on how to connect to kdb Insights Enterprise
 author: lnorris
+ms.date: 11-15-2024
+ms.author: lnorris
 ---
 
 # KX kdb Insights Enterprise Power Query Connector
@@ -46,7 +48,7 @@ To make the connection, follow these steps:
 
 1.  Select **Get Data**:
     - For **Power BI Desktop**, click `Get Data -> More` from the **Home** tab in the upper ribbon.
-    - For **Power BI Online**, in the Get Data experience, select the `Dataflow` category. Refer to [Creating a dataflow](https://learn.microsoft.com/en-us/power-bi/transform-model/dataflows/dataflows-create) for instructions.
+    - For **Power BI Online**, in the Get Data experience, select the `Dataflow` category.
 
 1. Search for **KX kdb**.
 
@@ -77,13 +79,13 @@ To make the connection, follow these steps:
 The [parameters](https://code.kx.com/insights/enterprise/integrations/powerbi/powerbi-import.html#parameters) available on the Navigator allow you to leverage the power of kdb Insights Enterprise analytics to filter, group, and aggregate data by restricting the data being loaded and bringing you the performance of the _kdb Insights database_.
 
 
-    | **Parameter** | **Details**                                                                      |
-    | ------------- | -------------------------------------------------------------------------------- |
-    | Start Time    | Applies to the partitioned column and will be ignored for non-partitioned tables |
-    | End Time      | Applies to the partitioned column and will be ignored for non-partitioned tables |
-    | Filter        | Filters out certain rows                                                         |
-    | Aggregation   | Filters the columns and/or aggregates the rows being returned                    |
-    | Group By      | Group the results of an aggregation based on specific columns                    |
+ | **Parameter** | **Details**                                                                      |
+ | ------------- | -------------------------------------------------------------------------------- |
+ | Start Time    | Applies to the partitioned column and will be ignored for non-partitioned tables |
+ | End Time      | Applies to the partitioned column and will be ignored for non-partitioned tables |
+ | Filter        | Filters out certain rows                                                         |
+ | Aggregation   | Filters the columns and/or aggregates the rows being returned                    |
+ | Group By      | Group the results of an aggregation based on specific columns                    |
 
 
 ## More resources
