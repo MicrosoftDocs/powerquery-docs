@@ -2,7 +2,7 @@
 title: KX kdb Insights Enterprise Power Query Connector
 description: Provides basic information, prerequisites, and instructions on how to connect to kdb Insights Enterprise
 author: lnorris
-ms.date: 11-15-2024
+ms.date: 11/15/2024
 ms.author: lnorris
 ---
 
