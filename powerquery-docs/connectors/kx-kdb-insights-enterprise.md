@@ -62,18 +62,15 @@ To make the connection, follow these steps:
 
     - If you have not signed in recently or have never signed in click **Sign in**. The button is named **Sign in as a different user** if your login credentials have expired or are no longer valid.
 
-
-   :::image type="content" source="./media/kx-kdb-insights-enterprise/powerbi-signin.png" alt-text="Filling KX Insights Enterprise instance information.":::
-
+   ![KX Insights Enterprise instance information.](./media/kx-kdb-insights-enterprise/powerbi-signin.png)
+   
 1. If your credentials are valid, the Connector popup displays that you are currently signed in and you can click the **Connect** button.
 
-   :::image type="content" source="./media/kx-kdb-insights-enterprise/powerbi-signedin.png" alt-text="KX Insights Enterprise signin popup.":::
-
+   ![KX Insights Enterprise signin popup.](./media/kx-kdb-insights-enterprise/powerbi-signedin.png)
 
 1. The **Navigator** dialog box displays all the running databases and tables for your chosen host on the left. Clicking on a table returns a preview of the selected data using the _kdb Insights Enterprise_ [getData REST API](https://code.kx.com/insights/api/database/query/get-data.html).
 
-   :::image type="content" source="./media/kx-kdb-insights-enterprise/powerbi-preview.png" alt-text="KX Insights Enterprise preview page.":::
-
+   ![KX Insights Enterprise preview page.](./media/kx-kdb-insights-enterprise/powerbi-preview.png)
 
 ## Navigator options
 
