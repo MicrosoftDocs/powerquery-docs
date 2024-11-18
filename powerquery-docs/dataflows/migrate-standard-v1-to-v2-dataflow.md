@@ -1,5 +1,5 @@
 ---
-title: Migrating a standard V1 dataflow to a standard V2 dataflow
+title: Migrate a standard V1 dataflow to a standard V2 dataflow
 description: Describes how to migrate a Power Platform standard V1 dataflow to a new standard V2 dataflow
 author: DougKlopfenstein
 ms.topic: conceptual
@@ -7,7 +7,7 @@ ms.date: 11/18/2024
 ms.author: dougklo
 ---
 
-# Migrating a standard V1 dataflow to a standard V2 dataflow
+# Migrate a standard V1 dataflow to a standard V2 dataflow
 
 Follow these steps to migrate a standard V1 dataflow to a standard V2 dataflow.
 
