@@ -22,7 +22,7 @@ ms.author: dougklo
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 > [!NOTE]
-> Since the December 2024 release for Power BI Desktop, we introduce a new implementation for Snowflake connector, currently available in preview. Learn more about [this feature](#new-snowflake-connector-implementation-preview).
+> In the December 2024 release for Power BI Desktop, we introduced a new implementation for the Snowflake connector, currently available in preview. Learn more about [this feature](#new-snowflake-connector-implementation-preview).
 
 ## Capabilities Supported
 
