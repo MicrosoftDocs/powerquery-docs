@@ -3,7 +3,7 @@ title: Power Query Snowflake connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Snowflake database, along with native query folding instructions and troubleshooting tips.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/24/2024
+ms.date: 11/12/2024
 ms.author: dougklo
 ---
 
@@ -20,6 +20,9 @@ ms.author: dougklo
 
 > [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+
+> [!NOTE]
+> Since the December 2024 release for Power BI Desktop, we introduce a new implementation for Snowflake connector, currently available in preview. Learn more about [this feature](#new-snowflake-connector-implementation-preview).
 
 ## Capabilities Supported
 
@@ -105,6 +108,29 @@ The following table lists all of the advanced options you can set in Power Query
 | SQL Statement | For information, go to [Import data from a database using native database query](../native-database-query.md). This option is only available in Power Query Desktop. |
 
 Once you've selected the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your Snowflake database.
+
+## New Snowflake connector implementation (Preview)
+
+Since the December 2024 release for Power BI Desktop, we introduce a new implementation for Snowflake connector, currently available in preview. This capability is enabled by default for all newly created connections. 
+
+If you need to change this setting, you can navigate to Options -> Preview features, and deselect the “Use new Snowflake connector implementation” option.
+
+:::image type="content" source="./media/snowflake/new-implementation-option.png" alt-text="Screenshot of the new Snowflake implementation option in Power BI Desktop.":::
+
+Your existing connections remain unchanged. You can try out the feature by adding the `Implementation="2.0"` flag in Snowflake.Databases in your queries as follows.
+
+```
+Source = Snowflake.Databases("contoso.snowflakecomputing.com", "CONTOSO_WH", Implementation="2")
+```
+
+>[!NOTE]
+> If you're using On-prem Data Gateway to refresh your semantic model, make sure you have the December 2024 version or later to use this feature.
+
+To aid with diagnosing any potential issue, you can find the Implementation and DriverType details in your Mashup logs. As an example:
+
+```json
+{"Start":"2024-11-02T00:14:02.7968686Z","Action":"Engine/Module/Snowflake/IO/Snowflake/Implementation","ResourceKind":"Snowflake","ResourcePath":"powerbi.snowflakecomputing.com ;DEMO_WH","HostProcessId":"29200","Implementation":"2.0","DriverType":"ADBC","ProductVersion":"2.139.0.0 (Main)+eda56ecd858054173a4d11db9c63a6da5cf92a99","ActivityId":"106f16b6-cfbb-4853-9f20-ed45486486d2","Process":"Microsoft.Mashup.Container.NetFX45","Pid":38560,"Tid":1,"Duration":"00:00:00.0000291"}
+```
 
 ## Troubleshooting
 
