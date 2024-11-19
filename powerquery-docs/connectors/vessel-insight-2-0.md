@@ -1,5 +1,14 @@
-# Vessel Insight 2.0
 
+---
+title: Power Query Vessel Insight 2.0 connector
+description: Provides basic information and prerequisites for the Vessel Insight 2.0 connector, descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
+author: cecilib
+ms.topic: conceptual
+ms.date: 
+ms.author: 
+---
+
+# Vessel Insight 2.0
 
 > [!NOTE]
 >The following connector article is provided by Kongsberg, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Kongsberg website and use the support channels there.
@@ -87,7 +96,7 @@ For **Voyage**, you need to input IMOs that you want to fetch data for.
 
 When you import voyage data through the **Voyage** node, you can limit the amount of data for the **History** and **Location History** table by setting a set of optional input parameters.
 
-:::image type="content" source="./media/vessel-insight-2-0/voyageparams.png" alt-text="Voyage limit data":::
+:::image type="content" source="./media/vessel-insight-2-0/voyagparams.png" alt-text="Voyage limit data":::
       
 These input parameters are:  
 *   **Comma Separated IMOs**: Input one or multiple IMO numbers you want voyage data for.
