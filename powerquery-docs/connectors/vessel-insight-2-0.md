@@ -32,9 +32,10 @@ To connect to Vessel Insight:
 
 3. Select the parameters for the data query, the selection will be applied to all Vessel Insight Data.
    :::image type="content" source="./media/vessel-insight-2-0/parameters.png" alt-text="Select parameters.":::
-   The parameters are:
+   
+The parameters are:
 - Time mode: **Latest** or **Period**
-- - In case of **Latest**, the other parameters are optional
+   - In case of **Latest**, the other parameters are optional
 - **Interval**: Different intervals to select for data retrieval e.g. **1h**
 - **Start**/**End** **time**: Time interval to get data for e.g. 2024-11-03T00:00:00Z
 - **Resampling methods**: Which aggregate method to use, any combination of **avg**, **min**, **max**, **count** and **sum**
@@ -65,9 +66,11 @@ You can select the following options in the navigator:
 * **Voyage**: Voyage history and location data from Automatic Identification System (AIS).
 
 For **Vessel Insight Data 2.0** the same parameters are applied to all selections, and the summary shows which values are in use:
+
 :::image type="content" source="./media/vessel-insight-2-0/summary.png" alt-text="Parameters selected.":::
 
 Only nodes which contain data is shown:
+
 :::image type="content" source="./media/vessel-insight-2-0/nodes.png" alt-text="Navigator selected.":::
 
 
@@ -83,6 +86,7 @@ For **Voyage**, you need to input IMOs that you want to fetch data for.
 :::image type="content" source="./media/vessel-insight-2-0/voyage.png" alt-text="Voyage IMO parameter.":::
 
 When you import voyage data through the **Voyage** node, you can limit the amount of data for the **History** and **Location History** table by setting a set of optional input parameters.
+
 :::image type="content" source="./media/vessel-insight-2-0/voyageparams.png" alt-text="Voyage limit data":::
       
 These input parameters are:  
