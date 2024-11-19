@@ -11,7 +11,7 @@ ms.author: dougklo
 
 Follow these steps to migrate a standard V1 dataflow to a standard V2 dataflow.
 
-1. In the Dataflows action bar, Select the **Create copy** option for the standard V1 dataflow you would like to migrate to a standard V2 dataflow. In case the dataflow isn't published, the draft version would be copied.
+1. In the dataflow action bar, select the **Create copy** option for the standard V1 dataflow you would like to migrate to a standard V2 dataflow. In case the dataflow isn't published, the draft version would be copied.
 
    :::image type="content" source="media/migrate-standard-v1-to-v2-dataflow/select-create-copy.png" alt-text="Screenshot of the dataflows action bar with the Create copy option emphasized.":::
 
@@ -41,14 +41,14 @@ Follow these steps to migrate a standard V1 dataflow to a standard V2 dataflow.
 
    :::image type="content" source="media/migrate-standard-v1-to-v2-dataflow/show-refresh-history.png" alt-text="Screenshot of the published v2 dataflow ellipsis menu with Show refresh history emphasized.":::
 
-1. Once the new standard V2 dataflow is configured and validated, you can safely delete the old standard V1 dataflow.
+1. If the standard V1 dataflow is included within an unmanaged solution, delete it from the solution using the **Remove from this solution** option.
 
-   :::image type="content" source="media/migrate-standard-v1-to-v2-dataflow/delete-v1-dataflow.png" alt-text="Screenshot of the published v2 dataflow ellipsis menu with Delete option emphasized.":::
+   If the standard V1 dataflow is included within a managed solution, go to the source environment and recreate the solution with the new standard V2 dataflow.
 
-1. If the standard V1 dataflow is included within a solution, delete it from the solution using the **Delete from this environment** option.
-
-   :::image type="content" source="media/migrate-standard-v1-to-v2-dataflow/delete-from-environment.png" alt-text="Screenshot of the v1 dataflow ellipsis menu with Delete from this environment emphasized.":::
-
-1. Add the new standard V2 dataflow to the solution using **Add existing** -> **Automation** -> **Dataflow**, and then **Publish all customization**.
+   Add the new standard V2 dataflow to the solution using **Add existing** -> **Automation** -> **Dataflow**, and then **Publish all customization**. For more information, go to [Solutions in Power Apps](/power-apps/maker/data-platform/solutions-overview).
 
    :::image type="content" source="media/migrate-standard-v1-to-v2-dataflow/add-existing-automation-dataflow.png" alt-text="<alt text>":::
+
+1. Once the new standard V2 dataflow is configured and validated, we recommend that you delete the old standard V1 dataflow.
+
+   :::image type="content" source="media/migrate-standard-v1-to-v2-dataflow/delete-v1-dataflow.png" alt-text="Screenshot of the published v2 dataflow ellipsis menu with Delete option emphasized.":::
