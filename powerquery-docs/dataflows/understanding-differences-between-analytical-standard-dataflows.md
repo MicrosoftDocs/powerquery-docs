@@ -18,7 +18,7 @@ Dataflows created in Power BI are always analytical dataflows. Dataflows created
 ## Standard dataflows
 
 > [!NOTE]
-> We encourage Power Platform dataflow users to migrate from standard V1 dataflows to standard V2 dataflows. Standard V1 dataflows are on a path to lose support in the near future. For more information about migrating to standard V2 dataflows, go to [Migrate a standard V1 dataflow to a standard V2 dataflow](migrate-standard-v1-to-v2-dataflow.md).
+> We encourage Power Platform dataflow users to migrate from standard V1 dataflows to standard V2 dataflows. Standard V1 dataflows are on a path to discontinued support in the near future. For more information about migrating to standard V2 dataflows, go to [Migrate a standard V1 dataflow to a standard V2 dataflow](migrate-standard-v1-to-v2-dataflow.md).
 
 A standard dataflow loads data to Dataverse tables. Standard dataflows can only be created in Power Apps. One benefit of creating this type of dataflow is that any application that depends on data in Dataverse can work with the data created by standard dataflows. Typical applications that use Dataverse tables are Power Apps, Power Automate, AI Builder and Power Virtual Agents.
 
