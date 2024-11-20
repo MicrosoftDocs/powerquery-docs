@@ -46,7 +46,7 @@ There are some restrictions to be aware of:
 
    :::image type="content" source="fhir-preauthorize-powerbi.png" alt-text="Screenshot demonstrating how to preauthorize the Power BI client application." lightbox="fhir-preauthorize-powerbi.png":::
 
-   The client ID for the Power BI client is `a672d62c-fc7b-4e81-a576-e60dc46e951d`.
+   The client ID for the Power BI client is `00001111-aaaa-2222-bbbb-3333cccc4444`.
 
 * The Power Query (for example, Power BI) client will only request a single scope: `user_impersonation`. This scope must be available and the FHIR server can't rely on other scopes.
 
