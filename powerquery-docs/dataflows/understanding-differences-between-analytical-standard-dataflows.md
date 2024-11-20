@@ -3,7 +3,7 @@ title: Understanding the differences between dataflow types
 description: Understanding the differences between standard V1, V2 and analytical dataflows.
 author: Luitwieler
 ms.topic: conceptual 
-ms.date: 11/19/2024 
+ms.date: 11/20/2024 
 ms.author: jeluitwi 
 --- 
 
@@ -16,9 +16,6 @@ Selecting a storage destination of a dataflow determines the dataflow's type. A 
 Dataflows created in Power BI are always analytical dataflows. Dataflows created in Power Apps can either be standard or analytical, depending on your selection when creating the dataflow.
 
 ## Standard dataflows
-
-> [!NOTE]
-> We encourage Power Platform dataflow users to migrate from standard V1 dataflows to standard V2 dataflows. Standard V1 dataflows are on a path to discontinued support in the near future. For more information about migrating to standard V2 dataflows, go to [Migrate a standard V1 dataflow to a standard V2 dataflow](migrate-standard-v1-to-v2-dataflow.md).
 
 A standard dataflow loads data to Dataverse tables. Standard dataflows can only be created in Power Apps. One benefit of creating this type of dataflow is that any application that depends on data in Dataverse can work with the data created by standard dataflows. Typical applications that use Dataverse tables are Power Apps, Power Automate, AI Builder and Power Virtual Agents.
 
@@ -36,6 +33,9 @@ To create a dataflow in Power Apps:
 If you're creating your first dataflow, you can also select the **Create a dataflow** button.
 
 ### Standard dataflows versions
+
+> [!NOTE]
+> We encourage Power Platform dataflow users to migrate from standard V1 dataflows to standard V2 dataflows. Standard V1 dataflows are on a path to discontinued support in the near future. For more information about migrating to standard V2 dataflows, go to [Migrate a standard V1 dataflow to a standard V2 dataflow](migrate-standard-v1-to-v2-dataflow.md).
 
 We've been working on significant updates to standard dataflows to improve their performance and reliability. These improvements will eventually be available to all standard dataflows. But in the interim, we differentiate between existing standard dataflows (version 1) and new standard dataflows (version 2) by adding a version indicator in Power Apps.
 
