@@ -233,6 +233,8 @@ items:
           href: dataflows/sync-excel-cds-dataflow.md
         - name: "Add data to a table in Dataverse"
           href: dataflows/add-data-power-query.md
+        - name: Migrate standard V1 to a V2 dataflow
+          href: dataflows/migrate-standard-v1-to-v2-dataflow.md
       - name: Integration
         items:
         - name: "Data Factory dataflows"
