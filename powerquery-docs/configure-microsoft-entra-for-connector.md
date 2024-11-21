@@ -128,7 +128,7 @@ This section describes common errors you might receive if your Microsoft Entra a
 
 ### Power Query application hasn't been preauthorized
 
-> access_denied: AADSTS650057: Invalid resource. The client has requested access to a resource which is not listed in the requested permissions in the client's application registration. Client app ID: 11112222-bbbb-3333-cccc-4444dddd5555(Microsoft Power Query for Excel). Resource value from request: 00001111-aaaa-2222-bbbb-3333cccc4444. Resource app ID: 44994a60-7f50-4eca-86b2-5d44f873f93
+> access_denied: AADSTS650057: Invalid resource. The client has requested access to a resource which is not listed in the requested permissions in the client's application registration. Client app ID: a672d62c-fc7b-4e81-a576-e60dc46e951d(Microsoft Power Query for Excel). Resource value from request: 00001111-aaaa-2222-bbbb-3333cccc4444. Resource app ID: 00001111-aaaa-2222-bbbb-3333cccc4444
 
 You might see this error if your resource application hasn't preauthorized the Power Query client applications. Follow the steps to [preauthorize the Power Query client IDs](#preauthorize-the-power-query-client-applications).
 
