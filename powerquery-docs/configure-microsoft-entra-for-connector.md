@@ -54,7 +54,7 @@ used by the `Resource` field of the `Aad` record in your connector. The value is
 3. Enter a URI or accept the default based on your app ID.
 4. Select **Save and continue**.
 
-The examples in this guide assume you're using the default Application ID URI format (for example - `api://44994a60-7f50-4eca-86b2-5d44f873f93f`).
+The examples in this guide assume you're using the default Application ID URI format (for example - `api://00001111-aaaa-2222-bbbb-3333cccc4444`).
 
 ## Configure a Scope
 
@@ -109,7 +109,7 @@ MyConnector = [
 ];
 ```
 
-Replace the `{YourApplicationIdUri}` value with the **Application ID URI** value for your resource application, for example, `api://44994a60-7f50-4eca-86b2-5d44f873f93f`.
+Replace the `{YourApplicationIdUri}` value with the **Application ID URI** value for your resource application, for example, `api://00001111-aaaa-2222-bbbb-3333cccc4444`.
 
 In this example:
 
@@ -128,7 +128,7 @@ This section describes common errors you might receive if your Microsoft Entra a
 
 ### Power Query application hasn't been preauthorized
 
-> access_denied: AADSTS650057: Invalid resource. The client has requested access to a resource which is not listed in the requested permissions in the client's application registration. Client app ID: a672d62c-fc7b-4e81-a576-e60dc46e951d(Microsoft Power Query for Excel). Resource value from request: 44994a60-7f50-4eca-86b2-5d44f873f93f. Resource app ID: 44994a60-7f50-4eca-86b2-5d44f873f93
+> access_denied: AADSTS650057: Invalid resource. The client has requested access to a resource which is not listed in the requested permissions in the client's application registration. Client app ID: a672d62c-fc7b-4e81-a576-e60dc46e951d(Microsoft Power Query for Excel). Resource value from request: 00001111-aaaa-2222-bbbb-3333cccc4444. Resource app ID: 00001111-aaaa-2222-bbbb-3333cccc4444
 
 You might see this error if your resource application hasn't preauthorized the Power Query client applications. Follow the steps to [preauthorize the Power Query client IDs](#preauthorize-the-power-query-client-applications).
 
