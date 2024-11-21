@@ -80,7 +80,7 @@ Power Query connectors use two different Microsoft Entra client IDs. Preauthoriz
 
 | Client ID | Application Name | Used By |
 | :-------- | :--------------- | :------ |
-| 11112222-bbbb-3333-cccc-4444dddd5555 | Power Query for Excel | Desktop environments |
+| a672d62c-fc7b-4e81-a576-e60dc46e951d | Power Query for Excel | Desktop environments |
 | b52893c8-bc2e-47fc-918b-77022b299bbc | Power BI Data Refresh | Service environments |
 
 To preauthorize the Power Query client IDs:
