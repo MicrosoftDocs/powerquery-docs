@@ -1,12 +1,12 @@
 ---
-title: KX kdb Insights Enterprise Power Query Connector
+title: KX kdb Insights Enterprise Power Query Connector (Beta)
 description: Provides basic information, prerequisites, and instructions on how to connect to kdb Insights Enterprise
 author: liznorris
 ms.date: 11/15/2024
 ms.author: dougklo
 ---
 
-# KX kdb Insights Enterprise Power Query Connector
+# KX kdb Insights Enterprise Power Query Connector (Beta)
 
 > [!NOTE]
 > The following connector article is provided by KX Systems Inc., the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the [KX](https://www.kx.com) website and use the support channels there.
@@ -17,7 +17,7 @@ ms.author: dougklo
 | Item	                        | Description                 |
 | ------------------------------ | --------------------------- |
 | Release State                  | General Availability        |
-| Products                       | Power BI                    |
+| Products                       | Power BI (Semantic models)<br>Power BI (Dataflows)<br>Fabric (Dataflow Gen2)                   |
 | Authentication Types Supported | Username/Password<br/>OAuth |
 
 The connector enables Microsoft Power BI users to remotely connect, explore, query data, preview tables, and harness the power and performance of kdb Insights Enterprise analytics before importing datasets into Power BI for visualization.
