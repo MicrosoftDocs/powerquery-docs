@@ -50,7 +50,7 @@ Follow these steps to migrate a standard V1 dataflow to a standard V2 dataflow.
 
    Add the new standard V2 dataflow to the solution using **Add existing** -> **Automation** -> **Dataflow**, and then **Publish all customization**. For more information, go to [Solutions in Power Apps](/power-apps/maker/data-platform/solutions-overview).
 
-   :::image type="content" source="media/migrate-standard-v1-to-v2-dataflow/add-existing-automation-dataflow.png" alt-text="<alt text>":::
+   :::image type="content" source="media/migrate-standard-v1-to-v2-dataflow/add-existing-automation-dataflow.png" alt-text="Screenshot of the automation dataflow option to select under the add existing option menu.":::
 
 1. Once the new standard V2 dataflow is configured and validated, we recommend that you delete the old standard V1 dataflow.
 
