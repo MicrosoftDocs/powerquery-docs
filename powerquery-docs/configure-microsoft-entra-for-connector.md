@@ -134,7 +134,7 @@ You might see this error if your resource application hasn't preauthorized the P
 
 ### Connector's Aad record is missing a Scope value
 
-> access_denied: AADSTS650053: The application 'Microsoft Power Query for Excel' asked for scope 'user_impersonation' that doesn't exist on the resource '44994a60-7f50-4eca-86b2-5d44f873f93f'. Contact the app vendor.
+> access_denied: AADSTS650053: The application 'Microsoft Power Query for Excel' asked for scope 'user_impersonation' that doesn't exist on the resource '00001111-aaaa-2222-bbbb-3333cccc4444'. Contact the app vendor.
 
 Power Query requests the `user_impersonation` scope if the connector's `Aad` record doesn't define a `Scope` field, or the `Scope` value is `null`. You can resolve this issue by defining a `Scope` value in the connector. Using the `.default` scope is recommended, but you can also specify scopes at the connector level (for example - `Data.Read`).
 
