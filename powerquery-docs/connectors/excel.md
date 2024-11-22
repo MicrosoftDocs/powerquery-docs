@@ -3,7 +3,7 @@ title: Power Query Excel connector
 description: Provides basic information and prerequisites for the connector, along with troubleshooting tips, how to fix missing or incomplete Excel data, and improve performance.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 2/7/2024
+ms.date: 11/22/2024
 ms.author: dougklo
 ---
 
@@ -189,5 +189,5 @@ However, sometimes this error can happen when a file appears to be an Open XML f
 ## Known issues and limitations
 
 * Power Query Online is unable to access encrypted Excel files. Since Excel files labeled with sensitivity types other than "Public" or "Non-Business" are encrypted, they aren't accessible through Power Query Online.
-* Power Query Online doesn't support password-protected Excel files. 
-
+* Power Query Online doesn't support password-protected Excel files.
+* The [Excel.Workbook](/powerquery-m/excel-workbook) `useHeaders` option converts numbers and dates to text using the current culture, and thus behaves differently when run in environments with different operating systme cultures set. We recommend using [Table.PromoteHeaders](/powerquery-m/table-promoteheaders) instead.
