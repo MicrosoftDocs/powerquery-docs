@@ -1,22 +1,22 @@
 ---
 title: Power Query Automy Data Analytics Connector
 description: Provides basic information and prerequisites for the Automy Data Analytics connector
-author: DougKlopfenstein
+author: cquintero89
 ms.topic: conceptual
-ms.date: 1/8/2024
+ms.date: 11/25/2024
 ms.author: dougklo
 ---
 
-# Automy Data Analytics (Beta)
+# Automy Data Analytics
 
 > [!NOTE]
->The following connector article is provided by ACEROYALTY, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the ACEROYALTY website and use the support channels there.
+>The following connector article is provided by AUTOMY, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the AUTOMY website and use the support channels there.
 
 ## Summary
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | Beta |
+| Release State | Production |
 | Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Automy Report Token |
 
@@ -27,6 +27,17 @@ Before you can sign in to Automy Data Analytics, you must have an Automy Report 
 ## Capabilities Supported
 
 * Import
+* Optional date range parameters for certain tables and functions
+
+## New Features in Version 1.2.1
+
+- **Added Tables:**
+  - **Delegations**
+  - **Delegation Items**
+  - **Delegated Tasks**
+  - **Instance Approvers**
+- **Optional Date Range Parameters:**
+  - Added optional `start` and `end` parameters to certain tables and functions to support filtering by date range.
 
 ## Connect to Automy Data Analytics data
 
@@ -44,7 +55,7 @@ To connect to Automy Data Analytics data:
 
    Once you've succeeded, select **Connect**.
 
-4. In the Automy Data Analytics window that appears, select the correct parameters to prepare the connection. Select the type of report and data type and completed the token information, and then select **Ok**.
+4. In the Automy Data Analytics window that appears, select the correct parameters to prepare the connection. Select the type of report and data type and complete the token information, and then select **Ok**.
 
    > [!NOTE]
    > You can generate an authentication token for reports using the configuration option in Automy.
