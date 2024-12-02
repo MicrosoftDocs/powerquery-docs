@@ -111,13 +111,13 @@ Once you've selected the advanced options you require, select **OK** in Power Qu
 
 ## New Snowflake connector implementation (Preview)
 
-In the December 2024 release for Power BI Desktop, we introduced a new implementation for the Snowflake connector, currently available in preview. This capability is enabled by default for all newly created connections.
+In the December 2024 release for Power BI Desktop, we introduced a new implementation for the Snowflake connector to enhance the integration with Snowflake, currently available in preview. We encourage you to try it out and [provide us feedback](https://aka.ms/snowflake-connector-feedback).
 
-If you need to change this setting, you can navigate to Options -> Preview features, and deselect the "Use new Snowflake connector implementation" option.
+To access this feature, in Power BI Desktop, navigate to **Options and settings** (under the File Menu) -> **Options** -> **Preview features**, click the checkbox to enable the "Use new Snowflake connector implementation" option. Once the option is on, all the newly created connections will automatically use the new connector implementation.
 
 :::image type="content" source="./media/snowflake/new-implementation-option.png" alt-text="Screenshot of the new Snowflake implementation option in Power BI Desktop.":::
 
-Your existing connections remain unchanged. You can try out the feature by adding the `Implementation="2.0"` flag in Snowflake.Databases in your queries as follows.
+Your existing connections remain unchanged. You can also try out the feature by adding the `Implementation="2.0"` flag in Snowflake.Databases in your queries as follows. This property differentiates the version of connector you are using. 
 
 ```
 Source = Snowflake.Databases("contoso.snowflakecomputing.com", "CONTOSO_WH", Implementation="2.0")
