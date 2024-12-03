@@ -22,7 +22,7 @@ ms.author: dougklo
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 > [!NOTE]
-> Proxy configuration are not supported with this connector as it uses TCP/IP connection. Proxy is only detected when using [HTTP MSMDPUMP.dll endpoint](https://learn.microsoft.com/en-us/analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0?view=asallproducts-allversions)
+> Proxy configuration isn't supported with this connector as it uses a TCP/IP connection. Proxy is only detected when using an [HTTP MSMDPUMP.dll endpoint](/analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0).
 
 ## Prerequisites
 
