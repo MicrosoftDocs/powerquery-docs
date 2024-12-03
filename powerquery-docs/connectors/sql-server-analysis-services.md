@@ -3,7 +3,7 @@ title: Power Query SQL Server Analysis Services database connector
 description: Includes basic information about products that use the SQL Server Analysis Services database connector, supported authentication types, prerequisites, and connection instructions.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/24/2024
+ms.date: 11/24/2024
 ms.author: dougklo
 ---
 
@@ -20,6 +20,9 @@ ms.author: dougklo
 
 > [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+
+> [!NOTE]
+> Proxy configuration isn't supported with this connector as it uses a TCP/IP connection. Proxy is only detected when using an [HTTP MSMDPUMP.dll endpoint](/analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0).
 
 ## Prerequisites
 
