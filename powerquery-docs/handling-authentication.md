@@ -3,7 +3,7 @@ title: Handling authentication for Power Query connectors
 description: Manage authentication for Power Query connectors
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 1/17/2024
+ms.date: 12/4/2024
 ms.author: miescobar
 ---
 
@@ -156,7 +156,7 @@ AuthorizationUri = (dataSourcePath) => FunctionThatDeterminesAadEndpointFromData
 ```
 
 ```powerquery-m
-Resource = "77256ee0-fe79-11ea-adc1-0242ac120002"   // Microsoft Entra ID resource value for your service - Guid or URL
+Resource = "44445555-eeee-6666-ffff-7777aaaa8888"   // Microsoft Entra ID resource value for your service - Guid or URL
 ```
 
 ```powerquery-m
@@ -175,7 +175,7 @@ Requesting the [.default scope](/entra/identity-platform/scopes-oidc#the-default
 Authentication = [
     Aad = [
         AuthorizationUri = "https://login.microsoftonline.com/common/oauth2/authorize",
-        Resource = "77256ee0-fe79-11ea-adc1-0242ac120002", // Entra Application ID URI or app guid
+        Resource = "44445555-eeee-6666-ffff-7777aaaa8888", // Entra Application ID URI or app guid
         Scope = ".default"
     ]
 ]
