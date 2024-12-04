@@ -19,17 +19,17 @@ As an alternative to local file storage, you can store credentials in an [Azure 
 
 | Variable                   | Details                                                                               | Sample                               |
 | -------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------ |
-| PQTEST_AZURE_CLIENT_ID     | ID (GUID) for the Microsoft Entra ID application authorized to access your key vault. | c265f4e8-a32f-4548-a21e-3542ec65134a |
+| PQTEST_AZURE_CLIENT_ID     | ID (GUID) for the Microsoft Entra ID application authorized to access your key vault. | a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1 |
 | PQTEST_AZURE_CLIENT_SECRET | Client secret for your Microsoft Entra ID application.                                | \<client-secret-placeholder>         |
-| PQTEST_AZURE_TENANT_ID     | ID (GUID) for the tenant that owns the Azure Key Vault.                               | c265f4e8-a32f-4548-a21e-3542ec65134a |
+| PQTEST_AZURE_TENANT_ID     | ID (GUID) for the tenant that owns the Azure Key Vault.                               | a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1 |
 | PQTEST_AZURE_KEY_VAULT_URL | URL to the key vault.                                                                 | `https://<myvault>.vault.azure.net`  |
 
 Example of using the **keyVault** option:
 
 ```PowerShell
-set PQTEST_AZURE_CLIENT_ID="c265f4e8-a32f-4548-a21e-3542ec65134a"
+set PQTEST_AZURE_CLIENT_ID="a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1"
 set PQTEST_AZURE_CLIENT_SECRET="<client-secret-placeholder>"
-set PQTEST_AZURE_TENANT_ID="c265f4e8-a32f-4548-a21e-3542ec65134a"
+set PQTEST_AZURE_TENANT_ID="a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1"
 set PQTEST_AZURE_KEY_VAULT_URL="https://myvault.vault.azure.net"
 
 <Path to PQTest.exe>.\PQTest.exe list-credential --keyVault secretName
