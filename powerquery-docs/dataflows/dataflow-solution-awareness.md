@@ -4,7 +4,7 @@ description: Provides an overview of dataflows in solutions, and includes specia
 author: Luitwieler
 ms.author: jeluitwi
 ms.topic: conceptual 
-ms.date: 2/13/2024 
+ms.date: 12/16/2024 
 
 ---
 # Overview of solution-aware dataflows
@@ -121,6 +121,7 @@ For security reasons, credentials of connections used by dataflows aren't persis
 * Incremental refresh configuration isn't supported when deploying solutions. After deployment of the dataflow via solution, the incremental refresh configuration should be reapplied.
 * Linked tables to other dataflows aren't supported when deploying solutions. After deployment of the dataflow via solution, edit the dataflow and edit the connection to the linked dataflow.
 * To enable dataflow import, the Dataflows plugin performs unmanaged customizations during the asynchronous import step. These modifications are essential for a successful import.
-* Dataflows do not support block of unmanaged customizations. See, [Block unmanaged customizations in Dataverse environments](/power-platform/alm/block-unmanaged-customizations#known-limitations)
-* Dataflows do not support preferred solution. See, [Set a preferred solution](/power-apps/maker/data-platform/preferred-solution#limitations)
+* Dataflows don't support block of unmanaged customizations. For more information, go to [Block unmanaged customizations in Dataverse environments](/power-platform/alm/block-unmanaged-customizations#known-limitations).
+* Dataflows don't support preferred solutions. For more information, go to [Set a preferred solution](/power-apps/maker/data-platform/preferred-solution#limitations).
 * For dataflows to import successfully into an environment, either the environment can't be in administration mode, or background operations need to be enabled.
+* If a dataflow is created as part of the solution and data is loaded into a new table, that table isn't created in the same solution. Therefore, the prefixes of the column schema names shown in the dataflow experience don't match the publisher prefix of the dataflow solution.
