@@ -123,7 +123,7 @@ The Microsoft driver is the same one used in Microsoft Host Integration Server, 
 You can choose to use either the Microsoft driver (default) or the IBM driver if you're using Power Query Desktop. Currently, Power Query Online only uses the Microsoft driver. Each driver has its limitations.
 
 * Microsoft driver
-  * Supports Transport Layer Security (TLS) only with the December 2024 release or Power BI Desktop or later
+  * Supports Transport Layer Security (TLS) only with the December 2024 release of Power BI Desktop or later
 * IBM driver
   * The IBM Db2 database connector, when using the IBM Db2 driver for .NET, doesn't work with Mainframe or IBM i systems
   * Doesn't support DirectQuery
