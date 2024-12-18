@@ -5,6 +5,7 @@ author: ptyx507x
 ms.topic: conceptual
 ms.date: 4/11/2024
 ms.author: miescobar
+ms.subservice: custom-connectors
 ---
 
 # Handling navigation

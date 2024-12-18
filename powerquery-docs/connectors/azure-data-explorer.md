@@ -5,6 +5,7 @@ author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 2/7/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # Azure Data Explorer (Kusto)

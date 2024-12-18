@@ -5,6 +5,7 @@ author: appintbot-leapdev
 ms.topic: conceptual
 ms.date: 04/05/2024
 ms.author: jburchel
+ms.subservice: connectors
 ---
 
 # LEAP (Beta) Power Query custom connector

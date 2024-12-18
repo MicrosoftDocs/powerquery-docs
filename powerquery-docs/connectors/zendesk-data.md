@@ -5,6 +5,7 @@ author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 4/5/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # Zendesk Data (Beta) Power Query custom connector

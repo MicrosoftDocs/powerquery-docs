@@ -5,6 +5,7 @@ author: ptyx507
 ms.date: 1/5/2023
 ms.author: miescobar
 ms.custom: intro-internal
+ms.subservice: get-data
 ---
 
 # Upload a file (Preview)

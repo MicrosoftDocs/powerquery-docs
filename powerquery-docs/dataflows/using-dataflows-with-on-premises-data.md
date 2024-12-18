@@ -7,6 +7,7 @@ ms.reviewer: dougklo
 ms.topic: article
 author: Luitwieler
 ms.author: jeluitwi
+ms.subservice: dataflows
 ---
 
 # Using an on-premises data gateway in Power Platform dataflows

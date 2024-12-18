@@ -5,6 +5,7 @@ author: jonburchel
 ms.topic: conceptual
 ms.date: 04/05/2024
 ms.author: jburchel
+ms.subservice: connectors
 ---
 
 # Samsara Power Query custom connector

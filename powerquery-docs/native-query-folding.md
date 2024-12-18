@@ -4,6 +4,7 @@ description: This article provides information on how to enable query folding ag
 author: ptyx507x
 ms.date: 7/19/2024
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 
 # Query folding on native queries

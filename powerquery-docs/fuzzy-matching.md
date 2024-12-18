@@ -4,6 +4,7 @@ description: "How-to article on the fuzzy matching feature in Power Query and ho
 author: ptyx507x
 ms.date: 5/31/2024
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 
 # How fuzzy matching works in Power Query

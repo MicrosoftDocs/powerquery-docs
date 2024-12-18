@@ -4,6 +4,7 @@ description: Overview of the Data Quality, Column Distribution, and Column Profi
 author: ptyx507
 ms.date: 10/2/2024
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 
 # Using the data profiling tools

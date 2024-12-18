@@ -5,6 +5,7 @@ author: dougklopfenstein
 ms.topic: conceptual
 ms.date: 1/8/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # SAP Business Warehouse connector troubleshooting

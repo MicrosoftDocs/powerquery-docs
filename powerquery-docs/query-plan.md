@@ -6,6 +6,7 @@ author: ptyx507x
 ms.topic: quickstart
 ms.date: 1/5/2023
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 
 # Query plan for Power Query (Preview)

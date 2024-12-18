@@ -6,6 +6,7 @@ ms.author: davidi
 ms.custom: seodec18
 ms.topic: how-to
 ms.date: 2/4/2022
+ms.subservice: connectors
 ---
 
 # Enable encryption for SAP HANA

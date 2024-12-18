@@ -4,6 +4,7 @@ description: Using Query Diagnostics to diagnose what operations and data source
 author: ptyx507x
 ms.date: 7/22/2024
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 
 # Query diagnostics

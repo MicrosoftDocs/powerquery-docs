@@ -6,6 +6,7 @@ ms.date: 3/13/2024
 ms.author: miescobar
 ms.topic: conceptual
 ms.search.form: DataflowGen2 Overview
+ms.subservice: transform-data
 ---
 # Best practices when working with Power Query
 

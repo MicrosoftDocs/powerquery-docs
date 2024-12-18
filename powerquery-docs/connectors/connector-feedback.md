@@ -6,6 +6,7 @@ author: ptyx507x
 ms.reviewer: dougklo
 ms.date: 1/8/2024
 ms.author: miescobar
+ms.subservice: user-assistance
 ---
 
 # Power Query connector feedback

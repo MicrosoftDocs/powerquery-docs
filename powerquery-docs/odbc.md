@@ -5,6 +5,7 @@ author: ptyx507x
 ms.topic: conceptual
 ms.date: 8/20/2024
 ms.author: miescobar
+ms.subservice: custom-connectors
 ---
 
 # Enabling DirectQuery for an ODBC-based connector

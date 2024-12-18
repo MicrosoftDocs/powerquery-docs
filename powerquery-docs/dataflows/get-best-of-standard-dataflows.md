@@ -6,6 +6,7 @@ ms.reviewer: dougklo
 ms.topic: conceptual
 ms.date: 1/6/2023
 ms.author: jeluitwi
+ms.subservice: dataflows
 ---
 
 # Field mapping considerations for standard dataflows

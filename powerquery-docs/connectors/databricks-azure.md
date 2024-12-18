@@ -6,6 +6,7 @@ author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 2/1/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # Azure Databricks

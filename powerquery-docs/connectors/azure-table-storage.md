@@ -5,6 +5,7 @@ author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 3/26/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # Azure Table Storage

@@ -2,11 +2,10 @@
 title: TripPin 7 - Advanced Schema
 description: Adding an advanced schema with typing to your TripPin REST connector.
 author: ptyx507x
-
-
 ms.topic: tutorial
 ms.date: 5/17/2023
 ms.author: miescobar
+ms.subservice: custom-connectors
 ---
 
 # TripPin part 7 - Advanced schema with M types

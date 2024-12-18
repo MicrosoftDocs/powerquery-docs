@@ -5,6 +5,7 @@ author: lmasterson
 ms.topic: conceptual
 ms.date: 04/11/2024
 ms.author: jburchel
+ms.subservice: connectors
 ---
 
 # LinkedIn Learning - Power BI connector

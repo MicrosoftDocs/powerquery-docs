@@ -4,6 +4,7 @@ description: This article provides information about the various reasons that a 
 author: ptyx507x
 ms.date: 8/22/2024
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 
 # Why does my query run multiple times?

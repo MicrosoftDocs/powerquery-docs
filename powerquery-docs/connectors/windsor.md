@@ -5,6 +5,7 @@ author: lanceris
 ms.author: miescobar
 ms.topic: conceptual
 ms.date: 06/19/2024
+ms.subservice: connectors
 ---
 
 # Windsor (Beta) Power Query custom connector

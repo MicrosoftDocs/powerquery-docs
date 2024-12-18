@@ -5,6 +5,7 @@ author: ptyx507
 ms.date: 5/17/2024
 ms.author: dougklo
 ms.reviewer: miescobar
+ms.subservice: get-data
 ---
 
 # Change the gateway used in a dataflow project

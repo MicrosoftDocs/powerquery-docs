@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.date: 1/18/2024
 ms.author: dougklo
 LocalizationGroup: reference
+ms.subservice: connectors
 ---
 
 # Azure Analysis Services database

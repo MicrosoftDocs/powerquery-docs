@@ -4,6 +4,7 @@ description: Describes how to keep columns in a table by either choosing to keep
 author: ptyx507
 ms.date: 7/24/2024
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 
 # Choose or remove columns

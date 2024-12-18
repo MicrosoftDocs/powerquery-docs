@@ -4,6 +4,7 @@ description: Describes how to parse or interpret a JSON or XML string in a table
 author: ptyx507
 ms.date: 7/23/2024
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 
 # Parse text as JSON or XML

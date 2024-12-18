@@ -5,6 +5,7 @@ ms.date: 1/17/2024
 ms.author: jeluitwi
 author: Luitwieler
 ms.topic: how-to
+ms.subservice: dataflows
 ---
 
 # Connect Azure Data Lake Storage Gen2 for dataflow storage

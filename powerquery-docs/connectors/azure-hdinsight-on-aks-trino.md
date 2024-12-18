@@ -5,6 +5,7 @@ author: georgewfisher
 ms.topic: conceptual
 ms.date: 10/24/2024
 ms.author: gefisher
+ms.subservice: connectors
 ---
 
 # Azure HDInsight on AKS Trino (Beta) (Deprecated)

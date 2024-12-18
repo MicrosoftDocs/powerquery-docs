@@ -5,6 +5,7 @@ author: diegomotasuper
 ms.topic: conceptual
 ms.date: 04/05/2024
 ms.author: jburchel
+ms.subservice: connectors
 ---
 
 # Supermetrics Power Query custom connector

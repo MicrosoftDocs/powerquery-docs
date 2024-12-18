@@ -5,6 +5,7 @@ author: hansenms
 ms.topic: conceptual
 ms.date: 7/25/2023
 ms.author: mihansen
+ms.subservice: connectors
 ---
 
 # FHIR Relationships

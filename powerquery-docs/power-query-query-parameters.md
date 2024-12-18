@@ -4,6 +4,7 @@ description: An article on how to use parameters in Power Query
 author: ptyx507x
 ms.date: 03/29/2024
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 # Using parameters
 

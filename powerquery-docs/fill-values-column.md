@@ -4,6 +4,7 @@ description: With Power Query, you can use the values in a column to fill down o
 author: ptyx507
 ms.date: 6/13/2024
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 
 # Fill values in a column

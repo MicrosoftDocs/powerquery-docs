@@ -5,6 +5,7 @@ author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 2/14/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # Troubleshooting the Web connector

@@ -5,6 +5,7 @@ author: ptyx507x
 ms.author: miescobar
 ms.topic: conceptual
 ms.date: 1/9/2023
+ms.subservice: transform-data
 ---
 
 # Optimize Power Query when expanding table columns

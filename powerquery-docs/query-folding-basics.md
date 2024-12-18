@@ -5,6 +5,7 @@ author: migueesc123
 ms.date: 6/10/2024
 ms.author: miescobar
 ms.topic: overview
+ms.subservice: transform-data
 ---
 
 # Overview of query evaluation and query folding in Power Query

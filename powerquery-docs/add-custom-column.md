@@ -4,6 +4,7 @@ description: An article that demonstrates how to create a custom column in Power
 author: ptyx507x
 ms.date: 7/18/2024
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 
 # Add a custom column

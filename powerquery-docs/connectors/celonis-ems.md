@@ -4,6 +4,7 @@ description: Provides basic information, prerequisites, and connection steps for
 author: capono
 ms.date: 1/8/2024 
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # Celonis EMS

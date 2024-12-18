@@ -5,6 +5,7 @@ author: ptyx507x
 ms.topic: overview
 ms.date: 6/14/2024
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 
 # Power Query template (preview)

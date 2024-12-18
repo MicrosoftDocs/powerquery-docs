@@ -4,6 +4,7 @@ description: Provides basic information and prerequisites for using the Palantir
 author: mshafer
 ms.date: 1/24/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # Palantir Foundry

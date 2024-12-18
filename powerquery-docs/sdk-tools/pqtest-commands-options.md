@@ -5,6 +5,7 @@ author: ryan-syed
 ms.topic: conceptual
 ms.date: 02/14/2024
 ms.author: v-ryansyed
+ms.subservice: custom-connectors
 ---
 
 # Commands and options

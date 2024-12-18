@@ -5,6 +5,7 @@ author: ptyx507x
 ms.topic: conceptual
 ms.date: 1/8/2024
 ms.author: miescobar
+ms.subservice: get-data
 ---
 
 # Import data from a database using native database query

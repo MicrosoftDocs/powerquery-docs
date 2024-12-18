@@ -5,6 +5,7 @@ author: Luitwieler
 ms.topic: conceptual 
 ms.date: 11/20/2024 
 ms.author: jeluitwi 
+ms.subservice: dataflows
 --- 
 
 # Understanding the differences between dataflow types
