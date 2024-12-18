@@ -4,6 +4,7 @@ description: Within Power Query, you maneuver around the different queries in th
 author: ptyx507x
 ms.date: 1/9/2023
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 
 

@@ -5,6 +5,7 @@ author: StijnKing
 ms.topic: conceptual
 ms.date: 1/24/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # Eduframe Reporting (Beta)

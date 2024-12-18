@@ -5,6 +5,7 @@ author: ptyx507x
 ms.date: 5/31/2024
 ms.author: miescobar
 ms.custom: edited
+ms.subservice: transform-data
 ---
 
 # Grouping or summarizing rows

@@ -4,6 +4,7 @@ description: Applied steps show the transformations to the data.
 author: ptyx507x
 ms.date: 12/5/2024
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 
 # Using the Applied Steps list

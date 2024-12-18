@@ -5,6 +5,7 @@ author: bentsileviav
 ms.topic: conceptual
 ms.date: 9/30/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # ClickHouse (Beta)

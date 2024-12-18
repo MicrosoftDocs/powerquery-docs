@@ -4,6 +4,7 @@ description: An introduction to the combine files feature describing the process
 author: ptyx507
 ms.date: 7/19/2024
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 
 # Combine files overview

@@ -6,6 +6,7 @@ author: mattmasson
 ms.reviewer: dougklo
 ms.date: 10/12/2021
 ms.author: mmasson
+ms.subservice: get-data
 ---
 
 # Enabling Microsoft Edge (Chromium) for OAuth authentication in Power BI Desktop

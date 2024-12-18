@@ -5,6 +5,7 @@ author: DougKlopfenstein
 ms.topic: how-to
 ms.date: 1/8/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 # Get webpage data by providing examples
 

@@ -6,7 +6,7 @@ author: ahudson8
 ms.topic: conceptual
 ms.date: 7/29/2024
 ms.author: alhudso
-
+ms.subservice: connectors
 ---
 
 # Azure Resource Graph

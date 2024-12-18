@@ -5,6 +5,7 @@ author: jbolinsky
 ms.topic: conceptual
 ms.date: 5/2/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # Intersystems Health Insight

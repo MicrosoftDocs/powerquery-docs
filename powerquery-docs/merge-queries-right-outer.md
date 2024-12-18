@@ -5,6 +5,7 @@ author: ptyx507
 ms.date: 8/15/2024
 ms.author: miescobar
 ms.custom: edited
+ms.subservice: transform-data
 ---
 
 # Right outer join

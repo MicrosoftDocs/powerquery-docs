@@ -4,6 +4,7 @@ description: This article describes the process and specifics of the authenticat
 author: ptyx507x
 ms.date: 3/7/2024
 ms.author: miescobar
+ms.subservice: get-data
 ---
 
 # Connections and authentication in Power Query Online

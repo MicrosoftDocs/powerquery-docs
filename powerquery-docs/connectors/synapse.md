@@ -5,6 +5,7 @@ author: miquelladeboer
 ms.topic: conceptual
 ms.date: 1/24/2024
 ms.author: mideboer
+ms.subservice: connectors
 ---
 
 # Azure Synapse Analytics workspace (Beta)

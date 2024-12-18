@@ -4,6 +4,7 @@ description: Add a new column to an existing table in Power Query that ranks the
 author: ptyx507x
 ms.date: 7/17/2024
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 
 # Rank column (Preview)

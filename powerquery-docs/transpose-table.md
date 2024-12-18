@@ -5,6 +5,7 @@ author: ptyx507
 ms.date: 6/10/2024
 ms.author: miescobar
 ms.custom: edited
+ms.subservice: transform-data
 ---
 
 # Transpose a table

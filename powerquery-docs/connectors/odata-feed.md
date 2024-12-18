@@ -5,6 +5,7 @@ author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 4/12/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # OData Feed

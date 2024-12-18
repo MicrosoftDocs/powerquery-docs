@@ -5,6 +5,7 @@ author: Luitwieler
 ms.topic: conceptual
 ms.date: 6/13/2023
 ms.author: jeluitwi
+ms.subservice: dataflows
 ---
 
 # Computed table scenarios and use cases

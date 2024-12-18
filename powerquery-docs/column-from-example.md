@@ -5,6 +5,7 @@ author: ptyx507
 ms.date: 8/19/2024
 ms.author: miescobar
 ms.custom: edited
+ms.subservice: transform-data
 ---
 
 # Add a column from examples

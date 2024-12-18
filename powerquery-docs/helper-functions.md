@@ -5,6 +5,7 @@ author: ptyx507x
 ms.topic: conceptual
 ms.date: 8/22/2024
 ms.author: miescobar
+ms.subservice: custom-connectors
 ---
 
 # Helper functions

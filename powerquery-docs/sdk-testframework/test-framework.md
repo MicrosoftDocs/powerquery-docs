@@ -5,6 +5,7 @@ author: ryan-syed
 ms.topic: reference
 ms.date: 01/19/2024
 ms.author: v-ryansyed
+ms.subservice: custom-connectors
 ---
 
 # Power Query SDK test framework reference

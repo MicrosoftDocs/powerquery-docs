@@ -5,6 +5,7 @@ author: Julian-Brandrick
 ms.topic: reference
 ms.date: 01/09/2024
 ms.author: v-jbrandrick
+ms.subservice: custom-connectors
 ---
 
 # Power Query SDK test framework part 7 - Pipeline guide

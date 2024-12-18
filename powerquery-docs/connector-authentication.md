@@ -5,6 +5,7 @@ author: ptyx507x
 ms.topic: conceptual
 ms.date: 12/5/2024
 ms.author: miescobar
+ms.subservice: get-data
 ---
 
 # Authentication in desktop apps

@@ -5,6 +5,7 @@ author: joefields
 ms.topic: conceptual
 ms.date: 6/7/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # BuildingConnected (Beta)

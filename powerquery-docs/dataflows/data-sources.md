@@ -5,6 +5,7 @@ author: Luitwieler
 ms.topic: conceptual
 ms.date: 7/24/2024
 ms.author: jeluitwi
+ms.subservice: dataflows
 ---
 
 # Connect to data sources for dataflows

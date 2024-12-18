@@ -6,6 +6,7 @@ author: ptyx507x
 ms.topic: quickstart
 ms.date: 9/16/2024
 ms.author: miescobar
+ms.subservice: custom-connectors
 ---
 
 # Develop a connector using the Power Query SDK

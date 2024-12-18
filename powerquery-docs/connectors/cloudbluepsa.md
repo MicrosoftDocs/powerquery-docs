@@ -5,6 +5,7 @@ author: mohsad06
 ms.topic: conceptual
 ms.date: 2/1/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # CloudBluePSA (Beta)

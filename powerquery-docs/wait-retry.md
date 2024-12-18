@@ -5,6 +5,7 @@ author: mattmasson
 ms.topic: conceptual
 ms.date: 2/16/2023
 ms.author: mmasson
+ms.subservice: custom-connectors
 ---
 
 # Wait-Retry Pattern

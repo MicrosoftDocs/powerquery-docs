@@ -2,11 +2,10 @@
 title: TripPin 2 - REST
 description: Starting a REST connector for the TripPin sample service
 author: ptyx507x
-
-
 ms.topic: tutorial
 ms.date: 5/16/2024
 ms.author: miescobar
+ms.subservice: custom-connectors
 ---
 
 # TripPin part 2 - Data connector for a REST service

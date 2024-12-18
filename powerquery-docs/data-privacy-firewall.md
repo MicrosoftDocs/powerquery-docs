@@ -5,6 +5,7 @@ author: ehrenMSFT
 ms.topic: conceptual
 ms.date: 8/1/2024
 ms.author: ehvonleh
+ms.subservice: transform-data
 ---
 
 # Behind the scenes of the Data Privacy Firewall

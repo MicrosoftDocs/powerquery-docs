@@ -5,6 +5,7 @@ author: ptyx507x
 ms.date: 04/11/2022
 ms.author: miescobar
 ms.custom: intro-internal
+ms.subservice: transform-data
 ---
 
 # Global search box (Preview)

@@ -5,7 +5,7 @@ author: Luitwieler
 ms.author: jeluitwi
 ms.topic: conceptual 
 ms.date: 12/16/2024 
-
+ms.subservice: dataflows
 ---
 # Overview of solution-aware dataflows
 

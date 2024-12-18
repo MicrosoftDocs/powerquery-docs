@@ -5,6 +5,7 @@ author: ptyx507x
 ms.topic: conceptual
 ms.date: 2/14/2023
 ms.author: miescobar
+ms.subservice: custom-connectors
 ---
 
 # List of Samples

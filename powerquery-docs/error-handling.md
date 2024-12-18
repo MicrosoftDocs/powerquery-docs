@@ -4,6 +4,7 @@ description: An article on how to catch and handle errors in Power Query using t
 author: ptyx507x
 ms.date: 5/15/2024
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 
 # Error handling

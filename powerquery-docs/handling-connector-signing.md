@@ -5,6 +5,7 @@ author: ptyx507x
 ms.topic: conceptual
 ms.date: 12/1/2021
 ms.author: miescobar
+ms.subservice: custom-connectors
 ---
 
 # Handling Power Query Connector Signing 

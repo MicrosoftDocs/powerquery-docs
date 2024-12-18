@@ -5,7 +5,7 @@ author: Luitwieler
 ms.topic: conceptual
 ms.date: 1/6/2023
 ms.author: jeluitwi
-
+ms.subservice: dataflows
 ---
 # How to migrate queries from Power Query in the desktop (Power BI and Excel) to dataflows
 

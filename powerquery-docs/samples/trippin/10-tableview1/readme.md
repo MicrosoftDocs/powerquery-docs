@@ -5,6 +5,7 @@ author: ptyx507x
 ms.topic: tutorial
 ms.date: 5/17/2024
 ms.author: miescobar
+ms.subservice: custom-connectors
 ---
 
 # TripPin part 10 - Basic query folding

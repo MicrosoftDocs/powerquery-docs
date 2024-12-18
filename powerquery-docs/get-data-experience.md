@@ -6,6 +6,7 @@ ms.date: 6/5/2024
 ms.author: miescobar
 ms.topic: overview
 ms.search.form: DataflowGen2 Overview
+ms.subservice: get-data
 ---
 
 # Getting data overview

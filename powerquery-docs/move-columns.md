@@ -1,13 +1,11 @@
 ---
 title: Move columns
-
 description: How to move a column to the location you want in Power Query.
 author: ptyx507x
-
 ms.reviewer: dougklo
 ms.date: 1/24/2024
 ms.author: miescobar
-
+ms.subservice: transform-data
 ---
 
 # Move columns

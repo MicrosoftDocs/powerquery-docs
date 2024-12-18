@@ -5,6 +5,7 @@ author: innovation-team
 ms.topic: conceptual
 ms.date: 07/25/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # Wolters Kluwer CCH Tagetik

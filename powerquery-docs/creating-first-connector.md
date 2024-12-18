@@ -5,6 +5,7 @@ author: ptyx507x
 ms.date: 5/15/2024
 ms.author: miescobar
 ms.custom: intro-internal
+ms.subservice: custom-connectors
 ---
 
 # Creating your first connector: Hello World

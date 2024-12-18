@@ -4,6 +4,7 @@ description: Query folding indicators in Power Query Online help you understand 
 author: ptyx507x
 ms.date: 5/6/2024
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 
 # Query folding indicators

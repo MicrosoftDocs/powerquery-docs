@@ -5,6 +5,7 @@ author: Luitwieler
 ms.topic: conceptual
 ms.date: 3/4/2024
 ms.author: jeluitwi
+ms.subservice: dataflows
 ---
 
 # Trigger dataflows and Power BI semantic models sequentially

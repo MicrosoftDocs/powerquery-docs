@@ -5,6 +5,7 @@ author: ptyx507x
 ms.topic: conceptual
 ms.date: 8/3/2022
 ms.author: miescobar
+ms.subservice: custom-connectors
 ---
 
 # Handling Data Access

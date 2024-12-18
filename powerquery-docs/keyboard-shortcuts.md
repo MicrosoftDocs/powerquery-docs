@@ -5,6 +5,7 @@ author: ptyx507x
 ms.author: miescobar
 ms.topic: conceptual
 ms.date: 8/16/2024
+ms.subservice: transform-data
 ---
 
 # Keyboard shortcuts in Power Query

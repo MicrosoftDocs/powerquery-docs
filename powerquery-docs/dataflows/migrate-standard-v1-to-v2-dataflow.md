@@ -5,6 +5,7 @@ author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 11/20/2024
 ms.author: dougklo
+ms.subservice: dataflows
 ---
 
 # Migrate a standard V1 dataflow to a standard V2 dataflow

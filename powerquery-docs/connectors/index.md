@@ -5,6 +5,7 @@ author: DougKlopfenstein
 ms.date: 7/18/2024
 ms.author: dougklo
 ms.custom: intro-internal
+ms.subservice: connectors
 ---
 
 # Connectors in Power Query

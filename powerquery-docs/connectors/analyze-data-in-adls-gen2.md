@@ -5,6 +5,7 @@ author: Luitwieler
 ms.topic: conceptual
 ms.date: 6/6/2024
 ms.author: jeluitwi
+ms.subservice: connectors
 ---
 
 # Analyze data in Azure Data Lake Storage Gen2 by using Power BI

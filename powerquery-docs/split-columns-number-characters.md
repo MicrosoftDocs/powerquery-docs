@@ -4,6 +4,7 @@ description: An article on how to Split columns by number of characters into new
 author: ptyx507
 ms.date: 12/13/2022
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 
 # Split columns by number of characters

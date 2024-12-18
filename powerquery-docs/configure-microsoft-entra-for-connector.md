@@ -5,6 +5,7 @@ author: mattmasson
 ms.topic: conceptual
 ms.date: 3/12/2024
 ms.author: mmasson
+ms.subservice: custom-connectors
 ---
 
 # Quickstart: Configuring Microsoft Entra for a custom connector

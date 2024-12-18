@@ -4,6 +4,7 @@ description: This article describes Power Query's lack of support for connecting
 author: mattmasson
 ms.date: 1/17/2024
 ms.author: mmasson
+ms.subservice: get-data
 ---
 
 # Lack of Support for Microsoft Graph in Power Query
