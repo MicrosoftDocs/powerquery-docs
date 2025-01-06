@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for using the Power Qu
 author: DougKlopfenstein
 
 ms.topic: conceptual
-ms.date: 2/1/2024
+ms.date: 1/6/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
@@ -20,7 +20,7 @@ ms.subservice: connectors
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
-| Authentication Types Supported | Azure Active Directory<br/>Personal Access Token<br/> OAuth (OIDC) |
+| Authentication Types Supported | Username/Password<br/>Personal Access Token<br/> OAuth (OIDC) |
 
 > [!NOTE]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
