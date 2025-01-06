@@ -59,7 +59,7 @@ The following table lists the major features differences between standard datafl
 
 An analytical dataflow loads data to storage types optimized for analytics&mdash;Azure Data Lake Storage. Microsoft Power Platform environments and Power BI workspaces provide customers with a managed analytical storage location bundled with those product licenses. In addition, customers can link their organization’s Azure Data Lake storage account as a destination for dataflows.
 
-Analytical dataflows are capable additional analytical features. For example, integration with Power BI’s AI features or use of computed tables, which is discussed later.  
+Analytical dataflows are capable of additional analytical features. For example, integration with Power BI’s AI features or use of computed tables, which is discussed later.  
 
 You can create analytical dataflows in Power BI. By default, they load data to Power BI’s managed storage. But you can also configure Power BI to store the data in the organization’s Azure Data Lake Storage.
 
