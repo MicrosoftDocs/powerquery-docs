@@ -3,7 +3,7 @@ title: Power Query Snowflake connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Snowflake database, along with native query folding instructions and troubleshooting tips.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 11/12/2024
+ms.date: 01/13/2024
 ms.author: dougklo
 ---
 
@@ -22,7 +22,7 @@ ms.author: dougklo
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 > [!NOTE]
-> In the December 2024 release for Power BI Desktop, we introduced a new implementation for the Snowflake connector, currently available in preview. Learn more about [this feature](#new-snowflake-connector-implementation-preview).
+> In the January 2025 release for Power BI Desktop, we introduced a new implementation for the Snowflake connector, currently available in preview. Learn more about [this feature](#new-snowflake-connector-implementation-preview).
 
 ## Capabilities Supported
 
@@ -111,7 +111,7 @@ Once you've selected the advanced options you require, select **OK** in Power Qu
 
 ## New Snowflake connector implementation (Preview)
 
-In the December 2024 release for Power BI Desktop, we introduced a new implementation for the Snowflake connector to enhance the integration with Snowflake, currently available in preview. We encourage you to try it out and [provide us feedback](https://aka.ms/snowflake-connector-feedback).
+In the January 2025 release for Power BI Desktop, we introduced a new implementation for the Snowflake connector to enhance the integration with Snowflake, currently available in preview. We encourage you to try it out and [provide us feedback](https://aka.ms/snowflake-connector-feedback).
 
 To access this feature, in Power BI Desktop, navigate to **Options and settings** (under the File Menu) -> **Options** -> **Preview features**, click the checkbox to enable the "Use new Snowflake connector implementation" option. Once the option is on, all the newly created connections will automatically use the new connector implementation.
 
@@ -124,7 +124,7 @@ Source = Snowflake.Databases("contoso.snowflakecomputing.com", "CONTOSO_WH", Imp
 ```
 
 >[!NOTE]
-> If you're using On-prem Data Gateway to refresh your semantic model, make sure you have the December 2024 version or later to use this feature.
+> If you're using On-prem Data Gateway to refresh your semantic model, make sure you have the January 2025 version or later to use this feature.
 
 To aid with diagnosing any potential issue, you can find the Implementation and DriverType details in your Mashup logs. As an example:
 
