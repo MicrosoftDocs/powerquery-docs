@@ -5,6 +5,7 @@ author: ryan-syed
 ms.topic: overview
 ms.date: 02/14/2024
 ms.author: v-ryansyed
+ms.subservice: custom-connectors
 ---
 
 # PQTest

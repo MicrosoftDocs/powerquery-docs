@@ -5,6 +5,7 @@ author: kyvosdevelopers
 ms.topic: conceptual
 ms.date: 8/14/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # Kyvos ODBC Connector (Beta)

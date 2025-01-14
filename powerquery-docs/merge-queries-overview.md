@@ -5,6 +5,7 @@ author: ptyx507
 ms.date: 5/17/2024
 ms.author: miescobar
 ms.topic: overview
+ms.subservice: transform-data
 ---
 
 # Merge queries overview

@@ -5,6 +5,7 @@ author: ptyx507x
 ms.reviewer: dougklo
 ms.date: 8/27/2024
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 
 # Rename columns

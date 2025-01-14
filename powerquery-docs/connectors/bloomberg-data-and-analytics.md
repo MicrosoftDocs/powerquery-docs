@@ -5,6 +5,7 @@ author: Shrewbitz
 ms.topic: conceptual
 ms.date: 8/14/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # Bloomberg Data and Analytics

@@ -5,6 +5,7 @@ author: ptyx507x
 ms.topic: conceptual
 ms.date: 3/13/2024
 ms.author: miescobar
+ms.subservice: get-data
 ---
 
 # Connect to data using generic interfaces

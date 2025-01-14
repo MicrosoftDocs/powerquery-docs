@@ -5,6 +5,7 @@ author: ptyx507
 ms.date: 12/12/2022
 ms.author: miescobar
 ms.custom: edited
+ms.subservice: transform-data
 ---
 
 # Reverse rows

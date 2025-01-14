@@ -5,6 +5,7 @@ author: Luitwieler
 ms.topic: conceptual
 ms.date: 7/24/2024
 ms.author: jeluitwi
+ms.subservice: dataflows
 ---
 
 # What licenses do you need to use dataflows?

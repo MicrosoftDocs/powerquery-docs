@@ -5,6 +5,7 @@ author: Luitwieler
 ms.topic: overview
 ms.date: 1/26/2024
 ms.author: jeluitwi
+ms.subservice: dataflows
 ---
 
 # Power Automate templates for the dataflows connector

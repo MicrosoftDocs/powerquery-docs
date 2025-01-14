@@ -4,6 +4,7 @@ description: An article on how to share queries in Power Query
 author: ptyx507x
 ms.date: 3/13/2024
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 
 # Share a query

@@ -4,6 +4,7 @@ description: All available methods in Power Query to get files from your SharePo
 author: ptyx507x
 ms.date: 1/24/2024
 ms.author: miescobar
+ms.subservice: get-data
 ---
 
 # SharePoint and OneDrive for Business files import

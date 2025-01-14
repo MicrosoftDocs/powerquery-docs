@@ -5,6 +5,7 @@ author: ptyx507
 ms.date: 5/15/2024
 ms.author: miescobar
 ms.topic: conceptual
+ms.subservice: transform-data
 ---
 
 # Pivot columns

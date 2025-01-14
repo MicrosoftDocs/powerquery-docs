@@ -6,6 +6,7 @@ author: ptyx507x
 ms.topic: quickstart
 ms.date: 5/15/2024
 ms.author: miescobar
+ms.subservice: custom-connectors
 ---
 # Power Query SDK Overview
 

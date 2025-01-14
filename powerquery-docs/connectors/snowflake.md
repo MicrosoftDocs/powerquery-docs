@@ -5,6 +5,7 @@ author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 01/13/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # Snowflake

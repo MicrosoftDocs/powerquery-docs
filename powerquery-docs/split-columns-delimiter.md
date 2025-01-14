@@ -4,6 +4,7 @@ description: An article on how to Split columns by delimiter into new columns or
 author: ptyx507
 ms.date: 5/6/2024
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 
 # Split columns by delimiter

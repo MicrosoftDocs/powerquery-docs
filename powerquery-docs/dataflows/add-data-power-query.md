@@ -6,6 +6,7 @@ ms.reviewer: dougklo
 ms.topic: how-to
 ms.date: 10/3/2024
 ms.author: jeluitwi
+ms.subservice: dataflows
 ---
 
 # Add data to a table in Microsoft Dataverse by using Power Query

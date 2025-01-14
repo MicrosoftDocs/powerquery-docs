@@ -4,6 +4,7 @@ description: With the unpivot columns feature in Power Query, you can transform 
 author: ptyx507
 ms.date: 6/11/2024
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 
 # Unpivot columns

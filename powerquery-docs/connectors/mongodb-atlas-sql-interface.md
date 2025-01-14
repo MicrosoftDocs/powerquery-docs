@@ -5,6 +5,7 @@ author: bucaojit
 ms.author: dougklo
 ms.topic: conceptual  
 ms.date: 1/24/2024  
+ms.subservice: connectors
 ---
 
 # MongoDB Atlas SQL interface

@@ -4,6 +4,7 @@ description: Schema view optimizes the experience when working on schema-related
 author: ptyx507x
 ms.author: miescobar
 ms.date: 1/9/2023
+ms.subservice: transform-data
 ---
 
 # Using Schema view (Preview)

@@ -5,6 +5,7 @@ author: dougklopfenstein
 ms.topic: conceptual
 ms.date: 1/25/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # SAP Business Warehouse Message Server

@@ -4,6 +4,7 @@ description: This article demonstrates how to append table queries in Power Quer
 author: ptyx507
 ms.date: 5/6/2024
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 
 # Append queries

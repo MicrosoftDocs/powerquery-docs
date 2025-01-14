@@ -4,6 +4,7 @@ description: Overview of the manage connections feature in Power Query Online th
 author: ptyx507
 ms.date: 6/26/2024
 ms.author: miescobar
+ms.subservice: get-data
 ---
 
 # Manage connections (Preview)

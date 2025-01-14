@@ -5,6 +5,7 @@ author: ptyx507x
 ms.topic: conceptual
 ms.date: 5/15/2024
 ms.author: miescobar
+ms.subservice: custom-connectors
 ---
 
 # Handling Data source path

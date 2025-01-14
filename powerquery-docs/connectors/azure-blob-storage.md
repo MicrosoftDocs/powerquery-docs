@@ -6,7 +6,7 @@ author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 10/4/2024
 ms.author: dougklo
-
+ms.subservice: connectors
 ---
 
 # Azure Blob Storage

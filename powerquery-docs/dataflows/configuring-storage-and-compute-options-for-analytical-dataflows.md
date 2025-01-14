@@ -5,6 +5,7 @@ author: Luitwieler
 ms.author: jeluitwi
 ms.topic: conceptual
 ms.date: 1/26/2024
+ms.subservice: dataflows
 ---
 
 # Dataflow storage options

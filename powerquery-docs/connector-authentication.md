@@ -3,8 +3,9 @@ title: Authentication in desktop apps
 description: How to select credentials for a connector in Power Query Desktop to authenticate a connection with a data source, how to select the authentication level, and how to edit or delete credentials for specific connectors and sites.
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 3/20/2024
+ms.date: 12/5/2024
 ms.author: miescobar
+ms.subservice: get-data
 ---
 
 # Authentication in desktop apps
@@ -129,7 +130,7 @@ If you need more control over the OAuth flow (for example, if your service must 
 
 ### Microsoft Entra ID client IDs
 
-The following Microsoft Entra ID client IDs are used by Power Query. You might need to explicitly allow these client IDs to access your service and API, depending on your overall Microsoft Entra ID settings. Go to step 8 of [Add a scope](/azure/active-directory/develop/quickstart-configure-app-expose-web-apis#add-a-scope) for more details.
+The following Microsoft Entra ID client IDs are used by Power Query. You might need to explicitly allow these client IDs to access your service and API, depending on your overall Microsoft Entra ID settings. Go to step 6 of [Add a scope](/azure/active-directory/develop/quickstart-configure-app-expose-web-apis#add-a-scope) for more details.
 
 | Client ID  | Title | Description |
 | ---------- | ----- | ----------- |

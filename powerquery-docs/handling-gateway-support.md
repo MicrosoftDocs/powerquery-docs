@@ -5,6 +5,7 @@ author: ptyx507x
 ms.topic: conceptual
 ms.date: 1/9/2023
 ms.author: miescobar
+ms.subservice: custom-connectors
 ---
 
 # Handling Gateway Support

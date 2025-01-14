@@ -5,6 +5,7 @@ author: ptyx507x
 ms.topic: conceptual
 ms.date: 10/16/2022
 ms.author: miescobar
+ms.subservice: custom-connectors
 ---
 
 # Status Code Handling with `Web.Contents`

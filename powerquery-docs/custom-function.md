@@ -5,6 +5,7 @@ author: ptyx507x
 ms.date: 5/3/2024
 ms.author: miescobar
 ms.custom: intro-internal
+ms.subservice: transform-data
 ---
 
 # Using custom functions

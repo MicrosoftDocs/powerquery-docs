@@ -8,6 +8,7 @@ ms.topic: overview
 ms.date: 11/16/2023
 ms.author: miescobar
 ms.search.form: DataflowGen2 Overview
+ms.subservice: transform-data
 ---
 
 # The Power Query user interface

@@ -2,11 +2,10 @@
 title: TripPin 9 - Test Connection
 description: Adding a test connection handler for gateway support to your TripPin REST connector.
 author: ptyx507x
-
-
 ms.topic: tutorial
 ms.date: 5/17/2024
 ms.author: miescobar
+ms.subservice: custom-connectors
 ---
 
 # TripPin part 9 - TestConnection

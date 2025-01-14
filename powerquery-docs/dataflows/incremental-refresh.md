@@ -5,6 +5,7 @@ author: Luitwieler
 ms.topic: conceptual
 ms.date: 1/26/2024
 ms.author: jeluitwi
+ms.subservice: dataflows
 ---
 
 # Using incremental refresh with dataflows

@@ -5,6 +5,7 @@ author: Luitwieler
 ms.topic: conceptual
 ms.date: 3/22/2024
 ms.author: jeluitwi
+ms.subservice: user-assistance
 ---
 
 # Power Query Online limits

@@ -4,6 +4,7 @@ description: Diagram view offers a visual way to prepare data in the Power Query
 author: ptyx507
 ms.date: 11/11/2024
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 
 # Diagram view

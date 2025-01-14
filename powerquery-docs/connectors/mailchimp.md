@@ -5,6 +5,7 @@ author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 1/8/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # Mailchimp (Deprecated)

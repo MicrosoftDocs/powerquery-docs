@@ -4,6 +4,7 @@ description: An article on how to do a merge operation in Power Query using the 
 author: ptyx507
 ms.date: 6/12/2024
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 
 # Left outer join

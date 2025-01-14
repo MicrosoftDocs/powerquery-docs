@@ -3,8 +3,9 @@ title: Where to get data
 description: Describes the process of getting data for Power Query from various Microsoft products.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 3/12/2024
+ms.date: 1/9/2025
 ms.author: dougklo
+ms.subservice: get-data
 ---
 
 # Where to get data
@@ -41,17 +42,22 @@ In Excel for Windows, you can also directly select Text/CSV, Web, and Excel work
 
 To get data in Power BI service:
 
-1. On the left side of Power BI service, select **Workspaces** (but not **My Workspace**).
+1. On the left side of Power BI service, select **Workspaces**.
 
 2. From the Workspace context menu, select the workspace you want to use.
 
-3. From the workspace (in this example, TestWorkspace01), select the context menu next to **New**.
+3. From the workspace (in this example, TestWorkspace01), select **New item**.
 
-4. From the **New** context menu, select **Dataflow**.
+4. From the **New item** page, under **Get data**, select the dataflow version you want to use (either Dataflow Gen1 or Dataflow Gen2).
 
-   :::image type="content" source="media/where-to-get-data/workspace-dataflow.png" alt-text="Screenshot with text workspace open, the context menu for new open, and dataflow emphasized." lightbox="media/where-to-get-data/workspace-dataflow.png":::
+   :::image type="content" source="media/where-to-get-data/workspace-dataflow.png" alt-text="Screenshot with text workspace open, the New item page open, and the two dataflow versions emphasized." lightbox="media/where-to-get-data/workspace-dataflow.png":::
 
-5. From **Define new tables**, select **Add new tables**.
+5. If you select **Dataflow Gen1**:
+   1. From **Define new tables**, select **Add new tables**.
+
+   If you select **Dataflow Gen2**:
+   1. In the **New Dataflow Gen2** dialog, enter the name of your new dataflow and then select **Create**.
+   1. In the Power Query editor, under the **Home** tab, select **Get data**.
 
 6. In the **Choose data source** page, use **Search** to search for the name of the connector, or select **View more** on the right hand side the connector to see a list of all the connectors available in Power BI service.
 
@@ -83,7 +89,7 @@ To import data to a new table in Power Apps:
 
 4. If you choose to view more connectors, you can still use **Search** to search for the name of the connector, or choose a category to see a list of connectors associated with that category.
 
-   :::image type="content" source="media/where-to-get-data/power-apps-view-more.png" alt-text="Screenshot of the Power Apps Choose data source page displayed after selecting view more, including the categories at the top and then the list of connectors." lightbox="media/where-to-get-data/power-apps-view-more.png":::
+   :::image type="content" source="media/where-to-get-data/power-apps-view-more.png" alt-text="Screenshot of the Power Apps Choose data source page displayed after selecting view more, with the list of connectors." lightbox="media/where-to-get-data/power-apps-view-more.png":::
 
 To import data to an existing table in Power Apps:
 
@@ -148,21 +154,21 @@ To get data in Customer Insights:
 
 7. If you choose to view more connectors, you can still use **Search** to search for the name of the connector, or choose a category to see a list of connectors associated with that category.
 
-   :::image type="content" source="media/where-to-get-data/customer-insights-view-more.png" alt-text="Screenshot of the Customer Insights Choose data source page displayed after selecting view more, including the categories at the top and then the list of connectors." lightbox="media/where-to-get-data/customer-insights-view-more.png":::
+   :::image type="content" source="media/where-to-get-data/customer-insights-view-more.png" alt-text="Screenshot of the Customer Insights Choose data source page displayed after selecting view more, with the list of connectors." lightbox="media/where-to-get-data/customer-insights-view-more.png":::
 
-## Get data from Data Factory in Microsoft Fabric (Preview)
+## Get data from Data Factory in Microsoft Fabric
 
 To get data in Data Factory:
 
-1. On the left side of Data Factory, select **Workspaces** (but not **My Workspace**).
+1. On the left side of Data Factory, select **Workspaces**.
 
-2. From your Data Factory workspace, select **New** > **Dataflow Gen2 (Preview)** to create a new dataflow.
+2. From your Data Factory workspace, select **New** > **Dataflow Gen2** to create a new dataflow.
 
    :::image type="content" source="./media/where-to-get-data/select-open-dataflow.png" alt-text="Screenshot showing the workspace where you choose to create a new dataflow." lightbox="./media/where-to-get-data/select-open-dataflow.png":::
 
 3. In Power Query, either select **Get data** in the ribbon or select **Get data from another source** in the current view.
 
-   :::image type="content" source="./media/where-to-get-data/get-data.png" alt-text="Screenshot showing the Power Query workspace with the Get data option emphasized.":::
+   :::image type="content" source="./media/where-to-get-data/get-data.png" alt-text="Screenshot showing the Power Query workspace with the Get data option emphasized." lightbox="./media/where-to-get-data/get-data.png":::
 
 4. In the **Choose data source** page, use **Search** to search for the name of the connector, or select **View more** on the right hand side the connector to see a list of all the connectors available in Power BI service.
 
@@ -170,7 +176,7 @@ To get data in Data Factory:
 
 5. If you choose to view more connectors, you can still use **Search** to search for the name of the connector, or choose a category to see a list of connectors associated with that category.
 
-   :::image type="content" source="media/where-to-get-data/data-factory-view-more.png" alt-text="Screenshot of the Data Factory Choose data source page displayed after selecting view more, including the categories at the top and then the list of connectors." lightbox="media/where-to-get-data/data-factory-view-more.png":::
+   :::image type="content" source="media/where-to-get-data/data-factory-view-more.png" alt-text="Screenshot of the Data Factory Choose data source page displayed after selecting view more, with the list of connectors." lightbox="media/where-to-get-data/data-factory-view-more.png":::
 
 ## Get data in Analysis Services
 

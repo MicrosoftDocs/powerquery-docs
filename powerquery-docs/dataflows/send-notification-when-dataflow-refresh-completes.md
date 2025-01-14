@@ -5,6 +5,7 @@ author: Luitwieler
 ms.topic: conceptual
 ms.date: 1/6/2023
 ms.author: jeluitwi
+ms.subservice: dataflows
 ---
 
 # Send a notification when a dataflow refresh completes

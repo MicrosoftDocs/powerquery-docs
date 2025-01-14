@@ -5,6 +5,7 @@ author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 1/24/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # Impala database
@@ -95,3 +96,4 @@ Here are a few considerations and limitations to keep in mind with the **Impala*
 
 * The Impala connector is supported on the on-premises data gateway, using any of the three supported authentication mechanisms.
 * The Impala connector uses the Impala driver, which limits the size of string types to 32K by default.
+* The Impala connector doesn't support overridding the **Realm** option for Kerberos authentication.

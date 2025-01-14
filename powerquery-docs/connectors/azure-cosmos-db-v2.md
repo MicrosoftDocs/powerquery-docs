@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.date: 1/24/2024
 ms.author: rechalil
 ms.reviewer: dougklo
-LocalizationGroup: reference
+ms.subservice: connectors
 ---
 
 # Azure Cosmos DB v2 (Beta)

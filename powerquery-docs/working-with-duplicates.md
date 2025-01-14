@@ -4,6 +4,7 @@ description: Working with duplicate values in Power Query. An article about how 
 author: ptyx507
 ms.date: 6/11/2024
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 
 # Working with duplicate values

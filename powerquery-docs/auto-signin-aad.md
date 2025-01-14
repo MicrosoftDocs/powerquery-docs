@@ -4,6 +4,7 @@ description: Power Query enables you to automatically sign in to a select set of
 author: ptyx507x
 ms.date: 1/17/2024
 ms.author: miescobar
+ms.subservice: get-data
 ---
 
 # Auto sign in for Microsoft Entra ID data sources

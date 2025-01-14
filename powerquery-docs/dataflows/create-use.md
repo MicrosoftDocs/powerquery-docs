@@ -5,6 +5,7 @@ author: Luitwieler
 ms.topic: conceptual
 ms.date: 1/25/2024
 ms.author: jeluitwi
+ms.subservice: dataflows
 ---
 
 # Create and use dataflows in Microsoft Power Platform
@@ -55,7 +56,8 @@ Most dataflow capabilities are available in both Power Apps and Power BI. Datafl
 
 ## Known limitations
 
-* Copying dataflows as part of a [Power Platform environments copy](/power-platform/admin/copy-environment) operation or [Recover a recently deleted environment](/power-platform/admin/recover-environment) operation isn't supported.
+* Copying dataflows as part of a [Power Platform environments copy](/power-platform/admin/copy-environment) operation or [Back up and restore environments](/power-platform/admin/backup-restore-environments) operation isn't supported.
+* Change owner for a Dataflow with a connection and a query parameter would also change the parameter value to a previous value (if such value has been set).
 
 ## Next steps
 

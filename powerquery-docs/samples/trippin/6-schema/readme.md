@@ -2,11 +2,10 @@
 title: TripPin 6 - Schema
 description: Adding a schema with enforcement to your TripPin REST connector.
 author: ptyx507x
-
-
 ms.topic: tutorial
 ms.date: 5/17/2023
 ms.author: miescobar
+ms.subservice: custom-connectors
 ---
 
 # TripPin part 6 - Schema

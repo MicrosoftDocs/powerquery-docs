@@ -5,6 +5,7 @@ author: ptyx507x
 ms.date: 1/18/2024
 ms.author: miescobar
 ms.topic: conceptual
+ms.subservice: transform-data
 ---
 
 # Query folding examples
