@@ -69,7 +69,7 @@ To make the connection to a **Snowflake** computing warehouse, take the followin
 7. Select **Import** to import data directly into Power BI, or select **DirectQuery**, then select **OK**. More information: [Use DirectQuery in Power BI Desktop](/power-bi/connect-data/desktop-use-directquery)
 
    > [!NOTE]
-   >Microsoft Entra ID Single Sign-On (SSO) only supports DirectQuery.
+   >Microsoft Entra ID single sign-on (SSO) only supports DirectQuery.
 
    ![Screenshot of Connection settings, which contains the Import and DirectQuery selections.](./media/snowflake/connection-settings-desktop.png)
 
@@ -102,32 +102,32 @@ The following table lists all of the advanced options you can set in Power Query
 | Advanced option | Description |
 | --------------- | ----------- |
 | Role name | Specifies the role that the report uses via the driver. This role must be available to the user, otherwise no role is set. |
-| Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, you won’t see those columns. |
+| Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, you don’t see those columns. |
 | Connection timeout in seconds | Specifies how long to wait for a response when interacting with the Snowflake service before returning an error. Default is 0 (no timeout).|
 | Command timeout in seconds | Specifies how long to wait for a query to complete before returning an error. Default is 0 (no timeout). |
 | Database | Specifies a specific database in the warehouse. This option is only available in Power Query Desktop. |
 | SQL Statement | For information, go to [Import data from a database using native database query](../native-database-query.md). This option is only available in Power Query Desktop. |
 
-Once you've selected the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your Snowflake database.
+Once you select the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your Snowflake database.
 
 ## New Snowflake connector implementation (Preview)
 
 In the January 2025 release for Power BI Desktop, we introduced a new implementation for the Snowflake connector to enhance the integration with Snowflake, currently available in preview. We encourage you to try it out and [provide us feedback](https://aka.ms/snowflake-connector-feedback).
 
-To access this feature, in Power BI Desktop, navigate to **Options and settings** (under the File Menu) -> **Options** -> **Preview features**, click the checkbox to enable the "Use new Snowflake connector implementation" option. Once the option is on, all the newly created connections will automatically use the new connector implementation.
+To access this feature, in Power BI Desktop, navigate to **Options and settings** (under the **File** tab) > **Options** > **Preview features**, and then select the checkbox to enable the **Use new Snowflake connector implementation** option. Once the option is on, all the newly created connections automatically use the new connector implementation.
 
 :::image type="content" source="./media/snowflake/new-implementation-option.png" alt-text="Screenshot of the new Snowflake implementation option in Power BI Desktop.":::
 
-Your existing connections remain unchanged. You can also try out the feature by adding the `Implementation="2.0"` flag in Snowflake.Databases in your queries as follows. This property differentiates the version of connector you are using. 
+Your existing connections remain unchanged. You can also try out the feature by adding the `Implementation="2.0"` flag in `Snowflake.Databases` in your queries as follows. This property differentiates the version of the connector you're using.
 
-```
+```powerquery-m
 Source = Snowflake.Databases("contoso.snowflakecomputing.com", "CONTOSO_WH", Implementation="2.0")
 ```
 
->[!NOTE]
-> If you're using On-prem Data Gateway to refresh your semantic model, make sure you have the January 2025 version or later to use this feature.
+> [!NOTE]
+> If you're using the on-premises data gateway to refresh your semantic model, make sure you have the January 2025 version or later to use this feature.
 
-To aid with diagnosing any potential issue, you can find the Implementation and DriverType details in your Mashup logs. As an example:
+To aid with diagnosing any potential issue, you can find the `Implementation` and `DriverType` details in your Mashup logs. As an example:
 
 ```json
 {"Start":"2024-11-02T00:14:02.7968686Z","Action":"Engine/Module/Snowflake/IO/Snowflake/Implementation","ResourceKind":"Snowflake","ResourcePath":"powerbi.snowflakecomputing.com ;DEMO_WH","HostProcessId":"29200","Implementation":"2.0","DriverType":"ADBC","ProductVersion":"2.139.0.0 (Main)+eda56ecd858054173a4d11db9c63a6da5cf92a99","ActivityId":"106f16b6-cfbb-4853-9f20-ed45486486d2","Process":"Microsoft.Mashup.Container.NetFX45","Pid":38560,"Tid":1,"Duration":"00:00:00.0000291"}
@@ -152,7 +152,7 @@ If a database name has a hyphen in it, you can encounter an ```ODBC: ERROR[42000
 
 ### Slicer visual for Boolean datatype
 
-The slicer visual for the Boolean data type isn't functioning as expected in the June 2024 release. This is a known issue. As a temporary solution, users can convert the Boolean data type in their reports to text by navigating to: Transfer -> Data Type -> Text. A fix will be provided in October 2024 release.
+The slicer visual for the Boolean data type isn't functioning as expected in the June 2024 release. This non-functionality is a known issue. As a temporary solution, users can convert the Boolean data type in their reports to text by navigating to: Transfer -> Data Type -> Text. A fix is provided in October 2024 release.
 
 ## Additional information
 
