@@ -3,7 +3,7 @@ title: Power Query Snowflake connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Snowflake database, along with native query folding instructions and troubleshooting tips.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 01/13/2024
+ms.date: 01/15/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
@@ -114,6 +114,9 @@ Once you select the advanced options you require, select **OK** in Power Query D
 
 In the January 2025 release for Power BI Desktop, we introduced a new implementation for the Snowflake connector to enhance the integration with Snowflake, currently available in preview. We encourage you to try it out and [provide us feedback](https://aka.ms/snowflake-connector-feedback).
 
+> [!NOTE]
+> This feature is supported in the 64-bit version of Power BI Desktop and doesn't work in the 32-bit version.
+
 To access this feature, in Power BI Desktop, navigate to **Options and settings** (under the **File** tab) > **Options** > **Preview features**, and then select the checkbox to enable the **Use new Snowflake connector implementation** option. Once the option is on, all the newly created connections automatically use the new connector implementation.
 
 :::image type="content" source="./media/snowflake/new-implementation-option.png" alt-text="Screenshot of the new Snowflake implementation option in Power BI Desktop.":::
@@ -121,7 +124,7 @@ To access this feature, in Power BI Desktop, navigate to **Options and settings*
 Your existing connections remain unchanged. You can also try out the feature by adding the `Implementation="2.0"` flag in `Snowflake.Databases` in your queries as follows. This property differentiates the version of the connector you're using.
 
 ```powerquery-m
-Source = Snowflake.Databases("contoso.snowflakecomputing.com", "CONTOSO_WH", Implementation="2.0")
+Source = Snowflake.Databases("contoso.snowflakecomputing.com", "CONTOSO_WH", [Implementation="2.0"])
 ```
 
 > [!NOTE]
