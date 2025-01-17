@@ -94,9 +94,9 @@ It can take up to 48 hours for the backend systems to delete all the files and r
 
 You can either wait 48 hours before publishing the dataflow or create it now under a different name and rename it later on.
 
-## I can't publish a dataflow with Private Link enabled
+## I can't publish a dataflow when Private Link is enabled
 
-This problem happens when you try to publish a dataflow in a workspace that has a capacity assigned to it that is not in the same region as the VNET Gateway that the connector depends on.
+This problem happens when you try to publish a dataflow in a workspace that has a capacity assigned to it that is not in the same region as the VNET Gateway that the connector depends on with Private Link enabled and Public Access is blocked.
 
 **Reason:**
 
