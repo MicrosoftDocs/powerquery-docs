@@ -589,6 +589,8 @@ items:
         href: connectors/twilio.md
       - name: "Usercube (Beta)"
         href: connectors/usercube.md
+      - name: "Vertica database"
+        href: connectors/vertica-database.md
       - name: "Vessel Insight"
         href: connectors/vessel-insight.md
       - name: "Warehouse (Beta)"
