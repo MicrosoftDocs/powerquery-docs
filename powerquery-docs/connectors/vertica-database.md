@@ -27,7 +27,7 @@ ms.subservice: connectors
 * Import
 * DirectQuery (Power BI semantic models)
 
-## Connect to an Vertica database from Power Query Desktop
+## Connect to a Vertica database from Power Query Desktop
 
 To connect to an **Vertica** database, take the following steps:
 
@@ -50,7 +50,7 @@ To connect to an **Vertica** database, take the following steps:
 5. After you connect, a **Navigator** window appears and displays the data that's available on the server. Either select **Load** to load the data or **Transform Data** to continue transforming the data in the Power Query editor.
 
 
-## Connect to an Vertica database from Power Query Online
+## Connect to a Vertica database from Power Query Online
 
 To connect to an **Vertica** database, take the following steps:
 
