@@ -5,7 +5,7 @@ author: ptyx507x
 
 
 ms.topic: overview
-ms.date: 11/16/2023
+ms.date: 1/23/2025
 ms.author: miescobar
 ms.search.form: DataflowGen2 Overview
 ms.subservice: transform-data
@@ -56,7 +56,7 @@ The **Navigator** now opens, where you select the tables you want to connect to 
 
 The dialog then loads the data from the Customers table into the Power Query editor.
 
-The above experience of connecting to your data, specifying the authentication method, and selecting the specific object or table to connect to is called the *get data experience*. This experience is documented with further detail in the [Getting data](get-data-experience.md) article.
+The experience of connecting to your data, specifying the authentication method, and selecting the specific object or table to connect to is called the *get data experience*. This experience is documented with further detail in the [Getting data](get-data-experience.md) article.
 
 > [!NOTE]
 > To learn more about the OData feed connector, go to [OData feed](connectors/odata-feed.md).
@@ -108,7 +108,7 @@ You're encouraged to try all of these options to find the view and layout that y
 
 The right side of the status bar also contains icons for the diagram, data, and schema views. You can use these icons to change between views. You can also use these icons to enable or disable the view of your choice.
 
-:::image type="content" source="media/power-query-ui/pqui-current-view-schema.png" alt-text="Screenshot of the Power Query user interface with the queries pane collapsed and the current view switched to schema view and the schema view icon emphasized." lightbox="media/power-query-ui/pqui-current-view-schema.png":::
+:::image type="content" source="media/power-query-ui/pqui-current-view-schema.png" alt-text="Screenshot with the queries pane collapsed and the current view switched to schema view and the schema view icon emphasized." lightbox="media/power-query-ui/pqui-current-view-schema.png":::
 
 ### What is schema view
 
@@ -150,7 +150,7 @@ The **Group by** dialog then appears. You can set the **Group by** operation to 
 
 Select **OK** to perform the operation. Your data preview refreshes to show the total number of customers by country.
 
-An alternative way to launch the **Group by** dialog would be to use the **Group by** button in the ribbon or by right-clicking the **Country** column.
+An alternative way to launch the **Group by** dialog would be to use the **Group by** button in the ribbon or to select and hold (right-click) the **Country** column.
 
 :::image type="content" source="media/power-query-ui/pqui-group-by-alt.png" alt-text="Screenshot emphasizing the Group by button in the ribbon and the Group by option in the Country column menu." lightbox="media/power-query-ui/pqui-group-by-alt.png":::
 
@@ -189,11 +189,11 @@ In the **Group by** dialog, set the **Group by** operation to group by country a
 
 ## Referencing queries
 
-Now that you have a query for customers and a query for suppliers, your next goal is to combine these queries into one. There are many ways to accomplish this, including using the **Merge** option in the **Customers** table, duplicating a query, or referencing a query. For this example, you create a reference by right-clicking the **Customers** table and selecting **Reference**, which effectively creates a new query that references the **Customers** query.
+Now that you have a query for customers and a query for suppliers, your next goal is to combine these queries into one. There are many ways to accomplish this, including using the **Merge** option in the **Customers** table, duplicating a query, or referencing a query. For this example, you create a reference by selecting and holding (right-clicking) the **Customers** table and selecting **Reference**, which effectively creates a new query that references the **Customers** query.
 
 :::image type="content" source="media/power-query-ui/pqui-reference-query.png" alt-text="Screenshot of the Customers menu with the Reference option emphasized." lightbox="media/power-query-ui/pqui-reference-query.png":::
 
-After creating this new query, change the name of the query to **Country Analysis** and disable the load of the **Customers** table by unmarking the **Enable load** option from the **Suppliers** query.
+After creating this new query, change the name of the query to **Country Analysis** and disable the load of the **Customers** table by clearing the **Enable load** option from the **Suppliers** query.
 
 :::image type="content" source="media/power-query-ui/pqui-disable-load.png" alt-text="Screenshot of the third query name changed to Country Analysis and the Suppliers Enable load option unmarked and emphasized." lightbox="media/power-query-ui/pqui-disable-load.png":::
 
@@ -205,7 +205,7 @@ Inside the **Country Analysis** query, select the **Merge queries** option from 
 
 :::image type="content" source="media/power-query-ui/pqui-merge-queries.png" alt-text="Screenshot of the Power Query workspace with the Country Analysis query selected, and the Merge queries option in the Home tab emphasized." lightbox="media/power-query-ui/pqui-merge-queries.png":::
 
-A new dialog for the merge operation appears. You can then select the query to merge with your current query. In the **Right table for merge**, select the **Suppliers** query and then select the **Country** field from both queries. Finally, select the **Inner** join kind, as you only want the countries/regions where you have **Customers** and **Suppliers** for this analysis.
+A new dialog for the merge operation appears. You can then select the query to merge with your current query. In the **Right table for merge**, select the **Suppliers** query, and then select the **Country** field from both queries. Finally, select the **Inner** join kind, as you only want the countries/regions where you have **Customers** and **Suppliers** for this analysis.
 
 :::image type="content" source="media/power-query-ui/pqui-merge-queries-dialog.png" alt-text="Screenshot of the Merge queries dialog with the Country column selected in both queries and the Inner join kind selected.":::
 
@@ -224,7 +224,7 @@ The result of this **expand** operation is a table with only 12 rows. Rename the
 
 Every transformation that is applied to your query is saved as a step in the **Applied steps** section of the query settings pane. If you ever need to check how your query is transformed from step to step, you can select a step and preview how your query resolves at that specific point.
 
-You can also right-click a query and select the **Properties** option to change the name of the query or add a description for the query. For example, right-click the **Merge queries** step from the **Country Analysis** query and change the name of the query to **Merge with Suppliers** and the description to **Getting data from the Suppliers query for Suppliers by Country**.
+You can also select and hold (right-click) a query and select the **Properties** option to change the name of the query or add a description for the query. For example, select and hold (right-click) the **Merge queries** step from the **Country Analysis** query and change the name of the query to **Merge with Suppliers** and the description to **Getting data from the Suppliers query for Suppliers by Country**.
 
 :::image type="content" source="media/power-query-ui/pqui-step-properties.png" alt-text="Screenshot of the Step properties dialog with the changed name and description filled in.":::
 
@@ -282,7 +282,7 @@ There's a **Help** tab in the Power Query editor running on Power BI Desktop, bu
 
 The Power Query **Help** tab in Power BI service, Power Apps, Dynamics 365 Customer Insights, and Azure Data Factory contains links to important sources of information about Power Query.
 
-:::image type="content" source="media/power-query-ui/help-tab.png" alt-text="Screenshot of the help tab with the Power Query documentation, Keyboard shortcuts, Support, Power Query website, Power Query blog, Power Query community, Submit an idea, and Send feedback links.":::
+:::image type="content" source="media/power-query-ui/help-tab.png" alt-text="Screenshot of the help tab with the Power Query documentation with all of the help, community, and feedback options displayed.":::
 
 The options in the help tab include links to:
 
