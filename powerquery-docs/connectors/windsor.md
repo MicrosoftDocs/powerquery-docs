@@ -64,7 +64,7 @@ To connect to Windsor:
 
 4. Select **Sign in** to sign in to your Windsor account.  
 
-   :::image type="content" source="media/windsor/windsor-pbi-signin.png" alt-text="Screenshot of the authentication dialog wher you sign in to Windsor.":::
+   :::image type="content" source="media/windsor/windsor-pbi-signin.png" alt-text="Screenshot of the authentication dialog where you sign in to Windsor.":::
 
 5. Sign in to Windsor Onboard in the window that appears. Enter your email and password or select **Sign in with Microsoft** / **Sign in with Google** and choose the account that you used to sign in to the Windsor Onboard in step 1 in [Prerequisites](#prerequisites).
 
