@@ -32,6 +32,9 @@ Daily Evaluation Time: Currently unrestricted
 
 Per Query Timeout: 10 minutes
 
+> [!NOTE]
+> Performing Data Definition Language (DDL) operations to the data source is **not supported** in Power Query, examples of such operations are "DROP TABLE", "CREATE TABLE", and "ALTER TABLE" for instance. Attempting to use such commands can result in multiple failures and errors.
+
 ## Refresh limits
 
 During refresh (either scheduled or on-demand), query evaluations return complete results. Data is typically persisted in storage.
