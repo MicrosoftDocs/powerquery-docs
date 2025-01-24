@@ -603,7 +603,7 @@ items:
           href: connectors/web/web-by-example.md
         - name: "Troubleshooting"
           href: connectors/web/web-troubleshoot.md
-      - name: "Windsor (Beta)"
+      - name: "Windsor"
         href: connectors/windsor.md
       - name: "Wolters Kluwer CCH Tagetik"
         href: connectors/wolters-kluwer-cch-tagetik.md
