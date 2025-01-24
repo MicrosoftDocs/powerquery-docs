@@ -16,7 +16,7 @@ ms.author: dougklo
 
 | Item	                        | Description                 |
 | ------------------------------ | --------------------------- |
-| Release State                  | General Availability        |
+| Release State                  | Preview        |
 | Products                       | Power BI (Semantic models)<br>Power BI (Dataflows)<br>Fabric (Dataflow Gen2)                   |
 | Authentication Types Supported | Username/Password<br/>OAuth |
 
