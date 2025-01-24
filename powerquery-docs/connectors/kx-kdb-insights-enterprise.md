@@ -47,32 +47,32 @@ To make the connection, follow these steps:
 1. Open Microsoft Power BI Desktop or Power BI Online.
 
 1.  Select **Get Data**:
-    * For **Power BI Desktop**, click `Get Data -> More` from the **Home** tab in the upper ribbon.
-    * For **Power BI Online**, in the Get Data experience, select the `Dataflow` category.
+    * For Power BI Desktop, select **Get Data** > **More** from the **Home** tab in the upper ribbon.
+    * For Power BI Online, in the Get Data experience, select the **Dataflow** category.
 
 1. Search for **KX kdb**.
 
 1. Select **KX kdb Insights Enterprise**.
 
-1. Click **Connect**.
+1. Select **Connect**.
 
 1. Enter the URL for your kdb Insights Enterprise deployment.
 
-1. Click **OK**.
+1. Select **OK**.
 
-1. You are prompted to sign in if you have not signed in recently or have never signed in:
+1. You're prompted to sign in if you haven't signed in recently or have never signed in:
 
-    * If you have not signed in recently or have never signed in click **Sign in**. The button is named **Sign in as a different user** if your login credentials have expired or are no longer valid.
+    * If you haven't signed in recently or have never signed in, select **Sign in**. The button is named **Sign in as a different user** if your login credentials have expired or are no longer valid.
 
-   ![KX Insights Enterprise instance information.](./media/kx-kdb-insights-enterprise/powerbi-signin.png)
-   
-1. If your credentials are valid, the Connector popup displays that you are currently signed in and you can click the **Connect** button.
+      :::image type="content" source="./media/kx-kdb-insights-enterprise/powerbi-signin.png" alt-text="Screenshot showing the KX Insights Enterprise instance information.":::
 
-   ![KX Insights Enterprise signin popup.](./media/kx-kdb-insights-enterprise/powerbi-signedin.png)
+1. If your credentials are valid, the Connector popup displays that yo'are currently signed in and you can select the **Connect** button.
 
-1. The **Navigator** dialog box displays all the running databases and tables for your chosen host on the left. Clicking on a table returns a preview of the selected data using the _kdb Insights Enterprise_ [getData REST API](https://code.kx.com/insights/api/database/query/get-data.html).
+   :::image type="content" source="./media/kx-kdb-insights-enterprise/powerbi-signedin.png" alt-text="Screenshot showing the KX Insights Enterprise signin popup.":::
 
-   ![KX Insights Enterprise preview page.](./media/kx-kdb-insights-enterprise/powerbi-preview.png)
+1. The **Navigator** dialog box displays all the running databases and tables for your chosen host on the left. Selecting a table returns a preview of the selected data using the _kdb Insights Enterprise_ [getData REST API](https://code.kx.com/insights/api/database/query/get-data.html).
+
+   :::image type="content" source="./media/kx-kdb-insights-enterprise/powerbi-preview.png" alt-text="Screenshot showing the KX Insights Enterprise preview page.":::
 
 ## Navigator options
 
@@ -81,8 +81,8 @@ The [parameters](https://code.kx.com/insights/enterprise/integrations/powerbi/po
 
 | **Parameter** | **Details**                                                                      |
 | ------------- | -------------------------------------------------------------------------------- |
-| Start Time    | Applies to the partitioned column and will be ignored for non-partitioned tables |
-| End Time      | Applies to the partitioned column and will be ignored for non-partitioned tables |
+| Start Time    | Applies to the partitioned column and is ignored for non-partitioned tables |
+| End Time      | Applies to the partitioned column and is ignored for non-partitioned tables |
 | Filter        | Filters out certain rows                                                         |
 | Aggregation   | Filters the columns and/or aggregates the rows being returned                    |
 | Group By      | Group the results of an aggregation based on specific columns                    |
@@ -90,7 +90,7 @@ The [parameters](https://code.kx.com/insights/enterprise/integrations/powerbi/po
 
 ## More resources
 
-For more information visit the following resources:
+For more information, visit the following resources:
 
 * [kdb Insights Enterprise official documentation](https://code.kx.com/insights/enterprise/index.html).
 
