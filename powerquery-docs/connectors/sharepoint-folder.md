@@ -39,7 +39,7 @@ When you're connecting to a SharePoint site, you'll be asked to enter the site U
    ![Image with the locations of Home in the navigation pane, the icon at the top of the site, and the resulting URL address.](./media/sharepoint-list/sharepoint-address.png)
 
 > [!NOTE]
-> A classic SharePoint URL page is not supported and will fail to connect. Only a modern Sharepoint home page is supported.
+> A classic SharePoint URL page isn't supported and will fail to connect. Only a modern Sharepoint home page is supported.
 
 ## Connect to a SharePoint folder from Power Query Desktop
 
