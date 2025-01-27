@@ -29,7 +29,7 @@ The number of rows varies from file to file, but all files have a header section
 
 The goal is to combine all 12 files into a single table. This combined table contains the header row at the top of the table, and includes the source name, date, country, units, and revenue data for the entire year in separate columns after the header row.
 
-:::image type="content" source="media/combine-files-csv/combine-files-csv-final-table.png" alt-text="Sample final combined table.":::
+:::image type="content" source="media/combine-files-csv/combine-files-csv-final-table.png" alt-text="Screenshot of the sample final combined table." lightbox="media/combine-files-csv/combine-files-csv-final-table.png":::
 
 ## Table preview
 
