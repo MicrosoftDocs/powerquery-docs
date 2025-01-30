@@ -22,6 +22,9 @@ ms.subservice: connectors
 > [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
+> [!NOTE]
+> If you select Service Principal as the authentication type in Power BI service, you need to grant it app-only permissions through Azure Access Control Services (ACS). For more information, go to [Granting access using SharePoint App-Only](/sharepoint/dev/solution-guidance/security-apponly-azureacs).
+
 ## Capabilities supported
 
 * Site URL
