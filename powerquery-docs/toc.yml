@@ -453,6 +453,8 @@ items:
         href: connectors/json.md
       - name: "KQL database"
         href: connectors/kql-database.md
+      - name: "KX kdb Insights Enterprise (Beta)"
+        href: connectors/kx-kdb-insights-enterprise.md
       - name: "Kyvos ODBC (Beta)"
         href: connectors/kyvos-odbc.md
       - name: "Lakehouse (Beta)"
