@@ -3,7 +3,7 @@ title: Power Query SharePoint folder connector
 description: Provides basic information, prerequisites, and how to connect to your data, along with troubleshooting tips when combining files and using filename special characters.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/24/2024
+ms.date: 1/31/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
@@ -34,7 +34,7 @@ ms.subservice: connectors
 
 ## Determine the site URL
 
-When you're connecting to a SharePoint site, you're asked to enter the site URL. To find the site URL that contains your SharePoint folder, first open a page in SharePoint. From a page in SharePoint, you can usually get the site address by selecting **Home** in the navigation pane, or the icon for the site at the top. Copy the address from your web browser's address bar and save for later.
+When you're connecting to the document library in a SharePoint site, you're asked to enter the site URL. To find the site URL that contains your SharePoint folder, first open a page in SharePoint. From a page in SharePoint, you can usually get the site address by selecting **Home** in the navigation pane, or the icon for the site at the top. Copy the address from your web browser's address bar and save for later.
 
 :::image type="content" source="./media/sharepoint-list/sharepoint-address.png" alt-text="Screenshot emphasizing the locations of Home in the navigation pane, the icon at the top of the site, and the resulting URL address.":::
 
@@ -42,7 +42,7 @@ When you're connecting to a SharePoint site, you're asked to enter the site URL.
 
 To connect to a SharePoint folder:
 
-1. From **Get Data**, select **SharePoint folder**. More information: [Where to get data](where-to-get-data.md)
+1. From **Get Data**, select **SharePoint folder**. More information: [Where to get data](../where-to-get-data.md)
 
 2. Paste the SharePoint site URL you copied in [Determine the site URL](#determine-the-site-url) to the **Site URL** text box in the **SharePoint folder** dialog box. In this example, the site URL is `https://contoso.sharepoint.com/marketing/data`. If the site URL you enter is invalid, a :::image type="icon" source="./media/sharepoint-folder/warning.png"::: warning icon appears next to the URL text box.
 
@@ -108,7 +108,7 @@ In some cases, you might have multiple folders on your SharePoint site containin
 
    :::image type="content" source="./media/sharepoint-folder/transform-file-table.png" alt-text="Screenshot of the Power Query editor where you find the files to keep." lightbox="./media/sharepoint-folder/transform-file-table.png":::
 
-3. In this example, the required files are the last rows in the table. Select **Remove Rows**, enter the value of the last row before the files to keep (in this case 909), and select **OK**.
+3. In this example, the required files are the last rows in the table. Select **Remove Rows** > **Remove Top Rows**, enter the value of the last row before the files to keep (in this case 909), and select **OK**.
 
    :::image type="content" source="./media/sharepoint-folder/remove-rows.png" alt-text="Screenshot of the Power Query editor with the Remove rows option emphasized." lightbox="./media/sharepoint-folder/remove-rows.png":::
 
@@ -118,11 +118,11 @@ For more information about combining files, go to [Combine files in Power Query]
 
 ### Filename special characters
 
-If a filename contains certain special characters, it may lead to authentication errors because of the filename being truncated in the URL. If you're getting unusual authentication errors, make sure all of the filenames you're using don't contain any of the following special characters.
+If a filename contains certain special characters, it might lead to authentication errors because of the filename being truncated in the URL. If you're getting unusual authentication errors, make sure all of the filenames you're using don't contain any of the following special characters.
 
 `# % $`
 
-If these characters are present in the filename, the file owner must rename the file so that it does NOT contain any of these characters.
+If these characters are present in the filename, the file owner must rename the file so that it doesn't contain any of these characters.
 
 ### Permissions
 
