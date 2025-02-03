@@ -16,7 +16,7 @@ Install an on-premises data gateway to transfer data quickly and securely betwee
 
 ## Prerequisites
 ### Power BI service
-- You must have a [currently supported gateway installed](/data-integration/gateway/service-gateway-monthly-updates) to use with Dataflows. The minimum version that works with Power BI Dataflow is **3000.210.14**.
+- You must have a [currently supported gateway installed](/data-integration/gateway/service-gateway-monthly-updates) to use with Dataflows. The minimum version that works with Power BI Dataflow is **3000.214.8**.
 
 - A Power BI Pro license or a PPU license.  Don't have one? [Sign up for 60 days free](/power-bi/fundamentals/service-get-started#sign-up-for-the-power-bi-service).
 
@@ -26,7 +26,7 @@ Install an on-premises data gateway to transfer data quickly and securely betwee
   - A gateway connection for the data source(s) you intend to use already created on the gateway for which you are a user.
 
 ### Power Apps
-- You must have a [currently supported gateway installed](/data-integration/gateway/service-gateway-monthly-updates) to use with Dataflows. The minimum version that works with Power Apps Dataflow is **3000.210.14**.
+- You must have a [currently supported gateway installed](/data-integration/gateway/service-gateway-monthly-updates) to use with Dataflows. The minimum version that works with Power Apps Dataflow is **3000.214.8**.
 
 - A Power Apps account. Don't have one? [Sign up for 30 days free](/powerapps/maker/signup-for-powerapps).
 
