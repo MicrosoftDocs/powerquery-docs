@@ -173,13 +173,13 @@ in
 
 Misspelling a column name might result in an error message about query folding instead of missing column.
 
-### Accessing large semantic models
+### Accessing large amounts of Dataverse data
 
 Queries on Dataverse tables can return large amounts of data. If you're using the Power Query Dataverse connector, any specific query that accesses the model has a fixed five (5) minute timeout irrespective of the size of the data. For more information, go to [limitations](/power-apps/developer/data-platform/dataverse-sql-query#limitations). So you might need to query the data multiple times to access all of the data in the model. Using multiple queries can take a considerable amount of time to return all the data.
 
-If you're using the [Common Data Service (Legacy)](common-data-service-legacy.md) connector, you can use a single query to access all of the data in the semantic model. This connector works differently and returns the result in "pages" of 5-K records. Although the Common Data Service (Legacy) connector is more efficient in returning large amounts of data, it can still take a significant amount of time to return the result.
+If you're using the [Common Data Service (Legacy)](common-data-service-legacy.md) connector, you can use a single query to access all of the data. This connector works differently and returns the result in "pages" of 5-K records. Although the Common Data Service (Legacy) connector is more efficient in returning large amounts of data, it can still take a significant amount of time to return the result.
 
-Instead of using these connectors to access large semantic models, we recommend that you use [Azure Synapse Link](/powerapps/maker/data-platform/export-to-data-lake) to access large models. Using Azure Synapse Link is even more efficient than either the Power Query Dataverse or Common Data Service (Legacy) connectors, and is specifically designed around data integration scenarios.
+Instead of using these connectors to access large amounts of Dataverse data, we recommend that you use [Azure Synapse Link](/powerapps/maker/data-platform/export-to-data-lake) to access large models. Using Azure Synapse Link is even more efficient than either the Power Query Dataverse or Common Data Service (Legacy) connectors, and is specifically designed around data integration scenarios.
 
 ### Performance issues related to relationship columns
 
