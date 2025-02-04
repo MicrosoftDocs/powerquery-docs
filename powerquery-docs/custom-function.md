@@ -2,7 +2,7 @@
 title: Using custom functions in Power Query
 description: An article on how to create custom functions in Power Query
 author: ptyx507x
-ms.date: 5/3/2024
+ms.date: 2/4/2025
 ms.author: miescobar
 ms.custom: intro-internal
 ms.subservice: transform-data
@@ -12,16 +12,39 @@ ms.subservice: transform-data
 
 If you find yourself in a situation where you need to apply the same set of transformations to different queries or values, creating a Power Query custom function that can be reused as many times as you need could be beneficial. A Power Query custom function is a mapping from a set of input values to a single output value, and is created from native M functions and operators.
 
-While you can manually create your own Power Query custom function using code as described in [Understanding Power Query M functions](/powerquery-m/understanding-power-query-m-functions), the Power Query user interface offers you features to speed up, simplify, and enhance the process of creating and managing a custom function.
+While you can manually create your own Power Query custom function using [code](/powerquery-m/understanding-power-query-m-functions), or the Power Query user interface offers you features to speed up, simplify, and enhance the process of creating and managing a custom function.
 
-This article focuses on this experience, provided only through the Power Query user interface, and how to get the most out of it.
+First we'll cover the basic steps for [creating a custom function with code in the UI](#create-a-custom-function-from-code-in-the-ui), then we'll focus on using the interface to [turn complex actions into a reusable function](#create-a-custom-function-from-a-table-reference-tutorial).
 
 > [!IMPORTANT]
-> This article outlines how to create a custom function with Power Query using common transforms accessible in the Power Query user interface. It focuses on the core concepts to create custom functions, and links to additional articles in Power Query documentation for more information on specific transforms that are referenced in this article.
+> This article outlines how to create a custom function with Power Query using common transforms accessible in the Power Query user interface. It focuses on the core concepts to create custom functions, and links to other articles in Power Query documentation for more information on specific transforms that are referenced in this article.
 
-## Create a custom function from a table reference
+## Create a custom function from code in the UI
 
-> [!NOTE]
+>[!NOTE]
+> The following steps can be followed inn Power BI Desktop or using the Power Query experience found in Excel for Windows.
+
+1. Use the connector experience to connect to your data where it's housed. When you've selected your data, select the **Transform Data** or **Edit** button. This will take you to the Power Query experience.
+1. Right-click a blank spot in the **Queries** pane on the left.
+1. Select **Blank Query**.
+1. In the new blank query window select the **Home** menu, then **Advanced editor**.
+1. Replace the template with your custom function. For example:
+    ```powerquery-m
+    let
+     HelloWorld = () => ("Hello World")
+    in
+     HelloWorld
+    ```
+1. Select **Done**.
+1. To use the function, select it, and then select **Invoke**. The result will be added to the **Queries** pane.
+1. To use the function in a query, in your query select **Add column** and **Invoke custom function**.
+
+For more information about developing custom functions with code, see this article: [Understanding Power Query M Functions](#create-a-custom-function-from-code-in-the-ui).
+In the following sections, there's also a tutorial describing how you can use the Power Query user interface to develop custom functions without writing code.
+
+## Create a custom function from a table reference tutorial
+
+>[!NOTE]
 > The following example was created using the desktop experience found in Power BI Desktop and can also be followed using the Power Query experience found in Excel for Windows.
 
 You can follow along with this example by downloading the sample files used in this article from the following [download link](https://aka.ms/PQCombineFilesSample). For simplicity, this article uses the Folder connector. To learn more about the Folder connector, go to [Folder](connectors/folder.md). The goal of this example is to create a custom function that can be applied to all the files in that folder before combining all of the data from all files into a single table.
