@@ -116,7 +116,7 @@ There are certain Tabular Data Stream (TDS) data types that are supported in ODa
 
 All of these features will be added to the Dataverse connector in the future, at which time the Common Data Service (Legacy) connector will be deprecated.
 
-More information: [Accessing large semantic models](#accessing-large-semantic-models)
+More information: [Accessing large amounts of Dataverse data](#accessing-large-amounts-of-dataverse-data)
 
 ## Limitations and issues
 
