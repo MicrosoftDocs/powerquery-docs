@@ -12,7 +12,7 @@ ms.subservice: transform-data
 
 If you find yourself in a situation where you need to apply the same set of transformations to different queries or values, creating a Power Query custom function that can be reused as many times as you need could be beneficial. A Power Query custom function is a mapping from a set of input values to a single output value, and is created from native M functions and operators.
 
-While you can manually create your own Power Query custom function using [code](/powerquery-m/understanding-power-query-m-functions), or the Power Query user interface offers you features to speed up, simplify, and enhance the process of creating and managing a custom function.
+You can manually create your own Power Query custom function using the [Power Query M formula language](/powerquery-m/understanding-power-query-m-functions), or the Power Query user interface offers you features to speed up, simplify, and enhance the process of creating and managing a custom function.
 
 First we'll cover the basic steps for [creating a custom function with code in the UI](#create-a-custom-function-from-code-in-the-ui), then we'll focus on using the interface to [turn complex actions into a reusable function](#create-a-custom-function-from-a-table-reference-tutorial).
 
@@ -22,7 +22,7 @@ First we'll cover the basic steps for [creating a custom function with code in t
 ## Create a custom function from code in the UI
 
 >[!NOTE]
-> The following steps can be followed inn Power BI Desktop or using the Power Query experience found in Excel for Windows.
+> The following steps can be followed in Power BI Desktop or using the Power Query experience found in Excel for Windows.
 
 1. Use the connector experience to connect to your data where it's housed. When you've selected your data, select the **Transform Data** or **Edit** button. This will take you to the Power Query experience.
 1. Right-click a blank spot in the **Queries** pane on the left.
@@ -36,11 +36,9 @@ First we'll cover the basic steps for [creating a custom function with code in t
      HelloWorld
     ```
 1. Select **Done**.
-1. To use the function, select it, and then select **Invoke**. The result will be added to the **Queries** pane.
-1. To use the function in a query, in your query select **Add column** and **Invoke custom function**.
 
-For more information about developing custom functions with code, see this article: [Understanding Power Query M Functions](#create-a-custom-function-from-code-in-the-ui).
-In the following sections, there's also a tutorial describing how you can use the Power Query user interface to develop custom functions without writing code.
+For more information about developing custom functions with the Power Query M formula language, see this article: [Understanding Power Query M Functions](/powerquery-m/understanding-power-query-m-functions).
+In the following sections, there are tutorials describing how you can use the Power Query user interface to develop custom functions without writing code, and instructions on how you can invoke your custom function in your query.
 
 ## Create a custom function from a table reference tutorial
 
