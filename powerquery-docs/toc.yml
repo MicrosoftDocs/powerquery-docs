@@ -383,7 +383,7 @@ items:
         href: connectors/cloudbluepsa.md
       - name: "Common Data Service (Legacy)"
         href: connectors/common-data-service-legacy.md
-      - name: "ClickHouse (Beta)"
+      - name: "ClickHouse"
         href: connectors/clickhouse.md
       - name: "Databricks"
         href: connectors/databricks.md
