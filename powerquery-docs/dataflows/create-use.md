@@ -57,7 +57,7 @@ Most dataflow capabilities are available in both Power Apps and Power BI. Datafl
 ## Known limitations
 
 * Copying dataflows as part of a [Back up and restore environments](/power-platform/admin/backup-restore-environments) operation isn't supported.
-* Copying dataflows as part of a [Power Platform environments copy](/power-platform/admin/copy-environment) operation do not preserve their email notification setting.
+* Copying dataflows as part of a [Power Platform environments copy](/power-platform/admin/copy-environment) operation don't preserve their email notification setting.
 * Change owner for a Dataflow with a connection and a query parameter would also change the parameter value to a previous value (if such value has been set).
 
 ## Next steps
