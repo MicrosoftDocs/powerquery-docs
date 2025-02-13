@@ -3,7 +3,7 @@ title: Power Query ClickHouse connector
 description: Provides basic information, prerequisites, and instructions on how to connect to ClickHouse
 author: bentsileviav
 ms.topic: conceptual
-ms.date: 9/30/2024
+ms.date: 2/13/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
@@ -17,7 +17,7 @@ ms.subservice: connectors
 
 | Item                           | Description                                                                    |
 |--------------------------------|--------------------------------------------------------------------------------|
-| Release State                  | Preview                                                                        |
+| Release State                  | General Availability                                                           |
 | Products                       | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | ClickHouse (Username/Password)                                                 |
 
