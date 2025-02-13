@@ -141,6 +141,9 @@ After defining these fields, a new grid pops up where you can enter the values t
 
 With the new **Interesting Orders** list parameters in place, head back to the **Orders** query. Select the auto-filter menu of the **OrderID** field. Select **Number filters** > **In**.
 
+>[!TIP]
+>For some of the other data types, the **In** filter might not appear in the main filter menu. Select any other filter option and then edit the filter under **Query settings**. From the filter dropdown select **In**.
+
 :::image type="content" source="media/power-query-query-parameters/numbers-filters-in-list-parameter.png" alt-text="In option inside the Numbers filters sub-menu for the OrderID column.":::
 
 After selecting this option, a new **Filter rows** dialog box appears. From here, you can select the list parameter from a drop-down menu.
