@@ -143,6 +143,9 @@ With the new **Interesting Orders** list parameters in place, head back to the *
 
 :::image type="content" source="media/power-query-query-parameters/numbers-filters-in-list-parameter.png" alt-text="In option inside the Numbers filters sub-menu for the OrderID column.":::
 
+>[!TIP]
+>For some of the other data types, the **In** filter might not appear in the main filter menu. Select any other filter option and then edit the filter under **Query settings**. Then, from the filter dropdown in the editor, select **In**.
+
 After selecting this option, a new **Filter rows** dialog box appears. From here, you can select the list parameter from a drop-down menu.
 
 :::image type="content" source="media/power-query-query-parameters/filter-rows-list-parameter.png" alt-text="Filter rows dialog showing the in operator where you can use the new Interesting Orders list parameter.":::
