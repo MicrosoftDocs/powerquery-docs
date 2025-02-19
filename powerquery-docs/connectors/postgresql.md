@@ -112,9 +112,9 @@ Once you select the advanced options you require, select **OK** in Power Query D
 
 ## Native query folding
 
-By default, native query folding is enabled. Operations that are capable of folding are applied on top of your native query according to normal Import or Direct Query logic. Native Query folding isn't applicable with optional parameters present in [Value.NativeQuery()](/powerquery-m/value-nativequery).
+By default, native query folding is enabled. Operations that are capable of folding are applied on top of your native query according to normal Import or Direct Query logic. Native Query folding isn't applicable with optional parameters present in [Value.NativeQuery](/powerquery-m/value-nativequery).
 
-In the rare case that folding doesn't work with native query folding enabled, you can disable it. To disable native query folding, set the `EnableFolding` flag to `false` for [Value.NativeQuery()](/powerquery-m/value-nativequery) in the advanced editor.
+In the rare case that folding doesn't work with native query folding enabled, you can disable it. To disable native query folding, set the `EnableFolding` flag to `false` for [Value.NativeQuery](/powerquery-m/value-nativequery) in the advanced editor.
 
 Sample:
 `Value.NativeQuery(target as any, query, null, [EnableFolding=false])`
@@ -125,6 +125,6 @@ Your native query might throw the following error:
 
 `We cannot fold on top of this native query. Please modify the native query or remove the 'EnableFolding' option.`
 
-A basic trouble shooting step is to check if the query in [Value.NativeQuery()](/powerquery-m/value-nativequery) throws the same error with a `limit 1` clause around it:
+A basic trouble shooting step is to check if the query in [Value.NativeQuery](/powerquery-m/value-nativequery) throws the same error with a `limit 1` clause around it:
 
 `select * from (query) _ limit 1`
