@@ -48,7 +48,7 @@ For Power Apps, you must install the NpgSQL provider on your local machine. To i
 
 Once the matching Npgsql provider is installed, you can connect to a PostgreSQL database. To make the connection, take the following steps:
 
-1. Select the **PostgreSQL database** option in the connector selection. More information: [Where to get data](where-to-get-data.md)
+1. Select the **PostgreSQL database** option in the connector selection. More information: [Where to get data](../where-to-get-data.md)
 
 2. In the **PostgreSQL database** dialog that appears, provide the name of the server and database.
 
@@ -77,7 +77,7 @@ Once the matching Npgsql provider is installed, you can connect to a PostgreSQL 
 
 To make the connection, take the following steps:
 
-1. Select the **PostgreSQL database** option in the connector selection.
+1. Select the **PostgreSQL database** option in the connector selection. More information: [Where to get data](../where-to-get-data.md)
 
 2. In the **PostgreSQL database** dialog that appears, provide the name of the server and database.
 
