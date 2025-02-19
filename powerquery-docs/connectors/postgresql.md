@@ -69,7 +69,7 @@ Once the matching Npgsql provider is installed, you can connect to a PostgreSQL 
 
    Select **OK** to connect to the database by using an unencrypted connection, or follow the instructions in [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine) to set up encrypted connections to PostgreSQL database.
 
-5. In **Navigator**, select the database information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
+5. In **Navigator**, select the database information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query editor.
 
    :::image type="content" source="./media/postgresql/navigator-desktop.png" alt-text="Screenshot of the Power Query Desktop Navigator showing the Human Resources employee data in PostgreSQL database." lightbox="./media/postgresql/navigator-desktop.png":::
 
@@ -91,7 +91,7 @@ To make the connection, take the following steps:
 
 6. Select **Next** to connect to the database.
 
-7. In **Navigator**, select the data you require, then select **Transform data** to transform the data in Power Query Editor.
+7. In **Navigator**, select the data you require, then select **Transform data** to transform the data in Power Query editor.
 
 ## Connect using advanced options
 
