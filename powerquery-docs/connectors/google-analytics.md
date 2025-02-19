@@ -72,7 +72,7 @@ To connect to Google Analytics data:
 
 Once the connection is established, you’ll see a list of the accounts you have access to. Drill through the account, properties, and views to see a selection of values, categorized in display folders.
 
-You can **Load** the selected table, which brings the entire table into Power BI Desktop, or you can select **Transform Data** to edit the query, which opens Power Query Editor. You can then filter and refine the set of data you want to use, and then load that refined set of data into Power BI Desktop.
+You can **Load** the selected table, which brings the entire table into Power BI Desktop, or you can select **Transform Data** to edit the query, which opens Power Query editor. You can then filter and refine the set of data you want to use, and then load that refined set of data into Power BI Desktop.
 
 :::image type="content" source="./media/adobe-analytics/button-select.png" alt-text="Load or transform data.":::
 
@@ -107,7 +107,7 @@ To connect to Google Analytics data:
 
    Once the connection is established, you’ll see a list of the accounts you have access to. Drill through the account, properties, and views to see a selection of values, categorized in display folders.
 
-8. Select **Transform data** to edit the query in Power Query Editor. You can then filter and refine the set of data you want to use, and then load that refined set of data into Power Apps.
+8. Select **Transform data** to edit the query in Power Query editor. You can then filter and refine the set of data you want to use, and then load that refined set of data into Power Apps.
 
 ## Limitations and issues
 
@@ -151,7 +151,7 @@ From this record, you can see you have your [Analytics view (profile) ID](https:
 
 You can copy these values into the [Google Analytics Query Explorer](https://ga-dev-tools.appspot.com/query-explorer/) to validate that the same data you're seeing returned by your query is also being returned by the API.
 
-If your error is around a date range, you can easily fix it. Go into the [Advanced Editor](/power-query/power-query-ui#the-advanced-editor). You'll have an M query that looks something like this (at a minimum&mdash;there may be other transforms on top of it).
+If your error is around a date range, you can easily fix it. Go into the [advanced editor](/power-query/power-query-ui#the-advanced-editor). You'll have an M query that looks something like this (at a minimum&mdash;there may be other transforms on top of it).
 
 ```powerquery-m
 let
@@ -170,7 +170,7 @@ in
 
 You can do one of two things. If you have a **Date** column, you can filter on the Date. This is the easier option. If you don't care about breaking it up by date, you can Group afterwards.
 
-If you don't have a **Date** column, you can manually manipulate the query in the Advanced Editor to add one and filter on it. For example:
+If you don't have a **Date** column, you can manually manipulate the query in the advanced editor to add one and filter on it. For example:
 
 ```powerquery-m
    let
