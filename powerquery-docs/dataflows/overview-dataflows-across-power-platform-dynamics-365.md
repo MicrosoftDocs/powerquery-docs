@@ -3,7 +3,7 @@ title: An overview of dataflows across Microsoft Power Platform and Dynamics 365
 description: An overview of dataflows across Microsoft Power Platform and Dynamics 365 products
 author: Luitwieler
 ms.topic: overview
-ms.date: 1/25/2024 
+ms.date: 2/20/2025 
 ms.author: jeluitwi
 ms.subservice: dataflows
 ---
@@ -33,7 +33,7 @@ Dataflows are cloud-based. When a dataflow is authored and saved, its definition
 
 ### Dataflows use a powerful transformation engine
 
-Power Query is the data transformation engine used in the dataflow. This engine is capable enough to support many advanced transformations. It also uses a straightforward, yet powerful, graphical user interface called Power Query Editor. You can use dataflows with this editor to develop your data integration solutions faster and more easily.
+Power Query is the data transformation engine used in the dataflow. This engine is capable enough to support many advanced transformations. It also uses a straightforward, yet powerful, graphical user interface called Power Query editor. You can use dataflows with this editor to develop your data integration solutions faster and more easily.
 
 :::image type="content" source="media/overview-dataflows/power-query-editor.png" alt-text="Screenshot showing an example of Power Query transformations." lightbox="media/overview-dataflows/power-query-editor.png":::
 
@@ -59,7 +59,7 @@ The following list highlights some of the benefits of using dataflows:
 
 - Dataflows take advantage of Power Query, a powerful, graphical, self-service data transformation experience.
 
-- Dataflows run entirely in the cloud. No additional infrastructure is required.
+- Dataflows run entirely in the cloud. No extra infrastructure is required.
 
 - You have multiple options for starting to work with dataflows, using licenses for Power Apps, Power BI, and Customer Insights.
 
@@ -71,7 +71,7 @@ You can use dataflows for many purposes. The following scenarios provide a few e
 
 ### Data migration from legacy systems
 
-In this scenario, the decision has been made by an organization to use Power Apps for the new user interface experience rather than the legacy on-premises system. Power Apps, Power Automate, and AI Builder all use Dataverse as the primary data storage system. The current data in the existing on-premises system can be migrated into Dataverse by using a dataflow, and then these products can use that data.
+In this scenario, an organization decides to use Power Apps for the new user interface experience rather than the legacy on-premises system. Power Apps, Power Automate, and AI Builder all use Dataverse as the primary data storage system. The current data in the existing on-premises system can be migrated into Dataverse by using a dataflow, and then these products can use that data.
 
 ### Using dataflows to build a data warehouse
 
@@ -87,11 +87,11 @@ You can use dataflows as a replacement for other ETL tools to build a dimensiona
 
 ### Centralize data preparation and reuse of semantic models across multiple Power BI solutions
 
-If multiple Power BI solutions are using the same transformed version of a table, the process to create the table will be repeated multiple times. This increases the load on the source system, consumes more resources, and creates duplicate data with multiple points of failure. Instead, a single dataflow can be created to compute the data for all solutions. Power BI can then reuse the result of the transformation in all solutions. The dataflow, if used in such a way, can be part of a robust Power BI implementation architecture that avoids the Power Query code duplicates and reduces the maintenance costs of the data integration layer.
+If multiple Power BI solutions are using the same transformed version of a table, the process to create the table is repeated multiple times. This increases the load on the source system, consumes more resources, and creates duplicate data with multiple points of failure. Instead, a single dataflow can be created to compute the data for all solutions. Power BI can then reuse the result of the transformation in all solutions. The dataflow, if used in such a way, can be part of a robust Power BI implementation architecture that avoids the Power Query code duplicates and reduces the maintenance costs of the data integration layer.
 
 :::image type="content" source="media/overview-dataflows/reuse-tables-in-solutions.png" alt-text="Image of how tables can be reused across multiple solutions.":::
 
-## Next steps
+## Related content
 
 The following articles provide further study materials for dataflows.
 
