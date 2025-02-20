@@ -83,7 +83,7 @@ To install the driver on the machine running Power BI Desktop or the on-premises
 
 3. Select **ODBC driver** under **Vertica Component List**, then select **Next** to start the installation.
 
-   :::image type="content" source="media/Vertica-database/install-odbc-driver.png" alt-text="Image of installing the Vertica ODBC driver on local machine.":::
+   :::image type="content" source="media/Vertica-database/install-odbc-driver.png" alt-text="Screenshot of installing the Vertica ODBC driver on local machine.":::
 
 To use this Vertica ODBC driver in Power BI Desktop, navigate to **Options and settings** (under the **File** tab) > **Options** > **Preview features**, and then select the checkbox to enable the **Use user-installed Vertica ODBC driver** option. 
 
