@@ -3,7 +3,7 @@ title: Power Query Snowflake connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Snowflake database, along with native query folding instructions and troubleshooting tips.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 01/15/2025
+ms.date: 02/20/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
@@ -23,7 +23,7 @@ ms.subservice: connectors
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 > [!NOTE]
-> In the January 2025 release for Power BI Desktop, we introduced a new implementation for the Snowflake connector, currently available in preview. Learn more about [this feature](#new-snowflake-connector-implementation-preview).
+> Since the January 2025 release for Power BI Desktop, we introduced a new implementation for the Snowflake connector, currently available in preview. Learn more about [this feature](#new-snowflake-connector-implementation-preview).
 
 ## Capabilities Supported
 
@@ -112,7 +112,12 @@ Once you select the advanced options you require, select **OK** in Power Query D
 
 ## New Snowflake connector implementation (Preview)
 
-In the January 2025 release for Power BI Desktop, we introduced a new implementation for the Snowflake connector to enhance the integration with Snowflake, currently available in preview. We encourage you to try it out and [provide us feedback](https://aka.ms/snowflake-connector-feedback).
+Since the January 2025 release for Power BI Desktop, we introduced a new implementation for the Snowflake connector to enhance the integration with Snowflake, currently available in preview. It uses Arrow Database Connectivity (ADBC) instead of ODBC to connect to and retrieve data from Snowflake which improves performance especially for large result sets. As we continue to enhance and add new capabilities to this connector, we encourage you to upgrade to the latest version to try it out and [provide us feedback](https://aka.ms/snowflake-connector-feedback).
+
+In February 2025 release, this connector is upgraded with the following improvement:
+
+- Enhanced performance by reducing the number of metadata calls.
+- Resolved duplicate values issue for large result sets.
 
 > [!NOTE]
 > This feature is supported in the 64-bit version of Power BI Desktop and doesn't work in the 32-bit version.
