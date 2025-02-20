@@ -24,7 +24,7 @@ ms.subservice: connectors
 
 ## Prerequisites
 
-Since December 2019, Power BI Desktop ships with NpgSQL, and no other installation is required. As of the October 2024 release, NpgSQL 4.0.17 is the version included. GAC Installation overrides the version provided with Power BI Desktop, which is the default. Refreshing is supported both through the cloud in the Power BI service and also on premise through the on-premise data gateway. To refresh data from the Power BI service without an on-premise data gateway, PostgreSQL must be hosted in a manner that allows direct connection from the Power BI services on Azure. This connectivity is natively supported for PostgreSQL hosted in Microsoft Azure. For other hosting environments, consult your hosting provider about configuring your PostgreSQL for direct access from the internet. If PostgreSQL is configured so that it can't be directly accessed from the internet (recommended for security), you need to use an on-premise data gateway for refreshes. In the Power BI service, NpgSQL 4.0.17 is used, while on premise refresh uses the local installation of NpgSQL, if available, and otherwise uses NpgSQL 4.0.17.
+Since December 2019, Power BI Desktop ships with NpgSQL, and no other installation is required. As of the October 2024 release, NpgSQL 4.0.17 is the version included. GAC Installation overrides the version provided with Power BI Desktop, which is the default. Refreshing is supported both through the cloud in the Power BI service and also on premise through the on-premises data gateway. To refresh data from the Power BI service without an on-premises data gateway, PostgreSQL must be hosted in a manner that allows direct connection from the Power BI services on Azure. This connectivity is natively supported for PostgreSQL hosted in Microsoft Azure. For other hosting environments, consult your hosting provider about configuring your PostgreSQL for direct access from the internet. If PostgreSQL is configured so that it can't be directly accessed from the internet (recommended for security), you need to use an on-premises data gateway for refreshes. In the Power BI service, NpgSQL 4.0.17 is used, while on premises refresh uses the local installation of NpgSQL, if available, and otherwise uses NpgSQL 4.0.17.
 
 For Power BI Desktop versions released before December 2019, you must install the NpgSQL provider on your local machine. To install the NpgSQL provider, go to the [releases page](https://github.com/npgsql/Npgsql/releases), search for the latest v4.0.x version, and download and run the .msi file. The provider architecture (32-bit or 64-bit) needs to match the architecture of the product where you intend to use the connector. When installing, make sure that you select NpgSQL GAC Installation to ensure NpgSQL itself is added to your machine.
 
@@ -48,7 +48,7 @@ For Power Apps, you must install the NpgSQL provider on your local machine. To i
 
 Once the matching Npgsql provider is installed, you can connect to a PostgreSQL database. To make the connection, take the following steps:
 
-1. Select the **PostgreSQL database** option in the connector selection. More information: [Where to get data](../where-to-get-data.md)
+1. Select the **PostgreSQL database** option in the connector selection. For more information, go to [Where to get data](../where-to-get-data.md).
 
 2. In the **PostgreSQL database** dialog that appears, provide the name of the server and database.
 
@@ -62,14 +62,13 @@ Once the matching Npgsql provider is installed, you can connect to a PostgreSQL 
 
    For more information about using authentication methods, go to [Authentication with a data source](../connectorauthentication.md).
 
-   > [!NOTE]
-   > If the connection isn't encrypted, you're prompted with the following message.
+5. If the connection isn't encrypted, you're prompted with the following message.
 
    :::image type="content" source="./media/postgresql/encryption-warning.png" alt-text="Screenshot of the Azure SQL database encryption support dialog.":::
 
    Select **OK** to connect to the database by using an unencrypted connection, or follow the instructions in [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine) to set up encrypted connections to PostgreSQL database.
 
-5. In **Navigator**, select the database information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query editor.
+6. In **Navigator**, select the database information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query editor.
 
    :::image type="content" source="./media/postgresql/navigator-desktop.png" alt-text="Screenshot of the Power Query Desktop Navigator showing the Human Resources employee data in PostgreSQL database." lightbox="./media/postgresql/navigator-desktop.png":::
 
@@ -77,7 +76,7 @@ Once the matching Npgsql provider is installed, you can connect to a PostgreSQL 
 
 To make the connection, take the following steps:
 
-1. Select the **PostgreSQL database** option in the connector selection. More information: [Where to get data](../where-to-get-data.md)
+1. Select the **PostgreSQL database** option in the connector selection. For more information, go to [Where to get data](../where-to-get-data.md).
 
 2. In the **PostgreSQL database** dialog that appears, provide the name of the server and database.
 
@@ -103,7 +102,7 @@ The following table lists all of the advanced options you can set in Power Query
 
 | Advanced option | Description |
 | --------------- | ----------- |
-| Command timeout in minutes | If your connection lasts longer than 10 minutes (the default time out), you can enter another value in minutes to keep the connection open longer. This option is only available in Power Query Desktop. |
+| Command timeout in minutes | If your connection lasts longer than 10 minutes (the default time-out), you can enter another value in minutes to keep the connection open longer. This option is only available in Power Query Desktop. |
 | SQL statement | For information, go to [Import data from a database using native database query](../native-database-query.md). |
 | Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, those columns aren't displayed. |
 | Navigate using full hierarchy | If checked, the navigator displays the complete hierarchy of tables in the database you're connecting to. If cleared, the navigator displays only the tables whose columns and rows contain data. |
@@ -125,6 +124,6 @@ Your native query might throw the following error:
 
 `We cannot fold on top of this native query. Please modify the native query or remove the 'EnableFolding' option.`
 
-A basic trouble shooting step is to check if the query in [Value.NativeQuery](/powerquery-m/value-nativequery) throws the same error with a `limit 1` clause around it:
+A basic troubleshooting step is to check if the query in [Value.NativeQuery](/powerquery-m/value-nativequery) throws the same error with a `limit 1` clause around it:
 
 `select * from (query) _ limit 1`
