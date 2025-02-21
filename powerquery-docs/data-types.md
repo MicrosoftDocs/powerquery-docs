@@ -121,7 +121,7 @@ When Power Query defines a column data type or converts from one data type to an
 
 This locale setting is important for interpreting text values into a specific data type. For example, imagine that you have your locale set as **English (United States)**, but a column in one of your CSV files has dates formatted in the United Kingdom format of day/month/year.
 
-:::image type="content" source="media/data-types/locale-sample-original.png" alt-text="Screenshot of the sample original table with dates in the Date column set to UK format of day, then month, then year":::
+:::image type="content" source="media/data-types/locale-sample-original.png" alt-text="Screenshot of the sample original table with dates in the Date column set to UK format of day, then month, then year.":::
 
 When you try setting the data type of the **Date** column to be **Date**, you get error values.
 
