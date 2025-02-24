@@ -20,7 +20,7 @@ You can find the **Append queries** command on the **Home** tab in the **Combine
 
 * **Append queries** - appends other tables to your current query.
 
-    _**For example:** You have two tables, A and B. You select **Append queries** in table A, and request to append table B. Your table A query will now have an appended table that contains aggregated table from A and B. Your table B query is unchanged._
+    _**For example:** You have two tables, A and B. You select **Append queries** in table A, and request to append table B. Your table A query will now have an appended table that contains aggregated data from A and B. Your table B query is unchanged._
 
 * **Append queries as new** - appends other tables to a new query.
 
