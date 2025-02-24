@@ -180,3 +180,7 @@ The following matrix is designed to give you a quick look at the feasibility of 
 | :::image type="icon" source="media/data-types/cancel-24px.png"::: | Not possible|
 | :::image type="icon" source="media/data-types/truncate-24px.png"::: | Possible, but it adds values to the original value |
 | :::image type="icon" source="media/data-types/alert-24px.png"::: | Possible, but it truncates the original value |
+
+## Types in Power Query M
+
+You can find a list of the commonly used data types in the Power Query M [Types and type conversion](/powerquery-m/type-conversion) article. There's also a complete list of data types in the Power Query M formula language [Types](/powerquery-m/m-spec-types) article.
