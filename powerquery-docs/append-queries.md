@@ -19,9 +19,12 @@ The append operation creates a single table by adding the contents of one or mor
 You can find the **Append queries** command on the **Home** tab in the **Combine** group. On the drop-down menu, there are two options:
 
 * **Append queries** - appends other tables to your current query.
-    _For example: You have two tables, A and B. You select **Append queries** in table A, and request to append table B. Your table A query will now have an appended table that contains aggregated table from A and B. Your table B query is unchanged._
+
+    _**For example:** You have two tables, A and B. You select **Append queries** in table A, and request to append table B. Your table A query will now have an appended table that contains aggregated table from A and B. Your table B query is unchanged._
+
 * **Append queries as new** - appends other tables to a new query.
-    _For example: You have two tables, A and B. You select **Append queries as new** in table A, and request to append table B. You now have a new query called Append1 that contains an aggregated table from A and B. Both your table A and table B queries are unchanged._
+
+    _**For example:** You have two tables, A and B. You select **Append queries as new** in table A, and request to append table B. You now have a new query called Append1 that contains an aggregated table from A and B. Both your table A and table B queries are unchanged._
 
 :::image type="content" source="media/append-queries/append-queries-icons.png" alt-text="Screenshot of the Power Query Home tab ribbon with the Append queries commands emphasized." lightbox="media/append-queries/append-queries-icons.png":::
 
