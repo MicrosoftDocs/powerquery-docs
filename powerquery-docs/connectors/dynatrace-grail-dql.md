@@ -66,7 +66,7 @@ the following steps:
 
 ![credentials](./media/dynatrace-grail-dql/connector5_white.png)
 
-5) Once you have successfully authenticated, the message will show that you are currently signed in.Click Connect.
+5) Once you have successfully authenticated, the message will show that you are currently signed in. Click Connect.
 
 ![connect](./media/dynatrace-grail-dql/connector6_white.png)
 
