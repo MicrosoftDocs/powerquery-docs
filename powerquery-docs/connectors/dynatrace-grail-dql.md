@@ -36,16 +36,6 @@ sure the environment is set to the new version and not previous classic
 as the latest version contains the Dynatrace Grail data lakehouse and is set up for
 the authentication requirements for the connector.
 
-### Setting up the connector
-
-Please follow the steps below to set up the Dynatrace Grail DQL
-Connector for the Power BI Desktop.
-
-Installing the MEZ file requires lowering security on PowerBI Desktop.
-To achieve the same without lowering the security you would need the
-"Dynatrace Grail DQL.pqx" file and the registry thumbprint which is
-available on request from Dynatrace.
-
 --------------------------------------------------------
 ## Capabilities Supported
 
