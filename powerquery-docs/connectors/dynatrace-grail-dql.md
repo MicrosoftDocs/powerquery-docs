@@ -38,10 +38,8 @@ the authentication requirements for the connector.
 
 ## Capabilities Supported
 
-| Capability                                  |
-| ------------------------------------------- |
-| Import mode only                            |
-| Option to enter a DQL query when connecting - limited to a maximum of 1 million rows |
+ - Import mode only
+ - Option to enter a DQL query when connecting - limited to a maximum of 1 million rows
 
 
 ## Connection to Dynatrace Grail from Power BI Desktop
