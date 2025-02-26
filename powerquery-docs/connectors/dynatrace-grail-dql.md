@@ -1,12 +1,12 @@
 ---
-title: Connect PowerBI to Dynatrace Grail
-description: The connector allows PowerBI users to access a Dynatrace environment on which they have the necessary permissions to run DQL queries.
+title: Connect Power BI to Dynatrace Grail
+description: The connector allows Power BI users to access a Dynatrace environment on which they have the necessary permissions to run DQL queries.
 author: gordon-dt
 ms.date: 
 ms.author: 
 ---
 
-# Microsoft documentation to connect PowerBI to Dynatrace Grail.
+# Dynatrace Grail (Beta)
 
 The following connector article is provided by Dynatrace, the owner of
 this connector and a member of the Microsoft Power Query Connector
@@ -17,7 +17,7 @@ visit the Dynatrace website and use the support channels there.
 |Item|                                Description|
 ------|----------------------------------------------------------------
 |Release State|                       Pre-Release|
-|Products|                            PowerBI (Semantic Models)|
+|Products|                            Power BI (Semantic Models)|
 |Authentication Types Supported|      Windows (Power BI Desktop)|
 |Function Reference Documentation|    Source|
 
@@ -26,7 +26,7 @@ visit the Dynatrace website and use the support channels there.
 ### Dynatrace environment
 
 It is assumed that a Dynatrace environment is already configured for
-connection from PowerBI Desktop.
+connection from Power BI Desktop.
 
 On Microsoft Azure that can be done through the Marketplace and
 searching for: **Azure Native Dynatrace Service**
@@ -36,59 +36,58 @@ sure the environment is set to the new version and not previous classic
 as the latest version contains the Dynatrace Grail data lakehouse and is set up for
 the authentication requirements for the connector.
 
---------------------------------------------------------
 ## Capabilities Supported
 
-| Number | Capability                                  |
-| ------ | ------------------------------------------- |
-| 1      | Import mode only                            |
-| 2      | Option to enter a DQL query when connecting - limited to a maximum of 1 million rows. |
---------------------------------------------------------
+| Capability                                  |
+| ------------------------------------------- |
+| Import mode only                            |
+| Option to enter a DQL query when connecting - limited to a maximum of 1 million rows |
 
-## Connection to Dynatrace Grail from PowerBI Desktop
+
+## Connection to Dynatrace Grail from Power BI Desktop
 
 To connect to a Dynatrace SaaS instance from Power Query Desktop, take
 the following steps:
 
 1) Select **Dynatrace Grail DQL** in the get data experience.
    
-![get data](./media/dynatrace-grail-dql/connector1_white.png)
+![Screenshot of the Get Data dialog to connect to Dynatrace Grail.](./media/dynatrace-grail-dql/connector1-white.png)
 
 2) Enter your Dynatrace environment. Note that this needs to be the latest Dynatrace version with Grail enabled. The DQL query is optional at this point, but should be used for more complex queries outside of the default queries built in.
 
-![dt environment](./media/dynatrace-grail-dql/connector3_white.png)
+![Screenshot of the environment entry dialog box for the Dynatrace tenant to connect to.](./media/dynatrace-grail-dql/connector3-white.png)
 
-3) The next screen will require you to sign into your environment to authenticate your permissions.
+3) Sign into your environment to authenticate your permissions.
 
-![authenticate](./media/dynatrace-grail-dql/connector4_white.png)
+![Screenshot of the Power Query authentication dialog when you sign in.](./media/dynatrace-grail-dql/connector4-white.png)
 
 4) A browser window will pop up requiring your credentials.
 
-![credentials](./media/dynatrace-grail-dql/connector5_white.png)
+![Screenshot of the Windows authenticated user account to select.](./media/dynatrace-grail-dql/connector5-white.png)
 
 5) Once you have successfully authenticated, the message will show that you are currently signed in. Click Connect.
 
-![connect](./media/dynatrace-grail-dql/connector6_white.png)
+![Screenshot of a successfully signed in dialog box.](./media/dynatrace-grail-dql/connector6-white.png)
 
-6) The Navigator screen will show the record types available to select from Dynatrace Grail.
+6) The Navigator screen shows the record types available to select from Dynatrace Grail.
 
-![records](./media/dynatrace-grail-dql/connector7_white.png)
+![Sample screenshot of record types available in Dynatrace Grail.](./media/dynatrace-grail-dql/connector7-white.png)
 
-7) Selecting one of them, Logs in this example, will run a fetch logs DQL query with a default 1000 row limit. Note that you will require permissions on the Dynatrace environment in order to be able to run this query successfully.
+7) Selecting one of them, Logs in this example, runs a fetch logs DQL query with a default 1000 row limit. Note that you require permissions on the Dynatrace environment in order to be able to run this query successfully.
 
-![logs](./media/dynatrace-grail-dql/connector8_white.png)
+![Sample screenshot of a resultant DQL log query from Dynatrace Grail.](./media/dynatrace-grail-dql/connector8-white.png)
 
 8) The Advanced Editor shows the M code the connector is using.
 
-![connector](./media/dynatrace-grail-dql/connector9_white.png)
+![Screenshot of the connector in M code.](./media/dynatrace-grail-dql/connector9-white.png)
 
 9)  An optional step when connecting is to type in a DQL query directly. In this example fetch logs (default last 2 hours) with a limit of 1000 rows.
 
-![dql](./media/dynatrace-grail-dql/connector10_white.png)
+![Screenshot of a sample DQL query that can be used in the connector.](./media/dynatrace-grail-dql/connector10-white.png)
 
-10) The resulting import into PowerBI will look similar to this.
+10) The resulting import into Power BI looks similar to this.
 
-![show](./media/dynatrace-grail-dql/connector11_white.png)
+![Screenshot of a sample set of Log rows imported into Power BI](./media/dynatrace-grail-dql/connector11-white.png)
 
 ### Troubleshooting
 
