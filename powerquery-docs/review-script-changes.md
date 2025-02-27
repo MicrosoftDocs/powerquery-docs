@@ -5,6 +5,7 @@ author: ptyx507x
 ms.topic: conceptual
 ms.date: 1/9/2023
 ms.author: miescobar
+ms.subservice: user-assistance
 ---
 
 
@@ -35,4 +36,4 @@ When you commit a query, Power Query Online will evaluate it to see if the 'stor
 - If you accept, the changes will be made to your query.
 - If you cancel, you might rewrite your query to make sure that you move your comments properly, or rearrange however else you want.
 
-![Review Script Changes pane depicting a diff between what is committed and what is saved.](media/review-script-changes/review-script-changes.png "Review Script Changes pane")
+:::image type="content" source="media/review-script-changes/review-script-changes.png" alt-text="Review Script Changes pane depicting a diff between what is committed and what is saved.":::

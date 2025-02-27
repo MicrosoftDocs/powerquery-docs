@@ -5,6 +5,7 @@ author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 2/16/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # SharePoint Online list
@@ -19,10 +20,10 @@ ms.author: dougklo
 | Function Reference Documentation | [SharePoint.Contents](/powerquery-m/sharepoint-contents)<br/>[SharePoint.Files](/powerquery-m/sharepoint-files)<br/>[SharePoint.Tables](/powerquery-m/sharepoint-tables) |
 
 > [!NOTE]
->The service principal authentication type isn't supported when using an on-premises data gateway or a virtual network (VNet) data gateway.
+> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 > [!NOTE]
-> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+> If you select Service Principal as the authentication type in Power BI service, you need to grant it app-only permissions through Azure Access Control Services (ACS). For more information, go to [Granting access using SharePoint App-Only](/sharepoint/dev/solution-guidance/security-apponly-azureacs).
 
 ## Capabilities supported
 
@@ -42,9 +43,9 @@ To connect to a SharePoint Online list:
 
 2. Paste the SharePoint site URL you copied in [Determine the site URL](#determine-the-site-url) to the **Site URL** field in the open dialog box.
 
-   ![Folder selection.](./media/sharepoint-online-list/sharepoint-online-list-url.png)
+   :::image type="content" source="./media/sharepoint-online-list/sharepoint-online-list-url.png" alt-text="Folder selection.":::
 
-   If the URL address you enter is invalid, a ![Warning icon.](./media/sharepoint-online-list/web-warning.png) warning icon will appear next to the **Site URL** textbox.
+   If the URL address you enter is invalid, a :::image type="content" source="./media/sharepoint-online-list/web-warning.png" alt-text="Warning icon."::: warning icon will appear next to the **Site URL** textbox.
 
    You can also select either the 1.0 implementation of this connector or the 2.0 implementation. More information: [Connect to SharePoint Online list v2.0](#connect-to-sharepoint-online-list-v20)
 
@@ -52,13 +53,13 @@ To connect to a SharePoint Online list:
 
 3. If this is the first time you've visited this site address, select the appropriate authentication method. Enter your credentials and chose which level to apply these settings to. Then select **Connect**.
 
-   ![Choose Microsoft account.](./media/sharepoint-online-list/sharepoint-online-list-sign-in.png)
+   :::image type="content" source="./media/sharepoint-online-list/sharepoint-online-list-sign-in.png" alt-text="Choose Microsoft account.":::
 
     For more information about authentication methods and level settings, go to [Authentication with a data source](../connectorauthentication.md).
 
 4. From the **Navigator**, you can select a location, then either transform the data in the Power Query editor by selecting **Transform Data**, or load the data by selecting **Load**.
 
-   ![Select the list checkbox.](./media/sharepoint-online-list/sharepoint-online-list-navigator.png)
+   :::image type="content" source="./media/sharepoint-online-list/sharepoint-online-list-navigator.png" alt-text="Select the list checkbox.":::
 
 ## Connect to a SharePoint Online list from Power Query Online
 
@@ -70,7 +71,7 @@ To connect to a SharePoint Online list:
 
 2. Paste the SharePoint site URL you copied in [Determine the site URL](#determine-the-site-url) to the **Site URL** field in the open dialog box.
 
-   ![Online list selection.](./media/sharepoint-online-list/sharepoint-online-list-url-online.png)
+   :::image type="content" source="./media/sharepoint-online-list/sharepoint-online-list-url-online.png" alt-text="Online list selection.":::
 
 3. Enter the name of an on-premises data gateway if needed.
 
@@ -80,7 +81,7 @@ To connect to a SharePoint Online list:
 
 6. From the **Navigator**, you can select a location, then transform the data in the Power Query editor by selecting **Transform data**.
 
-   ![Navigator with data.](./media/sharepoint-online-list/sharepoint-online-list-navigator-online.png)
+   :::image type="content" source="./media/sharepoint-online-list/sharepoint-online-list-navigator-online.png" alt-text="Navigator with data.":::
 
 ## Connect to SharePoint Online list v2.0
 
@@ -97,12 +98,11 @@ With this update to the connector, we're making available two different views fo
 
 The **All** view includes all user created and system defined columns. You can see what columns are included in the following screen.
 
-   ![A screen showing a sample of view settings for a specific view in SharePoint Online list.](./media/sharepoint-online-list/sharepoint-online-list-view.png)
+   :::image type="content" source="./media/sharepoint-online-list/sharepoint-online-list-view.png" alt-text="A screen showing a sample of view settings for a specific view in SharePoint Online list.":::
 
 The default view is what you'll see when looking at the list online in whichever view you've set as *Default* in your settings. If you edit this view to add or remove either user created or system defined columns, or by creating a new view and setting it as default, these changes will propagate through the connector.
 
-   [![A screen showing a sample of SharePoint Online list default view.](./media/sharepoint-online-list/sharepoint-online-list-settings.png)](./media/sharepoint-online-list/sharepoint-online-list-settings.png#lightbox)
-
+   :::image type="content" source="./media/sharepoint-online-list/sharepoint-online-list-settings.png" lightbox="./media/sharepoint-online-list/sharepoint-online-list-settings.png" alt-text="A screen showing a sample of SharePoint Online list default view.":::
 > [!NOTE]
 > If you set the default view in your SharePoint site to **Calendar** view or **Board** view, SharePoint only returns the columns shown in the selected view. In this scenario, Power BI will not retrieve all the columns in the list, even though you choose **All** option. This is by design.
 

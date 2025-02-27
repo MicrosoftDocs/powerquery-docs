@@ -1,10 +1,11 @@
 ---
-title: MongoDB Atlas SQL interface connector (Beta)  
+title: MongoDB Atlas SQL interface connector
 description: Provides basic information, prerequisites, and instructions for using the MongoDB Atlas SQL interface connector.  
 author: bucaojit  
 ms.author: dougklo
 ms.topic: conceptual  
 ms.date: 1/24/2024  
+ms.subservice: connectors
 ---
 
 # MongoDB Atlas SQL interface
@@ -14,11 +15,14 @@ ms.date: 1/24/2024
 
 ## Summary
 
-| Item                           | Description                                                                    |
-|--------------------------------|--------------------------------------------------------------------------------|
-| Release State                  | Beta                                                                           |
-| Products                       | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
-| Authentication Types Supported | Database (Username/Password)                                                   |
+| Item                           | Description                                                                                                 |
+|--------------------------------|-------------------------------------------------------------------------------------------------------------|
+| Release State                  | General Availability                                                                                        |
+| Products                       | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)                              |
+| Authentication Types Supported | Database (Username/Password)<br/>X.509 Certificates<br/>OAuth (OIDC)<br/>AWS Identity and Access Management |
+
+> [!NOTE]
+> When using authentication mechanisms other than Username/Password (such as X.509 Certificates, OAuth (OIDC), or AWS IAM), you can leave the username and password fields blank in the connection dialogue. The appropriate credentials will be handled through the chosen authentication method.
 
 ## Prerequisites
 
@@ -35,11 +39,12 @@ To use the MongoDB Atlas SQL connector, you must have an [Atlas federated databa
 > [!NOTE]
 > If some or all of your data comes from an Atlas cluster, you must use MongoDB version 5.0 or greater for that cluster to take advantage of Atlas SQL.
 
-We also recommend that you install the MongoDB Atlas SQL ODBC Driver before using the MongoDB Atlas SQL connector.
+The [MongoDB Atlas SQL ODBC Driver](https://www.mongodb.com/try/download/odbc-driver) is required to use the MongoDB Atlas SQL Connector.
 
 ## Capabilities Supported
 
 - Import
+- DirectQuery (Power BI semantic models)
 
 ## Connect to MongoDB Atlas federated database using Atlas SQL interface from Power Query Desktop
 
@@ -62,6 +67,12 @@ To connect using the Atlas SQL interface:
      Use the MongoDB URI obtained [in the prerequisites](#obtaining-connection-information-for-your-federated-database-instance).  Make sure that it doesn't contain your username and password. URIs containing username and/or passwords are rejected.
    - Your federated **Database** name. _Required_  
      Use the name of the federated database obtained [in the prerequisites](#obtaining-connection-information-for-your-federated-database-instance).
+   - A SQL query. _Optional_ \
+     Enter a native Atlas SQL query to execute immediately. If the **Database** is the same as above, you may omit it from the query.
+     ```
+     SELECT * FROM orders
+     ```
+   - Select either Import or DirectQuery for your desired Data Connectivity mode
 
    Select **OK**.  
 

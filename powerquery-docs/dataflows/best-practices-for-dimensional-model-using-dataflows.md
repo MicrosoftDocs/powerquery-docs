@@ -1,10 +1,11 @@
 ---
 title: Best practices for creating a dimensional model using dataflows
 description: Best practices for creating a dimensional model using dataflows
-author: bensack
+author: Luitwieler
 ms.topic: conceptual
 ms.date: 6/14/2023
-ms.author: bensack
+ms.author: jeluitwi
+ms.subservice: dataflows
 ---
 
 # Best practices for creating a dimensional model using dataflows
@@ -54,7 +55,7 @@ When you use the result of a dataflow in another dataflow, you're using the conc
 
 In the previous image, the computed table gets the data directly from the source. However, in the architecture of staging and transformation dataflows, it's likely that the computed tables are sourced from the staging dataflows.
 
-![Computed table sourced from dataflows used to process common transformations.](media/best-practices-for-dimensional-model/computed-entity-from-dataflows.png)
+:::image type="content" source="media/best-practices-for-dimensional-model/computed-entity-from-dataflows.png" alt-text="Computed table sourced from dataflows used to process common transformations.":::
 
 ## Build a star schema
 
@@ -68,8 +69,7 @@ It isn't ideal to bring data in the same layout of the operational system into a
 
 When building dimension tables, make sure you have a key for each one. This key ensures that there are no many-to-many (or in other words, "weak") relationships among dimensions. You can create the key by applying some transformation to make sure a column or a combination of columns is returning unique rows in the dimension. Then that combination of columns can be marked as a key in the table in the dataflow.
 
-> [!div class="mx-imgBorder"]
-> ![Mark a column as a key value.](media/best-practices-for-dimensional-model/mark-as-key.png)
+:::image type="content" source="media/best-practices-for-dimensional-model/mark-as-key.png" alt-text="Mark a column as a key value.":::
 
 ### Do an incremental refresh for large fact tables
 

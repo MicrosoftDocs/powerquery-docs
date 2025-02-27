@@ -5,6 +5,7 @@ author: jsilva
 ms.topic: conceptual
 ms.date: 1/24/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # Planview OKR (Beta)
@@ -67,7 +68,7 @@ To load data from Planview OKR in Power Query Online:
 
 3. If you're connecting using Planview OKR for the first time, you need to sign in into your Planview Admin account.
 
-   :::image type="content" source="./media/planview-okr/planview-okr-sign-in.png" alt-text="./media/planview-okr/planview-okr-sign-in.png":::
+   :::image type="content" source="./media/planview-okr/planview-okr-sign-in.png" alt-text="./media/planview-okr/planview-okr-sign-in.png.":::
 
 4. After you sign in, select **Next**.
 

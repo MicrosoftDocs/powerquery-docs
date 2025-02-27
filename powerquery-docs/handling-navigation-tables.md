@@ -3,15 +3,16 @@ title: Handling navigation for Power Query connectors
 description: Manage navigation for Power Query connectors
 author: ptyx507x
 ms.topic: conceptual
-ms.date: 1/9/2023
+ms.date: 4/11/2024
 ms.author: miescobar
+ms.subservice: custom-connectors
 ---
 
 # Handling navigation
 
 Navigation Tables (or nav tables) are a core part of providing a user-friendly experience for your connector. The Power Query experience displays them to the user after they've entered any required parameters for your data source function, and have authenticated with the data source.
 
-![The TripPin navigation table.](media/handling-navigation-tables/navigation-table.png)
+:::image type="content" source="media/handling-navigation-tables/navigation-table.png" alt-text="The TripPin navigation table.":::
 
 Behind the scenes, a nav table is just a regular M Table value with specific metadata fields defined on its Type. When your data source function returns a table with these fields defined, Power Query will display the navigator dialog. You can actually see the underlying data as a Table value by right-clicking on the root node and selecting **Edit**.
 
@@ -49,10 +50,6 @@ The function adds the following metadata to the table type:
 Each of the following item kind values provide a different icon in the navigation table.
 
 * Feed
-* Cube
-* CubeDatabase
-* CubeView
-* CubeViewFolder
 * Database
 * DatabaseServer
 * Dimension
@@ -61,13 +58,8 @@ Each of the following item kind values provide a different icon in the navigatio
 * Function
 * View
 * Sheet
-* Subcube
 * DefinedName
 * Record
-
-The following screenshot shows the icons for item kinds in Power BI Desktop.
-
-![List of Navigation Table ItemKinds.](media/handling-navigation-tables/item-kinds.png)
 
 ## Examples
 
@@ -95,7 +87,7 @@ shared FunctionCallThatReturnsATable = () =>
 
 This code will result in the following Navigator display in Power BI Desktop:
 
-![A sample of a flat navigation table.](media/handling-navigation-tables/navigation-table-sample.png)
+:::image type="content" source="media/handling-navigation-tables/navigation-table-sample.png" alt-text="A sample of a flat navigation table.":::
 
 ### Multi-level navigation table
 
@@ -129,7 +121,7 @@ CreateNavTable = (message as text) as table =>
 
 This code would result in the following Navigator display in Power BI Desktop:
 
-![A sample of a hierarchical navigation table.](media/handling-navigation-tables/navigation-table-nested.png)
+:::image type="content" source="media/handling-navigation-tables/navigation-table-nested.png" alt-text="A sample of a hierarchical navigation table.":::
 
 ### Dynamic navigation tables
 

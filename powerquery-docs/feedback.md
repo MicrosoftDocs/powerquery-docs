@@ -5,6 +5,7 @@ author: ptyx507x
 ms.author: miescobar
 ms.reviewer: dougklo
 ms.date: 1/16/2024
+ms.subservice: user-assistance
 ---
 
 # Power Query feedback

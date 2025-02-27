@@ -5,6 +5,7 @@ author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 1/24/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # Sybase database
@@ -41,18 +42,17 @@ To make the connection, take the following steps:
 
 2. Specify the Sybase server to connect to in **Server** and the database where your data is stored in **Database**.
 
-   ![Enter the Sybase database connection.](./media/sybase-database/connection-settings.png)
+   :::image type="content" source="./media/sybase-database/connection-settings.png" alt-text="Enter the Sybase database connection.":::
 
 3. Select **OK**.
 
 4. If this is the first time you're connecting to this Sybase server and database, select the authentication type you want to use, enter your credentials, and then select **Connect**. For more information about using and managing authentication, go to [Authentication with a data source](../connectorauthentication.md).
 
-   ![Enter your Sybase database credentials.](./media/sybase-database/enter-credentials.png)
+   :::image type="content" source="./media/sybase-database/enter-credentials.png" alt-text="Enter your Sybase database credentials.":::
 
 5. In **Navigator**, select the data you require, then either select **Load** to load the data or **Transform Data** to transform the data.
 
-   [![Select the data you require from the database](./media/sybase-database/navigator-desktop.png)](./media/sybase-database/navigator-desktop.png#lightbox)
-
+   :::image type="content" source="./media/sybase-database/navigator-desktop.png" lightbox="./media/sybase-database/navigator-desktop.png" alt-text="Select the data you require from the database":::
 ## Connect to a Sybase database from Power Query Online
 
 To make the connection, take the following steps:
@@ -72,8 +72,7 @@ To make the connection, take the following steps:
 
 6. Select **Use Encrypted Connection** if you want to use an encrypted connection, or clear the option if you want to use an unencrypted connection.
 
-   [![Enter Sybase database online connection.](./media/sybase-database/data-source-online.png)](./media/sybase-database/data-source-online.png#lightbox)
-
+   :::image type="content" source="./media/sybase-database/data-source-online.png" lightbox="./media/sybase-database/data-source-online.png" alt-text="Enter Sybase database online connection.":::
 7. Select **Next** to continue.
 
 8. In **Navigator**, select the data you require, then select **Transform data** to transform the data in the Power Query editor.

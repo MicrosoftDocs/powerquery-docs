@@ -27,7 +27,7 @@
     },
     {
       "source_path": "powerquery-docs/HandlingQueryFolding.md",
-      "redirect_url": "/power-query/power-query-folding",
+      "redirect_url": "/power-query/query-folding-basics",
       "redirect_document_id": "false"
     },
     {
@@ -449,6 +449,26 @@
       "source_path": "powerquery-docs/dataflows/linked-entities.md",
       "redirect_url": "/power-query/dataflows/linked-tables",
       "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs/power-query-folding.md",
+      "redirect_url": "/power-query/query-folding-basics",
+      "redirect_document_id": "true"
+    },
+    {
+      "source_path": "powerquery-docs//connector-certification.md",
+      "redirect_url": "/fabric/data-factory/connector-certification",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerquery-docs/certification-submission.md",
+      "redirect_url": "/fabric/data-factory/certification-submission",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerquery-docs/providing-user-documentation.md",
+      "redirect_url": "/fabric/data-factory/providing-user-documentation",
+      "redirect_document_id": "false"
     }
-      ]
+  ]
 }

@@ -1,10 +1,11 @@
 ---
 title: Security roles and permission levels in standard dataflows
 description: Describes the security roles and permission levels used in standard dataflows.
-author: bensack
+author: Luitwieler
 ms.topic: conceptual
 ms.date: 6/14/2023
-ms.author: bensack
+ms.author: jeluitwi
+ms.subservice: dataflows
 ---
 
 # Security roles and permission levels required to create standard dataflows
@@ -37,18 +38,15 @@ To add a security role to a user who is already present in an environment:
 
 3. Select **Manage users in Dynamics 365**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Select Manage users in Dynamics 365.](/power-platform/admin/media/manage-users-dynamics-365.png)
+   ![Select Manage users in Dynamics 365.](/power-platform/admin/media/manage-users-dynamics-365.png)
 
 4. Select the user from the list of users in the environment, and then select **Manage roles**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Select Manage roles.](/power-platform/admin/media/select-manage-roles.png)
+   :::image type="content" source="/power-platform/admin/media/select-manage-roles.png" alt-text="Select Manage roles.":::
 
 5. Assign one or more security roles to the user.
 
-   > [!div class="mx-imgBorder"]
-   > ![Manage user roles.](/power-platform/admin/media/manage-user-roles.png)
+   :::image type="content" source="/power-platform/admin/media/manage-user-roles.png" alt-text="Manage user roles.":::
 
 6. Select **OK**.
 

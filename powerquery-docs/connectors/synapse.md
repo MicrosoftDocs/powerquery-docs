@@ -5,6 +5,7 @@ author: miquelladeboer
 ms.topic: conceptual
 ms.date: 1/24/2024
 ms.author: mideboer
+ms.subservice: connectors
 ---
 
 # Azure Synapse Analytics workspace (Beta)
@@ -37,11 +38,11 @@ To connect to Synapse workspace data:
 
 1. Select **Get Data** from the **Home** ribbon in Power BI Desktop. Select **Azure Synapse Analytics workspace (Beta)**. Then select **Connect**.
 
-   ![Get Data from Synapse Workspaces.](./media/azure-synpse-analytics-workspace/get-data-synapse.png)
+   :::image type="content" source="./media/azure-synpse-analytics-workspace/get-data-synapse.png" alt-text="Get Data from Synapse Workspaces.":::
 
 2. If this is the first time you are connecting to this workspace, you'll be asked to sign in to your Synapse account. To sign in, select **Sign in**.
 
-   ![Authentication dialog box with sign-in button for your organizational account.](./media/azure-synpse-analytics-workspace/sign-in.png)
+   :::image type="content" source="./media/azure-synpse-analytics-workspace/sign-in.png" alt-text="Authentication dialog box with sign-in button for your organizational account.":::
 
 3. In the **Sign in with Microsoft** window that appears, provide your credentials to sign in to your Synapse account. Then select **Next**.
 

@@ -6,7 +6,7 @@ author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 2/7/2024
 ms.author: dougklo
-LocalizationGroup: reference
+ms.subservice: connectors
 ---
 
 # Parquet

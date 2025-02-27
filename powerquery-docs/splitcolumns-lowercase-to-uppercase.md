@@ -5,6 +5,7 @@ author: ptyx507x
 ms.topic: conceptual
 ms.date: 1/9/2023
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 
 # Split columns by lowercase to uppercase
@@ -18,15 +19,15 @@ You can find the **Split Columns: By Lowercase to Uppercase** option in three pl
 
 * **Home tab**&mdash;under the **Split Column** dropdown menu inside the **Transform** group.
 
-   ![Image shows By Lowercase to Uppercase under the Home tab.](media/splitcolumns-lowercase-to-uppercase/sc-home-lu.png)
+   :::image type="content" source="media/splitcolumns-lowercase-to-uppercase/sc-home-lu.png" alt-text="Image shows By Lowercase to Uppercase under the Home tab.":::
 
 * **Transform tab**&mdash;under the **Split Column** dropdown menu inside the **Text Column** group.
 
-   ![Image shows By Lowercase to Uppercase under the Transform tab.](media/splitcolumns-lowercase-to-uppercase/sc-transform-lu.png)
+   :::image type="content" source="media/splitcolumns-lowercase-to-uppercase/sc-transform-lu.png" alt-text="Image shows By Lowercase to Uppercase under the Transform tab.":::
 
 * **Right-click a column**&mdash;inside the **Split Column** option.
 
-   ![Image shows By Lowercase to Uppercase when right-clicking a column.](media/splitcolumns-lowercase-to-uppercase/sc-rightclick-lu.png)
+   :::image type="content" source="media/splitcolumns-lowercase-to-uppercase/sc-rightclick-lu.png" alt-text="Image shows By Lowercase to Uppercase when right-clicking a column.":::
 
 ## Split columns by lowercase to uppercase into columns
 

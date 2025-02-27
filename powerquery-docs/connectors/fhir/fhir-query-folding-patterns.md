@@ -1,28 +1,29 @@
 ---
 title: FHIR Power Query folding patterns
-description: Power Query connector for FHIR query folding patterns
+description: Power Query connector for FHIR query folding patterns.
 author: hansenms
 ms.topic: conceptual
-ms.date: 7/25/2023
+ms.date: 3/13/2024
 ms.author: mihansen
+ms.subservice: connectors
 ---
 
 # FHIR query folding patterns
 
-This article describes Power Query patterns that will allow effective query folding in FHIR. It assumes that you are familiar with with using the [Power Query connector for FHIR](fhir.md) and understand the basic motivation and principles for [Power Query folding in FHIR](fhir-queryfolding.md).
+This article describes Power Query patterns that allow effective query folding in FHIR. It assumes that you're familiar with using the [Power Query connector for FHIR](fhir.md) and understand the basic motivation and principles for [Power Query folding in FHIR](fhir-query-folding.md).
 
 ## How to use this document
 
-The list of examples in this document is not exhaustive and does not cover all the search parameters that queries will fold to. However, we provide examples of the types of queries and parameters you might encounter. When you are constructing a filter query expression, consider whether the parameter you would like to filter on is:
+The list of examples in this document isn't exhaustive and doesn't cover all the search parameters that queries fold to. However, we provide examples of the types of queries and parameters you might encounter. When you're constructing a filter query expression, consider whether the parameter you would like to filter on is:
 
 * A primitive type (like `Patient.birthDate`)
 * A complex type, which would be a record in Power Query (like `Patient.meta`)
 * An array of primitive types, which would be a list in Power Query (like `Patient.meta.profile`)
 * An array of complex types, which would be a table in Power Query (like `Observation.code.coding`, which has a number of columns)
 
-And then consult the list of examples below. There are also examples of combining these types of filtering patters in multi-level, nested filtering statements. Finally, this article provides more complicated filtering expressions that fold to [composite search parameters](https://www.hl7.org/fhir/search.html#combining).
+And then consult the following list of examples. There are also examples of combining these types of filtering patters in multi-level, nested filtering statements. Finally, this article provides more complicated filtering expressions that fold to [composite search parameters](https://www.hl7.org/fhir/search.html#combining).
 
-In each example you'll find a filtering expression (`Table.SelectRows`) and right above each filtering statement a comment `// Fold: ...` explaining what search parameters and values the expression will fold to.
+In each example, you find a filtering expression (`Table.SelectRows`) and right above each filtering statement a comment `// Fold: ...` explaining what search parameters and values the expression folds to.
 
 ## Filtering on primitive types
 
@@ -124,7 +125,7 @@ in
     FilteredPatients
 ```
 
-Filtering to keep only patients that are not male (includes other):
+Filtering to keep only patients that aren't male (includes other):
 
 <!-- 
     DOC: Folding Patient.gender not male (code)
@@ -666,7 +667,7 @@ in
 
 ## Filtering with composite search parameters
 
-FHIR has [composite search](https://www.hl7.org/fhir/search.html#combining) parameters that allow filtering on multiple fields on a complex type within a resource or at the root of the resource at the same time. For example, one can search for Observations with specific code *and* a specific value (a `code-value-quantity` search parameter). The Power Query connector for FHIR will attempt to recognize filtering expressions that map to such composite search parameters. This sections lists some examples of these patterns. In the context of analyzing FHIR data, it is especially the composite search parameters on the `Observation` resource that are of interest.
+FHIR has [composite search](https://www.hl7.org/fhir/search.html#combining) parameters that allow filtering on multiple fields on a complex type within a resource or at the root of the resource at the same time. For example, one can search for Observations with specific code *and* a specific value (a `code-value-quantity` search parameter). The Power Query connector for FHIR attempts to recognize filtering expressions that map to such composite search parameters. This section lists some examples of these patterns. In the context of analyzing FHIR data, it's especially the composite search parameters on the `Observation` resource that are of interest.
 
 Filtering Observations on code and value quantity, body height greater than 150:
 
@@ -771,11 +772,11 @@ in
 
 ## Summary
 
-Query folding turns Power Query filtering expressions into FHIR search parameters. The Power Query connector for FHIR recognizes certain patterns and attempts to identify matching search parameters. Recognizing those patterns will help you write more efficient Power Query expressions.
+Query folding turns Power Query filtering expressions into FHIR search parameters. The Power Query connector for FHIR recognizes certain patterns and attempts to identify matching search parameters. Recognizing those patterns helps you write more efficient Power Query expressions.
 
 ## Next steps
 
-In this article, we reviewed some classes of filtering expressions that will fold to FHIR search parameters. Next read about establishing relationships between FHIR resources.
+In this article, we reviewed some classes of filtering expressions that fold to FHIR search parameters. Next read about establishing relationships between FHIR resources.
 
 >[!div class="nextstepaction"]
 >[FHIR Power Query relationships](fhir-relationships.md)

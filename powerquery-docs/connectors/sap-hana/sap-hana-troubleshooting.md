@@ -5,6 +5,7 @@ author: dougklopfenstein
 ms.topic: conceptual
 ms.date: 1/8/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # Troubleshooting
@@ -95,6 +96,6 @@ This message might be because of:
 
   - Response from SAP:
 
-    ![SAP response to known issue.](sap-hana-issue.png)
+    :::image type="content" source="sap-hana-issue.png" alt-text="SAP response to known issue.":::
 
   Unfortunately, this is an SAP issue so you'll need to wait for a fix from SAP.

@@ -5,6 +5,7 @@ author: nikkiwaghani
 ms.author: nikkiwaghani
 ms.topic: overview
 ms.date: 1/17/2024
+ms.subservice: dataflows
 ---
 
 # Data exfiltration considerations and best practices for dataflows
@@ -23,7 +24,7 @@ A trusted user who has access to sensitive data can author a program to push the
 * Cross data source filtering and joins: Sensitive data can be used as filtering or join conditions against another untrusted data source. Specifically, data can travel to the untrusted data source in the form of query strings or parameters.
 * Output destinations: By using Fabric [dataflows](/fabric/data-factory/create-first-dataflow-gen2), users can specify output destinations for their queries, thereby transferring data to a list of supported data sinks, which includes Azure SQL databases and data warehouses, Fabric Lakehouses, Warehouses, and KQL databases.
 
-:::image type="content" source="media\service-gateway-dataflow-best-practices\artbitrary-code-execution.png" alt-text="Image of how M Programs that run on the cloud can execute arbitrary code and connect to untrusted data sources" lightbox="media\service-gateway-dataflow-best-practices\artbitrary-code-execution.png":::
+:::image type="content" source="media\service-gateway-dataflow-best-practices\artbitrary-code-execution.png" alt-text="Image of how M Programs that run on the cloud can execute arbitrary code and connect to untrusted data sources." lightbox="media\service-gateway-dataflow-best-practices\artbitrary-code-execution.png":::
 
 ### Cross-tenant data movement
 

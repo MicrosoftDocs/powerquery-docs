@@ -4,6 +4,7 @@ description: Power Query enables you to automatically sign in to a select set of
 author: ptyx507x
 ms.date: 1/17/2024
 ms.author: miescobar
+ms.subservice: get-data
 ---
 
 # Auto sign in for Microsoft Entra ID data sources
@@ -17,7 +18,7 @@ More technically, the auto sign-in feature for Microsoft Entra ID data sources u
 
 When selecting a connector that has this capability, it automatically signs you in with **Organizational account** set as the authentication kind.
 
-![Connect to data source dialog showing the SharePoint folder connector experience where the user Test Account has been automatically logged in using the Organizational account as the authentication kind.](media/aad-obo/sample-connect-to-data-source.png)
+:::image type="content" source="media/aad-obo/sample-connect-to-data-source.png" alt-text="Connect to data source dialog showing the SharePoint folder connector experience where the user Test Account has been automatically logged in using the Organizational account as the authentication kind.":::
 
 >[!TIP]
 >If you'd like to authenticate with a different account, select the **Switch account** link shown in the dialog.

@@ -5,6 +5,7 @@ author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 1/24/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # SumTotal
@@ -46,7 +47,7 @@ To connect to SumTotal from Power BI Desktop:
 
 2. In the **Get Data** dialog box, select **Other > SumTotal**, and then select **Connect**.
 
-   ![Screenshot](media/sumtotal/sumtotal-get-data.png)
+   :::image type="content" source="media/sumtotal/sumtotal-get-data.png" alt-text="Screenshot.":::
 
 3. Enter the server URL address of the data you want to load.
 

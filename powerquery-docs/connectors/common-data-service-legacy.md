@@ -5,6 +5,7 @@ author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 2/1/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # Common Data Service (Legacy)
@@ -42,7 +43,7 @@ To connect to Common Data Service (Legacy) from Power Query Desktop:
 
 2. Enter the Common Data Service (Legacy) environment URL of the data you want to load. Use the format https://\<_yourenvironmentid_>.crm.dynamics.com/. More information: [Finding your Dataverse environment URL](#finding-your-common-data-service-legacy-environment-url)
 
-   ![Server URL selection.](media/common-data-service/enter-url.png)
+   :::image type="content" source="media/common-data-service/enter-url.png" alt-text="Server URL selection.":::
 
    When the table is loaded in the Navigator dialog box, by default the columns in the table are reordered in alphabetical order by the column names. If you don't want the columns reordered, in the advanced settings enter **false** in **Reorder columns**.
 
@@ -52,11 +53,11 @@ To connect to Common Data Service (Legacy) from Power Query Desktop:
 
 3. If this attempt is the first time you're connecting to this site, select **Sign in** and input your credentials. Then select **Connect**.
 
-   ![Sign in to this site.](media/common-data-service/sign-in.png)
+   :::image type="content" source="media/common-data-service/sign-in.png" alt-text="Sign in to this site.":::
 
 4. In **Navigator**, select the data you require, then either load or transform the data.
 
-   ![Load or transform from navigator.](media/common-data-service/navigator.png)
+   :::image type="content" source="media/common-data-service/navigator.png" alt-text="Load or transform from navigator.":::
 
 ## Connect to Common Data Service (Legacy) from Power Query Online
 
@@ -68,7 +69,7 @@ To connect to Common Data Service (Legacy) from Power Query Online:
 
 2. Enter the server URL address of the data you want to load.
 
-   ![Enter the server URL.](media/common-data-service/enter-url-online.png)
+   :::image type="content" source="media/common-data-service/enter-url-online.png" alt-text="Enter the server URL.":::
 
 3. If necessary, enter an on-premises data gateway if you're going to be using on-premises data. For example, if you're going to combine data from Dataverse and an on-premises SQL Server database.
 
@@ -80,11 +81,11 @@ To connect to Common Data Service (Legacy) from Power Query Online:
 
 ## Finding your Common Data Service (Legacy) environment URL
 
-Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). In the upper right of the Power Apps page, select the environment you're going to connect to. Select the ![Settings icon.](media/common-data-service/settings-icon.png) settings icon, and then select **Advanced settings**.
+Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). In the upper right of the Power Apps page, select the environment you're going to connect to. Select the :::image type="content" source="media/common-data-service/settings-icon.png" alt-text="Settings icon."::: settings icon, and then select **Advanced settings**.
 
 In the new browser tab that opens, copy the root of the URL. This root URL is the unique URL for your environment. The URL will be in the format of https://\<*yourenvironmentid*>.crm.dynamics.com/. Keep this URL somewhere handy so you can use it later, for example, when you create Power BI reports.
 
-![Location of the Common Data Service (Legacy) environment URL.](media/common-data-service/cds-env.png)
+:::image type="content" source="media/common-data-service/cds-env.png" alt-text="Location of the Common Data Service (Legacy) environment URL.":::
 
 ### When to use the Common Data Service (Legacy) connector
 

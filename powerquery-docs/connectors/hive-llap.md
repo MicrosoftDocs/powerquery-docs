@@ -5,6 +5,7 @@ author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 1/24/2024 
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # Hive LLAP
@@ -41,7 +42,7 @@ To connect to an Apache Hive LLAP server:
    - The `hostname` (for example, `hivellaphttp.southcentralus.contoso.com`) is the hostname or IP address of the Apache Hive server.
    - The `port number` (for example, 10500) is the port number for the Apache Hive server. If the `port number` isn't specified, the default value is 10501 for the HTTP transport protocol and 10500 for the standard transport protocol.
 
-   ![Hive LLAP connection builder.](./media/hive-llap/server-selection.png)
+   :::image type="content" source="./media/hive-llap/server-selection.png" alt-text="Hive LLAP connection builder.":::
 
 3. In **Thrift Transport Protocol**, select either **Standard** for TCP mode, or **HTTP** for HTTP mode.
 
@@ -62,7 +63,7 @@ To connect to an Apache Hive LLAP server:
 
 8. In **Navigator**, select the data you require. Then select either **Transform data** to transform the data in Power Query Editor or **Load** to load the data in Power BI Desktop.
 
-   ![Apache Hive LLAP import data navigator.](./media/hive-llap/navigator.png)
+   :::image type="content" source="./media/hive-llap/navigator.png" alt-text="Apache Hive LLAP import data navigator.":::
 
 ## Connect to Hive LLAP data from Power Query Online
 
@@ -70,7 +71,7 @@ To connect to the Apache Hive LLAP server:
 
 1. Select the **Hive LLAP** option in the **Power Query - Choose data source** page.
 
-   ![Screenshot of the connect to data source page with all of the selections not yet filled in.](./media/hive-llap/connect-online.png)
+   :::image type="content" source="./media/hive-llap/connect-online.png" alt-text="Screenshot of the connect to data source page with all of the selections not yet filled in.":::
 
 2. Enter the **URL** to the Adobe Hive LLAP server. You can also enter an optional port number. Typically, the URL looks like `http://[hostname]:[port number]`. The components of the URL are:
 
@@ -107,7 +108,7 @@ To use this feature:
 
 5. Select the option to **Use SSO via Kerberos for DirectQuery queries** or **Use SSO via Kerberos for DirectQuery and Import queries**.
 
-   ![Add data source dialog showing the Kerberos advanced settings.](./media/hive-llap/kerberos-sso.png)
+   :::image type="content" source="./media/hive-llap/kerberos-sso.png" alt-text="Add data source dialog showing the Kerberos advanced settings.":::
 
 More information, [Configure Kerberos-based SSO from Power BI service to on-premises data sources](/power-bi/connect-data/service-gateway-sso-kerberos)
 
@@ -117,7 +118,7 @@ More information, [Configure Kerberos-based SSO from Power BI service to on-prem
 
 You might come across the following "SSL_connect" error after entering the authentication information for the connector and selecting **Connect**.
 
-![Unable to connect error with SSL wrong version number](./media/hive-llap/unable-to-connect.png)
+:::image type="content" source="./media/hive-llap/unable-to-connect.png" alt-text="Unable to connect error with SSL wrong version number.":::
 
 If this error occurs:
 
@@ -125,11 +126,11 @@ If this error occurs:
 
 2. In **Data source settings**, select the Hive LLAP source you created, and then select **Edit Permissions**.
 
-   ![Select the Hive LLAP source.](./media/hive-llap/data-source-settings.png)
+   :::image type="content" source="./media/hive-llap/data-source-settings.png" alt-text="Select the Hive LLAP source.":::
 
 3. In **Edit Permissions**, under **Encryption**, clear the **Encrypt connections** check box.
 
-   ![Clear the Encrypt connections box.](./media/hive-llap/encryption-off.png)
+   :::image type="content" source="./media/hive-llap/encryption-off.png" alt-text="Clear the Encrypt connections box.":::
 
 4. Select **OK**, and then in **Data source settings**, select **Close**.
 
@@ -139,7 +140,7 @@ If this error occurs:
 
 After publishing a report in Power BI service, you need to update the credentials to the Hive data source in the cloud to refresh in Power BI service. After filling in the credentials, you might get the error:
 
-![Screenshot of Credential Error.](media/hive-llap/image.png)
+:::image type="content" source="media/hive-llap/image.png" alt-text="Screenshot of Credential Error.":::
 
 If you get this error and you see the following message in Fiddler trace, this is an SSL issue.
 

@@ -5,6 +5,7 @@ author: dougklopfenstein
 ms.topic: conceptual
 ms.date: 1/8/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # Configure SSL for ODBC client access to SAP HANA
@@ -13,7 +14,7 @@ If you're connecting to an SAP HANA database from Power Query Online, you may ne
 
 In Power BI Desktop and Excel, you can set up these properties when you first sign in using the Power Query SAP HANA database connector. The **Validate server certificate** selection in the authentication dialog box is enabled by default. You can then enter values in the **SSL crypto provider**, **SSL key store**, and **SSL trust store** properties in this dialog box. However, all of the validate server certificate selections in the authentication dialog box in Power BI Desktop and Excel are optional. They're optional in case you want to use ODBC Data Source Administrator to set them up at the driver level.
 
-![Validate server certificate selections.](ssl-setup-odbc.png)
+:::image type="content" source="ssl-setup-odbc.png" alt-text="Validate server certificate selections.":::
 
 > [!NOTE]
 > You must have the proper SAP HANA ODBC driver (32-bit or 64-bit) installed before you can set these properties in ODBC Data Source Administrator.
@@ -24,29 +25,29 @@ To use ODBC Data Source Administrator to set up the validate server certificate 
 
 1. From the Windows Start menu, select **Windows Administrative Tools** > **ODBC Data Sources**. If you're using a 32-bit version of Power BI Desktop or Excel, open ODBC Data Sources (32-bit), otherwise open ODBC Data Sources (64-bit).
 
-   ![Open the ODBC Data Source Administrator.](odbc-data-sources.png)
+   :::image type="content" source="odbc-data-sources.png" alt-text="Open the ODBC Data Source Administrator.":::
 
 2. In the **User DSN** tab, select **Add**.
 
 3. In the **Create New Data Source** dialog box, select the **HDBODBC** driver, and then select **Finish**.
 
-    ![Create a new data source.](create-new-data-source.png)
+    :::image type="content" source="create-new-data-source.png" alt-text="Create a new data source.":::
 
 4. In the **ODBC Configuration for SAP HANA** dialog box, enter a **Data source name**. Then enter your server and database information, and select **Validate the TLS/SSL certificate**.
 
-    ![Set up the ODBC configuration.](odbc-configuration.png)
+    :::image type="content" source="odbc-configuration.png" alt-text="Set up the ODBC configuration.":::
 
 5. Select the **Advanced** button.
 
 6. In the **Advanced ODBC Connection Property Setup** dialog box, select the **Add** button.
 
-    ![Add property to odbc connection.](advanced-odbc-connection.png)
+    :::image type="content" source="advanced-odbc-connection.png" alt-text="Add property to odbc connection.":::
 
 7. In the **Add/Modify Connection Property** dialog box, enter **sslCryptoProvider** in the **Property** text box.
 
 8. In the **Value** text box, enter the name of the crypto provider you'll be using: either **sapcrypto**, **commoncrypto**, **openssl**, or **mscrypto**.
 
-    ![Enter the connection property and value.](add-modify-connection-property.png)
+    :::image type="content" source="add-modify-connection-property.png" alt-text="Enter the connection property and value.":::
 
 9. Select **OK**.
 

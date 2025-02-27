@@ -5,6 +5,7 @@ author: hansenms
 ms.topic: conceptual
 ms.date: 1/17/2024
 ms.author: mihansen
+ms.subservice: connectors
 ---
 
 # FHIR connector authentication

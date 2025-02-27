@@ -3,8 +3,9 @@ title: Power Query OData Feed connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your data using the connector.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 2/7/2024
+ms.date: 4/12/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # OData Feed
@@ -40,17 +41,17 @@ To load data from an OData Feed in Power Query Desktop:
 
 2. Choose the **Basic** button and enter a URL address in the text box. This URL should be the root of the OData service you want to connect to. For example, enter `http://services.odata.org/V4/northwind/northwind.svc/`. Then select **OK**.
 
-   ![OData URL selection.](media/odata-feed/odata-basic-url.png)
+   :::image type="content" source="media/odata-feed/odata-basic-url.png" alt-text="OData URL selection.":::
 
-   If the URL address you enter is invalid, a ![Warning icon.](./media/odata-feed/web-warning.png) warning icon will appear next to the **URL** textbox.
+   If the URL address you enter is invalid, a :::image type="content" source="./media/odata-feed/web-warning.png" alt-text="Warning icon."::: warning icon will appear next to the **URL** textbox.
 
 3. If this is the first time you're connecting using the OData Feed, select the authentication type, input your credentials (if necessary), and select the level to apply the authentication settings to. Then select **Connect**.
 
-   ![OData credentials selection.](media/odata-feed/odata-sign-in.png)
+   :::image type="content" source="media/odata-feed/odata-sign-in.png" alt-text="OData credentials selection.":::
 
 4. From the **Navigator** dialog, you can select a table, then either transform the data in the Power Query Editor by selecting **Transform Data**, or load the data by selecting **Load**.
 
-   ![Web table selection.](media/odata-feed/odata-navigator.png)
+   :::image type="content" source="media/odata-feed/odata-navigator.png" alt-text="Web table selection.":::
 
    If you have multiple tables that have a direct relationship to one or more of the already selected tables, you can select the **Select Related Tables** button. When you do, all tables that have a direct relationship to one or more of the already selected tables will be imported as well.
 
@@ -80,11 +81,11 @@ Connecting to [Microsoft Graph](/graph/overview) REST [APIs](https://graph.micro
 
 ## Known Issues and Limitations
 
-### Joins
+### Connections closed when joining with OData / Web sources
 
-Due to the architecture of OData and other web connectors, joins can be non-performant. While you have the option to use navigation columns when merging between tables from an OData source, you don't have this option when merging with non-Odata sources.
+Due to the architecture of OData and other web connectors, joins can be slow. A slow join can sometimes cause the source to fail the connection, resulting an error such as 'An existing connection was forcibly closed by the remote host'. While you have the option to use navigation columns when merging between tables from an OData source, you don't have his option when merging with non-OData sources. If you're seeing such issues when merging an OData or Web source, and are unable to use a navigation column instead, you should apply [Table.Buffer](/powerquery-m/table-buffer) to your query in the advanced editor before you merge the data.
 
-If you're seeing performance issues when merging an OData source, you should apply [Table.Buffer](/powerquery-m/table-buffer) to your OData query in the advanced editor, before you merge the data.
+We recommend buffering the smaller of the queries being merged to optimize the performance. You can also try switching the order of the queries in the join to optimize the query.
 
 ### Test Connection issues
 
@@ -106,7 +107,7 @@ Contact the service owner. They'll either need to change the authentication conf
 
 ### Maximum URL length
 
-If you're using the OData feed connector to connect to a SharePoint list, SharePoint online list, or Project Online, the maximum URL length for these connections is approximately 2100 characters. Exceeding the character limit results in a 401 error. This maximum URL length is built in the SharePoint front end and can't be changed.
+If you're using the OData feed connector to connect to a SharePoint list, SharePoint online list, or Project Online, the maximum URL length for these connections is approximately 2,100 characters. Exceeding the character limit results in a 401 error. This maximum URL length is built in the SharePoint front end and can't be changed.
 
 To get around this limitation, start with the root OData endpoint and then navigate and filter inside Power Query. Power Query filters this URL locally when the URL is too long for SharePoint to handle. For example, start with:
 

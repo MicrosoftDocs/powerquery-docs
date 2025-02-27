@@ -1,10 +1,11 @@
 ---
 title: Power Query Adobe Analytics connector
-description: Provides basic information and prerequisites for the connector, descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
+description: Provides basic information and prerequisites for the connector, descriptions of the optional input parameters, and limitations and issues you might encounter.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/18/2024
+ms.date: 4/24/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # Adobe Analytics
@@ -32,43 +33,43 @@ To connect to Adobe Analytics data:
 
 1. Select **Get Data** from the **Home** ribbon in Power BI Desktop. Select **Online Services** from the categories on the left, select **Adobe Analytics**, and then select **Connect**.
 
-   ![Get Data from Adobe Analytics.](./media/adobe-analytics/get-aa-data.png)
+   :::image type="content" source="./media/adobe-analytics/get-aa-data.png" alt-text="Get Data from Adobe Analytics.":::
 
 2. If this is the first time you're getting data through the Adobe Analytics connector, a third-party notice will be displayed. Select **Don't warn me again with this connector** if you don't want this message to be displayed again, and then select **Continue**.
 
 3. To sign in to your Adobe Analytics account, select **Sign in**.
 
-   ![Select sign in button.](./media/adobe-analytics/sign-in.png)
+   :::image type="content" source="./media/adobe-analytics/sign-in.png" alt-text="Select sign in button.":::
 
 4. In the Adobe Analytics window that appears, provide your credentials to sign in to your Adobe Analytics account. You can either supply a username (which is usually an email address), or select **Continue with Google** or **Continue with Facebook**.
 
-   ![Sign in to Adobe Analytics.](./media/adobe-analytics/adobe-sign-in.png)
+   :::image type="content" source="./media/adobe-analytics/adobe-sign-in.png" alt-text="Sign in to Adobe Analytics.":::
 
    If you entered an email address, select **Continue**.
 
 5. Enter your Adobe Analytics password and select **Continue**.
 
-   ![Enter your password.](./media/adobe-analytics/enter-password.png)
+   :::image type="content" source="./media/adobe-analytics/enter-password.png" alt-text="Enter your password.":::
 
 6. Once you've successfully signed in, select **Connect**.
 
-   ![Signed in and ready to connect.](./media/adobe-analytics/signed-in.png)
+   :::image type="content" source="./media/adobe-analytics/signed-in.png" alt-text="Signed in and ready to connect.":::
 
 Once the connection is established, you can preview and select multiple dimensions and measures within the **Navigator** dialog box to create a single tabular output. 
 
-![Select data using Navigator.](./media/adobe-analytics/navigator-view.png)
+:::image type="content" source="./media/adobe-analytics/navigator-view.png" alt-text="Select data using Navigator.":::
 
 You can also provide any optional input parameters required for the selected items. For more information about these parameters, see [Optional input parameters](#optional-input-parameters).
 
 You can **Load** the selected table, which brings the entire table into Power BI Desktop, or you can select **Transform Data** to edit the query, which opens Power Query Editor. You can then filter and refine the set of data you want to use, and then load that refined set of data into Power BI Desktop.
 
-![Load or transform data.](./media/adobe-analytics/button-select.png)
+:::image type="content" source="./media/adobe-analytics/button-select.png" alt-text="Load or transform data.":::
 
 ## Optional input parameters
 
 When you've selected the Adobe Analytics data you want to load or transform in the Power Query **Navigator** dialog box, you can also limit the amount of data by selecting a set of optional input parameters. 
 
-![Optional input parameters.](./media/adobe-analytics/navigator-options.png)
+:::image type="content" source="./media/adobe-analytics/navigator-options.png" alt-text="Optional input parameters.":::
 
 These input parameters are:
 
@@ -76,7 +77,7 @@ These input parameters are:
 
 * Segment&mdash;filter the data based on all segments contained in the data, or only those segments you select. To change the list of segments, select the ellipsis to the right of the **Segment** list box, then choose the segments you want. By default, all segments are included in the data.
 
-   ![Select the list of segments.](./media/adobe-analytics/segment-select.png)
+   :::image type="content" source="./media/adobe-analytics/segment-select.png" alt-text="Select the list of segments.":::
 
 * Top&mdash;filter the data based on the top items for the dimension. You can enter a value in the **Top** text box, or select the ellipsis next to the text box to select some default values. By default, all items are selected.
 
@@ -94,11 +95,13 @@ You should be aware of the following limitations and issues associated with acce
 
 * The default rate limit for an Adobe Analytics Company is 120 requests per minute per user (the limit is enforced as 12 requests every 6 seconds).
 
+* This connector isn't supported with an on-premises data gateway. However it is supported when using the [VNet data gateway](/data-integration/vnet/use-data-gateways-sources-power-bi#supported-azure-data-services).
+
 Import from Adobe Analytics will stop and display an error message whenever the Adobe Analytics connector hits any of the API limits listed above.
 
-When accessing your data using the Adobe Analytics connector, follow the guidelines provided under the [Best Practices](https://www.adobe.io/apis/experiencecloud/analytics/docs.html#!AdobeDocs/analytics-2.0-apis/master/reporting-guide.md) heading.
+When accessing your data using the Adobe Analytics connector, follow the guidelines provided under the [Best Practices](https://developer.adobe.com/analytics-apis/docs/2.0/guides/faq/#what-are-some-best-practices-and-guidelines-when-using-the-apis) heading.
 
-For additional guidelines on accessing Adobe Analytics data, see [Recommended usage guidelines](https://helpx.adobe.com/analytics/kb/recommended-usage-guidelines.html).
+For additional guidelines on accessing Adobe Analytics data, see [Recommended usage guidelines](https://experienceleague.adobe.com/en/docs/analytics/analyze/admin-overview/use-cases).
 
 ## Next steps
 

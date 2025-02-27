@@ -4,6 +4,7 @@ description: With Power Query, you can add a conditional column to your query by
 author: ptyx507
 ms.date: 2/16/2024
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 
 # Add a conditional column

@@ -5,6 +5,7 @@ author: dougklopfenstein
 ms.topic: conceptual
 ms.date: 1/26/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # Navigate the query objects
@@ -15,23 +16,23 @@ You'll see one catalog folder with the name $INFOCUBE. This folder contains all 
 
 The other catalog folders represent InfoProviders in SAP BW for which at least one query exists.
 
-![Screenshot of navigator displaying the catalog folders.](sap-bw-navigator.png)
+:::image type="content" source="sap-bw-navigator.png" alt-text="Screenshot of navigator displaying the catalog folders.":::
 
 The **Navigator** dialog box displays a hierarchical tree of data objects from the connected SAP BW system. The following table describes the types of objects.
 
 | Symbol | Description                                              |
 | ------ | ---------------------------------------------------------|
-| ![Server symbol.](server.png) | Your SAP BW server |
-| ![Catalog symbol.](catalog.png) | Catalog&mdash;either **$INFOCUBE** or an InfoProvider |
-| ![Cube symbol.](infocube.png) | InfoCube or a BEx Query |
-| ![Key symbol.](key.png) | Key figure |
-| ![Characteristic symbol.](characteristic.png) | Characteristic |
-| ![Characteristic level symbol.](char-level.png) | Characteristic level |
-| ![Property symbol.](property.png) | Property (Attribute) |
-| ![Hierarchy symbol.](hierarchy.png) | Hierarchy |
+| :::image type="content" source="server.png" alt-text="Server symbol."::: | Your SAP BW server |
+| :::image type="content" source="catalog.png" alt-text="Catalog symbol."::: | Catalog&mdash;either **$INFOCUBE** or an InfoProvider |
+| :::image type="content" source="infocube.png" alt-text="Cube symbol."::: | InfoCube or a BEx Query |
+| :::image type="content" source="key.png" alt-text="Key symbol."::: | Key figure |
+| :::image type="content" source="characteristic.png" alt-text="Characteristic symbol."::: | Characteristic |
+| :::image type="content" source="char-level.png" alt-text="Characteristic level symbol."::: | Characteristic level |
+| :::image type="content" source="property.png" alt-text="Property symbol."::: | Property (Attribute) |
+| :::image type="content" source="hierarchy.png" alt-text="Hierarchy symbol."::: | Hierarchy |
 
 &nbsp;
-![Navigator with display options context menu open.](navigator-display-options.png)
+:::image type="content" source="navigator-display-options.png" alt-text="Navigator with display options context menu open.":::
 
 > [!NOTE]
 >The navigator shows InfoCubes and BEx queries. For BEx queries, you may need to go into Business Explorer, open the desired query and check **Allow External Access to this Query: By OLE DB for OLAP** for the query to be available in the navigator.
@@ -58,7 +59,7 @@ Characteristics in SAP BW can have more than one hierarchy defined. For those ch
 
 For characteristics with hierarchies, the properties selected for that characteristic will be included for each selected level of the hierarchy.
 
-![Characteristic hierarchies with selected properties.](characteristic-hierarchies.png)
+:::image type="content" source="characteristic-hierarchies.png" alt-text="Characteristic hierarchies with selected properties.":::
 
 ## Measure properties
 
@@ -89,7 +90,7 @@ Queries in SAP BW can have dynamic filters defined that allow you to restrict th
 
 When you select an SAP BW query with characteristic restrictions in the Power Query navigator, you'll see the variables displayed as parameters above the data preview area.
 
-![Screenshot showing the variables displayed as parameters above the data preview area.](variables-as-parameters.png)
+:::image type="content" source="variables-as-parameters.png" alt-text="Screenshot showing the variables displayed as parameters above the data preview area.":::
 
 Using the **Show** selector, you can display all parameters that are defined on the query, or just the required ones.
 
@@ -97,7 +98,7 @@ The query shown in the previous image has several optional parameters, including
 
 The value **#** means unassigned; in the example any data record without an assigned material group value.
 
-![Select values menu showing material groups that can be selected.](select-material-group.png)
+:::image type="content" source="select-material-group.png" alt-text="Select values menu showing material groups that can be selected.":::
 
 **Performance recommendation**
 
@@ -111,7 +112,7 @@ In many cases, it may also be possible to work with the author of the BEx Query 
 
 Once you've selected the SAP data set you want in the navigator, you can import the data into Power Query Editor. Select **Transform Data** to launch the Power Query Editor, where you can perform additional data transformation and filtering steps.
 
-![View of Power Query Editor after it is launched.](launch-query-editor.png)
+:::image type="content" source="launch-query-editor.png" alt-text="View of Power Query Editor after it is launched.":::
 
 In the example above, a parameter was used to only bring back records with a **Material Group** of casings, motherboards, and processors.
 

@@ -2,14 +2,16 @@
 title: TripPin 7 - Advanced Schema
 description: Adding an advanced schema with typing to your TripPin REST connector.
 author: ptyx507x
-
-
 ms.topic: tutorial
-ms.date: 1/9/2023
+ms.date: 5/17/2023
 ms.author: miescobar
+ms.subservice: custom-connectors
 ---
 
 # TripPin part 7 - Advanced schema with M types
+
+>[!NOTE]
+>This content currently references content from a legacy implementation for unit testing in Visual Studio. The content will be updated in the near future to cover the new [Power Query SDK test framework](../../../sdk-testframework/test-framework.md).
 
 This multi-part tutorial covers the creation of a new data source extension for Power Query. The tutorial is meant to be done sequentially&mdash;each lesson builds on the connector created in previous lessons, incrementally adding new capabilities to your connector.
 
@@ -177,7 +179,7 @@ SchemaTable = #table({"Entity", "Type"}, {
 ## Enforcing a schema using types
 
 You'll rely on a common function (`Table.ChangeType`) to enforce a schema on your data, much like you used `SchemaTransformTable` in the [previous lesson](../6-schema/readme.md).
-Unlike `SchemaTransformTable`, `Table.ChangeType` takes in an actual M table type as an argument, and will apply your schema _recursively_ for all nested types. It's signature looks like this:
+Unlike `SchemaTransformTable`, `Table.ChangeType` takes in an actual M table type as an argument, and will apply your schema _recursively_ for all nested types. Its signature looks like this:
 
 ```powerquery-m
 Table.ChangeType = (table, tableType as type) as nullable table => ...

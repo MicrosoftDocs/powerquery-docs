@@ -5,6 +5,7 @@ author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 1/24/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # SAP HANA database
@@ -48,7 +49,7 @@ To connect to an SAP HANA database from Power Query Desktop:
 
 2. Enter the name and port of the SAP HANA server you want to connect to. The example in the following figure uses `SAPHANATestServer` on port `30015`.
 
-   ![Enter the SAP HANA server information.](sap-hana-server.png)
+   :::image type="content" source="sap-hana-server.png" alt-text="Enter the SAP HANA server information.":::
 
    By default, the port number is set to support a single container database. If your SAP HANA database can contain more than one multitenant database container, select **Multi-container system database (30013)**. If you want to connect to a tenant database or a database with a non-default instance number, select **Custom** from the **Port** drop-down menu.
 
@@ -60,7 +61,7 @@ To connect to an SAP HANA database from Power Query Desktop:
 
 3. If you're accessing a database for the first time, you'll be asked to enter your credentials for authentication. In this example, the SAP HANA server requires database user credentials, so select **Database** and enter your user name and password. If necessary, enter your server certificate information.
 
-   ![Enter the server credentials.](sap-hana-signin.png)
+   :::image type="content" source="sap-hana-signin.png" alt-text="Enter the server credentials.":::
 
    Also, you may need to validate the server certificate. For more information about using validate server certificate selections, see [Using SAP HANA encryption](sap-hana-encryption.md). In Power BI Desktop and Excel, the validate server certificate selection is enabled by default. If you've already set up these selections in ODBC Data Source Administrator, clear the **Validate server certificate** check box. To learn more about using ODBC Data Source Administrator to set up these selections, go to [Configure SSL for ODBC client access to SAP HANA](configure-odbc-sap-hana.md).
 
@@ -92,7 +93,7 @@ To connect to SAP HANA data from Power Query Online:
 
 6. Select **Use Encrypted Connection** if you're using any encrypted connection, then choose the SSL crypto provider. If you're not using an encrypted connection, clear **Use Encrypted Connection**. More information: [Enable encryption for SAP HANA](sap-hana-encryption.md)
 
-   ![SAP HANA database online sign-in.](sap-hana-online-signin.png)
+   :::image type="content" source="sap-hana-online-signin.png" alt-text="SAP HANA database online sign-in.":::
 
 7. Select **Next** to continue.
 

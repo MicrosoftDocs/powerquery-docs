@@ -5,6 +5,7 @@ author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 1/24/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # ODBC
@@ -41,7 +42,7 @@ To make the connection, take the following steps:
 
 2. In **From ODBC**, select the data source name (DSN) from the **Data source name (DSN)** drop-down box. In this example, a DSN name of **SQL Server Database** is used.
 
-   ![ODBC connection builder in Power Query Desktop.](./media/odbc/odbc-builder.png)
+   :::image type="content" source="./media/odbc/odbc-builder.png" alt-text="ODBC connection builder in Power Query Desktop.":::
 
    You can also choose **Advanced options** to enter more optional connection information. More information: [Connect using advanced options](#connect-using-advanced-options)
 
@@ -49,7 +50,7 @@ To make the connection, take the following steps:
 
 4. If this is the first time you're connecting to this database, select the authentication type and input your credentials when prompted.
 
-   ![ODBC authentication in Power Query Desktop](./media/odbc/odbc-authentication.png)
+   :::image type="content" source="./media/odbc/odbc-authentication.png" alt-text="ODBC authentication in Power Query Desktop.":::
 
    The authentication types available are:
    * **Default or Custom**: Select this authentication type when you don't specify any credentials if you're using DSN configured with a username and password. Or, if you need to include credentials as connection string properties.
@@ -62,7 +63,7 @@ To make the connection, take the following steps:
 
 6. In the **Navigator**, select the database information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
 
-   ![navigator](./media/odbc/odbc-desktop-navigator.png)
+   :::image type="content" source="./media/odbc/odbc-desktop-navigator.png" alt-text="navigator.":::
 
 ## Connect to an ODBC data source from Power Query Online
 
@@ -86,7 +87,7 @@ To make the connection, take the following steps:
 
 Power Query provides a set of advanced options that you can add to your query if needed.
 
-![ODBC advanced options](./media/odbc/odbc-advanced-options.png)
+:::image type="content" source="./media/odbc/odbc-advanced-options.png" alt-text="ODBC advanced options.":::
 
 | Advanced option | Description |
 | --------------- | ----------- |

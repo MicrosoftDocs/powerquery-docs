@@ -3,8 +3,9 @@ title: Behind the scenes of the Data Privacy Firewall
 description: Describes the purpose of the Data Privacy Firewall
 author: ehrenMSFT
 ms.topic: conceptual
-ms.date: 1/22/2024
+ms.date: 8/1/2024
 ms.author: ehvonleh
+ms.subservice: transform-data
 ---
 
 # Behind the scenes of the Data Privacy Firewall
@@ -179,7 +180,7 @@ Here's a sample scenario. It's a fairly straightforward merge of a text file (Co
 Here's the M code for the three queries used in this example.
 
 ```powerquery-m
-shared DbServer = "montegoref6" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true];
+shared DbServer = "MySqlServer" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true];
 ```
 
 ```powerquery-m
@@ -218,7 +219,7 @@ in
 
 Here's a higher-level view, showing the dependencies.
 
-![Query Dependencies Dialog.](media/data-privacy-firewall/firewall-query-dependencies.png)
+:::image type="content" source="media/data-privacy-firewall/firewall-query-dependencies.png" alt-text="Query Dependencies Dialog.":::
 
 ### Let's partition
 

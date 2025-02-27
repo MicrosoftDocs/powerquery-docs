@@ -1,10 +1,11 @@
 ---
 title: Open a ticket when a dataflow refresh fails
 description: How to use the dataflows connector in Power Automate to open a ticket when a dataflow refresh fails.
-author: miquelladeboer
+author: Luitwieler
 ms.topic: conceptual
 ms.date: 2/13/2024
-ms.author: mideboer
+ms.author: jeluitwi
+ms.subservice: dataflows
 ---
 
 # Open a ticket when a dataflow refresh fails

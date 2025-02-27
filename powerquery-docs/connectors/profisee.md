@@ -7,6 +7,7 @@ ms.service: powerquery
 ms.topic: conceptual
 ms.date: 1/24/2024
 LocalizationGroup: reference
+ms.subservice: connectors
 ---
 
 # Profisee

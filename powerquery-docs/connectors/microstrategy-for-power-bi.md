@@ -5,6 +5,7 @@ author: pawjastrzebski
 ms.topic: conceptual
 ms.date: 1/24/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # MicroStrategy for Power BI
@@ -41,14 +42,14 @@ To connect to MicroStrategy using Power BI Desktop:
 
 4. Enter a valid MicroStrategy Library URL, for example, `https://.../MicroStrategyLibrary`.
 
-   ![Standard environment URL example.](./media/micro-strategy-for-power-bi/pbi-standard-login.png)
+   :::image type="content" source="./media/micro-strategy-for-power-bi/pbi-standard-login.png" alt-text="Standard environment URL example.":::
 
    > [!NOTE]
    >If you want to utilize OIDC authentication, you must add a **#OIDCMode** string to the end of the URL.
    >
    >OIDC authentication is available starting in version 2.4.5 of the connector.
 
-   ![OIDC environment URL example.](./media/micro-strategy-for-power-bi/pbi-oidc-login.png)
+   :::image type="content" source="./media/micro-strategy-for-power-bi/pbi-oidc-login.png" alt-text="OIDC environment URL example.":::
 
 5. (optional) Select the authentication mode. This option only affects basic authentication.
 

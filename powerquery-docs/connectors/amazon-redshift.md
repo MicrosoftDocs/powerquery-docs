@@ -5,6 +5,7 @@ author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 1/24/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # Amazon Redshift
@@ -96,7 +97,7 @@ The following table describes all of the advanced options you can set in Power Q
 | Advanced option | Description |
 | --------------- | ----------- |
 | Provider Name | Provides an Amazon Resource Name (ARN), which uniquely identifies AWS resources. |
-| Batch size | Specifies the maximum number of rows to retrieve at a time from the server when fetching data. A small number translates into more calls to the server when retrieving a large data set. A large number of rows may improve performance, but could cause high memory usage. The default value is 100 rows. |
+| Batch size | Specifies the maximum number of rows to retrieve at a time from the server when fetching data. A small number translates into more calls to the server when retrieving a large data set. A large number of rows may improve performance, but could cause high memory usage. The default is single row fetch. |
 | SQL Statement | For information, go to [Import data from a database using native database query](../native-database-query.md). This option is only available in Power BI Desktop. |
 
 ## Enable Microsoft Entra ID Single Sign-On (SSO) for Amazon Redshift
@@ -113,7 +114,7 @@ To configure a new connection in Power BI service:
 
 2. Enable the **Redshift SSO** option.
 
-   ![Image of the Redshift SSO option with the Enabled button enabled.](./media/amazon-redshift/redshift-sso.png)
+   :::image type="content" source="./media/amazon-redshift/redshift-sso.png" alt-text="Image of the Redshift SSO option with the Enabled button enabled.":::
 
 ### Microsoft Entra ID Single Sign-On (SSO) for Amazon Redshift with an on-premises data gateway
 
@@ -121,7 +122,7 @@ Before you can enable Microsoft Entra ID SSO for Amazon Redshift, you must first
 
 1. In Power BI service, select **Admin portal** from the settings list.
 
-   ![Another image of the Settings menu with the Admin portal emphasized.](./media/amazon-redshift/admin-portal.png)
+   :::image type="content" source="./media/amazon-redshift/admin-portal.png" alt-text="Another image of the Settings menu with the Admin portal emphasized.":::
 
 2. Under **Tenant settings**, enable **Azure AD Single-Sign On (SSO) for Gateway**.
 
@@ -131,11 +132,11 @@ Once you've enabled Microsoft Entra ID SSO for all data sources, then enable Mic
 
 1. Enable the **Redshift SSO** option.
 
-   ![Image of the Redshift SSO dialog with the Enabled option enabled.](./media/amazon-redshift/redshift-sso.png)
+   :::image type="content" source="./media/amazon-redshift/redshift-sso.png" alt-text="Image of the Redshift SSO dialog with the Enabled option enabled.":::
 
 2. Select **Manage gateways** from the settings list.
 
-   ![Image of the Settings menu with Manage gateways emphasized.](./media/amazon-redshift/manage-gateways.png)
+   :::image type="content" source="./media/amazon-redshift/manage-gateways.png" alt-text="Image of the Settings menu with Manage gateways emphasized.":::
 
 3. Select a gateway, and then select **Choose Data Source**.
 
@@ -143,4 +144,4 @@ Once you've enabled Microsoft Entra ID SSO for all data sources, then enable Mic
 
    Also select **Use SSO via Azure AD for DirectQuery queries**.
 
-   ![Image of the Data Source Settings tab with the Provider Name and Use SSO via Azure AD for DirectQuery queries advanced settings emphasized.](./media/amazon-redshift/gateway-settings.png)
+   :::image type="content" source="./media/amazon-redshift/gateway-settings.png" alt-text="Image of the Data Source Settings tab with the Provider Name and Use SSO via Azure AD for DirectQuery queries advanced settings emphasized.":::

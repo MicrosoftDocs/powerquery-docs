@@ -5,6 +5,7 @@ author: ptyx507x
 ms.topic: conceptual
 ms.date: 1/9/2023
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 
 
@@ -16,7 +17,7 @@ While you may get a similar result at the end of an authoring workflow, refreshi
 
 To start Query Diagnostics, go to the **Tools** tab in the Power Query editor ribbon. You're presented here with a few different options.
 
-![Query diagnostics control.](media/query-diagnostics/diagnostics-toolbar.png)
+:::image type="content" source="media/query-diagnostics/diagnostics-toolbar.png" alt-text="Query diagnostics control.":::
 
 There are two primary options here, 'Diagnose Step' and 'Start Diagnostics' (paired with 'Stop Diagnostics'). The former will give you information on a query up to a selected step, and is most useful for understanding what operations are being performed locally or remotely in a query. The latter gives you more insight into a variety of other cases, discussed below.
 
@@ -45,23 +46,23 @@ The authoring workflow's primary difference is that it will generally generate m
 
 We're going to walk through an example. We're using the OData connector in this sample, but when reviewing the output we'll also look at the SQL version of the same database. For both data sources, we're going to connect to the data source via 'New Source', 'Recent Sources', or 'Get Data'. For the SQL connection you'll need to put in credentials for your server, but for the public OData endpoint you can put in the endpoint linked above.
 
-![OData connection.](media/record-query-diagnostics/diagnostics-odata-northwind.png)
+:::image type="content" source="media/record-query-diagnostics/diagnostics-odata-northwind.png" alt-text="OData connection.":::
 
 Once you connect and choose authentication, select the **Customers** table from the OData service.
 
-![Northwind navigation.](media/record-query-diagnostics/diagnostics-odata-selecttable.png)
+:::image type="content" source="media/record-query-diagnostics/diagnostics-odata-selecttable.png" alt-text="Northwind navigation.":::
 
 This will present you with the Customers table in the Power Query interface. Let's say that we want to know how many Sales Representatives there are in different countries/regions. First, right-click on **Sales Representative** under the **Contact Title** column, mouse over **Text Filters**, and select **Equals**.
 
-![Apply text filter to contact title.](media/record-query-diagnostics/diagnostics-odata-filter.png)
+:::image type="content" source="media/record-query-diagnostics/diagnostics-odata-filter.png" alt-text="Apply text filter to contact title.":::
 
 Now, select **Group By** from the ribbon and do a grouping by **Country**, with your aggregate being a **Count**.
 
-![Apply Group By.](media/record-query-diagnostics/diagnostics-odata-group-by.png)
+:::image type="content" source="media/record-query-diagnostics/diagnostics-odata-group-by.png" alt-text="Apply Group By.":::
 
 This should present you with the same data you see below.
 
-![Results.](media/record-query-diagnostics/diagnostics-odata-end.png)
+:::image type="content" source="media/record-query-diagnostics/diagnostics-odata-end.png" alt-text="Results.":::
 
 Finally, navigate back to the **Tools** tab of the Ribbon and select **Stop Diagnostics**. This will stop the tracing and build your diagnostics file for you, and the summary and detailed tables will appear on the left-hand side.
 
@@ -82,11 +83,11 @@ Note that when talking about 'Refresh All' that it will refresh all queries and 
 
 Query Diagnostics can be used to diagnose the so-called 'final query' that is emitted during the Refresh in Power BI, rather than just the Power Query editor experience. To do this, you first need to load the data to the model once. If you are planning to do this, make sure that you realize that if you select **Close and Apply** that the editor window will close (interrupting tracing) so you either need to do it on the second refresh, or select the dropdown icon under **Close and Apply** and select **Apply** instead.
 
-![Apply query changes.](media/record-query-diagnostics/diagnostics-close-and-apply.png)
+:::image type="content" source="media/record-query-diagnostics/diagnostics-close-and-apply.png" alt-text="Apply query changes.":::
 
 Either way, make sure to select **Start Diagnostics** on the **Diagnostics** section of the **Tools** tab in the editor. Once you've done this refresh your model, or even just the table you care about.
 
-![Refresh table.](media/record-query-diagnostics/diagnostics-refresh.png)
+:::image type="content" source="media/record-query-diagnostics/diagnostics-refresh.png" alt-text="Refresh table.":::
 
 Once it's done loading the data to model, select **Stop Diagnostics**.
 
@@ -100,7 +101,7 @@ It's important to note that just because you see a resource (database, web endpo
 
 If you used 'Diagnose Step' on the query we built above, you'll find that it only returns 10 or so rows, and if we look at the last row with a Data Source Query we can get a pretty good idea of what our final emitted query to the data source will be. In this case, we can see that Sales Representative was filtered remotely, but the grouping (by process of elimination) happened locally.
 
-![Diagnosing the filtered and grouped Customers table.](media/record-query-diagnostics/diagnose-step-odata-customers.png)
+:::image type="content" source="media/record-query-diagnostics/diagnose-step-odata-customers.png" alt-text="Diagnosing the filtered and grouped Customers table.":::
 
 If you start and stop diagnostics and refresh the same query, we get 40 rows due to the fact that, as mentioned above, Power Query is getting information on every step, not just the final step. This makes it harder when you're just trying to get insight into one particular part of your query.
 

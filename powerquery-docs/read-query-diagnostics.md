@@ -5,6 +5,7 @@ author: ptyx507x
 ms.topic: conceptual
 ms.date: 1/9/2023
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 
 # Visualizing and Interpreting Query Diagnostics in Power BI
@@ -38,7 +39,7 @@ For the second visualization, one choice is to use a Stacked Column Chart. In th
 
 Once your visualization is built, make sure you sort by 'Earliest [Start Time](QueryDiagnostics.md#start-time)' ascending so you can see the order things happen in.
 
-![Visualization of details and time aggregation.](media/read-query-diagnostics/query-diagnostics-odata-high-level.png)
+:::image type="content" source="media/read-query-diagnostics/query-diagnostics-odata-high-level.png" alt-text="Visualization of details and time aggregation.":::
 
 While your exact needs might differ, this combination of charts is a good place to start for looking at numerous diagnostics files and for a number of purposes.
 
@@ -54,11 +55,11 @@ Now, because the time values for the sample queries we're using here are so smal
 
 For my OData results, I see in the image that the vast majority of the time was spent retrieving the data from source&mdash;if I select the 'Data Source' item on the legend, it shows me all of the different operations related to sending a query to the Data Source.
 
-![OData Northwind Query Diagnostics Summary.](media/read-query-diagnostics/query-diagnostics-odata-emitted.png)
+:::image type="content" source="media/read-query-diagnostics/query-diagnostics-odata-emitted.png" alt-text="OData Northwind Query Diagnostics Summary.":::
 
 If we perform all the same operations and build similar visualizations, but with the SQL traces instead of the ODATA ones, we can see how the two data sources compare!
 
-![OData Northwind Query Diagnostics Summary with SQL traces.](media/read-query-diagnostics/query-diagnostics-sql-high-level.png)
+:::image type="content" source="media/read-query-diagnostics/query-diagnostics-sql-high-level.png" alt-text="OData Northwind Query Diagnostics Summary with SQL traces.":::
 
 If we select the Data Source table, like with the ODATA diagnostics we can see the first evaluation (2.3 in this image) emits metadata queries, with the second evaluation actually retrieving the data we care about. Because we're retrieving small amounts of data in this case, the data pulled back takes a small amount of time (less than a tenth of a second for the entire second evaluation to happen, with less than a twentieth of a second for data retrieval itself), but that won't be true in all cases.
 

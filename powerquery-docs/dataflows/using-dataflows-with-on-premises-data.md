@@ -5,8 +5,9 @@ ms.date: 1/17/2024
 ms.reviewer: dougklo
 
 ms.topic: article
-author: bensack
-ms.author: bensack
+author: Luitwieler
+ms.author: jeluitwi
+ms.subservice: dataflows
 ---
 
 # Using an on-premises data gateway in Power Platform dataflows
@@ -14,8 +15,8 @@ ms.author: bensack
 Install an on-premises data gateway to transfer data quickly and securely between a Power Platform dataflow and a data source that isn't in the cloud, such as an on-premises SQL Server database or an on-premises SharePoint site. You can view all gateways for which you have administrative permissions and manage permissions and connections for those gateways.
 
 ## Prerequisites
-
 ### Power BI service
+- You must have a [currently supported gateway installed](/data-integration/gateway/service-gateway-monthly-updates) to use with Dataflows. The minimum version that works with Power BI Dataflow is **3000.214.8**.
 
 - A Power BI Pro license or a PPU license.  Don't have one? [Sign up for 60 days free](/power-bi/fundamentals/service-get-started#sign-up-for-the-power-bi-service).
 
@@ -25,6 +26,7 @@ Install an on-premises data gateway to transfer data quickly and securely betwee
   - A gateway connection for the data source(s) you intend to use already created on the gateway for which you are a user.
 
 ### Power Apps
+- You must have a [currently supported gateway installed](/data-integration/gateway/service-gateway-monthly-updates) to use with Dataflows. The minimum version that works with Power Apps Dataflow is **3000.214.8**.
 
 - A Power Apps account. Don't have one? [Sign up for 30 days free](/powerapps/maker/signup-for-powerapps).
 
@@ -47,7 +49,7 @@ To install a gateway from Power BI service:
 
 1. Select the downloads button in the upper right corner of Power BI service, and choose **Data Gateway**.
 
-   ![Image showing the data gateway selection in Power Bi service](media/using-dataflows-with-on-premiese-data/install-gateway-power-bi.png)
+   :::image type="content" source="media/using-dataflows-with-on-premiese-data/install-gateway-power-bi.png" alt-text="Image showing the data gateway selection in Power Bi service.":::
 
 2. Install the gateway using the instructions provided in [Install an on-premises data gateway](/data-integration/gateway/service-gateway-install).
 
@@ -57,11 +59,11 @@ To install a gateway from Power Apps:
 
 1. In the left navigation pane of [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** > **Gateways**.
 
-   ![Gateways in left navigation bar.](media/using-dataflows-with-on-premiese-data/nav-pane-gateways.png)
+   :::image type="content" source="media/using-dataflows-with-on-premiese-data/nav-pane-gateways.png" alt-text="Gateways in left navigation bar.":::
 
 2. Select [New gateway](https://go.microsoft.com/fwlink/?LinkID=820931).
 
-   ![Image showing the new gateway button in Power Apps](media/using-dataflows-with-on-premiese-data/install-gateway-power-apps.png)
+   :::image type="content" source="media/using-dataflows-with-on-premiese-data/install-gateway-power-apps.png" alt-text="Image showing the new gateway button in Power Apps.":::
 
 3. In the **On-Premises Data Gateway** section, select **Download**.
 
@@ -73,11 +75,11 @@ To install a gateway from Power Apps:
 
 2. Select an on-premises data source from the data sources list.
 
-   ![Choose an on-premises data source.](media/using-dataflows-with-on-premiese-data/on-premises-data-sources.png)
+   :::image type="content" source="media/using-dataflows-with-on-premiese-data/on-premises-data-sources.png" alt-text="Choose an on-premises data source.":::
 
 3. Provide the connection details for the enterprise gateway that will be used to access the on-premises data. You must select the gateway itself, and provide credentials for the selected gateway. Only gateways for which you're an administrator appear in the list.
 
-    ![Provide connection details.](media/using-dataflows-with-on-premiese-data/connection-creds.png)
+    :::image type="content" source="media/using-dataflows-with-on-premiese-data/connection-creds.png" alt-text="Provide connection details.":::
 
 You can change the enterprise gateway used for a given dataflow and change the gateway assigned to all of your queries using the dataflow authoring tool.
 
@@ -90,7 +92,7 @@ You can change the enterprise gateway used for a given dataflow and change the g
 
 1. Select the setup button in the upper right corner of Power BI service, choose **Manage gateways**, and then select the gateway you want.
 
-   ![Image showing the manage gateways selection in Power BI service](media/using-dataflows-with-on-premiese-data/manage-gateways-power-bi.png)
+   :::image type="content" source="media/using-dataflows-with-on-premiese-data/manage-gateways-power-bi.png" alt-text="Image showing the manage gateways selection in Power BI service.":::
 
 2. To add a user to the gateway, select the **Administrators** table and enter the email address of the user you would like to add as an administrator. Creating or modifying data sources in dataflows requires Admin permissions to the gateway. Admins have full control of the gateway, including adding users, setting permissions, creating connections to all available data sources, and deleting the gateway.
 

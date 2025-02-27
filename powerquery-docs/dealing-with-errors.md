@@ -2,9 +2,10 @@
 title: Dealing with errors 
 description: Understanding errors in Power Query and most common step level and cell level errors.
 author: ptyx507
-ms.date: 12/9/2022
+ms.date: 03/29/2024
 ms.author: miescobar
 ms.custom: edited
+ms.subservice: transform-data
 ---
 
 # Dealing with errors in Power Query
@@ -20,7 +21,7 @@ This article provides suggestions for how to fix the most common errors you migh
 
 A step-level error prevents the query from loading and displays the error components in a yellow pane.
 
-![Step-level error.](media/dealing-with-errors/column-name.png "Step-level error")
+:::image type="content" source="media/dealing-with-errors/column-name.png" alt-text="Step-level error.":::
 
 * **Error reason**: The first section before the colon. In the example above, the error reason is **Expression.Error**.
 * **Error message**: The section directly after the reason. In the example above, the error message is **The column 'Column' of the table wasn't found**.
@@ -31,7 +32,7 @@ A step-level error prevents the query from loading and displays the error compon
 
 In all cases, we recommend that you take a close look at the error reason, error message, and error detail to understand what's causing the error. You can select the **Go to error** button, if available, to view the first step where the error occurred.
 
-![Go to error button.](media/dealing-with-errors/go-to-error.png "Go to error button")
+:::image type="content" source="media/dealing-with-errors/go-to-error.png" alt-text="Go to error button.":::
 
 #### Can't find the source - DataSource.Error  
 
@@ -65,7 +66,7 @@ This error can be caused by a number of reasons, such as the data privacy levels
 
 A cell-level error won't prevent the query from loading, but displays error values as **Error** in the cell. Selecting the white space in the cell displays the error pane underneath the data preview.
 
-![Displaying the error message by selecting whitespace in a table cell containing an error.](media/dealing-with-errors/could-not-convert.png "Displaying the error message by selecting whitespace in a table cell containing an error")
+:::image type="content" source="media/dealing-with-errors/could-not-convert.png" alt-text="Displaying the error message by selecting whitespace in a table cell containing an error.":::
 
 >[!NOTE]
 > The data profiling tools can help you more easily identify cell-level errors with the column quality feature. More information: [Data profiling tools](data-profiling-tools.md#column-quality)
@@ -82,7 +83,7 @@ For the next sections, the provided examples will be using the same sample query
 
 To remove rows with errors in Power Query, first select the column that contains errors. On the **Home** tab, in the **Reduce rows** group, select **Remove rows**. From the drop-down menu, select **Remove errors**.
 
-![Remove errors button on the Home tab.](media/dealing-with-errors/remove-errors.png "Remove errors button on the Home tab")
+:::image type="content" source="media/dealing-with-errors/remove-errors.png" alt-text="Remove errors button on the Home tab.":::
 
 The result of that operation will give you the table that you're looking for.
 
@@ -92,11 +93,11 @@ The result of that operation will give you the table that you're looking for.
 
 If instead of removing rows with errors, you want to replace the errors with a fixed value, you can do so as well. To replace rows that have errors, first select the column that contains errors. On the **Transform** tab, in the **Any column** group, select **Replace values**. From the drop-down menu, select **Replace errors**.
 
-![Replace errors button on the Transform tab.](media/dealing-with-errors/replace-errors.png "Replace errors button on the Transform tab")
+:::image type="content" source="media/dealing-with-errors/replace-errors.png" alt-text="Replace errors button on the Transform tab.":::
 
 In the **Replace errors** dialog box, enter the value **10** because you want to replace all errors with the value 10.
 
-![Replace errors dialog box.](media/dealing-with-errors/replace-errors-window.png "Replace errors dialog box")
+:::image type="content" source="media/dealing-with-errors/replace-errors-window.png" alt-text="Replace errors dialog box.":::
 
 The result of that operation will give you the table that you're looking for.
 
@@ -106,11 +107,11 @@ The result of that operation will give you the table that you're looking for.
 
 Power Query can serve as a good auditing tool to identify any rows with errors even if you don't fix the errors. This is where **Keep errors** can be helpful. To keep rows that have errors, first select the column that contains errors. On the **Home** tab, in the **Reduce rows** group, select **Keep rows**. From the drop-down menu, select **Keep errors**.
 
-![Keep errors button on the Home tab.](media/dealing-with-errors/keep-errors.png "Keep errors button on the Home tab")
+:::image type="content" source="media/dealing-with-errors/keep-errors.png" alt-text="Keep errors button on the Home tab.":::
 
 The result of that operation will give you the table that you're looking for.
 
-![Final table that keeps only rows that contain errors.](media/dealing-with-errors/keep-errors-final.png "Final table that keeps only rows that contain errors")
+:::image type="content" source="media/dealing-with-errors/keep-errors-final.png" alt-text="Final table that keeps only rows that contain errors.":::
 
 ### Common cell-level errors
 
@@ -122,7 +123,7 @@ Commonly triggered when changing the data type of a column in a table. Some valu
 
 **Example**: You have a query that includes a column named **Sales**. One cell in that column has **NA** as a cell value, while the rest have whole numbers as values. You decide to convert the data type of the column from text to whole number, but the cell with the **NA** value causes an error.
 
-![Could not convert to data type error details.](media/dealing-with-errors/could-not-convert-details.png "Could not convert to data type error details")
+:::image type="content" source="media/dealing-with-errors/could-not-convert-details.png" alt-text="Could not convert to data type error details.":::
 
 **Possible solutions**: After identifying the row with the error, you can either modify the data source to reflect the correct value rather than **NA**, or you can apply a **Replace error** operation to provide a value for any **NA** values that cause an error.
 
@@ -132,7 +133,7 @@ When trying to apply an operation that isn't supported, such as multiplying a te
 
 **Example**: You want to create a custom column for your query by creating a text string that contains the phrase "Total Sales: " concatenated with the value from the **Sales** column. An error occurs because the concatenation operation only supports text columns and not numeric ones.
 
-![Expression error in the error pane caused by trying to apply an And operator to text and a number from the Sales column.](media/dealing-with-errors/operation-errors.png "Expression error in the error pane caused by trying to apply an And operator to text and a number from the Sales column")
+:::image type="content" source="media/dealing-with-errors/operation-errors.png" alt-text="Expression error in the error pane caused by trying to apply an And operator to text and a number from the Sales column.":::
 
 **Possible solutions**: Before creating this custom column, change the data type of the **Sales** column to be text.
 
@@ -142,7 +143,7 @@ When trying to apply an operation that isn't supported, such as multiplying a te
 
 When working with data that contains nested structured values (such as tables, lists, or records), you may sometimes encounter the following error:
 
-![Error for nested values triggered by formula firewall taken place](media/dealing-with-errors/privacy-buffer-error.png)
+:::image type="content" source="media/dealing-with-errors/privacy-buffer-error.png" alt-text="Error for nested values triggered by formula firewall taken place.":::
 
 ```
 Expression.Error: We cannot return a value of type {value} in this context

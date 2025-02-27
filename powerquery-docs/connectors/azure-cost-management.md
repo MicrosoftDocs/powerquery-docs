@@ -1,15 +1,14 @@
 ---
-title: Azure Cost Management
+title: Azure Cost Management connector
 description: Includes basic information, prerequisites, and information on how to connect to Azure Cost Management.
-
 author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 1/24/2024
 ms.author: dougklo
-
+ms.subservice: connectors
 ---
 
-# Azure Cost Management
+# Azure Cost Management connector
 
 ## Summary
 
@@ -38,7 +37,7 @@ ms.author: dougklo
 
 ## Connect to Azure Cost Management from Power Query Desktop
 
-To connect to the **Azure Cost Management**:
+To connect to **Azure Cost Management**:
 
 1. In the **Home** ribbon, select **Get Data**.
 
@@ -46,7 +45,7 @@ To connect to the **Azure Cost Management**:
 
 3. Select **Azure Cost Management**.
 
-    ![Get data](media/azure-cost-management/get-data.png)
+    :::image type="content" source="media/azure-cost-management/get-data.png" alt-text="Get data.":::
 
 4. In the dialog that appears, for the **Choose Scope** drop down, use **Manually Input Scope** for **Microsoft Customer Agreements**, or use **Enrollment Number** for **Enterprise Agreements (EA)**.
 
@@ -66,9 +65,9 @@ To connect to a billing account, you need to retrieve your **Billing account ID*
 
 4. Under **Billing profile**, copy the **ID**.
 
-    :::image type="content" source="media/azure-cost-management/billing-profile.png" alt-text="Screenshot of Cost management billing profile":::
+    :::image type="content" source="media/azure-cost-management/billing-profile.png" alt-text="Screenshot of Cost management billing profile.":::
 
-5. For **Choose Scope**, select **Manually Input Scope** and input the connection string as shown in the example below, replacing *{billingAccountId}* with the data copied from the previous steps.
+5. For **Choose Scope**, select **Manually Input Scope** and input the connection string as shown in the following example, replacing *{billingAccountId}* with the data copied from the previous steps.
 
     `/providers/Microsoft.Billing/billingAccounts/{billingAccountId}`
 
@@ -76,7 +75,7 @@ To connect to a billing account, you need to retrieve your **Billing account ID*
 
 6. Enter the number of months and select **OK**.
 
-    :::image type="content" source="media/azure-cost-management/number-of-months.png" alt-text="Screenshot of Azure Cost Management with number of months input":::
+    :::image type="content" source="media/azure-cost-management/number-of-months.png" alt-text="Screenshot of Azure Cost Management with number of months input.":::
 
     Alternatively, if you want to download less than a month's worth of data you can set *Number of months* to zero, then specify a date range using *Start Date* and *End Date* values that equate to less than 31 days.
 
@@ -96,7 +95,7 @@ To connect to a **billing profile**, you must retrieve your **Billing profile ID
 
 5. Under **Billing account**, copy the **ID**.
 
-    :::image type="content" source="media/azure-cost-management/copy-id.png" alt-text="Screenshot of Azure Cost Management billing account information":::
+    :::image type="content" source="media/azure-cost-management/copy-id.png" alt-text="Screenshot of Azure Cost Management billing account information.":::
 
 6. For **Choose Scope**, select **Manually Input Scope** and input the connection string as shown in the example below, replacing *{billingAccountId}* and *{billingProfileId}* with the data copied from the previous steps.
 
@@ -120,7 +119,7 @@ To connect with an Enterprise Agreement (EA) account, you can get your enrollmen
 
 5. Enter the number of months and then select **OK**.
 
-    ![Screenshot shows the Azure Cost Management properties with a scope of Enrollment number.](media/azure-cost-management/get-data-enterprise-agreement.png)
+    :::image type="content" source="media/azure-cost-management/get-data-enterprise-agreement.png" alt-text="Screenshot shows the Azure Cost Management properties with a scope of Enrollment number.":::
 
 6. When prompted, sign in with your Azure user account and password. You must use an Enterprise Administrator account for Enterprise Agreements.
 
@@ -136,7 +135,7 @@ Once you successfully authenticate, a **Navigator** window appears with the foll
 | **Charges** | A month-level summary of Azure usage, Marketplace charges, and charges billed separately. Microsoft Customer Agreement only. |
 | **Credit lots** | Azure credit lot purchase details for the provided billing profile. Microsoft Customer Agreement only. |
 | **Pricesheets** | Applicable meter rates for the provided billing profile or EA enrollment. |
-| **RI charges** | Charges associated to your Reserved Instances over the last 24 months. This table is in the process of being deprecated, please use RI transactions |
+| **RI charges** | Charges associated to your Reserved Instances over the last 24 months. This table is in the process of being deprecated. Instead, use RI transactions |
 | **RI recommendations (shared)** | Reserved Instance purchase recommendations based on all your subscription usage trends for the last 30 days. |
 | **RI recommendations (single)** | Reserved Instance purchase recommendations based on your single subscription usage trends for the last 30 days. |
 | **RI transactions** | List of transactions for reserved instances on billing account scope. |
@@ -147,7 +146,7 @@ Once you successfully authenticate, a **Navigator** window appears with the foll
 
 You can select a table to see a preview dialog. You can select one or more tables by selecting the boxes beside their name. Then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
 
-![Screenshot shows the Navigator dialog box.](media/azure-cost-management/navigator-enrollment.png)
+:::image type="content" source="media/azure-cost-management/navigator-enrollment.png" alt-text="Screenshot shows the Navigator dialog box.":::
 
 When you select **Load**, the data is loaded into Power BI Desktop.
 
@@ -161,7 +160,7 @@ The following considerations and limitations apply to the Azure Cost Management 
 
 * The Azure Cost Management connector uses OAuth 2.0 for authentication with Azure and identifies users who are going to use the connector. Tokens generated in this process are valid for a specific period. Power BI preserves the token for the next login. OAuth 2.0, is a standard for the process that goes on behind the scenes to ensure the secure handling of these permissions. To connect, you must use an [Enterprise Administrator](/azure/billing/billing-understand-ea-roles) account for Enterprise Agreements, or have [appropriate permissions](/microsoft-365/commerce/billing-and-payments/manage-billing-profiles) at the billing account or billing profile levels for Microsoft Customer Agreements.
 
-* Data row requests exceeding one million rows is not supported by Power BI. Instead, you can try using the export feature described in [create and manage exported data in Azure Cost Management](/azure/cost-management-billing/costs/tutorial-export-acm-data).
+* Data row requests exceeding one million rows aren't supported by Power BI. Instead, you can try using the export feature described in [create and manage exported data in Cost Management](/azure/cost-management-billing/costs/tutorial-export-acm-data).
 
 * The Azure Cost Management data connector doesn't work with Office 365 GCC customer accounts.
 
@@ -180,7 +179,7 @@ You might receive a *400 bad request* from the **RI usage details** when you try
 
 2. In Power Query Editor, select the **RI usage details** semantic model and select **Advanced Editor**.
 
-3. Update the Power Query code as shown in the following paragraph(s), which will split the calls into three-month chunks. Make sure you note and retain your enrollment number, or billing account/billing profile ID.
+3. To split the calls into three-month chunks, update the Power Query code as shown in the following sections. Make sure you note and retain your enrollment number, or billing account/billing profile ID.
 
    For **EA** use the following code update:
   

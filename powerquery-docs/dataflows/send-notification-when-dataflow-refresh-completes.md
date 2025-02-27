@@ -1,10 +1,11 @@
 ---
 title: Send a notification when a dataflow refresh completes
 description: How to use the dataflows connector in Power Automate to send a notification when a dataflow refresh completes
-author: miquelladeboer
+author: Luitwieler
 ms.topic: conceptual
 ms.date: 1/6/2023
-ms.author: mideboer
+ms.author: jeluitwi
+ms.subservice: dataflows
 ---
 
 # Send a notification when a dataflow refresh completes
@@ -30,8 +31,7 @@ To set up a Power Automate notification that will be sent when a dataflow fails:
    2. Leave the second cell as **is equal to**.
    3. In the third cell, enter **False**.
 
-   [![Image of the condition connector with all the cells filled out.](media/send-notification/email-yes-no-false.png)](media/send-notification/email-yes-no-false.png#lightbox)
-
+   :::image type="content" source="media/send-notification/email-yes-no-false.png" lightbox="media/send-notification/email-yes-no-false.png" alt-text="Image of the condition connector with all the cells filled out.":::
 8. In the **If Yes** section, select **Add an action**.
 9. Search for the "Send an email notification (V3)" connector, and then select it.
 10. Enter the email address and subject information.

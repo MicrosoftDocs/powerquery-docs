@@ -6,6 +6,7 @@ ms.author: dougklo
 ms.service: powerquery
 ms.topic: conceptual
 ms.date: 1/24/2024
+ms.subservice: connectors
 ---
 
 # Denodo
@@ -39,7 +40,7 @@ To make the connection, take the following steps:
 
 1. In order to connect to data, select **Get Data** from the **Home** ribbon and select **Denodo** in the **Database** section.
 
-   ![Denodo connector in Power Query Desktop.](./media/denodo/select-denodo.png)
+   :::image type="content" source="./media/denodo/select-denodo.png" alt-text="Denodo connector in Power Query Desktop.":::
 
 2. There are two ways to connect to the data source of your choice:
 
@@ -48,7 +49,7 @@ To make the connection, take the following steps:
 
    In the **DSN or Connection String** section of the **Denodo Connector** dialog box, provide the **Data source name (DSN)** or the **Connection String** depending on the type of connection you prefer.
 
-   ![Denodo connector dialog.](./media/denodo/denodo-connector.png)
+   :::image type="content" source="./media/denodo/denodo-connector.png" alt-text="Denodo connector dialog.":::
 
     When creating a Denodo-compatible connection string, you must take into account that the **Driver** field must be omitted, as this is transparently set at connection time by the connector itself.
 
@@ -98,7 +99,7 @@ To make the connection, take the following steps:
 
    * **Windows**: When you choose to use Windows authentication, Power BI Desktop connects to Virtual DataPort using Kerberos authentication.
 
-      ![Denodo Windows authentication in Power BI Desktop.](./media/denodo/denodo-windows-authentication.png)
+      :::image type="content" source="./media/denodo/denodo-windows-authentication.png" alt-text="Denodo Windows authentication in Power BI Desktop.":::
 
       In this case:
 
@@ -110,17 +111,17 @@ To make the connection, take the following steps:
 
       * Make sure the **Advanced Options** page of the DSN configuration contains all the needed configuration for using Kerberos as an authentication method.
 
-        ![Advanced Options page at the Denodo DSN configuration.](./media/denodo/denodo-advanced-options-dsn.png)
+        :::image type="content" source="./media/denodo/denodo-advanced-options-dsn.png" alt-text="Advanced Options page at the Denodo DSN configuration.":::
 
    * **Basic**: This authentication type allows you to connect Power BI Desktop to your Virtual DataPort data using your Virtual DataPort server credentials.
 
-      ![Denodo basic authentication in Power BI Desktop.](./media/denodo/denodo-basic-authentication.png)
+      :::image type="content" source="./media/denodo/denodo-basic-authentication.png" alt-text="Denodo basic authentication in Power BI Desktop.":::
 
 8. Once you're done, select **Connect**.
 
 9. In **Navigator**, select the data you need from the database you want and choose **Load**, or choose **Transform Data** if you're going to modify the incoming data.
 
-   ![Denodo navigator.](./media/denodo/denodo-navigator.png)
+   :::image type="content" source="./media/denodo/denodo-navigator.png" alt-text="Denodo navigator.":::
 
 ## Connect to an ODBC data source from Power BI service using the on-premises data gateway
 
@@ -130,11 +131,11 @@ To make the connection, take the following steps:
 
 2. Sign in and register your gateway. In the on-premises data gateway app, select the **Status** tab to verify that your gateway is online and ready to be used.
 
-   ![On-premises data gateway with status tab open.](./media/denodo/on-premises-data-gateway.png)
+   :::image type="content" source="./media/denodo/on-premises-data-gateway.png" alt-text="On-premises data gateway with status tab open.":::
 
 3. Using the gateway settings page in Power BI service, create a data source for the Denodo Power BI custom connector.
 
-   ![Add Denodo Data source.](./media/denodo/data-source-settings-select-denodo.png)
+   :::image type="content" source="./media/denodo/data-source-settings-select-denodo.png" alt-text="Add Denodo Data source.":::
 
    In order to create the data source, you have to specify the way to connect to the data source of your choice:
       * Through DSN
@@ -147,13 +148,13 @@ To make the connection, take the following steps:
          * The Denodo Virtual DataPort database that the data source connects to must be configured with the option **ODBC/ADO.net authentication type** set to **Kerberos**.
          * Make sure the **Advanced Options** page of the DSN configuration contains all the needed configuration for using Kerberos as an authentication method.
 
-           ![Advanced Options page at the Denodo DSN configuration.](./media/denodo/denodo-advanced-options-dsn.png)
+           :::image type="content" source="./media/denodo/denodo-advanced-options-dsn.png" alt-text="Advanced Options page at the Denodo DSN configuration.":::
 
       * **Basic**: This authentication type allows you to create a data source in Power BI service to connect to your Virtual DataPort data using your Virtual DataPort server credentials.
 
 4. If you use Windows authentication, under **Advanced settings** for the data source you can enable the single sign-on (SSO) authentication schema in order to use the same credentials of the user accessing your reports in Power BI for accessing the required data in Denodo.
 
-   ![Denodo SSO using Kerberos.](./media/denodo/denodo-sso.png)
+   :::image type="content" source="./media/denodo/denodo-sso.png" alt-text="Denodo SSO using Kerberos.":::
 
    There are two options for enabling SSO: **Use SSO via Kerberos for DirectQuery queries** and **Use SSO via Kerberos for DirectQuery And Import queries**. If you're working with _DirectQuery_ based reports, both options use the SSO credentials of the user that signs in to the Power BI service. The difference comes when you work with _Import_ based reports. In this scenario, the former option uses the credentials entered in the data source page (**Username** and **Password** fields), while the latter uses the credentials of the data set owner.
 
@@ -172,6 +173,18 @@ To make the connection, take the following steps:
    * Select **File** > **Publish** > **Publish to Power BI**.
    * Save the report on the computer.
    * Select the workspace where you want to publish.
+
+## Advanced configuration
+
+### Use of the ConnectionTimeout parameter.
+
+If you want to control how long to wait before abandoning an attempt to make a connection to a server you can use the  `ConnectionTimeout` parameter. 
+
+This parameter can only be used from the **Advanced Editor**. To do so, the `ConnectionTimeout` parameter must be added in the record options, associating a value of type `Duration` to it.
+
+> Learn more about the `Duration` type [here](/powerquery-m/sharpduration).
+
+   :::image type="content" source="./media/denodo/denodo-connectiontimeout.png" alt-text="Use of the ConnectionTimeout parameter.":::
 
 ## Troubleshooting
 

@@ -5,6 +5,7 @@ author: ptyx507x
 ms.date: 1/18/2024
 ms.author: miescobar
 ms.topic: conceptual
+ms.subservice: transform-data
 ---
 
 # Query folding examples
@@ -41,7 +42,7 @@ This article showcases three ways to achieve the same output with different leve
 
 After connecting to your database and navigating to the `fact_Sale` table, you select the **Keep bottom rows** transform found inside the **Reduce rows** group of the **Home** tab.
 
-![Keep bottom rows transform found inside the Reduce rows group of the home tab.](media/query-folding-basics/keep-bottom-rows-ui.png)
+:::image type="content" source="media/query-folding-basics/keep-bottom-rows-ui.png" alt-text="Keep bottom rows transform found inside the Reduce rows group of the home tab.":::
 
 After selecting this transform, a new dialog appears. In this new dialog, you can enter the number of rows that you'd like to keep. For this case, enter the value 10, and then select **OK**.
 
@@ -52,7 +53,7 @@ After selecting this transform, a new dialog appears. In this new dialog, you ca
 
 Next, select the **Choose columns** transform found inside the **Manage columns** group of the **Home** tab. You can then select the columns you want to keep from your table and remove the rest.
 
-![Selecting the Choose columns transform for the no query folding example.](media/query-folding-basics/choose-columns-ui.png)
+:::image type="content" source="media/query-folding-basics/choose-columns-ui.png" alt-text="Selecting the Choose columns transform for the no query folding example.":::
 
 Lastly, inside the **Choose columns** dialog, select the `Sale Key`, `Customer Key`, `Invoice Date Key`, `Description`, and `Quantity` columns, and then select **OK**.
 
@@ -74,7 +75,7 @@ in
 
 Under **Applied steps** in the Power Query editor, you’ll notice that the query folding indicators for **Kept bottom rows** and **Choose columns** are marked as steps that will be evaluated outside the data source or, in other words, by the Power Query engine.
 
-![Applied steps pane for the query with the query folding indicators showcasing the Kept bottom rows and the Removed other columns steps.](media/query-folding-basics/no-folding-steps.png)
+:::image type="content" source="media/query-folding-basics/no-folding-steps.png" alt-text="Applied steps pane for the query with the query folding indicators showcasing the Kept bottom rows and the Removed other columns steps.":::
 
 You can right-click the last step of your query, the one named **Choose columns**, and select the option that reads **View Query plan**. The goal of the query plan is to provide you with a detailed view of how your query is run. To learn more about this feature, go to [Query plan](query-plan.md).
 
@@ -101,7 +102,7 @@ For its evaluation, this query had to download all rows and fields from the `fac
 
 After connecting to the database and navigating to the `fact_Sale` table, you start by selecting the columns that you want to keep from your table. Select the **Choose columns** transform found inside the **Manage columns** group from the **Home** tab. This transform helps you to explicitly select the columns that you want to keep from your table and remove the rest.
 
-![Selecting the Choose columns transform for the partial query folding example.](media/query-folding-basics/choose-columns-ui.png)
+:::image type="content" source="media/query-folding-basics/choose-columns-ui.png" alt-text="Selecting the Choose columns transform for the partial query folding example.":::
 
 Inside the **Choose columns** dialog, select the `Sale Key`, `Customer Key`, `Invoice Date Key`, `Description`, and `Quantity` columns and then select **OK**.
 
@@ -136,7 +137,7 @@ in
 
 Checking the applied steps pane, you notice that the query folding indicators are showing that the last transform that you added, `Kept bottom rows`, is marked as a step that will be evaluated outside the data source or, in other words, by the Power Query engine.
 
-![Applied steps pane for the query with the query folding indicators showcasing that the Kept bottom rows is marked as a step that will be evaluated outside the data source.](media/query-folding-basics/partial-folding-steps.png)
+:::image type="content" source="media/query-folding-basics/partial-folding-steps.png" alt-text="Applied steps pane for the query with the query folding indicators showcasing that the Kept bottom rows is marked as a step that will be evaluated outside the data source.":::
 
 You can right-click the last step of your query, the one named `Kept bottom rows`, and select the **Query plan** option to better understand how your query might be evaluated.
 
@@ -162,7 +163,7 @@ For its evaluation, this query had to download all rows and only the required fi
 
 After connecting to the database and navigating to the `fact_Sale` table, start by selecting the columns that you want to keep from your table. Select the **Choose columns** transform found inside the **Manage columns** group from the **Home** tab. This transform helps you to explicitly select the columns that you want to keep from your table and remove the rest.
 
-![Selecting the Choose columns transform for the full query folding example.](media/query-folding-basics/choose-columns-ui.png)
+:::image type="content" source="media/query-folding-basics/choose-columns-ui.png" alt-text="Selecting the Choose columns transform for the full query folding example.":::
 
 In **Choose columns**, select the `Sale Key`, `Customer Key`, `Invoice Date Key`, `Description`, and `Quantity` columns, and then select **OK**.
 
@@ -174,11 +175,11 @@ You now create logic that will sort the table to have the last sales at the top 
 
 Next, select the table contextual menu and choose the **Keep top rows** transform.
 
-![Keep top rows option inside the table context menu.](media/query-folding-basics/full-folding-keep-top-rows.png)
+:::image type="content" source="media/query-folding-basics/full-folding-keep-top-rows.png" alt-text="Keep top rows option inside the table context menu.":::
 
 In **Keep top rows**, enter the value 10, and then select **OK**.
 
-![Keep top rows dialog with the value of ten entered as the input value to only keep the top ten rows of the table.](media/query-folding-basics/full-folding-keep-top-rows-dialog.png)
+:::image type="content" source="media/query-folding-basics/full-folding-keep-top-rows-dialog.png" alt-text="Keep top rows dialog with the value of ten entered as the input value to only keep the top ten rows of the table.":::
 
 The following code sample is the full M script for the query you created:
 
@@ -197,7 +198,7 @@ in
 
 When checking the applied steps pane, you'll notice that the query folding indicators are showing that the transforms that you added, **Choose columns**, **Sorted rows**, and **Kept top rows**, are marked as steps that will be evaluated at the data source.
 
-![All the query steps have the icon that showcases that they can be folded back to the data source.](media/query-folding-basics/full-folding-steps.png)
+:::image type="content" source="media/query-folding-basics/full-folding-steps.png" alt-text="All the query steps have the icon that showcases that they can be folded back to the data source.":::
 
 You can right-click the last step of your query, the one named **Kept top rows**, and select the option that reads **Query plan**.
 

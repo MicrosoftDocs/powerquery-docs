@@ -3,8 +3,9 @@ title: Get data UI
 description: Describes the new modern UI of the Power Query Online get data experience.
 author: TauseefSiddique
 ms.topic: conceptual
-ms.date: 9/22/2023
+ms.date: 3/8/2024
 ms.author: dougklo
+ms.subservice: get-data
 ---
 
 # Get data experience
@@ -20,7 +21,7 @@ The get data experience allows you to discover and connect to your data.
 
 The procedures for where to start getting data in Power BI Desktop are described in [Data sources in Power BI Desktop](/power-bi/connect-data/desktop-data-sources).
 
-:::image type="content" source="media/where-to-get-data/power-bi-desktop-data-select.png" alt-text="Screenshot of the Data field in the Home ribbon of Power BI Desktop":::
+:::image type="content" source="media/where-to-get-data/power-bi-desktop-data-select.png" alt-text="Screenshot of the Data field in the Home ribbon of Power BI Desktop.":::
 
 The new modular experience in Power Query Online is separated into different modules located on the left side navigation bar. These modules include:
 
@@ -32,31 +33,31 @@ The new modular experience in Power Query Online is separated into different mod
 * **Blank Table** (all)
 * **Blank Query** (all)
 
-## Home
+### Home
 
 The home page acts as a summary of all the modules and presents you with different options to expedite the process and get you closer to your data. Typically, this module contains any existing data sources and gives you the option to use a new data source, table, and upload files. From the home page, you can select **View more** on the right side of the **New sources** and **OneLake data hub** sections to visit those modules.
 
 :::image type="content" source="media/get-data-ui/home.png" alt-text="Screenshot of the Choose data source page with the Home module on the right side emphasized." lightbox="media/get-data-ui/home.png":::
 
-## Templates
+### Templates
 
 A dataflow template provides a predefined set of entities and field mappings to enable flow of data from your source to the destination, in the Common Data Model. A dataflow template commoditizes the movement of data, which in turn reduces overall burden and cost for a business user. It provides you with a head start to ingest data wherein you don’t need to worry about knowing and mapping the source and destination entities and fields&mdash;we do it for you, through dataflow templates. For more information about templates, go to [Introducing dataflow templates; A quick and efficient way to build your sales leaderboard and get visibility over your sales pipeline](https://powerbi.microsoft.com/blog/introducing-dataflow-templates-a-quick-and-efficient-way-to-build-your-sales-leaderboard-and-get-visibility-over-your-sales-pipeline).
 
 :::image type="content" source="media/get-data-ui/templates.png" alt-text="Screenshot of the Templates page with the Templates module on the right side emphasized." lightbox="media/get-data-ui/templates.png":::
 
-## OneLake data hub
+### OneLake data hub
 
 The OneLake data hub makes it easy to find, explore, and use the Fabric data items in your organization that you have access to. It provides information about the items and entry points for working with them. For more information on the OneLake data hub, go to [OneLake Data Hub](/fabric/get-started/onelake-data-hub).
 
 :::image type="content" source="media/get-data-ui/onelake.png" alt-text="Screenshot of the OneLake data hub module." lightbox="media/get-data-ui/onelake.png":::
 
-## New
+### New
 
 The **new** module provides a full list of connectors that you can select from. On this page, you can search for a connector across all categories by using the search bar at the top of page. You can also navigate across the categories to find a specific connector to integrate with. Selecting a connector here opens the connection settings window, which begins the process of connecting. For more information on using connectors, go to [Getting data overview](get-data-experience.md).
 
-:::image type="content" source="media/get-data-ui/new.png" alt-text="New Module Screenshot" lightbox="media/get-data-ui/new.png":::
+:::image type="content" source="media/get-data-ui/new.png" alt-text="New Module Screenshot." lightbox="media/get-data-ui/new.png":::
 
-## Upload
+### Upload
 
 The **Upload** module lets you upload your files directly. The following connectors support this capability:  
 
@@ -68,16 +69,38 @@ The **Upload** module lets you upload your files directly. The following connect
 
 This module is an extension of this capability and lets you select the browse button to upload a local file, or even drag and drop a file. For more information on uploading files, go to [Upload a file](upload-file.md).
 
-:::image type="content" source="media/get-data-ui/upload.png" alt-text="Upload Module Screenshot" lightbox="media/get-data-ui/upload.png":::
+:::image type="content" source="media/get-data-ui/upload.png" alt-text="Upload Module Screenshot." lightbox="media/get-data-ui/upload.png":::
 
-## Blank table
+### Blank table
 
 The **Blank table** module provides a quick start in creating a table in a dataflow.
 
-:::image type="content" source="media/get-data-ui/blank-table.png" alt-text="Blank Query Module Screenshot" lightbox="media/get-data-ui/blank-table.png":::
+:::image type="content" source="media/get-data-ui/blank-table.png" alt-text="Blank Query Module Screenshot." lightbox="media/get-data-ui/blank-table.png":::
 
-## Blank query
+### Blank query
 
 The **Blank query** module lets you write or paste your own M script to create a new query.
 
-:::image type="content" source="media/get-data-ui/blank-query.png" alt-text="Blank Table Module Screenshot":::
+:::image type="content" source="media/get-data-ui/blank-query.png" alt-text="Screenshot of a Blank Table Module." lightbox="media/get-data-ui/blank-query.png":::
+
+## Save and load your data
+
+Once your data is transformed, you can then save your changes and load the data. Depending on where you arrived from when transforming your data, you might have slightly different ways of saving and loading your changes.
+
+For example, if you open the Power Query editor from Excel, you save and load your changes using the **Close & Load** option in the **Home** tab.
+
+:::image type="content" source="media/get-data-ui/excel-close-load.png" alt-text="Screenshot of the Close and Load option.":::
+
+If you open the Power Query editor from Power BI Desktop, you save and load your changes using the **Close & Apply** option in the **Home** tab.
+
+:::image type="content" source="media/get-data-ui/power-bi-desktop-apply.png" alt-text="Screenshot of the Close and Apply option.":::
+
+If you open the Power Query editor online, you save and load your changes using the **Save & close** button in the lower right side of the Power Query editor.
+
+:::image type="content" source="media/get-data-ui/online-save-close.png" alt-text="Screenshot of the Save & close button in Power Query Online.":::
+
+If you open the Power Query editor in Analysis Services, you can save and load your changes by either using the **Import** button or the **Home** > **Close & Apply** option in the Power Query editor ribbon.
+
+:::image type="content" source="media/get-data-ui/analysis-services-import.png" alt-text="Screenshot of the Import button in Analysis Services.":::
+
+:::image type="content" source="media/get-data-ui/analysis-services-close-and-apply.png" alt-text="Screenshot of the Close & Apply button in Analysis Services.":::

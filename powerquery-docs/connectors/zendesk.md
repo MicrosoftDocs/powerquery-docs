@@ -5,6 +5,7 @@ author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 1/24/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # Zendesk (Beta)
@@ -31,13 +32,13 @@ To connect to Zendesk data:
 
 1. Select **Get Data** from the **Home** ribbon in Power BI Desktop. Select **Online Services** from the categories on the left, select **Zendesk (Beta)**, and then select **Connect**.
 
-   ![Image with Online Services category and the Zendesk connector highlighted.](./media/zendesk/get-zendesk-data.png)
+   :::image type="content" source="./media/zendesk/get-zendesk-data.png" alt-text="Image with Online Services category and the Zendesk connector highlighted.":::
 
 2. If this is the first time you're getting data through the Zendesk connector, a preview connector notice will be displayed. Select **Don't warn me again with this connector** if you don't want this message to be displayed again, and then select **Continue**.
 
 3. Enter the Zendesk URL location that you want to access, and the select **OK**.
 
-   ![Image with Zendesk URL location filled out and ready to select OK](./media/zendesk/zendesk-url.png)
+   :::image type="content" source="./media/zendesk/zendesk-url.png" alt-text="Image with Zendesk URL location filled out and ready to select OK.":::
 
 4. To sign in to your Zendesk account, select **Sign in**.
 
@@ -45,13 +46,13 @@ To connect to Zendesk data:
 
 5. In the Zendesk window that appears, provide your credentials to sign in to your Zendesk account.
 
-   ![Image with the sign in screen to Zendesk.](./media/zendesk/zendesk-sign-in.png)
+   :::image type="content" source="./media/zendesk/zendesk-sign-in.png" alt-text="Image with the sign in screen to Zendesk.":::
 
 6. Select **Sign in**.
 
 7. Once you've successfully signed in, select **Connect**.
 
-   ![Image with the user signed in and ready to connect](./media/zendesk/signed-in.png)
+   :::image type="content" source="./media/zendesk/signed-in.png" alt-text="Image with the user signed in and ready to connect.":::
 
 8. In **Navigator**, select the information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
 

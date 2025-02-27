@@ -5,6 +5,7 @@ author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 1/24/2024
 ms.author: dougklo
+ms.subservice: connectors
 ---
 
 # PDF
@@ -39,13 +40,13 @@ To make the connection from Power Query Desktop:
 1. Select the **PDF** option in the connector selection.
 2. Browse for and select the PDF file you want to load. Then select **Open**.
 
-   ![Select the PDF file from File Explorer.](./media/pdf/connect-desktop.png)
+   :::image type="content" source="./media/pdf/connect-desktop.png" alt-text="Select the PDF file from File Explorer.":::
 
    If the PDF file is online, use the [Web connector](web/web.md) to connect to the file.
 
 3. In **Navigator**, select the file information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
 
-   ![PDF file imported into Power Query Desktop Navigator.](./media/pdf/desktop-navigator-view.png)
+   :::image type="content" source="./media/pdf/desktop-navigator-view.png" alt-text="PDF file imported into Power Query Desktop Navigator.":::
 
 ## Connect to a PDF file from Power Query Online
 
@@ -55,7 +56,7 @@ To make the connection from Power Query Online:
 
 2. In the PDF dialog box that appears, either provide the file path or the URL to the location of the PDF file. If you're loading a local file, you can also select **Upload file (Preview)** to browse to the local file or drag and drop the file.
 
-   ![Connection information to access the PDF file.](./media/pdf/connect-online.png)
+   :::image type="content" source="./media/pdf/connect-online.png" alt-text="Connection information to access the PDF file.":::
 
 3. If necessary, select an on-premises data gateway to access the PDF file.
 
@@ -63,7 +64,7 @@ To make the connection from Power Query Online:
 
 5. In **Navigator**, select the file information you want, and then select **Transform Data** to continue transforming the data in Power Query Editor.
 
-   ![PDF file imported into Power Query online Navigator.](./media/pdf/online-navigator-view.png)
+   :::image type="content" source="./media/pdf/online-navigator-view.png" alt-text="PDF file imported into Power Query online Navigator.":::
 
 ## Limitations and considerations
 

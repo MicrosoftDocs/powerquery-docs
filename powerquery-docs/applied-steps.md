@@ -2,21 +2,22 @@
 title: Applied steps
 description: Applied steps show the transformations to the data.
 author: ptyx507x
-ms.date: 1/18/2024
+ms.date: 12/5/2024
 ms.author: miescobar
+ms.subservice: transform-data
 ---
 
 # Using the Applied Steps list
 
-The **Applied steps** list is part of the **Query settings** pane in Power Query. Any transformations to your data is dislayed in the **Applied steps** list. For instance, if you change the first column name, the new column name is displayed in the **Applied steps** list as **Renamed columns**.
+The **Applied steps** list is part of the **Query settings** pane in Power Query. Any transformations to your data are displayed in the **Applied steps** list. For instance, if you change the first column name, the new column name is displayed in the **Applied steps** list as **Renamed columns**.
 
-:::image type="content" source="media/applied-steps/applied-steps-new-column-name.png" alt-text="Screenshot of the Power Query editor with Renamed columns in Applied steps and the column being renamed emphasized" lightbox="media/applied-steps/applied-steps-new-column-name.png":::
+:::image type="content" source="media/applied-steps/applied-steps-new-column-name.png" alt-text="Screenshot of the Power Query editor with Renamed columns in Applied steps and the column being renamed emphasized." lightbox="media/applied-steps/applied-steps-new-column-name.png":::
 
 Selecting any step displays the results of that particular step, so you can see exactly how your data changes as you add steps to the query.
 
 ## Access the Applied steps list
 
-In most cases, the **Applied steps** list is displayed automatically when you connect to your data source and open the Power Query editor. However, there may be times when the **Query settings** section has been closed, and you need to reopen it.
+In most cases, the **Applied steps** list is displayed automatically when you connect to your data source and open the Power Query editor. However, there might be times when the **Query settings** section is closed, and you need to reopen it.
 
 If you're using Power Query Desktop (Excel, Power BI Desktop, Analysis Services) and the **Query Settings** pane is closed, select the **View** tab from the ribbon, and then select **Query Settings**.
 
@@ -47,9 +48,9 @@ The full list of the step parts are:
 * Step settings: Change any settings that are specific to the selected step. Not all steps have settings. More information: [Edit settings](#edit-settings)
 * Query folding indicator: Provides a graphic representation of the query folding status of the selected step. This indicator isn't available in Power Query Desktop. More information: [Query folding indicators](step-folding-indicators.md)
 
-In Power Query Online, if you hover the mouse cursor over one of the applied steps, an informational display opens, listing the step name, step label, step description, step settings, information about the step query folding, and a learn more link to the [Query folding indicators](step-folding-indicators.md) article. For more information about query folding, go to [Power Query query folding](power-query-folding.md). The step label is automatically generated when the step is created, and indicates the step type, as does the step icon. The step label and the step icon can't be changed.
+In Power Query Online, if you hover the mouse cursor over one of the applied steps, an informational display opens, listing the step name, step label, step description, step settings, information about the step query folding, and a learn more link to the [Query folding indicators](step-folding-indicators.md) article. For more information about query folding, go to [Overview of query evaluation and query folding in Power Query](query-folding-basics.md). The step label is automatically generated when the step is created, and indicates the step type, as does the step icon. The step label and the step icon can't be changed.
 
-:::image type="content" source="media/applied-steps/applied-steps-hover.png" alt-text="Image pointing out the step icon, step name, step label, step description, step settings, and query folding description items in the applied steps informational display." lightbox="media/applied-steps/applied-steps-hover.png":::
+:::image type="content" source="media/applied-steps/applied-steps-hover.png" alt-text="Image pointing out the description items in the applied steps informational display." lightbox="media/applied-steps/applied-steps-hover.png":::
 
 ## Step menu selections
 
@@ -111,11 +112,11 @@ To set a transformation for the new step, select the new step in the list and ma
 
 ### Move step
 
-To move a step up one position in the list, right-click the step and select **Move before**.
+To move up a step one position in the list, right-click the step and select **Move before**.
 
 :::image type="content" source="media/applied-steps/applied-steps-move-up.png" alt-text="Screenshot of the step menu with Move up option emphasized.":::
 
-To move a step down one position in the list, right-click the step and select **Move after**.
+To move down a step one position in the list, right-click the step and select **Move after**.
 
 :::image type="content" source="media/applied-steps/applied-steps-move-down.png" alt-text="Screenshot of the step menu with the Move down option emphasized.":::
 
@@ -125,7 +126,7 @@ Alternatively, or to move more than a single position, drag and drop the step to
 
 ### Extract the previous steps into query
 
-You can also separate a series of transformations into a different query. This allows the query to be referenced for other sources, which can be helpful if you're trying to apply the same transformation to multiple data sets. To extract all the previous steps into a new query, right-click the first step you do *not* want to include in the query and select **Extract Previous**.
+You can also separate a series of transformations into a different query. This change allows the query to be referenced for other sources, which can be helpful if you're trying to apply the same transformation to multiple data sets. To extract all the previous steps into a new query, right-click the first step you *don't* want to include in the query and select **Extract Previous**.
 
 :::image type="content" source="media/applied-steps/applied-steps-extract-previous.png" alt-text="Screenshot of the step menu with the Extract previous option emphasized.":::
 
@@ -143,7 +144,7 @@ In the window, change the step name and description, then select **OK** to save 
 
 Adding a description to a step adds a small icon next to the step to denote that the step has a description. In Power Query Desktop, you can hover over this icon to display the description as a tooltip.
 
-:::image type="content" source="media/applied-steps/step-description.png" alt-text="Screenshot of the Query settings pane with the description icon and the cursor hovering over a step to reveal the step name and step description in Power Query Desktop.":::
+:::image type="content" source="media/applied-steps/step-description.png" alt-text="Screenshot of the Query settings pane with the description icon and the cursor hovering over a step to reveal the step name and step description.":::
 
 In Power Query Online, the step description is included in the informational display that appears when you hover over any of the steps in the applied steps list.
 

@@ -3,8 +3,9 @@ title: Power Query Online Usage Limits
 description: Authoring and refresh limits for Power Query Online in its various product integrations.
 author: Luitwieler
 ms.topic: conceptual
-ms.date: 2/16/2024
+ms.date: 3/22/2024
 ms.author: jeluitwi
+ms.subservice: user-assistance
 ---
 
 # Power Query Online limits
@@ -31,6 +32,9 @@ Daily Evaluation Time: Currently unrestricted
 
 Per Query Timeout: 10 minutes
 
+> [!NOTE]
+> Performing Data Definition Language (DDL) operations to the data source is **not supported** in Power Query, examples of such operations are "DROP TABLE", "CREATE TABLE", and "ALTER TABLE" for instance. Attempting to use such commands can result in multiple failures and errors.
+
 ## Refresh limits
 
 During refresh (either scheduled or on-demand), query evaluations return complete results. Data is typically persisted in storage.
@@ -41,10 +45,16 @@ During refresh (either scheduled or on-demand), query evaluations return complet
 | Dataflows in PowerApps.com (Trial)| 500 | 2 | 8 |
 | Dataflows in PowerApps.com (Production) | 1000 | 8 | 20 |
 | Data Integration in PowerApps.com Admin Portal | 1000 | 24 | 20 |
-| Dataflows in PowerBI.com | 1000 | 100 | 20 |
+| Power BI Dataflows in PowerBI.com | 1000 | 100 | 20 |
+| Data Factory Dataflow Gen2 in Microsoft Fabric | 5000 | 100 | [SKU Limits](/power-bi/enterprise/service-premium-what-is#dataflows-gen1) |
 | Dataflows in Dynamics 365 Customer Insights | 1000 | 100 | 20 |
 
 ## Dataflow limits
 
 Dataflow is a workload that leverages Power Query Online. Dataflow is integrated into Power BI, PowerApps, Microsoft Fabric, and Dynamics 365 Customer Insights.
+
 A single dataflow has a limit of 50 tables. If you need more than 50 tables, you can create multiple dataflows. If you exceed the limit, an error message occurs during publishing and refreshing.
+
+There is no maximum size limit for a single dataflow table. However, when a table gets too big, a possible timeout could occur when accessing the table. In this case, use the Table.*xxx*N functions (such as [Table.FirstN](/powerquery-m/table-firstn), [Table.LastN](/powerquery-m/table-lastn), [Table.RemoveFirstN](/powerquery-m/table-removefirstn), [Table.RemoveLastN](/powerquery-m/table-removelastn), and so on) or other filters to reduce the scope and size of the data.
+
+We suggest not having more than 100 dataflows (Gen1 or Gen2) per workspace.

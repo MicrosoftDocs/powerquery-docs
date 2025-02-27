@@ -5,6 +5,7 @@ author: ptyx507x
 ms.author: miescobar
 ms.topic: conceptual
 ms.date: 1/9/2023
+ms.subservice: transform-data
 ---
 
 # Optimize Power Query when expanding table columns
@@ -13,27 +14,27 @@ The simplicity and ease of use that allows Power BI users to quickly gather data
 
 Consider the following example of a SharePoint customer list.
 
-![Primary SharePoint customer list.](media/optimize-expanding-table-columns/primary-customer-list.png)
+:::image type="content" source="media/optimize-expanding-table-columns/primary-customer-list.png" alt-text="Primary SharePoint customer list.":::
 
 And the following location list it refers to.
 
-![Secondary SharePoint customer list.](media/optimize-expanding-table-columns/secondary-location-list.png)
+:::image type="content" source="media/optimize-expanding-table-columns/secondary-location-list.png" alt-text="Secondary SharePoint customer list.":::
 
 When first connecting to the list, the location shows up as a record.
 
-![Primary location records.](media/optimize-expanding-table-columns/first-connecting.png)
+:::image type="content" source="media/optimize-expanding-table-columns/first-connecting.png" alt-text="Primary location records.":::
 
 This top-level data is gathered through a single HTTP call to the SharePoint API (ignoring the metadata call), which you can see in any web debugger.
 
-![Single HTTP call in web debugger.](media/optimize-expanding-table-columns/debugger-top-level.png)
+:::image type="content" source="media/optimize-expanding-table-columns/debugger-top-level.png" alt-text="Single HTTP call in web debugger.":::
 
 When you expand the record, you see the fields joined from the secondary table.
 
-![Fields joined from the secondary table.](media/optimize-expanding-table-columns/expand-record.png)
+:::image type="content" source="media/optimize-expanding-table-columns/expand-record.png" alt-text="Fields joined from the secondary table.":::
 
 When expanding related rows from one table to another, the default behavior of Power BI is to generate a call to `Table.ExpandTableColumn`. You can see this in the generated formula field. Unfortunately, this method generates an individual call to the second table for every row in the first table.
 
-![Individual calls to the second table.](media/optimize-expanding-table-columns/expand-table-column.png)
+:::image type="content" source="media/optimize-expanding-table-columns/expand-table-column.png" alt-text="Individual calls to the second table.":::
 
 This increases the number of HTTP calls by one for each row in the primary list. This may not seem like a lot in the above example of five or six rows, but in production systems where SharePoint lists reach hundreds of thousands of rows, this can cause a significant experience degradation.
 
@@ -41,33 +42,33 @@ When queries reach this bottleneck, the best mitigation is to avoid the call-per
 
 First, start with the original table, noting the column you want to expand, and ensuring you have the ID of the item so that you can match it. Typically the foreign key is named similar to the display name of the column with **Id** appended. In this example, it's **LocationId**.
 
-![Foreign key name.](media/optimize-expanding-table-columns/original-table.png)
+:::image type="content" source="media/optimize-expanding-table-columns/original-table.png" alt-text="Foreign key name.":::
 
 Second, load the secondary table, making sure to include the **Id**, which is the foreign key. Right-click on the Queries panel to create a new query.
 
-![Load secondary table with the Id foreign key.](media/optimize-expanding-table-columns/secondary-table.png)
+:::image type="content" source="media/optimize-expanding-table-columns/secondary-table.png" alt-text="Load secondary table with the Id foreign key.":::
 
 Finally, join the two tables using the respective column names that match. You can typically find this field by first expanding the column, then looking for the matching columns in the preview.
 
-![Matching columns in preview.](media/optimize-expanding-table-columns/matching-columns.png)
+:::image type="content" source="media/optimize-expanding-table-columns/matching-columns.png" alt-text="Matching columns in preview.":::
 
 In this example, you can see that **LocationId** in the primary list matches **Id** in the secondary list. The UI renames this to **Location.Id** to make the column name unique. Now let's use this information to merge the tables.
 
 By right-clicking on the query panel and selecting **New Query** > **Combine** > **Merge Queries as New**, you see a friendly UI to help you combine these two queries.
 
-![Use merge queries as new to combine the queries.](media/optimize-expanding-table-columns/merge-queries.png)
+:::image type="content" source="media/optimize-expanding-table-columns/merge-queries.png" alt-text="Use merge queries as new to combine the queries.":::
 
 Select each table from the drop-down to see a preview of the query.
 
-![Preview merged queries.](media/optimize-expanding-table-columns/preview-query.png)
+:::image type="content" source="media/optimize-expanding-table-columns/preview-query.png" alt-text="Preview merged queries.":::
 
 Once you've selected both tables, select the column that joins the tables logically (in this example, it's **LocationId** from the primary table and **Id** from the secondary table). The dialog will instruct you how many of the rows match using that foreign key. You'll likely want to use the default join kind (left outer) for this kind of data.
 
-![Merge left outer join kind.](media/optimize-expanding-table-columns/preview-merge.png)
+:::image type="content" source="media/optimize-expanding-table-columns/preview-merge.png" alt-text="Merge left outer join kind.":::
 
 Select **OK** and you'll see a new query, which is the result of the join. Expanding the record now doesn't imply additional calls to the backend.
 
-![Left outer join result.](media/optimize-expanding-table-columns/result-query.png)
+:::image type="content" source="media/optimize-expanding-table-columns/result-query.png" alt-text="Left outer join result.":::
 
 Refreshing this data will result in only two calls to SharePoint&mdash;one for the primary list, and one for the secondary list. The join will be performed in memory, significantly reducing the number of calls to SharePoint.
 
