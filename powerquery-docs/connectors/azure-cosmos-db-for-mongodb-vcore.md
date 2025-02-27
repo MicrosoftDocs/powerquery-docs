@@ -14,7 +14,7 @@ ms.author: dougklo
 | Item                             | Description                                                                                                                                                                    |
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Release state                    | Beta                                                                                                                                                                           |
-| Products supported               | Power BI (Semantic models)<br/>Power BI (Dataflows)                                                                                                                            |
+| Products supported               | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)                                                                                                                            |
 | Authentication types supported   | Basic (username / password) for all of </br>Power BI Desktop, </br>Power Query Online with gateway, and </br>Power Query Online                                                |
 | Function Reference Documentation | [Direct Query Function Support](#direct-query-support)</br>[Power Query M function reference](/powerquery-m/power-query-m-function-reference) |
 
