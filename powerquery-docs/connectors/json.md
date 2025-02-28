@@ -38,7 +38,7 @@ To load a local JSON file:
 
 Loading the JSON file automatically launches the Power Query editor. Power Query uses automatic table detection to seamlessly flatten the JSON data into a table. From the editor, you can then continue to transform the data if you want, or you can just close and apply. More information: [Automatic table detection from JSON files](#automatic-table-detection-from-json-files)
 
-:::image type="content" source="./media/json/convert-table.png" alt-text="Image of the Power Query editor with the JSON data flattened into a table." lightbox="./media/json/convert-table.png":::
+:::image type="content" source="./media/json/convert-table.png" alt-text="Screenshot of the Power Query editor with the JSON data flattened into a table." lightbox="./media/json/convert-table.png":::
 
 ## Load a local JSON file from Power Query Online
 
@@ -72,7 +72,7 @@ Importing data from JSON files (or Web APIs) can be challenging for end users. H
 
 With the addition of automatic table detection capabilities, using the JSON connector in Power Query automatically applies transformation steps to flatten the JSON data into a table. Previously, users had to flatten records and lists manually.
 
-:::image type="content" source="./media/json/automatic-table-detection.png" alt-text="Screenshot of the Power Query editor demonstrationg automatic table detection." lightbox="./media/json/automatic-table-detection.png":::
+:::image type="content" source="./media/json/automatic-table-detection.png" alt-text="Screenshot of the Power Query editor demonstrating automatic table detection." lightbox="./media/json/automatic-table-detection.png":::
 
 ## Troubleshooting
 
