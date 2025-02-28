@@ -32,7 +32,7 @@ To load a local JSON file:
 
 1. Select the **JSON** option in the **Get Data** selection. This selection launches a local file browser where you can select your JSON file.
 
-   :::image type="content" source="./media/json/json-get-data.png" alt-text="Image of the file browser with two JSON files to choose from." lightbox="./media/json/json-get-data.png":::
+   :::image type="content" source="./media/json/json-get-data.png" alt-text="Image of the file browser with two JSON files to choose from.":::
 
 2. Select **Open** to open the file.
 
