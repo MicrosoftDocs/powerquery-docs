@@ -18,11 +18,10 @@
     }
   ],
   "notification_subscribers": [
-    "dougklo@microsoft.com"
+    "didocs@microsoft.com"
   ],
   "sync_notification_subscribers": [
-    "jasonh@microsoft.com",
-    "dougklo@microsoft.com"
+    "didocs@microsoft.com"
   ],
   "branches_to_filter": [],
   "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/powerquery-docs",
