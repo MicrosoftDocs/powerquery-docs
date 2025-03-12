@@ -47,7 +47,7 @@ To connect to Salesforce Reports data:
 
    :::image type="content" source="media/salesforce-reports/sf-reports-url.png" alt-text="Get data from the production URL.":::
 
-   You can also select **Custom** and enter a custom URL to sign in. This custom URL might be a custom domain you've created within Salesforce, such as `https://contoso.salesforce.com`. You can also use the custom URL selection if you're using your own CNAME record that redirects to Salesforce.
+   You can also select **Custom** and enter a custom URL to sign in. This custom URL might be a custom domain you've created within Salesforce, such as `https://contoso.salesforce.com`. You can also use the custom URL selection if you're using your own CNAME record that redirects to Salesforce. Currently custom URLs only support the `salesforce.com` and `cloudforce.com` domains. Note that lightning URLs aren't supported.
 
    Once you've selected the URL, select **OK** to continue.
 
@@ -105,5 +105,7 @@ For more information on Salesforce API versions and support, visit the [Salesfor
 * Salesforce trial accounts don't have API access.
 
 * Lightning URLs aren't supported.
+
+* Custom URLs only support the salesforce.com and cloudforce.com domains, the use of other domains will result in the "Invalid Arguments" error
 
 For more information about Salesforce internal API limits, go to [Salesforce Developer Limits and Allocations Quick Reference](https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm#!).
