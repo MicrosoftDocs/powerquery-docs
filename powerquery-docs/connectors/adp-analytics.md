@@ -48,6 +48,7 @@ To connect to ADP Analytics data:
    * ADP Enterprise HR® V5 and V6
 
 2. Navigate into the **Reports & Analytics** > **Analytics** > **Dashboards** > **Data Mashup** page.
+
 3. Select the **SUBSCRIBE NOW** link in Power BI tile to subscribe to the ADP Analytics connector from the ADP marketplace.
 
    :::image type="content" source="./media/adp-analytics/subscribe_now.png" alt-text="Screenshot of the Power BI title with the Subscribe Now to ADP Analytics emphasized.":::
@@ -58,11 +59,11 @@ To connect to ADP Analytics data:
 
 5. Select metrics to be imported into Power BI from the list of ADP Analytics metrics.
 
-   :::image type="content" source="./media/adp-analytics/select_metrics.png" alt-text="Screenshot of the Power BI Data Manager with the Select metrics in ADP Analytics step displayed.":::
+   :::image type="content" source="./media/adp-analytics/select_metrics.png" alt-text="Screenshot of the Power BI Data Manager with the Select metrics in ADP Analytics step displayed." lightbox="./media/adp-analytics/select_metrics.png":::
 
 6. Configure selected metrics to select whether to import Metric Detail and/or Employee Detail table into Power BI.
 
-   :::image type="content" source="./media/adp-analytics/configured_metrics.png" alt-text="Screenshot of the Power BI Data Manager with the Configured metrics in ADP Analytics step displayed.":::
+   :::image type="content" source="./media/adp-analytics/configured_metrics.png" alt-text="Screenshot of the Power BI Data Manager with the Configured metrics in ADP Analytics step displayed." lightbox="./media/adp-analytics/configured_metrics.png":::
 
 7. Select **Get Data** from the **Home** ribbon in Power BI Desktop. Select **ADP Analytics**, and then select **Connect**.
 
@@ -88,11 +89,11 @@ To connect to ADP Analytics data:
 
 13. Once the connection is established, you can preview and select the Metric Detail and/or Employee Detail tables of the selected metrics within the **Navigator** dialog to import into Power BI.
 
-    :::image type="content" source="./media/adp-analytics/navigator.png" alt-text="Screenshot of the Navigator dialog where you select the ADP Analytics tables to use.":::
+    :::image type="content" source="./media/adp-analytics/navigator.png" alt-text="Screenshot of the Navigator dialog where you select the ADP Analytics tables to use." lightbox="./media/adp-analytics/navigator.png":::
 
 14. You can **Load** the selected table, which brings the entire table into Power BI Desktop, or you can select **Transform Data** to edit the query, which opens the Power Query editor. You can then filter and refine the set of data you want to use, and then load that refined set of data into Power BI Desktop.
 
-    :::image type="content" source="./media/adp-analytics/load.png" alt-text="Screenshot of the Navigator dialog with the Load button emphasized.":::
+    :::image type="content" source="./media/adp-analytics/load.png" alt-text="Screenshot of the Navigator dialog with the Load button emphasized." lightbox="./media/adp-analytics/load.png":::
 
 ## Limitations and issues
 
