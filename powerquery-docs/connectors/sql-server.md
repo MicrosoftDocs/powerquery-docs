@@ -20,7 +20,7 @@ ms.subservice: connectors
 | M Function Reference | [Sql.Database](/powerquery-m/sql-database)<br/>[Sql.Databases](/powerquery-m/sql-databases) |
 
 > [!NOTE]
-> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+> Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Capabilities Supported
 
@@ -37,11 +37,11 @@ ms.subservice: connectors
 
 To make the connection, take the following steps:
 
-1. Select the **SQL Server database** option in the connector selection.
+1. Select the **SQL Server database** option in the connector selection. For more information, go to [Where to get data](../where-to-get-data.md).
 
 2. In the **SQL Server database** dialog that appears, provide the name of the server and database (optional).
 
-   :::image type="content" source="./media/sql-server-database/select-database-desktop.png" alt-text="SQL Server database connection builder in Power Query Desktop.":::
+   :::image type="content" source="./media/sql-server-database/select-database-desktop.png" alt-text="Screenshot of the SQL Server database connection builder in Power Query Desktop.":::
 
 3. Select either the **Import** or **DirectQuery** data connectivity mode (Power BI Desktop only).
 
@@ -49,28 +49,28 @@ To make the connection, take the following steps:
 
 5. If you're connecting to this database for the first time, select the authentication type, input your credentials, and select the level to apply the authentication settings to. Then select **Connect**.
 
-   :::image type="content" source="./media/sql-server-database/signin-desktop.png" alt-text="SQL Server database authentication.":::
+   :::image type="content" source="./media/sql-server-database/signin-desktop.png" alt-text="Screenshot of the SQL Server database authentication.":::
 
    > [!NOTE]
-   > If the connection isn't encrypted, you'll be prompted with the following dialog.
+   > If the connection isn't encrypted, you're prompted with the following dialog.
 
-   :::image type="content" source="./media/sql-server-database/encryption-warning.png" alt-text="SQL Server database encryption support.":::
+   :::image type="content" source="./media/sql-server-database/encryption-warning.png" alt-text="Screenshot of the SQL Server database encryption support warning.":::
 
     Select **OK** to connect to the database by using an unencrypted connection, or follow these [instructions](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine) to set up encrypted connections to SQL Server. Additionally, when encryption is enabled for SQL servers using self-signed certificates, review this [section](#sql-server-certificate-isnt-trusted-on-the-client-power-bi-desktop-or-on-premises-data-gateway) to add the SQL servers to the Power Query Desktop client's trust list.
 
-6. In **Navigator**, select the database information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor.
+6. In **Navigator**, select the database information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in the Power Query editor.
 
-   :::image type="content" source="./media/sql-server-database/navigator-desktop.png" alt-text="Power Query Navigator showing the employee data.":::
+   :::image type="content" source="./media/sql-server-database/navigator-desktop.png" alt-text="Screenshot of the Power Query Navigator showing the employee data." lightbox="./media/sql-server-database/navigator-desktop.png":::
 
 ## Connect to SQL Server database from Power Query Online
 
 To make the connection, take the following steps:
 
-1. Select the **SQL Server database** option in the connector selection.
+1. Select the **SQL Server database** option in the connector selection. For more information, go to [Where to get data](../where-to-get-data.md).
 
 2. In the **SQL Server database** dialog that appears, provide the name of the server and database (optional).
 
-   :::image type="content" source="./media/sql-server-database/select-database-online.png" alt-text="SQL Server database connection builder in Power Query Online.":::
+   :::image type="content" source="./media/sql-server-database/select-database-online.png" alt-text="Screenshot of the SQL Server database connection builder in Power Query Online.":::
 
 3. If the SQL server isn't online, select an on-premises data gateway. Additionally, if using the port with servername, use the value `servername*` as the server name in the connection settings.
 
@@ -82,7 +82,7 @@ To make the connection, take the following steps:
 
 7. In **Navigator**, select the data you require, and then select **Transform data**.
 
-   :::image type="content" source="./media/sql-server-database/navigator-online.png" alt-text="Power Query Online Navigator showing the Human Resources employee data.":::
+   :::image type="content" source="./media/sql-server-database/navigator-online.png" alt-text="Screenshot of the Power Query Online Navigator showing the Human Resources employee data." lightbox="./media/sql-server-database/navigator-online.png":::
 
 ## Connect using advanced options
 
@@ -90,7 +90,7 @@ Both Power Query Desktop and Power Query Online provide a set of advanced option
 
 | Advanced option | Description |
 | --------------- | ----------- |
-| Command timeout in minutes | If your connection lasts longer than 10 minutes (the default timeout), you can enter another value in minutes to keep the connection open longer. This option is only available in Power Query Desktop. |
+| Command timeout in minutes | If your connection lasts longer than 10 minutes (the default time out), you can enter another value in minutes to keep the connection open longer. This option is only available in Power Query Desktop. |
 | SQL statement | For information, go to [Import data from a database using native database query](../native-database-query.md). |
 | Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, you can't see those columns. |
 | Navigate using full hierarchy | If checked, the Navigator displays the complete hierarchy of tables in the database you're connecting to. If cleared, Navigator displays only the tables whose columns and rows contain data. |
@@ -122,9 +122,10 @@ To troubleshoot this error when using on-premises data gateway, change the gatew
 To troubleshoot this error when using Power BI Desktop, modify the value of the environment variable `PBI_SQL_TRUSTED_SERVERS` to include the SQL Servers. The supported values are the same as outlined for gateway configuration (as described in step 4 above).
 
 For connections to SQL Server from Power BI Desktop and on-premises data gateway versions starting with February 2024 or later, follow one of these options:
-- Follow the solution mentioned previously to add the environment variable `PBI_SQL_TRUSTED_SERVERS`.
-- Ask your SQL administrators to acquire a certificate from a well-known certificate authority.
-- Change the setting `SqlTrustedServers` on the gateway config file. 
+
+* Follow the solution mentioned previously to add the environment variable `PBI_SQL_TRUSTED_SERVERS`.
+* Ask your SQL administrators to acquire a certificate from a well-known certificate authority.
+* Change the setting `SqlTrustedServers` on the gateway config file.
 
 ### Always Encrypted columns
 
@@ -132,9 +133,9 @@ Power Query doesn't support 'Always Encrypted' columns.
 
 ### Microsoft Entra ID authentication
 
-Microsoft Entra ID (Organizational account) authentication is only supported in the SQL Server connector if the specified server also supports Microsoft Entra ID authentication. Otherwise, you might encounter a "The OAuth authentication method isn't supported in this data source" error.
+Microsoft Entra ID (Organizational account) authentication is only supported in the SQL Server connector if the specified server also supports Microsoft Entra ID authentication. Otherwise, you might encounter a `The OAuth authentication method isn't supported in this data source` error.
 
-Note that in Power BI service, the Microsoft Entra ID authentication method shows up as "OAuth2."
+In Power BI service, the Microsoft Entra ID authentication method shows up as `OAuth2`.
 
 ## Next steps
 
