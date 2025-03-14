@@ -16,7 +16,7 @@ ms.subservice: connectors
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
-| Authentication Types Supported | Database (Username/Password)<br/>Windows<br/>Organizational account (if the specified server supports it) |
+| Authentication Types Supported | Database/Basic (Username/Password)<br/>Windows<br/>Organizational account (if the specified server supports it)<br/>Service principal |
 | M Function Reference | [Sql.Database](/powerquery-m/sql-database)<br/>[Sql.Databases](/powerquery-m/sql-databases) |
 
 > [!NOTE]
@@ -90,11 +90,12 @@ Both Power Query Desktop and Power Query Online provide a set of advanced option
 
 | Advanced option | Description |
 | --------------- | ----------- |
-| Command timeout in minutes | If your connection lasts longer than 10 minutes (the default time out), you can enter another value in minutes to keep the connection open longer. This option is only available in Power Query Desktop. |
+| Command timeout in minutes | If your connection lasts longer than 10 minutes (the default time out), you can enter another value in minutes to keep the connection open longer. |
 | SQL statement | For information, go to [Import data from a database using native database query](../native-database-query.md). |
 | Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, you can't see those columns. |
 | Navigate using full hierarchy | If checked, the Navigator displays the complete hierarchy of tables in the database you're connecting to. If cleared, Navigator displays only the tables whose columns and rows contain data. |
-| Enable SQL Server Failover support | If checked, when a node in the SQL Server [failover group](/sql/sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server) isn't available, Power Query moves from that node to another when failover occurs. If cleared, no failover occurs. |
+| Enable SQL Server failover support | If checked, when a node in the SQL Server [failover group](/sql/sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server) isn't available, Power Query moves from that node to another when failover occurs. If cleared, no failover occurs. This option is only available in Power Query Online.|
+| Enable cross database folding | This option is only available in Power Query Online. |
 
 Once you select the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your SQL Server database.
 
@@ -137,6 +138,6 @@ Microsoft Entra ID (Organizational account) authentication is only supported in 
 
 In Power BI service, the Microsoft Entra ID authentication method shows up as `OAuth2`.
 
-## Next steps
+## Related content
 
 [Optimize Power Query when expanding table columns](../optimize-expanding-table-columns.md)
