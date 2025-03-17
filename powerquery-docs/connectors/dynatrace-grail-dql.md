@@ -2,7 +2,7 @@
 title: Connect Power BI to Dynatrace Grail
 description: The connector allows users to access a Dynatrace environment on which they have the necessary permissions to run Dynatrace Query Language (DQL) queries.
 author: gordon-dt
-ms.date: 3/5/2025
+ms.date: 3/17/2025
 ms.author: dougklo
 ---
 
