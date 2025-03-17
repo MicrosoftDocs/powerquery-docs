@@ -399,6 +399,8 @@ items:
         href: connectors/digital-construction-works-insights.md
       - name: "Dynamics 365 Online (legacy)"
         href: connectors/dynamics-365-online.md
+      - name: "Dynatrace Grail (Beta)"
+        href: connectors/dynatrace-grail-dql.md
       - name: "Eduframe (Beta)"
         href: connectors/eduframe.md
       - name: "Emplifi Metrics (Deprecated)"
