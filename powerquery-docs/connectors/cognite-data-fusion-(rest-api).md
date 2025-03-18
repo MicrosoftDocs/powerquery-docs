@@ -3,8 +3,8 @@ title: Power Query Cognite Data Fusion (REST API) connector
 description: Provides basic information, prerequisites, and instructions on how to connect to and use the Cognite Data Fusion (REST API) connector.
 author: evertoncolling
 ms.topic: conceptual
-ms.date:
-ms.author:
+ms.date: {@date}
+ms.author: {ms-alias}
 ms.subservice: connectors
 ---
 
