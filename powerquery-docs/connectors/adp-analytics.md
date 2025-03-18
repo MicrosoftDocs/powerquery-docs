@@ -2,16 +2,15 @@
 title: Power Query ADP Analytics connector
 description: Provides basic information, prerequisites, and instructions on how to connect using the Power Query ADP Analytics connector.
 author: Upendra
-ms.date: 3/12/2025
+ms.date: 3/18/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
 
-<!--| title                                    | description                                                                              | author       | ms.topic   | ms.date    | ms.author |
-| ---------------------------------------- | ---------------------------------------------------------------------------------------- | ------------ | ---------- | ---------- | --------- |
-| Power Query<br />ADP Analytics connector | Provides basic information<br />and connection instructions <br />to get analytics data. | Sana Upendra | conceptual | 02/24/2025 | Upendra   | -->
-
 # ADP Analytics (Beta)
+
+> [!NOTE]
+>The following connector article is provided by ADP, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the ADP website and use the support channels there.
 
 ## Summary
 
@@ -20,8 +19,6 @@ ms.subservice: connectors
 | Release State                    | Beta                                                                  |
 | Products                         | Power BI (Semantic models)<br />Power BI (Dataflows)<br />Fabric (Dataflow Gen2) |
 | Authentication Types Supported   | Organizational account                                                |
-<!--| Version                          | 1.0                                                                   |-->
-<!--| Function Reference Documentation | [ADPAnalytics.Contents](/powerquery-m/adpanalytics-contents)          |-->
 
 ## Prerequisites
 
