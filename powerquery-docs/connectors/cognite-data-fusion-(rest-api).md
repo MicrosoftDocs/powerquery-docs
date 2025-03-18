@@ -3,12 +3,12 @@ title: Power Query Cognite Data Fusion (REST API) connector
 description: Provides basic information, prerequisites, and instructions on how to connect to and use the Cognite Data Fusion (REST API) connector.
 author: evertoncolling
 ms.topic: conceptual
-ms.date: 
-ms.author: 
+ms.date: 3/18/2025
+ms.author: dougklo
 ms.subservice: connectors
 ---
 
-# Cognite Data Fusion (REST API)
+# Cognite Data Fusion (REST API) (Beta)
 
 > [!NOTE]
 >The following connector article is provided by Cognite, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Cognite website and use the support channels there.
@@ -17,7 +17,7 @@ ms.subservice: connectors
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | Preview |
+| Release State | Beta |
 | Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | OAuth (OIDC) |
 
@@ -38,26 +38,26 @@ To connect to Cognite Data Fusion from Power Query Desktop, take the following s
 
 1. Select **Get Data** from the **Home** ribbon in Power BI Desktop. In the Get Data dialog, search for **Cognite**, select the **Cognite Data Fusion (REST API)** connector, and then select **Connect**.
 
-   :::image type="content" source="./media/cognite-data-fusion-rest/get-data-dialog.png" alt-text="Locate the CDF REST API connector in Power BI.":::
+   :::image type="content" source="./media/cognite-data-fusion-rest/get-data-dialog.png" alt-text="Screenshot showing how to locate the CDF REST API connector in Power BI.":::
 
-2. In the **Cognite Data Fusion (CDF)** dialog box, enter details to configure the connection to CDF and click **OK**:
+2. In the **Cognite Data Fusion (CDF)** dialog box, enter details to configure the connection to CDF, and then select **OK**:
 
    * **CDF project**: Enter the name of the CDF project you're connecting to.
    * **CDF organization**: Enter the organization to use to sign in to CDF.
 
-   :::image type="content" source="./media/cognite-data-fusion-rest/connection-settings.png" alt-text="Configure the CDF REST API connector in Power BI.":::
+   :::image type="content" source="./media/cognite-data-fusion-rest/connection-settings.png" alt-text="Screenshot of the connection settings where you configure the CDF REST API connector in Power BI.":::
 
 3. To sign in to your CDF account, select **Sign in** and follow the authentication process.
 
-   :::image type="content" source="./media/cognite-data-fusion-rest/sign-in.png" alt-text="Select sign in button.":::
+   :::image type="content" source="./media/cognite-data-fusion-rest/sign-in.png" alt-text="Screenshot of the authentication dialog where you select the sign in button.":::
 
 4. Once you've successfully signed in, select **Connect**.
 
-   :::image type="content" source="./media/cognite-data-fusion-rest/signed-in.png" alt-text="Signed in and ready to connect.":::
+   :::image type="content" source="./media/cognite-data-fusion-rest/signed-in.png" alt-text="Screenshot of the authentication dialog where you are signed in and ready to connect.":::
 
-5. In the **Navigator**, you'll see a list of available functions. Select the function you want to use, and then select **Transform Data** to open the Power Query Editor and retrieve data from CDF.
+5. In the **Navigator**, a list of available functions is displayed. Select the function you want to use, and then select **Transform Data** to open the Power Query editor and retrieve data from CDF.
 
-   :::image type="content" source="./media/cognite-data-fusion-rest/navigator.png" alt-text="Selecting functions using the REST API connector in Power BI.":::
+   :::image type="content" source="./media/cognite-data-fusion-rest/navigator.png" alt-text="Screenshot showing how to select functions using the REST API connector in Power BI.":::
 
 ## Connect to Cognite Data Fusion from Power Query Online
 
@@ -75,20 +75,20 @@ To connect to Cognite Data Fusion from Power Query Online, take the following st
    :::image type="content" source="./media/cognite-data-fusion-rest/online-connection-settings.png" alt-text="Screenshot of the Cognite Data Fusion (REST API) online connection settings.":::
 
 3. In the **Connection credentials** section:
-   * If this is your first time connecting to CDF, select **Create new connection** from the **Connection** dropdown menu.
+   * If you're connecting to CDF for the first time, select **Create new connection** from the **Connection** dropdown menu.
    * If you've connected previously, you can select an existing connection from the **Connection** dropdown menu.
-   * For the data gateway: If your organization uses a gateway to access CDF, select the appropriate gateway from the dropdown menu. If data gateway is set to **(none)**, the connector will use the Power BI service to connect to CDF directly.
-   * You may also select the Privacy Level for the data connection at this stage.
+   * For the data gateway: If your organization uses a gateway to access CDF, select the appropriate gateway from the dropdown menu. If data gateway is set to **(none)**, the connector uses the Power BI service to connect to CDF directly.
+   * You can also select the Privacy Level for the data connection at this stage.
    * For new connections, select **Sign in** and follow the authentication process.
 
    :::image type="content" source="./media/cognite-data-fusion-rest/online-connection-credentials.png" alt-text="Screenshot of the Cognite Data Fusion (REST API) online connection credentials.":::
 
 4. Once you've successfully signed in, select **Next**.
 
-5. In the **Choose data** section, select the function you want to use, and then select **Create** to open the Power Query Editor and retrieve data from CDF.
+5. In the **Choose data** section, select the function you want to use, and then select **Create** to open the Power Query editor and retrieve data from CDF.
 
    :::image type="content" source="./media/cognite-data-fusion-rest/online-navigator.png" alt-text="Screenshot of the Power Query Online Navigator showing the available functions.":::
 
-## Additional Information
+## Additional information
 
 - Connect to Cognite Data Fusion in Power BI using the [Cognite Data Fusion (REST API) connector](https://docs.cognite.com/cdf/dashboards/guides/powerbi/set_up_rest_connector).
