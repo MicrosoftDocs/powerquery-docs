@@ -381,6 +381,10 @@ items:
         href: connectors/celonis-ems.md
       - name: "CloudBluePSA (Beta)"
         href: connectors/cloudbluepsa.md
+      - name: "Cognite Data Fusion (OData)"
+        href: connectors/cognite-data-fusion-(odata).md
+      - name: "Cognite Data Fusion (REST API) (Beta)"
+        href: connectors/cognite-data-fusion-(rest-api).md
       - name: "Common Data Service (Legacy)"
         href: connectors/common-data-service-legacy.md
       - name: "ClickHouse"
