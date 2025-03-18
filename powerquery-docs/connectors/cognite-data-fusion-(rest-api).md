@@ -51,9 +51,9 @@ To connect to Cognite Data Fusion from Power Query Desktop, take the following s
 
    :::image type="content" source="./media/cognite-data-fusion-rest/sign-in.png" alt-text="Screenshot of the authentication dialog where you select the sign in button.":::
 
-4. Once you've successfully signed in, select **Connect**.
+4. Once you successfully sign in, select **Connect**.
 
-   :::image type="content" source="./media/cognite-data-fusion-rest/signed-in.png" alt-text="Screenshot of the authentication dialog where you are signed in and ready to connect.":::
+   :::image type="content" source="./media/cognite-data-fusion-rest/signed-in.png" alt-text="Screenshot of the authentication dialog where you're signed in and ready to connect.":::
 
 5. In the **Navigator**, a list of available functions is displayed. Select the function you want to use, and then select **Transform Data** to open the Power Query editor and retrieve data from CDF.
 
@@ -76,14 +76,14 @@ To connect to Cognite Data Fusion from Power Query Online, take the following st
 
 3. In the **Connection credentials** section:
    * If you're connecting to CDF for the first time, select **Create new connection** from the **Connection** dropdown menu.
-   * If you've connected previously, you can select an existing connection from the **Connection** dropdown menu.
+   * If you connected previously, you can select an existing connection from the **Connection** dropdown menu.
    * For the data gateway: If your organization uses a gateway to access CDF, select the appropriate gateway from the dropdown menu. If data gateway is set to **(none)**, the connector uses the Power BI service to connect to CDF directly.
    * You can also select the Privacy Level for the data connection at this stage.
    * For new connections, select **Sign in** and follow the authentication process.
 
    :::image type="content" source="./media/cognite-data-fusion-rest/online-connection-credentials.png" alt-text="Screenshot of the Cognite Data Fusion (REST API) online connection credentials.":::
 
-4. Once you've successfully signed in, select **Next**.
+4. Once you successfully sign in, select **Next**.
 
 5. In the **Choose data** section, select the function you want to use, and then select **Create** to open the Power Query editor and retrieve data from CDF.
 

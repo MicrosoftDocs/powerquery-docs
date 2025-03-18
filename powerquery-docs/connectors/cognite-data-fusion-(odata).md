@@ -43,9 +43,9 @@ To connect to Cognite Data Fusion from Power Query Desktop, take the following s
 
 2. In the **Cognite Data Fusion (CDF)** dialog, enter details to configure the connection to CDF, and the select **OK**:
 
-   * **Data Source Identifier**: Enter the CDF project name, a data model URL, or a custom OData query to retrieve data from CDF.
+   * **Data Source Identifier**: To retrieve data from CDF, enter the CDF project name, a data model URL, or a custom OData query.
      * To authenticate as a guest user in Microsoft Entra ID, add the Entra ID tenant ID, for example, `dataSource?tenantId=MyEntraIDTenant.onmicrosoft.com`.
-     * If you are passing a custom OData URL that already contains query parameters, then you can add the `tenantId` at the end with this syntax: `dataSource?$filter={Filter}&tenantId=MyEntraIDTenant.onmicrosoft.com`.
+     * If you're passing a custom OData URL that already contains query parameters, then you can add the `tenantId` at the end with this syntax: `dataSource?$filter={Filter}&tenantId=MyEntraIDTenant.onmicrosoft.com`.
 
    * **CDF API URL**: Enter the URL to the Cognite API, for example, `https://api.cognitedata.com` or `https://az-eastus-1.cognitedata.com`. To access some OData services, you might also need to add the API version, for example, `https://bluefield.cognitedata.com/20230821`.
 
@@ -55,13 +55,13 @@ To connect to Cognite Data Fusion from Power Query Desktop, take the following s
 
    :::image type="content" source="./media/cognite-data-fusion-odata/sign-in.png" alt-text="Screenshot of the authentication dialog where you select the sign in button.":::
 
-4. Once you've successfully signed in, select **Connect**.
+4. Once you successfully sign in, select **Connect**.
 
-   :::image type="content" source="./media/cognite-data-fusion-odata/signed-in.png" alt-text="Screenshot of the authentication dialog where you are signed in and ready to connect.":::
+   :::image type="content" source="./media/cognite-data-fusion-odata/signed-in.png" alt-text="Screenshot of the authentication dialog where you're signed in and ready to connect.":::
 
 5. In the **Navigator**, select the data you want to load or transform.
 
-   :::image type="content" source="./media/cognite-data-fusion-odata/navigator.png" alt-text="Screenshot of the navigatore where you select the data you want to use.":::
+   :::image type="content" source="./media/cognite-data-fusion-odata/navigator.png" alt-text="Screenshot of the navigator where you select the data you want to use.":::
 
 6. Select **Load** to import the data directly or **Transform Data** to open the Power Query editor for data filtering and transformation.
 
@@ -75,23 +75,23 @@ To connect to Cognite Data Fusion from Power Query Online, take the following st
 
 2. In the **Connection settings** section, enter the following information:
 
-   * **Data Source Identifier**: Enter the CDF project name, a data model URL, or a custom OData query to retrieve data from CDF.
+   * **Data Source Identifier**: To retrieve data from CDF, enter the CDF project name, a data model URL, or a custom OData query.
       * To authenticate as a guest user in Microsoft Entra ID, add the Entra ID tenant ID, for example, `dataSource?tenantId=MyEntraIDTenant.onmicrosoft.com`.
-      * If you are passing a custom OData URL that already contains query parameters, then you can add the `tenantId` at the end with this syntax: `dataSource?$filter={Filter}&tenantId=MyEntraIDTenant.onmicrosoft.com`.
+      * If you're passing a custom OData URL that already contains query parameters, then you can add the `tenantId` at the end with this syntax: `dataSource?$filter={Filter}&tenantId=MyEntraIDTenant.onmicrosoft.com`.
    * **CDF API URL**: Enter the URL to the Cognite API, for example, `https://api.cognitedata.com` or `https://az-eastus-1.cognitedata.com`. To access some OData services, you might also need to add the API version, for example, `https://bluefield.cognitedata.com/20230821`.
 
    :::image type="content" source="./media/cognite-data-fusion-odata/online-connection-settings.png" alt-text="Screenshot of the Cognite Data Fusion (OData) online connection settings.":::
 
 3. In the **Connection credentials** section:
    * If you're connecting to CDF for the first time, select **Create new connection** from the **Connection** dropdown menu.
-   * If you've connected previously, you can select an existing connection from the **Connection** dropdown menu.
+   * If you connected previously, you can select an existing connection from the **Connection** dropdown menu.
    * For the data gateway: If your organization uses a gateway to access CDF, select the appropriate gateway from the dropdown menu. If data gateway is set to **(none)**, the connector uses the Power BI service to connect to CDF directly.
    * You can also select the Privacy Level for the data connection at this stage.
    * For new connections, select **Sign in** and follow the authentication process.
 
    :::image type="content" source="./media/cognite-data-fusion-odata/online-connection-credentials.png" alt-text="Screenshot of the Cognite Data Fusion (OData) online connection credentials.":::
 
-4. Once you've successfully signed in, select **Next**.
+4. Once you successfully sign in, select **Next**.
 
 5. In the **Choose data** section, select the data you require, and then select **Create** to open the Power Query editor and retrieve data from CDF.
 
