@@ -319,6 +319,8 @@ items:
         href: connectors/active-directory.md
       - name: "Adobe Analytics"
         href: connectors/adobe-analytics.md
+      - name: "ADP Analytics (Beta)"
+        href: connectors/adp-analytics.md
       - name: "Amazon Athena"
         href: connectors/amazon-athena.md
       - name: "Amazon OpenSearch Service (Beta)"
