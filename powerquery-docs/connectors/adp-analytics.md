@@ -56,11 +56,11 @@ To connect to ADP Analytics data:
 
 5. Select metrics to be imported into Power BI from the list of ADP Analytics metrics.
 
-   :::image type="content" source="./media/adp-analytics/select-metrics.png" alt-text="Screenshot of the Power BI Data Manager with the Select metrics in ADP Analytics step displayed." lightbox="./media/adp-analytics/select_metrics.png":::
+   :::image type="content" source="./media/adp-analytics/select-metrics.png" alt-text="Screenshot of the Power BI Data Manager with the Select metrics in ADP Analytics step displayed." lightbox="./media/adp-analytics/select-metrics.png":::
 
 6. Configure selected metrics to select whether to import Metric Detail and/or Employee Detail table into Power BI.
 
-   :::image type="content" source="./media/adp-analytics/configured-metrics.png" alt-text="Screenshot of the Power BI Data Manager with the Configured metrics in ADP Analytics step displayed." lightbox="./media/adp-analytics/configured_metrics.png":::
+   :::image type="content" source="./media/adp-analytics/configured-metrics.png" alt-text="Screenshot of the Power BI Data Manager with the Configured metrics in ADP Analytics step displayed." lightbox="./media/adp-analytics/configured-metrics.png":::
 
 7. Select **Get Data** from the **Home** ribbon in Power BI Desktop. Select **ADP Analytics**, and then select **Connect**.
 
