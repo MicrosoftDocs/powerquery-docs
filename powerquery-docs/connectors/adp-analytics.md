@@ -74,7 +74,7 @@ To connect to ADP Analytics data:
 
 10. In the ADP Analytics window that appears, provide your credentials to sign in to your ADP Analytics account.
 
-    :::image type="content" source="./media/adp-analytics/userid.png" alt-text="Screenshot of the ADP window where you enter your User ID in ADP Analytics.":::
+    :::image type="content" source="./media/adp-analytics/user-id.png" alt-text="Screenshot of the ADP window where you enter your User ID in ADP Analytics.":::
 
 11. Enter your ADP Analytics password and select **Sign in**.
 
