@@ -51,7 +51,7 @@ items:
           href: query-folding-examples.md
         - name: "Query folding indicators"
           href: step-folding-indicators.md
-        - name: "Query plan (Preview)"
+        - name: "Query plan"
           href: query-plan.md
         - name: "Query folding on native queries"
           href: native-query-folding.md
