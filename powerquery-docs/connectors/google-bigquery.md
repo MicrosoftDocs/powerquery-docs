@@ -76,7 +76,7 @@ To connect to Google BigQuery from Power Query Online, take the following steps:
 3. A **Sign in with Google** dialog appears. Select your Google account and approve connecting.
 
     > [!NOTE]
-    >Although the sign in dialog box says you continue to Power BI Desktop once you've signed in, you're sent to your online app instead.
+    >Although the sign in dialog box says you continue to Power BI Desktop once you sign in, you're sent to your online app instead.
 
     :::image type="content" source="./media/google-bigquery/sign-into-google-online.png" alt-text="Screenshot of the Google sign in dialog where you sign in to your account.":::
 
