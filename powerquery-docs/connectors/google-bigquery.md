@@ -59,7 +59,7 @@ To connect to Google BigQuery from Power Query Desktop, take the following steps
 
 6. Once you successfully connect, a **Navigator** window appears and displays the data available on the server. Select your data in the navigator. Then select either **Transform Data** to transform the data in Power Query or **Load** to load the data in Power BI Desktop.
 
-    :::image type="content" source="./media/google-bigquery/navigator-bigquery.png" alt-text="Screenshot of the Power Query navigator loading Google BigQuery data to desktop app." lightbox=./media/google-bigquery/navigator-bigquery.png":::
+    :::image type="content" source="./media/google-bigquery/navigator-bigquery.png" alt-text="Screenshot of the Power Query navigator loading Google BigQuery data to desktop app." lightbox="./media/google-bigquery/navigator-bigquery.png":::
 
 ## Connect to Google BigQuery data from Power Query Online
 
