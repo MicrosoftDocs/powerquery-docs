@@ -3,7 +3,7 @@ title: Migrate a standard V1 dataflow to a standard V2 dataflow
 description: Describes how to migrate a Power Platform standard V1 dataflow to a new standard V2 dataflow
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 11/20/2024
+ms.date: 3/25/2025
 ms.author: dougklo
 ms.subservice: dataflows
 ---
@@ -11,7 +11,7 @@ ms.subservice: dataflows
 # Migrate a standard V1 dataflow to a standard V2 dataflow
 
 > [!NOTE]
-> We encourage Power Platform dataflow users to migrate from standard V1 dataflows to standard V2 dataflows. Standard V1 dataflows are on a path to discontinued support in the near future.
+> We encourage Power Platform dataflow users to migrate from standard V1 dataflows to standard V2 dataflows. Standard V1 dataflows will be discontinued as of March 31, 2025.
 
 Follow these steps to migrate a standard V1 dataflow to a standard V2 dataflow.
 
