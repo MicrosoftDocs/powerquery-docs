@@ -32,6 +32,9 @@ ms.subservice: connectors
 
 ## Connect to a Vertica database from Power Query Desktop
 
+> [!NOTE]
+> Since April 2025 version of Power BI Desktop, the [**Use user-installed Vertica ODBC driver**](#use-vertica-odbc-driver-preview) option is enabled by default, so that you need to install the ODBC driver on your machine to use the Vertica database connector in Power BI Desktop. If you would like to revert to the old built-in driver experience, you may deselect the option in "Options and settings".
+
 To connect to an **Vertica** database, take the following steps:
 
 1. Select **Get Data** from the **Home** ribbon in Power BI Desktop.
@@ -85,10 +88,7 @@ To install the driver on the machine running Power BI Desktop or the on-premises
 
    :::image type="content" source="media/Vertica-database/install-odbc-driver.png" alt-text="Screenshot of installing the Vertica ODBC driver on local machine.":::
 
-To use this Vertica ODBC driver in Power BI Desktop, navigate to **Options and settings** (under the **File** tab) > **Options** > **Preview features**, and then select the checkbox to enable the **Use user-installed Vertica ODBC driver** option. 
-
-> [!NOTE]
-> Since April 2025 version of Power BI Desktop, the **Use user-installed Vertica ODBC driver** option is enabled by default, so that you need to install the ODBC driver on your machine to use the Vertica database connector in Power BI Desktop. If you would like to revert to the old built-in driver experience, you may deselect the option in "Options and settings".
+To use this Vertica ODBC driver in Power BI Desktop, navigate to **Options and settings** (under the **File** tab) > **Options** > **Preview features**, and then select the checkbox to enable the **Use user-installed Vertica ODBC driver** option. Since April 2025 version of Power BI Desktop, the **Use user-installed Vertica ODBC driver** option is enabled by default, so that you need to install the ODBC driver on your machine to use the Vertica database connector in Power BI Desktop. If you would like to revert to the old built-in driver experience, you may deselect this option in options and settings.
 
 To use this Vertica ODBC driver in the on-premises data gateway, change the gateway configurations to update the `UserInstalledVerticaODBCDriver` setting using the following steps:
 
