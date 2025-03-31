@@ -3,7 +3,7 @@ title: Power Query Snowflake connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Snowflake database, along with native query folding instructions and troubleshooting tips.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 02/20/2025
+ms.date: 03/31/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
@@ -23,7 +23,7 @@ ms.subservice: connectors
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 > [!NOTE]
-> Since the January 2025 release for Power BI Desktop, we introduced a new implementation for the Snowflake connector, currently available in preview. Learn more about [this feature](#new-snowflake-connector-implementation-preview).
+> Since January 2025, we introduced a new implementation for the Snowflake connector, currently available in preview. Learn more about [this feature](#new-snowflake-connector-implementation-preview).
 
 ## Capabilities Supported
 
@@ -112,28 +112,30 @@ Once you select the advanced options you require, select **OK** in Power Query D
 
 ## New Snowflake connector implementation (Preview)
 
-Since the January 2025 release for Power BI Desktop, we introduced a new implementation for the Snowflake connector to enhance the integration with Snowflake, currently available in preview. It uses Arrow Database Connectivity (ADBC) instead of ODBC to connect to and retrieve data from Snowflake which improves performance especially for large result sets. As we continue to enhance and add new capabilities to this connector, we encourage you to upgrade to the latest version to try it out and [provide us feedback](https://aka.ms/snowflake-connector-feedback).
+Since January 2025, we introduced a new implementation for the Snowflake connector to enhance the integration with Snowflake, currently available in preview. It uses Arrow Database Connectivity (ADBC) instead of ODBC to connect to and retrieve data from Snowflake which improves performance especially for large result sets. As we continue to enhance and add new capabilities to this connector, we encourage you to upgrade to the latest version to try it out and [provide us feedback](https://aka.ms/snowflake-connector-feedback).
 
-In February 2025 release, this connector is upgraded with the following improvement:
-
-- Enhanced performance by reducing the number of metadata calls.
-- Resolved duplicate values issue for large result sets.
+- In February 2025 release, this connector is upgraded with the following improvement:
+  - Enhanced performance by reducing the number of metadata calls.
+  - Resolved duplicate values issue for large result sets.
+- In March 2025 release, this connector is upgraded to further boost the performance.
 
 > [!NOTE]
 > This feature is supported in the 64-bit version of Power BI Desktop and doesn't work in the 32-bit version.
 
-To access this feature, in Power BI Desktop, navigate to **Options and settings** (under the **File** tab) > **Options** > **Preview features**, and then select the checkbox to enable the **Use new Snowflake connector implementation** option. Once the option is on, all the newly created connections automatically use the new connector implementation.
+To access this feature in Power BI Desktop, navigate to **Options and settings** (under the **File** tab) > **Options** > **Preview features**, and then select the checkbox to enable the **Use new Snowflake connector implementation** option. Once the option is on, all the newly created connections automatically use the new connector implementation.
 
 :::image type="content" source="./media/snowflake/new-implementation-option.png" alt-text="Screenshot of the new Snowflake implementation option in Power BI Desktop.":::
 
-Your existing connections remain unchanged. You can also try out the feature by adding the `Implementation="2.0"` flag in `Snowflake.Databases` in your queries as follows. This property differentiates the version of the connector you're using.
+Your existing connections remain unchanged. You can try out the feature by adding the `Implementation="2.0"` flag in `Snowflake.Databases` in your queries as follows. This property differentiates the version of the connector you're using.
+
+To access this feature in Dataflow Gen2, after you configure getting data from Snowflake, go to **Advanced editor** in the top ribbon, and add the `Implementation="2.0"` flag in `Snowflake.Databases` in your queries as follows to use this new connector.
 
 ```powerquery-m
 Source = Snowflake.Databases("contoso.snowflakecomputing.com", "CONTOSO_WH", [Implementation="2.0"])
 ```
 
 > [!NOTE]
-> If you're using the on-premises data gateway to refresh your semantic model, make sure you have the January 2025 version or later to use this feature.
+> When using the on-premises data gateway, the minimal supported version is January 2025. You are recommended to use the latest version to evaluate this feature with the most current capabilities.
 
 To aid with diagnosing any potential issue, you can find the `Implementation` and `DriverType` details in your Mashup logs. As an example:
 
