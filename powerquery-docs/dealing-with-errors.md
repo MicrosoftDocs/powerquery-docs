@@ -2,7 +2,7 @@
 title: Dealing with errors 
 description: Understanding errors in Power Query and most common step level and cell level errors.
 author: ptyx507
-ms.date: 03/29/2024
+ms.date: 3/31/2025
 ms.author: miescobar
 ms.custom: edited
 ms.subservice: transform-data
@@ -21,18 +21,17 @@ This article provides suggestions for how to fix the most common errors you migh
 
 A step-level error prevents the query from loading and displays the error components in a yellow pane.
 
-:::image type="content" source="media/dealing-with-errors/column-name.png" alt-text="Step-level error.":::
+:::image type="content" source="media/dealing-with-errors/column-name.png" alt-text="Screenshot of a Step-level error where a column wasn't found.":::
 
 * **Error reason**: The first section before the colon. In the example above, the error reason is **Expression.Error**.
 * **Error message**: The section directly after the reason. In the example above, the error message is **The column 'Column' of the table wasn't found**.
 * **Error detail**: The section directly after the **Details:** string. In the example above, the error detail is **Column**.
 
-
 ### Common step-level errors
 
 In all cases, we recommend that you take a close look at the error reason, error message, and error detail to understand what's causing the error. You can select the **Go to error** button, if available, to view the first step where the error occurred.
 
-:::image type="content" source="media/dealing-with-errors/go-to-error.png" alt-text="Go to error button.":::
+:::image type="content" source="media/dealing-with-errors/go-to-error.png" alt-text="Screenshot of an error message with the Go to error button emphasized." lightbox="media/dealing-with-errors/go-to-error.png":::
 
 #### Can't find the source - DataSource.Error  
 
