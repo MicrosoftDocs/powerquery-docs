@@ -48,7 +48,7 @@ To connect to Salesforce Objects data:
 
    :::image type="content" source="media/salesforce-objects/sf-objects-url.png" alt-text="Get data from the production URL.":::
 
-   You can also select **Custom** and enter a custom URL to sign in. This custom URL might be a custom domain you've created within Salesforce, such as `https://contoso.salesforce.com`. You can also use the custom URL selection if you're using your own CNAME record that redirects to Salesforce. Note that lightning URLs aren't supported.
+   You can also select **Custom** and enter a custom URL to sign in. This custom URL might be a custom domain you've created within Salesforce, such as `https://contoso.salesforce.com`. You can also use the custom URL selection if you're using your own CNAME record that redirects to Salesforce. Currently custom URLs only support the `salesforce.com` and `cloudforce.com` domains. Note that lightning URLs aren't supported.
 
    Also, you can select **Include relationship columns**. This selection alters the query by including columns that might have foreign-key relationships to other tables. If this box is unchecked, you won’t see those columns.
 
@@ -114,6 +114,8 @@ For more information on Salesforce API versions and support, visit the [Salesfor
 * Custom fields of type "Picklist (Multi-Select)" are not supported by "Create record" and "Update record" operations.
 
 * Lightning URLs aren't supported.
+
+* Custom URLs only support the salesforce.com and cloudforce.com domains, the use of other domains will result in the "Invalid Arguments" error
 
 * Salesforce limits the number of concurrent queries that can be executed by a single account. ['INVALID_QUERY_LOCATOR ' error](https://help.salesforce.com/s/articleView?id=000323582&type=1) This is a Salesforce limit, and can be encountered when there are multiple concurrent queries against Salesforce using the same account. This includes all client applications (not just the PowerQuery connector) using the Salesforce API. To reduce the likelihood of this error, ensure that the number of Salesforce queries are kept to a minimum, use available options (such as dataflows) to stage the data from Salesforce, and confirm that other uses of the Salesforce API with the same account are not scheduled concurrently.
 
