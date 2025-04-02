@@ -4,7 +4,7 @@ description: Provides an overview of dataflows in solutions, and includes specia
 author: Luitwieler
 ms.author: jeluitwi
 ms.topic: conceptual 
-ms.date: 12/16/2024 
+ms.date: 4/2/2025 
 ms.subservice: dataflows
 ---
 # Overview of solution-aware dataflows
@@ -125,3 +125,4 @@ For security reasons, credentials of connections used by dataflows aren't persis
 * Dataflows don't support preferred solutions. For more information, go to [Set a preferred solution](/power-apps/maker/data-platform/preferred-solution#limitations).
 * For dataflows to import successfully into an environment, either the environment can't be in administration mode, or background operations need to be enabled.
 * If a dataflow is created as part of the solution and data is loaded into a new table, that table isn't created in the same solution. Therefore, the prefixes of the column schema names shown in the dataflow experience don't match the publisher prefix of the dataflow solution.
+* For security reasons, credentials of connections used by dataflows aren't persisted by solutions. Once a dataflow is deployed as part of a solution, you need to edit its connections before it can be scheduled to run. Connections need to be updated in both update and upgrade modes of the import, regardless of whether there was a change to the dataflow.
