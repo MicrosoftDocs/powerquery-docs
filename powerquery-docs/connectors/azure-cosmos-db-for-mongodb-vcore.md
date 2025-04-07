@@ -97,6 +97,24 @@ Refer to [Troubleshooting & Limitations](#troubleshooting--limitations) for limi
 - Time.Hour, Time.Minute, Time.Second
 - Value.Add, Value.Divide, Value.Equals, Value.Multiply, Value.NullableEquals, Value.Subtract
 
+## Connect to Azure CosmosDB for MongoDB vCore from Power Query Online
+
+To make the connection, take the following steps:
+
+1. Open up your dataflow.
+
+2. Select **Get data from another source ->** option.
+
+3. Select the **Azure MongoDB for vCore** connector.
+
+4. Fill in your **endpoint** and **connection credentials**.
+
+5. Click **Next**.
+
+6. Expand your desired databases and select your desired tables.
+
+7. Click **Create**.
+
 ## Troubleshooting & Limitations
 
 - As [Power Query Text functions](/powerquery-m/text-functions) are not yet supported, neither is using **Text Filters** on a column when **Transforming Data** in **Direct Query** mode.
