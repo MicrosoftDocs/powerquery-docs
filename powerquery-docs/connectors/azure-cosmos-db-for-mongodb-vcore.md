@@ -107,7 +107,11 @@ To make the connection, take the following steps:
 
 3. Select the **Azure MongoDB for vCore** connector.
 
+![PowerBI service choosing data source](./media/PowerBI-service-choose-data-source.png)
+
 4. Fill in your **endpoint** and **connection credentials**.
+
+![PowerBI service connection details](./media/PowerBI-service-connection.png)
 
 5. Click **Next**.
 
