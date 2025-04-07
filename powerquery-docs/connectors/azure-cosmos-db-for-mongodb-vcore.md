@@ -1,7 +1,7 @@
 ---
 title: Azure Cosmos DB for MongoDB vCore Data Connector
 description: Includes basic information and prerequisites, instructions on how to connect to your Azure Cosmos for Mongo vCore database, and information about advanced connection options.
-author: v-mgale
+author: MitchellGale
 ms.topic: conceptual
 ms.date: 3/22/2024
 ms.author: dougklo
@@ -35,7 +35,7 @@ To connect to an Azure Cosmos DB for MongoDB vCore from Power Query Desktop, tak
 
 1. In **Azure Cosmos DB for MongoDB vCore**, provide the Cosmos DB endpoint. Optionally provide a **Database Name** and a **Collection Name**. If a database name is not provided, the upcoming **Navigator** screen will show all databases and their respective collections. Specifying both database and collection names will only show that collection. Specifying a collection name without a database name results in a connection error.
 
-   ![Enter Azure Cosmos DB for MongoDB vCore database connection.](./media/azure-cosmos-db-for-mongodb-vcore/signin.png)
+   ![Enter Azure Cosmos DB for MongoDB vCore database connection.](./media/azure-cosmos-db-for-mongodb-vcore/signin.png).
 
 1. Select either the **Import** or **DirectQuery** data connectivity mode.
 
@@ -107,11 +107,11 @@ To make the connection, take the following steps:
 
 3. Select the **Azure MongoDB for vCore** connector.
 
-![PowerBI service choosing data source](./media/PowerBI-service-choose-data-source.png)
+![PowerBI service choosing data source](./media/azure-cosmos-db-for-mongodb-vcore/PowerBI-service-choose-data-source.png)
 
 4. Fill in your **endpoint** and **connection credentials**.
 
-![PowerBI service connection details](./media/PowerBI-service-connection.png)
+![PowerBI service connection details](./media/azure-cosmos-db-for-mongodb-vcore/PowerBI-service-connection.png)
 
 5. Click **Next**.
 
