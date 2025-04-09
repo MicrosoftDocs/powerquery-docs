@@ -107,8 +107,8 @@ The following table lists all of the advanced options you can set in Power Query
 | --------------- | ----------- |
 | Role name | Specifies the role that the report uses via the driver. This role must be available to the user, otherwise no role is set. |
 | Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, you don’t see those columns. |
-| Connection timeout in seconds | Specifies how long to wait for a response when interacting with the Snowflake service before returning an error. Default is 0 (no timeout).|
-| Command timeout in seconds | Specifies how long to wait for a query to complete before returning an error. Default is 0 (no timeout). |
+| Connection timeout in seconds | Specifies how long to wait for a response when interacting with the Snowflake service before returning an error. Default is 0 (no time-out).|
+| Command timeout in seconds | Specifies how long to wait for a query to complete before returning an error. Default is 0 (no time-out). |
 | Database | Specifies a specific database in the warehouse. This option is only available in Power Query Desktop. |
 | SQL Statement | For information, go to [Import data from a database using native database query](../native-database-query.md). This option is only available in Power Query Desktop. |
 
@@ -139,7 +139,7 @@ Source = Snowflake.Databases("contoso.snowflakecomputing.com", "CONTOSO_WH", [Im
 ```
 
 > [!NOTE]
-> When using the on-premises data gateway, the minimal supported version is January 2025. You are recommended to use the latest version to evaluate this feature with the most current capabilities.
+> When you use the on-premises data gateway, note the minimal supported version is January 2025. You're recommended to use the latest version to evaluate this feature with the most current capabilities.
 
 To aid with diagnosing any potential issue, you can find the `Implementation` and `DriverType` details in your Mashup logs. As an example:
 
@@ -166,7 +166,11 @@ If a database name has a hyphen in it, you can encounter an ```ODBC: ERROR[42000
 
 ### Slicer visual for Boolean datatype
 
-The slicer visual for the Boolean data type isn't functioning as expected in the June 2024 release. This non-functionality is a known issue. As a temporary solution, users can convert the Boolean data type in their reports to text by navigating to: Transfer -> Data Type -> Text. A fix is provided in October 2024 release.
+The slicer visual for the Boolean data type isn't functioning as expected in the June 2024 release. This nonfunctionality is a known issue. As a temporary solution, users can convert the Boolean data type in their reports to text by navigating to: Transfer -> Data Type -> Text. A fix is provided in October 2024 release.
+
+### Views not visible with Implementation="2.0"
+
+Views are not currently visible when using the `Implementation="2.0"` flag. Our team is working on a fix for this. There are two workarounds. The first option is to remove `[Kind=view]` from the key and then the view will show correctly. The second option is to remove the `Implementation="2.0"` flag.
 
 ## Additional information
 
