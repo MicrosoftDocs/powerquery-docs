@@ -47,7 +47,7 @@ To connect to an Azure Cosmos DB for MongoDB vCore from Power Query Desktop, tak
 
 1. In **Navigator**, select the database information you want. A list of collections appear under each database. Select one or more collections and then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query Editor. The list of databases and collections are affected if the optional **Database Name** and **Collection Name** were previously supplied.
 
-   ![Screenshot showing Azure Cosmos DB for MongoDB vCore load or transform](./media/azure-cosmos-db-for-mongodb-vcore/navigator-desktop.png)
+   ![Screenshot showing Azure Cosmos DB for MongoDB vCore load or transform.](./media/azure-cosmos-db-for-mongodb-vcore/navigator-desktop.png)
 
 ## Connect to Azure Cosmos DB for MongoDB vCore database from Power Query Online
 
@@ -73,7 +73,7 @@ The custom `Value.NativeQuery` function allows native MongoDB queries to be sent
 
 1. Using the Navigator, select at least one collection and choosing **Transform Data**.
 
-   ![Screenshot showing Native Mongo Query Transform Data](./media/azure-cosmos-db-for-mongodb-vcore/transform-data-on-load.png)
+   ![Screenshot showing Native Mongo Query Transform Data.](./media/azure-cosmos-db-for-mongodb-vcore/transform-data-on-load.png)
 
 1. Choose **Advanced Editor**. The **Advanced Editor** dialog appears to show the initial query that would be used to fetch all the data in the selected collection.
 
