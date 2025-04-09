@@ -168,6 +168,10 @@ If a database name has a hyphen in it, you can encounter an ```ODBC: ERROR[42000
 
 The slicer visual for the Boolean data type isn't functioning as expected in the June 2024 release. This non-functionality is a known issue. As a temporary solution, users can convert the Boolean data type in their reports to text by navigating to: Transfer -> Data Type -> Text. A fix is provided in October 2024 release.
 
+### Views not visible with Implementation="2.0"
+
+Views are not currently visible when using the `Implementation="2.0"` flag. Our team is working on a fix for this. There are two workarounds. The first option is to remove `[Kind=view]` from the key and then the view will show correctly. The second option is to remove the `Implementation="2.0"` flag.
+
 ## Additional information
 
 - [Connect to Snowflake in Power BI Service](/power-bi/connect-data/service-connect-snowflake)
