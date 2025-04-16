@@ -3,7 +3,7 @@ title: Power Query Snowflake connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Snowflake database, along with native query folding instructions and troubleshooting tips.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 04/07/2025
+ms.date: 04/16/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
@@ -121,7 +121,7 @@ Since January 2025, we introduced a new implementation for the Snowflake connect
 - In February 2025 release, this connector is upgraded with the following improvement:
   - Enhanced performance by reducing the number of metadata calls.
   - Resolved duplicate values issue for large result sets.
-- In March 2025 release, this connector is upgraded to further boost the performance. And it's enabled by default in Power BI Desktop so that the newly created connections automatically use the new connector implementation
+- In March 2025 release, this connector is upgraded to further boost the performance. And it's enabled by default in Power BI Desktop so that the newly created connections automatically use the new connector implementation. The issue of [views not visible](#views-not-visible-with-implementation20) has been fixed in the most recent release.
 
 > [!NOTE]
 > This feature is supported in the 64-bit version of Power BI Desktop and doesn't work in the 32-bit version.
@@ -147,6 +147,11 @@ To aid with diagnosing any potential issue, you can find the `Implementation` an
 {"Start":"2024-11-02T00:14:02.7968686Z","Action":"Engine/Module/Snowflake/IO/Snowflake/Implementation","ResourceKind":"Snowflake","ResourcePath":"powerbi.snowflakecomputing.com ;DEMO_WH","HostProcessId":"29200","Implementation":"2.0","DriverType":"ADBC","ProductVersion":"2.139.0.0 (Main)+eda56ecd858054173a4d11db9c63a6da5cf92a99","ActivityId":"106f16b6-cfbb-4853-9f20-ed45486486d2","Process":"Microsoft.Mashup.Container.NetFX45","Pid":38560,"Tid":1,"Duration":"00:00:00.0000291"}
 ```
 
+Currently, this connector has the following known limitations: 
+
+- Multi-statement queries are not supported.
+- Duration type is not supported.
+
 ## Troubleshooting
 
 ### Error: SQL compilation error: Object does not exist, or operation cannot be performed
@@ -170,7 +175,7 @@ The slicer visual for the Boolean data type isn't functioning as expected in the
 
 ### Views not visible with Implementation="2.0"
 
-Views are not currently visible when using the `Implementation="2.0"` flag. Our team is working on a fix for this. There are two workarounds. The first option is to remove `[Kind=view]` from the key and then the view will show correctly. The second option is to remove the `Implementation="2.0"` flag.
+In some version of March 2025 release of Power BI Desktop, you may encounter issue that views are not visible when using the [new Snowflake connector](#new-snowflake-connector-implementation-preview) (`Implementation="2.0"`). This issue has been fixed since the latest March 2025 release of Power BI Desktop. Upgrade your installation to try again.
 
 ## Additional information
 
