@@ -54,9 +54,9 @@ To connect to Databricks using the Delta Sharing connector, use the following st
 7. In the **Delta sharing** authentication dialog box, provide your authentication type:
 
     * If authenticating with bearer tokens, select **Authentication** from the sidebar and enter the token retrieved from the credentials file in the **Bearer Token** field.
-    * If authenticating with OIDC, select **OAuth** from the sidebar and click **Sign in**. Log in using your organization's identity provider credentials.
+    * If authenticating with OIDC, select **OAuth** from the sidebar and then select **Sign in**. Sign in using your organization's identity provider credentials.
 
-        * For more details about this process, visit [Receive Delta Sharing shares using Open ID Connect](https://docs.databricks.com/aws/en/delta-sharing/sharing-over-oidc-u2m).
+    For more details about this process, visit [Receive Delta Sharing shares using Open ID Connect](https://docs.databricks.com/aws/en/delta-sharing/sharing-over-oidc-u2m).
 
 8. Select **Connect**.
 
