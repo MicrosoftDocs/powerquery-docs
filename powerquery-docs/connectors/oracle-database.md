@@ -3,7 +3,7 @@ title: Power Query Oracle database connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your Oracle database using the connector.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 04/08/2025
+ms.date: 04/21/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
@@ -32,7 +32,7 @@ Supported Oracle versions:
 Before you can connect to an Oracle database using Power Query, you need to install the Oracle Client for Microsoft Tools (OCMT). To connect to an Oracle database with the [on-premises data gateway](/data-integration/gateway/), 64-bit OCMT must be installed on the computer running the gateway. For more information, go to [Manage your data source - Oracle](/power-bi/connect-data/service-gateway-onprem-manage-oracle).
 
 > [!NOTE]
-> Since the April 2025 release for Power BI Desktop and the on-premises data gateway, we provide a new option to use the built-in Oracle managed ODP.NET driver to connect to the Oracle database, currently available in preview. With the feature enabled, you don't need to install the OCMT manually. Learn more about [this feature](#use-the-built-in-oracle-driver-preview).
+> Since the April 2025 release for Power BI Desktop, we provide a new option to use the built-in Oracle managed ODP.NET driver to connect to the Oracle database, currently available in preview. With the feature enabled, you don't need to install the OCMT manually. Learn more about [this feature](#use-the-built-in-oracle-driver-preview).
 
 ## Capabilities Supported
 
@@ -235,29 +235,13 @@ Once you've selected the advanced options you require, select **OK** in Power Qu
 
 ## Use the built-in Oracle driver (Preview)
 
-Starting from the April 2025 version of Power BI Desktop and the on-premises data gateway, the Oracle connector includes a built-in Oracle managed ODP.NET driver for connectivity. This feature removes the necessity for users to install and manage the driver. You can enable this feature by following the instructions provided below.
+Starting from the April 2025 version of Power BI Desktop, the Oracle connector includes a built-in Oracle managed ODP.NET driver for connectivity. This feature removes the necessity for users to install and manage the driver. You can enable this feature by following the instructions provided below.
 
 To use this built-in driver in Power BI Desktop, navigate to **Options and settings** (under the **File** tab) > **Options** > **Preview features**, and then select the checkbox to enable the **Enable using bundled Oracle Managed ODP Provider** option. 
 
-To use this built-in driver in the on-premises data gateway, change the gateway configurations to update the `EnableOracleBundledOdacProvider` setting using the following steps:
+The remaining configurations to connect to a Oracle database from Power Query Desktop are the same as described in the previous sections.
 
-1. On the local machine where the on-premises data gateway is installed, navigate to **C:\Program Files\On-premises data gateway**.
-2. Make a backup of the configuration file named **Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config**.
-3. Open the original **Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config** configuration file and locate the `EnableOracleBundledOdacProvider` entry.
-4. Update the `EnableOracleBundledOdacProvider` value as `True`.
-5. Restart your gateway.
-
-```xml
-<Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.GatewayCoreSettings>
-   ...
-   <setting name="EnableOracleBundledOdacProvider" serializeAs="String">
-	   <value>True</value>
-   </setting>
-   ...
-</Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.GatewayCoreSettings>    
-```
-
-The remaining configurations to connect to a Oracle database from Power Query Desktop or Power Query Online are the same as described in the previous sections.
+When using on-premises data gateway, currently you still need to install the OCMT on your gateway machine.
 
 ## Known issues and limitations
 
