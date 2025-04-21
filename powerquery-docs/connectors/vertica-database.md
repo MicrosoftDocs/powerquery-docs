@@ -3,7 +3,7 @@ title: Power Query Vertica database connector
 description: Provides basic information for the Vertica database connector, along with how to connect to your Vertica data.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/27/2025
+ms.date: 03/31/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
@@ -23,7 +23,7 @@ ms.subservice: connectors
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 > [!NOTE]
-> Since the February 2025 release for Power BI Desktop and the on-premises data gateway, we provide a new option to use the official Vertica ODBC driver to connect to the Vertica database, currently available in preview. Learn more about [this feature](#use-vertica-odbc-driver-preview).
+> Since the February 2025 release for Power BI Desktop and the on-premises data gateway, we provide a new option to use the user-installed Vertica ODBC driver to connect to the Vertica database, currently available in preview. Learn more about [this feature](#use-vertica-odbc-driver-preview).
 
 ## Capabilities Supported
 
@@ -31,6 +31,9 @@ ms.subservice: connectors
 * DirectQuery (Power BI semantic models)
 
 ## Connect to a Vertica database from Power Query Desktop
+
+> [!NOTE]
+> Since April 2025 version of Power BI Desktop, the [**Use user-installed Vertica ODBC driver**](#use-vertica-odbc-driver-preview) option is enabled by default, so that you need to install the ODBC driver on your machine to use the Vertica database connector in Power BI Desktop. If you would like to revert to the old built-in driver experience, you may deselect the option in "Options and settings".
 
 To connect to an **Vertica** database, take the following steps:
 
@@ -73,7 +76,7 @@ To connect to an **Vertica** database, take the following steps:
 
 ## Use Vertica ODBC driver (Preview)
 
-The Vertica connector includes a built-in driver for connectivity by default. Starting from the February 2025 version of Power BI Desktop and the on-premises data gateway, there is an additional option to use the official Vertica ODBC driver to connect to the Vertica database, currently available in preview. This enables you to utilize the native client tool provided by the data source.
+The Vertica connector includes a built-in driver for connectivity by default. Starting from the February 2025 version of Power BI Desktop and the on-premises data gateway, there is an additional option to use the user-installed Vertica ODBC driver to connect to the Vertica database, currently available in preview. This enables you to utilize the native client tool provided by the data source.
 
 To install the driver on the machine running Power BI Desktop or the on-premises data gateway, follow these steps:
 
@@ -85,7 +88,7 @@ To install the driver on the machine running Power BI Desktop or the on-premises
 
    :::image type="content" source="media/Vertica-database/install-odbc-driver.png" alt-text="Screenshot of installing the Vertica ODBC driver on local machine.":::
 
-To use this Vertica ODBC driver in Power BI Desktop, navigate to **Options and settings** (under the **File** tab) > **Options** > **Preview features**, and then select the checkbox to enable the **Use user-installed Vertica ODBC driver** option. 
+To use this Vertica ODBC driver in Power BI Desktop, navigate to **Options and settings** (under the **File** tab) > **Options** > **Preview features**, and then select the checkbox to enable the **Use user-installed Vertica ODBC driver** option. Since April 2025 version of Power BI Desktop, the **Use user-installed Vertica ODBC driver** option is enabled by default, so that you need to install the ODBC driver on your machine to use the Vertica database connector in Power BI Desktop. If you would like to revert to the old built-in driver experience, you may deselect this option in options and settings.
 
 To use this Vertica ODBC driver in the on-premises data gateway, change the gateway configurations to update the `UserInstalledVerticaODBCDriver` setting using the following steps:
 
