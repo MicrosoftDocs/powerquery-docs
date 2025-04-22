@@ -239,6 +239,8 @@ Starting from the April 2025 version of Power BI Desktop, the Oracle connector i
 
 To use this built-in driver in Power BI Desktop, navigate to **Options and settings** (under the **File** tab) > **Options** > **Preview features**, and then select the checkbox to enable the **Enable using bundled Oracle Managed ODP Provider** option. 
 
+:::image type="content" source="./media/snowflake/option-for-bundled-driver.png" alt-text="Screenshot of option to enable using bundled Oracle Managed ODP Provider in Power BI Desktop.":::
+
 The remaining configurations to connect to a Oracle database from Power Query Desktop are the same as described in the previous sections.
 
 When using on-premises data gateway, currently you still need to install the OCMT on your gateway machine.
