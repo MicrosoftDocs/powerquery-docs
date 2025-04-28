@@ -24,9 +24,9 @@ Select the **Web** option in the connector selection, and then select **Connect*
 
 In **From Web**, enter the URL of the Web page from which you'd like to extract data. In this article, we'll use the Microsoft Store Web page, and show how this connector works.
 
-If you want to follow along, you can use the [Microsoft Store URL](https://www.microsoft.com/en-us/store/top-paid/games/xbox?category=classics) that we use in this article:
+If you want to follow along, you can use the [Microsoft Store URL](https://www.microsoft.com/store/top-paid/games/xbox?category=classics) that we use in this article:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[https://www.microsoft.com/en-us/store/top-paid/games/xbox?category=classics](https://www.microsoft.com/en-us/store/top-paid/games/xbox?category=classics)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://www.microsoft.com/store/top-paid/games/xbox?category=classics
 
 ![Web dialog.](web-by-example_04.png)
 
