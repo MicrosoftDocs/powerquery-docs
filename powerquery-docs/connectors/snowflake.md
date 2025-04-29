@@ -3,7 +3,7 @@ title: Power Query Snowflake connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Snowflake database, along with native query folding instructions and troubleshooting tips.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 04/16/2025
+ms.date: 04/29/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
@@ -151,6 +151,7 @@ Currently, this connector has the following known limitations:
 
 - Multi-statement queries are not supported.
 - Duration type is not supported.
+- Relationships are not supported.
 
 ## Troubleshooting
 
