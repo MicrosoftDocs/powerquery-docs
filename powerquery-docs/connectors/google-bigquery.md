@@ -120,9 +120,9 @@ Since May 2025, we introduced a new implementation for the Google BigQuery conne
 
 To access this feature in Power BI Desktop, navigate to **Options and settings** (under the **File** tab) > **Options** > **Preview features**, and then select the checkbox to enable the **Use new Google BigQuery connector implementation** option. Once the option is on, all the newly created connections automatically use the new connector implementation. 
 
-Your existing connections remain unchanged. You can try out the feature by adding the `Implementation="2.0"` flag in `GoogleBigQuery.Databases` in your queries as follows. This property differentiates the version of the connector you're using.
+Your existing connections remain unchanged. You can try out the feature by adding the `Implementation="2.0"` flag in `GoogleBigQuery.Database` in your queries as follows. This property differentiates the version of the connector you're using.
 
-To access this feature in Dataflow Gen2, after you configure getting data from Google BigQuery, go to **Advanced editor** in the top ribbon, and add the `Implementation="2.0"` flag in `GoogleBigQuery.Databases` in your queries as follows to use this new connector.
+To access this feature in Dataflow Gen2, after you configure getting data from Google BigQuery, go to **Advanced editor** in the top ribbon, and add the `Implementation="2.0"` flag in `GoogleBigQuery.Database` in your queries as follows to use this new connector.
 
 ```powerquery-m
 Source = GoogleBigQuery.Database([Implementation = "2.0"])
