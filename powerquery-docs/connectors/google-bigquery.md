@@ -133,6 +133,11 @@ Source = GoogleBigQuery.Database([Implementation = "2.0"])
 
 To aid with diagnosing any potential issue, you can find the `Implementation` as "2.0" and `DriverType` as "ADBC" in your Mashup logs.
 
+Currently, this connector has the following known limitations: 
+
+- Relationships are not supported.
+- Proxy is not supported.
+
 ## Limitations and considerations
 
 This section describes any limitations or considerations of the Google BigQuery connector.
