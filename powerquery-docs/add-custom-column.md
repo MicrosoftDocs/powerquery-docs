@@ -2,7 +2,7 @@
 title: Add a custom column
 description: An article that demonstrates how to create a custom column in Power Query using the Power Query M formula language.
 author: ptyx507x
-ms.date: 5/22/2025
+ms.date: 5/19/2025
 ms.author: miescobar
 ---
 
@@ -84,10 +84,10 @@ The **Custom column** dialog box appears with the custom column formula you crea
 > [!NOTE]
 >Depending on the formula you used for your custom column, Power Query changes the settings behavior of your step for a more simplified and native experience. For this example, the **Added custom** step changed its behavior from a standard custom column step to a *Multiplication* experience because the formula from that step only multiplies the values from two columns.
 
-## Using Copilot to create a custom column script (Preview)
+## Using Copilot to create a custom column formula (Preview)
 
 >[!NOTE]
->This experience is only available in Power Query experiences that leverage Copilot.
+>This experience is only available in Power Query experiences that apply Copilot.
 
 Inside the *Add custom column* dialog a new input textbox with the copilot icon is available. In it you can describe with your own words and in your language what you want this custom column to do in regards to the logic of your column.
 
@@ -97,7 +97,7 @@ For example, for a table that has the fields **OrderID**, **Quantity**, **Catego
 
 ```if the Total order is more than 2000 and the Category is B, then provide a discount of 10%. If the total is more than 200 and the Category is A, then provide a discount of 25% but only if the Quantity is more than 10 otherwise just provide a 10% discount.```
 
-After submitting this prompt, Copilot will process it an modify the custom column formula for you as well as adding a name and a data type if necessary.
+After submitting this prompt, Copilot will process it and modify the custom column formula for you and adding a name and a data type if necessary.
 
 ![Screenshot of the Copilot experience for natural language to custom column formula in the add custom column dialog of Power Query](media/add-custom-column/copilot-add-custom-column.png)
 
