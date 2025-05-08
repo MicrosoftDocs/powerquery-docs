@@ -3,7 +3,7 @@ title: Power Query Snowflake connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Snowflake database, along with native query folding instructions and troubleshooting tips.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 04/29/2025
+ms.date: 05/08/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
@@ -177,6 +177,10 @@ The slicer visual for the Boolean data type isn't functioning as expected in the
 ### Views not visible with Implementation="2.0"
 
 In some version of March 2025 release of Power BI Desktop, you may encounter issue that views are not visible when using the [new Snowflake connector](#new-snowflake-connector-implementation-preview) (`Implementation="2.0"`). This issue has been fixed since the latest March 2025 release of Power BI Desktop. Upgrade your installation to try again.
+
+### TIMESTAMP_NTZ values are UTC with Implementation="2.0"
+
+TIMESTAMP_LTZ types are not being converted to the local time zone but are returning the UTC value when using the [new Snowflake connector](#new-snowflake-connector-implementation-preview) (`Implementation="2.0"`). For example, doing `SELECT CURRENT_TIMESTAMP` from Snowflake is returning the UTC time, not the user's local time zone. There's ongoing work towards a fix and the documentation will be updated when a fix is released.
 
 ## Additional information
 
