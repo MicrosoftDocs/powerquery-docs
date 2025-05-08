@@ -261,8 +261,6 @@ To use this built-in driver in the on-premises data gateway, change the gateway 
 
 The remaining configurations to connect to a Oracle database from Power Query Desktop are the same as described in the previous sections.
 
-When using on-premises data gateway, currently you still need to install the OCMT on your gateway machine.
-
 ## Known issues and limitations
 
 Power BI sessions can still be active on your Oracle database for approximately 30 minutes after a semantic model refresh to that Oracle database. Only after approximately 30 minutes do those sessions become inactive/removed on the Oracle database. This behavior is by design.
