@@ -91,15 +91,15 @@ The **Custom column** dialog box appears with the custom column formula you crea
 
 Inside the *Add custom column* dialog a new input textbox with the copilot icon is available. In it you can describe with your own words and in your language what you want this custom column to do in regards to the logic of your column.
 
-For example, imagine a scenario where you want to introduce a complex conditional logic. You could describe this logic with your own words and Copilot would be able to create the custom column formula for you.
+For example, imagine a scenario where you want to introduce complex conditional logic. You could describe this logic with your own words and Copilot can create the custom column formula for you.
 
 For example, for a table that has the fields **OrderID**, **Quantity**, **Category**, **Total** you can pass a prompt like the following:
 
 ```if the Total order is more than 2000 and the Category is B, then provide a discount of 10%. If the total is more than 200 and the Category is A, then provide a discount of 25% but only if the Quantity is more than 10 otherwise just provide a 10% discount.```
 
-After submitting this prompt, Copilot will process it and modify the custom column formula for you and adding a name and a data type if necessary.
+After you submit this prompt, Copilot processes it and modifies the custom column formula for you, adding a name and a data type if necessary.
 
-![Screenshot of the Copilot experience for natural language to custom column formula in the add custom column dialog of Power Query](media/add-custom-column/copilot-add-custom-column.png)
+:::image type="content" source="media/add-custom-column/copilot-add-custom-column.png" alt-text="Screenshot of the Copilot experience for natural language to custom column formula in the add custom column dialog of Power Query.":::
 
 You can review the custom column and make any changes necessary.
 
