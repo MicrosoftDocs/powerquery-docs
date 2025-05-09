@@ -22,9 +22,6 @@ ms.subservice: connectors
 > [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
-> [!NOTE]
-> Since the February 2025 release for Power BI Desktop and the on-premises data gateway, we provide a new option to use the user-installed Vertica ODBC driver to connect to the Vertica database. Learn more about [this feature](#use-vertica-odbc-driver-preview).
-
 ## Capabilities Supported
 
 * Import
