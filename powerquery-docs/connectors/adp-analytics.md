@@ -1,13 +1,13 @@
 ---
 title: Power Query ADP Analytics connector
-description: Provides basic information, prerequisites, and instructions on how to connect using the Power Query ADP Analytics connector.
+description: Provides basic information and connection instructions to get analytics data.
 author: Upendra
-ms.date: 3/18/2025
+ms.date: 5/12/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
 
-# ADP Analytics (Beta)
+# ADP Analytics
 
 > [!NOTE]
 >The following connector article is provided by ADP, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the ADP website and use the support channels there.
@@ -16,7 +16,8 @@ ms.subservice: connectors
 
 | Item                             | Description                                                           |
 | -------------------------------- | --------------------------------------------------------------------- |
-| Release State                    | Beta                                                                  |
+| Release State                    | General Availability                                                  |
+| Version                          | 1.0.1                                                                 |
 | Products                         | Power BI (Semantic models)<br />Power BI (Dataflows)<br />Fabric (Dataflow Gen2) |
 | Authentication Types Supported   | Organizational account                                                |
 
@@ -46,11 +47,11 @@ To connect to ADP Analytics data:
 
 2. Navigate into the **Reports & Analytics** > **Analytics** > **Dashboards** > **Data Mashup** page.
 
-3. Select the **SUBSCRIBE NOW** link in Power BI tile to subscribe to the ADP Analytics connector from the ADP marketplace.
+3. Select the **SUBSCRIBE NOW** link in the Power BI tile to subscribe to the ADP Analytics connector from the ADP marketplace .
 
    :::image type="content" source="./media/adp-analytics/subscribe-now.png" alt-text="Screenshot of the Power BI title with the Subscribe Now to ADP Analytics emphasized.":::
 
-4. Once you've subscribed to the ADP analytics connector, select the **CONNECT NOW** link in Power BI tile to select and configure metrics to be imported into Power BI.
+4. Once you've subscribed to the ADP analytics connector, select the **CONNECT NOW** link in the Power BI tile to select and configure metrics to be imported into Power BI .
 
    :::image type="content" source="./media/adp-analytics/connect-now.png" alt-text="Screenshot of the Power BI title with the Connect Now to ADP Analytics emphasized.":::
 
