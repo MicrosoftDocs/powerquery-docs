@@ -3,7 +3,7 @@ title: Power Query Snowflake connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Snowflake database, along with native query folding instructions and troubleshooting tips.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 05/08/2025
+ms.date: 05/19/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
@@ -116,12 +116,13 @@ Once you select the advanced options you require, select **OK** in Power Query D
 
 ## New Snowflake connector implementation (Preview)
 
-Since January 2025, we introduced a new implementation for the Snowflake connector to enhance the integration with Snowflake, currently available in preview. It uses Arrow Database Connectivity (ADBC) instead of ODBC to connect to and retrieve data from Snowflake which improves performance especially for large result sets. As we continue to enhance and add new capabilities to this connector, we encourage you to upgrade to the latest version to try it out and [provide us feedback](https://aka.ms/snowflake-connector-feedback).
+Since January 2025, we introduced a new implementation for the Snowflake connector to enhance the integration with Snowflake, currently available in preview. It uses Arrow Database Connectivity (ADBC) instead of ODBC to connect to and retrieve data from Snowflake which improves performance especially for large result sets. As we continue to enhance and add new capabilities to this connector as listed in the following table, we encourage you to upgrade to the latest version to try it out and [provide us feedback](https://aka.ms/snowflake-connector-feedback).
 
-- In February 2025 release, this connector is upgraded with the following improvement:
-  - Enhanced performance by reducing the number of metadata calls.
-  - Resolved duplicate values issue for large result sets.
-- In March 2025 release, this connector is upgraded to further boost the performance. And it's enabled by default in Power BI Desktop so that the newly created connections automatically use the new connector implementation. The issue of [views not visible](#views-not-visible-with-implementation20) has been fixed in the most recent release.
+| Release       | Connector improvement                                        |
+| ------------- | ------------------------------------------------------------ |
+| April 2025    | - Added support for Snowflake query tag. As an example: `{"PowerQuery":true,"Host":"PBI_SemanticModel_MWC","HostContext":"PowerBIPremium-DirectQuery"}` |
+| March 2025    | - Enhanced performance when retrieving data from Snowflake.<br/>- Enabled by default in Power BI Desktop so that the newly created connections automatically use the new connector implementation.<br/>- Fixed the [views not visible issue](#views-not-visible-with-implementation20) since the latest March release. |
+| February 2025 | - Enhanced performance by reducing the number of metadata calls.<br/>- Resolved duplicate values issue for large result sets. |
 
 > [!NOTE]
 > This feature is supported in the 64-bit version of Power BI Desktop and doesn't work in the 32-bit version.
