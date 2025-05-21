@@ -3,7 +3,7 @@ title: Power Query SAP HANA database connector
 description: Provides basic information, prerequisites, and instructions on connecting to your data using the SAP HANA database connector.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/24/2024
+ms.date: 5/21/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
@@ -239,6 +239,14 @@ With this change, the added columns are treated as _dynamic attributes_ within t
 The following sample query takes advantage of this new capability. In the past, you would get a "the value is not a cube" exception when applying [Cube.CollapseAndRemoveColumns](/powerquery-m/cube-collapseandremovecolumns).
 
 :::code language="powerquery-m" source="dynamic-attributes.m":::
+
+## Limitations
+
+The following limitations apply to the Power Query SAP HANA database connector.
+
+### Connect to SAP HANA database over proxy
+
+The SAP HANA database connector doesn't support connecting to cloud database through proxy. To work around, use the [ODBC connector](../odbc.md) instead and specify the proxy settings in DSN or connection string.
 
 ## Next steps
 
