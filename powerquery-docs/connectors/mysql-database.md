@@ -126,4 +126,4 @@ For cases where Python or R is used with a MySQL database on-premises connection
 
 ### Unsupported regions
 
-The MySQL connector doesn't support China Cloud for Power Apps, Power Automate and Logic Apps. Refer to [MySQL connector](/power-query/connectors/mysql-database) for those products.
+The MySQL connector doesn't support China Cloud for Power Apps, Power Automate and Logic Apps. Refer to [MySQL connector](/connectors/mysql) for those products.
