@@ -3,7 +3,7 @@ title: Power Query OData Feed connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your data using the connector.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 4/12/2024
+ms.date: 5/21/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
@@ -39,7 +39,7 @@ To load data from an OData Feed in Power Query Desktop:
 
 1. Select **OData** or **OData Feed** in the get data experience. The get data experience in Power Query Desktop varies between apps. For more information about the Power Query Desktop get data experience for your app, go to [Where to get data](../where-to-get-data.md).
 
-2. Choose the **Basic** button and enter a URL address in the text box. This URL should be the root of the OData service you want to connect to. For example, enter `http://services.odata.org/V4/northwind/northwind.svc/`. Then select **OK**.
+2. Choose the **Basic** button and enter a URL address in the text box. This URL should be the root of the OData service you want to connect to. For example, enter `https://services.odata.org/V4/northwind/northwind.svc/`. Then select **OK**.
 
    :::image type="content" source="media/odata-feed/odata-basic-url.png" alt-text="OData URL selection.":::
 
