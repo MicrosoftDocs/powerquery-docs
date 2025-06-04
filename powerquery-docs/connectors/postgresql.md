@@ -3,7 +3,7 @@ title: Power Query PostgreSQL connector
 description: Provides basic information, prerequisites, and instructions on how to connect to your database, along with native query folding instructions and troubleshooting tips.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 2/19/2025
+ms.date: 6/4/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
@@ -24,15 +24,13 @@ ms.subservice: connectors
 
 ## Prerequisites
 
-Since December 2019, Power BI Desktop ships with NpgSQL, and no other installation is required. As of the October 2024 release, NpgSQL 4.0.17 is the version included. GAC Installation overrides the version provided with Power BI Desktop, which is the default. Refreshing is supported both through the cloud in the Power BI service and also on premise through the on-premises data gateway. To refresh data from the Power BI service without an on-premises data gateway, PostgreSQL must be hosted in a manner that allows direct connection from the Power BI services on Azure. This connectivity is natively supported for PostgreSQL hosted in Microsoft Azure. For other hosting environments, consult your hosting provider about configuring your PostgreSQL for direct access from the internet. If PostgreSQL is configured so that it can't be directly accessed from the internet (recommended for security), you need to use an on-premises data gateway for refreshes. In the Power BI service, NpgSQL 4.0.17 is used, while on premises refresh uses the local installation of NpgSQL, if available, and otherwise uses NpgSQL 4.0.17.
+Power BI Desktop has included the Npgsql provider for PostgreSQL connector since December 2019, eliminating the need for additional installation. Starting with the October 2024 version, it incorporates Npgsql version 4.0.17. Separate Npgsql GAC installation will override this default version.
 
-For Power BI Desktop versions released before December 2019, you must install the NpgSQL provider on your local machine. To install the NpgSQL provider, go to the [releases page](https://github.com/npgsql/Npgsql/releases), search for the latest v4.0.x version, and download and run the .msi file. The provider architecture (32-bit or 64-bit) needs to match the architecture of the product where you intend to use the connector. When installing, make sure that you select NpgSQL GAC Installation to ensure NpgSQL itself is added to your machine.
+The PostgreSQL connector is supported for cloud connection and via VNet data gateway or on-premises data gateway. Since the June 2025 release, the on-premises data gateway includes the Npgsql provider, so no extra installation is needed. Separate Npgsql GAC installation will override this default version.
 
-**We recommend NpgSQL 4.0.17. NpgSQL 4.1 and up won't work due to .NET version incompatibilities.**
+For Power BI Desktop versions released before December 2019 and on-premises data gateway released before June 2025, you must install the Npgsql provider on your local machine to use the PostgreSQL connector. To install the Npgsql provider, go to the [releases page](https://github.com/Npgsql/Npgsql/releases), search for the latest v4.0.x version, and download and run the .msi file. The provider architecture (32-bit or 64-bit) needs to match the architecture of the product where you intend to use the connector. When installing, make sure that you select Npgsql GAC Installation to ensure Npgsql itself is added to your machine. When installing the Npqsql, we recommend version 4.0.17. **Npgsql 4.1 and up won't work due to .NET version incompatibilities.**
 
 :::image type="content" source="media/postgresql/postgres-1.png" alt-text="Screenshot of the Npgsql installer with GAC Installation selected.":::
-
-For Power Apps, you must install the NpgSQL provider on your local machine. To install the NpgSQL provider, go to the [releases page](https://github.com/npgsql/Npgsql/releases) and download the relevant version. **Download and run the installer (the NpgSQL-[version number].msi) file**. Ensure you select the NpgSQL GAC Installation and on completion restart your machine for this installation to take effect.
 
 ## Capabilities Supported
 
