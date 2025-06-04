@@ -23,7 +23,7 @@ The Power BI QuickBooks Online connector enables connecting to your QuickBooks O
 > [!IMPORTANT]
 > This Quickbooks Online (Beta) connector is under deprecation. Starting June 2025, the connector will not be shown in the Power BI service, and the entry will be removed from Power BI Desktop in the July 2025 release. 
 >
-> The connector is planned to be deprecated in August 2025. We recommend you transition off existing connections using this connector and don't use this connector for new connections.
+> The connector is planned to be deprecated starting from August 2025. We recommend you transition off existing connections using this connector and don't use this connector for new connections.
 
 > [!WARNING]
 > QuickBooks Online has deprecated support for Internet Explorer 11, which Power Query Desktop uses for authentication to online services. To be able to log in to Quickbooks Online from Power BI Desktop, go to [Enabling Microsoft Edge (Chromium) for OAuth Authentication in Power BI Desktop](../oauth-edge-chromium.md).
