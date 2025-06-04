@@ -79,7 +79,7 @@ To connect to an **Vertica** database, take the following steps:
 
 ## Use Vertica ODBC driver
 
-Starting from the February 2025 version of Power BI Desktop and the on-premises data gateway, we provide the capability to use the user-installed Vertica ODBC driver to connect to the Vertica database, which enables you to utilize the native client tool provided by the data source. The previous built-in driver will be deprecated and removed in future releases. Connecting to Vertica database without on-premises data gateway will no longer be supported and and will result in an error since June 2025.
+Starting from the February 2025 version of Power BI Desktop and the on-premises data gateway, we provide the capability to use the user-installed Vertica ODBC driver to connect to the Vertica database, which enables you to utilize the native client tool provided by the data source. The previous built-in driver will be deprecated and removed in future releases. Connecting to Vertica database without on-premises data gateway will no longer be supported and will result in an error since June 2025.
 
 ### Install the Vertica ODBC driver
 
