@@ -3,7 +3,7 @@ title: Power Query Snowflake connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Snowflake database, along with native query folding instructions and troubleshooting tips.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 05/19/2025
+ms.date: 06/17/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
@@ -182,6 +182,10 @@ In some version of March 2025 release of Power BI Desktop, you may encounter iss
 ### TIMESTAMP_NTZ values are UTC with Implementation="2.0"
 
 TIMESTAMP_LTZ types are not being converted to the local time zone but are returning the UTC value when using the [new Snowflake connector](#new-snowflake-connector-implementation-preview) (`Implementation="2.0"`). For example, doing `SELECT CURRENT_TIMESTAMP` from Snowflake is returning the UTC time, not the user's local time zone. There's ongoing work towards a fix and the documentation will be updated when a fix is released.
+
+### Index was outside the bounds of the array when using Implementation="2.0"
+
+In some scenarios, an error is thrown indicating the `Index was outside the bounds of the array` when using the [new Snowflake connector](#new-snowflake-connector-implementation-preview) (`Implementation="2.0"`). The workaround is to remove the `Implementation="2.0"` value from your query. There's ongoing work towards a fix and the documentation will be updated when a fix is released.
 
 ## Additional information
 
