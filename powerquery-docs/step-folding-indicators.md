@@ -2,7 +2,7 @@
 title: Query folding indicators in Power Query
 description: Query folding indicators in Power Query Online help you understand what steps fold and give insight into how to build more performant queries.
 author: ptyx507x
-ms.date: 5/6/2024
+ms.date: 6/20/2025
 ms.author: miescobar
 ms.subservice: transform-data
 ---
@@ -37,7 +37,7 @@ If you examine how this code shows up in query folding indicators, you note that
 
 :::image type="content" source="media/step-folding-indicators/interpreting-step-diagnostics-1.png" alt-text="Screenshot of the Source and Navigation steps in Folding Indicator pane.":::
 
-In this example, the initial steps can't be confirmed to fold (is inconclusive), but the final step generated when you load data initially does fold. How the first steps (**Source**, and sometimes other **Navigation** steps) are handled depends on the connector. With SQL, for example, it's handled as a catalog table value, which doesn't fold. However, as soon as you select data for that connector, it folds.
+In this example, the initial steps can't be confirmed to fold (is inconclusive), but the final step generated when you load data initially does fold. How the first steps (**Source**, and sometimes other **Navigation** steps) are handled depends on the connector. With SQL, for example, the step is handled as a catalog table value, which doesn't fold. However, as soon as you select data for that connector, it folds.
 
 Conversely, this indication can also mean that your query folds up to a point and then stops folding. Unlike in the case where you have a folding indicator for the step that shows that everything folds, when you have a not-folding indicator it doesn't mean that everything doesn't fold. Instead, it means that "not everything" folds. Generally, everything up to the last folding indicator folds, with more operations happening after.
 
@@ -62,10 +62,10 @@ Query folding indicators use an underlying query plan, and require it to be able
 
 |Indicator|Icon|Description|
 |---------|----|-------|
-|**Folding**|:::image type="icon" source="media/step-folding-indicators/folding-small.png":::|The folding indicator tells you that the query up to this step is evaluated by the data source.|
-|**Not folding**|:::image type="icon" source="media/step-folding-indicators/not-folding-small.png":::|The not-folding indicator tells you that some part of the query up to this step is evaluated outside the data source. You can compare it with the last folding indicator, if there is one, to see if you can rearrange your query to be more performant.|
+|**Folding**|:::image type="icon" source="media/step-folding-indicators/folding-small.png":::|The folding indicator tells you that the data source evaluates the query up to this step.|
+|**Not folding**|:::image type="icon" source="media/step-folding-indicators/not-folding-small.png":::|The not-folding indicator tells you that some part of the query up to this step is evaluated outside the data source. You can compare it with the last folding indicator, if there's one, to see if you can rearrange your query to be more performant.|
 |**Might fold**|:::image type="icon" source="media/step-folding-indicators/might-fold-small.png":::|Might fold indicators are uncommon. They mean that a query "might" fold. They indicate either that folding or not folding is determined at runtime, when pulling results from the query, and that the query plan is dynamic. These indicators likely only appear with ODBC or OData connections. |
-|**Opaque**|:::image type="icon" source="media/step-folding-indicators/opaque-folding-small.png":::|Opaque indicators tell you that the resulting query plan is inconclusive for some reason. It generally indicates that there's a true "constant" table, or that that transform or connector isn't supported by the indicators and query plan tool.|
+|**Opaque**|:::image type="icon" source="media/step-folding-indicators/opaque-folding-small.png":::|Opaque indicators tell you that the resulting query plan is inconclusive for some reason. It generally indicates that there's a true "constant" table, or that the indicators and query plan tool doesn't support that transform or connector.|
 |**Unknown**|:::image type="icon" source="media/step-folding-indicators/no-query-plan-small.png":::|Unknown indicators represent an absence of a query plan, either due to an error or attempting to run the query plan evaluation on something other than a table (such as a record, list, or primitive).|
 
 ## Example analysis
