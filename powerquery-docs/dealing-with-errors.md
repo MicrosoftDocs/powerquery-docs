@@ -29,7 +29,7 @@ A step-level error prevents the query from loading and displays the error compon
 
 Power Query Online displays slightly different details. The error detail is still **Column**, but the online error message also contains the error reason (**Expression.Error**) and the error code (**10224**).
 
-:::image type="content" source="media/dealing-with-errors/column-name-online.png" alt-text="Screenshot of a Step-level error where a column wasn't found." lightbox="media/dealing-with-errors/column-name-online.png":::
+:::image type="content" source="media/dealing-with-errors/column-name-online.png" alt-text="Screenshot of an online Step-level error where a column wasn't found." lightbox="media/dealing-with-errors/column-name-online.png":::
 
 ### Common step-level errors
 
