@@ -2,7 +2,7 @@
 title: Understanding query evaluation and query folding in Power Query
 description: Provides an overall description of the query evaluation and query folding mechanisms in Power Query.
 author: migueesc123
-ms.date: 6/10/2024
+ms.date: 4/30/2025
 ms.author: miescobar
 ms.topic: overview
 ms.subservice: transform-data
@@ -94,7 +94,7 @@ The following diagram demonstrates the steps that take place in this optimizatio
 
 The goal of query folding is to offload or push as much of the evaluation of a query to a data source that can compute the transformations of your query.
 
-The query folding mechanism accomplishes this goal by translating your M script to a language that can be interpreted and executed by your data source. It then pushes the evaluation to your data source and sends the result of that evaluation to Power Query.
+The query folding mechanism accomplishes this goal by translating your M script to a language that your data source can interpret and execute. It then pushes the evaluation to your data source and sends the result of that evaluation to Power Query.
 
 This operation often provides a faster query execution than extracting all the required data from your data source and running all transforms required in the Power Query engine.
 
@@ -103,7 +103,7 @@ When you use the [get data experience](get-data-experience.md), Power Query guid
 However, the steps that follow in your query are the steps or transforms that the query folding mechanism attempts to optimize. It then checks if they can be offloaded to your data source instead of being processed using the Power Query engine.
 
 > [!IMPORTANT]
-> All data source functions, commonly shown as the **Source** step of a query, queries the data at the data source in its native language. The query folding mechanism is utilized on all transforms applied to your query after your data source function so they can be translated and combined into a single data source query or as many transforms that can be offloaded to the data source.
+> All data source functions, commonly shown as the **Source** step of a query, queries the data at the data source in its native language. The query folding mechanism is utilized on all transforms applied to your query after your data source function. They can then be translated and combined into a single data source query or as many transforms that can be offloaded to the data source.
 
 Depending on how the query is structured, there could be three possible outcomes to the query folding mechanism:
 
@@ -114,7 +114,7 @@ Depending on how the query is structured, there could be three possible outcomes
 > [!NOTE]
 >The query folding mechanism is primarily available in connectors for structured data sources such as, but not limited to, [Microsoft SQL Server](connectors/sql-server.md) and [OData Feed](connectors/odata-feed.md). During the optimization phase, the engine might sometimes reorder steps in the query.
 >
->Leveraging a data source that has more processing resources and has query folding capabilities can expedite your query loading times as the processing occurs at the data source and not at the Power Query engine.
+>Using a data source that has more processing resources and has query folding capabilities can expedite your query loading times as the processing occurs at the data source and not at the Power Query engine.
 
 ## Related content
 

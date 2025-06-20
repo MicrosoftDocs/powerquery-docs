@@ -3,7 +3,7 @@ title: Power Query Oracle database connector
 description: Provides basic information and prerequisites for the connector, and instructions on how to connect to your Oracle database using the connector.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/24/2024
+ms.date: 04/29/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
@@ -29,9 +29,10 @@ Supported Oracle versions:
 * Oracle Database Server 12c (12.1.0.2) and later
 * Oracle Autonomous Database - all versions
 
-Before you can connect to an Oracle database using Power Query, you need to install the Oracle Client for Microsoft Tools (OCMT).
+Before you can connect to an Oracle database using Power Query, you need to install the Oracle Client for Microsoft Tools (OCMT). To connect to an Oracle database with the [on-premises data gateway](/data-integration/gateway/), 64-bit OCMT must be installed on the computer running the gateway. For more information, go to [Manage your data source - Oracle](/power-bi/connect-data/service-gateway-onprem-manage-oracle).
 
-To connect to an Oracle database with the [on-premises data gateway](/data-integration/gateway/), 64-bit OCMT must be installed on the computer running the gateway. For more information, go to [Manage your data source - Oracle](/power-bi/connect-data/service-gateway-onprem-manage-oracle).
+> [!NOTE]
+> Since the April 2025 version of Power BI Desktop and May 2025 version of on-premises data gateway, we provide a new option to use the built-in Oracle managed ODP.NET driver to connect to the Oracle database, currently available in preview. With the feature enabled, you don't need to install the OCMT manually. Learn more about [this feature](#use-the-built-in-oracle-driver-preview).
 
 ## Capabilities Supported
 
@@ -231,6 +232,34 @@ The following table lists all of the advanced options you can set in Power Query
 | Navigate using full hierarchy | If checked, the navigator displays the complete hierarchy of tables in the database you're connecting to. If cleared, the navigator displays only the tables whose columns and rows contain data. |
 
 Once you've selected the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your Oracle database.
+
+## Use the built-in Oracle driver (Preview)
+
+Starting from the April 2025 version of Power BI Desktop and May 2025 version of on-premises data gateway, the Oracle connector includes a built-in Oracle managed ODP.NET driver for connectivity. This feature removes the necessity for users to install and manage the driver. You can enable this feature by following the instructions provided below.
+
+To use this built-in driver in Power BI Desktop, navigate to **Options and settings** (under the **File** tab) > **Options** > **Preview features**, and then select the checkbox to enable the **Enable using bundled Oracle Managed ODP Provider** option. 
+
+:::image type="content" source="./media/oracle-database/option-for-bundled-driver.png" alt-text="Screenshot of option to enable using bundled Oracle Managed ODP Provider in Power BI Desktop.":::
+
+To use this built-in driver in the on-premises data gateway, change the gateway configurations to update the `MashupFlight_EnableOracleBundledOdacProvider` setting using the following steps:
+
+1. On the local machine where the on-premises data gateway is installed, navigate to **C:\Program Files\On-premises data gateway**.
+2. Make a backup of the configuration file named **Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config**.
+3. Open the original **Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config** configuration file and locate the `MashupFlight_EnableOracleBundledOdacProvider` entry.
+4. Update the `MashupFlight_EnableOracleBundledOdacProvider` value as `True`.
+5. Restart your gateway.
+
+```xml
+<Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.GatewayCoreSettings>
+   ...
+   <setting name="MashupFlight_EnableOracleBundledOdacProvider" serializeAs="String">
+      <value>True</value>
+   </setting>
+   ...
+</Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.GatewayCoreSettings>    
+```
+
+The remaining configurations to connect to a Oracle database from Power Query Desktop are the same as described in the previous sections.
 
 ## Known issues and limitations
 

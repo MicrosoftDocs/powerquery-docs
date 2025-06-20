@@ -3,7 +3,7 @@ title: Power Query Vertica database connector
 description: Provides basic information for the Vertica database connector, along with how to connect to your Vertica data.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/27/2025
+ms.date: 05/31/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
@@ -22,8 +22,8 @@ ms.subservice: connectors
 > [!NOTE]
 > Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
-> [!NOTE]
-> Since the February 2025 release for Power BI Desktop and the on-premises data gateway, we provide a new option to use the official Vertica ODBC driver to connect to the Vertica database, currently available in preview. Learn more about [this feature](#use-vertica-odbc-driver-preview).
+> [!IMPORTANT]
+> Starting from June 2025, the Vertica connector no longer supports cloud connections. If you have such workload, use the on-premises data gateway and install the Vertica ODBC driver to connect to Vertica database. Learn more from [Use user-installed Vertica ODBC driver](#use-vertica-odbc-driver).
 
 ## Capabilities Supported
 
@@ -31,6 +31,9 @@ ms.subservice: connectors
 * DirectQuery (Power BI semantic models)
 
 ## Connect to a Vertica database from Power Query Desktop
+
+> [!NOTE]
+> Since April 2025 version of Power BI Desktop, you need to [install the Vertica ODBC driver](#use-vertica-odbc-driver) on your machine to use the Vertica database connector.
 
 To connect to an **Vertica** database, take the following steps:
 
@@ -55,6 +58,9 @@ To connect to an **Vertica** database, take the following steps:
 
 ## Connect to a Vertica database from Power Query Online
 
+> [!NOTE]
+> Since May 2025 version of on-premises data gateway, you need to [install the Vertica ODBC driver](#use-vertica-odbc-driver) on your gateway machine to use the Vertica database connector.
+
 To connect to an **Vertica** database, take the following steps:
 
 1. Select the **Vertica** option in the connector selection.
@@ -71,9 +77,11 @@ To connect to an **Vertica** database, take the following steps:
 
 6. In **Navigator**, select the data you require, then select **Transform data** to transform the data in the Power Query editor.
 
-## Use Vertica ODBC driver (Preview)
+## Use Vertica ODBC driver
 
-The Vertica connector includes a built-in driver for connectivity by default. Starting from the February 2025 version of Power BI Desktop and the on-premises data gateway, there is an additional option to use the official Vertica ODBC driver to connect to the Vertica database, currently available in preview. This enables you to utilize the native client tool provided by the data source.
+Starting from the February 2025 version of Power BI Desktop and the on-premises data gateway, we provide the capability to use the user-installed Vertica ODBC driver to connect to the Vertica database, which enables you to utilize the native client tool provided by the data source. The previous built-in driver will be deprecated and removed in future releases. Connecting to Vertica database without on-premises data gateway will no longer be supported and will result in an error since June 2025.
+
+### Install the Vertica ODBC driver
 
 To install the driver on the machine running Power BI Desktop or the on-premises data gateway, follow these steps:
 
@@ -85,20 +93,38 @@ To install the driver on the machine running Power BI Desktop or the on-premises
 
    :::image type="content" source="media/Vertica-database/install-odbc-driver.png" alt-text="Screenshot of installing the Vertica ODBC driver on local machine.":::
 
-To use this Vertica ODBC driver in Power BI Desktop, navigate to **Options and settings** (under the **File** tab) > **Options** > **Preview features**, and then select the checkbox to enable the **Use user-installed Vertica ODBC driver** option. 
+### Use Vertica ODBC driver in Power BI Desktop
 
-To use this Vertica ODBC driver in the on-premises data gateway, change the gateway configurations to update the `UserInstalledVerticaODBCDriver` setting using the following steps:
+Since **April 2025 version** of Power BI Desktop, you need to [install the ODBC driver](#install-the-vertica-odbc-driver) on your machine to use the Vertica database connector in Power BI Desktop.
+
+For February and March 2025 version of Power BI Desktop, to use the user-installed Vertica ODBC driver, navigate to **Options and settings** (under the **File** tab) > **Options** > **Preview features**, and then select the checkbox to enable the **Use user-installed Vertica ODBC driver** option.
+
+### Use Vertica ODBC driver in on-premises data gateway
+
+Since **May 2025 version** of on-premises data gateway, you need to [install the Vertica ODBC driver](#install-the-vertica-odbc-driver) on your gateway machine to use the Vertica database connector which provides the latest capability.
+
+If you need to change the driver to use, you can update the value of the corresponding feature name in the gateway configuration file.
+
+| On-premises data gateway version | Feature name                       | Description                                                  |
+| -------------------------------- | ---------------------------------- | ------------------------------------------------------------ |
+| May 2025 onwards                 | MashupUseEmbeddedVerticaODBCDriver | Setting that determines which driver to use:<br/>- `False` (default): Use the user-installed Vertica ODBC driver.<br/>- `True`: Use the built-in Vertica driver. |
+| February, March and April 2025   | UserInstalledVerticaODBCDriver     | Setting that determines which driver to use:<br/>- `False` (default): Use the built-in Vertica driver.<br>- `True`: Use the user-installed Vertica ODBC driver. |
+| Earlier versions                 | -                                  | Always use the built-in Vertica driver.                      |
+
+To change the configuration, using the following steps: 
 
 1. On the local machine where the on-premises data gateway is installed, navigate to **C:\Program Files\On-premises data gateway**.
 2. Make a backup of the configuration file named **Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config**.
-3. Open the original **Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config** configuration file and locate the `UserInstalledVerticaODBCDriver` entry.
-4. Update the `UserInstalledVerticaODBCDriver` value as `True`.
+3. Open the original **Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.dll.config** configuration file and locate the feature name entry as specified in the table above, corresponding to your gateway version.
+4. Update the value for the feature name.
 5. Restart your gateway.
+
+*Example of using the built-in driver in May 2025 version of on-premises data gateway:*
 
 ```xml
 <Microsoft.PowerBI.DataMovement.Pipeline.GatewayCore.GatewayCoreSettings>
    ...
-   <setting name="UserInstalledVerticaODBCDriver" serializeAs="String">
+   <setting name="MashupUseEmbeddedVerticaODBCDriver" serializeAs="String">
 	   <value>True</value>
    </setting>
    ...

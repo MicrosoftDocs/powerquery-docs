@@ -3,7 +3,7 @@ title: Power Query Snowflake connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Snowflake database, along with native query folding instructions and troubleshooting tips.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 03/31/2025
+ms.date: 06/17/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
@@ -38,6 +38,10 @@ ms.subservice: connectors
   - Native SQL statement
 
 ## Connect to Snowflake data warehouse from Power Query Desktop
+
+> [!NOTE]
+>
+> Since March 2025 version of Power BI Desktop, the [**New Snowflake connector implementation**](#new-snowflake-connector-implementation-preview) option is enabled by default. If you need to revert to the old connector behavior, you may deselect the option in "Options and settings" or remove the `Implementation="2.0"` flag from existing queries.
 
 To make the connection to a **Snowflake** computing warehouse, take the following steps:
 
@@ -103,8 +107,8 @@ The following table lists all of the advanced options you can set in Power Query
 | --------------- | ----------- |
 | Role name | Specifies the role that the report uses via the driver. This role must be available to the user, otherwise no role is set. |
 | Include relationship columns | If checked, includes columns that might have relationships to other tables. If this box is cleared, you don’t see those columns. |
-| Connection timeout in seconds | Specifies how long to wait for a response when interacting with the Snowflake service before returning an error. Default is 0 (no timeout).|
-| Command timeout in seconds | Specifies how long to wait for a query to complete before returning an error. Default is 0 (no timeout). |
+| Connection timeout in seconds | Specifies how long to wait for a response when interacting with the Snowflake service before returning an error. Default is 0 (no time-out).|
+| Command timeout in seconds | Specifies how long to wait for a query to complete before returning an error. Default is 0 (no time-out). |
 | Database | Specifies a specific database in the warehouse. This option is only available in Power Query Desktop. |
 | SQL Statement | For information, go to [Import data from a database using native database query](../native-database-query.md). This option is only available in Power Query Desktop. |
 
@@ -112,17 +116,18 @@ Once you select the advanced options you require, select **OK** in Power Query D
 
 ## New Snowflake connector implementation (Preview)
 
-Since January 2025, we introduced a new implementation for the Snowflake connector to enhance the integration with Snowflake, currently available in preview. It uses Arrow Database Connectivity (ADBC) instead of ODBC to connect to and retrieve data from Snowflake which improves performance especially for large result sets. As we continue to enhance and add new capabilities to this connector, we encourage you to upgrade to the latest version to try it out and [provide us feedback](https://aka.ms/snowflake-connector-feedback).
+Since January 2025, we introduced a new implementation for the Snowflake connector to enhance the integration with Snowflake, currently available in preview. It uses Arrow Database Connectivity (ADBC) instead of ODBC to connect to and retrieve data from Snowflake which improves performance especially for large result sets. As we continue to enhance and add new capabilities to this connector as listed in the following table, we encourage you to upgrade to the latest version to try it out and [provide us feedback](https://aka.ms/snowflake-connector-feedback).
 
-- In February 2025 release, this connector is upgraded with the following improvement:
-  - Enhanced performance by reducing the number of metadata calls.
-  - Resolved duplicate values issue for large result sets.
-- In March 2025 release, this connector is upgraded to further boost the performance.
+| Release       | Connector improvement                                        |
+| ------------- | ------------------------------------------------------------ |
+| April 2025    | - Added support for Snowflake query tag. As an example: `{"PowerQuery":true,"Host":"PBI_SemanticModel_MWC","HostContext":"PowerBIPremium-DirectQuery"}` |
+| March 2025    | - Enhanced performance when retrieving data from Snowflake.<br/>- Enabled by default in Power BI Desktop so that the newly created connections automatically use the new connector implementation.<br/>- Fixed the [views not visible issue](#views-not-visible-with-implementation20) since the latest March release. |
+| February 2025 | - Enhanced performance by reducing the number of metadata calls.<br/>- Resolved duplicate values issue for large result sets. |
 
 > [!NOTE]
 > This feature is supported in the 64-bit version of Power BI Desktop and doesn't work in the 32-bit version.
 
-To access this feature in Power BI Desktop, navigate to **Options and settings** (under the **File** tab) > **Options** > **Preview features**, and then select the checkbox to enable the **Use new Snowflake connector implementation** option. Once the option is on, all the newly created connections automatically use the new connector implementation.
+To access this feature in Power BI Desktop, navigate to **Options and settings** (under the **File** tab) > **Options** > **Preview features**, and then select the checkbox to enable the **Use new Snowflake connector implementation** option. Once the option is on, all the newly created connections automatically use the new connector implementation. Since March 2025 version of Power BI Desktop, this option is enabled by default. If you would like to revert to the old connector behavior, you may deselect the option in "Options and settings".
 
 :::image type="content" source="./media/snowflake/new-implementation-option.png" alt-text="Screenshot of the new Snowflake implementation option in Power BI Desktop.":::
 
@@ -135,13 +140,19 @@ Source = Snowflake.Databases("contoso.snowflakecomputing.com", "CONTOSO_WH", [Im
 ```
 
 > [!NOTE]
-> When using the on-premises data gateway, the minimal supported version is January 2025. You are recommended to use the latest version to evaluate this feature with the most current capabilities.
+> When you use the on-premises data gateway, note the minimal supported version is January 2025. You're recommended to use the latest version to evaluate this feature with the most current capabilities.
 
 To aid with diagnosing any potential issue, you can find the `Implementation` and `DriverType` details in your Mashup logs. As an example:
 
 ```json
 {"Start":"2024-11-02T00:14:02.7968686Z","Action":"Engine/Module/Snowflake/IO/Snowflake/Implementation","ResourceKind":"Snowflake","ResourcePath":"powerbi.snowflakecomputing.com ;DEMO_WH","HostProcessId":"29200","Implementation":"2.0","DriverType":"ADBC","ProductVersion":"2.139.0.0 (Main)+eda56ecd858054173a4d11db9c63a6da5cf92a99","ActivityId":"106f16b6-cfbb-4853-9f20-ed45486486d2","Process":"Microsoft.Mashup.Container.NetFX45","Pid":38560,"Tid":1,"Duration":"00:00:00.0000291"}
 ```
+
+Currently, this connector has the following known limitations: 
+
+- Multi-statement queries are not supported.
+- Duration type is not supported.
+- Relationships are not supported.
 
 ## Troubleshooting
 
@@ -162,7 +173,19 @@ If a database name has a hyphen in it, you can encounter an ```ODBC: ERROR[42000
 
 ### Slicer visual for Boolean datatype
 
-The slicer visual for the Boolean data type isn't functioning as expected in the June 2024 release. This non-functionality is a known issue. As a temporary solution, users can convert the Boolean data type in their reports to text by navigating to: Transfer -> Data Type -> Text. A fix is provided in October 2024 release.
+The slicer visual for the Boolean data type isn't functioning as expected in the June 2024 release. This nonfunctionality is a known issue. As a temporary solution, users can convert the Boolean data type in their reports to text by navigating to: Transfer -> Data Type -> Text. A fix is provided in October 2024 release.
+
+### Views not visible with Implementation="2.0"
+
+In some version of March 2025 release of Power BI Desktop, you may encounter issue that views are not visible when using the [new Snowflake connector](#new-snowflake-connector-implementation-preview) (`Implementation="2.0"`). This issue has been fixed since the latest March 2025 release of Power BI Desktop. Upgrade your installation to try again.
+
+### TIMESTAMP_NTZ values are UTC with Implementation="2.0"
+
+TIMESTAMP_LTZ types are not being converted to the local time zone but are returning the UTC value when using the [new Snowflake connector](#new-snowflake-connector-implementation-preview) (`Implementation="2.0"`). For example, doing `SELECT CURRENT_TIMESTAMP` from Snowflake is returning the UTC time, not the user's local time zone. There's ongoing work towards a fix and the documentation will be updated when a fix is released.
+
+### Index was outside the bounds of the array when using Implementation="2.0"
+
+In some scenarios, an error is thrown indicating the `Index was outside the bounds of the array` when using the [new Snowflake connector](#new-snowflake-connector-implementation-preview) (`Implementation="2.0"`). The workaround is to remove the `Implementation="2.0"` value from your query. There's ongoing work towards a fix and the documentation will be updated when a fix is released.
 
 ## Additional information
 
