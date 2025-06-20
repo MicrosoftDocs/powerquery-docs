@@ -2,7 +2,7 @@
 title: Dealing with errors 
 description: Understanding errors in Power Query and most common step level and cell level errors.
 author: ptyx507
-ms.date: 3/31/2025
+ms.date: 6/20/2025
 ms.author: miescobar
 ms.custom: edited
 ms.subservice: transform-data
