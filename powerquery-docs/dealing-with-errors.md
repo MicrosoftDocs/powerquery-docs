@@ -21,7 +21,7 @@ This article provides suggestions for how to fix the most common errors you migh
 
 A step-level error prevents the query from loading and displays the error components in a yellow pane.
 
-:::image type="content" source="media/dealing-with-errors/column-name.png" alt-text="Screenshot of a Step-level error where a column wasn't found." lightbox="media/dealing-with-errors/column-name.png":::
+:::image type="content" source="media/dealing-with-errors/column-name.png" alt-text="Screenshot of a Step-level error where a column wasn't found.":::
 
 * **Error reason**: The first section before the colon. In the previous example, the error reason is **Expression.Error**.
 * **Error message**: The section directly after the reason. In the previous example, the error message is **The column 'Column' of the table wasn't found**.
@@ -29,7 +29,7 @@ A step-level error prevents the query from loading and displays the error compon
 
 Power Query Online displays slightly different details. The error detail is still **Column**, but the online error message also contains the error reason (**Expression.Error**) and the error code (**10224**).
 
-:::image type="content" source="media/dealing-with-errors/column-name-online.png" alt-text="Screenshot of an online Step-level error where a column wasn't found." lightbox="media/dealing-with-errors/column-name-online.png":::
+:::image type="content" source="media/dealing-with-errors/column-name-online.png" alt-text="Screenshot of an online Step-level error where a column wasn't found.":::
 
 ### Common step-level errors
 
@@ -43,7 +43,7 @@ This error commonly occurs when the data source is inaccessible by the user, the
 
 **Example**: You have a query from a text tile that was located in drive D and created by user A. User A shares the query with user B, who doesn't have access to drive D. When this person tries to execute the query, they get a **DataSource.NotFound** because there's no drive D in their environment.
 
-:::image type="content" source="media/dealing-with-errors/file-path.png" alt-text="Screenshot of a data source error that couldn't find the file because there's no drive D in the current environment." lightbox="media/dealing-with-errors/file-path.png":::
+:::image type="content" source="media/dealing-with-errors/file-path.png" alt-text="Screenshot of a data source error that couldn't find the file because there's no drive D in the current environment.":::
 
 **Possible solutions**: You can change the file path of the text file to a path that both users have access to. As user B, you can change the file path to be a local copy of the same text file.
 
@@ -53,7 +53,7 @@ This error is commonly triggered when a step makes a direct reference to a colum
 
 **Example**: You have a query from a text file where one of the column names was **Column**. In your query, you have a step that renames that column to **Date**. But there was a change in the original text file, and it no longer has a column heading with the name **Column** because it was manually changed to **Date**. Power Query is unable to find a column heading named **Column**, so it can't rename any columns. It displays the error shown in the following image.
 
-:::image type="content" source="media/dealing-with-errors/column-name.png" alt-text="Screenshot of an expression error where the column of the table wasn't found because the column name was manually changed." lightbox="media/dealing-with-errors/column-name.png":::
+:::image type="content" source="media/dealing-with-errors/column-name.png" alt-text="Screenshot of an expression error where the column of the table wasn't found because the column name was manually changed.":::
 
 **Possible solutions**: There are multiple solutions for this case, but they all depend on what you'd like to do. For this example, because the correct **Date** column header already comes from your text file, you can just remove the step that renames the column. This change allows your query to run without this error.
 
@@ -146,7 +146,7 @@ When trying to apply an operation that isn't supported, such as multiplying a te
 
 When working with data that contains nested structured values (such as tables, lists, or records), you might sometimes encounter the following error:
 
-:::image type="content" source="media/dealing-with-errors/privacy-buffer-error.png" alt-text="Screenshot of an error for nested values triggered by formula firewall taking place.":::
+:::image type="content" source="media/dealing-with-errors/privacy-buffer-error.png" alt-text="Screenshot of an error for nested values triggered by formula firewall taking place." lightbox="media/dealing-with-errors/privacy-buffer-error.png":::
 
 ```
 Expression.Error: We cannot return a value of type {value} in this context
