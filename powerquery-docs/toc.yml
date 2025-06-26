@@ -333,7 +333,7 @@ items:
         href: connectors/assemble-views.md
       - name: "Autodesk Construction Cloud"
         href: connectors/autodesk-construction-cloud.md
-      - name: "Automy Data Analytics (Beta)"
+      - name: "Automy Data Analytics"
         href: connectors/automy-data-analytics.md
       - name: "Azure Analysis Services database"
         href: connectors/azure-analysis-services.md
