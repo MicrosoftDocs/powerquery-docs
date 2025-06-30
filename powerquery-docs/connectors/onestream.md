@@ -145,17 +145,17 @@ The OneStream connector has a limitation of 2 million rows per call. Executing a
 
 ### Loading large dataset using loop on custom M queries
 
-When loading large amount of data that could potentially fail due to the maximum row limit, it is recommended to create a custom query directly in PowerBI to loop through a dimension, splitting the query into multiple queries and joining the data from the query results in PowerBI directly.
+When loading large amounts of data that could potentially fail due to the maximum row limit, we recommend that you create a custom query directly in Power BI to loop through a dimension, splitting the query into multiple queries and joining the data from the query results in Power BI directly.
   
-See the example below for a query that executes a CubeViewMD Data Adapter retrieval multiple times. The 3 main components are:
+The following query example executes a CubeViewMD Data Adapter retrieval multiple times. The 3 main components are:
 
-* GetCubeViewColumns which returns a list of all the columns from the specified adapter you are trying to load. The columns are set manually to avoid having to dynamically parse them which is expensive (requires one additional query execution).
+* **GetCubeViewColumns**: Returns a list of all the columns from the specified adapter you're trying to load. The columns are set manually to avoid having to dynamically parse them, which is expensive (requires one additional query execution).
 
-* GetEntities which executes a DataAdapter configured as Method - Members (see image below) to retrieve all members needed for a dimension (in this case entity). You can change this to loop over any dimension / member script needed.
+* **GetEntities**: Executes a DataAdapter configured as Method - Members (see following image) to retrieve all members needed for a dimension (in this case entity). You can change this to loop over any dimension / member script needed.
 
-:::image type="content" source="./media/onestream/os-method-adapter-loop.png" alt-text="Screenshot of the setup of a Members data adapter configuration." lightbox="./media/onestream/os-connector-get-adapter.png":::
+  :::image type="content" source="./media/onestream/os-method-adapter-loop.png" alt-text="Screenshot of the setup of a Members data adapter configuration." lightbox="./media/onestream/os-connector-get-adapter.png":::
 
-* GetCubeViewData which runs a CubeViewMD adapter. The CubeView contains a parameter called pbi_param_entity, which is the one used for passing the values of GetEntities when looping.
+* **GetCubeViewData**: Runs a CubeViewMD adapter. The CubeView contains a parameter called `pbi_param_entity`, which is the one used for passing the values of GetEntities when looping.
 
 You can use this code in a custom query to execute the chosen data adapter in loop over the specified member script for a dimension.
 
