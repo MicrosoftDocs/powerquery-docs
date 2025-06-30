@@ -42,25 +42,25 @@ To import data using FactSet from Power Query Desktop, take the following steps:
 
     On the Power BI Desktop home page, under section **"Get Data" -> "More…"**
 
-    ![Image of Get Data drop down box with the More option emphasized.](./media/factset/open-power-bi.png)
+    :::image type="content" source="./media/factset/open-power-bi.png" alt-text="Image of Get Data drop down box with the More option emphasized.":::
 
 2. **Connect to FactSet**
 
     Search for **FactSet** in the **Get Data** pop-up and select the **FactSet** connector from the right-hand list. **Note:** This connector serves as a unified solution, incorporating all the contents from previous FactSet connectors.
 
-    ![Image of the Get Data dialog box with FactSet emphasized.](./media/factset/connect.png)
+    :::image type="content" source="./media/factset/connect.png" alt-text="Image of the Get Data dialog box with FactSet emphasized.":::
 
 3. **Authentication page**
 
     You will be prompted to sign in using your FactSet credentials. Alternatively, you can enter the Username - Serial and the API key. Please see the [FactSet Developer Portal](https://developer.factset.com/manage-api-keys) for additional instructions on setting up an API Key.
 
-    ![Image of the Authentication dialog box with the FactSet Login highlighted.](./media/factset/authentication.png)
+    :::image type="content" source="./media/factset/authentication.png" alt-text="Image of the Authentication dialog box with the FactSet Login highlighted.":::
 
 4. **FactSet Navigator**
 
     FactSet will open a Navigator with a list of all functions provided. Please note that all functions may not be available depending on your subscriptions; your account team can assist with requirements for access to additional products. Navigate to and select all the desired endpoint(s). Choose **Load** to import the data, or select **Transform Data** to proceed with data transformation in the Power Query editor.
 
-    ![Image of the Navigator dialog box with a list of all of the provided functions.](./media/factset/navigator.png)
+    :::image type="content" source="./media/factset/navigator.png" alt-text="Image of the Navigator dialog box with a list of all of the provided functions.":::
 
 5. **Use Functions in FactSet**
 
