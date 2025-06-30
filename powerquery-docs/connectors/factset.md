@@ -5,7 +5,7 @@ author: eschmidtfds
 ms.service: powerquery
 ms.topic: conceptual
 ms.date: 6/30/2025
-ms.author: unknown
+ms.author: dougklo
 ms.subservice: connectors
 ---
 
