@@ -3,7 +3,7 @@ title: Understanding the differences between dataflow types
 description: Understanding the differences between standard V1, V2 and analytical dataflows.
 author: Luitwieler
 ms.topic: conceptual 
-ms.date: 11/20/2024 
+ms.date: 7/1/2025 
 ms.author: jeluitwi 
 ms.subservice: dataflows
 --- 
@@ -33,27 +33,18 @@ To create a dataflow in Power Apps:
 
 If you're creating your first dataflow, you can also select the **Create a dataflow** button.
 
-### Standard dataflows versions
+The following table lists the major features for standard V2 dataflows, and provides information about the feature's behavior.
+
+| **Feature** | **Standard V2** |
+| --- | --- |
+| Maximum number of dataflows that can be saved with automatic schedule per customer tenant |  Unlimited |
+| Maximum number of records ingested per query/table | Unbounded. The maximum number of records that can be ingested per query or table now depends on Dataverse service protection limits at the time of ingestion. |
+| Incremental Refresh policy | Supported |
+| Resiliency | When Dataverse service protection limits are encountered, a record is retried up to three times. |
+| Power Automate integration |  Supported |
 
 > [!NOTE]
-> We encourage Power Platform dataflow users to migrate from standard V1 dataflows to standard V2 dataflows. Standard V1 dataflows are on a path to discontinued support in the near future. For more information about migrating to standard V2 dataflows, go to [Migrate a standard V1 dataflow to a standard V2 dataflow](migrate-standard-v1-to-v2-dataflow.md).
-
-We've been working on significant updates to standard dataflows to improve their performance and reliability. These improvements will eventually be available to all standard dataflows. But in the interim, we differentiate between existing standard dataflows (version 1) and new standard dataflows (version 2) by adding a version indicator in Power Apps.
-
-:::image type="content" source="media/understanding-differences-between-analytical-standard-dataflows/standard-dataflow-version-indication.png" alt-text="Screenshot of the Power Apps user interface with an example of both version 1 and version 2 dataflows emphasized." lightbox="media/understanding-differences-between-analytical-standard-dataflows/standard-dataflow-version-indication.png":::
-
-### Standard dataflow versions feature comparison
-
-The following table lists the major features differences between standard dataflows V1 and V2, and provides information about each feature's behavior in each version.
-
-| **Feature** | **Standard V1** | **Standard V2** |
-| --- | --- | --- |
-| Maximum number of dataflows that can be saved with automatic schedule per customer tenant | 50 |  Unlimited |
-| Maximum number of records ingested per query/table | 500,000 | Unbounded. The maximum number of records that can be ingested per query or table now depends on Dataverse service protection limits at the time of ingestion. |
-| Ingestion speed into Dataverse | Baseline performance | Improved performance by a few factors. Actual results might vary and depend on characteristics of the data ingested, and load on Dataverse service at the time of ingestion. |
-| Incremental Refresh policy | Not supported | Supported |
-| Resiliency | When Dataverse service protection limits are encountered, a record is retried up to three times. | When Dataverse service protection limits are encountered, a record is retried up to three times. |
-| Power Automate integration | Not supported |  Supported |
+> We encourage Power Platform dataflow users to migrate from standard V1 dataflows to standard V2 dataflows. Standard V1 dataflows were discontinued on May 31, 2025. As of this date, all standard V1 dataflows are no longer being refreshed, and users can no longer create or edit them. However, existing standard VI dataflows aren't being deleted. For more information about migrating to standard V2 dataflows, go to [Migrate a standard V1 dataflow to a standard V2 dataflow](migrate-standard-v1-to-v2-dataflow.md).
 
 ## Analytical dataflows
 
