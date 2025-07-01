@@ -20,10 +20,10 @@ ms.subservice: connectors
 | Function Reference Documentation | &mdash; |
 
 > [!NOTE]
-> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+> The Snowflake connector implementation 2.0 has been generally available since July 2025. Learn more about [this feature](#snowflake-connector-implementation-20).
 
 > [!NOTE]
-> The Snowflake connector implementation 2.0 has been generally available since July 2025. Learn more about [this feature](#snowflake-connector-implementation20).
+> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Capabilities Supported
 
@@ -41,7 +41,7 @@ ms.subservice: connectors
 
 > [!NOTE]
 >
-> Since March 2025 version of Power BI Desktop, the [**Snowflake connector implementation 2.0**](#snowflake-connector-implementation20) option is enabled by default.
+> Since March 2025 version of Power BI Desktop, the [**Snowflake connector implementation 2.0**](#snowflake-connector-implementation-20) option is enabled by default.
 
 To make the connection to a **Snowflake** computing warehouse, take the following steps:
 
@@ -134,8 +134,8 @@ To aid with diagnosing any potential issue, you can find the `Implementation` an
 
 The following options are available since July 2025 release:
 
-- `UseHighPrecision`: Controls the precision of how Snowflake NUMBER(38,0) fields should be handled. If no value is specified, the connector will query Snowflake using the `SHOW PARAMETERS LIKE 'ODBC_TREAT_DECIMAL_AS_INT'` query. If the no value is set, then the connector will use the scale specified by the column. A `true` value will treat NUMBER(38,0) as a Decimal type. The value `false` will treat NUMBER(38,0) as an Int64 type. If the scale is higher than 0, then the column is considered a Double type. 
-- `DateTimePrecision`: Controls the precision of how Snowflake Timestamp values are treated. Snowflake typically stores Timestamp values with nanosecond precision. In ADBC, this can cause an overflow exception for dates before 1677 or after 2262, [according to Snowflake](https://pkg.go.dev/github.com/snowflakedb/gosnowflake#hdr-Arrow_batches). Valid values for this option are *null*, `nanoseconds` or `microseconds`. A *null* value will use `nanoseconds` by default. Users who need dates before 1677 or after 2262 are recommended to use the `microseconds` setting. If users need to retain precision to the ten millionth place before 1677 or after 2262, it is recommended to stay with the ODBC driver.
+- `UseHighPrecision`: Controls the precision of how Snowflake NUMBER(38,0) fields should be handled. If no value is specified, the connector queries Snowflake using the `SHOW PARAMETERS LIKE 'ODBC_TREAT_DECIMAL_AS_INT'` query. If the no value is set, then the connector uses the scale specified by the column. A `true` value treats NUMBER(38,0) as a Decimal type. The value `false` treats NUMBER(38,0) as an Int64 type. If the scale is higher than 0, then the column is considered a Double type. 
+- `DateTimePrecision`: Controls the precision of how Snowflake Timestamp values are treated. Snowflake typically stores Timestamp values with nanosecond precision. In ADBC, this can cause an overflow exception for dates before 1677 or after 2262, [according to Snowflake](https://pkg.go.dev/github.com/snowflakedb/gosnowflake#hdr-Arrow_batches). Valid values for this option are *null*, `nanoseconds` or `microseconds`. A *null* value uses `nanoseconds` by default. Users who need dates before 1677 or after 2262 are recommended to use the `microseconds` setting. If users need to retain precision to the ten millionth place before 1677 or after 2262, it is recommended to stay with the ODBC driver.
 
 If you need to use proxy to connect to Snowflake, refer to the [proxy setting instruction](https://pkg.go.dev/github.com/snowflakedb/gosnowflake#hdr-Proxy). The driver uses environment variables for the proxy settings.
 
@@ -181,11 +181,11 @@ In some version of March 2025 release of Power BI Desktop, you may encounter iss
 
 ### TIMESTAMP_NTZ values are UTC with Implementation="2.0"
 
-TIMESTAMP_LTZ types are not being converted to the local time zone but are returning the UTC value when using the [Snowflake connector implementation 2.0](#snowflake-connector-implementation20) (`Implementation="2.0"`). For example, doing `SELECT CURRENT_TIMESTAMP` from Snowflake is returning the UTC time, not the user's local time zone. There's ongoing work towards a fix and the documentation will be updated when a fix is released.
+TIMESTAMP_LTZ types are not being converted to the local time zone but are returning the UTC value when using the [Snowflake connector implementation 2.0](#snowflake-connector-implementation-20) (`Implementation="2.0"`). For example, doing `SELECT CURRENT_TIMESTAMP` from Snowflake is returning the UTC time, not the user's local time zone. There's ongoing work towards a fix and the documentation will be updated when a fix is released.
 
 ### Index was outside the bounds of the array when using Implementation="2.0"
 
-In some scenarios, an error is thrown indicating the `Index was outside the bounds of the array` when using the [Snowflake connector implementation 2.0](#snowflake-connector-implementation20) (`Implementation="2.0"`). The workaround is to remove the `Implementation="2.0"` value from your query. There's ongoing work towards a fix and the documentation will be updated when a fix is released.
+In some scenarios, an error is thrown indicating the `Index was outside the bounds of the array` when using the [Snowflake connector implementation 2.0](#snowflake-connector-implementation-20) (`Implementation="2.0"`). The workaround is to remove the `Implementation="2.0"` value from your query. There's ongoing work towards a fix and the documentation will be updated when a fix is released.
 
 ## Additional information
 
