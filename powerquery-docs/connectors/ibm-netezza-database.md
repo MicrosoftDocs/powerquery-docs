@@ -24,7 +24,7 @@ ms.subservice: connectors
 
 > [!NOTE]
 >
-> Since the July 2025 release for Power BI Desktop and the on-premises data gateway, we provide a new option to use the user-installed Netezza ODBC driver to connect to the IBM Netezza database, currently available in preview. Learn more from [Use user-installed Netezza ODBC driver](#use-Netezza-odbc-driver-preview).
+> Since the July 2025 release for Power BI Desktop and the on-premises data gateway, we provide a new option to use the user-installed Netezza ODBC driver to connect to the IBM Netezza database, currently available in preview. Learn more from [Use user-installed Netezza ODBC driver](#use-netezza-odbc-driver-preview).
 
 ## Capabilities Supported
 
