@@ -45,15 +45,15 @@ To connect to an **IBM Netezza** database, take the following steps:
 
 2. Select **Database** from the categories on the left, select **IBM Netezza** on the right, and then select **Connect**.
 
-    :::image type="content" source="media/Netezza-database/get-data.png" alt-text="Image of the Get Data dialog with the Database category and Netezza connector selected.":::
+    :::image type="content" source="media/ibm-netezza-database/get-data.png" alt-text="Image of the Get Data dialog with the Database category and Netezza connector selected.":::
 
 3. In the **IBM Netezza** window that appears, type or paste the name of your Netezza server and database into the boxes. You can **Import** data directly into Power BI or you can use **DirectQuery**. Learn more about [using DirectQuery](/power-bi/connect-data/desktop-use-directquery). Then select **OK**.
 
-    :::image type="content" source="media/Netezza-database/server-selection.png" alt-text="Image of the Netezza dialog with a Server name entered and the Import data connectivity mode selected.":::
+    :::image type="content" source="media/ibm-netezza-database/server-selection.png" alt-text="Image of the Netezza dialog with a Server name entered and the Import data connectivity mode selected.":::
 
 4. When prompted, enter your credentials. The IBM Netezza connector supports user name and password authentication.
 
-   :::image type="content" source="media/Netezza-database/sign-in-screen.png" alt-text="Image of the authentication dialog with Database authentication configuration.":::
+   :::image type="content" source="media/ibm-netezza-database/sign-in-screen.png" alt-text="Image of the authentication dialog with Database authentication configuration.":::
 
    For more information about authentication methods, go to [Authentication with a data source](../connectorauthentication.md).
 
@@ -68,7 +68,7 @@ To connect to an **IBM Netezza** database, take the following steps:
 
 2. In **Connect to data source**, provide the name of the server and database.
 
-   :::image type="content" source="./media/Netezza-database/service-signin.png" alt-text="Enter the Netezza database online connection.":::
+   :::image type="content" source="./media/ibm-netezza-database/service-signin.png" alt-text="Enter the Netezza database online connection.":::
 
 3. Select the name of your on-premises data gateway.
 
@@ -96,13 +96,13 @@ Once you've selected the advanced options you require, select **OK** in Power Qu
 
 ## Use Netezza ODBC driver (Preview)
 
-The IBM Netezza connector includes a built-in driver for connectivity by default. Starting from the **July 2025 version** of Power BI Desktop and the on-premises data gateway, there is an additional option to use the user-installed Netezza ODBC driver to connect to the IBM Netezza database, currently available in preview. This enables you to utilize the native client tool provided by the data source.
+The IBM Netezza connector includes a built-in driver for connectivity by default. Starting from the **July 2025 version** of Power BI Desktop and the on-premises data gateway, there's a new option to use the user-installed Netezza ODBC driver to connect to the IBM Netezza database, currently available in preview. It enables you to utilize the native client tool provided by the data source.
 
 To install the driver on the machine running Power BI Desktop or the on-premises data gateway, follow the IBM Netezza instruction from [Installing and configuring ODBC (Windows)](https://www.ibm.com/docs/en/netezza?topic=odbc-installing-configuring-windows).
 
 To use the user-installed Netezza ODBC driver in Power BI Desktop, navigate to **Options and settings** (under the **File** tab) > **Options** > **Preview features**, and then select the checkbox to enable the **Use user-installed Netezza ODBC driver** option.
 
-:::image type="content" source="media/Netezza-database/pbi-desktop-preview-option.png" alt-text="Screenshot of the use user-installed Netezza ODBC driver option in Power BI Desktop.":::
+:::image type="content" source="media/ibm-netezza-database/pbi-desktop-preview-option.png" alt-text="Screenshot of the use user-installed Netezza ODBC driver option in Power BI Desktop.":::
 
 To use the user-installed Netezza ODBC driver in on-premises data gateway, update the gateway configurations using the following steps:
 
@@ -124,7 +124,7 @@ To use the user-installed Netezza ODBC driver in on-premises data gateway, updat
 
 Currently, using the user-installed Netezza ODBC driver has the following known limitations:
 
-- “Create hierarchical navigation view” setting is not supported. The connector always provides the database navigation in hierarchy view.
-- "Include relationship columns" setting is not supported. Relationships are not returned. The capability will be added in future release.
+- "Create hierarchical navigation view" setting is not supported. The connector always provides the database navigation in hierarchy view.
+- "Include relationship columns" setting is not supported. Relationships aren't returned. The capability will be added in future release.
 
 The remaining configurations to connect to an IBM Netezza database from Power Query Desktop or Power Query Online are the same as described in the previous sections.
