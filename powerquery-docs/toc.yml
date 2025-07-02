@@ -453,6 +453,8 @@ items:
         href: connectors/hive-llap.md
       - name: "IBM Db2 database"
         href: connectors/ibm-db2-database.md
+      - name: "IBM Netezza database"
+        href: connectors/ibm-netezza-database.md
       - name: "Impala database"
         href: connectors/impala-database.md
       - name: "Intersystems Health Insight"
