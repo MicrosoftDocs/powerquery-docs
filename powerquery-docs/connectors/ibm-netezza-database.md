@@ -124,7 +124,7 @@ To use the user-installed Netezza ODBC driver in on-premises data gateway, updat
 
 Currently, using the user-installed Netezza ODBC driver has the following known limitations:
 
-- "Create hierarchical navigation view" setting is not supported. The connector always provides the database navigation in hierarchy view.
-- "Include relationship columns" setting is not supported. Relationships aren't returned. The capability will be added in future release.
+- "Include relationship columns" is not supported. Relationships aren't returned. The capability will be added in the upcoming August release.
+- "Create hierarchical navigation view" setting as `false` is not supported and will result in an error. The connector always provides the database navigation in hierarchy view which is the default behavior.
 
 The remaining configurations to connect to an IBM Netezza database from Power Query Desktop or Power Query Online are the same as described in the previous sections.
