@@ -45,15 +45,15 @@ To connect to an **IBM Netezza** database, take the following steps:
 
 2. Select **Database** from the categories on the left, select **IBM Netezza** on the right, and then select **Connect**.
 
-    :::image type="content" source="media/ibm-netezza-database/get-data.png" alt-text="Image of the Get Data dialog with the Database category and Netezza connector selected.":::
+    :::image type="content" source="media/ibm-netezza-database/get-data.png" alt-text="Screenshot of the Get Data dialog with the Database category and Netezza connector selected.":::
 
 3. In the **IBM Netezza** window that appears, type or paste the name of your Netezza server and database into the boxes. You can **Import** data directly into Power BI or you can use **DirectQuery**. Learn more about [using DirectQuery](/power-bi/connect-data/desktop-use-directquery). Then select **OK**.
 
-    :::image type="content" source="media/ibm-netezza-database/server-selection.png" alt-text="Image of the Netezza dialog with a Server name entered and the Import data connectivity mode selected.":::
+    :::image type="content" source="media/ibm-netezza-database/server-selection.png" alt-text="Screenshot of the Netezza dialog with a Server name entered and the Import data connectivity mode selected.":::
 
 4. When prompted, enter your credentials. The IBM Netezza connector supports user name and password authentication.
 
-   :::image type="content" source="media/ibm-netezza-database/sign-in-screen.png" alt-text="Image of the authentication dialog with Database authentication configuration.":::
+   :::image type="content" source="media/ibm-netezza-database/sign-in-screen.png" alt-text="Screenshot of the authentication dialog with Database authentication configuration.":::
 
    For more information about authentication methods, go to [Authentication with a data source](../connectorauthentication.md).
 
