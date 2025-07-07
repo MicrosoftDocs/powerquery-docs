@@ -48,7 +48,7 @@ To connect to Databricks from Power Query Desktop, take the following steps:
 
 3. Provide your credentials to authenticate with your Databricks SQL Warehouse. You have three options for credentials:
 
-    * Username / Password. This option isn't available if your organization/account uses 2FA/MFA.
+    * Databricks Client Credentials. Refer to [Databricks OAuth M2M](https://docs.databricks.com/aws/en/dev-tools/auth/oauth-m2m) for instructions on generating Databricks OAuth M2M Client Credentials.
     * Personal Access Token. Refer to [Personal access tokens](/azure/databricks/sql/user/security/personal-access-tokens) for instructions on generating a Personal Access Token (PAT).
     * OAuth (OIDC). Sign in to your organizational account using the browser popup.
 
