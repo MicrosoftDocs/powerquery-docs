@@ -319,7 +319,7 @@ items:
         href: connectors/active-directory.md
       - name: "Adobe Analytics"
         href: connectors/adobe-analytics.md
-      - name: "ADP Analytics (Beta)"
+      - name: "ADP Analytics"
         href: connectors/adp-analytics.md
       - name: "Amazon Athena"
         href: connectors/amazon-athena.md
