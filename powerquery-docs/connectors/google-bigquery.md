@@ -113,7 +113,7 @@ Once you select the advanced options you require, select **OK** in Power Query D
 
 ## New Google BigQuery connector implementation (Preview)
 
-Since May 2025, we introduced a new implementation for the Google BigQuery connector to enhance the integration with Google BigQuery, currently available in preview. It uses Arrow Database Connectivity (ADBC) instead of ODBC to connect to and retrieve data from Google BigQuery which improves performance especially for large result sets. As we continue to enhance and add new capabilities to this connector, we encourage you to upgrade to the latest version to try it out and [provide us feedback](https://aka.ms/gbq-connector-feedback).
+Since May 2025, we introduced a new implementation for the Google BigQuery connector to enhance the integration with Google BigQuery, currently available in preview. It uses [Arrow Database Connectivity (ADBC)](https://github.com/apache/arrow-adbc/blob/main/csharp/src/Drivers/BigQuery/readme.md) instead of ODBC to connect to and retrieve data from Google BigQuery which improves performance especially for large result sets. As we continue to enhance and add new capabilities to this connector, we encourage you to upgrade to the latest version to try it out and [provide us feedback](https://aka.ms/gbq-connector-feedback).
 
 > [!NOTE]
 > This feature is supported in the 64-bit version of Power BI Desktop and doesn't work in the 32-bit version.
