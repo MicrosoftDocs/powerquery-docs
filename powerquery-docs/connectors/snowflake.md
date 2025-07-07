@@ -181,11 +181,11 @@ In some version of March 2025 release of Power BI Desktop, you may encounter iss
 
 ### TIMESTAMP_NTZ values are UTC with Implementation="2.0"
 
-TIMESTAMP_LTZ types are not being converted to the local time zone but are returning the UTC value when using the [Snowflake connector implementation 2.0](#snowflake-connector-implementation-20) (`Implementation="2.0"`). For example, doing `SELECT CURRENT_TIMESTAMP` from Snowflake is returning the UTC time, not the user's local time zone. There's ongoing work towards a fix and the documentation will be updated when a fix is released.
+TIMESTAMP_LTZ types are not being converted to the local time zone but are returning the UTC value when using the [Snowflake connector implementation 2.0](#snowflake-connector-implementation-20) (`Implementation="2.0"`). For example, doing `SELECT CURRENT_TIMESTAMP` from Snowflake is returning the UTC time, not the user's local time zone. This issue is addressed in the July 2025 release.
 
 ### Index was outside the bounds of the array when using Implementation="2.0"
 
-In some scenarios, an error is thrown indicating the `Index was outside the bounds of the array` when using the [Snowflake connector implementation 2.0](#snowflake-connector-implementation-20) (`Implementation="2.0"`). The workaround is to remove the `Implementation="2.0"` value from your query. There's ongoing work towards a fix and the documentation will be updated when a fix is released.
+In some scenarios, an error is thrown indicating the `Index was outside the bounds of the array` when using the [Snowflake connector implementation 2.0](#snowflake-connector-implementation-20) (`Implementation="2.0"`). This issue is addressed in the June 2025 release.
 
 ## Additional information
 
