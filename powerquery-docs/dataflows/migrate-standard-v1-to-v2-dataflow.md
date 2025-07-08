@@ -11,7 +11,7 @@ ms.subservice: dataflows
 # Migrate a standard V1 dataflow to a standard V2 dataflow
 
 > [!NOTE]
-> We encourage Power Platform dataflow users to migrate from standard V1 dataflows to standard V2 dataflows. Standard V1 dataflows were discontinued on May 31, 2025. As of this date, all standard V1 dataflows are no longer being refreshed, and users can no longer create or edit them. However, existing standard VI dataflows aren't being deleted.
+> We encourage Power Platform dataflow users to migrate from standard V1 dataflows to standard V2 dataflows. Standard V1 dataflows were discontinued on May 31, 2025. As of this date, all standard V1 dataflows can no longer be refreshed, and users can no longer create or edit them. However, existing standard V1 dataflows aren't being deleted.
 
 Follow these steps to migrate a standard V1 dataflow to a standard V2 dataflow.
 

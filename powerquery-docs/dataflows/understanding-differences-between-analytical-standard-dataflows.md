@@ -3,7 +3,7 @@ title: Understanding the differences between dataflow types
 description: Understanding the differences between standard and analytical dataflows.
 author: Luitwieler
 ms.topic: conceptual 
-ms.date: 7/1/2025 
+ms.date: 7/8/2025 
 ms.author: jeluitwi 
 ms.subservice: dataflows
 --- 
@@ -33,6 +33,9 @@ To create a dataflow in Power Apps:
 
 If you're creating your first dataflow, you can also select the **Create a dataflow** button.
 
+> [!NOTE]
+> We encourage Power Platform dataflow users to migrate from standard V1 dataflows to standard V2 dataflows. Standard V1 dataflows were discontinued on May 31, 2025. As of this date, all standard V1 dataflows can no longer be refreshed, and users can no longer create or edit them. However, existing standard V1 dataflows aren't being deleted. For more information about migrating to standard V2 dataflows, go to [Migrate a standard V1 dataflow to a standard V2 dataflow](migrate-standard-v1-to-v2-dataflow.md).
+
 The following table lists the major features for standard V2 dataflows, and provides information about the feature's behavior.
 
 | **Feature** | **Standard V2** |
@@ -42,9 +45,6 @@ The following table lists the major features for standard V2 dataflows, and prov
 | Incremental Refresh policy | Supported |
 | Resiliency | When Dataverse service protection limits are encountered, a record is retried up to three times. |
 | Power Automate integration |  Supported |
-
-> [!NOTE]
-> We encourage Power Platform dataflow users to migrate from standard V1 dataflows to standard V2 dataflows. Standard V1 dataflows were discontinued on May 31, 2025. As of this date, all standard V1 dataflows are no longer being refreshed, and users can no longer create or edit them. However, existing standard VI dataflows aren't being deleted. For more information about migrating to standard V2 dataflows, go to [Migrate a standard V1 dataflow to a standard V2 dataflow](migrate-standard-v1-to-v2-dataflow.md).
 
 ## Analytical dataflows
 
