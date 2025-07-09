@@ -2,7 +2,7 @@
 title: Best practices when working with Power Query
 description: Best practices when working with Power Query
 author: ptyx507
-ms.date: 3/13/2024
+ms.date: 7/9/2025
 ms.author: miescobar
 ms.topic: conceptual
 ms.search.form: DataflowGen2 Overview
