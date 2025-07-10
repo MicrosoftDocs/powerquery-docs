@@ -2,7 +2,7 @@
 title: Unpivot columns
 description: With the unpivot columns feature in Power Query, you can transform selected columns into attribute-value pairs where columns become rows.
 author: ptyx507
-ms.date: 6/11/2024
+ms.date: 7/10/2025
 ms.author: miescobar
 ms.subservice: transform-data
 ---
@@ -12,7 +12,7 @@ ms.subservice: transform-data
 In Power Query, you can transform columns into attribute-value pairs, where columns become rows.
 
 :::image type="complex" source="media/unpivot-column/unpivot-operation-diagram.png" alt-text="Unpivot columns diagram.":::
-   Diagram showing the left table with a blank column and rows, and the Attributes values A1, A2, and A3 as column headers. In this table, the A1 column contains the values V1, V4, and V7. The A2 column contains the values V2, V5, and V8. The A3 column contains the values V3, V6, and V9. With the columns unpivoted, the right table of the diagram contains a blank column and rows, an Attributes column with nine rows with A1, A2, and A3 repeated three times, and a Values column with values V1 through V9.  
+   Diagram showing the left table with a blank column and rows, and the Attributes values A1, A2, and A3 as column headers. In this table, the A1 column contains the values V1, V4, and V7. The A2 column contains the values V2, V5, and V8. The A3 column contains the values V3, V6, and V9. With the columns unpivoted, the right table of the diagram contains a blank column and rows. An Attributes column also contains nine rows with A1, A2, and A3 repeated three times. Finally, a Values column contains values V1 through V9.  
 :::image-end:::
 
 For example, given a table like the following, where country rows and date columns create a matrix of values, it's difficult to analyze the data in a scalable way.
@@ -24,7 +24,7 @@ For example, given a table like the following, where country rows and date colum
 Instead, you can transform the table into a table with unpivoted columns, as shown in the following image. In the transformed table, it's easier to use the date as an attribute to filter on.
 
 :::image type="complex" source="media/unpivot-column/unpivot-final-table.png" alt-text="Unpivot columns sample goal table.":::
-   Screenshot of the table containing a Country column set as the Text data type, an Attribute column set as the Text data type, and a Value column set as the Whole number data type. The Country column contains USA in the first three rows, Canada in the next three rows, and Panama in the last three rows. The Attribute column contains the June 1, 2023 date in the first, forth, and seventh rows, the July 1, 2023 date in the second, fifth, and eighth rows, and the August 1, 2023 date in the third, sixth, and ninth rows.
+   Screenshot of the table containing a Country column set as the Text data type, an Attribute column set as the Text data type, and a Value column set as the Whole number data type. The Country column contains USA in the first three rows, Canada in the next three rows, and Panama in the last three rows. The Attribute column contains the June 1, 2023 date in the first, fourth, and seventh rows. The July 1, 2023 date appears in the second, fifth, and eighth rows. Finally, the August 1, 2023 date is found in the third, sixth, and ninth rows.
 :::image-end:::
 
 The key in this transformation is that you have a set of dates in the table that should all be part of a single column. The respective value for each date and country should be in a different column, effectively creating an attribute-value pair.
@@ -59,7 +59,7 @@ For the previously described scenario, you first need to select the columns you 
 The result of that operation yields the result shown in the following image.
 
 :::image type="complex" source="media/unpivot-column/unpivot-columns-final-table.png" alt-text="Unpivot columns final table." lightbox="media/unpivot-column/unpivot-columns-final-table.png":::
-   Screenshot of the table containing a Country column set as the Text data type, an Attribute column set as the Text data type, and a Value column set as the Whole number data type. The Country column contains USA in the first three rows, Canada in the next three rows, and Panama in the last three rows. The Attribute column contains the June 1, 2023 date in the first, forth, and seventh rows, the July, 1, 2023 date in the second, fifth, and eighth rows, and the August 1, 2023 date in the third, sixth, and ninth rows. In addition, the Unpivot columns entry is emphasized in the Query settings pane and the M language code is shown in the formula bar.
+   Screenshot of the table containing a Country column set as the Text data type, an Attribute column set as the Text data type, and a Value column set as the Whole number data type. The Country column contains USA in the first three rows, Canada in the next three rows, and Panama in the last three rows. The Attribute column contains the June 1, 2023 date in the first, fourth, and seventh rows. The July 1, 2023 date is in the second, fifth, and eighth rows. The August 1, 2023 date appears in the third, sixth, and ninth rows. In addition, the Unpivot columns entry is emphasized in the Query settings pane and the M language code is shown in the formula bar.
 :::image-end:::
 
 ### Special considerations
@@ -70,9 +70,9 @@ After creating your query from the previous steps, imagine that your initial tab
    Screenshot of the table with the same original Country, June 1, 2023, July 1, 2023, and August 2023 date columns, with the addition of a September 1, 2023 date column. The Country column still contains the USA, Canada, and Panama values, but also has UK added to the fourth row and Mexico added to the fifth row.
 :::image-end:::
 
-Notice that you're adding a new column for the date September 1, 2023 (9/1/2023), and two new rows for the countries/regions UK and Mexico.
+Notice that you're adding a new column for the date September 1, 2023 (**9/1/2023**), and two new rows for the countries/regions UK and Mexico.
 
-If you refresh your query, notice that the operation is done on the updated column, but doesn't affect the column that wasn't originally selected (**Country**, in this example). This means that any new column that you added to the source table is unpivoted as well.
+If you refresh your query, notice that the operation is done on the updated column, but doesn't affect the column that wasn't originally selected (**Country**, in this example). This behavior means that any new column that you added to the source table is unpivoted as well.
 
 The following image shows what your query looks like after the refresh with the new updated source table.
 
@@ -84,16 +84,16 @@ The following image shows what your query looks like after the refresh with the 
 
 You can also select the columns that you don't want to unpivot and unpivot the rest of the columns in the table. This operation is where **Unpivot other columns** comes into play.
 
-:::image type="content" source="media/unpivot-column/unpivot-other-columns.png" alt-text="Screenshot of the table with the Country column shortcut menu selected and the Unpivot other columns command in the menu is emphasized.":::
+:::image type="content" source="media/unpivot-column/unpivot-other-columns.png" alt-text="Screenshot of the table with the Country column shortcut menu selected and the Unpivot other columns command emphasized.":::
 
 The result of that operation yields exactly the same result as the one you got from **Unpivot columns**.
 
 :::image type="complex" source="media/unpivot-column/unpivot-other-columns-final-table.png" alt-text="Unpivot other columns sample goal table.":::
-   Screenshot of the table containing a Country column set as the Text data type, an Attribute column set as the Text data type, and a Value column set as the Whole number data type. The Country column contains USA in the first three rows, Canada in the next three rows, and Panama in the last three rows. The Attribute column contains the June 1, 2023 date in the first, forth, and seventh rows, the July 1, 2023 date in the second, fifth, and eighth rows, and the August 1, 2023 date in the third, sixth, and ninth rows.
+   Screenshot of the table containing a Country column set as the Text data type, an Attribute column set as the Text data type, and a Value column set as the Whole number data type. The Country column contains USA in the first three rows, Canada in the next three rows, and Panama in the last three rows. The Attribute column contains the June 1, 2023 date in the first, fourth, and seventh rows. The July 1, 2023 date is in the second, fifth, and eighth rows. The August 1, 2023 date appears in the third, sixth, and ninth rows.
 :::image-end:::
 
 > [!NOTE]
-> This transformation is crucial for queries that have an unknown number of columns. The operation will unpivot all columns from your table except the ones that you've selected. This is an ideal solution if the data source of your scenario got new date columns in a refresh, because those will get picked up and unpivoted.
+> This transformation is crucial for queries that have an unknown number of columns. The operation unpivots all columns from your table except the ones that you selected. This type of transformation is an ideal solution if the data source of your scenario got new date columns in a refresh, because those new columns get picked up and unpivoted.
 
 <!--markdownlint-disable MD024-->
 ### Special considerations
@@ -115,7 +115,7 @@ You can select the **Country** column, and then select **Unpivot other column**,
 
 ## Unpivot only selected columns
 
-The purpose of this last option is to only unpivot specific columns from your table. This option is important for scenarios where you're dealing with an unknown number of columns from your data source and you only want to unpivot the selected columns.
+The purpose of this last option is to only unpivot specific columns from your table. This option is important for scenarios where you're dealing with an unknown number of columns from your data source. It allows you to unpivot only the selected columns.
 
 To perform this operation, select the columns to unpivot, which in this example is all the columns except the **Country** column. Then right-click any of the columns you selected, and then select **Unpivot only selected columns**.
 
@@ -124,7 +124,7 @@ To perform this operation, select the columns to unpivot, which in this example 
 Notice how this operation yields the same output as the previous examples.
 
 :::image type="complex" source="media/unpivot-column/unpivot-only-selected-columns-final-table.png" alt-text="Unpivot only selected columns final table.":::
-   Screenshot of the table containing a Country column set as the Text data type, an Attribute column set as the Text data type, and a Value column set as the Whole number data type. The Country column contains USA in the first three rows, Canada in the next three rows, and Panama in the last three rows. The Attribute column contains the June 1, 2023 date in the first, forth, and seventh rows, the July 1, 2023 date in the second, fifth, and eighth rows, and August 1, 2023 date in the third, sixth, and ninth rows.
+   Screenshot of the table containing a Country column set as the Text data type, an Attribute column set as the Text data type, and a Value column set as the Whole number data type. The Country column contains USA in the first three rows, Canada in the next three rows, and Panama in the last three rows. The Attribute column contains the June 1, 2023 date in the first, fourth, and seventh rows. The July 1, 2023 date is in the second, fifth, and eighth rows. The August 1, 2023 date appears in the third, sixth, and ninth rows.
 :::image-end:::
 
 <!--markdownlint-disable MD024-->
