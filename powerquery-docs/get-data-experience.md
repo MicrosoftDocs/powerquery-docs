@@ -2,7 +2,7 @@
 title: "Getting data overview"
 description: "Overviews of the Power Query get data experience and all its components, such as connector parameters, authentication, navigation table, and query destination."
 author: ptyx507x
-ms.date: 6/5/2024
+ms.date: 7/10/2025
 ms.author: miescobar
 ms.topic: overview
 ms.search.form: DataflowGen2 Overview
@@ -43,7 +43,7 @@ In comparison, when trying to connect to an Excel file, Power Query requires tha
 The connector parameters are commonly used to establish a connection to a data source, and they&mdash;in conjunction with the connector used&mdash;define a *data source path*.
 
 > [!NOTE]
->Some connectors don't require you to enter any parameters at all. These are called *singleton connectors* and only have one data source path available per environment. Some examples are Adobe Analytics, MailChimp, and Google Analytics.
+>Some connectors don't require you to enter any parameters at all. These connectors are called *singleton connectors* and only have one data source path available per environment. Some examples are Adobe Analytics, MailChimp, and Google Analytics.
 
 ### 2. Authentication
 
@@ -67,7 +67,7 @@ For example, the available authentication methods for the SQL Server database co
 
 The goal of the data preview stage is to provide you with a user-friendly way to preview and select your data.
 
-Depending on the connector that you're using, you can preview data by using either:
+Depending on the connector that you use, you can preview data by using either:
 
 * Navigator window
 * Table preview dialog box
@@ -90,7 +90,7 @@ The **Navigator** window consists of two main sections:
 
 ##### Object limitation workaround
 
-There’s a fixed limit of 10,000 objects in the **Navigator** in Power Query Desktop. This limit doesn’t occur in Power Query Online. The Power Query Online UI is eventually going to replace the one in the desktop.
+There’s a fixed limit of 10,000 objects in the **Navigator** in Power Query Desktop. This limit doesn't occur in Power Query Online. The Power Query Online UI is eventually going to replace the one in the desktop.
 
 In the interim, you can use the following workaround:
 
@@ -98,7 +98,7 @@ In the interim, you can use the following workaround:
 
    :::image type="content" source="media/get-data-experience/navigator-transform-data.png" alt-text="Screenshot of the Navigator with transform data from the drop-down menu emphasized.":::
 
-2. Power Query Editor then opens with the full navigation table in the table preview area. This view doesn't have a limit on the number of objects, and you can use filters or any other Power Query transforms to explore the list and find the rows you want (for example, based on the **Name** column).
+2. The Power Query editor then opens with the full navigation table in the table preview area. This view doesn't have a limit on the number of objects, and you can use filters or any other Power Query transforms to explore the list and find the rows you want (for example, based on the **Name** column).
 
 3. Upon finding the item you want, you can get at the contents by selecting the data link (such as the **Table** link in the following image).
 
@@ -166,7 +166,7 @@ The primary information required by all connectors to define a connection are:
 > [!IMPORTANT]
 >Some Power Query integrations don't currently enable a defined connection or a privacy level. But, all Power Query Online experiences do provide a way to define the data gateway, authentication kind, and the credentials needed to establish a connection with your data source.
 
-Once a connection in Power Query Online has been defined, you can reuse the same connection later on without reentering all this information again. The **Connection** field offers a dropdown menu where you select your already defined connections. Once you select your already defined connection, you don't need to enter any other details before selecting **Next**.
+Once a connection in Power Query Online is defined, you can reuse the same connection later on without reentering all this information again. The **Connection** field offers a dropdown menu where you select your already defined connections. Once you select your already defined connection, you don't need to enter any other details before selecting **Next**.
 
 :::image type="content" source="media/get-data-experience/pqo-pick-connection.png" alt-text="Connect to data source dialog box where the connection name was picked from the dropdown menu inside the connection field.":::
 
