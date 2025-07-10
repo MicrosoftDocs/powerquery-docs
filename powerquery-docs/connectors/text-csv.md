@@ -31,7 +31,7 @@ To load a local text or CSV file:
 
 1. Select the **Text/CSV** option in **Get Data**. This action launches a local file browser where you can select your text file.
 
-   :::image type="content" source="./media/text-csv/text-csv-browse.png" alt-text="Screenshot of the open file browser whey you make your text file selection.":::
+   :::image type="content" source="./media/text-csv/text-csv-browse.png" alt-text="Screenshot of the open file browser whey you make your text file selection." lightbox="./media/text-csv/text-csv-browse.png":::
 
    Select **Open** to open the file.
 
@@ -126,7 +126,7 @@ When editing the source step (in the **Applied steps** pane of Power Query Deskt
 
 The **Line breaks** dropdown allows you to select if you want to apply line breaks that are inside quotes or not.
 
-:::image type="content" source="./media/text-csv/csv-edit-line-break.png" alt-text="Screenshot of the dropdown where you select the line break style for a CSV file." lightbox="./media/text-csv/csv-edit-line-break.png":::
+:::image type="content" source="./media/text-csv/csv-edit-line-break.png" alt-text="Screenshot of the dropdown where you select the line break style for a CSV file.":::
 
 For example, if you edit the 'structured' sample previously provided, you can add a line break.
 
