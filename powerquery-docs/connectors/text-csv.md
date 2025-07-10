@@ -126,7 +126,7 @@ When editing the source step (in the **Applied steps** pane of Power Query Deskt
 
 The **Line breaks** dropdown allows you to select if you want to apply line breaks that are inside quotes or not.
 
-:::image type="content" source="./media/text-csv/csv-edit-line-break.png" alt-text="Screenshot of the dropdown where you select the line break style for a CSV file.":::
+:::image type="content" source="./media/text-csv/csv-edit-line-break.png" alt-text="Screenshot of the dropdown where you select the line break style for a CSV file." lightbox="./media/text-csv/csv-edit-line-break.png":::
 
 For example, if you edit the 'structured' sample previously provided, you can add a line break.
 
@@ -139,7 +139,7 @@ This is also a string.	2	"DEF456"
 
 If **Line breaks** is set to **Ignore quoted line breaks**, this sample loads with the second half of the string under the first half in the same column.
 
-:::image type="content" source="./media/text-csv/csv-ignore-line-breaks.png" alt-text="Loading of a CSV file with quoted line breaks ignored." lightbox="./media/text-csv/csv-ignore-line-breaks.png":::
+:::image type="content" source="./media/text-csv/csv-ignore-line-breaks.png" alt-text="Loading of a CSV file with quoted line breaks ignored.":::
 
 If **Line breaks** is set to **Apply all line breaks**, this sample loads an extra row, with the content after the line breaks being the only content in that row (exact output might depend on structure of the file contents).
 
