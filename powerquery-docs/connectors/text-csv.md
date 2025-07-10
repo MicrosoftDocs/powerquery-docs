@@ -139,7 +139,7 @@ This is also a string.	2	"DEF456"
 
 If **Line breaks** is set to **Ignore quoted line breaks**, this sample loads with the second half of the string under the first half in the same column.
 
-:::image type="content" source="./media/text-csv/csv-ignore-line-breaks.png" alt-text="Loading of a CSV file with quoted line breaks ignored.":::
+:::image type="content" source="./media/text-csv/csv-ignore-line-breaks.png" alt-text="Loading of a CSV file with quoted line breaks ignored." lightbox="./media/text-csv/csv-ignore-line-breaks.png":::
 
 If **Line breaks** is set to **Apply all line breaks**, this sample loads an extra row, with the content after the line breaks being the only content in that row (exact output might depend on structure of the file contents).
 
