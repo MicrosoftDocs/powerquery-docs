@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.subservice: connectors
 ---
 
-# OneStream (Beta)
+# OneStream
 
 > [!NOTE]
 > The following connector article is provided by OneStream Software, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the OneStream Software website and use the support channels there.
@@ -17,7 +17,7 @@ ms.subservice: connectors
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | (Beta) |
+| Release State | General Availability |
 | Products | Power BI (Datasets)</br>Power BI (Dataflows)</br>Fabric (Dataflow Gen2)|
 | Authentication Types Supported | Organizational Account |
 
@@ -142,6 +142,73 @@ The OneStream connector has a limitation of 2 million rows per call. Executing a
   Example: Consolidations involve the parent entity only taking 40% of one of the child entities' values. Ensure that this logic is done in OneStream, and you load the data adapter in Power BI, which already has the values populated.
 
   Attempting to replicate the logic in Power BI would be extremely inefficient and is better performed in the source system.
+
+### Loading large dataset using loop on custom M queries
+
+When loading large amounts of data that could potentially fail due to the maximum row limit, we recommend that you create a custom query directly in Power BI to loop through a dimension, splitting the query into multiple queries and joining the data from the query results in Power BI directly.
+  
+The following query example executes a CubeViewMD Data Adapter retrieval multiple times. The 3 main components are:
+
+* **GetCubeViewColumns**: Returns a list of all the columns from the specified adapter you're trying to load. The columns are set manually to avoid having to dynamically parse them, which is expensive (requires one additional query execution).
+
+* **GetEntities**: Executes a DataAdapter configured as Method - Members (see following image) to retrieve all members needed for a dimension (in this case entity). You can change this to loop over any dimension / member script needed.
+
+  :::image type="content" source="./media/onestream/os-method-adapter-loop.png" alt-text="Screenshot of the setup of a Members data adapter configuration." lightbox="./media/onestream/os-connector-get-adapter.png":::
+
+* **GetCubeViewData**: Runs a CubeViewMD adapter. The CubeView contains a parameter called `pbi_param_entity`, which is the one used for passing the values of GetEntities when looping.
+
+You can use this code in a custom query to execute the chosen data adapter in loop over the specified member script for a dimension.
+
+```
+let
+   GetCubeViewColumns = () as list =>
+      let 
+            Source = {"Cube","Entity","Parent","Cons","Scenario","Time","StartDate","EndDate","View","Account","Flow","Origin","IC","UD1","UD2","UD3","UD4","UD5","UD6","UD7","UD8","CalcScript","Amount"}
+      in
+            Source,
+
+   GetEmptyTable = () as table =>
+      let
+            Source = #table(
+               GetCubeViewColumns(),
+               {
+               }
+            )
+      in 
+            Source,
+
+   GetEntities = () as table =>
+      let
+            Source = OneStream.Navigation("https://your-environment.onestreamcloud.com"),
+            YourApp = Source{[Key="YourApp"]}[Data],
+            YourCube = YourApp{[Key="YourCube"]}[Data],
+            #"Get Custom Adapter" = YourCube{[Key="Get Custom Adapter"]}[Data],
+            MemberList = #"Get Custom Adapter"("zzz_PBI_EntityMembers", "Default", null, null),
+            MemberListNoDuplicates = Table.Distinct(#"Invoked FunctionGet Custom Adapter1", {"MemberId"}),
+            MemberListNamesOnly = Table.RemoveColumns(MemberListNoDuplicates,{"DimTypeId", "DimId", "MemberId", "Description", "SupportsChildren", "IndentLevel"})
+      in
+            MemberListNamesOnly,
+
+
+   GetCubeViewData = (EntityName) as table =>
+      let
+            Source = OneStream.Navigation("https://your-environment.onestreamcloud.com"),
+            YourApp = Source{[Key="YourApp"]}[Data],
+            YourCube = YourApp{[Key="YourCube"]}[Data],
+            #"Get Custom Adapter" = YourCube{[Key="Get Custom Adapter"]}[Data],
+            CubeView = try #"Get Custom Adapter"("zzz_PBI_CubeViewAdapter", "Default", null, "pbi_param_entity="& EntityName),
+            CubeViewOrDefault = if CubeView[HasError] then GetEmptyTable() else CubeView[Value]
+      in
+            CubeViewOrDefault,
+
+   List = GetCubeViewColumns(),
+   Source = GetEntities(),
+   Data = Table.AddColumn(Source, "LoopCubeViewData", each GetCubeViewData([Name])),
+   Expand = Table.ExpandTableColumn(Data, "LoopCubeViewData", List),
+   Rows = Table.SelectRows(Expand, each [Cube] <> null)
+in
+   Rows
+```
 
 ### Get cube
 
