@@ -23,7 +23,7 @@ ms.subservice: connectors
 | Authentication Types Supported | Azure Active Directory<br/>Personal Access Token<br/>Username / Password |
 
 > [!NOTE]
->The Azure Databricks connector for Power BI now supports the [Arrow Database Connectivity (ADBC)](https://github.com/apache/arrow-adbc/blob/main/csharp/src/Drivers/Databricks/readme.md) driver. This feature is available in preview. Learn more [here](#arrow-database-connectivity-driver-connector-implementation).
+>The Azure Databricks connector for Power BI now supports the [Arrow Database Connectivity (ADBC)](https://github.com/apache/arrow-adbc/blob/main/csharp/src/Drivers/Databricks/readme.md) driver. This feature is available in preview. Learn more [here](#arrow-database-connectivity-driver-connector-implementation-preview).
 
 ## Capabilities supported
 
