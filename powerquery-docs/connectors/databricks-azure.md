@@ -83,7 +83,7 @@ To connect to Databricks from Power Query Online, take the following steps:
 
 ## Arrow Database Connectivity driver connector implementation
 
-You can use the [Arrow Database Connectivity (ADBC)](https://github.com/apache/arrow-adbc/blob/main/csharp/src/Drivers/BigQuery/readme.md) driver for the Azure Databricks connector in Power BI. As we continue to enhance and add new capabilities to this connector, we recommend you to upgrade to the latest version to try it out and [submit product feedback](https://learn.microsoft.com/en-us/azure/databricks/resources/ideas).
+You can use the [Arrow Database Connectivity (ADBC)](https://github.com/apache/arrow-adbc/blob/main/csharp/src/Drivers/BigQuery/readme.md) driver for the Azure Databricks connector in Power BI. As we continue to enhance and add new capabilities to this connector, we recommend you to upgrade to the latest version to try it out and [submit product feedback](/azure/databricks/resources/ideas).
 
 To switch to the ADBC driver, do the following:
 
