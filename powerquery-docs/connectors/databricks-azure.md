@@ -23,7 +23,7 @@ ms.subservice: connectors
 | Authentication Types Supported | Azure Active Directory<br/>Personal Access Token<br/>Username / Password |
 
 > [!NOTE]
->The Azure Databricks connector for Power BI now supports the [Arrow Database Connectivity (ADBC)](https://github.com/apache/arrow-adbc/blob/main/csharp/src/Drivers/BigQuery/readme.md) driver. This feature is available in preview. Learn more [here](#arrow-database-connectivity-driver-connector-implementation).
+>The Azure Databricks connector for Power BI now supports the [Arrow Database Connectivity (ADBC)](https://github.com/apache/arrow-adbc/blob/main/csharp/src/Drivers/Databricks/readme.md) driver. This feature is available in preview. Learn more [here](#arrow-database-connectivity-driver-connector-implementation).
 
 ## Capabilities supported
 
@@ -81,15 +81,15 @@ To connect to Databricks from Power Query Online, take the following steps:
 
     :::image type="content" source="./media/databricksazure/pq-choose-data.png" alt-text="Image of Power Query navigator loading Databricks Cloud data to online app.":::
 
-## Arrow Database Connectivity driver connector implementation
+## Arrow Database Connectivity driver connector implementation (Preview)
 
-You can use the [Arrow Database Connectivity (ADBC)](https://github.com/apache/arrow-adbc/blob/main/csharp/src/Drivers/BigQuery/readme.md) driver for the Azure Databricks connector in Power BI. As we continue to enhance and add new capabilities to this connector, we recommend you to upgrade to the latest version to try it out and [submit product feedback](/azure/databricks/resources/ideas).
+You can use the [Arrow Database Connectivity (ADBC)](https://github.com/apache/arrow-adbc/blob/main/csharp/src/Drivers/Databricks/readme.md) driver for the Azure Databricks connector in Power BI. As we continue to enhance and add new capabilities to this connector, we recommend that you to upgrade to the latest version to try it out and [submit product feedback](/azure/databricks/resources/ideas).
 
-To switch to the ADBC driver, do the following:
+To switch to the ADBC driver:
 
 1. Open your desired dashboard in Power BI.
-1. Click **Transform Data**.
-1. Click **Advanced Editor** in the **Query** option section.
+1. Select **Transform Data**.
+1. Select **Advanced Editor** in the **Query** option section.
 1. Specify `Implementation="2.0"` for ADBC.
     ```powerquery-m
     let
