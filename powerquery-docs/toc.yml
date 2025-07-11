@@ -421,6 +421,8 @@ items:
         href: connectors/exact-online-premium.md
       - name: "Excel"
         href: connectors/excel.md
+      - name: "FactSet"
+        href: connectors/factset.md
       - name: "FactSet RMS (Beta)"
         href: connectors/factset-rms.md
       - name: "FHIR"
