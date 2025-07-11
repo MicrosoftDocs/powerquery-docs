@@ -503,7 +503,7 @@ items:
         href: connectors/odbc.md
       - name: "OLE DB"
         href: connectors/ole-db.md
-      - name: "OneStream (Beta)"
+      - name: "OneStream"
         href: connectors/onestream.md
       - name: "OpenSearch Project (Beta)"
         href: connectors/opensearch-project.md
