@@ -93,7 +93,7 @@ To switch to the ADBC driver:
 1. Specify `Implementation="2.0"` for ADBC.
     ```powerquery-m
     let
-        Source = DatabricksMultiCloud.Catalogs("adb-<workspace-id>.<random-number>.azuredatabricks.net", "/sql/1.0/warehouses/<sql-warehouse-id>",
+        Source = Databricks.Catalogs("adb-<workspace-id>.<random-number>.azuredatabricks.net", "/sql/1.0/warehouses/<sql-warehouse-id>",
             [Catalog=null, Database=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0"]),
         powerbi_Database = Source{[Name="powerbi",Kind="Database"]}[Data],
         default_Schema = powerbi_Database{[Name="default",Kind="Schema"]}[Data],
