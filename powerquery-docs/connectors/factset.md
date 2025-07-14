@@ -28,11 +28,11 @@ ms.subservice: connectors
 To start using the FactSet connector, the following prerequisite steps need to be completed.
 
 * Download Power BI
-  * Please ensure that you are using the latest version of Power BI, as the latest major update to FactSet will only be available there. Any subsequent major or minor version updates will only be available by upgrading Power BI.
+  * Ensure that you are using the latest version of Power BI, as the latest major update to FactSet is only available there. Any subsequent major or minor version updates will only be available by upgrading Power BI.
 
 * Subscription & Authentication
-  * To access FactSet's data, the appropriate subscription is required. Please contact your FactSet representative for more details.
-  * With the subscription in place, the next step is to choose your authentication method. You can either generate an API key from the [Developer Portal](https://developer.factset.com/learn/authentication-api-key), or you can authenticate using the "Use FactSet Login" option (recommended).
+  * To access FactSet's data, the appropriate subscription is required. Contact your FactSet representative for more details.
+  * With the subscription in place, the next step is to choose your authentication method. You can either generate an API key from the [Developer Portal](https://developer.factset.com/learn/authentication-api-key), or you can authenticate using the **Use FactSet Login** option (recommended).
 
 ## Connect to FactSet from Power BI Desktop
 
@@ -42,30 +42,33 @@ To import data using FactSet from Power Query Desktop, take the following steps:
 
     On the Power BI Desktop home page, under section **"Get Data" -> "More…"**
 
-    :::image type="content" source="./media/factset/open-power-bi.png" alt-text="Image of Get Data drop down box with the More option emphasized.":::
+    :::image type="content" source="./media/factset/open-power-bi.png" alt-text="Screenshot of the Get Data drop down box with the More option emphasized.":::
 
 2. **Connect to FactSet**
 
-    Search for **FactSet** in the **Get Data** pop-up and select the **FactSet** connector from the right-hand list. **Note:** This connector serves as a unified solution, incorporating all the contents from previous FactSet connectors.
+    Search for **FactSet** in the **Get Data** pop-up and select the **FactSet** connector from the right-hand list.
 
-    :::image type="content" source="./media/factset/connect.png" alt-text="Image of the Get Data dialog box with FactSet emphasized.":::
+    > [!NOTE]
+    >  This connector serves as a unified solution, incorporating all the contents from previous FactSet connectors.
 
-3. **Authentication page**
+    :::image type="content" source="./media/factset/connect.png" alt-text="Screenshot of the Get Data dialog box with FactSet emphasized.":::
 
-    You will be prompted to sign in using your FactSet credentials. Alternatively, you can enter the Username - Serial and the API key. Please see the [FactSet Developer Portal](https://developer.factset.com/manage-api-keys) for additional instructions on setting up an API Key.
+4. **Authentication page**
 
-    :::image type="content" source="./media/factset/authentication.png" alt-text="Image of the Authentication dialog box with the FactSet Login highlighted.":::
+    You're prompted to sign in using your FactSet credentials. Alternatively, you can enter the Username - Serial and the API key. For more instructions on setting up an API key, go to the [FactSet Developer Portal](https://developer.factset.com/manage-api-keys).
 
-4. **FactSet Navigator**
+    :::image type="content" source="./media/factset/authentication.png" alt-text="Screenshot of the Authentication dialog box with the FactSet Login highlighted.":::
 
-    FactSet will open a Navigator with a list of all functions provided. Please note that all functions may not be available depending on your subscriptions; your account team can assist with requirements for access to additional products. Navigate to and select all the desired endpoint(s). Choose **Load** to import the data, or select **Transform Data** to proceed with data transformation in the Power Query editor.
+5. **FactSet Navigator**
 
-    :::image type="content" source="./media/factset/navigator.png" alt-text="Image of the Navigator dialog box with a list of all of the provided functions.":::
+    FactSet opens a Navigator with a list of all functions provided. Note that all functions might not be available depending on your subscriptions; your account team can assist with requirements for access to additional products. Navigate to and select all the desired endpoint(s). Choose **Load** to import the data, or select **Transform Data** to proceed with data transformation in the Power Query editor.
 
-5. **Use Functions in FactSet**
+    :::image type="content" source="./media/factset/navigator.png" alt-text="Screenshot of the Navigator dialog box with a list of all of the provided functions.":::
 
-    A form will populate in the query window with parameter fields to guide you. You can use the [Developer Portal](https://developer.factset.com/api-catalog) for more detail on the types of values accepted for each parameter and detail about the responses.
+6. **Use Functions in FactSet**
 
-6. **Result Format**
+    A form populates in the query window with parameter fields to guide you. You can use the [Developer Portal](https://developer.factset.com/api-catalog) for more detail on the types of values accepted for each parameter and detail about the responses.
 
-    Results will be returned as a table and can be used to build your visualizations.
+7. **Result Format**
+
+    Results are returned as a table and can be used to build your visualizations.
