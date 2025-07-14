@@ -20,7 +20,7 @@ Sunset of FactSet RMS Connector is scheduled for July 15, 2025. This functionali
 |Release state | Beta |
 | Products supported | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication types supported| Basic |
-| Function reference docs | https://developer.factset.com/api-catalog/irn-notes-api|
+| Function reference docs | https://developer.factset.com/api-catalog/irn-notes-api |
 
 > [!NOTE]
 > The following connector article is provided by FactSet, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the FactSet website and use the support channels there.
