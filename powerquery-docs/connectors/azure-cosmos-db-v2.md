@@ -66,7 +66,7 @@ To connect to Azure Cosmos DB data:
 
    :::image type="content" source="./media/azure-cosmosdb/connection-page.png" alt-text="Screenshot of the connection dialog box showing the Cosmos Endpoint entry and Data connectivity mode set to DirectQuery.":::
 
-6. At the prompt to configure data source authentication, enter either the Account key or sign in to your Organizational account. Then select **Connect**. Your data catalog, databases, and tables appear in the **Navigator** dialog box.
+6. At the prompt to configure data source authentication, either enter the Account key or sign in to your Organizational account. Then select **Connect**. Your data catalog, databases, and tables appear in the **Navigator** dialog box.
 
 7. In the **Display Options** pane, select the check box for the data set that you want to use.
 
