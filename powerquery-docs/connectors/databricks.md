@@ -25,6 +25,9 @@ ms.subservice: connectors
 > [!NOTE]
 >Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
 
+> [!NOTE]
+>The Databricks connector for Power BI now supports the [Arrow Database Connectivity (ADBC)](https://github.com/apache/arrow-adbc/blob/main/csharp/src/Drivers/Databricks/readme.md) driver. This feature is available in preview. Learn more [here](#arrow-database-connectivity-driver-connector-implementation-preview).
+
 ## Prerequisites
 
 This connector is only for use with a Databricks SQL Warehouse running on AWS and using OAuth. If you're using Azure Databricks, use the [Azure Databricks](databricks-azure.md) connector. If you aren't using OAuth with your Databricks SQL Warehouse (on AWS or GCP), use the [Azure Databricks](databricks-azure.md) connector too. Databricks Community Edition isn't supported.
@@ -84,3 +87,24 @@ To connect to Databricks from Power Query Online, take the following steps:
 4. Once you successfully connect, the **Navigator** appears and displays the data available on the server. Select your data in the navigator. Then select **Next** to transform the data in Power Query.
 
     :::image type="content" source="./media/databricks/pq-choose-data.png" alt-text="Image of Power Query navigator loading Databricks Cloud data to online app.":::
+
+## Arrow Database Connectivity driver connector implementation (Preview)
+
+You can use the [Arrow Database Connectivity (ADBC)](https://github.com/apache/arrow-adbc/blob/main/csharp/src/Drivers/Databricks/readme.md) driver for the Databricks connector in Power BI. As we continue to enhance and add new capabilities to this connector, we recommend that you to upgrade to the latest version to try it out and [submit product feedback](https://docs.databricks.com/aws/en/resources/ideas).
+
+To switch to the ADBC driver:
+
+1. Open your desired dashboard in Power BI.
+1. Select **Transform Data**.
+1. Select **Advanced Editor** in the **Query** option section.
+1. Specify `Implementation="2.0"` for ADBC.
+    ```powerquery-m
+    let
+        Source = DatabricksMultiCloud.Catalogs("<instance-name>.cloud.databricks.net", "/sql/1.0/warehouses/<sql-warehouse-id>",
+            [Catalog=null, Database=null, EnableAutomaticProxyDiscovery=null, Implementation="2.0"]),
+        powerbi_Database = Source{[Name="powerbi",Kind="Database"]}[Data],
+        default_Schema = powerbi_Database{[Name="default",Kind="Schema"]}[Data],
+        dashboard_data_Table = default_Schema{[Name="dashboard_data",Kind="Table"]}[Data]
+    in
+        dashboard_data_Table
+    ```
