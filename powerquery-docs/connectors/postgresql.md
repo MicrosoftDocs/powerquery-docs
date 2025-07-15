@@ -3,7 +3,7 @@ title: Power Query PostgreSQL connector
 description: Provides basic information, prerequisites, and instructions on how to connect to your database, along with native query folding instructions and troubleshooting tips.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 6/4/2025
+ms.date: 7/14/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
@@ -16,7 +16,7 @@ ms.subservice: connectors
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
-| Authentication Types Supported | Database (Username/Password) |
+| Authentication Types Supported | Database (Username/Password)<br/>Microsoft account (Microsoft Entra ID) |
 | Function Reference Documentation | [PostgreSQL.Database](/powerquery-m/postgresql-database) |
 
 > [!NOTE]
@@ -54,11 +54,14 @@ Once the matching Npgsql provider is installed, you can connect to a PostgreSQL 
 
 3. Select either the **Import** or **DirectQuery** data connectivity mode.
 
-4. If you're connecting to this database for the first time, input your PostgreSQL credentials in the **User name** and **Password** boxes of the **Database** authentication type. Select the level to apply the authentication settings to. Then select **Connect**.
+4. If you're connecting to this database for the first time, select the authentication type you want to use, and then enter your credentials. The authentication types available are:
 
-    :::image type="content" source="./media/postgresql/sign-in-desktop.png" alt-text="Screenshot of the authentication dialog where you enter your PostgreSQL user name and password.":::
+   * Database (Username and password)
+   * Microsoft account (Microsoft Entra ID)
 
-   For more information about using authentication methods, go to [Authentication with a data source](../connectorauthentication.md).
+   For more information about authentication, go to [Authentication with a data source](../connectorauthentication.md).
+
+   :::image type="content" source="./media/postgresql/sign-in-desktop.png" alt-text="Screenshot of the authentication dialog where you enter your PostgreSQL user name and password.":::
 
 5. If the connection isn't encrypted, you're prompted with the following message.
 
