@@ -2,7 +2,7 @@
 title: Error handling
 description: An article on how to catch and handle errors in Power Query using the syntax try and otherwise.
 author: ptyx507x
-ms.date: 5/15/2024
+ms.date: 7/16/2025
 ms.author: miescobar
 ms.subservice: transform-data
 ---
@@ -54,7 +54,7 @@ Using the same sample data source as the previous section, the new goal is to cr
 > [!NOTE]
 > The sole purpose of excluding the `#REF!` error is for demonstration purposes. With the concepts showcased in this article, you can target any fields of your choice from the error record.
 
-When you select any of the whitespace next to the error value, you get the details pane at the bottom of the screen. The details pane contains both the error reason, `DataFormat.Error`, and the error message, `Invalid cell value '#REF!'`:
+When you select any whitespace next to the error value, you get the details pane at the bottom of the screen. The details pane contains both the error reason, `DataFormat.Error`, and the error message, `Invalid cell value '#REF!'`:
 
 :::image type="content" source="media/error-handling/sample-workbook-in-power-query-sample-error.png" alt-text="Screenshot of the selected error, with an error message at the bottom of the dialog.":::
 
@@ -80,7 +80,7 @@ This operation exposes three new fields:
 * **All Errors.Value**&mdash;if the value from the **Standard Rate** column had no error, this column displays the value from the **Standard Rate** column. For values with errors this field isn't available, and during the expand operation this column has `null` values.
 * **All Errors.Error**&mdash;if the value from the **Standard Rate** column had an error, this column displays the error record for the value from the **Standard Rate** column. For values with no errors, this field isn't available, and during the expand operation this column has `null` values.
 
-:::image type="content" source="media/error-handling/try-record-expanded-columns.png" alt-text="Screenshot of table with the new fields in columns, with one All.Errors.Error value selected, and showing the error messages below the table.":::
+:::image type="content" source="media/error-handling/try-record-expanded-columns.png" alt-text="Screenshot of table with the new fields in columns, with one All.Errors.Error value selected, and showing the error messages below the table." lightbox="media/error-handling/try-record-expanded-columns.png":::
 
 For further investigation, you can expand the **All Errors.Error** column to get the three components of the error record:
 
@@ -94,11 +94,11 @@ After doing the expand operation, the **All Errors.Error.Message** field display
 
 Now with each error message in a new column, you can create a new conditional column with the name **Final Rate** and the following clauses:
 
-* If the value in the **All Errors.Errors.Message** column equals `null`, then the output is the value from the **Standard Rate** column.
-* Else, if the value in the **All Errors.Errors.Message** column doesn't equal `Invalid cell value '#REF!'.`, then the output is the value from the **Special Rate** column.
+* If the value in the **All Errors.Error.Message** column equals `null`, then the output is the value from the **Standard Rate** column.
+* Else, if the value in the **All Errors.Error.Message** column doesn't equal `Invalid cell value '#REF!'.`, then the output is the value from the **Special Rate** column.
 * Else, null.
 
-:::image type="content" source="media/error-handling/conditional-column.png" alt-text="Screenshot of the Add conditional column dialog with all of the error conditions set for the new column.":::
+:::image type="content" source="media/error-handling/conditional-column.png" alt-text="Screenshot of the Add conditional column dialog with all of the error conditions set for the new column." lightbox="media/error-handling/conditional-column.png":::
 
 After keeping only the **Account**, **Standard Rate**, **Special Rate**, and **Final Rate** columns, and adding the correct data type for each column, the following image demonstrates what the final table looks like.
 
@@ -110,9 +110,9 @@ Alternatively, you can also create a new custom column using the `try` and `catc
 
 `try [Standard Rate] catch (r)=> if r[Message] <> "Invalid cell value '#REF!'." then [Special Rate] else null`
 
-:::image type="content" source="media/error-handling/try-catch-approach.png" alt-text="Custom column dialog with a new formula showcasing the try and catch syntax approach.":::
+:::image type="content" source="media/error-handling/try-catch-approach.png" alt-text="Screenshot of the custom column dialog with a new formula showcasing the try and catch syntax approach.":::
 
-## More resources
+## Related content
 
 * [Understanding and working with errors in Power Query](dealing-with-errors.md)
 * [Add a Custom column in Power Query](add-custom-column.md)
