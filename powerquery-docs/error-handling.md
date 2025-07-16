@@ -80,7 +80,7 @@ This operation exposes three new fields:
 * **All Errors.Value**&mdash;if the value from the **Standard Rate** column had no error, this column displays the value from the **Standard Rate** column. For values with errors this field isn't available, and during the expand operation this column has `null` values.
 * **All Errors.Error**&mdash;if the value from the **Standard Rate** column had an error, this column displays the error record for the value from the **Standard Rate** column. For values with no errors, this field isn't available, and during the expand operation this column has `null` values.
 
-:::image type="content" source="media/error-handling/try-record-expanded-columns.png" alt-text="Screenshot of table with the new fields in columns, with one All.Errors.Error value selected, and showing the error messages below the table.":::
+:::image type="content" source="media/error-handling/try-record-expanded-columns.png" alt-text="Screenshot of table with the new fields in columns, with one All.Errors.Error value selected, and showing the error messages below the table." lightbox="media/error-handling/try-record-expanded-columns.png":::
 
 For further investigation, you can expand the **All Errors.Error** column to get the three components of the error record:
 
@@ -98,7 +98,7 @@ Now with each error message in a new column, you can create a new conditional co
 * Else, if the value in the **All Errors.Error.Message** column doesn't equal `Invalid cell value '#REF!'.`, then the output is the value from the **Special Rate** column.
 * Else, null.
 
-:::image type="content" source="media/error-handling/conditional-column.png" alt-text="Screenshot of the Add conditional column dialog with all of the error conditions set for the new column.":::
+:::image type="content" source="media/error-handling/conditional-column.png" alt-text="Screenshot of the Add conditional column dialog with all of the error conditions set for the new column." lightbox="media/error-handling/conditional-column.png":::
 
 After keeping only the **Account**, **Standard Rate**, **Special Rate**, and **Final Rate** columns, and adding the correct data type for each column, the following image demonstrates what the final table looks like.
 
@@ -110,7 +110,7 @@ Alternatively, you can also create a new custom column using the `try` and `catc
 
 `try [Standard Rate] catch (r)=> if r[Message] <> "Invalid cell value '#REF!'." then [Special Rate] else null`
 
-:::image type="content" source="media/error-handling/try-catch-approach.png" alt-text="Custom column dialog with a new formula showcasing the try and catch syntax approach.":::
+:::image type="content" source="media/error-handling/try-catch-approach.png" alt-text="Screenshot of the custom column dialog with a new formula showcasing the try and catch syntax approach.":::
 
 ## Related content
 
