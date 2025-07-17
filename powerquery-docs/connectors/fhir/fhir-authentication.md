@@ -31,7 +31,7 @@ After that, follow the steps to [query and shape your data](fhir.md).
 
 ## Microsoft Entra ID (organizational) authentication
 
-The Power Query connector for FHIR supports OAuth authentication for FHIR servers that are secured with [Microsoft Entra ID](https://azure.microsoft.com/services/active-directory/).
+The Power Query connector for FHIR supports OAuth authentication for FHIR servers that are secured with [Microsoft Entra ID](https://www.microsoft.com/security/business/identity-access/microsoft-entra-id).
 
 To use Microsoft Entra ID authentication, select **Organizational account** when connecting.
 
