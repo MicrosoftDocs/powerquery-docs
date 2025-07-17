@@ -3,7 +3,7 @@ title: Get data UI
 description: Describes the new modern UI of the Power Query Online get data experience.
 author: TauseefSiddique
 ms.topic: conceptual
-ms.date: 3/8/2024
+ms.date: 7/17/2025
 ms.author: dougklo
 ms.subservice: get-data
 ---
@@ -26,16 +26,18 @@ The procedures for where to start getting data in Power BI Desktop are described
 The new modular experience in Power Query Online is separated into different modules located on the left side navigation bar. These modules include:
 
 * **Home** (all)
-* **Templates** (Power BI service only)
-* **OneLake Data Hub** (Fabric only)
 * **New** (all)
+* **Recent** (all)
+* **Templates** (Power BI service only)
+* **OneLake catalog** (Fabric only)
+* **Azure** (all)
 * **Upload** (all)
 * **Blank Table** (all)
 * **Blank Query** (all)
 
 ### Home
 
-The home page acts as a summary of all the modules and presents you with different options to expedite the process and get you closer to your data. Typically, this module contains any existing data sources and gives you the option to use a new data source, table, and upload files. From the home page, you can select **View more** on the right side of the **New sources** and **OneLake data hub** sections to visit those modules.
+The home page acts as a summary of all the modules and presents you with different options to expedite the process and get you closer to your data. Typically, this module contains any existing data sources and gives you the option to use a new data source, table, and upload files. From the home page, you can select **View more** on the right side of the **New sources**, **Recent (Preview)**, and **OneLake catalog** sections to visit those modules.
 
 :::image type="content" source="media/get-data-ui/home.png" alt-text="Screenshot of the Choose data source page with the Home module on the right side emphasized." lightbox="media/get-data-ui/home.png":::
 
@@ -45,11 +47,11 @@ A dataflow template provides a predefined set of entities and field mappings to 
 
 :::image type="content" source="media/get-data-ui/templates.png" alt-text="Screenshot of the Templates page with the Templates module on the right side emphasized." lightbox="media/get-data-ui/templates.png":::
 
-### OneLake data hub
+### OneLake catalog
 
-The OneLake data hub makes it easy to find, explore, and use the Fabric data items in your organization that you have access to. It provides information about the items and entry points for working with them. For more information on the OneLake data hub, go to [OneLake Data Hub](/fabric/get-started/onelake-data-hub).
+The OneLake catalog makes it easy to find, explore, and use the Fabric data items in your organization that you have access to. It provides information about the items and entry points for working with them. For more information on the OneLake catalog, go to [OneLake catalog](/fabric/governance/onelake-catalog-overview).
 
-:::image type="content" source="media/get-data-ui/onelake.png" alt-text="Screenshot of the OneLake data hub module." lightbox="media/get-data-ui/onelake.png":::
+:::image type="content" source="media/get-data-ui/onelake.png" alt-text="Screenshot of the OneLake catalog module." lightbox="media/get-data-ui/onelake.png":::
 
 ### New
 
