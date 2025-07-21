@@ -2,10 +2,10 @@
 title: SAP HANA encryption
 description: Learn how to encrypt the connection when connecting to an SAP HANA server from Power Query using SAML SSO.
 author: davidiseminger
-ms.author: davidi
+ms.author: dougklo
 ms.custom: seodec18
 ms.topic: how-to
-ms.date: 2/4/2022
+ms.date: 7/21/2025
 ms.subservice: connectors
 ---
 
@@ -13,7 +13,7 @@ ms.subservice: connectors
 
 We recommend that you encrypt connections to an SAP HANA server from Power Query Desktop and Power Query Online. You can enable HANA encryption using SAP's proprietary CommonCryptoLib (formerly known as sapcrypto) library. SAP recommends using CommonCryptoLib.
 
->[!Note]
+> [!NOTE]
 >SAP no longer supports the OpenSSL, and as a result, Microsoft also has discontinued its support. Use CommonCryptoLib instead.
 
 This article provides an overview of enabling encryption using CommonCryptoLib, and references some specific areas of the SAP documentation. We update content and links periodically, but for comprehensive instructions and support, always refer to the official SAP documentation. Use CommonCryptoLib to set up encryption instead of OpenSSL; for steps to do so, go to [How to Configure TLS/SSL in SAP HANA 2.0](https://blogs.sap.com/2018/11/13/how-to-configure-tlsssl-in-sap-hana-2.0/). For steps on how to migrate from OpenSSL to CommonCryptoLib, go to [SAP Note 2093286](https://launchpad.support.sap.com/#/notes/2093286) (s-user required).
@@ -27,7 +27,7 @@ There are four phases to enabling encryption for SAP HANA. We cover these phases
 
 Ensure your HANA server is configured to use CommonCryptoLib as its cryptographic provider.
 
-:::image type="content" source="common-crypto.png" alt-text="OpenSSL cryptographic provider.":::
+:::image type="content" source="common-crypto.png" alt-text="Screenshot with the CommonCryptoLib cryptographic provider emphasized.":::
 
 ## Create a certificate signing request
 
@@ -47,13 +47,11 @@ This command creates a certificate signing request and private key. Fill in \<_H
 
 ## Get the certificate signed
 
-Get the certificate signed by a certificate authority (CA) that is trusted by the client(s) you'll use to connect to the HANA server.
+Get the certificate signed by a certificate authority (CA) that is trusted by the client(s) you use to connect to the HANA server.
 
 1. If you already have a trusted company CA (represented by CA\_Cert.pem and CA\_Key.pem in the following example), sign the certificate request by running the following command:
 
     **openssl x509 -req -days 365 -in csr.txt -CA CA_Cert.pem -CAkey CA_Key.pem -CAcreateserial -out cert.pem**
-
-
 
 2. Copy the new file, cert.pem, to the server.
 
@@ -67,20 +65,20 @@ Get the certificate signed by a certificate authority (CA) that is trusted by th
 
     The client must trust the CA used to sign the HANA server's X509 certificate before an encrypted connection can be made to the HANA server from the client's machine.
 
-    There are various ways to ensure this trust relationship exists using Microsoft Management Console (mmc) or the command line. You can import the CA's X509 certificate (cert.pem) into the **Trusted Root Certification Authorities** folder for the user that will establish the connection, or into the same folder for the client machine itself, if that is desirable.
+    There are various ways to ensure this trust relationship exists using Microsoft Management Console (mmc) or the command line. You can import the CA's X509 certificate (cert.pem) into the **Trusted Root Certification Authorities** folder for the user that establishes the connection, or into the same folder for the client machine itself, if that is desirable.
 
-    :::image type="content" source="trusted-root-certification.png" alt-text="Trusted Root Certification Authorities folder.":::
+    :::image type="content" source="trusted-root-certification.png" alt-text="Screenshot of the Microsoft Management Console with the Trusted Root Certification Authorities folder emphasized.":::
 
     You must first convert cert.pem into a .crt file before you can import the certificate into the Trusted Root Certification Authorities folder.
 
 ## Test the connection
 
->[!Note]
+> [!NOTE]
 > Before using the procedures in this section, you must be signed in to Power BI using your admin account credentials.
 
-Before you can validate a server certificate in the Power BI service online, you must have a data source already set up for the [on-premises data gateway](/data-integration/gateway/). If you don't already have a data source set up to test the connection, you'll have to create one. To set up the data source on the gateway:
+Before you can validate a server certificate in the Power BI service online, you must have a data source already set up for the [on-premises data gateway](/data-integration/gateway/). If you don't already have a data source set up to test the connection, you have to create one. To set up the data source on the gateway:
 
-1. From the Power BI service, select the :::image type="content" source="setup.png" alt-text="setup icon."::: setup icon.
+1. From the Power BI service, select the :::image type="icon" source="setup.png"::: setup icon.
 
 2. From the drop-down list, select **Manage gateways**.
 
@@ -102,20 +100,20 @@ Test the connection in Power BI Desktop or the Power BI service.
 
     - Power BI Desktop
 
-        :::image type="content" source="validate-server-certificate-service.png" alt-text="Validate server certificate - service.":::
+        :::image type="content" source="validate-server-certificate-service.png" alt-text="Screenshot of the Power BI Desktop validate server certificate information.":::
 
     - Power BI service
 
-        :::image type="content" source="validate-server-certificate-desktop.png" alt-text="Validate server certificate - desktop.":::
+        :::image type="content" source="validate-server-certificate-desktop.png" alt-text="Screenshot of the Power BI service validate server certificate information.":::
 
 2. Verify that you can successfully establish an encrypted connection to the server with the **Validate server certificate** option enabled, by loading data in Power BI Desktop or refreshing a published report in Power BI service.
 
-You'll note that only the **SSL crypto provider** information is required. However, your implementation might require that you also use the key store and trust store. For more information about these stores and how to create them, go to [Client-Side TLS/SSL Connection Properties (ODBC)](https://help.sap.com/viewer/b3ee5778bc2e4a089d3299b82ec762a7/2.0.03/en-US/0ae2b75266df44499d8fed8035e024ad.html).
+You should note that only the **SSL crypto provider** information is required. However, your implementation might require that you also use the key store and trust store. For more information about these stores and how to create them, go to [Client-Side TLS/SSL Connection Properties (ODBC)](https://help.sap.com/viewer/b3ee5778bc2e4a089d3299b82ec762a7/2.0.03/en-US/0ae2b75266df44499d8fed8035e024ad.html).
 
 ## Additional information
 
 - [Server-Side TLS/SSL Configuration Properties for External Communication (JDBC/ODBC)](https://help.sap.com/viewer/b3ee5778bc2e4a089d3299b82ec762a7/2.0.04/en-US/64065bc94ccb4f64bfb544686db23e60.html)
 
-## Next steps
+## Related content
 
 - [Configure SSL for ODBC client access to SAP HANA](configure-odbc-sap-hana.md)
