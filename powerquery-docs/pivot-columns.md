@@ -1,8 +1,8 @@
 ---
 title: Pivot columns feature description
-description: Describes how to uses an aggregation calculation on table column values and then pivots the column into a new table.
+description: Describes how to use an aggregation calculation on table column values and then pivots the column into a new table.
 author: ptyx507
-ms.date: 5/15/2024
+ms.date: 7/21/2025
 ms.author: miescobar
 ms.topic: conceptual
 ms.subservice: transform-data
@@ -12,19 +12,19 @@ ms.subservice: transform-data
 
 In Power Query, you can create a table that contains an aggregate value for each unique value in a column. Power Query groups each unique value, does an aggregate calculation for each value, and pivots the column into a new table.
 
-:::image type="complex" source="media/pivot-columns/pivot-operation-diagram.png" alt-text="Pivot columns diagram.":::
-   Diagram showing a table on the left with a blank column and rows. An Attributes column contains nine rows with A1, A2, and A3 repeated three times. A Values column contains, from top to bottom, values V1 through V9. With the columns pivoted, a table on the right contains a blank column and rows, the Attributes values A1, A2, and A3 as column headers, with the A1 column containing the values V1, V4, and V7, the A2 column containing the values V2, V5, and V8, and the A3 column containing the values V3, V6, and V9.
+:::image type="complex" source="media/pivot-columns/pivot-operation-diagram.png" alt-text="Diagram showing how Pivot columns changes a table.":::
+   Diagram showing the left table with a blank column and rows. An Attributes column contains nine rows with A1, A2, and A3 repeated three times. A Values column contains, from top to bottom, values V1 through V9. With the columns pivoted, the right table contains a blank column and rows. The Attributes values A1, A2, and A3 are column headers. The A1 column contains the V1, V4, and V7 values. The A2 column contains the V2, V5, and V8 values. Finally, the A3 column containing the V3, V6, and V9 values.
 :::image-end:::
 
 Imagine a table like the one in the following image.
 
-:::image type="complex" source="media/pivot-columns/original-table.png" alt-text="Pivot column original table.":::
+:::image type="complex" source="media/pivot-columns/original-table.png" alt-text="Screenshot of the original table used to pivot a column.":::
    Table containing a Country column set as the Text data type, a Date column set as the Data data type, and a Value column set as the Whole number data type. The Country column contains USA in the first three rows, Canada in the next three rows, and Panama in the last three rows. The Date column contains a date in the first, forth, and seventh rows, a second date in the second, fifth, and eighth rows, and third date in the third, sixth, and ninth rows.
 :::image-end:::
 
 This table contains values by country and date in a simple table. In this example, you want to transform this table into the one where the date column is pivoted, as shown in the following image.
 
-:::image type="complex" source="media/pivot-columns/final-table.png" alt-text="Pivot column final table.":::
+:::image type="complex" source="media/pivot-columns/final-table.png" alt-text="Screenshot of the final table created by pivoting the column.":::
    Table containing a Country column set in the Text data type, and a first, second, and third date columns set as the Whole number data type. The Country column contains Canada in row 1, Panama in row 2, and USA in row 3.
 :::image-end:::
 
@@ -63,7 +63,7 @@ The available options are:
 
 You can pivot columns without aggregating when you're working with columns that can't be aggregated, or aggregation isn't required for what you're trying to do. For example, imagine a table like the following image, that has **Country**, **Position**, and **Product** as fields.
 
-:::image type="complex" source="media/pivot-columns/dont-aggregate-valid-initial.png" alt-text="Pivot column no aggregation.":::
+:::image type="complex" source="media/pivot-columns/dont-aggregate-valid-initial.png" alt-text="Screenshot of the initial table to demonstrate a pivot column with no aggregation.":::
    Table with Country column containing USA in the first three rows, Canada in the next three rows, and Panama in the last three rows. The Position column contains First Place in the first, fourth, and seventh rows, Second Place in the second, fifth, and eighth rows, and third Place in the third, sixth, and ninth rows.
 :::image-end:::
 
@@ -85,14 +85,14 @@ The result of this operation yields the result shown in the following image.
 
 The way the **Don't aggregate** option works is that it grabs a single value for the pivot operation to be placed as the value for the intersection of the column and row pair. For example, let's say you have a table like the one in the following image.
 
-:::image type="complex" source="media/pivot-columns/dont-aggregate-error-initial.png" alt-text="Pivot column don't aggregate error example initial table.":::
+:::image type="complex" source="media/pivot-columns/dont-aggregate-error-initial.png" alt-text="Screenshot of the initial table with a Pivot column doesn't aggregate error example.":::
    Table with a Country, Date, and Value columns. The Country column contains USA in the first three rows, Canada in the next three rows, and Panama in the last three rows. The Date column contains a single date in all rows. The value column contains various whole numbers between 20 and 785.
 :::image-end:::
 
 You want to pivot that table by using the **Date** column, and you want to use the values from the **Value** column. Because this pivot makes your table have just the **Country** values on rows and the **Dates** as columns, you get an error for every single cell value because there are multiple rows for every combination of **Country** and **Date**. The outcome of this **Pivot column** operation yields the results shown in the following image.
 
-:::image type="complex" source="media/pivot-columns/dont-aggregate-error-final.png" alt-text="Pivot column don't aggregate error example final table." lightbox="media/pivot-columns/dont-aggregate-error-final.png":::
+:::image type="complex" source="media/pivot-columns/dont-aggregate-error-final.png" alt-text="Screenshot of the Pivot column doesn't aggregate error example final table." lightbox="media/pivot-columns/dont-aggregate-error-final.png":::
    Power Query editor pane showing a table with Country and date value columns. The Country column contains Canada in the first row, Panama in the second row, and USA in the third row. All of the rows under the date value column contain Errors, with one error selected. Under the table is another pane that shows the expression error with the "There are too many elements in the enumeration to complete the operation" message.
 :::image-end:::
 
-Notice the error message "Expression.Error: There were too many elements in the enumeration to complete the operation." This error occurs because the **Don't aggregate** operation only expects a single value for the country and date combination.
+Notice the error message `Expression.Error: There were too many elements in the enumeration to complete the operation.` This error occurs because the **Don't aggregate** operation only expects a single value for the country and date combination.
