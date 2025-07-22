@@ -20,7 +20,7 @@ ms.subservice: connectors
 | Function Reference Documentation | &mdash; |
 
 > [!NOTE]
-> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+> Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 > [!IMPORTANT]
 > Starting from June 2025, the Vertica connector no longer supports cloud connections. If you have such workload, use the on-premises data gateway and install the Vertica ODBC driver to connect to Vertica database. Learn more from [Use user-installed Vertica ODBC driver](#use-vertica-odbc-driver).
