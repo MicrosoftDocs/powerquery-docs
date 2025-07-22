@@ -10,7 +10,7 @@ ms.subservice: connectors
 
 # Socialbakers (Deprecated)
 
-Sunset of Socialbakers API Connector is scheduled for August 1, 2024. Please make sure to make the required changes beforehand. Contact your Emplifi representative for more info.
+Sunset of Socialbakers API Connector is scheduled for August 1, 2024. Make sure to make the required changes beforehand. Contact your Emplifi representative for more info.
 
 > [!NOTE]
 > The following connector article is provided by Socialbakers (now Emplifi), the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Emplifi website and use the support channels there.
@@ -29,7 +29,7 @@ Sunset of Socialbakers API Connector is scheduled for August 1, 2024. Please mak
 
 ## **Prerequisites**
 
-To use the Socialbakers (Emplifi) Connector, you must have Socialbakers (Emplifi) credentials (Token and Secret). Contact the Emplifi Support team to get yours, if you don't have them. The credentials allow the user to get the data and metrics from the profiles the user has added to the Emplifi platform.
+To use the Socialbakers (Emplifi) Connector, you must have Socialbakers (Emplifi) credentials (Token and Secret). Contact the Emplifi Support team to get yours, if you don't have them. The credentials allow the user to get the data and metrics from the profiles the user added to the Emplifi platform.
 
 ## **Capabilities Supported**
 
@@ -43,7 +43,7 @@ When the connector is started for the first time, authentication is needed. Ente
 
 :::image type="content" source="./media/socialbakers/image.png" alt-text="Authentication.":::
 
-Once you sign in, the authentication information is automatically stored by Power BI for future use. It can be found under **File** > **Options and settings** > **Data source settings** > **Global permissions**.
+Once you sign in, Power BI automatically stores the authentication information for future use. It can be found under **File** > **Options and settings** > **Data source settings** > **Global permissions**.
 
 At any time, the permissions can be cleared (or edited) and new credentials can be entered.
 
@@ -67,7 +67,7 @@ Not all data sources are the same. The differences are described [later](#facebo
 
 2. Enter the data and select the metrics in the Parameters section. For more details about the metrics, visit the [Socialbakers API documentation](https://api.emplifi.io).
 
-   - An example selection follows below:
+   - An example selection follows:
      - **Start Date:** `07/01/2021`
      - **End Date:** `07/30/2021`
      - **End Today:** `No`
@@ -92,13 +92,13 @@ Not all data sources are the same. The differences are described [later](#facebo
 
 #### Facebook Ads Data Source
 
-Facebook Ads is a little bit more specific data source that differs from the other sources. All other sources (for example, Aggregated Post Metrics, Post Metrics, Profile Metrics) follow the same process as described above. Facebook Ads has an extra step to perform before the Parameters are set.
+Facebook Ads is slightly more specific data source that differs from the other sources. All other sources (for example, Aggregated Post Metrics, Post Metrics, Profile Metrics) follow the same process as described previously. Facebook Ads has an extra step to perform before the Parameters are set.
 
 When selected, Facebook Ads first display a list of the last 12 months.
 
 ![FacebookAds.](./media/socialbakers/image5.png)
 
-By selecting the specific month(s), you're narrowing down all your Facebook Ad Accounts to the ones that were active in the selected time period.
+By selecting one or more specific months, you're narrowing down all your Facebook Ad Accounts to the ones that were active in the selected time period.
 
 ![SelectedMonth.](./media/socialbakers/image6.png)
 
