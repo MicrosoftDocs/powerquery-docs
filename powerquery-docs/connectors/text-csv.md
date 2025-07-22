@@ -19,7 +19,7 @@ ms.subservice: connectors
 | Function Reference Documentation | [File.Contents](/powerquery-m/file-contents)<br/>[Lines.FromBinary](/powerquery-m/lines-frombinary)<br/>[Csv.Document](/powerquery-m/csv-document) |
 
 > [!NOTE]
->Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+>Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Capabilities supported
 

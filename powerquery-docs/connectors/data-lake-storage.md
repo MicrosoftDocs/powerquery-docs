@@ -20,7 +20,7 @@ ms.subservice: connectors
 | Function Reference Documentation | [AzureStorage.DataLake](/powerquery-m/azurestorage-datalake)<br/>[AzureStorage.DataLakeContents](/powerquery-m/azurestorage-datalakecontents) |
 
 > [!NOTE]
-> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+> Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
 

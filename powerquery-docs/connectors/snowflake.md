@@ -23,7 +23,7 @@ ms.subservice: connectors
 > The Snowflake connector implementation 2.0 has been generally available since July 2025. Learn more about [this feature](#snowflake-connector-implementation-20).
 
 > [!NOTE]
-> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+> Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Capabilities Supported
 

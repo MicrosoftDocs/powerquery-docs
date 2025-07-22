@@ -23,7 +23,7 @@ ms.subservice: connectors
 | Function Reference Documentation | [SapBusinessWarehouse.Cubes](/powerquery-m/sapbusinesswarehouse-cubes)<br/>[Sapbusinesswarehouseexecutionmode.DataStream](/powerquery-m/sapbusinesswarehouseexecutionmode-type)<br/>[SapBusinessWarehouseExecutionMode.BasXml](/powerquery-m/sapbusinesswarehouseexecutionmode-type)<br/>[SapBusinessWarehouseExecutionMode.BasXmlGzip](/powerquery-m/sapbusinesswarehouseexecutionmode-type) |
 
 > [!NOTE]
-> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+> Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
 
