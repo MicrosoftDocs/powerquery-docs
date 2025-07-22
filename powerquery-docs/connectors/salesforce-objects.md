@@ -19,7 +19,7 @@ ms.subservice: connectors
 | Authentication Types Supported | Salesforce account |
 
 > [!NOTE]
-> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+> Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 > [!WARNING]
 > By default, Salesforce doesn't support Internet Explorer 11, which is used as part of the authentication experience to online services in Power Query Desktop. Opt-in for [extended support for accessing Lightning Experience Using Microsoft Internet Explorer 11](https://help.salesforce.com/articleView?id=000333934&type=1&mode=1). You might also want to review Salesforce documentation on [configuring Internet Explorer](https://developer.salesforce.com/docs/atlas.en-us.salesforce_supported_browsers_cheatsheet.meta/salesforce_supported_browsers_cheatsheet/getstart_browser_ie.htm). At this time, users are impaired from authenticating, but stored credentials should continue to work until their existing authentication tokens expire. To resolve this issue, go to [Enabling Microsoft Edge (Chromium) for OAuth Authentication in Power BI Desktop](../oauth-edge-chromium.md).

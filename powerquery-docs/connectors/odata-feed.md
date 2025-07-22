@@ -20,7 +20,7 @@ ms.subservice: connectors
 | Function Reference Documentation | [OData.Feed](/powerquery-m/odata-feed), [ODataOmitValues.Nulls](/powerquery-m/odataomitvalues-type) |
 
 > [!NOTE]
->Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+>Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Capabilities supported
 

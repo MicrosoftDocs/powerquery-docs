@@ -23,7 +23,7 @@ If you don't have a FHIR server, you can provision the [Azure API for FHIR](/azu
 | Authentication Types Supported | Anonymous<br/>Organizational account |
 
 > [!NOTE]
-> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+> Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Capabilities Supported
 
