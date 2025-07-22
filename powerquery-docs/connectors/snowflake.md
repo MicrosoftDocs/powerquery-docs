@@ -3,7 +3,7 @@ title: Power Query Snowflake connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Snowflake database, along with native query folding instructions and troubleshooting tips.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 07/01/2025
+ms.date: 07/22/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
@@ -167,23 +167,32 @@ To update the default database name: `alter user`*`username`*` set DEFAULT_NAMES
 
 ## Limitations and known issues
 
-### Hyphens in database names
+### Known issues in Snowflake connector implementation 2.0
+
+Currently, the [Snowflake connector implementation 2.0](#snowflake-connector-implementation-20) has the following known issues. There's ongoing work towards a fix and the documentation will be updated when a fix is released.
+
+- Snowflake query with `count distinct` logic returns incorrect result. 
+- When creating relationships, encounter error `Object reference not set to an instance of an object`. The relationship can still be defined once you cancel the pop-up window.
+
+### Resolved issues
+
+#### Hyphens in database names
 
 If a database name has a hyphen in it, you can encounter an ```ODBC: ERROR[42000] SQL compilation error```. This issue is addressed in the September 2024 release.
 
-### Slicer visual for Boolean datatype
+#### Slicer visual for Boolean datatype
 
 The slicer visual for the Boolean data type isn't functioning as expected in the June 2024 release. This nonfunctionality is a known issue. As a temporary solution, users can convert the Boolean data type in their reports to text by navigating to: Transfer -> Data Type -> Text. A fix is provided in October 2024 release.
 
-### Views not visible with Implementation="2.0"
+#### Views not visible with Implementation="2.0"
 
 In some version of March 2025 release of Power BI Desktop, you may encounter issue that views are not visible when using the [Snowflake connector implementation 2.0](#snowflake-connector-implementation-20) (`Implementation="2.0"`). This issue has been fixed since the latest March 2025 release of Power BI Desktop. Upgrade your installation to try again.
 
-### TIMESTAMP_NTZ values are UTC with Implementation="2.0"
+#### TIMESTAMP_NTZ values are UTC with Implementation="2.0"
 
 TIMESTAMP_LTZ types are not being converted to the local time zone but are returning the UTC value when using the [Snowflake connector implementation 2.0](#snowflake-connector-implementation-20) (`Implementation="2.0"`). For example, doing `SELECT CURRENT_TIMESTAMP` from Snowflake is returning the UTC time, not the user's local time zone. This issue is addressed in the July 2025 release.
 
-### Index was outside the bounds of the array when using Implementation="2.0"
+#### Index was outside the bounds of the array when using Implementation="2.0"
 
 In some scenarios, an error is thrown indicating the `Index was outside the bounds of the array` when using the [Snowflake connector implementation 2.0](#snowflake-connector-implementation-20) (`Implementation="2.0"`). This issue is addressed in the June 2025 release.
 
