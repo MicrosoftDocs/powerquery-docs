@@ -84,3 +84,7 @@ In cases where multi-line rows aren't properly identified, you might be able to 
 ### Power BI dataflows in a Premium capacity	
 
 When working with the PDF connector on dataflows in a Premium capacity, the PDF connector doesn't properly make the connection. To enable the PDF connector to work on dataflows in a Premium capacity, configure that dataflow to use a gateway, and confirm the connection to that dataflow goes through the gateway.
+
+### Differences in PDF data on desktop versus Power Query Online
+
+Certain PDF files might be processed differently on desktop (Excel or Power BI Desktop) versus in Power Query Online. For example, the layout of the tables returned by Power Query Online might be different, or page tables might be unexpectedly empty. This can happen when a PDF file uses non-embedded fonts that are assumed to be installed in the host environment, since most fonts aren't available in Windows Server Core (which is what runs Power Query Online's M evaluations). To work around this issue, configure your queries to refresh using a gateway that runs on a version of Windows that has the necessary fonts installed.
