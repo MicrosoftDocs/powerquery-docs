@@ -22,7 +22,7 @@ ms.subservice: connectors
 |Authentication Types Supported| Username and Password OAuth (OIDC) |
 
 > [!NOTE]
->Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+>Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
 
