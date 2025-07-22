@@ -3,7 +3,7 @@ title: Power Query Salesforce Objects connector
 description: Provides basic information, prerequisites, and information on how to connect to your data, along with a list of known issues and limitations.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 7/21/2025
+ms.date: 7/22/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
@@ -28,7 +28,7 @@ ms.subservice: connectors
 
 To use the Salesforce Objects connector, you must have a Salesforce account username and password.
 
-Also, Salesforce API access should be enabled. To verify access settings, go to your personal Salesforce page, open your profile settings, and search for and make sure the **API Enabled** checkbox is selected. Note that Salesforce trial accounts don't have API access.
+Also, Salesforce API access should be enabled. To verify access settings, go to your personal Salesforce page, open your profile settings, and search for and make sure the **API Enabled** checkbox is selected. Take note that Salesforce trial accounts don't have API access.
 
 ## Capabilities Supported
 
@@ -46,9 +46,9 @@ To connect to Salesforce Objects data:
 
 2. In **Salesforce Objects**, choose the **Production** URL if you use the Salesforce production URL (`https://www.salesforce.com`) to sign in.
 
-   :::image type="content" source="media/salesforce-objects/sf-objects-url.png" alt-text="Screenshot of the Get data dialog from the production URL.":::
+   :::image type="content" source="media/salesforce-objects/sf-objects-url.png" alt-text="Screenshot of the Get data dialog with the production URL selected.":::
 
-   You can also select **Custom** and enter a custom URL to sign in. This custom URL might be a custom domain you created within Salesforce, such as `https://contoso.salesforce.com`. You can also use the custom URL selection if you're using your own CNAME record that redirects to Salesforce. Note that lightning URLs aren't supported.
+   You can also select **Custom** and enter a custom URL to sign in. This custom URL might be a custom domain you created within Salesforce, such as `https://contoso.salesforce.com`. You can also use the custom URL selection if you're using your own CNAME record that redirects to Salesforce. Take note that lightning URLs aren't supported.
 
    Also, you can select **Include relationship columns**. This selection alters the query by including columns that might have foreign-key relationships to other tables. If this box is unchecked, you don't see those columns.
 
@@ -72,7 +72,7 @@ To connect to Salesforce Objects data:
 
 2. In **Salesforce objects**, choose the URL you want to use to connect. Select the **Production** URL if you use the Salesforce production URL (`https://www.salesforce.com`) to sign in.
 
-   :::image type="content" source="media/salesforce-objects/sf-objects-url-online.png" alt-text="Add Salesforce Object connection information.":::
+   :::image type="content" source="media/salesforce-objects/sf-objects-url-online.png" alt-text="Screenshot of the Connect to data source window where you add Salesforce Objects connection information.":::
 
    > [!NOTE]
    >Currently, you might need to select the **Custom** URL, enter `https://www.salesforce.com` in the text box, and then select **Production** to connect to your data.
