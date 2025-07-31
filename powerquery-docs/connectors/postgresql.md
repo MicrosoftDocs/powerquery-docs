@@ -67,7 +67,7 @@ Once the matching Npgsql provider is installed, you can connect to a PostgreSQL 
 
    :::image type="content" source="./media/postgresql/encryption-warning.png" alt-text="Screenshot of the Azure SQL database encryption support dialog.":::
 
-   Select **OK** to connect to the database by using an unencrypted connection. If an encrypted connection is desired, the PostgreSQL server must be set up to accommodate SSL connections (please see [PostgreSQL documentation](https://www.postgresql.org/docs/current/ssl-tcp.html) for guidance). Once completed, your machine may be required to install the PostgreSQL server's SSL certificate into its Trusted Root Certification Authorities.
+   Select **OK** to connect to the database by using an unencrypted connection. If an encrypted connection is desired, the PostgreSQL server must be set up to accommodate SSL connections (go to the [PostgreSQL documentation](https://www.postgresql.org/docs/current/ssl-tcp.html) for guidance). Once completed, your machine might be required to install the PostgreSQL server's SSL certificate into its Trusted Root Certification Authorities.
 
 6. In **Navigator**, select the database information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query editor.
 
