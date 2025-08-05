@@ -25,6 +25,9 @@ ms.subservice: connectors
 > [!NOTE]
 > Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
+> [!NOTE]
+> Username/password authentication mode will be deprecated by Snowflake (read [more here](https://www.snowflake.com/en/blog/blocking-single-factor-password-authentification/). A replacement auth mechanism will be available soon. More information can be found on our [Fabric roadmap](https://roadmap.fabric.microsoft.com/?product=datafactory)
+
 ## Capabilities Supported
 
 - Import
