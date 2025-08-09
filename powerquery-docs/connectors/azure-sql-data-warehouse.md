@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.date: 10/9/2024
 ms.author: dougklo
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # Azure Synapse Analytics (SQL DW)

@@ -7,6 +7,7 @@ ms.topic: quickstart
 ms.date: 5/15/2024
 ms.author: miescobar
 ms.subservice: custom-connectors
+ms.custom: sfi-image-nochange
 ---
 # Power Query SDK Overview
 

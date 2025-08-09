@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.date: 4/24/2024
 ms.author: dougklo
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # Adobe Analytics

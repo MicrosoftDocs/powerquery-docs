@@ -5,6 +5,7 @@ author: ptyx507x
 ms.date: 3/7/2024
 ms.author: miescobar
 ms.subservice: get-data
+ms.custom: sfi-image-nochange
 ---
 
 # Connections and authentication in Power Query Online

@@ -6,6 +6,7 @@ ms.author: dougklo
 ms.topic: conceptual
 ms.date: 1/31/2023
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # inwink Connector (Beta)

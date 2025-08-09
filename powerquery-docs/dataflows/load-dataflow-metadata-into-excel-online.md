@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.date: 1/6/2023
 ms.author: jeluitwi
 ms.subservice: dataflows
+ms.custom: sfi-image-nochange
 ---
 
 # Load data in Excel Online and build a dataflows monitoring report with Power BI

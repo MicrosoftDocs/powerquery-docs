@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.date: 2/16/2024
 ms.author: dougklo
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # Azure Data Lake Storage Gen2

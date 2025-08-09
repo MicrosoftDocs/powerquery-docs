@@ -6,6 +6,7 @@ ms.date: 4/29/2025
 ms.author: dougklo
 ms.reviewer: miescobar
 ms.subservice: get-data
+ms.custom: sfi-image-nochange
 ---
 
 # Change the gateway used in a dataflow project

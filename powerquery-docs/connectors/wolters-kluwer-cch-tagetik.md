@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.date: 07/25/2024
 ms.author: dougklo
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # Wolters Kluwer CCH Tagetik

@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.date: 7/25/2023
 ms.author: mihansen
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # FHIR Relationships
