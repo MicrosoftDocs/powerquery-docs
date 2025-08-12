@@ -6,6 +6,7 @@ ms.author: miescobar
 ms.topic: conceptual
 ms.date: 1/24/2025
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # Windsor Power Query custom connector

@@ -5,6 +5,7 @@ author: DougKlopfenstein
 ms.date: 10/7/2024
 ms.author: dougklo
 ms.subservice: user-assistance
+ms.custom: sfi-image-nochange
 ---
 
 # Capture web requests with Fiddler

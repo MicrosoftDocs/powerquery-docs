@@ -7,6 +7,7 @@ ms.topic: conceptual
 ms.date: 2/1/2024
 ms.author: dougklo
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # Azure Databricks

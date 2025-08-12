@@ -7,6 +7,7 @@ ms.date: 1/18/2024
 ms.author: dougklo
 LocalizationGroup: reference
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # Azure Analysis Services database

@@ -6,6 +6,7 @@ ms.author: dougklo
 ms.topic: conceptual
 ms.date: 2/15/2024
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # SolarWinds Service Desk

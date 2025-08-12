@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.date: 12/4/2024
 ms.author: miescobar
 ms.subservice: custom-connectors
+ms.custom: sfi-ropc-blocked
 ---
 
 # Handling authentication

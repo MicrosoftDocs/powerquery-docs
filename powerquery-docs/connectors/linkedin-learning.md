@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.date: 04/11/2024
 ms.author: jburchel
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # LinkedIn Learning - Power BI connector
