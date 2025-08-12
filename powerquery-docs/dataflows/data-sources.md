@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.date: 7/24/2024
 ms.author: jeluitwi
 ms.subservice: dataflows
+ms.custom: sfi-image-nochange
 ---
 
 # Connect to data sources for dataflows

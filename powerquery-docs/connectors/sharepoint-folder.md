@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.date: 1/31/2025
 ms.author: dougklo
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # SharePoint folder

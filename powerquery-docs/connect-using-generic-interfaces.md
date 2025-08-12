@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.date: 3/13/2024
 ms.author: miescobar
 ms.subservice: get-data
+ms.custom: sfi-image-nochange
 ---
 
 # Connect to data using generic interfaces

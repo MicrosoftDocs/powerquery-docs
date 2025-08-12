@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.date: 02/14/2024
 ms.author: dougklo
 ms.subservice: custom-connectors
+ms.custom: sfi-ropc-nochange
 ---
 
 # Commands and options

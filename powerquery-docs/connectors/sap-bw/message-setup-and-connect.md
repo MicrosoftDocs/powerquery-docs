@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.date: 1/25/2024
 ms.author: dougklo
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # SAP Business Warehouse Message Server

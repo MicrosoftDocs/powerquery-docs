@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.date: 8/14/2024
 ms.author: dougklo
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # Kyvos ODBC Connector (Beta)

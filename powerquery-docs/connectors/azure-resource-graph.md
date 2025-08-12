@@ -7,6 +7,7 @@ ms.topic: conceptual
 ms.date: 7/29/2024
 ms.author: alhudso
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # Azure Resource Graph

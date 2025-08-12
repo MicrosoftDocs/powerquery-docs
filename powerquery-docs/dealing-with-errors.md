@@ -4,8 +4,10 @@ description: Understanding errors in Power Query and most common step level and 
 author: ptyx507
 ms.date: 6/20/2025
 ms.author: miescobar
-ms.custom: edited
 ms.subservice: transform-data
+ms.custom:
+  - edited
+  - sfi-image-nochange
 ---
 
 # Dealing with errors in Power Query

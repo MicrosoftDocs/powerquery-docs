@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.date: 1/8/2024
 ms.author: dougklo
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # Configure SSL for ODBC client access to SAP HANA

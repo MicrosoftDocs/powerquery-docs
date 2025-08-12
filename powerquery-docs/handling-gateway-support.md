@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.date: 1/9/2023
 ms.author: miescobar
 ms.subservice: custom-connectors
+ms.custom: sfi-ropc-blocked
 ---
 
 # Handling Gateway Support

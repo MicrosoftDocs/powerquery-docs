@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.date: 11/8/2023
 ms.author: jeluitwi
 ms.subservice: dataflows
+ms.custom: sfi-image-nochange
 ---
 
 # Load data in a Power BI streaming dataset and build a dataflows monitoring report with Power BI

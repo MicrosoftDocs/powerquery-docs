@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.date: 7/16/2025
 ms.author: mihansen
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # FHIR connector authentication

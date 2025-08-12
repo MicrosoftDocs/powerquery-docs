@@ -6,6 +6,7 @@ ms.topic: reference
 ms.date: 01/19/2024
 ms.author: v-ryansyed
 ms.subservice: custom-connectors
+ms.custom: sfi-ropc-blocked
 ---
 
 # Power Query SDK test framework part 5 - Testing your extension connector

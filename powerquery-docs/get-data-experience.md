@@ -7,6 +7,7 @@ ms.author: miescobar
 ms.topic: overview
 ms.search.form: DataflowGen2 Overview
 ms.subservice: get-data
+ms.custom: sfi-image-nochange
 ---
 
 # Getting data overview
