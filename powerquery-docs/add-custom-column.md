@@ -2,7 +2,7 @@
 title: Add a custom column
 description: An article that demonstrates how to create a custom column in Power Query using the Power Query M formula language.
 author: ptyx507x
-ms.date: 5/19/2025
+ms.date: 8/13/2025
 ms.author: miescobar
 ms.subservice: transform-data
 ---
