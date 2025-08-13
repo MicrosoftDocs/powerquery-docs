@@ -2,7 +2,7 @@
 title: Add a custom column
 description: An article that demonstrates how to create a custom column in Power Query using the Power Query M formula language.
 author: ptyx507x
-ms.date: 5/19/2025
+ms.date: 8/13/2025
 ms.author: miescobar
 ms.subservice: transform-data
 ---
@@ -85,10 +85,10 @@ The **Custom column** dialog box appears with the custom column formula you crea
 > [!NOTE]
 >Depending on the formula you used for your custom column, Power Query changes the settings behavior of your step for a more simplified and native experience. For this example, the **Added custom** step changed its behavior from a standard custom column step to a *Multiplication* experience because the formula from that step only multiplies the values from two columns.
 
-## Using Copilot to create a custom column formula (Preview)
+## Using Copilot to create a custom column formula
 
 >[!NOTE]
->This experience is only available in Power Query experiences that apply Copilot.
+>This experience is only available in Power Query experiences that use Copilot.
 
 Inside the *Add custom column* dialog a new input textbox with the copilot icon is available. In it you can describe with your own words and in your language what you want this custom column to do in regards to the logic of your column.
 
