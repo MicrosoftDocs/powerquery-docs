@@ -3,7 +3,7 @@ title: Secure your Power Query deployment
 description: Learn how to secure Power Query, with best practices for protecting your data, connections, and transformations.
 author: DougKlopfenstein
 ms.author: dougklo
-ms.service: power-query
+ms.service: powerquery
 ms.topic: conceptual
 ms.custom: horz-security
 ms.date: 08/14/2025
