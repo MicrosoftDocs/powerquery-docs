@@ -8,7 +8,7 @@ ms.author: dougklo
 ms.subservice: connectors
 ---
 
-# Cognite Data Fusion (REST API) (Beta)
+# Cognite Data Fusion (REST API)
 
 > [!NOTE]
 >The following connector article is provided by Cognite, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Cognite website and use the support channels there.
@@ -17,7 +17,7 @@ ms.subservice: connectors
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | Beta |
+| Release State | General Availability |
 | Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | OAuth (OIDC) |
 
