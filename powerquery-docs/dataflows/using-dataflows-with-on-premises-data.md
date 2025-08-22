@@ -34,7 +34,7 @@ Install an on-premises data gateway to transfer data quickly and securely betwee
 
 > [!NOTE]
 >
-> For Power Apps dataflows, only users who have been directly granted Admin access to a gateway are able to create connections using that gateway. Users who inherit Admin access through a group are not able to create connections.
+> For Power Apps dataflows, only users who have been directly granted Admin access to a gateway are able to create connections using that gateway. Users who inherit Admin access through a group aren't able to create connections.
 
 - A license that supports accessing on-premises data using an on-premises gateway. More information: "Connect to your data" row of the "Explore Power Apps plans" table in the [Power Apps pricing](https://powerapps.microsoft.com/pricing/) page.
 
@@ -158,7 +158,7 @@ There are a few known limitations when using enterprise gateways and dataflows.
 - Dataflows are only supported using enterprise gateways. Personal gateways won't be available for selection in the drop-down lists and settings
     screens.
 
-- Creating new data sources with a gateway in dataflows is only supported for people with *Admins* permissions. For Power Apps dataflows, only users who have been directly granted Admin access to a gateway are able to create connections using that gateway. Users who inherit Admin access through a group are not able to create connections.
+- Creating new data sources with a gateway in dataflows is only supported for people with *Admins* permissions. For Power Apps dataflows, only users who have been directly granted Admin access to a gateway are able to create connections using that gateway. Users who inherit Admin access through a group aren't able to create connections.
 
 - Users with *Can Use* or *Can Use + Share* permissions can use existing connections when creating dataflows.
 
