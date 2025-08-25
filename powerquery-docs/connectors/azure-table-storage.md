@@ -92,9 +92,15 @@ The following limitations apply to the Power Query Azure Table Storage connector
 
 ### Power Query Online and Azure Storage are in the same region
 
-Direct access to an Azure Storage account with the firewall enabled and in the same region as Power Query Online isn't supported. This limitation arises because Power Query services, when deployed in the same region as the Azure storage account, use private Azure IP addresses for communication. For further details, refer to the [Azure documentation on storage network security](/azure/storage/common/storage-network-security?tabs=azure-portal#grant-access-from-an-internet-ip-range).
+Direct access to an Azure Storage account with the firewall enabled and in the same region as Power Query Online isn't supported. This limitation arises because Power Query services, when deployed in the same region as the Azure storage account, use private Azure IP addresses for communication. For more information, see the [Azure documentation on storage network security](/azure/storage/common/storage-network-security?tabs=azure-portal#grant-access-from-an-internet-ip-range).
 
 To work around this limitation and enable access to Azure Storage from Power Query Online in the same region, use one of the following methods:
 
 - Utilize an [On-premises data gateway](/data-integration/gateway/), which serves as a bridge between Power Query Online and Azure Storage.
 - Use a [Virtual Network (VNet) data gateway](/data-integration/vnet/overview).
+
+### Mixed case support for names of Azure Tables
+
+In some scenarios, the connector is unable to access data in Azure storage account tables when the table name uses mixed casing. The error `DataFormat.Error: OData: The format isn't supported.` is thrown. The issue occurs when using Microsoft Entra account credentials in both Power BI Desktop and Power BI Service. The cause of the issue is the limitations of oData v3 protocol used by Azure Tables, which doesn't fully support the payload format when table names contain uppercase characters. For more information, see the [Azure documentation on payload formats supported by Table Storage](https://learn.microsoft.com/en-us/rest/api/storageservices/summary-of-table-service-functionality#payload-formats).
+
+To work around this limitation, change table names with mixed casing to all lowercase.
