@@ -73,11 +73,11 @@ Before using native database query, you should be aware of the limitations and i
 
 ### Data Definition Language (DDL) operations
 
-Performing Data Definition Language (DDL) operations to the data source is **not supported** in Power Query, examples of such operations are "DROP TABLE", "CREATE TABLE", and "ALTER TABLE" for instance. Attempting to use such commands can result in multiple failures and errors.
+Performing Data Definition Language (DDL) operations to the data source are **not supported** in Power Query, examples of such operations are "DROP TABLE", "CREATE TABLE", and "ALTER TABLE" for instance. Attempting to use such commands can result in multiple failures and errors.
 
 ### Query folding
 
-Query folding while using a native database query is limited to only a certain number of Power Query connectors. For more information, go to [Query folding on native queries](native-query-folding.md).
+Query folding while using a native database query is limited to only some Power Query connectors. For more information, go to [Query folding on native queries](native-query-folding.md).
 
 ### Native database query security
 
@@ -89,7 +89,7 @@ If this message occurs, select **Edit Permission**. This selection opens the **N
 
 :::image type="content" source="media/native-database-query/approve-query.png" alt-text="Screenshot of the native database query dialog where you approve running the native query.":::
 
-By default, if you run a native database query outside of the connector dialogs, you're prompted each time you run a different query text to ensure that the query text to be executed is approved by you.
+By default, if you run a native database query outside of the connector dialogs, you're prompted each time you run a different query text. This prompting ensures that the query text to be executed is approved by you.
 
 > [!NOTE]
 > Native database queries that you insert in your get data operation don't ask you whether you want to run the query or not. They just run.
