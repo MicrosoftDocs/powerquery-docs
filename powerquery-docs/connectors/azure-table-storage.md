@@ -101,6 +101,4 @@ To work around this limitation and enable access to Azure Storage from Power Que
 
 ### Mixed case support for names of Azure Tables
 
-In some scenarios, the connector is unable to access data in Azure storage account tables when the table name uses mixed casing. The error `DataFormat.Error: OData: The format isn't supported.` is thrown. The issue occurs when using Microsoft Entra account credentials in both Power BI Desktop and Power BI Service. The cause of the issue is the limitations of oData v3 protocol used by Azure Tables, which doesn't fully support the payload format when table names contain uppercase characters. For more information, see the [Azure documentation on payload formats supported by Table Storage](https://learn.microsoft.com/en-us/rest/api/storageservices/summary-of-table-service-functionality#payload-formats).
-
-To work around this limitation, change table names with mixed casing to all lowercase.
+In some scenarios using Microsoft Entra Auth, the connector is unable to access data in Azure storage account tables when the table name uses mixed casing. And, the error `DataFormat.Error: OData: The format isn't supported.` is thrown. To work around this limitation, change table names with mixed casing to all lowercase or use the account key authentication method.
