@@ -101,4 +101,4 @@ To work around this limitation and enable access to Azure Storage from Power Que
 
 ### Mixed case support for names of Azure Tables
 
-In certain scenarios involving Microsoft Entra authentication, the connector may fail to access data in Azure Storage account tables when the table name contains mixed casing, resulting in the error: `DataFormat.Error: OData: The format isn't supported`. To work around this limitation, rename the table using all lowercase characters or switch to the account key authentication method.
+In certain scenarios involving Microsoft Entra authentication, the connector might fail to access data in Azure Storage account tables when the table name contains mixed casing, resulting in the error: `DataFormat.Error: OData: The format isn't supported`. To work around this limitation, rename the table using all lowercase characters or switch to the account key authentication method.
