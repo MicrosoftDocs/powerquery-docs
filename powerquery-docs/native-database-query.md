@@ -73,7 +73,7 @@ Before using native database query, you should be aware of the limitations and i
 
 ### Data Definition Language (DDL) operations
 
-Performing Data Definition Language (DDL) operations to the data source are **not supported** in Power Query, examples of such operations are "DROP TABLE", "CREATE TABLE", and "ALTER TABLE" for instance. Attempting to use such commands can result in multiple failures and errors.
+Performing Data Definition Language (DDL) operations to the data source are **not supported** in Power Query. Examples of such operations are "DROP TABLE", "CREATE TABLE", and "ALTER TABLE" for instance. Attempting to use such commands can result in multiple failures and errors.
 
 ### Query folding
 
