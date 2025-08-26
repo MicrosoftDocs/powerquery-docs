@@ -3,7 +3,7 @@ title: "Create and use dataflows in Microsoft Power Platform"
 description: Learn how to use dataflows in Microsoft Power Platform.
 author: Luitwieler
 ms.topic: conceptual
-ms.date: 1/25/2024
+ms.date: 8/26/2025
 ms.author: jeluitwi
 ms.subservice: dataflows
 ---
@@ -30,7 +30,7 @@ With dataflows, Microsoft brings the self-service data preparation capabilities 
 
   * **Azure Data Lake Storage** lets you collaborate with people in your organization using Power BI, Azure Data, and AI services, or using custom-built Line of Business Applications that read data from the lake. Dataflows that load data to an Azure Data Lake Storage account store data in Common Data Model folders. Common Data Model folders contain schematized data and metadata in a standardized format, to facilitate data exchange and to enable full interoperability across services that produce or consume data stored in an organization’s Azure Data Lake Storage account as the shared storage layer.
 
-* **Advanced Analytics and AI with Azure**: Power Platform dataflows store data in Dataverse or Azure Data Lake Storage&mdash;which means that data ingested through dataflows is now available to data engineers and data scientists to apply the full power of Azure Data Services, such as Azure Machine Learning, Azure Databricks, and Azure Synapse Analytics for advanced analytics and AI. This enables business analysts, data engineers, and data scientists to collaborate on the same data within their organization.
+* **Advanced Analytics and AI with Azure**: Power Platform dataflows store data in Dataverse or Azure Data Lake Storage&mdash;which means that data ingested through dataflows is now available to data engineers and data scientists to apply the full power of Azure Data Services, such as Azure Machine Learning, Azure Databricks, and Azure Synapse Analytics for advanced analytics and AI. This availability enables business analysts, data engineers, and data scientists to collaborate on the same data within their organization.
 
 * **Support for Common Data Model**: Common Data Model is a set of a standardized data schemas and a metadata system to allow consistency of data and its meaning across applications and business processes. Dataflows support Common Data Model by offering easy mapping from any data in any shape into the standard Common Data Model tables, such as Account and Contact. Dataflows also land the data, both standard and custom tables, in schematized Common Data Model form. Business analysts can take advantage of the standard schema and its semantic consistency, or customize their tables based on their unique needs. Common Data Model continues to evolve as part of the [Open Data Initiative](https://dynamics.microsoft.com/open-data-initiative/).
 
@@ -58,7 +58,7 @@ Most dataflow capabilities are available in both Power Apps and Power BI. Datafl
 
 * Copying dataflows as part of a [Back up and restore environments](/power-platform/admin/backup-restore-environments) operation isn't supported.
 * Copying dataflows as part of a [Power Platform environments copy](/power-platform/admin/copy-environment) operation don't preserve their email notification setting.
-* Change owner for a Dataflow with a connection and a query parameter would also change the parameter value to a previous value (if such value has been set).
+* Change owner for a Dataflow with a connection and a query parameter would also change the parameter value to a previous value (if such value was set).
 
 ## Next steps
 
