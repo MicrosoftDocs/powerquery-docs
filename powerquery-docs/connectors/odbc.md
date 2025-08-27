@@ -58,7 +58,7 @@ To make the connection, take the following steps:
    * **Windows**: Select this authentication type if you want to connect using Windows authentication. Optionally, include any connection string properties you need.
    * **Database**: Select this authentication type to use a username and password to access a data source with an ODBC driver. Optionally, include any connection string properties you need. This authentication type is the default selection.
 
-   For more information, go to [Authentication with a data source](../connectorauthentication.md).
+   For more information, go to [Authentication in desktop apps](../connector-authentication.md).
 
 5. Once you're done, select **Connect**.
 
@@ -78,7 +78,7 @@ To make the connection, take the following steps:
 
 3. If needed, select an on-premises data gateway in **Data gateway**.
 
-4. Choose the authentication kind to sign in, and then enter your credentials.
+4. Choose the authentication kind to sign in, and then enter your credentials. For more information, go to [Authentication in Power Query Online](../connection-authentication-pqo.md).
 
 5. Select **Next**.
 
