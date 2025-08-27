@@ -84,7 +84,7 @@ To make the connection, take the following steps:
 
 6. In the **Navigator**, select the database information you want, and then select **Transform data** to continue transforming the data in the Power Query editor.
 
-   :::image type="content" source="./media/odbc/odbc-online-navigator.png" alt-text="Screenshot of the ODBC page, with the connection string set to the SQL Server database." lightbox="./media/odbc/odbc-online-navigator.png":::
+   :::image type="content" source="./media/odbc/odbc-online-navigator.png" alt-text="Screenshot of the online navigator with employee information selected." lightbox="./media/odbc/odbc-online-navigator.png":::
 
 ## Connect using advanced options
 
