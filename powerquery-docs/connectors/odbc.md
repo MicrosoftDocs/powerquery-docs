@@ -64,7 +64,7 @@ To make the connection, take the following steps:
 
 6. In **Navigator**, select the database information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in the Power Query editor.
 
-   :::image type="content" source="./media/odbc/odbc-desktop-navigator.png" alt-text="Screenshot of the desktop navigator with employee information selected.":::
+   :::image type="content" source="./media/odbc/odbc-desktop-navigator.png" alt-text="Screenshot of the desktop navigator with employee information selected." lightbox="./media/odbc/odbc-desktop-navigator.png":::
 
 ## Connect to an ODBC data source from Power Query Online
 
