@@ -2,7 +2,7 @@
 title: Using the data profiling tools
 description: Overview of the Data Quality, Column Distribution, and Column Profile features found inside the Power Query Editor
 author: ptyx507
-ms.date: 10/2/2024
+ms.date: 8/28/2025
 ms.author: miescobar
 ms.subservice: transform-data
 ---
@@ -25,7 +25,7 @@ In Power Query Online, select **Data view**, then enable the options you want in
 
 :::image type="content" source="media/data-profiling-tools/enable-data-preview-tools-online.png" alt-text="Screenshot of the data profiling tools selected under Data view in the View tab.":::
 
-After you enable the options, you'll see something like the following image in Power Query Editor.
+After you enable the options, the data profiling information displays in the Power Query editor.
 
 :::image type="content" source="media/data-profiling-tools/data-preview-tools-enabled-v2.png" alt-text="Screenshot of the data profiling tools after they're set up." lightbox="media/data-profiling-tools/data-preview-tools-enabled-v2.png":::
 
@@ -46,7 +46,7 @@ The column quality feature labels values in rows in five categories:
 
 * **Unexpected error**, shown in dashed red.
 
-These indicators are displayed directly underneath the name of the column as part of a small bar chart, as shown in the following image.
+These indicators are displayed directly underneath the name of the column as part of a small bar chart.
 
 :::image type="content" source="media/data-profiling-tools/data-quality.png" alt-text="Screenshot of the enhanced view of the bar chart with data quality indicators and labels above each column in the table." lightbox="media/data-profiling-tools/data-quality.png":::
 
@@ -68,7 +68,7 @@ By hovering over the distribution data in any of the columns, you get informatio
 
 ## Column profile
 
-This feature provides a more in-depth look at the data in a column. Apart from the column distribution chart, it contains a column statistics chart. This information is displayed underneath the data preview section, as shown in the following image.
+This feature provides a more in-depth look at the data in a column. Apart from the column distribution chart, it contains a column statistics chart. This information is displayed underneath the data preview section.
 
 :::image type="content" source="media/data-profiling-tools/column-profile.png" alt-text="Screenshot of the data profiling tool with the column profile emphasized." lightbox="media/data-profiling-tools/column-profile.png":::
 
