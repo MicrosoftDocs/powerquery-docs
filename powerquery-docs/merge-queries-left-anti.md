@@ -2,7 +2,7 @@
 title: "Left anti join"
 description: An article on how to do a merge operation in Power Query using the Left anti join kind. 
 author: ptyx507
-ms.date: 6/12/2024
+ms.date: 8/29/2025
 ms.author: miescobar
 ms.custom: edited
 ms.subservice: transform-data
@@ -10,7 +10,7 @@ ms.subservice: transform-data
 
 # Left anti join
 
-One of the join kinds available in the **Merge** dialog box in Power Query is a *left anti join*, which brings in only rows from the left table that don't have any matching rows from the right table. More information: [Merge operations overview](merge-queries-overview.md)
+One of the join kinds available in the **Merge** dialog box in Power Query is a *left anti join*, which brings in only rows from the left table that don't have any matching rows from the right table. For more information, go to [Merge operations overview](merge-queries-overview.md).
 
 :::image type="complex" source="media/merge-queries-left-anti/left-anti-join-operation.png" alt-text="Left anti join example.":::
    Diagram shows the left table with Date, CountryID, and Units columns. The emphasized CountryID column contains values of 1 in rows 1 and 2, 3 in row 3, and 2 in row 4. The right table contains ID and Country columns. The emphasized ID column contains values of 3 in row 1 (denoting Panama) and 4 in row 2 (denoting Spain). A table below the first two tables contains Date, CountryID, Units, and Country columns. The table has three rows, with two rows containing the data for CountryID 1, and one row for CountryID 2. Since none of the remaining CountryIDs match any of the countries/regions in the right table, the rows in the Country column in the merged table all contain null.
@@ -50,7 +50,7 @@ To do a left anti join:
 :::image type="content" source="media/merge-queries-left-anti/left-anti-merge-window.png" alt-text="Screenshot of the Merge dialog showing the results of following the previous left anti join procedure.":::
 
 > [!TIP]
->Take a closer look at the message at the bottom of the dialog box that reads "The selection selects 3 of 4 rows from the first table." This message is crucial to understanding the result that you get from this operation.
+>Take a closer look at the message at the bottom of the dialog that reads "The selection selects 3 of 4 rows from the first table." This message is crucial to understanding the result that you get from this operation.
 
 In the **Sales** table, you have two instances of a **CountryID** of 1 and one instance of a **CountryID** of 2, but neither of them are found in the **Countries** table. Therefore, the match found three of four rows in the left (first) table.
 
