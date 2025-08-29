@@ -10,7 +10,7 @@ ms.subservice: transform-data
 
 # Left anti join
 
-One of the join kinds available in the **Merge** dialog box in Power Query is a *left anti join*, which brings in only rows from the left table that don't have any matching rows from the right table. Fro more information, go to [Merge operations overview](merge-queries-overview.md).
+One of the join kinds available in the **Merge** dialog box in Power Query is a *left anti join*, which brings in only rows from the left table that don't have any matching rows from the right table. For more information, go to [Merge operations overview](merge-queries-overview.md).
 
 :::image type="complex" source="media/merge-queries-left-anti/left-anti-join-operation.png" alt-text="Left anti join example.":::
    Diagram shows the left table with Date, CountryID, and Units columns. The emphasized CountryID column contains values of 1 in rows 1 and 2, 3 in row 3, and 2 in row 4. The right table contains ID and Country columns. The emphasized ID column contains values of 3 in row 1 (denoting Panama) and 4 in row 2 (denoting Spain). A table below the first two tables contains Date, CountryID, Units, and Country columns. The table has three rows, with two rows containing the data for CountryID 1, and one row for CountryID 2. Since none of the remaining CountryIDs match any of the countries/regions in the right table, the rows in the Country column in the merged table all contain null.
