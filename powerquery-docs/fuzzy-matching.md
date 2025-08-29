@@ -2,7 +2,7 @@
 title: How fuzzy matching works in Power Query
 description: "How-to article on the fuzzy matching feature in Power Query and how to better take advantage of it."
 author: ptyx507x
-ms.date: 5/31/2024
+ms.date: 8/29/2025
 ms.author: miescobar
 ms.subservice: transform-data
 ---
@@ -12,6 +12,9 @@ ms.subservice: transform-data
 Power Query features such as [fuzzy merge](merge-queries-fuzzy-match.md), [cluster values](cluster-values.md), and [fuzzy grouping](group-by.md#fuzzy-grouping) use the same mechanisms to work as fuzzy matching.
 
 This article goes over many scenarios that demonstrate how to take advantage of the options that fuzzy matching has, with the goal of making 'fuzzy' clear.
+
+> [!NOTE]
+>Although the cluster values option is only available in Power Query Online, the mechanisms shown in this section also apply to fuzzy merge and fuzzy grouping.
 
 ## Adjust the similarity threshold
 
@@ -41,9 +44,9 @@ Now you're tasked with clustering the values. To do that task, load the previous
 
 :::image type="content" source="media/fuzzy-matching/cluster-values-icon.png" alt-text="Screenshot with the cluster values option inside the Add column tab in the ribbon available after selecting the Fruit column from the table.":::
 
-The **Cluster values** dialog box appears, where you can specify the name of the new column. Name this new column **Cluster** and select **OK**.
+The **Cluster values** dialog appears, where you can specify the name of the new column. Name this new column **Cluster** and select **OK**.
 
-:::image type="content" source="media/fuzzy-matching/cluster-values-default-window.png" alt-text="Screenshot of the cluster values dialog box after selecting the Fruit column. The new column name field is set to Cluster.":::
+:::image type="content" source="media/fuzzy-matching/cluster-values-default-window.png" alt-text="Screenshot of the cluster values dialog after selecting the Fruit column. The new column name field is set to Cluster.":::
 
 By default, Power Query uses a similarity threshold of 0.8 (or 80%). The minimum value of 0.00 causes all values with any level of similarity to match each other, and the maximum value of 1.00 only allows exact matches. A fuzzy "exact match" might ignore differences like casing, word order, and punctuation. The result of the previous operation yields the following table with a new **Cluster** column.
 
@@ -51,7 +54,7 @@ By default, Power Query uses a similarity threshold of 0.8 (or 80%). The minimum
 
 While the clustering is done, it's not giving you the expected results for all the rows. Row number two (2) still has the value `Blue berries are simply the best`, but it should be clustered to `Blueberries`, and something similar happens to the text strings `Strawberries = <3`, `fav fruit is bananas`, and `My favorite fruit, by far, is Apples. I simply love them!`.
 
-To determine what's causing this clustering, double-click **Clustered values** in the **Applied steps** panel to bring back the **Cluster values** dialog box. Inside this dialog box, expand **Fuzzy cluster options**. Enable the **Show similarity scores** option, and then select **OK**.
+To determine what's causing this clustering, double-click **Clustered values** in the **Applied steps** panel to bring back the **Cluster values** dialog. Inside this dialog, expand **Fuzzy cluster options**. Enable the **Show similarity scores** option, and then select **OK**.
 
 :::image type="content" source="media/fuzzy-matching/window-with-show-similarity-score.png" alt-text="Screenshot of the cluster values window with the fuzzy cluster options displayed and the show similarity scores option selected.":::
 
@@ -61,7 +64,7 @@ Enabling the **Show similarity scores** option creates a new column in your tabl
 
 Upon closer inspection, Power Query couldn't find any other values in the similarity threshold for the text strings `Blue berries are simply the best`,`Strawberries = <3`, `fav fruit is bananas`, and `My favorite fruit, by far, is Apples. I simply love them!`.
 
-Go back to the **Cluster values** dialog box one more time by double-clicking **Clustered values** in the **Applied steps** panel. Change the **Similarity threshold** from **0.8** to **0.6**, and then select **OK**.
+Go back to the **Cluster values** dialog one more time by double-clicking **Clustered values** in the **Applied steps** panel. Change the **Similarity threshold** from **0.8** to **0.6**, and then select **OK**.
 
 :::image type="content" source="media/fuzzy-matching/window-with-show-similarity-score-60.png" alt-text="Screenshot of the cluster values dialog with the fuzzy cluster options displayed and the similarity threshold set at 0.6.":::
 
