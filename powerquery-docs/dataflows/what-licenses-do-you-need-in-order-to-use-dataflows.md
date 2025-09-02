@@ -20,7 +20,7 @@ A Power BI Pro account is available on a user-monthly basis. Multiple options ar
 
 ## Creating dataflows in Microsoft Power Platform environments
 
-If you want to create dataflows in the Microsoft Power Platform environment, a Power Apps Premium, Power Apps Per User plan  (P1 legacy license) or Power Apps Per App plan (P2 legacy license) is required. For more information, go to [Purchase Power Apps for your organization](https://learn.microsoft.com/en-us/power-platform/admin/signup-for-powerapps-admin).
+If you want to create dataflows in the Microsoft Power Platform environment, a Power Apps Premium, Power Apps Per User plan  (P1 legacy license) or Power Apps Per App plan (P2 legacy license) is required. For more information, go to [Purchase Power Apps for your organization](/power-platform/admin/signup-for-powerapps-admin).
 
 If you want to create analytical dataflows that store data in your organization's Azure Data Lake Storage Gen2 account, you or your administrator need access to an Azure subscription and an Azure Data Lake Storage Gen2 account.
 
@@ -121,5 +121,6 @@ If you want to read more details about the concepts discussed in this article, g
 - [AI capabilities in Power BI dataflows](/power-bi/service-machine-learning-automated)
 - [Standard vs. analytical dataflows](understanding-differences-between-analytical-standard-dataflows.md)
 - [The enhanced compute engine](/power-bi/transform-model/service-dataflows-enhanced-compute-engine)
+
 
 
