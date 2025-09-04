@@ -22,6 +22,9 @@ ms.subservice: connectors
 > [!NOTE]
 > Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
+> [!NOTE]
+> The Impala connector implementation 2.0 has been in preview since July 2025.  
+
 ## Capabilities Supported
 
 * Import
@@ -90,6 +93,25 @@ Power Query provides a set of advanced options that you can add to your query if
 | Connection timeout duration | Specifies the maximum time Power Query will wait for a connection to complete. You can enter another value to keep the connection open longer.|
 | Command timeout duration | Specifies the maximum time a command is allowed to run before Power Query abandons the call. |
 
+## Impala connector implementation 2.0
+
+In August 2025, we introduced a new implementation for the Impala connector to enhance the integration with Impala. We recommend that you upgrade your Power BI Desktop and the on-premises data gateway to the latest version to benefit from the most current capabilities. 
+
+Provide us [feedback](https://aka.ms/ImpalaConnectorFeedback) to help us continue improving the connector. 
+
+The Impala connector implementation 2.0 is built using the open-source Arrow Database Connectivity (ADBC) driver. ADBC provides a set of standard interfaces for interacting with Arrow data, which is especially efficient at fetching large datasets with minimal overhead and no serialization or copying. The ADBC driver also incorporates security enhancements such as memory safety and garbage collection.
+
+Additionally, collaboration with the open-source community enables more rapid updates, utilizing modern tools and secure development lifecycle (SDL) processes. To enable you to take advantage of these performance and security enhancements, all newly created connections automatically use the 2.0 implementation starting August 2025. During the transition period, you can test the 2.0 implementation by updating your existing queries and adding the `Implementation="2.0"` flag in **Impala.Database** as follows. After the transition, connections that don't specify  an implementation will be automatically updated to the 2.0 implementation.
+
+Source = Impala.Database("impalavm.centralus.cloudapp.azure.com", [Implementation="2.0"
+
+To aid with diagnosing any potential issue, you can find the `Implementation` and `DriverType` details in your Mashup logs like the following example. If you encounter any issue during the transition, contact support.
+
+
+```json { "Start": "2024-11-02T00:14:02.7968686Z", "Action": "Engine/Module/Impala/IO/Impala/Implementation", "ResourceKind": "Impala", "ResourcePath": "impalavm.centralus.cloudapp.azure.com", "HostProcessId": "29200", "Implementation": "2.0", "DriverType": "ADBC", "ProductVersion": "2.139.0.0 (Main)+eda56ecd858054173a4d11db9c63a6da5cf92a99", "ActivityId": "106f16b6-cfbb-4853-9f20-ed45486486d2", "Process": "Microsoft.Mashup.Container.NetFX45", "Pid": 38560, "Tid": 1, "Duration": "00:00:00.0000291" }
+```
+To remain on the previous connector implementation temporarily (while troubleshooting), specify `Implementation="1.0"` in your queries.
+
 ## Considerations and limitations
 
 Here are a few considerations and limitations to keep in mind with the **Impala** connector:
@@ -99,4 +121,4 @@ Here are a few considerations and limitations to keep in mind with the **Impala*
 * The Impala connector doesn't support overridding the **Realm** option for Kerberos authentication.
 
 
-TEST
++TEST
