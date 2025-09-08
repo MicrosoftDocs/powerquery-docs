@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.date: 10/28/2024
 ms.author: dougklo
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # Access database

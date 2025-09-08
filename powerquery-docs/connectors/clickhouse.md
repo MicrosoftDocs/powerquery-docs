@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.date: 2/13/2025
 ms.author: dougklo
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # ClickHouse

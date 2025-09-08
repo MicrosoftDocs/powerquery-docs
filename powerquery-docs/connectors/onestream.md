@@ -6,6 +6,7 @@ ms.author: dougklo
 ms.date: 05/29/2024
 ms.topic: conceptual
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # OneStream

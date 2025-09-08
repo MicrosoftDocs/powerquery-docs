@@ -2,7 +2,7 @@
 title: Add a custom column
 description: An article that demonstrates how to create a custom column in Power Query using the Power Query M formula language.
 author: ptyx507x
-ms.date: 5/19/2025
+ms.date: 8/29/2025
 ms.author: miescobar
 ms.subservice: transform-data
 ---
@@ -13,7 +13,7 @@ If you need more flexibility for adding new columns than the ones provided out o
 
 Imagine that you have a table with the following set of columns.
 
-:::image type="content" source="media/add-custom-column/add-custom-column-initial-table.png" alt-text="Screenshot of the sample initial table with Date, Country, Units, Unit Price and percent discount columns.":::
+:::image type="content" source="media/add-custom-column/add-custom-column-initial-table.png" alt-text="Screenshot of the sample initial table with Date, Country, Units, Unit Price, and percent discount columns.":::
 
 Using the **Units**, **Unit Price**, and **Discount** columns, you'd like to create two new columns:
 
@@ -40,9 +40,12 @@ The **Custom column** dialog contains:
 
 * A dropdown menu where you can select the data type for your new column.
 
-* An **Available columns** list on the right underneath the **Data type** selection.
-
 * A **Custom column formula** box where you can enter a [Power Query M formula](/powerquery-m/power-query-m-function-reference).  
+
+* An **Available columns** list beside the **Custom column formula** selection.
+
+> [!NOTE]
+>The **Data type** selection is only available when you use Power Query Online.
 
 To add a new custom column, select a column from the **Available columns** list. Then, select the **Insert column** button below the list to add it to the custom column formula. You can also add a column by selecting it in the list. Alternatively, you can write your own formula by using the Power Query M formula language in **Custom column formula**.
 
@@ -60,7 +63,7 @@ The result of that operation adds a new **Total Sale before Discount** column to
 :::image type="content" source="media/add-custom-column/add-custom-column-total-sale-before-discount-column.png" alt-text="Screenshot of the table with new custom column called Total Sale before Discount showing the price without the discount.":::
 
 > [!NOTE]
->If you're using Power Query Desktop, the **Data type** field isn't available in **Custom column**. This means that you need to define a data type for any custom columns after creating the columns. More information: [Data types in Power Query](data-types.md#how-to-define-a-column-data-type)
+>If you're using Power Query Desktop, the **Data type** field isn't available in **Custom column**. This means that you need to define a data type for any custom columns after creating the columns. For more information, go to [Data types in Power Query](data-types.md#how-to-define-a-column-data-type).
 
 ### Adding the Total Sale after Discount column
 
@@ -85,16 +88,16 @@ The **Custom column** dialog box appears with the custom column formula you crea
 > [!NOTE]
 >Depending on the formula you used for your custom column, Power Query changes the settings behavior of your step for a more simplified and native experience. For this example, the **Added custom** step changed its behavior from a standard custom column step to a *Multiplication* experience because the formula from that step only multiplies the values from two columns.
 
-## Using Copilot to create a custom column formula (Preview)
+## Using Copilot to create a custom column formula
 
->[!NOTE]
->This experience is only available in Power Query experiences that apply Copilot.
+> [!NOTE]
+>This experience is only available in Power Query experiences that use Copilot.
 
-Inside the *Add custom column* dialog a new input textbox with the copilot icon is available. In it you can describe with your own words and in your language what you want this custom column to do in regards to the logic of your column.
+Inside the *Add custom column* dialog a new input textbox with the copilot icon is available. In it, you can describe with your own words and in your language what you want this custom column to do in regards to the logic of your column.
 
 For example, imagine a scenario where you want to introduce complex conditional logic. You could describe this logic with your own words and Copilot can create the custom column formula for you.
 
-For example, for a table that has the fields **OrderID**, **Quantity**, **Category**, **Total** you can pass a prompt like the following:
+For example, for a table that has the fields **OrderID**, **Quantity**, **Category**, and **Total**, you can pass a prompt like the following:
 
 ```if the Total order is more than 2000 and the Category is B, then provide a discount of 10%. If the total is more than 200 and the Category is A, then provide a discount of 25% but only if the Quantity is more than 10 otherwise just provide a 10% discount.```
 
@@ -104,10 +107,10 @@ After you submit this prompt, Copilot processes it and modifies the custom colum
 
 You can review the custom column and make any changes necessary.
 
->[!NOTE]
+> [!NOTE]
 >Any prompts sent on a custom column dialog that has an existing formula could result in the existing formula being fully replaced with the suggestion from Copilot.
 
 ## Related content
 
-* You can create a custom column in other ways, such as creating a column based on examples you provide to the Power Query editor. More information: [Add a column from an example](column-from-example.md)
+* You can create a custom column in other ways, such as creating a column based on examples you provide to the Power Query editor. For more information, go to [Add a column from an example](column-from-example.md).
 * For Power Query M reference information, go to [Power Query M function reference](/powerquery-m/power-query-m-function-reference).

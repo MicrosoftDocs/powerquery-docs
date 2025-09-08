@@ -7,6 +7,7 @@ ms.topic: quickstart
 ms.date: 3/21/2025
 ms.author: miescobar
 ms.subservice: transform-data
+ms.custom: sfi-image-nochange
 ---
 
 # Query plan for Power Query

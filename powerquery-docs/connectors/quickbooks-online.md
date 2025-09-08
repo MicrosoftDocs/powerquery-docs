@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.date: 5/27/2025
 ms.author: dougklo
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # QuickBooks Online (Beta) (Deprecating)
