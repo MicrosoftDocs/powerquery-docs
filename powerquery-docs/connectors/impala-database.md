@@ -108,8 +108,24 @@ Source = Impala.Database("impalavm.centralus.cloudapp.azure.com", [Implementatio
 
 To aid with diagnosing any potential issue, you can find the `Implementation` and `DriverType` details in your Mashup logs like the following example. If you encounter any issue during the transition, contact support.
 
-```json { "Start": "2024-11-02T00:14:02.7968686Z", "Action": "Engine/Module/Impala/IO/Impala/Implementation", "ResourceKind": "Impala", "ResourcePath": "impalavm.centralus.cloudapp.azure.com", "HostProcessId": "29200", "Implementation": "2.0", "DriverType": "ADBC", "ProductVersion": "2.139.0.0 (Main)+eda56ecd858054173a4d11db9c63a6da5cf92a99", "ActivityId": "106f16b6-cfbb-4853-9f20-ed45486486d2", "Process": "Microsoft.Mashup.Container.NetFX45", "Pid": 38560, "Tid": 1, "Duration": "00:00:00.0000291" }
+```json 
+{ 
+    "Start": "2024-11-02T00:14:02.7968686Z", 
+    "Action": "Engine/Module/Impala/IO/Impala/Implementation", 
+    "ResourceKind": "Impala", 
+    "ResourcePath": "impalavm.centralus.cloudapp.azure.com",
+    "HostProcessId": "29200",
+    "Implementation": "2.0",
+    "DriverType": "ADBC",
+    "ProductVersion": "2.139.0.0 (Main)+eda56ecd858054173a4d11db9c63a6da5cf92a99",
+    "ActivityId": "106f16b6-cfbb-4853-9f20-ed45486486d2",
+    "Process": "Microsoft.Mashup.Container.NetFX45",
+    "Pid": 38560,
+    "Tid": 1,
+    "Duration": "00:00:00.0000291"
+}
 ```
+
 To remain on the previous connector implementation temporarily (while troubleshooting), specify `Implementation="1.0"` in your queries.
 
 ## Considerations and limitations
