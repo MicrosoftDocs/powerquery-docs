@@ -4,17 +4,18 @@ description: Provides basic information, prerequisites, and instructions on how 
 author: giladsmg
 ms.author: dougklo
 ms.topic: conceptual
-ms.date: 2/15/2024
+ms.date: 9/11/2025
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
 ---
 
 # SolarWinds Service Desk
 
+>[!Note]
+>This connector is owned and provided by SolarWinds Service Desk.
+
 This connector lets you incrementally import incidents and different asset records from SolarWinds Service Desk (SWSD) to Microsoft Power BI. The import provides raw data on the topics most relevant to your organization. You can then review and analyze the data by viewing it in various formats, such as tables, graphs, and charts.
 
-> [!NOTE]
-> The following connector article is provided by SolarWinds, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or want to request changes to it, visit the [SolarWinds Service Desk - Power BI Connector](https://documentation.solarwinds.com/en/success_center/swsd/default.htm#powerbi.htm?cshid=swsd_powerbi) documentation website.
 
 ## Summary
 

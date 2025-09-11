@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for the connector, and
 author: paservois
 ms.author: dougklo
 ms.topic: conceptual
-ms.date: 1/31/2023
+ms.date: 9/11/2025
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
 ---
@@ -12,7 +12,7 @@ ms.custom: sfi-image-nochange
 # inwink Connector (Beta)
 
 >[!Note]
->The following connector article is provided by inwink, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the [inwink website](https://help.inwink.com/get-help) and use the support channels there.
+>This connector is owned and provided by Inwink.
 
 ## Summary
 

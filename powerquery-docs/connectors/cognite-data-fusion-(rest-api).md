@@ -3,15 +3,15 @@ title: Power Query Cognite Data Fusion (REST API) connector
 description: Provides basic information, prerequisites, and instructions on how to connect to and use the Cognite Data Fusion (REST API) connector.
 author: evertoncolling
 ms.topic: conceptual
-ms.date: 3/18/2025
+ms.date: 9/11/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
 
 # Cognite Data Fusion (REST API)
 
-> [!NOTE]
->The following connector article is provided by Cognite, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Cognite website and use the support channels there.
+>[!Note]
+>This connector is owned and provided by Cognite.
 
 ## Summary
 

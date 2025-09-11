@@ -3,7 +3,7 @@ title: Power Query Supermetrics connector
 description: Provides basic information and prerequisites for the Supermetrics connector, supported authentication types, outlines limitations and issues.
 author: diegomotasuper
 ms.topic: conceptual
-ms.date: 04/05/2024
+ms.date: 09/11/2025
 ms.author: jburchel
 ms.subservice: connectors
 ---
@@ -11,7 +11,7 @@ ms.subservice: connectors
 # Supermetrics Power Query custom connector
 
 >[!Note]
->The following connector article is provided by Supermetrics, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the https://supermetrics.com/ website and use the support channels there.
+>This connector is owned and provided by Supermetrics.
 
 ## Summary
 | Item | Description                                                                       |

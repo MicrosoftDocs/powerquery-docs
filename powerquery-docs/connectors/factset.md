@@ -4,15 +4,15 @@ description: Provides basic information and prerequisites for the FactSet Enterp
 author: eschmidtfds
 ms.service: powerquery
 ms.topic: conceptual
-ms.date: 6/30/2025
+ms.date: 9/11/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
 
 # FactSet
 
-> [!NOTE]
-> The following connector article is provided by FactSet, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the FactSet website and use the support channels there.
+>[!Note]
+>This connector is owned and provided by FactSet.
 
 ## Summary
 

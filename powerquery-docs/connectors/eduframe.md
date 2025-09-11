@@ -11,6 +11,9 @@ ms.custom: sfi-image-nochange
 
 # Eduframe Reporting (Beta)
 
+>[!Note]
+>This connector is owned and provided by Eduframe.
+
 ## Summary
 
 | Item | Description |
@@ -19,8 +22,6 @@ ms.custom: sfi-image-nochange
 | Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Eduframe account |
 
-> [!NOTE]
-> The following connector article is provided by Drieam, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Drieam website and use the support channels there.
 
 ## Prerequisites
 

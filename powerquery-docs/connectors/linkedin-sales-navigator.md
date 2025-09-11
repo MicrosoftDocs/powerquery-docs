@@ -4,13 +4,16 @@ description: Includes basic information, prerequisites, and information on how t
 
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/24/2024
+ms.date: 9/11/2025
 ms.author: dougklo
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
 ---
 
 # LinkedIn Sales Navigator (Beta)
+
+>[!Note]
+>This connector is owned and provided by LinkedIn.
 
 ## Summary
 

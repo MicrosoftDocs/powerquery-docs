@@ -2,11 +2,14 @@
 title: Connect Power BI to Dynatrace Grail
 description: The connector allows users to access a Dynatrace environment on which they have the necessary permissions to run Dynatrace Query Language (DQL) queries.
 author: gordon-dt
-ms.date: 3/17/2025
+ms.date: 9/11/2025
 ms.author: dougklo
 ---
 
 # Dynatrace Grail (Beta)
+
+>[!Note]
+>This connector is owned and provided by Dynatrace.
 
 ## Summary
 
@@ -16,9 +19,6 @@ ms.author: dougklo
 |Products|                            Power BI (Semantic Models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)|
 |Authentication Types Supported|      Windows (Power BI Desktop)<br/>Organizational account|
 |Function Reference Documentation|    Source|
-
-> [!NOTE]
->The following connector article is provided by Dynatrace, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Dynatrace website and use the support channels there.
 
 ## Prerequisites
 

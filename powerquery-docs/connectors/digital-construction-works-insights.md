@@ -3,12 +3,15 @@ title: Power Query Digital Construction Works Insights Connector
 description: Provides basic information and prerequisites for the Digital Construction Works Insights connector, descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/24/2024
+ms.date: 9/11/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
 
 # Digital Construction Works Insights
+
+>[!Note]
+>This connector is owned and provided by Digital Construction Works.
 
 ## Summary
 
@@ -18,9 +21,6 @@ ms.subservice: connectors
 | Products supported | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication types supported| Digital Construction Works JSON Web Token (JWT) |
 | Function reference docs | &mdash; |
-
-> [!NOTE]
-> The following connector article is provided by Digital Construction Works (DCW), the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the DCW website and use the support channels there.
 
 ## Prerequisites
 

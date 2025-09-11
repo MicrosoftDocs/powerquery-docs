@@ -3,7 +3,7 @@ title: Kyvos ODBC Connector
 description: Provides basic information, prerequisites, and instructions on how to connect to Kyvos ODBC Connector.
 author: kyvosdevelopers
 ms.topic: conceptual
-ms.date: 8/14/2024
+ms.date: 9/11/2025
 ms.author: dougklo
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
@@ -11,8 +11,8 @@ ms.custom: sfi-image-nochange
 
 # Kyvos ODBC Connector (Beta)
 
-> [!NOTE]
->The following connector article is provided by Kyvos, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or would like to see changes made to it, write to Kyvos Support at support@kyvos.io.
+>[!Note]
+>This connector is owned and provided by Kyvos.
 
 ## Summary
 
