@@ -357,6 +357,8 @@ items:
           href: connectors/data-lake-storage.md
         - name: "Analyze ADLS Gen2 data"
           href: connectors/analyze-data-in-adls-gen2.md
+      - name : "Azure Device Registry"
+        href: connectors/azure-device-registry.md
       - name: Azure HDInsight
         href: connectors/azure-hdinsight.md
       - name: Azure HDInsight on AKS Trino (Beta) (Deprecated)
