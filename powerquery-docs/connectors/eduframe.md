@@ -3,7 +3,7 @@ title: Power Query Eduframe Reporting (Beta) connector
 description: Provides basic information and prerequisites for the Eduframe Reporting connector, descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
 author: StijnKing
 ms.topic: conceptual
-ms.date: 1/24/2024
+ms.date: 9/11/2025
 ms.author: dougklo
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
@@ -65,6 +65,3 @@ You should be aware of the following limitations and issues associated with acce
 
 * There's a throttling limit of 100 API calls per 60 seconds.
 
-## Next steps
-
-You can find additional information and templates for this connector on our [documentation page](https://drieam.github.io/EduFramePowerBiConnector/).
