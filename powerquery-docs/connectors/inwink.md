@@ -1,5 +1,5 @@
 ---
-title: Power Query inwink connector (Beta)
+title: inwink connector (Beta)
 description: Provides basic information and prerequisites for the connector, and descriptions on how to connect to the inwink connector.
 author: paservois
 ms.author: dougklo
@@ -24,11 +24,11 @@ ms.custom: sfi-image-nochange
 
 ## Prerequisites
 
-Before you can sign in to the inwink connector, you must have an inwink account (username/password).
+Before you can sign in to the connector, you must have an inwink account (username/password).
 
 ## Connect to inwink data
 
-To connect to inwink data:
+Follow the next steps to connect to your data:
 
 1. Select **Get Data** from the **Home** ribbon in Power BI Desktop. Select **Online Services** from the categories on the left, select **inwink**, and then select **Connect**.
 
@@ -38,7 +38,7 @@ To connect to inwink data:
 
    :::image type="content" source="./media/inwink/select-scope.png" alt-text="Screenshot of the inwink source dialog.":::
 
-3. Select **Sign in** to sign in to your inwink account.
+3. Select **Sign in** to provide your credentials and authenticate to your data.
 
    :::image type="content" source="./media/inwink/auth-1.png" alt-text="Screenshot of the first inwink authentication dialog.":::
 
@@ -54,4 +54,4 @@ You can select **Load** on the selected tables, which brings all the tables into
 
 ## Limitations and issues
 
-Power BI Desktop may automatically create table relationships during data load, which can lead to errors. To prevent this, delete all relationships involving the *Status* column.
+Power BI Desktop may automatically create table relationships during data load, which can lead to errors. To prevent such behavior, delete all relationships involving the *Status* column.
