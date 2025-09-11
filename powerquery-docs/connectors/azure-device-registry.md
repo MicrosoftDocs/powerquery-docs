@@ -101,3 +101,10 @@ Power Query provides advanced options that you can add to your connector if need
 | --- | --- |
 | Maximum Rows per Page | Set the maximum number of rows per API call. The default is 500. You can increase this to improve performance, but larger values might increase response size. |
 | Limit Results | By default, all available records are returned. Set to true to limit the results to the first 100 records. |
+
+
+## Additional resources
+
+- [Use Azure Device Registry with Azure IoT Operations](/azure/iot-operations/deploy-iot-ops/howto-manage-update-uninstall#view-azure-device-registry)
+- [Reliability in Azure Device Registry](/azure/reliability/reliability-device-registry)
+
