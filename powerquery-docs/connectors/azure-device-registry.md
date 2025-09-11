@@ -1,6 +1,6 @@
 ---
 title: Azure Device Registry connector
-description: Includes basic information, prerequisites, and information on how to connect to Azure Device Registry, along with a list of limitations.
+description: Includes basic information, prerequisites, and information on how to connect to Azure Device Registry from Power Query Desktop and Power Query Online.
 author: SoniaLopezBravo
 ms.topic: conceptual
 ms.date: 9/9/2025
