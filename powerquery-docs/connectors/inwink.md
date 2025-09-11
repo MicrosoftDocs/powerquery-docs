@@ -54,4 +54,4 @@ You can select **Load** on the selected tables, which brings all the tables into
 
 ## Limitations and issues
 
-Table relationships might be automatically set by Power BI Desktop when loading the tables and induce errors. Delete all relationships on column 'Status'.
+Table relationships can be automatically set by Power BI Desktop when loading the tables and induce errors. Delete all relationships on column *Status*.
