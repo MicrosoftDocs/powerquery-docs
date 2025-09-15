@@ -4,16 +4,17 @@ description: Provides basic information and prerequisites for the Supermetrics c
 author: diegomotasuper
 ms.topic: conceptual
 ms.date: 04/05/2024
-ms.author: jburchel
+ms.author: dougklo
 ms.subservice: connectors
 ---
 
 # Supermetrics Power Query custom connector
 
->[!Note]
+> [!NOTE]
 >The following connector article is provided by Supermetrics, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the https://supermetrics.com/ website and use the support channels there.
 
 ## Summary
+
 | Item | Description                                                                       |
 | ---- |-----------------------------------------------------------------------------------|
 | Release State | Preview                                                                     |
@@ -21,12 +22,12 @@ ms.subservice: connectors
 | Authentication Types Supported | OAuth                                  |
 | Function reference docs | N/A |
 
->[!Note]
+> [!NOTE]
 >Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
-
 ## Prerequisites
->Before using the connector, you need to create an account in the [Supermetrics Hub](https://hub.supermetrics.com)  and save at least one query.
+
+Before using the connector, you need to create an account in the [Supermetrics Hub](https://hub.supermetrics.com)  and save at least one query.
 
 Follow these steps to create and save a query:
 
@@ -44,7 +45,6 @@ Follow these steps to create and save a query:
    > [!NOTE]
    > If you're trying to get data from popular data sources, such as Google Ads, Google Analytics 4, Facebook Insights, LinkedIn Ads, once you add a connection to the data source with Supermetrics, you can have a quick start with one of the [template reports](https://supermetrics.com/template-gallery?page=1&search=&destination=567736) we offer.
 
-
 5. Define the query settings for the data you’d like to see in your reports:
     - Pick accounts to fetch data from.
     - Define a date range - use a flexible date range, for example “last 2 months”, and always get data for the previous two months. Note that you can change the date range for a particular report using the connector.
@@ -55,14 +55,15 @@ Follow these steps to create and save a query:
 
 The queries you save in the Hub are available to you in Power BI Desktop once you sign in to the Supermetrics connector. Feel free to connect multiple data sources and save queries in each to be able to create a combined report, say, from your Ads accounts across multiple marketing sources.
 
-
-
 ## Capabilities supported
-* Import 
-* Data import from multiple sources
+
+- Import
+- Data import from multiple sources
 
 ## Connection instructions
-To connect to Supermetrics
+
+To connect to Supermetrics:
+
 1. Open Power BI Desktop.
 
 2. Navigate to the **Home** ribbon and select **Get Data**.
@@ -100,6 +101,7 @@ To connect to Supermetrics
     Once you see the dataset you’d like to use, select **Load** to use it in Power BI Desktop, or **Transform** to refine it in the Power Query Editor first.
 
 ## Limitations
+
 - Query manager must be used to create and manage queries
 - The timeout limit for polling the query results is 30 minutes
 
@@ -108,10 +110,11 @@ To connect to Supermetrics
 *Query authentication "email@domain.com" is no longer available.*
 
 Possible reasons:
+
 - The connection between Supermetrics and the data source expired. You need to reconnect in Supermetrics Hub.
 
 ## Next steps
 
 You might also find the following Supermetrics information useful:
 
-* [Supermetrics for Power BI: Getting started](https://supermetrics.com/docs/product-power-bi-getting-started/)
+- [Supermetrics for Power BI: Getting started](https://supermetrics.com/docs/product-power-bi-getting-started/)
