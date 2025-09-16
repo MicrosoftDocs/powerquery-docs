@@ -228,3 +228,20 @@ A known issue is that the Google BigQuery connector doesn't currently support ma
 * The quota is exceeded across the customer account usage of project.lists API calls to Google. When multiple reports refresh simultaneously, it might trigger an error in different queries or reports. To prevent the error, schedule report refreshes at staggered intervals.
 * Update query to include a Billing Project ID - `GoogleBigQuery.Database([BillingProject="Include-Billing-Project-Id-Here"])`.
 * Calls to `GoogleBigQuery.Database` should be in the same query as the schema and table selection to avoid the error.
+
+### ExecuteQueryInternalAsync failure when using ADBC
+
+Some users may experience issues when connecting to BigQuery using the `Implementation="2.0"` path and receive the error `Cannot execute <ExecuteQueryInternalAsync>b__2 after 5 tries`. This could be due to a few factors:
+
+1. The permission issue outlined below.
+2. If the `LargeResultDataset` is passed, then the driver will attempt to create the output dataset with the name provided. This requires the correct permissions to do so.
+
+If you receieve the message this message along with additional details that contains `Last exception: ...` where `...` are additional details of the failure, please create a case for further investigation.
+
+### Permission issues connecting with ADBC
+
+Some environments may require additional permissions to connect using `Implementation="2.0"`/ADBC. This is because the ADBC path uses different BigQuery APIs to query and load data than ODBC does. The required permissions are outlined in the driver's [GitHub repository](https://github.com/apache/arrow-adbc/tree/main/csharp/src/Drivers/BigQuery#permissions).  
+
+### Unable to refresh partitioned models with ADBC
+
+A known issue in the Google BigQuery connector is that partitioned semantic models may not refresh correctly. This often shows with the error `Cannot execute <ReadChunkWithRetries>b__0 after 5 tries`. A recently fix was published for this and should be deployed in October 2025. If you receieve the message this message along with additional details that contains `Last exception: ...` where `...` are additional details of the failure, please create a case for further investigation.
