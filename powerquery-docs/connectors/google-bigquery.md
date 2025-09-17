@@ -236,7 +236,7 @@ Some users mignt experience issues when connecting to BigQuery using the `Implem
 * The permission issue outlined in the following section.
 * If `LargeResultDataset` is passed, then the driver attempts to create the output dataset with the name provided. This creation requires the correct permissions to do so.
 
-If you receieve this message along with additional details that contains `Last exception: ...`, where `...` are additional details of the failure, create a case for further investigation.
+If you receieve this message along with additional details that contains `Last exception: ...`, where `...` are additional details of the failure, [create a case](https://devblogs.microsoft.com/premier-developer/opening-an-incident-using-microsoft-premier-online-now-services-hub/) for further investigation.
 
 ### Permission issues connecting with ADBC
 
@@ -244,4 +244,4 @@ Some environments might require additional permissions to connect using `Impleme
 
 ### Unable to refresh partitioned models with ADBC
 
-A known issue in the Google BigQuery connector is that partitioned semantic models might not refresh correctly. This often shows with the `Cannot execute <ReadChunkWithRetries>b__0 after 5 tries` error. A recent fix was published for this issue and should be deployed in October 2025. If you receieve this message along with additional details that contains `Last exception: ...`, where `...` are additional details of the failure, create a case for further investigation.
+A known issue in the Google BigQuery connector is that partitioned semantic models might not refresh correctly. This often shows with the `Cannot execute <ReadChunkWithRetries>b__0 after 5 tries` error. A recent fix was published for this issue and should be deployed in October 2025. If you receieve this message along with additional details that contains `Last exception: ...`, where `...` are additional details of the failure, [create a case](https://devblogs.microsoft.com/premier-developer/opening-an-incident-using-microsoft-premier-online-now-services-hub/) for further investigation.
