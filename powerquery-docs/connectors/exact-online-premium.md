@@ -1,16 +1,16 @@
 ---
 title: Power Query Exact Online Premium connector
 description: Provides basic information and prerequisites for the Exact Online Premium connector, supported authentication types, outlines limitations and issues.
-author: jonburchel
+author: DougKlopfenstein
 ms.topic: conceptual
 ms.date: 04/05/2024
-ms.author: jburchel
+ms.author: dougklo
 ms.subservice: connectors
 ---
 
 # Exact Online Premium Power Query custom connector
 
->[!NOTE]
+> [!NOTE]
 >The following connector article is provided by Exact Online, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Exact Online website and use the support channels there.
 
 ## Summary
@@ -32,7 +32,7 @@ ms.subservice: connectors
   - Open the **Master data** screen
   - Locate the **Microsoft Office 365** section and add the IP address to the Power BI access list
 
-  >[!Note]
+  > [!NOTE]
   >The Microsoft Office 365 menu also contains downloadable report templates for Power BI, which can be used with this connector.
 
 - In order to refresh data, an **on-premises data gateway** must be available. You can follow [this link](/data-integration/gateway/service-gateway-install) to learn how to install it; we recommend installing it on a managed machine that is always on.
@@ -70,7 +70,6 @@ To connect to Exact Online Premium:
    :::image type="content" source="media/exact-online-premium/exact-online-premium-navigator.png" alt-text="Navigator screen showing Exact Online content.":::
 
 1. Finally, select the data usage mode (import or direct query)
-
 
 ## Limitations
 

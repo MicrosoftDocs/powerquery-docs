@@ -2,7 +2,7 @@
 title: "Manage connections (Preview)"
 description: Overview of the manage connections feature in Power Query Online that allows you to unlink and edit connections from your project.
 author: ptyx507
-ms.date: 6/26/2024
+ms.date: 8/20/2025
 ms.author: miescobar
 ms.subservice: get-data
 ---
@@ -52,7 +52,7 @@ A new prompt then asks you to confirm that you want to unlink the connection.
 :::image type="content" source="media/manage-connections/confirmation-prompt.png" alt-text="Screenshot of the prompt asking you to confirm the unlink action.":::
 
 > [!NOTE]
->If you want to delete a connection from within a specific product integration, such as Microsoft Power BI or Microsoft Fabric, be sure to check out the documentation for each product on how a centralized connections portal can be used or try using the [Global permissions](#global-permissions) view.
+>If you want to delete a connection from within a specific product integration, such as Microsoft Power BI or Microsoft Fabric, be sure to check out the documentation for each product on how a centralized connections portal can be used. Or try using the [Global permissions](#global-permissions) view.
 
 ### Edit a connection in current project
 
@@ -77,7 +77,7 @@ The global permissions view displays a list of every single connection that's av
 ### Edit a connection in global permissions
 
 > [!CAUTION]
-> Editing global permissions are made in much the same way as editing the current project. However, be aware that making changes to the global permissions affect all of the connections of the particular type you are editing instead of just the connection in the current project.
+> Editing global permissions are made in much the same way as editing the current project. However, making changes to the global permissions affect all of the connections of the particular type you're editing instead of just the connection in the current project.
 
 Right next to the name of the connection, and before the delete icon, there's an icon to edit the connection.
 
@@ -94,7 +94,7 @@ The edit functionality allows you to change the following values:
 ### Delete a connection in global permissions
 
 > [!WARNING]
-> Be aware that deleting a connection in global permissions deletes all of the connections associated with the individual connection you are deleting instead of just the connection in the current project. Once the connection is deleted, you can't undo the deletion. Be sure to determine the impact in other projects that rely on this connection before deleting a connection in global permissions.
+> Deleting a connection in global permissions deletes all of the connections associated with the individual connection you're deleting instead of just the connection in the current project. Once the connection is deleted, you can't undo the deletion. Be sure to determine the impact in other projects that rely on this connection before deleting a connection in global permissions.
 
 Next to the name of the connection, after the edit icon, there's an icon to delete the connection.
 
@@ -104,7 +104,7 @@ When you select the delete icon next to the connection name, you're asked to ver
 
 :::image type="content" source="media/manage-connections/delete-connection-dialog.png" alt-text="Screenshot of the dialog for deleting a connection for the selected OData connection.":::
 
-## More Resources
+## Related content
 
 * [Get Data experience in Power Query](get-data-experience.md)
 * [Connectors available in Power Query](connectors/index.md)
