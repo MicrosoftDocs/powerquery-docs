@@ -24,7 +24,10 @@ ms.subservice: connectors
 ## Prerequisites
 
 * An Azure subscription. Go to [Get Azure free trial](https://azure.microsoft.com/pricing/free-trial/).
-* You must have appropriate rights in [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview) with at least read access to the resources you want to query.
+* You must have appropriate rights in [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview) with at least read access to the Azure Device Registry resources you want to query.
+
+> [!NOTE]
+> The Azure Device Registry connector only works for namespace assets (preview) and namespace devices (preview) in AIO 1.2.x versions. For more information, see [What is asset and device management in Azure IoT Operations?](/azure/iot-operations/discover-manage-assets/overview-manage-assets).
 
 ## Capabilities supported
 
@@ -51,8 +54,8 @@ To connect to Azure Device Registry from Power Query Desktop:
     | Field | Description |
     | --- | --- |
     | Scope | Choose whether to retrieve data from all Azure subscriptions in your tenant or from specific subscriptions. |
-    | Subscription ID(s) | Applies only when Scope is set to Subscription. By default, all subscriptions are included. Enter one or more Subscription IDs, separated by commas, to narrow the scope to specific subscriptions. |
-    | ADR Namespace(s) | Applies only when Scope is set to Subscription. By default, the namespace filter applies across all subscriptions if no Subscription IDs are provided. Enter one or more ADR namespaces, separated by commas, to filter results. |
+    | Subscription ID(s) | Applies **only** when scope is set to Subscription. By default, all subscriptions are included. Enter one or more Subscription IDs, separated by commas, to narrow the scope to specific subscriptions. If you select tenant for scope, you don't need to add a Subscription ID.|
+    | ADR Namespace(s) | Applies **only** when scope is set to Subscription. By default, the namespace filter applies across all subscriptions if no Subscription IDs are provided. Enter one or more ADR namespaces, separated by commas, to filter results. If you select tenant for scope, then you don't need to add an ADR Namespace.|
     | Custom Attributes | Enter a comma-separated list of up to 100 custom attribute names to include as separate columns. A column named "attributes" is always included and contains all custom attributes in JSON format, even if they aren't listed in this field. |
 
     > [!NOTE]
@@ -60,7 +63,7 @@ To connect to Azure Device Registry from Power Query Desktop:
 
 1. Select **Next**.
 1. If you're connecting to this site for the first time, select **Sign in** and input your credentials. Then select **Connect**.
-1. In **Navigator** pane, select the tables with the resource types you require. You can select either namespace Assets or namespace Devices or both.
+1. In **Navigator** pane, select the tables with the resource types you require. You can select either namespace assets (preview), devices (preview), or both.
 
    :::image type="content" source="./media/azure-device-registry/navigator-desktop.png" alt-text="Screenshot of the Navigator Dialog Box in Power Query Desktop.":::
 
@@ -70,7 +73,7 @@ To connect to Azure Device Registry from Power Query Desktop:
 
 To connect to Azure Device Registry from Power Query Online:
 
-1. In **Choose data source**, select Azure or search for **Azure Resource Graph**, and then select **Azure Resource Graph**. For more information, see [Where to get data in Power Query](../where-to-get-data.md).
+1. In **Choose data source**, select Azure or search for **Azure Device Registry**, and then select **Azure Device Registry**. For more information, see [Where to get data in Power Query](../where-to-get-data.md).
 1. In **Connect to data source**, select a scope and fill in any optional or advanced fields.
 
    :::image type="content" source="./media/azure-device-registry/enter-information-online.png" alt-text="Screenshot of Azure Device Registry dialog in Power Query Online." lightbox="./media/azure-device-registry/enter-information-online.png":::
@@ -81,14 +84,14 @@ To connect to Azure Device Registry from Power Query Online:
     | Field | Description |
     | --- | --- |
     | Scope | Choose whether to retrieve data from all Azure subscriptions in your tenant or from specific subscriptions. |
-    | Subscription ID(s) | Applies only when Scope is set to Subscription. By default, all subscriptions are included. Enter one or more Subscription IDs, separated by commas, to narrow the scope to specific subscriptions. |
-    | ADR Namespace(s) | Applies only when Scope is set to Subscription. By default, the namespace filter applies across all subscriptions if no Subscription IDs are provided. Enter one or more ADR namespaces, separated by commas, to filter results. |
+    | Subscription ID(s) | Applies **only** when scope is set to Subscription. By default, all subscriptions are included. Enter one or more Subscription IDs, separated by commas, to narrow the scope to specific subscriptions.|
+    | ADR Namespace(s) | Applies **only** when scope is set to Subscription. By default, the namespace filter applies across all subscriptions if no Subscription IDs are provided. Enter one or more ADR namespaces, separated by commas, to filter results.|
     | Custom Attributes | Enter a comma-separated list of up to 100 custom attribute names to include as separate columns. A column named "attributes" is always included and contains all custom attributes in JSON format, even if they aren't listed in this field. |
 
 1. Select **Next**.
 1. If you're connecting to this site for the first time, select **Sign in** and input your credentials. Then select **Connect**.
 1. When you're successfully signed in, select **Next**.
-1. In **Choose data**, select the resource types you require (either namespace Assets, namespace Devices or both) and then select **Create**.
+1. In **Choose data**, select the resource types you require (either namespace assets (preview), devices (preview) or both) and then select **Create**.
 
     > [!NOTE]
     > Expect longer wait times for large query results.
