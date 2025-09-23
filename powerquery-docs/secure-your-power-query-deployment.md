@@ -12,9 +12,9 @@ ai-usage: ai-assisted
 
 # Secure your Power Query deployment
 
-Power Query provides capabilities to extract, transform, and load data from various sources into destinations like Power BI, Excel, Dataverse, and Azure Data Lake Storage. When deploying this service, it's important to follow security best practices to protect data, configurations, and connections.
+Power Query provides capabilities to extract, transform, and load data from various sources into destinations like Power BI, Excel, Dataverse, and Azure Data Lake Storage. When using Power Query, it's important to follow security best practices to protect data, configurations, and connections.
 
-This article provides guidance on how to best secure your Power Query deployment.
+This article provides guidance on how to apply security best practices when working with Power Query, helping you safeguard against outside risks.
 
 ## Data protection
 
@@ -54,15 +54,11 @@ Implementing network security controls helps protect your Power Query connection
 
 - **Enable TLS encryption for all connections**: Ensure that connections to data sources use Transport Layer Security (TLS) encryption with modern cipher suites. Outdated cipher suites might not be supported and could pose security risks. For more information, go to [Power Query cipher suites](common-issues.md#power-query).
 
-- **Configure firewalls for data source access**: When using Power Query with Azure Storage or other cloud services with firewall settings, ensure proper configuration to allow authenticated connections while blocking unauthorized access. For more information, go to [Azure Blob Storage limitations](connectors/azure-blob-storage.md#limitations).
-
-- **Consider Azure ExpressRoute for critical deployments**: For enterprise environments with sensitive data, consider using Azure ExpressRoute to establish private connections between your on-premises network and Microsoft cloud services, bypassing the public internet entirely. For more information, go to [Network security](/power-platform/guidance/adoption/data-protection#network-security).
+- **Configure firewalls for data source access**: When using Power Query Online with Azure Storage or other cloud services with firewall settings, ensure proper configuration to allow authenticated connections while blocking unauthorized access. For more information, go to [Azure Blob Storage limitations](connectors/azure-blob-storage.md#limitations).
 
 ## Logging and monitoring
 
 Implementing comprehensive logging and monitoring helps detect suspicious activities and troubleshoot issues with your Power Query deployments.
-
-- **Enable Query Diagnostics for sensitive operations**: Use Query Diagnostics in Power BI Desktop to investigate Power Query performance and understand what queries are being sent to data sources. This helps identify potential security issues and ensures query folding is working correctly. However, unless you need Query Diagnostics for troubleshooting, it's best to keep these diagnostics off. These diagnostics are stored in log files and could contain customer content, such as query names, source paths, and so on. For more information, go to [Query Diagnostics](/power-bi/guidance/powerbi-implementation-planning-auditing-monitoring-data-level-auditing#query-diagnostics).
 
 - **Use appropriate Web Preview Warning Level** - Use the appropriate Web Preview Warning Level in desktop builds of Power Query. Moderate and Strict ensure that you don't load any websites that you haven't visited before, which can protect you from loading malicious websites.
 
@@ -70,23 +66,7 @@ Implementing comprehensive logging and monitoring helps detect suspicious activi
 
 - **Track data source connections**: Monitor which data sources are being accessed, how frequently, and by which users to identify unusual access patterns that might indicate security issues. For more information, go to [Performance monitoring](/power-bi/guidance/powerbi-implementation-planning-auditing-monitoring-overview#value-of-auditing-and-monitoring).
 
-- **Implement Azure Log Analytics for Premium workspaces**: For Power BI Premium workspaces, integrate with Azure Log Analytics to capture semantic model events and monitor data access patterns at scale. For more information, go to [Azure Log Analytics](/power-bi/guidance/powerbi-implementation-planning-auditing-monitoring-data-level-auditing#azure-log-analytics).
-
 - **Audit dataflow and datamart operations**: Track user activities for Power BI dataflows and datamarts using the Power BI activity log to maintain visibility into data transformation operations. For more information, go to [Dataflow monitoring](/power-bi/guidance/powerbi-implementation-planning-auditing-monitoring-data-level-auditing#dataflow-monitoring).
-
-## Backup and recovery
-
-Protecting your Power Query assets through proper backup and recovery strategies ensures business continuity and prevents data loss.
-
-- **Back up dataflow definitions**: Since deleted dataflows can't be recovered, implement a backup strategy by exporting dataflow definitions to JSON files and storing them in SharePoint or Azure Data Lake Gen2. Consider using Power Automate or Azure Logic Apps to automate this process. For more information, go to [Dataflows best practices](/power-bi/transform-model/dataflows/dataflows-best-practices).
-
-- **Enable Azure storage connections for automatic backups**: When using Power BI dataflows, enable Azure storage connections on your workspace to automatically store copies of your dataflow definitions and snapshots in a data lake. These stored copies allow recovery of deleted or modified dataflows. For more information, go to [Dataflows best practices](/power-bi/transform-model/dataflows/dataflows-best-practices#deleted-dataflows-cant-be-recovered).
-
-- **Back up semantic models with XMLA endpoints**: For Power BI Premium or Premium Per User (PPU) licenses, utilize the Backup and Restore feature through XML for Analysis (XMLA) endpoints to create backups of your semantic models. These backups provide protection against corruption or loss and enable migration scenarios. For more information, go to [Backup and restore semantic models with Power BI Premium](/fabric/enterprise/powerbi/service-premium-backup-restore-dataset).
-
-- **Consider multi-geo backup requirements**: When using backup and restore features that rely on Azure Data Lake Gen2 storage, provision the storage account in the same region as your Power BI Premium capacity to avoid data transfer costs and comply with data residency requirements. For more information, go to [Multi-geo considerations](/fabric/enterprise/powerbi/service-premium-backup-restore-dataset#multi-geo-considerations).
-
-- **Implement a disaster recovery plan**: Develop a comprehensive disaster recovery plan that includes the ability to access Power Query data through alternative methods such as the OneLake ADLS Gen2 API or tools like Azure Storage Explorer if there are service disruptions. For more information, go to [Set up disaster recovery](/azure/reliability/reliability-fabric#set-up-disaster-recovery).
 
 ## Service-specific security
 
@@ -96,11 +76,9 @@ Power Query includes specific security considerations related to its implementat
 
 - **Secure R and Python scripts**: When using R or Python scripts in Power Query, be aware that they execute with the permissions of the user and could potentially access sensitive data. Only use scripts from trusted sources and set appropriate privacy levels. For more information, go to [Use R in Power Query Editor](/power-bi/connect-data/desktop-r-in-query-editor#use-an-r-script-in-power-query-editor).
 
-- **Implement Customer Lockbox for enterprise deployments**: For enterprise deployments where sensitive data is processed, consider implementing Customer Lockbox to control Microsoft access to your environments when resolving support issues. This implementation provides temporary, just-in-time access with proper approvals. For more information, go to [Manage Microsoft access to customer data with Customer Lockbox](/power-platform/guidance/adoption/data-protection#manage-microsoft-access-to-customer-data-with-customer-lockbox).
+## Best practices for gateways
 
-- **Establish separate environments for development and production**: Create distinct environments for development and production to prevent accidental changes to production data pipelines. This separation also allows for proper testing of security controls before deployment. For more information, go to [Use this privacy setting for data sources in a controlled development environment](privacy-levels.md).
-
-- **Consider gateway clustering for critical workloads**: For enterprise environments with critical data processing needs, implement gateway clusters to improve reliability and meet different compliance or security requirements for various data sources. For more information, go to [Network security](/power-platform/guidance/adoption/data-protection#network-security).
+- **Consider gateway clustering for critical workloads**: For enterprise environments with critical data processing needs, implement gateway clusters to improve reliability and meet different compliance or security requirements for various data sources. For more information, go to [Connect to on-premises resources](/power-platform/guidance/adoption/data-protection#connect-to-on-premise-resources).
 
 ## Learn more
 
