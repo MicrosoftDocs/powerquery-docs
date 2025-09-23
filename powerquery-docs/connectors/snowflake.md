@@ -177,7 +177,7 @@ Currently, the [Snowflake connector implementation 2.0](#snowflake-connector-imp
 
 - Snowflake query with `count distinct` logic returns incorrect result. 
 - When creating relationships, encounter error `Object reference not set to an instance of an object`. The relationship can still be defined once you cancel the pop-up window.
-- Increased memory use. The overall load time is typically faster using `Implementation="2.0"`, but the memory consumption can also be higher, in some cases causing issues such as `Resource Governing: This operation was canceled because there wasn't enough memory to finish running it. Either reduce the memory footprint of your dataset by doing things such as limiting the amount of imported data, or if using Power BI Premium, increase the memory of the Premium capacity where this dataset is hosted.` A fix is planned for late 2025/early 2026.  
+- Increased memory use. The overall load time is typically faster using `Implementation="2.0"`, but the memory consumption can also be higher, in some cases causing issues such as `Resource Governing: This operation was canceled because there wasn't enough memory to finish running it. Either reduce the memory footprint of your dataset by doing things such as limiting the amount of imported data, or if using Power BI Premium, increase the memory of the Premium capacity where this dataset is hosted.`  
 
 ### Resolved issues
 
