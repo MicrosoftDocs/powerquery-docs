@@ -1,5 +1,5 @@
 ---
-title: Secure your Power Query deployment
+title: Security best practices for Power Query
 description: Learn how to secure Power Query, with best practices for protecting your data, connections, and transformations.
 author: DougKlopfenstein
 ms.author: dougklo
@@ -10,7 +10,7 @@ ms.date: 9/24/2025
 ai-usage: ai-assisted
 ---
 
-# Secure your Power Query deployment
+# Security best practices for Power Query
 
 Power Query provides capabilities to extract, transform, and load data from various sources into destinations like Power BI, Excel, Dataverse, and Azure Data Lake Storage. When using Power Query, it's important to follow security best practices to protect data, configurations, and connections.
 

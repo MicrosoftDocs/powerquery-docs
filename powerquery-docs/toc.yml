@@ -270,7 +270,7 @@ items:
     - name: Security
       items:
         - name: Secure your Power Query deployment
-          href: secure-your-power-query-deployment.md
+          href: security-best-practices-power-query.md
         - name: "Data exfiltration best practices for dataflows"
           href: dataflows/data-exfiltration-best-practices.md
     - name: Power Query template (preview)
