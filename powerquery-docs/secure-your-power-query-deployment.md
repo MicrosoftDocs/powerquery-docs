@@ -6,7 +6,7 @@ ms.author: dougklo
 ms.service: powerquery
 ms.topic: conceptual
 ms.custom: horz-security
-ms.date: 08/14/2025
+ms.date: 9/24/2025
 ai-usage: ai-assisted
 ---
 
@@ -60,7 +60,9 @@ Implementing network security controls helps protect your Power Query connection
 
 Implementing comprehensive logging and monitoring helps detect suspicious activities and troubleshoot issues with your Power Query deployments.
 
-- **Use appropriate Web Preview Warning Level** - Use the appropriate Web Preview Warning Level in desktop builds of Power Query. Moderate and Strict ensure that you don't load any websites that you haven't visited before, which can protect you from loading malicious websites.
+- **Enable Query Diagnostics for sensitive operations**: Use Query Diagnostics in Power BI Desktop to investigate Power Query performance and understand what queries are being sent to data sources. These diagnostics ensure query folding is working correctly. However, unless you need Query Diagnostics for troubleshooting, it's best to keep these diagnostics off. These diagnostics are stored in log files and could contain customer content, such as query names, source paths, and so on. For more information, go to [Query Diagnostics](/power-bi/guidance/powerbi-implementation-planning-auditing-monitoring-data-level-auditing#query-diagnostics).
+
+- **Use appropriate Web Preview Warning Level** - Use the appropriate Web Preview Warning Level in desktop builds of Power Query. Moderate and Strict ensure that you don't load any websites that you haven't visited before, which can protect you from loading malicious websites. The Web Preview Warning Level option in Power Query is only available from Power BI Desktop or Excel.
 
 - **Monitor native queries sent to data sources**: To ensure queries don't contain unexpected or potentially harmful operations, regularly review the actual queries sent to your data sources. Query Diagnostics can help identify which queries are being sent. For more information, go to [Query evaluation and folding](/power-bi/guidance/powerbi-implementation-planning-auditing-monitoring-data-level-auditing#query-evaluation-and-folding).
 
