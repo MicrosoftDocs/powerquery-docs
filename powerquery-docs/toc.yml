@@ -357,6 +357,8 @@ items:
           href: connectors/data-lake-storage.md
         - name: "Analyze ADLS Gen2 data"
           href: connectors/analyze-data-in-adls-gen2.md
+      - name : "Azure Device Registry (Beta)"
+        href: connectors/azure-device-registry.md
       - name: Azure HDInsight
         href: connectors/azure-hdinsight.md
       - name: Azure HDInsight on AKS Trino (Beta) (Deprecated)
@@ -387,7 +389,7 @@ items:
         href: connectors/cloudbluepsa.md
       - name: "Cognite Data Fusion (OData)"
         href: connectors/cognite-data-fusion-(odata).md
-      - name: "Cognite Data Fusion (REST API) (Beta)"
+      - name: "Cognite Data Fusion (REST API)"
         href: connectors/cognite-data-fusion-(rest-api).md
       - name: "Common Data Service (Legacy)"
         href: connectors/common-data-service-legacy.md

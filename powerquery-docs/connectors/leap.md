@@ -4,7 +4,7 @@ description: Includes basic information, prerequisites and instructions on how t
 author: appintbot-leapdev
 ms.topic: conceptual
 ms.date: 04/05/2024
-ms.author: jburchel
+ms.author: dougklo
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
 ---
