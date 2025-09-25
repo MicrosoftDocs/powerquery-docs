@@ -96,7 +96,7 @@ To connect to Dynatrace Grail DQL from Power Query Online:
 
    :::image type="content" source="./media/dynatrace-grail-dql/connector13-white.png" alt-text="Screenshot of the environment entry dialog box in Power Query Online for the Dynatrace tenant to connect to.":::
 
-3. If you want to use any **advance options**, select the option and enter the data to use with that option. More information: [Connect using advanced options](#connect-using-advanced-options)
+3. If you want to use any **advanced options**, select the option and enter the data to use with that option. More information: [Connect using advanced options](#connect-using-advanced-options)
 
 4. Sign into your environment to authenticate your permissions. **Sign in** with an organizational account.
 
