@@ -235,6 +235,20 @@ Some users mignt experience issues when connecting to BigQuery using the `Implem
 
 * The permission issue outlined in the following section.
 * If `LargeResultDataset` is passed, then the driver attempts to create the output dataset with the name provided. This creation requires the correct permissions to do so.
+* When no region is explicitly specified during dataset creation, the BigQuery API defaults to the US multi-region. This behavior is driven by the API itself and not by the connector or client configuration.
+
+#### Workaround Options
+
+##### Manual Dataset Creation
+
+To avoid unexpected region defaults, manually create the dataset in your desired region using the [BigQuery Console](https://console.cloud.google.com/).
+
+##### Desktop Connector Configuration
+
+If you're using Power BI Desktop and encounter errors while navigating tables:
+
+1. Go to **File** > **Options and settings** > **Options**
+2. Under **Preview features**, uncheck the option **Use new Google BigQuery connector implementation**.
 
 If you receieve this message along with additional details that contains `Last exception: ...`, where `...` are additional details of the failure, [create a case](https://devblogs.microsoft.com/premier-developer/opening-an-incident-using-microsoft-premier-online-now-services-hub/) for further investigation.
 
