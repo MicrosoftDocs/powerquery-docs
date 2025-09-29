@@ -240,14 +240,15 @@ Some users mignt experience issues when connecting to BigQuery using the `Implem
 #### Workaround Options
 
 ##### Manual Dataset Creation
+
 To avoid unexpected region defaults, manually create the dataset in your desired region using the [BigQuery Console](https://console.cloud.google.com/).
 
 ##### Desktop Connector Configuration
+
 If you're using Power BI Desktop and encounter errors while navigating tables:
 
-Go to File > Options and settings > Options
-Under Preview features, uncheck the option:
-Use new Google BigQuery connector implementation
+1. Go to **File** > **Options and settings** > **Options**
+2. Under **Preview features**, uncheck the option **Use new Google BigQuery connector implementation**.
 
 If you receieve this message along with additional details that contains `Last exception: ...`, where `...` are additional details of the failure, [create a case](https://devblogs.microsoft.com/premier-developer/opening-an-incident-using-microsoft-premier-online-now-services-hub/) for further investigation.
 
