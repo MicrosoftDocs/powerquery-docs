@@ -107,6 +107,6 @@ For more information on Salesforce API versions and support, visit the [Salesfor
 
 * Lightning URLs aren't supported.
 
-* Custom URLs only support the salesforce.com and cloudforce.com domains, the use of other domains will result in the "Invalid Arguments" error
+* Custom URLs only support the salesforce.com and cloudforce.com domains. The use of other domains results in an "Invalid Arguments" error.
 
 For more information about Salesforce internal API limits, go to [Salesforce Developer Limits and Allocations Quick Reference](https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm#!).
