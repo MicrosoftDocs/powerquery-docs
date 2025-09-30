@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.date: 10/28/2024
 ms.author: dougklo
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # Access database
@@ -20,7 +21,7 @@ ms.subservice: connectors
 | Function Reference Documentation | [Access.Database](/powerquery-m/access-database) |
 
 > [!NOTE]
-> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+> Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
 

@@ -6,6 +6,7 @@ ms.topic: tutorial
 ms.date: 5/17/2024
 ms.author: miescobar
 ms.subservice: custom-connectors
+ms.custom: sfi-image-nochange
 ---
 
 # TripPin part 9 - TestConnection

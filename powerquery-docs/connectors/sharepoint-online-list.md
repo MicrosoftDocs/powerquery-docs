@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.date: 2/16/2024
 ms.author: dougklo
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # SharePoint Online list
@@ -20,7 +21,7 @@ ms.subservice: connectors
 | Function Reference Documentation | [SharePoint.Contents](/powerquery-m/sharepoint-contents)<br/>[SharePoint.Files](/powerquery-m/sharepoint-files)<br/>[SharePoint.Tables](/powerquery-m/sharepoint-tables) |
 
 > [!NOTE]
-> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+> Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 > [!NOTE]
 > If you select Service Principal as the authentication type in Power BI service, you need to grant it app-only permissions through Azure Access Control Services (ACS). For more information, go to [Granting access using SharePoint App-Only](/sharepoint/dev/solution-guidance/security-apponly-azureacs).

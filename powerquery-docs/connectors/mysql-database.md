@@ -3,9 +3,10 @@ title: Power Query MySQL database connector
 description: Provides basic information about products that use the connector, supported authentication types, prerequisites, and connection instructions.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 2/20/2025
+ms.date: 5/21/2025
 ms.author: dougklo
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # MySQL database
@@ -20,7 +21,7 @@ ms.subservice: connectors
 | Function Reference Documentation | [MySQL.Database](/powerquery-m/mysql-database) |
 
 > [!NOTE]
-> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+> Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
 
@@ -123,3 +124,7 @@ For cases where Python or R is used with a MySQL database on-premises connection
 
 * Make the MySQL server database accessible from the cloud.
 * Move the MySQL on-premises data to a different dataset and use the Enterprise Gateway exclusively for that purpose. 
+
+### Unsupported regions
+
+The MySQL connector doesn't support China Cloud for Power Apps, Power Automate and Logic Apps. Refer to [MySQL connector](/connectors/mysql) for those products.

@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.date: 4/5/2024
 ms.author: dougklo
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # Zendesk Data (Beta) Power Query custom connector

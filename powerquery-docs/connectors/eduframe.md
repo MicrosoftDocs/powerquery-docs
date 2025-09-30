@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.date: 1/24/2024
 ms.author: dougklo
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # Eduframe Reporting (Beta)
@@ -19,7 +20,7 @@ ms.subservice: connectors
 | Authentication Types Supported | Eduframe account |
 
 > [!NOTE]
-> The following connector article is provided by Drieam, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Drieam website and use the support channels there.
+> The following connector article is provided by Eduframe, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Eduframe website and use the support channels there.
 
 ## Prerequisites
 
@@ -65,4 +66,4 @@ You should be aware of the following limitations and issues associated with acce
 
 ## Next steps
 
-You can find additional information and templates for this connector on our [documentation page](https://drieam.github.io/EduFramePowerBiConnector/).
+You can find additional information and templates for this connector on our [documentation page](https://docs.eduframe.nl/docs/powerbi/intro).

@@ -3,9 +3,10 @@ title: Power Query JSON connector
 description: Provides basic information and connection instructions, along with instructions on loading from the web and basic troubleshooting information.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 2/28/2024
+ms.date: 7/16/2025
 ms.author: dougklo
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # JSON
@@ -20,7 +21,7 @@ ms.subservice: connectors
 | Function Reference Documentation | [Json.Document](/powerquery-m/json-document) |
 
 > [!NOTE]
-> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+> Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Capabilities supported
 
@@ -32,7 +33,7 @@ To load a local JSON file:
 
 1. Select the **JSON** option in the **Get Data** selection. This selection launches a local file browser where you can select your JSON file.
 
-   :::image type="content" source="./media/json/json-get-data.png" alt-text="Image of the file browser with two JSON files to choose from.":::
+   :::image type="content" source="./media/json/json-get-data.png" alt-text="Screenshot of the file browser with two JSON files to choose from.":::
 
 2. Select **Open** to open the file.
 
@@ -66,7 +67,7 @@ To load a JSON file from the web, select the [Web connector](./web/web.md), ente
 
 ## Automatic table detection from JSON files
 
-Importing data from JSON files (or Web APIs) can be challenging for end users. Here is an example of JSON file with multiple levels of nested data.
+Importing data from JSON files (or Web APIs) can be challenging for end users. Here's an example of JSON file with multiple levels of nested data.
 
 :::image type="content" source="./media/json/sample-json-file.png" alt-text="Screenshot of the contents of a JSON file with nested data.":::
 
@@ -76,7 +77,7 @@ With the addition of automatic table detection capabilities, using the JSON conn
 
 ## Troubleshooting
 
-If you see the following message, it might be because the file is invalid, for example, it's not really a JSON file, or is malformed. Or you might be trying to load a JSON Lines file.
+If you see the following message, it might be because the file is invalid. For example, it's not really a JSON file, or is malformed, or you might be trying to load a JSON Lines file.
 
 :::image type="content" source="./media/json/unable-connect.png" alt-text="Screenshot of the unable to connect message when trying to connect to a JSON file.":::
 

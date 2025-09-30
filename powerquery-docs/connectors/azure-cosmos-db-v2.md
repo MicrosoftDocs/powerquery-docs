@@ -1,24 +1,24 @@
 ---
-title: Power Query Azure Cosmos DB v2 (Beta)
+title: Power Query Azure Cosmos DB v2
 description: Provides basic information, prerequisites, and instructions on how to connect to Azure Cosmos DB v2.
 author: revinjchalil
 
 ms.topic: conceptual
-ms.date: 1/24/2024
+ms.date: 7/7/2025
 ms.author: rechalil
 ms.reviewer: dougklo
 ms.subservice: connectors
 ---
 
-# Azure Cosmos DB v2 (Beta)
+# Azure Cosmos DB v2
 
 ## Summary
 
 | Item | Description |
 | ---- | ----------- |
-| Release State | Beta |
+| Release State | General Availability |
 | Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
-| Authentication Types Supported | Feed Key |
+| Authentication Types Supported | Feed Key<br/>Organizational account |
 
 ## Prerequisites
 
@@ -43,15 +43,15 @@ To connect to Azure Cosmos DB data:
 
 3. In the search box, enter **Cosmos DB v2**.
 
-4. Select **Azure Cosmos DB v2 (Beta)**, and then select **Connect**.
+4. Select **Azure Cosmos DB v2**, and then select **Connect**.
 
    :::image type="content" source="./media/azure-cosmosdb/get-data.png" alt-text="Screenshot showing Select Azure Cosmos DB v2 selection.":::
 
 5. On the **Azure Cosmos DB v2** connection page, for **Cosmos Endpoint**, enter the URI of the Azure Cosmos DB account that you want to use. For **Data Connectivity mode**, choose a mode that's appropriate for your use case, following these general guidelines:
 
-   * For smaller data sets, choose **Import**. When using import mode, Power BI works with Cosmos DB to import the contents of the entire data set for use in your visualizations.
+   * For smaller data sets, choose **Import**. When you use import mode, Power BI works with Cosmos DB to import the contents of the entire data set for use in your visualizations.
 
-   * **DirectQuery** mode enables **query pushdown** to the Cosmos DB container for execution and improves the performance of the connector. For partitioned Cosmos DB containers, a SQL query with an aggregate function is passed down to Cosmos DB if the query also contains a filter (WHERE clause) on the Partition Key. For example, if the partition key is defined to be "Product", then a SQL query that can be passed down and be executed on Cosmos DB server can be:
+   * **DirectQuery** mode enables **query pushdown** to the Cosmos DB container for execution and improves the performance of the connector. For partitioned Cosmos DB containers, a SQL query with an aggregate function is passed down to Cosmos DB if the query also contains a filter (WHERE clause) on the Partition Key. For example, if the partition key is defined to be "Product," then a SQL query that can be passed down and executed on Cosmos DB server can be:
 
       `SELECT SUM(ColumnName) FROM TableName where Product = 'SampleValue'`
 
@@ -66,11 +66,11 @@ To connect to Azure Cosmos DB data:
 
    :::image type="content" source="./media/azure-cosmosdb/connection-page.png" alt-text="Screenshot of the connection dialog box showing the Cosmos Endpoint entry and Data connectivity mode set to DirectQuery.":::
 
-6. At the prompt to configure data source authentication, enter the Account Key. Then select **Connect**. Your data catalog, databases, and tables appear in the **Navigator** dialog box.
+6. At the prompt to configure data source authentication, either enter the Account key or sign in to your Organizational account. Then select **Connect**. Your data catalog, databases, and tables appear in the **Navigator** dialog box.
 
 7. In the **Display Options** pane, select the check box for the data set that you want to use.
 
-   :::image type="content" source="./media/azure-cosmosdb/navigator.png" alt-text="Screenshot of the Navigator emphasizing the data you've selected." lightbox="./media/azure-cosmosdb/navigator.png":::
+   :::image type="content" source="./media/azure-cosmosdb/navigator.png" alt-text="Screenshot of the Navigator emphasizing the data you selected." lightbox="./media/azure-cosmosdb/navigator.png":::
 
 8. The most optimal way to specify the Partition Key filter (so that the aggregate functions can be pushed down to Cosmos DB) is to use [dynamic M parameters](/power-bi/connect-data/desktop-dynamic-m-query-parameters). To use dynamic M parameters, you would create a data set with unique Partition Key values, create a parameter, add it as a filter on the main data set, bind it to the unique Partition key data set, and use it as a slicer for the main data set. Use the following steps to enable dynamic M parameters for Partition Key filtering.
 
@@ -122,24 +122,24 @@ The following table lists all of the advanced options you can set in Power Query
 | --------------- | ----------- |
 | Number of Retries | How many times to retry if there are HTTP return codes of `408 - Request Timeout`, `412 - Precondition Failed`, or `429 - Too Many Requests`. The default number of retries is 5. |
 | Enable AVERAGE function Passdown | Specifies whether the connector allows pass-down of the AVG aggregate function to the Cosmos DB. The default value is 1 and the connector attempts to pass-down the AVG aggregate function down to Cosmos DB, by default. If the argument contains string, boolean, or null values for the AVG aggregate function, an undefined result set is returned by the Cosmos DB server. When set to value of 0, the AVG aggregate function isn't passed down to the Cosmos DB server, and the connector handles performing the AVG aggregation operation itself.|
-| Enable SORT Passdown for multiple columns | Specifies whether the connector allows multiple columns to be passed down to Cosmos DB when specified in the ORDER BY clause of the SQL query. The default value is 0 and if more than one column is specified in the ORDER BY clause, the connector doesn't pass down the columns by default and instead handles performing the order by itself. When set to value of 1, the connector attempts to pass-down multiple columns to Cosmos DB when specified in the ORDER BY clause of the SQL query. To allow multiple columns to be passed down to Cosmos DB, make sure to have composite indexes set on the columns in the respective collections. For partitioned collections, a SQL query with ORDER BY will be passed down to Cosmos DB only if the query contains a filter on the partitioned key. Also, if there are more than eight columns specified in the ORDER BY clause, the connector doesn't pass down the ORDER BY clause and instead handles the ordering execution itself.|
+| Enable SORT Passdown for multiple columns | Specifies whether the connector allows multiple columns to be passed down to Cosmos DB when specified in the ORDER BY clause of the SQL query. The default value is 0. If more than one column is specified in the ORDER BY clause, the connector doesn't pass down the columns by default. Instead, it handles performing the order by itself. When set to value of 1, the connector attempts to pass-down multiple columns to Cosmos DB when specified in the ORDER BY clause of the SQL query. To allow multiple columns to be passed down to Cosmos DB, make sure to have composite indexes set on the columns in the respective collections. For partitioned collections, a SQL query with ORDER BY is passed down to Cosmos DB only if the query contains a filter on the partitioned key. Also, if there are more than eight columns specified in the ORDER BY clause, the connector doesn't pass down the ORDER BY clause and instead handles the ordering execution itself.|
 
 ## Known issues and limitations
 
-* For partitioned Cosmos DB containers, a SQL query with an aggregate function is passed down to Cosmos DB if the query also contains a filter (WHERE clause) on the Partition Key. If the aggregate query doesn't contain a filter on the Partition Key, the aggregation is performed by the connector.
+* For partitioned Cosmos DB containers, a SQL query with an aggregate function is passed down to Cosmos DB if the query also contains a filter (WHERE clause) on the Partition Key. If the aggregate query doesn't contain a filter on the Partition Key, the connector performs the aggregation.
 
 * The connector doesn't pass down an aggregate function if it's called upon after TOP or LIMIT is applied. Cosmos DB processes the TOP operation at the end
 when processing a query. For example, in the following query, TOP is applied in the subquery, while the aggregate function is applied on top of that result set:
 
    `SELECT COUNT(1) FROM (SELECT TOP 4 * FROM EMP) E`
 
-* If DISTINCT is provided in an aggregate function, the connector doesn't pass the aggregate function down to Cosmos DB if a DISTINCT clause is provided in an aggregate function. When present in an aggregate function, DISTINCT isn't supported by the Cosmos DB SQL API.
+* If DISTINCT is provided in an aggregate function, the connector doesn't pass the aggregate function down to Cosmos DB if a DISTINCT clause is provided in an aggregate function. When present in an aggregate function, the Cosmos DB SQL API doesn't support DISTINCT.
 
 * For the SUM aggregate function, Cosmos DB returns undefined as the result set if any of the arguments in SUM are string, boolean, or null. However, if there are null values, the connector passes the query to Cosmos DB in such a way that it asks the data source to replace a null value with zero as part of the SUM calculation.
 
 * For the AVG aggregate function, Cosmos DB returns undefined as result set if any of the arguments in SUM are string, boolean, or null. The connector exposes a connection property to disable passing down the AVG aggregate function to Cosmos DB in case this default Cosmos DB behavior needs to be overridden. When AVG passdown is disabled, it isn't passed down to Cosmos DB, and the connector handles performing the AVG aggregation operation itself. For more information, go to "Enable AVERAGE function Passdown" in [Advanced options](#advanced-options).
 
-* Azure Cosmos DB Containers with large partition key are not currently supported in the Connector.
+* Azure Cosmos DB Containers with large partition key aren't currently supported in the Connector.
 
 * Aggregation passdown is disabled for the following syntax due to server limitations:
 
@@ -149,7 +149,7 @@ when processing a query. For example, in the following query, TOP is applied in 
 
 * The V2 connector doesn't support complex data types such as arrays, objects, and hierarchical structures. We recommend the [Fabric Mirroring for Azure Cosmos DB](/fabric/database/mirrored-database/azure-cosmos-db) feature for those scenarios.
   
-* The V2 connector uses sampling of the first 1,000 documents to come up with the inferred schema. It's not recommended for schema evolution scenarios when only part of the documents are updated. As an example, a newly added property to one document in a container with thousants of documents may not be inlcuded in the inferred schema. We recommend the [Fabric Mirroring for Azure Cosmos DB](/fabric/database/mirrored-database/azure-cosmos-db) feature for those scenarios.
+* The V2 connector uses sampling of the first 1,000 documents to come up with the inferred schema. It's not recommended for schema evolution scenarios when only part of the documents are updated. As an example, a newly added property to one document in a container with thousands of documents might not be included in the inferred schema. We recommend the [Fabric Mirroring for Azure Cosmos DB](/fabric/database/mirrored-database/azure-cosmos-db) feature for those scenarios.
   
 * Currently the V2 connector doesn't support non-string values in object properties.
   

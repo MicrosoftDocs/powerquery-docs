@@ -51,7 +51,7 @@ items:
           href: query-folding-examples.md
         - name: "Query folding indicators"
           href: step-folding-indicators.md
-        - name: "Query plan (Preview)"
+        - name: "Query plan"
           href: query-plan.md
         - name: "Query folding on native queries"
           href: native-query-folding.md
@@ -319,6 +319,8 @@ items:
         href: connectors/active-directory.md
       - name: "Adobe Analytics"
         href: connectors/adobe-analytics.md
+      - name: "ADP Analytics"
+        href: connectors/adp-analytics.md
       - name: "Amazon Athena"
         href: connectors/amazon-athena.md
       - name: "Amazon OpenSearch Service (Beta)"
@@ -331,13 +333,15 @@ items:
         href: connectors/assemble-views.md
       - name: "Autodesk Construction Cloud"
         href: connectors/autodesk-construction-cloud.md
-      - name: "Automy Data Analytics (Beta)"
+      - name: "Automy Data Analytics"
         href: connectors/automy-data-analytics.md
       - name: "Azure Analysis Services database"
         href: connectors/azure-analysis-services.md
       - name: "Azure Blob Storage"
         href: connectors/azure-blob-storage.md
-      - name: "Azure Cosmos DB v2 (Beta)"
+      - name: "Azure Cosmos DB for MongoDB vCore"
+        href: connectors/azure-cosmos-db-for-mongodb-vcore.md
+      - name: "Azure Cosmos DB v2"
         href: connectors/azure-cosmos-db-v2.md
       - name: "Azure Cost Management"
         href: connectors/azure-cost-management.md
@@ -353,6 +357,8 @@ items:
           href: connectors/data-lake-storage.md
         - name: "Analyze ADLS Gen2 data"
           href: connectors/analyze-data-in-adls-gen2.md
+      - name : "Azure Device Registry (Beta)"
+        href: connectors/azure-device-registry.md
       - name: Azure HDInsight
         href: connectors/azure-hdinsight.md
       - name: Azure HDInsight on AKS Trino (Beta) (Deprecated)
@@ -381,6 +387,10 @@ items:
         href: connectors/celonis-ems.md
       - name: "CloudBluePSA (Beta)"
         href: connectors/cloudbluepsa.md
+      - name: "Cognite Data Fusion (OData)"
+        href: connectors/cognite-data-fusion-(odata).md
+      - name: "Cognite Data Fusion (REST API)"
+        href: connectors/cognite-data-fusion-(rest-api).md
       - name: "Common Data Service (Legacy)"
         href: connectors/common-data-service-legacy.md
       - name: "ClickHouse"
@@ -413,6 +423,8 @@ items:
         href: connectors/exact-online-premium.md
       - name: "Excel"
         href: connectors/excel.md
+      - name: "FactSet"
+        href: connectors/factset.md
       - name: "FactSet RMS (Beta)"
         href: connectors/factset-rms.md
       - name: "FHIR"
@@ -445,6 +457,8 @@ items:
         href: connectors/hive-llap.md
       - name: "IBM Db2 database"
         href: connectors/ibm-db2-database.md
+      - name: "IBM Netezza database"
+        href: connectors/ibm-netezza-database.md
       - name: "Impala database"
         href: connectors/impala-database.md
       - name: "Intersystems Health Insight"
@@ -493,7 +507,7 @@ items:
         href: connectors/odbc.md
       - name: "OLE DB"
         href: connectors/ole-db.md
-      - name: "OneStream (Beta)"
+      - name: "OneStream"
         href: connectors/onestream.md
       - name: "OpenSearch Project (Beta)"
         href: connectors/opensearch-project.md

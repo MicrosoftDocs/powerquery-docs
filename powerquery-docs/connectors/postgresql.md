@@ -3,9 +3,10 @@ title: Power Query PostgreSQL connector
 description: Provides basic information, prerequisites, and instructions on how to connect to your database, along with native query folding instructions and troubleshooting tips.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 2/19/2025
+ms.date: 7/14/2025
 ms.author: dougklo
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # PostgreSQL
@@ -16,23 +17,21 @@ ms.subservice: connectors
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Excel<br/>Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows)<br/>Dynamics 365 Customer Insights<br/>Analysis Services |
-| Authentication Types Supported | Database (Username/Password) |
+| Authentication Types Supported | Database (Username/Password)<br/>Microsoft account (Microsoft Entra ID) |
 | Function Reference Documentation | [PostgreSQL.Database](/powerquery-m/postgresql-database) |
 
 > [!NOTE]
-> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+> Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
 
-Since December 2019, Power BI Desktop ships with NpgSQL, and no other installation is required. As of the October 2024 release, NpgSQL 4.0.17 is the version included. GAC Installation overrides the version provided with Power BI Desktop, which is the default. Refreshing is supported both through the cloud in the Power BI service and also on premise through the on-premises data gateway. To refresh data from the Power BI service without an on-premises data gateway, PostgreSQL must be hosted in a manner that allows direct connection from the Power BI services on Azure. This connectivity is natively supported for PostgreSQL hosted in Microsoft Azure. For other hosting environments, consult your hosting provider about configuring your PostgreSQL for direct access from the internet. If PostgreSQL is configured so that it can't be directly accessed from the internet (recommended for security), you need to use an on-premises data gateway for refreshes. In the Power BI service, NpgSQL 4.0.17 is used, while on premises refresh uses the local installation of NpgSQL, if available, and otherwise uses NpgSQL 4.0.17.
+Power BI Desktop has included the Npgsql provider for PostgreSQL connector since December 2019, eliminating the need for additional installation. Starting with the October 2024 version, it incorporates Npgsql version 4.0.17. Separate Npgsql GAC installation will override this default version.
 
-For Power BI Desktop versions released before December 2019, you must install the NpgSQL provider on your local machine. To install the NpgSQL provider, go to the [releases page](https://github.com/npgsql/Npgsql/releases), search for the latest v4.0.x version, and download and run the .msi file. The provider architecture (32-bit or 64-bit) needs to match the architecture of the product where you intend to use the connector. When installing, make sure that you select NpgSQL GAC Installation to ensure NpgSQL itself is added to your machine.
+The PostgreSQL connector is supported for cloud connection and via VNet data gateway or on-premises data gateway. Since the June 2025 release, the on-premises data gateway includes the Npgsql provider, so no extra installation is needed. Separate Npgsql GAC installation will override this default version.
 
-**We recommend NpgSQL 4.0.17. NpgSQL 4.1 and up won't work due to .NET version incompatibilities.**
+For Power BI Desktop versions released before December 2019 and on-premises data gateway released before June 2025, you must install the Npgsql provider on your local machine to use the PostgreSQL connector. To install the Npgsql provider, go to the [releases page](https://github.com/npgsql/npgsql/releases/tag/v4.0.17) for version 4.0.17, download and run the .msi file. The provider architecture (32-bit or 64-bit) needs to match the architecture of the product where you intend to use the connector. When installing, make sure that you select Npgsql GAC Installation to ensure Npgsql itself is added to your machine. Npgsql 4.1 and up are not supported due to .NET version incompatibilities.
 
 :::image type="content" source="media/postgresql/postgres-1.png" alt-text="Screenshot of the Npgsql installer with GAC Installation selected.":::
-
-For Power Apps, you must install the NpgSQL provider on your local machine. To install the NpgSQL provider, go to the [releases page](https://github.com/npgsql/Npgsql/releases) and download the relevant version. **Download and run the installer (the NpgSQL-[version number].msi) file**. Ensure you select the NpgSQL GAC Installation and on completion restart your machine for this installation to take effect.
 
 ## Capabilities Supported
 
@@ -56,17 +55,20 @@ Once the matching Npgsql provider is installed, you can connect to a PostgreSQL 
 
 3. Select either the **Import** or **DirectQuery** data connectivity mode.
 
-4. If you're connecting to this database for the first time, input your PostgreSQL credentials in the **User name** and **Password** boxes of the **Database** authentication type. Select the level to apply the authentication settings to. Then select **Connect**.
+4. If you're connecting to this database for the first time, select the authentication type you want to use, and then enter your credentials. The authentication types available are:
 
-    :::image type="content" source="./media/postgresql/sign-in-desktop.png" alt-text="Screenshot of the authentication dialog where you enter your PostgreSQL user name and password.":::
+   * Database (Username and password)
+   * Microsoft account (Microsoft Entra ID)
 
-   For more information about using authentication methods, go to [Authentication with a data source](../connectorauthentication.md).
+   For more information about authentication, go to [Authentication with a data source](../connectorauthentication.md).
+
+   :::image type="content" source="./media/postgresql/sign-in-desktop.png" alt-text="Screenshot of the authentication dialog where you enter your PostgreSQL user name and password.":::
 
 5. If the connection isn't encrypted, you're prompted with the following message.
 
    :::image type="content" source="./media/postgresql/encryption-warning.png" alt-text="Screenshot of the Azure SQL database encryption support dialog.":::
 
-   Select **OK** to connect to the database by using an unencrypted connection, or follow the instructions in [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine) to set up encrypted connections to PostgreSQL database.
+   Select **OK** to connect to the database by using an unencrypted connection. If an encrypted connection is desired, the PostgreSQL server must be set up to accommodate SSL connections (go to the [PostgreSQL documentation](https://www.postgresql.org/docs/current/ssl-tcp.html) for guidance). Once completed, your machine might be required to install the PostgreSQL server's SSL certificate into its Trusted Root Certification Authorities.
 
 6. In **Navigator**, select the database information you want, then either select **Load** to load the data or **Transform Data** to continue transforming the data in Power Query editor.
 

@@ -6,6 +6,7 @@ ms.author: dougklo
 ms.topic: conceptual  
 ms.date: 1/24/2024  
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # MongoDB Atlas SQL interface

@@ -5,6 +5,7 @@ author: ptyx507x
 ms.date: 3/13/2024
 ms.author: miescobar
 ms.subservice: transform-data
+ms.custom: sfi-image-nochange
 ---
 
 # Share a query

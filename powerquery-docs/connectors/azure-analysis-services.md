@@ -7,6 +7,7 @@ ms.date: 1/18/2024
 ms.author: dougklo
 LocalizationGroup: reference
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # Azure Analysis Services database
@@ -21,7 +22,7 @@ ms.subservice: connectors
 | M Function Reference | [AnalysisServices.Database](/powerquery-m/analysisservices-database)<br/>[AnalysisServices.Databases](/powerquery-m/analysisservices-databases) |
 
 > [!NOTE]
-> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+> Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
 

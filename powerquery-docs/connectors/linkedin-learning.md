@@ -4,8 +4,9 @@ description: Describes how to configure LinkedIn Learning Power BI connector.
 author: lmasterson
 ms.topic: conceptual
 ms.date: 04/11/2024
-ms.author: jburchel
+ms.author: dougklo
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # LinkedIn Learning - Power BI connector
@@ -34,7 +35,7 @@ These insights can be aggregated, based on various entities, such as individuals
 
 ### Advantages
 
-* No need to download or receive CSV files.​
+* No need to download or receive CSV files.
 * Ability to query data periods greater than one year.
 * No requirement for coding solutions to connect to the LinkedIn Learning API for learner and asset data.
 
@@ -46,7 +47,7 @@ These insights can be aggregated, based on various entities, such as individuals
 
 The scenario outlined in this tutorial assumes that you already have the following prerequisites:
 
-* A Microsoft Windows PC ​
+* A Microsoft Windows PC
 * Microsoft Power BI Desktop: [Download here](https://powerbi.microsoft.com/downloads/)
 * LinkedIn Learning admin access
 
@@ -79,7 +80,7 @@ To obtain your Client ID & Client Secret from LinkedIn Learning, follow these st
 
    :::image type="content" source="./media/linkedin-learning/power-bi-get-data.png" alt-text="Screenshot of the get data search box with returned search results when LinkedIn Learning is searched.":::
 
-5. Select the **LinkedIn Learning** Connector.
+5. Select the **LinkedIn Learning** Connector.
 
    :::image type="content" source="./media/linkedin-learning/power-bi-client-id-client-secret.png" alt-text="Screenshot of where the Client ID and Client Secret should be inputted within Power BI.":::
 

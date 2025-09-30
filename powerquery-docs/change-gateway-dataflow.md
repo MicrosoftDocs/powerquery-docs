@@ -2,10 +2,11 @@
 title: Change the gateway used in a dataflow project
 description: An article that describes how to change the data gateway in Power Query Online dataflow projects.
 author: ptyx507
-ms.date: 5/17/2024
+ms.date: 4/29/2025
 ms.author: dougklo
 ms.reviewer: miescobar
 ms.subservice: get-data
+ms.custom: sfi-image-nochange
 ---
 
 # Change the gateway used in a dataflow project
@@ -66,4 +67,4 @@ Once in **Connect to a data source**, create a new connection or select or modif
 After defining the connection details, select **Next** and validate that your query is loading in the Power Query editor.
 
 > [!NOTE]
->This process is the same if you were to connect again to your data source. But by doing the process again, you're effectively re-defining what authentication method and credentials to use against your data source.
+>This process is the same if you were to connect again to your data source. But by doing the process again, you're effectively redefining what authentication method and credentials to use against your data source.

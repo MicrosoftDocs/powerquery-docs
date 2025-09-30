@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.date: 1/31/2024
 ms.author: dougklo
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # Active Directory
@@ -20,7 +21,7 @@ ms.subservice: connectors
 | Function Reference Documentation | [ActiveDirectory.Domains](/powerquery-m/activedirectory-domains) |
 
 > [!NOTE]
-> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+> Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Capabilities Supported
 

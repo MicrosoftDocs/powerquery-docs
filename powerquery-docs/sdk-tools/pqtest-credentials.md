@@ -4,8 +4,9 @@ description: Understanding credential commands within PQTest
 author: ryan-syed
 ms.topic: conceptual
 ms.date: 02/14/2024
-ms.author: v-ryansyed
+ms.author: dougklo
 ms.subservice: custom-connectors
+ms.custom: sfi-ropc-blocked
 ---
 
 # Credentials

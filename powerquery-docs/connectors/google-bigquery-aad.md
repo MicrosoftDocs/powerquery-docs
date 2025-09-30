@@ -3,7 +3,7 @@ title: Google BigQuery (Microsoft Entra ID)
 description: Provides basic information and prerequisites for the Google BigQuery (Microsoft Entra ID) connector for Power Query.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 10/14/2024
+ms.date: 07/01/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
@@ -19,7 +19,11 @@ ms.subservice: connectors
 | Authentication Types Supported | Organizational account |
 
 > [!NOTE]
-> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+> Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
+
+> [!NOTE]
+>
+> Since July 2025, we introduced a new implementation for the Google BigQuery (Microsoft Entra ID) connector, currently available in preview. Learn more about [this feature](#new-google-bigquery-connector-implementation-preview).
 
 ## Prerequisites
 
@@ -86,6 +90,34 @@ The following table lists all of the advanced options you can set in Power Query
 | Native query | For information, go to [Import data from a database using native database query](../native-database-query.md). In this version of native database query functionality, you need to use fully qualified table names in the format `Database.Schema.Table`, for example `SELECT * FROM DEMO_DB.PUBLIC.DEMO_TABLE`. This option is only available in Power Query Desktop. |
 
 Once you've selected the advanced options you require, select **OK** in Power Query Desktop or **Next** in Power Query Online to connect to your Google BigQuery data.
+
+## New Google BigQuery connector implementation (Preview)
+
+Since July 2025, we introduced a new implementation for the Google BigQuery (Microsoft Entra ID) connector to enhance the integration with Google BigQuery, currently available in preview. It uses [Arrow Database Connectivity (ADBC)](https://github.com/apache/arrow-adbc/blob/main/csharp/src/Drivers/BigQuery/readme.md) instead of ODBC to connect to and retrieve data from Google BigQuery which improves performance especially for large result sets. As we continue to enhance and add new capabilities to this connector, we encourage you to upgrade to the latest version to try it out and [provide us feedback](https://aka.ms/gbq-connector-feedback).
+
+> [!NOTE]
+>
+> This feature is supported in the 64-bit version of Power BI Desktop and doesn't work in the 32-bit version.
+
+To access this feature in Power BI Desktop, navigate to **Options and settings** (under the **File** tab) > **Options** > **Preview features**, and then select the checkbox to enable the **Use new Google BigQuery connector implementation** option. Once the option is on, all the newly created connections automatically use the new connector implementation. 
+
+Your existing connections remain unchanged. You can try out the feature by adding the `Implementation="2.0"` flag in `GoogleBigQueryAad.Database` in your queries as follows. This property differentiates the version of the connector you're using.
+
+To access this feature in Dataflow Gen2, after you configure getting data from Google BigQuery, go to **Advanced editor** in the top ribbon, and add the `Implementation="2.0"` flag in `GoogleBigQueryAad.Database` in your queries as follows to use this new connector.
+
+```powerquery-m
+Source = GoogleBigQueryAad.Database([Implementation = "2.0"])
+```
+
+> [!NOTE]
+> When you use the on-premises data gateway, note the minimal supported version is July 2025. You're recommended to use the latest version to evaluate this feature with the most current capabilities.
+
+To aid with diagnosing any potential issue, you can find the `Implementation` as "2.0" and `DriverType` as "ADBC" in your Mashup logs.
+
+Currently, this connector has the following known limitations: 
+
+- Relationships are not supported.
+- Proxy is not supported.
 
 ## Limitations and considerations
 

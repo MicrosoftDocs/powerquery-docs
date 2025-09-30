@@ -2,7 +2,7 @@
 title: "Combine files overview" 
 description: An introduction to the combine files feature describing the process of how to combine files in Power Query.
 author: ptyx507
-ms.date: 7/19/2024
+ms.date: 8/29/2025
 ms.author: miescobar
 ms.subservice: transform-data
 ---
@@ -27,7 +27,7 @@ When you work with these sources, notice that they share the same table schema, 
 In the file system view, the **Content** column contains the binary representation of each file.
 
 > [!NOTE]
-> You can filter the list of files in the file system view by using any of the available fields. It's good practice to filter this view to show only the files you need to combine, for example by filtering fields such as **Extension** or **Folder Path**. More information: [Folder](connectors/folder.md)
+> You can filter the list of files in the file system view by using any of the available fields. It's good practice to filter this view to show only the files you need to combine, for example by filtering fields such as **Extension** or **Folder Path**. Form more information, go to [Folder](connectors/folder.md).
 
 Selecting any of the \[Binary\] values in the **Content** column automatically creates a series of navigation steps to that specific file. Power Query tries to interpret the binary by using one of the available connectors, such as [Text/CSV](connectors/text-csv.md), [Excel](connectors/excel.md), [JSON](connectors/json.md), or [XML](connectors/xml.md).
 
@@ -89,7 +89,7 @@ You can easily combine all files within a given folder, as long as they have the
 > [!NOTE]
 >You can modify the steps inside the example query to change the function applied to each binary in your query. The example query is linked to the function, so any changes made to the example query is reflected in the function query.
 >
->If any of the changes affect column names or column data types, be sure to check the last step of your output query. Adding a **Change column type** step can introduce a step-level error that prevents you from visualizing your table. More information: [Dealing with errors](dealing-with-errors.md)
+>If any of the changes affect column names or column data types, be sure to check the last step of your output query. Adding a **Change column type** step can introduce a step-level error that prevents you from visualizing your table. For more information, go to [Dealing with errors](dealing-with-errors.md).
 
 ### Related content
 

@@ -1,44 +1,37 @@
 ---
 title: Connect Power BI to Dynatrace Grail
-description: The connector allows Power BI users to access a Dynatrace environment on which they have the necessary permissions to run DQL queries.
+description: The connector allows users to access a Dynatrace environment on which they have the necessary permissions to run Dynatrace Query Language (DQL) queries.
 author: gordon-dt
-ms.date: 3/5/2025
+ms.date: 3/17/2025
 ms.author: dougklo
 ---
 
 # Dynatrace Grail (Beta)
 
->[! NOTE]
->The following connector article is provided by Dynatrace, the owner of
-this connector and a member of the Microsoft Power Query Connector
-Certification Program. If you have questions regarding the content of
-this article or have changes you would like to see made to this article,
-visit the Dynatrace website and use the support channels there.
+## Summary
 
 |Item|                                Description|
-------|----------------------------------------------------------------
+|------|----------------------------------------------------------------|
 |Release State|                       Beta|
 |Products|                            Power BI (Semantic Models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)|
 |Authentication Types Supported|      Windows (Power BI Desktop)<br/>Organizational account|
 |Function Reference Documentation|    Source|
 
+> [!NOTE]
+>The following connector article is provided by Dynatrace, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Dynatrace website and use the support channels there.
+
 ## Prerequisites
 
-It is assumed that a Dynatrace environment is already configured for
-connection from Power BI Desktop.
+It's assumed that a Dynatrace environment is already configured for connection from Power BI Desktop.
 
-On Microsoft Azure, that can be done through the Marketplace and
-searching for **Azure Native Dynatrace Service**.
+On Microsoft Azure, that can be done through the Marketplace and searching for **Azure Native Dynatrace Service**.
 
-Follow the instructions to set up a Dynatrace SaaS environment. Make
-sure the environment is set to the new version and not the previous classic version,
-as the latest version contains the Dynatrace Grail data lakehouse and is set up for
-the authentication requirements for the connector.
+Follow the instructions to set up a Dynatrace SaaS environment. Make sure the environment is set to the new version and not the previous classic version, as the latest version contains the Dynatrace Grail data lakehouse and is set up for the authentication requirements for the connector.
 
 ## Capabilities Supported
 
 - Import mode only
-- Option to enter a DQL query when connecting - limited to a maximum of 1 million rows
+- Option to enter a DQL query when connecting&mdash;limited to a maximum of 1 million rows
 
 ## Connection to Dynatrace Grail from Power BI Desktop
 
@@ -60,7 +53,7 @@ To connect to a Dynatrace SaaS instance from Power Query Desktop, take the follo
 
    :::image type="content" source="./media/dynatrace-grail-dql/connector5-white.png" alt-text="Screenshot of the Windows authenticated user account to select.":::
 
-5. Once you have successfully authenticated, the message shows that you're currently signed in. Select **Connect**.
+5. Once you successfully authenticate, the message shows that you're currently signed in. Select **Connect**.
 
    :::image type="content" source="./media/dynatrace-grail-dql/connector6-white.png" alt-text="Screenshot of a successfully signed in dialog box.":::
 
@@ -70,19 +63,19 @@ To connect to a Dynatrace SaaS instance from Power Query Desktop, take the follo
 
 7. Selecting one of them logs in this example, and runs a fetch logs DQL query with a default 1000 row limit. You require permissions on the Dynatrace environment in order to run this query successfully.
 
-   :::image type="content" source="./media/dynatrace-grail-dql/connector8-white.png" alt-text="Sample screenshot of a resultant DQL log query from Dynatrace Grail.":::
+   :::image type="content" source="./media/dynatrace-grail-dql/connector8-white.png" alt-text="Sample screenshot of a resultant DQL log query from Dynatrace Grail." lightbox="./media/dynatrace-grail-dql/connector8-white.png":::
 
 8. The advanced editor shows the M code the connector is using.
 
-   :::image type="content" source="./media/dynatrace-grail-dql/connector9-white.png" alt-text="Screenshot of the connector in M code.":::
+   :::image type="content" source="./media/dynatrace-grail-dql/connector9-white.png" alt-text="Screenshot of the connector in Power Query M code.":::
 
-9.  An optional step when connecting is to type in a DQL query directly. The following example fetches logs (default last 2 hours) with a limit of 1000 rows.
+9. An optional step when connecting is to type in a DQL query directly. The following example fetches logs (default last 2 hours) with a limit of 1,000 rows.
 
    :::image type="content" source="./media/dynatrace-grail-dql/connector10-white.png" alt-text="Screenshot of a sample DQL query that can be used in the connector.":::
 
 10. The resulting import into Power BI looks similar to this example.
 
-    :::image type="content" source="./media/dynatrace-grail-dql/connector11-white.png" alt-text="Screenshot of a sample set of Log rows imported into Power BI.":::
+    :::image type="content" source="./media/dynatrace-grail-dql/connector11-white.png" alt-text="Screenshot of a sample set of Log rows imported into Power BI." lightbox="./media/dynatrace-grail-dql/connector11-white.png":::
 
 ### Troubleshooting
 

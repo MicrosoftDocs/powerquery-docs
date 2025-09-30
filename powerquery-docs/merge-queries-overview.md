@@ -2,7 +2,7 @@
 title: Merge queries overview
 description: An overview of merge queries operations in Power Query, along with the basic principles and common uses. 
 author: ptyx507
-ms.date: 5/17/2024
+ms.date: 3/31/2025
 ms.author: miescobar
 ms.topic: overview
 ms.subservice: transform-data
@@ -49,7 +49,7 @@ After you select both the left and right tables, you can select the columns that
 The goal is to join these tables by using the **CountryID** column from both tables, so you select the **CountryID** column from each table. After you make the selections, a message appears with an estimated number of matches at the bottom of the dialog box.
 
 > [!NOTE]
-> Although this example shows the same column header for both tables, this isn't a requirement for the merge operation. Column headers don't need to match between tables. However, it's important to note that the columns must be of the same data type, otherwise the merge operation might not yield correct results.
+> Although this example shows the same column header for both tables, matching column names isn't a requirement for the merge operation. Column headers don't need to match between tables. However, it's important to note that the columns must be of the same data type, otherwise the merge operation might not yield correct results.
 
 You can also select multiple columns to perform the join by selecting **Ctrl** as you select the columns. When you do so, the order in which the columns were selected is displayed in small numbers next to the column headings, starting with 1.
 
@@ -62,11 +62,11 @@ First select the **CountryID** column in the **Sales** table, select **Ctrl**, a
 :::image-end:::
 
 > [!NOTE]
-> When selecting multiple columns for a join, the order you select the columns in each table must match. For example, the first column selected in the left table is matched with the first column selected in the right table, and so on. Otherwise, you'll observe incorrect join results.
+> When you select multiple columns for a join, the order you select the columns in each table must match. For example, the first column selected in the left table is matched with the first column selected in the right table, and so on. Otherwise, you can observe incorrect join results.
 
 ### Use the column pair suggestion
 
-When selecting the left and right table in the Merge dialog, you can check the light bulb icon on the top right corner of the dialog to see if there are any suggestions when it comes to column-pair-mapping between both tables.
+When you select the left and right table in the Merge dialog, you can check the light bulb icon on the top right corner of the dialog. This bulb indicates if there are any suggestions when it comes to column-pair-mapping between both tables.
 
 There can be many suggestions in place but, for this scenario, there's only one suggestion by the feature, where it maps the column CountryID from the Sales table to the CountryID column from the Countries table. You can select it and the column-pair-mapping is automatically applied to your dialog.
 
@@ -82,11 +82,11 @@ After you select **OK** in the **Merge** dialog box, the base table of your quer
 From here, you can choose to expand or aggregate the fields from this new table column, which are the fields from your right table.
 
 :::image type="complex" source="media/merge-queries-overview/expand-table-column.png" alt-text="Expand table column menu." lightbox="media/merge-queries-overview/expand-table-column.png":::
-   Screenshot of the table showing the merged Countries column on the right, with all rows containing a Table. The expand icon on the right of the Countries column header is selected, and the expand menu is open. The expand menu has the Select all, CountryID, StateID, Country, and State selections selected. The Use original column name as prefix is also selected.
+   Screenshot of the table showing the merged Countries column, with all rows containing a Table. The expand icon on the Countries column header is selected, and the expand menu is open. The expand menu has the Select all, CountryID, StateID, Country, and State selections selected. The Use original column name as prefix is also selected.
 :::image-end:::
 
 > [!NOTE]
->Currently, the Power Query Online experience only provides the expand operation in its interface. The option to aggregate will be added later this year.
+>Currently, Power Query Online only provides the expand operation in its interface. The option to aggregate will be added later this year.
 
 ## Join kinds
 

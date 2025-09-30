@@ -7,6 +7,7 @@ ms.service: powerquery
 ms.topic: conceptual
 ms.date: 1/24/2024
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # Denodo
@@ -23,7 +24,7 @@ ms.subservice: connectors
 | Authentication Types Supported | Basic <br/>Windows<br/> |
 
 > [!NOTE]
-> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+> Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
 
@@ -117,6 +118,9 @@ To make the connection, take the following steps:
 
       :::image type="content" source="./media/denodo/denodo-basic-authentication.png" alt-text="Denodo basic authentication in Power BI Desktop.":::
 
+        > [!NOTE]
+        > Older versions of the Denodo connector required the escaping of certain password characters. As of version 1.0.8 this is no longer needed.
+
 8. Once you're done, select **Connect**.
 
 9. In **Navigator**, select the data you need from the database you want and choose **Load**, or choose **Transform Data** if you're going to modify the incoming data.
@@ -140,6 +144,8 @@ To make the connection, take the following steps:
    In order to create the data source, you have to specify the way to connect to the data source of your choice:
       * Through DSN
       * Using a connection string
+      > [!NOTE]
+      > When deciding whether to connect via a connection string or DSN, it is recommended to use the latter. This is because the DSN configuration offers many more configuration options that might not be directly available when using a connection string.
 
    You also have to specify the authentication mode. The available authentication methods are:
       * **Windows**: When you choose to use Windows authentication, Power BI service connects to Virtual DataPort using Kerberos authentication. You need:
@@ -178,13 +184,37 @@ To make the connection, take the following steps:
 
 ### Use of the ConnectionTimeout parameter.
 
-If you want to control how long to wait before abandoning an attempt to make a connection to a server you can use the  `ConnectionTimeout` parameter. 
+If you want to control how long to wait before abandoning an attempt to make a connection to a server, you can use the  `ConnectionTimeout` parameter. 
 
-This parameter can only be used from the **Advanced Editor**. To do so, the `ConnectionTimeout` parameter must be added in the record options, associating a value of type `Duration` to it.
+This parameter can only be used from the advanced editor. To do so, the `ConnectionTimeout` parameter must be added in the record options, associating a value of type `duration` to it.
 
-> Learn more about the `Duration` type [here](/powerquery-m/sharpduration).
+> Learn more about the `duration` type [here](/powerquery-m/sharpduration).
 
    :::image type="content" source="./media/denodo/denodo-connectiontimeout.png" alt-text="Use of the ConnectionTimeout parameter.":::
+
+### Use of the QueryTimeout parameter.
+
+If you want to control how long to wait before abandoning an attempt to make the execution of a query, you can use the `QueryTimeout` parameter.
+
+This parameter can only be used from the advanced editor. To do so, the `QueryTimeout` parameter must be added in the record options, associating a value of type `number` to it. This numeric value is represented in milliseconds, for example 10000 equals 10s.
+
+   :::image type="content" source="./media/denodo/denodo-querytimeout.png" alt-text="Use of the QueryTimeout parameter.":::
+
+### Use of the UserAgent parameter.
+
+If you want to specify the name of the client application, you can use the `UserAgent` parameter.
+
+This parameter can only be used from the advanced editor. To do so, the `UserAgent` parameter must be added in the record options, associating a value of type `text`.
+
+   :::image type="content" source="./media/denodo/denodo-useragent.png" alt-text="Use of the UserAgent parameter.":::
+
+### Use of the Compression parameter.
+
+It is recommended to activate this setting when the client application and the Denodo server are connected through a WAN. In these cases, you can expect significant performance improvements when the client application reads moderate or large data volumes. For this you can use the `Compression` parameter.
+
+This parameter can only be used from the advanced editor. To do so, the `Compression` parameter must be added in the record options, associating a value of type `number` (0 or 1).
+
+   :::image type="content" source="./media/denodo/denodo-compression.png" alt-text="Use of the Compression parameter.":::
 
 ## Troubleshooting
 

@@ -20,7 +20,7 @@ A Power BI Pro account is available on a user-monthly basis. Multiple options ar
 
 ## Creating dataflows in Microsoft Power Platform environments
 
-If you want to create dataflows in the Microsoft Power Platform environment, a Power Apps (per-user or per-app) license is required.
+If you want to create dataflows in the Microsoft Power Platform environment, a Power Apps Premium, Power Apps Per User plan  (P1 legacy license) or Power Apps Per App plan (P2 legacy license) is required. For more information, go to [Purchase Power Apps for your organization](/power-platform/admin/signup-for-powerapps-admin).
 
 If you want to create analytical dataflows that store data in your organization's Azure Data Lake Storage Gen2 account, you or your administrator need access to an Azure subscription and an Azure Data Lake Storage Gen2 account.
 
@@ -72,7 +72,7 @@ The following limitations are in place in Power Apps:
 
 ### Power BI Pro
 
-Power BI Pro gives you the ability to create analytical dataflows, but not use any of the premium features. With a Power BI Pro account, you can't use linked or computed tables, you can't use AI capabilities in Power BI, and you can't use DirectQuery to connect to the dataflow. The storage for your dataflows is limited to the space left under your Power BI Pro account, which is a subset of 10-GB storage for all Power BI content. Currently, we don't report the current storage usage of dataflows in the [Power BI portal](/power-bi/admin/service-admin-manage-your-data-storage-in-power-bi). You'll be notified if you've almost reached the limit of the left over capacity.
+Power BI Pro gives you the ability to create analytical dataflows, but not use any of the premium features. With a Power BI Pro account, you can't use linked or computed tables, you can't use AI capabilities in Power BI, and you can't use DirectQuery to connect to the dataflow. The storage for your dataflows is limited to the space left under your Power BI Pro account, which is a subset of 10-GB storage for all Power BI content. Currently, we don't report the current storage usage of dataflows in the [Power BI portal](/power-bi/admin/service-admin-manage-your-data-storage-in-power-bi). You'll be notified if you've almost reached the limit of the left over capacity. When you migrate an existing workspace from Power BI Premium back to Power BI Pro, dataflows may no longer support refresh operations through the UI due to a known limitation. As a workaround, you can re-enable refresh by editing and saving the dataflow.
 
 ### Power BI Premium
 
@@ -121,3 +121,6 @@ If you want to read more details about the concepts discussed in this article, g
 - [AI capabilities in Power BI dataflows](/power-bi/service-machine-learning-automated)
 - [Standard vs. analytical dataflows](understanding-differences-between-analytical-standard-dataflows.md)
 - [The enhanced compute engine](/power-bi/transform-model/service-dataflows-enhanced-compute-engine)
+
+
+

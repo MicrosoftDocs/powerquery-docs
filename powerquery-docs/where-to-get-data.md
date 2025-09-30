@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.date: 1/9/2025
 ms.author: dougklo
 ms.subservice: get-data
+ms.custom: sfi-image-nochange
 ---
 
 # Where to get data

@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.date: 2/13/2025
 ms.author: dougklo
 ms.subservice: connectors
+ms.custom: sfi-image-nochange
 ---
 
 # ClickHouse
@@ -22,7 +23,7 @@ ms.subservice: connectors
 | Authentication Types Supported | ClickHouse (Username/Password)                                                 |
 
 > [!NOTE]
-> Some capabilities may be present in one product but not others due to deployment schedules and host-specific capabilities.
+> Some capabilities might be present in one product but not others due to deployment schedules and host-specific capabilities.
 
 ## Prerequisites
 
