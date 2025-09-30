@@ -49,21 +49,23 @@ To connect to Salesforce Objects data:
 
    :::image type="content" source="media/salesforce-objects/sf-objects-url.png" alt-text="Screenshot of the Get data dialog with the production URL selected.":::
 
-   You can also select **Custom** and enter a custom URL to sign in. This custom URL might be a custom domain you've created within Salesforce, such as `https://contoso.salesforce.com`. You can also use the custom URL selection if you're using your own CNAME record that redirects to Salesforce. Currently custom URLs only support the `salesforce.com` and `cloudforce.com` domains. Note that lightning URLs aren't supported.
+   You can also select **Custom** and enter a custom URL to sign in. This custom URL might be a custom domain you've created within Salesforce, such as `https://contoso.salesforce.com`. You can also use the custom URL selection if you're using your own CNAME record that redirects to Salesforce. Currently custom URLs only support the `salesforce.com` and `cloudforce.com` domains.
+   >[!Note]
+   >Lightning URLs aren't supported.
 
    Also, you can select **Include relationship columns**. This selection alters the query by including columns that might have foreign-key relationships to other tables. If this box is unchecked, you don't see those columns.
 
    Once you select the URL, select **OK** to continue.
 
-3. Select **Sign in** to sign in to your Salesforce account.
+4. Select **Sign in** to sign in to your Salesforce account.
 
    :::image type="content" source="media/salesforce-objects/sf-objects-sign-in.png" alt-text="Screenshot of the sign in dialog for your Salesforce account.":::
 
    Once you successfully sign in, select **Connect**.
 
-4. If you're signing in for the first time using a specific app, you're asked to verify your authenticity by entering a code sent to your email address. You're then asked whether you want the app you're using to access the data. For example, you're asked if you want to allow Power BI Desktop to access your Salesforce data. Select **Allow**.
+5. If you're signing in for the first time using a specific app, you're asked to verify your authenticity by entering a code sent to your email address. You're then asked whether you want the app you're using to access the data. For example, you're asked if you want to allow Power BI Desktop to access your Salesforce data. Select **Allow**.
 
-5. In the **Navigator** dialog, select the Salesforce Objects you want to load. You can then either select **Load** to load the data or select **Transform Data** to transform the data.
+6. In the **Navigator** dialog, select the Salesforce Objects you want to load. You can then either select **Load** to load the data or select **Transform Data** to transform the data.
 
 ## Connect to Salesforce Objects from Power Query Online
 
