@@ -116,7 +116,7 @@ For more information on Salesforce API versions and support, visit the [Salesfor
 
 * Lightning URLs aren't supported.
 
-* Custom URLs only support the salesforce.com and cloudforce.com domains, the use of other domains will result in the "Invalid Arguments" error
+* Custom URLs only support the salesforce.com and cloudforce.com domains. The use of other domains results in an "Invalid Arguments" error.
 
 * Salesforce limits the number of concurrent queries that a single account can execute. ['INVALID_QUERY_LOCATOR ' error](https://help.salesforce.com/s/articleView?id=000323582&type=1) This is a Salesforce limit, and can be encountered when there are multiple concurrent queries against Salesforce using the same account. This limit includes all client applications (not just the PowerQuery connector) using the Salesforce API. To reduce the likelihood of this error:
   * Ensure that the number of Salesforce queries are kept to a minimum.
