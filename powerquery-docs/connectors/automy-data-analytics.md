@@ -11,7 +11,7 @@ ms.subservice: connectors
 # Automy Data Analytics
 
 >[!Note]
->This connector is owned and provided by Automy.
+>This connector is owned and provided by AUTOMY.
 
 ## Summary
 

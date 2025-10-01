@@ -12,7 +12,7 @@ ms.custom: sfi-image-nochange
 # ClickHouse
 
 >[!Note]
->This connector is owned and provided by Clickhouse.
+>This connector is owned and provided by ClickHouse, Inc.
 
 ## Summary
 

@@ -12,7 +12,7 @@ ms.custom: sfi-image-nochange
 # Eduframe Reporting (Beta)
 
 >[!Note]
->This connector is owned and provided by Eduframe.
+>This connector is owned and provided by Drieam.
 
 ## Summary
 

@@ -10,7 +10,7 @@ ms.subservice: connectors
 # ADP Analytics
 
 > [!NOTE]
->This connector is owned and provided by ADP Analytics.
+>This connector is owned and provided by ADP.
 
 ## Summary
 

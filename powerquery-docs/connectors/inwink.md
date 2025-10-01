@@ -12,7 +12,7 @@ ms.custom: sfi-image-nochange
 # inwink Connector (Beta)
 
 >[!Note]
->This connector is owned and provided by Inwink.
+>This connector is owned and provided by inwink.
 
 ## Summary
 
@@ -54,4 +54,4 @@ You can select **Load** on the selected tables, which brings all the tables into
 
 ## Limitations and issues
 
-Power BI Desktop may automatically create table relationships during data load, which can lead to errors. To prevent such behavior, delete all relationships involving the *Status* column.
+Power BI Desktop might automatically set table relationships during data load, which can lead to errors. To prevent such behavior, delete all relationships involving the *Status* column.

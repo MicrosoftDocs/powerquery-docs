@@ -9,7 +9,7 @@ ms.author: dougklo
 # KX kdb Insights Enterprise Power Query Connector (Beta)
 
 >[!Note]
->This connector is owned and provided by KX.
+>This connector is owned and provided by  KX Systems Inc.
 
 ## Summary
 

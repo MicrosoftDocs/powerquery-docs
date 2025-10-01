@@ -12,7 +12,7 @@ ms.custom: sfi-image-nochange
 # Intersystems Health Insight
 
 >[!Note]
->This connector is owned and provided by Intersystem Health Insight.
+>This connector is owned and provided by Intersystem.
 
 ## Summary
 
