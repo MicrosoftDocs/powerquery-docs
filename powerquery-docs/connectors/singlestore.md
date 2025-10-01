@@ -12,7 +12,7 @@ ms.custom: sfi-image-nochange
 # SingleStore
 
 >[!Note]
->This connector is owned and provided by Singlestore.
+>This connector is owned and provided by SingleStore.
 
 ## Summary
 

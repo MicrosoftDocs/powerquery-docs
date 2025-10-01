@@ -11,7 +11,7 @@ ms.subservice: connectors
 # SIS-CC SDMX (Beta)
 
 >[!Note]
->This connector is owned and provided by SIS-CC.
+>This connector is owned and provided by the Statistical Information System Collaboration Community (SIS-CC).
 
 ## Summary
 

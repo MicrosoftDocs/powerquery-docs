@@ -12,9 +12,6 @@ ms.custom: sfi-image-nochange
 
 # LinkedIn Sales Navigator (Beta)
 
->[!Note]
->This connector is owned and provided by LinkedIn.
-
 ## Summary
 
 | Item | Description |

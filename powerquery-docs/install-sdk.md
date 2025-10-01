@@ -73,7 +73,7 @@ With your connector created, you can send this file as you wish to your users an
 ### Microsoft Power BI
  You can use your own custom connector in the Microsoft Power BI Desktop and the Microsoft Power BI Service for Semantic models for refresh and connectivity in the cloud.
 
-Power Query connectors can be loaded into three experiences:
+Power Query connectors can be loaded into two experiences:
 * **On-Premises Data Gateway**: Your connector can be loaded through the gateway to be used in the Microsoft Fabric and Microsoft Power BI services
 * **Power Query Desktop**: within experiences like Power BI Desktop.
 
