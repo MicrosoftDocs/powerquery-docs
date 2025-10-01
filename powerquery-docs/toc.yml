@@ -269,7 +269,7 @@ items:
           href: dataflows/troubleshooting-dataflow-issues-connection-to-the-data-source.md
     - name: Security
       items:
-        - name: Secure your Power Query deployment
+        - name: Security best practices
           href: security-best-practices-power-query.md
         - name: "Data exfiltration best practices for dataflows"
           href: dataflows/data-exfiltration-best-practices.md
