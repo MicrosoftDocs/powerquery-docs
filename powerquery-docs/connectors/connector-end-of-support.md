@@ -1,5 +1,5 @@
 ---
-title: Connector end of support
+title: Power Query connector end of support
 description: Provides information about Power Query connectors that are no longer supported, their sunset date, and any additional information.
 author: DougKlopfenstein
 ms.topic: conceptual
@@ -10,7 +10,7 @@ ms.subservice: connectors
 
 # Connector end of support
 
-The following Power Query connectors are no longer supported and have been removed from Power Query.
+The following Power Query connectors are no longer supported and no longer appear in Power Query.
 
 | Connector | Sunset | Notes |
 | --------- | ------ | ----- |
