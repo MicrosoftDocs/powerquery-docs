@@ -22,7 +22,6 @@ ms.custom: sfi-image-nochange
 | Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
 | Authentication Types Supported | Eduframe account |
 
-
 ## Prerequisites
 
 Before you can sign in to Eduframe Reporting, you must have an Eduframe Admin account (username/password) and have enabled the Eduframe Reporting integration. To enable this integration, you can send an email to: support@eduframe.nl.

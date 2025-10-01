@@ -191,8 +191,6 @@ items:
         href: dataflows/how-to-migrate-queries-from-power-query-desktop-to-dataflows.md
       - name: "Use an on-premises data gateway"
         href: dataflows/using-dataflows-with-on-premises-data.md
-      - name: "Data exfiltration best practices for dataflows"
-        href: dataflows/data-exfiltration-best-practices.md
       - name: Analytical dataflows
         items:
         - name: "Create computed tables"
@@ -269,6 +267,12 @@ items:
           href: dataflows/troubleshooting-dataflow-issue-get-data-from-dataflow.md
         - name: "Connecting to the data source"
           href: dataflows/troubleshooting-dataflow-issues-connection-to-the-data-source.md
+    - name: Security
+      items:
+        - name: Security best practices
+          href: security-best-practices-power-query.md
+        - name: "Data exfiltration best practices for dataflows"
+          href: dataflows/data-exfiltration-best-practices.md
     - name: Power Query template (preview)
       href: power-query-template.md
     - name: Keyboard shortcuts
@@ -357,6 +361,8 @@ items:
           href: connectors/data-lake-storage.md
         - name: "Analyze ADLS Gen2 data"
           href: connectors/analyze-data-in-adls-gen2.md
+      - name : "Azure Device Registry (Beta)"
+        href: connectors/azure-device-registry.md
       - name: Azure HDInsight
         href: connectors/azure-hdinsight.md
       - name: Azure HDInsight on AKS Trino (Beta) (Deprecated)

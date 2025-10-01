@@ -228,3 +228,34 @@ A known issue is that the Google BigQuery connector doesn't currently support ma
 * The quota is exceeded across the customer account usage of project.lists API calls to Google. When multiple reports refresh simultaneously, it might trigger an error in different queries or reports. To prevent the error, schedule report refreshes at staggered intervals.
 * Update query to include a Billing Project ID - `GoogleBigQuery.Database([BillingProject="Include-Billing-Project-Id-Here"])`.
 * Calls to `GoogleBigQuery.Database` should be in the same query as the schema and table selection to avoid the error.
+
+### ExecuteQueryInternalAsync failure when using ADBC
+
+Some users mignt experience issues when connecting to BigQuery using the `Implementation="2.0"` path and receive the error `Cannot execute <ExecuteQueryInternalAsync>b__2 after 5 tries`. This issue could be due to a few factors:
+
+* The permission issue outlined in the following section.
+* If `LargeResultDataset` is passed, then the driver attempts to create the output dataset with the name provided. This creation requires the correct permissions to do so.
+* When no region is explicitly specified during dataset creation, the BigQuery API defaults to the US multi-region. This behavior is driven by the API itself and not by the connector or client configuration.
+
+#### Workaround Options
+
+##### Manual Dataset Creation
+
+To avoid unexpected region defaults, manually create the dataset in your desired region using the [BigQuery Console](https://console.cloud.google.com/).
+
+##### Desktop Connector Configuration
+
+If you're using Power BI Desktop and encounter errors while navigating tables:
+
+1. Go to **File** > **Options and settings** > **Options**
+2. Under **Preview features**, uncheck the option **Use new Google BigQuery connector implementation**.
+
+If you receieve this message along with additional details that contains `Last exception: ...`, where `...` are additional details of the failure, [create a case](https://devblogs.microsoft.com/premier-developer/opening-an-incident-using-microsoft-premier-online-now-services-hub/) for further investigation.
+
+### Permission issues connecting with ADBC
+
+Some environments might require additional permissions to connect using `Implementation="2.0"`/ADBC. This is because the ADBC path uses different BigQuery APIs to query and load data than ODBC does. The required permissions are outlined in the driver's [GitHub repository](https://github.com/apache/arrow-adbc/tree/main/csharp/src/Drivers/BigQuery#permissions).  
+
+### Unable to refresh partitioned models with ADBC
+
+A known issue in the Google BigQuery connector is that partitioned semantic models might not refresh correctly. This often shows with the `Cannot execute <ReadChunkWithRetries>b__0 after 5 tries` error. A recent fix was published for this issue and should be deployed in October 2025. If you receieve this message along with additional details that contains `Last exception: ...`, where `...` are additional details of the failure, [create a case](https://devblogs.microsoft.com/premier-developer/opening-an-incident-using-microsoft-premier-online-now-services-hub/) for further investigation.
