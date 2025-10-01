@@ -638,7 +638,7 @@ items:
       - name: "Zendesk Data (Beta)"
         href: connectors/zendesk-data.md
       - name: "Connector end of support"
-        href: connectors/connector-end-of-support-md
+        href: connectors/connector-end-of-support.md
     - name: Support and troubleshooting
       items:
       - name: "Power Query online limits"
