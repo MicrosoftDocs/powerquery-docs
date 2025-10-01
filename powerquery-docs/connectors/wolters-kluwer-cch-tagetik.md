@@ -3,7 +3,7 @@ title: Wolters Kluwer CCH Tagetik connector
 description: Provides prerequisites, capabilities supported, and connection instructions to your Wolters Kluwer CCH Tagetik data.
 author: innovation-team
 ms.topic: conceptual
-ms.date: 07/25/2024
+ms.date: 09/11/2025
 ms.author: dougklo
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
@@ -11,8 +11,8 @@ ms.custom: sfi-image-nochange
 
 # Wolters Kluwer CCH Tagetik
 
-> [!NOTE]
->The following connector article is provided by Wolters Kluwer CCH Tagetik, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Wolters Kluwer website and use the support channels there.
+>[!Note]
+>This connector is owned and provided by Wolters Kluwer.
 
 ## Summary
 

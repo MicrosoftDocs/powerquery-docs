@@ -3,13 +3,16 @@ title: Intersystems Health Insight
 description: Provides basic details about using the Intersystems Health Insight connector.
 author: jbolinsky
 ms.topic: conceptual
-ms.date: 5/2/2024
+ms.date: 9/11/2025
 ms.author: dougklo
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
 ---
 
 # Intersystems Health Insight
+
+>[!Note]
+>This connector is owned and provided by Intersystem.
 
 ## Summary
 

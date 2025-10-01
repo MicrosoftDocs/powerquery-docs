@@ -4,15 +4,15 @@ description: Provides basic information, prerequisites, and instructions for usi
 author: bucaojit  
 ms.author: dougklo
 ms.topic: conceptual  
-ms.date: 1/24/2024  
+ms.date: 9/11/2025  
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
 ---
 
 # MongoDB Atlas SQL interface
 
-> [!NOTE]
-> The following connector article is provided by MongoDB, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the MongoDB website and use the support channels there.
+>[!Note]
+>This connector is owned and provided by MongoDB.
 
 ## Summary
 

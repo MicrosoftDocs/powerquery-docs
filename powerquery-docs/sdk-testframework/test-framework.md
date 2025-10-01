@@ -3,7 +3,7 @@ title: Power Query SDK test framework reference sequence
 description: Overview and listing of the PowerQuery SDK testing framework reference sequence.
 author: ryan-syed
 ms.topic: reference
-ms.date: 01/19/2024
+ms.date: 09/11/2025
 ms.author: v-ryansyed
 ms.subservice: custom-connectors
 ---
@@ -34,7 +34,7 @@ The following list is the typical Power Query SDK developer workflow with the te
 
 ## Goals of the test framework
 
-The long-term goal of Power Query SDK test framework is to provide a robust testing solution integrated with the Visual Studio Code SDK to test extension connectors. It should greatly improve the developer experience for the development of the connectors. It should also bring standardization to rather fragmented test practices, eventually increasing the quality bar and decreasing sustainment efforts of the connectors. We also envision the test framework to plug into the connector certification process and enhance the experience for the partners.
+The long-term goal of Power Query SDK test framework is to provide a robust testing solution integrated with the Visual Studio Code SDK to test extension connectors. It should greatly improve the developer experience for the development of the connectors. It should also bring standardization to rather fragmented test practices, eventually increasing the quality bar and decreasing sustainment efforts of the connectors.
 
 The goals of the test framework initial release are to provide:
 

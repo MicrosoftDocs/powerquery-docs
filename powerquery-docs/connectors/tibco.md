@@ -3,7 +3,7 @@ title: TIBCO(R) Data Virtualization connector
 description: Provides basic information, prerequisites, and instructions on how to connect to your TIBCO(R) Data Virtualization Server.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/24/2024
+ms.date: 9/11/2025
 ms.author: dougklo
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
@@ -11,8 +11,8 @@ ms.custom: sfi-image-nochange
 
 # TIBCO(R) Data Virtualization
 
-> [!NOTE]
->The following connector article is provided by TIBCO, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the TIBCO website and use the support channels there.
+>[!Note]
+>This connector is owned and provided by TIBCO.
 
 ## Summary
 

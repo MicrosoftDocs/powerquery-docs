@@ -3,15 +3,15 @@ title: Delta Sharing connector
 description: Provides basic information and prerequisites for the Delta Sharing connector for Power Query.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 1/24/2024
+ms.date: 9/11/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
 
 # Delta Sharing
 
-> [!NOTE]
->The following connector article is provided by Databricks, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Databricks website and use the support channels there.
+>[!Note]
+>This connector is owned and provided by Databricks.
 
 ## Summary
 

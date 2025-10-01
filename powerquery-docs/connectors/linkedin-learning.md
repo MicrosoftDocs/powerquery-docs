@@ -3,7 +3,7 @@ title: Configure LinkedIn Learning Power BI connector
 description: Describes how to configure LinkedIn Learning Power BI connector. 
 author: lmasterson
 ms.topic: conceptual
-ms.date: 04/11/2024
+ms.date: 09/11/2025
 ms.author: dougklo
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
@@ -11,12 +11,12 @@ ms.custom: sfi-image-nochange
 
 # LinkedIn Learning - Power BI connector
 
+>[!Note]
+>This connector is owned and provided by LinkedIn Learning.
+
 The LinkedIn Learning Power BI connector is a specialized data connector designed and developed to establish a direct connection between Power BI and LinkedIn Learning APIs. Through this integration, users can access essential insights and engagement metrics, including course completions, hours of content viewed, and active learning days.
 
 These insights can be aggregated, based on various entities, such as individuals, groups, accounts, or content objects like courses and videos. Organizations analyzing these metrics can effectively measure the effect and success of their learning and development initiatives.
-
-> [!NOTE]
-> The following connector article is provided by LinkedIn Learning, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the LinkedIn Learning website and use the support channels there.
 
 ## Summary
 

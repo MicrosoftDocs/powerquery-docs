@@ -417,8 +417,6 @@ items:
         href: connectors/dynatrace-grail-dql.md
       - name: "Eduframe (Beta)"
         href: connectors/eduframe.md
-      - name: "Emplifi Metrics (Deprecated)"
-        href: connectors/emplifi-metrics.md
       - name: "EQuIS"
         href: connectors/equis.md
       - name: "Essbase"
@@ -429,8 +427,6 @@ items:
         href: connectors/excel.md
       - name: "FactSet"
         href: connectors/factset.md
-      - name: "FactSet RMS (Beta)"
-        href: connectors/factset-rms.md
       - name: "FHIR"
         items:
         - name: Connect to FHIR
@@ -485,8 +481,6 @@ items:
         href: connectors/leap.md
       - name: LinkedIn Sales Navigator (Beta)
         href: connectors/linkedin-sales-navigator.md
-      - name: "Mailchimp (Deprecated)"
-        href: connectors/mailchimp.md
       - name: "Microsoft Azure Consumption Insights (Beta) (Deprecated)"
         href: connectors/microsoft-azure-consumption-insights.md
       - name: Microsoft Exchange
@@ -583,8 +577,6 @@ items:
         href: connectors/smartsheet.md
       - name: "Snowflake"
         href: connectors/snowflake.md
-      - name: "Socialbakers Metrics (Deprecated)"
-        href: connectors/socialbakers.md
       - name: "SoftOne BI (Beta)"
         href: connectors/softone-bi.md
       - name: "SolarWinds Service Desk"
@@ -593,8 +585,6 @@ items:
         href: connectors/sql-server-analysis-services.md
       - name: "SQL Server database"
         href: connectors/sql-server.md
-      - name: "Stripe (Deprecated)"
-        href: connectors/stripe.md
       - name: "SumTotal"
         href: connectors/sumtotal.md
       - name: "Supermetrics"
@@ -607,8 +597,6 @@ items:
         href: connectors/text-csv.md
       - name: "TIBCO(R) Data Virtualization"
         href: connectors/tibco.md
-      - name: "Twilio (Beta) (Deprecated)"
-        href: connectors/twilio.md
       - name: "Usercube (Beta)"
         href: connectors/usercube.md
       - name: "Vertica database"
@@ -629,8 +617,6 @@ items:
         href: connectors/windsor.md
       - name: "Wolters Kluwer CCH Tagetik"
         href: connectors/wolters-kluwer-cch-tagetik.md
-      - name: "Workforce Dimensions (Beta) (Deprecated)"
-        href: connectors/workforce-dimensions.md
       - name: "XML"
         href: connectors/xml.md
       - name: "Zendesk (Beta)"
