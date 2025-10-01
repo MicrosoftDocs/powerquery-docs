@@ -3,15 +3,15 @@ title: Power Query Samsara connector
 description: Provides basic information and prerequisites for the Samsara connector, supported authentication types, outlines limitations and issues.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 04/05/2024
+ms.date: 09/11/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
 
 # Samsara Power Query custom connector
 
-> [!NOTE]
-> The following connector article is provided by Samsara, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Samsara website and use the support channels there.
+>[!Note]
+>This connector is owned and provided by Samsara.
 
 ## Summary
 

@@ -3,12 +3,15 @@ title: Power Query Planview OKR (Beta) connector
 description: Provides basic information and prerequisites for Planview OKR connector
 author: jsilva
 ms.topic: conceptual
-ms.date: 1/24/2024
+ms.date: 9/11/2025
 ms.author: dougklo
 ms.subservice: connectors
 ---
 
 # Planview OKR (Beta)
+
+>[!Note]
+>This connector is owned and provided by Planview.
 
 ## Summary
 

@@ -3,7 +3,7 @@ title: SoftOne BI connector
 description: This article provides information for the SoftOne BI connector and a tutorial for usage.
 author: basilrormose
 ms.topic: conceptual
-ms.date: 1/24/2024
+ms.date: 9/11/2025
 ms.author: dougklo
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
@@ -11,8 +11,8 @@ ms.custom: sfi-image-nochange
 
 # SoftOne BI (Beta)
 
-> [!NOTE]
->The following connector article is provided by SoftOne, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the SoftOne website and use the support channels there.
+>[!Note]
+>This connector is owned and provided by SoftOne.
 
 ## Summary
 
@@ -20,7 +20,7 @@ ms.custom: sfi-image-nochange
 | ---- | ----------- |
 | Release State | Beta |
 | Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2) |
-| Authentication Types Supported | Basic (Soft1/Atlantis Web Services) |
+| Authentication Types Supported | Basic |
 
 ## Prerequisites
 
@@ -52,8 +52,8 @@ To load data from your installation with Power Query Desktop:
 
     > [!NOTE]
     >
-    >* If you enter incorrect credentials, you'll receive a message stating that your sign in failed due to invalid credentials.
-    >* If the SoftOne BI Connector is not activated, or the Web Account that you're using is not configured with the service, you'll receive a message stating that access is denied because the selected module is not activated.
+    >* If you enter incorrect credentials, you receive a message stating that your sign in failed due to invalid credentials.
+    >* If the SoftOne BI Connector isn't activated, or the Web Account that you're using isn't configured with the service, you receive a message stating that access is denied because the selected module isn't activated.
 
 1. After signing in with SoftOne Web Services, you can connect to your data store.
 
@@ -67,7 +67,7 @@ To load data from your installation with Power Query Desktop:
 
     You must have uploaded the data from your Soft1 or Atlantis installation (per the product documentation) to see any tables. If you haven't uploaded your data, you won't see any tables displayed in the Navigation Table.
 
-    :::image type="content" source="media/softone-bi/softone-bi-no-data.png" alt-text="No data tables - data has not been uploaded.":::
+    :::image type="content" source="media/softone-bi/softone-bi-no-data.png" alt-text="No data tables - data hasn't been uploaded.":::
 
     In this case, you need to go back to your application and upload your data.
 
@@ -79,7 +79,7 @@ To load data from your installation with Power Query Desktop:
 
 1. Select **Sign in** and enter your credentials (Serial number, username, and password).
 
-    :::image type="content" source="media/softone-bi/softone-bi-login.png" alt-text="Enter the your installation serial number and Web Account credentials.":::
+    :::image type="content" source="media/softone-bi/softone-bi-login.png" alt-text="Enter your installation serial number and Web Account credentials.":::
 
 1. Once you're authenticated, select **Connect**.
 

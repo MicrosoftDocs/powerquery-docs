@@ -3,7 +3,7 @@ title: Power Query BQE Core connector
 description: Provides basic information, prerequisites, and instructions on how to connect to BQE Core.
 author: cruzgreg
 ms.topic: conceptual
-ms.date: 1/24/2024
+ms.date: 9/11/2025
 ms.author: dougklo
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
@@ -11,8 +11,8 @@ ms.custom: sfi-image-nochange
 
 # BQE Core
 
-> [!NOTE]
->The following connector article is provided by BQE, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the BQE website and use the support channels there.
+>[!Note]
+>This connector is owned and provided by BQE.
 
 ## Summary
 

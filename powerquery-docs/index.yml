@@ -73,8 +73,6 @@ landingContent:
         links:
           - text: Custom connector development
             url: installingsdk.md
-          - text: Custom connector certification
-            url: connectorcertification.md
             
   # Card
   - title: Reference content

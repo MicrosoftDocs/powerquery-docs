@@ -3,7 +3,7 @@ title: Power Query Zendesk Data (Beta) connector
 description: Provides basic information and prerequisites for the Zendesk Data (Beta) connector, describes the connection process, and discusses limitations and issues you might encounter.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 4/5/2024
+ms.date: 9/11/2025
 ms.author: dougklo
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
@@ -11,8 +11,9 @@ ms.custom: sfi-image-nochange
 
 # Zendesk Data (Beta) Power Query custom connector
 
-> [!NOTE]
->The following connector article is provided by Zendesk, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Zendesk website and use the support channels there.
+
+>[!Note]
+>This connector is owned and provided by Zendesk.
 
 ## Summary
 

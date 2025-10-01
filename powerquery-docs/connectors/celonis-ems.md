@@ -2,15 +2,15 @@
 title: Power Query Celonis EMS connector
 description: Provides basic information, prerequisites, and connection steps for Celonis EMS.
 author: capono
-ms.date: 1/8/2024 
+ms.date: 9/11/2025 
 ms.author: dougklo
 ms.subservice: connectors
 ---
 
 # Celonis EMS
 
-> [!NOTE]
-> The following connector article is provided by Celonis, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Celonis website and use the support channels there.
+>[!Note]
+>This connector is owned and provided by Celonis.
 
 ## Summary
 

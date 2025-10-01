@@ -3,7 +3,7 @@ title: Power Query Bloomberg Data and Analytics connector
 description: Provides basic information and prerequisites for the Bloomberg Data and Analytics connector, descriptions of the optional input parameters, and discusses limitations and issues you might encounter.
 author: Shrewbitz
 ms.topic: conceptual
-ms.date: 8/14/2024
+ms.date: 9/11/2025
 ms.author: dougklo
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
@@ -11,8 +11,8 @@ ms.custom: sfi-image-nochange
 
 # Bloomberg Data and Analytics
 
-> [!NOTE]
->The following connector article is provided by Bloomberg, the owner of this connector and a member of the Microsoft Power Query Connector Certification Program. If you have questions regarding the content of this article or have changes you would like to see made to this article, visit the Bloomberg website and use the support channels there.
+>[!Note]
+>This connector is owned and provided by Bloomberg.
 
 ## Summary
 
