@@ -31,7 +31,7 @@ To use Azure Data Lake Storage Gen2 for dataflows, you need the following:
 - An Azure storage account. The storage account must have the Data Lake Storage Gen2 feature enabled.
 
 > [!TIP]
-> If you don't have an Azure subscription, [create a free trial account](https://azure.microsoft.com/free/) before you begin.
+> If you don't have an Azure subscription, [create a free trial account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) before you begin.
 
 ## Prepare your Azure Data Lake Storage Gen2 for Power Platform dataflows
 
