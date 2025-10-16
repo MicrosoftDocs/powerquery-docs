@@ -3,7 +3,7 @@ title: Google BigQuery connector
 description: Provides basic information and prerequisites for the Google BigQuery connector for Power Query.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 4/29/2025
+ms.date: 10/16/2025
 ms.author: dougklo
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
@@ -162,6 +162,10 @@ In this case, you might need to enter a Billing Project ID in the **Billing Proj
 In addition, if you also create a report in Power BI service using a gateway, you might still get this error. In this case, you must manually include the Billing Project ID in the M code for the connection using the Power Query editor or the Power Query formula bar. For example:
 
 `Source = GoogleBigQuery.Database([BillingProject="Include-Billing-Project-Id-Here"])`
+
+#### Single cloud connection support
+
+Google BigQuery doesn't support multiple cloud connections because it lacks a parameters field to configure more than one. As a result, only a single cloud connection can be used.
 
 ### Nested fields
 
