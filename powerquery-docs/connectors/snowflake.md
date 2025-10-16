@@ -17,8 +17,11 @@ ms.custom: sfi-image-nochange
 | ---- | ----------- |
 | Release State | General Availability |
 | Products | Power BI (Semantic models)<br/>Power BI (Dataflows)<br/>Fabric (Dataflow Gen2)<br/>Power Apps (Dataflows) |
-| Authentication Types Supported | Snowflake (Username/Password), Microsoft account (Microsoft Entra ID) |
+| Authentication Types Supported | Snowflake (Username/Password), Microsoft account (Microsoft Entra ID), Key Pair Authorization |
 | Function Reference Documentation | &mdash; |
+
+> [!NOTE]
+> The Snowflake connector now supports Key Pair Authorization. Please note that When using Key Pair Auth for the Snowflake connector, the ADBC implementation will be used; when choosing connections that are created with KeyPair Auth for a datasets or dataflows, they will automatically start using the ADBC implementation to complete the refresh and the results might be different. 
 
 > [!NOTE]
 > The Snowflake connector implementation 2.0 has been generally available since July 2025. Learn more about [this feature](#snowflake-connector-implementation-20).
