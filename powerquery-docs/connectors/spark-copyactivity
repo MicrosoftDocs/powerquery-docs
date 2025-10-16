@@ -1,0 +1,106 @@
+# Configure Spark Connector in a Copy Activity
+
+**Date:** 10/16/2025  
+This article outlines how to use the **copy activity in a pipeline** to read data from **Microsoft Fabric Data Warehouse** or **Lakehouse** using the Spark connector.
+
+---
+
+## Supported Configuration
+
+For the configuration of each tab under copy activity, go to the following sections respectively:
+
+- **General**
+- **Source**
+- **Destination**
+- **Mapping**
+- **Settings**
+
+---
+
+## General
+
+Refer to [this page](https://learn.microsoft.com/en-us/fabric/data-factory/pipeline-overview) to configure the **General** tab.
+
+---
+
+## Source
+
+Go to the **Source** tab to configure your copy activity source.
+
+### Required Properties:
+
+- **Connection**:  
+  Select a Spark connection from the connection list. If no connection exists, create a new Spark connection (preinstalled in Fabric runtime).
+
+- **Use query**:  
+  - **Table**: Read data from a specified table or view in the Data Warehouse or Lakehouse.  
+  - **Query**: Run a custom T-SQL query against the SQL analytics endpoint.
+
+### Examples:
+
+**Table:**
+```scala
+synapsesql(tableName: String = "<Warehouse.Schema.Table>")
+``
+**Query:**
+```spark.read.option(Constants.DatabaseName, "<warehouse>").synapsesql("<T-SQL Query>")
+``
+
+Also consider the Synapsesql Method signature. The following command shows the synapsesql method signature for the read request. The three-part tableName argument is required for accessing tables or views from a warehouse and the SQL analytics endpoint of a lakehouse. Update the argument with the following names, based on your scenario:
+  - Part 1: Name of warehouse or lakehouse.
+  - Part 2: Name of schema.
+  - Part 3: Name of the table or view.
+
+synapsesql(tableName: String = "<Part1.Part2.Part3>") => org.apache.spark.sql.DataFrame
+
+  In addition to reading from a table or view directly, this connector also allows you to specify a custom or passthrough query, which gets passed to SQL engine and result is returned back to Spark:
+spark.read.option(Constants.DatabaseName, "<warehouse/lakehouse name>").synapsesql("<T-SQL Query>") => org.apache.spark.sql.DataFrame
+
+
+##Specify SQL Endpoint Explicitly 
+  // For warehouse
+spark.conf.set("spark.datawarehouse.<warehouse name>.sqlendpoint", "<sql endpoint,port>")
+// For lakehouse
+spark.conf.set("spark.lakehouse.<lakehouse name>.sqlendpoint", "<sql endpoint,port>")
+// Read from table
+spark.read.synapsesql("<warehouse/lakehouse name>.<schema name>.<table or view name>")
+
+---
+## Version 
+Use Spark connector v2.0 for improved native Spark support. We suggest upgrading from v1.0.
+
+---
+## Advanced Options 
+**Query timeout (minutes)**: Default is 120 minutes. Specify timespan format, e.g., "02:00:00".
+**Partitioning**: The Fabric Spark connector does not provide built-in partition options like PostgreSQL. Use Spark’s native DataFrame partitioning for performance tuning.
+
+---
+## Destination 
+The Spark connector in Fabric is primarily designed for read operations:
+  - Bulk write or upsert operations are not supported in copy activity.
+  - For write-back scenarios, use Fabric APIs or Lakehouse write methods outside of copy activity.
+
+---
+## Mapping
+For Mapping tab configuration, see https://learn.microsoft.com/en-us/fabric/data-factory/.
+
+---
+## Settings
+For Settings tab configuration, go to https://learn.microsoft.com/en-us/fabric/data-factory/.
+
+---
+## Security
+Authentication uses **Microsoft Entra ID**.
+Enforces **object-level, row-level**, and **column-level** security as defined in the SQL engine.
+
+---
+## Best Practices
+Use custom queries for selective data retrieval.
+Leverage Spark DataFrame partitioning for large datasets.
+Upgrade to v2.0 for enhanced performance and SSL support.
+
+
+## Realted Content 
+  - [https://learn.microsoft.com/en-us/fabric/data-factory/](https://learn.microsoft.com/en-us/fabric/data-factory/)
+  - [https://spark.apache.org/docs/latest/sql-programming-guide.html](https://spark.apache.org/docs/latest/sql-programming-guide.html)
+  - [https://learn.microsoft.com/en-us/fabric/data-factory/pipeline-overview](https://learn.microsoft.com/en-us/fabric/data-factory/pipeline-overview)
