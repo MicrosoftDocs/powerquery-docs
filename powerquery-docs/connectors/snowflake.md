@@ -21,7 +21,7 @@ ms.custom: sfi-image-nochange
 | Function Reference Documentation | &mdash; |
 
 > [!NOTE]
-> The Snowflake connector now supports Key Pair Authorization. Please note that When using Key Pair Auth for the Snowflake connector, the ADBC implementation will be used; when choosing connections that are created with KeyPair Auth for a datasets or dataflows, they will automatically start using the ADBC implementation to complete the refresh and the results might be different. 
+> When using Key Pair Authorization, the ADBC implementation is used. Connections (datasets or dataflows) created with Key Pair Authorization will automatically use ADBC for refresh. Please document specifically what differences to expect (e.g., behavior changes) or link to a section detailing them.
 
 > [!NOTE]
 > The Snowflake connector implementation 2.0 has been generally available since July 2025. Learn more about [this feature](#snowflake-connector-implementation-20).
