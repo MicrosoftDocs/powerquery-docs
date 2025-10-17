@@ -124,13 +124,13 @@ In January 2025, we introduced a new implementation for the Snowflake connector 
 
 The Snowflake connector implementation 2.0 is built using the open-source [Arrow Database Connectivity](https://arrow.apache.org/docs/format/ADBC.html) (ADBC) driver. ADBC provides a set of standard interfaces for interacting with Arrow data, which is especially efficient at fetching large datasets with minimal overhead and no serialization or copying. The ADBC driver also incorporates security enhancements such as memory safety and garbage collection. Additionally, collaboration with the open-source community enables more rapid updates, utilizing modern tools and secure development lifecycle (SDL) processes.
 
-To enable you to take advantage of these performance and security enhancements, starting July 2025, all the newly created connections automatically uses the 2.0 implementation. In addition, we'll gradually transition existing customers to the 2.0 implementation in phases, with updates being applied to different regions through November 2025. During this period, you can test the 2.0 implementation by updating your existing queries and adding the `Implementation="2.0"` flag in `Snowflake.Databases` as follows. After the transition, connections that do not specify an implementation will be automatically updated to the 2.0 implementation.
+To enable you to take advantage of these performance and security enhancements, starting July 2025, all the newly created connections in Desktop automatically use the 2.0 implementation. You can also test the 2.0 implementation by updating your existing queries and adding the `Implementation="2.0"` flag in `Snowflake.Databases` as follows.
 
 ```powerquery-m
 Source = Snowflake.Databases("contoso.snowflakecomputing.com", "CONTOSO_WH", [Implementation="2.0"])
 ```
 
-To aid with diagnosing any potential issue, you can find the `Implementation` and `DriverType` details in your Mashup logs like the following example. If you encounter any issue during the transition, contact support. Meanwhile, to self-mitigate, you can specify `Implementation="1.0"` to keep using the 1.0 connector to avoid business interruption before the issue is resolved.
+To aid with diagnosing any potential issue, you can find the `Implementation` and `DriverType` details in your Mashup logs like the following example. If you encounter any issue during the transition, contact support. Meanwhile, to self-mitigate, you can remove `Implementation="2.0"` to keep using the ODBC connector to avoid business interruption before the issue is resolved.
 
 ```json
 {"Start":"2024-11-02T00:14:02.7968686Z","Action":"Engine/Module/Snowflake/IO/Snowflake/Implementation","ResourceKind":"Snowflake","ResourcePath":"powerbi.snowflakecomputing.com ;DEMO_WH","HostProcessId":"29200","Implementation":"2.0","DriverType":"ADBC","ProductVersion":"2.139.0.0 (Main)+eda56ecd858054173a4d11db9c63a6da5cf92a99","ActivityId":"106f16b6-cfbb-4853-9f20-ed45486486d2","Process":"Microsoft.Mashup.Container.NetFX45","Pid":38560,"Tid":1,"Duration":"00:00:00.0000291"}
@@ -177,6 +177,7 @@ Currently, the [Snowflake connector implementation 2.0](#snowflake-connector-imp
 
 - Snowflake query with `count distinct` logic returns incorrect result. 
 - When creating relationships, encounter error `Object reference not set to an instance of an object`. The relationship can still be defined once you cancel the pop-up window.
+- Increased memory use. The overall load time is typically faster using `Implementation="2.0"`, but the memory consumption can also be higher, in some cases causing issues such as `Resource Governing: This operation was canceled because there wasn't enough memory to finish running it. Either reduce the memory footprint of your dataset by doing things such as limiting the amount of imported data, or if using Power BI Premium, increase the memory of the Premium capacity where this dataset is hosted.`  
 
 ### Resolved issues
 
