@@ -3,7 +3,7 @@ title: Azure Data Lake Storage Gen2
 description: Includes basic information, prerequisites, and information on how to connect to Azure Data Lake Storage Gen2, along with a list of limitations.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 2/16/2024
+ms.date: 10/22/2025
 ms.author: dougklo
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
@@ -115,6 +115,10 @@ To work around this limitation and enable access to Azure Storage from Power Que
 
 * Utilize an [On-premises data gateway](/data-integration/gateway/), which serves as a bridge between Power Query Online and Azure Storage.
 * Use a [Virtual Network (VNet) data gateway](/data-integration/vnet/overview).
+
+### Role-based access control (RBAC) required
+
+Role-based access control (RBAC) is required for Power BI to work correctly. Access Control List (ACL) isn't supported for Power BI access.
 
 ## See also
 
