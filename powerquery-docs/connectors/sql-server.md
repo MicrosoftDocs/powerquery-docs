@@ -3,7 +3,7 @@ title: Power Query SQL Server connector
 description: Includes basic information about products that use the connector, supported authentication types, prerequisites, and connection instructions.
 author: DougKlopfenstein
 ms.topic: conceptual
-ms.date: 3/14/2025
+ms.date: 10/22/2025
 ms.author: dougklo
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
@@ -123,7 +123,7 @@ To troubleshoot this error when using on-premises data gateway, change the gatew
 
 To troubleshoot this error when using Power BI Desktop, modify the value of the environment variable `PBI_SQL_TRUSTED_SERVERS` to include the SQL Servers. The supported values are the same as outlined for gateway configuration (as described in step 4 above).
 
-For connections to SQL Server from Power BI Desktop and on-premises data gateway versions starting with February 2024 or later, follow one of these options:
+For connections to SQL Server from Power BI Desktop and on-premises data gateway versions starting with February 2025 or later, follow one of these options:
 
 * Follow the solution mentioned previously to add the environment variable `PBI_SQL_TRUSTED_SERVERS`.
 * Ask your SQL administrators to acquire a certificate from a well-known certificate authority.
