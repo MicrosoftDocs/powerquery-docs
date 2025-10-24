@@ -449,6 +449,8 @@ items:
         href: connectors/google-bigquery.md
       - name: "Google BigQuery (Microsoft Entra ID)"
         href: connectors/google-bigquery-aad.md
+      - name: "Google Looker"
+        href: connectors/google-looker.md
       - name: "Google Sheets"
         href: connectors/google-sheets.md
       - name: "Hadoop File (HDFS)"
