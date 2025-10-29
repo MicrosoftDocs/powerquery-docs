@@ -4,7 +4,7 @@ description: Provides basic information and prerequisites for using the Power Qu
 author: DougKlopfenstein
 
 ms.topic: conceptual
-ms.date: 9/11/2025
+ms.date: 10/29/2025
 ms.author: dougklo
 ms.subservice: connectors
 ms.custom: sfi-image-nochange
@@ -89,6 +89,9 @@ To connect to Databricks from Power Query Online, take the following steps:
 
     :::image type="content" source="./media/databricks/pq-choose-data.png" alt-text="Image of Power Query navigator loading Databricks Cloud data to online app.":::
 
+> [!NOTE]
+>The Power BI service Databricks connector doesn't support native query.
+
 ## Arrow Database Connectivity driver connector implementation (Preview)
 
 You can use the [Arrow Database Connectivity (ADBC)](https://github.com/apache/arrow-adbc/blob/main/csharp/src/Drivers/Databricks/readme.md) driver for the Databricks connector in Power BI. As we continue to enhance and add new capabilities to this connector, we recommend that you to upgrade to the latest version to try it out and [submit product feedback](https://docs.databricks.com/aws/en/resources/ideas).
@@ -99,6 +102,7 @@ To switch to the ADBC driver:
 1. Select **Transform Data**.
 1. Select **Advanced Editor** in the **Query** option section.
 1. Specify `Implementation="2.0"` for ADBC.
+
     ```powerquery-m
     let
         Source = DatabricksMultiCloud.Catalogs("<instance-name>.cloud.databricks.net", "/sql/1.0/warehouses/<sql-warehouse-id>",
