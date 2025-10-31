@@ -523,8 +523,6 @@ items:
         href: connectors/postgresql.md
       - name: "Profisee"
         href: connectors/profisee.md
-      - name: "QuickBooks Online (Beta)"
-        href: connectors/quickbooks-online.md
       - name: "Salesforce Objects"
         href: connectors/salesforce-objects.md
       - name: "Salesforce Reports"
