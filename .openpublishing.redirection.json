@@ -504,6 +504,11 @@
       "source_path": "powerquery-docs/providing-user-documentation.md",
       "redirect_url": "/fabric/data-factory/providing-user-documentation",
       "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerquery-docs/connectors/quickbooks-online.md",
+      "redirect_url": "/power-query/connectors/",
+      "redirect_document_id": "false"
     }
   ]
 }
