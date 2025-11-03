@@ -54,7 +54,7 @@ The result of that operation will give you a table with three columns.
 :::image type="content" source="media/split-columns-positions/into-columns-split-column-pre-final.png" alt-text="Sample transformed table after splitting column into columns by positions.":::
 
 > [!Note]  
-> Power Query will split the column into as many columns as the number of positions specified. The names of the new columns will contain the same name as the original column, suffixed by a dot and a one-based number that represents the split section of the column. In the example above, the column named **Column1**  will be split into three columns named **Column1.1**, **Column1.2** and **Column1.3**.
+> Power Query splits the column into as many columns as the number of positions specified. The names of the new columns contain the same name as the original column, suffixed by a dot and a one-based number that represents the split section of the column. In the previous example, the column named **Column1**  is split into three columns named **Column1.1**, **Column1.2** and **Column1.3**.
 
 You can now change the name of the columns, and also define the data types of each column as follows:
 
